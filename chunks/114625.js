@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => p });
 var i = n(200651);
 n(192379);
 var r = n(442837),
@@ -10,7 +10,7 @@ var r = n(442837),
     d = n(575651),
     u = n(436858),
     m = n(275554);
-function g() {
+function p() {
     let e = (0, r.e7)([l.Z], () => l.Z.useReducedMotion);
     return (0, i.jsx)(o.O3, {
         children: (0, i.jsxs)(s.mzw, {

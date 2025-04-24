@@ -1,4 +1,4 @@
-n.d(t, { i: () => j }), n(388685);
+n.d(t, { i: () => S }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(636977),
@@ -19,18 +19,18 @@ var r = n(200651),
     O = n(921944),
     v = n(46140);
 let C = 'orb-announcement-modal-key';
-function j() {
+function S() {
     let { hasLayers: e } = (0, o.cj)([f.Z], () => ({ hasLayers: f.Z.hasLayers() })),
         { onboardingModalOpenedPrior: t } = (0, o.cj)([b.Z], () => ({ onboardingModalOpenedPrior: b.Z.onboardingModalOpenedPrior })),
-        { enabled: j } = (0, m.W)({ location: 'virtual_currency_announcement_modal' }),
-        [x, S] = (0, h.US)(j ? [s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [], ...y.b.useSelectedDismissibleContent),
-        E = (0, c.s9z)(c.JQI);
+        { enabled: S } = (0, m.W)({ location: 'virtual_currency_announcement_modal' }),
+        [j, E] = (0, h.US)(S ? [s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [], ...y.b.useSelectedDismissibleContent),
+        x = (0, c.s9z)(c.JQI);
     i.useEffect(() => {
-        j &&
+        S &&
             !t &&
-            x === s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL &&
+            j === s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL &&
             (e ||
-                E ||
+                x ||
                 (u.Z.dispatch({ type: 'VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN' }),
                 (0, a.ZD)(
                     async () => {
@@ -38,13 +38,13 @@ function j() {
                         return function (t) {
                             let { onClose: n, transitionState: i } = t,
                                 o = async () => {
-                                    await n(), S(O.L.USER_DISMISS);
+                                    await n(), E(O.L.USER_DISMISS);
                                 };
                             return (0, r.jsx)(e, {
                                 transitionState: i,
                                 onClose: o,
                                 ctaOnClick: () => {
-                                    S(O.L.TAKE_ACTION),
+                                    E(O.L.TAKE_ACTION),
                                         (0, d.EW)(s.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK, {
                                             dismissAction: O.L.INDIRECT_ACTION,
                                             groupName: O.R.VIRTUAL_CURRENCY_ONBOARDING
@@ -70,9 +70,9 @@ function j() {
                     {
                         modalKey: C,
                         onCloseRequest: () => {
-                            S(O.L.USER_DISMISS), (0, c.Mr3)(C);
+                            E(O.L.USER_DISMISS), (0, c.Mr3)(C);
                         }
                     }
                 )));
-    }, [x, j, t, S, e, E]);
+    }, [j, S, t, E, e, x]);
 }

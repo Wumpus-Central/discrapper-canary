@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(695346),
     u = n(650774),
     m = n(430824),
-    g = n(771845),
-    p = n(626135),
+    p = n(771845),
+    g = n(626135),
     h = n(358085),
     f = n(88658),
     b = n(660243),
     _ = n(981631),
     x = n(703115),
     E = n(526761),
-    j = n(676654),
-    C = n(388032),
+    C = n(676654),
+    j = n(388032),
     O = n(530435);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -67,7 +67,7 @@ function T(e) {
     let { guildId: t } = e,
         n = (0, c.Q3)('GuildItem'),
         a = (0, l.e7)([m.Z], () => m.Z.getGuild(t)),
-        g = (0, l.e7)([u.Z], () => u.Z.getMemberCount(t)),
+        p = (0, l.e7)([u.Z], () => u.Z.getMemberCount(t)),
         h = !d.SE.useSetting().includes(t),
         b = (0, o.dQu)(o.TVs.modules.guildbar.AVATAR_SIZE),
         T = (0, s.Ie)(null != t ? t : _.lds),
@@ -76,7 +76,7 @@ function T(e) {
                 let n = (0, f._o)();
                 e ? n.delete(t) : n.add(t),
                     d.SE.updateSetting([...n]),
-                    p.default.track(_.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
+                    g.default.track(_.rMx.USER_SERVER_PRIVACY_SETTINGS_ACTION, {
                         action: x.Y.RESTRICT_GUILD_ACTIVITY_STATUS_TOGGLE,
                         ingress: E.f4.USER_SETTINGS_ACTIVITY_PRIVACY,
                         guild_id: t
@@ -125,7 +125,7 @@ function T(e) {
                           (0, i.jsx)(o.Text, {
                               variant: 'text-xs/normal',
                               className: O.guildSubtitle,
-                              children: C.intl.formatToPlainString(j.default.obBqMj, { count: null != g ? g : 0 })
+                              children: j.intl.formatToPlainString(C.default.obBqMj, { count: null != p ? p : 0 })
                           })
                       ]
                   })
@@ -141,36 +141,36 @@ function I() {
         s = [
             {
                 value: a.E5.ON,
-                label: C.intl.string(C.t.UzGMHx)
+                label: j.intl.string(j.t.UzGMHx)
             },
             {
                 value: a.E5.ON_FOR_LARGE_GUILDS,
-                label: C.intl.string(C.t.OFqxQU)
+                label: j.intl.string(j.t.OFqxQU)
             },
             {
                 value: a.E5.OFF,
-                label: C.intl.string(C.t.MIgNPD)
+                label: j.intl.string(j.t.MIgNPD)
             }
         ],
-        c = (0, l.e7)([g.ZP], () => g.ZP.getFlattenedGuildIds()),
+        c = (0, l.e7)([p.ZP], () => p.ZP.getFlattenedGuildIds()),
         u = r.useCallback(() => {
             let e = (0, f._o)();
             c.some((t) => e.has(t)) ? d.SE.updateSetting([]) : d.SE.updateSetting(c);
         }, [c]);
     return (0, i.jsxs)(o.hjN, {
         tag: o.RB0.H5,
-        title: C.intl.string(j.default.o0peVV),
+        title: j.intl.string(C.default.o0peVV),
         titleClassName: O.title,
         children: [
             (0, i.jsxs)(o.xJW, {
                 tag: o.RB0.H5,
-                title: C.intl.string(j.default.eAQM7u),
+                title: j.intl.string(C.default.eAQM7u),
                 className: O.defaultSetting,
                 children: [
                     (0, i.jsx)(o.R94, {
                         type: o.R94.Types.DESCRIPTION,
                         className: O.description,
-                        children: C.intl.string(j.default.lKsV2t)
+                        children: j.intl.string(C.default.lKsV2t)
                     }),
                     (0, i.jsx)(o.q4e, {
                         options: s,
@@ -182,18 +182,18 @@ function I() {
             (0, i.jsx)('div', {
                 children: (0, i.jsxs)(o.xJW, {
                     tag: o.RB0.H5,
-                    title: C.intl.string(j.default.f3ZvjI),
+                    title: j.intl.string(C.default.f3ZvjI),
                     children: [
                         (0, i.jsx)(o.R94, {
                             type: o.R94.Types.DESCRIPTION,
                             className: O.description,
-                            children: C.intl.string(j.default.tHLm2N)
+                            children: j.intl.string(C.default.tHLm2N)
                         }),
                         !e &&
                             (0, i.jsx)(o.Wn, {
                                 messageType: o.QYI.WARNING,
                                 className: O.ignoredWarning,
-                                children: C.intl.string(j.default.mUwVAQ)
+                                children: j.intl.string(C.default.mUwVAQ)
                             }),
                         (0, i.jsx)(o.zJl, {
                             fade: !0,
@@ -205,7 +205,7 @@ function I() {
                             children: (0, i.jsx)(o.zxk, {
                                 look: o.zxk.Looks.LINK,
                                 onClick: u,
-                                children: C.intl.string(j.default.gJ8jlZ)
+                                children: j.intl.string(C.default.gJ8jlZ)
                             })
                         })
                     ]
@@ -217,7 +217,7 @@ function I() {
 function N() {
     return (0, i.jsx)(o.hjN, {
         tag: o.RB0.H5,
-        title: C.intl.string(j.default['+RndDg']),
+        title: j.intl.string(C.default['+RndDg']),
         children: (0, i.jsx)(b.r, {})
     });
 }
@@ -227,24 +227,24 @@ function y() {
         n = d.Ou.useSetting();
     return (0, i.jsxs)(o.hjN, {
         tag: o.RB0.H5,
-        title: C.intl.string(C.t['5gexRU']),
+        title: j.intl.string(j.t['5gexRU']),
         titleClassName: O.title,
         children: [
             (0, i.jsx)(o.j7V, {
                 disabled: e,
                 hideBorder: !0,
                 onChange: (e) => d.cP.updateSetting(e),
-                note: C.intl.string(C.t.IjucAA),
+                note: j.intl.string(j.t.IjucAA),
                 value: t,
-                children: C.intl.string(C.t.eVdoIy)
+                children: j.intl.string(j.t.eVdoIy)
             }),
             (0, i.jsx)(o.j7V, {
                 disabled: e,
                 hideBorder: !0,
                 onChange: (e) => d.Ou.updateSetting(e),
-                note: C.intl.string(C.t.oCONqK),
+                note: j.intl.string(j.t.oCONqK),
                 value: n,
-                children: C.intl.string(C.t['tuKl+v'])
+                children: j.intl.string(j.t['tuKl+v'])
             })
         ]
     });
@@ -258,10 +258,10 @@ function A(e) {
                 return (n) => (0, i.jsx)(e, v(S({}, n), { onScrollToGuildsSection: t }));
             });
         },
-        l = h.isPlatformEmbedded ? C.intl.string(C.t.MznbeH) : C.intl.string(C.t.oKqC4u);
+        l = h.isPlatformEmbedded ? j.intl.string(j.t.MznbeH) : j.intl.string(j.t.oKqC4u);
     return (0, i.jsx)(o.hjN, {
         tag: o.RB0.H5,
-        title: C.intl.string(C.t.Wspazs),
+        title: j.intl.string(j.t.Wspazs),
         className: O.allActivitySharingTitle,
         children: (0, i.jsx)(o.j7V, {
             value: r,
@@ -269,7 +269,7 @@ function A(e) {
                 e ? d.G6.updateSetting(e) : s();
             },
             note: l,
-            children: C.intl.string(C.t['4q/Ewc'])
+            children: j.intl.string(j.t['4q/Ewc'])
         })
     });
 }
@@ -278,7 +278,7 @@ function P() {
         className: O.privacyAndTerms,
         children: (0, i.jsx)(o.ToO, {
             type: o.ToO.Types.PRIMARY,
-            body: C.intl.format(C.t.xvCsx8, {
+            body: j.intl.format(j.t.xvCsx8, {
                 termsLink: _.EYA.TERMS,
                 privacyLink: _.EYA.PRIVACY
             })
@@ -291,7 +291,7 @@ let R = function (e) {
     return (0, i.jsxs)(o.hjN, {
         className: t,
         tag: o.RB0.H1,
-        title: C.intl.string(C.t['6x5uWV']),
+        title: j.intl.string(j.t['6x5uWV']),
         children: [
             (0, i.jsx)(A, {
                 onScrollToGuildsSection: () => {

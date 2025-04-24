@@ -1,7 +1,7 @@
 n.d(t, { Z: () => d });
 var r = n(200651),
-    i = n(192379),
-    s = n(442837),
+    s = n(192379),
+    i = n(442837),
     o = n(461745),
     l = n(663389),
     a = n(5967),
@@ -10,16 +10,16 @@ var r = n(200651),
 function d(e) {
     let { style: t } = e,
         n = (0, c.Z7)(),
-        d = i.useCallback((e, t) => {
+        d = s.useCallback((e, t) => {
             t.stopPropagation(), t.preventDefault(), (0, c.QH)(e);
         }, []),
-        f = i.useCallback(() => {
+        f = s.useCallback(() => {
             (0, c.QH)(!1), (0, c.yN)('');
         }, []),
-        p = i.useRef(null),
-        g = (0, s.e7)([l.Z], () => l.Z.getSection());
+        p = s.useRef(null),
+        g = (0, i.e7)([l.Z], () => l.Z.getSection());
     return (
-        i.useEffect(() => {
+        s.useEffect(() => {
             let e = (e) => {
                 var t;
                 let n = p.current;

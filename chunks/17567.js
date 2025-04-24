@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var i = n(710845),
     r = n(314897),
     s = n(271383),
@@ -53,13 +53,13 @@ function m(e, t) {
         e
     );
 }
-let g = new i.Z('Guilds'),
-    p = new (class {
+let p = new i.Z('Guilds'),
+    g = new (class {
         async getAsync(e) {
             let t = performance.now(),
                 n = await c.Z.guilds(e).getMany(),
                 i = performance.now();
-            return g.verbose('loaded in '.concat(i - t, 'ms (guilds: ').concat(n.length, ')')), n;
+            return p.verbose('loaded in '.concat(i - t, 'ms (guilds: ').concat(n.length, ')')), n;
         }
         async getOneAsync(e, t) {
             return await c.Z.guilds(e).get(t);

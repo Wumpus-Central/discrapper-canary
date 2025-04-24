@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => g });
 var i = n(200651),
     r = n(704215),
     s = n(481060),
@@ -9,9 +9,9 @@ var i = n(200651),
     d = n(921944),
     u = n(388032),
     m = n(385255);
-function g(e) {
+function p(e) {
     let { markAsDismissed: t } = e,
-        { analyticsLocations: g } = (0, a.ZP)(l.Z.CUSTOM_STATUS_TAGS_COACHMARK);
+        { analyticsLocations: p } = (0, a.ZP)(l.Z.CUSTOM_STATUS_TAGS_COACHMARK);
     return (0, i.jsx)(o.Z, {
         dismissibleContent: r.z.CUSTOM_STATUS_PROMPTS_COACHMARK,
         tryItText: (0, i.jsx)(s.Text, {
@@ -61,7 +61,7 @@ function g(e) {
                             (s = s =
                                 {
                                     location: 'CustomStatusTagsCoachmark',
-                                    sourceAnalyticsLocations: g,
+                                    sourceAnalyticsLocations: p,
                                     prompt: t
                                 }),
                             Object.getOwnPropertyDescriptors
@@ -99,7 +99,7 @@ function g(e) {
         className: m.container
     });
 }
-function p(e) {
+function g(e) {
     let { children: t, markAsDismissed: n } = e;
     return (0, i.jsx)(s.yRy, {
         onRequestClose: () => n(d.L.INDIRECT_ACTION),
@@ -107,7 +107,7 @@ function p(e) {
         align: 'center',
         shouldShow: !0,
         animation: s.yRy.Animation.TRANSLATE,
-        renderPopout: () => (0, i.jsx)(g, { markAsDismissed: n }),
+        renderPopout: () => (0, i.jsx)(p, { markAsDismissed: n }),
         children: t
     });
 }

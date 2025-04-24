@@ -10,8 +10,8 @@ var r = n(120356),
     d = n(122021),
     u = n(231757),
     m = n(626135),
-    g = n(981631),
-    p = n(286990);
+    p = n(981631),
+    g = n(286990);
 let h = (e) => {
     let { disabled: t = !1, type: n, className: r, innerClassName: h, onConnect: f } = e,
         b = (0, o.ZP)(),
@@ -21,12 +21,12 @@ let h = (e) => {
         children: (e) => {
             let { onMouseEnter: o, onMouseLeave: d } = e;
             return (0, i.jsx)('div', {
-                className: s()(p.wrapper, r),
+                className: s()(g.wrapper, r),
                 children: (0, i.jsx)(a.tEY, {
                     children: (0, i.jsx)('button', {
                         onMouseEnter: o,
                         onMouseLeave: d,
-                        className: s()(p.inner, h),
+                        className: s()(g.inner, h),
                         type: 'button',
                         disabled: t,
                         style: { backgroundImage: "url('".concat((0, l.wj)(b) ? _.icon.darkSVG : _.icon.lightSVG, "')") },
@@ -40,7 +40,7 @@ let h = (e) => {
                                               platformType: t.type,
                                               location: 'Friends List'
                                           }),
-                                              m.default.track(g.rMx.ACCOUNT_LINK_STEP, {
+                                              m.default.track(p.rMx.ACCOUNT_LINK_STEP, {
                                                   previous_step: 'desktop connections',
                                                   current_step: 'desktop oauth',
                                                   platform_type: t.type

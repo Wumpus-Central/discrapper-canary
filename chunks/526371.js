@@ -9,21 +9,21 @@ var i = n(200651),
     d = n(230711),
     u = n(100527),
     m = n(906732),
-    g = n(605236),
-    p = n(314910),
+    p = n(605236),
+    g = n(314910),
     h = n(498646),
     f = n(981631),
     b = n(921944),
     _ = n(622802),
     x = n(388032),
     E = n(631587),
-    j = n(394637);
-function C() {
+    C = n(394637);
+function j() {
     let e = (0, r.useRef)(null),
         [t, n] = (0, r.useState)(!1),
         { analyticsLocations: s } = (0, m.ZP)(u.Z.HOLIDAY_COACHMARK),
         h = (e) => {
-            (0, g.EW)(o.z.CLICKER_COACHMARK, {
+            (0, p.EW)(o.z.CLICKER_COACHMARK, {
                 dismissAction: e,
                 forceTrack: !0
             });
@@ -33,7 +33,7 @@ function C() {
             var n, i;
             t ? null == (n = e.current) || n.play() : null == (i = e.current) || i.pause();
         }, [t]),
-        (0, i.jsx)(p.ZP, {
+        (0, i.jsx)(g.ZP, {
             children: (0, i.jsxs)(c.P3F, {
                 className: l()(E.wrapper, { [E.wrapperHovered]: t }),
                 onMouseEnter: () => n(!0),
@@ -79,7 +79,7 @@ function C() {
                         children: [
                             (0, i.jsx)('img', {
                                 className: E.icon,
-                                src: j,
+                                src: C,
                                 alt: ''
                             }),
                             (0, i.jsxs)('div', {
@@ -109,7 +109,7 @@ function C() {
     );
 }
 function O() {
-    let e = (0, g.wE)(o.z.CLICKER_COACHMARK),
+    let e = (0, p.wE)(o.z.CLICKER_COACHMARK),
         { enableGame: t } = h.C.getCurrentConfig({ location: 'Coachmark' });
-    return e || !t ? null : (0, i.jsx)(C, {});
+    return e || !t ? null : (0, i.jsx)(j, {});
 }

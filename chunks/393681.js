@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(780384),
     u = n(481060),
     m = n(816814),
-    g = n(809206),
-    p = n(497321),
+    p = n(809206),
+    g = n(497321),
     h = n(279837),
     f = n(952306),
     b = n(600164),
     _ = n(690221),
     x = n(346585),
     E = n(347649),
-    j = n(332473),
-    C = n(303172),
+    C = n(332473),
+    j = n(303172),
     O = n(518560),
     S = n(921801),
     v = n(484459),
@@ -93,7 +93,7 @@ class X extends r.PureComponent {
         (0, v.Z)(e.id, e.getAvatarURL(void 0, 80));
     }
     componentWillUnmount() {
-        m.Z.clearBackupCodes(), (0, g.Zy)();
+        m.Z.clearBackupCodes(), (0, p.Zy)();
     }
     renderAccountWarning() {
         let { currentUser: e } = this.props;
@@ -163,7 +163,7 @@ class X extends r.PureComponent {
                       '',
                       (0, i.jsx)(_.Z, {
                           className: W.noticeTextButton,
-                          onClick: () => (0, C.Z)(H.Kq.USER_SETTINGS),
+                          onClick: () => (0, j.Z)(H.Kq.USER_SETTINGS),
                           children: z.intl.string(z.t.LhlgY2)
                       })
                   ]
@@ -269,7 +269,7 @@ class X extends r.PureComponent {
                 confirmText: z.intl.string(z.t['8lQ2ra']),
                 cancelText: z.intl.string(z.t['ETE/oK']),
                 onCancel: e,
-                onConfirm: () => (0, g.ss)('', !0).then(e),
+                onConfirm: () => (0, p.ss)('', !0).then(e),
                 children: (0, i.jsx)(u.Text, {
                     variant: 'text-md/normal',
                     children: z.intl.string(z.t.FB4H1N)
@@ -353,7 +353,7 @@ class X extends r.PureComponent {
         });
     }
     render() {
-        return this.props.hide ? (0, i.jsx)(p.Z, {}) : this.renderUnhidden();
+        return this.props.hide ? (0, i.jsx)(g.Z, {}) : this.renderUnhidden();
     }
     handleDisableAccountError(e) {
         if (e.body.code === F.evJ.INVALID_PASSWORD) throw e;
@@ -363,7 +363,7 @@ class X extends r.PureComponent {
         });
     }
     handleSubmitDisableAccount(e, t) {
-        return (0, g.ss)(e, t).then(F.dG4, this.handleDisableAccountError);
+        return (0, p.ss)(e, t).then(F.dG4, this.handleDisableAccountError);
     }
     handleDisableAccount() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -402,7 +402,7 @@ let Q = () => {
         t = (0, c.e7)([I.Z], () => I.Z.getBackupCodes()),
         n = (0, c.e7)([N.Z], () => N.Z.hidePersonalInformation),
         r = (0, c.e7)([Z.Z], () => Z.Z.theme),
-        s = (0, j.b)(),
+        s = (0, C.b)(),
         l = (0, E.CC)(),
         a = (0, c.e7)([D.default], () => D.default.locale),
         d = (0, c.e7)([y.Z], () => y.Z.getSubsection());

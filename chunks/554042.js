@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var i = n(200651),
     r = n(192379),
     s = n(120356),
@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(153867),
     u = n(425493),
     m = n(918222),
-    g = n(607070),
-    p = n(304761),
+    p = n(607070),
+    g = n(304761),
     h = n(865427),
     f = n(358085),
     b = n(210887),
     _ = n(981631),
     x = n(388032),
     E = n(560030);
-let j = [
+let C = [
     {
         label: 'Latin alphabet',
         value: 'aBcDeFgHiJkLmNoPqRsTuVwXyZ'
@@ -47,13 +47,13 @@ let j = [
         value: 'custom'
     }
 ];
-function C() {
+function j() {
     let [e, t] = r.useState(Math.round((window.outerWidth / window.innerWidth) * 100)),
-        { platformZoom: n, theme: s } = (0, a.cj)([b.Z, g.Z], () => ({
+        { platformZoom: n, theme: s } = (0, a.cj)([b.Z, p.Z], () => ({
             theme: b.Z.theme,
-            platformZoom: g.Z.zoom
+            platformZoom: p.Z.zoom
         })),
-        [C, O] = r.useState('upright'),
+        [j, O] = r.useState('upright'),
         S = ['normal', 'medium', 'semibold', 'bold', 'extrabold'],
         v = new Map([
             ['normal', 400],
@@ -69,27 +69,27 @@ function C() {
             });
     }, []);
     let T = f.isPlatformEmbedded ? n : e,
-        I = (0, a.e7)([p.C], () => {
+        I = (0, a.e7)([g.C], () => {
             var e, t;
-            return (0, h.fD)() ? (null == (t = p.C.getCurrentBuildOverride()) || null == (e = t.overrides) ? void 0 : e.discord_web) : null;
+            return (0, h.fD)() ? (null == (t = g.C.getCurrentBuildOverride()) || null == (e = t.overrides) ? void 0 : e.discord_web) : null;
         }),
         [N, y] = (0, m.R)('playground-overrideText', null),
-        [A, P] = (0, m.R)('playground-defaultText', j[0].value),
+        [A, P] = (0, m.R)('playground-defaultText', C[0].value),
         R = r.useCallback(
             (e) => {
-                let t = j.find((t) => {
+                let t = C.find((t) => {
                     let { value: n } = t;
                     return n === e;
                 });
-                '' === e || null == e ? (P(j[0].value), y(null)) : null != t ? P(t.value) : (P('custom'), y(e));
+                '' === e || null == e ? (P(C[0].value), y(null)) : null != t ? P(t.value) : (P('custom'), y(e));
             },
             [y, P]
         );
     return (0, i.jsx)('div', {
         className: E.fullscreen,
         style: {
-            '--playground-font-family': 'mono' === C ? 'gg mono' : 'gg sans',
-            '--playground-font-style': 'italic' === C ? 'italic' : 'normal'
+            '--playground-font-family': 'mono' === j ? 'gg mono' : 'gg sans',
+            '--playground-font-style': 'italic' === j ? 'italic' : 'normal'
         },
         children: (0, i.jsxs)(o.hjN, {
             tag: o.RB0.H1,
@@ -122,7 +122,7 @@ function C() {
                         (0, i.jsx)(o.xJW, {
                             children: (0, i.jsx)(o.q4e, {
                                 className: E.select,
-                                options: j,
+                                options: C,
                                 onChange: (e) => R(e),
                                 value: A
                             })
@@ -180,7 +180,7 @@ function C() {
                                 onChange: (e) => {
                                     O(e.value);
                                 },
-                                value: C
+                                value: j
                             })
                         }),
                         (0, i.jsx)(u.Z, {

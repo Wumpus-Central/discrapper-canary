@@ -19,12 +19,12 @@ var r = n(200651),
     O = n(214629),
     v = n(566620),
     C = n(317381),
-    j = n(736409),
-    x = n(367907),
-    S = n(835473),
-    E = n(413523),
-    P = n(933557),
-    I = n(194082),
+    S = n(736409),
+    j = n(367907),
+    E = n(835473),
+    x = n(413523),
+    I = n(933557),
+    P = n(194082),
     w = n(550532),
     N = n(436774),
     Z = n(605236),
@@ -154,9 +154,9 @@ class ey extends i.PureComponent {
                           title: l,
                           icon: null == t ? void 0 : t.sourceIcon
                       })
-                    : (0, r.jsx)(I.ZP, {
-                          look: I.ZP.Looks.GRAY,
-                          size: I.ZP.Sizes.SMALL,
+                    : (0, r.jsx)(P.ZP, {
+                          look: P.ZP.Looks.GRAY,
+                          size: P.ZP.Sizes.SMALL,
                           className: ep.liveIndicator
                       }),
                 (0, r.jsxs)('div', {
@@ -251,7 +251,7 @@ class ey extends i.PureComponent {
                           em(eg({}, e), {
                               className: o()(ep.gameWrapper, ep.clickableGameWrapper, { [ep.clickableGameWrapperForceHover]: c }),
                               onClick: () => {
-                                  p.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' }), c && u(ed.L.TAKE_ACTION), (0, x.yw)(ec.rMx.ACTIVITY_PANEL_GAME_CARD_ACTIVITY_POPOUT_REFOCUS_CLICKED);
+                                  p.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' }), c && u(ed.L.TAKE_ACTION), (0, j.yw)(ec.rMx.ACTIVITY_PANEL_GAME_CARD_ACTIVITY_POPOUT_REFOCUS_CLICKED);
                               },
                               children: b
                           })
@@ -265,7 +265,7 @@ class ey extends i.PureComponent {
     render() {
         let { canGoLive: e, embeddedActivity: t, runningGame: n, isStreaming: i, streamMetadata: l, application: s, activity: a, className: c, isForceShowSharingPopout: u, setIsForceShowSharingPopout: d } = this.props;
         return i || (((0, es.y)(s, a, t) || e) && (null != n || null != t))
-            ? (0, r.jsx)(j.j, {
+            ? (0, r.jsx)(S.j, {
                   isForceShowSharingPopout: u,
                   setIsForceShowSharingPopout: d,
                   children: (0, r.jsx)('div', {
@@ -292,7 +292,7 @@ class ey extends i.PureComponent {
                         ((0, F.vd)(t.type) &&
                             f.Z.selectParticipant(
                                 t.id,
-                                (0, E.gN)({
+                                (0, x.gN)({
                                     applicationId: n.applicationId,
                                     instanceId: n.compositeInstanceId
                                 })
@@ -333,14 +333,14 @@ let e_ = (0, b.Z)(function (e) {
         m = (0, u.e7)([y.Z], () => y.Z.useReducedMotion),
         b = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
         v = (0, u.e7)([q.Z, X.Z, K.ZP], () => (null != a ? D.JL(a, q.Z, X.Z, !1) : null != n && D.h_(K.ZP.getChannels(n), q.Z, X.Z).length > 0)),
-        [j] = (0, S.Z)([null != (t = null != g && null != g.id ? g.id : null != s && null != s.id ? s.id : null != b ? b.applicationId : void 0) ? t : '']),
-        x = (0, u.e7)([w.Z], () => w.Z.getFakeGameData()),
-        E = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
-        I = (0, O.Z0)() && null != E && (0, _.R)(),
+        [S] = (0, E.Z)([null != (t = null != g && null != g.id ? g.id : null != s && null != s.id ? s.id : null != b ? b.applicationId : void 0) ? t : '']),
+        j = (0, u.e7)([w.Z], () => w.Z.getFakeGameData()),
+        x = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
+        P = (0, O.Z0)() && null != x && (0, _.R)(),
         N = (0, u.e7)([Q.Z], () => (0, L.Z)(Q.Z) && (0, ei.isWindows)()),
         R = (0, u.e7)([J.Z], () => (null != o ? J.Z.findActivity(o, (e) => e.type === ec.IIU.PLAYING) : null)),
         k = null != f && f.ownerId === o && f.state !== ec.jm8.ENDED,
-        M = (0, u.e7)([et.default, $.Z], () => (null != h ? (0, P.F6)(h, et.default, $.Z) : void 0)),
+        M = (0, u.e7)([et.default, $.Z], () => (null != h ? (0, I.F6)(h, et.default, $.Z) : void 0)),
         G = (0, B.Z)(),
         [V, H] = i.useState(!1),
         { showsActivityPopoutQuickRefocusNUX: F, markActivityPopoutQuickRefocusNUXAsDismissed: el } = (function () {
@@ -358,12 +358,12 @@ let e_ = (0, b.Z)(function (e) {
         ey,
         em(eg({}, l), {
             guildId: n,
-            canGoLive: N || I || void 0 !== x,
+            canGoLive: N || P || void 0 !== j,
             activity: R,
             embeddedActivity: b,
             userId: o,
-            runningGame: null != x ? x : s,
-            application: j,
+            runningGame: null != j ? j : s,
+            application: S,
             useReducedMotion: m,
             isStreaming: k,
             channel: h,

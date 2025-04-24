@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(953529);
+n.d(t, { Z: () => g }), n(953529);
 var i = n(200651);
 n(192379);
 var r = n(120356),
@@ -10,7 +10,7 @@ var r = n(120356),
     d = n(388032),
     u = n(634789),
     m = n(20493);
-let g = (e) => {
+let p = (e) => {
         let { header: t, description: n, icon: r, inModal: a } = e;
         return (0, i.jsxs)('div', {
             className: s()(u.row, m.marginBottom8, { [u.inModal]: a }),
@@ -37,7 +37,7 @@ let g = (e) => {
             ]
         });
     },
-    p = (e) => {
+    g = (e) => {
         let { inModal: t } = e,
             n = (0, a.o)(d.intl.string(c.default.Sm8Gq6), d.intl.string(c.default.YU7aaW)),
             r = (0, a.o)(d.intl.string(c.default['TCzk/f']), d.intl.string(c.default['2OqtJC'])),
@@ -51,7 +51,7 @@ let g = (e) => {
                     color: 'header-secondary',
                     children: n
                 }),
-                (0, i.jsx)(g, {
+                (0, i.jsx)(p, {
                     header: d.intl.string(c.default['/zMYZW']),
                     description: d.intl.string(c.default.DxFKkZ),
                     icon: (0, i.jsx)(l.iFz, {
@@ -62,7 +62,7 @@ let g = (e) => {
                     }),
                     inModal: t
                 }),
-                (0, i.jsx)(g, {
+                (0, i.jsx)(p, {
                     header: d.intl.string(c.default['44NEx8']),
                     description: d.intl.string(c.default.WrY56O),
                     icon: (0, i.jsx)(l.dRF, {
@@ -73,7 +73,7 @@ let g = (e) => {
                     }),
                     inModal: t
                 }),
-                (0, i.jsx)(g, {
+                (0, i.jsx)(p, {
                     header: d.intl.string(c.default['Z3G+8v']),
                     description: d.intl.string(c.default.KBgAra),
                     icon: (0, i.jsx)(o.Z, {
@@ -89,7 +89,7 @@ let g = (e) => {
                     color: 'header-secondary',
                     children: r
                 }),
-                (0, i.jsx)(g, {
+                (0, i.jsx)(p, {
                     header: s,
                     description: m,
                     icon: (0, i.jsx)(l.Dio, {

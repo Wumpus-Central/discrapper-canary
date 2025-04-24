@@ -9,7 +9,7 @@ var i = n(200651),
     d = n(474936),
     u = n(388032),
     m = n(898582);
-function g(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -34,7 +34,7 @@ function g(e) {
     }
     return e;
 }
-function p(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,7 +54,7 @@ function p(e, t) {
 }
 function h(e) {
     let { guildBoostSlot: t, onClose: h, hasCancelableGuildBoostSlot: f, premiumSubscription: b, onSelect: _, fractionalState: x, user: E } = e,
-        j = {
+        C = {
             transfer: {
                 label: null != t.premiumGuildSubscription ? u.intl.string(u.t['PR0n//']) : u.intl.string(u.t['+fmEYG']),
                 subtext: t.isOnCooldown() ? u.intl.string(u.t.XnB8Mz) : null,
@@ -73,14 +73,14 @@ function h(e) {
         };
     switch (b.status) {
         case c.O0b.PAST_DUE:
-            (j.cancel.disabled = !0), (j.cancel.subtext = u.intl.string(u.t.WnL6DQ)), (j.uncancel.disabled = !0);
+            (C.cancel.disabled = !0), (C.cancel.subtext = u.intl.string(u.t.WnL6DQ)), (C.uncancel.disabled = !0);
             break;
         case c.O0b.PAUSE_PENDING:
         case c.O0b.PAUSED:
-            x === d.a$.NONE && ((j.transfer.disabled = !0), (j.transfer.subtext = u.intl.string(u.t.LiLRRU)), (0, a.y)('guild_boost_slot_popout', E, x) || ((j.cancel.subtext = u.intl.string(u.t['1ywaWF'])), (j.cancel.disabled = !0), (j.uncancel.disabled = !0)));
+            x === d.a$.NONE && ((C.transfer.disabled = !0), (C.transfer.subtext = u.intl.string(u.t.LiLRRU)), (0, a.y)('guild_boost_slot_popout', E, x) || ((C.cancel.subtext = u.intl.string(u.t['1ywaWF'])), (C.cancel.disabled = !0), (C.uncancel.disabled = !0)));
     }
-    (0, a.y)('guild_boost_slot_popout', E, x) && ((j.cancel.subtext = u.intl.string(u.t.dq4vq6)), (j.cancel.disabled = !0), (j.uncancel.disabled = !0));
-    let C = r.useMemo(
+    (0, a.y)('guild_boost_slot_popout', E, x) && ((C.cancel.subtext = u.intl.string(u.t.dq4vq6)), (C.cancel.disabled = !0), (C.uncancel.disabled = !0));
+    let j = r.useMemo(
         () =>
             b.isPausedOrPausePending && x === d.a$.NONE
                 ? (0, i.jsx)(s.sNh, {
@@ -102,50 +102,50 @@ function h(e) {
         children: [
             (0, i.jsx)(s.sNh, {
                 id: 'apply',
-                label: j.transfer.label,
-                subtext: j.transfer.subtext,
+                label: C.transfer.label,
+                subtext: C.transfer.subtext,
                 action: function () {
                     (0, s.ZDy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 760558));
                         return (n) =>
                             (0, i.jsx)(
                                 e,
-                                p(g({}, n), {
+                                g(p({}, n), {
                                     guildBoostSlots: [t],
                                     locationSection: c.jXE.SETTINGS_PREMIUM
                                 })
                             );
                     });
                 },
-                disabled: j.transfer.disabled
+                disabled: C.transfer.disabled
             }),
             (0, o.tl)(t)
                 ? (0, i.jsx)(s.sNh, {
                       id: 'uncancel',
-                      label: j.uncancel.label,
-                      subtext: j.uncancel.subtext,
+                      label: C.uncancel.label,
+                      subtext: C.uncancel.subtext,
                       action: function () {
                           (0, s.ZDy)(async () => {
                               let { default: e } = await Promise.resolve().then(n.bind(n, 450468));
-                              return (n) => (0, i.jsx)(e, p(g({}, n), { guildBoostSlotId: t.id }));
+                              return (n) => (0, i.jsx)(e, g(p({}, n), { guildBoostSlotId: t.id }));
                           });
                       },
-                      disabled: j.uncancel.disabled
+                      disabled: C.uncancel.disabled
                   })
                 : (0, i.jsx)(s.sNh, {
                       id: 'cancel',
-                      label: j.cancel.label,
-                      subtext: j.cancel.subtext,
+                      label: C.cancel.label,
+                      subtext: C.cancel.subtext,
                       action: function () {
                           (0, s.ZDy)(async () => {
                               let { default: e } = await Promise.resolve().then(n.bind(n, 401786));
-                              return (n) => (0, i.jsx)(e, p(g({}, n), { guildBoostSlot: t }));
+                              return (n) => (0, i.jsx)(e, g(p({}, n), { guildBoostSlot: t }));
                           });
                       },
-                      disabled: j.cancel.disabled,
+                      disabled: C.cancel.disabled,
                       color: 'danger'
                   }),
-            C
+            j
         ]
     });
 }

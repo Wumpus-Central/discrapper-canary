@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var i = n(200651),
     r = n(192379),
     s = n(913527),
@@ -9,7 +9,7 @@ var i = n(200651),
     d = n(584825),
     u = n(931547),
     m = n(388032);
-let g = (e) => {
+let p = (e) => {
     let [t, n] = r.useState(!1),
         [i, s] = r.useState(null);
     return {
@@ -27,10 +27,10 @@ let g = (e) => {
         error: i
     };
 };
-function p(e) {
+function g(e) {
     let { groupListingId: t, subscription: n, className: s } = e,
         { analyticsLocations: a } = (0, c.ZP)(o.Z.PENDING_PLAN_CHANGE_NOTICE),
-        { resetRenewalMutation: p, submitting: h, error: f } = g(a),
+        { resetRenewalMutation: g, submitting: h, error: f } = p(a),
         b = (0, d._k)(t, { includeSoftDeleted: !0 }),
         { currentListing: _, nextListing: x } = r.useMemo(() => {
             if ((null == n ? void 0 : n.renewalMutations) == null)
@@ -54,7 +54,7 @@ function p(e) {
             changeDate: E
         }),
         error: null == f ? void 0 : f.message,
-        onClick: () => p(n),
+        onClick: () => g(n),
         submitting: h,
         ctaMessage: m.intl.string(m.t.De4wIy),
         className: s

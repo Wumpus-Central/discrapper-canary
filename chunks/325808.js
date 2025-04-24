@@ -9,23 +9,23 @@ var i = n(200651),
     d = n(230711),
     u = n(825209),
     m = n(906732),
-    g = n(313201),
-    p = n(131951),
+    p = n(313201),
+    g = n(131951),
     h = n(358085),
     f = n(962100),
     b = n(981631),
     _ = n(388032),
     x = n(285425),
     E = n(20493);
-let j = !h.isPlatformEmbedded,
-    C = (0, g.hQ)();
+let C = !h.isPlatformEmbedded,
+    j = (0, p.hQ)();
 function O(e) {
     return e >= 1000 ? ((e /= 1000), ''.concat(e.toFixed(2), 's')) : ''.concat(e.toFixed(0), ' ms');
 }
 function S(e) {
     let t,
         { inputMode: n } = e,
-        { shortcut: r, delay: s } = (0, a.cj)([p.Z], () => p.Z.getModeOptions());
+        { shortcut: r, delay: s } = (0, a.cj)([g.Z], () => g.Z.getModeOptions());
     return (
         (t =
             h.isPlatformEmbedded || n !== b.pM4.PUSH_TO_TALK
@@ -60,7 +60,7 @@ function S(e) {
                             children: (0, i.jsxs)(o.xJW, {
                                 children: [
                                     (0, i.jsx)(o.vwX, {
-                                        id: C,
+                                        id: j,
                                         tag: o.RB0.H5,
                                         className: E.marginBottom8,
                                         children: _.intl.string(_.t.y0ShVl)
@@ -70,7 +70,7 @@ function S(e) {
                                         onValueChange: (e) => c.Z.setMode(n, { delay: e }),
                                         onValueRender: O,
                                         maxValue: b.qhL,
-                                        'aria-labelledby': C
+                                        'aria-labelledby': j
                                     })
                                 ]
                             })
@@ -84,7 +84,7 @@ function S(e) {
 }
 function v() {
     let { analyticsLocations: e } = (0, m.ZP)(),
-        t = (0, a.e7)([p.Z], () => p.Z.getMode()),
+        t = (0, a.e7)([g.Z], () => g.Z.getMode()),
         s = [
             {
                 value: b.pM4.VOICE_ACTIVITY,
@@ -92,14 +92,14 @@ function v() {
             },
             {
                 value: b.pM4.PUSH_TO_TALK,
-                name: j ? _.intl.string(_.t['1AINrK']) : _.intl.string(_.t.Q8gkVF)
+                name: C ? _.intl.string(_.t['1AINrK']) : _.intl.string(_.t.Q8gkVF)
             }
         ],
         l = r.useCallback(
             (t) => {
                 let { value: r } = t;
                 r === b.pM4.PUSH_TO_TALK &&
-                    j &&
+                    C &&
                     (0, o.ZDy)(async () => {
                         let { default: e } = await Promise.resolve().then(n.bind(n, 468026));
                         return (t) =>

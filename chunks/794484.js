@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var i = n(200651),
     r = n(192379),
     s = n(120356),
@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(695349),
     u = n(314684),
     m = n(687362),
-    g = n(675619),
-    p = n(119850),
+    p = n(675619),
+    g = n(119850),
     h = n(32173),
     f = n(391110),
     b = n(75077),
@@ -46,15 +46,15 @@ let E = (e) => {
                     })
                 });
     },
-    j = (e) => {
+    C = (e) => {
         var t;
-        let { className: n, variant: s = f.R0.PERKS_DISCOVERABILITY, noBackground: j = !1, leftAlignHeaders: C = !1, showAllPerksButton: O, headerClassname: S, isFullScreen: v = !0, shouldAutoScroll: T = !1 } = e,
+        let { className: n, variant: s = f.R0.PERKS_DISCOVERABILITY, noBackground: C = !1, leftAlignHeaders: j = !1, showAllPerksButton: O, headerClassname: S, isFullScreen: v = !0, shouldAutoScroll: T = !1 } = e,
             I = r.useRef(null),
             N = (0, u.Er)(),
             y = (0, m.v)(N),
             A = s === f.R0.WHATS_NEW,
             P = (0, u.IY)(),
-            R = (0, p.x)();
+            R = (0, g.x)();
         r.useEffect(() => {
             A && !y && (P(), R());
         }, [P, R, A, y]);
@@ -62,7 +62,7 @@ let E = (e) => {
                 A && y && P();
             },
             Z = y && A;
-        (0, g.r)({
+        (0, p.r)({
             ref: I,
             shouldScroll: Z || T,
             onScrollEnd: D,
@@ -98,15 +98,15 @@ let E = (e) => {
                     className: l()(
                         x.section,
                         {
-                            [x.centerAlignSection]: !C,
-                            [x.leftAlignSection]: C
+                            [x.centerAlignSection]: !j,
+                            [x.leftAlignSection]: j
                         },
                         n
                     ),
                     children: [
                         (0, i.jsx)(E, {
                             showAllPerksButton: O,
-                            leftAlignHeaders: C,
+                            leftAlignHeaders: j,
                             title: w.title,
                             headerClassname: S
                         }),
@@ -114,16 +114,16 @@ let E = (e) => {
                             variant: 'text-lg/normal',
                             color: 'header-primary',
                             className: l()(x.subtitle, {
-                                [x.subtitle]: null == O || C,
-                                [x.subtitleWithButton]: null != O && !C,
-                                [x.fullWidth]: A || C,
+                                [x.subtitle]: null == O || j,
+                                [x.subtitleWithButton]: null != O && !j,
+                                [x.fullWidth]: A || j,
                                 [x.moreSubtitleMargin]: V,
-                                [x.leftAlignSubtitle]: C,
-                                [x.centerAlignSubtitle]: !C
+                                [x.leftAlignSubtitle]: j,
+                                [x.centerAlignSubtitle]: !j
                             }),
                             children: w.subtitle
                         }),
-                        !C &&
+                        !j &&
                             null != O &&
                             (0, i.jsx)('div', {
                                 className: x.showAllPerksButtonCenter,
@@ -163,7 +163,7 @@ let E = (e) => {
                                         }
                                         return e;
                                     })({ confettiCanvas: e.name === h.u.TENURE_REWARD_COLLECTIBLE ? G : void 0 }, e)),
-                                    (r = r = { forceShadow: j }),
+                                    (r = r = { forceShadow: C }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                         : (function (e, t) {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var i = n(192379),
     r = n(913527),
     s = n.n(r),
@@ -9,17 +9,17 @@ var i = n(192379),
     d = n(289393),
     u = n(697227),
     m = n(981631),
-    g = n(388032);
-function p(e) {
+    p = n(388032);
+function g(e) {
     let t = (0, u.W)(e),
         n = (0, l.e7)([d.Z], () => d.Z.getSubscriptionListingForPlan(t)),
         r = (0, l.e7)([d.Z], () => (null != n ? d.Z.getSubscriptionGroupListingForSubscriptionListing(n.id) : null)),
-        p = (0, l.e7)([a.Z], () => a.Z.getGuild(null == r ? void 0 : r.guild_id)),
+        g = (0, l.e7)([a.Z], () => a.Z.getGuild(null == r ? void 0 : r.guild_id)),
         [h, f] = i.useState(!1),
         { fetchSubscriptionsSettings: b } = (0, c.JH)();
     i.useEffect(() => {
-        h && null != p && null == d.Z.getSubscriptionSettings(p.id) && b(p.id);
-    }, [h, p, b]);
+        h && null != g && null == d.Z.getSubscriptionSettings(g.id) && b(g.id);
+    }, [h, g, b]);
     let _ =
         null == n
             ? void 0
@@ -34,7 +34,7 @@ function p(e) {
                   return {
                       memberSince: r,
                       nextRenewalDate: n,
-                      nextRenewalLabel: l ? g.intl.string(g.t.UAfot7) : g.intl.string(g.t.CVjLcH),
+                      nextRenewalLabel: l ? p.intl.string(p.t.UAfot7) : p.intl.string(p.t.CVjLcH),
                       subscriptionPrice: i,
                       isCancelled: l,
                       isPastDue: a,
@@ -42,7 +42,7 @@ function p(e) {
                   };
               })({ subscription: e });
     return {
-        guild: p,
+        guild: g,
         expanded: h,
         handleToggleExpanded: () => f((e) => !e),
         listing: n,

@@ -15,7 +15,7 @@ function m() {
     let e = o.Z.getCameraComponent(),
         t = (0, s.e7)([o.Z], () => o.Z.getVideoDeviceId()),
         [n, m] = r.useState(!1),
-        g = (0, s.e7)([o.Z], () => o.Z.isVideoAvailable());
+        p = (0, s.e7)([o.Z], () => o.Z.isVideoAvailable());
     return n
         ? (0, i.jsx)('div', {
               className: d.cameraWrapper,
@@ -37,7 +37,7 @@ function m() {
               children: [
                   (0, i.jsx)('div', { className: d.previewImage }),
                   (0, i.jsx)(l.ua7, {
-                      text: g ? null : c.intl.string(c.t['8jSzSU']),
+                      text: p ? null : c.intl.string(c.t['8jSzSU']),
                       children: (e) => {
                           var t, n;
                           return (0, i.jsx)(
@@ -70,7 +70,7 @@ function m() {
                               (n = n =
                                   {
                                       onClick: () => m(!0),
-                                      disabled: !g,
+                                      disabled: !p,
                                       children: c.intl.string(c.t.JIf4v7)
                                   }),
                               Object.getOwnPropertyDescriptors

@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(246946),
     u = n(626135),
     m = n(669079),
-    g = n(981631),
-    p = n(388032),
+    p = n(981631),
+    g = n(388032),
     h = n(423953);
 function f(e, t, n) {
     return (
@@ -64,16 +64,16 @@ class x extends r.Component {
         let {
             analyticsContext: { location: e }
         } = this.props;
-        return _(b({}, e), { object: g.qAy.BUTTON_CTA });
+        return _(b({}, e), { object: p.qAy.BUTTON_CTA });
     }
     render() {
         let { obscureInput: e } = this.props,
             { codeInput: t, submitting: n, hasError: r, isPromoCode: s } = this.state;
         return (0, i.jsxs)(l.hjN, {
             tag: l.RB0.H1,
-            title: p.intl.string(p.t['il+VCg']),
+            title: g.intl.string(g.t['il+VCg']),
             children: [
-                (0, i.jsx)(l.vwX, { children: p.intl.string(p.t.SeKIoa) }),
+                (0, i.jsx)(l.vwX, { children: g.intl.string(g.t.SeKIoa) }),
                 (0, i.jsx)('form', {
                     onSubmit: this.handleSubmit,
                     children: (0, i.jsxs)(o.Z, {
@@ -83,13 +83,13 @@ class x extends r.Component {
                                 value: t,
                                 onChange: this.handleChange,
                                 placeholder: 'WUMP-AAAAA-BBBBB-CCCCC',
-                                error: !s && r ? p.intl.string(p.t.Y11a2t) : null,
+                                error: !s && r ? g.intl.string(g.t.Y11a2t) : null,
                                 className: h.codeRedemptionInput
                             }),
                             (0, i.jsx)(l.zxk, {
                                 type: 'submit',
                                 submitting: n,
-                                children: p.intl.string(p.t.KIpp7O)
+                                children: g.intl.string(g.t.KIpp7O)
                             })
                         ]
                     })
@@ -98,7 +98,7 @@ class x extends r.Component {
                     ? (0, i.jsx)(l.Text, {
                           className: h.errorMessage,
                           variant: 'text-sm/normal',
-                          children: p.intl.format(p.t.gPt3PD, {
+                          children: g.intl.format(g.t.gPt3PD, {
                               promoLink: () => {
                                   window.open('https://discord.com/billing/promotions/'.concat(t));
                               }
@@ -132,9 +132,9 @@ class x extends r.Component {
                 try {
                     let e = await a.Z.resolveGiftCode(n);
                     if (null != e && null != e.giftCode.promotion) throw (this.setState({ isPromoCode: !0 }), Error('Cannnot redeem promotion code as gift'));
-                    u.default.track(g.rMx.OPEN_MODAL, {
+                    u.default.track(p.rMx.OPEN_MODAL, {
                         type: 'gift_accept',
-                        location: _(b({}, this.analyticsLocation), { object: g.qAy.BUTTON_CTA })
+                        location: _(b({}, this.analyticsLocation), { object: p.qAy.BUTTON_CTA })
                     }),
                         (0, c.V)({ processedCode: n }),
                         this.setState({ codeInput: '' });

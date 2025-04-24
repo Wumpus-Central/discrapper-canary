@@ -54,15 +54,15 @@ function g(e) {
         { name: _, rarity: O } = b,
         { color: v } = (0, c.F7)(O),
         C = (0, i.wj)(m) ? p : f,
-        j = (y.size - y.offset - 2 * y.stroke) * 0.8,
-        x = y.size - y.stroke,
-        S = {
-            width: 0.4 * j,
-            height: 0.4 * j
-        },
+        S = (y.size - y.offset - 2 * y.stroke) * 0.8,
+        j = y.size - y.stroke,
         E = {
-            width: S.width + 1,
-            height: S.height + 1,
+            width: 0.4 * S,
+            height: 0.4 * S
+        },
+        x = {
+            width: E.width + 1,
+            height: E.height + 1,
             right: y.stroke + 1,
             bottom: y.stroke + 1,
             padding: 0
@@ -70,8 +70,8 @@ function g(e) {
     return (0, r.jsxs)('div', {
         className: d.container,
         style: {
-            width: x,
-            height: x,
+            width: j,
+            height: j,
             padding: y.stroke
         },
         'aria-label': ''.concat(null != (t = _()) ? t : ''),
@@ -81,14 +81,14 @@ function g(e) {
                 children: (0, r.jsx)(l.rm8, {
                     size: 'custom',
                     color: u ? v : (0, s.Lq)(C.trophy),
-                    width: j,
-                    height: j
+                    width: S,
+                    height: S
                 })
             }),
             !u &&
                 (0, r.jsx)('div', {
                     className: d.lockContainer,
-                    style: E,
+                    style: x,
                     children: (0, r.jsx)(
                         l.mBM,
                         h(
@@ -96,7 +96,7 @@ function g(e) {
                                 size: 'custom',
                                 color: (0, s.Lq)(C.locked)
                             },
-                            S
+                            E
                         )
                     )
                 }),
@@ -104,8 +104,8 @@ function g(e) {
                 O === c.EP.LEGENDARY &&
                 (0, r.jsx)('div', {
                     className: d.lockContainer,
-                    style: E,
-                    children: (0, r.jsx)(a.Z, h({ className: d.confettiIcon }, S))
+                    style: x,
+                    children: (0, r.jsx)(a.Z, h({ className: d.confettiIcon }, E))
                 })
         ]
     });

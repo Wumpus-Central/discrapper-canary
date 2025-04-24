@@ -1,14 +1,14 @@
 n.d(t, { m: () => g }), n(388685);
-var r = n(192379),
-    i = n(442837),
+var i = n(192379),
+    r = n(442837),
     s = n(594174),
-    o = n(78839),
-    l = n(431),
-    a = n(111361),
+    l = n(78839),
+    a = n(431),
+    o = n(111361),
     c = n(74538),
-    u = n(557017),
-    d = n(474936);
-let f = (e) => {
+    d = n(557017),
+    u = n(474936);
+let m = (e) => {
         let t = new Date();
         t.setDate(t.getDate() - 10);
         let n = e.endedAt;
@@ -17,32 +17,32 @@ let f = (e) => {
     p = (e) => {
         var t;
         let n = null == (t = (0, c.Af)(e)) ? void 0 : t.planId;
-        return void 0 === n || c.ZP.getPremiumType(n) !== d.p9.TIER_2;
+        return void 0 === n || c.ZP.getPremiumType(n) !== u.p9.TIER_2;
     };
 function g(e) {
     let { location: t } = e,
-        [n, c] = r.useState(null),
-        g = u.t.useExperiment({ location: t }),
-        [b, m] = (0, i.Wu)([o.ZP], () => [o.ZP.getMostRecentPremiumTypeSubscription(), o.ZP.getPreviousPremiumTypeSubscription()]),
-        h = (0, i.e7)([l.Z], () => l.Z.hasFetchedOffer()),
-        [v, _] = (0, i.Wu)([o.ZP], () => [o.ZP.hasFetchedMostRecentPremiumTypeSubscription(), o.ZP.hasFetchedPreviousPremiumTypeSubscription()]),
-        O = (0, i.e7)([s.default], () => s.default.getCurrentUser()),
-        y = (null == O ? void 0 : O.hasHadPremium()) && !v && !_,
-        j = !(0, a.I5)(O) && !h;
+        [n, c] = i.useState(null),
+        g = d.t.useExperiment({ location: t }),
+        [h, f] = (0, r.Wu)([l.ZP], () => [l.ZP.getMostRecentPremiumTypeSubscription(), l.ZP.getPreviousPremiumTypeSubscription()]),
+        b = (0, r.e7)([a.Z], () => a.Z.hasFetchedOffer()),
+        [_, x] = (0, r.Wu)([l.ZP], () => [l.ZP.hasFetchedMostRecentPremiumTypeSubscription(), l.ZP.hasFetchedPreviousPremiumTypeSubscription()]),
+        E = (0, r.e7)([s.default], () => s.default.getCurrentUser()),
+        C = (null == E ? void 0 : E.hasHadPremium()) && !_ && !x,
+        j = !(0, o.I5)(E) && !b;
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             if (!1 === g.enabled) return void c(!1);
-            if (!y && !j) {
-                if (null === b) return void ((0, a.I5)(O, d.p9.TIER_2) ? c(!1) : c(!0));
-                if (b.isPaused) c(!0);
-                else if (b.isEnded) l.Z.hasAnyUnexpiredOffer() || l.Z.hasAnyUnexpiredDiscountOffer() || f(b) ? c(!1) : c(!0);
-                else if (b.isActive) {
-                    let e = p(b),
-                        t = null == m || !f(m);
+            if (!C && !j) {
+                if (null === h) return void ((0, o.I5)(E, u.p9.TIER_2) ? c(!1) : c(!0));
+                if (h.isPaused) c(!0);
+                else if (h.isEnded) a.Z.hasAnyUnexpiredOffer() || a.Z.hasAnyUnexpiredDiscountOffer() || m(h) ? c(!1) : c(!0);
+                else if (h.isActive) {
+                    let e = p(h),
+                        t = null == f || !m(f);
                     c(e && t);
                 } else c(!1);
             }
-        }, [g.enabled, b, m, y, j, O]),
+        }, [g.enabled, h, f, C, j, E]),
         n
     );
 }

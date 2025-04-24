@@ -1,4 +1,4 @@
-n.d(t, { r: () => p });
+n.d(t, { r: () => g });
 var i = n(106351),
     r = n(475179),
     s = n(816782),
@@ -9,8 +9,8 @@ var i = n(106351),
     d = n(592125),
     u = n(944486),
     m = n(914010),
-    g = n(981631);
-let p = {
+    p = n(981631);
+let g = {
     binds: ['mod+u'],
     comboKeysBindGlobal: !0,
     action() {
@@ -21,7 +21,7 @@ let p = {
         if (null != t && null != n && n.type === i.d.DM) {
             let e = c.ZP.getSection(t, null == n ? void 0 : n.isDM()),
                 i = (0, o.Of)(n.getRecipientId()),
-                r = e === g.ULH.PROFILE;
+                r = e === p.ULH.PROFILE;
             return (
                 (0, a.TY)({
                     displayProfile: i,

@@ -9,8 +9,8 @@ var i,
     d = n.n(c),
     u = n(663993),
     m = n(770146),
-    g = n(772096),
-    p = n(428595),
+    p = n(772096),
+    g = n(428595),
     h = n(532901),
     f = n(204227),
     b = n(283574);
@@ -61,8 +61,8 @@ function E(e, t) {
         e
     );
 }
-let j = new RegExp('https?://'.concat(null != (i = window.GLOBAL_ENV.CDN_HOST) ? i : ''));
-function C(e) {
+let C = new RegExp('https?://'.concat(null != (i = window.GLOBAL_ENV.CDN_HOST) ? i : ''));
+function j(e) {
     return 'string' == typeof e.content ? e.content : v(e.content);
 }
 let O = E(x({}, d().defaultRules), {
@@ -94,14 +94,14 @@ let O = E(x({}, d().defaultRules), {
         em: E(x({}, d().defaultRules.em), { order: 6 }),
         u: E(x({}, d().defaultRules.u), { order: 5 }),
         del: E(x({}, d().defaultRules.del), { order: 6 }),
-        link: E(x({}, g.ZP, (0, h.Z)({ enableBuildOverrides: !1 })), { order: 6 }),
+        link: E(x({}, p.ZP, (0, h.Z)({ enableBuildOverrides: !1 })), { order: 6 }),
         blockQuote: E(x({}, d().defaultRules.blockQuote), {
             react: (e, t, n) =>
                 (0, s.jsx)(
                     'blockquote',
                     {
                         className: f.blockquote,
-                        children: C(e)
+                        children: j(e)
                     },
                     n.key
                 )
@@ -114,19 +114,19 @@ let O = E(x({}, d().defaultRules), {
                 let r = i.match(e, t, n);
                 if (null != r && Array.isArray(r) && r.length >= 3) {
                     let e = r[2];
-                    if ('string' == typeof e) return null != e.match(j) ? r : null;
+                    if ('string' == typeof e) return null != e.match(C) ? r : null;
                 }
                 return !1;
             }
         }),
-        inlineCode: E(x({}, p.Z.RULES.inlineCode), {
+        inlineCode: E(x({}, g.Z.RULES.inlineCode), {
             order: 6,
             react: (e, t, n) =>
                 (0, s.jsx)(
                     'code',
                     {
                         className: f.codeInline,
-                        children: C(e)
+                        children: j(e)
                     },
                     n.key
                 )
@@ -139,7 +139,7 @@ let O = E(x({}, d().defaultRules), {
                         {
                             children: (0, s.jsx)('code', {
                                 className: o()(b.scrollbarGhostHairline, 'hljs'),
-                                children: C(e)
+                                children: j(e)
                             })
                         },
                         i.key

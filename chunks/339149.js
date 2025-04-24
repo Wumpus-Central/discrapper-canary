@@ -1,5 +1,5 @@
 n.d(t, {
-    E: () => I,
+    E: () => P,
     Z: () => w
 }),
     n(388685),
@@ -24,7 +24,7 @@ var r,
     O = n(981631),
     v = n(388032),
     C = n(496614);
-function j(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function j(e, t, n) {
         e
     );
 }
-function x(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,12 +48,12 @@ function x(e) {
                 })
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
 }
-let S = {
+let E = {
     [O.vxO.INSTALLING]: {
         [f.J6.NONE]: (e, t) => v.intl.formatToPlainString(v.t['p+2sEx'], { name: e }),
         [f.J6.SECONDS]: (e, t) =>
@@ -109,7 +109,7 @@ let S = {
             })
     }
 };
-class E extends l.PureComponent {
+class x extends l.PureComponent {
     renderText() {
         let { state: e, isPaused: t } = this.props;
         if (e.type === O.vxO.UPDATING || e.type === O.vxO.REPAIRING || e.type === O.vxO.INSTALLING) {
@@ -129,13 +129,13 @@ class E extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            j(this, 'renderProgressBody', (e, t) => {
+            S(this, 'renderProgressBody', (e, t) => {
                 let { state: n, application: r } = this.props,
                     { stage: i, progress: l, total: o, type: s } = n;
                 if (null == l || null == o || null == i) return null;
                 let a = (e[e.length - 1] / t) * 1000,
                     c = 0 !== a ? Math.max(1, (o - l) / a) : null,
-                    u = S[s],
+                    u = E[s],
                     d = null != u ? Object.keys(u) : [],
                     { unit: h, time: p } = (0, f.CI)(null != c ? c / 60 : null, d);
                 if (null != u && null != h) {
@@ -146,7 +146,7 @@ class E extends l.PureComponent {
             });
     }
 }
-class P extends (r = l.PureComponent) {
+class I extends (r = l.PureComponent) {
     componentWillAppear(e) {
         this.state.animationScale.setValue(1), e();
     }
@@ -166,7 +166,7 @@ class P extends (r = l.PureComponent) {
         let { firstApplication: e, firstState: t, isPaused: n } = this.props;
         return null == e || null == t
             ? v.intl.string(v.t.cw57am)
-            : (0, i.jsx)(E, {
+            : (0, i.jsx)(x, {
                   application: e,
                   state: t,
                   isPaused: n
@@ -186,7 +186,7 @@ class P extends (r = l.PureComponent) {
                     var r, l;
                     return (0, i.jsx)(
                         'div',
-                        ((r = x({}, n)),
+                        ((r = j({}, n)),
                         (l = l =
                             {
                                 children: (0, i.jsx)(h._3P, {
@@ -219,24 +219,24 @@ class P extends (r = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            j(this, 'state', { animationScale: new a.Z.Value(0) }),
-            j(this, 'handleOnClick', (e) => {
+            S(this, 'state', { animationScale: new a.Z.Value(0) }),
+            S(this, 'handleOnClick', (e) => {
                 let { onClick: t } = this.props;
                 e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, g.uL)(O.Z5c.APPLICATION_LIBRARY);
             });
     }
 }
-function I(e, t) {
+function P(e, t) {
     return e.reduce((e, n) => {
         let { applicationId: r, branchId: i } = n,
             l = t.getState(r, i);
         return null != l && e.push(l), e;
     }, []);
 }
-j(P, 'defaultProps', { strokeSize: h._3P.StrokeSizes.MEDIUM });
+S(I, 'defaultProps', { strokeSize: h._3P.StrokeSizes.MEDIUM });
 let w = c.ZP.connectStores([b.Z, m.Z, p.Z], () => {
     let e = b.Z.activeItems,
-        t = I(e, m.Z),
+        t = P(e, m.Z),
         { total: n, progress: r } = y.lK(t);
     return {
         percent: y.xI(r, n),
@@ -268,7 +268,7 @@ let w = c.ZP.connectStores([b.Z, m.Z, p.Z], () => {
     return t
         ? (0, i.jsx)(d.W, {
               component: l.Fragment,
-              children: n.percent > 0 && n.percent < 100 ? (0, i.jsx)(P, x({}, n)) : null
+              children: n.percent > 0 && n.percent < 100 ? (0, i.jsx)(I, j({}, n)) : null
           })
-        : (0, i.jsx)(P, x({}, n));
+        : (0, i.jsx)(I, j({}, n));
 });

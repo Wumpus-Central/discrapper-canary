@@ -1,4 +1,4 @@
-n.d(t, { g: () => C }), n(539854);
+n.d(t, { g: () => j }), n(539854);
 var i = n(200651);
 n(192379);
 var r = n(442837),
@@ -10,23 +10,23 @@ var r = n(442837),
     d = n(598077),
     u = n(246946),
     m = n(594174),
-    g = n(626135),
-    p = n(51144),
+    p = n(626135),
+    g = n(51144),
     h = n(480387),
     f = n(726745),
     b = n(251423),
     _ = n(383832),
     x = n(981631),
     E = n(388032),
-    j = n(965695);
-function C(e) {
+    C = n(965695);
+function j(e) {
     let t = (0, r.e7)([m.default], () => m.default.getCurrentUser()),
         n = (0, r.e7)([u.Z], () => u.Z.hidePersonalInformation),
-        C = (0, r.e7)([c.Z], () => (0, s.wj)(c.Z.theme)),
+        j = (0, r.e7)([c.Z], () => (0, s.wj)(c.Z.theme)),
         O = (0, o.R6)('useMultiAccountMenuItems'),
         { multiAccountUsers: S } = (0, b.L)(),
         v = (e) => {
-            e !== (null == t ? void 0 : t.id) && (g.default.track(x.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: x.jXE.USER_PROFILE } }), h.yD(e));
+            e !== (null == t ? void 0 : t.id) && (p.default.track(x.rMx.MULTI_ACCOUNT_SWITCH_ATTEMPT, { location: { section: x.jXE.USER_PROFILE } }), h.yD(e));
         },
         T = S.map((r) => {
             let s = new d.Z(r),
@@ -37,11 +37,11 @@ function C(e) {
                 l.sNh,
                 {
                     id: s.id,
-                    focusedClassName: j.focused,
+                    focusedClassName: C.focused,
                     label: (e) => {
                         let { isFocused: t } = e;
                         return (0, i.jsxs)('div', {
-                            className: j.userMenuItem,
+                            className: C.userMenuItem,
                             children: [
                                 (0, i.jsx)(l.qEK, {
                                     src: s.getAvatarURL(void 0, 40),
@@ -49,19 +49,19 @@ function C(e) {
                                     'aria-label': r.username
                                 }),
                                 (0, i.jsxs)('div', {
-                                    className: j.userMenuUsername,
+                                    className: C.userMenuUsername,
                                     children: [
                                         (0, i.jsx)(l.Text, {
-                                            className: j.userMenuText,
+                                            className: C.userMenuText,
                                             variant: 'text-sm/normal',
-                                            children: p.ZP.getUserTag(s, {
+                                            children: g.ZP.getUserTag(s, {
                                                 mode: 'username',
                                                 identifiable: n ? 'never' : 'always'
                                             })
                                         }),
                                         !s.isPomelo() &&
                                             (0, i.jsx)(l.Text, {
-                                                className: j.userMenuDiscriminator,
+                                                className: C.userMenuDiscriminator,
                                                 variant: 'text-sm/normal',
                                                 children: u
                                             })
@@ -71,15 +71,15 @@ function C(e) {
                                     (0, i.jsx)(l.owK, {
                                         size: 'sm',
                                         color: (0, a.Lq)(t ? x.Ilk.WHITE_500 : x.Ilk.BRAND_500),
-                                        secondaryColor: (0, a.Lq)((t && C) || (t && !O && !C) ? x.Ilk.BRAND_500 : x.Ilk.WHITE_500),
-                                        className: j.activeIcon
+                                        secondaryColor: (0, a.Lq)((t && j) || (t && !O && !j) ? x.Ilk.BRAND_500 : x.Ilk.WHITE_500),
+                                        className: C.activeIcon
                                     }),
                                 c &&
                                     (0, i.jsx)(l.P4T, {
                                         color: (0, a.Lq)(x.Ilk.RED_400),
-                                        secondaryColor: (0, a.Lq)((t && C) || (t && !O && !C) ? x.Ilk.BRAND_500 : x.Ilk.WHITE_500),
+                                        secondaryColor: (0, a.Lq)((t && j) || (t && !O && !j) ? x.Ilk.BRAND_500 : x.Ilk.WHITE_500),
                                         size: 'xs',
-                                        className: j.activeIcon
+                                        className: C.activeIcon
                                     })
                             ]
                         });

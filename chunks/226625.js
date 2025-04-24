@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(442837),
     u = n(481060),
     m = n(607070),
-    g = n(536837);
-let p = {
+    p = n(536837);
+let g = {
     mass: 10,
     tension: 550,
     friction: 140
@@ -37,7 +37,7 @@ function h(e) {
     let [b, _] = (0, u.q_F)(() => ({
         x: 0,
         y: 0,
-        config: p
+        config: g
     }));
     return (
         r.useEffect(() => {
@@ -50,7 +50,7 @@ function h(e) {
             style: {
                 transform: (0, c.to)([b.x, b.y], (e, t) => 'translate3d('.concat(e, 'px, ').concat(t, 'px, 0)'))
             },
-            className: l()(g.background, t)
+            className: l()(p.background, t)
         })
     );
 }

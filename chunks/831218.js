@@ -19,12 +19,12 @@ var r,
     O = n(313201),
     v = n(540059),
     C = n(860144),
-    j = n(214852),
-    x = n(518311),
-    S = n(355298),
-    E = n(869404),
-    P = n(333984),
-    I = n(210887),
+    S = n(214852),
+    j = n(518311),
+    E = n(355298),
+    x = n(869404),
+    I = n(333984),
+    P = n(210887),
     w = n(592125),
     N = n(158776),
     Z = n(55589),
@@ -428,7 +428,7 @@ class G extends (r = l.Component) {
                                       className: D.headerText,
                                       children: R.intl.string(R.t.YUU0RE)
                                   }),
-                                  (0, i.jsx)(x.Z, {
+                                  (0, i.jsx)(j.Z, {
                                       tooltip: R.intl.string(R.t['6Urw1t']),
                                       tooltipPosition: 'top',
                                       popoutAlign: 'left',
@@ -471,23 +471,23 @@ let B = (e) => {
         { version: o, theme: s, children: d, showDMHeader: p } = e,
         g = l.Children.count(d),
         m = w.Z.getMutablePrivateChannels(),
-        b = (0, E.k1)(m),
+        b = (0, x.k1)(m),
         y = (0, u.Wu)(
-            [Z.Z, S.Z, P.Z],
+            [Z.Z, E.Z, I.Z],
             () => {
                 let e = Z.Z.getPrivateChannelIds();
-                return (0, E.tU)(e, [S.Z, P.Z]);
+                return (0, x.tU)(e, [E.Z, I.Z]);
             },
             []
         );
-    (0, j.z)(C.R);
-    let _ = (0, u.cj)([f.Z, I.Z, w.Z], () => ({
-            theme: I.Z.darkSidebar ? A.BRd.DARK : s,
+    (0, S.z)(C.R);
+    let _ = (0, u.cj)([f.Z, P.Z, w.Z], () => ({
+            theme: P.Z.darkSidebar ? A.BRd.DARK : s,
             keyboardModeEnabled: f.Z.keyboardModeEnabled,
             version: null != o ? ''.concat(o, ':').concat(w.Z.getPrivateChannelsVersion()) : w.Z.getPrivateChannelsVersion()
         })),
-        x = l.useRef(null),
-        N = null != (t = e.listScrollerRef) ? t : x,
+        j = l.useRef(null),
+        N = null != (t = e.listScrollerRef) ? t : j,
         T = l.useCallback(
             (e) => {
                 let t = N.current,

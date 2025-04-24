@@ -9,22 +9,22 @@ var i = n(200651),
     d = n(355467),
     u = n(179360),
     m = n(881052),
-    g = n(128069),
-    p = n(100527),
+    p = n(128069),
+    g = n(100527),
     h = n(906732),
     f = n(600164),
     b = n(431369),
     _ = n(210887),
     x = n(78839),
     E = n(74538),
-    j = n(388032),
-    C = n(485312);
+    C = n(388032),
+    j = n(485312);
 async function O(e, t, n, i) {
     await (0, u.bG)(n), await (0, d.Mg)(e, { items: (0, E.MY)(e, t) }, i);
 }
 function S(e) {
     let { premiumSubscription: t, guildBoostSlotId: n, onNext: s, onClose: d } = e,
-        [u, p] = r.useState(!1),
+        [u, g] = r.useState(!1),
         x = (0, a.e7)([_.Z], () => _.Z.theme),
         { analyticsLocations: S } = (0, h.ZP)(),
         [v, T] = r.useState(null);
@@ -35,20 +35,20 @@ function S(e) {
                 children: [
                     (0, i.jsx)(c.vwX, {
                         tag: c.RB0.H4,
-                        children: j.intl.string(j.t.l52ih4)
+                        children: C.intl.string(C.t.l52ih4)
                     }),
                     (0, i.jsx)(c.olH, { onClick: d })
                 ]
             }),
             (0, i.jsxs)(c.hzk, {
-                className: C.body,
+                className: j.body,
                 children: [
                     null !== v &&
                         (0, i.jsx)(c.kzN, {
-                            className: C.error,
+                            className: j.error,
                             children: v
                         }),
-                    j.intl.string(j.t.DY2CXl)
+                    C.intl.string(C.t.DY2CXl)
                 ]
             }),
             (0, i.jsxs)(c.mzw, {
@@ -57,23 +57,23 @@ function S(e) {
                     (0, i.jsx)(c.zxk, {
                         onClick: async () => {
                             try {
-                                p(!0), T(null);
+                                g(!0), T(null);
                                 let e = (0, b.g)(t, 1);
                                 l()((0, E.uV)(e) <= (0, E.uV)(t.additionalPlans), 'Uncanceling should not increase the number of guild subscriptions'), await O(t, e, n, S), s();
                             } catch (t) {
                                 let e = t instanceof m.HF ? t : new m.HF(t, t.code);
-                                T(j.intl.string(e.code === g.SM.BILLING_PAUSE_INVALID_UPDATE ? j.t.dq4vq6 : j.t['5mlOCQ'])), p(!1);
+                                T(C.intl.string(e.code === p.SM.BILLING_PAUSE_INVALID_UPDATE ? C.t.dq4vq6 : C.t['5mlOCQ'])), g(!1);
                             }
                         },
                         submitting: u,
-                        children: j.intl.string(j.t.etZP4O)
+                        children: C.intl.string(C.t.etZP4O)
                     }),
                     (0, i.jsx)(c.zxk, {
                         look: c.zxk.Looks.LINK,
                         color: (0, o.ap)(x) ? c.zxk.Colors.PRIMARY : c.zxk.Colors.WHITE,
                         onClick: d,
                         disabled: u,
-                        children: j.intl.string(j.t.oEAioK)
+                        children: C.intl.string(C.t.oEAioK)
                     })
                 ]
             })
@@ -89,19 +89,19 @@ function v(e) {
                 children: [
                     (0, i.jsx)(c.vwX, {
                         tag: c.RB0.H4,
-                        children: j.intl.string(j.t.H9QUAA)
+                        children: C.intl.string(C.t.H9QUAA)
                     }),
                     (0, i.jsx)(c.olH, { onClick: t })
                 ]
             }),
             (0, i.jsxs)(c.hzk, {
-                className: C.body,
-                children: [(0, i.jsx)('div', { className: C.uncancelImage }), (0, i.jsx)('div', { children: j.intl.string(j.t.G27uHR) })]
+                className: j.body,
+                children: [(0, i.jsx)('div', { className: j.uncancelImage }), (0, i.jsx)('div', { children: C.intl.string(C.t.G27uHR) })]
             }),
             (0, i.jsx)(c.mzw, {
                 children: (0, i.jsx)(c.zxk, {
                     onClick: t,
-                    children: j.intl.string(j.t.BddRzc)
+                    children: C.intl.string(C.t.BddRzc)
                 })
             })
         ]
@@ -110,12 +110,12 @@ function v(e) {
 function T(e) {
     let t,
         { guildBoostSlotId: n, transitionState: s, onClose: l } = e,
-        { analyticsLocations: o } = (0, h.ZP)(p.Z.GUILD_BOOST_UNCANCELLATION_MODAL);
+        { analyticsLocations: o } = (0, h.ZP)(g.Z.GUILD_BOOST_UNCANCELLATION_MODAL);
     r.useEffect(() => {
         x.ZP.hasFetchedSubscriptions() || (0, d.jg)();
     }, []);
     let u = (0, a.e7)([x.ZP], () => x.ZP.getPremiumTypeSubscription()),
-        [m, g] = r.useState(1);
+        [m, p] = r.useState(1);
     if (null == u) t = (0, i.jsx)(c.hzk, { children: (0, i.jsx)(c.$jN, {}) });
     else
         switch (m) {
@@ -123,7 +123,7 @@ function T(e) {
                 t = (0, i.jsx)(S, {
                     premiumSubscription: u,
                     guildBoostSlotId: n,
-                    onNext: () => g(2),
+                    onNext: () => p(2),
                     onClose: l
                 });
                 break;

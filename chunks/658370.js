@@ -10,14 +10,14 @@ var r = n(120356),
     d = n(639119),
     u = n(404615),
     m = n(743612),
-    g = n(409100),
-    p = n(474936),
+    p = n(409100),
+    g = n(474936),
     h = n(388032),
     f = n(344253);
 let b = (e) => {
     var t;
     let n,
-        { title: r, titleClassName: b = '', buttonClassName: _ = '', subtitle: x = '', description: E = '', descriptionCta: j = '', isPremiumGetCta: C, onCtaClick: O, cardVariant: S } = e,
+        { title: r, titleClassName: b = '', buttonClassName: _ = '', subtitle: x = '', description: E = '', descriptionCta: C = '', isPremiumGetCta: j, onCtaClick: O, cardVariant: S } = e,
         v = (0, d.N)(),
         T = null == v ? void 0 : v.subscription_trial,
         I = (0, c.Ng)(),
@@ -43,22 +43,22 @@ let b = (e) => {
                 subtitle: x,
                 description: E
             }),
-            C &&
-                (0, i.jsx)(g.Z, {
+            j &&
+                (0, i.jsx)(p.Z, {
                     className: _,
                     look: l.zxk.Looks.BLANK,
                     color: l.zxk.Colors.CUSTOM,
-                    subscriptionTier: p.Si.TIER_2,
+                    subscriptionTier: g.Si.TIER_2,
                     buttonText: y,
                     showGradient: !0
                 }),
-            0 !== j.length &&
+            0 !== C.length &&
                 (null == (n = null == A ? void 0 : A.descriptionCta) ? void 0 : n.hideOnHoverComponent) !== !0 &&
                 null != O &&
                 (0, i.jsx)(l.zxk, {
                     className: _,
                     onClick: O,
-                    children: j
+                    children: C
                 })
         ]
     });

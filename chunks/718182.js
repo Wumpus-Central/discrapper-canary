@@ -9,10 +9,10 @@ var r = n(200651),
     u = n(129293),
     d = n(388905),
     h = n(703656),
-    g = n(108427),
-    p = n(981631),
-    m = n(388032),
-    f = n(20493);
+    p = n(108427),
+    g = n(981631),
+    f = n(388032),
+    m = n(20493);
 function _(e) {
     let { location: t, transitionTo: l = h.uL } = e,
         [o, _] = i.useState('submitting');
@@ -20,12 +20,12 @@ function _(e) {
         return 'Android' === s().os.family || 'iOS' === s().os.family
             ? null
             : (0, r.jsx)(d.zx, {
-                  onClick: () => l(p.Z5c.LOGIN, { source: 'authorizeIPAdress' }),
-                  children: m.intl.string(m.t.dKhVQE)
+                  onClick: () => l(g.Z5c.LOGIN, { source: 'authorizeIPAdress' }),
+                  children: f.intl.string(f.t.dKhVQE)
               });
     }
     return ((0, c.ZP)(() => {
-        (0, g.e)('authorize_ip');
+        (0, p.e)('authorize_ip');
         let e = (0, u.Z)(t);
         if (null == e) return void _('failed');
         (async () => {
@@ -42,15 +42,15 @@ function _(e) {
                   (0, r.jsx)('img', {
                       alt: '',
                       src: n(262467),
-                      className: f.marginBottom20
+                      className: m.marginBottom20
                   }),
                   (0, r.jsx)(d.Dx, {
-                      className: f.marginBottom8,
-                      children: m.intl.string(m.t['f/54a2'])
+                      className: m.marginBottom8,
+                      children: f.intl.string(f.t['f/54a2'])
                   }),
                   (0, r.jsx)(d.DK, {
-                      className: f.marginBottom40,
-                      children: m.intl.string(m.t.i3ehMj)
+                      className: m.marginBottom40,
+                      children: f.intl.string(f.t.i3ehMj)
                   }),
                   x()
               ]
@@ -61,21 +61,21 @@ function _(e) {
                     (0, r.jsx)('img', {
                         alt: '',
                         src: n(640356),
-                        className: f.marginBottom20
+                        className: m.marginBottom20
                     }),
                     (0, r.jsx)(d.Dx, {
-                        className: f.marginBottom8,
-                        children: m.intl.string(m.t.iG0SlJ)
+                        className: m.marginBottom8,
+                        children: f.intl.string(f.t.iG0SlJ)
                     }),
                     (0, r.jsx)(d.DK, {
-                        className: f.marginBottom40,
-                        children: m.intl.string(m.t['Elv+qq'])
+                        className: m.marginBottom40,
+                        children: f.intl.string(f.t['Elv+qq'])
                     }),
                     x()
                 ]
             })
           : (0, r.jsxs)(d.ZP, {
-                children: [(0, r.jsx)(d.Hh, {}), (0, r.jsx)(d.Dx, { children: m.intl.string(m.t['9exy+f']) })]
+                children: [(0, r.jsx)(d.Hh, {}), (0, r.jsx)(d.Dx, { children: f.intl.string(f.t['9exy+f']) })]
             });
 }
 o.ZP.initialize();

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var i = n(200651),
     r = n(192379),
     s = n(120356),
@@ -9,9 +9,9 @@ var i = n(200651),
     d = n(906732),
     u = n(892001),
     m = n(772599);
-let g = (e) => {
-    let { userId: t, children: n, isLast: s, className: g } = e,
-        [p, h] = r.useState(!1),
+let p = (e) => {
+    let { userId: t, children: n, isLast: s, className: p } = e,
+        [g, h] = r.useState(!1),
         { analyticsLocations: f } = (0, d.ZP)(),
         b = r.useCallback(() => {
             (0, u.openUserProfileModal)({
@@ -63,9 +63,9 @@ let g = (e) => {
                     })(
                         {
                             style: { opacity: 1 },
-                            className: l()(m.rowItem, g, {
+                            className: l()(m.rowItem, p, {
                                 [m.last]: s,
-                                [m.active]: p
+                                [m.active]: g
                             }),
                             onMouseEnter: _,
                             onMouseLeave: x,
@@ -73,7 +73,7 @@ let g = (e) => {
                         },
                         e
                     )),
-                    (r = r = { children: n(p) }),
+                    (r = r = { children: n(g) }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                         : (function (e, t) {

@@ -88,13 +88,13 @@ function y(e, t) {
     let { analyticsLocations: y } = (0, s.ZP)(),
         [_, O] = i.useState(!1),
         [v, C] = i.useState(void 0),
-        j = (0, l.e7)([h.Z], () => {
+        S = (0, l.e7)([h.Z], () => {
             var t, n;
             return null != (n = null == (t = h.Z.getStateForGuild(e)) ? void 0 : t.appliedBoosts) ? n : 0;
         }),
-        x = (0, l.e7)([u.Z], () => u.Z.getGuild(e)),
-        S = Math.max((null != (m = null == x ? void 0 : x.premiumSubscriberCount) ? m : 0) - j, 0),
-        E = i.useCallback(
+        j = (0, l.e7)([u.Z], () => u.Z.getGuild(e)),
+        E = Math.max((null != (m = null == j ? void 0 : j.premiumSubscriberCount) ? m : 0) - S, 0),
+        x = i.useCallback(
             (n) => {
                 let r = n ? d.H6 : d.Th;
                 return (
@@ -112,21 +112,21 @@ function y(e, t) {
             },
             [e, t.skuId]
         ),
-        P = i.useCallback(
+        I = i.useCallback(
             (e) => {
-                if ((e.stopPropagation(), null != x))
-                    return S < t.cost
+                if ((e.stopPropagation(), null != j))
+                    return E < t.cost
                         ? void (0, a.u)({
                               analyticsLocation: {
                                   page: f.ZY5.GUILD_POWERUPS_OVERVIEW,
                                   section: f.jXE.GUILD_POWERUPS_OVERVIEW_CARD
                               },
-                              numberOfBoostsToAdd: t.cost - S,
+                              numberOfBoostsToAdd: t.cost - E,
                               analyticsLocations: y,
-                              guild: x,
+                              guild: j,
                               intent: t.type === p.Us.LEVEL ? c.P.LEVEL : c.P.PERK,
                               onSubscribeComplete: () =>
-                                  E(!0).then(() => {
+                                  x(!0).then(() => {
                                       (0, o.ZDy)(async () => {
                                           let { default: e } = await n.e('13965').then(n.bind(n, 666083));
                                           return (n) =>
@@ -134,7 +134,7 @@ function y(e, t) {
                                                   e,
                                                   g(
                                                       {
-                                                          guildId: x.id,
+                                                          guildId: j.id,
                                                           powerup: t
                                                       },
                                                       n
@@ -143,7 +143,7 @@ function y(e, t) {
                                       });
                                   })
                           })
-                        : E(!0).then(() => {
+                        : x(!0).then(() => {
                               (0, o.ZDy)(async () => {
                                   let { default: e } = await n.e('13965').then(n.bind(n, 666083));
                                   return (n) =>
@@ -151,7 +151,7 @@ function y(e, t) {
                                           e,
                                           g(
                                               {
-                                                  guildId: x.id,
+                                                  guildId: j.id,
                                                   powerup: t
                                               },
                                               n
@@ -160,14 +160,14 @@ function y(e, t) {
                               });
                           });
             },
-            [E, t, S, y, x]
+            [x, t, E, y, j]
         ),
-        I = i.useCallback((e) => (e.stopPropagation(), E(!1)), [E]);
+        P = i.useCallback((e) => (e.stopPropagation(), x(!1)), [x]);
     return {
         isLoading: _,
         error: v,
-        onActivate: P,
-        onDeactivate: I,
+        onActivate: I,
+        onDeactivate: P,
         onShowDeactivate: i.useCallback(
             (i) => {
                 i.stopPropagation(),

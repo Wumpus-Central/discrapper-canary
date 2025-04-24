@@ -19,7 +19,7 @@ var r = n(200651),
 let O = (e) => {
     let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: O } = e,
         [v, C] = (0, i.useState)(!1),
-        j = (function (e) {
+        S = (function (e) {
             let { isForceShowSharingPopout: t } = e,
                 { rtcPopoutEnabled: n } = (0, g.SN)('SharingPrivacyPopout'),
                 { rtcPopoutEnabled: r } = (0, g.m_)('SharingPrivacyPopout'),
@@ -35,11 +35,11 @@ let O = (e) => {
             }
             return c && n && !o ? (t ? m.N.Activity : m.N.ActivityNux) : null;
         })({ isForceShowSharingPopout: n }),
-        x = (0, i.useRef)(null);
+        j = (0, i.useRef)(null);
     return ((0, i.useEffect)(() => {
         n && f.default.track(b.rMx.OPEN_POPOUT, { type: 'SharingPrivacyPopout' });
     }, [n]),
-    null != j || v)
+    null != S || v)
         ? (0, r.jsx)(c.ZP, {
               contentTypes: n ? [] : [o.z.SHARE_ACTIVITY_COACHMARK_V2],
               children: (e) => {
@@ -49,7 +49,7 @@ let O = (e) => {
                           (0, a.EW)(o.z.SHARE_ACTIVITY_COACHMARK_V2, { dismissAction: y.L.USER_DISMISS }), O(!1), C(!1);
                       };
                       return (0, r.jsx)(s.yRy, {
-                          targetElementRef: x,
+                          targetElementRef: j,
                           shouldShow: !0,
                           spacing: -2,
                           position: 'top',
@@ -60,12 +60,12 @@ let O = (e) => {
                               return (0, r.jsx)(m.I, {
                                   closePopout: t,
                                   onOpen: () => C(!0),
-                                  popoutState: j
+                                  popoutState: S
                               });
                           },
                           children: () =>
                               (0, r.jsx)(s.P3F, {
-                                  innerRef: x,
+                                  innerRef: j,
                                   onClick: e,
                                   children: t
                               })

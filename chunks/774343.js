@@ -9,8 +9,8 @@ var i,
     d = n(570140),
     u = n(592125),
     m = n(896797),
-    g = n(430824),
-    p = n(944486),
+    p = n(430824),
+    g = n(944486),
     h = n(55589),
     f = n(981631);
 let b = (null != (a = null == (l = window) || null == (s = l.location) ? void 0 : s.pathname) ? a : '').startsWith(f.Z5c.ACTIVITIES) ? f.Z5c.ACTIVITIES : null;
@@ -21,7 +21,7 @@ function _(e) {
 }
 class x extends (o = c.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, h.Z, p.Z, g.Z, u.Z);
+        this.waitFor(m.Z, h.Z, g.Z, p.Z, u.Z);
     }
     getHomeLink() {
         return null != b ? b : m.Z.fallbackRoute;
@@ -39,7 +39,7 @@ class x extends (o = c.ZP.Store) {
 let E = new x(d.Z, {
     OVERLAY_INITIALIZE: function () {
         let e = h.Z.getPrivateChannelIds(),
-            t = p.Z.getChannelId(f.ME);
+            t = g.Z.getChannelId(f.ME);
         (null != t || null != e[0]) && (b = f.Z5c.CHANNEL(f.ME, null != t ? t : e[0]));
     },
     APP_VIEW_SET_HOME_LINK: _,

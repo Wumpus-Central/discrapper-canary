@@ -1,7 +1,7 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r,
-    i,
     s,
+    i,
     o = n(442837),
     l = n(570140);
 let a = {},
@@ -43,16 +43,16 @@ class m extends (r = o.ZP.Store) {
         return d;
     }
 }
-(s = 'AppliedGuildBoostStore'),
-    (i = 'displayName') in m
-        ? Object.defineProperty(m, i, {
-              value: s,
+(i = 'AppliedGuildBoostStore'),
+    (s = 'displayName') in m
+        ? Object.defineProperty(m, s, {
+              value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (m[i] = s);
-let h = new m(l.Z, {
+        : (m[s] = i);
+let v = new m(l.Z, {
     GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: function (e) {
         let { guildId: t, appliedBoosts: n } = e;
         a[t] = {

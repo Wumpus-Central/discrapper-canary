@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(716161),
     u = n(634041),
     m = n(647177),
-    g = n(672339),
-    p = n(898531),
+    p = n(672339),
+    g = n(898531),
     h = n(636188),
     f = n(678916),
     b = n(981631),
     _ = n(869783),
     x = n(388032),
     E = n(635968);
-function j(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -42,7 +42,7 @@ function j(e) {
     }
     return e;
 }
-function C(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,7 +64,7 @@ function O(e) {
     let { onLearnMore: t, selectedBackgroundOption: O, onSelectBackgroundOption: S, currentDeviceId: v, smallerBackgroundOptions: T, className: I } = e,
         N = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
         [y, A] = r.useState(null),
-        P = (0, p.Z)(),
+        P = (0, g.Z)(),
         R = c.ZP.canUseCustomBackgrounds(N);
     r.useEffect(() => {
         (0, d.XV)();
@@ -83,14 +83,14 @@ function O(e) {
     }),
         r.useEffect(() => {
             let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = L.current;
-            e ? (0, g.FU)(n, v, { track: !1 }).catch(() => t(null)) : null != n && t(null);
+            e ? (0, p.FU)(n, v, { track: !1 }).catch(() => t(null)) : null != n && t(null);
         }, [v]);
     let B = (e) => {
         S(e),
-            (0, g.FU)(e, v, { location: w.location })
+            (0, p.FU)(e, v, { location: w.location })
                 .then(() => A(null))
                 .catch(() => {
-                    A(x.intl.string(x.t.ejrSLS)), (0, g.FU)(null, v, { location: w.location });
+                    A(x.intl.string(x.t.ejrSLS)), (0, p.FU)(null, v, { location: w.location });
                 });
     };
     return P
@@ -115,9 +115,9 @@ function O(e) {
                               return (n) =>
                                   (0, i.jsx)(
                                       e,
-                                      C(j({}, n), {
+                                      j(C({}, n), {
                                           onLearnMore: t,
-                                          analyticsSource: C(j({}, w.location), { object: b.qAy.BUTTON_CTA })
+                                          analyticsSource: j(C({}, w.location), { object: b.qAy.BUTTON_CTA })
                                       })
                                   );
                           });

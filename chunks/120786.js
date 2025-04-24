@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(607070),
     u = n(70097),
     m = n(507808),
-    g = n(981631),
-    p = n(388032),
+    p = n(981631),
+    g = n(388032),
     h = n(350298),
     f = n(806539),
     b = n(477154),
@@ -44,13 +44,13 @@ let x = () => {
         });
     },
     E = (e) => {
-        let { ctaText: t, ctaOnClick: n, analyticsPage: s, linkPreText: a = p.intl.string(p.t['5qZv9P']), linkText: d = p.intl.string(p.t.XRdyj4) } = e,
+        let { ctaText: t, ctaOnClick: n, analyticsPage: s, linkPreText: a = g.intl.string(g.t['5qZv9P']), linkText: d = g.intl.string(g.t.XRdyj4) } = e,
             u = r.useCallback(() => {
                 null != s &&
                     (0, m.Y)({
                         pageType: s,
-                        sectionType: g.jXE.ORBS_BALANCE_MENU,
-                        ctaObject: g.qAy.ORBS_LEARN_MORE_LINK
+                        sectionType: p.jXE.ORBS_BALANCE_MENU,
+                        ctaObject: p.qAy.ORBS_LEARN_MORE_LINK
                     });
             }, [s]);
         return (0, i.jsxs)('div', {
@@ -83,7 +83,7 @@ let x = () => {
                         (0, i.jsx)(c.eee, {
                             target: '_blank',
                             rel: 'author',
-                            href: g.yXt.HELP_ARTICLE_ORBS_FAQ,
+                            href: p.yXt.HELP_ARTICLE_ORBS_FAQ,
                             className: h.learnMoreLink,
                             onClick: u,
                             children: d

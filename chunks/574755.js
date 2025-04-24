@@ -9,24 +9,24 @@ var i = n(200651),
     d = n(441167),
     u = n(695346),
     m = n(131951),
-    g = n(924557),
-    p = n(435064),
+    p = n(924557),
+    g = n(435064),
     h = n(779618),
     f = n(39604),
     b = n(703288),
     _ = n(491758),
     x = n(233685),
     E = n(388032),
-    j = n(922284),
-    C = n(802454),
+    C = n(922284),
+    j = n(802454),
     O = n(20493);
 function S(e) {
     let { className: t, showHeader: n = !0 } = e,
         S = u.tU.useSetting(),
         { enableViewerClipping: v } = d.Z.useExperiment({ location: 'Clips Settings' }, { autoTrackExposure: !1 }),
         { analyticsLocations: T } = (0, o.ZP)(),
-        I = (0, g.Go)(),
-        { viewerClipsEnabled: N } = (0, s.cj)([p.Z], () => p.Z.getSettings()),
+        I = (0, p.Go)(),
+        { viewerClipsEnabled: N } = (0, s.cj)([g.Z], () => g.Z.getSettings()),
         y = (0, h.Z)(m.Z);
     return (
         r.useEffect(() => {
@@ -41,7 +41,7 @@ function S(e) {
                         tag: a.RB0.H1,
                         title: n
                             ? (0, i.jsxs)('div', {
-                                  className: j.headerContainer,
+                                  className: C.headerContainer,
                                   children: [E.intl.string(E.t.z2jK6e), (0, i.jsx)(b.Z, {})]
                               })
                             : null,
@@ -58,7 +58,7 @@ function S(e) {
                     children: [
                         (0, i.jsx)(a.j7V, {
                             hideBorder: !0,
-                            className: C.formItem,
+                            className: j.formItem,
                             value: S,
                             note: E.intl.string(E.t['wW9/zc']),
                             onChange: (e) => f.yg({ allowVoiceRecording: e }),
@@ -68,7 +68,7 @@ function S(e) {
                             y &&
                             (0, i.jsx)(a.j7V, {
                                 hideBorder: !0,
-                                className: C.formItem,
+                                className: j.formItem,
                                 value: N,
                                 note: E.intl.string(E.t['0vjy8P']),
                                 onChange: (e) =>

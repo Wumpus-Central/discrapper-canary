@@ -14,8 +14,8 @@ var r = n(200651),
     v = n(214629),
     b = n(317381),
     h = n(16609),
-    j = n(781780),
-    O = n(325749),
+    O = n(781780),
+    j = n(325749),
     x = n(981631),
     y = n(921944),
     g = n(578809);
@@ -144,7 +144,7 @@ function _() {
                           children: [
                               (0, r.jsx)('div', {
                                   className: g.headerContainer,
-                                  children: (0, r.jsx)(O.Z, {
+                                  children: (0, r.jsx)(j.Z, {
                                       applicationId: d.id,
                                       channelId: t
                                   })
@@ -152,7 +152,7 @@ function _() {
                               (0, r.jsx)('div', {
                                   className: g.iframeContainer,
                                   children: (0, r.jsx)(P, {
-                                      children: (0, r.jsx)(j.Z, {
+                                      children: (0, r.jsx)(O.Z, {
                                           channelId: t,
                                           guildId: n,
                                           embeddedActivity: e,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685), n(539854);
+n.d(t, { Z: () => P }), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -19,12 +19,12 @@ var r = n(200651),
     O = n(449932),
     v = n(561788),
     C = n(876548),
-    j = n(543432),
-    x = n(981631),
-    S = n(388032),
-    E = n(642317),
-    P = n(656855);
-function I(e) {
+    S = n(543432),
+    j = n(981631),
+    E = n(388032),
+    x = n(642317),
+    I = n(656855);
+function P(e) {
     var t, l;
     let { channel: o, guild: p, onAction: f, voiceStates: g, isChannelSelected: b, shouldShowSettingNudge: _ } = e,
         v = i.useMemo(() => {
@@ -44,16 +44,16 @@ function I(e) {
         }, [o, g]);
     (0, c.$)(v);
     let C = (0, u.ZP)(o),
-        j = Array.from((0, u.uF)(C).values()),
-        P = null != (t = null == g ? void 0 : g.filter(y.lm)) ? t : [],
-        I = (e) => (t) => ([x.IIU.PLAYING, x.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === x.IIU.LISTENING,
+        S = Array.from((0, u.uF)(C).values()),
+        I = null != (t = null == g ? void 0 : g.filter(y.lm)) ? t : [],
+        P = (e) => (t) => ([j.IIU.PLAYING, j.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === j.IIU.LISTENING,
         N = (0, s.e7)(
             [m.Z],
             () => {
                 let e = {};
                 return (
-                    P.forEach((t) => {
-                        let n = m.Z.findActivity(t.user.id, I(t));
+                    I.forEach((t) => {
+                        let n = m.Z.findActivity(t.user.id, P(t));
                         if (null != n && !(0, h.Z)(n)) {
                             var r, i, l, o;
                             let s = ''.concat(null != (i = n.application_id) ? i : '', ':').concat(null != (l = null == (r = n.party) ? void 0 : r.id) ? l : t.user.id),
@@ -64,27 +64,27 @@ function I(e) {
                                               members: [],
                                               activity: n
                                           };
-                            a.members.push(t), (0, d.Z)(a.activity, x.xjy.JOIN) || (a.activity = n), (e[s] = a);
+                            a.members.push(t), (0, d.Z)(a.activity, j.xjy.JOIN) || (a.activity = n), (e[s] = a);
                         }
                     }),
                     Object.values(e)
                 );
             },
-            [P],
+            [I],
             s.pF
         );
-    return N.length + j.length === 0
+    return N.length + S.length === 0
         ? null
         : (0, r.jsxs)(a.Ttm, {
-              className: E.container,
+              className: x.container,
               children: [
                   (0, r.jsx)(w, {
                       channel: o,
                       isChannelSelected: b,
                       voiceStatesCount: null != (l = null == g ? void 0 : g.length) ? l : 0
                   }),
-                  (0, r.jsx)('div', { className: E.headerDivider }),
-                  j.map((e, t) => {
+                  (0, r.jsx)('div', { className: x.headerDivider }),
+                  S.map((e, t) => {
                       var n;
                       return (0, r.jsx)(
                           O.Z,
@@ -113,13 +113,13 @@ function I(e) {
                   _ &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)('div', { className: E.headerDivider }),
+                              (0, r.jsx)('div', { className: x.headerDivider }),
                               (0, r.jsx)('div', {
-                                  className: E.settingNudgeText,
+                                  className: x.settingNudgeText,
                                   children: (0, r.jsx)(a.Text, {
                                       variant: 'text-xs/normal',
                                       tag: 'span',
-                                      children: S.intl.format(S.t.ePyoY2, {
+                                      children: E.intl.format(E.t.ePyoY2, {
                                           onClick: () => {
                                               (0, a.ZDy)(async () => {
                                                   let { default: e } = await n.e('59500').then(n.bind(n, 241420));
@@ -180,7 +180,7 @@ function I(e) {
 }
 function w(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: i } = e,
-        l = (0, s.e7)([g.Z], () => !g.Z.can(x.Plq.CONNECT, t)),
+        l = (0, s.e7)([g.Z], () => !g.Z.can(j.Plq.CONNECT, t)),
         a = (0, s.e7)([b.Z], () => b.Z.hasVideo(t.id)),
         c = (0, _.ZP)({
             channel: t,
@@ -192,7 +192,7 @@ function w(e) {
     return null == (0, p.KS)(t, u)
         ? null
         : (0, r.jsxs)('div', {
-              className: o()(E.popoutHeaderContainer, P.popoutHeaderContainer),
+              className: o()(x.popoutHeaderContainer, I.popoutHeaderContainer),
               children: [
                   (0, r.jsx)(v.Z, { channel: t }),
                   c
@@ -201,7 +201,7 @@ function w(e) {
                             video: a,
                             channel: t
                         })
-                      : (0, r.jsx)(j.Z, { userCount: i })
+                      : (0, r.jsx)(S.Z, { userCount: i })
               ]
           });
 }

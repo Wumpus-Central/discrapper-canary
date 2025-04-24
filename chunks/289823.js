@@ -139,8 +139,8 @@ let v = {
             {
                 statusCoords: E,
                 frontAvatarOffsetPx: C,
-                frontAvatarSizePx: O,
-                backAvatarSizePx: P
+                frontAvatarSizePx: P,
+                backAvatarSizePx: O
             } = a.useMemo(() => {
                 var e;
                 let t = ''.concat(S, '-').concat(m);
@@ -206,8 +206,8 @@ let v = {
                         (0, r.jsx)('img', {
                             src: n,
                             alt: '',
-                            width: P,
-                            height: P
+                            width: O,
+                            height: O
                         }),
                         (0, r.jsx)('div', {
                             style: {
@@ -217,7 +217,7 @@ let v = {
                             },
                             children: (0, r.jsx)(b, {
                                 src: i,
-                                size: O,
+                                size: P,
                                 isTyping: m,
                                 status: p
                             })

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(539854);
+n.d(t, { Z: () => j }), n(388685), n(539854);
 var i = n(200651),
     r = n(192379),
     s = n(442837),
@@ -9,22 +9,22 @@ var i = n(200651),
     d = n(243778),
     u = n(731722),
     m = n(993413),
-    g = n(996073),
-    p = n(594174),
+    p = n(996073),
+    g = n(594174),
     h = n(583899),
     f = n(981631),
     b = n(921944),
     _ = n(526761),
     x = n(388032),
     E = n(805589);
-let j = (0, c.hQ)(),
-    C = r.memo(function (e) {
+let C = (0, c.hQ)(),
+    j = r.memo(function (e) {
         let { availableClans: t } = e,
             [n, c] = (0, d.US)([l.z.GUILD_TAG_USER_PROFILE_NEW_BADGE]),
-            C = r.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
-            O = (0, s.e7)([p.default], () => {
+            j = r.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
+            O = (0, s.e7)([g.default], () => {
                 var e;
-                return (0, u.Pb)(null == (e = p.default.getCurrentUser()) ? void 0 : e.primaryGuild).guildId;
+                return (0, u.Pb)(null == (e = g.default.getCurrentUser()) ? void 0 : e.primaryGuild).guildId;
             }),
             S = r.useMemo(
                 () =>
@@ -45,7 +45,7 @@ let j = (0, c.hQ)(),
                 (e) => {
                     var t, n, r;
                     if (null == e) return null;
-                    let s = C.get(e.value);
+                    let s = j.get(e.value);
                     if (null == s) return null;
                     let l = null == (t = s.profile) ? void 0 : t.tag;
                     return null == l
@@ -59,7 +59,7 @@ let j = (0, c.hQ)(),
                               guildIconSize: 32
                           });
                 },
-                [C]
+                [j]
             ),
             T = r.useCallback(
                 (e) => {
@@ -81,10 +81,10 @@ let j = (0, c.hQ)(),
             }, [c]),
             P = r.useRef(null);
         return (
-            (0, g.Z)(P, _.Y_.GUILD_TAG),
+            (0, p.Z)(P, _.Y_.GUILD_TAG),
             (0, i.jsxs)(m.Z, {
                 title: x.intl.string(x.t.Pdd1nZ),
-                titleId: j,
+                titleId: C,
                 ref: P,
                 titleIcon:
                     n === l.z.GUILD_TAG_USER_PROFILE_NEW_BADGE &&

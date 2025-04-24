@@ -13,24 +13,24 @@ var i = n(913527),
     d = n(594190),
     u = n(553795),
     m = n(77498),
-    g = n(283595),
-    p = n(823379),
+    p = n(283595),
+    g = n(823379),
     h = n(981631),
     f = n(701488);
 function b() {
-    let e = (0, s.Wu)([d.ZP, m.Z, g.Z], () =>
+    let e = (0, s.Wu)([d.ZP, m.Z, p.Z], () =>
             d.ZP.getGamesSeen(!1)
-                .filter((e) => !!(0, d.FZ)(e, [d.ZP, m.Z, g.Z]).detectable && null != e.lastLaunched && 30 >= r()().diff(e.lastLaunched, 'days'))
+                .filter((e) => !!(0, d.FZ)(e, [d.ZP, m.Z, p.Z]).detectable && null != e.lastLaunched && 30 >= r()().diff(e.lastLaunched, 'days'))
                 .map((e) => {
                     var t, n;
                     return null != (n = e.id) ? n : null == (t = m.Z.getGameByGameData(e)) ? void 0 : t.id;
                 })
         ),
         t = e.length,
-        n = e.filter(p.lm).slice(0, t > 4 ? 3 : 4);
+        n = e.filter(g.lm).slice(0, t > 4 ? 3 : 4);
     return {
         assets: (0, c.Z)(n)
-            .filter(p.lm)
+            .filter(g.lm)
             .map((e) => {
                 var t;
                 return {

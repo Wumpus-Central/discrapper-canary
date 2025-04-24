@@ -9,7 +9,7 @@ var i = n(200651),
 let d = r.forwardRef(function (e, t) {
     var n,
         r,
-        { currentPageIndex: s, numPages: d, onChangePage: u, children: m, className: g, showPageCount: p = !0 } = e,
+        { currentPageIndex: s, numPages: d, onChangePage: u, children: m, className: p, showPageCount: g = !0 } = e,
         h = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -59,7 +59,7 @@ let d = r.forwardRef(function (e, t) {
             return e;
         })(
             {
-                className: l()(c.__invalid_paginator, g),
+                className: l()(c.__invalid_paginator, p),
                 ref: t
             },
             h
@@ -82,7 +82,7 @@ let d = r.forwardRef(function (e, t) {
                                     'aria-label': o.intl.string(o.t.vgfxaG)
                                 })
                             }),
-                            p
+                            g
                                 ? (0, i.jsx)('div', {
                                       className: c.pageIndicator,
                                       children: o.intl.format(o.t.MtpIws, {

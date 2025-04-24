@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(634894),
     u = n(410030),
     m = n(100527),
-    g = n(906732),
-    p = n(975298),
+    p = n(906732),
+    g = n(975298),
     h = n(15640),
     f = n(594174),
     b = n(78839),
     _ = n(74538),
     x = n(775412),
     E = n(104494),
-    j = n(639119),
-    C = n(230916),
+    C = n(639119),
+    j = n(230916),
     O = n(346497),
     S = n(823188),
     v = n(21023),
@@ -143,7 +143,7 @@ let k = () => {
         var t;
         let n,
             { className: s, hideCTAs: P = !1, headingOverride: R, hidePill: D = !1, selectedPlanColumnClassName: Z, selectedPlanTier: V = N.p9.TIER_2 } = e,
-            { analyticsLocations: G } = (0, g.ZP)(m.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
+            { analyticsLocations: G } = (0, p.ZP)(m.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
             F = (0, a.e7)([b.ZP], () => b.ZP.hasFetchedSubscriptions()),
             H = (0, h.V)(),
             z = 'PlanComparisonTable';
@@ -159,16 +159,16 @@ let k = () => {
             Y = (0, o.ap)(W),
             K = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
             q = (0, _.M5)(K, N.p9.TIER_2),
-            X = (0, j.N)(),
+            X = (0, C.N)(),
             Q = null == X || null == (t = X.subscription_trial) ? void 0 : t.sku_id,
             J = (0, x.rT)(),
             $ = (0, E.Ng)(),
             ee = null != $ && (0, E.Wp)($, N.Si.TIER_2),
-            et = (0, C.A)(N.Xh.PREMIUM_MONTH_TIER_2),
+            et = (0, j.A)(N.Xh.PREMIUM_MONTH_TIER_2),
             en = ''.concat(et, '/').concat((0, _.eP)(N.rV.MONTH)),
             ei = (0, _.CY)(N.Xh.PREMIUM_MONTH_TIER_0),
             er = (0, _.CY)(N.Xh.PREMIUM_MONTH_TIER_2),
-            es = (0, p.Z)(),
+            es = (0, g.Z)(),
             el = (0, v.n)(ei, er, ee, en, es.fractionalState),
             ea = (0, O.Vi)();
         if (!F || !H) return null;
@@ -258,7 +258,7 @@ let k = () => {
                     ? (0, i.jsx)(k, {})
                     : (0, i.jsx)(L, {}));
         let ec = Q === N.Si.TIER_0 || J === N.p9.TIER_0 || V === N.p9.TIER_0;
-        return (0, i.jsx)(g.Gt, {
+        return (0, i.jsx)(p.Gt, {
             value: G,
             children: (0, i.jsxs)('div', {
                 className: l()(A.root, s),

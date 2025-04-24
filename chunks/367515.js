@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(880257),
     u = n(631885),
     m = n(933970),
-    g = n(340453),
-    p = n(292352),
+    p = n(340453),
+    g = n(292352),
     h = n(332495),
     f = n(388032),
     b = n(708734);
@@ -61,57 +61,57 @@ function E(e) {
     let { user: t } = e,
         s = (0, d.Z)(),
         E = (0, u.VM)(),
-        j = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
-        C = r.useCallback(() => {
-            l()(void 0 !== j, 'User must be logged in to accept a link request'),
+        C = (0, a.e7)([c.default], () => c.default.getCurrentUser()),
+        j = r.useCallback(() => {
+            l()(void 0 !== C, 'User must be logged in to accept a link request'),
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('59716').then(n.bind(n, 275370));
                     return (n) =>
                         (0, i.jsx)(
                             e,
                             x(_({}, n), {
-                                currentUser: j,
+                                currentUser: C,
                                 otherUser: t
                             })
                         );
                 });
-        }, [j, t]),
+        }, [C, t]),
         O = r.useCallback(() => {
-            l()(void 0 !== j, 'User must be logged in to decline a link request'),
+            l()(void 0 !== C, 'User must be logged in to decline a link request'),
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('958').then(n.bind(n, 4526));
                     return (n) =>
                         (0, i.jsx)(
                             e,
                             x(_({}, n), {
-                                currentUser: j,
+                                currentUser: C,
                                 otherUser: t
                             })
                         );
                 });
-        }, [j, t]),
+        }, [C, t]),
         S = r.useCallback(() => {
-            l()(void 0 !== j, 'User must be logged in to decline a link request'),
+            l()(void 0 !== C, 'User must be logged in to decline a link request'),
                 (0, o.ZDy)(async () => {
                     let { default: e } = await n.e('69015').then(n.bind(n, 247265));
                     return (n) =>
                         (0, i.jsx)(
                             e,
                             x(_({}, n), {
-                                currentUser: j,
+                                currentUser: C,
                                 otherUser: t
                             })
                         );
                 });
-        }, [j, t]);
+        }, [C, t]);
     return (0, i.jsxs)('div', {
         className: b.container,
         children: [
             (0, i.jsx)('div', {
                 className: b.details,
-                children: (0, i.jsx)(g.Z, {
+                children: (0, i.jsx)(p.Z, {
                     otherUser: t,
-                    status: p.ne.PENDING
+                    status: g.ne.PENDING
                 })
             }),
             (0, i.jsx)('div', {
@@ -131,7 +131,7 @@ function E(e) {
                                         icon: o.dz2,
                                         className: b.__invalid_actionAccept,
                                         tooltip: f.intl.string(h.default.krWQZG),
-                                        onClick: C
+                                        onClick: j
                                     }),
                               (0, i.jsx)(m.Z, {
                                   icon: o.Dio,

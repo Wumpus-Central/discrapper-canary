@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(355467),
     u = n(179360),
     m = n(821849),
-    g = n(15640),
-    p = n(899667),
+    p = n(15640),
+    g = n(899667),
     h = n(853872),
     f = n(78839),
     b = n(783739),
@@ -26,9 +26,9 @@ function E() {
             hasFetchedSubscriptions: f.ZP.hasFetchedSubscriptions(),
             premiumSubscription: f.ZP.getPremiumTypeSubscription()
         })),
-        n = (0, g.V)(),
+        n = (0, p.V)(),
         s = (0, a.e7)([h.Z], () => h.Z.hasFetchedPaymentSources),
-        E = (0, a.e7)([p.Z], () => p.Z.isFetchingCurrentUserAppliedBoosts);
+        E = (0, a.e7)([g.Z], () => g.Z.isFetchingCurrentUserAppliedBoosts);
     return e && n && s && !E
         ? (0, i.jsxs)('div', {
               className: x.container,

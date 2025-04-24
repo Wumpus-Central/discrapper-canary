@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(838436),
     u = n(51331),
     m = n(703115),
-    g = n(526761),
-    p = n(726985),
+    p = n(526761),
+    g = n(726985),
     h = n(736530),
     f = n(981631),
     b = n(388032);
 function _(e) {
     let { ingress: t, guildId: n } = e,
         c = o.SE.useSetting().includes(n),
-        g = r.useCallback(
+        p = r.useCallback(
             (e) => {
                 let i = (0, a._o)();
                 e ? i.delete(n) : i.add(n),
@@ -33,17 +33,17 @@ function _(e) {
     return n === h.T
         ? null
         : (0, i.jsx)(d.U, {
-              setting: p.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_STATUS_V2,
+              setting: g.s6.PRIVACY_SERVER_SPECIFIC_PRIVACY_ACTIVITY_STATUS_V2,
               children: (0, i.jsx)(u.Z, {
                   title: b.intl.string(b.t.IQO6Bg),
                   value: !c,
-                  onChange: g,
+                  onChange: p,
                   note: b.intl.format(b.t.v03Xpq, { helpdeskArticle: l.Z.getArticleURL(f.BhN.ACTIVITY_STATUS_SETTINGS) })
               })
           });
 }
 function x(e) {
-    let { ingress: t = g.f4.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = e,
+    let { ingress: t = p.f4.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = e,
         r = (0, c.is)();
     return (0, i.jsx)(_, {
         ingress: t,

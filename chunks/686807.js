@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(200651);
 n(192379);
-var i = n(481060),
-    s = n(201895),
+var s = n(481060),
+    i = n(201895),
     o = n(471445),
     l = n(823379),
     a = n(303737),
@@ -13,10 +13,10 @@ function f(e) {
     let { channelId: t } = e,
         n = (0, a.m7)(t);
     if (null == n) return '['.concat(u.intl.string(u.t.bz1PZW), ']');
-    let l = n.isMediaChannel() ? i.XBm : (0, o.Th)(n.type);
+    let l = n.isMediaChannel() ? s.XBm : (0, o.Th)(n.type);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(i.nn4, { children: (0, s.ZP)({ channel: n }) }),
+            (0, r.jsx)(s.nn4, { children: (0, i.ZP)({ channel: n }) }),
             (0, r.jsxs)('div', {
                 'aria-hidden': !0,
                 children: [

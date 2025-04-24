@@ -10,13 +10,13 @@ var r = n(120356),
     d = n(220082),
     u = n(687158),
     m = n(576635),
-    g = n(74538),
-    p = n(193528),
+    p = n(74538),
+    g = n(193528),
     h = n(993413),
     f = n(388032),
     b = n(732391);
 function _(e) {
-    let { user: t, pendingAvatarSrc: n, pendingColors: r, onThemeColorsChange: l, preventDisabled: _, guildId: x, className: E, showPremiumIcon: j = !0, showResetThemeButton: C = !1, forcedDivider: O } = e,
+    let { user: t, pendingAvatarSrc: n, pendingColors: r, onThemeColorsChange: l, preventDisabled: _, guildId: x, className: E, showPremiumIcon: C = !0, showResetThemeButton: j = !1, forcedDivider: O } = e,
         S = (0, u.ZP)(t.id, x),
         { primaryColor: v, secondaryColor: T } = (0, m.Z)({
             user: t,
@@ -24,7 +24,7 @@ function _(e) {
             pendingThemeColors: r,
             isPreview: !0
         }),
-        I = g.ZP.canUsePremiumProfileCustomization(t),
+        I = p.ZP.canUsePremiumProfileCustomization(t),
         N = null != n ? n : t.getAvatarURL(x, 80),
         y = (0, c.dQu)(o.Z.unsafe_rawColors.PRIMARY_530).hex(),
         A = (0, d.Cf)(N, y, !1);
@@ -36,14 +36,14 @@ function _(e) {
         title: f.intl.string(f.t.DMeO2d),
         disabled: !I && !_,
         className: s()(b.__invalid_profileThemesSection, E),
-        showPremiumIcon: j,
+        showPremiumIcon: C,
         forcedDivider: O,
         children: (0, i.jsxs)('div', {
             className: b.sectionContainer,
             children: [
                 (0, i.jsx)('div', {
                     className: b.sparkleContainer,
-                    children: (0, i.jsx)(p.Z, {
+                    children: (0, i.jsx)(g.Z, {
                         onChange: (e) => P([e, T]),
                         color: v,
                         suggestedColors: A,
@@ -59,7 +59,7 @@ function _(e) {
                 }),
                 (0, i.jsx)('div', {
                     className: b.sparkleContainer,
-                    children: (0, i.jsx)(p.Z, {
+                    children: (0, i.jsx)(g.Z, {
                         onChange: (e) => P([v, e]),
                         color: T,
                         suggestedColors: A,
@@ -73,7 +73,7 @@ function _(e) {
                         })
                     })
                 }),
-                C &&
+                j &&
                     null != x &&
                     (0, i.jsx)(c.zxk, {
                         className: b.resetButton,

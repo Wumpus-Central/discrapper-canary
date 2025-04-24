@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(539854);
+n.d(t, { Z: () => S }), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -127,46 +127,46 @@ function C(e) {
         })
     );
 }
-function j(e) {
+function S(e) {
     let { onActivate: t } = e,
         n = (0, u.Q3)('PendingGuildJoinRequestsFolderNode'),
-        [l, j] = i.useState(!1),
-        x = (0, s.e7)([f.Z], () => f.Z.getGuildId()),
-        S = (0, s.e7)([p.Z], () => p.Z.hasFetchedRequestToJoinGuilds),
-        E = (0, b.Z)(),
-        P = (0, c.Z)(x),
-        I = i.useMemo(() => {
+        [l, S] = i.useState(!1),
+        j = (0, s.e7)([f.Z], () => f.Z.getGuildId()),
+        E = (0, s.e7)([p.Z], () => p.Z.hasFetchedRequestToJoinGuilds),
+        x = (0, b.Z)(),
+        I = (0, c.Z)(j),
+        P = i.useMemo(() => {
             let e = (0, m.qQ)({
                 folderId: g.S.PENDING_JOIN_REQUESTS_FOLDER,
                 folderName: O.intl.string(O.t['scsU+v']),
                 expanded: l,
                 guildIds: []
             });
-            for (let t of E) e.children.push((0, m.Mg)(t, e.id));
+            for (let t of x) e.children.push((0, m.Mg)(t, e.id));
             return e;
-        }, [E, l]);
+        }, [x, l]);
     i.useEffect(() => {
-        l && !S && d.Z.fetchRequestToJoinGuilds();
-    }, [l, S]);
-    let w = null != x && E.includes(x);
+        l && !E && d.Z.fetchRequestToJoinGuilds();
+    }, [l, E]);
+    let w = null != j && x.includes(j);
     return (i.useEffect(() => {
-        !l && w && P !== x && j(!0);
-    }, [l, w, P, x]),
-    0 === E.length)
+        !l && w && I !== j && S(!0);
+    }, [l, w, I, j]),
+    0 === x.length)
         ? null
         : (0, r.jsx)(C, {
               onActivate: t,
               children: (0, r.jsx)('div', {
                   className: o()({ [v.folderWrapperCollapsed]: !l }),
                   children: (0, r.jsx)(y.Z, {
-                      folderNode: I,
+                      folderNode: P,
                       expanded: l,
                       useCircleMask: !l && !w,
                       selected: w,
                       draggable: !1,
                       sorting: !1,
                       onExpandCollapse: () => {
-                          j(!l), h.ZP.clearCoachmark();
+                          S(!l), h.ZP.clearCoachmark();
                       },
                       folderIconContentClassName: v.folderIconContent,
                       folderIconContent: (0, r.jsx)(a.wGF, {

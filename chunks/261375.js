@@ -9,8 +9,8 @@ var i = n(768433),
     d = n(496675),
     u = n(386438),
     m = n(287328),
-    g = n(458772);
-function p(e, t, n) {
+    p = n(458772);
+function g(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -135,7 +135,7 @@ let b = new (class {
     }
     unsync(e, t) {
         var n;
-        null == (n = this.synced) || n.delete(e), m.Z.basicChannelsTransaction(t).delete(e), m.Z.syncedBasicChannelsTransaction(t).put(e, !1), g.Z.invalidate(e);
+        null == (n = this.synced) || n.delete(e), m.Z.basicChannelsTransaction(t).delete(e), m.Z.syncedBasicChannelsTransaction(t).put(e, !1), p.Z.invalidate(e);
     }
     sync(e) {
         h.verbose('Starting to write all basic channels');
@@ -169,8 +169,8 @@ let b = new (class {
         );
     }
     constructor() {
-        p(this, 'synced', null),
-            p(this, 'actions', {
+        g(this, 'synced', null),
+            g(this, 'actions', {
                 BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
                 CHANNEL_CREATE: (e, t) => this.handleChannelCreate(e, t),
                 CHANNEL_DELETE: (e, t) => this.handleChannelDelete(e, t),

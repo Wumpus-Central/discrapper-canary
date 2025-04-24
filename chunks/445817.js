@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(716161),
     u = n(672339),
     m = n(747545),
-    g = n(131951),
-    p = n(594174),
+    p = n(131951),
+    g = n(594174),
     h = n(981631),
     f = n(388032),
     b = n(959963);
@@ -20,12 +20,12 @@ let _ = {
 };
 function x(e) {
     let { previewEnabled: t, onEnablePreview: n, onCancelPreview: x } = e,
-        E = g.Z.getCameraComponent(),
-        [j, C] = r.useState((0, c.P)(p.default.getCurrentUser())),
+        E = p.Z.getCameraComponent(),
+        [C, j] = r.useState((0, c.P)(g.default.getCurrentUser())),
         O = r.useRef(!1),
-        S = r.useRef(j),
+        S = r.useRef(C),
         v = (0, o.O)(),
-        T = (0, s.e7)([g.Z], () => g.Z.isVideoAvailable());
+        T = (0, s.e7)([p.Z], () => p.Z.isVideoAvailable());
     return (
         r.useEffect(
             () => () => {
@@ -34,9 +34,9 @@ function x(e) {
             []
         ),
         (0, i.jsx)(m.Z, {
-            selectedBackgroundOption: j,
+            selectedBackgroundOption: C,
             onSelectBackgroundOption: (e) => {
-                (O.current = !0), (S.current = e), C(e), (0, u.wG)(e, { location: v.location }).catch(h.dG4);
+                (O.current = !0), (S.current = e), j(e), (0, u.wG)(e, { location: v.location }).catch(h.dG4);
             },
             onCancelPreview: x,
             renderCamera: (e) =>

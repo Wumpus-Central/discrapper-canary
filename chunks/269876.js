@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var i = n(200651),
     r = n(192379),
     s = n(120356),
@@ -9,27 +9,27 @@ var i = n(200651),
     d = n(692547),
     u = n(481060),
     m = n(846027),
-    g = n(313201),
-    p = n(131951),
+    p = n(313201),
+    g = n(131951),
     h = n(65154),
     f = n(388032),
     b = n(979385),
     _ = n(251574),
     x = n(893354),
     E = n(20493);
-let j = (0, g.hQ)();
-function C() {
+let C = (0, p.hQ)();
+function j() {
     let [e, t] = r.useState(-100),
         [n, s] = r.useState(!1),
-        { threshold: C, autoThreshold: O } = (0, a.cj)([p.Z], () => p.Z.getModeOptions()),
+        { threshold: j, autoThreshold: O } = (0, a.cj)([g.Z], () => g.Z.getModeOptions()),
         {
             inputMode: S,
             automaticVADSupported: v,
             isEnabled: T
-        } = (0, a.cj)([p.Z], () => ({
-            inputMode: p.Z.getMode(),
-            automaticVADSupported: p.Z.supports(h.AN.AUTOMATIC_VAD),
-            isEnabled: p.Z.isEnabled()
+        } = (0, a.cj)([g.Z], () => ({
+            inputMode: g.Z.getMode(),
+            automaticVADSupported: g.Z.supports(h.AN.AUTOMATIC_VAD),
+            isEnabled: g.Z.isEnabled()
         }));
     function I(e, n) {
         t(e), s((n & h.Dg.VOICE) === h.Dg.VOICE);
@@ -44,22 +44,22 @@ function C() {
         let e = new c.V7();
         return (
             e.start(1000, () => {
-                p.Z.getMediaEngine().on(o.aB.VoiceActivity, I), e.stop();
+                g.Z.getMediaEngine().on(o.aB.VoiceActivity, I), e.stop();
             }),
             () => {
-                p.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, I), e.stop();
+                g.Z.getMediaEngine().removeListener(o.aB.VoiceActivity, I), e.stop();
             }
         );
     }, []);
     let y = (0, i.jsx)('section', {
         className: l()(b.inputSensitivityToggle, b.manual),
         children: (0, i.jsx)(u.iRW, {
-            initialValue: C + 100,
+            initialValue: j + 100,
             onValueRender: (e) => ''.concat((-((100 - e) * 1)).toFixed(0), 'dB'),
             onValueChange: (e) => N(-((100 - e) * 1), O),
             barStyles: { background: d.Z.unsafe_rawColors.GREEN_360.css },
             fillStyles: { background: d.Z.unsafe_rawColors.YELLOW_300.css },
-            'aria-labelledby': j,
+            'aria-labelledby': C,
             children: (0, i.jsxs)('div', {
                 className: l()(b.sliderBar, b.microphone, b.inputSensitivityBar, _.bar),
                 children: [
@@ -90,11 +90,11 @@ function C() {
             })),
         (0, i.jsxs)(u.xJW, {
             title: f.intl.string(f.t['sqUm+v']),
-            titleId: j,
+            titleId: C,
             className: b.sensitivity,
             children: [
                 v &&
-                    (0, i.jsx)(g.FG, {
+                    (0, i.jsx)(p.FG, {
                         children: (e) =>
                             (0, i.jsxs)('div', {
                                 className: l()(x.horizontal, E.marginBottom4),
@@ -110,7 +110,7 @@ function C() {
                                     (0, i.jsx)(u.rsf, {
                                         id: e,
                                         checked: O,
-                                        onChange: (e) => N(C, e)
+                                        onChange: (e) => N(j, e)
                                     })
                                 ]
                             })

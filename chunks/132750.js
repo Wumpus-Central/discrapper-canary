@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(100527),
     u = n(906732),
     m = n(429467),
-    g = n(981631),
-    p = n(388032),
+    p = n(981631),
+    g = n(388032),
     h = n(493456);
 function f(e) {
     let { openModal: t, hasCustomStatus: n, className: r } = e,
@@ -24,25 +24,25 @@ function f(e) {
         onKeyDown: (e) => {
             ('Enter' === e.key || ' ' === e.key) && s(e);
         },
-        'aria-label': n ? p.intl.string(p.t.PwknJC) : p.intl.string(p.t.Vq4UmZ),
+        'aria-label': n ? g.intl.string(g.t.PwknJC) : g.intl.string(g.t.Vq4UmZ),
         children: [
             n ? (0, i.jsx)(a.vdY, { size: 'xxs' }) : (0, i.jsx)(a.oFk, { size: 'xxs' }),
             (0, i.jsx)(a.Text, {
                 variant: 'text-xs/medium',
-                children: n ? p.intl.string(p.t.PwknJC) : p.intl.string(p.t.Vq4UmZ)
+                children: n ? g.intl.string(g.t.PwknJC) : g.intl.string(g.t.Vq4UmZ)
             })
         ]
     });
 }
 function b(e) {
-    let { hovered: t, activities: s, user: l, applicationStream: p, voiceChannel: b } = e,
+    let { hovered: t, activities: s, user: l, applicationStream: g, voiceChannel: b } = e,
         { analyticsLocations: _ } = (0, u.ZP)(d.Z.RTC_PANEL),
         x =
             null == s
                 ? void 0
                 : s.find((e) => {
                       let { type: t } = e;
-                      return t === g.IIU.CUSTOM_STATUS;
+                      return t === p.IIU.CUSTOM_STATUS;
                   }),
         E = r.useCallback(() => {
             (0, a.ZDy)(async () => {
@@ -114,7 +114,7 @@ function b(e) {
                       children: (0, i.jsx)(o.Z, {
                           user: l,
                           activities: s,
-                          applicationStream: p,
+                          applicationStream: g,
                           voiceChannel: b,
                           hideTooltip: !0
                       })

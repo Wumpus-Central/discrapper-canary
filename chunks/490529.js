@@ -1,5 +1,5 @@
 n.d(t, {
-    X8: () => g,
+    X8: () => p,
     tI: () => m,
     uj: () => a
 }),
@@ -64,7 +64,7 @@ let a = () => {
             );
         });
     },
-    g = (e) =>
+    p = (e) =>
         ({
             [s.gkr.HOUSE_1]: l.intl.string(l.t.ORKdHR),
             [s.gkr.HOUSE_2]: l.intl.string(l.t.aKf3dn),

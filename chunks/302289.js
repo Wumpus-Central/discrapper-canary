@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(953529);
+n.d(t, { Z: () => g }), n(953529);
 var i = n(200651);
 n(192379);
 var r = n(120356),
@@ -10,8 +10,8 @@ var r = n(120356),
     d = n(388032),
     u = n(175875),
     m = n(589608),
-    g = n(128216);
-let p = () => {
+    p = n(128216);
+let g = () => {
     let e = (0, a.o)(d.intl.string(c.default.i4XFEB), d.intl.string(c.default.eHQZuL));
     return (0, i.jsxs)('div', {
         className: s()(u.container, m.box, m),
@@ -35,7 +35,7 @@ let p = () => {
             (0, i.jsx)('div', {
                 className: u.artContainer,
                 children: (0, i.jsx)('img', {
-                    src: g,
+                    src: p,
                     alt: d.intl.string(c.default.o4pfFB)
                 })
             })

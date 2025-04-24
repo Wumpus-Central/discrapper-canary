@@ -163,7 +163,7 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
                 c.length > 0 && a('Contains unrecognized files', c);
             });
     },
-    C = (e) => {
+    O = (e) => {
         let { files: t, addError: n, addWarning: a } = e;
         f({
             names: t.avatarDecorationFiles.map((e) => e.name),
@@ -171,7 +171,7 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
         }),
             j(r.aB.AVATAR_DECORATION, t.avatarDecorationFiles, n, a);
     },
-    O = (e, t, n) => {
+    C = (e, t, n) => {
         _({
             files: e,
             addError: n,
@@ -182,7 +182,7 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
                 addError: n,
                 addWarning: t
             }),
-            C({
+            O({
                 files: e,
                 addError: n,
                 addWarning: t
@@ -234,7 +234,7 @@ let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
                         let n = await p(t);
                         if (n.length > 0) return void d('Missing required directories', n);
                         let a = await (0, r.LY)([t]);
-                        O(a, u, d);
+                        C(a, u, d);
                     } finally {
                         t(!0);
                     }

@@ -21,16 +21,16 @@ var i = n(570140),
     d = n(815372),
     u = n(336197),
     m = n(359110),
-    g = n(769654),
-    p = n(722589),
+    p = n(769654),
+    g = n(722589),
     h = n(131704),
     f = n(592125),
     b = n(283595),
     _ = n(944486),
     x = n(914010),
     E = n(626135),
-    j = n(777754),
-    C = n(823385),
+    C = n(777754),
+    j = n(823385),
     O = n(981631),
     S = n(176505);
 function v(e) {
@@ -78,18 +78,18 @@ function y(e) {
     };
 }
 function A(e, t) {
-    let { results: n, queryMode: i, query: r, maxQueryLength: s } = C.Z.getProps(),
+    let { results: n, queryMode: i, query: r, maxQueryLength: s } = j.Z.getProps(),
         l = x.Z.getGuildId(),
         a = _.Z.getChannelId(l),
         o = n[(0, c.gJ)(c.a8.DOWN, -1, n)],
-        d = j.Z.isEmail(r),
-        u = j.Z.isPhoneNumber(r),
-        m = j.Z.isUserTagLike(r),
-        g = null != a && (0, S.AB)(a),
-        p = (e) => (null == e ? null : e.type === c.h8.IN_APP_NAVIGATION ? e.type + '_' + e.record.type : e.type),
+        d = C.Z.isEmail(r),
+        u = C.Z.isPhoneNumber(r),
+        m = C.Z.isUserTagLike(r),
+        p = null != a && (0, S.AB)(a),
+        g = (e) => (null == e ? null : e.type === c.h8.IN_APP_NAVIGATION ? e.type + '_' + e.record.type : e.type),
         b = {
-            current_channel_id: g ? void 0 : a,
-            current_channel_static_route: g ? a : void 0,
+            current_channel_id: p ? void 0 : a,
+            current_channel_static_route: p ? a : void 0,
             current_guild_id: l,
             query_mode: null != i ? i : 'GENERAL',
             query_length: r.length,
@@ -98,14 +98,14 @@ function A(e, t) {
             is_phone_like: u,
             is_username_like: m,
             query: d || u || m ? null : r,
-            top_result_type: p(o),
+            top_result_type: g(o),
             top_result_score: null != o ? o.score : null,
-            num_results_total: C.Z.getResultTotals(),
-            num_results_users: C.Z.getResultTotals(c.h8.USER),
-            num_results_text_channels: C.Z.getResultTotals(c.h8.TEXT_CHANNEL),
-            num_results_voice_channels: C.Z.getResultTotals(c.h8.VOICE_CHANNEL),
-            num_results_guilds: C.Z.getResultTotals(c.h8.GUILD),
-            num_results_group_dms: C.Z.getResultTotals(c.h8.GROUP_DM)
+            num_results_total: j.Z.getResultTotals(),
+            num_results_users: j.Z.getResultTotals(c.h8.USER),
+            num_results_text_channels: j.Z.getResultTotals(c.h8.TEXT_CHANNEL),
+            num_results_voice_channels: j.Z.getResultTotals(c.h8.VOICE_CHANNEL),
+            num_results_guilds: j.Z.getResultTotals(c.h8.GUILD),
+            num_results_group_dms: j.Z.getResultTotals(c.h8.GROUP_DM)
         };
     if (null != a) {
         let e = f.Z.getChannel(a);
@@ -113,7 +113,7 @@ function A(e, t) {
     }
     if (null != t) {
         let { type: e, score: i, record: r } = t;
-        switch (((b.selected_type = p(t)), (b.selected_score = i), (b.selected_index = n.indexOf(t)), e)) {
+        switch (((b.selected_type = g(t)), (b.selected_score = i), (b.selected_index = n.indexOf(t)), e)) {
             case c.h8.GUILD:
                 b.selected_guild_id = r.id;
                 break;
@@ -138,7 +138,7 @@ function R() {
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '';
     !(function (e) {
         let t;
-        if (C.Z.isOpen()) return;
+        if (j.Z.isOpen()) return;
         let n = x.Z.getGuildId(),
             i = _.Z.getChannelId(n);
         if (null != i) {
@@ -174,7 +174,7 @@ function k(e) {
         x = { page: O.ZY5.QUICK_SWITCHER };
     switch (h) {
         case c.h8.GUILD:
-            (0, g.X)(_.id, { navigationReplace: !0 });
+            (0, p.X)(_.id, { navigationReplace: !0 });
             break;
         case c.h8.TEXT_CHANNEL:
             null != (t = f.Z.getChannel(_.id)) &&
@@ -215,7 +215,7 @@ function k(e) {
             break;
         case c.h8.IN_APP_NAVIGATION:
             if (e.record.type === d.Ky.SETTINGS) {
-                let t = (0, p.default)(e.record.path);
+                let t = (0, g.default)(e.record.path);
                 null != t &&
                     o.Z.open(t.section, t.subsection, {
                         openWithoutBackstack: !1,

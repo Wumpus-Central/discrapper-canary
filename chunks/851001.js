@@ -9,23 +9,23 @@ var i = n(200651),
     d = n(70097),
     u = n(526167),
     m = n(140465),
-    g = n(104494),
-    p = n(639119),
+    p = n(104494),
+    g = n(639119),
     h = n(635921),
     f = n(474936),
     b = n(869783),
     _ = n(388032),
     x = n(601060),
     E = n(839526),
-    j = n(4046),
-    C = n(423741);
+    C = n(4046),
+    j = n(423741);
 let O = r.forwardRef((e, t) => {
     var n, s;
     let { className: O, isFooterVisible: S, isDarkMode: v, isReducedMotion: T, subscriptionTier: I } = e,
         { analyticsLocations: N } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_FOOTER_CTA),
-        y = (0, g.Ng)(),
-        A = (0, g.Wp)(y, f.Si.TIER_2) ? f.Si.TIER_2 : void 0,
-        P = (0, p.N)(),
+        y = (0, p.Ng)(),
+        A = (0, p.Wp)(y, f.Si.TIER_2) ? f.Si.TIER_2 : void 0,
+        P = (0, g.N)(),
         R = (0, m.Nx)(),
         D = (0, u.rO)(),
         Z = r.useRef(null),
@@ -58,14 +58,14 @@ let O = r.forwardRef((e, t) => {
                         children: (0, i.jsx)(d.Z, {
                             playsInline: !0,
                             preload: 'auto',
-                            poster: j.Z,
+                            poster: C.Z,
                             className: x.footerArt,
                             onEnded: () => {
                                 k(!0);
                             },
                             ref: Z,
                             children: (0, i.jsx)('source', {
-                                src: D ? E.Z : C.Z,
+                                src: D ? E.Z : j.Z,
                                 type: D ? b.m.MP4 : b.m.WEBM
                             })
                         })

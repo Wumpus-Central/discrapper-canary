@@ -9,7 +9,7 @@ var i = n(200651),
     d = n(981631),
     u = n(388032),
     m = n(962311);
-function g(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function g(e, t, n) {
         e
     );
 }
-let p = {
+let g = {
         [d.gkr.HOUSE_1]: m.membershipDialogHouse1,
         [d.gkr.HOUSE_2]: m.membershipDialogHouse2,
         [d.gkr.HOUSE_3]: m.membershipDialogHouse3
@@ -50,7 +50,7 @@ class _ extends r.Component {
         if (null != e) {
             let t = u.intl.formatToPlainString(u.t.yG0XAA, { houseName: (0, c.X8)(e) });
             return (0, i.jsx)('div', {
-                className: l()(m.membershipDialog, p[e]),
+                className: l()(m.membershipDialog, g[e]),
                 children: (0, i.jsxs)('div', {
                     className: m.membershipDialogContent,
                     children: [
@@ -144,7 +144,7 @@ class _ extends r.Component {
     }
     constructor(...e) {
         super(...e),
-            g(this, 'handleJoinHypeSquadClick', () => {
+            p(this, 'handleJoinHypeSquadClick', () => {
                 (0, a.ZDy)(async () => {
                     let { default: e } = await n.e('83264').then(n.bind(n, 711184));
                     return (t) =>
@@ -161,7 +161,7 @@ class _ extends r.Component {
                                             })
                                         )),
                                         i.forEach(function (t) {
-                                            g(e, t, n[t]);
+                                            p(e, t, n[t]);
                                         });
                                 }
                                 return e;

@@ -10,8 +10,8 @@ var r = n(120356),
     d = n(140465),
     u = n(474936),
     m = n(981631),
-    g = n(388032),
-    p = n(132383);
+    p = n(388032),
+    g = n(132383);
 let h = (e) => {
     let t,
         n,
@@ -19,15 +19,15 @@ let h = (e) => {
         _ = (0, d.Nx)();
     if (null == r) return null;
     let x = null != r ? c.ZP.getPremiumPlanItem(r) : null;
-    if ((c.ZP.isBoostOnlySubscription(r) ? (t = g.intl.string(g.t.Uj0md3)) : null != x && (t = c.ZP.getDisplayPremiumType(x.planId)), null == t)) return null;
+    if ((c.ZP.isBoostOnlySubscription(r) ? (t = p.intl.string(p.t.Uj0md3)) : null != x && (t = c.ZP.getDisplayPremiumType(x.planId)), null == t)) return null;
     let E = () => a.Z.open(m.oAB.SUBSCRIPTIONS),
-        j = (null != x ? c.ZP.getSkuIdForPlan(x.planId) : null) === u.Si.TIER_1;
+        C = (null != x ? c.ZP.getSkuIdForPlan(x.planId) : null) === u.Si.TIER_1;
     return (
         (n = null != b ? b : _ || f ? 'always-white' : 'text-normal'),
         (0, i.jsxs)(l.Zbd, {
-            className: s()(p.container, h, {
-                [p.lightTextLink]: f,
-                [p.centerText]: _
+            className: s()(g.container, h, {
+                [g.lightTextLink]: f,
+                [g.centerText]: _
             }),
             type: l.Zbd.Types.CUSTOM,
             children: [
@@ -36,17 +36,17 @@ let h = (e) => {
                     width: 20,
                     height: 20,
                     color: 'currentColor',
-                    className: s()(p.icon, { [p.lightThemeColorOnly]: _ || f })
+                    className: s()(g.icon, { [g.lightThemeColorOnly]: _ || f })
                 }),
                 (0, i.jsx)(l.Text, {
                     variant: 'text-sm/medium',
                     color: n,
-                    children: j
-                        ? g.intl.format(g.t['tYuv+f'], {
+                    children: C
+                        ? p.intl.format(p.t['tYuv+f'], {
                               helpdeskArticle: o.Z.getArticleURL(m.BhN.PREMIUM_DETAILS),
                               onSubscriptionsClick: E
                           })
-                        : g.intl.format(g.t.xHRgU1, {
+                        : p.intl.format(p.t.xHRgU1, {
                               subscriptionName: t,
                               onSubscriptionsClick: E
                           })

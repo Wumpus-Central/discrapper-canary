@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(846027),
     u = n(906732),
     m = n(687058),
-    g = n(253052),
-    p = n(463395),
+    p = n(253052),
+    g = n(463395),
     h = n(131951),
     f = n(358085),
     b = n(210887),
     _ = n(494620),
     x = n(962100),
     E = n(65154),
-    j = n(388032),
-    C = n(209782),
+    C = n(388032),
+    j = n(209782),
     O = n(20493);
 let S = f.isWindows() ? ['BTHENUM', 'BTHHFENUM'] : [];
 function v() {
@@ -38,7 +38,7 @@ function v() {
             outputDeviceId: h.Z.getOutputDeviceId()
         })),
         y = (0, m.Z)(),
-        A = (0, g.Z)(),
+        A = (0, p.Z)(),
         P = r.useMemo(() => {
             let e = l()(y).find((e) => e.id === I),
                 t = l()(A).find((e) => e.id === N),
@@ -56,13 +56,13 @@ function v() {
         (e = (0, i.jsx)(c.R94, {
             type: c.R94.Types.DESCRIPTION,
             className: O.marginTop8,
-            children: j.intl.format(j.t['1iK6UV'], { onDownloadClick: () => (0, x.y)('Help Text Input Devices') })
+            children: C.intl.format(C.t['1iK6UV'], { onDownloadClick: () => (0, x.y)('Help Text Input Devices') })
         })),
         T ||
             (t = (0, i.jsx)(c.R94, {
                 type: c.R94.Types.DESCRIPTION,
                 className: O.marginTop8,
-                children: j.intl.format(j.t.Ow0dbG, { onDownloadClick: () => (0, x.y)('Help Text Output Devices') })
+                children: C.intl.format(C.t.Ow0dbG, { onDownloadClick: () => (0, x.y)('Help Text Output Devices') })
             }));
     let R = l()(y).values().first(),
         D = null != R ? R.disabled : null != e,
@@ -71,22 +71,22 @@ function v() {
     function k(e) {
         let t,
             { label: r, value: s } = e;
-        if (p.Z.isCertified(s)) {
+        if (g.Z.isCertified(s)) {
             let e = (0, o.ap)(f) ? n(561259) : n(887695);
             t = (0, i.jsx)('img', {
                 src: e,
                 alt: 'Certified',
-                className: C.deviceOptionCertified
+                className: j.deviceOptionCertified
             });
         }
         return (0, i.jsxs)(
             'span',
             {
-                className: C.deviceOption,
+                className: j.deviceOption,
                 children: [
                     (0, i.jsx)('span', {
-                        className: C.deviceOptionLabel,
-                        children: p.Z.getCertifiedDeviceName(s, r)
+                        className: j.deviceOptionLabel,
+                        children: g.Z.getCertifiedDeviceName(s, r)
                     }),
                     t
                 ]
@@ -98,15 +98,15 @@ function v() {
         return k(e[0]);
     }
     return (0, i.jsxs)('div', {
-        className: C.devices,
+        className: j.devices,
         children: [
             (0, i.jsxs)('div', {
-                className: C.deviceColumns,
+                className: j.deviceColumns,
                 children: [
                     (0, i.jsx)('div', {
-                        className: C.column,
+                        className: j.column,
                         children: (0, i.jsxs)(c.xJW, {
-                            title: j.intl.string(j.t.hHMYbW),
+                            title: C.intl.string(C.t.hHMYbW),
                             children: [
                                 (0, i.jsx)(c.q4e, {
                                     value: I,
@@ -131,9 +131,9 @@ function v() {
                         })
                     }),
                     (0, i.jsx)('div', {
-                        className: C.column,
+                        className: j.column,
                         children: (0, i.jsxs)(c.xJW, {
-                            title: j.intl.string(j.t.dl18zc),
+                            title: C.intl.string(C.t.dl18zc),
                             children: [
                                 (0, i.jsx)(c.q4e, {
                                     value: N,
@@ -162,7 +162,7 @@ function v() {
             P &&
                 (0, i.jsx)(_.Z, {
                     look: _.z.WARNING,
-                    children: j.intl.string(j.t.Ioz3g4)
+                    children: C.intl.string(C.t.Ioz3g4)
                 })
         ]
     });

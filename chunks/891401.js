@@ -70,7 +70,7 @@ function j() {
             primaryColor: s,
             secondaryColor: v,
             tokenMixAmount: j,
-            linkColor: C
+            linkColor: O
         } = (0, c.cj)(
             [u.Z],
             () => {
@@ -86,7 +86,7 @@ function j() {
             },
             [n]
         ),
-        O = r.useCallback(
+        C = r.useCallback(
             (e) => {
                 null != n && (0, m.i)(n, { opacity: e });
             },
@@ -168,7 +168,7 @@ function j() {
                                 defaultValue: 1,
                                 minValue: 0,
                                 maxValue: 1,
-                                onValueChange: O
+                                onValueChange: C
                             },
                             'opacity-'.concat(l)
                         ),
@@ -264,7 +264,7 @@ function j() {
                         }),
                         (0, a.jsx)('input', {
                             type: 'color',
-                            value: C,
+                            value: O,
                             onChange: T
                         }),
                         (0, a.jsx)(d.zxk, {

@@ -13,13 +13,13 @@ function m() {
     let t = (0, r.e7)([a.Z], () => a.Z.getStatus()),
         n = null != (e = (0, o.u5)(t)) ? e : '',
         m = t === c.Sk.INVISIBLE || t === c.Sk.OFFLINE,
-        g = (0, l.V)({ location: 'UserProfileAccountPopoutMenuItemStatusLabel' });
+        p = (0, l.V)({ location: 'UserProfileAccountPopoutMenuItemStatusLabel' });
     return (0, i.jsxs)('div', {
         className: u.container,
         children: [
             n,
             n.length > 0 &&
-                g &&
+                p &&
                 m &&
                 (0, i.jsx)(s.ua7, {
                     text: d.intl.string(d.t.L99HQk),

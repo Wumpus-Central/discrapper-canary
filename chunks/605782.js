@@ -69,28 +69,28 @@ class u extends i.Component {
     render() {
         let e = this.props,
             { children: t, location: n, history: u, staticContext: d, match: h } = e,
-            g = c(e, ['children', 'location', 'history', 'staticContext', 'match']),
-            p = null,
-            m = null;
+            p = c(e, ['children', 'location', 'history', 'staticContext', 'match']),
+            g = null,
+            f = null;
         return (
             i.Children.forEach(t, (e) => {
-                if (null == p && i.isValidElement(e)) {
+                if (null == g && i.isValidElement(e)) {
                     let t = e.props,
                         { component: r, render: s } = t,
                         h = c(t, ['component', 'render']),
-                        g = h.path || h.from;
-                    null != (p = null != g ? (0, l.LX)(n.pathname, a(o({}, h), { path: g })) : null) &&
+                        p = h.path || h.from;
+                    null != (g = null != p ? (0, l.LX)(n.pathname, a(o({}, h), { path: p })) : null) &&
                         ((h = a(o({}, h), {
-                            key: g,
+                            key: p,
                             location: n,
-                            match: p,
+                            match: g,
                             history: u,
                             staticContext: d
                         })),
-                        null != r ? (m = i.createElement(r, h)) : null != s && (m = s(h)));
+                        null != r ? (f = i.createElement(r, h)) : null != s && (f = s(h)));
                 }
             }),
-            (0, r.jsx)(s.W, a(o({}, g), { children: m }))
+            (0, r.jsx)(s.W, a(o({}, p), { children: f }))
         );
     }
 }

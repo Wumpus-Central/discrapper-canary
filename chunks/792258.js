@@ -10,8 +10,8 @@ var r = n(120356),
     d = n(914788),
     u = n(981631),
     m = n(332495),
-    g = n(388032),
-    p = n(45452);
+    p = n(388032),
+    g = n(45452);
 let h = [18, 18, 16, 16, 14, 12, 10],
     f = (e) => {
         let { guildId: t } = e,
@@ -27,14 +27,14 @@ let h = [18, 18, 16, 16, 14, 12, 10],
             x = null != (E = h[(_ = (0, l.Zg)(f)).length - 1]) ? E : h[h.length - 1];
         }
         return (0, i.jsxs)('div', {
-            className: p.container,
+            className: g.container,
             children: [
                 (0, i.jsxs)('div', {
                     style: { fontSize: x },
                     children: [
                         null != _
                             ? (0, i.jsx)('div', {
-                                  className: s()(p.childWrapper, p.acronym),
+                                  className: s()(g.childWrapper, g.acronym),
                                   'aria-hidden': !0,
                                   children: _
                               })
@@ -49,17 +49,17 @@ let h = [18, 18, 16, 16, 14, 12, 10],
                     ]
                 }),
                 (0, i.jsxs)('div', {
-                    className: p.descriptors,
+                    className: g.descriptors,
                     children: [
                         (0, i.jsxs)('div', {
-                            className: p.header,
+                            className: g.header,
                             children: [
                                 r
                                     ? (0, i.jsx)(c.Z, {
                                           guild: n,
                                           tooltipPosition: 'bottom',
                                           tooltipColor: o.ua7.Colors.PRIMARY,
-                                          className: p.guildBadge
+                                          className: g.guildBadge
                                       })
                                     : null,
                                 (0, i.jsx)(o.Text, {
@@ -72,7 +72,7 @@ let h = [18, 18, 16, 16, 14, 12, 10],
                             ? (0, i.jsx)(o.Text, {
                                   variant: 'text-xs/medium',
                                   color: 'text-muted',
-                                  children: g.intl.format(m.default['5JmNgo'], { members: n.approximateMemberCount })
+                                  children: p.intl.format(m.default['5JmNgo'], { members: n.approximateMemberCount })
                               })
                             : null
                     ]

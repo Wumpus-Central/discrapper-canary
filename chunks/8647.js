@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => C });
 var i = n(200651);
 n(192379);
 var r = n(120356),
@@ -10,20 +10,20 @@ var r = n(120356),
     d = n(78839),
     u = n(63063),
     m = n(74538),
-    g = n(821629),
-    p = n(346497),
+    p = n(821629),
+    g = n(346497),
     h = n(409100),
     f = n(725727),
     b = n(474936),
     _ = n(981631),
     x = n(388032),
     E = n(669792);
-let j = function (e) {
+let C = function (e) {
     let { isFullScreen: t, buttonClassName: r } = e,
-        { promotion: j } = (0, f.mq)(),
-        C = (0, l.e7)([d.ZP], () => d.ZP.getPremiumTypeSubscription());
-    if (!(0, p.Vi)()) return null;
-    let O = new Date(j.endDate);
+        { promotion: C } = (0, f.mq)(),
+        j = (0, l.e7)([d.ZP], () => d.ZP.getPremiumTypeSubscription());
+    if (!(0, g.Vi)()) return null;
+    let O = new Date(C.endDate);
     return (0, i.jsx)(c.O, {
         newLocations: [o.Z.PREMIUM_MARKETING_PAGE_BANNER],
         children: (0, i.jsxs)('div', {
@@ -45,12 +45,12 @@ let j = function (e) {
                                 (0, i.jsx)(a.X6q, {
                                     variant: 'display-sm',
                                     color: 'always-white',
-                                    children: null == C || null == (0, m.he)(C) ? x.intl.string(x.t.xbzNJC) : x.intl.string(x.t['22WZ9P'])
+                                    children: null == j || null == (0, m.he)(j) ? x.intl.string(x.t.xbzNJC) : x.intl.string(x.t['22WZ9P'])
                                 }),
                                 (0, i.jsx)(a.Text, {
                                     className: E.countdown,
                                     variant: 'text-sm/bold',
-                                    children: (0, i.jsx)(g.Z, { endDate: O })
+                                    children: (0, i.jsx)(p.Z, { endDate: O })
                                 }),
                                 (0, i.jsx)(a.Text, {
                                     variant: 'text-sm/medium',

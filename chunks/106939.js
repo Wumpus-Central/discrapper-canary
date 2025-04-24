@@ -12,16 +12,16 @@ var i = n(200651),
     d = n(704215),
     u = n(481060),
     m = n(150063),
-    g = n(493773),
-    p = n(758119),
+    p = n(493773),
+    g = n(758119),
     h = n(100527),
     f = n(906732),
     b = n(252618),
     _ = n(313201),
     x = n(605236),
     E = n(984370),
-    j = n(797614),
-    C = n(108427),
+    C = n(797614),
+    j = n(108427),
     O = n(210887),
     S = n(695346),
     v = n(594174),
@@ -158,8 +158,8 @@ function Y() {
         f = v.default.getCurrentUser(),
         E = null != e,
         O = s && null != f && !E;
-    (0, g.ZP)(() => {
-        (0, C.e)('family-center'),
+    (0, p.ZP)(() => {
+        (0, j.e)('family-center'),
             I.ZP.initialPageLoad(),
             n ||
                 (0, x.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
@@ -187,11 +187,11 @@ function Y() {
                 initial_page: k.QH[n],
                 source: k._6[k.Mu.SIDENAV]
             }),
-                j.Z.increment({ name: o.V.FAMILY_CENTER_VIEW });
+                C.Z.increment({ name: o.V.FAMILY_CENTER_VIEW });
         }
     }, [s, E]),
     r.useEffect(() => {
-        O && (0, p.mN)(B.L0.FAMILY_CENTER);
+        O && (0, g.mN)(B.L0.FAMILY_CENTER);
     }, [O]),
     O)
         ? null
@@ -228,9 +228,9 @@ function K() {
         z = v.default.getCurrentUser(),
         Y = null != t,
         K = a && null != z && !Y;
-    (0, g.ZP)(() => {
+    (0, p.ZP)(() => {
         m.Y(L.Z5c.FAMILY_CENTER),
-            (0, C.e)('family-center'),
+            (0, j.e)('family-center'),
             !N.Z.isLoading() && N.Z.canRefetch() && I.ZP.initialPageLoad(),
             s ||
                 (0, x.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
@@ -259,7 +259,7 @@ function K() {
                     initial_page: k.QH[n],
                     source: k._6[k.Mu.SIDENAV]
                 }),
-                    j.Z.increment({ name: o.V.FAMILY_CENTER_VIEW });
+                    C.Z.increment({ name: o.V.FAMILY_CENTER_VIEW });
             }
         }, [a, Y]),
         r.useEffect(() => {
@@ -267,7 +267,7 @@ function K() {
             a && t && void 0 === e && S.Ex.updateSetting(!0);
         }, [a, t]),
         r.useEffect(() => {
-            K && (0, p.mN)(B.L0.FAMILY_CENTER);
+            K && (0, g.mN)(B.L0.FAMILY_CENTER);
         }, [K]),
         K)
     )

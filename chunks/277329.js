@@ -10,8 +10,8 @@ var r = n(442837),
     d = n(293389),
     u = n(327885),
     m = n(326528),
-    g = n(332325),
-    p = n(981631),
+    p = n(332325),
+    g = n(981631),
     h = n(388032),
     f = n(881328);
 function b() {
@@ -29,7 +29,7 @@ function b() {
                 className: f.tabBar,
                 selectedItem: n,
                 onItemSelect: (e) => {
-                    l.Z.setSection(p.oAB.GAMES, e);
+                    l.Z.setSection(g.oAB.GAMES, e);
                 },
                 orientation: 'horizontal',
                 type: 'top',
@@ -58,22 +58,22 @@ function b() {
             }),
             (() => {
                 switch (n) {
-                    case g.Z.CLIPS:
+                    case p.Z.CLIPS:
                         return (0, i.jsx)(a.Z, {
                             className: f.body,
                             showHeader: !1
                         });
-                    case g.Z.OVERLAY:
+                    case p.Z.OVERLAY:
                         return (0, i.jsx)(u.Z, {
                             className: f.body,
                             showHeader: !1
                         });
-                    case g.Z.ACTIVITY_PRIVACY:
+                    case p.Z.ACTIVITY_PRIVACY:
                         return (0, i.jsx)(c.Z, {
                             className: f.body,
                             showHeader: !1
                         });
-                    case g.Z.MY_GAMES:
+                    case p.Z.MY_GAMES:
                     default:
                         return (0, i.jsx)(d.Z, {
                             className: f.body,

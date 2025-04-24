@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(131951),
     u = n(962100),
     m = n(445817),
-    g = n(726985),
-    p = n(65154),
+    p = n(726985),
+    g = n(65154),
     h = n(388032),
     f = n(20493);
 function b() {
@@ -28,12 +28,12 @@ function b() {
 }
 function _(e) {
     let { refreshStyles: t = !1 } = e,
-        n = (0, a.e7)([d.Z], () => d.Z.supports(p.AN.VIDEO)),
+        n = (0, a.e7)([d.Z], () => d.Z.supports(g.AN.VIDEO)),
         [s, u] = r.useState(!1),
         _ = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(c.F, {
-                    setting: g.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
+                    setting: p.s6.VOICE_AND_VIDEO_VIDEO_CAMERA,
                     children: (0, i.jsx)(m.Z, {
                         previewEnabled: s,
                         onEnablePreview: () => u(!0),

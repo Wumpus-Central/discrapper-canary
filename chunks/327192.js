@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(780384),
     u = n(481060),
     m = n(570140),
-    g = n(457330),
-    p = n(497321),
+    p = n(457330),
+    g = n(497321),
     h = n(23551),
     f = n(468026),
     b = n(410030),
     _ = n(726542),
     x = n(122021),
     E = n(275759),
-    j = n(231757),
-    C = n(888496),
+    C = n(231757),
+    j = n(888496),
     O = n(605236),
     S = n(565138),
     v = n(297700),
@@ -86,7 +86,7 @@ let H = (e) => {
             (r = (0, i.jsx)(u.zxk, {
                 size: u.PhG.SMALL,
                 onClick: function () {
-                    g.Z.joinServer(s.id, () => {});
+                    p.Z.joinServer(s.id, () => {});
                 },
                 disabled: l,
                 children: (0, i.jsx)('span', { children: l ? U.intl.string(U.t.RXvQQk) : U.intl.string(U.t.XpeFYm) })
@@ -139,7 +139,7 @@ function z(e) {
     let n,
         s,
         l,
-        { onDisconnect: a, account: o, theme: m, locale: p } = e,
+        { onDisconnect: a, account: o, theme: m, locale: g } = e,
         [h, b] = r.useState(o.friendSync),
         [O, S] = r.useState(o.visibility),
         [T, I] = r.useState(o.metadataVisibility),
@@ -164,7 +164,7 @@ function z(e) {
         r.useEffect(() => {
             if (!1 === o.verified) return;
             let { inProgressVisibility: e, inProgressMetadataVisibility: t } = J.current;
-            null != e && (S(e), g.Z.setVisibility(o.type, o.id, e), R(null)), null != t && (I(t), g.Z.setMetadataVisibility(o.type, o.id, t), G(null));
+            null != e && (S(e), p.Z.setVisibility(o.type, o.id, e), R(null)), null != t && (I(t), p.Z.setMetadataVisibility(o.type, o.id, t), G(null));
         }, [o]);
     function $() {
         let e = _.Z.get(o.type),
@@ -309,27 +309,27 @@ function z(e) {
                 var t;
                 let n = null != (t = e.metadata) ? t : {},
                     r = null,
-                    s = (0, E.FI)(n[B.PC.CREATED_AT], p);
+                    s = (0, E.FI)(n[B.PC.CREATED_AT], g);
                 switch (e.type) {
                     case L.ABu.REDDIT:
-                        r = (0, C.oP)(n, V.metadataItem);
+                        r = (0, j.oP)(n, V.metadataItem);
                         break;
                     case L.ABu.STEAM:
-                        r = (0, C.Dq)(n, V.metadataItem);
+                        r = (0, j.Dq)(n, V.metadataItem);
                         break;
                     case L.ABu.BLUESKY:
                     case L.ABu.TWITTER:
                     case L.ABu.MASTODON:
-                        r = (0, C.rJ)(n, V.metadataItem);
+                        r = (0, j.rJ)(n, V.metadataItem);
                         break;
                     case L.ABu.EBAY:
-                        r = (0, C.ul)(n, V.metadataItem);
+                        r = (0, j.ul)(n, V.metadataItem);
                         break;
                     case L.ABu.PAYPAL:
-                        r = (0, C.li)(n, V.metadataItem);
+                        r = (0, j.li)(n, V.metadataItem);
                         break;
                     case L.ABu.TIKTOK:
-                        r = (0, C.hf)(n, V.metadataItem);
+                        r = (0, j.hf)(n, V.metadataItem);
                 }
                 null !== s &&
                     (null == r && (r = []),
@@ -387,7 +387,7 @@ function z(e) {
                                     ? void 0
                                     : () => {
                                           W(!0),
-                                              g.Z.refresh(e.type, e.id).finally(() => {
+                                              p.Z.refresh(e.type, e.id).finally(() => {
                                                   setTimeout(() => {
                                                       Y.push(e.id), K(Y), W(!1);
                                                   }, 2000);
@@ -410,7 +410,7 @@ function z(e) {
                     hideBorder: !0,
                     value: h,
                     onChange: function (e) {
-                        b(e), g.Z.setFriendSync(o.type, o.id, e);
+                        b(e), p.Z.setFriendSync(o.type, o.id, e);
                     },
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
@@ -423,7 +423,7 @@ function z(e) {
                     hideBorder: !0,
                     value: N,
                     onChange: function (e) {
-                        y(e), g.Z.setShowActivity(o.type, o.id, e);
+                        y(e), p.Z.setShowActivity(o.type, o.id, e);
                     },
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
@@ -440,13 +440,13 @@ function z(e) {
                             n = +!!e;
                         if (e && !t) {
                             G(n),
-                                (0, j.Z)({
+                                (0, C.Z)({
                                     platformType: o.type,
                                     location: 'User Settings'
                                 });
                             return;
                         }
-                        I(n), g.Z.setMetadataVisibility(o.type, o.id, n);
+                        I(n), p.Z.setMetadataVisibility(o.type, o.id, n);
                     },
                     disabled: 1 !== O || null == o.metadata,
                     children: (0, i.jsx)(u.Text, {
@@ -468,13 +468,13 @@ function z(e) {
                                     n = +!!e;
                                 if (e && !t) {
                                     R(n),
-                                        (0, j.Z)({
+                                        (0, C.Z)({
                                             platformType: o.type,
                                             location: 'User Settings'
                                         });
                                     return;
                                 }
-                                S(n), g.Z.setVisibility(o.type, o.id, n);
+                                S(n), p.Z.setVisibility(o.type, o.id, n);
                             },
                             children: (0, i.jsx)(u.Text, {
                                 variant: 'text-sm/semibold',
@@ -497,7 +497,7 @@ function z(e) {
                           className: V.integrationRevoked,
                           children: U.intl.format(U.t['6C4lgI'], {
                               onReconnect: function () {
-                                  (0, j.Z)({
+                                  (0, C.Z)({
                                       platformType: o.type,
                                       location: 'User Settings'
                                   });
@@ -552,7 +552,7 @@ function W() {
 }
 function Y(e) {
     let t = _.Z.get(e);
-    (0, j.Z)({ platformType: t.type }),
+    (0, C.Z)({ platformType: t.type }),
         A.default.track(L.rMx.ACCOUNT_LINK_STEP, {
             previous_step: 'desktop connections',
             current_step: 'desktop oauth',
@@ -646,7 +646,7 @@ function q(e) {
                                 onDisconnect: () =>
                                     (function (e) {
                                         let { type: t, id: n } = e;
-                                        g.Z.disconnect(t, n);
+                                        p.Z.disconnect(t, n);
                                     })(e)
                             },
                             t
@@ -666,10 +666,10 @@ let X = () => {
     (0, a.e7)([N.ZP], () => N.ZP.getFlattenedGuildIds());
     let l = (0, a.e7)([R.default], () => R.default.locale);
     return (r.useEffect(() => {
-        g.Z.fetch();
+        p.Z.fetch();
     }, []),
     e)
-        ? (0, i.jsx)(p.Z, {})
+        ? (0, i.jsx)(g.Z, {})
         : (0, i.jsxs)(u.hjN, {
               className: V.__invalid_connections,
               tag: u.RB0.H1,

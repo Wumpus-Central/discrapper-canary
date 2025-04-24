@@ -9,21 +9,21 @@ var i = n(200651),
     d = n(726542),
     u = n(275759),
     m = n(231757),
-    g = n(888496),
-    p = n(706454),
+    p = n(888496),
+    g = n(706454),
     h = n(553795),
     f = n(63063),
     b = n(981631),
     _ = n(856651),
     x = n(388032),
     E = n(6318);
-function j(e) {
+function C(e) {
     var t;
     let { account: n, refreshed: l, handleRefresh: o } = e,
         [c, d] = r.useState(!1),
         m = null != (t = n.metadata) ? t : {},
-        h = (0, s.e7)([p.default], () => p.default.locale),
-        j = r.useCallback(async () => {
+        h = (0, s.e7)([g.default], () => g.default.locale),
+        C = r.useCallback(async () => {
             d(!0);
             try {
                 await o(n);
@@ -31,31 +31,31 @@ function j(e) {
                 d(!1);
             }
         }, [n, o]),
-        C = null;
+        j = null;
     switch (n.type) {
         case b.ABu.REDDIT:
-            C = (0, g.oP)(m, E.metadataItem);
+            j = (0, p.oP)(m, E.metadataItem);
             break;
         case b.ABu.STEAM:
-            C = (0, g.Dq)(m, E.metadataItem);
+            j = (0, p.Dq)(m, E.metadataItem);
             break;
         case b.ABu.TWITTER:
-            C = (0, g.rJ)(m, E.metadataItem);
+            j = (0, p.rJ)(m, E.metadataItem);
             break;
         case b.ABu.EBAY:
-            C = (0, g.ul)(m, E.metadataItem);
+            j = (0, p.ul)(m, E.metadataItem);
             break;
         case b.ABu.PAYPAL:
-            C = (0, g.li)(m, E.metadataItem);
+            j = (0, p.li)(m, E.metadataItem);
             break;
         case b.ABu.TIKTOK:
-            C = (0, g.hf)(m, E.metadataItem);
+            j = (0, p.hf)(m, E.metadataItem);
     }
     let O = (0, u.FI)(m[_.PC.CREATED_AT], h),
         S = null,
         v = x.intl.string(x.t.wzzjk5);
     return (
-        (null == C || 0 === C.length) &&
+        (null == j || 0 === j.length) &&
             null == O &&
             ((S = (0, i.jsx)(
                 a.Text,
@@ -72,14 +72,14 @@ function j(e) {
             className: E.metadataContainer,
             children: [
                 S,
-                null == C
+                null == j
                     ? void 0
-                    : C.map((e, t) =>
+                    : j.map((e, t) =>
                           (0, i.jsxs)(i.Fragment, {
-                              children: [e, t < C.length - 1 ? (0, i.jsx)('span', { className: E.dot }) : null]
+                              children: [e, t < j.length - 1 ? (0, i.jsx)('span', { className: E.dot }) : null]
                           })
                       ),
-                null != C && C.length > 0 && null != O ? (0, i.jsx)('div', { className: E.dot }) : null,
+                null != j && j.length > 0 && null != O ? (0, i.jsx)('div', { className: E.dot }) : null,
                 null != O
                     ? (0, i.jsx)(
                           a.Text,
@@ -101,7 +101,7 @@ function j(e) {
                         submitting: c,
                         disabled: l,
                         'aria-label': x.intl.string(x.t.sCkLYG),
-                        onClick: l ? void 0 : j,
+                        onClick: l ? void 0 : C,
                         children: v
                     },
                     'refresh-button'
@@ -110,13 +110,13 @@ function j(e) {
         })
     );
 }
-function C(e) {
+function j(e) {
     let { account: t, handleRefresh: n, refreshedAccountIds: s } = e,
-        [u, g] = r.useState(t.visibility),
-        [p, h] = r.useState(t.metadataVisibility),
+        [u, p] = r.useState(t.visibility),
+        [g, h] = r.useState(t.metadataVisibility),
         f = (0, c.ZP)();
     r.useEffect(() => {
-        g(t.visibility), h(t.metadataVisibility);
+        p(t.visibility), h(t.metadataVisibility);
     }, [t]);
     let b = d.Z.get(t.type),
         _ = !0 === b.hasMetadata;
@@ -141,14 +141,14 @@ function C(e) {
                                     let { verified: n } = t,
                                         i = +!!e;
                                     if (e && !n) {
-                                        g(i),
+                                        p(i),
                                             (0, m.Z)({
                                                 platformType: t.type,
                                                 location: 'User Settings'
                                             });
                                         return;
                                     }
-                                    g(i), o.Z.setVisibility(t.type, t.id, i);
+                                    p(i), o.Z.setVisibility(t.type, t.id, i);
                                 },
                                 children: [
                                     (0, i.jsx)(a.Text, {
@@ -157,7 +157,7 @@ function C(e) {
                                         children: b.name
                                     }),
                                     _ &&
-                                        (0, i.jsx)(j, {
+                                        (0, i.jsx)(C, {
                                             account: t,
                                             refreshed: s.includes(t.id),
                                             handleRefresh: n
@@ -169,7 +169,7 @@ function C(e) {
                                     className: E.additionalDetailsSwitch,
                                     hideBorder: !0,
                                     disabled: 1 !== u || null == t.metadata,
-                                    value: 1 === p,
+                                    value: 1 === g,
                                     onChange: function (e) {
                                         let { verified: n } = t,
                                             i = +!!e;
@@ -220,7 +220,7 @@ function O() {
                   }),
                   t.map((e) =>
                       (0, i.jsx)(
-                          C,
+                          j,
                           {
                               account: e,
                               handleRefresh: c,

@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(607070),
     u = n(100527),
     m = n(906732),
-    g = n(975298),
-    p = n(626135),
+    p = n(975298),
+    g = n(626135),
     h = n(695349),
     f = n(103433),
     b = n(166021),
     _ = n(32173),
     x = n(391110),
     E = n(75077),
-    j = n(981631),
-    C = n(388032),
+    C = n(981631),
+    j = n(388032),
     O = n(614729),
     S = n(865215);
 let v = (e) => {
@@ -35,10 +35,10 @@ let v = (e) => {
         [R, D] = r.useState(!1),
         Z = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
         w = (0, E.mN)(),
-        { fractionalState: k } = (0, g.Z)(),
+        { fractionalState: k } = (0, p.Z)(),
         L = (0, h.W)();
     return (
-        w ? ((t = C.intl.string(C.t['+vt7w8'])), (n = C.intl.string(C.t.LgHbnJ))) : ((t = C.intl.string(C.t.LgHbnJ)), (n = C.intl.string(C.t['+vt7w8']))),
+        w ? ((t = j.intl.string(j.t['+vt7w8'])), (n = j.intl.string(j.t.LgHbnJ))) : ((t = j.intl.string(j.t.LgHbnJ)), (n = j.intl.string(j.t['+vt7w8']))),
         (0, i.jsx)(c.yWw, {
             className: l()(O.allPerksScroller, {
                 [O.open]: s,
@@ -54,7 +54,7 @@ let v = (e) => {
                             className: O.heroHeading,
                             onBackClick: () => {
                                 v(!1),
-                                    p.default.track(j.rMx.NITRO_HOME_NAVIGATION, {
+                                    g.default.track(C.rMx.NITRO_HOME_NAVIGATION, {
                                         current_component: x.MQ.SEE_ALL,
                                         next_component: T,
                                         interaction_component: 'Back Button'
@@ -104,7 +104,7 @@ let v = (e) => {
                                     variant: 'heading-xxl/extrabold',
                                     color: 'header-primary',
                                     className: O.heading,
-                                    children: C.intl.string(C.t.LTaxu7)
+                                    children: j.intl.string(j.t.LTaxu7)
                                 }),
                                 (0, i.jsx)(b.Z, {
                                     className: O.cardCarousel,
@@ -124,7 +124,7 @@ let v = (e) => {
                         (0, i.jsx)(o.$, {
                             innerRef: y,
                             onChange: (e) => {
-                                e && !R && (p.default.track(j.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: P }), D(!0));
+                                e && !R && (g.default.track(C.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: P }), D(!0));
                             },
                             children: (0, i.jsx)('div', {
                                 ref: y,
@@ -136,7 +136,7 @@ let v = (e) => {
                             className: O.bottomIllustration,
                             width: 112,
                             height: 85,
-                            alt: C.intl.string(C.t.X4IxWF)
+                            alt: j.intl.string(j.t.X4IxWF)
                         })
                     ]
                 })

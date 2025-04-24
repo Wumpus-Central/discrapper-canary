@@ -9,7 +9,7 @@ var i = n(200651),
 function d(e) {
     var t,
         n,
-        { children: s, onClick: d, className: u, tag: m, target: g, isGrass: p = !1, muted: h = !1, disabled: f = !1 } = e,
+        { children: s, onClick: d, className: u, tag: m, target: p, isGrass: g = !1, muted: h = !1, disabled: f = !1 } = e,
         b = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -30,7 +30,7 @@ function d(e) {
             return r;
         })(e, ['children', 'onClick', 'className', 'tag', 'target', 'isGrass', 'muted', 'disabled']);
     let _ = (0, c.Z)(),
-        x = (0, o.hW)(p),
+        x = (0, o.hW)(g),
         E = (0, r.useCallback)(
             (e) => {
                 h || x(), null == d || d(e);
@@ -69,7 +69,7 @@ function d(e) {
                 onClick: f ? void 0 : E,
                 className: l()(_, u),
                 tag: m,
-                target: g,
+                target: p,
                 children: s
             }),
         Object.getOwnPropertyDescriptors

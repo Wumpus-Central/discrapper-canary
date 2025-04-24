@@ -1,4 +1,4 @@
-n.d(t, { s: () => S }), n(388685);
+n.d(t, { s: () => E }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(442837),
@@ -22,8 +22,8 @@ let C = (e, t) => {
         let n = null != t && !t.isPreview;
         return e ? (e && !n ? 'no-wallpaper-nitro' : 'has-wallpaper-nitro') : 'non-nitro';
     },
-    j = (e) => ('has-wallpaper-nitro' === e ? _.intl.string(_.t.T9dXPj) : _.intl.string(_.t.zyvzQ0)),
-    x = (e) => {
+    S = (e) => ('has-wallpaper-nitro' === e ? _.intl.string(_.t.T9dXPj) : _.intl.string(_.t.zyvzQ0)),
+    j = (e) => {
         switch (e) {
             case 'non-nitro':
                 return _.intl.string(_.t.VU8fxM);
@@ -33,17 +33,17 @@ let C = (e, t) => {
                 return _.intl.string(_.t.eZMxlZ);
         }
     },
-    S = (e) => {
-        let { children: t, channelId: n, selectedChannelId: S } = e,
-            E = (0, a.wE)(o.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
-            P = (0, l.e7)([d.Z], () => d.Z.getLayers().includes(m.S9g.USER_SETTINGS)),
-            I = S === n,
+    E = (e) => {
+        let { children: t, channelId: n, selectedChannelId: E } = e,
+            x = (0, a.wE)(o.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
+            I = (0, l.e7)([d.Z], () => d.Z.getLayers().includes(m.S9g.USER_SETTINGS)),
+            P = E === n,
             { canAccessPicker: w, entryPoint: N } = (0, p.m)({
                 location: 'ChatWallpaperDMListCoachmark',
-                selectedChannelId: S
+                selectedChannelId: E
             }),
             Z = N === h.FN.CONTEXT_MENU,
-            [T, A] = (0, c.US)(E && Z && I && w && !P ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
+            [T, A] = (0, c.US)(x && Z && P && w && !I ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : []),
             R = (0, u.m)(y.p9.TIER_2),
             D = (0, f.Z)(n),
             L = T === o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
@@ -69,8 +69,8 @@ let C = (e, t) => {
                 A(b.L.USER_DISMISS);
             },
             V = C(R, null != D ? D : null),
-            H = j(V),
-            F = x(V);
+            H = S(V),
+            F = j(V);
         return (0, r.jsx)('div', {
             ref: k,
             children: (0, r.jsx)(s.yRy, {

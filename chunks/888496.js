@@ -2,7 +2,7 @@ n.d(t, {
     Dq: () => f,
     hf: () => x,
     li: () => b,
-    oP: () => p,
+    oP: () => g,
     rJ: () => h,
     rm: () => E,
     ul: () => _
@@ -20,8 +20,8 @@ var r = n(120356),
     d = n(275759),
     u = n(856651),
     m = n(388032),
-    g = n(566825);
-function p(e) {
+    p = n(566825);
+function g(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
         r = [],
@@ -32,7 +32,7 @@ function p(e) {
         s > -1 &&
             r.push(
                 (0, i.jsx)(
-                    j,
+                    C,
                     {
                         className: n,
                         count: s,
@@ -76,7 +76,7 @@ function h(e) {
         l > -1 &&
             s.push(
                 (0, i.jsx)(
-                    j,
+                    C,
                     {
                         className: r,
                         count: l,
@@ -88,7 +88,7 @@ function h(e) {
         a > -1 &&
             s.push(
                 (0, i.jsx)(
-                    j,
+                    C,
                     {
                         className: r,
                         count: a,
@@ -111,7 +111,7 @@ function f(e) {
         o > -1 &&
             a.push(
                 (0, i.jsx)(
-                    j,
+                    C,
                     {
                         className: l,
                         count: o,
@@ -158,7 +158,7 @@ function b(e) {
                 (0, i.jsx)(
                     S,
                     {
-                        className: s()(t, g.paypalVerifiedTag),
+                        className: s()(t, p.paypalVerifiedTag),
                         label: m.intl.string(m.t.IhXLy8)
                     },
                     u.PC.PAYPAL_VERIFIED
@@ -177,7 +177,7 @@ function _(e) {
         s > 0 &&
             r.push(
                 (0, i.jsx)(
-                    j,
+                    C,
                     {
                         className: n,
                         count: s,
@@ -213,7 +213,7 @@ function x(e) {
         o > -1 &&
             l.push(
                 (0, i.jsx)(
-                    j,
+                    C,
                     {
                         className: s,
                         count: o,
@@ -225,7 +225,7 @@ function x(e) {
         c > -1 &&
             l.push(
                 (0, i.jsx)(
-                    j,
+                    C,
                     {
                         className: s,
                         count: c,
@@ -237,7 +237,7 @@ function x(e) {
         d > -1 &&
             l.push(
                 (0, i.jsx)(
-                    j,
+                    C,
                     {
                         className: s,
                         count: d,
@@ -293,7 +293,7 @@ function E(e) {
                 case u.xn.DATETIME_LESS_THAN_EQUAL:
                     r.push(
                         (0, i.jsx)(
-                            C,
+                            j,
                             {
                                 className: t,
                                 date: a,
@@ -310,7 +310,7 @@ function E(e) {
                 case u.xn.INTEGER_LESS_THAN_EQUAL:
                     r.push(
                         (0, i.jsx)(
-                            j,
+                            C,
                             {
                                 className: t,
                                 count: Number(a),
@@ -324,7 +324,7 @@ function E(e) {
     }
     return r;
 }
-function j(e) {
+function C(e) {
     let t,
         { count: n, label: r, className: l, percent: a } = e,
         d = (0, c.$U)(n) + (a ? '%' : '');
@@ -337,17 +337,17 @@ function j(e) {
                   })
                 : m.intl.format(r, { value: d })),
         (0, i.jsx)(o.Text, {
-            className: s()(g.connectedAccountVanityMetadata, l),
+            className: s()(p.connectedAccountVanityMetadata, l),
             variant: 'text-xs/normal',
             color: 'interactive-active',
             children: t
         })
     );
 }
-function C(e) {
+function j(e) {
     let { date: t, locale: n, label: r, className: l } = e;
     return (0, i.jsx)(o.Text, {
-        className: s()(g.connectedAccountVanityMetadata, l),
+        className: s()(p.connectedAccountVanityMetadata, l),
         variant: 'text-xs/normal',
         color: 'interactive-active',
         children: m.intl.format(m.t.HLoinJ, {
@@ -359,7 +359,7 @@ function C(e) {
 function O(e) {
     let { label: t, imageSrc: n, imageAlt: r, className: l } = e;
     return (0, i.jsxs)('div', {
-        className: s()(g.connectedAccountVanityMetadata, g.connectedAccountVanityMetadataItem, l),
+        className: s()(p.connectedAccountVanityMetadata, p.connectedAccountVanityMetadataItem, l),
         children: [
             (0, i.jsx)(o.ua7, {
                 text: r,
@@ -396,7 +396,7 @@ function O(e) {
                             {
                                 src: n,
                                 alt: r,
-                                className: g.connectedAccountVanityMetadataItemIcon
+                                className: p.connectedAccountVanityMetadataItemIcon
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(s))
@@ -427,7 +427,7 @@ function S(e) {
     return (0, i.jsx)(o.Text, {
         variant: 'text-xs/semibold',
         color: 'interactive-active',
-        className: s()(g.connectedAccountVanityMetadata, g.connectedAccountVanityMetadataTag, n),
+        className: s()(p.connectedAccountVanityMetadata, p.connectedAccountVanityMetadataTag, n),
         children: t
     });
 }

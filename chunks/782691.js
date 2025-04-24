@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(23645),
     u = n(53281),
     m = n(678135),
-    g = n(594174),
-    p = n(373071),
+    p = n(594174),
+    g = n(373071),
     h = n(489495),
     f = n(189),
     b = n(662583),
@@ -41,7 +41,7 @@ function E(e) {
     }
     return e;
 }
-function j(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,7 +59,7 @@ function j(e, t) {
         e
     );
 }
-let C = {
+let j = {
         [h.cq.THUMBNAIL]: null,
         [h.cq.STATIC]: null,
         [h.cq.REDUCED_MOTION]: null
@@ -67,14 +67,14 @@ let C = {
     O = 'debug',
     S = (e) => {
         let { effect: t, back: n } = e,
-            { upsertConfig: s } = (0, p.n6)(),
-            S = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
+            { upsertConfig: s } = (0, g.n6)(),
+            S = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
             [v, T] = r.useState(!0),
             I = r.useRef(null),
             [N, y] = r.useState(!1),
             [A, P] = r.useState(!1),
             [R, D] = r.useState([]),
-            [Z, w] = r.useState(C),
+            [Z, w] = r.useState(j),
             k = r.useRef([]),
             [L, B] = r.useState(t.name),
             M = L.toLowerCase().replace(/\s+/g, '_'),
@@ -100,7 +100,7 @@ let C = {
                 let n = V(t);
                 null != n &&
                     (0, h.i0)(n, (t) => {
-                        w((i) => j(E({}, i), { [e]: (0, h.z)(t, n) }));
+                        w((i) => C(E({}, i), { [e]: (0, h.z)(t, n) }));
                     });
             },
             F = (e, t) => {
@@ -125,7 +125,7 @@ let C = {
                     });
             },
             H = (e) => {
-                w((t) => j(E({}, t), { [e]: null }));
+                w((t) => C(E({}, t), { [e]: null }));
             };
         r.useEffect(() => {
             let e = t.config.effects;
@@ -144,7 +144,7 @@ let C = {
                         let [t, n] = e;
                         if (null != n) {
                             let e = (0, h.$j)(n.base64);
-                            (n.src = e), k.current.push(e), w((e) => j(E({}, e), { [t]: n }));
+                            (n.src = e), k.current.push(e), w((e) => C(E({}, e), { [t]: n }));
                         }
                     });
             }, [t.config.stillFrames]);
@@ -367,9 +367,9 @@ let C = {
                                                       (0, i.jsx)(d.Z, {
                                                           fileContents: () =>
                                                               JSON.stringify(
-                                                                  j(E({}, t), {
+                                                                  C(E({}, t), {
                                                                       name: L,
-                                                                      config: j(E({}, t.config), {
+                                                                      config: C(E({}, t.config), {
                                                                           effects: R,
                                                                           stillFrames: Z
                                                                       })
@@ -472,7 +472,7 @@ let C = {
                                               color: c.Ttl.RED,
                                               look: c.iLD.OUTLINED,
                                               onClick: () => {
-                                                  D([]), w(C);
+                                                  D([]), w(j);
                                               },
                                               children: 'Clear Assets'
                                           })

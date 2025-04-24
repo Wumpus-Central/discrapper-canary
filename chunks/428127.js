@@ -66,20 +66,20 @@ function _(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: l, jumpToVoiceChannels: u, jumpToChannel: d } = e,
         { bottomBar: p, topBar: _ } = (0, a.cj)([f.Z], () => f.Z.getUnreadStateForGuildId(n.id)),
         O = (0, a.e7)([h.Z], () => h.Z.isFocused()),
-        { mode: v, mentionCount: C, targetChannelId: j } = 'bottom' === t ? p : _,
-        x = v === f.x.HIDDEN,
-        S = (0, c.q_F)(
+        { mode: v, mentionCount: C, targetChannelId: S } = 'bottom' === t ? p : _,
+        j = v === f.x.HIDDEN,
+        E = (0, c.q_F)(
             {
-                to: { transform: x ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
+                to: { transform: j ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
                 config: b
             },
             O ? 'respect-motion-settings' : 'animate-never'
         ),
-        E = i.useCallback(
+        x = i.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), null != j && d(j);
+                e.preventDefault(), e.stopPropagation(), null != S && d(S);
             },
-            [d, j]
+            [d, S]
         );
     return (0, r.jsx)('div', {
         className: o()(m.container, {
@@ -88,15 +88,15 @@ function _(e) {
         }),
         children: (0, r.jsx)(s.animated.div, {
             className: m.containerPadding,
-            style: S,
-            'aria-hidden': x,
+            style: E,
+            'aria-hidden': j,
             children:
                 v === f.x.HIDDEN
                     ? (0, r.jsx)('div', { className: o()(m.bar, m.emptyBar) })
                     : v === f.x.UNREAD
                       ? (0, r.jsxs)(c.P3F, {
                             className: m.bar,
-                            onClick: E,
+                            onClick: x,
                             children: [
                                 'bottom' === t
                                     ? (0, r.jsx)(c.CJ0, {
@@ -124,7 +124,7 @@ function _(e) {
                       : v === f.x.MENTIONS
                         ? (0, r.jsx)(c.P3F, {
                               className: o()(m.bar, m.mentionsBar),
-                              onClick: E,
+                              onClick: x,
                               children: (0, r.jsx)(c.Text, {
                                   variant: 'text-xs/semibold',
                                   color: 'status-danger-text',

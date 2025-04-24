@@ -10,8 +10,8 @@ var r = n(120356),
     d = n(600164),
     u = n(594174),
     m = n(418632),
-    g = n(388032),
-    p = n(231829);
+    p = n(388032),
+    g = n(231829);
 function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,12 +63,12 @@ function f(e) {
     return f && b
         ? null
         : (0, i.jsx)(c.Zbd, {
-              className: s()(p.wrapper, l),
+              className: s()(g.wrapper, l),
               children: (0, i.jsxs)(d.Z, {
                   align: d.Z.Align.CENTER,
                   children: [
                       (0, i.jsx)(d.Z.Child, {
-                          className: p.image,
+                          className: g.image,
                           grow: 0,
                           shrink: 0
                       }),
@@ -76,11 +76,11 @@ function f(e) {
                           children: [
                               (0, i.jsx)(c.Text, {
                                   variant: 'text-sm/normal',
-                                  children: f ? (null != r ? r : g.intl.string(g.t.WuyBbG)) : null != t ? t : g.intl.string(g.t['f+Zaoq'])
+                                  children: f ? (null != r ? r : p.intl.string(p.t.WuyBbG)) : null != t ? t : p.intl.string(p.t['f+Zaoq'])
                               }),
                               (0, i.jsxs)(d.Z, {
                                   justify: d.Z.Justify.CENTER,
-                                  className: p.content,
+                                  className: g.content,
                                   children: [
                                       f
                                           ? _
@@ -93,7 +93,7 @@ function f(e) {
                                                     size: c.zxk.Sizes.MEDIUM,
                                                     color: c.zxk.Colors.BRAND,
                                                     onClick: x,
-                                                    children: g.intl.string(g.t.ydw5nZ)
+                                                    children: p.intl.string(p.t.ydw5nZ)
                                                 })
                                           : (0, i.jsx)(d.Z.Child, {
                                                 grow: 0,
@@ -107,7 +107,7 @@ function f(e) {
                                                             return (t) => (0, i.jsx)(e, h({}, t));
                                                         });
                                                     },
-                                                    children: g.intl.string(g.t.fiNVio)
+                                                    children: p.intl.string(p.t.fiNVio)
                                                 })
                                             }),
                                       f && _
@@ -118,7 +118,7 @@ function f(e) {
                                                     color: c.zxk.Colors.PRIMARY,
                                                     look: c.zxk.Looks.LINK,
                                                     onClick: x,
-                                                    children: g.intl.string(g.t.Vm8akJ)
+                                                    children: p.intl.string(p.t.Vm8akJ)
                                                 })
                                             })
                                           : null

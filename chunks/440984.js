@@ -9,20 +9,20 @@ var i = n(200651),
     d = n(530618),
     u = n(74538),
     m = n(937615),
-    g = n(230916),
-    p = n(798769),
+    p = n(230916),
+    g = n(798769),
     h = n(474936),
     f = n(388032),
     b = n(583532),
     _ = n(982404),
     x = n(299156);
 function E(e) {
-    let { premiumSubscription: t, premiumType: n, onClose: E, confettiCanvas: j, userWasChurned: C = !1, userDiscountOffer: O } = e,
+    let { premiumSubscription: t, premiumType: n, onClose: E, confettiCanvas: C, userWasChurned: j = !1, userDiscountOffer: O } = e,
         S = (0, o.ZP)(),
         v = (0, l.wj)(S) ? _ : x,
         T = r.useRef(null),
         [I, N] = r.useState(!1),
-        y = (0, g._)(t, h.Xh.PREMIUM_MONTH_TIER_2, O),
+        y = (0, p._)(t, h.Xh.PREMIUM_MONTH_TIER_2, O),
         A = (0, u.aS)(h.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
             paymentSourceId: t.paymentSourceId
@@ -51,7 +51,7 @@ function E(e) {
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(p.Z, {
+            (0, i.jsx)(g.Z, {
                 premiumType: n,
                 className: b.cancellationHeader,
                 onClose: E
@@ -74,7 +74,7 @@ function E(e) {
                                               }),
                                               (0, i.jsx)(a.X6q, {
                                                   variant: 'heading-xl/bold',
-                                                  children: C ? f.intl.string(f.t.gOOPaG) : f.intl.string(f.t.PZSyRk)
+                                                  children: j ? f.intl.string(f.t.gOOPaG) : f.intl.string(f.t.PZSyRk)
                                               })
                                           ]
                                       }),
@@ -92,7 +92,7 @@ function E(e) {
                 I &&
                 (0, i.jsx)(d.Z, {
                     confettiTarget: T.current,
-                    confettiCanvas: j,
+                    confettiCanvas: C,
                     confettiVelocityMultiplier: 0.75
                 })
         ]

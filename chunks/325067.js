@@ -9,15 +9,15 @@ var i,
     d = n(570140);
 let u = !1,
     m = [],
-    g = '',
-    p = !1,
+    p = '',
+    g = !1,
     h = {
         viewNonce: '',
         regenerateNonce: ''
     };
 class f extends (s = c.ZP.Store) {
     getVerificationKey() {
-        return g;
+        return p;
     }
     getBackupCodes() {
         return m;
@@ -29,7 +29,7 @@ class f extends (s = c.ZP.Store) {
         return h;
     }
     get hasSeenBackupPrompt() {
-        return p;
+        return g;
     }
 }
 (r = 'MFAStore'),
@@ -61,13 +61,13 @@ let b = new f(d.Z, {
     },
     MFA_VIEW_BACKUP_CODES: function (e) {
         let { codes: t, key: n } = e;
-        (m = a().sortBy(t, 'code')), (g = n);
+        (m = a().sortBy(t, 'code')), (p = n);
     },
     MFA_SEND_VERIFICATION_KEY: function (e) {
         let { nonces: t } = e;
         h = t;
     },
     MFA_SEEN_BACKUP_CODE_PROMPT: function () {
-        p = !0;
+        g = !0;
     }
 });

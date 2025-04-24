@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(906732),
     u = n(335131),
     m = n(597688),
-    g = n(1870),
-    p = n(884697),
+    p = n(1870),
+    g = n(884697),
     h = n(175756),
     f = n(104494),
     b = n(639119),
     _ = n(402567),
     x = n(629654),
     E = n(53691),
-    j = n(165583),
-    C = n(267717),
+    C = n(165583),
+    j = n(267717),
     O = n(643879),
     S = n(350327),
     v = n(996073),
@@ -105,7 +105,7 @@ function G(e) {
             if (e) {
                 if (((0, a.I5)(q), (0, S.z5)(K), (0, S.ho)(X), null != J)) {
                     let e = m.Z.getProduct(J.skuId);
-                    null != e && (0, p.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, a.cV)(J)) : null != g.Z.getPurchase(J.skuId) && (0, a.cV)(J);
+                    null != e && (0, g.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, a.cV)(J)) : null != p.Z.getPurchase(J.skuId) && (0, a.cV)(J);
                 }
                 I.default.track(L.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: ee });
             }
@@ -240,7 +240,7 @@ function G(e) {
                               showUpsell: !0,
                               text: U.intl.format(U.t.TmfgIy, {
                                   onClick: () => {
-                                      (0, C.y)({
+                                      (0, j.y)({
                                           analyticsSource: er,
                                           onSubscribeFinish: el
                                       });
@@ -254,7 +254,7 @@ function G(e) {
                           (0, i.jsxs)('div', {
                               children: [
                                   (0, i.jsx)('div', { className: V.premiumTier2Divider }),
-                                  (0, i.jsx)(j.ZP, {
+                                  (0, i.jsx)(C.ZP, {
                                       type: B.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL,
                                       subscriptionTier: B.Si.TIER_2
                                   })

@@ -8,13 +8,13 @@ function o(e) {
     let { onError: t, onSuccess: n } = null != e ? e : {},
         [o, c] = i.useState(!1),
         [d, u] = i.useState(!1),
-        [m, g] = i.useState(!1),
-        [p, h] = i.useState(!1),
+        [m, p] = i.useState(!1),
+        [g, h] = i.useState(!1),
         [f, b] = i.useState(!1),
         [_, x] = i.useState(!1),
-        [E, j] = i.useState(!1),
-        [C, O] = i.useState(!1),
-        S = o || d || m || p || _ || C,
+        [E, C] = i.useState(!1),
+        [j, O] = i.useState(!1),
+        S = o || d || m || g || _ || j,
         v = i.useCallback(
             async (e) => {
                 if (!S) {
@@ -50,14 +50,14 @@ function o(e) {
         I = i.useCallback(
             async (e) => {
                 if (!S) {
-                    g(!0);
+                    p(!0);
                     try {
                         await (0, s.Yw)(e.id, a.ne.INACTIVE), null == n || n();
                     } catch (n) {
                         let e = new r.Hx(n);
                         null == t || t(e);
                     } finally {
-                        g(!1);
+                        p(!1);
                     }
                 }
             },
@@ -95,14 +95,14 @@ function o(e) {
         A = i.useCallback(
             async (e) => {
                 if (!E) {
-                    j(!0);
+                    C(!0);
                     try {
                         await s.ZP.fetchTeenActivity(e), null == n || n();
                     } catch (n) {
                         let e = new r.Hx(n);
                         null == t || t(e);
                     } finally {
-                        j(!1);
+                        C(!1);
                     }
                 }
             },
@@ -137,7 +137,7 @@ function o(e) {
                     i = n[n.length - 1],
                     a = l.Z.getStartId(),
                     o = l.Z.getSelectedTeenId();
-                if (!C && null != a && null != o) {
+                if (!j && null != a && null != o) {
                     O(!0);
                     try {
                         await s.ZP.fetchMoreTeenActivity(o, e, a, i.event_id);
@@ -149,15 +149,15 @@ function o(e) {
                     }
                 }
             },
-            [C, t]
+            [j, t]
         ),
         isAcceptLoading: o,
         isDeclineLoading: d,
         isDisconnectLoading: m,
-        isCancelLoading: p,
+        isCancelLoading: g,
         isGetLinkCodeLoading: f,
         isSelectTeenUserLoading: E,
         isRequestingLink: _,
-        isMoreLoading: C
+        isMoreLoading: j
     };
 }

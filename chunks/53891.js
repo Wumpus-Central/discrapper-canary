@@ -10,8 +10,8 @@ var r = n(442837),
     d = n(430824),
     u = n(562511),
     m = n(731722),
-    g = n(299929),
-    p = n(921944),
+    p = n(299929),
+    g = n(921944),
     h = n(388032);
 let f = new o.Z('GuildTagCoachmark');
 function b(e) {
@@ -28,14 +28,14 @@ function b(e) {
         position: 'top',
         spacing: 16,
         shouldShow: !0,
-        onRequestClose: () => t(p.L.USER_DISMISS),
+        onRequestClose: () => t(g.L.USER_DISMISS),
         renderPopout: () =>
-            (0, i.jsx)(g.Z, {
+            (0, i.jsx)(p.Z, {
                 guildId: e.guild.id,
                 guildProfile: e.guild.profile,
                 title: h.intl.formatToPlainString(h.t['m/Tc3t'], { guildName: e.guild.name }),
                 description: h.intl.string(h.t.DrAXIi),
-                onClose: () => t(p.L.TAKE_ACTION)
+                onClose: () => t(g.L.TAKE_ACTION)
             }),
         children: e.children
     });
@@ -43,20 +43,20 @@ function b(e) {
 function _(e) {
     function t(t) {
         var n;
-        (0, c.Qd)(s.C.ADOPT_CLAN_IDENTITY_NOTICE, e.guild.id, !0, p.L.DISMISS), null == (n = e.onDismiss) || n.call(e, t);
+        (0, c.Qd)(s.C.ADOPT_CLAN_IDENTITY_NOTICE, e.guild.id, !0, g.L.DISMISS), null == (n = e.onDismiss) || n.call(e, t);
     }
     return (0, i.jsx)(l.yRy, {
         position: 'top',
         spacing: 16,
         shouldShow: !0,
-        onRequestClose: () => t(p.L.USER_DISMISS),
+        onRequestClose: () => t(g.L.USER_DISMISS),
         renderPopout: () =>
-            (0, i.jsx)(g.Z, {
+            (0, i.jsx)(p.Z, {
                 guildId: e.guild.id,
                 guildProfile: e.guild.profile,
                 title: h.intl.formatToPlainString(h.t.VFqnyc, { guildName: e.guild.name }),
                 description: h.intl.string(h.t.DrAXIi),
-                onClose: () => t(p.L.TAKE_ACTION)
+                onClose: () => t(g.L.TAKE_ACTION)
             }),
         children: e.children
     });

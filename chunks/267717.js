@@ -1,6 +1,6 @@
 n.d(t, {
     default: () => h,
-    y: () => p
+    y: () => g
 });
 var i = n(200651);
 n(192379);
@@ -13,7 +13,7 @@ var r = n(481060),
     d = n(981631),
     u = n(388032),
     m = n(784687);
-function g(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -38,7 +38,7 @@ function g(e) {
     }
     return e;
 }
-function p(e) {
+function g(e) {
     let { analyticsSource: t, onSubscribeFinish: s } = e,
         a = l.default.getCurrentUser();
     null != a &&
@@ -47,7 +47,7 @@ function p(e) {
             return (n) =>
                 (0, i.jsx)(
                     e,
-                    g(
+                    p(
                         {
                             user: a,
                             analyticsSource: t,
@@ -85,7 +85,7 @@ function h(e) {
         })(e, ['user', 'onClose']);
     return (0, i.jsx)(
         o.Z,
-        g(
+        p(
             {
                 modalClassName: m.modal,
                 modalContentClassName: m.modalContent,

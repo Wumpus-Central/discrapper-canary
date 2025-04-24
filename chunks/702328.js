@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(481060),
     u = n(634894),
     m = n(410030),
-    g = n(607070),
-    p = n(100527),
+    p = n(607070),
+    g = n(100527),
     h = n(906732),
     f = n(70097),
     b = n(433811),
     _ = n(214852),
     x = n(594174),
     E = n(78839),
-    j = n(626135),
-    C = n(526167),
+    C = n(626135),
+    j = n(526167),
     O = n(74538),
     S = n(140465),
     v = n(278605),
@@ -63,8 +63,8 @@ var i = n(200651),
     ed = n(786362),
     eu = n(181960),
     em = n(313199),
-    eg = n(821969);
-let ep = (e) => {
+    ep = n(821969);
+let eg = (e) => {
         let { isFullscreen: t, selectedPremiumType: n } = e;
         return (t && null == n) || (n === en.p9.TIER_2 && t) ? null : (0, i.jsx)(H.Z, { className: t ? el.perkCardsContainerSpacingFullscreen : el.perkCardsContainerSpacingSettings });
     },
@@ -132,9 +132,9 @@ let ep = (e) => {
             e_ = r.useRef(null),
             ex = r.useRef(null),
             eE = r.useRef(null),
-            ej = (0, a.e7)([g.Z], () => g.Z.useReducedMotion),
-            eC = (0, m.ZP)(),
-            eO = (0, c.wj)(eC),
+            eC = (0, a.e7)([p.Z], () => p.Z.useReducedMotion),
+            ej = (0, m.ZP)(),
+            eO = (0, c.wj)(ej),
             eS = x.default.getCurrentUser(),
             ev = (0, O.I5)(eS),
             eT = (0, v.xP)('PremiumMarketingHome'),
@@ -144,7 +144,7 @@ let ep = (e) => {
             [eP, eR] = r.useState(!1),
             [eD, eZ] = r.useState(!1),
             [ew, ek] = r.useState(!1),
-            eL = (0, C.rO)(),
+            eL = (0, j.rO)(),
             [eB, eM] = r.useState(!1),
             eU = (0, a.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()),
             eV = null != eU ? (0, O.Af)(eU) : null,
@@ -160,7 +160,7 @@ let ep = (e) => {
             eJ = (0, N.m)({ location: 'PremiumMarketingHome' }),
             e$ = null != (s = eQ || eJ) && s,
             e0 = null == (n = (0, I.Z)()) ? void 0 : n.billingSettingsMarketingBanner,
-            { analyticsLocations: e1 } = (0, h.ZP)(p.Z.PREMIUM_MARKETING),
+            { analyticsLocations: e1 } = (0, h.ZP)(g.Z.PREMIUM_MARKETING),
             e2 = 'PremiumMarketingHome';
         (0, u.j)({
             location: e2 + ' auto on',
@@ -303,15 +303,15 @@ let ep = (e) => {
                                       (0, i.jsx)('div', {
                                           className: el.heroHeadingV2ArtContainer,
                                           children: (0, i.jsx)(f.Z, {
-                                              autoPlay: !ej,
+                                              autoPlay: !eC,
                                               playsInline: !0,
-                                              preload: ej ? 'none' : 'auto',
+                                              preload: eC ? 'none' : 'auto',
                                               poster: em.Z,
                                               loop: !0,
                                               className: el.heroHeadingV2Art,
                                               ref: W,
                                               children: (0, i.jsx)('source', {
-                                                  src: eL ? eu.Z : eg.Z,
+                                                  src: eL ? eu.Z : ep.Z,
                                                   type: eL ? er.m.MP4 : er.m.WEBM
                                               })
                                           })
@@ -335,9 +335,9 @@ let ep = (e) => {
                         setIsAllPerksVisible: eY,
                         hasRenderedOnce: eB,
                         isMarketingPageV2Enabled: eN,
-                        isReducedMotion: ej
+                        isReducedMotion: eC
                     }),
-                    !eN && (0, i.jsx)(ep, { isFullscreen: B }),
+                    !eN && (0, i.jsx)(eg, { isFullscreen: B }),
                     eN && e3,
                     (0, i.jsxs)('div', {
                         className: el.planComparisonTableContainer,
@@ -380,7 +380,7 @@ let ep = (e) => {
                     (0, i.jsx)(o.$, {
                         innerRef: ex,
                         onChange: (e) => {
-                            e && !ew && (j.default.track(ei.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: e1 }), ek(!0));
+                            e && !ew && (C.default.track(ei.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: e1 }), ek(!0));
                         },
                         children: (0, i.jsx)('div', {
                             ref: ex,
@@ -405,7 +405,7 @@ let ep = (e) => {
                                 ref: eE,
                                 isFooterVisible: eP,
                                 isDarkMode: eO,
-                                isReducedMotion: ej,
+                                isReducedMotion: eC,
                                 subscriptionTier: eF
                             })
                         })

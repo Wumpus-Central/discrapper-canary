@@ -10,8 +10,8 @@ var r = n(524437),
     d = n(880257),
     u = n(63063),
     m = n(838436),
-    g = n(526761),
-    p = n(726985),
+    p = n(526761),
+    g = n(726985),
     h = n(981631),
     f = n(388032),
     b = n(298136);
@@ -24,7 +24,7 @@ function _() {
             if ((0, o.Ks)() && t.includes(r.Q4.SHOW)) return void l.Z.showAgeVerificationGetStartedModal(a.cU.SENSITIVE_MEDIA_FILTER_SETTINGS);
             (0, o.zj)(e);
         },
-        j = [
+        C = [
             {
                 value: r.Q4.BLUR,
                 label: f.intl.string(f.t.S49UaW)
@@ -34,7 +34,7 @@ function _() {
                 label: f.intl.string(f.t['D/157e'])
             }
         ],
-        C = [
+        j = [
             {
                 value: r.Q4.BLUR,
                 label: f.intl.string(f.t.S49UaW)
@@ -45,10 +45,10 @@ function _() {
             label: f.intl.string(f.t['5k5OFh'])
         };
     return (
-        t && (j.unshift(O), C.unshift(O)),
+        t && (C.unshift(O), j.unshift(O)),
         (0, i.jsxs)(m.U, {
-            setting: p.s6.PRIVACY_SENSITIVE_MEDIA_V2,
-            scrollPosition: g.FY.EXPLICIT_MEDIA_REDACTION_V2,
+            setting: g.s6.PRIVACY_SENSITIVE_MEDIA_V2,
+            scrollPosition: p.FY.EXPLICIT_MEDIA_REDACTION_V2,
             children: [
                 (0, i.jsx)(m.H, {
                     header: f.intl.string(f.t['c/UOwM']),
@@ -59,7 +59,7 @@ function _() {
                     title: f.intl.string(f.t['6k0AgI']),
                     titleClassName: b.selectItemTitle,
                     children: (0, i.jsx)(s.q4e, {
-                        options: j,
+                        options: C,
                         value: _,
                         onChange: (e) => E({ explicitContentFriendDm: e })
                     })
@@ -69,7 +69,7 @@ function _() {
                     title: f.intl.string(f.t.D2EGSk),
                     titleClassName: b.selectItemTitle,
                     children: (0, i.jsx)(s.q4e, {
-                        options: j,
+                        options: C,
                         value: x,
                         onChange: (e) => E({ explicitContentNonFriendDm: e })
                     })
@@ -80,7 +80,7 @@ function _() {
                         title: f.intl.string(f.t['FP+a4+']),
                         titleClassName: b.selectItemTitle,
                         children: (0, i.jsx)(s.q4e, {
-                            options: C,
+                            options: j,
                             value: n,
                             onChange: (e) => E({ explicitContentGuilds: e })
                         })

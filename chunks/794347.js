@@ -12,19 +12,19 @@ var i,
     d = n(393238),
     u = n(162168),
     m = n(624138),
-    g = n(182323);
-let p = (0, m.Mg)(c.Z.GRADIENT_PROGRESS_NOTCH_WIDTH);
+    p = n(182323);
+let g = (0, m.Mg)(c.Z.GRADIENT_PROGRESS_NOTCH_WIDTH);
 var h = (((i = {}).BLACK = 'BLACK'), (i.GRAY = 'GRAY'), i);
 let f = {
-    BLACK: g.black,
-    GRAY: g.gray
+    BLACK: p.black,
+    GRAY: p.gray
 };
 function b(e) {
-    return Math.round(e / p) * p;
+    return Math.round(e / g) * g;
 }
 function _(e) {
     let { notchBackground: t, progress: n, gradientStart: i = o.Z.unsafe_rawColors.YELLOW_260.css, gradientEnd: l = o.Z.unsafe_rawColors.GREEN_360.css, className: c, children: m } = e,
-        { ref: p, width: h } = (0, d.ZP)(),
+        { ref: g, width: h } = (0, d.ZP)(),
         _ = s.useMemo(() => (null != h ? b(h) : 0), [h]),
         x = s.useMemo(() => {
             let e = Math.abs(b((_ * (100 - Math.max(0, Math.min(100, n)))) / 100) - _);
@@ -38,21 +38,21 @@ function _(e) {
             [l, i, n, _]
         );
     return (0, r.jsxs)('div', {
-        className: g.wrapper,
-        ref: p,
+        className: p.wrapper,
+        ref: g,
         children: [
             (0, r.jsxs)('div', {
-                className: a()(g.container, c),
+                className: a()(p.container, c),
                 style: E,
                 children: [
                     (0, r.jsx)('div', {
-                        className: g.progress,
+                        className: p.progress,
                         style: x
                     }),
                     0 !== _ &&
                         (0, r.jsx)(u.Z, {
                             width: _,
-                            className: a()(g.notches, f[t])
+                            className: a()(p.notches, f[t])
                         })
                 ]
             }),

@@ -36,33 +36,33 @@ function u(e) {
     return e;
 }
 let m = { unlockedAchievements: {} },
-    g = u({}, m);
-class p extends (i = r.ZP.PersistedStore) {
+    p = u({}, m);
+class g extends (i = r.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(l.default, c.ZP);
         let t = null != e ? e : u({}, m);
-        for (let e in t) g[e] = t[e];
+        for (let e in t) p[e] = t[e];
     }
     getState() {
-        return g;
+        return p;
     }
     getAllUnlockedAchievements() {
-        return g.unlockedAchievements;
+        return p.unlockedAchievements;
     }
     getUnlocked(e) {
         var t;
-        return null != (t = g.unlockedAchievements[e]) ? t : null;
+        return null != (t = p.unlockedAchievements[e]) ? t : null;
     }
 }
-d(p, 'displayName', 'PoggermodeAchievementStore'), d(p, 'persistKey', 'PoggermodeAchievementStore');
-let h = new p(s.Z, {
+d(g, 'displayName', 'PoggermodeAchievementStore'), d(g, 'persistKey', 'PoggermodeAchievementStore');
+let h = new g(s.Z, {
     POGGERMODE_ACHIEVEMENT_UNLOCK: function (e) {
         let { achievementId: t } = e;
         if (!o.Z.isEnabled()) return !1;
         !(function (e) {
             var t, n;
-            if (null == g.unlockedAchievements[e])
-                (t = u({}, g.unlockedAchievements)),
+            if (null == p.unlockedAchievements[e])
+                (t = u({}, p.unlockedAchievements)),
                     (n = n =
                         {
                             [e]: {
@@ -82,7 +82,7 @@ let h = new p(s.Z, {
                           })(Object(n)).forEach(function (e) {
                               Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                           }),
-                    (g.unlockedAchievements = t),
+                    (p.unlockedAchievements = t),
                     setTimeout(() => {
                         (0, a.D)(e, !0);
                     }, 2000);

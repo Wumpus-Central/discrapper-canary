@@ -1,68 +1,68 @@
-n.d(t, { default: () => p });
-var s = n(200651),
-    l = n(192379),
-    o = n(399606),
-    a = n(481060),
-    r = n(194359),
-    i = n(726521),
-    c = n(681678),
-    d = n(594174),
-    u = n(51144),
-    h = n(991981),
-    k = n(134612),
-    m = n(388032),
-    x = n(995605);
+l.d(t, { default: () => p });
+var n = l(200651),
+    o = l(192379),
+    i = l(399606),
+    s = l(481060),
+    a = l(194359),
+    r = l(726521),
+    c = l(681678),
+    d = l(594174),
+    h = l(51144),
+    k = l(991981),
+    u = l(134612),
+    m = l(388032),
+    x = l(995605);
 function p(e) {
-    let { userId: t, channelId: n, transitionState: p, onBlock: C, onBlockAndReport: g, onClose: M, onCancel: z } = e,
-        f = (0, h.q)(n),
-        j = l.useCallback(() => {
-            r.Z.blockUser(t, { location: k.zr }).then(() => {
-                c.Z.showBlockSuccessToast(t, n);
+    let { userId: t, channelId: l, transitionState: p, onBlock: C, onBlockAndReport: z, onClose: j, onCancel: D } = e,
+        M = (0, k.q)(l),
+        f = o.useCallback(() => {
+            a.Z.blockUser(t, { location: u.zr }).then(() => {
+                c.Z.showBlockSuccessToast(t, l);
             });
-        }, [t, n]),
-        D = l.useCallback(() => {
-            j(), C(), M();
-        }, [j, C, M]),
-        U = l.useCallback(() => {
-            j(), (0, i.wk)(f), g(), M();
-        }, [f, j, g, M]),
-        b = (0, o.e7)([d.default], () => d.default.getUser(t)),
-        T = u.ZP.useName(b);
-    return (0, s.jsx)(a.Y0X, {
+        }, [t, l]),
+        b = o.useCallback(() => {
+            f(), C(), j();
+        }, [f, C, j]),
+        g = o.useCallback(() => {
+            f(), (0, r.wk)(M), z(), j();
+        }, [M, f, z, j]),
+        T = (0, i.e7)([d.default], () => d.default.getUser(t)),
+        U = h.ZP.useName(T);
+    return (0, n.jsx)(s.Y0X, {
         transitionState: p,
-        children: (0, s.jsx)(a.Ttm, {
+        children: (0, n.jsx)(s.Ttm, {
             style: { overflow: 'hidden auto' },
-            children: (0, s.jsxs)(a.hzk, {
+            children: (0, n.jsxs)(s.hzk, {
                 className: x.modalContent,
                 children: [
-                    (0, s.jsx)(a.X6q, {
+                    (0, n.jsx)(s.X6q, {
                         variant: 'heading-lg/bold',
                         color: 'header-primary',
-                        children: m.intl.format(m.t.x5pOn5, { name: T })
+                        children: m.intl.format(m.t.x5pOn5, { name: U })
                     }),
-                    (0, s.jsx)(a.Text, {
+                    (0, n.jsx)(s.Text, {
                         variant: 'text-md/medium',
                         color: 'header-secondary',
                         className: x.modalDescription,
                         children: m.intl.string(m.t.aedksr)
                     }),
-                    (0, s.jsx)(a.zxk, {
-                        onClick: D,
-                        color: a.Ttl.BRAND,
-                        size: a.PhG.MEDIUM,
+                    (0, n.jsx)(s.zxk, {
+                        onClick: b,
+                        color: s.Ttl.BRAND,
+                        size: s.PhG.MEDIUM,
                         children: m.intl.string(m.t.MzsUsr)
                     }),
-                    (0, s.jsx)(a.zxk, {
-                        onClick: U,
-                        color: a.Ttl.PRIMARY,
-                        size: a.PhG.MEDIUM,
+                    (0, n.jsx)(s.zxk, {
+                        onClick: g,
+                        color: s.Ttl.PRIMARY,
+                        size: s.PhG.MEDIUM,
                         children: m.intl.string(m.t['3pzuj4'])
                     }),
-                    (0, s.jsx)(a.zxk, {
-                        onClick: z,
-                        color: a.Ttl.PRIMARY,
-                        look: a.iLD.OUTLINED,
-                        size: a.PhG.MEDIUM,
+                    (0, n.jsx)(s.zxk, {
+                        onClick: D,
+                        color: s.Ttl.PRIMARY,
+                        look: s.iLD.OUTLINED,
+                        size: s.PhG.MEDIUM,
                         children: m.intl.string(m.t.okuCoa)
                     })
                 ]

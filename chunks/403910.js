@@ -1,13 +1,13 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => i });
 var r = n(442837),
-    i = n(339085);
-let s = function (e, t) {
+    s = n(339085);
+let i = function (e, t) {
     return (0, r.e7)(
-        [i.ZP],
+        [s.ZP],
         () => {
             var n;
             if (null == t) return null;
-            let r = i.ZP.getDisambiguatedEmojiContext(e);
+            let r = s.ZP.getDisambiguatedEmojiContext(e);
             return null != (n = r.getById(t)) ? n : r.getByName(t);
         },
         [e, t]

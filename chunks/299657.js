@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(570140),
     u = n(355467),
     m = n(179360),
-    g = n(821849),
-    p = n(497321),
+    p = n(821849),
+    g = n(497321),
     h = n(100527),
     f = n(906732),
     b = n(211242),
     _ = n(15640),
     x = n(89057),
     E = n(605236),
-    j = n(433811),
-    C = n(214852),
+    C = n(433811),
+    j = n(214852),
     O = n(621853),
     S = n(484459),
     v = n(246946),
@@ -40,7 +40,7 @@ var i = n(200651),
     V = n(126867);
 let G = function (e) {
     let { entrypoint: t = B.EZ.UserSettings } = e;
-    (0, C.z)(j.X);
+    (0, j.z)(C.X);
     let n = (0, b.Q)(),
         { sourceAnalyticsLocations: s, analyticsLocations: G } = (0, f.ZP)(h.Z.PREMIUM_MARKETING),
         F = (0, a.e7)([I.ZP], () => I.ZP.hasFetchedSubscriptions()),
@@ -64,7 +64,7 @@ let G = function (e) {
     r.useEffect(() => {
         d.Z.wait(async () => {
             let e = Date.now();
-            await Promise.all([u.jg(), (0, m.X8)(), u.tZ(), (0, g.Y2)(ee, null, M.JjL.DISCOVERY), null != z && et && J && (0, S.Z)(z)]), (Q.current = Date.now() - e), X(!1);
+            await Promise.all([u.jg(), (0, m.X8)(), u.tZ(), (0, p.Y2)(ee, null, M.JjL.DISCOVERY), null != z && et && J && (0, S.Z)(z)]), (Q.current = Date.now() - e), X(!1);
         });
     }, [ee, z, et, J]),
     r.useEffect(() => {
@@ -78,7 +78,7 @@ let G = function (e) {
             });
     }, [s, q]),
     (0, a.e7)([v.Z], () => v.Z.enabled))
-        ? (0, i.jsx)(p.Z, {})
+        ? (0, i.jsx)(g.Z, {})
         : n
           ? (0, i.jsx)(x.c8, {})
           : t === B.EZ.ApplicationStoreHome && J

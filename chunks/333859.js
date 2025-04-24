@@ -1,4 +1,4 @@
-n.d(t, { c: () => j });
+n.d(t, { c: () => C });
 var i = n(200651);
 n(192379);
 var r = n(442837),
@@ -10,8 +10,8 @@ var r = n(442837),
     d = n(94795),
     u = n(327943),
     m = n(539873),
-    g = n(311476),
-    p = n(197115),
+    p = n(311476),
+    g = n(197115),
     h = n(626135),
     f = n(981631),
     b = n(474936),
@@ -20,10 +20,10 @@ var r = n(442837),
 let E = () => {
         (0, d.nJ)(), (0, l.xf)();
     },
-    j = () => {
+    C = () => {
         let { analyticsLocations: e } = (0, c.ZP)(o.Z.USER_SETTINGS),
             t = (0, r.e7)([u.Z], () => u.Z.isUpsellPreview),
-            { enabled: n } = g.Z.getCurrentConfig(
+            { enabled: n } = p.Z.getCurrentConfig(
                 { location: 'UserSettingsAppearanceInAppIcon' },
                 {
                     autoTrackExposure: t,
@@ -54,7 +54,7 @@ let E = () => {
                                         children: n ? _.intl.string(_.t.SKNnqq) : _.intl.string(_.t['hb/wEx'])
                                     }),
                                     t
-                                        ? (0, i.jsx)(p.Z, {
+                                        ? (0, i.jsx)(g.Z, {
                                               className: x.tryItOutButton,
                                               showGradient: n,
                                               subscriptionTier: b.Si.TIER_2,

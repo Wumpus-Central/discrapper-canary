@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(692547),
     u = n(481060),
     m = n(660216),
-    g = n(225433),
-    p = n(825209),
+    p = n(225433),
+    g = n(825209),
     h = n(721383),
     f = n(612226),
     b = n(714338),
     _ = n(924557),
     x = n(600164),
     E = n(74299),
-    j = n(365023),
-    C = n(131951),
+    C = n(365023),
+    j = n(131951),
     O = n(556296),
     S = n(808506),
     v = n(63063),
@@ -119,11 +119,11 @@ class G extends r.PureComponent {
             className: l()(D.keybindGroup, Z.card),
             children: [
                 !e &&
-                    (0, i.jsx)(g.Z, {
+                    (0, i.jsx)(p.Z, {
                         'aria-label': R.intl.string(R.t.qEHmmJ),
                         className: D.removeKeybind,
                         onClick: this.handleDeleteKeybind,
-                        look: g.Z.Looks.FILLED
+                        look: p.Z.Looks.FILLED
                     }),
                 (0, i.jsxs)(x.Z, {
                     className: w.marginBottom8,
@@ -146,7 +146,7 @@ class G extends r.PureComponent {
                             children: (0, i.jsx)(u.xJW, {
                                 title: R.intl.string(R.t['1La4tL']),
                                 className: D.item,
-                                children: (0, i.jsx)(p.Z, {
+                                children: (0, i.jsx)(g.Z, {
                                     defaultValue: this.props.keybind.shortcut,
                                     onChange: this.handleShortcutChange
                                 })
@@ -244,7 +244,7 @@ class F extends r.PureComponent {
                 }
             ];
         return (
-            (0, j.l)() &&
+            (0, C.l)() &&
                 r.push({
                     value: A.kg4.TOGGLE_CAMERA,
                     label: R.intl.string(R.t.hf8JVV)
@@ -259,7 +259,7 @@ class F extends r.PureComponent {
                     label: R.intl.string(R.t.hurHWl)
                 })),
             t &&
-                ((0, T.isWindows)() || C.Z.getUseSystemScreensharePicker()) &&
+                ((0, T.isWindows)() || j.Z.getUseSystemScreensharePicker()) &&
                 r.push({
                     value: A.kg4.TOGGLE_GO_LIVE_STREAMING,
                     label: R.intl.string(R.t.ybdjJC)
@@ -314,7 +314,7 @@ class F extends r.PureComponent {
                 [A.kg4.TOGGLE_VOICE_MODE]: R.intl.string(R.t.snm5YW),
                 [A.kg4.TOGGLE_STREAMER_MODE]: R.intl.string(R.t.YszLLy)
             };
-        return (0, j.l)() && (i[A.kg4.TOGGLE_CAMERA] = R.intl.string(R.t.v1JBtL)), e && (i[A.kg4.TOGGLE_OVERLAY_INPUT_LOCK] = R.intl.string(R.t.IoP5vb)), t && (0, T.isWindows)() && (i[A.kg4.TOGGLE_GO_LIVE_STREAMING] = R.intl.string(R.t.s4C239)), (0, T.isDesktop)() && ((i[A.kg4.NAVIGATE_BACK] = R.intl.string(R.t.nKDlEh)), (i[A.kg4.NAVIGATE_FORWARD] = R.intl.string(R.t.DK0FFh)), (i[A.kg4.SOUNDBOARD] = (0, T.isWindows)() ? R.intl.string(R.t['5wJefH']) : R.intl.string(R.t.gzjsSE)), (i[A.kg4.SOUNDBOARD_HOLD] = (0, T.isWindows)() ? R.intl.string(R.t.RRkZc3) : R.intl.string(R.t.laNlTk)), n && (i[A.kg4.SAVE_CLIP] = R.intl.string(R.t.z3Wbam))), i;
+        return (0, C.l)() && (i[A.kg4.TOGGLE_CAMERA] = R.intl.string(R.t.v1JBtL)), e && (i[A.kg4.TOGGLE_OVERLAY_INPUT_LOCK] = R.intl.string(R.t.IoP5vb)), t && (0, T.isWindows)() && (i[A.kg4.TOGGLE_GO_LIVE_STREAMING] = R.intl.string(R.t.s4C239)), (0, T.isDesktop)() && ((i[A.kg4.NAVIGATE_BACK] = R.intl.string(R.t.nKDlEh)), (i[A.kg4.NAVIGATE_FORWARD] = R.intl.string(R.t.DK0FFh)), (i[A.kg4.SOUNDBOARD] = (0, T.isWindows)() ? R.intl.string(R.t['5wJefH']) : R.intl.string(R.t.gzjsSE)), (i[A.kg4.SOUNDBOARD_HOLD] = (0, T.isWindows)() ? R.intl.string(R.t.RRkZc3) : R.intl.string(R.t.laNlTk)), n && (i[A.kg4.SAVE_CLIP] = R.intl.string(R.t.z3Wbam))), i;
     }
     renderKeybinds(e) {
         return e.map((e) =>
@@ -493,7 +493,7 @@ class F extends r.PureComponent {
 }
 function H() {
     let e = (0, c.e7)([O.ZP], () => O.ZP.getState()),
-        t = (0, c.e7)([C.Z], () => (0, E.Z)(C.Z)),
+        t = (0, c.e7)([j.Z], () => (0, E.Z)(j.Z)),
         n = (0, c.e7)([S.default], () => S.default.isSupported()),
         r = (0, _.Go)();
     return (0, i.jsx)(F, {

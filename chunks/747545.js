@@ -16,16 +16,16 @@ var i = n(200651),
     d = n(846519),
     u = n(481060),
     m = n(846027),
-    g = n(579806),
-    p = n(906732),
+    p = n(579806),
+    g = n(906732),
     h = n(920321),
     f = n(921801),
     b = n(695346),
     _ = n(938117),
     x = n(131951),
     E = n(626135),
-    j = n(358085),
-    C = n(981631),
+    C = n(358085),
+    j = n(981631),
     O = n(726985),
     S = n(388032),
     v = n(602985);
@@ -53,7 +53,7 @@ function I() {
 }
 function N(e) {
     let { hideDeviceSelector: t = !1, hideDeviceHeader: n = !1, hideCameraSettingsLink: r = !1, onLearnMore: s, selectedBackgroundOption: a, onSelectBackgroundOption: d, renderCamera: I, hidePreviewToggle: N = !1, showSmallBackgroundOptions: y = !1, onCancelPreview: A } = e,
-        { analyticsLocations: P } = (0, p.ZP)(),
+        { analyticsLocations: P } = (0, g.ZP)(),
         { currentDeviceId: R, isVideoAvailable: D } = (0, c.cj)([x.Z], () => ({
             currentDeviceId: x.Z.getVideoDeviceId(),
             isVideoAvailable: x.Z.isVideoAvailable()
@@ -84,7 +84,7 @@ function N(e) {
                       className: v.previewToggle,
                       note: S.intl.string(S.t.WNbX4O),
                       onChange: (e) => {
-                          b.qF.updateSetting(e), E.default.track(C.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
+                          b.qF.updateSetting(e), E.default.track(j.rMx.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
                       },
                       value: w,
                       hideBorder: !0,
@@ -109,14 +109,14 @@ function N(e) {
                                 'aria-label': S.intl.string(S.t['t9eQ/v'])
                             }),
                             !r &&
-                                !!(0, j.isWindows)() &&
-                                !!j.isPlatformEmbedded &&
-                                o().satisfies(g.Z.os.release, '>=10.0.22000') &&
+                                !!(0, C.isWindows)() &&
+                                !!C.isPlatformEmbedded &&
+                                o().satisfies(p.Z.os.release, '>=10.0.22000') &&
                                 (0, i.jsx)(u.R94, {
                                     className: v.cameraDeeplink,
                                     children: S.intl.format(S.t.aJYgRk, {
                                         onCameraSettingsClick: () => {
-                                            null == A || A(), window.open((0, j.getPlatform)() === j.PlatformTypes.WINDOWS ? 'ms-settings:camera' + (null != R ? '?cameraId='.concat(encodeURIComponent(R.replace(T, '{E5323777-F976-4f5b-9B55-B94699C46E44}'))) : '') : ''), E.default.track(C.rMx.SYSTEM_CAMERA_SETTINGS_OPENED, { location_stack: P });
+                                            null == A || A(), window.open((0, C.getPlatform)() === C.PlatformTypes.WINDOWS ? 'ms-settings:camera' + (null != R ? '?cameraId='.concat(encodeURIComponent(R.replace(T, '{E5323777-F976-4f5b-9B55-B94699C46E44}'))) : '') : ''), E.default.track(j.rMx.SYSTEM_CAMERA_SETTINGS_OPENED, { location_stack: P });
                                         }
                                     })
                                 })

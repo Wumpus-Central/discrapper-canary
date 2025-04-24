@@ -1,7 +1,7 @@
 n.d(t, {
     Ae: () => d,
     Qe: () => m,
-    U0: () => g,
+    U0: () => p,
     bV: () => u,
     uZ: () => c
 }),
@@ -44,7 +44,7 @@ function u() {
 function m(e) {
     return e.replace(/[\s._-]+/g, '').toUpperCase();
 }
-function g(e, t) {
+function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'Discord';
     return 'otpauth://totp/'.concat(encodeURI(n), ':').concat(encodeURI(e), '?secret=').concat(m(t), '&issuer=').concat(encodeURIComponent(n));
 }

@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(524437),
     u = n(780384),
     m = n(481060),
-    g = n(457330),
-    p = n(410030),
+    p = n(457330),
+    g = n(410030),
     h = n(726542),
     f = n(116841),
     b = n(295377),
     _ = n(921801),
     x = n(553795),
     E = n(430824),
-    j = n(63063),
-    C = n(358085),
+    C = n(63063),
+    j = n(358085),
     O = n(709054),
     S = n(362352),
     v = n(413182),
@@ -97,7 +97,7 @@ function D() {
     let e = T.G6.useSetting(),
         t = T.Wz.useSetting(),
         n = (0, S.Yd)('activity privacy tab'),
-        r = C.isPlatformEmbedded ? y.intl.string(y.t.MznbeH) : y.intl.string(y.t.oKqC4u),
+        r = j.isPlatformEmbedded ? y.intl.string(y.t.MznbeH) : y.intl.string(y.t.oKqC4u),
         s = (e) => {
             T.Wz.updateSetting(e ? d.E5.ON_FOR_LARGE_GUILDS : d.E5.OFF), R(e);
         },
@@ -142,7 +142,7 @@ function D() {
                                   variant: 'text-sm/normal',
                                   color: 'header-secondary',
                                   className: P.marginBottom8,
-                                  children: y.intl.format(y.t.aUxRra, { helpdeskArticle: j.Z.getArticleURL(N.BhN.ACTIVITY_STATUS_SETTINGS) })
+                                  children: y.intl.format(y.t.aUxRra, { helpdeskArticle: C.Z.getArticleURL(N.BhN.ACTIVITY_STATUS_SETTINGS) })
                               }),
                               (0, i.jsx)(m.q4e, {
                                   options: o,
@@ -153,7 +153,7 @@ function D() {
                       })
                     : (0, i.jsx)(m.j7V, {
                           value: t === d.E5.OFF,
-                          note: y.intl.format(y.t['+5/xu7'], { helpdeskArticle: j.Z.getArticleURL(N.BhN.ACTIVITY_STATUS_SETTINGS) }),
+                          note: y.intl.format(y.t['+5/xu7'], { helpdeskArticle: C.Z.getArticleURL(N.BhN.ACTIVITY_STATUS_SETTINGS) }),
                           onChange: (e) => s(!e),
                           children: y.intl.string(y.t.D5GXTU)
                       }),
@@ -219,7 +219,7 @@ let k = (e) => {
 function L(e) {
     let { account: t } = e,
         [n, s] = r.useState(t.showActivity),
-        l = (0, p.ZP)();
+        l = (0, g.ZP)();
     r.useEffect(() => {
         s(t.showActivity);
     }, [t]);
@@ -231,7 +231,7 @@ function L(e) {
                 hideBorder: !0,
                 value: n,
                 onChange: function (e) {
-                    s(e), g.Z.setShowActivity(t.type, t.id, e);
+                    s(e), p.Z.setShowActivity(t.type, t.id, e);
                 },
                 children: (0, i.jsxs)('div', {
                     className: A.activitySwitchRow,

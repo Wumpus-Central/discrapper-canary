@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(906732),
     u = n(313201),
     m = n(73346),
-    g = n(584825),
-    p = n(305342),
+    p = n(584825),
+    g = n(305342),
     h = n(293810),
     f = n(388032),
     b = n(637158);
@@ -34,9 +34,9 @@ let _ = (e) => {
     x = (e) => {
         var t;
         let { transitionState: n, groupListing: r, guildId: s, listing: o, subscription: x, onClose: E } = e,
-            j = (0, u.Dt)(),
-            C = (0, g.YB)(s),
-            O = (null == C || null == (t = C.cover_image_asset) ? void 0 : t.application_id) != null ? (0, m._W)(C.cover_image_asset.application_id, C.cover_image_asset, 440) : void 0,
+            C = (0, u.Dt)(),
+            j = (0, p.YB)(s),
+            O = (null == j || null == (t = j.cover_image_asset) ? void 0 : t.application_id) != null ? (0, m._W)(j.cover_image_asset.application_id, j.cover_image_asset, 440) : void 0,
             { analyticsLocations: S } = (0, d.ZP)(c.Z.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
             { cancelSubscription: v, error: T, submitting: I } = _(S),
             N = async () => {
@@ -53,7 +53,7 @@ let _ = (e) => {
         return (0, i.jsxs)(a.Y0X, {
             transitionState: n,
             className: b.__invalid_modal,
-            'aria-labelledby': j,
+            'aria-labelledby': C,
             children: [
                 (0, i.jsxs)('div', {
                     children: [
@@ -74,7 +74,7 @@ let _ = (e) => {
                     className: b.content,
                     children: [
                         (0, i.jsx)(a.X6q, {
-                            id: j,
+                            id: C,
                             variant: 'text-md/medium',
                             className: b.title,
                             children: f.intl.string(f.t.O6l5tL)
@@ -84,7 +84,7 @@ let _ = (e) => {
                             variant: 'text-sm/normal',
                             children: R
                         }),
-                        (0, i.jsx)(p.c, {
+                        (0, i.jsx)(g.c, {
                             listingId: o.id,
                             guildId: r.guild_id,
                             className: b.benefits

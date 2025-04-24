@@ -10,8 +10,8 @@ var r = n(120356),
     d = n(631885),
     u = n(568671),
     m = n(292352),
-    g = n(332495),
-    p = n(388032),
+    p = n(332495),
+    g = n(388032),
     h = n(864903),
     f = n(589608),
     b = n(633488),
@@ -29,15 +29,15 @@ let x = () => {
                             fullWidth: !1,
                             size: l.PhG.LARGE,
                             onClick: () => n(m.dG.REQUESTS),
-                            children: p.intl.string(p.t.LhlgY2)
+                            children: g.intl.string(g.t.LhlgY2)
                         })
                       : (0, i.jsx)(u.Z, {})
               });
     },
     E = () => {
         let e = (0, c.Z)(),
-            t = (0, a.o)(p.intl.string(g.default.T7GyW1), p.intl.string(g.default.goKE2d)),
-            n = (0, a.o)(p.intl.format(g.default.MXjDSk, { articleLink: 'https://support.discord.com/hc/articles/14155060633623' }), p.intl.format(g.default.EMCf6u, { articleLink: 'https://support.discord.com/hc/articles/14155043715735' }));
+            t = (0, a.o)(g.intl.string(p.default.T7GyW1), g.intl.string(p.default.goKE2d)),
+            n = (0, a.o)(g.intl.format(p.default.MXjDSk, { articleLink: 'https://support.discord.com/hc/articles/14155060633623' }), g.intl.format(p.default.EMCf6u, { articleLink: 'https://support.discord.com/hc/articles/14155043715735' }));
         return (0, i.jsxs)('div', {
             className: s()(h.container, f.box),
             children: [
@@ -66,7 +66,7 @@ let x = () => {
                     className: h.headerImage,
                     children: (0, i.jsx)('img', {
                         src: e ? b : _,
-                        alt: p.intl.string(g.default.ffg6xc)
+                        alt: g.intl.string(p.default.ffg6xc)
                     })
                 })
             ]

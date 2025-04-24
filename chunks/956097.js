@@ -9,8 +9,8 @@ var i,
     d = n(668781),
     u = n(358085),
     m = n(998502),
-    g = n(49226),
-    p = n(981631);
+    p = n(49226),
+    g = n(981631);
 let h = { status: '' },
     f = [],
     b = ['discord.com', 'discordapp.com', 'discordapp.net', 'dl.discordapp.net', 'discordcdn.com', 'discord.gg', 'discord.media'];
@@ -70,10 +70,10 @@ class _ extends (i = a.ZP.Store) {
         try {
             var e;
             let t = await this.runCommand('registration', 'show');
-            if (((null == t ? void 0 : t.code) === 'MissingRegistration' && (await this.runCommand('registration', 'new'), (t = await this.runCommand('registration', 'show'))), (null == t || null == (e = t.account) ? void 0 : e.type) === 'free' && g.Z.getCurrentConfig({ location: 'configureLicense' }).plus)) {
+            if (((null == t ? void 0 : t.code) === 'MissingRegistration' && (await this.runCommand('registration', 'new'), (t = await this.runCommand('registration', 'show'))), (null == t || null == (e = t.account) ? void 0 : e.type) === 'free' && p.Z.getCurrentConfig({ location: 'configureLicense' }).plus)) {
                 let { key: e } = (
                     await o.tn.get({
-                        url: p.ANM.USER_WARP_LICENSE,
+                        url: g.ANM.USER_WARP_LICENSE,
                         oldFormErrors: !0,
                         rejectWithError: !0
                     })
@@ -104,7 +104,7 @@ class _ extends (i = a.ZP.Store) {
         return f;
     }
     get clientEnabled() {
-        return g.Z.getCurrentConfig(
+        return p.Z.getCurrentConfig(
             { location: 'WarpClientStore' },
             {
                 autoTrackExposure: !0,

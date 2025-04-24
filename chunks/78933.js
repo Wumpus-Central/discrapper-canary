@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(100527),
     u = n(906732),
     m = n(368326),
-    g = n(429467),
-    p = n(440051),
+    p = n(429467),
+    g = n(440051),
     h = n(734934),
     f = n(300284),
     b = n(680295),
     _ = n(785717),
     x = n(687158),
     E = n(892001),
-    j = n(899007),
-    C = n(648052),
+    C = n(899007),
+    j = n(648052),
     O = n(867176),
     S = n(537006),
     v = n(483517),
@@ -89,16 +89,16 @@ function Q(e) {
     let el = (0, l.e7)([Z.Z], () => Z.Z.getStatus(t.id)),
         ea = D.Cr.useSetting(),
         eo = (0, F.F)(ea),
-        { expiringStatusProfileFeedback: ec } = p.Y.useExperiment({ location: 'UserProfileAccountPopout' }, { autoTrackExposure: !1 }),
+        { expiringStatusProfileFeedback: ec } = g.Y.useExperiment({ location: 'UserProfileAccountPopout' }, { autoTrackExposure: !1 }),
         ed = (0, l.e7)([w.Z], () => w.Z.hidePersonalInformation),
         eu = (0, h.p)(),
         em = D.Sb.useSetting(),
-        eg = (0, F.I)(el),
-        ep = (0, U.g)(n),
+        ep = (0, F.I)(el),
+        eg = (0, U.g)(n),
         eh = (0, f.Z)({ analyticsLocations: en }),
         ef = (0, B.I5)(t),
         eb = (0, m.p)({ location: 'UserProfileAccountPopout' }),
-        e_ = r.useMemo(() => (0, g.Z)(), []),
+        e_ = r.useMemo(() => (0, p.Z)(), []),
         ex = (e) => {
             null == n || n(),
                 (0, E.openUserProfileModal)(
@@ -137,7 +137,7 @@ function Q(e) {
                                     displayProfile: et,
                                     themeType: W.lY.POPOUT
                                 }),
-                                (0, i.jsx)(j.Z, {
+                                (0, i.jsx)(C.Z, {
                                     user: t,
                                     displayProfile: et,
                                     themeType: W.lY.POPOUT,
@@ -166,7 +166,7 @@ function Q(e) {
                                     nickname: L.ZP.getName(null, null, t),
                                     onOpenProfile: ee ? void 0 : ex,
                                     pronouns: null == et ? void 0 : et.pronouns,
-                                    tags: (0, i.jsx)(C.Z, {
+                                    tags: (0, i.jsx)(j.Z, {
                                         displayProfile: et,
                                         themeType: W.lY.POPOUT,
                                         onClose: n,
@@ -243,7 +243,7 @@ function Q(e) {
                                                                       className: K.statusPickerModalMenu,
                                                                       'aria-label': Y.intl.string(Y.t.E13trK),
                                                                       onClose: t,
-                                                                      children: eg
+                                                                      children: ep
                                                                   });
                                                               },
                                                         onClick: s.tq
@@ -291,7 +291,7 @@ function Q(e) {
                                                                                                       hideScroller: !0,
                                                                                                       onClose: r,
                                                                                                       onSelect: void 0,
-                                                                                                      children: eg
+                                                                                                      children: ep
                                                                                                   })
                                                                                               }),
                                                                                           Object.getOwnPropertyDescriptors
@@ -336,7 +336,7 @@ function Q(e) {
                                                                 navId: 'switch-accounts-submenu',
                                                                 'aria-label': Y.intl.string(Y.t.wFhVqK),
                                                                 onClose: t,
-                                                                children: ep
+                                                                children: eg
                                                             });
                                                         }
                                                     }),

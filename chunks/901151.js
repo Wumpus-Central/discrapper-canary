@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(709054),
     u = n(695346),
     m = n(749876),
-    g = n(546957),
-    p = n(838436),
+    p = n(546957),
+    g = n(838436),
     h = n(51331),
     f = n(726985),
     b = n(981631),
@@ -127,9 +127,9 @@ function E(e) {
         ]
     });
 }
-function j() {
+function C() {
     let e = u._j.useSetting();
-    return (0, i.jsx)(p.U, {
+    return (0, i.jsx)(g.U, {
         setting: f.s6.PRIVACY_AND_SAFETY_ALLOW_GAME_FRIEND_DMS,
         children: (0, i.jsx)(h.Z, {
             title: _.intl.string(_.t.XpBObG),
@@ -139,7 +139,7 @@ function j() {
         })
     });
 }
-function C() {
+function j() {
     let e = u.JG.useSetting(),
         t = e === s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET ? s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL : e,
         n = [
@@ -156,10 +156,10 @@ function C() {
                 value: s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_NONE
             }
         ];
-    return (0, i.jsxs)(p.U, {
+    return (0, i.jsxs)(g.U, {
         setting: f.s6.PRIVACY_AND_SAFETY_IN_GAME_DMS,
         children: [
-            (0, i.jsx)(p.H, {
+            (0, i.jsx)(g.H, {
                 header: _.intl.string(_.t['ms+TmZ']),
                 description: _.intl.string(_.t['4NN4+/'])
             }),
@@ -176,12 +176,12 @@ function C() {
 }
 function O() {
     let { showLoadingIndicator: e, slayerSdkApplications: t } = (0, m.Z)();
-    return (0, i.jsx)(g.Z, {
+    return (0, i.jsx)(p.Z, {
         children: e
             ? (0, i.jsx)(l.$jN, {})
             : t.length > 0
               ? (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(E, { applications: t }), (0, i.jsx)(j, {}), (0, i.jsx)('div', { className: x.divider }), (0, i.jsx)(C, {})]
+                    children: [(0, i.jsx)(E, { applications: t }), (0, i.jsx)(C, {}), (0, i.jsx)('div', { className: x.divider }), (0, i.jsx)(j, {})]
                 })
               : (0, i.jsxs)('div', {
                     className: x.emptyContainer,

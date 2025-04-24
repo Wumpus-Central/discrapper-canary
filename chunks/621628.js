@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => C,
+    Z: () => j,
     u: () => E
 }),
     n(388685),
@@ -27,8 +27,8 @@ var i = n(200651),
     d = n(481060),
     u = n(600164),
     m = n(675478),
-    g = n(581883),
-    p = n(883904),
+    p = n(581883),
+    g = n(883904),
     h = n(68985),
     f = n(211644),
     b = n(804501),
@@ -66,7 +66,7 @@ function E(e) {
         ]
     });
 }
-function j(e) {
+function C(e) {
     let { items: t, dismissedContents: n, handleChange: r } = e;
     return (0, i.jsx)(i.Fragment, {
         children: t
@@ -84,7 +84,7 @@ function j(e) {
             )
     });
 }
-function C() {
+function j() {
     var e;
     let t = (0, f.ZP)((e) => e.recentlyShown),
         {
@@ -96,12 +96,12 @@ function C() {
             dailyCapOverridden: h.Z.dailyCapOverridden,
             newUserMinAgeRequiredOverridden: h.Z.newUserMinAgeRequiredOverridden
         })),
-        [E, C] = r.useState(''),
+        [E, j] = r.useState(''),
         O =
             null !=
-            (e = (0, a.e7)([g.Z], () => {
+            (e = (0, a.e7)([p.Z], () => {
                 var e;
-                return null == (e = g.Z.settings.userContent) ? void 0 : e.dismissedContents;
+                return null == (e = p.Z.settings.userContent) ? void 0 : e.dismissedContents;
             }))
                 ? e
                 : new Uint8Array(),
@@ -147,18 +147,18 @@ function C() {
                     }),
                     (0, i.jsx)(d.j7V, {
                         value: s,
-                        onChange: p.Nj,
+                        onChange: g.Nj,
                         children: 'Override Dismissible Content Daily Cap'
                     }),
                     (0, i.jsx)(d.j7V, {
                         value: b,
-                        onChange: p.KC,
+                        onChange: g.KC,
                         children: 'Override Minimum User Account Age Requirement'
                     }),
                     (0, i.jsxs)(d.xJW, {
                         children: [
                             (0, i.jsx)(d.zxk, {
-                                onClick: () => (0, p.EG)(),
+                                onClick: () => (0, g.EG)(),
                                 children: 'Reset DismissibleContentFrameworkStore'
                             }),
                             (0, i.jsx)(d.R94, {
@@ -177,8 +177,8 @@ function C() {
                         className: x.marginBottom20,
                         size: d.E1j.Sizes.LARGE,
                         query: E,
-                        onChange: C,
-                        onClear: () => C('')
+                        onChange: j,
+                        onClear: () => j('')
                     }),
                     (0, i.jsxs)(d.xJW, {
                         className: _.buttonsContainer,
@@ -201,7 +201,7 @@ function C() {
                                       className: x.marginBottom20,
                                       children: (0, i.jsx)(d.vwX, { children: 'Recently Shown' })
                                   }),
-                                  (0, i.jsx)(j, {
+                                  (0, i.jsx)(C, {
                                       items: I,
                                       dismissedContents: O,
                                       handleChange: T
@@ -216,7 +216,7 @@ function C() {
                                       className: x.marginBottom20,
                                       children: (0, i.jsx)(d.vwX, { children: 'Recent Overrides' })
                                   }),
-                                  (0, i.jsx)(j, {
+                                  (0, i.jsx)(C, {
                                       items: N,
                                       dismissedContents: O,
                                       handleChange: T
@@ -228,7 +228,7 @@ function C() {
                         className: l()(x.marginBottom20, x.marginTop20),
                         children: (0, i.jsx)(d.vwX, { children: 'Available Dismissible Contents' })
                     }),
-                    (0, i.jsx)(j, {
+                    (0, i.jsx)(C, {
                         items: y,
                         dismissedContents: O,
                         handleChange: T

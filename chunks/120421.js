@@ -49,9 +49,9 @@ function u(e, t, n) {
     };
 }
 let m = u(),
-    g = !1;
-function p() {
-    g = !1;
+    p = !1;
+function g() {
+    p = !1;
 }
 function h() {
     return Object.values(m.pointsByItem).reduce((e, t) => e + t, 0);
@@ -139,7 +139,7 @@ class b extends (i = r.ZP.PersistedStore) {
         return m.endTime;
     }
     get isRedeemingPrize() {
-        return g;
+        return p;
     }
     get volume() {
         return m.volume;
@@ -229,10 +229,10 @@ let _ = new b(s.Z, {
         m = u(m.volume, m.isMuted, m.unlockedAchievements);
     },
     CLICKER_GAME_REDEEM_PRIZE_START: function () {
-        g = !0;
+        p = !0;
     },
-    CLICKER_GAME_REDEEM_PRIZE_SUCCESS: p,
-    CLICKER_GAME_REDEEM_PRIZE_FAIL: p,
+    CLICKER_GAME_REDEEM_PRIZE_SUCCESS: g,
+    CLICKER_GAME_REDEEM_PRIZE_FAIL: g,
     CLICKER_GAME_SET_VOLUME: function (e) {
         let { volume: t } = e;
         m.volume = t;

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(953529);
+n.d(t, { Z: () => C }), n(953529);
 var i = n(200651),
     r = n(192379),
     s = n(120356),
@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(410030),
     u = n(70097),
     m = n(626135),
-    g = n(526167),
-    p = n(831964),
+    p = n(526167),
+    g = n(831964),
     h = n(981631),
     f = n(869783),
     b = n(388032),
@@ -41,35 +41,35 @@ function x(e) {
     return e;
 }
 let E = (e) => {
-        let { name: t, title: n, description: s, descriptionCta: b, previewImage: x, videoUrl: E, shouldLoadVideo: j, index: C, isCompact: O, isReducedMotion: S, onClick: v } = e,
-            T = (0, g.rO)(),
+        let { name: t, title: n, description: s, descriptionCta: b, previewImage: x, videoUrl: E, shouldLoadVideo: C, index: j, isCompact: O, isReducedMotion: S, onClick: v } = e,
+            T = (0, p.rO)(),
             I = r.useRef(null),
             N = r.useRef(0),
             y = (function (e) {
                 let t;
                 switch (e) {
-                    case p.dm.EMOJIS:
+                    case g.dm.EMOJIS:
                         t = _.emojisBackground;
                         break;
-                    case p.dm.REFERRAL_PROGRAM:
+                    case g.dm.REFERRAL_PROGRAM:
                         t = _.referralProgramBackground;
                         break;
-                    case p.dm.NO_LIMITS:
+                    case g.dm.NO_LIMITS:
                         t = _.noLimitsBackground;
                         break;
-                    case p.dm.NEW_APP_STYLES:
+                    case g.dm.NEW_APP_STYLES:
                         t = _.newStylesBackground;
                         break;
-                    case p.dm.YOUR_SPACE:
+                    case g.dm.YOUR_SPACE:
                         t = _.yourSpaceBackground;
                         break;
-                    case p.dm.SERVER_PROFILES:
+                    case g.dm.SERVER_PROFILES:
                         t = _.serverProfilesBackground;
                         break;
-                    case p.dm.SHOW_YOUR_STYLE:
+                    case g.dm.SHOW_YOUR_STYLE:
                         t = _.yourStyleBackground;
                         break;
-                    case p.dm.PERMADECOS:
+                    case g.dm.PERMADECOS:
                         t = _.permadecosBackground;
                 }
                 return t;
@@ -132,7 +132,7 @@ let E = (e) => {
                         u.Z,
                         {
                             playsInline: !0,
-                            preload: j ? 'auto' : 'none',
+                            preload: C ? 'auto' : 'none',
                             muted: !0,
                             poster: x,
                             loop: !0,
@@ -151,7 +151,7 @@ let E = (e) => {
                     )
                 });
             },
-            B = C % 2 != 0;
+            B = j % 2 != 0;
         return (0, i.jsx)('div', {
             className: l()(y, {
                 [_.whatsNewBoxContainer]: !O,
@@ -170,10 +170,10 @@ let E = (e) => {
                   })
         });
     },
-    j = r.memo(function (e) {
+    C = r.memo(function (e) {
         let { className: t, shouldLoadVideo: n, isBestOfNitro: r = !1, isReducedMotion: s } = e,
-            a = Object.values((0, p.ZP)(r)),
-            o = r ? Object.values((0, p.__)()) : null;
+            a = Object.values((0, g.ZP)(r)),
+            o = r ? Object.values((0, g.__)()) : null;
         return (0, i.jsxs)('div', {
             className: l()(_.boxBackdrop, t),
             children: [

@@ -19,8 +19,8 @@ var a = n(200651),
     g = n(168524),
     _ = n(77498),
     y = n(823379),
-    C = n(550532),
-    O = n(71585),
+    O = n(550532),
+    C = n(71585),
     N = n(146282),
     E = n(780106),
     T = n(650613),
@@ -86,7 +86,7 @@ function Z() {
     var e, t;
     let n = (0, u.e7)([N.Z], () => N.Z.getFeed(P.YN.GLOBAL_FEED)),
         l = (0, u.e7)([N.Z], () => N.Z.getDebugImpressionCappingDisabled()),
-        i = (0, u.e7)([O.Z], () => O.Z.getDebugFastImpressionCappingEnabled()),
+        i = (0, u.e7)([C.Z], () => C.Z.getDebugFastImpressionCappingEnabled()),
         s = (function (e) {
             let t = o().groupBy(e, (e) => e.content_type);
             return Object.keys(t).map((e) => {
@@ -116,7 +116,7 @@ function Z() {
             location: 'DevToolsContentInventory',
             source: j.m1.DevTools
         }),
-        z = Object.entries(null != (t = m.K.get('GameProfileModal')) ? t : {})
+        M = Object.entries(null != (t = m.K.get('GameProfileModal')) ? t : {})
             .filter((e) => {
                 let [t, n] = e;
                 return n;
@@ -125,8 +125,8 @@ function Z() {
                 let [t] = e;
                 return t;
             }),
-        M = (0, b.Z)(z).filter(y.lm),
-        U = (0, u.e7)([C.Z], () => C.Z.getFakeGameToShow());
+        z = (0, b.Z)(M).filter(y.lm),
+        U = (0, u.e7)([O.Z], () => O.Z.getFakeGameToShow());
     return (0, a.jsx)('div', {
         className: k.panel,
         children: (0, a.jsxs)(x.zJl, {
@@ -206,7 +206,7 @@ function Z() {
                             error: R.length > 0 && null == D ? 'No game profile for '.concat(null != A ? A : R + ' - try by id', '.') : void 0,
                             style: null != D ? { border: '1px solid green' } : {}
                         }),
-                        (0, a.jsx)('ul', { children: M.map((e) => (0, a.jsx)('li', { children: (0, a.jsx)(L, { application: e }) }, 'follow-game-'.concat(e.id))) })
+                        (0, a.jsx)('ul', { children: z.map((e) => (0, a.jsx)('li', { children: (0, a.jsx)(L, { application: e }) }, 'follow-game-'.concat(e.id))) })
                     ]
                 }),
                 (0, a.jsxs)(x.hjN, {

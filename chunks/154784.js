@@ -9,14 +9,14 @@ var i = n(200651),
     d = n(672339),
     u = n(938117),
     m = n(131951),
-    g = n(594174),
-    p = n(726985),
+    p = n(594174),
+    g = n(726985),
     h = n(981631);
 function f() {
     let e = (0, l.O)(),
         t = r.useRef(!1),
         n = (0, s.e7)([m.Z], () => m.Z.getVideoDeviceId()),
-        [f, b] = r.useState((0, o.P)(g.default.getCurrentUser())),
+        [f, b] = r.useState((0, o.P)(p.default.getCurrentUser())),
         _ = r.useRef(f);
     return (
         r.useEffect(
@@ -26,7 +26,7 @@ function f() {
             []
         ),
         (0, i.jsx)(a.F, {
-            setting: p.s6.VOICE_AND_VIDEO_VIDEO_BACKGROUND,
+            setting: g.s6.VOICE_AND_VIDEO_VIDEO_BACKGROUND,
             children: (0, i.jsx)(u.Z, {
                 selectedBackgroundOption: f,
                 onSelectBackgroundOption: (n) => {

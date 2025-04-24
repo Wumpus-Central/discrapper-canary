@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(243778),
     u = n(373230),
     m = n(654904),
-    g = n(993413),
-    p = n(921944),
+    p = n(993413),
+    g = n(921944),
     h = n(486324),
     f = n(485696),
     b = n(388032),
@@ -22,7 +22,7 @@ let x = [
     }
 ];
 function E(e) {
-    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: E, changeAvatarButtonText: j, guildId: C, className: O, disabled: S = !1, isTryItOutFlow: v = !1, forcedDivider: T, withHighlight: I = !1 } = e,
+    let { showRemoveAvatarButton: t, errors: n, onAvatarChange: s, sectionTitle: E, changeAvatarButtonText: C, guildId: j, className: O, disabled: S = !1, isTryItOutFlow: v = !1, forcedDivider: T, withHighlight: I = !1 } = e,
         { newestAnalyticsLocation: N } = (0, c.ZP)(),
         y = I ? o.gtL : o.zxk,
         A = (0, u.T)({ location: 'AvatarSection' }),
@@ -31,16 +31,16 @@ function E(e) {
     let [R, D] = (0, d.US)(P),
         Z = R === a.z.RECENT_AVATARS_SETTINGS_PROFILE_PAGE_NEW_BADGE,
         w = r.useCallback(() => {
-            D(p.L.TAKE_ACTION),
+            D(g.L.TAKE_ACTION),
                 (0, m.$r)({
                     uploadType: h.pC.AVATAR,
                     analyticsSource: N,
                     filters: v ? x : void 0,
-                    guildId: C,
+                    guildId: j,
                     isTryItOutFlow: v
                 });
-        }, [C, N, v, D]);
-    return (0, i.jsx)(g.Z, {
+        }, [j, N, v, D]);
+    return (0, i.jsx)(p.Z, {
         className: O,
         title: E,
         titleIcon: Z
@@ -65,7 +65,7 @@ function E(e) {
                     className: l()({ [_.buttonHighlighted]: I }),
                     size: o.zxk.Sizes.SMALL,
                     onClick: w,
-                    children: null != j ? j : b.intl.string(b.t['4OynCA'])
+                    children: null != C ? C : b.intl.string(b.t['4OynCA'])
                 }),
                 t &&
                     (0, i.jsx)(o.zxk, {
@@ -74,7 +74,7 @@ function E(e) {
                         look: o.zxk.Looks.LINK,
                         size: o.zxk.Sizes.SMALL,
                         onClick: () => s(null),
-                        children: null != C ? b.intl.string(b.t.TDjKDg) : b.intl.string(b.t.twB3f3)
+                        children: null != j ? b.intl.string(b.t.TDjKDg) : b.intl.string(b.t.twB3f3)
                     })
             ]
         })

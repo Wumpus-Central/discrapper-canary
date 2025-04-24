@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(663389),
     u = n(960412),
     m = n(151662),
-    g = n(930441),
-    p = n(726985),
+    p = n(930441),
+    g = n(726985),
     h = n(388032),
     f = n(495288),
     b = n(20493);
@@ -29,22 +29,22 @@ function x() {
         { categories: n, initialized: s } = (0, a.cj)([m.Z], () => m.Z.getEmailSettings());
     r.useEffect(() => {
         if (null == s) (0, u.Y7)();
-        else if (e === g.vG.toUpperCase()) {
+        else if (e === p.vG.toUpperCase()) {
             var n;
             null == t || null == (n = t.current) || n.scrollIntoView(!0);
         }
     }, [s, t, e]);
-    let x = g.M0.reduce((e, t) => e || !!n[t], !1),
+    let x = p.M0.reduce((e, t) => e || !!n[t], !1),
         E = {
-            [g.$Z.COMMUNICATION]: p.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
-            [g.$Z.SOCIAL]: p.s6.NOTIFICATIONS_EMAILS_SOCIAL,
-            [g.$Z.UPDATES_AND_ANNOUNCEMENTS]: p.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
-            [g.$Z.TIPS]: p.s6.NOTIFICATIONS_EMAILS_TIPS,
-            [g.$Z.RECOMMENDATIONS_AND_EVENTS]: p.s6.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS
+            [p.$Z.COMMUNICATION]: g.s6.NOTIFICATIONS_EMAILS_COMMUNICATION,
+            [p.$Z.SOCIAL]: g.s6.NOTIFICATIONS_EMAILS_SOCIAL,
+            [p.$Z.UPDATES_AND_ANNOUNCEMENTS]: g.s6.NOTIFICATIONS_EMAILS_ANNOUNCEMENTS_AND_UPDATES,
+            [p.$Z.TIPS]: g.s6.NOTIFICATIONS_EMAILS_TIPS,
+            [p.$Z.RECOMMENDATIONS_AND_EVENTS]: g.s6.NOTIFICATIONS_EMAILS_RECOMMENDATIONS_AND_EVENTS
         };
     return s
         ? (0, i.jsxs)(c.F, {
-              setting: p.s6.NOTIFICATIONS_EMAILS,
+              setting: g.s6.NOTIFICATIONS_EMAILS,
               children: [
                   (0, i.jsx)('div', { ref: t }),
                   (0, i.jsxs)(o.hjN, {
@@ -52,7 +52,7 @@ function x() {
                       tag: o.RB0.H1,
                       title: h.intl.string(h.t.TPchzM),
                       children: [
-                          g.Od.map((e) => {
+                          p.Od.map((e) => {
                               let { category: t, label: r, subLabel: s } = e,
                                   l = E[t],
                                   a = (0, i.jsx)(
@@ -79,7 +79,7 @@ function x() {
                                   : a;
                           }),
                           (0, i.jsxs)(c.F, {
-                              setting: p.s6.NOTIFICATIONS_EMAILS_UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS,
+                              setting: g.s6.NOTIFICATIONS_EMAILS_UNSUBSCRIBE_FROM_ALL_MARKETING_EMAILS,
                               children: [
                                   (0, i.jsx)(o.zxk, {
                                       className: f.marketingUnsubscribeButton,

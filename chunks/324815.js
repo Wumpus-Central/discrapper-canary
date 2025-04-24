@@ -11,8 +11,8 @@ let o = {
 function c(e) {
     var t,
         n,
-        { className: r, color: c, onClick: d, disabled: u, children: m, muted: g = !1 } = e,
-        p = (function (e, t) {
+        { className: r, color: c, onClick: d, disabled: u, children: m, muted: p = !1 } = e,
+        g = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -57,10 +57,10 @@ function c(e) {
                     });
             }
             return e;
-        })({}, p)),
+        })({}, g)),
         (n = n =
             {
-                muted: g,
+                muted: p,
                 className: s()(u ? a.buttonDisabled : a.buttonEnabled, o[c], r),
                 onClick: u ? void 0 : d,
                 children: m

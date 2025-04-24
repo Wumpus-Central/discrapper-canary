@@ -10,16 +10,16 @@ var r = n(512722),
     d = n(660216),
     u = n(13245),
     m = n(825209),
-    g = n(887278),
-    p = n(594190),
+    p = n(887278),
+    g = n(594190),
     h = n(212632),
     f = n(444295),
     b = n(486016),
     _ = n(809357),
     x = n(371651),
     E = n(624864),
-    j = n(957148),
-    C = n(556296),
+    C = n(957148),
+    j = n(556296),
     O = n(808506),
     S = n(237997),
     v = n(626135);
@@ -33,8 +33,8 @@ function P(e) {
     var t;
     let n = S.default.getNotificationPositionMode(),
         i = n !== I._vf.DISABLED,
-        r = C.ZP.getOverlayKeybind(),
-        s = C.ZP.getOverlayChatKeybind();
+        r = j.ZP.getOverlayKeybind(),
+        s = j.ZP.getOverlayChatKeybind();
     return {
         enabled: O.default.enabled,
         notifications_enabled: i,
@@ -72,9 +72,9 @@ function D(e) {
             shouldShowKeybindIndicators: S.default.showKeybindIndicators,
             textChatDisabled: E.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT)
         })),
-        L = (0, o.e7)([C.ZP], () => C.ZP.getOverlayKeybind()),
+        L = (0, o.e7)([j.ZP], () => j.ZP.getOverlayKeybind()),
         B = (0, _.Z)({ location: 'overlay_user_settings' }),
-        M = (0, g.$1)(),
+        M = (0, p.$1)(),
         U = P(A);
     return (
         a().isEqual(U, A) || (v.default.track(I.rMx.OVERLAY_SETTINGS_UPDATED, U), (A = U)),
@@ -101,8 +101,8 @@ function D(e) {
                                         onChange: function (e) {
                                             var t, n;
                                             u.Z.setEnabled(e, r);
-                                            let i = null != (n = null == (t = p.ZP.getCurrentGameForAnalytics()) ? void 0 : t.id) ? n : null;
-                                            (0, f.ou)(e, f.AE.LEGACY, i), !e && l && (0, j.l)(f.AE.LEGACY, i);
+                                            let i = null != (n = null == (t = g.ZP.getCurrentGameForAnalytics()) ? void 0 : t.id) ? n : null;
+                                            (0, f.ou)(e, f.AE.LEGACY, i), !e && l && (0, C.l)(f.AE.LEGACY, i);
                                         },
                                         children: N.intl.string(N.t.vSP6c3)
                                     })

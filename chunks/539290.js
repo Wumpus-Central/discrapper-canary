@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(200651);
 n(192379);
-var i = n(120356),
-    s = n.n(i),
+var s = n(120356),
+    i = n.n(s),
     o = n(780384),
     l = n(481060),
     a = n(410030),
@@ -17,13 +17,13 @@ let f = {
     BOTTOM: d.verticalStatusWarningBlock
 };
 function p(e) {
-    let { className: t, color: n = c.W.YELLOW, buttonPosition: i = f.BOTTOM, notice: p, ctaLabel: g, ctaLoading: b, ctaDisabled: m, ctaClassName: h, onClick: v } = e,
-        _ = (0, a.ZP)();
+    let { className: t, color: n = c.W.YELLOW, buttonPosition: s = f.BOTTOM, notice: p, ctaLabel: g, ctaLoading: b, ctaDisabled: m, ctaClassName: v, onClick: h } = e,
+        O = (0, a.ZP)();
     return (0, r.jsx)(u.Z, {
-        className: s()(d.statusWarningBlock, { [d.statusWarningBlockWithCta]: null != g }, t),
-        color: (0, o.wj)(_) ? n : c.W.BROWN,
+        className: i()(d.statusWarningBlock, { [d.statusWarningBlockWithCta]: null != g }, t),
+        color: (0, o.wj)(O) ? n : c.W.BROWN,
         children: (0, r.jsxs)('div', {
-            className: i,
+            className: s,
             children: [
                 (0, r.jsx)(l.Text, {
                     variant: 'text-sm/normal',
@@ -31,14 +31,14 @@ function p(e) {
                     children: p
                 }),
                 null != g &&
-                    null != v &&
+                    null != h &&
                     (0, r.jsx)('div', {
                         className: d.ctaButtonContainer,
                         children: (0, r.jsx)(l.zxk, {
-                            className: s()(d.ctaButton, (0, o.wj)(_) ? void 0 : d.ctaBlackButton, h),
-                            color: (0, o.wj)(_) ? l.zxk.Colors.WHITE : l.zxk.Colors.CUSTOM,
+                            className: i()(d.ctaButton, (0, o.wj)(O) ? void 0 : d.ctaBlackButton, v),
+                            color: (0, o.wj)(O) ? l.zxk.Colors.WHITE : l.zxk.Colors.CUSTOM,
                             size: l.PhG.MEDIUM,
-                            onClick: v,
+                            onClick: h,
                             disabled: m,
                             submitting: b,
                             children: (0, r.jsx)(l.Text, {

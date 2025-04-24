@@ -694,7 +694,7 @@ function v() {
         [v, g] = r.useState(!1),
         _ = Object.values((0, l.e7)([d.Z], () => d.Z.paymentSources)),
         y = b[e],
-        C = async () => {
+        O = async () => {
             let e = n;
             '' === e && (e = 'pm_card_us'),
                 await i.tn.post({
@@ -704,7 +704,7 @@ function v() {
                 }),
                 await (0, o.tZ)();
         },
-        O = async () => {
+        C = async () => {
             await i.tn.del({
                 url: '/debug/payment-source',
                 rejectWithError: !1
@@ -762,13 +762,13 @@ function v() {
                             }),
                             (0, a.jsx)(s.zxk, {
                                 size: s.zxk.Sizes.SMALL,
-                                onClick: C,
+                                onClick: O,
                                 children: 'Create Stripe Credit Card'
                             }),
                             _.length > 0 &&
                                 (0, a.jsx)(s.zxk, {
                                     size: s.zxk.Sizes.SMALL,
-                                    onClick: O,
+                                    onClick: C,
                                     children: 'Delete All Payment Sources'
                                 }),
                             (0, a.jsx)(s.zxk, {

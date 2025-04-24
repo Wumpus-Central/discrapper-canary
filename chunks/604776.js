@@ -29,7 +29,7 @@ let j = (e) => {
                 !r &&
                     (0, a.jsxs)(c.Text, {
                         variant: 'text-md/normal',
-                        children: ['SKU: ', null == (t = O.find((e) => e.value === n.skuId)) ? void 0 : t.label]
+                        children: ['SKU: ', null == (t = C.find((e) => e.value === n.skuId)) ? void 0 : t.label]
                     }),
                 null != n.startsAt &&
                     null != n.endsAt &&
@@ -88,13 +88,13 @@ let j = (e) => {
                 rejectWithError: !0
             });
     },
-    C = async () => {
+    O = async () => {
         await o.tn.post({
             url: '/debug/entitlements/fulfillment',
             rejectWithError: !1
         });
     },
-    O = [
+    C = [
         {
             label: '1 hour',
             value: s.a.PREMIUM_TIER_2_1_HOUR
@@ -122,7 +122,7 @@ function N() {
             await y(e), await I();
         },
         k = async () => {
-            await C(), await I();
+            await O(), await I();
         },
         I = async () => {
             try {
@@ -200,7 +200,7 @@ function N() {
                             (0, a.jsx)(c.PhF, {
                                 serialize: (e) => e,
                                 isSelected: (e) => e === o,
-                                options: O,
+                                options: C,
                                 select: d,
                                 popoutLayerContext: x.O$
                             }),

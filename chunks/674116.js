@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(131951),
     u = n(663389),
     m = n(63063),
-    g = n(680924),
-    p = n(58765),
+    p = n(680924),
+    g = n(58765),
     h = n(429789),
     f = n(726763),
     b = n(208113),
     _ = n(894939),
     x = n(710808),
     E = n(625205),
-    j = n(325808),
-    C = n(823087),
+    C = n(325808),
+    j = n(823087),
     O = n(232388),
     S = n(546997),
     v = n(186934),
@@ -46,7 +46,7 @@ function V() {
         var e, i;
         t === Z.GA && (null == n || null == (e = n.current) || e.scrollIntoView(), o.Z.clearSubsection()), t === Z.gP && (null == m || null == (i = m.current) || i.scrollIntoView(), o.Z.clearSubsection());
     }, [n, m, t]);
-    let k = (0, p.Z)();
+    let k = (0, g.Z)();
     return (0, i.jsxs)(l.hjN, {
         tag: l.RB0.H1,
         title: B.intl.string(B.t.NiTd0d),
@@ -65,7 +65,7 @@ function V() {
                     (0, i.jsxs)(c.F, {
                         setting: w.s6.VOICE_AND_VIDEO_MIC_TEST,
                         children: [
-                            (0, i.jsx)(C.Z, {}),
+                            (0, i.jsx)(j.Z, {}),
                             (0, i.jsx)(l.R94, {
                                 className: M.marginBottom20,
                                 type: l.R94.Types.DESCRIPTION,
@@ -76,7 +76,7 @@ function V() {
                     }),
                     (0, i.jsx)(c.F, {
                         setting: w.s6.VOICE_AND_VIDEO_INPUT_MODE,
-                        children: (0, i.jsx)(j.Z, {})
+                        children: (0, i.jsx)(C.Z, {})
                     }),
                     (0, i.jsx)(c.F, {
                         setting: w.s6.VOICE_AND_VIDEO_SENSITIVITY,
@@ -141,7 +141,7 @@ function V() {
                                     look: l.zxk.Looks.OUTLINED,
                                     color: l.zxk.Colors.RED,
                                     onClick: () => {
-                                        (0, g.Z)(B.intl.string(B.t['/RXu6+']), B.intl.string(B.t.sQ42iY), a.Z.reset);
+                                        (0, p.Z)(B.intl.string(B.t['/RXu6+']), B.intl.string(B.t.sQ42iY), a.Z.reset);
                                     },
                                     size: l.zxk.Sizes.SMALL,
                                     children: B.intl.string(B.t['/RXu6+'])

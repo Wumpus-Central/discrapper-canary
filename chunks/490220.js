@@ -10,7 +10,7 @@ var i = n(200651),
     u = n(976979);
 function m(e) {
     var t;
-    let { user: m, disabledInputs: g, containerClassName: p } = e,
+    let { user: m, disabledInputs: p, containerClassName: g } = e,
         { reducedMotion: h } = r.useContext(l.Sfi),
         {
             pendingAvatar: f,
@@ -18,8 +18,8 @@ function m(e) {
             pendingThemeColors: _,
             pendingPronouns: x,
             pendingBio: E,
-            tryItOutThemeColors: j,
-            tryItOutAvatar: C,
+            tryItOutThemeColors: C,
+            tryItOutAvatar: j,
             tryItOutBanner: O,
             tryItOutAvatarDecoration: S,
             tryItOutProfileEffectId: v
@@ -52,23 +52,23 @@ function m(e) {
         ),
         T = (0, o.SD)({
             userId: m.id,
-            image: null != C ? C : f
+            image: null != j ? j : f
         }),
         I = (0, a.Z)(S, !1);
     return (0, i.jsx)(d.Z, {
-        containerClassName: p,
+        containerClassName: g,
         user: m,
         pendingPronouns: x,
         pendingBio: E,
         pendingBanner: null != (t = null != O ? O : b) ? t : n(466045),
         pendingAvatar: T,
-        pendingThemeColors: null != j ? j : _,
+        pendingThemeColors: null != C ? C : _,
         pendingAvatarDecoration: I,
         pendingProfileEffectId: v,
-        avatarClassName: null != C || null != f || h.enabled ? void 0 : u.spinningAvatar,
+        avatarClassName: null != j || null != f || h.enabled ? void 0 : u.spinningAvatar,
         canUsePremiumCustomization: !0,
         isTryItOutFlow: !0,
         hideExampleButton: !0,
-        disabledInputs: g
+        disabledInputs: p
     });
 }

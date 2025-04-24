@@ -20,8 +20,8 @@ var a = n(200651),
 n(381996);
 var _ = n(392750),
     y = n(926976),
-    C = n(592197),
-    O = n(806240),
+    O = n(592197),
+    C = n(806240),
     N = n(789654),
     E = n(719672),
     T = n(691867),
@@ -35,8 +35,8 @@ var _ = n(392750),
     L = n(735959),
     A = n(246992),
     D = n(496025),
-    z = n(442954),
-    M = n(633001),
+    M = n(442954),
+    z = n(633001),
     U = n(702904),
     B = n(178821),
     F = n(891401),
@@ -123,7 +123,7 @@ function el(e) {
                         id: 'clans',
                         name: 'Clans',
                         group: Q.v0.GUILDS,
-                        render: () => (0, a.jsx)(O.Z, {})
+                        render: () => (0, a.jsx)(C.Z, {})
                     }),
                     e.push({
                         id: 'performance',
@@ -141,7 +141,7 @@ function el(e) {
                         id: 'overlay',
                         name: 'Overlay v3',
                         group: Q.v0.GAMES,
-                        render: () => (0, a.jsx)(M.Z, {})
+                        render: () => (0, a.jsx)(z.Z, {})
                     }),
                     e.push({
                         id: 'slayer_sdk',
@@ -195,7 +195,7 @@ function el(e) {
                     id: 'modals',
                     name: 'Modals',
                     group: Q.v0.UI,
-                    render: () => (0, a.jsx)(z.Z, {})
+                    render: () => (0, a.jsx)(M.Z, {})
                 }),
                 e.push({
                     id: 'affinity',
@@ -251,7 +251,7 @@ function el(e) {
                         id: 'billing',
                         name: 'Billing',
                         group: Q.v0.BILLING,
-                        render: () => (0, a.jsx)(C.Z, {})
+                        render: () => (0, a.jsx)(O.Z, {})
                     }),
                     e.push({
                         id: 'fractional_nitro',

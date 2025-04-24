@@ -20,18 +20,18 @@ var i = n(120356),
     O = n(823379),
     v = n(709054),
     C = n(853856),
-    j = n(981631),
-    x = n(388032),
-    S = n(714509),
-    E = n(375613);
-function P(e, t) {
+    S = n(981631),
+    j = n(388032),
+    E = n(714509),
+    x = n(375613);
+function I(e, t) {
     return 0 === t.length
         ? null
         : (0, r.jsxs)('div', {
-              className: S.row,
+              className: E.row,
               children: [
                   (0, r.jsx)(e, {
-                      className: S.activityIcon,
+                      className: E.activityIcon,
                       color: 'currentColor'
                   }),
                   (0, r.jsx)(h.Z, {
@@ -42,7 +42,7 @@ function P(e, t) {
               ]
           });
 }
-function I() {
+function P() {
     let e = (0, a.Wu)([C.Z, b.Z], () =>
             v.default
                 .keys(C.Z.getFavoriteChannels())
@@ -50,8 +50,8 @@ function I() {
                 .filter(O.lm)
         ),
         t = e.map((e) => e.id),
-        n = e.filter((e) => e.type === j.d4z.GUILD_VOICE),
-        i = e.filter((e) => e.type === j.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
+        n = e.filter((e) => e.type === S.d4z.GUILD_VOICE),
+        i = e.filter((e) => e.type === S.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
         l = (0, a.Wu)(
             [_.ZP],
             () =>
@@ -78,7 +78,7 @@ function I() {
             for (let t of i) e += f.Z.getParticipantCount(t, g.pV.AUDIENCE);
             return e;
         }),
-        x = (0, a.Wu)(
+        j = (0, a.Wu)(
             [m.Z],
             () =>
                 m.Z.getAllApplicationStreams()
@@ -86,7 +86,7 @@ function I() {
                     .map((e) => e.ownerId),
             [t]
         ),
-        E = (0, a.Wu)(
+        x = (0, a.Wu)(
             [d.ZP],
             () => {
                 let e = d.ZP.getEmbeddedActivitiesByChannel(),
@@ -99,22 +99,22 @@ function I() {
             },
             [t]
         ),
-        I = (0, a.Wu)([y.default], () => E.map((e) => y.default.getUser(e)), [E]),
-        w = (0, a.Wu)([y.default], () => x.map((e) => y.default.getUser(e)), [x]),
-        N = P(
+        P = (0, a.Wu)([y.default], () => x.map((e) => y.default.getUser(e)), [x]),
+        w = (0, a.Wu)([y.default], () => j.map((e) => y.default.getUser(e)), [j]),
+        N = I(
             c.gj8,
-            l.filter((e) => !x.includes(e.id) && !E.includes(e.id))
+            l.filter((e) => !j.includes(e.id) && !x.includes(e.id))
         ),
         Z =
             0 === o.length
                 ? null
                 : (0, r.jsxs)('div', {
-                      className: S.row,
+                      className: E.row,
                       children: [
                           (0, r.jsx)(c.ewx, {
                               size: 'lg',
                               color: 'currentColor',
-                              className: S.activityIcon
+                              className: E.activityIcon
                           }),
                           (0, r.jsx)(h.Z, {
                               guildId: void 0,
@@ -122,14 +122,14 @@ function I() {
                               max: 3
                           }),
                           (0, r.jsxs)('div', {
-                              className: S.stageListenerPill,
+                              className: E.stageListenerPill,
                               children: [
                                   (0, r.jsx)(c.VWR, {
                                       size: 'xs',
                                       color: 'currentColor'
                                   }),
                                   (0, r.jsx)(c.Text, {
-                                      className: S.stageListenerCount,
+                                      className: E.stageListenerCount,
                                       color: 'text-normal',
                                       variant: 'text-xs/medium',
                                       children: p
@@ -138,12 +138,12 @@ function I() {
                           })
                       ]
                   }),
-        T = P(
+        T = I(
             c.hGI,
-            w.filter((e) => null != e && !E.includes(e.id))
+            w.filter((e) => null != e && !x.includes(e.id))
         ),
         { enabled: A } = u.c.useExperiment({ location: 'FavoritesTooltip' }, { autoTrackExposure: !0 }),
-        R = P(A ? c.iWm : c.nG3, I);
+        R = I(A ? c.iWm : c.nG3, P);
     return (0, r.jsxs)(r.Fragment, {
         children: [Z, N, T, R]
     });
@@ -152,13 +152,13 @@ function w() {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', {
-                className: l()(S.row, S.rowGuildName),
+                className: l()(E.row, E.rowGuildName),
                 children: (0, r.jsx)('span', {
-                    className: l()(S.guildNameText, S.guildNameTextLimitedSize),
-                    children: x.intl.string(x.t.wMWycn)
+                    className: l()(E.guildNameText, E.guildNameTextLimitedSize),
+                    children: j.intl.string(j.t.wMWycn)
                 })
             }),
-            (0, r.jsx)(I, {})
+            (0, r.jsx)(P, {})
         ]
     });
 }
@@ -171,7 +171,7 @@ function N(e) {
         position: 'right',
         text: (0, r.jsx)(w, {}),
         'aria-label': t,
-        tooltipClassName: E.listItemTooltip,
+        tooltipClassName: x.listItemTooltip,
         onTooltipShow: n,
         children: (e) => {
             var t, n;

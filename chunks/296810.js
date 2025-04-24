@@ -10,7 +10,7 @@ var r = n(120356),
     d = n(775853);
 function u(e) {
     let { children: t, className: n, layoutClassName: r, profilePreview: u, previewTitle: m } = e,
-        g = () =>
+        p = () =>
             (0, i.jsx)(o.Z, {
                 title: null != m ? m : c.intl.string(c.t.Zb06yM),
                 className: d.preview,
@@ -21,10 +21,10 @@ function u(e) {
         children: (0, i.jsxs)(a.hjN, {
             className: d.profileCustomizationSection,
             children: [
-                l.tq && g(),
+                l.tq && p(),
                 (0, i.jsxs)('div', {
                     className: s()(d.baseLayout, r),
-                    children: [t, !l.tq && g()]
+                    children: [t, !l.tq && p()]
                 })
             ]
         })

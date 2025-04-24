@@ -20,19 +20,19 @@ let b = i.memo(function (e) {
         O = (0, l.e7)([h.Z], () => h.Z.getGuild(_)),
         v = (0, s.E)(O),
         C = (0, l.e7)([p.Z], () => p.Z.isFocused()),
-        j = (0, l.e7)([u.Z], () => u.Z.isUnavailable(_)),
-        x = (0, c.Z)((e) => e.guildId),
-        S = (0, f.Z)(_),
+        S = (0, l.e7)([u.Z], () => u.Z.isUnavailable(_)),
+        j = (0, c.Z)((e) => e.guildId),
+        E = (0, f.Z)(_),
         {
-            badge: E,
-            unread: P,
-            isMentionLowImportance: I
+            badge: x,
+            unread: I,
+            isMentionLowImportance: P
         } = (0, l.cj)([d.default], () => ({
             badge: d.default.getMentionCount(_),
             isMentionLowImportance: d.default.getIsMentionLowImportance(_),
             unread: d.default.hasUnread(_)
         })),
-        w = (0, a.Ij)(O) && 0 === E,
+        w = (0, a.Ij)(O) && 0 === x,
         N = i.useMemo(
             () =>
                 null != y
@@ -81,14 +81,14 @@ let b = i.memo(function (e) {
         (n = n =
             {
                 guild: O,
-                unavailable: j,
+                unavailable: S,
                 animatable: C,
-                selected: x === _,
-                badge: E,
-                isMentionLowImportance: I,
+                selected: j === _,
+                badge: x,
+                isMentionLowImportance: P,
                 lowerBadge: N,
-                unread: P,
-                mediaState: S,
+                unread: I,
+                mediaState: E,
                 guildJoinRequestStatus: v
             }),
         Object.getOwnPropertyDescriptors

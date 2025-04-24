@@ -1,4 +1,4 @@
-n.d(t, { f: () => C }), n(388685), n(49124);
+n.d(t, { f: () => j }), n(388685), n(49124);
 var i = n(200651),
     r = n(192379),
     s = n(734530),
@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(502109),
     u = n(241209),
     m = n(563132),
-    g = n(586585),
-    p = n(439021),
+    p = n(586585),
+    g = n(439021),
     h = n(450272),
     f = n(231338),
     b = n(388032),
@@ -41,7 +41,7 @@ function E(e) {
     }
     return e;
 }
-function j(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,7 +59,7 @@ function j(e, t) {
         e
     );
 }
-function C() {
+function j() {
     return (0, i.jsx)(m.PaymentContextProvider, {
         stepConfigs: [],
         skuIDs: [],
@@ -138,7 +138,7 @@ function S(e) {
                 look: o.zxk.Looks.LINK
             })
         };
-    return e.renderStepBody ? (0, i.jsx)(p.t, E({}, n, e)) : 'applePay' === e.paymentRequestWallet ? (0, i.jsx)(d.Ch, E({}, n, e)) : (0, i.jsx)(d.Tr, E({}, n, e));
+    return e.renderStepBody ? (0, i.jsx)(g.t, E({}, n, e)) : 'applePay' === e.paymentRequestWallet ? (0, i.jsx)(d.Ch, E({}, n, e)) : (0, i.jsx)(d.Tr, E({}, n, e));
 }
 function v(e) {
     let { children: t, footer: n, className: r } = e;
@@ -168,8 +168,8 @@ function T(e) {
             null != n.current && n.current.show();
         };
     return (0, i.jsx)(v, {
-        footer: (0, i.jsx)(g.Z, {
-            primaryCTA: g.Z.CTAType.CONTINUE,
+        footer: (0, i.jsx)(p.Z, {
+            primaryCTA: p.Z.CTAType.CONTINUE,
             primaryText: b.intl.string('applePay' === t ? b.t.WoXvJC : b.t.wnVVr6),
             primaryDisabled: !s,
             onPrimary: () => a(),
@@ -213,7 +213,7 @@ function N() {
                 children: (0, i.jsx)(I, {
                     children: (0, i.jsx)(
                         c.ZP,
-                        j(E({}, e), {
+                        C(E({}, e), {
                             onChooseType: () => {},
                             paymentRequestWallets: ['googlePay', 'applePay']
                         })
@@ -225,7 +225,7 @@ function N() {
                 children: (0, i.jsx)(I, {
                     children: (0, i.jsx)(
                         c.ZP,
-                        j(E({}, e), {
+                        C(E({}, e), {
                             onChooseType: () => {},
                             paymentRequestWallets: []
                         })
@@ -237,7 +237,7 @@ function N() {
                 children: (0, i.jsx)(I, {
                     children: (0, i.jsx)(
                         c.ZP,
-                        j(E({}, e), {
+                        C(E({}, e), {
                             isEligibleForTrial: !0,
                             onChooseType: () => {},
                             paymentRequestWallets: []
@@ -250,7 +250,7 @@ function N() {
                 children: (0, i.jsx)(I, {
                     children: (0, i.jsx)(
                         c.ZP,
-                        j(E({}, e), {
+                        C(E({}, e), {
                             onChooseType: () => {},
                             paymentRequestWallets: [],
                             paymentSourceTypeRestrictions: [f.He.CARD.valueOf()]
@@ -314,7 +314,7 @@ function Z() {
         [n, l] = r.useState(P),
         [a, c] = r.useState(D(R)),
         [d, m] = r.useState(R),
-        [g, p] = r.useState(null),
+        [p, g] = r.useState(null),
         [f, b] = r.useState(
             (0, i.jsx)(h.DS, {
                 errorLabel: y.CONFIGURABLE,
@@ -358,11 +358,11 @@ function Z() {
                 value: a,
                 onChange: c
             }),
-            null != g &&
+            null != p &&
                 (0, i.jsx)(o.Text, {
                     variant: 'text-md/normal',
                     color: 'text-danger',
-                    children: g
+                    children: p
                 }),
             (0, i.jsx)(o.zxk, {
                 className: _.applyChangesButton,
@@ -397,9 +397,9 @@ function Z() {
                             ),
                             l(t),
                             m(n),
-                            p(null);
+                            g(null);
                     } catch (e) {
-                        console.error('ConfigurableStripeExpressCheckoutElement - error parsing JSON: ', e), p('Error parsing JSON. Check console for more information.');
+                        console.error('ConfigurableStripeExpressCheckoutElement - error parsing JSON: ', e), g('Error parsing JSON. Check console for more information.');
                     }
                 },
                 children: 'Apply Changes'

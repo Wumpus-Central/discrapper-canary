@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => C });
 var i = n(200651),
     r = n(192379),
     s = n(120356),
@@ -9,17 +9,17 @@ var i = n(200651),
     d = n(481060),
     u = n(37234),
     m = n(960412),
-    g = n(151662),
-    p = n(695346),
+    p = n(151662),
+    g = n(695346),
     h = n(981631),
     f = n(930441),
     b = n(332495),
     _ = n(388032),
     x = n(128607),
     E = n(20493);
-let j = () => {
-    let e = p.Ex.useSetting(),
-        { categories: t, initialized: n } = (0, c.cj)([g.Z], () => g.Z.getEmailSettings());
+let C = () => {
+    let e = g.Ex.useSetting(),
+        { categories: t, initialized: n } = (0, c.cj)([p.Z], () => p.Z.getEmailSettings());
     return (
         r.useEffect(() => {
             null == n && (0, m.Y7)();
@@ -37,7 +37,7 @@ let j = () => {
                     value: e,
                     note: _.intl.string(b.default['5MdB3t']),
                     hideBorder: !0,
-                    onChange: p.Ex.updateSetting,
+                    onChange: g.Ex.updateSetting,
                     children: _.intl.string(b.default.zkEceX)
                 }),
                 e

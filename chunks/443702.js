@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(355467),
     u = n(230711),
     m = n(497321),
-    g = n(231428),
-    p = n(390954),
+    p = n(231428),
+    g = n(390954),
     h = n(89057),
     f = n(921801),
     b = n(246946),
     _ = n(594174),
     x = n(351402),
     E = n(853872),
-    j = n(78839),
-    C = n(706454),
+    C = n(78839),
+    j = n(706454),
     O = n(726985),
     S = n(981631),
     v = n(388032),
@@ -46,7 +46,7 @@ class I extends r.PureComponent {
                             })
                           : (0, i.jsx)(f.F, {
                                 setting: O.s6.BILLING_PAYMENT_METHODS,
-                                children: (0, i.jsx)(p.Z, {
+                                children: (0, i.jsx)(g.Z, {
                                     paymentSources: n,
                                     defaultPaymentSourceId: r,
                                     premiumSubscriptionPaymentSourceId: null != l && l.status !== S.O0b.CANCELED ? l.paymentSourceId : null,
@@ -64,7 +64,7 @@ class I extends r.PureComponent {
                                       tag: 'h1',
                                       children: v.intl.string(v.t.obLrcH)
                                   }),
-                                  children: [(0, i.jsx)(h.oQ, {}), (0, i.jsx)(g.Z, { locale: s })]
+                                  children: [(0, i.jsx)(h.oQ, {}), (0, i.jsx)(p.Z, { locale: s })]
                               })
                           })
                       }),
@@ -78,13 +78,13 @@ class I extends r.PureComponent {
     }
 }
 function N() {
-    let e = (0, a.cj)([C.default, x.Z, E.Z, _.default, b.Z, j.ZP], () => {
-        let e = j.ZP.getPremiumTypeSubscription(),
+    let e = (0, a.cj)([j.default, x.Z, E.Z, _.default, b.Z, C.ZP], () => {
+        let e = C.ZP.getPremiumTypeSubscription(),
             t = _.default.getCurrentUser();
         return (
             l()(null != t, 'UserSettingsBilling: currentUser cannot be undefined'),
             {
-                locale: C.default.locale,
+                locale: j.default.locale,
                 hide: b.Z.enabled,
                 isClaimed: t.isClaimed(),
                 isVerified: t.verified,

@@ -1,29 +1,29 @@
 n.d(t, { Z: () => c });
 var r = n(200651);
 n(192379);
-var i = n(120356),
-    l = n.n(i),
+var s = n(120356),
+    i = n.n(s),
     o = n(481060),
-    s = n(679768),
+    l = n(679768),
     a = n(456411);
 function c(e) {
-    let { copy: t, showStars: n = !0, className: i } = e;
+    let { copy: t, showStars: n = !0, className: s } = e;
     return (0, r.jsxs)('div', {
-        className: l()(a.badgeContainer, i),
+        className: i()(a.badgeContainer, s),
         children: [
             n &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)('span', {
-                            className: l()(a.star, a.starLeft),
-                            children: (0, r.jsx)(s.Z, {
+                            className: i()(a.star, a.starLeft),
+                            children: (0, r.jsx)(l.Z, {
                                 width: '10',
                                 height: '10'
                             })
                         }),
                         (0, r.jsx)('span', {
-                            className: l()(a.star, a.starRight),
-                            children: (0, r.jsx)(s.Z, {
+                            className: i()(a.star, a.starRight),
+                            children: (0, r.jsx)(l.Z, {
                                 width: '14',
                                 height: '14'
                             })

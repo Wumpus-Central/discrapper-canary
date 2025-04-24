@@ -7,14 +7,14 @@ var i = n(200651),
     o = n(686546),
     c = n(168301);
 let d = r.forwardRef(function (e, t) {
-    let { tooltipText: n, children: r, onContextMenu: s, onClick: d, disabled: u, icon: m, iconForeground: g, innerClassName: p, className: h, redGlow: f, tooltipClassName: b, onMouseEnter: _, onMouseLeave: x, 'aria-label': E, 'aria-checked': j, role: C, tooltipColor: O, tooltipForceOpen: S, tooltipContentClassName: v, plated: T } = e,
+    let { tooltipText: n, children: r, onContextMenu: s, onClick: d, disabled: u, icon: m, iconForeground: p, innerClassName: g, className: h, redGlow: f, tooltipClassName: b, onMouseEnter: _, onMouseLeave: x, 'aria-label': E, 'aria-checked': C, role: j, tooltipColor: O, tooltipForceOpen: S, tooltipContentClassName: v, plated: T } = e,
         I =
             'function' == typeof m
                 ? (0, i.jsx)(m, {
                       width: 20,
                       height: 20,
                       size: 'custom',
-                      colorClass: null != g ? g : '',
+                      colorClass: null != p ? p : '',
                       color: 'currentColor'
                   })
                 : m;
@@ -28,7 +28,7 @@ let d = r.forwardRef(function (e, t) {
         children: (e) => {
             var n,
                 m,
-                { onClick: g, onMouseEnter: b, onMouseLeave: E } = e,
+                { onClick: p, onMouseEnter: b, onMouseLeave: E } = e,
                 O = (function (e, t) {
                     if (null == e) return {};
                     var n,
@@ -81,7 +81,7 @@ let d = r.forwardRef(function (e, t) {
                         look: a.zxk.Looks.BLANK,
                         size: a.zxk.Sizes.NONE,
                         disabled: u,
-                        innerClassName: p,
+                        innerClassName: g,
                         wrapperClassName: l()(c.button, h),
                         className: l()(c.button, h, {
                             [c.redGlow]: f,
@@ -91,7 +91,7 @@ let d = r.forwardRef(function (e, t) {
                             [c.plateMuted]: f && T
                         }),
                         onClick: (e) => {
-                            null != g && g(), null != d && d(e);
+                            null != p && p(), null != d && d(e);
                         },
                         onMouseEnter: () => {
                             null == b || b(), null == _ || _();
@@ -100,8 +100,8 @@ let d = r.forwardRef(function (e, t) {
                             null == E || E(), null == x || x();
                         },
                         onContextMenu: s,
-                        role: C,
-                        'aria-checked': j,
+                        role: j,
+                        'aria-checked': C,
                         focusProps: {
                             offset: {
                                 left: -1,

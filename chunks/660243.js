@@ -10,8 +10,8 @@ var r = n(120356),
     d = n(903002),
     u = n(214492),
     m = n(981631),
-    g = n(676654),
-    p = n(388032),
+    p = n(676654),
+    g = n(388032),
     h = n(128910),
     f = n(146036),
     b = n(510176);
@@ -46,7 +46,7 @@ function _(e) {
                     ? (0, i.jsx)(l.xv, {
                           variant: 'text-sm/semibold',
                           color: 'text-muted',
-                          children: p.intl.string(p.t.jfrLLS)
+                          children: g.intl.string(g.t.jfrLLS)
                       })
                     : (0, i.jsxs)('div', {
                           className: h.sharingContainer,
@@ -57,7 +57,7 @@ function _(e) {
                                       c > 0 &&
                                       (0, i.jsx)(l.xv, {
                                           variant: 'text-sm/semibold',
-                                          children: p.intl.string(p.t.NOIHs7)
+                                          children: g.intl.string(g.t.NOIHs7)
                                       })
                               }),
                               (0, i.jsxs)('div', {
@@ -90,8 +90,8 @@ function x() {
         children: [
             (0, i.jsx)(_, {
                 headerAssetSrc: f,
-                headerText: p.intl.string(p.t.CQkyMj),
-                description: p.intl.string(g.default.ctRS3d),
+                headerText: g.intl.string(g.t.CQkyMj),
+                description: g.intl.string(p.default.ctRS3d),
                 assets: t,
                 assetCount: n,
                 onClick: () => o.Z.open(m.oAB.REGISTERED_GAMES),
@@ -99,8 +99,8 @@ function x() {
             }),
             (0, i.jsx)(_, {
                 headerAssetSrc: b,
-                headerText: p.intl.string(p.t['3fe7U1']),
-                description: p.intl.string(g.default.DU5UXF),
+                headerText: g.intl.string(g.t['3fe7U1']),
+                description: g.intl.string(p.default.DU5UXF),
                 assets: r,
                 assetCount: s,
                 onClick: () => o.Z.open(m.oAB.CONNECTIONS),

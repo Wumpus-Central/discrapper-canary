@@ -1,6 +1,6 @@
 n.d(t, {
-    Sz: () => C,
-    of: () => j
+    Sz: () => j,
+    of: () => C
 }),
     n(539854),
     n(388685),
@@ -15,8 +15,8 @@ var i = n(200651),
     d = n(355467),
     u = n(493773),
     m = n(410030),
-    g = n(906732),
-    p = n(600164),
+    p = n(906732),
+    g = n(600164),
     h = n(296848),
     f = n(798769),
     b = n(981631),
@@ -30,7 +30,7 @@ async function E(e) {
         r(!0), s(!1);
     }
 }
-function j(e) {
+function C(e) {
     let { premiumType: t, onClose: n, pauseDuration: s, setPauseDuration: l, footer: o, premiumSubscription: d } = e,
         m = r.useCallback(
             (e) => {
@@ -39,7 +39,7 @@ function j(e) {
             },
             [l]
         ),
-        g = d.status === b.O0b.PAUSED ? _.intl.string(_.t.Lp9WoK) : _.intl.string(_.t.eSR83d),
+        p = d.status === b.O0b.PAUSED ? _.intl.string(_.t.Lp9WoK) : _.intl.string(_.t.eSR83d),
         E = (function (e) {
             let t = e.status === b.O0b.PAUSED ? _.t.o3upfX : _.t.dBXZEh,
                 { durations: n, currentDaysPaused: i } = (0, h.AT)(e),
@@ -86,7 +86,7 @@ function j(e) {
                             (0, i.jsx)(c.X6q, {
                                 variant: 'heading-sm/medium',
                                 className: x.subtitle,
-                                children: g
+                                children: p
                             })
                         ]
                     })
@@ -100,18 +100,18 @@ function j(e) {
                     })
                 }),
                 (0, i.jsx)(c.mzw, {
-                    justify: p.Z.Justify.START,
+                    justify: g.Z.Justify.START,
                     children: o
                 })
             ]
         })
     );
 }
-function C(e) {
+function j(e) {
     let { premiumSubscription: t, premiumType: n, onClose: s, pauseDuration: a, analyticsLocation: d } = e,
         [u, h] = r.useState(!1),
-        { analyticsLocations: j } = (0, g.ZP)(),
-        [C, O] = r.useState(!1),
+        { analyticsLocations: C } = (0, p.ZP)(),
+        [j, O] = r.useState(!1),
         S = (0, m.ZP)(),
         v = null,
         T = null,
@@ -169,13 +169,13 @@ function C(e) {
                     ]
                 }),
                 (0, i.jsx)(c.mzw, {
-                    justify: p.Z.Justify.START,
+                    justify: g.Z.Justify.START,
                     children: (0, i.jsxs)('div', {
                         className: x.whatYouLoseButtonContainer,
                         children: [
                             (0, i.jsx)(c.zxk, {
                                 color: c.zxk.Colors.RED,
-                                disabled: C || null == a,
+                                disabled: j || null == a,
                                 onClick: async () => {
                                     await E({
                                         premiumSubscription: t,
@@ -183,7 +183,7 @@ function C(e) {
                                         setIsCancelling: O,
                                         setHasError: h,
                                         onClose: s,
-                                        analyticsLocations: j,
+                                        analyticsLocations: C,
                                         analyticsLocation: d
                                     });
                                 },

@@ -14,16 +14,16 @@ var s = n(399606),
     d = n(607070),
     u = n(100527),
     m = n(906732),
-    g = n(975298),
-    p = n(779618),
+    p = n(975298),
+    g = n(779618),
     h = n(832149),
     f = n(605236),
     b = n(442933),
     _ = n(300284),
     x = n(703656),
     E = n(547972),
-    j = n(131951),
-    C = n(594174),
+    C = n(131951),
+    j = n(594174),
     O = n(78839),
     S = n(424218),
     v = n(63063),
@@ -68,16 +68,16 @@ var s = n(399606),
     ed = n(572501),
     eu = n(755590),
     em = n(909910),
-    eg = n(637810),
-    ep = n(570423),
+    ep = n(637810),
+    eg = n(570423),
     eh = n(912429),
     ef = n(91394),
     eb = n(209672),
     e_ = n(698173),
     ex = n(926262),
     eE = n(482668),
-    ej = n(21504),
-    eC = n(371435),
+    eC = n(21504),
+    ej = n(371435),
     eO = n(83663),
     eS = n(317194),
     ev = (((i = {}).CLIENT_THEMES = 'clientThemes'), (i.CLIPS = 'clips'), (i.COLLECTIBLE_DECO = 'collectibleDeco'), (i.EARLY_ACCESS = 'earlyAccess'), (i.ENTRANCE_SOUNDS = 'entranceSounds'), (i.PROFILES = 'profiles'), (i.REMIXING = 'remixing'), (i.SERVER_BOOSTS = 'serverBoosts'), (i.GREY_SERVER_BOOSTS = 'greyServerBoosts'), (i.SPECIAL_MEMBER_PRICING = 'specialMemberPricing'), (i.SPECIAL_MEMBER_PRICING_SEE_ALL_VARIANT = 'specialMemberPricingSeeAllVariant'), (i.SPECIAL_SHOP_PERKS = 'specialShopPerks'), (i.NAMEPLATES = 'nameplates'), (i.UNLIMITED_SUPER_REACTIONS = 'unlimitedSuperReactions'), (i.SUPER_REACTIONS = 'superReactions'), (i.UPCOMING_DROP_UNTIMED = 'upcomingDropUntimed'), (i.CUSTOM_APP_ICONS = 'customAppIcons'), (i.MORE_EMOJI_POWER = 'moreEmojiPower'), (i.CUSTOM_SOUNDS_EVERYWHERE = 'customSoundsEverywhere'), (i.SPECIAL_STICKER_ACCESS = 'specialStickerAccess'), (i.LARGE_UPLOADS = 'largeUploads'), (i.HD_VIDEO = 'hdVideo'), (i.BADGE = 'badge'), (i.GREY_BADGE = 'greyBadge'), (i.ENTRANCE_SOUNDS_SEE_ALL_VARIATION = 'entranceSoundsSeeAllVariation'), (i.EARLY_ACCESS_SEE_ALL_VARIATION = 'earlyAccessSeeAllVariant'), (i.TENURE_REWARD_COLLECTIBLE = 'tenureRewardCollectible'), (i.REFERRAL_PROGRAM = 'referralProgram'), (i.NEW_APP_STYLES_UPDATE_JUNE_2024 = 'newAppStylesUpdateJune2024'), (i.SERVER_PROFILES = 'serverProfiles'), (i.TENURE_BADGE = 'tenureBadge'), (i.PERMADECOS = 'permadecos'), i);
@@ -92,17 +92,17 @@ let eT = () => {
         })),
         eN = null != eT ? T.ZP.getPremiumPlanItem(eT) : null,
         ey = (null != eN ? T.ZP.getSkuIdForPlan(eN.planId) : null) === B.Si.TIER_2,
-        eA = C.default.getCurrentUser(),
+        eA = j.default.getCurrentUser(),
         eP = (0, T.I5)(eA, B.p9.TIER_2),
         eR = (0, T.I5)(eA, B.p9.TIER_0),
         eD = (0, y.bq)({ showAnimations: !0 }),
         eZ = null != eD ? eD.initialPercentage : void 0,
         ew = null != eD ? eD.percentage : void 0,
-        ek = (0, p.Z)(j.Z),
+        ek = (0, g.Z)(C.Z),
         eL = (0, b.H)('usePerksDiscoverabilityCards'),
         eB = (0, A.a)(),
         eM = (0, y.Kb)(M.qY),
-        { isFractionalPremiumActive: eU } = (0, g.Z)(),
+        { isFractionalPremiumActive: eU } = (0, p.Z)(),
         eV = null != eT && eT.hasPremiumAtLeast(B.p9.TIER_2),
         eG = (0, f.wE)(l.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE),
         { enabled: eF } = I.Z.useExperiment({ location: 'usePerksDiscoverabilityCards' }),
@@ -280,7 +280,7 @@ let eT = () => {
                 title: z.intl.string(z.t['NyDu//']),
                 subtitle: z.intl.string(z.t['4pEwXF']),
                 descriptionCta: z.intl.string(z.t.jVcuVV),
-                perkImage: eC.Z,
+                perkImage: ej.Z,
                 imageOverlayText: z.intl.string(z.t.lcYttb)
             },
             specialMemberPricing: eL
@@ -301,7 +301,7 @@ let eT = () => {
                         description: z.intl.string(z.t['t+QZSU']),
                         descriptionCta: z.intl.string(z.t.dBJVnZ),
                         onCtaClick: eW,
-                        perkImage: eg
+                        perkImage: ep
                     }
                   : {
                         name: 'specialMemberPricing',
@@ -309,7 +309,7 @@ let eT = () => {
                         subtitle: z.intl.string(z.t.opgqDQ),
                         description: z.intl.string(z.t['JE/EWV']),
                         isPremiumGetCta: !0,
-                        perkImage: eg
+                        perkImage: ep
                     },
             specialMemberPricingSeeAllVariant: eL
                 ? {
@@ -329,7 +329,7 @@ let eT = () => {
                         description: z.intl.string(z.t['t+QZSU']),
                         descriptionCta: z.intl.string(z.t.dBJVnZ),
                         onCtaClick: eW,
-                        perkImage: ep
+                        perkImage: eg
                     }
                   : {
                         name: 'specialMemberPricingSeeAllVariant',
@@ -337,7 +337,7 @@ let eT = () => {
                         subtitle: z.intl.string(z.t.opgqDQ),
                         description: z.intl.string(z.t['JE/EWV']),
                         isPremiumGetCta: !0,
-                        perkImage: ep
+                        perkImage: eg
                     },
             specialShopPerks: eL
                 ? {
@@ -357,7 +357,7 @@ let eT = () => {
                         description: z.intl.string(z.t['t+QZSU']),
                         descriptionCta: z.intl.string(z.t.dBJVnZ),
                         onCtaClick: eW,
-                        perkImage: eg
+                        perkImage: ep
                     }
                   : {
                         name: 'specialShopPerks',
@@ -366,7 +366,7 @@ let eT = () => {
                         description: z.intl.string(z.t['JE/EWV']),
                         descriptionCta: z.intl.string(z.t.dBJVnZ),
                         onCtaClick: eW,
-                        perkImage: eg
+                        perkImage: ep
                     },
             unlimitedSuperReactions: eP
                 ? {
@@ -567,7 +567,7 @@ let eT = () => {
                     termsLink: N.Ps
                 }),
                 perkComponent: (0, r.jsx)(w.Z, {
-                    image: i ? ej.Z : eE.Z,
+                    image: i ? eC.Z : eE.Z,
                     cta: z.intl.string(z.t.s0w7a2),
                     onClick: () => {
                         (0, a.ZDy)(async () => {

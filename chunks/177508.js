@@ -9,8 +9,8 @@ var i = n(200651),
     d = n(481060),
     u = n(240872),
     m = n(514361),
-    g = n(705262),
-    p = n(526156),
+    p = n(705262),
+    g = n(526156),
     h = n(706705),
     f = n(726985),
     b = n(981631),
@@ -41,7 +41,7 @@ function E(e) {
     }
     return e;
 }
-function j(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,7 +59,7 @@ function j(e, t) {
         e
     );
 }
-let C = Object.keys(d.zxk.Colors).filter((e) => 'CUSTOM' !== e),
+let j = Object.keys(d.zxk.Colors).filter((e) => 'CUSTOM' !== e),
     O = Object.keys(d.zxk.Looks).filter((e) => 'BLANK' !== e),
     S = Object.keys(d.zxk.Sizes).filter((e) => 'NONE' !== e);
 function v() {
@@ -278,7 +278,7 @@ function R() {
 function D() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(p.Z, {
+            (0, i.jsx)(g.Z, {
                 parentSetting: f.s6.DESIGN_SYSTEMS,
                 settingsSection: b.oAB.DESIGN_SYSTEMS,
                 tabs: [
@@ -301,9 +301,9 @@ function D() {
             }),
             (0, i.jsx)('div', {
                 className: x.themes,
-                children: (0, i.jsx)(g.ZP, {
-                    type: g.yH.SETTINGS,
-                    children: (0, i.jsx)(g.ZP.Basic, { className: x.themeSelectionGroup })
+                children: (0, i.jsx)(p.ZP, {
+                    type: p.yH.SETTINGS,
+                    children: (0, i.jsx)(p.ZP.Basic, { className: x.themeSelectionGroup })
                 })
             })
         ]
@@ -311,7 +311,7 @@ function D() {
 }
 function Z() {
     let [e, t] = r.useState(!1),
-        n = C.flatMap((e) => [
+        n = j.flatMap((e) => [
             ...O.map((t) =>
                 (0, i.jsxs)(
                     d.zxk,
@@ -620,22 +620,22 @@ function L() {
                     (0, i.jsx)(d.ua7, {
                         text: "Here's top aligned tooltip text!",
                         position: 'top',
-                        children: (e) => (0, i.jsx)(d.zxk, j(E({}, e), { children: 'Tooltip on the top' }))
+                        children: (e) => (0, i.jsx)(d.zxk, C(E({}, e), { children: 'Tooltip on the top' }))
                     }),
                     (0, i.jsx)(d.ua7, {
                         text: "Here's right aligned tooltip text!",
                         position: 'left',
-                        children: (e) => (0, i.jsx)(d.zxk, j(E({}, e), { children: 'Tooltip on the left' }))
+                        children: (e) => (0, i.jsx)(d.zxk, C(E({}, e), { children: 'Tooltip on the left' }))
                     }),
                     (0, i.jsx)(d.ua7, {
                         text: "Here's bottom aligned tooltip text!",
                         position: 'bottom',
-                        children: (e) => (0, i.jsx)(d.zxk, j(E({}, e), { children: 'Tooltip on the bottom' }))
+                        children: (e) => (0, i.jsx)(d.zxk, C(E({}, e), { children: 'Tooltip on the bottom' }))
                     }),
                     (0, i.jsx)(d.ua7, {
                         text: "Here's right aligned tooltip text!",
                         position: 'right',
-                        children: (e) => (0, i.jsx)(d.zxk, j(E({}, e), { children: 'Tooltip on the right' }))
+                        children: (e) => (0, i.jsx)(d.zxk, C(E({}, e), { children: 'Tooltip on the right' }))
                     })
                 ]
             }),
@@ -870,7 +870,7 @@ function U() {
         [n, s] = r.useState(null),
         [l, o] = r.useState([]),
         [c, u] = r.useState([]),
-        [m, g] = r.useState([]);
+        [m, p] = r.useState([]);
     return (0, i.jsxs)('div', {
         className: x.searchableSelectExamples,
         children: [
@@ -903,7 +903,7 @@ function U() {
                 multi: !0,
                 clearable: !0,
                 value: m,
-                onChange: (e) => g(e),
+                onChange: (e) => p(e),
                 options: a.G
             }),
             (0, i.jsx)(d.VcW, {

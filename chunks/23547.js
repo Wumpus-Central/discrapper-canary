@@ -1,5 +1,5 @@
 n.d(t, {
-    Mm: () => p,
+    Mm: () => g,
     jj: () => m,
     wH: () => u
 });
@@ -37,14 +37,14 @@ function c(e) {
 let d = 'balance-widget-menu-coachmark-modal',
     u = () => (0, l.nfh)(d),
     m = () => (0, l.Mr3)(d),
-    g = {
+    p = {
         modalKey: d,
         onCloseCallback: a.j2,
         onCloseRequest: async () => {
             await (0, a.j2)();
         }
     };
-function p(e) {
+function g(e) {
     let t = (0, s.cj)([o.Z], () => o.Z.earnedOrbsCoachmark),
         { shouldOpen: a } = t;
     return (
@@ -56,7 +56,7 @@ function p(e) {
                     (0, l.ZDy)(async () => {
                         let { BalanceWidgetEarnedOrbsCoachmarkModal: e } = await Promise.all([n.e('82081'), n.e('72425')]).then(n.bind(n, 720463));
                         return (t) => (0, i.jsx)(e, c({}, r, t));
-                    }, g);
+                    }, p);
             } else !a && t && m();
         }, [a, e]),
         c({}, t)

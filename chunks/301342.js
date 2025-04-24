@@ -25,9 +25,9 @@ var r = n(200651),
     O = n(203818),
     v = n(438144),
     C = n(981631),
-    j = n(388032),
-    x = n(585523);
-function S(e) {
+    S = n(388032),
+    j = n(585523);
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +52,7 @@ function S(e) {
     }
     return e;
 }
-function E(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -70,17 +70,17 @@ function E(e, t) {
         e
     );
 }
-function P(e) {
+function I(e) {
     e.stopPropagation();
 }
-let I = i.memo(function (e) {
+let P = i.memo(function (e) {
         let t,
-            { channel: l, connectChannelDragSource: h, connectChannelDropTarget: O, disableManageChannels: v, position: I, sortingPosition: w, hideIcon: N, children: Z } = e,
+            { channel: l, connectChannelDragSource: h, connectChannelDropTarget: O, disableManageChannels: v, position: P, sortingPosition: w, hideIcon: N, children: Z } = e,
             T = (0, g.Q3)('CategoryChannel'),
             A = (0, a.e7)([_.ZP], () => _.ZP.isChannelMuted(l.getGuildId(), l.id)),
             R = (0, a.e7)([m.Z], () => m.Z.isCollapsed(l.id)),
             D = (0, a.e7)([y.Z], () => y.Z.can(C.Plq.MANAGE_CHANNELS, l));
-        t = null != w ? (I > w ? x.containerDragAfter : x.containerDragBefore) : x.containerDefault;
+        t = null != w ? (P > w ? j.containerDragAfter : j.containerDragBefore) : j.containerDefault;
         let L = i.useCallback(() => {
                 R ? (0, u.mJ)(l.id) : (0, u.c4)(l.id);
             }, [l.id, R]),
@@ -94,7 +94,7 @@ let I = i.memo(function (e) {
                                 return (n) =>
                                     (0, r.jsx)(
                                         e,
-                                        E(S({}, n), {
+                                        x(E({}, n), {
                                             channel: l,
                                             guild: t
                                         })
@@ -113,7 +113,7 @@ let I = i.memo(function (e) {
                         return (n) =>
                             (0, r.jsx)(
                                 i,
-                                E(S({}, n), {
+                                x(E({}, n), {
                                     channelType: e,
                                     guildId: t,
                                     categoryId: 'null' !== l.id ? l.id : null
@@ -157,27 +157,27 @@ let I = i.memo(function (e) {
                         },
                         children: (0, r.jsxs)('div', {
                             ref: F,
-                            className: o()(x.iconVisibility, x.wrapper, {
-                                [x.collapsed]: R,
-                                [x.muted]: A,
-                                [x.clickable]: !0
+                            className: o()(j.iconVisibility, j.wrapper, {
+                                [j.collapsed]: R,
+                                [j.muted]: A,
+                                [j.clickable]: !0
                             }),
                             onContextMenu: k,
                             children: [
                                 (0, r.jsxs)(
                                     c.P3F,
-                                    E(
-                                        S(
+                                    x(
+                                        E(
                                             {
                                                 innerRef: H,
-                                                className: x.mainContent,
+                                                className: j.mainContent,
                                                 tabIndex: B
                                             },
                                             V
                                         ),
                                         {
                                             onClick: L,
-                                            'aria-label': j.intl.formatToPlainString(j.t.y5l3Jy, { categoryName: l.name }),
+                                            'aria-label': S.intl.formatToPlainString(S.t.y5l3Jy, { categoryName: l.name }),
                                             'aria-expanded': !R,
                                             focusProps: { enabled: !1 },
                                             children: [
@@ -186,17 +186,17 @@ let I = i.memo(function (e) {
                                                     : (0, r.jsx)(c.CJ0, {
                                                           size: 'md',
                                                           color: 'currentColor',
-                                                          className: x.icon
+                                                          className: j.icon
                                                       }),
                                                 (0, r.jsx)(p.Z, {
-                                                    className: x.name,
+                                                    className: j.name,
                                                     children: (0, r.jsx)(f.Z, { children: l.name })
                                                 }),
                                                 T && !N
                                                     ? (0, r.jsx)(c.CJ0, {
                                                           size: 'md',
                                                           color: 'currentColor',
-                                                          className: x.icon
+                                                          className: j.icon
                                                       })
                                                     : null
                                             ]
@@ -204,19 +204,19 @@ let I = i.memo(function (e) {
                                     )
                                 ),
                                 (0, r.jsx)('div', {
-                                    onClick: P,
-                                    className: x.children,
+                                    onClick: I,
+                                    className: j.children,
                                     children:
                                         D && !v
                                             ? (0, r.jsx)(c.ua7, {
-                                                  text: j.intl.string(j.t['fUYU+v']),
+                                                  text: S.intl.string(S.t['fUYU+v']),
                                                   children: (e) => {
                                                       let { onMouseEnter: t, onMouseLeave: n } = e;
                                                       return (0, r.jsx)(c.zxk, {
-                                                          'aria-label': j.intl.string(j.t['fUYU+v']),
+                                                          'aria-label': S.intl.string(S.t['fUYU+v']),
                                                           look: c.zxk.Looks.BLANK,
                                                           size: c.zxk.Sizes.NONE,
-                                                          className: o()(x.addButton, x.forceVisible),
+                                                          className: o()(j.addButton, j.forceVisible),
                                                           onClick: M,
                                                           onMouseEnter: t,
                                                           onMouseLeave: n,
@@ -233,12 +233,12 @@ let I = i.memo(function (e) {
                                                               ? (0, r.jsx)(c.BRu, {
                                                                     size: 'xs',
                                                                     color: 'currentColor',
-                                                                    className: x.addButtonIcon
+                                                                    className: j.addButtonIcon
                                                                 })
                                                               : (0, r.jsx)(c.qJs, {
                                                                     size: 'sm',
                                                                     color: 'currentColor',
-                                                                    className: x.addButtonIcon
+                                                                    className: j.addButtonIcon
                                                                 })
                                                       });
                                                   }
@@ -253,32 +253,32 @@ let I = i.memo(function (e) {
             });
         return null != O && null != h ? O(h(z)) : z;
     }),
-    w = (0, h.B)(I),
+    w = (0, h.B)(P),
     N = i.memo(function (e) {
         let { name: t, onDismiss: n, className: i } = e;
         return (0, r.jsx)('li', {
-            className: o()(i, x.containerDefault),
+            className: o()(i, j.containerDefault),
             children: (0, r.jsxs)('div', {
-                className: o()(x.iconVisibility, x.wrapperStatic),
+                className: o()(j.iconVisibility, j.wrapperStatic),
                 children: [
                     (0, r.jsx)('div', {
-                        className: x.mainContent,
+                        className: j.mainContent,
                         children: (0, r.jsx)(p.Z, {
-                            className: x.name,
+                            className: j.name,
                             children: (0, r.jsx)(f.Z, { children: t })
                         })
                     }),
                     null != n
                         ? (0, r.jsx)(c.DY3, {
-                              text: j.intl.string(j.t['5qNmsb']),
-                              className: x.dismissWrapper,
+                              text: S.intl.string(S.t['5qNmsb']),
+                              className: j.dismissWrapper,
                               children: (0, r.jsx)(c.P3F, {
-                                  className: x.dismissButton,
+                                  className: j.dismissButton,
                                   onClick: n,
                                   children: (0, r.jsx)(c.k$p, {
                                       size: 'md',
                                       color: 'currentColor',
-                                      className: x.dismiss
+                                      className: j.dismiss
                                   })
                               })
                           })
@@ -298,33 +298,33 @@ let I = i.memo(function (e) {
             ? (0, r.jsxs)(c.zxk, {
                   look: c.zxk.Looks.FILLED,
                   color: c.zxk.Colors.PRIMARY,
-                  className: x.refreshVoiceChannelsButton,
-                  innerClassName: x.refreshVoiceChannelsButtonInner,
+                  className: j.refreshVoiceChannelsButton,
+                  innerClassName: j.refreshVoiceChannelsButtonInner,
                   onClick: o,
                   children: [
                       (0, r.jsx)(c.gj8, {
                           size: 'xs',
                           color: 'currentColor',
-                          className: x.voiceChannelsToggleIcon
+                          className: j.voiceChannelsToggleIcon
                       }),
                       (0, r.jsx)(c.Text, {
                           variant: 'text-sm/medium',
-                          children: n ? j.intl.string(j.t['/eB9Bg']) : j.intl.string(j.t.Q2gPWl)
+                          children: n ? S.intl.string(S.t['/eB9Bg']) : S.intl.string(S.t.Q2gPWl)
                       })
                   ]
               })
             : (0, r.jsxs)(c.P3F, {
-                  className: x.voiceChannelsButton,
+                  className: j.voiceChannelsButton,
                   onClick: o,
                   children: [
                       (0, r.jsx)(c.gj8, {
                           size: 'xs',
                           color: 'currentColor',
-                          className: x.voiceChannelsToggleIcon
+                          className: j.voiceChannelsToggleIcon
                       }),
                       (0, r.jsx)(c.Text, {
                           variant: 'text-sm/medium',
-                          children: n ? j.intl.string(j.t['/eB9Bg']) : j.intl.string(j.t.Q2gPWl)
+                          children: n ? S.intl.string(S.t['/eB9Bg']) : S.intl.string(S.t.Q2gPWl)
                       })
                   ]
               });
@@ -335,12 +335,12 @@ let I = i.memo(function (e) {
         return i || null == n || n.record.type === C.d4z.GUILD_CATEGORY
             ? i
                 ? (0, r.jsx)('li', {
-                      className: x.containerDefault,
+                      className: j.containerDefault,
                       children: (0, r.jsx)('div', {
-                          className: o()(x.iconVisibility, x.wrapperStatic),
+                          className: o()(j.iconVisibility, j.wrapperStatic),
                           children: (0, r.jsx)(p.Z, {
-                              className: x.name,
-                              children: (0, r.jsx)(f.Z, { children: j.intl.string(j.t['V/u9Dw']) })
+                              className: j.name,
+                              children: (0, r.jsx)(f.Z, { children: S.intl.string(S.t['V/u9Dw']) })
                           })
                       })
                   })
@@ -350,11 +350,11 @@ let I = i.memo(function (e) {
     A = i.memo(function (e) {
         let { channel: t } = e;
         return (0, r.jsx)('li', {
-            className: x.containerDefault,
+            className: j.containerDefault,
             children: (0, r.jsx)('div', {
-                className: o()(x.iconVisibility, x.wrapperStatic),
+                className: o()(j.iconVisibility, j.wrapperStatic),
                 children: (0, r.jsx)(p.Z, {
-                    className: x.name,
+                    className: j.name,
                     children: (0, r.jsx)(f.Z, { children: t.name })
                 })
             })

@@ -13,8 +13,8 @@ var i = n(200651),
     d = n(712297),
     u = n(982204),
     m = n(811334),
-    g = n(152521),
-    p = n(960919),
+    p = n(152521),
+    g = n(960919),
     h = n(981631),
     f = n(388032),
     b = n(309103);
@@ -67,7 +67,7 @@ let E = (e) => {
             variant: 'text-md/semibold',
             className: b.orbAmountTag,
             children: [
-                (0, i.jsx)(p.Z, {
+                (0, i.jsx)(g.Z, {
                     shouldUseThemeColor: !0,
                     customSize: 14
                 }),
@@ -75,7 +75,7 @@ let E = (e) => {
             ]
         });
     },
-    j = (e) => {
+    C = (e) => {
         var { orbBalance: t, orbPriceAmount: n, submitting: s, onClick: l } = e,
             a = (function (e, t) {
                 if (null == e) return {};
@@ -124,10 +124,10 @@ let E = (e) => {
                     })
                 );
     },
-    C = (e) => {
+    j = (e) => {
         let { orbPriceAmount: t, skuId: n } = e,
             { skusById: s } = (0, d.Z)({
-                applicationId: (0, g.N)(n),
+                applicationId: (0, p.N)(n),
                 skuIDs: [n],
                 isGift: !1,
                 currentPaymentSourceId: null
@@ -193,7 +193,7 @@ let E = (e) => {
                     tag: r.RB0.H5,
                     children: f.intl.string(f.t.sail9P)
                 }),
-                (0, i.jsx)(C, {
+                (0, i.jsx)(j, {
                     skuId: t,
                     orbPriceAmount: n
                 }),
@@ -215,7 +215,7 @@ let E = (e) => {
         return (0, i.jsxs)(r.mzw, {
             align: o.Z.Align.CENTER,
             children: [
-                (0, i.jsx)(j, {
+                (0, i.jsx)(C, {
                     orbBalance: n,
                     orbPriceAmount: t,
                     submitting: s,

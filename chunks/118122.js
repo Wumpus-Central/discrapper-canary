@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => j });
 var r = n(200651),
     i = n(192379),
     l = n(442837),
@@ -30,7 +30,7 @@ let C = {
         y: 0
     }
 };
-function j(e) {
+function S(e) {
     (0, s.jW)(e, async () => {
         let { default: e } = await n.e('9606').then(n.bind(n, 987578));
         return (t) =>
@@ -64,14 +64,14 @@ function j(e) {
             );
     });
 }
-function x(e) {
+function j(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
         s = (0, l.e7)([f.Z], () => f.Z.getGuilds()),
-        x = i.useMemo(() => Object.values(s), [s]),
-        S = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
-        E = i.useMemo(() => x.some((e) => e.isOwner(S)), [x, S]),
-        P = (0, o.s9z)((e) => (0, o.DEQ)(e, _.PU)),
-        { analyticsLocations: I } = (0, a.ZP)(),
+        j = i.useMemo(() => Object.values(s), [s]),
+        E = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
+        x = i.useMemo(() => j.some((e) => e.isOwner(E)), [j, E]),
+        I = (0, o.s9z)((e) => (0, o.DEQ)(e, _.PU)),
+        { analyticsLocations: P } = (0, a.ZP)(),
         w = (0, u.Q3)('CreateJoinGuildButton'),
         N = (0, r.jsx)(b.Z, {
             showPill: !1,
@@ -84,12 +84,12 @@ function x(e) {
                               page: y.Sbl.CREATE_JOIN_GUILD_MODAL,
                               section: y.jXE.GUILD_CAP_UPSELL_MODAL
                           },
-                          analyticsLocations: I
+                          analyticsLocations: P
                       })
                     : c.Z.openCreateGuildModal({ location: 'Guild List' });
             },
-            selected: P,
-            onContextMenu: j,
+            selected: I,
+            onContextMenu: S,
             tooltip: O.intl.string(O.t.l5WIbW),
             icon: w ? o.oFk : o.BRu
         });
@@ -98,7 +98,7 @@ function x(e) {
         : (0, r.jsx)('div', {
               className: v.tutorialContainer,
               children: (0, r.jsxs)(p.Z, {
-                  tutorialId: E ? 'create-more-servers' : 'create-first-server',
+                  tutorialId: x ? 'create-more-servers' : 'create-first-server',
                   inlineSpecs: C,
                   position: 'right',
                   children: [

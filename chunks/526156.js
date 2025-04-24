@@ -9,22 +9,22 @@ var r = n(120356),
     c = n(44380);
 let d = (e) => {
     var t;
-    let { tabs: n, settingsSection: r, parentSetting: d, panelClassName: u, defaultTabIndex: m, onTabChange: g } = e,
-        { viewableTabs: p, filteredTab: h } = (0, o.a)(n, d),
+    let { tabs: n, settingsSection: r, parentSetting: d, panelClassName: u, defaultTabIndex: m, onTabChange: p } = e,
+        { viewableTabs: g, filteredTab: h } = (0, o.a)(n, d),
         f = null != m ? n[m] : null,
-        b = null != (t = null != f ? f : h) ? t : p[0];
+        b = null != (t = null != f ? f : h) ? t : g[0];
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(l.njP, {
                 className: c.tabBar,
                 selectedItem: b.setting,
                 onItemSelect: (e) => {
-                    a.Z.setSection(r, e), null == g || g(e);
+                    a.Z.setSection(r, e), null == p || p(e);
                 },
                 orientation: 'horizontal',
                 type: 'top',
                 look: 'brand',
-                children: p.map((e) =>
+                children: g.map((e) =>
                     (0, i.jsx)(
                         l.njP.Item,
                         {

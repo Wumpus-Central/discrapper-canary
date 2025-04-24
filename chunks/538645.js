@@ -9,24 +9,24 @@ var i = n(200651),
     d = n(281598),
     u = n(373071),
     m = n(782691),
-    g = n(662583);
-let p = "Make sure you're only uploading text files!",
+    p = n(662583);
+let g = "Make sure you're only uploading text files!",
     h = (e) => {
         var t, n, r;
         let { effect: s, onClick: a } = e,
             { deleteConfig: c } = (0, u.n6)();
         return (0, i.jsxs)(o.P3F, {
-            className: g.previewCard,
+            className: p.previewCard,
             onClick: () => {
                 a(s);
             },
             children: [
                 (0, i.jsx)('div', {
-                    className: g.previewCardImage,
+                    className: p.previewCardImage,
                     style: { backgroundImage: 'url('.concat(null == (r = s.config) || null == (n = r.effects) || null == (t = n[0]) ? void 0 : t.base64, ')') }
                 }),
                 (0, i.jsxs)('div', {
-                    className: l()(g.previewCardFooter, g.row),
+                    className: l()(p.previewCardFooter, p.row),
                     children: [
                         (0, i.jsx)(o.Text, {
                             variant: 'text-md/bold',
@@ -56,9 +56,9 @@ function b() {
         b = r.useRef(null),
         _ = r.useCallback(
             (e, n) => {
-                if (null == n || !e.type.startsWith('text/')) return (0, d.Eo)(p);
+                if (null == n || !e.type.startsWith('text/')) return (0, d.Eo)(g);
                 let [i, r] = n.split(',');
-                if (!i.includes('text/plain')) return (0, d.Eo)(p);
+                if (!i.includes('text/plain')) return (0, d.Eo)(g);
                 let s = JSON.parse(atob(r));
                 (s.id = (0, a.Z)()), t(s), (0, d.XA)('Profile Effect (maybe??) imported!');
             },
@@ -73,23 +73,23 @@ function b() {
             [_]
         );
     return (0, i.jsxs)('div', {
-        className: g.root,
+        className: p.root,
         children: [
             null == n &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsxs)('div', {
-                            className: g.col,
+                            className: p.col,
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: g.section,
+                                    className: p.section,
                                     children: (0, i.jsx)(o.X6q, {
                                         variant: 'heading-lg/bold',
                                         children: 'Profile Effects'
                                     })
                                 }),
                                 (0, i.jsx)('div', {
-                                    className: g.grid,
+                                    className: p.grid,
                                     children: Object.values(e).map((e) =>
                                         (0, i.jsx)(
                                             h,
@@ -106,10 +106,10 @@ function b() {
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: l()(g.row, g.end, g.section),
+                            className: l()(p.row, p.end, p.section),
                             children: [
                                 (0, i.jsxs)('div', {
-                                    className: g.uploadButton,
+                                    className: p.uploadButton,
                                     children: [
                                         (0, i.jsx)(o.Text, {
                                             variant: 'text-md/normal',

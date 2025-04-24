@@ -6,14 +6,14 @@ var r = n(120356),
     l = n(584973),
     a = n(60213);
 function o(e) {
-    let { activity: t, className: n, emojiClassName: r, textClassName: o, placeholderText: c, soloEmojiClassName: d, animate: u = !0, hideTooltip: m = !1, hideEmoji: g = !1, children: p } = e;
+    let { activity: t, className: n, emojiClassName: r, textClassName: o, placeholderText: c, soloEmojiClassName: d, animate: u = !0, hideTooltip: m = !1, hideEmoji: p = !1, children: g } = e;
     if (null == t) return null;
     let { emoji: h } = t,
         f = null != t.state && '' !== t.state ? t.state : c;
     return (0, i.jsxs)('div', {
         className: s()(a.__invalid_container, n),
         children: [
-            g || null == h
+            p || null == h
                 ? null
                 : (0, i.jsx)(l.Z, {
                       emoji: h,
@@ -27,7 +27,7 @@ function o(e) {
                       children: f
                   })
                 : null,
-            p
+            g
         ]
     });
 }

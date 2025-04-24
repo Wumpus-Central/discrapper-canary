@@ -20,16 +20,16 @@ var i,
     d = n(933557),
     u = n(471445),
     m = n(16206),
-    g = n(790145),
-    p = n(925329),
+    p = n(790145),
+    g = n(925329),
     h = n(565138),
     f = n(754688),
     b = n(237583),
     _ = n(430824),
     x = n(699516),
     E = n(594174),
-    j = n(51144),
-    C = n(388032),
+    C = n(51144),
+    j = n(388032),
     O = n(212522);
 function S(e, t, n) {
     return (
@@ -138,7 +138,7 @@ class T extends s.Component {
     }
     getAccessibilityLabel() {
         let { guild: e } = this.props;
-        return C.intl.formatToPlainString(C.t.WVq3Li, { name: e.name });
+        return j.intl.formatToPlainString(j.t.WVq3Li, { name: e.name });
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, onContextMenu: i, focused: s, score: l, id: a } = this.props;
@@ -180,7 +180,7 @@ class I extends (i = s.Component) {
         return (
             null != n &&
                 n > 0 &&
-                (e = (0, r.jsx)(g.Z, {
+                (e = (0, r.jsx)(p.Z, {
                     className: O.badge,
                     value: n,
                     lowImportance: l
@@ -239,7 +239,7 @@ class I extends (i = s.Component) {
             n = null == (e = _.Z.getGuild(this.props.channel.guild_id)) ? void 0 : e.name,
             i = (0, d.F6)(t, E.default, x.Z),
             r = (0, m.Z)(t);
-        return C.intl.formatToPlainString(C.t['Vw/da2'], {
+        return j.intl.formatToPlainString(j.t['Vw/da2'], {
             name: i,
             type: r,
             guild: n
@@ -279,7 +279,7 @@ class N extends s.Component {
         return (
             null != t &&
                 t > 0 &&
-                (e = (0, r.jsx)(g.Z, {
+                (e = (0, r.jsx)(p.Z, {
                     className: O.badge,
                     value: t
                 })),
@@ -313,11 +313,11 @@ class N extends s.Component {
         let { channel: e, mentions: t } = this.props,
             n = (0, d.F6)(e, E.default, x.Z);
         return null != t && t > 0
-            ? C.intl.formatToPlainString(C.t.LYdVfH, {
+            ? j.intl.formatToPlainString(j.t.LYdVfH, {
                   name: n,
                   mentions: t
               })
-            : C.intl.formatToPlainString(C.t.lLSbnp, { name: n });
+            : j.intl.formatToPlainString(j.t.lLSbnp, { name: n });
     }
     render() {
         let { onMouseEnter: e, onClick: t, onFocus: n, onContextMenu: i, focused: s, score: l, id: a } = this.props;
@@ -350,7 +350,7 @@ class y extends s.Component {
         let e,
             { user: t, comparator: n } = this.props,
             i = x.Z.getNickname(t.id);
-        return ((e = n === t.tag || null == n || '' === n ? t.username : n) === t.username || e === t.id) && (e = null != i ? i : j.ZP.getName(t)), e;
+        return ((e = n === t.tag || null == n || '' === n ? t.username : n) === t.username || e === t.id) && (e = null != i ? i : C.ZP.getName(t)), e;
     }
     renderName() {
         let e,
@@ -359,7 +359,7 @@ class y extends s.Component {
         return (
             null != n &&
                 n > 0 &&
-                (e = (0, r.jsx)(g.Z, {
+                (e = (0, r.jsx)(p.Z, {
                     className: O.badge,
                     value: n
                 })),
@@ -373,7 +373,7 @@ class y extends s.Component {
                     e,
                     (0, r.jsx)('span', {
                         className: O.username,
-                        children: j.ZP.getUserTag(t)
+                        children: C.ZP.getUserTag(t)
                     })
                 ]
             })
@@ -396,14 +396,14 @@ class y extends s.Component {
     getAccessibilityLabel() {
         let { mentions: e, user: t } = this.props,
             n = this.getDisplayNickname(),
-            i = j.ZP.getUserTag(t);
+            i = C.ZP.getUserTag(t);
         return null != e && e > 0
-            ? C.intl.formatToPlainString(C.t['6b9Ura'], {
+            ? j.intl.formatToPlainString(j.t['6b9Ura'], {
                   name: n,
                   id: i,
                   mentions: e
               })
-            : C.intl.formatToPlainString(C.t.GWYOAQ, {
+            : j.intl.formatToPlainString(j.t.GWYOAQ, {
                   name: n,
                   id: i
               });
@@ -431,7 +431,7 @@ class A extends s.Component {
             children: [
                 (0, r.jsx)('div', {
                     className: O.iconContainer,
-                    children: (0, r.jsx)(p.Z, {
+                    children: (0, r.jsx)(g.Z, {
                         tabIndex: -1,
                         className: O.gameIcon,
                         game: t,
@@ -480,18 +480,18 @@ class R extends s.Component {
             s = (0, f.Qj)(n.path);
         return (
             null == s || void 0 === s.messageId
-                ? ((e = C.intl.string(C.t.qbSCqq)),
+                ? ((e = j.intl.string(j.t.qbSCqq)),
                   (t = (0, r.jsx)(l.xPt, {
                       size: 'xs',
                       color: 'currentColor'
                   })))
                 : (0, f.VO)(s)
-                  ? ((e = C.intl.string(C.t['6Fd/j4'])),
+                  ? ((e = j.intl.string(j.t['6Fd/j4'])),
                     (t = (0, r.jsx)(l.acy, {
                         size: 'xs',
                         color: 'currentColor'
                     })))
-                  : ((e = C.intl.string(C.t.jQRwp6)),
+                  : ((e = j.intl.string(j.t.jQRwp6)),
                     (t = (0, r.jsx)(l.mBM, {
                         size: 'xs',
                         color: 'currentColor'
@@ -535,28 +535,28 @@ class D extends s.Component {
             c = s ? l.iWm : l.jje;
         switch (n.type) {
             case o.Ky.SHOP:
-                (e = C.intl.string(C.t.pWG4zc)),
+                (e = j.intl.string(j.t.pWG4zc)),
                     (t = (0, r.jsx)(l.EOn, {
                         size: 'xs',
                         color: 'currentColor'
                     }));
                 break;
             case o.Ky.NITRO_HOME:
-                (e = C.intl.string(C.t.Ipxkoq)),
+                (e = j.intl.string(j.t.Ipxkoq)),
                     (t = (0, r.jsx)(l.SrA, {
                         size: 'xs',
                         color: 'currentColor'
                     }));
                 break;
             case o.Ky.QUEST_HOME:
-                (e = C.intl.string(C.t.JALI2N)),
+                (e = j.intl.string(j.t.JALI2N)),
                     (t = (0, r.jsx)(l.qDn, {
                         size: 'xs',
                         color: 'currentColor'
                     }));
                 break;
             case o.Ky.APPS_HOME:
-                (e = C.intl.string(C.t.PHjkRE)),
+                (e = j.intl.string(j.t.PHjkRE)),
                     (t = (0, r.jsx)(c, {
                         size: 'xs',
                         color: 'currentColor'
@@ -564,7 +564,7 @@ class D extends s.Component {
                 break;
             case o.Ky.SETTINGS:
                 var d;
-                (e = null != (d = n.label) ? d : C.intl.string(C.t['3D5yo6'])),
+                (e = null != (d = n.label) ? d : j.intl.string(j.t['3D5yo6'])),
                     (t = (0, r.jsx)(l.ewm, {
                         size: 'xs',
                         color: 'currentColor'

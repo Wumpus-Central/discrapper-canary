@@ -73,8 +73,8 @@ let v = {
 function _(e) {
     var t, n, l;
     let { subscription: h, onUpdated: _ } = e,
-        [y, C] = r.useState(!1),
-        [O, N] = r.useState(!1),
+        [y, O] = r.useState(!1),
+        [C, N] = r.useState(!1),
         [E, T] = r.useState(null),
         S = (e) => ((null == e && (e = h.status), e in v) ? v[e] : 'Unknown status '.concat(e)),
         P = (e) => {
@@ -187,7 +187,7 @@ function _(e) {
                     children: [
                         (0, a.jsxs)(o.P3F, {
                             onClick: () => {
-                                C(!y);
+                                O(!y);
                             },
                             className: b.collapsablePaneHeader,
                             children: [
@@ -231,7 +231,7 @@ function _(e) {
                 children: [
                     (0, a.jsxs)(o.P3F, {
                         onClick: () => {
-                            N(!O);
+                            N(!C);
                         },
                         className: b.collapsablePaneHeader,
                         children: [
@@ -241,10 +241,10 @@ function _(e) {
                                     children: 'Modifications'
                                 })
                             }),
-                            (0, a.jsx)(c.Z, { direction: O ? c.Z.Directions.UP : c.Z.Directions.DOWN })
+                            (0, a.jsx)(c.Z, { direction: C ? c.Z.Directions.UP : c.Z.Directions.DOWN })
                         ]
                     }),
-                    O &&
+                    C &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsx)(o.hjN, {

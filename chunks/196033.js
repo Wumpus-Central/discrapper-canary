@@ -9,8 +9,8 @@ var i = n(192379),
     d = n(281598),
     u = n(388032),
     m = n(513767),
-    g = n(78230),
-    p = n(786792),
+    p = n(78230),
+    g = n(786792),
     h = n(161594);
 let f = () => {
     let e = (0, c.zL)(d.jE.UPSELL_BANNER),
@@ -21,7 +21,7 @@ let f = () => {
             () =>
                 n
                     ? {
-                          asset: g,
+                          asset: p,
                           popoutAsset: m,
                           title: u.intl.string(u.t.QZVVBg),
                           body: u.intl.string(u.t.sajmAg),
@@ -31,7 +31,7 @@ let f = () => {
                     : null != f
                       ? f
                       : {
-                            asset: p,
+                            asset: g,
                             popoutAsset: h,
                             title: u.intl.string(u.t['4Emkur']),
                             body: u.intl.string(u.t.gn7SZW),

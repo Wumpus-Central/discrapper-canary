@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => p });
 var i = n(200651);
 n(192379);
 var r = n(442837),
@@ -10,7 +10,7 @@ var r = n(442837),
     d = n(726985),
     u = n(388032),
     m = n(20493);
-function g(e) {
+function p(e) {
     let { refreshStyles: t = !1 } = e,
         n = (0, r.e7)([o.ZP], () => o.ZP.disableVoiceChannelChangeAlert);
     return (0, i.jsx)(a.F, {

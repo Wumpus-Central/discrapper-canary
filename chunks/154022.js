@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(481060),
     u = n(230711),
     m = n(419363),
-    g = n(857595),
-    p = n(607070),
+    p = n(857595),
+    g = n(607070),
     h = n(627845),
     f = n(600164),
     b = n(313201),
     _ = n(786761),
     x = n(3148),
     E = n(739566),
-    j = n(753206),
-    C = n(440849),
+    C = n(753206),
+    j = n(440849),
     O = n(921801),
     S = n(196051),
     v = n(441729),
@@ -83,7 +83,7 @@ let G = (0, b.hQ)(),
     F = (0, b.hQ)(),
     H = (0, b.hQ)(),
     z = o().debounce((e) => {
-        (0, g.o2)(e);
+        (0, p.o2)(e);
     }, 250),
     W = o().debounce((e) => {
         (0, S.Ct)(e);
@@ -202,7 +202,7 @@ function K() {
                 }),
                 (0, i.jsx)('div', {
                     className: L.previewMessage,
-                    children: (0, i.jsx)(j.Z, {
+                    children: (0, i.jsx)(C.Z, {
                         compact: e,
                         author: V(U({}, (0, E.ZH)(t)), { colorString: '#DD80F4' }),
                         message: t
@@ -213,9 +213,9 @@ function K() {
     });
 }
 function q() {
-    let { saturation: e, desaturateUserColors: t } = (0, c.cj)([p.Z], () => ({
-        saturation: p.Z.saturation,
-        desaturateUserColors: p.Z.desaturateUserColors
+    let { saturation: e, desaturateUserColors: t } = (0, c.cj)([g.Z], () => ({
+        saturation: g.Z.saturation,
+        desaturateUserColors: g.Z.desaturateUserColors
     }));
     return (0, i.jsxs)(d.hjN, {
         className: B.marginTop20,
@@ -249,7 +249,7 @@ function q() {
                     hideBorder: !0,
                     className: l()(B.marginTop20, B.marginBottom20),
                     value: t,
-                    onChange: g.f1,
+                    onChange: p.f1,
                     note: k.intl.string(k.t.nlAOER),
                     children: k.intl.string(k.t.bQCodH)
                 })
@@ -258,21 +258,21 @@ function q() {
     });
 }
 function X() {
-    let e = (0, c.e7)([p.Z], () => p.Z.alwaysShowLinkDecorations);
+    let e = (0, c.e7)([g.Z], () => g.Z.alwaysShowLinkDecorations);
     return (0, i.jsx)(d.xJW, {
         className: B.marginTop20,
         children: (0, i.jsx)(d.j7V, {
             note: k.intl.string(k.t['72i5GB']),
             value: e,
             onChange: function () {
-                (0, g.gs)(!e);
+                (0, p.gs)(!e);
             },
             children: k.intl.string(k.t.OLZFBw)
         })
     });
 }
 function Q() {
-    let e = (0, c.e7)([p.Z], () => p.Z.roleStyle);
+    let e = (0, c.e7)([g.Z], () => g.Z.roleStyle);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(d.xJW, {
@@ -300,7 +300,7 @@ function Q() {
                             }
                         ],
                         onChange: function (e) {
-                            (0, g.u1)(e.value);
+                            (0, p.u1)(e.value);
                         },
                         value: e
                     })
@@ -311,7 +311,7 @@ function Q() {
     });
 }
 function J() {
-    let e = (0, c.e7)([p.Z], () => p.Z.syncProfileThemeWithUserTheme),
+    let e = (0, c.e7)([g.Z], () => g.Z.syncProfileThemeWithUserTheme),
         t = r.useRef(null);
     return (
         (0, A.Z)(t, P.rP.SYNC_PROFILE_THEME_WITH_USER_THEME),
@@ -329,7 +329,7 @@ function J() {
                     }),
                     className: B.marginTop20,
                     value: e,
-                    onChange: g.Uv,
+                    onChange: p.Uv,
                     children: k.intl.string(k.t['sSY+mJ'])
                 })
             })
@@ -337,14 +337,14 @@ function J() {
     );
 }
 function $() {
-    let [e] = (0, c.Wu)([p.Z], () => [p.Z.syncForcedColors, p.Z.systemForcedColors]),
+    let [e] = (0, c.Wu)([g.Z], () => [g.Z.syncForcedColors, g.Z.systemForcedColors]),
         [t, n] = r.useState(e);
     r.useEffect(() => {
         n(e);
     }, [e]);
     let s = r.useRef(null);
     r.useEffect(() => {
-        null != s.current && (clearTimeout(s.current), (s.current = null)), t !== e && (s.current = setTimeout(() => (0, g.qz)(t), 150));
+        null != s.current && (clearTimeout(s.current), (s.current = null)), t !== e && (s.current = setTimeout(() => (0, p.qz)(t), 150));
     }, [t, e]);
     let l = k.intl.format(k.t.GwEVEx, { learnMoreLink: I.Z.getArticleURL(D.BhN.FORCED_COLORS) });
     return (0, i.jsx)(d.xJW, {
@@ -370,10 +370,10 @@ function ee() {
             systemPrefersReducedMotion: a,
             gifAutoPlayOverrideReason: o,
             animateEmojiOverrideReason: u
-        } = (0, c.cj)([p.Z, y.Z], () => ({
-            systemPrefersReducedMotion: p.Z.systemPrefersReducedMotion,
-            rawPrefersReducedMotion: p.Z.rawPrefersReducedMotion,
-            useReducedMotion: p.Z.useReducedMotion,
+        } = (0, c.cj)([g.Z, y.Z], () => ({
+            systemPrefersReducedMotion: g.Z.systemPrefersReducedMotion,
+            rawPrefersReducedMotion: g.Z.rawPrefersReducedMotion,
+            useReducedMotion: g.Z.useReducedMotion,
             gifAutoPlayOverrideReason: y.Z.getAppliedOverrideReasonKey('gifAutoPlay'),
             animateEmojiOverrideReason: y.Z.getAppliedOverrideReasonKey('animateEmoji')
         })),
@@ -381,12 +381,12 @@ function ee() {
     (0, A.Z)(m, P.rP.REDUCED_MOTION);
     let h = r.useCallback(
             (e, t) => {
-                (0, g.Zt)(t ? 'auto' : a);
+                (0, p.Zt)(t ? 'auto' : a);
             },
             [a]
         ),
         f = r.useCallback((e) => {
-            (0, g.Zt)(e ? 'reduce' : 'no-preference');
+            (0, p.Zt)(e ? 'reduce' : 'no-preference');
         }, []);
     return (0, i.jsxs)(d.xJW, {
         ref: m,
@@ -422,7 +422,7 @@ function ee() {
                 children: (0, i.jsx)(d.j7V, {
                     className: B.marginBottom20,
                     value: e,
-                    note: null != o ? (0, C.Z)(o) : void 0,
+                    note: null != o ? (0, j.Z)(o) : void 0,
                     onChange: N.QK.updateSetting,
                     children: k.intl.string(k.t.Iayoh4)
                 })
@@ -432,7 +432,7 @@ function ee() {
                 children: (0, i.jsx)(d.j7V, {
                     className: B.marginBottom20,
                     value: t,
-                    note: null != u ? (0, C.Z)(u) : void 0,
+                    note: null != u ? (0, j.Z)(u) : void 0,
                     onChange: N.Yk.updateSetting,
                     children: k.intl.string(k.t.iIaOlZ)
                 })
@@ -453,7 +453,7 @@ function et() {
             (0, i.jsx)(d.R94, {
                 type: d.R94.Types.DESCRIPTION,
                 className: B.marginBottom8,
-                children: null != t ? (0, C.Z)(t) : k.intl.string(k.t.GRa6U1)
+                children: null != t ? (0, j.Z)(t) : k.intl.string(k.t.GRa6U1)
             }),
             (0, i.jsx)(d.FXm, {
                 options: [
@@ -478,7 +478,7 @@ function et() {
     });
 }
 function en() {
-    let e = (0, c.e7)([p.Z], () => p.Z.isSubmitButtonEnabled),
+    let e = (0, c.e7)([g.Z], () => g.Z.isSubmitButtonEnabled),
         t = N.dN.useSetting(),
         n = r.useRef(null);
     return (
@@ -496,7 +496,7 @@ function en() {
                     children: (0, i.jsx)(d.j7V, {
                         className: B.marginTop20,
                         value: e,
-                        onChange: g.eN,
+                        onChange: p.eN,
                         children: k.intl.string(k.t['3Fztn5'])
                     })
                 }),

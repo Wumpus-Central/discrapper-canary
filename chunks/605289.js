@@ -10,8 +10,8 @@ var r = n(120356),
     d = n(985754),
     u = n(222727),
     m = n(318747),
-    g = n(409100),
-    p = n(474936),
+    p = n(409100),
+    g = n(474936),
     h = n(981631),
     f = n(614075);
 let b = function (e) {
@@ -25,14 +25,14 @@ let b = function (e) {
             subscription: _,
             userLocale: b
         }),
-        j = r.toLowerCase() + 'Banner';
+        C = r.toLowerCase() + 'Banner';
     return (0, i.jsxs)('div', {
         className: s()(f.bannerContainer, {
             [f.smallGap]: n,
             [f.bigGap]: !n
         }),
         children: [
-            (0, i.jsx)('div', { className: s()(f[j], f.bannerImageContainer) }),
+            (0, i.jsx)('div', { className: s()(f[C], f.bannerImageContainer) }),
             (0, i.jsx)(a.X6q, {
                 className: f.bannerHeading,
                 variant: 'heading-xl/semibold',
@@ -50,14 +50,14 @@ let b = function (e) {
             (0, i.jsxs)('div', {
                 className: f.ctaButtonContainer,
                 children: [
-                    (0, i.jsx)(g.Z, {
+                    (0, i.jsx)(p.Z, {
                         forceInverted: !0,
                         className: f.ctaButton,
-                        subscriptionTier: p.Si.TIER_2
+                        subscriptionTier: g.Si.TIER_2
                     }),
                     (0, i.jsx)(m.Z, {
                         forceWhite: !0,
-                        subscriptionTier: p.Si.TIER_2,
+                        subscriptionTier: g.Si.TIER_2,
                         className: f.ctaButton
                     })
                 ]

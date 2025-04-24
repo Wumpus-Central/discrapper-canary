@@ -12,16 +12,16 @@ var i = n(200651),
     d = n(857595),
     u = n(607070),
     m = n(100527),
-    g = n(906732),
-    p = n(238302),
+    p = n(906732),
+    g = n(238302),
     h = n(514361),
     f = n(705262),
     b = n(540059),
     _ = n(605236),
     x = n(104494),
     E = n(639119),
-    j = n(311476),
-    C = n(165583),
+    C = n(311476),
+    j = n(165583),
     O = n(197115),
     S = n(504983),
     v = n(626135),
@@ -36,18 +36,18 @@ let R = () => {
             dismissAction: N.L.PRIMARY,
             forceTrack: !0
         }),
-            (0, p.Kq)(),
+            (0, g.Kq)(),
             (0, c.xf)();
     },
     D = () => {
         var e, t;
-        let { analyticsLocations: n } = (0, g.ZP)(m.Z.USER_SETTINGS),
+        let { analyticsLocations: n } = (0, p.ZP)(m.Z.USER_SETTINGS),
             l = (0, s.e7)([h.Z], () => h.Z.isPreview),
             a = (null == (t = (0, E.N)()) || null == (e = t.subscription_trial) ? void 0 : e.sku_id) === y.Si.TIER_2,
             c = (0, x.Ng)(),
             d = (0, x.Wp)(c, y.Si.TIER_2),
             u = !l || a,
-            { enabled: p } = j.Z.getCurrentConfig(
+            { enabled: g } = C.Z.getCurrentConfig(
                 { location: 'UserSettingsAppearanceClientThemes' },
                 {
                     autoTrackExposure: !u,
@@ -63,14 +63,14 @@ let R = () => {
                           children: [
                               (0, i.jsx)(o.zxk, {
                                   size: o.zxk.Sizes.MEDIUM,
-                                  color: p ? o.zxk.Colors.BRAND : o.zxk.Colors.PRIMARY,
+                                  color: g ? o.zxk.Colors.BRAND : o.zxk.Colors.PRIMARY,
                                   onClick: () => R(),
-                                  children: p ? A.intl.string(A.t.SKNnqq) : A.intl.string(A.t['E+COuL'])
+                                  children: g ? A.intl.string(A.t.SKNnqq) : A.intl.string(A.t['E+COuL'])
                               }),
                               (0, i.jsx)(O.Z, {
-                                  showGradient: p,
+                                  showGradient: g,
                                   subscriptionTier: y.Si.TIER_2,
-                                  buttonText: p ? A.intl.string(A.t.pj0XBA) : d ? A.intl.formatToPlainString(A.t.bkQ4bG, { percent: null == c ? void 0 : c.discount.amount }) : A.intl.string(A.t.mr4K7O),
+                                  buttonText: g ? A.intl.string(A.t.pj0XBA) : d ? A.intl.formatToPlainString(A.t.bkQ4bG, { percent: null == c ? void 0 : c.discount.amount }) : A.intl.string(A.t.mr4K7O),
                                   className: P.premiumCta
                               })
                           ]
@@ -87,7 +87,7 @@ let R = () => {
                 children: [
                     (0, i.jsx)(f.ZP, {
                         type: f.yH.SETTINGS,
-                        children: p
+                        children: g
                             ? (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsx)(f.ZP.BasicAndGradient, {
@@ -121,7 +121,7 @@ let R = () => {
                                                               children: A.intl.string(A.t['E+COuL'])
                                                           }),
                                                           (0, i.jsx)('div', { className: P.premiumTier2Divider }),
-                                                          (0, i.jsx)(C.ZP, {
+                                                          (0, i.jsx)(j.ZP, {
                                                               type: y.cd.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL,
                                                               subscriptionTier: y.Si.TIER_2
                                                           })

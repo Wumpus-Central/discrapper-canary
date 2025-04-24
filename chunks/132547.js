@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(214852),
     u = n(626135),
     m = n(314684),
-    g = n(794484),
-    p = n(347475),
+    p = n(794484),
+    g = n(347475),
     h = n(342414),
     f = n(615042),
     b = n(391110),
     _ = n(71363),
     x = n(781800),
     E = n(981631),
-    j = n(388032),
-    C = n(614729),
+    C = n(388032),
+    j = n(614729),
     O = n(865215);
 let S = () => {
     (0, d.z)(c.X), (0, f.u)();
@@ -34,26 +34,26 @@ let S = () => {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(l.yWw, {
-                    className: C.mainPageScroller,
+                    className: j.mainPageScroller,
                     ref: e,
                     children: (0, i.jsx)('div', {
-                        className: C.container,
+                        className: j.container,
                         children: (0, i.jsxs)(o.Gt, {
                             value: v,
                             children: [
                                 (0, i.jsx)(h.Z, {
-                                    className: C.heroHeading,
+                                    className: j.heroHeading,
                                     location: b.MQ.HOME
                                 }),
-                                (0, i.jsx)(g.Z, {
+                                (0, i.jsx)(p.Z, {
                                     variant: b.R0.WHATS_NEW,
-                                    className: C.whatsNew,
+                                    className: j.whatsNew,
                                     noBackground: !0,
                                     leftAlignHeaders: !0,
                                     shouldAutoScroll: N
                                 }),
-                                (0, i.jsx)(g.Z, {
-                                    className: C.perksDiscoverability,
+                                (0, i.jsx)(p.Z, {
+                                    className: j.perksDiscoverability,
                                     noBackground: !0,
                                     leftAlignHeaders: !0,
                                     showAllPerksButton: (0, i.jsx)(x.Z, {
@@ -61,15 +61,15 @@ let S = () => {
                                         previousComponent: b.MQ.HOME
                                     })
                                 }),
-                                (0, i.jsx)(p.Z, {
-                                    className: C.giftNitro,
+                                (0, i.jsx)(g.Z, {
+                                    className: j.giftNitro,
                                     location: a.Z.PREMIUM_MARKETING_GIFT_SECTION,
                                     analyticsLocation: {
                                         page: E.ZY5.NITRO_HOME,
                                         section: E.jXE.GIFT_BANNER
                                     }
                                 }),
-                                (0, i.jsx)('div', { className: C.footerSpacing }),
+                                (0, i.jsx)('div', { className: j.footerSpacing }),
                                 (0, i.jsx)(s.$, {
                                     innerRef: t,
                                     onChange: (e) => {
@@ -77,15 +77,15 @@ let S = () => {
                                     },
                                     children: (0, i.jsx)('div', {
                                         ref: t,
-                                        className: C.bottomOfPageVisibilitySensor
+                                        className: j.bottomOfPageVisibilitySensor
                                     })
                                 }),
                                 (0, i.jsx)('img', {
                                     src: O,
-                                    className: C.bottomIllustration,
+                                    className: j.bottomIllustration,
                                     width: 112,
                                     height: 85,
-                                    alt: j.intl.string(j.t.X4IxWF)
+                                    alt: C.intl.string(C.t.X4IxWF)
                                 })
                             ]
                         })

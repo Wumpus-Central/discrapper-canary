@@ -1,4 +1,4 @@
-n.d(t, { B: () => E });
+n.d(t, { B: () => x });
 var r = n(200651);
 n(192379);
 var i = n(155281),
@@ -20,7 +20,7 @@ var i = n(155281),
     O = n(281029),
     v = n(700785),
     C = n(981631);
-function j(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,8 +45,8 @@ function j(e) {
     }
     return e;
 }
-let x = 'DRAGGABLE_GUILD_CHANNEL';
-function S(e, t) {
+let j = 'DRAGGABLE_GUILD_CHANNEL';
+function E(e, t) {
     var n, r;
     if (null == e || null == t) return null;
     if (e !== C.I_8) return f.Z.getChannel(t);
@@ -54,22 +54,22 @@ function S(e, t) {
         l = null != (r = null != (n = i[m.sH].find((e) => e.channel.id === t)) ? n : i[m.Zb].find((e) => e.channel.id === t)) ? r : i[C.d4z.GUILD_CATEGORY].find((e) => e.channel.id === t);
     return null == l ? void 0 : l.channel;
 }
-function E(e) {
+function x(e) {
     return (0, i.G)(
-        x,
+        j,
         {
             drop(e, t) {
                 let n,
                     i = _.Z.getGuildId(),
                     l = t.getItem(),
-                    o = (0, O.if)(S(i, l.id), l.position, e.channel, e.position, l.channelList);
+                    o = (0, O.if)(E(i, l.id), l.position, e.channel, e.position, l.channelList);
                 if (null == o) return;
-                let u = S(i, l.id);
+                let u = E(i, l.id);
                 if (null == u) return;
                 let h = g.Z.getCategories(i),
                     p = b.Z.getGuild(i);
                 if (null == p) return;
-                let m = (0, O.Dn)(u, S(i, o.referenceId), o.parentId, h);
+                let m = (0, O.Dn)(u, E(i, o.referenceId), o.parentId, h);
                 if (0 !== m.length) {
                     if (i === C.I_8) return void (0, d.s3)(m);
                     if (
@@ -97,7 +97,7 @@ function E(e) {
                                 var l, o;
                                 return (0, r.jsx)(
                                     c.default,
-                                    ((l = j({}, t)),
+                                    ((l = S({}, t)),
                                     (o = o =
                                         {
                                             channel: u,
@@ -164,7 +164,7 @@ function E(e) {
         }
     )(
         (0, l.E)(
-            x,
+            j,
             {
                 canDrag(e) {
                     let { channel: t } = e;
@@ -176,7 +176,7 @@ function E(e) {
                             'true' !== o.K.get('doNotShowReorderModal') &&
                                 (0, s.ZDy)(async () => {
                                     let { default: e } = await n.e('82560').then(n.bind(n, 391312));
-                                    return (t) => (0, r.jsx)(e, j({}, t));
+                                    return (t) => (0, r.jsx)(e, S({}, t));
                                 }),
                             !1
                         );

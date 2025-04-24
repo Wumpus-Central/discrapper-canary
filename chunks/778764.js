@@ -9,15 +9,15 @@ var i = n(200651),
     d = n(202858),
     u = n(287880),
     m = n(358085),
-    g = n(960048),
-    p = n(998502),
+    p = n(960048),
+    g = n(998502),
     h = n(365007),
     f = n(15980),
     b = n(755733),
     _ = n(981631),
     x = n(388032),
     E = n(49149);
-function j(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -42,7 +42,7 @@ function j(e) {
     }
     return e;
 }
-function C(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -63,7 +63,7 @@ function C(e, t) {
 function O(e) {
     let { transitionState: t, onClose: l, ticket: o, challenge: u } = e,
         f = (0, c.Dt)(),
-        [j, C] = r.useState(''),
+        [C, j] = r.useState(''),
         [O, S] = r.useState(!0),
         [v, T] = r.useState(b.x.INIT),
         [I, N] = r.useState(''),
@@ -71,11 +71,11 @@ function O(e) {
         P = async () => {
             let e;
             T(b.x.REGISTER);
-            let t = m.isPlatformEmbedded && p.ZP.supportsFeature(_.eRX.WEBAUTHN) ? p.ZP.webAuthnRegister(u) : s.Ue(JSON.parse(u)).then((e) => JSON.stringify(e));
+            let t = m.isPlatformEmbedded && g.ZP.supportsFeature(_.eRX.WEBAUTHN) ? g.ZP.webAuthnRegister(u) : s.Ue(JSON.parse(u)).then((e) => JSON.stringify(e));
             try {
                 e = await t;
             } catch (e) {
-                g.Z.captureException(e), A(x.intl.string(x.t.xSCvBQ)), T(b.x.INIT);
+                p.Z.captureException(e), A(x.intl.string(x.t.xSCvBQ)), T(b.x.INIT);
                 return;
             }
             N(e), T(b.x.NAME);
@@ -170,7 +170,7 @@ function O(e) {
                         children: (0, i.jsxs)('form', {
                             onSubmit: (e) => {
                                 e.preventDefault(),
-                                    (0, h.Sr)(j, o, I)
+                                    (0, h.Sr)(C, o, I)
                                         .then(async () => {
                                             await (0, d.Yn)(!1);
                                         })
@@ -198,9 +198,9 @@ function O(e) {
                                                 }),
                                                 (0, i.jsx)(a.oil, {
                                                     className: E.input,
-                                                    value: j,
+                                                    value: C,
                                                     onChange: (e) => {
-                                                        C(e), S(0 === e.length);
+                                                        j(e), S(0 === e.length);
                                                     },
                                                     autoFocus: !0,
                                                     minLength: 1
@@ -249,7 +249,7 @@ function S(e) {
                 action: () => {
                     (0, a.ZDy)(async () => {
                         let { default: e } = await n.e('804').then(n.bind(n, 89616));
-                        return (t) => (0, i.jsx)(e, j({ credential: r }, t));
+                        return (t) => (0, i.jsx)(e, C({ credential: r }, t));
                     });
                 }
             }),
@@ -300,7 +300,7 @@ function v() {
                                         color: a.zxk.Colors.TRANSPARENT,
                                         size: a.zxk.Sizes.ICON,
                                         onClick: (t) => {
-                                            (0, o.vq)(t, (t) => (0, i.jsx)(S, C(j({}, t), { credential: e })));
+                                            (0, o.vq)(t, (t) => (0, i.jsx)(S, j(C({}, t), { credential: e })));
                                         },
                                         'aria-label': x.intl.string(x.t['+nrTbG']),
                                         innerClassName: E.credentialOptions,
@@ -327,7 +327,7 @@ function v() {
                                     (0, a.h7j)((e) =>
                                         (0, i.jsx)(
                                             O,
-                                            C(j({}, e), {
+                                            j(C({}, e), {
                                                 ticket: t,
                                                 challenge: n
                                             })
@@ -335,7 +335,7 @@ function v() {
                                     );
                                 })
                                 .catch((e) => {
-                                    e.message !== x.intl.string(x.t.N2yb9f) && g.Z.captureException(e);
+                                    e.message !== x.intl.string(x.t.N2yb9f) && p.Z.captureException(e);
                                 })
                                 .finally(() => {
                                     s(!1);

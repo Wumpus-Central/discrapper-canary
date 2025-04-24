@@ -9,41 +9,41 @@ var r = n(200651),
     u = n(388905),
     d = n(925329),
     h = n(479446),
-    g = n(981632),
-    p = n(594174),
-    m = n(509545),
-    f = n(55563),
+    p = n(981632),
+    g = n(594174),
+    f = n(509545),
+    m = n(55563),
     _ = n(296848),
     x = n(981631),
-    b = n(474936),
-    E = n(388032),
+    E = n(474936),
+    b = n(388032),
     v = n(378027),
     j = n(893354),
     I = n(20493);
-let O = o.ZP.connectStores([f.Z, c.Z, m.Z, p.default], (e) => {
+let O = o.ZP.connectStores([m.Z, c.Z, f.Z, g.default], (e) => {
     let { giftCode: t } = e,
-        n = f.Z.get(t.skuId),
+        n = m.Z.get(t.skuId),
         { subscriptionPlanId: r } = t;
     return {
         sku: n,
         subscriptionPlan: null != r ? (0, _.oE)(r) : null,
         application: c.Z.getApplication(n.applicationId),
-        gifter: p.default.getUser(t.userId)
+        gifter: g.default.getUser(t.userId)
     };
 })((e) => {
-    let { error: t, giftCode: n, gifter: l, sku: o, application: c, subscriptionPlan: p } = e,
-        m = null == l ? E.intl.string(E.t.lTGZAg) : E.intl.formatToPlainString(E.t.TjWdPT, { username: l.username }),
-        f = o.name;
+    let { error: t, giftCode: n, gifter: l, sku: o, application: c, subscriptionPlan: g } = e,
+        f = null == l ? b.intl.string(b.t.lTGZAg) : b.intl.formatToPlainString(b.t.TjWdPT, { username: l.username }),
+        m = o.name;
     return (
-        null != p &&
-            (f = E.intl.formatToPlainString(p.interval === b.rV.MONTH ? E.t.CTpcCQ : E.t.rgPWGx, {
+        null != g &&
+            (m = b.intl.formatToPlainString(g.interval === E.rV.MONTH ? b.t.CTpcCQ : b.t.rgPWGx, {
                 skuName: o.name,
-                intervalCount: p.intervalCount
+                intervalCount: g.intervalCount
             })),
         (0, r.jsxs)(i.Fragment, {
             children: [
                 null != n.giftStyle
-                    ? (0, r.jsx)(g.Z, {
+                    ? (0, r.jsx)(p.Z, {
                           defaultAnimationState: h.SR.LOOP,
                           giftStyle: n.giftStyle,
                           className: v.seasonalIcon
@@ -55,11 +55,11 @@ let O = o.ZP.connectStores([f.Z, c.Z, m.Z, p.default], (e) => {
                       }),
                 null != t
                     ? (0, r.jsxs)(i.Fragment, {
-                          children: [(0, r.jsx)(u.DK, { children: E.intl.string(E.t.mDFGFh) }), (0, r.jsx)(u.Dx, { children: t })]
+                          children: [(0, r.jsx)(u.DK, { children: b.intl.string(b.t.mDFGFh) }), (0, r.jsx)(u.Dx, { children: t })]
                       })
                     : (0, r.jsxs)(i.Fragment, {
                           children: [
-                              (0, r.jsx)(u.DK, { children: m }),
+                              (0, r.jsx)(u.DK, { children: f }),
                               (0, r.jsxs)(u.Dx, {
                                   className: s()(I.marginTop8, j.flexCenter),
                                   children: [
@@ -70,7 +70,7 @@ let O = o.ZP.connectStores([f.Z, c.Z, m.Z, p.default], (e) => {
                                               game: c,
                                               skuId: o.id
                                           }),
-                                      f
+                                      m
                                   ]
                               })
                           ]

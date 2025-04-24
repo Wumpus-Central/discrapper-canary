@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(953529), n(388685);
+n.d(t, { Z: () => g }), n(953529), n(388685);
 var i = n(200651),
     r = n(192379),
     s = n(481060),
@@ -9,32 +9,32 @@ var i = n(200651),
     d = n(131085),
     u = n(526761),
     m = n(388032),
-    g = n(729495);
-let p = r.memo(function (e) {
-    let { guildId: t, guildProfile: n, title: p, description: h, onClose: f } = e,
+    p = n(729495);
+let g = r.memo(function (e) {
+    let { guildId: t, guildProfile: n, title: g, description: h, onClose: f } = e,
         b = (0, a.Z)({ scrollPosition: u.Y_.GUILD_TAG }),
         [_, x] = r.useState(!1);
     async function E() {
         x(!0), await (0, l.nE)(t, !0), x(!1), null == f || f();
     }
     return (0, i.jsxs)('div', {
-        className: g.container,
+        className: p.container,
         children: [
             (0, i.jsx)(s.olH, {
-                className: g.closeButton,
+                className: p.closeButton,
                 onClick: f
             }),
             (0, i.jsx)('div', {
-                className: g.tagContainer,
+                className: p.tagContainer,
                 children: (0, i.jsxs)('div', {
-                    className: g.tag,
+                    className: p.tag,
                     children: [
                         null != n.badge &&
                             (0, i.jsx)(c.eI, {
                                 src: (0, o.Ic)(t, n.badge, d.Gg.SIZE_36),
                                 tag: n.tag,
                                 size: d.Gg.SIZE_36,
-                                className: g.badge
+                                className: p.badge
                             }),
                         (0, i.jsx)(s.Text, {
                             tag: 'span',
@@ -46,23 +46,23 @@ let p = r.memo(function (e) {
             }),
             (0, i.jsx)(s.X6q, {
                 variant: 'heading-md/semibold',
-                className: g.title,
-                children: p
+                className: p.title,
+                children: g
             }),
             (0, i.jsx)(s.Text, {
                 variant: 'text-sm/medium',
-                className: g.description,
+                className: p.description,
                 children: h
             }),
             (0, i.jsx)(s.zxk, {
-                className: g.adoptButton,
+                className: p.adoptButton,
                 submitting: _,
                 onClick: E,
                 children: m.intl.string(m.t.jwEaiY)
             }),
             (0, i.jsx)(s.zxk, {
                 color: s.zxk.Colors.PRIMARY,
-                className: g.editButton,
+                className: p.editButton,
                 onClick: function () {
                     null == f || f(), b();
                 },
