@@ -1,8 +1,8 @@
 n.d(t, { Z: () => w }), n(388685);
 var i = n(200651),
     r = n(192379),
-    o = n(120356),
-    l = n.n(o),
+    l = n(120356),
+    o = n.n(l),
     s = n(954955),
     c = n.n(s),
     a = n(772848),
@@ -10,9 +10,9 @@ var i = n(200651),
     d = n(902704),
     h = n(13245),
     p = n(928518),
-    m = n(237997),
-    b = n(358085),
-    f = n(306381),
+    f = n(237997),
+    m = n(358085),
+    b = n(306381),
     v = n(610394),
     g = n(561064),
     y = n(501787),
@@ -68,7 +68,7 @@ let j = r.createContext(
             null != this.zones.get(e) && (null == (t = this.resizeObserver) || t.unobserve(e), this.zones.delete(e), this.elements.delete(e), this.updateZones());
         }
         updateZones() {
-            if (!b.isPlatformEmbedded) return;
+            if (!m.isPlatformEmbedded) return;
             let e = p.Z.getWindow(y.$J);
             null != e &&
                 h.Z.setClickZones(
@@ -131,10 +131,10 @@ let j = r.createContext(
     })((0, g.i)())
 );
 function w(e) {
-    let { observe: t = !0, className: n, style: o, children: s } = e,
+    let { observe: t = !0, className: n, style: l, children: s } = e,
         c = r.useContext(j),
-        a = (0, u.e7)([v.ZP], () => v.ZP.hasRenderDebugMode(f.G.ClickZones)),
-        d = (0, u.e7)([m.default], () => m.default.disableClickableRegions),
+        a = (0, u.e7)([v.default], () => v.default.hasRenderDebugMode(b.G.ClickZones)),
+        d = (0, u.e7)([f.default], () => f.default.disableClickableRegions),
         [{ refHandler: h, setObserve: p }] = r.useState(() => {
             let e = null;
             return {
@@ -152,8 +152,8 @@ function w(e) {
         }, [t, p, d]),
         (0, i.jsx)('div', {
             ref: h,
-            style: o,
-            className: l()(n, O.clickable, a && O.debugMode),
+            style: l,
+            className: o()(n, O.clickable, a && O.debugMode),
             'data-click-zone': !0,
             children: s
         })

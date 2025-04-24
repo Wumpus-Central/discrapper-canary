@@ -15,11 +15,11 @@ var i = n(200651),
     d = n(594174),
     g = n(74538),
     b = n(759198),
-    p = n(11352),
-    f = n(213931),
-    S = n(767157),
-    O = n(112440),
-    h = n(671105),
+    p = n(173345),
+    f = n(817876),
+    S = n(213931),
+    O = n(767157),
+    h = n(112440),
     E = n(552958),
     y = n(981631),
     j = n(921944),
@@ -49,8 +49,8 @@ function x() {
 }
 function A(e, t, s, v) {
     var m, x;
-    let A = (0, h.OR)(e),
-        L = (0, h._c)(e, t),
+    let A = (0, f.OR)(e),
+        L = (0, f._c)(e, t),
         I = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
         Z = (0, l.e7)([u.ZP], () => u.ZP.isMuted(e), [e]),
         D = g.ZP.canUseCustomNotificationSounds(I),
@@ -72,10 +72,10 @@ function A(e, t, s, v) {
         return null;
     let B = (n) => {
             if ((G(n), C(j.L.TAKE_ACTION), !D && n !== _.YC.CLASSIC)) {
-                (0, S.Z)(n, 'contextMenu'), (0, O.Z)();
+                (0, O.Z)(n, 'contextMenu'), (0, h.Z)();
                 return;
             }
-            null != t ? (0, f.M)(e, t, M, n, 'contextMenu') : (0, f.t)(e, M, n, 'contextMenu');
+            null != t ? (0, S.M)(e, t, M, n, 'contextMenu') : (0, S.t)(e, M, n, 'contextMenu');
         },
         Y = D ? o.Text : b.Z,
         Q = (0, _.LB)(),

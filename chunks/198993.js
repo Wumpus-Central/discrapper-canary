@@ -1,7 +1,7 @@
 n.d(t, {
     ZP: () => E,
     c2: () => x,
-    cK: () => g
+    cK: () => p
 });
 var r,
     i,
@@ -25,7 +25,7 @@ function h(e, t, n) {
         e
     );
 }
-function p(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function p(e) {
     }
     return e;
 }
-var g = (((r = {}).SIZE_40 = 'SIZE_40'), (r.SIZE_60 = 'SIZE_60'), r);
+var p = (((r = {}).SIZE_40 = 'SIZE_40'), (r.SIZE_60 = 'SIZE_60'), r);
 let f = Object.freeze({
         SIZE_40: 'size-40',
         SIZE_60: 'size-60'
@@ -79,7 +79,7 @@ class _ extends (i = o.PureComponent) {
             className: c()(d.qrCodeContainer, t),
             children: (0, s.jsx)(
                 u.default,
-                p(
+                g(
                     {
                         value: n,
                         level: 'M'
@@ -102,7 +102,7 @@ class x extends (l = o.PureComponent) {
         return (0, s.jsxs)('div', {
             className: d.qrCodeOverlayContainer,
             children: [
-                (0, s.jsx)(_, p({}, this.props)),
+                (0, s.jsx)(_, g({}, this.props)),
                 (0, s.jsx)('div', {
                     className: d.qrCodeOverlay,
                     children: (0, s.jsx)('img', {

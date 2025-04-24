@@ -1,11 +1,11 @@
-n.d(t, { Q: () => r }), n(388685);
+n.d(t, { Q: () => o }), n(388685);
 var i = n(192379),
-    l = n(542094);
-function r(e) {
+    a = n(542094);
+function o(e) {
     let [t, n] = i.useState(e);
     return (
         i.useLayoutEffect(() => {
-            if (e === l.JS.LEAVE) {
+            if (e === a.JS.LEAVE) {
                 let t = setTimeout(() => n(e), 100);
                 return () => clearTimeout(t);
             }

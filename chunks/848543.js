@@ -123,9 +123,9 @@ function Z(e) {
     let {
             Component: Y,
             play: K,
-            events: { onMouseEnter: q, onMouseLeave: Q }
+            events: { onMouseEnter: q, onMouseLeave: X }
         } = (0, c.j)(),
-        X = (e) =>
+        Q = (e) =>
             (0, r.jsx)(u.yRy, {
                 targetElementRef: Z,
                 animation: u.yRy.Animation.FADE,
@@ -173,7 +173,7 @@ function Z(e) {
                                         },
                                         onMouseLeave: (t) => {
                                             var n, r;
-                                            null == (n = l.onMouseLeave) || n.call(l, t), null == e || null == (r = e.onMouseLeave) || r.call(e), Q();
+                                            null == (n = l.onMouseLeave) || n.call(l, t), null == e || null == (r = e.onMouseLeave) || r.call(e), X();
                                         },
                                         onContextMenu: W,
                                         fullWidth: !0,
@@ -205,7 +205,7 @@ function Z(e) {
             children: (0, r.jsx)(u.ua7, {
                 targetElementRef: Z,
                 text: L ? T.intl.string(T.t['Ox4/zc']) : R ? T.intl.string(T.t['+YBKYG']) : D ? T.intl.string(T.t.X1lQlp) : T.intl.string(T.t['6EJvHh']),
-                children: (e) => X(e)
+                children: (e) => Q(e)
             })
         })
     );

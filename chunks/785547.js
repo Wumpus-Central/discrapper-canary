@@ -17,8 +17,8 @@ var r,
     b = n(941128),
     x = n(780570),
     y = n(358085),
-    v = n(814225),
-    E = n(346329),
+    E = n(814225),
+    v = n(346329),
     O = n(701560),
     j = n(981631),
     C = n(388032),
@@ -188,7 +188,7 @@ class Z extends (r = a.Component) {
             return this.renderDisabledButton(
                 n,
                 (function (e) {
-                    let t = v.en(e.sku);
+                    let t = E.en(e.sku);
                     return null != t ? C.intl.formatToPlainString(C.t.Aqe2ZG, { date: t }) : null;
                 })(t)
             );
@@ -210,11 +210,11 @@ class Z extends (r = a.Component) {
             }),
             I(this, 'handleInstall', () => {
                 let { libraryApplication: e, source: t } = this.props;
-                E.installApplication(e.id, e.branchId, t);
+                v.installApplication(e.id, e.branchId, t);
             }),
             I(this, 'handleUpdate', () => {
                 let { libraryApplication: e } = this.props;
-                E.updateApplication(e.id, e.branchId);
+                v.updateApplication(e.id, e.branchId);
             }),
             I(this, 'onClickHandlers', {
                 add_to_library: this.handleAddToLibrary,

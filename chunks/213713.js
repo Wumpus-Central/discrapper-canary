@@ -15,8 +15,8 @@ var a = n(200651),
     b = n(835473),
     f = n(246992),
     v = n(681619),
-    j = n(810568),
-    g = n(168524),
+    g = n(810568),
+    j = n(168524),
     _ = n(77498),
     y = n(823379),
     O = n(550532),
@@ -111,10 +111,10 @@ function Z() {
             },
             [R]
         ),
-        D = (0, g.Z)({
+        D = (0, j.Z)({
             applicationId: A,
             location: 'DevToolsContentInventory',
-            source: j.m1.DevTools
+            source: g.m1.DevTools
         }),
         M = Object.entries(null != (t = m.K.get('GameProfileModal')) ? t : {})
             .filter((e) => {
@@ -239,10 +239,10 @@ function Z() {
 }
 let L = (e) => {
     let { application: t } = e,
-        n = (0, g.Z)({
+        n = (0, j.Z)({
             applicationId: t.id,
             location: 'DevToolsContentInventory',
-            source: j.m1.DevTools
+            source: g.m1.DevTools
         });
     return (0, a.jsx)(x.P3F, {
         onClick: n,

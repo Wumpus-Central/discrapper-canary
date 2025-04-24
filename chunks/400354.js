@@ -1,6 +1,6 @@
 n.d(t, { l: () => a });
-var r = n(200651),
-    i = n(192379),
+var i = n(200651),
+    r = n(192379),
     l = n(709014);
 let o = {
         deafen: {
@@ -25,50 +25,50 @@ let o = {
         }
     },
     a = (e) => {
-        let t = i.useRef(null),
-            a = i.useRef(e);
+        let t = r.useRef(null),
+            a = r.useRef(e);
         a.current = e;
-        let s = i.useMemo(
+        let s = r.useMemo(
                 () => () => {
                     null != t.current && t.current.play(e);
                 },
                 [e]
             ),
-            c = i.useCallback(() => {
+            c = r.useCallback(() => {
                 if (null == t.current) return;
                 let n = 'deafen' === e ? 'hover_undeafened' : 'hover_deafened';
                 t.current.play(n);
             }, [e]),
-            u = i.useCallback(() => {
+            u = r.useCallback(() => {
                 if (null == t.current) return;
                 let n = 'deafen' === e ? 'hover_undeafened' : 'hover_deafened';
                 t.current.stopIfPlaying(n);
             }, [e]),
-            d = i.useCallback((e) => {
-                var i, s;
-                return (0, r.jsx)(
+            d = r.useCallback((e) => {
+                var r, s;
+                return (0, i.jsx)(
                     l.L,
-                    ((i = (function (e) {
+                    ((r = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
-                                r = Object.keys(n);
+                                i = Object.keys(n);
                             'function' == typeof Object.getOwnPropertySymbols &&
-                                (r = r.concat(
+                                (i = i.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     })
                                 )),
-                                r.forEach(function (t) {
-                                    var r;
-                                    (r = n[t]),
+                                i.forEach(function (t) {
+                                    var i;
+                                    (i = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: r,
+                                                  value: i,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = r);
+                                            : (e[t] = i);
                                 });
                         }
                         return e;
@@ -81,18 +81,18 @@ let o = {
                             markers: o
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))
+                        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(s))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
-                                  var r = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, r);
+                                  var i = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, i);
                               }
                               return n;
                           })(Object(s)).forEach(function (e) {
-                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(s, e));
+                              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(s, e));
                           }),
-                    i)
+                    r)
                 );
             }, []);
         return {
@@ -102,11 +102,11 @@ let o = {
                 onMouseLeave: u
             },
             play: s,
-            getDuration: i.useCallback(() => {
+            getDuration: r.useCallback(() => {
                 var e;
                 return null == (e = t.current) ? void 0 : e.getDuration();
             }, []),
-            getCurrentFrame: i.useCallback(() => {
+            getCurrentFrame: r.useCallback(() => {
                 var e, n;
                 return null != (n = null == (e = t.current) ? void 0 : e.getCurrentFrame()) ? n : null;
             }, []),

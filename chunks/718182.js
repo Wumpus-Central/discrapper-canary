@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(129293),
     d = n(388905),
     h = n(703656),
-    p = n(108427),
-    g = n(981631),
+    g = n(108427),
+    p = n(981631),
     f = n(388032),
     m = n(20493);
 function _(e) {
@@ -20,12 +20,12 @@ function _(e) {
         return 'Android' === s().os.family || 'iOS' === s().os.family
             ? null
             : (0, r.jsx)(d.zx, {
-                  onClick: () => l(g.Z5c.LOGIN, { source: 'authorizeIPAdress' }),
+                  onClick: () => l(p.Z5c.LOGIN, { source: 'authorizeIPAdress' }),
                   children: f.intl.string(f.t.dKhVQE)
               });
     }
     return ((0, c.ZP)(() => {
-        (0, p.e)('authorize_ip');
+        (0, g.e)('authorize_ip');
         let e = (0, u.Z)(t);
         if (null == e) return void _('failed');
         (async () => {

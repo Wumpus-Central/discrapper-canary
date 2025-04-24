@@ -99,7 +99,7 @@ function z(e) {
         H = m.Z.useExperiment({ location: 'activity_popout_overflow_menu' }, { autoTrackExposure: !0 }).enabled,
         q = o.useCallback(() => {
             let e = (0, k.getPID)();
-            s.Z.setInputLocked(!v.ZP.isInputLocked(e), e);
+            s.Z.setInputLocked(!v.default.isInputLocked(e), e);
         }, []),
         $ = (0, E.PR)(),
         {

@@ -257,10 +257,10 @@ function S(e, t, n, i, a) {
     r.installLogCallback(e, t, n, i, a);
 }
 function T(e, t) {
-    r._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h0d9f524a369b50d3(e, t);
+    r._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__hc0a10dcc4cbf4b0c(e, t);
 }
 function A(e, t) {
-    r._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h83f15003f1e5040a(e, t);
+    r._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h432f73bef2b498f4(e, t);
 }
 function N(e, t, n) {
     r.closure504_externref_shim(e, t, n);

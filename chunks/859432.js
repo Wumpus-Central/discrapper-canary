@@ -27,7 +27,7 @@ var i = n(200651),
     S = n(978946),
     w = n(41776),
     m = n(837949),
-    Z = n(11352),
+    Z = n(173345),
     A = n(271383),
     G = n(496675),
     T = n(9156),
@@ -386,7 +386,7 @@ let Q = r.memo(function (e) {
                                   icon: eO ? void 0 : s.Dkj,
                                   action: () =>
                                       (0, s.ZDy)(async () => {
-                                          let { default: e } = await Promise.all([n.e('5863'), n.e('95626')]).then(n.bind(n, 751212));
+                                          let { default: e } = await Promise.all([n.e('5863'), n.e('58273')]).then(n.bind(n, 751212));
                                           return (n) => (0, i.jsx)(e, H(F({}, n), { guildId: t.id }));
                                       })
                               }),

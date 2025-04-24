@@ -535,7 +535,7 @@ function J() {
                   className: F.marginBottom20,
                   value: t,
                   onChange: (e) => {
-                      g.Z.setAccountFlag(U.c.MENTION_ON_ALL_MESSAGES, e);
+                      g.Z.setAccountFlag(U.ce.MENTION_ON_ALL_MESSAGES, e);
                   },
                   note: "Increments the mention count when receiving a message in a channel set to 'All Messages'",
                   children: 'Mention on all messages?'
@@ -572,7 +572,7 @@ function $() {
                                   disabled: s || n,
                                   note: 'Turns on the new notification system',
                                   onChange: (e) => {
-                                      g.Z.setAccountFlag(U.c.USE_NEW_NOTIFICATIONS, e);
+                                      g.Z.setAccountFlag(U.ce.USE_NEW_NOTIFICATIONS, e);
                                   },
                                   children: V.intl.string(V.t.z21l8P)
                               })
@@ -611,7 +611,7 @@ function $() {
                                               hideBorder: !0,
                                               value: n,
                                               onChange: (e) => {
-                                                  g.Z.setAccountFlag(U.c.USE_NEW_NOTIFICATIONS, e);
+                                                  g.Z.setAccountFlag(U.ce.USE_NEW_NOTIFICATIONS, e);
                                               },
                                               children: 'Toggle new system on/off'
                                           })

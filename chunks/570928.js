@@ -1,6 +1,6 @@
 n.d(t, { Z: () => d });
-var r,
-    i = n(200651),
+var i,
+    r = n(200651),
     l = n(192379),
     o = n(120356),
     a = n.n(o),
@@ -18,48 +18,48 @@ function c(e, t, n) {
         e
     );
 }
-class u extends (r = l.PureComponent) {
+class u extends (i = l.PureComponent) {
     render() {
         var e, t;
         let n = this.props,
-            { tag: r, children: l, hoverText: o, className: u, forceHover: d } = n,
-            p = (function (e, t) {
+            { tag: i, children: l, hoverText: o, className: u, forceHover: d } = n,
+            f = (function (e, t) {
                 if (null == e) return {};
                 var n,
-                    r,
-                    i = (function (e, t) {
+                    i,
+                    r = (function (e, t) {
                         if (null == e) return {};
                         var n,
-                            r,
-                            i = {},
+                            i,
+                            r = {},
                             l = Object.keys(e);
-                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                        return i;
+                        for (i = 0; i < l.length; i++) (n = l[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                        return r;
                     })(e, t);
                 if (Object.getOwnPropertySymbols) {
                     var l = Object.getOwnPropertySymbols(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                    for (i = 0; i < l.length; i++) (n = l[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                 }
-                return i;
+                return r;
             })(n, ['tag', 'children', 'hoverText', 'className', 'forceHover']);
-        return (0, i.jsxs)(
+        return (0, r.jsxs)(
             'div',
             ((e = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
-                        r = Object.keys(n);
+                        i = Object.keys(n);
                     'function' == typeof Object.getOwnPropertySymbols &&
-                        (r = r.concat(
+                        (i = i.concat(
                             Object.getOwnPropertySymbols(n).filter(function (e) {
                                 return Object.getOwnPropertyDescriptor(n, e).enumerable;
                             })
                         )),
-                        r.forEach(function (t) {
+                        i.forEach(function (t) {
                             c(e, t, n[t]);
                         });
                 }
                 return e;
-            })({}, p)),
+            })({}, f)),
             (t = t =
                 {
                     className: a()(u, s.hoverRoll, {
@@ -67,11 +67,11 @@ class u extends (r = l.PureComponent) {
                         [s.forceHover]: d
                     }),
                     children: [
-                        (0, i.jsx)(r, {
+                        (0, r.jsx)(i, {
                             className: s.hovered,
                             children: o
                         }),
-                        (0, i.jsx)(r, {
+                        (0, r.jsx)(i, {
                             className: s.default,
                             children: l
                         })
@@ -82,8 +82,8 @@ class u extends (r = l.PureComponent) {
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
-                          var r = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, r);
+                          var i = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, i);
                       }
                       return n;
                   })(Object(t)).forEach(function (n) {

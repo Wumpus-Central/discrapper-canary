@@ -95,10 +95,10 @@ let I = r.memo(function (e) {
             (0, s.Os)(e);
         }, []),
         { id: A, pinned: D, zIndex: L, size: R, anchor: M } = t,
-        z = (0, h.w_)(R, P),
-        V = (0, h.KR)(M, P),
-        { minSize: U, resizeX: W, resizeY: G, dragAnywhere: F } = null != Z ? Z : {},
-        B = D || !N,
+        V = (0, h.w_)(R, P),
+        z = (0, h.KR)(M, P),
+        { minSize: U, resizeX: W, resizeY: G, dragAnywhere: B } = null != Z ? Z : {},
+        F = D || !N,
         H = r.useMemo(
             () => ({
                 minX: 0,
@@ -129,7 +129,7 @@ let I = r.memo(function (e) {
                     : null,
             [t, o, I]
         ),
-        K = (0, a.e7)([O.ZP], () => O.ZP.hasRenderDebugMode(y.G.WidgetAreas)),
+        K = (0, a.e7)([O.default], () => O.default.hasRenderDebugMode(y.G.WidgetAreas)),
         X = r.useMemo(() => {
             if (null != j) return (e) => j(x(E({}, e), { widget: t }));
         }, [j, t]);
@@ -143,8 +143,8 @@ let I = r.memo(function (e) {
             S
         ),
         id: A,
-        size: z,
-        anchor: V,
+        size: V,
+        anchor: z,
         container: H,
         minSize:
             null != U
@@ -153,12 +153,12 @@ let I = r.memo(function (e) {
                       width: 0,
                       height: 0
                   },
-        hidden: !B,
+        hidden: !F,
         locked: N,
         resizeX: null != W && W,
         resizeY: null != G && G,
         style: { zIndex: L },
-        dragAnywhere: null != F && F,
+        dragAnywhere: null != B && B,
         active: !N,
         onUpdate: T,
         onClick: k,

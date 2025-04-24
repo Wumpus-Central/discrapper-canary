@@ -56,9 +56,9 @@ function m(e) {
 }
 let p = function (e) {
     let { fractionalPremiumInfo: t, className: n, activationDate: r } = e,
-        c = (0, o.Am)(t),
+        c = (0, o.jp)(t),
         p = c.length > 0,
-        g = (0, a.Z)(t.endsAt, a.a.SHORT_TIME),
+        g = (0, a.ZP)(t.endsAt, a.aj.SHORT_TIME),
         h = p ? c : g;
     return (0, i.jsx)('div', {
         children: (0, i.jsxs)('div', {

@@ -5,8 +5,8 @@ var n = a(200651),
     i = a(481060),
     o = a(239091),
     s = a(765250),
-    c = a(13245),
-    u = a(355863),
+    u = a(13245),
+    c = a(355863),
     d = a(237997),
     p = a(610394),
     v = a(340101),
@@ -64,15 +64,15 @@ function j(e) {
         x.current = w;
     }),
         l.useEffect(() => () => x.current(), []);
-    let P = (0, r.e7)([p.ZP, u.Z], () => {
-            let e = p.ZP.getWidgetByType(m.Odu.VOICE_V3);
+    let M = (0, r.e7)([p.default, c.Z], () => {
+            let e = p.default.getWidgetByType(m.Odu.VOICE_V3);
             if (null == e) return null;
-            let t = u.Z.getWidget(e.id);
+            let t = c.Z.getWidget(e.id);
             return null != t && (0, v.Aw)(t) ? t : null;
         }),
-        M = null != (a = null == P || null == (t = P.meta) ? void 0 : t.voiceStatesMaxShown) ? a : g.At;
+        P = null != (a = null == M || null == (t = M.meta) ? void 0 : t.voiceStatesMaxShown) ? a : g.At;
     function A(e) {
-        null != P && (e < 1 ? (0, s.zG)(P.id, { voiceStatesMaxShown: g.Og }) : (0, s.zG)(P.id, { voiceStatesMaxShown: Math.floor(e) }));
+        null != M && (e < 1 ? (0, s.zG)(M.id, { voiceStatesMaxShown: g.Og }) : (0, s.zG)(M.id, { voiceStatesMaxShown: Math.floor(e) }));
     }
     return (0, n.jsxs)(i.v2r, {
         navId: 'overlay-voice-widget-context-menu',
@@ -90,7 +90,7 @@ function j(e) {
                             checked: S === e.value,
                             id: 'avatar-size-mode-'.concat(e.value),
                             group: 'avatar-size-mode',
-                            action: () => c.Z.setAvatarSizeMode(e.value)
+                            action: () => u.Z.setAvatarSizeMode(e.value)
                         },
                         e.value
                     )
@@ -106,7 +106,7 @@ function j(e) {
                             checked: h === e.value,
                             id: 'display-name-mode-'.concat(e.value),
                             group: 'display-name-mode',
-                            action: () => c.Z.setDisplayNameMode(e.value)
+                            action: () => u.Z.setDisplayNameMode(e.value)
                         },
                         e.value
                     )
@@ -122,7 +122,7 @@ function j(e) {
                             checked: k === e.value,
                             id: 'display-user-mode-'.concat(e.value),
                             group: 'display-user-mode',
-                            action: () => c.Z.setDisplayUserMode(e.value)
+                            action: () => u.Z.setDisplayUserMode(e.value)
                         },
                         e.value
                     )
@@ -164,7 +164,7 @@ function j(e) {
                             (l = l =
                                 {
                                     ref: t,
-                                    value: M,
+                                    value: P,
                                     minValue: 0,
                                     maxValue: g.yC,
                                     onChange: A,

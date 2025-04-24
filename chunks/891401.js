@@ -58,10 +58,10 @@ function f(e, t) {
 function v() {
     return (0, a.jsx)('div', {
         className: p.container,
-        children: (0, a.jsx)(j, {})
+        children: (0, a.jsx)(g, {})
     });
 }
-function j() {
+function g() {
     let e = (0, c.e7)([h.Z], () => h.Z.getChannelId()),
         t = (0, x.Z)(e),
         n = null == t ? void 0 : t.wallpaperId,
@@ -69,7 +69,7 @@ function j() {
             opacity: l,
             primaryColor: s,
             secondaryColor: v,
-            tokenMixAmount: j,
+            tokenMixAmount: g,
             linkColor: O
         } = (0, c.cj)(
             [u.Z],
@@ -94,7 +94,7 @@ function j() {
         ),
         N = r.useCallback(
             (e) => {
-                g(null == t ? void 0 : t.wallpaperId, e.target.value);
+                j(null == t ? void 0 : t.wallpaperId, e.target.value);
             },
             [null == t ? void 0 : t.wallpaperId]
         ),
@@ -237,13 +237,13 @@ function j() {
                             d.iRW,
                             {
                                 className: p.slider,
-                                initialValue: j,
+                                initialValue: g,
                                 defaultValue: 100,
                                 minValue: 0,
                                 maxValue: 100,
                                 onValueChange: S
                             },
-                            'tokenMixAmount-'.concat(j)
+                            'tokenMixAmount-'.concat(g)
                         ),
                         (0, a.jsx)(d.ua7, {
                             text: 'The color used for hyperlinks.',
@@ -277,7 +277,7 @@ function j() {
         ]
     });
 }
-let g = (0, s.debounce)(function (e, t) {
+let j = (0, s.debounce)(function (e, t) {
         null != e && (0, m.i)(e, { primary_color: t });
     }, 200),
     _ = (0, s.debounce)(function (e, t) {

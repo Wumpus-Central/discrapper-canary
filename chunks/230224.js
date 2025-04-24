@@ -1,11 +1,11 @@
 n.d(t, {
     GB: () => C,
     JI: () => N,
-    UM: () => Z,
+    UM: () => A,
     V6: () => P,
     WT: () => j,
     X7: () => I,
-    jq: () => A,
+    jq: () => Z,
     mx: () => E
 }),
     n(415506);
@@ -19,8 +19,8 @@ var r = n(200651),
     u = n(925329),
     d = n(372769),
     h = n(768581),
-    p = n(51144),
-    g = n(245335),
+    g = n(51144),
+    p = n(245335),
     f = n(981631),
     m = n(888592),
     _ = n(388032),
@@ -34,7 +34,7 @@ let E = 100,
         };
         return 0 === r.memberCount && 0 === r.memberCount ? null : r;
     },
-    v = (e) => e.target_type === g.Iq.STREAM && null != e.target_user,
+    v = (e) => e.target_type === p.Iq.STREAM && null != e.target_user,
     j = (e) => {
         var t;
         return (null == (t = e.channel) ? void 0 : t.type) === f.d4z.GROUP_DM;
@@ -88,14 +88,14 @@ function P(e) {
               flat: !0
           });
 }
-function A(e) {
+function Z(e) {
     let { invite: t, showBigUserIcon: n } = e,
         l = i.useMemo(() => (n ? null : v(t) && null != t.target_user ? h.ZP.getUserAvatarURL(t.target_user) : y(t) && null != t.inviter ? h.ZP.getUserAvatarURL(t.inviter) : null), [t, n]),
         s = _.intl.string(_.t['3rE1Pz']);
     if (j(t)) {
         var c, u;
         s = (null == (c = t.channel) ? void 0 : c.name) != null && (null == (u = t.inviter) ? void 0 : u.username) != null ? _.intl.format(_.t.Lu4h19, { username: t.inviter.username }) : _.intl.string(_.t.OsdY8P);
-    } else v(t) && null != t.target_user ? (s = _.intl.formatToPlainString(_.t.x2L32d, { username: t.target_user.username })) : S(t) ? (s = _.intl.string(_.t['FDsl+P'])) : y(t) && null != t.inviter && (s = _.intl.format(_.t.spU2mJ, { username: p.ZP.getFormattedName(t.inviter) }));
+    } else v(t) && null != t.target_user ? (s = _.intl.formatToPlainString(_.t.x2L32d, { username: t.target_user.username })) : S(t) ? (s = _.intl.string(_.t['FDsl+P'])) : y(t) && null != t.inviter && (s = _.intl.format(_.t.spU2mJ, { username: g.ZP.getFormattedName(t.inviter) }));
     return (0, r.jsxs)('div', {
         className: x.inviteJoinContainer,
         children: [
@@ -114,13 +114,13 @@ function A(e) {
         ]
     });
 }
-function Z(e) {
+function A(e) {
     let t,
         n,
         i,
-        { user: l, guild: s, channel: u, application: h, showBigUserIcon: g } = e;
+        { user: l, guild: s, channel: u, application: h, showBigUserIcon: p } = e;
     if (null != s)
-        g &&
+        p &&
             null == h &&
             (t = (0, r.jsx)(a.Vj, {
                 guild: s,
@@ -156,7 +156,7 @@ function Z(e) {
                 })));
     else if (null != u) {
         if (null == l) throw Error('no inviter in group DM invite');
-        let e = p.ZP.getFormattedName(l);
+        let e = g.ZP.getFormattedName(l);
         null != u.name && '' !== u.name
             ? ((n = u.name),
               null != u.icon &&
@@ -166,7 +166,7 @@ function Z(e) {
                   })))
             : (n = e);
     } else if (null != l) {
-        let e = p.ZP.getFormattedName(l);
+        let e = g.ZP.getFormattedName(l);
         (n = _.intl.formatToPlainString(_.t['4aF92d'], { username: e })),
             (i = (0, r.jsx)(a.DK, {
                 className: x.directInviteSubTitle,

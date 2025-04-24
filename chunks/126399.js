@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(544891),
     i = n(570140),
     l = n(893776),
@@ -14,7 +14,7 @@ function h(e, t) {
         handoff_source: t
     });
 }
-class p extends u.Z {
+class g extends u.Z {
     _initialize() {
         i.Z.subscribe('BROWSER_HANDOFF_END', this.handleEnd), i.Z.subscribe('BROWSER_HANDOFF_FROM_APP', this.handleHandoff);
     }
@@ -78,4 +78,4 @@ class p extends u.Z {
                 : (this[t] = n);
     }
 }
-let g = new p();
+let p = new g();

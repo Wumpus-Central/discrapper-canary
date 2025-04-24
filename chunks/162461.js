@@ -1,6 +1,6 @@
 n.d(t, {
     DG: () => o,
-    MY: () => s,
+    Mc: () => s,
     iC: () => f,
     nP: () => d,
     sA: () => l,
@@ -32,19 +32,19 @@ let o = (0, r.B)({
     }),
     s = (0, r.B)({
         kind: 'user',
-        id: '2025-02_hotwheels_v2_model',
+        id: '2025-04_hotwheels_v3_model',
         label: 'Next iteration of the activity feed ranking model.',
         commonTriggerPoint: a.$P.CONNECTION_OPEN,
         defaultConfig: {},
         treatments: [
             {
-                id: 5,
-                label: 'ML model V1',
+                id: 3,
+                label: 'Noteworthy',
                 config: {}
             },
             {
-                id: 13,
-                label: 'ML model V2',
+                id: 15,
+                label: 'ML model V3',
                 config: {}
             }
         ]

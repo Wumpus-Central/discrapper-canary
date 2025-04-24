@@ -1,6 +1,6 @@
 n.d(t, {
     M: () => d,
-    Z: () => E
+    Z: () => f
 }),
     n(388685);
 var r,
@@ -31,7 +31,7 @@ class p extends (r = a.ZP.Store) {
               writable: !0
           })
         : (p[l] = o);
-let E = new p(u.Z, {
+let f = new p(u.Z, {
     CONNECTION_OPEN: function () {
         c.clear(), s.clear();
     },

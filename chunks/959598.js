@@ -1,5 +1,5 @@
 var r = {
-    './source-code-pro/sourcecodepro-700-bold.woff2': ['711313'],
+    './source-code-pro/sourcecodepro-400-normal.woff2': ['654556'],
     './gg-mono/ggmono-600-semibold.woff2': ['750499', '44999'],
     './gg-mono/ggmono-700-bold.woff2': ['757883'],
     './gg-sans/ggsans-700-bolditalic.woff2': ['228978'],
@@ -35,7 +35,7 @@ var r = {
     './gg-mono/ggmono-400-normal.woff2': ['349374'],
     './gg-sans/ggsans-600-semibold.woff2': ['151859'],
     './noto-sans/notosans-400-normal.woff2': ['134131'],
-    './source-code-pro/sourcecodepro-400-normal.woff2': ['654556'],
+    './source-code-pro/sourcecodepro-700-bold.woff2': ['711313'],
     './noto-sans/notosans-800-extrabolditalic.woff2': ['6675'],
     './source-code-pro/sourcecodepro-600-semibold.woff2': ['626025', '49678'],
     './corinthia/corinthia-400-normal.woff2': ['622814'],

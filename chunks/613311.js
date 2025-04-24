@@ -46,8 +46,8 @@ var r = n(200651),
     Y = n(506648),
     K = n(449275),
     q = n(445986),
-    Q = n(119520),
-    X = n(450233),
+    X = n(119520),
+    Q = n(450233),
     J = n(726581),
     $ = n(74153),
     ee = n(125930),
@@ -397,7 +397,7 @@ class ed extends i.PureComponent {
                       children: this.renderListing()
                   });
             return (0, r.jsxs)(i.Fragment, {
-                children: [(0, r.jsx)(C.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), (0, r.jsx)(Q.Z, { game: e }), n]
+                children: [(0, r.jsx)(C.yY, { location: e.name }), this.renderJsonLD(), this.renderHeader(e, t), (0, r.jsx)(X.Z, { game: e }), n]
             });
         }
         return a
@@ -559,8 +559,8 @@ class ed extends i.PureComponent {
                                 children: [
                                     null != t ? (0, N.Z)(t) : null,
                                     null != e && null != t ? (0, r.jsx)('div', { children: 'deprecated!' }) : null,
-                                    (0, r.jsx)(X.Z, {
-                                        messageStyle: X.G.SHORT,
+                                    (0, r.jsx)(Q.Z, {
+                                        messageStyle: Q.G.SHORT,
                                         className: eo.purchaseError
                                     })
                                 ]

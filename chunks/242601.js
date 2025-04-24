@@ -40,14 +40,14 @@ var r = n(200651),
     V = n(50101),
     B = n(908062),
     H = n(639777),
-    F = n(11352),
+    F = n(173345),
     z = n(304445),
     W = n(344185),
     Y = n(155409),
     K = n(10401),
     q = n(970731),
-    Q = n(210887),
-    X = n(592125),
+    X = n(210887),
+    Q = n(592125),
     J = n(796974),
     $ = n(486472),
     ee = n(984933),
@@ -488,7 +488,7 @@ function eP(e) {
         [m, b, C] = (0, d.Wu)([ei.Z], () => [ei.Z.can(eg.Plq.MANAGE_GUILD, o), ei.Z.can(eg.Plq.MANAGE_ROLES, o), ei.Z.can(eg.Plq.MANAGE_THREADS, o)]),
         j = (0, d.e7)([$.Z], () => $.Z.isUnavailable(n)),
         R = (0, d.e7)([eo.default], () => eo.default.getCurrentUser()),
-        M = (0, d.e7)([Q.Z], () => (Q.Z.darkSidebar ? eg.BRd.DARK : Q.Z.theme)),
+        M = (0, d.e7)([X.Z], () => (X.Z.darkSidebar ? eg.BRd.DARK : X.Z.theme)),
         { enableStudyGroup: U } = (0, k.s)(o),
         z = (0, T.ZP)((e) => e.currentlyShown.has(p.z.NAGBAR_NOTICE_CONNECT_PLAYSTATION)),
         [Y, q] = i.useState(!z),
@@ -513,7 +513,7 @@ function eP(e) {
         eA = (0, I.Q)(),
         eZ = (m || (null == o ? void 0 : o.premiumTier) === eg.Eu4.NONE) && !ec.s.isDisallowPopupsSet() && !eA,
         ex = (0, d.e7)([D.Z, er.Z], () => null != o && null != R && m && !er.Z.hasLayers() && D.Z.shouldShowGuildTemplateDirtyTooltip(n)),
-        ew = (0, d.e7)([X.Z], () => X.Z.getChannel(a)),
+        ew = (0, d.e7)([Q.Z], () => Q.Z.getChannel(a)),
         { isPopoutOpen: eL } = (0, Z.y)(),
         eR = null != (t = null == o ? void 0 : o.hasFeature(eg.oNc.COMMUNITY)) && t,
         eD = (0, d.e7)([W.Z], () => !s().isEmpty(W.Z.getThreadsForGuild(n))),
@@ -531,7 +531,7 @@ function eP(e) {
         eY = (0, H.Z)(n),
         eK = (0, B.Z)(n),
         eq = eW && !1 === eY && eK.length > 0,
-        eQ = (0, N.Q3)('GuildSidebar');
+        eX = (0, N.Q3)('GuildSidebar');
     return (0, r.jsx)(eT, {
         guildId: n,
         hideSelectedChannel: l,
@@ -572,6 +572,6 @@ function eP(e) {
         shouldRenderBurstCoachmark: eM,
         shouldRenderCustomNotificationSoundsCoachmark: ez,
         shouldRenderGuildPowerupPerkCoachmark: eq,
-        isRefreshEnabled: eQ
+        isRefreshEnabled: eX
     });
 }

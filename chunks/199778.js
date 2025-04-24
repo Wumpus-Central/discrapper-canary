@@ -71,7 +71,7 @@ function O(e) {
     let { hide: t, pillClassName: n, containerClassName: i } = e,
         { fractionalState: E, endsAt: y } = (0, c.Z)(),
         O = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
-        I = (0, l.Z)(y, l.a.LONG_TIME_LEFT);
+        I = (0, l.ZP)(y, l.aj.LONG_TIME_LEFT);
     if (!0 === t || !(0, d.y)('guild_boosting_fractional_premium_pill', O, E)) return null;
     let S = m.intl.format(m.t['4RgA6O'], { helpCenterLink: p.Z.getArticleURL(h.BhN.FRACTIONAL_PREMIUM_ABOUT) });
     return (0, r.jsx)(u.Z, {

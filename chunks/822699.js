@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(893776),
     d = n(533307),
     h = n(447543),
-    p = n(126399),
-    g = n(521379),
+    g = n(126399),
+    p = n(521379),
     f = n(765717),
     m = n(267394),
     _ = n(761305),
@@ -26,8 +26,8 @@ var r = n(200651),
     y = n(82142),
     C = n(701190),
     P = n(626135),
-    A = n(81063),
-    Z = n(449934),
+    Z = n(81063),
+    A = n(449934),
     T = n(768581),
     R = n(625054),
     w = n(645499),
@@ -108,8 +108,8 @@ let el = (0, L.Z)(K.Z),
     eu = (0, L.Z)(O.Z),
     ed = (0, L.Z)(q.Z),
     eh = (0, L.Z)(k.Z),
-    ep = (0, L.Z)(M.Z),
-    eg = (0, L.Z)(Q.Z),
+    eg = (0, L.Z)(M.Z),
+    ep = (0, L.Z)(Q.Z),
     ef = (0, L.Z)(x.Z),
     em = (0, L.Z)(J.Z),
     e_ = (0, L.Z)(U.Z),
@@ -119,7 +119,7 @@ let el = (0, L.Z)(K.Z),
     ev = (0, L.Z)(W.Z),
     ej = (0, L.Z)(X.Z),
     eI = (0, L.Z)(Y.Z),
-    eO = (0, L.Z)(g.Z);
+    eO = (0, L.Z)(p.Z);
 class eS extends i.PureComponent {
     static getDerivedStateFromProps(e, t) {
         var n;
@@ -128,11 +128,11 @@ class eS extends i.PureComponent {
             o = null != (n = (0, l.parse)(i.search).redirect_to) ? n : null;
         (null == o || '' === o || !(0, w.B)(o) || o.startsWith($.Z5c.ME)) && (o = null);
         let a = null;
-        if (null == r) a = (0, Z.gK)(o);
+        if (null == r) a = (0, A.gK)(o);
         else if ((null == r ? void 0 : r.state) === $.r2o.RESOLVED) {
             let { guild: e, target_application: t } = r;
             null != t
-                ? null != s && (a = (0, A.xF)(t.id, s, 1024))
+                ? null != s && (a = (0, Z.xF)(t.id, s, 1024))
                 : null != e &&
                   'string' == typeof e.splash &&
                   (a = T.ZP.getGuildSplashURL({
@@ -160,21 +160,21 @@ class eS extends i.PureComponent {
             (t || ee.a) && this.resolveInvite(),
             this.resolveGiftCode(),
             this.resolveGuildTemplate(),
-            p.Z.initialize();
+            g.Z.initialize();
     }
     componentDidUpdate(e) {
         var t, n;
         e.hasLoadedExperiments || !this.props.hasLoadedExperiments || ee.a || this.resolveInvite(), (null == (t = e.invite) ? void 0 : t.state) !== (null == (n = this.props.invite) ? void 0 : n.state) && this.maybeFetchApplicationSplash();
     }
     componentWillUnmount() {
-        p.Z.terminate();
+        g.Z.terminate();
     }
     maybeFetchApplicationSplash() {
         let { invite: e } = this.props;
         if ((null == e ? void 0 : e.state) === $.r2o.RESOLVED) {
             let { target_application: t } = e;
             null != t &&
-                (0, A.hR)(t.id, ['embedded_splash']).then((e) => {
+                (0, Z.hR)(t.id, ['embedded_splash']).then((e) => {
                     let [t] = e;
                     return this.setState({ backgroundId: t });
                 });
@@ -296,7 +296,7 @@ class eS extends i.PureComponent {
                 }),
                 (0, r.jsx)(f.Z, {
                     path: $.Z5c.VERIFY,
-                    render: (e) => (0, r.jsx)(eg, er({}, e))
+                    render: (e) => (0, r.jsx)(ep, er({}, e))
                 }),
                 (0, r.jsx)(f.Z, {
                     path: $.Z5c.VERIFY_HUB_EMAIL,
@@ -328,7 +328,7 @@ class eS extends i.PureComponent {
                 }),
                 (0, r.jsx)(f.Z, {
                     path: $.Z5c.AUTHORIZE_PAYMENT,
-                    render: (e) => (0, r.jsx)(ep, er({}, e))
+                    render: (e) => (0, r.jsx)(eg, er({}, e))
                 }),
                 (0, r.jsx)(f.Z, {
                     path: $.Z5c.RESET,

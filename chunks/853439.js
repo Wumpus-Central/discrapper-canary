@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => f });
 var r,
     i,
     l,
@@ -29,7 +29,7 @@ class p extends (l = o.ZP.Store) {
               writable: !0
           })
         : (p[r] = i);
-let E = new p(a.Z, {
+let f = new p(a.Z, {
     GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS: function (e) {
         let { selectedTemplate: t, guildId: n } = e,
             r = Object.values(c.Z.getMutableGuildChannelsForGuild(n));

@@ -1,38 +1,38 @@
-n.d(t, { U: () => f });
-var r = n(200651),
-    l = n(192379),
+n.d(t, { U: () => h });
+var l = n(200651),
+    r = n(192379),
     i = n(399606),
-    o = n(481060),
-    a = n(592125),
+    a = n(481060),
+    o = n(592125),
     s = n(922482),
     u = n(750154),
     c = n(427679),
     d = n(388032);
-function h(e) {
+function f(e) {
     var t, n;
-    let { activity: h } = e,
-        { channelId: f } = null != (t = (0, u.rq)(h)) ? t : {},
-        p = (0, i.e7)([c.Z], () => c.Z.getStageInstanceByChannel(f), [f]),
-        g = l.useRef(null),
-        y = l.useCallback(() => {
-            let e = a.Z.getChannel(f);
+    let { activity: f } = e,
+        { channelId: h } = null != (t = (0, u.rq)(f)) ? t : {},
+        g = (0, i.e7)([c.Z], () => c.Z.getStageInstanceByChannel(h), [h]),
+        p = r.useRef(null),
+        y = r.useCallback(() => {
+            let e = o.Z.getChannel(h);
             null != e && s.Cq(e);
-        }, [f]),
-        O = null != (n = null == p ? void 0 : p.topic) ? n : h.name,
-        b = d.intl.formatToPlainString(d.t['T+DNAA'], { channel: O });
-    return (0, r.jsx)('div', {
-        ref: g,
-        children: (0, r.jsx)(o.P3F, {
+        }, [h]),
+        O = null != (n = null == g ? void 0 : g.topic) ? n : f.name,
+        m = d.intl.formatToPlainString(d.t['T+DNAA'], { channel: O });
+    return (0, l.jsx)('div', {
+        ref: p,
+        children: (0, l.jsx)(a.P3F, {
             onClick: y,
-            focusProps: { ringTarget: g },
-            children: (0, r.jsx)(o.X6q, {
+            focusProps: { ringTarget: p },
+            children: (0, l.jsx)(a.X6q, {
                 variant: 'heading-sm/semibold',
-                children: b
+                children: m
             })
         })
     });
 }
-class f {
+class h {
     shouldShow(e) {
         return (0, u.JE)(e);
     }
@@ -46,11 +46,11 @@ class f {
         var e;
         (e = 'body') in this
             ? Object.defineProperty(this, e, {
-                  value: h,
+                  value: f,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (this[e] = h);
+            : (this[e] = f);
     }
 }

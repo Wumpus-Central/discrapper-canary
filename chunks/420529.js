@@ -11,8 +11,8 @@ var l = e(399606),
     p = e(446226),
     o = e(937393),
     g = e(721351),
-    I = e(981631),
-    c = e(388032);
+    c = e(981631),
+    I = e(388032);
 function E(t) {
     for (var n = 1; n < arguments.length; n++) {
         var e = null != arguments[n] ? arguments[n] : {},
@@ -59,24 +59,24 @@ function T(t, n) {
 function U(t) {
     let n = (0, l.e7)([_.Z], () => _.Z.getChannelId() === t.id),
         U = (0, p.Z)(),
-        L = (null == U ? void 0 : U.channelId) === t.id,
-        O = (0, a.V)(t) && !t.isPrivate(),
-        y = (0, a.Z)(t),
-        D = (!(0, l.e7)([s.Z], () => s.Z.isInChannel(t.id)) && y) || O,
-        m = (0, o.Z)();
-    if (!L && 0 === m.length) return null;
-    let S = (n) => {
+        O = (null == U ? void 0 : U.channelId) === t.id,
+        L = (0, a.V)(t) && !t.isPrivate(),
+        m = (0, a.Z)(t),
+        y = (!(0, l.e7)([s.Z], () => s.Z.isInChannel(t.id)) && m) || L,
+        S = (0, o.Z)();
+    if (!O && 0 === S.length) return null;
+    let D = (n) => {
         if (!n.twoWayLink || n.revoked)
             return void (0, d.Z)({
                 platformType: n.type,
                 location: 'Console Transfer Item'
             });
-        n.type === I.ABu.XBOX
+        n.type === c.ABu.XBOX
             ? (0, r.ZDy)(async () => {
                   let { default: n } = await Promise.all([e.e('57543'), e.e('522')]).then(e.bind(e, 200623));
                   return (e) => (0, i.jsx)(n, T(E({}, e), { channel: t }));
               })
-            : (n.type === I.ABu.PLAYSTATION || n.type === I.ABu.PLAYSTATION_STAGING) &&
+            : (n.type === c.ABu.PLAYSTATION || n.type === c.ABu.PLAYSTATION_STAGING) &&
               (0, r.ZDy)(async () => {
                   let { default: l } = await e.e('638').then(e.bind(e, 543974));
                   return (e) =>
@@ -89,26 +89,26 @@ function U(t) {
                       );
               });
     };
-    return L
+    return O
         ? (0, i.jsx)(r.sNh, {
-              label: c.intl.string(c.t.PlwgdX),
+              label: I.intl.string(I.t.PlwgdX),
               id: 'handoff',
               action: () => {
                   (0, u.F)(U);
               },
               icon: (0, g.Z)(void 0),
-              disabled: D
+              disabled: y
           })
-        : m.map((t) => {
+        : S.map((t) => {
               var e, l;
               return (0, i.jsx)(
                   r.sNh,
                   {
                       id: 'transfer-'.concat(t.type, '-').concat(t.id),
-                      label: ((e = t.type), (l = n), e === I.ABu.XBOX ? (l ? c.intl.string(c.t['qVE/VF']) : c.intl.string(c.t.E8euSk)) : e === I.ABu.PLAYSTATION ? (l ? c.intl.string(c.t.vzfxmZ) : c.intl.string(c.t.QxEYDg)) : e === I.ABu.PLAYSTATION_STAGING ? (l ? c.intl.string(c.t.BDiXtb) : c.intl.string(c.t['bhdB9/'])) : void 0),
-                      action: () => S(t),
+                      label: ((e = t.type), (l = n), e === c.ABu.XBOX ? (l ? I.intl.string(I.t['qVE/VF']) : I.intl.string(I.t.E8euSk)) : e === c.ABu.PLAYSTATION ? (l ? I.intl.string(I.t.vzfxmZ) : I.intl.string(I.t.QxEYDg)) : e === c.ABu.PLAYSTATION_STAGING ? (l ? I.intl.string(I.t.BDiXtb) : I.intl.string(I.t['bhdB9/'])) : void 0),
+                      action: () => D(t),
                       icon: (0, g.Z)(t.type),
-                      disabled: D
+                      disabled: y
                   },
                   t.id
               );

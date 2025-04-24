@@ -1,19 +1,19 @@
 n.d(t, {
-    ZP: () => _,
-    fO: () => g,
-    sF: () => h
+    ZP: () => T,
+    fO: () => E,
+    sF: () => N
 });
 var r = n(200651),
-    i = n(192379),
-    l = n(120356),
-    a = n.n(l),
+    l = n(192379),
+    a = n(120356),
+    i = n.n(a),
     o = n(481060),
-    s = n(377171),
-    c = n(951394),
-    u = n(407477),
-    d = n(388032),
-    p = n(852747);
-function m(e) {
+    u = n(377171),
+    s = n(951394),
+    c = n(407477),
+    p = n(388032),
+    m = n(852747);
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,89 +42,89 @@ function f(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = (function (e, t) {
+        l = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                i = {},
-                l = Object.keys(e);
-            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-            return i;
+                l = {},
+                a = Object.keys(e);
+            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+            return l;
         })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
     }
-    return i;
+    return l;
 }
-let h = i.forwardRef(function (e, t) {
-    var { label: n, ariaLabel: i, tooltipText: l, tooltipColor: h, icon: g, iconProps: _, onClick: b, onTooltipShow: x, onTooltipHide: y, disabled: v, dangerous: E, separator: O, sparkle: j, showNewBadge: C, buttonClassName: S, children: I } = e,
-        N = f(e, ['label', 'ariaLabel', 'tooltipText', 'tooltipColor', 'icon', 'iconProps', 'onClick', 'onTooltipShow', 'onTooltipHide', 'disabled', 'dangerous', 'separator', 'sparkle', 'showNewBadge', 'buttonClassName', 'children']);
-    let { canShowReactionsOnMessageHover: T } = u.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
+let N = l.forwardRef(function (e, t) {
+    var { label: n, ariaLabel: l, tooltipText: a, tooltipColor: N, icon: E, iconProps: T, onClick: O, onTooltipShow: I, onTooltipHide: h, disabled: _, dangerous: R, separator: g, sparkle: C, showNewBadge: P, buttonClassName: A, children: L } = e,
+        b = f(e, ['label', 'ariaLabel', 'tooltipText', 'tooltipColor', 'icon', 'iconProps', 'onClick', 'onTooltipShow', 'onTooltipHide', 'disabled', 'dangerous', 'separator', 'sparkle', 'showNewBadge', 'buttonClassName', 'children']);
+    let { canShowReactionsOnMessageHover: G } = c.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
     return (
-        u.Xb.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 }),
+        c.Xb.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 }),
         (0, r.jsx)(o.ua7, {
-            text: null != l ? l : n,
-            color: null != h ? h : o.FGA.PRIMARY,
+            text: null != a ? a : n,
+            color: null != N ? N : o.FGA.PRIMARY,
             'aria-label': n,
-            onTooltipShow: x,
-            onTooltipHide: y,
+            onTooltipShow: I,
+            onTooltipHide: h,
             hideOnClick: !0,
-            tooltipClassName: p.tooltip,
+            tooltipClassName: m.tooltip,
             children: (e) => {
-                var l, u;
-                let { onMouseEnter: f, onMouseLeave: h, onClick: x } = e;
+                var a, c;
+                let { onMouseEnter: f, onMouseLeave: N, onClick: I } = e;
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)(
-                            c.zx,
-                            ((l = m(
+                            s.zx,
+                            ((a = d(
                                 {
                                     ref: t,
-                                    className: a()(S, { [p.hoverBarButton]: T }),
+                                    className: i()(A, { [m.hoverBarButton]: G }),
                                     onMouseEnter: f,
-                                    onMouseLeave: h,
+                                    onMouseLeave: N,
                                     onClick: (e) => {
-                                        null == x || x(), b(e);
+                                        null == I || I(), O(e);
                                     },
-                                    'aria-label': null != i ? i : n,
-                                    disabled: v,
-                                    dangerous: E
+                                    'aria-label': null != l ? l : n,
+                                    disabled: _,
+                                    dangerous: R
                                 },
-                                N
+                                b
                             )),
-                            (u = u =
+                            (c = c =
                                 {
                                     children: [
-                                        null != g
+                                        null != E
                                             ? (0, r.jsx)(
-                                                  g,
-                                                  m(
+                                                  E,
+                                                  d(
                                                       {
-                                                          className: p.icon,
+                                                          className: m.icon,
                                                           color: 'currentColor'
                                                       },
-                                                      _
+                                                      T
                                                   )
                                               )
                                             : null,
-                                        null != I
+                                        null != L
                                             ? (0, r.jsx)('div', {
-                                                  className: a()(p.icon, p.buttonContent),
-                                                  children: I
+                                                  className: i()(m.icon, m.buttonContent),
+                                                  children: L
                                               })
                                             : null,
-                                        j && (0, r.jsx)(o.K1N, {}),
-                                        C &&
+                                        C && (0, r.jsx)(o.K1N, {}),
+                                        P &&
                                             (0, r.jsx)(o.IGR, {
-                                                text: d.intl.string(d.t.y2b7CA),
-                                                color: s.Z.BG_BRAND,
-                                                className: p.newBadge
+                                                text: p.intl.string(p.t.y2b7CA),
+                                                color: u.Z.BG_BRAND,
+                                                className: m.newBadge
                                             })
                                     ]
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(u))
+                                ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(c))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -132,30 +132,30 @@ let h = i.forwardRef(function (e, t) {
                                           n.push.apply(n, r);
                                       }
                                       return n;
-                                  })(Object(u)).forEach(function (e) {
-                                      Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(u, e));
+                                  })(Object(c)).forEach(function (e) {
+                                      Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(c, e));
                                   }),
-                            l)
+                            a)
                         ),
-                        O && (0, r.jsx)(c.Z0, {})
+                        g && (0, r.jsx)(s.Z0, {})
                     ]
                 });
             }
         })
     );
 });
-function g(e) {
+function E(e) {
     let { className: t } = e;
-    return (0, r.jsx)('div', { className: a()(p.separator, t) });
+    return (0, r.jsx)('div', { className: i()(m.separator, t) });
 }
-function _(e) {
+function T(e) {
     var { children: t } = e,
         n = f(e, ['children']);
-    let { canShowReactionsOnMessageHover: i } = u.ZP.useExperiment({ location: 'HoverBar' }, { autoTrackExposure: !0 });
+    let { canShowReactionsOnMessageHover: l } = c.ZP.useExperiment({ location: 'HoverBar' }, { autoTrackExposure: !0 });
     return (
-        u.Xb.useExperiment({ location: 'HoverBar' }, { autoTrackExposure: !0 }),
-        (0, r.jsx)(c.ZP, {
-            className: a()(n.className, p.popover, { [p.popoverReactionHoverBar]: i }),
+        c.Xb.useExperiment({ location: 'HoverBar' }, { autoTrackExposure: !0 }),
+        (0, r.jsx)(s.ZP, {
+            className: i()(n.className, m.popover, { [m.popoverReactionHoverBar]: l }),
             children: t
         })
     );

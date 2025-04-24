@@ -1,4 +1,4 @@
-n.d(t, { Z: () => z }), n(388685);
+n.d(t, { Z: () => V }), n(388685);
 var i = n(200651),
     r = n(192379),
     o = n(120356),
@@ -286,7 +286,7 @@ function R(e) {
     });
 }
 let M = new Set([N.jm8.ENDED, N.jm8.FAILED, N.jm8.PAUSED]),
-    z = r.memo(function (e) {
+    V = r.memo(function (e) {
         let { participant: t, width: n, locked: r, widgetId: o, pinned: l } = e,
             s = (0, a.e7)([E.Z], () => E.Z.getActiveStreamForUser(t.user.id, t.stream.guildId), [t.user.id, t.stream.guildId]),
             u = (0, f.bp)(),

@@ -207,7 +207,7 @@ class tl extends i.PureComponent {
         let i = eY.default.getUser(t.getRecipientId());
         s()(null != i, 'Missing user in Channel.openDMContextMenu'),
             (0, _.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('79695'), n.e('20875'), n.e('70205'), n.e('98783'), n.e('53912'), n.e('56826'), n.e('31084')]).then(n.bind(n, 131404));
+                let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('53912'), n.e('56826'), n.e('59831')]).then(n.bind(n, 131404));
                 return (n) =>
                     (0, r.jsx)(
                         e,

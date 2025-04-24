@@ -11,7 +11,7 @@ n.d(t, {
     bu: () => er,
     kb: () => W,
     s9: () => Y,
-    t9: () => Q,
+    t9: () => X,
     tr: () => et,
     vv: () => $,
     zM: () => K,
@@ -244,10 +244,10 @@ function q(e) {
             return e;
     }
 }
-function Q(e, t, n) {
+function X(e, t, n) {
     return e === Z.mFx.JOIN && null != t && null != t.id && null != n.join;
 }
-function X(e) {
+function Q(e) {
     return o.tn
         .get({
             url: Z.ANM.APPLICATION_RPC(e),
@@ -272,10 +272,10 @@ async function J(e, t, n) {
             let e = (0, u.ZP)(t);
             if (null == e || !V(n, [e])) throw new P.Z({ closeCode: Z.$VG.INVALID_ORIGIN }, 'Invalid Origin');
         } else {
-            let e = await X(t);
+            let e = await Q(t);
             if (((r = f.ZP.createFromServer(e)), !V(n, e.rpc_origins))) throw new P.Z({ closeCode: Z.$VG.INVALID_ORIGIN }, 'Invalid Origin');
         }
-    null == r && (r = f.ZP.createFromServer(await X(t)));
+    null == r && (r = f.ZP.createFromServer(await Q(t)));
     let { id: i, name: l, icon: a, coverImage: o, flags: s } = r;
     e.application = {
         id: i,

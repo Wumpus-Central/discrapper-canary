@@ -2,21 +2,21 @@ n.d(t, { Z: () => a });
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    o = n(153867),
-    l = n(468026),
+    l = n(153867),
+    o = n(468026),
     s = n(740492),
     c = n(388032);
 function a(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => {},
         n = (t) => {
-            o.ZP.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: !0 }), t(), e();
+            l.ZP.updatedUnsyncedSettings({ disableEmbeddedActivityPopOutAlert: !0 }), t(), e();
         };
     s.ZP.disableEmbeddedActivityPopOutAlert
         ? e()
         : (0, r.h7j)(
               (r) =>
                   (0, i.jsx)(
-                      l.default,
+                      o.default,
                       (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},

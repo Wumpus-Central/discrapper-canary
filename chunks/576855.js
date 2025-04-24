@@ -1,33 +1,33 @@
 n.d(t, { Z: () => f });
 var r,
-    i,
-    l = n(200651),
-    a = n(192379),
+    l,
+    a = n(200651),
+    i = n(192379),
     o = n(120356),
-    s = n.n(o),
-    c = n(481060),
-    u = n(388032),
-    d = n(108921);
-let p = {
-    BLOCK: d.block,
-    INLINE: d.inline
+    u = n.n(o),
+    s = n(481060),
+    c = n(388032),
+    p = n(108921);
+let m = {
+    BLOCK: p.block,
+    INLINE: p.inline
 };
-class m extends (i = a.PureComponent) {
+class d extends (l = i.PureComponent) {
     render() {
-        let { children: e, className: t, textClassName: n, type: r = p.BLOCK, style: i } = this.props;
-        return (0, l.jsxs)('div', {
-            className: s()(t, r),
-            style: i,
+        let { children: e, className: t, textClassName: n, type: r = m.BLOCK, style: l } = this.props;
+        return (0, a.jsxs)('div', {
+            className: u()(t, r),
+            style: l,
             children: [
-                (0, l.jsxs)(c.Text, {
+                (0, a.jsxs)(s.Text, {
                     variant: 'text-sm/bold',
                     tag: 'div',
                     color: 'text-positive',
-                    className: d.pro,
-                    children: [u.intl.string(u.t['8tvIiI']), ':']
+                    className: p.pro,
+                    children: [c.intl.string(c.t['8tvIiI']), ':']
                 }),
-                (0, l.jsx)(c.Text, {
-                    className: s()(d.tip, n),
+                (0, a.jsx)(s.Text, {
+                    className: u()(p.tip, n),
                     variant: 'text-sm/normal',
                     children: e
                 })
@@ -35,12 +35,12 @@ class m extends (i = a.PureComponent) {
         });
     }
 }
-(r = 'Types') in m
-    ? Object.defineProperty(m, r, {
-          value: p,
+(r = 'Types') in d
+    ? Object.defineProperty(d, r, {
+          value: m,
           enumerable: !0,
           configurable: !0,
           writable: !0
       })
-    : (m[r] = p);
-let f = m;
+    : (d[r] = m);
+let f = d;

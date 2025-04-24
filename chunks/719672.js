@@ -48,7 +48,7 @@ function v() {
         n = (0, u.ZP)((e) => e.lastWinnerTime),
         r = 0 !== n ? l()(n).fromNow() : 'n/a',
         v = (0, u.ZP)((e) => e.recentlyShown[0]),
-        j = e.map((e) => {
+        g = e.map((e) => {
             let { eventType: t, dismissibleContent: n } = e;
             return {
                 key: p(t) + n.toString(),
@@ -56,7 +56,7 @@ function v() {
                 dismissibleContent: n
             };
         }),
-        g = Array.from(t.keys()).map((e) => ({
+        j = Array.from(t.keys()).map((e) => ({
             key: e.toString(),
             dismissibleContent: e
         }));
@@ -99,13 +99,13 @@ function v() {
                 children: (0, a.jsx)(x.Z, {
                     className: h.candidatesTable,
                     columns: f,
-                    data: g
+                    data: j
                 })
             }),
             (0, a.jsx)('br', {}),
             (0, a.jsx)(x.Z, {
                 columns: b,
-                data: j
+                data: g
             })
         ]
     });
