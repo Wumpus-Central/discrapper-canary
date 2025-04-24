@@ -75,10 +75,7 @@ function E(e, t) {
     return u.info('QUNS for '.concat(t.name, ': ').concat(n)), n === i.Ng.QUNS_RUNNING_D3D_FULL_SCREEN;
 }
 let b = { '1314682894106497096': (e, t, n) => (E(e, t) ? i.Jx.FULLSCREEN : n) },
-    y = {
-        '762434991303950386': (e) => !0,
-        367827983903490050: (e) => !0
-    },
+    y = new Set(['762434991303950386', '367827983903490050', '1124351860376096858']),
     v = 16,
     O = !0;
 async function I(e) {
@@ -95,9 +92,7 @@ async function I(e) {
 function S(e) {
     var t;
     let n = null == (t = l.Z.getGameByName(e.name)) ? void 0 : t.id;
-    if (null == n) return !1;
-    let r = y[n];
-    return null != r && r(e);
+    return null != n && y.has(n);
 }
 function T(e) {
     let t = o.ZP.getGameForPID(e);
