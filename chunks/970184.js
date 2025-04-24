@@ -1,7 +1,7 @@
 n.d(t, {
     CJ: () => P,
-    Ee: () => b,
-    Il: () => M
+    Ee: () => M,
+    Il: () => y
 }),
     n(388685),
     n(997841);
@@ -19,8 +19,8 @@ var l = n(200651),
     I = n(188597),
     p = n(41776),
     m = n(665906),
-    S = n(592125),
-    f = n(271383),
+    f = n(592125),
+    S = n(271383),
     C = n(607744),
     _ = n(594174),
     g = n(280501),
@@ -38,29 +38,30 @@ let O = (e) => {
                 return !0;
             case d.re.ACTION_ROW:
             case d.re.TEXT_INPUT:
+            default:
                 return !1;
         }
     },
     A = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             l = g.gH.NORMAL;
-        return null != e && e.state !== T.F.FAILED && (e.data.interactionType === d.B8.MESSAGE_COMPONENT && e.data.componentId === t.id ? (l = g.gH.LOADING) : O(t) && (l = g.gH.DISABLED)), n && (l = g.gH.DISABLED), l;
+        return null != e && e.state !== T.F.FAILED && (e.data.interactionType === d.B8.MESSAGE_COMPONENT && e.data.componentId === t.id ? (l = g.gH.LOADING) : O(t) && (l = g.gH.DISABLED)), n && O(t) && (l = g.gH.DISABLED), l;
     },
     v = (e) => {
-        let t = S.Z.getChannel(e),
+        let t = f.Z.getChannel(e),
             n = (0, r.e7)([C.Z], () => (null == t ? void 0 : t.guild_id) == null || C.Z.canChatInGuild(t.guild_id), [t]),
             l = (0, r.e7)([p.Z], () => (null == t ? void 0 : t.guild_id) != null && p.Z.isLurking(t.guild_id), [t]),
-            i = (0, r.e7)([f.ZP, _.default], () => {
+            i = (0, r.e7)([S.ZP, _.default], () => {
                 var e, n;
                 let l = _.default.getCurrentUser();
-                return null != (n = (null == t ? void 0 : t.guild_id) != null && null != l ? (null == (e = f.ZP.getMember(null == t ? void 0 : t.guild_id, l.id)) ? void 0 : e.isPending) : null) && n;
+                return null != (n = (null == t ? void 0 : t.guild_id) != null && null != l ? (null == (e = S.ZP.getMember(null == t ? void 0 : t.guild_id, l.id)) ? void 0 : e.isPending) : null) && n;
             }),
             [, u] = (0, s.AB)(null == t ? void 0 : t.guild_id),
             a = (0, m.tc)(t);
         return !!(!n || l || i || (null == t ? void 0 : t.isLockedThread()) || ((null == t ? void 0 : t.isArchivedThread()) && !a)) || !!u;
     };
 function L(e, t) {
-    let n = i.useContext(y),
+    let n = i.useContext(b),
         [l, u] = i.useState(null),
         a = i.useCallback(
             (t) => {
@@ -99,7 +100,7 @@ function R(e, t, n, l) {
         executeStateUpdate: i.useCallback(
             (t) => {
                 if (!s(t)) return !1;
-                let l = S.Z.getChannel(e.channel_id);
+                let l = f.Z.getChannel(e.channel_id);
                 return (
                     null != l &&
                         null != n.customId &&
@@ -119,8 +120,8 @@ function R(e, t, n, l) {
             },
             [e.channel_id, e.flags, e.id, n.customId, n.type, n.id, T, s]
         ),
-        isDisabled: d,
-        visualState: A(o, n),
+        isDisabled: d && O(n),
+        visualState: A(o, n, d),
         error: c
     };
 }
@@ -152,8 +153,8 @@ function Z(e, t, n) {
         }
     );
 }
-let y = i.createContext(null);
-function M(e) {
+let b = i.createContext(null);
+function y(e) {
     let { children: t, message: n, modal: u, validators: r, shouldDisableInteractiveComponents: o = !1 } = e,
         d = i.useMemo(
             () =>
@@ -173,14 +174,14 @@ function M(e) {
                       }),
             [n, u, r, o]
         );
-    return (0, l.jsx)(y.Provider, {
+    return (0, l.jsx)(b.Provider, {
         value: d,
         children: t
     });
 }
-function b(e, t) {
-    return i.useContext(y).useComponentState(e, t);
+function M(e, t) {
+    return i.useContext(b).useComponentState(e, t);
 }
 function P() {
-    return i.useContext(y);
+    return i.useContext(b);
 }
