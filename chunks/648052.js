@@ -9,6 +9,7 @@ var r = n(200651),
 let u = {
     [c.lY.POPOUT]: 12,
     [c.lY.MODAL]: 26,
+    [c.lY.MODAL_V2]: 16,
     [c.lY.SIDEBAR]: 13
 };
 function d(e) {

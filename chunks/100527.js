@@ -405,6 +405,7 @@ var r = (function (e) {
         (e.NOT_SHARING_LINK = 'not sharing link'),
         (e.USER_PROFILE_POPOUT = 'user profile popout'),
         (e.USER_PROFILE_MODAL = 'user profile modal'),
+        (e.USER_PROFILE_MODAL_V2 = 'user profile modal v2'),
         (e.USER_PROFILE_SIDEBAR = 'user profile sidebar'),
         (e.USER_PROFILE_ACCOUNT_POPOUT = 'user profile account popout'),
         (e.USER_PROFILE_ACTION_SHEET = 'user profile action sheet'),

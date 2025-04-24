@@ -1,194 +1,199 @@
-t.d(n, { Z: () => m });
-var l = t(200651);
-t(192379);
-var r = t(481060),
-    i = t(194359),
-    o = t(906732),
-    s = t(475413),
-    u = t(934861),
-    a = t(156518),
-    c = t(690501),
-    d = t(562831),
-    f = t(981631),
-    p = t(388032),
-    g = t(940427);
-function b(e) {
-    for (var n = 1; n < arguments.length; n++) {
-        var t = null != arguments[n] ? arguments[n] : {},
-            l = Object.keys(t);
+n.d(t, { Z: () => v });
+var r = n(200651);
+n(192379);
+var o = n(481060),
+    l = n(194359),
+    i = n(906732),
+    c = n(475413),
+    u = n(934861),
+    s = n(156518),
+    a = n(690501),
+    d = n(562831),
+    f = n(981631),
+    b = n(388032),
+    p = n(940427);
+function O(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (l = l.concat(
-                Object.getOwnPropertySymbols(t).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            l.forEach(function (n) {
-                var l;
-                (l = t[n]),
-                    n in e
-                        ? Object.defineProperty(e, n, {
-                              value: l,
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[n] = l);
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function v(e, n) {
+function g(e, t) {
     return (
-        (n = null != n ? n : {}),
+        (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-            : (function (e, n) {
-                  var t = Object.keys(e);
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : (function (e, t) {
+                  var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var l = Object.getOwnPropertySymbols(e);
-                      t.push.apply(t, l);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
-                  return t;
-              })(Object(n)).forEach(function (t) {
-                  Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
+                  return n;
+              })(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e) {
-    var { user: n, analyticsLocation: t } = e,
-        r = (function (e, n) {
+function y(e) {
+    var { user: t, analyticsLocation: n } = e,
+        o = (function (e, t) {
             if (null == e) return {};
-            var t,
-                l,
-                r = (function (e, n) {
+            var n,
+                r,
+                o = (function (e, t) {
                     if (null == e) return {};
-                    var t,
-                        l,
-                        r = {},
-                        i = Object.keys(e);
-                    for (l = 0; l < i.length; l++) (t = i[l]), n.indexOf(t) >= 0 || (r[t] = e[t]);
-                    return r;
-                })(e, n);
+                    var n,
+                        r,
+                        o = {},
+                        l = Object.keys(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                    return o;
+                })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (l = 0; l < i.length; l++) (t = i[l]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]);
+                var l = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
-            return r;
+            return o;
         })(e, ['user', 'analyticsLocation']);
-    let i = (0, a.Y)({
-        user: n,
-        analyticsLocation: t
+    let l = (0, s.Y)({
+        user: t,
+        analyticsLocation: n
     });
-    return 0 === i.length
-        ? (0, l.jsx)(s.ef, v(b({}, r), { disabled: !0 }))
-        : (0, l.jsx)(a.Z, {
-              menuItems: i,
-              children: (e) => (0, l.jsx)('div', v(b({}, e), { children: (0, l.jsx)(s.ef, b({}, r)) }))
+    return 0 === l.length
+        ? (0, r.jsx)(c.ef, g(O({}, o), { disabled: !0 }))
+        : (0, r.jsx)(s.Z, {
+              menuItems: l,
+              children: (e) => (0, r.jsx)('div', g(O({}, e), { children: (0, r.jsx)(c.ef, O({}, o)) }))
           });
 }
 function j(e) {
-    let { gameFriends: n, hasIncomingPendingGameFriends: t, hasOutgoingPendingGameFriends: r, user: i, analyticsLocation: o } = e,
+    let { gameFriends: t, hasIncomingPendingGameFriends: n, hasOutgoingPendingGameFriends: o, user: l, analyticsLocation: i } = e,
         {
-            onMouseEnter: s,
+            onMouseEnter: c,
             ariaLabel: u,
-            tooltipText: a,
+            tooltipText: s,
             icon: d
-        } = (0, c.N)({
-            gameFriends: n,
-            hasIncomingPendingGameFriends: t,
-            hasOutgoingPendingGameFriends: r
+        } = (0, a.N)({
+            gameFriends: t,
+            hasIncomingPendingGameFriends: n,
+            hasOutgoingPendingGameFriends: o
         });
-    return (0, l.jsx)(h, {
-        tooltipText: a,
+    return (0, r.jsx)(y, {
+        tooltipText: s,
         ariaLabel: u,
         icon: d,
-        onMouseEnter: s,
-        user: i,
-        analyticsLocation: o
+        onMouseEnter: c,
+        user: l,
+        analyticsLocation: i
     });
 }
-function m(e) {
-    let { isCurrentUser: n, user: t, relationshipType: a, friendToken: c, onClose: b } = e,
-        { newestAnalyticsLocation: v } = (0, o.ZP)(),
-        { gameFriends: m, hasOutgoingPendingGameFriends: O, hasIncomingPendingGameFriends: y } = (0, d.H)({ userId: t.id }),
-        Z = m.length > 0 || O || y;
-    return n || a === f.OGo.BLOCKED
+function v(e) {
+    let { isCurrentUser: t, user: n, relationshipType: s, friendToken: a, autoFocus: O, onClose: g } = e,
+        { newestAnalyticsLocation: v } = (0, i.ZP)(),
+        { gameFriends: h, hasOutgoingPendingGameFriends: m, hasIncomingPendingGameFriends: P } = (0, d.H)({ userId: n.id }),
+        x = h.length > 0 || m || P;
+    return t || s === f.OGo.BLOCKED
         ? null
-        : a === f.OGo.FRIEND || t.bot
-          ? (0, l.jsx)('div', {
-                className: g.multipleButtons,
-                children: (0, l.jsx)(u.c, {
-                    userId: t.id,
-                    onClose: b
+        : s === f.OGo.FRIEND || n.bot
+          ? (0, r.jsx)('div', {
+                className: p.multipleButtons,
+                children: (0, r.jsx)(u.c, {
+                    userId: n.id,
+                    onClose: g,
+                    autoFocus: O
                 })
             })
-          : a === f.OGo.NONE && Z
-            ? (0, l.jsxs)('div', {
-                  className: g.multipleButtons,
+          : s === f.OGo.NONE && x
+            ? (0, r.jsxs)('div', {
+                  className: p.multipleButtons,
                   children: [
-                      (0, l.jsx)(j, {
-                          user: t,
+                      (0, r.jsx)(j, {
+                          user: n,
                           analyticsLocation: v,
-                          gameFriends: m,
-                          hasIncomingPendingGameFriends: y,
-                          hasOutgoingPendingGameFriends: O
+                          gameFriends: h,
+                          hasIncomingPendingGameFriends: P,
+                          hasOutgoingPendingGameFriends: m
                       }),
-                      (0, l.jsx)(u.c, {
-                          userId: t.id,
-                          onClose: b
+                      (0, r.jsx)(u.c, {
+                          userId: n.id,
+                          onClose: g,
+                          autoFocus: O
                       })
                   ]
               })
-            : a === f.OGo.PENDING_OUTGOING
-              ? (0, l.jsxs)('div', {
-                    className: g.multipleButtons,
+            : s === f.OGo.PENDING_OUTGOING
+              ? (0, r.jsxs)('div', {
+                    className: p.multipleButtons,
                     children: [
-                        (0, l.jsx)(h, {
-                            icon: r.iHX,
-                            tooltipText: p.intl.string(p.t.zz2i8v),
-                            user: t,
+                        (0, r.jsx)(y, {
+                            icon: o.iHX,
+                            tooltipText: b.intl.string(b.t.zz2i8v),
+                            user: n,
                             analyticsLocation: v
                         }),
-                        (0, l.jsx)(u.c, {
-                            userId: t.id,
-                            onClose: b
+                        (0, r.jsx)(u.c, {
+                            userId: n.id,
+                            onClose: g,
+                            autoFocus: O
                         })
                     ]
                 })
-              : a === f.OGo.PENDING_INCOMING
-                ? (0, l.jsxs)('div', {
-                      className: g.multipleButtons,
+              : s === f.OGo.PENDING_INCOMING
+                ? (0, r.jsxs)('div', {
+                      className: p.multipleButtons,
                       children: [
-                          (0, l.jsx)(h, {
-                              icon: r.iHX,
-                              tooltipText: p.intl.string(p.t.ZOFd1N),
-                              user: t,
+                          (0, r.jsx)(y, {
+                              icon: o.iHX,
+                              tooltipText: b.intl.string(b.t.ZOFd1N),
+                              user: n,
                               analyticsLocation: v
                           }),
-                          (0, l.jsx)(u.c, {
-                              userId: t.id,
-                              onClose: b
+                          (0, r.jsx)(u.c, {
+                              userId: n.id,
+                              onClose: g,
+                              autoFocus: O
                           })
                       ]
                   })
-                : (0, l.jsxs)('div', {
-                      className: g.multipleButtons,
+                : (0, r.jsxs)('div', {
+                      className: p.multipleButtons,
                       children: [
-                          (0, l.jsx)(u.v, {
-                              userId: t.id,
-                              onClose: b
+                          (0, r.jsx)(u.v, {
+                              userId: n.id,
+                              onClose: g
                           }),
-                          (0, l.jsx)(s.tG, {
+                          (0, r.jsx)(c.tG, {
                               action: 'SEND_FRIEND_REQUEST',
-                              icon: r.oLu,
-                              text: p.intl.string(p.t['7815aW']),
-                              color: r.zxk.Colors.BRAND,
+                              icon: o.oLu,
+                              text: b.intl.string(b.t['7815aW']),
+                              color: o.zxk.Colors.BRAND,
+                              autoFocus: O,
                               onClick: () => {
-                                  i.Z.addRelationship({
-                                      userId: t.id,
+                                  l.Z.addRelationship({
+                                      userId: n.id,
                                       context: { location: v },
-                                      friendToken: c
+                                      friendToken: a
                                   });
                               }
                           })

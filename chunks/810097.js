@@ -99,6 +99,7 @@ function P(e) {
         G =
             !a &&
             x !== b.lY.MODAL &&
+            x !== b.lY.MODAL_V2 &&
             (0, l.EQ)(n)
                 .with(b.n_.STATUS, () => 0 === j.length && null == U)
                 .with(b.n_.ACTIVITY, () => !0)

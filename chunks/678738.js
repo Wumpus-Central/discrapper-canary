@@ -8,20 +8,20 @@ var r = n(200651),
     c = n(607070),
     u = n(729894);
 function d(e) {
-    let { children: t, heading: n, headingIcon: a, subheading: d, className: f, scrollIntoView: _ = !1, headingColor: p = 'header-secondary' } = e,
-        h = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
-        m = i.useRef(null);
+    let { children: t, heading: n, headingIcon: a, subheading: d, className: f, scrollIntoView: _ = !1, headingClassName: p, headingVariant: h = 'text-xs/semibold', headingColor: m = 'header-secondary' } = e,
+        g = (0, s.e7)([c.Z], () => c.Z.useReducedMotion),
+        E = i.useRef(null);
     return (
         i.useEffect(() => {
-            let e = m.current;
+            let e = E.current;
             if (null == e) return;
             let t = requestAnimationFrame(() => {
-                e.scrollIntoView({ behavior: h ? 'auto' : 'smooth' });
+                e.scrollIntoView({ behavior: g ? 'auto' : 'smooth' });
             });
             return () => cancelAnimationFrame(t);
-        }, [h]),
+        }, [g]),
         (0, r.jsxs)('section', {
-            ref: _ ? m : void 0,
+            ref: _ ? E : void 0,
             className: o()(u.section, f),
             children: [
                 null != n &&
@@ -32,14 +32,15 @@ function d(e) {
                                 className: u.header,
                                 children: [
                                     (0, r.jsx)(l.X6q, {
-                                        variant: 'text-xs/semibold',
-                                        color: p,
+                                        variant: h,
+                                        color: m,
+                                        className: p,
                                         children: n
                                     }),
                                     null != a &&
                                         (0, r.jsx)(a, {
                                             size: 'xxs',
-                                            color: l.TVs.colors.HEADER_SECONDARY
+                                            color: m
                                         })
                                 ]
                             }),

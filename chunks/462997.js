@@ -18,6 +18,14 @@ let a = {
         bannerHeight: 210,
         themePadding: 0
     },
+    [i.lY.MODAL_V2]: {
+        avatarSize: r.EFr.SIZE_80,
+        avatarOffsetX: 26,
+        avatarOffsetY: 4,
+        bannerWidth: 400,
+        bannerHeight: 140,
+        themePadding: 0
+    },
     [i.lY.SIDEBAR]: {
         avatarSize: r.EFr.SIZE_80,
         avatarOffsetX: 10,

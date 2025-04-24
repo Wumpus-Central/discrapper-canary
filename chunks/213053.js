@@ -42,6 +42,7 @@ function h(e) {
 let m = {
         [_.lY.POPOUT]: 'user-profile-popout',
         [_.lY.MODAL]: 'user-profile-modal',
+        [_.lY.MODAL_V2]: 'user-profile-modal-v2',
         [_.lY.SIDEBAR]: 'user-profile-sidebar'
     },
     g = 'custom-user-profile-theme',
