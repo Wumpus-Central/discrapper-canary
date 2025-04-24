@@ -1,82 +1,83 @@
-n.d(t, { Z: () => M }), n(388685);
+n.d(t, { Z: () => z }), n(388685);
 var r = n(200651),
     o = n(192379),
     i = n(120356),
     l = n.n(i),
-    a = n(442837),
-    c = n(481060),
-    u = n(13245),
-    s = n(753972),
-    d = n(812206),
-    p = n(111028),
-    f = n(726721),
-    m = n(610394),
-    v = n(522474),
-    b = n(788983),
-    h = n(695346),
+    a = n(252258),
+    c = n(442837),
+    u = n(481060),
+    s = n(13245),
+    d = n(753972),
+    p = n(812206),
+    f = n(111028),
+    m = n(726721),
+    v = n(610394),
+    b = n(522474),
+    h = n(788983),
+    O = n(695346),
     j = n(390322),
-    O = n(961048),
-    x = n(871499),
-    y = n(268353),
-    g = n(786915),
-    P = n(107169),
-    _ = n(592125),
-    I = n(271383),
-    Z = n(594174),
-    C = n(358085),
+    x = n(961048),
+    y = n(871499),
+    g = n(268353),
+    P = n(786915),
+    _ = n(107169),
+    I = n(592125),
+    Z = n(271383),
+    C = n(594174),
+    S = n(358085),
     w = n(51144),
-    S = n(998502),
-    T = n(228488),
-    N = n(145597),
-    k = n(214629),
-    E = n(317381),
-    A = n(884338),
-    U = n(473179),
-    D = n(932174),
-    B = n(981631),
-    R = n(388032),
-    L = n(951927);
-let Y = A.u.SIZE_24;
-function M(e) {
+    T = n(998502),
+    N = n(228488),
+    k = n(145597),
+    E = n(214629),
+    A = n(317381),
+    U = n(884338),
+    D = n(473179),
+    B = n(932174),
+    R = n(981631),
+    L = n(388032),
+    Y = n(951927);
+let M = U.u.SIZE_24;
+function z(e) {
     let { applicationId: t, channelId: n } = e,
-        i = (0, a.e7)([d.Z], () => d.Z.getApplication(t)),
-        M = (0, a.e7)([E.ZP], () => E.ZP.getSelfEmbeddedActivities().get(t)),
-        z = (0, a.e7)([_.Z], () => _.Z.getChannel(n)),
-        W = h.Sb.useSetting(),
-        K = (0, a.Wu)(
-            [I.ZP],
+        i = (0, c.e7)([p.Z], () => p.Z.getApplication(t)),
+        z = (0, c.e7)([A.ZP], () => A.ZP.getSelfEmbeddedActivities().get(t)),
+        W = (0, c.e7)([I.Z], () => I.Z.getChannel(n)),
+        K = O.Sb.useSetting(),
+        V = (0, c.Wu)(
+            [Z.ZP],
             () => {
                 var e;
-                return null == z || null == M ? [] : Array.from(null != (e = M.userIds) ? e : []).map((e) => I.ZP.getMember(z.guild_id, e));
+                return null == W || null == z ? [] : Array.from(null != (e = z.userIds) ? e : []).map((e) => Z.ZP.getMember(W.guild_id, e));
             },
-            [M, z]
+            [z, W]
         ),
-        V = o.useMemo(() => {
+        J = o.useMemo(() => {
             let e = new Map();
             return (
-                K.forEach((t) => {
+                V.forEach((t) => {
                     null != t && void 0 !== t && e.set(t.userId, t);
                 }),
                 e
             );
-        }, [K]),
-        J = o.useCallback(
+        }, [V]),
+        X = o.useCallback(
             (e, t) => {
                 var n;
                 if (null == e) return null;
-                let o = V.get(e.id),
+                let o = J.get(e.id),
                     i = null != (n = null == o ? void 0 : o.nick) ? n : w.ZP.getName(e);
                 return (0, r.jsx)(
-                    c.DY3,
+                    u.DY3,
                     {
                         text: i,
                         position: 'bottom',
                         children: (0, r.jsx)(
                             'img',
                             {
-                                src: e.getAvatarURL(null == t ? void 0 : t.guild_id, Y),
+                                src: e.getAvatarURL(null == t ? void 0 : t.guild_id, M),
                                 alt: i,
-                                className: L.avatar
+                                className: Y.avatar
                             },
                             e.id
                         )
@@ -84,60 +85,60 @@ function M(e) {
                     e.id
                 );
             },
-            [V]
+            [J]
         ),
-        F = null == M ? void 0 : M.userIds,
-        G = (0, a.Wu)(
-            [Z.default],
+        F = null == z ? void 0 : z.userIds,
+        G = (0, c.Wu)(
+            [C.default],
             () =>
                 Array.from(null != F ? F : [])
-                    .map((e) => Z.default.getUser(e))
+                    .map((e) => C.default.getUser(e))
                     .filter((e) => null != e),
             [F]
         ),
-        H = f.Z.useExperiment({ location: 'activity_popout_overflow_menu' }, { autoTrackExposure: !0 }).enabled,
-        X = o.useCallback(() => {
-            let e = (0, N.getPID)();
-            u.Z.setInputLocked(!m.ZP.isInputLocked(e), e);
+        H = m.Z.useExperiment({ location: 'activity_popout_overflow_menu' }, { autoTrackExposure: !0 }).enabled,
+        q = o.useCallback(() => {
+            let e = (0, k.getPID)();
+            s.Z.setInputLocked(!v.ZP.isInputLocked(e), e);
         }, []),
-        q = (0, k.PR)(),
+        $ = (0, E.PR)(),
         {
-            canStayOnTop: $,
-            popoutWindowAlwaysOnTop: Q,
-            handleStayOnTop: ee
+            canStayOnTop: Q,
+            popoutWindowAlwaysOnTop: ee,
+            handleStayOnTop: et
         } = (function () {
-            let e = (0, a.e7)([v.Z], () => v.Z.getIsAlwaysOnTop(B.KJ3.ACTIVITY_POPOUT)),
+            let e = (0, c.e7)([b.Z], () => b.Z.getIsAlwaysOnTop(R.KJ3.ACTIVITY_POPOUT)),
                 t = o.useCallback((e) => {
-                    b.hY(B.KJ3.ACTIVITY_POPOUT, e);
+                    h.hY(R.KJ3.ACTIVITY_POPOUT, e);
                 }, []);
             return {
-                canStayOnTop: C.isPlatformEmbedded && S.ZP.supportsFeature(B.eRX.POPOUT_WINDOWS),
+                canStayOnTop: S.isPlatformEmbedded && T.ZP.supportsFeature(R.eRX.POPOUT_WINDOWS),
                 popoutWindowAlwaysOnTop: e,
                 handleStayOnTop: t
             };
         })(),
         {
-            rootNode: et,
-            popoutWindow: en,
-            toggleFullScreen: er
+            rootNode: en,
+            popoutWindow: er,
+            toggleFullScreen: eo
         } = (function () {
-            let { popoutWindow: e, currentDocument: t, rootNode: n } = (0, D.Z)(),
+            let { popoutWindow: e, currentDocument: t, rootNode: n } = (0, B.Z)(),
                 [r, i] = o.useState(!1),
                 l = o.useCallback(() => {
-                    null != n && r && (i(!1), (0, T.Pr)(n, t));
+                    null != n && r && (i(!1), (0, N.Pr)(n, t));
                 }, [n, t, r]),
                 a = o.useCallback(() => {
-                    null != n && (r ? l() : (i(!0), (0, T.Dj)(n)));
+                    null != n && (r ? l() : (i(!0), (0, N.Dj)(n)));
                 }, [n, r, l]),
                 c = o.useCallback(() => {
-                    null != n && !(0, T.rB)(n, t) && r && a();
+                    null != n && !(0, N.rB)(n, t) && r && a();
                 }, [n, t, r, a]);
             return (
                 o.useEffect(
                     () => (
-                        null == t || t.addEventListener(T.NO, c),
+                        null == t || t.addEventListener(N.NO, c),
                         () => {
-                            null == t || t.removeEventListener(T.NO, c);
+                            null == t || t.removeEventListener(N.NO, c);
                         }
                     ),
                     [t, c]
@@ -149,99 +150,99 @@ function M(e) {
                 }
             );
         })(),
-        eo = o.useRef(null);
-    if (null == i || null == M) return null;
-    let ei = (0, r.jsx)(s.Z, {
+        ei = o.useRef(null);
+    if (null == i || null == z) return null;
+    let el = (0, r.jsx)(d.Z, {
         application: i,
         size: 24,
-        className: L.appIcon
+        className: Y.appIcon
     });
     return (
-        W &&
-            (ei = (0, r.jsx)(c.DY3, {
-                text: M.compositeInstanceId,
+        K &&
+            (el = (0, r.jsx)(u.DY3, {
+                text: z.compositeInstanceId,
                 position: 'bottom',
-                children: ei
+                children: el
             })),
-        (0, r.jsx)(c.f6W, {
-            theme: B.BRd.DARK,
+        (0, r.jsx)(u.f6W, {
+            theme: R.BRd.DARK,
             children: (e) =>
                 (0, r.jsxs)('div', {
-                    className: l()(L.container, e),
+                    className: l()(Y.container, e),
                     children: [
                         (0, r.jsxs)('div', {
-                            className: l()(L.headerSection, L.headerSectionLeft),
+                            className: l()(Y.headerSection, Y.headerSectionLeft),
                             children: [
-                                ei,
-                                (0, r.jsx)(c.Text, {
+                                el,
+                                (0, r.jsx)(u.Text, {
                                     variant: 'text-md/normal',
                                     color: 'header-primary',
-                                    className: L.applicationName,
-                                    children: (0, r.jsx)(p.Z, { children: i.name })
+                                    className: Y.applicationName,
+                                    children: (0, r.jsx)(f.Z, { children: i.name })
                                 }),
                                 (0, r.jsx)('div', {
-                                    className: L.dotSpacer,
-                                    children: (0, r.jsx)(c.Text, {
+                                    className: Y.dotSpacer,
+                                    children: (0, r.jsx)(u.Text, {
                                         variant: 'text-md/normal',
                                         color: 'text-muted',
                                         children: '.'
                                     })
                                 }),
-                                (0, r.jsx)(A.Z, {
+                                (0, r.jsx)(U.Z, {
                                     renderIcon: !1,
                                     users: G,
-                                    size: Y,
+                                    size: M,
                                     max: 6,
-                                    renderUser: (e) => J(e, z)
+                                    renderUser: (e) => X(e, W)
                                 })
                             ]
                         }),
                         (0, r.jsxs)('div', {
-                            className: l()(L.headerSection, L.headerSectionRight),
+                            className: l()(Y.headerSection, Y.headerSectionRight),
                             children: [
-                                (0, r.jsx)('div', { className: L.fade }),
+                                (0, r.jsx)('div', { className: Y.fade }),
                                 (0, r.jsxs)('div', {
-                                    className: L.actionButtonsContainer,
+                                    className: Y.actionButtonsContainer,
                                     children: [
-                                        (0, r.jsx)(g.Z, {
-                                            appContext: B.IlC.POPOUT,
+                                        (0, r.jsx)(P.Z, {
+                                            appContext: R.IlC.POPOUT,
                                             applicationId: t,
-                                            channel: z,
+                                            channel: W,
                                             shouldPrioritizeGroupPlusIcon: !0,
-                                            embeddedActivity: M,
-                                            iconClassName: L.inviteButtonIcon,
-                                            look: c.zxk.Looks.FILLED,
-                                            size: c.zxk.Sizes.TINY,
-                                            buttonText: R.intl.string(R.t['6F9ivr'])
+                                            isContextlessActivity: z.location.kind === a.E.CONTEXTLESS,
+                                            iconClassName: Y.inviteButtonIcon,
+                                            look: u.zxk.Looks.FILLED,
+                                            size: u.zxk.Sizes.TINY,
+                                            buttonText: L.intl.string(L.t['6F9ivr'])
                                         }),
-                                        q
-                                            ? (0, r.jsx)(x.Z, {
-                                                  onClick: X,
-                                                  iconComponent: c.epB,
-                                                  label: R.intl.string(R.t.mseZsL)
-                                              })
-                                            : null,
                                         $
-                                            ? (0, r.jsx)(P.Z, {
-                                                  popoutWindowAlwaysOnTop: Q,
-                                                  onToggleStayOnTop: ee
+                                            ? (0, r.jsx)(y.Z, {
+                                                  onClick: q,
+                                                  iconComponent: u.epB,
+                                                  label: L.intl.string(L.t.mseZsL)
                                               })
                                             : null,
-                                        (0, r.jsx)(y.Z, {
-                                            node: et,
-                                            guestWindow: en,
-                                            onClick: er
+                                        Q
+                                            ? (0, r.jsx)(_.Z, {
+                                                  popoutWindowAlwaysOnTop: ee,
+                                                  onToggleStayOnTop: et
+                                              })
+                                            : null,
+                                        (0, r.jsx)(g.Z, {
+                                            node: en,
+                                            guestWindow: er,
+                                            onClick: eo
                                         }),
                                         H &&
                                             (0, r.jsx)(
-                                                c.yRy,
+                                                u.yRy,
                                                 {
-                                                    targetElementRef: eo,
+                                                    targetElementRef: ei,
                                                     position: 'bottom',
                                                     renderPopout: (e) => {
                                                         let { closePopout: t } = e;
                                                         return (0, r.jsx)(j.Z, {
-                                                            children: (0, r.jsx)(U.Z, {
+                                                            children: (0, r.jsx)(D.Z, {
                                                                 application: i,
                                                                 channelId: n,
                                                                 onClose: t
@@ -252,7 +253,7 @@ function M(e) {
                                                         var n, r;
                                                         let { isShown: i } = t;
                                                         return (0, o.createElement)(
-                                                            O.Z,
+                                                            x.Z,
                                                             ((n = (function (e) {
                                                                 for (var t = 1; t < arguments.length; t++) {
                                                                     var n = null != arguments[t] ? arguments[t] : {},
@@ -280,7 +281,7 @@ function M(e) {
                                                             })({}, e)),
                                                             (r = r =
                                                                 {
-                                                                    buttonRef: eo,
+                                                                    buttonRef: ei,
                                                                     key: 'more-options',
                                                                     isActive: i
                                                                 }),
