@@ -42,9 +42,7 @@ let u = (e) => {
                             ? (0, a.jsx)(s.P3F, {
                                   tag: 'span',
                                   className: c.copyPropertyButton,
-                                  onClick: () => {
-                                      (0, o.JG)(l), d(!0);
-                                  },
+                                  onClick: () => (0, o.JG)(l, () => d(!0)),
                                   children: i
                                       ? (0, a.jsx)(s.kmB, {
                                             color: 'currentColor',

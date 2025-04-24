@@ -19,8 +19,8 @@ var a = n(200651),
     g = n(257785),
     _ = n(484036),
     y = n(681619),
-    C = n(621060),
-    O = n(388032),
+    O = n(621060),
+    C = n(388032),
     N = n(459100),
     E = n(616257);
 let T = [
@@ -69,9 +69,7 @@ function P(e) {
                 (0, a.jsx)(d.P3F, {
                     tag: 'span',
                     className: N.copyPropertyButton,
-                    onClick: () => {
-                        (0, b.JG)(JSON.stringify(l)), s(!0);
-                    },
+                    onClick: () => (0, b.JG)(JSON.stringify(l), () => s(!0)),
                     children: i
                         ? (0, a.jsx)(d.kmB, {
                               color: 'currentColor',
@@ -90,7 +88,7 @@ let w = [
         {
             id: 'details',
             name: 'Details',
-            group: C.v0.NONE,
+            group: O.v0.NONE,
             render: (e) => {
                 let {
                         loggedEvent: { event: t, properties: n, timestamp: r, fingerprint: l },
@@ -276,7 +274,7 @@ function R() {
         }),
         [b, f] = r.useState(void 0),
         g = p.find((e) => e.key === b),
-        { TabBar: S, renderSelectedTab: P } = (0, C.ZP)({ tabs: w }, []);
+        { TabBar: S, renderSelectedTab: P } = (0, O.ZP)({ tabs: w }, []);
     return (0, a.jsxs)('div', {
         ref: e,
         className: i()(E.panel, N.panel),
@@ -290,11 +288,11 @@ function R() {
                         size: d.zxk.Sizes.ICON,
                         onClick: j.Zw,
                         children: (0, a.jsx)('span', {
-                            title: O.intl.string(O.t.VkKicX),
+                            title: C.intl.string(C.t.VkKicX),
                             children: (0, a.jsx)(d.XHJ, {
                                 size: 'md',
                                 color: 'currentColor',
-                                'aria-label': O.intl.string(O.t.VkKicX)
+                                'aria-label': C.intl.string(C.t.VkKicX)
                             })
                         })
                     }),

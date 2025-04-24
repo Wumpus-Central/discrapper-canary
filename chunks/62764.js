@@ -124,8 +124,7 @@ function k(e) {
                 postId: V.id,
                 location: { section: Z.jXE.CHANNEL_HEADER }
             }),
-                (0, E.JG)((0, O.EO)(V, J)),
-                H(!0);
+                (0, E.JG)((0, O.EO)(V, J), () => H(!0));
         },
         ea = () => {
             c.Z.jumpToMessage({
