@@ -21702,6 +21702,7 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     font-size: 12px;
     font-weight: 600;
     justify-content: flex-start;
+    min-width: 0;
     transition: color .125s
 }
 
@@ -21733,6 +21734,10 @@ input[type=checkbox]:focus-visible+.label__0d242 {
 
 .headerIcon__14245+.headerLabel__14245 {
     margin-left: 8px
+}
+
+.headerCollapseIcon__14245 {
+    flex-shrink: 0
 }
 
 .full-motion .headerCollapseIcon__14245 {
