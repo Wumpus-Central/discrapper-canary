@@ -17,6 +17,9 @@ function d(e) {
             onClick: () => {
                 null != d ? d() : null != p && p();
             },
+            onKeyUp: (e) => {
+                'Enter' === e.key && (e.stopPropagation(), e.preventDefault(), null != d ? d() : null != p && p());
+            },
             children: [
                 (0, r.jsx)('div', {
                     className: a.cardHeaderImg,

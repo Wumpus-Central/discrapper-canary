@@ -17,13 +17,16 @@ var l = n(120356),
     p = n(820468);
 let f = 5;
 function b(e) {
-    let { description: t, imgSrc: n, renderPurchaseButton: l, onPurchase: b, title: O, onDetails: m, benefitItems: y, benefitsSummary: v, subtitle: g, maxBenefits: h = f } = e;
+    let { description: t, imgSrc: n, renderPurchaseButton: l, onPurchase: b, title: O, onDetails: y, benefitItems: m, benefitsSummary: v, subtitle: g, maxBenefits: h = f } = e;
     return (0, r.jsx)(o.tE, {
         children: (0, r.jsxs)('div', {
             className: i()(d.container, p.hoverCard),
             tabIndex: 0,
             onClick: () => {
-                null != m ? m() : null != b && b();
+                null != y ? y() : null != b && b();
+            },
+            onKeyUp: (e) => {
+                'Enter' === e.key && (e.stopPropagation(), e.preventDefault(), null != y ? y() : null != b && b());
             },
             children: [
                 (0, r.jsx)('div', {
@@ -80,8 +83,8 @@ function b(e) {
                             children: c.Z.Messages.STOREFRONT_BENEFITS_SUMMARY.format({ count: v })
                         })
                     }),
-                null != y &&
-                    y.length > 0 &&
+                null != m &&
+                    m.length > 0 &&
                     (0, r.jsx)('div', {
                         className: d.benefits,
                         children: (0, r.jsx)('div', {
@@ -94,18 +97,18 @@ function b(e) {
                                         variant: 'eyebrow',
                                         children: c.Z.Messages.STOREFRONT_BENEFITS_TITLE
                                     }),
-                                    y.length > h
+                                    m.length > h
                                         ? (0, r.jsxs)(r.Fragment, {
                                               children: [
-                                                  y.slice(0, h),
+                                                  m.slice(0, h),
                                                   (0, r.jsx)(u.x, {
                                                       variant: 'text-md/semibold',
                                                       color: 'text-secondary',
-                                                      children: c.Z.Messages.STOREFRONT_MORE_BENEFITS.format({ count: y.length - h })
+                                                      children: c.Z.Messages.STOREFRONT_MORE_BENEFITS.format({ count: m.length - h })
                                                   })
                                               ]
                                           })
-                                        : y
+                                        : m
                                 ]
                             })
                         })
