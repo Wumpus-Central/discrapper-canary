@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => d });
 var r = n(200651),
     s = n(192379),
     i = n(120356),
@@ -7,11 +7,11 @@ var r = n(200651),
     o = n(511010),
     c = n(824469),
     u = n(444812);
-function _(e) {
-    let { headerText: t, secondaryHeaderText: n, descriptionText: i, infoRows: _, onDismissAndStay: d, onDismissAndLeave: A, leaveButtonText: f, stayButtonText: E, transitionState: I, impression: g } = e;
+function d(e) {
+    let { headerText: t, secondaryHeaderText: n, descriptionText: i, infoRows: d, onDismissAndStay: _, onDismissAndLeave: A, leaveButtonText: f, stayButtonText: E, transitionState: I, impression: h } = e;
     return (0, r.jsxs)(l.Y0X, {
         transitionState: I,
-        impression: g,
+        impression: h,
         children: [
             (0, r.jsx)('img', {
                 alt: '',
@@ -47,7 +47,7 @@ function _(e) {
                 children: [
                     (0, r.jsx)('div', {
                         className: c.infoGroup,
-                        children: _.map((e, t) =>
+                        children: d.map((e, t) =>
                             (0, r.jsxs)(
                                 s.Fragment,
                                 {
@@ -62,7 +62,7 @@ function _(e) {
                                                 })
                                             ]
                                         }),
-                                        t < _.length - 1 && (0, r.jsx)(o.Z, {})
+                                        t < d.length - 1 && (0, r.jsx)(o.Z, {})
                                     ]
                                 },
                                 t
@@ -74,7 +74,7 @@ function _(e) {
                         children: [
                             (0, r.jsx)(l.zxk, {
                                 color: l.zxk.Colors.PRIMARY,
-                                onClick: d,
+                                onClick: _,
                                 children: E
                             }),
                             (0, r.jsx)(l.zxk, {
