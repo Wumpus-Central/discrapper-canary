@@ -38,29 +38,27 @@ function j(e) {
 }
 function E(e) {
     let { guildId: t, markAsDismissed: n } = e,
-        i = (0, f.Z)(t),
-        o = (0, p.Z)(t);
-    if (0 === o.length) return;
-    let s = o.length > 1 ? ''.concat(o[0].title, ' & ').concat(o[1].title) : ''.concat(o[0].title);
-    return (0, r.jsx)(I, {
-        asset: (0, r.jsx)('img', {
-            alt: '',
-            src: S.Z,
-            className: l()(C.image, C.newPerksImage)
-        }),
-        header: v.intl.string(O.default.xyE2AQ),
-        content: i ? v.intl.formatToPlainString(O.default.IJP4YG, { perks: s }) : v.intl.formatToPlainString(O.default['6kywho'], { perks: s }),
-        buttonCTA: v.intl.string(v.t.RzWDqa),
-        onClick: () =>
-            i
-                ? (0, g.Z)(t, c.Z.GUILD_POWERUPS_COACHMARK_NEW_PERKS)
-                : (0, u.f)({
-                      guildId: t,
-                      location: { section: y.jXE.GUILD_POWERUPS_NEW_PERKS_COACHMARK }
-                  }),
-        markAsDismissed: n,
-        caretPosition: i ? d.DF.LEFT_TOP : d.DF.TOP_CENTER
-    });
+        i = (0, f.Z)(t);
+    if (0 !== (0, p.Z)(t).length)
+        return (0, r.jsx)(I, {
+            asset: (0, r.jsx)('img', {
+                alt: '',
+                src: S.Z,
+                className: l()(C.image, C.newPerksImage)
+            }),
+            header: v.intl.string(O.default.QpQBPT),
+            content: i ? v.intl.string(O.default['6hn0xM']) : v.intl.string(O.default.RDuvXl),
+            buttonCTA: v.intl.string(v.t.RzWDqa),
+            onClick: () =>
+                i
+                    ? (0, g.Z)(t, c.Z.GUILD_POWERUPS_COACHMARK_NEW_PERKS)
+                    : (0, u.f)({
+                          guildId: t,
+                          location: { section: y.jXE.GUILD_POWERUPS_NEW_PERKS_COACHMARK }
+                      }),
+            markAsDismissed: n,
+            caretPosition: i ? d.DF.LEFT_TOP : d.DF.TOP_CENTER
+        });
 }
 function x(e) {
     let { guildId: t, powerups: n, markAsDismissed: i } = e,
