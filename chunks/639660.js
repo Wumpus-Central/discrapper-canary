@@ -10,14 +10,14 @@ var r = t(200651),
     d = t(309945),
     p = t(981631),
     m = t(680278),
-    _ = t(388032),
-    x = t(106180);
+    x = t(388032),
+    _ = t(106180);
 function f() {
     return (0, r.jsx)('div', {
-        className: x.staffContainer,
+        className: _.staffContainer,
         children: (0, r.jsx)(i.xv, {
             variant: 'text-sm/medium',
-            children: _.intl.string(m.default.l9n4QU)
+            children: x.intl.string(m.default.l9n4QU)
         })
     });
 }
@@ -41,11 +41,11 @@ function v(e) {
                   : void 0;
     return null != h || t
         ? (0, r.jsxs)('div', {
-              className: x.container,
+              className: _.container,
               children: [
                   (0, r.jsx)(i.xv, {
                       variant: 'eyebrow',
-                      children: _.intl.string(m.default['3FRira'])
+                      children: x.intl.string(m.default['3FRira'])
                   }),
                   t && (0, r.jsx)(f, {}),
                   h

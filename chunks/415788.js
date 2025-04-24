@@ -11,20 +11,20 @@ var s = n(200651),
     b = n(921944),
     C = n(388032),
     _ = n(970248),
-    E = n(746458);
+    A = n(746458);
 function L(t) {
     let { upsellType: e, onClose: n, transitionState: L } = t,
-        [S, p] = (0, u.US)([o.z.Q1_2025_FOLLOW_UP_REVERSE_TRIAL_OFFER]);
+        [p, E] = (0, u.US)([o.z.Q2_2025_MARKETING_MOMENT_FOLLOW_UP_MODAL]);
     return (
         (0, c.ZP)(r.Z.REVERSE_TRIAL_UPSELL_MODAL),
         a.useEffect(
             () => () => {
-                p(b.L.USER_DISMISS);
+                E(b.L.USER_DISMISS);
             },
-            [p]
+            [E]
         ),
         (0, s.jsx)(d.Z, {
-            artURL: E.Z,
+            artURL: A.Z,
             artContainerClassName: _.artContainer,
             enableArtBoxShadow: !1,
             type: e,
@@ -33,12 +33,12 @@ function L(t) {
             bodyClassName: _.subHeader,
             glowUp: C.intl.string(C.t.gFGZZG),
             onSubscribeClick: () => {
-                p(b.L.TAKE_ACTION);
+                E(b.L.TAKE_ACTION);
             },
             secondaryCTA: C.intl.string(C.t.ZnqyZ2),
             secondaryCTAClassName: _.secondaryCTA,
             onSecondaryClick: function () {
-                p(b.L.TAKE_ACTION), n(), (0, i.uL)(l.Z5c.APPLICATION_STORE);
+                E(b.L.TAKE_ACTION), n(), (0, i.uL)(l.Z5c.APPLICATION_STORE);
             },
             subscribeButtonText: C.intl.string(C.t.J61px8),
             subscribeButtonClassname: _.subscribeButton,
@@ -51,7 +51,7 @@ function L(t) {
                 object: l.qAy.BUTTON_CTA
             },
             transitionState: L,
-            onClose: () => (p(b.L.USER_DISMISS), n())
+            onClose: () => (E(b.L.USER_DISMISS), n())
         })
     );
 }
