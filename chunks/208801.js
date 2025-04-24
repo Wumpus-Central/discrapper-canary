@@ -73,8 +73,6 @@ n.r(
         avatar: 'avatar__4ed1a',
         newBadge: 'newBadge__4ed1a eyebrow__4ed1a',
         marketingButtonBackground: 'marketingButtonBackground__4ed1a',
-        marketingButtonBackgroundImage: 'marketingButtonBackgroundImage__4ed1a',
-        marketingButtonImage: 'marketingButtonImage__4ed1a',
-        marketingButtonImageHovered: 'marketingButtonImageHovered__4ed1a'
+        marketingButtonBackgroundImage: 'marketingButtonBackgroundImage__4ed1a'
     })
 );
