@@ -34402,12 +34402,20 @@ html:not(.visual-refresh) .root_e5f3a9 {
     margin-top: 16px
 }
 
-.subscriptionCostRow_b44961 {
+.invoiceRow_b44961 {
+    color: var(--header-primary)
+}
+
+.invoiceDiscountRow_b44961,
+.invoiceRow_b44961 {
     align-items: center;
-    color: var(--header-primary);
     display: flex;
     flex-direction: row;
     justify-content: space-between
+}
+
+.invoiceDiscountRow_b44961 {
+    color: var(--text-positive)
 }
 
 .invoiceSpinner_b44961 {
