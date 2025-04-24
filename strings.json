@@ -20915,6 +20915,8 @@
   "ZxxHIC": "Until !!{timeString}!!",
   "CgWmmZ": "Add Stranger Danger Warning (Experimental)",
   "VuSvGh": "Reset Safety Warning dismissals (Experimental)",
+  "LPxt+P": "Take Survey",
+  "G1AFm5": "Help us make Discord better by answering a few questions!",
   "FKXvaG": "$[!!{username}!!]({{usernameHook}}) is live! Now streaming !!{activityName}!!. [Join Stream](Join Stream)",
   "dMmbGh": "[!!{username}!!](!!{username}!!) is live. [Join Stream](Join Stream)",
   "NEFxtb": "$[!!{username}!!]({{usernameHook}}) was live for !!{duration}!! in !!{channelName}!!",
