@@ -3,8 +3,8 @@ var a = n(200651),
     r = n(192379),
     l = n(442837),
     i = n(481060),
-    o = n(570140),
-    s = n(178635),
+    s = n(570140),
+    o = n(178635),
     c = n(115470),
     d = n(511010),
     u = n(246992),
@@ -34,9 +34,9 @@ function h() {
         [f, v] = r.useState(0),
         j = (0, l.e7)([c.Z], () => {
             var t;
-            return null === e ? null : null != (t = c.Z.getFeedbackConfig(e)) ? t : s.R[e];
+            return null === e ? null : null != (t = c.Z.getFeedbackConfig(e)) ? t : o.R[e];
         }),
-        g = Object.keys(s.R).map((e) => ({
+        g = Object.keys(o.R).map((e) => ({
             label: e,
             value: e
         })),
@@ -171,7 +171,7 @@ function h() {
                 children: [
                     (0, a.jsx)(i.zxk, {
                         onClick: () =>
-                            void o.Z.dispatch({
+                            void s.Z.dispatch({
                                 type: 'FEEDBACK_OVERRIDE_SET',
                                 feedbackType: e,
                                 cooldown: n * p,
@@ -182,7 +182,7 @@ function h() {
                     }),
                     (0, a.jsx)(i.zxk, {
                         onClick: () =>
-                            void o.Z.dispatch({
+                            void s.Z.dispatch({
                                 type: 'FEEDBACK_OVERRIDE_CLEAR',
                                 feedbackType: e
                             }),

@@ -1,10 +1,10 @@
-n.r(t), n.d(t, { default: () => es }), n(539854), n(388685);
+n.r(t), n.d(t, { default: () => eo }), n(539854), n(388685);
 var a = n(200651),
     r = n(192379),
     l = n(120356),
     i = n.n(l),
-    o = n(990547),
-    s = n(442837),
+    s = n(990547),
+    o = n(442837),
     c = n(481060),
     d = n(347469),
     u = n(213609),
@@ -282,7 +282,7 @@ function el(e) {
         }, []),
         {
             TabBar: i,
-            renderSelectedTab: s,
+            renderSelectedTab: o,
             selectedTabId: d
         } = (0, Q.ZP)(
             {
@@ -296,8 +296,8 @@ function el(e) {
         );
     return (
         (0, u.Z)({
-            type: o.ImpressionTypes.PANE,
-            name: o.ImpressionNames.VIEW_PANEL_DEVTOOLS,
+            type: s.ImpressionTypes.PANE,
+            name: s.ImpressionNames.VIEW_PANEL_DEVTOOLS,
             properties: { panel: d }
         }),
         (0, a.jsxs)(A.Gk, {
@@ -319,7 +319,7 @@ function el(e) {
                                                       windowKey: ee.KJ3.DEVTOOLS_POPOUT,
                                                       title: 'DevTools',
                                                       withTitleBar: !0,
-                                                      children: (0, a.jsx)(es, {
+                                                      children: (0, a.jsx)(eo, {
                                                           mobile: !1,
                                                           isPopout: !0
                                                       })
@@ -347,7 +347,7 @@ function el(e) {
                     ]
                 }),
                 (0, a.jsx)(i, {}),
-                s(),
+                o(),
                 (0, a.jsx)(A.Br, { className: en.layerContainer })
             ]
         })
@@ -355,7 +355,7 @@ function el(e) {
 }
 function ei() {
     let e = r.useRef(null),
-        t = (0, s.e7)([j.Z], () => j.Z.sidebarWidth),
+        t = (0, o.e7)([j.Z], () => j.Z.sidebarWidth),
         [n, l] = r.useState(null),
         i = r.useCallback((e) => (0, v.Qh)({ sidebarWidth: e }), []);
     return (r.useEffect(() => {
@@ -384,8 +384,8 @@ function ei() {
               ]
           });
 }
-function eo() {
-    return (0, s.e7)([j.Z], () => j.Z.displayTools)
+function es() {
+    return (0, o.e7)([j.Z], () => j.Z.displayTools)
         ? (0, a.jsx)('div', {
               className: i()(en.container, en.mobileContainerExpanded),
               children: (0, a.jsx)('div', {
@@ -411,10 +411,10 @@ function eo() {
               })
           });
 }
-function es(e) {
+function eo(e) {
     let { mobile: t, isPopout: n = !1 } = e;
     return t
-        ? (0, a.jsx)(eo, {})
+        ? (0, a.jsx)(es, {})
         : n
           ? (0, a.jsx)('div', {
                 className: en.popoutContainer,

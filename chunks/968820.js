@@ -10,7 +10,7 @@ var i = n(481060),
     u = n(388032),
     d = n(380544);
 function m(e) {
-    let { children: t, revenue: n, revenueTrend: m, summaryMetricLabel: g, summaryMetricValue: p, summaryMetricTrend: f, summaryMetricTrendIsPercent: h } = e;
+    let { children: t, revenue: n, revenueTrend: m, summaryMetricLabel: g, summaryMetricValue: p, summaryMetricTrend: h, summaryMetricTrendIsPercent: f } = e;
     return (0, r.jsx)(i.hjN, {
         title: u.intl.string(u.t.ofmOzc),
         children: (0, r.jsxs)('div', {
@@ -30,8 +30,8 @@ function m(e) {
                             label: g,
                             value: p,
                             additionalContent: (0, r.jsx)(l.H, {
-                                value: f,
-                                isPercent: h
+                                value: h,
+                                isPercent: f
                             })
                         })
                     ]

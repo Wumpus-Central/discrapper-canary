@@ -4,8 +4,8 @@ var a,
 n(192379);
 var l = n(120356),
     i = n.n(l),
-    o = n(325767),
-    s = n(789700),
+    s = n(325767),
+    o = n(789700),
     c = (((a = {}).LEFT = 'LEFT'), (a.RIGHT = 'RIGHT'), (a.UP = 'UP'), (a.DOWN = 'DOWN'), (a.UP_LEFT = 'UP_LEFT'), (a.DOWN_RIGHT = 'DOWN_RIGHT'), a);
 let d = (e) => {
     var t,
@@ -56,7 +56,7 @@ let d = (e) => {
                     });
             }
             return e;
-        })({}, (0, o.Z)(h))),
+        })({}, (0, s.Z)(h))),
         (n = n =
             {
                 width: a,
@@ -66,17 +66,17 @@ let d = (e) => {
                     (function (e) {
                         switch (e) {
                             case 'LEFT':
-                                return s.left;
+                                return o.left;
                             case 'RIGHT':
-                                return s.right;
+                                return o.right;
                             case 'UP':
                                 return null;
                             case 'DOWN':
-                                return s.down;
+                                return o.down;
                             case 'UP_LEFT':
-                                return s.upLeft;
+                                return o.upLeft;
                             case 'DOWN_RIGHT':
-                                return s.downRight;
+                                return o.downRight;
                             default:
                                 throw Error('Invalid Direction '.concat(e));
                         }

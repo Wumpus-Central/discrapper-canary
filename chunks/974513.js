@@ -1,6 +1,6 @@
 n.d(t, {
-    O4: () => h,
-    OA: () => f,
+    O4: () => f,
+    OA: () => h,
     Wu: () => x
 }),
     n(388685);
@@ -57,11 +57,11 @@ function p(e, t) {
         e
     );
 }
-function f(e, t) {
+function h(e, t) {
     let n = (0, l.Wu)([u.Z], () => (0, o.kl)(e, t, u.Z.editedOnboardingPrompts));
     return [(0, l.Wu)([u.Z], () => (0, o.kl)(e, t, u.Z.editedOnboardingPrompts, o.V7)), n];
 }
-function h(e) {
+function f(e) {
     let t = (0, l.e7)([a.Z], () => a.Z.isAdvancedMode(e)),
         [n, r] = (function (e) {
             let t = (0, l.Wu)([a.Z], () => (0, o.kl)(e, a.Z.getDefaultChannelIds(e), a.Z.getOnboardingPrompts(e)));

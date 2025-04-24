@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(272573),
@@ -35,7 +35,7 @@ function p(e) {
     }
     return e;
 }
-function f(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,10 +53,10 @@ function f(e, t) {
         e
     );
 }
-function h(e) {
+function f(e) {
     let { guildId: t, triggerType: n } = e,
-        h = i.useMemo(() => () => (0, o.ep)(t, n), [t, n]),
-        [x] = i.useState(h),
+        f = i.useMemo(() => () => (0, o.ep)(t, n), [t, n]),
+        [x] = i.useState(f),
         [b, j] = i.useState(!1),
         { editingRule: _, createNewEditingRule: v } = (0, u.V)(),
         { getDefaultRuleName: O } = c.I6[n],
@@ -65,12 +65,12 @@ function h(e) {
         I = (0, a.q_F)({
             opacity: +!C,
             pointerEvents: C ? 'none' : 'all',
-            config: f(p({}, l.config.stiff), { clamp: !0 })
+            config: h(p({}, l.config.stiff), { clamp: !0 })
         }),
         E = (0, a.q_F)({
             opacity: +!!C,
             pointerEvents: C ? 'all' : 'none',
-            config: f(p({}, l.config.stiff), { clamp: !0 }),
+            config: h(p({}, l.config.stiff), { clamp: !0 }),
             onStart: () => {
                 N(C ? _ : x);
             },

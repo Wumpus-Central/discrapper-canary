@@ -31,7 +31,7 @@ let m = (e) => {
     });
 };
 function g(e) {
-    let { header: t, text: i, analyticsLocation: c, guild: u, className: g, textColor: p, headerColor: f, buttonProps: h } = e,
+    let { header: t, text: i, analyticsLocation: c, guild: u, className: g, textColor: p, headerColor: h, buttonProps: f } = e,
         { analyticsLocations: x } = (0, o.ZP)(a.Z.GUILD_BOOSTING_UPSELL_BANNER);
     return (0, r.jsx)(o.Gt, {
         value: x,
@@ -48,7 +48,7 @@ function g(e) {
                     children: [
                         (0, r.jsx)(s.Text, {
                             variant: 'text-lg/semibold',
-                            color: null != f ? f : 'always-white',
+                            color: null != h ? h : 'always-white',
                             className: d.header,
                             children: t
                         }),
@@ -65,7 +65,7 @@ function g(e) {
                         guild: u,
                         analyticsLocation: c,
                         className: d.button,
-                        buttonProps: h
+                        buttonProps: f
                     })
                 })
             ]

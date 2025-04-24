@@ -4,8 +4,8 @@ n(192379);
 var r = n(189223),
     l = n(692547),
     i = n(410030),
-    o = n(95398),
-    s = n(981631),
+    s = n(95398),
+    o = n(981631),
     c = n(616257);
 let d = {
     base00: l.Z.colors.BACKGROUND_SECONDARY.css,
@@ -24,9 +24,9 @@ function u(e) {
 let m = u(d),
     x = u(d);
 function h(e) {
-    return s.Jn9.test(e)
-        ? (0, a.jsx)(o.ZP, {
-              type: o.ZP.Types.TEXT,
+    return o.Jn9.test(e)
+        ? (0, a.jsx)(s.ZP, {
+              type: s.ZP.Types.TEXT,
               children: () => e
           })
         : e;

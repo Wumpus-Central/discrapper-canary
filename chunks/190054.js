@@ -2,10 +2,10 @@ n.d(t, { H: () => d }), n(388685);
 var r = n(200651),
     l = n(192379),
     i = n(120356),
-    u = n.n(i),
-    s = n(481060),
-    a = n(572004),
-    o = n(388032),
+    o = n.n(i),
+    a = n(481060),
+    s = n(572004),
+    u = n(388032),
     c = n(798665);
 function d(e) {
     var { chunks: t, className: n, onCopy: i } = e,
@@ -28,19 +28,19 @@ function d(e) {
             }
             return l;
         })(e, ['chunks', 'className', 'onCopy']);
-    let f = l.useMemo(() => (null == t ? void 0 : t.join(' ')), [t]),
-        [E, g] = l.useState(!1),
-        _ = l.useCallback(() => {
-            (0, a.JG)(f, () => {
-                g(!0), null == i || i();
+    let h = l.useMemo(() => (null == t ? void 0 : t.join(' ')), [t]),
+        [f, p] = l.useState(!1),
+        g = l.useCallback(() => {
+            (0, s.JG)(h, () => {
+                p(!0), null == i || i();
             });
-        }, [i, f]),
-        y = E ? s.owK : s.TIy;
-    return (0, r.jsx)(s.P3F, {
-        className: u()(c.container, n),
-        onClick: _,
-        children: (0, r.jsx)(s.ua7, {
-            text: E ? o.intl.string(o.t['t5VZ8/']) : o.intl.string(o.t.OpuAlJ),
+        }, [i, h]),
+        y = f ? a.owK : a.TIy;
+    return (0, r.jsx)(a.P3F, {
+        className: o()(c.container, n),
+        onClick: g,
+        children: (0, r.jsx)(a.ua7, {
+            text: f ? u.intl.string(u.t['t5VZ8/']) : u.intl.string(u.t.OpuAlJ),
             children: (e) => {
                 var t, n;
                 return (0, r.jsx)(
@@ -73,7 +73,7 @@ function d(e) {
                     (n = n =
                         {
                             size: 'xxs',
-                            color: E ? s.TVs.colors.TEXT_POSITIVE : s.TVs.colors.INTERACTIVE_NORMAL
+                            color: f ? a.TVs.colors.TEXT_POSITIVE : a.TVs.colors.INTERACTIVE_NORMAL
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

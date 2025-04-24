@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(239091),
     g = n(497321),
     p = n(724757),
-    f = n(210887),
-    h = n(387667),
+    h = n(210887),
+    f = n(387667),
     x = n(598077),
     b = n(592125),
     j = n(430824),
@@ -183,13 +183,13 @@ let M = i.forwardRef((e, t) => {
 });
 function G(e) {
     let { logs: t, guildId: n, guild: l, expandedId: s, lastExpandedId: o, scroller: c, setExpandedRef: u, setLastExpandedRef: d, onHeaderClick: m, onContentClick: g } = e,
-        f = i.useRef(c);
+        h = i.useRef(c);
     i.useEffect(() => {
-        f.current = c;
+        h.current = c;
     }, [c]);
-    let h = (0, p.Z)('audit-log', f);
+    let f = (0, p.Z)('audit-log', h);
     return (0, r.jsx)(a.bG, {
-        navigator: h,
+        navigator: f,
         children: (0, r.jsx)(a.SJ, {
             children: (e) => {
                 var { ref: i } = e,
@@ -371,8 +371,8 @@ class U extends i.PureComponent {
             D(this, 'renderActionQuickSelectItem', (e, t) => {
                 var n;
                 let { actionFilter: i } = this.props,
-                    l = (0, h.Pw)(e.value),
-                    s = (0, h.p5)(e.value),
+                    l = (0, f.Pw)(e.value),
+                    s = (0, f.p5)(e.value),
                     a = e.value === i;
                 return (0, r.jsxs)(
                     u.lo1,
@@ -593,7 +593,7 @@ class U extends i.PureComponent {
             });
     }
 }
-let B = c.ZP.connectStores([y.Z, N.Z, j.Z, f.Z, _.Z, v.default], () => {
+let B = c.ZP.connectStores([y.Z, N.Z, j.Z, h.Z, _.Z, v.default], () => {
     let e = N.Z.getGuildId(),
         t = j.Z.getGuild(e),
         n = y.Z.logs;
@@ -610,7 +610,7 @@ let B = c.ZP.connectStores([y.Z, N.Z, j.Z, f.Z, _.Z, v.default], () => {
         logs: null != n && null != t ? I._$(n, t) : [],
         actionFilter: y.Z.actionFilter,
         userIdFilter: y.Z.userIdFilter,
-        theme: f.Z.theme,
+        theme: h.Z.theme,
         hide: _.Z.enabled
     };
 })(U);

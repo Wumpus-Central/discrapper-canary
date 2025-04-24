@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(419922),
     g = n(388032),
     p = n(646084);
-let f = (e) => {
-    let { className: t, isDisabled: l, sticker: f, canManageSticker: h } = e,
+let h = (e) => {
+    let { className: t, isDisabled: l, sticker: h, canManageSticker: f } = e,
         [x, b] = i.useState(!1),
         [j, _] = (0, c.Z)(null, 4000),
         v = () => {
@@ -47,8 +47,8 @@ let f = (e) => {
                             return e;
                         })(
                             {
-                                sticker: f,
-                                guildId: f.guild_id
+                                sticker: h,
+                                guildId: h.guild_id
                             },
                             t
                         )
@@ -58,12 +58,12 @@ let f = (e) => {
         O = async () => {
             _(null), b(!0);
             try {
-                await (0, d.Um)(f);
+                await (0, d.Um)(h);
             } catch (e) {
                 _(e.body.message), b(!1);
             }
         },
-        C = u.ZP.useUserTag(f.user);
+        C = u.ZP.useUserTag(h.user);
     return (0, r.jsx)(a.ua7, {
         color: a.ua7.Colors.RED,
         forceOpen: null != j,
@@ -78,7 +78,7 @@ let f = (e) => {
                             (0, r.jsx)(m.Z, {
                                 className: p.sticker,
                                 size: 72,
-                                sticker: f
+                                sticker: h
                             }),
                             (0, r.jsxs)('div', {
                                 children: [
@@ -86,16 +86,16 @@ let f = (e) => {
                                         color: 'header-primary',
                                         variant: 'text-xs/semibold',
                                         className: p.stickerName,
-                                        children: f.name
+                                        children: h.name
                                     }),
-                                    null != f.user &&
+                                    null != h.user &&
                                         (0, r.jsxs)('div', {
                                             className: p.user,
                                             children: [
                                                 (0, r.jsx)(o.Z, {
                                                     className: p.userAvatar,
                                                     size: a.EFr.SIZE_16,
-                                                    user: f.user
+                                                    user: h.user
                                                 }),
                                                 (0, r.jsx)(a.Text, {
                                                     color: 'header-secondary',
@@ -106,7 +106,7 @@ let f = (e) => {
                                         })
                                 ]
                             }),
-                            h
+                            f
                                 ? (0, r.jsxs)('div', {
                                       className: p.actions,
                                       children: [

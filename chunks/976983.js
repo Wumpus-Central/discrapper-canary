@@ -17,8 +17,8 @@ var i = n(120356),
     m = n(307707),
     g = n(216701),
     p = n(570961),
-    f = n(290511),
-    h = n(388032),
+    h = n(290511),
+    f = n(388032),
     x = n(311400);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -83,7 +83,7 @@ function _(e) {
         }),
         { customEmoji: D, unicodeEmoji: k } = (0, m.Z)(null == (t = C.emoji) ? void 0 : t.id, null == (i = C.emoji) ? void 0 : i.name);
     return (
-        (0, f.Oq)(C.emoji) || null != D || null != k || (S = h.intl.string(h.t['61wfmp'])),
+        (0, h.Oq)(C.emoji) || null != D || null != k || (S = f.intl.string(f.t['61wfmp'])),
         (0, r.jsxs)(o.P3F, {
             className: l()(x.optionCard, {
                 [x.hasError]: y || null != S,
@@ -192,12 +192,12 @@ function v(e) {
             [x.singleColumn]: a
         }),
         onClick: () => {
-            u && i.options.length + 1 === f.fY
+            u && i.options.length + 1 === h.fY
                 ? c.Z.show({
-                      title: h.intl.string(h.t.TggC7u),
-                      body: h.intl.formatToPlainString(h.t.kPQKam, { thresholdCount: f.fY }),
-                      confirmText: h.intl.string(h.t.BddRzc),
-                      cancelText: h.intl.string(h.t['ETE/oK']),
+                      title: f.intl.string(f.t.TggC7u),
+                      body: f.intl.formatToPlainString(f.t.kPQKam, { thresholdCount: h.fY }),
+                      confirmText: f.intl.string(f.t.BddRzc),
+                      cancelText: f.intl.string(f.t['ETE/oK']),
                       onConfirm: m
                   })
                 : m();
@@ -213,7 +213,7 @@ function v(e) {
                 (0, r.jsx)(o.Text, {
                     variant: 'text-md/medium',
                     color: 'header-primary',
-                    children: h.intl.string(h.t.Ty3lgo)
+                    children: f.intl.string(f.t.Ty3lgo)
                 })
             ]
         })

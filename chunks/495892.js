@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(85960),
     g = n(65912),
     p = n(457414),
-    f = n(154502),
-    h = n(295708),
+    h = n(154502),
+    f = n(295708),
     x = n(273504),
     b = n(388032),
     j = n(260324);
@@ -66,7 +66,7 @@ function O(e) {
                 null == t
                     ? (0, m.V9)(n).map((e) =>
                           (0, r.jsx)(
-                              f.Z,
+                              h.Z,
                               {
                                   actionType: e,
                                   triggerType: n
@@ -84,7 +84,7 @@ function O(e) {
                               null == s ||
                                   e.push(
                                       (0, r.jsx)(
-                                          f.Z,
+                                          h.Z,
                                           {
                                               actionType: i,
                                               action: s,
@@ -157,7 +157,7 @@ function I(e) {
         children: [
             (0, r.jsx)('div', {
                 className: j.ruleTextContainer,
-                children: (0, r.jsx)(h.Z, {
+                children: (0, r.jsx)(f.Z, {
                     rule: n,
                     onChangeRule: i
                 })
@@ -200,14 +200,14 @@ function S(e) {
     let { rule: t, isDefaultRule: n, onContextMenu: a } = e,
         o = (0, p.w)(t.triggerType, t),
         { isLoading: c, saveRule: m } = (0, g.w)(),
-        { updateRule: f } = (0, d.pH)(t.guildId),
-        [h, x] = i.useState(t.enabled),
+        { updateRule: h } = (0, d.pH)(t.guildId),
+        [f, x] = i.useState(t.enabled),
         C = (0, l.throttle)(async (e, n) => {
             if ((n.preventDefault(), n.stopPropagation(), !c)) {
-                let e = v(_({}, t), { enabled: !h });
-                x(!h);
+                let e = v(_({}, t), { enabled: !f });
+                x(!f);
                 let n = await m(e, []);
-                null != n && (f(n), x(n.enabled));
+                null != n && (h(n), x(n.enabled));
             }
         }, 300),
         I = (e) => {
@@ -263,7 +263,7 @@ function S(e) {
                     (0, r.jsx)(s.rsf, {
                         className: j.toggle,
                         onChange: C,
-                        checked: null != h && h
+                        checked: null != f && f
                     }),
                     !n &&
                         (0, r.jsx)(s.ua7, {

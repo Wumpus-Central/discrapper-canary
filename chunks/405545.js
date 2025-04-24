@@ -7,8 +7,8 @@ var i = n(120356),
     a = n(137158),
     o = n(664305);
 let c = function (e) {
-    let { formField: t, index: n, isDragEnabled: i, isDropHovered: c, onDrop: u, onEdit: d, onRemove: m, canRemove: g, actionsLocation: p, fieldStyle: f } = e,
-        { label: h } = t;
+    let { formField: t, index: n, isDragEnabled: i, isDropHovered: c, onDrop: u, onEdit: d, onRemove: m, canRemove: g, actionsLocation: p, fieldStyle: h } = e,
+        { label: f } = t;
     return (0, r.jsx)(a.Z, {
         field: t,
         index: n,
@@ -17,10 +17,10 @@ let c = function (e) {
         onDrop: u,
         onEdit: d,
         onRemove: m,
-        title: h,
+        title: f,
         canRemove: g,
         actionsLocation: p,
-        fieldStyle: f,
+        fieldStyle: h,
         children: (0, r.jsx)(s.BO, {
             field: t,
             value: void 0,

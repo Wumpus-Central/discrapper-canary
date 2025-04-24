@@ -94,7 +94,7 @@ function E(e) {
             gradientStyle: E,
             gradientClassname: b,
             gradientGlowClassname: y
-        } = (0, c.I)({
+        } = (0, c.Ic)({
             primaryColor: null == s ? void 0 : s.primaryColor,
             secondaryColor: null == s ? void 0 : s.secondaryColor,
             tertiaryColor: null == s ? void 0 : s.tertiaryColor,

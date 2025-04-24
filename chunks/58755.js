@@ -3,8 +3,8 @@ var a = n(200651),
     r = n(192379),
     l = n(394900),
     i = n(661105),
-    o = n(609067),
-    s = n(94367),
+    s = n(609067),
+    o = n(94367),
     c = n(203165),
     d = n(481060),
     u = n(789654),
@@ -72,8 +72,8 @@ let f = Object.keys(x.jQ).map((e) => ({
 function j(e) {
     let { state: t, setState: n } = e,
         { scales: l } = t,
-        [i, o] = r.useState(null),
-        s = (0, a.jsxs)('div', {
+        [i, s] = r.useState(null),
+        o = (0, a.jsxs)('div', {
             className: h.section,
             children: [
                 (0, a.jsx)(d.VcW, {
@@ -110,7 +110,7 @@ function j(e) {
                             'li',
                             {
                                 children: (0, a.jsx)(d.P3F, {
-                                    onClick: () => o(e.name),
+                                    onClick: () => s(e.name),
                                     style: { cursor: 'pointer' },
                                     children: (0, a.jsx)(_, {
                                         scale: e,
@@ -128,11 +128,11 @@ function j(e) {
         f =
             null != u
                 ? (0, a.jsx)(g, {
-                      onClose: () => o(null),
+                      onClose: () => s(null),
                       scale: u,
                       setState: n
                   })
-                : s;
+                : o;
     return (0, a.jsx)('div', { children: f });
 }
 function g(e) {
@@ -308,7 +308,7 @@ function g(e) {
                             children: Object.entries(N).map((e, n) => {
                                 let [r, c] = e,
                                     u = (0, x.HI)(c),
-                                    m = (0, o.Z)((0, s.Z)('black'), c) > 4.5 ? 'black' : 'white',
+                                    m = (0, s.Z)((0, o.Z)('black'), c) > 4.5 ? 'black' : 'white',
                                     h = E[r];
                                 return (0, a.jsxs)(
                                     'div',
@@ -343,7 +343,7 @@ function g(e) {
 }
 function _(e) {
     let { scale: t, onRemove: n } = e,
-        o = r.useMemo(() => Object.values((0, x.XM)(t)).map((e) => (0, l.Z)((0, i.Z)(e, x.HW.sRGB), { format: 'hex' })), [t]);
+        s = r.useMemo(() => Object.values((0, x.XM)(t)).map((e) => (0, l.Z)((0, i.Z)(e, x.HW.sRGB), { format: 'hex' })), [t]);
     return (0, a.jsxs)('li', {
         className: h.override,
         children: [
@@ -374,7 +374,7 @@ function _(e) {
             }),
             (0, a.jsx)('div', {
                 className: h.palettePreview,
-                children: o.map((e) =>
+                children: s.map((e) =>
                     (0, a.jsx)(
                         'span',
                         {

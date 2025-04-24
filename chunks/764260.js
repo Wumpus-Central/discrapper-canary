@@ -6,8 +6,8 @@ n.d(t, {
     TW: () => m,
     TY: () => c,
     Uv: () => u,
-    _l: () => f,
-    d_: () => h,
+    _l: () => h,
+    d_: () => f,
     lO: () => o,
     sI: () => s,
     we: () => p
@@ -77,7 +77,7 @@ function p(e, t, n) {
         mentionable: n
     });
 }
-function f(e, t, n) {
+function h(e, t, n) {
     r.Z.dispatch({
         type: 'GUILD_SETTINGS_ROLES_UPDATE_ROLE_ICON',
         id: e,
@@ -85,7 +85,7 @@ function f(e, t, n) {
         unicodeEmoji: n
     });
 }
-function h(e, t) {
+function f(e, t) {
     r.Z.dispatch({
         type: 'GUILD_SETTINGS_ROLES_UPDATE_ROLE_CONNECTION_CONFIGURATIONS',
         roleId: e,

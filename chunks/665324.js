@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(232567),
     g = n(596454),
     p = n(410030),
-    f = n(100527),
-    h = n(906732),
+    h = n(100527),
+    f = n(906732),
     x = n(623624),
     b = n(357156),
     j = n(208049),
@@ -80,10 +80,10 @@ function G(e, t) {
 let U = P.isPlatformEmbedded || ('Safari' !== o().name && 'Firefox' !== o().name);
 function B() {
     let e = (0, c.e7)([R.Z], () => R.Z.getProps().guild),
-        { analyticsLocations: t } = (0, h.ZP)(f.Z.GUILD_SETTINGS_SOUNDBOARD);
+        { analyticsLocations: t } = (0, f.ZP)(h.Z.GUILD_SETTINGS_SOUNDBOARD);
     return null == e
         ? null
-        : (0, r.jsx)(h.Gt, {
+        : (0, r.jsx)(f.Gt, {
               value: t,
               children: (0, r.jsx)(d.hjN, {
                   tag: d.RB0.H1,
@@ -220,12 +220,12 @@ function V(e) {
     i.useEffect(() => {
         (0, j.w)();
     }, []);
-    let f = i.useMemo(() => l.reduce((e, t) => ((e[t.soundId] = new Audio((0, v.Z)(t.soundId))), e), {}), [l]),
-        h = 0 === l.length && !s;
+    let h = i.useMemo(() => l.reduce((e, t) => ((e[t.soundId] = new Audio((0, v.Z)(t.soundId))), e), {}), [l]),
+        f = 0 === l.length && !s;
     function x(e) {
         var t;
         null == (t = o.current) || t.pause();
-        let n = f[e.soundId];
+        let n = h[e.soundId];
         null != n && ((o.current = n), (n.currentTime = 0), (n.volume = (0, O.Z)(e.volume)), n.play());
     }
     if (
@@ -263,11 +263,11 @@ function V(e) {
                     }),
                     (0, r.jsx)('div', {
                         className: L.buttons,
-                        children: !h && C
+                        children: !f && C
                     })
                 ]
             }),
-            h
+            f
                 ? (0, r.jsxs)(d.ubH, {
                       theme: u,
                       className: L.empty,
@@ -332,9 +332,9 @@ function V(e) {
 }
 function Y(e) {
     let { sound: t, isPlaying: l, onPlaySound: a, guild: o } = e,
-        { soundId: u, name: p, user: f, userId: x, emojiId: _, emojiName: v } = t,
-        { analyticsLocations: O } = (0, h.ZP)(),
-        N = (0, c.e7)([I.default], () => (null != f ? f : I.default.getUser(x)), [x, f]),
+        { soundId: u, name: p, user: h, userId: x, emojiId: _, emojiName: v } = t,
+        { analyticsLocations: O } = (0, f.ZP)(),
+        N = (0, c.e7)([I.default], () => (null != h ? h : I.default.getUser(x)), [x, h]),
         { canManageGuildExpression: E } = (0, b.XJ)(o),
         T = i.useMemo(() => E(t), [t, E]),
         P = null != _ || null != v,

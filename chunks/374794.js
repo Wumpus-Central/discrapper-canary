@@ -1,14 +1,14 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => o });
 var a = n(200651);
 n(192379);
 var r = n(120356),
     l = n.n(r),
     i = n(481060),
-    o = n(53281);
-function s(e) {
+    s = n(53281);
+function o(e) {
     var t,
         n,
-        { children: r, className: s, innerClassName: c, onChange: d, 'aria-label': u, 'aria-describedby': m, filters: x, multiple: h = !1, disabled: p = !1, submitting: b = !1 } = e,
+        { children: r, className: o, innerClassName: c, onChange: d, 'aria-label': u, 'aria-describedby': m, filters: x, multiple: h = !1, disabled: p = !1, submitting: b = !1 } = e,
         f = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -32,7 +32,7 @@ function s(e) {
         within: !0,
         children: (0, a.jsxs)('div', {
             className: l()(
-                s,
+                o,
                 (0, i.nYM)(
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
@@ -86,7 +86,7 @@ function s(e) {
                     className: c,
                     children: r
                 }),
-                (0, a.jsx)(o.Z, {
+                (0, a.jsx)(s.Z, {
                     tabIndex: 0,
                     onChange: d,
                     filters: x,

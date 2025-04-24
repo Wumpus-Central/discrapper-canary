@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(594174),
     g = n(626135),
     p = n(233608),
-    f = n(700785),
-    h = n(764260),
+    h = n(700785),
+    f = n(764260),
     x = n(631969),
     b = n(95242),
     j = n(420966),
@@ -70,16 +70,16 @@ function S(e) {
         s = (0, o.e7)([m.default], () => m.default.getCurrentUser()),
         u = i.useMemo(
             () =>
-                f.uB({
+                h.uB({
                     user: s,
                     context: t
                 }),
             [s, t]
         ),
-        d = i.useMemo(() => ({ [n.id]: E(I({}, n), { permissions: f.Hn }) }), [n]),
+        d = i.useMemo(() => ({ [n.id]: E(I({}, n), { permissions: h.Hn }) }), [n]),
         g = i.useMemo(
             () =>
-                f.uB({
+                h.uB({
                     user: s,
                     context: t,
                     roles: d
@@ -100,10 +100,10 @@ function S(e) {
                     size: c.zxk.Sizes.TINY,
                     look: c.zxk.Looks.LINK,
                     color: c.zxk.Colors.LINK,
-                    onClick: () => (0, h.TY)(n.id),
+                    onClick: () => (0, f.TY)(n.id),
                     onMouseEnter: t,
                     onMouseLeave: i,
-                    disabled: a.fS(n.permissions, f.Hn) || p || l,
+                    disabled: a.fS(n.permissions, h.Hn) || p || l,
                     children: C.intl.string(C.t['UYq7+P'])
                 });
             }
@@ -144,7 +144,7 @@ function T(e) {
                         locked: l,
                         onChange: (e, t) => {
                             if ('string' == typeof t) throw Error('Unexpected string `allow`');
-                            (0, h.lO)(n.id, e, t);
+                            (0, f.lO)(n.id, e, t);
                         },
                         permissionRender: s
                     },
@@ -168,7 +168,7 @@ function P(e) {
                 })
             )
             .filter((e) => e.permissions.length > 0),
-        { headerHeight: f, headerRef: h } = (0, b.Z)(0),
+        { headerHeight: h, headerRef: f } = (0, b.Z)(0),
         { scrolledToTop: x, handleScroll: S } = (0, j.V)(),
         P = i.useRef(!1);
     return (
@@ -177,14 +177,14 @@ function P(e) {
         }, [u]),
         (0, r.jsx)(c.yWw, {
             className: y.scroller,
-            style: { scrollPaddingTop: f },
+            style: { scrollPaddingTop: h },
             onScroll: S,
             children: (0, r.jsxs)('div', {
                 className: N.contentWidth,
                 children: [
                     (0, r.jsxs)('div', {
                         className: s()(N.header, N.stickyHeader, { [N.stickyHeaderElevated]: !x }),
-                        ref: h,
+                        ref: f,
                         children: [
                             (0, r.jsx)(j.Z, {
                                 guild: t,

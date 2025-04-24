@@ -1,7 +1,7 @@
 n.d(t, {
-    BG: () => f,
+    BG: () => h,
     DO: () => x,
-    pt: () => h
+    pt: () => f
 }),
     n(388685);
 var r = n(570140),
@@ -16,10 +16,10 @@ var r = n(570140),
     m = n(208665),
     g = n(290511),
     p = n(388032);
-function f() {
+function h() {
     r.Z.dispatch({ type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_RESET' });
 }
-function h(e) {
+function f(e) {
     r.Z.dispatch({
         type: 'GUILD_SETTINGS_DEFAULT_CHANNELS_TOGGLE',
         channelId: e
@@ -28,10 +28,10 @@ function h(e) {
 async function x(e) {
     let t = Array.from(u.Z.editedDefaultChannelIds).filter((e) => null != o.Z.getChannel(e)),
         n = m.Z.advancedMode,
-        [f, h] = (0, a.d9)(e.id, [...t]),
+        [h, f] = (0, a.d9)(e.id, [...t]),
         x = (0, a.kl)(e.id, t, m.Z.editedOnboardingPrompts),
         b = (0, a.kl)(e.id, t, m.Z.editedOnboardingPrompts, a.V7);
-    if (s.Z.getEnabled(e.id) && ((!n && (h.length < g.md || f.length < g.X)) || (n && (x.length < g.md || b.length < g.X))))
+    if (s.Z.getEnabled(e.id) && ((!n && (f.length < g.md || h.length < g.X)) || (n && (x.length < g.md || b.length < g.X))))
         return void i.Z.show({
             title: p.intl.string(p.t.iLdiqa),
             body: p.intl.string(p.t.JOT74e)

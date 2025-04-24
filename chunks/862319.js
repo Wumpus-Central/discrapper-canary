@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => h,
+    Z: () => f,
     w: () => x
 });
 var r = n(200651);
@@ -39,7 +39,7 @@ function p(e) {
     }
     return e;
 }
-function f(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,9 +57,9 @@ function f(e, t) {
         e
     );
 }
-function h(e) {
+function f(e) {
     let { channelBenefits: t, intangibleBenefits: n, subscriptionListings: i, onImport: a } = e,
-        h = (0, u.mY)();
+        f = (0, u.mY)();
     return (0, r.jsx)('div', {
         className: g.container,
         children: i.map((e) =>
@@ -99,7 +99,7 @@ function h(e) {
                                 (0, s.h7j)((i) =>
                                     (0, r.jsx)(
                                         d.K,
-                                        f(p({}, i), {
+                                        h(p({}, i), {
                                             fromSubscriptionListing: e,
                                             existingChannelBenefits: t,
                                             existingIntangibleBenefits: n,
@@ -108,7 +108,7 @@ function h(e) {
                                     )
                                 );
                             },
-                            disabled: h,
+                            disabled: f,
                             children: m.intl.string(m.t['90bIv7'])
                         })
                     ]
@@ -128,7 +128,7 @@ function x(e) {
                   (0, s.h7j)((e) =>
                       (0, r.jsx)(
                           d.C,
-                          f(p({}, e), {
+                          h(p({}, e), {
                               guildId: t,
                               onImport: n
                           })

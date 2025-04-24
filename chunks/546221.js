@@ -12,8 +12,8 @@ var i = n(481060),
     m = n(146610),
     g = n(67152),
     p = n(791382),
-    f = n(277369),
-    h = n(215124),
+    h = n(277369),
+    f = n(215124),
     x = n(981631),
     b = n(388032),
     j = n(264054);
@@ -113,7 +113,7 @@ let O = (e) => {
                       title: b.intl.string(b.t.O8cDAA),
                       disabled: I,
                       className: j.formSection,
-                      children: (0, r.jsx)(f.Z, {
+                      children: (0, r.jsx)(h.Z, {
                           guildId: a,
                           application: o
                       })
@@ -121,7 +121,7 @@ let O = (e) => {
                   (0, r.jsx)(i.hjN, {
                       title: b.intl.string(b.t['0n7R2d']),
                       className: j.formSection,
-                      children: (0, r.jsx)(h.Z, {
+                      children: (0, r.jsx)(f.Z, {
                           guildId: a,
                           allPeriods: C
                       })

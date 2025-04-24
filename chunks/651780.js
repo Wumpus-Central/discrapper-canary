@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(100527),
     g = n(15640),
     p = n(774380),
-    f = n(404270),
-    h = n(441536),
+    h = n(404270),
+    f = n(441536),
     x = n(174604),
     b = n(386937),
     j = n(316350),
@@ -111,7 +111,7 @@ function w() {
                 (0, r.jsx)(x.Z, {
                     guild: e,
                     onButtonClick: function () {
-                        null != e && ((0, c.xf)(), (0, h.Z)(e.id, m.Z.GUILD_POWERUPS_GUILD_SETTINGS_PREMIUM));
+                        null != e && ((0, c.xf)(), (0, f.Z)(e.id, m.Z.GUILD_POWERUPS_GUILD_SETTINGS_PREMIUM));
                     }
                 }),
             (0, r.jsx)(b.Z, {
@@ -119,7 +119,7 @@ function w() {
                 renderTier: P
             }),
             (0, r.jsx)('div', { className: E.divider }),
-            n ? (0, r.jsx)(f.Z, {}) : null,
+            n ? (0, r.jsx)(h.Z, {}) : null,
             n
                 ? (0, r.jsx)(p.Z, {
                       onOpenPremiumClick: () =>

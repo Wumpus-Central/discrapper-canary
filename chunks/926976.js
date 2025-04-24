@@ -3,8 +3,8 @@ var a = n(200651),
     r = n(192379),
     l = n(120356),
     i = n.n(l),
-    o = n(913527),
-    s = n.n(o),
+    s = n(913527),
+    o = n.n(s),
     c = n(442837),
     d = n(481060),
     u = n(129861),
@@ -50,11 +50,11 @@ function S(e) {
 }
 function P(e) {
     let { name: t, children: n, copyValue: l } = e,
-        [i, o] = r.useState(!1);
+        [i, s] = r.useState(!1);
     return (
         r.useEffect(() => {
             if (i) {
-                let e = setTimeout(() => o(!1), 1000);
+                let e = setTimeout(() => s(!1), 1000);
                 return () => clearTimeout(e);
             }
         }, [i]),
@@ -70,7 +70,7 @@ function P(e) {
                     tag: 'span',
                     className: N.copyPropertyButton,
                     onClick: () => {
-                        (0, b.JG)(JSON.stringify(l)), o(!0);
+                        (0, b.JG)(JSON.stringify(l)), s(!0);
                     },
                     children: i
                         ? (0, a.jsx)(d.kmB, {
@@ -94,10 +94,10 @@ let w = [
             render: (e) => {
                 let {
                         loggedEvent: { event: t, properties: n, timestamp: r, fingerprint: l },
-                        onClose: o
+                        onClose: s
                     } = e,
                     c = p.default.getUser(l),
-                    x = s()(r);
+                    x = o()(r);
                 return (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsxs)(m.ZP, {
@@ -170,7 +170,7 @@ let w = [
                                 (0, a.jsx)(m.ZP.Icon, {
                                     icon: d.k$p,
                                     tooltip: 'Close',
-                                    onClick: o
+                                    onClick: s
                                 })
                             ]
                         }),
@@ -183,7 +183,7 @@ let w = [
                                     children: (0, a.jsxs)('time', {
                                         dateTime: r.toISOString(),
                                         title: (0, f.vc)(x, 'LLLL'),
-                                        children: ['(', s().locale(), ') ', (0, f.Y4)(x)]
+                                        children: ['(', o().locale(), ') ', (0, f.Y4)(x)]
                                     })
                                 }),
                                 null != c &&
@@ -264,14 +264,14 @@ function R() {
     let e = r.useRef(null),
         [t, n] = r.useState(''),
         l = (0, c.e7)([v.Z], () => v.Z.loggedEventsVersion),
-        [o, s] = r.useState(() => Object.keys(k)),
+        [s, o] = r.useState(() => Object.keys(k)),
         [u, m] = r.useState(v.Z.loggedEvents),
         x = r.useCallback((e) => {
             m(e);
         }, []);
     (0, h.BO)(t, v.Z.loggedEvents, x, I, [l]);
     let p = u.filter((e) => {
-            for (let t of o) if (k[t].filter(e)) return !0;
+            for (let t of s) if (k[t].filter(e)) return !0;
             return !1;
         }),
         [b, f] = r.useState(void 0),
@@ -306,9 +306,9 @@ function R() {
                             return (0, a.jsx)(
                                 d.P3F,
                                 {
-                                    className: i()(N.filter, o.includes(t) && N.activeFilter),
+                                    className: i()(N.filter, s.includes(t) && N.activeFilter),
                                     onClick: () => {
-                                        s((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
+                                        o((e) => (e.includes(t) ? e.filter((e) => e !== t) : [...e, t]));
                                     },
                                     children: n.label
                                 },

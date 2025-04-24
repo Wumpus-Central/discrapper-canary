@@ -4,20 +4,20 @@ n(192379);
 var r = n(866442),
     l = n(442837),
     i = n(692547),
-    o = n(481060),
-    s = n(607070),
+    s = n(481060),
+    o = n(607070),
     c = n(297700),
     d = n(388032);
 function u(e) {
     let t,
         { color: n, size: u, forcedIconColor: m, className: x, iconClassName: h, tooltipText: p } = e,
-        [b, f] = (0, l.Wu)([s.Z], () => [s.Z.desaturateUserColors, s.Z.saturation]),
-        v = (0, o.dQu)(i.Z.unsafe_rawColors.PRIMARY_300).hex(),
+        [b, f] = (0, l.Wu)([o.Z], () => [o.Z.desaturateUserColors, o.Z.saturation]),
+        v = (0, s.dQu)(i.Z.unsafe_rawColors.PRIMARY_300).hex(),
         j = (0, r._i)(null != n ? n : v),
         g = (0, r.ho)(j, !1, b ? f : null);
     return (
         (t = null != m ? m : 0.3 > (0, r.Bd)(j) ? i.Z.unsafe_rawColors.PRIMARY_630.css : i.Z.unsafe_rawColors.WHITE_500.css),
-        (0, a.jsx)(o.ua7, {
+        (0, a.jsx)(s.ua7, {
             text: null != p ? p : d.intl.string(d.t.T3PvV1),
             children: (e) => {
                 var n, r;
@@ -53,7 +53,7 @@ function u(e) {
                             className: x,
                             color: g,
                             size: u,
-                            children: (0, a.jsx)(o.kmB, {
+                            children: (0, a.jsx)(s.kmB, {
                                 size: 'custom',
                                 color: t,
                                 height: u,

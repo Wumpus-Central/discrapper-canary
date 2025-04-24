@@ -27,8 +27,8 @@ var r = n(200651),
     m = n(970061),
     g = n(456268),
     p = n(134432),
-    f = n(813197),
-    h = n(208567),
+    h = n(813197),
+    f = n(208567),
     x = n(496675),
     b = n(768581),
     j = n(63063),
@@ -359,7 +359,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                                 color: a.zxk.Colors.PRIMARY,
                                                                                 children: [
                                                                                     E.intl.string(E.t.yG2pUl),
-                                                                                    (0, r.jsx)(f.ZP, {
+                                                                                    (0, r.jsx)(h.ZP, {
                                                                                         disabled: !R,
                                                                                         onChange: Y
                                                                                     })
@@ -367,7 +367,7 @@ let T = 'https:' + window.GLOBAL_ENV.MARKETING_ENDPOINT + '/servers/',
                                                                             })
                                                                         ]
                                                                     }),
-                                                                    (0, r.jsx)(h.Z, {
+                                                                    (0, r.jsx)(f.Z, {
                                                                         image: u.discoverySplash,
                                                                         makeURL: (e) =>
                                                                             b.ZP.getGuildDiscoverySplashURL({

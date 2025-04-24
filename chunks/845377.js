@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(692547),
     g = n(481060),
     p = n(984933),
-    f = n(63063),
-    h = n(709054),
+    h = n(63063),
+    f = n(709054),
     x = n(434404),
     b = n(118215),
     j = n(981631),
@@ -177,7 +177,7 @@ let I = (e) => {
                 description: _.intl.string(_.t.hSLSMz),
                 failingDescription: _.intl.format(_.t.odsGg4, {
                     termsURL: j.EYA.TERMS,
-                    guidelinesURL: f.Z.getArticleURL(j.BhN.PUBLIC_GUILD_GUILDLINES)
+                    guidelinesURL: h.Z.getArticleURL(j.BhN.PUBLIC_GUILD_GUILDLINES)
                 }),
                 checked: null == m ? void 0 : m.safeEnvironment
             },
@@ -194,7 +194,7 @@ let I = (e) => {
                 description: _.intl.formatToPlainString(_.t.VT0bQE, { minimumGuildAge: Math.ceil(m.minimumGuildAge / 7) }),
                 failingDescription: _.intl.formatToPlainString(_.t.jYwM1d, {
                     minimumGuildAge: Math.ceil(m.minimumGuildAge / 7),
-                    passDate: u()(h.default.extractTimestamp(l)).add(m.minimumGuildAge, 'days').format('LL')
+                    passDate: u()(f.default.extractTimestamp(l)).add(m.minimumGuildAge, 'days').format('LL')
                 }),
                 checked: null == m ? void 0 : m.age
             },

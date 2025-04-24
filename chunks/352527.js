@@ -3,15 +3,15 @@ var a,
     r,
     l,
     i = n(442837),
-    o = n(570140);
-let s = !1,
+    s = n(570140);
+let o = !1,
     c = !1;
 class d extends (l = i.ZP.Store) {
     get keepOpen() {
         return c;
     }
     get enabled() {
-        return s;
+        return o;
     }
 }
 (r = 'SoundboardOverlayStore'),
@@ -23,9 +23,9 @@ class d extends (l = i.ZP.Store) {
               writable: !0
           })
         : (d[a] = r);
-let u = new d(o.Z, {
+let u = new d(s.Z, {
     SOUNDBOARD_SET_OVERLAY_ENABLED: function (e) {
-        if (((s = e.enabled), e.enabled)) {
+        if (((o = e.enabled), e.enabled)) {
             var t;
             c = null != (t = e.keepOpen) && t;
         }

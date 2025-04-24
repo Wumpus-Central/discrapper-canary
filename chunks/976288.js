@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(650774),
     g = n(434404),
     p = n(999382),
-    f = n(718157),
-    h = n(450474),
+    h = n(718157),
+    f = n(450474),
     x = n(166184),
     b = n(936735),
     j = n(654351),
@@ -43,7 +43,7 @@ function E(e) {
         p = i.useCallback((e) => {
             g.Z.updateGuild({ description: e });
         }, []),
-        { memberCount: f, onlineCount: h } = (0, s.cj)([m.Z], () => ({
+        { memberCount: h, onlineCount: f } = (0, s.cj)([m.Z], () => ({
             memberCount: m.Z.getMemberCount(n.id),
             onlineCount: m.Z.getOnlineCount(n.id)
         }));
@@ -132,8 +132,8 @@ function E(e) {
             (0, r.jsx)(x.Z, {
                 className: N.preview,
                 guild: n,
-                memberCount: f,
-                presenceCount: h
+                memberCount: h,
+                presenceCount: f
             })
         ]
     });
@@ -173,7 +173,7 @@ function S(e) {
                     }),
                     (0, r.jsx)('div', {
                         className: N.editableSection,
-                        children: (0, r.jsx)(f.E, {
+                        children: (0, r.jsx)(h.E, {
                             guildId: t.id,
                             guildMetadata: n
                         })
@@ -195,7 +195,7 @@ function S(e) {
                     }),
                     (0, r.jsx)('div', {
                         className: N.editableSection,
-                        children: (0, r.jsx)(h.Z, {
+                        children: (0, r.jsx)(f.Z, {
                             guild: t,
                             guildMetadata: n
                         })
@@ -230,7 +230,7 @@ function T(e) {
             },
             [t, n]
         ),
-        f = i.useMemo(
+        h = i.useMemo(
             () =>
                 (0, j.P5)(n.primaryCategoryId)
                     .filter((e) => !n.keywords.includes(e))
@@ -245,7 +245,7 @@ function T(e) {
                     }),
             [n.keywords, n.primaryCategoryId, p]
         ),
-        h = null != s ? s : d;
+        f = null != s ? s : d;
     return (0, r.jsxs)('div', {
         className: N.sectionContainer,
         children: [
@@ -272,17 +272,17 @@ function T(e) {
                         maxTaxLength: O._0,
                         placeholder: n.keywords.length < 1 ? y.intl.string(y.t.EL4Lho) : void 0
                     }),
-                    null != h
+                    null != f
                         ? (0, r.jsx)(a.Text, {
                               color: 'text-danger',
                               variant: 'text-sm/normal',
                               className: N.error,
-                              children: h
+                              children: f
                           })
                         : null
                 ]
             }),
-            f.length > 0
+            h.length > 0
                 ? (0, r.jsxs)('div', {
                       children: [
                           (0, r.jsx)(a.X6q, {
@@ -293,7 +293,7 @@ function T(e) {
                           }),
                           (0, r.jsx)('div', {
                               className: N.editableSection,
-                              children: (0, r.jsx)(u.j, { pills: f })
+                              children: (0, r.jsx)(u.j, { pills: h })
                           })
                       ]
                   })

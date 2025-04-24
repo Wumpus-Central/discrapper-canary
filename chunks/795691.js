@@ -10,11 +10,11 @@ function u(e) {
     let { guildId: t, selectedGameApplicationIds: n, onUpdateGames: u, disabled: d } = e,
         { topGames: m, tryFetchTopGames: g } = (0, s.I)(),
         p = m.get(t),
-        [f, h] = i.useState(!1);
+        [h, f] = i.useState(!1);
     i.useEffect(() => {
-        h(!0),
+        f(!0),
             g(t).finally(() => {
-                h(!1);
+                f(!1);
             });
     }, [t, g]);
     let x = i.useMemo(
@@ -32,7 +32,7 @@ function u(e) {
             },
             [u, n]
         );
-    return f && null == p
+    return h && null == p
         ? (0, r.jsx)(l.$jN, {})
         : null == x || 0 === x.length
           ? null

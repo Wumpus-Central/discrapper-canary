@@ -1,34 +1,34 @@
 n.d(t, {
-    Ld: () => c,
-    R_: () => o,
-    aw: () => u,
-    pU: () => d
+    Ld: () => u,
+    R_: () => s,
+    aw: () => d,
+    pU: () => c
 }),
     n(997841),
     n(35282);
-var l = n(630388),
-    r = n(406432),
-    i = n(828061),
-    a = n(981631);
-let s = /\.(mp3|m4a|ogg|opus|wav|flac)$/i,
-    o = (e) => 'IMAGE' === e || 'VIDEO' === e || 'CLIP' === e || 'VISUAL_PLACEHOLDER' === e,
-    c = (e) => 'IMAGE' === e || 'VIDEO' === e || 'VISUAL_PLACEHOLDER' === e;
-function u(e, t) {
-    let { filename: n, width: o, height: c } = e;
-    if (t && null != o && o > 0 && null != c && c > 0)
-        if ((0, r.CO)(n)) return 'IMAGE';
+var i = n(630388),
+    o = n(406432),
+    r = n(828061),
+    l = n(981631);
+let a = /\.(mp3|m4a|ogg|opus|wav|flac)$/i,
+    s = (e) => 'IMAGE' === e || 'VIDEO' === e || 'CLIP' === e || 'VISUAL_PLACEHOLDER' === e,
+    u = (e) => 'IMAGE' === e || 'VIDEO' === e || 'VISUAL_PLACEHOLDER' === e;
+function d(e, t) {
+    let { filename: n, width: s, height: u } = e;
+    if (t && null != s && s > 0 && null != u && u > 0)
+        if ((0, o.CO)(n)) return 'IMAGE';
         else {
-            var u;
-            if (!(0, r.NU)(n) || null == e.proxy_url) return 'INVALID';
-            return (0, l.yE)(null != (u = e.flags) ? u : 0, a.J0y.IS_CLIP) ? 'CLIP' : 'VIDEO';
+            var d;
+            if (!(0, o.NU)(n) || null == e.proxy_url) return 'INVALID';
+            return (0, i.yE)(null != (d = e.flags) ? d : 0, l.J0y.IS_CLIP) ? 'CLIP' : 'VIDEO';
         }
-    return null != t && s.test(n) && null != e.url ? 'AUDIO' : null != e.url && (0, i.O)(n) ? 'PLAINTEXT_PREVIEW' : 'OTHER';
+    return null != t && a.test(n) && null != e.url ? 'AUDIO' : null != e.url && (0, r.O)(n) ? 'PLAINTEXT_PREVIEW' : 'OTHER';
 }
-function d(e) {
-    let { contentType: t, width: n, height: l } = e;
-    if (null != n && n > 0 && null != l && l > 0) {
-        if ((0, r.tw)(t)) return 'IMAGE';
-        else if ((0, r.X2)(t)) return 'VIDEO';
+function c(e) {
+    let { contentType: t, width: n, height: i } = e;
+    if (null != n && n > 0 && null != i && i > 0) {
+        if ((0, o.tw)(t)) return 'IMAGE';
+        else if ((0, o.X2)(t)) return 'VIDEO';
     }
     return 'VISUAL_PLACEHOLDER';
 }

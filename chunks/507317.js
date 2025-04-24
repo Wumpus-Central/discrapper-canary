@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(768581),
     g = n(434404),
     p = n(981631),
-    f = n(30513),
-    h = n(486324),
+    h = n(30513),
+    f = n(486324),
     x = n(200299),
     b = n(388032),
     j = n(773100);
@@ -59,7 +59,7 @@ let _ = function (e) {
                                         let { imageUri: n } = e;
                                         return g.Z.saveGuild(t.id, { homeHeader: n });
                                     },
-                                    uploadType: h.pC.HOME_HEADER
+                                    uploadType: f.pC.HOME_HEADER
                                 },
                                 n
                             )
@@ -88,7 +88,7 @@ let _ = function (e) {
                             page: p.ZY5.GUILD_SETTINGS
                         },
                         guild: t,
-                        perks: (0, f.XO)()
+                        perks: (0, h.XO)()
                     });
             },
             [t]

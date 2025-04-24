@@ -1,4 +1,4 @@
-n.d(t, { c: () => h });
+n.d(t, { c: () => f });
 var r = n(200651),
     i = n(192379),
     l = n(481060),
@@ -11,9 +11,9 @@ var r = n(200651),
     m = n(981631),
     g = n(30513),
     p = n(200299),
-    f = n(388032);
-function h(e) {
-    let { guild: t, canManageGuild: n, buttonClassName: h } = e,
+    h = n(388032);
+function f(e) {
+    let { guild: t, canManageGuild: n, buttonClassName: f } = e,
         { analyticsLocations: x } = (0, s.ZP)(),
         b = t.hasFeature(m.oNc.INVITE_SPLASH),
         j = n && b,
@@ -38,9 +38,9 @@ function h(e) {
         ? (0, r.jsxs)(l.zxk, {
               disabled: !j,
               color: l.Ttl.BRAND,
-              className: h,
+              className: f,
               children: [
-                  f.intl.string(f.t.yG2pUl),
+                  h.intl.string(h.t.yG2pUl),
                   (0, r.jsx)(o.ZP, {
                       disabled: !j,
                       onChange: _,
@@ -50,7 +50,7 @@ function h(e) {
               ]
           })
         : (0, r.jsx)(u.P, {
-              className: h,
+              className: f,
               onClick: v
           });
 }

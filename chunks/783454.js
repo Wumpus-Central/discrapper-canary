@@ -11,15 +11,15 @@ var r = n(200651),
     m = n(551789);
 function g(e) {
     let { intiallyExpanded: t = !1, title: n, description: l, children: g } = e,
-        [p, f] = i.useState(t),
-        h = () => f((e) => !e),
+        [p, h] = i.useState(t),
+        f = () => h((e) => !e),
         x = (0, o.Dt)();
     return (0, r.jsxs)('div', {
         className: m.container,
         children: [
             (0, r.jsx)(u.Z, {
                 className: s()(m.header, { [m.headerWithDescription]: p && null != l }),
-                onClick: h,
+                onClick: f,
                 children: (e) => {
                     let { areaRef: t, handleStopPropagation: i } = e;
                     return (0, r.jsxs)(r.Fragment, {
@@ -29,7 +29,7 @@ function g(e) {
                                 children: n
                             }),
                             (0, r.jsx)(a.P3F, {
-                                onClick: i(h),
+                                onClick: i(f),
                                 'aria-label': d.intl.string(d.t.e5eQOz),
                                 'aria-controls': x,
                                 'aria-expanded': p,

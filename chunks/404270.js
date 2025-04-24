@@ -12,8 +12,8 @@ var i = n(120356),
     m = n(930153),
     g = n(74538),
     p = n(937615),
-    f = n(474936),
-    h = n(388032),
+    h = n(474936),
+    f = n(388032),
     x = n(67949);
 let b = (e) => {
     var t;
@@ -22,14 +22,14 @@ let b = (e) => {
         b = (0, s.e7)([o.default], () => o.default.locale),
         j = (0, s.e7)([d.ZP], () => d.ZP.getPremiumTypeSubscription()),
         _ = (0, s.e7)([u.Z], () => (null != j ? u.Z.get(j.planId) : void 0)),
-        v = null != (t = (0, s.e7)([u.Z], () => (null != _ ? u.Z.getForSkuAndInterval((0, g.Wz)(f.Si.GUILD), _.interval, _.intervalCount) : void 0))) ? t : f.GP[f.Xh.PREMIUM_MONTH_GUILD];
+        v = null != (t = (0, s.e7)([u.Z], () => (null != _ ? u.Z.getForSkuAndInterval((0, g.Wz)(h.Si.GUILD), _.interval, _.intervalCount) : void 0))) ? t : h.GP[h.Xh.PREMIUM_MONTH_GUILD];
     return (0, r.jsxs)('div', {
         className: l()(x.wrapper, n),
         children: [
             (0, r.jsx)(a.X6q, {
                 className: x.heading,
                 variant: 'heading-xl/semibold',
-                children: h.intl.string(h.t['3x1PFB'])
+                children: f.intl.string(f.t['3x1PFB'])
             }),
             (0, r.jsx)(a.Text, {
                 variant: 'text-md/normal',
@@ -39,8 +39,8 @@ let b = (e) => {
                         o = g.ZP.getDefaultPrice(i, !1),
                         c = (0, p.og)((0, p.T4)(a.amount, a.currency), l, s),
                         u = (0, p.og)((0, p.T4)(o.amount, o.currency), l, s);
-                    return g.ZP.isPremium(t, f.p9.TIER_2)
-                        ? h.intl.format(h.t.N3Icb2, {
+                    return g.ZP.isPremium(t, h.p9.TIER_2)
+                        ? f.intl.format(f.t.N3Icb2, {
                               price: c,
                               originalPrice: u,
                               originalPriceHook: (e, t) =>
@@ -52,11 +52,11 @@ let b = (e) => {
                                       },
                                       t
                                   ),
-                              freeSubscriptionCount: f.cb,
-                              discountPercent: (0, m.T3)(n, f.Rr / 100)
+                              freeSubscriptionCount: h.cb,
+                              discountPercent: (0, m.T3)(n, h.Rr / 100)
                           })
-                        : g.ZP.isPremium(t, f.p9.TIER_1)
-                          ? h.intl.format(h.t.nQLVBA, {
+                        : g.ZP.isPremium(t, h.p9.TIER_1)
+                          ? f.intl.format(f.t.nQLVBA, {
                                 price: c,
                                 originalPrice: u,
                                 originalPriceHook: (e, t) =>
@@ -68,9 +68,9 @@ let b = (e) => {
                                         },
                                         t
                                     ),
-                                discountPercent: (0, m.T3)(n, f.Rr / 100)
+                                discountPercent: (0, m.T3)(n, h.Rr / 100)
                             })
-                          : h.intl.format(h.t.Mmf63N, { price: c });
+                          : f.intl.format(f.t.Mmf63N, { price: c });
                 })({
                     currentUser: i,
                     locale: b,

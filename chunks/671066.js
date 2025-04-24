@@ -12,8 +12,8 @@ var i = n(442837),
     m = n(467397);
 function g(e) {
     var t;
-    let { action: n, triggerType: g, toggled: p, onToggleAction: f } = e,
-        h = (e) => () => f(e),
+    let { action: n, triggerType: g, toggled: p, onToggleAction: h } = e,
+        f = (e) => () => h(e),
         x = (0, u.c)(n.type, n, g),
         b = null == (t = n.metadata) ? void 0 : t.channelId,
         j = (0, i.e7)(
@@ -56,7 +56,7 @@ function g(e) {
                             children: [
                                 null != j && d.intl.format(d.t['8Sr/am'], { channelName: j }),
                                 (0, r.jsx)(l.P3F, {
-                                    onClick: h(!0),
+                                    onClick: f(!0),
                                     className: m.editChannel,
                                     tag: 'span',
                                     role: 'link',
@@ -70,7 +70,7 @@ function g(e) {
                 children: (0, r.jsx)(l.XZJ, {
                     type: l.XZJ.Types.INVERTED,
                     value: p,
-                    onChange: h(!1),
+                    onChange: f(!1),
                     className: m.__invalid_actionCheckbox
                 })
             })

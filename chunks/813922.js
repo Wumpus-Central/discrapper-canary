@@ -11,7 +11,7 @@ var r = n(200651),
     m = n(273504),
     g = n(388032),
     p = n(461367);
-function f(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function f(e) {
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,13 +59,13 @@ function x(e) {
     let { rule: v, onChangeRule: O } = e,
         C = i.useCallback(
             (e) => {
-                O(h(f({}, v), { triggerMetadata: h(f({}, v.triggerMetadata), { keywordFilter: e }) }));
+                O(f(h({}, v), { triggerMetadata: f(h({}, v.triggerMetadata), { keywordFilter: e }) }));
             },
             [O, v]
         ),
         y = i.useCallback(
             (e) => {
-                O(h(f({}, v), { triggerMetadata: h(f({}, v.triggerMetadata), { allowList: e }) }));
+                O(f(h({}, v), { triggerMetadata: f(h({}, v.triggerMetadata), { allowList: e }) }));
             },
             [O, v]
         );

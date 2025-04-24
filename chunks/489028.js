@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(30624),
     g = n(577275),
     p = n(594174),
-    f = n(451478),
-    h = n(626135),
+    h = n(451478),
+    f = n(626135),
     x = n(584825),
     b = n(723047),
     j = n(416867),
@@ -43,7 +43,7 @@ function T(e) {
         { enableGuildMonetizationForTeam: u, submitting: d, error: m } = (0, c.Z)(),
         { fetchSubscriptionsSettings: g } = (0, x.JH)(),
         p = (0, b.mY)(),
-        f = i.useMemo(
+        h = i.useMemo(
             () =>
                 n.map((e) => ({
                     label: e.name,
@@ -51,7 +51,7 @@ function T(e) {
                 })),
             [n]
         ),
-        h = async () => {
+        f = async () => {
             (await u(t, a, y.wW.GUILD_ROLE_SUBSCRIPTIONS)) &&
                 (g(t.id),
                 (0, j.B)({
@@ -67,15 +67,15 @@ function T(e) {
                 children: [
                     (0, r.jsx)(s.q4e, {
                         className: E.teamSelect,
-                        options: f,
+                        options: h,
                         placeholder: I.intl.string(I.t.QXf93N),
                         value: a,
-                        isDisabled: 0 === f.length || p || !l,
+                        isDisabled: 0 === h.length || p || !l,
                         onChange: (e) => o(e),
                         'aria-label': I.intl.string(I.t.QXf93N)
                     }),
                     (0, r.jsx)(s.zxk, {
-                        onClick: h,
+                        onClick: f,
                         className: E.enableTicketingButton,
                         submitting: d,
                         disabled: null == a || p || !l,
@@ -97,7 +97,7 @@ let P = (e) => {
         n = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
         c = t.isOwner(n),
         x = (0, o.Ob)(t),
-        b = (0, l.e7)([f.Z], () => f.Z.isFocused()),
+        b = (0, l.e7)([h.Z], () => h.Z.isFocused()),
         { teams: j, loading: O } = (0, g.Z)({ refreshOnDepChange: b }),
         y = i.useMemo(
             () =>
@@ -109,7 +109,7 @@ let P = (e) => {
         ),
         P = y.length > 0,
         w = i.useCallback(async () => {
-            h.default.track(C.rMx.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
+            f.default.track(C.rMx.GUILD_ROLE_SUBSCRIPTION_TEAM_SETUP_CLICKED, {
                 is_onboarding_v2: x,
                 has_eligible_team: P,
                 guild_id: t.id,

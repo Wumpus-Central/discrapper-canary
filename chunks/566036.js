@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(388032),
     g = n(210530),
     p = n(381109);
-let f = () => null;
-function h(e) {
+let h = () => null;
+function f(e) {
     let { gameApplicationIds: t, handleChange: n, disabled: i } = e,
         { options: l, matchSorterOptions: s } = (0, o.h)();
     return (0, r.jsx)(a.VcW, {
@@ -27,7 +27,7 @@ function h(e) {
         matchSorterOptions: s,
         clearQueryOnSelect: !0,
         customPillContainerClassName: g.pills,
-        renderCustomPill: f
+        renderCustomPill: h
     });
 }
 function x(e) {
@@ -56,7 +56,7 @@ function j(e) {
     let { profile: n, canManageGuild: l } = e,
         o = n.id,
         u = null != (t = null == n ? void 0 : n.gameApplicationIds) ? t : b,
-        f = i.useCallback(
+        h = i.useCallback(
             (e) => {
                 c.Z.updateGuildProfile(o, { gameApplicationIds: e });
             },
@@ -87,9 +87,9 @@ function j(e) {
             (0, r.jsxs)('div', {
                 className: g.sectionBody,
                 children: [
-                    (0, r.jsx)(h, {
+                    (0, r.jsx)(f, {
                         gameApplicationIds: u,
-                        handleChange: f,
+                        handleChange: h,
                         disabled: !l
                     }),
                     (0, r.jsx)(x, {
@@ -100,7 +100,7 @@ function j(e) {
                     (0, r.jsx)(d.Z, {
                         guildId: o,
                         selectedGameApplicationIds: u,
-                        onUpdateGames: f,
+                        onUpdateGames: h,
                         disabled: !l
                     })
                 ]

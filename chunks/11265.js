@@ -10,7 +10,7 @@ var r = n(200651),
     d = n(212787);
 let m = i.memo(function (e) {
     var t, n;
-    let { renderHeader: l, children: m, isExpanded: g, isStuck: p, onExpand: f, disableAnimation: h, disableBackground: x } = e,
+    let { renderHeader: l, children: m, isExpanded: g, isStuck: p, onExpand: h, disableAnimation: f, disableBackground: x } = e,
         [b, j] = i.useState(!0),
         [_, v] = i.useState(!1),
         { ref: O, height: C = 0 } = (0, c.ZP)(),
@@ -66,7 +66,7 @@ let m = i.memo(function (e) {
                     v(!0);
                 }
             },
-            b || h ? 'animate-never' : 'respect-motion-settings'
+            b || f ? 'animate-never' : 'respect-motion-settings'
         );
     return (
         i.useLayoutEffect(() => {
@@ -89,7 +89,7 @@ let m = i.memo(function (e) {
                 children: [
                     (0, r.jsx)(o.P3F, {
                         innerRef: O,
-                        onClick: p ? void 0 : f,
+                        onClick: p ? void 0 : h,
                         className: s()(d.innerHeader, { [d.toggled]: g && p }),
                         'aria-label': u.intl.string(u.t.dcl9MT),
                         children: l

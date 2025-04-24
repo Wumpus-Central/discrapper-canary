@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(65361),
     g = n(246946),
     p = n(330010),
-    f = n(999382),
-    h = n(800223),
+    h = n(999382),
+    f = n(800223),
     x = n(24318),
     b = n(822693),
     j = n(388032),
@@ -25,8 +25,8 @@ function v(e) {
             fetchedEmbed: C,
             embedEnabled: y,
             embedChannelId: N
-        } = (0, a.cj)([f.Z], () => {
-            let { fetchedEmbed: e, embedEnabled: t, embedChannelId: n } = f.Z.getProps();
+        } = (0, a.cj)([h.Z], () => {
+            let { fetchedEmbed: e, embedEnabled: t, embedChannelId: n } = h.Z.getProps();
             return {
                 fetchedEmbed: e,
                 embedEnabled: t,
@@ -46,7 +46,7 @@ function v(e) {
         }, [t, g]);
     let R = i.useCallback(
         async (e) => {
-            T(!0), await (0, h.c)(t, e, N), T(!1);
+            T(!0), await (0, f.c)(t, e, N), T(!1);
         },
         [N, t]
     );

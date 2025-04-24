@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685), n(358797);
+n.d(t, { Z: () => f }), n(388685), n(358797);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -25,7 +25,7 @@ function p(e) {
         className: g.resizeHandle
     });
 }
-let f = i.forwardRef(function (e, t) {
+let h = i.forwardRef(function (e, t) {
     let { children: n, onFocus: l, onBlur: s, onClick: o } = e,
         c = i.useRef(null),
         [u, m] = i.useState(d.tq);
@@ -54,9 +54,9 @@ let f = i.forwardRef(function (e, t) {
         ]
     });
 });
-function h(e) {
+function f(e) {
     var t;
-    let { initialValue: n, onChangeTags: l, onChangeNewTagValue: c, tagErrors: d = {}, placeholder: p, className: h, maxTags: x } = e,
+    let { initialValue: n, onChangeTags: l, onChangeNewTagValue: c, tagErrors: d = {}, placeholder: p, className: f, maxTags: x } = e,
         b = i.useRef(null),
         j = i.useRef(null),
         _ = i.useRef(null),
@@ -121,12 +121,12 @@ function h(e) {
             [S, T, D, Z]
         );
     return (0, r.jsxs)('div', {
-        className: s()(g.mainContainer, h),
+        className: s()(g.mainContainer, f),
         ref: j,
         tabIndex: 0,
         onKeyUp: N,
         children: [
-            (0, r.jsxs)(f, {
+            (0, r.jsxs)(h, {
                 ref: _,
                 onClick: G,
                 children: [

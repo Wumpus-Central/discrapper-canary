@@ -16,8 +16,8 @@ var r = n(200651),
     m = n(688465),
     g = n(241559),
     p = n(496675),
-    f = n(246946),
-    h = n(594174),
+    h = n(246946),
+    f = n(594174),
     x = n(63063),
     b = n(78451),
     j = n(434404),
@@ -229,7 +229,7 @@ function w(e) {
 function R(e) {
     let { guild: t, mfaLevel: n } = e,
         l = (0, o.e7)([p.Z], () => null != t && p.Z.can(C.Plq.MANAGE_GUILD, t), [t]),
-        s = (0, o.e7)([h.default], () => h.default.getCurrentUser()),
+        s = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
         { isGuildOwnerWithMFA: d, showMFAUserTooltip: m } = i.useMemo(
             () =>
                 null == s
@@ -244,7 +244,7 @@ function R(e) {
             [s, t]
         ),
         g = n === C.BpS.ELEVATED,
-        f = (0, a.throttle)(async (e) => {
+        h = (0, a.throttle)(async (e) => {
             d &&
                 (m ||
                     (await j.Z.updateMFALevel({
@@ -262,7 +262,7 @@ function R(e) {
                       children: [
                           (0, r.jsx)(c.j7V, {
                               value: g,
-                              onChange: f,
+                              onChange: h,
                               className: N.switchItem,
                               disabled: !d,
                               hideBorder: !0,
@@ -300,7 +300,7 @@ function R(e) {
 }
 function Z() {
     let { guild: e, mfaLevel: t } = (0, o.cj)([_.Z], () => _.Z.getProps(), []),
-        n = (0, o.e7)([f.Z], () => f.Z.enabled, []);
+        n = (0, o.e7)([h.Z], () => h.Z.enabled, []);
     return null == e
         ? null
         : n

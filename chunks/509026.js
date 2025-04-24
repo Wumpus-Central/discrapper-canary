@@ -55,8 +55,8 @@ function g(e, t) {
 function p(e) {
     let { guild: t } = e,
         p = (0, i.e7)([s.Z], () => s.Z.isUploadingEmoji()),
-        f = (0, u.Z)(t.id),
-        h = t.getMaxRoleSubscriptionEmojiSlots() - f.length,
+        h = (0, u.Z)(t.id),
+        f = t.getMaxRoleSubscriptionEmojiSlots() - h.length,
         x = (0, c.mY)();
     return (0, r.jsxs)(l.hjN, {
         title: d.intl.string(d.t.LDT0Q0),
@@ -87,17 +87,17 @@ function p(e) {
                 },
                 buttonCTA: d.intl.string(d.t.AuPtoq),
                 submitting: p,
-                disabled: x || p || 0 === h
+                disabled: x || p || 0 === f
             }),
             (0, r.jsx)(l.LZC, { size: 24 }),
             (0, r.jsx)(a.L3, {
                 title: d.intl.string(d.t.lu1ZQ0),
                 maxSlots: t.getMaxRoleSubscriptionEmojiSlots(),
-                emojiCount: f.length
+                emojiCount: h.length
             }),
             (0, r.jsx)(a.FT, {
                 guild: t,
-                emojis: f,
+                emojis: h,
                 onEdit: (e, t) => {
                     (0, l.ZDy)(async () => {
                         let { UpdateEmojiRolesModal: i } = await n.e('9007').then(n.bind(n, 604623));

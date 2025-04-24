@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var r = n(200651),
     i = n(192379),
     l = n(536982),
@@ -35,7 +35,7 @@ function p(e) {
     }
     return e;
 }
-function f(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,12 +53,12 @@ function f(e, t) {
         e
     );
 }
-function h(e) {
-    var t, n, h;
+function f(e) {
+    var t, n, f;
     let { rule: x, onChangeRule: b } = e,
         j = i.useCallback(
             (e) => {
-                b(f(p({}, x), { triggerMetadata: f(p({}, x.triggerMetadata), { allowList: e }) }));
+                b(h(p({}, x), { triggerMetadata: h(p({}, x.triggerMetadata), { allowList: e }) }));
             },
             [b, x]
         );
@@ -77,7 +77,7 @@ function h(e) {
                         onChange: j,
                         initialValue: null == (t = x.triggerMetadata) ? void 0 : t.allowList,
                         maxWordCount: d.I3,
-                        collapsed: (null == (n = x.triggerMetadata) ? void 0 : n.allowList) == null || (null == (h = x.triggerMetadata) ? void 0 : h.allowList.length) === 0
+                        collapsed: (null == (n = x.triggerMetadata) ? void 0 : n.allowList) == null || (null == (f = x.triggerMetadata) ? void 0 : f.allowList.length) === 0
                     })
                 ]
             }),

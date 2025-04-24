@@ -11,8 +11,8 @@ var r,
     m = n(264451),
     g = n(759178),
     p = n(462087),
-    f = n(685201),
-    h = n(766434),
+    h = n(685201),
+    f = n(766434),
     x = n(755930),
     b = n(334820),
     j = n(198139),
@@ -53,7 +53,7 @@ let C = (e) => {
 };
 function y(e) {
     let { item: t } = e,
-        { ppgStatus: n, payoutStatus: r, ppgDeferralReasons: i, periodEndDate: s } = (0, h.j0)(t),
+        { ppgStatus: n, payoutStatus: r, ppgDeferralReasons: i, periodEndDate: s } = (0, f.j0)(t),
         a = null != s ? u()(s).add(15, 'days').toISOString() : void 0,
         o = (0, m.Zo)(a, 'MMM D');
     switch (n) {
@@ -85,7 +85,7 @@ function y(e) {
                     ]
                 });
             return (0, l.jsxs)(l.Fragment, {
-                children: [_.intl.string(_.t.OtZ5k5), (0, l.jsx)(f.Z, { className: v.statusDeferredIcon })]
+                children: [_.intl.string(_.t.OtZ5k5), (0, l.jsx)(h.Z, { className: v.statusDeferredIcon })]
             });
     }
     switch (r) {

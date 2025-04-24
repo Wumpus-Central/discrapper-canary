@@ -3,8 +3,8 @@ var a = n(200651),
     r = n(192379),
     l = n(120356),
     i = n.n(l),
-    o = n(442837),
-    s = n(481060),
+    s = n(442837),
+    o = n(481060),
     c = n(665149),
     d = n(428530),
     u = n(484036),
@@ -29,7 +29,7 @@ function f(e) {
                 }
             );
         }, [t, n]),
-        (0, a.jsx)(s.zJl, {
+        (0, a.jsx)(o.zJl, {
             className: p.inspectorContainer,
             children: (0, a.jsx)(d.Z, { data: l })
         })
@@ -89,7 +89,7 @@ function g(e) {
                 className: i()(h.headerBar, p.subPanelHeaderBar),
                 children: [
                     (0, a.jsx)(c.ZP.Icon, {
-                        icon: s.lO_,
+                        icon: o.lO_,
                         tooltip: t.getName()
                     }),
                     (0, a.jsx)(c.ZP.Title, { children: t.getName() })
@@ -102,7 +102,7 @@ function g(e) {
 function _() {
     let e = r.useRef(null),
         [t, n] = r.useState(''),
-        l = o.yh.getAll(),
+        l = s.yh.getAll(),
         c = r
             .useMemo(
                 () =>
@@ -128,9 +128,9 @@ function _() {
         children: [
             (0, a.jsx)('div', {
                 className: p.toolbar,
-                children: (0, a.jsx)(s.E1j, {
+                children: (0, a.jsx)(o.E1j, {
                     className: p.searchBar,
-                    size: s.E1j.Sizes.SMALL,
+                    size: o.E1j.Sizes.SMALL,
                     query: t,
                     onChange: n,
                     onClear: () => n(''),

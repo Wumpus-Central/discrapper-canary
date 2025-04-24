@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685), n(361932), n(187205), n(953529);
+n.d(t, { Z: () => h }), n(388685), n(361932), n(187205), n(953529);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -32,19 +32,19 @@ function p(e) {
         ]
     });
 }
-function f(e) {
+function h(e) {
     let { children: t } = e,
         [n, l] = i.useState(!1),
         s = t.flatMap((e) => e.items.map((e) => e.completed)),
         o = s.filter((e) => e).length / s.length,
-        f = 1 === o,
-        h = (0, c.q_F)({ width: ''.concat(100 * o, '%') }),
+        h = 1 === o,
+        f = (0, c.q_F)({ width: ''.concat(100 * o, '%') }),
         x = [m.intl.format(m.t.wtQtXl, { promoPageGuideUrl: d.iv.PROMO_PAGE_GUIDE }), m.intl.format(m.t['0Fo0wc'], { caseStudiesUrl: d.iv.CASE_STUDIES }), m.intl.format(m.t['7JdzjI'], { subscriptionOfferingGuideUrl: d.iv.SUBSCRIPTION_OFFERING_GUIDE }), m.intl.format(m.t.zkXN6O, { tierStructureGuideUrl: d.iv.TIER_STRUCTURE_GUIDE })],
         b = n
             ? null
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      !f &&
+                      !h &&
                           t.map((e, t) => {
                               let { title: n, items: l } = e;
                               return (0, r.jsxs)(
@@ -111,12 +111,12 @@ function f(e) {
                         })
                     ]
                 }),
-                !f &&
+                !h &&
                     (0, r.jsx)('div', {
                         className: g.progressBarOuter,
                         children: (0, r.jsx)(a.animated.div, {
                             className: g.progressBarInner,
-                            style: h
+                            style: f
                         })
                     }),
                 b

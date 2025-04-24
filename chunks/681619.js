@@ -3,8 +3,8 @@ var a = n(200651),
     r = n(192379),
     l = n(120356),
     i = n.n(l),
-    o = n(481060),
-    s = n(616257);
+    s = n(481060),
+    o = n(616257);
 function c(e) {
     let { columns: t, data: n, className: l, rowClassName: c, onClickRow: d, selectedRowKey: u, rowHeight: m = 40 } = e,
         x = r.useMemo(
@@ -37,7 +37,7 @@ function c(e) {
                     })(
                         {
                             renderHeader: () =>
-                                (0, a.jsx)(o.Text, {
+                                (0, a.jsx)(s.Text, {
                                     variant: 'text-sm/semibold',
                                     children: e.key
                                 })
@@ -49,15 +49,15 @@ function c(e) {
         ),
         h = [n.length];
     return (0, a.jsx)('div', {
-        className: s.tableContainer,
-        children: (0, a.jsx)(o.Tvr, {
+        className: o.tableContainer,
+        children: (0, a.jsx)(s.Tvr, {
             className: l,
-            innerClassName: s.table,
+            innerClassName: o.table,
             sections: h,
             sectionHeight: 40,
             renderSection: (e) => {
                 let { section: t } = e,
-                    r = s.tableHeader;
+                    r = o.tableHeader;
                 return (0, a.jsx)(
                     'div',
                     {
@@ -65,12 +65,12 @@ function c(e) {
                         children: x.map((e) => {
                             var r, l;
                             let i = e.cellClassName,
-                                o = { width: 'calc('.concat(null != (l = e.cellWidth) ? l : '1fr', ' - ').concat(16, 'px)') };
+                                s = { width: 'calc('.concat(null != (l = e.cellWidth) ? l : '1fr', ' - ').concat(16, 'px)') };
                             return (0, a.jsx)(
                                 'div',
                                 {
                                     className: i,
-                                    style: o,
+                                    style: s,
                                     children: null == (r = e.renderHeader) ? void 0 : r.call(e, e, n)
                                 },
                                 'dev-tools-th-'.concat(t, '-').concat(e.key)
@@ -85,19 +85,19 @@ function c(e) {
                 let { rowIndex: t } = e,
                     r = n[t],
                     l = r.key,
-                    h = i()(s.tableRow, {
-                        [s.selectedTableRow]: l === u,
+                    h = i()(o.tableRow, {
+                        [o.selectedTableRow]: l === u,
                         rowClassName: c
                     });
                 return (0, a.jsx)(
-                    o.P3F,
+                    s.P3F,
                     {
                         className: h,
                         onClick: () => (null == d ? void 0 : d(r)),
                         children: x.map((e) => {
                             var n, l;
                             let i = e.cellClassName,
-                                o = {
+                                s = {
                                     width: 'calc('.concat(null != (l = e.cellWidth) ? l : '1fr', ' - ').concat(16, 'px)'),
                                     height: 'calc('.concat(m, 'px - ').concat(16, 'px)')
                                 };
@@ -105,7 +105,7 @@ function c(e) {
                                 'div',
                                 {
                                     className: i,
-                                    style: o,
+                                    style: s,
                                     children: null == (n = e.render) ? void 0 : n.call(e, r, void 0, t)
                                 },
                                 'dev-tools-td-'.concat(t, '-').concat(e.key)

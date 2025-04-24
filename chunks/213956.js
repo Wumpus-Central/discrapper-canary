@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(999382),
     g = n(84613),
     p = n(392885),
-    f = n(740903),
-    h = n(464610),
+    h = n(740903),
+    f = n(464610),
     x = n(733629),
     b = n(598622),
     j = n(921944),
@@ -32,40 +32,40 @@ function O() {
         return null;
     let C = (0, b.Q)(n);
     switch (O) {
-        case f.u.OVERVIEW:
-            e = (0, r.jsx)(h.Z, { guild: n });
+        case h.u.OVERVIEW:
+            e = (0, r.jsx)(f.Z, { guild: n });
             break;
-        case f.u.CAPTCHA_AND_RAID_PROTECTION:
+        case h.u.CAPTCHA_AND_RAID_PROTECTION:
             e = (0, r.jsx)(x.Z, {
                 title: _.intl.string(_.t['53eF5u']),
-                settings: C[f.u.CAPTCHA_AND_RAID_PROTECTION]
+                settings: C[h.u.CAPTCHA_AND_RAID_PROTECTION]
             });
             break;
-        case f.u.DM_AND_SPAM_PROTECTION:
+        case h.u.DM_AND_SPAM_PROTECTION:
             e = (0, r.jsx)(x.Z, {
                 title: _.intl.string(_.t.O0SfFx),
-                settings: C[f.u.DM_AND_SPAM_PROTECTION]
+                settings: C[h.u.DM_AND_SPAM_PROTECTION]
             });
             break;
-        case f.u.AUTOMOD:
+        case h.u.AUTOMOD:
             e = (0, r.jsx)(c.Z, { guildId: n.id });
             break;
-        case f.u.PERMISSIONS:
+        case h.u.PERMISSIONS:
             e = (0, r.jsx)(x.Z, {
                 title: _.intl.string(_.t.BXoNiY),
-                settings: C[f.u.PERMISSIONS]
+                settings: C[h.u.PERMISSIONS]
             });
     }
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            O !== f.u.OVERVIEW &&
+            O !== h.u.OVERVIEW &&
                 (0, r.jsxs)(a.zxk, {
                     className: v.back,
                     innerClassName: v.backButton,
                     look: a.zxk.Looks.BLANK,
                     size: a.zxk.Sizes.MIN,
                     onClick: () => {
-                        (0, g.K)(f.u.OVERVIEW);
+                        (0, g.K)(h.u.OVERVIEW);
                     },
                     children: [
                         (0, r.jsx)(u.Z, {

@@ -28,7 +28,7 @@ function u(e) {
             return i;
         })(e, ['action', 'children', 'className', 'onExpandChange', 'loading']);
     let [g, p] = i.useState(!1),
-        f = (e) => {
+        h = (e) => {
             p(e), null == u || u(e);
         };
     return (0, r.jsx)(a.zF9, {
@@ -73,7 +73,7 @@ function u(e) {
                         className: c.groupHeaderRow,
                         action: d ? (0, r.jsx)(a.$jN, { type: a.$jN.Type.PULSING_ELLIPSIS }) : t,
                         onClick: (e) => {
-                            f(!g), l(e);
+                            h(!g), l(e);
                         }
                     }),
                 Object.getOwnPropertyDescriptors

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -36,8 +36,8 @@ function g(e) {
     return e;
 }
 let p = d.Ilk.PRIMARY_400,
-    f = d.Ilk.PRIMARY_500;
-function h(e) {
+    h = d.Ilk.PRIMARY_500;
+function f(e) {
     var { enabled: t, imageClassName: n, iconWrapperClassName: i } = e,
         d = (function (e, t) {
             if (null == e) return {};
@@ -58,8 +58,8 @@ function h(e) {
             }
             return i;
         })(e, ['enabled', 'imageClassName', 'iconWrapperClassName']);
-    let h = (0, o.ZP)(),
-        x = (0, s.wj)(h) ? p : f,
+    let f = (0, o.ZP)(),
+        x = (0, s.wj)(f) ? p : h,
         b = {
             height: 18,
             width: 18,

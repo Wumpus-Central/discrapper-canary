@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(8426),
     g = n(969632),
     p = n(824990),
-    f = n(981631),
-    h = n(388032),
+    h = n(981631),
+    f = n(388032),
     x = n(773100);
 let b = [],
     j = function (e) {
@@ -27,7 +27,7 @@ let b = [],
             O = i.useMemo(
                 () =>
                     (0, l.chain)(v)
-                        .filter((e) => e.channel.type === f.d4z.GUILD_TEXT && e.channel.id !== (null == n ? void 0 : n.rulesChannelId) && !_.includes(e.channel.id) && !j.includes(e.channel.id) && d.Uu(f.Plq.VIEW_CHANNEL, e.channel) && !d.Uu(f.Plq.SEND_MESSAGES, e.channel))
+                        .filter((e) => e.channel.type === h.d4z.GUILD_TEXT && e.channel.id !== (null == n ? void 0 : n.rulesChannelId) && !_.includes(e.channel.id) && !j.includes(e.channel.id) && d.Uu(h.Plq.VIEW_CHANNEL, e.channel) && !d.Uu(h.Plq.SEND_MESSAGES, e.channel))
                         .take(5)
                         .value(),
                 [v, _, null == n ? void 0 : n.rulesChannelId, j]
@@ -45,7 +45,7 @@ let b = [],
                           children: [
                               (0, r.jsx)(a.Text, {
                                   variant: 'text-md/semibold',
-                                  children: h.intl.string(h.t.WThgAQ)
+                                  children: f.intl.string(f.t.WThgAQ)
                               }),
                               (0, r.jsxs)('div', {
                                   className: x.suggestedChannelsHeader,
@@ -53,7 +53,7 @@ let b = [],
                                       (0, r.jsx)(a.Text, {
                                           variant: 'text-xs/medium',
                                           color: 'text-muted',
-                                          children: h.intl.string(h.t.YtNI8P)
+                                          children: f.intl.string(f.t.YtNI8P)
                                       }),
                                       (0, r.jsxs)(a.P3F, {
                                           className: x.suggestedChannelsDismiss,
@@ -67,7 +67,7 @@ let b = [],
                                               (0, r.jsx)(a.Text, {
                                                   variant: 'text-xs/semibold',
                                                   color: 'text-brand',
-                                                  children: h.intl.string(h.t.aLqZTk)
+                                                  children: f.intl.string(f.t.aLqZTk)
                                               })
                                           ]
                                       })

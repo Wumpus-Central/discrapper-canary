@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(8426),
     g = n(969632),
     p = n(535907),
-    f = n(388032),
-    h = n(773100);
+    h = n(388032),
+    f = n(773100);
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -85,11 +85,11 @@ let j = function (e) {
               onClick: j,
               children: (0, r.jsx)(o.Text, {
                   variant: 'text-sm/medium',
-                  children: f.intl.string(f.t['9Z+aEB'])
+                  children: h.intl.string(h.t['9Z+aEB'])
               })
           })
         : (0, r.jsxs)(o.P3F, {
-              className: h.editWelcomeSection,
+              className: f.editWelcomeSection,
               onClick: j,
               children: [
                   (0, r.jsx)(u.Z, {
@@ -100,18 +100,18 @@ let j = function (e) {
                       }
                   }),
                   (0, r.jsx)(o.ua7, {
-                      text: f.intl.string(f.t.bt75u7),
+                      text: h.intl.string(h.t.bt75u7),
                       children: (e) =>
                           (0, r.jsxs)(
                               'div',
                               b(x({}, e), {
-                                  className: s()(h.actionItemEditButton, h.editWelcomeButton),
+                                  className: s()(f.actionItemEditButton, f.editWelcomeButton),
                                   children: [
                                       (0, r.jsx)(o.vdY, {
                                           size: 'md',
                                           color: 'currentColor'
                                       }),
-                                      (0, r.jsx)(o.nn4, { children: f.intl.string(f.t.bt75u7) })
+                                      (0, r.jsx)(o.nn4, { children: h.intl.string(h.t.bt75u7) })
                                   ]
                               })
                           )

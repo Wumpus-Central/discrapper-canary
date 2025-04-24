@@ -1,34 +1,34 @@
-n.d(t, { Ns: () => p }), n(388685);
-var r = n(192379),
-    a = n(392711),
-    i = n.n(a),
-    o = n(876215),
-    l = n(442837),
-    c = n(146282),
-    s = n(26033),
-    u = n(897674),
-    _ = n(709054),
-    d = n(206583);
-let f = new Set([o.s.PLAYED_GAME, o.s.LAUNCHED_ACTIVITY]),
-    m = (e) => f.has(e.content_type);
+r.d(t, { Ns: () => p }), r(388685);
+var n = r(192379),
+    i = r(392711),
+    a = r.n(i),
+    l = r(876215),
+    s = r(442837),
+    o = r(146282),
+    c = r(26033),
+    u = r(897674),
+    d = r(709054),
+    m = r(206583);
+let g = new Set([l.s.PLAYED_GAME, l.s.LAUNCHED_ACTIVITY]),
+    f = (e) => g.has(e.content_type);
 function p(e) {
     let { entries: t } = (function () {
-        let e = (0, u.Z)(d.YN.GAME_PROFILE_FEED),
-            t = (0, u.Z)(d.YN.GLOBAL_FEED),
-            n = r.useMemo(
+        let e = (0, u.Z)(m.YN.GAME_PROFILE_FEED),
+            t = (0, u.Z)(m.YN.GLOBAL_FEED),
+            r = n.useMemo(
                 () =>
-                    i()(t)
+                    a()(t)
                         .unionBy(e, (e) => e.id)
-                        .filter(m)
-                        .orderBy((e) => _.default.extractTimestamp(e.id), 'desc')
+                        .filter(f)
+                        .orderBy((e) => d.default.extractTimestamp(e.id), 'desc')
                         .uniqWith((e, t) => e.author_id === t.author_id && e.extra.application_id === t.extra.application_id)
                         .value(),
                 [e, t]
             );
         return {
-            requestId: (0, l.e7)([c.Z], () => c.Z.getFeedRequestId(d.YN.GAME_PROFILE_FEED)),
-            entries: n
+            requestId: (0, s.e7)([o.Z], () => o.Z.getFeedRequestId(m.YN.GAME_PROFILE_FEED)),
+            entries: r
         };
     })();
-    return r.useMemo(() => (null == t ? void 0 : t.filter((t) => ((0, s.dX)(t) || (0, s.Mq)(t)) && t.extra.application_id === e)), [t, e]);
+    return n.useMemo(() => (null == t ? void 0 : t.filter((t) => ((0, c.dX)(t) || (0, c.Mq)(t)) && t.extra.application_id === e)), [t, e]);
 }

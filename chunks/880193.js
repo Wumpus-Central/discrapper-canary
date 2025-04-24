@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(723047),
     g = n(727843),
     p = n(290348),
-    f = n(927954),
-    h = n(783454),
+    h = n(927954),
+    f = n(783454),
     x = n(981631),
     b = n(388032),
     j = n(301849),
@@ -28,7 +28,7 @@ function v(e) {
         [y, N] = p.mR(n),
         [I, E] = p.PK(n),
         [S, T] = p.d9(n, 1024),
-        { imageCTA: P, imageAriaLabel: w, setFilename: R } = (0, f.Z)(v),
+        { imageCTA: P, imageAriaLabel: w, setFilename: R } = (0, h.Z)(v),
         Z = i.useMemo(() => {
             var e;
             return null !=
@@ -49,7 +49,7 @@ function v(e) {
         A = (0, a.Dt)(),
         L = (0, a.Dt)(),
         M = (0, a.Dt)();
-    return (0, r.jsxs)(h.Z, {
+    return (0, r.jsxs)(f.Z, {
         title: b.intl.string(b.t.iHU439),
         intiallyExpanded: !0,
         children: [

@@ -15,8 +15,8 @@ var r = n(200651),
     m = n(454585),
     g = n(323502),
     p = n(958832),
-    f = n(324067),
-    h = n(984933),
+    h = n(324067),
+    f = n(984933),
     x = n(259580),
     b = n(999382),
     j = n(743475),
@@ -33,14 +33,14 @@ var r = n(200651),
 function P(e) {
     let { guild: t } = e,
         a = (0, l.e7)([u.Z], () => u.Z.getEnabled(t.id)),
-        f = (0, l.e7)([p.Z], () => p.Z.hasFetched(t.id)),
-        h = (0, C.Z)(t),
+        h = (0, l.e7)([p.Z], () => p.Z.hasFetched(t.id)),
+        f = (0, C.Z)(t),
         x = (0, l.e7)([_.Z], () => _.Z.editedDefaultChannelIds),
-        b = h.filter((e) => !x.has(e.id)),
+        b = f.filter((e) => !x.has(e.id)),
         [v, O] = i.useState(!1);
     i.useEffect(() => {
-        f || a || (0, g.S)(t.id);
-    }, [t.id, f, a]);
+        h || a || (0, g.S)(t.id);
+    }, [t.id, h, a]);
     let y = (e) => {
         (0, s.ZDy)(async () => {
             let { default: i } = await n.e('35641').then(n.bind(n, 89216));
@@ -217,8 +217,8 @@ function w(e) {
     let { saveOnClose: t = !1 } = e,
         n = (0, l.e7)([b.Z], () => b.Z.getGuild()),
         a = (0, l.e7)([u.Z], () => u.Z.isLoading()),
-        o = (0, l.e7)([h.ZP], () => h.ZP.getChannels(null == n ? void 0 : n.id)),
-        c = (0, l.e7)([f.Z], () => f.Z.getCategories(null == n ? void 0 : n.id)),
+        o = (0, l.e7)([f.ZP], () => f.ZP.getChannels(null == n ? void 0 : n.id)),
+        c = (0, l.e7)([h.Z], () => h.Z.getCategories(null == n ? void 0 : n.id)),
         d = (0, l.e7)([O.Z], () => O.Z.advancedMode),
         m = i.useRef(null),
         [g, p] = i.useState(!1),

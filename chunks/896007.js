@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => f,
+    ZP: () => h,
     vE: () => p
 }),
     n(539854);
@@ -19,7 +19,7 @@ let { getSectionDefinition: m } = c.Z,
     };
 function p(e) {
     var t, n;
-    let { guild: c, canManageGuild: p, canViewAuditLog: f, canManageRoles: h, canManageBans: x, canAccessMembersPage: b, canViewGuildAnalytics: j, isOwner: _, isGuildAdmin: v, canManageGuildExpressions: O } = e,
+    let { guild: c, canManageGuild: p, canViewAuditLog: h, canManageRoles: f, canManageBans: x, canAccessMembersPage: b, canViewGuildAnalytics: j, isOwner: _, isGuildAdmin: v, canManageGuildExpressions: O } = e,
         C = () =>
             (0, a.X$)({
                 guild: c,
@@ -89,7 +89,7 @@ function p(e) {
             N.push(m(u.pNK.EMOJI, y)),
             N.push(m(u.pNK.STICKERS, y)),
             N.push(m(u.pNK.SOUNDBOARD, y))),
-        (p || h || b || v) &&
+        (p || f || b || v) &&
             (N.push({ section: g.DIVIDER }),
             N.push({
                 section: g.HEADER,
@@ -107,7 +107,7 @@ function p(e) {
         N.push(m(u.pNK.INTEGRATIONS, y)),
         N.push(m(u.pNK.APP_DIRECTORY, y));
     let I = !c.hasFeature(u.oNc.COMMUNITY) && ((0, l.Nb)(c.id) || (0, l.ze)(c.id));
-    (p || f || x || I) &&
+    (p || h || x || I) &&
         (N.push({ section: g.DIVIDER }),
         N.push({
             section: g.HEADER,
@@ -122,4 +122,4 @@ function p(e) {
         S = C();
     return (p || E || S) && (N.push({ section: g.DIVIDER }), N.push(m(u.pNK.COMMUNITY, y)), N.push(m(u.pNK.ONBOARDING, y)), N.push(m(u.pNK.ANALYTICS, y)), N.push(m(u.pNK.COMMUNITY_WELCOME, y)), N.push(m(u.pNK.DISCOVERY_LANDING_PAGE, y)), N.push(m(u.pNK.ROLE_SUBSCRIPTIONS, y)), N.push(m(u.pNK.GUILD_PRODUCTS, y)), N.push(m(u.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE, y))), N.push({ section: g.DIVIDER }), N.push(m(u.pNK.GUILD_PREMIUM, y)), N.push(m(u.pNK.GUILD_TEMPLATES, y)), N.push(m(u.pNK.DELETE, y)), N.filter(o.lm);
 }
-let f = { generateSections: p };
+let h = { generateSections: p };

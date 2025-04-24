@@ -44,8 +44,8 @@ function i(e, t) {
         e
     );
 }
-let o = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO_LOGO, r.jE.PDP_BACKGROUND, r.jE.PDP_LOGO, r.jE.COLLECTED_MODAL_BG, r.jE.MOBILE_BANNER, r.jE.MOBILE_BACKGROUND]),
-    s = ['intro', 'idle', 'reduced_motion', 'static', 'thumbnail'],
+let s = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO_LOGO, r.jE.PDP_BACKGROUND, r.jE.PDP_LOGO, r.jE.COLLECTED_MODAL_BG, r.jE.MOBILE_BANNER, r.jE.MOBILE_BACKGROUND]),
+    o = ['intro', 'idle', 'reduced_motion', 'static', 'thumbnail'],
     c = {
         max: 5000000,
         warn: 2000000
@@ -133,12 +133,12 @@ let o = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
                 addError: n
             });
         let l = new Set(t.collectionFiles.map((e) => e.name)),
-            i = Array.from(o).filter((e) => !l.has(e));
+            i = Array.from(s).filter((e) => !l.has(e));
         i.length > 0 && n('Missing required files', i);
-        let s = Object.values(r.jE)
-            .filter((e) => !o.has(e))
+        let o = Object.values(r.jE)
+            .filter((e) => !s.has(e))
             .filter((e) => !l.has(e));
-        s.length > 0 && a('Missing optional assets', s);
+        o.length > 0 && a('Missing optional assets', o);
     },
     y = (e) => {
         let { files: t, addError: n, addWarning: a } = e;
@@ -157,9 +157,9 @@ let o = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
                     addError: n
                 }),
                     j(r.aB.PROFILE_EFFECT, l, n, a);
-                let o = s.filter((e) => !i.some((t) => t.startsWith(e) && t.endsWith('.png'))).map((e) => ''.concat(t, '/').concat(e));
-                o.length > 0 && n('Missing required PFX files with prefix', o), i.some((e) => e.endsWith('.txt')) || n('PFX configs required - please include both exports! (exception: duplicate variant configs are optional)', [t]);
-                let c = i.filter((e) => !s.some((t) => e.startsWith(t)) && !e.endsWith('.txt')).map((e) => ''.concat(t, '/').concat(e));
+                let s = o.filter((e) => !i.some((t) => t.startsWith(e) && t.endsWith('.png'))).map((e) => ''.concat(t, '/').concat(e));
+                s.length > 0 && n('Missing required PFX files with prefix', s), i.some((e) => e.endsWith('.txt')) || n('PFX configs required - please include both exports! (exception: duplicate variant configs are optional)', [t]);
+                let c = i.filter((e) => !o.some((t) => e.startsWith(t)) && !e.endsWith('.txt')).map((e) => ''.concat(t, '/').concat(e));
                 c.length > 0 && a('Contains unrecognized files', c);
             });
     },
@@ -195,8 +195,8 @@ let o = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
     },
     N = () => {
         let [e, t] = a.useState(!1),
-            [n, o] = a.useState({}),
-            [s, c] = a.useState({}),
+            [n, s] = a.useState({}),
+            [o, c] = a.useState({}),
             d = a.useCallback(function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
                 c((n) => {
@@ -209,7 +209,7 @@ let o = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
             }, []),
             u = a.useCallback(function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-                o((n) => {
+                s((n) => {
                     var a;
                     let r = null != (a = n[e]) ? a : [];
                     return i(l({}, n), {
@@ -218,11 +218,11 @@ let o = new Set([r.jE.SHOP_ALL_BANNER_STATIC, r.jE.HERO_BANNER_STATIC, r.jE.HERO
                 });
             }, []),
             m = a.useCallback(() => {
-                t(!1), c({}), o({});
+                t(!1), c({}), s({});
             }, []);
         return {
             validationComplete: e,
-            errors: s,
+            errors: o,
             warnings: n,
             validateShopAssetPackage: a.useCallback(
                 async (e) => {

@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(981631),
     g = n(30513),
     p = n(200299),
-    f = n(388032),
-    h = n(722733);
+    h = n(388032),
+    f = n(722733);
 function x(e) {
     let { guild: t, canManageGuild: n } = e,
         x = t.hasFeature(m.oNc.INVITE_SPLASH),
@@ -46,7 +46,7 @@ function x(e) {
                     : null,
             disabled: !b,
             onChange: _,
-            hint: f.intl.string(f.t.uPvxqK),
+            hint: h.intl.string(h.t.uPvxqK),
             enabled: b,
             maxFileSizeBytes: p.B,
             onFileSizeError: () => (0, a.Z)(p.B)
@@ -56,7 +56,7 @@ function x(e) {
         : (0, r.jsx)(l.P3F, {
               'aria-hidden': !0,
               tabIndex: -1,
-              className: h.upsell,
+              className: f.upsell,
               onClick: v,
               children: O
           });

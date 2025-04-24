@@ -14,10 +14,10 @@ function g(e) {
         n = i.useId(),
         g = (0, l.e7)([o.Z], () => null != t && o.Z.can(u.Plq.MANAGE_GUILD, t), [t]),
         p = t.hasFeature(u.oNc.COMMUNITY),
-        [f, h] = i.useState(t.hasFeature(u.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
+        [h, f] = i.useState(t.hasFeature(u.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)),
         x = i.useCallback(
             async (e) => {
-                h(e), await (0, a.fp)(t, e);
+                f(e), await (0, a.fp)(t, e);
             },
             [t]
         );
@@ -49,7 +49,7 @@ function g(e) {
                       className: m.buttonContainer,
                       children: (0, r.jsx)(s.rsf, {
                           id: n,
-                          checked: f,
+                          checked: h,
                           onChange: x,
                           disabled: !g
                       })

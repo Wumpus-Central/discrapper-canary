@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(481060),
     g = n(541716),
     p = n(752305),
-    f = n(893718),
-    h = n(592125),
+    h = n(893718),
+    f = n(592125),
     x = n(984933),
     b = n(540457),
     j = n(681460),
@@ -65,7 +65,7 @@ function N(e, t) {
 }
 let I = 'RULE';
 function E(e) {
-    let { rule: t, rulesChannel: n, index: l, onChange: a, onKeyDown: o, onClear: d, onRuleReorder: h, isDropHovered: x, focused: b, onFocus: j, previewEnabled: v, isDragEnabled: y } = e,
+    let { rule: t, rulesChannel: n, index: l, onChange: a, onKeyDown: o, onClear: d, onRuleReorder: f, isDropHovered: x, focused: b, onFocus: j, previewEnabled: v, isDragEnabled: y } = e,
         N = i.useRef(null),
         E = i.useRef(null),
         [{ textValue: S, richValue: T }, P] = i.useState((0, p.eK)(t.value)),
@@ -76,7 +76,7 @@ function E(e) {
                 index: l
             },
             end: (e, t) => {
-                null == e || t.didDrop() || h(e.rule, null, !0);
+                null == e || t.didDrop() || f(e.rule, null, !0);
             }
         }),
         [, Z] = (0, u.L)({
@@ -89,10 +89,10 @@ function E(e) {
                 if (null == i || null == s) return;
                 let a = (i.bottom - i.top) / 2,
                     o = s.y - i.top;
-                (r < l && o < a) || (r > l && o > a) || h(e.rule, l, !1);
+                (r < l && o < a) || (r > l && o > a) || f(e.rule, l, !1);
             },
             drop: (e) => {
-                h(e.rule, l, !0);
+                f(e.rule, l, !0);
             }
         });
     if (
@@ -122,7 +122,7 @@ function E(e) {
             children: [
                 (0, r.jsx)(m.P3F, {
                     onMouseDown: () => j(l),
-                    children: (0, r.jsx)(f.Z, {
+                    children: (0, r.jsx)(h.Z, {
                         innerClassName: C.rulesTextAreaInput,
                         type: g.Ie.RULES_INPUT,
                         textValue: S,
@@ -182,10 +182,10 @@ function S(e) {
     let { rules: t, setRules: n, guild: l } = e,
         s = l.rulesChannelId,
         a = l.hasFeature(v.oNc.PREVIEW_ENABLED),
-        c = (0, d.e7)([h.Z], () => (null != s ? h.Z.getChannel(s) : null)),
+        c = (0, d.e7)([f.Z], () => (null != s ? f.Z.getChannel(s) : null)),
         u = (0, d.e7)([x.ZP], () => x.ZP.getDefaultChannel(l.id)),
         [g, p] = i.useState(null),
-        [f, I] = i.useState(null),
+        [h, I] = i.useState(null),
         S = i.useCallback(
             (e) => {
                 if (t.length !== _.X2)
@@ -281,7 +281,7 @@ function S(e) {
                             onClear: () => w(n),
                             onRuleReorder: R,
                             isDropHovered: n === g,
-                            focused: n === f,
+                            focused: n === h,
                             onFocus: I,
                             previewEnabled: null == a || a,
                             isDragEnabled: t.length > 1

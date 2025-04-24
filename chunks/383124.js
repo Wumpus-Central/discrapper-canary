@@ -14,11 +14,11 @@ function m(e) {
             coverImageHeight: 336,
             coverImageWidth: 252
         }),
-        f = (0, o.e7)([u.Z], () => {
+        h = (0, o.e7)([u.Z], () => {
             var e, n;
             return null != (n = null == (e = u.Z.getDetectableGame(t)) ? void 0 : e.name) ? n : '';
         }),
-        h = i.useCallback(() => {
+        f = i.useCallback(() => {
             null == l || l(t);
         }, [t, l]),
         x = i.useMemo(
@@ -32,10 +32,10 @@ function m(e) {
                         })
                       : (0, r.jsx)('img', {
                             className: d.gameImage,
-                            alt: f,
+                            alt: h,
                             src: p
                         }),
-            [p, g, f]
+            [p, g, h]
         );
     return (0, r.jsxs)('div', {
         className: s()(d.selectedGame, {
@@ -46,7 +46,7 @@ function m(e) {
             (0, r.jsxs)(a.P3F, {
                 'aria-disabled': m,
                 tabIndex: m ? -1 : 0,
-                onClick: m ? void 0 : h,
+                onClick: m ? void 0 : f,
                 className: s()(d.gameImageBackground, {
                     [d.gameImageLoading]: g,
                     [d.disabled]: m
@@ -67,7 +67,7 @@ function m(e) {
                 className: d.gameName,
                 variant: 'text-xs/medium',
                 color: 'header-primary',
-                children: f
+                children: h
             })
         ]
     });

@@ -24,13 +24,13 @@ function d() {
             };
             (0, a.pV)(e.id, t);
         }, [e, d]),
-        f = i.useCallback(() => {
+        h = i.useCallback(() => {
             null != t && c.Z.init(t);
         }, [t]);
     return (0, r.jsx)(s.Z, {
         submitting: m,
         errorMessage: g,
         onSave: p,
-        onReset: f
+        onReset: h
     });
 }

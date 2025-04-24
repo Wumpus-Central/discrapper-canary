@@ -7,8 +7,8 @@ var a = n(200651),
     r = n(704215),
     l = n(481060),
     i = n(570140),
-    o = n(605236),
-    s = n(592125),
+    s = n(605236),
+    o = n(592125),
     c = n(305587);
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -37,8 +37,8 @@ function d(e) {
 }
 function u(e) {
     let { channelId: t, location: n } = e,
-        a = s.Z.getChannel(t),
-        l = (0, o.un)(r.z.USER_DM_MUTE_FEEDBACK);
+        a = o.Z.getChannel(t),
+        l = (0, s.un)(r.z.USER_DM_MUTE_FEEDBACK);
     null != a &&
         a.isDM() &&
         !l &&

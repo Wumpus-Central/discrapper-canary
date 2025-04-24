@@ -17,8 +17,8 @@ var r = n(200651),
     m = n(442837),
     g = n(481060),
     p = n(668781),
-    f = n(80932),
-    h = n(225433),
+    h = n(80932),
+    f = n(225433),
     x = n(599059),
     b = n(327802),
     j = n(110924),
@@ -69,7 +69,7 @@ function F(e) {
     }
     return e;
 }
-let z = u().throttle(f.OQ, 1000),
+let z = u().throttle(h.OQ, 1000),
     H = (e) => {
         let { guildId: t, emoji: n, onEdit: l, editingDisabled: a = !1 } = e,
             [o, c] = i.useState(n.name),
@@ -129,7 +129,7 @@ let z = u().throttle(f.OQ, 1000),
                                 if (o !== n.name) {
                                     let e = w.ZP.sanitizeEmojiName(o);
                                     e !== n.name &&
-                                        (0, f.dv)({
+                                        (0, h.dv)({
                                             guildId: t,
                                             emojiId: n.id,
                                             name: e
@@ -170,10 +170,10 @@ let z = u().throttle(f.OQ, 1000),
                         })
                     }),
                 !a &&
-                    (0, r.jsx)(h.Z, {
+                    (0, r.jsx)(f.Z, {
                         className: U.emojiRemove,
                         onClick: () => {
-                            (0, f.RE)(t, n.id).catch((e) => {
+                            (0, h.RE)(t, n.id).catch((e) => {
                                 let { status: t } = e;
                                 429 === t &&
                                     p.Z.show({
@@ -328,19 +328,19 @@ let z = u().throttle(f.OQ, 1000),
                 revision: k.Z.getEmojiRevision(e.id),
                 emojis: k.Z.getEmojis(e.id)
             })),
-            f = (0, j.Z)(c),
-            [h, x] = i.useState(!1),
+            h = (0, j.Z)(c),
+            [f, x] = i.useState(!1),
             [y, P] = i.useState(!1),
             w = i.useRef(null);
         i.useEffect(() => {
-            h && q();
-        }, [h]),
+            f && q();
+        }, [f]),
             i.useEffect(() => {
                 z(e.id);
             }, [e.id]),
             i.useEffect(() => {
-                null != f && f < c && z(e.id);
-            }, [c, f, e.id]);
+                null != h && h < c && z(e.id);
+            }, [c, h, e.id]);
         let [Z, B] = i.useMemo(() => {
                 let t = null == p ? void 0 : p.filter((t) => !(0, N.Kt)(t, e.id)),
                     [n, r] = u().partition(t, (e) => !e.animated);

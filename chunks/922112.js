@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(8426),
     g = n(969632),
     p = n(388032),
-    f = n(773100);
-function h(e) {
+    h = n(773100);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -103,7 +103,7 @@ let b = function (e) {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            x(h({}, n), {
+                            x(f({}, n), {
                                 guildId: t,
                                 resourceChannel: l,
                                 onSave: Z,
@@ -117,34 +117,34 @@ let b = function (e) {
     return null == N
         ? null
         : (0, r.jsxs)('div', {
-              className: f.resourceChannelContainer,
+              className: h.resourceChannelContainer,
               children: [
                   (0, r.jsxs)('div', {
-                      className: s()(f.resourceChannel, {
-                          [f.dropIndicatorBefore]: null != P && b < P,
-                          [f.dropIndicatorAfter]: null != P && b > P,
-                          [f.resourceChannelError]: null != I
+                      className: s()(h.resourceChannel, {
+                          [h.dropIndicatorBefore]: null != P && b < P,
+                          [h.dropIndicatorAfter]: null != P && b > P,
+                          [h.resourceChannelError]: null != I
                       }),
                       ref: (e) => {
                           T(w(e));
                       },
                       children: [
                           (0, r.jsx)('div', {
-                              className: f.dragContainer,
+                              className: h.dragContainer,
                               onMouseEnter: () => R(!0),
                               onMouseLeave: () => R(!1),
                               children: (0, r.jsx)(a.Vni, {
                                   size: 'xs',
                                   color: 'currentColor',
-                                  className: f.dragIcon
+                                  className: h.dragIcon
                               })
                           }),
                           null != S &&
                               (0, r.jsx)('div', {
-                                  className: f.iconWrapper,
+                                  className: h.iconWrapper,
                                   children: (0, r.jsx)('img', {
                                       src: S,
-                                      className: f.icon,
+                                      className: h.icon,
                                       width: 32,
                                       height: 32,
                                       alt: '',
@@ -152,17 +152,17 @@ let b = function (e) {
                                   })
                               }),
                           (0, r.jsxs)('div', {
-                              className: f.resourceChannelContent,
+                              className: h.resourceChannelContent,
                               children: [
                                   (0, r.jsx)(a.Text, {
-                                      className: f.resourceChannelTitle,
+                                      className: h.resourceChannelTitle,
                                       variant: 'text-md/semibold',
                                       color: 'header-primary',
                                       children: O
                                   }),
                                   !E &&
                                       (0, r.jsx)(a.Text, {
-                                          className: f.resourceChannelDescription,
+                                          className: h.resourceChannelDescription,
                                           variant: 'text-xs/medium',
                                           color: 'text-muted',
                                           lineClamp: 1,
@@ -175,9 +175,9 @@ let b = function (e) {
                               children: (e) =>
                                   (0, r.jsxs)(
                                       a.zxk,
-                                      x(h({}, e), {
-                                          className: f.resourceChannelEditButton,
-                                          innerClassName: f.resourceChannelEditButtonInner,
+                                      x(f({}, e), {
+                                          className: h.resourceChannelEditButton,
+                                          innerClassName: h.resourceChannelEditButtonInner,
                                           size: a.zxk.Sizes.MIN,
                                           onClick: k,
                                           children: [

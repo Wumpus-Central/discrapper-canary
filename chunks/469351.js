@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(411667),
     g = n(434404),
     p = n(962086),
-    f = n(225675),
-    h = n(703656),
+    h = n(225675),
+    f = n(703656),
     x = n(430824),
     b = n(594174),
     j = n(63063),
@@ -40,12 +40,12 @@ function S(e) {
         g.Z.close();
         let t = { [e.id]: e };
         (0, p.iD)(T.id, {
-            type: f.z.SERVER_SHOP,
+            type: h.z.SERVER_SHOP,
             roles: t,
             initialTab: 'guild_products',
             returnToSection: y.pNK.GUILD_PRODUCTS
         }),
-            (0, h.uL)(y.Z5c.CHANNEL(T.id, N.oC.GUILD_SHOP));
+            (0, f.uL)(y.Z5c.CHANNEL(T.id, N.oC.GUILD_SHOP));
     }, [T]);
     if (!S || R) return (0, r.jsx)(a.$jN, {});
     if (null == T) return null;
