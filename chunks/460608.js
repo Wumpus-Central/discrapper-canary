@@ -7,9 +7,10 @@ var r = t(200651),
     l = t(179360),
     c = t(899667),
     u = t(430824),
-    d = t(659679),
-    p = t(388032),
-    m = t(211886);
+    d = t(709054),
+    p = t(659679),
+    m = t(388032),
+    x = t(211886);
 function _(e) {
     let { guildId: n } = e,
         t = (0, a.Wu)(
@@ -20,27 +21,27 @@ function _(e) {
             },
             [n]
         ),
-        _ = i.useMemo(() => t.sort((e, n) => (e.id < n.id ? 1 : -1)), [t]),
-        x = (0, a.e7)([u.Z], () => {
+        _ = i.useMemo(() => t.sort((e, n) => (d.default.extractTimestamp(e.id) < d.default.extractTimestamp(n.id) ? 1 : -1)), [t]),
+        f = (0, a.e7)([u.Z], () => {
             var e;
             return null == (e = u.Z.getGuild(n)) ? void 0 : e.premiumSubscriberCount;
         });
     return (i.useEffect(() => {
-        x !== t.length && (0, l.C0)(n);
-    }, [n, x, t.length]),
+        f !== t.length && (0, l.C0)(n);
+    }, [n, f, t.length]),
     0 === _.length)
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(s.X6, {
-                      className: m.header,
+                      className: x.header,
                       variant: 'eyebrow',
-                      children: p.intl.string(p.t.yM9Krq)
+                      children: m.intl.string(m.t.yM9Krq)
                   }),
                   (0, r.jsx)(o.zJ, {
-                      className: m.container,
+                      className: x.container,
                       fade: !0,
-                      children: _.map((e, n) => (0, r.jsx)(d.Z, { boost: e }, 'boost-activity-'.concat(n)))
+                      children: _.map((e, n) => (0, r.jsx)(p.Z, { boost: e }, 'boost-activity-'.concat(n)))
                   })
               ]
           });
