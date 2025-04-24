@@ -168,17 +168,27 @@ class V extends (r = s.yh) {
             }
         return null;
     }
-    getFractionalPremium(e) {
-        var t;
-        let n = [],
-            r = new Date();
+    getFractionalPremium() {
+        var e;
+        let { includeEnded: t = !1, excludeReverseTrial: n = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            r = [],
+            i = new Date();
         return (
-            null == (t = this.getForApplication(p.CL)) ||
-                t.forEach((t) => {
-                    let i = null != t.endsAt && t.endsAt < r;
-                    t.type === _.qc2.FRACTIONAL_REDEMPTION && (!i || e) && n.push(t);
+            null == (e = this.getForApplication(p.CL)) ||
+                e.forEach((e) => {
+                    let a = null != e.endsAt && e.endsAt < i;
+                    e.type !== _.qc2.FRACTIONAL_REDEMPTION || (a && !t) || (n && e.sourceType === _.kNB.REVERSE_TRIAL) || r.push(e);
                 }),
-            n
+            r
+        );
+    }
+    isFractionalPremiumActive() {
+        let { excludeReverseTrial: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        return (
+            this.getFractionalPremium({
+                includeEnded: !1,
+                excludeReverseTrial: e
+            }).length > 0
         );
     }
     getUnactivatedFractionalPremiumUnits() {

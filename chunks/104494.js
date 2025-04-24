@@ -40,9 +40,10 @@ function f(e, t) {
 }
 function _() {
     var e, t;
-    let n = f(c.hs),
-        r = f(c.RU),
-        i = f(c.rB),
-        a = f(c.ih);
-    return null != (t = null != (e = null != n ? n : r) ? e : i) ? t : a;
+    let n = s.Z.canFractionalPremiumUserUseOffer(),
+        r = f(c.hs, n),
+        i = f(c.RU, n),
+        a = f(c.rB, n),
+        o = f(c.ih, n);
+    return null != (t = null != (e = null != r ? r : i) ? e : a) ? t : o;
 }

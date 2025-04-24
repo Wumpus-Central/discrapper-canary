@@ -1,6 +1,6 @@
 n.d(t, {
-    B: () => d,
-    w: () => f
+    B: () => c,
+    w: () => u
 }),
     n(388685);
 var r = n(192379),
@@ -8,33 +8,28 @@ var r = n(192379),
     a = n(846519),
     o = n(594174),
     s = n(431),
-    l = n(580130),
-    c = n(74538),
-    u = n(249689);
-function d(e) {
+    l = n(74538);
+function c(e) {
     return null != e && null != e.expires_at && Date.now() > Date.parse(e.expires_at);
 }
-function f(e) {
-    let t = o.default.getCurrentUser(),
-        n = (0, i.e7)([s.Z], () => s.Z.getUserTrialOffer(e)),
-        [f, _] = r.useState(d(n)),
-        p = (0, i.e7)([o.default], () => (0, c.I5)(o.default.getCurrentUser())),
-        h = (0, i.Wu)([l.Z], () => l.Z.getFractionalPremium(!1)).length > 0,
-        m = !p || (h && (0, u.C)('use-trial-offer', t));
+function u(e) {
+    let t = (0, i.e7)([s.Z], () => s.Z.getUserTrialOffer(e)),
+        [n, u] = r.useState(c(t)),
+        d = !(0, i.e7)([o.default], () => (0, l.I5)(o.default.getCurrentUser())) || s.Z.canFractionalPremiumUserUseOffer();
     return (
         r.useEffect(() => {
-            if (null != n && null != n.expires_at) {
+            if (null != t && null != t.expires_at) {
                 let e = new a.V7(),
-                    t = () => {
-                        let r = null != n.expires_at ? Date.parse(n.expires_at) - Date.now() : 0;
+                    r = () => {
+                        let i = null != t.expires_at ? Date.parse(t.expires_at) - Date.now() : 0;
                         null == e ||
-                            e.start(r, () => {
-                                !f && d(n) ? _(!0) : t();
+                            e.start(i, () => {
+                                !n && c(t) ? u(!0) : r();
                             });
                     };
-                return t(), () => e.stop();
+                return r(), () => e.stop();
             }
-        }, [f, n]),
-        !f && m ? n : null
+        }, [n, t]),
+        !n && d ? t : null
     );
 }
