@@ -1,29 +1,28 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => b });
 var i = n(200651);
 n(192379);
 var r = n(13245),
     o = n(45114),
     l = n(937889),
-    a = n(864060),
-    s = n(703656),
-    c = n(460181),
-    u = n(974180),
-    d = n(358085),
-    p = n(998502),
-    h = n(145597),
-    f = n(610394),
-    m = n(516542),
-    g = n(618373),
-    y = n(620954),
-    O = n(987650),
-    v = n(981631),
-    b = n(388032);
-function _(e, t, n, _) {
-    var E;
-    let { icon: x, title: I, body: j } = (0, a.Xi)(e, t, n),
-        { trackView: C, trackClick: S } = (0, y.R)(O.n0.TextChat, {
-            notif_type: O.n0.TextChat,
-            notif_user_id: null == (E = t.author) ? void 0 : E.id,
+    a = n(622733),
+    s = n(864060),
+    c = n(703656),
+    u = n(358085),
+    d = n(998502),
+    p = n(145597),
+    h = n(610394),
+    f = n(516542),
+    m = n(618373),
+    g = n(620954),
+    y = n(987650),
+    O = n(981631),
+    v = n(388032);
+function b(e, t, n, b) {
+    var _;
+    let { icon: E, title: x, body: I } = (0, s.Xi)(e, t, n),
+        { trackView: j, trackClick: C } = (0, g.R)(y.n0.TextChat, {
+            notif_type: y.n0.TextChat,
+            notif_user_id: null == (_ = t.author) ? void 0 : _.id,
             message_id: t.id,
             message_type: t.type,
             guild_id: e.guild_id,
@@ -31,8 +30,8 @@ function _(e, t, n, _) {
             channel_type: e.type
         });
     return {
-        icon: x,
-        title: I,
+        icon: E,
+        title: x,
         body:
             t.content.length > 0
                 ? (0, l.ZP)(t, {
@@ -40,27 +39,27 @@ function _(e, t, n, _) {
                       formatInline: !0,
                       hideSimpleEmbedContent: !1
                   }).content
-                : j,
-        hint: (e, t) => (e && !t ? null : (0, g.Q)((0, y.P)(), b.t.ykjOAA, b.intl.string(b.t.jZkzVF))),
+                : I,
+        hint: (e, t) => (e && !t ? null : (0, m.Q)((0, g.P)(), v.t.ykjOAA, v.intl.string(v.t.jZkzVF))),
         maxBodyLines: 2,
         renderFooter: (n, r, o) =>
             n && !o
-                ? (0, i.jsx)(m.Z, {
+                ? (0, i.jsx)(f.Z, {
                       id: r,
                       replyToMessageId: t.id,
                       channel: e,
-                      onSend: () => S('send')
+                      onSend: () => C('send')
                   })
                 : null,
         onNotificationShow: () => {
-            _ && (0, c.GN)(u.Ay, u.yk), C();
+            b && (0, a.t)(t), j();
         },
         onNotificationClick: () => {
-            let n = (0, h.getPID)();
-            (0, o.In)(e.id, !0, !0, t.id, { section: v.jXE.OVERLAY }), f.ZP.isInputLocked(n) ? (S('unlock'), r.Z.setInputLocked(!1, n)) : (S('jump'), (0, s.uL)(v.Z5c.CHANNEL(e.guild_id, e.id, t.id)), d.isPlatformEmbedded && p.ZP.focus());
+            let n = (0, p.getPID)();
+            (0, o.In)(e.id, !0, !0, t.id, { section: O.jXE.OVERLAY }), h.default.isInputLocked(n) ? (C('unlock'), r.Z.setInputLocked(!1, n)) : (C('jump'), (0, c.uL)(O.Z5c.CHANNEL(e.guild_id, e.id, t.id)), u.isPlatformEmbedded && d.ZP.focus());
         },
         onDismissClick: () => {
-            S('dismiss');
+            C('dismiss');
         }
     };
 }
