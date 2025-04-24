@@ -1,59 +1,52 @@
 n.d(t, {
-    Dp: () => E,
-    Lv: () => I,
-    NH: () => m,
-    Ot: () => u,
-    R4: () => f,
-    S7: () => l.S,
-    Ts: () => g,
-    Uo: () => h,
-    V6: () => y,
-    V_: () => b,
-    XZ: () => d,
-    a_: () => s.a,
-    cd: () => _,
-    dr: () => c,
-    l$: () => O,
-    tD: () => p,
-    tt: () => S,
-    v6: () => v
+    Dp: () => g,
+    NH: () => h,
+    Ot: () => c,
+    R4: () => d,
+    S7: () => s.S,
+    Ts: () => m,
+    Uo: () => p,
+    V6: () => b,
+    V_: () => E,
+    XZ: () => u,
+    a_: () => o.a,
+    cd: () => f,
+    dr: () => l,
+    tD: () => _,
+    v6: () => y
 }),
     n(388685);
-var r = n(754700),
-    i = n(758846),
-    a = n(70956),
-    o = n(497505),
-    s = n(438954),
-    l = n(670081),
-    c = (function (e) {
+var r = n(758846),
+    i = n(70956),
+    a = n(497505),
+    o = n(438954),
+    s = n(670081),
+    l = (function (e) {
         return (e.ACTIVITY_PANEL = 'quests_bar_activity_panel'), (e.QUESTS_MANAGER = 'quests_manager'), (e.QUESTS_CONSOLE_OPTIMISTIC_UPDATES_MANAGER = 'quests_console_optimistic_updates_manager'), (e.USER_SETTINGS_GIFT_INVENTORY = 'user_settings_gift_inventory'), (e.USER_SETTINGS_SEARCH_GIFT_INVENTORY = 'user_settings_search_gift_inventory'), (e.USE_QUESTS = 'use_quests'), (e.STREAM_SOURCE_SELECT = 'stream_source_select'), (e.MEMBERS_LIST = 'members_list'), (e.QUESTS_BAR = 'quests_bar'), (e.QUESTS_BAR_MOBILE = 'quests_bar_mobile'), (e.REWARD_CODE_MODAL = 'reward_code_modal'), (e.INGAME_REWARD_MODAL = 'ingame_reward_modal'), (e.QUEST_PREVIEW_TOOL = 'quest_preview_tool'), (e.QUESTS_CARD = 'quests_card'), (e.QUESTS_STORE = 'quests_store'), (e.QUEST_CHANNEL_CALL_HEADER = 'quests_channel_call_header'), (e.QUEST_HOME_DESKTOP = 'quest_home_desktop'), (e.QUEST_HOME_MOBILE = 'quest_home_mobile'), (e.QUEST_PROGRESS_BAR = 'quest_progress_bar'), (e.EMBED_MOBILE = 'embed_mobile'), (e.EMBED_DESKTOP = 'embed_desktop'), (e.QUEST_CONTEXT_MENU = 'context_menu'), (e.CODED_LINK = 'coded_link'), (e.QUEST_DISCLOSURE_MODAL = 'quest_disclosure_modal'), (e.DISCOVERY_SIDEBAR = 'discovery_sidebar'), (e.DISCOVERY_COMPASS = 'discovery_compass'), (e.BADGE = 'badge'), (e.VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK = 'virtual_currency_earned_orbs_coachmark'), (e.COLLECTIBLES_SHOP_HEADER_BAR = 'collectibles_shop_header_bar'), (e.ORBS_ANNOUNCEMENT_MODAL = 'orbs_announcement_modal'), (e.CONFLICT_CHECKS = 'conflict_checks'), (e.VIDEO_MODAL = 'video_modal'), (e.VIDEO_MODAL_MOBILE = 'video_modal_mobile'), e;
     })({});
-let u = a.Z.Millis.MINUTE * i.c.ConsecutiveHeartbeatPeriodMinutes,
-    d = {
+let c = i.Z.Millis.MINUTE * r.c.ConsecutiveHeartbeatPeriodMinutes,
+    u = {
         tension: 900,
         friction: 45,
         clamp: !0
     },
-    f = {
+    d = {
         tension: 360,
         friction: 30,
         clamp: !0
     };
-var _ = (function (e) {
+var f = (function (e) {
     return (e.CONSOLE = 'CONSOLE'), (e.DESKTOP = 'DESKTOP'), e;
 })({});
-let p = 'https://cdn.discordapp.com/quests/',
-    h = 'https://cdn.discordapp.com/assets/quests/';
-var m = (function (e) {
+let _ = 'https://cdn.discordapp.com/quests/',
+    p = 'https://cdn.discordapp.com/assets/quests/';
+var h = (function (e) {
     return (e.COLLAPSED = 'collapsed'), (e.EXPANDED = 'expanded'), (e.CLOSED = 'closed'), (e.SOFT_DISMISSED = 'soft-dismissed'), (e.RESET_TO_PREVIOUS = 'reset-to-previous'), e;
 })({});
-let g = '545364944258990091',
-    E = '{reward_code}';
-var b = (function (e) {
+let m = '545364944258990091',
+    g = '{reward_code}';
+var E = (function (e) {
     return (e.EXCLUDED_QUEST = 'excluded_quest'), (e.UNKNOWN_QUEST = 'unknown_quest'), e;
 })({});
-let y = '1333839522189938740',
-    v = new Set([o.Ok.DESKTOP_ACCOUNT_PANEL_AREA, o.Ok.MOBILE_HOME_DOCK_AREA]),
-    O = new Set([r.X.STREAM_ON_DESKTOP, r.X.PLAY_ON_DESKTOP, r.X.PLAY_ON_XBOX, r.X.PLAY_ON_PLAYSTATION, r.X.PLAY_ON_DESKTOP_V2]),
-    I = new Set([r.X.STREAM_ON_DESKTOP, r.X.PLAY_ON_DESKTOP, r.X.PLAY_ON_XBOX, r.X.PLAY_ON_PLAYSTATION, r.X.PLAY_ON_DESKTOP_V2]),
-    S = new Set([r.X.STREAM_ON_DESKTOP, r.X.PLAY_ON_DESKTOP, r.X.PLAY_ON_XBOX, r.X.PLAY_ON_PLAYSTATION, r.X.PLAY_ON_DESKTOP_V2]);
+let b = '1333839522189938740',
+    y = new Set([a.Ok.DESKTOP_ACCOUNT_PANEL_AREA, a.Ok.MOBILE_HOME_DOCK_AREA]);
