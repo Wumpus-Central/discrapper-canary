@@ -44666,6 +44666,10 @@ div.mobilePushContainer__3d3b0 {
     z-index: 1
 }
 
+.theme-light .username_e5de78 {
+    filter: brightness(75%)
+}
+
 .convenienceGradient_e5de78:after {
     background: inherit;
     -webkit-background-clip: text;
