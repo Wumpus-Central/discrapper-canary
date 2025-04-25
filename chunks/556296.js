@@ -195,7 +195,7 @@ function J(e) {
                 a
             )
         ),
-        d.Z.validateKeybind((0, y.BB)(e.shortcut));
+        d.Z.validateKeybind((0, y.BB)(t));
 }
 function $(e) {
     let t = N(

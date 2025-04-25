@@ -1,9 +1,9 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var i,
-    l = n(392711),
-    r = n.n(l),
-    o = n(442837),
-    s = n(570140),
+    r = n(392711),
+    l = n.n(r),
+    s = n(442837),
+    o = n(570140),
     a = n(598077),
     u = n(594174),
     c = n(388380),
@@ -23,20 +23,20 @@ function f(e, t, n) {
 }
 let g = {},
     p = 0,
-    h = !1,
+    O = !1,
     y = !1;
-function O(e) {
+function h(e) {
     var t;
     let n = null != e.contact_names && e.contact_names.length >= 2 ? e.contact_names.slice(0, 2) : [];
     return {
         key: e.suggested_user.id,
-        name: null == (t = r().first(e.reasons)) ? void 0 : t.name,
+        name: null == (t = l().first(e.reasons)) ? void 0 : t.name,
         user: new a.Z(e.suggested_user),
         mutualFriendsCount: e.mutual_friends_count,
         contactNames: n
     };
 }
-class N extends (i = o.ZP.Store) {
+class v extends (i = s.ZP.Store) {
     initialize() {
         this.waitFor(u.default);
     }
@@ -53,14 +53,14 @@ class N extends (i = o.ZP.Store) {
         return g[e];
     }
 }
-f(N, 'displayName', 'FriendSuggestionStore');
-let v = new N(s.Z, {
+f(v, 'displayName', 'FriendSuggestionStore');
+let m = new v(o.Z, {
     CONNECTION_OPEN: function (e) {
-        (g = {}), (p = e.friendSuggestionCount) > 0 ? ((y = !0), !h && y && ((h = !0), (y = !1), c.Z.fetch())) : (0, d.Z)();
+        (g = {}), (p = e.friendSuggestionCount) > 0 ? ((y = !0), !O && y && ((O = !0), (y = !1), c.Z.fetch())) : (0, d.Z)();
     },
     FRIEND_SUGGESTION_CREATE: function (e) {
         var t, n;
-        let i = O(e.suggestion);
+        let i = h(e.suggestion);
         if (null != g[i.key]) return !1;
         p++,
             (t = (function (e) {
@@ -99,16 +99,16 @@ let v = new N(s.Z, {
     },
     LOAD_FRIEND_SUGGESTIONS_SUCCESS: function (e) {
         var t;
-        (h = !1),
+        (O = !1),
             (t = e.suggestions),
-            (g = r()
+            (g = l()
                 .chain(t)
-                .map((e) => O(e))
+                .map((e) => h(e))
                 .keyBy((e) => e.key)
                 .value()),
-            (p = r().keys(g).length);
+            (p = l().keys(g).length);
     },
     LOAD_FRIEND_SUGGESTIONS_FAILURE: function () {
-        (h = !1), (g = {});
+        (O = !1), (g = {});
     }
 });

@@ -318,7 +318,7 @@ let v = 'migrated',
             defaultSettings: {
                 anchor: {
                     left: void 0,
-                    top: O,
+                    top: 6 * O,
                     bottom: void 0,
                     right: I
                 },

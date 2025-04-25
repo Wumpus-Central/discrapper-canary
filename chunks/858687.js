@@ -1,23 +1,23 @@
-n.d(t, { Z: () => d });
+n.d(t, { Z: () => u });
 var r = n(200651),
     i = n(192379),
-    o = n(481060),
+    a = n(481060),
     l = n(493683),
-    a = n(699516),
-    c = n(594174),
-    s = n(933557),
-    u = n(388032);
-function d(e, t) {
-    let d = i.useCallback(() => {
-        let i = (0, s.F6)(e, c.default, a.Z),
-            d = u.intl.formatToPlainString(u.t.hJ5Ap6, { name: i }),
-            b = u.intl.format(u.t.SSIVOj, { name: i });
-        e.isManaged() && ((d = u.intl.formatToPlainString(u.t.hVGjER, { name: i })), (b = u.intl.format(u.t.IK1Qvr, { name: i })));
-        let f = function (n) {
+    o = n(699516),
+    s = n(594174),
+    c = n(933557),
+    d = n(388032);
+function u(e, t) {
+    let u = i.useCallback(() => {
+        let i = (0, c.F6)(e, s.default, o.Z),
+            u = d.intl.formatToPlainString(d.t.hJ5Ap6, { name: i }),
+            f = d.intl.format(d.t.SSIVOj, { name: i });
+        e.isManaged() && ((u = d.intl.formatToPlainString(d.t.hVGjER, { name: i })), (f = d.intl.format(d.t.IK1Qvr, { name: i })));
+        let p = function (n) {
             let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
             l.Z.closePrivateChannel(e.id, t, r);
         };
-        (0, o.ZDy)(async () => {
+        (0, a.ZDy)(async () => {
             let { default: e } = await n.e('14604').then(n.bind(n, 960670));
             return (t) =>
                 (0, r.jsx)(
@@ -48,19 +48,19 @@ function d(e, t) {
                         return e;
                     })(
                         {
-                            header: d,
-                            body: b,
-                            onSubmit: f
+                            header: u,
+                            body: f,
+                            onSubmit: p
                         },
                         t
                     )
                 );
         });
     }, [e, t]);
-    return (0, r.jsx)(o.sNh, {
+    return (0, r.jsx)(a.sNh, {
         id: 'leave-channel',
-        label: u.intl.string(u.t['26C4oq']),
-        action: d,
+        label: d.intl.string(d.t['26C4oq']),
+        action: u,
         color: 'danger'
     });
 }

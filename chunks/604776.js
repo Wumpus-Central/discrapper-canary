@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var a = n(200651),
     r = n(192379),
     l = n(120356),
@@ -108,13 +108,13 @@ let g = (e) => {
             value: s.a.PREMIUM_TIER_2_3_DAY
         }
     ];
-function N() {
+function E() {
     let [e, t] = r.useState(!1),
         [n, l] = r.useState(!1),
         [o, d] = r.useState(s.a.PREMIUM_TIER_2_1_HOUR),
         [m, p] = r.useState([]),
-        [N, E] = r.useState([]),
-        [T, S] = r.useState([]),
+        [E, N] = r.useState([]),
+        [S, T] = r.useState([]),
         P = async (e) => {
             await _(e), await I();
         },
@@ -140,7 +140,7 @@ function N() {
             I();
         }, []),
         r.useEffect(() => {
-            E(R(m)), S(Z(m));
+            N(R(m)), T(Z(m));
         }, [m]),
         (0, a.jsx)(c.zJl, {
             className: f.panel,
@@ -259,7 +259,7 @@ function N() {
                                     })
                                 ]
                             }),
-                            N.length > 0 &&
+                            E.length > 0 &&
                                 (0, a.jsxs)('div', {
                                     children: [
                                         (0, a.jsx)(c.Text, {
@@ -268,7 +268,7 @@ function N() {
                                             children: 'Active premium'
                                         }),
                                         (0, a.jsx)('div', {
-                                            children: N.map((e) =>
+                                            children: E.map((e) =>
                                                 (0, a.jsx)(
                                                     g,
                                                     {
@@ -282,7 +282,7 @@ function N() {
                                         })
                                     ]
                                 }),
-                            T.length > 0 &&
+                            S.length > 0 &&
                                 (0, a.jsxs)('div', {
                                     children: [
                                         (0, a.jsx)(c.Text, {
@@ -290,7 +290,7 @@ function N() {
                                             variant: 'text-md/bold',
                                             children: 'Unconsumed Fractional Premium'
                                         }),
-                                        (0, a.jsx)('div', { children: T.map((e) => (0, a.jsx)(g, { entitlement: e }, e.id)) })
+                                        (0, a.jsx)('div', { children: S.map((e) => (0, a.jsx)(g, { entitlement: e }, e.id)) })
                                     ]
                                 })
                         ]

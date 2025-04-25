@@ -324,7 +324,7 @@ let I = {
         },
         renderTitle: () => (0, i.jsx)(y.PI, { children: _.intl.string(_.t['6gwSFR']) }),
         renderButtons: () => null,
-        predicate: () => (0, l.Rb)('ActivityPopout').allowActivityWidget && !(0, o.X)('FriendsPopout')
+        predicate: () => (0, l.Rb)('ActivityPopout').allowActivityWidget && !(0, o.X)('FriendsPopout').enableOverlayWidget
     },
     [b.Odu.FRIENDS]: {
         renderWidget(e) {
@@ -333,6 +333,6 @@ let I = {
         },
         renderTitle: () => (0, i.jsx)(y.PI, { children: _.intl.string(_.t.TdEu5e) }),
         renderButtons: () => null,
-        predicate: () => (0, o.X)('FriendsPopout')
+        predicate: () => (0, o.X)('FriendsPopout').enableOverlayWidget
     }
 };

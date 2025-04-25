@@ -1,15 +1,15 @@
 n.d(t, { t: () => p });
 var i = n(31775),
-    l = n.n(i),
-    r = n(173345),
-    o = n(817876),
-    s = n(592125),
+    r = n.n(i),
+    l = n(173345),
+    s = n(817876),
+    o = n(592125),
     a = n(292959),
     u = n(594174),
     c = n(912101),
     d = n(74538),
     f = n(468788);
-let g = new (l())({
+let g = new (r())({
     max: 1000,
     updateAgeOnGet: !0
 });
@@ -31,19 +31,19 @@ function p(e) {
         if (null != g.get(i)) return;
         g.set(i, Date.now());
     }
-    let l = (function (e) {
+    let r = (function (e) {
         var t;
         let n = u.default.getCurrentUser();
         if (null == n) return;
-        let i = s.Z.getChannel(e.channel_id);
+        let i = o.Z.getChannel(e.channel_id);
         if (null == i) return;
-        let l = null != (t = i.guild_id) ? t : '',
+        let r = null != (t = i.guild_id) ? t : '',
             a = i.id,
             c = d.ZP.canUseCustomNotificationSounds(n),
-            f = r.Y.getCurrentConfig({ location: 'MessageNotificationUtils' }).enabled;
+            f = l.Y.getCurrentConfig({ location: 'MessageNotificationUtils' }).enabled;
         if (!c || !f) return;
-        let g = (0, o.bb)(l, a);
-        return null != g ? g : (0, o.iD)(l);
+        let g = (0, s.bb)(r, a);
+        return null != g ? g : (0, s.iD)(r);
     })(e);
-    return c.Z.playNotificationSound(f.Ay, f.yk, l);
+    return c.Z.playNotificationSound(f.Ay, f.yk, r);
 }

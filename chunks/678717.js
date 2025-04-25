@@ -22,10 +22,10 @@ var _ = n(392750),
     y = n(926976),
     O = n(592197),
     C = n(806240),
-    N = n(789654),
-    E = n(719672),
-    T = n(691867),
-    S = n(916790),
+    E = n(789654),
+    N = n(719672),
+    S = n(691867),
+    T = n(916790),
     P = n(645973),
     w = n(903502),
     k = n(604776),
@@ -96,7 +96,7 @@ function el(e) {
                     id: 'dispatcher',
                     name: 'Dispatcher',
                     group: Q.v0.EVENTS,
-                    render: () => (0, a.jsx)(S.Z, {})
+                    render: () => (0, a.jsx)(T.Z, {})
                 }
             ];
             return (
@@ -159,13 +159,13 @@ function el(e) {
                     id: 'colors',
                     name: 'Colors',
                     group: Q.v0.UI,
-                    render: () => (0, a.jsx)(N.Z, {})
+                    render: () => (0, a.jsx)(E.Z, {})
                 }),
                 e.push({
                     id: 'design_toggles',
                     name: 'Design Toggles',
                     group: Q.v0.UI,
-                    render: () => (0, a.jsx)(T.Z, {})
+                    render: () => (0, a.jsx)(S.Z, {})
                 }),
                 e.push({
                     id: 'overlays',
@@ -214,7 +214,7 @@ function el(e) {
                     id: 'dcf',
                     name: 'DCF',
                     group: Q.v0.EXPERIMENTS,
-                    render: () => (0, a.jsx)(E.Z, {})
+                    render: () => (0, a.jsx)(N.Z, {})
                 }),
                 e.push({
                     id: 'perks',

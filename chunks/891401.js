@@ -92,25 +92,25 @@ function g() {
             },
             [n]
         ),
-        N = r.useCallback(
+        E = r.useCallback(
             (e) => {
                 j(null == t ? void 0 : t.wallpaperId, e.target.value);
             },
             [null == t ? void 0 : t.wallpaperId]
         ),
-        E = r.useCallback(
+        N = r.useCallback(
             (e) => {
                 y(null == t ? void 0 : t.wallpaperId, e.target.value);
             },
             [null == t ? void 0 : t.wallpaperId]
         ),
-        T = r.useCallback(
+        S = r.useCallback(
             (e) => {
                 _(null == t ? void 0 : t.wallpaperId, e.target.value);
             },
             [null == t ? void 0 : t.wallpaperId]
         ),
-        S = r.useCallback(
+        T = r.useCallback(
             (e) => {
                 null != n && (0, m.i)(n, { token_mix_amount: Math.round(e) });
             },
@@ -192,7 +192,7 @@ function g() {
                         (0, a.jsx)('input', {
                             type: 'color',
                             value: s,
-                            onChange: N
+                            onChange: E
                         }),
                         (0, a.jsx)(d.ua7, {
                             text: 'The second most prominent color in the wallpaper. This will be used to adjust the color tokens.',
@@ -214,7 +214,7 @@ function g() {
                         (0, a.jsx)('input', {
                             type: 'color',
                             value: v,
-                            onChange: E
+                            onChange: N
                         }),
                         (0, a.jsx)(d.ua7, {
                             text: 'Controls how much the primary/secondary colors are mixed into the tokens.',
@@ -241,7 +241,7 @@ function g() {
                                 defaultValue: 100,
                                 minValue: 0,
                                 maxValue: 100,
-                                onValueChange: S
+                                onValueChange: T
                             },
                             'tokenMixAmount-'.concat(g)
                         ),
@@ -265,7 +265,7 @@ function g() {
                         (0, a.jsx)('input', {
                             type: 'color',
                             value: O,
-                            onChange: T
+                            onChange: S
                         }),
                         (0, a.jsx)(d.zxk, {
                             className: p.resetButton,

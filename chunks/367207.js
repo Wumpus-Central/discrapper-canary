@@ -120,7 +120,7 @@ class v extends o.Z {
             y(this, '_maybeFetchPremiumOffer', async () => {
                 let e = u.default.getCurrentUser();
                 if (null != e && e.verified) {
-                    let t = !(0, h.I5)(e) && d.Z.shouldFetchOffer();
+                    let t = (d.Z.canFractionalPremiumUserUseOffer() || !(0, h.I5)(e)) && d.Z.shouldFetchOffer();
                     await (0, g.T)('PremiumManager', t);
                 }
                 l.Z.dispatch({ type: 'PREMIUM_MARKETING_DATA_READY' });

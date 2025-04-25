@@ -31,7 +31,7 @@ function h() {
         t = (0, r.e7)([l.Z], () => l.Z.getReverseTrialEntitlement(!1));
     return (
         (0, a.ZP)(() => {
-            null != e && (0, c.I5)(e) && (l.Z.fetchedAllEntitlements || (0, i.p0)({ entitlementType: f.qc2.FRACTIONAL_REDEMPTION }));
+            null != e && (0, c.I5)(e) && (l.Z.fetchedAllEntitlements || l.Z.fetchingAllEntitlements || (0, i.p0)({ entitlementType: f.qc2.FRACTIONAL_REDEMPTION }));
         }),
         t
     );

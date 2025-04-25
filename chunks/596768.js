@@ -1,4 +1,4 @@
-n.d(t, { Z: () => T }), n(388685), n(642613);
+n.d(t, { Z: () => S }), n(388685), n(642613);
 var a = n(200651),
     r = n(192379),
     l = n(120356),
@@ -21,7 +21,7 @@ var a = n(200651),
     y = n(388032),
     O = n(459100),
     C = n(616257);
-let N = [
+let E = [
         {
             key: 'id',
             cellClassName: O.eventColumn,
@@ -47,7 +47,7 @@ let N = [
             }
         }
     ],
-    E = [
+    N = [
         {
             id: 'details',
             name: 'Details',
@@ -120,16 +120,16 @@ let N = [
             }
         }
     ];
-function T() {
+function S() {
     let [e, t] = r.useState(''),
         n = r.useRef(null),
         l = (0, u.Wu)([b.Z], () => b.Z.loggedTriggers),
         s = r.useMemo(() => l.filter((t) => 0 === e.length || o()(e, t.experimentId)).sort((e, t) => t.timestamp.getTime() - e.timestamp.getTime()), [l, e]),
         [c, d] = r.useState(void 0),
         h = s.find((e) => e.key === c),
-        { TabBar: p, renderSelectedTab: v } = (0, _.ZP)({ tabs: E }, []),
-        T = (0, u.e7)([b.Z], () => b.Z.trackTriggers),
-        S = r.useCallback((e) => {
+        { TabBar: p, renderSelectedTab: v } = (0, _.ZP)({ tabs: N }, []),
+        S = (0, u.e7)([b.Z], () => b.Z.trackTriggers),
+        T = r.useCallback((e) => {
             x.Z.dispatch({
                 type: 'SET_TRACK_TRIGGERS',
                 enabled: e
@@ -146,8 +146,8 @@ function T() {
                         title: 'Enables tracking of all triggers',
                         className: O.triggersEnable,
                         children: (0, a.jsx)(m.rsf, {
-                            checked: T,
-                            onChange: S,
+                            checked: S,
+                            onChange: T,
                             className: O.__invalid_toolbarSwitch
                         })
                     }),
@@ -175,7 +175,7 @@ function T() {
                 ]
             }),
             (0, a.jsx)(j.Z, {
-                columns: N,
+                columns: E,
                 data: s,
                 selectedRowKey: c,
                 onClickRow: (e) => d(e.key)

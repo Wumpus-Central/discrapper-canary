@@ -74,9 +74,9 @@ function _(e) {
     var t, n, l;
     let { subscription: h, onUpdated: _ } = e,
         [y, O] = r.useState(!1),
-        [C, N] = r.useState(!1),
-        [E, T] = r.useState(null),
-        S = (e) => ((null == e && (e = h.status), e in v) ? v[e] : 'Unknown status '.concat(e)),
+        [C, E] = r.useState(!1),
+        [N, S] = r.useState(null),
+        T = (e) => ((null == e && (e = h.status), e in v) ? v[e] : 'Unknown status '.concat(e)),
         P = (e) => {
             let t = new Date(e);
             return u.default.fromTimestamp(t.getTime());
@@ -128,7 +128,7 @@ function _(e) {
                     rejectWithError: !1
                 });
             } catch (e) {
-                T(e.body.message);
+                S(e.body.message);
             }
             _();
         },
@@ -163,7 +163,7 @@ function _(e) {
                         }),
                     (0, a.jsxs)(o.Text, {
                         variant: 'text-md/normal',
-                        children: ['Status: ', S()]
+                        children: ['Status: ', T()]
                     }),
                     h.status === x.O0b.PAUSED &&
                         (0, a.jsxs)(a.Fragment, {
@@ -231,7 +231,7 @@ function _(e) {
                 children: [
                     (0, a.jsxs)(o.P3F, {
                         onClick: () => {
-                            N(!C);
+                            E(!C);
                         },
                         className: b.collapsablePaneHeader,
                         children: [
@@ -252,7 +252,7 @@ function _(e) {
                                     tag: o.RB0.H3,
                                     className: b.formSection,
                                     children: (0, a.jsx)(o.PhF, {
-                                        serialize: (e) => S(e),
+                                        serialize: (e) => T(e),
                                         isSelected: (e) => e === h.status,
                                         options: j,
                                         select: (e) => w({ status: e }),
@@ -269,11 +269,11 @@ function _(e) {
                                             onClick: (e) => k(),
                                             children: 'Renew Subscription'
                                         }),
-                                        null !== E &&
+                                        null !== N &&
                                             (0, a.jsx)(o.kzN, {
                                                 className: b.error,
-                                                onDismiss: () => T(null),
-                                                children: E
+                                                onDismiss: () => S(null),
+                                                children: N
                                             })
                                     ]
                                 }),

@@ -1,25 +1,25 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => s });
 var i = n(544891),
-    l = n(570140),
-    r = n(981631);
-let o = {
+    r = n(570140),
+    l = n(981631);
+let s = {
     async fetch() {
         try {
             let e = await i.tn.get({
-                url: r.ANM.FRIEND_SUGGESTIONS,
+                url: l.ANM.FRIEND_SUGGESTIONS,
                 rejectWithError: !0
             });
-            l.Z.dispatch({
+            r.Z.dispatch({
                 type: 'LOAD_FRIEND_SUGGESTIONS_SUCCESS',
                 suggestions: e.body
             });
         } catch (e) {
-            l.Z.dispatch({ type: 'LOAD_FRIEND_SUGGESTIONS_FAILURE' });
+            r.Z.dispatch({ type: 'LOAD_FRIEND_SUGGESTIONS_FAILURE' });
         }
     },
     ignore(e) {
         i.tn.del({
-            url: r.ANM.FRIEND_SUGGESTION(e),
+            url: l.ANM.FRIEND_SUGGESTION(e),
             rejectWithError: !0
         });
     }
