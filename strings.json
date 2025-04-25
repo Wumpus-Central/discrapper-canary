@@ -4006,6 +4006,7 @@
   "ncOAhY": "Update emoji, !!{emojiName}!!, answer !!{answerNumber}!!",
   "vcC7Qk": "Update media, !!{imageName}!!, answer !!{answerNumber}!!",
   "QbhHBQ": "Edit Image Description",
+  "w8e4qK": "You have {numOfErrors, plural, one { error} other { errors} }",
   "hvrPgI": "Poll will be live for 24 hours",
   "GD/8X1": "Create a Poll",
   "e9hWx8": "Poll answer style",
