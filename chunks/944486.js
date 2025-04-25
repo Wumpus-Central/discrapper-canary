@@ -164,23 +164,26 @@ function z(e) {
     (s = t), G();
 }
 function q(e, t, n) {
+    let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
     if ((j.delete(e), null == t)) {
         let n = S.Z.getGuildId();
         x[U(n)] === e && (t = n);
     }
-    let r = null != O.Z.getGuild(t) ? t : null,
-        i = !1;
-    s === e && ((s = null), (i = !0)), x[U(r)] === e && ((x[U(r)] = null != n ? n : B(U(r))), S.Z.getGuildId() === r && (0, m.dL)(T.Z5c.CHANNEL(t, x[U(r)])), (i = !0)), null != r && k[r] === e && (delete k[r], (i = !0)), i && G();
+    let i = null != O.Z.getGuild(t) ? t : null,
+        a = !1;
+    s === e && ((s = null), (a = !0)), x[U(i)] === e && ((x[U(i)] = r && null != n ? n : B(U(i))), S.Z.getGuildId() === i && (0, m.dL)(T.Z5c.CHANNEL(t, x[U(i)])), (a = !0)), null != i && k[i] === e && (delete k[i], (a = !0)), a && G();
 }
 function Q(e) {
-    let {
-        channel: { id: t, guild_id: n, parent_id: r }
-    } = e;
-    q(t, n, r);
+    let { type: t, channel: n } = e;
+    q(n.id, n.guild_id, n.parent_id, 'THREAD_DELETE' === t);
 }
 function X(e) {
     let { channels: t } = e;
-    for (let e of t) e.isScheduledForDeletion() && q(e.id, e.guild_id, e.parent_id);
+    for (let e of t)
+        if (e.isScheduledForDeletion()) {
+            let t = g.Ec.has(e.type);
+            q(e.id, e.guild_id, e.parent_id, t);
+        }
 }
 function J(e) {
     let { guild: t } = e;
