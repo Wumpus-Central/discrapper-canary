@@ -1,30 +1,34 @@
 n.d(t, {
-    B0: () => h,
-    Jj: () => v,
-    M4: () => R,
-    Nt: () => p,
-    RV: () => y,
-    VP: () => C,
-    X: () => N,
-    ZD: () => g,
-    fw: () => E,
-    hs: () => O,
-    i_: () => P,
-    k8: () => A,
-    ox: () => m,
-    yL: () => b
+    B0: () => b,
+    Jj: () => N,
+    Lo: () => E,
+    M4: () => U,
+    Nt: () => g,
+    RV: () => A,
+    VP: () => j,
+    X: () => k,
+    ZD: () => v,
+    fw: () => S,
+    hs: () => C,
+    i_: () => G,
+    k8: () => M,
+    ox: () => y,
+    yL: () => T
 }),
     n(415506),
     n(467055),
     n(388685);
 var r = n(192379),
-    i = n(544891),
-    a = n(570140),
-    o = n(367907),
-    s = n(432877),
-    l = n(82554),
-    c = n(981631);
-function u(e, t, n) {
+    i = n(512722),
+    a = n.n(i),
+    o = n(741086),
+    s = n(544891),
+    l = n(570140),
+    c = n(367907),
+    u = n(432877),
+    d = n(82554),
+    f = n(981631);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +41,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,12 +52,12 @@ function d(e) {
                 })
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -65,43 +69,53 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-async function p(e, t) {
+async function g(e, t) {
     var n;
-    let r = S(e),
-        a = await i.tn.get({
-            url: c.ANM.GET_REPORT_MENU(r),
+    let r = P(e),
+        i = await s.tn.get({
+            url: f.ANM.GET_REPORT_MENU(r),
             query: (null == t ? void 0 : t.variant) != null ? { variant: t.variant } : void 0,
             rejectWithError: !1
         });
-    return null != (n = a.body) ? n : JSON.parse(a.text);
+    return null != (n = i.body) ? n : JSON.parse(i.text);
 }
-async function h(e, t) {
+async function E(e, t) {
     var n;
-    let r = I(e),
-        a = await i.tn.get({
-            url: c.ANM.GET_UNAUTHENTICATED_REPORT_MENU(r),
+    let r = w(e),
+        i = await s.tn.get({
+            url: f.ANM.GET_REPORT_MENU(r),
             query: (null == t ? void 0 : t.variant) != null ? { variant: t.variant } : void 0,
             rejectWithError: !1
         });
-    return null != (n = a.body) ? n : JSON.parse(a.text);
+    return null != (n = i.body) ? n : JSON.parse(i.text);
 }
-async function m(e, t) {
-    let n = S(e),
-        r = await p(e, t);
-    await i.tn.post({
-        url: c.ANM.SUBMIT_REPORT_MENU(n),
-        body: T(r, e, [
+async function b(e, t) {
+    var n;
+    let r = R(e),
+        i = await s.tn.get({
+            url: f.ANM.GET_UNAUTHENTICATED_REPORT_MENU(r),
+            query: (null == t ? void 0 : t.variant) != null ? { variant: t.variant } : void 0,
+            rejectWithError: !1
+        });
+    return null != (n = i.body) ? n : JSON.parse(i.text);
+}
+async function y(e, t) {
+    let n = P(e),
+        r = await g(e, t);
+    await s.tn.post({
+        url: f.ANM.SUBMIT_REPORT_MENU(n),
+        body: x(r, e, [
             {
                 nodeRef: r.root_node_id,
                 destination: ['', r.success_node_id]
@@ -110,27 +124,35 @@ async function m(e, t) {
         rejectWithError: !1
     });
 }
-function g(e, t, n) {
-    return s.ZP.get('iar_skip_api_report_submit')
-        ? Promise.resolve()
-        : i.tn.post({
-              url: c.ANM.SUBMIT_REPORT_MENU(S(t)),
-              body: T(e, t, n),
-              rejectWithError: !1
-          });
+function v(e, t, n) {
+    return u.ZP.get('iar_skip_api_report_submit') ? Promise.resolve() : o.s.REPORT_TO_MOD.has(t.name) ? I(e, t, n) : O(e, t, n);
 }
-function E(e, t, n, r) {
-    if (s.ZP.get('iar_skip_api_report_submit')) return Promise.resolve();
-    let a = I(t);
-    return i.tn.post({
-        url: c.ANM.SUBMIT_UNAUTHENTICATED_REPORT_MENU(a),
-        body: T(e, t, n, r),
+function O(e, t, n) {
+    return s.tn.post({
+        url: f.ANM.SUBMIT_REPORT_MENU(P(t)),
+        body: x(e, t, n),
         rejectWithError: !1
     });
 }
-function b(e, t) {
-    return i.tn.post({
-        url: c.ANM.SEND_UNAUTHENTICATED_REPORT_PINCODE(e),
+function I(e, t, n) {
+    return s.tn.post({
+        url: D(t),
+        body: L(e, t, n),
+        rejectWithError: !1
+    });
+}
+function S(e, t, n, r) {
+    if (u.ZP.get('iar_skip_api_report_submit')) return Promise.resolve();
+    let i = R(t);
+    return s.tn.post({
+        url: f.ANM.SUBMIT_UNAUTHENTICATED_REPORT_MENU(i),
+        body: x(e, t, n, r),
+        rejectWithError: !1
+    });
+}
+function T(e, t) {
+    return s.tn.post({
+        url: f.ANM.SEND_UNAUTHENTICATED_REPORT_PINCODE(e),
         body: {
             name: e,
             email: t
@@ -138,10 +160,10 @@ function b(e, t) {
         rejectWithError: !1
     });
 }
-async function y(e, t, n) {
+async function A(e, t, n) {
     return (
-        await i.tn.post({
-            url: c.ANM.VERIFY_UNAUTHENTICATED_REPORT(e),
+        await s.tn.post({
+            url: f.ANM.VERIFY_UNAUTHENTICATED_REPORT(e),
             body: {
                 name: e,
                 email: t,
@@ -151,159 +173,202 @@ async function y(e, t, n) {
         })
     ).body;
 }
-async function v() {
-    return await i.tn.get({
-        url: c.ANM.DSA_CAPABILITIES,
+async function N() {
+    return await s.tn.get({
+        url: f.ANM.DSA_CAPABILITIES,
         rejectWithError: !1
     });
 }
-async function O(e) {
+async function C(e) {
     return (
-        await i.tn.post({
-            url: c.ANM.SUBMIT_REPORT_SECOND_LOOK,
+        await s.tn.post({
+            url: f.ANM.SUBMIT_REPORT_SECOND_LOOK,
             body: { token: e },
             rejectWithError: !1
         })
     ).body;
 }
-function I(e) {
+function R(e) {
     let t = e.name;
-    if (!Object.values(l.BM).includes(t)) throw Error('Invalid report type '.concat(e.name));
-    return t;
+    return a()(Object.values(d.BM).includes(t), 'Invalid report type '.concat(e.name)), t;
 }
-function S(e) {
+function P(e) {
     let t = e.name;
-    if (!Object.values(l.b).includes(t)) throw Error('Invalid report type '.concat(e.name));
-    return t;
+    return a()(Object.values(d.b).includes(t), 'Invalid report type '.concat(e.name)), t;
 }
-let T = (e, t, n, r) => {
-    let { version: i, variant: a, language: o } = e,
-        s = {
-            channel_id: void 0,
-            message_id: void 0,
-            stage_instance_id: void 0,
-            guild_id: void 0,
-            guild_scheduled_event_id: void 0,
-            user_id: void 0,
-            email_token: void 0,
-            application_id: void 0,
-            entrypoint: void 0
-        },
-        c = {
-            version: i,
-            variant: a,
-            language: null != o ? o : 'en',
-            breadcrumbs: n.map((e) => e.nodeRef),
-            elements: n.reduce((e, t) => {
-                let { multiSelect: n, textInput: r } = t;
-                return d(
-                    {},
-                    e,
-                    null != n && { [n.name]: Object.keys(n.state) },
-                    Object.fromEntries(
-                        Object.entries(null != r ? r : {}).map((e) => {
-                            let [t, { value: n }] = e;
-                            return [t, n];
-                        })
-                    )
-                );
-            }, {})
-        };
-    if (t.name === l.b.MESSAGE || t.name === l.b.FIRST_DM) {
-        let { channel_id: e, id: n } = t.record;
-        return _(d({}, c, s), {
-            name: t.name,
-            channel_id: e,
-            message_id: n
-        });
-    }
-    if (t.name === l.b.GUILD || t.name === l.b.GUILD_DISCOVERY) {
-        let { id: e } = t.record;
-        return _(d({}, c, s), {
-            name: t.name,
-            guild_id: e
-        });
-    }
-    if (t.name === l.b.GUILD_DIRECTORY_ENTRY) {
-        let { guildId: e, channelId: n } = t.record;
-        return _(d({}, c, s), {
-            name: t.name,
-            channel_id: n,
-            guild_id: e
-        });
-    }
-    if (t.name === l.b.STAGE_CHANNEL) {
-        let { id: e, guild_id: n, channel_id: r } = t.record;
-        return _(d({}, c, s), {
-            name: t.name,
-            channel_id: r,
-            guild_id: n,
-            stage_instance_id: e
-        });
-    }
-    if (t.name === l.b.GUILD_SCHEDULED_EVENT) {
-        let { id: e, guild_id: n } = t.record;
-        return _(d({}, c, s), {
-            name: t.name,
-            guild_id: n,
-            guild_scheduled_event_id: e
-        });
-    } else if (t.name === l.b.USER)
-        return _(d({}, c, s), {
-            name: t.name,
-            user_id: t.record.id,
-            guild_id: t.contextualGuildId
-        });
-    else if (t.name === l.BM.USER)
-        return _(d({}, c, s), {
-            name: t.name,
-            user_id: t.record.id,
-            guild_id: t.contextualGuildId,
-            email_token: r
-        });
-    else if (t.name === l.BM.MESSAGE)
-        return _(d({}, c, s), {
-            name: t.name,
-            message_id: t.record.id,
-            email_token: r
-        });
-    else if (t.name === l.BM.GUILD)
-        return _(d({}, c, s), {
-            name: t.name,
-            guild_id: t.record.id,
-            email_token: r
-        });
-    else if (t.name === l.b.APPLICATION)
-        return _(d({}, c, s), {
-            name: t.name,
-            application_id: t.record.id,
-            guild_id: t.contextualGuildId,
-            channel_id: t.contextualChannelId,
-            entrypoint: t.entrypoint
-        });
-    return null;
-};
-function A(e, t, n) {
-    o.ZP.trackWithMetadata(c.rMx.IAR_MODAL_CLOSE, {
+function w(e) {
+    let t = e.name;
+    return a()(Object.values(d.xw).includes(t), 'Invalid report type '.concat(e.name)), t;
+}
+function D(e) {
+    if ((a()(o.s.REPORT_TO_MOD.has(e.name), 'Invalid report type '.concat(e.name)), e.name === d.xw.MESSAGE)) return f.ANM.SUBMIT_MODERATOR_MESSAGE_REPORT(e.record.channel_id, e.record.id);
+    throw Error('Invalid report type '.concat(e.name));
+}
+let L = (e, t, n) => {
+        let { version: r, variant: i, language: a } = e,
+            o = {
+                channel_id: void 0,
+                message_id: void 0,
+                guild_id: void 0
+            },
+            s = {
+                version: r,
+                variant: i,
+                language: null != a ? a : 'en',
+                breadcrumbs: n.map((e) => e.nodeRef),
+                elements: n.reduce((e, t) => {
+                    let { multiSelect: n, textInput: r } = t;
+                    return p(
+                        {},
+                        e,
+                        null != n && { [n.name]: Object.keys(n.state) },
+                        Object.fromEntries(
+                            Object.entries(null != r ? r : {}).map((e) => {
+                                let [t, { value: n }] = e;
+                                return [t, n];
+                            })
+                        )
+                    );
+                }, {})
+            };
+        if (t.name === d.xw.MESSAGE) {
+            let { channel_id: e, id: n } = t.record;
+            return m(p({}, s, o), {
+                name: t.name,
+                channel_id: e,
+                message_id: n
+            });
+        }
+        return null;
+    },
+    x = (e, t, n, r) => {
+        let { version: i, variant: a, language: o } = e,
+            s = {
+                channel_id: void 0,
+                message_id: void 0,
+                stage_instance_id: void 0,
+                guild_id: void 0,
+                guild_scheduled_event_id: void 0,
+                user_id: void 0,
+                email_token: void 0,
+                application_id: void 0,
+                entrypoint: void 0
+            },
+            l = {
+                version: i,
+                variant: a,
+                language: null != o ? o : 'en',
+                breadcrumbs: n.map((e) => e.nodeRef),
+                elements: n.reduce((e, t) => {
+                    let { multiSelect: n, textInput: r } = t;
+                    return p(
+                        {},
+                        e,
+                        null != n && { [n.name]: Object.keys(n.state) },
+                        Object.fromEntries(
+                            Object.entries(null != r ? r : {}).map((e) => {
+                                let [t, { value: n }] = e;
+                                return [t, n];
+                            })
+                        )
+                    );
+                }, {})
+            };
+        if (t.name === d.b.MESSAGE || t.name === d.b.FIRST_DM) {
+            let { channel_id: e, id: n } = t.record;
+            return m(p({}, l, s), {
+                name: t.name,
+                channel_id: e,
+                message_id: n
+            });
+        }
+        if (t.name === d.b.GUILD || t.name === d.b.GUILD_DISCOVERY) {
+            let { id: e } = t.record;
+            return m(p({}, l, s), {
+                name: t.name,
+                guild_id: e
+            });
+        }
+        if (t.name === d.b.GUILD_DIRECTORY_ENTRY) {
+            let { guildId: e, channelId: n } = t.record;
+            return m(p({}, l, s), {
+                name: t.name,
+                channel_id: n,
+                guild_id: e
+            });
+        }
+        if (t.name === d.b.STAGE_CHANNEL) {
+            let { id: e, guild_id: n, channel_id: r } = t.record;
+            return m(p({}, l, s), {
+                name: t.name,
+                channel_id: r,
+                guild_id: n,
+                stage_instance_id: e
+            });
+        }
+        if (t.name === d.b.GUILD_SCHEDULED_EVENT) {
+            let { id: e, guild_id: n } = t.record;
+            return m(p({}, l, s), {
+                name: t.name,
+                guild_id: n,
+                guild_scheduled_event_id: e
+            });
+        } else if (t.name === d.b.USER)
+            return m(p({}, l, s), {
+                name: t.name,
+                user_id: t.record.id,
+                guild_id: t.contextualGuildId
+            });
+        else if (t.name === d.BM.USER)
+            return m(p({}, l, s), {
+                name: t.name,
+                user_id: t.record.id,
+                guild_id: t.contextualGuildId,
+                email_token: r
+            });
+        else if (t.name === d.BM.MESSAGE)
+            return m(p({}, l, s), {
+                name: t.name,
+                message_id: t.record.id,
+                email_token: r
+            });
+        else if (t.name === d.BM.GUILD)
+            return m(p({}, l, s), {
+                name: t.name,
+                guild_id: t.record.id,
+                email_token: r
+            });
+        else if (t.name === d.b.APPLICATION)
+            return m(p({}, l, s), {
+                name: t.name,
+                application_id: t.record.id,
+                guild_id: t.contextualGuildId,
+                channel_id: t.contextualChannelId,
+                entrypoint: t.entrypoint
+            });
+        return null;
+    };
+function M(e, t, n) {
+    c.ZP.trackWithMetadata(f.rMx.IAR_MODAL_CLOSE, {
         report_type: e.name,
         report_id: n,
         navigation_history: t,
-        message_id: e.name === l.b.MESSAGE || e.name === l.b.FIRST_DM ? e.record.id : void 0,
-        stage_instance_id: e.name === l.b.STAGE_CHANNEL ? e.record.id : void 0,
-        guild_scheduled_event_id: e.name === l.b.GUILD_SCHEDULED_EVENT ? e.record.id : void 0,
-        guild_id: e.name === l.b.GUILD || e.name === l.b.GUILD_DISCOVERY ? e.record.id : e.name === l.b.GUILD_DIRECTORY_ENTRY ? e.record.guildId : e.name === l.b.GUILD_SCHEDULED_EVENT ? e.record.guild_id : void 0,
-        channel_id: e.name === l.b.GUILD_SCHEDULED_EVENT ? e.record.channel_id : e.name === l.b.GUILD_DIRECTORY_ENTRY ? e.record.channelId : void 0,
-        application_id: e.name === l.b.APPLICATION ? e.record.id : void 0
+        message_id: e.name === d.b.MESSAGE || e.name === d.b.FIRST_DM ? e.record.id : void 0,
+        stage_instance_id: e.name === d.b.STAGE_CHANNEL ? e.record.id : void 0,
+        guild_scheduled_event_id: e.name === d.b.GUILD_SCHEDULED_EVENT ? e.record.id : void 0,
+        guild_id: e.name === d.b.GUILD || e.name === d.b.GUILD_DISCOVERY ? e.record.id : e.name === d.b.GUILD_DIRECTORY_ENTRY ? e.record.guildId : e.name === d.b.GUILD_SCHEDULED_EVENT ? e.record.guild_id : void 0,
+        channel_id: e.name === d.b.GUILD_SCHEDULED_EVENT ? e.record.channel_id : e.name === d.b.GUILD_DIRECTORY_ENTRY ? e.record.channelId : void 0,
+        application_id: e.name === d.b.APPLICATION ? e.record.id : void 0
     });
 }
-function N(e, t) {
-    a.Z.dispatch({
+function k(e, t) {
+    l.Z.dispatch({
         type: 'IN_APP_REPORTS_SHOW_FEEDBACK',
         reportId: t,
         reportType: e.name
     });
 }
-function C(e, t, n, r, i) {
+function j(e, t, n, r, i) {
     return (
         e.some((e) => {
             var t;
@@ -313,13 +378,13 @@ function C(e, t, n, r, i) {
         ((null == n ? void 0 : n.should_submit_data) === !0 && (null == i || 0 === Object.keys(i).length))
     );
 }
-var R = (function (e) {
+var U = (function (e) {
     return (e.SETTINGS_UPSELLS_VIEWED = 'SETTINGS_UPSELLS_VIEWED'), (e.SETTINGS_UPSELLS_APPLY_CLICKED = 'SETTINGS_UPSELLS_APPLY_CLICKED'), (e.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED = 'SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED'), e;
 })({});
-function P(e, t, n) {
+function G(e, t, n) {
     return r.useCallback(
         (r) => (i) => {
-            o.ZP.trackWithMetadata(c.rMx.IAR_SETTINGS_UPSELLS_ACTION, {
+            c.ZP.trackWithMetadata(f.rMx.IAR_SETTINGS_UPSELLS_ACTION, {
                 report_id: n,
                 report_type: e.name,
                 report_subtype: t,

@@ -556,6 +556,7 @@ let A = Object.freeze({
         SUBMIT_UNAUTHENTICATED_REPORT_MENU: (t) => '/reporting/unauthenticated/'.concat(t),
         SEND_UNAUTHENTICATED_REPORT_PINCODE: (t) => '/reporting/unauthenticated/'.concat(t, '/code'),
         VERIFY_UNAUTHENTICATED_REPORT: (t) => '/reporting/unauthenticated/'.concat(t, '/verify'),
+        SUBMIT_MODERATOR_MESSAGE_REPORT: (t, e) => '/channels/'.concat(t, '/').concat(e, '/mod-report'),
         DSA_EXPERIMENT_UNAUTHENTICATED: '/reporting/unauthenticated/experiment',
         DSA_CAPABILITIES: '/reporting/unauthenticated/capabilities',
         SUBMIT_REPORT_SECOND_LOOK: '/reporting/review',
