@@ -1,5 +1,4 @@
 n.d(t, {
-    PM: () => c,
     _f: () => a,
     aZ: () => l,
     gu: () => o
@@ -51,31 +50,3 @@ let a = (0, r.B)({
 function l(e, t) {
     return void 0 !== e && (null == e ? void 0 : e.isGuildVoice()) && s.getCurrentConfig({ location: t }, { autoTrackExposure: !0 }).enabled;
 }
-let c = (0, r.B)({
-    kind: 'user',
-    id: '2025-03_app_launcher_pep_button_label',
-    label: 'Change PEP Button Label To Play',
-    defaultConfig: {
-        enabled: !1,
-        altLayout: !1
-    },
-    commonTriggerPoint: i.$P.CONNECTION_OPEN,
-    treatments: [
-        {
-            id: 1,
-            label: 'Change PEP Button Label To Play',
-            config: {
-                enabled: !0,
-                altLayout: !1
-            }
-        },
-        {
-            id: 2,
-            label: 'Change PEP Button Label To Play With Alt Layout',
-            config: {
-                enabled: !0,
-                altLayout: !0
-            }
-        }
-    ]
-});

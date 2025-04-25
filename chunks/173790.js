@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var i = n(200651),
     r = n(192379),
     l = n(442837),
@@ -9,90 +9,88 @@ var i = n(200651),
     u = n(778569),
     d = n(213459),
     p = n(835473),
-    m = n(424602),
-    f = n(573188),
-    h = n(541099),
-    b = n(827498),
-    _ = n(783097),
-    y = n(753972),
-    x = n(387658),
-    C = n(536650),
-    v = n(675993),
-    g = n(689079),
-    j = n(388032),
-    P = n(189102),
-    N = n(413097);
-function E(e) {
+    m = n(573188),
+    f = n(541099),
+    h = n(827498),
+    b = n(783097),
+    _ = n(753972),
+    y = n(387658),
+    v = n(536650),
+    x = n(675993),
+    C = n(689079),
+    g = n(388032),
+    j = n(189102),
+    P = n(413097);
+function N(e) {
     var t;
-    let { context: n, application: c, sectionName: u, showFriendsTab: E } = e,
-        A = 'channel' === n.type ? n.channel : void 0,
-        I = (0, l.e7)([h.Z], () => h.Z.entrypoint()),
-        S = null != (t = (0, p.q)(c.id === g.bi.BUILT_IN ? null : c.id)) ? t : c,
-        T = (0, l.e7)([s.Z], () => s.Z.inDevModeForApplication(S.id)),
-        L = (0, _.ye)(S) ? O : v.Z,
-        w = m.PM.useExperiment({ location: 'AppLauncherApplicationViewScreen' }),
-        { enabled: R } = f.X.useExperiment({ location: 'AppLauncherApplicationViewScreen' }),
-        Z = r.useRef(null),
-        [k, M] = r.useState(!1),
-        { iconURL: D, name: B } = r.useMemo(
+    let { context: n, application: c, sectionName: u, showFriendsTab: N } = e,
+        E = 'channel' === n.type ? n.channel : void 0,
+        A = (0, l.e7)([f.Z], () => f.Z.entrypoint()),
+        I = null != (t = (0, p.q)(c.id === C.bi.BUILT_IN ? null : c.id)) ? t : c,
+        S = (0, l.e7)([s.Z], () => s.Z.inDevModeForApplication(I.id)),
+        T = (0, b.ye)(I) ? O : x.Z,
+        { enabled: w } = m.X.useExperiment({ location: 'AppLauncherApplicationViewScreen' }),
+        L = r.useRef(null),
+        [R, Z] = r.useState(!1),
+        { iconURL: k, name: M } = r.useMemo(
             () =>
-                (0, _.sl)(S, {
-                    fakeAppIconURL: N,
+                (0, b.sl)(I, {
+                    fakeAppIconURL: P,
                     size: 84
                 }),
-            [S]
+            [I]
         ),
-        U = (0, d.PL)(!0, !0),
-        H = (0, d.LD)(null == A ? void 0 : A.guild_id, !0),
-        W = r.useMemo(() => (0, d.If)(n, S.id), [U, H, n, S.id]),
-        V = !W.isGuildInstalled && !W.isUserInstalled;
+        D = (0, d.PL)(!0, !0),
+        B = (0, d.LD)(null == E ? void 0 : E.guild_id, !0),
+        U = r.useMemo(() => (0, d.If)(n, I.id), [D, B, n, I.id]),
+        H = !U.isGuildInstalled && !U.isUserInstalled;
     return (
         r.useEffect(() => {
-            V && d.ZP.queryInstallOnDemandApp(S.id, null == A ? void 0 : A.id);
-        }, [S.id, null == A ? void 0 : A.id, V]),
+            H && d.ZP.queryInstallOnDemandApp(I.id, null == E ? void 0 : E.id);
+        }, [I.id, null == E ? void 0 : E.id, H]),
         (0, i.jsxs)(a.u2D, {
-            className: P.container,
+            className: j.container,
             fade: !0,
-            ref: Z,
+            ref: L,
             role: 'region',
-            'aria-label': j.intl.formatToPlainString(j.t['4OP4Ul'], { applicationName: B }),
+            'aria-label': g.intl.formatToPlainString(g.t['4OP4Ul'], { applicationName: M }),
             children: [
-                (0, i.jsx)(C.Z, {
-                    application: S,
+                (0, i.jsx)(v.Z, {
+                    application: I,
                     context: n,
-                    name: B,
-                    iconURL: D,
-                    scrollerRef: Z,
+                    name: M,
+                    iconURL: k,
+                    scrollerRef: L,
                     sectionName: u
                 }),
-                null != D &&
-                    (0, i.jsx)(y.Z, {
-                        src: D,
-                        className: P.appIcon
+                null != k &&
+                    (0, i.jsx)(_.Z, {
+                        src: k,
+                        className: j.appIcon
                     }),
-                (0, i.jsx)(o.Z, { size: w.enabled ? 44 : R ? 52 : 54 }),
-                (0, i.jsx)(L, {
+                (0, i.jsx)(o.Z, { size: w ? 52 : 54 }),
+                (0, i.jsx)(T, {
                     context: n,
-                    application: S,
+                    application: I,
                     sectionName: u,
-                    hasCommands: k,
-                    showFriendsTab: E
+                    hasCommands: R,
+                    showFriendsTab: N
                 }),
-                I === b._b.TEXT
-                    ? (0, i.jsx)(x.Z, {
+                A === h._b.TEXT
+                    ? (0, i.jsx)(y.Z, {
                           context: n,
-                          application: S,
+                          application: I,
                           sectionName: u,
-                          installOnDemand: V,
-                          setHasCommands: M
+                          installOnDemand: H,
+                          setHasCommands: Z
                       })
                     : null,
-                w.enabled || R
-                    ? (0, i.jsx)(v.u, {
+                w
+                    ? (0, i.jsx)(x.u, {
                           context: n,
-                          application: S,
-                          hasCommands: k,
-                          isDeveloperOfThisApp: T
+                          application: I,
+                          hasCommands: R,
+                          isDeveloperOfThisApp: S
                       })
                     : null
             ]
@@ -106,9 +104,9 @@ function O(e) {
             size: 2048,
             names: ['embedded_cover']
         }),
-        s = (0, _.yJ)(n),
+        s = (0, b.yJ)(n),
         d = null != s && null != s.activity_preview_video_asset_id ? (0, c.Z)(n.id, s.activity_preview_video_asset_id) : null;
-    return (0, i.jsx)(v.Z, {
+    return (0, i.jsx)(x.Z, {
         context: t,
         application: n,
         imageCoverUrl: a.url,

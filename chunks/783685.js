@@ -1,40 +1,38 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => d }), n(388685);
 var i = n(200651),
     r = n(192379),
     l = n(481060),
     o = n(626135),
-    a = n(424602),
-    s = n(827498),
-    c = n(915346),
-    u = n(981631),
-    d = n(388032);
-function p(e) {
-    let { botUserId: t, applicationId: n, buttonSize: p, analyticsLocations: m } = e,
-        [f, h] = r.useState(!1),
-        b = r.useRef(null),
-        _ = r.useCallback(async () => {
-            o.default.track(u.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
+    a = n(827498),
+    s = n(915346),
+    c = n(981631),
+    u = n(388032);
+function d(e) {
+    let { botUserId: t, applicationId: n, buttonSize: d, analyticsLocations: p } = e,
+        [m, f] = r.useState(!1),
+        h = r.useRef(null),
+        b = r.useCallback(async () => {
+            o.default.track(c.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                 application_id: n,
-                button_action: s._y.OPEN_APP_DM
+                button_action: a._y.OPEN_APP_DM
             }),
-                h(!0);
+                f(!0);
             try {
-                await (0, c.W)({
+                await (0, s.W)({
                     appId: n,
                     botId: t,
-                    analyticsLocations: m
+                    analyticsLocations: p
                 });
             } catch (e) {}
-            clearTimeout(b.current), h(!1);
-        }, [t, n, m]),
-        y = a.PM.useExperiment({ location: 'AppTryItOutButton()' }).enabled ? d.intl.string(d.t['e+CzPj']) : d.intl.string(d.t.AUM8hY);
+            clearTimeout(h.current), f(!1);
+        }, [t, n, p]);
     return (0, i.jsx)(l.zxk, {
         type: 'submit',
-        size: p,
+        size: d,
         color: l.zxk.Colors.PRIMARY,
-        submitting: f,
-        onClick: _,
-        'aria-label': y,
-        children: y
+        submitting: m,
+        onClick: b,
+        'aria-label': u.intl.string(u.t.AUM8hY),
+        children: u.intl.string(u.t.AUM8hY)
     });
 }
