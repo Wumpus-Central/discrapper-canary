@@ -3,7 +3,6 @@ n.d(t, {
     B6: () => X,
     Bd: () => eE,
     DU: () => ec,
-    Fr: () => el,
     GI: () => ef,
     Gd: () => eN,
     I: () => eg,
@@ -21,6 +20,7 @@ n.d(t, {
     e5: () => Y,
     eN: () => K,
     eQ: () => eT,
+    fN: () => el,
     iO: () => es,
     kJ: () => eu,
     me: () => ey,
@@ -317,7 +317,10 @@ function es() {
 }
 function el(e) {
     let t = (0, u.e7)([N.Z], () => N.Z.quests),
-        n = r.useMemo(() => (0, R.Jg)(t, e), [e, t]);
+        n = r.useMemo(() => {
+            let n = (0, R.MM)(t, x.tt);
+            return (0, R.Jg)(n, e);
+        }, [e, t]);
     return q(n) ? null : n;
 }
 function ec(e) {
