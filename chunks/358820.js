@@ -188,6 +188,13 @@ async function R() {
                     (await t.setVoiceFilterLaggingCallback(() => {
                         s.Z.dispatch({ type: 'VOICE_FILTER_LAGGING' });
                     })),
+                void 0 !== t.setVoiceFilterReadyCallback &&
+                    (await t.setVoiceFilterReadyCallback((e) => {
+                        s.Z.dispatch({
+                            type: 'VOICE_FILTER_READY',
+                            name: e
+                        });
+                    })),
                 await s.Z.dispatch({
                     type: 'VOICE_FILTER_NATIVE_MODULE_STATE_CHANGE',
                     state: g.O.LOADED
