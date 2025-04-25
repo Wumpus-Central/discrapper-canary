@@ -17,8 +17,8 @@ var i = n(200651),
     _ = n(785717),
     x = n(687158),
     E = n(892001),
-    C = n(899007),
-    j = n(648052),
+    j = n(899007),
+    C = n(648052),
     O = n(867176),
     S = n(537006),
     v = n(483517),
@@ -137,7 +137,7 @@ function Q(e) {
                                     displayProfile: et,
                                     themeType: W.lY.POPOUT
                                 }),
-                                (0, i.jsx)(C.Z, {
+                                (0, i.jsx)(j.Z, {
                                     user: t,
                                     displayProfile: et,
                                     themeType: W.lY.POPOUT,
@@ -166,7 +166,7 @@ function Q(e) {
                                     nickname: L.ZP.getName(null, null, t),
                                     onOpenProfile: ee ? void 0 : ex,
                                     pronouns: null == et ? void 0 : et.pronouns,
-                                    tags: (0, i.jsx)(j.Z, {
+                                    tags: (0, i.jsx)(C.Z, {
                                         displayProfile: et,
                                         themeType: W.lY.POPOUT,
                                         onClose: n,

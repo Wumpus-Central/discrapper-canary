@@ -17,8 +17,8 @@ var i = n(200651),
     _ = n(622802),
     x = n(388032),
     E = n(631587),
-    C = n(394637);
-function j() {
+    j = n(394637);
+function C() {
     let e = (0, r.useRef)(null),
         [t, n] = (0, r.useState)(!1),
         { analyticsLocations: s } = (0, m.ZP)(u.Z.HOLIDAY_COACHMARK),
@@ -79,7 +79,7 @@ function j() {
                         children: [
                             (0, i.jsx)('img', {
                                 className: E.icon,
-                                src: C,
+                                src: j,
                                 alt: ''
                             }),
                             (0, i.jsxs)('div', {
@@ -111,5 +111,5 @@ function j() {
 function O() {
     let e = (0, p.wE)(o.z.CLICKER_COACHMARK),
         { enableGame: t } = h.C.getCurrentConfig({ location: 'Coachmark' });
-    return e || !t ? null : (0, i.jsx)(j, {});
+    return e || !t ? null : (0, i.jsx)(C, {});
 }

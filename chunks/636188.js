@@ -17,8 +17,8 @@ var i = n(200651),
     _ = n(768581),
     x = n(709054),
     E = n(647177),
-    C = n(63985),
-    j = n(678916),
+    j = n(63985),
+    C = n(678916),
     O = n(981631),
     S = n(190378),
     v = n(486324),
@@ -136,8 +136,8 @@ function R(e) {
     });
 }
 function D(e) {
-    var { option: t, source: r, selected: s = !1, onSelectOption: u, isAnimatedImage: _, isVideo: x, hotspotLocation: C } = e,
-        j = (function (e, t) {
+    var { option: t, source: r, selected: s = !1, onSelectOption: u, isAnimatedImage: _, isVideo: x, hotspotLocation: j } = e,
+        C = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -158,7 +158,7 @@ function D(e) {
         })(e, ['option', 'source', 'selected', 'onSelectOption', 'isAnimatedImage', 'isVideo', 'hotspotLocation']);
     let S = (0, d.O)(),
         { analyticsLocations: v } = (0, p.ZP)(m.Z.VIDEO_BACKGROUND_IMAGE_OPTION),
-        P = (0, a.e7)([f.Z], () => null != C && f.Z.hasHotspot(C)),
+        P = (0, a.e7)([f.Z], () => null != j && f.Z.hasHotspot(j)),
         D = x
             ? (0, i.jsx)(g.Z, {
                   className: N.backgroundImageOption,
@@ -173,9 +173,9 @@ function D(e) {
                   source: r
               });
     function Z() {
-        null != C &&
+        null != j &&
             P &&
-            (h.Kw(C),
+            (h.Kw(j),
             b.default.track(O.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: T.cd.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET,
                 location: S.location,
@@ -184,7 +184,7 @@ function D(e) {
     }
     return (0, i.jsxs)(
         o.P3F,
-        A(y({}, j), {
+        A(y({}, C), {
             className: l()(N.backgroundOption, { [N.backgroundOptionSelected]: s }),
             onClick: () => u(t),
             onContextMenu: (e) =>
@@ -322,7 +322,7 @@ function L(e) {
                             e,
                             y(
                                 {
-                                    maxFileSizeBytes: j.SJ,
+                                    maxFileSizeBytes: C.SJ,
                                     onComplete: (e) => {
                                         let { imageUri: n, file: i, isFromTenor: r } = e;
                                         return t(n, i, r);
@@ -349,7 +349,7 @@ function B(e) {
         u = r.useMemo(() => n.sort((e, t) => (null == e.last_used || null == t.last_used ? x.default.compare(t.id, e.id) : new Date(t.last_used).getTime() - new Date(e.last_used).getTime())), [n]),
         g = u.length >= 25,
         { analyticsLocations: h } = (0, p.ZP)(m.Z.VIDEO_BACKGROUND_OPTIONS),
-        f = Object.values((0, C.Z)()).sort((e, t) => j.E1[e.id] - j.E1[t.id]);
+        f = Object.values((0, j.Z)()).sort((e, t) => C.E1[e.id] - C.E1[t.id]);
     return (0, i.jsx)(p.Gt, {
         value: h,
         children: (0, i.jsxs)('div', {
@@ -363,9 +363,9 @@ function B(e) {
                 }),
                 (0, i.jsx)(P, {
                     className: N.__invalid_backgroundOptionBlurred,
-                    selected: s === j.f7,
+                    selected: s === C.f7,
                     icon: o.yMH,
-                    onClick: () => l(j.f7),
+                    onClick: () => l(C.f7),
                     text: I.intl.string(I.t.LhSyLy),
                     children: (0, i.jsx)('div', { className: N.backgroundOptionBlurBackground })
                 }),

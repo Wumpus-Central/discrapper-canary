@@ -17,8 +17,8 @@ var i = n(200651),
     _ = n(981631),
     x = n(703115),
     E = n(526761),
-    C = n(676654),
-    j = n(388032),
+    j = n(676654),
+    C = n(388032),
     O = n(530435);
 function S(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -125,7 +125,7 @@ function T(e) {
                           (0, i.jsx)(o.Text, {
                               variant: 'text-xs/normal',
                               className: O.guildSubtitle,
-                              children: j.intl.formatToPlainString(C.default.obBqMj, { count: null != p ? p : 0 })
+                              children: C.intl.formatToPlainString(j.default.obBqMj, { count: null != p ? p : 0 })
                           })
                       ]
                   })
@@ -141,15 +141,15 @@ function I() {
         s = [
             {
                 value: a.E5.ON,
-                label: j.intl.string(j.t.UzGMHx)
+                label: C.intl.string(C.t.UzGMHx)
             },
             {
                 value: a.E5.ON_FOR_LARGE_GUILDS,
-                label: j.intl.string(j.t.OFqxQU)
+                label: C.intl.string(C.t.OFqxQU)
             },
             {
                 value: a.E5.OFF,
-                label: j.intl.string(j.t.MIgNPD)
+                label: C.intl.string(C.t.MIgNPD)
             }
         ],
         c = (0, l.e7)([p.ZP], () => p.ZP.getFlattenedGuildIds()),
@@ -159,18 +159,18 @@ function I() {
         }, [c]);
     return (0, i.jsxs)(o.hjN, {
         tag: o.RB0.H5,
-        title: j.intl.string(C.default.o0peVV),
+        title: C.intl.string(j.default.o0peVV),
         titleClassName: O.title,
         children: [
             (0, i.jsxs)(o.xJW, {
                 tag: o.RB0.H5,
-                title: j.intl.string(C.default.eAQM7u),
+                title: C.intl.string(j.default.eAQM7u),
                 className: O.defaultSetting,
                 children: [
                     (0, i.jsx)(o.R94, {
                         type: o.R94.Types.DESCRIPTION,
                         className: O.description,
-                        children: j.intl.string(C.default.lKsV2t)
+                        children: C.intl.string(j.default.lKsV2t)
                     }),
                     (0, i.jsx)(o.q4e, {
                         options: s,
@@ -182,18 +182,18 @@ function I() {
             (0, i.jsx)('div', {
                 children: (0, i.jsxs)(o.xJW, {
                     tag: o.RB0.H5,
-                    title: j.intl.string(C.default.f3ZvjI),
+                    title: C.intl.string(j.default.f3ZvjI),
                     children: [
                         (0, i.jsx)(o.R94, {
                             type: o.R94.Types.DESCRIPTION,
                             className: O.description,
-                            children: j.intl.string(C.default.tHLm2N)
+                            children: C.intl.string(j.default.tHLm2N)
                         }),
                         !e &&
                             (0, i.jsx)(o.Wn, {
                                 messageType: o.QYI.WARNING,
                                 className: O.ignoredWarning,
-                                children: j.intl.string(C.default.mUwVAQ)
+                                children: C.intl.string(j.default.mUwVAQ)
                             }),
                         (0, i.jsx)(o.zJl, {
                             fade: !0,
@@ -205,7 +205,7 @@ function I() {
                             children: (0, i.jsx)(o.zxk, {
                                 look: o.zxk.Looks.LINK,
                                 onClick: u,
-                                children: j.intl.string(C.default.gJ8jlZ)
+                                children: C.intl.string(j.default.gJ8jlZ)
                             })
                         })
                     ]
@@ -217,7 +217,7 @@ function I() {
 function N() {
     return (0, i.jsx)(o.hjN, {
         tag: o.RB0.H5,
-        title: j.intl.string(C.default['+RndDg']),
+        title: C.intl.string(j.default['+RndDg']),
         children: (0, i.jsx)(b.r, {})
     });
 }
@@ -227,24 +227,24 @@ function y() {
         n = d.Ou.useSetting();
     return (0, i.jsxs)(o.hjN, {
         tag: o.RB0.H5,
-        title: j.intl.string(j.t['5gexRU']),
+        title: C.intl.string(C.t['5gexRU']),
         titleClassName: O.title,
         children: [
             (0, i.jsx)(o.j7V, {
                 disabled: e,
                 hideBorder: !0,
                 onChange: (e) => d.cP.updateSetting(e),
-                note: j.intl.string(j.t.IjucAA),
+                note: C.intl.string(C.t.IjucAA),
                 value: t,
-                children: j.intl.string(j.t.eVdoIy)
+                children: C.intl.string(C.t.eVdoIy)
             }),
             (0, i.jsx)(o.j7V, {
                 disabled: e,
                 hideBorder: !0,
                 onChange: (e) => d.Ou.updateSetting(e),
-                note: j.intl.string(j.t.oCONqK),
+                note: C.intl.string(C.t.oCONqK),
                 value: n,
-                children: j.intl.string(j.t['tuKl+v'])
+                children: C.intl.string(C.t['tuKl+v'])
             })
         ]
     });
@@ -258,10 +258,10 @@ function A(e) {
                 return (n) => (0, i.jsx)(e, v(S({}, n), { onScrollToGuildsSection: t }));
             });
         },
-        l = h.isPlatformEmbedded ? j.intl.string(j.t.MznbeH) : j.intl.string(j.t.oKqC4u);
+        l = h.isPlatformEmbedded ? C.intl.string(C.t.MznbeH) : C.intl.string(C.t.oKqC4u);
     return (0, i.jsx)(o.hjN, {
         tag: o.RB0.H5,
-        title: j.intl.string(j.t.Wspazs),
+        title: C.intl.string(C.t.Wspazs),
         className: O.allActivitySharingTitle,
         children: (0, i.jsx)(o.j7V, {
             value: r,
@@ -269,7 +269,7 @@ function A(e) {
                 e ? d.G6.updateSetting(e) : s();
             },
             note: l,
-            children: j.intl.string(j.t['4q/Ewc'])
+            children: C.intl.string(C.t['4q/Ewc'])
         })
     });
 }
@@ -278,7 +278,7 @@ function P() {
         className: O.privacyAndTerms,
         children: (0, i.jsx)(o.ToO, {
             type: o.ToO.Types.PRIMARY,
-            body: j.intl.format(j.t.xvCsx8, {
+            body: C.intl.format(C.t.xvCsx8, {
                 termsLink: _.EYA.TERMS,
                 privacyLink: _.EYA.PRIVACY
             })
@@ -291,7 +291,7 @@ let R = function (e) {
     return (0, i.jsxs)(o.hjN, {
         className: t,
         tag: o.RB0.H1,
-        title: j.intl.string(j.t['6x5uWV']),
+        title: C.intl.string(C.t['6x5uWV']),
         children: [
             (0, i.jsx)(A, {
                 onScrollToGuildsSection: () => {

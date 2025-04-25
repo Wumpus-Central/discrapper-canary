@@ -57,7 +57,7 @@ function _(e, t) {
     );
 }
 function x(e) {
-    let { onChange: t, onClose: n, color: s, suggestedColors: x, disabled: E, label: C, colorPickerMiddle: j, colorPickerFooter: O, showEyeDropper: S } = e,
+    let { onChange: t, onClose: n, color: s, suggestedColors: x, disabled: E, label: j, colorPickerMiddle: C, colorPickerFooter: O, showEyeDropper: S } = e,
         v = r.useRef(null),
         T = (0, d.dQu)(c.Z.colors.BACKGROUND_PRIMARY).hex(),
         I = c.Z.colors.BACKGROUND_ACCENT.css,
@@ -65,13 +65,13 @@ function x(e) {
         y = (0, o.Rf)(s),
         A = y === T ? I : y,
         P = (0, m.Lq)(N ? g.Ilk.WHITE_500 : g.Ilk.PRIMARY_530),
-        R = (0, u.Z)(j),
+        R = (0, u.Z)(C),
         D = (0, u.Z)(O),
         [Z, w] = r.useState((0, a.Z)());
     return (
         r.useEffect(() => {
-            (R !== j || D !== O) && w((0, a.Z)());
-        }, [O, j, D, R]),
+            (R !== C || D !== O) && w((0, a.Z)());
+        }, [O, C, D, R]),
         (0, i.jsx)(d.yRy, {
             positionKey: Z,
             renderPopout: (e) =>
@@ -81,7 +81,7 @@ function x(e) {
                         value: s,
                         onChange: t,
                         suggestedColors: x,
-                        middle: j,
+                        middle: C,
                         footer: O,
                         showEyeDropper: S
                     })
@@ -133,7 +133,7 @@ function x(e) {
                                 })
                             })
                         ),
-                        C
+                        j
                     ]
                 });
             }

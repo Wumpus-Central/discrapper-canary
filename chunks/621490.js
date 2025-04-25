@@ -75,7 +75,7 @@ let E = (e) => {
             ]
         });
     },
-    C = (e) => {
+    j = (e) => {
         var { orbBalance: t, orbPriceAmount: n, submitting: s, onClick: l } = e,
             a = (function (e, t) {
                 if (null == e) return {};
@@ -124,7 +124,7 @@ let E = (e) => {
                     })
                 );
     },
-    j = (e) => {
+    C = (e) => {
         let { orbPriceAmount: t, skuId: n } = e,
             { skusById: s } = (0, d.Z)({
                 applicationId: (0, p.N)(n),
@@ -193,7 +193,7 @@ let E = (e) => {
                     tag: r.RB0.H5,
                     children: f.intl.string(f.t.sail9P)
                 }),
-                (0, i.jsx)(j, {
+                (0, i.jsx)(C, {
                     skuId: t,
                     orbPriceAmount: n
                 }),
@@ -215,7 +215,7 @@ let E = (e) => {
         return (0, i.jsxs)(r.mzw, {
             align: o.Z.Align.CENTER,
             children: [
-                (0, i.jsx)(C, {
+                (0, i.jsx)(j, {
                     orbBalance: n,
                     orbPriceAmount: t,
                     submitting: s,

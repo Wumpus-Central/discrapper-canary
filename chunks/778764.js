@@ -17,7 +17,7 @@ var i = n(200651),
     _ = n(981631),
     x = n(388032),
     E = n(49149);
-function C(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -42,7 +42,7 @@ function C(e) {
     }
     return e;
 }
-function j(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -63,7 +63,7 @@ function j(e, t) {
 function O(e) {
     let { transitionState: t, onClose: l, ticket: o, challenge: u } = e,
         f = (0, c.Dt)(),
-        [C, j] = r.useState(''),
+        [j, C] = r.useState(''),
         [O, S] = r.useState(!0),
         [v, T] = r.useState(b.x.INIT),
         [I, N] = r.useState(''),
@@ -170,7 +170,7 @@ function O(e) {
                         children: (0, i.jsxs)('form', {
                             onSubmit: (e) => {
                                 e.preventDefault(),
-                                    (0, h.Sr)(C, o, I)
+                                    (0, h.Sr)(j, o, I)
                                         .then(async () => {
                                             await (0, d.Yn)(!1);
                                         })
@@ -198,9 +198,9 @@ function O(e) {
                                                 }),
                                                 (0, i.jsx)(a.oil, {
                                                     className: E.input,
-                                                    value: C,
+                                                    value: j,
                                                     onChange: (e) => {
-                                                        j(e), S(0 === e.length);
+                                                        C(e), S(0 === e.length);
                                                     },
                                                     autoFocus: !0,
                                                     minLength: 1
@@ -249,7 +249,7 @@ function S(e) {
                 action: () => {
                     (0, a.ZDy)(async () => {
                         let { default: e } = await n.e('804').then(n.bind(n, 89616));
-                        return (t) => (0, i.jsx)(e, C({ credential: r }, t));
+                        return (t) => (0, i.jsx)(e, j({ credential: r }, t));
                     });
                 }
             }),
@@ -300,7 +300,7 @@ function v() {
                                         color: a.zxk.Colors.TRANSPARENT,
                                         size: a.zxk.Sizes.ICON,
                                         onClick: (t) => {
-                                            (0, o.vq)(t, (t) => (0, i.jsx)(S, j(C({}, t), { credential: e })));
+                                            (0, o.vq)(t, (t) => (0, i.jsx)(S, C(j({}, t), { credential: e })));
                                         },
                                         'aria-label': x.intl.string(x.t['+nrTbG']),
                                         innerClassName: E.credentialOptions,
@@ -327,7 +327,7 @@ function v() {
                                     (0, a.h7j)((e) =>
                                         (0, i.jsx)(
                                             O,
-                                            j(C({}, e), {
+                                            C(j({}, e), {
                                                 ticket: t,
                                                 challenge: n
                                             })

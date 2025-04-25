@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var i = n(200651),
     r = n(192379),
     s = n(120356),
@@ -46,9 +46,9 @@ let E = (e) => {
                     })
                 });
     },
-    C = (e) => {
+    j = (e) => {
         var t;
-        let { className: n, variant: s = f.R0.PERKS_DISCOVERABILITY, noBackground: C = !1, leftAlignHeaders: j = !1, showAllPerksButton: O, headerClassname: S, isFullScreen: v = !0, shouldAutoScroll: T = !1 } = e,
+        let { className: n, variant: s = f.R0.PERKS_DISCOVERABILITY, noBackground: j = !1, leftAlignHeaders: C = !1, showAllPerksButton: O, headerClassname: S, isFullScreen: v = !0, shouldAutoScroll: T = !1 } = e,
             I = r.useRef(null),
             N = (0, u.Er)(),
             y = (0, m.v)(N),
@@ -98,15 +98,15 @@ let E = (e) => {
                     className: l()(
                         x.section,
                         {
-                            [x.centerAlignSection]: !j,
-                            [x.leftAlignSection]: j
+                            [x.centerAlignSection]: !C,
+                            [x.leftAlignSection]: C
                         },
                         n
                     ),
                     children: [
                         (0, i.jsx)(E, {
                             showAllPerksButton: O,
-                            leftAlignHeaders: j,
+                            leftAlignHeaders: C,
                             title: w.title,
                             headerClassname: S
                         }),
@@ -114,16 +114,16 @@ let E = (e) => {
                             variant: 'text-lg/normal',
                             color: 'header-primary',
                             className: l()(x.subtitle, {
-                                [x.subtitle]: null == O || j,
-                                [x.subtitleWithButton]: null != O && !j,
-                                [x.fullWidth]: A || j,
+                                [x.subtitle]: null == O || C,
+                                [x.subtitleWithButton]: null != O && !C,
+                                [x.fullWidth]: A || C,
                                 [x.moreSubtitleMargin]: V,
-                                [x.leftAlignSubtitle]: j,
-                                [x.centerAlignSubtitle]: !j
+                                [x.leftAlignSubtitle]: C,
+                                [x.centerAlignSubtitle]: !C
                             }),
                             children: w.subtitle
                         }),
-                        !j &&
+                        !C &&
                             null != O &&
                             (0, i.jsx)('div', {
                                 className: x.showAllPerksButtonCenter,
@@ -163,7 +163,7 @@ let E = (e) => {
                                         }
                                         return e;
                                     })({ confettiCanvas: e.name === h.u.TENURE_REWARD_COLLECTIBLE ? G : void 0 }, e)),
-                                    (r = r = { forceShadow: C }),
+                                    (r = r = { forceShadow: j }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
                                         : (function (e, t) {

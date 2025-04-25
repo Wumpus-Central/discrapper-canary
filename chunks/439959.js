@@ -43,19 +43,19 @@ let f = { id: 'None' },
                     section: 'purchase',
                     items: [f, _, ...e.purchase],
                     height: 12,
-                    header: u.intl.string(u.t.JEimX1)
+                    header: u.intl.string(u.t.VqmVqK)
                 },
                 {
                     section: e.premium_purchase.length > 0 ? 'premium_purchase' : 'premium_preview',
                     items: e.premium_purchase.length > 0 ? e.premium_purchase : e.premium_preview,
                     height: 12,
-                    header: u.intl.string(u.t.DIJLzM)
+                    header: u.intl.string(u.t.TiLCg4)
                 },
                 {
                     section: 'preview',
                     items: e.preview,
                     height: 12,
-                    header: u.intl.string(u.t.fmIfaG)
+                    header: u.intl.string(u.t['1vbbeX'])
                 }
             ].filter((e) => {
                 let { items: t } = e;

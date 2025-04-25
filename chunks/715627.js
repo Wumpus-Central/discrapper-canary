@@ -13,9 +13,9 @@ let o = {
     c = (e, t, n) => (null == n ? t : (e * n) / 100),
     d = r.memo(function (e) {
         let { confettiTarget: t, colors: n, emojiURL: d, numBursts: u, particlesPerBurst: m, offsetXPercentageMax: p, offsetXPercentageMin: g, offsetYPercentageMax: h, offsetYPercentageMin: f, customConfettiCanvas: b, speedValues: _ = o, dragCoefficientValue: x = 1.66, onAnimationEnd: E } = e,
-            [C, j] = r.useState(null),
+            [j, C] = r.useState(null),
             { confettiCanvas: O } = r.useContext(l.h),
-            S = (0, s.uR)(null != b ? b : O, C),
+            S = (0, s.uR)(null != b ? b : O, j),
             [v, T] = r.useState(!1);
         r.useEffect(() => {
             v && (null == E || E());
@@ -132,7 +132,7 @@ let o = {
                 );
             }, [S, t, u, m, p, g, h, f, _, x, E]),
             (0, i.jsx)(s.Ji, {
-                ref: j,
+                ref: C,
                 sprites: null != I ? I : a.CA,
                 colors: null != n ? n : a.Br,
                 spriteWidth: a.Ko,

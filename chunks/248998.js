@@ -20,12 +20,12 @@ function p(e) {
         _ = l ? 'header-primary' : 'text-muted',
         x = l ? 'header-secondary' : 'text-muted',
         E = a()(n),
-        C = null != f && l,
-        j = C ? o.P3F : 'div';
-    return (0, i.jsxs)(j, {
-        className: s()(m.container, C && m.actionable),
+        j = null != f && l,
+        C = j ? o.P3F : 'div';
+    return (0, i.jsxs)(C, {
+        className: s()(m.container, j && m.actionable),
         onClick: () => {
-            C && f();
+            j && f();
         },
         children: [
             (0, i.jsx)('div', {

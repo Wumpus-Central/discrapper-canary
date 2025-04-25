@@ -17,8 +17,8 @@ var i = n(200651),
     _ = n(594174),
     x = n(78839),
     E = n(267642),
-    C = n(63063),
-    j = n(74538),
+    j = n(63063),
+    C = n(74538),
     O = n(283029),
     S = n(357956),
     v = n(275909),
@@ -74,7 +74,7 @@ function R(e) {
         u = r.useMemo(() => (null != t.cooldownEndsAt ? new Date(t.cooldownEndsAt) : null), [t]),
         p = (0, E.tl)(t),
         g = (null == a ? void 0 : a.isPaused) === !0 || d,
-        h = d ? N.intl.format(N.t.hshta2, { helpCenterLink: C.Z.getArticleURL(T.BhN.FRACTIONAL_PREMIUM_ABOUT) }) : N.intl.string(N.t.mOWsFx);
+        h = d ? N.intl.format(N.t.hshta2, { helpCenterLink: j.Z.getArticleURL(T.BhN.FRACTIONAL_PREMIUM_ABOUT) }) : N.intl.string(N.t.mOWsFx);
     return (0, i.jsxs)(
         'li',
         {
@@ -197,7 +197,7 @@ let w = function (e) {
                 }
             );
         }, [s]),
-        H = null != g ? j.ZP.getNumIncludedPremiumGuildSubscriptionSlots(g.planId) : 0,
+        H = null != g ? C.ZP.getNumIncludedPremiumGuildSubscriptionSlots(g.planId) : 0,
         z = Math.max(0, H - M.length),
         W = V > H,
         Y = H === s.length,
@@ -220,7 +220,7 @@ let w = function (e) {
         X = r.useMemo(() => U.find((e) => e.isAvailable()), [U]);
     if (0 === U.length) return null;
     let Q = U.length;
-    if (((t = Y ? N.intl.formatToPlainString(F ? N.t['3DW6DQ'] : N.t['/u15QU'], { numUnappliedGuildBoostSlots: Q }) : N.intl.formatToPlainString(F ? N.t['3DW6DQ'] : N.t.BPadnJ, { numUnappliedGuildBoostSlots: Q })), j.ZP.isPremium(w))) {
+    if (((t = Y ? N.intl.formatToPlainString(F ? N.t['3DW6DQ'] : N.t['/u15QU'], { numUnappliedGuildBoostSlots: Q }) : N.intl.formatToPlainString(F ? N.t['3DW6DQ'] : N.t.BPadnJ, { numUnappliedGuildBoostSlots: Q })), C.ZP.isPremium(w))) {
         let e = (e, t) =>
             (0, i.jsx)(
                 c.P3F,
@@ -250,7 +250,7 @@ let w = function (e) {
                 subscriptionIsPausedOrPausePending: !0,
                 fractionalPremiumBlocksBoosting: !0
             },
-            () => N.intl.format(N.t['4RgA6O'], { helpCenterLink: C.Z.getArticleURL(T.BhN.FRACTIONAL_PREMIUM_ABOUT) })
+            () => N.intl.format(N.t['4RgA6O'], { helpCenterLink: j.Z.getArticleURL(T.BhN.FRACTIONAL_PREMIUM_ABOUT) })
         )
         .with(
             {

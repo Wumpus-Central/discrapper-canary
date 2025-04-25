@@ -80,20 +80,20 @@ function h(e) {
         _ = g(e, ['id', 'label', 'sublabel', 'icon', 'hint', 'renderSubmenu']);
     let x = (0, l.JA)(t),
         { onFocus: E } = x,
-        C = g(x, ['onFocus']),
-        { id: j } = (0, l.f$)(),
+        j = g(x, ['onFocus']),
+        { id: C } = (0, l.f$)(),
         [O, S] = r.useState(!1),
         v = null != b;
     r.useLayoutEffect(() => {
         if (v)
-            return (0, s.N)(j, (e) => {
+            return (0, s.N)(C, (e) => {
                 S(e === t);
             });
-    }, [t, j, v]);
+    }, [t, C, v]);
     let T = (e) =>
         (0, i.jsxs)(
             d.kF,
-            p(m({}, e, C, _), {
+            p(m({}, e, j, _), {
                 role: 'button',
                 look: o.zxk.Looks.BLANK,
                 size: o.zxk.Sizes.NONE,

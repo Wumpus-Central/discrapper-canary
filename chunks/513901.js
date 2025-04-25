@@ -16,7 +16,7 @@ var i = n(200651),
     b = n(388032),
     _ = n(482470);
 function x(e) {
-    let { user: t, guild: n, className: s, sectionTitle: x, forcedDivider: E = !1, withTutorial: C = !1, showBorder: j = !1, isTryItOutFlow: O = !1, initialSelectedEffectId: S } = e,
+    let { user: t, guild: n, className: s, sectionTitle: x, forcedDivider: E = !1, withTutorial: j = !1, showBorder: C = !1, isTryItOutFlow: O = !1, initialSelectedEffectId: S } = e,
         v = (0, m.Kg)(t, n),
         T = u.ZP.canUsePremiumProfileCustomization(t),
         { analyticsLocations: I } = (0, o.ZP)(),
@@ -38,13 +38,13 @@ function x(e) {
             });
     }, [T, I]);
     let P = null != n,
-        R = C ? a.gtL : a.zxk;
+        R = j ? a.gtL : a.zxk;
     return (0, i.jsx)(p.Z, {
         forcedDivider: E,
         borderType: g.Y.PREMIUM,
         hasBackground: !0,
         title: x,
-        showBorder: j,
+        showBorder: C,
         errors: y,
         className: s,
         children: (0, i.jsxs)('div', {
@@ -53,8 +53,8 @@ function x(e) {
                 (0, i.jsx)(R, {
                     size: a.zxk.Sizes.SMALL,
                     onClick: A,
-                    className: l()({ [_.buttonHighlighted]: C }),
-                    children: b.intl.string(b.t['0nEVoK'])
+                    className: l()({ [_.buttonHighlighted]: j }),
+                    children: b.intl.string(b.t['/dRfCQ'])
                 }),
                 (O || void 0 !== N ? null != N : null != v) &&
                     (0, i.jsx)(a.zxk, {
@@ -65,7 +65,7 @@ function x(e) {
                         onClick: function () {
                             (0, m.s6)(null, v, null == n ? void 0 : n.id);
                         },
-                        children: P ? b.intl.string(b.t.GJ3Fcn) : b.intl.string(b.t['Ld+f5e'])
+                        children: P ? b.intl.string(b.t.CHf9iI) : b.intl.string(b.t.uMuafH)
                     })
             ]
         })

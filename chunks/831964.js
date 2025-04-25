@@ -21,8 +21,8 @@ var i,
     _ = n(91342),
     x = n(181708),
     E = n(290650),
-    C = n(751125),
-    j = n(357003),
+    j = n(751125),
+    C = n(357003),
     O = n(904505),
     S = n(712626),
     v = n(386014),
@@ -49,7 +49,7 @@ let D = () => {
                 title: m.intl.string(m.t['6b3ydH']),
                 description: m.intl.string(m.t['Y+IJys']),
                 previewImage: g,
-                videoUrl: e ? E.ZP : C.ZP,
+                videoUrl: e ? E.ZP : j.ZP,
                 isCompact: !0
             }
         };
@@ -68,9 +68,9 @@ let D = () => {
                     title: m.intl.string(m.t['57ngoq']),
                     description: m.intl.string(m.t.piFFjY),
                     descriptionCta: m.intl.string(m.t.jVcuVV),
-                    previewImage: j.Z,
+                    previewImage: C.Z,
                     onClick: n,
-                    videoUrl: j.Z
+                    videoUrl: C.Z
                 },
                 serverProfiles: {
                     name: 'serverProfiles',

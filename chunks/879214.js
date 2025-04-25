@@ -1,4 +1,4 @@
-n.d(t, { W: () => j });
+n.d(t, { W: () => C });
 var i = n(200651),
     r = n(120356),
     s = n.n(r),
@@ -17,22 +17,22 @@ var i = n(200651),
     _ = n(780525),
     x = n(474936),
     E = n(388032),
-    C = n(731670);
-let j = (e) => {
+    j = n(731670);
+let C = (e) => {
     let { isFullScreen: t, analyticsLocations: n } = e,
         r = (0, a.e7)([p.default], () => p.default.getCurrentUser()),
-        j = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
+        C = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
         O = (0, g.M5)(r, x.p9.TIER_0) || (0, g.M5)(r, x.p9.TIER_1),
         S = new Date(_.Lk);
     return (0, i.jsx)(u.O, {
         newLocations: [d.Z.PREMIUM_MARKETING_PAGE_BANNER],
         children: (0, i.jsx)('div', {
-            className: s()(C.banner, {
-                [C.bannerFullScreen]: t,
-                [C.staticBanner]: j
+            className: s()(j.banner, {
+                [j.bannerFullScreen]: t,
+                [j.staticBanner]: C
             }),
             children: (0, i.jsxs)('div', {
-                className: s()(C.bannerContent, { [C.bannerContentSettingsPage]: !t }),
+                className: s()(j.bannerContent, { [j.bannerContentSettingsPage]: !t }),
                 children: [
                     (0, i.jsx)(l.X6, {
                         variant: 'display-sm',
@@ -40,7 +40,7 @@ let j = (e) => {
                         children: !0 === O ? E.intl.string(E.t.tY1el5) : E.intl.string(E.t.HaPg8P)
                     }),
                     (0, i.jsx)(l.xv, {
-                        className: C.countdown,
+                        className: j.countdown,
                         variant: 'text-sm/bold',
                         children: (0, i.jsx)(h.Z, { endDate: S })
                     }),
@@ -51,8 +51,8 @@ let j = (e) => {
                     }),
                     (0, i.jsx)(o.gtL, {
                         color: 'white',
-                        className: C.bannerButton,
-                        buttonShineClassName: C.bannerButtonShine,
+                        className: j.bannerButton,
+                        buttonShineClassName: j.bannerButtonShine,
                         onClick: () => {
                             (0, m.Z)({
                                 analyticsLocations: n,

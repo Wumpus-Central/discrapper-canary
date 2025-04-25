@@ -17,8 +17,8 @@ var i = n(200651),
     _ = n(775451),
     x = n(970815),
     E = n(275388),
-    C = n(720463),
-    j = n(931928),
+    j = n(720463),
+    C = n(931928),
     O = n(450272),
     S = n(981631),
     v = n(388032),
@@ -33,10 +33,10 @@ function N() {
     let { openIntroToOrbsClaimedCoachmark: e } = (0, p.l)({ location: 'VirtualCurrencyComponents' }),
         [t, n] = r.useState(150),
         [g, h] = r.useState(150),
-        [E, C] = r.useState(500),
-        [j, I] = r.useState(f.b.DEFAULT),
+        [E, j] = r.useState(500),
+        [C, I] = r.useState(f.b.DEFAULT),
         N = () => {
-            switch (j) {
+            switch (C) {
                 case f.b.DEFAULT:
                     I(f.b.HIGHLIGHTED);
                     break;
@@ -175,7 +175,7 @@ function N() {
                         className: T.interactivePillContainer,
                         children: (0, i.jsx)(x.A4, {
                             balance: g,
-                            balanceWidgetMode: j,
+                            balanceWidgetMode: C,
                             onClick: () => N()
                         })
                     }),
@@ -187,7 +187,7 @@ function N() {
                     (0, i.jsx)(l.FiK, {
                         className: T.numberInput,
                         value: E,
-                        onChange: (e) => C(e)
+                        onChange: (e) => j(e)
                     }),
                     (0, i.jsx)(s.zx, {
                         onClick: () => {
@@ -202,7 +202,7 @@ function N() {
                         className: T.interactivePillContainer,
                         children: (0, i.jsx)(x.A4, {
                             balance: g,
-                            balanceWidgetMode: j,
+                            balanceWidgetMode: C,
                             onClick: () => N()
                         })
                     })
@@ -374,8 +374,8 @@ function A() {
                 label: 'Onboarding Coachmark',
                 direction: 'horizontal',
                 children: [
-                    (0, i.jsx)(j.ED, { onClose: S.dG4 }),
-                    (0, i.jsx)(j.ED, {
+                    (0, i.jsx)(C.ED, { onClose: S.dG4 }),
+                    (0, i.jsx)(C.ED, {
                         onClose: S.dG4,
                         invertCoachmark: !0
                     })
@@ -383,7 +383,7 @@ function A() {
             }),
             (0, i.jsx)(O.E_, {
                 label: 'Balance Widget Coachmark',
-                children: (0, i.jsx)(C.E, {})
+                children: (0, i.jsx)(j.E, {})
             })
         ]
     });

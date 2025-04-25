@@ -20,7 +20,7 @@ let o = (e) => {
             (0, r.jsx)(i.sNh, {
                 id: 'change-avatar-decoration',
                 action: n,
-                label: a.intl.string(a.t['Tna/TU'])
+                label: a.intl.string(a.t.BVcYCw)
             })
         ]
     });

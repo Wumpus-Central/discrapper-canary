@@ -17,8 +17,8 @@ var i = n(200651),
     _ = n(246946),
     x = n(594174),
     E = n(63063),
-    C = n(74538),
-    j = n(18438),
+    j = n(74538),
+    C = n(18438),
     O = n(778825),
     S = n(856607),
     v = n(594496),
@@ -108,7 +108,7 @@ function R(e) {
             userId: s.id,
             image: k
         });
-    return (r.useEffect(() => () => c.Z.wait(j.W3), []),
+    return (r.useEffect(() => () => c.Z.wait(C.W3), []),
     r.useEffect(() => {
         null != w &&
             m.ZP.trackWithMetadata(I.rMx.SETTINGS_PANE_VIEWED, {
@@ -133,7 +133,7 @@ function R(e) {
                                   (0, i.jsx)(T.Z, {
                                       guildId: t.id,
                                       onChange: (e) => {
-                                          null != e && (0, j.HP)(e);
+                                          null != e && (0, C.HP)(e);
                                       }
                                   }),
                                   (0, i.jsx)(g.Z, {
@@ -144,7 +144,7 @@ function R(e) {
                                               pendingAvatar: B,
                                               user: s,
                                               guild: t,
-                                              canUsePremiumCustomization: C.ZP.canUsePremiumProfileCustomization(s),
+                                              canUsePremiumCustomization: j.ZP.canUsePremiumProfileCustomization(s),
                                               onUpsellClick: P
                                           })
                                       ),

@@ -95,12 +95,12 @@ let v = () => 80,
             { user: r, profileEffect: l, innerRef: o, section: s, isSelected: v } = e,
             E = O(e, ['user', 'profileEffect', 'innerRef', 'section', 'isSelected']);
         let C = (0, g.V)(l.id),
-            I = (0, a.e7)([d.Z], () => {
+            w = (0, a.e7)([d.Z], () => {
                 let e = d.Z.getProduct(l.skuId);
                 return (0, f.G1)(e);
             }),
-            S = (0, f.Yq)(l.skuId),
-            w = i.useRef(null),
+            I = (0, f.Yq)(l.skuId),
+            S = i.useRef(null),
             { accessibilityLabel: N, thumbnailPreviewSrc: Z, title: k } = null != (t = null == C ? void 0 : C.config) ? t : {},
             D = m.ZP.canUseCollectibles(r),
             A = s === h.$0.PREMIUM_PURCHASE && !D,
@@ -111,7 +111,7 @@ let v = () => 80,
                 y(
                     {
                         className: !A || v || T ? void 0 : j.decorationGridItemChurned,
-                        innerRef: null != o ? o : w,
+                        innerRef: null != o ? o : S,
                         isSelected: v
                     },
                     E
@@ -130,7 +130,7 @@ let v = () => 80,
                         }),
                         s === h.$0.PURCHASE || (s === h.$0.PREMIUM_PURCHASE && D)
                             ? null
-                            : S
+                            : I
                               ? (0, n.jsx)(u.lBU, {
                                     className: j.newBadge,
                                     text: (0, n.jsxs)('div', {
@@ -145,7 +145,7 @@ let v = () => 80,
                                     })
                                 })
                               : (0, n.jsx)(u.G2e, {
-                                    icon: I
+                                    icon: w
                                         ? () =>
                                               (0, n.jsx)(u.SrA, {
                                                   size: 'custom',
@@ -203,7 +203,7 @@ let v = () => 80,
                                         (0, n.jsx)(u.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'header-primary',
-                                            children: null != r ? b.intl.string(b.t.GJ3Fcn) : b.intl.string(b.t.PoWNfX)
+                                            children: null != r ? b.intl.string(b.t.CHf9iI) : b.intl.string(b.t.PoWNfX)
                                         })
                                     ]
                                 },

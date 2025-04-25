@@ -17,8 +17,8 @@ var i = n(200651),
     _ = n(778764),
     x = n(314897),
     E = n(325067),
-    C = n(594174),
-    j = n(572004),
+    j = n(594174),
+    C = n(572004),
     O = n(287880),
     S = n(714565),
     v = n(202858),
@@ -83,9 +83,9 @@ function w(e) {
         l = r.useRef(null),
         a = r.useCallback(
             (e) => {
-                if ('c' === e.key && e.metaKey && j.wS) {
+                if ('c' === e.key && e.metaKey && C.wS) {
                     var t;
-                    e.preventDefault(), e.stopPropagation(), (0, j.JG)(s), null == l || null == (t = l.current) || t.focus();
+                    e.preventDefault(), e.stopPropagation(), (0, C.JG)(s), null == l || null == (t = l.current) || t.focus();
                 }
             },
             [s]
@@ -434,7 +434,7 @@ class k extends r.PureComponent {
     }
 }
 function L(e) {
-    let t = (0, a.e7)([C.default], () => C.default.getCurrentUser());
+    let t = (0, a.e7)([j.default], () => j.default.getCurrentUser());
     l()(null != t, 'TwoFactorAuth: currentUser cannot be undefined');
     let n = (0, a.cj)([E.Z, x.default], () => ({
         togglingSMS: E.Z.togglingSMS,

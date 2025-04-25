@@ -23,8 +23,8 @@ var i = n(200651),
     _ = n(326255),
     x = n(956221),
     E = n(747017),
-    C = n(385499),
-    j = n(570908),
+    j = n(385499),
+    C = n(570908),
     O = n(702321),
     S = n(201895),
     v = n(43267),
@@ -179,7 +179,7 @@ let en = q.ZP.getEnableHardwareAcceleration() ? p.Xo$ : p.qEK,
         }),
     eo = (e) => {
         var { route: t, selected: n, icon: r, iconClassName: s, avatarWithTextClassName: a, interactiveClassName: o, text: d, children: m, locationState: g, onClick: h, className: f, role: b, 'aria-posinset': _, 'aria-setsize': x, listItemRef: E } = e,
-            C = et(e, ['route', 'selected', 'icon', 'iconClassName', 'avatarWithTextClassName', 'interactiveClassName', 'text', 'children', 'locationState', 'onClick', 'className', 'role', 'aria-posinset', 'aria-setsize', 'listItemRef']);
+            j = et(e, ['route', 'selected', 'icon', 'iconClassName', 'avatarWithTextClassName', 'interactiveClassName', 'text', 'children', 'locationState', 'onClick', 'className', 'role', 'aria-posinset', 'aria-setsize', 'listItemRef']);
         let O = (0, y.Q3)('PrivateChannelLinkButton');
         return (0, i.jsx)(I.Z, {
             className: l()(J.channel, { [J.fullWidth]: u.tq }, f),
@@ -204,11 +204,11 @@ let en = q.ZP.getEnableHardwareAcceleration() ? p.Xo$ : p.qEK,
                                 },
                                 className: J.link
                             },
-                            C
+                            j
                         ),
                         {
                             children: [
-                                (0, i.jsx)(j.Z, {
+                                (0, i.jsx)(C.Z, {
                                     muted: !1,
                                     avatar: (0, i.jsx)(r, {
                                         size: O ? 'refresh_sm' : void 0,
@@ -251,8 +251,8 @@ function ec(e) {
             blocked: H.Z.isBlocked(t.getRecipientId())
         })),
         eE = eh && e_,
-        eC = eh && ex,
-        ej = (eb || eE || eC) && !(a || Y),
+        ej = eh && ex,
+        eC = (eb || eE || ej) && !(a || Y),
         eO = (0, m.e7)([F.ZP], () => F.ZP.getMentionCount(t.id) > 0),
         eS = (0, T.ZP)(t),
         ev = (0, m.e7)([A.Z], () => A.Z.isFavorite(t.id)),
@@ -355,7 +355,7 @@ function ec(e) {
                           applicationStream: x,
                           animate: Y,
                           textClassName: J.activityStatusText,
-                          iconClassName: ej ? J.mutedIcon : void 0
+                          iconClassName: eC ? J.mutedIcon : void 0
                       })
                     : null,
         eL = () => {
@@ -434,7 +434,7 @@ function ec(e) {
                 'aria-setsize': z,
                 'aria-posinset': G,
                 children: [
-                    eT && eO ? (0, i.jsx)('div', { className: l()(J.unreadPill, { [J.muted]: ej }) }) : null,
+                    eT && eO ? (0, i.jsx)('div', { className: l()(J.unreadPill, { [J.muted]: eC }) }) : null,
                     (0, i.jsxs)(p.vjx, {
                         className: l()(J.interactive, {
                             [J.interactiveSystemDM]: eg && ep,
@@ -442,7 +442,7 @@ function ec(e) {
                         }),
                         as: 'div',
                         onClick: eD,
-                        muted: ej,
+                        muted: eC,
                         selected: a,
                         children: [
                             (0, i.jsx)(L.Z, {
@@ -468,20 +468,20 @@ function ec(e) {
                                         r
                                     ),
                                     {
-                                        children: (0, i.jsx)(j.Z, {
+                                        children: (0, i.jsx)(C.Z, {
                                             ref: eM,
                                             avatar: eL(),
-                                            highlighted: eO && !(eT && ej),
-                                            muted: ej,
+                                            highlighted: eO && !(eT && eC),
+                                            muted: eC,
                                             subText: ek(),
                                             name: (0, i.jsx)(N.Z, {
                                                 tooltipClassName: J.overflowTooltip,
                                                 children: eB
                                             }),
                                             decorators: t.isSystemDM()
-                                                ? (0, i.jsx)(C.Z, {
+                                                ? (0, i.jsx)(j.Z, {
                                                       className: J.decorator,
-                                                      type: C.Z.Types.SYSTEM_DM,
+                                                      type: j.Z.Types.SYSTEM_DM,
                                                       verified: !0
                                                   })
                                                 : null
@@ -491,7 +491,7 @@ function ec(e) {
                             ),
                             ev ? (0, i.jsx)(es, {}) : null,
                             eE ? (0, i.jsx)(el, {}) : null,
-                            eC ? (0, i.jsx)(ea, {}) : null,
+                            ej ? (0, i.jsx)(ea, {}) : null,
                             (0, i.jsx)(er, {
                                 'aria-label': em ? Q.intl.string(Q.t['26C4oq']) : Q.intl.string(Q.t.jsvgc3),
                                 onClick: em ? ew : eA,

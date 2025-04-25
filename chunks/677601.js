@@ -321,7 +321,7 @@ class eK extends i.PureComponent {
                         theme: e,
                         children: (e) =>
                             (0, r.jsx)('div', {
-                                className: o()(eH.callContainer, e),
+                                className: o()(eH.callContainer, a || t !== eG.AEg.FULL_SCREEN ? void 0 : eH.fullScreen, e),
                                 ref: (e) => {
                                     (this._callContainerRef.current = e), (this.props.callContainerRef.current = e);
                                 },

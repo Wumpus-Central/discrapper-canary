@@ -32,7 +32,7 @@ function g(e) {
         s > -1 &&
             r.push(
                 (0, i.jsx)(
-                    C,
+                    j,
                     {
                         className: n,
                         count: s,
@@ -76,7 +76,7 @@ function h(e) {
         l > -1 &&
             s.push(
                 (0, i.jsx)(
-                    C,
+                    j,
                     {
                         className: r,
                         count: l,
@@ -88,7 +88,7 @@ function h(e) {
         a > -1 &&
             s.push(
                 (0, i.jsx)(
-                    C,
+                    j,
                     {
                         className: r,
                         count: a,
@@ -111,7 +111,7 @@ function f(e) {
         o > -1 &&
             a.push(
                 (0, i.jsx)(
-                    C,
+                    j,
                     {
                         className: l,
                         count: o,
@@ -177,7 +177,7 @@ function _(e) {
         s > 0 &&
             r.push(
                 (0, i.jsx)(
-                    C,
+                    j,
                     {
                         className: n,
                         count: s,
@@ -213,7 +213,7 @@ function x(e) {
         o > -1 &&
             l.push(
                 (0, i.jsx)(
-                    C,
+                    j,
                     {
                         className: s,
                         count: o,
@@ -225,7 +225,7 @@ function x(e) {
         c > -1 &&
             l.push(
                 (0, i.jsx)(
-                    C,
+                    j,
                     {
                         className: s,
                         count: c,
@@ -237,7 +237,7 @@ function x(e) {
         d > -1 &&
             l.push(
                 (0, i.jsx)(
-                    C,
+                    j,
                     {
                         className: s,
                         count: d,
@@ -293,7 +293,7 @@ function E(e) {
                 case u.xn.DATETIME_LESS_THAN_EQUAL:
                     r.push(
                         (0, i.jsx)(
-                            j,
+                            C,
                             {
                                 className: t,
                                 date: a,
@@ -310,7 +310,7 @@ function E(e) {
                 case u.xn.INTEGER_LESS_THAN_EQUAL:
                     r.push(
                         (0, i.jsx)(
-                            C,
+                            j,
                             {
                                 className: t,
                                 count: Number(a),
@@ -324,7 +324,7 @@ function E(e) {
     }
     return r;
 }
-function C(e) {
+function j(e) {
     let t,
         { count: n, label: r, className: l, percent: a } = e,
         d = (0, c.$U)(n) + (a ? '%' : '');
@@ -344,7 +344,7 @@ function C(e) {
         })
     );
 }
-function j(e) {
+function C(e) {
     let { date: t, locale: n, label: r, className: l } = e;
     return (0, i.jsx)(o.Text, {
         className: s()(p.connectedAccountVanityMetadata, l),

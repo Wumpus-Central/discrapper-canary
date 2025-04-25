@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(539854);
+n.d(t, { Z: () => C }), n(388685), n(539854);
 var i = n(200651),
     r = n(192379),
     s = n(442837),
@@ -17,11 +17,11 @@ var i = n(200651),
     _ = n(526761),
     x = n(388032),
     E = n(805589);
-let C = (0, c.hQ)(),
-    j = r.memo(function (e) {
+let j = (0, c.hQ)(),
+    C = r.memo(function (e) {
         let { availableClans: t } = e,
             [n, c] = (0, d.US)([l.z.GUILD_TAG_USER_PROFILE_NEW_BADGE]),
-            j = r.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
+            C = r.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
             O = (0, s.e7)([g.default], () => {
                 var e;
                 return (0, u.Pb)(null == (e = g.default.getCurrentUser()) ? void 0 : e.primaryGuild).guildId;
@@ -45,7 +45,7 @@ let C = (0, c.hQ)(),
                 (e) => {
                     var t, n, r;
                     if (null == e) return null;
-                    let s = j.get(e.value);
+                    let s = C.get(e.value);
                     if (null == s) return null;
                     let l = null == (t = s.profile) ? void 0 : t.tag;
                     return null == l
@@ -59,7 +59,7 @@ let C = (0, c.hQ)(),
                               guildIconSize: 32
                           });
                 },
-                [j]
+                [C]
             ),
             T = r.useCallback(
                 (e) => {
@@ -84,7 +84,7 @@ let C = (0, c.hQ)(),
             (0, p.Z)(P, _.Y_.GUILD_TAG),
             (0, i.jsxs)(m.Z, {
                 title: x.intl.string(x.t.Pdd1nZ),
-                titleId: C,
+                titleId: j,
                 ref: P,
                 titleIcon:
                     n === l.z.GUILD_TAG_USER_PROFILE_NEW_BADGE &&

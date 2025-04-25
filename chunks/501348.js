@@ -17,8 +17,8 @@ var i = n(200651),
     _ = n(627845),
     x = n(514361),
     E = n(600164),
-    C = n(313201),
-    j = n(540059),
+    j = n(313201),
+    C = n(540059),
     O = n(605236),
     S = n(786761),
     v = n(3148),
@@ -91,9 +91,9 @@ let Y = {
         COZY: 'cozy',
         COMPACT: 'compact'
     },
-    K = (0, C.hQ)(),
-    q = (0, C.hQ)(),
-    X = (0, C.hQ)(),
+    K = (0, j.hQ)(),
+    q = (0, j.hQ)(),
+    X = (0, j.hQ)(),
     Q = '1337',
     J = (e) => {
         let t = 0;
@@ -176,7 +176,7 @@ let Y = {
         ];
     },
     $ = () => {
-        let e = (0, j.Q3)('ThemeTitle'),
+        let e = (0, C.Q3)('ThemeTitle'),
             t = (0, a.e7)([x.Z], () => x.Z.isPreview),
             { enabled: n } = N.Z.useExperiment(
                 { location: 'GradientSelectorsTitle' },
@@ -768,8 +768,8 @@ function ei() {
                 gradientPreset: x.Z.gradientPreset
             };
         }),
-        d = (0, j.o9)('UserSettingsAppearance'),
-        u = (0, j.Q3)('UserSettingsAppearance');
+        d = (0, C.o9)('UserSettingsAppearance'),
+        u = (0, C.Q3)('UserSettingsAppearance');
     return (0, i.jsx)(
         u ? et : ee,
         z(

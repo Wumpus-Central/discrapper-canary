@@ -17,8 +17,8 @@ var i = n(200651),
     _ = n(786761),
     x = n(3148),
     E = n(739566),
-    C = n(753206),
-    j = n(440849),
+    j = n(753206),
+    C = n(440849),
     O = n(921801),
     S = n(196051),
     v = n(441729),
@@ -202,7 +202,7 @@ function K() {
                 }),
                 (0, i.jsx)('div', {
                     className: L.previewMessage,
-                    children: (0, i.jsx)(C.Z, {
+                    children: (0, i.jsx)(j.Z, {
                         compact: e,
                         author: V(U({}, (0, E.ZH)(t)), { colorString: '#DD80F4' }),
                         message: t
@@ -422,7 +422,7 @@ function ee() {
                 children: (0, i.jsx)(d.j7V, {
                     className: B.marginBottom20,
                     value: e,
-                    note: null != o ? (0, j.Z)(o) : void 0,
+                    note: null != o ? (0, C.Z)(o) : void 0,
                     onChange: N.QK.updateSetting,
                     children: k.intl.string(k.t.Iayoh4)
                 })
@@ -432,7 +432,7 @@ function ee() {
                 children: (0, i.jsx)(d.j7V, {
                     className: B.marginBottom20,
                     value: t,
-                    note: null != u ? (0, j.Z)(u) : void 0,
+                    note: null != u ? (0, C.Z)(u) : void 0,
                     onChange: N.Yk.updateSetting,
                     children: k.intl.string(k.t.iIaOlZ)
                 })
@@ -453,7 +453,7 @@ function et() {
             (0, i.jsx)(d.R94, {
                 type: d.R94.Types.DESCRIPTION,
                 className: B.marginBottom8,
-                children: null != t ? (0, j.Z)(t) : k.intl.string(k.t.GRa6U1)
+                children: null != t ? (0, C.Z)(t) : k.intl.string(k.t.GRa6U1)
             }),
             (0, i.jsx)(d.FXm, {
                 options: [

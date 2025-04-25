@@ -17,8 +17,8 @@ var i = n(200651),
     _ = n(402567),
     x = n(629654),
     E = n(53691),
-    C = n(165583),
-    j = n(267717),
+    j = n(165583),
+    C = n(267717),
     O = n(643879),
     S = n(350327),
     v = n(996073),
@@ -240,7 +240,7 @@ function G(e) {
                               showUpsell: !0,
                               text: U.intl.format(U.t.TmfgIy, {
                                   onClick: () => {
-                                      (0, j.y)({
+                                      (0, C.y)({
                                           analyticsSource: er,
                                           onSubscribeFinish: el
                                       });
@@ -254,7 +254,7 @@ function G(e) {
                           (0, i.jsxs)('div', {
                               children: [
                                   (0, i.jsx)('div', { className: V.premiumTier2Divider }),
-                                  (0, i.jsx)(C.ZP, {
+                                  (0, i.jsx)(j.ZP, {
                                       type: B.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL,
                                       subscriptionTier: B.Si.TIER_2
                                   })

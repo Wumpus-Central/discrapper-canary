@@ -17,8 +17,8 @@ var i = n(200651),
     _ = n(690221),
     x = n(346585),
     E = n(347649),
-    C = n(332473),
-    j = n(303172),
+    j = n(332473),
+    C = n(303172),
     O = n(518560),
     S = n(921801),
     v = n(484459),
@@ -163,7 +163,7 @@ class X extends r.PureComponent {
                       '',
                       (0, i.jsx)(_.Z, {
                           className: W.noticeTextButton,
-                          onClick: () => (0, j.Z)(H.Kq.USER_SETTINGS),
+                          onClick: () => (0, C.Z)(H.Kq.USER_SETTINGS),
                           children: z.intl.string(z.t.LhlgY2)
                       })
                   ]
@@ -402,7 +402,7 @@ let Q = () => {
         t = (0, c.e7)([I.Z], () => I.Z.getBackupCodes()),
         n = (0, c.e7)([N.Z], () => N.Z.hidePersonalInformation),
         r = (0, c.e7)([Z.Z], () => Z.Z.theme),
-        s = (0, C.b)(),
+        s = (0, j.b)(),
         l = (0, E.CC)(),
         a = (0, c.e7)([D.default], () => D.default.locale),
         d = (0, c.e7)([y.Z], () => y.Z.getSubsection());

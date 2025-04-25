@@ -13,13 +13,13 @@ var r = n(525654),
 function p() {
     var e, t, n, r, p;
     let g = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        h = '393822',
-        f = '3f019c65c35cb80562b0d6d26351e988bdde94f2'.substring(0, 7),
+        h = '393880',
+        f = '5d26118b18d464baea34bf5ae4c1255e10b1390c'.substring(0, 7),
         b = null === a.Z || void 0 === a.Z ? void 0 : a.Z.remoteApp.getVersion(),
         _ = null === a.Z || void 0 === a.Z || null == (e = (t = a.Z.remoteApp).getBuildNumber) ? void 0 : e.call(t),
         x = null === a.Z || void 0 === a.Z || null == (n = (r = a.Z.remoteApp).getAppArch) ? void 0 : n.call(r),
         E = null == (p = o.C.getCurrentBuildOverride().overrides) ? void 0 : p.discord_web,
-        C = (function () {
+        j = (function () {
             var e;
             let t = null === s() || void 0 === s() || null == (e = s().os) ? void 0 : e.toString();
             if (null == t || null == a.Z) return null;
@@ -27,13 +27,13 @@ function p() {
                 [i, r, l] = d.ZP.parsedOSRelease;
             return t.includes('Windows 10') && void 0 !== l && l >= 22000 && (t = t.replace('Windows 10', 'Windows 11')), t.includes('OS X 10.15.7') && void 0 !== i && i >= 20 && (t = 'macOS '.concat(i - 9)), ''.concat(t, ' (').concat(n, ')');
         })(),
-        j = [g, h, '('.concat(f, ')')];
+        C = [g, h, '('.concat(f, ')')];
     return (
-        null != b && (j.push('Host '.concat(b)), null != x && j.push(x.toLowerCase()), null != _ && j.push('('.concat(_, ')'))),
-        j.push('Build Override: '.concat(null != E ? E.id : 'N/A')),
-        null != C && j.push(C),
+        null != b && (C.push('Host '.concat(b)), null != x && C.push(x.toLowerCase()), null != _ && C.push('('.concat(_, ')'))),
+        C.push('Build Override: '.concat(null != E ? E.id : 'N/A')),
+        null != j && C.push(j),
         (0, i.jsx)(c.Z, {
-            copyValue: j.join(' '),
+            copyValue: C.join(' '),
             text: u.intl.string(u.t['9Al4QU']),
             'aria-label': !1,
             children: (e) => {
@@ -130,13 +130,13 @@ function p() {
                                               ]
                                           })
                                         : null,
-                                    null != C
+                                    null != j
                                         ? (0, i.jsx)(l.Text, {
                                               tag: 'span',
                                               className: m.line,
                                               variant: 'text-xs/normal',
                                               color: 'text-muted',
-                                              children: C
+                                              children: j
                                           })
                                         : null
                                 ]

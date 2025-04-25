@@ -58,8 +58,8 @@ function x(e, t) {
     );
 }
 function E() {}
-let C = [h.h8.VOICE_CHANNEL];
-function j(e) {
+let j = [h.h8.VOICE_CHANNEL];
+function C(e) {
     e.setOptions({ voiceChannelGuildFilter: null }), e.setLimit(1 / 0);
 }
 function O(e) {
@@ -154,8 +154,8 @@ function N(e) {
             queryResults: y
         } = (0, o.Z)({
             visible: !0,
-            autocompleterResultTypes: C,
-            autocompleterBeforeCreateSearchContext: j
+            autocompleterResultTypes: j,
+            autocompleterBeforeCreateSearchContext: C
         }),
         A = (function (e) {
             let t = '' !== e,

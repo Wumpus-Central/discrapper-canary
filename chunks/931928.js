@@ -1,7 +1,7 @@
 n.d(t, {
     ED: () => x,
-    fO: () => C,
-    qp: () => j
+    fO: () => j,
+    qp: () => C
 }),
     n(388685);
 var i = n(200651),
@@ -58,7 +58,7 @@ let x = (e) =>
             )
         ),
     E = [g.Z5c.ME, g.Z5c.COLLECTIBLES_SHOP, g.Z5c.NITRO_HOME],
-    C = (e) => {
+    j = (e) => {
         var { onClose: t, onCtaClick: n, targetElementRef: a, isGuildBarScrolling: c, children: m } = e,
             h = (function (e, t) {
                 if (null == e) return {};
@@ -80,13 +80,13 @@ let x = (e) =>
                 return r;
             })(e, ['onClose', 'onCtaClick', 'targetElementRef', 'isGuildBarScrolling', 'children']);
         let f = r.useRef(null),
-            [b, j] = r.useState(22),
+            [b, C] = r.useState(22),
             O = r.useRef(null),
             S = (0, o.Q3)('VirtualCurrency: DiscoveryOnboardingCoachmark'),
             v = r.useCallback(
                 (e) => {
                     if (S) {
-                        let t = window.innerHeight - ((0, p.t4)() + C.COACHMARK_VERTICAL_OFFSET);
+                        let t = window.innerHeight - ((0, p.t4)() + j.COACHMARK_VERTICAL_OFFSET);
                         return e.top <= t;
                     }
                     return !0;
@@ -107,7 +107,7 @@ let x = (e) =>
             y = r.useCallback(
                 (e) => {
                     let t = Math.floor(e.width / 2) - 2;
-                    b !== t && j(t);
+                    b !== t && C(t);
                 },
                 [b]
             );
@@ -134,8 +134,8 @@ let x = (e) =>
             children: m
         });
     };
-C.COACHMARK_VERTICAL_OFFSET = 10;
-let j = (e) => {
+j.COACHMARK_VERTICAL_OFFSET = 10;
+let C = (e) => {
     let { isVirtualCurrencyEnabled: t, discoveryButtonRef: n, scrollToBottom: i } = e,
         s = (0, o.Q3)('VirtualCurrency: DiscoveryOnboardingCoachmark'),
         l = r.useCallback(() => {

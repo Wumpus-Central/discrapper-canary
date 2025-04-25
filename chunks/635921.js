@@ -22,8 +22,8 @@ var i = n(200651),
     _ = n(346497),
     x = n(422034),
     E = n(206127),
-    C = n(710220),
-    j = n(318747),
+    j = n(710220),
+    C = n(318747),
     O = n(409100),
     S = n(474936),
     v = n(388032),
@@ -41,7 +41,7 @@ let I = (e) => {
             d =
                 t && a
                     ? null
-                    : (0, i.jsx)(j.Z, {
+                    : (0, i.jsx)(C.Z, {
                           className: l()(T.button, s),
                           forceWhite: !a
                       });
@@ -102,7 +102,7 @@ let A = r.forwardRef((e, t) => {
                             children: v.intl.string(v.t.YCZldH)
                         }),
                         V
-                            ? (0, i.jsx)(C.Z, { referrer: U })
+                            ? (0, i.jsx)(j.Z, { referrer: U })
                             : G
                               ? (0, i.jsx)('div', {
                                     className: T.affinityDescription,
@@ -115,7 +115,7 @@ let A = r.forwardRef((e, t) => {
                         B || D
                             ? (0, i.jsx)('div', {
                                   className: T.buttonContainer,
-                                  children: (0, i.jsx)(j.Z, {
+                                  children: (0, i.jsx)(C.Z, {
                                       className: l()(T.button, E),
                                       forceWhite: !0
                                   })

@@ -21,7 +21,7 @@ let h = (e) => {
     let x = null != r ? c.ZP.getPremiumPlanItem(r) : null;
     if ((c.ZP.isBoostOnlySubscription(r) ? (t = p.intl.string(p.t.Uj0md3)) : null != x && (t = c.ZP.getDisplayPremiumType(x.planId)), null == t)) return null;
     let E = () => a.Z.open(m.oAB.SUBSCRIPTIONS),
-        C = (null != x ? c.ZP.getSkuIdForPlan(x.planId) : null) === u.Si.TIER_1;
+        j = (null != x ? c.ZP.getSkuIdForPlan(x.planId) : null) === u.Si.TIER_1;
     return (
         (n = null != b ? b : _ || f ? 'always-white' : 'text-normal'),
         (0, i.jsxs)(l.Zbd, {
@@ -41,7 +41,7 @@ let h = (e) => {
                 (0, i.jsx)(l.Text, {
                     variant: 'text-sm/medium',
                     color: n,
-                    children: C
+                    children: j
                         ? p.intl.format(p.t['tYuv+f'], {
                               helpdeskArticle: o.Z.getArticleURL(m.BhN.PREMIUM_DETAILS),
                               onSubscriptionsClick: E

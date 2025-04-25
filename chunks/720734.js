@@ -22,8 +22,8 @@ var i = n(200651),
     _ = n(239091),
     x = n(230711),
     E = n(410575),
-    C = n(941129),
-    j = n(634894),
+    j = n(941129),
+    C = n(634894),
     O = n(586902),
     S = n(980591),
     v = n(468363),
@@ -76,8 +76,8 @@ var i = n(200651),
     e_ = n(640806),
     ex = n(184301),
     eE = n(52538),
-    eC = n(670188),
-    ej = n(861254),
+    ej = n(670188),
+    eC = n(861254),
     eO = n(221241),
     eS = n(879815),
     ev = n(294629),
@@ -178,8 +178,8 @@ function ti(e) {
         }),
         x = (0, f.dQu)(f.TVs.modules.guildbar.AVATAR_SIZE),
         {
-            updateOpenPopoutRef: C,
-            highlightBadge: j,
+            updateOpenPopoutRef: j,
+            highlightBadge: C,
             setHighlightBadge: O
         } = (function () {
             let e = r.useRef(null),
@@ -217,12 +217,12 @@ function ti(e) {
         ? null
         : (0, i.jsx)(E.Z, {
               object: e1.qAy.AVATAR,
-              children: (0, i.jsx)(eC.Z, {
+              children: (0, i.jsx)(ej.Z, {
                   user: s,
                   targetElementRef: p,
                   clickTrap: !0,
                   preload: () =>
-                      (0, ex.Z)(s.id, s.getAvatarURL(void 0, eC.I), {
+                      (0, ex.Z)(s.id, s.getAvatarURL(void 0, ej.I), {
                           type: 'account_popout',
                           withMutualGuilds: !1,
                           withMutualFriends: !1
@@ -231,7 +231,7 @@ function ti(e) {
                       let { closePopout: n, setPopoutRef: r } = e;
                       return (0, i.jsx)(er.Z, {
                           currentUser: s,
-                          highlightBadge: j,
+                          highlightBadge: C,
                           openedAt: t,
                           onClose: () => {
                               null == n || n();
@@ -248,7 +248,7 @@ function ti(e) {
                       c(), O(void 0);
                   },
                   children: (e) => (
-                      C(e),
+                      j(e),
                       (0, i.jsxs)(
                           f.P3F,
                           e5(
@@ -649,14 +649,14 @@ class tr extends r.PureComponent {
     }
 }
 function ts(e) {
-    let { selfDeaf: t, selfMute: n, awaitingRemote: r, serverMute: s, serverDeaf: l, suppress: a, shouldShowSpeakingWhileMutedTooltip: o, isEligibleForPomelo: c, webBuildOverride: d, handleMouseEnterMute: u, handleMouseLeaveMute: m, handleToggleSelfDeaf: p, handleToggleSelfMute: g, handleInputAudioContextMenu: h, handleOutputAudioContextMenu: b, handleOpenAccountSettings: _, handleOpenSettingsContextMenu: x, dismissibleContents: E, nameplate: C, accountContainerRef: j } = e,
-        O = (0, el.A)(C);
+    let { selfDeaf: t, selfMute: n, awaitingRemote: r, serverMute: s, serverDeaf: l, suppress: a, shouldShowSpeakingWhileMutedTooltip: o, isEligibleForPomelo: c, webBuildOverride: d, handleMouseEnterMute: u, handleMouseLeaveMute: m, handleToggleSelfDeaf: p, handleToggleSelfMute: g, handleInputAudioContextMenu: h, handleOutputAudioContextMenu: b, handleOpenAccountSettings: _, handleOpenSettingsContextMenu: x, dismissibleContents: E, nameplate: j, accountContainerRef: C } = e,
+        O = (0, el.A)(j);
     return (0, i.jsxs)('div', {
         className: e8.buttons,
         style: O,
         children: [
             (0, i.jsx)(to, {
-                accountContainerRef: j,
+                accountContainerRef: C,
                 selfMute: n,
                 serverMute: s,
                 suppress: a,
@@ -668,8 +668,8 @@ function ts(e) {
                 onMouseLeave: m,
                 onClick: g,
                 onContextMenu: h,
-                iconForeground: null != C ? e8.iconForeground : void 0,
-                nameplate: C
+                iconForeground: null != j ? e8.iconForeground : void 0,
+                nameplate: j
             }),
             (0, i.jsx)(tc, {
                 selfDeaf: t,
@@ -677,8 +677,8 @@ function ts(e) {
                 onClick: p,
                 onContextMenu: b,
                 awaitingRemote: r,
-                iconForeground: null != C ? e8.iconForeground : void 0,
-                nameplate: C
+                iconForeground: null != j ? e8.iconForeground : void 0,
+                nameplate: j
             }),
             (0, i.jsx)(ta, {
                 isEligibleForPomelo: c,
@@ -686,8 +686,8 @@ function ts(e) {
                 onClick: _,
                 onContextMenu: x,
                 dismissibleContents: E.settings,
-                iconForeground: null != C ? e8.iconForeground : void 0,
-                nameplate: C
+                iconForeground: null != j ? e8.iconForeground : void 0,
+                nameplate: j
             })
         ]
     });
@@ -735,7 +735,7 @@ function tl() {
         k = (0, o.e7)([J.Z], () => null != J.Z.getAwaitingRemoteSessionInfo()),
         L = (0, o.e7)([eB.Z], () => eB.Z.getGuildId()),
         B = (0, eg.D)(),
-        M = (0, C.u)(),
+        M = (0, j.u)(),
         U = eK.ZP.canUsePremiumGuildMemberProfile(t),
         V = (null == t || null == (e = t.avatarDecoration) ? void 0 : e.skuId) === e2.rL,
         { voiceActivityStatusEnabled: G } = (0, v.U)({ location: 'Account' }),
@@ -744,11 +744,11 @@ function tl() {
         [Y, K] = (0, ee.G)(null != L ? L : null),
         { enabled: q } = (0, z.Z)({ location: 'Account' }),
         Q = 'account';
-    (0, j.j)({
+    (0, C.j)({
         location: Q + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, j.j)({
+        (0, C.j)({
             location: Q + ' auto off',
             autoTrackExposure: !1
         });
@@ -860,7 +860,7 @@ function ta(e) {
     });
 }
 function to(e) {
-    let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: c, tooltipText: d, tooltipColor: u, tooltipForceOpen: g, iconForeground: b, onMouseEnter: _, onMouseLeave: x, onClick: E, onContextMenu: C, nameplate: j, accountContainerRef: O } = e,
+    let { selfMute: t, serverMute: n, suppress: s, awaitingRemote: c, tooltipText: d, tooltipColor: u, tooltipForceOpen: g, iconForeground: b, onMouseEnter: _, onMouseLeave: x, onClick: E, onContextMenu: j, nameplate: C, accountContainerRef: O } = e,
         S = t || s || n,
         v = r.useRef(null),
         T = r.useRef(null),
@@ -872,9 +872,9 @@ function to(e) {
         Z = (0, o.e7)([eL.Z], () => eL.Z.isConnected()),
         { Component: w, events: k, play: B } = R ? N : I,
         M = n || s ? f.v0G : w,
-        { mode: U } = (0, ej.ZP)({ location: 'RTC Microphone Button' }),
+        { mode: U } = (0, eC.ZP)({ location: 'RTC Microphone Button' }),
         { coloredIconsEnabled: V } = (0, eO.Z)({ location: 'RTC Microphone Button' }),
-        G = null != d ? d : (0, L.Z)(t, n, s, c, U === ej.BK.GroupedButtonsRedMic),
+        G = null != d ? d : (0, L.Z)(t, n, s, c, U === eC.BK.GroupedButtonsRedMic),
         { analyticsLocations: F } = (0, P.ZP)(A.Z.AUDIO_INPUT_BUTTON),
         H = (0, eT.Hu)({
             location: A.Z.AUDIO_INPUT_BUTTON,
@@ -883,9 +883,9 @@ function to(e) {
     r.useEffect(() => () => B(), [S, B]);
     let z = r.useCallback(
             (e) => {
-                C(e, F);
+                j(e, F);
             },
-            [C, F]
+            [j, F]
         ),
         [W, Y] = r.useState(!1),
         K = r.useCallback((e) => {
@@ -918,7 +918,7 @@ function to(e) {
                         tooltipText: G,
                         tooltipColor: u,
                         tooltipForceOpen: g,
-                        plated: null != j,
+                        plated: null != C,
                         onMouseEnter: () => {
                             _(), k.onMouseEnter();
                         },
@@ -992,7 +992,7 @@ function to(e) {
                                                 e9(
                                                     {
                                                         ref: T,
-                                                        plated: null != j,
+                                                        plated: null != C,
                                                         tooltipForceOpen: q,
                                                         tooltipColor: q ? f.FGA.GREEN : void 0,
                                                         tooltipContentClassName: q ? e8.voiceFilterWarning : void 0,
@@ -1052,7 +1052,7 @@ function tc(e) {
         { coloredIconsEnabled: x } = (0, eO.Z)({ location: 'RTC Microphone Button' }),
         { analyticsLocations: E } = (0, P.ZP)(A.Z.AUDIO_OUTPUT_BUTTON);
     r.useEffect(() => () => g(), [m, g]);
-    let C = r.useCallback(
+    let j = r.useCallback(
         (e) => {
             o(e, E);
         },
@@ -1073,7 +1073,7 @@ function tc(e) {
                 className: c
             }),
             onClick: a,
-            onContextMenu: C,
+            onContextMenu: j,
             innerClassName: l()({ [e8.redIcon]: n }),
             iconForeground: m ? e8.strikethrough : void 0,
             role: 'switch',

@@ -1,4 +1,4 @@
-r.d(t, { default: () => S }), r(388685);
+r.d(t, { default: () => I }), r(388685);
 var n = r(200651),
     i = r(192379),
     l = r(442837),
@@ -42,7 +42,7 @@ function C(e) {
                         ? (0, n.jsx)(o.zxk, {
                               onClick: l,
                               disabled: a,
-                              children: _.intl.string(_.t.d6sv6u)
+                              children: _.intl.string(_.t.Jh8fJy)
                           })
                         : d || !(0, u.G1)(r)
                           ? (0, n.jsx)(o.zxk, {
@@ -65,29 +65,29 @@ function C(e) {
         ]
     });
 }
-function I(e) {
+function w(e) {
     let { user: t, guild: r, categories: l, purchases: c, onClose: f, initialSelectedProfileEffectId: p, currentSavedEffectId: m, analyticsLocations: g } = e,
         { pendingProfileEffectId: b } = (0, h.bd)(r),
         [j, O] = i.useMemo(() => {
             let e = (0, u.bl)(l, c);
             return [e.purchased, e.shopPreviews];
         }, [l, c]),
-        [v, I] = i.useState(() => (null != p ? p : void 0 !== b ? b : null == m ? null : null != m ? m : null)),
-        [S, w] = i.useMemo(() => {
+        [v, w] = i.useState(() => (null != p ? p : void 0 !== b ? b : null == m ? null : null != m ? m : null)),
+        [I, S] = i.useMemo(() => {
             var e;
             let t = j.find((e) => (null == e ? void 0 : e.id) === v),
                 r = null != t || null === v;
             return [null != (e = null != t ? t : O.find((e) => (null == e ? void 0 : e.id) === v)) ? e : null, r];
         }, [v, j, O]),
-        { product: N, purchase: Z } = (0, d.Z)(null == S ? void 0 : S.skuId),
+        { product: N, purchase: Z } = (0, d.Z)(null == I ? void 0 : I.skuId),
         k = i.useRef(null),
         D = x.ZP.canUseCollectibles(t),
         A = v === (void 0 === b ? (null != m ? m : null) : b),
         T = i.useCallback(
             (e) => {
-                I(e);
+                w(e);
             },
-            [I]
+            [w]
         ),
         B = i.useCallback(
             (e) => {
@@ -108,7 +108,7 @@ function I(e) {
                 children: [
                     (0, n.jsx)(o.X6q, {
                         variant: 'heading-lg/semibold',
-                        children: _.intl.string(_.t.t5SVGR)
+                        children: _.intl.string(_.t['/6nv6O'])
                     }),
                     (0, n.jsx)(o.olH, {
                         className: E.modalCloseButton,
@@ -129,8 +129,8 @@ function I(e) {
                     }),
                     (0, n.jsx)(y.Z, {
                         user: t,
-                        canApplySelectedChange: w,
-                        pendingProfileEffectRecord: S,
+                        canApplySelectedChange: S,
+                        pendingProfileEffectRecord: I,
                         product: N,
                         purchase: Z,
                         guild: r
@@ -148,14 +148,14 @@ function I(e) {
                 purchase: Z,
                 canUseCollectibles: D,
                 selectedProfileEffectId: v,
-                selectedProfileEffectItem: S,
+                selectedProfileEffectItem: I,
                 disableApplyButton: A,
                 analyticsLocations: g
             })
         ]
     });
 }
-function S(e) {
+function I(e) {
     let { transitionState: t, analyticsLocations: r, initialSelectedEffectId: a, guild: u, onClose: d } = e,
         { isFetching: p, categories: m, purchases: g } = (0, f.Z)('ProfileEffectModal'),
         x = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
@@ -179,7 +179,7 @@ function S(e) {
                           className: E.spinner,
                           type: o.$jN.Type.SPINNING_CIRCLE
                       })
-                    : (0, n.jsx)(I, {
+                    : (0, n.jsx)(w, {
                           user: x,
                           guild: u,
                           categories: m,

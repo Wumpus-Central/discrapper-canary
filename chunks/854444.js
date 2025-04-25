@@ -22,12 +22,12 @@ var i = n(192379),
     _ = n(496675),
     x = n(306680),
     E = n(944486),
-    C = n(9156),
-    j = n(823379),
+    j = n(9156),
+    C = n(823379),
     O = n(540126),
     S = n(647086),
     v = n(231338);
-let T = 12633 == n.j ? [a.ZP, o.Z, d.ZP, u.Z, m.Z, g.Z, h.Z, b.Z, _.Z, x.ZP, E.Z, C.ZP] : null;
+let T = 12633 == n.j ? [a.ZP, o.Z, d.ZP, u.Z, m.Z, g.Z, h.Z, b.Z, _.Z, x.ZP, E.Z, j.ZP] : null;
 function I() {
     let [e, t] = i.useState(() => N());
     return (
@@ -40,7 +40,7 @@ function I() {
 }
 function N() {
     let e = o.Z.getFavoriteChannels(),
-        t = C.ZP.isGuildCollapsed(S._),
+        t = j.ZP.isGuildCollapsed(S._),
         n = E.Z.getChannelId(),
         i = h.Z.getChannel(n),
         r = E.Z.getVoiceChannelId(),
@@ -68,8 +68,8 @@ function N() {
                     g = null != (c = d || m || !a ? u.Z.getActiveJoinedRelevantThreadsForParent(n.guild_id, n.id) : u.Z.getActiveJoinedUnreadThreadsForParent(n.guild_id, n.id)) ? c : {},
                     h = (0, O.zR)(n, g, i, r, t),
                     b = f.Z.isCollapsed(n.id),
-                    E = C.ZP.isChannelMuted(n.guild_id, n.id),
-                    j = {
+                    E = j.ZP.isChannelMuted(n.guild_id, n.id),
+                    C = {
                         id: n.id,
                         record: n,
                         category: l,
@@ -81,9 +81,9 @@ function N() {
                         isFirstVoiceChannel: !1,
                         subtitle: (0, O.Bz)(n, b, !1)
                     };
-                return d || m || !s().isEmpty(g) || x.ZP.getMentionCount(n.id) > 0 ? j : (t && E) || (a && (E || o || (0, p.vd)(n.type) || ((0, p.vc)(n.type) && !1 === x.ZP.hasUnread(n.id)))) ? null : j;
+                return d || m || !s().isEmpty(g) || x.ZP.getMentionCount(n.id) > 0 ? C : (t && E) || (a && (E || o || (0, p.vd)(n.type) || ((0, p.vc)(n.type) && !1 === x.ZP.hasUnread(n.id)))) ? null : C;
             })
-            .filter(j.lm)
+            .filter(C.lm)
             .sortBy((e) => {
                 let { record: t } = e;
                 return t.isGuildVocal() ? t.position + 10000 : t.position;
@@ -112,7 +112,7 @@ function N() {
                 let { id: n, order: i } = e,
                     r = o.Z.getCategoryRecord(n),
                     s = null != (t = d[n]) ? t : [],
-                    l = C.ZP.isChannelMuted(S._, n),
+                    l = j.ZP.isChannelMuted(S._, n),
                     a = g.Z.isCollapsed(n),
                     c = null;
                 return {

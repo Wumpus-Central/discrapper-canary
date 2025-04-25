@@ -15,20 +15,20 @@ var i = n(200651),
     f = n(142436);
 function b(e) {
     let { user: t, guild: n, className: s, sectionTitle: m, forcedDivider: b = !1, withTutorial: x = !1, isTryItOutFlow: E = !1 } = e,
-        { analyticsLocations: C } = (0, o.ZP)(),
-        j = null != n,
+        { analyticsLocations: j } = (0, o.ZP)(),
+        C = null != n,
         { userAvatarDecoration: O, guildAvatarDecoration: S, pendingAvatarDecoration: v, pendingErrors: T } = (0, p.$U)(t, n),
         I = (0, u.Z)('enable_avatar_decoration_uploads'),
         N = r.useCallback(
             () =>
                 (0, d.ps)({
-                    analyticsLocations: C,
+                    analyticsLocations: j,
                     isTryItOutFlow: E,
                     guild: n
                 }),
-            [C, E, n]
+            [j, E, n]
         ),
-        y = E || void 0 !== v ? null != v : (j ? S : O) != null,
+        y = E || void 0 !== v ? null != v : (C ? S : O) != null,
         A = x ? a.gtL : a.zxk;
     return (0, i.jsxs)(g.Z, {
         className: s,
@@ -44,7 +44,7 @@ function b(e) {
                         size: a.zxk.Sizes.SMALL,
                         onClick: N,
                         className: l()({ [f.buttonHighlighted]: x }),
-                        children: h.intl.string(h.t['Tna/TU'])
+                        children: h.intl.string(h.t.BVcYCw)
                     }),
                     y &&
                         (0, i.jsx)(a.zxk, {
@@ -55,7 +55,7 @@ function b(e) {
                             onClick: function () {
                                 (0, p.PO)(null == n ? void 0 : n.id, null);
                             },
-                            children: (0, c.ad)(t, n) ? h.intl.string(h.t['GsW4/v']) : h.intl.string(h.t.GReZ6O)
+                            children: (0, c.ad)(t, n) ? h.intl.string(h.t.CHf9iI) : h.intl.string(h.t.OrokWl)
                         })
                 ]
             }),

@@ -17,8 +17,8 @@ var i = n(200651),
     _ = n(313201),
     x = n(674180),
     E = n(565138),
-    C = n(374649),
-    j = n(908951),
+    j = n(374649),
+    C = n(908951),
     O = n(703656),
     S = n(853872),
     v = n(245950),
@@ -119,7 +119,7 @@ let L = (e) => {
     B = (e) => {
         let { subscription: t } = e,
             { analyticsLocations: n } = (0, h.ZP)(),
-            [r] = (0, C.ED)({
+            [r] = (0, j.ED)({
                 subscriptionId: t.id,
                 renewal: !0,
                 analyticsLocations: n,
@@ -127,7 +127,7 @@ let L = (e) => {
             }),
             s = (0, o.e7)([S.Z], () => S.Z.hasFetchedPaymentSources);
         return null != r && s
-            ? (0, i.jsx)(j.Z, {
+            ? (0, i.jsx)(C.Z, {
                   subscription: t,
                   currentInvoicePreview: r,
                   dropdownClassName: Z.paymentSourceDropdown
@@ -169,13 +169,13 @@ let L = (e) => {
     },
     U = (e) => {
         let { subscription: t } = e,
-            { listing: n, groupListing: s, guild: o, expanded: g, handleToggleExpanded: b, subscriptionInfo: C } = (0, v.Z)(t),
-            [j, S] = r.useState(!1),
+            { listing: n, groupListing: s, guild: o, expanded: g, handleToggleExpanded: b, subscriptionInfo: j } = (0, v.Z)(t),
+            [C, S] = r.useState(!1),
             U = (0, _.Dt)(),
             { analyticsLocations: V } = (0, h.ZP)(),
             { shouldHideGuildPurchaseEntryPoints: G } = (0, x.uP)(null == o ? void 0 : o.id),
             F = (null == t ? void 0 : t.paymentGateway) === A.gg$.APPLE_PARTNER;
-        if (null == s || null == n || null == C) return null;
+        if (null == s || null == n || null == j) return null;
         let H = async () => {
                 try {
                     S(!0), await d.pl(t, V), (0, y.h)();
@@ -183,7 +183,7 @@ let L = (e) => {
                     S(!1);
                 }
             },
-            { isCancelled: z, isPastDue: W, subscriptionPrice: Y, memberSince: K, nextRenewalDate: q, nextRenewalLabel: X, isTrial: Q } = C,
+            { isCancelled: z, isPastDue: W, subscriptionPrice: Y, memberSince: K, nextRenewalDate: q, nextRenewalLabel: X, isTrial: Q } = j,
             J = n.soft_deleted || null == o || F,
             $ = () =>
                 z
@@ -318,7 +318,7 @@ let L = (e) => {
                                   (0, i.jsx)(M, {
                                       isTrial: Q,
                                       isCancelled: z,
-                                      isResubscribing: j,
+                                      isResubscribing: C,
                                       shouldHideRoleSubscriptionEntryPoints: G,
                                       onCancelSubscriptionClick: () => {
                                           null != o &&

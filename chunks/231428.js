@@ -17,8 +17,8 @@ var i,
     _ = n(600164),
     x = n(239827),
     E = n(818035),
-    C = n(509545),
-    j = n(78839),
+    j = n(509545),
+    C = n(78839),
     O = n(74538),
     S = n(807160),
     v = n(981631),
@@ -244,7 +244,7 @@ function k(e) {
 }
 function L(e) {
     let t = (0, u.e7)([E.Z], () => E.Z.getPayments()),
-        n = (0, u.e7)([j.ZP], () => j.ZP.getPremiumTypeSubscription()),
+        n = (0, u.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()),
         i = s.useMemo(
             () =>
                 new Set(
@@ -265,7 +265,7 @@ function L(e) {
                 ),
             [t]
         ),
-        a = (0, u.Wu)([C.Z], () => C.Z.getPlanIdsForSkus(Array.from(l))),
+        a = (0, u.Wu)([j.Z], () => j.Z.getPlanIdsForSkus(Array.from(l))),
         o = s.useCallback(() => a.length === i.size, [a, i]),
         c = s.useMemo(() => t.filter((e) => e.currency !== v.pKx.DISCORD_ORB), [t]);
     return (

@@ -17,8 +17,8 @@ var i = n(200651),
     _ = n(331642),
     x = n(63063),
     E = n(581883),
-    C = n(738486),
-    j = n(918257),
+    j = n(738486),
+    C = n(918257),
     O = n(970813),
     S = n(726985),
     v = n(981631),
@@ -39,7 +39,7 @@ function P(e) {
             children: [
                 (0, i.jsxs)(p.F, {
                     setting: S.s6.VOICE_AND_VIDEO_SOUNDBOARD,
-                    children: [(0, i.jsx)(j.Z, { refreshStyles: t }), (0, i.jsx)(O.Z, { refreshStyles: t })]
+                    children: [(0, i.jsx)(C.Z, { refreshStyles: t }), (0, i.jsx)(O.Z, { refreshStyles: t })]
                 }),
                 (0, i.jsxs)(p.F, {
                     setting: S.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
@@ -63,7 +63,7 @@ function R(e) {
         [s, c] = r.useState(T.hY),
         p = (0, b.tT)(s),
         E = A(p),
-        j = (null == p ? void 0 : p.type) === b.zx.GLOBAL,
+        C = (null == p ? void 0 : p.type) === b.zx.GLOBAL,
         O = (0, a.e7)([h.Z], () => h.Z.hasFetchedAllSounds()) && null != p && null == E;
     r.useEffect(() => {
         O && (0, f.tt)({ location: n });
@@ -108,7 +108,7 @@ function R(e) {
                     children: [
                         (0, i.jsx)(_.Z, {
                             sound: E,
-                            isGlobal: j,
+                            isGlobal: C,
                             onSelect: (e) => {
                                 null == e ? (0, f.aC)(s, n) : (0, f.SZ)(s, e, n);
                             }
@@ -123,7 +123,7 @@ function R(e) {
                 })
             ]
         });
-    return t ? (0, i.jsx)(C.Z, { children: P }) : P;
+    return t ? (0, i.jsx)(j.Z, { children: P }) : P;
 }
 function D(e) {
     let { guildId: t } = e,

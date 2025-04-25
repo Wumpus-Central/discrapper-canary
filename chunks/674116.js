@@ -17,8 +17,8 @@ var i = n(200651),
     _ = n(894939),
     x = n(710808),
     E = n(625205),
-    C = n(325808),
-    j = n(823087),
+    j = n(325808),
+    C = n(823087),
     O = n(232388),
     S = n(546997),
     v = n(186934),
@@ -65,7 +65,7 @@ function V() {
                     (0, i.jsxs)(c.F, {
                         setting: w.s6.VOICE_AND_VIDEO_MIC_TEST,
                         children: [
-                            (0, i.jsx)(j.Z, {}),
+                            (0, i.jsx)(C.Z, {}),
                             (0, i.jsx)(l.R94, {
                                 className: M.marginBottom20,
                                 type: l.R94.Types.DESCRIPTION,
@@ -76,7 +76,7 @@ function V() {
                     }),
                     (0, i.jsx)(c.F, {
                         setting: w.s6.VOICE_AND_VIDEO_INPUT_MODE,
-                        children: (0, i.jsx)(C.Z, {})
+                        children: (0, i.jsx)(j.Z, {})
                     }),
                     (0, i.jsx)(c.F, {
                         setting: w.s6.VOICE_AND_VIDEO_SENSITIVITY,

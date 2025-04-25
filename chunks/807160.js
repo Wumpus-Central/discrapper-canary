@@ -17,8 +17,8 @@ var i,
     _ = n(600164),
     x = n(925329),
     E = n(267101),
-    C = n(240864),
-    j = n(942833),
+    j = n(240864),
+    C = n(942833),
     O = n(400916),
     S = n(916001),
     v = n(539290),
@@ -170,7 +170,7 @@ let ei = (e) => {
 function er(e) {
     let { guildId: t, guildProductListingId: n } = e,
         i = (0, E.hO)(t, n, { requireCurrentGuild: !1 }),
-        l = (0, j.C)(i),
+        l = (0, C.C)(i),
         a = (0, m.e7)([R.Z], () => R.Z.getGuild(t)),
         o = (null == i ? void 0 : i.role_id) != null && (null == i ? void 0 : i.attachments_count) === 0 ? W.intl.string(W.t.H11qcX) : l,
         c = s.useCallback(async () => {
@@ -198,7 +198,7 @@ function es(e) {
     var t, n;
     let { guildId: i, guildProductListingId: s } = e,
         l = (0, E.hO)(i, s, { requireCurrentGuild: !1 }),
-        a = (0, m.e7)([C.Z], () => C.Z.getGuildProductFetchState(s) === C.M.FETCHING),
+        a = (0, m.e7)([j.Z], () => j.Z.getGuildProductFetchState(s) === j.M.FETCHING),
         o = null == l ? void 0 : l.role_id,
         c = (0, m.e7)([R.Z], () => (null != o ? R.Z.getRole(i, o) : void 0), [i, o]),
         d = (null != (n = null == l || null == (t = l.attachments) ? void 0 : t.length) ? n : 0) > 0,
@@ -789,8 +789,8 @@ function ea(e) {
     }, [u, p]);
     let x = (0, m.e7)([R.Z], () => R.Z.getGuild(null == h ? void 0 : h.guildId)),
         E = c ? h : void 0,
-        C = i.subscription,
-        j = (0, m.e7)([Z.Z], () => (null != C && C.type !== F.NYc.PREMIUM ? Z.Z.get(C.items[0].planId) : null));
+        j = i.subscription,
+        C = (0, m.e7)([Z.Z], () => (null != j && j.type !== F.NYc.PREMIUM ? Z.Z.get(j.items[0].planId) : null));
     return (0, r.jsx)(el, {
         applicationStatistics: g,
         application: p ? _ : E,
@@ -801,7 +801,7 @@ function ea(e) {
         compactMode: a,
         className: o,
         payment: i,
-        plan: j
+        plan: C
     });
 }
 K(el, 'defaultProps', { compactMode: !1 });

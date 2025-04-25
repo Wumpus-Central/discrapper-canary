@@ -18,8 +18,8 @@ var r = n(442837),
     _ = n(459674),
     x = n(803567),
     E = n(269876),
-    C = n(976758),
-    j = n(726985),
+    j = n(976758),
+    C = n(726985),
     O = n(981631),
     S = n(65154),
     v = n(388032);
@@ -29,20 +29,20 @@ function I() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)(c.Z, {
-                webSetting: j.s6.VOICE_AND_VIDEO_VOICE,
+                webSetting: C.s6.VOICE_AND_VIDEO_VOICE,
                 children: [
                     (0, i.jsxs)(d.Z, {
                         children: [
                             (0, i.jsx)(l.F, {
-                                setting: j.s6.VOICE_AND_VIDEO_DEVICES,
+                                setting: C.s6.VOICE_AND_VIDEO_DEVICES,
                                 children: (0, i.jsx)(p.Z, {})
                             }),
                             (0, i.jsx)(l.F, {
-                                setting: j.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
-                                children: (0, i.jsx)(C.Z, {})
+                                setting: C.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
+                                children: (0, i.jsx)(j.Z, {})
                             }),
                             (0, i.jsxs)(l.F, {
-                                setting: j.s6.VOICE_AND_VIDEO_MIC_TEST,
+                                setting: C.s6.VOICE_AND_VIDEO_MIC_TEST,
                                 children: [
                                     (0, i.jsx)(h.Z, {}),
                                     (0, i.jsx)(s.R94, {
@@ -56,11 +56,11 @@ function I() {
                     (0, i.jsxs)(d.Z, {
                         children: [
                             (0, i.jsx)(l.F, {
-                                setting: j.s6.VOICE_AND_VIDEO_INPUT_MODE,
+                                setting: C.s6.VOICE_AND_VIDEO_INPUT_MODE,
                                 children: (0, i.jsx)(g.Z, {})
                             }),
                             (0, i.jsx)(l.F, {
-                                setting: j.s6.VOICE_AND_VIDEO_SENSITIVITY,
+                                setting: C.s6.VOICE_AND_VIDEO_SENSITIVITY,
                                 children: e === S.pM.VOICE_ACTIVITY && (0, i.jsx)(E.Z, {})
                             })
                         ]
@@ -68,13 +68,13 @@ function I() {
                 ]
             }),
             (0, i.jsx)(c.Z, {
-                webSetting: j.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
+                webSetting: C.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
                 title: v.intl.string(v.t['6I6GUl']),
                 children: (0, i.jsx)(x.Z, { refreshStyles: !0 })
             }),
             (0, i.jsx)(c.Z, {
                 title: v.intl.string(v.t['8/udY2']),
-                webSetting: j.s6.VOICE_AND_VIDEO_VOICE_ADVANCED,
+                webSetting: C.s6.VOICE_AND_VIDEO_VOICE_ADVANCED,
                 children: (0, i.jsxs)(d.Z, {
                     children: [(0, i.jsx)(b.Z, { refreshStyles: !0 }), (0, i.jsx)(_.Z, { refreshStyles: !0 }), (0, i.jsx)(u.Z, { refreshStyles: !0 }), (0, i.jsx)(m.Z, { refreshStyles: !0 }), (0, i.jsx)(f.Z, { refreshStyles: !0 })]
                 })

@@ -29,8 +29,8 @@ var i = n(570140),
     _ = n(944486),
     x = n(914010),
     E = n(626135),
-    C = n(777754),
-    j = n(823385),
+    j = n(777754),
+    C = n(823385),
     O = n(981631),
     S = n(176505);
 function v(e) {
@@ -78,13 +78,13 @@ function y(e) {
     };
 }
 function A(e, t) {
-    let { results: n, queryMode: i, query: r, maxQueryLength: s } = j.Z.getProps(),
+    let { results: n, queryMode: i, query: r, maxQueryLength: s } = C.Z.getProps(),
         l = x.Z.getGuildId(),
         a = _.Z.getChannelId(l),
         o = n[(0, c.gJ)(c.a8.DOWN, -1, n)],
-        d = C.Z.isEmail(r),
-        u = C.Z.isPhoneNumber(r),
-        m = C.Z.isUserTagLike(r),
+        d = j.Z.isEmail(r),
+        u = j.Z.isPhoneNumber(r),
+        m = j.Z.isUserTagLike(r),
         p = null != a && (0, S.AB)(a),
         g = (e) => (null == e ? null : e.type === c.h8.IN_APP_NAVIGATION ? e.type + '_' + e.record.type : e.type),
         b = {
@@ -100,12 +100,12 @@ function A(e, t) {
             query: d || u || m ? null : r,
             top_result_type: g(o),
             top_result_score: null != o ? o.score : null,
-            num_results_total: j.Z.getResultTotals(),
-            num_results_users: j.Z.getResultTotals(c.h8.USER),
-            num_results_text_channels: j.Z.getResultTotals(c.h8.TEXT_CHANNEL),
-            num_results_voice_channels: j.Z.getResultTotals(c.h8.VOICE_CHANNEL),
-            num_results_guilds: j.Z.getResultTotals(c.h8.GUILD),
-            num_results_group_dms: j.Z.getResultTotals(c.h8.GROUP_DM)
+            num_results_total: C.Z.getResultTotals(),
+            num_results_users: C.Z.getResultTotals(c.h8.USER),
+            num_results_text_channels: C.Z.getResultTotals(c.h8.TEXT_CHANNEL),
+            num_results_voice_channels: C.Z.getResultTotals(c.h8.VOICE_CHANNEL),
+            num_results_guilds: C.Z.getResultTotals(c.h8.GUILD),
+            num_results_group_dms: C.Z.getResultTotals(c.h8.GROUP_DM)
         };
     if (null != a) {
         let e = f.Z.getChannel(a);
@@ -138,7 +138,7 @@ function R() {
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : '';
     !(function (e) {
         let t;
-        if (j.Z.isOpen()) return;
+        if (C.Z.isOpen()) return;
         let n = x.Z.getGuildId(),
             i = _.Z.getChannelId(n);
         if (null != i) {

@@ -57,10 +57,10 @@ function _(e) {
     let { experiment: n, experimentId: s, overrideDescriptor: m, defaultOpen: g } = e,
         [b, _] = r.useState(g),
         [x, E] = r.useState(!1),
-        C = r.useCallback(() => {
+        j = r.useCallback(() => {
             _((e) => !e);
         }, []),
-        j = (0, a.e7)([u.Z], () => u.Z.getUserExperimentDescriptor(s)),
+        C = (0, a.e7)([u.Z], () => u.Z.getUserExperimentDescriptor(s)),
         O = (0, a.e7)([u.Z], () => u.Z.getLoadedUserExperiment(s)),
         S = (0, a.Wu)([u.Z], () =>
             l()
@@ -89,7 +89,7 @@ function _(e) {
         ),
         T = (0, i.jsx)(o.kL8, {
             'aria-label': 'Toggle visibility',
-            onClick: C,
+            onClick: j,
             children: (0, i.jsxs)(o.vwX, {
                 tag: o.RB0.H3,
                 className: f.title,
@@ -157,7 +157,7 @@ function _(e) {
                               children: [
                                   (0, i.jsxs)(o.R94, {
                                       type: o.geA.DESCRIPTION,
-                                      children: ['Current assigned to bucket ', null != (t = null == j ? void 0 : j.bucket) ? t : h.NZ.NOT_ELIGIBLE]
+                                      children: ['Current assigned to bucket ', null != (t = null == C ? void 0 : C.bucket) ? t : h.NZ.NOT_ELIGIBLE]
                                   }),
                                   null == O
                                       ? (0, i.jsx)(o.R94, {
@@ -238,7 +238,7 @@ function x(e) {
                     return ''.concat(new Date(n).toLocaleString(), ' (').concat(t, ')');
                 })
         ),
-        [C, j] = (0, a.Wu)([m.Z, u.Z], () => {
+        [j, C] = (0, a.Wu)([m.Z, u.Z], () => {
             let e = l().sortBy(l().values(m.Z.getGuilds()), (e) => e.name.toLowerCase()),
                 t = {},
                 i = [];
@@ -312,7 +312,7 @@ function x(e) {
                               children: [
                                   (0, i.jsxs)(o.R94, {
                                       type: o.geA.DESCRIPTION,
-                                      children: ['Current Assignments: ', j]
+                                      children: ['Current Assignments: ', C]
                                   }),
                                   null == x
                                       ? (0, i.jsx)(o.R94, {
@@ -333,7 +333,7 @@ function x(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: f.pre,
-                                            children: C
+                                            children: j
                                         }),
                                         (0, i.jsx)(o.vwX, {
                                             tag: 'h5',

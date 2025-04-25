@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(953529);
+n.d(t, { Z: () => j }), n(953529);
 var i = n(200651),
     r = n(192379),
     s = n(120356),
@@ -41,7 +41,7 @@ function x(e) {
     return e;
 }
 let E = (e) => {
-        let { name: t, title: n, description: s, descriptionCta: b, previewImage: x, videoUrl: E, shouldLoadVideo: C, index: j, isCompact: O, isReducedMotion: S, onClick: v } = e,
+        let { name: t, title: n, description: s, descriptionCta: b, previewImage: x, videoUrl: E, shouldLoadVideo: j, index: C, isCompact: O, isReducedMotion: S, onClick: v } = e,
             T = (0, p.rO)(),
             I = r.useRef(null),
             N = r.useRef(0),
@@ -132,7 +132,7 @@ let E = (e) => {
                         u.Z,
                         {
                             playsInline: !0,
-                            preload: C ? 'auto' : 'none',
+                            preload: j ? 'auto' : 'none',
                             muted: !0,
                             poster: x,
                             loop: !0,
@@ -151,7 +151,7 @@ let E = (e) => {
                     )
                 });
             },
-            B = j % 2 != 0;
+            B = C % 2 != 0;
         return (0, i.jsx)('div', {
             className: l()(y, {
                 [_.whatsNewBoxContainer]: !O,
@@ -170,7 +170,7 @@ let E = (e) => {
                   })
         });
     },
-    C = r.memo(function (e) {
+    j = r.memo(function (e) {
         let { className: t, shouldLoadVideo: n, isBestOfNitro: r = !1, isReducedMotion: s } = e,
             a = Object.values((0, g.ZP)(r)),
             o = r ? Object.values((0, g.__)()) : null;

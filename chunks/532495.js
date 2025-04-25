@@ -18,8 +18,8 @@ var r = n(512722),
     _ = n(872736),
     x = n(818420),
     E = n(134795),
-    C = n(610966),
-    j = n(513901),
+    j = n(610966),
+    C = n(513901),
     O = n(451392),
     S = n(906364),
     v = n(643879),
@@ -158,7 +158,7 @@ function Z() {
             ),
             es && (0, i.jsx)(x.Z, { user: B }),
             (0, i.jsx)(
-                j.Z,
+                C.Z,
                 {
                     user: B,
                     sectionTitle: R.intl.string(R.t.wR5wOj)
@@ -188,7 +188,7 @@ function Z() {
                       ]
                   })
                 : (0, i.jsx)(
-                      C.Z,
+                      j.Z,
                       {
                           user: B,
                           savedUserColor: null == M ? void 0 : M.accentColor,

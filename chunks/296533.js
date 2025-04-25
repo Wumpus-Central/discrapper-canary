@@ -22,40 +22,40 @@ var i = n(200651),
     _ = n(275909),
     x = n(300037),
     E = n(981631),
-    C = n(474936),
-    j = n(388032),
+    j = n(474936),
+    C = n(388032),
     O = n(238045);
 function S(e) {
     let { guildTier: t, guildBoostSlot: n, showAltText: l, isCanceled: o, premiumSubscription: c, fractionalPremiumInfo: d } = e,
         u = r.useMemo(() => {
             if (o) {
                 let e = c.currentPeriodEnd;
-                return c.isPausedForFractionalPremium && (e = d.endsAt.toDate()), j.intl.format(j.t.Z4ULRE, { date: e });
+                return c.isPausedForFractionalPremium && (e = d.endsAt.toDate()), C.intl.format(C.t.Z4ULRE, { date: e });
             }
             let e = null != n.premiumGuildSubscription ? f.default.extractTimestamp(n.premiumGuildSubscription.id) : 0;
-            return j.intl.formatToPlainString(j.t.lY2Bur, { date: new Date(e) });
+            return C.intl.formatToPlainString(C.t.lY2Bur, { date: new Date(e) });
         }, [n, o, c, d]),
         m = r.useMemo(
             () =>
                 (function (e) {
                     if (null == e || e === E.Eu4.NONE) return '';
                     let t = [
-                        j.intl.formatToPlainString(j.t.dLlKX1, { numEmojiSlots: C.HO[e].limits.emoji }),
-                        j.intl.formatToPlainString(j.t['+ANIfn'], { numStickerSlots: C.HO[e].limits.stickers }),
-                        j.intl.formatToPlainString(j.t['4gt60d'], { numSoundboardSlots: C.HO[e].limits.soundboardSounds }),
-                        j.intl.formatToPlainString(j.t.XahSjY, {
-                            resolution: C.HO[e].limits.screenShareQualityResolution,
-                            framerate: C.HO[e].limits.screenShareQualityFramerate
+                        C.intl.formatToPlainString(C.t.dLlKX1, { numEmojiSlots: j.HO[e].limits.emoji }),
+                        C.intl.formatToPlainString(C.t['+ANIfn'], { numStickerSlots: j.HO[e].limits.stickers }),
+                        C.intl.formatToPlainString(C.t['4gt60d'], { numSoundboardSlots: j.HO[e].limits.soundboardSounds }),
+                        C.intl.formatToPlainString(C.t.XahSjY, {
+                            resolution: j.HO[e].limits.screenShareQualityResolution,
+                            framerate: j.HO[e].limits.screenShareQualityFramerate
                         }),
-                        j.intl.formatToPlainString(j.t.NbNs7e, { bitrate: C.HO[e].limits.bitrate / 1000 }),
-                        j.intl.formatToPlainString(j.t.VVKcpq, { filesize: C.HO[e].limits.fileSize / 1024 / 1024 }),
-                        j.intl.formatToPlainString(j.t.TbpCvr, { numVideoStageSeats: C.HO[e].limits.stageVideoUsers }),
-                        j.intl.string(j.t.LDyX3t),
-                        j.intl.string(j.t.YtGlPT)
+                        C.intl.formatToPlainString(C.t.NbNs7e, { bitrate: j.HO[e].limits.bitrate / 1000 }),
+                        C.intl.formatToPlainString(C.t.VVKcpq, { filesize: j.HO[e].limits.fileSize / 1024 / 1024 }),
+                        C.intl.formatToPlainString(C.t.TbpCvr, { numVideoStageSeats: j.HO[e].limits.stageVideoUsers }),
+                        C.intl.string(C.t.LDyX3t),
+                        C.intl.string(C.t.YtGlPT)
                     ];
-                    e >= E.Eu4.TIER_2 && (t.push(j.intl.string(j.t.SztbtL)), t.push(j.intl.string(j.t['3GK91t']))), e >= E.Eu4.TIER_3 && t.push(j.intl.string(j.t.XUUJd3));
+                    e >= E.Eu4.TIER_2 && (t.push(C.intl.string(C.t.SztbtL)), t.push(C.intl.string(C.t['3GK91t']))), e >= E.Eu4.TIER_3 && t.push(C.intl.string(C.t.XUUJd3));
                     let n = t[Math.floor(Math.random() * t.length)];
-                    return j.intl.format(j.t['/dOAmZ'], { perk: n });
+                    return C.intl.format(C.t['/dOAmZ'], { perk: n });
                 })(t),
             [t]
         ),
@@ -94,7 +94,7 @@ function v(e) {
         f = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
         x = (0, l.e7)([p.default], () => p.default.getCurrentUser()),
         E = r.useMemo(() => (null != n.cooldownEndsAt ? new Date(n.cooldownEndsAt) : null), [n]),
-        C = r.useMemo(() => null != E && E > new Date(), [E]),
+        j = r.useMemo(() => null != E && E > new Date(), [E]),
         v = (0, g.tl)(n),
         T = (0, c.Z)();
     return (0, i.jsxs)('div', {
@@ -105,13 +105,13 @@ function v(e) {
                 children: [
                     (0, i.jsx)(_.Z, {
                         isCanceled: v,
-                        hasCooldown: C,
+                        hasCooldown: j,
                         useReducedMotion: f
                     }),
                     (0, i.jsx)('div', {
                         className: O.boostDescriptionContainer,
                         children:
-                            null != E && C && !v
+                            null != E && j && !v
                                 ? (0, i.jsx)(b.Z, {
                                       className: O.boostDescriptionInnerContainer,
                                       cooldown: E.getTime()
@@ -170,7 +170,7 @@ function v(e) {
                                 })({}, e)),
                                 (n = n =
                                     {
-                                        'aria-label': j.intl.string(j.t.PdRCRk),
+                                        'aria-label': C.intl.string(C.t.PdRCRk),
                                         className: O.boostSlotMenuIcon,
                                         children: (0, i.jsx)(a.Huf, {
                                             size: 'md',

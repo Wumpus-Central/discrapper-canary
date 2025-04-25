@@ -17,8 +17,8 @@ var i = n(200651),
     _ = n(952306),
     x = n(299206),
     E = n(295474),
-    C = n(144114),
-    j = n(918505),
+    j = n(144114),
+    C = n(918505),
     O = n(332473),
     S = n(921801),
     v = n(485341),
@@ -87,7 +87,7 @@ function W(e) {
     var t, s;
     let { className: a, user: o } = e,
         c = r.useRef(null),
-        m = (0, j.o9)(),
+        m = (0, C.o9)(),
         p = (0, O.b)(),
         g = (0, E.gS)(),
         h = null != (s = null == g || null == (t = g.nick) ? void 0 : t[0]) ? s : null,
@@ -97,7 +97,7 @@ function W(e) {
     }, [o.username]);
     let _ = !o.isClaimed(),
         x = (m && !o.isPomelo() && !o.hasVerifiedEmailOrPhone()) || _,
-        C = x ? V.intl.string(V.t['7Ngnys']) : void 0;
+        j = x ? V.intl.string(V.t['7Ngnys']) : void 0;
     return (0, i.jsxs)('div', {
         className: l()(G.field, a),
         children: [
@@ -178,7 +178,7 @@ function W(e) {
                     })
                 }),
             (0, i.jsx)(u.ua7, {
-                text: C,
+                text: j,
                 children: (e) =>
                     (0, i.jsx)(
                         u.zxk,
@@ -427,7 +427,7 @@ function X(e) {
                                                   title: V.intl.string(V.t['3CTiKi']),
                                                   children: s.hasFlag(B.xW$.MFA_SMS) ? V.intl.string(V.t.jrhJys) : void 0,
                                                   actionText: V.intl.string(V.t.N86XcH),
-                                                  handleSubmit: (e) => C.Z.removePhone(e, C.L.USER_SETTINGS_UPDATE)
+                                                  handleSubmit: (e) => j.Z.removePhone(e, j.L.USER_SETTINGS_UPDATE)
                                               })
                                           )
                                       );
@@ -444,7 +444,7 @@ function X(e) {
                                 (0, u.ZDy)(
                                     async () => {
                                         let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
-                                        return (t) => (0, i.jsx)(e, F({ reason: C.L.USER_SETTINGS_UPDATE }, t));
+                                        return (t) => (0, i.jsx)(e, F({ reason: j.L.USER_SETTINGS_UPDATE }, t));
                                     },
                                     { modalKey: M.M }
                                 );

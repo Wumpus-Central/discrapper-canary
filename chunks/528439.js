@@ -41,19 +41,19 @@ let m = { id: 'None' },
                     section: 'purchase',
                     items: [m, g, ...e.purchase],
                     height: 12,
-                    header: f.intl.string(f.t.JEimX1)
+                    header: f.intl.string(f.t['9x1v/v'])
                 },
                 {
                     section: 'premium_purchase',
                     items: e.premium_purchase,
                     height: 12,
-                    header: f.intl.string(f.t.DIJLzM)
+                    header: f.intl.string(f.t.TiLCg4)
                 },
                 {
                     section: 'preview',
                     items: e.preview,
                     height: 12,
-                    header: f.intl.string(f.t.fmIfaG)
+                    header: f.intl.string(f.t['1vbbeX'])
                 }
             ].filter((e) => {
                 let { items: t } = e;

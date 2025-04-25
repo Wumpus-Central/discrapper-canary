@@ -132,7 +132,7 @@ function C(e) {
                                             });
                                     },
                                     submitting: S || M,
-                                    children: k.intl.string(k.t['Tna/TU'])
+                                    children: k.intl.string(k.t.BVcYCw)
                                 }),
                                 (0, r.jsx)(i.zxk, {
                                     onClick: Z.onClose,

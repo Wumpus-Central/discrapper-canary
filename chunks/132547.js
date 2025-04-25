@@ -17,8 +17,8 @@ var i = n(200651),
     _ = n(71363),
     x = n(781800),
     E = n(981631),
-    C = n(388032),
-    j = n(614729),
+    j = n(388032),
+    C = n(614729),
     O = n(865215);
 let S = () => {
     (0, d.z)(c.X), (0, f.u)();
@@ -34,26 +34,26 @@ let S = () => {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(l.yWw, {
-                    className: j.mainPageScroller,
+                    className: C.mainPageScroller,
                     ref: e,
                     children: (0, i.jsx)('div', {
-                        className: j.container,
+                        className: C.container,
                         children: (0, i.jsxs)(o.Gt, {
                             value: v,
                             children: [
                                 (0, i.jsx)(h.Z, {
-                                    className: j.heroHeading,
+                                    className: C.heroHeading,
                                     location: b.MQ.HOME
                                 }),
                                 (0, i.jsx)(p.Z, {
                                     variant: b.R0.WHATS_NEW,
-                                    className: j.whatsNew,
+                                    className: C.whatsNew,
                                     noBackground: !0,
                                     leftAlignHeaders: !0,
                                     shouldAutoScroll: N
                                 }),
                                 (0, i.jsx)(p.Z, {
-                                    className: j.perksDiscoverability,
+                                    className: C.perksDiscoverability,
                                     noBackground: !0,
                                     leftAlignHeaders: !0,
                                     showAllPerksButton: (0, i.jsx)(x.Z, {
@@ -62,14 +62,14 @@ let S = () => {
                                     })
                                 }),
                                 (0, i.jsx)(g.Z, {
-                                    className: j.giftNitro,
+                                    className: C.giftNitro,
                                     location: a.Z.PREMIUM_MARKETING_GIFT_SECTION,
                                     analyticsLocation: {
                                         page: E.ZY5.NITRO_HOME,
                                         section: E.jXE.GIFT_BANNER
                                     }
                                 }),
-                                (0, i.jsx)('div', { className: j.footerSpacing }),
+                                (0, i.jsx)('div', { className: C.footerSpacing }),
                                 (0, i.jsx)(s.$, {
                                     innerRef: t,
                                     onChange: (e) => {
@@ -77,15 +77,15 @@ let S = () => {
                                     },
                                     children: (0, i.jsx)('div', {
                                         ref: t,
-                                        className: j.bottomOfPageVisibilitySensor
+                                        className: C.bottomOfPageVisibilitySensor
                                     })
                                 }),
                                 (0, i.jsx)('img', {
                                     src: O,
-                                    className: j.bottomIllustration,
+                                    className: C.bottomIllustration,
                                     width: 112,
                                     height: 85,
-                                    alt: C.intl.string(C.t.X4IxWF)
+                                    alt: j.intl.string(j.t.X4IxWF)
                                 })
                             ]
                         })

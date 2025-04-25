@@ -18,8 +18,8 @@ var r = n(120356),
     _ = n(695349),
     x = n(249689),
     E = n(520540),
-    C = n(104494),
-    j = n(639119),
+    j = n(104494),
+    C = n(639119),
     O = n(533525),
     S = n(197115),
     v = n(823188),
@@ -38,9 +38,9 @@ let w = (e) => {
             { headingText: o, headingTop: c } = M(),
             d = p.default.getCurrentUser(),
             m = (0, l.e7)([g.ZP], () => g.ZP.getPremiumTypeSubscription()),
-            h = (0, j.N)(),
-            f = (0, C.Ng)(),
-            b = (0, C.Wp)(f, y.Si.TIER_2) ? y.Si.TIER_2 : void 0,
+            h = (0, C.N)(),
+            f = (0, j.Ng)(),
+            b = (0, j.Wp)(f, y.Si.TIER_2) ? y.Si.TIER_2 : void 0,
             _ = null != m && m.status !== A.O0b.ACCOUNT_HOLD && m.hasAnyPremiumNitro,
             E = (0, u.Z)(),
             O = (0, x.C)('nitro-home', d) && E.isFractionalPremiumActive && !_;
@@ -172,11 +172,11 @@ let w = (e) => {
             h = (0, O.b)(n),
             x = (0, i.jsx)(w, { className: t }),
             E = P.intl.string(P.t.ifwQZW),
-            { fractionalState: C, endsAt: j } = (0, u.Z)(),
-            S = (0, d.ZP)(j, d.aj.CREDITS_ENDS_IN);
+            { fractionalState: j, endsAt: C } = (0, u.Z)(),
+            S = (0, d.ZP)(C, d.aj.CREDITS_ENDS_IN);
         l ? ((E = P.intl.string(P.t.ifwQZW)), (x = (0, i.jsx)(L, {}))) : h && ((g = P.intl.string(P.t.qYKftb)), (E = P.intl.string(P.t.ifwQZW)), (x = (0, i.jsx)(k, { location: n })));
         let T = null;
-        if (C === y.a$.NONE || l)
+        if (j === y.a$.NONE || l)
             T = (0, i.jsx)(v.Cy, {
                 className: s()(R.trialPill, { [R.hidden]: !p }),
                 text: g,

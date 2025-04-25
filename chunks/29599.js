@@ -17,8 +17,8 @@ var i = n(200651),
     _ = n(178100),
     x = n(518638),
     E = n(725727),
-    C = n(454982),
-    j = n(197115),
+    j = n(454982),
+    C = n(197115),
     O = n(504983),
     S = n(703656),
     v = n(594174),
@@ -38,30 +38,30 @@ function Z(e) {
         g = () => u((e) => !e),
         b = (0, h.ZP)(),
         E = (0, x.Pz)(n.id, b),
-        j = null != s,
-        O = (0, _.Z)(n, j);
-    j && c
+        C = null != s,
+        O = (0, _.Z)(n, C);
+    C && c
         ? (t = R.intl.format(R.t.pkxVx8, {
               endDate: O,
               onClickDetails: g
           }))
-        : j && !c
+        : C && !c
           ? (t = R.intl.format(R.t['4sFeoa'], {
                 endDate: O,
                 onClickDetails: g
             }))
-          : !j && c
+          : !C && c
             ? (t = R.intl.format(R.t['RBnE+v'], {
                   endDate: O,
                   onClickDetails: g
               }))
-            : j ||
+            : C ||
               c ||
               (t = R.intl.format(R.t['57+7Qk'], {
                   endDate: O,
                   onClickDetails: g
               }));
-    let S = j ? R.intl.string(R.t['2cHUtr']) : R.intl.string(R.t.O13yh4),
+    let S = C ? R.intl.string(R.t['2cHUtr']) : R.intl.string(R.t.O13yh4),
         v = r.useCallback(() => p(!1), []),
         { outboundTitle: T, outboundTermsAndConditions: I } = n;
     return (0, i.jsxs)(i.Fragment, {
@@ -124,7 +124,7 @@ function Z(e) {
                     renderModal: (e) => {
                         var t, r;
                         return (0, i.jsx)(
-                            C.Z,
+                            j.Z,
                             ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
@@ -191,8 +191,8 @@ let w = function () {
             (0, m.Qv)().then(() => f(!0));
         });
     }, []);
-    let { promotionsLoaded: _, activeOutboundPromotions: x, claimedEndedOutboundPromotions: C, claimedOutboundPromotionCodeMap: w, addClaimedOutboundPromotionCode: k } = (0, E.lG)(),
-        L = x.length + C.length > 0,
+    let { promotionsLoaded: _, activeOutboundPromotions: x, claimedEndedOutboundPromotions: j, claimedOutboundPromotionCodeMap: w, addClaimedOutboundPromotionCode: k } = (0, E.lG)(),
+        L = x.length + j.length > 0,
         B =
             b.g.useExperiment(
                 { location: 'EntitlementGifts' },
@@ -234,7 +234,7 @@ let w = function () {
                                                 }
                                             })
                                         }),
-                                        (0, i.jsx)(j.Z, {
+                                        (0, i.jsx)(C.Z, {
                                             showGradient: !0,
                                             className: D.promoNitroButton,
                                             subscriptionTier: P.Si.TIER_2,
@@ -257,7 +257,7 @@ let w = function () {
                                       className: l()({ [D.marginContainer]: !B }),
                                       children: [
                                           m,
-                                          C.map((e) => {
+                                          j.map((e) => {
                                               let { code: t, promotion: n } = e;
                                               return (0, i.jsx)(
                                                   Z,

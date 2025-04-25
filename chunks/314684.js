@@ -27,8 +27,8 @@ var i = n(192379),
     _ = n(626135),
     x = n(823379),
     E = n(111361),
-    C = n(595878),
-    j = n(944880),
+    j = n(595878),
+    C = n(944880),
     O = n(513785),
     S = n(106255),
     v = n(474936),
@@ -187,7 +187,7 @@ let R = new Set(),
     Z = () => {
         let e = A(),
             [t, n] = i.useState(D(e)),
-            r = (0, C.cG)({ location: 'Home' });
+            r = (0, j.cG)({ location: 'Home' });
         i.useEffect(() => {
             !1 !== r && n(D(e));
         }, [e, r]);
@@ -197,7 +197,7 @@ let R = new Set(),
     w = () => {
         var e;
         let t = null == (e = A()) ? void 0 : e.nitroTenureStatus,
-            n = (0, C.cG)({ location: 'Home' }) && null != t && t === T.EB.REDEEMABLE,
+            n = (0, j.cG)({ location: 'Home' }) && null != t && t === T.EB.REDEEMABLE,
             [i] = (0, h.US)(n ? [a.z.TENURE_REWARD_REDEEMABLE_CONFETTI] : []);
         return !!n && i === a.z.TENURE_REWARD_REDEEMABLE_CONFETTI;
     },
@@ -237,17 +237,17 @@ function L() {
 }
 function B() {
     var e;
-    let t = (0, C.oY)({ location: 'Home' });
+    let t = (0, j.oY)({ location: 'Home' });
     L(v.CL), L(I.XAJ, t), M(T.qY);
     let n = A(),
         r = null != (e = null == n ? void 0 : n.showCard) && e;
     i.useEffect(() => {
-        r && j.Z.forceRefreshIfOutdated();
+        r && C.Z.forceRefreshIfOutdated();
     }, [r]);
 }
 function M(e) {
     var t;
-    let n = (0, C.oY)({ location: 'Home' }),
+    let n = (0, j.oY)({ location: 'Home' }),
         r = (0, m.hv)('useCollectiblePurchaseForTenureReward'),
         [s, a] = (0, l.Wu)([u.Z], () => [u.Z.purchases, u.Z.hasPreviouslyFetched]);
     return (

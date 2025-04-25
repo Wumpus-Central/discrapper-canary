@@ -27,12 +27,12 @@ function g(e) {
         b = (0, r.e7)([a.Z], () => a.Z.hasFetchedOffer()),
         [_, x] = (0, r.Wu)([l.ZP], () => [l.ZP.hasFetchedMostRecentPremiumTypeSubscription(), l.ZP.hasFetchedPreviousPremiumTypeSubscription()]),
         E = (0, r.e7)([s.default], () => s.default.getCurrentUser()),
-        C = (null == E ? void 0 : E.hasHadPremium()) && !_ && !x,
-        j = !(0, o.I5)(E) && !b;
+        j = (null == E ? void 0 : E.hasHadPremium()) && !_ && !x,
+        C = !(0, o.I5)(E) && !b;
     return (
         i.useEffect(() => {
             if (!1 === g.enabled) return void c(!1);
-            if (!C && !j) {
+            if (!j && !C) {
                 if (null === h) return void ((0, o.I5)(E, u.p9.TIER_2) ? c(!1) : c(!0));
                 if (h.isPaused) c(!0);
                 else if (h.isEnded) a.Z.hasAnyUnexpiredOffer() || a.Z.hasAnyUnexpiredDiscountOffer() || m(h) ? c(!1) : c(!0);
@@ -42,7 +42,7 @@ function g(e) {
                     c(e && t);
                 } else c(!1);
             }
-        }, [g.enabled, h, f, C, j, E]),
+        }, [g.enabled, h, f, j, C, E]),
         n
     );
 }

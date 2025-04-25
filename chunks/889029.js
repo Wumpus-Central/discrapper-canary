@@ -23,7 +23,7 @@ function _() {
             hidePersonalInformation: _,
             disableSounds: x,
             disableNotifications: E,
-            enableContentProtection: C
+            enableContentProtection: j
         } = (0, l.cj)([u.Z], () =>
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
@@ -51,7 +51,7 @@ function _() {
                 return e;
             })({}, u.Z.getSettings())
         ),
-        j = (e, t) => {
+        C = (e, t) => {
             o.Z.update({ [e]: t });
         };
     return (0, i.jsxs)(a.hjN, {
@@ -80,7 +80,7 @@ function _() {
                 children: [
                     (0, i.jsx)(a.j7V, {
                         value: e,
-                        onChange: (e) => j('enabled', e),
+                        onChange: (e) => C('enabled', e),
                         note: h.intl.format(h.t.MLVL2N, {
                             onClick: () => {
                                 c.Z.setSection(g.oAB.KEYBINDS);
@@ -92,7 +92,7 @@ function _() {
                         if (m.isPlatformEmbedded)
                             return (0, i.jsx)(a.j7V, {
                                 value: t,
-                                onChange: (e) => j('autoToggle', e),
+                                onChange: (e) => C('autoToggle', e),
                                 note: h.intl.string(h.t.ZPi4lJ),
                                 children: h.intl.string(h.t.PKDAJy)
                             });
@@ -109,7 +109,7 @@ function _() {
                         setting: p.s6.STREAMER_MODE_HIDE_PERSONAL_INFORMATION,
                         children: (0, i.jsx)(a.j7V, {
                             value: _,
-                            onChange: (e) => j('hidePersonalInformation', e),
+                            onChange: (e) => C('hidePersonalInformation', e),
                             note: h.intl.string(h.t['+9Lra2']),
                             children: h.intl.string(h.t.UpQziI)
                         })
@@ -118,7 +118,7 @@ function _() {
                         setting: p.s6.STREAMER_MODE_HIDE_INVITE_LINKS,
                         children: (0, i.jsx)(a.j7V, {
                             value: r,
-                            onChange: (e) => j('hideInstantInvites', e),
+                            onChange: (e) => C('hideInstantInvites', e),
                             note: h.intl.string(h.t.m7mS2d),
                             children: h.intl.string(h.t.q7WNGh)
                         })
@@ -127,7 +127,7 @@ function _() {
                         setting: p.s6.STREAMER_MODE_DISABLE_SOUNDS,
                         children: (0, i.jsx)(a.j7V, {
                             value: x,
-                            onChange: (e) => j('disableSounds', e),
+                            onChange: (e) => C('disableSounds', e),
                             note: h.intl.string(h.t.eAkaio),
                             children: h.intl.string(h.t.o56OZm)
                         })
@@ -136,7 +136,7 @@ function _() {
                         setting: p.s6.STREAMER_MODE_DISABLE_NOTIFICATIONS,
                         children: (0, i.jsx)(a.j7V, {
                             value: E,
-                            onChange: (e) => j('disableNotifications', e),
+                            onChange: (e) => C('disableNotifications', e),
                             note: h.intl.string(h.t.ZAmpQ0),
                             children: h.intl.string(h.t.qmYiYW)
                         })
@@ -144,8 +144,8 @@ function _() {
                     (0, i.jsx)(d.F, {
                         setting: p.s6.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE,
                         children: (0, i.jsx)(a.j7V, {
-                            value: C,
-                            onChange: (e) => j('enableContentProtection', e),
+                            value: j,
+                            onChange: (e) => C('enableContentProtection', e),
                             note: h.intl.string(h.t.P4vj0t),
                             children: h.intl.string(h.t['iA81+f'])
                         })

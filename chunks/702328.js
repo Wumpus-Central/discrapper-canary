@@ -17,8 +17,8 @@ var i = n(200651),
     _ = n(214852),
     x = n(594174),
     E = n(78839),
-    C = n(626135),
-    j = n(526167),
+    j = n(626135),
+    C = n(526167),
     O = n(74538),
     S = n(140465),
     v = n(278605),
@@ -132,9 +132,9 @@ let eg = (e) => {
             e_ = r.useRef(null),
             ex = r.useRef(null),
             eE = r.useRef(null),
-            eC = (0, a.e7)([p.Z], () => p.Z.useReducedMotion),
-            ej = (0, m.ZP)(),
-            eO = (0, c.wj)(ej),
+            ej = (0, a.e7)([p.Z], () => p.Z.useReducedMotion),
+            eC = (0, m.ZP)(),
+            eO = (0, c.wj)(eC),
             eS = x.default.getCurrentUser(),
             ev = (0, O.I5)(eS),
             eT = (0, v.xP)('PremiumMarketingHome'),
@@ -144,7 +144,7 @@ let eg = (e) => {
             [eP, eR] = r.useState(!1),
             [eD, eZ] = r.useState(!1),
             [ew, ek] = r.useState(!1),
-            eL = (0, j.rO)(),
+            eL = (0, C.rO)(),
             [eB, eM] = r.useState(!1),
             eU = (0, a.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()),
             eV = null != eU ? (0, O.Af)(eU) : null,
@@ -303,9 +303,9 @@ let eg = (e) => {
                                       (0, i.jsx)('div', {
                                           className: el.heroHeadingV2ArtContainer,
                                           children: (0, i.jsx)(f.Z, {
-                                              autoPlay: !eC,
+                                              autoPlay: !ej,
                                               playsInline: !0,
-                                              preload: eC ? 'none' : 'auto',
+                                              preload: ej ? 'none' : 'auto',
                                               poster: em.Z,
                                               loop: !0,
                                               className: el.heroHeadingV2Art,
@@ -335,7 +335,7 @@ let eg = (e) => {
                         setIsAllPerksVisible: eY,
                         hasRenderedOnce: eB,
                         isMarketingPageV2Enabled: eN,
-                        isReducedMotion: eC
+                        isReducedMotion: ej
                     }),
                     !eN && (0, i.jsx)(eg, { isFullscreen: B }),
                     eN && e3,
@@ -380,7 +380,7 @@ let eg = (e) => {
                     (0, i.jsx)(o.$, {
                         innerRef: ex,
                         onChange: (e) => {
-                            e && !ew && (C.default.track(ei.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: e1 }), ek(!0));
+                            e && !ew && (j.default.track(ei.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: e1 }), ek(!0));
                         },
                         children: (0, i.jsx)('div', {
                             ref: ex,
@@ -405,7 +405,7 @@ let eg = (e) => {
                                 ref: eE,
                                 isFooterVisible: eP,
                                 isDarkMode: eO,
-                                isReducedMotion: eC,
+                                isReducedMotion: ej,
                                 subscriptionTier: eF
                             })
                         })

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => j });
 var i = n(200651),
     r = n(192379),
     s = n(120356),
@@ -17,7 +17,7 @@ var i = n(200651),
     _ = n(388032),
     x = n(128607),
     E = n(20493);
-let C = () => {
+let j = () => {
     let e = g.Ex.useSetting(),
         { categories: t, initialized: n } = (0, c.cj)([p.Z], () => p.Z.getEmailSettings());
     return (

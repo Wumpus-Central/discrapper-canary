@@ -17,8 +17,8 @@ var i = n(200651),
     _ = n(921801),
     x = n(553795),
     E = n(430824),
-    C = n(63063),
-    j = n(358085),
+    j = n(63063),
+    C = n(358085),
     O = n(709054),
     S = n(362352),
     v = n(413182),
@@ -97,7 +97,7 @@ function D() {
     let e = T.G6.useSetting(),
         t = T.Wz.useSetting(),
         n = (0, S.Yd)('activity privacy tab'),
-        r = j.isPlatformEmbedded ? y.intl.string(y.t.MznbeH) : y.intl.string(y.t.oKqC4u),
+        r = C.isPlatformEmbedded ? y.intl.string(y.t.MznbeH) : y.intl.string(y.t.oKqC4u),
         s = (e) => {
             T.Wz.updateSetting(e ? d.E5.ON_FOR_LARGE_GUILDS : d.E5.OFF), R(e);
         },
@@ -142,7 +142,7 @@ function D() {
                                   variant: 'text-sm/normal',
                                   color: 'header-secondary',
                                   className: P.marginBottom8,
-                                  children: y.intl.format(y.t.aUxRra, { helpdeskArticle: C.Z.getArticleURL(N.BhN.ACTIVITY_STATUS_SETTINGS) })
+                                  children: y.intl.format(y.t.aUxRra, { helpdeskArticle: j.Z.getArticleURL(N.BhN.ACTIVITY_STATUS_SETTINGS) })
                               }),
                               (0, i.jsx)(m.q4e, {
                                   options: o,
@@ -153,7 +153,7 @@ function D() {
                       })
                     : (0, i.jsx)(m.j7V, {
                           value: t === d.E5.OFF,
-                          note: y.intl.format(y.t['+5/xu7'], { helpdeskArticle: C.Z.getArticleURL(N.BhN.ACTIVITY_STATUS_SETTINGS) }),
+                          note: y.intl.format(y.t['+5/xu7'], { helpdeskArticle: j.Z.getArticleURL(N.BhN.ACTIVITY_STATUS_SETTINGS) }),
                           onChange: (e) => s(!e),
                           children: y.intl.string(y.t.D5GXTU)
                       }),

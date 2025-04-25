@@ -25,14 +25,14 @@ let b = function (e) {
             subscription: _,
             userLocale: b
         }),
-        C = r.toLowerCase() + 'Banner';
+        j = r.toLowerCase() + 'Banner';
     return (0, i.jsxs)('div', {
         className: s()(f.bannerContainer, {
             [f.smallGap]: n,
             [f.bigGap]: !n
         }),
         children: [
-            (0, i.jsx)('div', { className: s()(f[C], f.bannerImageContainer) }),
+            (0, i.jsx)('div', { className: s()(f[j], f.bannerImageContainer) }),
             (0, i.jsx)(a.X6q, {
                 className: f.bannerHeading,
                 variant: 'heading-xl/semibold',
