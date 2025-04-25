@@ -50,20 +50,71 @@ function E(e) {
             for (let t = 0; t < 3; t++) {
                 let r = n[t];
                 if (null == r) break;
-                let { icon: s, name: l, id: a } = r,
-                    c = o.ZP.getApplicationIconURL({
-                        id: r.id,
+                let { icon: s, name: a, id: c } = r,
+                    d = o.ZP.getApplicationIconURL({
+                        id: c,
                         icon: s
                     });
                 e.push(
                     (0, i.jsx)(
-                        'img',
+                        l.ua7,
                         {
-                            src: c,
-                            'aria-label': l,
-                            className: x.icon
+                            text: a,
+                            children: (e) =>
+                                (0, i.jsx)(
+                                    'img',
+                                    (function (e, t) {
+                                        return (
+                                            (t = null != t ? t : {}),
+                                            Object.getOwnPropertyDescriptors
+                                                ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+                                                : (function (e, t) {
+                                                      var n = Object.keys(e);
+                                                      if (Object.getOwnPropertySymbols) {
+                                                          var i = Object.getOwnPropertySymbols(e);
+                                                          n.push.apply(n, i);
+                                                      }
+                                                      return n;
+                                                  })(Object(t)).forEach(function (n) {
+                                                      Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+                                                  }),
+                                            e
+                                        );
+                                    })(
+                                        (function (e) {
+                                            for (var t = 1; t < arguments.length; t++) {
+                                                var n = null != arguments[t] ? arguments[t] : {},
+                                                    i = Object.keys(n);
+                                                'function' == typeof Object.getOwnPropertySymbols &&
+                                                    (i = i.concat(
+                                                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                                        })
+                                                    )),
+                                                    i.forEach(function (t) {
+                                                        var i;
+                                                        (i = n[t]),
+                                                            t in e
+                                                                ? Object.defineProperty(e, t, {
+                                                                      value: i,
+                                                                      enumerable: !0,
+                                                                      configurable: !0,
+                                                                      writable: !0
+                                                                  })
+                                                                : (e[t] = i);
+                                                    });
+                                            }
+                                            return e;
+                                        })({}, e),
+                                        {
+                                            src: d,
+                                            'aria-label': a,
+                                            className: x.icon
+                                        }
+                                    )
+                                )
                         },
-                        a
+                        c
                     )
                 );
             }
@@ -127,7 +178,7 @@ function E(e) {
         ]
     });
 }
-function C() {
+function j() {
     let e = u._j.useSetting();
     return (0, i.jsx)(g.U, {
         setting: f.s6.PRIVACY_AND_SAFETY_ALLOW_GAME_FRIEND_DMS,
@@ -139,7 +190,7 @@ function C() {
         })
     });
 }
-function j() {
+function C() {
     let e = u.JG.useSetting(),
         t = e === s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET ? s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL : e,
         n = [
@@ -181,7 +232,7 @@ function O() {
             ? (0, i.jsx)(l.$jN, {})
             : t.length > 0
               ? (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(E, { applications: t }), (0, i.jsx)(C, {}), (0, i.jsx)('div', { className: x.divider }), (0, i.jsx)(j, {})]
+                    children: [(0, i.jsx)(E, { applications: t }), (0, i.jsx)(j, {}), (0, i.jsx)('div', { className: x.divider }), (0, i.jsx)(C, {})]
                 })
               : (0, i.jsxs)('div', {
                     className: x.emptyContainer,
