@@ -57,7 +57,7 @@ function h(e) {
 function m(e, t) {
     i.fz.updateSetting(e),
         o.default.track(s.rMx.NOTIFICATION_SETTINGS_UPDATED, {
-            update_type: l.Ib.ACCOUNT,
+            update_type: l.I.ACCOUNT,
             reaction_notifications: e,
             reaction_notifications_old: t
         });

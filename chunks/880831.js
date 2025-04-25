@@ -20,8 +20,8 @@ var r = n(200651),
     b = n(739566),
     _ = n(267128),
     y = n(378233),
-    C = n(419922),
-    x = n(375954),
+    x = n(419922),
+    C = n(375954),
     v = n(699516),
     j = n(768581),
     O = n(70956),
@@ -43,7 +43,7 @@ function N(e) {
         ),
         s = (0, b.Uj)(n),
         d = i.useContext(f.Z),
-        [x, O] = i.useState(!1),
+        [C, O] = i.useState(!1),
         E = (0, m.p)(),
         I = i.useCallback(
             (e) => {
@@ -60,7 +60,7 @@ function N(e) {
         Z =
             null != n.content && '' !== n.content
                 ? (0, g.ZP)(n, {
-                      isInteracting: x,
+                      isInteracting: C,
                       shouldFilterKeywords: E
                   }).content
                 : null,
@@ -79,12 +79,12 @@ function N(e) {
             R.length > 0
                 ? R.map((e) =>
                       (0, r.jsx)(
-                          C.Z,
+                          x.Z,
                           {
                               className: S.sticker,
                               size: 128,
                               sticker: e,
-                              isInteracting: x
+                              isInteracting: C
                           },
                           e.id
                       )
@@ -161,7 +161,7 @@ function T(e) {
             let g = null != (t = h.current) ? t : a;
             return {
                 toastsHidden: u,
-                toastMessages: (0, c.Wu)([x.Z], () => g.map((e) => x.Z.getMessage(n, e)), [n, g]).filter(E.lm)
+                toastMessages: (0, c.Wu)([C.Z], () => g.map((e) => C.Z.getMessage(n, e)), [n, g]).filter(E.lm)
             };
         })({
             channelId: t,
@@ -188,12 +188,12 @@ function T(e) {
             }
             (0, a.isEqual)(e, y.current) || b(e);
         }, [f]);
-    let C = f.map((e) => ({
+    let x = f.map((e) => ({
             message: e,
             height: m.current[e.id],
             y: g[e.id]
         })),
-        v = (0, u.Yzy)(C, {
+        v = (0, u.Yzy)(x, {
             keys: (e) => e.message.id,
             from: () => ({ opacity: 0 }),
             enter: (e) => {

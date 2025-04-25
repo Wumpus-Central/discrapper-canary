@@ -59,7 +59,7 @@ function O(e, t) {
 function v(e) {
     let { locked: t, pinned: n, anchorLeft: o } = e,
         v = (0, a.e7)([d.Z], () => d.Z.getSocket()),
-        b = (0, a.e7)([f.default], () => f.default.isGPUBoosted());
+        b = (0, a.e7)([f.ZP], () => f.ZP.isGPUBoosted());
     (0, u.nU)();
     let _ = (0, a.e7)([p.Z], () => p.Z.getWindow(m.$J)),
         [E, x] = (0, u.m8)(v),
@@ -76,12 +76,12 @@ function v(e) {
             }
         )
     );
-    let V = r.useCallback(() => {
+    let z = r.useCallback(() => {
             S(), A(), D();
         }, [S, A, D]),
-        [z, U] = r.useState(!0),
+        [V, U] = r.useState(!0),
         [W, G] = r.useState(!0),
-        [B, F] = r.useState(!0),
+        [F, B] = r.useState(!0),
         [H, Y] = r.useState(!0),
         [Q, K] = r.useState(!0);
     return t && !n
@@ -89,7 +89,7 @@ function v(e) {
         : (0, i.jsxs)('div', {
               className: l()(g.panelGroup, !o && g.rightAligned),
               children: [
-                  (z || !t) &&
+                  (V || !t) &&
                       (0, i.jsxs)('div', {
                           className: g.measurement,
                           children: [
@@ -98,7 +98,7 @@ function v(e) {
                                       className: g.measurementCheckbox,
                                       children: (0, i.jsx)(s.XZJ, {
                                           size: 16,
-                                          value: z,
+                                          value: V,
                                           onChange: (e, t) => U(t)
                                       })
                                   }),
@@ -149,7 +149,7 @@ function v(e) {
                               })
                           ]
                       }),
-                  (B || !t) &&
+                  (F || !t) &&
                       (0, i.jsxs)('div', {
                           className: g.measurement,
                           children: [
@@ -158,8 +158,8 @@ function v(e) {
                                       className: g.measurementCheckbox,
                                       children: (0, i.jsx)(s.XZJ, {
                                           size: 16,
-                                          value: B,
-                                          onChange: (e, t) => F(t)
+                                          value: F,
+                                          onChange: (e, t) => B(t)
                                       })
                                   }),
                               (0, i.jsxs)(s.Text, {
@@ -285,7 +285,7 @@ function v(e) {
                           className: g.bottomPanelButton,
                           children: (0, i.jsx)(h.Z, {
                               children: (0, i.jsx)(s.zxk, {
-                                  onClick: V,
+                                  onClick: z,
                                   children: 'Reset Frame Data'
                               })
                           })

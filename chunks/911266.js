@@ -18,25 +18,25 @@ var r = n(200651),
 let y = (e) => {
     let { message: t, hovering: n, compact: l } = e,
         y = i.useRef((0, a.random)(-6, 24)).current,
-        C = (0, s.e7)([h.Z], () => h.Z.confettiMode),
-        x = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
+        x = (0, s.e7)([h.Z], () => h.Z.confettiMode),
+        C = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         v = i.useRef(0),
         j = i.useRef(null),
         O = i.useRef(null),
         [E, I] = i.useState(!1),
-        P = i.useMemo(() => !n && !C && !x, [C, n, x]);
+        P = i.useMemo(() => !n && !x && !C, [x, n, C]);
     if (
         (i.useEffect(() => {
-            n || I(!1), n && C && I(!0);
-        }, [n, C]),
+            n || I(!1), n && x && I(!0);
+        }, [n, x]),
         i.useEffect(() => {
-            !x &&
+            !C &&
                 (E ||
                     (!1 === n && ((v.current = 0), null != j.current && (clearTimeout(j.current), (j.current = null))),
                     (v.current = Date.now()),
                     (j.current = setTimeout(() => {
                         let e = v.current;
-                        if (0 !== e && !1 !== n && !(Date.now() - e < 1000) && !C) {
+                        if (0 !== e && !1 !== n && !(Date.now() - e < 1000) && !x) {
                             if (null != O.current) {
                                 var r;
                                 let { x: e, y: n, width: i, height: l } = null == (r = O.current) ? void 0 : r.getBoundingClientRect();
@@ -59,7 +59,7 @@ let y = (e) => {
                                 });
                         }
                     }, 1100))));
-        }, [C, E, n, t, x]),
+        }, [x, E, n, t, C]),
         !(0, m.p7)('Message Confetti Peak') || !(0, b.Uw)(t))
     )
         return null;
@@ -88,19 +88,19 @@ let y = (e) => {
             (0, r.jsx)('img', {
                 alt: '',
                 src: N,
-                className: o()([_.emoji, _.left, P && _.shy, C && _.confettiMode]),
+                className: o()([_.emoji, _.left, P && _.shy, x && _.confettiMode]),
                 width: 28
             }),
             (0, r.jsx)('img', {
                 alt: '',
                 src: N,
-                className: o()([_.emoji, _.right, P && _.shy, C && _.confettiMode]),
+                className: o()([_.emoji, _.right, P && _.shy, x && _.confettiMode]),
                 width: 26
             }),
             (0, r.jsx)('img', {
                 alt: '',
                 src: N,
-                className: o()([_.emoji, _.center, P && _.shy, C && _.confettiMode]),
+                className: o()([_.emoji, _.center, P && _.shy, x && _.confettiMode]),
                 width: 32
             })
         ]

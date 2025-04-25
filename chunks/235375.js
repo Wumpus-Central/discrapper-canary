@@ -1,6 +1,6 @@
 n.r(t),
     n.d(t, {
-        baseRules: () => v,
+        baseRules: () => O,
         customRules: () => j
     }),
     n(35282),
@@ -9,8 +9,8 @@ var r = n(200651),
     o = n(192379),
     a = n(120356),
     i = n.n(a),
-    s = n(477660),
-    l = n.n(s),
+    l = n(477660),
+    s = n.n(l),
     c = n(481060),
     u = n(37234),
     d = n(230711),
@@ -44,30 +44,30 @@ function h(e) {
     }
     return e;
 }
-let y = l().defaultRules.link,
-    _ = { section: f.jXE.SETTINGS_CHANGELOG },
-    O = (e) => {
+let _ = s().defaultRules.link,
+    y = { section: f.jXE.SETTINGS_CHANGELOG },
+    v = (e) => {
         let { level: t, children: n, className: r = null, styleSheet: a = {} } = e,
-            s = (0, c.xSt)(),
-            l = parseInt(t, 10),
-            u = isNaN(l) ? 1 : l;
-        return o.createElement('h'.concat(s + u - 1), { className: i()(...(null == r ? [] : r.split(' ').map((e) => a[e]))) }, n);
+            l = (0, c.xSt)(),
+            s = parseInt(t, 10),
+            u = isNaN(s) ? 1 : s;
+        return o.createElement('h'.concat(l + u - 1), { className: i()(...(null == r ? [] : r.split(' ').map((e) => a[e]))) }, n);
     },
-    v = null != p.Z ? p.Z.defaultRules : null,
+    O = null != p.Z ? p.Z.defaultRules : null,
     j = {
         link: {
             parse(e, t, n) {
                 var r, o;
                 let a,
                     i = e[2],
-                    s = i.startsWith('https://discordapp.com/nitro') || i.startsWith('https://discord.com/nitro'),
-                    l = i.startsWith('https://discordapp.com/hypesquad') || i.startsWith('https://discord.com/hypesquad'),
+                    l = i.startsWith('https://discordapp.com/nitro') || i.startsWith('https://discord.com/nitro'),
+                    s = i.startsWith('https://discordapp.com/hypesquad') || i.startsWith('https://discord.com/hypesquad'),
                     p = i.startsWith('/shop/fullscreen?source=1') || i.startsWith('/activities');
                 return (
                     (a =
-                        s || l
+                        l || s
                             ? (e) => {
-                                  m.default.track(f.rMx.PREMIUM_PROMOTION_OPENED, { location: _ }), s ? d.Z.open(f.oAB.PREMIUM) : l && d.Z.open(f.oAB.HYPESQUAD_ONLINE), n.changeLog.track(f.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }), (0, c.Mr3)(b.Xd), e.preventDefault();
+                                  m.default.track(f.rMx.PREMIUM_PROMOTION_OPENED, { location: y }), l ? d.Z.open(f.oAB.PREMIUM) : s && d.Z.open(f.oAB.HYPESQUAD_ONLINE), n.changeLog.track(f.rMx.CHANGE_LOG_CTA_CLICKED, { cta_type: 'nitro' }), (0, c.Mr3)(b.Xd), e.preventDefault();
                               }
                             : p
                               ? (e) => {
@@ -86,7 +86,7 @@ let y = l().defaultRules.link,
                                             )
                                         );
                                 }),
-                    (r = h({}, y.parse(e, t, n))),
+                    (r = h({}, _.parse(e, t, n))),
                     (o = o = { callToAction: a }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(o))
@@ -107,7 +107,7 @@ let y = l().defaultRules.link,
                 (0, r.jsx)(
                     c.eee,
                     {
-                        href: l().sanitizeUrl(e.target),
+                        href: s().sanitizeUrl(e.target),
                         title: e.title,
                         onClick: e.callToAction,
                         target: '_blank',
@@ -120,7 +120,7 @@ let y = l().defaultRules.link,
         lheading: (e) => ({
             react: (t, n, o) =>
                 (0, r.jsx)(
-                    O,
+                    v,
                     {
                         level: t.level,
                         className: t.className,
@@ -133,7 +133,7 @@ let y = l().defaultRules.link,
         heading: {
             react: (e, t, n) =>
                 (0, r.jsx)(
-                    O,
+                    v,
                     {
                         level: e.level,
                         children: t(e.content, n)
@@ -154,6 +154,6 @@ let y = l().defaultRules.link,
                 );
             }
         },
-        blockQuote: { react: null == v ? void 0 : v.blockQuote.react },
+        blockQuote: { react: null == O ? void 0 : O.blockQuote.react },
         paragraph: { react: (e, t, n) => (0, r.jsx)('p', { children: t(e.content, n) }, n.key) }
     };

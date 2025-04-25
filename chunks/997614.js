@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(221241),
     _ = n(82965),
     y = n(294629),
-    C = n(390322),
-    x = n(871499),
+    x = n(390322),
+    C = n(871499),
     v = n(131951),
     j = n(574254),
     O = n(459273),
@@ -133,7 +133,7 @@ function w(e) {
                 let { closePopout: n } = e;
                 return V
                     ? null
-                    : (0, r.jsx)(C.Z, {
+                    : (0, r.jsx)(x.Z, {
                           children: (0, r.jsx)(m.Z, {
                               guildId: B,
                               channel: t,
@@ -151,7 +151,7 @@ function w(e) {
             children: (e) =>
                 X
                     ? (0, r.jsx)(
-                          x.d,
+                          C.d,
                           A(
                               T(
                                   {
@@ -179,7 +179,7 @@ function w(e) {
                           )
                       )
                     : (0, r.jsx)(
-                          x.Z,
+                          C.Z,
                           A(
                               T(
                                   {

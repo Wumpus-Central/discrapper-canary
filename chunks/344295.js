@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(298444),
     d = n(447543),
     h = n(881052),
-    g = n(899370),
-    p = n(267394),
+    p = n(899370),
+    g = n(267394),
     f = n(388905),
     m = n(639946),
     _ = n(792766),
@@ -26,8 +26,8 @@ var r = n(200651),
     y = n(626135),
     C = n(630388),
     P = n(63063),
-    Z = n(782605),
-    A = n(954824),
+    A = n(782605),
+    Z = n(954824),
     T = n(588705),
     R = n(781428),
     w = n(423527),
@@ -58,14 +58,14 @@ let F = 'Accept Invite Page',
     };
 async function V(e) {
     let { invite: t } = await d.ZP.resolveInvite(e, F);
-    null != t && (0, p.A)(t);
+    null != t && (0, g.A)(t);
 }
 class K extends i.PureComponent {
     componentDidMount() {
         let { isUnderage: e, login: t, inviteKey: n } = this.props;
         if ((y.default.track(L.rMx.INVITE_VIEWED, { invite_code: n }, { flush: !0 }), (0, I.e)('invite'), !M.KO)) {
             let e = this.getInviteKey();
-            A.Z.launch('discord://' + L.Z5c.INVITE(e), () => void 0);
+            Z.Z.launch('discord://' + L.Z5c.INVITE(e), () => void 0);
         }
         if (!t && e) {
             let e = this.getInviteKey(),
@@ -302,11 +302,11 @@ class K extends i.PureComponent {
                     context: this.getAcceptInviteContext(F),
                     skipOnboarding: !0,
                     callback: (t) => {
-                        (0, p.A)(t), null != t.channel && d.ZP.openApp(e, t.channel.id);
+                        (0, g.A)(t), null != t.channel && d.ZP.openApp(e, t.channel.id);
                     }
                 }).catch((e) => {
                     if (e instanceof h.yZ || e instanceof h.Hx) {
-                        let t = (0, Z.O)(e.code);
+                        let t = (0, A.O)(e.code);
                         this.setState({
                             error: {
                                 code: e.code,
@@ -341,7 +341,7 @@ class K extends i.PureComponent {
             });
     }
 }
-let H = c.ZP.connectStores([N.Z, S.Z, O.default, x.Z, g.Z], (e) => {
+let H = c.ZP.connectStores([N.Z, S.Z, O.default, x.Z, p.Z], (e) => {
     var t;
     let { inviteKey: n } = e;
     return {
@@ -349,6 +349,6 @@ let H = c.ZP.connectStores([N.Z, S.Z, O.default, x.Z, g.Z], (e) => {
         nativeAppState: x.Z.getState(n),
         authenticated: O.default.isAuthenticated(),
         defaultRoute: S.Z.defaultRoute,
-        isUnderage: g.Z.isUnderageAnonymous()
+        isUnderage: p.Z.isUnderageAnonymous()
     };
 })(K);

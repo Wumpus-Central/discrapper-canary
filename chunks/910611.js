@@ -21,8 +21,8 @@ var r = n(200651),
     b = n(699516),
     _ = n(914010),
     y = n(594174),
-    C = n(768581),
-    x = n(63063),
+    x = n(768581),
+    C = n(63063),
     v = n(946734),
     j = n(99843),
     O = n(372564),
@@ -38,7 +38,7 @@ function T(e) {
         l = (0, u.q)(null == (t = n.linkedLobby) ? void 0 : t.application_id),
         [o, a] = (0, f.US)([s.z.CHANNEL_LINKED_LOBBY_EDUCATION_TOOLTIP], void 0, !0);
     if (null == l) return null;
-    let d = C.ZP.getApplicationIconURL({
+    let d = x.ZP.getApplicationIconURL({
             id: l.id,
             icon: l.icon,
             size: 14
@@ -60,7 +60,7 @@ function T(e) {
                                   (0, r.jsx)(c.Text, {
                                       variant: 'text-sm/medium',
                                       color: 'header-secondary',
-                                      children: Z.intl.format(Z.t['16agur'], { helpdeskArticle: x.Z.getArticleURL(P.BhN.CHANNEL_LINKED_LOBBIES) })
+                                      children: Z.intl.format(Z.t['16agur'], { helpdeskArticle: C.Z.getArticleURL(P.BhN.CHANNEL_LINKED_LOBBIES) })
                                   }),
                                   (0, r.jsx)(c.P3F, {
                                       className: N.linkedLobbyEducationTooltipCloseClickContainer,
@@ -156,7 +156,7 @@ function T(e) {
 function A(e) {
     let { channel: t, channelName: n, parentChannel: l, guild: a, inSidebar: s = !1, handleClick: u, handleContextMenu: d, handleParentClick: f, handleParentContextMenu: m, renderFollowButton: g } = e,
         _ = (0, h.KS)(t, a),
-        { prefix: C, level: x } = (function (e, t) {
+        { prefix: x, level: C } = (function (e, t) {
             var n, r;
             switch (e) {
                 case P.d4z.DM:
@@ -200,9 +200,9 @@ function A(e) {
         })(t.type, a),
         v = (0, r.jsxs)(r.Fragment, {
             children: [
-                null != C
+                null != x
                     ? (0, r.jsxs)(c.nn4, {
-                          children: [C, ':']
+                          children: [x, ':']
                       })
                     : null,
                 ' ',
@@ -212,7 +212,7 @@ function A(e) {
     switch (t.type) {
         case P.d4z.DM:
             return (0, r.jsx)(I.Z, {
-                level: x,
+                level: C,
                 channel: t,
                 handleClick: u,
                 handleContextMenu: d
@@ -242,7 +242,7 @@ function A(e) {
                       children: [
                           k(_, t.type === P.d4z.GUILD_ANNOUNCEMENT ? Z.intl.string(Z.t.l1dkSE) : Z.intl.string(Z.t.Pnajj4)),
                           (0, r.jsx)(E.Z.Title, {
-                              level: x,
+                              level: C,
                               onContextMenu: d,
                               onClick: u,
                               children: v
@@ -253,7 +253,7 @@ function A(e) {
                       children: [
                           k(_, t.type === P.d4z.GUILD_ANNOUNCEMENT ? Z.intl.string(Z.t.l1dkSE) : Z.intl.string(Z.t.Pnajj4)),
                           (0, r.jsx)(E.Z.Title, {
-                              level: x,
+                              level: C,
                               onContextMenu: d,
                               onClick: u,
                               children: v
@@ -266,7 +266,7 @@ function A(e) {
                 children: [
                     k(_, Z.intl.string(Z.t.BVZqJi)),
                     (0, r.jsx)(E.Z.Title, {
-                        level: x,
+                        level: C,
                         onContextMenu: d,
                         onClick: u,
                         children: v
@@ -278,7 +278,7 @@ function A(e) {
                 children: [
                     k(_, Z.intl.string(Z.t.EErMzM)),
                     (0, r.jsx)(E.Z.Title, {
-                        level: x,
+                        level: C,
                         onContextMenu: d,
                         onClick: u,
                         children: v
@@ -295,7 +295,7 @@ function A(e) {
                     children: [
                         k(e, Z.intl.string(Z.t.Pnajj4)),
                         (0, r.jsx)(E.Z.Title, {
-                            level: x,
+                            level: C,
                             onContextMenu: m,
                             onClick: f,
                             className: o()(N.parentChannelName, N.cursorPointer),
@@ -311,7 +311,7 @@ function A(e) {
                     O,
                     k(S ? null : _, Z.intl.string(Z.t['7Xm5QE'])),
                     (0, r.jsx)(E.Z.Title, {
-                        level: x,
+                        level: C,
                         onContextMenu: d,
                         onClick: u,
                         className: o()({
@@ -334,13 +334,13 @@ function A(e) {
                           })
                         : null,
                     (0, r.jsxs)(E.Z.Title, {
-                        level: x,
+                        level: C,
                         onContextMenu: d,
                         onClick: u,
                         children: [
-                            null != C
+                            null != x
                                 ? (0, r.jsxs)(c.nn4, {
-                                      children: [C, ':']
+                                      children: [x, ':']
                                   })
                                 : null,
                             ' ',

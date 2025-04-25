@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(470956),
     _ = n(430824),
     y = n(496675),
-    C = n(434488),
-    x = n(27457),
+    x = n(434488),
+    C = n(27457),
     v = n(251564),
     j = n(695492),
     O = n(981631),
@@ -51,7 +51,7 @@ function I(e) {
         z = M.map(
             (e) => (t) =>
                 (0, r.jsx)(
-                    x.ZP,
+                    C.ZP,
                     {
                         participant: e,
                         channel: S,
@@ -88,7 +88,7 @@ function I(e) {
                   D &&
                   (G && !H
                       ? z.push((e) =>
-                            (0, r.jsx)(C.h, {
+                            (0, r.jsx)(x.h, {
                                 channel: S,
                                 guild: w,
                                 width: e,
@@ -106,7 +106,7 @@ function I(e) {
                             })
                         ))
                 : z.push((e) =>
-                      (0, r.jsx)(C.h, {
+                      (0, r.jsx)(x.h, {
                           channel: S,
                           guild: w,
                           width: e,

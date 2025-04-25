@@ -1,6 +1,6 @@
 n.d(t, {
     W: () => y,
-    Z: () => C
+    Z: () => x
 });
 var r = n(200651);
 n(192379);
@@ -86,9 +86,9 @@ function y(e) {
             }
         );
 }
-function C(e) {
+function x(e) {
     var t,
-        { stream: n, applicationId: i, channel: o, exitFullScreen: C, appContext: x, analyticsLocation: v, className: j } = e,
+        { stream: n, applicationId: i, channel: o, exitFullScreen: x, appContext: C, analyticsLocation: v, className: j } = e,
         O = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -133,8 +133,8 @@ function C(e) {
                                             channel: o,
                                             streamUserId: null == n ? void 0 : n.ownerId,
                                             applicationId: i,
-                                            appContext: x,
-                                            exitFullScreen: C,
+                                            appContext: C,
+                                            exitFullScreen: x,
                                             analyticsLocation: v,
                                             guildScheduledEvent: S
                                         });
@@ -149,9 +149,9 @@ function C(e) {
                 (0, r.jsx)(d.Z, {
                     channel: o,
                     stream: n,
-                    appContext: x,
+                    appContext: C,
                     className: l()(j, g.iconButton),
-                    exitFullScreen: C,
+                    exitFullScreen: x,
                     analyticsLocation: v,
                     guildScheduledEvent: S
                 })

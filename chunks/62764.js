@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(60174),
     _ = n(216337),
     y = n(920888),
-    C = n(287151),
-    x = n(569471),
+    x = n(287151),
+    C = n(569471),
     v = n(346479),
     j = n(592125),
     O = n(934415),
@@ -80,7 +80,7 @@ function k(e) {
         [F, H] = (0, p.Z)(!1, 2000),
         V = (0, a.e7)([j.Z], () => j.Z.getChannel(t), [t]),
         { firstMessage: z } = (0, P.cl)(V),
-        W = (0, a.e7)([x.Z], () => x.Z.hasJoined(t)),
+        W = (0, a.e7)([C.Z], () => C.Z.hasJoined(t)),
         { disableReactionUpdates: Y, disableReactionCreates: q, isLurking: K, isGuest: X, isPendingMember: Q } = (0, g.Z)(V),
         J = (0, a.e7)([j.Z], () => j.Z.getChannel(k)),
         $ = (0, I.Bs)(J),
@@ -149,7 +149,7 @@ function k(e) {
                                 null != $ &&
                                 (0, r.jsx)('div', {
                                     className: A.reactions,
-                                    children: (0, r.jsx)(C.le, {
+                                    children: (0, r.jsx)(x.le, {
                                         message: z,
                                         readOnly: !1,
                                         useChatFontScaling: !1,

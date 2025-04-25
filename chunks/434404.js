@@ -104,7 +104,7 @@ let R = new s.Z('GuildSettingsActionCreators'),
         },
         async open(e, t, r, i) {
             var a;
-            await Promise.all([n.e('48835'), n.e('25292'), n.e('95477'), n.e('90508'), n.e('91245'), n.e('80284'), n.e('83166'), n.e('92779'), n.e('2286'), n.e('94928'), n.e('7654'), n.e('62117'), n.e('49049'), n.e('44156'), n.e('86133'), n.e('49286'), n.e('32652'), n.e('6850'), n.e('58227'), n.e('54408'), n.e('80728'), n.e('50629'), n.e('93375'), n.e('64679'), n.e('44606'), n.e('56534'), n.e('10280')]).then(n.bind(n, 994763)), (null == (a = m.Z.getGuild(e)) ? void 0 : a.hasFeature(y.oNc.COMMUNITY)) && (t === y.pNK.GUILD_AUTOMOD && ((t = y.pNK.SAFETY), (i = y.KsC.SAFETY_AUTOMOD)), t === y.pNK.MEMBER_VERIFICATION && ((t = y.pNK.SAFETY), (i = y.KsC.SAFETY_DM_AND_SPAM_PROTECTION))), P.init(e, t, r, i), _.Z.closeGuildSidebar(e), (0, o.jN)(y.S9g.GUILD_SETTINGS);
+            await Promise.all([n.e('48835'), n.e('25292'), n.e('90508'), n.e('95477'), n.e('91245'), n.e('80284'), n.e('27146'), n.e('2286'), n.e('94928'), n.e('7654'), n.e('62117'), n.e('49049'), n.e('44156'), n.e('86133'), n.e('49286'), n.e('32652'), n.e('6850'), n.e('58227'), n.e('54408'), n.e('80728'), n.e('50629'), n.e('93375'), n.e('64679'), n.e('44606'), n.e('56534'), n.e('10280')]).then(n.bind(n, 994763)), (null == (a = m.Z.getGuild(e)) ? void 0 : a.hasFeature(y.oNc.COMMUNITY)) && (t === y.pNK.GUILD_AUTOMOD && ((t = y.pNK.SAFETY), (i = y.KsC.SAFETY_AUTOMOD)), t === y.pNK.MEMBER_VERIFICATION && ((t = y.pNK.SAFETY), (i = y.KsC.SAFETY_DM_AND_SPAM_PROTECTION))), P.init(e, t, r, i), _.Z.closeGuildSidebar(e), (0, o.jN)(y.S9g.GUILD_SETTINGS);
         },
         close() {
             a.Z.dispatch({ type: 'GUILD_SETTINGS_CLOSE' });

@@ -17,8 +17,8 @@ var r = n(200651),
     b = n(406432),
     x = n(348238),
     y = n(38267),
-    E = n(884902),
-    v = n(670188),
+    v = n(884902),
+    E = n(670188),
     O = n(695346),
     j = n(271383),
     C = n(594174),
@@ -100,7 +100,7 @@ function M(e) {
             var e;
             return [null != (e = null == J ? void 0 : J.colorString) ? e : 'inherit', null == J ? void 0 : J.colorStrings, null == J ? void 0 : J.colorRoleId];
         }, [J]),
-        er = (0, E.X)(null == J ? void 0 : J.guildId, et),
+        er = (0, v.X)(null == J ? void 0 : J.guildId, et),
         { reducedMotion: ei } = i.useContext(u.Sfi),
         [el, ea] = i.useState(!1),
         eo = i.useCallback(() => {
@@ -203,7 +203,7 @@ function M(e) {
                         children: [
                             null != B.authorId &&
                                 null != ed &&
-                                (0, r.jsx)(v.Z, {
+                                (0, r.jsx)(E.Z, {
                                     userId: B.authorId,
                                     guildId: B.guildId,
                                     channelId: F.id,
@@ -266,7 +266,7 @@ function M(e) {
                                                               className: R.authorName
                                                           })
                                                         : (0, r.jsx)(
-                                                              v.Z,
+                                                              E.Z,
                                                               {
                                                                   userId: B.authorId,
                                                                   guildId: B.guildId,

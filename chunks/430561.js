@@ -1,13 +1,13 @@
 n.d(t, {
-    GY: () => m,
-    PI: () => p,
-    RT: () => h,
+    GY: () => O,
+    PI: () => f,
+    RT: () => m,
     ls: () => g
 });
-var i = n(200651);
+var r = n(200651);
 n(192379);
-var r = n(120356),
-    l = n.n(r),
+var i = n(120356),
+    l = n.n(i),
     o = n(692547),
     a = n(481060),
     s = n(765250),
@@ -16,29 +16,29 @@ var r = n(120356),
 function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+            r = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: i,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function f(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -46,8 +46,8 @@ function f(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var i = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, i);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -56,11 +56,11 @@ function f(e, t) {
         e
     );
 }
-function p(e) {
+function f(e) {
     let { children: t } = e;
-    return (0, i.jsx)('div', {
+    return (0, r.jsx)('div', {
         className: u.titleWrapper,
-        children: (0, i.jsx)(a.Text, {
+        children: (0, r.jsx)(a.Text, {
             variant: 'text-xs/semibold',
             color: 'header-primary',
             children: t
@@ -70,16 +70,16 @@ function p(e) {
 function g(e) {
     let { onClick: t } = e,
         n = c.intl.string(c.t['3D5yo6']);
-    return (0, i.jsx)(a.ua7, {
+    return (0, r.jsx)(a.ua7, {
         text: n,
         'aria-label': n,
         children: (e) =>
-            (0, i.jsx)(
+            (0, r.jsx)(
                 a.P3F,
-                f(d({}, e), {
+                p(d({}, e), {
                     className: u.button,
                     onClick: t,
-                    children: (0, i.jsx)(a.ewm, {
+                    children: (0, r.jsx)(a.ewm, {
                         size: 'xxs',
                         color: o.Z.colors.INTERACTIVE_ACTIVE
                     })
@@ -87,22 +87,22 @@ function g(e) {
             )
     });
 }
-function m(e) {
+function O(e) {
     let { widgetId: t, showAllStreams: n } = e,
-        r = n ? c.intl.string(c.t.q2B3rq) : c.intl.string(c.t.JKGi6u),
-        p = () => {
+        i = n ? c.intl.string(c.t.q2B3rq) : c.intl.string(c.t.JKGi6u),
+        f = () => {
             (0, s.zG)(t, { showAllStreams: !n });
         };
-    return (0, i.jsx)(a.ua7, {
-        text: r,
-        'aria-label': r,
+    return (0, r.jsx)(a.ua7, {
+        text: i,
+        'aria-label': i,
         children: (e) =>
-            (0, i.jsx)(
+            (0, r.jsx)(
                 a.P3F,
-                f(d({}, e), {
+                p(d({}, e), {
                     className: l()(u.button, n && u.active),
-                    onClick: p,
-                    children: (0, i.jsx)(a.pzj, {
+                    onClick: f,
+                    children: (0, r.jsx)(a.pzj, {
                         size: 'xxs',
                         color: n ? o.Z.colors.BG_BRAND : o.Z.colors.INTERACTIVE_ACTIVE
                     })
@@ -110,19 +110,19 @@ function m(e) {
             )
     });
 }
-function h(e) {
+function m(e) {
     let { id: t, pinned: n } = e,
-        r = n ? c.intl.string(c.t.cSu80t) : c.intl.string(c.t.cM8Vnp);
-    return (0, i.jsx)(a.ua7, {
-        text: r,
-        'aria-label': r,
+        i = n ? c.intl.string(c.t.cSu80t) : c.intl.string(c.t.cM8Vnp);
+    return (0, r.jsx)(a.ua7, {
+        text: i,
+        'aria-label': i,
         children: (e) =>
-            (0, i.jsx)(
+            (0, r.jsx)(
                 a.P3F,
-                f(d({}, e), {
+                p(d({}, e), {
                     className: l()(u.button, n && u.active),
                     onClick: () => (0, s.xh)(t),
-                    children: (0, i.jsx)(a.k5M, {
+                    children: (0, r.jsx)(a.k5M, {
                         size: 'xxs',
                         color: n ? o.Z.colors.BG_BRAND : o.Z.colors.INTERACTIVE_ACTIVE
                     })

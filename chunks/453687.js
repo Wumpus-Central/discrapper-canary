@@ -1,8 +1,8 @@
 n.d(t, {
     Dv: () => c,
-    Gq: () => s,
+    Gq: () => l,
     Gx: () => g,
-    XX: () => l,
+    XX: () => s,
     bX: () => d,
     bY: () => u,
     iG: () => p,
@@ -15,10 +15,10 @@ var r = n(446108),
 function i(e) {
     return 'message-content-'.concat(e.id);
 }
-function s(e) {
+function l(e) {
     return 'message-reply-context-'.concat(e.id);
 }
-function l(e, t) {
+function s(e, t) {
     let n = null != t ? t : e.id;
     return 'message-username-'.concat(n);
 }
@@ -39,26 +39,26 @@ function p(e, t, n) {
         f = e.codedLinks.length > 0,
         b = e.hasFlag(a.iLy.HAS_THREAD),
         h = p || g || m || f || b || e.type === a.uaV.THREAD_CREATED,
-        y = p && e.content === e.embeds[0].url && e.embeds[0].type === a.hBH.GIFV,
-        _ = e.type !== a.uaV.DEFAULT || (!y && '' !== e.content),
-        O = (0, o.Z)(e),
-        v = !O && (null == n ? void 0 : n.hasTimestamp) !== !1,
-        j = l(e, t),
-        x = s(e),
-        P = O ? '' : ''.concat(u ? x : j, ' ').concat(r.Z0);
-    if (_) {
+        _ = p && e.content === e.embeds[0].url && e.embeds[0].type === a.hBH.GIFV,
+        y = e.type !== a.uaV.DEFAULT || (!_ && '' !== e.content),
+        v = (0, o.Z)(e),
+        O = !v && (null == n ? void 0 : n.hasTimestamp) !== !1,
+        j = s(e, t),
+        x = l(e),
+        C = v ? '' : ''.concat(u ? x : j, ' ').concat(r.Z0);
+    if (y) {
         let t = i(e);
-        P += ' '.concat(t);
+        C += ' '.concat(t);
     }
     if (h) {
         let t = d(e);
-        P += ' '.concat(t);
+        C += ' '.concat(t);
     }
-    if (v) {
+    if (O) {
         let t = c(e);
-        P += ' '.concat(r.fy, ' ').concat(t);
+        C += ' '.concat(r.fy, ' ').concat(t);
     }
-    return P.trim();
+    return C.trim();
 }
 function g(e) {
     if (0 === e.reactions.length) return;

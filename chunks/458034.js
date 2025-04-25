@@ -8,8 +8,8 @@ n(192379);
 var o = n(442837),
     a = n(481060),
     i = n(430824),
-    s = n(275759),
-    l = n(388032);
+    l = n(275759),
+    s = n(388032);
 let c = 'guild-connection-roles';
 function u(e) {
     (0, a.ZDy)(
@@ -71,10 +71,10 @@ function u(e) {
     );
 }
 function d(e) {
-    return (0, o.e7)([i.Z], () => (0, s.kQ)(e, i.Z.getRoles(e.id)), [e])
+    return (0, o.e7)([i.Z], () => (0, l.kQ)(e, i.Z.getRoles(e.id)), [e])
         ? (0, r.jsx)(a.sNh, {
               id: 'guild-connection-roles',
-              label: l.intl.string(l.t.ghtnsr),
+              label: s.intl.string(s.t.ghtnsr),
               icon: a.xPt,
               action: () => u(e.id)
           })

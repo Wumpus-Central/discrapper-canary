@@ -19,7 +19,7 @@ function g(e) {
         b = (0, d.sz)(t),
         _ = null != (0, d.qY)(t),
         { canManageGuildEvent: y } = (0, a.XJ)(g),
-        C = (0, i.cj)([u.ZP], () => b.reduce((e, t) => ((e[t.id] = u.ZP.getUserCount(t.id, (0, p.DK)(t))), e), {}));
+        x = (0, i.cj)([u.ZP], () => b.reduce((e, t) => ((e[t.id] = u.ZP.getUserCount(t.id, (0, p.DK)(t))), e), {}));
     return b.length < 1 || _
         ? null
         : (0, r.jsx)(r.Fragment, {
@@ -91,7 +91,7 @@ function g(e) {
                                         parentGuildId: e.guild_id
                                     });
                           },
-                          userCount: C[e.id],
+                          userCount: x[e.id],
                           className: m.eventPrompt
                       },
                       e.id

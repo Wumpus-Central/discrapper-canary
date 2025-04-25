@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r,
     i = n(873546),
     l = n(442837),
@@ -87,7 +87,7 @@ class y extends (r = l.ZP.Store) {
     }
 }
 u(y, 'displayName', 'TutorialIndicatorStore');
-let C = new y(o.Z, {
+let x = new y(o.Z, {
     CONNECTION_OPEN: function (e) {
         let { tutorial: t } = e;
         (b = !0), (m = !0), (h = {}), null != t && ((m = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (h[e] = !1))), _();

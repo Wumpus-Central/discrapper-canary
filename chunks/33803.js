@@ -17,8 +17,8 @@ var r = n(200651),
     b = n(226192),
     x = n(36459),
     y = n(336197),
-    E = n(359110),
-    v = n(726033),
+    v = n(359110),
+    E = n(726033),
     O = n(496675),
     j = n(594174),
     C = n(5192),
@@ -132,7 +132,7 @@ function K(e, t, n) {
         if (null != t && null != n)
             return (i) =>
                 (0, r.jsx)(
-                    v.Z,
+                    E.Z,
                     V(H({}, i), {
                         user: t,
                         currentUser: n,
@@ -323,7 +323,7 @@ function ee(e) {
     var t;
     let { id: n, compact: l, message: o, channel: s } = e,
         {
-            avatarSrc: v,
+            avatarSrc: E,
             eventHandlers: { onMouseEnter: j, onMouseLeave: C }
         } = (0, k.m)(!0),
         S = (0, c.JA)(null != n ? n : ''),
@@ -354,7 +354,7 @@ function ee(e) {
                         channelId: e,
                         messageId: o.id
                     }),
-                    (0, E.Kh)(e));
+                    (0, v.Kh)(e));
             },
             [o, ee]
         ),
@@ -363,15 +363,15 @@ function ee(e) {
         }, [s, o.id]),
         ex = (0, F.L9)(Number(ea)),
         ey = null != eo,
-        eE = q && null != el && (null == es || !es.actions.hasOwnProperty(g.d.DELETE_USER_MESSAGE)),
-        ev = o.embeds.length > 0 ? (null == (t = o.embeds[0].fields.find((e) => 'channel_id' === e.rawName)) ? void 0 : t.rawValue) : null,
-        eO = null != ev;
+        ev = q && null != el && (null == es || !es.actions.hasOwnProperty(g.d.DELETE_USER_MESSAGE)),
+        eE = o.embeds.length > 0 ? (null == (t = o.embeds[0].fields.find((e) => 'channel_id' === e.rawName)) ? void 0 : t.rawValue) : null,
+        eO = null != eE;
     return (0, r.jsx)('div', {
         onMouseEnter: j,
         onMouseLeave: C,
         children: (0, r.jsx)(D.Z, {
             className: a()(G.mainContainer, { [G.compact]: l }),
-            iconNode: l ? null : (0, r.jsx)(k.S, { src: v }),
+            iconNode: l ? null : (0, r.jsx)(k.S, { src: E }),
             iconContainerClassName: G.iconContainer,
             compact: l,
             children: (0, r.jsxs)('div', {
@@ -530,7 +530,7 @@ function ee(e) {
                                           children: [
                                               (0, r.jsx)('div', { className: G.dot }),
                                               (0, r.jsx)(p.zxk, {
-                                                  onClick: () => e_(ev),
+                                                  onClick: () => e_(eE),
                                                   color: p.zxk.Colors.LINK,
                                                   look: p.zxk.Looks.LINK,
                                                   size: p.zxk.Sizes.SMALL,
@@ -563,7 +563,7 @@ function ee(e) {
                                         })
                                     })
                                 }),
-                                eE
+                                ev
                                     ? (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)('div', { className: G.dot }),

@@ -122,7 +122,7 @@ let h = {
             }),
             i.uv.announce(p.intl.string(p.t.MlIsJy)),
             (0, c.jz)({
-                updateType: f.Ib.AUTHORIZED_APP_DM,
+                updateType: f.I.AUTHORIZED_APP_DM,
                 guildId: e,
                 channelId: t,
                 applicationId: n,

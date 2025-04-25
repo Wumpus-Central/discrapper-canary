@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(51144),
     _ = n(901461),
     y = n(981631),
-    C = n(388032),
-    x = n(900170);
+    x = n(388032),
+    C = n(900170);
 let v = '749054660769218631';
 function j(e) {
     var t;
@@ -34,7 +34,7 @@ function j(e) {
                     .find((e) => e.author.id !== h.default.getId() && e.state === y.yb.SENT && !(0, _.Z)(e))
         ),
         E = (0, a.e7)([m.default], () => m.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-        I = null != (t = b.ZP.useName(E)) ? t : C.intl.string(C.t.y1Wu2d),
+        I = null != (t = b.ZP.useName(E)) ? t : x.intl.string(x.t.y1Wu2d),
         P = (0, a.e7)([d.Z], () => d.Z.getStickerById(v)),
         S = i.useCallback(async () => {
             if (null == l || '' === l)
@@ -47,14 +47,14 @@ function j(e) {
                             type: 'Send wave'
                         });
                 } catch (e) {
-                    e.ok || 429 !== e.status || j(C.intl.string(C.t['Whhv4+']));
+                    e.ok || 429 !== e.status || j(x.intl.string(x.t['Whhv4+']));
                 }
         }, [n.id, n.type, l]),
-        Z = C.intl.formatToPlainString(C.t.m0zYbW, { username: I }),
+        Z = x.intl.formatToPlainString(x.t.m0zYbW, { username: I }),
         N =
             null != l && '' !== l
                 ? (0, r.jsx)(s.Text, {
-                      className: x.error,
+                      className: C.error,
                       color: 'text-danger',
                       variant: 'text-sm/normal',
                       children: l
@@ -62,11 +62,11 @@ function j(e) {
                 : null;
     return O
         ? (0, r.jsxs)('div', {
-              className: x.containerCompact,
+              className: C.containerCompact,
               children: [
                   (0, r.jsxs)(s.P3F, {
-                      className: null != l && '' !== l ? x.compactButtonDisabled : x.compactButton,
-                      'aria-label': C.intl.string(C.t.pJObYG),
+                      className: null != l && '' !== l ? C.compactButtonDisabled : C.compactButton,
+                      'aria-label': x.intl.string(x.t.pJObYG),
                       onClick: S,
                       children: [
                           (0, r.jsx)(p.Z, {
@@ -74,7 +74,7 @@ function j(e) {
                               size: 24
                           }),
                           (0, r.jsx)(s.Text, {
-                              className: x.text,
+                              className: C.text,
                               variant: 'text-md/medium',
                               children: Z
                           })
@@ -84,14 +84,14 @@ function j(e) {
               ]
           })
         : (0, r.jsxs)('div', {
-              className: x.containerExpanded,
+              className: C.containerExpanded,
               children: [
                   (0, r.jsx)(p.Z, {
                       sticker: P,
                       size: 160
                   }),
                   (0, r.jsx)(s.zxk, {
-                      className: x.button,
+                      className: C.button,
                       onClick: S,
                       disabled: !!l,
                       children: Z

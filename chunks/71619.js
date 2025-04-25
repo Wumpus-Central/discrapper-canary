@@ -1,5 +1,5 @@
 n.d(t, {
-    AB: () => s,
+    AB: () => l,
     ZP: () => u,
     s5: () => d
 });
@@ -7,11 +7,11 @@ var r = n(442837),
     o = n(271383),
     a = n(594174),
     i = n(69882);
-function s(e) {
+function l(e) {
     let t = (0, r.e7)([a.default], () => a.default.getCurrentUser());
     return u(null == t ? void 0 : t.id, e);
 }
-function l(e, t, n) {
+function s(e, t, n) {
     return null != t && null != e ? n.getMember(t, e) : null;
 }
 function c(e) {
@@ -19,8 +19,8 @@ function c(e) {
     return [null != (t = null == e ? void 0 : e.communicationDisabledUntil) ? t : null, (0, i.b)(e)];
 }
 function u(e, t) {
-    return c((0, r.e7)([o.ZP], () => l(e, t, o.ZP), [t, e]));
+    return c((0, r.e7)([o.ZP], () => s(e, t, o.ZP), [t, e]));
 }
 function d(e, t) {
-    return c(l(e, t, o.ZP));
+    return c(s(e, t, o.ZP));
 }

@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(388905),
     d = n(353926),
     h = n(82554),
-    g = n(726521),
-    p = n(185625),
+    p = n(726521),
+    g = n(185625),
     f = n(314897),
     m = n(63063),
     _ = n(981631),
@@ -86,12 +86,12 @@ let I = {
             },
             a = (e) => {
                 let t = async () => {
-                        await (0, p.yL)(i, e);
+                        await (0, g.yL)(i, e);
                     },
-                    s = async (t) => await (0, p.RV)(i, e, t),
+                    s = async (t) => await (0, g.RV)(i, e, t),
                     a = (e) => {
                         let t = null == e ? void 0 : e.token;
-                        i === h.BM.MESSAGE ? (0, g.eE)(t) : i === h.BM.USER ? (0, g.JM)(t) : i === h.BM.GUILD && (0, g.FO)(t);
+                        i === h.BM.MESSAGE ? (0, p.eE)(t) : i === h.BM.USER ? (0, p.JM)(t) : i === h.BM.GUILD && (0, p.FO)(t);
                     };
                 t(),
                     (0, o.ZDy)(async () => {
@@ -130,9 +130,9 @@ let I = {
         let [e, t] = i.useState(!0),
             [n, l] = i.useState([]),
             h = (0, s.e7)([f.default], () => f.default.isAuthenticated()),
-            g = (0, s.e7)([d.Z], () => d.Z.hasLoadedExperiments),
+            p = (0, s.e7)([d.Z], () => d.Z.hasLoadedExperiments),
             v = () => {
-                (0, p.Jj)()
+                (0, g.Jj)()
                     .then((e) => {
                         let {
                             body: { capabilities: n }
@@ -155,10 +155,10 @@ let I = {
             }, [h]),
             i.useEffect(() => {
                 (async () => {
-                    g || (await a.Z.getLocationMetadata(), a.Z.getExperiments());
+                    p || (await a.Z.getLocationMetadata(), a.Z.getExperiments());
                 })();
-            }, [g]),
-            e || !g
+            }, [p]),
+            e || !p
                 ? (0, r.jsx)(u.ZP, { children: (0, r.jsx)(o.$jN, {}) })
                 : null != n &&
                   n.length > 0 &&

@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(475179),
     _ = n(239091),
     y = n(377993),
-    C = n(697309),
-    x = n(457868),
+    x = n(697309),
+    C = n(457868),
     v = n(561472),
     j = n(36311),
     O = n(112724),
@@ -70,8 +70,8 @@ var r = n(200651),
     eb = n(703656),
     e_ = n(359110),
     ey = n(854709),
-    eC = n(14091),
-    ex = n(6025),
+    ex = n(14091),
+    eC = n(6025),
     ev = n(897473),
     ej = n(922482),
     eO = n(856393),
@@ -207,7 +207,7 @@ class tl extends i.PureComponent {
         let i = eY.default.getUser(t.getRecipientId());
         s()(null != i, 'Missing user in Channel.openDMContextMenu'),
             (0, _.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('53912'), n.e('56826'), n.e('59831')]).then(n.bind(n, 131404));
+                let { default: e } = await Promise.all([n.e('79695'), n.e('20875'), n.e('70205'), n.e('98783'), n.e('53912'), n.e('56826'), n.e('31084')]).then(n.bind(n, 131404));
                 return (n) =>
                     (0, r.jsx)(
                         e,
@@ -333,7 +333,7 @@ class tl extends i.PureComponent {
                 case e3.d4z.PRIVATE_THREAD:
                     if (!t.isArchivedThread() && null != i)
                         return (0, r.jsx)(
-                            x.Z,
+                            C.Z,
                             {
                                 channel: t,
                                 guild: i
@@ -341,7 +341,7 @@ class tl extends i.PureComponent {
                             'channel-members-'.concat(t.id)
                         );
             }
-        else if (o === e3.ULH.SEARCH && null != e) return (0, r.jsx)(eC.Z, { searchId: e });
+        else if (o === e3.ULH.SEARCH && null != e) return (0, r.jsx)(ex.Z, { searchId: e });
         return null;
     }
     openChannelModal() {
@@ -411,7 +411,7 @@ class tl extends i.PureComponent {
                     children: (0, r.jsx)(Y.Z, {
                         guildId: e,
                         userId: t,
-                        onClose: () => ex.Z.closeGuildSidebar(e)
+                        onClose: () => eC.Z.closeGuildSidebar(e)
                     })
                 });
             }
@@ -419,7 +419,7 @@ class tl extends i.PureComponent {
         let u = (null == t ? void 0 : t.type) != null && e3.TPd.GUILD_THREADS_ONLY.has(t.type) ? 528 : 450,
             d = s - e3.PrS - u;
         return (
-            c && (d += C.qO),
+            c && (d += x.qO),
             (0, r.jsx)(eQ.Z, {
                 sidebarType: (null == t ? void 0 : t.type) != null && e3.TPd.GUILD_THREADS_ONLY.has(t.type) ? eQ.y.PostSidebar : eQ.y.ThreadSidebar,
                 maxWidth: d,
@@ -739,8 +739,8 @@ let to = (0, O.Z)(tl),
             g = null == c ? void 0 : c.parent_id,
             _ = (0, h.e7)([eL.Z], () => eL.Z.getChannel(g), [g]),
             y = (0, h.e7)([eG.Z], () => eG.Z.getGuild(null == c ? void 0 : c.guild_id), [c]),
-            { needSubscriptionToAccess: C } = (0, X.Z)(null != (t = null == c ? void 0 : c.id) ? t : void 0),
-            x = (0, h.e7)(
+            { needSubscriptionToAccess: x } = (0, X.Z)(null != (t = null == c ? void 0 : c.id) ? t : void 0),
+            C = (0, h.e7)(
                 [w.Z],
                 () => {
                     let e = null != a ? w.Z.getParticipants(a) : [],
@@ -775,7 +775,7 @@ let to = (0, O.Z)(tl),
             M = (0, h.e7)([P.ZP], () => P.ZP.getActivityPanelMode()),
             L = null != k && !(0, Z.Z)(null == c ? void 0 : c.id) && M === e7.Ez.PANEL,
             D = (0, h.e7)([eq.Z], () => null != c && c.isVocalThread() && !u().isEmpty(eq.Z.getVoiceStatesForChannel(c.id)), [c]),
-            B = null != c && c.isPrivate() && !L && x,
+            B = null != c && c.isPrivate() && !L && C,
             F = (null == c ? void 0 : c.isGuildVocal()) || B || D,
             { welcomeModalChannelId: H } = (0, d.TH)(),
             z = (0, h.e7)([em.Z], () => null != c && em.Z.isLurking(c.guild_id), [c]),
@@ -845,7 +845,7 @@ let to = (0, O.Z)(tl),
                         parentChannel: _,
                         voiceChannel: p,
                         layout: Y,
-                        needSubscriptionToAccess: C,
+                        needSubscriptionToAccess: x,
                         isLurking: z,
                         hasModalOpen: e_,
                         section: $,
@@ -853,7 +853,7 @@ let to = (0, O.Z)(tl),
                         guildSidebarState: en,
                         guild: y,
                         searchId: (0, h.e7)([eV.Z], () => eV.Z.getCurrentSearchId()),
-                        showCall: !C && F,
+                        showCall: !x && F,
                         showActivityPanel: L,
                         nsfwAgree: (0, h.e7)([eB.Z], () => eB.Z.didAgree(null == c ? void 0 : c.guild_id)),
                         isMobile: (0, h.e7)([eF.Z], () => (null == c ? void 0 : c.type) === e3.d4z.DM && eF.Z.isMobileOnline(c.getRecipientId()), [c]),

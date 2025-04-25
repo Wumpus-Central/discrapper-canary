@@ -1,8 +1,8 @@
 n.d(t, { Z: () => L }), n(388685);
 var i = n(200651),
     r = n(192379),
-    l = n(392711),
-    o = n.n(l),
+    o = n(392711),
+    l = n.n(o),
     s = n(272573),
     c = n(818405),
     a = n(587158),
@@ -10,9 +10,9 @@ var i = n(200651),
     d = n(442837),
     h = n(481060),
     p = n(224706),
-    f = n(13245),
-    m = n(615287),
-    b = n(493773),
+    m = n(13245),
+    b = n(615287),
+    f = n(493773),
     v = n(797614),
     g = n(703656),
     y = n(594174),
@@ -21,11 +21,11 @@ var i = n(200651),
     C = n(960048),
     j = n(145597),
     w = n(333031),
-    k = n(610394),
-    P = n(380736),
+    P = n(610394),
+    k = n(380736),
     E = n(987650),
-    S = n(981631),
-    Z = n(388032),
+    Z = n(981631),
+    S = n(388032),
     z = n(138134);
 function N(e, t, n) {
     return (
@@ -40,7 +40,7 @@ function N(e, t, n) {
         e
     );
 }
-let T = o().throttle(
+let T = l().throttle(
         () => {
             v.Z.increment(
                 {
@@ -56,31 +56,31 @@ let T = o().throttle(
     D = 10 * x.Z.Millis.SECOND;
 function M(e) {
     var t, n;
-    let { error: l, onLock: o, onReload: c, onDisable: a, onCrashDisabled: u } = e,
+    let { error: o, onLock: l, onReload: c, onDisable: a, onCrashDisabled: u } = e,
         p = r.useMemo(() => new s.SpringValue(1), []),
-        m = r.useRef(null),
+        b = r.useRef(null),
         [v, g] = r.useState(!1),
         [x, C] = r.useState(!1),
         j = (0, d.e7)([y.default], () => y.default.getCurrentUser());
-    (0, b.ZP)(
+    (0, f.ZP)(
         () => (
-            (m.current = setTimeout(w, D)),
-            f.Z.track(S.rMx.NOTIFICATION_VIEWED, { notif_type: E.n0.OverlayCrashed }),
+            (b.current = setTimeout(w, D)),
+            m.Z.track(Z.rMx.NOTIFICATION_VIEWED, { notif_type: E.n0.OverlayCrashed }),
             () => {
-                null != m.current && clearTimeout(m.current);
+                null != b.current && clearTimeout(b.current);
             }
         )
     );
     let w = r.useCallback(() => {
-            p.set(0), null != m.current && clearTimeout(m.current), (m.current = null), null == o || o(), null == u || u();
-        }, [p, o, u]),
+            p.set(0), null != b.current && clearTimeout(b.current), (b.current = null), null == l || l(), null == u || u();
+        }, [p, l, u]),
         N = r.useCallback(
             (e) => {
                 x ||
                     (C(!0),
-                    null == o || o(),
-                    f.Z.track(
-                        S.rMx.NOTIFICATION_CLICKED,
+                    null == l || l(),
+                    m.Z.track(
+                        Z.rMx.NOTIFICATION_CLICKED,
                         {
                             notif_type: E.n0.OverlayCrashed,
                             action_type: 'reload'
@@ -90,28 +90,28 @@ function M(e) {
                     e.stopPropagation(),
                     setTimeout(() => (null == c ? void 0 : c()), 200));
             },
-            [o, c, x]
+            [l, c, x]
         ),
         T = r.useCallback(
             (e) => {
-                e.stopPropagation(), e.shiftKey ? (g(!0), null != m.current && clearTimeout(m.current)) : g(!1);
+                e.stopPropagation(), e.shiftKey ? (g(!0), null != b.current && clearTimeout(b.current)) : g(!1);
             },
             [g]
         ),
         M = r.useCallback(
             (e) => {
-                e.stopPropagation(), null == o || o(), null == a || a();
+                e.stopPropagation(), null == l || l(), null == a || a();
             },
-            [a, o]
+            [a, l]
         ),
-        R = (0, d.e7)([k.default], () => k.default.getFocusedRunningGame()),
+        R = (0, d.e7)([P.ZP], () => P.ZP.getFocusedRunningGame()),
         L = v
             ? (0, i.jsxs)('div', {
                   children: [
                       (0, i.jsx)(h.Text, {
                           variant: 'text-md/semibold',
                           color: 'text-primary',
-                          children: Z.intl.string(Z.t.mn4eXF)
+                          children: S.intl.string(S.t.mn4eXF)
                       }),
                       (0, i.jsxs)('div', {
                           className: z.stackTraceCode,
@@ -119,14 +119,14 @@ function M(e) {
                               (0, i.jsx)(h.Text, {
                                   variant: 'text-sm/normal',
                                   color: 'text-secondary',
-                                  children: l.message
+                                  children: o.message
                               }),
                               (0, i.jsx)(h.Text, {
                                   variant: 'text-xxs/normal',
                                   color: 'text-secondary',
                                   children: (0, i.jsx)('code', {
                                       className: z.code,
-                                      children: (0, i.jsx)('pre', { children: l.stack })
+                                      children: (0, i.jsx)('pre', { children: o.stack })
                                   })
                               })
                           ]
@@ -134,14 +134,14 @@ function M(e) {
                   ]
               })
             : null,
-        A = v ? null : Z.intl.string(Z.t.oEJEFh),
+        A = v ? null : S.intl.string(S.t.oEJEFh),
         I = (null != (t = null == j ? void 0 : j.isStaff()) && t) || (null != (n = null == j ? void 0 : j.isStaffPersonal()) && n);
-    return (0, i.jsx)(P.Y, {
-        title: Z.intl.string(Z.t.U38qZm),
+    return (0, i.jsx)(k.Y, {
+        title: S.intl.string(S.t.U38qZm),
         body: L,
         hint: I ? A : void 0,
-        confirmText: Z.intl.string(Z.t.a3HlgI),
-        cancelText: null != R ? Z.intl.string(Z.t.qIYnPj) : void 0,
+        confirmText: S.intl.string(S.t.a3HlgI),
+        cancelText: null != R ? S.intl.string(S.t.qIYnPj) : void 0,
         icon: (0, i.jsx)(O.Z, {
             width: 40,
             height: 40,
@@ -150,12 +150,12 @@ function M(e) {
         onNotificationClick: T,
         onConfirmClick: N,
         onCancelClick: null != R ? M : void 0,
-        onDismissClick: o,
+        onDismissClick: l,
         expand: !0,
         locked: !0,
         notificationId: 'overlay-crashed',
         index: 0,
-        status: S._1z.ACTIVE,
+        status: Z._1z.ACTIVE,
         containerRef: null,
         contentOpacity: p,
         className: z.errorNotificationContainer,
@@ -170,9 +170,9 @@ class R extends r.PureComponent {
             info: t
         });
         let i = (0, j.getPID)();
-        f.Z.setOverlayCrashed(i, e), f.Z.setInputLocked(!0, i);
+        m.Z.setOverlayCrashed(i, e), m.Z.setInputLocked(!0, i);
         let r = C.Z.captureCrash(e, { extra: t });
-        f.Z.track(S.rMx.APP_CRASHED, {
+        m.Z.track(Z.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
@@ -195,19 +195,19 @@ class R extends r.PureComponent {
                           onLock: () => {
                               var e;
                               let t = null != (e = this.pid) ? e : (0, j.getPID)();
-                              f.Z.setInputLocked(!0, t), this.setState({ showError: !1 });
+                              m.Z.setInputLocked(!0, t), this.setState({ showError: !1 });
                           },
                           onDisable: () => {
-                              let e = k.default.getFocusedRunningGame();
+                              let e = P.ZP.getFocusedRunningGame();
                               null != e && p.Z.toggleOverlay(e, !1, !1);
                           },
                           onCrashDisabled: () => {
                               var e;
                               let t = null != (e = this.pid) ? e : (0, j.getPID)();
-                              f.Z.updateOverlayState(t, m.mM.OVERLAY_CRASHED_DISABLED), this.setState({ showError: !1 });
+                              m.Z.updateOverlayState(t, b.mM.OVERLAY_CRASHED_DISABLED), this.setState({ showError: !1 });
                           },
                           onReload: () => {
-                              f.Z.setReloadOverlay((0, j.getPID)()), this.setState({ showError: !1 });
+                              m.Z.setReloadOverlay((0, j.getPID)()), this.setState({ showError: !1 });
                           }
                       })
                   })

@@ -20,8 +20,8 @@ var r = n(200651),
     b = n(358221),
     _ = n(414910),
     y = n(909820),
-    C = n(493010),
-    x = n(71127),
+    x = n(493010),
+    C = n(71127),
     v = n(185935),
     j = n(522651),
     O = n(540059),
@@ -81,14 +81,14 @@ function es(e) {
             var e;
             return null != (e = null == o ? void 0 : o.window) ? e : window;
         }, [o]),
-        C = (0, J.Z)({
+        x = (0, J.Z)({
             channel: t,
             appContext: n,
             popoutOpen: l,
             popoutWindow: o,
             currentWindow: y
         }),
-        x = n === ee.IlC.POPOUT && U.isPlatformEmbedded && B.ZP.supportsFeature(ee.eRX.POPOUT_WINDOWS);
+        C = n === ee.IlC.POPOUT && U.isPlatformEmbedded && B.ZP.supportsFeature(ee.eRX.POPOUT_WINDOWS);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             m
@@ -100,7 +100,7 @@ function es(e) {
                       location: u
                   })
                 : null,
-            x
+            C
                 ? (0, r.jsx)(A.Z, {
                       className: er.rightTrayIcon,
                       popoutWindowAlwaysOnTop: a,
@@ -119,7 +119,7 @@ function es(e) {
                       }
                   })
                 : null,
-            C
+            x
         ]
     });
 }
@@ -145,13 +145,13 @@ function ec(e) {
 function eu(e) {
     let t,
         { channel: n, toggleRequestToSpeakSidebar: l, showRequestToSpeakSidebar: c, popoutWindow: d, popoutWindowAlwaysOnTop: p, popoutOpen: h, chatOpen: _ } = e,
-        { analyticsLocations: C } = (0, g.ZP)(m.Z.VOICE_CONTROL_TRAY),
-        x = (0, f.bp)(),
+        { analyticsLocations: x } = (0, g.ZP)(m.Z.VOICE_CONTROL_TRAY),
+        C = (0, f.bp)(),
         v = (0, s.e7)([D.Z], () => D.Z.getVoiceChannelId() === n.id, [n.id]),
         j = (0, s.e7)([L.Z], () => L.Z.can(ee.Plq.CONNECT, n)),
         E = (0, F.w8)(n.id, H.pV.SPEAKER),
         I = (0, s.e7)([b.Z], () => b.Z.getSelectedParticipant(n.id)),
-        P = h && x !== ee.IlC.POPOUT,
+        P = h && C !== ee.IlC.POPOUT,
         S = (0, O.Q3)('StageChannelCallContent'),
         [T, A] = i.useState(0),
         w = (0, u._q$)('StageChannelCall'),
@@ -191,13 +191,13 @@ function eu(e) {
                 S
                     ? null
                     : (0, r.jsx)(g.Gt, {
-                          value: C,
+                          value: x,
                           children: (0, r.jsx)(ec, { channel: n })
                       }),
             renderBottomCenter: () =>
                 v
                     ? (0, r.jsx)(g.Gt, {
-                          value: C,
+                          value: x,
                           children: (0, r.jsx)(X.Z, {
                               channel: n,
                               isOnStartStageScreen: R
@@ -207,10 +207,10 @@ function eu(e) {
             renderBottomRight: () =>
                 v
                     ? (0, r.jsx)(g.Gt, {
-                          value: C,
+                          value: x,
                           children: (0, r.jsx)(es, {
                               channel: n,
-                              appContext: x,
+                              appContext: C,
                               popoutOpen: h,
                               popoutWindow: d,
                               popoutWindowAlwaysOnTop: p,
@@ -220,7 +220,7 @@ function eu(e) {
                     : null,
             renderHeader: () =>
                 (0, r.jsx)(q.Z, {
-                    inPopout: x === ee.IlC.POPOUT,
+                    inPopout: C === ee.IlC.POPOUT,
                     toggleRequestToSpeakSidebar: l,
                     showRequestToSpeakSidebar: c,
                     channel: n
@@ -345,7 +345,7 @@ function ed(e) {
                             children: [
                                 S &&
                                     k &&
-                                    (0, r.jsx)(C.Z, {
+                                    (0, r.jsx)(x.Z, {
                                         channel: t,
                                         guild: N,
                                         maxWidth: R
@@ -353,7 +353,7 @@ function ed(e) {
                                 Z &&
                                     T &&
                                     k &&
-                                    (0, r.jsx)(x.Z, {
+                                    (0, r.jsx)(C.Z, {
                                         channel: t,
                                         maxWidth: R
                                     })

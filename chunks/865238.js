@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(131951),
     _ = n(594174),
     y = n(63063),
-    C = n(5192),
-    x = n(823961),
+    x = n(5192),
+    C = n(823961),
     v = n(981631),
     j = n(37113),
     O = n(388032),
@@ -54,7 +54,7 @@ function Z(e) {
         N = (0, u.Wu)([g.Z], () => g.Z.getAllActiveStreams()),
         T = (0, u.e7)([_.default], () => _.default.getCurrentUser()),
         A = null != N.find((e) => e.ownerId === (null == T ? void 0 : T.id)),
-        w = (0, u.e7)([x.Z], () => x.Z.getPreviousGoLiveSettings()),
+        w = (0, u.e7)([C.Z], () => C.Z.getPreviousGoLiveSettings()),
         R = A && null != w && w.resolution !== j.LY.RESOLUTION_1440 && w.frameRate !== j.ws.FPS_60,
         [k, M] = (0, i.useState)(!1);
     (0, i.useEffect)(() => {
@@ -83,7 +83,7 @@ function Z(e) {
             size: d.EFr.SIZE_48,
             animateOnHover: !0
         }),
-        G = C.ZP.getName(t.guild_id, t.id, l),
+        G = x.ZP.getName(t.guild_id, t.id, l),
         F = A && !R,
         H = t.hdStreamingUntil;
     if (null == H || null == l || null == T) return null;
@@ -139,7 +139,7 @@ function Z(e) {
                           (0, r.jsx)(d.zxk, {
                               onClick: () => {
                                   if (R) {
-                                      let e = x.Z.getPreviousGoLiveSettings(),
+                                      let e = C.Z.getPreviousGoLiveSettings(),
                                           t = b.Z.getGoLiveSource();
                                       if (null == e) return void a();
                                       let n = (0, h.s_)(e.resolution, e.frameRate, t);

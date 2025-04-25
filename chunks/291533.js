@@ -9,5 +9,5 @@ function c(e) {
     let t = (0, a.A2)(e),
         n = (0, r.e7)([o.Z], () => o.Z.isOpen()),
         c = (0, r.e7)([s.Z], () => s.Z.hasLayers());
-    return (0, l.bf)(!t || n || c ? null : i.z.GUILD_TAG_AVAILABLE_COACHMARK, { cooldownDurationMs: 1800000 });
+    return (0, l.bf)(!t || n || c ? null : i.z.GUILD_TAG_AVAILABLE_COACHMARK, { cooldownDurationMs: 180000 });
 }

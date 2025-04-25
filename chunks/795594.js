@@ -634,7 +634,7 @@ let eh = (e) => {
                     J.fy.INFREQUENT_USER_ACTION
                 ),
                     N.ZP.trackWithMetadata(er.rMx.NOTIFICATION_SETTINGS_UPDATED, {
-                        update_type: ei.Ib.AUTHORIZED_APP_DM_PUSH_NOTIFICATION,
+                        update_type: ei.I.AUTHORIZED_APP_DM_PUSH_NOTIFICATION,
                         application_id: a.id,
                         label: e ? z.ZB.Unmuted : z.ZB.Muted
                     });

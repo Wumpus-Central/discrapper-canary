@@ -21,8 +21,8 @@ var r = n(200651),
     b = n(569545),
     _ = n(102172),
     y = n(525925),
-    C = n(701362),
-    x = n(670188),
+    x = n(701362),
+    C = n(670188),
     v = n(597998),
     j = n(314897),
     O = n(430824),
@@ -149,7 +149,7 @@ let M = (0, p.$)(function (e) {
             });
         },
         e_ = () =>
-            (0, r.jsx)(C.Z, {
+            (0, r.jsx)(x.Z, {
                 user: p,
                 channel: R,
                 onWatch: eg,
@@ -238,7 +238,7 @@ let M = (0, p.$)(function (e) {
                     )
             });
         },
-        eC = (0, r.jsx)('div', {
+        ex = (0, r.jsx)('div', {
             className: T.draggable,
             'data-dnd-name': R.name,
             onMouseEnter: el
@@ -247,7 +247,7 @@ let M = (0, p.$)(function (e) {
                       K && !ed && (null == $ || $(p.id));
                   },
             onMouseLeave: el ? void 0 : ef,
-            children: (0, r.jsx)(x.Z, {
+            children: (0, r.jsx)(C.Z, {
                 clickTrap: (null == p ? void 0 : p.id) === (null == (t = I.default.getCurrentUser()) ? void 0 : t.id) && ed,
                 targetElementRef: eu,
                 user: p,
@@ -259,5 +259,5 @@ let M = (0, p.$)(function (e) {
                 children: (e) => ey(e)
             })
         });
-    return q ? Y(eC) : eC;
+    return q ? Y(ex) : ex;
 });

@@ -23,14 +23,14 @@ function b(e) {
                 loading: null == n || (null != e && e.loading)
             };
         }),
-        C = (0, l.e7)([p.ZP], () => p.ZP.hasUnreadPins(t.id));
+        x = (0, l.e7)([p.ZP], () => p.ZP.hasUnreadPins(t.id));
     return (
         (0, c.ZP)(() => {
             _.some(u.k5) && s.Z.fetchPins(t.id, !0);
         }),
         i.useEffect(() => {
-            C && s.Z.ackPins(t.id);
-        }, [C, t.id]),
+            x && s.Z.ackPins(t.id);
+        }, [x, t.id]),
         (0, r.jsx)(a.VqE, {
             'aria-label': m.intl.string(m.t['mp1N//']),
             children: (0, r.jsx)(h.ZP, {

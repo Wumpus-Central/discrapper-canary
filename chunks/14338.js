@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => x });
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -59,8 +59,8 @@ function _(e, t) {
 function y(e) {
     let { channel: t, speaker: l, className: f } = e,
         { newestAnalyticsLocation: y } = (0, d.ZP)(),
-        C = (0, u.bp)(),
-        { reducedMotion: x } = i.useContext(a.Sfi),
+        x = (0, u.bp)(),
+        { reducedMotion: C } = i.useContext(a.Sfi),
         v = (0, c.Z)({ userId: l.id }),
         j = null != l.member ? (0, m.CA)(l.member) : null,
         O = (e) => {
@@ -82,7 +82,7 @@ function y(e) {
                             })
                         );
                 },
-                { context: C }
+                { context: x }
             );
         };
     return (0, r.jsx)(h.Z, {
@@ -107,14 +107,14 @@ function y(e) {
                                 size: a.EFr.SIZE_24,
                                 className: o()(g.avatar, f),
                                 'aria-label': l.userNick,
-                                isSpeaking: v && !x.enabled
+                                isSpeaking: v && !C.enabled
                             })
                         })
                     )
             })
     });
 }
-function C(e) {
+function x(e) {
     let { speakers: t, channel: n } = e;
     return (0, r.jsx)(f.Z, {
         className: g.summary,

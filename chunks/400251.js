@@ -21,8 +21,8 @@ var r = n(200651),
     b = n(601964),
     _ = n(430824),
     y = n(768581),
-    C = n(683818),
-    x = n(16853),
+    x = n(683818),
+    C = n(16853),
     v = n(981631),
     j = n(388032),
     O = n(901593),
@@ -112,7 +112,7 @@ function N(e) {
     let { entry: t } = e,
         [l, a] = i.useState(!1),
         c = i.useRef(null),
-        { canEdit: u } = (0, C.Z)(t);
+        { canEdit: u } = (0, x.Z)(t);
     return (0, r.jsx)('div', {
         className: o()(O.actionButtonsContainer, { [O.forceButtonsShow]: l }),
         children: (0, r.jsxs)(p.ZP, {
@@ -145,7 +145,7 @@ function N(e) {
                           }
                       })
                     : null,
-                (0, r.jsx)(x.Z, {
+                (0, r.jsx)(C.Z, {
                     targetElementRef: c,
                     onRequestOpen: () => a(!0),
                     onRequestClose: () => a(!1),
@@ -187,11 +187,11 @@ let T = (e) => {
     var t;
     let { entry: l } = e,
         [o, p] = i.useState(!1),
-        C = null != (0, a.e7)([_.Z], () => _.Z.getGuild(l.guildId)),
-        x = async () => {
+        x = null != (0, a.e7)([_.Z], () => _.Z.getGuild(l.guildId)),
+        C = async () => {
             p(!0);
             try {
-                C ? (0, g.X)(l.guildId) : await u.Z.joinGuild(l.guildId, { source: v.vtS.DIRECTORY_ENTRY });
+                x ? (0, g.X)(l.guildId) : await u.Z.joinGuild(l.guildId, { source: v.vtS.DIRECTORY_ENTRY });
             } finally {
                 p(!1);
             }
@@ -212,7 +212,7 @@ let T = (e) => {
                 : void 0,
         Z = j.intl.string(j.t.VJlc0d);
     return (
-        C && (Z = j.intl.string(j.t.cqWE2d)),
+        x && (Z = j.intl.string(j.t.cqWE2d)),
         (0, r.jsxs)('div', {
             className: O.card,
             onContextMenu: (e) => {
@@ -312,8 +312,8 @@ let T = (e) => {
                         (0, r.jsx)(s.zxk, {
                             submitting: o,
                             className: O.joinButton,
-                            color: C ? s.zxk.Colors.PRIMARY : s.zxk.Colors.GREEN,
-                            onClick: x,
+                            color: x ? s.zxk.Colors.PRIMARY : s.zxk.Colors.GREEN,
+                            onClick: C,
                             children: Z
                         })
                     ]

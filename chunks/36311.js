@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => x });
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -22,8 +22,8 @@ function y(e) {
             return (null == (e = f.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) === !1;
         }),
         o = (0, p.Kt)(),
-        { verifyAgreementButtonText: y, verifyGateDescription: C } = (0, p.a1)(),
-        x = i.useCallback(() => {
+        { verifyAgreementButtonText: y, verifyGateDescription: x } = (0, p.a1)(),
+        C = i.useCallback(() => {
             null != t && c.Z.nsfwReturnToSafety(t.id);
         }, [t]),
         v = i.useCallback(() => {
@@ -38,9 +38,9 @@ function y(e) {
               channelId: n,
               modalType: d.it.NSFW_CHANNEL_AGE_VERIFY,
               onAgree: j,
-              onDisagree: x,
+              onDisagree: C,
               title: b.intl.string(b.t.ZmwvDQ),
-              description: C,
+              description: x,
               agreement: y,
               agreementButtonColor: s.zxk.Colors.BRAND,
               disagreement: b.intl.string(b.t['/g10LC']),
@@ -52,7 +52,7 @@ function y(e) {
                 channelId: n,
                 modalType: d.it.NSFW_CHANNEL_UNDERAGE,
                 onAgree: v,
-                onDisagree: x,
+                onDisagree: C,
                 title: b.intl.string(b.t.NEabBQ),
                 description: b.intl.format(b.t['2kHZen'], { helpURL: m.Z.getArticleURL(g.BhN.NSFW_AGE_GATING) }),
                 agreement: null,
@@ -64,14 +64,14 @@ function y(e) {
                 channelId: n,
                 modalType: d.it.NSFW_CHANNEL_VERIFIED,
                 onAgree: v,
-                onDisagree: x,
+                onDisagree: C,
                 title: b.intl.string(b.t.ZmwvDQ),
                 description: b.intl.string(b.t.E4Cd5O),
                 agreement: b.intl.string(b.t.wVq7ur),
                 disagreement: b.intl.string(b.t['/g10LC'])
             });
 }
-let C = function (e) {
+let x = function (e) {
     let { guild: t, channelId: n, className: l } = e,
         a = i.useRef(null);
     return (

@@ -58,10 +58,10 @@ function f(e, t) {
 function v() {
     return (0, a.jsx)('div', {
         className: p.container,
-        children: (0, a.jsx)(g, {})
+        children: (0, a.jsx)(j, {})
     });
 }
-function g() {
+function j() {
     let e = (0, c.e7)([h.Z], () => h.Z.getChannelId()),
         t = (0, x.Z)(e),
         n = null == t ? void 0 : t.wallpaperId,
@@ -69,7 +69,7 @@ function g() {
             opacity: l,
             primaryColor: s,
             secondaryColor: v,
-            tokenMixAmount: g,
+            tokenMixAmount: j,
             linkColor: O
         } = (0, c.cj)(
             [u.Z],
@@ -94,7 +94,7 @@ function g() {
         ),
         E = r.useCallback(
             (e) => {
-                j(null == t ? void 0 : t.wallpaperId, e.target.value);
+                g(null == t ? void 0 : t.wallpaperId, e.target.value);
             },
             [null == t ? void 0 : t.wallpaperId]
         ),
@@ -104,13 +104,13 @@ function g() {
             },
             [null == t ? void 0 : t.wallpaperId]
         ),
-        S = r.useCallback(
+        T = r.useCallback(
             (e) => {
                 _(null == t ? void 0 : t.wallpaperId, e.target.value);
             },
             [null == t ? void 0 : t.wallpaperId]
         ),
-        T = r.useCallback(
+        S = r.useCallback(
             (e) => {
                 null != n && (0, m.i)(n, { token_mix_amount: Math.round(e) });
             },
@@ -237,13 +237,13 @@ function g() {
                             d.iRW,
                             {
                                 className: p.slider,
-                                initialValue: g,
+                                initialValue: j,
                                 defaultValue: 100,
                                 minValue: 0,
                                 maxValue: 100,
-                                onValueChange: T
+                                onValueChange: S
                             },
-                            'tokenMixAmount-'.concat(g)
+                            'tokenMixAmount-'.concat(j)
                         ),
                         (0, a.jsx)(d.ua7, {
                             text: 'The color used for hyperlinks.',
@@ -265,7 +265,7 @@ function g() {
                         (0, a.jsx)('input', {
                             type: 'color',
                             value: O,
-                            onChange: S
+                            onChange: T
                         }),
                         (0, a.jsx)(d.zxk, {
                             className: p.resetButton,
@@ -277,7 +277,7 @@ function g() {
         ]
     });
 }
-let j = (0, s.debounce)(function (e, t) {
+let g = (0, s.debounce)(function (e, t) {
         null != e && (0, m.i)(e, { primary_color: t });
     }, 200),
     _ = (0, s.debounce)(function (e, t) {

@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => h,
-    f: () => y
+    f: () => C
 }),
     n(388685);
 var r,
@@ -13,12 +13,12 @@ var r,
     s = n(481060),
     d = n(239091),
     p = n(596454),
-    f = n(607070),
-    E = n(339085),
-    O = n(695346),
+    E = n(607070),
+    f = n(339085),
+    _ = n(695346),
     S = n(572004),
-    _ = n(388032),
-    T = n(559297);
+    O = n(388032),
+    I = n(559297);
 function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -44,7 +44,7 @@ function g(e) {
     }
     return e;
 }
-function I(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -64,44 +64,44 @@ function I(e, t) {
 }
 var b = (((r = b || {})[(r.SMALL = 0)] = 'SMALL'), (r[(r.MEDIUM = 1)] = 'MEDIUM'), r);
 function h(e) {
-    let { tag: t, size: r = 1, disabled: o, className: b, onClick: h, onRemove: y, selected: C, ariaLabel: N } = e,
-        { name: P, emojiId: m, emojiName: v } = t,
-        A = null != y,
-        [j, L] = l.useState(!1),
-        R = (0, c.e7)([E.ZP], () => (null != m ? E.ZP.getUsableCustomEmojiById(m) : null)),
-        D = A || null != h,
-        F = (!A || !j) && (null != m || null != v),
+    let { tag: t, size: r = 1, disabled: o, className: b, onClick: h, onRemove: C, selected: y, ariaLabel: N } = e,
+        { name: P, emojiId: m, emojiName: A } = t,
+        v = null != C,
+        [L, j] = l.useState(!1),
+        F = (0, c.e7)([f.ZP], () => (null != m ? f.ZP.getUsableCustomEmojiById(m) : null)),
+        D = v || null != h,
+        R = (!v || !L) && (null != m || null != A),
         w = 0 === r,
         M = l.useRef(null),
-        U = (0, c.e7)([f.Z], () => f.Z.keyboardModeEnabled),
-        Z = (e) => {
-            let r = O.Sb.getSetting();
+        U = (0, c.e7)([E.Z], () => E.Z.keyboardModeEnabled),
+        G = (e) => {
+            let r = _.Sb.getSetting();
             S.wS &&
                 r &&
                 (0, d.jW)(e, async () => {
                     let { default: e } = await n.e('29646').then(n.bind(n, 955116));
-                    return (n) => (0, i.jsx)(e, I(g({}, n), { tag: t }));
+                    return (n) => (0, i.jsx)(e, T(g({}, n), { tag: t }));
                 });
         },
-        x = (0, i.jsxs)(i.Fragment, {
+        Z = (0, i.jsxs)(i.Fragment, {
             children: [
-                F
+                R
                     ? (0, i.jsx)(p.Z, {
-                          className: a()(T.emoji, { [T.small]: w }),
+                          className: a()(I.emoji, { [I.small]: w }),
                           emojiId: m,
-                          emojiName: v,
-                          animated: !!(null == R ? void 0 : R.animated),
+                          emojiName: A,
+                          animated: !!(null == F ? void 0 : F.animated),
                           size: 'reaction'
                       })
                     : null,
-                j &&
-                    A &&
+                L &&
+                    v &&
                     (0, i.jsx)('div', {
-                        className: T.closeCircle,
+                        className: I.closeCircle,
                         children: (0, i.jsx)(s.Dio, {
                             size: 'md',
                             color: 'currentColor',
-                            className: T.close
+                            className: I.close
                         })
                     }),
                 (0, i.jsx)(s.Text, {
@@ -112,57 +112,57 @@ function h(e) {
                 })
             ]
         }),
-        G = {
+        x = {
             key: t.id,
             className: a()(
-                T.pill,
+                I.pill,
                 {
-                    [T.disabled]: o,
-                    [T.clickable]: D,
-                    [T.small]: w,
-                    [T.selected]: C
+                    [I.disabled]: o,
+                    [I.clickable]: D,
+                    [I.small]: w,
+                    [I.selected]: y
                 },
                 b
             ),
             onClick: (e) => {
-                null == h || h(e), null == y || y(t), U || null == M.current || M.current.blur();
+                null == h || h(e), null == C || C(t), U || null == M.current || M.current.blur();
             },
-            onContextMenu: (e) => Z(e),
-            onMouseEnter: () => A && L(!0),
-            onMouseLeave: () => A && L(!1)
+            onContextMenu: (e) => G(e),
+            onMouseEnter: () => v && j(!0),
+            onMouseLeave: () => v && j(!1)
         },
         H = (0, u.JA)('forum-tag-'.concat(t.id));
     return D
         ? (0, i.jsx)(
               s.P3F,
-              I(
+              T(
                   g(
-                      I(g({}, H), {
+                      T(g({}, H), {
                           innerRef: M,
                           focusProps: { ringTarget: M },
-                          'aria-label': null != N ? N : _.intl.formatToPlainString(_.t.iyRTLi, { tagName: P }),
+                          'aria-label': null != N ? N : O.intl.formatToPlainString(O.t.iyRTLi, { tagName: P }),
                           role: 'button',
-                          'aria-pressed': C
+                          'aria-pressed': y
                       }),
-                      G
+                      x
                   ),
-                  { children: x }
+                  { children: Z }
               )
           )
-        : (0, i.jsx)('div', I(g({}, G), { children: x }));
+        : (0, i.jsx)('div', T(g({}, x), { children: Z }));
 }
-function y(e) {
+function C(e) {
     let { tags: t, count: n, size: r = 1 } = e,
         l = 0 === r;
     return (0, i.jsx)(s.ua7, {
-        'aria-label': _.intl.string(_.t['P/y+sr']),
+        'aria-label': O.intl.string(O.t['P/y+sr']),
         text: (0, i.jsx)(i.Fragment, {
             children: t.map((e) =>
                 (0, i.jsx)(
                     h,
                     {
                         tag: e,
-                        className: T.tooltipPill,
+                        className: I.tooltipPill,
                         size: h.Sizes.SMALL
                     },
                     e.id
@@ -172,8 +172,8 @@ function y(e) {
         children: (e) =>
             (0, i.jsx)(
                 'div',
-                I(g({}, e), {
-                    className: a()(T.pill, { [T.small]: l }),
+                T(g({}, e), {
+                    className: a()(I.pill, { [I.small]: l }),
                     children: (0, i.jsxs)(s.Text, {
                         variant: l ? 'text-xs/semibold' : 'text-sm/semibold',
                         children: ['+', n]

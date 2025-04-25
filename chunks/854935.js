@@ -17,8 +17,8 @@ var i = n(442837),
     b = n(78806),
     _ = n(91433),
     y = n(900927),
-    C = n(944043),
-    x = n(678738),
+    x = n(944043),
+    C = n(678738),
     v = n(502762),
     j = n(530),
     O = n(827313),
@@ -85,7 +85,7 @@ function Z(e) {
                     e.applicationId
                 )
             ),
-            (0, r.jsx)(C.Z, {
+            (0, r.jsx)(x.Z, {
                 user: t,
                 className: S.card
             }),
@@ -106,7 +106,7 @@ function Z(e) {
                     !L &&
                         (null == Z ? void 0 : Z.bio) != null &&
                         (null == Z ? void 0 : Z.bio) !== '' &&
-                        (0, r.jsx)(x.Z, {
+                        (0, r.jsx)(C.Z, {
                             heading: P.intl.string(P.t['61W33d']),
                             headingColor: 'header-primary',
                             children: (0, r.jsx)(f.Z, {
@@ -123,12 +123,12 @@ function Z(e) {
                             channel: N
                         }),
                     M.length > 0 &&
-                        (0, r.jsx)(x.Z, {
+                        (0, r.jsx)(C.Z, {
                             heading: P.intl.string(P.t['Uv/eT0']),
                             headingColor: 'header-primary',
                             children: (0, r.jsx)(b.Z, { applicationIds: M })
                         }),
-                    (0, r.jsx)(x.Z, {
+                    (0, r.jsx)(C.Z, {
                         heading: t.bot ? P.intl.string(P.t['A//N4u']) : P.intl.string(P.t.a6XYDw),
                         headingColor: 'header-primary',
                         children: (0, r.jsx)(y.Z, { userId: t.id })

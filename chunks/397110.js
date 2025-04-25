@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => x });
 var r = n(200651);
 n(192379);
 var i = n(410030),
@@ -17,11 +17,11 @@ var i = n(410030),
     b = n(787439),
     _ = n(388032),
     y = n(396285);
-function C(e) {
+function x(e) {
     let { user: t } = e,
         { analyticsLocations: n } = (0, o.ZP)(),
-        { context: C } = (0, c.KZ)(),
-        x = (0, i.ZP)(),
+        { context: x } = (0, c.KZ)(),
+        C = (0, i.ZP)(),
         v = (0, l.Z)(),
         { mutualFriendsCount: j, mutualFriends: O, mutualGuilds: E } = (0, u.Z)(t),
         I = !t.bot && null != j && j > 0,
@@ -43,7 +43,7 @@ function C(e) {
                                       user: t,
                                       guild: n,
                                       nick: i,
-                                      theme: x,
+                                      theme: C,
                                       onSelect: () => (0, s.X)(n.id)
                                   },
                                   n.id
@@ -112,7 +112,7 @@ function C(e) {
                                                                     });
                                                             }
                                                             return e;
-                                                        })({}, C)),
+                                                        })({}, x)),
                                                         (t = t =
                                                             {
                                                                 userId: i.id,

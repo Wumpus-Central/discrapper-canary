@@ -9,8 +9,8 @@ var r = n(200651),
     u = n(742458),
     d = n(541692),
     h = n(952802),
-    g = n(388905),
-    p = n(815660),
+    p = n(388905),
+    g = n(815660),
     f = n(388032),
     m = n(893354),
     _ = n(20493);
@@ -30,7 +30,7 @@ let x = () => {
                 N(e.body.message);
             }
         },
-        Z = async () => {
+        A = async () => {
             b(!0);
             try {
                 let { token: t } = await c.Z.verifyPhone(C + e, l);
@@ -41,10 +41,10 @@ let x = () => {
                 b(!1);
             }
         },
-        A = (0, r.jsxs)(g.ZP, {
+        Z = (0, r.jsxs)(p.ZP, {
             children: [
-                (0, r.jsx)(g.Ee, { src: n(292824) }),
-                (0, r.jsxs)(g.Dx, {
+                (0, r.jsx)(p.Ee, { src: n(292824) }),
+                (0, r.jsxs)(p.Dx, {
                     className: s()(_.marginTop20, m.flex, m.justifyCenter, m.alignCenter),
                     children: [
                         f.intl.string(f.t.WWzQtb),
@@ -58,15 +58,15 @@ let x = () => {
             ]
         });
     return v
-        ? A
-        : (0, r.jsxs)(g.ZP, {
+        ? Z
+        : (0, r.jsxs)(p.ZP, {
               children: [
-                  (0, r.jsx)(g.Dx, { children: f.intl.string(f.t.o4JNrK) }),
-                  (0, r.jsx)(g.DK, {
+                  (0, r.jsx)(p.Dx, { children: f.intl.string(f.t.o4JNrK) }),
+                  (0, r.jsx)(p.DK, {
                       className: _.marginTop8,
                       children: f.intl.string(f.t.y0tVbm)
                   }),
-                  (0, r.jsxs)(g.gO, {
+                  (0, r.jsxs)(p.gO, {
                       className: _.marginTop20,
                       children: [
                           (0, r.jsx)(h.Z, {
@@ -80,23 +80,23 @@ let x = () => {
                               forceMode: u.Nz.PHONE,
                               error: I
                           }),
-                          (0, r.jsx)(g.II, {
+                          (0, r.jsx)(p.II, {
                               className: _.marginTop20,
                               label: f.intl.string(f.t.OdzNbm),
                               value: l,
                               onChange: x,
-                              maxLength: p.z,
+                              maxLength: g.z,
                               error: S
                           }),
-                          (0, r.jsx)(g.zx, {
-                              size: g.zx.Sizes.SMALL,
-                              look: g.zx.Looks.LINK,
+                          (0, r.jsx)(p.zx, {
+                              size: p.zx.Sizes.SMALL,
+                              look: p.zx.Looks.LINK,
                               onClick: P,
                               children: f.intl.string(f.t['5b60go'])
                           }),
-                          (0, r.jsx)(g.zx, {
+                          (0, r.jsx)(p.zx, {
                               className: _.marginTop20,
-                              onClick: Z,
+                              onClick: A,
                               submitting: E,
                               children: f.intl.string(f.t.i4jeWV)
                           })

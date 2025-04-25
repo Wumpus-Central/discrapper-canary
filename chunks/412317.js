@@ -4,8 +4,8 @@ n(192379);
 var o = n(481060),
     l = n(194359),
     i = n(906732),
-    c = n(475413),
-    u = n(934861),
+    u = n(475413),
+    c = n(934861),
     s = n(156518),
     a = n(690501),
     d = n(562831),
@@ -37,7 +37,7 @@ function O(e) {
     }
     return e;
 }
-function g(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -55,7 +55,7 @@ function g(e, t) {
         e
     );
 }
-function y(e) {
+function g(e) {
     var { user: t, analyticsLocation: n } = e,
         o = (function (e, t) {
             if (null == e) return {};
@@ -81,17 +81,17 @@ function y(e) {
         analyticsLocation: n
     });
     return 0 === l.length
-        ? (0, r.jsx)(c.ef, g(O({}, o), { disabled: !0 }))
+        ? (0, r.jsx)(u.ef, y(O({}, o), { disabled: !0 }))
         : (0, r.jsx)(s.Z, {
               menuItems: l,
-              children: (e) => (0, r.jsx)('div', g(O({}, e), { children: (0, r.jsx)(c.ef, O({}, o)) }))
+              children: (e) => (0, r.jsx)('div', y(O({}, e), { children: (0, r.jsx)(u.ef, O({}, o)) }))
           });
 }
 function j(e) {
     let { gameFriends: t, hasIncomingPendingGameFriends: n, hasOutgoingPendingGameFriends: o, user: l, analyticsLocation: i } = e,
         {
-            onMouseEnter: c,
-            ariaLabel: u,
+            onMouseEnter: u,
+            ariaLabel: c,
             tooltipText: s,
             icon: d
         } = (0, a.N)({
@@ -99,17 +99,17 @@ function j(e) {
             hasIncomingPendingGameFriends: n,
             hasOutgoingPendingGameFriends: o
         });
-    return (0, r.jsx)(y, {
+    return (0, r.jsx)(g, {
         tooltipText: s,
-        ariaLabel: u,
+        ariaLabel: c,
         icon: d,
-        onMouseEnter: c,
+        onMouseEnter: u,
         user: l,
         analyticsLocation: i
     });
 }
 function v(e) {
-    let { isCurrentUser: t, user: n, relationshipType: s, friendToken: a, autoFocus: O, onClose: g } = e,
+    let { isCurrentUser: t, user: n, relationshipType: s, friendToken: a, autoFocus: O, onClose: y } = e,
         { newestAnalyticsLocation: v } = (0, i.ZP)(),
         { gameFriends: h, hasOutgoingPendingGameFriends: m, hasIncomingPendingGameFriends: P } = (0, d.H)({ userId: n.id }),
         x = h.length > 0 || m || P;
@@ -118,9 +118,9 @@ function v(e) {
         : s === f.OGo.FRIEND || n.bot
           ? (0, r.jsx)('div', {
                 className: p.multipleButtons,
-                children: (0, r.jsx)(u.c, {
+                children: (0, r.jsx)(c.c, {
                     userId: n.id,
-                    onClose: g,
+                    onClose: y,
                     autoFocus: O
                 })
             })
@@ -135,9 +135,9 @@ function v(e) {
                           hasIncomingPendingGameFriends: P,
                           hasOutgoingPendingGameFriends: m
                       }),
-                      (0, r.jsx)(u.c, {
+                      (0, r.jsx)(c.c, {
                           userId: n.id,
-                          onClose: g,
+                          onClose: y,
                           autoFocus: O
                       })
                   ]
@@ -146,15 +146,15 @@ function v(e) {
               ? (0, r.jsxs)('div', {
                     className: p.multipleButtons,
                     children: [
-                        (0, r.jsx)(y, {
+                        (0, r.jsx)(g, {
                             icon: o.iHX,
                             tooltipText: b.intl.string(b.t.zz2i8v),
                             user: n,
                             analyticsLocation: v
                         }),
-                        (0, r.jsx)(u.c, {
+                        (0, r.jsx)(c.c, {
                             userId: n.id,
-                            onClose: g,
+                            onClose: y,
                             autoFocus: O
                         })
                     ]
@@ -163,15 +163,15 @@ function v(e) {
                 ? (0, r.jsxs)('div', {
                       className: p.multipleButtons,
                       children: [
-                          (0, r.jsx)(y, {
+                          (0, r.jsx)(g, {
                               icon: o.iHX,
                               tooltipText: b.intl.string(b.t.ZOFd1N),
                               user: n,
                               analyticsLocation: v
                           }),
-                          (0, r.jsx)(u.c, {
+                          (0, r.jsx)(c.c, {
                               userId: n.id,
-                              onClose: g,
+                              onClose: y,
                               autoFocus: O
                           })
                       ]
@@ -179,11 +179,11 @@ function v(e) {
                 : (0, r.jsxs)('div', {
                       className: p.multipleButtons,
                       children: [
-                          (0, r.jsx)(u.v, {
+                          (0, r.jsx)(c.v, {
                               userId: n.id,
-                              onClose: g
+                              onClose: y
                           }),
-                          (0, r.jsx)(c.tG, {
+                          (0, r.jsx)(u.tG, {
                               action: 'SEND_FRIEND_REQUEST',
                               icon: o.oLu,
                               text: b.intl.string(b.t['7815aW']),

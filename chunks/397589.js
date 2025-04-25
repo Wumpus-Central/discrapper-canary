@@ -1,10 +1,10 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => y });
 var r = n(200651),
     o = n(192379),
     a = n(481060),
     i = n(782568),
-    s = n(592125),
-    l = n(594174),
+    l = n(592125),
+    s = n(594174),
     c = n(63063),
     u = n(5192),
     d = n(992970),
@@ -14,23 +14,23 @@ var r = n(200651),
     f = n(235894),
     b = n(981631),
     h = n(388032),
-    y = n(277586);
-let _ = (e) => {
+    _ = n(277586);
+let y = (e) => {
     var t;
     let { message: n } = e,
-        _ = o.useRef(null),
-        O = (0, p.p7)('Message Header') && n.hasPotions(),
-        v = s.Z.getChannel(n.getChannelId()),
+        y = o.useRef(null),
+        v = (0, p.p7)('Message Header') && n.hasPotions(),
+        O = l.Z.getChannel(n.getChannelId()),
         j = null == (t = n.potions) ? void 0 : t[0],
         x = o.useMemo(() => {
             var e;
             if (null == j) return null;
-            let t = l.default.getUser(j.used_by);
-            return null != (e = (0, u.y)(null == v ? void 0 : v.getGuildId(), null == v ? void 0 : v.id, t)) ? e : null == t ? void 0 : t.globalName;
-        }, [j, v]),
-        P = o.useCallback(() => {
-            if (null != _.current && (0, f.Uw)(n)) {
-                let { x: e, y: t, width: r, height: o } = _.current.getBoundingClientRect();
+            let t = s.default.getUser(j.used_by);
+            return null != (e = (0, u.y)(null == O ? void 0 : O.getGuildId(), null == O ? void 0 : O.id, t)) ? e : null == t ? void 0 : t.globalName;
+        }, [j, O]),
+        C = o.useCallback(() => {
+            if (null != y.current && (0, f.Uw)(n)) {
+                let { x: e, y: t, width: r, height: o } = y.current.getBoundingClientRect();
                 (0, g.Z)(
                     n,
                     {
@@ -44,13 +44,13 @@ let _ = (e) => {
                 );
             }
         }, [n]),
-        C = o.useCallback(() => {
+        P = o.useCallback(() => {
             (0, i.Z)(c.Z.getArticleURL(b.BhN.CONFETTI_POTION));
         }, []);
-    return O && null != x && (null == j ? void 0 : j.type) === m.B.CONFETTI
+    return v && null != x && (null == j ? void 0 : j.type) === m.B.CONFETTI
         ? (0, r.jsx)(a.P3F, {
-              onFocus: P,
-              onClick: C,
+              onFocus: C,
+              onClick: P,
               'aria-label': h.intl.string(h.t.Mp5k6O),
               children: (0, r.jsx)(a.ua7, {
                   text: h.intl.formatToPlainString(h.t['FE++aG'], { user: x }),
@@ -84,8 +84,8 @@ let _ = (e) => {
                               return e;
                           })(
                               {
-                                  ref: _,
-                                  className: y.potionBadge
+                                  ref: y,
+                                  className: _.potionBadge
                               },
                               e
                           )),

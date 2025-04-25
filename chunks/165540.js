@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(119315),
     _ = n(367907),
     y = n(213609),
-    C = n(499254),
-    x = n(541099),
+    x = n(499254),
+    C = n(541099),
     v = n(827498),
     j = n(569211),
     O = n(663924),
@@ -39,7 +39,7 @@ var r = n(200651),
 let B = i.forwardRef(function (e, t) {
     var n, l;
     let { type: j, animateRef: O } = e,
-        E = (0, s.e7)([x.Z], () => x.Z.shouldShowPopup() && x.Z.activeViewType() === j),
+        E = (0, s.e7)([C.Z], () => C.Z.shouldShowPopup() && C.Z.activeViewType() === j),
         { badgeTreatment: P } = f.Y.useExperiment({ location: 'ChannelAppLauncherButton' }, { autoTrackExposure: !0 }),
         { Component: N, events: T, play: A } = (0, I.Z)('ChannelAppLauncherButton'),
         { Component: w, play: U } = (0, u.B)(),
@@ -63,7 +63,7 @@ let B = i.forwardRef(function (e, t) {
                 source: v._b.TEXT,
                 badge_type: H ? P.valueOf() : null
             }),
-                E ? C.yT(v.ti.DISMISSED) : ((0, Z.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: M.L.TAKE_ACTION }), C.__(v._b.TEXT, j), m.ux()),
+                E ? x.yT(v.ti.DISMISSED) : ((0, Z.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: M.L.TAKE_ACTION }), x.__(v._b.TEXT, j), m.ux()),
                 A();
         }, [E, j, A, H, P]);
     i.useEffect(() => {
@@ -258,7 +258,7 @@ let F = i.memo(function (e) {
         }),
         u = (0, w.Z)({ type: n }),
         d = (0, P.h9)(t.id),
-        p = (0, s.e7)([x.Z], () => x.Z.appDMChannelsWithFailedLoads().has(t.id)),
+        p = (0, s.e7)([C.Z], () => C.Z.appDMChannelsWithFailedLoads().has(t.id)),
         { visible: h } = (0, A.xL)();
     return c
         ? (0, r.jsxs)('div', {

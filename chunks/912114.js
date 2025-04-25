@@ -20,8 +20,8 @@ var r = n(200651),
     b = n(626135),
     _ = n(140106),
     y = n(981631),
-    C = n(388032),
-    x = n(285580);
+    x = n(388032),
+    C = n(285580);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -71,21 +71,21 @@ function O(e) {
         { analyticsLocations: g } = (0, p.ZP)(a, d.Z.GROUP_DM_ICON_EDITOR),
         b = c ? 32 : 64;
     return (0, r.jsxs)('div', {
-        className: o()(x.iconSection, u),
+        className: o()(C.iconSection, u),
         children: [
             (0, r.jsxs)(s.P3F, {
-                className: o()(x.iconContainer, { [x.petite]: c }),
-                'aria-label': C.intl.string(C.t['0qPSMT']),
+                className: o()(C.iconContainer, { [C.petite]: c }),
+                'aria-label': x.intl.string(x.t['0qPSMT']),
                 onClick: () => (0, _.ND)(i, g),
                 children: [
                     null != m
                         ? (0, r.jsx)('img', {
                               src: m,
                               alt: '',
-                              className: x.iconImage
+                              className: C.iconImage
                           })
                         : (0, r.jsx)('div', {
-                              className: x.iconPlaceholder,
+                              className: C.iconPlaceholder,
                               children: (0, r.jsx)(s.BFJ, {
                                   size: 'custom',
                                   width: b,
@@ -94,7 +94,7 @@ function O(e) {
                               })
                           }),
                     (0, r.jsx)('div', {
-                        className: x.pencilIconWrapper,
+                        className: C.pencilIconWrapper,
                         children: (0, r.jsx)(s.vdY, {
                             color: 'currentColor',
                             size: c ? 'xs' : 'refresh_sm'
@@ -105,12 +105,12 @@ function O(e) {
             null != m && f
                 ? (0, r.jsx)(s.P3F, {
                       onClick: l,
-                      'aria-label': C.intl.string(C.t['uY+Nk5']),
+                      'aria-label': x.intl.string(x.t['uY+Nk5']),
                       style: { cursor: 'pointer' },
                       children: (0, r.jsx)(s.Text, {
                           variant: 'text-sm/medium',
                           color: 'text-danger',
-                          children: C.intl.string(C.t['uY+Nk5'])
+                          children: x.intl.string(x.t['uY+Nk5'])
                       })
                   })
                 : null
@@ -175,22 +175,22 @@ let E = function (e) {
                       children: [
                           (0, r.jsxs)(s.xBx, {
                               separator: !0,
-                              className: x.header,
+                              className: C.header,
                               children: [
                                   (0, r.jsx)(s.X6q, {
                                       id: I,
                                       variant: 'heading-lg/semibold',
                                       color: 'header-primary',
-                                      children: C.intl.string(C.t['5Q9+/P'])
+                                      children: x.intl.string(x.t['5Q9+/P'])
                                   }),
                                   (0, r.jsx)(s.olH, {
                                       onClick: h,
-                                      className: x.closeButtonWrapper
+                                      className: C.closeButtonWrapper
                                   })
                               ]
                           }),
                           (0, r.jsxs)(s.hzk, {
-                              className: x.modalContent,
+                              className: C.modalContent,
                               children: [
                                   (0, r.jsx)(O, {
                                       channel: P,
@@ -200,7 +200,7 @@ let E = function (e) {
                                       analyticsLocations: k
                                   }),
                                   (0, r.jsx)(s.oil, {
-                                      'aria-label': C.intl.string(C.t.GEGW3N),
+                                      'aria-label': x.intl.string(x.t.GEGW3N),
                                       placeholder: null != Z ? Z : '',
                                       value: N,
                                       onChange: T,
@@ -213,14 +213,14 @@ let E = function (e) {
                                   (0, r.jsx)(s.zxk, {
                                       type: 'submit',
                                       disabled: N === S && !R,
-                                      children: C.intl.string(C.t.R3BPHx)
+                                      children: x.intl.string(x.t.R3BPHx)
                                   }),
                                   (0, r.jsx)(s.zxk, {
                                       onClick: h,
                                       look: s.zxk.Looks.LINK,
                                       color: s.zxk.Colors.PRIMARY,
-                                      innerClassName: x.cancelButton,
-                                      children: C.intl.string(C.t['ETE/oK'])
+                                      innerClassName: C.cancelButton,
+                                      children: x.intl.string(x.t['ETE/oK'])
                                   })
                               ]
                           })

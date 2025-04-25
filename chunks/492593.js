@@ -4,8 +4,8 @@ n(192379);
 var o = n(120356),
     a = n.n(o),
     i = n(481060),
-    s = n(477747),
-    l = n(848697);
+    l = n(477747),
+    s = n(848697);
 function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -61,10 +61,10 @@ let d = function (e) {
             childrenExecutedCommand: f,
             childrenHeader: b,
             childrenSystemMessage: h,
-            childrenButtons: y,
-            childrenMessageContent: _,
-            childrenAccessories: O,
-            messageRef: v,
+            childrenButtons: _,
+            childrenMessageContent: y,
+            childrenAccessories: v,
+            messageRef: O,
             focusProps: j = {
                 offset: {
                     left: 4,
@@ -72,8 +72,8 @@ let d = function (e) {
                 }
             },
             hasThread: x,
-            isSystemMessage: P,
-            hasReply: C,
+            isSystemMessage: C,
+            hasReply: P,
             authorHasGradientRole: T = !1,
             guildId: w
         } = e,
@@ -96,8 +96,8 @@ let d = function (e) {
             }
             return o;
         })(e, ['className', 'compact', 'contentOnly', 'zalgo', 'preview', 'disableInteraction', 'childrenRepliedMessage', 'childrenExecutedCommand', 'childrenHeader', 'childrenSystemMessage', 'childrenButtons', 'childrenMessageContent', 'childrenAccessories', 'messageRef', 'focusProps', 'hasThread', 'isSystemMessage', 'hasReply', 'authorHasGradientRole', 'guildId']);
-    let I = (0, s.Z)(w, 'BaseMessage'),
-        N = (0, r.jsx)(
+    let I = (0, l.Z)(w, 'BaseMessage'),
+        k = (0, r.jsx)(
             i.tEY,
             u(c({}, j), {
                 children: (0, r.jsxs)(
@@ -106,18 +106,18 @@ let d = function (e) {
                         c(
                             {
                                 className: a()(t, {
-                                    [l.gradient]: !!I && T,
-                                    [l.wrapper]: !0,
-                                    [l.contentOnly]: o,
-                                    [l.compact]: n,
-                                    [l.preview]: p,
-                                    [l.cozy]: !n,
-                                    [l.zalgo]: d,
-                                    [l.hasThread]: x,
-                                    [l.isSystemMessage]: P,
-                                    [l.hasReply]: C
+                                    [s.gradient]: !!I && T,
+                                    [s.wrapper]: !0,
+                                    [s.contentOnly]: o,
+                                    [s.compact]: n,
+                                    [s.preview]: p,
+                                    [s.cozy]: !n,
+                                    [s.zalgo]: d,
+                                    [s.hasThread]: x,
+                                    [s.isSystemMessage]: C,
+                                    [s.hasReply]: P
                                 }),
-                                ref: v
+                                ref: O
                             },
                             S
                         ),
@@ -127,14 +127,14 @@ let d = function (e) {
                                 m,
                                 f,
                                 (0, r.jsxs)('div', {
-                                    className: l.contents,
-                                    children: [h, b, null == h && _]
+                                    className: s.contents,
+                                    children: [h, b, null == h && y]
                                 }),
-                                O,
-                                null != y
+                                v,
+                                null != _
                                     ? (0, r.jsx)('div', {
-                                          className: l.buttonContainer,
-                                          children: y
+                                          className: s.buttonContainer,
+                                          children: _
                                       })
                                     : null
                             ]
@@ -143,5 +143,5 @@ let d = function (e) {
                 )
             })
         );
-    return g ? (0, r.jsx)(i.Rny, { children: N }) : N;
+    return g ? (0, r.jsx)(i.Rny, { children: k }) : k;
 };

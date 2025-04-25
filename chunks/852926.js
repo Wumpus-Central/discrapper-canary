@@ -17,7 +17,7 @@ var r = n(13245),
     p = n(981631);
 let h = ['207646673902501888'];
 function f(e) {
-    return null != e && l.default.isOverlayOOPEnabledForPid(e) && a.default.isReady(e) && a.default.getOverlayState(e) === i.mM.OVERLAY_RENDERING;
+    return null != e && l.default.isOverlayOOPEnabledForPid(e) && a.ZP.isReady(e) && a.ZP.getOverlayState(e) === i.mM.OVERLAY_RENDERING;
 }
 function g(e) {
     return null == e

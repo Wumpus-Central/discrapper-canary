@@ -1,13 +1,13 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => E });
 var i,
     r = n(442837),
     l = n(570140),
     s = n(656063),
-    o = n(814443),
-    a = n(158776),
-    u = n(594174),
-    c = n(981631);
-function d(e, t, n) {
+    a = n(814443),
+    o = n(158776),
+    c = n(594174),
+    u = n(981631);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -31,12 +31,12 @@ function f(e) {
                 })
             )),
             i.forEach(function (t) {
-                d(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-function g(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,50 +54,50 @@ function g(e, t) {
         e
     );
 }
-let p = !1,
+let g = !1,
     O = {},
     y = {};
 function h(e) {
     let t = !1;
     return (
         e.forEach((e) => {
-            t = !1 !== m(e) || t;
+            t = !1 !== N(e) || t;
         }),
         t
     );
 }
-function v(e) {
+function m(e) {
     let t = y[e];
     if (null == t) return !1;
     let n = t.gameId;
-    return null != O[n] && ((O = f({}, O)), delete O[n][e], 0 === Object.values(O[n]).length && delete O[n]), (y = f({}, y)), delete y[e], !0;
+    return null != O[n] && ((O = d({}, O)), delete O[n][e], 0 === Object.values(O[n]).length && delete O[n]), (y = d({}, y)), delete y[e], !0;
 }
-function m(e) {
+function N(e) {
     let { user: t, activities: n } = e;
     if (null == t) return !1;
-    let i = n.filter((e) => e.type !== c.IIU.CUSTOM_STATUS);
-    if (0 === i.length) return v(t.id);
+    let i = n.filter((e) => e.type !== u.IIU.CUSTOM_STATUS);
+    if (0 === i.length) return m(t.id);
     let r = !1;
     return (
         i.forEach((e) => {
             (function (e, t) {
                 var n, i;
                 let r = (0, s.Z)(e);
-                if (null == r) return v(t.id);
+                if (null == r) return m(t.id);
                 let l = y[t.id];
-                null != l && l.gameId !== r && v(t.id);
-                let o = null != (i = null == (n = e.timestamps) ? void 0 : n.start) ? i : Date.now(),
-                    a = {
+                null != l && l.gameId !== r && m(t.id);
+                let a = null != (i = null == (n = e.timestamps) ? void 0 : n.start) ? i : Date.now(),
+                    o = {
                         userId: t.id,
                         activity: e,
-                        startedPlaying: o
+                        startedPlaying: a
                     };
                 return (
-                    (O = g(f({}, O), { [r]: g(f({}, O[r]), { [a.userId]: a }) })),
-                    (y = g(f({}, y), {
-                        [a.userId]: {
+                    (O = p(d({}, O), { [r]: p(d({}, O[r]), { [o.userId]: o }) })),
+                    (y = p(d({}, y), {
+                        [o.userId]: {
                             gameId: r,
-                            startedPlaying: a.startedPlaying
+                            startedPlaying: o.startedPlaying
                         }
                     })),
                     !0
@@ -107,32 +107,32 @@ function m(e) {
         r
     );
 }
-function N() {
+function S() {
     let e,
         t = !1;
     return (
-        o.Z.needsRefresh() ||
-            p ||
+        a.Z.needsRefresh() ||
+            g ||
             ((O = {}),
             (y = {}),
             (e = !1),
-            a.Z.getUserIds().forEach((t) => {
-                let n = u.default.getUser(t);
+            o.Z.getUserIds().forEach((t) => {
+                let n = c.default.getUser(t);
                 null != n &&
                     (e =
-                        m({
+                        N({
                             user: n,
-                            activities: a.Z.getActivities(t)
+                            activities: o.Z.getActivities(t)
                         }) || e);
             }),
             (t = e)),
-        (p = !o.Z.needsRefresh()),
+        (g = !a.Z.needsRefresh()),
         t
     );
 }
-class S extends (i = r.ZP.Store) {
+class v extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(o.Z), this.syncWith([o.Z], N);
+        this.waitFor(a.Z), this.syncWith([a.Z], S);
     }
     get games() {
         return O;
@@ -150,8 +150,8 @@ class S extends (i = r.ZP.Store) {
         return y[e];
     }
 }
-d(S, 'displayName', 'NowPlayingStore');
-let b = new S(l.Z, {
+f(v, 'displayName', 'NowPlayingStore');
+let E = new v(l.Z, {
     CONNECTION_OPEN: function () {
         (O = {}), (y = {});
     },
@@ -171,7 +171,7 @@ let b = new S(l.Z, {
     },
     PRESENCE_UPDATES: function (e) {
         let { updates: t } = e;
-        return t.map((e) => m(e)).some((e) => e);
+        return t.map((e) => N(e)).some((e) => e);
     },
     PRESENCES_REPLACE: function (e) {
         let { presences: t } = e;

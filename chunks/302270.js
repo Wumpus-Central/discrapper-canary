@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(795318),
     _ = n(933557),
     y = n(320007),
-    C = n(236091),
-    x = n(540059),
+    x = n(236091),
+    C = n(540059),
     v = n(623624),
     j = n(665149),
     O = n(984370),
@@ -104,12 +104,12 @@ function X(e) {
         { preventIdle: D, allowIdle: U } = (0, P.Y)('popup'),
         { hasParticipantsPanel: F } = (0, m.Z)({ location: 'StageChannelCallHeader' }),
         H = F && A,
-        z = (0, x.Q3)('StageChannelCallHeader'),
+        z = (0, C.Q3)('StageChannelCallHeader'),
         { simplifiedSettingsEnabled: W } = (0, I.Z)({ location: 'StageChannelCallHeader' });
     return (0, r.jsxs)(h.Gt, {
         value: v,
         children: [
-            (0, r.jsx)(C.Z, { channelId: n.id }, 'clips-enabled-indicator'),
+            (0, r.jsx)(x.Z, { channelId: n.id }, 'clips-enabled-indicator'),
             !W &&
                 (0, r.jsx)(
                     c.yRy,
@@ -202,10 +202,10 @@ function Q(e) {
         g = (0, k.Rk)(l.id, M.pV.AUDIENCE),
         b = (0, a.e7)([A.Z], () => A.Z.getGuild(l.guild_id), [l.guild_id]),
         y = null != (t = null == b ? void 0 : b.maxStageVideoChannelUsers) ? t : 0,
-        C = (null == b ? void 0 : b.isCommunity()) ? y < H.TU7 : (null == b ? void 0 : b.premiumTier) !== H.Eu4.TIER_3 && y <= H.eez,
+        x = (null == b ? void 0 : b.isCommunity()) ? y < H.TU7 : (null == b ? void 0 : b.premiumTier) !== H.Eu4.TIER_3 && y <= H.eez,
         E = (0, F.Z)(l),
         I = (0, a.e7)([w.Z], () => w.Z.can(D.yP, l)),
-        P = (0, x.Q3)('StageChannelCallHeader'),
+        P = (0, C.Q3)('StageChannelCallHeader'),
         S = () => {
             u.Z.updateStageVideoLimitBoostUpsellDismissed(l.id, !0),
                 R.default.track(H.rMx.BOOSTING_UPSELL_CLICKED, {
@@ -306,18 +306,18 @@ function Q(e) {
                                   (0, r.jsx)(c.Text, {
                                       variant: 'text-md/medium',
                                       color: 'header-primary',
-                                      children: C ? W.intl.string(W.t['T+zF9P']) : W.intl.string(W.t['IZ+SVl'])
+                                      children: x ? W.intl.string(W.t['T+zF9P']) : W.intl.string(W.t['IZ+SVl'])
                                   }),
                                   (0, r.jsx)(c.Text, {
                                       variant: 'text-xs/medium',
                                       color: 'text-normal',
-                                      children: C ? W.intl.string(W.t.Izgpmp) : W.intl.string(W.t['7FHbPD'])
+                                      children: x ? W.intl.string(W.t.Izgpmp) : W.intl.string(W.t['7FHbPD'])
                                   })
                               ]
                           }),
                           (0, r.jsx)('div', {
                               className: Y.buttons,
-                              children: C
+                              children: x
                                   ? (0, r.jsxs)(r.Fragment, {
                                         children: [
                                             (0, r.jsx)(c.zxk, {

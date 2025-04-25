@@ -67,14 +67,14 @@ let h = (e) => {
             children: [(0, a.jsx)(_, { sku: t }), (0, a.jsx)(b, { sku: t }), (0, a.jsx)(x, { sku: t })]
         });
     },
-    E = (e) => {
+    v = (e) => {
         let { className: t } = e;
         return (0, a.jsx)('div', {
             className: t,
             children: p.intl.string(p.t.QQsaCQ)
         });
     };
-class v extends (r = o.PureComponent) {
+class E extends (r = o.PureComponent) {
     getState() {
         let { inLibrary: e, sku: t, hasEntitlementBranch: n } = this.props;
         if (n) return 5;
@@ -89,7 +89,7 @@ class v extends (r = o.PureComponent) {
         let { className: n, sku: r } = this.props;
         switch (e) {
             case 5:
-                return (0, a.jsx)(E, { className: c()(t, n) });
+                return (0, a.jsx)(v, { className: c()(t, n) });
             case 1:
                 return (0, a.jsx)(h, { className: c()(t, n) });
             case 3:
@@ -113,7 +113,7 @@ class v extends (r = o.PureComponent) {
         let { className: t, sku: n } = this.props;
         switch (e) {
             case 5:
-                return (0, a.jsx)(E, { className: t });
+                return (0, a.jsx)(v, { className: t });
             case 3:
                 return (0, a.jsx)(g, {
                     sku: n,
@@ -136,7 +136,7 @@ class v extends (r = o.PureComponent) {
             { className: n, sku: r } = this.props;
         switch (e) {
             case 5:
-                t = (0, a.jsx)(E, {});
+                t = (0, a.jsx)(v, {});
                 break;
             case 2:
                 t = (0, a.jsxs)(o.Fragment, {
@@ -176,12 +176,12 @@ class v extends (r = o.PureComponent) {
         }
     }
 }
-(l = 'Types') in v
-    ? Object.defineProperty(v, l, {
+(l = 'Types') in E
+    ? Object.defineProperty(E, l, {
           value: f,
           enumerable: !0,
           configurable: !0,
           writable: !0
       })
-    : (v[l] = f);
-let O = v;
+    : (E[l] = f);
+let O = E;

@@ -127,7 +127,7 @@ function y(e, t, n, a, o) {
         m(p({}, g, i.Z.getStats(e)), {
             location: o,
             guild_id: e,
-            update_type: u.Ib.GUILD,
+            update_type: u.I.GUILD,
             label: a,
             guild_flags_old: E('guild_flags'),
             guild_is_muted_old: E('guild_is_muted'),
@@ -151,7 +151,7 @@ function O(e) {
 }
 function I(e) {
     var t, n, s, d;
-    let { updateType: _ = u.Ib.CHANNEL, guildId: h, channelId: g, applicationId: E, change: y, previous: I, label: S, location: T } = e,
+    let { updateType: _ = u.I.CHANNEL, guildId: h, channelId: g, applicationId: E, change: y, previous: I, label: S, location: T } = e,
         N = function (e) {
             var t, n;
             let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},

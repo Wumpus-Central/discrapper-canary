@@ -7,8 +7,8 @@ n(192379);
 var o = n(481060),
     l = n(493683),
     i = n(475413),
-    c = n(388032);
-function u(e) {
+    u = n(388032);
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,11 +57,11 @@ function a(e) {
         a = s(e, ['userId', 'onClose']);
     return (0, r.jsx)(
         i.tG,
-        u(
+        c(
             {
                 action: 'SEND_MESSAGE',
                 icon: o.kBi,
-                text: c.intl.string(c.t.zROXER),
+                text: u.intl.string(u.t.zROXER),
                 onClick: () => {
                     l.Z.openPrivateChannel({ recipientIds: t }), null == n || n();
                 }
@@ -75,11 +75,11 @@ function d(e) {
         a = s(e, ['userId', 'onClose']);
     return (0, r.jsx)(
         i.ef,
-        u(
+        c(
             {
                 action: 'SEND_MESSAGE',
                 icon: o.kBi,
-                tooltipText: c.intl.string(c.t.zROXER),
+                tooltipText: u.intl.string(u.t.zROXER),
                 onClick: () => {
                     l.Z.openPrivateChannel({ recipientIds: t }), null == n || n();
                 }

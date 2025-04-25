@@ -10,21 +10,21 @@ var o = t(442837),
     d = t(63063),
     u = t(369566),
     f = t(29899),
-    p = t(678738),
-    m = t(151545),
+    m = t(678738),
+    p = t(151545),
     h = t(744802),
-    I = t(493043),
-    x = t(864141),
-    _ = t(228168),
+    x = t(493043),
+    I = t(864141),
+    v = t(228168),
     b = t(981631),
-    v = t(388032),
-    g = t(316879),
-    j = t(301150);
+    j = t(388032),
+    _ = t(316879),
+    g = t(301150);
 function Z(e) {
-    let { user: n, currentUser: t, displayProfile: Z, guildId: y, subsection: A, onClose: N } = e,
+    let { user: n, currentUser: t, displayProfile: Z, guildId: y, subsection: N, onClose: A } = e,
         { voiceActivityStatusEnabled: T } = (0, r.U)({ location: 'UserProfileModalActivity' }),
-        { live: O, recent: E, stream: P } = (0, u.Z)(n.id),
-        { voiceChannel: C, voiceActivity: S } = (0, f.Z)({
+        { live: O, recent: C, stream: E } = (0, u.Z)(n.id),
+        { voiceChannel: P, voiceActivity: S } = (0, f.Z)({
             userId: n.id,
             guildId: y
         }),
@@ -34,42 +34,42 @@ function Z(e) {
             let e = L ? c.Z.getStatus() : a.Z.getStatus(n.id);
             return e === l.Skl.OFFLINE || e === l.Skl.INVISIBLE;
         }),
-        B = O.length > 0 || null != P,
-        D = T && null == P && null == S && null != C,
+        B = O.length > 0 || null != E,
+        D = T && null == E && null == S && null != P,
         U = !w && (B || D),
-        R = E.length > 0;
+        R = C.length > 0;
     return U || R || !M
         ? (0, i.jsxs)(l.zJl, {
-              className: g.scroller,
+              className: _.scroller,
               fade: !0,
               children: [
                   U
-                      ? (0, i.jsxs)(p.Z, {
+                      ? (0, i.jsxs)(m.Z, {
                             children: [
                                 D &&
-                                    (0, i.jsx)(x.Z, {
+                                    (0, i.jsx)(I.Z, {
                                         user: n,
                                         currentUser: t,
-                                        voiceChannel: C,
-                                        onClose: N
+                                        voiceChannel: P,
+                                        onClose: A
                                     }),
-                                null != P &&
-                                    (0, i.jsx)(I.Z, {
+                                null != E &&
+                                    (0, i.jsx)(x.Z, {
                                         location: 'UserProfileModalActivity',
                                         user: n,
                                         currentUser: t,
-                                        stream: P,
-                                        onClose: N,
+                                        stream: E,
+                                        onClose: A,
                                         profileGuildId: null == Z ? void 0 : Z.guildId
                                     }),
                                 O.map((e, o) =>
                                     (0, i.jsx)(
-                                        m.Z,
+                                        p.Z,
                                         {
                                             user: n,
                                             currentUser: t,
                                             activity: e,
-                                            onClose: N,
+                                            onClose: A,
                                             profileGuildId: null == Z ? void 0 : Z.guildId
                                         },
                                         'live-'.concat(o)
@@ -79,10 +79,10 @@ function Z(e) {
                         })
                       : null,
                   R
-                      ? (0, i.jsx)(p.Z, {
-                            heading: v.intl.string(v.t.M0zgnZ),
+                      ? (0, i.jsx)(m.Z, {
+                            heading: j.intl.string(j.t.M0zgnZ),
                             subheading: L
-                                ? v.intl.format(v.t['4bk9Ag'], {
+                                ? j.intl.format(j.t['4bk9Ag'], {
                                       learnMoreHook: (e, n) =>
                                           (0, i.jsx)(
                                               l.eee,
@@ -94,8 +94,8 @@ function Z(e) {
                                           )
                                   })
                                 : void 0,
-                            scrollIntoView: A === _.Tb.RECENT_ACTIVITY,
-                            children: E.map((e) =>
+                            scrollIntoView: N === v.Tb.RECENT_ACTIVITY,
+                            children: C.map((e) =>
                                 (0, i.jsx)(
                                     h.Z,
                                     {
@@ -104,7 +104,7 @@ function Z(e) {
                                         currentUser: t,
                                         entry: e,
                                         profileGuildId: null == Z ? void 0 : Z.guildId,
-                                        onClose: N
+                                        onClose: A
                                     },
                                     e.id
                                 )
@@ -114,7 +114,7 @@ function Z(e) {
               ]
           })
         : (0, i.jsx)('div', {
-              className: j.empty,
+              className: g.empty,
               children: (0, i.jsx)(l.$jN, {})
           });
 }

@@ -1,7 +1,7 @@
-n.d(t, { Z: () => i });
-var l = n(818083),
-    r = n(987338);
-let i = (0, l.B)({
+n.d(e, { Z: () => a });
+var i = n(818083),
+    l = n(987338);
+let a = (0, i.B)({
     kind: 'user',
     id: '2025-03_activity_notification_improvements',
     label: 'Activity Notification Improvements',
@@ -13,5 +13,5 @@ let i = (0, l.B)({
             config: { disableCurrentActivityNotifications: !0 }
         }
     ],
-    commonTriggerPoint: r.$P.CONNECTION_OPEN
+    commonTriggerPoint: l.$P.CONNECTION_OPEN
 });

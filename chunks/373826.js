@@ -84,7 +84,7 @@ function h(e) {
     let { themeType: d } = (0, o.z)(),
         p = 'string' == typeof t ? t.trim() : t;
     if (null == p || '' === p) return null;
-    let h = () => (d === s.lY.MODAL ? (0, r.jsx)(i.Text, f(u({ color: 'text-normal' }, c), { children: p })) : (0, r.jsx)(i.Text, f(u({ color: 'text-normal' }, c), { children: (0, r.jsx)(a.Z, { children: p }) })));
+    let h = () => (d === s.lY.MODAL || d === s.lY.MODAL_V2 ? (0, r.jsx)(i.Text, f(u({ color: 'text-normal' }, c), { children: p })) : (0, r.jsx)(i.Text, f(u({ color: 'text-normal' }, c), { children: (0, r.jsx)(a.Z, { children: p }) })));
     return null != n
         ? (0, r.jsx)(i.P3F, {
               onClick: (e) => {

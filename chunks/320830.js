@@ -9,7 +9,7 @@ var r = n(200651),
     u = n(481060),
     d = n(624138),
     h = n(749047);
-function g(e, t, n) {
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function g(e, t, n) {
         e
     );
 }
-function p(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,7 +33,7 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                g(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
@@ -65,7 +65,7 @@ let f = (0, d.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
                 this.state.shouldAnimate ? this.animateTo(m.START, e) : e();
             }
             animateTo(e, t) {
-                o.Z.spring(this.anim, p({ toValue: e }, _)).start(t);
+                o.Z.spring(this.anim, g({ toValue: e }, _)).start(t);
             }
             getAnimatedStyle(e) {
                 return this.state.shouldAnimate
@@ -99,7 +99,7 @@ let f = (0, d.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
                             let { reducedMotion: n } = t;
                             return (0, r.jsx)(o.Z.div, {
                                 style: this.getAnimatedStyle(n.enabled),
-                                children: (0, r.jsx)(e, p({}, this.props))
+                                children: (0, r.jsx)(e, g({}, this.props))
                             });
                         }
                     })
@@ -107,14 +107,14 @@ let f = (0, d.Mg)(c.Z.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
             }
             constructor(...e) {
                 super(...e),
-                    g(this, 'timeout', void 0),
-                    g(this, 'anim', new o.Z.Value(m.START)),
-                    g(this, 'state', { shouldAnimate: !a.tq }),
-                    g(this, 'handleResize', () => {
+                    p(this, 'timeout', void 0),
+                    p(this, 'anim', new o.Z.Value(m.START)),
+                    p(this, 'state', { shouldAnimate: !a.tq }),
+                    p(this, 'handleResize', () => {
                         let e = window.innerWidth > f;
                         !this.state.shouldAnimate && e && this.anim.setValue(m.END), this.setState({ shouldAnimate: e });
                     }),
-                    g(this, 'handleResizeDebounced', s()(this.handleResize, 60));
+                    p(this, 'handleResizeDebounced', s()(this.handleResize, 60));
             }
         };
     };

@@ -17,8 +17,8 @@ var i = n(120356),
     b = n(271383),
     _ = n(430824),
     y = n(496675),
-    C = n(158776),
-    x = n(885110),
+    x = n(158776),
+    C = n(885110),
     v = n(594174),
     j = n(572004),
     O = n(5192),
@@ -72,7 +72,7 @@ function N(e, t) {
 function T(e) {
     let { user: t, guildId: n, onClose: i } = e,
         l = t.id,
-        s = (0, o.e7)([x.Z, C.Z, g.default], () => (l === g.default.getId() ? x.Z.getStatus() : C.Z.getStatus(l, n)), [l, n]);
+        s = (0, o.e7)([C.Z, x.Z, g.default], () => (l === g.default.getId() ? C.Z.getStatus() : x.Z.getStatus(l, n)), [l, n]);
     return (0, r.jsxs)('div', {
         className: S.topRow,
         children: [
@@ -180,8 +180,8 @@ function w(e) {
         m = (0, o.e7)([_.Z], () => _.Z.getGuild(l)),
         {
             canKickUser: b,
-            canBanUser: C,
-            canModerateMembers: x
+            canBanUser: x,
+            canModerateMembers: C
         } = (0, o.cj)(
             [y.Z, v.default, _.Z],
             () => ({
@@ -240,7 +240,7 @@ function w(e) {
                 })
             }),
             (0, r.jsx)(A, {
-                disabled: !C,
+                disabled: !x,
                 text: P.intl.string(P.t['5MBJ5O']),
                 onClick: () => {
                     (0, a.ZDy)(async () => {
@@ -264,7 +264,7 @@ function w(e) {
                 })
             }),
             (0, r.jsx)(A, {
-                disabled: !x,
+                disabled: !C,
                 text: O ? P.intl.string(P.t.N86XcH) : P.intl.string(P.t.kTlLr6),
                 onClick: () => {
                     O

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685), n(642613);
+n.d(t, { Z: () => T }), n(388685), n(642613);
 var a = n(200651),
     r = n(192379),
     l = n(120356),
@@ -15,8 +15,8 @@ var a = n(200651),
     b = n(120816),
     f = n(31336),
     v = n(257785),
-    g = n(484036),
-    j = n(681619),
+    j = n(484036),
+    g = n(681619),
     _ = n(621060),
     y = n(388032),
     O = n(459100),
@@ -120,7 +120,7 @@ let E = [
             }
         }
     ];
-function S() {
+function T() {
     let [e, t] = r.useState(''),
         n = r.useRef(null),
         l = (0, u.Wu)([b.Z], () => b.Z.loggedTriggers),
@@ -128,8 +128,8 @@ function S() {
         [c, d] = r.useState(void 0),
         h = s.find((e) => e.key === c),
         { TabBar: p, renderSelectedTab: v } = (0, _.ZP)({ tabs: N }, []),
-        S = (0, u.e7)([b.Z], () => b.Z.trackTriggers),
-        T = r.useCallback((e) => {
+        T = (0, u.e7)([b.Z], () => b.Z.trackTriggers),
+        S = r.useCallback((e) => {
             x.Z.dispatch({
                 type: 'SET_TRACK_TRIGGERS',
                 enabled: e
@@ -146,8 +146,8 @@ function S() {
                         title: 'Enables tracking of all triggers',
                         className: O.triggersEnable,
                         children: (0, a.jsx)(m.rsf, {
-                            checked: S,
-                            onChange: T,
+                            checked: T,
+                            onChange: S,
                             className: O.__invalid_toolbarSwitch
                         })
                     }),
@@ -174,14 +174,14 @@ function S() {
                     })
                 ]
             }),
-            (0, a.jsx)(j.Z, {
+            (0, a.jsx)(g.Z, {
                 columns: E,
                 data: s,
                 selectedRowKey: c,
                 onClickRow: (e) => d(e.key)
             }),
             null != h &&
-                (0, a.jsxs)(g.Z, {
+                (0, a.jsxs)(j.Z, {
                     className: O.subPanel,
                     minHeight: 100,
                     initialHeight: null != n.current ? n.current.clientHeight / 2 : 300,

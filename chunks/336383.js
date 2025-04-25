@@ -90,7 +90,7 @@ let O = i.forwardRef(function (e, t) {
     let { themeType: O } = (0, f.z)(),
         { analyticsLocations: I } = (0, l.ZP)(),
         { context: S } = (0, c.KZ)();
-    return O === _.lY.MODAL || (null == S ? void 0 : S.userId) == null
+    return O === _.lY.MODAL || O === _.lY.MODAL_V2 || (null == S ? void 0 : S.userId) == null
         ? (0, r.jsx)(
               d.Z.Overlay,
               b(

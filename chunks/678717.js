@@ -15,8 +15,8 @@ var a = n(200651),
     b = n(906467),
     f = n(259580),
     v = n(31336),
-    g = n(19759),
-    j = n(432877);
+    j = n(19759),
+    g = n(432877);
 n(381996);
 var _ = n(392750),
     y = n(926976),
@@ -24,8 +24,8 @@ var _ = n(392750),
     C = n(806240),
     E = n(789654),
     N = n(719672),
-    S = n(691867),
-    T = n(916790),
+    T = n(691867),
+    S = n(916790),
     P = n(645973),
     w = n(903502),
     k = n(604776),
@@ -39,8 +39,8 @@ var _ = n(392750),
     z = n(633001),
     U = n(702904),
     B = n(178821),
-    G = n(891401),
-    F = n(958328),
+    F = n(891401),
+    G = n(958328),
     V = n(315384),
     H = n(514866),
     W = n(384207),
@@ -58,7 +58,7 @@ var _ = n(392750),
 function er(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: r } = e,
         l = (0, d.Z)({
-            minDimension: g.h,
+            minDimension: j.h,
             resizableDomNodeRef: t,
             onElementResize: n,
             onElementResizeEnd: r,
@@ -96,7 +96,7 @@ function el(e) {
                     id: 'dispatcher',
                     name: 'Dispatcher',
                     group: Q.v0.EVENTS,
-                    render: () => (0, a.jsx)(T.Z, {})
+                    render: () => (0, a.jsx)(S.Z, {})
                 }
             ];
             return (
@@ -165,13 +165,13 @@ function el(e) {
                     id: 'design_toggles',
                     name: 'Design Toggles',
                     group: Q.v0.UI,
-                    render: () => (0, a.jsx)(S.Z, {})
+                    render: () => (0, a.jsx)(T.Z, {})
                 }),
                 e.push({
                     id: 'overlays',
                     name: 'Dev Overlays',
                     group: Q.v0.DEVELOPMENT,
-                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: j.zU.OVERLAYS })
+                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: g.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
@@ -183,13 +183,13 @@ function el(e) {
                     id: 'reporting',
                     name: 'Reporting',
                     group: Q.v0.EXPERIMENTS,
-                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: j.zU.REPORTING })
+                    render: () => (0, a.jsx)(I.Z, { devSettingsCategory: g.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
                     name: 'Permissions',
                     group: Q.v0.USERS,
-                    render: () => (0, a.jsx)(F.Z, {})
+                    render: () => (0, a.jsx)(G.Z, {})
                 }),
                 e.push({
                     id: 'modals',
@@ -220,7 +220,7 @@ function el(e) {
                     id: 'perks',
                     name: 'Perks',
                     group: Q.v0.PREMIUM,
-                    render: () => (0, a.jsx)(G.Z, {})
+                    render: () => (0, a.jsx)(F.Z, {})
                 }),
                 e.push({
                     id: 'potions',
@@ -287,7 +287,7 @@ function el(e) {
         } = (0, Q.ZP)(
             {
                 tabs: l,
-                initialSelectedTabId: null != (t = g.Z.lastOpenTabId) ? t : void 0,
+                initialSelectedTabId: null != (t = j.Z.lastOpenTabId) ? t : void 0,
                 onChangeTab: (e) => {
                     (0, v.Qh)({ lastOpenTabId: e });
                 }
@@ -355,7 +355,7 @@ function el(e) {
 }
 function ei() {
     let e = r.useRef(null),
-        t = (0, o.e7)([g.Z], () => g.Z.sidebarWidth),
+        t = (0, o.e7)([j.Z], () => j.Z.sidebarWidth),
         [n, l] = r.useState(null),
         i = r.useCallback((e) => (0, v.Qh)({ sidebarWidth: e }), []);
     return (r.useEffect(() => {
@@ -367,7 +367,7 @@ function ei() {
               ref: e,
               className: en.container,
               style: {
-                  minWidth: g.h,
+                  minWidth: j.h,
                   width: n
               },
               'data-app-right-panel': !0,
@@ -385,7 +385,7 @@ function ei() {
           });
 }
 function es() {
-    return (0, o.e7)([g.Z], () => g.Z.displayTools)
+    return (0, o.e7)([j.Z], () => j.Z.displayTools)
         ? (0, a.jsx)('div', {
               className: i()(en.container, en.mobileContainerExpanded),
               children: (0, a.jsx)('div', {

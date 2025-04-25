@@ -1,18 +1,18 @@
-function l(e, t, n) {
+function r(e, t, n) {
     return (n.y - e.y) * (t.x - e.x) > (t.y - e.y) * (n.x - e.x);
 }
-function r(e, t, n, r) {
-    return l(e, n, r) !== l(t, n, r) && l(e, t, n) !== l(e, t, r);
+function l(e, t, n, l) {
+    return r(e, n, l) !== r(t, n, l) && r(e, t, n) !== r(e, t, l);
 }
 function i(e, t, n) {
-    let l = Math.sqrt(Math.pow(e.x - t.x, 2) + Math.pow(e.y - t.y, 2));
+    let r = Math.sqrt(Math.pow(e.x - t.x, 2) + Math.pow(e.y - t.y, 2));
     return {
-        x: t.x + ((t.x - e.x) / l) * n,
-        y: t.y + ((t.y - e.y) / l) * n
+        x: t.x + ((t.x - e.x) / r) * n,
+        y: t.y + ((t.y - e.y) / r) * n
     };
 }
-function a(e, t, n) {
-    let l = {
+function o(e, t, n) {
+    let r = {
             x: n.x,
             y: n.y
         },
@@ -20,17 +20,17 @@ function a(e, t, n) {
             x: n.x + n.width,
             y: n.y
         },
-        a = {
+        o = {
             x: n.x,
             y: n.y + n.height
         },
-        o = {
+        a = {
             x: n.x + n.width,
             y: n.y + n.height
         };
-    return r(e, t, l, i) || r(e, t, i, o) || r(e, t, o, a) || r(e, t, a, l);
+    return l(e, t, r, i) || l(e, t, i, a) || l(e, t, a, o) || l(e, t, o, r);
 }
 n.d(t, {
-    Vr: () => a,
+    Vr: () => o,
     ld: () => i
 });

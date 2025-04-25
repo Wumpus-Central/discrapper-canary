@@ -23,8 +23,8 @@ var r = n(200651),
     b = n(51144),
     x = n(506071),
     y = n(696014),
-    E = n(847033),
-    v = n(544978),
+    v = n(847033),
+    E = n(544978),
     O = n(893182),
     j = n(388032),
     C = n(414521);
@@ -104,8 +104,8 @@ function N(e) {
         T = (null != (n = null == d || null == (t = d.description) ? void 0 : t.trim().length) ? n : 0) > 0,
         [P, A] = i.useState(1),
         w = (0, c.Z)('(max-width: 1439px)'),
-        { selectedTab: Z, isPhantomPreview: R } = (0, E.m)(),
-        k = Z === v.y.GUILD_PRODUCTS_PREVIEW ? j.intl.string(j.t['LvXy/P']) : j.intl.string(j.t.XyqKh4),
+        { selectedTab: Z, isPhantomPreview: R } = (0, v.m)(),
+        k = Z === E.y.GUILD_PRODUCTS_PREVIEW ? j.intl.string(j.t['LvXy/P']) : j.intl.string(j.t.XyqKh4),
         D = T
             ? (0, r.jsxs)(r.Fragment, {
                   children: [

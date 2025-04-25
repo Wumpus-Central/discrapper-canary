@@ -13,8 +13,8 @@ var r = n(200651),
     u = n(372769),
     d = n(44609),
     h = n(47343),
-    g = n(973616),
-    p = n(131704),
+    p = n(973616),
+    g = n(131704),
     f = n(601964),
     m = n(598077),
     _ = n(594174),
@@ -74,16 +74,16 @@ let O = () =>
             a,
             { invite: c, disableUser: O = !1, error: N, flatActivityCount: y = !1, isRegister: C = !1 } = e,
             P = (0, d.WR)({ location: 'invite' }),
-            { currentUser: Z } = (0, l.cj)([_.default], () => ({ currentUser: _.default.getCurrentUser() }));
+            { currentUser: A } = (0, l.cj)([_.default], () => ({ currentUser: _.default.getCurrentUser() }));
         if (null == c) return null;
-        let A = null != c.guild ? new f.ZP(c.guild) : null,
-            T = null != c.channel ? (0, p.jD)(c.channel) : null,
-            R = null != c.target_application ? new g.ZP(c.target_application) : null,
+        let Z = null != c.guild ? new f.ZP(c.guild) : null,
+            T = null != c.channel ? (0, g.jD)(c.channel) : null,
+            R = null != c.target_application ? new p.ZP(c.target_application) : null,
             w = O || null == c.inviter ? null : new m.Z(c.inviter),
-            L = !((null != c.approximate_member_count && c.approximate_member_count > 100) || (null != A && A.hasFeature(E.oNc.COMMUNITY))) && null != w,
+            L = !((null != c.approximate_member_count && c.approximate_member_count > 100) || (null != Z && Z.hasFeature(E.oNc.COMMUNITY))) && null != w,
             D = null,
             k = !1;
-        if (null != A)
+        if (null != Z)
             (D = null == w ? j.intl.string(j.t['3rE1Pz']) : j.intl.formatToPlainString(j.t['5u47vb'], { username: x.ZP.getFormattedName(w) })),
                 c.target_type === v.Iq.STREAM && null != c.target_user && (D = j.intl.formatToPlainString(j.t.x2L32d, { username: x.ZP.getFormattedName(c.target_user) })),
                 c.target_type === v.Iq.EMBEDDED_APPLICATION && null != c.target_application && (D = null != w ? j.intl.formatToPlainString(j.t.UW1Cam, { username: x.ZP.getFormattedName(w) }) : j.intl.string(j.t.ENSuNz)),
@@ -91,10 +91,10 @@ let O = () =>
                     null == R &&
                     (n = (0, r.jsx)(o.Vj, {
                         className: I.icon,
-                        guild: A,
+                        guild: Z,
                         size: o.Vj.Sizes.SMALL
                     })),
-                (i = A.name),
+                (i = Z.name),
                 null != R &&
                     ((i = R.name),
                     (a = (0, r.jsxs)('div', {
@@ -107,7 +107,7 @@ let O = () =>
                                 className: I.guildContainer,
                                 children: [
                                     (0, r.jsx)(o.Vj, {
-                                        guild: A,
+                                        guild: Z,
                                         size: o.Vj.Sizes.SMALL
                                     }),
                                     (0, r.jsx)(s.Text, {
@@ -115,7 +115,7 @@ let O = () =>
                                         variant: 'text-lg/normal',
                                         color: 'header-primary',
                                         className: I.appGuildName,
-                                        children: A.name
+                                        children: Z.name
                                     })
                                 ]
                             })
@@ -150,7 +150,7 @@ let O = () =>
             children: [
                 (0, r.jsx)(S, {
                     application: R,
-                    guild: A,
+                    guild: Z,
                     user: L ? w : null,
                     compact: k
                 }),
@@ -164,9 +164,9 @@ let O = () =>
                               (0, r.jsxs)(o.Dx, {
                                   className: I.title,
                                   children: [
-                                      null != A
+                                      null != Z
                                           ? (0, r.jsx)(u.Z, {
-                                                guild: A,
+                                                guild: Z,
                                                 className: I.guildBadge,
                                                 tooltipPosition: 'left'
                                             })
@@ -186,7 +186,7 @@ let O = () =>
                           total: c.approximate_member_count,
                           flat: y
                       }),
-                P ? (0, r.jsx)(h.R, {}) : (0, r.jsx)(o.jQ, { user: Z })
+                P ? (0, r.jsx)(h.R, {}) : (0, r.jsx)(o.jQ, { user: A })
             ]
         });
     };

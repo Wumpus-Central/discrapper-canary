@@ -187,7 +187,7 @@ let k = (e) => [
                   ]
               });
     }),
-    V = r.memo(function (e) {
+    z = r.memo(function (e) {
         let { emptyText: t } = e;
         return (0, i.jsx)('div', {
             className: T.emptyChannelItem,
@@ -198,7 +198,7 @@ let k = (e) => [
             })
         });
     }),
-    z = r.memo(function (e) {
+    V = r.memo(function (e) {
         let { sectionHeader: t, channelIds: n, currentVoiceChannel: o, onSelect: l, hasQuery: a, query: c, scrollable: u = !0 } = e,
             [d, p] = r.useState(null),
             h = (e) => {
@@ -224,7 +224,7 @@ let k = (e) => [
                 (0, i.jsxs)(g, {
                     className: T.channelList,
                     children: [
-                        a && 0 === n.length && (0, i.jsx)(V, { emptyText: P.intl.string(P.t.nxSS09) }),
+                        a && 0 === n.length && (0, i.jsx)(z, { emptyText: P.intl.string(P.t.nxSS09) }),
                         n.map((e) =>
                             (0, i.jsx)(
                                 M,
@@ -305,7 +305,7 @@ function U(e) {
               className: l()(T.channelList, T.channelListWrapper),
               children: [
                   o.length > 0 &&
-                      (0, i.jsx)(z, {
+                      (0, i.jsx)(V, {
                           sectionHeader: P.intl.string(P.t.lnk2NT),
                           channelIds: o.slice(0, 3),
                           hasQuery: !1,
@@ -315,7 +315,7 @@ function U(e) {
                           scrollable: !1
                       }),
                   c.length > 0 &&
-                      (0, i.jsx)(z, {
+                      (0, i.jsx)(V, {
                           sectionHeader: P.intl.string(P.t['0lvb9P']),
                           channelIds: c.slice(0, 8),
                           hasQuery: !1,
@@ -326,7 +326,7 @@ function U(e) {
                       })
               ]
           })
-        : (0, i.jsx)(V, { emptyText: P.intl.string(P.t['3ET7Aw']) });
+        : (0, i.jsx)(z, { emptyText: P.intl.string(P.t['3ET7Aw']) });
 }
 function W(e) {
     e.stopPropagation();
@@ -442,7 +442,7 @@ function G(e) {
                         })
                     }),
                     y
-                        ? (0, i.jsx)(z, {
+                        ? (0, i.jsx)(V, {
                               sectionHeader: v ? P.intl.format(P.t.qdXiQ0, b) : P.intl.format(P.t['Aq+8wM'], b),
                               channelIds: h
                                   .map((e) => {

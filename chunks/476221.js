@@ -1,42 +1,42 @@
 n.d(t, { Z: () => i }), n(35282);
-var l = n(981631),
-    r = n(388032);
+var r = n(981631),
+    l = n(388032);
 let i = {
     getStatus: function (e) {
         let t,
             n,
             i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         switch (e) {
-            case l.hes.CONNECTING:
-                (t = l.QKv.CONNECTING), (n = r.intl.string(r.t.MzW9sL));
+            case r.hes.CONNECTING:
+                (t = r.QKv.CONNECTING), (n = l.intl.string(l.t.MzW9sL));
                 break;
-            case l.hes.AUTHENTICATING:
-                (t = l.QKv.CONNECTING), (n = r.intl.string(r.t.GxXwEx));
+            case r.hes.AUTHENTICATING:
+                (t = r.QKv.CONNECTING), (n = l.intl.string(l.t.GxXwEx));
                 break;
-            case l.hes.AWAITING_ENDPOINT:
-                (t = l.QKv.CONNECTING), (n = r.intl.string(r.t.xEbu0d));
+            case r.hes.AWAITING_ENDPOINT:
+                (t = r.QKv.CONNECTING), (n = l.intl.string(l.t.xEbu0d));
                 break;
-            case l.hes.RTC_CONNECTED:
-                (t = l.QKv.CONNECTED), (n = i ? r.intl.string(r.t.HtVOdX) : r.intl.string(r.t['daXg4+']));
+            case r.hes.RTC_CONNECTED:
+                (t = r.QKv.CONNECTED), (n = i ? l.intl.string(l.t.HtVOdX) : l.intl.string(l.t['daXg4+']));
                 break;
-            case l.hes.RTC_CONNECTING:
-                (t = l.QKv.CONNECTING), (n = r.intl.string(r.t.Gp51dn));
+            case r.hes.RTC_CONNECTING:
+                (t = r.QKv.CONNECTING), (n = l.intl.string(l.t.Gp51dn));
                 break;
-            case l.hes.ICE_CHECKING:
-                (t = l.QKv.CONNECTING), (n = r.intl.string(r.t.rdCyAw));
+            case r.hes.ICE_CHECKING:
+                (t = r.QKv.CONNECTING), (n = l.intl.string(l.t.rdCyAw));
                 break;
-            case l.hes.DTLS_CONNECTING:
-                (t = l.QKv.CONNECTING), (n = r.intl.string(r.t.UvB3gY));
+            case r.hes.DTLS_CONNECTING:
+                (t = r.QKv.CONNECTING), (n = l.intl.string(l.t.UvB3gY));
                 break;
-            case l.hes.NO_ROUTE:
-                (t = l.QKv.ERROR), (n = r.intl.string(r.t.mGhOIi));
+            case r.hes.NO_ROUTE:
+                (t = r.QKv.ERROR), (n = l.intl.string(l.t.mGhOIi));
                 break;
-            case l.hes.RTC_DISCONNECTED:
-                (t = l.QKv.ERROR), (n = r.intl.string(r.t.M7LDmJ));
+            case r.hes.RTC_DISCONNECTED:
+                (t = r.QKv.ERROR), (n = l.intl.string(l.t.M7LDmJ));
                 break;
-            case l.hes.DISCONNECTED:
+            case r.hes.DISCONNECTED:
             default:
-                (t = l.QKv.ERROR), (n = r.intl.string(r.t.NLKQb2));
+                (t = r.QKv.ERROR), (n = l.intl.string(l.t.NLKQb2));
         }
         return {
             connectionStatus: t,

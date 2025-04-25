@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(144144),
     _ = n(276264),
     y = n(607070),
-    C = n(100527),
-    x = n(367907),
+    x = n(100527),
+    C = n(367907),
     v = n(906732),
     j = n(493324),
     O = n(611064),
@@ -128,7 +128,7 @@ let en = q.ZP.getEnableHardwareAcceleration(),
         }
     },
     ei = i.memo(function (e) {
-        let { colorString: t, colorStrings: l, colorRoleName: o, colorRoleId: a, isOwner: s, nick: c, user: u, currentUser: p, activities: h, applicationStream: f, status: g, channel: y, guildId: C, isTyping: x, isMobileOnline: v, premiumSince: j, nameplate: O, shouldShowPopoutOnHover: E } = e,
+        let { colorString: t, colorStrings: l, colorRoleName: o, colorRoleId: a, isOwner: s, nick: c, user: u, currentUser: p, activities: h, applicationStream: f, status: g, channel: y, guildId: x, isTyping: C, isMobileOnline: v, premiumSince: j, nameplate: O, shouldShowPopoutOnHover: E } = e,
             I = et(e, ['colorString', 'colorStrings', 'colorRoleName', 'colorRoleId', 'isOwner', 'nick', 'user', 'currentUser', 'activities', 'applicationStream', 'status', 'channel', 'guildId', 'isTyping', 'isMobileOnline', 'premiumSince', 'nameplate', 'shouldShowPopoutOnHover']),
             [P, S] = i.useState(!1),
             Z = null != j ? new Date(j) : null,
@@ -142,14 +142,14 @@ let en = q.ZP.getEnableHardwareAcceleration(),
                                 e,
                                 ee($({}, n), {
                                     user: u,
-                                    guildId: C,
+                                    guildId: x,
                                     channel: y,
                                     showMediaItems: t
                                 })
                             );
                     });
                 },
-                [u, C, y]
+                [u, x, y]
             ),
             A = i.useCallback(() => {
                 let e = '@'.concat(Y.ZP.getUserTag(u, { decoration: 'never' })),
@@ -163,21 +163,21 @@ let en = q.ZP.getEnableHardwareAcceleration(),
             }, [u, y.id]),
             w = i.useCallback(
                 (e) => {
-                    null != C &&
+                    null != x &&
                         (e.stopPropagation(),
                         (0, T.f)({
-                            guildId: C,
+                            guildId: x,
                             location: {
                                 section: K.jXE.MEMBER_LIST,
                                 object: K.qAy.BOOST_GEM_ICON
                             }
                         }));
                 },
-                [C]
+                [x]
             );
         return (0, r.jsx)(L.Z, {
             user: u,
-            guildId: C,
+            guildId: x,
             channelId: y.id,
             roleId: a,
             position: d.tq ? 'window_center' : 'left',
@@ -209,9 +209,9 @@ let en = q.ZP.getEnableHardwareAcceleration(),
                             colorString: t,
                             colorStrings: l,
                             colorRoleName: o,
-                            isTyping: x,
+                            isTyping: C,
                             channel: y,
-                            guildId: C,
+                            guildId: x,
                             isMobile: v,
                             onClickPremiumGuildIcon: w,
                             selected: P,
@@ -554,13 +554,13 @@ class es extends i.Component {
                         num_users_visible_with_nameplate: 0
                     }
                 );
-                (this.lastReportedAnalyticsChannel = this.props.channel.id), x.ZP.trackWithMetadata(K.rMx.MEMBER_LIST_VIEWED, $({}, i));
+                (this.lastReportedAnalyticsChannel = this.props.channel.id), C.ZP.trackWithMetadata(K.rMx.MEMBER_LIST_VIEWED, $({}, i));
             });
     }
 }
 function ec(e) {
     let { channel: t, className: n } = e,
-        { analyticsLocations: l } = (0, v.ZP)(C.Z.MEMBER_LIST),
+        { analyticsLocations: l } = (0, v.ZP)(x.Z.MEMBER_LIST),
         a = (0, h.e7)([y.Z], () => y.Z.keyboardModeEnabled),
         s = (0, h.cj)([U.ZP], () => U.ZP.getProps(t.guild_id, t.id)),
         {
@@ -575,7 +575,7 @@ function ec(e) {
         }),
         b = i.useRef(null),
         _ = (0, f.UBm)('lg') + (0, f.UBm)('xxs'),
-        x = i.useCallback(
+        C = i.useCallback(
             (e, t) => {
                 let n = b.current;
                 if (null == n) return;
@@ -619,7 +619,7 @@ function ec(e) {
         ),
         E = (0, u.ZP)({
             id: 'members-'.concat(t.id),
-            setFocus: x,
+            setFocus: C,
             isEnabled: a,
             scrollToStart: j,
             scrollToEnd: O

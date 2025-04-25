@@ -1,34 +1,34 @@
 n.d(t, { Z: () => s }), n(388685);
-var l = n(200651),
-    r = n(192379),
+var r = n(200651),
+    l = n(192379),
     i = n(311308),
-    a = n(692547),
-    o = n(481060);
+    o = n(692547),
+    a = n(481060);
 function s(e) {
-    let t = (0, r.useRef)(null),
-        [n, s] = (0, r.useState)(null),
-        [u] = (0, r.useState)(() => new i.TimelineDataSeries()),
-        c = (0, o.dQu)(a.Z.colors.BACKGROUND_PRIMARY).hsl(),
-        d = (0, o.dQu)(a.Z.colors.TEXT_NORMAL).hsl(),
-        f = (0, o.dQu)(a.Z.colors.BACKGROUND_ACCENT).hsl(),
-        h = (0, o.dQu)(a.Z.unsafe_rawColors.BRAND_500).hsl();
-    (0, r.useEffect)(() => {
+    let t = (0, l.useRef)(null),
+        [n, s] = (0, l.useState)(null),
+        [u] = (0, l.useState)(() => new i.TimelineDataSeries()),
+        c = (0, a.dQu)(o.Z.colors.BACKGROUND_PRIMARY).hsl(),
+        d = (0, a.dQu)(o.Z.colors.TEXT_NORMAL).hsl(),
+        h = (0, a.dQu)(o.Z.colors.BACKGROUND_ACCENT).hsl(),
+        f = (0, a.dQu)(o.Z.unsafe_rawColors.BRAND_500).hsl();
+    (0, l.useEffect)(() => {
         var e;
         let n = t.current;
         if (null == n) return;
-        let l = new i.TimelineGraphView(n, null != (e = window.devicePixelRatio) ? e : 1);
-        (l.backgroundColor = c), (l.textColor = d), (l.gridColor = f), (l.timeOptions = { timeStyle: 'short' }), (l.fontFamily = 'gg sans'), (l.fontSize = 11), u.setColor(h), l.addDataSeries(u), l.updateEndDate(), s(l);
-    }, [t, c, h, f, d, u]),
+        let r = new i.TimelineGraphView(n, null != (e = window.devicePixelRatio) ? e : 1);
+        (r.backgroundColor = c), (r.textColor = d), (r.gridColor = h), (r.timeOptions = { timeStyle: 'short' }), (r.fontFamily = 'gg sans'), (r.fontSize = 11), u.setColor(f), r.addDataSeries(u), r.updateEndDate(), s(r);
+    }, [t, c, f, h, d, u]),
         u.setPoints(e.dataPoints),
         null == n || n.updateEndDate();
-    let g = {
+    let p = {
         width: e.width,
         height: e.height
     };
-    return (0, l.jsx)(
+    return (0, r.jsx)(
         'canvas',
         {
-            style: g,
+            style: p,
             width: e.width,
             height: e.height,
             ref: t

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => u });
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -6,16 +6,16 @@ var i = n(442837),
     a = n(914010),
     o = n(362658),
     c = n(981631),
-    u = n(388032);
-function s(e) {
+    s = n(388032);
+function u(e) {
     let t = (0, i.e7)([a.Z], () => a.Z.getGuildId()),
-        s = e.type === c.d4z.GUILD_CATEGORY,
+        u = e.type === c.d4z.GUILD_CATEGORY,
         { isFavoritesPerk: d } = (0, o.z)('useChannelFavoriteSetNickname');
     return __OVERLAY__ || t !== c.I_8
         ? null
         : (0, r.jsx)(l.sNh, {
               id: 'set-channel-nickname',
-              label: d && s ? u.intl.string(u.t.xXYKiI) : u.intl.string(u.t.dilOFx),
+              label: d && u ? s.intl.string(s.t.xXYKiI) : s.intl.string(s.t.dilOFx),
               action: function () {
                   (0, l.ZDy)(async () => {
                       let { default: t } = await n.e('46161').then(n.bind(n, 238716));
@@ -51,9 +51,9 @@ function s(e) {
                               (l = l =
                                   {
                                       channelId: e.id,
-                                      heading: d && s ? u.intl.string(u.t.xXYKiI) : u.intl.string(u.t.dilOFx),
-                                      formTitle: d && s ? u.intl.string(u.t.OCAkGB) : u.intl.string(u.t['621LJC']),
-                                      allowReset: !(d && s)
+                                      heading: d && u ? s.intl.string(s.t.xXYKiI) : s.intl.string(s.t.dilOFx),
+                                      formTitle: d && u ? s.intl.string(s.t.OCAkGB) : s.intl.string(s.t['621LJC']),
+                                      allowReset: !(d && u)
                                   }),
                               Object.getOwnPropertyDescriptors
                                   ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))

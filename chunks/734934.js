@@ -27,7 +27,7 @@ function p(e, t) {
         s.fy.INFREQUENT_USER_ACTION
     ),
         c.default.track(d.rMx.NOTIFICATION_SETTINGS_UPDATED, {
-            update_type: u.Ib.ACCOUNT,
+            update_type: u.I.ACCOUNT,
             quiet_mode_enabled: e,
             quiet_mode_enabled_old: n
         }),

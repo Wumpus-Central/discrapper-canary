@@ -19,16 +19,16 @@ function g(e) {
         b = (0, f.qY)(t),
         _ = (0, i.e7)([u.Z], () => u.Z.getChannel(t), [t]),
         { canManageGuildEvent: y } = (0, a.XJ)(_),
-        C = y(b);
+        x = y(b);
     if (null == b) return null;
-    let x = () => {
+    let C = () => {
             if (null != _ && (0, h.Z)(_)) return void (0, d.lC)(_, g);
             n();
         },
         v = () => {
             p.Z.endEvent(b.id, b.guild_id);
         };
-    return C
+    return x
         ? (0, r.jsx)(l.yRy, {
               renderPopout: (e) => {
                   let { closePopout: t } = e;
@@ -55,7 +55,7 @@ function g(e) {
                   let { onClick: t } = e;
                   return (0, r.jsx)(c.Z, {
                       label: m.intl.string(m.t['6vrfgo']),
-                      onClick: x,
+                      onClick: C,
                       onPopoutClick: t
                   });
               }

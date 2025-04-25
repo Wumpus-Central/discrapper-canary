@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(100527),
     _ = n(906732),
     y = n(82295),
-    C = n(91218),
-    x = n(623624),
+    x = n(91218),
+    C = n(623624),
     v = n(518738),
     j = n(850020),
     O = n(965376),
@@ -85,7 +85,7 @@ let Y = B.ZP.getEnableHardwareAcceleration(),
             b = (0, p.e7)([R.default], () => R.default.getCurrentUser()),
             _ = (null == g ? void 0 : g.id) === (null == b ? void 0 : b.id),
             y = (0, p.e7)([T.Z, A.Z], () => (_ ? A.Z.getStatus() : T.Z.getStatus(o, t.guild_id))),
-            C = (0, p.e7)([T.Z], () => T.Z.isMobileOnline(o)),
+            x = (0, p.e7)([T.Z], () => T.Z.isMobileOnline(o)),
             v = (0, p.e7)([T.Z, A.Z], () => (_ ? A.Z.getActivities() : T.Z.getActivities(o, t.guild_id))),
             O = (0, p.e7)([S.Z], () => S.Z.getAnyStreamForUser(o)),
             k = (0, c.JA)(o),
@@ -140,7 +140,7 @@ let Y = B.ZP.getEnableHardwareAcceleration(),
             z = i.useCallback(
                 (e) => {
                     e.stopPropagation(),
-                        (0, x.f)({
+                        (0, C.f)({
                             guildId: t.guild_id,
                             location: {
                                 section: F.jXE.THREAD_MEMBER_LIST,
@@ -206,7 +206,7 @@ let Y = B.ZP.getEnableHardwareAcceleration(),
                             isTyping: s,
                             channel: t,
                             guildId: t.guild_id,
-                            isMobile: C,
+                            isMobile: x,
                             selected: K,
                             applicationStream: O,
                             premiumSince: null == J ? null : new Date(J),
@@ -247,7 +247,7 @@ let Y = B.ZP.getEnableHardwareAcceleration(),
                       count: i
                   }),
                   children: [
-                      null != o ? (0, r.jsx)(C.Z, W({ className: z.roleIcon }, o)) : null,
+                      null != o ? (0, r.jsx)(x.Z, W({ className: z.roleIcon }, o)) : null,
                       (0, r.jsxs)('span', {
                           'aria-hidden': !0,
                           children: [n, ' \u2014 ', i]
@@ -347,7 +347,7 @@ function J(e) {
                 listRef: r
             };
         })(l, q),
-        C = 0 === d.length || d.every((e) => 0 === e.userIds.length);
+        x = 0 === d.length || d.every((e) => 0 === e.userIds.length);
     if (
         (i.useEffect(() => {
             M.default.track(F.rMx.MEMBER_LIST_VIEWED, {
@@ -356,10 +356,10 @@ function J(e) {
                 guild_id: t.guild_id
             });
         }, [t.guild_id, t.id, t.type]),
-        C)
+        x)
     )
         return (0, r.jsx)($, { channel: t });
-    let x = s().omit(m.containerProps, ['ref']),
+    let C = s().omit(m.containerProps, ['ref']),
         v = D.iJ(n);
     return (0, r.jsx)(_.Gt, {
         value: a,
@@ -413,7 +413,7 @@ function J(e) {
                                     sections: d.map((e) => e.userIds.length),
                                     fade: !0
                                 },
-                                x,
+                                C,
                                 e
                             ),
                             l

@@ -67,11 +67,11 @@ let y = function (e) {
             },
             [t]
         ),
-        [C, x] = i.useState(!1),
+        [x, C] = i.useState(!1),
         v = (0, l.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]),
         j = (0, s.Aq)(),
         O = i.useCallback(() => {
-            y || x((e) => !e);
+            y || C((e) => !e);
         }, [y]);
     function E(e) {
         (null == e ? void 0 : e.shiftKey) || j.dispatch(m.CkL.POPOUT_CLOSE);
@@ -87,13 +87,13 @@ let y = function (e) {
             [O]
         ),
         (0, r.jsx)(o.yRy, {
-            shouldShow: C,
+            shouldShow: x,
             animation: o.yRy.Animation.NONE,
             position: 'bottom',
             align: 'right',
             autoInvert: !1,
             ignoreModalClicks: !0,
-            onRequestClose: () => x(!1),
+            onRequestClose: () => C(!1),
             renderPopout: function (e) {
                 return (0, r.jsx)(
                     a.Z,

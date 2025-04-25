@@ -25,14 +25,14 @@ let v = {
         [x.O0b.PAUSED]: 'Paused',
         [x.O0b.PAUSE_PENDING]: 'Pause Pending'
     },
-    g = {
+    j = {
         [h.Id.UNKNOWN]: 'Unknown',
         [h.Id.ADMIN]: 'Admin',
         [h.Id.USER]: 'User',
         [h.Id.FRACTIONAL_PREMIUM]: 'Fractional Premium',
         [h.Id.DEFERRED_START]: 'Deferred Start'
     },
-    j = [
+    g = [
         {
             label: 'Unpaid',
             value: x.O0b.UNPAID
@@ -75,8 +75,8 @@ function _(e) {
     let { subscription: h, onUpdated: _ } = e,
         [y, O] = r.useState(!1),
         [C, E] = r.useState(!1),
-        [N, S] = r.useState(null),
-        T = (e) => ((null == e && (e = h.status), e in v) ? v[e] : 'Unknown status '.concat(e)),
+        [N, T] = r.useState(null),
+        S = (e) => ((null == e && (e = h.status), e in v) ? v[e] : 'Unknown status '.concat(e)),
         P = (e) => {
             let t = new Date(e);
             return u.default.fromTimestamp(t.getTime());
@@ -128,7 +128,7 @@ function _(e) {
                     rejectWithError: !1
                 });
             } catch (e) {
-                S(e.body.message);
+                T(e.body.message);
             }
             _();
         },
@@ -163,14 +163,14 @@ function _(e) {
                         }),
                     (0, a.jsxs)(o.Text, {
                         variant: 'text-md/normal',
-                        children: ['Status: ', T()]
+                        children: ['Status: ', S()]
                     }),
                     h.status === x.O0b.PAUSED &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsxs)(o.Text, {
                                     variant: 'text-md/normal',
-                                    children: ['Pause Reason: ', h.pauseReason in g ? g[h.pauseReason] : 'Unknown pause reason '.concat(h.pauseReason)]
+                                    children: ['Pause Reason: ', h.pauseReason in j ? j[h.pauseReason] : 'Unknown pause reason '.concat(h.pauseReason)]
                                 }),
                                 null != h.pauseEndsAt &&
                                     (0, a.jsxs)(o.Text, {
@@ -252,9 +252,9 @@ function _(e) {
                                     tag: o.RB0.H3,
                                     className: b.formSection,
                                     children: (0, a.jsx)(o.PhF, {
-                                        serialize: (e) => T(e),
+                                        serialize: (e) => S(e),
                                         isSelected: (e) => e === h.status,
-                                        options: j,
+                                        options: g,
                                         select: (e) => w({ status: e }),
                                         popoutLayerContext: m.O$
                                     })
@@ -272,7 +272,7 @@ function _(e) {
                                         null !== N &&
                                             (0, a.jsx)(o.kzN, {
                                                 className: b.error,
-                                                onDismiss: () => S(null),
+                                                onDismiss: () => T(null),
                                                 children: N
                                             })
                                     ]

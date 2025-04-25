@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(400816),
     _ = n(104402),
     y = n(584354),
-    C = n(725060);
-let x = (e) => {
+    x = n(725060);
+let C = (e) => {
     let { searchQuery: t, setSearchQuery: n, handleClearSearch: i, handleSearchKeyPress: l } = e,
         { ref: a, width: u } = (0, c.ZP)(),
         d = null != u && u <= 800;
@@ -28,7 +28,7 @@ let x = (e) => {
             (0, r.jsx)('img', {
                 alt: '',
                 className: _.headerImage,
-                src: d ? C : y
+                src: d ? x : y
             }),
             (0, r.jsx)('div', {
                 className: _.headerContentWrapper,
@@ -120,7 +120,7 @@ function v(e) {
     });
 }
 let j = (e) => {
-    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: l, searchQuery: o, setSearchQuery: c, handleClearSearch: d, handleSearchKeyPress: p, currentCategoryId: y, handleSelectCategory: C, categoryCounts: j, allEntriesCount: O, isLoading: E } = e,
+    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: l, searchQuery: o, setSearchQuery: c, handleClearSearch: d, handleSearchKeyPress: p, currentCategoryId: y, handleSelectCategory: x, categoryCounts: j, allEntriesCount: O, isLoading: E } = e,
         I = (0, a.e7)([u.Z], () => u.Z.getGuild(t.getGuildId()));
     return null != I && I.hasFeature(m.oNc.SHARD)
         ? (0, r.jsx)(v, {
@@ -134,7 +134,7 @@ let j = (e) => {
               children: (0, r.jsxs)(s.yWw, {
                   className: b.scroller,
                   children: [
-                      (0, r.jsx)(x, {
+                      (0, r.jsx)(C, {
                           searchQuery: o,
                           setSearchQuery: c,
                           handleClearSearch: d,
@@ -148,7 +148,7 @@ let j = (e) => {
                               look: 'brand',
                               selectedItem: y,
                               onItemSelect: (e) => {
-                                  C(e);
+                                  x(e);
                               },
                               children: [
                                   (0, r.jsx)(

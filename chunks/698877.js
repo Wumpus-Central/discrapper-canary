@@ -28,8 +28,8 @@ function u(e) {
             }
             return i;
         })(e, ['hasPermission', 'streamActive', 'isSelfStream', 'centerButton', 'onMouseEnter', 'onMouseLeave', 'premiumGlow', 'renderNUXHighlight', 'buttonRef']);
-    let { mode: C } = (0, o.ZP)({ location: 'StreamButton' }),
-        { squareButtonsEnabled: x, coloredIconsEnabled: v } = (0, a.Z)({ location: 'StreamButton' }),
+    let { mode: x } = (0, o.ZP)({ location: 'StreamButton' }),
+        { squareButtonsEnabled: C, coloredIconsEnabled: v } = (0, a.Z)({ location: 'StreamButton' }),
         j = h ? s.d : s.Z;
     t = d ? (p ? c.intl.string(c.t.S5anIS) : c.intl.string(c.t.q3O3Jy)) : u ? c.intl.string(c.t.fjBNo6) : c.intl.string(c.t.uQn9Bw);
     let { Component: O, events: E, play: I } = (0, l.P)(d ? 'disable' : 'enable');
@@ -68,7 +68,7 @@ function u(e) {
                     disabled: !u,
                     iconComponent: O,
                     isActive: d,
-                    color: (b ? (n = 'premiumGradient') : (x || C === o.BK.GroupedButtonsRedMic) && d && (n = 'green'), n),
+                    color: (b ? (n = 'premiumGradient') : (C || x === o.BK.GroupedButtonsRedMic) && d && (n = 'green'), n),
                     caretColor: v ? void 0 : 'primaryDark',
                     onMouseEnter: (e) => {
                         null == f || f(e), E.onMouseEnter();

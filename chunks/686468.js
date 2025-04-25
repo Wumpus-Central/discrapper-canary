@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(546247),
     _ = n(496675),
     y = n(146085),
-    C = n(979339),
-    x = n(643632),
+    x = n(979339),
+    C = n(643632),
     v = n(939863),
     j = n(388032),
     O = n(941188);
@@ -43,7 +43,7 @@ function E(e) {
 }
 function I(e) {
     let { channel: t } = e,
-        { participants: n, usersInSummary: i } = (0, C.Z)(t.id);
+        { participants: n, usersInSummary: i } = (0, x.Z)(t.id);
     return (0, r.jsxs)('div', {
         className: O.audienceSummary,
         children: [
@@ -81,8 +81,8 @@ function P(e) {
         s = (0, d.Q3)('StartStageChannelCallView'),
         u = t.guild_id,
         { canCreateGuildEvent: p } = (0, g.XJ)(t),
-        P = (0, x.Z)(t.id),
-        { usersInSummary: S } = (0, C.Z)(t.id),
+        P = (0, C.Z)(t.id),
+        { usersInSummary: S } = (0, x.Z)(t.id),
         Z = (0, c._q$)('StartStageChannelCallView'),
         N = i.useRef(null);
     return (0, r.jsxs)('div', {

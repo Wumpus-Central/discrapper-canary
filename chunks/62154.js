@@ -1,39 +1,39 @@
-t.d(n, { Z: () => v });
+t.d(n, { Z: () => _ });
 var i = t(200651);
 t(192379);
 var o = t(442837),
     l = t(320582),
     r = t(699516),
     s = t(5192),
-    c = t(111361),
-    a = t(648052),
+    a = t(111361),
+    c = t(648052),
     d = t(537006),
     u = t(681837),
     f = t(91433),
-    p = t(944043),
-    m = t(502762),
+    m = t(944043),
+    p = t(502762),
     h = t(530),
-    I = t(740628),
-    x = t(643518),
-    b = t(228168),
-    _ = t(981631),
+    x = t(740628),
+    I = t(643518),
+    v = t(228168),
+    b = t(981631),
     j = t(405666);
-function v(e) {
+function _(e) {
     var n;
-    let { user: t, currentUser: v, guildId: g, channelId: Z, displayProfile: y, initialSection: A, initialSubsection: T, friendToken: O, onClose: N } = e,
-        { relationshipType: E, originApplicationId: C } = (0, o.cj)([r.Z], () => ({
+    let { user: t, currentUser: _, guildId: g, channelId: Z, displayProfile: y, initialSection: N, initialSubsection: A, friendToken: T, onClose: O } = e,
+        { relationshipType: C, originApplicationId: E } = (0, o.cj)([r.Z], () => ({
             relationshipType: r.Z.getRelationshipType(t.id),
             originApplicationId: r.Z.getOriginApplicationId(t.id)
         })),
         P = (0, l.vh)(t.id),
-        S = t.id === v.id,
-        M = (0, c.I5)(v),
-        w = s.ZP.useName(null == y ? void 0 : y.guildId, Z, t),
-        L = (0, x.Z)({
+        S = t.id === _.id,
+        M = (0, a.I5)(_),
+        L = s.ZP.useName(null == y ? void 0 : y.guildId, Z, t),
+        w = (0, I.Z)({
             user: t,
-            currentUser: v,
+            currentUser: _,
             guildId: g,
-            initialSubsection: T
+            initialSubsection: A
         });
     return (0, i.jsxs)('div', {
         className: j.body,
@@ -41,31 +41,31 @@ function v(e) {
             (0, i.jsx)(h.Z, {
                 className: j.username,
                 user: t,
-                nickname: w,
+                nickname: L,
                 pronouns: null == y ? void 0 : y.pronouns,
                 nicknameVariant: 'heading-xl/bold',
                 nicknameIcons: (0, i.jsx)(u.Z, { userId: t.id }),
-                tags: (0, i.jsx)(a.Z, {
+                tags: (0, i.jsx)(c.Z, {
                     displayProfile: y,
-                    themeType: b.lY.MODAL,
-                    onClose: N
+                    themeType: v.lY.MODAL,
+                    onClose: O
                 })
             }),
-            E === _.OGo.PENDING_INCOMING &&
-                (0, i.jsx)(m.Z.Overlay, {
+            C === b.OGo.PENDING_INCOMING &&
+                (0, i.jsx)(p.Z.Overlay, {
                     className: j.bannerContainer,
                     children: (0, i.jsx)(f.Z, {
                         user: t,
-                        applicationId: C,
+                        applicationId: E,
                         guildId: null != (n = null == y ? void 0 : y.guildId) ? n : void 0,
                         channelId: Z,
-                        friendToken: O,
+                        friendToken: T,
                         className: j.friendRequestBanner
                     })
                 }),
             P.map((e) =>
                 (0, i.jsx)(
-                    m.Z.Overlay,
+                    p.Z.Overlay,
                     {
                         className: j.bannerContainer,
                         children: (0, i.jsx)(f.Z, {
@@ -79,7 +79,7 @@ function v(e) {
                     e.applicationId
                 )
             ),
-            (0, i.jsx)(p.Z, {
+            (0, i.jsx)(m.Z, {
                 user: t,
                 className: j.bannerContainer
             }),
@@ -87,17 +87,17 @@ function v(e) {
                 (0, i.jsx)(d.Z, {
                     className: j.bannerContainer,
                     isPremiumUser: M,
-                    onInteraction: N
+                    onInteraction: O
                 }),
-            (0, i.jsx)(I.Z, {
+            (0, i.jsx)(x.Z, {
                 user: t,
-                currentUser: v,
+                currentUser: _,
                 displayProfile: y,
                 guildId: g,
-                items: L,
-                initialSection: A,
-                initialSubsection: T,
-                onClose: N
+                items: w,
+                initialSection: N,
+                initialSubsection: A,
+                onClose: O
             })
         ]
     });

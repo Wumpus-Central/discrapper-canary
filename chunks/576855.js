@@ -1,33 +1,33 @@
 n.d(t, { Z: () => f });
 var r,
-    l,
-    a = n(200651),
-    i = n(192379),
+    i,
+    l = n(200651),
+    a = n(192379),
     o = n(120356),
-    u = n.n(o),
-    s = n(481060),
-    c = n(388032),
-    p = n(108921);
-let m = {
-    BLOCK: p.block,
-    INLINE: p.inline
+    s = n.n(o),
+    c = n(481060),
+    u = n(388032),
+    d = n(108921);
+let p = {
+    BLOCK: d.block,
+    INLINE: d.inline
 };
-class d extends (l = i.PureComponent) {
+class m extends (i = a.PureComponent) {
     render() {
-        let { children: e, className: t, textClassName: n, type: r = m.BLOCK, style: l } = this.props;
-        return (0, a.jsxs)('div', {
-            className: u()(t, r),
-            style: l,
+        let { children: e, className: t, textClassName: n, type: r = p.BLOCK, style: i } = this.props;
+        return (0, l.jsxs)('div', {
+            className: s()(t, r),
+            style: i,
             children: [
-                (0, a.jsxs)(s.Text, {
+                (0, l.jsxs)(c.Text, {
                     variant: 'text-sm/bold',
                     tag: 'div',
                     color: 'text-positive',
-                    className: p.pro,
-                    children: [c.intl.string(c.t['8tvIiI']), ':']
+                    className: d.pro,
+                    children: [u.intl.string(u.t['8tvIiI']), ':']
                 }),
-                (0, a.jsx)(s.Text, {
-                    className: u()(p.tip, n),
+                (0, l.jsx)(c.Text, {
+                    className: s()(d.tip, n),
                     variant: 'text-sm/normal',
                     children: e
                 })
@@ -35,12 +35,12 @@ class d extends (l = i.PureComponent) {
         });
     }
 }
-(r = 'Types') in d
-    ? Object.defineProperty(d, r, {
-          value: m,
+(r = 'Types') in m
+    ? Object.defineProperty(m, r, {
+          value: p,
           enumerable: !0,
           configurable: !0,
           writable: !0
       })
-    : (d[r] = m);
-let f = d;
+    : (m[r] = p);
+let f = m;

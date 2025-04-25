@@ -143,7 +143,7 @@ function j(e) {
             },
             [s]
         ),
-        X = i.useCallback((e) => {
+        Q = i.useCallback((e) => {
             switch (e) {
                 case 0:
                     return 320;
@@ -153,7 +153,7 @@ function j(e) {
                     throw Error('[getItemHeight] Failed for section: '.concat(e));
             }
         }, []),
-        Q = i.useCallback(
+        X = i.useCallback(
             async (e, t, n, r) => {
                 var i, a;
                 await l(e, t, n, r);
@@ -173,7 +173,7 @@ function j(e) {
                             style: n,
                             children: (0, r.jsx)(I.ZP, {
                                 guildId: e,
-                                onClick: async (e) => await Q(e, t, A, T),
+                                onClick: async (e) => await X(e, t, A, T),
                                 onView: (e) => z(e)
                             })
                         },
@@ -181,7 +181,7 @@ function j(e) {
                     );
                 }
             },
-            [s, Q, z, A]
+            [s, X, z, A]
         );
     i.useEffect(() => {
         let e = V.current;
@@ -236,7 +236,7 @@ function j(e) {
             renderSection: Y,
             getSectionHeight: K,
             getItemKey: q,
-            getItemHeight: X,
+            getItemHeight: Q,
             chunkSize: 24,
             onScroll: $,
             renderAccessory: (e) =>

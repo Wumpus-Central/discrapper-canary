@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => C });
 var r = n(200651),
     i = n(192379),
     l = n(704215),
@@ -16,9 +16,9 @@ var r = n(200651),
     b = n(981631),
     _ = n(921944),
     y = n(388032),
-    C = n(591837);
-let x = function (e) {
-    let { channel: t, guild: n, maxWidth: x } = e;
+    x = n(591837);
+let C = function (e) {
+    let { channel: t, guild: n, maxWidth: C } = e;
     i.useEffect(() => {
         (0, p.EW)(l.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: _.L.AUTO });
     }, []);
@@ -32,7 +32,7 @@ let x = function (e) {
         });
     return (0, r.jsxs)(u.Z, {
         sidebarType: u.y.CallChatSidebar,
-        maxWidth: x,
+        maxWidth: C,
         floatingLayer: g.ZP,
         children: [
             (0, r.jsx)(s.Z, {
@@ -52,7 +52,7 @@ let x = function (e) {
                 ]
             }),
             (0, r.jsx)('div', {
-                className: C.chat,
+                className: x.chat,
                 children: (0, r.jsx)(
                     c.Z,
                     {

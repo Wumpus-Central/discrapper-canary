@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(176412),
     _ = n(496977),
     y = n(314734),
-    C = n(981631),
-    x = n(149203),
+    x = n(981631),
+    C = n(149203),
     v = n(388032),
     j = n(760420);
 let O = { height: (0, b.DK)() };
@@ -40,13 +40,13 @@ function I(e) {
                     if (r === d.current) return;
                     if (r.classList.contains(y.t4) || r.classList.contains(y.Id)) return void e.preventDefault();
                     if (r.classList.contains(y.NN)) return;
-                    let t = [x.cZ, c.N];
+                    let t = [C.cZ, c.N];
                     if (r.classList.contains(y.I4) || t.includes(r.id)) return;
                     r = r.parentNode;
                 }
                 E();
                 let i = null == (t = (0, h.uB)(e)) ? void 0 : t.activeElement;
-                (null == i || 'BODY' === i.tagName) && p.S.dispatchToLastSubscribed(C.CkL.TEXTAREA_FOCUS);
+                (null == i || 'BODY' === i.tagName) && p.S.dispatchToLastSubscribed(x.CkL.TEXTAREA_FOCUS);
             },
             [n, j, v]
         );
@@ -54,9 +54,9 @@ function I(e) {
         () => (
             f.addEventListener('mousedown', O),
             f.addEventListener('contextmenu', O),
-            b.subscribe(C.CkL.POPOUT_CLOSE, E),
+            b.subscribe(x.CkL.POPOUT_CLOSE, E),
             () => {
-                f.removeEventListener('mousedown', O), f.removeEventListener('contextmenu', O), b.unsubscribe(C.CkL.POPOUT_CLOSE, E);
+                f.removeEventListener('mousedown', O), f.removeEventListener('contextmenu', O), b.unsubscribe(x.CkL.POPOUT_CLOSE, E);
             }
         ),
         [O, f, b]

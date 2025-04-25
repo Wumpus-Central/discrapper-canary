@@ -1,20 +1,20 @@
-let l;
-n.d(t, { Z: () => _ }), n(388685), n(539854), n(781311), n(35282);
-var r,
+let r;
+n.d(t, { Z: () => T }), n(388685), n(539854), n(781311), n(35282);
+var l,
     i = n(442837),
-    a = n(570140),
-    o = n(278323),
+    o = n(570140),
+    a = n(278323),
     s = n(212819),
     u = n(933557),
     c = n(592125),
     d = n(430824),
-    f = n(293273),
-    h = n(158776),
-    g = n(699516),
-    p = n(594174),
+    h = n(293273),
+    f = n(158776),
+    p = n(699516),
+    g = n(594174),
     y = n(55589),
     O = n(981631);
-function m(e, t, n) {
+function b(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,11 +28,11 @@ function m(e, t, n) {
     );
 }
 let v = [s.h8.TEXT_CHANNEL, s.h8.GROUP_DM, s.h8.USER],
-    E = null,
-    b = null,
+    m = null,
+    x = null,
     N = [],
     C = [];
-function x(e) {
+function E(e) {
     (N = [...N, e]),
         (C = C.map((e) => {
             var t, n;
@@ -40,15 +40,15 @@ function x(e) {
                 (t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
-                            l = Object.keys(n);
+                            r = Object.keys(n);
                         'function' == typeof Object.getOwnPropertySymbols &&
-                            (l = l.concat(
+                            (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 })
                             )),
-                            l.forEach(function (t) {
-                                m(e, t, n[t]);
+                            r.forEach(function (t) {
+                                b(e, t, n[t]);
                             });
                     }
                     return e;
@@ -59,8 +59,8 @@ function x(e) {
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var l = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, l);
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
                           }
                           return n;
                       })(Object(n)).forEach(function (e) {
@@ -69,38 +69,38 @@ function x(e) {
                 t
             );
         })),
-        P.emitChange();
+        S.emitChange();
+}
+function j() {
+    (m = null), null != r && (r.destroy(), (r = null)), null != x && x();
 }
 function I() {
-    (E = null), null != l && (l.destroy(), (l = null)), null != b && b();
+    let e = null != m && null != m.application_id ? h.Z.getApplicationActivity(m.application_id) : null;
+    if (null != m && (null == e || null == e.party || null == e.party.id)) return j();
 }
-function S() {
-    let e = null != E && null != E.application_id ? f.Z.getApplicationActivity(E.application_id) : null;
-    if (null != E && (null == e || null == e.party || null == e.party.id)) return I();
-}
-class T extends (r = i.ZP.Store) {
+class P extends (l = i.ZP.Store) {
     initialize() {
-        this.waitFor(f.Z);
+        this.waitFor(h.Z);
     }
     getActivity() {
-        return E;
+        return m;
     }
     getQuery() {
         var e;
-        return null != (e = null == l ? void 0 : l.query) ? e : '';
+        return null != (e = null == r ? void 0 : r.query) ? e : '';
     }
     getResults() {
         return C;
     }
 }
-m(T, 'displayName', 'ActivityInviteModalStore');
-let P = new T(a.Z, {
+b(P, 'displayName', 'ActivityInviteModalStore');
+let S = new P(o.Z, {
         ACTIVITY_INVITE_MODAL_OPEN: function (e) {
-            (E = e.activity),
-                (b = e.resolve),
+            (m = e.activity),
+                (x = e.resolve),
                 (N = []),
-                null == l &&
-                    (l = new s.ZP(
+                null == r &&
+                    (r = new s.ZP(
                         (e, t) => {
                             (C = (
                                 '' === t.trim()
@@ -112,11 +112,11 @@ let P = new T(a.Z, {
                                                   if (null != n)
                                                       if (n.type === O.d4z.DM) {
                                                           let t = n.getRecipientId(),
-                                                              l = null != t ? p.default.getUser(t) : null;
-                                                          null != l &&
+                                                              r = null != t ? g.default.getUser(t) : null;
+                                                          null != r &&
                                                               e.push({
                                                                   type: s.h8.USER,
-                                                                  record: l,
+                                                                  record: r,
                                                                   score: 0
                                                               });
                                                       } else
@@ -139,19 +139,19 @@ let P = new T(a.Z, {
                                             return {
                                                 type: s.h8.USER,
                                                 sent: N.includes(t.id),
-                                                status: h.Z.getStatus(t.id),
+                                                status: f.Z.getStatus(t.id),
                                                 data: e
                                             };
                                         }
                                         case s.h8.TEXT_CHANNEL: {
                                             let { record: t } = e,
                                                 n = c.Z.getChannel(t.parent_id),
-                                                l = d.Z.getGuild(t.guild_id);
+                                                r = d.Z.getGuild(t.guild_id);
                                             return {
                                                 type: s.h8.TEXT_CHANNEL,
                                                 sent: N.includes(t.id),
-                                                categoryName: null != n ? (0, u.F6)(n, p.default, g.Z) : '',
-                                                guildName: null != l ? l.toString() : '',
+                                                categoryName: null != n ? (0, u.F6)(n, g.default, p.Z) : '',
+                                                guildName: null != r ? r.toString() : '',
                                                 data: e
                                             };
                                         }
@@ -168,42 +168,42 @@ let P = new T(a.Z, {
                                     }
                                 })
                                 .filter((e) => null != e)),
-                                P.emitChange();
+                                S.emitChange();
                         },
                         v,
                         100
                     )),
-                l.search('');
+                r.search('');
         },
         ACTIVITY_INVITE_MODAL_QUERY: function (e) {
             let { query: t } = e;
-            null != l && l.search(t);
+            null != r && r.search(t);
         },
         ACTIVITY_INVITE_MODAL_SEND: function (e) {
-            if (null == E) return;
+            if (null == m) return;
             let t = e.channelId,
                 n = e.userId;
             null != t
-                ? o.Z.sendActivityInvite({
+                ? a.Z.sendActivityInvite({
                       channelId: t,
                       type: O.mFx.JOIN,
-                      activity: E,
+                      activity: m,
                       location: 'Channel Text Area - Invite to Join Modal'
-                  }).then(() => x(t))
+                  }).then(() => E(t))
                 : null != n &&
-                  o.Z.sendActivityInviteUser({
+                  a.Z.sendActivityInviteUser({
                       userId: n,
                       type: O.mFx.JOIN,
-                      activity: E,
+                      activity: m,
                       location: 'Channel Text Area - Invite to Join Modal'
-                  }).then(() => x(n));
+                  }).then(() => E(n));
         },
-        ACTIVITY_INVITE_MODAL_CLOSE: I,
+        ACTIVITY_INVITE_MODAL_CLOSE: j,
         OVERLAY_SET_INPUT_LOCKED: function (e) {
             let { locked: t } = e;
-            return !!t && null != E && (I(), !0);
+            return !!t && null != m && (j(), !0);
         },
-        LOCAL_ACTIVITY_UPDATE: S,
-        RPC_APP_DISCONNECTED: S
+        LOCAL_ACTIVITY_UPDATE: I,
+        RPC_APP_DISCONNECTED: I
     }),
-    _ = 12633 == n.j ? P : null;
+    T = 12633 == n.j ? S : null;

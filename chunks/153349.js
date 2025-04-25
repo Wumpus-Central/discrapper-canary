@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(670188),
     _ = n(271383),
     y = n(496675),
-    C = n(158776),
-    x = n(471253),
+    x = n(158776),
+    C = n(471253),
     v = n(431328),
     j = n(145834),
     O = n(590415),
@@ -99,9 +99,9 @@ let A = i.memo(function (e) {
         });
         let v = t.getGuildId();
         s()(null != v, 'Channel cannot be guildless');
-        let { isMobile: E, status: I } = (0, c.cj)([C.Z], () => ({
-                isMobile: C.Z.isMobileOnline(l.user.id),
-                status: C.Z.getStatus(l.user.id, v)
+        let { isMobile: E, status: I } = (0, c.cj)([x.Z], () => ({
+                isMobile: x.Z.isMobileOnline(l.user.id),
+                status: x.Z.getStatus(l.user.id, v)
             })),
             P = (0, c.e7)([_.ZP], () => _.ZP.getMember(v, l.user.id)),
             A = (0, g.X)(t.guild_id, null == P ? void 0 : P.colorStrings),
@@ -109,10 +109,10 @@ let A = i.memo(function (e) {
         (0, f.$)(w);
         let R = l.rtsState === O.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
         function k() {
-            (0, x.DT)(t, l.user.id, !1);
+            (0, C.DT)(t, l.user.id, !1);
         }
         function M() {
-            (0, x.DT)(t, l.user.id, !0);
+            (0, C.DT)(t, l.user.id, !0);
         }
         let L = (e) => {
             (0, d.jW)(e, async () => {
