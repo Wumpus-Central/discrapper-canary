@@ -35,8 +35,8 @@ var _ = n(392750),
     L = n(735959),
     A = n(246992),
     D = n(496025),
-    M = n(442954),
-    z = n(633001),
+    z = n(442954),
+    M = n(633001),
     U = n(702904),
     B = n(178821),
     F = n(891401),
@@ -141,7 +141,7 @@ function el(e) {
                         id: 'overlay',
                         name: 'Overlay v3',
                         group: Q.v0.GAMES,
-                        render: () => (0, a.jsx)(z.Z, {})
+                        render: () => (0, a.jsx)(M.Z, {})
                     }),
                     e.push({
                         id: 'slayer_sdk',
@@ -195,7 +195,7 @@ function el(e) {
                     id: 'modals',
                     name: 'Modals',
                     group: Q.v0.UI,
-                    render: () => (0, a.jsx)(M.Z, {})
+                    render: () => (0, a.jsx)(z.Z, {})
                 }),
                 e.push({
                     id: 'affinity',

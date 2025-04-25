@@ -116,7 +116,7 @@ function Z() {
             location: 'DevToolsContentInventory',
             source: j.m1.DevTools
         }),
-        M = Object.entries(null != (t = m.K.get('GameProfileModal')) ? t : {})
+        z = Object.entries(null != (t = m.K.get('GameProfileModal')) ? t : {})
             .filter((e) => {
                 let [t, n] = e;
                 return n;
@@ -125,7 +125,7 @@ function Z() {
                 let [t] = e;
                 return t;
             }),
-        z = (0, b.Z)(M).filter(y.lm),
+        M = (0, b.Z)(z).filter(y.lm),
         U = (0, u.e7)([O.Z], () => O.Z.getFakeGameToShow());
     return (0, a.jsx)('div', {
         className: k.panel,
@@ -206,7 +206,7 @@ function Z() {
                             error: R.length > 0 && null == D ? 'No game profile for '.concat(null != A ? A : R + ' - try by id', '.') : void 0,
                             style: null != D ? { border: '1px solid green' } : {}
                         }),
-                        (0, a.jsx)('ul', { children: z.map((e) => (0, a.jsx)('li', { children: (0, a.jsx)(L, { application: e }) }, 'follow-game-'.concat(e.id))) })
+                        (0, a.jsx)('ul', { children: M.map((e) => (0, a.jsx)('li', { children: (0, a.jsx)(L, { application: e }) }, 'follow-game-'.concat(e.id))) })
                     ]
                 }),
                 (0, a.jsxs)(x.hjN, {

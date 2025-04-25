@@ -21,9 +21,9 @@ let x = (e) => {
     let { isLoading: t, rankedSkuIds: n, handleTransition: a, numVisibleItems: x, tab: O } = e,
         j = (0, o.e7)([c.default], () => c.default.getCurrentUser()),
         y = l.createRef(),
-        S = (0, m.u)(),
-        k = l.useMemo(() => S(n), [t, S, n]),
-        P = (0, b.a)()(k),
+        k = (0, m.u)(),
+        S = l.useMemo(() => k(n), [t, k, n]),
+        P = (0, b.a)()(S),
         E = (0, p.l)(P),
         w = (0, h.St)(E);
     return null == j

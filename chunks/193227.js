@@ -21,8 +21,8 @@ var r = n(200651),
     O = n(81136),
     j = n(619899),
     y = n(302800),
-    S = n(215023),
-    k = n(474936),
+    k = n(215023),
+    S = n(474936),
     P = n(484920);
 function E(e) {
     let { products: t, handleShopCardMount: n, header: l, category: a, isPremiumUser: i, isGiftEasterEggEnabled: c } = e,
@@ -56,7 +56,7 @@ function E(e) {
                                           product: e,
                                           user: u,
                                           isGiftEasterEggEnabled: c,
-                                          tab: S.AW.CATALOG
+                                          tab: k.AW.CATALOG
                                       },
                                       e.skuId
                                   )
@@ -157,7 +157,7 @@ function B(e) {
                     style: { left: ''.concat(g.current, '%') },
                     children: (0, r.jsx)(d.Z, {
                         idleAnimationState: u.SR.IDLE,
-                        giftStyle: k.Cj.BOX
+                        giftStyle: S.Cj.BOX
                     })
                 }),
             (0, r.jsx)(C.Z, {
@@ -191,7 +191,7 @@ function I(e) {
         (0, m.n)({
             sessionId: f,
             checkpoint: m.a.SHOP_MOUNTED,
-            tab: S.AW.CATALOG,
+            tab: k.AW.CATALOG,
             isFullScreen: d,
             unpublishedCategoriesShown: h,
             cacheDisabled: g
@@ -203,7 +203,7 @@ function I(e) {
             (0, m.n)({
                 sessionId: f,
                 checkpoint: m.a.SHOP_RENDERED,
-                tab: S.AW.CATALOG,
+                tab: k.AW.CATALOG,
                 isFullScreen: d,
                 unpublishedCategoriesShown: h,
                 cacheDisabled: g

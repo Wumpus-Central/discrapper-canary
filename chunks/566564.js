@@ -24,10 +24,10 @@ let j = (e) => {
         let { handleTransition: n, numVisibleItems: a, isFetchingCategories: s, tab: u, isFullScreen: v } = e,
             { noCache: x, includeUnpublished: j } = (0, f.Z)(),
             y = (0, c.sp)(),
-            S = null != (t = null == y ? void 0 : y.sessionId) ? t : '';
+            k = null != (t = null == y ? void 0 : y.sessionId) ? t : '';
         l.useEffect(() => {
             (0, b.n)({
-                sessionId: S,
+                sessionId: k,
                 checkpoint: b.a.SHOP_MOUNTED,
                 tab: u,
                 isFullScreen: v,
@@ -36,7 +36,7 @@ let j = (e) => {
             });
         }, [u]);
         let {
-                isFetchingShopHome: k,
+                isFetchingShopHome: S,
                 fetchShopHomeError: P,
                 shopBlocks: E,
                 refreshShopHome: w
@@ -49,7 +49,7 @@ let j = (e) => {
                     logPerf: !0
                 },
                 {
-                    sessionId: S,
+                    sessionId: k,
                     tab: u,
                     isFullScreen: v
                 }
@@ -60,17 +60,17 @@ let j = (e) => {
         if (
             (l.useEffect(() => {
                 null != P ||
-                    k ||
+                    S ||
                     0 === E.length ||
                     (0, b.n)({
-                        sessionId: S,
+                        sessionId: k,
                         checkpoint: b.a.SHOP_RENDERED,
                         tab: u,
                         isFullScreen: v,
                         unpublishedCategoriesShown: j,
                         cacheDisabled: x
                     });
-            }, [P, k, E.length, j, x, S, u, v]),
+            }, [P, S, E.length, j, x, k, u, v]),
             null != P)
         )
             return (0, r.jsx)(p.Z, {
@@ -78,22 +78,22 @@ let j = (e) => {
                 errorOrigin: p.i.SHOP_PAGE,
                 errorMessage: P.message
             });
-        if (k || 0 === E.length)
+        if (S || 0 === E.length)
             return (0, r.jsxs)('div', {
                 className: O.loadingContainer,
                 children: [
                     (0, r.jsx)(m.Z, {
-                        isLoading: k,
+                        isLoading: S,
                         handleTransition: n,
                         tab: u
                     }),
                     (0, r.jsx)(g.Z, {
-                        isLoading: k,
+                        isLoading: S,
                         handleTransition: n,
                         categories: []
                     }),
                     (0, r.jsx)(h.Z, {
-                        isLoading: k,
+                        isLoading: S,
                         handleTransition: n,
                         numVisibleItems: a,
                         rankedSkuIds: [],
@@ -109,7 +109,7 @@ let j = (e) => {
                     l = (0, r.jsx)(
                         m.Z,
                         {
-                            isLoading: k,
+                            isLoading: S,
                             handleTransition: n,
                             heroBlock: e,
                             tab: u
@@ -121,7 +121,7 @@ let j = (e) => {
                     l = (0, r.jsx)(
                         g.Z,
                         {
-                            isLoading: k,
+                            isLoading: S,
                             handleTransition: n,
                             featuredBlockRecord: e
                         },
@@ -132,7 +132,7 @@ let j = (e) => {
                     l = (0, r.jsx)(
                         h.Z,
                         {
-                            isLoading: k || s,
+                            isLoading: S || s,
                             handleTransition: n,
                             numVisibleItems: a,
                             rankedSkuIds: e.rankedSkuIds,

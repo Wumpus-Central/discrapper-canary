@@ -21,8 +21,8 @@ var r = n(200651),
     O = n(819640),
     j = n(594174),
     y = n(626135),
-    S = n(74538),
-    k = n(960048),
+    k = n(74538),
+    S = n(960048),
     P = n(381585),
     E = n(597688),
     w = n(328347),
@@ -100,10 +100,10 @@ let K = (e) => {
         let ex = (0, s.e7)([O.Z], () => O.Z.getLayers().includes(q.S9g.COLLECTIBLES_SHOP)),
             { onClose: eO } = (0, D.Db)(),
             ej = (0, s.e7)([j.default], () => j.default.getCurrentUser()),
-            ey = S.ZP.canUseCollectibles(ej),
+            ey = k.ZP.canUseCollectibles(ej),
             {
-                categories: eS,
-                isFetchingCategories: ek,
+                categories: ek,
+                isFetchingCategories: eS,
                 fetchCategoriesError: eP,
                 fetchPurchasesError: eE,
                 claimError: ew,
@@ -121,11 +121,11 @@ let K = (e) => {
             ),
             eI = null != (t = null != eP ? eP : eE) ? t : ew;
         (0, v.P)();
-        let eT = (0, N.O)(eS),
+        let eT = (0, N.O)(ek),
             eL = l.useRef(null),
             [eN, eA] = l.useState(!1);
         (0, R.Kp)({
-            isFetchingCategories: ek,
+            isFetchingCategories: eS,
             isLayer: ex,
             initialItemCardRef: eL
         }),
@@ -262,7 +262,7 @@ let K = (e) => {
                                                 let e = [];
                                                 return (
                                                     null != eP ? e.push('shop load fetch categories error: '.concat(eI.message)) : null != eE ? e.push('shop load fetch purchase error: '.concat(eI.message)) : e.push('shop load claim error: '.concat(eI.message)),
-                                                    k.Z.captureMessage(e.join('\n'), {
+                                                    S.Z.captureMessage(e.join('\n'), {
                                                         tags: {
                                                             isStaff: null != (l = null == ej || null == (t = ej.isStaff()) ? void 0 : t.toString()) ? l : 'unknown',
                                                             preloadEnabled: e$.toString(),
@@ -285,7 +285,7 @@ let K = (e) => {
                                                         handleTransition: eY,
                                                         numVisibleItems: eb,
                                                         tab: e,
-                                                        isFetchingCategories: ek
+                                                        isFetchingCategories: eS
                                                     });
                                                 case z.AW.CATALOG:
                                                     return (0, r.jsx)('div', {
@@ -297,7 +297,7 @@ let K = (e) => {
                                                             }),
                                                             children: [
                                                                 (0, r.jsx)(Z.Z, {
-                                                                    isFetchingCategories: ek,
+                                                                    isFetchingCategories: eS,
                                                                     sortedCategories: eX,
                                                                     setCategoryRef: eF,
                                                                     isPremiumUser: ey,

@@ -88,13 +88,13 @@ let x = s()((e) => {
         let { variantGroupProduct: t, variant: n, variantIndex: a, totalVariants: o, selectedVariantIndex: s, onEnter: d, onLeave: p, minimal: O } = e,
             { isPurchased: j } = (0, g.L)(n),
             y = (0, c.JA)('shop-variants-group-'.concat(t.storeListingId, '-').concat(a)),
-            { onFocus: S } = y,
-            k = v(y, ['onFocus']),
+            { onFocus: k } = y,
+            S = v(y, ['onFocus']),
             P = l.useCallback(
                 (e) => {
-                    e.preventDefault(), e.stopPropagation(), (0, f.$)(t, a), S();
+                    e.preventDefault(), e.stopPropagation(), (0, f.$)(t, a), k();
                 },
-                [S, t, a]
+                [k, t, a]
             );
         return (0, r.jsx)(b.ua7, {
             text: h.intl.string(h.t['/bUsx8']),
@@ -103,7 +103,7 @@ let x = s()((e) => {
             children: (e) =>
                 (0, r.jsx)(
                     b.P3F,
-                    C(_({}, k), {
+                    C(_({}, S), {
                         tag: 'li',
                         onMouseEnter: () => {
                             var t;
@@ -151,11 +151,11 @@ let x = s()((e) => {
         let { variantGroupProduct: l, className: a, previewingVariantIndexProps: o, setIsHoveringOnSwitch: s, minimal: d, purchases: g, alternativeBackgroundColor: x } = e,
             j = (0, f.o)(l, g),
             y = o.previewingVariantIndex,
-            S = null == (t = l.variants) ? void 0 : t[j],
-            k = null !== y ? (null == (n = l.variants) ? void 0 : n[y]) : void 0,
+            k = null == (t = l.variants) ? void 0 : t[j],
+            S = null !== y ? (null == (n = l.variants) ? void 0 : n[y]) : void 0,
             P = (0, p.Z)('shop-variants-group-'.concat(l.storeListingId), u.hy.HORIZONTAL);
-        if (null == S) return null;
-        let E = null != k ? k.variantLabel : null == S ? void 0 : S.variantLabel;
+        if (null == k) return null;
+        let E = null != S ? S.variantLabel : null == k ? void 0 : k.variantLabel;
         return (0, r.jsx)(c.bG, {
             navigator: P,
             children: (0, r.jsx)(c.SJ, {
