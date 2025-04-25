@@ -1,77 +1,77 @@
-n.d(t, { Z: () => C });
-var r = n(200651),
-    i = n(192379),
-    a = n(120356),
-    o = n.n(a),
-    s = n(442837),
-    l = n(481060),
-    c = n(22267),
-    u = n(442933),
-    d = n(680295),
-    f = n(687158),
-    _ = n(576635),
-    p = n(518950),
-    h = n(502762),
-    m = n(4517),
-    g = n(25990),
-    E = n(594174),
-    b = n(150039),
-    y = n(397689),
-    v = n(656229),
-    O = n(724241),
-    I = n(890876),
-    S = n(981631),
-    T = n(228168),
-    A = n(388032),
-    N = n(997926);
-function C(e) {
-    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: a, pendingBanner: s, pendingAccentColor: c, pendingBio: g, pendingPronouns: E, pendingAvatar: A, pendingAvatarDecoration: C, pendingNickname: P, pendingGlobalName: w, pendingThemeColors: D, pendingProfileEffectId: L, avatarClassName: x, containerClassName: M, isTryItOutFlow: k = !1, disabledInputs: j = !1, hideCustomStatus: U = !1, hideBioSection: G = !1, hideMessageInput: B = !0, hideExampleButton: V = !1, pendingBadges: F, shouldOpenBadgeTooltip: Z, showNameplatePreview: H = !1 } = e,
-        Y = (0, f.ZP)(t.id, null == n ? void 0 : n.id),
-        { avatarSrc: W, avatarDecorationSrc: K } = (0, p.Z)({
+n.d(t, { Z: () => N });
+var r = n(200651);
+n(192379);
+var i = n(120356),
+    a = n.n(i),
+    o = n(442837),
+    s = n(481060),
+    l = n(22267),
+    c = n(442933),
+    u = n(680295),
+    d = n(687158),
+    f = n(576635),
+    _ = n(518950),
+    p = n(502762),
+    h = n(4517),
+    m = n(25990),
+    g = n(594174),
+    E = n(150039),
+    b = n(397689),
+    y = n(656229),
+    v = n(724241),
+    O = n(890876),
+    I = n(981631),
+    S = n(228168),
+    T = n(388032),
+    A = n(997926);
+function N(e) {
+    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: o, pendingBanner: l, pendingAccentColor: m, pendingBio: g, pendingPronouns: T, pendingAvatar: N, pendingAvatarDecoration: R, pendingNickname: P, pendingGlobalName: w, pendingThemeColors: D, pendingProfileEffectId: L, avatarClassName: x, containerClassName: M, isTryItOutFlow: k = !1, disabledInputs: j = !1, hideCustomStatus: U = !1, hideBioSection: G = !1, hideMessageInput: B = !0, hideExampleButton: V = !1, pendingBadges: F, shouldOpenBadgeTooltip: Z, showNameplatePreview: H = !1 } = e,
+        Y = (0, d.ZP)(t.id, null == n ? void 0 : n.id),
+        { avatarSrc: W, avatarDecorationSrc: K } = (0, _.Z)({
             user: t,
             guildId: null == n ? void 0 : n.id,
-            avatarDecorationOverride: C,
-            avatarOverride: A,
-            size: l.EFr.SIZE_80,
+            avatarDecorationOverride: R,
+            avatarOverride: N,
+            size: s.EFr.SIZE_80,
             showPending: !0
         }),
-        z = (0, b.ZT)({
+        z = (0, E.ZT)({
             pendingProfileEffectId: L,
             displayProfile: Y
         }),
-        { theme: q, primaryColor: Q } = (0, _.Z)({
+        { theme: q, primaryColor: Q } = (0, f.Z)({
             user: t,
             displayProfile: Y,
             pendingThemeColors: D,
             isPreview: i
         }),
-        X = (0, u.H)('UserProfilePreview');
+        X = (0, c.H)('UserProfilePreview');
     return (0, r.jsxs)('div', {
-        className: N.column,
+        className: A.column,
         children: [
-            (0, r.jsxs)(h.Z, {
+            (0, r.jsxs)(p.Z, {
                 user: t,
                 displayProfile: Y,
-                themeType: T.lY.POPOUT,
+                themeType: S.lY.POPOUT,
                 pendingThemeColors: D,
-                className: o()(N.container, M),
+                className: a()(A.container, M),
                 forceShowPremium: i,
                 children: [
                     (0, r.jsxs)('header', {
-                        className: N.header,
+                        className: A.header,
                         children: [
-                            (0, r.jsx)(v.Z, {
+                            (0, r.jsx)(y.Z, {
                                 user: t,
                                 displayProfile: Y,
                                 guildId: null == n ? void 0 : n.id,
                                 canUsePremiumCustomization: i,
-                                pendingBanner: s,
-                                pendingAccentColor: c,
+                                pendingBanner: l,
+                                pendingAccentColor: m,
                                 isTryItOutFlow: k,
                                 disabledInputs: j,
-                                onUpsellClick: () => (null == a ? void 0 : a({ object: S.qAy.EDIT_PROFILE_BANNER }))
+                                onUpsellClick: () => (null == o ? void 0 : o({ object: I.qAy.EDIT_PROFILE_BANNER }))
                             }),
-                            (0, r.jsx)(y.Z, {
+                            (0, r.jsx)(b.Z, {
                                 user: t,
                                 guild: n,
                                 displayProfile: Y,
@@ -83,66 +83,61 @@ function C(e) {
                                 className: x,
                                 disabledInputs: j,
                                 isTryItOutFlow: k,
-                                onUpsellClick: () => (null == a ? void 0 : a({ object: S.qAy.AVATAR }))
+                                onUpsellClick: () => (null == o ? void 0 : o({ object: I.qAy.AVATAR }))
                             }),
                             !U &&
-                                (0, r.jsx)(m.Z, {
+                                (0, r.jsx)(h.Z, {
                                     location: 'UserProfilePreview',
                                     user: t,
-                                    themeType: T.lY.POPOUT,
+                                    themeType: S.lY.POPOUT,
                                     disableEdit: j
                                 })
                         ]
                     }),
-                    (0, r.jsx)(O.Z, {
+                    (0, r.jsx)(v.Z, {
                         user: t,
                         displayProfile: Y,
                         guild: n,
-                        pendingAvatar: A,
+                        pendingAvatar: N,
                         pendingNickname: P,
                         pendingGlobalName: w,
                         pendingBio: g,
-                        pendingPronouns: E,
+                        pendingPronouns: T,
                         isTryItOutFlow: k,
                         hideBioSection: G,
                         pendingBadges: F,
                         shouldOpenBadgeTooltip: Z
                     }),
-                    (0, r.jsx)(I.Z, {
+                    (0, r.jsx)(O.Z, {
                         user: t,
                         hideMessageInput: B,
                         hideExampleButton: V
                     }),
-                    null != z && (0, r.jsx)(d.Z, { profileEffectId: z })
+                    null != z && (0, r.jsx)(u.Z, { profileEffectId: z })
                 ]
             }),
-            X && H && (0, r.jsx)(R, {})
+            X && H && (0, r.jsx)(C, {})
         ]
     });
 }
-function R() {
-    var e;
-    let t = (0, s.e7)([E.default], () => E.default.getCurrentUser()),
-        n = (0, s.e7)([g.Z], () => g.Z.getPendingNameplate()),
-        a = i.useMemo(() => {
-            var e;
-            return null == t || null == (e = t.collectibles) || e.nameplate, A.intl.string(A.t.ziaxGh);
-        }, [null == t || null == (e = t.collectibles) ? void 0 : e.nameplate, n]);
-    return null == t
+function C() {
+    let e = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
+        t = (0, o.e7)([m.Z], () => m.Z.getPendingNameplate());
+    return null == e
         ? null
         : (0, r.jsxs)('div', {
-              className: N.nameplatePreviewSection,
+              className: A.nameplatePreviewSection,
               children: [
-                  (0, r.jsx)(l.Text, {
+                  (0, r.jsx)(s.Text, {
                       variant: 'eyebrow',
-                      children: a.toLocaleUpperCase()
+                      children: T.intl.string(T.t['7KRt6e']).toLocaleUpperCase()
                   }),
-                  (0, r.jsx)(c.Z, {
-                      user: t,
-                      nameplate: n,
-                      nameplateData: void 0 === n ? t.nameplate : void 0,
+                  (0, r.jsx)(l.Z, {
+                      user: e,
+                      nameplate: t,
+                      nameplateData: void 0 === t ? e.nameplate : void 0,
                       isHighlighted: !0,
-                      className: N.nameplate
+                      className: A.nameplate
                   })
               ]
           });
