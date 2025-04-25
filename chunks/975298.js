@@ -16,13 +16,19 @@ var r = n(192379),
     g = n(981631),
     E = n(474936);
 function b() {
-    let { forceFetch: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : { forceFetch: !1 },
-        t = (0, c.e7)([f.default], () => f.default.getCurrentUser()),
-        n = (0, c.Wu)([p.Z], () => p.Z.getFractionalPremium()),
-        i = (0, c.e7)([p.Z], () => p.Z.fetchedAllEntitlements),
-        s = (0, c.Wu)([p.Z], () => p.Z.getUnactivatedFractionalPremiumUnits()),
-        b = (0, c.e7)([_.ZP], () => _.ZP.getPremiumTypeSubscription()),
-        [y, v] = r.useState({
+    let { forceFetch: e, excludeReverseTrial: t } =
+            arguments.length > 0 && void 0 !== arguments[0]
+                ? arguments[0]
+                : {
+                      forceFetch: !1,
+                      excludeReverseTrial: !1
+                  },
+        n = (0, c.e7)([f.default], () => f.default.getCurrentUser()),
+        i = (0, c.Wu)([p.Z], () => p.Z.getFractionalPremium({ excludeReverseTrial: t })),
+        s = (0, c.e7)([p.Z], () => p.Z.fetchedAllEntitlements),
+        b = (0, c.Wu)([p.Z], () => p.Z.getUnactivatedFractionalPremiumUnits()),
+        y = (0, c.e7)([_.ZP], () => _.ZP.getPremiumTypeSubscription()),
+        [v, O] = r.useState({
             isFractionalPremiumActive: !1,
             fractionalState: E.a$.NONE,
             startsAt: l()(0),
@@ -33,10 +39,10 @@ function b() {
         });
     return (
         (0, d.ZP)(() => {
-            (null != t || e) && (p.Z.fetchingAllEntitlements || (0, u.p0)({ entitlementType: g.qc2.FRACTIONAL_REDEMPTION }));
+            (null != n || e) && (p.Z.fetchingAllEntitlements || (0, u.p0)({ entitlementType: g.qc2.FRACTIONAL_REDEMPTION }));
         }),
         r.useEffect(() => {
-            if (null == t || (0 === n.length && 0 === s.length)) {
+            if (null == n || (0 === i.length && 0 === b.length)) {
                 let e = {
                     isFractionalPremiumActive: !1,
                     fractionalState: E.a$.NONE,
@@ -44,30 +50,30 @@ function b() {
                     endsAt: l()(0),
                     currentEntitlementId: '',
                     unactivatedUnits: [],
-                    fetched: i
+                    fetched: s
                 };
-                v((t) => ((0, o.isEqual)(t, e) ? t : e));
+                O((t) => ((0, o.isEqual)(t, e) ? t : e));
                 return;
             }
-            let e = n.filter((e) => null != e.endsAt && null != e.startsAt).sort((e, t) => ((a()(null != e.endsAt && null != t.endsAt, 'endsAt should not be null'), e.endsAt < t.endsAt) ? -1 : +(e.endsAt > t.endsAt)));
-            if ((e.reverse(), e.length > 0 && (e.length !== n.length || null == e[0].startsAt || null == e[0].endsAt))) {
-                let e = Array.from(n.values()).map((e) => e.id),
+            let e = i.filter((e) => null != e.endsAt && null != e.startsAt).sort((e, t) => ((a()(null != e.endsAt && null != t.endsAt, 'endsAt should not be null'), e.endsAt < t.endsAt) ? -1 : +(e.endsAt > t.endsAt)));
+            if ((e.reverse(), e.length > 0 && (e.length !== i.length || null == e[0].startsAt || null == e[0].endsAt))) {
+                let e = Array.from(i.values()).map((e) => e.id),
                     t = 'fractional redemption entitlements should have startsAt/endsAt';
                 throw ((0, h.g9)(t, { extra: { entitlementIds: e } }), Error(t));
             }
-            let r = e.length > 0,
-                c = E.a$.NONE;
-            r && (c = null != b && b.status === g.O0b.PAUSED ? E.a$.FP_SUB_PAUSED : E.a$.FP_ONLY),
-                v({
-                    isFractionalPremiumActive: r,
-                    fractionalState: c,
-                    startsAt: r ? l()(e[0].startsAt) : l()(0),
-                    endsAt: r ? l()((0, m.N1)(e[0].endsAt, s)) : l()(0),
+            let t = e.length > 0,
+                r = E.a$.NONE;
+            t && (r = null != y && y.status === g.O0b.PAUSED ? E.a$.FP_SUB_PAUSED : E.a$.FP_ONLY),
+                O({
+                    isFractionalPremiumActive: t,
+                    fractionalState: r,
+                    startsAt: t ? l()(e[0].startsAt) : l()(0),
+                    endsAt: t ? l()((0, m.N1)(e[0].endsAt, b)) : l()(0),
                     currentEntitlementId: e.length > 0 ? e[0].id : '',
-                    unactivatedUnits: s,
-                    fetched: i
+                    unactivatedUnits: b,
+                    fetched: s
                 });
-        }, [t, n, b, s, i]),
-        y
+        }, [n, i, y, b, s]),
+        v
     );
 }
