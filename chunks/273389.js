@@ -7,19 +7,19 @@ var r = n(200651),
     s = n(18537);
 let c = (e) => {
     let t,
-        { button: n, submitting: c, disableNext: d, onClick: u, canNavigateBack: m, onBackClicked: x } = e,
-        p = l.useRef(null),
+        { button: n, submitting: c, disableNext: d, onClick: u, canNavigateBack: m, onBackClicked: p } = e,
+        x = l.useRef(null),
         b = null != n && 'cancel' !== n.type,
-        h = m && (null == n ? void 0 : n.type) !== 'done',
-        _ = b || h;
+        _ = m && (null == n ? void 0 : n.type) !== 'done',
+        h = b || _;
     if (
         (l.useEffect(() => {
             if ((null == n ? void 0 : n.type) === 'submit' || (null == n ? void 0 : n.type) === 'done') {
                 var e;
-                null == (e = p.current) || e.focus();
+                null == (e = x.current) || e.focus();
             }
         }, [null == n ? void 0 : n.type]),
-        !_)
+        !h)
     )
         return null;
     let f = o.intl.string(o.t.i4jeWV);
@@ -28,9 +28,9 @@ let c = (e) => {
         (0, r.jsxs)(i.mzw, {
             direction: a.Z.Direction.HORIZONTAL,
             children: [
-                h &&
+                _ &&
                     (0, r.jsx)(i.zxk, {
-                        onClick: x,
+                        onClick: p,
                         color: i.zxk.Colors.TRANSPARENT,
                         disabled: c,
                         children: o.intl.string(o.t['13/7kZ'])
@@ -43,7 +43,7 @@ let c = (e) => {
                         color: t,
                         className: s.actionButton,
                         disabled: c || d,
-                        buttonRef: p,
+                        buttonRef: x,
                         children: f
                     })
             ]

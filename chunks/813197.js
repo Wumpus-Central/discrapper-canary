@@ -27,7 +27,7 @@ function u() {
     return [
         {
             name: l.intl.string(l.t.Sp2NFx),
-            extensions: ['jpg', 'jpeg', 'png', 'gif', 'webp']
+            extensions: ['jpg', 'jpeg', 'png', 'gif', 'webp', 'avif']
         }
     ];
 }

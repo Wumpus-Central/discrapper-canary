@@ -11,8 +11,8 @@ var i = n(200651),
     f = n(556012),
     g = n(572456),
     m = n(434404),
-    h = n(981631),
-    b = n(273504),
+    b = n(981631),
+    h = n(273504),
     p = n(388032),
     O = n(466745);
 function y(e) {
@@ -58,7 +58,7 @@ function E(e, t) {
         e
     );
 }
-let v = b.fX.KEYWORD;
+let v = h.fX.KEYWORD;
 function j(e, t) {
     let { perGuildMaxCount: n } = c.I6[v],
         { isLoading: j, saveRule: S, errorMessage: P } = (0, d.w)(),
@@ -70,20 +70,20 @@ function j(e, t) {
             var e;
             return null != (e = T[v]) ? e : [];
         }, [T]),
-        D = 0 === w.length,
-        A = n > w.length && !D;
+        A = 0 === w.length,
+        D = n > w.length && !A;
     if (!r.useMemo(() => (0, u.ze)(t), [t]) || null == e || 0 === e.length || null == t) return null;
     let C = e.split(' '),
-        R = C.length;
+        L = C.length;
     try {
-        (0, o.km)(C, b.RH);
+        (0, o.km)(C, h.RH);
     } catch (e) {
         return null;
     }
-    let L = () => {
+    let R = () => {
             null != t &&
                 ((0, a.Zy)(),
-                m.Z.open(t, h.pNK.GUILD_AUTOMOD),
+                m.Z.open(t, b.pNK.GUILD_AUTOMOD),
                 setTimeout(() => {
                     _(t, v, {
                         triggerMetadata: {
@@ -112,11 +112,11 @@ function j(e, t) {
         I ||
             (G = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    D &&
+                    A &&
                         (0, i.jsx)(l.sNh, {
                             id: 'add-first-rule',
                             label: p.intl.string(p.t.f72Zqa),
-                            action: L,
+                            action: R,
                             disabled: j
                         }),
                     w.map((e) => {
@@ -148,14 +148,14 @@ function j(e, t) {
                             e.id
                         );
                     }),
-                    A &&
+                    D &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(l.Clw, {}),
                                 (0, i.jsx)(l.sNh, {
                                     id: 'add-another-rule',
                                     label: p.intl.string(p.t['0K5jDA']),
-                                    action: L,
+                                    action: R,
                                     disabled: j
                                 })
                             ]
@@ -164,7 +164,7 @@ function j(e, t) {
             })),
         (0, i.jsx)(l.sNh, {
             id: 'guild-automod-add-selection',
-            label: p.intl.formatToPlainString(p.t.Kkjv1t, { keywordCount: R }),
+            label: p.intl.formatToPlainString(p.t.Kkjv1t, { keywordCount: L }),
             onFocus: () => {
                 Z || (N(!0), x());
             },

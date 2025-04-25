@@ -19,7 +19,7 @@ let d = (t) => {
             icon: u,
             description: d,
             color: f,
-            tooltip: O
+            tooltip: g
         } = {
             0: {
                 icon: a.gm1,
@@ -80,7 +80,7 @@ let d = (t) => {
             }),
             (0, i.jsx)(a.DY3, {
                 position: 'right',
-                text: O,
+                text: g,
                 children: (0, i.jsx)(a.P4T, {
                     size: 'custom',
                     width: 20,

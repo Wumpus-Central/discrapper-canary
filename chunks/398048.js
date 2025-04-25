@@ -1,4 +1,4 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => u });
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -6,9 +6,9 @@ var i = n(442837),
     o = n(496675),
     c = n(981631),
     a = n(388032);
-function s(e, t) {
-    let s = (0, i.e7)([o.Z], () => o.Z.can(c.Plq.MANAGE_CHANNELS, e), [e]);
-    return __OVERLAY__ || !s
+function u(e, t) {
+    let u = (0, i.e7)([o.Z], () => o.Z.can(c.Plq.MANAGE_CHANNELS, e), [e]);
+    return __OVERLAY__ || !u
         ? null
         : (0, r.jsx)(l.sNh, {
               id: 'clone-channel',

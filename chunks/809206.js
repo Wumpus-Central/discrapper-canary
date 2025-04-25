@@ -109,7 +109,7 @@ async function E(e) {
     );
 }
 function b(e) {
-    let { username: t, discriminator: n, email: r, emailToken: a, password: s, avatar: c, avatarDescription: _, avatarId: h, avatarDecoration: m, newPassword: g, globalName: b, nameplate: y } = e;
+    let { username: t, discriminator: n, email: r, emailToken: a, password: s, avatar: c, avatarDescription: _, avatarId: h, avatarDecoration: m, newPassword: g, globalName: b, nameplate: y, primaryGuildId: v } = e;
     return (
         o.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT' }),
         (0, l.Z)(
@@ -129,12 +129,12 @@ function b(e) {
                     },
                     e
                 );
-                null === m && (o.avatar_decoration_id = null), null != m && ((o.avatar_decoration_id = m.id), (o.avatar_decoration_sku_id = m.skuId)), null === y && (o.nameplate_id = null), null != y && ((o.nameplate_id = y.id), (o.nameplate_sku_id = y.skuId));
+                null === m && (o.avatar_decoration_id = null), null != m && ((o.avatar_decoration_id = m.id), (o.avatar_decoration_sku_id = m.skuId)), null === y && (o.nameplate_id = null), null != y && ((o.nameplate_id = y.id), (o.nameplate_sku_id = y.skuId)), void 0 !== v && (o.primary_guild_id = v);
                 let l = i.K.get(u.JkL),
                     f = (0, d.xJ)();
                 null != f && null != l && ((o.push_provider = f), (o.push_token = l));
-                let v = i.K.get(u.scU);
-                return null != d.mv && null != v && ((o.push_voip_provider = d.mv), (o.push_voip_token = v)), E(o);
+                let O = i.K.get(u.scU);
+                return null != d.mv && null != O && ((o.push_voip_provider = d.mv), (o.push_voip_token = O)), E(o);
             },
             {
                 checkEnabled: !1,

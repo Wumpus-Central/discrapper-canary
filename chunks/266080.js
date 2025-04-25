@@ -10,25 +10,25 @@ var r = n(200651),
     u = n(388032);
 let m = (e) => {
     let { guildId: t, reportId: n } = e,
-        [m, x] = l.useState(!1),
-        p = c.Z.getGuild(t),
-        b = null != p;
+        [m, p] = l.useState(!1),
+        x = c.Z.getGuild(t),
+        b = null != x;
     l.useEffect(() => {
-        x(!b);
+        p(!b);
     }, [b]);
-    let h = l.useCallback(() => {
-        x(!0),
+    let _ = l.useCallback(() => {
+        p(!0),
             a.ZP.trackWithMetadata(d.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
                 guild_id: t,
                 report_id: n
             }),
             o.Z.leaveGuild(t);
     }, [t, n]);
-    return null == p
+    return null == x
         ? null
         : (0, r.jsx)(s.ZP, {
               title: u.intl.string(u.t.cU96io),
-              description: u.intl.formatToPlainString(u.t['26mR6+'], { guildName: null == p ? void 0 : p.name }),
+              description: u.intl.formatToPlainString(u.t['26mR6+'], { guildName: null == x ? void 0 : x.name }),
               buttonText: m ? u.intl.string(u.t['9Ak99v']) : u.intl.string(u.t.F3qExs),
               buttonDisabled: m,
               buttonColor: i.zxk.Colors.RED,
@@ -63,10 +63,10 @@ let m = (e) => {
                               return e;
                           })(
                               {
-                                  header: u.intl.formatToPlainString(u.t['1GX6Pz'], { name: p.name }),
+                                  header: u.intl.formatToPlainString(u.t['1GX6Pz'], { name: x.name }),
                                   confirmText: u.intl.string(u.t.J2TBi4),
                                   cancelText: u.intl.string(u.t['ETE/oK']),
-                                  onConfirm: h
+                                  onConfirm: _
                               },
                               e
                           )),
@@ -74,7 +74,7 @@ let m = (e) => {
                               {
                                   children: (0, r.jsx)(i.Text, {
                                       variant: 'text-md/normal',
-                                      children: u.intl.format(u.t.ZEXC0t, { name: p.name })
+                                      children: u.intl.format(u.t.ZEXC0t, { name: x.name })
                                   })
                               }),
                           Object.getOwnPropertyDescriptors

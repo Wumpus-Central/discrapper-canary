@@ -6,13 +6,13 @@ n.d(t, {
     Hd: () => N,
     Xl: () => T,
     dF: () => C,
-    eM: () => R,
+    eM: () => L,
     fB: () => _,
-    gK: () => D,
+    gK: () => A,
     mG: () => M,
-    qe: () => A,
+    qe: () => D,
     rY: () => x,
-    ts: () => L,
+    ts: () => R,
     zW: () => S
 }),
     n(200651),
@@ -31,8 +31,8 @@ var c = n(623292),
     f = n(314897),
     g = n(592125),
     m = n(626135),
-    h = n(934415),
-    b = n(572004),
+    b = n(934415),
+    h = n(572004),
     p = n(585483),
     O = n(709054),
     y = n(111618),
@@ -44,14 +44,14 @@ function S(e) {
     null != t && s.Z.open(t, j.pNK.ENGAGEMENT);
 }
 function P(e, t, n) {
-    (0, b.JG)(n.shiftKey ? ''.concat(t.channel_id, '-').concat(t.id) : t.id);
+    (0, h.JG)(n.shiftKey ? ''.concat(t.channel_id, '-').concat(t.id) : t.id);
 }
 function _(e, t) {
     m.default.track(j.rMx.MESSAGE_LINK_COPIED, {
         message_id: t.id,
         channel: t.channel_id
     }),
-        (0, b.JG)((0, h.wR)(e.guild_id, e.id, t.id));
+        (0, h.JG)((0, b.wR)(e.guild_id, e.id, t.id));
 }
 function Z(e, t, n) {
     t.state === j.yb.SEND_FAILED || n.shiftKey ? r.Z.deleteMessage(e.id, t.id, t.state === j.yb.SEND_FAILED) : l.Z.confirmDelete(e, t);
@@ -83,10 +83,10 @@ function w(e, t, n) {
     }),
         p.S.dispatchToLastSubscribed(j.CkL.TEXTAREA_FOCUS);
 }
-function D(e, t) {
+function A(e, t) {
     (0, d.R6)(e, t, 'Message');
 }
-function A(e, t) {
+function D(e, t) {
     let n = g.Z.getChannel(O.default.castMessageIdAsChannelId(t.id));
     null != n && (0, d.ok)(n);
 }
@@ -96,13 +96,13 @@ function C(e, t) {
         messageId: t.id
     });
 }
-function R(e, t) {
+function L(e, t) {
     (0, u.x)({
         channelId: e.id,
         messageId: t.id
     });
 }
-function L(e, t) {
+function R(e, t) {
     (0, o.l8)({
         message: t,
         source: 'message-actions'

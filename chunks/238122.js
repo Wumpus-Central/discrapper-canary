@@ -10,8 +10,8 @@ var r = n(200651),
 let u = (e) => {
         var t, n;
         let {
-                data: { title: u, subtitle: m, placeholder: x, rows: p, character_limit: b, pattern: h },
-                onChange: _,
+                data: { title: u, subtitle: m, placeholder: p, rows: x, character_limit: b, pattern: _ },
+                onChange: h,
                 initialText: f,
                 isRequired: g
             } = e,
@@ -66,22 +66,22 @@ let u = (e) => {
         }, [f]);
         let I = l.useCallback(
             (e) => {
-                let t = null != h ? new RegExp(h) : null;
+                let t = null != _ ? new RegExp(_) : null;
                 null == t || t.test(e)
                     ? null != e &&
                       (Z(null),
                       y(e),
-                      _({
+                      h({
                           value: e,
                           isValid: !0
                       }))
                     : (Z(s.intl.string(s.t['24xrGR'])),
-                      _({
+                      h({
                           value: e,
                           isValid: !1
                       }));
             },
-            [_, h]
+            [h, _]
         );
         return (0, r.jsxs)('div', {
             className: d.marginBottom8,
@@ -106,8 +106,8 @@ let u = (e) => {
                     onChange: I,
                     value: j,
                     error: O,
-                    rows: p,
-                    placeholder: x,
+                    rows: x,
+                    placeholder: p,
                     autoFocus: !0
                 }),
                 null != m &&

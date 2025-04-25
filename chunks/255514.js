@@ -9,11 +9,11 @@ var r = n(200651),
     d = n(778231),
     u = n(816342),
     m = n(15667),
-    x = n(76264),
-    p = n(805746),
+    p = n(76264),
+    x = n(805746),
     b = n(822686),
-    h = n(356110),
-    _ = n(730719),
+    _ = n(356110),
+    h = n(730719),
     f = n(996701),
     g = n(238122),
     v = n(273514),
@@ -90,9 +90,9 @@ let V = (e) => {
         [eo, es] = l.useState(!1),
         [ec, ed] = l.useState(!1),
         [eu, em] = l.useState(''),
-        [ex, ep] = l.useState(() => ({})),
-        [eb, eh] = l.useState(() => ({})),
-        [e_, ef] = l.useState((0, s.VP)(el, ei, et, ee, J)),
+        [ep, ex] = l.useState(() => ({})),
+        [eb, e_] = l.useState(() => ({})),
+        [eh, ef] = l.useState((0, s.VP)(el, ei, et, ee, J)),
         eg = l.useMemo(() => ('message' === n.name ? n.record.channel_id : void 0), [n]),
         ev = function (e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
@@ -101,8 +101,8 @@ let V = (e) => {
                 value: t,
                 isValid: n
             }),
-                eh(r),
-                ef((0, s.VP)(el, ei, et, r, ex));
+                e_(r),
+                ef((0, s.VP)(el, ei, et, r, ep));
         },
         ej = l.useMemo(
             () => (e) => {
@@ -114,15 +114,15 @@ let V = (e) => {
                         null != et
                             ? {
                                   name: et.name,
-                                  state: ex
+                                  state: ep
                               }
                             : void 0
                 });
             },
-            [t, K, et, ex, eb, el, ei]
+            [t, K, et, ep, eb, el, ei]
         );
     l.useEffect(() => {
-        null != J && ep(J), null != ee && eh(ee);
+        null != J && ex(J), null != ee && e_(ee);
     }, [J, ee]);
     let ey = (e) => {
             e === z.evJ.INVALID_FORM_BODY ? em(U.intl.string(U.t.VjAAuL)) : em(U.intl.string(U.t.h6D8V1));
@@ -168,7 +168,7 @@ let V = (e) => {
                     null != en && (0, r.jsx)(L.Z, { element: en }),
                     null != ea && (0, r.jsx)(A.Z, { element: ea }),
                     null != q(t, 'breadcrumbs') && (0, r.jsx)(m.Z, { history: H }),
-                    null != q(t, 'message_preview') && ('message' === n.name || 'first_dm' === n.name) && (0, r.jsx)(P.Z, { message: n.record }),
+                    null != q(t, 'message_preview') && ('message' === n.name || 'first_dm' === n.name || 'report_to_mod_message' === n.name) && (0, r.jsx)(P.Z, { message: n.record }),
                     null != q(t, 'user_preview') && 'user' === n.name ? (0, r.jsx)(M.Z, { user: n.record }) : null,
                     null != q(t, 'guild_preview') && 'guild' === n.name ? (0, r.jsx)(y.Z, { guild: n.record }) : null,
                     (function (e) {
@@ -187,7 +187,7 @@ let V = (e) => {
                                         reportId: $
                                     }),
                                 null != q(t, 'block_users') &&
-                                    ('message' === n.name || 'first_dm' === n.name || 'user' === n.name || ('application' === n.name && null != n.record.bot)) &&
+                                    ('message' === n.name || 'first_dm' === n.name || 'user' === n.name || 'report_to_mod_message' === n.name || ('application' === n.name && null != n.record.bot)) &&
                                     (0, r.jsx)(u.Z, {
                                         user: 'application' === n.name ? n.record.bot : 'user' === n.name ? n.record : n.record.author,
                                         channelId: eg,
@@ -196,14 +196,14 @@ let V = (e) => {
                                     }),
                                 !eI &&
                                     null != q(t, 'mute_users') &&
-                                    ('message' === n.name || 'first_dm' === n.name || 'user' === n.name) &&
+                                    ('message' === n.name || 'first_dm' === n.name || 'user' === n.name || 'report_to_mod_message' === n.name) &&
                                     (0, r.jsx)(T.Z, {
                                         user: 'user' === n.name ? n.record : n.record.author,
                                         channelId: eg,
                                         reportId: $
                                     }),
                                 null != q(t, 'delete_message') &&
-                                    'message' === n.name &&
+                                    ('message' === n.name || 'report_to_mod_message' === n.name) &&
                                     (0, r.jsx)(b.Z, {
                                         message: n.record,
                                         reportId: $
@@ -216,7 +216,7 @@ let V = (e) => {
                                     }),
                                 null != q(t, 'deauthorize_app') &&
                                     'application' === n.name &&
-                                    (0, r.jsx)(p.Z, {
+                                    (0, r.jsx)(x.Z, {
                                         application: n.record,
                                         reportId: $
                                     }),
@@ -229,7 +229,7 @@ let V = (e) => {
                             ]
                         }),
                     null != q(t, 'settings_upsells') &&
-                        'message' === n.name &&
+                        ('message' === n.name || 'report_to_mod_message' === n.name) &&
                         null != eZ &&
                         (0, r.jsx)(w.Z, {
                             settingsUpsells: eZ,
@@ -248,15 +248,15 @@ let V = (e) => {
                         (0, r.jsx)(S.Z, {
                             element: et,
                             onChange: (e, t) => {
-                                let n = W({}, ex);
-                                e in ex ? delete n[e] : (n[e] = t), ep(n), ef((0, s.VP)(el, ei, et, eb, n));
+                                let n = W({}, ep);
+                                e in ep ? delete n[e] : (n[e] = t), ex(n), ef((0, s.VP)(el, ei, et, eb, n));
                             },
-                            state: ex
+                            state: ep
                         }),
                     F.includes(n.name) &&
                         null != ei &&
                         ei.length > 0 &&
-                        (0, r.jsx)(h.Z, {
+                        (0, r.jsx)(_.Z, {
                             elements: ei,
                             onChange: ev,
                             state: eb
@@ -272,14 +272,14 @@ let V = (e) => {
                     (0, r.jsxs)('div', {
                         className: G.listContainer,
                         children: [
-                            (0, r.jsx)(x.Z, {
+                            (0, r.jsx)(p.Z, {
                                 node: t,
                                 onSelectChild: ej
                             }),
                             null != er && er.length > 0 ? (0, r.jsx)(f.Z, { elements: er }) : null
                         ]
                     }),
-                    (0, r.jsx)(_.Z, {
+                    (0, r.jsx)(h.Z, {
                         errorMessage: eu,
                         onClose: () => {
                             em('');
@@ -290,7 +290,7 @@ let V = (e) => {
             (0, r.jsx)(c.Z, {
                 button: t.button,
                 submitting: eo,
-                disableNext: e_,
+                disableNext: eh,
                 onClick: (e) => {
                     switch (e.type) {
                         case 'done':
