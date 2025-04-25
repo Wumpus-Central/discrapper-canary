@@ -1,8 +1,8 @@
 n.d(t, {
-    Q4: () => R,
-    Vv: () => S,
-    oO: () => A,
-    po: () => T,
+    Q4: () => C,
+    Vv: () => I,
+    oO: () => T,
+    po: () => S,
     x_: () => d.Z
 }),
     n(388685),
@@ -46,32 +46,31 @@ let h = 5,
     m = /\.webp($|\?|#)/i,
     g = /\.avif($|\?|#)/i,
     E = [16, 20, 22, 24, 28, 32, 40, 44, 48, 56, 60, 64, 80, 96, 100, 128, 160, 240, 256, 300, 320, 480, 512, 600, 640, 1024, 1280, 1536, 2048, 3072, 4096],
-    b = 4096,
-    y = new (o())({ max: 1000 });
-function v(e, t) {
+    b = new (o())({ max: 1000 });
+function y(e, t) {
     null == e.backoff && (e.backoff = new l.Z());
     let { backoff: n } = e;
     return async () => {
         await u.Z.isOnline(),
             n.fails < h
                 ? n.fail(() => {
-                      O(e);
+                      v(e);
                   })
-                : I(!0, e, t);
+                : O(!0, e, t);
     };
 }
-function O(e) {
+function v(e) {
     let t = new Image();
-    (t.onerror = v(e, t)),
+    (t.onerror = y(e, t)),
         (t.onload = () => {
             let { backoff: n } = e;
-            null != n && n.succeed(), I(!1, e, t);
+            null != n && n.succeed(), O(!1, e, t);
         }),
         (t.src = e.url);
 }
-function I(e, t, n) {
+function O(e, t, n) {
     let { callbacks: r, url: i } = t;
-    if (e) y.del(i);
+    if (e) b.del(i);
     else {
         let { width: e, height: r } = n;
         (t = {
@@ -80,16 +79,16 @@ function I(e, t, n) {
             width: e,
             height: r
         }),
-            y.set(i, t);
+            b.set(i, t);
     }
     null != r && r.forEach((n) => n(e, t));
 }
-function S(e) {
-    let t = y.get(e);
+function I(e) {
+    let t = b.get(e);
     return null != t && t.loaded;
 }
-function T(e, t) {
-    let n = y.get(e);
+function S(e, t) {
+    let n = b.get(e);
     if (null != n && n.loaded)
         return (
             null != t &&
@@ -115,8 +114,8 @@ function T(e, t) {
                     url: e,
                     loaded: !1
                 }),
-                y.set(e, n),
-                O(n)),
+                b.set(e, n),
+                v(n)),
             null != t && ((r = t.bind(null)), null == n.callbacks && (n.callbacks = new Set()), n.callbacks.add(r)),
             () => {
                 null != r && null != n && (null != n.callbacks && n.callbacks.delete(r), null != n.backoff && n.backoff.cancel());
@@ -124,7 +123,7 @@ function T(e, t) {
         );
     }
 }
-function A(e) {
+function T(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (n) {
@@ -133,30 +132,30 @@ function A(e) {
     }
     return null != (t = E.find((t) => e <= t)) ? t : E[E.length - 1];
 }
-function N(e) {
+function A(e) {
     let [t, n] = e.split('?');
     return [t, s.parse(n)];
 }
-function C(e) {
-    let { src: t, sourceWidth: n, sourceHeight: r, targetWidth: a, targetHeight: o, format: l = null, quality: u = null, animated: d = !1, srcIsAnimated: f = !1 } = e;
+function N(e) {
+    let { src: t, sourceWidth: n, sourceHeight: r, targetWidth: a, targetHeight: o, format: l = null, quality: u = null, animated: d = !1, srcIsAnimated: _ = !1 } = e;
     if (t.startsWith('data:image')) return t;
-    let [_, p] = N(t);
-    null != l && (p.format = l), null != u && (p.quality = u), d && f && (m.test(t) || g.test(t)) && (p.animated = !0), g.test(t) && (p.format = 'webp');
-    let h = (0, c.Tj)({
+    let [p, h] = A(t);
+    null != l && (h.format = l), null != u && (h.quality = u), d && _ && (m.test(t) || g.test(t)) && (h.animated = !0), g.test(t) && (h.format = 'webp');
+    let E = (0, c.Tj)({
         width: a,
         height: o,
-        maxWidth: b,
-        maxHeight: b
+        maxWidth: f.hiG,
+        maxHeight: f.hiG
     });
-    return (a = h.width), (o = h.height), (a !== n || o !== r) && ((p.width = 0 | a), (p.height = 0 | o)), i().isEmpty(p) || (_ += '?' + s.stringify(p)), _;
+    return (a = E.width), (o = E.height), (a !== n || o !== r) && ((h.width = 0 | a), (h.height = 0 | o)), i().isEmpty(h) || (p += '?' + s.stringify(h)), p;
 }
-function R(e) {
+function C(e) {
     let { src: t, width: n, height: r, maxWidth: i, maxHeight: a, ratio: o = 1, format: s = null, quality: l = null, animated: c = !1, srcIsAnimated: u = !1 } = e,
         f = n,
         _ = r;
     o < 1 && ((f = Math.round(n * o)), (_ = Math.round(r * o))), null != i && (f = Math.min(f, i)), null != a && (_ = Math.min(_, a));
     let p = (0, d.Z)();
-    return C({
+    return N({
         src: t,
         sourceWidth: n,
         sourceHeight: r,
