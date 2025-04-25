@@ -1,6 +1,6 @@
 t.a(e, async function (e, r) {
     try {
-        t.r(n), t.d(n, { default: () => b });
+        t.r(n), t.d(n, { default: () => h });
         var l = t(200651);
         t(192379);
         var i = t(138546),
@@ -8,34 +8,36 @@ t.a(e, async function (e, r) {
             o = t(63681),
             c = t(12781),
             a = t(980426),
-            d = t(733653),
-            s = t(249597),
-            f = t(312539),
-            _ = t(325980),
-            g = e([i]);
-        i = (g.then ? (await g)() : g)[0];
-        let h = {
+            d = t(659700),
+            s = t(733653),
+            f = t(249597),
+            _ = t(312539),
+            g = t(325980),
+            b = e([i]);
+        i = (b.then ? (await b)() : b)[0];
+        let m = {
             text: u.xv,
             paragraph: u.nv,
             empty: u.HY,
             emoji: c.d,
-            link: d.r,
-            list: s.a,
-            listItem: s.H,
+            link: s.r,
+            list: f.a,
+            listItem: f.H,
             code: o.E,
             code_block: o.d,
-            quote: _.p,
+            quote: g.p,
             bold: a.d8,
             italic: a.Tx,
             underline: a.v6,
             strikethrough: a.nY,
-            mention: f.p
+            mention: _.p,
+            heading: d.X
         };
-        function b(e) {
+        function h(e) {
             let { content: n } = e;
             return (0, l.jsx)(i.ZP, {
                 content: n,
-                renderers: h
+                renderers: m
             });
         }
         r();
