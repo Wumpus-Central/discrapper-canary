@@ -179,7 +179,7 @@ function D(e) {
                         children: [
                             (0, r.jsx)(f.E, {
                                 image: M,
-                                size: f.J.SIZE_60,
+                                size: D === A.lY.MODAL_V2 ? f.J.SIZE_100 : f.J.SIZE_60,
                                 className: N.clickableImage,
                                 onClick: (e) => {
                                     e.stopPropagation(), j({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, p.Z5)(a, t.id);
@@ -205,14 +205,15 @@ function D(e) {
                                         activity: a,
                                         className: N.badges
                                     }),
-                                    B()
+                                    B(),
+                                    D === A.lY.MODAL_V2 && V()
                                 ]
                             }),
                             D === A.lY.MODAL && V()
                         ]
                     })
                 }),
-                D !== A.lY.MODAL && V()
+                D !== A.lY.MODAL && D !== A.lY.MODAL_V2 && V()
             ]
         })
     });

@@ -12,7 +12,5 @@ e.exports = {
     profileHeading: 'profileHeading__9c3be',
     profileConnections: 'profileConnections__9c3be',
     profileAppConnections: 'profileAppConnections__9c3be',
-    profileNote: 'profileNote__9c3be',
-    tabBar: 'tabBar__9c3be',
-    tabBarItem: 'tabBarItem__9c3be'
+    profileNote: 'profileNote__9c3be'
 };

@@ -69,7 +69,7 @@ let h = {
     crunchyroll: a()(u.aspectRatio, u.crunchyroll)
 };
 var m = (function (e) {
-    return (e.SIZE_60 = 'size-60'), (e.SIZE_72 = 'size-72'), e;
+    return (e.SIZE_60 = 'size-60'), (e.SIZE_72 = 'size-72'), (e.SIZE_100 = 'size-100'), e;
 })({});
 let g = {
     'size-60': {
@@ -81,6 +81,11 @@ let g = {
         imageSize: 72,
         smallImageSize: 32,
         mask: s.QS.CONTENT_IMAGE_72
+    },
+    'size-100': {
+        imageSize: 100,
+        smallImageSize: 32,
+        mask: s.QS.CONTENT_IMAGE_100
     }
 };
 function E(e) {

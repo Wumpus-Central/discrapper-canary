@@ -69,9 +69,7 @@ function O(e) {
                 })
             });
         },
-        D = T === E.lY.MODAL,
-        L = T === E.lY.SIDEBAR,
-        x = !D && !L;
+        D = T !== E.lY.MODAL && T !== E.lY.MODAL_V2 && T !== E.lY.SIDEBAR;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(h.Z, { className: y.voiceChannelDivider }),
@@ -105,7 +103,7 @@ function O(e) {
                             e.stopPropagation(), null == I || I({ action: 'PRESS_VOICE_CHANNEL_AVATARS' });
                         },
                         onUserClick: (e) => e.stopPropagation(),
-                        disableUserPopout: !!x || ((e) => e === t.id)
+                        disableUserPopout: !!D || ((e) => e === t.id)
                     })
                 ]
             })

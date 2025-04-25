@@ -1,18 +1,29 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => d });
 var r = n(200651);
 n(192379);
-var i = n(655922),
-    a = n(420660),
-    o = n(475413),
-    s = n(388032);
-function l(e) {
+var i = n(481060),
+    a = n(655922),
+    o = n(420660),
+    s = n(652853),
+    l = n(475413),
+    c = n(228168),
+    u = n(388032);
+function d(e) {
     let { activity: t, onAction: n } = e,
-        l = (0, i.Z)(t);
-    return (0, a.Z)(t) && null != l
-        ? (0, r.jsx)(o.tG, {
-              text: s.intl.string(s.t['I6JG4+']),
-              fullWidth: !0,
-              onClick: (e) => (e.stopPropagation(), null == n || n({ action: 'PRESS_WATCH_BUTTON' }), window.open(l))
+        { themeType: d } = (0, s.z)(),
+        f = (0, a.Z)(t);
+    if (!(0, o.Z)(t) || null == f) return null;
+    let _ = (e) => (e.stopPropagation(), null == n || n({ action: 'PRESS_WATCH_BUTTON' }), window.open(f));
+    return d === c.lY.MODAL_V2
+        ? (0, r.jsx)(l.tG, {
+              text: u.intl.string(u.t['I6JG4+']),
+              size: i.PhG.TINY,
+              themeColor: 'none',
+              onClick: _
           })
-        : null;
+        : (0, r.jsx)(l.tG, {
+              text: u.intl.string(u.t['I6JG4+']),
+              fullWidth: !0,
+              onClick: _
+          });
 }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => A });
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -14,10 +14,12 @@ var i = n(442837),
     p = n(103450),
     h = n(592125),
     m = n(944486),
-    g = n(475413),
-    E = n(981631),
-    b = n(388032);
-function y(e, t, n) {
+    g = n(652853),
+    E = n(475413),
+    b = n(228168),
+    y = n(981631),
+    v = n(388032);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +32,7 @@ function y(e, t, n) {
         e
     );
 }
-function v(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,12 +43,12 @@ function v(e) {
                 })
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                O(e, t, n[t]);
             });
     }
     return e;
 }
-function O(e, t) {
+function S(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -58,86 +60,92 @@ function O(e, t) {
     }
     return n;
 }
-function I(e, t) {
+function T(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : O(Object(t)).forEach(function (n) {
+            : S(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function S(e) {
-    let { user: t, activity: n, onAction: y, onClose: O } = e,
-        { newestAnalyticsLocation: S } = (0, c.ZP)(),
-        T = (0, o.bp)() === E.IlC.POPOUT,
-        A = (0, i.e7)([h.Z, m.Z], () => h.Z.getChannel(m.Z.getChannelId())),
-        N = (0, p.e)({
+function A(e) {
+    let { user: t, activity: n, onAction: O, onClose: S } = e,
+        { newestAnalyticsLocation: A } = (0, c.ZP)(),
+        { themeType: N } = (0, g.z)(),
+        C = (0, o.bp)() === y.IlC.POPOUT,
+        R = (0, i.e7)([h.Z, m.Z], () => h.Z.getChannel(m.Z.getChannelId())),
+        P = (0, p.e)({
             activity: null != n ? n : void 0,
             embeddedActivity: void 0,
             user: t,
-            onClose: O
+            onClose: S
         }),
-        { enabled: C } = s.c.useExperiment({ location: 'ActivityButton' }, { autoTrackExposure: !0 }),
-        R = C ? a.iWm : a.jje;
-    if (null == N && null != n && (0, l.Z)(n))
-        return (0, r.jsx)(g.tG, {
-            icon: R,
-            text: b.intl.string(b.t.RscU7O),
+        { enabled: w } = s.c.useExperiment({ location: 'ActivityButton' }, { autoTrackExposure: !0 }),
+        D = w ? a.iWm : a.jje;
+    if (null == P && null != n && (0, l.Z)(n))
+        return (0, r.jsx)(E.tG, {
+            icon: D,
+            text: v.intl.string(v.t.RscU7O),
             color: a.Ttl.BRAND,
+            size: N === b.lY.MODAL_V2 ? a.PhG.TINY : void 0,
+            fullWidth: N !== b.lY.MODAL_V2,
             themeColor: 'none',
-            fullWidth: !0,
             onClick: (e) => {
                 e.stopPropagation(),
-                    null == O || O(),
-                    null == y || y({ action: 'PRESS_PLAY_BUTTON' }),
-                    (null == A ? void 0 : A.isVocal())
+                    null == S || S(),
+                    null == O || O({ action: 'PRESS_PLAY_BUTTON' }),
+                    (null == R ? void 0 : R.isVocal())
                         ? (0, f.Z)({
                               context: {
                                   type: 'channel',
-                                  channel: A
+                                  channel: R
                               },
-                              analyticsLocation: S,
-                              openInPopout: T
+                              analyticsLocation: A,
+                              openInPopout: C
                           })
                         : (0, u.__)(d._b.TEXT, _.Ie.NORMAL, { applicationId: n.application_id });
             }
         });
-    if (null == N) return null;
-    let { isJoining: P, handleJoinRequest: w, buttonCTA: D, tooltip: L, isEnabled: x, isEmbedded: M } = N;
-    return M
+    if (null == P) return null;
+    let { isJoining: L, handleJoinRequest: x, buttonCTA: M, tooltip: k, isEnabled: j, isEmbedded: U } = P;
+    return U
         ? (0, r.jsx)(a.ua7, {
-              text: L,
+              text: k,
               children: (e) =>
                   (0, r.jsx)(
-                      g.tG,
-                      I(v({}, e), {
+                      E.tG,
+                      T(I({}, e), {
                           icon: a.YVR,
-                          text: D,
-                          disabled: !x,
-                          submitting: P,
-                          fullWidth: !0,
+                          text: M,
+                          disabled: !j,
+                          submitting: L,
+                          size: N === b.lY.MODAL_V2 ? a.PhG.TINY : void 0,
+                          fullWidth: N !== b.lY.MODAL_V2,
+                          themeColor: N === b.lY.MODAL_V2 ? 'none' : void 0,
                           onClick: (e) => {
-                              e.stopPropagation(), null == y || y({ action: 'PRESS_JOIN_BUTTON' }), w();
+                              e.stopPropagation(), null == O || O({ action: 'PRESS_JOIN_BUTTON' }), x();
                           }
                       })
                   )
           })
         : (0, r.jsx)(a.ua7, {
-              text: L,
+              text: k,
               children: (e) =>
                   (0, r.jsx)(
-                      g.tG,
-                      I(v({}, e), {
+                      E.tG,
+                      T(I({}, e), {
                           icon: a.iWm,
-                          text: D,
-                          disabled: !x,
-                          submitting: P,
-                          fullWidth: !0,
+                          text: M,
+                          disabled: !j,
+                          submitting: L,
+                          size: N === b.lY.MODAL_V2 ? a.PhG.TINY : void 0,
+                          fullWidth: N !== b.lY.MODAL_V2,
+                          themeColor: N === b.lY.MODAL_V2 ? 'none' : void 0,
                           onClick: (e) => {
-                              e.stopPropagation(), null == y || y({ action: 'PRESS_ASK_TO_JOIN_BUTTON' }), w();
+                              e.stopPropagation(), null == O || O({ action: 'PRESS_ASK_TO_JOIN_BUTTON' }), x();
                           }
                       })
                   )

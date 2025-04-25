@@ -13,6 +13,8 @@ e.exports = {
     actions: 'actions__39ec2',
     primaryButton: 'primaryButton__39ec2',
     customButton: 'customButton__39ec2',
+    tinyIconButton: 'tinyIconButton__39ec2',
+    tinyIconButtonInner: 'tinyIconButtonInner__39ec2',
     badges: 'badges__39ec2',
     clickableContainer: 'clickableContainer__39ec2',
     clickableImage: 'clickableImage__39ec2',

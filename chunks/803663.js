@@ -1,31 +1,43 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => g });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    a = n(359110),
-    o = n(922482),
-    s = n(146085),
-    l = n(750154),
-    c = n(592125),
-    u = n(496675),
-    d = n(979651),
-    f = n(475413),
-    _ = n(388032);
-function p(e) {
-    let { activity: t, onAction: n, onClose: p } = e,
-        h = (0, l.rq)(t),
-        { channelId: m, guildId: g } = null != h ? h : {},
-        E = (0, i.e7)([d.Z], () => null != m && d.Z.isInChannel(m), [m]),
-        b = (0, i.e7)([c.Z], () => (null != m ? c.Z.getChannel(m) : null), [m]),
-        y = (0, i.e7)([u.Z], () => null != b && u.Z.can(s.gl, b), [b]);
-    if (!(0, l.dS)(t) || !y || null == g || null == m) return null;
-    let v = (e) => {
-        e.stopPropagation(), null == n || n({ action: 'PRESS_STAGE_CHANNEL_LISTEN_BUTTON' }), o.AC(g, m), (0, a.Kh)(m), null == p || p();
+    a = n(481060),
+    o = n(359110),
+    s = n(922482),
+    l = n(146085),
+    c = n(750154),
+    u = n(592125),
+    d = n(496675),
+    f = n(979651),
+    _ = n(652853),
+    p = n(475413),
+    h = n(228168),
+    m = n(388032);
+function g(e) {
+    let { activity: t, onAction: n, onClose: g } = e,
+        { themeType: E } = (0, _.z)(),
+        b = (0, c.rq)(t),
+        { channelId: y, guildId: v } = null != b ? b : {},
+        O = (0, i.e7)([f.Z], () => null != y && f.Z.isInChannel(y), [y]),
+        I = (0, i.e7)([u.Z], () => (null != y ? u.Z.getChannel(y) : null), [y]),
+        S = (0, i.e7)([d.Z], () => null != I && d.Z.can(l.gl, I), [I]);
+    if (!(0, c.dS)(t) || !S || null == v || null == y) return null;
+    let T = (e) => {
+        e.stopPropagation(), null == n || n({ action: 'PRESS_STAGE_CHANNEL_LISTEN_BUTTON' }), s.AC(v, y), (0, o.Kh)(y), null == g || g();
     };
-    return (0, r.jsx)(f.tG, {
-        text: _.intl.string(_.t.ZYO5OD),
-        fullWidth: !0,
-        disabled: E,
-        onClick: v
-    });
+    return E === h.lY.MODAL_V2
+        ? (0, r.jsx)(p.tG, {
+              text: m.intl.string(m.t.ZYO5OD),
+              size: a.PhG.TINY,
+              themeColor: 'none',
+              disabled: O,
+              onClick: T
+          })
+        : (0, r.jsx)(p.tG, {
+              text: m.intl.string(m.t.ZYO5OD),
+              fullWidth: !0,
+              disabled: O,
+              onClick: T
+          });
 }

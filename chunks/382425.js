@@ -94,6 +94,7 @@ function Y(e) {
                                 src: Q === G.BRd.LIGHT ? H : Z
                             }),
                             q !== U.lY.MODAL &&
+                                q !== U.lY.MODAL_V2 &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(l.Text, {
@@ -120,6 +121,7 @@ function Y(e) {
                                 className: F.image
                             }),
                             q !== U.lY.MODAL &&
+                                q !== U.lY.MODAL_V2 &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(l.Text, {
@@ -139,7 +141,7 @@ function Y(e) {
                     });
         },
         ep = () =>
-            q !== U.lY.MODAL
+            q !== U.lY.MODAL && q !== U.lY.MODAL_V2
                 ? null
                 : (0, r.jsxs)('div', {
                       className: V.details,
@@ -162,11 +164,12 @@ function Y(e) {
                               onUserClick: (e) => e.stopPropagation(),
                               disableUserPopout: (e) => e === t.id,
                               overflowCountColor: 'text-muted'
-                          })
+                          }),
+                          q === U.lY.MODAL_V2 && em()
                       ]
                   }),
         eh = () =>
-            q === U.lY.MODAL
+            q === U.lY.MODAL || q === U.lY.MODAL_V2
                 ? null
                 : (0, r.jsx)(M.Z, {
                       user: t,
@@ -239,7 +242,7 @@ function Y(e) {
                                         eh()
                                     ]
                                 }),
-                                q !== U.lY.MODAL && em()
+                                q !== U.lY.MODAL && q !== U.lY.MODAL_V2 && em()
                             ]
                         })
                     })

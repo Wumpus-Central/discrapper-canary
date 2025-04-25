@@ -1,31 +1,43 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => h });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    a = n(726542),
-    o = n(906732),
-    s = n(231757),
-    l = n(553795),
-    c = n(475413),
-    u = n(981631),
-    d = n(388032);
-function f(e) {
-    let { platformType: t, icon: n, onAction: f } = e,
-        { newestAnalyticsLocation: _ } = (0, o.ZP)();
-    return (0, i.e7)([l.Z], () => null != l.Z.getAccount(null, t))
-        ? null
-        : (0, r.jsx)(c.tG, {
+    a = n(481060),
+    o = n(726542),
+    s = n(906732),
+    l = n(231757),
+    c = n(553795),
+    u = n(652853),
+    d = n(475413),
+    f = n(228168),
+    _ = n(981631),
+    p = n(388032);
+function h(e) {
+    let { platformType: t, icon: n, onAction: h } = e,
+        { newestAnalyticsLocation: m } = (0, s.ZP)(),
+        { themeType: g } = (0, u.z)();
+    if ((0, i.e7)([c.Z], () => null != c.Z.getAccount(null, t))) return null;
+    let E = (e) => {
+        e.stopPropagation();
+        let n = t === _.ABu.XBOX;
+        null == h || h({ action: n ? 'PRESS_CONNECT_XBOX_BUTTON' : 'PRESS_CONNECT_PLAYSTATION_BUTTON' }),
+            (0, l.Z)({
+                platformType: t,
+                location: m
+            });
+    };
+    return g === f.lY.MODAL_V2
+        ? (0, r.jsx)(d.tG, {
               icon: n,
-              text: d.intl.formatToPlainString(d.t.XWSHTU, { platform: a.Z.get(t).name }),
+              text: p.intl.formatToPlainString(p.t.XWSHTU, { platform: o.Z.get(t).name }),
+              size: a.PhG.TINY,
+              themeColor: 'none',
+              onClick: E
+          })
+        : (0, r.jsx)(d.tG, {
+              icon: n,
+              text: p.intl.formatToPlainString(p.t.XWSHTU, { platform: o.Z.get(t).name }),
               fullWidth: !0,
-              onClick: (e) => {
-                  e.stopPropagation();
-                  let n = t === u.ABu.XBOX;
-                  null == f || f({ action: n ? 'PRESS_CONNECT_XBOX_BUTTON' : 'PRESS_CONNECT_PLAYSTATION_BUTTON' }),
-                      (0, s.Z)({
-                          platformType: t,
-                          location: _
-                      });
-              }
+              onClick: E
           });
 }

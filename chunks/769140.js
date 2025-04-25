@@ -88,6 +88,7 @@ function B(e) {
                                 src: Z === x.BRd.LIGHT ? G : U
                             }),
                             F !== L.lY.MODAL &&
+                                F !== L.lY.MODAL_V2 &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(s.Text, {
@@ -114,6 +115,7 @@ function B(e) {
                                 className: j.image
                             }),
                             F !== L.lY.MODAL &&
+                                F !== L.lY.MODAL_V2 &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(s.Text, {
@@ -133,7 +135,7 @@ function B(e) {
                     });
         },
         ea = () =>
-            F !== L.lY.MODAL
+            F !== L.lY.MODAL && F !== L.lY.MODAL_V2
                 ? null
                 : (0, r.jsxs)('div', {
                       className: k.details,
@@ -156,11 +158,12 @@ function B(e) {
                               onUserClick: (e) => e.stopPropagation(),
                               disableUserPopout: (e) => e === t.id,
                               overflowCountColor: 'text-muted'
-                          })
+                          }),
+                          F === L.lY.MODAL_V2 && es()
                       ]
                   }),
         eo = () =>
-            F === L.lY.MODAL
+            F === L.lY.MODAL || F === L.lY.MODAL_V2
                 ? null
                 : (0, r.jsx)(P.Z, {
                       user: t,
@@ -207,7 +210,7 @@ function B(e) {
                         eo()
                     ]
                 }),
-                F !== L.lY.MODAL && es()
+                F !== L.lY.MODAL && F !== L.lY.MODAL_V2 && es()
             ]
         })
     });

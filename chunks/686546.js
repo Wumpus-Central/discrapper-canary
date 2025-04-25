@@ -219,6 +219,7 @@ var g = (function (e) {
         (e.GAMEPLAY_HIGH_ACTIVITY_ICON = 'svg-mask-gameplay-high-activity-icon'),
         (e.CONTENT_IMAGE_60 = 'svg-mask-content-image-60'),
         (e.CONTENT_IMAGE_72 = 'svg-mask-content-image-72'),
+        (e.CONTENT_IMAGE_100 = 'svg-mask-content-image-100'),
         e
     );
 })({});
@@ -1264,7 +1265,8 @@ let es = eo,
                     ei('svg-mask-badged-guild-icon'),
                     ea('svg-mask-forward-attachment-pile-overflow'),
                     et('svg-mask-content-image-60', 60, 24, 2),
-                    et('svg-mask-content-image-72', 72, 32, 4)
+                    et('svg-mask-content-image-72', 72, 32, 4),
+                    et('svg-mask-content-image-100', 100, 32, 4)
                 ]
             });
         },

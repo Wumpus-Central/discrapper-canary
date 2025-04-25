@@ -1,49 +1,74 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => y });
 var r = n(200651);
 n(192379);
 var i = n(657707),
     a = n(442837),
-    o = n(475179),
-    s = n(287734),
-    l = n(359110),
-    c = n(922482),
-    u = n(496675),
-    d = n(979651),
-    f = n(387082),
-    _ = n(652853),
-    p = n(475413),
-    h = n(228168),
-    m = n(981631),
-    g = n(388032);
-function E(e) {
-    let { channel: t, onAction: n, onClose: E } = e,
-        { themeType: b } = (0, _.z)(),
-        y = (0, a.e7)([d.Z], () => d.Z.isInChannel(t.id)),
-        v = (0, a.e7)([u.Z], () => t.isPrivate() || u.Z.can(m.Plq.CONNECT, t)),
-        { chatButtonEnabled: O } = (0, f.s)({ location: 'UserProfileActivityVoiceChannelButtons' });
-    if (!v) return null;
-    let I = () => (b === h.lY.MODAL ? g.intl.string(g.t['3xjX0d']) : t.isDM() || t.isGroupDM() ? g.intl.string(g.t['7hwn2N']) : t.isGuildStageVoice() ? g.intl.string(g.t.Acqcoq) : g.intl.string(g.t.BXxdl5)),
-        S = () => (b === h.lY.MODAL ? g.intl.string(g.t.VJlc0d) : t.isDM() || t.isGroupDM() ? g.intl.string(g.t.ozoE2N) : t.isGuildStageVoice() ? g.intl.string(g.t['7vb2cX']) : g.intl.string(g.t['96ANUF']));
-    return (0, r.jsxs)(r.Fragment, {
-        children: [
-            (0, r.jsx)(p.tG, {
-                text: y ? I() : S(),
-                themeColor: y ? 'secondary' : 'primary',
-                fullWidth: !0,
-                onClick: (e) => {
-                    e.stopPropagation(), null == n || n({ action: 'PRESS_JOIN_CALL_BUTTON' }), t.isGuildStageVoice() ? (0, c.Cq)(t) : (s.default.selectVoiceChannel(t.id), (0, l.Kh)(t.id)), null == E || E();
-                }
-            }),
-            O &&
-                t.isGuildVocal() &&
-                (0, r.jsx)(p.ef, {
-                    icon: i.kBi,
-                    tooltipText: y ? g.intl.string(g.t.kkKapK) : g.intl.string(g.t.ZXxLQk),
-                    themeColor: y ? 'secondary' : 'primary',
-                    onClick: (e) => {
-                        e.stopPropagation(), null == n || n({ action: 'OPEN_VOICE_CHAT' }), o.Z.updateChatOpen(t.id, !0), (0, l.Kh)(t.id), null == E || E();
-                    }
-                })
-        ]
-    });
+    o = n(481060),
+    s = n(475179),
+    l = n(287734),
+    c = n(359110),
+    u = n(922482),
+    d = n(496675),
+    f = n(979651),
+    _ = n(387082),
+    p = n(652853),
+    h = n(475413),
+    m = n(228168),
+    g = n(981631),
+    E = n(388032),
+    b = n(227832);
+function y(e) {
+    let { channel: t, onAction: n, onClose: y } = e,
+        { themeType: v } = (0, p.z)(),
+        O = (0, a.e7)([f.Z], () => f.Z.isInChannel(t.id)),
+        I = (0, a.e7)([d.Z], () => t.isPrivate() || d.Z.can(g.Plq.CONNECT, t)),
+        { chatButtonEnabled: S } = (0, _.s)({ location: 'UserProfileActivityVoiceChannelButtons' });
+    if (!I) return null;
+    let T = () => (v === m.lY.MODAL || v === m.lY.MODAL_V2 ? E.intl.string(E.t['3xjX0d']) : t.isDM() || t.isGroupDM() ? E.intl.string(E.t['7hwn2N']) : t.isGuildStageVoice() ? E.intl.string(E.t.Acqcoq) : E.intl.string(E.t.BXxdl5)),
+        A = () => (v === m.lY.MODAL || v === m.lY.MODAL_V2 ? E.intl.string(E.t.VJlc0d) : t.isDM() || t.isGroupDM() ? E.intl.string(E.t.ozoE2N) : t.isGuildStageVoice() ? E.intl.string(E.t['7vb2cX']) : E.intl.string(E.t['96ANUF'])),
+        N = (e) => {
+            e.stopPropagation(), null == n || n({ action: 'PRESS_JOIN_CALL_BUTTON' }), t.isGuildStageVoice() ? (0, u.Cq)(t) : (l.default.selectVoiceChannel(t.id), (0, c.Kh)(t.id)), null == y || y();
+        },
+        C = (e) => {
+            e.stopPropagation(), null == n || n({ action: 'OPEN_VOICE_CHAT' }), s.Z.updateChatOpen(t.id, !0), (0, c.Kh)(t.id), null == y || y();
+        };
+    return v === m.lY.MODAL_V2
+        ? (0, r.jsxs)(r.Fragment, {
+              children: [
+                  (0, r.jsx)(h.tG, {
+                      text: O ? T() : A(),
+                      size: o.PhG.TINY,
+                      themeColor: 'none',
+                      onClick: N
+                  }),
+                  S &&
+                      t.isGuildVocal() &&
+                      (0, r.jsx)(h.ef, {
+                          icon: i.kBi,
+                          tooltipText: O ? E.intl.string(E.t.kkKapK) : E.intl.string(E.t.ZXxLQk),
+                          className: b.tinyIconButton,
+                          innerClassName: b.tinyIconButtonInner,
+                          themeColor: 'none',
+                          onClick: C
+                      })
+              ]
+          })
+        : (0, r.jsxs)(r.Fragment, {
+              children: [
+                  (0, r.jsx)(h.tG, {
+                      text: O ? T() : A(),
+                      themeColor: O ? 'secondary' : 'primary',
+                      fullWidth: !0,
+                      onClick: N
+                  }),
+                  S &&
+                      t.isGuildVocal() &&
+                      (0, r.jsx)(h.ef, {
+                          icon: i.kBi,
+                          tooltipText: O ? E.intl.string(E.t.kkKapK) : E.intl.string(E.t.ZXxLQk),
+                          themeColor: O ? 'secondary' : 'primary',
+                          onClick: C
+                      })
+              ]
+          });
 }
