@@ -149,46 +149,48 @@ function v(e, t, n) {
 function O(e) {
     return null != e && null != e.end_time ? new Date(e.end_time).getTime() : null;
 }
-function I(e, t, n, s, d, _) {
-    var h, g, E, y;
-    let I = function (t) {
-            var n, r;
-            let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                a = null != (n = i.muted) ? n : null == t ? void 0 : t.channel_is_muted,
-                o = null != i.message_notifications ? b[i.message_notifications] : null == t ? void 0 : t.channel_message_notification_settings,
-                s = null == e ? null : !0 === a || null != o;
+function I(e) {
+    var t, n, s, d;
+    let { updateType: _ = u.Ib.CHANNEL, guildId: h, channelId: g, applicationId: E, change: y, previous: I, label: S, location: T } = e,
+        N = function (e) {
+            var t, n;
+            let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                i = null != (t = r.muted) ? t : null == e ? void 0 : e.channel_is_muted,
+                a = null != r.message_notifications ? b[r.message_notifications] : null == e ? void 0 : e.channel_message_notification_settings,
+                o = null == h ? null : !0 === i || null != a;
             return {
-                channel_is_muted: a,
-                channel_is_overridden: s,
-                channel_flags: null != (r = i.flags) ? r : null == t ? void 0 : t.channel_flags,
-                channel_message_notification_settings: o,
-                channel_muted_until: O(i.mute_config)
+                channel_is_muted: i,
+                channel_is_overridden: o,
+                channel_flags: null != (n = r.flags) ? n : null == e ? void 0 : e.channel_flags,
+                channel_message_notification_settings: a,
+                channel_muted_until: O(r.mute_config)
             };
         },
-        S = I(s),
-        T = I(A(e, t), n),
-        N = v(S, T, 'RETURN_PREVIOUS_WHEN_CHANGED'),
-        C = a.Z.getChannel(t),
-        R = null != (g = N('channel_flags')) ? g : 0,
-        P = (null != (E = T.channel_flags) ? E : 0) ^ R,
-        w = 0 === (0, l.M1)(P, f.ic.FAVORITED, f.ic.OPT_IN_ENABLED),
-        D = null != (y = null == (h = o.Z.getLastMessage(t)) ? void 0 : h.type) ? y : null;
+        C = N(I),
+        R = N(A(h, g), y),
+        P = v(C, R, 'RETURN_PREVIOUS_WHEN_CHANGED'),
+        w = a.Z.getChannel(g),
+        D = null != (n = P('channel_flags')) ? n : 0,
+        L = (null != (s = R.channel_flags) ? s : 0) ^ D,
+        x = 0 === (0, l.M1)(L, f.ic.FAVORITED, f.ic.OPT_IN_ENABLED),
+        M = null != (d = null == (t = o.Z.getLastMessage(g)) ? void 0 : t.type) ? d : null;
     r.ZP.trackWithMetadata(
         c.rMx.NOTIFICATION_SETTINGS_UPDATED,
-        m(p({}, T, i.Z.getStats(e)), {
-            location: _,
-            guild_id: e,
-            channel_id: t,
-            update_type: u.Ib.CHANNEL,
-            label: d,
-            parent_id: null != C ? C.parent_id : null,
-            channel_flags_old: N('channel_flags'),
-            channel_is_muted_old: N('channel_is_muted'),
-            channel_muted_until_old: N('channel_muted_until'),
-            channel_is_overridden_old: N('channel_is_overridden'),
-            channel_message_notification_settings_old: N('channel_message_notification_settings'),
-            is_opt_in_only_change: w,
-            last_message_type: D
+        m(p({}, R, i.Z.getStats(h)), {
+            location: T,
+            guild_id: h,
+            channel_id: g,
+            update_type: _,
+            label: S,
+            parent_id: null != w ? w.parent_id : null,
+            channel_flags_old: P('channel_flags'),
+            channel_is_muted_old: P('channel_is_muted'),
+            channel_muted_until_old: P('channel_muted_until'),
+            channel_is_overridden_old: P('channel_is_overridden'),
+            channel_message_notification_settings_old: P('channel_message_notification_settings'),
+            is_opt_in_only_change: x,
+            last_message_type: M,
+            application_id: E
         })
     );
 }

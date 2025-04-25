@@ -91,7 +91,14 @@ function I(e, t, n, r) {
             channelId: t,
             settings: d
         }),
-        (0, m.jz)(e, t, d, o, m.UE.optedIn(n), r),
+        (0, m.jz)({
+            guildId: e,
+            channelId: t,
+            change: d,
+            previous: o,
+            label: m.UE.optedIn(n),
+            location: r
+        }),
         P(e),
         p.default.track(
             g.rMx.CHANNEL_LIST_UPDATED,
@@ -126,7 +133,14 @@ function S(e, t, n, r) {
         channelId: t,
         settings: d
     }),
-        (0, m.jz)(e, t, d, o, m.UE.optedIn(n), r),
+        (0, m.jz)({
+            guildId: e,
+            channelId: t,
+            change: d,
+            previous: o,
+            label: m.UE.optedIn(n),
+            location: r
+        }),
         P(e),
         p.default.track(
             g.rMx.CHANNEL_LIST_UPDATED,

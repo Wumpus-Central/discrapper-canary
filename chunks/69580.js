@@ -429,7 +429,12 @@ function eb(e) {
                                   nonce: eh,
                                   integrationType: null != e4 ? e4 : void 0
                               });
-                    eU((0, Y.d)(e)), eg === z.s.NONE && e.authorized && !ts && tc(!0), (0, S.yw)(eo.rMx.OAUTH2_AUTHORIZE_VIEWED, { application_id: e.application.id });
+                    eU((0, Y.d)(e)),
+                        eg === z.s.NONE && e.authorized && !ts && tc(!0),
+                        (0, S.yw)(eo.rMx.OAUTH2_AUTHORIZE_VIEWED, {
+                            application_id: e.application.id,
+                            mobile_push_notification_default_setting: !1
+                        });
                 } catch (n) {
                     let { status: e, body: t } = n;
                     if (401 === e) return void (0, H.c$)(eM, 'oauth2_error_unauthorized');
@@ -462,7 +467,8 @@ function eb(e) {
                 application_id: U,
                 integration_type: e4,
                 scopes: tt,
-                permissions: tr.toString()
+                permissions: tr.toString(),
+                mobile_push_notification_default_setting: !1
             }));
     }, [U, e4, tr, tt, eG]),
         i.useEffect(() => {

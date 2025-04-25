@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685), n(997841);
+n.d(t, { Z: () => h }), n(388685), n(997841);
 var r = n(544891),
     i = n(780384),
     a = n(570140),
@@ -8,9 +8,10 @@ var r = n(544891),
     c = n(621600),
     u = n(709054),
     d = n(981631),
-    f = n(526761),
-    _ = n(388032);
-let p = {
+    f = n(468788),
+    _ = n(526761),
+    p = n(388032);
+let h = {
     open(e) {
         a.Z.dispatch({
             type: 'NOTIFICATION_SETTINGS_MODAL_OPEN',
@@ -43,7 +44,14 @@ let p = {
             (0, c.Wq)(e, t, s, n, r),
             u.default.keys(t.channel_overrides).forEach((i) => {
                 let a = l.get(i);
-                (0, c.jz)(e, i, t.channel_overrides[i], a, n, r);
+                (0, c.jz)({
+                    guildId: e,
+                    channelId: i,
+                    change: t.channel_overrides[i],
+                    previous: a,
+                    label: n,
+                    location: r
+                });
             });
     },
     updateGuildNotificationSettingsBulk(e, t, n) {
@@ -71,8 +79,15 @@ let p = {
                 channelId: t,
                 settings: n
             }),
-            i.uv.announce(_.intl.string(_.t.MlIsJy)),
-            (0, c.jz)(e, t, n, l, r, s);
+            i.uv.announce(p.intl.string(p.t.MlIsJy)),
+            (0, c.jz)({
+                guildId: e,
+                channelId: t,
+                change: n,
+                previous: l,
+                label: r,
+                location: s
+            });
     },
     updateChannelOverrideSettingsBulk(e, t, n, r) {
         let i = u.default.keys(t),
@@ -84,11 +99,41 @@ let p = {
                 guildId: e,
                 overrides: t
             }),
-            u.default.keys(t).forEach((i) => (0, c.jz)(e, i, t[i], l.get(i), n, r));
+            u.default.keys(t).forEach((i) =>
+                (0, c.jz)({
+                    guildId: e,
+                    channelId: i,
+                    change: t[i],
+                    previous: l.get(i),
+                    label: n,
+                    location: r
+                })
+            );
+    },
+    updateAppDMOverrideSettings(e, t, n, r, s) {
+        let l = (0, c.I)(e, t),
+            u = { channel_overrides: { [t]: r } };
+        o.Z.saveUserGuildSettings(e, u),
+            a.Z.dispatch({
+                type: 'USER_GUILD_SETTINGS_CHANNEL_UPDATE',
+                guildId: e,
+                channelId: t,
+                settings: r
+            }),
+            i.uv.announce(p.intl.string(p.t.MlIsJy)),
+            (0, c.jz)({
+                updateType: f.Ib.AUTHORIZED_APP_DM,
+                guildId: e,
+                channelId: t,
+                applicationId: n,
+                change: r,
+                previous: l,
+                label: s
+            });
     },
     setForumThreadsCreated(e, t) {
-        let n = t ? f.ic.NEW_FORUM_THREADS_ON : f.ic.NEW_FORUM_THREADS_OFF,
-            r = t ? f.ic.NEW_FORUM_THREADS_OFF : f.ic.NEW_FORUM_THREADS_ON,
+        let n = t ? _.ic.NEW_FORUM_THREADS_ON : _.ic.NEW_FORUM_THREADS_OFF,
+            r = t ? _.ic.NEW_FORUM_THREADS_OFF : _.ic.NEW_FORUM_THREADS_ON,
             i = (s.ZP.getChannelFlags(e) & ~r) | n;
         this.updateChannelOverrideSettings(e.guild_id, e.id, { flags: i }, c.UE.forumThreadsCreated(t));
     },
