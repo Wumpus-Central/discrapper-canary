@@ -1,74 +1,80 @@
-t.d(n, { Z: () => f }), t(388685);
+t.d(n, { Z: () => p }), t(388685);
 var o = t(200651),
     i = t(192379),
     c = t(481060),
     r = t(785717),
-    l = t(128156),
-    a = t(228168),
-    s = t(388032),
-    d = t(662776);
-function u(e) {
-    let { user: n, currentUser: t, section: i, subsection: c, displayProfile: r, guildId: s, onClose: d } = e;
-    return i === a.oh.ACTIVITY
-        ? (0, o.jsx)(l.Z, {
+    a = t(128156),
+    l = t(210788),
+    s = t(228168),
+    d = t(388032),
+    u = t(662776);
+function f(e) {
+    let { user: n, currentUser: t, section: i, subsection: c, displayProfile: r, guildId: d, onClose: u } = e;
+    return i === s.oh.ACTIVITY
+        ? (0, o.jsx)(a.Z, {
               user: n,
               currentUser: t,
               displayProfile: r,
-              guildId: s,
+              guildId: d,
               subsection: c,
-              onClose: d
+              onClose: u
           })
-        : (a.oh.MUTUALS, null);
+        : i === s.oh.MUTUALS
+          ? (0, o.jsx)(l.Z, {
+                user: n,
+                onClose: u
+            })
+          : null;
 }
-function f(e) {
+function p(e) {
     var n, t;
-    let { user: l, currentUser: f, displayProfile: p, guildId: b, initialSection: m, initialSubsection: h, onClose: g } = e,
-        { trackUserProfileAction: x } = (0, r.KZ)(),
-        j = i.useMemo(
+    let { user: a, currentUser: l, displayProfile: p, guildId: m, initialSection: h, initialSubsection: _, onClose: b } = e,
+        { trackUserProfileAction: g } = (0, r.KZ)(),
+        y = i.useMemo(
             () =>
-                l.id === f.id
+                a.id === l.id
                     ? [
                           {
-                              section: a.oh.ACTIVITY,
-                              text: s.intl.string(s.t.chq59f)
+                              section: s.oh.ACTIVITY,
+                              text: d.intl.string(d.t.chq59f)
                           }
                       ]
                     : [
                           {
-                              section: a.oh.ACTIVITY,
-                              text: s.intl.string(s.t.chq59f)
+                              section: s.oh.ACTIVITY,
+                              text: d.intl.string(d.t.chq59f)
                           },
                           {
-                              section: a.oh.MUTUALS,
-                              text: s.intl.string(s.t.f5KLNj)
+                              section: s.oh.MUTUALS,
+                              text: d.intl.string(d.t.f5KLNj)
                           }
                       ],
-            [l.id, f.id]
+            [a.id, l.id]
         ),
-        [{ section: _, subsection: y }, I] = i.useState({
+        [{ section: x, subsection: j }, I] = i.useState({
             section:
                 null !=
                 (t =
                     null ==
-                    (n = j.find((e) => {
+                    (n = y.find((e) => {
                         let { section: n } = e;
-                        return n === m;
+                        return n === h;
                     }))
                         ? void 0
                         : n.section)
                     ? t
-                    : a.oh.ACTIVITY,
-            subsection: h
+                    : s.oh.ACTIVITY,
+            subsection: _
         });
     return (0, o.jsxs)('div', {
-        className: d.container,
+        className: u.container,
         children: [
             (0, o.jsx)(c.njP, {
                 type: 'top',
-                className: d.tabBar,
-                selectedItem: _,
+                className: u.tabBar,
+                selectedItem: x,
                 onItemSelect: (e) => {
-                    x({
+                    g({
                         action: 'PRESS_SECTION',
                         section: e
                     }),
@@ -77,12 +83,12 @@ function f(e) {
                             subsection: void 0
                         });
                 },
-                children: j.map((e) => {
+                children: y.map((e) => {
                     let { section: n, text: t } = e;
                     return (0, o.jsx)(
                         c.njP.Item,
                         {
-                            className: d.tabBarItem,
+                            className: u.tabBarItem,
                             id: n,
                             'aria-label': t,
                             children: (0, o.jsx)(c.X6q, {
@@ -94,14 +100,14 @@ function f(e) {
                     );
                 })
             }),
-            (0, o.jsx)(u, {
-                user: l,
-                currentUser: f,
+            (0, o.jsx)(f, {
+                user: a,
+                currentUser: l,
                 displayProfile: p,
-                guildId: b,
-                section: _,
-                subsection: y,
-                onClose: g
+                guildId: m,
+                section: x,
+                subsection: j,
+                onClose: b
             })
         ]
     });
