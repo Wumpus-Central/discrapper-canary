@@ -20,6 +20,7 @@ e.exports = {
     darker: 'darker__08415',
     featuredBlock: 'featuredBlock__08415',
     featuredBlockBodyText: 'featuredBlockBodyText__08415',
+    featuredBlockNameplate: 'featuredBlockNameplate__08415',
     featuredBlockBadge: 'featuredBlockBadge__08415',
     featuredBlockButton: 'featuredBlockButton__08415',
     heroBlock: 'heroBlock__08415',
