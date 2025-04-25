@@ -4176,6 +4176,7 @@
   "Yizuvb": "Clear after {hours, plural, =1 { hour} other { hours} }",
   "/XUoq6": "Clear after {minutes, plural, =1 { minute} other { minutes} }",
   "TOEOaW": "Clear after today",
+  "DN91Jy": "tomorrow at !!{time}!!",
   "3DagBA": "Clear Status",
   "wfYTHR": "Clear custom status",
   "mLs2c3": "Clear in {hours, plural, =1 { hour} other { hours} }",
