@@ -68,9 +68,9 @@ function S(e) {
                 rejectWithError: !0
             })
             .then((e) => {
-                if (null != e.body && '261801454a2a0b1b9193cb4263cbb0ed3a2acabb' !== e.body.hash) {
+                if (null != e.body && '3f019c65c35cb80562b0d6d26351e988bdde94f2' !== e.body.hash) {
                     {
-                        let e = new Date('1745538614368'),
+                        let e = new Date('1745565872919'),
                             t = new Date();
                         (0, g.TD)(t, e).hours > 6 && eh(!0);
                     }

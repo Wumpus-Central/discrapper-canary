@@ -16,7 +16,7 @@ var n = r(200651),
     b = r(388032),
     j = r(233966),
     x = r(223223);
-function P(e) {
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -41,7 +41,7 @@ function P(e) {
     }
     return e;
 }
-function y(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -84,7 +84,7 @@ let v = () => 80,
             l = O(e, ['children', 'className', 'isSelected']);
         return (0, n.jsx)(
             u.P3F,
-            y(P({ className: o()(j.effectGridItem, r, { [j.selected]: i }) }, l), {
+            P(y({ className: o()(j.effectGridItem, r, { [j.selected]: i }) }, l), {
                 onClick: l.onSelect,
                 children: t
             })
@@ -107,8 +107,8 @@ let v = () => 80,
             T = (0, p.M)();
         return (0, n.jsxs)(
             _,
-            y(
-                P(
+            P(
+                y(
                     {
                         className: !A || v || T ? void 0 : j.decorationGridItemChurned,
                         innerRef: null != o ? o : w,
@@ -191,7 +191,7 @@ let v = () => 80,
                             (0, n.jsxs)(
                                 _,
                                 {
-                                    style: P({}, p),
+                                    style: y({}, p),
                                     isSelected: !d,
                                     onSelect: () => o(null),
                                     children: [
@@ -240,7 +240,7 @@ let v = () => 80,
                                 E,
                                 {
                                     user: t,
-                                    style: P({}, p),
+                                    style: y({}, p),
                                     section: g,
                                     profileEffect: e,
                                     innerRef: r ? l : void 0,
@@ -254,7 +254,7 @@ let v = () => 80,
                 renderSection: (e, t) => {
                     let { header: r } = a[e];
                     return (0, n.jsx)('div', {
-                        style: y(P({}, t), {
+                        style: P(y({}, t), {
                             height: ''.concat(16, 'px'),
                             position: 'absolute'
                         }),

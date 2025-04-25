@@ -1,9 +1,9 @@
 n.d(t, {
-    H: () => o,
+    H: () => l,
     a: () => i
 });
 var r = n(460083);
-function o(e) {
+function l(e) {
     let { enabled: t } = r.d.getCurrentConfig({
         guildId: e,
         location: '988d4e_3'

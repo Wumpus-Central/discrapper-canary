@@ -16,8 +16,8 @@ var n = r(200651),
     b = r(594174),
     j = r(626135),
     x = r(74538),
-    P = r(934261),
-    y = r(52268),
+    y = r(934261),
+    P = r(52268),
     O = r(981631),
     v = r(474936),
     _ = r(388032),
@@ -119,7 +119,7 @@ function I(e) {
             (0, n.jsxs)(o.hzk, {
                 className: E.modalContent,
                 children: [
-                    (0, n.jsx)(y.Z, {
+                    (0, n.jsx)(P.Z, {
                         user: t,
                         guild: r,
                         pendingProfileEffect: v,
@@ -127,7 +127,7 @@ function I(e) {
                         onSelect: T,
                         onOpenShop: B
                     }),
-                    (0, n.jsx)(P.Z, {
+                    (0, n.jsx)(y.Z, {
                         user: t,
                         canApplySelectedChange: w,
                         pendingProfileEffectRecord: S,
@@ -159,17 +159,17 @@ function S(e) {
     let { transitionState: t, analyticsLocations: r, initialSelectedEffectId: a, guild: u, onClose: d } = e,
         { isFetching: p, categories: m, purchases: g } = (0, f.Z)('ProfileEffectModal'),
         x = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
-        { analyticsLocations: P } = (0, c.ZP)(r, s.Z.EDIT_PROFILE_EFFECT_MODAL),
-        y = (0, h.Kg)(x, u);
+        { analyticsLocations: y } = (0, c.ZP)(r, s.Z.EDIT_PROFILE_EFFECT_MODAL),
+        P = (0, h.Kg)(x, u);
     return (
         i.useEffect(() => {
             j.default.track(O.rMx.OPEN_MODAL, {
                 type: O.jXE.PROFILE_EFFECT_CUSTOMIZATION,
-                location_stack: P
+                location_stack: y
             });
-        }, [P]),
+        }, [y]),
         (0, n.jsx)(c.Gt, {
-            value: P,
+            value: y,
             children: (0, n.jsx)(o.Y0X, {
                 transitionState: t,
                 className: E.modal,
@@ -185,9 +185,9 @@ function S(e) {
                           categories: m,
                           purchases: g,
                           initialSelectedProfileEffectId: a,
-                          currentSavedEffectId: y,
+                          currentSavedEffectId: P,
                           onClose: d,
-                          analyticsLocations: P
+                          analyticsLocations: y
                       })
             })
         })

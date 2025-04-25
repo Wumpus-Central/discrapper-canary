@@ -39,7 +39,7 @@ function _(e) {
         [E, y] = l.useState(h('')),
         I = l.useCallback((e) => y(h(e)), [y]),
         { queryMode: S } = E,
-        A = l.useRef(),
+        A = l.useRef(null),
         O = l.useRef(n),
         v = p !== A.current ? n : O.current;
     l.useEffect(() => {

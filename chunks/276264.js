@@ -276,7 +276,7 @@ let G = (0, C.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
         i.useEffect(() => {
             n && eA(!1);
         }, [n]);
-        let eN = (0, O.Fr)(C),
+        let eN = (0, O.fN)(C),
             eC = null != eN && !ed && n && !eT,
             eR = i.useCallback(() => {
                 ep(!0);

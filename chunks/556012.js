@@ -1,99 +1,99 @@
-e.d(n, { c: () => S });
-var r = e(481060),
-    l = e(933557),
-    a = e(592125),
-    i = e(699516),
-    s = e(594174),
-    u = e(273504),
-    c = e(590433),
-    o = e(388032);
-let d = (t) => t !== u.jj.QUARANTINE_USER,
-    j = (t) => {
-        switch (t) {
-            case u.jj.BLOCK_MESSAGE:
-            case u.jj.FLAG_TO_CHANNEL:
-            case u.jj.USER_COMMUNICATION_DISABLED:
-            case u.jj.QUARANTINE_USER:
+n.d(t, { c: () => j });
+var r = n(481060),
+    l = n(933557),
+    i = n(592125),
+    a = n(699516),
+    u = n(594174),
+    o = n(273504),
+    s = n(590433),
+    c = n(388032);
+let f = (e) => e !== o.jj.QUARANTINE_USER,
+    E = (e) => {
+        switch (e) {
+            case o.jj.BLOCK_MESSAGE:
+            case o.jj.FLAG_TO_CHANNEL:
+            case o.jj.USER_COMMUNICATION_DISABLED:
+            case o.jj.QUARANTINE_USER:
                 return !0;
             default:
                 return !1;
         }
     },
-    A = (t) => {
-        switch (t) {
-            case u.jj.BLOCK_MESSAGE:
-                return o.intl.string(o.t.d1ab8v);
-            case u.jj.FLAG_TO_CHANNEL:
-                return o.intl.string(o.t['Y+Vmvb']);
-            case u.jj.USER_COMMUNICATION_DISABLED:
-                return o.intl.string(o.t.Xz2njI);
-            case u.jj.QUARANTINE_USER:
-                return o.intl.string(o.t.NPO8eX);
+    g = (e) => {
+        switch (e) {
+            case o.jj.BLOCK_MESSAGE:
+                return c.intl.string(c.t.d1ab8v);
+            case o.jj.FLAG_TO_CHANNEL:
+                return c.intl.string(c.t['Y+Vmvb']);
+            case o.jj.USER_COMMUNICATION_DISABLED:
+                return c.intl.string(c.t.Xz2njI);
+            case o.jj.QUARANTINE_USER:
+                return c.intl.string(c.t.NPO8eX);
         }
     },
-    E = function (t) {
-        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.fX.KEYWORD;
-        switch (t) {
-            case u.jj.BLOCK_MESSAGE:
-                switch (n) {
-                    case u.fX.MENTION_SPAM:
-                        return o.intl.string(o.t['8hdId3']);
-                    case u.fX.ML_SPAM:
-                        return o.intl.string(o.t.tLQYs7);
+    d = function (e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.fX.KEYWORD;
+        switch (e) {
+            case o.jj.BLOCK_MESSAGE:
+                switch (t) {
+                    case o.fX.MENTION_SPAM:
+                        return c.intl.string(c.t['8hdId3']);
+                    case o.fX.ML_SPAM:
+                        return c.intl.string(c.t.tLQYs7);
                     default:
-                        return o.intl.string(o.t.xAAocn);
+                        return c.intl.string(c.t.xAAocn);
                 }
-            case u.jj.FLAG_TO_CHANNEL:
-                return o.intl.string(o.t.BHAXfX);
-            case u.jj.USER_COMMUNICATION_DISABLED:
-                return o.intl.string(o.t['bNK+gI']);
-            case u.jj.QUARANTINE_USER:
-                return o.intl.string(o.t['/7nL5e']);
+            case o.jj.FLAG_TO_CHANNEL:
+                return c.intl.string(c.t.BHAXfX);
+            case o.jj.USER_COMMUNICATION_DISABLED:
+                return c.intl.string(c.t['bNK+gI']);
+            case o.jj.QUARANTINE_USER:
+                return c.intl.string(c.t['/7nL5e']);
         }
     },
-    N = (t, n) => {
-        var e, r, d;
-        switch (t) {
-            case u.jj.QUARANTINE_USER:
-            case u.jj.BLOCK_MESSAGE:
+    S = (e, t) => {
+        var n, r, f;
+        switch (e) {
+            case o.jj.QUARANTINE_USER:
+            case o.jj.BLOCK_MESSAGE:
                 return null;
-            case u.jj.FLAG_TO_CHANNEL: {
-                let t = null == n || null == (e = n.metadata) ? void 0 : e.channelId;
-                if (null == t) return null;
-                let r = a.Z.getChannel(t);
-                if (null == r) return null;
-                let u = (0, l.F6)(r, s.default, i.Z);
-                return o.intl.format(o.t.xQXnkJ, { channelName: u });
-            }
-            case u.jj.USER_COMMUNICATION_DISABLED: {
-                let t = null != (d = null == n || null == (r = n.metadata) ? void 0 : r.durationSeconds) ? d : 0,
-                    e = (0, c.L9)(t);
+            case o.jj.FLAG_TO_CHANNEL: {
+                let e = null == t || null == (n = t.metadata) ? void 0 : n.channelId;
                 if (null == e) return null;
-                return o.intl.format(o.t.AFmbfX, { duration: e });
+                let r = i.Z.getChannel(e);
+                if (null == r) return null;
+                let o = (0, l.F6)(r, u.default, a.Z);
+                return c.intl.format(c.t.xQXnkJ, { channelName: o });
+            }
+            case o.jj.USER_COMMUNICATION_DISABLED: {
+                let e = null != (f = null == t || null == (r = t.metadata) ? void 0 : r.durationSeconds) ? f : 0,
+                    n = (0, s.L9)(e);
+                if (null == n) return null;
+                return c.intl.format(c.t.AFmbfX, { duration: n });
             }
         }
     },
-    _ = (t) => {
-        switch (t) {
-            case u.jj.BLOCK_MESSAGE:
+    O = (e) => {
+        switch (e) {
+            case o.jj.BLOCK_MESSAGE:
                 return r.k$p;
-            case u.jj.FLAG_TO_CHANNEL:
+            case o.jj.FLAG_TO_CHANNEL:
                 return r.VL1;
-            case u.jj.USER_COMMUNICATION_DISABLED:
+            case o.jj.USER_COMMUNICATION_DISABLED:
                 return r.YlB;
-            case u.jj.QUARANTINE_USER:
+            case o.jj.QUARANTINE_USER:
                 return r.ics;
         }
     };
-function S(t, n, e) {
-    var l, a, i, s;
-    return j(t)
+function j(e, t, n) {
+    var l, i, a, u;
+    return E(e)
         ? {
-              headerText: null != (l = A(t)) ? l : '',
-              descriptionText: null != (a = E(t, e)) ? a : '',
-              helperText: null != (i = N(t, n)) ? i : null,
-              icon: null != (s = _(t)) ? s : r.k$p,
-              isEditable: d(t)
+              headerText: null != (l = g(e)) ? l : '',
+              descriptionText: null != (i = d(e, n)) ? i : '',
+              helperText: null != (a = S(e, t)) ? a : null,
+              icon: null != (u = O(e)) ? u : r.k$p,
+              isEditable: f(e)
           }
         : null;
 }

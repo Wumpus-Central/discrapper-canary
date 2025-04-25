@@ -1,16 +1,16 @@
-n.d(t, { Z: () => a }), n(388685), n(35282), n(781311);
-var l = n(192379),
-    r = n(211266),
+n.d(t, { Z: () => s }), n(388685), n(35282), n(781311);
+var r = n(192379),
+    l = n(211266),
     i = n(212819);
-function a(e) {
+function s(e) {
     let { searchOptions: t } = e,
-        [n, a] = l.useState({
+        [n, s] = r.useState({
             results: [],
             query: ''
         }),
-        s = (0, r.Z)(() => {
+        a = (0, l.Z)(() => {
             let e = new i.ZP((e, t) => {
-                a({
+                s({
                     results: e,
                     query: t
                 });
@@ -18,43 +18,43 @@ function a(e) {
             return e.setLimit(20), e.search(''), e;
         });
     return (
-        l.useEffect(() => () => s.destroy(), [s]),
-        l.useEffect(() => {
-            null != t && t !== s.options && s.setOptions(t);
-        }, [s, t]),
+        r.useEffect(() => () => a.destroy(), [a]),
+        r.useEffect(() => {
+            null != t && t !== a.options && a.setOptions(t);
+        }, [a, t]),
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
-                    l = Object.keys(n);
+                    r = Object.keys(n);
                 'function' == typeof Object.getOwnPropertySymbols &&
-                    (l = l.concat(
+                    (r = r.concat(
                         Object.getOwnPropertySymbols(n).filter(function (e) {
                             return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         })
                     )),
-                    l.forEach(function (t) {
-                        var l;
-                        (l = n[t]),
+                    r.forEach(function (t) {
+                        var r;
+                        (r = n[t]),
                             t in e
                                 ? Object.defineProperty(e, t, {
-                                      value: l,
+                                      value: r,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = l);
+                                : (e[t] = r);
                     });
             }
             return e;
         })(
             {
-                search: l.useCallback(
+                search: r.useCallback(
                     (e) => {
                         var t;
-                        let { query: n, resultTypes: l } = e;
-                        (null != s.resultTypes && ((t = s.resultTypes), l.length === t.size && l.every((e) => t.has(e)))) || (s.setResultTypes(l), s.setLimit(1 === l.length ? 50 : 20)), s.search('' === n.trim() ? '' : n);
+                        let { query: n, resultTypes: r } = e;
+                        (null != a.resultTypes && ((t = a.resultTypes), r.length === t.size && r.every((e) => t.has(e)))) || (a.setResultTypes(r), a.setLimit(1 === r.length ? 50 : 20)), a.search('' === n.trim() ? '' : n);
                     },
-                    [s]
+                    [a]
                 )
             },
             n
