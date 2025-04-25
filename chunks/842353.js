@@ -1,0 +1,37 @@
+var r = t(958579);
+e.exports = t.v(n, e.id, '5628946a9c5348bf', {
+    './discord_markdown_bg.js': {
+        __wbindgen_string_get: r.qt,
+        __wbindgen_object_drop_ref: r.ug,
+        __wbindgen_is_string: r.eY,
+        __wbindgen_error_new: r.hd,
+        __wbindgen_is_null: r.zr,
+        __wbindgen_is_undefined: r.XP,
+        __wbindgen_is_object: r.Wl,
+        __wbindgen_jsval_loose_eq: r.Qr,
+        __wbindgen_boolean_get: r.HT,
+        __wbindgen_number_get: r.M1,
+        __wbg_String_b9412f8799faab3e: r.KA,
+        __wbg_get_bd8e338fbd5f5cc8: r.KG,
+        __wbg_length_cd7af8117672b8b8: r._T,
+        __wbindgen_is_function: r.o$,
+        __wbg_next_40fc327bfc8770e6: r.c1,
+        __wbg_next_196c84450b364254: r.$X,
+        __wbg_done_298b57d23c0fc80c: r.K5,
+        __wbg_value_d93c65011f51a456: r.WM,
+        __wbg_iterator_2cee6dadfd956dfa: r.F0,
+        __wbg_get_e3c254076557e348: r.s2,
+        __wbg_call_27c0f87801dedf93: r.Sp,
+        __wbg_isArray_2ab64d95e09ea0ae: r.yW,
+        __wbg_instanceof_ArrayBuffer_836825be07d4c9d2: r.dw,
+        __wbg_entries_95cc2c823b285a09: r.Pn,
+        __wbg_buffer_12d079cc21e14bdb: r._D,
+        __wbg_new_63b92bc8671ed464: r.KX,
+        __wbg_set_a47bac70306a19a7: r.fH,
+        __wbg_length_c20a40f15020d68a: r.Cl,
+        __wbg_instanceof_Uint8Array_2b3bbecd033d19f6: r.zk,
+        __wbindgen_debug_string: r.fY,
+        __wbindgen_throw: r.Or,
+        __wbindgen_memory: r.oH
+    }
+});
