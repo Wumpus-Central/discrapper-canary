@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => v });
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -15,19 +15,19 @@ var i = n(200651),
     b = n(388032),
     _ = n(152790),
     y = n(263930);
-let x = (e) => {
-    let { entry: t, onClose: n, onReaction: l, onRequestOpen: x, disableActivityProfileLinks: C, customCTA: v, popoutClassname: g, popoutPosition: j = 'right' } = e,
+let v = (e) => {
+    let { entry: t, onClose: n, onReaction: l, onRequestOpen: v, disableActivityProfileLinks: x, customCTA: C, popoutClassname: g, popoutPosition: j = 'right' } = e,
         P = r.useRef(null),
         N = (0, a.e7)([u.Z, c.Z], () => c.Z.getChannel(u.Z.getChannelId())),
-        E = (0, a.e7)([d.default], () => d.default.getUser(t.author_id)),
-        { nick: O, avatar: A } = r.useMemo(() => {
-            let e = null == E ? void 0 : E.getAvatarURL(null == N ? void 0 : N.guild_id, 48, !1);
+        O = (0, a.e7)([d.default], () => d.default.getUser(t.author_id)),
+        { nick: E, avatar: A } = r.useMemo(() => {
+            let e = null == O ? void 0 : O.getAvatarURL(null == N ? void 0 : N.guild_id, 48, !1);
             return {
-                nick: p.ZP.getName(null == N ? void 0 : N.guild_id, null == N ? void 0 : N.id, E),
+                nick: p.ZP.getName(null == N ? void 0 : N.guild_id, null == N ? void 0 : N.id, O),
                 avatar: e
             };
-        }, [E, N]);
-    return null == E
+        }, [O, N]);
+    return null == O
         ? null
         : (0, i.jsx)(s.yRy, {
               targetElementRef: P,
@@ -45,13 +45,13 @@ let x = (e) => {
                           },
                           onUserPopoutClosed: () => r(),
                           disableGameProfileLinks: !0,
-                          disableActivityProfileLinks: C
+                          disableActivityProfileLinks: x
                       })
                   });
               },
               positionKey: "'content-entry-".concat(t.id),
               onRequestOpen: () => {
-                  null == x || x();
+                  null == v || v();
               },
               children: (e) => {
                   var n, r;
@@ -97,7 +97,7 @@ let x = (e) => {
                                           (0, i.jsx)('img', {
                                               className: _.avatar,
                                               src: A,
-                                              alt: b.intl.formatToPlainString(b.t.IzVXxc, { userName: O })
+                                              alt: b.intl.formatToPlainString(b.t.IzVXxc, { userName: E })
                                           }),
                                           (0, i.jsx)('div', {
                                               className: _.playerInfo,
@@ -108,7 +108,7 @@ let x = (e) => {
                                                           variant: 'text-md/medium',
                                                           color: 'text-primary',
                                                           lineClamp: 1,
-                                                          children: O
+                                                          children: E
                                                       }),
                                                       (0, i.jsx)(h.Gk, {
                                                           location: h.Gt.APP_LAUNCHER,
@@ -117,8 +117,8 @@ let x = (e) => {
                                                   ]
                                               })
                                           }),
-                                          null != v
-                                              ? v
+                                          null != C
+                                              ? C
                                               : (0, i.jsx)('div', {
                                                     className: _.reactions,
                                                     children: (0, i.jsx)(s.n$P, { size: 'sm' })

@@ -16,7 +16,7 @@ var i = n(200651),
     _ = n(413097);
 function y(e) {
     var t;
-    let { command: n, application: y, onClick: x, query: C, searchResultsPosition: v, onClickAppCardFriends: g } = e,
+    let { command: n, application: y, onClick: v, query: x, searchResultsPosition: C, onClickAppCardFriends: g } = e,
         j = r.useCallback(
             (e) => {
                 if ((0, u.BQ)(y)) {
@@ -55,17 +55,17 @@ function y(e) {
             },
             [y]
         ),
-        { iconURL: P, name: N, description: E } = r.useMemo(() => (0, u.sl)(y, { fakeAppIconURL: _ }), [y]),
-        O = r.useMemo(() => {
+        { iconURL: P, name: N, description: O } = r.useMemo(() => (0, u.sl)(y, { fakeAppIconURL: _ }), [y]),
+        E = r.useMemo(() => {
             var e;
-            let t = null != (e = null == n ? void 0 : n.displayDescription) ? e : E;
+            let t = null != (e = null == n ? void 0 : n.displayDescription) ? e : O;
             return null == t ? null : (0, d.ae)(t, void 0);
-        }, [E, null == n ? void 0 : n.displayDescription]),
+        }, [O, null == n ? void 0 : n.displayDescription]),
         { trackSearchResultsItemImpressionRef: A } = (0, h.Z)({
             applicationId: y.id,
             commandId: null == n ? void 0 : n.id,
-            query: C,
-            searchResultsPosition: v
+            query: x,
+            searchResultsPosition: C
         }),
         { enabled: I } = c.X.useExperiment({ location: 'AppLauncherSearchCard' }, { autoTrackExposure: !0 }),
         { friends: S } = (0, a.Z)(y),
@@ -73,7 +73,7 @@ function y(e) {
     return (0, i.jsx)(l.P3F, {
         className: b.clickable,
         innerRef: (e) => (A.current = e),
-        onClick: x,
+        onClick: v,
         onContextMenu: j,
         children: (0, i.jsxs)(l.Rny, {
             className: b.focusBlock,
@@ -104,7 +104,7 @@ function y(e) {
                                   variant: 'text-sm/normal',
                                   color: 'text-secondary',
                                   lineClamp: 1,
-                                  children: O
+                                  children: E
                               })
                     ]
                 }),

@@ -15,7 +15,7 @@ var i,
     p = n(815605),
     m = n(981631),
     f = n(872333),
-    g = (((i = {})[(i.NORMAL = 16)] = 'NORMAL'), (i[(i.NORMAL_NEW = 20)] = 'NORMAL_NEW'), (i[(i.LARGE = 32)] = 'LARGE'), i);
+    g = (((i = {})[(i.NORMAL = 20)] = 'NORMAL'), (i[(i.LARGE = 32)] = 'LARGE'), i);
 let b = async (e) => {
     var t;
     let { effect: n } = e,
@@ -24,7 +24,7 @@ let b = async (e) => {
     return (r.assets[0].p = n.url), r;
 };
 function j(e) {
-    let { className: t, effect: n, onComplete: i, emojiSize: a = 16 } = e,
+    let { className: t, effect: n, onComplete: i, emojiSize: a = 20 } = e,
         l = o.useRef(null),
         h = a * p.Vz,
         m = (h + a) / 2;

@@ -17,8 +17,8 @@ var r,
     b = n(709586),
     x = n(267642),
     y = n(739566),
-    v = n(834129),
-    E = n(981631),
+    E = n(834129),
+    v = n(981631),
     O = n(388032),
     j = n(573510);
 function C(e) {
@@ -185,7 +185,7 @@ function U(e) {
         { createMultipleConfettiAt: g, confettiCanvas: _ } = l.useContext(f.h),
         [b, x] = l.useState(null),
         y = (0, s.uR)(_, b),
-        v = (function (e, t) {
+        E = (function (e, t) {
             if (null == e) return 'enter';
             switch (e) {
                 case 'enter':
@@ -201,8 +201,8 @@ function U(e) {
                     return 'enter';
             }
         })(d, h),
-        E = T.includes(h),
-        O = E && 'exit' === d,
+        v = T.includes(h),
+        O = v && 'exit' === d,
         C = l.useCallback((e) => {
             m(e);
         }, []),
@@ -246,7 +246,7 @@ function U(e) {
             }
         }, [g, h, d, a]),
         l.useEffect(() => {
-            if (E && 'leaf_fall' === d) {
+            if (v && 'leaf_fall' === d) {
                 let e = w[h].leafRotationDirection;
                 y.createConfetti(
                     {
@@ -298,7 +298,7 @@ function U(e) {
                     { sprite: 'TOP_LEFT' === h ? k : D }
                 );
             }
-        }, [E, y, h, d]),
+        }, [v, y, h, d]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(s.Ji, {
@@ -319,7 +319,7 @@ function U(e) {
                     children: (0, i.jsx)(p.kci, {
                         animationRef: A,
                         className: o()(j.easterEggAnimation, { [j.easterEggAnimationHideLeaf]: O }),
-                        nextScene: v,
+                        nextScene: E,
                         sceneSegments: I,
                         onScenePlay: C,
                         onSceneComplete: S,
@@ -336,12 +336,12 @@ function F(e) {
         { message: n, compact: r, guild: a, usernameHook: o, onClickMessage: s } = e,
         c = (function (e) {
             switch (e.type) {
-                case E.uaV.GUILD_BOOST_TIER_1:
-                    return E.Eu4.TIER_1;
-                case E.uaV.GUILD_BOOST_TIER_2:
-                    return E.Eu4.TIER_2;
-                case E.uaV.GUILD_BOOST_TIER_3:
-                    return E.Eu4.TIER_3;
+                case v.uaV.GUILD_BOOST_TIER_1:
+                    return v.Eu4.TIER_1;
+                case v.uaV.GUILD_BOOST_TIER_2:
+                    return v.Eu4.TIER_2;
+                case v.uaV.GUILD_BOOST_TIER_3:
+                    return v.Eu4.TIER_3;
             }
             return null;
         })(n),
@@ -392,7 +392,7 @@ function F(e) {
             I(!1);
         }, []),
         D = l.useCallback(() => {
-            (0, g.AI)({ settingsVisible: !0 }), m.Z.open(E.oAB.POGGERMODE), I(!1);
+            (0, g.AI)({ settingsVisible: !0 }), m.Z.open(v.oAB.POGGERMODE), I(!1);
         }, []),
         L = l.useCallback(
             (e, t) => {
@@ -410,7 +410,7 @@ function F(e) {
             onMouseEnter: R
         })
     });
-    return (0, i.jsxs)(v.Z, {
+    return (0, i.jsxs)(E.Z, {
         iconNode: M,
         timestamp: n.timestamp,
         compact: r,

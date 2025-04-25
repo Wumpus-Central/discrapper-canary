@@ -20,8 +20,8 @@ var r,
     b = n(28546),
     x = n(963249),
     y = n(703656),
-    v = n(594174),
-    E = n(626135),
+    E = n(594174),
+    v = n(626135),
     O = n(51144),
     j = n(479446),
     C = n(795448),
@@ -36,7 +36,7 @@ var r,
     R = (((r = {}).SYSTEM_MESSAGE = 'system_message'), (r.COACHMARK = 'coachmark'), r);
 function k(e) {
     let { giftIntentType: t, premiumGiftIntentCardType: n, recipientUser: r, onMouseEnter: a, onMouseLeave: R, popoutPosition: k, analyticsPage: D, analyticsSection: L, glow: M, giftIntentSecondaryAction: U } = e,
-        F = (0, c.e7)([v.default], () => v.default.getCurrentUser()),
+        F = (0, c.e7)([E.default], () => E.default.getCurrentUser()),
         { analyticsLocations: B } = (0, h.ZP)(),
         G = (0, c.e7)([S.Z], () => S.Z.getFriendAnniversaryYears(r.id));
     l.useEffect(() => {
@@ -118,7 +118,7 @@ function k(e) {
                                 className: o()(Z.button, J),
                                 onClick: (e) => {
                                     e.stopPropagation(),
-                                        E.default.track(T.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
+                                        v.default.track(T.rMx.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
                                             gift_intent_type: t,
                                             cta_type: U
                                         }),

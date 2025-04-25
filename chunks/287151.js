@@ -30,8 +30,8 @@ var i,
     S = n(906411),
     _ = n(56314),
     C = n(231053),
-    R = n(944386),
-    P = n(305325),
+    P = n(944386),
+    R = n(305325),
     E = n(33154),
     I = n(692147),
     N = n(197115),
@@ -42,8 +42,8 @@ var i,
     k = n(592125),
     L = n(430824),
     D = n(542578),
-    B = n(914010),
-    U = n(594174),
+    U = n(914010),
+    B = n(594174),
     F = n(451478),
     V = n(626135),
     H = n(74538),
@@ -156,7 +156,7 @@ class ed extends (i = o.PureComponent) {
         let e,
             t,
             { count: n, burst_count: i, colors: o, isBurstReaction: a, hideCount: l, emoji: c, readOnly: u, isLurking: p, isGuest: m, isPendingMember: b, className: j, useChatFontScaling: O, message: y, hideEmoji: T, animationStartPosition: S, emojiSize: _ } = this.props,
-            { shouldShowTooltip: C, tooltipTextAria: R, reactionRef: P, tooltipPositionKey: E } = this.state,
+            { shouldShowTooltip: C, tooltipTextAria: P, reactionRef: R, tooltipPositionKey: E } = this.state,
             N = O ? ei : en,
             w = {
                 transform: [{ scale: this.scale }],
@@ -169,13 +169,13 @@ class ed extends (i = o.PureComponent) {
                 a = null != (M = (0, h.wK)(null != i ? i : '', r)) ? M : '';
             this.isMe() && (w.borderColor = i), (w.background = a), (e = n), (t = n);
         }
-        let k = null == P ? void 0 : P.getBoundingClientRect(),
+        let k = null == R ? void 0 : R.getBoundingClientRect(),
             L = null != S && null != k,
             D = null == S;
         return (0, r.jsx)(f.yRy, {
-            targetElementRef: { current: P },
+            targetElementRef: { current: R },
             shouldShow: C,
-            'aria-label': null != R && R,
+            'aria-label': null != P && P,
             renderPopout: this.renderTooltip,
             nudgeAlignIntoViewport: !0,
             position: 'top',
@@ -232,7 +232,7 @@ class ed extends (i = o.PureComponent) {
                                                                           messageId: y.id,
                                                                           useChatFontScaling: O,
                                                                           color: t,
-                                                                          emojiSize: 'reactionLarge' === _ ? Y.M.NORMAL_NEW : Y.M.NORMAL
+                                                                          emojiSize: Y.M.NORMAL
                                                                       })
                                                               ]
                                                           })
@@ -256,7 +256,7 @@ class ed extends (i = o.PureComponent) {
                                                   }),
                                             (0, r.jsx)(I.Z, {
                                                 count: Z,
-                                                reactionRef: P
+                                                reactionRef: R
                                             })
                                         ]
                                     })
@@ -444,7 +444,7 @@ class ed extends (i = o.PureComponent) {
                                   })
                               }),
                               (() => {
-                                  let e = U.default.getCurrentUser();
+                                  let e = B.default.getCurrentUser();
                                   return i
                                       ? (0, r.jsxs)('div', {
                                             className: s()(er.burstReactionTooltipPrompt, er.burstReactionTooltipSpacer),
@@ -540,14 +540,14 @@ class ed extends (i = o.PureComponent) {
                 if (!t) return null;
                 let n = k.Z.getChannel(e.getChannelId()),
                     i = L.Z.getGuild(null == n ? void 0 : n.getGuildId());
-                null != i && (0, P.hk)(i.id);
+                null != i && (0, R.hk)(i.id);
             }),
             eo(this, 'handleSetReactionRef', (e) => {
                 this.setState({ reactionRef: e });
             }),
             eo(this, 'trackReactionTooltipViewed', () => {
                 let { emoji: e, message: t, type: n } = this.props,
-                    i = U.default.getCurrentUser(),
+                    i = B.default.getCurrentUser(),
                     r = k.Z.getChannel(t.getChannelId()),
                     o = n === z.O.BURST,
                     a = (0, H.I5)(i),
@@ -584,7 +584,7 @@ let eh = o.memo((e) => {
             l = (0, p.e7)([G.Z], () => void 0 !== G.Z.getEffectForEmojiId(i.getChannelId(), i.id, o)),
             c = (0, p.e7)([j.Z], () => j.Z.useReducedMotion),
             u = M.Yk.useSetting(),
-            d = U.default.getCurrentUser(),
+            d = B.default.getCurrentUser(),
             h = (0, H.I5)(d),
             m = (0, p.e7)([G.Z], () => G.Z.getReactionPickerAnimation(i.id, o.name, o.id)),
             f = a && (l || null != m);
@@ -604,7 +604,7 @@ let eh = o.memo((e) => {
     ep = (e) => {
         var t, n, i;
         let { emojiId: o, expressionSourceGuild: a, hasJoinedExpressionSourceGuild: s, onClose: l, popoutData: c, currentGuildId: u, nonce: d } = e;
-        (0, R.u)({
+        (0, P.u)({
             emojiId: o,
             currentGuildId: u,
             popoutData: c,
@@ -657,17 +657,17 @@ let eh = o.memo((e) => {
             [j, v] = o.useState(!1),
             [O, y] = o.useState(!1),
             [x, _] = o.useState(!1),
-            R = null != c,
-            P = null != (t = null == u ? void 0 : u.isDiscoverable()) && t,
-            E = B.Z.getGuildId(),
+            P = null != c,
+            R = null != (t = null == u ? void 0 : u.isDiscoverable()) && t,
+            E = U.Z.getGuildId(),
             I = null != E && (E === (null == u ? void 0 : u.id) || E === (null == c ? void 0 : c.id)),
-            N = U.default.getCurrentUser(),
+            N = B.default.getCurrentUser(),
             w = (0, W.a)({
                 sourceType: g,
                 expressionSourceApplication: null != h ? h : null,
                 isPremium: H.ZP.isPremium(N),
-                hasJoinedEmojiSourceGuild: R,
-                isDiscoverable: P,
+                hasJoinedEmojiSourceGuild: P,
+                isDiscoverable: R,
                 emojiComesFromCurrentGuild: I,
                 isUnusableRoleSubscriptionEmoji: !1,
                 userIsRoleSubscriber: !1,
@@ -693,7 +693,7 @@ let eh = o.memo((e) => {
                         y(!1), _(!0), i();
                     })();
             }, [n, j, x, i]),
-            R)
+            P)
         )
             return null;
         let Z = () => {
@@ -741,7 +741,7 @@ let eh = o.memo((e) => {
                       (0, r.jsx)(ep, {
                           emojiId: n,
                           expressionSourceGuild: u,
-                          hasJoinedExpressionSourceGuild: R,
+                          hasJoinedExpressionSourceGuild: P,
                           onClose: a,
                           popoutData: w,
                           currentGuildId: E,

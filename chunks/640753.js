@@ -26,7 +26,7 @@ let g = r.memo(function (e) {
         [T, S] = r.useState(!1),
         _ = (0, o.e7)([s.Z], () => s.Z.useReducedMotion),
         C = c.Yk.useSetting(),
-        R = r.useCallback(() => {
+        P = r.useCallback(() => {
             a.Z.dispatch({
                 type: 'BURST_REACTION_EFFECT_CLEAR',
                 channelId: t,
@@ -59,7 +59,7 @@ let g = r.memo(function (e) {
         : (0, i.jsx)(h.Z, {
               className: (b ? f : m).effect,
               effect: x,
-              onComplete: R,
+              onComplete: P,
               emojiSize: O
           });
 });

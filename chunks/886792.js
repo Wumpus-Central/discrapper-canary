@@ -57,7 +57,7 @@ function b(e, t) {
 function _(e) {
     let { entry: t } = e,
         { user: n, activity: _, embeddedActivity: y } = (0, d.n)(t),
-        x = r.useMemo(() => {
+        v = r.useMemo(() => {
             if (null == n || null == _) return null;
             let e = (0, o.Z)(_, m.xjy.JOIN) || (0, a.Z)(_);
             return e && e
@@ -86,7 +86,7 @@ function _(e) {
         b(h({}, e), {
             onReaction: () => {},
             onRequestOpen: () => {},
-            customCTA: null != x ? x : null,
+            customCTA: null != v ? v : null,
             popoutClassname: p.I4,
             popoutPosition: 'left'
         })

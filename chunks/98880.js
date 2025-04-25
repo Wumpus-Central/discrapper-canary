@@ -24,21 +24,21 @@ var i,
     b = n(723163),
     _ = n(361213),
     y = n(542094),
-    x = n(778569),
-    C = n(182906),
-    v = n(556505),
+    v = n(778569),
+    x = n(182906),
+    C = n(556505),
     g = n(367907),
     j = n(220082),
     P = n(70097),
     N = n(973616),
-    E = n(594174),
-    O = n(695103),
+    O = n(594174),
+    E = n(695103),
     A = n(880448),
     I = n(768581),
     S = n(573188),
     T = n(541099),
-    L = n(783097),
-    w = n(695676),
+    w = n(783097),
+    L = n(695676),
     R = n(176412),
     Z = n(226026),
     k = n(570949),
@@ -50,8 +50,8 @@ var i,
     W = n(860901),
     V = n(413097),
     F = n(969728);
-function z() {
-    return (z =
+function G() {
+    return (G =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -61,7 +61,7 @@ function z() {
             return e;
         }).apply(this, arguments);
 }
-function G(e) {
+function z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -142,23 +142,23 @@ function Q(e) {
     let { application: t, onClick: n, children: i, sectionName: o, resultsPosition: s, sectionOverallPosition: d, tracksImpression: p, disabled: m, containerStyle: f, look: h } = e,
         b = l.useCallback(
             (e) => {
-                if ((0, L.BQ)(t)) {
+                if ((0, w.BQ)(t)) {
                     let n = t instanceof N.ZP ? t : N.ZP.createFromServer(t);
-                    (0, u.vq)(e, (e) => (0, r.jsx)(k.Z, G({ application: n }, e)));
+                    (0, u.vq)(e, (e) => (0, r.jsx)(k.Z, z({ application: n }, e)));
                 }
             },
             [t]
         ),
-        { name: _, description: y } = l.useMemo(() => (0, L.sl)(t, { fakeAppIconURL: V }), [t]),
-        { trackItemImpressionRef: x } = (0, Z.Z)({
+        { name: _, description: y } = l.useMemo(() => (0, w.sl)(t, { fakeAppIconURL: V }), [t]),
+        { trackItemImpressionRef: v } = (0, Z.Z)({
             applicationId: t.id,
-            applicationFlags: (0, L.BQ)(t) ? t.flags : void 0,
+            applicationFlags: (0, w.BQ)(t) ? t.flags : void 0,
             sectionName: o,
             sectionPosition: s,
             sectionOverallPosition: d,
-            promotionalLabel: (0, L.dF)(t)
+            promotionalLabel: (0, w.dF)(t)
         }),
-        C = l.useMemo(() => {
+        x = l.useMemo(() => {
             let e = m ? W.containerDisabled : W.container;
             return a()(
                 e,
@@ -172,13 +172,13 @@ function Q(e) {
         }, [f, m, h]);
     return m
         ? (0, r.jsx)('div', {
-              ref: p ? x : void 0,
-              className: C,
+              ref: p ? v : void 0,
+              className: x,
               children: i
           })
         : (0, r.jsx)(c.P3F, {
-              innerRef: p ? x : void 0,
-              className: C,
+              innerRef: p ? v : void 0,
+              className: x,
               onClick: n,
               onContextMenu: b,
               'aria-label': H.intl.formatToPlainString(H.t['zLhr9/'], {
@@ -190,12 +190,12 @@ function Q(e) {
 }
 function J(e) {
     let { application: t, imageStyle: n, children: i } = e,
-        { name: o, iconURL: s } = l.useMemo(() => (0, L.sl)(t, { fakeAppIconURL: V }), [t]);
+        { name: o, iconURL: s } = l.useMemo(() => (0, w.sl)(t, { fakeAppIconURL: V }), [t]);
     return (0, r.jsx)(c.ua7, {
         tooltipContentClassName: W.tooltipContent,
         text: o,
         children: (e) => {
-            var t = z(
+            var t = G(
                 {},
                 (function (e) {
                     if (null == e) throw TypeError('Cannot destructure ' + e);
@@ -204,7 +204,7 @@ function J(e) {
             );
             return (0, r.jsxs)(
                 'div',
-                X(G({ className: a()(W.iconContainer, n) }, t), {
+                X(z({ className: a()(W.iconContainer, n) }, t), {
                     children: [
                         (0, r.jsx)(M.Z, {
                             src: s,
@@ -221,29 +221,29 @@ function J(e) {
 }
 function K(e) {
     let { application: t, look: n, imageStyle: i, enableVideoBanner: o, disableBannerFadeIn: u, children: p, overrideImageUrl: m, showsPromoted: h, onClickAppCardFriends: _ } = e,
-        { iconURL: y, name: x, description: C } = l.useMemo(() => (0, L.sl)(t, { fakeAppIconURL: V }), [t]),
-        g = l.useMemo(() => (null == C ? null : (0, R.ae)(C)), [C]),
+        { iconURL: y, name: v, description: x } = l.useMemo(() => (0, w.sl)(t, { fakeAppIconURL: V }), [t]),
+        g = l.useMemo(() => (null == x ? null : (0, R.ae)(x)), [x]),
         P = (0, j.ZP)(y, ''),
-        [N, E] = l.useState(!1),
+        [N, O] = l.useState(!1),
         A = l.useCallback(() => {
-            !0 === o && E(!0);
+            !0 === o && O(!0);
         }, [o]),
-        I = h || (0, L.lf)(t),
+        I = h || (0, w.lf)(t),
         T = 'large_banner' === n || 'medium_banner' === n,
-        w = l.useCallback(() => E(!1), []),
-        Z = (0, s.e7)([f.Z, O.Z], () => f.Z.inDevModeForApplication(t.id) || O.Z.inTestModeForApplication(t.id), [t.id]),
-        k = (0, L.WA)(t),
+        L = l.useCallback(() => O(!1), []),
+        Z = (0, s.e7)([f.Z, E.Z], () => f.Z.inDevModeForApplication(t.id) || E.Z.inTestModeForApplication(t.id), [t.id]),
+        k = (0, w.WA)(t),
         { enabled: B } = S.X.useExperiment({ location: 'AppLauncherAppCard' }, { autoTrackExposure: !0 }),
         { friends: U } = (0, b.Z)(t),
-        F = B && (0, L.ye)(t) && U.length > 0;
+        F = B && (0, w.ye)(t) && U.length > 0;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             T
                 ? (0, r.jsxs)('div', {
                       onMouseEnter: A,
                       onFocus: A,
-                      onMouseLeave: w,
-                      onBlur: w,
+                      onMouseLeave: L,
+                      onBlur: L,
                       className: a()(W.bannerImageContainer, {
                           [W.mediumBanner]: 'medium_banner' === n,
                           [W.largeBanner]: 'large_banner' === n
@@ -273,7 +273,7 @@ function K(e) {
                                                 })
                                             }),
                                         Z && (0, r.jsx)($, {}),
-                                        k !== d.ww.NONE && (0, r.jsx)(v.Z, { labelType: k })
+                                        k !== d.ww.NONE && (0, r.jsx)(C.Z, { labelType: k })
                                     ]
                                 })
                               : null,
@@ -303,7 +303,7 @@ function K(e) {
                                         variant: 'heading-md/semibold',
                                         color: 'header-primary',
                                         lineClamp: 1,
-                                        children: x
+                                        children: v
                                     }),
                                     !T && I
                                         ? (0, r.jsx)('div', {
@@ -342,15 +342,15 @@ function K(e) {
 function $() {
     return (0, r.jsx)(c.ua7, {
         text: H.intl.string(H.t.CfTySU),
-        children: (e) => (0, r.jsx)('div', X(G({ className: W.devShelfBadge }, e), { children: (0, r.jsx)(A.Z, { className: W.devShelfIcon }) }))
+        children: (e) => (0, r.jsx)('div', X(z({ className: W.devShelfBadge }, e), { children: (0, r.jsx)(A.Z, { className: W.devShelfIcon }) }))
     });
 }
 function ee(e) {
     let { application: t } = e,
-        n = E.default.getCurrentUser();
+        n = O.default.getCurrentUser();
     if (!(null == n ? void 0 : n.isStaff()) && !(null == n ? void 0 : n.isStaffPersonal())) return null;
-    let i = (0, L.yJ)(t);
-    if (null == i || !(0, L.BQ)(t)) return null;
+    let i = (0, w.yJ)(t);
+    if (null == i || !(0, w.BQ)(t)) return null;
     let l = (0, y.fD)(t, i);
     return null == l
         ? null
@@ -359,7 +359,7 @@ function ee(e) {
               children: (e) =>
                   (0, r.jsx)(
                       'img',
-                      G(
+                      z(
                           {
                               className: W.staffBadge,
                               alt: l,
@@ -375,11 +375,11 @@ function et(e) {
     if (null != o)
         return (0, r.jsx)('img', {
             src: o,
-            alt: (0, L.BQ)(t) ? t.name : '',
+            alt: (0, w.BQ)(t) ? t.name : '',
             className: a()(W.bannerImage, { [W.disableFadeIn]: l })
         });
-    if ((0, L.BQ)(t)) {
-        if ((0, L.ye)(t))
+    if ((0, w.BQ)(t)) {
+        if ((0, w.ye)(t))
             return (0, r.jsx)(en, {
                 application: t,
                 showVideo: i,
@@ -399,13 +399,13 @@ function et(e) {
 }
 function en(e) {
     let { application: t, showVideo: n, disableFadeIn: i } = e,
-        o = (0, x.Z)({
+        o = (0, v.Z)({
             applicationId: t.id,
             size: 600,
             names: ['embedded_cover']
         }),
         s = l.useMemo(() => {
-            let e = (0, L.yJ)(t);
+            let e = (0, w.yJ)(t);
             return null != e && null != e.activity_preview_video_asset_id ? (0, _.Z)(t.id, e.activity_preview_video_asset_id) : null;
         }, [t]),
         [c, u] = l.useState(n);
@@ -431,7 +431,7 @@ function en(e) {
                       })
                   })
                 : null,
-            (0, r.jsx)(C.Z, {
+            (0, r.jsx)(x.Z, {
                 imageBackground: o,
                 applicationName: t.name,
                 imageClassName: d,
@@ -469,7 +469,7 @@ function er(e) {
 }
 function el(e) {
     let { application: t, sectionName: n, resultsPosition: i, query: r, installOnDemand: o, location: a } = e,
-        { pushHistory: s } = (0, w.hH)(),
+        { pushHistory: s } = (0, L.hH)(),
         { friends: c } = (0, b.Z)(t),
         u = l.useCallback(
             (e) => {
@@ -479,13 +479,13 @@ function el(e) {
                         section_name: n,
                         search_results_position: i,
                         source: T.Z.entrypoint(),
-                        promotional_label: (0, L.dF)(t),
+                        promotional_label: (0, w.dF)(t),
                         location: a,
                         query: r,
                         num_friends_who_play: c.length
                     }),
                     s({
-                        type: w.gc.APPLICATION,
+                        type: L.gc.APPLICATION,
                         application: t,
                         installOnDemand: o,
                         sectionName: n
@@ -501,14 +501,14 @@ function el(e) {
                         section_name: n,
                         search_results_position: i,
                         source: T.Z.entrypoint(),
-                        promotional_label: (0, L.dF)(t),
+                        promotional_label: (0, w.dF)(t),
                         location: a,
                         query: r,
                         num_friends_who_play: c.length,
                         tab_id: 'friends'
                     }),
                     s({
-                        type: w.gc.APPLICATION,
+                        type: L.gc.APPLICATION,
                         application: t,
                         installOnDemand: o,
                         sectionName: n,
@@ -526,7 +526,7 @@ function eo(e) {
     let { onClickAppCard: t, onClickAppCardFriends: n } = el(e);
     return (0, r.jsx)(
         Y,
-        X(G({}, e), {
+        X(z({}, e), {
             onClick: t,
             onClickAppCardFriends: n
         })
@@ -553,15 +553,15 @@ function ea(e) {
             }
             return r;
         })(e, ['context', 'application', 'location', 'sectionName', 'isOneClickCTA', 'fetchesApplication']);
-    if (!(0, L.BQ)(n)) throw Error('PerformActivityActionAppCard was passed the Built-in App, which is not supported.');
+    if (!(0, w.BQ)(n)) throw Error('PerformActivityActionAppCard was passed the Built-in App, which is not supported.');
     let p = l.useId(),
         [m, f] = (0, s.Wu)([h.ZP], () => [h.ZP.isLaunchingActivity(), h.ZP.getLaunchState(n.id, 'channel' === t.type ? t.channel.id : void 0)]),
         b = null != f && f.isLaunching && f.componentId === p,
         {
             onActivityItemSelected: _,
-            activityAction: x,
-            buttonColor: C,
-            buttonText: v
+            activityAction: v,
+            buttonColor: x,
+            buttonText: C
         } = (0, R.P7)({
             context: t,
             application: n,
@@ -570,11 +570,11 @@ function ea(e) {
             launchingComponentId: p,
             fetchesApplication: u
         });
-    return x === y.JS.START || x === y.JS.JOIN
+    return v === y.JS.START || v === y.JS.JOIN
         ? a
             ? (0, r.jsx)(
                   Y,
-                  X(G({}, d), {
+                  X(z({}, d), {
                       sectionName: o,
                       application: n,
                       onClick: _,
@@ -591,7 +591,7 @@ function ea(e) {
               )
             : (0, r.jsx)(
                   eo,
-                  X(G({}, d), {
+                  X(z({}, d), {
                       context: t,
                       sectionName: o,
                       application: n,
@@ -600,7 +600,7 @@ function ea(e) {
               )
         : (0, r.jsx)(
               Y,
-              X(G({}, d), {
+              X(z({}, d), {
                   sectionName: o,
                   application: n,
                   onClick: (e) => {
@@ -615,15 +615,15 @@ function ea(e) {
                           className: W.voiceLauncherAppCardButton,
                           type: 'submit',
                           size: c.zxk.Sizes.LARGE,
-                          color: C,
+                          color: x,
                           disabled: m,
                           onClick: _,
                           'aria-label': H.intl.formatToPlainString(H.t['XjP/R0'], {
-                              buttonText: v,
+                              buttonText: C,
                               applicationName: n.name
                           }),
                           submitting: b,
-                          children: v
+                          children: C
                       })
                   })
               })

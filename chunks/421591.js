@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(482853);
+n.d(t, { Z: () => x }), n(388685), n(482853);
 var i = n(200651),
     r = n(192379),
     l = n(481060),
@@ -18,8 +18,8 @@ let y = {
         width: h.Gy,
         height: (0, d.DK)()
     },
-    x = { height: (0, d.DK)() },
-    C = r.memo(
+    v = { height: (0, d.DK)() },
+    x = r.memo(
         r.forwardRef(function (e, t) {
             let { context: n, entrypoint: l, initHistory: u } = e,
                 { analyticsLocations: d } = (0, s.ZP)(o.Z.APP_LAUNCHER);
@@ -48,7 +48,7 @@ let y = {
                         className: _.contentWrapper,
                         children: (0, i.jsx)(s.Gt, {
                             value: d,
-                            children: (0, i.jsx)(v, {
+                            children: (0, i.jsx)(C, {
                                 initHistory: u,
                                 children: (0, i.jsx)(g, {
                                     context: n,
@@ -61,7 +61,7 @@ let y = {
             );
         })
     );
-function v(e) {
+function C(e) {
     let { initHistory: t, children: n } = e,
         [l, o] = r.useState(null != t ? t : [{ type: u.gc.HOME }]),
         [a, s] = r.useState({}),
@@ -169,26 +169,26 @@ function g(e) {
                 }
             );
         })(o),
-        { currentView: b, getMostRecentHistoryItemByType: y, setSlideReady: C } = (0, u.hH)();
+        { currentView: b, getMostRecentHistoryItemByType: y, setSlideReady: x } = (0, u.hH)();
     r.useEffect(() => {
-        C(!1);
-    }, [null == b ? void 0 : b.type, C]);
-    let v = r.useCallback(() => {
-        C(!0);
-    }, [C]);
+        x(!1);
+    }, [null == b ? void 0 : b.type, x]);
+    let C = r.useCallback(() => {
+        x(!0);
+    }, [x]);
     if (null == b) return null;
     let g = y(u.gc.LIST),
         j = y(u.gc.APPLICATION);
     return (0, i.jsxs)(l.MyZ, {
         activeSlide: b.type,
         width: h.Gy,
-        onSlideReady: v,
+        onSlideReady: C,
         children: [
             (0, i.jsx)(l.Mi4, {
                 id: u.gc.HOME,
                 children: (0, i.jsx)('div', {
                     className: _.slideContent,
-                    style: x,
+                    style: v,
                     children: (0, i.jsx)(m.Z, {
                         isScrollCloseToBottom: c,
                         setScroller: s,
@@ -203,7 +203,7 @@ function g(e) {
                 id: u.gc.LIST,
                 children: (0, i.jsx)('div', {
                     className: _.slideContent,
-                    style: x,
+                    style: v,
                     children:
                         null != g &&
                         (0, i.jsx)(f.Z, {
@@ -221,7 +221,7 @@ function g(e) {
                 id: u.gc.APPLICATION,
                 children: (0, i.jsx)('div', {
                     className: _.slideContent,
-                    style: x,
+                    style: v,
                     children:
                         null != j &&
                         (0, i.jsx)(p.Z, {

@@ -17,24 +17,24 @@ function m(e, t) {
         b = null != f ? [f, ...h] : h,
         _ = (0, o.Z)(b),
         y = 'channel' in t && (0, l.aZ)(t.channel, 'useActivityShelfData()'),
-        x = i.useMemo(() => _.filter(c.lm), [_]),
-        C = i.useMemo(
+        v = i.useMemo(() => _.filter(c.lm), [_]),
+        x = i.useMemo(
             () =>
-                null != f && x.length > 0 && x[0].id === f && null != x[0].embeddedActivityConfig
+                null != f && v.length > 0 && v[0].id === f && null != v[0].embeddedActivityConfig
                     ? [
                           {
-                              activity: x[0].embeddedActivityConfig,
-                              application: x[0]
+                              activity: v[0].embeddedActivityConfig,
+                              application: v[0]
                           }
                       ]
                     : [],
-            [x, f]
+            [v, f]
         ),
-        v = i.useMemo(
+        C = i.useMemo(
             () =>
                 m
                     .map((e) => {
-                        let t = x.find((t) => t.id === e.application_id);
+                        let t = v.find((t) => t.id === e.application_id);
                         return null == t
                             ? null
                             : {
@@ -43,11 +43,11 @@ function m(e, t) {
                               };
                     })
                     .filter(c.lm),
-            [m, x]
+            [m, v]
         );
     return i.useMemo(
         () =>
-            [...C, ...v]
+            [...x, ...C]
                 .filter((e) => {
                     var t;
                     let { activity: n } = e;
@@ -58,6 +58,6 @@ function m(e, t) {
                     return !t.requires_age_gate || (null == n ? void 0 : n.nsfwAllowed) === !0 || (null == n ? void 0 : n.nsfwAllowed) == null;
                 })
                 .filter((e) => !y || e.application.id !== l.gu),
-        [null == n ? void 0 : n.nsfwAllowed, v, y, C]
+        [null == n ? void 0 : n.nsfwAllowed, C, y, x]
     );
 }

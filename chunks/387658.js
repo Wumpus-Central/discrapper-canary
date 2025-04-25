@@ -15,29 +15,29 @@ var i = n(200651),
     b = n(895924),
     _ = n(104919),
     y = n(583027),
-    x = n(585483),
-    C = n(499254),
-    v = n(541099),
+    v = n(585483),
+    x = n(499254),
+    C = n(541099),
     g = n(827498),
     j = n(496158),
     P = n(676161),
     N = n(660090),
-    E = n(783097),
-    O = n(176412),
+    O = n(783097),
+    E = n(176412),
     A = n(870205),
     I = n(981631),
     S = n(689079),
     T = n(388032),
-    L = n(85884),
-    w = n(100260);
+    w = n(85884),
+    L = n(100260);
 let R = 'placeholder',
     Z = [, , , , ,].fill(R);
 function k(e) {
     var t, n;
     let { context: l, command: o, section: s, sectionName: c } = e,
         d = r.useCallback(() => {
-            let e = v.Z.entrypoint();
-            C.yT(g.ti.COMMAND),
+            let e = C.Z.entrypoint();
+            x.yT(g.ti.COMMAND),
                 (0, y.Mo)({
                     command: o,
                     location: b.Vh.APP_LAUNCHER_APPLICATION_VIEW,
@@ -53,14 +53,14 @@ function k(e) {
                         source: e,
                         commandOrigin: b.bB.APPLICATION_LAUNCHER
                     }),
-                    x.S.dispatch(I.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.channel.id }));
+                    v.S.dispatch(I.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.channel.id }));
         }, [l, o, s, c]),
         p = (null != (n = null == (t = o.options) ? void 0 : t.length) ? n : 0) > 0,
-        f = r.useMemo(() => (0, O.ae)(o.displayDescription, void 0), [o.displayDescription]),
+        f = r.useMemo(() => (0, E.ae)(o.displayDescription, void 0), [o.displayDescription]),
         h = r.useMemo(
             () =>
                 (0, i.jsxs)('div', {
-                    className: w.commandTextContainer,
+                    className: L.commandTextContainer,
                     children: [
                         (0, i.jsx)(u.Text, {
                             variant: 'text-sm/semibold',
@@ -78,11 +78,11 @@ function k(e) {
             [o.displayName, f]
         );
     return (0, i.jsxs)(u.P3F, {
-        className: w.command,
+        className: L.command,
         onClick: d,
         children: [
             (0, i.jsx)(u.Rny, {
-                className: w.commandFocusBlock,
+                className: L.commandFocusBlock,
                 children: h
             }),
             p
@@ -113,13 +113,13 @@ function M() {
         l = r.useMemo(
             () =>
                 (0, i.jsxs)('div', {
-                    className: w.commandTextContainerPlaceholder,
+                    className: L.commandTextContainerPlaceholder,
                     children: [
                         (0, i.jsx)('div', {
-                            className: L.textPlaceholder,
+                            className: w.textPlaceholder,
                             style: t,
                             children: (0, i.jsx)(u.Text, {
-                                className: L.hidden,
+                                className: w.hidden,
                                 variant: 'text-sm/semibold',
                                 color: 'header-primary',
                                 lineClamp: 1,
@@ -127,10 +127,10 @@ function M() {
                             })
                         }),
                         (0, i.jsx)('div', {
-                            className: L.textPlaceholder,
+                            className: w.textPlaceholder,
                             style: n,
                             children: (0, i.jsx)(u.Text, {
-                                className: L.hidden,
+                                className: w.hidden,
                                 variant: 'text-xs/medium',
                                 color: 'text-muted',
                                 lineClamp: 1,
@@ -142,7 +142,7 @@ function M() {
             [t, n]
         );
     return (0, i.jsx)('div', {
-        className: o()(w.command, L.loadingAnimation, { [L.noAnimation]: e }),
+        className: o()(L.command, w.loadingAnimation, { [w.noAnimation]: e }),
         children: l
     });
 }
@@ -155,7 +155,7 @@ function D(e) {
             async (e) => {
                 if ('channel' !== t.type) return;
                 e.stopPropagation();
-                let i = v.Z.lastShownEntrypoint();
+                let i = C.Z.lastShownEntrypoint();
                 try {
                     let { isAuthorized: e } = await (0, _.L)({
                         applicationId: n.applicationId,
@@ -168,14 +168,14 @@ function D(e) {
                         }
                     });
                     e &&
-                        (await (0, E.Y$)({
+                        (await (0, O.Y$)({
                             command: n,
                             optionValues: {},
                             context: o,
                             sectionName: l,
                             commandOrigin: b.bB.APP_LAUNCHER_APPLICATION_VIEW
                         }),
-                        C.yT(g.ti.COMMAND));
+                        x.yT(g.ti.COMMAND));
                 } finally {
                     c(!1);
                 }
@@ -188,8 +188,8 @@ function D(e) {
         disabled: a,
         size: u.PhG.ICON,
         color: u.zxk.Colors.PRIMARY,
-        className: w.commandSentCTAButton,
-        innerClassName: w.commandSentCTAButtonInner,
+        className: L.commandSentCTAButton,
+        innerClassName: L.commandSentCTAButtonInner,
         'aria-label': T.intl.formatToPlainString(T.t.UXw6W1, { commandName: n.untranslatedName }),
         children: [
             (0, i.jsx)(u.Text, {
@@ -211,7 +211,7 @@ function B(e) {
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsxs)('div', {
-                      className: w.commandListHeader,
+                      className: L.commandListHeader,
                       children: [
                           (0, i.jsx)(u.X6q, {
                               variant: 'heading-sm/semibold',
@@ -221,7 +221,7 @@ function B(e) {
                       ]
                   }),
                   (0, i.jsx)('ul', {
-                      className: w.commandContainer,
+                      className: L.commandContainer,
                       'aria-label': l,
                       children: n.map((e, n) =>
                           e === R
@@ -267,7 +267,7 @@ function U(e) {
             sortOrder: b,
             setSortOrder: _,
             commands: y,
-            canSort: x
+            canSort: v
         } = (0, N.Z)({
             sectionId: l.id,
             commandsByActiveSection: u
@@ -275,7 +275,7 @@ function U(e) {
     r.useEffect(() => {
         c(l.id);
     }, [l.id, c]);
-    let C = (0, P.Z)({
+    let x = (0, P.Z)({
         context: n,
         commands: y,
         limit: 5
@@ -285,12 +285,12 @@ function U(e) {
     }, [s, y]),
     m || 0 !== y.length)
         ? (0, i.jsxs)('ul', {
-              className: w.contentContainer,
+              className: L.contentContainer,
               children: [
                   (0, i.jsx)(B, {
                       context: n,
                       section: f,
-                      commands: C,
+                      commands: x,
                       headerName: T.intl.string(T.t.acSE0t),
                       sectionName: o
                   }),
@@ -301,7 +301,7 @@ function U(e) {
                       headerName: T.intl.string(T.t.DUU9Ly),
                       sectionName: o,
                       children:
-                          x &&
+                          v &&
                           (0, i.jsx)(A.Z, {
                               sortOrder: b,
                               onSortOptionClick: _

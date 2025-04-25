@@ -16,8 +16,8 @@ var r = n(200651),
     _ = n(280306);
 function b(e) {
     let { code: t, message: n, embedUrl: b } = e,
-        [x, y, v] = (0, a.Wu)([f.Z], () => [f.Z.getApplication(t), f.Z.isInvalidApplication(t), f.Z.getApplicationFetchState(t)], [t]),
-        E = (0, a.e7)([d.Z], () => {
+        [x, y, E] = (0, a.Wu)([f.Z], () => [f.Z.getApplication(t), f.Z.isInvalidApplication(t), f.Z.getApplicationFetchState(t)], [t]),
+        v = (0, a.e7)([d.Z], () => {
             var e;
             return null != (e = d.Z.getGuildId()) ? e : void 0;
         }),
@@ -31,26 +31,26 @@ function b(e) {
                 application_id: t,
                 device_platform: l.tq ? 'mobile_web' : 'desktop_web',
                 sender_user_id: n.author.id,
-                guild_id: E,
+                guild_id: v,
                 channel_id: n.channel_id
             });
-        }, [t, E, n.author.id, n.channel_id]);
+        }, [t, v, n.author.id, n.channel_id]);
     return (i.useEffect(() => {
         (0, m.gZ)(t);
     }, [t]),
     i.useEffect(() => {
-        O && v === f.M.FETCHED && I();
-    }, [O, v, I]),
+        O && E === f.M.FETCHED && I();
+    }, [O, E, I]),
     i.useEffect(() => {
         O &&
             y &&
             p.default.track(h.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
                 device_platform: l.tq ? 'mobile_web' : 'desktop_web',
                 sender_user_id: n.author.id,
-                guild_id: E,
+                guild_id: v,
                 channel_id: n.channel_id
             });
-    }, [O, E, y, n.author.id, n.channel_id]),
+    }, [O, v, y, n.author.id, n.channel_id]),
     y)
         ? (0, r.jsxs)(c.Z, {
               containerRef: S,
@@ -71,7 +71,7 @@ function b(e) {
                   })
               ]
           })
-        : null == x || v === f.M.FETCHING
+        : null == x || E === f.M.FETCHING
           ? (0, r.jsxs)(c.Z, {
                 containerRef: S,
                 children: [(0, r.jsx)(c.Z.Header, { text: g.intl.string(g.t.m9hXGR) }), (0, r.jsx)(c.Z.Body, { resolving: !0 })]

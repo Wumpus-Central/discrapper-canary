@@ -33,8 +33,8 @@ var i = n(200651),
     S = n(95398),
     _ = n(247206),
     C = n(406432),
-    R = n(169525),
-    P = n(566006),
+    P = n(169525),
+    R = n(566006),
     E = n(255269),
     I = n(937889),
     N = n(443877),
@@ -45,8 +45,8 @@ var i = n(200651),
     k = n(433355),
     L = n(592125),
     D = n(496675),
-    B = n(699516),
-    U = n(451478),
+    U = n(699516),
+    B = n(451478),
     F = n(55935),
     V = n(109434),
     H = n(456269),
@@ -130,13 +130,13 @@ let ea = 72,
                 null == o || o(x.current, t);
             }, [x, o, t]);
         let _ = r.useRef(null),
-            { handleLeftClick: C, handleRightClick: R } = (0, Q.Z)({
+            { handleLeftClick: C, handleRightClick: P } = (0, Q.Z)({
                 facepileRef: _,
                 goToThread: n,
                 channel: m
             }),
-            P = (0, h.JA)(t),
-            { role: E, onFocus: I } = P,
+            R = (0, h.JA)(t),
+            { role: E, onFocus: I } = R,
             N = (function (e, t) {
                 if (null == e) return {};
                 var n,
@@ -155,13 +155,13 @@ let ea = 72,
                     for (i = 0; i < o.length; i++) (n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                 }
                 return r;
-            })(P, ['role', 'onFocus']),
+            })(R, ['role', 'onFocus']),
             { isFocused: w, handleFocus: Z, handleBlur: A } = (0, q.Z)(I);
         return (0, i.jsxs)('div', {
             ref: x,
             'data-item-id': t,
             onClick: C,
-            onContextMenu: R,
+            onContextMenu: P,
             className: a()(ei.container, c, { [ei.isOpen]: g }),
             children: [
                 (0, i.jsx)(
@@ -170,7 +170,7 @@ let ea = 72,
                         {
                             onClick: C,
                             focusProps: { ringTarget: x },
-                            onContextMenu: R,
+                            onContextMenu: P,
                             'aria-label': en.intl.formatToPlainString(en.t.pgYN6e, {
                                 title: m.name,
                                 count: j
@@ -289,9 +289,9 @@ function eu(e) {
 }
 let ed = r.memo(function (e) {
     let { message: t, channel: n, content: r, hasMediaAttachment: o, hasUnreads: s } = e,
-        { isBlocked: l, isIgnored: c } = (0, p.cj)([B.Z], () => ({
-            isBlocked: null != t && B.Z.isBlockedForMessage(t),
-            isIgnored: null != t && B.Z.isIgnoredForMessage(t)
+        { isBlocked: l, isIgnored: c } = (0, p.cj)([U.Z], () => ({
+            isBlocked: null != t && U.Z.isBlockedForMessage(t),
+            isIgnored: null != t && U.Z.isIgnoredForMessage(t)
         })),
         u = (0, p.e7)([z.Z], () => z.Z.isLoading(n.id)),
         d = (0, p.e7)([D.Z], () => D.Z.can(ee.Plq.MANAGE_MESSAGES, n)),
@@ -467,7 +467,7 @@ function em(e) {
               burst_count: 0,
               me: !1,
               me_burst: !1,
-              type: P.O.NORMAL,
+              type: R.O.NORMAL,
               emojiSize: 'reaction',
               emojiSizeTooltip: 'reaction'
           });
@@ -489,7 +489,7 @@ function ef(e) {
                       isLurking: s,
                       isPendingMember: l,
                       useChatFontScaling: !1,
-                      type: o.burst_count >= o.count ? P.O.BURST : P.O.NORMAL,
+                      type: o.burst_count >= o.count ? R.O.BURST : R.O.NORMAL,
                       emojiSize: 'reaction',
                       emojiSizeTooltip: 'reaction'
                   },
@@ -559,10 +559,10 @@ function ej(e) {
     let t,
         n,
         { firstMedia: r, shouldObscure: o, obscureReason: s, shouldShowAgeVerification: l } = e,
-        c = (0, p.e7)([U.Z], () => U.Z.isFocused()),
+        c = (0, p.e7)([B.Z], () => B.Z.isFocused()),
         u = (0, C.d$)(r.src),
         d = M.QK.useSetting(),
-        h = (0, R.MC)(s),
+        h = (0, P.MC)(s),
         { src: m, width: g, height: b, alt: j } = r;
     if ((b > g ? (n = es) : (t = ea), l)) {
         var v;
@@ -608,11 +608,11 @@ function ej(e) {
 }
 function ev(e) {
     let { channel: t, firstMedia: n } = e,
-        [r, o] = (0, R.hL)({
+        [r, o] = (0, P.hL)({
             media: n,
             channel: t
         }),
-        a = (0, _.m8)() && o === R.wk.EXPLICIT_CONTENT;
+        a = (0, _.m8)() && o === P.wk.EXPLICIT_CONTENT;
     return (0, i.jsx)(f.Rny, {
         enabled: !0,
         children: (0, i.jsxs)('div', {

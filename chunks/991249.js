@@ -1,19 +1,19 @@
-r.d(e, { Z: () => l });
+r.d(t, { Z: () => a });
 var n = r(200651);
 r(192379);
 var o = r(481060),
     i = r(239091),
-    a = r(765250),
-    c = r(388032);
-function l(t, e) {
+    c = r(765250),
+    l = r(388032);
+function a(e, t) {
     return (0, n.jsx)(
         o.S89,
         {
-            label: c.intl.string(c.t.XQQQFB),
-            checked: e,
+            label: l.intl.string(l.t.XQQQFB),
+            checked: t,
             id: 'widget-layout-type',
             action: () => {
-                (0, a.zG)(t, { horizontal: !e }), (0, i.Zy)();
+                (0, c.zG)(e, { horizontal: !t }), (0, i.Zy)();
             }
         },
         'widget-layout-type'

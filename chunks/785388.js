@@ -23,8 +23,8 @@ var i = n(200651),
     S = n(815605),
     _ = n(222677),
     C = n(995774),
-    R = n(665906),
-    P = n(210887),
+    P = n(665906),
+    R = n(210887),
     E = n(314897),
     I = n(592125),
     N = n(271383),
@@ -35,8 +35,8 @@ var i = n(200651),
     k = n(594174),
     L = n(768581),
     D = n(176354),
-    B = n(5192),
-    U = n(709054),
+    U = n(5192),
+    B = n(709054),
     F = n(91047),
     V = n(981631),
     H = n(388032),
@@ -217,9 +217,9 @@ function $(e) {
     let { emoji: t, user: n, message: r, channel: o, guildId: a, reactionType: s, onRemoveReactor: l, disableManage: c = !1 } = e,
         d = (0, u.e7)([E.default], () => E.default.getId()),
         p = (0, u.e7)([k.default], () => k.default.getUser(n.id), [n]),
-        g = (0, R.$R)(o),
+        g = (0, P.$R)(o),
         j = (0, u.e7)([A.Z], () => A.Z.can(V.Plq.MANAGE_MESSAGES, o) && g) || d === n.id,
-        v = (0, u.e7)([N.ZP, I.Z, M.Z], () => B.ZP.getName(a, o.id, n));
+        v = (0, u.e7)([N.ZP, I.Z, M.Z], () => U.ZP.getName(a, o.id, n));
     return (0, i.jsxs)(b.Z, {
         className: G.reactorDefault,
         onContextMenu: (e) => (0, F.Pv)(e, n, o),
@@ -418,7 +418,7 @@ function et(e) {
             [Z.Z, O.Z],
             () => {
                 var e, n;
-                let i = null != (n = Z.Z.getMessage(t.getChannelId(), t.id)) ? n : null == (e = O.Z.getMessage(U.default.castMessageIdAsChannelId(t.id))) ? void 0 : e.firstMessage;
+                let i = null != (n = Z.Z.getMessage(t.getChannelId(), t.id)) ? n : null == (e = O.Z.getMessage(B.default.castMessageIdAsChannelId(t.id))) ? void 0 : e.firstMessage;
                 return null != i ? i.reactions : [];
             },
             [t]
@@ -465,8 +465,8 @@ function et(e) {
             var e;
             return null == T ? null : null != (e = f.find((e) => (0, C.ir)(e.emoji, T.emoji))) ? e : null;
         }, [f, T]),
-        R = (0, u.e7)([g.Z], () => g.Z.saturation),
-        E = (0, u.e7)([P.Z], () => (0, d.wj)(P.Z.theme));
+        P = (0, u.e7)([g.Z], () => g.Z.saturation),
+        E = (0, u.e7)([R.Z], () => (0, d.wj)(R.Z.theme));
     if (
         (r.useEffect(() => {
             (0 === f.length || (null == T && null == _)) && setImmediate(s);
@@ -499,7 +499,7 @@ function et(e) {
                                       reactionType: n ? x.O.BURST : x.O.NORMAL,
                                       emoji: e.emoji,
                                       count: n ? e.burst_count : e.count,
-                                      colors: null != e.burst_colors ? (0, v.Z)(e.burst_colors, R, E) : void 0
+                                      colors: null != e.burst_colors ? (0, v.Z)(e.burst_colors, P, E) : void 0
                                   },
                                   ''
                                       .concat(n ? 'burst-' : 'normal-')

@@ -17,8 +17,8 @@ var r = n(200651),
     b = n(626135),
     x = n(76535),
     y = n(866104),
-    v = n(886176),
-    E = n(981631),
+    E = n(886176),
+    v = n(981631),
     O = n(388032),
     j = n(24665);
 function C(e) {
@@ -30,7 +30,7 @@ function C(e) {
         N = (0, f.ue)(n, { publishedOnly: !0 }),
         T = i.useCallback(async () => {
             b.default.track(
-                E.rMx.GUILD_SHOP_EMBED_CLICKED,
+                v.rMx.GUILD_SHOP_EMBED_CLICKED,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -57,7 +57,7 @@ function C(e) {
                     return e;
                 })({}, (0, d.hH)(n))
             ),
-                await (0, h.Z)(E.Z5c.SERVER_SHOP(n));
+                await (0, h.Z)(v.Z5c.SERVER_SHOP(n));
         }, [n]);
     (0, p.Z)(
         {
@@ -82,7 +82,7 @@ function C(e) {
                     (0, r.jsxs)('div', {
                         className: j.serverShopLabel,
                         children: [
-                            (0, r.jsx)(v.Z, {
+                            (0, r.jsx)(E.Z, {
                                 height: '16px',
                                 width: '16px',
                                 color: s.Z.INTERACTIVE_NORMAL
@@ -141,7 +141,7 @@ function C(e) {
                                 children: (0, r.jsxs)('div', {
                                     className: j.guildShopEmbedCtaContent,
                                     children: [
-                                        (0, r.jsx)(v.Z, {
+                                        (0, r.jsx)(E.Z, {
                                             height: '18px',
                                             width: '18px'
                                         }),

@@ -163,7 +163,7 @@ function k(e) {
                                         me: !1,
                                         burst_count: 0,
                                         me_burst: !1,
-                                        emojiSize: 'reactionLarge'
+                                        emojiSize: 'reaction'
                                     })
                                 }),
                             (0, r.jsx)(y.Z, {

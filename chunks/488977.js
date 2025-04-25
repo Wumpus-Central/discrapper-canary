@@ -1,4 +1,4 @@
-n.d(t, { Z: () => w }), n(997841);
+n.d(t, { Z: () => L }), n(997841);
 var i = n(200651),
     r = n(192379),
     l = n(120356),
@@ -15,15 +15,15 @@ var i = n(200651),
     b = n(726521),
     _ = n(973616),
     y = n(914010),
-    x = n(594174),
-    C = n(626135),
-    v = n(572004),
+    v = n(594174),
+    x = n(626135),
+    C = n(572004),
     g = n(630388),
     j = n(135431),
     P = n(541099),
     N = n(783097),
-    E = n(570949),
-    O = n(314734),
+    O = n(570949),
+    E = n(314734),
     A = n(981631),
     I = n(388032),
     S = n(640724);
@@ -52,7 +52,7 @@ function T(e) {
     }
     return e;
 }
-function L(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -70,9 +70,9 @@ function L(e, t) {
         e
     );
 }
-function w(e) {
+function L(e) {
     var t;
-    let { application: l, context: w, className: R, sectionName: Z } = e,
+    let { application: l, context: L, className: R, sectionName: Z } = e,
         k = r.useRef(null),
         M = (0, a.e7)([P.Z], () => P.Z.entrypoint()),
         D = (0, N.L1)(l),
@@ -92,15 +92,15 @@ function w(e) {
             section_name: Z,
             source: P.Z.lastShownEntrypoint()
         },
-        V = x.default.getCurrentUser(),
+        V = v.default.getCurrentUser(),
         F = h.Z.useExperiment({ location: u.Vh.APP_LAUNCHER_APPLICATION_VIEW_MORE_MENU }, { autoTrackExposure: !0 }).enabled,
-        z = (0, f.Z)({
+        G = (0, f.Z)({
             id: l.id,
             label: I.intl.string(I.t['+NP/b2'])
         }),
-        G = (0, E.P)({ application: l }),
+        z = (0, O.P)({ application: l }),
         X = (0, g.yE)(null != (t = l.flags) ? t : 0, A.udG.EMBEDDED),
-        q = 'channel' === w.type ? w.channel : void 0;
+        q = 'channel' === L.type ? L.channel : void 0;
     return (0, i.jsxs)('div', {
         className: S.container,
         children: [
@@ -112,8 +112,8 @@ function w(e) {
                               referrerId: null == V ? void 0 : V.id
                           })
                         : (0, p.J)(T({ id: l.id }, D));
-                    (0, v.JG)(e, () => (0, s.showToast)((0, s.createToast)(I.intl.string(I.t['L/PwZW']), s.ToastType.SUCCESS))),
-                        C.default.track(A.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
+                    (0, C.JG)(e, () => (0, s.showToast)((0, s.createToast)(I.intl.string(I.t['L/PwZW']), s.ToastType.SUCCESS))),
+                        x.default.track(A.rMx.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: l.id,
                             source: M
                         });
@@ -130,7 +130,7 @@ function w(e) {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, i.jsxs)(s.v2r, {
-                        className: O.NN,
+                        className: E.NN,
                         navId: 'app-details-more-menu',
                         onClose: t,
                         'aria-label': I.intl.string(I.t.AXIHpa),
@@ -162,7 +162,7 @@ function w(e) {
                                               action: () => {
                                                   null == D.customInstallUrl && (0, c.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, W),
                                                       (0, j.L)(
-                                                          L(T({}, D), {
+                                                          w(T({}, D), {
                                                               oauth2Callback: (e) => {
                                                                   let { location: t } = e;
                                                                   null != t && (0, c.yw)(A.rMx.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, W);
@@ -189,10 +189,10 @@ function w(e) {
                                               }
                                           })
                                         : null,
-                                    G
+                                    z
                                 ]
                             }),
-                            (0, i.jsx)(s.kSQ, { children: z })
+                            (0, i.jsx)(s.kSQ, { children: G })
                         ]
                     });
                 },
@@ -201,7 +201,7 @@ function w(e) {
                 children: (e) =>
                     (0, i.jsx)(
                         s.P3F,
-                        L(T({ innerRef: k }, e), {
+                        w(T({ innerRef: k }, e), {
                             onClick: e.onClick,
                             className: o()(S.clickable, R),
                             'aria-label': I.intl.string(I.t.UKOtz8),

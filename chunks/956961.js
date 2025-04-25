@@ -17,8 +17,8 @@ var r = n(200651),
     b = n(592125),
     x = n(655354),
     y = n(324081),
-    v = n(791914),
-    E = n(981631),
+    E = n(791914),
+    v = n(981631),
     O = n(388032),
     j = n(829444),
     C = n(384323);
@@ -37,7 +37,7 @@ function I(e) {
     return (0, r.jsxs)('div', {
         className: j.container,
         children: [
-            (0, r.jsx)(v.Z, {
+            (0, r.jsx)(E.Z, {
                 tab: u.X.TODOS,
                 setTab: t,
                 closePopout: n
@@ -70,19 +70,19 @@ function N(e) {
         o = i.message,
         u = (0, c.e7)([b.Z], () => b.Z.getChannel(l.channelId)),
         g = () => {
-            (0, f.uL)(E.Z5c.CHANNEL(null == u ? void 0 : u.getGuildId(), l.channelId, l.messageId));
+            (0, f.uL)(v.Z5c.CHANNEL(null == u ? void 0 : u.getGuildId(), l.channelId, l.messageId));
         },
-        v = null;
+        E = null;
     return (null != l.dueAt &&
         (l.dueAt > new Date()
             ? ((t = 'text-muted'),
-              (v = O.intl.formatToPlainString(O.t.H4gnX1, {
+              (E = O.intl.formatToPlainString(O.t.H4gnX1, {
                   duration: s()
                       .duration(l.dueAt.getTime() - Date.now(), 'millisecond')
                       .humanize()
               })))
             : ((t = 'text-danger'),
-              (v = O.intl.formatToPlainString(O.t['Uq7Y+/'], {
+              (E = O.intl.formatToPlainString(O.t['Uq7Y+/'], {
                   duration: s()
                       .duration(Date.now() - l.dueAt.getTime(), 'millisecond')
                       .humanize()
@@ -113,11 +113,11 @@ function N(e) {
                                         ]
                                     })
                                   : null,
-                              null != v
+                              null != E
                                   ? (0, r.jsx)(d.Text, {
                                         variant: 'text-sm/medium',
                                         color: t,
-                                        children: v
+                                        children: E
                                     })
                                   : null,
                               (0, r.jsx)(d.DY3, {

@@ -15,10 +15,10 @@ var r = n(200651),
 let g = i.memo(function (e) {
         let t,
             n,
-            { useChatFontScaling: i, hideEmoji: l, emoji: c, className: g, count: _, me: b, me_burst: x, burst_count: y, burst_colors: v, readOnly: E, isLurking: O, isGuest: j, isPendingMember: C, type: S, emojiSize: I } = e,
+            { useChatFontScaling: i, hideEmoji: l, emoji: c, className: g, count: _, me: b, me_burst: x, burst_count: y, burst_colors: E, readOnly: v, isLurking: O, isGuest: j, isPendingMember: C, type: S, emojiSize: I } = e,
             N = S === p.O.BURST,
             T = (0, m.y4)(b, x, S),
-            P = (0, d.v)(N && null != v ? v : []),
+            P = (0, d.v)(N && null != E ? E : []),
             A = i ? h : f,
             w = N ? y : _,
             Z = (0, u.y)(w, m.aO),
@@ -37,7 +37,7 @@ let g = i.memo(function (e) {
         return (0, r.jsxs)('div', {
             className: a()(A.reaction, A.reactionInner, g, {
                 [A.reactionMe]: T,
-                [A.reactionReadOnly]: E && !O && !C && !j
+                [A.reactionReadOnly]: v && !O && !C && !j
             }),
             style: R,
             children: [
@@ -57,8 +57,8 @@ let g = i.memo(function (e) {
         });
     }),
     _ = i.memo(function (e) {
-        var { showImmediate: t, reactions: n, emojiSize: l } = e,
-            a = (function (e, t) {
+        var { showImmediate: t, reactions: n } = e,
+            l = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -76,29 +76,29 @@ let g = i.memo(function (e) {
                     for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                 }
                 return i;
-            })(e, ['showImmediate', 'reactions', 'emojiSize']);
-        let [o, s] = i.useState(!1),
-            [u, d] = i.useTransition(),
-            f = i.useCallback(
+            })(e, ['showImmediate', 'reactions']);
+        let [a, o] = i.useState(!1),
+            [s, u] = i.useTransition(),
+            d = i.useCallback(
                 (e) => {
                     !e ||
-                        o ||
-                        u ||
-                        d(() => {
-                            s(!0);
+                        a ||
+                        s ||
+                        u(() => {
+                            o(!0);
                         });
                 },
-                [o, u]
+                [a, s]
             ),
-            h = (0, c.O)(f),
-            _ = (o && !u) || t ? m.le : g;
+            f = (0, c.O)(d),
+            h = (a && !s) || t ? m.le : g;
         return (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)('div', { ref: h }),
+                (0, r.jsx)('div', { ref: f }),
                 n.map((e) => {
                     var t, n, i;
                     return (0, r.jsx)(
-                        _,
+                        h,
                         ((t = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},
@@ -123,8 +123,8 @@ let g = i.memo(function (e) {
                                     });
                             }
                             return e;
-                        })({}, a, e)),
-                        (n = n = { emojiSize: l }),
+                        })({}, l, e)),
+                        (n = n = { emojiSize: 'reaction' }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                             : (function (e, t) {
