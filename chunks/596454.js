@@ -138,10 +138,7 @@ function A(e) {
             let e = null != f && '' !== f ? { 'data-id': f } : { 'data-name': p };
             return y(
                 O(y({}, x), {
-                    className: o()('emoji', c, {
-                        jumboable: 'jumbo' === S,
-                        reactionLarge: 'reactionLarge' === S
-                    }),
+                    className: o()('emoji', c, { jumboable: 'jumbo' === S }),
                     onError: z,
                     onMouseEnter: q,
                     onMouseLeave: Q,

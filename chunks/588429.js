@@ -1,12 +1,9 @@
 n.r(
     (e.exports = {
         reactions: 'reactions__23977',
-        largeReactions: 'largeReactions__23977',
         icon: 'icon__23977',
-        largeIcon: 'largeIcon__23977',
         reactionBtn: 'reactionBtn__23977',
         active: 'active__23977',
-        largeReactionBtn: 'largeReactionBtn__23977',
         visible: 'visible__23977',
         forceShow: 'forceShow__23977',
         hideEmoji: 'hideEmoji__23977',
