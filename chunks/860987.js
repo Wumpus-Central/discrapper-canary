@@ -11,6 +11,7 @@ function i(e) {
         id: e.id,
         label: e.label,
         default: e.default,
+        variants: e.variants,
         isBlurred: e.is_blurred,
         designGroupId: e.design_group_id
     };

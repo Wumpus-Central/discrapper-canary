@@ -2,62 +2,52 @@ n.d(t, { Z: () => y }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(788900),
-    o = n(442837),
-    a = n(357352),
-    s = n(565942),
-    c = n(626135),
-    u = n(436952),
-    d = n(411149),
-    p = n(115215),
-    h = n(151480),
+    o = n(357352),
+    a = n(565942),
+    s = n(626135),
+    c = n(436952),
+    u = n(411149),
+    d = n(115215),
+    p = n(151480),
+    h = n(461762),
     f = n(680783),
     m = n(981631),
     g = n(24848),
     b = n(413135).Buffer;
 function _(e) {
-    let { chatWallpaperState: t } = e,
-        {
-            wallpaperAssetUrl: n,
-            wallpaperThumbhashDataUrl: p,
-            opacity: f
-        } = (0, o.cj)([d.Z], () => {
-            let e = d.Z.getWallpaperById(t.wallpaperId);
-            return null == e
-                ? {}
-                : {
-                      wallpaperAssetUrl: (0, a.I)(e.default.asset),
-                      wallpaperThumbhashDataUrl: null != e.default.thumbhash ? (0, l.xS)(b.from(e.default.thumbhash, 'base64')) : void 0,
-                      opacity: e.default.opacity
-                  };
-        }),
-        _ = u.qM.useExperiment({ location: 'channel_chat_wallpaper' }).enabled,
-        [y, x] = i.useState(p);
+    var t;
+    let { chatWallpaperState: n } = e,
+        d = c.qM.useExperiment({ location: 'channel_chat_wallpaper' }).enabled,
+        f = (0, h.Z)(n.wallpaperId),
+        _ = (0, o.I)(null != (t = null == f ? void 0 : f.asset) ? t : ''),
+        y = (null == f ? void 0 : f.thumbhash) != null ? (0, l.xS)(b.from(f.thumbhash, 'base64')) : void 0,
+        [x, C] = i.useState(y);
     return (i.useEffect(() => {
-        null == n && t.isViewable && d.Z.shouldFetchWallpapers && (0, h.k9)();
-    }, [n, t.isViewable]),
+        null == _ && n.isViewable && u.Z.shouldFetchWallpapers && (0, p.k9)();
+    }, [_, n.isViewable]),
     i.useEffect(() => {
-        if (null == n) return void x(void 0);
+        if (null == _) return void C(void 0);
         let e = performance.now();
-        x(p),
-            (0, s.p)(n, (t) => {
-                if (t === n) {
-                    x(void 0);
+        C(y),
+            (0, a.p)(_, (t) => {
+                if (t === _) {
+                    C(void 0);
                     let n = performance.now();
-                    c.default.track(m.rMx.CHAT_WALLPAPER_DOWNLOADED, {
+                    s.default.track(m.rMx.CHAT_WALLPAPER_DOWNLOADED, {
                         time_used_in_ms: n - e,
                         asset_url: t
                     });
                 }
             });
-    }, [n, p]),
-    t.isViewable)
+    }, [_, y]),
+    n.isViewable && null != f)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  null != y &&
+                  null != x &&
                       (0, r.jsx)('div', {
                           className: g.thumbhashContainer,
                           children: (0, r.jsx)('img', {
-                              src: y,
+                              src: x,
                               alt: '',
                               'aria-hidden': !0
                           })
@@ -65,8 +55,8 @@ function _(e) {
                   (0, r.jsx)('div', {
                       className: g.wallpaperContainer,
                       style: {
-                          backgroundImage: null != n ? 'url('.concat(n, ')') : void 0,
-                          opacity: _ ? f : void 0
+                          backgroundImage: null != _ ? 'url('.concat(_, ')') : void 0,
+                          opacity: d ? f.opacity : void 0
                       }
                   })
               ]
@@ -76,5 +66,5 @@ function _(e) {
 function y(e) {
     let { channel: t } = e,
         n = (0, f.Z)(t.id);
-    return null == n || !n.isViewable || (!t.isDM() && !t.isMultiUserDM() && !t.isGroupDM()) || (p.t(t) && !n.isPreview) ? null : (0, r.jsx)(_, { chatWallpaperState: n });
+    return null == n || !n.isViewable || (!t.isDM() && !t.isMultiUserDM() && !t.isGroupDM()) || (d.t(t) && !n.isPreview) ? null : (0, r.jsx)(_, { chatWallpaperState: n });
 }
