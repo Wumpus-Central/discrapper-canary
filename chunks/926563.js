@@ -14,11 +14,11 @@ var a = n(481060),
     f = n(228168),
     p = n(200051);
 function b(e) {
-    let { user: t, previewText: n, previewEmoji: b, previewStatus: S, placeHolderText: j, transitionState: g, label: O } = e,
-        x = (0, i.ZP)(t.id);
+    let { user: t, previewText: n, previewEmoji: b, previewStatus: S, placeHolderText: j, transitionState: g, label: x } = e,
+        O = (0, i.ZP)(t.id);
     return (0, l.jsxs)(c.Z, {
         user: t,
-        displayProfile: x,
+        displayProfile: O,
         themeType: f.lY.POPOUT,
         className: p.profilePreviewContainer,
         children: [
@@ -26,14 +26,14 @@ function b(e) {
                 children: [
                     (0, l.jsx)(u.Z, {
                         user: t,
-                        displayProfile: x,
+                        displayProfile: O,
                         themeType: f.lY.POPOUT
                     }),
                     (0, l.jsx)('div', {
                         inert: '',
                         children: (0, l.jsx)(o.Z, {
                             user: t,
-                            displayProfile: x,
+                            displayProfile: O,
                             themeType: f.lY.POPOUT,
                             previewStatus: S,
                             className: p.avatar
@@ -47,20 +47,20 @@ function b(e) {
                         previewEmoji: b,
                         placeholderText: j,
                         hasEntered: g === a.Dvm.ENTERED,
-                        previewLabel: O
+                        previewLabel: x
                     })
                 ]
             }),
-            (null == x ? void 0 : x.profileEffectId) != null && (0, l.jsx)(r.Z, { profileEffectId: x.profileEffectId }),
+            (null == O ? void 0 : O.profileEffectId) != null && (0, l.jsx)(r.Z, { profileEffectId: O.profileEffectId }),
             (0, l.jsx)('div', {
                 className: p.usernameContainer,
                 inert: '',
                 children: (0, l.jsx)(d.Z, {
                     user: t,
                     nickname: h.ZP.getName(null, null, t),
-                    pronouns: null == x ? void 0 : x.pronouns,
+                    pronouns: null == O ? void 0 : O.pronouns,
                     tags: (0, l.jsx)(s.Z, {
-                        displayProfile: x,
+                        displayProfile: O,
                         themeType: f.lY.POPOUT
                     })
                 })

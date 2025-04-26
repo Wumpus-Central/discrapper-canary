@@ -1,5 +1,5 @@
-t.d(n, { P: () => i });
-let r = (0, t(818083).B)({
+n.d(t, { P: () => i });
+let r = (0, n(818083).B)({
     kind: 'user',
     id: '2023-08-30_open-in-popout',
     label: 'Open Channel in Popout',
