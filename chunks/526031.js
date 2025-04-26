@@ -60,6 +60,7 @@ function p(e) {
                             })({}, n)),
                             (s = s =
                                 {
+                                    showLabelSelectorNewTooltip: !0,
                                     location: 'CustomStatusTagsCoachmark',
                                     sourceAnalyticsLocations: p,
                                     prompt: t

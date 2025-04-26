@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => C });
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -13,23 +13,24 @@ var r = n(200651),
     f = n(594174),
     m = n(63063),
     g = n(981631),
-    b = n(388032),
-    _ = n(857651);
-function y(e) {
+    b = n(723359),
+    _ = n(388032),
+    y = n(857651);
+function x(e) {
     let { guild: t, channelId: n } = e,
         l = (0, a.e7)([f.default], () => {
             var e;
             return (null == (e = f.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) === !1;
         }),
         o = (0, p.Kt)(),
-        { verifyAgreementButtonText: y, verifyGateDescription: x } = (0, p.a1)(),
-        C = i.useCallback(() => {
+        { verifyAgreementButtonText: x, verifyGateDescription: C } = (0, p.a1)(b.L0.NSFW_CHANNEL),
+        v = i.useCallback(() => {
             null != t && c.Z.nsfwReturnToSafety(t.id);
         }, [t]),
-        v = i.useCallback(() => {
+        j = i.useCallback(() => {
             null != t && c.Z.nsfwAgree(t.id);
         }, [t]),
-        j = i.useCallback(() => {
+        O = i.useCallback(() => {
             u.Z.showAgeVerificationGetStartedModal(d.cU.NSFW_GUILD);
         }, []);
     return o
@@ -37,41 +38,41 @@ function y(e) {
               guildId: null == t ? void 0 : t.id,
               channelId: n,
               modalType: d.it.NSFW_CHANNEL_AGE_VERIFY,
-              onAgree: j,
-              onDisagree: C,
-              title: b.intl.string(b.t.ZmwvDQ),
-              description: x,
-              agreement: y,
+              onAgree: O,
+              onDisagree: v,
+              title: _.intl.string(_.t.ZmwvDQ),
+              description: C,
+              agreement: x,
               agreementButtonColor: s.zxk.Colors.BRAND,
-              disagreement: b.intl.string(b.t['/g10LC']),
-              imageClassName: _.ageGatedImage
+              disagreement: _.intl.string(_.t['/g10LC']),
+              imageClassName: y.ageGatedImage
           })
         : l
           ? (0, r.jsx)(h.Z, {
                 guildId: null == t ? void 0 : t.id,
                 channelId: n,
                 modalType: d.it.NSFW_CHANNEL_UNDERAGE,
-                onAgree: v,
-                onDisagree: C,
-                title: b.intl.string(b.t.NEabBQ),
-                description: b.intl.format(b.t['2kHZen'], { helpURL: m.Z.getArticleURL(g.BhN.NSFW_AGE_GATING) }),
+                onAgree: j,
+                onDisagree: v,
+                title: _.intl.string(_.t.NEabBQ),
+                description: _.intl.format(_.t['2kHZen'], { helpURL: m.Z.getArticleURL(g.BhN.NSFW_AGE_GATING) }),
                 agreement: null,
-                disagreement: b.intl.string(b.t['/g10LC']),
-                imageClassName: _.ageGatedImage
+                disagreement: _.intl.string(_.t['/g10LC']),
+                imageClassName: y.ageGatedImage
             })
           : (0, r.jsx)(h.Z, {
                 guildId: null == t ? void 0 : t.id,
                 channelId: n,
                 modalType: d.it.NSFW_CHANNEL_VERIFIED,
-                onAgree: v,
-                onDisagree: C,
-                title: b.intl.string(b.t.ZmwvDQ),
-                description: b.intl.string(b.t.E4Cd5O),
-                agreement: b.intl.string(b.t.wVq7ur),
-                disagreement: b.intl.string(b.t['/g10LC'])
+                onAgree: j,
+                onDisagree: v,
+                title: _.intl.string(_.t.ZmwvDQ),
+                description: _.intl.string(_.t.E4Cd5O),
+                agreement: _.intl.string(_.t.wVq7ur),
+                disagreement: _.intl.string(_.t['/g10LC'])
             });
 }
-let x = function (e) {
+let C = function (e) {
     let { guild: t, channelId: n, className: l } = e,
         a = i.useRef(null);
     return (
@@ -81,10 +82,10 @@ let x = function (e) {
         }, []),
         (0, r.jsx)(s.Den, {
             ref: a,
-            className: _.scroller,
+            className: y.scroller,
             children: (0, r.jsx)('div', {
-                className: o()(l, _.wrapper),
-                children: (0, r.jsx)(y, {
+                className: o()(l, y.wrapper),
+                children: (0, r.jsx)(x, {
                     guild: t,
                     channelId: n
                 })

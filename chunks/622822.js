@@ -1,37 +1,40 @@
 n.d(t, {
-    Kt: () => m,
-    Yt: () => p,
-    a1: () => f,
-    bN: () => d
+    Kt: () => f,
+    Yt: () => m,
+    a1: () => h,
+    bN: () => p
 });
 var r = n(81643),
     i = n(974814),
     l = n(594174),
     a = n(709054),
-    o = n(981631),
-    s = n(388032);
-let c = new Date('06/16/2020'),
-    u = [o.V_K.AGE_RESTRICTED, o.V_K.EXPLICIT];
-function d() {
+    o = n(723359),
+    s = n(981631),
+    c = n(388032);
+let u = new Date('06/16/2020'),
+    d = [s.V_K.AGE_RESTRICTED, s.V_K.EXPLICIT];
+function p() {
     let e = l.default.getCurrentUser();
-    return null != e && a.default.extractTimestamp(e.id) > c.getTime() && null == e.nsfwAllowed;
+    return null != e && a.default.extractTimestamp(e.id) > u.getTime() && null == e.nsfwAllowed;
 }
-function p(e) {
-    return u.includes(e.nsfwLevel);
+function m(e) {
+    return d.includes(e.nsfwLevel);
 }
-function m() {
+function f() {
     let e = (0, i.s8)({ location: 'age-gate-utils' }),
         t = (0, r.L5)();
     return e && t;
 }
-function f() {
-    return (0, r.l6)()
+function h(e) {
+    let t = (0, r.l6)(),
+        n = e === o.L0.NSFW_SERVER || e === o.L0.NSFW_SERVER_INVITE || e === o.L0.NSFW_SERVER_INVITE_EMBED;
+    return t
         ? {
-              verifyAgreementButtonText: s.intl.string(s.t['2L5V8/']),
-              verifyGateDescription: s.intl.format(s.t.ECL1eX, {})
+              verifyAgreementButtonText: c.intl.string(c.t['2L5V8/']),
+              verifyGateDescription: n ? c.intl.format(c.t['8yts9f'], {}) : c.intl.format(c.t.ECL1eX, {})
           }
         : {
-              verifyAgreementButtonText: s.intl.string(s.t.SFWVER),
-              verifyGateDescription: s.intl.string(s.t['NjO/s7'])
+              verifyAgreementButtonText: c.intl.string(c.t.SFWVER),
+              verifyGateDescription: n ? c.intl.string(c.t['+tEu6+']) : c.intl.string(c.t['NjO/s7'])
           };
 }
