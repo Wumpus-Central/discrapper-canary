@@ -8,7 +8,6 @@ e.exports = {
     inner: 'inner_ab8609',
     content: 'content_ab8609',
     unclamped: 'unclamped_ab8609',
-    clickable: 'clickable_ab8609',
     ring: 'ring_ab8609',
     statusText: 'statusText_ab8609',
     statusEmoji: 'statusEmoji_ab8609',
@@ -16,6 +15,12 @@ e.exports = {
     italicPrompt: 'italicPrompt_ab8609',
     addStatusIcon: 'addStatusIcon_ab8609',
     addStatusIconColor: 'addStatusIconColor_ab8609',
-    labelIconsRow: 'labelIconsRow_ab8609',
-    labelRow: 'labelRow_ab8609'
+    labelRow: 'labelRow_ab8609',
+    labelToolbar: 'labelToolbar_ab8609',
+    labelToolbarHoverGap: 'labelToolbarHoverGap_ab8609',
+    labelToolbarVisible: 'labelToolbarVisible_ab8609',
+    labelToolbarFadeIn: 'labelToolbarFadeIn_ab8609',
+    labelToolbarFadingOut: 'labelToolbarFadingOut_ab8609',
+    labelToolbarFadeOut: 'labelToolbarFadeOut_ab8609',
+    customStatusLabelToolbar: 'customStatusLabelToolbar_ab8609'
 };
