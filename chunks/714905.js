@@ -2,6 +2,7 @@ e.exports = {
     container: 'container__28fdc',
     tabBar: 'tabBar__28fdc',
     tabBarItem: 'tabBarItem__28fdc',
+    tabBarPanel: 'tabBarPanel__28fdc',
     scroller: 'scroller__28fdc',
     empty: 'empty__28fdc',
     emptyImage: 'emptyImage__28fdc',

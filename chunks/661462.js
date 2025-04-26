@@ -1,75 +1,113 @@
-t.d(n, { Z: () => p }), t(388685);
-var o = t(200651),
-    i = t(192379),
-    c = t(481060),
-    r = t(785717),
-    a = t(128156),
-    l = t(210788),
-    s = t(228168),
-    d = t(388032),
-    u = t(662776);
+n.d(t, { Z: () => p }), n(388685);
+var o = n(200651),
+    r = n(192379),
+    i = n(481060),
+    c = n(785717),
+    a = n(128156),
+    l = n(210788),
+    s = n(228168),
+    d = n(388032),
+    u = n(662776);
 function f(e) {
-    let { user: n, currentUser: t, section: i, subsection: c, displayProfile: r, guildId: d, onClose: u } = e;
-    return i === s.oh.ACTIVITY
+    let { user: t, currentUser: n, section: r, subsection: i, displayProfile: c, guildId: d, onClose: u } = e;
+    return r === s.oh.ACTIVITY
         ? (0, o.jsx)(a.Z, {
-              user: n,
-              currentUser: t,
-              displayProfile: r,
+              user: t,
+              currentUser: n,
+              displayProfile: c,
               guildId: d,
-              subsection: c,
+              subsection: i,
               onClose: u
           })
-        : i === s.oh.MUTUALS
+        : r === s.oh.MUTUALS
           ? (0, o.jsx)(l.Z, {
-                user: n,
+                user: t,
                 onClose: u
             })
           : null;
 }
 function p(e) {
-    var n, t;
-    let { user: a, currentUser: l, displayProfile: p, guildId: m, initialSection: h, initialSubsection: _, onClose: b } = e,
-        { trackUserProfileAction: g } = (0, r.KZ)(),
-        y = i.useMemo(
+    var t, n, a;
+    let { user: l, currentUser: p, displayProfile: m, guildId: b, initialSection: h, initialSubsection: _, onClose: y } = e,
+        { trackUserProfileAction: g } = (0, c.KZ)(),
+        j = r.useMemo(
             () =>
-                a.id === l.id
+                l.id === p.id
                     ? [
                           {
                               section: s.oh.ACTIVITY,
-                              text: d.intl.string(d.t.chq59f)
+                              text: d.intl.string(d.t.chq59f),
+                              subsection: void 0
                           }
                       ]
                     : [
                           {
                               section: s.oh.ACTIVITY,
-                              text: d.intl.string(d.t.chq59f)
+                              text: d.intl.string(d.t.chq59f),
+                              subsection: void 0
                           },
                           {
                               section: s.oh.MUTUALS,
-                              text: d.intl.string(d.t.f5KLNj)
+                              text: d.intl.string(d.t.f5KLNj),
+                              subsection: void 0
                           }
                       ],
-            [a.id, l.id]
+            [l.id, p.id]
         ),
-        [{ section: x, subsection: j }, I] = i.useState({
-            section:
+        [{ section: x, subsection: v, text: I }, O] = r.useState(
+            ((n = (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        o = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (o = o.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        o.forEach(function (t) {
+                            var o;
+                            (o = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: o,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = o);
+                        });
+                }
+                return e;
+            })(
+                {},
                 null !=
-                (t =
-                    null ==
-                    (n = y.find((e) => {
-                        let { section: n } = e;
-                        return n === h;
+                    (t = j.find((e) => {
+                        let { section: t } = e;
+                        return t === h;
                     }))
-                        ? void 0
-                        : n.section)
                     ? t
-                    : s.oh.ACTIVITY,
-            subsection: _
-        });
+                    : j[0]
+            )),
+            (a = a = { subsection: _ }),
+            Object.getOwnPropertyDescriptors
+                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
+                : (function (e, t) {
+                      var n = Object.keys(e);
+                      if (Object.getOwnPropertySymbols) {
+                          var o = Object.getOwnPropertySymbols(e);
+                          n.push.apply(n, o);
+                      }
+                      return n;
+                  })(Object(a)).forEach(function (e) {
+                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
+                  }),
+            n)
+        );
     return (0, o.jsxs)('div', {
         className: u.container,
         children: [
-            (0, o.jsx)(c.njP, {
+            (0, o.jsx)(i.njP, {
                 type: 'top',
                 className: u.tabBar,
                 selectedItem: x,
@@ -78,36 +116,40 @@ function p(e) {
                         action: 'PRESS_SECTION',
                         section: e
                     }),
-                        I({
-                            section: e,
-                            subsection: void 0
+                        O((t) => {
+                            var n;
+                            return null != (n = j.find((t) => t.section === e)) ? n : t;
                         });
                 },
-                children: y.map((e) => {
-                    let { section: n, text: t } = e;
-                    return (0, o.jsx)(
-                        c.njP.Item,
+                children: j.map((e) =>
+                    (0, o.jsx)(
+                        i.njP.Item,
                         {
                             className: u.tabBarItem,
-                            id: n,
-                            'aria-label': t,
-                            children: (0, o.jsx)(c.X6q, {
+                            id: e.section,
+                            'aria-label': e.text,
+                            children: (0, o.jsx)(i.X6q, {
                                 variant: 'heading-lg/medium',
-                                children: t
+                                children: e.text
                             })
                         },
-                        n
-                    );
-                })
+                        e.section
+                    )
+                )
             }),
-            (0, o.jsx)(f, {
-                user: a,
-                currentUser: l,
-                displayProfile: p,
-                guildId: m,
-                section: x,
-                subsection: j,
-                onClose: b
+            (0, o.jsx)(i.njP.Panel, {
+                id: x,
+                'aria-label': I,
+                className: u.tabBarPanel,
+                children: (0, o.jsx)(f, {
+                    user: l,
+                    currentUser: p,
+                    displayProfile: m,
+                    guildId: b,
+                    section: x,
+                    subsection: v,
+                    onClose: y
+                })
             })
         ]
     });
