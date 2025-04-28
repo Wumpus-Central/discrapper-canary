@@ -13636,28 +13636,6 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     width: 100%
 }
 
-.guildIconImage__79e3e {
-    height: 100%;
-    object-fit: cover;
-    width: 100%
-}
-
-.guildIconImage__79e3e.acronym__79e3e {
-    background-color: var(--bg-base-tertiary)
-}
-
-.acronym__79e3e {
-    align-items: center;
-    color: var(--header-primary);
-    display: flex;
-    font-size: 14px;
-    font-weight: 500;
-    justify-content: center;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 100%
-}
-
 .container__80da8 {
     display: flex;
     flex-direction: row;
