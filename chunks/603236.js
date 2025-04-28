@@ -33,7 +33,7 @@ let _ = o.ZP.connectStores([g.Z], () => ({ hideValue: g.Z.hideInstantInvites }))
         });
     }),
     S = (e) => {
-        let { guild: t, noInvitesAvailable: n, showFriends: r, onClose: o, modalState: d, isApplicationBypassToggleEnabled: g, setInviteFlags: S, copyValue: b, changePage: E, inviteChannel: T, source: O, code: y, guildScheduledEvent: C, disabled: P, application: Z } = e,
+        let { guild: t, noInvitesAvailable: n, showFriends: r, onClose: o, modalState: d, isApplicationBypassToggleEnabled: g, setInviteFlags: S, copyValue: E, changePage: b, inviteChannel: T, source: O, code: y, guildScheduledEvent: C, disabled: P, application: Z } = e,
             { maxAge: w, maxUses: A, networkError: k, showVanityURL: R, flags: M } = d,
             D = i.useCallback(() => {
                 h.default.track(I.rMx.COPY_INSTANT_INVITE, {
@@ -49,7 +49,7 @@ let _ = o.ZP.connectStores([g.Z], () => ({ hideValue: g.Z.hideInstantInvites }))
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(_, {
-                    value: b,
+                    value: E,
                     autoFocus: r,
                     onCopy: D,
                     disabled: P
@@ -124,7 +124,7 @@ let _ = o.ZP.connectStores([g.Z], () => ({ hideValue: g.Z.hideInstantInvites }))
                               ' ',
                               r
                                   ? (0, l.jsx)(u.eee, {
-                                        onClick: () => E(x.RV.SETTINGS),
+                                        onClick: () => b(x.RV.SETTINGS),
                                         children: f.intl.string(f.t.VNe8Pz)
                                     })
                                   : null

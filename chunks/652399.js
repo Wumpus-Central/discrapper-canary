@@ -5,6 +5,7 @@ n.d(t, {
     cy: () => p,
     hM: () => a,
     sL: () => o,
+    tI: () => m,
     zW: () => s
 });
 var r = n(367907),
@@ -52,21 +53,41 @@ function s(e) {
     });
 }
 function c(e) {
-    let { searchType: t } = e;
-    r.ZP.trackWithMetadata(l.rMx.SEARCH_RESULT_EMPTY, { search_type: t });
+    let { searchType: t, searchAnalyticsId: n } = e;
+    r.ZP.trackWithMetadata(l.rMx.SEARCH_RESULT_EMPTY, {
+        search_type: t,
+        search_id: n
+    });
 }
 function u(e) {
     let { searchType: t } = e;
     r.ZP.trackWithMetadata(l.rMx.SEARCH_OPENED, { search_type: t });
 }
 function d(e) {
-    let { searchAnalyticsId: t } = e;
-    r.ZP.trackWithMetadata(l.rMx.SEARCH_CLOSED, { search_id: t });
+    let { searchAnalyticsId: t, searchType: n } = e;
+    r.ZP.trackWithMetadata(l.rMx.SEARCH_CLOSED, {
+        search_id: t,
+        search_type: n
+    });
 }
 function p(e) {
     let { searchType: t, searchAnalyticsId: n } = e;
     r.ZP.trackWithMetadata(l.rMx.SEARCH_INPUT_CLEARED, {
         search_id: n,
         search_type: t
+    });
+}
+function m(e) {
+    let { searchType: t, searchAnalyticsId: n, query: i } = e,
+        a = Object.keys(i),
+        o = a.reduce((e, t) => {
+            let n = i[t];
+            return (e[t] = Array.isArray(n) ? n.length : 1), e;
+        }, {});
+    r.ZP.trackWithMetadata(l.rMx.SEARCH_STARTED, {
+        search_type: t,
+        prev_search_id: n,
+        num_modifiers: a.length,
+        modifiers: o
     });
 }

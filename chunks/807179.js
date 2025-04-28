@@ -4,5 +4,7 @@ e.exports = {
     left: 'left_db78b7',
     right: 'right_db78b7',
     closeButton: 'closeButton_db78b7',
-    uploadContainer: 'uploadContainer_db78b7'
+    uploadContainer: 'uploadContainer_db78b7',
+    emptyState: 'emptyState_db78b7',
+    dropZone: 'dropZone_db78b7'
 };

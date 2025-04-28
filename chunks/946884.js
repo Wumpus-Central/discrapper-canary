@@ -3,15 +3,15 @@ t.a(e, async function (e, r) {
         t.d(n, { ZP: () => a });
         var l = t(818140),
             i = t(192379),
-            o = e([l]);
-        function u(e, n) {
+            u = e([l]);
+        function c(e, n) {
             if (null == e) throw Error(`Attempted to render "${n}" but no renderer was provided`);
         }
-        l = (o.then ? (await o)() : o)[0];
+        l = (u.then ? (await u)() : u)[0];
         let d = new Set(['bold', 'italic', 'underline', 'strikethrough', 'spoiler', 'emoji', 'timestamp', 'mention', 'link', 'code', 'code_block', 'heading', 'list', 'quote', 'small']);
-        function c({ node: e, renderers: n }) {
+        function o({ node: e, renderers: n }) {
             let t = n[e.type];
-            if ((u(t, e.type), Array.isArray(e.value)))
+            if ((c(t, e.type), Array.isArray(e.value)))
                 return i.createElement(
                     t,
                     null,
@@ -42,15 +42,15 @@ t.a(e, async function (e, r) {
                     }
                     return i.createElement(t, e.value, l);
                 case 'quote':
-                    let o = n.paragraph;
+                    let u = n.paragraph;
                     return (
-                        u(o, 'paragraph'),
+                        c(u, 'paragraph'),
                         i.createElement(
                             t,
                             null,
                             e.value.lines.map((e) =>
                                 i.createElement(
-                                    o,
+                                    u,
                                     {
                                         key: e,
                                         value: e,
@@ -77,13 +77,13 @@ t.a(e, async function (e, r) {
                         })
                     );
                 case 'list':
-                    let c = n.listItem ?? 'li';
+                    let o = n.listItem ?? 'li';
                     return i.createElement(
                         t,
                         e.value,
                         e.value.items.map((e, t) =>
                             i.createElement(
-                                c,
+                                o,
                                 { key: t },
                                 i.createElement(s, {
                                     nodes: e.content,
@@ -112,7 +112,7 @@ t.a(e, async function (e, r) {
                 i.Fragment,
                 null,
                 e.map((e, t) =>
-                    i.createElement(c, {
+                    i.createElement(o, {
                         key: t,
                         node: e,
                         renderers: n

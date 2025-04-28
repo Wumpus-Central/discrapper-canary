@@ -13,10 +13,11 @@ function p(e) {
     let { markAsDismissed: t } = e,
         { analyticsLocations: p } = (0, a.ZP)(l.Z.CUSTOM_STATUS_TAGS_COACHMARK);
     return (0, i.jsx)(o.Z, {
+        inlineArt: !0,
         dismissibleContent: r.z.CUSTOM_STATUS_PROMPTS_COACHMARK,
         tryItText: (0, i.jsx)(s.Text, {
             variant: 'text-xs/normal',
-            color: 'text-brand',
+            className: m.tryItText,
             children: u.intl.string(u.t.RzWDqa)
         }),
         dismissText: (0, i.jsx)(s.Text, {

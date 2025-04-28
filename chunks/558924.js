@@ -10,12 +10,12 @@ var i = t(120356),
     c = t(481060),
     d = t(26151),
     g = t(906732),
-    Z = t(213609),
-    b = t(358221),
+    b = t(213609),
+    Z = t(358221),
     f = t(985588),
     p = t(933557),
-    m = t(243778),
-    O = t(359110),
+    O = t(243778),
+    m = t(359110),
     h = t(163612),
     j = t(592125),
     P = t(354459),
@@ -23,7 +23,7 @@ var i = t(120356),
     x = t(388032),
     y = t(940082);
 function N(e, n) {
-    let [t, i] = (0, u.Wu)([b.Z], () => [null != n ? b.Z.getParticipants(n) : null, null != n ? b.Z.getParticipant(n, e.id) : null], [n, e.id]),
+    let [t, i] = (0, u.Wu)([Z.Z], () => [null != n ? Z.Z.getParticipants(n) : null, null != n ? Z.Z.getParticipant(n, e.id) : null], [n, e.id]),
         o = (0, u.e7)([j.Z], () => j.Z.getChannel(n)),
         p = (0, f.s)(e, 'context_menu', n),
         { enabled: N } = h.Z.useExperiment({
@@ -36,10 +36,10 @@ function N(e, n) {
         T = null != i && i.type === P.fO.USER && i.ringing,
         U = [];
     I && !C && (S || T) && U.push(s.z.RING_USER_TO_VC_NEW_BADGE);
-    let [A, R] = (0, m.US)(U),
+    let [A, R] = (0, O.US)(U),
         w = A === s.z.RING_USER_TO_VC_NEW_BADGE,
         { analyticsLocations: M } = (0, g.ZP)();
-    return ((0, Z.Z)(
+    return ((0, b.Z)(
         {
             type: a.ImpressionTypes.MENU,
             name: a.ImpressionNames.RING_TO_GUILD_VC_MENU_ITEM_SHOWN,
@@ -65,7 +65,7 @@ function N(e, n) {
                     : x.intl.string(x.t.bHa9kJ),
                 subtext: I ? (0, l.jsx)(_, { channel: o }) : null,
                 action: () => {
-                    w && R(v.L.TAKE_ACTION), d.Z.ring(n, [e.id]), I && null != n && (0, O.Kh)(n);
+                    w && R(v.L.TAKE_ACTION), d.Z.ring(n, [e.id]), I && null != n && (0, m.Kh)(n);
                 },
                 className: y.menuItem
             })

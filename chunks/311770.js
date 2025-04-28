@@ -1,9 +1,9 @@
-n.d(l, { EmojiStudioModal: () => j }), n(388685);
+n.d(l, { EmojiStudioModal: () => b }), n(388685);
 var t = n(200651),
-    a = n(192379),
-    i = n(772848),
-    r = n(442837),
-    o = n(481060),
+    r = n(192379),
+    a = n(772848),
+    o = n(442837),
+    i = n(481060),
     s = n(730089),
     d = n(372129),
     u = n(430824),
@@ -11,32 +11,32 @@ var t = n(200651),
     m = n(914010),
     h = n(375727),
     x = n(841776),
-    f = n(981631),
-    g = n(388032),
-    p = n(807179);
-let b = (e) => {
-        let { guilds: l, currentGuildId: n } = _(),
-            [r, d] = a.useState(n),
-            [u, c] = a.useState(null),
-            [m, f] = a.useState(null),
-            [b, j] = a.useState(e.userImage),
-            I = async () => {
-                if ((c(null), f(null), null == r)) return void c('Please select a server for the emoji.');
-                if (null == b || (null == b ? void 0 : b.data) == null || (null == b ? void 0 : b.file) == null || (null == b ? void 0 : b.image) == null) return void c('Missing image data');
-                let { data: e, file: l, image: n } = b;
+    j = n(981631),
+    p = n(388032),
+    g = n(807179);
+let v = (e) => {
+        let { userImage: l } = e,
+            { guilds: n, currentGuildId: o } = f(),
+            [d, u] = r.useState(o),
+            [c, m] = r.useState(null),
+            [j, v] = r.useState(null),
+            b = async () => {
+                if ((m(null), v(null), null == d)) return void m('Please select a server for the emoji.');
+                if (null == l || (null == l ? void 0 : l.data) == null || (null == l ? void 0 : l.file) == null || (null == l ? void 0 : l.image) == null) return void m('Missing image data');
+                let { data: e, file: n, image: t } = l;
                 try {
-                    let t = await (0, s.G)({
+                    let l = await (0, s.G)({
                         data: e,
-                        file: l,
-                        image: n,
-                        guildId: r,
-                        uploadId: (0, i.Z)(),
+                        file: n,
+                        image: t,
+                        guildId: d,
+                        uploadId: (0, a.Z)(),
                         hideErrorModal: !1
                     });
-                    if (t) return void f(t);
+                    if (l) return void v(l);
                 } catch (e) {
-                    var t;
-                    c(null != (t = null == e ? void 0 : e.message) ? t : 'Failed to upload');
+                    var r;
+                    m(null != (r = null == e ? void 0 : e.message) ? r : 'Failed to upload');
                     return;
                 }
                 (0, h.y)();
@@ -44,88 +44,121 @@ let b = (e) => {
         return (0, t.jsxs)('main', {
             children: [
                 (0, t.jsx)('div', {
-                    className: p.left,
-                    children:
-                        null == b
-                            ? (0, t.jsx)(v, { setUserImage: j })
-                            : (0, t.jsx)('img', {
-                                  src: b.data,
-                                  alt: 'Uploaded content'
-                              })
+                    className: g.left,
+                    children: (0, t.jsx)('img', {
+                        src: l.data,
+                        alt: 'Uploaded content'
+                    })
                 }),
                 (0, t.jsxs)('div', {
-                    className: p.right,
+                    className: g.right,
                     children: [
-                        (0, t.jsx)(o.X6q, {
+                        (0, t.jsx)(i.X6q, {
                             variant: 'heading-lg/bold',
-                            children: g.intl.string(g.t.DU0dy8)
+                            children: p.intl.string(p.t.DU0dy8)
                         }),
                         (0, t.jsxs)('div', {
-                            className: p.uploadContainer,
+                            className: g.uploadContainer,
                             children: [
                                 (0, t.jsx)(x.H, {
-                                    error: u,
-                                    uploadErrorCode: m
+                                    error: c,
+                                    uploadErrorCode: j
                                 }),
-                                (0, t.jsx)(o.q4e, {
-                                    options: l.map((e) => ({
+                                (0, t.jsx)(i.q4e, {
+                                    options: n.map((e) => ({
                                         label: e.name,
                                         value: e.id
                                     })),
-                                    value: r,
-                                    onChange: (e) => d(e)
+                                    value: d,
+                                    onChange: (e) => u(e)
                                 }),
-                                (0, t.jsx)(o.zxk, {
-                                    onClick: I,
+                                (0, t.jsx)(i.zxk, {
+                                    onClick: b,
                                     fullWidth: !0,
-                                    disabled: null == b || null == r,
+                                    disabled: null == l || null == d,
                                     children: 'Upload'
                                 })
                             ]
                         }),
-                        (0, t.jsx)(o.olH, {
+                        (0, t.jsx)(i.olH, {
                             onClick: h.y,
-                            className: p.closeButton
+                            className: g.closeButton
                         })
                     ]
                 })
             ]
         });
     },
-    j = (e) => {
-        let { transitionState: l, userImage: n } = e;
-        return (0, t.jsx)(o.Y0X, {
+    b = (e) => {
+        let { transitionState: l, userImage: n } = e,
+            [a, o] = r.useState(n),
+            s = null == a ? i.CgR.MEDIUM : i.CgR.LARGE;
+        return (0, t.jsx)(i.Y0X, {
             transitionState: l,
-            size: o.CgR.LARGE,
-            className: p.modalRoot,
-            children: (0, t.jsx)(o.hzk, {
+            size: s,
+            className: g.modalRoot,
+            children: (0, t.jsx)(i.hzk, {
                 scrollbarType: 'none',
-                className: p.modalContent,
-                children: (0, t.jsx)(b, { userImage: n })
+                className: g.modalContent,
+                children: null == a ? (0, t.jsx)(_, { setUserImage: o }) : (0, t.jsx)(v, { userImage: a })
             })
         });
     },
-    _ = () => ({
-        guilds: (0, r.Wu)([u.Z, c.Z], () => Object.values(u.Z.getGuilds()).filter((e) => c.Z.can(f.Plq.CREATE_GUILD_EXPRESSIONS, e))),
-        currentGuildId: (0, r.e7)([u.Z, m.Z, c.Z], () => {
+    f = () => ({
+        guilds: (0, o.Wu)([u.Z, c.Z], () => Object.values(u.Z.getGuilds()).filter((e) => c.Z.can(j.Plq.CREATE_GUILD_EXPRESSIONS, e))),
+        currentGuildId: (0, o.e7)([u.Z, m.Z, c.Z], () => {
             let e = m.Z.getGuildId(),
                 l = u.Z.getGuild(e);
-            return c.Z.can(f.Plq.CREATE_GUILD_EXPRESSIONS, l) && null != l ? l.id : null;
+            return c.Z.can(j.Plq.CREATE_GUILD_EXPRESSIONS, l) && null != l ? l.id : null;
         })
     }),
-    v = (e) => {
-        let { setUserImage: l } = e,
-            [n, i] = a.useState(!1);
-        return (0, t.jsxs)(o.zxk, {
-            tabIndex: -1,
-            size: o.zxk.Sizes.MEDIUM,
-            disabled: n,
-            submitting: n,
+    _ = (e) => {
+        let { setUserImage: l } = e;
+        return (0, t.jsxs)('div', {
+            className: g.emptyState,
+            children: [
+                (0, t.jsxs)('header', {
+                    children: [
+                        (0, t.jsx)(i.X6q, {
+                            variant: 'heading-lg/medium',
+                            color: 'header-primary',
+                            children: 'Add Emoji'
+                        }),
+                        (0, t.jsx)(i.Text, {
+                            variant: 'text-sm/normal',
+                            color: 'header-muted',
+                            children: "Select an image or GIF. You'll be able to edit & preview."
+                        })
+                    ]
+                }),
+                (0, t.jsxs)('div', {
+                    className: g.dropZone,
+                    children: [
+                        (0, t.jsx)(i.dZu, {
+                            size: 'lg',
+                            color: i.TVs.colors.HEADER_MUTED
+                        }),
+                        (0, t.jsxs)(i.Text, {
+                            variant: 'text-md/medium',
+                            children: ['Drag & drop or ', (0, t.jsx)(I, { setUserImage: l })]
+                        })
+                    ]
+                }),
+                (0, t.jsx)(i.olH, {
+                    onClick: h.y,
+                    className: g.closeButton
+                })
+            ]
+        });
+    },
+    I = (e) => {
+        let { setUserImage: l } = e;
+        return (0, t.jsxs)(i.P3F, {
             focusProps: { within: !0 },
+            tag: 'a',
             children: [
                 'Select an image',
                 (0, t.jsx)(d.Z, {
-                    disabled: n,
                     tabIndex: 0,
                     onChange: (e, n, t) => (
                         l({
@@ -134,9 +167,7 @@ let b = (e) => {
                             image: t
                         }),
                         Promise.resolve(void 0)
-                    ),
-                    setLoading: i,
-                    multiple: !0
+                    )
                 })
             ]
         });

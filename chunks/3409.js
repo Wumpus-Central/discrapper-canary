@@ -339,7 +339,7 @@ function eT(e) {
         eW(e.id), eY(e);
     }
     let ts = (0, G.isDesktop)() ? [] : ['applePay', 'googlePay'];
-    ts.includes('googlePay') || ts.push('googlePay'), ts.includes('applePay') || ts.push('applePay');
+    (!(0, G.isDesktop)() || X) && ts.push('googlePay', 'applePay');
     let [tl, tc] = i.useState(!1),
         tu = i.useRef(null),
         td = () => {

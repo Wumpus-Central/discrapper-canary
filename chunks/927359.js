@@ -15,7 +15,7 @@ var l = (function (e) {
 function c(e) {
     return e.days > 0
         ? {
-              days: e.days + 1,
+              days: e.hours > 0 ? e.days + 1 : e.days,
               hours: 0,
               minutes: 0,
               seconds: 0

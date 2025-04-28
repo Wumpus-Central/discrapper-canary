@@ -20,8 +20,8 @@ var l = n(200651),
     N = n(447003),
     _ = n(933557),
     S = n(259473),
-    b = n(600164),
-    E = n(687516),
+    E = n(600164),
+    b = n(687516),
     T = n(266076),
     O = n(227672),
     y = n(810123),
@@ -359,8 +359,8 @@ function ea(e) {
             },
             { autoTrackExposure: eN }
         ),
-        { canCreateApplicationBypassInvites: eS, isManualApprovalGuild: eb } = (0, G.R)(r),
-        eE = e_ && eN,
+        { canCreateApplicationBypassInvites: eS, isManualApprovalGuild: eE } = (0, G.R)(r),
+        eb = e_ && eN,
         {
             rows: eT,
             showFriends: eO,
@@ -396,7 +396,7 @@ function ea(e) {
             case Y.Iq.STREAM:
                 if (null == p) break;
                 let e = Z.Z.getStreamForUser(p, r.id),
-                    t = (0, E.L2)(e, D.Z);
+                    t = (0, b.L2)(e, D.Z);
                 V.default.track(K.rMx.OPEN_MODAL, {
                     type: 'Send Stream Invite',
                     source: d,
@@ -568,7 +568,7 @@ function ea(e) {
                     })
                 }),
                 (0, l.jsxs)(g.mzw, {
-                    direction: b.Z.Direction.VERTICAL,
+                    direction: E.Z.Direction.VERTICAL,
                     className: J.footer,
                     children: [
                         (0, l.jsx)(H.f, {
@@ -583,8 +583,8 @@ function ea(e) {
                             hasSelection: C.length > 0,
                             options: ee,
                             setOptions: ep,
-                            isGuestInviteAllowed: eE,
-                            isTemporaryInviteAllowed: !eE && !eb,
+                            isGuestInviteAllowed: eb,
+                            isTemporaryInviteAllowed: !eb && !eE,
                             isApplicationBypassAllowed: eS,
                             setError: eu,
                             analyticsLocation: eg[0]

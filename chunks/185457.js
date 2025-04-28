@@ -1,4 +1,4 @@
-t.d(n, { Z: () => Z });
+t.d(n, { Z: () => b });
 var l = t(200651);
 t(192379);
 var i = t(481060),
@@ -10,27 +10,28 @@ var i = t(481060),
     c = t(981631),
     d = t(228168),
     g = t(388032);
-function Z(e) {
-    let { user: n, guildId: t, channelId: Z, context: b } = e,
+function b(e) {
+    let { user: n, guildId: t, channelId: b, context: Z } = e,
         { id: f } = n,
-        { loading: p, note: m } = (0, a.Z)(f),
-        O = !p && null != m && m.length > 0,
-        h = b === c.IlC.POPOUT || b === c.IlC.OVERLAY,
+        { loading: p, note: O } = (0, a.Z)(f),
+        m = !p && null != O && O.length > 0,
+        h = Z === c.IlC.POPOUT || Z === c.IlC.OVERLAY,
         { analyticsLocations: j } = (0, r.ZP)();
     return f === u.default.getId() || s.Z.hidePersonalInformation || h
         ? null
         : (0, l.jsx)(i.sNh, {
               id: 'note',
-              label: p ? g.intl.string(g.t['WLKx//']) : O ? g.intl.string(g.t['gs+qcH']) : g.intl.string(g.t['1ZZttr']),
+              label: p ? g.intl.string(g.t['WLKx//']) : m ? g.intl.string(g.t.sHHsOD) : g.intl.string(g.t.Dglxra),
+              subtext: g.intl.string(g.t.r1BOdX),
               action: () => {
                   (0, o.openUserProfileModal)({
                       userId: n.id,
                       section: d.oh.USER_INFO,
                       subsection: d.Tb.NOTE,
                       guildId: t,
-                      channelId: Z,
+                      channelId: b,
                       sourceAnalyticsLocations: j,
-                      appContext: b
+                      appContext: Z
                   });
               }
           });

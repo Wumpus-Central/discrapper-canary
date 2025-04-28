@@ -9,13 +9,11 @@ var i = n(481060),
 function c(e) {
     let { children: t, messageReference: n, guildName: a } = e;
     if (null == n) return (0, r.jsx)(i.eee, { children: t });
-    let { guild_id: o, channel_id: s, message_id: c } = n;
+    let { guild_id: o } = n;
     return null == o
         ? (0, r.jsx)(i.eee, { children: t })
         : (0, r.jsx)(l.Z, {
               guildId: o,
-              channelId: s,
-              messageId: c,
               name: a,
               children: (e) => {
                   var n, l;

@@ -17,10 +17,10 @@ function u(e) {
             [c]
         );
     if (!d) return null;
-    let Z = null == g ? o.intl.string(o.t.BGYkaG) : o.intl.string(o.t['8pOYUF']);
+    let b = null == g ? o.intl.string(o.t.BGYkaG) : o.intl.string(o.t['8pOYUF']);
     return (0, l.jsx)(r.sNh, {
         id: null == g ? 'add-friend-nickname' : 'edit-friend-nickname',
-        label: Z,
+        label: b,
         action: () => {
             null == u || u(),
                 (0, r.ZDy)(

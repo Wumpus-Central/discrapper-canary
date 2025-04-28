@@ -1,4 +1,4 @@
-t.d(n, { Z: () => j });
+t.d(n, { Z: () => b });
 var i = t(200651);
 t(192379);
 var o = t(442837),
@@ -10,15 +10,15 @@ var o = t(442837),
     d = t(785717),
     u = t(621853),
     f = t(172351),
-    m = t(280885),
-    p = t(900927),
+    p = t(280885),
+    m = t(900927),
     h = t(678738),
     x = t(179828),
     I = t(228168),
-    v = t(388032),
-    b = t(349966);
-function j(e) {
-    let { user: n, currentUser: t, displayProfile: j, guildId: _, subsection: g, onClose: Z } = e,
+    j = t(388032),
+    v = t(349966);
+function b(e) {
+    let { user: n, currentUser: t, displayProfile: b, guildId: _, subsection: g, onClose: Z } = e,
         { trackUserProfileAction: y } = (0, d.KZ)(),
         N = (0, o.e7)([a.Z], () => a.Z.getGuild(_)),
         A = (0, o.e7)([u.Z], () => {
@@ -28,12 +28,12 @@ function j(e) {
         T = (0, o.e7)([s.Z, c.Z], () => s.Z.getChannel(c.Z.getChannelId()));
     return (0, i.jsxs)(l.zJl, {
         fade: !0,
-        className: b.scroller,
+        className: v.scroller,
         children: [
-            (null == j ? void 0 : j.bio) != null &&
-                (null == j ? void 0 : j.bio) !== '' &&
-                (0, i.jsx)(m.Z, {
-                    userBio: j.bio,
+            (null == b ? void 0 : b.bio) != null &&
+                (null == b ? void 0 : b.bio) !== '' &&
+                (0, i.jsx)(p.Z, {
+                    userBio: b.bio,
                     setLineClamp: !1
                 }),
             (null == A ? void 0 : A.popularApplicationCommandIds) != null &&
@@ -53,19 +53,19 @@ function j(e) {
                     scrollIntoView: g === I.Tb.ROLES
                 }),
             (0, i.jsx)(h.Z, {
-                heading: v.intl.string(v.t['A//N4u']),
-                children: (0, i.jsx)(p.Z, {
+                heading: j.intl.string(j.t['A//N4u']),
+                children: (0, i.jsx)(m.Z, {
                     userId: n.id,
                     guildId: _,
                     tooltipDelay: I.vB
                 })
             }),
             (0, i.jsx)(h.Z, {
-                heading: v.intl.string(v.t['mQKv+v']),
+                heading: j.intl.string(j.t['mQKv+v']),
                 scrollIntoView: g === I.Tb.NOTE,
                 children: (0, i.jsx)(r.Z, {
                     userId: n.id,
-                    className: b.note,
+                    className: v.note,
                     autoFocus: g === I.Tb.NOTE,
                     onUpdate: () => y({ action: 'SET_NOTE' })
                 })

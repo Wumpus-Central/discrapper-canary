@@ -9,8 +9,8 @@ var i = n(481060),
     u = n(100527),
     d = n(299206),
     c = n(976192),
-    f = n(276022),
-    g = n(777658),
+    g = n(276022),
+    f = n(777658),
     Z = n(858488),
     b = n(44652),
     O = n(185457),
@@ -64,7 +64,7 @@ let _ = (0, a.Z)(
                     analyticsLocation: D,
                     context: _
                 }),
-                H = (0, f.Z)({
+                H = (0, g.Z)({
                     user: t,
                     guildId: n
                 }),
@@ -73,7 +73,7 @@ let _ = (0, a.Z)(
                     guildId: n
                 }),
                 K = (0, s.Z)(null, t),
-                W = (0, g.Z)({ user: t }),
+                W = (0, f.Z)({ user: t }),
                 J = (0, b.Z)({ user: t }),
                 X = (0, S.Z)({ user: t }),
                 z = (0, h.Z)({

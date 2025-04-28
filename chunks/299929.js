@@ -2,8 +2,8 @@ n.d(t, { Z: () => g }), n(953529), n(388685);
 var i = n(200651),
     r = n(192379),
     s = n(481060),
-    l = n(931240),
-    a = n(300284),
+    l = n(300284),
+    a = n(321114),
     o = n(731722),
     c = n(172751),
     d = n(131085),
@@ -12,10 +12,10 @@ var i = n(200651),
     p = n(729495);
 let g = r.memo(function (e) {
     let { guildId: t, guildProfile: n, title: g, description: h, onClose: f } = e,
-        b = (0, a.Z)({ scrollPosition: u.Y_.GUILD_TAG }),
+        b = (0, l.Z)({ scrollPosition: u.Y_.GUILD_TAG }),
         [_, x] = r.useState(!1);
     async function E() {
-        x(!0), await (0, l.nE)(t, !0), x(!1), null == f || f();
+        x(!0), await (0, a.c)(t, !0), x(!1), null == f || f();
     }
     return (0, i.jsxs)('div', {
         className: p.container,

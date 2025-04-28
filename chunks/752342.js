@@ -10,14 +10,14 @@ var o = t(481060),
     d = t(899007),
     u = t(648052),
     f = t(867176),
-    m = t(681837),
-    p = t(502762),
+    p = t(681837),
+    m = t(502762),
     h = t(530),
     x = t(871604),
     I = t(952124),
-    v = t(53558),
-    b = t(544989),
-    j = t(934861),
+    j = t(53558),
+    v = t(544989),
+    b = t(30556),
     _ = t(4517),
     g = t(740628),
     Z = t(398145),
@@ -26,50 +26,50 @@ var o = t(481060),
     A = t(388032),
     T = t(405666);
 function O(e) {
-    let { user: n, currentUser: t, guildId: O, channelId: C, messageId: E, roleId: P, sessionId: S, initialSection: M, initialSubsection: L, transitionState: w, openedAt: B, onClose: D, sourceAnalyticsLocations: U = [] } = e,
-        R = O === N.ME ? void 0 : O,
-        k = (0, c.ZP)(n.id, R),
-        { analyticsLocations: G } = (0, r.ZP)([...U, l.Z.USER_PROFILE_MODAL]),
-        Y = (0, a.ZB)({
+    let { user: n, currentUser: t, guildId: O, channelId: C, messageId: E, roleId: P, sessionId: S, initialSection: L, initialSubsection: M, transitionState: w, openedAt: D, onClose: U, sourceAnalyticsLocations: B = [] } = e,
+        G = O === N.ME ? void 0 : O,
+        R = (0, c.ZP)(n.id, G),
+        { analyticsLocations: k } = (0, r.ZP)([...B, l.Z.USER_PROFILE_MODAL]),
+        F = (0, a.ZB)({
             layout: 'MODAL',
             userId: n.id,
             sourceSessionId: S,
-            guildId: R,
+            guildId: G,
             channelId: C,
             messageId: E,
             roleId: P
         }),
-        F = (0, Z.Z)(n);
+        Y = (0, Z.Z)(n);
     return (0, i.jsx)(r.Gt, {
-        value: G,
+        value: k,
         children: (0, i.jsx)(a.Mt, {
-            value: Y,
-            openedAt: B,
-            fetchStartedAt: null == k ? void 0 : k.fetchStartedAt,
-            fetchEndedAt: null == k ? void 0 : k.fetchEndedAt,
-            isLoaded: null == k ? void 0 : k.isLoaded,
+            value: F,
+            openedAt: D,
+            fetchStartedAt: null == R ? void 0 : R.fetchStartedAt,
+            fetchEndedAt: null == R ? void 0 : R.fetchEndedAt,
+            isLoaded: null == R ? void 0 : R.isLoaded,
             children: (0, i.jsx)(o.Y0X, {
                 transitionState: w,
                 className: T.root,
                 hideShadow: !0,
                 'aria-label': A.intl.string(A.t['3N/J2t']),
-                children: (0, i.jsxs)(p.Z, {
+                children: (0, i.jsxs)(m.Z, {
                     user: n,
-                    displayProfile: k,
+                    displayProfile: R,
                     themeType: y.lY.MODAL,
                     children: [
-                        (0, i.jsx)(b.Z, {
+                        (0, i.jsx)(v.Z, {
                             children: (0, i.jsx)(I.Z, {
                                 user: n,
-                                guildId: R,
-                                onCloseProfile: D
+                                guildId: G,
+                                onCloseProfile: U
                             })
                         }),
                         (0, i.jsxs)('header', {
                             children: [
                                 (0, i.jsx)(f.Z, {
                                     user: n,
-                                    displayProfile: k,
+                                    displayProfile: R,
                                     themeType: y.lY.MODAL
                                 }),
                                 (0, i.jsxs)('div', {
@@ -77,8 +77,8 @@ function O(e) {
                                     children: [
                                         (0, i.jsx)(d.Z, {
                                             user: n,
-                                            displayProfile: k,
-                                            guildId: R,
+                                            displayProfile: R,
+                                            guildId: G,
                                             channelId: C,
                                             themeType: y.lY.MODAL
                                         }),
@@ -87,24 +87,26 @@ function O(e) {
                                             user: n,
                                             themeType: y.lY.MODAL,
                                             hasEntered: w === o.Dvm.ENTERED,
-                                            onCloseProfile: D
+                                            onCloseProfile: U
                                         }),
                                         (0, i.jsxs)('div', {
                                             className: T.headerButtons,
                                             children: [
-                                                (0, i.jsx)(j.c, {
+                                                (0, i.jsx)(b.Z, {
+                                                    type: 'text',
                                                     userId: n.id,
-                                                    onClose: D,
+                                                    onClose: U,
                                                     className: T.messageTextButton
                                                 }),
-                                                (0, i.jsx)(j.v, {
+                                                (0, i.jsx)(b.Z, {
+                                                    type: 'icon',
                                                     userId: n.id,
-                                                    onClose: D,
+                                                    onClose: U,
                                                     tooltipContainerClassName: T.messageIconButton
                                                 }),
-                                                (0, i.jsx)(v.Z, {
+                                                (0, i.jsx)(j.Z, {
                                                     user: n,
-                                                    guildId: R
+                                                    guildId: G
                                                 }),
                                                 (0, i.jsx)(x.Z, { user: n })
                                             ]
@@ -119,25 +121,25 @@ function O(e) {
                                 (0, i.jsx)(h.Z, {
                                     className: T.username,
                                     user: n,
-                                    nickname: s.ZP.getName(R, C, n),
-                                    pronouns: null == k ? void 0 : k.pronouns,
+                                    nickname: s.ZP.getName(G, C, n),
+                                    pronouns: null == R ? void 0 : R.pronouns,
                                     nicknameVariant: 'heading-xl/bold',
-                                    nicknameIcons: (0, i.jsx)(m.Z, { userId: n.id }),
+                                    nicknameIcons: (0, i.jsx)(p.Z, { userId: n.id }),
                                     tags: (0, i.jsx)(u.Z, {
-                                        displayProfile: k,
+                                        displayProfile: R,
                                         themeType: y.lY.MODAL,
-                                        onClose: D
+                                        onClose: U
                                     })
                                 }),
                                 (0, i.jsx)(g.Z, {
                                     user: n,
                                     currentUser: t,
-                                    displayProfile: k,
-                                    guildId: R,
-                                    items: F,
-                                    initialSection: null != M ? M : y.oh.BOT_INFO,
-                                    initialSubsection: L,
-                                    onClose: D
+                                    displayProfile: R,
+                                    guildId: G,
+                                    items: Y,
+                                    initialSection: null != L ? L : y.oh.BOT_INFO,
+                                    initialSubsection: M,
+                                    onClose: U
                                 })
                             ]
                         })

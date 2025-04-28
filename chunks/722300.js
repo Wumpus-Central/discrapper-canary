@@ -27,7 +27,7 @@ function u(e) {
                     height: 70,
                     children: (0, r.jsx)('div', {
                         className: c.avatarWrapper,
-                        children: (0, r.jsx)(o.R, {
+                        children: (0, r.jsx)(o.R$, {
                             guildName: f,
                             iconSize: 64
                         })

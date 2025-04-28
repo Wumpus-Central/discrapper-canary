@@ -14,13 +14,13 @@ var d,
     N = n(699516),
     _ = n(981631),
     S = n(245335);
-let b = new Set(),
-    E = [],
+let E = new Set(),
+    b = [],
     T = new Map();
 function O(e) {
     let t = new Set(),
         n = null == s || u === S.Iq.EMBEDDED_APPLICATION ? void 0 : s.id,
-        l = (0, I.rh)(b, n);
+        l = (0, I.rh)(E, n);
     for (let e of (null == l || N.Z.isBlocked(l.id) || t.add(l.id), v.Z.getUserAffinitiesUserIds())) t.add(e);
     let i = new Set();
     return (
@@ -34,7 +34,7 @@ function O(e) {
                 .forEach((e) => i.add(e.id)),
         (0, I.an)({
             query: e,
-            omitUserIds: b,
+            omitUserIds: E,
             suggestedUserIds: t,
             maxRowsWithoutQuery: 100,
             omitGuildId: n,
@@ -44,7 +44,7 @@ function O(e) {
     );
 }
 function y(e) {
-    (E = e),
+    (b = e),
         (T = new Map()),
         e.forEach((e, t) => {
             T.set(e, { index: t });
@@ -55,7 +55,7 @@ class C extends (d = h.ZP.Store) {
         this.waitFor(N.Z, v.Z);
     }
     getInviteSuggestionRows() {
-        return E;
+        return b;
     }
     getTotalSuggestionsCount() {
         return i;
@@ -70,7 +70,7 @@ class C extends (d = h.ZP.Store) {
             ? {
                   rowNum: t.index,
                   isAffinitySuggestion: e.isSuggested,
-                  numTotal: E.length,
+                  numTotal: b.length,
                   numAffinityConnections: n.size,
                   isFiltered: r
               }
@@ -93,7 +93,7 @@ let P = new C(m.Z, {
             (a = d),
             (o = c),
             (u = g),
-            (b = new Set([
+            (E = new Set([
                 ...t,
                 ...N.Z.getBlockedOrIgnoredIDs(),
                 ...(0, I.Sz)({
@@ -104,7 +104,7 @@ let P = new C(m.Z, {
             ])),
             (r = !1);
         let { rows: h, counts: m } = O('');
-        y(h), (l = m), (i = E.length);
+        y(h), (l = m), (i = b.length);
     },
     INVITE_SUGGESTIONS_SEARCH: function (e) {
         let { query: t } = e;

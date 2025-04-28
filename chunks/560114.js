@@ -20,8 +20,8 @@ var l,
     N = n(100527),
     _ = n(906732),
     S = n(835473),
-    b = n(447003),
-    E = n(471445),
+    E = n(447003),
+    b = n(471445),
     T = n(259473),
     O = n(600164),
     y = n(687516),
@@ -178,7 +178,7 @@ class em extends (l = r.PureComponent) {
     }
     renderChannelWarning() {
         let { inviteChannel: e } = this.props;
-        return (0, b.Z)(e)
+        return (0, E.Z)(e)
             ? (0, i.jsxs)('div', {
                   className: ei.warningContainer,
                   children: [
@@ -204,7 +204,7 @@ class em extends (l = r.PureComponent) {
             h = null,
             m = null;
         if (((e = o ? null : null != r ? el.intl.string(el.t['6VQaqa']) : null != s ? el.intl.formatToPlainString(el.t.ZdK3dX, { applicationName: s.name }) : null != l ? el.intl.string(el.t.JKV4FB) : (null == u ? void 0 : u.isGuildStageVoice()) ? el.intl.string(el.t.zTrsHx) : el.intl.format(el.t.NvVBJS, { name: t.toString() })), null != u)) {
-            let e = (0, E.KS)(u, t);
+            let e = (0, b.KS)(u, t);
             null != e &&
                 (m = (0, i.jsxs)('div', {
                     className: ei.headerChannelContainer,
@@ -598,7 +598,7 @@ eo(em, 'defaultProps', {
 });
 let ep = r.forwardRef(function (e, t) {
     var n, l;
-    let { channel: s, guild: a, source: o, guildScheduledEvent: u, streamUserId: d, applicationId: c, transitionState: g, onClose: v, welcomeToServer: x, page: E, analyticsLocation: O } = e,
+    let { channel: s, guild: a, source: o, guildScheduledEvent: u, streamUserId: d, applicationId: c, transitionState: g, onClose: v, welcomeToServer: x, page: b, analyticsLocation: O } = e,
         { analyticsLocations: y } = (0, _.ZP)(N.Z.INSTANT_INVITE_MODAL),
         C = (0, m.e7)(
             [U.Z, k.Z, R.ZP],
@@ -678,7 +678,7 @@ let ep = r.forwardRef(function (e, t) {
         ex = !X && !(null == C ? void 0 : C.isGuildVocal()) && ev,
         eI = (null == C ? void 0 : C.type) === et.d4z.GUILD_VOICE,
         ef = null != (n = null == F ? void 0 : F.flags) ? n : 0,
-        ej = (0, b.Z)(C);
+        ej = (0, E.Z)(C);
     X || (null == el ? void 0 : el.invite_code) == null || (es = el.invite_code);
     let [eN, e_] = r.useState({
             query: '',
@@ -688,14 +688,14 @@ let ep = r.forwardRef(function (e, t) {
             temporary: null != ed && ed,
             networkError: void 0,
             showVanityURL: ex,
-            currentPage: null != E ? E : ee.RV.MAIN,
+            currentPage: null != b ? b : ee.RV.MAIN,
             lastPage: void 0,
             flags: ef
         }),
         eS = r.useCallback((e) => {
             e_((t) => eu({}, t, e));
         }, []),
-        eb = r.useCallback(
+        eE = r.useCallback(
             (e) => {
                 eS({
                     currentPage: e,
@@ -704,19 +704,19 @@ let ep = r.forwardRef(function (e, t) {
             },
             [eN.currentPage, eS]
         ),
-        eE = eI && !ex && !J && !ej,
+        eb = eI && !ex && !J && !ej,
         { enabled: eT } = P.o.useExperiment(
             {
                 guildId: null == a ? void 0 : a.id,
                 location: 'acc417_3'
             },
-            { autoTrackExposure: eE }
+            { autoTrackExposure: eb }
         ),
         { maxAge: eO, maxUses: ey, temporary: eC, savedMaxAge: eP, flags: eZ } = eN,
         ew = r.useCallback(() => {
             let { currentPage: e, lastPage: t } = eN;
-            e === ee.RV.SETTINGS && null != t ? eb(t) : v();
-        }, [eb, eN, v]),
+            e === ee.RV.SETTINGS && null != t ? eE(t) : v();
+        }, [eE, eN, v]),
         eA = r.useCallback(() => {
             let e = null == C ? void 0 : C.id;
             0 === ey && 0 === eO && !eC && ex
@@ -783,11 +783,11 @@ let ep = r.forwardRef(function (e, t) {
             transitionState: g,
             onClose: v,
             canShowVanityURL: ex,
-            isGuestInviteCreationToggleEnabled: eT && eE,
-            shouldHideTemporaryInviteToggle: (eT && eE) || eV,
+            isGuestInviteCreationToggleEnabled: eT && eb,
+            shouldHideTemporaryInviteToggle: (eT && eb) || eV,
             modalState: eN,
             setModalState: eS,
-            changePage: eb,
+            changePage: eE,
             onGenerateNewLink: eA,
             handleDone: ew,
             isApplicationBypassToggleEnabled: eL && !J

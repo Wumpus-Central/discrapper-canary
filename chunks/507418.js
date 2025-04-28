@@ -3,7 +3,7 @@ var r = n(200651);
 n(192379);
 var i = n(512722),
     l = n.n(i),
-    a = n(83474),
+    a = n(914620),
     o = n(245315),
     s = n(556041),
     c = n(726033),
@@ -15,13 +15,11 @@ function m(e, t) {
     if ((0, o.cp)(t)) return (0, r.jsx)(s.Z, {});
     if ((0, p.Z)(t)) {
         let l = (null != (i = null == t || null == (n = t.author) ? void 0 : n.username) ? i : '').split(' ').slice(0, -1).join(' '),
-            { guild_id: o, channel_id: s, message_id: c } = t.messageReference;
+            { guild_id: o } = t.messageReference;
         if (null != o)
-            return (0, r.jsx)(a.ZP, {
+            return (0, r.jsx)(a.Z, {
                 setPopoutRef: e.setPopoutRef,
                 guildId: o,
-                channelId: s,
-                messageId: c,
                 name: l
             });
     }

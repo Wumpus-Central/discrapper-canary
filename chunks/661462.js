@@ -28,9 +28,9 @@ function f(e) {
 }
 function p(e) {
     var t, n, a;
-    let { user: l, currentUser: p, displayProfile: m, guildId: b, initialSection: h, initialSubsection: _, onClose: y } = e,
-        { trackUserProfileAction: g } = (0, c.KZ)(),
-        j = r.useMemo(
+    let { user: l, currentUser: p, displayProfile: m, guildId: b, initialSection: h, initialSubsection: y, onClose: g } = e,
+        { trackUserProfileAction: j } = (0, c.KZ)(),
+        _ = r.useMemo(
             () =>
                 l.id === p.id
                     ? [
@@ -54,7 +54,7 @@ function p(e) {
                       ],
             [l.id, p.id]
         ),
-        [{ section: x, subsection: v, text: I }, O] = r.useState(
+        [{ section: x, subsection: I, text: v }, O] = r.useState(
             ((n = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -82,14 +82,14 @@ function p(e) {
             })(
                 {},
                 null !=
-                    (t = j.find((e) => {
+                    (t = _.find((e) => {
                         let { section: t } = e;
                         return t === h;
                     }))
                     ? t
-                    : j[0]
+                    : _[0]
             )),
-            (a = a = { subsection: _ }),
+            (a = a = { subsection: y }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
                 : (function (e, t) {
@@ -112,16 +112,16 @@ function p(e) {
                 className: u.tabBar,
                 selectedItem: x,
                 onItemSelect: (e) => {
-                    g({
+                    j({
                         action: 'PRESS_SECTION',
                         section: e
                     }),
                         O((t) => {
                             var n;
-                            return null != (n = j.find((t) => t.section === e)) ? n : t;
+                            return null != (n = _.find((t) => t.section === e)) ? n : t;
                         });
                 },
-                children: j.map((e) =>
+                children: _.map((e) =>
                     (0, o.jsx)(
                         i.njP.Item,
                         {
@@ -139,7 +139,7 @@ function p(e) {
             }),
             (0, o.jsx)(i.njP.Panel, {
                 id: x,
-                'aria-label': I,
+                'aria-label': v,
                 className: u.tabBarPanel,
                 children: (0, o.jsx)(f, {
                     user: l,
@@ -147,8 +147,8 @@ function p(e) {
                     displayProfile: m,
                     guildId: b,
                     section: x,
-                    subsection: v,
-                    onClose: y
+                    subsection: I,
+                    onClose: g
                 })
             })
         ]

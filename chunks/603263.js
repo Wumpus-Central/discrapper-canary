@@ -12,7 +12,7 @@ n.d(t, {
     yC: () => u
 });
 var r = n(570140),
-    i = n(367907),
+    i = n(652399),
     l = n(768119),
     a = n(405656),
     o = n(981631);
@@ -59,24 +59,20 @@ function c(e, t) {
         e
     );
 }
-function u(e, t, n, s) {
-    (0, a.jW)(t, e), s && (t.search_everywhere = !0);
-    let c = Object.keys(t);
-    i.ZP.trackWithMetadata(o.rMx.SEARCH_STARTED, {
-        search_type: l.Z.getSearchType(),
-        prev_search_id: l.Z.getAnalyticsId(e),
-        num_modifiers: c.length,
-        modifiers: c.reduce((e, n) => {
-            let r = t[n];
-            return (e[n] = Array.isArray(r) ? r.length : 1), e;
-        }, {})
-    }),
+function u(e, t, n, o) {
+    (0, a.jW)(t, e),
+        o && (t.search_everywhere = !0),
+        (0, i.tI)({
+            searchType: l.Z.getSearchType(),
+            searchAnalyticsId: l.Z.getAnalyticsId(e),
+            query: t
+        }),
         r.Z.dispatch({
             type: 'SEARCH_START',
             query: t,
             searchId: e,
             queryString: n,
-            searchEverywhere: s
+            searchEverywhere: o
         });
 }
 function d(e) {

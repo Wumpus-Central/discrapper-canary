@@ -240,9 +240,15 @@ class D extends i.PureComponent {
                 this.setState({ focused: !0 }), E.Z.isActive(t) || (0, N.I1)({ searchType: e });
             }),
             Z(this, 'onBlur', () => {
-                let { searchId: e } = this.props;
+                let { searchId: e, searchType: t } = this.props;
                 this.setState({ focused: !1 }, () => {
-                    null == e || E.Z.isActive(e) || (0, N.IZ)({ searchAnalyticsId: E.Z.getAnalyticsId(e) }), j.xb(this.props.editorState) && this.clearSearch();
+                    null == e ||
+                        E.Z.isActive(e) ||
+                        (0, N.IZ)({
+                            searchType: t,
+                            searchAnalyticsId: E.Z.getAnalyticsId(e)
+                        }),
+                        j.xb(this.props.editorState) && this.clearSearch();
                 });
             }),
             Z(this, 'handleReturn', (e) => {
@@ -348,8 +354,15 @@ function L(e) {
         f = i.useRef(a);
     return (
         i.useEffect(() => {
-            f.current && !a && ((f.current = !1), (0, N.IZ)({ searchAnalyticsId: m.current })), !f.current && a && (f.current = !0);
-        }, [a, m]),
+            f.current &&
+                !a &&
+                ((f.current = !1),
+                (0, N.IZ)({
+                    searchType: l,
+                    searchAnalyticsId: m.current
+                })),
+                !f.current && a && (f.current = !0);
+        }, [a, m, l]),
         (0, r.jsx)(D, {
             className: t,
             searchId: n,

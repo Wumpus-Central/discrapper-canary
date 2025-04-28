@@ -10,42 +10,42 @@ var i = t(442837),
     c = t(592125),
     d = t(984933),
     g = t(271383),
-    Z = t(430824),
-    b = t(496675),
+    b = t(430824),
+    Z = t(496675),
     f = t(699516),
     p = t(594174),
-    m = t(979651),
-    O = t(934415),
+    O = t(979651),
+    m = t(934415),
     h = t(700785),
     j = t(981631),
     P = t(388032);
 function v(e, n) {
     let t = (0, i.e7)([d.ZP], () => d.ZP.getChannels(n)[d.Zb], [n]),
         v = (0, i.e7)(
-            [m.Z, c.Z],
+            [O.Z, c.Z],
             () => {
-                let t = m.Z.getUserVoiceChannelId(n, e.id);
+                let t = O.Z.getUserVoiceChannelId(n, e.id);
                 return c.Z.getChannel(t);
             },
             [n, e.id]
         );
     if ((0, i.e7)([g.ZP], () => g.ZP.isGuestOrLurker(n, e.id), [n, e.id]) || null == v) return null;
     let x = e.id === s.default.getId();
-    if (!x && !b.Z.can(j.Plq.MOVE_MEMBERS, v)) return null;
+    if (!x && !Z.Z.can(j.Plq.MOVE_MEMBERS, v)) return null;
     let y = t.filter((n) => {
         let { channel: t } = n;
         return (
             t.id !== v.id &&
             (x
-                ? b.Z.can(j.Plq.CONNECT, t) && !(0, O.rY)(t, m.Z, Z.Z)
-                : b.Z.can(j.Plq.MOVE_MEMBERS, t) &&
-                  (b.Z.can(j.Plq.CONNECT, t) ||
+                ? Z.Z.can(j.Plq.CONNECT, t) && !(0, m.rY)(t, O.Z, b.Z)
+                : Z.Z.can(j.Plq.MOVE_MEMBERS, t) &&
+                  (Z.Z.can(j.Plq.CONNECT, t) ||
                       h.BT({
                           permission: j.Plq.CONNECT,
                           user: e,
                           context: t
                       })) &&
-                  !(0, O.rY)(t, m.Z, Z.Z))
+                  !(0, m.rY)(t, O.Z, b.Z))
         );
     });
     return 0 === y.length

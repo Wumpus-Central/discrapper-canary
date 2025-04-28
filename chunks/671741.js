@@ -22,7 +22,7 @@ var r = n(200651),
     j = n(952124),
     O = n(544989),
     E = n(481932),
-    I = n(272510),
+    I = n(664794),
     P = n(4517),
     S = n(854935),
     Z = n(397110),
@@ -116,7 +116,12 @@ function R(e) {
                                             themeType: N.lY.SIDEBAR,
                                             shouldShowTooltip: null === H.interactionType
                                         }),
-                                        t.bot ? (0, r.jsx)(j.Z, { user: t }) : (0, r.jsx)(I.Z, { user: t })
+                                        t.bot
+                                            ? (0, r.jsx)(j.Z, { user: t })
+                                            : (0, r.jsx)(I.Z, {
+                                                  type: 'banner',
+                                                  user: t
+                                              })
                                     ]
                                 }),
                                 (0, r.jsxs)('header', {

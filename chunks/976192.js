@@ -9,19 +9,19 @@ var l = t(200651),
     c = t(484459),
     d = t(314897),
     g = t(271383),
-    Z = t(430824),
-    b = t(496675),
+    b = t(430824),
+    Z = t(496675),
     f = t(594174),
     p = t(981631),
-    m = t(388032),
-    O = t(965385);
+    O = t(388032),
+    m = t(965385);
 function h(e) {
     let { guildId: n, userId: h, analyticsLocation: j, analyticsLocations: P, context: v, icon: x } = e,
-        y = Z.Z.getGuild(n),
+        y = b.Z.getGuild(n),
         N = d.default.getId(),
         _ = (0, r.e7)([f.default], () => f.default.getUser(h)),
         E = (0, r.e7)([g.ZP], () => g.ZP.isGuestOrLurker(n, h), [n, h]);
-    (0, r.e7)([b.Z], () => b.Z.getGuildVersion(n), [n]);
+    (0, r.e7)([Z.Z], () => Z.Z.getGuildVersion(n), [n]);
     let C = i.useMemo(() => ({ [n]: [h] }), [n, h]);
     (0, o.$)(C);
     let I = v === p.IlC.POPOUT,
@@ -31,18 +31,18 @@ function h(e) {
         }),
         T = (0, u.Aq)();
     if (null == y || I) return null;
-    let U = N === h && (b.Z.can(p.Plq.CHANGE_NICKNAME, y) || b.Z.can(p.Plq.MANAGE_NICKNAMES, y)),
+    let U = N === h && (Z.Z.can(p.Plq.CHANGE_NICKNAME, y) || Z.Z.can(p.Plq.MANAGE_NICKNAMES, y)),
         A = N === h,
-        R = b.Z.canManageUser(p.Plq.MANAGE_NICKNAMES, h, y);
+        R = Z.Z.canManageUser(p.Plq.MANAGE_NICKNAMES, h, y);
     if (!(U || R || A) || null == _ || E) return null;
-    let w = y.hasFeature(p.oNc.HUB) ? m.intl.string(m.t['+MWrWl']) : m.intl.string(m.t['PKQB/P']),
-        M = A ? w : m.intl.string(m.t.dilOFx);
+    let w = y.hasFeature(p.oNc.HUB) ? O.intl.string(O.t['+MWrWl']) : O.intl.string(O.t['PKQB/P']),
+        M = A ? w : O.intl.string(O.t.dilOFx);
     return (0, l.jsx)(a.sNh, {
         id: 'change-nickname',
         label: (0, l.jsx)('div', {
-            className: O.labelWrapper,
+            className: m.labelWrapper,
             children: (0, l.jsx)('span', {
-                className: O.label,
+                className: m.label,
                 children: M
             })
         }),

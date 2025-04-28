@@ -1,7 +1,7 @@
 n.d(t, {
-    PE: () => y,
-    l: () => v,
-    pM: () => E
+    Z7: () => E,
+    g: () => O,
+    k9: () => I
 });
 var r = n(200651),
     i = n(192379),
@@ -85,88 +85,107 @@ function g(e, t) {
     return i;
 }
 function E(e) {
-    let { userId: t, friendToken: n, analyticsLocation: l, shouldShowTooltip: c } = e,
-        u = i.useCallback(() => {
+    var { type: t, userId: n, friendToken: l, analyticsLocation: c, shouldShowTooltip: u } = e,
+        f = m(e, ['type', 'userId', 'friendToken', 'analyticsLocation', 'shouldShowTooltip']);
+    let p = i.useCallback(() => {
             o.Z.addRelationship({
-                userId: t,
-                friendToken: n,
-                context: { location: l }
+                userId: n,
+                friendToken: l,
+                context: { location: c }
             });
-        }, [l, n, t]);
-    return (0, r.jsx)(s.oY, {
-        action: 'SEND_FRIEND_REQUEST',
-        icon: a.oLu,
-        tooltipText: d.intl.string(d.t.w5uwoK),
-        shouldShowTooltip: c,
-        onClick: u
-    });
+        }, [c, l, n]),
+        h = t === s.j8.TEXT ? s.tG : s.oY;
+    return (0, r.jsx)(
+        h,
+        _(
+            {
+                action: 'SEND_FRIEND_REQUEST',
+                icon: a.oLu,
+                text: d.intl.string(d.t.w5uwoK),
+                tooltipText: d.intl.string(d.t.w5uwoK),
+                shouldShowTooltip: u,
+                onClick: p
+            },
+            f
+        )
+    );
 }
 function b(e) {
-    var { user: t, analyticsLocation: n } = e,
-        a = m(e, ['user', 'analyticsLocation']);
-    let o = (0, l.Y)({
-            user: t,
-            analyticsLocation: n
+    var { type: t, user: n, analyticsLocation: a } = e,
+        o = m(e, ['type', 'user', 'analyticsLocation']);
+    let c = (0, l.Y)({
+            user: n,
+            analyticsLocation: a
         }),
-        c = i.useRef(null);
-    return 0 === o.length
-        ? (0, r.jsx)(s.oY, h(_({}, a), { disabled: !0 }))
+        u = i.useRef(null),
+        d = t === s.j8.ICON ? s.ef : s.oY;
+    return 0 === c.length
+        ? (0, r.jsx)(d, h(_({}, o), { disabled: !0 }))
         : (0, r.jsx)(l.Z, {
-              targetElementRef: c,
-              menuItems: o,
-              children: (e) => (0, r.jsx)('div', h(_({ ref: c }, e), { children: (0, r.jsx)(s.oY, _({}, a)) }))
+              targetElementRef: u,
+              menuItems: c,
+              children: (e) => (0, r.jsx)('div', h(_({ ref: u }, e), { children: (0, r.jsx)(d, _({}, o)) }))
           });
 }
-function y(e) {
-    let { user: t, relationshipType: n, analyticsLocation: o, shouldShowTooltip: s } = e,
-        l = i.useMemo(() => {
-            switch (n) {
-                case u.OGo.FRIEND:
-                    return a._uN;
-                case u.OGo.PENDING_OUTGOING:
-                case u.OGo.PENDING_INCOMING:
-                    return a.iHX;
-            }
-        }, [n]),
-        c = i.useMemo(() => {
-            switch (n) {
-                case u.OGo.FRIEND:
-                    return d.intl.string(d.t.G7jMpa);
-                case u.OGo.PENDING_OUTGOING:
-                    return d.intl.string(d.t['s/+byM']);
-                case u.OGo.PENDING_INCOMING:
-                    return d.intl.string(d.t['6QQCQ0']);
-            }
-        }, [n]);
-    return (0, r.jsx)(b, {
-        icon: l,
-        tooltipText: c,
-        shouldShowTooltip: s,
-        user: t,
-        analyticsLocation: o
-    });
+let y = {
+        [u.OGo.FRIEND]: a._uN,
+        [u.OGo.PENDING_OUTGOING]: a.iHX,
+        [u.OGo.PENDING_INCOMING]: a.iHX
+    },
+    v = {
+        [u.OGo.FRIEND]: () => d.intl.string(d.t.G7jMpa),
+        [u.OGo.PENDING_OUTGOING]: () => d.intl.string(d.t['s/+byM']),
+        [u.OGo.PENDING_INCOMING]: () => d.intl.string(d.t['6QQCQ0'])
+    };
+function O(e) {
+    var { type: t, user: n, relationshipType: i, analyticsLocation: a, shouldShowTooltip: o } = e,
+        s = m(e, ['type', 'user', 'relationshipType', 'analyticsLocation', 'shouldShowTooltip']);
+    let l = y[i],
+        c = v[i]();
+    return (0, r.jsx)(
+        b,
+        _(
+            {
+                type: t,
+                user: n,
+                icon: l,
+                tooltipText: c,
+                shouldShowTooltip: o,
+                analyticsLocation: a
+            },
+            s
+        )
+    );
 }
-function v(e) {
-    let { user: t, gameFriends: n, hasOutgoingPendingGameFriends: i, hasIncomingPendingGameFriends: a, analyticsLocation: o, shouldShowTooltip: s } = e,
-        {
-            tooltipText: l,
-            onMouseEnter: u,
-            ariaLabel: d,
-            icon: f
-        } = (0, c.N)({
-            gameFriends: n,
-            hasOutgoingPendingGameFriends: i,
-            hasIncomingPendingGameFriends: a
-        });
-    return (0, r.jsx)(b, {
-        tooltipText: l,
-        tooltipPosition: 'left',
-        tooltipAlign: 'top',
-        ariaLabel: d,
-        shouldShowTooltip: s,
-        icon: f,
-        onMouseEnter: u,
-        user: t,
-        analyticsLocation: o
+function I(e) {
+    var { type: t, user: n, gameFriends: i, hasOutgoingPendingGameFriends: a, hasIncomingPendingGameFriends: o, analyticsLocation: s, shouldShowTooltip: l } = e,
+        u = m(e, ['type', 'user', 'gameFriends', 'hasOutgoingPendingGameFriends', 'hasIncomingPendingGameFriends', 'analyticsLocation', 'shouldShowTooltip']);
+    let {
+        tooltipText: d,
+        onMouseEnter: f,
+        ariaLabel: p,
+        icon: h
+    } = (0, c.N)({
+        gameFriends: i,
+        hasOutgoingPendingGameFriends: a,
+        hasIncomingPendingGameFriends: o
     });
+    return (0, r.jsx)(
+        b,
+        _(
+            {
+                type: t,
+                tooltipText: d,
+                tooltipPosition: 'left',
+                tooltipAlign: 'top',
+                ariaLabel: p,
+                shouldShowTooltip: l,
+                icon: h,
+                onMouseEnter: f,
+                user: n,
+                analyticsLocation: s
+            },
+            u
+        )
+    );
 }

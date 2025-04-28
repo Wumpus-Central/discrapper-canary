@@ -1,87 +1,87 @@
-n.d(e, { Z: () => f });
-var o = n(200651),
-    i = n(192379),
+n.d(e, { Z: () => g });
+var i = n(200651),
+    o = n(192379),
     r = n(120356),
     a = n.n(r),
     l = n(53691),
     c = n(378879),
     s = n(981631),
     u = n(486324),
-    _ = n(388032),
-    d = n(826756);
-function f(t) {
+    d = n(388032),
+    _ = n(826756);
+function g(t) {
     var { uploadType: e, analyticsSource: n, className: r } = t,
-        f = (function (t, e) {
+        g = (function (t, e) {
             if (null == t) return {};
             var n,
-                o,
-                i = (function (t, e) {
+                i,
+                o = (function (t, e) {
                     if (null == t) return {};
                     var n,
-                        o,
-                        i = {},
+                        i,
+                        o = {},
                         r = Object.keys(t);
-                    for (o = 0; o < r.length; o++) (n = r[o]), e.indexOf(n) >= 0 || (i[n] = t[n]);
-                    return i;
+                    for (i = 0; i < r.length; i++) (n = r[i]), e.indexOf(n) >= 0 || (o[n] = t[n]);
+                    return o;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
                 var r = Object.getOwnPropertySymbols(t);
-                for (o = 0; o < r.length; o++) (n = r[o]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (i[n] = t[n]);
+                for (i = 0; i < r.length; i++) (n = r[i]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (o[n] = t[n]);
             }
-            return i;
+            return o;
         })(t, ['uploadType', 'analyticsSource', 'className']);
-    let m = i.useCallback(() => {
+    let m = o.useCallback(() => {
             (0, c.s)({
                 uploadType: e,
                 analyticsSource: n
             });
         }, [e, n]),
-        p = i.useMemo(() => {
+        f = o.useMemo(() => {
             switch (e) {
                 case u.pC.AVATAR:
-                    return _.intl.format(_.t['pvw/HB'], { onClick: m });
+                    return d.intl.format(d.t['pvw/HB'], { onClick: m });
                 case u.pC.BANNER:
-                    return _.intl.format(_.t.aCrz1d, { onClick: m });
+                    return d.intl.format(d.t.aCrz1d, { onClick: m });
                 default:
                     return '';
             }
         }, [e, m]);
     return e !== u.pC.AVATAR && e !== u.pC.BANNER
         ? null
-        : (0, o.jsx)(
+        : (0, i.jsx)(
               l.p,
               (function (t) {
                   for (var e = 1; e < arguments.length; e++) {
                       var n = null != arguments[e] ? arguments[e] : {},
-                          o = Object.keys(n);
+                          i = Object.keys(n);
                       'function' == typeof Object.getOwnPropertySymbols &&
-                          (o = o.concat(
+                          (i = i.concat(
                               Object.getOwnPropertySymbols(n).filter(function (t) {
                                   return Object.getOwnPropertyDescriptor(n, t).enumerable;
                               })
                           )),
-                          o.forEach(function (e) {
-                              var o;
-                              (o = n[e]),
+                          i.forEach(function (e) {
+                              var i;
+                              (i = n[e]),
                                   e in t
                                       ? Object.defineProperty(t, e, {
-                                            value: o,
+                                            value: i,
                                             enumerable: !0,
                                             configurable: !0,
                                             writable: !0
                                         })
-                                      : (t[e] = o);
+                                      : (t[e] = i);
                           });
                   }
                   return t;
               })(
                   {
-                      text: p,
-                      button: _.intl.string(_.t.BmJkbW),
+                      text: f,
+                      button: d.intl.string(d.t.BmJkbW),
                       buttonAnalyticsObject: { section: s.jXE.USER_PROFILE },
-                      className: a()(d.container, r)
+                      className: a()(_.container, r)
                   },
-                  f
+                  g
               )
           );
 }

@@ -10,27 +10,27 @@ var i = t(866442),
     c = t(434404),
     d = t(181918),
     g = t(271383),
-    Z = t(430824),
-    b = t(496675),
+    b = t(430824),
+    Z = t(496675),
     f = t(823379),
     p = t(981631),
-    m = t(388032),
-    O = t(895261);
+    O = t(388032),
+    m = t(895261);
 function h(e, n, t) {
     var r, o;
     return (0, l.jsxs)('div', {
-        className: O.roleRow,
+        className: m.roleRow,
         children: [
             'dot' === n
                 ? (0, l.jsx)(a.FhE, {
-                      className: O.roleDot,
+                      className: m.roleDot,
                       color: null != (r = e.colorString) ? r : (0, i.Rf)(p.p6O),
                       colors: t ? e.colorStrings : null,
                       background: !1,
                       tooltip: !1
                   })
                 : (0, l.jsx)(a.xko, {
-                      className: O.roleDot,
+                      className: m.roleDot,
                       color: null != (o = e.colorString) ? o : (0, i.Rf)(p.p6O),
                       colors: t ? e.colorStrings : null
                   }),
@@ -41,9 +41,9 @@ function h(e, n, t) {
 function j(e, n) {
     let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-        O = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-        j = (0, r.e7)([Z.Z], () => Z.Z.getGuild(n)),
-        P = (0, r.e7)([Z.Z], () => Z.Z.getRoles(n)),
+        m = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+        j = (0, r.e7)([b.Z], () => b.Z.getGuild(n)),
+        P = (0, r.e7)([b.Z], () => b.Z.getRoles(n)),
         v = (0, r.e7)([o.Z], () => o.Z.roleStyle),
         x = (0, s.sE)(n, {
             location: i,
@@ -54,25 +54,25 @@ function j(e, n) {
             isGuildMember: N,
             canManageRoles: _
         } = (0, r.cj)(
-            [g.ZP, b.Z],
+            [g.ZP, Z.Z],
             () => {
                 let t = g.ZP.getMember(n, e);
                 return {
                     userRoles: null != t ? t.roles : [],
                     isGuildMember: null != t,
-                    canManageRoles: null != j && b.Z.can(p.Plq.MANAGE_ROLES, j)
+                    canManageRoles: null != j && Z.Z.can(p.Plq.MANAGE_ROLES, j)
                 };
             },
             [e, n, j]
         ),
         E = (0, d.$V)(n, 'useUserRolesItems');
     if (__OVERLAY__ || null == y || null == j || !N) return null;
-    let C = b.Z.getHighestRole(j),
+    let C = Z.Z.getHighestRole(j),
         I = Object.values(P).filter((e) => !(0, u.pM)(j.id, e.id)),
         S =
-            _ && !O
+            _ && !m
                 ? I.map((t) => {
-                      let i = t.managed || !b.Z.isRoleHigher(j, C, t),
+                      let i = t.managed || !Z.Z.isRoleHigher(j, C, t),
                           r = -1 !== y.indexOf(t.id);
                       return i && !r
                           ? null
@@ -117,7 +117,7 @@ function j(e, n) {
           ? S
           : (0, l.jsx)(a.sNh, {
                 id: 'roles',
-                label: m.intl.formatToPlainString(m.t.PCs0oq, { numRoles: S.length }),
+                label: O.intl.formatToPlainString(O.t.PCs0oq, { numRoles: S.length }),
                 children: S
             });
 }

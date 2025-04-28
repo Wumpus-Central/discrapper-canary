@@ -65,7 +65,10 @@ class S extends i.Component {
                             null != e.content && '' !== e.content && (n++, /https?:\/\/[^\s]+/.test(e.content) && l++), null != e.embeds && e.embeds.length > 0 && i++, null != e.attachments && e.attachments.length > 0 && r++;
                         }),
                     0 === n
-                        ? (0, y.Qb)({ searchType: t.props.searchType })
+                        ? (0, y.Qb)({
+                              searchType: t.props.searchType,
+                              searchAnalyticsId: t.props.searchAnalyticsId
+                          })
                         : (0, y.hM)({
                               searchType: t.props.searchType,
                               searchAnalyticsId: t.props.searchAnalyticsId,

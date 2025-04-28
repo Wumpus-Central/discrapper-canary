@@ -9,9 +9,9 @@ n(192379);
 var i = n(120356),
     a = n.n(i),
     o = n(481060),
-    s = n(114487),
-    l = n(686546),
-    c = n(813197),
+    s = n(686546),
+    l = n(813197),
+    c = n(60034),
     u = n(15210),
     d = n(464647),
     f = n(43542),
@@ -36,13 +36,13 @@ function E(e) {
     return null == n
         ? (0, r.jsx)('div', {
               className: h.avatarContainer,
-              children: (0, r.jsx)(l.ZP, {
-                  mask: l.QS.CLAN_ICON,
+              children: (0, r.jsx)(s.ZP, {
+                  mask: s.QS.CLAN_ICON,
                   width: 70,
                   height: 70,
                   children: (0, r.jsx)('div', {
                       className: h.avatarWrapper,
-                      children: (0, r.jsx)(s.b, {
+                      children: (0, r.jsx)(c.Ft, {
                           guildId: t.id,
                           guildName: t.name,
                           guildIcon: t.icon,
@@ -55,14 +55,14 @@ function E(e) {
               className: h.avatarContainer,
               children: (0, r.jsx)(o.tEY, {
                   within: !0,
-                  children: (0, r.jsx)(l.ZP, {
-                      mask: l.QS.CLAN_ICON,
+                  children: (0, r.jsx)(s.ZP, {
+                      mask: s.QS.CLAN_ICON,
                       width: 70,
                       height: 70,
                       children: (0, r.jsxs)('div', {
                           className: a()(h.avatarWrapper, h.clickable),
                           children: [
-                              (0, r.jsx)(s.b, {
+                              (0, r.jsx)(c.Ft, {
                                   guildId: t.id,
                                   guildName: t.name,
                                   guildIcon: t.icon,
@@ -76,7 +76,7 @@ function E(e) {
                                   height: 20,
                                   color: 'white'
                               }),
-                              (0, r.jsx)(c.ZP, {
+                              (0, r.jsx)(l.ZP, {
                                   tabIndex: 0,
                                   onChange: n
                               })

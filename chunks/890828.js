@@ -7,9 +7,9 @@ var i = n(200651),
     s = n(481060),
     c = n(933557),
     u = n(471445),
-    d = n(114487),
-    p = n(686546),
-    h = n(318374),
+    d = n(686546),
+    p = n(318374),
+    h = n(60034),
     f = n(473403),
     m = n(99214),
     g = n(46145),
@@ -77,13 +77,13 @@ let k = (e) => [
                 [t.id, l, n]
             ),
             d = t.getGuildId(),
-            p = Math.max(l.length, 2);
+            h = Math.max(l.length, 2);
         return null == d
             ? null
-            : (0, i.jsx)(h.Z, {
+            : (0, i.jsx)(p.Z, {
                   users: u,
                   guildId: d,
-                  maxUsers: Math.min(p, 4),
+                  maxUsers: Math.min(h, 4),
                   size: s.EFr.SIZE_24,
                   overflowCountClassName: T.overflowCount,
                   overflowCountVariant: 'text-xs/semibold',
@@ -110,13 +110,13 @@ let k = (e) => [
                 default:
                     return null;
             }
-        return (0, i.jsx)(p.ZP, {
-            mask: p.QS.CLAN_ICON,
+        return (0, i.jsx)(d.ZP, {
+            mask: d.QS.CLAN_ICON,
             width: 32,
             height: 32,
             children: (0, i.jsx)('div', {
                 className: T.guildIconWrapper,
-                children: (0, i.jsx)(d.b, {
+                children: (0, i.jsx)(h.Ft, {
                     guildId: o.id,
                     guildName: null != (t = o.name) ? t : P.intl.string(P.t.DmIUGB),
                     guildIcon: o.icon,

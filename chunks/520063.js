@@ -9,12 +9,12 @@ var l = t(200651),
     c = t(346479),
     d = t(665906),
     g = t(592125),
-    Z = t(430824),
-    b = t(496675),
+    b = t(430824),
+    Z = t(496675),
     f = t(594174),
     p = t(981631),
-    m = t(388032);
-function O(e) {
+    O = t(388032);
+function m(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             l = Object.keys(t);
@@ -59,9 +59,9 @@ function h(e, n) {
 }
 function j(e, n, j) {
     let P = i.useMemo(() => ({ [n]: [e.id] }), [n, e.id]);
-    (0, o.$)(P), (0, r.e7)([b.Z], () => b.Z.getGuildVersion(n), [n]);
+    (0, o.$)(P), (0, r.e7)([Z.Z], () => Z.Z.getGuildVersion(n), [n]);
     let v = (0, r.e7)([g.Z], () => g.Z.getChannel(j)),
-        x = (0, r.e7)([Z.Z], () => Z.Z.getGuild(n), [n]),
+        x = (0, r.e7)([b.Z], () => b.Z.getGuild(n), [n]),
         y = (0, r.e7)([f.default], () => f.default.getCurrentUser()),
         N = (0, u.Z)(v, 'Context Menu'),
         _ = (0, d.Xb)(v);
@@ -72,7 +72,7 @@ function j(e, n, j) {
         E
             ? (0, l.jsx)(a.sNh, {
                   id: 'remove',
-                  label: v.isForumPost() ? m.intl.formatToPlainString(m.t.v2KNNz, { user: e.username }) : m.intl.formatToPlainString(m.t['27xWaW'], { user: e.username }),
+                  label: v.isForumPost() ? O.intl.formatToPlainString(O.t.v2KNNz, { user: e.username }) : O.intl.formatToPlainString(O.t['27xWaW'], { user: e.username }),
                   color: 'danger',
                   action: () => c.Z.removeMember(v, e.id, 'Context Menu')
               })
@@ -80,7 +80,7 @@ function j(e, n, j) {
         (0, s.BK)(e, x)
             ? (0, l.jsx)(a.sNh, {
                   id: 'kick',
-                  label: E ? m.intl.formatToPlainString(m.t['1Ie87u'], { user: e.username }) : m.intl.formatToPlainString(m.t['9l/iTU'], { user: e.username }),
+                  label: E ? O.intl.formatToPlainString(O.t['1Ie87u'], { user: e.username }) : O.intl.formatToPlainString(O.t['9l/iTU'], { user: e.username }),
                   color: 'danger',
                   action: () =>
                       (0, a.ZDy)(async () => {
@@ -88,7 +88,7 @@ function j(e, n, j) {
                           return (t) =>
                               (0, l.jsx)(
                                   n,
-                                  h(O({}, t), {
+                                  h(m({}, t), {
                                       guildId: x.id,
                                       user: e
                                   })
@@ -99,7 +99,7 @@ function j(e, n, j) {
         (0, s.mm)(e, x)
             ? (0, l.jsx)(a.sNh, {
                   id: 'ban',
-                  label: E ? m.intl.formatToPlainString(m.t.i62APT, { user: e.username }) : m.intl.formatToPlainString(m.t.WnpUBg, { user: e.username }),
+                  label: E ? O.intl.formatToPlainString(O.t.i62APT, { user: e.username }) : O.intl.formatToPlainString(O.t.WnpUBg, { user: e.username }),
                   color: 'danger',
                   action: () =>
                       (0, a.ZDy)(async () => {
@@ -107,7 +107,7 @@ function j(e, n, j) {
                           return (t) =>
                               (0, l.jsx)(
                                   n,
-                                  h(O({}, t), {
+                                  h(m({}, t), {
                                       guildId: x.id,
                                       user: e
                                   })

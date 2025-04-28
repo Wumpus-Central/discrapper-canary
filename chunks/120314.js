@@ -1,43 +1,45 @@
 t.a(e, async function (e, r) {
     try {
-        t.r(n), t.d(n, { default: () => h });
+        t.r(n), t.d(n, { default: () => m });
         var l = t(200651);
         t(192379);
-        var i = t(138546),
+        var i = t(946884),
             u = t(222082),
-            o = t(63681),
-            c = t(12781),
-            a = t(980426),
-            d = t(659700),
-            s = t(733653),
-            f = t(249597),
-            _ = t(312539),
-            g = t(325980),
-            b = e([i]);
-        i = (b.then ? (await b)() : b)[0];
-        let m = {
+            c = t(63681),
+            o = t(743965),
+            a = t(12781),
+            d = t(980426),
+            s = t(659700),
+            f = t(733653),
+            _ = t(249597),
+            g = t(312539),
+            b = t(325980),
+            h = e([i]);
+        i = (h.then ? (await h)() : h)[0];
+        let y = {
             text: u.xv,
             paragraph: u.nv,
             empty: u.HY,
-            emoji: c.d,
-            link: s.r,
-            list: f.a,
-            listItem: f.H,
-            code: o.E,
+            emoji: a.d,
+            link: f.r,
+            list: _.a,
+            listItem: _.H,
+            code: c.E,
             code_block: o.d,
-            quote: g.p,
-            bold: a.d8,
-            italic: a.Tx,
-            underline: a.v6,
-            strikethrough: a.nY,
-            mention: _.p,
-            heading: d.X
+            quote: b.p,
+            bold: d.d8,
+            italic: d.Tx,
+            underline: d.v6,
+            strikethrough: d.nY,
+            mention: g.p,
+            heading: s.X,
+            small: s.x
         };
-        function h(e) {
+        function m(e) {
             let { content: n } = e;
             return (0, l.jsx)(i.ZP, {
                 content: n,
-                renderers: m
+                renderers: y
             });
         }
         r();
