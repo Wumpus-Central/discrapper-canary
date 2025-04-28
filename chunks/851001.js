@@ -21,8 +21,8 @@ var i = n(200651),
     C = n(423741);
 let O = r.forwardRef((e, t) => {
     var n, s;
-    let { className: O, isFooterVisible: S, isDarkMode: v, isReducedMotion: T, subscriptionTier: I } = e,
-        { analyticsLocations: N } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_FOOTER_CTA),
+    let { className: O, isFooterVisible: S, isDarkMode: v, isReducedMotion: T, subscriptionTier: N } = e,
+        { analyticsLocations: I } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_FOOTER_CTA),
         y = (0, p.Ng)(),
         A = (0, p.Wp)(y, f.Si.TIER_2) ? f.Si.TIER_2 : void 0,
         P = (0, g.N)(),
@@ -35,7 +35,7 @@ let O = r.forwardRef((e, t) => {
             !S || T || w || null == Z.current || Z.current.play();
         }, [S, T, w]),
         (0, i.jsx)(c.Gt, {
-            value: N,
+            value: I,
             children: (0, i.jsxs)('div', {
                 ref: t,
                 className: l()(x.container, O),
@@ -47,7 +47,7 @@ let O = r.forwardRef((e, t) => {
                         children: _.intl.string(_.t.lEw32t)
                     }),
                     (0, i.jsx)(h.PK, {
-                        subscriptionTier: null != (s = null != I ? I : null == P || null == (n = P.subscription_trial) ? void 0 : n.sku_id) ? s : A,
+                        subscriptionTier: null != (s = null != N ? N : null == P || null == (n = P.subscription_trial) ? void 0 : n.sku_id) ? s : A,
                         inOfferExperience: R,
                         containerClassName: x.footerCTAContainer,
                         isMarketingPageV2Enabled: !0,

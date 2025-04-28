@@ -19,24 +19,24 @@ function x(e) {
     let { user: t, guild: n, className: s, sectionTitle: x, forcedDivider: E = !1, withTutorial: j = !1, showBorder: C = !1, isTryItOutFlow: O = !1, initialSelectedEffectId: S } = e,
         v = (0, m.Kg)(t, n),
         T = u.ZP.canUsePremiumProfileCustomization(t),
-        { analyticsLocations: I } = (0, o.ZP)(),
-        { pendingProfileEffectId: N, errors: y } = (0, m.bd)(n),
+        { analyticsLocations: N } = (0, o.ZP)(),
+        { pendingProfileEffectId: I, errors: y } = (0, m.bd)(n),
         A = r.useCallback(
             () =>
                 (0, c.H)({
-                    analyticsLocations: I,
+                    analyticsLocations: N,
                     initialSelectedEffectId: S,
                     guild: n
                 }),
-            [I, S, n]
+            [N, S, n]
         );
     r.useEffect(() => {
         T &&
             d.default.track(h.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: f.cd.PROFILE_EFFECTS_INLINE_SETTINGS,
-                location_stack: I
+                location_stack: N
             });
-    }, [T, I]);
+    }, [T, N]);
     let P = null != n,
         R = j ? a.gtL : a.zxk;
     return (0, i.jsx)(p.Z, {
@@ -56,7 +56,7 @@ function x(e) {
                     className: l()({ [_.buttonHighlighted]: j }),
                     children: b.intl.string(b.t['/dRfCQ'])
                 }),
-                (O || void 0 !== N ? null != N : null != v) &&
+                (O || void 0 !== I ? null != I : null != v) &&
                     (0, i.jsx)(a.zxk, {
                         className: _.removeButton,
                         color: a.zxk.Colors.PRIMARY,

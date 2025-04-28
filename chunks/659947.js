@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(539854), n(388685);
+n.d(t, { Z: () => N }), n(539854), n(388685);
 var i = n(200651),
     r = n(192379),
     s = n(442837),
@@ -83,7 +83,7 @@ function T() {
         })
     });
 }
-function I(e) {
+function N(e) {
     var t, n;
     let { keybind: s } = e,
         o = r.useRef(s);
@@ -95,7 +95,7 @@ function I(e) {
             (0, l.ZDy)(
                 async () => (e) =>
                     (0, i.jsx)(
-                        N,
+                        I,
                         x(_({}, e), {
                             onSelect: (e) => {
                                 u(e), a.Z.setKeybind(x(_({}, o.current), { params: { channelId: e } }));
@@ -126,7 +126,7 @@ function I(e) {
         })
     });
 }
-function N(e) {
+function I(e) {
     let { transitionState: t, onClose: n, onSelect: a } = e,
         c = r.useId(),
         _ = r.useRef(null),
@@ -149,8 +149,8 @@ function N(e) {
             };
         })(),
         {
-            query: I,
-            updateQuery: N,
+            query: N,
+            updateQuery: I,
             queryResults: y
         } = (0, o.Z)({
             visible: !0,
@@ -174,7 +174,7 @@ function N(e) {
                     [t]
                 );
             return t ? null : n;
-        })(I),
+        })(N),
         { focusedIndex: P, setFocusedIndex: R } = (function (e) {
             let [t, n] = r.useState(0),
                 i = r.useRef(e);
@@ -188,7 +188,7 @@ function N(e) {
                     setFocusedIndex: n
                 }
             );
-        })(I);
+        })(N);
     r.useEffect(() => {
         let { current: e } = _;
         null == e ||
@@ -218,8 +218,8 @@ function N(e) {
                 (0, i.jsx)('div', {
                     className: b.inputWrapper,
                     children: (0, i.jsx)(l.oil, {
-                        value: I,
-                        onChange: N,
+                        value: N,
+                        onChange: I,
                         onKeyDown: function (e) {
                             O();
                             let t = e.key.toLowerCase();
@@ -253,8 +253,8 @@ function N(e) {
                         spellCheck: !1
                     })
                 }),
-                0 === D && '' !== I && (0, i.jsx)(T, {}),
-                (D > 0 || '' === I) &&
+                0 === D && '' !== N && (0, i.jsx)(T, {}),
+                (D > 0 || '' === N) &&
                     (0, i.jsx)(l.Tvr, {
                         innerId: c,
                         innerRole: 'listbox',

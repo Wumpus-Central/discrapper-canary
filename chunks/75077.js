@@ -79,7 +79,7 @@ let _ = (e, t, n) => ((0, s.wj)(e) ? t : n),
                 o({ card: n.specialShopPerks });
             },
             d = O();
-        return a && o({ card: n.nameplates }), null != n.collectibleDeco && o({ card: n.collectibleDeco }), null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.tenureRewardCollectible && !0 === r && o({ card: n.tenureRewardCollectible }), o({ card: n.permadecos }), i && d ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : i && !d && (o({ card: n.referralProgram }), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), a || c(), o({ card: n.unlimitedSuperReactions }), t;
+        return a && o({ card: n.nameplates }), null != n.tenureBadge && o({ card: n.tenureBadge }), null != n.tenureRewardCollectible && !0 === r && o({ card: n.tenureRewardCollectible }), o({ card: n.permadecos }), i && d ? (0 === t.length && c(), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })) : i && !d && (o({ card: n.referralProgram }), o({ card: n.newAppStylesUpdateJune2024 }), o({ card: n.serverProfiles })), o({ card: n.earlyAccess }), a || c(), o({ card: n.unlimitedSuperReactions }), t;
     },
     E = (e) => {
         let { perksCards: t, variant: n, isFullScreen: r, showTenureCard: s, isPremiumSubscriber: l, fractionalState: a, isInReverseTrial: o } = e,

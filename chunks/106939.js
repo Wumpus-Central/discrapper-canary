@@ -26,8 +26,8 @@ var i = n(200651),
     S = n(695346),
     v = n(594174),
     T = n(626135),
-    I = n(260722),
-    N = n(914788),
+    N = n(260722),
+    I = n(914788),
     y = n(841409),
     A = n(652262),
     P = n(880257),
@@ -37,8 +37,8 @@ var i = n(200651),
     w = n(521450),
     k = n(292352),
     L = n(981631),
-    B = n(723359),
-    M = n(921944),
+    M = n(723359),
+    B = n(921944),
     U = n(332495),
     V = n(388032),
     G = n(347362);
@@ -151,7 +151,7 @@ function Y() {
     let e = (0, P.Z)(),
         t = (0, R.M8)(),
         n = (0, x.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
-        s = (0, c.e7)([N.Z], () => N.Z.getIsInitialized()),
+        s = (0, c.e7)([I.Z], () => I.Z.getIsInitialized()),
         l = (0, A.M)(),
         { selectedTab: a, handleTabChange: m } = (0, y.Z)(),
         h = (0, _.Dt)(),
@@ -160,10 +160,10 @@ function Y() {
         O = s && null != f && !E;
     (0, p.ZP)(() => {
         (0, C.e)('family-center'),
-            I.ZP.initialPageLoad(),
+            N.ZP.initialPageLoad(),
             n ||
                 (0, x.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
-                    dismissAction: M.L.AUTO,
+                    dismissAction: B.L.AUTO,
                     forceTrack: !0
                 });
     });
@@ -191,7 +191,7 @@ function Y() {
         }
     }, [s, E]),
     r.useEffect(() => {
-        O && (0, g.mN)(B.L0.FAMILY_CENTER);
+        O && (0, g.mN)(M.L0.FAMILY_CENTER);
     }, [O]),
     O)
         ? null
@@ -220,7 +220,7 @@ function K() {
         t = (0, P.Z)(),
         n = (0, R.M8)(),
         s = (0, x.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
-        a = (0, c.e7)([N.Z], () => N.Z.getIsInitialized()),
+        a = (0, c.e7)([I.Z], () => I.Z.getIsInitialized()),
         E = (0, A.M)(),
         D = (0, c.e7)([O.Z], () => O.Z.theme),
         { selectedTab: Z, handleTabChange: w } = (0, y.Z)(),
@@ -231,10 +231,10 @@ function K() {
     (0, p.ZP)(() => {
         m.Y(L.Z5c.FAMILY_CENTER),
             (0, C.e)('family-center'),
-            !N.Z.isLoading() && N.Z.canRefetch() && I.ZP.initialPageLoad(),
+            !I.Z.isLoading() && I.Z.canRefetch() && N.ZP.initialPageLoad(),
             s ||
                 (0, x.EW)(d.z.FAMILY_CENTER_NEW_BADGE, {
-                    dismissAction: M.L.AUTO,
+                    dismissAction: B.L.AUTO,
                     forceTrack: !0
                 });
     });
@@ -267,7 +267,7 @@ function K() {
             a && t && void 0 === e && S.Ex.updateSetting(!0);
         }, [a, t]),
         r.useEffect(() => {
-            K && (0, g.mN)(B.L0.FAMILY_CENTER);
+            K && (0, g.mN)(M.L0.FAMILY_CENTER);
         }, [K]),
         K)
     )

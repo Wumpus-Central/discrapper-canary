@@ -18,8 +18,8 @@ function b(e) {
         { analyticsLocations: j } = (0, o.ZP)(),
         C = null != n,
         { userAvatarDecoration: O, guildAvatarDecoration: S, pendingAvatarDecoration: v, pendingErrors: T } = (0, p.$U)(t, n),
-        I = (0, u.Z)('enable_avatar_decoration_uploads'),
-        N = r.useCallback(
+        N = (0, u.Z)('enable_avatar_decoration_uploads'),
+        I = r.useCallback(
             () =>
                 (0, d.ps)({
                     analyticsLocations: j,
@@ -42,7 +42,7 @@ function b(e) {
                 children: [
                     (0, i.jsx)(A, {
                         size: a.zxk.Sizes.SMALL,
-                        onClick: N,
+                        onClick: I,
                         className: l()({ [f.buttonHighlighted]: x }),
                         children: h.intl.string(h.t.BVcYCw)
                     }),
@@ -59,7 +59,7 @@ function b(e) {
                         })
                 ]
             }),
-            t.isStaff() && I && (0, i.jsx)(_, { user: t })
+            t.isStaff() && N && (0, i.jsx)(_, { user: t })
         ]
     });
 }

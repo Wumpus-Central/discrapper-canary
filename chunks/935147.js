@@ -23,8 +23,8 @@ var i = n(200651),
     S = n(350327),
     v = n(996073),
     T = n(25990),
-    I = n(626135),
-    N = n(74538),
+    N = n(626135),
+    I = n(74538),
     y = n(296810),
     A = n(433411),
     P = n(532432),
@@ -34,14 +34,14 @@ var i = n(200651),
     w = n(451392),
     k = n(490220),
     L = n(981631),
-    B = n(474936),
-    M = n(526761),
+    M = n(474936),
+    B = n(526761),
     U = n(388032),
     V = n(23821);
 function G(e) {
     var t, n;
     let { user: G, isVisible: F, shouldShow: H } = e,
-        z = N.ZP.isPremium(G),
+        z = I.ZP.isPremium(G),
         {
             pendingAvatar: W,
             pendingThemeColors: Y,
@@ -99,7 +99,7 @@ function G(e) {
         $ = (0, h.Z)(Q),
         { preset: ee, onShuffle: et } = (0, _.Z)(),
         en = r.useRef(null);
-    (0, v.Z)(en, M.Y_.TRY_IT_OUT);
+    (0, v.Z)(en, B.Y_.TRY_IT_OUT);
     let { analyticsLocations: ei, newestAnalyticsLocation: er, sourceAnalyticsLocations: es } = (0, d.ZP)(c.Z.USER_SETTINGS_TRY_OUT_PREMIUM),
         el = (e) => {
             if (e) {
@@ -107,20 +107,20 @@ function G(e) {
                     let e = m.Z.getProduct(J.skuId);
                     null != e && (0, g.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, a.cV)(J)) : null != p.Z.getPurchase(J.skuId) && (0, a.cV)(J);
                 }
-                I.default.track(L.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: ee });
+                N.default.track(L.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: ee });
             }
         };
     r.useEffect(() => {
         F &&
-            I.default.track(L.rMx.PREMIUM_UPSELL_VIEWED, {
-                type: B.cd.PREMIUM_PROFILE_TRY_IT_OUT,
+            N.default.track(L.rMx.PREMIUM_UPSELL_VIEWED, {
+                type: M.cd.PREMIUM_PROFILE_TRY_IT_OUT,
                 location: { page: L.ZY5.USER_SETTINGS },
                 location_stack: es
             });
     }, [es, G, F]);
-    let ea = (null == (n = (0, b.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === B.Si.TIER_2,
+    let ea = (null == (n = (0, b.N)()) || null == (t = n.subscription_trial) ? void 0 : t.sku_id) === M.Si.TIER_2,
         eo = (0, f.Ng)(),
-        ec = (0, f.Wp)(eo, B.Si.TIER_2),
+        ec = (0, f.Wp)(eo, M.Si.TIER_2),
         ed = 'TryOutPremiumSection';
     return ((0, o.j)({
         location: ed + ' auto on',
@@ -255,8 +255,8 @@ function G(e) {
                               children: [
                                   (0, i.jsx)('div', { className: V.premiumTier2Divider }),
                                   (0, i.jsx)(j.ZP, {
-                                      type: B.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL,
-                                      subscriptionTier: B.Si.TIER_2
+                                      type: M.cd.CUSTOM_PROFILE_TRY_OUT_UPSELL,
+                                      subscriptionTier: M.Si.TIER_2
                                   })
                               ]
                           })

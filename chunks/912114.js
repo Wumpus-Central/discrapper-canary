@@ -172,6 +172,7 @@ let E = function (e) {
                   children: (0, r.jsxs)(s.Y0X, {
                       transitionState: l,
                       'aria-labelledby': I,
+                      className: C.modal,
                       children: [
                           (0, r.jsxs)(s.xBx, {
                               separator: !0,
@@ -185,7 +186,7 @@ let E = function (e) {
                                   }),
                                   (0, r.jsx)(s.olH, {
                                       onClick: h,
-                                      className: C.closeButtonWrapper
+                                      className: C.closeButton
                                   })
                               ]
                           }),
@@ -209,6 +210,7 @@ let E = function (e) {
                               ]
                           }),
                           (0, r.jsxs)(s.mzw, {
+                              className: C.footer,
                               children: [
                                   (0, r.jsx)(s.zxk, {
                                       type: 'submit',

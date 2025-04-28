@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => N });
 var i = n(200651);
 n(192379);
 var r = n(442837),
@@ -24,7 +24,7 @@ var r = n(442837),
     S = n(65154),
     v = n(388032);
 let T = ''.concat(o.Z.getArticleURL(O.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
-function I() {
+function N() {
     let { inputMode: e } = (0, r.cj)([a.Z], () => ({ inputMode: a.Z.getMode() }));
     return (0, i.jsxs)(i.Fragment, {
         children: [

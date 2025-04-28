@@ -23,8 +23,8 @@ var i = n(200651),
     S = n(856607),
     v = n(594496),
     T = n(856768),
-    I = n(981631),
-    N = n(388032);
+    N = n(981631),
+    I = n(388032);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -71,7 +71,7 @@ function A(e, t) {
 function P(e) {
     (0, o.ZDy)(async () => {
         let { default: t } = await n.e('84509').then(n.bind(n, 933696));
-        return (n) => (0, i.jsx)(t, y({ source: A(y({}, e), { page: I.ZY5.GUILD_MEMBER_PROFILE_SETTINGS }) }, n));
+        return (n) => (0, i.jsx)(t, y({ source: A(y({}, e), { page: N.ZY5.GUILD_MEMBER_PROFILE_SETTINGS }) }, n));
     });
 }
 function R(e) {
@@ -104,16 +104,16 @@ function R(e) {
             }
             return r;
         })(Z, ['source', 'pendingAvatar']),
-        B = (0, f.SD)({
+        M = (0, f.SD)({
             userId: s.id,
             image: k
         });
     return (r.useEffect(() => () => c.Z.wait(C.W3), []),
     r.useEffect(() => {
         null != w &&
-            m.ZP.trackWithMetadata(I.rMx.SETTINGS_PANE_VIEWED, {
+            m.ZP.trackWithMetadata(N.rMx.SETTINGS_PANE_VIEWED, {
                 settings_type: 'guild',
-                destination_pane: I.jXE.SETTINGS_CUSTOMIZE_PROFILE,
+                destination_pane: N.jXE.SETTINGS_CUSTOMIZE_PROFILE,
                 source: w
             });
     }, [w]),
@@ -125,7 +125,7 @@ function R(e) {
                 children: [
                     (0, i.jsx)(o.Text, {
                         variant: 'text-sm/normal',
-                        children: N.intl.format(N.t['/PTB2N'], { helpCenterLink: E.Z.getArticleURL(I.BhN.GUILD_PROFILES) })
+                        children: I.intl.format(I.t['/PTB2N'], { helpCenterLink: E.Z.getArticleURL(N.BhN.GUILD_PROFILES) })
                     }),
                     null != t
                         ? (0, i.jsxs)(i.Fragment, {
@@ -137,11 +137,11 @@ function R(e) {
                                       }
                                   }),
                                   (0, i.jsx)(g.Z, {
-                                      previewTitle: N.intl.formatToPlainString(N.t.Tc0slJ, { guildName: null == t ? void 0 : t.name }),
+                                      previewTitle: I.intl.formatToPlainString(I.t.Tc0slJ, { guildName: null == t ? void 0 : t.name }),
                                       profilePreview: (0, i.jsx)(
                                           h.Z,
                                           A(y({}, L), {
-                                              pendingAvatar: B,
+                                              pendingAvatar: M,
                                               user: s,
                                               guild: t,
                                               canUsePremiumCustomization: j.ZP.canUsePremiumProfileCustomization(s),

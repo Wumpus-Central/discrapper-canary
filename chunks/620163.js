@@ -24,8 +24,8 @@ var r = n(990547),
     S = n(540059),
     v = n(621628),
     T = n(243778),
-    I = n(18438),
-    N = n(778825),
+    N = n(18438),
+    I = n(778825),
     y = n(665166),
     A = n(442933),
     P = n(715495),
@@ -35,8 +35,8 @@ var r = n(990547),
     w = n(813732),
     k = n(398140),
     L = n(564344),
-    B = n(538645),
-    M = n(977156),
+    M = n(538645),
+    B = n(977156),
     U = n(652380),
     V = n(373230),
     G = n(145158),
@@ -78,8 +78,8 @@ var r = n(990547),
     eS = n(327885),
     ev = n(595242),
     eT = n(463153),
-    eI = n(36192),
-    eN = n(889029),
+    eN = n(36192),
+    eI = n(889029),
     ey = n(400287),
     eA = n(554042),
     eP = n(936982),
@@ -89,8 +89,8 @@ var r = n(990547),
     ew = n(168308),
     ek = n(277329),
     eL = n(273927),
-    eB = n(604224),
-    eM = n(43434),
+    eM = n(604224),
+    eB = n(43434),
     eU = n(333576),
     eV = n(726985),
     eG = n(583139),
@@ -263,12 +263,12 @@ let eX = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 newIndicator: (0, i.jsx)(eJ, {}),
                 newIndicatorDismissibleContentTypes: [...eQ()],
                 notice: {
-                    stores: [W.Z, N.Z],
+                    stores: [W.Z, I.Z],
                     element: k.Z
                 },
                 onSettingsClose: () => {
                     o.Z.wait(() => {
-                        (0, I.It)(), (0, u.P6)(), m.Z.clearSubsection(eF.oAB.PROFILE_CUSTOMIZATION);
+                        (0, N.It)(), (0, u.P6)(), m.Z.clearSubsection(eF.oAB.PROFILE_CUSTOMIZATION);
                     });
                 },
                 url: eF.Z5c.SETTINGS('profile-customization')
@@ -497,7 +497,7 @@ let eX = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eW.intl.string(eW.t['+1h0k5'])],
                 label: eW.intl.string(eW.t['+1h0k5']),
                 ariaLabel: eW.intl.string(eW.t['+1h0k5']),
-                element: eI.Z,
+                element: eN.Z,
                 newIndicatorDismissibleContentTypes: [s.z.AUTH_SESSIONS_NEW],
                 impressionName: r.ImpressionNames.USER_SETTINGS_SESSIONS,
                 impressionProperties: { source: A }
@@ -810,7 +810,7 @@ let eX = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eW.intl.string(eW.t.B1fFpa)],
                 label: eW.intl.string(eW.t.B1fFpa),
                 ariaLabel: eW.intl.string(eW.t.B1fFpa),
-                element: eB.Z,
+                element: eM.Z,
                 predicate: () => z.Z.isSupported(),
                 url: eF.Z5c.SETTINGS('voice')
             },
@@ -1373,7 +1373,7 @@ let eX = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eW.intl.string(eW.t.S5GfOT)],
                 label: eW.intl.string(eW.t.S5GfOT),
                 ariaLabel: eW.intl.string(eW.t.S5GfOT),
-                element: eN.Z,
+                element: eI.Z,
                 url: eF.Z5c.SETTINGS('streamer-mode')
             },
             [eV.s6.STREAMER_MODE_INTEGRATIONS]: {
@@ -1742,7 +1742,7 @@ let eX = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eF.oAB.REVENUE_STORYBOOK_PAGE,
                 searchableTitles: ['Revenue Storybook', 'Payment Components', 'Orb Components', 'Virtual Currency'],
                 label: 'Revenue Storybook',
-                element: eM.Z,
+                element: eB.Z,
                 predicate: () => F.Z.isDeveloper
             },
             [eV.s6.VIRTUAL_CURRENCY_CONFIGURATION]: {
@@ -1756,14 +1756,14 @@ let eX = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eF.oAB.REVENUE_STORYBOOK_PAGE,
                 searchableTitles: ['Payment Components'],
                 label: 'Payment Components',
-                element: eM.Z,
+                element: eB.Z,
                 predicate: () => F.Z.isDeveloper
             },
             [eV.s6.ORB_COMPONENTS]: {
                 section: eF.oAB.REVENUE_STORYBOOK_PAGE,
                 searchableTitles: ['Orb Components'],
                 label: 'Orb Components',
-                element: eM.Z,
+                element: eB.Z,
                 predicate: () => F.Z.isDeveloper
             },
             [eV.s6.TEXT_PLAYGROUND]: {
@@ -1820,7 +1820,7 @@ let eX = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eF.oAB.PROFILE_EFFECTS_PREVIEW_TOOL,
                 searchableTitles: ['PFX Editor'],
                 label: 'PFX Editor',
-                element: B.Z,
+                element: M.Z,
                 predicate: () => F.Z.isDeveloper
             },
             [eV.s6.NAMEPLATES_PREVIEW_TOOL]: {
@@ -1835,7 +1835,7 @@ let eX = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: ['Quest Preview Tool'],
                 label: 'Quest Preview Tool',
                 element: U.Z,
-                predicate: () => (0, M.X7)({ location: eH.dr.QUEST_PREVIEW_TOOL })
+                predicate: () => (0, B.X7)({ location: eH.dr.QUEST_PREVIEW_TOOL })
             },
             [eV.s6.WEB_SETTING_TREE_TOOL]: {
                 section: eF.oAB.WEB_SETTING_TREE_TOOL,

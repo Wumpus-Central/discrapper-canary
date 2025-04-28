@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685), n(35282);
+n.d(t, { Z: () => N }), n(388685), n(35282);
 var i,
     r = n(200651),
     s = n(192379),
@@ -318,7 +318,7 @@ C(T, 'defaultProps', {
     onSubmit: () => {},
     onCancel: () => {}
 });
-let I = c.ZP.connectStores([h.Z], () => ({
+let N = c.ZP.connectStores([h.Z], () => ({
     updateError: h.Z.editSourceError,
     removeError: h.Z.removeSourceError
 }))(T);

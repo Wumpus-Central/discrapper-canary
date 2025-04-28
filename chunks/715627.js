@@ -20,7 +20,7 @@ let o = {
         r.useEffect(() => {
             v && (null == E || E());
         });
-        let I = r.useMemo(() => {
+        let N = r.useMemo(() => {
             if (null != d)
                 return [
                     {
@@ -133,7 +133,7 @@ let o = {
             }, [S, t, u, m, p, g, h, f, _, x, E]),
             (0, i.jsx)(s.Ji, {
                 ref: C,
-                sprites: null != I ? I : a.CA,
+                sprites: null != N ? N : a.CA,
                 colors: null != n ? n : a.Br,
                 spriteWidth: a.Ko,
                 spriteHeight: a.Ko

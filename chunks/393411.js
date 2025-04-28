@@ -28,8 +28,8 @@ var r = n(120356),
     S = n(296848),
     v = n(140465),
     T = n(695349),
-    I = n(404380),
-    N = n(879463),
+    N = n(404380),
+    I = n(879463),
     y = n(104494),
     A = n(987997),
     P = n(833569),
@@ -63,7 +63,7 @@ function L(e) {
     }
     return e;
 }
-function B(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,7 +81,7 @@ function B(e, t) {
         e
     );
 }
-let M = new g.Z('SubscriptionHeader.tsx'),
+let B = new g.Z('SubscriptionHeader.tsx'),
     U = {
         page: Z.ZY5.USER_SETTINGS,
         section: Z.jXE.SETTINGS_PREMIUM,
@@ -208,7 +208,7 @@ let W = function (e) {
         K = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
         { fractionalState: q } = (0, p.Z)({ forceFetch: !1 }),
         X = q === D.a$.FP_SUB_PAUSED,
-        { enabled: Q } = (0, N.ZP)({ location: W });
+        { enabled: Q } = (0, I.ZP)({ location: W });
     (D.pj.has(r.planId) && Z.JwP.ALL_PAUSEABLE.has(r.status) && !X) || (Q = !1);
     let J = (0, y.Ng)(),
         $ = null == J || null == (t = J.discount) ? void 0 : t.amount,
@@ -230,7 +230,7 @@ let W = function (e) {
                 return (n) =>
                     (0, i.jsx)(
                         t,
-                        B(L({}, n), {
+                        M(L({}, n), {
                             premiumSubscription: r,
                             analyticsLocation: z,
                             analyticsLocations: Y,
@@ -242,7 +242,7 @@ let W = function (e) {
         ea = () => {
             if (null != r && null != r.premiumPlanIdFromItems) {
                 let e = _.Z.get(r.premiumPlanIdFromItems);
-                if (null == e) return void M.info('Plan not fetched for plan id: '.concat(r.premiumPlanIdFromItems));
+                if (null == e) return void B.info('Plan not fetched for plan id: '.concat(r.premiumPlanIdFromItems));
                 let t = (0, O.DE)(e, null == g ? void 0 : g.id, !1),
                     n = t.length > 0 ? t[0] : r.currency,
                     i = !1;
@@ -356,7 +356,7 @@ let W = function (e) {
                 });
             }
             function t() {
-                let e = C.ZP.isSwitchingPlansDisabled(r) || (0, I.o)(W, K, q),
+                let e = C.ZP.isSwitchingPlansDisabled(r) || (0, N.o)(W, K, q),
                     t = C.ZP.getSwitchingPlansDisabledMessage(r);
                 return (0, i.jsxs)('div', {
                     className: k.toolsButtons,
@@ -385,7 +385,7 @@ let W = function (e) {
                             children: (t) =>
                                 (0, i.jsx)(
                                     A.Z,
-                                    B(L({}, t), {
+                                    M(L({}, t), {
                                         disabled: e,
                                         className: k.toolsButton,
                                         onClick: () => {

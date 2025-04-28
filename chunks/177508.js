@@ -80,7 +80,7 @@ function v() {
             (0, i.jsx)(Z, {}),
             (0, i.jsx)(U, {}),
             (0, i.jsx)(V, {}),
-            (0, i.jsx)(B, {}),
+            (0, i.jsx)(M, {}),
             (0, i.jsx)(L, {}),
             (0, i.jsx)(k, {}),
             (0, i.jsx)(w, {}),
@@ -117,8 +117,8 @@ function T() {
         ]
     });
 }
-let I = ['neutral', 'blue_new', 'blurple', 'green_new', 'red_new', 'teal_new', 'yellow_new', 'orange_new', 'pink', 'purple'],
-    N = ['background-surface-highest', 'background-surface-higher', 'background-surface-high', 'background-base-low', 'background-base-lower', 'background-base-lowest'],
+let N = ['neutral', 'blue_new', 'blurple', 'green_new', 'red_new', 'teal_new', 'yellow_new', 'orange_new', 'pink', 'purple'],
+    I = ['background-surface-highest', 'background-surface-higher', 'background-surface-high', 'background-base-low', 'background-base-lower', 'background-base-lowest'],
     y = ['', 'background-mod-subtle', 'background-mod-normal', 'background-mod-strong'],
     A = ['critical', 'warning', 'positive', 'info'],
     P = ['text-default', 'text-primary', 'text-secondary', 'text-tertiary', 'text-feedback-critical', 'text-feedback-warning', 'text-feedback-positive', 'text-feedback-info', 'premium-nitro-pink-text'];
@@ -130,7 +130,7 @@ function R() {
                 className: x.heading,
                 children: 'Background Colors'
             }),
-            N.map((e) =>
+            I.map((e) =>
                 (0, i.jsxs)(
                     'div',
                     {
@@ -235,7 +235,7 @@ function R() {
                 className: x.heading,
                 children: 'Scales'
             }),
-            I.map((e) =>
+            N.map((e) =>
                 (0, i.jsxs)(
                     'div',
                     {
@@ -443,7 +443,7 @@ function Z() {
                     children: 'Large'
                 })
             }),
-            (0, i.jsx)(M, {})
+            (0, i.jsx)(B, {})
         ]
     });
 }
@@ -643,7 +643,7 @@ function L() {
         ]
     });
 }
-function B() {
+function M() {
     let [e, t] = r.useState(!1),
         [n, s] = r.useState(!1),
         [l, a] = r.useState('auto');
@@ -845,7 +845,7 @@ function B() {
         ]
     });
 }
-function M() {
+function B() {
     return (0, i.jsxs)('div', {
         className: x.shinyButtonExamples,
         children: [

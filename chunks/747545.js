@@ -1,6 +1,6 @@
 n.d(t, {
-    S: () => I,
-    Z: () => N
+    S: () => N,
+    Z: () => I
 }),
     n(704826),
     n(35282),
@@ -30,7 +30,7 @@ var i = n(200651),
     S = n(388032),
     v = n(602985);
 let T = /\{65E8773D-8F56-11D0-A3B9-00A0C9223196\}/i;
-function I() {
+function N() {
     let [e, t] = r.useState(!1),
         n = (0, c.e7)([x.Z], () => x.Z.isMediaFilterSettingLoading());
     return (r.useEffect(() => {
@@ -51,8 +51,8 @@ function I() {
           })
         : null;
 }
-function N(e) {
-    let { hideDeviceSelector: t = !1, hideDeviceHeader: n = !1, hideCameraSettingsLink: r = !1, onLearnMore: s, selectedBackgroundOption: a, onSelectBackgroundOption: d, renderCamera: I, hidePreviewToggle: N = !1, showSmallBackgroundOptions: y = !1, onCancelPreview: A } = e,
+function I(e) {
+    let { hideDeviceSelector: t = !1, hideDeviceHeader: n = !1, hideCameraSettingsLink: r = !1, onLearnMore: s, selectedBackgroundOption: a, onSelectBackgroundOption: d, renderCamera: N, hidePreviewToggle: I = !1, showSmallBackgroundOptions: y = !1, onCancelPreview: A } = e,
         { analyticsLocations: P } = (0, g.ZP)(),
         { currentDeviceId: R, isVideoAvailable: D } = (0, c.cj)([x.Z], () => ({
             currentDeviceId: x.Z.getVideoDeviceId(),
@@ -69,7 +69,7 @@ function N(e) {
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            I(R),
+            N(R),
             x.Z.isEnabled()
                 ? null
                 : (0, i.jsx)(u.Text, {
@@ -78,7 +78,7 @@ function N(e) {
                       variant: 'text-sm/normal',
                       children: S.intl.format(S.t.stagfH, { onEnableClick: () => m.Z.enable(!0) })
                   }),
-            N
+            I
                 ? null
                 : (0, i.jsx)(u.j7V, {
                       className: v.previewToggle,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var i = n(200651),
     r = n(192379),
     s = n(481060),
@@ -25,8 +25,8 @@ var i = n(200651),
 function T(e) {
     let { ingress: t, guildId: n } = e,
         T = (0, f.c_)(),
-        I = (0, g.q)(),
-        N = h.h2.useSetting().includes(n),
+        N = (0, g.q)(),
+        I = h.h2.useSetting().includes(n),
         y = h.mX.useSetting(),
         A = h.zA.useSetting().includes(n),
         P = r.useCallback(
@@ -75,21 +75,21 @@ function T(e) {
             n === O.T
                 ? (0, i.jsx)(_.Z, {
                       title: v.intl.string(v.t['3o2ojo']),
-                      value: !I && !y,
+                      value: !N && !y,
                       onChange: (e) => D(e, !1),
-                      disabled: I,
+                      disabled: N,
                       note: v.intl.format(v.t.wkm9a2, { helpdeskArticle: d.Z.getArticleURL(S.BhN.MESSAGE_REQUESTS) })
                   })
                 : (0, i.jsx)(_.Z, {
                       title: v.intl.string(v.t['3o2ojo']),
                       value: !A,
                       onChange: (e) => D(e, !0),
-                      disabled: N,
+                      disabled: I,
                       note: T ? v.intl.format(v.t.WpnWLS, { helpdeskArticle: d.Z.getArticleURL(S.BhN.MESSAGE_REQUESTS) }) : v.intl.format(v.t.wkm9a2, { helpdeskArticle: d.Z.getArticleURL(S.BhN.MESSAGE_REQUESTS) })
                   })
     });
 }
-function I(e) {
+function N(e) {
     let { ingress: t = j.f4.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = e,
         r = (0, f.is)();
     return (0, i.jsx)(T, {

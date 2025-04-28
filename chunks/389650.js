@@ -23,8 +23,8 @@ var i = n(200651),
     S = n(808506),
     v = n(63063),
     T = n(358085),
-    I = n(13140),
-    N = n(210887),
+    N = n(13140),
+    I = n(210887),
     y = n(659947),
     A = n(981631),
     P = n(420212),
@@ -61,7 +61,7 @@ function L(e) {
     }
     return e;
 }
-function B(e, t) {
+function M(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -79,7 +79,7 @@ function B(e, t) {
         e
     );
 }
-function M(e) {
+function B(e) {
     let { children: t } = e;
     return t([f.Q2.MESSAGE, f.Q2.NAVIGATION, f.Q2.DND, f.Q2.CHAT, f.Q2.VOICE_AND_VIDEO, f.Q2.MISCELLANEOUS]);
 }
@@ -87,11 +87,11 @@ let U = o()((0, f.Rv)())
         .filter((e) => e.description !== R.intl.string(R.t.HnNtEB))
         .groupBy((e) => e.group)
         .value(),
-    V = c.ZP.connectStores([N.Z], () => ({ theme: N.Z.theme }))(u.ubH);
+    V = c.ZP.connectStores([I.Z], () => ({ theme: I.Z.theme }))(u.ubH);
 class G extends r.PureComponent {
     renderMessage() {
         let { keybind: e } = this.props,
-            t = I.BB(e.shortcut);
+            t = N.BB(e.shortcut);
         return b.Z.hasBind(t)
             ? (0, i.jsx)(u.R94, {
                   className: D.keybindMessage,
@@ -162,7 +162,7 @@ class G extends r.PureComponent {
                                     children: (e) =>
                                         (0, i.jsx)(
                                             'div',
-                                            B(L({}, e), {
+                                            M(L({}, e), {
                                                 children: (0, i.jsx)(u.rsf, {
                                                     checked: t,
                                                     onChange: this.handleEnableDisable
@@ -186,17 +186,17 @@ class G extends r.PureComponent {
     constructor(...e) {
         super(...e),
             k(this, 'handleActionChanged', (e) => {
-                m.Z.setKeybind(B(L({}, this.props.keybind), { action: e }));
+                m.Z.setKeybind(M(L({}, this.props.keybind), { action: e }));
             }),
             k(this, 'handleShortcutChange', (e) => {
-                m.Z.setKeybind(B(L({}, this.props.keybind), { shortcut: e }));
+                m.Z.setKeybind(M(L({}, this.props.keybind), { shortcut: e }));
             }),
             k(this, 'handleDeleteKeybind', () => {
                 m.Z.deleteKeybind(this.props.keybind.id);
             }),
             k(this, 'handleEnableDisable', () => {
                 let { keybind: e } = this.props;
-                m.Z.setKeybind(B(L({}, this.props.keybind), { enabled: !e.enabled }));
+                m.Z.setKeybind(M(L({}, this.props.keybind), { enabled: !e.enabled }));
             });
     }
 }
@@ -423,7 +423,7 @@ class F extends r.PureComponent {
                             ]
                         }),
                         (0, i.jsx)(u.$i$, {}),
-                        (0, i.jsx)(M, {
+                        (0, i.jsx)(B, {
                             children: (e) =>
                                 (0, i.jsx)(i.Fragment, {
                                     children: e.map((e, t) => {

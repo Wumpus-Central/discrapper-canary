@@ -24,8 +24,8 @@ var r = n(120356),
     S = n(197115),
     v = n(823188),
     T = n(184176),
-    I = n(409100),
-    N = n(386733),
+    N = n(409100),
+    I = n(386733),
     y = n(474936),
     A = n(981631),
     P = n(388032),
@@ -35,7 +35,7 @@ var r = n(120356),
 let w = (e) => {
         var t, n;
         let { className: r } = e,
-            { headingText: o, headingTop: c } = M(),
+            { headingText: o, headingTop: c } = B(),
             d = p.default.getCurrentUser(),
             m = (0, l.e7)([g.ZP], () => g.ZP.getPremiumTypeSubscription()),
             h = (0, C.N)(),
@@ -66,7 +66,7 @@ let w = (e) => {
                             className: R.buttonContainer,
                             children: [
                                 O &&
-                                    (0, i.jsx)(I.Z, {
+                                    (0, i.jsx)(N.Z, {
                                         color: a.Ttl.BRAND,
                                         className: s()(R.button, R.subscribeButton),
                                         subscriptionTier: null != (n = null == h || null == (t = h.subscription_trial) ? void 0 : t.sku_id) ? n : b
@@ -89,7 +89,7 @@ let w = (e) => {
         let { location: t } = e,
             { subscriberHomeVariant: n } = E.g.useExperiment({ location: t }, { autoTrackExposure: !1 }),
             r = n === E.p.VARIANT_2,
-            { headingText: s, headingTop: l } = M();
+            { headingText: s, headingTop: l } = B();
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('img', {
@@ -119,7 +119,7 @@ let w = (e) => {
                                         isGift: !0
                                     })
                                 }),
-                            (0, i.jsx)(N.Z, {})
+                            (0, i.jsx)(I.Z, {})
                         ]
                     })
                 })
@@ -127,7 +127,7 @@ let w = (e) => {
         });
     },
     L = () => {
-        let { headingText: e } = M();
+        let { headingText: e } = B();
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('img', {
@@ -162,7 +162,7 @@ let w = (e) => {
             ]
         });
     },
-    [B, M] = (0, h.Z)(),
+    [M, B] = (0, h.Z)(),
     U = (e) => {
         let { className: t, location: n } = e,
             { analyticsLocations: r } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
@@ -259,7 +259,7 @@ let w = (e) => {
         }
         return (0, i.jsx)(c.Gt, {
             value: r,
-            children: (0, i.jsx)(B.Provider, {
+            children: (0, i.jsx)(M.Provider, {
                 value: {
                     headingText: E,
                     headingTop: T

@@ -1,5 +1,5 @@
 n.d(t, {
-    PK: () => I,
+    PK: () => N,
     ZP: () => A,
     _O: () => y
 }),
@@ -28,7 +28,7 @@ var i = n(200651),
     S = n(474936),
     v = n(388032),
     T = n(909176);
-let I = (e) => {
+let N = (e) => {
         let { inOfferExperience: t, subscriptionTier: n, containerClassName: r, buttonClassName: s, isMarketingPageV2Enabled: a, isDarkMode: o } = e,
             c = (0, i.jsx)(O.Z, {
                 forceInverted: o || !a,
@@ -50,7 +50,7 @@ let I = (e) => {
             children: [c, ' ', d]
         });
     },
-    N = (e) => {
+    I = (e) => {
         let { isFullscreen: t } = e;
         return (0, i.jsxs)(i.Fragment, {
             children: [(0, i.jsx)(u.A, { className: t ? T.fullscreenSparkleStar1 : T.settingsSparkleStar1 }), (0, i.jsx)(u.A, { className: t ? T.fullscreenSparkleStar2 : T.settingsSparkleStar2 }), (0, i.jsx)(u.A, { className: t ? T.fullscreenSparkleStar3 : T.settingsSparkleStar3 }), (0, i.jsx)(u.A, { className: t ? T.fullscreenSparkleStar4 : T.settingsSparkleStar4 })]
@@ -78,11 +78,11 @@ let A = r.forwardRef((e, t) => {
         w = (0, h.Wp)(Z, S.Si.TIER_2) ? S.Si.TIER_2 : void 0,
         k = (0, f.N)(),
         L = (0, p.Nx)(),
-        B = (0, _.Vi)(),
-        M = (0, a.e7)([m.Z], () => m.Z.affinities),
+        M = (0, _.Vi)(),
+        B = (0, a.e7)([m.Z], () => m.Z.affinities),
         U = (0, b.Z)(),
         V = A === S.EZ.ApplicationStoreHome && null != U,
-        G = M.length > 0;
+        G = B.length > 0;
     return (0, i.jsx)(d.Gt, {
         value: R,
         children: (0, i.jsxs)('div', {
@@ -112,7 +112,7 @@ let A = r.forwardRef((e, t) => {
                                     })
                                 })
                               : (0, i.jsx)(y, {}),
-                        B || D
+                        M || D
                             ? (0, i.jsx)('div', {
                                   className: T.buttonContainer,
                                   children: (0, i.jsx)(C.Z, {
@@ -120,7 +120,7 @@ let A = r.forwardRef((e, t) => {
                                       forceWhite: !0
                                   })
                               })
-                            : (0, i.jsx)(I, {
+                            : (0, i.jsx)(N, {
                                   subscriptionTier: null != (r = null != O ? O : null == k || null == (n = k.subscription_trial) ? void 0 : n.sku_id) ? r : w,
                                   inOfferExperience: L,
                                   buttonClassName: E,
@@ -134,7 +134,7 @@ let A = r.forwardRef((e, t) => {
                             })
                     ]
                 }),
-                !L && (0, i.jsx)(N, { isFullscreen: s })
+                !L && (0, i.jsx)(I, { isFullscreen: s })
             ]
         })
     });

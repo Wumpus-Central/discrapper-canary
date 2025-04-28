@@ -28,10 +28,10 @@ function v() {
         n = (0, s.e7)([d.Z, h.Z], () => d.Z.showNotice() || h.Z.showNotice()),
         v = null != e ? e : t,
         T = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
-        { subsection: I, setSubsection: N } = (0, x.Z)(),
+        { subsection: N, setSubsection: I } = (0, x.Z)(),
         { hasSearchResults: y, searchResults: A } = (0, g.E)();
     function P(t) {
-        if (I !== t) {
+        if (N !== t) {
             if (n) {
                 b.S.dispatch(E.CkL.SHAKE_APP, {
                     duration: 300,
@@ -40,7 +40,7 @@ function v() {
                     b.S.dispatch(E.CkL.EMPHASIZE_NOTICE);
                 return;
             }
-            t === j.NB.GUILD && null == e && null != v && (0, c.Fq)(v), N(t);
+            t === j.NB.GUILD && null == e && null != v && (0, c.Fq)(v), I(t);
         }
     }
     r.useEffect(() => {
@@ -60,7 +60,7 @@ function v() {
                     className: S.tabBar,
                     type: 'top',
                     look: 'brand',
-                    selectedItem: I,
+                    selectedItem: N,
                     onItemSelect: P,
                     children: [
                         D
@@ -87,7 +87,7 @@ function v() {
                             : null
                     ]
                 }),
-                I === j.NB.GUILD ? (0, i.jsx)(u.Z, { selectedGuild: v }) : (0, i.jsx)(p.Z, {})
+                N === j.NB.GUILD ? (0, i.jsx)(u.Z, { selectedGuild: v }) : (0, i.jsx)(p.Z, {})
             ]
         })
     );

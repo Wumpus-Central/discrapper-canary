@@ -27,8 +27,8 @@ var i,
     S = n(712626),
     v = n(386014),
     T = n(845571),
-    I = n(220046),
-    N = n(385874),
+    N = n(220046),
+    I = n(385874),
     y = n(371000),
     A = n(377679),
     P = n(825087),
@@ -79,7 +79,7 @@ let D = () => {
                     descriptionCta: m.intl.string(m.t.jVcuVV),
                     onClick: n,
                     previewImage: b,
-                    videoUrl: i ? T.ZP : I.ZP
+                    videoUrl: i ? T.ZP : N.ZP
                 },
                 referralProgram: {
                     name: 'referralProgram',
@@ -97,7 +97,7 @@ let D = () => {
                     descriptionCta: m.intl.string(m.t.jVcuVV),
                     previewImage: f,
                     onClick: n,
-                    videoUrl: i ? N.Z : y.Z
+                    videoUrl: i ? I.Z : y.Z
                 },
                 yourSpace: {
                     name: 'yourSpace',

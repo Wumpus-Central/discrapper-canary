@@ -100,10 +100,10 @@ let x = (e) =>
             r.useEffect(() => {
                 null !== f.current && f.current.updateElementPosition();
             }, [c]);
-        let I = (0, s.TH)().pathname,
-            N = r.useCallback(() => {
-                E.includes(I) || (0, d.uL)(g.Z5c.ME), n();
-            }, [I, n]),
+        let N = (0, s.TH)().pathname,
+            I = r.useCallback(() => {
+                E.includes(N) || (0, d.uL)(g.Z5c.ME), n();
+            }, [N, n]),
             y = r.useCallback(
                 (e) => {
                     let t = Math.floor(e.width / 2) - 2;
@@ -123,7 +123,7 @@ let x = (e) =>
                 _(
                     {
                         onClose: t,
-                        onCtaClick: N,
+                        onCtaClick: I,
                         tailLeftOffset: b,
                         coachmarkRef: O
                     },

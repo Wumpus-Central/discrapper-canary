@@ -66,7 +66,7 @@ function O(e) {
         [j, C] = r.useState(''),
         [O, S] = r.useState(!0),
         [v, T] = r.useState(b.x.INIT),
-        [I, N] = r.useState(''),
+        [N, I] = r.useState(''),
         [y, A] = r.useState(null),
         P = async () => {
             let e;
@@ -78,7 +78,7 @@ function O(e) {
                 p.Z.captureException(e), A(x.intl.string(x.t.xSCvBQ)), T(b.x.INIT);
                 return;
             }
-            N(e), T(b.x.NAME);
+            I(e), T(b.x.NAME);
         };
     return (0, i.jsxs)(a.Y0X, {
         transitionState: t,
@@ -170,7 +170,7 @@ function O(e) {
                         children: (0, i.jsxs)('form', {
                             onSubmit: (e) => {
                                 e.preventDefault(),
-                                    (0, h.Sr)(j, o, I)
+                                    (0, h.Sr)(j, o, N)
                                         .then(async () => {
                                             await (0, d.Yn)(!1);
                                         })

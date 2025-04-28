@@ -115,7 +115,7 @@ let A = (e) => {
                 guildId: t.id,
                 guildName: t.name,
                 guildIcon: t.icon,
-                iconSize: 32
+                iconSize: 40
             });
         return (0, l.jsx)(A, {
             inviteIcon: a,
@@ -130,7 +130,7 @@ let A = (e) => {
             subheading: r
         });
     },
-    R = (e) => {
+    M = (e) => {
         let t,
             { guild: n } = e,
             { guildProfile: r, fetchGuildProfile: s } = (0, f.u)(n.id);
@@ -171,7 +171,7 @@ let A = (e) => {
             guildId: n.id,
             guildName: n.name,
             guildIcon: n.icon,
-            iconSize: 32
+            iconSize: 40
         });
         return (0, l.jsx)(A, {
             inviteIcon: a,
@@ -179,7 +179,7 @@ let A = (e) => {
             subheading: t
         });
     },
-    M = (e) => {
+    R = (e) => {
         let { applicationId: t } = e,
             [n] = (0, p.Z)([t]);
         if (null == n) return null;
@@ -192,6 +192,7 @@ let A = (e) => {
             }),
             s = (0, l.jsx)(I.Z, {
                 game: n,
+                size: I.Z.Sizes.MEDIUM,
                 className: P.inviteIcon
             });
         return (0, l.jsx)(A, {
@@ -203,13 +204,13 @@ let A = (e) => {
 function D(e) {
     let { guild: t, channel: n, applicationId: i } = e;
     return null != i
-        ? (0, l.jsx)(M, { applicationId: i })
+        ? (0, l.jsx)(R, { applicationId: i })
         : null != n
           ? (0, l.jsx)(k, {
                 guild: t,
                 channel: n
             })
-          : (0, l.jsx)(R, { guild: t });
+          : (0, l.jsx)(M, { guild: t });
 }
 function L(e) {
     let { className: t, children: n } = e;
@@ -236,7 +237,7 @@ function V(e) {
     );
 }
 function U(e) {
-    let { className: t, guild: r, channel: a, applicationId: m, getInviteKey: p, sendInvite: v, canUseVanityURL: I, disabled: f, hasSelection: j, options: S, setOptions: A, isApplicationBypassAllowed: k, isGuestInviteAllowed: R, isTemporaryInviteAllowed: M, setError: U, analyticsLocation: F } = e,
+    let { className: t, guild: r, channel: a, applicationId: m, getInviteKey: p, sendInvite: v, canUseVanityURL: I, disabled: f, hasSelection: j, options: S, setOptions: A, isApplicationBypassAllowed: k, isGuestInviteAllowed: M, isTemporaryInviteAllowed: R, setError: U, analyticsLocation: F } = e,
         [B, z] = i.useState(!1),
         [G, H] = i.useState(!1),
         q = i.useRef(null),
@@ -454,7 +455,7 @@ function U(e) {
                                     })
                                 ]
                             }),
-                        R &&
+                        M &&
                             (0, l.jsxs)(V, {
                                 htmlFor: K,
                                 children: [
@@ -486,7 +487,7 @@ function U(e) {
                                     })
                                 ]
                             }),
-                        M &&
+                        R &&
                             (0, l.jsxs)(V, {
                                 htmlFor: X,
                                 children: [

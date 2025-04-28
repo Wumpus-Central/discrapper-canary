@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => I });
 var i = n(200651),
     r = n(192379),
     s = n(512722),
@@ -23,7 +23,7 @@ var i = n(200651),
     S = n(981631),
     v = n(388032),
     T = n(189435);
-class I extends r.PureComponent {
+class N extends r.PureComponent {
     componentDidMount() {
         c.Z.wait(() => {
             d.tZ(), d.jg();
@@ -77,7 +77,7 @@ class I extends r.PureComponent {
               });
     }
 }
-function N() {
+function I() {
     let e = (0, a.cj)([C.default, x.Z, E.Z, _.default, b.Z, j.ZP], () => {
         let e = j.ZP.getPremiumTypeSubscription(),
             t = _.default.getCurrentUser();
@@ -98,7 +98,7 @@ function N() {
         );
     });
     return (0, i.jsx)(
-        I,
+        N,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},

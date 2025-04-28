@@ -22,8 +22,8 @@ function _(e) {
         S = (0, m.KK)(j.flags),
         v = S ? s.QTo : s.tBG,
         T = S ? f.intl.string(f.t['46YF2N']) : f.intl.string(f.t.fFyGiI),
-        I = null == (t = p.metadata) ? void 0 : t.application_subscription_guild_id,
-        N = (0, r.e7)([d.Z], () => (S && null != I ? d.Z.getGuild(I) : void 0), [I, S]),
+        N = null == (t = p.metadata) ? void 0 : t.application_subscription_guild_id,
+        I = (0, r.e7)([d.Z], () => (S && null != N ? d.Z.getGuild(N) : void 0), [N, S]),
         y = (0, r.e7)(
             [u.Z],
             () => {
@@ -65,7 +65,7 @@ function _(e) {
                                             T
                                         ]
                                     }),
-                                    null != N &&
+                                    null != I &&
                                         (0, i.jsxs)(i.Fragment, {
                                             children: [
                                                 (0, i.jsx)(s.Text, {
@@ -76,13 +76,13 @@ function _(e) {
                                                     className: b.guildSubscription,
                                                     children: [
                                                         (0, i.jsx)(c.Z, {
-                                                            guild: N,
+                                                            guild: I,
                                                             size: c.Z.Sizes.SMOL
                                                         }),
                                                         (0, i.jsx)(s.X6q, {
                                                             variant: 'heading-md/semibold',
                                                             color: 'text-muted',
-                                                            children: f.intl.format(f.t['7ZD8p6'], { guildName: N.name })
+                                                            children: f.intl.format(f.t['7ZD8p6'], { guildName: I.name })
                                                         })
                                                     ]
                                                 })
@@ -161,7 +161,7 @@ function _(e) {
                                   x,
                                   {
                                       storeListing: e,
-                                      guildId: I,
+                                      guildId: N,
                                       navigateToHome: E
                                   },
                                   e.id

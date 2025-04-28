@@ -162,12 +162,12 @@ function O() {
                                 variant: 'text-sm/semibold',
                                 children: 'Memberlist'
                             }),
-                            (0, i.jsx)(I, { nameplate: a }),
+                            (0, i.jsx)(N, { nameplate: a }),
                             (0, i.jsx)(o.Text, {
                                 variant: 'text-sm/semibold',
                                 children: 'DMs'
                             }),
-                            (0, i.jsx)(N, { nameplate: a }),
+                            (0, i.jsx)(I, { nameplate: a }),
                             (0, i.jsx)(o.Text, {
                                 variant: 'text-sm/semibold',
                                 children: 'RTC'
@@ -298,7 +298,7 @@ function T(e) {
         ]
     });
 }
-function I(e) {
+function N(e) {
     let { nameplate: t } = e,
         n = (0, a.e7)([m.default], () => m.default.getCurrentUser());
     return (0, i.jsx)('div', {
@@ -340,7 +340,7 @@ function I(e) {
         })
     });
 }
-function N(e) {
+function I(e) {
     let { nameplate: t } = e;
     return (0, i.jsx)('div', {
         className: l()(E.preview, E.resizer),

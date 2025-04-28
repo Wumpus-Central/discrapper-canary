@@ -23,8 +23,8 @@ var i = n(200651),
     S = n(196051),
     v = n(441729),
     T = n(626135),
-    I = n(63063),
-    N = n(695346),
+    N = n(63063),
+    I = n(695346),
     y = n(263937),
     A = n(996073),
     P = n(526761),
@@ -34,8 +34,8 @@ var i = n(200651),
     w = n(653477),
     k = n(388032),
     L = n(855112),
-    B = n(20493),
-    M = n(328756);
+    M = n(20493),
+    B = n(328756);
 function U(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -94,7 +94,7 @@ function Y(e) {
         title: k.intl.string(k.t.G0neg4),
         children: [
             (0, i.jsx)('div', {
-                className: B.marginBottom20,
+                className: M.marginBottom20,
                 children: (0, i.jsx)(K, {})
             }),
             (0, i.jsxs)(O.F, {
@@ -135,9 +135,9 @@ function Y(e) {
             (0, i.jsxs)(O.F, {
                 setting: R.s6.ACCESSIBILITY_APPEARANCE_UPSELL,
                 children: [
-                    (0, i.jsx)(d.$i$, { className: B.marginTop20 }),
+                    (0, i.jsx)(d.$i$, { className: M.marginTop20 }),
                     (0, i.jsx)(d.Text, {
-                        className: B.marginTop20,
+                        className: M.marginTop20,
                         variant: 'text-md/normal',
                         children: k.intl.format(k.t.DHpTjY, {
                             onAppearanceClick() {
@@ -151,7 +151,7 @@ function Y(e) {
     });
 }
 function K() {
-    let e = N.jU.useSetting(),
+    let e = I.jU.useSetting(),
         [t] = r.useState(() => {
             let e = (0, _.e5)(
                 V(
@@ -190,7 +190,7 @@ function K() {
                                     d.Xo$,
                                     {
                                         'aria-label': k.intl.string(k.t.lqaIxM),
-                                        src: M,
+                                        src: B,
                                         size: d.EFr.SIZE_32,
                                         status: e
                                     },
@@ -218,17 +218,17 @@ function q() {
         desaturateUserColors: g.Z.desaturateUserColors
     }));
     return (0, i.jsxs)(d.hjN, {
-        className: B.marginTop20,
+        className: M.marginTop20,
         children: [
             (0, i.jsx)(d.vwX, {
                 id: G,
-                className: B.marginBottom8,
+                className: M.marginBottom8,
                 children: k.intl.string(k.t['5PWWCQ'])
             }),
             (0, i.jsx)(d.R94, {
                 id: F,
                 type: d.R94.Types.DESCRIPTION,
-                className: B.marginBottom20,
+                className: M.marginBottom20,
                 children: k.intl.string(k.t['0PbE/P'])
             }),
             (0, i.jsx)(d.iRW, {
@@ -247,7 +247,7 @@ function q() {
                 setting: R.s6.ACCESSIBILITY_SATURATION_CUSTOM_COLOR,
                 children: (0, i.jsx)(d.j7V, {
                     hideBorder: !0,
-                    className: l()(B.marginTop20, B.marginBottom20),
+                    className: l()(M.marginTop20, M.marginBottom20),
                     value: t,
                     onChange: p.f1,
                     note: k.intl.string(k.t.nlAOER),
@@ -260,7 +260,7 @@ function q() {
 function X() {
     let e = (0, c.e7)([g.Z], () => g.Z.alwaysShowLinkDecorations);
     return (0, i.jsx)(d.xJW, {
-        className: B.marginTop20,
+        className: M.marginTop20,
         children: (0, i.jsx)(d.j7V, {
             note: k.intl.string(k.t['72i5GB']),
             value: e,
@@ -277,11 +277,11 @@ function Q() {
         children: [
             (0, i.jsxs)(d.xJW, {
                 title: k.intl.string(k.t.uSOPWl),
-                className: B.marginTop20,
+                className: M.marginTop20,
                 children: [
                     (0, i.jsx)(d.R94, {
                         type: d.R94.Types.DESCRIPTION,
-                        className: B.marginBottom8,
+                        className: M.marginBottom8,
                         children: k.intl.string(k.t['86hjzc'])
                     }),
                     (0, i.jsx)(d.FXm, {
@@ -306,7 +306,7 @@ function Q() {
                     })
                 ]
             }),
-            (0, i.jsx)(d.$i$, { className: B.marginTop20 })
+            (0, i.jsx)(d.$i$, { className: M.marginTop20 })
         ]
     });
 }
@@ -318,7 +318,7 @@ function J() {
         (0, i.jsx)(d.xJW, {
             ref: t,
             title: k.intl.string(k.t.BT8Bmp),
-            className: l()(B.marginTop20, L.syncProfileThemeWithUserTheme),
+            className: l()(M.marginTop20, L.syncProfileThemeWithUserTheme),
             children: (0, i.jsx)(O.F, {
                 setting: R.s6.ACCESSIBILITY_PROFILE_COLORS_SYNC_THEMES,
                 children: (0, i.jsx)(d.j7V, {
@@ -327,7 +327,7 @@ function J() {
                             u.Z.open(D.oAB.APPEARANCE);
                         }
                     }),
-                    className: B.marginTop20,
+                    className: M.marginTop20,
                     value: e,
                     onChange: p.Uv,
                     children: k.intl.string(k.t['sSY+mJ'])
@@ -346,10 +346,10 @@ function $() {
     r.useEffect(() => {
         null != s.current && (clearTimeout(s.current), (s.current = null)), t !== e && (s.current = setTimeout(() => (0, p.qz)(t), 150));
     }, [t, e]);
-    let l = k.intl.format(k.t.GwEVEx, { learnMoreLink: I.Z.getArticleURL(D.BhN.FORCED_COLORS) });
+    let l = k.intl.format(k.t.GwEVEx, { learnMoreLink: N.Z.getArticleURL(D.BhN.FORCED_COLORS) });
     return (0, i.jsx)(d.xJW, {
         title: k.intl.string(k.t.TYyfOz),
-        className: B.marginTop20,
+        className: M.marginTop20,
         children: (0, i.jsx)(O.F, {
             setting: R.s6.ACCESSIBILITY_CONTRAST_SYNC_FORCED_COLORS,
             children: (0, i.jsx)(d.j7V, {
@@ -362,8 +362,8 @@ function $() {
     });
 }
 function ee() {
-    let e = N.QK.useSetting(),
-        t = N.Yk.useSetting(),
+    let e = I.QK.useSetting(),
+        t = I.Yk.useSetting(),
         {
             useReducedMotion: n,
             rawPrefersReducedMotion: s,
@@ -391,15 +391,15 @@ function ee() {
     return (0, i.jsxs)(d.xJW, {
         ref: m,
         title: k.intl.string(k.t.e3TR1d),
-        className: l()(B.marginTop20, L.reducedMotion),
+        className: l()(M.marginTop20, L.reducedMotion),
         children: [
             (0, i.jsx)(d.R94, {
                 type: d.R94.Types.DESCRIPTION,
-                className: B.marginBottom8,
-                children: k.intl.format(k.t['2l9U2t'], { helpdeskArticle: I.Z.getArticleURL(D.BhN.REDUCED_MOTION) })
+                className: M.marginBottom8,
+                children: k.intl.format(k.t['2l9U2t'], { helpdeskArticle: N.Z.getArticleURL(D.BhN.REDUCED_MOTION) })
             }),
             (0, i.jsx)(d.XZJ, {
-                className: l()(B.marginTop20, B.marginBottom20),
+                className: l()(M.marginTop20, M.marginBottom20),
                 value: 'auto' === s,
                 shape: d.XZJ.Shapes.BOX,
                 type: d.XZJ.Types.INVERTED,
@@ -420,20 +420,20 @@ function ee() {
             (0, i.jsx)(O.F, {
                 setting: R.s6.ACCESSIBILITY_REDUCED_MOTION_AUTO_PLAY_GIFS,
                 children: (0, i.jsx)(d.j7V, {
-                    className: B.marginBottom20,
+                    className: M.marginBottom20,
                     value: e,
                     note: null != o ? (0, C.Z)(o) : void 0,
-                    onChange: N.QK.updateSetting,
+                    onChange: I.QK.updateSetting,
                     children: k.intl.string(k.t.Iayoh4)
                 })
             }),
             (0, i.jsx)(O.F, {
                 setting: R.s6.ACCESSIBILITY_REDUCED_MOTION_PLAY_ANIMATED_EMOJI,
                 children: (0, i.jsx)(d.j7V, {
-                    className: B.marginBottom20,
+                    className: M.marginBottom20,
                     value: t,
                     note: null != u ? (0, C.Z)(u) : void 0,
-                    onChange: N.Yk.updateSetting,
+                    onChange: I.Yk.updateSetting,
                     children: k.intl.string(k.t.iIaOlZ)
                 })
             })
@@ -441,18 +441,18 @@ function ee() {
     });
 }
 function et() {
-    let e = N.Wp.useSetting(),
+    let e = I.Wp.useSetting(),
         t = (0, c.e7)([y.Z], () => y.Z.getAppliedOverrideReasonKey('animateStickers')),
         n = r.useCallback((e) => {
-            N.Wp.updateSetting(e.value);
+            I.Wp.updateSetting(e.value);
         }, []);
     return (0, i.jsxs)(d.xJW, {
-        className: B.marginTop20,
+        className: M.marginTop20,
         title: k.intl.string(k.t['6NtAuL']),
         children: [
             (0, i.jsx)(d.R94, {
                 type: d.R94.Types.DESCRIPTION,
-                className: B.marginBottom8,
+                className: M.marginBottom8,
                 children: null != t ? (0, C.Z)(t) : k.intl.string(k.t.GRa6U1)
             }),
             (0, i.jsx)(d.FXm, {
@@ -479,22 +479,22 @@ function et() {
 }
 function en() {
     let e = (0, c.e7)([g.Z], () => g.Z.isSubmitButtonEnabled),
-        t = N.dN.useSetting(),
+        t = I.dN.useSetting(),
         n = r.useRef(null);
     return (
         (0, A.Z)(n, P.rP.LEGACY_CHAT_INPUT),
         (0, i.jsxs)(d.xJW, {
             ref: n,
-            className: B.marginTop20,
+            className: M.marginTop20,
             children: [
                 (0, i.jsx)(d.vwX, {
-                    className: B.marginBottom8,
+                    className: M.marginBottom8,
                     children: k.intl.string(k.t.onqU6u)
                 }),
                 (0, i.jsx)(O.F, {
                     setting: R.s6.ACCESSIBILITY_MESSAGES_SEND_MESSAGE_BUTTON,
                     children: (0, i.jsx)(d.j7V, {
-                        className: B.marginTop20,
+                        className: M.marginTop20,
                         value: e,
                         onChange: p.eN,
                         children: k.intl.string(k.t['3Fztn5'])
@@ -503,7 +503,7 @@ function en() {
                 (0, i.jsx)(O.F, {
                     setting: R.s6.ACCESSIBILITY_MESSAGES_LEGACY_CHAT_INPUT,
                     children: (0, i.jsx)(d.j7V, {
-                        className: B.marginTop8,
+                        className: M.marginTop8,
                         value: t,
                         note: k.intl.string(k.t.Q7wgHR),
                         onChange: (e) => {
@@ -511,7 +511,7 @@ function en() {
                                 enabled: e,
                                 location: { section: D.jXE.SETTINGS_ACCESSIBILITY }
                             }),
-                                N.dN.updateSetting(e);
+                                I.dN.updateSetting(e);
                         },
                         children: k.intl.string(k.t.TZ2hZG)
                     })
@@ -521,7 +521,7 @@ function en() {
     );
 }
 function ei() {
-    let e = N.OW.useSetting(),
+    let e = I.OW.useSetting(),
         t = (0, c.e7)([v.Z], () => v.Z.speechRate),
         [n, s] = r.useState(!1);
     return m.Zh
@@ -530,18 +530,18 @@ function ei() {
                   (0, i.jsx)(O.F, {
                       setting: R.s6.ACCESSIBILITY_TEXT_TO_SPEECH,
                       children: (0, i.jsxs)(d.xJW, {
-                          className: B.marginTop20,
+                          className: M.marginTop20,
                           children: [
                               (0, i.jsx)(d.vwX, {
-                                  className: B.marginBottom8,
+                                  className: M.marginBottom8,
                                   children: k.intl.string(k.t.VpSKeH)
                               }),
                               (0, i.jsx)(O.F, {
                                   setting: R.s6.ACCESSIBILITY_TEXT_TO_SPEECH_TTS_COMMAND,
                                   children: (0, i.jsx)(d.j7V, {
-                                      className: B.marginTop20,
+                                      className: M.marginTop20,
                                       value: e,
-                                      onChange: N.OW.updateSetting,
+                                      onChange: I.OW.updateSetting,
                                       children: k.intl.string(k.t.qvTIwc)
                                   })
                               })
@@ -551,11 +551,11 @@ function ei() {
                   (0, i.jsx)(O.F, {
                       setting: R.s6.ACCESSIBILITY_TEXT_TO_SPEECH_RATE,
                       children: (0, i.jsxs)(d.xJW, {
-                          className: B.marginTop20,
+                          className: M.marginTop20,
                           children: [
                               (0, i.jsx)(d.vwX, {
                                   id: H,
-                                  className: B.marginBottom20,
+                                  className: M.marginBottom20,
                                   children: k.intl.string(k.t.lsW5Eh)
                               }),
                               (0, i.jsx)('div', {

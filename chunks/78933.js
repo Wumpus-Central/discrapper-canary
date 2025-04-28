@@ -23,8 +23,8 @@ var i = n(200651),
     S = n(537006),
     v = n(483517),
     T = n(483424),
-    I = n(681837),
-    N = n(502762),
+    N = n(681837),
+    I = n(502762),
     y = n(530),
     A = n(309494),
     P = n(4517),
@@ -34,8 +34,8 @@ var i = n(200651),
     w = n(246946),
     k = n(572004),
     L = n(5192),
-    B = n(74538),
-    M = n(7093),
+    M = n(74538),
+    B = n(7093),
     U = n(474376),
     V = n(431282),
     G = n(213928),
@@ -85,7 +85,7 @@ function Q(e) {
     r.useEffect(() => {
         null == Q || Q(er.current);
     }, [er, Q]),
-        r.useEffect(() => (M.Z.setState({ isOpen: !0 }), () => M.Z.setState({ isOpen: !1 })), []);
+        r.useEffect(() => (B.Z.setState({ isOpen: !0 }), () => B.Z.setState({ isOpen: !1 })), []);
     let el = (0, l.e7)([Z.Z], () => Z.Z.getStatus(t.id)),
         ea = D.Cr.useSetting(),
         eo = (0, F.F)(ea),
@@ -96,7 +96,7 @@ function Q(e) {
         ep = (0, F.I)(el),
         eg = (0, U.g)(n),
         eh = (0, f.Z)({ analyticsLocations: en }),
-        ef = (0, B.I5)(t),
+        ef = (0, M.I5)(t),
         eb = (0, m.p)({ location: 'UserProfileAccountPopout' }),
         e_ = r.useMemo(() => (0, p.Z)(), []),
         ex = (e) => {
@@ -123,7 +123,7 @@ function Q(e) {
             children: (0, i.jsx)(a.VqE, {
                 ref: er,
                 'aria-label': t.username,
-                children: (0, i.jsxs)(N.Z, {
+                children: (0, i.jsxs)(I.Z, {
                     className: K.themeContainer,
                     user: t,
                     displayProfile: et,
@@ -174,7 +174,7 @@ function Q(e) {
                                     }),
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                         children: [
-                                            (0, i.jsx)(I.Z, { userId: t.id }),
+                                            (0, i.jsx)(N.Z, { userId: t.id }),
                                             (0, i.jsx)(A.Z, {
                                                 user: t,
                                                 isHovering: es
@@ -201,7 +201,7 @@ function Q(e) {
                                 (0, i.jsxs)('div', {
                                     className: K.menus,
                                     children: [
-                                        (0, i.jsx)(N.Z.Overlay, {
+                                        (0, i.jsx)(I.Z.Overlay, {
                                             className: K.menuOverlay,
                                             children: (0, i.jsxs)(V.XE, {
                                                 id: 'profile-'.concat(t.id),
@@ -317,7 +317,7 @@ function Q(e) {
                                                 ]
                                             })
                                         }),
-                                        (0, i.jsx)(N.Z.Overlay, {
+                                        (0, i.jsx)(I.Z.Overlay, {
                                             className: K.menuOverlay,
                                             children: (0, i.jsxs)(V.XE, {
                                                 id: 'account-'.concat(t.id),

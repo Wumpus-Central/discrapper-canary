@@ -1,69 +1,46 @@
 n.d(t, {
-    Ei: () => d,
-    He: () => c,
-    b2: () => a,
+    Ei: () => c,
+    He: () => s,
     es: () => o
 });
-var i = n(544891),
-    r = n(570140),
-    s = n(960048),
-    l = n(981631);
-async function a(e) {
-    r.Z.dispatch({ type: 'BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_START' });
-    try {
-        let t = await i.tn.get({
-            url: l.ANM.Billing_SUBSCRIPTION_REWARD_ELIGIBILITY(e),
-            rejectWithError: !0
-        });
-        if (t.ok) {
-            let e = !!t.body.eligible;
-            return (
-                r.Z.dispatch({
-                    type: 'BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS',
-                    eligible: e
-                }),
-                e
-            );
-        }
-        return r.Z.dispatch({ type: 'BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE' }), !1;
-    } catch (e) {
-        return r.Z.dispatch({ type: 'BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_FAILURE' }), !1;
-    }
-}
+var r = n(544891),
+    i = n(570140),
+    l = n(960048),
+    a = n(981631);
 function o(e) {
-    r.Z.dispatch({
+    i.Z.dispatch({
         type: 'BILLING_SUBSCRIPTION_REWARD_ELIGIBILITY_FETCH_SUCCESS',
         eligible: e
     });
 }
-async function c(e) {
-    let { userTrialOffer: t, userDiscount: n, userDiscountOffer: r } = e;
+async function s(e) {
+    let { userTrialOffer: t, userDiscount: n, userDiscountOffer: i } = e;
     try {
-        let e = await i.tn.post({
-            url: l.ANM.PREMIUM_MARKETING,
+        let e = await r.tn.post({
+            url: a.ANM.PREMIUM_MARKETING,
             body: {
                 user_trial_offer: t,
                 user_discount: n,
-                user_discount_offer: r
+                user_discount_offer: i
             },
             rejectWithError: !0
         });
         if (e.ok) return e.body;
-        return s.Z.captureMessage('fetchPremiumMarketingContentWithUserOffer failed'), [];
+        return l.Z.captureMessage('fetchPremiumMarketingContentWithUserOffer failed'), [];
     } catch (e) {
         return [];
     }
 }
-async function d(e) {
+async function c(e) {
     let { subscriptionId: t, rewardSkuIds: n } = e;
     try {
-        let e = await i.tn.post({
-            url: l.ANM.BILLING_SUBSCRIPTION_REWARDS(t),
+        let e = await r.tn.post({
+            url: a.ANM.BILLING_SUBSCRIPTION_REWARDS(t),
             body: { reward_sku_ids: n },
             rejectWithError: !0
         });
         return (
-            r.Z.dispatch({
+            i.Z.dispatch({
                 type: 'ENTITLEMENT_CREATE',
                 entitlement: e.body
             }),

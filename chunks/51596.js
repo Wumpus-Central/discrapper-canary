@@ -60,18 +60,18 @@ function v(e) {
 }
 let T = () => Promise.resolve();
 T = n(346329).playApplication;
-let I = Object.freeze({
+let N = Object.freeze({
         [c.xQ.USER]: c.h8.USER,
         [c.xQ.TEXT_CHANNEL]: c.h8.TEXT_CHANNEL,
         [c.xQ.VOICE_CHANNEL]: c.h8.VOICE_CHANNEL,
         [c.xQ.GUILD]: c.h8.GUILD,
         [c.xQ.APPLICATION]: c.h8.APPLICATION
     }),
-    N = new RegExp('^'.concat(c.xQ.USER, '|').concat(c.xQ.TEXT_CHANNEL, '|').concat(c.xQ.VOICE_CHANNEL, '|\\').concat(c.xQ.GUILD, '|\\').concat(c.xQ.APPLICATION));
+    I = new RegExp('^'.concat(c.xQ.USER, '|').concat(c.xQ.TEXT_CHANNEL, '|').concat(c.xQ.VOICE_CHANNEL, '|\\').concat(c.xQ.GUILD, '|\\').concat(c.xQ.APPLICATION));
 function y(e) {
     var t;
     let n,
-        [i, r] = ((n = null != (t = I[e.charAt(0)]) ? t : null), [e.replace(N, ''), n]);
+        [i, r] = ((n = null != (t = N[e.charAt(0)]) ? t : null), [e.replace(I, ''), n]);
     return {
         query: i,
         queryMode: r

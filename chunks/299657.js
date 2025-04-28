@@ -23,8 +23,8 @@ var i = n(200651),
     S = n(484459),
     v = n(246946),
     T = n(594174),
-    I = n(78839),
-    N = n(626135),
+    N = n(78839),
+    I = n(626135),
     y = n(111361),
     A = n(357355),
     P = n(937579),
@@ -34,16 +34,16 @@ var i = n(200651),
     w = n(943180),
     k = n(2359),
     L = n(132547),
-    B = n(474936),
-    M = n(981631),
+    M = n(474936),
+    B = n(981631),
     U = n(921944),
     V = n(126867);
 let G = function (e) {
-    let { entrypoint: t = B.EZ.UserSettings } = e;
+    let { entrypoint: t = M.EZ.UserSettings } = e;
     (0, C.z)(j.X);
     let n = (0, b.Q)(),
         { sourceAnalyticsLocations: s, analyticsLocations: G } = (0, f.ZP)(h.Z.PREMIUM_MARKETING),
-        F = (0, a.e7)([I.ZP], () => I.ZP.hasFetchedSubscriptions()),
+        F = (0, a.e7)([N.ZP], () => N.ZP.hasFetchedSubscriptions()),
         H = (0, a.e7)([T.default], () => T.default.getCurrentUser()),
         z = null == H ? void 0 : H.id,
         W = (0, Z.N)(),
@@ -51,7 +51,7 @@ let G = function (e) {
         K = (0, _.V)(),
         [q, X] = r.useState(!0),
         Q = r.useRef(0),
-        J = (0, y.M5)(H, B.p9.TIER_2);
+        J = (0, y.M5)(H, M.p9.TIER_2);
     !0 !== (0, E.wE)(o.z.Q1_2025_MARKETING_MOMENT_OFFER_BADGE) && (0, E.EW)(o.z.Q1_2025_MARKETING_MOMENT_OFFER_BADGE, { dismissAction: U.L.TAKE_ACTION });
     let $ = (0, R.n)(),
         ee = null == $ ? void 0 : $.countryCode,
@@ -64,7 +64,7 @@ let G = function (e) {
     r.useEffect(() => {
         d.Z.wait(async () => {
             let e = Date.now();
-            await Promise.all([u.jg(), (0, m.X8)(), u.tZ(), (0, p.Y2)(ee, null, M.JjL.DISCOVERY), null != z && et && J && (0, S.Z)(z)]), (Q.current = Date.now() - e), X(!1);
+            await Promise.all([u.jg(), (0, m.X8)(), u.tZ(), (0, p.Y2)(ee, null, B.JjL.DISCOVERY), null != z && et && J && (0, S.Z)(z)]), (Q.current = Date.now() - e), X(!1);
         });
     }, [ee, z, et, J]),
     r.useEffect(() => {
@@ -72,7 +72,7 @@ let G = function (e) {
     }, [n, W, Y]),
     r.useEffect(() => {
         q ||
-            N.default.track(M.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
+            I.default.track(B.rMx.PREMIUM_MARKETING_PAGE_VIEWED, {
                 location_stack: s,
                 load_duration_ms: Q.current
             });
@@ -81,7 +81,7 @@ let G = function (e) {
         ? (0, i.jsx)(g.Z, {})
         : n
           ? (0, i.jsx)(x.c8, {})
-          : t === B.EZ.ApplicationStoreHome && J
+          : t === M.EZ.ApplicationStoreHome && J
             ? et && null == en
                 ? (0, i.jsx)('div', {
                       className: l()(V.container, V.loading),

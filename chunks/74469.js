@@ -73,8 +73,8 @@ let E = (0, o.hQ)(),
                 },
                 [o]
             ),
-            I = r.useCallback((e) => e === C, [C]),
-            N = r.useCallback((e) => e, []),
+            N = r.useCallback((e) => e === C, [C]),
+            I = r.useCallback((e) => e, []),
             y = r.useCallback(() => {
                 o(f.L.TAKE_ACTION), (0, d.c)(null, !1);
             }, [o]),
@@ -100,12 +100,12 @@ let E = (0, o.hQ)(),
                     (0, i.jsx)(a.PhF, {
                         className: x.select,
                         optionClassName: x.selectPopout,
-                        isSelected: I,
+                        isSelected: N,
                         options: O,
                         select: T,
                         renderOptionValue: v,
                         renderOptionLabel: S,
-                        serialize: N,
+                        serialize: I,
                         clear: y,
                         clearable: null != C
                     })

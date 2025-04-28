@@ -71,7 +71,7 @@ function T(e) {
         h = !d.SE.useSetting().includes(t),
         b = (0, o.dQu)(o.TVs.modules.guildbar.AVATAR_SIZE),
         T = (0, s.Ie)(null != t ? t : _.lds),
-        I = r.useCallback(
+        N = r.useCallback(
             (e) => {
                 let n = (0, f._o)();
                 e ? n.delete(t) : n.add(t),
@@ -92,7 +92,7 @@ function T(e) {
                   className: O.serverOptionSwitchContainer,
                   value: h,
                   onChange: () => {
-                      I(!h);
+                      N(!h);
                   },
                   hideBorder: !0,
                   children: (0, i.jsxs)('div', {
@@ -132,7 +132,7 @@ function T(e) {
               })
           });
 }
-function I() {
+function N() {
     let e = d.G6.useSetting(),
         t = d.Wz.useSetting(),
         n = (e) => {
@@ -214,7 +214,7 @@ function I() {
         ]
     });
 }
-function N() {
+function I() {
     return (0, i.jsx)(o.hjN, {
         tag: o.RB0.H5,
         title: C.intl.string(j.default['+RndDg']),
@@ -298,10 +298,10 @@ let R = function (e) {
                     null != n.current && n.current.scrollIntoView({ behavior: 'smooth' });
                 }
             }),
-            (0, i.jsx)(N, {}),
+            (0, i.jsx)(I, {}),
             (0, i.jsx)(o.$i$, { className: O.divider }),
             (0, i.jsx)('div', { ref: n }),
-            (0, i.jsx)(I, {}),
+            (0, i.jsx)(N, {}),
             (0, i.jsx)(o.$i$, { className: O.divider }),
             (0, i.jsx)(y, {}),
             (0, i.jsx)(P, {})

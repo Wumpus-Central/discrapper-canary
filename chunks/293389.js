@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(388685);
+n.d(t, { Z: () => M }), n(388685);
 var i = n(200651),
     r = n(192379),
     s = n(120356),
@@ -23,8 +23,8 @@ var i = n(200651),
     S = n(443474),
     v = n(20795),
     T = n(893354),
-    I = n(588866),
-    N = n(20493);
+    N = n(588866),
+    I = n(20493);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -98,7 +98,7 @@ function D(e) {
                         children: e.label
                     })
             }),
-            (0, i.jsx)(c.$i$, { className: l()(N.marginTop8, N.marginBottom8) }),
+            (0, i.jsx)(c.$i$, { className: l()(I.marginTop8, I.marginBottom8) }),
             (0, i.jsxs)('div', {
                 className: l()(S.actions, T.horizontal),
                 children: [
@@ -126,11 +126,11 @@ function Z(e) {
     let { rawGame: n, nowPlaying: s = !1, isOverride: g } = e,
         x = (0, a.cj)([p.ZP, f.Z, b.Z], () => (0, p.FZ)(n, [p.ZP, f.Z, b.Z])),
         [E, j] = r.useState(!1),
-        [v, N] = r.useState(null != (t = x.name) ? t : '???'),
+        [v, I] = r.useState(null != (t = x.name) ? t : '???'),
         P = l()(T.flexCenter, {
             [S.game]: !s,
             [S.activeGame]: s,
-            [I.card]: !s,
+            [N.card]: !s,
             [S.nowPlaying]: null != x && s
         });
     function D() {
@@ -198,7 +198,7 @@ function Z(e) {
                               onKeyDown: function (e) {
                                   13 === e.keyCode && (e.currentTarget.blur(), e.preventDefault());
                               },
-                              onChange: (e) => N(e.target.value)
+                              onChange: (e) => I(e.target.value)
                           }),
                     (function () {
                         let e,
@@ -351,7 +351,7 @@ function w() {
 function k(e) {
     let { children: t } = e;
     return (0, i.jsxs)(P, {
-        className: N.marginTop40,
+        className: I.marginTop40,
         children: [
             (0, i.jsx)(c.oxh, {
                 darkSrc: n(879601),
@@ -367,7 +367,7 @@ let L = (0, x.oH)(function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
         return new Set(t.map((e) => e.exePath));
     }),
-    B = function (e) {
+    M = function (e) {
         let { className: t, showHeader: n = !0 } = e,
             s = (0, a.Wu)([p.ZP], () => p.ZP.getGamesSeen(!0)),
             { runningGame: o, overrideExePaths: d } = (0, a.cj)([p.ZP], () => ({
@@ -393,7 +393,7 @@ let L = (0, x.oH)(function () {
                           )
                         : (0, i.jsx)(w, {}),
                     (0, i.jsxs)('div', {
-                        className: l()(S.nowPlayingAdd, N.marginReset, N.marginTop8, N.marginBottom20),
+                        className: l()(S.nowPlayingAdd, I.marginReset, I.marginTop8, I.marginBottom20),
                         children: [
                             (0, i.jsx)('span', { children: O.intl.string(O.t.xwhoqK) }),
                             (0, i.jsx)(c.yRy, {
@@ -419,10 +419,10 @@ let L = (0, x.oH)(function () {
                     0 === s.length
                         ? (0, i.jsx)(k, { children: (0, i.jsx)(c.OZU, { children: O.intl.string(O.t['1yiJws']) }) })
                         : (0, i.jsxs)(c.hjN, {
-                              className: N.marginTop40,
+                              className: I.marginTop40,
                               children: [
                                   (0, i.jsx)(c.vwX, {
-                                      className: N.marginBottom4,
+                                      className: I.marginBottom4,
                                       children: O.intl.string(O.t.jCOdv7)
                                   }),
                                   (0, i.jsx)(c.R94, {

@@ -23,8 +23,8 @@ var i = n(200651),
     S = n(921801),
     v = n(484459),
     T = n(430824),
-    I = n(325067),
-    N = n(246946),
+    N = n(325067),
+    I = n(246946),
     y = n(663389),
     A = n(594174),
     P = n(626135),
@@ -34,8 +34,8 @@ var i = n(200651),
     w = n(418632),
     k = n(10298),
     L = n(526156),
-    B = n(730820),
-    M = n(888256),
+    M = n(730820),
+    B = n(888256),
     U = n(2719),
     V = n(194530),
     G = n(726985),
@@ -224,7 +224,7 @@ class X extends r.PureComponent {
                         children: [
                             (0, i.jsx)(b.Z.Child, {
                                 wrap: !0,
-                                children: (0, i.jsx)(B.Z, { backupCodes: e })
+                                children: (0, i.jsx)(M.Z, { backupCodes: e })
                             }),
                             t.mfaEnabled
                                 ? null
@@ -299,7 +299,7 @@ class X extends r.PureComponent {
     }
     renderAccountRemovalSettings() {
         let { currentUser: e } = this.props;
-        return (0, i.jsx)(M.Z, {
+        return (0, i.jsx)(B.Z, {
             className: Y.marginTop40,
             currentUser: e,
             handleDisableAccount: () => this.handleDisableAccount(!1),
@@ -399,8 +399,8 @@ let Q = () => {
             let e = A.default.getCurrentUser();
             return o()(null != e, 'ConnectedUserAccountSettings: currentUser cannot be undefined'), e;
         }),
-        t = (0, c.e7)([I.Z], () => I.Z.getBackupCodes()),
-        n = (0, c.e7)([N.Z], () => N.Z.hidePersonalInformation),
+        t = (0, c.e7)([N.Z], () => N.Z.getBackupCodes()),
+        n = (0, c.e7)([I.Z], () => I.Z.hidePersonalInformation),
         r = (0, c.e7)([Z.Z], () => Z.Z.theme),
         s = (0, j.b)(),
         l = (0, E.CC)(),

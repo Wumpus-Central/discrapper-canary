@@ -34,7 +34,7 @@ function v(e) {
             paymentSourceId: t.paymentSourceId,
             currency: t.currency
         }),
-        I = (0, j.og)((0, j.T4)(T.amount, T.currency), v.interval, v.intervalCount);
+        N = (0, j.og)((0, j.T4)(T.amount, T.currency), v.interval, v.intervalCount);
     return (0, i.jsxs)(u.Y0X, {
         transitionState: r,
         'aria-label': O.intl.string(O.t['E9kB4+']),
@@ -55,12 +55,12 @@ function v(e) {
                 children: (0, _.Q0)(t.planId)
                     ? O.intl.format(O.t.GMp54O, {
                           downgradedPlan: E.ZP.getDisplayName(n.planId),
-                          existingRate: I
+                          existingRate: N
                       })
                     : O.intl.format(O.t['vx/NZ2'], {
                           existingPlan: E.ZP.getDisplayName(t.planId),
                           downgradedPlan: E.ZP.getDisplayName(n.planId),
-                          existingRate: I
+                          existingRate: N
                       })
             }),
             (0, i.jsxs)(u.mzw, {

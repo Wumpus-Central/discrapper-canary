@@ -69,11 +69,11 @@ function C() {
             });
     }, []);
     let T = f.isPlatformEmbedded ? n : e,
-        I = (0, a.e7)([g.C], () => {
+        N = (0, a.e7)([g.C], () => {
             var e, t;
             return (0, h.fD)() ? (null == (t = g.C.getCurrentBuildOverride()) || null == (e = t.overrides) ? void 0 : e.discord_web) : null;
         }),
-        [N, y] = (0, m.R)('playground-overrideText', null),
+        [I, y] = (0, m.R)('playground-overrideText', null),
         [A, P] = (0, m.R)('playground-defaultText', j[0].value),
         R = r.useCallback(
             (e) => {
@@ -105,7 +105,7 @@ function C() {
                                     style: { display: 'inline-block' },
                                     children: ['Zoom: ', T, '%']
                                 }),
-                                null != I
+                                null != N
                                     ? (0, i.jsxs)(o.Text, {
                                           tag: 'div',
                                           variant: 'heading-lg/bold',
@@ -114,7 +114,7 @@ function C() {
                                               marginLeft: '1em'
                                           },
                                           color: 'header-secondary',
-                                          children: ['(', I.id, ')']
+                                          children: ['(', N.id, ')']
                                       })
                                     : null
                             ]
@@ -132,7 +132,7 @@ function C() {
                                 className: E.input,
                                 children: (0, i.jsx)(o.oil, {
                                     placeholder: 'Enter custom input...',
-                                    value: null != N ? N : '',
+                                    value: null != I ? I : '',
                                     onChange: R
                                 })
                             })
@@ -233,7 +233,7 @@ function C() {
                                         ),
                                         S.map((t) => {
                                             var n;
-                                            let r = null != (n = 'custom' === A ? N : A) ? n : '';
+                                            let r = null != (n = 'custom' === A ? I : A) ? n : '';
                                             return (0, i.jsx)(
                                                 'div',
                                                 {
