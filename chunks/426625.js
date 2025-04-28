@@ -1,1 +1,1 @@
-e.exports = 'NODE' === n(284955);
+t.exports = 'NODE' === r(284955);

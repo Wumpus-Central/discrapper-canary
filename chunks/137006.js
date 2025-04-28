@@ -4,124 +4,109 @@ var r = n(243814),
 let l = {
         [i.Q5.INITIATE_IMAGE_UPLOAD]: {
             request: void 0,
-            response: (e) => e.object({ image_url: e.string().required() })
+            response: (e) => ({ image_url: e.string().required() })
         },
         [i.Q5.OPEN_SHARE_MOMENT_DIALOG]: {
             response: void 0,
-            request: (e) => (0, i.C5)(e.object({ mediaUrl: e.string().required().max(1024) }))
+            request: (e) => ({ mediaUrl: e.string().required().max(1024) })
         },
         [i.Q5.AUTHENTICATE]: {
-            request: (e) => (0, i.C5)(e.object({ access_token: e.string().allow(null).optional() })),
-            response: (e) =>
-                e.object({
-                    access_token: e.string().required(),
-                    user: e
-                        .object({
-                            username: e.string().required(),
-                            discriminator: e.string().required(),
-                            id: e.string().required(),
-                            avatar: e.string().allow(null),
-                            public_flags: e.number().required(),
-                            global_name: e.string().allow(null)
-                        })
-                        .required(),
-                    scopes: e
-                        .array()
-                        .items(e.string().valid(...(0, i.no)(r.x)))
-                        .required(),
-                    expires: e.string().required(),
-                    application: e
-                        .object({
-                            description: e.string().required(),
-                            icon: e.string().allow(null),
-                            id: e.string().required(),
-                            rpc_origins: e.array().items(e.string()).optional(),
-                            name: e.string().required()
-                        })
-                        .required()
-                })
+            request: (e) => ({ access_token: e.string().allow(null).optional() }),
+            response: (e) => ({
+                access_token: e.string().required(),
+                user: e
+                    .object({
+                        username: e.string().required(),
+                        discriminator: e.string().required(),
+                        id: e.string().required(),
+                        avatar: e.string().allow(null),
+                        public_flags: e.number().required(),
+                        global_name: e.string().allow(null)
+                    })
+                    .required(),
+                scopes: e
+                    .array()
+                    .items(e.string().valid(...(0, i.no)(r.x)))
+                    .required(),
+                expires: e.string().required(),
+                application: e
+                    .object({
+                        description: e.string().required(),
+                        icon: e.string().allow(null),
+                        id: e.string().required(),
+                        rpc_origins: e.array().items(e.string()).optional(),
+                        name: e.string().required()
+                    })
+                    .required()
+            })
         },
         [i.Q5.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: {
             request: void 0,
-            response: (e) =>
-                e
-                    .object({
-                        participants: e
-                            .array()
-                            .items(
-                                o(e)
-                                    .keys({ nickname: e.string().description('Server nickname. Not unique.') })
-                                    .required()
-                            )
+            response: (e) => ({
+                participants: e
+                    .array()
+                    .items(
+                        o(e)
+                            .keys({ nickname: e.string().description('Server nickname. Not unique.') })
                             .required()
-                    })
+                    )
                     .required()
+            })
         },
         [i.Q5.SHARE_INTERACTION]: {
-            request: (e) =>
-                (0, i.C5)(
-                    e.object({
-                        command: e.string().required(),
-                        content: e.string().max(2000),
-                        require_launch_channel: e.boolean(),
-                        preview_image: e.object({
-                            height: e.number().required(),
-                            url: e.string().required(),
-                            width: e.number().required()
-                        }),
-                        components: e.array().items(s(e)),
-                        pid: e.number()
-                    })
-                ),
-            response: (e) => e.object({ success: e.boolean().required() })
+            request: (e) => ({
+                command: e.string().required(),
+                content: e.string().max(2000),
+                require_launch_channel: e.boolean(),
+                preview_image: e.object({
+                    height: e.number().required(),
+                    url: e.string().required(),
+                    width: e.number().required()
+                }),
+                components: e.array().items(s(e)),
+                pid: e.number()
+            }),
+            response: (e) => ({ success: e.boolean().required() })
         },
         [i.Q5.SHARE_LINK]: {
-            request: (e) =>
-                (0, i.C5)(
-                    e.object({
-                        custom_id: e.string().max(64),
-                        message: e.string().max(1000).required(),
-                        link_id: e.string().max(64)
-                    })
-                ),
-            response: (e) =>
-                e.object({
-                    success: e.boolean().required(),
-                    didCopyLink: e.boolean().required(),
-                    didSendMessage: e.boolean().required()
-                })
+            request: (e) => ({
+                custom_id: e.string().max(64),
+                message: e.string().max(1000).required(),
+                link_id: e.string().max(64)
+            }),
+            response: (e) => ({
+                success: e.boolean().required(),
+                didCopyLink: e.boolean().required(),
+                didSendMessage: e.boolean().required()
+            })
         },
         [i.Q5.GET_RELATIONSHIPS]: {
             request: void 0,
-            response: (e) =>
-                e.object({
-                    relationships: e
-                        .array()
-                        .required()
-                        .items(
-                            e.object({
-                                type: e.number().required(),
-                                user: o(e).required(),
-                                presence: e.object({
-                                    status: e.string().required(),
-                                    activity: a(e).allow(null)
-                                })
+            response: (e) => ({
+                relationships: e
+                    .array()
+                    .required()
+                    .items(
+                        e.object({
+                            type: e.number().required(),
+                            user: o(e).required(),
+                            presence: e.object({
+                                status: e.string().required(),
+                                activity: a(e).allow(null)
                             })
-                        )
-                })
+                        })
+                    )
+            })
         },
         [i.Q5.INVITE_USER_EMBEDDED]: {
-            request: (e) =>
-                e
-                    .object({
-                        user_id: e.string().required(),
-                        content: e.string().min(0).max(1024)
-                    })
-                    .required(),
+            request: (e) => ({
+                user_id: e.string().required(),
+                content: e.string().min(0).max(1024)
+            }),
             response: void 0
         },
         [i.Q5.GET_USER]: {
-            request: (e) => (0, i.C5)(e.object({ id: e.string().max(64).required() })),
+            request: (e) => ({ id: e.string().max(64).required() }),
             response: (e) => o(e).allow(null)
         }
     },

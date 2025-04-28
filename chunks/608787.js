@@ -1,13 +1,14 @@
 n.d(t, {
-    GI: () => m,
-    Jt: () => f,
-    Un: () => h,
-    wE: () => p
+    GI: () => u,
+    Jt: () => a.Jt,
+    Un: () => c,
+    wE: () => a.wE
 }),
     n(388685);
 var r = n(200651),
-    i = n(192379);
-function a(e, t, n) {
+    i = n(192379),
+    a = n(252117);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +21,7 @@ function a(e, t, n) {
         e
     );
 }
-function o(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,72 +32,51 @@ function o(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
 }
-let s = function () {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'transparent';
-        return () =>
-            (0, r.jsx)('div', {
-                style: {
-                    position: 'absolute',
-                    width: '100%',
-                    height: '100%',
-                    backgroundColor: e
-                }
-            });
-    },
-    l = 50,
-    c = 500,
-    u = 5000,
-    d = () => Promise.resolve();
-function f(e) {
-    d = e;
-}
-let _ = (e) => new Promise((t) => setTimeout(t, e));
-async function p(e) {
-    let { createPromise: t, webpackId: r } = e,
-        i = c,
-        a = 0;
-    for (;;)
-        try {
-            return await t();
-        } catch (e) {
-            if ((console.log(e), r in n.c)) throw (console.log('Module was found in webpack cache so it has loaded from the network and webpack will not retry'), e);
-            if (a >= l) throw e;
-            await _(i), await d(), (i = Math.min(u, 2 * i)), a++;
-        }
-}
-function h(e) {
-    let { createPromise: t, webpackId: n, renderLoader: a, name: l, memo: c = !1 } = e,
-        u = i.lazy(() =>
-            p({
+let l = function () {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'transparent';
+    return () =>
+        (0, r.jsx)('div', {
+            style: {
+                position: 'absolute',
+                width: '100%',
+                height: '100%',
+                backgroundColor: e
+            }
+        });
+};
+function c(e) {
+    let { createPromise: t, webpackId: n, renderLoader: o, name: c, memo: u = !1 } = e,
+        d = i.lazy(() =>
+            (0, a.wE)({
                 createPromise: t,
                 webpackId: n
             })
         ),
-        d = (e) =>
+        f = (e) =>
             (0, r.jsx)(i.Suspense, {
-                fallback: null != a ? a() : s()(),
-                children: (0, r.jsx)(u, o({}, e))
+                fallback: null != o ? o() : l()(),
+                children: (0, r.jsx)(d, s({}, e))
             });
-    return c && (d = i.memo(d)), (d.displayName = 'Suspense('.concat(l || 'Unknown', ')')), d;
+    return u && (f = i.memo(f)), (f.displayName = 'Suspense('.concat(c || 'Unknown', ')')), f;
 }
-function m(e) {
-    let { createPromise: t, webpackId: n, render: a, renderFallback: o } = e,
-        [s, l] = i.useState(null);
+function u(e) {
+    let { createPromise: t, webpackId: n, render: o, renderFallback: s } = e,
+        [l, c] = i.useState(null);
     return (
         i.useEffect(() => {
-            p({
+            (0, a.wE)({
                 createPromise: t,
                 webpackId: n
             }).then((e) => {
                 let { default: t } = e;
-                return l(t);
+                return c(t);
             });
         }, []),
-        (0, r.jsx)(r.Fragment, { children: null == s ? o() : a(s) })
+        (0, r.jsx)(r.Fragment, { children: null == l ? s() : o(l) })
     );
 }

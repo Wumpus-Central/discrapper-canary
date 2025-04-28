@@ -1,8 +1,8 @@
-var e = 'object' == typeof document && document.all;
+var n = 'object' == typeof document && document.all;
 t.exports =
-    void 0 === e && void 0 !== e
+    void 0 === n && void 0 !== n
         ? function (t) {
-              return 'function' == typeof t || t === e;
+              return 'function' == typeof t || t === n;
           }
         : function (t) {
               return 'function' == typeof t;

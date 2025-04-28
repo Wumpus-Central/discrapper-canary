@@ -1,11 +1,11 @@
 n.d(t, {
-    q: () => o,
-    z: () => a
+    q: () => a,
+    z: () => o
 });
 var r = n(200651);
 n(192379);
-var l = n(481060);
-function i(e) {
+var i = n(481060);
+function l(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,36 +30,36 @@ function i(e) {
     }
     return e;
 }
-function a(e) {
-    let { guildId: t, userId: a, anaylticsLocations: o } = e;
-    (0, l.ZDy)(async () => {
+function o(e) {
+    let { guildId: t, userId: o, anaylticsLocations: a } = e;
+    (0, i.ZDy)(async () => {
         let { default: e } = await n.e('72920').then(n.bind(n, 109730));
         return (n) =>
             (0, r.jsx)(
                 e,
-                i(
+                l(
                     {
                         guildId: t,
-                        userId: a,
-                        anaylticsLocations: o
+                        userId: o,
+                        anaylticsLocations: a
                     },
                     n
                 )
             );
     });
 }
-function o(e) {
-    let { guildId: t, userId: a, anaylticsLocations: o } = e;
-    (0, l.ZDy)(async () => {
+function a(e) {
+    let { guildId: t, userId: o, anaylticsLocations: a } = e;
+    (0, i.ZDy)(async () => {
         let { default: e } = await n.e('76233').then(n.bind(n, 171494));
         return (n) =>
             (0, r.jsx)(
                 e,
-                i(
+                l(
                     {
                         guildId: t,
-                        userId: a,
-                        anaylticsLocations: o
+                        userId: o,
+                        anaylticsLocations: a
                     },
                     n
                 )

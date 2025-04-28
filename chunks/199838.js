@@ -1,58 +1,58 @@
-var r,
-    n,
-    _,
-    o = a(720561),
-    i = a(127849),
-    c = a(434431),
-    s = a(436207),
-    E = a(77025),
-    l = a(651144),
-    u = a(661314),
-    I = a(485073),
-    R = 'Object already initialized',
-    d = i.TypeError,
-    A = i.WeakMap;
-if (o || l.state) {
-    var f = l.state || (l.state = new A());
-    (f.get = f.get),
-        (f.has = f.has),
-        (f.set = f.set),
-        (r = function (t, e) {
-            if (f.has(t)) throw new d(R);
-            return (e.facade = t), f.set(t, e), e;
+var e,
+    o,
+    i,
+    u = r(720561),
+    c = r(127849),
+    a = r(434431),
+    f = r(436207),
+    s = r(77025),
+    l = r(651144),
+    p = r(661314),
+    d = r(485073),
+    _ = 'Object already initialized',
+    h = c.TypeError,
+    y = c.WeakMap;
+if (u || l.state) {
+    var b = l.state || (l.state = new y());
+    (b.get = b.get),
+        (b.has = b.has),
+        (b.set = b.set),
+        (e = function (t, n) {
+            if (b.has(t)) throw new h(_);
+            return (n.facade = t), b.set(t, n), n;
         }),
-        (n = function (t) {
-            return f.get(t) || {};
+        (o = function (t) {
+            return b.get(t) || {};
         }),
-        (_ = function (t) {
-            return f.has(t);
+        (i = function (t) {
+            return b.has(t);
         });
 } else {
-    var p = u('state');
-    (I[p] = !0),
-        (r = function (t, e) {
-            if (E(t, p)) throw new d(R);
-            return (e.facade = t), s(t, p, e), e;
+    var g = p('state');
+    (d[g] = !0),
+        (e = function (t, n) {
+            if (s(t, g)) throw new h(_);
+            return (n.facade = t), f(t, g, n), n;
         }),
-        (n = function (t) {
-            return E(t, p) ? t[p] : {};
+        (o = function (t) {
+            return s(t, g) ? t[g] : {};
         }),
-        (_ = function (t) {
-            return E(t, p);
+        (i = function (t) {
+            return s(t, g);
         });
 }
 t.exports = {
-    set: r,
-    get: n,
-    has: _,
+    set: e,
+    get: o,
+    has: i,
     enforce: function (t) {
-        return _(t) ? n(t) : r(t, {});
+        return i(t) ? o(t) : e(t, {});
     },
     getterFor: function (t) {
-        return function (e) {
-            var a;
-            if (!c(e) || (a = n(e)).type !== t) throw new d('Incompatible receiver, ' + t + ' required');
-            return a;
+        return function (n) {
+            var r;
+            if (!a(n) || (r = o(n)).type !== t) throw new h('Incompatible receiver, ' + t + ' required');
+            return r;
         };
     }
 };

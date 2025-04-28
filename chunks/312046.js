@@ -34,8 +34,9 @@ let o = (e) => ({
         gamePublisher: e.messages.game_publisher
     },
     taskConfig: (0, i.f)(e.task_config),
+    taskConfigV2: (0, i._)(e.task_config_v2),
     rewardsConfig: (0, r.v)(e.rewards_config),
-    videoMetadata: (0, a.F)(e.video_metadata),
+    videoMetadata: (0, a.FG)(e.video_metadata),
     cosponsorMetadata: s(e.cosponsor_metadata)
 });
 function s(e) {

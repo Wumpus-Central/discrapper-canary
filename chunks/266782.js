@@ -1,2 +1,2 @@
-var r = n(476078);
-e.exports = /(?:ipad|iphone|ipod).*applewebkit/i.test(r);
+var e = r(476078);
+t.exports = /(?:ipad|iphone|ipod).*applewebkit/i.test(e);

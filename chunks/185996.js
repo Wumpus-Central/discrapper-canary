@@ -28,7 +28,7 @@ let s = new r.Yd('libdiscore'),
     }),
     c = null;
 function u() {
-    return !!l.getCurrentConfig({ location: 'blockedDomains' }).enabled && ((0, i.u2)() || s.warn('isLibdiscoreBlockedDomainsEnabled called but libdiscore is not loaded'), !0);
+    return !!l.getCurrentConfig({ location: 'blockedDomains' }).enabled && (!!(0, i.X6)() || (s.warn('isLibdiscoreBlockedDomainsEnabled called but libdiscore is not loaded'), !1));
 }
 function d() {
     return null === c && ((c = u()), s.verbose('isLibdiscoreBlockedDomainsEnabledThisSession: '.concat(c))), c;
