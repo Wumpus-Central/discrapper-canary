@@ -1,45 +1,45 @@
-n.d(t, { Z: () => u });
-var r,
-    i,
+s.d(n, { Z: () => u });
+var t,
     l,
-    o = n(442837),
-    a = n(570140);
-let s = {};
-class c extends (l = o.ZP.Store) {
+    i,
+    o = s(442837),
+    a = s(570140);
+let r = {};
+class c extends (i = o.ZP.Store) {
     getFollowerStatsForChannel(e) {
-        return s[e];
+        return r[e];
     }
 }
-(i = 'ChannelFollowerStatsStore'),
-    (r = 'displayName') in c
-        ? Object.defineProperty(c, r, {
-              value: i,
+(l = 'ChannelFollowerStatsStore'),
+    (t = 'displayName') in c
+        ? Object.defineProperty(c, t, {
+              value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (c[r] = i);
+        : (c[t] = l);
 let u = new c(a.Z, {
     CONNECTION_OPEN: function () {
-        s = {};
+        r = {};
     },
     CHANNEL_FOLLOWER_STATS_FETCH_SUCCESS: function (e) {
-        let { channelId: t, stats: n } = e;
-        (n = null != n ? n : {}),
-            (s[t] = {
+        let { channelId: n, stats: s } = e;
+        (s = null != s ? s : {}),
+            (r[n] = {
                 loadingStatus: 'succeeded',
                 lastFetched: Date.now(),
-                channelsFollowing: n.channels_following,
-                guildMembers: n.guild_members,
-                guildsFollowing: n.guilds_following,
-                usersSeenEver: n.users_seen_ever,
-                subscribersGainedSinceLastPost: n.subscribers_gained_since_last_post,
-                subscribersLostSinceLastPost: n.subscribers_lost_since_last_post
+                channelsFollowing: s.channels_following,
+                guildMembers: s.guild_members,
+                guildsFollowing: s.guilds_following,
+                usersSeenEver: s.users_seen_ever,
+                subscribersGainedSinceLastPost: s.subscribers_gained_since_last_post,
+                subscribersLostSinceLastPost: s.subscribers_lost_since_last_post
             });
     },
     CHANNEL_FOLLOWER_STATS_FETCH_FAILURE: function (e) {
-        let { channelId: t } = e;
-        s[t] = {
+        let { channelId: n } = e;
+        r[n] = {
             loadingStatus: 'failed',
             lastFetched: Date.now(),
             channelsFollowing: 0,

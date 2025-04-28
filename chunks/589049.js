@@ -1,18 +1,18 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => u });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    l = n(230711),
-    o = n(906732),
-    a = n(981631),
-    s = n(388032);
-function c() {
-    let { analyticsLocations: e } = (0, o.ZP)();
+    o = n(230711),
+    l = n(906732),
+    c = n(981631),
+    a = n(388032);
+function u() {
+    let { analyticsLocations: e } = (0, l.ZP)();
     return (0, r.jsx)(i.sNh, {
         id: 'voice-and-video-settings',
-        label: s.intl.string(s.t.dsXapK),
+        label: a.intl.string(a.t.dsXapK),
         action: () => {
-            l.Z.open(a.oAB.VOICE, null, { analyticsLocations: e });
+            o.Z.open(c.oAB.VOICE, null, { analyticsLocations: e });
         },
         icon: i.ewm
     });

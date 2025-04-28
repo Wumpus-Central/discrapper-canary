@@ -554,6 +554,9 @@ class eP extends (i = o.ZP.PersistedStore) {
     getActivityPopoutWindowLayout() {
         return ee;
     }
+    isContextlessActivityInPanelMode() {
+        return (null == r ? void 0 : r.kind) === a.E.CONTEXTLESS && J === A.Ez.PANEL;
+    }
 }
 C(eP, 'displayName', 'EmbeddedActivitiesStore'),
     C(eP, 'persistKey', 'EmbeddedActivities'),

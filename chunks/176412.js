@@ -10,8 +10,8 @@ n.d(t, {
 var i,
     l,
     r = n(192379),
-    a = n(392711),
-    o = n.n(a),
+    o = n(392711),
+    a = n.n(o),
     c = n(442837),
     u = n(25209),
     d = n(481060),
@@ -73,7 +73,7 @@ let L =
                   Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
               }),
         i),
-    T = o().pick(
+    T = a().pick(
         (0, h.Z)([
             b.Z.RULES,
             { commandMention: L },
@@ -86,7 +86,7 @@ let L =
     ),
     S = u.w4(T);
 function N(e) {
-    let { context: t, application: n, location: i, sectionName: l, commandName: a, autoDismissOnClick: o = !0, launchingComponentId: u, submitting: y = !1, fetchesApplication: b = !0, onConfirmActivityLaunchChecksAlertOpen: h } = e,
+    let { context: t, application: n, location: i, sectionName: l, commandName: o, autoDismissOnClick: a = !0, launchingComponentId: u, submitting: y = !1, fetchesApplication: b = !0, onConfirmActivityLaunchChecksAlertOpen: h } = e,
         g = (0, p.O)(),
         A = (0, s.Qv)({
             context: t,
@@ -107,7 +107,7 @@ function N(e) {
             locationObject: g.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: t } = e;
-                o && m.yT(I.ti.ACTIVITY),
+                a && m.yT(I.ti.ACTIVITY),
                     (0, E.yw)(w.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: t,
@@ -124,7 +124,7 @@ function N(e) {
             onConfirmActivityLaunchChecksAlertOpen: h
         }),
         N = d.Ttl.BRAND,
-        D = null != a ? a : C.intl.string(C.t.zKX8Nj);
+        D = null != o ? o : C.intl.string(C.t.zKX8Nj);
     return (
         Z === s.JS.JOIN ? ((N = d.Ttl.GREEN), (D = C.intl.string(C.t.d9PsMj))) : Z !== s.JS.LEAVE || y || ((N = d.Ttl.RED), (D = C.intl.string(C.t['Hi1/aW']))),
         {
@@ -139,7 +139,7 @@ function D(e, t) {
     let n = O.Z.entrypoint(),
         i = r.useMemo(
             () =>
-                (0, a.debounce)(
+                (0, o.debounce)(
                     (e, t) => {
                         (0, E.yw)(w.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
                             type: e,

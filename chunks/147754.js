@@ -1,5 +1,5 @@
-n.d(t, { Z: () => r });
-let r = (0, n(818083).B)({
+e.d(n, { Z: () => i });
+let i = (0, e(818083).B)({
     kind: 'guild',
     id: '2021-11_hub_events',
     label: 'Hub Events',

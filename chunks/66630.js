@@ -32,39 +32,39 @@ var l = n(200651),
     D = n(782628);
 function A(e) {
     var t, n;
-    let { transitionState: r, onClose: A, sourceAnalyticsContext: L, sourceAnalyticsLocations: Z, prompt: B = null, showLabelSelectorNewTooltip: R = !1 } = e,
-        U = (0, g.p)({ location: 'CustomStatusModalWithPreview' }),
-        M = (0, S.P)({ location: 'CustomStatusModalWithPreview' }),
-        z = (0, j.Z)({ location: 'CustomStatusModalWithPreview' }),
-        Y = (0, o.e7)([p.default], () => {
+    let { transitionState: r, onClose: A, sourceAnalyticsContext: L, sourceAnalyticsLocations: Z, prompt: B = null, label: R = null, showLabelSelectorNewTooltip: U = !1 } = e,
+        M = (0, g.p)({ location: 'CustomStatusModalWithPreview' }),
+        z = (0, S.P)({ location: 'CustomStatusModalWithPreview' }),
+        Y = (0, j.Z)({ location: 'CustomStatusModalWithPreview' }),
+        F = (0, o.e7)([p.default], () => {
             var e;
             return null != (e = p.default.getCurrentUser()) ? e : null;
         }),
-        F = (0, P.a)(),
-        [W, H] = a.useState(null != (t = null == F ? void 0 : F.state) ? t : ''),
-        [K, V] = a.useState(null != (n = null == F ? void 0 : F.emoji) ? n : null),
-        [G, q] = a.useState((0, O.Z)()),
-        X = a.useRef(null),
+        W = (0, P.a)(),
+        [H, K] = a.useState(null != (t = null == W ? void 0 : W.state) ? t : ''),
+        [V, G] = a.useState(null != (n = null == W ? void 0 : W.emoji) ? n : null),
+        [q, X] = a.useState((0, O.Z)()),
         $ = a.useRef(null),
         Q = a.useRef(null),
-        [J, ee] = a.useState(null != F && z ? (0, C.Z)(F) : null),
-        [et, en] = a.useState(R),
-        el = U && null != B ? B.label() : I.intl.string(I.t['xod36+']),
-        [ea, er] = a.useState(el),
-        { ref: ei, width: eo } = (0, c.ZP)(el);
+        J = a.useRef(null),
+        [ee, et] = a.useState(null != W && Y && null == R ? (0, C.Z)(W) : R),
+        [en, el] = a.useState(U),
+        ea = M && null != B ? B.label() : I.intl.string(I.t['xod36+']),
+        [er, ei] = a.useState(ea),
+        { ref: eo, width: es } = (0, c.ZP)(ea);
     a.useEffect(() => {
-        let e = Q.current;
-        if (null == eo || null == e) return;
-        let t = eo - 78;
-        e.textContent = el;
+        let e = J.current;
+        if (null == es || null == e) return;
+        let t = es - 78;
+        e.textContent = ea;
         let n = e.getBoundingClientRect().width;
-        if (n <= t) er(el);
+        if (n <= t) ei(ea);
         else {
-            let e = n / el.length,
+            let e = n / ea.length,
                 l = Math.floor((t - 3 * e) / e);
-            er(''.concat(el.substring(0, l)).concat('...'));
+            ei(''.concat(ea.substring(0, l)).concat('...'));
         }
-    }, [eo, el]),
+    }, [es, ea]),
         a.useEffect(() => {
             b.default.track(E.rMx.OPEN_MODAL, {
                 type: m.Z.CUSTOM_STATUS_MODAL,
@@ -73,11 +73,11 @@ function A(e) {
         }, [Z]),
         (0, d.ZP)(() => {
             var e, t;
-            null == (e = X.current) || e.focus(), null == (t = X.current) || t.setSelection(W.length, W.length);
+            null == (e = $.current) || e.focus(), null == (t = $.current) || t.setSelection(H.length, H.length);
         });
-    let es = (e) => {
+    let eu = (e) => {
             null != e &&
-                V(
+                G(
                     null != e.id
                         ? {
                               id: e.id,
@@ -91,29 +91,29 @@ function A(e) {
                           }
                 );
         },
-        eu = () => {
+        ec = () => {
             (0, x.Z)({
-                text: W,
-                emojiInfo: K,
-                clearAfter: G,
+                text: H,
+                emojiInfo: V,
+                clearAfter: q,
                 prompt: B,
-                customStatusLabel: J,
+                customStatusLabel: ee,
                 analyticsContext: L
             }),
                 A();
         },
-        ec = () =>
-            null == K
+        ed = () =>
+            null == V
                 ? null
                 : () =>
                       (0, l.jsx)(u.Z, {
                           className: D.emoji,
-                          emojiId: K.id,
-                          emojiName: K.name,
-                          animated: !!K.animated
+                          emojiId: V.id,
+                          emojiName: V.name,
+                          animated: !!V.animated
                       }),
-        ed = U ? I.intl.string(I.t.rp0aho) : I.intl.string(I.t.UcdRn5),
-        em = 'custom-status-placeholder-text';
+        em = M ? I.intl.string(I.t.rp0aho) : I.intl.string(I.t.UcdRn5),
+        eh = 'custom-status-placeholder-text';
     return (0, l.jsxs)(s.Y0X, {
         transitionState: r,
         children: [
@@ -136,68 +136,68 @@ function A(e) {
             }),
             (0, l.jsxs)(s.hzk, {
                 children: [
-                    null != Y &&
+                    null != F &&
                         (0, l.jsx)('div', {
                             className: D.profilePreview,
                             children: (0, l.jsx)(N.Z, {
-                                user: Y,
-                                previewText: W,
-                                previewEmoji: K,
-                                placeHolderText: el,
+                                user: F,
+                                previewText: H,
+                                previewEmoji: V,
+                                placeHolderText: ea,
                                 transitionState: r,
-                                label: J
+                                label: ee
                             })
                         }),
                     (0, l.jsxs)(s.hjN, {
                         className: D.formGroup,
                         titleClassName: D.customStatusInputTitle,
-                        title: ed,
+                        title: em,
                         children: [
-                            z &&
+                            Y &&
                                 (0, l.jsx)('div', {
                                     className: D.labelSelectorContainer,
                                     children: (0, l.jsx)(s.DY3, {
                                         position: 'right',
                                         color: s.FGA.BRAND,
                                         'aria-label': I.intl.string(I.t.y2b7CA),
-                                        shouldShow: et,
-                                        forceOpen: et && r === s.Dvm.ENTERED,
+                                        shouldShow: en,
+                                        forceOpen: en && r === s.Dvm.ENTERED,
                                         tooltipClassName: D.labelSelectorTooltip,
                                         text: I.intl.string(I.t.y2b7CA),
                                         children: (0, l.jsx)(y.Z, {
-                                            currentValue: J,
+                                            currentValue: ee,
                                             onChange: (e) => {
-                                                let t = e === J ? null : e;
+                                                let t = e === ee ? null : e;
                                                 b.default.track(E.rMx.CUSTOM_STATUS_LABEL_CLICKED, {
-                                                    previous_label: J,
+                                                    previous_label: ee,
                                                     new_label: t,
                                                     location_stack: Z
                                                 }),
-                                                    ee(t),
-                                                    en(!1);
+                                                    et(t),
+                                                    el(!1);
                                             }
                                         })
                                     })
                                 }),
                             (0, l.jsxs)('div', {
                                 className: D.inputContainer,
-                                ref: ei,
+                                ref: eo,
                                 children: [
                                     (0, l.jsx)('span', {
-                                        ref: Q,
+                                        ref: J,
                                         className: D.hiddenPlaceholder,
                                         'aria-hidden': 'true'
                                     }),
                                     (0, l.jsx)('div', {
-                                        className: i()(D.emojiButtonContainer, null != J && D.emojiButtonContainerWithLabel),
+                                        className: i()(D.emojiButtonContainer, null != ee && D.emojiButtonContainerWithLabel),
                                         children: (0, l.jsx)(s.yRy, {
-                                            targetElementRef: $,
+                                            targetElementRef: Q,
                                             renderPopout: (e) => {
                                                 let { closePopout: t } = e;
                                                 return (0, l.jsx)(f.Z, {
                                                     closePopout: t,
                                                     onSelectEmoji: (e, n) => {
-                                                        es(e), n && t();
+                                                        eu(e), n && t();
                                                     },
                                                     pickerIntention: k.Hz.STATUS,
                                                     onNavigateAway: A
@@ -238,11 +238,11 @@ function A(e) {
                                                     })({}, e)),
                                                     (a = a =
                                                         {
-                                                            ref: $,
+                                                            ref: Q,
                                                             active: r,
                                                             className: D.emojiButton,
                                                             tabIndex: 0,
-                                                            renderButtonContents: ec()
+                                                            renderButtonContents: ed()
                                                         }),
                                                     Object.getOwnPropertyDescriptors
                                                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
@@ -265,35 +265,35 @@ function A(e) {
                                         s.Kx8,
                                         {
                                             autosize: !0,
-                                            'aria-describedby': em,
-                                            value: W,
+                                            'aria-describedby': eh,
+                                            value: H,
                                             maxLength: w.s0,
                                             rows: 1,
                                             showRemainingCharacterCount: !1,
-                                            placeholder: ea,
+                                            placeholder: er,
                                             onChange: (e) => {
-                                                H(e);
+                                                K(e);
                                             },
                                             onKeyDown: (e) => {
-                                                'Enter' === e.key && eu();
+                                                'Enter' === e.key && ec();
                                             },
-                                            className: i()(D.input, null != J && D.inputWithLabel),
-                                            inputRef: X
+                                            className: i()(D.input, null != ee && D.inputWithLabel),
+                                            inputRef: $
                                         },
-                                        null != J ? 'with-label' : 'without-label'
+                                        null != ee ? 'with-label' : 'without-label'
                                     ),
-                                    null != J &&
+                                    null != ee &&
                                         (0, l.jsx)('div', {
                                             className: D.inputCustomStatusLabelRow,
-                                            children: (0, l.jsx)(T.Z, { label: J })
+                                            children: (0, l.jsx)(T.Z, { label: ee })
                                         }),
                                     (0, l.jsx)(s.nn4, {
-                                        id: em,
-                                        children: ''.concat(I.intl.string(I.t.EVV6ub), ': ').concat(el)
+                                        id: eh,
+                                        children: ''.concat(I.intl.string(I.t.EVV6ub), ': ').concat(ea)
                                     }),
-                                    (W.length > 0 || null != K) &&
+                                    (H.length > 0 || null != V) &&
                                         (0, l.jsx)('div', {
-                                            className: i()(D.clearButtonWrapper, null != J && D.buttonContainerWithLabel),
+                                            className: i()(D.clearButtonWrapper, null != ee && D.buttonContainerWithLabel),
                                             children: (0, l.jsx)(s.zxk, {
                                                 focusProps: {
                                                     offset: {
@@ -305,7 +305,7 @@ function A(e) {
                                                 },
                                                 className: D.clearButton,
                                                 onClick: () => {
-                                                    H(''), V(null);
+                                                    K(''), G(null);
                                                 },
                                                 look: s.zxk.Looks.BLANK,
                                                 size: s.zxk.Sizes.NONE,
@@ -330,19 +330,19 @@ function A(e) {
                             className: D.clearAfterSelectContainer,
                             children: (0, l.jsx)(s.q4e, {
                                 maxVisibleItems: w.wS.length,
-                                value: G,
+                                value: q,
                                 options: w.wS.map((e) => ({
                                     value: e,
                                     key: e,
-                                    label: (0, v.Z)(e, M)
+                                    label: (0, v.Z)(e, z)
                                 })),
-                                onChange: (e) => q(e),
+                                onChange: (e) => X(e),
                                 optionClassName: D.clearAfterSelectOption,
                                 renderOptionLabel: (e) => {
                                     let { value: t } = e;
                                     return (0, l.jsx)('span', {
                                         className: D.clearAfterSelectOptionLabel,
-                                        children: (0, _.Z)(t, M)
+                                        children: (0, _.Z)(t, z)
                                     });
                                 },
                                 look: s.qQH.CUSTOM,
@@ -354,7 +354,7 @@ function A(e) {
                             type: 'submit',
                             size: s.zxk.Sizes.MEDIUM,
                             color: s.zxk.Colors.BRAND,
-                            onClick: eu,
+                            onClick: ec,
                             children: I.intl.string(I.t.R3BPHx)
                         })
                     ]

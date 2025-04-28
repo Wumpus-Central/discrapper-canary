@@ -1,27 +1,27 @@
-n.d(t, { Z: () => u });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    l = n.n(i),
-    o = n(388032),
-    a = n(650011),
-    s = n(296507),
-    c = n(866402);
-function u(e) {
-    let { className: t, children: n } = e;
-    return (0, r.jsxs)('div', {
-        className: l()(a.container, t),
+t.d(n, { Z: () => c });
+var i = t(200651);
+t(192379);
+var l = t(120356),
+    r = t.n(l),
+    a = t(388032),
+    d = t(650011),
+    o = t(296507),
+    s = t(866402);
+function c(e) {
+    let { className: n, children: t } = e;
+    return (0, i.jsxs)('div', {
+        className: r()(d.container, n),
         children: [
-            (0, r.jsx)('img', {
-                alt: o.intl.string(o.t.VoB8OT),
-                src: c,
-                className: l()(a.sparkleIcon, a.sparkleBottom)
-            }),
-            n,
-            (0, r.jsx)('img', {
-                alt: o.intl.string(o.t.VoB8OT),
+            (0, i.jsx)('img', {
+                alt: a.intl.string(a.t.VoB8OT),
                 src: s,
-                className: l()(a.sparkleIcon, a.sparkleTop)
+                className: r()(d.sparkleIcon, d.sparkleBottom)
+            }),
+            t,
+            (0, i.jsx)('img', {
+                alt: a.intl.string(a.t.VoB8OT),
+                src: o,
+                className: r()(d.sparkleIcon, d.sparkleTop)
             })
         ]
     });
