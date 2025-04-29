@@ -18763,6 +18763,7 @@
   "KLzzAg": "Recently Watched",
   "tpXzJy": "Nope",
   "fgP/wc": "Yeah",
+  "wv8Q7u": "{activitiesCount, plural, =1 {+  activity} other {+  activities} }",
   "JC/3x8": "{numSpeakers} speakers, {numListeners} listeners",
   "u//9Bw": "(!!{count}!! of !!{max}!!)",
   "IM4J4e": "(!!{count}!!)",
