@@ -1,6 +1,6 @@
 function i(t) {
-    let { image: e, cropDimensions: n, cropOriginCoordinates: i, maxDimensions: o, imageRotation: r = 0 } = t,
-        a = e.naturalWidth / e.width,
+    let { image: e, cropDimensions: n, cropOriginCoordinates: i, maxDimensions: o, imageRotation: a = 0 } = t,
+        r = e.naturalWidth / e.width,
         l = (function (t, e) {
             let { x: n, y: i } = t;
             switch (e) {
@@ -25,19 +25,19 @@ function i(t) {
                         y: i
                     };
             }
-        })(i, r),
-        c = r % 180 != 0,
-        s = n.width * a,
-        u = n.height * a,
-        d = Math.min(s, o.width),
-        _ = Math.min(u, o.height),
-        g = (c ? n.height : n.width) / 2,
-        m = (c ? n.width : n.height) / 2,
-        f = (e.width / 2 - g - l.x) * a,
-        h = (e.height / 2 - m - l.y) * a,
-        p = c ? u : s,
-        b = c ? s : u,
-        { x: x, y: y } = (function (t, e, n) {
+        })(i, a),
+        s = a % 180 != 0,
+        c = n.width * r,
+        d = n.height * r,
+        u = Math.min(c, o.width),
+        _ = Math.min(d, o.height),
+        g = (s ? n.height : n.width) / 2,
+        h = (s ? n.width : n.height) / 2,
+        m = (e.width / 2 - g - l.x) * r,
+        x = (e.height / 2 - h - l.y) * r,
+        f = s ? d : c,
+        p = s ? c : d,
+        { x: N, y: b } = (function (t, e, n) {
             switch (n) {
                 case 0:
                     return {
@@ -60,53 +60,53 @@ function i(t) {
                         y: 0
                     };
             }
-        })(s, u, r);
+        })(c, d, a);
     return {
-        sourceX: f,
-        sourceY: h,
-        sourceWidth: p,
-        sourceHeight: b,
-        destinationX: x,
-        destinationY: y,
-        destinationWidth: c ? _ : d,
-        destinationHeight: c ? d : _,
-        canvasWidth: d,
+        sourceX: m,
+        sourceY: x,
+        sourceWidth: f,
+        sourceHeight: p,
+        destinationX: N,
+        destinationY: b,
+        destinationWidth: s ? _ : u,
+        destinationHeight: s ? u : _,
+        canvasWidth: u,
         canvasHeight: _
     };
 }
 function o(t) {
-    let { image: e, cropDimensions: n, cropOriginCoordinates: o, maxDimensions: r, imageRotation: a = 0 } = t,
+    let { image: e, cropDimensions: n, cropOriginCoordinates: o, maxDimensions: a, imageRotation: r = 0 } = t,
         {
             sourceX: l,
-            sourceY: c,
-            sourceWidth: s,
-            sourceHeight: u,
-            destinationX: d,
+            sourceY: s,
+            sourceWidth: c,
+            sourceHeight: d,
+            destinationX: u,
             destinationY: _,
             destinationWidth: g,
-            destinationHeight: m,
-            canvasWidth: f,
-            canvasHeight: h
+            destinationHeight: h,
+            canvasWidth: m,
+            canvasHeight: x
         } = i({
             image: e,
             cropDimensions: n,
             cropOriginCoordinates: o,
-            maxDimensions: r,
-            imageRotation: a
+            maxDimensions: a,
+            imageRotation: r
         }),
-        p = document.createElement('canvas');
-    (p.width = f), (p.height = h);
-    let b = p.getContext('2d');
-    return null != b && (b.rotate((a * Math.PI) / 180), b.drawImage(e, l, c, s, u, d, _, g, m)), p.toDataURL('image/png');
+        f = document.createElement('canvas');
+    (f.width = m), (f.height = x);
+    let p = f.getContext('2d');
+    return null != p && (p.rotate((r * Math.PI) / 180), p.drawImage(e, l, s, c, d, u, _, g, h)), f.toDataURL('image/png');
 }
-function r(t, e, n) {
+function a(t, e, n) {
     let i = t.naturalWidth / t.naturalHeight,
-        r = e,
-        a = n;
-    t.naturalWidth > t.naturalHeight ? (r /= i) : (a *= i);
+        a = e,
+        r = n;
+    t.naturalWidth > t.naturalHeight ? (a /= i) : (r *= i);
     let l = {
-        height: r,
-        width: a
+        height: a,
+        width: r
     };
     return o({
         image: t,
@@ -122,7 +122,7 @@ function r(t, e, n) {
     });
 }
 n.d(e, {
-    Ae: () => r,
+    Ae: () => a,
     GS: () => i,
     PT: () => o
 });

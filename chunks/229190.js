@@ -16,7 +16,7 @@ function C(A) {
                     variant: 'text-xs/semibold',
                     color: 'header-secondary',
                     className: r.customColorsHeader,
-                    children: f.intl.string(f.t.lfYWW1)
+                    children: f.intl.string(f.t.JhNpg4)
                 }),
                 (0, B.jsxs)('div', {
                     ref: n,

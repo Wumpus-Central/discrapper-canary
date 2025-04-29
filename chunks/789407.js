@@ -11,6 +11,9 @@ class o extends i.ZP {
     getIconURL(e) {
         return a.icon.lightPNG;
     }
+    getWhiteIconURL() {
+        return a.icon.whitePNG;
+    }
     constructor() {
         super({}), (this.id = l), (this.name = a.name);
     }

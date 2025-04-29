@@ -51,9 +51,9 @@ let v = (e) => {
                       return (0, r.jsx)(s.yRy, {
                           targetElementRef: S,
                           shouldShow: !0,
-                          spacing: -2,
+                          spacing: 10,
                           position: 'top',
-                          align: 'center',
+                          align: 'left',
                           onRequestClose: e,
                           renderPopout: (e) => {
                               let { closePopout: t } = e;

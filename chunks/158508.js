@@ -1,19 +1,15 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => m });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    o = n(704215),
-    a = n(481060),
-    s = n(194359),
-    l = n(377171),
-    c = n(243778),
-    u = n(699516),
-    d = n(594174),
-    f = n(981631),
-    _ = n(921944),
-    p = n(388032),
-    h = n(86777);
-function m(e, t, n) {
+    o = n(481060),
+    a = n(194359),
+    s = n(699516),
+    l = n(594174),
+    c = n(981631),
+    u = n(388032),
+    d = n(86777);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +22,7 @@ function m(e, t, n) {
         e
     );
 }
-function g(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +33,12 @@ function g(e) {
                 })
             )),
             r.forEach(function (t) {
-                m(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-function E(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,80 +50,70 @@ function E(e, t) {
     }
     return n;
 }
-function b(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : E(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function y() {
-    return (0, r.jsx)(a.IGR, {
-        color: l.Z.BG_BRAND,
-        text: p.intl.string(p.t.y2b7CA)
-    });
-}
-function O(e) {
-    let { user: t, guildId: l, channelId: m, onBlock: E, onIgnore: O, onUnignore: v, location: I = 'ContextMenu', appContext: S = f.IlC.APP } = e,
-        { id: T } = t,
-        A = (0, i.e7)(
-            [d.default],
+function m(e) {
+    let { user: t, guildId: f, channelId: p, onBlock: m, onIgnore: g, onUnignore: E, location: b = 'ContextMenu', appContext: y = c.IlC.APP } = e,
+        { id: O } = t,
+        v = (0, i.e7)(
+            [l.default],
             () => {
                 var e;
-                return (null == (e = d.default.getCurrentUser()) ? void 0 : e.id) === T;
+                return (null == (e = l.default.getCurrentUser()) ? void 0 : e.id) === O;
             },
-            [T]
+            [O]
         ),
-        { isIgnored: N, isBlocked: C } = (0, i.cj)(
-            [u.Z],
+        { isIgnored: I, isBlocked: S } = (0, i.cj)(
+            [s.Z],
             () => ({
-                isIgnored: u.Z.isIgnored(T),
-                isBlocked: u.Z.isBlocked(T)
+                isIgnored: s.Z.isIgnored(O),
+                isBlocked: s.Z.isBlocked(O)
             }),
-            [T]
-        ),
-        R = [o.z.IGNORE_USER_NEW_BADGE],
-        [P, w] = (0, c.US)(R),
-        D = P === o.z.IGNORE_USER_NEW_BADGE;
-    return A || C
+            [O]
+        );
+    return v || S
         ? null
-        : (0, r.jsx)(a.sNh, {
+        : (0, r.jsx)(o.sNh, {
               id: 'ignore',
               color: 'default',
-              label: N
-                  ? p.intl.string(p.t['8wXU9P'])
-                  : (0, r.jsxs)('div', {
-                        className: h.label,
-                        children: [p.intl.string(p.t.ytCpKi), D ? (0, r.jsx)(y, {}) : null]
+              label: I
+                  ? u.intl.string(u.t['8wXU9P'])
+                  : (0, r.jsx)('div', {
+                        className: d.label,
+                        children: u.intl.string(u.t.ytCpKi)
                     }),
-              action: N
+              action: I
                   ? () => {
-                        null == v || v(), s.Z.unignoreUser(T, null != I ? I : 'use-ignore-user-item-web', null != m ? m : void 0);
+                        null == E || E(), a.Z.unignoreUser(O, null != b ? b : 'use-ignore-user-item-web', null != p ? p : void 0);
                     }
                   : () => {
-                        D && w(_.L.TAKE_ACTION),
-                            (0, a.ZDy)(
-                                async () => {
-                                    let { default: e } = await Promise.all([n.e('97652'), n.e('25784')]).then(n.bind(n, 240515));
-                                    return (n) =>
-                                        (0, r.jsx)(
-                                            e,
-                                            b(g({}, n), {
-                                                guildId: l,
-                                                channelId: m,
-                                                user: t,
-                                                onIgnore: O,
-                                                onBlock: E,
-                                                location: I
-                                            })
-                                        );
-                                },
-                                { contextKey: (0, a.VnL)(S) }
-                            );
+                        (0, o.ZDy)(
+                            async () => {
+                                let { default: e } = await Promise.all([n.e('97652'), n.e('25784')]).then(n.bind(n, 240515));
+                                return (n) =>
+                                    (0, r.jsx)(
+                                        e,
+                                        h(_({}, n), {
+                                            guildId: f,
+                                            channelId: p,
+                                            user: t,
+                                            onIgnore: g,
+                                            onBlock: m,
+                                            location: b
+                                        })
+                                    );
+                            },
+                            { contextKey: (0, o.VnL)(y) }
+                        );
                     }
           });
 }

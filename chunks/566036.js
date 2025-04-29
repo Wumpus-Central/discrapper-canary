@@ -21,7 +21,7 @@ function f(e) {
         wrapperClassName: g.selectWrapper,
         options: l,
         value: t,
-        placeholder: m.intl.string(m.t.acyezc),
+        placeholder: m.intl.string(m.t.JTLolJ),
         onChange: n,
         isDisabled: 20 === t.length || i,
         matchSorterOptions: s,

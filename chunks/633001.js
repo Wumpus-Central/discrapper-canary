@@ -375,7 +375,7 @@ function z() {
             return e;
         });
     }, [F]);
-    let [J, q] = r.useState({}),
+    let [q, J] = r.useState({}),
         $ = r.useRef(null);
     r.useEffect(
         () => (
@@ -385,7 +385,7 @@ function z() {
                     n = Date.now();
                 for (let a of e) t.push((0, b.hj)(a.pid, 0).then((e) => [a.pid, e, n]));
                 let a = await Promise.all(t);
-                q((e) =>
+                J((e) =>
                     a.reduce(
                         (e, t) => {
                             var n;
@@ -735,7 +735,7 @@ function z() {
                                                             color: 'text-secondary',
                                                             children: ['Original Screen Type: ', el(e.pid)]
                                                         }),
-                                                        null == (t = J[e.pid])
+                                                        null == (t = q[e.pid])
                                                             ? void 0
                                                             : t.reverse().map((t) => {
                                                                   let { screenType: n, timestamp: r } = t;

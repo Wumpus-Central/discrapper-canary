@@ -108,8 +108,8 @@ let Z = [I.x_.LEAF, I.x_.SWORD, I.x_.HEART, I.x_.FIRE, I.x_.WATER_DROP, I.x_.SKU
             x = (0, D.up)(O),
             G = !x || (null == V ? void 0 : V.tag) == null,
             T = null != (A = V.badge) ? A : Z[0],
-            Y = null != (g = V.badgeColorPrimary) ? g : u[0].primary,
-            F = null != (v = V.badgeColorSecondary) ? v : u[0].secondary,
+            F = null != (g = V.badgeColorPrimary) ? g : u[0].primary,
+            Y = null != (v = V.badgeColorSecondary) ? v : u[0].secondary,
             m = (0, B.jsxs)(B.Fragment, {
                 children: [
                     (0, B.jsx)(E.Z, {
@@ -118,8 +118,8 @@ let Z = [I.x_.LEAF, I.x_.SWORD, I.x_.HEART, I.x_.FIRE, I.x_.WATER_DROP, I.x_.SKU
                         isDisabled: G,
                         tag: null != (I = V.tag) ? I : '',
                         badge: T,
-                        primaryColor: Y,
-                        secondaryColor: F
+                        primaryColor: F,
+                        secondaryColor: Y
                     }),
                     (0, B.jsx)(l.Z, {
                         className: y.section,
@@ -130,8 +130,8 @@ let Z = [I.x_.LEAF, I.x_.SWORD, I.x_.HEART, I.x_.FIRE, I.x_.WATER_DROP, I.x_.SKU
                         className: y.section,
                         guildId: O.id,
                         badge: T,
-                        primaryColor: Y,
-                        secondaryColor: F
+                        primaryColor: F,
+                        secondaryColor: Y
                     })
                 ]
             });
@@ -194,8 +194,8 @@ let Z = [I.x_.LEAF, I.x_.SWORD, I.x_.HEART, I.x_.FIRE, I.x_.WATER_DROP, I.x_.SKU
                                                           i.Z.updateGuildProfile(O.id, {
                                                               tag: null != (A = V.tag) ? A : '',
                                                               badge: T,
-                                                              badgeColorPrimary: Y,
-                                                              badgeColorSecondary: F
+                                                              badgeColorPrimary: F,
+                                                              badgeColorSecondary: Y
                                                           });
                                                       } else i.Z.updateGuildProfile(O.id, { tag: null });
                                                   }
@@ -225,8 +225,8 @@ let Z = [I.x_.LEAF, I.x_.SWORD, I.x_.HEART, I.x_.FIRE, I.x_.WATER_DROP, I.x_.SKU
                                 guildId: O.id,
                                 tag: V.tag,
                                 badge: T,
-                                primaryColor: Y,
-                                secondaryColor: F
+                                primaryColor: F,
+                                secondaryColor: Y
                             })
                         })
                     ]

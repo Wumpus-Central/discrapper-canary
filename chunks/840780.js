@@ -135,12 +135,14 @@ class ey extends i.PureComponent {
         return (0, r.jsx)(es.J, eg({}, this.props));
     }
     renderGame() {
-        let { isStreaming: e, application: t, runningGame: n, setIsForceShowSharingPopout: i } = this.props;
+        let { isStreaming: e, application: t, runningGame: n, isForceShowSharingPopout: i, setIsForceShowSharingPopout: l } = this.props;
         return (0, r.jsx)(ea.k, {
             isStreaming: e,
             application: t,
             game: n,
-            onClickNotSharing: () => i(!0)
+            onClickNotSharing: () => l(!0),
+            isForceShowSharingPopout: i,
+            setIsForceShowSharingPopout: l
         });
     }
     renderScreenshare() {
@@ -186,21 +188,21 @@ class ey extends i.PureComponent {
     renderEmbeddedActivity() {
         let e,
             t,
-            { application: n, embeddedActivity: i, channel: l, channelName: s, guildForConnectedChannel: a, showsActivityPopoutQuickRefocusNUX: c, markActivityPopoutQuickRefocusNUXAsDismissed: u } = this.props;
+            { application: n, embeddedActivity: i, channel: l, channelName: s, guildForConnectedChannel: a, showsActivityPopoutQuickRefocusNUX: c, markActivityPopoutQuickRefocusNUXAsDismissed: u, isForceShowSharingPopout: d, setIsForceShowSharingPopout: f } = this.props;
         if (null == i || null == n) return null;
-        let d = { start: i.connectedSince },
-            f = (0, _.R)(),
-            g = s;
-        null != a && null != l ? ((e = ec.Z5c.CHANNEL(a.id, l.id)), (g = ''.concat(g, ' / ').concat(a.name))) : null != l && (e = ec.Z5c.CHANNEL(ec.ME, l.id));
-        let m = (0, r.jsx)(G.Z, {
+        let g = { start: i.connectedSince },
+            m = (0, _.R)(),
+            b = s;
+        null != a && null != l ? ((e = ec.Z5c.CHANNEL(a.id, l.id)), (b = ''.concat(b, ' / ').concat(a.name))) : null != l && (e = ec.Z5c.CHANNEL(ec.ME, l.id));
+        let y = (0, r.jsx)(G.Z, {
             href: e,
             onClick: this.handleApplicationOrChannelLinkClick,
             children: (0, r.jsx)(el.Z, {
                 className: ep.channel,
-                children: g
+                children: b
             })
         });
-        t = f
+        t = m
             ? (0, r.jsx)(eo.Z, { children: n.name })
             : (0, r.jsx)(G.Z, {
                   href: e,
@@ -210,20 +212,24 @@ class ey extends i.PureComponent {
                       children: n.name
                   })
               });
-        let b = (0, r.jsxs)(r.Fragment, {
+        let v = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(R.Z, {
                     className: ep.gameIcon,
                     game: n,
                     size: R.Z.Sizes.SMALL
                 }),
-                (0, r.jsxs)('div', {
-                    className: ep.info,
-                    children: [t, null != l && (0, F.Qm)(l.type) ? m : (0, r.jsx)(eb, { timestamps: d })]
+                (0, r.jsx)(j.j, {
+                    isForceShowSharingPopout: d,
+                    setIsForceShowSharingPopout: f,
+                    children: (0, r.jsxs)('div', {
+                        className: ep.info,
+                        children: [t, null != l && (0, F.Qm)(l.type) ? y : (0, r.jsx)(eb, { timestamps: g })]
+                    })
                 })
             ]
         });
-        return f
+        return m
             ? (0, r.jsx)(h.yRy, {
                   position: 'top',
                   align: 'center',
@@ -253,27 +259,23 @@ class ey extends i.PureComponent {
                               onClick: () => {
                                   p.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' }), c && u(ed.L.TAKE_ACTION), (0, S.yw)(ec.rMx.ACTIVITY_PANEL_GAME_CARD_ACTIVITY_POPOUT_REFOCUS_CLICKED);
                               },
-                              children: b
+                              children: v
                           })
                       )
               })
             : (0, r.jsx)('div', {
                   className: ep.gameWrapper,
-                  children: b
+                  children: v
               });
     }
     render() {
-        let { canGoLive: e, embeddedActivity: t, runningGame: n, isStreaming: i, streamMetadata: l, application: s, activity: a, className: c, isForceShowSharingPopout: u, setIsForceShowSharingPopout: d } = this.props;
+        let { canGoLive: e, embeddedActivity: t, runningGame: n, isStreaming: i, streamMetadata: l, application: s, activity: a, className: c } = this.props;
         return i || (((0, es.y)(s, a, t) || e) && (null != n || null != t))
-            ? (0, r.jsx)(j.j, {
-                  isForceShowSharingPopout: u,
-                  setIsForceShowSharingPopout: d,
-                  children: (0, r.jsx)('div', {
-                      className: o()(ep.panel, c),
-                      children: (0, r.jsxs)('div', {
-                          className: ep.body,
-                          children: [null == n || (i && (null == l ? void 0 : l.pid) == null) ? (null != t ? this.renderEmbeddedActivity() : this.renderScreenshare()) : this.renderGame(), this.renderActions()]
-                      })
+            ? (0, r.jsx)('div', {
+                  className: o()(ep.panel, c),
+                  children: (0, r.jsxs)('div', {
+                      className: ep.body,
+                      children: [null == n || (i && (null == l ? void 0 : l.pid) == null) ? (null != t ? this.renderEmbeddedActivity() : this.renderScreenshare()) : this.renderGame(), this.renderActions()]
                   })
               })
             : null;

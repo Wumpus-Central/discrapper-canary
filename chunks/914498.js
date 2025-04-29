@@ -9,7 +9,7 @@ n.d(t, {
 var r = n(626135),
     i = n(981631),
     o = (function (e) {
-        return (e.ACTIVITY = 'activity'), (e.APP_DISCOVERY = 'app_discovery'), (e.OAUTH = 'oauth'), (e.CUSTOM_ACTIVITY_LINK = 'custom_activity_link'), (e.ACTIVITY_INVITE = 'activity_invite'), (e.ACTIVITY_INSTANCE = 'activity_instance'), (e.UNKNOWN = 'unknown'), e;
+        return (e.ACTIVITY = 'activity'), (e.APP_DISCOVERY = 'app_discovery'), (e.OAUTH = 'oauth'), (e.CUSTOM_ACTIVITY_LINK = 'custom_activity_link'), (e.ACTIVITY_INVITE = 'activity_invite'), (e.ACTIVITY_INSTANCE = 'activity_instance'), (e.RICH_PRESENCE_INVITE = 'rich_presence_invite'), (e.UNKNOWN = 'unknown'), e;
     })({}),
     a = (function (e) {
         return (e.VIEW = 'view'), (e.PLAY = 'play'), (e.ADD_APP = 'add_app'), (e.JOIN_SERVER = 'join_server'), e;

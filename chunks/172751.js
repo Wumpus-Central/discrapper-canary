@@ -50,7 +50,7 @@ let g = i.memo(function (e) {
             ? null
             : (0, r.jsx)('img', {
                   src: t,
-                  alt: _.intl.formatToPlainString(_.t.PShNVV, { tag: n }),
+                  alt: _.intl.formatToPlainString(_.t.uPLDZG, { tag: n }),
                   className: a()(p.badge, i),
                   width: o,
                   height: o
