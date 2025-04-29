@@ -1615,32 +1615,18 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 }
 
 .wrapper_cc5dd2 {
-    box-sizing: border-box;
-    cursor: pointer;
-    height: var(--guildbar-avatar-size);
-    position: relative;
-    width: var(--guildbar-avatar-size)
+    position: relative
 }
 
-.visual-refresh .wrapper_cc5dd2 {
-    cursor: default
-}
-
-.wrapperSimple_cc5dd2 {
-    border-radius: 50%;
-    overflow: hidden
+.svg_cc5dd2,
+.wrapper_cc5dd2 {
+    box-sizing: border-box
 }
 
 .svg_cc5dd2 {
-    box-sizing: border-box;
     contain: paint;
-    left: 0;
-    position: absolute;
-    top: 0
-}
-
-.visual-refresh .svg_cc5dd2 {
     left: -4px;
+    position: absolute;
     top: -4px
 }
 
@@ -1680,11 +1666,11 @@ html.decorate-links .lowSaturationUnderline__41f68 {
     }
 }
 
-.visual-refresh.full-motion .lowerBadge_cc5dd2 {
+.full-motion .lowerBadge_cc5dd2 {
     animation: scaleIn_cc5dd2 .2s 1 forwards
 }
 
-.visual-refresh.full-motion .badgeStroke_cc5dd2 {
+.full-motion .badgeStroke_cc5dd2 {
     animation: scaleInHeight_cc5dd2 .2s 1 forwards;
     transform-origin: center
 }
@@ -1713,7 +1699,7 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 }
 
 .keyboard-mode .focusStroke_cc5dd2 {
-    fill: var(--blue-345);
+    fill: transparent;
     stroke: var(--blue-345);
     stroke-width: 8px
 }
@@ -1724,10 +1710,6 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 
 .keyboard-mode .simpleFocused_cc5dd2 {
     box-shadow: 0 0 0 4px var(--blue-345)
-}
-
-.visual-refresh.keyboard-mode .focusStroke_cc5dd2 {
-    fill: transparent
 }
 
 .hiddenVisually__27f77,
@@ -34824,24 +34806,23 @@ html:not(.visual-refresh) .root_e5f3a9 {
 }
 
 .overlayContainer_fdeafc {
+    flex: 1;
     height: 100%;
-    position: relative;
-    width: 100%
+    margin: 0 32px 0 8px;
+    position: relative
 }
 
 .avatarContainer_fdeafc {
+    display: flex;
+    max-width: 100%;
     opacity: 0;
+    overflow: hidden;
     position: absolute;
-    transition: opacity .4s ease;
-    width: 100%
+    transition: opacity .4s ease
 }
 
 .avatarVisible_fdeafc {
     opacity: 1
-}
-
-.avatarWithTextInnerClassName_fdeafc {
-    padding: 0 8px !important
 }
 
 .nameplatePurchased_fdeafc {
@@ -58796,7 +58777,7 @@ html.disable-forced-colors * {
     --user-profile-background-hover: hsl(var(--opacity-8-hsl)/0.0784313725490196);
     --user-profile-overlay-background: var(--neutral-73);
     --user-profile-overlay-background-hover: hsl(var(--opacity-8-hsl)/0.0784313725490196);
-    --app-background-frame: var(--neutral-96);
+    --app-background-frame: var(--neutral-97);
     --app-border-frame: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --background-base-low: var(--neutral-82);
     --background-base-lower: var(--neutral-86);
@@ -58927,7 +58908,7 @@ html.disable-forced-colors * {
         --user-profile-background-hover: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--theme-base-color-amount, 0%));
         --user-profile-overlay-background: color-mix(in oklab, var(--neutral-73) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --user-profile-overlay-background-hover: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--theme-base-color-amount, 0%));
-        --app-background-frame: color-mix(in oklab, var(--neutral-96) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
+        --app-background-frame: color-mix(in oklab, var(--neutral-97) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --app-border-frame: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--theme-base-color-amount, 0%));
         --background-base-low: color-mix(in oklab, var(--neutral-82) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
         --background-base-lower: color-mix(in oklab, var(--neutral-86) 100%, var(--theme-base-color, #000) var(--theme-base-color-amount, 0%));
@@ -59581,7 +59562,7 @@ html.disable-forced-colors * {
     --chat-markup-line-height: 1.375rem;
     --chat-resize-handle-width: 8px;
     --form-input-height: 48px;
-    --guildbar-avatar-size: 48px;
+    --guildbar-avatar-size: 40px;
     --guildbar-folder-size: 48px;
     --modal-horizontal-padding: 16px;
     --modal-vertical-padding: 16px;
@@ -59593,7 +59574,6 @@ html.disable-forced-colors * {
 .visual-refresh {
     --chat-input-icon-size: 20px;
     --form-input-height: 44px;
-    --guildbar-avatar-size: 40px;
     --modal-horizontal-padding: 24px;
     --modal-width-medium: 602px;
     --modal-width-small: 442px
