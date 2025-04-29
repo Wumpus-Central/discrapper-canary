@@ -1,8 +1,8 @@
-n.d(t, { Z: () => O }), n(361932), n(187205), n(539854), n(388685);
+n.d(t, { Z: () => v }), n(361932), n(187205), n(539854), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(392711),
-    o = n.n(a),
+    o = n(392711),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(208049),
@@ -17,35 +17,35 @@ var r = n(200651),
     E = n(231338),
     b = n(681162);
 let y = 4;
-function v(e) {
+function O(e) {
     let t = (0, s.e7)([h.default], () => m.ZP.canUseSoundboardEverywhere(h.default.getCurrentUser())),
         n = (0, s.e7)([u.Z], () => u.Z.getSoundsForGuild(g.X8)),
         r = (0, s.Wu)([_.Z], () => _.Z.getGuildIds()),
-        a = i.useMemo(() => p.Z.can(E.Pl.USE_EXTERNAL_SOUNDS, e), [e]);
+        o = i.useMemo(() => p.Z.can(E.Pl.USE_EXTERNAL_SOUNDS, e), [e]);
     return i.useMemo(() => {
         let i = [];
-        if (t && a) {
+        if (t && o) {
             let e = r.flatMap((e) => {
                 var t, n;
                 return null != (n = null == (t = u.Z.getSoundsForGuild(e)) ? void 0 : t.filter((e) => e.available)) ? n : [];
             });
-            i.push(...o().sampleSize(e, y));
+            i.push(...a().sampleSize(e, y));
         } else if ((null == e ? void 0 : e.guild_id) != null) {
             var s;
             let t = null == (s = u.Z.getSoundsForGuild(null == e ? void 0 : e.guild_id)) ? void 0 : s.filter((e) => e.available);
-            i.push(...o().sampleSize(t, y));
+            i.push(...a().sampleSize(t, y));
         }
-        return i.length < y && i.push(...o().sampleSize(null != n ? n : [], y - i.length)), i;
-    }, [a, null == e ? void 0 : e.guild_id, n, r, t]);
+        return i.length < y && i.push(...a().sampleSize(null != n ? n : [], y - i.length)), i;
+    }, [o, null == e ? void 0 : e.guild_id, n, r, t]);
 }
-let O = i.memo(function (e) {
+let v = i.memo(function (e) {
     let { channelId: t, onSelectSoundmoji: n } = e,
-        a = (0, s.e7)([u.Z], () => !u.Z.isFetching() && !u.Z.hasFetchedAllSounds(), []),
-        o = (0, s.e7)([f.Z], () => f.Z.getChannel(t)),
-        _ = v(o);
+        o = (0, s.e7)([u.Z], () => !u.Z.isFetching() && !u.Z.hasFetchedAllSounds(), []),
+        a = (0, s.e7)([f.Z], () => f.Z.getChannel(t)),
+        _ = O(a);
     return (i.useEffect(() => {
         (0, c.w)();
-    }, [a]),
+    }, [o]),
     0 === _.length)
         ? (0, r.jsx)(l.$jN, {})
         : (0, r.jsx)('div', {
@@ -59,7 +59,7 @@ let O = i.memo(function (e) {
                           refreshEnabled: !0,
                           isSoundmoji: !0,
                           sound: e,
-                          channel: o,
+                          channel: a,
                           onSelectItem: (t) => (null == n ? void 0 : n(e, !t.shiftKey))
                       },
                       t

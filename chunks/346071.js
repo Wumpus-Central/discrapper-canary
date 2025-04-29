@@ -2,8 +2,8 @@ n.d(t, { n: () => f });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    a = n(481060),
-    o = n(886969),
+    o = n(481060),
+    a = n(886969),
     s = n(580130),
     l = n(474936),
     c = n(981631),
@@ -12,7 +12,7 @@ var i = n(442837),
 function f(e) {
     let { fractionalPremiumInfo: t, variant: n = 'default', style: f } = e,
         _ = t.fractionalState === l.a$.FP_SUB_PAUSED,
-        p = (0, o.Z)(t.endsAt, _),
+        p = (0, a.Z)(t.endsAt, _),
         h = (0, i.e7)([s.Z], () => s.Z.get(t.currentEntitlementId));
     if ((null == h ? void 0 : h.sourceType) === c.kNB.REVERSE_TRIAL) return null;
     let m = '',
@@ -45,19 +45,19 @@ function f(e) {
                   (0, r.jsxs)('div', {
                       className: d.nitroIconContainer,
                       children: [
-                          (0, r.jsx)(a.SrA, {
+                          (0, r.jsx)(o.SrA, {
                               size: 'md',
                               color: 'white',
                               className: d.iconFractional
                           }),
-                          (0, r.jsx)(a.SrA, {
+                          (0, r.jsx)(o.SrA, {
                               size: 'md',
                               color: 'currentColor',
                               className: d.iconFractionalDark
                           })
                       ]
                   }),
-                  (0, r.jsx)(a.Text, {
+                  (0, r.jsx)(o.Text, {
                       variant: 'text-sm/normal',
                       children: m
                   }),

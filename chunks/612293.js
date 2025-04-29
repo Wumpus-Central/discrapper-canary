@@ -10,32 +10,32 @@ var n = r(200651),
     d = r(150039),
     p = r(594174),
     b = r(626135),
-    v = r(653079),
-    f = r(576386),
+    f = r(653079),
+    v = r(576386),
     m = r(981631),
     h = r(388032),
     g = r(637635);
 function x(e) {
     let { transitionState: t, analyticsLocations: r, onClose: c } = e,
         d = (0, o.e7)([p.default], () => p.default.getCurrentUser()),
-        { analyticsLocations: v } = (0, s.ZP)(r, a.Z.EDIT_NAMEPLATE_MODAL),
-        { available: f, purchased: h, isFetchingCategories: x, isFetchingPurchases: y } = (0, u.yV)('NameplateModal'),
-        O = x || (y && 0 === h.length);
+        { analyticsLocations: f } = (0, s.ZP)(r, a.Z.EDIT_NAMEPLATE_MODAL),
+        { available: v, purchased: h, isFetchingCategories: x, isFetchingPurchases: O } = (0, u.yV)('NameplateModal'),
+        j = x || (O && 0 === h.length);
     return (
         (0, i.useEffect)(() => {
             b.default.track(m.rMx.OPEN_MODAL, {
                 type: m.jXE.NAMEPLATE_CUSTOMIZATION,
-                location_stack: v
+                location_stack: f
             });
-        }, [v]),
+        }, [f]),
         null == d
             ? null
             : (0, n.jsx)(s.Gt, {
-                  value: v,
+                  value: f,
                   children: (0, n.jsx)(l.Y0X, {
                       transitionState: t,
-                      size: O ? l.CgR.DYNAMIC : l.CgR.MEDIUM,
-                      children: O
+                      size: j ? l.CgR.DYNAMIC : l.CgR.MEDIUM,
+                      children: j
                           ? (0, n.jsx)(l.$jN, {
                                 className: g.spinner,
                                 type: l.$jN.Type.SPINNING_CIRCLE
@@ -43,9 +43,9 @@ function x(e) {
                           : (0, n.jsx)(_, {
                                 user: d,
                                 onClose: c,
-                                available: f,
+                                available: v,
                                 purchased: h,
-                                analyticsLocations: v
+                                analyticsLocations: f
                             })
                   })
               })
@@ -59,8 +59,8 @@ function _(e) {
         }),
         { pendingNameplate: b } = (0, d._A)(),
         [m, x] = (0, i.useState)(() => (void 0 !== b ? b : null != p ? p : null)),
-        [_, y] = (0, i.useState)(null != m),
-        O = (0, i.useCallback)(
+        [_, O] = (0, i.useState)(null != m),
+        j = (0, i.useCallback)(
             (e) => {
                 u(),
                     (0, c.mK)({
@@ -91,16 +91,16 @@ function _(e) {
                 className: g.content,
                 scrollbarType: 'none',
                 children: [
-                    (0, n.jsx)(f.Z, {
+                    (0, n.jsx)(v.Z, {
                         selected: m,
                         onSelect: (e, t) => {
-                            x(e), y(null != t && t);
+                            x(e), O(null != t && t);
                         },
-                        onOpenShop: O,
+                        onOpenShop: j,
                         available: r,
                         purchased: o
                     }),
-                    (0, n.jsx)(v.Z, {
+                    (0, n.jsx)(f.Z, {
                         user: t,
                         selectedNameplate: m,
                         purchased: _
@@ -120,7 +120,7 @@ function _(e) {
                         : (0, n.jsx)(l.zxk, {
                               className: g.goToShopButton,
                               color: l.Ttl.CUSTOM,
-                              onClick: () => O(null == m ? void 0 : m.skuId),
+                              onClick: () => j(null == m ? void 0 : m.skuId),
                               children: (0, n.jsx)(l.Text, {
                                   color: 'always-white',
                                   variant: 'text-sm/medium',

@@ -1,9 +1,9 @@
 n.d(t, { Z: () => en }), n(388685), n(539854);
 var r,
     i = n(348327),
-    a = n.n(i),
-    o = n(392711),
-    s = n.n(o),
+    o = n.n(i),
+    a = n(392711),
+    s = n.n(a),
     l = n(442837),
     c = n(759174),
     u = n(570140),
@@ -17,8 +17,8 @@ var r,
     E = n(606304),
     b = n(594174),
     y = n(979651),
-    v = n(938475),
-    O = n(501655),
+    O = n(938475),
+    v = n(501655),
     I = n(88751),
     S = n(427679);
 function T(e, t, n) {
@@ -68,10 +68,10 @@ function L(e) {
 }
 function x(e) {
     let t = R[e];
-    return null == t && ((t = new O.ZP(e)), (R[e] = t), t.rebuild()), t;
+    return null == t && ((t = new v.ZP(e)), (R[e] = t), t.rebuild()), t;
 }
 function M(e) {
-    return null != e && e.isGuildStageVoice() && v.ZP.countVoiceStatesForChannel(e.id) > 0;
+    return null != e && e.isGuildStageVoice() && O.ZP.countVoiceStatesForChannel(e.id) > 0;
 }
 function k(e, t) {
     let n = p.Z.getChannel(e);
@@ -155,7 +155,7 @@ function J(e) {
         n = t.reduce((e, t) => {
             if (!t.isGuildStageVoice() || !C.has(t.guild_id)) return e;
             let n = N.get(t.id);
-            return null == n || a()(t.permissionOverwrites, n.permissionOverwrites) || (e.push(t.id), N.set(t.id, t)), e;
+            return null == n || o()(t.permissionOverwrites, n.permissionOverwrites) || (e.push(t.id), N.set(t.id, t)), e;
         }, []);
     return j((e) => e.rebuild(), n), n.length > 0;
 }
@@ -166,7 +166,7 @@ function $(e) {
 let ee = [];
 class et extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(_.default, b.default, p.Z, E.Z, y.Z, m.Z, v.ZP, h.Z, I.ZP, g.Z, S.Z, f.Z);
+        this.waitFor(_.default, b.default, p.Z, E.Z, y.Z, m.Z, O.ZP, h.Z, I.ZP, g.Z, S.Z, f.Z);
     }
     getParticipantsVersion(e) {
         var t, n;

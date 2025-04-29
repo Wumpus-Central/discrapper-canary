@@ -1,8 +1,8 @@
 n.d(t, {
     AM: () => r,
-    DY: () => o,
+    DY: () => a,
     O7: () => s,
-    b1: () => a,
+    b1: () => o,
     ud: () => i
 });
 var r = (function (e) {
@@ -11,10 +11,10 @@ var r = (function (e) {
     i = (function (e) {
         return (e.MARK_ALL_READ = 'mark_all_read'), (e.CLICKED = 'clicked'), (e.FRIEND_REQUESTS_BUTTON_CLICK = 'friend_requests_button_click'), (e.ACTION_BUTTON = 'action_button'), e;
     })({}),
-    a = (function (e) {
+    o = (function (e) {
         return (e.ForYou = 'ForYou'), (e.Mentions = 'Mentions'), (e.MessageReminders = 'MessageReminders'), e;
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return (e.GO_LIVE_PUSH = 'go_live_push'), (e.FRIEND_REQUEST_ACCEPTED = 'friend_request_accepted'), (e.FRIEND_REQUEST_PENDING = 'friend_request_pending'), (e.FRIEND_SUGGESTION_CREATED = 'friend_suggestion_created'), (e.FRIEND_REQUEST_REMINDER = 'friend_request_reminder'), (e.DM_FRIEND_NUDGE = 'dm_friend_nudge'), (e.RECENT_MENTION = 'recent_mention'), (e.REPLY_MENTION = 'reply_mention'), (e.GUILD_SCHEDULED_EVENT_STARTED = 'scheduled_guild_event_started'), (e.SYSTEM_DEMO = 'system_demo'), (e.MISSED_MESSAGES = 'missed_messages'), (e.TOP_MESSAGES = 'top_messages'), (e.LIFECYCLE_ITEM = 'lifecycle_item'), (e.TRENDING_CONTENT = 'trending_content'), (e.GAME_FRIEND_REQUEST_ACCEPTED = 'game_friend_request_accepted'), e;
     })({}),
     s = (function (e) {

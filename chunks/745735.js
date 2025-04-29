@@ -1,8 +1,8 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(192379),
     i = n(512722),
-    a = n.n(i);
-function o(e, t) {
+    o = n.n(i);
+function a(e, t) {
     let n = (0, r.useRef)(e),
         i = (0, r.useRef)(null);
     (0, r.useEffect)(() => {
@@ -10,7 +10,7 @@ function o(e, t) {
     }, [e]),
         (0, r.useEffect)(() => {
             function e() {
-                a()(null != n.current, 'Missing callback'), n.current();
+                o()(null != n.current, 'Missing callback'), n.current();
             }
             if (null === t) {
                 null !== i.current && (clearInterval(i.current), (i.current = null));

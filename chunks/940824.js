@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(37234),
-    o = n(100527),
+    o = n(37234),
+    a = n(100527),
     s = n(906732),
     l = n(703656),
     c = n(335131),
@@ -18,10 +18,10 @@ let _ = (e) => {
                 (0, l.uL)(u.Z5c.COLLECTIBLES_SHOP),
                 (0, c.mK)({
                     openInLayer: !1,
-                    analyticsSource: o.Z.PREMIUM_PAYMENT_MODAL,
+                    analyticsSource: a.Z.PREMIUM_PAYMENT_MODAL,
                     analyticsLocations: n
                 }),
-                (0, a.xf)();
+                (0, o.xf)();
         };
     return (0, r.jsxs)('div', {
         className: f.container,

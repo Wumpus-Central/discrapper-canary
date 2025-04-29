@@ -1,8 +1,8 @@
 n.d(t, { Z: () => z }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n.n(s),
     c = n(91192),
@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(451478),
     b = n(626135),
     y = n(624138),
-    v = n(543241),
-    O = n(883661),
+    O = n(543241),
+    v = n(883661),
     I = n(880949),
     S = n(784222),
     T = n(149203),
@@ -92,7 +92,7 @@ let x = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
     Y = k + j + 2 * U,
     W = 7;
 function K(e) {
-    let { activeIndex: t, categoryIndex: n, analyticsContext: a, categories: s, category: l, handleCategorySelect: u, isWindowFocused: d, useReducedMotion: _ } = e,
+    let { activeIndex: t, categoryIndex: n, analyticsContext: o, categories: s, category: l, handleCategorySelect: u, isWindowFocused: d, useReducedMotion: _ } = e,
         p = (0, c.JA)('expression-guild-'.concat(n)),
         h = l.type === T.En.GUILD ? null : l.id,
         m = t === n,
@@ -100,8 +100,8 @@ function K(e) {
         y = (0, r.jsxs)(
             f.P3F,
             L(w({}, p), {
-                'aria-label': (0, v.Nf)(l, E),
-                className: o()({
+                'aria-label': (0, O.Nf)(l, E),
+                className: a()({
                     [R.categoryItemGuildCategory]: null != E,
                     [R.categoryItemDefaultCategory]: null == E,
                     [R.categoryItemDefaultCategorySelected]: null == E && m,
@@ -110,7 +110,7 @@ function K(e) {
                 onClick: () => {
                     null != E &&
                         b.default.track(A.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
-                            location: null == a ? void 0 : a.location,
+                            location: null == o ? void 0 : o.location,
                             tab: N.X1.EMOJI,
                             guild_id: E.id
                         }),
@@ -126,7 +126,7 @@ function K(e) {
                           })
                         : null,
                     null == E && null != h
-                        ? (0, r.jsx)(O.Z, {
+                        ? (0, r.jsx)(v.Z, {
                               categoryId: h,
                               className: R.categoryIcon,
                               height: k,
@@ -153,28 +153,28 @@ function K(e) {
         : y;
 }
 let z = (e) => {
-    let { className: t, emojiListRef: n, sectionDescriptors: a, intention: s, channel: c, shouldShowSoundmojiInEmojiPicker: d = !1 } = e,
+    let { className: t, emojiListRef: n, sectionDescriptors: o, intention: s, channel: c, shouldShowSoundmojiInEmojiPicker: d = !1 } = e,
         g = h.kJ.useStore((e) => e.activeCategoryIndex),
         b = (0, S.Ni)({
-            sectionDescriptors: a,
+            sectionDescriptors: o,
             emojiListRef: n
         }),
         y = (0, _.O)(),
-        O = (0, v.kI)(s, c, null == c ? void 0 : c.guild_id, d),
+        v = (0, O.kI)(s, c, null == c ? void 0 : c.guild_id, d),
         I = i.useRef(null),
         A = (0, u.e7)([E.Z], () => E.Z.isFocused()),
         N = (0, u.e7)([p.Z], () => p.Z.useReducedMotion, []),
         P = i.useMemo(
             () =>
                 l().memoize((e, t) => {
-                    let n = O[t];
+                    let n = v[t];
                     if (null != n)
                         return (0, r.jsx)(
                             K,
                             {
                                 activeIndex: g,
                                 analyticsContext: y,
-                                categories: O,
+                                categories: v,
                                 category: n,
                                 categoryIndex: t,
                                 handleCategorySelect: b,
@@ -184,20 +184,20 @@ let z = (e) => {
                             t
                         );
                 }),
-            [g, y, O, b, A, N]
+            [g, y, v, b, A, N]
         ),
         w = i.useMemo(() => [8, 8, 0, 8], []),
         D = i.useCallback(
             (e, t) => {
-                let n = O[t];
+                let n = v[t];
                 if (n.type === T.En.RECENT) return F;
                 if (n.type === T.En.GUILD) {
-                    let e = O[t + 1];
+                    let e = v[t + 1];
                     return null != e && e.type !== T.En.GUILD ? H : Z;
                 }
                 return Y;
             },
-            [O]
+            [v]
         ),
         {
             nonUnicodeCategoryCount: L,
@@ -209,7 +209,7 @@ let z = (e) => {
                 t = 0,
                 n = 0,
                 r = 0;
-            O.forEach((i) => {
+            v.forEach((i) => {
                 i.type === T.En.GUILD ? ((t += 1), (n += 1)) : i.type === T.En.UNICODE ? (r += 1) : ((e += 1), (t += 1));
             });
             let i = F + t * Z + H;
@@ -219,7 +219,7 @@ let z = (e) => {
                 firstUnicodeCategoryOffsetTop: i,
                 rowCountBySection: [e, n, r]
             };
-        }, [O]),
+        }, [v]),
         [q, Q] = i.useState(!0);
     i.useLayoutEffect(() => {
         Q(L >= W);
@@ -241,17 +241,17 @@ let z = (e) => {
         ),
         $ = i.useCallback(
             (e, t) => {
-                let n = O[e];
+                let n = v[e];
                 if (null == n) return 0;
                 let r = q ? G : 0;
                 if (n.type === T.En.RECENT) return t ? 0 : j;
                 if (n.type === T.En.GUILD) {
-                    let n = O[e + 1];
+                    let n = v[e + 1];
                     return null != n && n.type !== T.En.GUILD ? (t ? B + -2 * V + M + r : M) : t ? r : M;
                 }
                 return t ? M + r : 2 * M;
             },
-            [O, q]
+            [v, q]
         ),
         ee = i.useMemo(
             () =>
@@ -266,12 +266,12 @@ let z = (e) => {
         expressionsListRef: n,
         className: t,
         store: h.kJ,
-        categories: O,
+        categories: v,
         listPadding: w,
         onScroll: X,
         renderCategoryListItem: P,
         renderSection: ee,
-        rowCount: O.length,
+        rowCount: v.length,
         categoryHeight: D,
         getScrollOffsetForIndex: $,
         rowCountBySection: z,
@@ -282,7 +282,7 @@ let z = (e) => {
                 {
                     'aria-hidden': !q,
                     'aria-label': C.intl.string(C.t.dT0ct7),
-                    className: o()(R.unicodeShortcut, { [R.unicodeShortcutInvisible]: !q }),
+                    className: a()(R.unicodeShortcut, { [R.unicodeShortcutInvisible]: !q }),
                     tabIndex: q ? 0 : -1,
                     onClick: () => J(e),
                     children: (0, r.jsx)(f.EO4, {

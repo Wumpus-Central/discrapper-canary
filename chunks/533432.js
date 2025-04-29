@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(359959),
     l = n(260866),
     c = n(481060),
@@ -13,8 +13,8 @@ var r = n(200651),
     p = n(388032),
     h = n(539490);
 let m = i.forwardRef(function (e, t) {
-        let { emojiListRef: n, gridNavigatorId: a, isFullRow: m, onKeyDown: g, onFocus: E, autoFocus: b, className: y, defaultSearchPlaceholder: v } = e,
-            O = i.useRef(null),
+        let { emojiListRef: n, gridNavigatorId: o, isFullRow: m, onKeyDown: g, onFocus: E, autoFocus: b, className: y, defaultSearchPlaceholder: O } = e,
+            v = i.useRef(null),
             I = (0, d.Iu)((e) => e.searchQuery),
             [S, T] = u.kJ.useStore((e) => [e.inspectedExpressionPosition, e.searchPlaceholder], s.X),
             A = i.useCallback(
@@ -41,26 +41,26 @@ let m = i.forwardRef(function (e, t) {
             i.useImperativeHandle(t, () => ({
                 focus: () => {
                     var e;
-                    return null == (e = O.current) ? void 0 : e.focus();
+                    return null == (e = v.current) ? void 0 : e.focus();
                 }
             })),
             (0, r.jsx)(c.E1j, {
                 autoFocus: b,
                 query: I,
-                ref: O,
+                ref: v,
                 size: c.E1j.Sizes.MEDIUM,
-                placeholder: null != T ? T : v,
+                placeholder: null != T ? T : O,
                 onClear: N,
                 onKeyDown: C,
                 onFocus: E,
                 onChange: A,
-                className: o()(y, { [h.searchBarFullRow]: m }),
+                className: a()(y, { [h.searchBarFullRow]: m }),
                 inputProps: {
                     'aria-label': p.intl.string(p.t.tCauZW),
                     'aria-haspopup': 'grid',
-                    'aria-controls': a,
+                    'aria-controls': o,
                     'aria-expanded': !0,
-                    'aria-activedescendant': (0, l.NE)(a, S.columnIndex, S.rowIndex)
+                    'aria-activedescendant': (0, l.NE)(o, S.columnIndex, S.rowIndex)
                 }
             })
         );

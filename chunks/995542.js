@@ -1,7 +1,7 @@
 var r = n(56135),
     i = n(888968),
-    a = n(649786),
-    o = n(718332),
+    o = n(649786),
+    a = n(718332),
     s = n(320114),
     l = n(82075),
     c = 1,
@@ -16,12 +16,12 @@ var r = n(56135),
     E = '[object String]',
     b = '[object Symbol]',
     y = '[object ArrayBuffer]',
-    v = '[object DataView]',
-    O = r ? r.prototype : void 0,
-    I = O ? O.valueOf : void 0;
-e.exports = function (e, t, n, r, O, S, T) {
+    O = '[object DataView]',
+    v = r ? r.prototype : void 0,
+    I = v ? v.valueOf : void 0;
+e.exports = function (e, t, n, r, v, S, T) {
     switch (n) {
-        case v:
+        case O:
             if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset) break;
             (e = e.buffer), (t = t.buffer);
         case y:
@@ -30,7 +30,7 @@ e.exports = function (e, t, n, r, O, S, T) {
         case d:
         case f:
         case h:
-            return a(+e, +t);
+            return o(+e, +t);
         case _:
             return e.name == t.name && e.message == t.message;
         case m:
@@ -44,7 +44,7 @@ e.exports = function (e, t, n, r, O, S, T) {
             var C = T.get(e);
             if (C) return C == t;
             (r |= u), T.set(e, t);
-            var R = o(A(e), A(t), r, O, S, T);
+            var R = a(A(e), A(t), r, v, S, T);
             return T.delete(e), R;
         case b:
             if (I) return I.call(e) == I.call(t);

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    a = n(704215),
-    o = n(481060),
+    o = n(704215),
+    a = n(481060),
     s = n(194359),
     l = n(377171),
     c = n(243778),
@@ -66,13 +66,13 @@ function b(e, t) {
     );
 }
 function y() {
-    return (0, r.jsx)(o.IGR, {
+    return (0, r.jsx)(a.IGR, {
         color: l.Z.BG_BRAND,
         text: p.intl.string(p.t.y2b7CA)
     });
 }
-function v(e) {
-    let { user: t, guildId: l, channelId: m, onBlock: E, onIgnore: v, onUnignore: O, location: I = 'ContextMenu', appContext: S = f.IlC.APP } = e,
+function O(e) {
+    let { user: t, guildId: l, channelId: m, onBlock: E, onIgnore: O, onUnignore: v, location: I = 'ContextMenu', appContext: S = f.IlC.APP } = e,
         { id: T } = t,
         A = (0, i.e7)(
             [d.default],
@@ -90,12 +90,12 @@ function v(e) {
             }),
             [T]
         ),
-        R = [a.z.IGNORE_USER_NEW_BADGE],
+        R = [o.z.IGNORE_USER_NEW_BADGE],
         [P, w] = (0, c.US)(R),
-        D = P === a.z.IGNORE_USER_NEW_BADGE;
+        D = P === o.z.IGNORE_USER_NEW_BADGE;
     return A || C
         ? null
-        : (0, r.jsx)(o.sNh, {
+        : (0, r.jsx)(a.sNh, {
               id: 'ignore',
               color: 'default',
               label: N
@@ -106,11 +106,11 @@ function v(e) {
                     }),
               action: N
                   ? () => {
-                        null == O || O(), s.Z.unignoreUser(T, null != I ? I : 'use-ignore-user-item-web', null != m ? m : void 0);
+                        null == v || v(), s.Z.unignoreUser(T, null != I ? I : 'use-ignore-user-item-web', null != m ? m : void 0);
                     }
                   : () => {
                         D && w(_.L.TAKE_ACTION),
-                            (0, o.ZDy)(
+                            (0, a.ZDy)(
                                 async () => {
                                     let { default: e } = await Promise.all([n.e('97652'), n.e('25784')]).then(n.bind(n, 240515));
                                     return (n) =>
@@ -120,13 +120,13 @@ function v(e) {
                                                 guildId: l,
                                                 channelId: m,
                                                 user: t,
-                                                onIgnore: v,
+                                                onIgnore: O,
                                                 onBlock: E,
                                                 location: I
                                             })
                                         );
                                 },
-                                { contextKey: (0, o.VnL)(S) }
+                                { contextKey: (0, a.VnL)(S) }
                             );
                     }
           });

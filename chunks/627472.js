@@ -1,8 +1,8 @@
 n.d(t, { z: () => h }), n(415506);
 var r = n(200651),
     i = n(192379),
-    a = n(803997),
-    o = n.n(a),
+    o = n(803997),
+    a = n.n(o),
     s = n(928873),
     l = n(780900);
 function c(e, t, n) {
@@ -63,8 +63,8 @@ function _(e, t) {
         r,
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -73,22 +73,22 @@ function p(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function h(e, t) {
     let n = (0, l.G6)(e);
-    return i.forwardRef(function (a, c) {
-        var { children: d, className: p, dir: h = 'ltr', orientation: m = 'vertical', paddingFix: g = !0, fade: E = !1, onScroll: b, style: y } = a,
-            v = _(a, ['children', 'className', 'dir', 'orientation', 'paddingFix', 'fade', 'onScroll', 'style']);
-        let O = i.useRef(null),
+    return i.forwardRef(function (o, c) {
+        var { children: d, className: p, dir: h = 'ltr', orientation: m = 'vertical', paddingFix: g = !0, fade: E = !1, onScroll: b, style: y } = o,
+            O = _(o, ['children', 'className', 'dir', 'orientation', 'paddingFix', 'fade', 'onScroll', 'style']);
+        let v = i.useRef(null),
             I = (0, l.tT)({
                 paddingFix: g,
                 orientation: m,
                 dir: h,
                 className: p,
-                scrollerRef: O,
+                scrollerRef: v,
                 specs: n
             });
         return (0, r.jsx)(
@@ -97,20 +97,20 @@ function h(e, t) {
                 u(
                     {
                         ref: (e) => {
-                            'function' == typeof c ? c(e) : null != c && (c.current = e), (O.current = e);
+                            'function' == typeof c ? c(e) : null != c && (c.current = e), (v.current = e);
                         },
-                        className: o()(p, {
+                        className: a()(p, {
                             [e]: !0,
                             [t]: E
                         }),
                         style: (0, l.uT)(y, m),
                         dir: h
                     },
-                    v
+                    O
                 ),
                 {
                     children: (0, r.jsxs)(s.Jc, {
-                        containerRef: O,
+                        containerRef: v,
                         children: [d, I]
                     })
                 }

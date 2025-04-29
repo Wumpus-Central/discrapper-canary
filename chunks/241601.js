@@ -8,11 +8,11 @@ n.d(t, {
     n(388685),
     n(35282);
 var i = n(164484),
-    a = n(993192),
-    o = n(388032),
+    o = n(993192),
+    a = n(388032),
     s = n(252517);
 r = n(330711).Z;
-let l = (0, a.F)((e, t) => ({
+let l = (0, o.F)((e, t) => ({
     isLoading: !1,
     inProgressLocale: void 0,
     error: void 0,
@@ -49,7 +49,7 @@ async function u(e) {
     let t = l.getState();
     t.setLoadingStarted(e);
     let n = [];
-    o.intl.setLocale(e),
+    a.intl.setLocale(e),
         n.push(),
         n.push(
             (async () => {

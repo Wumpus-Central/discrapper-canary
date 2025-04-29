@@ -1,7 +1,7 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(981631),
     i = n(388032);
-function a(e) {
+function o(e) {
     switch (e.type) {
         case r.IIU.STREAMING:
             let t = null != e.details && '' !== e.details ? e.details : e.name;
@@ -10,8 +10,8 @@ function a(e) {
             let n = null != e.details && '' !== e.details ? e.details : e.name;
             return null != n ? i.intl.formatToPlainString(i.t.Vnuxub, { name: n }) : null;
         case r.IIU.WATCHING:
-            let a = null != e.details && '' !== e.details ? e.details : e.name;
-            return null != a ? i.intl.formatToPlainString(i.t.pW3Ip6, { name: a }) : null;
+            let o = null != e.details && '' !== e.details ? e.details : e.name;
+            return null != o ? i.intl.formatToPlainString(i.t.pW3Ip6, { name: o }) : null;
         case r.IIU.COMPETING:
             return null != e.name ? i.intl.formatToPlainString(i.t.QQ2wVF, { name: e.name }) : null;
         case r.IIU.CUSTOM_STATUS:

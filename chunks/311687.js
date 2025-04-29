@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d });
 var r,
     i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -47,5 +47,5 @@ class u extends (r = i.ZP.PersistedStore) {
         return l.lastUpdateRequested[e];
     }
 }
-o(u, 'displayName', 'UserLeaderboardStore'), o(u, 'persistKey', 'UserLeaderboardStore');
-let d = new u(a.Z, { SET_USER_LEADERBOARD_LAST_UPDATE_REQUESTED: c });
+a(u, 'displayName', 'UserLeaderboardStore'), a(u, 'persistKey', 'UserLeaderboardStore');
+let d = new u(o.Z, { SET_USER_LEADERBOARD_LAST_UPDATE_REQUESTED: c });

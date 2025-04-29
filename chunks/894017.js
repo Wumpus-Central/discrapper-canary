@@ -1,10 +1,10 @@
 n.d(t, {
-    Z: () => a,
-    c: () => o
+    Z: () => o,
+    c: () => a
 });
 var r = n(442837),
     i = n(924301);
-function a(e, t) {
+function o(e, t) {
     return s(
         (0, r.Wu)([i.ZP], () => {
             var e, n;
@@ -13,7 +13,7 @@ function a(e, t) {
         e
     );
 }
-function o(e, t) {
+function a(e, t) {
     var n, r;
     return s(null != (r = null == (n = i.ZP.getGuildScheduledEvent(t)) ? void 0 : n.guild_scheduled_event_exceptions) ? r : [], e);
 }

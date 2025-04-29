@@ -1,8 +1,8 @@
 n.d(t, { Z: () => c }), n(388685), n(35282);
 var r = n(836560),
     i = n(68721),
-    a = n(961304),
-    o = n(65154);
+    o = n(961304),
+    a = n(65154);
 function s(e, t, n) {
     return (
         t in e
@@ -37,7 +37,7 @@ class c extends r.EventEmitter {
     }
     createOutput(e, t) {
         let n = this.outputs[e];
-        null == n && (((n = new a.Z(this.userId, this.audioContext)).mute = !1), (n.volume = 100), n.setSpeakingFlags(o.Dg.VOICE), n.setSinkId(this.sinkId), (this.outputs[e] = n)), n.addTrack(t), n.play();
+        null == n && (((n = new o.Z(this.userId, this.audioContext)).mute = !1), (n.volume = 100), n.setSpeakingFlags(a.Dg.VOICE), n.setSinkId(this.sinkId), (this.outputs[e] = n)), n.addTrack(t), n.play();
     }
     destroyOutput(e, t) {
         let n = this.outputs[e];

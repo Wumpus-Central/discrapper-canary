@@ -1,7 +1,7 @@
 var r = n(566817),
     i = n(429675),
-    a = n(815329),
-    o = n(699367),
+    o = n(815329),
+    a = n(699367),
     s = n(425194),
     l = n(752743),
     c = n(163567),
@@ -10,9 +10,9 @@ var r = n(566817),
     f = n(936342),
     _ = n(951575);
 e.exports = function (e, t, n) {
-    if (!_(e)) throw new a('Assertion failed: O must be an Object');
-    if (!c(t)) throw new a('Assertion failed: P must be a Property Key');
-    if (!o(n)) throw new a('Assertion failed: Desc must be a Property Descriptor');
+    if (!_(e)) throw new o('Assertion failed: O must be an Object');
+    if (!c(t)) throw new o('Assertion failed: P must be a Property Key');
+    if (!a(n)) throw new o('Assertion failed: Desc must be a Property Descriptor');
     if (!r) {
         if (s(n)) throw new i('This environment does not support accessor property descriptors.');
         var p = !(t in e) && n['[[Writable]]'] && n['[[Enumerable]]'] && n['[[Configurable]]'] && '[[Value]]' in n,

@@ -8,8 +8,8 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(392711),
-    o = n.n(a),
+    o = n(392711),
+    a = n.n(o),
     s = n(91192),
     l = n(876215),
     c = n(442837),
@@ -24,8 +24,8 @@ var r = n(200651),
     E = n(662594),
     b = n(594174),
     y = n(69259),
-    v = n(370370),
-    O = n(107062),
+    O = n(370370),
+    v = n(107062),
     I = n(91140),
     S = n(227172),
     T = n(551228),
@@ -97,8 +97,8 @@ function B(e, t) {
         r,
         i = V(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -107,8 +107,8 @@ function V(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let F = 72,
@@ -131,7 +131,7 @@ let Y = (e) => {
             case l.s.LISTENED_SESSION:
                 return (0, r.jsx)(T.ZP, G(j({}, n), { entry: t }));
             case l.s.LAUNCHED_ACTIVITY:
-                return (0, r.jsx)(v.Z, G(j({}, n), { entry: t }));
+                return (0, r.jsx)(O.Z, G(j({}, n), { entry: t }));
             case l.s.LEADERBOARD:
                 return (0, r.jsx)(g.Z, G(j({}, n), { entry: t }));
             default:
@@ -180,7 +180,7 @@ let Y = (e) => {
             case l.s.LISTENED_SESSION:
                 return (0, r.jsx)(A.Z, G(j({}, i), { entry: n }));
             case l.s.LAUNCHED_ACTIVITY:
-                return (0, r.jsx)(O.ZP, G(j({}, i), { entry: n }));
+                return (0, r.jsx)(v.ZP, G(j({}, i), { entry: n }));
             case l.s.LEADERBOARD:
                 return (null == (t = i.channel) ? void 0 : t.guild_id) != null
                     ? (0, r.jsx)(m.Z, {
@@ -197,21 +197,21 @@ let Y = (e) => {
     z = i.createContext(void 0),
     q = (e) => {
         var t,
-            { index: a } = e,
+            { index: o } = e,
             p = B(e, ['index']);
         let [m, g] = i.useState('default'),
-            E = (0, s.JA)(''.concat(a)),
-            v = null == (t = b.default.getCurrentUser()) ? void 0 : t.isStaff(),
-            { isRich: O, appName: I } = (0, L.n)(p.entry),
+            E = (0, s.JA)(''.concat(o)),
+            O = null == (t = b.default.getCurrentUser()) ? void 0 : t.isStaff(),
+            { isRich: v, appName: I } = (0, L.n)(p.entry),
             S = i.useMemo(
                 () => ({
                     entry: p.entry,
                     channelId: p.channel.id,
                     guildId: p.channel.guild_id,
                     requestId: p.requestId,
-                    richPresenceName: O ? I : void 0
+                    richPresenceName: v ? I : void 0
                 }),
-                [I, p.channel.guild_id, p.channel.id, p.entry, p.requestId, O]
+                [I, p.channel.guild_id, p.channel.id, p.entry, p.requestId, v]
             ),
             T = i.useRef(!1),
             [A, N] = i.useState(!1),
@@ -222,7 +222,7 @@ let Y = (e) => {
         }, [A, P]);
         let w = i.useCallback(
                 (e) => {
-                    v &&
+                    O &&
                         (0, f.jW)(e, async () => {
                             let { default: e } = await n.e('153').then(n.bind(n, 330150));
                             return () =>
@@ -232,7 +232,7 @@ let Y = (e) => {
                                 });
                         });
                 },
-                [p, v]
+                [p, O]
             ),
             D = i.useCallback(() => {
                 g(String(Date.now()));
@@ -246,7 +246,7 @@ let Y = (e) => {
             ),
             U = i.useMemo(
                 () =>
-                    o().throttle(
+                    a().throttle(
                         (e) => {
                             (0, y.L)(x.xP.CARD_POPOUT_OPEN, e);
                         },

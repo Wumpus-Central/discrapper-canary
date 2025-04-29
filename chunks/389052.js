@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    a = n(481060),
-    o = n(194359),
+    o = n(481060),
+    a = n(194359),
     s = n(681678),
     l = n(699516),
     c = n(594174),
@@ -63,29 +63,29 @@ function h(e, t) {
 }
 function m(e) {
     let { user: t, guildId: f, channelId: p, onBlock: m, onIgnore: g, onUnblock: E, location: b = 'ContextMenu', appContext: y = u.IlC.APP } = e,
-        { id: v } = t,
-        O = (0, i.e7)(
+        { id: O } = t,
+        v = (0, i.e7)(
             [c.default],
             () => {
                 var e;
-                return (null == (e = c.default.getCurrentUser()) ? void 0 : e.id) === v;
+                return (null == (e = c.default.getCurrentUser()) ? void 0 : e.id) === O;
             },
-            [v]
+            [O]
         ),
-        I = (0, i.e7)([l.Z], () => l.Z.isBlocked(v), [v]),
+        I = (0, i.e7)([l.Z], () => l.Z.isBlocked(O), [O]),
         S = I ? 'default' : 'danger';
-    return O
+    return v
         ? null
-        : (0, r.jsx)(a.sNh, {
+        : (0, r.jsx)(o.sNh, {
               id: 'block',
               color: null != S ? S : 'default',
               label: I ? d.intl.string(d.t.XyHpKC) : d.intl.string(d.t.l4EmaW),
               action: I
                   ? () => {
-                        null == E || E(), o.Z.unblockUser(v, { location: b }), s.Z.showUnblockSuccessToast(v, null != p ? p : void 0);
+                        null == E || E(), a.Z.unblockUser(O, { location: b }), s.Z.showUnblockSuccessToast(O, null != p ? p : void 0);
                     }
                   : () => {
-                        (0, a.ZDy)(
+                        (0, o.ZDy)(
                             async () => {
                                 let { default: e } = await Promise.all([n.e('97652'), n.e('25784')]).then(n.bind(n, 478923));
                                 return (n) =>
@@ -101,7 +101,7 @@ function m(e) {
                                         })
                                     );
                             },
-                            { contextKey: (0, a.VnL)(y) }
+                            { contextKey: (0, o.VnL)(y) }
                         );
                     }
           });

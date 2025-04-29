@@ -7,8 +7,8 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n(278074),
     c = n(442837),
@@ -23,8 +23,8 @@ var r = n(200651),
     E = n(652853),
     b = n(228168),
     y = n(388032),
-    v = n(341969);
-function O(e, t, n) {
+    O = n(341969);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,7 +48,7 @@ function I(e) {
                 })
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
@@ -89,7 +89,7 @@ let A = 2700,
         [b.n_.ACTIVITY]: () => y.intl.string(y.t.ObfsSk)
     };
 function P(e) {
-    let { user: t, sourceType: n, isVisible: a, isExpandable: O, interactionSourceId: S, targetRef: A, onAction: N, renderMoreButtonPopout: P } = e,
+    let { user: t, sourceType: n, isVisible: o, isExpandable: v, interactionSourceId: S, targetRef: A, onAction: N, renderMoreButtonPopout: P } = e,
         w = i.useRef(null),
         D = (0, c.e7)([p.default], () => p.default.getId() === t.id),
         L = (0, h.Z)(t.id),
@@ -97,7 +97,7 @@ function P(e) {
         { onInteraction: M, onInteractionPopoutTargetRefChange: k } = (0, g.Xo)(),
         { live: j, stream: U } = (0, m.Z)(t.id),
         G =
-            !a &&
+            !o &&
             x !== b.lY.MODAL &&
             x !== b.lY.MODAL_V2 &&
             (0, l.EQ)(n)
@@ -136,50 +136,50 @@ function P(e) {
                 x === b.lY.POPOUT && (0, _.EW)(u.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
         },
         H = (e) => {
-            e.animationName === (0, s.get)(v, 'fadeInAndOut') && V(!1);
+            e.animationName === (0, s.get)(O, 'fadeInAndOut') && V(!1);
         };
     return (0, r.jsxs)(f.ZP, {
-        className: o()(v.popover, {
-            [v.fadeInAndOut]: B,
-            [v.visible]: a,
-            [v.expandable]: O,
-            [v.statusPopover]: n === b.n_.STATUS,
-            [v.avatarPopover]: n === b.n_.AVATAR,
-            [v.activityPopover]: n === b.n_.ACTIVITY
+        className: a()(O.popover, {
+            [O.fadeInAndOut]: B,
+            [O.visible]: o,
+            [O.expandable]: v,
+            [O.statusPopover]: n === b.n_.STATUS,
+            [O.avatarPopover]: n === b.n_.AVATAR,
+            [O.activityPopover]: n === b.n_.ACTIVITY
         }),
         onAnimationEnd: B ? H : void 0,
         children: [
             (0, r.jsx)(d.DY3, {
                 text: y.intl.string(y.t.nhaI4e),
-                shouldShow: a,
-                className: v.tooltipContainer,
+                shouldShow: o,
+                className: O.tooltipContainer,
                 delay: 0,
                 'aria-label': !1,
                 children: (0, r.jsx)(f.zx, {
                     onClick: F,
-                    className: v.button,
+                    className: O.button,
                     'aria-label': C[n](),
                     'aria-haspopup': 'dialog',
                     children: (0, r.jsx)(d.EO4, {
                         size: 'xs',
-                        className: v.icon
+                        className: O.icon
                     })
                 })
             }),
             (0, r.jsx)(d.DY3, {
                 text: y.intl.string(y.t.RmDYKC),
-                shouldShow: a,
-                className: v.tooltipContainer,
+                shouldShow: o,
+                className: O.tooltipContainer,
                 delay: 0,
                 'aria-label': !1,
                 children: (0, r.jsx)(f.zx, {
                     onClick: Z,
-                    className: v.button,
+                    className: O.button,
                     'aria-label': R[n](),
                     'aria-haspopup': 'dialog',
                     children: (0, r.jsx)(d.n$P, {
                         size: 'xs',
-                        className: v.icon
+                        className: O.icon
                     })
                 })
             }),
@@ -192,19 +192,19 @@ function P(e) {
                       };
                       return (0, r.jsx)(d.DY3, {
                           text: y.intl.string(y.t.UKOtz8),
-                          shouldShow: a,
-                          className: v.tooltipContainer,
+                          shouldShow: o,
+                          className: O.tooltipContainer,
                           delay: 0,
                           'aria-label': !1,
                           children: (0, r.jsx)(
                               f.zx,
                               T(I({ ref: w }, e), {
                                   onClick: t,
-                                  className: v.button,
+                                  className: O.button,
                                   'aria-label': y.intl.string(y.t.UKOtz8),
                                   children: (0, r.jsx)(d.xhG, {
                                       size: 'xs',
-                                      className: v.icon
+                                      className: O.icon
                                   })
                               })
                           )

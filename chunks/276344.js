@@ -1,4 +1,4 @@
-n.d(t, { NM: () => a });
+n.d(t, { NM: () => o });
 var r = n(162461);
 let i = (0, n(818083).B)({
     kind: 'guild',
@@ -13,16 +13,16 @@ let i = (0, n(818083).B)({
         }
     ]
 });
-function a(e) {
-    let { guildId: t, location: n, autoTrackExposure: a = !0 } = e,
-        { enabled: o } = r.DG.getCurrentConfig({ location: n }, { autoTrackExposure: !1 });
-    if (!o) return !1;
+function o(e) {
+    let { guildId: t, location: n, autoTrackExposure: o = !0 } = e,
+        { enabled: a } = r.DG.getCurrentConfig({ location: n }, { autoTrackExposure: !1 });
+    if (!a) return !1;
     let { enabled: s } = i.getCurrentConfig(
         {
             guildId: t,
             location: n
         },
-        { autoTrackExposure: a }
+        { autoTrackExposure: o }
     );
     return s;
 }

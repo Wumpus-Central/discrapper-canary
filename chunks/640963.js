@@ -1,15 +1,15 @@
 n.d(t, { x: () => s }), n(388685);
 var r = n(192379),
     i = n(442837),
-    a = n(493683),
-    o = n(592125);
+    o = n(493683),
+    a = n(592125);
 function s(e) {
     let { channelId: t, onUpdateComplete: n } = e,
         [s, l] = r.useState(!1),
         c = r.useRef(null),
-        u = (0, i.e7)([o.Z], () => {
+        u = (0, i.e7)([a.Z], () => {
             var e, n;
-            return null == (n = o.Z.getChannel(t)) || null == (e = n.wallpaper) ? void 0 : e.wallpaperId;
+            return null == (n = a.Z.getChannel(t)) || null == (e = n.wallpaper) ? void 0 : e.wallpaperId;
         }),
         d = r.useCallback(() => {
             s && (null == n || n(c.current), l(!1));
@@ -18,7 +18,7 @@ function s(e) {
             async (e, t, n) => {
                 l(!0), (c.current = t);
                 try {
-                    (await a.Z.setWallpaper(e, t)).ok || null == n || n();
+                    (await o.Z.setWallpaper(e, t)).ok || null == n || n();
                     let r = setTimeout(() => d(), 5000);
                     return () => clearTimeout(r);
                 } catch (e) {

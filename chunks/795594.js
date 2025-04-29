@@ -1,6 +1,6 @@
 n.d(t, {
     J: () => ey,
-    Z: () => ev
+    Z: () => eO
 }),
     n(539854),
     n(388685),
@@ -10,8 +10,8 @@ n.d(t, {
     n(642613);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(658722),
     l = n.n(s),
     c = n(512722),
@@ -26,8 +26,8 @@ var r = n(200651),
     E = n(384275),
     b = n(493683),
     y = n(239091),
-    v = n(87051),
-    O = n(230711),
+    O = n(87051),
+    v = n(230711),
     I = n(497321),
     S = n(468026),
     T = n(317381),
@@ -64,8 +64,8 @@ var r = n(200651),
     en = n(981631),
     er = n(468788),
     ei = n(388032),
-    ea = n(989604),
-    eo = n(73433),
+    eo = n(989604),
+    ea = n(73433),
     es = n(20493);
 function el(e, t, n) {
     return (
@@ -123,19 +123,19 @@ let ef = _.ZP.connectStores([Q.Z], () => ({ theme: Q.Z.theme }))(g.ubH);
 function e_(e) {
     let { application: t, className: n } = e;
     return (0, r.jsxs)('div', {
-        className: o()(ea.twoWayWarning, n),
+        className: a()(eo.twoWayWarning, n),
         children: [
             (0, r.jsx)(g.d3s, {
                 size: 'md',
                 color: 'currentColor',
-                className: ea.twoWayWarningIcon
+                className: eo.twoWayWarningIcon
             }),
             (0, r.jsx)(g.Text, {
                 color: 'text-normal',
                 variant: 'text-sm/medium',
                 children: ei.intl.format(ei.t.jUhnwc, {
                     applicationName: t.name,
-                    onConnectionPress: () => O.Z.setSection(en.jXE.SETTINGS_CONNECTIONS)
+                    onConnectionPress: () => v.Z.setSection(en.jXE.SETTINGS_CONNECTIONS)
                 })
             })
         ]
@@ -149,12 +149,12 @@ let ep = (e) => {
                     return (0, r.jsx)(g.enf, {
                         size: 'md',
                         color: 'currentColor',
-                        className: ea.disclosureIcon
+                        className: eo.disclosureIcon
                     });
                 case p.u$.DISPLAYS_ADVERTISEMENTS:
-                    return (0, r.jsx)(g.FLu, { className: ea.disclosureIcon });
+                    return (0, r.jsx)(g.FLu, { className: eo.disclosureIcon });
                 default:
-                    return (0, r.jsx)(g.d3s, { className: ea.disclosureIcon });
+                    return (0, r.jsx)(g.d3s, { className: eo.disclosureIcon });
             }
         }, [t]);
     },
@@ -177,7 +177,7 @@ let ep = (e) => {
                         ei.intl.formatToPlainString(ei.t.inM1Ym, { applicationName: e.name }),
                         (0, r.jsx)(ee.Z, {
                             look: ee.z.WARNING,
-                            className: ea.infoBox,
+                            className: eo.infoBox,
                             children: ei.intl.string(ei.t.LY35Z2)
                         })
                     ]
@@ -187,7 +187,7 @@ let ep = (e) => {
                     children: [
                         i,
                         (0, r.jsx)(ee.Z, {
-                            className: ea.infoBox,
+                            className: eo.infoBox,
                             children: ei.intl.format(ei.t.KRnERk, { applicationName: e.name })
                         })
                     ]
@@ -219,7 +219,7 @@ let ep = (e) => {
                         shouldConfirm: !0
                     });
             },
-            a = () => {
+            o = () => {
                 null != t.privacy_policy_url &&
                     (0, W.q)({
                         href: t.privacy_policy_url,
@@ -228,21 +228,21 @@ let ep = (e) => {
             };
         return null != t.terms_of_service_url || null != t.privacy_policy_url
             ? (0, r.jsxs)('div', {
-                  className: ea.tosPrivacy,
+                  className: eo.tosPrivacy,
                   children: [
                       null != t.terms_of_service_url
                           ? (0, r.jsxs)(m.P, {
                                 tag: 'a',
                                 onClick: i,
-                                className: ea.tos,
+                                className: eo.tos,
                                 tabIndex: n ? 0 : -1,
                                 children: [
                                     (0, r.jsx)(g.R94, {
-                                        className: ea.link,
+                                        className: eo.link,
                                         children: ei.intl.string(ei.t['lx+GeX'])
                                     }),
                                     (0, r.jsx)(g.Gr1, {
-                                        className: ea.externalLinkIcon,
+                                        className: eo.externalLinkIcon,
                                         color: 'var(--text-link)'
                                     })
                                 ]
@@ -250,21 +250,21 @@ let ep = (e) => {
                           : null,
                       null != t.privacy_policy_url
                           ? (0, r.jsxs)('div', {
-                                className: ea.privacy,
+                                className: eo.privacy,
                                 children: [
-                                    null != t.terms_of_service_url ? (0, r.jsx)('div', { className: ea.divider }) : null,
+                                    null != t.terms_of_service_url ? (0, r.jsx)('div', { className: eo.divider }) : null,
                                     (0, r.jsxs)(m.P, {
                                         tag: 'a',
-                                        onClick: a,
-                                        className: ea.privacy,
+                                        onClick: o,
+                                        className: eo.privacy,
                                         tabIndex: n ? 0 : -1,
                                         children: [
                                             (0, r.jsx)(g.R94, {
-                                                className: ea.link,
+                                                className: eo.link,
                                                 children: ei.intl.string(ei.t.okSwq6)
                                             }),
                                             (0, r.jsx)(g.Gr1, {
-                                                className: ea.externalLinkIcon,
+                                                className: eo.externalLinkIcon,
                                                 color: 'var(--text-link)'
                                             })
                                         ]
@@ -277,8 +277,8 @@ let ep = (e) => {
             : null;
     },
     eE = (e) => {
-        let { scopes: t, application: a, selectedChannelId: s, selectedGuildId: l, onDelete: c, disclosures: u, locale: d, id: _ } = e,
-            p = i.useMemo(() => U.ZP.createFromServer(a), [a]),
+        let { scopes: t, application: o, selectedChannelId: s, selectedGuildId: l, onDelete: c, disclosures: u, locale: d, id: _ } = e,
+            p = i.useMemo(() => U.ZP.createFromServer(o), [o]),
             h = x.Z.useExperiment({ location: 'Authorized Applications' }, { autoTrackExposure: !0 }).enabled,
             m = () => {
                 let e = [];
@@ -294,8 +294,8 @@ let ep = (e) => {
                                     (0, r.jsxs)(
                                         'li',
                                         {
-                                            className: ea.permission,
-                                            children: [(0, r.jsx)('i', { className: ea.permissionCheckmark }), (0, r.jsx)(g.R94, { children: e })]
+                                            className: eo.permission,
+                                            children: [(0, r.jsx)('i', { className: eo.permissionCheckmark }), (0, r.jsx)(g.R94, { children: e })]
                                         },
                                         t
                                     )
@@ -308,7 +308,7 @@ let ep = (e) => {
                                               ? (0, r.jsxs)(
                                                     'li',
                                                     {
-                                                        className: ea.permission,
+                                                        className: eo.permission,
                                                         children: [(0, r.jsx)(ep, { disclosure: t }), (0, r.jsx)(g.R94, { children: i })]
                                                     },
                                                     n + e.length
@@ -320,18 +320,18 @@ let ep = (e) => {
                     });
             },
             E = () => {
-                if (null != a.description && '' !== a.description)
+                if (null != o.description && '' !== o.description)
                     return (0, r.jsx)(g.xJW, {
                         faded: !0,
                         title: ei.intl.string(ei.t.GfRGra),
-                        children: (0, r.jsx)(g.R94, { children: a.description })
+                        children: (0, r.jsx)(g.R94, { children: o.description })
                     });
             },
             b = (0, L.Z)({
-                id: a.id,
+                id: o.id,
                 label: ei.intl.string(ei.t['+NP/b2'])
             }),
-            v = i.useMemo(() => {
+            O = i.useMemo(() => {
                 if (null != b)
                     return (e) => {
                         (0, y.jW)(e, async () => {
@@ -340,15 +340,15 @@ let ep = (e) => {
                         });
                     };
             }, [b]),
-            O = () => {
+            v = () => {
                 let e = H.ZP.getApplicationIconURL({
-                        id: a.id,
-                        icon: a.icon
+                        id: o.id,
+                        icon: o.icon
                     }),
                     t =
                         null != e
                             ? (0, r.jsx)(D.Z.Child, {
-                                  className: ea.appAvatar,
+                                  className: eo.appAvatar,
                                   grow: 0,
                                   children: (0, r.jsx)('img', {
                                       src: e,
@@ -358,16 +358,16 @@ let ep = (e) => {
                             : null,
                     n = new Date(z.default.extractTimestamp(_)).toLocaleDateString(d);
                 return (0, r.jsxs)('div', {
-                    className: o()(ea.header, es.marginBottom20),
+                    className: a()(eo.header, es.marginBottom20),
                     children: [
                         t,
                         (0, r.jsxs)('div', {
-                            className: ea.headerTextContainer,
+                            className: eo.headerTextContainer,
                             children: [
                                 (0, r.jsx)(g.X6q, {
                                     variant: 'text-sm/semibold',
-                                    className: ea.headerText,
-                                    children: a.name
+                                    className: eo.headerText,
+                                    children: o.name
                                 }),
                                 (0, r.jsx)(g.Text, {
                                     variant: 'text-xs/normal',
@@ -381,7 +381,7 @@ let ep = (e) => {
                                   color: g.Ttl.TRANSPARENT,
                                   look: g.iLD.LINK,
                                   size: g.PhG.SMALL,
-                                  className: ea.reportButton,
+                                  className: eo.reportButton,
                                   onClick: () => eh(p, l, s),
                                   children: ei.intl.string(ei.t['+78Pfn'])
                               })
@@ -390,40 +390,40 @@ let ep = (e) => {
                             color: g.Ttl.RED,
                             look: g.iLD.OUTLINED,
                             size: g.PhG.SMALL,
-                            onClick: () => em(a, c),
+                            onClick: () => em(o, c),
                             children: ei.intl.string(ei.t.xUqheH)
                         })
                     ]
                 });
             },
-            I = (0, $.O)(a.id);
+            I = (0, $.O)(o.id);
         return (0, r.jsx)(g.Zbd, {
-            className: o()(ea.authedApp, es.marginBottom8),
+            className: a()(eo.authedApp, es.marginBottom8),
             outline: !0,
-            onContextMenu: v,
+            onContextMenu: O,
             children: (0, r.jsxs)(g.y5t, {
-                component: O(),
+                component: v(),
                 children: [
                     E(),
                     (0, r.jsx)(eg, {
-                        application: a,
+                        application: o,
                         isVisible: !0
                     }),
                     m(),
                     I &&
                         (0, r.jsx)(e_, {
-                            application: a,
-                            className: ea.twoWayWarningV1
+                            application: o,
+                            className: eo.twoWayWarningV1
                         })
                 ]
             })
         });
     },
     eb = (e) => {
-        let { scopes: t, application: a, selectedChannelId: s, selectedGuildId: l, onDelete: c, disclosures: d, locale: p, id: E } = e,
-            y = a.id,
-            O = i.useMemo(() => U.ZP.createFromServer(a), [a]),
-            I = (0, Y.yE)(O.flags, en.udG.EMBEDDED),
+        let { scopes: t, application: o, selectedChannelId: s, selectedGuildId: l, onDelete: c, disclosures: d, locale: p, id: E } = e,
+            y = o.id,
+            v = i.useMemo(() => U.ZP.createFromServer(o), [o]),
+            I = (0, Y.yE)(v.flags, en.udG.EMBEDDED),
             S = (0, _.e7)(
                 [J.Z],
                 () => {
@@ -433,7 +433,7 @@ let ep = (e) => {
                 [y]
             ),
             T = C.w.useExperiment({ location: 'oauth2_authorize' }),
-            A = a.bot,
+            A = o.bot,
             R = (0, _.e7)([B.Z], () => B.Z.getDMFromUserId(null == A ? void 0 : A.id)),
             { appDMChannelMuteConfig: w, dmChannelMuted: L } = (0, _.cj)([Z.ZP], () =>
                 null == R
@@ -454,17 +454,17 @@ let ep = (e) => {
                 for (let n of t) e.push(...(0, j.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(ei.intl.string(ei.t.Ls2XRk));
                 if (e.length > 0 || (null != d && d.length > 0))
                     return (0, r.jsx)(g.zF9, {
-                        className: ea.appDetailsSection,
+                        className: eo.appDetailsSection,
                         isExpanded: V,
                         collapsibleContent: (0, r.jsxs)('ul', {
-                            className: ea.appDetailsContent,
+                            className: eo.appDetailsContent,
                             children: [
                                 e.map((e, t) =>
                                     (0, r.jsxs)(
                                         'li',
                                         {
-                                            className: ea.permission,
-                                            children: [(0, r.jsx)('i', { className: ea.permissionCheckmark }), (0, r.jsx)(g.R94, { children: e })]
+                                            className: eo.permission,
+                                            children: [(0, r.jsx)('i', { className: eo.permissionCheckmark }), (0, r.jsx)(g.R94, { children: e })]
                                         },
                                         t
                                     )
@@ -477,7 +477,7 @@ let ep = (e) => {
                                               ? (0, r.jsxs)(
                                                     'li',
                                                     {
-                                                        className: ea.permission,
+                                                        className: eo.permission,
                                                         children: [(0, r.jsx)(ep, { disclosure: t }), (0, r.jsx)(g.R94, { children: i })]
                                                     },
                                                     n + e.length
@@ -491,7 +491,7 @@ let ep = (e) => {
                             return (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsxs)(m.P, {
-                                        className: ea.appDetailsSectionHeader,
+                                        className: eo.appDetailsSectionHeader,
                                         onClick: (e) => {
                                             F(!V), n(e);
                                         },
@@ -516,7 +516,7 @@ let ep = (e) => {
                                         (0, r.jsx)(g.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-secondary',
-                                            className: o()(ea.appDetailsContent, ea.permissionsDescription),
+                                            className: a()(eo.appDetailsContent, eo.permissionsDescription),
                                             children: ei.intl.format(ei.t.nZOS8v, { numPermissions: e.length })
                                         })
                                 ]
@@ -525,28 +525,28 @@ let ep = (e) => {
                     });
             },
             Q = i.useMemo(() => {
-                if (null != a.description && '' !== a.description)
+                if (null != o.description && '' !== o.description)
                     return (0, r.jsx)(g.Text, {
-                        className: eo.markup,
+                        className: ea.markup,
                         variant: 'text-sm/normal',
                         color: 'text-normal',
-                        children: (0, k.parseBioReact)(a.description)
+                        children: (0, k.parseBioReact)(o.description)
                     });
-            }, [a.description]),
+            }, [o.description]),
             ee = () => {
-                let e = null != a.description && '' !== a.description,
-                    t = null != a.terms_of_service_url || null != a.privacy_policy_url;
+                let e = null != o.description && '' !== o.description,
+                    t = null != o.terms_of_service_url || null != o.privacy_policy_url;
                 return e || t
                     ? (0, r.jsx)(g.zF9, {
-                          className: ea.appDetailsSection,
+                          className: eo.appDetailsSection,
                           isExpanded: M,
                           collapsibleContent: (0, r.jsxs)('div', {
-                              className: ea.appDetailsContent,
+                              className: eo.appDetailsContent,
                               children: [
                                   e && Q,
                                   t &&
                                       (0, r.jsx)(eg, {
-                                          application: a,
+                                          application: o,
                                           isVisible: M
                                       })
                               ]
@@ -554,7 +554,7 @@ let ep = (e) => {
                           children: (e) => {
                               let { onClick: t } = e;
                               return (0, r.jsxs)(m.P, {
-                                  className: ea.appDetailsSectionHeader,
+                                  className: eo.appDetailsSectionHeader,
                                   onClick: (e) => {
                                       G(!M), t(e);
                                   },
@@ -581,13 +581,13 @@ let ep = (e) => {
             },
             el = () => {
                 let e = H.ZP.getApplicationIconURL({
-                        id: a.id,
-                        icon: a.icon
+                        id: o.id,
+                        icon: o.icon
                     }),
                     t =
                         null != e
                             ? (0, r.jsx)(D.Z.Child, {
-                                  className: ea.appAvatarV2,
+                                  className: eo.appAvatarV2,
                                   grow: 0,
                                   children: (0, r.jsx)('img', {
                                       src: e,
@@ -597,16 +597,16 @@ let ep = (e) => {
                             : null,
                     n = new Date(z.default.extractTimestamp(E)).toLocaleDateString(p);
                 return (0, r.jsxs)('div', {
-                    className: ea.headerV2,
+                    className: eo.headerV2,
                     children: [
                         t,
                         (0, r.jsxs)('div', {
-                            className: ea.headerTextContainerV2,
+                            className: eo.headerTextContainerV2,
                             children: [
                                 (0, r.jsx)(g.X6q, {
                                     variant: 'heading-md/semibold',
-                                    className: o()(ea.headerText, es.marginBottom4),
-                                    children: a.name
+                                    className: a()(eo.headerText, es.marginBottom4),
+                                    children: o.name
                                 }),
                                 (0, r.jsx)(g.Text, {
                                     variant: 'text-sm/normal',
@@ -616,7 +616,7 @@ let ep = (e) => {
                             ]
                         }),
                         (0, r.jsx)(et.Z, {
-                            appRecord: O,
+                            appRecord: v,
                             showAppReportingOption: W,
                             selectedGuildId: l,
                             selectedChannelId: s
@@ -634,7 +634,7 @@ let ep = (e) => {
                 ),
                     N.ZP.trackWithMetadata(en.rMx.NOTIFICATION_SETTINGS_UPDATED, {
                         update_type: er.I.AUTHORIZED_APP_DM_PUSH_NOTIFICATION,
-                        application_id: a.id,
+                        application_id: o.id,
                         label: e ? K.ZB.Unmuted : K.ZB.Muted
                     });
             },
@@ -643,7 +643,7 @@ let ep = (e) => {
                 let e = R;
                 null == e && (e = await b.Z.ensurePrivateChannel(A.id)),
                     L
-                        ? v.Z.updateAppDMOverrideSettings(null, e, a.id, { muted: !1 }, K.ZB.Unmuted)
+                        ? O.Z.updateAppDMOverrideSettings(null, e, o.id, { muted: !1 }, K.ZB.Unmuted)
                         : (0, g.ZDy)(async () => {
                               let { default: t } = await n.e('8246').then(n.bind(n, 540679));
                               return (n) =>
@@ -652,29 +652,29 @@ let ep = (e) => {
                                       ec(
                                           {
                                               channelId: e,
-                                              applicationId: a.id
+                                              applicationId: o.id
                                           },
                                           n
                                       )
                                   );
                           });
-            }, [R, A, L, a.id]),
+            }, [R, A, L, o.id]),
             ef = () =>
                 T.enabled
                     ? (0, r.jsxs)('div', {
-                          className: ea.directMessagesSection,
+                          className: eo.directMessagesSection,
                           children: [
                               (0, r.jsx)(g.X6q, {
                                   variant: 'heading-sm/medium',
                                   color: 'header-primary',
-                                  className: ea.dmSettingsHeader,
+                                  className: eo.dmSettingsHeader,
                                   children: ei.intl.string(ei.t.NaZyYG)
                               }),
                               null != A
                                   ? (0, r.jsx)(g.j7V, {
                                         hideBorder: !0,
                                         onChange: ed,
-                                        className: ea.dmSettingsSwitch,
+                                        className: eo.dmSettingsSwitch,
                                         note:
                                             (null == w ? void 0 : w.end_time) != null
                                                 ? ei.intl.format(ei.t.j7h4AA, {
@@ -697,7 +697,7 @@ let ep = (e) => {
                                   ? (0, r.jsx)(g.j7V, {
                                         hideBorder: !0,
                                         onChange: eu,
-                                        className: ea.dmSettingsSwitch,
+                                        className: eo.dmSettingsSwitch,
                                         note: ei.intl.string(ei.t.hw1nKS),
                                         value: S,
                                         disabled: L,
@@ -710,45 +710,45 @@ let ep = (e) => {
                           ]
                       })
                     : null,
-            eh = (0, $.O)(a.id),
+            eh = (0, $.O)(o.id),
             eE = () =>
                 (0, r.jsxs)('div', {
-                    className: ea.footer,
+                    className: eo.footer,
                     children: [
                         eh &&
                             (0, r.jsx)(e_, {
-                                application: a,
-                                className: ea.twoWayWarningV2
+                                application: o,
+                                className: eo.twoWayWarningV2
                             }),
                         (0, r.jsx)('div', {
-                            className: ea.deauthorizeButton,
+                            className: eo.deauthorizeButton,
                             children: (0, r.jsx)(g.zxk, {
                                 color: g.Ttl.RED,
                                 look: g.iLD.OUTLINED,
                                 size: g.PhG.SMALL,
-                                onClick: () => em(a, c),
+                                onClick: () => em(o, c),
                                 children: ei.intl.string(ei.t.xUqheH)
                             })
                         })
                     ]
                 });
         return (0, r.jsx)('div', {
-            className: ea.authedAppV2,
+            className: eo.authedAppV2,
             children: (0, r.jsx)(g.y5t, {
                 component: el(),
                 children: (0, r.jsxs)('div', {
-                    className: ea.appDetailsContainer,
+                    className: eo.appDetailsContainer,
                     children: [ee(), q(), ef(), eE()]
                 })
             })
         });
     },
     ey = (0, d.U)(() => ({ searchQuery: '' })),
-    ev = () => {
+    eO = () => {
         let e = (0, _.e7)([F.Z], () => F.Z.hidePersonalInformation),
             t = (0, _.e7)([G.Z], () => G.Z.getApps()),
-            a = (0, _.e7)([q.default], () => q.default.locale),
-            o = (0, _.e7)([T.ZP], () => T.ZP.getSelfEmbeddedActivities()),
+            o = (0, _.e7)([q.default], () => q.default.locale),
+            a = (0, _.e7)([T.ZP], () => T.ZP.getSelfEmbeddedActivities()),
             s = (0, _.e7)([B.Z, V.Z], () => B.Z.getChannel(V.Z.getChannelId())),
             c = null == s ? void 0 : s.getGuildId(),
             u = R.G.useExperiment({ location: 'UserSettingsAuthedApps' }, { autoTrackExposure: !0 }).enabled;
@@ -764,7 +764,7 @@ let ep = (e) => {
         let d = (e) => {
                 let { id: t, application: n } = e;
                 E.Z.delete(t);
-                let r = o.get(n.id);
+                let r = a.get(n.id);
                 null != r &&
                     A.Z.leaveActivity({
                         location: r.location,
@@ -782,7 +782,7 @@ let ep = (e) => {
             },
             b = () =>
                 (0, r.jsx)('div', {
-                    className: ea.searchContainer,
+                    className: eo.searchContainer,
                     children: (0, r.jsx)(g.E1j, {
                         size: g.E1j.Sizes.MEDIUM,
                         query: f,
@@ -794,7 +794,7 @@ let ep = (e) => {
                 }),
             y = (e, t) =>
                 (0, r.jsxs)(ef, {
-                    className: ea.__invalid_marginTop20,
+                    className: eo.__invalid_marginTop20,
                     children: [
                         (0, r.jsx)(g.oxh, {
                             darkSrc: n(701972),
@@ -808,56 +808,54 @@ let ep = (e) => {
                         })
                     ]
                 }),
-            v = i.useMemo(() => {
+            O = i.useMemo(() => {
                 let e = f.trim().toLowerCase();
                 return '' === e || null == t ? t : t.length < 100 ? t.filter((t) => l()(e, t.application.name.toLowerCase())) : t.filter((t) => t.application.name.toLowerCase().includes(e));
             }, [t, f]),
-            O = () =>
-                null == t || null == v
+            v = () =>
+                null == t || null == O
                     ? (0, r.jsx)(g.$jN, {
                           className: es.marginTop20,
                           type: g.$jN.Type.SPINNING_CIRCLE
                       })
                     : 0 === t.length
                       ? y(ei.intl.string(ei.t.CpPv5u), ei.intl.string(ei.t['E+SM6e']))
-                      : 0 === v.length
+                      : 0 === O.length
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [b(), y(null, ei.intl.string(ei.t.EVWFNj))]
                           })
                         : (0, r.jsxs)(r.Fragment, {
                               children: [
                                   b(),
-                                  v
-                                      .sort((e, t) => Number(t.id) - Number(e.id))
-                                      .map((e) =>
-                                          u
-                                              ? (0, r.jsx)(
-                                                    eb,
-                                                    ec(
-                                                        {
-                                                            locale: a,
-                                                            onDelete: () => d(e),
-                                                            selectedChannelId: null == s ? void 0 : s.id,
-                                                            selectedGuildId: null != c ? c : void 0
-                                                        },
-                                                        e
-                                                    ),
-                                                    e.id
-                                                )
-                                              : (0, r.jsx)(
-                                                    eE,
-                                                    ec(
-                                                        {
-                                                            locale: a,
-                                                            onDelete: () => d(e),
-                                                            selectedChannelId: null == s ? void 0 : s.id,
-                                                            selectedGuildId: null != c ? c : void 0
-                                                        },
-                                                        e
-                                                    ),
-                                                    e.id
-                                                )
-                                      )
+                                  O.sort((e, t) => Number(t.id) - Number(e.id)).map((e) =>
+                                      u
+                                          ? (0, r.jsx)(
+                                                eb,
+                                                ec(
+                                                    {
+                                                        locale: o,
+                                                        onDelete: () => d(e),
+                                                        selectedChannelId: null == s ? void 0 : s.id,
+                                                        selectedGuildId: null != c ? c : void 0
+                                                    },
+                                                    e
+                                                ),
+                                                e.id
+                                            )
+                                          : (0, r.jsx)(
+                                                eE,
+                                                ec(
+                                                    {
+                                                        locale: o,
+                                                        onDelete: () => d(e),
+                                                        selectedChannelId: null == s ? void 0 : s.id,
+                                                        selectedGuildId: null != c ? c : void 0
+                                                    },
+                                                    e
+                                                ),
+                                                e.id
+                                            )
+                                  )
                               ]
                           });
         return e
@@ -872,7 +870,7 @@ let ep = (e) => {
                           title: ei.intl.string(ei.t.HU3RFx),
                           body: ei.intl.string(ei.t.Nu5Yi4)
                       }),
-                      children: O()
+                      children: v()
                   })
               });
     };

@@ -2,8 +2,8 @@ n.d(t, { Z: () => B }), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(481060),
     l = n(287734),
     c = n(872810),
@@ -18,8 +18,8 @@ var i = n(120356),
     E = n(102172),
     b = n(592125),
     y = n(430824),
-    v = n(496675),
-    O = n(158776),
+    O = n(496675),
+    v = n(158776),
     I = n(938475),
     S = n(960870),
     T = n(139793),
@@ -40,9 +40,9 @@ var i = n(120356),
 function B(e) {
     let { user: t, currentUser: n, stream: i, className: B, onClose: V } = e,
         { themeType: F, theme: Z } = (0, A.z)(),
-        H = (0, o.e7)([y.Z], () => y.Z.getGuild(null == i ? void 0 : i.guildId)),
-        Y = (0, o.e7)([b.Z], () => b.Z.getChannel(null == i ? void 0 : i.channelId)),
-        W = (0, o.Wu)([I.ZP], () =>
+        H = (0, a.e7)([y.Z], () => y.Z.getGuild(null == i ? void 0 : i.guildId)),
+        Y = (0, a.e7)([b.Z], () => b.Z.getChannel(null == i ? void 0 : i.channelId)),
+        W = (0, a.Wu)([I.ZP], () =>
             null != Y
                 ? I.ZP.getVoiceStatesForChannel(Y).map((e) => {
                       let { user: t } = e;
@@ -50,7 +50,7 @@ function B(e) {
                   })
                 : []
         ),
-        K = (0, o.e7)([O.Z], () => O.Z.findActivity(t.id, (e) => (0, d.Z)(e) && !(0, f.Z)(e))),
+        K = (0, a.e7)([v.Z], () => v.Z.findActivity(t.id, (e) => (0, d.Z)(e) && !(0, f.Z)(e))),
         { analyticsLocations: z } = (0, p.ZP)(_.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         q = (0, S.Z)({
             display: 'live',
@@ -65,7 +65,7 @@ function B(e) {
         }),
         { previewUrl: X, isLoading: J } = (0, g.Z)(null == i ? void 0 : i.guildId, null == i ? void 0 : i.channelId, null == i ? void 0 : i.ownerId),
         [$, ee] = (0, E.wq)(Y),
-        et = (0, o.e7)([v.Z], () => null != Y && v.Z.canBasicChannel(x.S7T.CONNECT, Y)),
+        et = (0, a.e7)([O.Z], () => null != Y && O.Z.canBasicChannel(x.S7T.CONNECT, Y)),
         en = (0, u.Z)(J ? null : X),
         er = J || null == X ? en : X;
     if (null == H || null == Y || !1 === i.discoverable) return null;
@@ -80,7 +80,7 @@ function B(e) {
                   })
                 : null == er
                   ? (0, r.jsxs)(s.P3F, {
-                        className: a()(j.preview, j.overlay, { [j.clickable]: $ }),
+                        className: o()(j.preview, j.overlay, { [j.clickable]: $ }),
                         onClick: $ ? e : void 0,
                         children: [
                             (0, r.jsx)('img', {
@@ -106,7 +106,7 @@ function B(e) {
                         ]
                     })
                   : (0, r.jsxs)(s.P3F, {
-                        className: a()(j.preview, j.overlay, { [j.clickable]: $ }),
+                        className: o()(j.preview, j.overlay, { [j.clickable]: $ }),
                         onClick: $ ? e : void 0,
                         children: [
                             (0, r.jsx)('img', {
@@ -134,7 +134,7 @@ function B(e) {
                         ]
                     });
         },
-        ea = () =>
+        eo = () =>
             F !== L.lY.MODAL && F !== L.lY.MODAL_V2
                 ? null
                 : (0, r.jsxs)('div', {
@@ -162,7 +162,7 @@ function B(e) {
                           F === L.lY.MODAL_V2 && es()
                       ]
                   }),
-        eo = () =>
+        ea = () =>
             F === L.lY.MODAL || F === L.lY.MODAL_V2
                 ? null
                 : (0, r.jsx)(P.Z, {
@@ -205,9 +205,9 @@ function B(e) {
                     children: [
                         (0, r.jsxs)('div', {
                             className: k.content,
-                            children: [ei(), ea(), F === L.lY.MODAL && es()]
+                            children: [ei(), eo(), F === L.lY.MODAL && es()]
                         }),
-                        eo()
+                        ea()
                     ]
                 }),
                 F !== L.lY.MODAL && F !== L.lY.MODAL_V2 && es()

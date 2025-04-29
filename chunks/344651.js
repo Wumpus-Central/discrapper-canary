@@ -2,8 +2,8 @@ n.d(t, { Z: () => W }), n(539854), n(388685), n(997841), n(415506);
 var r = n(392711),
     i = n.n(r);
 n(724522);
-var a = n(442837),
-    o = n(570140),
+var o = n(442837),
+    a = n(570140),
     s = n(749210),
     l = n(821849),
     c = n(232567),
@@ -18,8 +18,8 @@ var a = n(442837),
     E = n(131704),
     b = n(209747),
     y = n(598077),
-    v = n(592125),
-    O = n(271383),
+    O = n(592125),
+    v = n(271383),
     I = n(819640),
     S = n(594174),
     T = n(979651),
@@ -87,8 +87,8 @@ function k(e, t) {
         r,
         i = j(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -97,8 +97,8 @@ function j(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let U = new d.Z('ConnectionStore'),
@@ -114,8 +114,8 @@ let U = new d.Z('ConnectionStore'),
                           channels: []
                       };
             let r = (0, E.q_)(t),
-                i = v.Z.getChannel(t.id),
-                a =
+                i = O.Z.getChannel(t.id),
+                o =
                     null == i
                         ? void 0
                         : i.merge(
@@ -124,7 +124,7 @@ let U = new d.Z('ConnectionStore'),
                                   bitrate: null != (n = r.bitrate) ? n : i.bitrate
                               })
                           );
-            return e.channels.push(null != a ? a : r), e;
+            return e.channels.push(null != o ? o : r), e;
         },
         (e) => 'CHANNEL_UPDATE' !== e
     ),
@@ -201,7 +201,7 @@ function W(e) {
     return Z[e];
 }
 function K(e) {
-    o.Z.dispatch(e).catch((t) =>
+    a.Z.dispatch(e).catch((t) =>
         w.Wb.resetSocketOnDispatchError({
             error: t,
             action: e.type
@@ -209,15 +209,15 @@ function K(e) {
     );
 }
 function z(e, t, n) {
-    var r, a;
-    let { roles: o, nick: s, avatar: l, avatar_decoration_data: c, flags: d, premium_since: f, pending: _, joined_at: p, communication_disabled_until: h, unusual_dm_activity_until: m } = n,
-        g = O.ZP.getMember(e, t.id);
-    (null != g && g.nick === s && g.avatar === l && i().isEqual(g.roles, o) && (0, u.sr)(null != (r = g.avatarDecoration) ? r : null, null != c ? c : null) && g.premiumSince === f && g.isPending === _ && g.joinedAt === p && g.communicationDisabledUntil === h && g.flags === d && (null != (a = g.unusualDMActivityUntil) ? a : null) === (null != m ? m : null)) ||
+    var r, o;
+    let { roles: a, nick: s, avatar: l, avatar_decoration_data: c, flags: d, premium_since: f, pending: _, joined_at: p, communication_disabled_until: h, unusual_dm_activity_until: m } = n,
+        g = v.ZP.getMember(e, t.id);
+    (null != g && g.nick === s && g.avatar === l && i().isEqual(g.roles, a) && (0, u.sr)(null != (r = g.avatarDecoration) ? r : null, null != c ? c : null) && g.premiumSince === f && g.isPending === _ && g.joinedAt === p && g.communicationDisabledUntil === h && g.flags === d && (null != (o = g.unusualDMActivityUntil) ? o : null) === (null != m ? m : null)) ||
         K({
             type: 'GUILD_MEMBER_ADD',
             guildId: e,
             user: t,
-            roles: o,
+            roles: a,
             nick: s,
             avatar: l,
             avatarDecoration: c,
@@ -255,23 +255,23 @@ function Q(e) {
     });
 }
 function X(e) {
-    let { guildId: t, user: n, status: r, activities: i, hiddenActivities: a, clientStatus: o, processedAtTimestamp: s } = e;
+    let { guildId: t, user: n, status: r, activities: i, hiddenActivities: o, clientStatus: a, processedAtTimestamp: s } = e;
     F.add({
         guildId: t,
         user: n,
         status: r,
-        clientStatus: o,
+        clientStatus: a,
         activities: i,
-        hiddenActivities: a,
+        hiddenActivities: o,
         processedAtTimestamp: s
     });
 }
 Y(
     ['INITIAL_GUILD'],
-    (e) => ('full' === e.data_mode ? null : v.o.loadGuildIds([e.id])),
+    (e) => ('full' === e.data_mode ? null : O.o.loadGuildIds([e.id])),
     (e) => {
         m.Z.initialGuild.measure(() => {
-            a.ZP.Emitter.batched(() => {
+            o.ZP.Emitter.batched(() => {
                 let t = R.Fx(e, w.Wb.identifyStartTime);
                 null != S.default.getCurrentUser() &&
                     (K({
@@ -306,7 +306,7 @@ Y(
 ),
     H(['READY_SUPPLEMENTAL'], (e) => {
         m.Z.readySupplemental.measure(() => {
-            a.ZP.Emitter.batched(() => {
+            o.ZP.Emitter.batched(() => {
                 var t, n;
                 e = m.Z.hydrateReadySupplemental.measure(() => R.r$(e, w.Wb.identifyStartTime));
                 let r = (e) =>
@@ -322,15 +322,15 @@ Y(
                 i.forEach((e) => {
                     e.presences = r(e.presences || []);
                 });
-                let a = e.presences ? r(e.presences) : [],
-                    o = (null != (t = e.lazy_private_channels) ? t : []).map((e) => (0, E.q_)(e)),
+                let o = e.presences ? r(e.presences) : [],
+                    a = (null != (t = e.lazy_private_channels) ? t : []).map((e) => (0, E.q_)(e)),
                     s = null != (n = e.game_invites) ? n : [];
                 m.Z.dispatchReadySupplemental.measure(() => {
                     K({
                         type: 'CONNECTION_OPEN_SUPPLEMENTAL',
                         guilds: i,
-                        presences: a,
-                        lazyPrivateChannels: o,
+                        presences: o,
+                        lazyPrivateChannels: a,
                         gameInvites: s
                     });
                 });
@@ -376,7 +376,7 @@ Y(
                         return !e.unavailable && 'partial' === e.data_mode && ((null != (t = e.partial_updates.channels) ? t : []).length > 0 || (null != (n = e.partial_updates.deleted_channel_ids) ? n : []).length > 0 || void 0);
                     })
                     .map((e) => e.id);
-            return Promise.all([n, null != (t = v.o.loadGuildIds(r)) ? t : Promise.resolve()]).then((e) => {
+            return Promise.all([n, null != (t = O.o.loadGuildIds(r)) ? t : Promise.resolve()]).then((e) => {
                 let [t] = e;
                 return t;
             });
@@ -384,15 +384,15 @@ Y(
         (e, t, n) => {
             if (e.user.bot) return void K({ type: 'LOGOUT' });
             m.Z.ready.measure(() => {
-                a.ZP.Emitter.batched(() => {
+                o.ZP.Emitter.batched(() => {
                     let t = (e = m.Z.hydrateReady.measure(() => R.IM(e, w.Wb.identifyStartTime, n))).private_channels.map((e) => (0, E.q_)(e)),
                         r = e.guilds.filter((e) => !0 === e.unavailable && !0 !== e.geo_restricted).map((e) => e.id),
                         i = e.guilds.filter((e) => !0 !== e.unavailable),
-                        a = e.guilds.filter((e) => !0 === e.geo_restricted);
+                        o = e.guilds.filter((e) => !0 === e.geo_restricted);
                     i.forEach((e) => {
                         e.presences = [];
                     });
-                    let o = null == e.user_settings_proto ? void 0 : (0, g.ac)(e.user_settings_proto);
+                    let a = null == e.user_settings_proto ? void 0 : (0, g.ac)(e.user_settings_proto);
                     m.Z.dispatchReady.measure(() => {
                         var n, s;
                         K({
@@ -423,11 +423,11 @@ Y(
                             pendingPayments: e.pending_payments,
                             countryCode: null != (s = e.country_code) ? s : void 0,
                             guildJoinRequests: e.guild_join_requests || [],
-                            userSettingsProto: o,
+                            userSettingsProto: a,
                             apiCodeVersion: e.api_code_version,
                             auth: e.auth,
                             notificationSettings: { flags: e.notification_settings.flags },
-                            geoRestrictedGuilds: a,
+                            geoRestrictedGuilds: o,
                             explicitContentScanVersion: e.explicit_content_scan_version,
                             failedStates: e.failed_states
                         });
@@ -497,7 +497,7 @@ Y(
     }),
     Y(
         ['MESSAGE_CREATE'],
-        (e) => v.o.loadGuildIds([e.guild_id]),
+        (e) => O.o.loadGuildIds([e.guild_id]),
         (e) => {
             q(e),
                 null != e.author &&
@@ -513,7 +513,7 @@ Y(
     ),
     Y(
         ['MESSAGE_UPDATE'],
-        (e) => v.o.loadGuildIds([e.guild_id]),
+        (e) => O.o.loadGuildIds([e.guild_id]),
         (e) => {
             q(e),
                 K({
@@ -525,7 +525,7 @@ Y(
     ),
     Y(
         ['MESSAGE_DELETE'],
-        (e) => v.o.loadGuildIds([e.guild_id]),
+        (e) => O.o.loadGuildIds([e.guild_id]),
         (e) => {
             K({
                 type: 'MESSAGE_DELETE',
@@ -537,7 +537,7 @@ Y(
     ),
     Y(
         ['MESSAGE_DELETE_BULK'],
-        (e) => v.o.loadGuildIds([e.guild_id]),
+        (e) => O.o.loadGuildIds([e.guild_id]),
         (e) => {
             K({
                 type: 'MESSAGE_DELETE_BULK',
@@ -549,7 +549,7 @@ Y(
     ),
     Y(
         ['MESSAGE_ACK'],
-        (e) => v.o.loadGuildFromChannelId(e.channel_id),
+        (e) => O.o.loadGuildFromChannelId(e.channel_id),
         (e) => {
             K({
                 type: 'MESSAGE_ACK',
@@ -578,7 +578,7 @@ Y(
     }),
     Y(
         ['CHANNEL_PINS_ACK'],
-        (e) => v.o.loadGuildIds([e.guild_id]),
+        (e) => O.o.loadGuildIds([e.guild_id]),
         (e) => {
             K({
                 type: 'CHANNEL_PINS_ACK',
@@ -590,7 +590,7 @@ Y(
     ),
     Y(
         ['CHANNEL_PINS_UPDATE'],
-        (e) => v.o.loadGuildIds([e.guild_id]),
+        (e) => O.o.loadGuildIds([e.guild_id]),
         (e) => {
             K({
                 type: 'CHANNEL_PINS_UPDATE',
@@ -601,7 +601,7 @@ Y(
     ),
     Y(
         ['CHANNEL_CREATE', 'CHANNEL_DELETE'],
-        (e) => v.o.loadGuildIds([e.guild_id]),
+        (e) => O.o.loadGuildIds([e.guild_id]),
         (e, t) => {
             K({
                 type: t,
@@ -635,14 +635,14 @@ Y(
     }),
     Y(
         ['CHANNEL_UPDATE'],
-        (e) => v.o.loadGuildIds([e.guild_id]),
+        (e) => O.o.loadGuildIds([e.guild_id]),
         (e) => {
             G.add(e);
         }
     ),
     Y(
         ['THREAD_CREATE', 'THREAD_UPDATE', 'THREAD_DELETE'],
-        (e) => v.o.loadGuildIds([e.guild_id]),
+        (e) => O.o.loadGuildIds([e.guild_id]),
         (e, t) => {
             let { newly_created: n } = e,
                 r = k(e, ['newly_created']);
@@ -655,13 +655,13 @@ Y(
     ),
     Y(
         ['THREAD_LIST_SYNC'],
-        (e) => v.o.loadGuildIds([e.guild_id]),
+        (e) => O.o.loadGuildIds([e.guild_id]),
         (e) => {
             K({
                 type: 'THREAD_LIST_SYNC',
                 guildId: e.guild_id,
                 threads: e.threads.map((e) => {
-                    let t = v.Z.getChannel(e.parent_id);
+                    let t = O.Z.getChannel(e.parent_id);
                     return null != t && ((e.nsfw = t.nsfw), (e.parentChannelThreadType = t.type)), (0, E.q_)(e);
                 }),
                 mostRecentMessages: e.most_recent_messages,
@@ -719,7 +719,7 @@ Y(
         B.add(e);
     }),
     H(['CHANNEL_RECIPIENT_ADD', 'CHANNEL_RECIPIENT_REMOVE'], (e, t) => {
-        let n = v.Z.getBasicChannel(e.channel_id);
+        let n = O.Z.getBasicChannel(e.channel_id);
         K({
             type: t,
             channelId: e.channel_id,
@@ -730,7 +730,7 @@ Y(
     }),
     Y(
         ['GUILD_CREATE'],
-        (e) => ('full' === e.data_mode ? null : v.o.loadGuildIds([e.id])),
+        (e) => ('full' === e.data_mode ? null : O.o.loadGuildIds([e.id])),
         (e) => {
             if (e.unavailable)
                 K({
@@ -794,7 +794,7 @@ Y(
                   });
     }),
     H(['GUILD_MEMBERS_CHUNK'], (e) => {
-        a.ZP.Emitter.batched(() => {
+        o.ZP.Emitter.batched(() => {
             V.add({
                 guildId: e.guild_id,
                 members: e.members,
@@ -802,13 +802,13 @@ Y(
             }),
                 null != e.presences &&
                     e.presences.forEach((t) => {
-                        let { user: n, status: r, client_status: i, activities: a, hidden_activities: o, processed_at_timestamp: s } = t;
+                        let { user: n, status: r, client_status: i, activities: o, hidden_activities: a, processed_at_timestamp: s } = t;
                         return X({
                             guildId: e.guild_id,
                             user: n,
                             status: r,
-                            activities: a,
-                            hiddenActivities: o,
+                            activities: o,
+                            hiddenActivities: a,
                             clientStatus: i,
                             processedAtTimestamp: s
                         });
@@ -817,7 +817,7 @@ Y(
         });
     }),
     H(['THREAD_MEMBER_LIST_UPDATE'], (e) => {
-        a.ZP.Emitter.batched(() => {
+        o.ZP.Emitter.batched(() => {
             K({
                 type: 'THREAD_MEMBER_LIST_UPDATE',
                 guildId: e.guild_id,
@@ -826,13 +826,13 @@ Y(
             }),
                 null != e.presences &&
                     e.presences.forEach((t) => {
-                        let { user: n, status: r, client_status: i, activities: a, hidden_activities: o, processed_at_timestamp: s } = t;
+                        let { user: n, status: r, client_status: i, activities: o, hidden_activities: a, processed_at_timestamp: s } = t;
                         return X({
                             guildId: e.guild_id,
                             user: n,
                             status: r,
-                            activities: a,
-                            hiddenActivities: o,
+                            activities: o,
+                            hiddenActivities: a,
                             clientStatus: i,
                             processedAtTimestamp: s
                         });
@@ -859,7 +859,7 @@ Y(
     }),
     Y(
         ['GUILD_ROLE_CREATE', 'GUILD_ROLE_UPDATE'],
-        (e) => v.o.loadGuildIds([e.guild_id]),
+        (e) => O.o.loadGuildIds([e.guild_id]),
         (e, t) => {
             K({
                 type: t,
@@ -870,7 +870,7 @@ Y(
     ),
     Y(
         ['GUILD_ROLE_DELETE'],
-        (e) => v.o.loadGuildIds([e.guild_id]),
+        (e) => O.o.loadGuildIds([e.guild_id]),
         (e) => {
             K({
                 type: 'GUILD_ROLE_DELETE',
@@ -1275,7 +1275,7 @@ Y(
         });
     }),
     H(['GUILD_MEMBER_LIST_UPDATE'], (e) => {
-        a.ZP.Emitter.batched(() => {
+        o.ZP.Emitter.batched(() => {
             let t = (t) => {
                 if (null == t.member) return;
                 let { member: n } = t;
@@ -1697,7 +1697,7 @@ Y(
     }),
     Y(
         ['EMBEDDED_ACTIVITY_UPDATE_V2'],
-        (e) => v.o.loadGuildIds([e.guild_id]),
+        (e) => O.o.loadGuildIds([e.guild_id]),
         (e) => {
             K({
                 type: 'EMBEDDED_ACTIVITY_UPDATE_V2',
@@ -1737,7 +1737,7 @@ Y(
     }),
     Y(
         ['CHANNEL_SYNC'],
-        (e) => v.o.loadGuildIds([e.guild_id]),
+        (e) => O.o.loadGuildIds([e.guild_id]),
         (e) => {
             e.channels.forEach((e) => {
                 G.add(e);
@@ -1760,7 +1760,7 @@ Y(
     }),
     Y(
         ['PASSIVE_UPDATE_V2'],
-        (e) => v.o.loadGuildIds([e.guild_id]),
+        (e) => O.o.loadGuildIds([e.guild_id]),
         (e) => {
             K({
                 type: 'PASSIVE_UPDATE_V2',

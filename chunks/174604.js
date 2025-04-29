@@ -1,8 +1,8 @@
-n.d(t, { Z: () => O }), n(388685), n(583741), n(953529);
+n.d(t, { Z: () => v }), n(388685), n(583741), n(953529);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(272573),
     l = n(793030),
     c = n(442837),
@@ -65,7 +65,7 @@ function y(e, t) {
         e
     );
 }
-function v(e) {
+function O(e) {
     let { powerup: t } = e;
     return (0, r.jsx)(l.xv, {
         tag: 'span',
@@ -74,14 +74,14 @@ function v(e) {
         children: t.title
     });
 }
-function O(e) {
-    let { guild: t, themeResponsive: n = !0, onButtonClick: a } = e,
+function v(e) {
+    let { guild: t, themeResponsive: n = !0, onButtonClick: o } = e,
         g = (0, f.Ek)(t.id, 'GuildBoostingMarketing'),
         b = (0, c.e7)([d.Z], () => {
             var e, n;
             return null == (n = d.Z.getStateForGuild(t.id)) || null == (e = n.powerupCatalog) ? void 0 : e[_.Us.PERK];
         }),
-        [O, I] = i.useState(!1),
+        [v, I] = i.useState(!1),
         [S, T] = (0, u.q_F)(() => ({
             scale: 0.8,
             config: {
@@ -98,30 +98,30 @@ function O(e) {
     let A = i.useMemo(() => {
         let e;
         if (null == b || 0 === b.length) return '';
-        if (1 === b.length) e = (0, r.jsx)(v, { powerup: b[0] });
+        if (1 === b.length) e = (0, r.jsx)(O, { powerup: b[0] });
         else if (2 === b.length)
             e = h.intl.format(p.default.MNO3sL, {
-                perk1: (0, r.jsx)(v, { powerup: b[0] }),
-                perk2: (0, r.jsx)(v, { powerup: b[1] })
+                perk1: (0, r.jsx)(O, { powerup: b[0] }),
+                perk2: (0, r.jsx)(O, { powerup: b[1] })
             });
         else {
             let t = b.reverse();
             e = h.intl.format(p.default.GmN3VV, {
-                perk1: (0, r.jsx)(v, { powerup: t[0] }),
-                perk2: (0, r.jsx)(v, { powerup: t[1] })
+                perk1: (0, r.jsx)(O, { powerup: t[0] }),
+                perk2: (0, r.jsx)(O, { powerup: t[1] })
             });
         }
         return h.intl.format(p.default['/6GgQk'], { perks: e });
     }, [b]);
     return g && null != b && 0 !== b.length
         ? (0, r.jsxs)(s.animated.div, {
-              className: o()(m.container, { [m.themeResponsiveContainer]: n }),
-              style: y(E({}, S), { opacity: +!!O }),
+              className: a()(m.container, { [m.themeResponsiveContainer]: n }),
+              style: y(E({}, S), { opacity: +!!v }),
               children: [
                   (0, r.jsx)(l.xv, {
                       tag: 'span',
                       variant: 'text-md/semibold',
-                      className: o()(m.description, {
+                      className: a()(m.description, {
                           [m.text]: !n,
                           [m.responsiveText]: n
                       }),
@@ -129,7 +129,7 @@ function O(e) {
                   }),
                   (0, r.jsx)(u.zxk, {
                       className: m.button,
-                      onClick: a,
+                      onClick: o,
                       children: h.intl.string(p.default.E5V5KC)
                   })
               ]

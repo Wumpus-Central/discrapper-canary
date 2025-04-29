@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(388685);
 var r = n(780384),
     i = n(147913),
-    a = n(844070),
-    o = n(981631),
+    o = n(844070),
+    a = n(981631),
     s = n(388032);
 function l(e, t, n) {
     return (
@@ -20,11 +20,11 @@ function l(e, t, n) {
 function c(e) {
     let { relationship: t } = e,
         n = t.userIgnored;
-    t.type !== o.OGo.PENDING_INCOMING || n || (r.uv.announce(s.intl.formatToPlainString(s.t.zH0kCw, { username: t.user.username })), a.T(t.user));
+    t.type !== a.OGo.PENDING_INCOMING || n || (r.uv.announce(s.intl.formatToPlainString(s.t.zH0kCw, { username: t.user.username })), o.T(t.user));
 }
 function u(e) {
     let { user: t } = e;
-    r.uv.announce(s.intl.formatToPlainString(s.t['/+7xk5'], { username: t.username })), a.z(t);
+    r.uv.announce(s.intl.formatToPlainString(s.t['/+7xk5'], { username: t.username })), o.z(t);
 }
 class d extends i.Z {
     constructor(...e) {

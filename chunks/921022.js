@@ -1,14 +1,14 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(192379),
     i = n(931609);
-function a(e) {
+function o(e) {
     let { delay: t, disable: n = !1 } = e,
-        a = (0, i.Z)();
+        o = (0, i.Z)();
     r.useEffect(() => {
         if (t <= 0 || n) return;
         let e = setTimeout(() => {
-            a();
+            o();
         }, t);
         return () => clearTimeout(e);
-    }, [t, n, a]);
+    }, [t, n, o]);
 }

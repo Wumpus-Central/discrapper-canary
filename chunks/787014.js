@@ -10,9 +10,9 @@ n.d(t, {
     n(997841);
 var r = n(544891),
     i = n(570140),
-    a = n(408987);
+    o = n(408987);
 n(777639);
-var o = n(346479);
+var a = n(346479);
 n(388610);
 var s = n(592125),
     l = n(37234),
@@ -38,14 +38,14 @@ function _(e) {
     });
 }
 function p(e) {
-    let { name: t, type: n, topic: r, bitrate: a, userLimit: o, nsfw: s, flags: l, rateLimitPerUser: c, defaultThreadRateLimitPerUser: u, defaultAutoArchiveDuration: d, template: f, defaultReactionEmoji: _, rtcRegion: p, videoQualityMode: h, autoArchiveDuration: m, locked: g, invitable: E, availableTags: b, defaultSortOrder: y, defaultForumLayout: v, defaultTagSetting: O, iconEmoji: I, themeColor: S } = e;
+    let { name: t, type: n, topic: r, bitrate: o, userLimit: a, nsfw: s, flags: l, rateLimitPerUser: c, defaultThreadRateLimitPerUser: u, defaultAutoArchiveDuration: d, template: f, defaultReactionEmoji: _, rtcRegion: p, videoQualityMode: h, autoArchiveDuration: m, locked: g, invitable: E, availableTags: b, defaultSortOrder: y, defaultForumLayout: O, defaultTagSetting: v, iconEmoji: I, themeColor: S } = e;
     i.Z.dispatch({
         type: 'CHANNEL_SETTINGS_UPDATE',
         name: t,
         channelType: n,
         topic: r,
-        bitrate: a,
-        userLimit: o,
+        bitrate: o,
+        userLimit: a,
         nsfw: s,
         flags: l,
         rateLimitPerUser: c,
@@ -60,18 +60,18 @@ function p(e) {
         invitable: E,
         availableTags: b,
         defaultSortOrder: y,
-        defaultForumLayout: v,
-        defaultTagSetting: O,
+        defaultForumLayout: O,
+        defaultTagSetting: v,
         iconEmoji: I,
         themeColor: S
     });
 }
 async function h(e, t) {
-    let { name: n, type: l, position: u, topic: d, bitrate: f, userLimit: _, nsfw: p, flags: h, permissionOverwrites: m, rateLimitPerUser: g, defaultThreadRateLimitPerUser: E, defaultAutoArchiveDuration: b, template: y, defaultReactionEmoji: v, rtcRegion: O, videoQualityMode: I, autoArchiveDuration: S, locked: T, invitable: A, availableTags: N, defaultSortOrder: C, defaultForumLayout: R, defaultTagSetting: P, iconEmoji: w, themeColor: D } = t,
+    let { name: n, type: l, position: u, topic: d, bitrate: f, userLimit: _, nsfw: p, flags: h, permissionOverwrites: m, rateLimitPerUser: g, defaultThreadRateLimitPerUser: E, defaultAutoArchiveDuration: b, template: y, defaultReactionEmoji: O, rtcRegion: v, videoQualityMode: I, autoArchiveDuration: S, locked: T, invitable: A, availableTags: N, defaultSortOrder: C, defaultForumLayout: R, defaultTagSetting: P, iconEmoji: w, themeColor: D } = t,
         L = s.Z.getChannel(e);
     return (
         i.Z.dispatch({ type: 'CHANNEL_SETTINGS_SUBMIT' }),
-        await o.Z.unarchiveThreadIfNecessary(e),
+        await a.Z.unarchiveThreadIfNecessary(e),
         r.tn
             .patch({
                 url: c.ANM.CHANNEL(e),
@@ -89,18 +89,18 @@ async function h(e, t) {
                     default_thread_rate_limit_per_user: E,
                     default_auto_archive_duration: b,
                     template: y,
-                    rtc_region: O,
+                    rtc_region: v,
                     video_quality_mode: I,
                     auto_archive_duration: S,
                     locked: T,
                     invitable: A,
                     default_reaction_emoji:
-                        null != v
+                        null != O
                             ? {
-                                  emoji_id: null == v ? void 0 : v.emojiId,
-                                  emoji_name: null == v ? void 0 : v.emojiName
+                                  emoji_id: null == O ? void 0 : O.emojiId,
+                                  emoji_name: null == O ? void 0 : O.emojiName
                               }
-                            : null === v
+                            : null === O
                               ? null
                               : void 0,
                     available_tags:
@@ -137,7 +137,7 @@ async function h(e, t) {
                         channelId: e
                     });
                     let n = null == L ? void 0 : L.getGuildId();
-                    return null == n || (null == L ? void 0 : L.isThread()) || a.Z.checkGuildTemplateDirty(n), t;
+                    return null == n || (null == L ? void 0 : L.isThread()) || o.Z.checkGuildTemplateDirty(n), t;
                 },
                 (e) => (
                     i.Z.dispatch({
@@ -159,7 +159,7 @@ function m(e) {
         })
         .then(() => {
             let e = null == t ? void 0 : t.getGuildId();
-            null == e || (null == t ? void 0 : t.isThread()) || a.Z.checkGuildTemplateDirty(e), f();
+            null == e || (null == t ? void 0 : t.isThread()) || o.Z.checkGuildTemplateDirty(e), f();
         });
 }
 let g = {

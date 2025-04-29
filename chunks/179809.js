@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => N }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -6,169 +6,167 @@ var r = n(200651),
     s = n(999153),
     a = n(272573),
     c = n(91192),
-    u = n(477690),
-    d = n(481060),
-    h = n(153867),
-    p = n(540059),
-    f = n(771845),
-    g = n(624138),
-    m = n(727258),
-    b = n(276952),
-    y = n(199540),
-    _ = n(40153),
+    u = n(866442),
+    d = n(477690),
+    h = n(481060),
+    p = n(153867),
+    f = n(591146),
+    g = n(771845),
+    m = n(624138),
+    b = n(727258),
+    y = n(276952),
+    _ = n(199540),
+    v = n(40153),
     O = n(252686),
-    v = n(682662),
-    C = n(662146),
-    j = n(388032),
-    S = n(728492),
-    E = n(335426);
-let x = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
-    I = (0, a.animated)(d.Kqy),
-    P = i.memo(function (e) {
-        let { folderNode: t, setNodeRef: n, selected: l, expanded: a, mediaState: u, mentionCount: g = 0, isMentionLowImportance: P, unread: w = !1, defaultFolderName: N, useCircleMask: Z = !1, draggable: T = !1, sorting: A = !1, onDragStart: R, onDragEnd: D, onExpandCollapse: L, onContextMenu: k, renderChildNode: M, folderIconContent: U, folderIconContentClassName: G, 'aria-setsize': B, 'aria-posinset': V } = e,
-            { id: H, name: F, children: z } = t,
-            [W, Y] = i.useState(!1),
-            [K, q] = i.useState(!1),
-            Q = W || K;
+    C = n(682662),
+    j = n(662146),
+    S = n(981631),
+    E = n(388032),
+    x = n(728492),
+    P = n(335426);
+let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
+    w = (0, a.animated)(h.Kqy),
+    N = i.memo(function (e) {
+        let { folderNode: t, setNodeRef: n, selected: l, expanded: a, mediaState: d, mentionCount: m = 0, isMentionLowImportance: N, unread: Z = !1, defaultFolderName: T, draggable: A = !1, sorting: R = !1, onDragStart: D, onDragEnd: L, onExpandCollapse: k, onContextMenu: M, renderChildNode: U, folderButtonSize: G, folderButtonContent: B, 'aria-setsize': V, 'aria-posinset': H } = e,
+            { id: F, name: z, children: W } = t,
+            [Y, K] = i.useState(!1),
+            [q, Q] = i.useState(!1),
+            X = Y || q,
+            J = (0, f.M)('FolderItem');
         i.useEffect(() => {
-            A && Y(!1);
-        }, [A]);
-        let [{ dragging: X }, J] = (0, s.c)({
-                type: m.eD.FOLDER,
+            R && K(!1);
+        }, [R]);
+        let [{ dragging: $ }, ee] = (0, s.c)({
+                type: b.eD.FOLDER,
                 item: () => (
-                    null == R || R(),
+                    null == D || D(),
                     {
-                        type: m.eD.FOLDER,
+                        type: b.eD.FOLDER,
                         nodeId: t.id
                     }
                 ),
                 end() {
-                    null == D || D(), (0, h.V1)(f.ZP.getCompatibleGuildFolders());
+                    null == L || L(), (0, p.V1)(g.ZP.getCompatibleGuildFolders());
                 },
                 collect: (e) => ({ dragging: e.isDragging() })
             }),
-            $ = i.useCallback((e) => {
-                q(e);
+            et = i.useCallback((e) => {
+                Q(e);
             }, []),
-            ee = i.useCallback(
+            en = i.useCallback(
                 (e) => {
-                    (('ArrowRight' === e.key && !a) || ('ArrowLeft' === e.key && a)) && L();
+                    (('ArrowRight' === e.key && !a) || ('ArrowLeft' === e.key && a)) && k();
                 },
-                [L, a]
+                [k, a]
             ),
-            et = null != F && '' !== F ? F : null != N && '' !== N ? N : j.intl.string(j.t.xV9hVl),
-            en = (0, c.Ie)(''.concat(H)),
-            er = 'folder-items-'.concat(H),
-            ei = (function (e) {
-                let t = (0, d.dQu)(d.TVs.modules.guildbar.AVATAR_SIZE),
-                    n = (0, p.Q3)('FolderItem.useHeight'),
-                    r = (0, d.dQu)(d.TVs.space.SPACE_XS),
-                    i = (0, d.dQu)(d.TVs.modules.guildbar.AVATAR_SIZE),
-                    l = (0, d.dQu)(d.TVs.modules.guildbar.FOLDER_SIZE),
-                    o = n ? r : 8;
-                return e * (t + o) + (n ? (l - i) / 2 - o : 0);
-            })(z.length),
-            el = (0, d.Yzy)(!X && a, {
+            er = null != z && '' !== z ? z : null != T && '' !== T ? T : E.intl.string(E.t.xV9hVl),
+            ei = (0, c.Ie)(''.concat(F)),
+            el = 'folder-items-'.concat(F),
+            eo = (function (e) {
+                let t = (0, h.dQu)(h.TVs.modules.guildbar.FOLDER_SIZE),
+                    n = (0, h.dQu)(h.TVs.modules.guildbar.AVATAR_SIZE),
+                    r = (0, h.dQu)(h.TVs.space.SPACE_XS);
+                return e * (n + r) - r + (r - (t - n) / 2) + (0, h.dQu)(h.TVs.space.SPACE_4);
+            })(W.length),
+            es = (0, h.Yzy)(!$ && a, {
                 from: { height: 0 },
                 enter: { height: 1 },
                 leave: { height: 0 },
-                config: { duration: x }
+                config: { duration: I }
             }),
-            eo = i.useCallback((e) => (null == n ? void 0 : n(H, e)), [n, H]),
-            es = (0, r.jsxs)(v.H, {
+            ea = i.useCallback((e) => (null == n ? void 0 : n(F, e)), [n, F]),
+            ec = (0, r.jsxs)(C.H, {
                 children: [
-                    (0, r.jsx)(b.Z, {
-                        disabled: X || a,
-                        hovered: W,
+                    (0, r.jsx)(y.Z, {
+                        disabled: $ || a,
+                        hovered: Y,
                         selected: l,
-                        unread: w,
-                        className: E.pill
+                        unread: Z,
+                        className: P.pill
                     }),
-                    (0, r.jsx)(C.Z, {
-                        text: et,
-                        disabled: A,
+                    (0, r.jsx)(j.Z, {
+                        text: er,
+                        disabled: R,
                         selected: l,
                         disableWrapper: !0,
                         children: (0, r.jsx)('div', {
-                            ref: T
+                            ref: A
                                 ? (e) => {
-                                      J(e);
+                                      ee(e);
                                   }
                                 : void 0,
-                            className: o()(S.folderIcon, { [E.wobble]: !X && K && !a }),
-                            'data-dnd-name': et,
-                            children: X
-                                ? (0, r.jsx)(O.Z, {})
-                                : (0, r.jsx)(y.Z, {
+                            className: o()(x.folderHeader, {
+                                [x.folderHeaderSmall]: 'icon' === G || J,
+                                [P.wobble]: !$ && q && !a
+                            }),
+                            'data-dnd-name': er,
+                            children: $
+                                ? (0, r.jsx)(O.Z, { isFolder: !0 })
+                                : (0, r.jsx)(_.Z, {
                                       folderNode: t,
                                       expanded: a,
-                                      forceCircular: Z,
-                                      sorting: A,
-                                      mediaState: u,
-                                      mentionCount: g,
-                                      isMentionLowImportance: P,
-                                      tooltipName: et,
-                                      folderGroupId: er,
-                                      onClick: L,
-                                      onContextMenu: k,
-                                      onHoverChange: Y,
-                                      onKeyDown: ee,
-                                      treeItemProps: en,
-                                      folderIconContentClassName: G,
-                                      folderIconContent: U,
-                                      'aria-setsize': B,
-                                      'aria-posinset': V
+                                      sorting: R,
+                                      mediaState: d,
+                                      mentionCount: m,
+                                      isMentionLowImportance: N,
+                                      tooltipName: er,
+                                      folderGroupId: el,
+                                      onClick: k,
+                                      onContextMenu: M,
+                                      onHoverChange: K,
+                                      onKeyDown: en,
+                                      treeItemProps: ei,
+                                      folderButtonContent: B,
+                                      'aria-setsize': V,
+                                      'aria-posinset': H
                                   })
                         })
                     }),
-                    T
-                        ? (0, r.jsx)(_.ZP, {
-                              name: et,
+                    A
+                        ? (0, r.jsx)(v.ZP, {
+                              name: er,
                               targetNode: t,
-                              onDragOverChanged: $
+                              onDragOverChanged: et
                           })
                         : null
                 ]
-            });
+            }),
+            eu = null != t.color ? t.color : S.Wyy,
+            ed = eu === S.Wyy ? void 0 : (0, u.Rf)(eu);
         return (0, r.jsxs)('div', {
-            ref: eo,
-            className: o()(S.wrapper, a && S.isExpanded),
-            'data-drop-hovering': K,
+            ref: ea,
+            className: o()(x.folderGroup, {
+                [x.isExpanded]: a,
+                [x.isHovering]: X
+            }),
+            style: { '--custom-folder-color': null != ed ? ed : '' },
+            'data-drop-hovering': q,
             children: [
-                !X &&
-                    a &&
-                    (0, r.jsx)('span', {
-                        className: o()(S.expandedFolderBackground, {
-                            [S.collapsed]: !a,
-                            [S.hover]: Q
-                        })
-                    }),
-                es,
-                el((e, n, i) => {
+                !$ && a && (0, r.jsx)('span', { className: x.folderGroupBackground }),
+                ec,
+                es((e, n, i) => {
                     let { key: l } = i;
                     return (
                         n &&
                         (0, r.jsx)(
-                            I,
+                            w,
                             {
+                                id: el,
+                                role: 'group',
                                 as: 'ul',
                                 gap: 'xs',
-                                id: er,
-                                style: {
-                                    height: e.height.to((e) => e * ei),
-                                    overflow: 'hidden'
-                                },
-                                role: 'group',
+                                className: x.folderGuildsList,
+                                style: { height: e.height.to((e) => e * eo) },
                                 'aria-label': t.name,
-                                children: z.map((t, n) => M(t, n, z.length, e.height))
+                                children: W.map((t, n) => U(t, n, W.length, e.height))
                             },
                             l
                         )
                     );
                 }),
-                T && a
-                    ? (0, r.jsx)(_.Zu, {
-                          name: et,
+                A && a
+                    ? (0, r.jsx)(v.Zu, {
+                          name: er,
                           targetNode: t
                       })
                     : null

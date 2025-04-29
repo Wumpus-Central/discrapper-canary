@@ -1,16 +1,16 @@
 n.d(t, { T: () => d }), n(388685);
 var r = n(200651),
     i = n(359959),
-    a = n(442837),
-    o = n(241601),
+    o = n(442837),
+    a = n(241601),
     s = n(406128),
     l = n(706454),
     c = n(388032),
     u = n(665903);
 function d(e) {
     let { children: t } = e,
-        n = (0, a.e7)([l.default], () => l.default.locale),
-        [d, f] = (0, o.R_)((e) => [e.isLoading, e.error], i.X);
+        n = (0, o.e7)([l.default], () => l.default.locale),
+        [d, f] = (0, a.R_)((e) => [e.isLoading, e.error], i.X);
     return null != f
         ? (0, r.jsx)(s.Z, {
               title: c.intl.formatToPlainString(c.t['7basa2'], { locale: n }),

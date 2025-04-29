@@ -6,8 +6,8 @@ n.d(t, {
     n(953529);
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(406218),
+    o = n(570140),
+    a = n(406218),
     s = n(981631);
 function l(e, t, n) {
     return (
@@ -148,7 +148,7 @@ function y(e) {
               })
           );
 }
-function v(e) {
+function O(e) {
     let { guildId: t, visibility: n } = e,
         r = _.get(t),
         i = null == r ? void 0 : r.profile;
@@ -162,7 +162,7 @@ function v(e) {
             })
         );
 }
-function O(e) {
+function v(e) {
     let { form: t, guildId: n } = e,
         r = null == t ? void 0 : t.profile;
     if (null == r) return;
@@ -190,7 +190,7 @@ function I(e) {
         { profile: n } = t;
     if (null == n) return;
     let r = _.get(n.id),
-        i = (0, o.xo)(n);
+        i = (0, a.xo)(n);
     null == r
         ? _.set(
               n.id,
@@ -220,15 +220,15 @@ function T(e) {
 function A(e) {
     var t, n, r;
     let { guild: i } = e,
-        a = _.get(i.id);
-    if (null == a || null == a.profile) return !1;
-    let o = d(c({}, a.profile), {
+        o = _.get(i.id);
+    if (null == o || null == o.profile) return !1;
+    let a = d(c({}, o.profile), {
         name: i.name,
         icon: null != (t = i.icon) ? t : null,
         description: null != (n = i.description) ? n : '',
         customBanner: null != (r = i.discovery_splash) ? r : null
     });
-    _.set(i.id, d(c({}, a), { profile: o }));
+    _.set(i.id, d(c({}, o), { profile: a }));
 }
 class N extends (r = i.ZP.Store) {
     getProfile(e) {
@@ -253,20 +253,20 @@ class N extends (r = i.ZP.Store) {
     }
 }
 l(N, 'displayName', 'GuildProfileStore');
-let C = new N(a.Z, {
+let C = new N(o.Z, {
     GUILD_PROFILE_FETCH: h,
     GUILD_PROFILE_FETCH_SUCCESS: m,
     GUILD_PROFILE_FETCH_FAILURE: g,
     GUILD_PROFILE_UPDATE: E,
     GUILD_PROFILE_UPDATE_SUCCESS: b,
     GUILD_PROFILE_UPDATE_FAILURE: y,
-    MEMBER_VERIFICATION_FORM_UPDATE: O,
+    MEMBER_VERIFICATION_FORM_UPDATE: v,
     INVITE_RESOLVE_SUCCESS: I,
     INSTANT_INVITE_CREATE_SUCCESS: I,
     CHANNEL_CREATE: S,
     GUILD_SETTINGS_SET_WIDGET: T,
     GUILD_UPDATE: A,
     GUILD_PROFILE_UPDATE_VISIBILITY: E,
-    GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS: v,
+    GUILD_PROFILE_UPDATE_VISIBILITY_SUCCESS: O,
     GUILD_PROFILE_UPDATE_VISIBILITY_FAILURE: y
 });

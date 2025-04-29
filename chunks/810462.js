@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(359959),
-    o = n(260866),
+    o = n(359959),
+    a = n(260866),
     s = n(481060),
     l = n(806966),
     c = n(28546),
@@ -10,10 +10,10 @@ var r = n(200651),
 let d = i.forwardRef(function (e, t) {
     let { store: n, hasSendableExpressions: d, onKeyDown: f, gridNavigatorId: _, expressionsListRef: p, defaultSearchPlaceholder: h, emptySearchPlaceholder: m } = e,
         g = i.useRef(null),
-        [E, b] = (0, c.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], a.X),
+        [E, b] = (0, c.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], o.X),
         y = n.useStore((e) => e.searchPlaceholder),
-        v = n.useStore((e) => e.inspectedExpressionPosition, a.X),
-        O = i.useCallback(
+        O = n.useStore((e) => e.inspectedExpressionPosition, o.X),
+        v = i.useCallback(
             (e) => {
                 var t;
                 n.setActiveCategoryIndex('' === e ? 0 : l.c), n.setInspectedExpressionPosition(0, 0), n.setSearchPlaceholder(null), (0, c.ql)(e), null == (t = p.current) || t.scrollTo(0);
@@ -47,13 +47,13 @@ let d = i.forwardRef(function (e, t) {
             placeholder: S(),
             onClear: I,
             onKeyDown: f,
-            onChange: O,
+            onChange: v,
             className: u.__invalid_searchBar,
             inputProps: {
                 'aria-haspopup': 'grid',
                 'aria-controls': _,
                 'aria-expanded': !0,
-                'aria-activedescendant': (0, o.NE)(_, v.columnIndex, v.rowIndex)
+                'aria-activedescendant': (0, a.NE)(_, O.columnIndex, O.rowIndex)
             }
         })
     });

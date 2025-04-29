@@ -4,12 +4,12 @@ n.d(t, {
 });
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
-    s = n(378409),
-    l = n(124347),
-    c = n(80966),
-    u = n(480050),
+    o = n(120356),
+    a = n.n(o),
+    s = n(124347),
+    l = n(80966),
+    c = n(480050),
+    u = n(296182),
     d = n(524444),
     f = n(52824),
     _ = n(589530),
@@ -58,7 +58,7 @@ function y(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -69,14 +69,14 @@ function v(e, t) {
         e
     );
 }
-function O(e, t) {
+function v(e, t) {
     if (null == e) return {};
     var n,
         r,
         i = I(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -85,8 +85,8 @@ function I(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function S(e) {
@@ -95,9 +95,9 @@ function S(e) {
 }
 function T(e) {
     let t,
-        { media: n, obscured: i = !1, maxWidth: a, maxHeight: s, onContextMenu: f } = e,
+        { media: n, obscured: i = !1, maxWidth: o, maxHeight: u, onContextMenu: f } = e,
         { width: p, height: E, url: y, proxyUrl: I, alt: T, type: A, maxWidth: C, maxHeight: R } = n,
-        P = O(n, ['width', 'height', 'url', 'proxyUrl', 'alt', 'type', 'maxWidth', 'maxHeight']),
+        P = v(n, ['width', 'height', 'url', 'proxyUrl', 'alt', 'type', 'maxWidth', 'maxHeight']),
         { zoomed: w, setZoomed: D } = (0, m.Y)(),
         L = N(w, y, I),
         x = null != p && 0 !== p && null != E && 0 !== E;
@@ -107,13 +107,13 @@ function T(e) {
         if (null == e) return null;
         let t = null != (M = n.renderLinkComponent) ? M : d.iT;
         return (0, r.jsx)(
-            c.Z,
-            v(b({}, P), {
+            l.Z,
+            O(b({}, P), {
                 src: L,
                 width: p,
                 height: E,
-                maxWidth: a,
-                maxHeight: s,
+                maxWidth: o,
+                maxHeight: u,
                 poster: e,
                 naturalWidth: p,
                 naturalHeight: E,
@@ -132,13 +132,13 @@ function T(e) {
         'IMAGE' === A &&
             (t = x
                 ? (0, r.jsx)(
-                      l.ZP,
-                      v(b({}, P), {
+                      s.ZP,
+                      O(b({}, P), {
                           src: L,
                           width: p,
                           height: E,
-                          maxWidth: a,
-                          maxHeight: s,
+                          maxWidth: o,
+                          maxHeight: u,
                           useFullWidth: !0,
                           shouldLink: !1,
                           className: g.media,
@@ -154,18 +154,18 @@ function T(e) {
                       onContextMenu: f,
                       className: g.dimensionlessImage,
                       style: {
-                          maxWidth: a,
-                          maxHeight: s
+                          maxWidth: o,
+                          maxHeight: u
                       }
                   })),
         null != t
-            ? (0, r.jsx)(u.Z, {
+            ? (0, r.jsx)(c.Z, {
                   width: p,
                   height: E,
-                  maxWidth: a,
-                  maxHeight: s,
+                  maxWidth: o,
+                  maxHeight: u,
                   active: w,
-                  className: o()(g.wrapper, { [g.zoomed]: w }),
+                  className: a()(g.wrapper, { [g.zoomed]: w }),
                   onClick: () => {
                       D(!w), (0, h.yg)(w ? h.uG.ZOOM_OUT_IMAGE_PRESSED : h.uG.ZOOM_IN_IMAGE_PRESSED);
                   },
@@ -176,8 +176,8 @@ function T(e) {
 }
 let A = i.memo(T);
 function N(e, t, n) {
-    return e && (0, s.rV)(t)
-        ? (0, s.s$)(t)
+    return e && p.Z.isDiscordAssetUrl(t)
+        ? (0, u.s$)(t)
         : (0, f.q)({
               proxyURL: n,
               url: t

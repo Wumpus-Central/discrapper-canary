@@ -1,8 +1,8 @@
 n.d(t, { f: () => l }), n(388685), n(781311);
 var r = n(456007),
     i = n(895924),
-    a = n(351133),
-    o = n(689079),
+    o = n(351133),
+    a = n(689079),
     s = n(388032);
 function l(e) {
     let { option: t, content: n, guildId: l, channelId: c, allowEmptyValues: u, commandOrigin: d = i.bB.CHAT } = e,
@@ -26,7 +26,7 @@ function l(e) {
                 }
               : {
                     success: !1,
-                    error: (0, o.al)(t)
+                    error: (0, a.al)(t)
                 };
     let h =
             n.length > 1
@@ -35,6 +35,6 @@ function l(e) {
                       text: f
                   }
                 : n[0],
-        m = a.Z[t.type](h, t, c, l, d);
-    return m.success || null != m.error || (m.error = (0, o.al)(t)), m;
+        m = o.Z[t.type](h, t, c, l, d);
+    return m.success || null != m.error || (m.error = (0, a.al)(t)), m;
 }

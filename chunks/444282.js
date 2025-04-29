@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(166459),
     c = n(53281),
@@ -15,11 +15,11 @@ var r = n(200651),
     m = n(98030),
     g = n(451328);
 function E(e) {
-    let { channelId: t, option: n, keyboardModeEnabled: a } = e,
+    let { channelId: t, option: n, keyboardModeEnabled: o } = e,
         E = i.useRef(null),
         [b, y] = i.useState(!1),
-        v = f.Z.getUpload(t, n.name, d.d.SlashCommand),
-        O = i.useRef(null),
+        O = f.Z.getUpload(t, n.name, d.d.SlashCommand),
+        v = i.useRef(null),
         I = (e) => {
             if (e.which === h.yXg.ENTER) {
                 var t;
@@ -51,14 +51,14 @@ function E(e) {
             [t, n]
         );
     i.useEffect(() => {
-        let e = O.current;
+        let e = v.current;
         return (
-            null == v && (null == e || e.addEventListener('dragover', S, !1), null == e || e.addEventListener('dragleave', T, !1), null == e || e.addEventListener('drop', A, !1)),
+            null == O && (null == e || e.addEventListener('dragover', S, !1), null == e || e.addEventListener('dragleave', T, !1), null == e || e.addEventListener('drop', A, !1)),
             () => {
                 null == e || e.removeEventListener('dragover', S, !1), null == e || e.removeEventListener('dragleave', T, !1), null == e || e.removeEventListener('drop', A, !1);
             }
         );
-    }, [v, S, T, A]);
+    }, [O, S, T, A]);
     let N = (e) => {
         var r, i;
         if (null != t && (null == (i = e.currentTarget) || null == (r = i.files) ? void 0 : r[0]) != null) {
@@ -76,11 +76,11 @@ function E(e) {
                 (e.currentTarget.value = '');
         }
     };
-    return null != v
+    return null != O
         ? (0, r.jsx)(p.Z, {
               channelId: t,
-              upload: v,
-              keyboardModeEnabled: a,
+              upload: O,
+              keyboardModeEnabled: o,
               draftType: d.d.SlashCommand,
               label: (0, r.jsxs)(i.Fragment, {
                   children: [
@@ -93,7 +93,7 @@ function E(e) {
                           tag: 'span',
                           variant: 'text-md/normal',
                           color: 'text-brand',
-                          children: v.filename
+                          children: O.filename
                       })
                   ]
               }),
@@ -102,14 +102,14 @@ function E(e) {
         : (0, r.jsxs)(_.Z, {
               id: n.name,
               channelId: t,
-              keyboardModeEnabled: a,
+              keyboardModeEnabled: o,
               onKeyDown: I,
-              className: o()(m.emptyOption, { [m.emptyOptionActive]: b }),
+              className: a()(m.emptyOption, { [m.emptyOptionActive]: b }),
               draftType: d.d.SlashCommand,
-              ref: O,
+              ref: v,
               children: [
                   (0, r.jsx)('span', {
-                      className: o()(m.optionName, { [m.optionNameActive]: b }),
+                      className: a()(m.optionName, { [m.optionNameActive]: b }),
                       children: n.name
                   }),
                   (0, r.jsx)(s.P3F, {

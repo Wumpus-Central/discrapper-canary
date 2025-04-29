@@ -1,8 +1,8 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(359959),
     l = n(532772),
     c = n(570220),
@@ -65,16 +65,16 @@ function b(e, t) {
     );
 }
 function y(e, t) {
-    let { disabled: n, type: a } = e,
+    let { disabled: n, type: o } = e,
         [m, E] = (0, d.Iu)((e) => [e.activeView, e.pickerId], s.X),
         y = i.useContext(c.ZP),
-        v = !1,
-        [O, I] = i.useState(!1),
+        O = !1,
+        [v, I] = i.useState(!1),
         S = m === _.X1.STICKER,
         T = !1,
         A = i.useCallback(() => {
-            (0, d.RO)(_.X1.STICKER, a);
-        }, [a]);
+            (0, d.RO)(_.X1.STICKER, o);
+        }, [o]);
     i.useEffect(() => {
         let e = () => {
                 requestAnimationFrame(() => {
@@ -97,13 +97,13 @@ function y(e, t) {
     let { Component: N, events: C, play: R } = (0, l.z)(),
         P = (0, u.Q3)('ChannelStickerPickerButton');
     if (n) return null;
-    let w = O;
+    let w = v;
     return (0, r.jsx)('div', {
-        className: o()(_.CT, h.buttonContainer),
+        className: a()(_.CT, h.buttonContainer),
         ref: t,
         children: (0, r.jsx)(
             f.Z,
-            b(g({ innerClassName: o()(h.button, h.stickerButton, { [h.stickerButtonTilted]: w && !S }) }, C), {
+            b(g({ innerClassName: a()(h.button, h.stickerButton, { [h.stickerButtonTilted]: w && !S }) }, C), {
                 onClick: () => {
                     A(), R();
                 },
@@ -112,7 +112,7 @@ function y(e, t) {
                 'aria-expanded': S,
                 'aria-haspopup': 'dialog',
                 'aria-controls': E,
-                sparkle: v,
+                sparkle: O,
                 notification: T ? f.j.UPDATE : null,
                 children: (0, r.jsx)(N, {
                     size: P ? 'refresh_sm' : void 0,
@@ -122,4 +122,4 @@ function y(e, t) {
         )
     });
 }
-let v = i.memo(i.forwardRef(y));
+let O = i.memo(i.forwardRef(y));

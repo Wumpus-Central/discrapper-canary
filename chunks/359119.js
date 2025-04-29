@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(442837),
     i = n(570140),
-    a = n(592125);
-function o(e, t, n) {
+    o = n(592125);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -88,12 +88,12 @@ function y(e) {
     let { channel: t } = e;
     null != p[t.id] && delete p[t.id], h.delete(t.id);
 }
-function v(e) {
+function O(e) {
     let { channelId: t, warningId: n, feedbackType: r } = e,
         i = p[t];
     null != i && (p[t] = i.map((e) => (e.id === n ? c(s({}, e), { feedback_type: r }) : e)));
 }
-function O(e) {
+function v(e) {
     let { channelId: t } = e,
         n = p[t];
     h.delete(t), null != n && (p[t] = n.map((e) => c(s({}, e), { dismiss_timestamp: void 0 })));
@@ -111,7 +111,7 @@ function S(e) {
 }
 function T() {
     (p = {}),
-        Object.values(a.Z.getMutablePrivateChannels()).forEach((e) => {
+        Object.values(o.Z.getMutablePrivateChannels()).forEach((e) => {
             g(e);
         });
 }
@@ -120,7 +120,7 @@ function A(e) {
 }
 class N extends r.ZP.Store {
     initialize() {
-        this.waitFor(a.Z);
+        this.waitFor(o.Z);
     }
     getChannelSafetyWarning(e, t) {
         var n;
@@ -140,8 +140,8 @@ let C = new N(i.Z, {
     CHANNEL_UPDATES: b,
     CONNECTION_OPEN: T,
     CONNECTION_OPEN_SUPPLEMENTAL: T,
-    CHANNEL_SAFETY_WARNING_FEEDBACK: v,
-    CLEAR_CHANNEL_SAFETY_WARNINGS: O,
+    CHANNEL_SAFETY_WARNING_FEEDBACK: O,
+    CLEAR_CHANNEL_SAFETY_WARNINGS: v,
     DISMISS_CHANNEL_SAFETY_WARNINGS: I,
     ACKNOWLEDGE_CHANNEL_SAFETY_WARNING_TOOLTIP: S
 });

@@ -4,19 +4,19 @@ n.d(t, {
     d$: () => l,
     hw: () => u,
     kU: () => d,
-    kY: () => o
+    kY: () => a
 });
 var r = n(570140),
     i = n(156699),
-    a = n(493683);
-async function o(e, t, n, a) {
-    let o = e.getGuildId();
-    if (null != o && t === o && !(await (0, i.u)(e, a, n))) return !1;
+    o = n(493683);
+async function a(e, t, n, o) {
+    let a = e.getGuildId();
+    if (null != a && t === a && !(await (0, i.u)(e, o, n))) return !1;
     r.Z.dispatch({
         type: 'CHANNEL_SETTINGS_PERMISSIONS_UPDATE_PERMISSION',
         id: t,
         allow: n,
-        deny: a
+        deny: o
     });
 }
 function s(e) {
@@ -46,11 +46,11 @@ function d(e, t, n, i) {
                 if (t.length > 0) {
                     let n = t.pop();
                     if (null == n) return i();
-                    a.Z.updatePermissionOverwrite(e, n).then(i, i);
+                    o.Z.updatePermissionOverwrite(e, n).then(i, i);
                 } else {
                     let t = n.pop();
                     if (null == t) return i();
-                    a.Z.clearPermissionOverwrite(e, t).then(i, i);
+                    o.Z.clearPermissionOverwrite(e, t).then(i, i);
                 }
             };
             i();

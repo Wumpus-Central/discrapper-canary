@@ -18,20 +18,20 @@ n.d(t, {
     P2: () => f,
     ie: () => i,
     jb: () => s,
-    kn: () => a,
+    kn: () => o,
     qR: () => u,
     x3: () => l
 }),
     n(35282),
     n(388685);
 let i = 'data-list-item-id',
-    a = 'data-list-id',
-    o = '___';
+    o = 'data-list-id',
+    a = '___';
 function s(e, t) {
-    return ''.concat(e).concat(o).concat(t);
+    return ''.concat(e).concat(a).concat(t);
 }
 function l(e) {
-    return e.split(o)[1];
+    return e.split(a)[1];
 }
 function c(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i;
@@ -46,7 +46,7 @@ function d(e, t, n) {
 function f(e, t) {
     let n = !1;
     return function () {
-        for (var r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
+        for (var r = arguments.length, i = Array(r), o = 0; o < r; o++) i[o] = arguments[o];
         n || (e(...i), (n = !0), setTimeout(() => (n = !1), t));
     };
 }

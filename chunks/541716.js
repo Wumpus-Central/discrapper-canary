@@ -1,14 +1,14 @@
 n.d(t, {
     Ie: () => I,
-    OW: () => a,
-    gy: () => o
+    OW: () => o,
+    gy: () => a
 });
 var r = n(873546),
     i = n(703558),
-    a = (function (e) {
+    o = (function (e) {
         return (e[(e.TOOLTIP = 0)] = 'TOOLTIP'), (e[(e.STATIC = 1)] = 'STATIC'), (e[(e.NONE = 2)] = 'NONE'), e;
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.INLINE = 1)] = 'INLINE'), (e[(e.FLUSH = 2)] = 'FLUSH'), e;
     })({});
 let s = {
@@ -298,7 +298,7 @@ let s = {
         disableAutoFocus: !0,
         showCharacterCount: !0
     },
-    v = {
+    O = {
         analyticsName: 'rules_input',
         drafts: { type: i.d.ChannelMessage },
         permissions: { requireSendMessages: !1 },
@@ -310,7 +310,7 @@ let s = {
         disableAutoFocus: !0,
         hideAccessoryBar: !0
     },
-    O = {
+    v = {
         analyticsName: 'forum_channel_guidelines',
         drafts: { type: i.d.ChannelMessage },
         permissions: { requireSendMessages: !1 },
@@ -338,10 +338,10 @@ let s = {
         USER_PROFILE_REPLY: E,
         PROFILE_BIO_INPUT: b,
         CUSTOM_GIFT: y,
-        RULES_INPUT: v,
+        RULES_INPUT: O,
         CREATE_FORUM_POST: p,
         CREATE_POLL: h,
-        FORUM_CHANNEL_GUIDELINES: O,
+        FORUM_CHANNEL_GUIDELINES: v,
         ATOMIC_REACTOR_REPLY_INPUT: {
             analyticsName: 'atomic_reator_reply_input',
             drafts: { type: i.d.ChannelMessage },

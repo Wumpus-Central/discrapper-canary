@@ -1,8 +1,8 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => v });
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(314897),
+    o = n(570140),
+    a = n(314897),
     s = n(592125),
     l = n(131951),
     c = n(496675),
@@ -33,13 +33,13 @@ function g() {
     if (null == t) e = !0;
     else {
         let n = s.Z.getChannel(t),
-            r = d.Z.getVoiceState(null == n ? void 0 : n.getGuildId(), o.default.getId());
+            r = d.Z.getVoiceState(null == n ? void 0 : n.getGuildId(), a.default.getId());
         e = l.Z.getMode() !== f.pM4.VOICE_ACTIVITY || null == n || n.isPrivate() || n.isGuildStageVoice() || c.Z.can(f.Plq.USE_VAD, n) || m(r);
     }
     if (p === e) return !1;
     (h = e),
         (p = e),
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'SET_VAD_PERMISSION',
             hasPermission: p
         });
@@ -48,7 +48,7 @@ function E(e) {
     let { voiceStates: t } = e;
     return t.some((e) => {
         let { userId: t } = e;
-        return t === o.default.getId() && g();
+        return t === a.default.getId() && g();
     });
 }
 function b() {
@@ -57,7 +57,7 @@ function b() {
 function y() {
     h = p;
 }
-class v extends (r = i.ZP.Store) {
+class O extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, l.Z, u.Z, d.Z);
     }
@@ -68,8 +68,8 @@ class v extends (r = i.ZP.Store) {
         return p;
     }
 }
-_(v, 'displayName', 'PermissionVADStore');
-let O = new v(a.Z, {
+_(O, 'displayName', 'PermissionVADStore');
+let v = new O(o.Z, {
     RTC_CONNECTION_STATE: g,
     MEDIA_ENGINE_SET_AUDIO_ENABLED: g,
     AUDIO_SET_MODE: g,

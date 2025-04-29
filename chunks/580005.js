@@ -1,13 +1,13 @@
 n.d(t, {
-    C: () => O,
+    C: () => v,
     Z: () => w
 }),
     n(35282),
     n(539854);
 var r,
     i = n(392711),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(570140),
     l = n(704907),
     c = n(581883),
@@ -70,10 +70,10 @@ function b(e, t) {
     );
 }
 let y = 10,
-    v = 100,
     O = 100,
+    v = 100,
     I = new l.ZP({
-        computeBonus: () => v,
+        computeBonus: () => O,
         computeWeight: (e) => {
             let t = 1;
             return 0 === e ? (t = 100) : e >= 1 && e < 2 ? (t = 70) : e >= 2 && e < 4 ? (t = 50) : e >= 4 && e < 7 ? (t = 30) : e >= 7 && (t = 10), t;
@@ -83,7 +83,7 @@ let y = 10,
             return null != (n = null != (t = d.Z.getGuild(e)) ? t : u.Z.getChannel(e)) ? n : u.Z.getChannel(u.Z.getDMFromUserId(e));
         },
         afterCompute: () => {},
-        numFrequentlyItems: O,
+        numFrequentlyItems: v,
         maxSamples: y
     }),
     S = null,
@@ -127,12 +127,12 @@ function C() {
     let t = null == (e = c.Z.frecencyWithoutFetchingLatest.guildAndChannelFrecency) ? void 0 : e.guildAndChannels;
     if (null == t) return !1;
     I.overwriteHistory(
-        a().mapValues(t, (e) => b(g({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
+        o().mapValues(t, (e) => b(g({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
         R.pendingUsages
     );
 }
 let R = { pendingUsages: [] };
-class P extends (r = o.ZP.PersistedStore) {
+class P extends (r = a.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(_.Z, f.Z), null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && p.Xyh.test(e.key))), (R = e)), this.syncWith([c.Z], C);
     }
@@ -157,10 +157,10 @@ class P extends (r = o.ZP.PersistedStore) {
         return null != t ? this.getScoreWithoutFetchingLatest(t) : 0;
     }
     getMaxScore() {
-        return O * y;
+        return v * y;
     }
     getBonusScore() {
-        return v;
+        return O;
     }
 }
 m(P, 'displayName', 'FrecencyStore'), m(P, 'persistKey', 'FrecencyStore');

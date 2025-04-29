@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
 var r = n(200651),
     i = n(192379),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(358555),
     l = n(706454),
     c = n(411198),
@@ -64,7 +64,7 @@ function g(e, t) {
 }
 function E(e) {
     let { profile: t } = e,
-        n = (0, a.e7)([l.default], () => l.default.locale),
+        n = (0, o.e7)([l.default], () => l.default.locale),
         p = (0, d.M)(u.default.extractTimestamp(t.id), n),
         m = i.useMemo(() => {
             let e = (0, c.$5)(t);
@@ -79,12 +79,12 @@ function E(e) {
             (0, r.jsxs)('div', {
                 className: _.nameContainer,
                 children: [
-                    (0, r.jsx)(o.ua7, {
+                    (0, r.jsx)(a.ua7, {
                         text: t.name,
                         overflowOnly: !0,
                         children: (e) =>
                             (0, r.jsx)(
-                                o.X6q,
+                                a.X6q,
                                 g(h({}, e), {
                                     className: _.guildName,
                                     variant: 'heading-lg/medium',
@@ -103,7 +103,7 @@ function E(e) {
                         className: _.memberCount,
                         children: [
                             (0, r.jsx)('div', { className: _.dotOnline }),
-                            (0, r.jsx)(o.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-secondary',
                                 children: f.intl.format(f.t['LC+S+v'], { membersOnline: t.onlineCount })
@@ -114,7 +114,7 @@ function E(e) {
                         className: _.memberCount,
                         children: [
                             (0, r.jsx)('div', { className: _.dot }),
-                            (0, r.jsx)(o.Text, {
+                            (0, r.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'text-secondary',
                                 children: f.intl.format(f.t.zRl6XV, { count: t.memberCount })
@@ -125,7 +125,7 @@ function E(e) {
             }),
             (0, r.jsx)('div', {
                 className: _.established,
-                children: (0, r.jsx)(o.Text, {
+                children: (0, r.jsx)(a.Text, {
                     variant: 'text-sm/normal',
                     color: 'text-secondary',
                     children: f.intl.format(f.t['zb2Q5+'], { createdAtDate: p })

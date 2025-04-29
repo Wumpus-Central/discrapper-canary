@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h }), n(388685);
 var r = n(186102),
     i = n(873741),
-    a = n(866960),
-    o = n(626135),
+    o = n(866960),
+    a = n(626135),
     s = n(981631);
 function l(e, t, n) {
     return (
@@ -61,14 +61,14 @@ function _(e) {
     if (Math.random() > f) return;
     let t = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
         n = (0, i.d)();
-    o.default.track(
+    a.default.track(
         s.rMx.QUEST_DECISION_ROUNDTRIP,
         c(
             d(c({}, (0, r.Z)()), {
                 endpoint: e.endpoint,
                 was_successful: e.wasSuccessful,
                 api_latency_ms: t,
-                mobile_network_type: a.Z.getType()
+                mobile_network_type: o.Z.getType()
             }),
             null != n && { mobile_signal_strength_level: n }
         )

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
 var r = n(200651),
     i = n(192379),
-    a = n(442837),
-    o = n(606992),
+    o = n(442837),
+    a = n(606992),
     s = n(314897),
     l = n(843693),
     c = n(576125),
@@ -44,17 +44,17 @@ function g(e) {
     var t, n;
     let { editorHeight: r, textValue: c, channelId: d } = e,
         _ = i.useRef(c),
-        p = (0, o.Z)({ editorHeight: r }),
+        p = (0, a.Z)({ editorHeight: r }),
         g = (0, u.Z)(),
-        E = (0, a.e7)([l.ZP, s.default], () => l.ZP.isComboing(s.default.getId(), d)),
+        E = (0, o.e7)([l.ZP, s.default], () => l.ZP.isComboing(s.default.getId(), d)),
         b = null != (t = null == p ? void 0 : p.left) ? t : 0,
         y = (null != (n = null == p ? void 0 : p.top) ? n : 0) - h,
-        v = 0 === c.length,
-        O = i.useMemo(() => Math.random() < m, [v]);
+        O = 0 === c.length,
+        v = i.useMemo(() => Math.random() < m, [O]);
     return (
         i.useEffect(() => {
-            0 !== c.length && c !== _.current && E && (g.fire(b, y, O ? { sprite: f.vv } : null), (_.current = c));
-        }, [c, E, b, y, O, g]),
+            0 !== c.length && c !== _.current && E && (g.fire(b, y, v ? { sprite: f.vv } : null), (_.current = c));
+        }, [c, E, b, y, v, g]),
         null
     );
 }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => M }), n(35282);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(503438),
     c = n(100527),
@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(273284),
     b = n(510659),
     y = n(287954),
-    v = n(660579),
-    O = n(652853),
+    O = n(660579),
+    v = n(652853),
     I = n(64621),
     S = n(448980),
     T = n(336383),
@@ -60,9 +60,9 @@ function x(e) {
 }
 function M(e) {
     var t;
-    let { user: n, currentUser: a, activity: L, profileGuildId: M, className: k, onClose: j } = e,
+    let { user: n, currentUser: o, activity: L, profileGuildId: M, className: k, onClose: j } = e,
         U = i.useRef(null),
-        { themeType: G } = (0, O.z)(),
+        { themeType: G } = (0, v.z)(),
         { interactionSource: B, interactionSourceId: V } = (0, b.Xo)(),
         F = (0, _.Z)({
             activity: L,
@@ -85,29 +85,29 @@ function M(e) {
     if (!(0, l.Z)(L)) return null;
     let z = () => {
             var e, t;
-            let a = null != (t = null == (e = L.state) ? void 0 : e.split(';')) ? t : [];
-            return 0 === a.length
+            let o = null != (t = null == (e = L.state) ? void 0 : e.split(';')) ? t : [];
+            return 0 === o.length
                 ? null
                 : null == L.sync_id
                   ? (0, r.jsx)(N.Z, {
                         variant: 'text-xs/normal',
-                        text: a.join(', ')
+                        text: o.join(', ')
                     })
                   : (0, r.jsx)(N.Z, {
                         variant: 'text-xs/normal',
-                        text: a.map((e, t) =>
+                        text: o.map((e, t) =>
                             (0, r.jsxs)(
                                 i.Fragment,
                                 {
                                     children: [
                                         (0, r.jsx)(s.P3F, {
-                                            className: o()(D.clickableText, D.inline),
+                                            className: a()(D.clickableText, D.inline),
                                             onClick: (e) => {
                                                 e.stopPropagation(), W({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, p.d$)(L, n.id, t);
                                             },
                                             children: e
                                         }),
-                                        t < a.length - 1 ? ', ' : ''
+                                        t < o.length - 1 ? ', ' : ''
                                     ]
                                 },
                                 t
@@ -127,7 +127,7 @@ function M(e) {
                   });
         },
         Q = () =>
-            n.id === a.id
+            n.id === o.id
                 ? null
                 : (0, r.jsx)('div', {
                       className: D.actions,
@@ -156,7 +156,7 @@ function M(e) {
                 sourceType: w.n_.ACTIVITY,
                 onAction: W,
                 children: () =>
-                    (0, r.jsx)(v.Z, {
+                    (0, r.jsx)(O.Z, {
                         ref: U,
                         user: n,
                         className: D.toolbarContainer,
@@ -175,7 +175,7 @@ function M(e) {
                             }),
                         children: (0, r.jsxs)(T.Z, {
                             ref: K,
-                            className: o()(k, { [D.hoisted]: J }),
+                            className: a()(k, { [D.hoisted]: J }),
                             onAction: W,
                             onClose: j,
                             children: [

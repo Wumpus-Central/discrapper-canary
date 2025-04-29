@@ -16,15 +16,15 @@ var r = n(200651),
     b = n(925549),
     y = n(493773),
     _ = n(209613),
-    O = n(100527),
-    v = n(906732),
+    v = n(100527),
+    O = n(906732),
     C = n(358221),
     j = n(540059),
     S = n(706590),
     E = n(940777),
     x = n(41776),
-    I = n(905423),
-    P = n(802718),
+    P = n(905423),
+    I = n(802718),
     w = n(822857),
     N = n(931928),
     Z = n(431286),
@@ -233,7 +233,7 @@ function eu(e) {
         l = (0, S.Z)(),
         { pathname: o } = (0, c.TH)(),
         s = o.startsWith(et.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB('')),
-        a = (0, P.U)(),
+        a = (0, I.U)(),
         u = (0, h.Wu)([R.Z, A.ZP], () => k.default.keys(R.Z.getGuilds()).filter((e) => A.ZP.isCurrentUserGuest(e))),
         d = i.concat(u);
     return (0, r.jsxs)(r.Fragment, {
@@ -290,7 +290,7 @@ function eh(e) {
         b = i.useMemo(() => (n ? [] : p), [p, n]),
         _ = (0, h.e7)([C.Z], () => C.Z.isFullscreenInContext()),
         [S, E] = i.useState(!1),
-        P = i.useCallback(() => E(!0), []),
+        I = i.useCallback(() => E(!0), []),
         A = i.useCallback(() => E(!1), []),
         R = i.useRef(!1),
         [k] = i.useState(() => new f.V7()),
@@ -338,7 +338,7 @@ function eh(e) {
         ),
         [eg]
     );
-    let { analyticsLocations: em } = (0, v.ZP)(O.Z.GUILDS_LIST),
+    let { analyticsLocations: em } = (0, O.ZP)(v.Z.GUILDS_LIST),
         { pathname: eb } = (0, c.TH)(),
         ey = eb.startsWith(et.Z5c.GUILD_DISCOVERY) || eb.startsWith(et.Z5c.GLOBAL_DISCOVERY);
     (0, y.Ng)(() => {
@@ -356,10 +356,10 @@ function eh(e) {
     }),
         i.useEffect(() => {
             if ((eg.setGuildsTree(d), R.current || 0 === d.size)) return;
-            let e = I.Z.getState().guildId;
+            let e = P.Z.getState().guildId;
             eg.scrollToGuild(e, !1);
             let t = null;
-            return I.Z.subscribe((e) => {
+            return P.Z.subscribe((e) => {
                 let { guildId: n } = e;
                 n !== t && ((t = n), eg.scrollToGuild(t, !1));
             });
@@ -371,7 +371,7 @@ function eh(e) {
         });
     }, [eg]);
     (0, U.Z)(eg.scrollToGuild);
-    let eO = i.useCallback(
+    let ev = i.useCallback(
             function e(t, n, i) {
                 switch (t.type) {
                     case M.eD.FOLDER:
@@ -382,7 +382,7 @@ function eh(e) {
                                 setNodeRef: eg.setNodeRef,
                                 draggable: !0,
                                 sorting: S,
-                                onDragStart: P,
+                                onDragStart: I,
                                 onDragEnd: A,
                                 renderChildNode: e,
                                 'aria-setsize': i,
@@ -398,7 +398,7 @@ function eh(e) {
                                 setRef: eg.setNodeRef,
                                 draggable: !0,
                                 sorting: S,
-                                onDragStart: P,
+                                onDragStart: I,
                                 onDragEnd: A,
                                 'aria-setsize': i,
                                 'aria-posinset': void 0 !== n ? n + 1 : void 0
@@ -409,27 +409,27 @@ function eh(e) {
                         return null;
                 }
             },
-            [P, A, S, eg.setNodeRef]
+            [I, A, S, eg.setNodeRef]
         ),
-        { enabled: ev } = (0, w.W)({ location: 'GuildsBar' });
+        { enabled: eO } = (0, w.W)({ location: 'GuildsBar' });
     (0, Z.i)();
     let eC = i.useRef(null),
         ej = (0, N.qp)({
-            isVirtualCurrencyEnabled: ev,
+            isVirtualCurrencyEnabled: eO,
             discoveryButtonRef: eC,
             scrollToBottom: eg.scrollToBottom
         }),
         { shouldShow: eS, questId: eE, onDiscoveryButtonClick: ex } = ej,
-        eI = es(ej, ['shouldShow', 'questId', 'onDiscoveryButtonClick']),
-        eP = ev && eS,
+        eP = es(ej, ['shouldShow', 'questId', 'onDiscoveryButtonClick']),
+        eI = eO && eS,
         ew = (0, r.jsx)(W.Z, {
             ref: eC,
-            questId: eP ? eE : void 0,
+            questId: eI ? eE : void 0,
             selected: ey,
             className: er.discoveryIcon,
-            onClick: eP ? ex : void 0
+            onClick: eI ? ex : void 0
         }),
-        eN = eP
+        eN = eI
             ? (0, r.jsx)(
                   N.fO,
                   eo(
@@ -438,7 +438,7 @@ function eh(e) {
                               targetElementRef: eC,
                               isGuildBarScrolling: $
                           },
-                          eI
+                          eP
                       ),
                       { children: ew }
                   )
@@ -452,7 +452,7 @@ function eh(e) {
             barClassName: er.unreadMentionsBar
         }),
         { pinnedSectionEnabled: eT } = (0, G.U)('GuildsBar');
-    return (0, r.jsx)(v.Gt, {
+    return (0, r.jsx)(O.Gt, {
         value: em,
         children: (0, r.jsx)(m.f6W, {
             theme: s,
@@ -500,7 +500,7 @@ function eh(e) {
                                                                       guildDiscoveryButton: eN,
                                                                       disableAppDownload: t,
                                                                       isOverlay: n,
-                                                                      renderTreeNode: eO,
+                                                                      renderTreeNode: ev,
                                                                       lurkingGuildIds: b
                                                                   })
                                                               ]
@@ -529,7 +529,7 @@ function eh(e) {
                                                       guildDiscoveryButton: eN,
                                                       disableAppDownload: t,
                                                       isOverlay: n,
-                                                      renderTreeNode: eO,
+                                                      renderTreeNode: ev,
                                                       lurkingGuildIds: b
                                                   })
                                               ]

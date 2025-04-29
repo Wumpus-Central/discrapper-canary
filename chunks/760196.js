@@ -5,8 +5,8 @@ n.d(t, {
     n(539854);
 var r = n(200651),
     i = n(192379),
-    a = n(442837),
-    o = n(998698),
+    o = n(442837),
+    a = n(998698),
     s = n(713583),
     l = n(931981),
     c = n(898188),
@@ -18,12 +18,12 @@ var r = n(200651),
     h = n(302195);
 function m(e) {
     let { channel: t, type: n, activeCommand: m, pendingReply: g, pendingScheduledMessage: E } = e,
-        { activeCommandOption: b, activeCommandOptionStates: y } = (0, a.cj)([o.Z], () => ({
-            activeCommandOption: o.Z.getActiveOption(t.id),
-            activeCommandOptionStates: o.Z.getOptionStates(t.id)
+        { activeCommandOption: b, activeCommandOptionStates: y } = (0, o.cj)([a.Z], () => ({
+            activeCommandOption: a.Z.getActiveOption(t.id),
+            activeCommandOptionStates: a.Z.getOptionStates(t.id)
         })),
-        v = (0, l.e)(t),
-        O = (0, u.LN)(t.id);
+        O = (0, l.e)(t),
+        v = (0, u.LN)(t.id);
     return i.useMemo(() => {
         let e = [],
             i = [];
@@ -53,28 +53,28 @@ function m(e) {
                         chatInputType: n
                     })
                 ),
-            v && e.push((0, r.jsx)(l.V, {})),
-            O && e.push((0, r.jsx)(d.Z, { channel: t })),
+            O && e.push((0, r.jsx)(l.V, {})),
+            v && e.push((0, r.jsx)(d.Z, { channel: t })),
             null != E && e.push((0, r.jsx)(f.y, { pendingScheduledMessage: E })),
             {
                 stacked: e,
                 floating: i
             }
         );
-    }, [m, b, y, t, g, v, n, O, E]);
+    }, [m, b, y, t, g, O, n, v, E]);
 }
 function g(e) {
     let { bars: t } = e,
         n = t.stacked.map((e, t) => (0, r.jsx)('div', { children: e }, t)),
-        a = t.floating.map((e, t) => (0, r.jsx)(i.Fragment, { children: e }, t));
-    return 0 === n.length && 0 === a.length
+        o = t.floating.map((e, t) => (0, r.jsx)(i.Fragment, { children: e }, t));
+    return 0 === n.length && 0 === o.length
         ? null
         : (0, r.jsxs)(i.Fragment, {
               children: [
-                  a.length > 0 &&
+                  o.length > 0 &&
                       (0, r.jsx)('div', {
                           className: h.floatingBars,
-                          children: a
+                          children: o
                       }),
                   n.length > 0 &&
                       (0, r.jsx)('div', {

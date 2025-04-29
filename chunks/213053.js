@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(388685);
 var r = n(192379),
     i = n(120356),
-    a = n.n(i),
-    o = n(866442),
+    o = n.n(i),
+    a = n(866442),
     s = n(442837),
     l = n(481060),
     c = n(607070),
@@ -56,16 +56,16 @@ function b(e) {
     let { theme: t, themeType: n, primaryColor: i, secondaryColor: _ } = e,
         [p, b] = (0, s.Wu)([c.Z], () => [c.Z.desaturateUserColors, c.Z.syncProfileThemeWithUserTheme]),
         y = (0, f.fq)(t),
-        v = b ? (null == y ? void 0 : y.overlaySyncedWithUserTheme) : null == y ? void 0 : y.overlay;
+        O = b ? (null == y ? void 0 : y.overlaySyncedWithUserTheme) : null == y ? void 0 : y.overlay;
     return {
         profileThemeStyle: (0, r.useMemo)(() => {
-            if (null == i || null == _ || null == y || null == v) return E;
-            let e = (e, t) => (0, o.ho)(e, p, null, t);
+            if (null == i || null == _ || null == y || null == O) return E;
+            let e = (e, t) => (0, a.ho)(e, p, null, t);
             return h(
                 {
                     '--profile-gradient-primary-color': e(i),
                     '--profile-gradient-secondary-color': e(_),
-                    '--profile-gradient-overlay-color': v,
+                    '--profile-gradient-overlay-color': O,
                     '--profile-gradient-button-color': e((0, f.ZB)(i))
                 },
                 (0, u.W4)({
@@ -76,8 +76,8 @@ function b(e) {
                     textMixAmount: 25
                 })
             );
-        }, [i, _, y, v, t, p]),
-        profileThemeClassName: a()((0, l.QeD)(t), null != n ? { [m[n]]: !0 } : void 0, {
+        }, [i, _, y, O, t, p]),
+        profileThemeClassName: o()((0, l.QeD)(t), null != n ? { [m[n]]: !0 } : void 0, {
             [d.e3]: null != i,
             [g]: null != i
         })

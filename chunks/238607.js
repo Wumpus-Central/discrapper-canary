@@ -2,8 +2,8 @@ n.d(t, { Z: () => A });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    a = n(481060),
-    o = n(40851),
+    o = n(481060),
+    a = n(40851),
     s = n(456100),
     l = n(841784),
     c = n(906732),
@@ -18,8 +18,8 @@ var i = n(442837),
     E = n(475413),
     b = n(228168),
     y = n(981631),
-    v = n(388032);
-function O(e, t, n) {
+    O = n(388032);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ function I(e) {
                 })
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
@@ -72,10 +72,10 @@ function T(e, t) {
     );
 }
 function A(e) {
-    let { user: t, activity: n, onAction: O, onClose: S } = e,
+    let { user: t, activity: n, onAction: v, onClose: S } = e,
         { newestAnalyticsLocation: A } = (0, c.ZP)(),
         { themeType: N } = (0, g.z)(),
-        C = (0, o.bp)() === y.IlC.POPOUT,
+        C = (0, a.bp)() === y.IlC.POPOUT,
         R = (0, i.e7)([h.Z, m.Z], () => h.Z.getChannel(m.Z.getChannelId())),
         P = (0, p.e)({
             activity: null != n ? n : void 0,
@@ -84,19 +84,19 @@ function A(e) {
             onClose: S
         }),
         { enabled: w } = s.c.useExperiment({ location: 'ActivityButton' }, { autoTrackExposure: !0 }),
-        D = w ? a.iWm : a.jje;
+        D = w ? o.iWm : o.jje;
     if (null == P && null != n && (0, l.Z)(n))
         return (0, r.jsx)(E.tG, {
             icon: D,
-            text: v.intl.string(v.t.RscU7O),
-            color: a.Ttl.BRAND,
-            size: N === b.lY.MODAL_V2 ? a.PhG.TINY : void 0,
+            text: O.intl.string(O.t.RscU7O),
+            color: o.Ttl.BRAND,
+            size: N === b.lY.MODAL_V2 ? o.PhG.TINY : void 0,
             fullWidth: N !== b.lY.MODAL_V2,
             themeColor: 'none',
             onClick: (e) => {
                 e.stopPropagation(),
                     null == S || S(),
-                    null == O || O({ action: 'PRESS_PLAY_BUTTON' }),
+                    null == v || v({ action: 'PRESS_PLAY_BUTTON' }),
                     (null == R ? void 0 : R.isVocal())
                         ? (0, f.Z)({
                               context: {
@@ -112,40 +112,40 @@ function A(e) {
     if (null == P) return null;
     let { isJoining: L, handleJoinRequest: x, buttonCTA: M, tooltip: k, isEnabled: j, isEmbedded: U } = P;
     return U
-        ? (0, r.jsx)(a.ua7, {
+        ? (0, r.jsx)(o.ua7, {
               text: k,
               children: (e) =>
                   (0, r.jsx)(
                       E.tG,
                       T(I({}, e), {
-                          icon: a.YVR,
+                          icon: o.YVR,
                           text: M,
                           disabled: !j,
                           submitting: L,
-                          size: N === b.lY.MODAL_V2 ? a.PhG.TINY : void 0,
+                          size: N === b.lY.MODAL_V2 ? o.PhG.TINY : void 0,
                           fullWidth: N !== b.lY.MODAL_V2,
                           themeColor: N === b.lY.MODAL_V2 ? 'secondary' : void 0,
                           onClick: (e) => {
-                              e.stopPropagation(), null == O || O({ action: 'PRESS_JOIN_BUTTON' }), x();
+                              e.stopPropagation(), null == v || v({ action: 'PRESS_JOIN_BUTTON' }), x();
                           }
                       })
                   )
           })
-        : (0, r.jsx)(a.ua7, {
+        : (0, r.jsx)(o.ua7, {
               text: k,
               children: (e) =>
                   (0, r.jsx)(
                       E.tG,
                       T(I({}, e), {
-                          icon: a.iWm,
+                          icon: o.iWm,
                           text: M,
                           disabled: !j,
                           submitting: L,
-                          size: N === b.lY.MODAL_V2 ? a.PhG.TINY : void 0,
+                          size: N === b.lY.MODAL_V2 ? o.PhG.TINY : void 0,
                           fullWidth: N !== b.lY.MODAL_V2,
                           themeColor: N === b.lY.MODAL_V2 ? 'secondary' : void 0,
                           onClick: (e) => {
-                              e.stopPropagation(), null == O || O({ action: 'PRESS_ASK_TO_JOIN_BUTTON' }), x();
+                              e.stopPropagation(), null == v || v({ action: 'PRESS_ASK_TO_JOIN_BUTTON' }), x();
                           }
                       })
                   )

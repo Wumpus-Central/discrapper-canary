@@ -1,8 +1,8 @@
 n.r(t), n(65234), n(111804), n(490233), n(97749), n(388685), n(358797);
 var r,
     i,
-    a,
     o,
+    a,
     s,
     l,
     c,
@@ -18,8 +18,8 @@ var d = n(616254),
     E = n(395727),
     b = n(471638),
     y = n(585275),
-    v = n(960048),
-    O = n(63063),
+    O = n(960048),
+    v = n(63063),
     I = n(240849),
     S = n(998502),
     T = n(513566),
@@ -56,19 +56,19 @@ if (null != D.Z) {
     null == (r = D.Z.setUncaughtExceptionHandler) ||
         r.call(D.Z, (e, t) => {
             setImmediate(() => {
-                throw (v.Z.captureCrash(e), e);
+                throw (O.Z.captureCrash(e), e);
             });
         }),
         S.ZP.appLoaded();
-    let e = null == (i = (a = D.Z.remoteApp).getVersion) ? void 0 : i.call(a),
-        t = null == (o = (s = D.Z.remoteApp).getBuildNumber) ? void 0 : o.call(s),
+    let e = null == (i = (o = D.Z.remoteApp).getVersion) ? void 0 : i.call(o),
+        t = null == (a = (s = D.Z.remoteApp).getBuildNumber) ? void 0 : a.call(s),
         n = {};
     null != D.Z.remoteApp.getModuleVersions && (n = D.Z.remoteApp.getModuleVersions()),
-        v.Z.setExtra({
+        O.Z.setExtra({
             hostVersion: e,
             moduleVersions: n
         }),
-        v.Z.setTags({ nativeBuildNumber: null == t ? void 0 : t.toString() });
+        O.Z.setTags({ nativeBuildNumber: null == t ? void 0 : t.toString() });
     let u = Object.keys(n)
         .filter((e) => null != n[e])
         .map((e) => ''.concat(e, ': ').concat(n[e]))
@@ -81,7 +81,7 @@ if (((0, P.O)(window), (0, M.Mn)(), __OVERLAY__)) K(p.Z.Overlay);
 else if (null != window.require && null == window.DiscordNative) K(p.Z.OutdatedClient);
 else {
     if ((document.addEventListener('scroll', (e) => e.preventDefault()), N.isPlatformEmbedded)) {
-        (window.onbeforeunload = () => S.ZP.beforeUnload()), S.ZP.on('HELP_OPEN', () => window.open(O.Z.getCommunityURL()));
+        (window.onbeforeunload = () => S.ZP.beforeUnload()), S.ZP.on('HELP_OPEN', () => window.open(v.Z.getCommunityURL()));
         let e = new w.sW(F, () => S.ZP.purgeMemory());
         S.ZP.on('MAIN_WINDOW_BLUR', () => {
             e.delay(), S.ZP.setFocused(!1), (0, R.T_)(window, !1);

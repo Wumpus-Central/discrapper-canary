@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l }), n(388685);
 var r = n(192379),
     i = n(846519),
-    a = n(864106),
-    o = n(215023);
+    o = n(864106),
+    a = n(215023);
 let s = 2147483647;
 function l(e) {
     let [t, n] = r.useState(!1),
@@ -11,9 +11,9 @@ function l(e) {
         r.useEffect(() => {
             let t = () => {
                 if (null == e || !('expiresAt' in e) || null == e.expiresAt) return void n(!1);
-                let r = (0, a.fO)(e);
+                let r = (0, o.fO)(e);
                 n(r);
-                let c = 1000 * e.expiresAt + o.Cm - Date.now();
+                let c = 1000 * e.expiresAt + a.Cm - Date.now();
                 if (!r && c > 0) {
                     let e = new i.V7();
                     e.start(Math.min(s, c), () => t()), (l.current = e);

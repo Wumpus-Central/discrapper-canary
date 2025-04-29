@@ -3,7 +3,7 @@ n.d(t, {
     dY: () => T,
     eC: () => R,
     jz: () => N,
-    kC: () => O,
+    kC: () => v,
     l3: () => A,
     o3: () => S,
     vP: () => C
@@ -23,8 +23,8 @@ n.d(t, {
     n(539854);
 var r = n(392711),
     i = n.n(r),
-    a = n(913527),
-    o = n.n(a),
+    o = n(913527),
+    a = n.n(o),
     s = n(866442),
     l = n(630388),
     c = n(709054),
@@ -46,21 +46,21 @@ function y(e, t, n) {
     let r = null != n.proxy_url || /^https:/i.test(n.url);
     return null != e && c.default.extractTimestamp(e) < h && (r = r && null != t && p.test(t.name)), r;
 }
-function v(e) {
-    let { url: t, proxy_url: n, width: r, height: i, placeholder: a, placeholder_version: o, description: s, flags: c } = e;
+function O(e) {
+    let { url: t, proxy_url: n, width: r, height: i, placeholder: o, placeholder_version: a, description: s, flags: c } = e;
     return {
         url: t,
         proxyURL: n,
         width: r,
         height: i,
-        placeholder: a,
-        placeholderVersion: o,
+        placeholder: o,
+        placeholderVersion: a,
         description: s,
         srcIsAnimated: (0, l.yE)(null != c ? c : 0, u.FoC.IS_ANIMATED),
         flags: null != c ? c : 0
     };
 }
-function O(e, t, n) {
+function v(e, t, n) {
     let r = {
         id: i().uniqueId('embed_'),
         url: n.url,
@@ -92,20 +92,20 @@ function O(e, t, n) {
                 name: n.provider.name,
                 url: n.provider.url
             }),
-        null != n.timestamp && (r.timestamp = o()(new Date(n.timestamp))),
+        null != n.timestamp && (r.timestamp = a()(new Date(n.timestamp))),
         null != n.color && (r.color = (0, s.ho)(n.color, !0)),
         null != n.thumbnail && b(n.thumbnail))
     )
         switch (r.type) {
             case u.hBH.ARTICLE:
             case u.hBH.IMAGE:
-                r.image = v(n.thumbnail);
+                r.image = O(n.thumbnail);
                 break;
             default:
-                r.thumbnail = v(n.thumbnail);
+                r.thumbnail = O(n.thumbnail);
         }
     if (
-        (null != n.image && b(n.image) && (r.image = v(n.image)),
+        (null != n.image && b(n.image) && (r.image = O(n.image)),
         null != n.video &&
             (null == r.thumbnail &&
                 null != n.video.proxy_url &&
@@ -115,11 +115,11 @@ function O(e, t, n) {
                     height: n.video.height,
                     url: I(n.video.proxy_url, { format: 'webp' })
                 }),
-            null != r.thumbnail && b(n.video) && y(t, n.provider, n.video) && (r.video = v(n.video))),
+            null != r.thumbnail && b(n.video) && y(t, n.provider, n.video) && (r.video = O(n.video))),
         d.k.has(r.type))
     ) {
-        var a;
-        r.fields = (null != (a = n.fields) ? a : []).map((e) => {
+        var o;
+        r.fields = (null != (o = n.fields) ? o : []).map((e) => {
             let { name: t, value: n, inline: r } = e;
             return {
                 rawName: t,
@@ -156,8 +156,8 @@ function S(e) {
     );
 }
 function T(e) {
-    let { image: t, video: n, type: r, author: i, rawTitle: a } = e;
-    return (null != t || null != n) && (r === u.hBH.GIFV || (r !== u.hBH.RICH && null == i && null == a));
+    let { image: t, video: n, type: r, author: i, rawTitle: o } = e;
+    return (null != t || null != n) && (r === u.hBH.GIFV || (r !== u.hBH.RICH && null == i && null == o));
 }
 function A(e) {
     return e.type === u.hBH.ARTICLE && null != e.url && (g.test(e.url) || m.test(e.url));

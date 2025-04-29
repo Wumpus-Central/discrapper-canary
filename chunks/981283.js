@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(199902),
-    o = n(314897),
+    o = n(199902),
+    a = n(314897),
     s = n(19780),
     l = n(20528),
     c = n(960861),
@@ -50,8 +50,8 @@ class _ extends l.Z {
     platformHandleStreamStart() {}
     platformHandleVoiceStateUpdate(e) {
         let { userId: t, sessionId: n } = e;
-        if (t !== o.default.getId() || n !== o.default.getSessionId()) return;
-        let r = a.Z.getAllActiveStreams(),
+        if (t !== a.default.getId() || n !== a.default.getSessionId()) return;
+        let r = o.Z.getAllActiveStreams(),
             i = s.Z.getChannelId();
         r.forEach((e) => {
             e.channelId !== i && (0, u.Z)(e, !1);

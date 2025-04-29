@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T }), n(804061), n(704826), n(35282);
 var r = n(200651),
     i = n(192379),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(706454),
     l = n(594174),
     c = n(49012),
@@ -17,32 +17,32 @@ var r = n(200651),
     E = n(297781),
     b = n(591853),
     y = n(410441),
-    v = n(981631),
-    O = n(388032);
+    O = n(981631),
+    v = n(388032);
 let I = (e, t, n) => {
-        let r = O.t.LHF6Dw,
+        let r = v.t.LHF6Dw,
             i = u.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
-            a = e.extra.media_title;
-        return O.intl
+            o = e.extra.media_title;
+        return v.intl
             .formatToMarkdownString(r, {
-                mediaTitle: a,
+                mediaTitle: o,
                 userName: i,
                 episodeDescription: e.extra.media_subtitle
             })
             .replaceAll('*', '');
     },
     S = (e, t) =>
-        O.intl.formatToPlainString(O.t.kCbfbG, {
+        v.intl.formatToPlainString(v.t.kCbfbG, {
             username: t.username,
             activity: e.extra.media_title
         }),
     T = (e) => {
         let { channel: t, entry: n, onReaction: u, onVoiceChannelPreview: T } = e,
-            A = (0, a.e7)([l.default], () => l.default.getUser(n.author_id)),
+            A = (0, o.e7)([l.default], () => l.default.getUser(n.author_id)),
             { largeImage: N } = (0, f.rv)({ entry: n }),
             { primaryColor: C, secondaryColor: R } = (0, m.Z)(null == N ? void 0 : N.src),
-            P = (0, a.e7)([s.default], () => s.default.locale),
-            w = (0, h.Z)(v.ABu.CRUNCHYROLL),
+            P = (0, o.e7)([s.default], () => s.default.locale),
+            w = (0, h.Z)(O.ABu.CRUNCHYROLL),
             D = (0, _.ap)(n.extra.media_assets_large_text),
             L = i.useCallback(
                 (e) => {
@@ -78,13 +78,13 @@ let I = (e, t, n) => {
                       (0, r.jsx)(b.wG, {
                           channel: t,
                           entry: n,
-                          userDescription: (0, _.kr)(n) ? O.t['LH+Z39'] : O.t.YuKgmp,
+                          userDescription: (0, _.kr)(n) ? v.t['LH+Z39'] : v.t.YuKgmp,
                           title: n.extra.media_title,
                           subtitle: n.extra.media_subtitle,
                           headerIcons: (0, r.jsx)(y.Z, {
                               onClick: w,
-                              Icon: o.omf,
-                              'aria-label': O.intl.string(O.t.jdJYX1)
+                              Icon: a.omf,
+                              'aria-label': v.intl.string(v.t.jdJYX1)
                           }),
                           badges: (0, r.jsx)(E.Gk, {
                               location: E.Gt.POPOUT,

@@ -27,7 +27,7 @@ function i(e) {
     }
     return e;
 }
-function a(e, t) {
+function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -39,12 +39,12 @@ function a(e, t) {
     }
     return n;
 }
-function o(e, t) {
+function a(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : a(Object(t)).forEach(function (n) {
+            : o(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -56,8 +56,8 @@ function s(e, t) {
         r,
         i = l(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -66,8 +66,8 @@ function l(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function c(e, t) {
@@ -104,7 +104,7 @@ let f = (0, n(290486).U)(() => ({
             },
             setImgCache: (t, n, r) => {
                 e.setState((e) => ({
-                    imgCache: o(i({}, e.imgCache), {
+                    imgCache: a(i({}, e.imgCache), {
                         [t]: {
                             animatedUrl: n,
                             staticUrl: r
@@ -120,7 +120,7 @@ let f = (0, n(290486).U)(() => ({
             toolsCache: e.getState().toolsCache,
             setToolsCache: (t, n, r) => {
                 e.setState((e) => ({
-                    toolsCache: o(i({}, e.toolsCache), {
+                    toolsCache: a(i({}, e.toolsCache), {
                         [t]: {
                             url: n,
                             palette: r

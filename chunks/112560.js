@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     s = n(600164),
     l = n(993135);
 function c(e) {
@@ -25,11 +25,11 @@ function u(e) {
             !p &&
                 null != _ &&
                 (0, r.jsx)('div', {
-                    className: a()(l.art, l[d]),
+                    className: o()(l.art, l[d]),
                     style: { backgroundImage: 'url('.concat(_, ')') }
                 }),
             null != i
-                ? (0, r.jsx)(o.Text, {
+                ? (0, r.jsx)(a.Text, {
                       color: 'none',
                       variant: 'text-md/semibold',
                       className: l.header,
@@ -37,7 +37,7 @@ function u(e) {
                   })
                 : null,
             null != u
-                ? (0, r.jsx)(o.Text, {
+                ? (0, r.jsx)(a.Text, {
                       className: l.errorCodeMessage,
                       variant: 'text-sm/semibold',
                       color: 'text-muted',
@@ -46,7 +46,7 @@ function u(e) {
                   })
                 : null,
             null != c && (null == u || 'small' !== d)
-                ? (0, r.jsx)(o.Text, {
+                ? (0, r.jsx)(a.Text, {
                       color: 'none',
                       className: l.description,
                       variant: 'text-sm/medium',
@@ -55,11 +55,11 @@ function u(e) {
                 : null,
             h || null == n
                 ? null
-                : (0, r.jsx)(o.zxk, {
+                : (0, r.jsx)(a.zxk, {
                       className: l.outerButton,
-                      size: o.zxk.Sizes.NONE,
-                      color: o.zxk.Colors.WHITE,
-                      look: o.zxk.Looks.BLANK,
+                      size: a.zxk.Sizes.NONE,
+                      color: a.zxk.Colors.WHITE,
+                      look: a.zxk.Looks.BLANK,
                       innerClassName: l.button,
                       onClick: (e) => {
                           e.stopPropagation(), null == t || t(e);

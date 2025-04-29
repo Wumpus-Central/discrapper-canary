@@ -1,8 +1,8 @@
 n.d(t, { Z: () => s });
 var r = n(126387),
     i = n(632471),
-    a = n(205208),
-    o = n(740078);
+    o = n(205208),
+    a = n(740078);
 function s(e) {
     var t,
         n = e.reference,
@@ -13,25 +13,25 @@ function s(e) {
         d = n.x + n.width / 2 - s.width / 2,
         f = n.y + n.height / 2 - s.height / 2;
     switch (c) {
-        case o.we:
+        case a.we:
             t = {
                 x: d,
                 y: n.y - s.height
             };
             break;
-        case o.I:
+        case a.I:
             t = {
                 x: d,
                 y: n.y + n.height
             };
             break;
-        case o.F2:
+        case a.F2:
             t = {
                 x: n.x + n.width,
                 y: f
             };
             break;
-        case o.t$:
+        case a.t$:
             t = {
                 x: n.x - s.width,
                 y: f
@@ -43,14 +43,14 @@ function s(e) {
                 y: n.y
             };
     }
-    var _ = c ? (0, a.Z)(c) : null;
+    var _ = c ? (0, o.Z)(c) : null;
     if (null != _) {
         var p = 'y' === _ ? 'height' : 'width';
         switch (u) {
-            case o.BL:
+            case a.BL:
                 t[_] = t[_] - (n[p] / 2 - s[p] / 2);
                 break;
-            case o.ut:
+            case a.ut:
                 t[_] = t[_] + (n[p] / 2 - s[p] / 2);
         }
     }

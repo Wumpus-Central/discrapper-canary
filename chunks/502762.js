@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(576635),
     c = n(213053),
@@ -10,7 +10,7 @@ var r = n(200651),
     d = n(750883);
 let f = Object.assign(
     i.forwardRef(function (e, t) {
-        let { user: n, displayProfile: i, themeType: a, className: f, pendingThemeColors: _, themeOverride: p, children: h, forceShowPremium: m = !1 } = e,
+        let { user: n, displayProfile: i, themeType: o, className: f, pendingThemeColors: _, themeOverride: p, children: h, forceShowPremium: m = !1 } = e,
             {
                 theme: g,
                 primaryColor: E,
@@ -21,14 +21,14 @@ let f = Object.assign(
                 pendingThemeColors: _,
                 isPreview: m
             }),
-            { profileThemeStyle: y, profileThemeClassName: v } = (0, c.Z)({
+            { profileThemeStyle: y, profileThemeClassName: O } = (0, c.Z)({
                 theme: null != p ? p : g,
-                themeType: a,
+                themeType: o,
                 primaryColor: E,
                 secondaryColor: b
             });
         return (0, r.jsx)('div', {
-            className: o()(d.outer, v, f),
+            className: a()(d.outer, O, f),
             style: y,
             ref: t,
             children: (0, r.jsx)('div', {
@@ -36,7 +36,7 @@ let f = Object.assign(
                 children: (0, r.jsx)(s.ze6, {
                     theme: null != p ? p : g,
                     children: (0, r.jsx)(u.X, {
-                        themeType: a,
+                        themeType: o,
                         theme: null != p ? p : g,
                         primaryColor: E,
                         secondaryColor: b,
@@ -51,7 +51,7 @@ let f = Object.assign(
             let { children: n, className: i } = e;
             return (0, r.jsx)('div', {
                 ref: t,
-                className: o()(d.overlay, i),
+                className: a()(d.overlay, i),
                 children: n
             });
         })

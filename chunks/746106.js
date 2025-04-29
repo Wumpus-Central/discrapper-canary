@@ -1,8 +1,8 @@
 n.d(t, { w: () => y }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(607070),
@@ -18,11 +18,11 @@ var r = n(200651),
     b = n(892071);
 function y(e) {
     let { windowKey: t, children: n } = e,
-        a = null != t,
+        o = null != t,
         [y] = i.useState(() => g.ZP.getEnableHardwareAcceleration()),
         {
-            locale: v,
-            theme: O,
+            locale: O,
+            theme: v,
             focused: I,
             currentWindow: S,
             fontScale: T,
@@ -40,8 +40,8 @@ function y(e) {
             return {
                 locale: p.default.locale,
                 theme: h.Z.theme,
-                focused: a ? f.Z.getWindowFocused(t) : m.Z.isFocused(),
-                currentWindow: a && null != (e = f.Z.getWindow(t)) ? e : window,
+                focused: o ? f.Z.getWindowFocused(t) : m.Z.isFocused(),
+                currentWindow: o && null != (e = f.Z.getWindow(t)) ? e : window,
                 fontScale: c.Z.fontScale,
                 fontScaleClass: c.Z.fontScaleClass,
                 keyboardModeEnabled: c.Z.keyboardModeEnabled,
@@ -61,13 +61,13 @@ function y(e) {
         U = (0, d.M)('RootThemeContextProvider'),
         G = (0, d.C)('RootThemeContextProvider');
     return (0, r.jsx)(l.wMY, {
-        theme: O,
+        theme: v,
         flags: k,
         saturation: C,
         density: j,
         children: (0, r.jsx)(b.cE, {
-            lang: v,
-            theme: O,
+            lang: O,
+            theme: v,
             density: j,
             focused: I,
             fontScale: T,
@@ -81,7 +81,7 @@ function y(e) {
             useReducedMotion: D,
             alwaysShowLinkDecorations: L,
             hardwareAccelerationEnabled: y,
-            rootClassName: o()({
+            rootClassName: a()({
                 'confetti-mode': x,
                 'refresh-fast-follow-avatars': U,
                 'refresh-fast-follow-guild-bg': G

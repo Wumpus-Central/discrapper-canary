@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(592125),
+    o = n(570140),
+    a = n(592125),
     s = n(757266),
     l = n(375954);
 function c(e, t, n) {
@@ -34,7 +34,7 @@ function p(e) {
 }
 class h extends (r = i.ZP.Store) {
     initialize() {
-        this.waitFor(o.Z, s.Z, l.Z);
+        this.waitFor(a.Z, s.Z, l.Z);
     }
     getApps() {
         return d;
@@ -44,7 +44,7 @@ class h extends (r = i.ZP.Store) {
     }
 }
 c(h, 'displayName', 'AuthorizedAppsStore');
-let m = new h(a.Z, {
+let m = new h(o.Z, {
     USER_AUTHORIZED_APPS_REQUEST: _,
     USER_AUTHORIZED_APPS_UPDATE: p
 });

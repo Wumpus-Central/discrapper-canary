@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(297700),
     c = n(665786),
@@ -84,7 +84,7 @@ function E(e) {
 }
 class b extends i.PureComponent {
     renderBadge(e, t, n) {
-        let { className: i, badgeStrokeColor: a, tooltipColor: c = s.ua7.Colors.BRAND, tooltipPosition: u, tooltipDelay: d, size: f = 16, badgeColor: p, iconClassName: m, flowerStarClassName: b } = this.props,
+        let { className: i, badgeStrokeColor: o, tooltipColor: c = s.ua7.Colors.BRAND, tooltipPosition: u, tooltipDelay: d, size: f = 16, badgeColor: p, iconClassName: m, flowerStarClassName: b } = this.props,
             y = E(e);
         return (0, r.jsx)(s.ua7, {
             color: c,
@@ -96,14 +96,14 @@ class b extends i.PureComponent {
                     return (0, r.jsx)(
                         l.Z,
                         g(h({}, s), {
-                            className: o()(n, i),
+                            className: a()(n, i),
                             flowerStarClassName: b,
                             color: p,
-                            stroke: a,
+                            stroke: o,
                             size: f,
                             children: (0, r.jsx)(t, {
                                 size: 'xxs',
-                                className: o()(_.icon, m),
+                                className: a()(_.icon, m),
                                 color: 'currentColor'
                             })
                         })
@@ -116,10 +116,10 @@ class b extends i.PureComponent {
                     return (0, r.jsx)(
                         'div',
                         g(h({}, s), {
-                            className: o()(n, i),
+                            className: a()(n, i),
                             style: e,
                             children: (0, r.jsx)(t, {
-                                className: o()(_.icon, m),
+                                className: a()(_.icon, m),
                                 color: 'currentColor'
                             })
                         })

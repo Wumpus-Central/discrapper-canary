@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(192379),
     i = n(367907),
-    a = n(339085),
-    o = n(689789),
+    o = n(339085),
+    a = n(689789),
     s = n(407477),
     l = n(592125),
     c = n(944486),
@@ -54,19 +54,19 @@ function b(e) {
     var t;
     let { intention: n, containerWidth: r, rowSize: m, isBurstReaction: E, analyticsObject: b } = e,
         y = l.Z.getChannel(c.Z.getChannelId()),
-        v = null == y ? void 0 : y.getGuildId(),
-        { canSplitFrecencyList: O } = o.Z.getCurrentConfig({ location: 'trackOnEmojiPickerOpened' }, { autoTrackExposure: !0 }),
+        O = null == y ? void 0 : y.getGuildId(),
+        { canSplitFrecencyList: v } = a.Z.getCurrentConfig({ location: 'trackOnEmojiPickerOpened' }, { autoTrackExposure: !0 }),
         I = (0, s.E2)({
             location: 'trackOnEmojiPickerOpened',
             autoTrackExposure: !0
         });
     s.Xb.trackExposure({ location: 'trackOnEmojiPickerOpened' });
-    let S = (O || I) && n === p.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.frequently.slice() : a.ZP.emojiFrecencyWithoutFetchingLatest.frequently.slice(),
-        T = null != y ? a.ZP.getDisambiguatedEmojiContext(y.getGuildId()).favoriteEmojisWithoutFetchingLatest : [],
-        A = (O || I) && n === p.Hz.REACTION ? a.ZP.emojiReactionFrecencyWithoutFetchingLatest.numFrequentlyItems : a.ZP.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems,
+    let S = (v || I) && n === p.Hz.REACTION ? o.ZP.emojiReactionFrecencyWithoutFetchingLatest.frequently.slice() : o.ZP.emojiFrecencyWithoutFetchingLatest.frequently.slice(),
+        T = null != y ? o.ZP.getDisambiguatedEmojiContext(y.getGuildId()).favoriteEmojisWithoutFetchingLatest : [],
+        A = (v || I) && n === p.Hz.REACTION ? o.ZP.emojiReactionFrecencyWithoutFetchingLatest.numFrequentlyItems : o.ZP.emojiFrecencyWithoutFetchingLatest.numFrequentlyItems,
         N = S.slice(0, A),
-        C = null != v ? a.ZP.getGuildEmoji(v) : [],
-        R = Object.values(null != (t = a.ZP.getDisambiguatedEmojiContext(null == y ? void 0 : y.getGuildId()).groupedCustomEmojis) ? t : {}).reduce((e, t) => (e += t.length), 0),
+        C = null != O ? o.ZP.getGuildEmoji(O) : [],
+        R = Object.values(null != (t = o.ZP.getDisambiguatedEmojiContext(null == y ? void 0 : y.getGuildId()).groupedCustomEmojis) ? t : {}).reduce((e, t) => (e += t.length), 0),
         { topEmojis: P, newlyAddedEmojis: w } = (0, f._)({
             guildId: null == y ? void 0 : y.getGuildId(),
             pickerIntention: n

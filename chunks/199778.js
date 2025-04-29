@@ -1,9 +1,9 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => v });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(481060),
     l = n(927359),
     c = n(975298),
@@ -56,7 +56,7 @@ function y(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -67,23 +67,23 @@ function v(e, t) {
         e
     );
 }
-function O(e) {
+function v(e) {
     let { hide: t, pillClassName: n, containerClassName: i } = e,
         { fractionalState: E, endsAt: y } = (0, c.Z)(),
-        O = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
+        v = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
         I = (0, l.ZP)(y, l.aj.LONG_TIME_LEFT);
-    if (!0 === t || !(0, d.y)('guild_boosting_fractional_premium_pill', O, E)) return null;
+    if (!0 === t || !(0, d.y)('guild_boosting_fractional_premium_pill', v, E)) return null;
     let S = m.intl.format(m.t['4RgA6O'], { helpCenterLink: p.Z.getArticleURL(h.BhN.FRACTIONAL_PREMIUM_ABOUT) });
     return (0, r.jsx)(u.Z, {
         text: S,
         'aria-label': null == S ? void 0 : S.toString(),
         tooltipClassName: g.tooltip,
-        className: a()(g.unavailableCounterContainer, i),
+        className: o()(g.unavailableCounterContainer, i),
         children: (e) =>
             (0, r.jsxs)(
                 'div',
-                v(b({}, e), {
-                    className: a()(g.unavailableCounterPill, n),
+                O(b({}, e), {
+                    className: o()(g.unavailableCounterPill, n),
                     children: [
                         (0, r.jsx)(s.Text, {
                             variant: 'text-sm/bold',

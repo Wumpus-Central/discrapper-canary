@@ -1,7 +1,7 @@
 n.d(t, {
     EM: () => y,
     WW: () => _,
-    ZP: () => O
+    ZP: () => v
 });
 var r = n(200651),
     i = n(192379),
@@ -53,9 +53,9 @@ function _(e, t) {
         }
     }
 }
-let O = i.memo(function (e) {
-    let { sectionIndex: t, guild: n, guildChannels: b, guildChannelsVersion: y, selectedChannelId: _, disableManageChannels: O } = e,
-        { isFavoritesPerk: v } = (0, a.z)('ChannelListSection'),
+let v = i.memo(function (e) {
+    let { sectionIndex: t, guild: n, guildChannels: b, guildChannelsVersion: y, selectedChannelId: _, disableManageChannels: v } = e,
+        { isFavoritesPerk: O } = (0, a.z)('ChannelListSection'),
         C = i.useCallback(() => {
             let e = b.getCategoryFromSection(b.recentsSectionNumber);
             if (null == e) return;
@@ -73,7 +73,7 @@ let O = i.memo(function (e) {
             if (n.hasFeature(f.oNc.HUB)) return null;
             return (0, r.jsx)('div', { style: { height: E } });
         case d.p2:
-            return (0, r.jsx)(h.P, { name: v ? g.intl.string(g.t.mlPMCw) : g.intl.string(g.t.k8fFjo) });
+            return (0, r.jsx)(h.P, { name: O ? g.intl.string(g.t.mlPMCw) : g.intl.string(g.t.k8fFjo) });
         case b.recentsSectionNumber:
             return (0, r.jsx)(h.P, {
                 name: g.intl.string(g.t.gKcrqK),
@@ -100,7 +100,7 @@ let O = i.memo(function (e) {
             return (0, r.jsx)(h.ZP, {
                 channel: e.record,
                 position: e.position,
-                disableManageChannels: O,
+                disableManageChannels: v,
                 children: (0, r.jsx)(u.Z, {
                     inlineSpecs: p.MF,
                     arrowAlignment: o.cy.TOP,
@@ -115,7 +115,7 @@ let O = i.memo(function (e) {
             return (0, r.jsx)(h.ZP, {
                 channel: e.record,
                 position: e.position,
-                disableManageChannels: O
+                disableManageChannels: v
             });
         }
     }

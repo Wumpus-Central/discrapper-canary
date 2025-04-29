@@ -6,8 +6,8 @@ n.d(t, {
     n(35282);
 var r = n(593473),
     i = n(243814),
-    a = n(149765),
-    o = n(592125),
+    o = n(149765),
+    a = n(592125),
     s = n(914010),
     l = n(700785),
     c = n(713938);
@@ -20,10 +20,10 @@ function d(e) {
     let f = (0, r.parse)(e, { arrayFormat: 'bracket' }),
         _ = l.Hn;
     try {
-        _ = a.vB(null != f.permissions && '' !== f.permissions ? f.permissions : '0');
+        _ = o.vB(null != f.permissions && '' !== f.permissions ? f.permissions : '0');
     } catch (e) {}
     let p = f.channel_id,
-        h = null != (c = null != (i = null != (n = f.guild_id) ? n : null == (t = o.Z.getChannel(p)) ? void 0 : t.guild_id) ? i : s.Z.getGuildId()) ? c : void 0;
+        h = null != (c = null != (i = null != (n = f.guild_id) ? n : null == (t = a.Z.getChannel(p)) ? void 0 : t.guild_id) ? i : s.Z.getGuildId()) ? c : void 0;
     return {
         clientId: null != (u = f.client_id) ? u : '',
         scopes: (null != (d = f.scope) ? d : '').split(' ').filter((e) => e.length > 0),

@@ -1,25 +1,25 @@
-n.d(t, { f: () => a });
+n.d(t, { f: () => o });
 let r = 1000,
     i = window;
-function a(e, t) {
+function o(e, t) {
     let n = i;
     if (void 0 !== n && null != n.requestIdleCallback && null != n.cancelIdleCallback) {
-        var a;
+        var o;
         let i = !1,
-            o = null,
+            a = null,
             s = () => {
-                i || ((i = !0), null != o && (n.clearTimeout(o), (o = null)), e());
+                i || ((i = !0), null != a && (n.clearTimeout(a), (a = null)), e());
             },
             l = n.requestIdleCallback(s, t);
         return (
-            (o = n.setTimeout(
+            (a = n.setTimeout(
                 () => {
                     i || n.cancelIdleCallback(l), s();
                 },
-                null != (a = null == t ? void 0 : t.timeout) ? a : r
+                null != (o = null == t ? void 0 : t.timeout) ? o : r
             )),
             () => {
-                n.cancelIdleCallback(l), null != o && (n.clearTimeout(o), (o = null));
+                n.cancelIdleCallback(l), null != a && (n.clearTimeout(a), (a = null));
             }
         );
     }

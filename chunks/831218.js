@@ -16,15 +16,15 @@ var r,
     b = n(702321),
     y = n(46148),
     _ = n(82295),
-    O = n(313201),
-    v = n(540059),
+    v = n(313201),
+    O = n(540059),
     C = n(860144),
     j = n(214852),
     S = n(518311),
     E = n(355298),
     x = n(869404),
-    I = n(333984),
-    P = n(210887),
+    P = n(333984),
+    I = n(210887),
     w = n(592125),
     N = n(158776),
     Z = n(55589),
@@ -466,23 +466,23 @@ class G extends (r = l.Component) {
 L(G, 'defaultProps', { padding: 8 });
 let B = (e) => {
     var t;
-    let n = (0, v.Q3)('ConnectedPrivateChannelsList'),
+    let n = (0, O.Q3)('ConnectedPrivateChannelsList'),
         { density: r } = (0, h.TCT)(),
         { version: o, theme: s, children: d, showDMHeader: p } = e,
         g = l.Children.count(d),
         m = w.Z.getMutablePrivateChannels(),
         b = (0, x.k1)(m),
         y = (0, u.Wu)(
-            [Z.Z, E.Z, I.Z],
+            [Z.Z, E.Z, P.Z],
             () => {
                 let e = Z.Z.getPrivateChannelIds();
-                return (0, x.tU)(e, [E.Z, I.Z]);
+                return (0, x.tU)(e, [E.Z, P.Z]);
             },
             []
         );
     (0, j.z)(C.R);
-    let _ = (0, u.cj)([f.Z, P.Z, w.Z], () => ({
-            theme: P.Z.darkSidebar ? A.BRd.DARK : s,
+    let _ = (0, u.cj)([f.Z, I.Z, w.Z], () => ({
+            theme: I.Z.darkSidebar ? A.BRd.DARK : s,
             keyboardModeEnabled: f.Z.keyboardModeEnabled,
             version: null != o ? ''.concat(o, ':').concat(w.Z.getPrivateChannelsVersion()) : w.Z.getPrivateChannelsVersion()
         })),
@@ -528,7 +528,7 @@ let B = (e) => {
                 }),
             [N]
         ),
-        L = (0, O.Dt)(),
+        L = (0, v.Dt)(),
         U = (0, c.ZP)({
             id: 'private-channels-'.concat(L),
             isEnabled: _.keyboardModeEnabled,

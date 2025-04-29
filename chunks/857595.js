@@ -1,5 +1,5 @@
 n.d(t, {
-    Ej: () => O,
+    Ej: () => v,
     Nc: () => E,
     Qj: () => _,
     TX: () => I,
@@ -13,15 +13,15 @@ n.d(t, {
     lq: () => m,
     o2: () => b,
     oL: () => u,
-    qz: () => v,
+    qz: () => O,
     r_: () => g,
     rf: () => p,
     u1: () => T
 });
 var r = n(570140),
     i = n(153867),
-    a = n(626135),
-    o = n(607070),
+    o = n(626135),
+    a = n(607070),
     s = n(981631),
     l = n(969943),
     c = n(611480);
@@ -45,10 +45,10 @@ function f(e) {
     });
 }
 function _() {
-    r.Z.dispatch({ type: 'ACCESSIBILITY_KEYBOARD_MODE_ENABLE' }), a.default.track(s.rMx.KEYBOARD_MODE_TOGGLED, { enabled: !0 });
+    r.Z.dispatch({ type: 'ACCESSIBILITY_KEYBOARD_MODE_ENABLE' }), o.default.track(s.rMx.KEYBOARD_MODE_TOGGLED, { enabled: !0 });
 }
 function p() {
-    r.Z.dispatch({ type: 'ACCESSIBILITY_KEYBOARD_MODE_DISABLE' }), a.default.track(s.rMx.KEYBOARD_MODE_TOGGLED, { enabled: !1 });
+    r.Z.dispatch({ type: 'ACCESSIBILITY_KEYBOARD_MODE_DISABLE' }), o.default.track(s.rMx.KEYBOARD_MODE_TOGGLED, { enabled: !1 });
 }
 function h() {
     r.Z.dispatch({ type: 'ACCESSIBILITY_DESATURATE_ROLES_TOGGLE' });
@@ -72,12 +72,12 @@ function b(e) {
     });
 }
 function y(e) {
-    let t = o.Z.useReducedMotion;
+    let t = a.Z.useReducedMotion;
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION',
         prefersReducedMotion: e
     });
-    let n = o.Z.useReducedMotion;
+    let n = a.Z.useReducedMotion;
     !t && n
         ? i.ZP.applySettingsOverride({
               gifAutoPlay: {
@@ -95,13 +95,13 @@ function y(e) {
           })
         : t && !n && i.ZP.clearSettingsOverride('gifAutoPlay', 'animateEmoji', 'animateStickers');
 }
-function v(e) {
+function O(e) {
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SET_SYNC_FORCED_COLORS',
         syncForcedColors: e
     });
 }
-function O(e) {
+function v(e) {
     r.Z.dispatch({
         type: 'ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED',
         systemForcedColors: e
@@ -124,7 +124,7 @@ function T(e) {
         type: 'ACCESSIBILITY_SET_ROLE_STYLE',
         roleStyle: e
     }),
-        a.default.track(s.rMx.ROLE_STYLE_SETTING_UPDATED, { role_style: e });
+        o.default.track(s.rMx.ROLE_STYLE_SETTING_UPDATED, { role_style: e });
 }
 function A() {
     r.Z.dispatch({ type: 'ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE' });

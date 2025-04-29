@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(392711),
-    o = n(485341),
+    o = n(392711),
+    a = n(485341),
     s = n(819325),
     l = n(184325),
     c = n(228168);
@@ -14,7 +14,7 @@ let u = {
 };
 function d(e) {
     let { displayProfile: t, themeType: n, onClose: c, pendingBadges: d, shouldOpenBadgeTooltip: f } = e,
-        _ = (0, o.Z)(t),
+        _ = (0, a.Z)(t),
         p = i.useMemo(() => {
             if (null == d) return (0, s.w)(_);
             let e = new Set(_.map((e) => e.id)),
@@ -24,7 +24,7 @@ function d(e) {
     return 0 === p.length
         ? null
         : (0, r.jsx)(r.Fragment, {
-              children: (0, a.chunk)(p, u[n]).map((e) =>
+              children: (0, o.chunk)(p, u[n]).map((e) =>
                   (0, r.jsx)(
                       l.Z,
                       {

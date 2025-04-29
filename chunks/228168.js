@@ -1,11 +1,11 @@
 n.d(t, {
     Ej: () => p,
     Ig: () => s,
-    JX: () => o,
+    JX: () => a,
     P: () => m,
     Tb: () => u,
     Tg: () => l,
-    a6: () => a,
+    a6: () => o,
     cm: () => f,
     lY: () => d,
     n_: () => h,
@@ -15,8 +15,8 @@ n.d(t, {
 });
 var r = n(981631);
 let i = 300,
-    a = 100,
-    o = 750,
+    o = 100,
+    a = 750,
     s = 100,
     l = 'user-profile-popout';
 var c = (function (e) {
@@ -80,6 +80,7 @@ var c = (function (e) {
             (e.PRESS_SET_FRIEND_NICKNAME = 'PRESS_SET_FRIEND_NICKNAME'),
             (e.PRESS_INVITE_TO_SERVER = 'PRESS_INVITE_TO_SERVER'),
             (e.PRESS_MOD_VIEW = 'PRESS_MOD_VIEW'),
+            (e.PRESS_SHOW_MORE_ACTIVITY = 'PRESS_SHOW_MORE_ACTIVITY'),
             (e.JOIN_ACTIVITY = 'JOIN_ACTIVITY'),
             (e.SET_NOTE = 'SET_NOTE'),
             (e.SET_VOLUME = 'SET_VOLUME'),

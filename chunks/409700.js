@@ -7,8 +7,8 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(831209),
     l = n(442837),
     c = n(481060),
@@ -23,7 +23,7 @@ var r = n(200651),
     E = n(388032),
     b = n(367753),
     y = n(419718);
-function v(e, t, n) {
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function v(e, t, n) {
         e
     );
 }
-function O(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,7 +47,7 @@ function O(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                O(e, t, n[t]);
             });
     }
     return e;
@@ -97,9 +97,9 @@ function T() {
 function A(e) {
     let { sound: t, forceShowBetaLabel: n = !1 } = e,
         i = (0, p.V2)({ location: 'SoundmojiBanner' }),
-        a = (0, l.e7)([d.default], () => _.ZP.canUseSoundboardEverywhere(d.default.getCurrentUser())),
-        o = (0, l.e7)([u.Z], () => u.Z.getGuildId());
-    return n || a || t.guildId === g.X8 || t.guildId === o || !i
+        o = (0, l.e7)([d.default], () => _.ZP.canUseSoundboardEverywhere(d.default.getCurrentUser())),
+        a = (0, l.e7)([u.Z], () => u.Z.getGuildId());
+    return n || o || t.guildId === g.X8 || t.guildId === a || !i
         ? (0, r.jsx)(c.IGR, {
               text: 'BETA',
               color: s.Z.BG_BRAND,
@@ -136,7 +136,7 @@ function A(e) {
 function N(e) {
     let { sound: t } = e;
     return (0, r.jsxs)('div', {
-        className: o()(b.infoContainer, b.infoTooltip),
+        className: a()(b.infoContainer, b.infoTooltip),
         children: [
             (0, r.jsx)(A, { sound: t }),
             (0, r.jsxs)('div', {
@@ -169,7 +169,7 @@ function N(e) {
     });
 }
 function C(e) {
-    let { renderPopout: t, position: n, tooltipText: a, children: s, setTooltipShowing: l, clickableClassName: u } = e,
+    let { renderPopout: t, position: n, tooltipText: o, children: s, setTooltipShowing: l, clickableClassName: u } = e,
         [d, f] = i.useState(!1),
         [_, p] = i.useState(String(Date.now())),
         h = i.useCallback(
@@ -192,7 +192,7 @@ function C(e) {
             (0, r.jsx)(c.P3F, {
                 onClick: (e) => e.stopPropagation(),
                 onMouseOver: (e) => e.stopPropagation(),
-                children: t(S(O({}, e), { refreshPosition: m }))
+                children: t(S(v({}, e), { refreshPosition: m }))
             }),
         align: 'center',
         nudgeAlignIntoViewport: !0,
@@ -210,16 +210,16 @@ function C(e) {
                 onTooltipShow: () => {
                     E && (null == l || l(!0));
                 },
-                text: a,
+                text: o,
                 position: 'top',
                 shouldShow: E,
                 children: (t) =>
                     (0, r.jsx)(
                         c.P3F,
-                        S(O({ innerRef: g }, t, e), {
-                            'aria-label': a,
+                        S(v({ innerRef: g }, t, e), {
+                            'aria-label': o,
                             onClick: h,
-                            className: o()(y.secondaryButtonRefresh, u),
+                            className: a()(y.secondaryButtonRefresh, u),
                             children: s
                         })
                     )
@@ -246,7 +246,7 @@ function R(e) {
                 renderPopout: (e) =>
                     (0, r.jsx)(
                         m.Z,
-                        O(
+                        v(
                             {
                                 sound: t,
                                 channel: n

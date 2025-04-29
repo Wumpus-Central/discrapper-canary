@@ -16,15 +16,15 @@ var r,
     b = n(199902),
     y = n(19780),
     _ = n(306680),
-    O = n(944486),
-    v = n(594174),
+    v = n(944486),
+    O = n(594174),
     C = n(451478),
     j = n(276952),
     S = n(682662),
     E = n(662146),
     x = n(674552),
-    I = n(981631),
-    P = n(388032),
+    P = n(981631),
+    I = n(388032),
     w = n(223203);
 function N(e, t, n) {
     return (
@@ -145,7 +145,7 @@ class D extends (r = l.PureComponent) {
     }
     getChannelIcon() {
         let { channel: e } = this.props,
-            t = e.type === I.d4z.DM ? v.default.getUser(e.getRecipientId()) : null;
+            t = e.type === P.d4z.DM ? O.default.getUser(e.getRecipientId()) : null;
         return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, h.x)(e);
     }
     render() {
@@ -180,13 +180,13 @@ class D extends (r = l.PureComponent) {
                                 c.LYs,
                                 Z(
                                     {
-                                        to: I.Z5c.CHANNEL(I.ME, e.id),
+                                        to: P.Z5c.CHANNEL(P.ME, e.id),
                                         onMouseEnter: () => this.setState({ hovered: !0 }),
                                         onMouseLeave: () => this.setState({ hovered: !1 }),
                                         selected: n || g,
                                         ariaLabel:
                                             null != t
-                                                ? P.intl.formatToPlainString(P.t.hKarnZ, {
+                                                ? I.intl.formatToPlainString(I.t.hKarnZ, {
                                                       mentions: r,
                                                       name: t
                                                   })
@@ -227,7 +227,7 @@ class D extends (r = l.PureComponent) {
             }),
             N(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
-                    r = t.type === I.d4z.DM ? v.default.getUser(t.getRecipientId()) : null;
+                    r = t.type === P.d4z.DM ? O.default.getUser(t.getRecipientId()) : null;
                 null != r
                     ? (0, u.jW)(e, async () => {
                           let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('53912'), n.e('56826'), n.e('45903')]).then(n.bind(n, 131404));
@@ -265,32 +265,32 @@ let L = l.forwardRef(function (e, t) {
         r = (0, p.ZP)(e.channel),
         l = (0, s.Ie)(n, 2),
         o = (0, a.e7)([y.Z], () => y.Z.getChannelId(), []),
-        u = (0, a.e7)([d.Z], () => (null != o ? d.Z.getMode(o) : I.WtW.VOICE), [o]),
+        u = (0, a.e7)([d.Z], () => (null != o ? d.Z.getMode(o) : P.WtW.VOICE), [o]),
         h = (0, a.e7)([b.Z], () => b.Z.getAllApplicationStreamsForChannel(n).length > 0),
-        m = (0, a.e7)([O.Z], () => O.Z.getChannelId(), []),
-        v = (0, a.e7)([_.ZP], () => _.ZP.getMentionCount(n), [n]),
+        m = (0, a.e7)([v.Z], () => v.Z.getChannelId(), []),
+        O = (0, a.e7)([_.ZP], () => _.ZP.getMentionCount(n), [n]),
         { isFacepileEnabled: C } = g.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
         j = o === n,
         S = !1,
         E = !1;
-    j && ((S = u === I.WtW.VOICE), (E = u === I.WtW.VIDEO));
+    j && ((S = u === P.WtW.VOICE), (E = u === P.WtW.VIDEO));
     let x = (0, c.dQu)(c.TVs.modules.guildbar.AVATAR_SIZE),
-        P = (0, f.Q3)('DirectMessage');
+        I = (0, f.Q3)('DirectMessage');
     return (0, i.jsx)(
         D,
         T(Z({}, e), {
             ref: t,
             channelName: r,
-            unread: v > 0,
+            unread: O > 0,
             selected: m === n,
-            badge: v,
+            badge: O,
             audio: S,
             video: E,
             stream: h,
             isCurrentUserInThisDMCall: j,
             isGDMFacepileEnabled: C,
-            size: P ? x : 56,
-            isVisualRefreshEnabled: P,
+            size: I ? x : 56,
+            isVisualRefreshEnabled: I,
             treeItemProps: l
         })
     );

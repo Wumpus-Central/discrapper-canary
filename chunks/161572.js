@@ -2,8 +2,8 @@ n.d(t, { Z: () => l });
 var r = n(200651);
 n(192379);
 var i = n(837411),
-    a = n(705556),
-    o = n(955418),
+    o = n(705556),
+    a = n(955418),
     s = n(200669);
 function l(e) {
     let { user: t, guildId: n, channelId: l, onClose: c, appContext: u } = e,
@@ -12,14 +12,14 @@ function l(e) {
         className: s.footer,
         children: [
             d &&
-                (0, r.jsx)(o.Z, {
+                (0, r.jsx)(a.Z, {
                     user: t,
                     guildId: n,
                     channelId: l,
                     onClose: c
                 }),
             !d &&
-                (0, r.jsx)(a.Z, {
+                (0, r.jsx)(o.Z, {
                     user: t,
                     guildId: n,
                     onClose: c,

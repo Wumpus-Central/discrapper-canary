@@ -2,7 +2,7 @@ n.d(t, { Z: () => d });
 var r = n(200651);
 n(192379);
 var i = n(325767);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function a(e, t, n) {
         e
     );
 }
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,7 +26,7 @@ function o(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -60,8 +60,8 @@ function c(e, t) {
         r,
         i = u(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -70,16 +70,16 @@ function u(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function d(e) {
-    var { width: t = 24, height: n = 24, color: a = 'currentColor', foreground: s } = e,
+    var { width: t = 24, height: n = 24, color: o = 'currentColor', foreground: s } = e,
         u = c(e, ['width', 'height', 'color', 'foreground']);
     return (0, r.jsx)(
         'svg',
-        l(o({}, (0, i.Z)(u)), {
+        l(a({}, (0, i.Z)(u)), {
             width: t,
             height: n,
             viewBox: '0 0 24 24',
@@ -88,7 +88,7 @@ function d(e) {
                 clipRule: 'evenodd',
                 d: 'M12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z',
                 className: s,
-                fill: a
+                fill: o
             })
         })
     );

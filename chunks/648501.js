@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => P });
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -17,16 +17,16 @@ var i = n(442837),
     b = n(790901),
     y = n(714794),
     _ = n(355363),
-    O = n(687352),
-    v = n(876548),
+    v = n(687352),
+    O = n(876548),
     C = n(25601),
     j = n(981631),
     S = n(490897),
     E = n(388032),
     x = n(990252);
-function I(e) {
+function P(e) {
     var t;
-    let { channel: n, isChannelSelected: I, isChannelCollapsed: P, voiceStates: w, enableConnectedUserLimit: N, enableActivities: Z, isSubscriptionGated: T, needSubscriptionToAccess: A, isNewChannel: R, muted: D, resolvedUnreadSetting: L } = e,
+    let { channel: n, isChannelSelected: P, isChannelCollapsed: I, voiceStates: w, enableConnectedUserLimit: N, enableActivities: Z, isSubscriptionGated: T, needSubscriptionToAccess: A, isNewChannel: R, muted: D, resolvedUnreadSetting: L } = e,
         k = (0, i.e7)([f.ZP], () => f.ZP.getMentionCount(n.id)),
         M = (0, i.e7)([f.ZP], () => f.ZP.getIsMentionLowImportance(n.id)),
         U = (0, s.ZP)(n),
@@ -37,7 +37,7 @@ function I(e) {
             channel: n,
             locked: G,
             video: B || V,
-            selected: I
+            selected: P
         }),
         F = (0, i.e7)([d.Z], () => d.Z.getNewThreadCount(n.guild_id, n.id)),
         z = (0, a.n2)(n.guild_id, n.id),
@@ -71,18 +71,18 @@ function I(e) {
         });
     let Y = null != (t = null == w ? void 0 : w.length) ? t : 0;
     return null != N && N && H
-        ? (0, r.jsx)(v.Z, {
+        ? (0, r.jsx)(O.Z, {
               userCount: Y,
               video: B || V,
               channel: n
           })
-        : P && (0, m.a)(w) && W
+        : I && (0, m.a)(w) && W
           ? (0, r.jsx)(o.IGR, {
                 text: E.intl.string(E.t.dI3q4u),
                 color: l.Z.unsafe_rawColors.RED_400.css
             })
           : null != Z && Z && (0, b.u)(U)
-            ? (0, r.jsx)(O.Z, {
+            ? (0, r.jsx)(v.Z, {
                   embeddedApps: U,
                   muted: D
               })

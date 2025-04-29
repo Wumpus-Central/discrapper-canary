@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T }), n(388685);
 var r = n(147913),
     i = n(460181),
-    a = n(474873),
-    o = n(523746),
+    o = n(474873),
+    a = n(523746),
     s = n(592125),
     l = n(292959),
     c = n(944486),
@@ -38,7 +38,7 @@ function y(e, t, n) {
     var r = g(e, t, 'set');
     return m(e, r, n), n;
 }
-function v(e, t, n) {
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -51,11 +51,11 @@ function v(e, t, n) {
         e
     );
 }
-let O = (0, i.uk)('call_calling', a.Z.getSoundpack());
+let v = (0, i.uk)('call_calling', o.Z.getSoundpack());
 var I = new WeakMap();
 class S extends r.Z {
     _initialize() {
-        this.stores = new Map().set(o.Z, this.handleRingUpdate).set(l.Z, this.handleRingUpdate).set(u.Z, this.handleRingUpdate).set(d.Z, this.handleRingUpdate).set(_.Z, this.handleChannelRTCStoreChange).set(a.Z, this.handleSoundpackUpdate);
+        this.stores = new Map().set(a.Z, this.handleRingUpdate).set(l.Z, this.handleRingUpdate).set(u.Z, this.handleRingUpdate).set(d.Z, this.handleRingUpdate).set(_.Z, this.handleChannelRTCStoreChange).set(o.Z, this.handleSoundpackUpdate);
     }
     constructor(...e) {
         super(...e),
@@ -63,40 +63,40 @@ class S extends r.Z {
                 writable: !0,
                 value: new Set()
             }),
-            v(this, 'actions', {
+            O(this, 'actions', {
                 GUILD_LOCAL_RING_START: (e) => this.handleGuildRingStart(e),
                 GUILD_RING_STOP: (e) => this.handleGuildRingStop(e)
             }),
-            v(this, '_handleRing', (e, t) => {
+            O(this, '_handleRing', (e, t) => {
                 let n = d.Z.getCurrentClientVoiceChannelId(t),
                     r = null != n && f.ZP.countVoiceStatesForChannel(n) >= 2;
-                null == n || r || !e || l.Z.isSoundDisabled('call_calling') || u.Z.disableSounds ? O.stop() : O.loop();
+                null == n || r || !e || l.Z.isSoundDisabled('call_calling') || u.Z.disableSounds ? v.stop() : v.loop();
             }),
-            v(this, 'handleSoundpackUpdate', () => {
-                O.stop(), (O = (0, i.uk)('call_calling', a.Z.getSoundpack()));
+            O(this, 'handleSoundpackUpdate', () => {
+                v.stop(), (v = (0, i.uk)('call_calling', o.Z.getSoundpack()));
             }),
-            v(this, 'handleRingUpdate', () => {
+            O(this, 'handleRingUpdate', () => {
                 var e, t;
                 let n = c.Z.getVoiceChannelId(),
                     r = null != (t = null == (e = s.Z.getChannel(n)) ? void 0 : e.guild_id) ? t : null,
-                    i = o.Z.getCalls().some((e) => e.ringing.length > 0 && d.Z.getCurrentClientVoiceChannelId(null) === e.channelId);
+                    i = a.Z.getCalls().some((e) => e.ringing.length > 0 && d.Z.getCurrentClientVoiceChannelId(null) === e.channelId);
                 this._handleRing(i || E(this, I).size > 0, r);
             }),
-            v(this, 'handleGuildRingStart', (e) => {
+            O(this, 'handleGuildRingStart', (e) => {
                 let { ringing: t, guildId: n } = e;
                 t.forEach((e) => {
                     E(this, I).add(e);
                 }),
                     this._handleRing(E(this, I).size > 0, n);
             }),
-            v(this, 'handleGuildRingStop', (e) => {
+            O(this, 'handleGuildRingStop', (e) => {
                 let { ringing: t, guildId: n } = e;
                 t.forEach((e) => {
                     E(this, I).delete(e);
                 }),
                     this._handleRing(E(this, I).size > 0, n);
             }),
-            v(this, 'handleChannelRTCStoreChange', () => {
+            O(this, 'handleChannelRTCStoreChange', () => {
                 let e = c.Z.getVoiceChannelId(),
                     t = E(this, I).size > 0;
                 if (!t) return;

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(704826), n(35282), n(953529);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(403182),
     c = n(587446),
@@ -32,13 +32,13 @@ function _(e) {
     });
 }
 let p = i.forwardRef(function (e, t) {
-    let { title: n, titleIcon: i, titleId: a, description: l, children: f, className: p, errors: h, disabled: m = !1, hideDivider: g = !1, showBorder: E = !1, borderType: b, hasBackground: y = !1, forcedDivider: v = !1, showPremiumIcon: O = !1 } = e;
+    let { title: n, titleIcon: i, titleId: o, description: l, children: f, className: p, errors: h, disabled: m = !1, hideDivider: g = !1, showBorder: E = !1, borderType: b, hasBackground: y = !1, forcedDivider: O = !1, showPremiumIcon: v = !1 } = e;
     return (0, r.jsx)('div', {
-        className: o()(d.customizationSection, p, {
+        className: a()(d.customizationSection, p, {
             [d.disabled]: m,
             [d.hideDivider]: g,
             [d.showBorder]: E,
-            [d.withDivider]: v
+            [d.withDivider]: O
         }),
         ref: t,
         children: (0, r.jsxs)(u.Z, {
@@ -50,8 +50,8 @@ let p = i.forwardRef(function (e, t) {
             children: [
                 (0, r.jsxs)(s.vwX, {
                     className: d.title,
-                    id: a,
-                    children: [n, O && (0, r.jsx)(c.Z, {}), i]
+                    id: o,
+                    children: [n, v && (0, r.jsx)(c.Z, {}), i]
                 }),
                 null != l
                     ? (0, r.jsx)(s.R94, {

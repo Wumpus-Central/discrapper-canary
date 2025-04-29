@@ -2,34 +2,34 @@ var r = n(192379);
 function i(e, t) {
     return (e === t && (0 !== e || 1 / e == 1 / t)) || (e != e && t != t);
 }
-var a = 'function' == typeof Object.is ? Object.is : i,
-    o = r.useState,
+var o = 'function' == typeof Object.is ? Object.is : i,
+    a = r.useState,
     s = r.useEffect,
     l = r.useLayoutEffect,
     c = r.useDebugValue;
 function u(e, t) {
     var n = t(),
-        r = o({
+        r = a({
             inst: {
                 value: n,
                 getSnapshot: t
             }
         }),
         i = r[0].inst,
-        a = r[1];
+        o = r[1];
     return (
         l(
             function () {
-                (i.value = n), (i.getSnapshot = t), d(i) && a({ inst: i });
+                (i.value = n), (i.getSnapshot = t), d(i) && o({ inst: i });
             },
             [e, n, t]
         ),
         s(
             function () {
                 return (
-                    d(i) && a({ inst: i }),
+                    d(i) && o({ inst: i }),
                     e(function () {
-                        d(i) && a({ inst: i });
+                        d(i) && o({ inst: i });
                     })
                 );
             },
@@ -44,7 +44,7 @@ function d(e) {
     e = e.value;
     try {
         var n = t();
-        return !a(e, n);
+        return !o(e, n);
     } catch (e) {
         return !0;
     }

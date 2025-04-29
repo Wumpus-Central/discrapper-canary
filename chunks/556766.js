@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C });
 var r = n(200651),
     i = n(192379),
-    a = n(392711),
-    o = n.n(a),
+    o = n(392711),
+    a = n.n(o),
     s = n(252759),
     l = n(442837),
     c = n(481060),
@@ -29,7 +29,7 @@ function y(e, t, n) {
         e
     );
 }
-function v(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +45,7 @@ function v(e) {
     }
     return e;
 }
-function O(e, t) {
+function v(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -62,7 +62,7 @@ function I(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : O(Object(t)).forEach(function (n) {
+            : v(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -77,7 +77,7 @@ let S = {
         opacity: 1
     };
 function A() {
-    return 500 !== o().random(1, 1000) ? 'call_ringing' : o().sample(['call_ringing_beat', 'call_ringing_snow_halation']);
+    return 500 !== a().random(1, 1000) ? 'call_ringing' : a().sample(['call_ringing_beat', 'call_ringing_snow_halation']);
 }
 function N() {
     let e = (0, l.Wu)([g.Z, h.Z, u.ZP], () =>
@@ -91,27 +91,27 @@ function N() {
         ),
         t = (0, l.e7)([g.Z], () => g.Z.hasIncomingCalls()),
         n = (0, l.e7)([p.Z], () => p.Z.isSoundDisabled('call_ringing')),
-        a = (0, l.e7)([m.Z], () => m.Z.disableSounds),
-        o = (0, l.e7)([_.Z], () => _.Z.getSoundpack()),
+        o = (0, l.e7)([m.Z], () => m.Z.disableSounds),
+        a = (0, l.e7)([_.Z], () => _.Z.getSoundpack()),
         y = i.useRef(!1),
-        O = (0, s.Z)(() => {
+        v = (0, s.Z)(() => {
             let e = 'call_ringing';
-            return o === b.YC.CLASSIC ? (0, f.tu)(A(), e) : (0, f.uk)('call_ringing', o);
-        }, [o]);
+            return a === b.YC.CLASSIC ? (0, f.tu)(A(), e) : (0, f.uk)('call_ringing', a);
+        }, [a]);
     return (
         i.useEffect(
             () => () => {
-                O.stop();
+                v.stop();
             },
-            [O]
+            [v]
         ),
         i.useEffect(() => {
-            if (a || n) {
-                y.current && (O.stop(), (y.current = !1));
+            if (o || n) {
+                y.current && (v.stop(), (y.current = !1));
                 return;
             }
-            t && !y.current ? (O.loop(), (y.current = !0)) : !t && y.current && (O.stop(), (y.current = !1));
-        }, [n, a, t, O]),
+            t && !y.current ? (v.loop(), (y.current = !0)) : !t && y.current && (v.stop(), (y.current = !1));
+        }, [n, o, t, v]),
         (0, c.Yzy)(e, {
             keys: (e) => {
                 var t;
@@ -128,7 +128,7 @@ function N() {
                 friction: 18,
                 clamp: !0
             }
-        })((e, t) => (0, r.jsx)(d.Z, I(v({}, t), { animatedStyle: e })))
+        })((e, t) => (0, r.jsx)(d.Z, I(O({}, t), { animatedStyle: e })))
     );
 }
 let C = i.memo(N);

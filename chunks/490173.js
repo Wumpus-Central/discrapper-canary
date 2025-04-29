@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(990547),
-    o = n(442837),
+    o = n(990547),
+    a = n(442837),
     s = n(481060),
     l = n(239091),
     c = n(40851),
@@ -67,13 +67,13 @@ function b(e, t) {
 function y() {
     window.getSelection().removeAllRanges();
 }
-let v = (e) => {
-    let { children: t, close: n, onUnmount: o, target: l, rect: f, position: _, align: p, impressionName: m, impressionProperties: g, disableClickTrap: E = !1 } = e,
+let O = (e) => {
+    let { children: t, close: n, onUnmount: a, target: l, rect: f, position: _, align: p, impressionName: m, impressionProperties: g, disableClickTrap: E = !1 } = e,
         b = i.useRef(null),
-        v = i.useMemo(() => ({ current: l }), [l]),
-        O = i.useRef(n);
+        O = i.useMemo(() => ({ current: l }), [l]),
+        v = i.useRef(n);
     i.useEffect(() => {
-        O.current = n;
+        v.current = n;
     }),
         i.useEffect(() => {
             var e, t, n;
@@ -83,7 +83,7 @@ let v = (e) => {
                 var t;
                 let n = e.target,
                     r = null == (t = b.current) ? void 0 : t.elementRef.current;
-                (null != r && (0, s.ty$)(r, n)) || (y(), O.current());
+                (null != r && (0, s.ty$)(r, n)) || (y(), v.current());
             };
             return (
                 null == (t = r.ownerDocument) || t.addEventListener('click', i, !0),
@@ -94,9 +94,9 @@ let v = (e) => {
                 }
             );
         }, []);
-    let I = i.useRef(o);
+    let I = i.useRef(a);
     i.useEffect(() => {
-        I.current = o;
+        I.current = a;
     }),
         i.useEffect(
             () => () => {
@@ -110,7 +110,7 @@ let v = (e) => {
             null == (e = b.current) || e.updatePosition();
         }),
         (0, u.Z)({
-            type: a.ImpressionTypes.MENU,
+            type: o.ImpressionTypes.MENU,
             name: m,
             properties: g
         });
@@ -124,7 +124,7 @@ let v = (e) => {
     return (0, r.jsx)(d.W5, {
         onMount: T,
         onUnmount: A,
-        targetRef: v,
+        targetRef: O,
         overrideTargetRect: f,
         position: null != _ ? _ : 'right',
         align: null != p ? p : 'top',
@@ -135,7 +135,7 @@ let v = (e) => {
         children: t
     });
 };
-class O extends i.PureComponent {
+class v extends i.PureComponent {
     componentDidMount() {
         let { renderLazy: e, renderWindow: t } = this.props;
         if ((t.addEventListener('resize', this.closeResize, !0), p.S.subscribe(h.CkL.CONTEXT_MENU_CLOSE, this.props.closeContextMenu), null != e)) {
@@ -160,10 +160,10 @@ class O extends i.PureComponent {
     }
     render() {
         var e, t;
-        let { appContext: n, target: i, isOpen: a, theme: o, config: s, rect: l } = this.props,
+        let { appContext: n, target: i, isOpen: o, theme: a, config: s, rect: l } = this.props,
             c = null != (e = this.state.render) ? e : this.props.render;
-        return a && null != l && null != s && null != i && null != c && s.context === n
-            ? (0, r.jsx)(v, {
+        return o && null != l && null != s && null != i && null != c && s.context === n
+            ? (0, r.jsx)(O, {
                   target: i,
                   rect: l,
                   close: this.close,
@@ -177,7 +177,7 @@ class O extends i.PureComponent {
                       let { position: r } = e;
                       return c({
                           position: r,
-                          theme: o,
+                          theme: a,
                           onHeightUpdate: t,
                           config: s,
                           target: i,
@@ -205,15 +205,15 @@ function I() {
             contextMenu: e,
             version: t,
             isOpen: n
-        } = (0, o.cj)([_.Z], () => ({
+        } = (0, a.cj)([_.Z], () => ({
             contextMenu: _.Z.getContextMenu(),
             version: _.Z.version,
             isOpen: _.Z.isOpen()
         })),
-        a = (0, o.e7)([f.Z], () => f.Z.theme),
+        o = (0, a.e7)([f.Z], () => f.Z.theme),
         { appContext: s, renderWindow: u } = i.useContext(c.ZP);
     return (0, r.jsx)(
-        O,
+        v,
         b(
             g(
                 {
@@ -224,7 +224,7 @@ function I() {
             ),
             {
                 isOpen: n,
-                theme: a,
+                theme: o,
                 closeContextMenu: l.Zy
             }
         ),

@@ -1,8 +1,8 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(765053),
     l = n(512969),
     c = n(442837),
@@ -17,7 +17,7 @@ var r = n(200651),
 n(294346);
 let E = new Set([g.Z5c.LOGIN, g.Z5c.REGISTER]);
 function b(e) {
-    let { lang: t, style: n, className: a } = (0, p.vP)(),
+    let { lang: t, style: n, className: o } = (0, p.vP)(),
         s = (0, l.TH)(),
         u = i.useMemo(() => E.has(s.pathname), [s.pathname]);
     (0, m.Z)(window, u);
@@ -25,7 +25,7 @@ function b(e) {
     return (0, r.jsx)('html', {
         lang: t,
         style: ''.concat(n, ' --devtools-sidebar-width: ').concat(d, 'px;'),
-        className: o()(a, e, { overlay: __OVERLAY__ })
+        className: a()(o, e, { overlay: __OVERLAY__ })
     });
 }
 function y() {
@@ -58,13 +58,13 @@ function y() {
         })
     );
 }
-function v(e) {
+function O(e) {
     let { children: t, skipsSettingDefaultPageTitle: n } = e;
     (0, h.ZD)({ skipsSettingDefaultPageTitle: n });
-    let { clientThemesClassName: a, clientThemesCSS: o } = (0, d.ZP)(),
-        l = i.createElement('style', { [d.PQ]: !0 }, o);
+    let { clientThemesClassName: o, clientThemesCSS: a } = (0, d.ZP)(),
+        l = i.createElement('style', { [d.PQ]: !0 }, a);
     return (0, r.jsxs)(s.ql, {
-        children: [b(a), y(), l, t]
+        children: [b(o), y(), l, t]
     });
 }
-let O = i.memo(v);
+let v = i.memo(O);

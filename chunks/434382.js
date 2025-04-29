@@ -1,8 +1,8 @@
 n.d(t, { Z: () => R }), n(388685);
 var r = n(152057),
     i = n(570140),
-    a = n(147913),
-    o = n(38618),
+    o = n(147913),
+    a = n(38618),
     s = n(517100),
     l = n(914010),
     c = n(451478),
@@ -29,12 +29,12 @@ let p = r.v.LEAGUE_OF_LEGENDS_WEEKLY,
     E = new Map(),
     b = new Set(),
     y = new Map();
-function v(e, t) {
+function O(e, t) {
     return ''.concat(e, ':').concat(t);
 }
-function O(e, t) {
+function v(e, t) {
     var n;
-    let r = v(e, t);
+    let r = O(e, t);
     if (b.has(r) || (null != (n = y.get(r)) ? n : 0) > h) return !1;
     if (l.Z.getGuildId() !== e) return;
     if (
@@ -43,7 +43,7 @@ function O(e, t) {
             location: 'GuildLeaderboardManager'
         }) ||
         !c.Z.isFocused() ||
-        !o.Z.isConnected()
+        !a.Z.isConnected()
     )
         return !1;
     let i = s.Z.getIdleSince();
@@ -56,7 +56,7 @@ function S() {
     var e;
     I();
     let t = l.Z.getGuildId();
-    if (null == t || !O(t, p)) return;
+    if (null == t || !v(t, p)) return;
     let n = d.Z.getLeaderboardResponse(t, p),
         r = setTimeout(
             () =>
@@ -66,24 +66,24 @@ function S() {
                 }),
             Math.max(0, (null != (e = null == n ? void 0 : n.expires_at) ? e : Date.now()) - Date.now())
         ),
-        i = v(t, p);
+        i = O(t, p);
     E.set(i, r);
 }
 async function T(e) {
     let { guildId: t, leaderboardId: n, force: r = !1 } = e;
-    if (!(O(t, n) || r)) return;
-    let a = v(t, n);
-    if (!b.has(a))
+    if (!(v(t, n) || r)) return;
+    let o = O(t, n);
+    if (!b.has(o))
         try {
-            b.add(a);
+            b.add(o);
             let e = await (0, u.pV)({
                     guildId: t,
                     leaderboardId: n,
                     intervalOffset: 0,
                     force: r
                 }),
-                o = d.Z.get(t, n);
-            if ((null == o ? void 0 : o.interval_start) !== e.leaderboard.interval_start) {
+                a = d.Z.get(t, n);
+            if ((null == a ? void 0 : a.interval_start) !== e.leaderboard.interval_start) {
                 let e = await (0, u.pV)({
                     guildId: t,
                     leaderboardId: n,
@@ -101,16 +101,16 @@ async function T(e) {
                 leaderboardResponse: e,
                 intervalOffset: 0
             }),
-                y.delete(a),
-                b.delete(a),
+                y.delete(o),
+                b.delete(o),
                 S();
         } catch (i) {
-            var o;
-            let e = (null != (o = y.get(a)) ? o : 0) + 1;
-            if ((y.set(a, e), !O(t, n))) return;
+            var a;
+            let e = (null != (a = y.get(o)) ? a : 0) + 1;
+            if ((y.set(o, e), !v(t, n))) return;
             let r = 1000 * Math.pow(m, e);
             E.set(
-                a,
+                o,
                 setTimeout(
                     () =>
                         T({
@@ -129,7 +129,7 @@ function A() {
 function N() {
     I(), (E = new Map()), (b = new Set()), (y = new Map()), A();
 }
-class C extends a.Z {
+class C extends o.Z {
     fetchLeaderboard(e) {
         return T(e);
     }

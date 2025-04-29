@@ -7,8 +7,8 @@ n.d(t, {
     n(388685);
 var r = n(759174),
     i = n(933546),
-    a = n(569545),
-    o = n(199902),
+    o = n(569545),
+    a = n(199902),
     s = n(592125),
     l = n(720202),
     c = n(271383),
@@ -50,7 +50,7 @@ function y(e) {
     }
     return e;
 }
-function v(e, t) {
+function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -62,12 +62,12 @@ function v(e, t) {
     }
     return n;
 }
-function O(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : O(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -81,7 +81,7 @@ var I = (function (e) {
     })({});
 function T(e) {
     var t;
-    let { speaker: n, role: r, user: a, userNick: o, connectedOn: s, voiceState: l, type: c } = e,
+    let { speaker: n, role: r, user: o, userNick: a, connectedOn: s, voiceState: l, type: c } = e,
         u = n ? '\0' : '\x01',
         d = 'STREAM' === c ? '\0' : '\x01',
         f = l.selfMute ? '\x01' : '\0',
@@ -94,7 +94,7 @@ function T(e) {
         .concat(_)
         .concat(p)
         .concat(s)
-        .concat((0, i.Z)(o, a));
+        .concat((0, i.Z)(a, o));
 }
 function A(e) {
     let { user: t, voiceState: n } = e,
@@ -105,17 +105,17 @@ function N(e) {
     return e === g.xO.REQUESTED_TO_SPEAK || e === g.xO.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
 }
 function C(e) {
-    let { speaker: t, role: n, rtsState: r, blocked: i, ignored: a, isFriend: o } = e,
+    let { speaker: t, role: n, rtsState: r, blocked: i, ignored: o, isFriend: a } = e,
         s = [];
-    return N(r) && s.push('ALL_REQUESTED_TO_SPEAK'), r === g.xO.REQUESTED_TO_SPEAK && s.push('REQUESTED_TO_SPEAK_ONLY'), t ? s.push('SPEAKER') : (null != n ? s.push(n.id) : s.push('NO_ROLE'), s.push('AUDIENCE')), i ? s.push('BLOCKED') : a && s.push('IGNORED'), o && s.push('FRIEND'), s;
+    return N(r) && s.push('ALL_REQUESTED_TO_SPEAK'), r === g.xO.REQUESTED_TO_SPEAK && s.push('REQUESTED_TO_SPEAK_ONLY'), t ? s.push('SPEAKER') : (null != n ? s.push(n.id) : s.push('NO_ROLE'), s.push('AUDIENCE')), i ? s.push('BLOCKED') : o && s.push('IGNORED'), a && s.push('FRIEND'), s;
 }
 class R {
     _getParticipantsForUser(e, t) {
         var n, r, i;
         let s,
             b = [],
-            v = f.Z.getVoiceStateForChannel(this.channelId, e);
-        if (null == v) return b;
+            O = f.Z.getVoiceStateForChannel(this.channelId, e);
+        if (null == O) return b;
         let I = d.default.getUser(e);
         if (null == I) return null != this.guildId && m.Z.isPublic(this.channelId) && l.Z.requestMember(this.guildId, e), b;
         let S = null != t ? t[0] : null,
@@ -125,8 +125,8 @@ class R {
                 user: I,
                 userNick: p.ZP.getName(this.guildId, this.channelId, I),
                 nick: A,
-                comparator: (0, _.sQ)(v, A),
-                voiceState: v,
+                comparator: (0, _.sQ)(O, A),
+                voiceState: O,
                 role: (0, E.H)(this.guildId, e),
                 speaker: h.ZP.isSpeaker(e, this.channelId),
                 member: T,
@@ -135,16 +135,16 @@ class R {
                 isFriend: u.Z.isFriend(I.id),
                 connectedOn: null != (r = null == S ? void 0 : S.connectedOn) ? r : Date.now()
             },
-            C = O(y({}, N), {
+            C = v(y({}, N), {
                 type: 'VOICE',
                 id: I.id,
-                rtsState: (0, g.gf)(v)
+                rtsState: (0, g.gf)(O)
             });
         b.push(C);
-        let R = null != (i = o.Z.getStreamForUser(e, this.guildId)) ? i : o.Z.getActiveStreamForUser(e, this.guildId);
+        let R = null != (i = a.Z.getStreamForUser(e, this.guildId)) ? i : a.Z.getActiveStreamForUser(e, this.guildId);
         if (null != R && R.channelId === this.channelId) {
-            let e = (0, a.V9)(R);
-            (s = O(y({}, N), {
+            let e = (0, o.V9)(R);
+            (s = v(y({}, N), {
                 id: e,
                 type: 'STREAM',
                 rtsState: g.xO.NONE

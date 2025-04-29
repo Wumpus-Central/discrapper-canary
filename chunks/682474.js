@@ -1,7 +1,7 @@
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(786761),
+    o = n(570140),
+    a = n(786761),
     s = n(592125),
     l = n(594174),
     c = n(823379),
@@ -67,7 +67,7 @@ function m(e) {
     return u.default.compare(null == e ? void 0 : e.id, null == r || null == (t = r.message) ? void 0 : t.id) > -1;
 }
 function g(e, t) {
-    let n = null == t ? null : (0, o.e5)(t);
+    let n = null == t ? null : (0, a.e5)(t);
     return (
         (h[e] = {
             loaded: !0,
@@ -78,21 +78,21 @@ function g(e, t) {
 }
 function E(e, t) {
     let n = y(e),
-        r = v(e);
-    return null != n && null != r && ((h[e] = p(f({}, n), { message: (0, o.wi)(r, t) })), !0);
+        r = O(e);
+    return null != n && null != r && ((h[e] = p(f({}, n), { message: (0, a.wi)(r, t) })), !0);
 }
 function b(e, t) {
-    let n = v(e);
+    let n = O(e);
     return (null == n ? void 0 : n.id) === t && (delete h[e], !0);
 }
 function y(e) {
     return h[e];
 }
-function v(e) {
+function O(e) {
     var t;
     return null == (t = y(e)) ? void 0 : t.message;
 }
-function O() {
+function v() {
     h = {};
 }
 function I(e) {
@@ -134,8 +134,8 @@ class C extends (r = i.ZP.Store) {
     }
 }
 d(C, 'displayName', 'ForumPostRecentMessageStore'),
-    new C(a.Z, {
-        CONNECTION_OPEN: O,
+    new C(o.Z, {
+        CONNECTION_OPEN: v,
         MESSAGE_CREATE: S,
         MESSAGE_UPDATE: T,
         MESSAGE_DELETE: A,

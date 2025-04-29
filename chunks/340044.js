@@ -44,7 +44,7 @@ let h = i.memo(function (e) {
             m({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(s, 'px)') });
         }),
         _ = (0, s.y)(y),
-        O = (0, c.yF)(f.userId, p);
+        v = (0, c.yF)(f.userId, p);
     return (0, r.jsxs)('div', {
         className: o()(d.container, h && d.isOverlayContainer),
         ref: _,
@@ -56,7 +56,7 @@ let h = i.memo(function (e) {
             (0, r.jsx)('div', {
                 className: d.chipletParent,
                 children: (0, r.jsx)('span', {
-                    className: o()(d.chipletContainer, !O && h && d.noPadding),
+                    className: o()(d.chipletContainer, !v && h && d.noPadding),
                     ref: b,
                     style: g,
                     children: (0, r.jsx)(

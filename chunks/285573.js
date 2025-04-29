@@ -15,14 +15,14 @@ var r = n(200651),
     m = n(490897),
     b = n(915887);
 let y = (0, c.B)(function (e) {
-    let { guild: t, selectedChannelId: l, position: c, disableManageChannels: y, sorting: _, sortingType: O, sortingPosition: v, connectChannelDragSource: C, connectChannelDropTarget: j, tabIndex: S } = e,
+    let { guild: t, selectedChannelId: l, position: c, disableManageChannels: y, sorting: _, sortingType: v, sortingPosition: O, connectChannelDragSource: C, connectChannelDropTarget: j, tabIndex: S } = e,
         E = (0, s.e7)([u.Z, d.ZP], () => {
             let e = d.ZP.getDirectoryChannelIds(t.id);
             return 0 === e.length ? null : u.Z.getChannel(e[0]);
         }),
         x = (0, s.e7)([u.Z], () => u.Z.getChannel(null == E ? void 0 : E.parent_id)),
-        I = l === (null == E ? void 0 : E.id),
-        P = (0, s.e7)([h.Z], () => (null != x ? h.Z.can(g.Plq.MANAGE_CHANNELS, x) : null != t && h.Z.can(g.Plq.MANAGE_CHANNELS, t))),
+        P = l === (null == E ? void 0 : E.id),
+        I = (0, s.e7)([h.Z], () => (null != x ? h.Z.can(g.Plq.MANAGE_CHANNELS, x) : null != t && h.Z.can(g.Plq.MANAGE_CHANNELS, t))),
         w = i.useCallback(
             (e) => {
                 null != E &&
@@ -78,19 +78,19 @@ let y = (0, c.B)(function (e) {
             [E]
         );
     if (null == E) return null;
-    let N = (0, p.jo)(c, v),
-        Z = (0, p.CN)(E, _, O),
+    let N = (0, p.jo)(c, O),
+        Z = (0, p.CN)(E, _, v),
         T = (0, r.jsx)('div', {
             className: o()(N, {
                 [b.disabled]: Z,
-                [b.selected]: I
+                [b.selected]: P
             }),
             'data-dnd-name': E.name,
             children: (0, r.jsxs)(f.ZP, {
                 className: b.iconVisibility,
                 channel: E,
                 guild: t,
-                selected: I,
+                selected: P,
                 onContextMenu: w,
                 forceInteractable: !0,
                 resolvedUnreadSetting: m.i.ONLY_MENTIONS,
@@ -107,5 +107,5 @@ let y = (0, c.B)(function (e) {
                 ]
             })
         });
-    return P && (T = j(C(T))), T;
+    return I && (T = j(C(T))), T;
 });

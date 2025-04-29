@@ -1,8 +1,8 @@
 n.d(t, { U: () => l });
 var r = n(192379),
     i = n(718607);
-let a = (e) => e;
-function o(e, t = a) {
+let o = (e) => e;
+function a(e, t = o) {
     let n = r.useSyncExternalStore(
         e.subscribe,
         () => t(e.getState()),
@@ -12,7 +12,7 @@ function o(e, t = a) {
 }
 let s = (e) => {
         let t = (0, i.M)(e),
-            n = (e) => o(t, e);
+            n = (e) => a(t, e);
         return Object.assign(n, t), n;
     },
     l = (e) => (e ? s(e) : s);

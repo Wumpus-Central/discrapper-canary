@@ -1,8 +1,8 @@
 n.d(t, { W: () => E });
 var r = n(200651),
     i = n(192379),
-    a = n(468204),
-    o = n(348288),
+    o = n(468204),
+    a = n(348288),
     s = ['children'];
 function l(e, t) {
     return _(e) || f(e, t) || u(e, t) || c();
@@ -28,21 +28,21 @@ function f(e, t) {
         r,
         i = null == e ? null : ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator'];
     if (null != i) {
-        var a = [],
-            o = !0,
+        var o = [],
+            a = !0,
             s = !1;
         try {
-            for (i = i.call(e); !(o = (n = i.next()).done) && (a.push(n.value), !t || a.length !== t); o = !0);
+            for (i = i.call(e); !(a = (n = i.next()).done) && (o.push(n.value), !t || o.length !== t); a = !0);
         } catch (e) {
             (s = !0), (r = e);
         } finally {
             try {
-                o || null == i.return || i.return();
+                a || null == i.return || i.return();
             } finally {
                 if (s) throw r;
             }
         }
-        return a;
+        return o;
     }
 }
 function _(e) {
@@ -54,8 +54,8 @@ function p(e, t) {
         r,
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -64,8 +64,8 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 var m = 0,
@@ -73,12 +73,12 @@ var m = 0,
     E = (0, i.memo)(function (e) {
         var t = e.children,
             n = l(b(p(e, s)), 2),
-            a = n[0],
+            o = n[0],
             c = n[1];
         return (
             (0, i.useEffect)(function () {
                 if (c) {
-                    var e = v();
+                    var e = O();
                     return (
                         ++m,
                         function () {
@@ -87,19 +87,19 @@ var m = 0,
                     );
                 }
             }, []),
-            (0, r.jsx)(o.L.Provider, Object.assign({ value: a }, { children: t }), void 0)
+            (0, r.jsx)(a.L.Provider, Object.assign({ value: o }, { children: t }), void 0)
         );
     });
 function b(e) {
     return 'manager' in e ? [{ dragDropManager: e.manager }, !1] : [y(e.backend, e.context, e.options, e.debugMode), !e.context];
 }
 function y(e) {
-    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : v(),
+    var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : O(),
         n = arguments.length > 2 ? arguments[2] : void 0,
         r = arguments.length > 3 ? arguments[3] : void 0,
         i = t;
-    return i[g] || (i[g] = { dragDropManager: (0, a.i)(e, t, n, r) }), i[g];
+    return i[g] || (i[g] = { dragDropManager: (0, o.i)(e, t, n, r) }), i[g];
 }
-function v() {
+function O() {
     return void 0 !== n.g ? n.g : window;
 }

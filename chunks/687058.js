@@ -1,59 +1,59 @@
-n.d(t, { Z: () => u }), n(704826), n(35282);
-var r = n(192379),
-    l = n(442837),
-    i = n(131951),
-    o = n(65154),
-    a = n(388032);
-function s(e) {
+r.d(t, { Z: () => s }), r(704826), r(35282);
+var n = r(192379),
+    l = r(442837),
+    o = r(131951),
+    i = r(65154),
+    u = r(388032);
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: n,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
+                        : (e[t] = n);
             });
     }
     return e;
 }
 let c = /^Default/;
-function u() {
-    let e = (0, l.e7)([i.Z], () => i.Z.getInputDevices());
-    return r.useMemo(() => {
-        var t, n;
-        let r = s({}, e),
-            l = r[o.w5];
+function s() {
+    let e = (0, l.e7)([o.Z], () => o.Z.getInputDevices());
+    return n.useMemo(() => {
+        var t, r;
+        let n = a({}, e),
+            l = n[i.w5];
         return null == l
-            ? r
-            : ((r[o.w5] =
-                  ((t = s({}, l)),
-                  (n = n = { name: l.disabled ? a.intl.string(a.t['/QIjDA']) : l.name.replace(c, a.intl.string(a.t.bBvAEB)) }),
+            ? n
+            : ((n[i.w5] =
+                  ((t = a({}, l)),
+                  (r = r = { name: l.disabled ? u.intl.string(u.t['/QIjDA']) : l.name.replace(c, u.intl.string(u.t.bBvAEB)) }),
                   Object.getOwnPropertyDescriptors
-                      ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                      ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                       : (function (e, t) {
-                            var n = Object.keys(e);
+                            var r = Object.keys(e);
                             if (Object.getOwnPropertySymbols) {
-                                var r = Object.getOwnPropertySymbols(e);
-                                n.push.apply(n, r);
+                                var n = Object.getOwnPropertySymbols(e);
+                                r.push.apply(r, n);
                             }
-                            return n;
-                        })(Object(n)).forEach(function (e) {
-                            Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                            return r;
+                        })(Object(r)).forEach(function (e) {
+                            Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
                         }),
                   t)),
-              r);
+              n);
     }, [e]);
 }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => P }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(481060),
-    o = n(727637),
+    o = n(481060),
+    a = n(727637),
     s = n(100527),
     l = n(906732),
     c = n(580552),
@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(648052),
     b = n(867176),
     y = n(280885),
-    v = n(502762),
-    O = n(530),
+    O = n(502762),
+    v = n(530),
     I = n(679332),
     S = n(544989),
     T = n(228168),
@@ -66,7 +66,7 @@ function P(e) {
             roleId: w
         }),
         B = i.useRef(null),
-        V = (0, o.Z)(B);
+        V = (0, a.Z)(B);
     i.useEffect(() => {
         null == L || L(null == B ? void 0 : B.current);
     }, [B, L]);
@@ -85,7 +85,7 @@ function P(e) {
         Z = !M && (0, c.Z)(t.id),
         H = () =>
             Z
-                ? (0, r.jsx)(a.sNh, {
+                ? (0, r.jsx)(o.sNh, {
                       id: 'view-profile',
                       label: A.intl.string(A.t['+Xp3ho']),
                       action: () => {
@@ -110,11 +110,11 @@ function P(e) {
             fetchStartedAt: null == j ? void 0 : j.fetchStartedAt,
             fetchEndedAt: null == j ? void 0 : j.fetchEndedAt,
             isLoaded: null == j ? void 0 : j.isLoaded,
-            children: (0, r.jsxs)(a.VqE, {
+            children: (0, r.jsxs)(o.VqE, {
                 ref: B,
                 'aria-label': t.username,
                 children: [
-                    (0, r.jsxs)(v.Z, {
+                    (0, r.jsxs)(O.Z, {
                         user: t,
                         displayProfile: j,
                         themeType: T.lY.POPOUT,
@@ -145,11 +145,11 @@ function P(e) {
                                     t.isClyde() && (0, r.jsx)(u.Z, { className: N.headerTag })
                                 ]
                             }),
-                            (0, r.jsxs)(a.Ttm, {
+                            (0, r.jsxs)(o.Ttm, {
                                 fade: !0,
                                 className: N.body,
                                 children: [
-                                    (0, r.jsx)(O.Z, {
+                                    (0, r.jsx)(v.Z, {
                                         user: t,
                                         nickname: f.ZP.getName(n, C, t),
                                         onOpenProfile: Z ? F : void 0,

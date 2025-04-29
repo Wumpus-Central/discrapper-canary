@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(47770),
     i = n(68721),
-    a = n(591218);
-function o(e, t, n) {
+    o = n(591218);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -86,28 +86,28 @@ class l extends r.Z {
     }
     constructor(e) {
         super(),
-            o(this, 'audio', void 0),
-            o(this, 'video', new a.Z()),
-            o(this, 'desktop', null),
-            o(this, 'stream', void 0),
-            o(this, 'mergeStreams', () => {
+            a(this, 'audio', void 0),
+            a(this, 'video', new o.Z()),
+            a(this, 'desktop', null),
+            a(this, 'stream', void 0),
+            a(this, 'mergeStreams', () => {
                 var e, t, n;
                 let r = new MediaStream();
                 return null != this.desktop ? (null == (e = this.desktop.stream) || e.getTracks().forEach((e) => r.addTrack(e)), this.desktop.refreshSpeaking()) : (null == (t = this.audio.stream) || t.getAudioTracks().forEach((e) => r.addTrack(e)), null == (n = this.video.stream) || n.getVideoTracks().forEach((e) => r.addTrack(e))), (this.stream = r), this.emit('stream', r), this.emit('video', this.getVideoStreamId()), r;
             }),
-            o(this, 'handleVoiceActivity', (e) => {
+            a(this, 'handleVoiceActivity', (e) => {
                 this.emit('voiceactivity', e);
             }),
-            o(this, 'handleDesktopSourceEnd', () => {
+            a(this, 'handleDesktopSourceEnd', () => {
                 this.emit('desktopsourceend');
             }),
-            o(this, 'handleSpeaking', (e) => {
+            a(this, 'handleSpeaking', (e) => {
                 this.emit('speaking', e);
             }),
-            o(this, 'handleAudioPermission', (e) => {
+            a(this, 'handleAudioPermission', (e) => {
                 this.emit('audio-permission', e);
             }),
-            o(this, 'handleVideoPermission', (e) => {
+            a(this, 'handleVideoPermission', (e) => {
                 this.emit('video-permission', e);
             }),
             (this.audio = new i.Z(e)),

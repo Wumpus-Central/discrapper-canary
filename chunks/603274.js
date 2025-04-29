@@ -17,14 +17,14 @@ var i = n(120356),
     b = n(592125),
     y = n(594174),
     _ = n(938475),
-    O = n(823379),
-    v = n(709054),
+    v = n(823379),
+    O = n(709054),
     C = n(853856),
     j = n(981631),
     S = n(388032),
     E = n(714509),
     x = n(375613);
-function I(e, t) {
+function P(e, t) {
     return 0 === t.length
         ? null
         : (0, r.jsxs)('div', {
@@ -42,12 +42,12 @@ function I(e, t) {
               ]
           });
 }
-function P() {
+function I() {
     let e = (0, a.Wu)([C.Z, b.Z], () =>
-            v.default
+            O.default
                 .keys(C.Z.getFavoriteChannels())
                 .map((e) => b.Z.getChannel(e))
-                .filter(O.lm)
+                .filter(v.lm)
         ),
         t = e.map((e) => e.id),
         n = e.filter((e) => e.type === j.d4z.GUILD_VOICE),
@@ -99,9 +99,9 @@ function P() {
             },
             [t]
         ),
-        P = (0, a.Wu)([y.default], () => x.map((e) => y.default.getUser(e)), [x]),
+        I = (0, a.Wu)([y.default], () => x.map((e) => y.default.getUser(e)), [x]),
         w = (0, a.Wu)([y.default], () => S.map((e) => y.default.getUser(e)), [S]),
-        N = I(
+        N = P(
             c.gj8,
             l.filter((e) => !S.includes(e.id) && !x.includes(e.id))
         ),
@@ -138,12 +138,12 @@ function P() {
                           })
                       ]
                   }),
-        T = I(
+        T = P(
             c.hGI,
             w.filter((e) => null != e && !x.includes(e.id))
         ),
         { enabled: A } = u.c.useExperiment({ location: 'FavoritesTooltip' }, { autoTrackExposure: !0 }),
-        R = I(A ? c.iWm : c.nG3, P);
+        R = P(A ? c.iWm : c.nG3, I);
     return (0, r.jsxs)(r.Fragment, {
         children: [Z, N, T, R]
     });
@@ -158,7 +158,7 @@ function w() {
                     children: S.intl.string(S.t.wMWycn)
                 })
             }),
-            (0, r.jsx)(P, {})
+            (0, r.jsx)(I, {})
         ]
     });
 }

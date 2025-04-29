@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d });
 var r = n(200651),
     i = n(134632),
-    a = n(481060),
-    o = n(823379);
+    o = n(481060),
+    a = n(823379);
 function s(e, t, n) {
     return (
         t in e
@@ -38,8 +38,8 @@ function c(e, t) {
         r,
         i = u(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -48,8 +48,8 @@ function u(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function d(e) {
@@ -57,16 +57,16 @@ function d(e) {
         n = c(e, ['label']);
     switch (t) {
         case i.w.LISTEN:
-            return (0, r.jsx)(a.RZG, l({}, n));
+            return (0, r.jsx)(o.RZG, l({}, n));
         case i.w.WATCH:
-            return (0, r.jsx)(a.ARS, l({}, n));
+            return (0, r.jsx)(o.ARS, l({}, n));
         case i.w.PLAY:
-            return (0, r.jsx)(a.iWm, l({}, n));
+            return (0, r.jsx)(o.iWm, l({}, n));
         case i.w.THINK:
-            return (0, r.jsx)(a.WGR, l({}, n));
+            return (0, r.jsx)(o.WGR, l({}, n));
         case i.w.LOVE:
-            return (0, r.jsx)(a.h_8, l({}, n));
+            return (0, r.jsx)(o.h_8, l({}, n));
         default:
-            (0, o.vE)(t);
+            (0, a.vE)(t);
     }
 }

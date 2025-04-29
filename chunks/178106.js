@@ -1,9 +1,9 @@
 n.d(t, { Z: () => k }), n(539854), n(388685);
 var r,
     i = n(392711),
-    a = n.n(i),
-    o = n(31775),
-    s = n.n(o),
+    o = n.n(i),
+    a = n(31775),
+    s = n.n(a),
     l = n(442837),
     c = n(570140),
     u = n(704907),
@@ -55,7 +55,7 @@ function y(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -66,7 +66,7 @@ function v(e, t) {
         e
     );
 }
-let O = [],
+let v = [],
     I = new (s())({ max: m.zb }),
     S = new u.ZP({
         computeBonus: () => 100,
@@ -96,7 +96,7 @@ function N(e) {
 }
 function C(e) {
     S.track(e),
-        O.push({
+        v.push({
             key: e,
             timestamp: Date.now()
         }),
@@ -107,20 +107,20 @@ function R(e) {
     return !1;
 }
 function P(e) {
-    return a().mapValues(e, (e) => v(b({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) }));
+    return o().mapValues(e, (e) => O(b({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) }));
 }
 function w() {
     var e;
     if (!x()) return;
     let t = null == (e = d.Z.frecencyWithoutFetchingLatest.playedSoundFrecency) ? void 0 : e.playedSounds;
-    S.overwriteHistory(P(null != t ? t : {}), O);
+    S.overwriteHistory(P(null != t ? t : {}), v);
 }
 function D(e) {
     let {
         settings: { type: t },
         wasSaved: n
     } = e;
-    x() && t === g.yP.FRECENCY_AND_FAVORITES_SETTINGS && n && (O = []);
+    x() && t === g.yP.FRECENCY_AND_FAVORITES_SETTINGS && n && (v = []);
 }
 function L() {
     return (0, _.v)({
@@ -136,16 +136,16 @@ function x() {
 }
 class M extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(f.default, p.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && I.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (O = e.playedEventsPendingFlush), this.syncWith([d.Z], w);
+        this.waitFor(f.default, p.Z), (null == e ? void 0 : e.recentlyHeardCache) != null && I.load(e.recentlyHeardCache), (null == e ? void 0 : e.playedEventsPendingFlush) != null && (v = e.playedEventsPendingFlush), this.syncWith([d.Z], w);
     }
     getState() {
         return {
             recentlyHeardCache: I.dump(),
-            playedEventsPendingFlush: O
+            playedEventsPendingFlush: v
         };
     }
     hasPendingUsage() {
-        return O.length > 0;
+        return v.length > 0;
     }
     get playedSoundHistory() {
         return S.usageHistory;

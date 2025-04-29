@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ });
 var r = n(200651),
     i = n(192379),
-    a = n(665443),
-    o = n.n(a),
+    o = n(665443),
+    a = n.n(o),
     s = n(970838),
     l = n(376398);
 function c(e, t, n) {
@@ -40,8 +40,8 @@ function d(e, t) {
         r,
         i = f(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -50,12 +50,12 @@ function f(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function _(e) {
-    var { streamId: t, paused: n = !1, onReady: a, onResize: c, className: f } = e,
+    var { streamId: t, paused: n = !1, onReady: o, onResize: c, className: f } = e,
         _ = d(e, ['streamId', 'paused', 'onReady', 'onResize', 'className']);
     let p = i.useRef(null),
         h = i.useRef({
@@ -84,12 +84,12 @@ function _(e) {
         }, [n]);
     let m = i.useCallback(() => {
         var e, t, n, r;
-        let { width: i, height: a } = h.current,
-            o = null != (n = null == (e = p.current) ? void 0 : e.videoWidth) ? n : 0,
+        let { width: i, height: o } = h.current,
+            a = null != (n = null == (e = p.current) ? void 0 : e.videoWidth) ? n : 0,
             s = null != (r = null == (t = p.current) ? void 0 : t.videoHeight) ? r : 0;
-        if (i !== o || a !== s) {
+        if (i !== a || o !== s) {
             let e = {
-                width: o,
+                width: a,
                 height: s
             };
             null == c || c(e), (h.current = e);
@@ -100,8 +100,8 @@ function _(e) {
         if (null != e) return e.addEventListener('resize', m), () => e.removeEventListener('resize', m);
     }, [m]);
     let g = i.useCallback(() => {
-            null == a || a();
-        }, [a]),
+            null == o || o();
+        }, [o]),
         E = i.useCallback(
             (e) => {
                 n || e.currentTarget.play();
@@ -112,7 +112,7 @@ function _(e) {
         'video',
         u(
             {
-                className: o()('media-engine-video', f),
+                className: a()('media-engine-video', f),
                 ref: p,
                 autoPlay: !0,
                 onPause: E,

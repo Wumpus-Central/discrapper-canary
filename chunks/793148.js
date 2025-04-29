@@ -1,9 +1,9 @@
 n.d(t, { Z: () => h }), n(388685);
 var r,
     i = n(200651),
-    a = n(192379),
-    o = n(120356),
-    s = n.n(o),
+    o = n(192379),
+    a = n(120356),
+    s = n.n(a),
     l = n(481060),
     c = n(540026),
     u = n(388032),
@@ -22,7 +22,7 @@ function f(e, t, n) {
     );
 }
 let _ = 150;
-class p extends (r = a.PureComponent) {
+class p extends (r = o.PureComponent) {
     componentDidMount() {
         this.updateMediaBar();
     }
@@ -35,11 +35,11 @@ class p extends (r = a.PureComponent) {
         null != r && (e ? r.setGrabber(0) : r.setGrabber(t / n));
     }
     render() {
-        let { iconClassName: e, iconColor: t, className: n, sliderWrapperClassName: r, sliderClassName: a, currentWindow: o, muted: f, minValue: p, maxValue: h, value: m, onVolumeShow: g, onVolumeHide: E } = this.props,
-            { hovered: b, focused: y, dragging: v } = this.state,
-            O = l.gj8;
+        let { iconClassName: e, iconColor: t, className: n, sliderWrapperClassName: r, sliderClassName: o, currentWindow: a, muted: f, minValue: p, maxValue: h, value: m, onVolumeShow: g, onVolumeHide: E } = this.props,
+            { hovered: b, focused: y, dragging: O } = this.state,
+            v = l.gj8;
         return (
-            f || m === p ? (O = l.OyP) : m < h / 2 && (O = l.X2j),
+            f || m === p ? (v = l.OyP) : m < h / 2 && (v = l.X2j),
             (0, i.jsxs)('div', {
                 className: s()(n, d.container),
                 onMouseEnter: () => {
@@ -56,7 +56,7 @@ class p extends (r = a.PureComponent) {
                 onKeyDown: this.handleKeyDown,
                 children: [
                     (0, i.jsx)('div', {
-                        className: s()(d.volumeButtonSlider, r, { [d.sliderVisible]: b || y || v }),
+                        className: s()(d.volumeButtonSlider, r, { [d.sliderVisible]: b || y || O }),
                         onMouseEnter: () => {
                             clearTimeout(this._hoverTimeout), this.setState({ hovered: !0 });
                         },
@@ -64,13 +64,13 @@ class p extends (r = a.PureComponent) {
                             clearTimeout(this._hoverTimeout), (this._hoverTimeout = setTimeout(() => this.setState({ hovered: !1 }), _));
                         },
                         children: (0, i.jsx)(c.Z, {
-                            sliderClassName: a,
+                            sliderClassName: o,
                             type: c.Z.Types.VOLUME,
                             value: m / h,
                             onDrag: this.handleValueChange,
                             onDragStart: this.handleDragStart,
                             onDragEnd: this.handleDragEnd,
-                            currentWindow: o,
+                            currentWindow: a,
                             ref: this._mediaBar
                         })
                     }),
@@ -80,7 +80,7 @@ class p extends (r = a.PureComponent) {
                         size: l.zxk.Sizes.NONE,
                         look: l.zxk.Looks.BLANK,
                         onClick: this.handleToggleMute,
-                        children: (0, i.jsx)(O, {
+                        children: (0, i.jsx)(v, {
                             color: t,
                             className: e
                         })
@@ -91,7 +91,7 @@ class p extends (r = a.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            f(this, '_mediaBar', a.createRef()),
+            f(this, '_mediaBar', o.createRef()),
             f(this, '_hoverTimeout', void 0),
             f(this, 'state', {
                 hovered: !1,
@@ -109,13 +109,13 @@ class p extends (r = a.PureComponent) {
             }),
             f(this, 'handleKeyDown', (e) => {
                 let { minValue: t, value: n, maxValue: r, onValueChange: i } = this.props,
-                    a = 0.05 * (r - t);
+                    o = 0.05 * (r - t);
                 switch (e.key) {
                     case 'ArrowUp':
-                        e.stopPropagation(), e.preventDefault(), null == i || i(Math.min(r, n + a));
+                        e.stopPropagation(), e.preventDefault(), null == i || i(Math.min(r, n + o));
                         break;
                     case 'ArrowDown':
-                        e.stopPropagation(), e.preventDefault(), null == i || i(Math.max(t, n - a));
+                        e.stopPropagation(), e.preventDefault(), null == i || i(Math.max(t, n - o));
                 }
             }),
             f(this, 'handleDragStart', () => {

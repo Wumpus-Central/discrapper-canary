@@ -1,15 +1,15 @@
 n.d(t, {
     EM: () => b,
     PR: () => g,
-    Tt: () => O,
+    Tt: () => v,
     ZD: () => A,
     yY: () => I
 }),
     n(388685);
 var r = n(192379),
     i = n(359959),
-    a = n(993192),
-    o = n(731965);
+    o = n(993192),
+    a = n(731965);
 function s(e, t, n) {
     return (
         t in e
@@ -69,7 +69,7 @@ let d = { base: n(358085).isPlatformEmbedded ? void 0 : 'Discord' },
         onlyWhenBlurred: !1,
         interval: 1000
     },
-    p = (0, a.F)(() => ({
+    p = (0, o.F)(() => ({
         titles: [d],
         notificationCount: void 0,
         flashQueue: []
@@ -87,17 +87,17 @@ function m(e) {
     return null == t || 0 === t ? '' : t < 0 ? '\u2022 ' : '('.concat(t, ') ');
 }
 function g(e) {
-    (0, o.j)(() => p.setState({ notificationCount: e }));
+    (0, a.j)(() => p.setState({ notificationCount: e }));
 }
 function E(e) {
     return (
-        (0, o.j)(() =>
+        (0, a.j)(() =>
             p.setState((t) => ({
                 titles: [e, ...t.titles]
             }))
         ),
         () => {
-            (0, o.j)(() => p.setState((t) => ({ titles: t.titles.filter((t) => t !== e) })));
+            (0, a.j)(() => p.setState((t) => ({ titles: t.titles.filter((t) => t !== e) })));
         }
     );
 }
@@ -114,14 +114,14 @@ function b(e) {
 function y(e) {
     p.setState((t) => ({ flashQueue: t.flashQueue.filter((t) => t.id !== e) }));
 }
-function v() {
+function O() {
     p.setState({ flashQueue: [] });
 }
-function O(e) {
+function v(e) {
     r.useEffect(() => E(e), [...Object.values(e)]);
 }
 function I(e) {
-    return O(e), null;
+    return v(e), null;
 }
 function S() {
     let [e, t] = p((e) => {
@@ -132,25 +132,25 @@ function S() {
                 r = m(e);
             return [''.concat(r).concat(n), t[0]];
         }, i.X),
-        [n, a] = r.useState(!1),
-        o = r.useRef(0),
-        s = null == t ? void 0 : t.messages[o.current % t.messages.length];
+        [n, o] = r.useState(!1),
+        a = r.useRef(0),
+        s = null == t ? void 0 : t.messages[a.current % t.messages.length];
     return (
         r.useEffect(() => {
             if (null == t) {
-                (o.current = 0), a(!1);
+                (a.current = 0), o(!1);
                 return;
             }
             if (document.hasFocus() && t.onlyWhenBlurred) {
-                y(t.id), a(!1);
+                y(t.id), o(!1);
                 return;
             }
             let e = setInterval(() => {
-                if (o.current >= t.count) {
-                    y(t.id), a(!1);
+                if (a.current >= t.count) {
+                    y(t.id), o(!1);
                     return;
                 }
-                a((e) => !e || ((o.current += 1), !1));
+                o((e) => !e || ((a.current += 1), !1));
             }, t.interval);
             return () => clearInterval(e);
         }, [t]),
@@ -160,7 +160,7 @@ function S() {
 function T() {
     r.useEffect(() => {
         function e() {
-            v();
+            O();
         }
         return document.addEventListener('focusin', e, { capture: !0 }), () => document.removeEventListener('focusin', e, { capture: !0 });
     }, []);

@@ -1,4 +1,4 @@
-n.d(t, { U: () => O });
+n.d(t, { U: () => v });
 var r = n(200651),
     i = n(192379),
     l = n(91192),
@@ -74,13 +74,13 @@ function _(e) {
             },
             [t]
         ),
-        O = 'url('.concat(t.backgroundAssetUrl, ') black top / cover no-repeat'),
-        v = (0, r.jsxs)('div', {
+        v = 'url('.concat(t.backgroundAssetUrl, ') black top / cover no-repeat'),
+        O = (0, r.jsxs)('div', {
             className: m.tooltipContainer,
             children: [
                 (0, r.jsx)('div', {
                     className: m.tooltipBackground,
-                    style: { background: O }
+                    style: { background: v }
                 }),
                 (0, r.jsx)(o.X6q, {
                     variant: 'heading-sm/medium',
@@ -98,7 +98,7 @@ function _(e) {
             (0, r.jsx)(o.ze6, {
                 theme: f.BRd.DARK,
                 children: (0, r.jsx)(h.Z, {
-                    text: v,
+                    text: O,
                     tooltipClass: m.tooltip,
                     tooltipContentClass: m.tooltipContent,
                     children: (0, r.jsx)(o.ze6, {
@@ -123,7 +123,7 @@ function _(e) {
             }),
             (0, r.jsx)('div', {
                 style: {
-                    background: O,
+                    background: v,
                     width: 0,
                     height: 0
                 }
@@ -131,7 +131,7 @@ function _(e) {
         ]
     });
 }
-function O() {
+function v() {
     let e = (0, s.e7)([p.Z], () => p.Z.getActiveUserSignUp());
     return null == e ? null : (0, r.jsx)(_, { target: e });
 }

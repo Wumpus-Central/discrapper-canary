@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    a = n(481060),
-    o = n(898531),
+    o = n(481060),
+    a = n(898531),
     s = n(221241),
     l = n(314897),
     c = n(131951),
@@ -62,35 +62,35 @@ function h(e, t) {
     );
 }
 function m(e, t) {
-    let f = (0, a.vRw)(),
+    let f = (0, o.vRw)(),
         { videoEnabled: p, hasVideoDevice: m } = (0, i.cj)([c.Z], () => ({
             videoEnabled: c.Z.isVideoEnabled(),
             hasVideoDevice: c.Z.isVideoAvailable()
         })),
         g = (0, i.e7)([l.default], () => l.default.getId() === e),
-        E = (0, o.Z)(),
+        E = (0, a.Z)(),
         { simplifiedSettingsEnabled: b } = (0, s.Z)({ location: 'usePreviewVideoItem' });
     function y() {
-        (0, a.ZDy)(
+        (0, o.ZDy)(
             async () => {
                 let { default: e } = await Promise.all([n.e('94342'), n.e('86029'), n.e('16172'), n.e('84605'), n.e('25292'), n.e('90508'), n.e('95477'), n.e('22878'), n.e('13351'), n.e('91245'), n.e('74891'), n.e('6380'), n.e('46097'), n.e('8739'), n.e('18543'), n.e('58059'), n.e('20875'), n.e('28467'), n.e('86282'), n.e('22173'), n.e('30243'), n.e('37447'), n.e('53937'), n.e('76540'), n.e('23491'), n.e('80284'), n.e('15483'), n.e('2900'), n.e('17938'), n.e('93602'), n.e('27146'), n.e('49508'), n.e('22646'), n.e('64838'), n.e('25183'), n.e('3940'), n.e('60691'), n.e('2286'), n.e('27458'), n.e('94928'), n.e('78900'), n.e('74028'), n.e('88712'), n.e('30419'), n.e('18824'), n.e('82081'), n.e('44114'), n.e('62117'), n.e('11252'), n.e('30588'), n.e('86133'), n.e('43498'), n.e('87174'), n.e('30740')]).then(n.bind(n, 601572));
                 return (t) => (0, r.jsx)(e, h(_({}, t), { videoEnabled: p }));
             },
             {
                 modalKey: 'camera-preview',
-                contextKey: null != t ? (0, a.VnL)(t) : f
+                contextKey: null != t ? (0, o.VnL)(t) : f
             }
         );
     }
     return (!p || E) && g && m
-        ? (0, r.jsx)(a.sNh, {
+        ? (0, r.jsx)(o.sNh, {
               id: 'change-video-background',
               label: (0, r.jsx)('div', {
                   className: d.item,
                   children: p ? u.intl.string(u.t.mZKxHR) : u.intl.string(u.t.vkV939)
               }),
               action: y,
-              icon: b && (p ? a.yMH : a.tEF)
+              icon: b && (p ? o.yMH : o.tEF)
           })
         : null;
 }

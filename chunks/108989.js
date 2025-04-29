@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(995899);
-function o(e, t, n) {
+    o = n(995899);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -108,16 +108,16 @@ let u = [n(123353)],
         }
     };
 function h(e) {
-    let { className: t, firing: n = !0, wind: o = 2, sprites: l = u, spriteColors: h = d, confettiConfig: m } = e,
+    let { className: t, firing: n = !0, wind: a = 2, sprites: l = u, spriteColors: h = d, confettiConfig: m } = e,
         [g, E] = i.useState(null),
         [b, y] = i.useState(null),
-        v = (0, a.uR)(b, g),
-        O = i.useMemo(() => new a.qA({ wind: o }), [o]),
+        O = (0, o.uR)(b, g),
+        v = i.useMemo(() => new o.qA({ wind: a }), [a]),
         I = i.useCallback(() => {
             let e = null == b ? void 0 : b.getCanvas();
             if (null == e) return;
             let t = e.getBoundingClientRect();
-            v.createConfetti(
+            O.createConfetti(
                 c(s({}, p, m), {
                     position: {
                         type: 'static-random',
@@ -132,7 +132,7 @@ function h(e) {
                     }
                 })
             );
-        }, [v, b, m]);
+        }, [O, b, m]);
     return (
         i.useEffect(() => {
             let e = n ? setInterval(I, _) : null;
@@ -140,12 +140,12 @@ function h(e) {
         }, [n, I]),
         (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(a.O_, {
+                (0, r.jsx)(o.O_, {
                     ref: y,
                     className: t,
-                    environment: O
+                    environment: v
                 }),
-                (0, r.jsx)(a.Ji, {
+                (0, r.jsx)(o.Ji, {
                     ref: E,
                     colors: h,
                     sprites: l,

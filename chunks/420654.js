@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(906732),
     c = n(785717),
@@ -64,14 +64,14 @@ function g(e, t) {
 }
 let E = 57.75,
     b = i.memo(function (e) {
-        let { user: t, onClose: n, bio: a, hidePersonalInformation: p, viewFullBioDisabled: m = !1 } = e,
+        let { user: t, onClose: n, bio: o, hidePersonalInformation: p, viewFullBioDisabled: m = !1 } = e,
             { context: b } = (0, c.KZ)(),
             { analyticsLocations: y } = (0, l.ZP)(),
-            [v, O] = i.useState(null),
+            [O, v] = i.useState(null),
             [I, S] = i.useState(!1),
             [T, A] = i.useState(!1),
             N = (e) => {
-                null != e && (O(e), S(!T && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > E && A(!0));
+                null != e && (v(e), S(!T && e.scrollHeight - e.clientHeight > 1), e.getBoundingClientRect().height > E && A(!0));
             },
             C = () => {
                 null == n || n(),
@@ -83,18 +83,18 @@ let E = 57.75,
                     );
             },
             R = (e) => {
-                null == v || (null == v ? void 0 : v.contains(e.relatedTarget)) || (v.scrollTop = 0);
+                null == O || (null == O ? void 0 : O.contains(e.relatedTarget)) || (O.scrollTop = 0);
             };
-        return p || null == a || '' === a
+        return p || null == o || '' === o
             ? null
             : (0, r.jsxs)('div', {
                   children: [
                       (0, r.jsx)('div', {
                           ref: N,
-                          className: o()(_.descriptionClamp, T && _.maxBioHeight),
+                          className: a()(_.descriptionClamp, T && _.maxBioHeight),
                           onBlur: R,
                           children: (0, r.jsx)(d.Z, {
-                              userBio: a,
+                              userBio: o,
                               setLineClamp: !1,
                               textColor: 'header-primary'
                           })
@@ -104,7 +104,7 @@ let E = 57.75,
                               look: s.zxk.Looks.BLANK,
                               size: s.zxk.Sizes.NONE,
                               className: _.viewFullBio,
-                              color: o()(_.viewFullBioColor, m && _.viewFullBioDisabled),
+                              color: a()(_.viewFullBioColor, m && _.viewFullBioDisabled),
                               onClick: C,
                               children: (0, r.jsx)(s.Text, {
                                   variant: 'text-xs/normal',

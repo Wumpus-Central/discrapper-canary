@@ -2,8 +2,8 @@ n.d(t, { Z: () => y });
 var r = n(200651);
 n(192379);
 var i = n(657707),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(475179),
     l = n(287734),
     c = n(359110),
@@ -19,25 +19,25 @@ var i = n(657707),
     b = n(227832);
 function y(e) {
     let { channel: t, onAction: n, onClose: y } = e,
-        { themeType: v } = (0, p.z)(),
-        O = (0, a.e7)([f.Z], () => f.Z.isInChannel(t.id)),
-        I = (0, a.e7)([d.Z], () => t.isPrivate() || d.Z.can(g.Plq.CONNECT, t)),
+        { themeType: O } = (0, p.z)(),
+        v = (0, o.e7)([f.Z], () => f.Z.isInChannel(t.id)),
+        I = (0, o.e7)([d.Z], () => t.isPrivate() || d.Z.can(g.Plq.CONNECT, t)),
         { chatButtonEnabled: S } = (0, _.s)({ location: 'UserProfileActivityVoiceChannelButtons' });
     if (!I) return null;
-    let T = () => (v === m.lY.MODAL || v === m.lY.MODAL_V2 ? E.intl.string(E.t['3xjX0d']) : t.isDM() || t.isGroupDM() ? E.intl.string(E.t['7hwn2N']) : t.isGuildStageVoice() ? E.intl.string(E.t.Acqcoq) : E.intl.string(E.t.BXxdl5)),
-        A = () => (v === m.lY.MODAL || v === m.lY.MODAL_V2 ? E.intl.string(E.t.VJlc0d) : t.isDM() || t.isGroupDM() ? E.intl.string(E.t.ozoE2N) : t.isGuildStageVoice() ? E.intl.string(E.t['7vb2cX']) : E.intl.string(E.t['96ANUF'])),
+    let T = () => (O === m.lY.MODAL || O === m.lY.MODAL_V2 ? E.intl.string(E.t['3xjX0d']) : t.isDM() || t.isGroupDM() ? E.intl.string(E.t['7hwn2N']) : t.isGuildStageVoice() ? E.intl.string(E.t.Acqcoq) : E.intl.string(E.t.BXxdl5)),
+        A = () => (O === m.lY.MODAL || O === m.lY.MODAL_V2 ? E.intl.string(E.t.VJlc0d) : t.isDM() || t.isGroupDM() ? E.intl.string(E.t.ozoE2N) : t.isGuildStageVoice() ? E.intl.string(E.t['7vb2cX']) : E.intl.string(E.t['96ANUF'])),
         N = (e) => {
             e.stopPropagation(), null == n || n({ action: 'PRESS_JOIN_CALL_BUTTON' }), t.isGuildStageVoice() ? (0, u.Cq)(t) : (l.default.selectVoiceChannel(t.id), (0, c.Kh)(t.id)), null == y || y();
         },
         C = (e) => {
             e.stopPropagation(), null == n || n({ action: 'OPEN_VOICE_CHAT' }), s.Z.updateChatOpen(t.id, !0), (0, c.Kh)(t.id), null == y || y();
         };
-    return v === m.lY.MODAL_V2
+    return O === m.lY.MODAL_V2
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(h.tG, {
-                      text: O ? T() : A(),
-                      size: o.PhG.TINY,
+                      text: v ? T() : A(),
+                      size: a.PhG.TINY,
                       themeColor: 'secondary',
                       onClick: N
                   }),
@@ -45,7 +45,7 @@ function y(e) {
                       t.isGuildVocal() &&
                       (0, r.jsx)(h.ef, {
                           icon: i.kBi,
-                          tooltipText: O ? E.intl.string(E.t.kkKapK) : E.intl.string(E.t.ZXxLQk),
+                          tooltipText: v ? E.intl.string(E.t.kkKapK) : E.intl.string(E.t.ZXxLQk),
                           className: b.tinyIconButton,
                           innerClassName: b.tinyIconButtonInner,
                           themeColor: 'secondary',
@@ -56,8 +56,8 @@ function y(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(h.tG, {
-                      text: O ? T() : A(),
-                      themeColor: O ? 'secondary' : 'primary',
+                      text: v ? T() : A(),
+                      themeColor: v ? 'secondary' : 'primary',
                       fullWidth: !0,
                       onClick: N
                   }),
@@ -65,8 +65,8 @@ function y(e) {
                       t.isGuildVocal() &&
                       (0, r.jsx)(h.ef, {
                           icon: i.kBi,
-                          tooltipText: O ? E.intl.string(E.t.kkKapK) : E.intl.string(E.t.ZXxLQk),
-                          themeColor: O ? 'secondary' : 'primary',
+                          tooltipText: v ? E.intl.string(E.t.kkKapK) : E.intl.string(E.t.ZXxLQk),
+                          themeColor: v ? 'secondary' : 'primary',
                           onClick: C
                       })
               ]

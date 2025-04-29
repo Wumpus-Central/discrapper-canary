@@ -2,8 +2,8 @@ n.d(t, { Z: () => S }), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(392711),
-    a = n(481060),
-    o = n(16609),
+    o = n(481060),
+    a = n(16609),
     s = n(812206),
     l = n(569545),
     c = n(687516),
@@ -45,7 +45,7 @@ function y(e) {
     }
     return e;
 }
-function v(e, t) {
+function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -57,12 +57,12 @@ function v(e, t) {
     }
     return n;
 }
-function O(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : O(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -84,42 +84,42 @@ class I extends m.Z {
                 let { analyticsData: t } = e;
                 (0, i.sum)(t.duration_speaking_voice_filter_ms) >= 5000 &&
                     this.possiblyShowFeedbackModal(g.nw.VOICE_FILTER, () => {
-                        (0, a.ZDy)(async () => {
+                        (0, o.ZDy)(async () => {
                             let { VoiceFilterFeedbackModal: e } = await n.e('95677').then(n.bind(n, 193543));
-                            return (n) => (0, r.jsx)(e, O(y({}, n), { analyticsData: t }));
+                            return (n) => (0, r.jsx)(e, v(y({}, n), { analyticsData: t }));
                         });
                     }),
                     this.possiblyShowFeedbackModal(g.nw.VOICE, () => {
-                        (0, a.ZDy)(async () => {
+                        (0, o.ZDy)(async () => {
                             let { default: e } = await n.e('96888').then(n.bind(n, 988645));
-                            return (n) => (0, r.jsx)(e, O(y({}, n), { analyticsData: t }));
+                            return (n) => (0, r.jsx)(e, v(y({}, n), { analyticsData: t }));
                         });
                     });
             }),
             b(this, 'handleStreamClose', (e) => {
                 var t, i;
-                let { streamKey: o, canShowFeedback: s } = e,
-                    u = (0, l.my)(o),
+                let { streamKey: a, canShowFeedback: s } = e,
+                    u = (0, l.my)(a),
                     f = (0, c.L2)(u, _.Z),
-                    p = null != (i = h.Z.getVideoStats(o)) ? i : {},
+                    p = null != (i = h.Z.getVideoStats(a)) ? i : {},
                     m = y(
                         {
-                            media_session_id: h.Z.getMediaSessionId(o),
-                            rtc_connection_id: h.Z.getRtcConnectionId(o),
-                            stream_region: h.Z.getRegion(o),
-                            max_viewers: h.Z.getMaxViewers(o),
-                            parent_media_session_id: null == (t = h.Z.getRTCConnection(o)) ? void 0 : t.parentMediaSessionId
+                            media_session_id: h.Z.getMediaSessionId(a),
+                            rtc_connection_id: h.Z.getRtcConnectionId(a),
+                            stream_region: h.Z.getRegion(a),
+                            max_viewers: h.Z.getMaxViewers(a),
+                            parent_media_session_id: null == (t = h.Z.getRTCConnection(a)) ? void 0 : t.parentMediaSessionId
                         },
                         p
                     );
                 s &&
                     this.possiblyShowFeedbackModal(g.nw.STREAM, () => {
-                        (0, a.ZDy)(async () => {
+                        (0, o.ZDy)(async () => {
                             let { default: e } = await n.e('23657').then(n.bind(n, 142402));
                             return (t) =>
                                 (0, r.jsx)(
                                     e,
-                                    O(
+                                    v(
                                         y(
                                             {
                                                 stream: u,
@@ -137,32 +137,32 @@ class I extends m.Z {
             b(this, 'handleVideoBackgroundShowFeedback', (e) => {
                 let { analyticsData: t } = e;
                 this.possiblyShowFeedbackModal(g.nw.VIDEO_BACKGROUND, () => {
-                    (0, a.ZDy)(async () => {
+                    (0, o.ZDy)(async () => {
                         let { default: e } = await n.e('11495').then(n.bind(n, 801320));
-                        return (n) => (0, r.jsx)(e, O(y({}, n), { analyticsData: t }));
+                        return (n) => (0, r.jsx)(e, v(y({}, n), { analyticsData: t }));
                     });
                 });
             }),
             b(this, 'handleActivityClose', (e) => {
                 let { applicationId: t, location: i, showFeedback: l } = e,
                     c = s.Z.getApplication(t),
-                    d = (0, o.pY)(i),
+                    d = (0, a.pY)(i),
                     _ = f.Z.getChannel(d),
                     h = {
                         rtc_connection_id: p.Z.getRTCConnectionId(),
                         media_session_id: p.Z.getMediaSessionId()
                     },
-                    m = u.Z.getWindowOpen(E.KJ3.CHANNEL_CALL_POPOUT) ? a.u1M : a.z1l;
+                    m = u.Z.getWindowOpen(E.KJ3.CHANNEL_CALL_POPOUT) ? o.u1M : o.z1l;
                 null != c &&
                     l &&
                     this.possiblyShowFeedbackModal(g.nw.ACTIVITY, () => {
-                        (0, a.ZDy)(
+                        (0, o.ZDy)(
                             async () => {
                                 let { default: e } = await n.e('4413').then(n.bind(n, 450634));
                                 return (t) =>
                                     (0, r.jsx)(
                                         e,
-                                        O(y({}, t), {
+                                        v(y({}, t), {
                                             activityApplication: c,
                                             channel: _,
                                             embeddedActivityLocation: i,
@@ -177,12 +177,12 @@ class I extends m.Z {
             b(this, 'handleInAppReportsFeedback', (e) => {
                 let { reportId: t, reportType: i } = e;
                 this.possiblyShowFeedbackModal(g.nw.IN_APP_REPORTS, () => {
-                    (0, a.ZDy)(async () => {
+                    (0, o.ZDy)(async () => {
                         let { default: e } = await n.e('72135').then(n.bind(n, 442173));
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                O(y({}, n), {
+                                v(y({}, n), {
                                     reportId: t,
                                     reportType: i
                                 })
@@ -193,15 +193,15 @@ class I extends m.Z {
             b(this, 'handleUserDmMuteFeedback', (e) => {
                 let { channel: t } = e;
                 this.possiblyShowFeedbackModal(g.nw.USER_DM_MUTE, () => {
-                    (0, a.ZDy)(async () => {
+                    (0, o.ZDy)(async () => {
                         let { default: e } = await n.e('10620').then(n.bind(n, 408561));
-                        return (n) => (0, r.jsx)(e, O(y({}, n), { channel: t }));
+                        return (n) => (0, r.jsx)(e, v(y({}, n), { channel: t }));
                     });
                 });
             }),
             b(this, 'handleBlockUserFeedback', () => {
                 this.possiblyShowFeedbackModal(g.nw.BLOCK_USER, () => {
-                    (0, a.ZDy)(async () => {
+                    (0, o.ZDy)(async () => {
                         let { default: e } = await n.e('87995').then(n.bind(n, 180970));
                         return (t) => (0, r.jsx)(e, y({}, t));
                     });

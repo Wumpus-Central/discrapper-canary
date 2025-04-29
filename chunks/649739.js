@@ -1,7 +1,7 @@
 n.d(t, {
     Hr: () => i,
-    Ku: () => a,
-    ZP: () => o
+    Ku: () => o,
+    ZP: () => a
 });
 let r = (0, n(818083).B)({
     kind: 'user',
@@ -20,8 +20,8 @@ function i(e, t) {
     let { showGameIcon: n } = r.useExperiment({ location: e }, { autoTrackExposure: t });
     return n;
 }
-function a(e, t) {
+function o(e, t) {
     let { showGameIcon: n } = r.getCurrentConfig({ location: e }, { autoTrackExposure: t });
     return n;
 }
-let o = r;
+let a = r;

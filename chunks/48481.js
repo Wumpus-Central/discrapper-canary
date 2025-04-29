@@ -5,7 +5,7 @@ n.d(t, {
     d5: () => g,
     i7: () => S,
     kI: () => m,
-    re: () => v,
+    re: () => O,
     tU: () => N,
     u0: () => I,
     uL: () => T,
@@ -18,8 +18,8 @@ n.d(t, {
     n(583741);
 var r = n(647943),
     i = n(581282),
-    a = n(392711),
-    o = n.n(a),
+    o = n(392711),
+    a = n.n(o),
     s = n(377108),
     l = n(524437),
     c = n(397696),
@@ -80,18 +80,18 @@ function b(e, t) {
 function y(e, t) {
     return (0, i.m)(e.toBinary(t));
 }
-function v(e, t, n) {
+function O(e, t, n) {
     for (let e in ((t = _({}, t)), n)) delete t[e];
     return e.mergePartial(t, n), t;
 }
-function O(e, t, n) {
+function v(e, t, n) {
     return null == e.guilds && (e.guilds = l.os.create()), I(e.guilds, t, n);
 }
 function I(e, t, n) {
     return (null == t || 'null' === t) && (t = d.aIL), t in e.guilds || (e.guilds[t] = l.C4.create()), n(e.guilds[t]);
 }
 function S(e, t, n, r) {
-    return O(e, t, (e) => T(e, n, r));
+    return v(e, t, (e) => T(e, n, r));
 }
 function T(e, t, n) {
     return t in e.channels || (e.channels[t] = l.p5.create()), n(e.channels[t]);
@@ -105,11 +105,11 @@ function A(e, t) {
     }
     let r = 0.1 > Math.random(),
         i = !1,
-        a = [];
+        o = [];
     for (let n of t) {
-        var o, s;
+        var a, s;
         if (n.version <= e.versions.clientVersion) {
-            r && (null == (o = n.cleanup) || o.call(n));
+            r && (null == (a = n.cleanup) || a.call(n));
             continue;
         }
         let t = n.run(e);
@@ -117,19 +117,19 @@ function A(e, t) {
             null == (s = n.cleanup) || s.call(n);
             continue;
         }
-        (i = !0), null != n.cleanup && a.push(n.cleanup);
+        (i = !0), null != n.cleanup && o.push(n.cleanup);
     }
     return {
         proto: e,
         isDirty: i,
-        cleanupFuncs: a
+        cleanupFuncs: o
     };
 }
 function N(e, t) {
     let n = Object.entries(e);
     if (n.length > t)
         for (
-            n = o()
+            n = a()
                 .sortBy(n, (e) => {
                     let [t, n] = e;
                     return n.recentUses[n.recentUses.length - 1];

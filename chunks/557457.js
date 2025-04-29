@@ -8,8 +8,8 @@ n.d(t, {
 });
 var r = n(430824),
     i = n(19780),
-    a = n(594174),
-    o = n(626135),
+    o = n(594174),
+    a = n(626135),
     s = n(981631),
     l = n(37113),
     c = n(474936),
@@ -48,10 +48,10 @@ function E(e) {
 }
 function b(e, t, n) {
     let l = h(e, t, n),
-        u = a.default.getCurrentUser(),
+        u = o.default.getCurrentUser(),
         d = i.Z.getGuildId(),
         f = null != d ? r.Z.getGuild(d) : null;
-    o.default.track(s.rMx.STREAM_SETTINGS_UPDATE, {
+    a.default.track(s.rMx.STREAM_SETTINGS_UPDATE, {
         user_premium_tier: null == u ? void 0 : u.premiumType,
         guild_premium_tier: null == f ? void 0 : f.premiumTier,
         stream_quality_user_premium_tier: (null == l ? void 0 : l.quality) != null ? c.bg[l.quality] : null,

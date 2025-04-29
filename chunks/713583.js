@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(953529);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(239091),
     l = n(962293),
     c = n(555573),
@@ -63,11 +63,11 @@ function m(e, t) {
 }
 function g(e) {
     var t;
-    let a,
+    let o,
         _,
         h,
-        { className: g, activeCommand: E, activeOption: b, optionStates: y, channelId: v } = e,
-        O = i.useCallback(
+        { className: g, activeCommand: E, activeOption: b, optionStates: y, channelId: O } = e,
+        v = i.useCallback(
             (e) => {
                 var t;
                 let i = null == E || null == (t = E.rootCommand) ? void 0 : t.id;
@@ -88,26 +88,26 @@ function g(e) {
         ),
         I = i.useCallback(() => {
             c.Po({
-                channelId: v,
+                channelId: O,
                 command: null,
                 section: null
             });
-        }, [v]);
+        }, [O]);
     if (null == E) return null;
     if (null != b) {
         let e = y[b.name].lastValidationResult;
-        (a = b.displayName), (_ = b.displayDescription), (h = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error);
-    } else (a = ''.concat(u.GI).concat(E.displayName)), (_ = E.displayDescription), (h = null);
+        (o = b.displayName), (_ = b.displayDescription), (h = (null == e ? void 0 : e.success) ? null : null == e ? void 0 : e.error);
+    } else (o = ''.concat(u.GI).concat(E.displayName)), (_ = E.displayDescription), (h = null);
     return (0, r.jsxs)('div', {
-        className: o()(g, f.bar),
-        onContextMenu: O,
+        className: a()(g, f.bar),
+        onContextMenu: v,
         children: [
             (0, r.jsxs)('div', {
                 className: f.commandInfo,
                 children: [
                     (0, r.jsx)('span', {
                         className: f.name,
-                        children: a
+                        children: o
                     }),
                     null != h
                         ? (0, r.jsx)('span', {

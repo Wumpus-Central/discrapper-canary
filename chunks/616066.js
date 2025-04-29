@@ -2,8 +2,8 @@ n.d(t, { R: () => E });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(979554),
+    o = n.n(i),
+    a = n(979554),
     s = n(481060),
     l = n(1585),
     c = n(125988),
@@ -69,10 +69,10 @@ let g = u.ZP.getEnableHardwareAcceleration() ? s.Xo$ : s.qEK,
             {
                 avatarDecorationSrc: b,
                 eventHandlers: y,
-                avatarPlaceholderSrc: v
+                avatarPlaceholderSrc: O
             } = (0, c.Z)({
                 user: n,
-                avatarDecorationOverride: (null == t ? void 0 : t.type) === o.Z.AVATAR_DECORATION ? t : void 0,
+                avatarDecorationOverride: (null == t ? void 0 : t.type) === a.Z.AVATAR_DECORATION ? t : void 0,
                 size: E,
                 onlyAnimateOnHover: !i
             });
@@ -80,9 +80,9 @@ let g = u.ZP.getEnableHardwareAcceleration() ? s.Xo$ : s.qEK,
             g,
             m(p({}, y), {
                 avatarDecoration: b,
-                src: i ? (null == n ? void 0 : n.getAvatarURL(void 0, 152, !0)) : null != h ? h : v,
+                src: i ? (null == n ? void 0 : n.getAvatarURL(void 0, 152, !0)) : null != h ? h : O,
                 imageClassName: i ? f.fadeInAvatarImg : void 0,
-                className: a()(f.avatar, { [f.avatarPurchased]: u && !i }),
+                className: o()(f.avatar, { [f.avatarPurchased]: u && !i }),
                 size: _,
                 'aria-label': d.intl.string(d.t.lqaIxM)
             })

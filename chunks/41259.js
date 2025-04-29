@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
 var r = n(200651),
     i = n(192379),
-    a = n(793030),
-    o = n(974674),
+    o = n(793030),
+    a = n(974674),
     s = n(1561),
     l = n(993365),
     c = n(385499),
@@ -15,7 +15,7 @@ var r = n(200651),
     m = n(388032),
     g = n(441533);
 function E(e) {
-    let { id: t, user: n, application: E, bot: b, accountScopes: y, showLogout: v, location: O, scopes: I } = e,
+    let { id: t, user: n, application: E, bot: b, accountScopes: y, showLogout: O, location: v, scopes: I } = e,
         S = u.ZP.getApplicationIconURL({
             id: E.id,
             icon: E.icon
@@ -31,7 +31,7 @@ function E(e) {
                                   color: 'header-secondary',
                                   children: m.intl.string(m.t.uT1CPT)
                               }),
-                              (0, r.jsx)(a.X6, {
+                              (0, r.jsx)(o.X6, {
                                   variant: 'heading-xxl/bold',
                                   color: 'header-primary',
                                   children: E.name
@@ -75,7 +75,7 @@ function E(e) {
             (0, r.jsxs)('div', {
                 className: g.headerIcons,
                 children: [
-                    (0, r.jsx)(o.qE, {
+                    (0, r.jsx)(a.qE, {
                         className: g.avatar,
                         src: S,
                         size: h.EF.SIZE_80,
@@ -85,7 +85,7 @@ function E(e) {
                         className: g.ellipseGroup,
                         children: [(0, r.jsx)('div', { className: g.ellipse }), (0, r.jsx)('div', { className: g.ellipse }), (0, r.jsx)('div', { className: g.ellipse })]
                     }),
-                    (0, r.jsx)(o.qE, {
+                    (0, r.jsx)(a.qE, {
                         className: g.avatar,
                         src: T,
                         size: h.EF.SIZE_80,
@@ -94,7 +94,7 @@ function E(e) {
                 ]
             }),
             A,
-            v
+            O
                 ? (0, r.jsx)('div', {
                       className: g.currentUser,
                       children: (0, r.jsxs)(l.x, {
@@ -124,7 +124,7 @@ function E(e) {
                               (0, r.jsx)(s.P, {
                                   tag: 'a',
                                   className: g.logoutLink,
-                                  onClick: () => (0, f.c$)(O, 'oauth2_logout'),
+                                  onClick: () => (0, f.c$)(v, 'oauth2_logout'),
                                   children: m.intl.string(m.t['yV/hjI'])
                               })
                           ]

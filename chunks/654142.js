@@ -76,7 +76,7 @@ let y = i.memo(function (e) {
             }
             return i;
         })(e, ['folderNode']);
-    let { id: _, name: O, color: v, children: C } = t,
+    let { id: _, name: v, color: O, children: C } = t,
         j = C.map((e) => e.id),
         S = (0, a.Z)((e) => e.guildId),
         E = (0, l.e7)([c.Z], () => c.Z.isFolderExpanded(_)),
@@ -93,9 +93,9 @@ let y = i.memo(function (e) {
             for (let e of t) (e.length < n || 0 === r.length) && (r.push(e), (n -= e.length));
             return ''.concat(r.join(', ')).concat(r.length < t.length ? ', ...' : '');
         })(t),
-        I = (0, f.Z)(t),
+        P = (0, f.Z)(t),
         {
-            mentionCount: P,
+            mentionCount: I,
             isMentionLowImportance: w,
             unread: N
         } = (0, l.cj)([u.default], () => ({
@@ -115,14 +115,14 @@ let y = i.memo(function (e) {
                             e,
                             b(m({}, t), {
                                 folderId: _,
-                                folderName: O,
-                                folderColor: v,
-                                unread: N || P > 0
+                                folderName: v,
+                                folderColor: O,
+                                unread: N || I > 0
                             })
                         );
                 });
             },
-            [_, O, v, N, P]
+            [_, v, O, N, I]
         );
     return (0, r.jsx)(
         p.Z,
@@ -130,10 +130,10 @@ let y = i.memo(function (e) {
             folderNode: t,
             expanded: E,
             selected: null != S && j.includes(S),
-            mentionCount: P,
+            mentionCount: I,
             isMentionLowImportance: w,
             unread: N,
-            mediaState: I,
+            mediaState: P,
             defaultFolderName: x,
             onExpandCollapse: Z,
             onContextMenu: T

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A }), n(388685), n(457542), n(953529);
 var r = n(200651),
     i = n(192379),
-    a = n(831209),
-    o = n(793030),
+    o = n(831209),
+    a = n(793030),
     s = n(442837),
     l = n(481060),
     c = n(749210),
@@ -17,43 +17,43 @@ var r = n(200651),
     E = n(125900),
     b = n(767434),
     y = n(474936),
-    v = n(981631),
-    O = n(710111),
+    O = n(981631),
+    v = n(710111),
     I = n(388032),
     S = n(367753);
 function T(e) {
-    let { discoverableGuildId: t, closePopout: n, buttonType: a } = e,
-        o = i.useCallback(async () => {
+    let { discoverableGuildId: t, closePopout: n, buttonType: o } = e,
+        a = i.useCallback(async () => {
             if ((n(), null != t))
                 try {
                     await c.Z.joinGuild(t), c.Z.transitionToGuildSync(t);
                 } catch (e) {}
         }, [n, t]);
-    return a === b.y.GET_NITRO
+    return o === b.y.GET_NITRO
         ? (0, r.jsx)(g.Z, {
               fullWidth: !0,
               showGradient: !0,
-              premiumModalAnalyticsLocation: { section: v.jXE.PREMIUM_SOUNDMOJI_GUILD_INFO_POPOUT },
+              premiumModalAnalyticsLocation: { section: O.jXE.PREMIUM_SOUNDMOJI_GUILD_INFO_POPOUT },
               subscriptionTier: y.Si.TIER_2,
               size: l.zxk.Sizes.SMALL,
               color: l.zxk.Colors.CUSTOM,
               onClick: n,
               buttonText: I.intl.string(I.t.pj0XBA)
           })
-        : a === b.y.JOIN_GUILD
+        : o === b.y.JOIN_GUILD
           ? (0, r.jsx)(l.zxk, {
                 size: l.zxk.Sizes.SMALL,
                 fullWidth: !0,
-                onClick: o,
+                onClick: a,
                 children: I.intl.string(I.t.riu2R0)
             })
           : null;
 }
 function A(e) {
     let { sound: t, channel: n, closePopout: c, refreshPosition: g } = e,
-        y = t.guildId === O.X8,
-        v = (0, s.e7)([m.Z], () => m.Z.getGuild(t.guildId)),
-        A = !y && null != v,
+        y = t.guildId === v.X8,
+        O = (0, s.e7)([m.Z], () => m.Z.getGuild(t.guildId)),
+        A = !y && null != O,
         [N, C] = i.useState(),
         R = (0, E.V2)({ location: 'SoundmojiGuildInfo' }),
         P = y || A || null != N || !R,
@@ -72,7 +72,7 @@ function A(e) {
     let { buttonType: L, description: x } = (0, b.Z)(t, n, A, N),
         M = L === b.y.JOIN_GUILD,
         k = !y && w,
-        j = i.useMemo(() => (A ? u.JO.createFromGuildRecord(v) : null != N ? u.JO.createFromDiscoverableGuild(N) : void 0), [v, A, N]);
+        j = i.useMemo(() => (A ? u.JO.createFromGuildRecord(O) : null != N ? u.JO.createFromDiscoverableGuild(N) : void 0), [O, A, N]);
     return k
         ? (0, r.jsx)(f.SE, {})
         : (0, r.jsxs)('div', {
@@ -91,7 +91,7 @@ function A(e) {
                                       isSoundmoji: !0,
                                       onSelectItem: () => {}
                                   }),
-                                  (0, r.jsx)(o.xv, {
+                                  (0, r.jsx)(a.xv, {
                                       variant: 'text-sm/normal',
                                       children: x
                                   })
@@ -101,7 +101,7 @@ function A(e) {
                               (0, r.jsxs)('div', {
                                   className: S.infoExpandedGuildContainer,
                                   children: [
-                                      (0, r.jsx)(o.xv, {
+                                      (0, r.jsx)(a.xv, {
                                           variant: 'eyebrow',
                                           color: 'header-muted',
                                           className: S.infoExpandedGuildTitle,
@@ -126,7 +126,7 @@ function A(e) {
                   }),
                   (0, r.jsx)(l.IGR, {
                       text: 'BETA',
-                      color: a.Z.BG_BRAND,
+                      color: o.Z.BG_BRAND,
                       className: S.betaBadge
                   })
               ]

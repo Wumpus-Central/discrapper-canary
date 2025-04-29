@@ -1,8 +1,8 @@
 n.d(t, { Z: () => V }), n(415506), n(388685);
 var r,
     i = n(442837),
-    a = n(759174),
-    o = n(570140),
+    o = n(759174),
+    a = n(570140),
     s = n(786761),
     l = n(594174),
     c = n(686478);
@@ -47,7 +47,7 @@ function _(e) {
 function p(e) {
     return _(e.dueAt) - _(e.savedAt);
 }
-let h = new a.h(
+let h = new o.h(
         (e) => {
             let { saveData: t } = e;
             return [c._l.ALL, null != t.dueAt ? c._l.REMINDER : c._l.BOOKMARK];
@@ -62,26 +62,26 @@ let h = new a.h(
     E = new Set(),
     b = new Set(),
     y = new Map();
-function v(e) {
+function O(e) {
     let t = y.get(e);
     return null != t && t.size > 0;
 }
-function O(e) {
+function v(e) {
     let { channelId: t, messageId: n } = e;
     return ''.concat(t, '-').concat(n);
 }
 function I(e) {
     var t;
-    let n = O(e.saveData);
+    let n = v(e.saveData);
     null == h.get(n) && (g = Date.now()), h.set(n, e);
     let r = e.saveData.messageId,
         i = e.saveData.channelId,
-        a = null != (t = y.get(i)) ? t : new Set();
-    a.add(r), y.set(i, a), null == e.message && b.add(r), null != e.saveData.dueAt && new Date() > e.saveData.dueAt ? E.add(r) : E.delete(r);
+        o = null != (t = y.get(i)) ? t : new Set();
+    o.add(r), y.set(i, o), null == e.message && b.add(r), null != e.saveData.dueAt && new Date() > e.saveData.dueAt ? E.add(r) : E.delete(r);
 }
 function S(e) {
     var t;
-    let n = O(e),
+    let n = v(e),
         r = h.get(n);
     if (null == r) return !1;
     h.delete(n);
@@ -108,14 +108,14 @@ function R(e) {
 }
 function P(e) {
     let { messageId: t, channelId: n } = e,
-        r = O({
+        r = v({
             messageId: t,
             channelId: n
         }),
         i = h.get(r);
     if ((null == i ? void 0 : i.message) == null) return !1;
-    let a = d({}, i);
-    return (a.message = null), h.set(r, a), !0;
+    let o = d({}, i);
+    return (o.message = null), h.set(r, o), !0;
 }
 function w(e) {
     let { id: t, channelId: n } = e;
@@ -135,7 +135,7 @@ function D(e) {
 function L(e) {
     let { message: t } = e;
     if (null == t.id || null == t.channel_id) return !1;
-    let n = O({
+    let n = v({
             messageId: t.id,
             channelId: t.channel_id
         }),
@@ -150,19 +150,19 @@ function x() {
 }
 function M(e) {
     let { channel: t } = e;
-    if (0 === b.size || m || !v(t.id)) return !1;
+    if (0 === b.size || m || !O(t.id)) return !1;
     m = !0;
 }
 function k(e) {
     let { channels: t } = e;
     if (0 === b.size || m) return !1;
     let n = !1;
-    for (let e of t) v(e.id) && ((m = !0), (n = !0));
+    for (let e of t) O(e.id) && ((m = !0), (n = !0));
     return n;
 }
 function j(e) {
     let { channel: t } = e;
-    if (0 === b.size || m || !v(t.id)) return !1;
+    if (0 === b.size || m || !O(t.id)) return !1;
     m = !0;
 }
 function U(e) {
@@ -182,7 +182,7 @@ class B extends (r = i.ZP.Store) {
     }
     getSavedMessage(e, t) {
         return h.get(
-            O({
+            v({
                 channelId: e,
                 messageId: t
             })
@@ -211,7 +211,7 @@ class B extends (r = i.ZP.Store) {
     }
     isMessageBookmarked(e, t) {
         let n = h.get(
-            O({
+            v({
                 channelId: e,
                 messageId: t
             })
@@ -220,7 +220,7 @@ class B extends (r = i.ZP.Store) {
     }
     isMessageReminder(e, t) {
         let n = h.get(
-            O({
+            v({
                 channelId: e,
                 messageId: t
             })
@@ -229,7 +229,7 @@ class B extends (r = i.ZP.Store) {
     }
 }
 u(B, 'displayName', 'SavedMessagesStore');
-let V = new B(o.Z, {
+let V = new B(a.Z, {
     POST_CONNECTION_OPEN: T,
     LOGOUT: A,
     SAVED_MESSAGES_UPDATE: N,

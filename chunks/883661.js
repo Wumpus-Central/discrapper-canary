@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r = n(200651),
     i = n(192379),
-    a = n(481060),
-    o = n(149203);
+    o = n(481060),
+    a = n(149203);
 function s(e, t, n) {
     return (
         t in e
@@ -38,8 +38,8 @@ function c(e, t) {
         r,
         i = u(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -48,38 +48,38 @@ function u(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let d = (e) => {
         switch (e) {
-            case o.UX.RECENT:
-                return a.T39;
-            case o.UX.FAVORITES:
-                return a.r7p;
-            case o.UX.TOP_GUILD_EMOJI:
-                return a.rm8;
-            case o.UX.PEOPLE:
-                return a.EO4;
-            case o.UX.NATURE:
-                return a.NQW;
-            case o.UX.FOOD:
-                return a.ED8;
-            case o.UX.ACTIVITY:
-                return a.iWm;
-            case o.UX.TRAVEL:
-                return a.QhB;
-            case o.UX.OBJECTS:
-                return a.Xbz;
-            case o.UX.SYMBOLS:
-                return a.h_8;
-            case o.UX.FLAGS:
-                return a.U65;
-            case o.UX.PREMIUM_UPSELL:
-                return a.SrA;
-            case o.UX.SOUNDMOJI:
-                return a.KY1;
+            case a.UX.RECENT:
+                return o.T39;
+            case a.UX.FAVORITES:
+                return o.r7p;
+            case a.UX.TOP_GUILD_EMOJI:
+                return o.rm8;
+            case a.UX.PEOPLE:
+                return o.EO4;
+            case a.UX.NATURE:
+                return o.NQW;
+            case a.UX.FOOD:
+                return o.ED8;
+            case a.UX.ACTIVITY:
+                return o.iWm;
+            case a.UX.TRAVEL:
+                return o.QhB;
+            case a.UX.OBJECTS:
+                return o.Xbz;
+            case a.UX.SYMBOLS:
+                return o.h_8;
+            case a.UX.FLAGS:
+                return o.U65;
+            case a.UX.PREMIUM_UPSELL:
+                return o.SrA;
+            case a.UX.SOUNDMOJI:
+                return o.KY1;
             default:
                 return;
         }

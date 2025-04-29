@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(388685);
 var r = n(192379),
     i = n(663507),
-    a = n(924428),
-    o = n(151973);
+    o = n(924428),
+    a = n(151973);
 function s(e, t, n) {
     return (
         t in e
@@ -65,8 +65,8 @@ let d = Object.freeze({
     }
 });
 function f(e) {
-    let { sections: t, columns: n, getItemKey: s, getItemHeight: c, getSectionHeight: f, chunkSize: _ = 250, getScrollerState: p, maxBufferWidth: h, itemGutter: m, removeEdgeItemGutters: g, sectionGutter: E, padding: b, paddingVertical: y, paddingHorizontal: v, dir: O } = e,
-        I = (0, a.Z)(),
+    let { sections: t, columns: n, getItemKey: s, getItemHeight: c, getSectionHeight: f, chunkSize: _ = 250, getScrollerState: p, maxBufferWidth: h, itemGutter: m, removeEdgeItemGutters: g, sectionGutter: E, padding: b, paddingVertical: y, paddingHorizontal: O, dir: v } = e,
+        I = (0, o.Z)(),
         S = (0, r.useRef)(d),
         [T] = (0, r.useState)(() => new i.ZP()),
         A = p(),
@@ -77,7 +77,7 @@ function f(e) {
             chunkStart: P,
             chunkEnd: w,
             forceUpdateOnChunkChange: D
-        } = (0, o.Z)({
+        } = (0, a.Z)({
             chunkSize: _,
             getScrollerState: p,
             forceUpdate: I
@@ -99,13 +99,13 @@ function f(e) {
                           sectionGutter: E,
                           padding: b,
                           paddingVertical: y,
-                          paddingHorizontal: v,
+                          paddingHorizontal: O,
                           marginLeft: C / 2,
-                          dir: O
+                          dir: v
                       }),
                       T.computeVisibleSections(Math.max(0, P * _), w * _),
                       T.getState()),
-            [R, T, t, n, s, c, f, P, w, _, m, g, E, b, y, v, N, O]
+            [R, T, t, n, s, c, f, P, w, _, m, g, E, b, y, O, N, v]
         )),
         u(l({}, S.current), {
             masonryComputer: T,

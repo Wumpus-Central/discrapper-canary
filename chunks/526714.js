@@ -1,8 +1,8 @@
 n.d(t, { I: () => h });
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(670596),
     l = n(743236),
     c = n(939350),
@@ -60,7 +60,7 @@ function p(e, t) {
     );
 }
 function h(e) {
-    let { color: t = 'default', label: n, control: a, disabled: d, isFocused: _, showDefaultFocus: h = !1, menuItemProps: m, onClose: g } = e,
+    let { color: t = 'default', label: n, control: o, disabled: d, isFocused: _, showDefaultFocus: h = !1, menuItemProps: m, onClose: g } = e,
         { onInteraction: E } = i.useContext(s.p),
         b = i.useRef(null),
         y = i.useRef(null);
@@ -68,11 +68,11 @@ function h(e) {
         var e, t, n;
         _ ? ((0, l.F)(b), null == (e = y.current) || e.focus()) : null == (n = y.current) || null == (t = n.blur) || t.call(n);
     }, [_]);
-    let v = i.useCallback(() => {
+    let O = i.useCallback(() => {
             var e, t;
             (null == (t = y.current) || null == (e = t.activate) ? void 0 : e.call(t)) && g();
         }, [g]),
-        O = a(
+        v = o(
             {
                 onClose: g,
                 disabled: d,
@@ -91,8 +91,8 @@ function h(e) {
         p(
             f(
                 {
-                    onClick: v,
-                    className: o()(u.item, c._[t], {
+                    onClick: O,
+                    className: a()(u.item, c._[t], {
                         [u.disabled]: d,
                         [u.focused]: h && _,
                         [u.hideInteraction]: !h
@@ -112,7 +112,7 @@ function h(e) {
                               })
                           })
                         : null,
-                    O
+                    v
                 ]
             }
         )

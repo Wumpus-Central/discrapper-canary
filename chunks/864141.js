@@ -2,8 +2,8 @@ n.d(t, { Z: () => P });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(481060),
     l = n(100527),
     c = n(906732),
@@ -18,8 +18,8 @@ var i = n(120356),
     E = n(265386),
     b = n(340266),
     y = n(849755),
-    v = n(384298),
-    O = n(670451),
+    O = n(384298),
+    v = n(670451),
     I = n(228168),
     S = n(388032),
     T = n(227832);
@@ -90,7 +90,7 @@ function P(e) {
             userId: t.id,
             onAction: D
         }),
-        x = (0, o.e7)([u.Z], () => u.Z.getGuild(i.guild_id)),
+        x = (0, a.e7)([u.Z], () => u.Z.getGuild(i.guild_id)),
         M = (0, f.Z)(i),
         { channelStatusEnabled: k } = (0, d.D)({ location: 'UserProfileVoiceActivityCard' }),
         j = () => (i.isDM() || i.isGroupDM() ? S.intl.string(S.t['9FaEzs']) : i.isGuildStageVoice() ? S.intl.string(S.t.QygGCA) : S.intl.string(S.t.msxteH)),
@@ -105,7 +105,7 @@ function P(e) {
         G = () =>
             (0, r.jsx)('div', {
                 className: T.actions,
-                children: (0, r.jsx)(v.Z, {
+                children: (0, r.jsx)(O.Z, {
                     channel: i,
                     onAction: D,
                     onClose: C
@@ -115,14 +115,14 @@ function P(e) {
         value: w,
         children: (0, r.jsxs)(m.Z, {
             ref: L,
-            className: a()(T.card, A),
+            className: o()(T.card, A),
             onAction: D,
             onClose: C,
             children: [
                 (0, r.jsx)(g.Z, {
                     text: j(),
                     tags: U(),
-                    contextMenu: (0, r.jsx)(O.Z, {
+                    contextMenu: (0, r.jsx)(v.Z, {
                         display: 'voice',
                         user: t,
                         onClose: C

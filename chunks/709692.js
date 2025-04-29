@@ -8,16 +8,16 @@ n.d(t, {
     n(388685);
 var r = n(192379),
     i = n(97613),
-    a = n.n(i),
-    o = n(493773),
+    o = n.n(i),
+    a = n(493773),
     s = n(952265),
     l = n(307616),
     c = n(466377);
 function u(e) {
     let { renderModal: t, onCloseRequest: n, onCloseCallback: i } = e,
-        [c] = r.useState(() => a()()),
+        [c] = r.useState(() => o()()),
         u = (0, l.v)();
-    (0, o.Ng)(
+    (0, a.Ng)(
         () => (
             (0, s.h7)(
                 t,

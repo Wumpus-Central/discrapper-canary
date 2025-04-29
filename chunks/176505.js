@@ -1,10 +1,10 @@
 n.d(t, {
     $x: () => c,
-    AB: () => a,
+    AB: () => o,
     EC: () => f,
     HY: () => d,
     ME: () => s,
-    Qk: () => o,
+    Qk: () => a,
     Vg: () => i,
     Z7: () => u,
     oC: () => r,
@@ -15,10 +15,10 @@ var r = (function (e) {
     return (e.ROLE_SUBSCRIPTIONS = 'role-subscriptions'), (e.GUILD_SHOP = 'shop'), (e.MEMBER_APPLICATIONS = 'member-applications'), (e.GUILD_HOME = '@home'), (e.CHANNEL_BROWSER = 'channel-browser'), (e.GUILD_ONBOARDING = 'onboarding'), (e.CUSTOMIZE_COMMUNITY = 'customize-community'), (e.MEMBER_SAFETY = 'member-safety'), (e.GUILD_BOOSTS = 'boosts'), (e.REPORT_TO_MOD = 'report-to-mod'), e;
 })({});
 let i = new Set(Object.values(r));
-function a(e) {
+function o(e) {
     return i.has(e);
 }
-function o(e, t) {
+function a(e, t) {
     return ''.concat(e, '-').concat(t);
 }
 function s(e) {

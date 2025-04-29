@@ -6,8 +6,8 @@ n.d(t, {
     f0: () => f
 });
 var i = n(544891),
-    a = n(314897),
-    o = n(12647),
+    o = n(314897),
+    a = n(12647),
     s = n(865427);
 let l = '/__development/build_overrides',
     c = '/__development/create_build_override_link',
@@ -21,7 +21,7 @@ async function d(e) {
                 overrides: e,
                 version: s.Ji
             },
-            headers: { Authorization: null != (t = a.default.getToken()) ? t : '' },
+            headers: { Authorization: null != (t = o.default.getToken()) ? t : '' },
             oldFormErrors: !0,
             rejectWithError: !1
         });
@@ -36,7 +36,7 @@ async function f(e) {
             url: (0, s.pU)(u),
             body: {
                 payload: e,
-                token: a.default.getToken(),
+                token: o.default.getToken(),
                 version: s.Ji
             },
             oldFormErrors: !0,
@@ -61,7 +61,7 @@ function p(e) {
         .post({
             url: (0, s.pU)(c),
             body: e,
-            headers: { Authorization: null != (t = a.default.getToken()) ? t : '' },
+            headers: { Authorization: null != (t = o.default.getToken()) ? t : '' },
             oldFormErrors: !0,
             rejectWithError: !1
         })
@@ -84,6 +84,6 @@ function p(e) {
 }
 r = async (e) => {
     try {
-        await o.Z.flushCookies();
+        await a.Z.flushCookies();
     } catch (e) {}
 };

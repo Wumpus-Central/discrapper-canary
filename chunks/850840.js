@@ -1,8 +1,8 @@
 let r;
 n.d(t, { Z: () => h }), n(539854);
 var i,
-    a = n(442837),
-    o = n(570140);
+    o = n(442837),
+    a = n(570140);
 function s(e, t, n) {
     return (
         t in e
@@ -67,7 +67,7 @@ function _(e) {
     if (r.hasAcceptedEulaIds.includes(t)) return !1;
     r.hasAcceptedEulaIds.push(t);
 }
-class p extends (i = a.ZP.PersistedStore) {
+class p extends (i = o.ZP.PersistedStore) {
     initialize(e) {
         r = null != e ? e : d;
     }
@@ -82,7 +82,7 @@ class p extends (i = a.ZP.PersistedStore) {
     }
 }
 s(p, 'displayName', 'ApplicationStoreUserSettingsStore'), s(p, 'persistKey', 'ApplicationStoreUserSettingsStore'), s(p, 'migrations', [(e) => (null == e.hasAcceptedEulaIds ? u(l({}, e), { hasAcceptedEulaIds: [] }) : e)]);
-let h = new p(o.Z, {
+let h = new p(a.Z, {
     APPLICATION_STORE_ACCEPT_STORE_TERMS: f,
     APPLICATION_STORE_ACCEPT_EULA: _
 });

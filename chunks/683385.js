@@ -1,7 +1,7 @@
 var r = n(48657),
     i = n(580983),
-    a = n(179122),
-    o = n(449285),
+    o = n(179122),
+    a = n(449285),
     s = n(760725),
     l = n(914331),
     c = n(568033),
@@ -19,8 +19,8 @@ e.exports = function (e, t, n) {
         E,
         b,
         y,
-        v,
         O,
+        v,
         I = n && n.that,
         S = !!(n && n.AS_ENTRIES),
         T = !!(n && n.IS_RECORD),
@@ -31,21 +31,21 @@ e.exports = function (e, t, n) {
             return m && f(m, 'normal', e), new p(!0, e);
         },
         P = function (e) {
-            return S ? (a(e), N ? C(e[0], e[1], R) : C(e[0], e[1])) : N ? C(e, R) : C(e);
+            return S ? (o(e), N ? C(e[0], e[1], R) : C(e[0], e[1])) : N ? C(e, R) : C(e);
         };
     if (T) m = e.iterator;
     else if (A) m = e;
     else {
-        if (!(g = d(e))) throw new _(o(e) + ' is not iterable');
+        if (!(g = d(e))) throw new _(a(e) + ' is not iterable');
         if (s(g)) {
             for (E = 0, b = l(e); b > E; E++) if ((y = P(e[E])) && c(h, y)) return y;
             return new p(!1);
         }
         m = u(e, g);
     }
-    for (v = T ? e.next : m.next; !(O = i(v, m)).done; ) {
+    for (O = T ? e.next : m.next; !(v = i(O, m)).done; ) {
         try {
-            y = P(O.value);
+            y = P(v.value);
         } catch (e) {
             f(m, 'throw', e);
         }

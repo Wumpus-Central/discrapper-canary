@@ -16,8 +16,8 @@ var r = n(106351),
     b = n(496675),
     y = n(699516),
     _ = n(944486),
-    O = n(9156),
-    v = n(979651),
+    v = n(9156),
+    O = n(979651),
     C = n(709054),
     j = n(981631);
 function S(e, t) {
@@ -26,23 +26,23 @@ function S(e, t) {
 }
 function E(e) {
     var t;
-    let n = (0, i.e7)([O.ZP], () => O.ZP.isMuted(e)),
+    let n = (0, i.e7)([v.ZP], () => v.ZP.isMuted(e)),
         r = (0, c.k5)(e),
         j = (0, i.Wu)([o.ZP, y.Z], () => o.ZP.getEmbeddedActivitiesForGuild(e).filter((e) => !(0, a.BA)([...e.userIds], y.Z.getBlockedOrIgnoredIDs()))),
         E = (0, s.pY)(null == (t = j[0]) ? void 0 : t.location),
         x = (0, l.NX)(E),
         {
-            guildHasVoice: I,
-            guildHasVideo: P,
+            guildHasVoice: P,
+            guildHasVideo: I,
             selectedVoiceChannelHasVideo: w
         } = (0, i.cj)(
-            [_.Z, v.Z, m.Z, b.Z, g.Z],
+            [_.Z, O.Z, m.Z, b.Z, g.Z],
             () => {
                 var t;
                 let r = _.Z.getVoiceChannelId(),
                     i = null == (t = m.Z.getGuild(e)) ? void 0 : t.afkChannelId,
-                    l = v.Z.getUsersWithVideo(e),
-                    o = (0, a.DX)(v.Z.getVoiceStates(e));
+                    l = O.Z.getUsersWithVideo(e),
+                    o = (0, a.DX)(O.Z.getVoiceStates(e));
                 return {
                     guildHasVoice: (() => {
                         if (n) return !1;
@@ -57,7 +57,7 @@ function E(e) {
                         }
                         return !1;
                     })(),
-                    selectedVoiceChannelHasVideo: null != r && v.Z.hasVideo(r)
+                    selectedVoiceChannelHasVideo: null != r && O.Z.hasVideo(r)
                 };
             },
             [e, n]
@@ -71,16 +71,16 @@ function E(e) {
                 f = (null == (t = g.Z.getChannel(c)) ? void 0 : t.guild_id) === e,
                 m = !1,
                 y = !1,
-                O = !1,
                 v = !1,
+                O = !1,
                 S = !1,
                 E = !1;
             if (!f && n)
                 return {
                     audio: m,
-                    video: v,
+                    video: O,
                     screenshare: S,
-                    liveStage: O,
+                    liveStage: v,
                     activeEvent: y,
                     activity: E,
                     isCurrentUserConnected: !1
@@ -103,18 +103,18 @@ function E(e) {
                 })(),
                 k = o.ZP.getEmbeddedActivitiesForGuild(e).length > 0;
             return (
-                f ? ((m = !0), (y = (null == r ? void 0 : r.channel_id) === c), (O = T), (v = D), (S = A), (E = k)) : ((m = I), (y = null != r), (O = Z), (v = P), (S = R), (E = L)),
+                f ? ((m = !0), (y = (null == r ? void 0 : r.channel_id) === c), (v = T), (O = D), (S = A), (E = k)) : ((m = P), (y = null != r), (v = Z), (O = I), (S = R), (E = L)),
                 {
                     audio: m,
-                    video: v,
+                    video: O,
                     screenshare: S,
-                    liveStage: O,
+                    liveStage: v,
                     activeEvent: y,
                     activity: E,
                     isCurrentUserConnected: f || T
                 }
             );
         },
-        [e, n, w, N, x, j, r, I, P]
+        [e, n, w, N, x, j, r, P, I]
     );
 }

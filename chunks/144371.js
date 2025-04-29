@@ -1,8 +1,8 @@
 n.d(t, { O: () => f });
 var r = n(569545),
     i = n(199902),
-    a = n(959457),
-    o = n(458725),
+    o = n(959457),
+    a = n(458725),
     s = n(442741),
     l = n(150457);
 function c(e, t, n) {
@@ -40,10 +40,10 @@ let d = 10,
             var e;
             let t = i.Z.getCurrentUserActiveStream();
             if (null == t || 0 === i.Z.getViewerIds(t).length) return null;
-            let n = null == (e = a.Z.getRTCConnection((0, r.V9)(t))) ? void 0 : e.getMediaEngineConnectionId();
+            let n = null == (e = o.Z.getRTCConnection((0, r.V9)(t))) ? void 0 : e.getMediaEngineConnectionId();
             if (null == n) return null;
             let c = (0, l.hj)(n, t.ownerId);
-            return null == c ? null : 100 * c.short.packetLossRate > d || 100 * c.long.packetLossRate > d ? [u({ type: o.u.STREAM_SEND_HIGH_PACKET_LOSS }, (0, s.rT)((0, r.V9)(t)))] : void 0;
+            return null == c ? null : 100 * c.short.packetLossRate > d || 100 * c.long.packetLossRate > d ? [u({ type: a.u.STREAM_SEND_HIGH_PACKET_LOSS }, (0, s.rT)((0, r.V9)(t)))] : void 0;
         },
         makeErrorContextKey: (e) => ''.concat(e.streamKey, ':').concat(e.mediaSessionId)
     };

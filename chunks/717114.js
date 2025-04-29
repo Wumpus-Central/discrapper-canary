@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(923928),
     l = n(468026),
     c = n(594190),
@@ -41,19 +41,19 @@ function m(e) {
     return e;
 }
 let g = () => {
-    let [e, t] = (0, a.Wu)([c.ZP], () => [c.ZP.canShowAdminWarning, c.ZP.getVisibleGame()], []),
-        n = (0, a.e7)([d.Z], () => d.Z.isConnected(), []),
-        h = (0, a.e7)([u.Z], () => u.Z.getMode() === _.pM4.PUSH_TO_TALK, []),
+    let [e, t] = (0, o.Wu)([c.ZP], () => [c.ZP.canShowAdminWarning, c.ZP.getVisibleGame()], []),
+        n = (0, o.e7)([d.Z], () => d.Z.isConnected(), []),
+        h = (0, o.e7)([u.Z], () => u.Z.getMode() === _.pM4.PUSH_TO_TALK, []),
         g = null != t && t.elevated && n && h && e,
         E = i.useRef(null);
     function b() {
-        null !== E.current && ((0, o.Mr3)(E.current), (E.current = null));
+        null !== E.current && ((0, a.Mr3)(E.current), (E.current = null));
     }
     return (
         i.useEffect(
             () => (
                 g
-                    ? (E.current = (0, o.h7j)((e) =>
+                    ? (E.current = (0, a.h7j)((e) =>
                           (0, r.jsx)(
                               l.default,
                               m(

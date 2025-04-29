@@ -9,8 +9,8 @@ n.d(t, {
     n(388685);
 var r = n(442837),
     i = n(387343),
-    a = n(258609),
-    o = n(131704),
+    o = n(258609),
+    a = n(131704),
     s = n(984933),
     l = n(430824),
     c = n(496675),
@@ -20,11 +20,11 @@ var r = n(442837),
     _ = n(388032);
 function p(e, t, n) {
     var r;
-    let a = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
+    let o = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
     if (e.isPrivate()) return !0;
-    let o = t.getGuild(e.getGuildId()),
-        s = null != (r = null == o ? void 0 : o.maxStageVideoChannelUsers) ? r : 0;
-    return (!e.isGuildStageVoice() || !(s <= 0)) && (!a || !!(0, i.Z)(e, n)) && !!n.can(f.Plq.STREAM, e) && null != o && o.afkChannelId !== e.id;
+    let a = t.getGuild(e.getGuildId()),
+        s = null != (r = null == a ? void 0 : a.maxStageVideoChannelUsers) ? r : 0;
+    return (!e.isGuildStageVoice() || !(s <= 0)) && (!o || !!(0, i.Z)(e, n)) && !!n.can(f.Plq.STREAM, e) && null != a && a.afkChannelId !== e.id;
 }
 function h(e) {
     switch (e) {
@@ -38,19 +38,19 @@ function h(e) {
             return _.intl.string(_.t['7Xq/nZ']);
     }
 }
-function m(e, t, n, r, a) {
+function m(e, t, n, r, o) {
     let s;
     if (null == e) return [!1, 2];
     let l = t.isInChannel(e.id),
-        c = e instanceof o.Sf && (0, d.rY)(e, t, n),
+        c = e instanceof a.Sf && (0, d.rY)(e, t, n),
         u = (0, i.Z)(e, r),
-        f = null != a.getAwaitingRemoteSessionInfo() || null != a.getRemoteSessionId();
+        f = null != o.getAwaitingRemoteSessionInfo() || null != o.getRemoteSessionId();
     f ? (s = 0) : u || l ? c && !l && (s = 1) : (s = 2);
     let _ = u && !c;
     return [!__OVERLAY__ && !f && (l || _), s];
 }
 function g(e) {
-    return (0, r.Wu)([u.Z, l.Z, c.Z, a.Z], () => m(e, u.Z, l.Z, c.Z, a.Z));
+    return (0, r.Wu)([u.Z, l.Z, c.Z, o.Z], () => m(e, u.Z, l.Z, c.Z, o.Z));
 }
 function E(e, t, n) {
     let r = [];

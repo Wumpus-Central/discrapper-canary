@@ -2,7 +2,7 @@ let r;
 function i(e, t) {
     var n = ('undefined' != typeof Symbol && e[Symbol.iterator]) || e['@@iterator'];
     if (!n) {
-        if (Array.isArray(e) || (n = a(e)) || (t && e && 'number' == typeof e.length)) {
+        if (Array.isArray(e) || (n = o(e)) || (t && e && 'number' == typeof e.length)) {
             n && (e = n);
             var r = 0,
                 i = function () {};
@@ -24,7 +24,7 @@ function i(e, t) {
         }
         throw TypeError('Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.');
     }
-    var o,
+    var a,
         s = !0,
         l = !1;
     return {
@@ -36,26 +36,26 @@ function i(e, t) {
             return (s = e.done), e;
         },
         e: function (e) {
-            (l = !0), (o = e);
+            (l = !0), (a = e);
         },
         f: function () {
             try {
                 s || null == n.return || n.return();
             } finally {
-                if (l) throw o;
+                if (l) throw a;
             }
         }
     };
 }
-function a(e, t) {
+function o(e, t) {
     if (e) {
-        if ('string' == typeof e) return o(e, t);
+        if ('string' == typeof e) return a(e, t);
         var n = Object.prototype.toString.call(e).slice(8, -1);
         if (('Object' === n && e.constructor && (n = e.constructor.name), 'Map' === n || 'Set' === n)) return Array.from(e);
-        if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return o(e, t);
+        if ('Arguments' === n || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return a(e, t);
     }
 }
-function o(e, t) {
+function a(e, t) {
     (null == t || t > e.length) && (t = e.length);
     for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
     return r;
@@ -85,35 +85,35 @@ let b = ''.trim ? (e) => e.trim() : (e) => e.replace(/(^\s*|\s*$)/g, '');
 function y(e) {
     if (!f(e)) return e;
     let t = [];
-    for (let n in e) p(e, n) && v(t, n, e[n]);
+    for (let n in e) p(e, n) && O(t, n, e[n]);
     return t.join('&');
 }
-function v(e, t, n) {
+function O(e, t, n) {
     if (void 0 !== n) {
         if (null === n) return void e.push(encodeURI(t));
         if (Array.isArray(n)) {
             var r,
-                a = i(n);
+                o = i(n);
             try {
-                for (a.s(); !(r = a.n()).done; ) {
+                for (o.s(); !(r = o.n()).done; ) {
                     let n = r.value;
-                    v(e, t, n);
+                    O(e, t, n);
                 }
             } catch (e) {
-                a.e(e);
+                o.e(e);
             } finally {
-                a.f();
+                o.f();
             }
-        } else if (f(n)) for (let r in n) p(n, r) && v(e, `${t}[${r}]`, n[r]);
+        } else if (f(n)) for (let r in n) p(n, r) && O(e, `${t}[${r}]`, n[r]);
         else e.push(encodeURI(t) + '=' + encodeURIComponent(n));
     }
 }
-function O(e) {
+function v(e) {
     let t,
         n,
         r = {},
         i = e.split('&');
-    for (let e = 0, a = i.length; e < a; ++e) -1 === (n = (t = i[e]).indexOf('=')) ? (r[decodeURIComponent(t)] = '') : (r[decodeURIComponent(t.slice(0, n))] = decodeURIComponent(t.slice(n + 1)));
+    for (let e = 0, o = i.length; e < o; ++e) -1 === (n = (t = i[e]).indexOf('=')) ? (r[decodeURIComponent(t)] = '') : (r[decodeURIComponent(t.slice(0, n))] = decodeURIComponent(t.slice(n + 1)));
     return r;
 }
 function I(e) {
@@ -121,10 +121,10 @@ function I(e) {
         n,
         r,
         i,
-        a = e.split(/\r?\n/),
-        o = {};
-    for (let e = 0, s = a.length; e < s; ++e) -1 !== (t = (n = a[e]).indexOf(':')) && ((r = n.slice(0, t).toLowerCase()), (i = b(n.slice(t + 1))), (o[r] = i));
-    return o;
+        o = e.split(/\r?\n/),
+        a = {};
+    for (let e = 0, s = o.length; e < s; ++e) -1 !== (t = (n = o[e]).indexOf(':')) && ((r = n.slice(0, t).toLowerCase()), (i = b(n.slice(t + 1))), (a[r] = i));
+    return a;
 }
 function S(e) {
     return /[/+]json($|[^-\w])/i.test(e);
@@ -160,7 +160,7 @@ function A(e, t) {
         });
 }
 (E.serializeObject = y),
-    (E.parseString = O),
+    (E.parseString = v),
     (E.types = {
         html: 'text/html',
         json: 'application/json',
@@ -174,7 +174,7 @@ function A(e, t) {
         'application/json': l
     }),
     (E.parse = {
-        'application/x-www-form-urlencoded': O,
+        'application/x-www-form-urlencoded': v,
         'application/json': JSON.parse
     }),
     _(T.prototype, h.prototype),

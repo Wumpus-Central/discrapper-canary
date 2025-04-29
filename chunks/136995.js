@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y });
 var r = n(200651),
     i = n(192379),
-    a = n(481060),
-    o = n(287734),
+    o = n(481060),
+    a = n(287734),
     s = n(906732),
     l = n(522651),
     c = n(82965),
@@ -68,8 +68,8 @@ function E(e, t) {
         r,
         i = b(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -78,8 +78,8 @@ function b(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function y(e) {
@@ -87,10 +87,10 @@ function y(e) {
         m = E(e, ['channel', 'centerButton', 'onCallJoined']);
     let { parentAnalyticsLocation: b } = (0, s.ZP)(),
         y = n ? d.d : d.Z,
-        v = t.isManaged() || !t.isPrivate() ? _.intl.string(_.t.S0W8Z2) : _.intl.string(_.t['0D/6R0']),
-        O = (0, c.Z)({ location: 'JoinCallButton' }),
+        O = t.isManaged() || !t.isPrivate() ? _.intl.string(_.t.S0W8Z2) : _.intl.string(_.t['0D/6R0']),
+        v = (0, c.Z)({ location: 'JoinCallButton' }),
         I = i.useCallback(() => {
-            null == p || p(), (0, l.v)(b, l.d.JOIN_CALL), o.default.selectVoiceChannel(t.id);
+            null == p || p(), (0, l.v)(b, l.d.JOIN_CALL), a.default.selectVoiceChannel(t.id);
         }, [t.id, p, b]);
     return (
         i.useEffect(
@@ -105,10 +105,10 @@ function y(e) {
         (0, r.jsx)(
             y,
             g(h({}, m), {
-                iconComponent: a.Csw,
-                label: v,
+                iconComponent: o.Csw,
+                label: O,
                 onClick: I,
-                fullRegionButton: O
+                fullRegionButton: v
             })
         )
     );

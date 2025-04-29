@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(192379),
     i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(607070),
     l = n(212459),
     c = n(35305),
@@ -15,9 +15,9 @@ var r = n(192379),
 function d(e) {
     let { children: t, mode: n = 'DEFAULT' } = e,
         { zoomed: r } = (0, l.Y)(),
-        i = (0, o.e7)([s.Z], () => s.Z.keyboardModeEnabled);
+        i = (0, a.e7)([s.Z], () => s.Z.keyboardModeEnabled);
     return t(
-        a()(c.base, {
+        o()(c.base, {
             [c.hidden]: r && !i && 'PINNED' !== n,
             [c.focusSensitive]: 'FOCUS_SENSITIVE' === n
         })

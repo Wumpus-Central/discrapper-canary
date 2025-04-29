@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N }), n(388685), n(781311);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(106351),
     l = n(507274),
     c = n(541716),
@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(810097),
     b = n(652853),
     y = n(228168),
-    v = n(420212),
-    O = n(388032),
+    O = n(420212),
+    v = n(388032),
     I = n(42328);
 let S = (0, f.kt)({
         id: '1',
@@ -28,14 +28,14 @@ let S = (0, f.kt)({
         let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
         switch (r) {
             case y.n_.ACTIVITY:
-                let a = O.intl.formatToPlainString(O.t.WmvMCg, { username: n }),
-                    o = '\n> '.concat(i);
-                return null != i ? ''.concat(E.jd).concat(a, '*').concat(o, '\n').concat(t) : ''.concat(E.jd).concat(a, '*\n').concat(t);
+                let o = v.intl.formatToPlainString(v.t.WmvMCg, { username: n }),
+                    a = '\n> '.concat(i);
+                return null != i ? ''.concat(E.jd).concat(o, '*').concat(a, '\n').concat(t) : ''.concat(E.jd).concat(o, '*\n').concat(t);
             case y.n_.AVATAR:
-                let s = O.intl.formatToPlainString(O.t.lpaBsL, { username: n });
+                let s = v.intl.formatToPlainString(v.t.lpaBsL, { username: n });
                 return ''.concat(E.jd).concat(s, '*\n').concat(t);
             case y.n_.STATUS:
-                let l = O.intl.formatToPlainString(O.t.lFXgFR, { username: n }),
+                let l = v.intl.formatToPlainString(v.t.lFXgFR, { username: n }),
                     c = '\n> '.concat(i);
                 return null != i ? ''.concat(E.jd).concat(l, '*').concat(c, '\n').concat(t) : ''.concat(E.jd).concat(l, '*\n').concat(t);
             default:
@@ -45,17 +45,17 @@ let S = (0, f.kt)({
     A = (e) => {
         switch (e) {
             case y.n_.ACTIVITY:
-                return O.t.Qn081N;
+                return v.t.Qn081N;
             case y.n_.AVATAR:
-                return O.t.xGNPFB;
+                return v.t.xGNPFB;
             case y.n_.STATUS:
-                return O.t.g9BTCA;
+                return v.t.g9BTCA;
             default:
                 (0, _.vE)(e);
         }
     };
 function N(e) {
-    let { user: t, guildId: n, channelId: a, sourceType: s, sourceDetails: f, setPopoutRef: _, modalKey: E, onAction: N, onClose: C, entry: R } = e,
+    let { user: t, guildId: n, channelId: o, sourceType: s, sourceDetails: f, setPopoutRef: _, modalKey: E, onAction: N, onClose: C, entry: R } = e,
         { resetInteraction: P, setInteractionToast: w } = (0, g.Xo)(),
         { primaryColor: D } = (0, b.z)(),
         [L, x] = i.useState(''),
@@ -64,7 +64,7 @@ function N(e) {
         U = i.useRef(null),
         G = i.useCallback(
             (e) => {
-                e.key === v.vn.ESCAPE && (e.stopPropagation(), P());
+                e.key === O.vn.ESCAPE && (e.stopPropagation(), P());
             },
             [P]
         );
@@ -102,7 +102,7 @@ function N(e) {
         ref: U,
         onKeyDown: G,
         children: (0, r.jsx)('div', {
-            className: o()(I.container, V, { [I.customProfileTheme]: null != D }),
+            className: a()(I.container, V, { [I.customProfileTheme]: null != D }),
             children: (0, r.jsx)(d.Z, {
                 parentModalKey: E,
                 emojiPickerCloseOnModalOuterClick: !0,
@@ -110,7 +110,7 @@ function N(e) {
                 innerClassName: I.inputInner,
                 editorClassName: I.editor,
                 type: c.Ie.USER_PROFILE_REPLY,
-                placeholder: O.intl.formatToPlainString(A(s), { username: p.ZP.getName(n, a, t) }),
+                placeholder: v.intl.formatToPlainString(A(s), { username: p.ZP.getName(n, o, t) }),
                 channel: S,
                 textValue: L,
                 richValue: M,

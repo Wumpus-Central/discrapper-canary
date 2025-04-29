@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b });
 var r = n(200651),
     i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(481060),
     l = n(287734),
     c = n(933557),
@@ -18,14 +18,14 @@ var r = n(200651),
 function b(e) {
     let { channel: t, guild: n, onAction: i, onClose: b } = e,
         y = (0, c.ZP)(t),
-        v = (0, o.e7)([_.Z], () => t.isPrivate() || _.Z.can(m.Pl.CONNECT, t)),
-        O = () => {
-            if (!v) return y;
+        O = (0, a.e7)([_.Z], () => t.isPrivate() || _.Z.can(m.Pl.CONNECT, t)),
+        v = () => {
+            if (!O) return y;
             let e = (e) => {
                 e.stopPropagation(), t.isGuildStageVoice() ? (0, f.Cq)(t) : (l.default.selectVoiceChannel(t.id), (0, u.Kh)(t.id)), null == i || i({ action: 'OPEN_VOICE_CHANNEL' }), null == b || b();
             };
             return (0, r.jsx)(s.P3F, {
-                className: a()(E.clickableText, E.inline),
+                className: o()(E.clickableText, E.inline),
                 onClick: e,
                 children: y
             });
@@ -54,7 +54,7 @@ function b(e) {
                         color: s.TVs.colors.TEXT_NORMAL,
                         className: E.voiceIcon
                     }),
-                    O()
+                    v()
                 ]
             }),
             I()

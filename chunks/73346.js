@@ -14,8 +14,8 @@ n.d(t, {
     n(997841);
 var r = n(392711),
     i = n.n(r),
-    a = n(913527),
-    o = n.n(a),
+    o = n(913527),
+    a = n.n(o),
     s = n(991637),
     l = n.n(s),
     c = n(873546),
@@ -31,8 +31,8 @@ var r = n(392711),
     b = n(823379);
 n(358085);
 var y = n(709054),
-    v = n(981631);
-function O(e, t, n) {
+    O = n(981631);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -56,7 +56,7 @@ function I(e) {
                 })
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
@@ -65,7 +65,7 @@ n(388032), l().shim();
 let S = !c.tq && !c.Em && -1 !== (0, g.vu)(),
     T = 3;
 function A(e, t) {
-    let { analyticsSource: n, analyticsProperties: r, storeListingId: i, slug: a, channelId: o, guildId: s } = t,
+    let { analyticsSource: n, analyticsProperties: r, storeListingId: i, slug: o, channelId: a, guildId: s } = t,
         l = {
             state: {
                 analyticsSource: n,
@@ -73,12 +73,12 @@ function A(e, t) {
             },
             search: null != i ? '?store_listing_id='.concat(i) : ''
         };
-    return I({ pathname: null != o && null != s ? v.Z5c.CHANNEL(s, o, e) : v.Z5c.APPLICATION_STORE_LISTING_SKU(e, a) }, l);
+    return I({ pathname: null != a && null != s ? O.Z5c.CHANNEL(s, a, e) : O.Z5c.APPLICATION_STORE_LISTING_SKU(e, o) }, l);
 }
 function N(e, t, n, r) {
     var i;
-    let a,
-        o = window.GLOBAL_ENV.CDN_HOST;
+    let o,
+        a = window.GLOBAL_ENV.CDN_HOST;
     if (null == r)
         switch (t.mimeType || t.mime_type) {
             case 'video/quicktime':
@@ -95,15 +95,15 @@ function N(e, t, n, r) {
     let s = 'string' == typeof t ? t : t.id,
         l = (i = 'https:');
     return (
-        (a =
-            null != o
-                ? ''.concat(l, '//').concat(o, '/app-assets/').concat(e, '/store/').concat(s, '.').concat(r)
+        (o =
+            null != a
+                ? ''.concat(l, '//').concat(a, '/app-assets/').concat(e, '/store/').concat(s, '.').concat(r)
                 : ''
                       .concat(l)
                       .concat(window.GLOBAL_ENV.API_ENDPOINT)
-                      .concat(v.ANM.STORE_ASSET(e, s, r))),
-        null != n && (a += '?size='.concat((0, f.oO)(n * (0, f.x_)()))),
-        a
+                      .concat(O.ANM.STORE_ASSET(e, s, r))),
+        null != n && (o += '?size='.concat((0, f.oO)(n * (0, f.x_)()))),
+        o
     );
 }
 function C() {
@@ -119,9 +119,9 @@ function C() {
 }
 async function R(e) {
     var t, n, r, i;
-    let a = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        o = _.default.isAuthenticated();
-    if (a && o) {
+    let o = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        a = _.default.isAuthenticated();
+    if (o && a) {
         let e = [];
         h.Z.hasFetchedPaymentSources || e.push(null != (n = p.Z.paymentSourcesFetchRequest) ? n : (0, d.tZ)()), p.Z.ipCountryCodeLoaded || e.push((0, d.GE)()), e.push(C()), await Promise.race([Promise.allSettled(e), new Promise((e) => setTimeout(e, 10000))]);
     }
@@ -152,7 +152,7 @@ function P(e, t, n) {
 function w(e, t, n) {
     var r;
     let i = null != (r = n.getNowPlaying(e)) ? r : {},
-        a = y.default
+        o = y.default
             .keys(i)
             .map((e) => {
                 let n = t.getUser(e);
@@ -165,11 +165,11 @@ function w(e, t, n) {
             })
             .filter(b.lm)
             .sort((e, t) => t.startTime - e.startTime);
-    return 0 === a.length
+    return 0 === o.length
         ? null
         : {
-              type: v.AzA.NOW_PLAYING,
-              userInfo: a
+              type: O.AzA.NOW_PLAYING,
+              userInfo: o
           };
 }
 function D(e, t, n) {
@@ -190,15 +190,15 @@ function D(e, t, n) {
     return 0 === i.length
         ? null
         : {
-              type: v.AzA.EVER_PLAYED,
+              type: O.AzA.EVER_PLAYED,
               userInfo: i
           };
 }
 let L = [];
-function x(e, t, n, r, a) {
-    let o = t.get(e);
-    if (null == o) return L;
-    let s = o.applicationId,
+function x(e, t, n, r, o) {
+    let a = t.get(e);
+    if (null == a) return L;
+    let s = a.applicationId,
         l = [],
         c = [],
         u = w(s, n, r);
@@ -208,11 +208,11 @@ function x(e, t, n, r, a) {
             let { user: t } = e;
             return t.id;
         })));
-    let d = a.getStatisticsForApplication(s);
+    let d = o.getStatisticsForApplication(s);
     if (null != d) {
         let e = d.map((e) => e.user_id);
         if (i().difference(e, c).length > 0) {
-            let e = D(s, n, a);
+            let e = D(s, n, o);
             null != e && l.push(e);
         }
     }
@@ -223,26 +223,26 @@ function k(e, t, n) {
     let r = t.get(e),
         i = n.getForSKU(e);
     if (null == r || null == i) return M;
-    let a = [];
-    (0, E.yE)(r.flags, v.l4R.HAS_FREE_PREMIUM_CONTENT) && a.push({ type: v.AzA.HAS_FREE_PREMIUM_CONTENT });
+    let o = [];
+    (0, E.yE)(r.flags, O.l4R.HAS_FREE_PREMIUM_CONTENT) && o.push({ type: O.AzA.HAS_FREE_PREMIUM_CONTENT });
     let s = r.releaseDate;
     return (
         null != s &&
-            o()().diff(s, 'months') < T &&
-            (r.accessType === v.kGb.EARLY_ACCESS
-                ? a.push({
-                      type: v.AzA.EARLY_ACCESS,
+            a()().diff(s, 'months') < T &&
+            (r.accessType === O.kGb.EARLY_ACCESS
+                ? o.push({
+                      type: O.AzA.EARLY_ACCESS,
                       releaseDate: s
                   })
-                : a.push({
-                      type: v.AzA.RECENT_RELEASE_DATE,
+                : o.push({
+                      type: O.AzA.RECENT_RELEASE_DATE,
                       releaseDate: s
                   })),
         null != i.flavorText &&
-            a.push({
-                type: v.AzA.FLAVOR_TEXT,
+            o.push({
+                type: O.AzA.FLAVOR_TEXT,
                 flavorText: i.flavorText
             }),
-        a
+        o
     );
 }

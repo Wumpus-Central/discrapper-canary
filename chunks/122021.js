@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(192379),
     i = n(392711),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(726542),
     l = n(487576),
     c = n(553795),
@@ -20,7 +20,7 @@ let p = { [f.ABu.INSTAGRAM]: ['1036753656588017764'] },
     m = 30 * d.Z.Millis.DAY;
 function g(e) {
     let { forUserProfile: t } = e,
-        n = (0, o.e7)([u.default], () => u.default.getCurrentUser()),
+        n = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
         r = l.c.useExperiment({ location: 'f2f7ef_1' }, { autoTrackExposure: !1 }).allowPlayStationStaging;
     return (e) => {
         var i;
@@ -28,7 +28,7 @@ function g(e) {
     };
 }
 function E() {
-    let e = (0, o.e7)([c.Z], () => c.Z.getAccounts()),
+    let e = (0, a.e7)([c.Z], () => c.Z.getAccounts()),
         t = g({ forUserProfile: !1 }),
         n = r.useMemo(() => {
             let t = new Set();
@@ -36,7 +36,7 @@ function E() {
         }, [e]);
     return r.useMemo(
         () =>
-            a().sortBy(s.Z.filter(t), [
+            o().sortBy(s.Z.filter(t), [
                 (e) => {
                     var t;
                     return !(h.has(e.type) && Date.now() < (null != (t = h.get(e.type)) ? t : 0) + m);
@@ -55,16 +55,16 @@ function b(e) {
         let { key: t } = e;
         t === _.vn.SHIFT && n(!0);
     }
-    function a(e) {
+    function o(e) {
         let { key: t } = e;
         t === _.vn.SHIFT && n(!1);
     }
     return (r.useEffect(
         () => (
             window.addEventListener('keydown', i),
-            window.addEventListener('keyup', a),
+            window.addEventListener('keyup', o),
             () => {
-                window.removeEventListener('keydown', i), window.removeEventListener('keyup', a);
+                window.removeEventListener('keydown', i), window.removeEventListener('keyup', o);
             }
         ),
         []

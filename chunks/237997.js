@@ -1,8 +1,8 @@
 let r;
 n.r(t), n.d(t, { default: () => eT }), n(388685), n(415506);
 var i,
-    a = n(442837),
-    o = n(433517),
+    o = n(442837),
+    a = n(433517),
     s = n(570140),
     l = n(284737),
     c = n(490029),
@@ -17,8 +17,8 @@ var i,
     E = n(358085),
     b = n(145597),
     y = n(372679),
-    v = n(451478),
-    O = n(981631),
+    O = n(451478),
+    v = n(981631),
     I = n(987650);
 function S(e, t, n) {
     return (
@@ -78,8 +78,8 @@ function C(e, t) {
         r,
         i = R(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -88,18 +88,18 @@ function R(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let P = Object.freeze({
         selectedGuildId: null,
         selectedChannelId: null,
-        displayUserMode: O.OYC.ALWAYS,
-        displayNameMode: O.wC$.ALWAYS,
-        avatarSizeMode: O.ipw.LARGE,
-        notificationPositionMode: O._vf.TOP_LEFT,
-        textChatNotifications: O.Ypu.ENABLED,
+        displayUserMode: v.OYC.ALWAYS,
+        displayNameMode: v.wC$.ALWAYS,
+        avatarSizeMode: v.ipw.LARGE,
+        notificationPositionMode: v._vf.TOP_LEFT,
+        textChatNotifications: v.Ypu.ENABLED,
         disableExternalLinkAlert: !1,
         disablePinTutorial: !1,
         showKeybindIndicators: !0,
@@ -130,18 +130,18 @@ function Y(e) {
 }
 function W(e) {
     if (('OVERLAY_INITIALIZE' === e.type && Y(e) && (j = !0), j)) {
-        var t, n, r, i, a;
+        var t, n, r, i, o;
         switch (e.type) {
             case 'CHANNEL_CREATE':
             case 'THREAD_CREATE':
             case 'THREAD_UPDATE':
             case 'CHANNEL_DELETE':
             case 'THREAD_DELETE':
-                let o = (0, f.kt)(e.channel);
-                if (!f.AW.has(o.type)) break;
+                let a = (0, f.kt)(e.channel);
+                if (!f.AW.has(a.type)) break;
                 s.Z.dispatch({
                     type: e.type,
-                    channel: o
+                    channel: a
                 });
                 break;
             case 'CHANNEL_UPDATES':
@@ -161,7 +161,7 @@ function W(e) {
                     c = e.guild;
                 (c.channels = null != (i = null == (n = c.channels) ? void 0 : n.map(l)) ? i : null),
                     (c.threads = null == (r = c.threads) ? void 0 : r.map(l)),
-                    null != c.channelUpdates && (c.channelUpdates.writes = null == (a = c.channelUpdates.writes) ? void 0 : a.map(l)),
+                    null != c.channelUpdates && (c.channelUpdates.writes = null == (o = c.channelUpdates.writes) ? void 0 : o.map(l)),
                     s.Z.dispatch({
                         type: 'GUILD_CREATE',
                         guild: c
@@ -232,16 +232,16 @@ function ei(e) {
     let { guildId: t, channelId: n } = e;
     (F.selectedGuildId = t), (F.selectedChannelId = n);
 }
-function ea(e) {
+function eo(e) {
     let { callId: t } = e;
     L = t;
 }
-function eo() {
+function ea() {
     L = null;
 }
 function es() {
     if (__OVERLAY__) {
-        let e = v.Z.windowSize();
+        let e = O.Z.windowSize();
         (0, b.validResolution)(e) || (G = !1);
     }
 }
@@ -301,15 +301,15 @@ function ey() {
             return (
                 null != n &&
                 ((0, c.lW)({
-                    type: O.BmY.DISPATCH,
+                    type: v.BmY.DISPATCH,
                     pid: (0, b.getPID)(),
                     token: (0, b.getRPCAuthToken)(),
                     payloads: [
                         {
                             type: 'CHANNEL_PRELOAD',
-                            guildId: t === O.ME ? null : t,
+                            guildId: t === v.ME ? null : t,
                             channelId: n,
-                            context: O.e3s
+                            context: v.e3s
                         },
                         {
                             type: 'OVERLAY_SELECT_CHANNEL',
@@ -323,7 +323,7 @@ function ey() {
         }
         return (
             (0, c.lW)({
-                type: O.BmY.DISPATCH,
+                type: v.BmY.DISPATCH,
                 pid: (0, b.getPID)(),
                 token: (0, b.getRPCAuthToken)(),
                 payloads: [e]
@@ -332,23 +332,23 @@ function ey() {
         );
     });
 }
-function ev(e) {
+function eO(e) {
     let t = (0, b.getPID)();
     if (null == e.pid || e.pid === t)
         switch (e.type) {
-            case O.BmY.STORAGE_SYNC:
-                a.ZP.PersistedStore.initializeAll(e.states);
+            case v.BmY.STORAGE_SYNC:
+                o.ZP.PersistedStore.initializeAll(e.states);
                 break;
-            case O.BmY.DISPATCH:
+            case v.BmY.DISPATCH:
                 null != e.payloads && ((k = !0), e.payloads.forEach((e) => W(e)), (k = !1));
         }
 }
-function eO() {
+function ev() {
     ey(),
-        (0, c.Ty)(ev, (0, b.getRPCAuthToken)()),
+        (0, c.Ty)(eO, (0, b.getRPCAuthToken)()),
         (0, c.$j)(),
         (0, c.lW)({
-            type: O.BmY.CONNECT,
+            type: v.BmY.CONNECT,
             pid: (0, b.getPID)(),
             token: (0, b.getRPCAuthToken)()
         });
@@ -356,7 +356,7 @@ function eO() {
 function eI(e) {
     x.delete(e.previousAssociatedGamePID);
 }
-class eS extends (i = a.ZP.PersistedStore) {
+class eS extends (i = o.ZP.PersistedStore) {
     initialize(e) {
         if (
             (this.waitFor(_.default),
@@ -466,10 +466,10 @@ S(eS, 'displayName', 'OverlayStore'),
     S(eS, 'persistKey', 'OverlayStoreV2'),
     S(eS, 'migrations', [
         () => {
-            let e = T({}, o.K.get('OverlayStore')),
+            let e = T({}, a.K.get('OverlayStore')),
                 { pinnedWidgets: t, positions: n, sizes: r, v: i } = e,
-                a = C(e, ['pinnedWidgets', 'positions', 'sizes', 'v']);
-            return T({}, P, 5 === i ? a : null);
+                o = C(e, ['pinnedWidgets', 'positions', 'sizes', 'v']);
+            return T({}, P, 5 === i ? o : null);
         },
         (e) => {
             let t = _.default.getId();
@@ -480,13 +480,13 @@ let eT = new eS(s.Z, {
     LOGOUT: K,
     MULTI_ACCOUNT_REMOVE_ACCOUNT: z,
     CONNECTION_CLOSED: q,
-    OVERLAY_START_SESSION: eO,
+    OVERLAY_START_SESSION: ev,
     OVERLAY_INITIALIZE: Q,
     OVERLAY_READY: X,
     OVERLAY_FOCUSED: er,
     OVERLAY_SELECT_CHANNEL: ei,
-    OVERLAY_SELECT_CALL: ea,
-    CALL_DELETE: eo,
+    OVERLAY_SELECT_CALL: eo,
+    CALL_DELETE: ea,
     LAYOUT_CREATE: $,
     OVERLAY_SET_DISPLAY_NAME_MODE: ec,
     OVERLAY_SET_DISPLAY_USER_MODE: eu,

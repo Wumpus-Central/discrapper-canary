@@ -16,8 +16,8 @@ n.d(t, {
     n(388685);
 var r = n(192379),
     i = n(525654),
-    a = n.n(i),
-    o = n(259443),
+    o = n.n(i),
+    a = n(259443),
     s = n(442837),
     l = n(846027),
     c = n(607070),
@@ -32,8 +32,8 @@ var r = n(192379),
     E = n(451478),
     b = n(626135),
     y = n(980463),
-    v = n(823961),
-    O = n(317951),
+    O = n(823961),
+    v = n(317951),
     I = n(111810),
     S = n(896835),
     T = n(477931),
@@ -41,7 +41,7 @@ var r = n(192379),
     N = n(37113);
 let C = 3500000,
     R = 10000,
-    P = new o.Yd('HDStreamingConsumableModal'),
+    P = new a.Yd('HDStreamingConsumableModal'),
     w = (e) => {
         let t = (0, s.e7)([_.Z], () => _.Z.getGuild(null == e ? void 0 : e.guild_id)),
             n = (0, s.e7)([g.default], () => {
@@ -49,16 +49,16 @@ let C = 3500000,
                 return null == (e = g.default.getCurrentUser()) ? void 0 : e.id;
             }),
             i = (0, s.Wu)([f.Z], () => (null == e ? [] : f.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== n))),
-            a = i.some((e) => {
+            o = i.some((e) => {
                 let t = g.default.getUser(e.ownerId);
                 return null != t && h.Z.isMobileOnline(t.id);
             }),
-            [o, l] = (0, r.useState)(null),
+            [a, l] = (0, r.useState)(null),
             [c, u] = (0, r.useState)([]);
         (0, s.e7)(
             [m.Z],
             () => {
-                if (null == o || Date.now() - o > R) {
+                if (null == a || Date.now() - a > R) {
                     let e = i.map((e) => {
                         var t;
                         let n = (0, d.V9)(e),
@@ -68,10 +68,10 @@ let C = 3500000,
                     P.info('Setting bitrates', e), u(e), l(Date.now());
                 }
             },
-            [o, i]
+            [a, i]
         );
         let p = (0, r.useMemo)(() => 0 === c.length || !c.some((e) => null == e || e < C), [c]);
-        return ((null == t ? void 0 : t.premiumTier) === A.Eu4.NONE || (null == t ? void 0 : t.premiumTier) === A.Eu4.TIER_1) && p && !a;
+        return ((null == t ? void 0 : t.premiumTier) === A.Eu4.NONE || (null == t ? void 0 : t.premiumTier) === A.Eu4.TIER_1) && p && !o;
     },
     D = (e, t) => {
         let n = (0, s.e7)([g.default], () => {
@@ -80,11 +80,11 @@ let C = 3500000,
             }),
             r = (0, s.Wu)([f.Z], () => (null == e ? [] : f.Z.getAllActiveStreamsForChannel(e.id).filter((e) => e.ownerId !== n))),
             i = (0, S.j)(t),
-            a = w(e);
-        return i && a && r.length > 0;
+            o = w(e);
+        return i && o && r.length > 0;
     };
 function L(e) {
-    let [t, n, i] = (0, s.Wu)([v.Z], () => [v.Z.isFetchingPrice(e), v.Z.getPrice(e), v.Z.getErrored(e)]);
+    let [t, n, i] = (0, s.Wu)([O.Z], () => [O.Z.isFetchingPrice(e), O.Z.getPrice(e), O.Z.getErrored(e)]);
     return (
         (0, r.useEffect)(() => {
             t || null != n || i || (0, y.Gq)(e);
@@ -98,13 +98,13 @@ function L(e) {
 }
 function x(e) {
     let t = (0, I.V1)('Utils.tsx'),
-        [n, i, a, o, l] = (0, s.Wu)([v.Z], () => [v.Z.isEntitlementFetched(e), v.Z.fetchPotionCount(e), v.Z.isEntitlementFetching(e), v.Z.getEntitlement(e), v.Z.getErrored(e)]);
+        [n, i, o, a, l] = (0, s.Wu)([O.Z], () => [O.Z.isEntitlementFetched(e), O.Z.fetchPotionCount(e), O.Z.isEntitlementFetching(e), O.Z.getEntitlement(e), O.Z.getErrored(e)]);
     return (
         (0, r.useEffect)(() => {
-            n || a || !t || (0, y.gA)(e);
-        }, [n, a, e, t]),
+            n || o || !t || (0, y.gA)(e);
+        }, [n, o, e, t]),
         {
-            entitlement: o,
+            entitlement: a,
             numPotions: i,
             fetchedEntitlement: n,
             error: l
@@ -114,16 +114,16 @@ function x(e) {
 function M(e, t) {
     let n = (0, r.useRef)(!0),
         i = null == e ? void 0 : e.hdStreamingUntil,
-        a = (0, r.useRef)(t);
+        o = (0, r.useRef)(t);
     (0, r.useEffect)(() => {
-        a.current = t;
+        o.current = t;
     }),
         (0, r.useEffect)(() => {
             if (n.current) {
                 n.current = !1;
                 return;
             }
-            if (null != i && new Date(i) > new Date()) return a.current();
+            if (null != i && new Date(i) > new Date()) return o.current();
         }, [i]);
 }
 function k(e) {
@@ -139,7 +139,7 @@ function k(e) {
 }
 function j() {
     var e;
-    let t = (null != (e = a().name) ? e : 'unknown').toLowerCase(),
+    let t = (null != (e = o().name) ? e : 'unknown').toLowerCase(),
         n = (0, s.e7)([E.Z], () => E.Z.isFocused()),
         r = (0, s.e7)([c.Z], () => c.Z.useReducedMotion);
     return 'safari' === t || !n || r;
@@ -173,6 +173,6 @@ function F(e) {
     return null;
 }
 let Z = () => {
-    let { entitlement: e, numPotions: t } = x(O.D1);
+    let { entitlement: e, numPotions: t } = x(v.D1);
     return null != e && e.type === A.qc2.PURCHASE && null != t && t > 0;
 };

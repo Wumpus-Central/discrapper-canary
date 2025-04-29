@@ -8,19 +8,19 @@ try {
     i = null;
 }
 if (i && r) {
-    var a = {},
-        o = {};
-    i(o, 'length', {
+    var o = {},
+        a = {};
+    i(a, 'length', {
         '[[Get]]': function () {
-            throw a;
+            throw o;
         },
         '[[Enumerable]]': !0
     }),
         (e.exports = function (e) {
             try {
-                r(e, o);
+                r(e, a);
             } catch (e) {
-                return e === a;
+                return e === o;
             }
         });
 } else

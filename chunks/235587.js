@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(388685);
 var r,
     i = n(442837),
-    a = n(902704),
-    o = n(570140),
+    o = n(902704),
+    a = n(570140),
     s = n(709054);
 function l(e, t, n) {
     return (
@@ -46,14 +46,14 @@ function _(e) {
     let { leaderboardResponse: n, intervalOffset: r } = e;
     if (0 !== r) return !1;
     let { leaderboard: i } = n,
-        o = u(i.guild_id, i.leaderboard_id, i.interval_start),
+        a = u(i.guild_id, i.leaderboard_id, i.interval_start),
         l = {
             ranks: i.users.map((e) => e.user_id),
             ttl: s.default.extractTimestamp(i.interval_end)
         },
-        c = f.currentLeaderboardRanks[o];
-    if ((0, a.E)(l.ranks, null != (t = null == c ? void 0 : c.ranks) ? t : [])) return !1;
-    (f.prevLeaderboardRanks[o] = c), (f.currentLeaderboardRanks[o] = l);
+        c = f.currentLeaderboardRanks[a];
+    if ((0, o.E)(l.ranks, null != (t = null == c ? void 0 : c.ranks) ? t : [])) return !1;
+    (f.prevLeaderboardRanks[a] = c), (f.currentLeaderboardRanks[a] = l);
 }
 function p() {
     let e = Date.now();
@@ -80,4 +80,4 @@ class h extends (r = i.ZP.PersistedStore) {
     }
 }
 l(h, 'displayName', 'GuildLeaderboardRanksStore'), l(h, 'persistKey', 'GuildLeaderboardRanksStore');
-let m = new h(o.Z, { SET_GUILD_LEADERBOARD: _ });
+let m = new h(a.Z, { SET_GUILD_LEADERBOARD: _ });

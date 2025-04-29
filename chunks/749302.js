@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(835473),
     l = n(925329),
     c = n(699516),
@@ -39,30 +39,30 @@ function m(e) {
     let { menuItemId: t, user: n, label: s, gameRelationships: f, onClick: m, color: g } = e,
         { id: E, bot: b } = n,
         y =
-            (0, a.e7)([u.default], () => {
+            (0, o.e7)([u.default], () => {
                 var e;
                 return (null == (e = u.default.getCurrentUser()) ? void 0 : e.id) === E;
             }) || b,
-        v = y ? _ : f,
-        [O, I] = i.useState(!1),
+        O = y ? _ : f,
+        [v, I] = i.useState(!1),
         S = i.useCallback(() => I(!0), []),
         T = i.useMemo(
             () =>
-                v.map((e) => {
+                O.map((e) => {
                     let { applicationId: t } = e;
                     return t;
                 }),
-            [v]
+            [O]
         ),
-        A = (0, a.e7)([c.Z], () => c.Z.getRelationshipType(E), [E]),
-        N = p(T, O || 1 === v.length);
-    if (y || 0 === v.length || A === d.OGo.FRIEND) return null;
-    if (1 === v.length) {
-        let { applicationId: e } = v[0],
+        A = (0, o.e7)([c.Z], () => c.Z.getRelationshipType(E), [E]),
+        N = p(T, v || 1 === O.length);
+    if (y || 0 === O.length || A === d.OGo.FRIEND) return null;
+    if (1 === O.length) {
+        let { applicationId: e } = O[0],
             n = N.get(e);
         return null == n
             ? null
-            : (0, r.jsx)(o.sNh, {
+            : (0, r.jsx)(a.sNh, {
                   color: g,
                   id: t,
                   label: s,
@@ -72,13 +72,13 @@ function m(e) {
               });
     }
     let C = [];
-    return (v.forEach((e) => {
+    return (O.forEach((e) => {
         let { applicationId: t } = e,
             n = N.get(t);
         null != n &&
             C.push(
                 (0, r.jsx)(
-                    o.sNh,
+                    a.sNh,
                     {
                         id: t,
                         label: n.name,
@@ -94,7 +94,7 @@ function m(e) {
     }),
     0 === C.length)
         ? null
-        : (0, r.jsx)(o.sNh, {
+        : (0, r.jsx)(a.sNh, {
               color: g,
               id: t,
               label: s,

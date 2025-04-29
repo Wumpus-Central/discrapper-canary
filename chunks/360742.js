@@ -1,7 +1,7 @@
 n.d(t, { Z: () => c });
 var r = n(81825),
     i = n(598077);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function a(e, t, n) {
         e
     );
 }
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,7 +25,7 @@ function o(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -55,10 +55,10 @@ function l(e, t) {
 }
 class c extends r.Z {
     static createFromServer(e) {
-        return new c(l(o({}, e), { user: new i.Z(e.user) }));
+        return new c(l(a({}, e), { user: new i.Z(e.user) }));
     }
     constructor(e) {
         var t;
-        super(), a(this, 'id', void 0), a(this, 'name', void 0), a(this, 'type', void 0), a(this, 'user', void 0), a(this, 'displayName', void 0), (this.id = e.id), (this.name = e.name), (this.type = e.type), (this.user = e.user), (this.displayName = null != (t = e.name_localized) ? t : e.name);
+        super(), o(this, 'id', void 0), o(this, 'name', void 0), o(this, 'type', void 0), o(this, 'user', void 0), o(this, 'displayName', void 0), (this.id = e.id), (this.name = e.name), (this.type = e.type), (this.user = e.user), (this.displayName = null != (t = e.name_localized) ? t : e.name);
     }
 }

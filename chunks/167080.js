@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r = n(200651),
     i = n(192379),
-    a = n(335854),
-    o = n(481060),
+    o = n(335854),
+    a = n(481060),
     s = n(626135),
     l = n(981631),
     c = n(388032);
@@ -64,8 +64,8 @@ function p(e, t) {
         r,
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -74,33 +74,33 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let m = (e) => {
     var { href: t, className: n, iconClassName: u, rel: f, target: h, mimeType: m, fileName: g, focusProps: E, onClick: b } = e,
         y = p(e, ['href', 'className', 'iconClassName', 'rel', 'target', 'mimeType', 'fileName', 'focusProps', 'onClick']);
-    let v = i.useMemo(() => a.X.getDefaultLinkInterceptor(t), [t]),
-        O = i.useCallback(
+    let O = i.useMemo(() => o.X.getDefaultLinkInterceptor(t), [t]),
+        v = i.useCallback(
             (e) => {
                 s.default.track(l.rMx.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
                     attachment_type: null == m ? void 0 : m[0],
                     attachment_subtype: null == m ? void 0 : m[1]
                 }),
                     null == b || b(),
-                    null == v || v(e);
+                    null == O || O(e);
             },
-            [v, m, b]
+            [O, m, b]
         );
     return null != g
         ? (0, r.jsx)(
-              o.eee,
+              a.eee,
               _(
                   d(
                       {
                           href: t,
-                          onClick: O,
+                          onClick: v,
                           target: h,
                           rel: f,
                           className: n,
@@ -113,12 +113,12 @@ let m = (e) => {
               )
           )
         : (0, r.jsx)(
-              o.eee,
+              a.eee,
               _(
                   d(
                       {
                           href: t,
-                          onClick: O,
+                          onClick: v,
                           target: h,
                           rel: f,
                           className: n,
@@ -128,7 +128,7 @@ let m = (e) => {
                       y
                   ),
                   {
-                      children: (0, r.jsx)(o._8t, {
+                      children: (0, r.jsx)(a._8t, {
                           size: 'md',
                           color: 'currentColor',
                           className: u

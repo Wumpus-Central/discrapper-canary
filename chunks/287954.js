@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(510659),
-    o = n(497805),
+    o = n(510659),
+    a = n(497805),
     s = n(511341),
     l = n(215105),
     c = n(228168);
@@ -65,8 +65,8 @@ function p(e, t) {
         r,
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -75,8 +75,8 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function m(e, t) {
@@ -97,11 +97,11 @@ function m(e, t) {
 function g(e) {
     var { user: t, guildId: n, channelId: u, themeType: f, onClose: h, children: g } = e,
         E = p(e, ['user', 'guildId', 'channelId', 'themeType', 'onClose', 'children']);
-    let { interactionType: b, interactionSource: y, resetInteraction: v, interactionSourceId: O, interactionPopoutTargetRef: I } = (0, a.Xo)(),
-        S = f === c.lY.MODAL ? (0, o.z)(t.id, n) : void 0,
+    let { interactionType: b, interactionSource: y, resetInteraction: O, interactionSourceId: v, interactionPopoutTargetRef: I } = (0, o.Xo)(),
+        S = f === c.lY.MODAL ? (0, a.z)(t.id, n) : void 0,
         T = y === E.sourceType && b === c.P.REACT,
         A = y === E.sourceType && b === c.P.REPLY,
-        N = (T || A) && O === E.sourceId;
+        N = (T || A) && v === E.sourceId;
     return (0, r.jsx)(
         i.yRy,
         _(
@@ -110,9 +110,9 @@ function g(e) {
                     targetElementRef: null != I ? I : void 0,
                     renderPopout: (e) => {
                         let { setPopoutRef: i } = e,
-                            a = T ? s.Z : l.Z;
+                            o = T ? s.Z : l.Z;
                         return (0, r.jsx)(
-                            a,
+                            o,
                             d(
                                 {
                                     user: t,
@@ -128,7 +128,7 @@ function g(e) {
                         );
                     },
                     onRequestClose: () => {
-                        v(), null == h || h();
+                        O(), null == h || h();
                     },
                     shouldShow: N
                 },

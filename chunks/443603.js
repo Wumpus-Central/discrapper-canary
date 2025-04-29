@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(272573),
     l = n(481060),
     c = n(686546),
@@ -70,7 +70,7 @@ var E = (function (e) {
 })({});
 let b = 24,
     y = 20,
-    v = {
+    O = {
         config: {
             friction: 26,
             tension: 700,
@@ -93,10 +93,10 @@ let b = 24,
             opacity: 0
         }
     };
-function O(e) {
-    let { className: t, disabled: n = !1, innerClassName: i, childClassName: a, iconClassName: p, icon: m, children: E, onClick: O, isActive: I, onMouseEnter: S, onMouseLeave: T, onFocus: A, onBlur: N, pulse: C, sparkle: R, notification: P, 'aria-label': w, 'aria-expanded': D, 'aria-haspopup': L, 'aria-controls': x } = e,
+function v(e) {
+    let { className: t, disabled: n = !1, innerClassName: i, childClassName: o, iconClassName: p, icon: m, children: E, onClick: v, isActive: I, onMouseEnter: S, onMouseLeave: T, onFocus: A, onBlur: N, pulse: C, sparkle: R, notification: P, 'aria-label': w, 'aria-expanded': D, 'aria-haspopup': L, 'aria-controls': x } = e,
         M = (0, u.Q3)('ChannelTextAreaButton'),
-        k = (0, l.Yzy)(null != E, g(h({}, v), { keys: (e) => (e ? 'children' : 'icon') })),
+        k = (0, l.Yzy)(null != E, g(h({}, O), { keys: (e) => (e ? 'children' : 'icon') })),
         j = (e) => {
             let { component: t } = e;
             return null != P
@@ -123,9 +123,9 @@ function O(e) {
         'aria-haspopup': L,
         'aria-controls': x,
         disabled: n,
-        className: o()(t, { [_.active]: I }),
-        innerClassName: o()(_.button, i, { [_.pulseButton]: C }),
-        onClick: O,
+        className: a()(t, { [_.active]: I }),
+        innerClassName: a()(_.button, i, { [_.pulseButton]: C }),
+        onClick: v,
         onMouseEnter: S,
         onMouseLeave: T,
         onFocus: A,
@@ -144,7 +144,7 @@ function O(e) {
                           s.animated.div,
                           {
                               style: e,
-                              className: o()(_.buttonWrapper, a),
+                              className: a()(_.buttonWrapper, o),
                               children: j({ component: E })
                           },
                           i
@@ -154,10 +154,10 @@ function O(e) {
                             s.animated.div,
                             {
                                 style: e,
-                                className: o()(_.buttonWrapper, a),
+                                className: a()(_.buttonWrapper, o),
                                 children: j({
                                     component: (0, r.jsx)(m, {
-                                        className: o()(_.icon, p, { [_.pulseIcon]: C }),
+                                        className: a()(_.icon, p, { [_.pulseIcon]: C }),
                                         color: 'currentColor'
                                     })
                                 })
@@ -174,4 +174,4 @@ function O(e) {
         ]
     });
 }
-let I = i.memo(O);
+let I = i.memo(v);

@@ -7,8 +7,8 @@ n.d(t, {
     n(35282);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(399606),
     l = n(343817),
     c = n(481060),
@@ -23,14 +23,14 @@ var r = n(200651),
     E = n(957730),
     b = n(19780),
     y = n(594174),
-    v = n(626135),
-    O = n(981631),
+    O = n(626135),
+    v = n(981631),
     I = n(388032),
     S = n(823150);
 let T = 'VoiceChannelStatusModal',
     A = 500;
 function N(e) {
-    let { channel: t, transitionState: n, sourceAnalyticsLocations: a, onClose: N } = e,
+    let { channel: t, transitionState: n, sourceAnalyticsLocations: o, onClose: N } = e,
         C = (0, s.e7)([f.Z], () => f.Z.getChannelStatus(t)),
         R = (0, s.e7)([b.Z], () => b.Z.getMediaSessionId()),
         [P, w] = i.useState(null != C ? C : ''),
@@ -40,12 +40,12 @@ function N(e) {
         j = P.length > A,
         U = (0, g.Q3)('VoiceChannelStatusModal');
     i.useEffect(() => {
-        v.default.track(O.rMx.OPEN_MODAL, {
+        O.default.track(v.rMx.OPEN_MODAL, {
             type: 'Voice Channel Topic Modal',
             guild_id: t.guild_id,
-            location_stack: a
+            location_stack: o
         });
-    }, [t.guild_id, a]);
+    }, [t.guild_id, o]);
     let G = (e) => {
             M(new l.Hx(e, e.status).getAnyErrorMessage());
         },
@@ -62,18 +62,18 @@ function N(e) {
             let n = P.length,
                 r = P.replace(/<(a)?:[^:]+:[0-9]+>/g, '--').length,
                 i = E.ZP.parse(void 0, P),
-                { hasErrors: o } = B(i);
-            if (!o) {
+                { hasErrors: a } = B(i);
+            if (!a) {
                 try {
                     let e = await u.ZP.updateVoiceChannelStatus(t.id, i.content);
                     204 === e.status
-                        ? (v.default.track(O.rMx.VOICE_CHANNEL_TOPIC_SET, {
+                        ? (O.default.track(v.rMx.VOICE_CHANNEL_TOPIC_SET, {
                               guild_id: t.guild_id,
                               channel_id: t.id,
                               media_session_id: R,
                               raw_length: n,
                               text_length: r,
-                              location_stack: a
+                              location_stack: o
                           }),
                           N())
                         : G(e);
@@ -100,7 +100,7 @@ function N(e) {
         children: (0, r.jsxs)(c.Y0X, {
             transitionState: n,
             size: c.CgR.SMALL,
-            className: o()(S.modal, S.gradientBorder),
+            className: a()(S.modal, S.gradientBorder),
             children: [
                 (0, r.jsxs)(c.hzk, {
                     className: S.container,

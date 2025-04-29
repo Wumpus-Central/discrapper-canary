@@ -2,8 +2,8 @@ n.d(t, { p: () => p });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(272573),
+    o = n.n(i),
+    a = n(272573),
     s = n(481060),
     l = n(436774),
     c = n(197115),
@@ -39,8 +39,8 @@ function _(e) {
     return e;
 }
 function p(e) {
-    let { showUpsell: t, text: n, textVariant: i, button: f, buttonAnalyticsObject: p, className: h, buttonStyles: m, onSubscribeModalClose: g, showShadow: E = !0, position: b = 'floating', buttonSize: y = 'md', useLockIcon: v = !1 } = e,
-        O = (0, s.q_F)({
+    let { showUpsell: t, text: n, textVariant: i, button: f, buttonAnalyticsObject: p, className: h, buttonStyles: m, onSubscribeModalClose: g, showShadow: E = !0, position: b = 'floating', buttonSize: y = 'md', useLockIcon: O = !1 } = e,
+        v = (0, s.q_F)({
             transform: t ? 'translateY(0%)' : 'translateY(120%)',
             opacity: +!!t,
             config: {
@@ -48,9 +48,9 @@ function p(e) {
                 friction: 14
             }
         });
-    return (0, r.jsxs)(o.animated.div, {
-        style: _({}, O),
-        className: a()(
+    return (0, r.jsxs)(a.animated.div, {
+        style: _({}, v),
+        className: o()(
             d.upsellContainer,
             {
                 [d.upsellContainerShadow]: E,
@@ -60,7 +60,7 @@ function p(e) {
             h
         ),
         children: [
-            v
+            O
                 ? (0, r.jsx)(s.d$P, {
                       size: 'custom',
                       height: 20,

@@ -61,24 +61,23 @@ function p(e, t) {
     });
 }
 function f(e) {
-    let { guildNode: t, height: n } = e,
-        l = t.id,
-        f = (0, i.e7)([s.Z], () => s.Z.getRequest(l)),
-        g = (0, i.e7)([s.Z], () => s.Z.getJoinRequestGuild(l), [l]),
-        m = (0, i.e7)([c.Z], () => c.Z.isFocused()),
-        b = (0, i.e7)([a.Z], () => a.Z.getGuildId());
-    return null == g
+    let { guildNode: t } = e,
+        n = t.id,
+        l = (0, i.e7)([s.Z], () => s.Z.getRequest(n)),
+        f = (0, i.e7)([s.Z], () => s.Z.getJoinRequestGuild(n), [n]),
+        g = (0, i.e7)([c.Z], () => c.Z.isFocused()),
+        m = (0, i.e7)([a.Z], () => a.Z.getGuildId());
+    return null == f
         ? null
         : (0, r.jsx)(u.Z, {
               guildNode: t,
-              guild: g,
-              animatable: m,
+              guild: f,
+              animatable: g,
               draggable: !1,
-              selected: l === b,
+              selected: n === m,
               preloadOnClick: !1,
               contextMenu: p,
-              lowerBadge: (null == f ? void 0 : f.applicationStatus) === o.wB.REJECTED ? (0, d.jt)({ guildJoinRequestStatus: f.applicationStatus }) : void 0,
-              route: h.Z5c.GUILD_MEMBER_VERIFICATION(l),
-              height: n
+              lowerBadge: (null == l ? void 0 : l.applicationStatus) === o.wB.REJECTED ? (0, d.jt)({ guildJoinRequestStatus: l.applicationStatus }) : void 0,
+              route: h.Z5c.GUILD_MEMBER_VERIFICATION(n)
           });
 }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(704826), n(35282), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(793030),
-    o = n(481060),
+    o = n(793030),
+    a = n(481060),
     s = n(596454),
     l = n(962293),
     c = n(328908),
@@ -18,7 +18,7 @@ function E(e) {
     let { emojiConfetti: t } = e,
         n = i.useMemo(() => (null == t ? null : null == t.id ? t.optionallyDiverseSequence : t.name), [t]);
     return null == t
-        ? (0, r.jsx)(o.EO4, {
+        ? (0, r.jsx)(a.EO4, {
               size: 'sm',
               color: 'currentColor'
           })
@@ -33,13 +33,13 @@ let b = function (e) {
         n = (0, c.z8)(t.id),
         s = (0, c.OG)(t.id),
         { entitlement: b, numPotions: y } = (0, p.t6)(d.D1),
-        v = i.useCallback(
+        O = i.useCallback(
             (e) => {
                 (0, c.Hi)(e, t.id);
             },
             [t.id]
         ),
-        O = i.useCallback(() => {
+        v = i.useCallback(() => {
             (0, c.GA)(t.id);
         }, [t.id]),
         I = i.useMemo(() => (null != n ? n.name.replace(/_/g, ' ') : ''), [n]),
@@ -49,16 +49,16 @@ let b = function (e) {
         T = i.useMemo(() => (null != y && y > 0 ? ((null == b ? void 0 : b.type) === h.qc2.DEVELOPER_GIFT ? m.intl.format(m.t['b+P6ra'], { numPotions: y }) : m.intl.format(m.t.RiQ4cn, { numPotions: y })) : m.intl.string(m.t.hvVgAQ)), [y, b]),
         [A, N] = i.useState(!1 === s);
     i.useEffect(() => {
-        !1 === s && O();
-    }, [s, O]);
+        !1 === s && v();
+    }, [s, v]);
     let C = i.useCallback(() => {
             N(!1);
         }, []),
         R = i.useCallback(
             (e) => {
-                v(e), N(!1);
+                O(e), N(!1);
             },
-            [v]
+            [O]
         ),
         P = i.useCallback(() => {
             (0, f.s)({
@@ -79,7 +79,7 @@ let b = function (e) {
                 position: 'top',
                 align: 'left',
                 children: () =>
-                    (0, r.jsxs)(o.P3F, {
+                    (0, r.jsxs)(a.P3F, {
                         onClick: () => N(!A),
                         className: g.emojiSelectContainer,
                         children: [
@@ -87,7 +87,7 @@ let b = function (e) {
                                 className: g.emojiIconContainer,
                                 children: (0, r.jsx)(E, { emojiConfetti: null != n ? n : void 0 })
                             }),
-                            (0, r.jsx)(a.xv, {
+                            (0, r.jsx)(o.xv, {
                                 variant: 'text-sm/medium',
                                 children: null == n ? m.intl.string(m.t.mzfiGR) : m.intl.format(m.t.Hcd9OT, { emojiName: I })
                             })
@@ -97,13 +97,13 @@ let b = function (e) {
             (0, r.jsxs)('div', {
                 className: g.end,
                 children: [
-                    (0, r.jsx)(o.zxk, {
-                        look: o.zxk.Looks.LINK,
-                        size: o.zxk.Sizes.SMALL,
+                    (0, r.jsx)(a.zxk, {
+                        look: a.zxk.Looks.LINK,
+                        size: a.zxk.Sizes.SMALL,
                         onClick: P,
-                        color: o.zxk.Colors.TRANSPARENT,
+                        color: a.zxk.Colors.TRANSPARENT,
                         className: g.learnMoreButton,
-                        children: (0, r.jsx)(a.xv, {
+                        children: (0, r.jsx)(o.xv, {
                             variant: 'text-sm/medium',
                             children: T
                         })

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => k }), n(539854), n(388685);
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(740504),
+    o = n(570140),
+    a = n(740504),
     s = n(853856),
     l = n(314897),
     c = n(592125),
@@ -57,15 +57,15 @@ function y(e) {
         }),
         t[u.sH].forEach(r),
         t[u.Zb].forEach(r),
-        (0, o.Z)(n._categories, n).forEach(b),
+        (0, a.Z)(n._categories, n).forEach(b),
         (h[e] = n),
         n
     );
 }
-function v() {
+function O() {
     (h = {}), null != p && y(p);
 }
-function O(e) {
+function v(e) {
     let {
         guild: { id: t }
     } = e;
@@ -140,13 +140,13 @@ class M extends (r = i.ZP.Store) {
     }
 }
 _(M, 'displayName', 'GuildCategoryStore');
-let k = new M(a.Z, {
+let k = new M(o.Z, {
     CHANNEL_SELECT: D,
-    CONNECTION_OPEN: v,
-    OVERLAY_INITIALIZE: v,
-    CACHE_LOADED_LAZY: v,
-    GUILD_CREATE: O,
-    GUILD_UPDATE: O,
+    CONNECTION_OPEN: O,
+    OVERLAY_INITIALIZE: O,
+    CACHE_LOADED_LAZY: O,
+    GUILD_CREATE: v,
+    GUILD_UPDATE: v,
     GUILD_DELETE: I,
     CHANNEL_CREATE: S,
     CHANNEL_DELETE: S,

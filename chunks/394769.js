@@ -2,14 +2,14 @@ n.d(t, { Z: () => u });
 var r = n(200651);
 n(192379);
 var i = n(272573),
-    a = n(481060),
-    o = n(565138),
+    o = n(481060),
+    a = n(565138),
     s = n(678558),
     l = n(981631),
     c = n(831740);
 let u = function (e) {
     let { closeLayer: t, guild: n, isVisible: u } = e,
-        d = (0, a.q_F)({
+        d = (0, o.q_F)({
             transform: u ? 'translateY(-100%)' : 'translateY(0%)',
             opacity: +!!u,
             config: {
@@ -26,12 +26,12 @@ let u = function (e) {
                 (0, r.jsxs)('div', {
                     className: c.guildInfo,
                     children: [
-                        (0, r.jsx)(o.Z, {
+                        (0, r.jsx)(a.Z, {
                             className: c.guildIcon,
                             guild: n,
-                            size: o.Z.Sizes.LARGER
+                            size: a.Z.Sizes.LARGER
                         }),
-                        (0, r.jsx)(a.X6q, {
+                        (0, r.jsx)(o.X6q, {
                             className: c.guildName,
                             variant: 'text-lg/bold',
                             children: n.name
@@ -49,7 +49,7 @@ let u = function (e) {
                     },
                     closeLayer: t,
                     pauseAnimation: !u,
-                    size: a.zxk.Sizes.LARGE
+                    size: o.zxk.Sizes.LARGE
                 })
             ]
         })

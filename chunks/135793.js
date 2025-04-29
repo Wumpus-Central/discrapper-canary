@@ -7,8 +7,8 @@ n.d(t, {
     n(35282);
 var r = n(200651),
     i = n(192379),
-    a = n(990547),
-    o = n(311570),
+    o = n(990547),
+    a = n(311570),
     s = n(704215),
     l = n(481060),
     c = n(596454),
@@ -23,8 +23,8 @@ var r = n(200651),
     E = n(980463),
     b = n(328908),
     y = n(992970),
-    v = n(317951),
-    O = n(287941),
+    O = n(317951),
+    v = n(287941),
     I = n(235894),
     S = n(883998),
     T = n(576645),
@@ -89,7 +89,7 @@ let M = 190,
     k = 178,
     j = 'MESSAGE_CONFETTI_POTION_MODAL_KEY',
     U = (e) => {
-        let { channelId: t, message: i, onRedeem: a, onClose: o, buttonUseState: c = 'activate', source: u } = e,
+        let { channelId: t, message: i, onRedeem: o, onClose: a, buttonUseState: c = 'activate', source: u } = e,
             d = h.Z.getChannel(t);
         null != d &&
             ((0, f.EW)(s.z.CONFETTI_POTION_UPSELL, { dismissAction: N.L.INDIRECT_ACTION }),
@@ -102,8 +102,8 @@ let M = 190,
                             x(D({}, t), {
                                 channel: d,
                                 message: i,
-                                onRedeem: a,
-                                onUnmount: o,
+                                onRedeem: o,
+                                onUnmount: a,
                                 source: u,
                                 buttonUseState: c
                             })
@@ -113,19 +113,19 @@ let M = 190,
             ));
     };
 function G(e) {
-    let { transitionState: t, channel: n, message: o, onRedeem: s, onUnmount: c, buttonUseState: u, source: d } = e;
+    let { transitionState: t, channel: n, message: a, onRedeem: s, onUnmount: c, buttonUseState: u, source: d } = e;
     return (
         (0, i.useEffect)(() => c, [c]),
         (0, r.jsx)(l.Y0X, {
             size: l.CgR.DYNAMIC,
             transitionState: t,
             impression: {
-                impressionName: a.ImpressionNames.CONFETTI_POTION_MODAL,
+                impressionName: o.ImpressionNames.CONFETTI_POTION_MODAL,
                 impressionProperties: { source: d }
             },
             children: (0, r.jsx)(B, {
                 channel: n,
-                message: o,
+                message: a,
                 onRedeem: s,
                 buttonUseState: u
             })
@@ -133,33 +133,33 @@ function G(e) {
     );
 }
 function B(e) {
-    let { channel: t, message: n, onRedeem: a, buttonUseState: s } = e,
+    let { channel: t, message: n, onRedeem: o, buttonUseState: s } = e,
         c = null != n,
         f = c && (0, I.Uw)(n),
         _ = (0, b.Qj)(t.id, c),
-        { price: h, fetchingPrice: m, error: g } = (0, T.R2)(v.D1),
-        { entitlement: y, fetchedEntitlement: O, error: S } = (0, T.t6)(v.D1),
+        { price: h, fetchingPrice: m, error: g } = (0, T.R2)(O.D1),
+        { entitlement: y, fetchedEntitlement: v, error: S } = (0, T.t6)(O.D1),
         N = g || S,
         { analyticsLocations: C } = (0, d.ZP)([u.Z.CONFETTI_POTION_MODAL]),
         R = null != y && !y.consumed,
-        P = m || !O;
+        P = m || !v;
     (0, i.useEffect)(
         () => () => {
-            N && (0, E.SN)(v.D1);
+            N && (0, E.SN)(O.D1);
         },
         [N, c]
     );
     let w = (0, i.useCallback)(() => {
-            null != _ && ((0, l.pTH)(), a(_));
-        }, [_, a]),
+            null != _ && ((0, l.pTH)(), o(_));
+        }, [_, o]),
         D = (0, i.useCallback)(() => {
             (0, p.Z)({
-                skuId: v.D1,
+                skuId: O.D1,
                 analyticsLocations: C,
                 onComplete: () => {
-                    w(), (0, E.gA)(v.D1);
+                    w(), (0, E.gA)(O.D1);
                 },
-                variantsReturnStyle: o.v.INDIVIDUAL_PRODUCTS
+                variantsReturnStyle: a.v.INDIVIDUAL_PRODUCTS
             });
         }, [w, C]),
         L = (0, i.useCallback)(() => (R ? w() : D()), [w, D, R]),
@@ -184,7 +184,7 @@ function B(e) {
     });
 }
 let V = (e) => {
-        let { channel: t, buttonPurchaseState: n, buttonDisabledState: a, price: o, onActionClick: s, loading: l, selectedEmoji: c, isReaction: u } = e,
+        let { channel: t, buttonPurchaseState: n, buttonDisabledState: o, price: a, onActionClick: s, loading: l, selectedEmoji: c, isReaction: u } = e,
             d = (0, i.useRef)(null);
         return ((0, i.useEffect)(() => {
             var e;
@@ -192,14 +192,14 @@ let V = (e) => {
             let t = null == (e = d.current) ? void 0 : e.getBoundingClientRect();
             if (null == t) return;
             let n = (0, I.NV)(c),
-                { x: r, y: i, width: a, height: o } = t;
-            (0, O.I)(
+                { x: r, y: i, width: o, height: a } = t;
+            (0, v.I)(
                 n,
                 {
                     x: r,
                     y: i,
-                    w: a,
-                    h: o
+                    w: o,
+                    h: a
                 },
                 !0,
                 y.LL.ConfettiPreview
@@ -207,7 +207,7 @@ let V = (e) => {
         }, [c]),
         l)
             ? (0, r.jsx)(z, {})
-            : null == o
+            : null == a
               ? (0, r.jsx)(K, {})
               : (0, r.jsxs)(r.Fragment, {
                     children: [
@@ -222,8 +222,8 @@ let V = (e) => {
                         }),
                         (0, r.jsx)(H, {
                             buttonPurchaseState: n,
-                            buttonDisabledState: a,
-                            price: o,
+                            buttonDisabledState: o,
+                            price: a,
                             onActionClick: s
                         })
                     ]
@@ -277,12 +277,12 @@ let V = (e) => {
         });
     },
     Z = (e) => {
-        let { channel: t, selectedEmoji: n, isReaction: a } = e,
-            [o, s] = (0, i.useState)(!1),
+        let { channel: t, selectedEmoji: n, isReaction: o } = e,
+            [a, s] = (0, i.useState)(!1),
             u = (0, i.useCallback)(() => {
                 s(!1);
             }, []),
-            d = (0, i.useCallback)((e) => (0, b.t0)(e, t.id, a), [a, t.id]),
+            d = (0, i.useCallback)((e) => (0, b.t0)(e, t.id, o), [o, t.id]),
             { emojiName: f, selectionText: _ } = (0, i.useMemo)(
                 () =>
                     null == n
@@ -299,7 +299,7 @@ let V = (e) => {
             p = (0, i.useRef)(null);
         return (0, r.jsx)(S.Z, {
             channel: t,
-            shouldShow: o,
+            shouldShow: a,
             onRequestClose: u,
             setEmojiConfetti: d,
             positionRef: p,
@@ -309,7 +309,7 @@ let V = (e) => {
                 (0, r.jsx)(l.zxk, {
                     look: l.zxk.Looks.BLANK,
                     size: l.zxk.Sizes.NONE,
-                    onClick: () => s(!o),
+                    onClick: () => s(!a),
                     className: R.emojiSelect,
                     innerClassName: R.innerEmojiSelect,
                     children: (0, r.jsxs)('div', {
@@ -341,7 +341,7 @@ let V = (e) => {
                                     })
                                 ]
                             }),
-                            o
+                            a
                                 ? (0, r.jsx)(l.u04, {
                                       color: 'currentColor',
                                       size: 'custom',
@@ -358,7 +358,7 @@ let V = (e) => {
         });
     },
     H = (e) => {
-        let { buttonPurchaseState: t, buttonDisabledState: n, price: i, onActionClick: a } = e;
+        let { buttonPurchaseState: t, buttonDisabledState: n, price: i, onActionClick: o } = e;
         return (0, r.jsxs)('div', {
             className: R.footer,
             children: [
@@ -377,7 +377,7 @@ let V = (e) => {
                             buttonPurchaseState: t,
                             buttonDisabledState: n,
                             price: i,
-                            onActionClick: a
+                            onActionClick: o
                         })
                     ]
                 })
@@ -385,7 +385,7 @@ let V = (e) => {
         });
     },
     Y = () => {
-        let { entitlement: e, numPotions: t } = (0, T.t6)(v.D1);
+        let { entitlement: e, numPotions: t } = (0, T.t6)(O.D1);
         if (null == t || 0 === t) return null;
         let n = (null == e ? void 0 : e.type) === A.qc2.DEVELOPER_GIFT ? C.t['b+P6ra'] : C.t.RiQ4cn;
         return (0, r.jsxs)('div', {
@@ -404,7 +404,7 @@ let V = (e) => {
         });
     },
     W = (e) => {
-        let { buttonPurchaseState: t, buttonDisabledState: n, price: a, onActionClick: o } = e,
+        let { buttonPurchaseState: t, buttonDisabledState: n, price: o, onActionClick: a } = e,
             {
                 isDisabled: s,
                 copy: c,
@@ -412,8 +412,8 @@ let V = (e) => {
             } = (0, i.useMemo)(() => {
                 let e = {
                         0: C.intl.formatToPlainString(C.t.POGRmp, {
-                            amount: v.pe,
-                            price: (0, g.T4)(a.amount, a.currency)
+                            amount: O.pe,
+                            price: (0, g.T4)(o.amount, o.currency)
                         }),
                         1: C.intl.string(C.t.RrKeDw),
                         2: C.intl.string(C.t.WOXaWF),
@@ -430,7 +430,7 @@ let V = (e) => {
                     copy: e[t],
                     tooltipCopy: i ? r[n] : ''
                 };
-            }, [n, t, a.amount, a.currency]);
+            }, [n, t, o.amount, o.currency]);
         return (0, r.jsx)(l.ua7, {
             tooltipContentClassName: R.tooltip,
             text: u,
@@ -439,7 +439,7 @@ let V = (e) => {
                 (0, r.jsx)(
                     l.zxk,
                     x(D({}, e), {
-                        onClick: o,
+                        onClick: a,
                         disabled: s,
                         children: (0, r.jsx)('div', {
                             className: R.buttonCopy,

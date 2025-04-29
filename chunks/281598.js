@@ -1,5 +1,5 @@
 n.d(t, {
-    BU: () => O,
+    BU: () => v,
     CM: () => h,
     Eo: () => m,
     Kj: () => _,
@@ -17,8 +17,8 @@ n.d(t, {
     n(642613);
 var r = n(192379),
     i = n(481060),
-    a = n(406432),
-    o = n(619899);
+    o = n(406432),
+    a = n(619899);
 function s(e, t, n) {
     return (
         t in e
@@ -125,8 +125,8 @@ let m = (e) => {
         for (let n of e) E(n, t);
     },
     y = (e, t) => ''.concat(e, '/').concat(t),
-    v = (e) => (0, a.tw)(e.type) || (0, a.X2)(e.type),
-    O = (e) => {
+    O = (e) => (0, o.tw)(e.type) || (0, o.X2)(e.type),
+    v = (e) => {
         var t;
         return null != (t = _[e.name]) ? t : null;
     },
@@ -145,21 +145,21 @@ let m = (e) => {
         return t;
     },
     S = (e, t, n) => {
-        if (!v(t) && !t.name.endsWith('.txt')) return void n.ignoredFilenames.push(y(e, t.name));
+        if (!O(t) && !t.name.endsWith('.txt')) return void n.ignoredFilenames.push(y(e, t.name));
         e in n.profileEffectFilesMap || (n.profileEffectFilesMap[e] = []), n.profileEffectFilesMap[e].push(t);
     },
     T = (e, t, n, r) => {
         if (t.name === p) return;
         let i = y(e, t.name);
-        'profile_effects' === n ? S(e, t, r) : v(t) ? ('collection' === n || null === n ? (t.name in _ ? r.collectionFiles.push(t) : r.ignoredFilenames.push(i)) : 'avatar_decorations' === n ? r.avatarDecorationFiles.push(t) : r.ignoredFilenames.push(i)) : r.ignoredFilenames.push(i);
+        'profile_effects' === n ? S(e, t, r) : O(t) ? ('collection' === n || null === n ? (t.name in _ ? r.collectionFiles.push(t) : r.ignoredFilenames.push(i)) : 'avatar_decorations' === n ? r.avatarDecorationFiles.push(t) : r.ignoredFilenames.push(i)) : r.ignoredFilenames.push(i);
     },
     A = async (e, t, n) => {
         let r = e.createReader();
         for (let i of await new Promise((e) => r.readEntries(e)))
             if (i.isFile) {
                 let r = i,
-                    a = await new Promise((e) => r.file(e));
-                T(e.name, a, t, n);
+                    o = await new Promise((e) => r.file(e));
+                T(e.name, o, t, n);
             } else {
                 let e = await I(i);
                 n.ignoredFilenames.push(...e.map((e) => y(i.name, e.name)));
@@ -212,15 +212,15 @@ let m = (e) => {
                 profileEffectFilesMap: {},
                 ignoredFilenames: []
             })),
-            { upsertCollectionAsset: n, upsertAvatarDecorationAsset: i } = (0, o.N9)(),
-            a = r.useCallback(
+            { upsertCollectionAsset: n, upsertAvatarDecorationAsset: i } = (0, a.N9)(),
+            o = r.useCallback(
                 async (e) => {
                     let r = await R(e);
                     t(r),
                         (0 !== r.collectionFiles.length || 0 !== r.avatarDecorationFiles.length) &&
                             (r.collectionFiles.forEach((e) => {
                                 E(e, (e) => {
-                                    let t = O(e);
+                                    let t = v(e);
                                     null != t && n(t, e);
                                 });
                             }),
@@ -248,6 +248,6 @@ let m = (e) => {
             ignoredFilenames: e.ignoredFilenames,
             clearAssets: s,
             clearIgnoredFilenames: c,
-            processAndUpsertAssets: a
+            processAndUpsertAssets: o
         };
     };

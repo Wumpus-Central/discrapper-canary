@@ -16,15 +16,15 @@ var r = n(200651),
     b = n(730749),
     y = n(607070),
     _ = n(636449),
-    O = n(214629),
-    v = n(566620),
+    v = n(214629),
+    O = n(566620),
     C = n(317381),
     j = n(736409),
     S = n(367907),
     E = n(835473),
     x = n(413523),
-    I = n(933557),
-    P = n(194082),
+    P = n(933557),
+    I = n(194082),
     w = n(550532),
     N = n(436774),
     Z = n(605236),
@@ -154,9 +154,9 @@ class ey extends i.PureComponent {
                           title: l,
                           icon: null == t ? void 0 : t.sourceIcon
                       })
-                    : (0, r.jsx)(P.ZP, {
-                          look: P.ZP.Looks.GRAY,
-                          size: P.ZP.Sizes.SMALL,
+                    : (0, r.jsx)(I.ZP, {
+                          look: I.ZP.Looks.GRAY,
+                          size: I.ZP.Sizes.SMALL,
                           className: ep.liveIndicator
                       }),
                 (0, r.jsxs)('div', {
@@ -285,7 +285,7 @@ class ey extends i.PureComponent {
                 let { channel: t, embeddedActivity: n } = this.props;
                 a()(null != n, 'Activity cannot be null during navigation click');
                 let r = n.location.kind === c.E.CONTEXTLESS;
-                if (!(0, _.R)() && r) return void (0, v.tg)(eu.Ez.PANEL);
+                if (!(0, _.R)() && r) return void (0, O.tg)(eu.Ez.PANEL);
                 a()(null != t, 'Channel cannot be null during navigation click'),
                     g.Z.channelListScrollTo(null != (e = t.guild_id) ? e : ec.ME, t.id),
                     !(0, _.R)() &&
@@ -297,7 +297,7 @@ class ey extends i.PureComponent {
                                     instanceId: n.compositeInstanceId
                                 })
                             ),
-                        (0, F.Qm)(t.type) && (0, v.tg)(eu.Ez.PANEL));
+                        (0, F.Qm)(t.type) && (0, O.tg)(eu.Ez.PANEL));
             });
     }
 }
@@ -332,15 +332,15 @@ let e_ = (0, b.Z)(function (e) {
         [f, g] = (0, u.Wu)([z.Z], () => [z.Z.getCurrentUserActiveStream(), z.Z.getStreamerActiveStreamMetadata()]),
         m = (0, u.e7)([y.Z], () => y.Z.useReducedMotion),
         b = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
-        v = (0, u.e7)([q.Z, X.Z, K.ZP], () => (null != a ? D.JL(a, q.Z, X.Z, !1) : null != n && D.h_(K.ZP.getChannels(n), q.Z, X.Z).length > 0)),
+        O = (0, u.e7)([q.Z, X.Z, K.ZP], () => (null != a ? D.JL(a, q.Z, X.Z, !1) : null != n && D.h_(K.ZP.getChannels(n), q.Z, X.Z).length > 0)),
         [j] = (0, E.Z)([null != (t = null != g && null != g.id ? g.id : null != s && null != s.id ? s.id : null != b ? b.applicationId : void 0) ? t : '']),
         S = (0, u.e7)([w.Z], () => w.Z.getFakeGameData()),
         x = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
-        P = (0, O.Z0)() && null != x && (0, _.R)(),
+        I = (0, v.Z0)() && null != x && (0, _.R)(),
         N = (0, u.e7)([Q.Z], () => (0, L.Z)(Q.Z) && (0, ei.isWindows)()),
         R = (0, u.e7)([J.Z], () => (null != o ? J.Z.findActivity(o, (e) => e.type === ec.IIU.PLAYING) : null)),
         k = null != f && f.ownerId === o && f.state !== ec.jm8.ENDED,
-        M = (0, u.e7)([et.default, $.Z], () => (null != h ? (0, I.F6)(h, et.default, $.Z) : void 0)),
+        M = (0, u.e7)([et.default, $.Z], () => (null != h ? (0, P.F6)(h, et.default, $.Z) : void 0)),
         G = (0, B.Z)(),
         [V, H] = i.useState(!1),
         { showsActivityPopoutQuickRefocusNUX: F, markActivityPopoutQuickRefocusNUXAsDismissed: el } = (function () {
@@ -358,7 +358,7 @@ let e_ = (0, b.Z)(function (e) {
         ey,
         em(eg({}, l), {
             guildId: n,
-            canGoLive: N || P || void 0 !== S,
+            canGoLive: N || I || void 0 !== S,
             activity: R,
             embeddedActivity: b,
             userId: o,
@@ -367,7 +367,7 @@ let e_ = (0, b.Z)(function (e) {
             useReducedMotion: m,
             isStreaming: k,
             channel: h,
-            canStream: v,
+            canStream: O,
             stream: f,
             streamMetadata: g,
             channelName: M,

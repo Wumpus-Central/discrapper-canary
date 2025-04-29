@@ -3,7 +3,7 @@ e.exports = function (e) {
         n = t + '[:=]' + t,
         r = '[ \\t\\f]+',
         i = '([^\\\\:= \\t\\f\\n]|\\\\.)+',
-        a = {
+        o = {
             end: '(' + n + '|' + r + ')',
             relevance: 0,
             starts: {
@@ -30,7 +30,7 @@ e.exports = function (e) {
                         endsParent: !0
                     }
                 ],
-                starts: a
+                starts: o
             },
             {
                 className: 'attr',

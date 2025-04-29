@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y }), n(388685);
 var r,
     i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -104,8 +104,8 @@ class b extends (r = i.ZP.Store) {
               };
     }
 }
-o(b, 'displayName', 'GuildOnboardingMemberActionStore');
-let y = new b(a.Z, {
+a(b, 'displayName', 'GuildOnboardingMemberActionStore');
+let y = new b(o.Z, {
     GUILD_NEW_MEMBER_ACTIONS_FETCH_START: h,
     GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS: p,
     GUILD_NEW_MEMBER_ACTIONS_FETCH_FAIL: m,

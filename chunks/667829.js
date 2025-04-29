@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j }), n(388685), n(539854), n(35282);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n.n(s),
     c = n(218887),
@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(710845),
     b = n(117530),
     y = n(459273),
-    v = n(403182),
-    O = n(541716),
+    O = n(403182),
+    v = n(541716),
     I = n(752305),
     S = n(30465),
     T = n(140963),
@@ -194,12 +194,12 @@ class j extends i.Component {
         return e && !n ? R.intl.string(R.t.IYKTTU) : t;
     }
     render() {
-        var e, t, n, i, a, s;
-        let { textValue: l, richValue: c, disabled: u, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, fontSize: E, useSlate: b, spellcheckEnabled: v, useNewSlashCommands: S, canOnlyUseTextCommands: N, className: R, id: w, required: L, maxCharacterCount: M, allowNewLines: j, 'aria-describedby': U, 'aria-labelledby': G, accessibilityLabel: B } = this.props,
+        var e, t, n, i, o, s;
+        let { textValue: l, richValue: c, disabled: u, onChange: d, onKeyDown: _, onResize: p, onSubmit: h, channel: m, type: g, fontSize: E, useSlate: b, spellcheckEnabled: O, useNewSlashCommands: S, canOnlyUseTextCommands: N, className: R, id: w, required: L, maxCharacterCount: M, allowNewLines: j, 'aria-describedby': U, 'aria-labelledby': G, accessibilityLabel: B } = this.props,
             { submitting: V, popup: F } = this.state,
             Z = {
                 channel: m,
-                className: o()(R, P.textArea, {
+                className: a()(R, P.textArea, {
                     [P.textAreaSlate]: b,
                     [P.textAreaDisabled]: u || V
                 }),
@@ -209,7 +209,7 @@ class j extends i.Component {
                 accessibilityLabel: B,
                 disabled: u || !1,
                 submitting: V,
-                isEdit: g === O.Ie.EDIT,
+                isEdit: g === v.Ie.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
                 onPaste: this.handlePaste,
@@ -223,18 +223,18 @@ class j extends i.Component {
                 onResize: p,
                 onKeyDown: _,
                 onSubmit: h,
-                textAreaPaddingClassName: o()(k[E], {
-                    [P.textAreaWithoutAttachmentButton]: g !== O.Ie.NORMAL && g !== O.Ie.OVERLAY && g !== O.Ie.THREAD_CREATION && g !== O.Ie.SIDEBAR,
-                    [P.textAreaForPostCreation]: g === O.Ie.CREATE_FORUM_POST,
-                    [P.textAreaCustomGift]: g === O.Ie.CUSTOM_GIFT,
-                    [P.textAreaForUserProfile]: g === O.Ie.USER_PROFILE,
-                    [P.textAreaForOverlayInlineReply]: g === O.Ie.OVERLAY_INLINE_REPLY
+                textAreaPaddingClassName: a()(k[E], {
+                    [P.textAreaWithoutAttachmentButton]: g !== v.Ie.NORMAL && g !== v.Ie.OVERLAY && g !== v.Ie.THREAD_CREATION && g !== v.Ie.SIDEBAR,
+                    [P.textAreaForPostCreation]: g === v.Ie.CREATE_FORUM_POST,
+                    [P.textAreaCustomGift]: g === v.Ie.CUSTOM_GIFT,
+                    [P.textAreaForUserProfile]: g === v.Ie.USER_PROFILE,
+                    [P.textAreaForOverlayInlineReply]: g === v.Ie.OVERLAY_INLINE_REPLY
                 }),
-                spellcheckEnabled: v,
+                spellcheckEnabled: O,
                 useNewSlashCommands: S,
                 disableAutoFocus: f.tq || (null != (n = g.disableAutoFocus) && n),
                 disableEnterToSubmit: null != (i = null == (e = g.submit) ? void 0 : e.disableEnterToSubmit) && i,
-                'aria-controls': null != (a = F.id) ? a : void 0,
+                'aria-controls': null != (o = F.id) ? o : void 0,
                 'aria-haspopup': 'listbox',
                 'aria-expanded': null !== F.id || void 0,
                 'aria-activedescendant': null != (s = F.activeDescendant) ? s : void 0,
@@ -340,26 +340,26 @@ class j extends i.Component {
                 null == t || t(e), n && this.setState({ focused: !1 });
             }),
             w(this, 'handlePaste', (e) => {
-                let { channel: t, canPasteFiles: n, uploadPromptCharacterCount: r, promptToUpload: i, maxCharacterCount: a, type: o } = this.props;
+                let { channel: t, canPasteFiles: n, uploadPromptCharacterCount: r, promptToUpload: i, maxCharacterCount: o, type: a } = this.props;
                 if (null == i || (!t.isPrivate() && !n) || (t.isPrivate() && t.isManaged())) return !1;
                 let s = (e, n) => {
-                        var r, a;
+                        var r, o;
                         let s = g.Z.getActiveCommand(t.id);
                         if (null == s)
-                            return i(e, t, o.drafts.type, {
+                            return i(e, t, a.drafts.type, {
                                 requireConfirm: !0,
                                 showLargeMessageDialog: n
                             });
-                        let l = null != (r = o.drafts.commandType) ? r : o.drafts.type,
+                        let l = null != (r = a.drafts.commandType) ? r : a.drafts.type,
                             c = null,
                             u = g.Z.getActiveOption(t.id);
                         null !=
                             (c =
                                 (null == u ? void 0 : u.type) === h.jw.ATTACHMENT
                                     ? u
-                                    : null == (a = s.options)
+                                    : null == (o = s.options)
                                       ? void 0
-                                      : a.find((e) => {
+                                      : o.find((e) => {
                                             if (e.type === h.jw.ATTACHMENT) return null == b.Z.getUpload(t.id, e.name, l);
                                         })) &&
                             p.Z.setFile({
@@ -373,8 +373,8 @@ class j extends i.Component {
                                 }
                             });
                     },
-                    l = null != r ? r : a,
-                    { files: c } = U(e.clipboardData, o.uploadLongMessages ? l : null);
+                    l = null != r ? r : o,
+                    { files: c } = U(e.clipboardData, a.uploadLongMessages ? l : null);
                 return (
                     M(
                         'onPaste',
@@ -414,20 +414,20 @@ function U(e, t) {
     let n = [],
         r = [],
         i = null,
-        a = null;
+        o = null;
     for (let t of e.items)
         if ('file' === t.kind) {
             let e = t.getAsFile();
             if (null == e) continue;
             null != e.path && e.path.length > 0 ? n.push(e) : r.push(e);
-        } else 'string' === t.kind && ('text/plain' === t.type && null == i ? (i = t) : 'text/html' === t.type && null == a && (a = t));
+        } else 'string' === t.kind && ('text/plain' === t.type && null == i ? (i = t) : 'text/html' === t.type && null == o && (o = t));
     if (n.length > 0) return { files: n };
     if (r.length > 0) {
-        if (1 === r.length && 'image/png' === r[0].type && null != a) {
-            var o;
+        if (1 === r.length && 'image/png' === r[0].type && null != o) {
+            var a;
             let t = r[0],
-                n = null != (o = G(e.getData(a.type))) ? o : t.name;
-            return { files: [(0, v.dp)(t, n, t.type)] };
+                n = null != (a = G(e.getData(o.type))) ? a : t.name;
+            return { files: [(0, O.dp)(t, n, t.type)] };
         }
         return { files: r };
     }
@@ -436,7 +436,7 @@ function U(e, t) {
         if (n.length > t) {
             let e = new Blob([n], { type: 'text/plain' });
             return {
-                files: [(0, v.dp)(e, 'message.txt', 'text/plain')],
+                files: [(0, O.dp)(e, 'message.txt', 'text/plain')],
                 convertedStringToFile: !0
             };
         }

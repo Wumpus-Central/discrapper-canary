@@ -1,7 +1,7 @@
 var r = n(98405),
     i = n(154028),
-    a = n(10693),
-    o = n(621523),
+    o = n(10693),
+    a = n(621523),
     s = n(713411),
     l = n(530575),
     c = n(117895).f,
@@ -16,15 +16,15 @@ var r = n(98405),
     E = n(742850),
     b = n(199838),
     y = n(507604),
-    v = n(511696),
-    O = 'DOMException',
+    O = n(511696),
+    v = 'DOMException',
     I = 'DATA_CLONE_ERR',
     S = i('Error'),
     T =
-        i(O) ||
+        i(v) ||
         (function () {
             try {
-                new (i('MessageChannel') || a('worker_threads').MessageChannel)().port1.postMessage(new WeakMap());
+                new (i('MessageChannel') || o('worker_threads').MessageChannel)().port1.postMessage(new WeakMap());
             } catch (e) {
                 if (e.name === I && 25 === e.code) return e.constructor;
             }
@@ -32,8 +32,8 @@ var r = n(98405),
     A = T && T.prototype,
     N = S.prototype,
     C = b.set,
-    R = b.getterFor(O),
-    P = 'stack' in new S(O),
+    R = b.getterFor(v),
+    P = 'stack' in new S(v),
     w = function (e) {
         return f(g, e) && g[e].m ? g[e].c : 0;
     },
@@ -45,7 +45,7 @@ var r = n(98405),
             r = w(n);
         if (
             (C(this, {
-                type: O,
+                type: v,
                 name: n,
                 message: t,
                 code: r
@@ -54,7 +54,7 @@ var r = n(98405),
             P)
         ) {
             var i = new S(t);
-            (i.name = O), c(this, 'stack', l(1, E(i.stack, 1)));
+            (i.name = v), c(this, 'stack', l(1, E(i.stack, 1)));
         }
     },
     L = (D.prototype = s(N)),
@@ -71,21 +71,21 @@ var r = n(98405),
         });
     };
 y && (d(L, 'code', M('code')), d(L, 'message', M('message')), d(L, 'name', M('name'))), c(L, 'constructor', l(1, D));
-var k = o(function () {
+var k = a(function () {
         return !(new T() instanceof S);
     }),
     j =
         k ||
-        o(function () {
+        a(function () {
             return N.toString !== h || '2: 1' !== String(new T(1, 2));
         }),
     U =
         k ||
-        o(function () {
+        a(function () {
             return 25 !== new T(1, 'DataCloneError').code;
         }),
     G = k || 25 !== T[I] || 25 !== A[I],
-    B = v ? j || U || G : k;
+    B = O ? j || U || G : k;
 r(
     {
         global: !0,
@@ -94,9 +94,9 @@ r(
     },
     { DOMException: B ? D : T }
 );
-var V = i(O),
+var V = i(v),
     F = V.prototype;
-for (var Z in (j && (v || T === V) && u(F, 'toString', h),
+for (var Z in (j && (O || T === V) && u(F, 'toString', h),
 U &&
     y &&
     T === V &&

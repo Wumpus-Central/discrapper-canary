@@ -13,19 +13,19 @@ function r(e, t, n) {
 }
 n.d(t, {
     ZP: () => s,
-    k2: () => a
+    k2: () => o
 }),
     n(388685);
 let i = new (n(259443).Yd)('AssetMap');
-async function a(e) {
-    let t = new o(),
+async function o(e) {
+    let t = new a(),
         n = Object.entries(e).map((e) => {
             let [n, r] = e;
             return t.loadRemoteImage(n, r).catch((e) => i.warn('Failed to load canvas asset', e, n, r));
         });
     return await Promise.all(n), t;
 }
-class o {
+class a {
     loadFonts() {
         return Promise.resolve();
     }
@@ -43,4 +43,4 @@ class o {
         r(this, 'assets', {}), r(this, 'fontManager', void 0);
     }
 }
-let s = o;
+let s = a;

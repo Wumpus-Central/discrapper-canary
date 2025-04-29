@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(230711),
-    o = n(549879),
+    o = n(230711),
+    a = n(549879),
     s = n(906732),
     l = n(981631),
     c = n(526761),
@@ -14,7 +14,7 @@ function d(e) {
         id: 'video-settings',
         label: u.intl.string(u.t.LKzQSE),
         action: () => {
-            a.Z.open(l.oAB.VOICE, c.gP, { analyticsLocations: t }), (0, o.i)(e);
+            o.Z.open(l.oAB.VOICE, c.gP, { analyticsLocations: t }), (0, a.i)(e);
         },
         icon: i.ewm
     });

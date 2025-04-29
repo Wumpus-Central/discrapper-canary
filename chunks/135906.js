@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(871465);
 let i = {
     [r.YC.CLASSIC]: {
@@ -55,6 +55,6 @@ let i = {
         user_leave: 'winter_user_leave'
     }
 };
-function a(e) {
+function o(e) {
     return i[e];
 }

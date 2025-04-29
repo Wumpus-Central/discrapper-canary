@@ -2,8 +2,8 @@ n.d(t, { Z: () => y });
 var r = n(200651);
 n(192379);
 var i = n(780384),
-    a = n(481060),
-    o = n(410030),
+    o = n(481060),
+    a = n(410030),
     s = n(74538),
     l = n(104494),
     c = n(639119),
@@ -46,8 +46,8 @@ function m(e, t) {
         r,
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -56,18 +56,18 @@ function g(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let E = (e) => {
-        let { showTrialCTA: t, subscriptionTier: n, trialDurationCopy: r, isPersistentCTA: i, shouldShowReferralTrialCopy: a, subscriptionTrial: o } = e;
-        return t && a
+        let { showTrialCTA: t, subscriptionTier: n, trialDurationCopy: r, isPersistentCTA: i, shouldShowReferralTrialCopy: o, subscriptionTrial: a } = e;
+        return t && o
             ? f.intl.string(f.t.bXTClZ)
             : t && (n === d.Si.TIER_2 || i)
               ? (0, s.Rt)({
-                    intervalType: null == o ? void 0 : o.interval,
-                    intervalCount: null == o ? void 0 : o.interval_count
+                    intervalType: null == a ? void 0 : a.interval,
+                    intervalCount: null == a ? void 0 : a.interval_count
                 })
               : t
                 ? f.intl.formatToPlainString(f.t.nTmm2t, { freeTrialText: r })
@@ -75,10 +75,10 @@ let E = (e) => {
     },
     b = (e, t, n, r) => (t || n ? f.intl.string(f.t.fkPGam) : e === d.Si.TIER_2 ? f.intl.formatToPlainString(f.t.bkQ4bG, { percent: r }) : void 0),
     y = (e) => {
-        var { forceInverted: t, subscriptionTier: n, hasActivePromotion: p = !1, isPersistentCTA: g = !1, useShorterCTA: y = !1, showGradient: v, confirmationFooter: O, paymentModalBanner: I } = e,
+        var { forceInverted: t, subscriptionTier: n, hasActivePromotion: p = !1, isPersistentCTA: g = !1, useShorterCTA: y = !1, showGradient: O, confirmationFooter: v, paymentModalBanner: I } = e,
             S = m(e, ['forceInverted', 'subscriptionTier', 'hasActivePromotion', 'isPersistentCTA', 'useShorterCTA', 'showGradient', 'confirmationFooter', 'paymentModalBanner']);
-        let T = (0, o.ZP)(),
-            A = !v && ((0, i.wj)(T) || t),
+        let T = (0, a.ZP)(),
+            A = !O && ((0, i.wj)(T) || t),
             N = (0, c.N)(),
             C = null == N ? void 0 : N.subscription_trial,
             R = (0, s.a5)({
@@ -104,14 +104,14 @@ let E = (e) => {
             u.Z,
             h(
                 {
-                    color: A ? a.Ttl.BRAND_INVERTED : a.Ttl.BRAND,
+                    color: A ? o.Ttl.BRAND_INVERTED : o.Ttl.BRAND,
                     buttonShineClassName: 'buttonShineClassName' in S ? S.buttonShineClassName : A ? _.brandShine : void 0,
                     buttonText: L,
                     buttonTextClassName: w ? _.freeTrialText : void 0,
                     onlyShineOnHover: !0,
                     subscriptionTier: n,
-                    showGradient: v,
-                    confirmationFooter: O,
+                    showGradient: O,
+                    confirmationFooter: v,
                     paymentModalBanner: I
                 },
                 S

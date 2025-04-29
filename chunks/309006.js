@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(392711),
-    o = n(772848),
+    o = n(392711),
+    a = n(772848),
     s = n(442837),
     l = n(607070),
     c = n(963838),
@@ -34,9 +34,9 @@ let m = i.forwardRef(function (e, t) {
         g = (0, s.e7)([l.Z], () => l.Z.useReducedMotion),
         [E, b] = i.useState([]),
         y = E.length < p,
-        v = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
-        O = i.useCallback(() => {
-            if (!g && y && v && null != m) {
+        O = (null == n ? void 0 : n.emojiId) != null || (null == n ? void 0 : n.emojiName) != null,
+        v = i.useCallback(() => {
+            if (!g && y && O && null != m) {
                 var e;
                 let t = (0, c._r)({
                         id: n.emojiId,
@@ -45,9 +45,9 @@ let m = i.forwardRef(function (e, t) {
                     }),
                     r = null != n.emojiId,
                     i = f.q.PREMIUM,
-                    s = (0, a.random)(c.Jw[i].length, !1),
+                    s = (0, o.random)(c.Jw[i].length, !1),
                     l = {
-                        id: (0, o.Z)(),
+                        id: (0, a.Z)(),
                         animationId: s,
                         animationType: i,
                         shouldResize: r,
@@ -56,8 +56,8 @@ let m = i.forwardRef(function (e, t) {
                     };
                 b((e) => [...e, l]);
             }
-        }, [g, y, v, m, n]);
-    i.useImperativeHandle(t, () => ({ addAnimation: O }));
+        }, [g, y, O, m, n]);
+    i.useImperativeHandle(t, () => ({ addAnimation: v }));
     let I = i.useCallback((e) => {
         b((t) => {
             let n = [...t],
@@ -65,7 +65,7 @@ let m = i.forwardRef(function (e, t) {
             return n.splice(r, 1), n;
         });
     }, []);
-    return g || !v
+    return g || !O
         ? null
         : (0, r.jsx)('div', {
               className: _.effects,

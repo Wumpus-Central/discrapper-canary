@@ -1,8 +1,8 @@
 n.d(t, { Z: () => c });
 var r = n(192379),
     i = n(442837),
-    a = n(544891),
-    o = n(570140),
+    o = n(544891),
+    a = n(570140),
     s = n(722086),
     l = n(981631);
 function c(e) {
@@ -20,23 +20,23 @@ function c(e) {
     );
 }
 async function u(e) {
-    o.Z.dispatch({
+    a.Z.dispatch({
         type: 'USER_NOTE_LOAD_START',
         userId: e
     });
     try {
-        let { body: t } = await a.tn.get({
+        let { body: t } = await o.tn.get({
             url: l.ANM.NOTE(e),
             oldFormErrors: !0,
             rejectWithError: !0
         });
-        o.Z.dispatch({
+        a.Z.dispatch({
             type: 'USER_NOTE_LOADED',
             userId: e,
             note: t
         });
     } catch (t) {
-        o.Z.dispatch({
+        a.Z.dispatch({
             type: 'USER_NOTE_LOADED',
             userId: e
         });

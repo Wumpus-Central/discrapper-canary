@@ -1,8 +1,8 @@
 n.d(t, { Z: () => F }), n(388685), n(539854);
 var r,
     i = n(392711),
-    a = n.n(i),
-    o = n(314794),
+    o = n.n(i),
+    a = n(314794),
     s = n(442837),
     l = n(570140),
     c = n(959546),
@@ -29,13 +29,13 @@ let m = {},
     E = {},
     b = {},
     y = !1,
-    v = !1,
     O = !1,
+    v = !1,
     I = new Set(),
     S = new Set(),
     T = {};
 function A() {
-    (m = {}), (E = {}), (b = {}), (y = !1), (v = !1), (O = !1), (I = new Set()), (S = new Set());
+    (m = {}), (E = {}), (b = {}), (y = !1), (O = !1), (v = !1), (I = new Set()), (S = new Set());
 }
 function N(e) {
     (m[e.id] = c.Z.createFromServer(e)), null == E[e.sku_id] && (E[e.sku_id] = new Set()), null == b[e.application_id] && (b[e.application_id] = new Set()), null != e.subscription_id && (null == T[e.subscription_id] && (T[e.subscription_id] = new Set()), T[e.subscription_id].add(e.id)), b[e.application_id].add(e.id), E[e.sku_id].add(e.id);
@@ -71,10 +71,10 @@ function x() {
 }
 function M(e) {
     let { entitlements: t, excludeEnded: n } = e;
-    for (let e of ((v = !0), (y = !1), (O = !n), t)) N(e);
+    for (let e of ((O = !0), (y = !1), (v = !n), t)) N(e);
 }
 function k() {
-    (v = !1), (y = !1), (O = !1);
+    (O = !1), (y = !1), (v = !1);
 }
 function j(e) {
     let { entitlements: t } = e;
@@ -98,7 +98,7 @@ class V extends (r = s.yh) {
         return m[e];
     }
     getGiftable() {
-        return a().values(g);
+        return o().values(g);
     }
     getForApplication(e) {
         let t = b[e];
@@ -118,10 +118,10 @@ class V extends (r = s.yh) {
         return y;
     }
     get fetchedAllEntitlements() {
-        return v;
+        return O;
     }
     get fetchedEndedEntitlements() {
-        return O;
+        return v;
     }
     get applicationIdsFetching() {
         return I;
@@ -151,8 +151,8 @@ class V extends (r = s.yh) {
                 if (null != n && n.isValid(e, f.Z, r)) return !0;
             }
         if (S.has(n)) return !1;
-        let a = null != r ? u.Z.getLibraryApplication(n, r) : u.Z.getActiveLibraryApplication(n);
-        return !!(null != a && a.sku.id === t && (0, d.Je)(a)) || null;
+        let o = null != r ? u.Z.getLibraryApplication(n, r) : u.Z.getActiveLibraryApplication(n);
+        return !!(null != o && o.sku.id === t && (0, d.Je)(o)) || null;
     }
     hasFetchedForApplicationIds(e) {
         return e.every((e) => S.has(e));
@@ -176,9 +176,9 @@ class V extends (r = s.yh) {
         return (
             null == (e = this.getForApplication(p.CL)) ||
                 e.forEach((e) => {
-                    let a = null != e.endsAt && e.endsAt < i,
-                        o = e.sourceType === _.kNB.REVERSE_TRIAL && n;
-                    e.type !== _.qc2.FRACTIONAL_REDEMPTION || (a && !t) || o || r.push(e);
+                    let o = null != e.endsAt && e.endsAt < i,
+                        a = e.sourceType === _.kNB.REVERSE_TRIAL && n;
+                    e.type !== _.qc2.FRACTIONAL_REDEMPTION || (o && !t) || a || r.push(e);
                 }),
             r
         );
@@ -198,7 +198,7 @@ class V extends (r = s.yh) {
         return (
             null == (e = this.getForApplication(p.CL)) ||
                 e.forEach((e) => {
-                    o.k.ACTIVE_FRACTIONAL_PREMIUM_SKUS.has(e.skuId) && !e.consumed && t.push(e);
+                    a.k.ACTIVE_FRACTIONAL_PREMIUM_SKUS.has(e.skuId) && !e.consumed && t.push(e);
                 }),
             t
         );

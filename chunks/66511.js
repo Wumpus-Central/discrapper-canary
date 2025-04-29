@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(200651);
 n(192379);
 var i = n(952265),
-    a = n(626135),
-    o = n(863249),
+    o = n(626135),
+    a = n(863249),
     s = n(266395),
     l = n(592286),
     c = n(981631);
@@ -60,20 +60,20 @@ function _(e, t) {
     );
 }
 let p = () => {
-        a.default.track(c.rMx.MODAL_DISMISSED, { type: l.N4 });
+        o.default.track(c.rMx.MODAL_DISMISSED, { type: l.N4 });
     },
     h = (e) => {
-        a.default.track(c.rMx.OPEN_MODAL, {
+        o.default.track(c.rMx.OPEN_MODAL, {
             type: l.N4,
             guild_id: e
         });
     },
     m = {
-        openMemberVerificationModal(e, t, a) {
+        openMemberVerificationModal(e, t, o) {
             if (__OVERLAY__) return;
             h(e);
             let c = async (t) => {
-                await o.ZP.submitVerificationForm(e, t);
+                await a.ZP.submitVerificationForm(e, t);
             };
             (0, i.ZD)(
                 async () => {
@@ -83,7 +83,7 @@ let p = () => {
                             t,
                             _(d({}, n), {
                                 guildId: e,
-                                inviteKey: a,
+                                inviteKey: o,
                                 onComplete: c,
                                 onClose: function () {
                                     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];

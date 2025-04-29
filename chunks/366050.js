@@ -1,7 +1,7 @@
 let r, i;
 n.d(t, { Z: () => C }), n(388685);
-var a,
-    o = n(442837),
+var o,
+    a = n(442837),
     s = n(570140),
     l = n(981631),
     c = n(354459);
@@ -66,16 +66,16 @@ let p = new Map(),
     };
 function E(e) {
     var t, n;
-    let { id: a, component: o, props: s } = e;
-    if (null != p.get(a)) return;
+    let { id: o, component: a, props: s } = e;
+    if (null != p.get(o)) return;
     let c = {
-        id: a,
-        component: o,
+        id: o,
+        component: a,
         position: null != (t = s.position) ? t : m,
         props: s,
         docked: null != (n = s.docked) && n
     };
-    p.set(a, c), o === l.NYg.VIDEO ? null == r && (r = a) : o === l.NYg.EMBED_IFRAME && null == i && (i = a);
+    p.set(o, c), a === l.NYg.VIDEO ? null == r && (r = o) : a === l.NYg.EMBED_IFRAME && null == i && (i = o);
 }
 function b(e) {
     let { id: t } = e;
@@ -107,11 +107,11 @@ function y(e) {
             (m = n);
     }
 }
-function v(e) {
+function O(e) {
     let { width: t, pipType: n } = e;
     g[n] = t;
 }
-function O(e) {
+function v(e) {
     let { id: t, rect: n } = e;
     h[t] = n;
 }
@@ -141,7 +141,7 @@ function T(e) {
 function A() {
     (r = null), (i = null), (p = new Map());
 }
-class N extends (a = o.ZP.PersistedStore) {
+class N extends (o = a.ZP.PersistedStore) {
     initialize(e) {
         if (null == e) {
             (m = l.VD2.BOTTOM_RIGHT),
@@ -203,10 +203,10 @@ let C = new N(s.Z, {
     PICTURE_IN_PICTURE_OPEN: E,
     PICTURE_IN_PICTURE_CLOSE: b,
     PICTURE_IN_PICTURE_MOVE: y,
-    PICTURE_IN_PICTURE_RESIZE: v,
+    PICTURE_IN_PICTURE_RESIZE: O,
     PICTURE_IN_PICTURE_HIDE: I,
     PICTURE_IN_PICTURE_SHOW: S,
-    PICTURE_IN_PICTURE_UPDATE_RECT: O,
+    PICTURE_IN_PICTURE_UPDATE_RECT: v,
     PICTURE_IN_PICTURE_UPDATE_SELECTED_WINDOW: T,
     LOGOUT: A
 });

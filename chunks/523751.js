@@ -1,8 +1,8 @@
 n.d(t, { Z: () => k });
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(692547),
     c = n(780384),
@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(665786),
     b = n(697725),
     y = n(267642),
-    v = n(284363),
-    O = n(854218),
+    O = n(284363),
+    v = n(854218),
     I = n(682947),
     S = n(981631),
     T = n(388032),
@@ -81,8 +81,8 @@ function w(e, t) {
         r,
         i = D(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -91,40 +91,40 @@ function D(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let L = {
-    [v.Q.STAFF]: {
+    [O.Q.STAFF]: {
         IconComponent: u.Ymb,
         foregroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
         foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
         backgroundDarkColor: l.Z.unsafe_rawColors.GREEN_360.css,
         backgroundLightColor: l.Z.unsafe_rawColors.GREEN_360.css
     },
-    [v.Q.VERIFIED_AND_PARTNERED]: {
+    [O.Q.VERIFIED_AND_PARTNERED]: {
         IconComponent: u.kmB,
         foregroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
         foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
         backgroundDarkColor: l.Z.unsafe_rawColors.GREEN_360.css,
         backgroundLightColor: l.Z.unsafe_rawColors.GREEN_360.css
     },
-    [v.Q.VERIFIED]: {
+    [O.Q.VERIFIED]: {
         IconComponent: u.kmB,
         foregroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
         foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
         backgroundDarkColor: l.Z.unsafe_rawColors.GREEN_360.css,
         backgroundLightColor: l.Z.unsafe_rawColors.GREEN_360.css
     },
-    [v.Q.PARTNERED]: {
+    [O.Q.PARTNERED]: {
         IconComponent: (0, u.GSL)(E.Z),
         foregroundDarkColor: l.Z.unsafe_rawColors.WHITE_400.css,
         foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
         backgroundDarkColor: l.Z.unsafe_rawColors.BRAND_500.css,
         backgroundLightColor: l.Z.unsafe_rawColors.BRAND_500.css
     },
-    [v.Q.COMMUNITY]: {
+    [O.Q.COMMUNITY]: {
         IconComponent: u.tvw,
         foregroundDarkColor: l.Z.unsafe_rawColors.PRIMARY_500.css,
         foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
@@ -134,7 +134,7 @@ let L = {
         premiumForegroundColor: l.Z.unsafe_rawColors.WHITE_400.css,
         sizeAdjustment: 2
     },
-    [v.Q.DISCOVERABLE]: {
+    [O.Q.DISCOVERABLE]: {
         IconComponent: u.enf,
         foregroundDarkColor: l.Z.unsafe_rawColors.PRIMARY_500.css,
         foregroundLightColor: l.Z.unsafe_rawColors.WHITE_400.css,
@@ -144,7 +144,7 @@ let L = {
         premiumForegroundColor: l.Z.unsafe_rawColors.WHITE_400.css,
         sizeAdjustment: 2
     },
-    [v.Q.NONE]: {}
+    [O.Q.NONE]: {}
 };
 function x(e) {
     let { guildTraits: t } = e;
@@ -152,7 +152,7 @@ function x(e) {
         className: A.tooltipPremiumFooterContainer,
         children: [
             (0, r.jsxs)('div', {
-                className: o()(A.tooltipPremiumFooterSegment, A.tooltipPremiumFooterTierSegment),
+                className: a()(A.tooltipPremiumFooterSegment, A.tooltipPremiumFooterTierSegment),
                 children: [
                     (0, r.jsx)(b.Z, {
                         width: 18,
@@ -179,7 +179,7 @@ function x(e) {
 }
 function M(e) {
     let { badgeType: t, guildTraits: n } = e,
-        { tooltipTitle: i, tooltipSubtitle: a, tooltipDescription: o } = (0, I.G)(t, n.visibility);
+        { tooltipTitle: i, tooltipSubtitle: o, tooltipDescription: a } = (0, I.G)(t, n.visibility);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
@@ -190,18 +190,18 @@ function M(e) {
                         variant: 'text-xs/bold',
                         children: i
                     }),
-                    null != a
-                        ? (0, r.jsx)(u.Text, {
-                              color: 'text-muted',
-                              variant: 'text-xs/medium',
-                              children: a
-                          })
-                        : null,
                     null != o
                         ? (0, r.jsx)(u.Text, {
                               color: 'text-muted',
                               variant: 'text-xs/medium',
                               children: o
+                          })
+                        : null,
+                    null != a
+                        ? (0, r.jsx)(u.Text, {
+                              color: 'text-muted',
+                              variant: 'text-xs/medium',
+                              children: a
                           })
                         : null
                 ]
@@ -212,18 +212,18 @@ function M(e) {
 }
 function k(e) {
     let t, n;
-    var a,
-        { guild: o, tooltipColor: l = u.ua7.Colors.BRAND, tooltipPosition: d, className: E, flowerStarClassName: b, iconClassName: y, badgeStrokeColor: I, badgeColor: T, disableBoostClick: N, 'aria-label': R = !1 } = e,
+    var o,
+        { guild: a, tooltipColor: l = u.ua7.Colors.BRAND, tooltipPosition: d, className: E, flowerStarClassName: b, iconClassName: y, badgeStrokeColor: I, badgeColor: T, disableBoostClick: N, 'aria-label': R = !1 } = e,
         D = w(e, ['guild', 'tooltipColor', 'tooltipPosition', 'className', 'flowerStarClassName', 'iconClassName', 'badgeStrokeColor', 'badgeColor', 'disableBoostClick', 'aria-label']);
     let x = (0, f.Q3)('GuildBadgeV2'),
-        k = null != (a = D.size) ? a : x ? 18 : 16,
+        k = null != (o = D.size) ? o : x ? 18 : 16,
         j = (0, s.e7)([g.default, m.ZP], () => {
             let e = g.default.getCurrentUser();
-            return m.ZP.isMember(null == o ? void 0 : o.id, null == e ? void 0 : e.id);
+            return m.ZP.isMember(null == a ? void 0 : a.id, null == e ? void 0 : e.id);
         }),
         U = (0, s.e7)([h.Z], () => h.Z.theme),
-        G = (0, O.XX)(o),
-        B = (0, v.i)(G),
+        G = (0, v.XX)(a),
+        B = (0, O.i)(G),
         V = i.useMemo(() => G.premium && j && !N, [N, G.premium, j]),
         F = i.useCallback(
             (e) => {
@@ -231,16 +231,16 @@ function k(e) {
                     (e.stopPropagation(),
                     e.preventDefault(),
                     (0, _.f)({
-                        guildId: o.id,
+                        guildId: a.id,
                         location: {
                             section: S.jXE.GUILD_HEADER,
                             object: S.qAy.BOOST_GEM_ICON
                         }
                     }));
             },
-            [V, o.id]
+            [V, a.id]
         );
-    if (B === v.Q.NONE) return null;
+    if (B === O.Q.NONE) return null;
     let { IconComponent: Z, backgroundDarkColor: H, backgroundLightColor: Y, foregroundDarkColor: W, foregroundLightColor: K, premiumBackgroundColor: z, premiumForegroundColor: q, sizeAdjustment: Q } = L[B];
     if (null == Z) return null;
     G.premium && ((t = q), (n = z));

@@ -1,4 +1,4 @@
-n.d(t, { n: () => o }), n(388685), n(642613), n(539854);
+n.d(t, { n: () => a }), n(388685), n(642613), n(539854);
 var r = n(372817);
 function i(e, t, n) {
     return (
@@ -13,7 +13,7 @@ function i(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     if (null == e)
         return {
             x: 0,
@@ -31,7 +31,7 @@ function a(e) {
         y: n
     };
 }
-class o {
+class a {
     disconnect() {
         window.removeEventListener('keydown', this.handleDraggedElementKeyDown, { capture: !0 });
     }
@@ -45,7 +45,7 @@ class o {
             }))
                 ? void 0
                 : t[0];
-        null != n && (this.actions.hover([n], { clientOffset: a(e) }), (this.currentHoveredNode = e), this.previewer.render(this.monitor), this.announcer.announceHover(e, n), null == e || e.focus());
+        null != n && (this.actions.hover([n], { clientOffset: o(e) }), (this.currentHoveredNode = e), this.previewer.render(this.monitor), this.announcer.announceHover(e, n), null == e || e.focus());
     }
     getNextDropTarget() {
         var e;
@@ -76,7 +76,7 @@ class o {
                   return this.manager.getMonitor().canDropOnTarget(n) && e.push(r), e;
               }, []);
     }
-    constructor(e, t, n, a, o) {
+    constructor(e, t, n, o, a) {
         i(this, 'targetNodes', void 0),
             i(this, 'manager', void 0),
             i(this, 'previewer', void 0),
@@ -88,8 +88,8 @@ class o {
             i(this, 'handleDraggedElementKeyDown', void 0),
             (this.targetNodes = t),
             (this.manager = n),
-            (this.previewer = a),
-            (this.announcer = o),
+            (this.previewer = o),
+            (this.announcer = a),
             (this.handleDraggedElementKeyDown = async (e) => {
                 switch (e.key) {
                     case 'ArrowUp':

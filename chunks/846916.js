@@ -15,11 +15,11 @@ e.exports = function (e) {
             begin: /(\b0x[\d_]*(\.[\d_]*)?|0x\.\d[\d_]*)p[-+]?\d+|\b0[box][a-fA-F0-9][a-fA-F0-9_]*|(\b\d[\d_]*(\.[\d_]*)?|\.\d[\d_]*)([eEfF][-+]?\d+)?/,
             relevance: 0
         },
-        a = {
+        o = {
             className: 'string',
             begin: /'(.|\\[xXuU][a-zA-Z0-9]+)'/
         },
-        o = {
+        a = {
             className: 'subst',
             begin: /\$\(/,
             end: /\)/,
@@ -31,7 +31,7 @@ e.exports = function (e) {
         },
         l = {
             className: 'string',
-            contains: [e.BACKSLASH_ESCAPE, o, s],
+            contains: [e.BACKSLASH_ESCAPE, a, s],
             variants: [
                 {
                     begin: /\w*"""/,
@@ -46,7 +46,7 @@ e.exports = function (e) {
         },
         c = {
             className: 'string',
-            contains: [e.BACKSLASH_ESCAPE, o, s],
+            contains: [e.BACKSLASH_ESCAPE, a, s],
             begin: '`',
             end: '`'
         },
@@ -72,7 +72,7 @@ e.exports = function (e) {
         (r.name = 'Julia'),
         (r.contains = [
             i,
-            a,
+            o,
             l,
             c,
             u,
@@ -84,7 +84,7 @@ e.exports = function (e) {
             },
             { begin: /<:/ }
         ]),
-        (o.contains = r.contains),
+        (a.contains = r.contains),
         r
     );
 };

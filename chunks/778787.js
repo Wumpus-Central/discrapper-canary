@@ -1,13 +1,13 @@
 n.d(t, {
     Z: () => y,
-    q: () => v
+    q: () => O
 }),
     n(314940),
     n(539854);
 var r = n(278074),
     i = n(979554),
-    a = n(922347),
-    o = n(587177),
+    o = n(922347),
+    a = n(587177),
     s = n(311850),
     l = n(803358),
     c = n(135483),
@@ -71,8 +71,8 @@ function m(e, t) {
         r,
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -81,13 +81,13 @@ function g(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let E = (e) =>
         (0, r.EQ)(e)
-            .with({ type: i.Z.AVATAR_DECORATION }, (e) => a.Z.fromServer(e))
+            .with({ type: i.Z.AVATAR_DECORATION }, (e) => o.Z.fromServer(e))
             .with({ type: i.Z.PROFILE_EFFECT }, (e) => u.Z.fromServer(e))
             .with({ type: i.Z.NAMEPLATE }, (e) => c.Z.fromServer(e))
             .otherwise(() => null),
@@ -100,7 +100,7 @@ let E = (e) =>
             : [];
 class y extends l.Z {
     static fromServer(e) {
-        var { type: t, premium_type: n, category_sku_id: r, prices: i, bundled_products: a, variants: l } = e,
+        var { type: t, premium_type: n, category_sku_id: r, prices: i, bundled_products: o, variants: l } = e,
             c = m(e, ['type', 'premium_type', 'category_sku_id', 'prices', 'bundled_products', 'variants']);
         return new y(
             h(_({}, super.fromServer(c)), {
@@ -109,8 +109,8 @@ class y extends l.Z {
                 categorySkuId: r,
                 prices: (0, s.l)(i),
                 items: b(c.items),
-                bundledProducts: null == a ? void 0 : a.map(o.Z.fromServer),
-                variants: null == l ? void 0 : l.map(v.fromServer),
+                bundledProducts: null == o ? void 0 : o.map(a.Z.fromServer),
+                variants: null == l ? void 0 : l.map(O.fromServer),
                 googleSkuIds: c.google_sku_ids
             })
         );
@@ -119,12 +119,12 @@ class y extends l.Z {
         super(e), f(this, 'prices', void 0), f(this, 'type', void 0), f(this, 'premiumType', void 0), f(this, 'items', void 0), f(this, 'categorySkuId', void 0), f(this, 'bundledProducts', void 0), f(this, 'variants', void 0), f(this, 'variantGroupStoreListingId', void 0), f(this, 'googleSkuIds', void 0), (this.summary = e.summary), (this.type = e.type), (this.premiumType = e.premiumType), (this.items = e.items), (this.categorySkuId = e.categorySkuId), (this.prices = e.prices), (this.bundledProducts = e.bundledProducts), (this.googleSkuIds = e.googleSkuIds), (this.variants = e.variants);
     }
 }
-class v extends y {
+class O extends y {
     static fromServer(e) {
         var { base_variant_name: t, base_variant_sku_id: n, variant_label: r, variant_value: i } = e,
-            a = m(e, ['base_variant_name', 'base_variant_sku_id', 'variant_label', 'variant_value']);
-        return new v(
-            h(_({}, super.fromServer(a)), {
+            o = m(e, ['base_variant_name', 'base_variant_sku_id', 'variant_label', 'variant_value']);
+        return new O(
+            h(_({}, super.fromServer(o)), {
                 baseVariantName: t,
                 baseVariantSkuId: n,
                 variantLabel: r,

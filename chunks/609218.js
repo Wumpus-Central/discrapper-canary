@@ -5,8 +5,8 @@ n.d(t, {
     n(953529);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(355467),
@@ -21,13 +21,13 @@ var r = n(200651),
     E = n(302945),
     b = n(474936),
     y = n(981631),
-    v = n(388032),
-    O = n(229191),
+    O = n(388032),
+    v = n(229191),
     I = (function (e) {
         return (e[(e.NONE = 0)] = 'NONE'), (e[(e.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'), (e[(e.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER'), e;
     })({});
 function S(e) {
-    let { containerContext: t, image: n, title: a, description: I, enableSocialProof: S, analyticsLocationSection: T, upsellViewedTrackingData: A, onClose: N, onDisplay: C, onLearnMore: R } = e,
+    let { containerContext: t, image: n, title: o, description: I, enableSocialProof: S, analyticsLocationSection: T, upsellViewedTrackingData: A, onClose: N, onDisplay: C, onLearnMore: R } = e,
         P = (0, s.e7)([h.Z], () => h.Z.affinities),
         w = (0, s.e7)([h.Z], () => h.Z.hasFetched);
     i.useEffect(() => {
@@ -37,7 +37,7 @@ function S(e) {
             _.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, A), null == C || C();
         }, [C, A]);
     let D = P.length > 1 && S,
-        L = () => (2 === t ? O.hasTabParentContainer : 1 === t ? O.hasParentContainer : O.noParentContainer),
+        L = () => (2 === t ? v.hasTabParentContainer : 1 === t ? v.hasParentContainer : v.noParentContainer),
         x = () => {
             _.default.track(y.rMx.PREMIUM_PROMOTION_OPENED, {
                 location_section: T,
@@ -52,56 +52,56 @@ function S(e) {
         M = (0, m.N)(),
         k = i.useCallback(() => {
             var e;
-            return null != (e = (0, p.fr)(M)) ? e : v.intl.string(v.t.pj0XBA);
+            return null != (e = (0, p.fr)(M)) ? e : O.intl.string(O.t.pj0XBA);
         }, [M]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.YMn, {
                 backdropStyle: l.fCB.DARK,
                 onClose: N,
-                'aria-label': v.intl.string(v.t.cpT0Cg),
+                'aria-label': O.intl.string(O.t.cpT0Cg),
                 isVisible: !0
             }),
             (0, r.jsxs)('div', {
-                className: o()(O.container, L()),
+                className: a()(v.container, L()),
                 children: [
                     (0, r.jsx)(l.olH, {
                         onClick: N,
-                        className: O.closeButton
+                        className: v.closeButton
                     }),
                     (0, r.jsxs)('div', {
-                        className: O.contentContainer,
+                        className: v.contentContainer,
                         children: [
                             (0, r.jsx)('img', {
-                                className: O.image,
+                                className: v.image,
                                 width: n.width,
                                 height: n.height,
                                 src: n.url,
                                 alt: 'Nitro Perk'
                             }),
                             (0, r.jsx)(l.X6q, {
-                                className: o()(O.title, { [O.titleNoSocialProof]: !D }),
+                                className: a()(v.title, { [v.titleNoSocialProof]: !D }),
                                 variant: 'heading-xl/bold',
-                                children: a
+                                children: o
                             }),
                             D && (0, r.jsx)(E.Z, { affinities: P }),
                             (0, r.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
-                                className: O.body,
+                                className: v.body,
                                 children: I
                             })
                         ]
                     }),
                     (0, r.jsxs)('div', {
-                        className: O.ctaContainer,
+                        className: v.ctaContainer,
                         children: [
                             (0, r.jsx)(l.zxk, {
-                                className: O.secondaryCTA,
+                                className: v.secondaryCTA,
                                 size: l.zxk.Sizes.SMALL,
                                 color: l.zxk.Colors.CUSTOM,
                                 look: l.zxk.Looks.LINK,
                                 onClick: x,
-                                children: v.intl.string(v.t.ZnqyZ2)
+                                children: O.intl.string(O.t.ZnqyZ2)
                             }),
                             (0, r.jsx)(g.Z, {
                                 showGradient: !0,

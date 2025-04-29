@@ -2,7 +2,7 @@ n.d(t, { Z: () => c });
 var r = n(200651);
 n(192379);
 var i = n(952265);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function a(e, t, n) {
         e
     );
 }
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,7 +26,7 @@ function o(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -57,6 +57,6 @@ function l(e, t) {
 function c(e) {
     (0, i.ZD)(async () => {
         let { default: t } = await n.e('60082').then(n.bind(n, 874406));
-        return (n) => (0, r.jsx)(t, l(o({}, n), { incomingRequestCount: e }));
+        return (n) => (0, r.jsx)(t, l(a({}, n), { incomingRequestCount: e }));
     });
 }

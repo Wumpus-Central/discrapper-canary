@@ -5,8 +5,8 @@ n.d(t, {
     n(415506);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(873546),
     l = n(481060),
     c = n(597952);
@@ -21,23 +21,23 @@ function d() {
     return e;
 }
 function f(e) {
-    let { rootClassName: t, lang: n, theme: a, density: d, focused: f, fontScale: _, fontScaleClass: p, mouseMode: h, keyboardModeEnabled: m, saturation: g, desaturateUserColors: E, useForcedColors: b, systemForcedColors: y, useReducedMotion: v, alwaysShowLinkDecorations: O, hardwareAccelerationEnabled: I, children: S } = e,
+    let { rootClassName: t, lang: n, theme: o, density: d, focused: f, fontScale: _, fontScaleClass: p, mouseMode: h, keyboardModeEnabled: m, saturation: g, desaturateUserColors: E, useForcedColors: b, systemForcedColors: y, useReducedMotion: O, alwaysShowLinkDecorations: v, hardwareAccelerationEnabled: I, children: S } = e,
         T = window.CSS.supports('selector(::-webkit-scrollbar)'),
         A = 'font-size: '.concat(_, '%; --saturation-factor: ').concat(g, ';'),
-        N = o()(
+        N = a()(
             (0, c.Z)(),
-            (0, l.QeD)(a),
+            (0, l.QeD)(o),
             'density-'.concat(d),
             p,
             {
                 'low-saturation': g <= l.AEw,
                 'keyboard-mode': m,
-                'decorate-links': O,
+                'decorate-links': v,
                 'no-webkit-scrollbar': !T,
                 'has-webkit-scrollbar': T,
                 'mouse-mode': h,
-                'reduce-motion': v,
-                'full-motion': !v,
+                'reduce-motion': O,
+                'full-motion': !O,
                 'is-mobile': s.tq,
                 'app-focused': f,
                 'desaturate-user-colors': E,

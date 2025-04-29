@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r,
     i = n(442837),
-    a = n(846519),
-    o = n(570140),
+    o = n(846519),
+    a = n(570140),
     s = n(70956),
     l = n(592125),
     c = n(496675),
@@ -39,12 +39,12 @@ function h(e, t, n) {
         rateLimitPerUser: e.rateLimitPerUser,
         cooldownMs: n,
         cooldownEndTimestamp: r,
-        timer: new a.V7()
+        timer: new o.V7()
     }),
         p[t][e.id].timer.start(
             1000,
             () => {
-                o.Z.dispatch({
+                a.Z.dispatch({
                     type: 'SLOWMODE_SET_COOLDOWN',
                     channelId: e.id,
                     slowmodeType: t,
@@ -74,11 +74,11 @@ function y(e) {
         n = l.Z.getChannel(t.channelId);
     return null != n && h(n, 0, 0);
 }
-function v(e) {
+function O(e) {
     let { channelId: t, slowmodeType: n } = e;
     return g(t, n);
 }
-function O(e) {
+function v(e) {
     let { channelId: t, slowmodeType: n, cooldownMs: r } = e,
         i = l.Z.getChannel(t);
     if (null == i) return !1;
@@ -113,9 +113,9 @@ class T extends (r = i.ZP.Store) {
     }
 }
 d(T, 'displayName', 'SlowmodeStore');
-let A = new T(o.Z, {
-    SLOWMODE_RESET_COOLDOWN: v,
-    SLOWMODE_SET_COOLDOWN: O,
+let A = new T(a.Z, {
+    SLOWMODE_RESET_COOLDOWN: O,
+    SLOWMODE_SET_COOLDOWN: v,
     UPLOAD_START: b,
     UPLOAD_FAIL: y,
     UPLOAD_CANCEL_REQUEST: y,

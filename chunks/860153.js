@@ -10,8 +10,8 @@ var a = n(200651),
     d = n(318713),
     p = n(123145),
     m = n(592125),
-    g = n(73249),
-    _ = n(369171),
+    _ = n(73249),
+    g = n(369171),
     f = n(545093),
     y = n(388032),
     b = n(114047);
@@ -20,7 +20,7 @@ let O = r.memo(function (e) {
         n = (0, c.e7)([m.Z], () => m.Z.getChannel(t.channel_id));
     return null == n
         ? null
-        : (0, a.jsx)(_.ZP, {
+        : (0, a.jsx)(g.ZP, {
               children: (e) =>
                   (0, a.jsxs)(u.Z.Provider, {
                       value: n.guild_id,
@@ -62,12 +62,12 @@ function h(e) {
         className: b.topBar,
         children: [
             null != c && (0, a.jsx)(O, { message: c }),
-            (0, a.jsx)(g.Z, {
+            (0, a.jsx)(_.Z, {
                 item: n,
                 hideMediaOptions: r
             }),
-            (0, a.jsx)(_.ZP, {
-                mode: _.lx.PINNED,
+            (0, a.jsx)(g.ZP, {
+                mode: g.lx.PINNED,
                 children: (e) =>
                     (0, a.jsx)(f.Z, {
                         onClick: o,

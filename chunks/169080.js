@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(200651),
     i = n(192379),
-    a = n(512722),
-    o = n.n(a),
+    o = n(512722),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(297781),
@@ -19,21 +19,21 @@ var r = n(200651),
 let g = [n(191420), n(774621), n(49274), n(904141)];
 function E(e) {
     var t, n;
-    let { generateImageRef: a, leaderboard: g, userId: E, guildId: b } = e,
+    let { generateImageRef: o, leaderboard: g, userId: E, guildId: b } = e,
         y = (0, s.e7)([u.default], () => u.default.getUser(E)),
-        v = g.guild_settings.sort_by_statistic_id,
-        O = i.useMemo(() => g.users.findIndex((e) => e.user_id === E) + 1, [g, E]),
+        O = g.guild_settings.sort_by_statistic_id,
+        v = i.useMemo(() => g.users.findIndex((e) => e.user_id === E) + 1, [g, E]),
         I = i.useMemo(() => g.users.find((e) => e.user_id === E), [g, E]);
-    o()(null != I, 'User row should not be null'), o()(null != y, 'User must exist');
+    a()(null != I, 'User row should not be null'), a()(null != y, 'User must exist');
     let S = d.ZP.getName(b, void 0, y),
-        T = null != (n = null == (t = I.statistics[v]) ? void 0 : t.value) ? n : 0;
+        T = null != (n = null == (t = I.statistics[O]) ? void 0 : t.value) ? n : 0;
     return (0, r.jsxs)('div', {
-        ref: a,
+        ref: o,
         className: m.container,
         children: [
             (0, r.jsx)(p.Z, {
                 user: y,
-                rank: O,
+                rank: v,
                 avatarClassName: m.avatar,
                 rankBadgeVisibility: 'visibleWithoutBorder'
             }),
@@ -59,7 +59,7 @@ function E(e) {
                         variant: 'text-md/semibold',
                         children: h.intl.format(h.t.tluICw, {
                             username: S,
-                            rank: O
+                            rank: v
                         })
                     }),
                     (0, r.jsx)(l.LZC, { size: 2 }),
@@ -68,7 +68,7 @@ function E(e) {
                         children: [
                             (0, r.jsx)(f.DC, {
                                 value: T,
-                                statisticId: v
+                                statisticId: O
                             }),
                             (0, r.jsx)(f.Js, {
                                 intervalStart: g.interval_start,

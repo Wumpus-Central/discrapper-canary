@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(981729),
+    o = n.n(i),
+    a = n(981729),
     s = n(481060),
     l = n(674563),
     c = n(388032),
@@ -90,10 +90,10 @@ let h = (e) => {
             E = c.intl.string(c.t['9RNkeH']);
     }
     let y = i === l.Hb.ORIGINAL_POSTER,
-        v = i === l.Hb.REMIX,
-        O = null;
+        O = i === l.Hb.REMIX,
+        v = null;
     _ &&
-        (O = (0, r.jsx)(o.u, {
+        (v = (0, r.jsx)(a.u, {
             text: b,
             align: 'center',
             position: 'top',
@@ -111,12 +111,12 @@ let h = (e) => {
         (0, r.jsxs)(
             'span',
             p(f({}, e), {
-                className: a()(d, t, m ? u.rem : u.px, {
+                className: o()(d, t, m ? u.rem : u.px, {
                     [u.botTagOP]: y,
-                    [u.botTagRemix]: v
+                    [u.botTagRemix]: O
                 }),
                 children: [
-                    h ? null : O,
+                    h ? null : v,
                     g,
                     (0, r.jsx)('span', {
                         className: u.botText,
@@ -127,13 +127,13 @@ let h = (e) => {
         );
     switch (i) {
         case l.Hb.REMIX:
-            return (0, r.jsx)(o.u, {
+            return (0, r.jsx)(a.u, {
                 text: c.intl.string(c.t.xb0str),
                 position: 'top',
                 children: (e) => I(e)
             });
         case l.Hb.ORIGINAL_POSTER:
-            return (0, r.jsx)(o.u, {
+            return (0, r.jsx)(a.u, {
                 text: c.intl.string(c.t.uN6Emp),
                 position: 'top',
                 children: (e) => I(e)

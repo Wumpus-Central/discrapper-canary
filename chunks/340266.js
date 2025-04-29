@@ -2,8 +2,8 @@ n.d(t, { Z: () => y });
 var r = n(200651);
 n(192379);
 var i = n(392711),
-    a = n(481060),
-    o = n(111028),
+    o = n(481060),
+    a = n(111028),
     s = n(5192),
     l = n(652853),
     c = n(228168),
@@ -208,8 +208,8 @@ function y(e) {
         { themeType: d } = (0, l.z)(),
         _ = d === c.lY.MODAL_V2 ? b : E,
         y = t.length > h,
-        v = t.length - h + 1,
-        O = v >= 10 ? g : m;
+        O = t.length - h + 1,
+        v = O >= 10 ? g : m;
     return (0, r.jsx)('div', {
         className: u.container,
         children: _[(0, i.clamp)(t.length - 1, 0, _.length - 1)].map((e, i) => {
@@ -222,23 +222,23 @@ function y(e) {
                           className: u.circle,
                           style: e,
                           children:
-                              y && i === O
+                              y && i === v
                                   ? (0, r.jsx)('div', {
                                         className: u.overflowCount,
-                                        children: (0, r.jsx)(a.Text, {
+                                        children: (0, r.jsx)(o.Text, {
                                             variant: 'text-xxs/semibold',
                                             lineClamp: 1,
-                                            children: (0, r.jsx)(o.Z, { children: v > 99 ? '>99' : '+'.concat(v) })
+                                            children: (0, r.jsx)(a.Z, { children: O > 99 ? '>99' : '+'.concat(O) })
                                         })
                                     })
-                                  : (0, r.jsx)(a.ua7, {
+                                  : (0, r.jsx)(o.ua7, {
                                         text: s.ZP.getName(n.guild_id, n.id, l),
                                         children: (e) =>
                                             (0, r.jsx)(
                                                 'img',
                                                 p(f({}, e), {
                                                     className: u.avatar,
-                                                    src: l.getAvatarURL(n.guild_id, (0, a.pxk)(a.EFr.SIZE_80)),
+                                                    src: l.getAvatarURL(n.guild_id, (0, o.pxk)(o.EFr.SIZE_80)),
                                                     alt: ''
                                                 })
                                             )

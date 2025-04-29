@@ -16,26 +16,26 @@ var i = n(442837),
     m = n(388032),
     b = n(776571);
 function y(e) {
-    let { guild: t, selectedChannelId: n, selectedVoiceChannelId: y, selectedChannel: _, channelListRow: O } = e,
-        v = t.getModeratorReportChannelId(),
+    let { guild: t, selectedChannelId: n, selectedVoiceChannelId: y, selectedChannel: _, channelListRow: v } = e,
+        O = t.getModeratorReportChannelId(),
         { hasUnread: C, numUnread: j } = (0, i.cj)(
             [d.ZP],
             () =>
-                null == v
+                null == O
                     ? {
                           hasUnread: !1,
                           numUnread: 0
                       }
                     : {
-                          hasUnread: d.ZP.hasUnread(v),
-                          numUnread: d.ZP.getUnreadCount(v)
+                          hasUnread: d.ZP.hasUnread(O),
+                          numUnread: d.ZP.getUnreadCount(O)
                       },
-            [v]
+            [O]
         ),
-        S = (0, i.e7)([c.Z], () => (null == v ? 0 : c.Z.getNewThreadCount(t.id, v)));
+        S = (0, i.e7)([c.Z], () => (null == O ? 0 : c.Z.getNewThreadCount(t.id, O)));
     if (!(0, s._5)(t.id)) return null;
     let E = j > 0 ? m.intl.format(b.default['/wHkWV'], { count: j }) : m.intl.string(b.default['kI3X9/']),
-        { record: x, threadIds: I = [], threadCount: P = 0 } = null != O ? O : {};
+        { record: x, threadIds: P = [], threadCount: I = 0 } = null != v ? v : {};
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(h.m, {
@@ -51,7 +51,7 @@ function y(e) {
                         className: e
                     }),
                 text: E,
-                selected: n === g.oC.REPORT_TO_MOD || n === v,
+                selected: n === g.oC.REPORT_TO_MOD || n === O,
                 showUnread: C,
                 trailing:
                     S > 0
@@ -62,11 +62,11 @@ function y(e) {
                           })
                         : null
             }),
-            null != x && P > 0
+            null != x && I > 0
                 ? (0, r.jsx)(p.Z, {
                       withGuildIcon: !1,
                       channel: x,
-                      sortedThreadIds: I,
+                      sortedThreadIds: P,
                       selectedChannel: _,
                       selectedVoiceChannelId: y
                   })

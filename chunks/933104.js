@@ -21,17 +21,17 @@ var i = n(120356),
     b = n(279604),
     y = n(981631),
     _ = n(921944),
-    O = n(680278),
-    v = n(388032),
+    v = n(680278),
+    O = n(388032),
     C = n(423151),
     j = n(928381);
 function S(e) {
     let { guildId: t, powerup: n, markAsDismissed: i } = e;
-    return (0, r.jsx)(I, {
+    return (0, r.jsx)(P, {
         asset: (0, r.jsx)(m.g, { className: C.image }),
-        header: v.intl.formatToPlainString(O.default['Zg/m9P'], { perkName: n.title }),
-        content: v.intl.formatToPlainString(O.default['1EGXSE'], { perkName: n.title }),
-        buttonCTA: v.intl.string(v.t.RzWDqa),
+        header: O.intl.formatToPlainString(v.default['Zg/m9P'], { perkName: n.title }),
+        content: O.intl.formatToPlainString(v.default['1EGXSE'], { perkName: n.title }),
+        buttonCTA: O.intl.string(O.t.RzWDqa),
         onClick: () => (0, g.Z)(t, c.Z.GUILD_POWERUPS_COACHMARK_LEVEL_UP, n.skuId),
         markAsDismissed: i
     });
@@ -40,15 +40,15 @@ function E(e) {
     let { guildId: t, markAsDismissed: n } = e,
         i = (0, f.Z)(t);
     if (0 !== (0, p.Z)(t).length)
-        return (0, r.jsx)(I, {
+        return (0, r.jsx)(P, {
             asset: (0, r.jsx)('img', {
                 alt: '',
                 src: j.Z,
                 className: l()(C.image, C.newPerksImage)
             }),
-            header: v.intl.string(O.default.QpQBPT),
-            content: i ? v.intl.string(O.default['6hn0xM']) : v.intl.string(O.default.RDuvXl),
-            buttonCTA: v.intl.string(v.t.RzWDqa),
+            header: O.intl.string(v.default.QpQBPT),
+            content: i ? O.intl.string(v.default['6hn0xM']) : O.intl.string(v.default.RDuvXl),
+            buttonCTA: O.intl.string(O.t.RzWDqa),
             onClick: () =>
                 i
                     ? (0, g.Z)(t, c.Z.GUILD_POWERUPS_COACHMARK_NEW_PERKS)
@@ -70,7 +70,7 @@ function x(e) {
     if (0 === n.length) return;
     let a = n.length > 1 ? ''.concat(n[0].title, ' & ').concat(n[1].title) : ''.concat(n[0].title),
         u = 1 === n.length;
-    return (0, r.jsx)(I, {
+    return (0, r.jsx)(P, {
         asset:
             1 === n.length
                 ? (0, r.jsx)(m.m, {
@@ -78,14 +78,14 @@ function x(e) {
                       powerup: n[0]
                   })
                 : (0, r.jsx)(m.g, { className: C.image }),
-        header: v.intl.formatToPlainString(O.default.LmpChI, { guildName: l }),
-        content: n.length > 1 ? v.intl.formatToPlainString(O.default.wcQOqK, { perks: a }) : v.intl.formatToPlainString(O.default.ZF8NT0, { perk: a }),
-        buttonCTA: u ? v.intl.string(O.default.gSxlHR) : v.intl.string(v.t.RzWDqa),
+        header: O.intl.formatToPlainString(v.default.LmpChI, { guildName: l }),
+        content: n.length > 1 ? O.intl.formatToPlainString(v.default.wcQOqK, { perks: a }) : O.intl.formatToPlainString(v.default.ZF8NT0, { perk: a }),
+        buttonCTA: u ? O.intl.string(v.default.gSxlHR) : O.intl.string(O.t.RzWDqa),
         onClick: (e) => (u ? o(e) : (0, g.Z)(t, c.Z.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS)),
         markAsDismissed: i
     });
 }
-function I(e) {
+function P(e) {
     var { asset: t, header: n, content: i, caretPosition: s, markAsDismissed: c } = e,
         u = (function (e, t) {
             if (null == e) return {};

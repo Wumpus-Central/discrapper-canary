@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(100527),
     l = n(906732),
     c = n(699516),
@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(228168),
     b = n(388032),
     y = n(70964),
-    v = n(609440);
-function O(e, t, n) {
+    O = n(609440);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,14 +42,14 @@ function I(e) {
                 })
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
 }
 function S(e) {
-    let { user: t, guildId: n, setPopoutRef: O, channelId: S, messageId: T, roleId: A, openedAt: N, onHide: C, newAnalyticsLocations: R = [] } = e,
-        P = (0, a.e7)([c.Z], () => c.Z.isBlocked(t.id)),
+    let { user: t, guildId: n, setPopoutRef: v, channelId: S, messageId: T, roleId: A, openedAt: N, onHide: C, newAnalyticsLocations: R = [] } = e,
+        P = (0, o.e7)([c.Z], () => c.Z.isBlocked(t.id)),
         { analyticsLocations: w } = (0, l.ZP)([...R, P ? s.Z.BLOCKED_PROFILE_POPOUT : s.Z.IGNORED_PROFILE_POPOUT]),
         D = (0, d.ZB)({
             layout: 'POPOUT',
@@ -62,8 +62,8 @@ function S(e) {
         L = i.useRef(null),
         x = (0, _.ZP)(t.id, n);
     i.useEffect(() => {
-        null == O || O(null == L ? void 0 : L.current);
-    }, [L, O]);
+        null == v || v(null == L ? void 0 : L.current);
+    }, [L, v]);
     let M = P ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE';
     return (0, r.jsx)(l.Gt, {
         value: w,
@@ -73,7 +73,7 @@ function S(e) {
             fetchStartedAt: null == x ? void 0 : x.fetchStartedAt,
             fetchEndedAt: null == x ? void 0 : x.fetchEndedAt,
             isLoaded: null == x ? void 0 : x.isLoaded,
-            children: (0, r.jsx)(o.VqE, {
+            children: (0, r.jsx)(a.VqE, {
                 ref: L,
                 'aria-label': t.username,
                 children: (0, r.jsx)(h.Z, {
@@ -85,7 +85,7 @@ function S(e) {
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
-                                src: v,
+                                src: O,
                                 className: y.preview,
                                 'aria-hidden': !0
                             }),
@@ -99,17 +99,17 @@ function S(e) {
                                                 user: t,
                                                 guildId: n
                                             }),
-                                            (0, r.jsx)(o.X6q, {
+                                            (0, r.jsx)(a.X6q, {
                                                 variant: 'heading-lg/bold',
                                                 children: b.intl.string(b.t.b33pLC)
                                             }),
-                                            (0, r.jsx)(o.Text, {
+                                            (0, r.jsx)(a.Text, {
                                                 variant: 'text-sm/medium',
                                                 children: b.intl.format(P ? b.t['8F+WNz'] : b.t['/cZp5u'], { username: u.ZP.getName(n, S, t) })
                                             })
                                         ]
                                     }),
-                                    (0, r.jsxs)(o.Kqy, {
+                                    (0, r.jsxs)(a.Kqy, {
                                         align: 'center',
                                         children: [
                                             (0, r.jsx)(g.Z, {

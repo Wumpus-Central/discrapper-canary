@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(714338),
     y = n(607070),
     _ = n(460181),
-    O = n(585483),
-    v = n(264549),
+    v = n(585483),
+    O = n(264549),
     C = n(981631),
     j = n(388032),
     S = n(268751);
@@ -40,7 +40,7 @@ let x = {
     LEFT: u().throttle(() => (0, _.GN)('ddr-left'), 100),
     RIGHT: u().throttle(() => (0, _.GN)('ddr-right'), 100)
 };
-function I(e) {
+function P(e) {
     switch (e.keyCode) {
         case C.yXg.ARROW_UP:
             return 'UP';
@@ -54,7 +54,7 @@ function I(e) {
             return null;
     }
 }
-let P = [g.Q2.MESSAGE, g.Q2.NAVIGATION, g.Q2.VOICE_AND_VIDEO, g.Q2.CHAT, g.Q2.MISCELLANEOUS];
+let I = [g.Q2.MESSAGE, g.Q2.NAVIGATION, g.Q2.VOICE_AND_VIDEO, g.Q2.CHAT, g.Q2.MISCELLANEOUS];
 function w(e) {
     let { showBackdrop: t } = e;
     return (0, r.jsx)('div', { className: o()(S.backdrop, { [S.show]: t }) });
@@ -69,7 +69,7 @@ function N() {
     );
     return (0, r.jsx)('div', {
         className: S.keyboardShortcutList,
-        children: P.map((t) => {
+        children: I.map((t) => {
             let n = e[t],
                 i = (0, g.UD)(t),
                 l = (0, g.U6)(t);
@@ -139,10 +139,10 @@ function N() {
 }
 class Z extends i.PureComponent {
     componentDidMount() {
-        (this.lastInputedKeys = []), O.S.subscribe(C.CkL.SCROLL_PAGE_UP, this.scrollPageUp), O.S.subscribe(C.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.addEventListener('keyup', this.handleKeyUp, { capture: !0 });
+        (this.lastInputedKeys = []), v.S.subscribe(C.CkL.SCROLL_PAGE_UP, this.scrollPageUp), v.S.subscribe(C.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.addEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.addEventListener('keyup', this.handleKeyUp, { capture: !0 });
     }
     componentWillUnmount() {
-        O.S.unsubscribe(C.CkL.SCROLL_PAGE_UP, this.scrollPageUp), O.S.unsubscribe(C.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.removeEventListener('keyup', this.handleKeyUp, { capture: !0 });
+        v.S.unsubscribe(C.CkL.SCROLL_PAGE_UP, this.scrollPageUp), v.S.unsubscribe(C.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), window.removeEventListener('keydown', this.handleKeyDown, { capture: !0 }), window.removeEventListener('keyup', this.handleKeyUp, { capture: !0 });
     }
     render() {
         let { UP: e, DOWN: t, LEFT: n, RIGHT: i } = this.state;
@@ -269,12 +269,12 @@ class Z extends i.PureComponent {
             })),
             E(this, 'handleKeyDown', (e) => {
                 if ((this.lastInputedKeys.push(e.keyCode), (this.lastInputedKeys = this.lastInputedKeys.slice(-5)), this.lastInputedKeys[0] === C.yXg.H && this.lastInputedKeys[1] === C.yXg.H && this.lastInputedKeys[2] === C.yXg.ARROW_RIGHT && this.lastInputedKeys[3] === C.yXg.N && this.lastInputedKeys[4] === C.yXg.K && this.props.activateRagingDemon(), this.props.keyboardModeEnabled)) return;
-                let t = I(e);
+                let t = P(e);
                 null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowDown({ direction: t }));
             }),
             E(this, 'handleKeyUp', (e) => {
                 if (this.props.keyboardModeEnabled) return;
-                let t = I(e);
+                let t = P(e);
                 null !== t && (e.stopPropagation(), e.preventDefault(), this.arrowUp({ direction: t }));
             }),
             E(this, 'onArrowClick', (e) => {
@@ -323,7 +323,7 @@ function A(e) {
                     component: 'div',
                     children: l
                         ? (0, r.jsx)(
-                              v.Z,
+                              O.Z,
                               {
                                   handleDemonClose: function () {
                                       c(!1), setTimeout(n, 500);

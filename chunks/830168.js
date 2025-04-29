@@ -1,7 +1,7 @@
 let r, i;
-n.d(t, { Z: () => v }), n(388685), n(415506), n(49124);
-var a = n(570140),
-    o = n(330516),
+n.d(t, { Z: () => O }), n(388685), n(415506), n(49124);
+var o = n(570140),
+    a = n(330516),
     s = n(710845),
     l = n(594174),
     c = n(436181),
@@ -27,7 +27,7 @@ function g() {
 }
 function E(e) {
     let t = JSON.parse(e);
-    return h.log('Native Dispatch error', t), new o.Z(t);
+    return h.log('Native Dispatch error', t), new a.Z(t);
 }
 function b(e, t) {
     '' !== e && E(e);
@@ -45,14 +45,14 @@ function y(e) {
             u.default.track(e.event_name, t);
     }
 }
-let v = {
+let O = {
     init(e) {
-        let { userToken: t, userId: n, installPaths: r, platform: a, stateCallback: o, errorCallback: s } = e;
+        let { userToken: t, userId: n, installPaths: r, platform: o, stateCallback: a, errorCallback: s } = e;
         null == i &&
             m().then((e) => {
                 let c = {
                         environment: window.GLOBAL_ENV.RELEASE_CHANNEL,
-                        build_number: '394825'
+                        build_number: '394877'
                     },
                     u = l.default.getCurrentUser();
                 null != u && ((c.user_id = u.id), (c.user_name = u.tag), null != u.email && (c.email = u.email));
@@ -66,13 +66,13 @@ let v = {
                     api_endpoint: ''.concat('https:').concat(window.GLOBAL_ENV.API_ENDPOINT),
                     environment: window.GLOBAL_ENV.PROJECT_ENV,
                     sentry: c,
-                    platform: a
+                    platform: o
                 };
                 i = new e.Dispatch(
                     JSON.stringify(d),
                     (e) => {
                         let t = JSON.parse(e);
-                        o({
+                        a({
                             applications: t.applications,
                             paused: t.paused,
                             currentTask:
@@ -105,7 +105,7 @@ let v = {
         null != e && void 0 !== e.destroy && (e.destroy(), (i = null));
     },
     setTargetManifest(e) {
-        let { applicationId: t, applicationName: n, applicationIcon: r, branchId: i, buildId: a, manifestIds: o, installationPath: s } = e,
+        let { applicationId: t, applicationName: n, applicationIcon: r, branchId: i, buildId: o, manifestIds: a, installationPath: s } = e,
             l = g();
         null != l &&
             l.command(
@@ -115,18 +115,18 @@ let v = {
                     application_name: n,
                     application_icon: r,
                     branch_id: i,
-                    build_id: a,
-                    manifest_ids: o,
+                    build_id: o,
+                    manifest_ids: a,
                     install_path: s
                 }),
                 b
             );
     },
     setCurrentTask(e, t, n, r, i) {
-        let a = g();
+        let o = g();
         return (
-            null != a &&
-            (a.command(
+            null != o &&
+            (o.command(
                 JSON.stringify({
                     command: 'SetCurrentTask',
                     application_id: e,
@@ -208,7 +208,7 @@ let v = {
     runLaunchSetup: (e, t) =>
         c.Z.isRunning()
             ? Promise.reject(Error('Already running launch setup.'))
-            : (a.Z.dispatch({ type: 'DISPATCH_APPLICATION_LAUNCH_SETUP_START' }),
+            : (o.Z.dispatch({ type: 'DISPATCH_APPLICATION_LAUNCH_SETUP_START' }),
               new Promise((n, r) => {
                   let i = g();
                   if (null == i) return void r(Error('native dispatch instance not found'));
@@ -220,9 +220,9 @@ let v = {
                       }),
                       (e, t, i) => {
                           if ('' !== e) {
-                              a.Z.dispatch({ type: 'DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE' });
+                              o.Z.dispatch({ type: 'DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE' });
                               let t = E(e);
-                              a.Z.dispatch({
+                              o.Z.dispatch({
                                   type: 'DISPATCH_APPLICATION_ERROR',
                                   error: t
                               }),
@@ -230,12 +230,12 @@ let v = {
                               return;
                           }
                           if ('' !== t) {
-                              a.Z.dispatch({ type: 'DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE' }), n();
+                              o.Z.dispatch({ type: 'DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE' }), n();
                               return;
                           }
                           if ('' !== i) {
                               let e = JSON.parse(i);
-                              a.Z.dispatch({
+                              o.Z.dispatch({
                                   type: 'DISPATCH_APPLICATION_INSTALL_SCRIPTS_PROGRESS_UPDATE',
                                   progress: e.progress,
                                   total: e.total,
@@ -246,13 +246,13 @@ let v = {
                   );
               })),
     launch: (e, t, n, r) =>
-        new Promise((i, a) => {
-            let o = g();
-            if (null == o) return void a(Error('native dispatch instance not found'));
+        new Promise((i, o) => {
+            let a = g();
+            if (null == a) return void o(Error('native dispatch instance not found'));
             function s(e, t) {
-                '' !== e ? a(E(e)) : i([JSON.parse(t).pid]);
+                '' !== e ? o(E(e)) : i([JSON.parse(t).pid]);
             }
-            o.command(
+            a.command(
                 JSON.stringify({
                     command: 'Launch',
                     application_id: e,

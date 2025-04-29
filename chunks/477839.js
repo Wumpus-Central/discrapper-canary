@@ -4,7 +4,7 @@ n.d(t, {
     Ly: () => ek,
     MH: () => eB,
     SZ: () => ey,
-    U8: () => eO,
+    U8: () => ev,
     VU: () => eG,
     Vx: () => eM,
     Wq: () => ej,
@@ -17,15 +17,15 @@ n.d(t, {
     ne: () => eC,
     oK: () => eV,
     r7: () => eN,
-    tH: () => ev,
+    tH: () => eO,
     uv: () => eS,
     w2: () => eT,
     yN: () => eI
 });
 var r = n(562858),
     i = n(702319),
-    a = n(981631),
-    o = n(622802),
+    o = n(981631),
+    a = n(622802),
     s = n(388032),
     l = n(359527),
     c = n(277259),
@@ -40,8 +40,8 @@ var r = n(562858),
     E = n(31316),
     b = n(187695),
     y = n(618492),
-    v = n(306340),
-    O = n(940415),
+    O = n(306340),
+    v = n(940415),
     I = n(550376),
     S = n(99321),
     T = n(407239),
@@ -78,8 +78,8 @@ var r = n(562858),
     en = n(364769),
     er = n(951528),
     ei = n(239956),
-    ea = n(378682),
-    eo = n(69039),
+    eo = n(378682),
+    ea = n(69039),
     es = n(531787),
     el = n(400493),
     ec = n(938316),
@@ -94,8 +94,8 @@ var r = n(562858),
     eE = n(429413);
 let eb = '1344176506041139230',
     ey = [200, 500, 1000],
-    ev = 5,
-    eO = 'https://discord.com/settings/clicker-game';
+    eO = 5,
+    ev = 'https://discord.com/settings/clicker-game';
 var eI = (function (e) {
         return (e[(e.CLICKER_BUTTON = 0)] = 'CLICKER_BUTTON'), (e[(e.RAIN = 1)] = 'RAIN'), (e[(e.SUN = 2)] = 'SUN'), (e[(e.STATS = 3)] = 'STATS'), (e[(e.RATE = 4)] = 'RATE'), (e[(e.ACHIEVEMENTS = 5)] = 'ACHIEVEMENTS'), (e[(e.SNEK = 6)] = 'SNEK'), (e[(e.WEEDS = 7)] = 'WEEDS'), (e[(e.PET_WUMPUS = 8)] = 'PET_WUMPUS'), (e[(e.BOUNCING_LOGO = 9)] = 'BOUNCING_LOGO'), (e[(e.NAGBAR = 10)] = 'NAGBAR'), (e[(e.ANT = 11)] = 'ANT'), (e[(e.SNAIL = 12)] = 'SNAIL'), (e[(e.BEE = 13)] = 'BEE'), (e[(e.WORM = 14)] = 'WORM'), (e[(e.BUTTERFLY = 15)] = 'BUTTERFLY'), (e[(e.TULIP = 16)] = 'TULIP'), (e[(e.SUNFLOWER = 17)] = 'SUNFLOWER'), (e[(e.ORCHID = 18)] = 'ORCHID'), (e[(e.LOOTBOXES = 19)] = 'LOOTBOXES'), (e[(e.MESSAGES = 20)] = 'MESSAGES'), (e[(e.AT_SOMEONE = 21)] = 'AT_SOMEONE'), (e[(e.CURSORS = 22)] = 'CURSORS'), (e[(e.POURING_WATER = 23)] = 'POURING_WATER'), (e[(e.WATERING_CAN = 24)] = 'WATERING_CAN'), (e[(e.LEVELING = 25)] = 'LEVELING'), (e[(e.MUSIC = 26)] = 'MUSIC'), (e[(e.LAWNMOWER = 27)] = 'LAWNMOWER'), (e[(e.COMPLETE_GAME = 28)] = 'COMPLETE_GAME'), e;
     })({}),
@@ -104,205 +104,205 @@ var eI = (function (e) {
     })({});
 let eT = () => ({
     0: {
-        name: s.intl.string(o.default['1pCxsL']),
-        description: s.intl.string(o.default['1pCxsL']),
-        pointsDescription: o.default.C3Yi6u,
+        name: s.intl.string(a.default['1pCxsL']),
+        description: s.intl.string(a.default['1pCxsL']),
+        pointsDescription: a.default.C3Yi6u,
         cost: 0,
         purchaseIconSrc: B
     },
     1: {
-        name: s.intl.string(o.default.LpCYsb),
-        description: s.intl.string(o.default.KBsLzc),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default.LpCYsb),
+        description: s.intl.string(a.default.KBsLzc),
+        pointsDescription: a.default.QMkrPj,
         cost: 2800,
         purchaseIconSrc: es
     },
     2: {
-        name: s.intl.string(o.default.JTkCcX),
-        description: s.intl.string(o.default.WasJEx),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default.JTkCcX),
+        description: s.intl.string(a.default.WasJEx),
+        pointsDescription: a.default.QMkrPj,
         cost: 3200,
         purchaseIconSrc: e_
     },
     3: {
-        name: s.intl.string(o.default.bS8cBA),
-        description: s.intl.string(o.default.ysljvr),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default.bS8cBA),
+        description: s.intl.string(a.default.ysljvr),
+        pointsDescription: a.default.QMkrPj,
         cost: 850,
         purchaseIconSrc: ef
     },
     4: {
-        name: s.intl.string(o.default['XNOF5+']),
-        description: s.intl.format(o.default.RDskBQ, { grassIconHook: i.Z }),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default['XNOF5+']),
+        description: s.intl.format(a.default.RDskBQ, { grassIconHook: i.Z }),
+        pointsDescription: a.default.QMkrPj,
         cost: 70,
         purchaseIconSrc: ec
     },
     5: {
-        name: s.intl.string(o.default['236TJC']),
-        description: s.intl.string(o.default['+OWe8v']),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default['236TJC']),
+        description: s.intl.string(a.default['+OWe8v']),
+        pointsDescription: a.default.QMkrPj,
         cost: 300,
         purchaseIconSrc: l
     },
     6: {
-        name: s.intl.string(o.default.ysKTU1),
-        description: s.intl.string(o.default.SfM2SU),
-        pointsDescription: o.default.qI1UNj,
+        name: s.intl.string(a.default.ysKTU1),
+        description: s.intl.string(a.default.SfM2SU),
+        pointsDescription: a.default.qI1UNj,
         cost: 4921,
         purchaseIconSrc: ed
     },
     7: {
-        name: s.intl.string(o.default['s610+f']),
-        description: s.intl.string(o.default['02Ncoq']),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default['s610+f']),
+        description: s.intl.string(a.default['02Ncoq']),
+        pointsDescription: a.default.QMkrPj,
         cost: 0,
         purchaseIconSrc: eg
     },
     8: {
-        name: s.intl.string(o.default.QDlhR0),
-        description: s.intl.string(o.default.DQ6qb2),
-        pointsDescription: o.default.wV8Sj4,
+        name: s.intl.string(a.default.QDlhR0),
+        description: s.intl.string(a.default.DQ6qb2),
+        pointsDescription: a.default.wV8Sj4,
         cost: 100,
-        purchaseIconSrc: ea
+        purchaseIconSrc: eo
     },
     9: {
-        name: s.intl.string(o.default['y+f4AA']),
-        description: s.intl.string(o.default['/Tqbwc']),
-        pointsDescription: o.default.K3FGT0,
+        name: s.intl.string(a.default['y+f4AA']),
+        description: s.intl.string(a.default['/Tqbwc']),
+        pointsDescription: a.default.K3FGT0,
         cost: 4250,
         purchaseIconSrc: x
     },
     10: {
-        name: s.intl.string(o.default.VyPADw),
-        description: s.intl.string(o.default['0mTeUl']),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default.VyPADw),
+        description: s.intl.string(a.default['0mTeUl']),
+        pointsDescription: a.default.QMkrPj,
         cost: 4400,
         purchaseIconSrc: en
     },
     11: {
-        name: s.intl.string(o.default.ay3NkZ),
-        description: s.intl.string(o.default.tHSwqK),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default.ay3NkZ),
+        description: s.intl.string(a.default.tHSwqK),
+        pointsDescription: a.default.QMkrPj,
         cost: 50,
         purchaseIconSrc: w
     },
     12: {
-        name: s.intl.string(o.default.CWXupa),
-        description: s.intl.string(o.default.D86W0t),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default.CWXupa),
+        description: s.intl.string(a.default.D86W0t),
+        pointsDescription: a.default.QMkrPj,
         cost: 480,
         purchaseIconSrc: eu
     },
     13: {
-        name: s.intl.string(o.default.qq9hpq),
-        description: s.intl.string(o.default['bROl6+']),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default.qq9hpq),
+        description: s.intl.string(a.default['bROl6+']),
+        pointsDescription: a.default.QMkrPj,
         cost: 600,
         purchaseIconSrc: L
     },
     14: {
-        name: s.intl.string(o.default['18Pd8/']),
-        description: s.intl.string(o.default['8KvaTE']),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default['18Pd8/']),
+        description: s.intl.string(a.default['8KvaTE']),
+        pointsDescription: a.default.QMkrPj,
         cost: 1150,
         purchaseIconSrc: eE
     },
     15: {
-        name: s.intl.string(o.default.qRLMe3),
-        description: s.intl.string(o.default['+J3v+/']),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default.qRLMe3),
+        description: s.intl.string(a.default['+J3v+/']),
+        pointsDescription: a.default.QMkrPj,
         cost: 2400,
         purchaseIconSrc: G
     },
     16: {
-        name: s.intl.string(o.default.IZVSjo),
-        description: s.intl.string(o.default.HNySeX),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default.IZVSjo),
+        description: s.intl.string(a.default.HNySeX),
+        pointsDescription: a.default.QMkrPj,
         cost: 250,
         purchaseIconSrc: eh
     },
     17: {
-        name: s.intl.string(o.default['p+2LlJ']),
-        description: s.intl.string(o.default.tZGbND),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default['p+2LlJ']),
+        description: s.intl.string(a.default.tZGbND),
+        pointsDescription: a.default.QMkrPj,
         cost: 15,
         purchaseIconSrc: ep
     },
     18: {
-        name: s.intl.string(o.default['3p41io']),
-        description: s.intl.string(o.default.efABQk),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default['3p41io']),
+        description: s.intl.string(a.default.efABQk),
+        pointsDescription: a.default.QMkrPj,
         cost: 1250,
         purchaseIconSrc: ei
     },
     28: {
-        name: s.intl.string(o.default['2pbAaG']),
-        description: s.intl.string(o.default.hjqDg4),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default['2pbAaG']),
+        description: s.intl.string(a.default.hjqDg4),
+        pointsDescription: a.default.QMkrPj,
         cost: 20000,
         purchaseIconSrc: V
     },
     19: {
-        name: s.intl.string(o.default.WmIwqK),
-        description: s.intl.string(o.default['8Zgq//']),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default.WmIwqK),
+        description: s.intl.string(a.default['8Zgq//']),
+        pointsDescription: a.default.QMkrPj,
         cost: 3900,
         purchaseIconSrc: ee
     },
     20: {
-        name: s.intl.string(o.default.egjsSE),
-        description: s.intl.string(o.default['5cbdn5']),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default.egjsSE),
+        description: s.intl.string(a.default['5cbdn5']),
+        pointsDescription: a.default.QMkrPj,
         cost: 6000,
         purchaseIconSrc: er
     },
     21: {
-        name: s.intl.string(o.default['5ApWJS']),
-        description: s.intl.string(o.default.gRvPqK),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default['5ApWJS']),
+        description: s.intl.string(a.default.gRvPqK),
+        pointsDescription: a.default.QMkrPj,
         cost: 5200,
         purchaseIconSrc: D
     },
     22: {
-        name: s.intl.string(o.default.YDLnVV),
-        description: s.intl.string(o.default.KJ5fmZ),
-        pointsDescription: o.default.C3Yi6u,
+        name: s.intl.string(a.default.YDLnVV),
+        description: s.intl.string(a.default.KJ5fmZ),
+        pointsDescription: a.default.C3Yi6u,
         cost: 2150,
         purchaseIconSrc: F
     },
     23: {
-        name: s.intl.string(o.default.Bq5anp),
-        description: s.intl.string(o.default.iVUZLi),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default.Bq5anp),
+        description: s.intl.string(a.default.iVUZLi),
+        pointsDescription: a.default.QMkrPj,
         cost: 9001,
-        purchaseIconSrc: eo
+        purchaseIconSrc: ea
     },
     24: {
-        name: s.intl.string(o.default['/UFku7']),
-        description: s.intl.string(o.default.DC3NPz),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default['/UFku7']),
+        description: s.intl.string(a.default.DC3NPz),
+        pointsDescription: a.default.QMkrPj,
         cost: 1000,
         purchaseIconSrc: em
     },
     25: {
-        name: s.intl.string(o.default.L9Wvzs),
-        description: s.intl.string(o.default['4i9bg4']),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default.L9Wvzs),
+        description: s.intl.string(a.default['4i9bg4']),
+        pointsDescription: a.default.QMkrPj,
         cost: 800,
         purchaseIconSrc: $
     },
     26: {
-        name: s.intl.string(o.default.aaCahI),
-        description: s.intl.string(o.default.CLhdsb),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default.aaCahI),
+        description: s.intl.string(a.default.CLhdsb),
+        pointsDescription: a.default.QMkrPj,
         cost: 30,
         purchaseIconSrc: et
     },
     27: {
-        name: s.intl.string(o.default.ynArnJ),
-        description: s.intl.string(o.default.FBlH7u),
-        pointsDescription: o.default.QMkrPj,
+        name: s.intl.string(a.default.ynArnJ),
+        description: s.intl.string(a.default.FBlH7u),
+        pointsDescription: a.default.QMkrPj,
         cost: 0,
         purchaseIconSrc: J
     }
@@ -317,9 +317,9 @@ function eA(e) {
 let eN = () => ({
         0: {
             itemId: 0,
-            name: o.default.Th5Tfn,
-            description: s.intl.string(o.default.sFGAHx),
-            pointsDescription: o.default.C3Yi6u,
+            name: a.default.Th5Tfn,
+            description: s.intl.string(a.default.sFGAHx),
+            pointsDescription: a.default.C3Yi6u,
             cost: (e) => {
                 let { numAlreadyPurchased: t } = e;
                 return 10 * Math.pow(3, t);
@@ -332,9 +332,9 @@ let eN = () => ({
         },
         1: {
             itemId: 7,
-            name: s.intl.string(o.default['0oZ4ZW']),
-            description: s.intl.string(o.default['0OIHs7']),
-            pointsDescription: o.default.QMkrPj,
+            name: s.intl.string(a.default['0oZ4ZW']),
+            description: s.intl.string(a.default['0OIHs7']),
+            pointsDescription: a.default.QMkrPj,
             cost: () => 2200,
             predicate: (e) => {
                 let { numAlreadyPurchased: t } = e;
@@ -344,17 +344,17 @@ let eN = () => ({
         },
         2: {
             itemId: 9,
-            name: s.intl.string(o.default.eAck29),
-            description: s.intl.string(o.default.cfQopK),
-            pointsDescription: o.default.K3FGT0,
+            name: s.intl.string(a.default.eAck29),
+            description: s.intl.string(a.default.cfQopK),
+            pointsDescription: a.default.K3FGT0,
             cost: eA,
             purchaseIconSrc: j
         },
         3: {
             itemId: 9,
-            name: s.intl.string(o.default.TZwTub),
-            description: s.intl.string(o.default.mXdqqq),
-            pointsDescription: o.default.ZoeGuL,
+            name: s.intl.string(a.default.TZwTub),
+            description: s.intl.string(a.default.mXdqqq),
+            pointsDescription: a.default.ZoeGuL,
             cost: () => 7000,
             predicate: (e) => {
                 let { numAlreadyPurchased: t } = e;
@@ -364,9 +364,9 @@ let eN = () => ({
         },
         4: {
             itemId: 9,
-            name: o.default.sI8Fur,
-            description: s.intl.string(o.default.lchdNT),
-            pointsDescription: o.default.QMkrPj,
+            name: a.default.sI8Fur,
+            description: s.intl.string(a.default.lchdNT),
+            pointsDescription: a.default.QMkrPj,
             cost: (e) => {
                 let { numAlreadyPurchased: t } = e;
                 return (t + 1) * 9000;
@@ -379,9 +379,9 @@ let eN = () => ({
         },
         5: {
             itemId: 9,
-            name: s.intl.string(o.default.UbiSDQ),
-            description: s.intl.string(o.default['9l82i4']),
-            pointsDescription: o.default['V6/z2d'],
+            name: s.intl.string(a.default.UbiSDQ),
+            description: s.intl.string(a.default['9l82i4']),
+            pointsDescription: a.default['V6/z2d'],
             cost: () => 8500,
             predicate: (e) => {
                 let { numAlreadyPurchased: t } = e;
@@ -391,9 +391,9 @@ let eN = () => ({
         },
         6: {
             itemId: 0,
-            name: s.intl.string(o.default['9YDZd3']),
-            description: s.intl.string(o.default.qmvOkp),
-            pointsDescription: o.default['/IYwAQ'],
+            name: s.intl.string(a.default['9YDZd3']),
+            description: s.intl.string(a.default.qmvOkp),
+            pointsDescription: a.default['/IYwAQ'],
             cost: () => 3500,
             predicate: (e) => {
                 let { numAlreadyPurchased: t } = e;
@@ -403,24 +403,24 @@ let eN = () => ({
         },
         7: {
             itemId: 2,
-            name: o.default.GILINT,
-            description: s.intl.string(o.default.Wh8O9v),
-            pointsDescription: o.default.QMkrPj,
+            name: a.default.GILINT,
+            description: s.intl.string(a.default.Wh8O9v),
+            pointsDescription: a.default.QMkrPj,
             cost: (e) => {
                 let { numAlreadyPurchased: t } = e;
                 return Math.floor((t + 1) * 3840);
             },
             predicate: (e) => {
                 let { numAlreadyPurchased: t } = e;
-                return t < ev;
+                return t < eO;
             },
             purchaseIconSrc: e_
         },
         8: {
             itemId: 21,
-            name: s.intl.string(o.default['X3rm5+']),
-            description: s.intl.string(o.default.I8kmzc),
-            pointsDescription: o.default.WX8jkp,
+            name: s.intl.string(a.default['X3rm5+']),
+            description: s.intl.string(a.default.I8kmzc),
+            pointsDescription: a.default.WX8jkp,
             cost: () => 13500,
             predicate: (e) => {
                 let { numAlreadyPurchased: t } = e;
@@ -430,9 +430,9 @@ let eN = () => ({
         },
         9: {
             itemId: 0,
-            name: s.intl.string(o.default.cDFnMj),
-            description: s.intl.string(o.default.xzoyFx),
-            pointsDescription: o.default['/IYwAQ'],
+            name: s.intl.string(a.default.cDFnMj),
+            description: s.intl.string(a.default.xzoyFx),
+            pointsDescription: a.default['/IYwAQ'],
             cost: () => 1400,
             predicate: (e) => {
                 let { numAlreadyPurchased: t } = e;
@@ -442,9 +442,9 @@ let eN = () => ({
         },
         10: {
             itemId: 26,
-            name: s.intl.string(o.default.zA49s7),
-            description: s.intl.string(o.default.UXTp4u),
-            pointsDescription: o.default.QMkrPj,
+            name: s.intl.string(a.default.zA49s7),
+            description: s.intl.string(a.default.UXTp4u),
+            pointsDescription: a.default.QMkrPj,
             cost: () => 5000,
             predicate: (e) => {
                 let { numAlreadyPurchased: t } = e;
@@ -654,108 +654,108 @@ let eL = {
     ex = () => ({
         0: {
             icon: f,
-            name: s.intl.string(o.default.hYTmQU),
-            description: s.intl.formatToPlainString(o.default['87JVSk'], { count: eL[0] })
+            name: s.intl.string(a.default.hYTmQU),
+            description: s.intl.formatToPlainString(a.default['87JVSk'], { count: eL[0] })
         },
         1: {
             icon: _,
-            name: s.intl.string(o.default.Pf9Hv7),
-            description: s.intl.formatToPlainString(o.default['87JVSk'], { count: eL[1] })
+            name: s.intl.string(a.default.Pf9Hv7),
+            description: s.intl.formatToPlainString(a.default['87JVSk'], { count: eL[1] })
         },
         2: {
             icon: p,
-            name: s.intl.string(o.default.oTL1qq),
-            description: s.intl.formatToPlainString(o.default['87JVSk'], { count: eL[2] })
+            name: s.intl.string(a.default.oTL1qq),
+            description: s.intl.formatToPlainString(a.default['87JVSk'], { count: eL[2] })
         },
         3: {
             icon: S,
-            name: s.intl.string(o.default['3FgleX']),
-            description: s.intl.formatToPlainString(o.default.ttVnXV, { count: eL[3] })
+            name: s.intl.string(a.default['3FgleX']),
+            description: s.intl.formatToPlainString(a.default.ttVnXV, { count: eL[3] })
         },
         4: {
             icon: T,
-            name: s.intl.string(o.default.dWrQpq),
-            description: s.intl.formatToPlainString(o.default.ttVnXV, { count: eL[4] })
+            name: s.intl.string(a.default.dWrQpq),
+            description: s.intl.formatToPlainString(a.default.ttVnXV, { count: eL[4] })
         },
         5: {
             icon: A,
-            name: s.intl.string(o.default.z4uabm),
-            description: s.intl.formatToPlainString(o.default.ttVnXV, { count: eL[5] })
+            name: s.intl.string(a.default.z4uabm),
+            description: s.intl.formatToPlainString(a.default.ttVnXV, { count: eL[5] })
         },
         6: {
             icon: N,
-            name: s.intl.string(o.default.mVKL2d),
-            description: s.intl.formatToPlainString(o.default.ttVnXV, { count: eL[6] })
+            name: s.intl.string(a.default.mVKL2d),
+            description: s.intl.formatToPlainString(a.default.ttVnXV, { count: eL[6] })
         },
         7: {
             icon: C,
-            name: s.intl.string(o.default.effQ8v),
-            description: s.intl.string(o.default['1o7lUF'])
+            name: s.intl.string(a.default.effQ8v),
+            description: s.intl.string(a.default['1o7lUF'])
         },
         8: {
             icon: g,
-            name: s.intl.string(o.default.q6Wkho),
-            description: s.intl.formatToPlainString(o.default['3RaLUF'], { level: eL[8] })
+            name: s.intl.string(a.default.q6Wkho),
+            description: s.intl.formatToPlainString(a.default['3RaLUF'], { level: eL[8] })
         },
         9: {
             icon: E,
-            name: s.intl.string(o.default['g9+rmp']),
-            description: s.intl.formatToPlainString(o.default['3RaLUF'], { level: eL[9] })
+            name: s.intl.string(a.default['g9+rmp']),
+            description: s.intl.formatToPlainString(a.default['3RaLUF'], { level: eL[9] })
         },
         10: {
             icon: b,
-            name: s.intl.string(o.default.qA3ns7),
-            description: s.intl.formatToPlainString(o.default['3RaLUF'], { level: eL[10] })
+            name: s.intl.string(a.default.qA3ns7),
+            description: s.intl.formatToPlainString(a.default['3RaLUF'], { level: eL[10] })
         },
         11: {
             icon: y,
-            name: s.intl.string(o.default.gujDDQ),
-            description: s.intl.formatToPlainString(o.default['3RaLUF'], { level: eL[11] })
+            name: s.intl.string(a.default.gujDDQ),
+            description: s.intl.formatToPlainString(a.default['3RaLUF'], { level: eL[11] })
         },
         13: {
             icon: R,
-            name: s.intl.string(o.default.ihlJt7),
-            description: s.intl.formatToPlainString(o.default.gNIyY2, { count: eL[13] })
+            name: s.intl.string(a.default.ihlJt7),
+            description: s.intl.formatToPlainString(a.default.gNIyY2, { count: eL[13] })
         },
         14: {
             icon: h,
-            name: s.intl.string(o.default.IdVao6),
-            description: s.intl.formatToPlainString(o.default.AmNmLy, { count: eL[14] })
+            name: s.intl.string(a.default.IdVao6),
+            description: s.intl.formatToPlainString(a.default.AmNmLy, { count: eL[14] })
         },
         15: {
             icon: m,
-            name: s.intl.string(o.default.kM9kxs),
-            description: s.intl.formatToPlainString(o.default.AmNmLy, { count: eL[15] })
+            name: s.intl.string(a.default.kM9kxs),
+            description: s.intl.formatToPlainString(a.default.AmNmLy, { count: eL[15] })
         },
         16: {
-            icon: v,
-            name: s.intl.string(o.default['6cJ+7+']),
-            description: s.intl.string(o.default.SZCKXl)
+            icon: O,
+            name: s.intl.string(a.default['6cJ+7+']),
+            description: s.intl.string(a.default.SZCKXl)
         },
         17: {
-            icon: O,
-            name: s.intl.string(o.default.tWKo9v),
-            description: s.intl.formatToPlainString(o.default.C34HAQ, { count: eL[16] })
+            icon: v,
+            name: s.intl.string(a.default.tWKo9v),
+            description: s.intl.formatToPlainString(a.default.C34HAQ, { count: eL[16] })
         },
         18: {
             icon: I,
-            name: s.intl.string(o.default.R6FY6O),
-            description: s.intl.formatToPlainString(o.default.C34HAQ, { count: eL[17] })
+            name: s.intl.string(a.default.R6FY6O),
+            description: s.intl.formatToPlainString(a.default.C34HAQ, { count: eL[17] })
         },
         19: {
             icon: c,
-            name: s.intl.string(o.default['x2/m4O']),
-            description: s.intl.string(o.default.KO94zc)
+            name: s.intl.string(a.default['x2/m4O']),
+            description: s.intl.string(a.default.KO94zc)
         },
         20: {
             icon: u,
-            name: s.intl.string(o.default['0RU5mZ']),
-            description: s.intl.formatToPlainString(o.default['59Cedn'], { count: eL[19] })
+            name: s.intl.string(a.default['0RU5mZ']),
+            description: s.intl.formatToPlainString(a.default['59Cedn'], { count: eL[19] })
         },
         21: {
             icon: d,
-            name: s.intl.string(o.default.la7ZOz),
-            description: s.intl.formatToPlainString(o.default['59Cedn'], { count: eL[20] })
+            name: s.intl.string(a.default.la7ZOz),
+            description: s.intl.formatToPlainString(a.default['59Cedn'], { count: eL[20] })
         }
     });
 var eM = (function (e) {
@@ -763,22 +763,22 @@ var eM = (function (e) {
 })({});
 let ek = () => ({
         0: {
-            name: s.intl.string(o.default.jcJhmZ),
+            name: s.intl.string(a.default.jcJhmZ),
             src: W,
             activeSrc: Y
         },
         1: {
-            name: s.intl.string(o.default.ASuyiI),
+            name: s.intl.string(a.default.ASuyiI),
             src: H,
             activeSrc: Z
         },
         2: {
-            name: s.intl.string(o.default.dkzm0t),
+            name: s.intl.string(a.default.dkzm0t),
             src: Q,
             activeSrc: q
         },
         3: {
-            name: s.intl.string(o.default.T6kuMT),
+            name: s.intl.string(a.default.T6kuMT),
             src: z,
             activeSrc: K
         }
@@ -787,4 +787,4 @@ let ek = () => ({
     eU = 8,
     eG = '1349486948942745695',
     eB = '1349486948942745696',
-    eV = a.XAJ;
+    eV = o.XAJ;

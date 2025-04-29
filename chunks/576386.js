@@ -6,73 +6,80 @@ var n = r(200651),
     a = r(442837),
     s = r(481060),
     c = r(22267),
-    u = r(594174),
-    d = r(388032),
-    p = r(908998);
-let b = (e) => {
-        let { nameplate: t, isPurchased: r = !1, isSelected: o = !1, onClick: d } = e,
-            b = (0, a.e7)([u.default], () => u.default.getCurrentUser()),
-            [v, f] = (0, i.useState)(!1);
-        return null == b
+    u = r(377171),
+    d = r(594174),
+    p = r(388032),
+    b = r(908998);
+let f = (e) => {
+        let { nameplate: t, isPurchased: r = !1, isSelected: o = !1, onClick: p } = e,
+            f = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
+            [v, m] = (0, i.useState)(!1);
+        return null == f
             ? null
             : (0, n.jsxs)(s.P3F, {
-                  className: p.nameplateItem,
-                  onClick: d,
-                  onMouseEnter: () => f(!0),
-                  onMouseLeave: () => f(!1),
+                  className: b.nameplateItem,
+                  onClick: p,
+                  onMouseEnter: () => m(!0),
+                  onMouseLeave: () => m(!1),
                   children: [
                       (0, n.jsx)(c.Z, {
                           nameplate: t,
-                          user: b,
+                          user: f,
                           showWumpus: !0,
                           isHighlighted: v
                       }),
-                      (0, n.jsx)('div', { className: l()(p.nameplateItemOverlay, { [p.selected]: o }) }),
+                      (0, n.jsx)('div', { className: l()(b.nameplateItemOverlay, { [b.selected]: o }) }),
                       !r &&
-                          (0, n.jsx)('div', {
-                              className: p.lock,
-                              children: (0, n.jsx)(s.mBM, { size: 'xs' })
+                          (0, n.jsx)(s.G2e, {
+                              icon: () =>
+                                  (0, n.jsx)(s.mBM, {
+                                      size: 'xxs',
+                                      color: 'currentColor'
+                                  }),
+                              color: u.Z.BACKGROUND_ACCENT,
+                              className: b.iconBadge
                           })
                   ]
               });
     },
     v = (e) => {
         let { selected: t, onSelect: r, onOpenShop: i, available: o, purchased: c } = e;
-        return null == (0, a.e7)([u.default], () => u.default.getCurrentUser())
+        return null == (0, a.e7)([d.default], () => d.default.getCurrentUser())
             ? null
             : (0, n.jsxs)(s.u2D, {
-                  className: p.inventory,
+                  className: b.inventory,
                   children: [
                       (0, n.jsxs)('div', {
                           children: [
-                              (0, n.jsx)(s.Text, {
-                                  className: p.inventoryTitle,
-                                  color: 'text-secondary',
-                                  variant: 'text-xs/semibold',
-                                  children: d.intl.string(d.t['WfGV5+'])
-                              }),
+                              (0, n.jsx)(s.vwX, { children: p.intl.string(p.t['WfGV5+']) }),
                               (0, n.jsxs)('div', {
-                                  className: p.inventoryControls,
+                                  className: b.inventoryControls,
                                   children: [
                                       (0, n.jsxs)(s.P3F, {
-                                          className: l()(p.inventoryControlsButton, { [p.selected]: null == t }),
+                                          className: l()(b.inventoryControlsButton, { [b.selected]: null == t }),
                                           onClick: () => r(null),
                                           children: [
-                                              (0, n.jsx)(s.t6m, {}),
+                                              (0, n.jsx)(s.t6m, {
+                                                  size: 'md',
+                                                  color: 'currentColor'
+                                              }),
                                               (0, n.jsx)(s.Text, {
-                                                  variant: 'text-xs/semibold',
-                                                  children: d.intl.string(d.t.PoWNfX)
+                                                  variant: 'text-xs/normal',
+                                                  children: p.intl.string(p.t.PoWNfX)
                                               })
                                           ]
                                       }),
                                       (0, n.jsxs)(s.P3F, {
-                                          className: p.inventoryControlsButton,
+                                          className: b.inventoryControlsButton,
                                           onClick: i,
                                           children: [
-                                              (0, n.jsx)(s.EOn, {}),
+                                              (0, n.jsx)(s.EOn, {
+                                                  size: 'md',
+                                                  color: 'currentColor'
+                                              }),
                                               (0, n.jsx)(s.Text, {
-                                                  variant: 'text-xs/semibold',
-                                                  children: d.intl.string(d.t.pWG4zc)
+                                                  variant: 'text-xs/normal',
+                                                  children: p.intl.string(p.t.pWG4zc)
                                               })
                                           ]
                                       })
@@ -80,10 +87,10 @@ let b = (e) => {
                               }),
                               0 !== c.length
                                   ? (0, n.jsx)('div', {
-                                        className: p.list,
+                                        className: b.list,
                                         children: c.map((e) =>
                                             (0, n.jsx)(
-                                                b,
+                                                f,
                                                 {
                                                     nameplate: e,
                                                     isPurchased: !0,
@@ -100,17 +107,12 @@ let b = (e) => {
                       0 !== o.length
                           ? (0, n.jsxs)('div', {
                                 children: [
-                                    (0, n.jsx)(s.Text, {
-                                        className: p.inventoryDescriptionTitle,
-                                        color: 'text-secondary',
-                                        variant: 'text-xs/semibold',
-                                        children: d.intl.string(d.t['1vbbeX'])
-                                    }),
+                                    (0, n.jsx)(s.vwX, { children: p.intl.string(p.t['1vbbeX']) }),
                                     (0, n.jsx)('div', {
-                                        className: p.list,
+                                        className: b.list,
                                         children: o.map((e) =>
                                             (0, n.jsx)(
-                                                b,
+                                                f,
                                                 {
                                                     nameplate: e,
                                                     isSelected: (null == t ? void 0 : t.id) === e.id,

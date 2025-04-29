@@ -1,22 +1,22 @@
 n.d(t, {
-    PZ: () => a,
-    XX: () => o
+    PZ: () => o,
+    XX: () => a
 }),
     n(388685);
 var r = n(601964),
     i = n(981631),
-    a = (function (e) {
+    o = (function (e) {
         return (e.PUBLIC = 'PUBLIC'), (e.INVITE_ONLY = 'INVITE_ONLY'), (e.APPLY_TO_JOIN = 'APPLY_TO_JOIN'), e;
     })({});
-function o(e) {
+function a(e) {
     let t = new Set(e.features),
         n = 'INVITE_ONLY';
     t.has(i.oNc.COMMUNITY) && t.has(i.oNc.DISCOVERABLE) ? (n = 'PUBLIC') : t.has(i.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL) && t.has(i.oNc.MEMBER_VERIFICATION_GATE_ENABLED) && (n = 'APPLY_TO_JOIN');
-    let a = s(e),
-        o = 0;
-    if (a) {
+    let o = s(e),
+        a = 0;
+    if (o) {
         var l;
-        o = null != (l = e instanceof r.ZP ? e.premiumSubscriberCount : e.premiumSubscriptionCount) ? l : 0;
+        a = null != (l = e instanceof r.ZP ? e.premiumSubscriberCount : e.premiumSubscriptionCount) ? l : 0;
     }
     let c = e instanceof r.ZP ? e.premiumTier : i.Eu4.NONE;
     return {
@@ -25,8 +25,8 @@ function o(e) {
         community: t.has(i.oNc.COMMUNITY),
         staff: t.has(i.oNc.INTERNAL_EMPLOYEE_ONLY),
         visibility: n,
-        premium: a,
-        premiumSubscriberCount: o,
+        premium: o,
+        premiumSubscriberCount: a,
         premiumTier: c
     };
 }

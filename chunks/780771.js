@@ -1,8 +1,8 @@
 n.d(t, {
     N3: () => i,
-    _j: () => o,
+    _j: () => a,
     jD: () => s,
-    uj: () => a,
+    uj: () => o,
     vs: () => l
 });
 var r = n(359135);
@@ -53,10 +53,10 @@ let i = {
             name: r.P.Clover
         }
     },
-    a = 'invalid_palette',
-    o = 'custom_palette',
+    o = 'invalid_palette',
+    a = 'custom_palette',
     s = {
-        name: a,
+        name: o,
         darkBackground: '',
         lightBackground: ''
     },

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
 var r = n(570140),
     i = n(367907),
-    a = n(626135),
-    o = n(585483),
+    o = n(626135),
+    a = n(585483),
     s = n(981631);
 function l(e, t, n) {
     return (
@@ -46,7 +46,7 @@ let u = {
     },
     updateLayout(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.IlC.APP;
-        a.default.track(s.rMx.VIDEO_LAYOUT_TOGGLED, c({ video_layout: t }, (0, i.AB)(e))),
+        o.default.track(s.rMx.VIDEO_LAYOUT_TOGGLED, c({ video_layout: t }, (0, i.AB)(e))),
             r.Z.dispatch({
                 type: 'CHANNEL_RTC_UPDATE_LAYOUT',
                 channelId: e,
@@ -97,9 +97,9 @@ let u = {
         }),
             t
                 ? setTimeout(() => {
-                      o.S.dispatch(s.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
+                      a.S.dispatch(s.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
                   }, 0)
-                : o.S.dispatch(s.CkL.FOCUS_CHAT_BUTTON);
+                : a.S.dispatch(s.CkL.FOCUS_CHAT_BUTTON);
     },
     jumpToVoiceChannelMessage(e, t, n, i) {
         r.Z.dispatch({

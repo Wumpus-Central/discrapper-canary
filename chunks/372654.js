@@ -2,15 +2,15 @@ n.d(t, {
     ML: () => s,
     nH: () => l,
     vK: () => d,
-    yV: () => a
+    yV: () => o
 });
 var r = n(180650),
     i = n(921948);
-let a = 1060,
-    o = 180,
+let o = 1060,
+    a = 180,
     s = (e) => e * (0, i.Z)(),
     l = function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o,
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a,
             { primary: n, secondary: r } = e;
         return 'linear-gradient('.concat(t, 'deg, ').concat(n.toHslString(), ', ').concat(r.toHslString(), ')');
     },

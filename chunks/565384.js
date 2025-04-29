@@ -9,8 +9,8 @@ n.d(t, {
     n(388685);
 var r = n(993192),
     i = n(990547),
-    a = n(731965);
-function o(e, t, n) {
+    o = n(731965);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -45,19 +45,19 @@ let l = Object.freeze({
     }),
     c = (0, r.F)((e) => l),
     u = (e) => {
-        (0, a.j)(() => {
+        (0, o.j)(() => {
             c.setState((t) => ({
                 impressions: [...t.impressions, e]
             }));
         });
     },
     d = (e) => {
-        (0, a.j)(() => {
+        (0, o.j)(() => {
             c.setState((t) => ({ impressions: t.impressions.filter((t) => t.sequenceId !== e.sequenceId) }));
         });
     },
     f = (e, t) => {
-        (0, a.j)(() => {
+        (0, o.j)(() => {
             c.setState(() => ({ debugTrackedData: s({ name: e }, t) }));
         });
     },

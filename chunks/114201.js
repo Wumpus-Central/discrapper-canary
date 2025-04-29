@@ -2,8 +2,8 @@ n.d(t, { Z: () => C });
 var r = n(200651);
 n(192379);
 var i = n(99815),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(239091),
     l = n(314897),
     c = n(553795),
@@ -18,8 +18,8 @@ var i = n(99815),
     E = n(463031),
     b = n(981631),
     y = n(388032),
-    v = n(333329);
-function O(e, t, n) {
+    O = n(333329);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ function I(e) {
                 })
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                v(e, t, n[t]);
             });
     }
     return e;
@@ -112,9 +112,9 @@ function N(e, t) {
 }
 function C(e) {
     let { guildId: t, leaderboardId: _ } = e,
-        O = (0, a.e7)([l.default], () => l.default.getId()),
-        S = (0, a.e7)([c.Z], () => c.Z.getAccount(null, b.ABu.RIOT_GAMES)),
-        A = (0, a.e7)([c.Z], () => c.Z.getAccount(null, b.ABu.LEAGUE_OF_LEGENDS)),
+        v = (0, o.e7)([l.default], () => l.default.getId()),
+        S = (0, o.e7)([c.Z], () => c.Z.getAccount(null, b.ABu.RIOT_GAMES)),
+        A = (0, o.e7)([c.Z], () => c.Z.getAccount(null, b.ABu.LEAGUE_OF_LEGENDS)),
         C = (0, m.Z)({
             guildId: t,
             leaderboardId: _
@@ -135,13 +135,13 @@ function C(e) {
                 : b.dG4,
         w = null == S || R ? y.intl.string(y.t['0yRXHx']) : y.intl.string(y.t['KWpU6+']),
         { lastUpdateRequested: D, statisticLastUpdatedDate: L } = (0, g.Z)({
-            userId: O,
+            userId: v,
             guildId: t,
             leaderboardId: _,
             statisticId: i.E.LOL_TOTAL_KILLS
         }),
         { disabled: x, subtext: M } = N(D, L),
-        k = (0, a.e7)(
+        k = (0, o.e7)(
             [d.Z, u.Z],
             () => {
                 let e = u.Z.getGuild(t);
@@ -151,35 +151,35 @@ function C(e) {
         );
     return null == C
         ? null
-        : (0, r.jsx)(o.yRy, {
+        : (0, r.jsx)(a.yRy, {
               align: 'top',
               position: 'right',
               disablePointerEvents: !1,
               renderPopout: (e) => {
                   let { closePopout: i } = e;
-                  return (0, r.jsx)(o.v2r, {
+                  return (0, r.jsx)(a.v2r, {
                       navId: 'leaderboard-popout-context-menu',
                       onClose: () => {
                           (0, s.Zy)(), i();
                       },
                       'aria-label': y.intl.string(y.t.BjCuf3),
                       onSelect: void 0,
-                      children: (0, r.jsxs)(o.kSQ, {
+                      children: (0, r.jsxs)(a.kSQ, {
                           children: [
                               C.leaderboard_id === E.z &&
                                   null != S &&
-                                  (0, r.jsx)(o.sNh, {
+                                  (0, r.jsx)(a.sNh, {
                                       id: 'refresh-my-data',
                                       label: y.intl.string(y.t.iopWUV),
                                       action: P,
                                       disabled: x,
                                       subtext: M
                                   }),
-                              (0, r.jsx)(o.sNh, {
+                              (0, r.jsx)(a.sNh, {
                                   id: 'leaderboard-modal',
                                   label: w,
                                   action: () => {
-                                      (0, o.ZDy)(async () => {
+                                      (0, a.ZDy)(async () => {
                                           let { default: e } = await n.e('73217').then(n.bind(n, 139964));
                                           return (n) =>
                                               (0, r.jsx)(
@@ -194,11 +194,11 @@ function C(e) {
                                   }
                               }),
                               k
-                                  ? (0, r.jsx)(o.sNh, {
+                                  ? (0, r.jsx)(a.sNh, {
                                         id: 'leaderboard-settings-modal',
                                         label: y.intl.string(y.t['QV4/6u']),
                                         action: () => {
-                                            (0, o.ZDy)(async () => {
+                                            (0, a.ZDy)(async () => {
                                                 let { default: e } = await n.e('25526').then(n.bind(n, 262918));
                                                 return (n) =>
                                                     (0, r.jsx)(
@@ -218,13 +218,13 @@ function C(e) {
                   });
               },
               children: (e) =>
-                  (0, r.jsx)(o.ua7, {
+                  (0, r.jsx)(a.ua7, {
                       text: y.intl.string(y.t.UKOtz8),
                       children: (t) =>
                           (0, r.jsx)(
-                              o.P3F,
-                              T(I(T(I({}, t), { className: v.menuIcon }), e), {
-                                  children: (0, r.jsx)(o.xhG, {
+                              a.P3F,
+                              T(I(T(I({}, t), { className: O.menuIcon }), e), {
+                                  children: (0, r.jsx)(a.xhG, {
                                       color: 'currentColor',
                                       size: 'custom',
                                       width: 16,

@@ -7,8 +7,8 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n.n(s),
     c = n(442837),
@@ -23,8 +23,8 @@ var r = n(200651),
     E = n(523751),
     b = n(246364),
     y = n(746916),
-    v = n(965638),
-    O = n(160404),
+    O = n(965638),
+    v = n(160404),
     I = n(777861),
     S = n(565799),
     T = n(501655),
@@ -75,8 +75,8 @@ function B(e, t) {
         r,
         i = V(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -85,8 +85,8 @@ function V(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function F(e) {
@@ -108,20 +108,20 @@ function F(e) {
             [t]
         ),
         r = (0, A.ZP)(t),
-        a = i.useMemo(() => r.map((e) => e.id), [r]),
-        o = (0, c.e7)([L.ZP], () => L.ZP.getVoiceStates(t), [t]),
+        o = i.useMemo(() => r.map((e) => e.id), [r]),
+        a = (0, c.e7)([L.ZP], () => L.ZP.getVoiceStates(t), [t]),
         s = (0, c.Wu)([P.Z], () => P.Z.getBlockedOrIgnoredIDs()),
         u = l().flatMap(n, (t) => {
             var n;
             if (t === e.afkChannelId) return [];
-            let r = (null != (n = o[t]) ? n : []).map((e) => {
+            let r = (null != (n = a[t]) ? n : []).map((e) => {
                 let { user: t } = e;
                 return t;
             });
             return (0, p.dq)(r, s);
         }),
         d = (0, c.Wu)([S.Z], () =>
-            l().flatMap(a, (t) => {
+            l().flatMap(o, (t) => {
                 if (t === e.afkChannelId) return [];
                 let n = S.Z.getMutableParticipants(t, T.pV.SPEAKER)
                     .filter((e) => e.type === T.Ui.VOICE)
@@ -134,7 +134,7 @@ function F(e) {
         ),
         _ = (0, c.e7)([S.Z], () => {
             let e = 0;
-            for (let t of a) e += S.Z.getParticipantCount(t, T.pV.AUDIENCE);
+            for (let t of o) e += S.Z.getParticipantCount(t, T.pV.AUDIENCE);
             return e;
         }),
         h = (0, c.Wu)(
@@ -166,15 +166,15 @@ function F(e) {
         E = (0, c.Wu)([D.default], () => h.map((e) => D.default.getUser(e)), [h]),
         b = u.filter((e) => !h.includes(e.id) && !m.includes(e.id)),
         y = (0, p.dq)(b),
-        v = E.filter((e) => null != e && !m.includes(e.id)),
-        O = d.length > 0 || b.length > 0 || v.length > 0 || g.length > 0;
+        O = E.filter((e) => null != e && !m.includes(e.id)),
+        v = d.length > 0 || b.length > 0 || O.length > 0 || g.length > 0;
     return {
         voiceUsersToShow: y,
         stageSpeakers: d,
         numStageListeners: _,
-        streamUsersToShow: v,
+        streamUsersToShow: O,
         embeddedActivitiesUsers: g,
-        hasActivity: O
+        hasActivity: v
     };
 }
 function Z(e, t, n) {
@@ -247,8 +247,8 @@ function W(e) {
     let { guild: t } = e,
         n = t.id,
         { enabled: i } = d.c.useExperiment({ location: 'GuildTooltip' }, { autoTrackExposure: !0 }),
-        { voiceUsersToShow: a, stageSpeakers: s, numStageListeners: l, streamUsersToShow: f, embeddedActivitiesUsers: _ } = F(t),
-        p = Z(u.gj8, a, n),
+        { voiceUsersToShow: o, stageSpeakers: s, numStageListeners: l, streamUsersToShow: f, embeddedActivitiesUsers: _ } = F(t),
+        p = Z(u.gj8, o, n),
         h = H(n, s, l),
         m = Z(u.hGI, f, n),
         g = Z(i ? u.iWm : u.nG3, _, n),
@@ -270,7 +270,7 @@ function W(e) {
             E
                 ? (0, r.jsx)(Y, {
                       muteConfig: b,
-                      className: o()(k.muteText, { [k.muteTextWithActivity]: y })
+                      className: a()(k.muteText, { [k.muteTextWithActivity]: y })
                   })
                 : null
         ]
@@ -300,16 +300,16 @@ function z(e) {
 function q(e) {
     let { guild: t, includeActivity: n = !0 } = e,
         i = (0, m.Z)(t),
-        a = (0, y.E)(t),
-        s = null != a ? (0, r.jsx)(z, { guildJoinRequestStatus: a }) : null,
+        o = (0, y.E)(t),
+        s = null != o ? (0, r.jsx)(z, { guildJoinRequestStatus: o }) : null,
         l = n ? (0, r.jsx)(W, { guild: t }) : null,
-        d = (0, c.e7)([O.Z], () => O.Z.isViewingRoles(t.id)),
+        d = (0, c.e7)([v.Z], () => v.Z.isViewingRoles(t.id)),
         f = null != s ? s : l,
-        _ = (0, v.Ij)(t);
+        _ = (0, O.Ij)(t);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: o()(k.row, k.rowGuildName),
+                className: a()(k.row, k.rowGuildName),
                 children: [
                     i
                         ? (0, r.jsx)(E.Z, {
@@ -322,7 +322,7 @@ function q(e) {
                               className: k.rowIcon
                           }),
                     (0, r.jsx)('span', {
-                        className: o()(k.guildNameText, { [k.guildNameTextLimitedSize]: null != l }),
+                        className: a()(k.guildNameText, { [k.guildNameTextLimitedSize]: null != l }),
                         children: t.toString()
                     })
                 ]
@@ -347,7 +347,7 @@ function q(e) {
     });
 }
 function Q(e) {
-    let { guild: t, disabled: n = !1, 'aria-label': a = !1, children: o, includeActivity: s = !0 } = e,
+    let { guild: t, disabled: n = !1, 'aria-label': o = !1, children: a, includeActivity: s = !0 } = e,
         l = (0, h.Q3)('GuildTooltip');
     return (0, r.jsx)(u.ua7, {
         hideOnClick: !0,
@@ -359,16 +359,16 @@ function Q(e) {
                   guild: t,
                   includeActivity: s
               }),
-        'aria-label': a,
+        'aria-label': o,
         tooltipClassName: j.listItemTooltip,
         tooltipContentClassName: j.listItemTooltipContent,
         children: (e) => {
             var { onFocus: t, onBlur: n } = e,
-                a = B(e, ['onFocus', 'onBlur']);
+                o = B(e, ['onFocus', 'onBlur']);
             return (0, r.jsx)('div', {
                 onFocus: t,
                 onBlur: n,
-                children: i.cloneElement(i.Children.only(o), G({}, a))
+                children: i.cloneElement(i.Children.only(a), G({}, o))
             });
         }
     });

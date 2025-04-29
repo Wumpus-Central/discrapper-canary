@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r = n(200651),
     i = n(481060),
-    a = n(299206),
-    o = n(726521),
+    o = n(299206),
+    a = n(726521),
     s = n(389052),
     l = n(388032),
     c = n(923492);
@@ -60,7 +60,7 @@ function _(e, t) {
 }
 let p = (e) => {
         let { appRecord: t, closePopout: n, showAppReportingOption: s, selectedGuildId: c, selectedChannelId: u, children: d = null } = e,
-            f = (0, a.Z)({
+            f = (0, o.Z)({
                 id: t.id,
                 label: l.intl.string(l.t['+NP/b2'])
             });
@@ -76,7 +76,7 @@ let p = (e) => {
                           label: l.intl.string(l.t['+78Pfn']),
                           color: 'danger',
                           action: () =>
-                              (0, o.uu)({
+                              (0, a.uu)({
                                   application: t,
                                   entrypoint: 'authorized_apps_settings',
                                   contextualGuildId: c,
@@ -90,12 +90,12 @@ let p = (e) => {
         });
     },
     h = (e) => {
-        let { appRecord: t, botUser: n, closePopout: i, showAppReportingOption: a, selectedGuildId: o, selectedChannelId: l } = e;
+        let { appRecord: t, botUser: n, closePopout: i, showAppReportingOption: o, selectedGuildId: a, selectedChannelId: l } = e;
         return (0, r.jsx)(p, {
             appRecord: t,
             closePopout: i,
-            showAppReportingOption: a,
-            selectedGuildId: o,
+            showAppReportingOption: o,
+            selectedGuildId: a,
             selectedChannelId: l,
             children: (0, s.Z)({
                 user: n,
@@ -105,7 +105,7 @@ let p = (e) => {
         });
     },
     m = (e) => {
-        let { appRecord: t, showAppReportingOption: n, selectedGuildId: a, selectedChannelId: o } = e;
+        let { appRecord: t, showAppReportingOption: n, selectedGuildId: o, selectedChannelId: a } = e;
         return (0, r.jsx)(i.yRy, {
             renderPopout: (e) => {
                 let { closePopout: i } = e;
@@ -114,16 +114,16 @@ let p = (e) => {
                           appRecord: t,
                           closePopout: i,
                           showAppReportingOption: n,
-                          selectedGuildId: a,
-                          selectedChannelId: o
+                          selectedGuildId: o,
+                          selectedChannelId: a
                       })
                     : (0, r.jsx)(h, {
                           appRecord: t,
                           botUser: t.bot,
                           closePopout: i,
                           showAppReportingOption: n,
-                          selectedGuildId: a,
-                          selectedChannelId: o
+                          selectedGuildId: o,
+                          selectedChannelId: a
                       });
             },
             align: 'right',

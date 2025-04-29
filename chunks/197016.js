@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(200651);
 n(192379);
 var i = n(685072),
-    a = n(287734),
-    o = n(871499),
+    o = n(287734),
+    a = n(871499),
     s = n(388032);
 function l(e, t, n) {
     return (
@@ -63,8 +63,8 @@ function f(e, t) {
         r,
         i = _(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -73,16 +73,16 @@ function _(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function p(e) {
     var { centerButton: t = !1, onClick: n, onMouseEnter: l, onMouseLeave: u } = e,
         _ = f(e, ['centerButton', 'onClick', 'onMouseEnter', 'onMouseLeave']);
-    let p = t ? o.d : o.Z,
+    let p = t ? a.d : a.Z,
         h = () => {
-            null == n || n(), a.default.disconnect();
+            null == n || n(), o.default.disconnect();
         },
         m = () => s.intl.string(s.t['6vrfgo']),
         { Component: g, events: E } = (0, i.K)();

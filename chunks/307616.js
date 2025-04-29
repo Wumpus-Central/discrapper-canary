@@ -1,14 +1,14 @@
 n.d(t, {
     n: () => S,
-    v: () => O
+    v: () => v
 }),
     n(388685),
     n(415506),
     n(482853);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n.n(s),
     c = n(215569),
@@ -35,15 +35,15 @@ function b(e, t, n) {
     );
 }
 let y = [f.ZP, _.ZP];
-class v extends i.PureComponent {
+class O extends i.PureComponent {
     render() {
         let { render: e, LayerComponent: t, isTopModal: n, instant: i } = this.props,
-            a = i ? m.Dv.ENTERED : this.state.transitionState;
+            o = i ? m.Dv.ENTERED : this.state.transitionState;
         return (0, r.jsx)(t, {
             children: (0, r.jsx)('div', {
-                className: o()(E.layer, !n && E.hidden),
+                className: a()(E.layer, !n && E.hidden),
                 children: e({
-                    transitionState: a,
+                    transitionState: o,
                     onClose: this.close
                 })
             })
@@ -91,20 +91,20 @@ class v extends i.PureComponent {
             );
     }
 }
-function O() {
+function v() {
     return (0, h.Vn)((0, d.bp)());
 }
 let I = [];
 function S() {
-    let e = O(),
+    let e = v(),
         t = (0, h.s9)((t) => (void 0 !== t[e] ? t[e] : I)),
         n = i.useRef(void 0);
     i.useLayoutEffect(() => {
         n.current = t[t.length - 1];
     }, [t]);
-    let a = t.length > 0;
+    let o = t.length > 0;
     i.useLayoutEffect(() => {
-        if (!a) return;
+        if (!o) return;
         let e = () => {
             let e = n.current;
             null != e && null != e.onCloseRequest && e.onCloseRequest();
@@ -115,8 +115,8 @@ function S() {
                 p.S.unsubscribe(g.CkL.MODAL_CLOSE, e);
             }
         );
-    }, [a]);
-    let o = i.useCallback(() => {
+    }, [o]);
+    let a = i.useCallback(() => {
             let e = n.current;
             null != e && null != e.onCloseRequest && e.onCloseRequest();
         }, []),
@@ -132,28 +132,28 @@ function S() {
         children: [
             y.map((e, n) => {
                 var i;
-                let a = l().findLast(t, (t) => t.Layer === e || (null == t.Layer && e === f.ZP));
+                let o = l().findLast(t, (t) => t.Layer === e || (null == t.Layer && e === f.ZP));
                 return (0, r.jsx)(
                     u.YMn,
                     {
                         isVisible: d[n],
-                        backdropStyle: null != (i = null == a ? void 0 : a.backdropStyle) ? i : u.fCB.DARK,
-                        onClose: o,
+                        backdropStyle: null != (i = null == o ? void 0 : o.backdropStyle) ? i : u.fCB.DARK,
+                        onClose: a,
                         LayerComponent: e,
-                        backdropInstant: null == a ? void 0 : a.instant
+                        backdropInstant: null == o ? void 0 : o.instant
                     },
                     'layer-'.concat(n)
                 );
             }),
             t.map((e, n) => {
-                let { key: i, Layer: a, render: o, instant: l } = e;
+                let { key: i, Layer: o, render: a, instant: l } = e;
                 return (0, r.jsx)(
-                    v,
+                    O,
                     {
                         modalKey: i,
-                        LayerComponent: null != a ? a : f.ZP,
+                        LayerComponent: null != o ? o : f.ZP,
                         isTopModal: n === t.length - 1,
-                        render: o,
+                        render: a,
                         closeModal: s,
                         instant: l
                     },

@@ -1,9 +1,9 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => v });
 var r = n(200651);
 n(192379);
 var i = n(704215),
-    a = n(952265),
-    o = n(468026),
+    o = n(952265),
+    a = n(468026),
     s = n(231757),
     l = n(605236),
     c = n(131951),
@@ -66,8 +66,8 @@ function b(e, t) {
     );
 }
 let y = 'game_console_alert_modal',
-    v = 'game_console_ptt_alert_modal',
-    O = {
+    O = 'game_console_ptt_alert_modal',
+    v = {
         maybeShowPTTAlert(e) {
             if (c.Z.getMode() !== _.pM4.PUSH_TO_TALK || (0, l.un)(i.z.CONSOLE_PTT_DISABLE_ALERT)) return Promise.resolve();
             let t = {
@@ -83,7 +83,7 @@ let y = 'game_console_alert_modal',
                           },
                           s = (e) =>
                               (0, r.jsx)(
-                                  o.default,
+                                  a.default,
                                   b(g({}, e), {
                                       title: t,
                                       body: p.intl.string(p.t.bL21zs),
@@ -91,7 +91,7 @@ let y = 'game_console_alert_modal',
                                       titleClassName: h.title
                                   })
                               );
-                      (0, a.nf)(v) ? (0, a.o)(v, s) : (0, a.h7)(s, { modalKey: v });
+                      (0, o.nf)(O) ? (0, o.o)(O, s) : (0, o.h7)(s, { modalKey: O });
                   });
         },
         showSelfDismissableAlert(e) {
@@ -99,7 +99,7 @@ let y = 'game_console_alert_modal',
                 c = (0, r.jsx)(d.t, {
                     body: n,
                     errorCodeMessage: i,
-                    dismissCallback: () => (0, a.Mr)(y)
+                    dismissCallback: () => (0, o.Mr)(y)
                 });
             function p() {
                 null != l &&
@@ -112,13 +112,13 @@ let y = 'game_console_alert_modal',
             }
             let h = (e) =>
                 (0, r.jsx)(
-                    o.default,
+                    a.default,
                     b(g({}, e), {
                         title: t,
                         body: c,
                         onConfirm: p
                     })
                 );
-            (0, a.nf)(y) ? (0, a.o)(y, h) : (0, a.h7)(h, { modalKey: y });
+            (0, o.nf)(y) ? (0, o.o)(y, h) : (0, o.h7)(h, { modalKey: y });
         }
     };

@@ -10,8 +10,8 @@ n.d(t, {
     n(415506);
 var r = n(200651),
     i = n(192379),
-    a = n(772848),
-    o = n(286379),
+    o = n(772848),
+    a = n(286379),
     s = n(442837),
     l = n(493773),
     c = n(110924),
@@ -64,7 +64,7 @@ function y(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -75,7 +75,7 @@ function v(e, t) {
         e
     );
 }
-let O = 60,
+let v = 60,
     I = 1,
     S = 0.5,
     T = new Set();
@@ -168,7 +168,7 @@ class N {
             }),
             E(this, 'commonProperties', (e) =>
                 b(
-                    v(b({ impression_id: this.id }, (0, p.eE)(this.adDecisionData)), {
+                    O(b({ impression_id: this.id }, (0, p.eE)(this.adDecisionData)), {
                         is_quest_enrollment_blocked: this.isQuestEnrollmentBlocked,
                         quest_status: (0, d.uk)(e)
                     }),
@@ -194,7 +194,7 @@ class N {
             E(this, 'start', () => {
                 this.stop(!1),
                     (this.lastBeatTime = Date.now()),
-                    (this.heartbeatTimeoutId = window.setInterval(() => this.beat(), 1000 * O)),
+                    (this.heartbeatTimeoutId = window.setInterval(() => this.beat(), 1000 * v)),
                     (this.minViewTimeReachedTimeoutId = window.setTimeout(this.onMinViewTimeReached, 1000 * this.minViewTimeSeconds)),
                     this.quests.forEach((e) => {
                         (0, m.T)().info(''.concat(e.config.messages.questName, ' Quest became visible at ').concat((0, d._b)(this.questContent)), { impressionId: this.id }),
@@ -207,7 +207,7 @@ class N {
                     }),
                     (0, h.a)('QuestImpressionTracker') &&
                         u.Z.increment({
-                            name: o.V.QUEST_CONTENT_IMPRESSION,
+                            name: a.V.QUEST_CONTENT_IMPRESSION,
                             tags: ['quest_content:'.concat((0, d._b)(this.questContent))]
                         }),
                     (this.isRunning = !0);
@@ -216,7 +216,7 @@ class N {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
                 e && _.beat(!0), (_.lastBeatTime = void 0), clearInterval(_.heartbeatTimeoutId), clearTimeout(_.minViewTimeReachedTimeoutId), (_.isRunning = !1);
             }),
-            (this.id = (0, a.Z)()),
+            (this.id = (0, o.Z)()),
             (this.adDecisionData = n),
             (this.questContent = t),
             (this.questContentPosition = s),
@@ -253,7 +253,7 @@ function D() {
     return null == (e = w()) ? void 0 : e.getId();
 }
 function L(e) {
-    let { visible: t, visibleChanged: n, focused: a, reference: o, focusedChanged: c } = e,
+    let { visible: t, visibleChanged: n, focused: o, reference: a, focusedChanged: c } = e,
         u = R(e.questOrQuests),
         d = (0, f.KZ)(e.questContent),
         p = i.useRef(null),
@@ -263,10 +263,10 @@ function L(e) {
             null != p.current && p.current.stop();
         }),
         i.useEffect(() => {
-            let r = a && t,
+            let r = o && t,
                 i = (n || c || u) && r,
-                o = ((n || c) && !r) || u;
-            (i || o) && null != p.current && p.current.stop(),
+                a = ((n || c) && !r) || u;
+            (i || a) && null != p.current && p.current.stop(),
                 i &&
                     ((p.current = new N({
                         adDecisionData: d,
@@ -280,10 +280,10 @@ function L(e) {
                         isQuestEnrollmentBlocked: h
                     })),
                     p.current.start());
-        }, [a, t, c, n, e.questOrQuests, e.questContent, e.questContentPosition, e.questContentRowIndex, e.trackGuildAndChannelMetadata, u, e.minViewTimeSeconds, d, h]),
+        }, [o, t, c, n, e.questOrQuests, e.questContent, e.questContentPosition, e.questContentRowIndex, e.trackGuildAndChannelMetadata, u, e.minViewTimeSeconds, d, h]),
         (0, r.jsx)(P.Provider, {
             value: p,
-            children: e.children(o, p)
+            children: e.children(a, p)
         })
     );
 }

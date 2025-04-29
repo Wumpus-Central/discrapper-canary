@@ -22,18 +22,18 @@ var r =
             for (var n in e) 'default' === n || Object.prototype.hasOwnProperty.call(t, n) || r(t, e, n);
         };
 Object.defineProperty(t, '__esModule', { value: !0 }), (t.makeMessagesProxy = t.chainMessagesObjects = t.MessageLoader = t.waitForAllDefaultIntlMessagesLoaded = t.loadAllMessagesInLocale = t.createLoader = t.DEFAULT_LOCALE = t.IntlManager = t.runtimeHashMessageKey = t.bindFormatValues = t.FormatBuilder = t.dataFormatterCache = t.makeDataFormatters = void 0);
-var a = n(707073);
+var o = n(707073);
 Object.defineProperty(t, 'makeDataFormatters', {
     enumerable: !0,
     get: function () {
-        return a.makeDataFormatters;
+        return o.makeDataFormatters;
     }
 });
-var o = n(719371);
+var a = n(719371);
 Object.defineProperty(t, 'dataFormatterCache', {
     enumerable: !0,
     get: function () {
-        return o.dataFormatterCache;
+        return a.dataFormatterCache;
     }
 });
 var s = n(481078);

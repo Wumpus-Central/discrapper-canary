@@ -2,8 +2,8 @@ n.d(t, { Z: () => b }), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(893776),
-    o = n(147913),
+    o = n(893776),
+    a = n(147913),
     s = n(594174),
     l = n(626135),
     c = n(374023),
@@ -63,7 +63,7 @@ function m(e, t) {
     );
 }
 let g = 'LOGIN_REQUIRED_ACTIONS_MODAL_KEY';
-class E extends o.Z {
+class E extends a.Z {
     handleConnectionOpen() {
         let e = s.default.getCurrentUser();
         if (null == e || c.s.isDisallowPopupsSet()) return;
@@ -74,7 +74,7 @@ class E extends o.Z {
                       let { default: e } = await n.e('48707').then(n.bind(n, 194530));
                       return function (t) {
                           let n = () => {
-                                  t.onClose(), a.Z.logout('login_required_account_manager', d.Z5c.LOGIN);
+                                  t.onClose(), o.Z.logout('login_required_account_manager', d.Z5c.LOGIN);
                               },
                               i = () => {
                                   l.default.track(d.rMx.FORCED_UPDATE_PASSWORD_SUCCEEDED), t.onClose();
@@ -95,7 +95,7 @@ class E extends o.Z {
                       instant: !0
                   }
               )
-            : t && a.Z.logout('login_required_account_manager', d.Z5c.LOGIN);
+            : t && o.Z.logout('login_required_account_manager', d.Z5c.LOGIN);
     }
     constructor(...e) {
         super(...e), _(this, 'actions', { POST_CONNECTION_OPEN: this.handleConnectionOpen });

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x }), n(388685);
 var r = n(913527),
     i = n.n(r),
-    a = n(570140),
-    o = n(147913),
+    o = n(570140),
+    a = n(147913),
     s = n(335131),
     l = n(228624),
     c = n(959546),
@@ -29,15 +29,15 @@ function E(e, t, n) {
 }
 let b = null,
     y = !1,
-    v = 1209600000,
-    O = 86400000;
+    O = 1209600000,
+    v = 86400000;
 function I(e) {
     let t = c.Z.createFromServer(e.entitlement);
     (0, m._k)(t)
         ? S({ forceRefresh: !0 })
         : (0, m.YE)(t)
           ? null != h.Z.getTenureRewardStatusForRewardId(t.skuId) &&
-            a.Z.dispatch({
+            o.Z.dispatch({
                 type: 'USER_TENURE_REWARD_STATUS_DELETE',
                 tenureRewardIds: [t.skuId]
             })
@@ -54,7 +54,7 @@ function S() {
         n = (0, m.kG)(t),
         r = u.default.getCurrentUser();
     if (!(0, f.M5)(r, g.p9.TIER_2) && null == n) {
-        null != r && a.Z.dispatch({ type: 'USER_TENURE_REWARD_STATUS_RESET' });
+        null != r && o.Z.dispatch({ type: 'USER_TENURE_REWARD_STATUS_RESET' });
         return;
     }
     if ((0, p.dR)({ location: 'tenure_reward_manager' }))
@@ -66,7 +66,7 @@ function S() {
                 .filter((e) => null != h.Z.getTenureRewardStatusForRewardId(e.skuId))
                 .map((e) => e.skuId);
             t.length > 0 &&
-                a.Z.dispatch({
+                o.Z.dispatch({
                     type: 'USER_TENURE_REWARD_STATUS_DELETE',
                     tenureRewardIds: t
                 });
@@ -74,7 +74,7 @@ function S() {
 }
 function T() {
     let e = h.Z.getState();
-    return null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > v;
+    return null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > O;
 }
 function A() {
     let e = (0, m.GT)();
@@ -93,7 +93,7 @@ function C() {
     null != t && t > 0 && (b = setTimeout(S, t));
 }
 async function R() {
-    y || ((y = !0), await _.V(), (y = !1), a.Z.wait(() => C()));
+    y || ((y = !0), await _.V(), (y = !1), o.Z.wait(() => C()));
 }
 function P() {
     clearTimeout(b), (b = null);
@@ -104,10 +104,10 @@ function w() {
 function D() {
     S();
 }
-class L extends o.Z {
+class L extends a.Z {
     forceRefreshIfOutdated() {
         let e = h.Z.getState();
-        null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > O && S({ forceRefresh: !0 });
+        null != e.lastFetchTimeMs && Date.now() - e.lastFetchTimeMs > v && S({ forceRefresh: !0 });
     }
     constructor(...e) {
         super(...e),

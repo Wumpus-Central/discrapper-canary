@@ -15,17 +15,17 @@ n.d(t, {
     EA: () => T,
     ET: () => J,
     EZ: () => eU,
-    F$: () => v,
+    F$: () => O,
     FL: () => F,
     F_: () => l,
     GP: () => A,
     HO: () => ew,
     Hk: () => q,
-    IW: () => O,
-    Lw: () => eO,
+    IW: () => v,
+    Lw: () => ev,
     M_: () => e1,
     Nl: () => e_,
-    OT: () => eo,
+    OT: () => ea,
     QF: () => eN,
     QI: () => eW,
     QP: () => eL,
@@ -71,7 +71,7 @@ n.d(t, {
     gW: () => ep,
     gh: () => U,
     h1: () => ex,
-    h8: () => ea,
+    h8: () => eo,
     hX: () => eX,
     hs: () => es,
     i_: () => H,
@@ -94,7 +94,7 @@ n.d(t, {
     rX: () => B,
     rt: () => e0,
     vK: () => e4,
-    vL: () => ev,
+    vL: () => eO,
     w1: () => eg,
     wh: () => W,
     xT: () => ee,
@@ -105,8 +105,8 @@ n.d(t, {
     n(388685);
 var r = n(314794),
     i = n(981631),
-    a = n(185923),
-    o = n(388032),
+    o = n(185923),
+    a = n(388032),
     s = (function (e) {
         return (e[(e.TIER_1 = 1)] = 'TIER_1'), (e[(e.TIER_2 = 2)] = 'TIER_2'), (e[(e.TIER_0 = 3)] = 'TIER_0'), e;
     })({});
@@ -154,8 +154,8 @@ let g = new Set(['978380692553465866', '1024422698568122368', '51165187173620121
     E = new Set(['511651880837840896', '642251038925127690', '944037208325619722', '511651885459963904']),
     b = new Set(['590665532894740483', '944037355453415424', '944037391444738048', '590665538238152709']),
     y = new Set(['642251038925127690', '944037208325619722', '944037355453415424', '944037391444738048']),
-    v = new Set(['628379151761408000', '944265614527037440', '944265636643602432', '628381571568631808']),
-    O = Object.freeze({
+    O = new Set(['628379151761408000', '944265614527037440', '944265636643602432', '628381571568631808']),
+    v = Object.freeze({
         '978380684370378762': '978380692553465866',
         '521846918637420545': '511651871736201216',
         '521847234246082599': '511651880837840896',
@@ -347,8 +347,8 @@ let A = Object.freeze({
     en = '1271484512081285191',
     er = '1161363847311785984',
     ei = [H, Y, W, K, z, q, Q, X, J, $, ee, et, en, er],
-    ea = [$, ee, en],
-    eo = [$, en],
+    eo = [$, ee, en],
+    ea = [$, en],
     es = '1150904354090532864',
     el = '1199128659810582528',
     ec = '1204865493622587392',
@@ -509,13 +509,13 @@ var eb = (function (e) {
     ey = (function (e) {
         return (e[(e.PREMIUM_TIER_1 = 1)] = 'PREMIUM_TIER_1'), (e[(e.PREMIUM_TIER_2 = 2)] = 'PREMIUM_TIER_2'), (e[(e.GUILD_BOOST = 4)] = 'GUILD_BOOST'), (e[(e.PREMIUM_TIER_0 = 8)] = 'PREMIUM_TIER_0'), (e[(e.ON_REVERSE_TRIAL = 16)] = 'ON_REVERSE_TRIAL'), e;
     })({});
-let ev = Object.freeze({
+let eO = Object.freeze({
         '978380684370378762': 8,
         '521846918637420545': 1,
         '521847234246082599': 2,
         '590663762298667008': 4
     }),
-    eO = 52428800,
+    ev = 52428800,
     eI = 52428800,
     eS = 524288000,
     eT = 52428800,
@@ -543,7 +543,7 @@ let ev = Object.freeze({
         [i.Eu4.NONE]: {
             features: [],
             limits: {
-                emoji: a.xD,
+                emoji: o.xD,
                 bitrate: i.eWB,
                 fileSize: i.mBz,
                 screenShareQualityFramerate: 30,
@@ -629,7 +629,7 @@ let eV = Object.freeze({
         SUPPRESS_NOTIFICATION: 128
     }),
     eF = Object.freeze({
-        3: { fileSize: eO },
+        3: { fileSize: ev },
         1: { fileSize: eI },
         2: { fileSize: eS }
     });
@@ -661,49 +661,49 @@ var e3 = (function (e) {
 let e4 = {
     premium_tenure_1_month_v2: {
         id: 'premium_tenure_1_month_v2',
-        nameUnformatted: o.t.LR1C0d,
+        nameUnformatted: a.t.LR1C0d,
         tenureReqNumMonths: 1,
         hasWideArt: !1
     },
     premium_tenure_3_month_v2: {
         id: 'premium_tenure_3_month_v2',
-        nameUnformatted: o.t['rI1/3N'],
+        nameUnformatted: a.t['rI1/3N'],
         tenureReqNumMonths: 3,
         hasWideArt: !1
     },
     premium_tenure_6_month_v2: {
         id: 'premium_tenure_6_month_v2',
-        nameUnformatted: o.t.VkhVKS,
+        nameUnformatted: a.t.VkhVKS,
         tenureReqNumMonths: 6,
         hasWideArt: !1
     },
     premium_tenure_12_month_v2: {
         id: 'premium_tenure_12_month_v2',
-        nameUnformatted: o.t.gzUfNT,
+        nameUnformatted: a.t.gzUfNT,
         tenureReqNumMonths: 12,
         hasWideArt: !1
     },
     premium_tenure_24_month_v2: {
         id: 'premium_tenure_24_month_v2',
-        nameUnformatted: o.t.fuwTPj,
+        nameUnformatted: a.t.fuwTPj,
         tenureReqNumMonths: 24,
         hasWideArt: !1
     },
     premium_tenure_36_month_v2: {
         id: 'premium_tenure_36_month_v2',
-        nameUnformatted: o.t.qNhNk5,
+        nameUnformatted: a.t.qNhNk5,
         tenureReqNumMonths: 36,
         hasWideArt: !1
     },
     premium_tenure_60_month_v2: {
         id: 'premium_tenure_60_month_v2',
-        nameUnformatted: o.t['wvX+eH'],
+        nameUnformatted: a.t['wvX+eH'],
         tenureReqNumMonths: 60,
         hasWideArt: !0
     },
     premium_tenure_72_month_v2: {
         id: 'premium_tenure_72_month_v2',
-        nameUnformatted: o.t['/menIy'],
+        nameUnformatted: a.t['/menIy'],
         tenureReqNumMonths: 72,
         hasWideArt: !0
     }

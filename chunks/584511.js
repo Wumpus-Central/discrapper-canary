@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(481060),
     l = n(686546),
     c = n(131951),
@@ -41,8 +41,8 @@ var _ = (function (e) {
     return (e[(e.OUTGOING = 0)] = 'OUTGOING'), (e[(e.INCOMING = 1)] = 'INCOMING'), e;
 })(_ || {});
 function p(e) {
-    let { userId: t, size: n, speaking: i = !1, muted: d = !1, deafen: _ = !1, src: p, disabled: h = !1, ringing: m, ringingType: g = 0, avatarClassName: E, renderIcon: b, style: y, onClick: v, onContextMenu: O, className: I } = e,
-        S = (0, o.e7)([c.Z], () => null != t && c.Z.isLocalMute(t)),
+    let { userId: t, size: n, speaking: i = !1, muted: d = !1, deafen: _ = !1, src: p, disabled: h = !1, ringing: m, ringingType: g = 0, avatarClassName: E, renderIcon: b, style: y, onClick: O, onContextMenu: v, className: I } = e,
+        S = (0, a.e7)([c.Z], () => null != t && c.Z.isLocalMute(t)),
         T = () => {
             let e = S ? s.v0G : _ ? s.wE8 : s.nRN;
             return d || _ || S
@@ -59,7 +59,7 @@ function p(e) {
                   })
                 : null;
         },
-        A = () => (0, r.jsx)('div', { className: a()(u.border, { [u.speaking]: i }) }, 'border'),
+        A = () => (0, r.jsx)('div', { className: o()(u.border, { [u.speaking]: i }) }, 'border'),
         N = () =>
             d && i
                 ? (0, r.jsxs)(r.Fragment, {
@@ -73,7 +73,7 @@ function p(e) {
                 t = (0, r.jsx)('img', {
                     src: p,
                     alt: ' ',
-                    className: a()(u.voiceAvatar, E, { [u.ringingOutgoing]: m && 0 === g })
+                    className: o()(u.voiceAvatar, E, { [u.ringingOutgoing]: m && 0 === g })
                 });
             if (h) return t;
             let i = l.QS.AVATAR_DEFAULT;
@@ -94,10 +94,10 @@ function p(e) {
                 })
             );
         },
-        R = a()(
+        R = o()(
             u.wrapper,
             {
-                [u.clickable]: null != v,
+                [u.clickable]: null != O,
                 [u.ringingOutgoing]: m && 0 === g,
                 [u.ringingIncoming]: m && 1 === g
             },
@@ -113,7 +113,7 @@ function p(e) {
         );
     return (0, r.jsx)('div', {
         style: w,
-        onContextMenu: O,
+        onContextMenu: v,
         className: R,
         children: C()
     });

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A });
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(594174),
+    o = n(570140),
+    a = n(594174),
     s = n(626135),
     l = n(74538),
     c = n(997945),
@@ -32,14 +32,14 @@ let p = 2,
     m = !1,
     g = !0,
     E = () => {
-        g = !l.ZP.canUsePremiumAppIcons(o.default.getCurrentUser());
+        g = !l.ZP.canUsePremiumAppIcons(a.default.getCurrentUser());
     },
     b = (e) => {
         if (((h.client.desktop = e), !g)) {
             var t;
             s.default.track(u.rMx.APP_ICON_UPDATED, {
                 icon_id: e,
-                user_premium_tier: null == (t = o.default.getCurrentUser()) ? void 0 : t.premiumType,
+                user_premium_tier: null == (t = a.default.getCurrentUser()) ? void 0 : t.premiumType,
                 icon_premium_tier: e !== c.aH.DEFAULT ? f.p9.TIER_2 : null
             });
         }
@@ -48,10 +48,10 @@ function y(e) {
     let { id: t } = e;
     null != t && b(t);
 }
-function v() {
+function O() {
     m = !0;
 }
-function O() {
+function v() {
     I(), (m = !1);
 }
 function I() {
@@ -63,11 +63,11 @@ function I() {
 }
 function S(e) {
     let { markAsDismissed: t } = e;
-    (h.client.coachmarkImpressions += 1), h.client.coachmarkImpressions >= p && (null == t || t(d.L.UNKNOWN), O());
+    (h.client.coachmarkImpressions += 1), h.client.coachmarkImpressions >= p && (null == t || t(d.L.UNKNOWN), v());
 }
 class T extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (h = e), this.waitFor(o.default), this.syncWith([o.default], E);
+        null != e && (h = e), this.waitFor(a.default), this.syncWith([a.default], E);
     }
     get isEditorOpen() {
         return m;
@@ -84,11 +84,11 @@ class T extends (r = i.ZP.PersistedStore) {
     }
 }
 _(T, 'displayName', 'AppIconPersistedStoreState'), _(T, 'persistKey', 'AppIconPersistedStoreState');
-let A = new T(a.Z, {
+let A = new T(o.Z, {
     APP_ICON_UPDATED: y,
-    APP_ICON_EDITOR_OPEN: v,
-    APP_ICON_EDITOR_CLOSE: O,
+    APP_ICON_EDITOR_OPEN: O,
+    APP_ICON_EDITOR_CLOSE: v,
     APP_ICON_EDITOR_RESET: I,
     APP_ICON_TRACK_IMPRESSION: S,
-    LOGOUT: O
+    LOGOUT: v
 });

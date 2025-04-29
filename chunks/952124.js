@@ -1,8 +1,8 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => v });
 var r = n(200651),
     i = n(192379),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(100527),
     l = n(906732),
     c = n(279332),
@@ -29,7 +29,7 @@ function y(e, t, n) {
         e
     );
 }
-function v(e) {
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,13 +45,13 @@ function v(e) {
     }
     return e;
 }
-function O(e) {
-    let { user: t, guildId: n, viewProfileItem: y, onCloseProfile: O } = e,
+function v(e) {
+    let { user: t, guildId: n, viewProfileItem: y, onCloseProfile: v } = e,
         I = i.useRef(null),
         { trackUserProfileAction: S } = (0, m.KZ)(),
         { analyticsLocations: T, newestAnalyticsLocation: A } = (0, l.ZP)(s.Z.USER_PROFILE_OVERFLOW_MENU),
         N = c.J.useExperiment({ location: 'UserSettingsAuthedApps' }, { autoTrackExposure: !0 }).enabled,
-        C = (0, a.e7)([g.Z], () => g.Z.getUserProfile(t.id)),
+        C = (0, o.e7)([g.Z], () => g.Z.getUserProfile(t.id)),
         R = null == C ? void 0 : C.application,
         P = (0, f.Z)({
             user: t,
@@ -62,7 +62,7 @@ function O(e) {
                     action: 'MANAGE_APP',
                     analyticsLocations: T
                 }),
-                    null == O || O();
+                    null == v || v();
             }
         }),
         w = (0, _.Z)({
@@ -135,26 +135,26 @@ function O(e) {
         ];
     return M.every((e) => e.every((e) => null == e))
         ? null
-        : (0, r.jsx)(o.yRy, {
+        : (0, r.jsx)(a.yRy, {
               targetElementRef: I,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, r.jsx)(o.v2r, {
+                  return (0, r.jsx)(a.v2r, {
                       navId: 'user-bot-profile-overflow-menu',
                       onSelect: void 0,
                       onClose: t,
                       'aria-label': b.intl.string(b.t.AXIHpa),
-                      children: M.map((e, t) => (0, r.jsx)(o.kSQ, { children: e.map((e) => e) }, t))
+                      children: M.map((e, t) => (0, r.jsx)(a.kSQ, { children: e.map((e) => e) }, t))
                   });
               },
               children: (e) =>
                   (0, r.jsx)(
                       E.oY,
-                      v(
+                      O(
                           {
                               ref: I,
                               action: 'PRESS_OPTIONS',
-                              icon: o.xhG,
+                              icon: a.xhG,
                               tooltipText: b.intl.string(b.t.UKOtz8)
                           },
                           e

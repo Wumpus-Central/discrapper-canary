@@ -1,14 +1,14 @@
 n.d(t, {
     $$: () => i,
     Al: () => s,
-    L0: () => o,
-    dG: () => a,
+    L0: () => a,
+    dG: () => o,
     k0: () => r
 });
 let r = 2 * n(70956).Z.Millis.HOUR,
     i = 'new-user-age-gate-modal',
-    a = 'existing-user-age-gate-modal';
-var o = (function (e) {
+    o = 'existing-user-age-gate-modal';
+var a = (function (e) {
         return (e.AUTH = 'Register Age Gate'), (e.NEW_USER_FLOW = 'NUF'), (e.CLAIM_ACCOUNT = 'Claim Age Gate'), (e.NSFW_CHANNEL = 'NSFW Channel'), (e.NSFW_SERVER = 'NSFW Server'), (e.NSFW_SERVER_INVITE = 'NSFW Server Invite'), (e.NSFW_SERVER_INVITE_EMBED = 'NSFW Server Invite Embed'), (e.NSFW_VOICE_CHANNEL = 'NSFW Voice Channel'), (e.FAMILY_CENTER = 'Family Center'), (e.REGISTER = 'Register'), (e.DEEP_LINK_PROMPT = 'Deep Link Prompt'), (e.UNSPECIFIED = 'Unspecified'), e;
     })({}),
     s = (function (e) {

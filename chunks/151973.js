@@ -1,27 +1,27 @@
-n.d(t, { Z: () => o }), n(388685);
+n.d(t, { Z: () => a }), n(388685);
 var r = n(192379);
 function i(e, t, n) {
     return [Math.floor(e / n) - 1, Math.ceil((e + t) / n) + 1];
 }
-let a = [0, 0];
-function o(e) {
-    let { chunkSize: t, getScrollerState: n, forceUpdate: o } = e,
+let o = [0, 0];
+function a(e) {
+    let { chunkSize: t, getScrollerState: n, forceUpdate: a } = e,
         { dirty: s, scrollTop: l, offsetHeight: c } = n();
     (0, r.useLayoutEffect)(() => {
-        s > 0 && o();
-    }, [s, o]);
-    let u = (0, r.useRef)(a);
+        s > 0 && a();
+    }, [s, a]);
+    let u = (0, r.useRef)(o);
     u.current = i(l, c, t);
     let [d, f] = u.current;
     return {
         forceUpdateOnChunkChange: (0, r.useCallback)(
             (e) => {
-                let { dirty: r, scrollTop: a, offsetHeight: s } = n();
+                let { dirty: r, scrollTop: o, offsetHeight: s } = n();
                 if (r > 0) return;
-                let [l, c] = i(a, s, t);
-                l !== u.current[0] ? o() : 2 === e && c !== u.current[1] && o();
+                let [l, c] = i(o, s, t);
+                l !== u.current[0] ? a() : 2 === e && c !== u.current[1] && a();
             },
-            [o, t, n]
+            [a, t, n]
         ),
         chunkStart: d,
         chunkEnd: f,

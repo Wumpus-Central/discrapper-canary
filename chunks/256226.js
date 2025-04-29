@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N });
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(91192),
     l = n(866442),
     c = n(442837),
@@ -17,7 +17,7 @@ var r = n(200651),
     E = n(884902),
     b = n(388032),
     y = n(577604);
-function v(e, t, n) {
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +30,7 @@ function v(e, t, n) {
         e
     );
 }
-function O(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function O(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                O(e, t, n[t]);
             });
     }
     return e;
@@ -75,8 +75,8 @@ function T(e, t) {
         r,
         i = A(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -85,12 +85,12 @@ function A(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let N = i.forwardRef(function (e, t) {
-    var a, v, I;
+    var o, O, I;
     let A,
         { canRemove: N, className: C, role: R, onRemove: P, guildId: w, disableBorderColor: D, onMouseDown: L } = e,
         x = (0, s.JA)(R.id),
@@ -102,7 +102,7 @@ let N = i.forwardRef(function (e, t) {
             guildId: w
         }),
         U = (0, c.e7)([_.Z], () => _.Z.roleStyle),
-        G = (null == (a = R.tags) ? void 0 : a.guild_connections) === null,
+        G = (null == (o = R.tags) ? void 0 : o.guild_connections) === null,
         B = i.useCallback(
             (e) => {
                 (0, f.jW)(e, async () => {
@@ -110,7 +110,7 @@ let N = i.forwardRef(function (e, t) {
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            S(O({}, t), {
+                            S(v({}, t), {
                                 id: R.id,
                                 label: b.intl.string(b.t.sMsaLi)
                             })
@@ -120,7 +120,7 @@ let N = i.forwardRef(function (e, t) {
             [R.id]
         ),
         V = (0, d.dQu)(u.Z.unsafe_rawColors.PRIMARY_300).hsl(),
-        F = null != (v = R.colorString) ? v : V,
+        F = null != (O = R.colorString) ? O : V,
         Z = null != (I = (0, l.wK)(F, 0.6)) ? I : void 0,
         H = u.Z.unsafe_rawColors.WHITE_500.css,
         Y = (0, l._i)(F);
@@ -148,14 +148,14 @@ let N = i.forwardRef(function (e, t) {
             });
     let K = i.useMemo(() => {
             var t;
-            return O({ borderColor: D ? void 0 : Z }, null != (t = e.style) ? t : {});
+            return v({ borderColor: D ? void 0 : Z }, null != (t = e.style) ? t : {});
         }, [Z, D, e.style]),
         z = () =>
             N
                 ? (0, r.jsx)(d.DY3, {
                       text: b.intl.string(b.t.u3RVsL),
                       children: (0, r.jsxs)(d.P3F, {
-                          className: o()(y.roleRemoveButtonCanRemove, y.roleRemoveButton),
+                          className: a()(y.roleRemoveButtonCanRemove, y.roleRemoveButton),
                           onClick: P,
                           tabIndex: M,
                           focusProps: { focusClassName: y.roleRemoveIconFocused },
@@ -184,10 +184,10 @@ let N = i.forwardRef(function (e, t) {
         children: (0, r.jsxs)(
             'div',
             S(
-                O(
+                v(
                     {
                         ref: t,
-                        className: o()(y.role, C),
+                        className: a()(y.role, C),
                         style: K,
                         onContextMenu: B,
                         onMouseDown: L,
@@ -199,7 +199,7 @@ let N = i.forwardRef(function (e, t) {
                 {
                     children: [
                         z(),
-                        null != j ? (0, r.jsx)(m.Z, S(O({ className: y.roleIcon }, j), { enableTooltip: !1 })) : null,
+                        null != j ? (0, r.jsx)(m.Z, S(v({ className: y.roleIcon }, j), { enableTooltip: !1 })) : null,
                         (0, r.jsx)('div', {
                             'aria-hidden': !0,
                             className: y.roleName,

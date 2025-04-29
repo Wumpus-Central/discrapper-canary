@@ -1,8 +1,8 @@
 let r, i;
 n.d(t, { Z: () => q });
-var a,
-    o = n(512722),
-    s = n.n(o),
+var o,
+    a = n(512722),
+    s = n.n(a),
     l = n(392711),
     c = n.n(l),
     u = n(442837),
@@ -16,8 +16,8 @@ var a,
     E = n(314897),
     b = n(131951),
     y = n(158776),
-    v = n(19780),
-    O = n(981631);
+    O = n(19780),
+    v = n(981631);
 function I(e, t, n) {
     return (
         t in e
@@ -36,7 +36,7 @@ let S = {},
     A = {},
     N = {},
     C = {},
-    R = O.hVg.THEATRE,
+    R = v.hVg.THEATRE,
     P = {};
 function w(e, t, n) {
     return (
@@ -48,7 +48,7 @@ function w(e, t, n) {
             initialLayout: R,
             analyticsContext: n,
             isStreamer: null != T[e],
-            parentMediaSessionId: v.Z.getMediaSessionId()
+            parentMediaSessionId: O.Z.getMediaSessionId()
         })
     );
 }
@@ -64,7 +64,7 @@ function x() {
     (r = null), (i = null), D();
 }
 function M(e) {
-    let { streamType: t, guildId: n, channelId: r, appContext: i, pid: a, sourceId: o, nativePickerStyleUsed: s, goLiveModalDurationMs: l } = e,
+    let { streamType: t, guildId: n, channelId: r, appContext: i, pid: o, sourceId: a, nativePickerStyleUsed: s, goLiveModalDurationMs: l } = e,
         u = (0, p.V9)({
             streamType: t,
             guildId: n,
@@ -77,11 +77,11 @@ function M(e) {
             let { analyticsContext: t, isOwner: n } = e;
             t.setActionContext(i), t.setNativePickerStyleUsed(s), n && t.trackStart();
         }),
-        (N[u] = o),
-        (A[u] = a),
-        null != a)
+        (N[u] = a),
+        (A[u] = o),
+        null != o)
     ) {
-        let e = f.ZP.getGameForPID(a);
+        let e = f.ZP.getGameForPID(o);
         null != e &&
             (T[u] = {
                 name: e.name,
@@ -104,10 +104,10 @@ function k(e) {
         delete C[n];
 }
 function j(e) {
-    let { streamKey: t, rtcServerId: n, region: r, viewerIds: a } = e;
+    let { streamKey: t, rtcServerId: n, region: r, viewerIds: o } = e;
     i = t;
-    let o = P[t];
-    if (null == o && null != n) {
+    let a = P[t];
+    if (null == a && null != n) {
         null == A[t] && (T[t] = null);
         let e = (0, p.my)(t);
         null == T[t] && null == N[t] && (T[t] = (0, h.L2)(e, y.Z));
@@ -116,14 +116,14 @@ function j(e) {
             streamApplication: T[t],
             streamSourceType: K(N[t]),
             actionContext: S[t],
-            numViewers: null != a ? a.length : 0,
+            numViewers: null != o ? o.length : 0,
             goLiveModalDurationMs: C[t]
         });
-        (o = w(t, n, i)), (P[t] = o);
+        (a = w(t, n, i)), (P[t] = a);
     }
     d.Z.dispatch({
         type: 'MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET',
-        mediaEngineConnectionId: o.getMediaEngineConnectionId()
+        mediaEngineConnectionId: a.getMediaEngineConnectionId()
     });
 }
 function U(e) {
@@ -190,7 +190,7 @@ function K(e) {
     else if ((null == (r = platform) ? void 0 : r.name) === 'Safari') return 'window';
     return 'unknown';
 }
-class z extends (a = u.ZP.Store) {
+class z extends (o = u.ZP.Store) {
     getActiveStreamKey() {
         return (0, m.Z)(b.Z) ? i : null;
     }
@@ -204,10 +204,10 @@ class z extends (a = u.ZP.Store) {
         return P[e];
     }
     getQuality() {
-        if (!(0, m.Z)(b.Z)) return O.IE4.UNKNOWN;
+        if (!(0, m.Z)(b.Z)) return v.IE4.UNKNOWN;
         let e = this.getActiveStreamKey(),
             t = null != e ? P[e] : null;
-        return null != t ? t.quality : O.IE4.UNKNOWN;
+        return null != t ? t.quality : v.IE4.UNKNOWN;
     }
     getMediaSessionId(e) {
         if (null == e) return null;

@@ -2,8 +2,8 @@ n.d(t, { Z: () => E });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(481060),
     l = n(872810),
     c = n(493773),
@@ -17,30 +17,30 @@ var i = n(120356),
 let g = n(340109);
 function E(e) {
     let { stream: t, width: n, noArt: i = !1, selected: E = !1 } = e,
-        b = (0, o.e7)([f.Z], () => f.Z.getChannel(t.channelId)),
+        b = (0, a.e7)([f.Z], () => f.Z.getChannel(t.channelId)),
         y = (0, u.Q3)('StreamEnded');
-    function v(e) {
+    function O(e) {
         return e < 550 ? 'small' : e < 1000 ? 'medium' : 'large';
     }
     (0, c.ZP)(() => {
         (null == b ? void 0 : b.isGuildStageVoice()) && (0, l.aP)((0, d.V9)(t), !1);
     });
-    let O = () => (0, l.aP)((0, d.V9)(t)),
+    let v = () => (0, l.aP)((0, d.V9)(t)),
         I = h.intl.string(h.t['4EGMWF']),
-        S = v(n);
+        S = O(n);
     return y
         ? (0, r.jsx)(s.f6W, {
               disableAdaptiveTheme: !0,
               theme: p.BR.MIDNIGHT,
               children: (e) =>
                   (0, r.jsx)('div', {
-                      className: a()(m.container, e),
+                      className: o()(m.container, e),
                       children: (0, r.jsxs)('div', {
                           className: m.content,
                           children: [
                               (0, r.jsx)('div', {
-                                  className: a()(m.artContainer, m[S]),
-                                  children: (0, r.jsx)('div', { className: a()(m.art, m[S]) })
+                                  className: o()(m.artContainer, m[S]),
+                                  children: (0, r.jsx)('div', { className: o()(m.art, m[S]) })
                               }),
                               (0, r.jsxs)('div', {
                                   className: m.cta,
@@ -55,7 +55,7 @@ function E(e) {
                                           size: 'small' === S ? s.zxk.Sizes.MEDIUM : s.zxk.Sizes.LARGE,
                                           color: s.zxk.Colors.PRIMARY,
                                           onClick: (e) => {
-                                              e.stopPropagation(), O();
+                                              e.stopPropagation(), v();
                                           },
                                           children: (0, r.jsx)(s.Text, {
                                               color: 'none',
@@ -75,7 +75,7 @@ function E(e) {
               selected: E,
               size: (0, _.L)(n),
               header: h.intl.formatToMarkdownString(h.t['1Ww0Hh'], {}),
-              onCTAClick: O,
+              onCTAClick: v,
               callToAction: I
           });
 }

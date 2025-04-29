@@ -86,8 +86,8 @@ function b(e, t) {
 function y(e, t) {
     var m;
     let { analyticsLocations: y } = (0, s.ZP)(),
-        [_, O] = i.useState(!1),
-        [v, C] = i.useState(void 0),
+        [_, v] = i.useState(!1),
+        [O, C] = i.useState(void 0),
         j = (0, l.e7)([h.Z], () => {
             var t, n;
             return null != (n = null == (t = h.Z.getStateForGuild(e)) ? void 0 : t.appliedBoosts) ? n : 0;
@@ -98,7 +98,7 @@ function y(e, t) {
             (n) => {
                 let r = n ? d.H6 : d.Th;
                 return (
-                    O(!0),
+                    v(!0),
                     C(void 0),
                     r(e, t.skuId)
                         .catch((e) => {
@@ -106,13 +106,13 @@ function y(e, t) {
                             throw (C(null != (t = e.body.message) ? t : void 0), e);
                         })
                         .finally(() => {
-                            O(!1);
+                            v(!1);
                         })
                 );
             },
             [e, t.skuId]
         ),
-        I = i.useCallback(
+        P = i.useCallback(
             (e) => {
                 if ((e.stopPropagation(), null != S))
                     return E < t.cost
@@ -162,12 +162,12 @@ function y(e, t) {
             },
             [x, t, E, y, S]
         ),
-        P = i.useCallback((e) => (e.stopPropagation(), x(!1)), [x]);
+        I = i.useCallback((e) => (e.stopPropagation(), x(!1)), [x]);
     return {
         isLoading: _,
-        error: v,
-        onActivate: I,
-        onDeactivate: P,
+        error: O,
+        onActivate: P,
+        onDeactivate: I,
         onShowDeactivate: i.useCallback(
             (i) => {
                 i.stopPropagation(),

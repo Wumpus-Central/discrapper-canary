@@ -1,6 +1,6 @@
 n.d(t, {
     MO: () => f,
-    yx: () => o,
+    yx: () => a,
     zq: () => c
 }),
     n(413496),
@@ -9,9 +9,9 @@ n.d(t, {
     n(704826);
 let r = RegExp('\\p{Cf}|\\p{Zl}|\\p{Zp}|[^\\P{Cc}\\n]|[^\\P{Zs} ]', 'gu'),
     i = ['͏', '឴', '឵', 'ᅠ', 'ㅤ', 'ﾠ'],
-    a = RegExp(''.concat(r.source, '|').concat(i.join('|')), 'gu');
-function o(e) {
-    return e.replace(a, '');
+    o = RegExp(''.concat(r.source, '|').concat(i.join('|')), 'gu');
+function a(e) {
+    return e.replace(o, '');
 }
 let s = [
     {
@@ -77,10 +77,10 @@ function _(e) {
             (n += t), (r = r.substring(t.length)), (i = i.substring(t.length));
             continue;
         }
-        let a = String.fromCodePoint(t),
-            o = encodeURIComponent(a),
-            s = o === a ? 3 : o.length;
-        (n += d(t) ? a : o), (r = r.substring(s)), (i = i.substring(a.length));
+        let o = String.fromCodePoint(t),
+            a = encodeURIComponent(o),
+            s = a === o ? 3 : a.length;
+        (n += d(t) ? o : a), (r = r.substring(s)), (i = i.substring(o.length));
     }
     return n;
 }

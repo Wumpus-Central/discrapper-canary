@@ -1,7 +1,7 @@
 n.d(t, {
     Ah: () => E,
     CB: () => A,
-    aU: () => O,
+    aU: () => v,
     cp: () => N,
     eL: () => S,
     vg: () => T,
@@ -12,8 +12,8 @@ n.d(t, {
     n(388685);
 var r = n(192379),
     i = n(406432),
-    a = n(144140),
-    o = n(695346),
+    o = n(144140),
+    a = n(695346),
     s = n(592125),
     l = n(375954),
     c = n(594174),
@@ -37,7 +37,7 @@ var E = (function (e) {
     return (e.EMBED = 'embed'), (e.ATTACHMENT = 'attachment'), e;
 })({});
 function b(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.x4.getSetting();
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.x4.getSetting();
     if (!t) return [];
     let n = null == e ? void 0 : e.attachments;
     return null == e || null == n
@@ -46,11 +46,11 @@ function b(e) {
               .filter(g)
               .map((e, t) => {
                   var n;
-                  let { proxy_url: r, url: a, description: o, spoiler: s, flags: l, width: c, height: d, filename: f, content_scan_version: h } = e;
+                  let { proxy_url: r, url: o, description: a, spoiler: s, flags: l, width: c, height: d, filename: f, content_scan_version: h } = e;
                   if (null == c || null == d) return null;
                   let m = (0, i.NU)(f),
                       g = null != e.flags && (0, u.yE)(e.flags, p.J0y.IS_THUMBNAIL),
-                      E = null != r ? r : a;
+                      E = null != r ? r : o;
                   if (m) {
                       let e = _.Z.toURLSafe(r);
                       if (null == e) return null;
@@ -63,7 +63,7 @@ function b(e) {
                       spoiler: null != s && s,
                       flags: l,
                       contentScanVersion: h,
-                      alt: o,
+                      alt: a,
                       isVideo: m,
                       isThumbnail: g,
                       type: 'attachment',
@@ -75,23 +75,23 @@ function b(e) {
               .filter(d.lm);
 }
 function y(e) {
-    return b(e, o.x4.useSetting());
+    return b(e, a.x4.useSetting());
 }
-function v(e, t) {
-    let n = o.RS.useSetting(),
-        r = o.NA.useSetting();
+function O(e, t) {
+    let n = a.RS.useSetting(),
+        r = a.NA.useSetting();
     if (null == e) return [];
-    let a = e.embeds;
-    return n && r && null != a
-        ? a
+    let o = e.embeds;
+    return n && r && null != o
+        ? o
               .map((e, n) => {
                   var r;
-                  let a = null != (r = e.image) ? r : e.thumbnail;
-                  if ((null == a && null != e.images && (a = e.images[0]), null != a && null != a.url)) {
-                      let { height: r, proxyURL: o, url: s, width: l, flags: c } = a,
-                          d = null != o && (0, i.cb)(o);
+                  let o = null != (r = e.image) ? r : e.thumbnail;
+                  if ((null == o && null != e.images && (o = e.images[0]), null != o && null != o.url)) {
+                      let { height: r, proxyURL: a, url: s, width: l, flags: c } = o,
+                          d = null != a && (0, i.cb)(a);
                       return {
-                          src: null != o && '' !== o ? o : s,
+                          src: null != a && '' !== a ? a : s,
                           height: r,
                           width: l,
                           spoiler: t,
@@ -107,7 +107,7 @@ function v(e, t) {
               .filter(d.lm)
         : [];
 }
-function O(e, t) {
+function v(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = I(e, n);
     return r.useMemo(() => {
@@ -120,17 +120,17 @@ function O(e, t) {
     }, [t, i]);
 }
 function I(e, t) {
-    return [...y(e), ...v(e, t)];
+    return [...y(e), ...O(e, t)];
 }
 function S(e, t) {
     var n, r;
     let i = y(e),
-        a = v(e, t);
-    return null != (r = null != (n = i[0]) ? n : a[0]) ? r : null;
+        o = O(e, t);
+    return null != (r = null != (n = i[0]) ? n : o[0]) ? r : null;
 }
 function T(e, t) {
     let n = y(e),
-        r = v(e, t);
+        r = O(e, t);
     return null == n[0] && null != r[0];
 }
 function A(e, t) {
@@ -138,7 +138,7 @@ function A(e, t) {
     let r = s.Z.getChannel(t);
     if (null == r) return !1;
     let i = l.Z.getMessage(r.id, f.default.castChannelIdAsMessageId(r.id));
-    return null != i && e.length > 0 && null != e.find((e) => e.isImage || e.isVideo) && r.isForumPost() && r.ownerId === (null == (n = c.default.getCurrentUser()) ? void 0 : n.id) && 0 === a.Z.getCount(r.id) && (0 === i.attachments.length || null == i.attachments.find((e) => h(e) || m(e)));
+    return null != i && e.length > 0 && null != e.find((e) => e.isImage || e.isVideo) && r.isForumPost() && r.ownerId === (null == (n = c.default.getCurrentUser()) ? void 0 : n.id) && 0 === o.Z.getCount(r.id) && (0 === i.attachments.length || null == i.attachments.find((e) => h(e) || m(e)));
 }
 function N(e) {
     return e.reduce(

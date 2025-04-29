@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(388685);
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(823379),
+    o = n(570140),
+    a = n(823379),
     s = n(592125),
     l = n(486472),
     c = n(984933),
@@ -43,7 +43,7 @@ function E(e) {
 }
 function b(e) {
     let { userGuildSettings: t } = e,
-        n = new Set(t.map((e) => e.guild_id).filter(o.lm));
+        n = new Set(t.map((e) => e.guild_id).filter(a.lm));
     for (let e in f) {
         let t = s.Z.getChannel(e);
         null != t && null != t.guild_id && n.has(t.guild_id) && delete f[t.id];
@@ -56,14 +56,14 @@ function y(e) {
     } = e;
     return h(t);
 }
-function v(e) {
+function O(e) {
     let { guildId: t } = e;
     c.ZP.getChannels(t)[u.d4z.GUILD_CATEGORY].forEach((e) => {
         let { channel: t } = e;
         'null' !== t.id && (f[t.id] = !0);
     });
 }
-function O(e) {
+function v(e) {
     let { guildId: t } = e;
     c.ZP.getChannels(t)[u.d4z.GUILD_CATEGORY].forEach((e) => {
         let { channel: t } = e;
@@ -88,12 +88,12 @@ class I extends (r = i.ZP.PersistedStore) {
     }
 }
 d(I, 'displayName', 'CategoryCollapseStore'), d(I, 'persistKey', 'collapsedCategories');
-let S = new I(a.Z, {
+let S = new I(o.Z, {
     CONNECTION_OPEN: E,
     USER_GUILD_SETTINGS_FULL_UPDATE: b,
     CATEGORY_COLLAPSE: m,
     CATEGORY_EXPAND: g,
-    CATEGORY_COLLAPSE_ALL: v,
-    CATEGORY_EXPAND_ALL: O,
+    CATEGORY_COLLAPSE_ALL: O,
+    CATEGORY_EXPAND_ALL: v,
     CHANNEL_DELETE: y
 });

@@ -1,8 +1,8 @@
 n.d(t, { ZP: () => C });
 var r,
     i = n(392711),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(433517),
     l = n(570140);
 n(541049);
@@ -47,10 +47,10 @@ function b() {
     return null == E && (E = Math.max((window.innerWidth - d.PrS) * 0.4, d.$Y6)), E;
 }
 let y = {};
-function v(e) {
+function O(e) {
     y = h({}, y, e.settings);
 }
-function O() {
+function v() {
     y = {
         useSystemTheme: y.useSystemTheme,
         darkSidebar: y.darkSidebar
@@ -65,10 +65,10 @@ function T() {
 }
 function A() {
     var e;
-    let t = o.ZP.PersistedStore.migrateAndReadStoreState('AccessibilityStore', []).state;
+    let t = a.ZP.PersistedStore.migrateAndReadStoreState('AccessibilityStore', []).state;
     return null != (e = null == t ? void 0 : t.darkSidebar) && e;
 }
-class N extends (r = o.ZP.DeviceSettingsStore) {
+class N extends (r = a.ZP.DeviceSettingsStore) {
     initialize(e) {
         var t;
         (y = null != e ? e : {}).darkSidebar = null != (t = y.darkSidebar) ? t : A();
@@ -200,15 +200,15 @@ p(N, 'displayName', 'UnsyncedUserSettingsStore'),
     p(N, 'migrations', [
         () => {
             let e = s.K.get('UserSettingsStore');
-            return s.K.remove('UserSettingsStore'), a().pick(e, 'dataSavingMode', 'videoUploadQuality', 'lowQualityImageMode', 'useSystemTheme', 'expressionPickerWidth', 'disableVoiceChannelChangeAlert', 'disableHideSelfStreamAndVideoConfirmationAlert', 'pushUpsellDismissed', 'disableEmbeddedActivityPopOutAlert', 'disableActivityHardwareAccelerationPrompt', 'disableInviteWithTextChannelActivityLaunch', 'disableActivityHostLeftNitroUpsell', 'disableCallUserConfirmationPrompt', 'disableApplicationSubscriptionCancellationSurvey', 'enableAndroidChatListAnimations', 'showPlayAgain');
+            return s.K.remove('UserSettingsStore'), o().pick(e, 'dataSavingMode', 'videoUploadQuality', 'lowQualityImageMode', 'useSystemTheme', 'expressionPickerWidth', 'disableVoiceChannelChangeAlert', 'disableHideSelfStreamAndVideoConfirmationAlert', 'pushUpsellDismissed', 'disableEmbeddedActivityPopOutAlert', 'disableActivityHardwareAccelerationPrompt', 'disableInviteWithTextChannelActivityLaunch', 'disableActivityHostLeftNitroUpsell', 'disableCallUserConfirmationPrompt', 'disableApplicationSubscriptionCancellationSurvey', 'enableAndroidChatListAnimations', 'showPlayAgain');
         },
         (e) => {
             delete e.disableVisualRefresh;
         }
     ]);
 let C = new N(l.Z, {
-    UNSYNCED_USER_SETTINGS_UPDATE: v,
-    LOGOUT: O,
+    UNSYNCED_USER_SETTINGS_UPDATE: O,
+    LOGOUT: v,
     LOGIN_SUCCESS: I,
     REGISTER_SUCCESS: S,
     ACCESSIBILITY_DARK_SIDEBAR_TOGGLE: T

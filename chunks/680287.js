@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(539854), n(997841);
 var r = n(544891),
     i = n(881052),
-    a = n(687294),
-    o = n(476326),
+    o = n(687294),
+    a = n(476326),
     s = n(45251),
     l = n(861990),
     c = n(388032);
@@ -58,14 +58,14 @@ function _(e, t) {
         e
     );
 }
-class p extends a.Z {
+class p extends o.Z {
     async uploadFiles(e, t) {
         let { addFilesTo: n } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         super.upload({ name: c.intl.string(c.t.jfKTen) }, t, e);
         let r = new AbortController();
         try {
             if (((this.files = e), this._aborted || (this._handleStart(() => r.abort()), !(await this.compressAndCheckFileSize())))) return;
-            this.setUploadingTextForUI(), await (0, a.$)(this.files, !0, this._recomputeProgress.bind(this));
+            this.setUploadingTextForUI(), await (0, o.$)(this.files, !0, this._recomputeProgress.bind(this));
         } catch (e) {
             this._handleException(e);
         }
@@ -77,13 +77,13 @@ class p extends a.Z {
         }
     }
     async _createMessage(e, t, n) {
-        var a, c;
+        var o, c;
         let u,
             f = [];
         if (
             (this.files.forEach((e, t) => {
                 let n = (0, l.B)(e, t);
-                e.item.platform === o.ow.WEB && f.push(d({}, n));
+                e.item.platform === a.ow.WEB && f.push(d({}, n));
             }),
             null != (u = null != n && null != t ? this._addAttachmentsToPayload(t, n, f) : _(d({}, t), { attachments: f })).scheduled_timestamp)
         ) {
@@ -106,7 +106,7 @@ class p extends a.Z {
             } catch (e) {
                 if (this._raiseEndpointErrors) throw new i.Hx(e);
                 this._handleError({
-                    code: null == e || null == (a = e.body) ? void 0 : a.code,
+                    code: null == e || null == (o = e.body) ? void 0 : o.code,
                     body: null == e ? void 0 : e.body
                 });
             }

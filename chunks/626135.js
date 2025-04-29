@@ -20,8 +20,8 @@ n.r(t),
     n(388685);
 var r = n(192379),
     i = n(772848),
-    a = n(990547),
-    o = n(570140),
+    o = n(990547),
+    a = n(570140),
     s = n(565384),
     l = n(569611),
     c = n(97145),
@@ -84,24 +84,24 @@ function y(e, t) {
         e
     );
 }
-function v(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = O(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
 function O(e, t) {
     if (null == e) return {};
     var n,
         r,
+        i = v(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function v(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let I = { location: {} },
@@ -359,9 +359,9 @@ let B = () => h.E.NONE;
 function V(e) {
     B = e;
 }
-let F = (0, a.trackMaker)({
+let F = (0, o.trackMaker)({
     analyticEventConfigs: j,
-    dispatcher: o.Z,
+    dispatcher: a.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });
 function Z(e) {
@@ -369,20 +369,20 @@ function Z(e) {
 }
 function H(e) {
     var t, n, r, i;
-    let a = null != e ? e : {};
-    if (null != a.location) {
-        let { location: e } = a;
-        a = E({}, v(a, ['location']), U(e));
+    let o = null != e ? e : {};
+    if (null != o.location) {
+        let { location: e } = o;
+        o = E({}, O(o, ['location']), U(e));
     }
-    if (null != a.source) {
-        let { source: e } = a;
-        a = E({}, v(a, ['source']), G(e));
+    if (null != o.source) {
+        let { source: e } = o;
+        o = E({}, O(o, ['source']), G(e));
     }
-    (a.client_performance_cpu = f.Z.getCurrentCPUUsagePercent()), (a.client_performance_memory = f.Z.getCurrentMemoryUsageKB()), (a.cpu_core_count = f.Z.getCPUCoreCount()), (a.accessibility_features = B()), (a.rendered_locale = m.intl.currentLocale), (a.uptime_app = Math.floor((performance.now() - x) / 1000));
-    let o = f.Z.getProcessUptime();
-    null != o && (a.uptime_process_renderer = Math.floor(o));
+    (o.client_performance_cpu = f.Z.getCurrentCPUUsagePercent()), (o.client_performance_memory = f.Z.getCurrentMemoryUsageKB()), (o.cpu_core_count = f.Z.getCPUCoreCount()), (o.accessibility_features = B()), (o.rendered_locale = m.intl.currentLocale), (o.uptime_app = Math.floor((performance.now() - x) / 1000));
+    let a = f.Z.getProcessUptime();
+    null != a && (o.uptime_process_renderer = Math.floor(a));
     let { utmSource: s, utmMedium: l, utmCampaign: c, utmContent: u } = T;
-    return (a.utm_source = null != (t = a.utm_source) ? t : s), (a.utm_medium = null != (n = a.utm_medium) ? n : l), (a.utm_campaign = null != (r = a.utm_campaign) ? r : c), (a.utm_content = null != (i = a.utm_content) ? i : u), M.forEach((e) => e(a)), a;
+    return (o.utm_source = null != (t = o.utm_source) ? t : s), (o.utm_medium = null != (n = o.utm_medium) ? n : l), (o.utm_campaign = null != (r = o.utm_campaign) ? r : c), (o.utm_content = null != (i = o.utm_content) ? i : u), M.forEach((e) => e(o)), o;
 }
 function Y(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
@@ -429,9 +429,9 @@ function $(e, t) {
         })
     );
 }
-let ee = (0, a.trackMaker)({
+let ee = (0, o.trackMaker)({
     analyticEventConfigs: j,
-    dispatcher: o.Z,
+    dispatcher: a.Z,
     TRACK_ACTION_NAME: 'TRACK'
 });
 function et(e, t) {
@@ -441,8 +441,8 @@ function et(e, t) {
 function en() {
     return (0, i.Z)();
 }
-let er = y(E({}, a), {
-    getCampaignParams: a.getCampaignParams,
+let er = y(E({}, o), {
+    getCampaignParams: o.getCampaignParams,
     setSystemAccessibilityFeatures: V,
     expandEventProperties: H,
     track: $

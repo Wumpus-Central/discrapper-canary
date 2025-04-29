@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(200651),
     i = n(192379),
-    a = n(28546),
-    o = n(98528),
+    o = n(28546),
+    a = n(98528),
     s = n(429155),
     l = n(810462),
     c = n(783459);
@@ -59,14 +59,14 @@ function _(e, t) {
     );
 }
 function p(e) {
-    let { categories: t, collapsedCategories: n, containerWidth: u, store: f, onSelectItem: p, onSearchExpressions: h, hasSearchResults: m, defaultSearchPlaceholder: g, emptySearchPlaceholder: E, renderEmptyState: b, renderRow: y, renderSection: v, renderSectionHeader: O, renderSectionFooter: I, renderInspector: S, renderEmptySearchState: T, renderCategoryList: A, renderHeaderAccessories: N, rowHeight: C, sectionHeaderHeight: R, sectionFooterHeight: P, itemNodeWidth: w, listPaddingRight: D, itemNodeMargin: L, listPadding: x, gridNavigatorId: M, gridNotice: k, renderHeader: j, renderUpsell: U, setShowUpsell: G } = e,
+    let { categories: t, collapsedCategories: n, containerWidth: u, store: f, onSelectItem: p, onSearchExpressions: h, hasSearchResults: m, defaultSearchPlaceholder: g, emptySearchPlaceholder: E, renderEmptyState: b, renderRow: y, renderSection: O, renderSectionHeader: v, renderSectionFooter: I, renderInspector: S, renderEmptySearchState: T, renderCategoryList: A, renderHeaderAccessories: N, rowHeight: C, sectionHeaderHeight: R, sectionFooterHeight: P, itemNodeWidth: w, listPaddingRight: D, itemNodeMargin: L, listPadding: x, gridNavigatorId: M, gridNotice: k, renderHeader: j, renderUpsell: U, setShowUpsell: G } = e,
         B = i.useRef(null),
         V = i.useRef(null),
         F = i.useRef(null),
         Z = 0 === t.length,
-        H = (0, a.Iu)((e) => e.searchQuery),
+        H = (0, o.Iu)((e) => e.searchQuery),
         Y = f.useStore((e) => e.inspectedExpressionPosition),
-        W = (0, o.ep)({
+        W = (0, a.ep)({
             gridWrapperRef: B,
             containerWidth: u,
             showingEmptyState: Z
@@ -77,7 +77,7 @@ function p(e) {
             rowCountBySection: q,
             columnCounts: Q,
             gutterWidth: X
-        } = (0, o.yi)({
+        } = (0, a.yi)({
             categories: t,
             collapsedCategories: n,
             gridWidth: W,
@@ -91,7 +91,7 @@ function p(e) {
             gridContainerProps: ee,
             handleGridContainerKeyDown: et,
             isUsingKeyboardNavigation: en
-        } = (0, o.t$)({
+        } = (0, a.t$)({
             columnCounts: Q,
             expressionsListRef: V,
             expressionsGrid: K,
@@ -116,9 +116,9 @@ function p(e) {
                 ),
             [K, J, $, X, en, y, f, z]
         ),
-        ei = i.useCallback((e) => (null == v ? void 0 : v(t[e])), [t, v]),
-        ea = i.useCallback((e) => (null == O ? void 0 : O(t[e], e)), [t, O]),
-        eo = i.useCallback((e) => (null == I ? void 0 : I(t[e], e)), [t, I]),
+        ei = i.useCallback((e) => (null == O ? void 0 : O(t[e])), [t, O]),
+        eo = i.useCallback((e) => (null == v ? void 0 : v(t[e], e)), [t, v]),
+        ea = i.useCallback((e) => (null == I ? void 0 : I(t[e], e)), [t, I]),
         es = i.useCallback(() => {
             var e;
             return null == S ? void 0 : S(null == K || null == (e = K[Y.rowIndex]) ? void 0 : e[Y.columnIndex]);
@@ -189,9 +189,9 @@ function p(e) {
                                                     hasSearchResults: m,
                                                     listPadding: x,
                                                     renderRow: er,
-                                                    renderSection: null != v ? ei : void 0,
-                                                    renderSectionHeader: null != O ? ea : void 0,
-                                                    renderSectionFooter: null != I ? eo : void 0,
+                                                    renderSection: null != O ? ei : void 0,
+                                                    renderSectionHeader: null != v ? eo : void 0,
+                                                    renderSectionFooter: null != I ? ea : void 0,
                                                     renderInspector: null != S ? es : void 0,
                                                     renderEmptySearchState: T,
                                                     rowCount: z,

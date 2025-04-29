@@ -6,8 +6,8 @@ n.d(t, {
     n(583741);
 var r = n(192379),
     i = n(392711),
-    a = n.n(i),
-    o = n(516373);
+    o = n.n(i),
+    a = n(516373);
 function s(e, t, n) {
     return (
         t in e
@@ -63,13 +63,13 @@ function u(e, t) {
 let d = {};
 function f() {
     var e, t;
-    return null != (t = null == (e = (0, o.D)().favoriteGifs) ? void 0 : e.gifs) ? t : d;
+    return null != (t = null == (e = (0, a.D)().favoriteGifs) ? void 0 : e.gifs) ? t : d;
 }
 function _(e) {
     let t = f();
     return r.useMemo(
         () =>
-            a()(t)
+            o()(t)
                 .map((t, n) => {
                     var r;
                     return u(l({}, t), {

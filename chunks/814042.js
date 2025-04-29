@@ -1,8 +1,8 @@
 n.d(t, { C: () => I });
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(100527),
     c = n(906732),
@@ -17,10 +17,10 @@ var r = n(200651),
     E = n(474936),
     b = n(388032),
     y = n(397101),
-    v = n(867250);
-let O = () => (0, h.f)(!1),
+    O = n(867250);
+let v = () => (0, h.f)(!1),
     I = (e) => {
-        var t, n, a;
+        var t, n, o;
         let { onLearnMore: h } = e,
             { analyticsLocations: I } = (0, c.ZP)(l.Z.PREMIUM_UPSELL);
         i.useEffect(() => {
@@ -35,15 +35,15 @@ let O = () => (0, h.f)(!1),
             A = (null == S || null == (t = S.subscription_trial) ? void 0 : t.sku_id) === E.Si.TIER_0,
             N = null != S || null != T;
         return (0, r.jsxs)('div', {
-            className: o()(y.upsellWrapper, { [y.unifyTrialUpsell]: N }),
+            className: a()(y.upsellWrapper, { [y.unifyTrialUpsell]: N }),
             children: [
                 N
                     ? (0, r.jsx)(f.ZP, {
                           trialOffer: S,
                           discountOffer: T,
-                          onClose: O,
+                          onClose: v,
                           type: E.cd.STICKER_PICKER_UPSELL,
-                          subscriptionTier: null != (a = null == S || null == (n = S.subscription_trial) ? void 0 : n.sku_id) ? a : E.Si.TIER_2,
+                          subscriptionTier: null != (o = null == S || null == (n = S.subscription_trial) ? void 0 : n.sku_id) ? o : E.Si.TIER_2,
                           children: A
                               ? b.intl.format(b.t.MAGag4, {
                                     planName: (0, p.aq)(E.Xh.PREMIUM_MONTH_TIER_0),
@@ -55,7 +55,7 @@ let O = () => (0, h.f)(!1),
                           children: [
                               (0, r.jsx)('img', {
                                   className: y.upsellImage,
-                                  src: v,
+                                  src: O,
                                   alt: b.intl.string(b.t.do7AoK)
                               }),
                               (0, r.jsx)(s.Text, {
@@ -78,7 +78,7 @@ let O = () => (0, h.f)(!1),
                     }),
                 (0, r.jsx)(s.P3F, {
                     className: y.upsellClose,
-                    onClick: O,
+                    onClick: v,
                     children: (0, r.jsx)(s.Dio, {
                         size: 'md',
                         color: 'currentColor'

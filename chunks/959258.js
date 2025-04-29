@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(731965);
-function o(e, t, n) {
+    o = n(731965);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,8 +28,8 @@ class c {
         if (this.visibleComponents.has(e.target)) return;
         let i = Math.abs(e.intersectionRect.bottom - Number(null == (n = e.rootBounds) ? void 0 : n.bottom)) < Math.abs(e.intersectionRect.top - Number(null == (r = e.rootBounds) ? void 0 : r.top));
         i ? (this.visibleComponents = new Set([e.target, ...this.visibleComponents])) : this.visibleComponents.add(e.target);
-        let a = i || this.animatingComponents.size < s;
-        a ? this.animatingComponents.add(e.target) : this.animatingComponents.delete(e.target), t.updateState(a), a && this.visibleComponents.size > s && this.stopNodeFromAnimating();
+        let o = i || this.animatingComponents.size < s;
+        o ? this.animatingComponents.add(e.target) : this.animatingComponents.delete(e.target), t.updateState(o), o && this.visibleComponents.size > s && this.stopNodeFromAnimating();
     }
     handleNotVisible(e, t) {
         this.visibleComponents.has(e.target) && (t.updateState(!1), this.visibleComponents.delete(e.target), this.animatingComponents.delete(e.target), this.potentiallyAnimateNewNode());
@@ -75,10 +75,10 @@ class c {
         null == (e = this.observer) || e.disconnect(), this.registeredNodes.clear(), this.visibleComponents.clear();
     }
     constructor(e = !1) {
-        if ((o(this, 'registeredNodes', new Map()), o(this, 'visibleComponents', new Set()), o(this, 'animatingComponents', new Set()), o(this, 'observer', void 0), e)) return;
+        if ((a(this, 'registeredNodes', new Map()), a(this, 'visibleComponents', new Set()), a(this, 'animatingComponents', new Set()), a(this, 'observer', void 0), e)) return;
         this.observer = new window.IntersectionObserver(
             (e) => {
-                (0, a.j)(() => {
+                (0, o.j)(() => {
                     e.forEach((e) => {
                         let t = this.registeredNodes.get(e.target);
                         null != t && (e.intersectionRatio >= l ? this.handleVisible(e, t) : this.handleNotVisible(e, t));

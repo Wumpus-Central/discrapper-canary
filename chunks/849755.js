@@ -1,8 +1,8 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => v });
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(906732),
@@ -17,10 +17,10 @@ var r = n(200651),
     E = n(228168),
     b = n(981631),
     y = n(388032),
-    v = n(588015);
-function O(e) {
-    let { voiceChannel: t, onAction: n, onClose: a } = e,
-        { themeType: O } = (0, m.z)(),
+    O = n(588015);
+function v(e) {
+    let { voiceChannel: t, onAction: n, onClose: o } = e,
+        { themeType: v } = (0, m.z)(),
         { analyticsLocations: I } = (0, c.ZP)(),
         S = (0, p.W)(t),
         T = (0, u.ZP)(t, !0),
@@ -37,7 +37,7 @@ function O(e) {
     let C = (e) => {
         e.stopPropagation(),
             n({ action: 'PRESS_VOICE_CHANNEL_STATUS' }),
-            O === E.lY.POPOUT && (null == a || a()),
+            v === E.lY.POPOUT && (null == o || o()),
             (0, d.Z)({
                 channel: t,
                 sourceAnalyticsLocations: I
@@ -45,19 +45,19 @@ function O(e) {
     };
     return T && S
         ? (0, r.jsxs)(l.P3F, {
-              className: v.clickable,
+              className: O.clickable,
               onClick: C,
               children: [
                   (0, r.jsx)(g.Z, {
                       text: null != N ? N : y.intl.string(y.t.Mgpxi4),
                       variant: 'text-xs/normal',
                       color: 'text-secondary',
-                      className: v.text
+                      className: O.text
                   }),
                   (0, r.jsx)(l.vdY, {
                       color: 'currentColor',
                       size: 'xxs',
-                      className: o()(v.pencilIcon, null != N ? v.hidden : void 0),
+                      className: a()(O.pencilIcon, null != N ? O.hidden : void 0),
                       'aria-label': y.intl.string(y.t.bt75u7)
                   })
               ]
@@ -67,7 +67,7 @@ function O(e) {
                 text: N,
                 variant: 'text-xs/normal',
                 color: 'text-secondary',
-                className: v.text
+                className: O.text
             })
           : null;
 }

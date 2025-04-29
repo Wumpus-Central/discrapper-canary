@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(646574),
+    o = n.n(i),
+    a = n(646574),
     s = n(543241),
     l = n(747613),
     c = n(533432),
@@ -11,7 +11,7 @@ var i = n(120356),
     d = n(185923),
     f = n(539490);
 let _ = (e) => {
-    let { accessory: t, pickerIntention: n, headerClassName: i, emojiListRef: _, onKeyDown: p, onFocus: h, autoFocus: m, searchBarRef: g, hasTabWrapper: E, diversitySurrogate: b, isBurstReaction: y, onBurstReactionToggle: v, renderHeader: O } = e,
+    let { accessory: t, pickerIntention: n, headerClassName: i, emojiListRef: _, onKeyDown: p, onFocus: h, autoFocus: m, searchBarRef: g, hasTabWrapper: E, diversitySurrogate: b, isBurstReaction: y, onBurstReactionToggle: O, renderHeader: v } = e,
         I = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(c.Z, {
@@ -28,9 +28,9 @@ let _ = (e) => {
                 n === d.Hz.REACTION
                     ? (0, r.jsx)('div', {
                           className: f.burstToggle,
-                          children: (0, r.jsx)(o.Z, {
+                          children: (0, r.jsx)(a.Z, {
                               checked: y,
-                              onClick: v
+                              onClick: O
                           })
                       })
                     : null,
@@ -45,7 +45,7 @@ let _ = (e) => {
             ]
         });
     return (0, r.jsx)('div', {
-        className: a()(f.header, i),
-        children: null != O ? O(I) : I
+        className: o()(f.header, i),
+        children: null != v ? v(I) : I
     });
 };

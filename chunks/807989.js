@@ -2,8 +2,8 @@ n.d(t, { Z: () => b }), n(997841), n(190126), n(368063), n(65234), n(111804), n(
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(243814),
+    o = n.n(i),
+    a = n(243814),
     s = n(993365),
     l = n(481060),
     c = n(162685),
@@ -28,11 +28,11 @@ let E = (e) => {
 function b(e) {
     var t;
     let n,
-        { application: i, scopes: s, redirectUri: b, approximateGuildCount: v, isEmbeddedFlow: O, disclosures: I } = e,
+        { application: i, scopes: s, redirectUri: b, approximateGuildCount: O, isEmbeddedFlow: v, disclosures: I } = e,
         S = new Date(f.default.extractTimestamp(i.id)),
         T = (0, p.W3)(s),
         A = (0, d.yE)(null != (t = i.flags) ? t : 0, h.udG.EMBEDDED);
-    if (null != b && !A && !O)
+    if (null != b && !A && !v)
         try {
             let e = new URL(b);
             n = null != e.host && e.host.length > 0 ? e.origin : e.href;
@@ -41,7 +41,7 @@ function b(e) {
         }
     let N = c.w.useExperiment({ location: 'oauth2_authorize' });
     return (0, r.jsxs)('div', {
-        className: a()(g.applicationDetails, { [g.noPadding]: N.enabled }),
+        className: o()(g.applicationDetails, { [g.noPadding]: N.enabled }),
         children: [
             null != n
                 ? (0, r.jsx)(y, {
@@ -57,10 +57,10 @@ function b(e) {
                 icon: l.T39,
                 text: m.intl.formatToPlainString(m.t['+1bjc3'], { date: S })
             }),
-            s.includes(o.x.BOT) && null != v
+            s.includes(a.x.BOT) && null != O
                 ? (0, r.jsx)(y, {
                       icon: l.wGt,
-                      text: m.intl.formatToPlainString(m.t.UHGHSE, { guildCount: v })
+                      text: m.intl.formatToPlainString(m.t.UHGHSE, { guildCount: O })
                   })
                 : null,
             (0, r.jsx)(y, {

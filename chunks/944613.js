@@ -2,9 +2,9 @@ n.d(t, { Z: () => m }), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(658722),
-    a = n.n(i),
-    o = n(392711),
-    s = n.n(o),
+    o = n.n(i),
+    a = n(392711),
+    s = n.n(a),
     l = n(866442),
     c = n(442837),
     u = n(481060),
@@ -14,13 +14,13 @@ var i = n(658722),
     p = n(388032),
     h = n(72903);
 let m = function (e) {
-    let { className: t, guild: n, roleStyle: i, roleFilter: o, onSelect: m, onClose: g } = e,
+    let { className: t, guild: n, roleStyle: i, roleFilter: a, onSelect: m, onClose: g } = e,
         E = (0, c.e7)([f.Z], () => f.Z.getRoles(n.id)),
         b = (0, d.$V)(n.id, 'AddRolesPopout'),
         y = (e) =>
             s()(E)
-                .filter(o)
-                .filter((t) => a()(e.toLowerCase(), t.name.toLowerCase()))
+                .filter(a)
+                .filter((t) => o()(e.toLowerCase(), t.name.toLowerCase()))
                 .value();
     return (0, r.jsx)(u.DBG, {
         className: t,

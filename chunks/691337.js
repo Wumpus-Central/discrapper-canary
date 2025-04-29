@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(600164),
     c = n(259580),
@@ -30,22 +30,22 @@ class f extends i.PureComponent {
             n = e.map(this.renderBreadcrumb);
         return (0, r.jsx)(l.Z, {
             justify: l.Z.Justify.START,
-            className: o()(u.breadcrumbs, t),
+            className: a()(u.breadcrumbs, t),
             children: n
         });
     }
     constructor(...e) {
         super(...e),
             d(this, 'renderBreadcrumb', (e, t) => {
-                let { activeId: n, onBreadcrumbClick: i, breadcrumbs: a, renderCustomBreadcrumb: l, separatorClassName: d } = this.props,
+                let { activeId: n, onBreadcrumbClick: i, breadcrumbs: o, renderCustomBreadcrumb: l, separatorClassName: d } = this.props,
                     f = e.id === n,
                     _ = () => this.handleClick(e),
-                    p = t === a.length - 1,
+                    p = t === o.length - 1,
                     h =
                         null != l
                             ? l(e, f)
                             : (0, r.jsx)('span', {
-                                  className: o()(u.breadcrumb, {
+                                  className: a()(u.breadcrumb, {
                                       [u.activeBreadcrumb]: f,
                                       [u.interactiveBreadcrumb]: null != i
                                   }),
@@ -54,7 +54,7 @@ class f extends i.PureComponent {
                 return (0, r.jsxs)(
                     'div',
                     {
-                        className: o()(u.breadcrumbWrapper, { [u.breadcrumbFinalWrapper]: p }),
+                        className: a()(u.breadcrumbWrapper, { [u.breadcrumbFinalWrapper]: p }),
                         children: [
                             null != i
                                 ? (0, r.jsx)(s.P3F, {
@@ -67,7 +67,7 @@ class f extends i.PureComponent {
                             p
                                 ? null
                                 : (0, r.jsx)(c.Z, {
-                                      className: o()(u.breadcrumbArrow, d),
+                                      className: a()(u.breadcrumbArrow, d),
                                       direction: c.Z.Directions.RIGHT
                                   })
                         ]

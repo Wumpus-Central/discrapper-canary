@@ -1,8 +1,8 @@
-n.d(t, { Z: () => v }), n(781311);
+n.d(t, { Z: () => O }), n(781311);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(793030),
     l = n(442837),
     c = n(833664),
@@ -17,10 +17,10 @@ var r = n(200651),
     E = n(556638),
     b = n(981631),
     y = n(843280);
-function v(e) {
-    let { user: t, activities: n, applicationStream: a, voiceChannel: v, textClassName: O, iconClassName: I, textSize: S = 'xs', animate: T = !0, hasQuest: A = !1, hideEmoji: N = !1, hideTooltip: C = !1 } = e;
+function O(e) {
+    let { user: t, activities: n, applicationStream: o, voiceChannel: O, textClassName: v, iconClassName: I, textSize: S = 'xs', animate: T = !0, hasQuest: A = !1, hideEmoji: N = !1, hideTooltip: C = !1 } = e;
     (0, u.Z)(null == t ? void 0 : t.id);
-    let R = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
+    let R = (null == o ? void 0 : o.discoverable) !== !1 ? o : null,
         P = i.useMemo(() => {
             var e, t;
             let r =
@@ -43,7 +43,7 @@ function v(e) {
                     stream: R,
                     game: null == n ? void 0 : n.find(c.Z),
                     textVariant: 'text-'.concat(S, '/medium'),
-                    textClassName: O,
+                    textClassName: v,
                     iconClassName: I,
                     hideText: D,
                     hideIcon: w,
@@ -60,17 +60,17 @@ function v(e) {
                 ? (0, r.jsx)(m.Z, {
                       activity: e,
                       textVariant: 'text-'.concat(S, '/medium'),
-                      textClassName: O,
+                      textClassName: v,
                       iconClassName: I,
                       hideText: D,
                       hideIcon: w,
                       hideTooltip: C
                   })
-                : null != v
+                : null != O
                   ? (0, r.jsx)(g.Z, {
-                        channel: v,
+                        channel: O,
                         textVariant: 'text-'.concat(S, '/medium'),
-                        textClassName: O,
+                        textClassName: v,
                         iconClassName: I,
                         hideText: D,
                         hideTooltip: C
@@ -94,14 +94,14 @@ function v(e) {
                     null != t &&
                         (0, r.jsx)(p.Z, {
                             variant: 'text-'.concat(S, '/medium'),
-                            className: O,
+                            className: v,
                             children: t
                         })
                 ]
             });
         };
     return (0, r.jsxs)('div', {
-        className: o()(y.container, {
+        className: a()(y.container, {
             [y.textXs]: 'xs' === S,
             [y.textSm]: 'sm' === S
         }),
@@ -109,7 +109,7 @@ function v(e) {
             L(),
             (0, r.jsx)(s.xv, {
                 variant: 'text-'.concat(S, '/normal'),
-                className: o()(y.text, y.dot, O),
+                className: a()(y.text, y.dot, v),
                 children: E.l
             }),
             x(),

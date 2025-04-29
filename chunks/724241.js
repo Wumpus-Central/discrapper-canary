@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    a = n(648052),
-    o = n(530),
+    o = n(648052),
+    a = n(530),
     s = n(420654),
     l = n(116854),
     c = n(271383),
@@ -13,7 +13,7 @@ var i = n(442837),
     _ = n(200669);
 function p(e) {
     var t;
-    let { user: n, displayProfile: p, guild: h, pendingAvatar: m, pendingNickname: g, pendingGlobalName: E, pendingBio: b, pendingPronouns: y, isTryItOutFlow: v, hideBioSection: O, pendingBadges: I, shouldOpenBadgeTooltip: S } = e,
+    let { user: n, displayProfile: p, guild: h, pendingAvatar: m, pendingNickname: g, pendingGlobalName: E, pendingBio: b, pendingPronouns: y, isTryItOutFlow: O, hideBioSection: v, pendingBadges: I, shouldOpenBadgeTooltip: S } = e,
         T = (0, i.e7)([c.ZP], () => (null == h ? null : c.ZP.getMember(h.id, n.id))),
         A = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
         N = null == p || null == (t = p.getPreviewBio(b)) ? void 0 : t.value,
@@ -35,20 +35,20 @@ function p(e) {
         inert: '',
         className: _.body,
         children: [
-            (0, r.jsx)(o.Z, {
+            (0, r.jsx)(a.Z, {
                 user: n,
                 usernameIcon: P(),
                 nickname: R,
                 pronouns: C,
-                isTryItOut: v,
-                tags: (0, r.jsx)(a.Z, {
+                isTryItOut: O,
+                tags: (0, r.jsx)(o.Z, {
                     displayProfile: p,
                     themeType: f.lY.POPOUT,
                     pendingBadges: I,
                     shouldOpenBadgeTooltip: S
                 })
             }),
-            !O &&
+            !v &&
                 null != N &&
                 '' !== N &&
                 (0, r.jsx)(s.Z, {

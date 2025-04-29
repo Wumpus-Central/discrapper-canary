@@ -3,16 +3,16 @@ var r = n(192379);
 function i(e) {
     var t;
     let { stepConfigs: n, breadcrumbs: i } = e,
-        [a, o] = r.useState(null == (t = n[0]) ? void 0 : t.key),
+        [o, a] = r.useState(null == (t = n[0]) ? void 0 : t.key),
         s = r.useRef(null);
     return (
         r.useEffect(() => {
-            s.current = a;
-        }, [s, a]),
+            s.current = o;
+        }, [s, o]),
         {
             steps: n.map((e) => e.key).filter((e) => null != e),
-            step: a,
-            setStep: o,
+            step: o,
+            setStep: a,
             breadcrumbsData: n
                 .filter((e) => {
                     var t;

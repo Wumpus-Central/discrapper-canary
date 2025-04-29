@@ -1,72 +1,74 @@
 n.d(t, { Z: () => v });
-var r = n(200651);
-n(192379);
-var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
-    s = n(780384),
-    l = n(481060),
-    c = n(570908),
-    u = n(204418),
-    d = n(359135),
-    f = n(516817),
-    _ = n(210887),
-    p = n(158776),
-    h = n(5192),
-    m = n(579407),
-    g = n(388032),
-    E = n(538566),
-    b = n(460400),
-    y = n(943549);
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(442837),
+    l = n(780384),
+    c = n(481060),
+    u = n(570908),
+    d = n(204418),
+    f = n(359135),
+    _ = n(516817),
+    p = n(210887),
+    h = n(158776),
+    m = n(5192),
+    g = n(579407),
+    E = n(388032),
+    b = n(538566),
+    y = n(460400),
+    O = n(943549);
 let v = (e) => {
-    let { user: t, nameplate: n, nameplateData: i, className: v, isHighlighted: O, showStatus: I, showWumpus: S, isPurchased: T = !1 } = e,
-        A = (0, o.e7)([_.Z], () => (0, s.wj)(_.Z.theme)),
-        N = null != n ? (0, m.EU)(n) : i,
-        C = (0, o.e7)([p.Z], () => p.Z.getStatus(t.id)),
-        R = A ? '#706F74' : '#aaaab2';
+    let { user: t, nameplate: n, nameplateData: o, className: v, innerClassName: I, isHighlighted: S, showStatus: T, showWumpus: A, isPurchased: N = !1 } = e,
+        C = (0, s.e7)([p.Z], () => (0, l.wj)(p.Z.theme)),
+        R = null != n ? (0, g.EU)(n) : o,
+        P = (0, s.e7)([h.Z], () => h.Z.getStatus(t.id)),
+        w = C ? '#706F74' : '#aaaab2',
+        D = i.useRef(null);
     return (0, r.jsxs)('div', {
-        className: a()(v, E.nameplatePreview, { [E.nameplatePurchased]: T && !O }),
-        style: { color: A ? 'white' : 'black' },
+        className: a()(v, b.nameplatePreview, { [b.nameplatePurchased]: N && !S }),
+        style: { color: C ? 'white' : 'black' },
         children: [
-            null != N &&
+            null != R &&
                 (0, r.jsx)(
-                    f.Z,
+                    _.Z,
                     {
-                        nameplate: N,
-                        hovered: O,
-                        placement: d.i.PREVIEW
+                        nameplate: R,
+                        hovered: S,
+                        placement: f.i.PREVIEW,
+                        content: A ? void 0 : D
                     },
                     null == n ? void 0 : n.id
                 ),
             (0, r.jsxs)('div', {
-                className: E.overlayContainer,
+                className: b.overlayContainer,
                 children: [
                     (0, r.jsx)('div', {
-                        className: a()(E.avatarContainer, !S && E.avatarVisible),
-                        children: (0, r.jsx)(c.Z, {
-                            avatar: (0, r.jsx)(u.Z, {
+                        className: a()(b.avatarContainer, !A && b.avatarVisible),
+                        children: (0, r.jsx)(u.Z, {
+                            ref: D,
+                            avatar: (0, r.jsx)(d.Z, {
                                 user: t,
                                 guildId: null,
-                                avatarSize: l.EFr.SIZE_32,
-                                status: I ? C : void 0,
+                                avatarSize: c.EFr.SIZE_32,
+                                status: T ? P : void 0,
                                 'aria-hidden': !0
                             }),
-                            name: h.ZP.getName(null, null, t),
-                            innerClassName: E.avatarWithTextInnerClassName
+                            name: m.ZP.getName(null, null, t),
+                            innerClassName: I
                         })
                     }),
                     (0, r.jsx)('div', {
-                        className: a()(E.avatarContainer, S && E.avatarVisible),
-                        children: (0, r.jsx)(c.Z, {
-                            avatar: (0, r.jsx)(l.qEK, {
-                                src: A ? b : y,
-                                size: l.EFr.SIZE_32,
-                                'aria-label': g.intl.string(g.t.cqpybG),
-                                status: l.Skl.ONLINE,
-                                statusColor: R
+                        className: a()(b.avatarContainer, A && b.avatarVisible),
+                        children: (0, r.jsx)(u.Z, {
+                            avatar: (0, r.jsx)(c.qEK, {
+                                src: C ? y : O,
+                                size: c.EFr.SIZE_32,
+                                'aria-label': E.intl.string(E.t.cqpybG),
+                                status: c.Skl.ONLINE,
+                                statusColor: w
                             }),
-                            name: (0, r.jsx)('div', { className: a()(E.placeholderUsername, E.placeholderUsernameColor) }),
-                            innerClassName: E.avatarWithTextInnerClassName
+                            name: (0, r.jsx)('div', { className: a()(b.placeholderUsername, b.placeholderUsernameColor) })
                         })
                     })
                 ]

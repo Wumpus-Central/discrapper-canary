@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S });
 var r = n(200651),
     i = n(120356),
-    a = n.n(i),
-    o = n(704215),
+    o = n.n(i),
+    a = n(704215),
     s = n(481060),
     l = n(906732),
     c = n(335131),
@@ -17,38 +17,38 @@ var r = n(200651),
     E = n(921944),
     b = n(474936),
     y = n(388032),
-    v = n(869310);
-function O(e) {
+    O = n(869310);
+function v(e) {
     let { onClose: t } = e;
     return (0, r.jsx)(s.P3F, {
         'aria-label': y.intl.string(y.t.WAI6xs),
         onClick: t,
-        className: v.upsellCloseIconWrapper,
+        className: O.upsellCloseIconWrapper,
         children: (0, r.jsx)(s.Dio, {
             size: 'xs',
-            className: v.upsellCloseIcon,
+            className: O.upsellCloseIcon,
             color: 'currentColor'
         })
     });
 }
 function I(e) {
     let { tiny: t, isPremiumUser: n, onInteraction: i } = e,
-        { analyticsLocations: a, newestAnalyticsLocation: o } = (0, l.ZP)(),
+        { analyticsLocations: o, newestAnalyticsLocation: a } = (0, l.ZP)(),
         { trackUserProfileAction: u } = (0, _.KZ)();
     return (0, r.jsxs)('div', {
-        className: v.upsellButtons,
+        className: O.upsellButtons,
         children: [
             (0, r.jsx)('div', {
-                className: v.upsellButtonWrapper,
+                className: O.upsellButtonWrapper,
                 children: n
                     ? (0, r.jsxs)(s.gtL, {
                           onlyShineOnHover: !0,
                           size: t ? s.zxk.Sizes.TINY : s.zxk.Sizes.SMALL,
                           look: s.zxk.Looks.FILLED,
                           color: s.zxk.Colors.PRIMARY,
-                          className: v.upsellButton,
-                          innerClassName: v.viewPremiumPerksButtonInner,
-                          buttonShineClassName: v.viewPremiumPerksButtonShine,
+                          className: O.upsellButton,
+                          innerClassName: O.viewPremiumPerksButtonInner,
+                          buttonShineClassName: O.viewPremiumPerksButtonShine,
                           onClick: () => {
                               u({ action: m.yM.VIEW_PREMIUM_PERKS }), (0, f.uL)(g.Z5c.APPLICATION_STORE), null == i || i();
                           },
@@ -67,7 +67,7 @@ function I(e) {
                           buttonText: y.intl.string(y.t.x6rkDg),
                           subscriptionTier: b.Si.TIER_2,
                           premiumModalAnalyticsLocation: { section: g.jXE.USER_PROFILE },
-                          className: v.upsellButton,
+                          className: O.upsellButton,
                           size: t ? s.zxk.Sizes.TINY : s.zxk.Sizes.SMALL,
                           look: s.zxk.Looks.FILLED,
                           color: s.zxk.Colors.PRIMARY,
@@ -75,7 +75,7 @@ function I(e) {
                       })
             }),
             (0, r.jsx)('div', {
-                className: v.upsellButtonWrapper,
+                className: O.upsellButtonWrapper,
                 children: (0, r.jsx)(h.tG, {
                     icon: s.EOn,
                     action: m.yM.VISIT_SHOP,
@@ -84,12 +84,12 @@ function I(e) {
                     color: s.zxk.Colors.PRIMARY,
                     themeColor: 'none',
                     size: t ? s.zxk.Sizes.TINY : s.zxk.Sizes.SMALL,
-                    className: v.upsellButton,
+                    className: O.upsellButton,
                     onClick: () => {
                         (0, c.mK)({
-                            analyticsLocations: a,
+                            analyticsLocations: o,
                             openInLayer: !1,
-                            analyticsSource: o
+                            analyticsSource: a
                         }),
                             null == i || i();
                     }
@@ -103,10 +103,10 @@ let S = function (e) {
         { themeType: l } = (0, p.z)(),
         c = l === m.lY.MODAL;
     return (0, r.jsx)(u.ZP, {
-        contentTypes: [o.z.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS],
+        contentTypes: [a.z.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS],
         children: (e) => {
             let { visibleContent: l, markAsDismissed: u } = e;
-            if (l !== o.z.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS) return null;
+            if (l !== a.z.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS) return null;
             {
                 let e = (0, r.jsx)('div', {
                         children: (0, r.jsx)(s.Text, {
@@ -114,7 +114,7 @@ let S = function (e) {
                             children: y.intl.string(y.t.EIYbj4)
                         })
                     }),
-                    o = (0, r.jsx)(O, { onClose: () => u(E.L.USER_DISMISS) }),
+                    a = (0, r.jsx)(v, { onClose: () => u(E.L.USER_DISMISS) }),
                     l = (0, r.jsx)(I, {
                         isPremiumUser: t,
                         onInteraction: n,
@@ -122,26 +122,26 @@ let S = function (e) {
                     });
                 return c
                     ? (0, r.jsx)('div', {
-                          className: a()(v.upsellContainer, i),
+                          className: o()(O.upsellContainer, i),
                           children: (0, r.jsxs)('div', {
-                              className: a()(v.upsellContent, v.upsellRowContent),
+                              className: o()(O.upsellContent, O.upsellRowContent),
                               children: [
                                   e,
                                   (0, r.jsxs)('div', {
-                                      className: v.upsellRowRight,
-                                      children: [(0, r.jsx)('div', { children: l }), (0, r.jsx)('div', { children: o })]
+                                      className: O.upsellRowRight,
+                                      children: [(0, r.jsx)('div', { children: l }), (0, r.jsx)('div', { children: a })]
                                   })
                               ]
                           })
                       })
                     : (0, r.jsx)('div', {
-                          className: a()(v.upsellContainer, i),
+                          className: o()(O.upsellContainer, i),
                           children: (0, r.jsxs)('div', {
-                              className: a()(v.upsellContent, v.upsellDefaultContent),
+                              className: o()(O.upsellContent, O.upsellDefaultContent),
                               children: [
                                   (0, r.jsxs)('div', {
-                                      className: v.upsellHeader,
-                                      children: [e, (0, r.jsx)('div', { children: o })]
+                                      className: O.upsellHeader,
+                                      children: [e, (0, r.jsx)('div', { children: a })]
                                   }),
                                   l
                               ]

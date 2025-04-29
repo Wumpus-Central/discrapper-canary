@@ -4,15 +4,15 @@ n.d(t, {
 });
 var r = n(259443),
     i = n(668757),
-    a = n(818083),
-    o = n(987338);
+    o = n(818083),
+    a = n(987338);
 let s = new r.Yd('libdiscore'),
-    l = (0, a.B)({
+    l = (0, o.B)({
         kind: 'user',
         id: '2025-03_blocked_domains_libdiscore',
         label: 'Use Blocked Domains from Libdiscore',
         defaultConfig: { enabled: !1 },
-        commonTriggerPoint: o.$P.CONNECTION_OPEN,
+        commonTriggerPoint: a.$P.CONNECTION_OPEN,
         treatments: [
             {
                 id: 0,

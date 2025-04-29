@@ -1,9 +1,9 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(979554),
+    o = n.n(i),
+    a = n(979554),
     s = n(442837),
     l = n(481060),
     c = n(987209),
@@ -56,7 +56,7 @@ function y(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -67,21 +67,21 @@ function v(e, t) {
         e
     );
 }
-let O = (e) => {
-    let { skuId: t, isSelected: n, price: i, onSelect: E, shouldDisplayHeader: y = !1, className: O } = e,
+let v = (e) => {
+    let { skuId: t, isSelected: n, price: i, onSelect: E, shouldDisplayHeader: y = !1, className: v } = e,
         { product: I } = (0, _.T)(t),
         { giftRecipient: S, giftRecipientError: T } = (0, c.wD)(),
         A = (0, s.e7)([f.default], () => f.default.getCurrentUser()),
         N = (0, p.k)(I);
     if (null == I) return null;
     let [C] = I.items,
-        R = () => (C.type === o.Z.AVATAR_DECORATION ? m.intl.string(m.t['7v0T9P']) : C.type === o.Z.PROFILE_EFFECT ? m.intl.string(m.t.wR5wOj) : null),
+        R = () => (C.type === a.Z.AVATAR_DECORATION ? m.intl.string(m.t['7v0T9P']) : C.type === a.Z.PROFILE_EFFECT ? m.intl.string(m.t.wR5wOj) : null),
         P = null != S && S.id !== (null == A ? void 0 : A.id),
         w = () => {
             null != t && null != E && E(t);
         };
     return (0, r.jsxs)('div', {
-        className: O,
+        className: v,
         children: [
             y &&
                 (0, r.jsxs)('div', {
@@ -99,11 +99,11 @@ let O = (e) => {
                                     renderPopout: (e) =>
                                         (0, r.jsx)(
                                             u.Z,
-                                            v(b({}, e), {
+                                            O(b({}, e), {
                                                 user: S,
                                                 pendingAvatar: S.getAvatarURL(null, (0, l.pxk)(l.EFr.SIZE_80)),
-                                                pendingAvatarDecoration: C.type === o.Z.AVATAR_DECORATION ? C : null,
-                                                pendingProfileEffectId: C.type === o.Z.PROFILE_EFFECT ? C.id : null,
+                                                pendingAvatarDecoration: C.type === a.Z.AVATAR_DECORATION ? C : null,
+                                                pendingProfileEffectId: C.type === a.Z.PROFILE_EFFECT ? C.id : null,
                                                 canUsePremiumCustomization: !0,
                                                 disabledInputs: !0
                                             })
@@ -113,7 +113,7 @@ let O = (e) => {
                                     children: (e) =>
                                         (0, r.jsx)(
                                             l.P3F,
-                                            v(b({}, e), {
+                                            O(b({}, e), {
                                                 className: g.previewLink,
                                                 children: (0, r.jsx)(l.Text, {
                                                     variant: 'text-xs/medium',
@@ -130,7 +130,7 @@ let O = (e) => {
             (0, r.jsxs)(l.P3F, {
                 tag: 'div',
                 onClick: w,
-                className: a()(g.previewContainer, {
+                className: o()(g.previewContainer, {
                     [g.previewContainerSelected]: n && null == T,
                     [g.previewContainerError]: n && null != T
                 }),

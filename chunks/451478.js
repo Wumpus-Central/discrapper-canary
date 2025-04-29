@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(388685);
 var r,
     i = n(512722),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(570140),
     l = n(830917);
 function c(e, t, n) {
@@ -75,8 +75,8 @@ function h(e) {
         : t;
 }
 function m(e) {
-    a()(!p.has(e.windowId), 'Window initialized multiple times');
-    let { width: t, height: n, isElementFullscreen: r, focused: i, visible: o } = e;
+    o()(!p.has(e.windowId), 'Window initialized multiple times');
+    let { width: t, height: n, isElementFullscreen: r, focused: i, visible: a } = e;
     return (
         p.set(e.windowId, {
             windowSize: {
@@ -85,7 +85,7 @@ function m(e) {
             },
             isElementFullscreen: r,
             focused: i,
-            visible: o
+            visible: a
         }),
         i && (_ = e.windowId),
         !0
@@ -119,10 +119,10 @@ function y(e) {
         !0)
     );
 }
-function v(e) {
+function O(e) {
     return p.delete(e.windowId), _ === e.windowId && (_ = null), !0;
 }
-class O extends (r = o.ZP.Store) {
+class v extends (r = a.ZP.Store) {
     isFocused() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, l.UU)();
         return h(e).focused;
@@ -152,13 +152,13 @@ class O extends (r = o.ZP.Store) {
         return h(e).windowSize;
     }
 }
-c(O, 'displayName', 'WindowStore');
-let I = new O(s.Z, {
+c(v, 'displayName', 'WindowStore');
+let I = new v(s.Z, {
     WINDOW_INIT: m,
     WINDOW_FULLSCREEN_CHANGE: g,
     WINDOW_FOCUS: E,
     WINDOW_RESIZED: y,
-    WINDOW_UNLOAD: v,
+    WINDOW_UNLOAD: O,
     WINDOW_VISIBILITY_CHANGE: b
 });
 Promise.resolve()

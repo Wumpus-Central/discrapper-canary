@@ -1,8 +1,8 @@
 n.d(t, { Z: () => R }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(392711),
-    o = n.n(a),
+    o = n(392711),
+    a = n.n(o),
     s = n(818405),
     l = n(587158),
     c = n(286379),
@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(703656),
     b = n(626135),
     y = n(960048),
-    v = n(998502),
-    O = n(981631),
+    O = n(998502),
+    v = n(981631),
     I = n(388032),
     S = n(804683);
 function T(e, t, n) {
@@ -59,7 +59,7 @@ function A() {
         children: I.intl.string(I.t['/Nz9ra'])
     });
 }
-let N = o().throttle(
+let N = a().throttle(
     (e) => {
         g.Z.increment(
             {
@@ -84,7 +84,7 @@ class C extends i.PureComponent {
         });
         let r = (0, u.e)(),
             i = y.Z.captureCrash(e, { extra: t });
-        b.default.track(O.rMx.APP_CRASHED, {
+        b.default.track(v.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
@@ -94,7 +94,7 @@ class C extends i.PureComponent {
             error_level: 'fatal'
         }),
             N(r),
-            v.ZP.cleanupDisplaySleep();
+            O.ZP.cleanupDisplaySleep();
     }
     _handleSubmitReport() {
         location.reload(!0);

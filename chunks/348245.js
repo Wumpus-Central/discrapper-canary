@@ -1,8 +1,8 @@
 let r;
 n.d(t, { Z: () => q }), n(388685);
 var i = n(512969),
-    a = n(259443),
-    o = n(433517),
+    o = n(259443),
+    a = n(433517),
     s = n(570140),
     l = n(668781),
     c = n(904245),
@@ -17,8 +17,8 @@ var i = n(512969),
     E = n(592125),
     b = n(430824),
     y = n(306680),
-    v = n(944486),
-    O = n(914010),
+    O = n(944486),
+    v = n(914010),
     I = n(70956),
     S = n(198620),
     T = n(981631),
@@ -37,9 +37,9 @@ function C(e, t, n) {
         e
     );
 }
-let R = new a.Yd('MessageManager');
+let R = new o.Yd('MessageManager');
 function P(e) {
-    let { guildId: t, channelId: n, messageId: r, forceFetch: i, isPreload: a, jumpType: o, skipLocalFetch: s, logFailures: l } = e;
+    let { guildId: t, channelId: n, messageId: r, forceFetch: i, isPreload: o, jumpType: a, skipLocalFetch: s, logFailures: l } = e;
     if (null == n) {
         l && R.log('Skipping fetch because channelId is null');
         return;
@@ -65,15 +65,15 @@ function P(e) {
             f.Z.commit(h)),
         null != h.focusTargetId && null == r && ((h = h.mutate({ focusTargetId: null })), f.Z.commit(h));
     let m = i;
-    if ((!a || p.Z.isConnected() || h.loadingMore ? (h.loadingMore || (h.ready && !h.cached) ? (null != r ? (m = !0) : l && R.log('Skipping fetch because no other conditions matched')) : null == t || null != b.Z.getGuild(t) ? (m = !0) : l && R.log('Skipping fetch we are connected and have loaded messages')) : (m = !0), (0, _.Z)(n) && y.ZP.hasUnread(n) && (m = !0), m))
+    if ((!o || p.Z.isConnected() || h.loadingMore ? (h.loadingMore || (h.ready && !h.cached) ? (null != r ? (m = !0) : l && R.log('Skipping fetch because no other conditions matched')) : null == t || null != b.Z.getGuild(t) ? (m = !0) : l && R.log('Skipping fetch we are connected and have loaded messages')) : (m = !0), (0, _.Z)(n) && y.ZP.hasUnread(n) && (m = !0), m))
         if ((f.Z.commit(h.mutate({ loadingMore: !0 })), null != r))
             c.Z.jumpToMessage({
                 channelId: n,
                 messageId: r,
                 flash: !0,
-                isPreload: a,
+                isPreload: o,
                 skipLocalFetch: s,
-                jumpType: o
+                jumpType: a
             });
         else {
             if ((null == d ? void 0 : d.isThread()) && L(n))
@@ -86,7 +86,7 @@ function P(e) {
                             messageId: n,
                             flash: !1
                         },
-                        isPreload: a,
+                        isPreload: o,
                         skipLocalFetch: s
                     })
                 );
@@ -94,7 +94,7 @@ function P(e) {
                 return c.Z.fetchMessages({
                     channelId: n,
                     limit: T.AQB,
-                    isPreload: a,
+                    isPreload: o,
                     skipLocalFetch: s,
                     jump: { jumpType: u.SR.ANIMATED }
                 });
@@ -109,7 +109,7 @@ function P(e) {
                         flash: !1,
                         offset: 1
                     },
-                    isPreload: a,
+                    isPreload: o,
                     skipLocalFetch: s
                 })
             );
@@ -121,16 +121,16 @@ function L(e) {
     if (y.ZP.hasOpenedThread(e)) return !1;
     if (null == r) {
         var t;
-        r = null != (t = o.K.get(D, {})) ? t : {};
+        r = null != (t = a.K.get(D, {})) ? t : {};
     }
     if (e in r) return !1;
     r[e] = Date.now();
     let n = Date.now() - w;
     for (let e in r) r[e] < n && delete r[e];
-    return o.K.set(D, r), !0;
+    return a.K.set(D, r), !0;
 }
 function x() {
-    let e = v.Z.getChannelId();
+    let e = O.Z.getChannelId();
     if (null != e) {
         let n = E.Z.getChannel(e);
         if (null != n) {
@@ -150,7 +150,7 @@ function x() {
 }
 function M() {
     let { isPreload: e, skipLocalFetch: t, logFailures: n } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        r = v.Z.getChannelId();
+        r = O.Z.getChannelId();
     if (null != r) {
         let i = E.Z.getChannel(r);
         null != i
@@ -203,8 +203,8 @@ function G(e, t) {
         });
 }
 function B() {
-    let e = v.Z.getChannelId(),
-        t = O.Z.getGuildId();
+    let e = O.Z.getChannelId(),
+        t = v.Z.getGuildId();
     if (null == t || null == e) return;
     let n = g.ZP.getSidebarState(e);
     (null == n ? void 0 : n.type) !== h.tI.VIEW_CHANNEL && G(t, e);
@@ -222,7 +222,7 @@ function F(e) {
     let { channel: t, messageId: n } = e,
         r = t.guild_id;
     null != r &&
-        v.Z.getChannelId(r) === t.id &&
+        O.Z.getChannelId(r) === t.id &&
         P({
             guildId: r,
             channelId: t.id,
@@ -244,12 +244,12 @@ function Z(e) {
 let H = {};
 function Y(e) {
     var t;
-    let { channelId: n, jump: r, isStale: i, isPreview: a = !1 } = e;
-    if (a) return;
-    let o = null != (t = H[n]) ? t : 0;
-    if (Date.now() - o < 10 * I.Z.Millis.SECOND) return;
+    let { channelId: n, jump: r, isStale: i, isPreview: o = !1 } = e;
+    if (o) return;
+    let a = null != (t = H[n]) ? t : 0;
+    if (Date.now() - a < 10 * I.Z.Millis.SECOND) return;
     H[n] = Date.now();
-    let s = v.Z.getChannelId(),
+    let s = O.Z.getChannelId(),
         l = g.ZP.getCurrentSidebarChannelId(s),
         u = n === s || n === l;
     i &&
@@ -275,7 +275,7 @@ function W(e) {
 function K(e) {
     let { state: t } = e;
     if ('active' !== t) return !1;
-    let n = v.Z.getChannelId();
+    let n = O.Z.getChannelId();
     if (null == n) return !1;
     c.Z.fetchNewLocalMessages(n, T.AQB);
 }

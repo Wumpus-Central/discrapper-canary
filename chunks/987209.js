@@ -1,13 +1,13 @@
 n.d(t, {
     KB: () => I,
     b6: () => T,
-    wD: () => v
+    wD: () => O
 }),
     n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(442837),
-    o = n(597688),
+    o = n(442837),
+    a = n(597688),
     s = n(479446),
     l = n(646476),
     c = n(599659),
@@ -21,9 +21,9 @@ var r = n(200651),
     g = n(388032);
 let E = m.Cj.STANDARD_BOX,
     b = void 0,
-    [y, v, O] = (0, f.Z)();
+    [y, O, v] = (0, f.Z)();
 function I(e) {
-    let { isGift: t = !1, giftRecipient: n, giftMessage: f, giftStyle: h, giftingOrigin: v, children: O } = e,
+    let { isGift: t = !1, giftRecipient: n, giftMessage: f, giftStyle: h, giftingOrigin: O, children: v } = e,
         { selectedSkuId: I } = (0, p.JL)(),
         [S, T] = i.useState(n),
         [A, N] = i.useState(),
@@ -60,7 +60,7 @@ function I(e) {
             [S, Y, q, K, X]
         ),
         $ = (0, u.x8)(),
-        ee = (0, a.Wu)([o.Z], () => o.Z.recommendedGiftSkuIds);
+        ee = (0, o.Wu)([a.Z], () => a.Z.recommendedGiftSkuIds);
     return (0, r.jsx)(y.Provider, {
         value: {
             isGift: t,
@@ -86,12 +86,12 @@ function I(e) {
             giftMessageError: Q,
             alreadyHasHalloweenDeco: $,
             recommendedGiftSkuIds: ee,
-            giftingOrigin: v,
+            giftingOrigin: O,
             claimableRewards: k,
             selectedGiftingPromotionReward: j,
             setSelectedGiftingPromotionReward: U
         },
-        children: O
+        children: v
     });
 }
 let S = {

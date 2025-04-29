@@ -1,6 +1,6 @@
-let r, i, a;
+let r, i, o;
 n.d(t, { Z: () => Y }), n(388685);
-var o,
+var a,
     s = n(392711),
     l = n(442837),
     c = n(570140),
@@ -27,8 +27,8 @@ let m = new Map(),
     E = new Map(),
     b = new Map(),
     y = [],
-    v = m,
-    O = g,
+    O = m,
+    v = g,
     I = E,
     S = b,
     T = y,
@@ -49,33 +49,33 @@ let m = new Map(),
     },
     M = (e) => {
         let { skuId: t, product: n } = e;
-        O.set(t, n), (C = new Set(C)).delete(t), (R = new Map(R)).delete(t), (P = new Map(P)).delete(t);
+        v.set(t, n), (C = new Set(C)).delete(t), (R = new Map(R)).delete(t), (P = new Map(P)).delete(t);
     },
     k = (e) => {
-        (N = !0), (r = void 0), (a = void 0), (w = e.options);
+        (N = !0), (r = void 0), (o = void 0), (w = e.options);
     },
     j = (e) => {
         let { error: t } = e;
-        (v = m), (O = g), (T = y), (N = !1), (C = new Set()), (r = t), (a = Date.now());
+        (O = m), (v = g), (T = y), (N = !1), (C = new Set()), (r = t), (o = Date.now());
     },
     U = (e) => {
-        if (0 === e.categories.length) (v = m), (O = g);
-        else if (!(0, s.isEqual)([...v.values()], e.categories) && !e.noOp) {
+        if (0 === e.categories.length) (O = m), (v = g);
+        else if (!(0, s.isEqual)([...O.values()], e.categories) && !e.noOp) {
             let t = new Map(e.categories.map((e) => [e.skuId, e])),
                 n = new Date();
-            v.forEach((e, r) => {
+            O.forEach((e, r) => {
                 !t.has(r) && (null == e.unpublishedAt || e.unpublishedAt > n) && t.set(r, e);
             }),
-                (S = new Map([...(v = t).values()].map((e) => [e.storeListingId, e]))),
-                (O = new Map((0, _.Cs)(v, !0).map((e) => [e.skuId, e]))),
-                (I = new Map((0, _.Cs)(v, !1).map((e) => [e.storeListingId, e])));
+                (S = new Map([...(O = t).values()].map((e) => [e.storeListingId, e]))),
+                (v = new Map((0, _.Cs)(O, !0).map((e) => [e.skuId, e]))),
+                (I = new Map((0, _.Cs)(O, !1).map((e) => [e.storeListingId, e])));
         }
-        B(e.categories, O), (i = Date.now()), (N = !1), (r = void 0), (a = void 0);
+        B(e.categories, v), (i = Date.now()), (N = !1), (r = void 0), (o = void 0);
     },
     G = (e) => {
         if (0 === e.shopHome.categories.length) return;
         let t = new Map(e.shopHome.categories.map((e) => [e.skuId, e]));
-        (v = new Map([...v, ...t])), (O = new Map((0, _.Cs)(v, !0).map((e) => [e.skuId, e])));
+        (O = new Map([...O, ...t])), (v = new Map((0, _.Cs)(O, !0).map((e) => [e.skuId, e])));
     },
     B = (e, t) => {
         if (0 === e.length) {
@@ -95,7 +95,7 @@ let m = new Map(),
         }
     },
     V = () => {
-        (v = m), (O = g), (T = y), (i = void 0), (N = !1), (C = new Set()), (r = void 0), (a = void 0), (w = {}), (D = 0);
+        (O = m), (v = g), (T = y), (i = void 0), (N = !1), (C = new Set()), (r = void 0), (o = void 0), (w = {}), (D = 0);
     },
     F = () => {
         if (!u.Z.hasLoadedExperiments) return;
@@ -105,7 +105,7 @@ let m = new Map(),
     Z = (e) => {
         D = e.skipNumCategories;
     };
-class H extends (o = l.ZP.Store) {
+class H extends (a = l.ZP.Store) {
     initialize() {
         this.syncWith([f.default], V), this.syncWith([u.Z], F);
     }
@@ -119,7 +119,7 @@ class H extends (o = l.ZP.Store) {
         return r;
     }
     get lastErrorTimestamp() {
-        return a;
+        return o;
     }
     get lastSuccessfulFetch() {
         return i;
@@ -128,10 +128,10 @@ class H extends (o = l.ZP.Store) {
         return w;
     }
     get categories() {
-        return v;
+        return O;
     }
     get products() {
-        return O;
+        return v;
     }
     get recommendedGiftSkuIds() {
         return T;
@@ -140,10 +140,10 @@ class H extends (o = l.ZP.Store) {
         return D;
     }
     getCategory(e) {
-        return null != e ? v.get(e) : void 0;
+        return null != e ? O.get(e) : void 0;
     }
     getProduct(e) {
-        return null != e ? O.get(e) : void 0;
+        return null != e ? v.get(e) : void 0;
     }
     getProductFetchError(e) {
         return null != e ? R.get(e) : void 0;

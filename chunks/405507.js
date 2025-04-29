@@ -7,13 +7,13 @@ e.exports = function (e) {
         n = e.COMMENT('#', '$'),
         r = '([A-Za-z_]|::)(\\w|::)*',
         i = e.inherit(e.TITLE_MODE, { begin: r }),
-        a = {
+        o = {
             className: 'variable',
             begin: '\\$' + r
         },
-        o = {
+        a = {
             className: 'string',
-            contains: [e.BACKSLASH_ESCAPE, a],
+            contains: [e.BACKSLASH_ESCAPE, o],
             variants: [
                 {
                     begin: /'/,
@@ -30,8 +30,8 @@ e.exports = function (e) {
         aliases: ['pp'],
         contains: [
             n,
-            a,
             o,
+            a,
             {
                 beginKeywords: 'class',
                 end: '\\{|;',
@@ -65,7 +65,7 @@ e.exports = function (e) {
                         keywords: t,
                         relevance: 0,
                         contains: [
-                            o,
+                            a,
                             n,
                             {
                                 begin: '[a-zA-Z_]+\\s*=>',
@@ -83,7 +83,7 @@ e.exports = function (e) {
                                 begin: '(\\b0[0-7_]+)|(\\b0x[0-9a-fA-F_]+)|(\\b[1-9][0-9_]*(\\.[0-9_]+)?)|[0_]\\b',
                                 relevance: 0
                             },
-                            a
+                            o
                         ]
                     }
                 ],

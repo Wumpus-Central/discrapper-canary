@@ -1,8 +1,8 @@
 n.d(t, { E: () => I }), n(49124);
 var r = n(544891),
     i = n(668757),
-    a = n(881052),
-    o = n(552871),
+    o = n(881052),
+    a = n(552871),
     s = n(458725),
     l = n(283080),
     c = n(592125),
@@ -17,18 +17,18 @@ let g = 9437184,
     E = 14680064,
     b = new d.Z('DebugUploadManager'),
     y = null,
-    v = null;
-function O(e) {
+    O = null;
+function v(e) {
     switch (e.code) {
-        case a.cz.GENERAL:
+        case o.cz.GENERAL:
             return s.Nk.UploadErrorGeneral;
-        case a.cz.NO_FILE:
+        case o.cz.NO_FILE:
             return s.Nk.UploadErrorNoFile;
-        case a.cz.PROGRESS:
+        case o.cz.PROGRESS:
             return s.Nk.UploadErrorProgress;
-        case a.cz.UPLOAD:
+        case o.cz.UPLOAD:
             return s.Nk.UploadErrorUpload;
-        case a.cz.READ:
+        case o.cz.READ:
             return s.Nk.UploadErrorRead;
         default:
             return;
@@ -36,11 +36,11 @@ function O(e) {
 }
 async function I(e, t) {
     try {
-        await S(e), await (0, o.u)(E, t);
+        await S(e), await (0, a.u)(E, t);
     } catch (t) {
         let e;
         throw (
-            (t instanceof a.n0 && (e = O(t)),
+            (t instanceof o.n0 && (e = v(t)),
             (0, s.kr)({
                 type: s.u.DEBUG_LOG_UPLOAD_FAILED,
                 underlyingError: e,
@@ -52,21 +52,21 @@ async function I(e, t) {
 }
 async function S(e) {
     try {
-        let n, a, o, s;
+        let n, o, a, s;
         try {
             n = u.Pz();
         } catch (e) {
             n = 'Logs failed: '.concat(e);
         }
         try {
-            a = (null == y ? void 0 : y.getSystemLog) != null ? await new Promise((e) => y.getSystemLog(e)) : '';
+            o = (null == y ? void 0 : y.getSystemLog) != null ? await new Promise((e) => y.getSystemLog(e)) : '';
         } catch (e) {
-            a = 'System Logs failed '.concat(e);
+            o = 'System Logs failed '.concat(e);
         }
         try {
-            o = await (0, _.Z)().then((e) => (0, h.Z)(e, !0));
+            a = await (0, _.Z)().then((e) => (0, h.Z)(e, !0));
         } catch (e) {
-            o = 'Push logs failed: '.concat(e);
+            a = 'Push logs failed: '.concat(e);
         }
         try {
             var t;
@@ -74,25 +74,25 @@ async function S(e) {
         } catch (e) {
             s = 'LibDiscore logs failed: '.concat(e);
         }
-        let d = n.length + a.length + o.length + s.length;
+        let d = n.length + o.length + a.length + s.length;
         if (d > g) {
             let e = 1 - g / d;
-            (n = n.slice(n.length - Math.floor(n.length * e))), (a = a.slice(a.length - Math.floor(a.length * e))), (o = o.slice(o.length - Math.floor(o.length * e))), (s = s.slice(s.length - Math.floor(s.length * e)));
+            (n = n.slice(n.length - Math.floor(n.length * e))), (o = o.slice(o.length - Math.floor(o.length * e))), (a = a.slice(a.length - Math.floor(a.length * e))), (s = s.slice(s.length - Math.floor(s.length * e)));
         }
-        let E = (null == v ? void 0 : v.AppOpenedTimestamp) != null ? v.AppOpenedTimestamp : null,
+        let E = (null == O ? void 0 : O.AppOpenedTimestamp) != null ? O.AppOpenedTimestamp : null,
             b = '\n    '
                 .concat((0, p.Z)(E), '\n\n    ')
                 .concat((0, l.EA)(), '\n\n    Metadata:\n    ')
                 .concat(JSON.stringify((0, f.Z)(), void 0, 2), '\n\n    ChannelStore:\n    ')
                 .concat(JSON.stringify(c.Z.getDebugInfo(), void 0, 2), '\n\n    Logs:\n    ')
                 .concat(n, '\n\n    System logs:\n    ')
-                .concat(a, '\n\n    LibDiscore logs:\n    ')
+                .concat(o, '\n\n    LibDiscore logs:\n    ')
                 .concat(s, '\n\n    Push Notifications:\n    ')
-                .concat(o, '\n    ');
+                .concat(a, '\n    ');
         u.ZH();
-        let O = m.ANM.DEBUG_LOG(e, 'discord_app_logs');
+        let v = m.ANM.DEBUG_LOG(e, 'discord_app_logs');
         await r.tn.post({
-            url: O,
+            url: v,
             body: b,
             retries: 3,
             headers: { 'Content-Type': 'text/plain' },

@@ -2,7 +2,7 @@ n.d(t, { Z: () => b });
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    l = n(378409),
+    l = n(296182),
     a = n(976853),
     o = n(626135),
     s = n(358085),
@@ -57,7 +57,7 @@ function b(e, t, n) {
             }
         };
     return [
-        u.ZP.canCopyImage() && (0, l.Lz)(e)
+        (0, l.Lz)(e)
             ? (0, i.jsx)(
                   r.sNh,
                   {

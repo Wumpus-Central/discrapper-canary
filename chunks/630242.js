@@ -1,8 +1,8 @@
 n.d(t, { R: () => m }), n(388685);
 var r = n(192379),
     i = n(442837),
-    a = n(704215),
-    o = n(211644),
+    o = n(704215),
+    a = n(211644),
     s = n(605236),
     l = n(243778),
     c = n(944486),
@@ -18,8 +18,8 @@ function m(e) {
         b = (0, i.e7)([c.Z], () => c.Z.getCurrentlySelectedChannelId()),
         {
             canAccessPicker: y,
-            entryPoint: v,
-            isChatWallpaperSetterExperimentEnabled: O,
+            entryPoint: O,
+            isChatWallpaperSetterExperimentEnabled: v,
             isDarkTheme: I,
             selectedChannel: S
         } = (0, _.m)({
@@ -27,30 +27,30 @@ function m(e) {
             selectedChannelId: b
         }),
         T = y && !t,
-        [A, N] = (0, l.US)(T ? [a.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : [], void 0, !0),
-        C = A === a.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
-        [R, P] = (0, l.US)(C ? [a.z.CHAT_WALLPAPERS_PICKER_COACHMARK] : []),
-        w = (0, o.ZP)((e) => e.recentlyShown[0]),
-        D = (0, s.wE)(a.z.CHAT_WALLPAPERS_PICKER_COACHMARK);
+        [A, N] = (0, l.US)(T ? [o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK] : [], void 0, !0),
+        C = A === o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
+        [R, P] = (0, l.US)(C ? [o.z.CHAT_WALLPAPERS_PICKER_COACHMARK] : []),
+        w = (0, a.ZP)((e) => e.recentlyShown[0]),
+        D = (0, s.wE)(o.z.CHAT_WALLPAPERS_PICKER_COACHMARK);
     if (
         (r.useMemo(() => {
-            O &&
+            v &&
                 (null == S ? void 0 : S.isChatWallpaperEnabled) === !0 &&
                 !D &&
-                R !== a.z.CHAT_WALLPAPERS_PICKER_COACHMARK &&
+                R !== o.z.CHAT_WALLPAPERS_PICKER_COACHMARK &&
                 u.default.track(p.rMx.CHAT_WALLPAPER_PICKER_COACHMARK_NOT_SHOW_REASON, {
                     channel_id: S.id,
                     channel_type: S.type,
                     is_settings_open: t,
                     is_dark_theme: I,
                     is_overseer_dismissible_content_selected: C,
-                    last_dismissible_content_winner: null != w ? a.z[w] : 'None'
+                    last_dismissible_content_winner: null != w ? o.z[w] : 'None'
                 });
-        }, [O, S, D, R]),
+        }, [v, S, D, R]),
         !y)
     )
         return;
-    let L = C && R === a.z.CHAT_WALLPAPERS_PICKER_COACHMARK;
+    let L = C && R === o.z.CHAT_WALLPAPERS_PICKER_COACHMARK;
     if ((L && null != b && null == n && E !== f.j.COACHMARK && m(b), n === b)) {
         let e = L ? f.j.COACHMARK : f.j.DEFAULT;
         return (
@@ -59,7 +59,7 @@ function m(e) {
                 pickerType: e,
                 markDismissed: L
                     ? (e) => {
-                          P(e), v === d.FN.TOOLBAR && N(h.L.INDIRECT_ACTION);
+                          P(e), O === d.FN.TOOLBAR && N(h.L.INDIRECT_ACTION);
                       }
                     : void 0
             }

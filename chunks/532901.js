@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(125548);
 var r = n(200651),
     i = n(192379),
-    a = n(25209),
-    o = n(794295),
+    o = n(25209),
+    a = n(794295),
     s = n(865427),
     l = n(853425),
     c = n(49012),
@@ -13,7 +13,7 @@ function f(e) {
         react(t, n, f) {
             if (e.enableBuildOverrides && (0, s._G)(t.target)) return (0, r.jsx)(i.Fragment, { children: (0, r.jsx)(l.Z, { url: t.target }, t.target) }, f.key);
             let _ = n(t.content, f),
-                p = 'string' == typeof t.title && 0 !== t.title.length ? t.title : (0, a.Rp)(t.content),
+                p = 'string' == typeof t.title && 0 !== t.title.length ? t.title : (0, o.Rp)(t.content),
                 h = () => (0, u.r)(t),
                 m = (null == e ? void 0 : e.mustConfirmExternalLink)
                     ? (e) => (
@@ -42,7 +42,7 @@ function f(e) {
                       f.key
                   )
                 : (0, r.jsx)(
-                      o.Z,
+                      a.Z,
                       {
                           title: p,
                           href: t.target,

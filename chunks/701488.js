@@ -6,17 +6,17 @@ n.d(t, {
     GM: () => D,
     In: () => p,
     JT: () => h,
-    K8: () => v,
+    K8: () => O,
     OF: () => w,
     P9: () => b,
     Pc: () => T,
     S4: () => I,
     Si: () => g,
-    Ws: () => O,
+    Ws: () => v,
     Zc: () => _,
     cE: () => N,
-    cc: () => a,
-    d: () => o,
+    cc: () => o,
+    d: () => a,
     eB: () => E,
     jT: () => f,
     qm: () => l,
@@ -28,8 +28,8 @@ n.d(t, {
     n(388685);
 var r = n(911969),
     i = n(981631);
-let a = 160,
-    o = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
+let o = 160,
+    a = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
     s = '438122941302046720',
     l = '773336526917861400',
     c = '755600276941176913',
@@ -47,10 +47,10 @@ let a = 160,
     E = ['in_development', 'activities_team', 'employee_release'],
     b = ['1037680572660727838', '235088799074484224', '1007373802981822582', '1067803140071620628', '1194351737264406548', '1245041113882955918', '1245040907732910201', '1245040436427489471', '1208090049871351890', '1235205910863806484', '1227719606223765687'],
     y = ['1247266306231898122', '1257458870390099989', '1276239071764680926'];
-var v = (function (e) {
+var O = (function (e) {
         return (e.ADS = 'ADS'), (e.FAILED_LOAD = 'FAILED_LOAD'), (e.LAGGING = 'LAGGING'), (e.CONFUSING = 'CONFUSING'), (e.NOT_FUN = 'NOT_FUN'), (e.OTHER = 'OTHER'), e;
     })({}),
-    O = (function (e) {
+    v = (function (e) {
         return (e[(e.PLAY = 0)] = 'PLAY'), (e[(e.SPECTATE = 1)] = 'SPECTATE'), e;
     })({}),
     I = (function (e) {

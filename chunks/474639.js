@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T }), n(35282), n(388685);
 var r = n(46973),
     i = n(570140),
-    a = n(147913),
-    o = n(579806),
+    o = n(147913),
+    a = n(579806),
     s = n(569545),
     l = n(441167),
     c = n(695346),
@@ -17,8 +17,8 @@ var r = n(46973),
     E = n(435064),
     b = n(894694),
     y = n(779618),
-    v = n(356659),
-    O = n(981631),
+    O = n(356659),
+    v = n(981631),
     I = n(70722);
 function S(e, t, n) {
     return (
@@ -33,18 +33,18 @@ function S(e, t, n) {
         e
     );
 }
-class T extends a.Z {
+class T extends o.Z {
     handleRTCConnectionState(e) {
         let { context: t, state: n, streamKey: i } = e;
-        if (!(0, g.ln)() || n !== O.hes.RTC_CONNECTED) return;
-        let a = u.default.getId();
-        if (t === r.Yn.DEFAULT) return this.applyUserVoiceRecording(a);
+        if (!(0, g.ln)() || n !== v.hes.RTC_CONNECTED) return;
+        let o = u.default.getId();
+        if (t === r.Yn.DEFAULT) return this.applyUserVoiceRecording(o);
         if (t === r.Yn.STREAM && null != i) {
             let { ownerId: e } = (0, s.my)(i);
-            if (e !== a) return;
+            if (e !== o) return;
             let t = _.Z.getRTCConnection(i);
             if (null == t) return;
-            this.applyStreamRecording(a, t);
+            this.applyStreamRecording(o, t);
         }
     }
     handleRTCUserCreate(e) {
@@ -66,7 +66,7 @@ class T extends a.Z {
     }
     handleClipsInitFailure(e) {
         let { applicationName: t, errMsg: n } = e;
-        h.default.track(O.rMx.CLIPS_INIT_FAILURE, {
+        h.default.track(v.rMx.CLIPS_INIT_FAILURE, {
             application_name: t,
             error_message: n
         });
@@ -93,7 +93,7 @@ class T extends a.Z {
                 E.Z.getSettings().clipsEnabled && this.disableClips();
                 return;
             }
-            (null == E.Z.getHardwareClassification() || null == E.Z.getHardwareClassificationForDecoupled() || E.Z.getHardwareClassificationVersion() !== v.WM) &&
+            (null == E.Z.getHardwareClassification() || null == E.Z.getHardwareClassificationForDecoupled() || E.Z.getHardwareClassificationVersion() !== O.WM) &&
                 this.classifyHardwareAndTrack().then((e) => {
                     i.Z.dispatch({
                         type: 'CLIPS_CLASSIFY_HARDWARE',
@@ -103,17 +103,17 @@ class T extends a.Z {
         }
     }
     handleRTCConnectionVideo(e) {
-        let { userId: t, context: n, channelId: i, guildId: a } = e;
+        let { userId: t, context: n, channelId: i, guildId: o } = e;
         if (n !== r.Yn.STREAM || !(0, y.Z)(d.Z)) return;
-        let o = _.Z.getRTCConnection(
+        let a = _.Z.getRTCConnection(
             s.V9({
-                streamType: null != a ? I.lo.GUILD : I.lo.CALL,
+                streamType: null != o ? I.lo.GUILD : I.lo.CALL,
                 ownerId: t,
                 channelId: i,
-                guildId: a
+                guildId: o
             })
         );
-        null != o && this.applyStreamRecording(t, o);
+        null != a && this.applyStreamRecording(t, a);
     }
     async classifyHardwareAndTrack() {
         try {
@@ -128,7 +128,7 @@ class T extends a.Z {
                     };
                 }
                 {
-                    let e = (await o.Z.processUtils.getSystemInfo()).gpus.map((e) => {
+                    let e = (await a.Z.processUtils.getSystemInfo()).gpus.map((e) => {
                             let { model: t } = e;
                             return t;
                         }),
@@ -140,9 +140,9 @@ class T extends a.Z {
                 }
             })();
             return (
-                h.default.track(O.rMx.CLIPS_HARDWARE_CLASSIFICATION, {
+                h.default.track(v.rMx.CLIPS_HARDWARE_CLASSIFICATION, {
                     classification: t,
-                    version: v.WM,
+                    version: O.WM,
                     gpu_models: e
                 }),
                 t
@@ -153,11 +153,11 @@ class T extends a.Z {
     }
     classifyHardware(e) {
         if ((0, m.isWindows)()) {
-            let t = e.some((e) => v.mg.test(e)),
-                n = e.some((e) => v.nU.test(e));
+            let t = e.some((e) => O.mg.test(e)),
+                n = e.some((e) => O.nU.test(e));
             return t ? b.x.MEETS_AUTO_ENABLE : n ? b.x.MEETS_MINIMUM : b.x.BELOW_MINIMUM;
         }
-        return (0, m.isMac)() ? ('arm64' === o.Z.remoteApp.getAppArch() ? b.x.MEETS_AUTO_ENABLE : b.x.MEETS_MINIMUM) : b.x.UNKNOWN;
+        return (0, m.isMac)() ? ('arm64' === a.Z.remoteApp.getAppArch() ? b.x.MEETS_AUTO_ENABLE : b.x.MEETS_MINIMUM) : b.x.UNKNOWN;
     }
     applyUserVoiceRecording(e) {
         if (!(0, y.Z)(d.Z)) return;

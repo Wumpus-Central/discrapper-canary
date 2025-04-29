@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(686546),
     l = n(768581),
     c = n(895924),
@@ -66,8 +66,8 @@ function m(e, t) {
         r,
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -76,12 +76,12 @@ function g(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function E(e) {
-    var { section: t, isSelected: n, width: a, height: f, className: p, selectable: g = !1, isSquircle: E, onFocus: b, onBlur: y, onMouseOver: v, onMouseLeave: O } = e,
+    var { section: t, isSelected: n, width: o, height: f, className: p, selectable: g = !1, isSquircle: E, onFocus: b, onBlur: y, onMouseOver: O, onMouseLeave: v } = e,
         I = m(e, ['section', 'isSelected', 'width', 'height', 'className', 'selectable', 'isSquircle', 'onFocus', 'onBlur', 'onMouseOver', 'onMouseLeave']);
     let [S, T] = i.useState(!1),
         A = i.useCallback(() => {
@@ -91,11 +91,11 @@ function E(e) {
             T(!1), null == y || y();
         }, [y]),
         C = i.useCallback(() => {
-            T(!0), null == v || v();
-        }, [v]),
-        R = i.useCallback(() => {
-            T(!1), null == O || O();
+            T(!0), null == O || O();
         }, [O]),
+        R = i.useCallback(() => {
+            T(!1), null == v || v();
+        }, [v]),
         P = i.useMemo(() => {
             var e;
             return t.type !== c.Qi.APPLICATION
@@ -105,13 +105,13 @@ function E(e) {
                       icon: t.icon,
                       bot: null == (e = t.application) ? void 0 : e.bot,
                       botIconFirst: !0,
-                      size: a
+                      size: o
                   });
-        }, [t, a]);
+        }, [t, o]);
     return (0, r.jsx)(
         'div',
         h(_({}, I), {
-            className: o()(u.wrapper, p, {
+            className: a()(u.wrapper, p, {
                 [u.selectable]: g,
                 [u.selected]: g && n
             }),
@@ -122,13 +122,13 @@ function E(e) {
             children: (0, r.jsx)(s.ZP, {
                 className: u.mask,
                 mask: E || (g && (n || S)) ? s.QS.SQUIRCLE : s.QS.AVATAR_DEFAULT,
-                width: a,
+                width: o,
                 height: f,
                 children: (0, r.jsx)('img', {
                     alt: '',
                     className: u.icon,
                     style: {
-                        width: a,
+                        width: o,
                         height: f
                     },
                     src: P

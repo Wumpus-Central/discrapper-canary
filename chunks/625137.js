@@ -8,8 +8,8 @@ n.d(t, {
     n(642613);
 var r = n(149765),
     i = n(866442),
-    a = n(956226),
-    o = n(709054);
+    o = n(956226),
+    a = n(709054);
 function s(e) {
     e.permissions = r.vB(e.permissions);
 }
@@ -25,7 +25,7 @@ function l(e) {
         color: e.color,
         colorString: null != e.color && 0 !== e.color ? (0, i.Rf)(e.color) : null,
         colors: e.colors,
-        colorStrings: null != e.colors ? (0, a.D)(e.colors) : null,
+        colorStrings: null != e.colors ? (0, o.D)(e.colors) : null,
         hoist: e.hoist,
         managed: e.managed,
         tags: e.tags,
@@ -42,9 +42,9 @@ function c(e, t) {
         t
             .sort((t, n) => {
                 var r, i;
-                let a = e === t.id ? 1 / 0 : -(null != (r = t.originalPosition) ? r : t.position),
+                let o = e === t.id ? 1 / 0 : -(null != (r = t.originalPosition) ? r : t.position),
                     s = e === n.id ? 1 / 0 : -(null != (i = n.originalPosition) ? i : n.position);
-                return a === s ? o.default.compare(t.id, n.id) : a < s ? -1 : +(a !== s);
+                return o === s ? a.default.compare(t.id, n.id) : o < s ? -1 : +(o !== s);
             })
             .forEach((e, t) => {
                 (e.position = n - t), (r[e.id] = e);

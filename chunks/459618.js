@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I }), n(388685);
 var r = n(259443),
     i = n(442837),
-    a = n(570140),
-    o = n(186102),
+    o = n(570140),
+    a = n(186102),
     s = n(873741),
     l = n(592125),
     c = n(650774),
@@ -75,7 +75,7 @@ function b(e) {
     d.default.track(
         f.rMx.SEND_MESSAGE_ROUNDTRIP,
         p(
-            m(p({}, (0, o.Z)()), {
+            m(p({}, (0, a.Z)()), {
                 api_latency_ms: n,
                 gateway_latency_ms: r,
                 channel_id: t.id,
@@ -91,9 +91,9 @@ function b(e) {
 function y(e) {
     let { optimistic: t, message: n } = e,
         r = n.nonce;
-    t || null == r || O.recordGatewayResponse(r);
+    t || null == r || v.recordGatewayResponse(r);
 }
-class v extends i.ZP.Store {
+class O extends i.ZP.Store {
     recordMessageSendAttempt(e, t) {
         let n = {
             initialSendTimestamp: Date.now(),
@@ -125,5 +125,5 @@ class v extends i.ZP.Store {
         super(...e), _(this, 'pendingMessages', new Map());
     }
 }
-let O = new v(a.Z, { MESSAGE_CREATE: y }),
-    I = O;
+let v = new O(o.Z, { MESSAGE_CREATE: y }),
+    I = v;

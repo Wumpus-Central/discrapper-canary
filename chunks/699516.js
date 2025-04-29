@@ -1,8 +1,8 @@
 n.d(t, { Z: () => B }), n(388685);
 var r,
     i = n(392711),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(570140),
     l = n(23750),
     c = n(709054),
@@ -65,8 +65,8 @@ let m = 300000,
     E = {},
     b = {},
     y = new Set(),
-    v = new Set(),
     O = new Set(),
+    v = new Set(),
     I = {},
     S = {},
     T = 0,
@@ -77,20 +77,20 @@ let m = 300000,
     P = 0;
 function w() {
     C = Object.values(g).length;
-    let { [d.OGo.PENDING_INCOMING]: e = 0, [d.OGo.PENDING_OUTGOING]: t = 0, [d.OGo.FRIEND]: n = 0 } = a().countBy(Object.values(g), (e) => e);
-    (A = t), (N = n), (R = y.size), (P = O.size), (T = Math.max(e - R - P, 0));
+    let { [d.OGo.PENDING_INCOMING]: e = 0, [d.OGo.PENDING_OUTGOING]: t = 0, [d.OGo.FRIEND]: n = 0 } = o().countBy(Object.values(g), (e) => e);
+    (A = t), (N = n), (R = y.size), (P = v.size), (T = Math.max(e - R - P, 0));
 }
 function D(e) {
     (g = {}),
         (E = {}),
         (b = {}),
-        (v = new Set()),
-        (y = new Set()),
         (O = new Set()),
+        (y = new Set()),
+        (v = new Set()),
         (I = {}),
         (S = {}),
         e.relationships.forEach((e) => {
-            (g[e.id] = e.type), null != e.nickname && (E[e.id] = e.nickname), null != e.since && (b[e.id] = e.since), e.is_spam_request && y.add(e.id), null != e.origin_application_id && (I[e.id] = e.origin_application_id), e.user_ignored && (v.add(e.id), e.type === d.OGo.PENDING_INCOMING && O.add(e.id));
+            (g[e.id] = e.type), null != e.nickname && (E[e.id] = e.nickname), null != e.since && (b[e.id] = e.since), e.is_spam_request && y.add(e.id), null != e.origin_application_id && (I[e.id] = e.origin_application_id), e.user_ignored && (O.add(e.id), e.type === d.OGo.PENDING_INCOMING && v.add(e.id));
         }),
         w();
 }
@@ -104,7 +104,7 @@ function x(e) {
         null != e.relationship.since && (b = h(_({}, b), { [e.relationship.id]: e.relationship.since })),
         null != e.relationship.originApplicationId && (I = h(_({}, I), { [e.relationship.id]: e.relationship.originApplicationId })),
         e.relationship.isSpamRequest ? y.add(e.relationship.id) : y.delete(e.relationship.id),
-        e.relationship.userIgnored ? (v.add(e.relationship.id), e.relationship.type === d.OGo.PENDING_INCOMING ? O.add(e.relationship.id) : e.relationship.type === d.OGo.FRIEND && O.delete(e.relationship.id)) : (v.delete(e.relationship.id), O.delete(e.relationship.id)),
+        e.relationship.userIgnored ? (O.add(e.relationship.id), e.relationship.type === d.OGo.PENDING_INCOMING ? v.add(e.relationship.id) : e.relationship.type === d.OGo.FRIEND && v.delete(e.relationship.id)) : (O.delete(e.relationship.id), v.delete(e.relationship.id)),
         w(),
         e.relationship.type === d.OGo.FRIEND &&
             t === d.OGo.PENDING_OUTGOING &&
@@ -114,16 +114,16 @@ function x(e) {
             });
 }
 function M(e) {
-    (g = _({}, g)), delete g[e.relationship.id], null != E[e.relationship.id] && ((E = _({}, E)), delete E[e.relationship.id]), null != b[e.relationship.id] && ((b = _({}, b)), delete b[e.relationship.id]), null != I[e.relationship.id] && ((I = _({}, I)), delete I[e.relationship.id]), e.relationship.userIgnored || (v.delete(e.relationship.id), O.delete(e.relationship.id)), y.delete(e.relationship.id), w();
+    (g = _({}, g)), delete g[e.relationship.id], null != E[e.relationship.id] && ((E = _({}, E)), delete E[e.relationship.id]), null != b[e.relationship.id] && ((b = _({}, b)), delete b[e.relationship.id]), null != I[e.relationship.id] && ((I = _({}, I)), delete I[e.relationship.id]), e.relationship.userIgnored || (O.delete(e.relationship.id), v.delete(e.relationship.id)), y.delete(e.relationship.id), w();
 }
 function k(e) {
     let { relationship: t } = e;
-    (g = h(_({}, g), { [t.id]: t.type })), null == t.since ? delete b[t.id] : (b[t.id] = t.since), null == t.nickname ? delete E[t.id] : (E[t.id] = t.nickname), t.isSpamRequest ? y.add(t.id) : y.delete(t.id), null != S[t.id] && delete S[t.id], null == t.originApplicationId ? delete I[t.id] : (I[t.id] = t.originApplicationId), t.userIgnored ? (v.add(t.id), t.type === d.OGo.PENDING_INCOMING && O.add(t.id)) : (v.delete(t.id), O.delete(t.id)), w();
+    (g = h(_({}, g), { [t.id]: t.type })), null == t.since ? delete b[t.id] : (b[t.id] = t.since), null == t.nickname ? delete E[t.id] : (E[t.id] = t.nickname), t.isSpamRequest ? y.add(t.id) : y.delete(t.id), null != S[t.id] && delete S[t.id], null == t.originApplicationId ? delete I[t.id] : (I[t.id] = t.originApplicationId), t.userIgnored ? (O.add(t.id), t.type === d.OGo.PENDING_INCOMING && v.add(t.id)) : (O.delete(t.id), v.delete(t.id)), w();
 }
 function j(e) {
     (g = _({}, g)),
         c.default.keys(g).forEach((e) => {
-            g[e] === d.OGo.PENDING_INCOMING && (delete g[e], y.delete(e), O.delete(e), delete S[e]);
+            g[e] === d.OGo.PENDING_INCOMING && (delete g[e], y.delete(e), v.delete(e), delete S[e]);
         }),
         w();
 }
@@ -133,7 +133,7 @@ function U(e) {
         isStranger: e.isStranger
     };
 }
-class G extends (r = o.ZP.Store) {
+class G extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(u.default);
     }
@@ -158,7 +158,7 @@ class G extends (r = o.ZP.Store) {
         return !1;
     }
     isIgnored(e) {
-        return null != e && g[e] !== d.OGo.BLOCKED && v.has(e);
+        return null != e && g[e] !== d.OGo.BLOCKED && O.has(e);
     }
     isIgnoredForMessage(e) {
         var t, n, r, i;

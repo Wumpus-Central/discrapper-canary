@@ -1,9 +1,9 @@
 n.d(t, { m: () => E });
 var r = n(717029),
     i = n(846042),
-    a = n(395913);
-function o(e) {
-    return (o =
+    o = n(395913);
+function a(e) {
+    return (a =
         'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
@@ -51,7 +51,7 @@ function f(e) {
     };
 }
 function _(e, t) {
-    return t && ('object' === o(t) || 'function' == typeof t) ? t : p(e);
+    return t && ('object' === a(t) || 'function' == typeof t) ? t : p(e);
 }
 function p(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
@@ -92,7 +92,7 @@ var E = (function (e) {
     function n() {
         var e;
         s(this, n);
-        for (var r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
+        for (var r = arguments.length, i = Array(r), o = 0; o < r; o++) i[o] = arguments[o];
         return g(p((e = t.call.apply(t, [this].concat(i)))), 'priority', 90), g(p(e), 'incompatibleTokens', ['y', 'R', 'u', 'q', 'Q', 'M', 'L', 'I', 'd', 'D', 'E', 'i', 'c', 't', 'T']), e;
     }
     return (
@@ -100,16 +100,16 @@ var E = (function (e) {
             {
                 key: 'parse',
                 value: function (e, t, n, r) {
-                    var a = function (e) {
+                    var o = function (e) {
                         var t = 7 * Math.floor((e - 1) / 7);
                         return ((e + r.weekStartsOn + 6) % 7) + t;
                     };
                     switch (t) {
                         case 'e':
                         case 'ee':
-                            return (0, i.jg)((0, i.ZL)(t.length, e), a);
+                            return (0, i.jg)((0, i.ZL)(t.length, e), o);
                         case 'eo':
-                            return (0, i.jg)(n.ordinalNumber(e, { unit: 'day' }), a);
+                            return (0, i.jg)(n.ordinalNumber(e, { unit: 'day' }), o);
                         case 'eee':
                             return (
                                 n.day(e, {
@@ -172,7 +172,7 @@ var E = (function (e) {
             {
                 key: 'set',
                 value: function (e, t, n, r) {
-                    return (e = (0, a.Z)(e, n, r)).setUTCHours(0, 0, 0, 0), e;
+                    return (e = (0, o.Z)(e, n, r)).setUTCHours(0, 0, 0, 0), e;
                 }
             }
         ]),

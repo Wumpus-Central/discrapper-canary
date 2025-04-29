@@ -1,7 +1,7 @@
 n.d(t, {
     EO: () => G,
     LY: () => k,
-    Nj: () => a.Z,
+    Nj: () => o.Z,
     a5: () => x,
     c4: () => L,
     g7: () => w,
@@ -19,8 +19,8 @@ n.d(t, {
     n(388685);
 var r = n(149765),
     i = n(911969),
-    a = n(90463),
-    o = n(968358),
+    o = n(90463),
+    a = n(968358),
     s = n(874748),
     l = n(590415),
     c = n(131704),
@@ -35,14 +35,14 @@ n(51144);
 var g = n(981631),
     E = n(474936),
     b = n(388032);
-let { GUILD_VOICE: y, GUILD_CATEGORY: v, GUILD_STAGE_VOICE: O } = g.d4z;
+let { GUILD_VOICE: y, GUILD_CATEGORY: O, GUILD_STAGE_VOICE: v } = g.d4z;
 function I(e, t) {
-    return e === t || e === v;
+    return e === t || e === O;
 }
 function S(e, t, n) {
     let i = h.Hn;
     return (
-        ((0, c.r8)(t) || t === v) && (i = r.IH(i, g.Plq.VIEW_CHANNEL)),
+        ((0, c.r8)(t) || t === O) && (i = r.IH(i, g.Plq.VIEW_CHANNEL)),
         I(t, y) && ((i = r.IH(i, g.Plq.VIEW_CHANNEL)), (i = r.IH(i, g.Plq.CONNECT))),
         {
             id: e,
@@ -55,8 +55,8 @@ function S(e, t, n) {
 function T(e, t, n) {
     let i = h.Hn;
     return (
-        ((0, c.r8)(t) || t === v) && (i = r.IH(i, g.Plq.VIEW_CHANNEL)),
-        (I(t, y) || I(t, O)) && ((i = r.IH(i, g.Plq.VIEW_CHANNEL)), (i = r.IH(i, g.Plq.CONNECT))),
+        ((0, c.r8)(t) || t === O) && (i = r.IH(i, g.Plq.VIEW_CHANNEL)),
+        (I(t, y) || I(t, v)) && ((i = r.IH(i, g.Plq.VIEW_CHANNEL)), (i = r.IH(i, g.Plq.CONNECT))),
         {
             id: e,
             type: n,
@@ -67,13 +67,13 @@ function T(e, t, n) {
 }
 function A(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        a = [];
+        o = [];
     return (
-        (n.length > 0 || r) && a.push(S(e, t, i.BN.ROLE)),
+        (n.length > 0 || r) && o.push(S(e, t, i.BN.ROLE)),
         n.forEach((e) => {
-            a.push(T(e, t, i.BN.ROLE));
+            o.push(T(e, t, i.BN.ROLE));
         }),
-        a
+        o
     );
 }
 function N(e, t) {
@@ -94,15 +94,15 @@ function R(e) {
 }
 function P(e, t, n) {
     var r, i;
-    let a = e.getGuildId(),
-        s = n.getGuild(a),
+    let o = e.getGuildId(),
+        s = n.getGuild(o),
         l = null != (r = null == s ? void 0 : s.maxVideoChannelUsers) ? r : -1,
         c = null != (i = null == s ? void 0 : s.maxStageVideoChannelUsers) ? i : -1,
         u = p.ZP.countVoiceStatesForChannel(e.id),
         d = p.ZP.getVoiceStatesForChannel(e),
         _ = f.Z.can(g.Plq.MOVE_MEMBERS, e) && f.Z.can(g.Plq.CONNECT, e),
         h = !1;
-    h = e.type === O ? null != a && (t.hasVideo(e.id) || (0, o.a)(d)) && c > 0 && u >= c : null != a && t.hasVideo(e.id) && l > 0 && u >= l + +!!_;
+    h = e.type === v ? null != o && (t.hasVideo(e.id) || (0, a.a)(d)) && c > 0 && u >= c : null != o && t.hasVideo(e.id) && l > 0 && u >= l + +!!_;
     let m = e.userLimit > 0 && u >= e.userLimit;
     return h || (m && !_);
 }
@@ -111,7 +111,7 @@ function w(e, t) {
 }
 function D(e) {
     let { channels: t, selectedChannelId: n, selectedVoiceChannelId: r, voiceStates: i } = e,
-        a = [];
+        o = [];
     return (
         t.forEach((e) => {
             if (e.id === r || e.id === n) return;
@@ -119,11 +119,11 @@ function D(e) {
             null != t &&
                 (e.isGuildStageVoice()
                     ? t.forEach((e) => {
-                          (0, l.gf)(e.voiceState) === l.xO.ON_STAGE && a.push(e);
+                          (0, l.gf)(e.voiceState) === l.xO.ON_STAGE && o.push(e);
                       })
-                    : t.forEach((e) => a.push(e)));
+                    : t.forEach((e) => o.push(e)));
         }),
-        a
+        o
     );
 }
 function L(e) {
@@ -200,9 +200,9 @@ function U(e, t, n, r) {
 }
 function G(e, t, n, r) {
     let i,
-        a = e.getGuildId(),
-        o = (0, s.BC)(a, t);
-    return null != t && o ? U(a, t.id, e.id, m.default.castChannelIdAsMessageId(e.id)) : null != r ? r : j(a, e.id, n);
+        o = e.getGuildId(),
+        a = (0, s.BC)(o, t);
+    return null != t && a ? U(o, t.id, e.id, m.default.castChannelIdAsMessageId(e.id)) : null != r ? r : j(o, e.id, n);
 }
 function B(e) {
     if (null == e) return null;

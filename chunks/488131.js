@@ -1,13 +1,13 @@
 n.d(t, {
     NK: () => T,
     R6: () => I,
-    ok: () => O,
+    ok: () => v,
     vN: () => S
 });
 var r = n(512722),
     i = n.n(r),
-    a = n(392711),
-    o = n.n(a),
+    o = n(392711),
+    a = n.n(o),
     s = n(570140),
     l = n(430742),
     c = n(40851),
@@ -22,10 +22,10 @@ var r = n(512722),
     E = n(585483),
     b = n(124368),
     y = n(981631),
-    v = n(176505);
-function O(e, t, n) {
+    O = n(176505);
+function v(e, t, n) {
     c.UI.dispatch(y.CkL.POPOUT_CLOSE);
-    let r = !o().isEmpty(g.Z.getVoiceStatesForChannel(e.id));
+    let r = !a().isEmpty(g.Z.getVoiceStatesForChannel(e.id));
     if (t || !p.vF.getSetting() || __OVERLAY__ || r) {
         s.Z.dispatch({
             type: 'SIDEBAR_CLOSE',
@@ -35,9 +35,9 @@ function O(e, t, n) {
         return;
     }
     i()(null != e.parent_id, 'all threads must have parents');
-    let a = m.Z.getChannelId();
-    e.parent_id === a || (0, v.ME)(a) || (0, _.Kh)(e.parent_id),
-        (0, f.uL)(y.Z5c.CHANNEL_THREAD_VIEW((0, d.e)(e), (0, v.ME)(a) ? v.oC.GUILD_HOME : e.parent_id, e.id), e.isForumPost() ? { source: b.on.FORUM } : void 0),
+    let o = m.Z.getChannelId();
+    e.parent_id === o || (0, O.ME)(o) || (0, _.Kh)(e.parent_id),
+        (0, f.uL)(y.Z5c.CHANNEL_THREAD_VIEW((0, d.e)(e), (0, O.ME)(o) ? O.oC.GUILD_HOME : e.parent_id, e.id), e.isForumPost() ? { source: b.on.FORUM } : void 0),
         setTimeout(() => {
             E.S.dispatch(y.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
         }, 0);
@@ -68,7 +68,7 @@ function I(e, t, n) {
     }, 0);
 }
 function S(e, t) {
-    (0, f.uL)(y.Z5c.CHANNEL(e, (0, v.ME)(t) ? v.oC.GUILD_HOME : t)),
+    (0, f.uL)(y.Z5c.CHANNEL(e, (0, O.ME)(t) ? O.oC.GUILD_HOME : t)),
         s.Z.dispatch({
             type: 'SIDEBAR_CLOSE',
             baseChannelId: t

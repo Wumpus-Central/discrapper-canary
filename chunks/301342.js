@@ -22,8 +22,8 @@ var r = n(200651),
     b = n(430824),
     y = n(496675),
     _ = n(9156),
-    O = n(203818),
-    v = n(438144),
+    v = n(203818),
+    O = n(438144),
     C = n(981631),
     j = n(388032),
     S = n(585523);
@@ -70,17 +70,17 @@ function x(e, t) {
         e
     );
 }
-function I(e) {
+function P(e) {
     e.stopPropagation();
 }
-let P = i.memo(function (e) {
+let I = i.memo(function (e) {
         let t,
-            { channel: l, connectChannelDragSource: h, connectChannelDropTarget: O, disableManageChannels: v, position: P, sortingPosition: w, hideIcon: N, children: Z } = e,
+            { channel: l, connectChannelDragSource: h, connectChannelDropTarget: v, disableManageChannels: O, position: I, sortingPosition: w, hideIcon: N, children: Z } = e,
             T = (0, g.Q3)('CategoryChannel'),
             A = (0, a.e7)([_.ZP], () => _.ZP.isChannelMuted(l.getGuildId(), l.id)),
             R = (0, a.e7)([m.Z], () => m.Z.isCollapsed(l.id)),
             D = (0, a.e7)([y.Z], () => y.Z.can(C.Plq.MANAGE_CHANNELS, l));
-        t = null != w ? (P > w ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
+        t = null != w ? (I > w ? S.containerDragAfter : S.containerDragBefore) : S.containerDefault;
         let L = i.useCallback(() => {
                 R ? (0, u.mJ)(l.id) : (0, u.c4)(l.id);
             }, [l.id, R]),
@@ -204,10 +204,10 @@ let P = i.memo(function (e) {
                                     )
                                 ),
                                 (0, r.jsx)('div', {
-                                    onClick: I,
+                                    onClick: P,
                                     className: S.children,
                                     children:
-                                        D && !v
+                                        D && !O
                                             ? (0, r.jsx)(c.ua7, {
                                                   text: j.intl.string(j.t['fUYU+v']),
                                                   children: (e) => {
@@ -251,9 +251,9 @@ let P = i.memo(function (e) {
                     Z
                 ]
             });
-        return null != O && null != h ? O(h(z)) : z;
+        return null != v && null != h ? v(h(z)) : z;
     }),
-    w = (0, h.B)(P),
+    w = (0, h.B)(I),
     N = i.memo(function (e) {
         let { name: t, onDismiss: n, className: i } = e;
         return (0, r.jsx)('li', {
@@ -289,10 +289,10 @@ let P = i.memo(function (e) {
     }),
     Z = i.memo(function (e) {
         let { category: t } = e,
-            n = (0, a.e7)([O.Z], () => O.Z.isVoiceCategoryCollapsed(t.guild.id)),
+            n = (0, a.e7)([v.Z], () => v.Z.isVoiceCategoryCollapsed(t.guild.id)),
             l = (0, g.Q3)('VoiceChannelCategoryButton'),
             o = i.useCallback(() => {
-                n ? (0, v.s)(t.guild.id) : (0, v.M)(t.guild.id);
+                n ? (0, O.s)(t.guild.id) : (0, O.M)(t.guild.id);
             }, [t.guild.id, n]);
         return l
             ? (0, r.jsxs)(c.zxk, {
@@ -331,7 +331,7 @@ let P = i.memo(function (e) {
     }),
     T = i.memo(function (e) {
         let { category: t, channel: n } = e,
-            i = (0, a.e7)([O.Z], () => O.Z.isVoiceCategoryCollapsed(t.guild.id));
+            i = (0, a.e7)([v.Z], () => v.Z.isVoiceCategoryCollapsed(t.guild.id));
         return i || null == n || n.record.type === C.d4z.GUILD_CATEGORY
             ? i
                 ? (0, r.jsx)('li', {

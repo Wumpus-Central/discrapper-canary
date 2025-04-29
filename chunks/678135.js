@@ -2,8 +2,8 @@ n.d(t, { Z: () => N });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(481060),
     l = n(22267),
     c = n(442933),
@@ -18,14 +18,14 @@ var i = n(120356),
     E = n(150039),
     b = n(397689),
     y = n(656229),
-    v = n(724241),
-    O = n(890876),
+    O = n(724241),
+    v = n(890876),
     I = n(981631),
     S = n(228168),
     T = n(388032),
     A = n(997926);
 function N(e) {
-    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: o, pendingBanner: l, pendingAccentColor: m, pendingBio: g, pendingPronouns: T, pendingAvatar: N, pendingAvatarDecoration: R, pendingNickname: P, pendingGlobalName: w, pendingThemeColors: D, pendingProfileEffectId: L, avatarClassName: x, containerClassName: M, isTryItOutFlow: k = !1, disabledInputs: j = !1, hideCustomStatus: U = !1, hideBioSection: G = !1, hideMessageInput: B = !0, hideExampleButton: V = !1, pendingBadges: F, shouldOpenBadgeTooltip: Z, showNameplatePreview: H = !1 } = e,
+    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: a, pendingBanner: l, pendingAccentColor: m, pendingBio: g, pendingPronouns: T, pendingAvatar: N, pendingAvatarDecoration: R, pendingNickname: P, pendingGlobalName: w, pendingThemeColors: D, pendingProfileEffectId: L, avatarClassName: x, containerClassName: M, isTryItOutFlow: k = !1, disabledInputs: j = !1, hideCustomStatus: U = !1, hideBioSection: G = !1, hideMessageInput: B = !0, hideExampleButton: V = !1, pendingBadges: F, shouldOpenBadgeTooltip: Z, showNameplatePreview: H = !1 } = e,
         Y = (0, d.ZP)(t.id, null == n ? void 0 : n.id),
         { avatarSrc: W, avatarDecorationSrc: K } = (0, _.Z)({
             user: t,
@@ -54,7 +54,7 @@ function N(e) {
                 displayProfile: Y,
                 themeType: S.lY.POPOUT,
                 pendingThemeColors: D,
-                className: a()(A.container, M),
+                className: o()(A.container, M),
                 forceShowPremium: i,
                 children: [
                     (0, r.jsxs)('header', {
@@ -69,7 +69,7 @@ function N(e) {
                                 pendingAccentColor: m,
                                 isTryItOutFlow: k,
                                 disabledInputs: j,
-                                onUpsellClick: () => (null == o ? void 0 : o({ object: I.qAy.EDIT_PROFILE_BANNER }))
+                                onUpsellClick: () => (null == a ? void 0 : a({ object: I.qAy.EDIT_PROFILE_BANNER }))
                             }),
                             (0, r.jsx)(b.Z, {
                                 user: t,
@@ -83,7 +83,7 @@ function N(e) {
                                 className: x,
                                 disabledInputs: j,
                                 isTryItOutFlow: k,
-                                onUpsellClick: () => (null == o ? void 0 : o({ object: I.qAy.AVATAR }))
+                                onUpsellClick: () => (null == a ? void 0 : a({ object: I.qAy.AVATAR }))
                             }),
                             !U &&
                                 (0, r.jsx)(h.Z, {
@@ -94,7 +94,7 @@ function N(e) {
                                 })
                         ]
                     }),
-                    (0, r.jsx)(v.Z, {
+                    (0, r.jsx)(O.Z, {
                         user: t,
                         displayProfile: Y,
                         guild: n,
@@ -108,7 +108,7 @@ function N(e) {
                         pendingBadges: F,
                         shouldOpenBadgeTooltip: Z
                     }),
-                    (0, r.jsx)(O.Z, {
+                    (0, r.jsx)(v.Z, {
                         user: t,
                         hideMessageInput: B,
                         hideExampleButton: V
@@ -121,8 +121,8 @@ function N(e) {
     });
 }
 function C() {
-    let e = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
-        t = (0, o.e7)([m.Z], () => m.Z.getPendingNameplate());
+    let e = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
+        t = (0, a.e7)([m.Z], () => m.Z.getPendingNameplate());
     return null == e
         ? null
         : (0, r.jsxs)('div', {

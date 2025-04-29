@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A }), n(388685);
 var r,
     i = n(392711),
-    a = n(442837),
-    o = n(570140),
+    o = n(442837),
+    a = n(570140),
     s = n(709054),
     l = n(981631);
 function c(e, t, n) {
@@ -60,18 +60,18 @@ function y(e) {
         n = new Set(_);
     n.add(t), (_ = n);
 }
-function v(e) {
+function O(e) {
     let { channelId: t } = e,
         n = new Set(_);
     n.delete(t), (_ = n);
 }
-function O(e) {
+function v(e) {
     var t, n;
-    let { wallpaperId: r, overrides: a } = e;
-    if (null == d[r] || null == a) return void delete h[r];
+    let { wallpaperId: r, overrides: o } = e;
+    if (null == d[r] || null == o) return void delete h[r];
     null == h[r] && (h[r] = (0, i.cloneDeep)(d[r]));
-    let o = h[r];
-    (o.default = u({}, o.default, a)), (null == o || null == (t = o.variants) ? void 0 : t.dark) != null && (o.variants.dark = u({}, o.variants.dark, a)), (null == o || null == (n = o.variants) ? void 0 : n.light) != null && (o.variants.light = u({}, o.variants.light, a));
+    let a = h[r];
+    (a.default = u({}, a.default, o)), (null == a || null == (t = a.variants) ? void 0 : t.dark) != null && (a.variants.dark = u({}, a.variants.dark, o)), (null == a || null == (n = a.variants) ? void 0 : n.light) != null && (a.variants.light = u({}, a.variants.light, o));
 }
 function I(e) {
     let { channelId: t, message: n } = e;
@@ -84,7 +84,7 @@ function S(e) {
     if (null == r) return !1;
     p[t] = r.id;
 }
-class T extends (r = a.ZP.Store) {
+class T extends (r = o.ZP.Store) {
     get isFetchingWallpapers() {
         return 1 === f;
     }
@@ -112,14 +112,14 @@ class T extends (r = a.ZP.Store) {
     }
 }
 c(T, 'displayName', 'ChatWallpaperStore');
-let A = new T(o.Z, {
+let A = new T(a.Z, {
     FETCH_CHAT_WALLPAPERS_START: m,
     FETCH_CHAT_WALLPAPERS_SUCCESS: g,
     FETCH_CHAT_WALLPAPERS_FAILURE: E,
     LOAD_MESSAGES_SUCCESS: S,
     MESSAGE_CREATE: I,
     UPDATE_CHAT_WALLPAPER_FLAG_START: y,
-    UPDATE_CHAT_WALLPAPER_FLAG_COMPLETE: v,
-    UPDATE_CHAT_WALLPAPER_OVERRIDES: O,
+    UPDATE_CHAT_WALLPAPER_FLAG_COMPLETE: O,
+    UPDATE_CHAT_WALLPAPER_OVERRIDES: v,
     LOGOUT: b
 });

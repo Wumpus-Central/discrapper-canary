@@ -1,8 +1,8 @@
 n.d(t, { Z: () => s });
 var r = n(570140),
     i = n(434404),
-    a = n(821864),
-    o = n(308063);
+    o = n(821864),
+    a = n(308063);
 let s = {
     init() {
         r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_INIT' });
@@ -60,7 +60,7 @@ let s = {
     async saveApplicationPermissions(e, t, n) {
         try {
             r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }),
-                await a.U3({
+                await o.U3({
                     applicationId: e,
                     commandId: e,
                     defaultEveryoneValue: !0,
@@ -88,7 +88,7 @@ let s = {
     },
     async saveWebhook(e, t) {
         try {
-            r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }), await o.Z.update(e, t.id, t), r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' });
+            r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SUBMITTING' }), await a.Z.update(e, t.id, t), r.Z.dispatch({ type: 'INTEGRATION_SETTINGS_SAVE_SUCCESS' });
         } catch (e) {
             r.Z.dispatch({
                 type: 'INTEGRATION_SETTINGS_SAVE_FAILURE',

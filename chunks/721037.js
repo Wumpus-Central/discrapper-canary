@@ -1,8 +1,8 @@
 n.d(t, { Z: () => w }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(442837),
-    o = n(519938),
+    o = n(442837),
+    a = n(519938),
     s = n(317381),
     l = n(988980),
     c = n(16609),
@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(592125),
     b = n(366050),
     y = n(944486),
-    v = n(451478),
-    O = n(823379),
+    O = n(451478),
+    v = n(823379),
     I = n(981631),
     S = n(918559),
     T = n(354459);
@@ -46,16 +46,16 @@ let N = {
     R = [];
 class P extends i.PureComponent {
     render() {
-        let { selectedPIPWindow: e, pipWindows: t, pipWidth: n, maxX: i, maxY: a, theme: o, dockedRect: s, appContext: l, roundCorners: c } = this.props;
+        let { selectedPIPWindow: e, pipWindows: t, pipWidth: n, maxX: i, maxY: o, theme: a, dockedRect: s, appContext: l, roundCorners: c } = this.props;
         return (0, r.jsx)(_.Z, {
             pictureInPictureComponents: N,
             selectedPIPWindow: e,
             pipWindows: t,
             pipWidth: n,
             maxX: i,
-            maxY: a,
+            maxY: o,
             dockedRect: s,
-            theme: o,
+            theme: a,
             onWindowMove: this.handleWindowMove,
             onWindowResize: this.handleWindowResize,
             appContext: l,
@@ -66,17 +66,17 @@ class P extends i.PureComponent {
     constructor(...e) {
         super(...e),
             A(this, 'handleWindowMove', (e, t) => {
-                o.Ao(e, t);
+                a.Ao(e, t);
             }),
             A(this, 'handleWindowResize', (e) => {
-                o.d7(e, T.cL.VIDEO);
+                a.d7(e, T.cL.VIDEO);
             });
     }
 }
-let w = a.ZP.connectStores([p.Z, s.ZP, v.Z, h.Z, E.Z, y.Z, b.Z, f.Z, m.ZP], (e) => {
+let w = o.ZP.connectStores([p.Z, s.ZP, O.Z, h.Z, E.Z, y.Z, b.Z, f.Z, m.ZP], (e) => {
     var t, n, r, i;
-    let a,
-        { inPopoutWindow: o = !1 } = e,
+    let o,
+        { inPopoutWindow: a = !1 } = e,
         d = p.Z.getWindowOpen(I.KJ3.CHANNEL_CALL_POPOUT),
         _ = s.ZP.getCurrentEmbeddedActivity(),
         g = (0, c.pY)(null == _ ? void 0 : _.location),
@@ -84,8 +84,8 @@ let w = a.ZP.connectStores([p.Z, s.ZP, v.Z, h.Z, E.Z, y.Z, b.Z, f.Z, m.ZP], (e) 
         N = s.ZP.getActivityPanelMode(),
         C = A && N === S.Ez.PANEL,
         P = null != _ && null != g && (null == (t = f.Z.getSelectedParticipant(g)) ? void 0 : t.type) === T.fO.ACTIVITY,
-        w = v.Z.windowSize();
-    if (o) {
+        w = O.Z.windowSize();
+    if (a) {
         let e = p.Z.getWindow(I.KJ3.CHANNEL_CALL_POPOUT);
         w =
             null == e
@@ -95,26 +95,26 @@ let w = a.ZP.connectStores([p.Z, s.ZP, v.Z, h.Z, E.Z, y.Z, b.Z, f.Z, m.ZP], (e) 
                       height: e.innerHeight
                   };
     }
-    let D = o ? I.IlC.POPOUT : I.IlC.APP;
-    a = o && A ? null : o || !d || A ? (null != _ && C ? (null != (n = b.Z.pipActivityWindow) ? n : b.Z.pipVideoWindow) : null != (r = b.Z.pipVideoWindow) ? r : b.Z.pipActivityWindow) : null;
+    let D = a ? I.IlC.POPOUT : I.IlC.APP;
+    o = a && A ? null : a || !d || A ? (null != _ && C ? (null != (n = b.Z.pipActivityWindow) ? n : b.Z.pipVideoWindow) : null != (r = b.Z.pipVideoWindow) ? r : b.Z.pipActivityWindow) : null;
     let L = Array.from(b.Z.pipWindows.values()),
         x = b.Z.pipWidth(T.cL.VIDEO),
-        M = [L.find((e) => e.component === I.NYg.VIDEO), L.find((e) => e.component === I.NYg.EMBED_IFRAME)].filter(O.lm),
+        M = [L.find((e) => e.component === I.NYg.VIDEO), L.find((e) => e.component === I.NYg.EMBED_IFRAME)].filter(v.lm),
         k = m.ZP.callChatSidebarWidth,
         j = y.Z.getVoiceChannelId(),
         U = y.Z.getChannelId() === j,
         G = null != j && f.Z.getChatOpen(j),
         B = C || P,
         V = B && null != _ && (0, l.q)(_.applicationId),
-        F = !B && null != a && U && G;
+        F = !B && null != o && U && G;
     return {
-        selectedPIPWindow: a,
+        selectedPIPWindow: o,
         pipWindows: 0 === M.length ? R : M,
         pipWidth: x,
         maxX: w.width - (F ? k : 0),
         maxY: w.height,
         theme: h.Z.theme,
-        dockedRect: b.Z.getDockedRect(null != (i = null == a ? void 0 : a.id) ? i : ''),
+        dockedRect: b.Z.getDockedRect(null != (i = null == o ? void 0 : o.id) ? i : ''),
         appContext: D,
         roundCorners: !V
     };

@@ -1,7 +1,7 @@
 let r, i;
 n.d(t, { Z: () => S }), n(415506);
-var a,
-    o = n(442837),
+var o,
+    a = n(442837),
     s = n(544891),
     l = n(570140),
     c = n(358085),
@@ -35,13 +35,13 @@ function g(e) {
     p = t;
 }
 function E(e) {
-    let { paymentSourceType: t, state: n, path: i, query: a } = e;
+    let { paymentSourceType: t, state: n, path: i, query: o } = e;
     if (t !== u.HeQ.PAYPAL || n !== r) return;
-    let o = window.popupBridge.onComplete;
-    'function' == typeof o &&
-        o(null, {
+    let a = window.popupBridge.onComplete;
+    'function' == typeof a &&
+        a(null, {
             path: i,
-            queryItems: a
+            queryItems: o
         });
 }
 function b(e) {
@@ -51,7 +51,7 @@ function b(e) {
 function y() {
     _ = null;
 }
-function v() {
+function O() {
     p = null;
 }
 (0, c.isDesktop)() &&
@@ -64,7 +64,7 @@ function v() {
             (i = e), window.open(e), I.emitChange();
         }
     });
-class O extends (a = o.ZP.Store) {
+class v extends (o = a.ZP.Store) {
     getClient() {
         return f;
     }
@@ -78,14 +78,14 @@ class O extends (a = o.ZP.Store) {
         return i;
     }
 }
-d(O, 'displayName', 'BraintreeStore');
-let I = new O(l.Z, {
+d(v, 'displayName', 'BraintreeStore');
+let I = new v(l.Z, {
         BRAINTREE_CREATE_CLIENT_SUCCESS: h,
         BRAINTREE_CREATE_PAYPAL_CLIENT_SUCCESS: m,
         BILLING_POPUP_BRIDGE_CALLBACK: E,
         BILLING_POPUP_BRIDGE_STATE_UPDATE: b,
         BRAINTREE_TEARDOWN_PAYPAL_CLIENT: y,
         BRAINTREE_CREATE_VENMO_CLIENT_SUCCESS: g,
-        BRAINTREE_TEARDOWN_VENMO_CLIENT: v
+        BRAINTREE_TEARDOWN_VENMO_CLIENT: O
     }),
     S = I;

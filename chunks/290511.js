@@ -7,7 +7,7 @@ n.d(t, {
     Un: () => b,
     X: () => h,
     YW: () => d,
-    ae: () => v,
+    ae: () => O,
     b3: () => _,
     cf: () => T,
     dr: () => I,
@@ -16,20 +16,20 @@ n.d(t, {
     l7: () => g,
     md: () => p,
     qm: () => f,
-    yZ: () => O
+    yZ: () => v
 }),
     n(953529);
 var r = n(348327),
     i = n.n(r),
-    a = n(388032);
-function o(e, t) {
+    o = n(388032);
+function a(e, t) {
     if (null == e) return {};
     var n,
         r,
         i = s(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -38,8 +38,8 @@ function s(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let l = 100,
@@ -62,17 +62,17 @@ var g = (function (e) {
     })({});
 function y(e) {
     if (e.options.length > 0) return !1;
-    let t = v(),
+    let t = O(),
         { id: n } = t,
-        r = o(t, ['id']),
-        { id: a } = e,
-        s = o(e, ['id']);
+        r = a(t, ['id']),
+        { id: o } = e,
+        s = a(e, ['id']);
     return i()(r, s);
 }
-function v() {
+function O() {
     return {
         id: String(Date.now()),
-        title: a.intl.string(a.t.vY91Cw),
+        title: o.intl.string(o.t.vY91Cw),
         options: [],
         singleSelect: !1,
         required: !1,
@@ -80,7 +80,7 @@ function v() {
         type: 0
     };
 }
-function O(e) {
+function v(e) {
     return {
         id: String(Date.now()),
         title: '',

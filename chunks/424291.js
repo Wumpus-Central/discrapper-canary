@@ -2,8 +2,8 @@ n.d(t, { V: () => d });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(531826);
-function o(e, t, n) {
+    o = n(531826);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -57,12 +57,12 @@ function c(e, t) {
 }
 let u = 'activity-age-gate';
 function d(e) {
-    let { application: t, channelId: o, onAgree: l, onDisagree: d } = e,
+    let { application: t, channelId: a, onAgree: l, onDisagree: d } = e,
         f =
             null !=
-            (0, a.ZP)({
+            (0, o.ZP)({
                 application: t,
-                channelId: o
+                channelId: a
             })
                 ? i.u1M
                 : i.z1l;
@@ -74,7 +74,7 @@ function d(e) {
                     (0, r.jsx)(
                         e,
                         c(s({}, n), {
-                            channelId: o,
+                            channelId: a,
                             application: t,
                             onAgree: l,
                             onDisagree: d

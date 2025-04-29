@@ -1,9 +1,9 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(392711),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     s = n(493683),
     l = n(904245),
     c = n(911969),
@@ -66,7 +66,7 @@ function y(e, t) {
         e
     );
 }
-function v(e) {
+function O(e) {
     switch (e) {
         case h.nkL.GIF.title:
         case h.nkL.TENOR.title:
@@ -75,8 +75,8 @@ function v(e) {
             return '';
     }
 }
-let O = [
-    ...a()(h.nkL)
+let v = [
+    ...o()(h.nkL)
         .values()
         .map((e) => ({
             id: e.commandId,
@@ -86,10 +86,10 @@ let O = [
             inputType: _.iw.BUILT_IN_INTEGRATION,
             applicationId: p.bi.BUILT_IN,
             get untranslatedDescription() {
-                return v(e.title);
+                return O(e.title);
             },
             get displayDescription() {
-                return v(e.title);
+                return O(e.title);
             },
             options:
                 e.type === h.q9n.GIF
@@ -145,24 +145,24 @@ let O = [
         },
         execute: (e, t) => {
             var n, i;
-            let { channel: a } = t;
-            if (null == a) return;
-            let c = (0, u.F6)(a, f.default, d.Z),
+            let { channel: o } = t;
+            if (null == o) return;
+            let c = (0, u.F6)(o, f.default, d.Z),
                 _ = m.intl.formatToPlainString(m.t.hJ5Ap6, { name: c }),
                 p = m.intl.format(m.t.SSIVOj, { name: c }),
                 h = null != (i = null == (n = e.find((e) => 'silent' === e.name)) ? void 0 : n.value) && i;
             async function g() {
-                if (null != a)
+                if (null != o)
                     try {
-                        await s.Z.closePrivateChannel(a.id, void 0, h);
+                        await s.Z.closePrivateChannel(o.id, void 0, h);
                     } catch (e) {
-                        l.Z.sendBotMessage(a.id, m.intl.string(m.t.YOsuT0));
+                        l.Z.sendBotMessage(o.id, m.intl.string(m.t.YOsuT0));
                     }
             }
-            a.isManaged() && ((_ = m.intl.formatToPlainString(m.t.hVGjER, { name: c })), (p = m.intl.format(m.t.IK1Qvr, { name: c }))),
-                (0, o.h7j)((e) =>
+            o.isManaged() && ((_ = m.intl.formatToPlainString(m.t.hVGjER, { name: c })), (p = m.intl.format(m.t.IK1Qvr, { name: c }))),
+                (0, a.h7j)((e) =>
                     (0, r.jsx)(
-                        o.ConfirmModal,
+                        a.ConfirmModal,
                         y(
                             E(
                                 {
@@ -174,7 +174,7 @@ let O = [
                                 e
                             ),
                             {
-                                children: (0, r.jsx)(o.Text, {
+                                children: (0, r.jsx)(a.Text, {
                                     variant: 'text-md/normal',
                                     children: p
                                 })

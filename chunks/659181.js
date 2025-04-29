@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(388685), n(997841);
 var r = n(913527),
     i = n.n(r),
-    a = n(81825),
-    o = n(630388),
+    o = n(81825),
+    a = n(630388),
     s = n(973616),
     l = n(981631);
 function c(e, t, n) {
@@ -19,9 +19,9 @@ function c(e, t, n) {
     );
 }
 let u = ['500428425362931713', '451550535720501248', '471376328319303681', '466696214818193408'];
-class d extends a.Z {
+class d extends o.Z {
     static createFromServer(e) {
-        var t, n, r, a, o, l, c;
+        var t, n, r, o, a, l, c;
         let { price: u } = e;
         return new d({
             id: e.id,
@@ -58,9 +58,9 @@ class d extends a.Z {
             premium: null != (r = e.premium) && r,
             showAgeGate: e.show_age_gate || !1,
             restricted: e.restricted || !1,
-            slug: null != (a = e.slug) ? a : '',
+            slug: null != (o = e.slug) ? o : '',
             exclusive: e.exclusive || !1,
-            locales: null != (o = e.locales) ? o : ['en-US'],
+            locales: null != (a = e.locales) ? a : ['en-US'],
             flags: e.flags,
             externalPurchaseUrl: e.external_purchase_url,
             deleted: null != (l = e.deleted) && l,
@@ -113,16 +113,16 @@ class d extends a.Z {
         return u.includes(this.id);
     }
     get available() {
-        return (0, o.yE)(this.flags, l.l4R.AVAILABLE) || null != this.externalPurchaseUrl;
+        return (0, a.yE)(this.flags, l.l4R.AVAILABLE) || null != this.externalPurchaseUrl;
     }
     isAvailableForDistribution() {
-        return this.available && null != this.getPrice() && null == this.externalPurchaseUrl && (!this.premium || (0, o.yE)(this.flags, l.l4R.PREMIUM_AND_DISTRIBUTION));
+        return this.available && null != this.getPrice() && null == this.externalPurchaseUrl && (!this.premium || (0, a.yE)(this.flags, l.l4R.PREMIUM_AND_DISTRIBUTION));
     }
     isAvailable() {
-        return (0, o.yE)(this.flags, l.l4R.AVAILABLE);
+        return (0, a.yE)(this.flags, l.l4R.AVAILABLE);
     }
     isPremiumPerk() {
-        return this.premium && ((0, o.yE)(this.flags, l.l4R.PREMIUM_PURCHASE) || (0, o.yE)(this.flags, l.l4R.PREMIUM_AND_DISTRIBUTION));
+        return this.premium && ((0, a.yE)(this.flags, l.l4R.PREMIUM_PURCHASE) || (0, a.yE)(this.flags, l.l4R.PREMIUM_AND_DISTRIBUTION));
     }
     hasFeature(e) {
         return this.features.has(e);

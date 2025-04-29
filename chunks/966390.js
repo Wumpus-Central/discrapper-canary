@@ -1,8 +1,8 @@
 n.d(t, { Z: () => V }), n(388685), n(997841);
 var r = n(481060),
     i = n(570140),
-    a = n(430742),
-    o = n(904245),
+    o = n(430742),
+    a = n(904245),
     s = n(166459),
     l = n(531643),
     c = n(881052),
@@ -17,8 +17,8 @@ var r = n(481060),
     E = n(48854),
     b = n(785359),
     y = n(79390),
-    v = n(980463),
-    O = n(992970),
+    O = n(980463),
+    v = n(992970),
     I = n(576645),
     S = n(317951),
     T = n(287941),
@@ -114,7 +114,7 @@ async function G(e) {
             poll: (0, y.x9)(V.poll)
         });
     function Q() {
-        '' !== Y.content && '' === R.Z.getDraft(M, G) && a.Z.saveDraft(M, Y.content, G),
+        '' !== Y.content && '' === R.Z.getDraft(M, G) && o.Z.saveDraft(M, Y.content, G),
             0 === P.Z.getUploadCount(M, G) &&
                 s.Z.setUploads({
                     channelId: M,
@@ -156,7 +156,7 @@ async function G(e) {
                 }),
                 t === L.evJ.EXPLICIT_CONTENT)
             )
-                return void o.Z.sendExplicitMediaClydeError(M, null == n ? void 0 : n.attachments, p.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
+                return void a.Z.sendExplicitMediaClydeError(M, null == n ? void 0 : n.attachments, p.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
             if (t === L.evJ.AUTOMOD_MESSAGE_BLOCKED) {
                 let e = {
                         code: t,
@@ -187,10 +187,10 @@ async function G(e) {
                         )
                     );
                 else {
-                    var a;
+                    var o;
                     (0, l.openUploadError)({
                         title: x.intl.string(x.t.B3vFdX),
-                        help: null != (a = null == n ? void 0 : n.message) ? a : x.intl.string(x.t.zMEjJi)
+                        help: null != (o = null == n ? void 0 : n.message) ? o : x.intl.string(x.t.zMEjJi)
                     });
                 }
                 Q();
@@ -206,7 +206,7 @@ async function G(e) {
             });
             let n = (0, I.ZC)(t);
             null != n &&
-                ((0, v.gA)(S.D1),
+                ((0, O.gA)(S.D1),
                 (0, T.I)(
                     {
                         name: n.name,
@@ -214,7 +214,7 @@ async function G(e) {
                     },
                     void 0,
                     !0,
-                    O.LL.MessageSent
+                    v.LL.MessageSent
                 ));
         }),
         null == V || null == (t = V.confettiPotionData) || t.callback(),
@@ -235,7 +235,7 @@ function B(e) {
         (f.content = c.content), (f.tts = c.tts), (f.channel_id = c.channel_id);
         let e = N.Z.getPendingReply(t);
         if (null != e) {
-            let n = o.Z.getSendMessageOptionsForReply(e);
+            let n = a.Z.getSendMessageOptionsForReply(e);
             (f.type = L.uaV.REPLY), (f.message_reference = n.messageReference), (f.allowed_mentions = n.allowedMentions), (0, A.A6)(t);
         }
     }
@@ -268,7 +268,7 @@ function B(e) {
                 }),
                 u === L.evJ.EXPLICIT_CONTENT)
             )
-                return void o.Z.sendExplicitMediaClydeError(t, null == d ? void 0 : d.attachments, p.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
+                return void a.Z.sendExplicitMediaClydeError(t, null == d ? void 0 : d.attachments, p.UU.EXPLICIT_MEDIA_MESSAGE_SEND_BLOCKED);
             (0, l.openUploadError)({
                 title: x.intl.string(x.t.B3vFdX),
                 help: x.intl.format(x.t.gIlRx8, {
@@ -283,7 +283,7 @@ function B(e) {
                     }
                 })
             }),
-                '' !== f.content && '' === R.Z.getDraft(t, s) && a.Z.saveDraft(t, f.content, s);
+                '' !== f.content && '' === R.Z.getDraft(t, s) && o.Z.saveDraft(t, f.content, s);
         }),
         h.on('complete', (e) => {
             i.Z.dispatch({
@@ -296,9 +296,9 @@ function B(e) {
 }
 let V = {
     instantBatchUpload: function (e) {
-        let { channelId: t, files: n, draftType: r, isThumbnail: i = !1, filesMetadata: a = [] } = e,
-            o = Array.from(n).map((e, n) => {
-                let r = null != a ? a[n] : {};
+        let { channelId: t, files: n, draftType: r, isThumbnail: i = !1, filesMetadata: o = [] } = e,
+            a = Array.from(n).map((e, n) => {
+                let r = null != o ? o[n] : {};
                 return new d.n(
                     k(
                         {
@@ -313,7 +313,7 @@ let V = {
             });
         G({
             channelId: t,
-            uploads: o,
+            uploads: a,
             draftType: r
         });
     },

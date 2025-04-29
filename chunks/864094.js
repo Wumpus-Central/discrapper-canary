@@ -1,8 +1,8 @@
 n.d(t, { P: () => d });
 var r = n(200651),
     i = n(192379),
-    a = n(709014);
-function o(e, t, n) {
+    o = n(709014);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -78,8 +78,8 @@ let u = {
     },
     d = (e) => {
         let t = i.useRef(null),
-            o = i.useRef(e);
-        o.current = e;
+            a = i.useRef(e);
+        a.current = e;
         let l = i.useMemo(
                 () => () => {
                     null != t.current && t.current.play(e);
@@ -99,11 +99,11 @@ let u = {
             _ = i.useCallback(
                 (e) =>
                     (0, r.jsx)(
-                        a.L,
+                        o.L,
                         c(s({}, e), {
                             src: () => n.e('59682').then(n.t.bind(n, 126683, 19)),
                             ref: t,
-                            initialAnimation: o.current,
+                            initialAnimation: a.current,
                             markers: u
                         })
                     ),

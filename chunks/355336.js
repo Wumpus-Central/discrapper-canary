@@ -1,8 +1,8 @@
 n.d(t, { $: () => m }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(803997),
-    o = n.n(a),
+    o = n(803997),
+    a = n.n(o),
     s = n(84735),
     l = n(780900),
     c = n(789304);
@@ -64,8 +64,8 @@ function p(e, t) {
         r,
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -74,13 +74,13 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function m(e, t) {
     let n = new Map(),
-        a = new t((e) => {
+        o = new t((e) => {
             e.forEach((e) => {
                 var t;
                 let { target: r } = e;
@@ -88,7 +88,7 @@ function m(e, t) {
             });
         });
     return i.forwardRef(function (t, u) {
-        var { children: f, className: h, onResize: m, contentClassName: g, onScroll: E, dir: b = 'ltr', fade: y = !1, customTheme: v = !1, style: O } = t,
+        var { children: f, className: h, onResize: m, contentClassName: g, onScroll: E, dir: b = 'ltr', fade: y = !1, customTheme: O = !1, style: v } = t,
             I = p(t, ['children', 'className', 'onResize', 'contentClassName', 'onScroll', 'dir', 'fade', 'customTheme', 'style']);
         let S = i.useRef(null),
             T = i.useRef(null),
@@ -124,14 +124,14 @@ function m(e, t) {
                 ref: C,
                 key: 'container',
                 onUpdate: m,
-                resizeObserver: a,
+                resizeObserver: o,
                 listenerMap: n
             }),
             (0, l.zn)({
                 ref: T,
                 key: 'content',
                 onUpdate: m,
-                resizeObserver: a,
+                resizeObserver: o,
                 listenerMap: n
             }),
             (0, r.jsx)(
@@ -140,14 +140,14 @@ function m(e, t) {
                     d(
                         {
                             ref: C,
-                            className: o()(h, {
+                            className: a()(h, {
                                 [c.fade]: y,
-                                [c.customTheme]: v,
+                                [c.customTheme]: O,
                                 [e]: !0,
                                 [c.managedReactiveScroller]: !0,
                                 [c.scrolling]: A && y
                             }),
-                            style: O,
+                            style: v,
                             dir: b,
                             onScroll: w
                         },
@@ -158,7 +158,7 @@ function m(e, t) {
                             containerRef: T,
                             children: (0, r.jsxs)('div', {
                                 ref: T,
-                                className: o()(g, c.content),
+                                className: a()(g, c.content),
                                 children: [f, A && (0, r.jsx)('div', { className: c.pointerCover })]
                             })
                         })

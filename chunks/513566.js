@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(388685);
 var r = n(348327),
     i = n.n(r),
-    a = n(392711),
-    o = n.n(a),
+    o = n(392711),
+    a = n.n(o),
     s = n(570140),
     l = n(846027),
     c = n(287734),
@@ -17,8 +17,8 @@ var r = n(348327),
     E = n(358085),
     b = n(998502),
     y = n(981631),
-    v = n(388032);
-function O(e, t, n) {
+    O = n(388032);
+function v(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -43,7 +43,7 @@ class I extends u.Z {
     }
     constructor(...e) {
         super(...e),
-            O(this, 'callbackActions', {
+            v(this, 'callbackActions', {
                 [b.tS.VIDEO]: () => {
                     m.Z.isVideoEnabled() ? l.Z.setVideoEnabled(!1) : (0, p.Z)(() => l.Z.setVideoEnabled(!0), y.IlC.APP);
                 },
@@ -51,27 +51,27 @@ class I extends u.Z {
                 [b.tS.DEAFEN]: () => l.Z.toggleSelfDeaf({ location: 'Thumbar' }),
                 [b.tS.DISCONNECT]: () => c.default.disconnect()
             }),
-            O(this, 'isSupported', (0, E.isMac)() || (0, E.isWindows)()),
-            O(this, 'prevButtons', []),
-            O(this, 'buttonClicked', (e) => {
+            v(this, 'isSupported', (0, E.isMac)() || (0, E.isWindows)()),
+            v(this, 'prevButtons', []),
+            v(this, 'buttonClicked', (e) => {
                 if (!(e.buttonName in this.callbackActions)) return void console.error('ThumbarButtonsManager: Unknown callback eventName: "'.concat(e.buttonName, '"'), e);
                 this.callbackActions[e.buttonName]();
             }),
-            O(
+            v(
                 this,
                 'handleViewUpdate',
-                o().debounce(() => {
+                a().debounce(() => {
                     let e = g.Z.getVoiceChannelId();
                     if (null == e) return void this.setThumbarButtons([]);
                     let t = m.Z.isSelfMute(),
                         n = m.Z.isSelfDeaf(),
                         r = m.Z.isVideoEnabled(),
                         i = m.Z.isVideoAvailable(),
-                        a = h.Z.getChannel(e),
-                        o = null == a || (0, f.y)(a),
+                        o = h.Z.getChannel(e),
+                        a = null == o || (0, f.y)(o),
                         { reachedLimit: s, limit: l } =
-                            null != a
-                                ? (0, d.t)(a)
+                            null != o
+                                ? (0, d.t)(o)
                                 : {
                                       reachedLimit: void 0,
                                       limit: void 0
@@ -79,9 +79,9 @@ class I extends u.Z {
                         c = (0, _.X)({
                             enabled: r,
                             join: !1,
-                            channel: a,
+                            channel: o,
                             cameraUnavailable: !i,
-                            hasPermission: o,
+                            hasPermission: a,
                             channelLimit: l,
                             channelLimitReached: s
                         });
@@ -95,17 +95,17 @@ class I extends u.Z {
                         {
                             name: b.tS.MUTE,
                             active: t,
-                            tooltip: t ? v.intl.string(v.t.YqAjX1) : v.intl.string(v.t['w4m94+'])
+                            tooltip: t ? O.intl.string(O.t.YqAjX1) : O.intl.string(O.t['w4m94+'])
                         },
                         {
                             name: b.tS.DEAFEN,
                             active: n,
-                            tooltip: n ? v.intl.string(v.t['2US87+']) : v.intl.string(v.t.wjcRFR)
+                            tooltip: n ? O.intl.string(O.t['2US87+']) : O.intl.string(O.t.wjcRFR)
                         },
                         {
                             name: b.tS.DISCONNECT,
                             active: !0,
-                            tooltip: v.intl.string(v.t['6vrfgo'])
+                            tooltip: O.intl.string(O.t['6vrfgo'])
                         }
                     ]);
                 }, 100)

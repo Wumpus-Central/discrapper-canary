@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(200651);
 n(192379);
 var i = n(952265),
-    a = n(723359),
-    o = n(231338);
+    o = n(723359),
+    a = n(231338);
 function s(e, t, n) {
     return (
         t in e
@@ -43,8 +43,8 @@ function c(e) {
             return (t) => (0, r.jsx)(e, l({}, t));
         },
         {
-            modalKey: a.$$,
-            onCloseRequest: o.dG,
+            modalKey: o.$$,
+            onCloseRequest: a.dG,
             onCloseCallback: e
         }
     );
@@ -58,7 +58,7 @@ function u() {
             return (n) => (0, r.jsx)(t, l({ claimRequired: e }, n));
         },
         {
-            onCloseRequest: e ? o.dG : null,
+            onCloseRequest: e ? a.dG : null,
             onCloseCallback: t
         }
     );

@@ -1,8 +1,8 @@
 let r;
-n.d(t, { Z: () => ea }), n(539854), n(388685), n(583741), n(290780), n(35282), n(781311);
+n.d(t, { Z: () => eo }), n(539854), n(388685), n(583741), n(290780), n(35282), n(781311);
 var i,
-    a = n(392711),
-    o = n.n(a),
+    o = n(392711),
+    a = n.n(o),
     s = n(442837),
     l = n(433517),
     c = n(570140),
@@ -17,8 +17,8 @@ var i,
     E = n(984933),
     b = n(271383),
     y = n(430824),
-    v = n(496675),
-    O = n(306680),
+    O = n(496675),
+    v = n(306680),
     I = n(944486),
     S = n(914010),
     T = n(9156),
@@ -53,7 +53,7 @@ let w = 'seenQSTutorial',
     F = [],
     Z = [];
 function H() {
-    (j = y.Z.getGuildCount() >= 3 || o().size(m.Z.getMutablePrivateChannels()) >= 20), (F = []);
+    (j = y.Z.getGuildCount() >= 3 || a().size(m.Z.getMutablePrivateChannels()) >= 20), (F = []);
 }
 function Y(e) {
     let t = [];
@@ -113,15 +113,15 @@ function K() {
             });
     }
     let i = [],
-        a = [];
+        o = [];
     for (let e = 1; e < Z.length; e += 1) {
         let t = W(Z[e]);
-        null != t && ((t.type !== u.h8.TEXT_CHANNEL && t.type !== u.h8.VOICE_CHANNEL) || v.Z.can(C.Plq.VIEW_CHANNEL, t.record)) && a.push(t);
+        null != t && ((t.type !== u.h8.TEXT_CHANNEL && t.type !== u.h8.VOICE_CHANNEL) || O.Z.can(C.Plq.VIEW_CHANNEL, t.record)) && o.push(t);
     }
-    a.length > 0 && i.push((0, u.o6)(R.intl.string(R.t['80lOZ2'])), ...a);
+    o.length > 0 && i.push((0, u.o6)(R.intl.string(R.t['80lOZ2'])), ...o);
     let s = Y((e) => e === r || Z.includes(e));
     s.length > 0 && i.push((0, u.o6)(R.intl.string(R.t['4B63jY'])), ...s);
-    let l = O.ZP.getMentionChannelIds()
+    let l = v.ZP.getMentionChannelIds()
         .filter((e) => e !== r && !Z.includes(e))
         .map((e) => W(e))
         .filter(N.lm)
@@ -142,7 +142,7 @@ function K() {
         }),
             e.length > 0 && (i.push((0, u.o6)(R.intl.string(R.t.ieCAhI))), (i = i.concat(e)));
     }
-    return o()(i)
+    return a()(i)
         .uniqBy((e) => e.record.id)
         .value();
 }
@@ -178,15 +178,15 @@ function z(e, t) {
 function q(e) {
     var t;
     let { query: n, queryMode: i } = e,
-        a = null != (t = S.Z.getGuildId()) ? t : void 0,
-        o = new Set(['user:'.concat(h.default.getId())]);
-    null != a && o.add('guild:'.concat(a)),
+        o = null != (t = S.Z.getGuildId()) ? t : void 0,
+        a = new Set(['user:'.concat(h.default.getId())]);
+    null != o && a.add('guild:'.concat(o)),
         (r =
             null != r
                 ? r
                 : new u.ZP(J, x, null != i ? L : D, {
                       frecencyBoosters: !0,
-                      blacklist: o
+                      blacklist: a
                   })),
         (B = null),
         (V = n.length),
@@ -215,13 +215,13 @@ function $() {
 }
 function ee(e) {
     var t, n;
-    let { query: i, queryMode: a } = e;
+    let { query: i, queryMode: o } = e;
     if (null == r) return !1;
-    let o = null != (t = S.Z.getGuildId()) ? t : null;
-    if (U !== a) {
-        r.setResultTypes(null != a ? [a] : x), r.setLimit(null != a ? L : D);
+    let a = null != (t = S.Z.getGuildId()) ? t : null;
+    if (U !== o) {
+        r.setResultTypes(null != o ? [o] : x), r.setLimit(null != o ? L : D);
         let e = null != (n = S.Z.getGuildId()) ? n : void 0;
-        a === u.h8.USER && null != e
+        o === u.h8.USER && null != e
             ? r.setOptions(
                   {
                       userFilters: {
@@ -231,7 +231,7 @@ function ee(e) {
                   },
                   !0
               )
-            : a === u.h8.VOICE_CHANNEL
+            : o === u.h8.VOICE_CHANNEL
               ? r.setOptions({ voiceChannelGuildFilter: null }, !0)
               : r.setOptions(
                     {
@@ -241,7 +241,7 @@ function ee(e) {
                     !0
                 );
     }
-    (U = a), r.search(i, U === u.h8.USER ? o : void 0);
+    (U = o), r.search(i, U === u.h8.USER ? a : void 0);
 }
 function et(e) {
     M = e.selectedIndex;
@@ -303,4 +303,4 @@ let ei = new er(c.Z, {
         QUICKSWITCHER_SWITCH_TO: en,
         CHANNEL_SELECT: Q
     }),
-    ea = ei;
+    eo = ei;

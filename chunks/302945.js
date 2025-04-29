@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(793030),
     l = n(422034),
     c = n(182294),
@@ -10,12 +10,12 @@ var r = n(200651),
     d = n(798984);
 function f(e) {
     let { affinities: t, className: n } = e,
-        a = (e) => (null != e.globalName ? e.globalName : e.username),
+        o = (e) => (null != e.globalName ? e.globalName : e.username),
         f = i.useMemo(
             () =>
                 t.length > 1
                     ? u.intl.formatToPlainString(u.t.HaVk0d, {
-                          username: a(t[0]),
+                          username: o(t[0]),
                           numFriends: t.length - 1
                       })
                     : '',
@@ -34,7 +34,7 @@ function f(e) {
         )
     );
     return (0, r.jsxs)('div', {
-        className: o()(d.container, n),
+        className: a()(d.container, n),
         children: [
             (0, r.jsx)('div', {
                 className: d.iconContainer,

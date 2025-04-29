@@ -2,8 +2,8 @@ n.d(t, { Z: () => S }), n(388685), n(997841);
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(147913),
-    o = n(160404),
+    o = n(147913),
+    a = n(160404),
     s = n(314897),
     l = n(592125),
     c = n(271383),
@@ -45,7 +45,7 @@ function y(e) {
     }
     return e;
 }
-function v(e, t) {
+function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -57,18 +57,18 @@ function v(e, t) {
     }
     return n;
 }
-function O(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : O(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-class I extends a.Z {
+class I extends o.Z {
     constructor(...e) {
         super(...e),
             b(this, 'onboardingCompleteGuilds', new Set()),
@@ -85,18 +85,18 @@ class I extends a.Z {
                 null != e && this._getOrLoadOnboardingMemberActions(e);
             }),
             b(this, 'handleGuildMemberUpdate', (e) => {
-                let { flags: t, user: a, guildId: o } = e;
-                if (a.id === s.default.getId() && !this.onboardingCompleteGuilds.has(o) && (0, d.yE)(null != t ? t : 0, E.q.COMPLETED_HOME_ACTIONS)) {
+                let { flags: t, user: o, guildId: a } = e;
+                if (o.id === s.default.getId() && !this.onboardingCompleteGuilds.has(a) && (0, d.yE)(null != t ? t : 0, E.q.COMPLETED_HOME_ACTIONS)) {
                     var l, c;
-                    this.onboardingCompleteGuilds.add(o);
-                    let e = null != (c = null == (l = _.Z.getNewMemberActions(o)) ? void 0 : l.length) ? c : 0;
+                    this.onboardingCompleteGuilds.add(a);
+                    let e = null != (c = null == (l = _.Z.getNewMemberActions(a)) ? void 0 : l.length) ? c : 0;
                     if (0 === e) return;
                     (0, i.ZDy)(async () => {
                         let { default: t } = await n.e('92339').then(n.bind(n, 184100));
                         return (n) =>
                             (0, r.jsx)(
                                 t,
-                                O(y({}, n), {
+                                v(y({}, n), {
                                     initialPercent: (e - 1) / e,
                                     numActions: e
                                 })
@@ -112,15 +112,15 @@ class I extends a.Z {
                 let { guildId: t, channelId: n } = e;
                 if (null == t || null == n) return;
                 let { memberActions: r, completedActions: i } = await this._getOrLoadOnboardingMemberActions(t),
-                    a = null == r ? void 0 : r.find((e) => e.channelId === n);
-                (null == i ? void 0 : i[n]) !== !0 && null != a && a.actionType === p.oi.VIEW && (0, f.Oh)(t, n);
+                    o = null == r ? void 0 : r.find((e) => e.channelId === n);
+                (null == i ? void 0 : i[n]) !== !0 && null != o && o.actionType === p.oi.VIEW && (0, f.Oh)(t, n);
             }),
             b(this, 'handleMessageSend', (e) => {
                 var t;
                 let { guildId: n, channelId: r, message: i } = e;
                 if (null == n || null == r || (null == (t = i.author) ? void 0 : t.id) !== s.default.getId()) return;
-                let a = l.Z.getChannel(r);
-                (null == a ? void 0 : a.isForumPost()) && (null == a ? void 0 : a.parent_id) != null && this._completeChatAction(n, a.parent_id), this._completeChatAction(n, r);
+                let o = l.Z.getChannel(r);
+                (null == o ? void 0 : o.isForumPost()) && (null == o ? void 0 : o.parent_id) != null && this._completeChatAction(n, o.parent_id), this._completeChatAction(n, r);
             }),
             b(this, 'handleThreadCreate', (e) => {
                 var t;
@@ -134,14 +134,14 @@ class I extends a.Z {
             }),
             b(this, '_getOrLoadOnboardingMemberActions', async (e) => {
                 let t = (0, m.s)(e),
-                    n = o.Z.isFullServerPreview(e);
+                    n = a.Z.isFullServerPreview(e);
                 if (!t && !n) return {};
                 let r = c.ZP.getSelfMember(e);
                 if (null == r || !(0, g.m)(e)) return {};
-                let [i, a] = await Promise.all([this._getOrLoadOnboardingHomeSettings(e), this._getOrLoadMemberActions(e, r)]);
+                let [i, o] = await Promise.all([this._getOrLoadOnboardingHomeSettings(e), this._getOrLoadMemberActions(e, r)]);
                 return {
                     memberActions: i,
-                    completedActions: a
+                    completedActions: o
                 };
             }),
             b(this, '_getOrLoadOnboardingHomeSettings', async (e) => {

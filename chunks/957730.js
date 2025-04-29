@@ -1,8 +1,8 @@
 n.d(t, { ZP: () => ee }), n(35282), n(388685), n(539854), n(361932), n(187205);
 var r = n(392711),
     i = n.n(r),
-    a = n(477660),
-    o = n.n(a),
+    o = n(477660),
+    a = n.n(o),
     s = n(933557),
     l = n(339085),
     c = n(633302),
@@ -17,8 +17,8 @@ var r = n(392711),
     E = n(271383),
     b = n(430824),
     y = n(496675),
-    v = n(699516),
-    O = n(246946),
+    O = n(699516),
+    v = n(246946),
     I = n(594174),
     S = n(483360),
     T = n(176354),
@@ -113,8 +113,8 @@ function M(e, t, n) {
         }
         if ('"' === t[i]) break;
     }
-    let a = t.substring(0, i + 1),
-        o = (0, s.mA)(t.substring(2, i));
+    let o = t.substring(0, i + 1),
+        a = (0, s.mA)(t.substring(2, i));
     return n
         .sortBy((e) => {
             let { text: t } = e;
@@ -122,11 +122,11 @@ function M(e, t, n) {
         })
         .filter((e) => {
             let { text: t } = e;
-            return o === t;
+            return a === t;
         })
         .map((e) => {
             let { id: t } = e;
-            return [a, t, r];
+            return [o, t, r];
         })
         .first();
 }
@@ -142,7 +142,7 @@ function k(e) {
 }
 function j(e) {
     return {
-        match: o().anyScopeRegex(e),
+        match: a().anyScopeRegex(e),
         parse: (e) => ({
             type: 'text',
             content: e[0]
@@ -157,9 +157,9 @@ let U = u.Z.RULES,
     Z = /^<a?:(\w+):(\d+)>/,
     H = /(@everyone|@here|@Clyde)\b/,
     Y = {
-        link: k(o().defaultRules.link),
-        autolink: k(o().defaultRules.autolink),
-        url: k(o().defaultRules.url),
+        link: k(a().defaultRules.link),
+        autolink: k(a().defaultRules.autolink),
+        url: k(a().defaultRules.url),
         inlineCode: k(U.inlineCode),
         codeBlock: k(U.codeBlock),
         rawUserMention: j(B),
@@ -181,8 +181,8 @@ let U = u.Z.RULES,
                     ))
                 )
                     return null;
-                let a = H.exec(e);
-                if (null != a && i[0].length <= a[0].length) return null;
+                let o = H.exec(e);
+                if (null != o && i[0].length <= o[0].length) return null;
                 if ('' === n) {
                     let t = _.v.exec(e);
                     if (null != t && i[0].length <= t[0].length) return null;
@@ -225,17 +225,17 @@ let U = u.Z.RULES,
             match: (e) => c.ZP.EMOJI_NAME_RE.exec(e),
             parse(e, t, n) {
                 let [r, i] = e,
-                    { customEmoji: a } = n,
-                    o = Object.prototype.hasOwnProperty.call(a, i) ? a[i] : null;
-                if (null != o) {
+                    { customEmoji: o } = n,
+                    a = Object.prototype.hasOwnProperty.call(o, i) ? o[i] : null;
+                if (null != a) {
                     var s;
                     return {
                         type: 'customEmoticon',
                         content: '<'
-                            .concat(!0 === o.animated ? 'a' : '', ':')
-                            .concat(null != (s = o.originalName) ? s : o.name, ':')
-                            .concat(o.id, '>'),
-                        emoji: o
+                            .concat(!0 === a.animated ? 'a' : '', ':')
+                            .concat(null != (s = a.originalName) ? s : a.name, ':')
+                            .concat(a.id, '>'),
+                        emoji: a
                     };
                 }
                 return {
@@ -251,16 +251,16 @@ let U = u.Z.RULES,
             },
             parse(e, t, n) {
                 let [r, i] = e,
-                    { emojiContext: a } = n,
-                    o = a.getEmoticonByName(i);
-                return null != o
+                    { emojiContext: o } = n,
+                    a = o.getEmoticonByName(i);
+                return null != a
                     ? {
                           type: 'customEmoticon',
                           content: '<'
-                              .concat(!0 === o.animated ? 'a' : '', ':')
-                              .concat(o.name, ':')
-                              .concat(o.id, '>'),
-                          emoji: o
+                              .concat(!0 === a.animated ? 'a' : '', ':')
+                              .concat(a.name, ':')
+                              .concat(a.id, '>'),
+                          emoji: a
                       }
                     : {
                           type: 'text',
@@ -274,21 +274,21 @@ let U = u.Z.RULES,
         inlineCode: k(U.inlineCode),
         codeBlock: k(U.codeBlock),
         mention: {
-            match: o().anyScopeRegex(B),
+            match: a().anyScopeRegex(B),
             parse(e, t, n) {
                 let { isNotification: r } = n,
                     i = I.default.getUser(e[1]);
                 if (null == i) return { content: e[0] };
-                let a = A.ZP.getUserTag(i, { identifiable: r && O.Z.enabled ? 'never' : 'always' });
-                if (!r) return { content: '@'.concat(a) };
+                let o = A.ZP.getUserTag(i, { identifiable: r && v.Z.enabled ? 'never' : 'always' });
+                if (!r) return { content: '@'.concat(o) };
                 {
                     let e = A.ZP.getGlobalName(i);
-                    return { content: null != e ? '@'.concat(e) : '@'.concat(a) };
+                    return { content: null != e ? '@'.concat(e) : '@'.concat(o) };
                 }
             }
         },
         roleMention: {
-            match: o().anyScopeRegex(V),
+            match: a().anyScopeRegex(V),
             parse(e, t, n) {
                 let { guild: r } = n;
                 if (null != r) {
@@ -299,35 +299,35 @@ let U = u.Z.RULES,
             }
         },
         channel: {
-            match: o().anyScopeRegex(F),
+            match: a().anyScopeRegex(F),
             parse(e) {
                 let t = m.Z.getChannel(e[1]);
-                return { content: null == t ? e[0] : (0, s.F6)(t, I.default, v.Z, !0, !0) };
+                return { content: null == t ? e[0] : (0, s.F6)(t, I.default, O.Z, !0, !0) };
             }
         },
         emoji: {
-            match: o().anyScopeRegex(Z),
+            match: a().anyScopeRegex(Z),
             parse(e, t, n) {
-                let [r, i, a] = e,
-                    { guild: o } = n,
-                    s = l.ZP.getDisambiguatedEmojiContext(o ? o.id : null).getById(a),
+                let [r, i, o] = e,
+                    { guild: a } = n,
+                    s = l.ZP.getDisambiguatedEmojiContext(a ? a.id : null).getById(o),
                     c = null != s ? s.name : i;
                 return { content: ':'.concat(c, ':') };
             }
         },
         soundboard: {
-            match: o().anyScopeRegex(f.hf),
+            match: a().anyScopeRegex(f.hf),
             parse(e) {
                 let [t, n, r] = e;
                 return { content: '<sound:'.concat(n, ':').concat(r, '>') };
             }
         },
         spoiler: {
-            match: o().anyScopeRegex(N.$92),
+            match: a().anyScopeRegex(N.$92),
             parse: () => ({ content: '<'.concat(R.intl.string(R.t['F+x38P']).toLowerCase(), '>') })
         },
         staticRouteLink: {
-            match: o().anyScopeRegex(N.PEY),
+            match: a().anyScopeRegex(N.PEY),
             parse: (e) => ({ content: '<id:'.concat(e[1], '>') })
         },
         timestamp: L(w({}, U.timestamp), {
@@ -344,7 +344,7 @@ let U = u.Z.RULES,
         e[t].order = n;
     });
 });
-let K = o().parserFor(Y),
+let K = a().parserFor(Y),
     z = /(?:<a?:\w+:(\d+)>)|:(?:([^\s:]+?)(?:::skin-tone-\d)?:)/g;
 function q(e, t, n) {
     if (null != n && ('customEmoticon' === t.type && n(t.emoji, !1), 'emoticon' === t.type || 'text' === t.type)) {
@@ -385,7 +385,7 @@ function J(e) {
     let t,
         n = null == e ? void 0 : e.getGuildId(),
         r = null != n ? b.Z.getGuild(n) : null,
-        a = y.Z.can(N.Plq.MENTION_EVERYONE, e);
+        o = y.Z.can(N.Plq.MENTION_EVERYONE, e);
     t = (null == e ? void 0 : e.isPrivate())
         ? e.recipients.map((e) => ({
               userId: e,
@@ -400,7 +400,7 @@ function J(e) {
                 };
             })
           : [];
-    let o = i()(
+    let a = i()(
             t.reduce((e, t) => {
                 let { userId: n } = t,
                     r = I.default.getUser(n);
@@ -418,7 +418,7 @@ function J(e) {
             .values()
             .filter((e) => {
                 let { mentionable: t } = e;
-                return a || t;
+                return o || t;
             })
             .map((e) => {
                 let { id: t, name: n } = e;
@@ -458,7 +458,7 @@ function J(e) {
         inline: !0,
         mentionableRoles: s,
         guild: r,
-        users: o,
+        users: a,
         channels: c.concat(u).concat(d),
         emojiContext: f,
         customEmoticonsRegex: m,
@@ -496,11 +496,11 @@ let ee = {
     parsePreprocessor: (e, t) => K(t, J(e)),
     unparse(e, t, n) {
         let r = m.Z.getChannel(t),
-            a = null != r ? r.getGuildId() : null,
-            s = null != a ? b.Z.getGuild(a) : null,
+            o = null != r ? r.getGuildId() : null,
+            s = null != o ? b.Z.getGuild(o) : null,
             l = n ? W : i().omit(W, ['spoiler', 'timestamp']),
             u = n ? $ : c.ZP.translateSurrogatesToInlineEmoji,
-            d = o().parserFor(l),
+            d = a().parserFor(l),
             f = {
                 inline: !0,
                 guild: s,

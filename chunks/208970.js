@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I });
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(592125);
+    o = n(570140),
+    a = n(592125);
 function s(e, t, n) {
     return (
         t in e
@@ -57,7 +57,7 @@ function u(e, t) {
 }
 let d = {};
 function f(e) {
-    let t = o.Z.getChannel(e);
+    let t = a.Z.getChannel(e);
     return null != t && !!t.isForumLikeChannel();
 }
 function _(e) {
@@ -122,10 +122,10 @@ function y(e) {
     let { channel: t } = e;
     return delete d[t.id];
 }
-function v() {
+function O() {
     d = {};
 }
-class O extends (r = i.ZP.Store) {
+class v extends (r = i.ZP.Store) {
     getSearchQuery(e) {
         let t = d[e];
         return null == t ? void 0 : t.query;
@@ -144,9 +144,9 @@ class O extends (r = i.ZP.Store) {
         return (null == t ? void 0 : t.results) != null && t.results.length > 0;
     }
 }
-s(O, 'displayName', 'ForumSearchStore');
-let I = new O(a.Z, {
-    CONNECTION_OPEN: v,
+s(v, 'displayName', 'ForumSearchStore');
+let I = new v(o.Z, {
+    CONNECTION_OPEN: O,
     THREAD_DELETE: b,
     CHANNEL_DELETE: y,
     FORUM_SEARCH_QUERY_UPDATED: p,

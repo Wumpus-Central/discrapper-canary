@@ -1,8 +1,8 @@
 let r;
 n.d(t, { Z: () => j }), n(539854), n(388685), n(997841);
 var i,
-    a = n(348327),
-    o = n.n(a),
+    o = n(348327),
+    a = n.n(o),
     s = n(392711),
     l = n.n(s),
     c = n(442837),
@@ -17,8 +17,8 @@ var i,
     E = n(581883),
     b = n(199902),
     y = n(272053),
-    v = n(77498),
-    O = n(981631);
+    O = n(77498),
+    v = n(981631);
 function I(e, t, n) {
     return (
         t in e
@@ -80,35 +80,35 @@ function R() {
     let n = h.Z.getActivities();
     e.push(...n);
     let r = y.Z.getStream();
-    null != r && e.push(S({ type: O.IIU.STREAMING }, r));
+    null != r && e.push(S({ type: v.IIU.STREAMING }, r));
     let i = new Set();
     l().forEach(C, (t) => {
         let [, n] = t;
         null != n.application_id && (i.add(n.name), e.push(n));
     });
-    let a = p.ZP.getVisibleGame(),
-        s = null != a && null != a.name && i.has(a.name),
-        c = null != a && a.isLauncher,
+    let o = p.ZP.getVisibleGame(),
+        s = null != o && null != o.name && i.has(o.name),
+        c = null != o && o.isLauncher,
         u = null != b.Z.getCurrentUserActiveStream(),
         d = s || (c && !u);
-    if (null != a && null != a.name && !d) {
+    if (null != o && null != o.name && !d) {
         var f, E;
         e.push({
-            type: O.IIU.PLAYING,
-            name: a.name,
-            application_id: null != (E = a.id) ? E : null == (f = v.Z.getGameByName(a.name)) ? void 0 : f.id,
-            timestamps: { start: a.start }
+            type: v.IIU.PLAYING,
+            name: o.name,
+            application_id: null != (E = o.id) ? E : null == (f = O.Z.getGameByName(o.name)) ? void 0 : f.id,
+            timestamps: { start: o.start }
         });
     }
     let I = m.Z.getActivity();
-    null != I && e.push(S({ type: O.IIU.LISTENING }, I)), o()(N, e) || (N = e);
+    null != I && e.push(S({ type: v.IIU.LISTENING }, I)), a()(N, e) || (N = e);
 }
 function P() {
     (C = {}), R();
 }
 function w(e) {
     let { socketId: t, pid: n, activity: r } = e;
-    if (o()(C[t], [n, r])) return !1;
+    if (a()(C[t], [n, r])) return !1;
     null != r ? (C[t] = [n, r]) : delete C[t], R();
 }
 function D(e) {
@@ -122,21 +122,21 @@ function L(e) {
 function x(e) {
     let t = {},
         n = !1;
-    for (let [a, [o, s]] of Object.entries(C)) {
+    for (let [o, [a, s]] of Object.entries(C)) {
         var r, i;
         let l = null != (i = s.flags) ? i : 0,
             c = (0, f.Ix)(l);
-        'string' == typeof (null == (r = s.metadata) ? void 0 : r.embedded_activity_instance_id) && (c = (0, f.Pu)(c, e, s.metadata.embedded_activity_instance_id)), c !== l ? ((t[a] = [o, A(S({}, s), { flags: c })]), (n = !0)) : (t[a] = [o, s]);
+        'string' == typeof (null == (r = s.metadata) ? void 0 : r.embedded_activity_instance_id) && (c = (0, f.Pu)(c, e, s.metadata.embedded_activity_instance_id)), c !== l ? ((t[o] = [a, A(S({}, s), { flags: c })]), (n = !0)) : (t[o] = [a, s]);
     }
     n && ((C = t), R());
 }
 function M(e) {
     let { state: t, channelId: n } = e;
-    t === O.hes.RTC_CONNECTED ? n !== r && ((r = n), x(n)) : t === O.hes.DISCONNECTED && n === r && ((r = void 0), x(void 0));
+    t === v.hes.RTC_CONNECTED ? n !== r && ((r = n), x(n)) : t === v.hes.DISCONNECTED && n === r && ((r = void 0), x(void 0));
 }
 class k extends (i = c.ZP.Store) {
     initialize() {
-        this.waitFor(p.ZP, d.ZP, y.Z, b.Z, m.Z, E.Z, v.Z), this.syncWith([h.Z], () => R());
+        this.waitFor(p.ZP, d.ZP, y.Z, b.Z, m.Z, E.Z, O.Z), this.syncWith([h.Z], () => R());
     }
     getActivities() {
         return N;
@@ -148,7 +148,7 @@ class k extends (i = c.ZP.Store) {
         return this.findActivity((t) => t.application_id === e);
     }
     getCustomStatusActivity() {
-        return this.findActivity((e) => e.type === O.IIU.CUSTOM_STATUS);
+        return this.findActivity((e) => e.type === v.IIU.CUSTOM_STATUS);
     }
     findActivity(e) {
         return N.find(e);

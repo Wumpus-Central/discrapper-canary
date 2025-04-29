@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N }), n(539854);
 var r,
     i = n(392711),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(570140),
     l = n(911969),
     c = n(704907),
@@ -71,7 +71,7 @@ let E = [l.yU.CHAT, l.yU.PRIMARY_ENTRY_POINT],
         afterCompute: () => {},
         numFrequentlyItems: f.yP
     });
-function v(e) {
+function O(e) {
     let {
         settings: { type: t },
         wasSaved: n
@@ -79,7 +79,7 @@ function v(e) {
     if (t !== _.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
     b.pendingUsages = [];
 }
-function O(e) {
+function v(e) {
     var t;
     let { command: n } = e;
     if (!E.includes(n.type) || (null == (t = u.ZP.getLaunchState(n.applicationId)) ? void 0 : t.isLaunching)) return !1;
@@ -101,11 +101,11 @@ function T() {
     var e, t;
     let n = null != (t = null == (e = d.Z.frecencyWithoutFetchingLatest.applicationFrecency) ? void 0 : e.applications) ? t : {};
     y.overwriteHistory(
-        a().mapValues(n, (e) => g(h({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
+        o().mapValues(n, (e) => g(h({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
         b.pendingUsages
     );
 }
-class A extends (r = o.ZP.PersistedStore) {
+class A extends (r = a.ZP.PersistedStore) {
     initialize(e) {
         null != e && (b = e), this.waitFor(u.ZP), this.syncWith([d.Z], T);
     }
@@ -128,7 +128,7 @@ class A extends (r = o.ZP.PersistedStore) {
 }
 p(A, 'displayName', 'ApplicationFrecencyStore'), p(A, 'persistKey', 'ApplicationFrecency');
 let N = new A(s.Z, {
-    APPLICATION_COMMAND_USED: O,
+    APPLICATION_COMMAND_USED: v,
     EMBEDDED_ACTIVITY_OPEN: I,
-    USER_SETTINGS_PROTO_UPDATE: v
+    USER_SETTINGS_PROTO_UPDATE: O
 });

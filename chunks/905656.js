@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I }), n(290780);
 var r = n(200651),
     i = n(192379),
-    a = n(780384),
-    o = n(481060),
+    o = n(780384),
+    a = n(481060),
     s = n(197344),
     l = n(526167),
     c = n(70097),
@@ -16,9 +16,9 @@ var r = n(200651),
     g = n(470794),
     E = n(886777);
 function b(e) {
-    let { movDark: t = d, movLight: n = h, mp4Dark: i = f, mp4Light: a = m, pngDark: o = _, pngLight: s = g, webmDark: c = p, webmLight: b = E } = e,
+    let { movDark: t = d, movLight: n = h, mp4Dark: i = f, mp4Light: o = m, pngDark: a = _, pngLight: s = g, webmDark: c = p, webmLight: b = E } = e,
         y = (0, l.vu)(),
-        v = [
+        O = [
             (0, r.jsx)(
                 'source',
                 {
@@ -31,16 +31,16 @@ function b(e) {
                 'img',
                 {
                     alt: '',
-                    src: o
+                    src: a
                 },
                 'png'
             )
         ],
-        O = [
+        v = [
             (0, r.jsx)(
                 'source',
                 {
-                    src: a,
+                    src: o,
                     type: 'video/mp4'
                 },
                 'mp4'
@@ -56,7 +56,7 @@ function b(e) {
         ];
     return (
         (y > 52 || -1 === y) &&
-            (v.unshift(
+            (O.unshift(
                 (0, r.jsx)(
                     'source',
                     {
@@ -66,7 +66,7 @@ function b(e) {
                     'webm'
                 )
             ),
-            O.unshift(
+            v.unshift(
                 (0, r.jsx)(
                     'source',
                     {
@@ -77,7 +77,7 @@ function b(e) {
                 )
             )),
         (0, l.rO)() &&
-            (v.unshift(
+            (O.unshift(
                 (0, r.jsx)(
                     'source',
                     {
@@ -87,7 +87,7 @@ function b(e) {
                     'hevc'
                 )
             ),
-            O.unshift(
+            v.unshift(
                 (0, r.jsx)(
                     'source',
                     {
@@ -98,22 +98,22 @@ function b(e) {
                 )
             )),
         {
-            [u.BRd.DARK]: v,
-            [u.BRd.LIGHT]: O
+            [u.BRd.DARK]: O,
+            [u.BRd.LIGHT]: v
         }
     );
 }
 let y = s.Z.getAppSpinnerSources(),
-    v = null != y ? b(y) : null,
-    O = b({}),
+    O = null != y ? b(y) : null,
+    v = b({}),
     I = (e) => {
         var t;
         let { loop: n = !0, autoPlay: s = !0, setRef: l, className: d, onReady: f } = e,
-            { theme: _ } = (0, o.TCT)(),
-            { reducedMotion: p } = i.useContext(o.Sfi),
-            h = O;
-        null != v && (h = v);
-        let m = null != (t = h[(0, a.wj)(_) ? u.BRd.DARK : u.BRd.LIGHT]) ? t : h[u.BRd.DARK];
+            { theme: _ } = (0, a.TCT)(),
+            { reducedMotion: p } = i.useContext(a.Sfi),
+            h = v;
+        null != O && (h = O);
+        let m = null != (t = h[(0, o.wj)(_) ? u.BRd.DARK : u.BRd.LIGHT]) ? t : h[u.BRd.DARK];
         return (0, r.jsx)(
             c.Z,
             {

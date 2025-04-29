@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x }), n(388685), n(539854), n(642613);
 var r = n(200651),
     i = n(192379),
-    a = n(772848),
-    o = n(924826),
+    o = n(772848),
+    a = n(924826),
     s = n(91192),
     l = n(442837),
     c = n(481060),
@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(256226),
     b = n(314172),
     y = n(981631),
-    v = n(388032),
-    O = n(701991);
+    O = n(388032),
+    v = n(701991);
 function I(e, t, n) {
     return (
         t in e
@@ -77,8 +77,8 @@ function N(e, t) {
         r,
         i = C(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -87,8 +87,8 @@ function C(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let R = 4,
@@ -124,20 +124,20 @@ function L(e) {
                 let t = e === w - 1 ? r : P;
                 for (let e = 0, r = n.length; r < d.length; r++) {
                     let i = d[r],
-                        a = T.current[i.id];
-                    if (null == a) {
+                        o = T.current[i.id];
+                    if (null == o) {
                         0 === V.current && n.push(i);
                         continue;
                     }
-                    let o = Math.min(a.getBoundingClientRect().width, t);
-                    if (e + o > t) break;
-                    (e += o + R), n.push(i);
+                    let a = Math.min(o.getBoundingClientRect().width, t);
+                    if (e + a > t) break;
+                    (e += a + R), n.push(i);
                 }
             }
             x(n.length === L.length ? L : n), k(r), V.current++;
         }, [d, L, j]);
-    let F = i.useMemo(() => 'roles-'.concat((0, a.Z)()), []),
-        Z = (0, o.ZP)({
+    let F = i.useMemo(() => 'roles-'.concat((0, o.Z)()), []),
+        Z = (0, a.ZP)({
             id: F,
             isEnabled: !0,
             scrollToStart: y.Cyb,
@@ -145,9 +145,9 @@ function L(e) {
             wrap: !0
         }),
         H = d.length,
-        Y = 0 === H ? v.intl.string(v.t['vR7M+/']) : v.intl.formatToPlainString(v.t.PCs0oq, { numRoles: H }),
+        Y = 0 === H ? O.intl.string(O.t['vR7M+/']) : O.intl.formatToPlainString(O.t.PCs0oq, { numRoles: H }),
         W = (j ? d : L).map((e, i) => {
-            var a;
+            var o;
             return (0, r.jsx)(
                 E.Z,
                 {
@@ -157,7 +157,7 @@ function L(e) {
                     disableBorderColor: !0,
                     ref: (t) => C(e.id, t),
                     onRemove: () => I(e),
-                    canRemove: _ ? m.r6(l, n.id, f, e) : (null == (a = e.tags) ? void 0 : a.guild_connections) === null && t.id === n.id
+                    canRemove: _ ? m.r6(l, n.id, f, e) : (null == (o = e.tags) ? void 0 : o.guild_connections) === null && t.id === n.id
                 },
                 e.id
             );
@@ -180,7 +180,7 @@ function L(e) {
                     A(
                         S(
                             {
-                                className: O.root,
+                                className: v.root,
                                 'aria-label': Y,
                                 ref: t
                             },
@@ -192,10 +192,10 @@ function L(e) {
                                 L.length < d.length
                                     ? j
                                         ? (0, r.jsx)(c.DY3, {
-                                              text: v.intl.string(v.t.XnXtCg),
+                                              text: O.intl.string(O.t.XnXtCg),
                                               children: (0, r.jsx)(c.P3F, {
                                                   onClick: q,
-                                                  className: O.collapseButton,
+                                                  className: v.collapseButton,
                                                   children: (0, r.jsx)(h.Z, {
                                                       direction: h.Z.Directions.LEFT,
                                                       width: 12,
@@ -204,11 +204,11 @@ function L(e) {
                                               })
                                           })
                                         : (0, r.jsx)(c.DY3, {
-                                              text: v.intl.string(v.t.DY6n4u),
+                                              text: O.intl.string(O.t.DY6n4u),
                                               children: (0, r.jsx)(c.P3F, {
                                                   innerRef: G,
                                                   onClick: z,
-                                                  className: O.expandButton,
+                                                  className: v.expandButton,
                                                   children: (0, r.jsx)(c.Text, {
                                                       variant: 'text-xs/medium',
                                                       children: '+'.concat(d.length - L.length)
@@ -235,10 +235,10 @@ function L(e) {
     });
 }
 function x(e) {
-    let { user: t, currentUser: n, guild: a } = e,
-        { trackUserProfileAction: o } = (0, g.KZ)(),
-        s = (0, l.e7)([f.ZP], () => f.ZP.getMember(a.id, t.id)),
-        c = (0, l.e7)([_.Z], () => _.Z.getRoles(a.id)),
+    let { user: t, currentUser: n, guild: o } = e,
+        { trackUserProfileAction: a } = (0, g.KZ)(),
+        s = (0, l.e7)([f.ZP], () => f.ZP.getMember(o.id, t.id)),
+        c = (0, l.e7)([_.Z], () => _.Z.getRoles(o.id)),
         h = null == s ? void 0 : s.roles,
         E = i.useMemo(
             () =>
@@ -249,42 +249,42 @@ function x(e) {
                           .sort((e, t) => {
                               var n, r;
                               let i = (null == (n = e.tags) ? void 0 : n.guild_connections) !== null,
-                                  a = (null == (r = t.tags) ? void 0 : r.guild_connections) !== null;
-                              return i && !a ? 1 : !i && a ? -1 : 0;
+                                  o = (null == (r = t.tags) ? void 0 : r.guild_connections) !== null;
+                              return i && !o ? 1 : !i && o ? -1 : 0;
                           }),
             [c, h]
         ),
-        b = m.e9(a, n.id),
-        [v] = (0, l.Wu)([p.Z], () => [p.Z.can(y.Plq.MANAGE_ROLES, a), null != a ? p.Z.getGuildVersion(a.id) : null]),
-        O = i.useCallback(
+        b = m.e9(o, n.id),
+        [O] = (0, l.Wu)([p.Z], () => [p.Z.can(y.Plq.MANAGE_ROLES, o), null != o ? p.Z.getGuildVersion(o.id) : null]),
+        v = i.useCallback(
             (e) => {
                 var n, r;
-                o({ action: 'REMOVE_ROLE' });
+                a({ action: 'REMOVE_ROLE' });
                 let i = null != (r = null == h ? void 0 : h.filter((t) => t !== e.id)) ? r : [];
-                (null == (n = e.tags) ? void 0 : n.guild_connections) === null ? u.Z.unassignGuildRoleConnection(a.id, e.id) : d.Z.updateMemberRoles(a.id, t.id, i, [], [e.id]);
+                (null == (n = e.tags) ? void 0 : n.guild_connections) === null ? u.Z.unassignGuildRoleConnection(o.id, e.id) : d.Z.updateMemberRoles(o.id, t.id, i, [], [e.id]);
             },
-            [h, a.id, t.id, o]
+            [h, o.id, t.id, a]
         ),
         I = i.useCallback(
             (e) => {
-                o({ action: 'ADD_ROLE' });
+                a({ action: 'ADD_ROLE' });
                 let n = null != h ? h : [];
-                -1 === n.indexOf(e) && (n = n.concat([e])), d.Z.updateMemberRoles(a.id, t.id, n, [e], []);
+                -1 === n.indexOf(e) && (n = n.concat([e])), d.Z.updateMemberRoles(o.id, t.id, n, [e], []);
             },
-            [h, a.id, t.id, o]
+            [h, o.id, t.id, a]
         ),
-        S = v && null != s;
+        S = O && null != s;
     return 0 !== E.length || S
         ? (0, r.jsx)(L, {
               user: t,
               currentUser: n,
-              guild: a,
+              guild: o,
               guildMember: s,
               roles: E,
               highestRole: b,
-              canManageRoles: v,
+              canManageRoles: O,
               onAddRole: I,
-              onRemoveRole: O
+              onRemoveRole: v
           })
         : null;
 }

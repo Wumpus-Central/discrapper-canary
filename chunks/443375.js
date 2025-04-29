@@ -1,8 +1,8 @@
 n.d(t, { Z: () => Y });
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(394821),
     c = n(841784),
@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(750154),
     b = n(960870),
     y = n(139793),
-    v = n(994746),
-    O = n(273284),
+    O = n(994746),
+    v = n(273284),
     I = n(232174),
     S = n(510659),
     T = n(287954),
@@ -70,7 +70,7 @@ function H(e) {
 }
 function Y(e) {
     var t;
-    let { user: n, currentUser: a, activity: Z, application: Y, voiceGuild: W, voiceChannel: K, profileGuildId: z, className: q, onClose: Q } = e,
+    let { user: n, currentUser: o, activity: Z, application: Y, voiceGuild: W, voiceChannel: K, profileGuildId: z, className: q, onClose: Q } = e,
         X = i.useRef(null),
         { analyticsLocations: J } = (0, _.ZP)(f.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         { themeType: $ } = (0, N.z)(),
@@ -90,12 +90,12 @@ function Y(e) {
             userId: n.id,
             onAction: er
         }),
-        ea = (0, v.Z)(Z),
-        { largeImage: eo, smallImage: es } = (0, p.FO)(Z, Y),
+        eo = (0, O.Z)(Z),
+        { largeImage: ea, smallImage: es } = (0, p.FO)(Z, Y),
         el = (0, j.Z)({
             location: 'UserProfileActivityCardWithInteractionToolbar',
             user: n,
-            currentUser: a,
+            currentUser: o,
             activity: Z,
             application: Y,
             entry: en,
@@ -106,13 +106,13 @@ function Y(e) {
                 t = $ === U.lY.MODAL_V2 ? h.J.SIZE_100 : h.J.SIZE_60;
             return null == el
                 ? (0, r.jsx)(h.E, {
-                      image: eo,
+                      image: ea,
                       smallImage: es,
                       size: t,
                       aspectRatio: e
                   })
                 : (0, r.jsx)(h.E, {
-                      image: eo,
+                      image: ea,
                       smallImage: es,
                       size: t,
                       className: F.clickableImage,
@@ -176,13 +176,13 @@ function Y(e) {
             });
         },
         ef = () => {
-            var e, t, n, i, a, o;
+            var e, t, n, i, o, a;
             if (Z.type === G.IIU.WATCHING) return null;
             if ((0, u.Z)(Z)) return e_();
             if ((0, E.dS)(Z) && (null == (e = Z.party) ? void 0 : e.size) != null && (null == (t = Z.party) ? void 0 : t.size.length) >= 2) {
                 let e = V.intl.formatToPlainString(V.t['JC/3x8'], {
                     numSpeakers: null == (i = Z.party) ? void 0 : i.size[0],
-                    numListeners: (null == (a = Z.party) ? void 0 : a.size[1]) - (null == (o = Z.party) ? void 0 : o.size[0])
+                    numListeners: (null == (o = Z.party) ? void 0 : o.size[1]) - (null == (a = Z.party) ? void 0 : a.size[0])
                 });
                 return (0, r.jsx)(L.Z, {
                     variant: 'text-xs/normal',
@@ -271,7 +271,7 @@ function Y(e) {
                       onClose: Q
                   }),
         eg = () =>
-            n.id === a.id
+            n.id === o.id
                 ? null
                 : (0, r.jsx)('div', {
                       className: F.actions,
@@ -296,7 +296,7 @@ function Y(e) {
                 guildId: z,
                 themeType: $,
                 sourceId: eE,
-                sourceDetails: null == en ? (0, O.Z)(Z) : null,
+                sourceDetails: null == en ? (0, v.Z)(Z) : null,
                 entry: en,
                 onAction: er,
                 sourceType: U.n_.ACTIVITY,
@@ -320,11 +320,11 @@ function Y(e) {
                         onShowToolbar: () => er({ action: 'HOVER_ACTIVITY_CARD' }),
                         children: (0, r.jsxs)(w.Z, {
                             ref: ei,
-                            className: o()(q, { [F.hoisted]: eb }),
+                            className: a()(q, { [F.hoisted]: eb }),
                             onAction: er,
                             onClose: Q,
                             children: [
-                                (0, r.jsx)(D.Z, H({}, ea)),
+                                (0, r.jsx)(D.Z, H({}, eo)),
                                 (0, r.jsxs)('div', {
                                     className: F.body,
                                     children: [

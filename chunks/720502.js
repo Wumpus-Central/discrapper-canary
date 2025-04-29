@@ -5,8 +5,8 @@ n.r(t),
     });
 var r,
     i = n(192379),
-    a = n(995295);
-function o(e, t) {
+    o = n(995295);
+function a(e, t) {
     (e.prototype = Object.create(t.prototype)), (e.prototype.constructor = e), s(e, t);
 }
 function s(e, t) {
@@ -21,8 +21,8 @@ function l(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function c(e) {
@@ -90,7 +90,7 @@ let y = function (e, t) {
                         }),
                         (i.__getComponentNode = function () {
                             var e = i.getInstance();
-                            return t && 'function' == typeof t.setClickOutsideRef ? t.setClickOutsideRef()(e) : 'function' == typeof e.setClickOutsideRef ? e.setClickOutsideRef() : (0, a.findDOMNode)(e);
+                            return t && 'function' == typeof t.setClickOutsideRef ? t.setClickOutsideRef()(e) : 'function' == typeof e.setClickOutsideRef ? e.setClickOutsideRef() : (0, o.findDOMNode)(e);
                         }),
                         (i.enableOnClickOutside = function () {
                             if ('undefined' != typeof document && !m[i._uid]) {
@@ -125,7 +125,7 @@ let y = function (e, t) {
                         i
                     );
                 }
-                o(s, n);
+                a(s, n);
                 var g = s.prototype;
                 return (
                     (g.getInstance = function () {

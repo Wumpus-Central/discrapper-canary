@@ -1,7 +1,7 @@
 n.d(t, {
     CM: () => I,
-    Cf: () => v,
-    ID: () => O,
+    Cf: () => O,
+    ID: () => v,
     Ls: () => g,
     Xz: () => A,
     Z: () => m,
@@ -16,8 +16,8 @@ n.d(t, {
 });
 var r = n(544891),
     i = n(570140),
-    a = n(881052),
-    o = n(957730),
+    o = n(881052),
+    a = n(957730),
     s = n(695346),
     l = n(594174),
     c = n(626135),
@@ -64,7 +64,7 @@ async function m(e, t) {
     let f = null == (n = l.default.getCurrentUser()) ? void 0 : n.id;
     if (null == f) return;
     let _ = s.dN.getSetting();
-    null != e.bio && _ && (e.bio = o.ZP.parse(void 0, e.bio).content);
+    null != e.bio && _ && (e.bio = a.ZP.parse(void 0, e.bio).content);
     try {
         i.Z.dispatch({
             type: 'USER_PROFILE_UPDATE_START',
@@ -90,7 +90,7 @@ async function m(e, t) {
                 )
             );
         } else {
-            let e = new a.Hx(n);
+            let e = new o.Hx(n);
             i.Z.dispatch({
                 type: 'USER_PROFILE_UPDATE_FAILURE',
                 errors: n.body,
@@ -99,7 +99,7 @@ async function m(e, t) {
         }
         return n;
     } catch (t) {
-        let e = new a.Hx(t);
+        let e = new o.Hx(t);
         return (
             i.Z.dispatch({
                 type: 'USER_PROFILE_UPDATE_FAILURE',
@@ -138,13 +138,13 @@ function y(e) {
         banner: e
     });
 }
-function v(e) {
+function O(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_BIO',
         bio: e
     });
 }
-function O(e) {
+function v(e) {
     i.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_PRONOUNS',
         pronouns: e

@@ -1,13 +1,13 @@
 n.d(t, {
-    NW: () => a,
+    NW: () => o,
     tf: () => i,
-    zH: () => o
+    zH: () => a
 });
 var r = n(192379),
     i = function (e) {
         return (0, r.useEffect)(e, []);
     },
-    a = function () {
+    o = function () {
         var e = (0, r.useState)(0)[1],
             t = (0, r.useRef)(!1);
         return (
@@ -21,7 +21,7 @@ var r = n(192379),
             }
         );
     };
-function o(e) {
+function a(e) {
     var t = (0, r.useRef)(void 0);
     return (
         (0, r.useEffect)(function () {

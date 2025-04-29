@@ -1,13 +1,13 @@
 let r;
 n.d(t, {
     UB: () => w,
-    Uc: () => O,
+    Uc: () => v,
     ZP: () => Z,
     kE: () => D
 });
 var i,
-    a = n(192379),
-    o = n(442837),
+    o = n(192379),
+    a = n(442837),
     s = n(570140),
     l = n(872810),
     c = n(592125),
@@ -22,7 +22,7 @@ var i,
     E = n(299570),
     b = n(65154),
     y = n(388032);
-function v(e, t, n) {
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,7 +35,7 @@ function v(e, t, n) {
         e
     );
 }
-var O = (function (e) {
+var v = (function (e) {
     return (e[(e.Present = 0)] = 'Present'), (e[(e.Update = 1)] = 'Update'), (e[(e.Cancel = 2)] = 'Cancel'), (e[(e.Error = 3)] = 'Error'), e;
 })({});
 let I = !1,
@@ -57,7 +57,7 @@ function P() {
     }
 }
 function w() {
-    return (0, a.useEffect)(
+    return (0, o.useEffect)(
         () => (
             S++,
             P(),
@@ -69,7 +69,7 @@ function w() {
     );
 }
 function D() {
-    return (0, a.useEffect)(
+    return (0, o.useEffect)(
         () => (
             T++,
             P(),
@@ -98,7 +98,7 @@ function k() {
         sourceName: null != (e = x()) ? e : y.intl.string(y.t['KKcy9/'])
     };
 }
-class j extends (i = o.ZP.Store) {
+class j extends (i = a.ZP.Store) {
     initialize() {
         this.syncWith([d.Z, _.Z, c.Z, u.Z, f.Z], L), L();
     }
@@ -154,7 +154,7 @@ function V(e) {
 function F() {
     N = {};
 }
-v(j, 'displayName', 'NativeScreenSharePickerStore');
+O(j, 'displayName', 'NativeScreenSharePickerStore');
 let Z = new j(s.Z, {
     NATIVE_SCREEN_SHARE_PICKER_UPDATE: U,
     NATIVE_SCREEN_SHARE_PICKER_CANCEL: G,

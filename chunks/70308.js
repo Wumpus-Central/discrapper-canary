@@ -1,8 +1,8 @@
 n.d(t, { I: () => g });
 var r = n(200651),
     i = n(192379),
-    a = n(272573),
-    o = n(481060),
+    o = n(272573),
+    a = n(481060),
     s = n(345332),
     l = n(417153),
     c = n(561466),
@@ -129,7 +129,7 @@ function g() {
             var e, t;
             return m[null != (t = null == d || null == (e = d.options) ? void 0 : e.position) ? t : _.current];
         }, [d]),
-        g = (0, o.Yzy)(
+        g = (0, a.Yzy)(
             d,
             f(
                 {
@@ -154,7 +154,7 @@ function g() {
                 null === t
                     ? null
                     : (0, r.jsx)(
-                          a.animated.div,
+                          o.animated.div,
                           {
                               style: e,
                               children: (0, r.jsx)(s.F, f({}, t))

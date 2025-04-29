@@ -1,9 +1,9 @@
-n.d(t, { Z: () => O }), n(415506);
+n.d(t, { Z: () => v }), n(415506);
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(287734),
-    o = n(258609),
+    o = n(287734),
+    a = n(258609),
     s = n(703656),
     l = n(414509),
     c = n(452369),
@@ -45,23 +45,23 @@ function y(e) {
     }
     return e;
 }
-function v(e) {
+function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = e.getGuildId();
     if (null == n && !t) throw Error('VoiceChannel, transitionTo: Channel does not have a guildId');
     (0, s.uL)(g.Z5c.CHANNEL(n, e.id));
 }
-let O = {
+let v = {
     async handleVoiceConnect(e) {
-        let { channel: t, connected: s, needSubscriptionToAccess: b, locked: O = !1, routeDirectlyToChannel: I = !1, bypassChangeModal: S, bypassBlockedWarningModal: T, bypassGuildIdCheck: A = !1 } = e;
+        let { channel: t, connected: s, needSubscriptionToAccess: b, locked: v = !1, routeDirectlyToChannel: I = !1, bypassChangeModal: S, bypassBlockedWarningModal: T, bypassGuildIdCheck: A = !1 } = e;
         t.isThread() && (await d.Z.unarchiveThreadIfNecessary(t.id), u.Z.hasJoined(t.id) || (await d.Z.joinThread(t, 'Join Voice')));
-        let N = o.Z.getRemoteSessionId(),
+        let N = a.Z.getRemoteSessionId(),
             C = p.Z.getVoiceStateForSession(f.default.getId(), N),
             R = (null == C ? void 0 : C.channelId) === t.id || _.Z.getChannelId() === p.Z.getCurrentClientVoiceChannelId(t.guild_id),
             P = c.Z.getBlockedUsersForVoiceChannel(t.id),
             w = c.Z.getIgnoredUsersForVoiceChannel(t.id);
-        return ((0, l.B)(t.id) && (T = !0), T || O || s || (!(P.size > 0) && !(w.size > 0)))
-            ? !S && !O && (0, m._)(t)
+        return ((0, l.B)(t.id) && (T = !0), T || v || s || (!(P.size > 0) && !(w.size > 0)))
+            ? !S && !v && (0, m._)(t)
                 ? new Promise((e) => {
                       (0, i.ZDy)(async () => {
                           let { default: i } = await n.e('65045').then(n.bind(n, 143782));
@@ -78,7 +78,7 @@ let O = {
                                                       connected: s,
                                                       needSubscriptionToAccess: b,
                                                       routeDirectlyToChannel: I,
-                                                      locked: O,
+                                                      locked: v,
                                                       bypassChangeModal: !0
                                                   })
                                               )
@@ -88,19 +88,19 @@ let O = {
                               );
                       });
                   })
-                : (O || s || a.default.selectVoiceChannel(t.id), !__OVERLAY__ && (s || R || b || I) && v(t, A), !0)
+                : (v || s || o.default.selectVoiceChannel(t.id), !__OVERLAY__ && (s || R || b || I) && O(t, A), !0)
             : new Promise((e) => {
                   (0, i.ZDy)(
                       async () => {
                           let { default: i } = await n.e('12858').then(n.bind(n, 404339));
                           return (n) => {
-                              let { onClose: a, transitionState: o } = n;
+                              let { onClose: o, transitionState: a } = n;
                               return (0, r.jsx)(i, {
                                   channelId: t.id,
                                   blockedUserIds: P,
                                   ignoredUserIds: w,
-                                  transitionState: o,
-                                  onClose: a,
+                                  transitionState: a,
+                                  onClose: o,
                                   onJoin: () =>
                                       e(
                                           this.handleVoiceConnect({
@@ -108,7 +108,7 @@ let O = {
                                               connected: s,
                                               needSubscriptionToAccess: b,
                                               routeDirectlyToChannel: I,
-                                              locked: O,
+                                              locked: v,
                                               bypassChangeModal: !0,
                                               bypassBlockedWarningModal: !0
                                           })

@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(823379),
     y = n(51144),
     _ = n(291798);
-let O = d.u.SIZE_24;
-function v(e) {
+let v = d.u.SIZE_24;
+function O(e) {
     var t, n;
     let { activity: l, user: o, embeddedApp: s, onOpenSpotifyAlbum: u } = e,
         d = null == l ? void 0 : l.assets,
@@ -170,11 +170,11 @@ function x(e) {
         m = [];
     null != n ? (m = Array.from(n.embeddedActivity.userIds)) : (0, c.Z)(t) && null != u && (m = u.map((e) => e.user.id));
     let x = (0, s.Wu)([f.default], () => m.map((e) => f.default.getUser(e)).filter(b.lm)),
-        I = null != n || (0, c.Z)(t),
-        P = i.useMemo(() => {
+        P = null != n || (0, c.Z)(t),
+        I = i.useMemo(() => {
             let e = new Map();
             return (
-                I &&
+                P &&
                     null != u &&
                     u.forEach((t) => {
                         let n = t.member;
@@ -182,15 +182,15 @@ function x(e) {
                     }),
                 e
             );
-        }, [u, I]);
-    return I
+        }, [u, P]);
+    return P
         ? (0, r.jsxs)('div', {
               className: _.flexColumn,
               children: [
                   (0, r.jsxs)('div', {
                       className: _.flexRow,
                       children: [
-                          (0, r.jsx)(v, {
+                          (0, r.jsx)(O, {
                               activity: t,
                               user: l,
                               embeddedApp: n,
@@ -215,12 +215,12 @@ function x(e) {
                                           className: _.usersSummary,
                                           guildId: o.guild_id,
                                           users: x,
-                                          size: O,
+                                          size: v,
                                           max: 7,
                                           renderUser: (e) => {
                                               var t;
                                               if (null == e) return null;
-                                              let n = P.get(e.id),
+                                              let n = I.get(e.id),
                                                   i = null != (t = null == n ? void 0 : n.nick) ? t : y.ZP.getName(e);
                                               return (0, r.jsx)(
                                                   a.DY3,
@@ -230,7 +230,7 @@ function x(e) {
                                                       children: (0, r.jsx)(
                                                           'img',
                                                           {
-                                                              src: e.getAvatarURL(o.guild_id, O),
+                                                              src: e.getAvatarURL(o.guild_id, v),
                                                               alt: i,
                                                               className: _.avatar
                                                           },

@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(836560),
     i = n(555573),
-    a = n(376918),
-    o = n(695346),
+    o = n(376918),
+    a = n(695346),
     s = n(590921),
     l = n(152089);
 function c(e, t, n) {
@@ -146,18 +146,18 @@ class p extends r.EventEmitter {
         else if (null == c || (null != u && c.type !== u.type)) return void this.clearQuery();
         let { type: d, typeInfo: f, query: _ } = c,
             p = r || (n && ((null == (e = this.state.query) ? void 0 : e.queryText) !== _ || (null == (t = this.state.query) ? void 0 : t.typeInfo) !== f)),
-            h = o.fq.getSetting();
+            h = a.fq.getSetting();
         i.allowStickers = i.allowStickers ? h : i.allowStickers;
-        let m = o.eR.getSetting();
+        let m = a.eR.getSetting();
         i.allowSoundmoji = i.allowSoundmoji ? m : i.allowSoundmoji;
         let { results: g, metadata: E } = f.queryResults(this.props.channel, this.props.guild, _, i, p),
             b = 0;
         for (let e of Object.values(g)) Array.isArray(e) && (b += e.length);
         let y = !0 === g.isLoading,
-            v = this.shouldShow(b, y, f),
-            O = this.state.selectedIndex;
-        !v || y ? (O = null) : null != O && O >= b && (O = b - 1),
-            v && !this.state.isVisible && (0, a.a7)(d, this.props.channel, E),
+            O = this.shouldShow(b, y, f),
+            v = this.state.selectedIndex;
+        !O || y ? (v = null) : null != v && v >= b && (v = b - 1),
+            O && !this.state.isVisible && (0, o.a7)(d, this.props.channel, E),
             this.setState({
                 query: {
                     type: d,
@@ -168,15 +168,15 @@ class p extends r.EventEmitter {
                     options: i,
                     isLoading: y
                 },
-                isVisible: v,
-                selectedIndex: O
+                isVisible: O,
+                selectedIndex: v
             });
     }
     shouldShow(e, t, n) {
         return this.props.focused && null == this.props.expressionPickerView && (e > 0 || t || n.showEmpty);
     }
     selectResult(e, t, n) {
-        var r, i, o;
+        var r, i, a;
         if (!this.state.isVisible) return !1;
         let { type: l, typeInfo: c, results: u, resultCount: d, options: f } = this.state.query;
         if (e >= d) return !1;
@@ -193,7 +193,7 @@ class p extends r.EventEmitter {
                       tabOrEnter: n,
                       queryText: null == (r = this.state.query) ? void 0 : r.queryText
                   });
-        return null != _ && (0, a.Qt)(l, null != (o = _.type) ? o : null, this.props.channel, _.metadata), !0;
+        return null != _ && (0, o.Qt)(l, null != (a = _.type) ? a : null, this.props.channel, _.metadata), !0;
     }
     setState(e) {
         for (let t in e)

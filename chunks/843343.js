@@ -59,10 +59,9 @@ function g() {
                       )),
                       (t = t =
                           {
-                              children: (0, r.jsx)('span', {
-                                  'aria-hidden': !0,
-                                  className: f.errorInner,
-                                  children: '!'
+                              children: (0, r.jsx)(o.P4T, {
+                                  color: 'currentColor',
+                                  'aria-hidden': !0
                               })
                           }),
                       Object.getOwnPropertyDescriptors

@@ -1,8 +1,8 @@
 n.d(t, { O: () => A }), n(388685), n(314940);
 var r = n(200651),
     i = n(512722),
-    a = n.n(i),
-    o = n(278074),
+    o = n.n(i),
+    a = n(278074),
     s = n(979554),
     l = n(442837),
     c = n(481060),
@@ -17,7 +17,7 @@ var r = n(200651),
     E = n(755419),
     b = n(643158),
     y = n(223223);
-function v(e, t, n) {
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +30,7 @@ function v(e, t, n) {
         e
     );
 }
-function O(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,7 +41,7 @@ function O(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                O(e, t, n[t]);
             });
     }
     return e;
@@ -49,7 +49,7 @@ function O(e) {
 let I = (e) => {
         let { avatarDecoration: t, fallbackLabel: n } = e,
             i = (0, l.e7)([h.default], () => h.default.getCurrentUser()),
-            { avatarDecorationSrc: a, eventHandlers: o } = (0, d.Z)({
+            { avatarDecorationSrc: o, eventHandlers: a } = (0, d.Z)({
                 user: i,
                 onlyAnimateOnHover: !0,
                 avatarDecorationOverride: t,
@@ -59,28 +59,28 @@ let I = (e) => {
             ? n
             : (0, r.jsx)(
                   'img',
-                  O(
+                  v(
                       {
-                          src: a,
+                          src: o,
                           alt: t.label,
                           className: b.avatarDecoration
                       },
-                      o
+                      a
                   )
               );
     },
     S = (e) => {
         var t;
         let { profileEffect: n, fallbackLabel: i } = e,
-            a = (0, p.V)(null == n ? void 0 : n.id);
-        if (null == a) return i;
-        let { accessibilityLabel: o, thumbnailPreviewSrc: s, title: l } = null != (t = null == a ? void 0 : a.config) ? t : {};
+            o = (0, p.V)(null == n ? void 0 : n.id);
+        if (null == o) return i;
+        let { accessibilityLabel: a, thumbnailPreviewSrc: s, title: l } = null != (t = null == o ? void 0 : o.config) ? t : {};
         return (0, r.jsxs)('div', {
             className: b.profileEffectContainer,
             children: [
                 (0, r.jsx)('img', {
                     src: y,
-                    alt: o,
+                    alt: a,
                     className: b.profileEffectBackground
                 }),
                 (0, r.jsx)('img', {
@@ -116,11 +116,11 @@ let I = (e) => {
                   animationState: 'on_hover',
                   className: b.externalProductAsset
               })
-            : (0, o.EQ)(null == _ ? void 0 : _.type)
+            : (0, a.EQ)(null == _ ? void 0 : _.type)
                   .with(
                       s.Z.AVATAR_DECORATION,
                       () => (
-                          a()(_.type === s.Z.AVATAR_DECORATION, 'ts-match checked the type'),
+                          o()(_.type === s.Z.AVATAR_DECORATION, 'ts-match checked the type'),
                           (0, r.jsx)(I, {
                               avatarDecoration: _,
                               fallbackLabel: c
@@ -130,7 +130,7 @@ let I = (e) => {
                   .with(
                       s.Z.PROFILE_EFFECT,
                       () => (
-                          a()(_.type === s.Z.PROFILE_EFFECT, 'ts-match checked the type'),
+                          o()(_.type === s.Z.PROFILE_EFFECT, 'ts-match checked the type'),
                           (0, r.jsx)(S, {
                               profileEffect: _,
                               fallbackLabel: c
@@ -140,7 +140,7 @@ let I = (e) => {
                   .with(
                       s.Z.NAMEPLATE,
                       () => (
-                          a()(_.type === s.Z.NAMEPLATE, 'ts-match checked the type'),
+                          o()(_.type === s.Z.NAMEPLATE, 'ts-match checked the type'),
                           (0, r.jsx)(T, {
                               nameplate: _,
                               fallbackLabel: c

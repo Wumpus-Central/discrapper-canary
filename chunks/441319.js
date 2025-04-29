@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(997945),
     i = n(388032),
-    a = n(105797),
-    o = n(63725),
+    o = n(105797),
+    a = n(63725),
     s = n(924997),
     l = n(861498),
     c = n(749834),
@@ -22,8 +22,8 @@ var r = n(997945),
     E = n(591304),
     b = n(73375),
     y = n(328664),
-    v = n(328259),
-    O = n(19009),
+    O = n(328259),
+    v = n(19009),
     I = n(234912),
     S = n(405571),
     T = n(730886),
@@ -33,7 +33,7 @@ let C = 60;
 function R() {
     return {
         id: r.aH.DEFAULT,
-        iconSource: o,
+        iconSource: a,
         name: i.intl.string(i.t.ANxkLy),
         isPremium: !1
     };
@@ -54,13 +54,13 @@ function P() {
         },
         {
             id: r.Ru.MATTE_DARK,
-            iconSource: v,
+            iconSource: O,
             isPremium: !0,
             name: i.intl.string(i.t.NkshQk)
         },
         {
             id: r.Ru.MATTE_LIGHT,
-            iconSource: O,
+            iconSource: v,
             name: i.intl.string(i.t.G2W309),
             isPremium: !0
         },
@@ -138,7 +138,7 @@ function P() {
         },
         {
             id: r.Ru.ANGRY,
-            iconSource: a,
+            iconSource: o,
             isPremium: !0,
             name: i.intl.string(i.t['9PUXpK'])
         },

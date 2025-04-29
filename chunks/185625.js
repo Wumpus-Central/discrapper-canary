@@ -7,7 +7,7 @@ n.d(t, {
     RV: () => A,
     VP: () => j,
     X: () => k,
-    ZD: () => v,
+    ZD: () => O,
     fw: () => S,
     hs: () => C,
     i_: () => G,
@@ -20,8 +20,8 @@ n.d(t, {
     n(388685);
 var r = n(192379),
     i = n(512722),
-    a = n.n(i),
-    o = n(741086),
+    o = n.n(i),
+    a = n(741086),
     s = n(544891),
     l = n(570140),
     c = n(367907),
@@ -124,10 +124,10 @@ async function y(e, t) {
         rejectWithError: !1
     });
 }
-function v(e, t, n) {
-    return u.ZP.get('iar_skip_api_report_submit') ? Promise.resolve() : o.s.REPORT_TO_MOD.has(t.name) ? I(e, t, n) : O(e, t, n);
-}
 function O(e, t, n) {
+    return u.ZP.get('iar_skip_api_report_submit') ? Promise.resolve() : a.s.REPORT_TO_MOD.has(t.name) ? I(e, t, n) : v(e, t, n);
+}
+function v(e, t, n) {
     return s.tn.post({
         url: f.ANM.SUBMIT_REPORT_MENU(P(t)),
         body: x(e, t, n),
@@ -190,23 +190,23 @@ async function C(e) {
 }
 function R(e) {
     let t = e.name;
-    return a()(Object.values(d.BM).includes(t), 'Invalid report type '.concat(e.name)), t;
+    return o()(Object.values(d.BM).includes(t), 'Invalid report type '.concat(e.name)), t;
 }
 function P(e) {
     let t = e.name;
-    return a()(Object.values(d.b).includes(t), 'Invalid report type '.concat(e.name)), t;
+    return o()(Object.values(d.b).includes(t), 'Invalid report type '.concat(e.name)), t;
 }
 function w(e) {
     let t = e.name;
-    return a()(Object.values(d.xw).includes(t), 'Invalid report type '.concat(e.name)), t;
+    return o()(Object.values(d.xw).includes(t), 'Invalid report type '.concat(e.name)), t;
 }
 function D(e) {
-    if ((a()(o.s.REPORT_TO_MOD.has(e.name), 'Invalid report type '.concat(e.name)), e.name === d.xw.MESSAGE)) return f.ANM.SUBMIT_MODERATOR_MESSAGE_REPORT(e.record.channel_id, e.record.id);
+    if ((o()(a.s.REPORT_TO_MOD.has(e.name), 'Invalid report type '.concat(e.name)), e.name === d.xw.MESSAGE)) return f.ANM.SUBMIT_MODERATOR_MESSAGE_REPORT(e.record.channel_id, e.record.id);
     throw Error('Invalid report type '.concat(e.name));
 }
 let L = (e, t, n) => {
-        let { version: r, variant: i, language: a } = e,
-            o = {
+        let { version: r, variant: i, language: o } = e,
+            a = {
                 channel_id: void 0,
                 message_id: void 0,
                 guild_id: void 0
@@ -214,7 +214,7 @@ let L = (e, t, n) => {
             s = {
                 version: r,
                 variant: i,
-                language: null != a ? a : 'en',
+                language: null != o ? o : 'en',
                 breadcrumbs: n.map((e) => e.nodeRef),
                 elements: n.reduce((e, t) => {
                     let { multiSelect: n, textInput: r } = t;
@@ -233,7 +233,7 @@ let L = (e, t, n) => {
             };
         if (t.name === d.xw.MESSAGE) {
             let { channel_id: e, id: n } = t.record;
-            return m(p({}, s, o), {
+            return m(p({}, s, a), {
                 name: t.name,
                 channel_id: e,
                 message_id: n
@@ -242,7 +242,7 @@ let L = (e, t, n) => {
         return null;
     },
     x = (e, t, n, r) => {
-        let { version: i, variant: a, language: o } = e,
+        let { version: i, variant: o, language: a } = e,
             s = {
                 channel_id: void 0,
                 message_id: void 0,
@@ -256,8 +256,8 @@ let L = (e, t, n) => {
             },
             l = {
                 version: i,
-                variant: a,
-                language: null != o ? o : 'en',
+                variant: o,
+                language: null != a ? a : 'en',
                 breadcrumbs: n.map((e) => e.nodeRef),
                 elements: n.reduce((e, t) => {
                     let { multiSelect: n, textInput: r } = t;

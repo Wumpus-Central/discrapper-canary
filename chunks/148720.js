@@ -1,8 +1,8 @@
 n.d(t, { k: () => b });
 var r = n(252258),
     i = n(668781),
-    a = n(728345),
-    o = n(835873),
+    o = n(728345),
+    a = n(835873),
     s = n(973616),
     l = n(592125),
     c = n(430824),
@@ -21,7 +21,7 @@ function E(e) {
             null == n || n();
             break;
         case m.Fw.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
-            (0, o.w)();
+            (0, a.w)();
             break;
         case m.Fw.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
             i.Z.show({
@@ -56,28 +56,28 @@ function E(e) {
     }
 }
 async function b(e) {
-    let { channelId: t, applicationId: n, launchId: i, inputApplication: o, analyticsLocations: g, launchingComponentId: b, sectionName: y, inviterUserId: v } = e,
-        O = _.ZP.getEmbeddedActivitiesForChannel(t).find((e) => e.applicationId === n && (null == i || e.launchId === i)),
-        I = o;
+    let { channelId: t, applicationId: n, launchId: i, inputApplication: a, analyticsLocations: g, launchingComponentId: b, sectionName: y, inviterUserId: O } = e,
+        v = _.ZP.getEmbeddedActivitiesForChannel(t).find((e) => e.applicationId === n && (null == i || e.launchId === i)),
+        I = a;
     if (null == I) {
-        let e = await a.ZP.fetchApplication(n);
+        let e = await o.ZP.fetchApplication(n);
         I = s.ZP.createFromServer(e);
     }
-    if (null == O || null == I) return;
+    if (null == v || null == I) return;
     let S = d.default.getCurrentUser(),
         T = l.Z.getChannel(t);
     async function A() {
-        null != O &&
+        null != v &&
             (await (0, p.Z)({
-                applicationId: O.applicationId,
+                applicationId: v.applicationId,
                 activityChannelId: t,
                 locationObject: {},
                 analyticsLocations: g,
                 componentId: b,
                 sectionName: y,
-                inviterUserId: v,
-                instanceId: O.compositeInstanceId,
-                isContextlessActivity: O.location.kind === r.E.CONTEXTLESS
+                inviterUserId: O,
+                instanceId: v.compositeInstanceId,
+                isContextlessActivity: v.location.kind === r.E.CONTEXTLESS
             }));
     }
     E({

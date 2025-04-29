@@ -1,8 +1,8 @@
-n.d(t, { r: () => o });
+n.d(t, { r: () => a });
 var r = n(709054);
 let i = 0,
-    a = new r.SnowflakeSequence();
-function o() {
+    o = new r.SnowflakeSequence();
+function a() {
     let e = Date.now();
-    return i !== e && (a.reset(), (i = e)), r.default.fromTimestampWithSequence(e, a);
+    return i !== e && (o.reset(), (i = e)), r.default.fromTimestampWithSequence(e, o);
 }

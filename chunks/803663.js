@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    a = n(481060),
-    o = n(359110),
+    o = n(481060),
+    a = n(359110),
     s = n(922482),
     l = n(146085),
     c = n(750154),
@@ -18,26 +18,26 @@ function g(e) {
     let { activity: t, onAction: n, onClose: g } = e,
         { themeType: E } = (0, _.z)(),
         b = (0, c.rq)(t),
-        { channelId: y, guildId: v } = null != b ? b : {},
-        O = (0, i.e7)([f.Z], () => null != y && f.Z.isInChannel(y), [y]),
+        { channelId: y, guildId: O } = null != b ? b : {},
+        v = (0, i.e7)([f.Z], () => null != y && f.Z.isInChannel(y), [y]),
         I = (0, i.e7)([u.Z], () => (null != y ? u.Z.getChannel(y) : null), [y]),
         S = (0, i.e7)([d.Z], () => null != I && d.Z.can(l.gl, I), [I]);
-    if (!(0, c.dS)(t) || !S || null == v || null == y) return null;
+    if (!(0, c.dS)(t) || !S || null == O || null == y) return null;
     let T = (e) => {
-        e.stopPropagation(), null == n || n({ action: 'PRESS_STAGE_CHANNEL_LISTEN_BUTTON' }), s.AC(v, y), (0, o.Kh)(y), null == g || g();
+        e.stopPropagation(), null == n || n({ action: 'PRESS_STAGE_CHANNEL_LISTEN_BUTTON' }), s.AC(O, y), (0, a.Kh)(y), null == g || g();
     };
     return E === h.lY.MODAL_V2
         ? (0, r.jsx)(p.tG, {
               text: m.intl.string(m.t.ZYO5OD),
-              size: a.PhG.TINY,
+              size: o.PhG.TINY,
               themeColor: 'secondary',
-              disabled: O,
+              disabled: v,
               onClick: T
           })
         : (0, r.jsx)(p.tG, {
               text: m.intl.string(m.t.ZYO5OD),
               fullWidth: !0,
-              disabled: O,
+              disabled: v,
               onClick: T
           });
 }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l }), n(388685), n(35282);
 var r = n(200651),
     i = n(192379),
-    a = n(481060);
-function o(e, t, n) {
+    o = n(481060);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +20,7 @@ class s extends i.PureComponent {
         let { text: e, lastItem: t, className: n } = this.props;
         return (0, r.jsxs)('span', {
             children: [
-                (0, r.jsx)(a.eee, {
+                (0, r.jsx)(o.eee, {
                     className: n,
                     onClick: this.handleClick,
                     children: e
@@ -31,7 +31,7 @@ class s extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            o(this, 'handleClick', () => {
+            a(this, 'handleClick', () => {
                 let { onClick: e, index: t } = this.props;
                 null == e || e(t);
             });
@@ -58,7 +58,7 @@ class l extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            o(this, 'handleOpenSpotifyArtist', (e) => {
+            a(this, 'handleOpenSpotifyArtist', (e) => {
                 let { onOpenSpotifyArtist: t } = this.props;
                 null == t || t(e);
             });

@@ -1,14 +1,14 @@
 n.d(t, {
     Ft: () => g,
-    ML: () => v,
+    ML: () => O,
     ZJ: () => y,
     mF: () => m
 }),
     n(388685);
 var r = n(512722),
     i = n.n(r),
-    a = n(373793),
-    o = n(149765),
+    o = n(373793),
+    a = n(149765),
     s = n(911969),
     l = n(399860),
     c = n(131704),
@@ -23,7 +23,7 @@ var r = n(512722),
     })({});
 function g(e, t, n) {
     var r;
-    let { context: l, commandTypes: m, allowNsfw: g, computedPermissions: O, userId: I, roleIds: S, isImpersonating: T, hasBaseAccessPermissions: A } = t,
+    let { context: l, commandTypes: m, allowNsfw: g, computedPermissions: v, userId: I, roleIds: S, isImpersonating: T, hasBaseAccessPermissions: A } = t,
         { applicationAllowedForUser: N, applicationAllowedForChannel: C, isGuildInstalled: R, isUserInstalled: P, commandBotId: w } = n;
     if (!m.includes(e.type)) return 2;
     if (e.nsfw && !g) return 1;
@@ -43,17 +43,17 @@ function g(e, t, n) {
     }
     if (e.applicationId === p.bi.BUILT_IN) return 0;
     let L = null != l ? (0, _.ny)(l) : void 0;
-    if (null == L || o.e$(O, h.Plq.ADMINISTRATOR) || (P && (null == (r = e.integration_types) ? void 0 : r.includes(a.Y.USER_INSTALL)))) return 0;
-    if (!A && R && (null == e.integration_types || e.integration_types.includes(a.Y.GUILD_INSTALL))) return 5;
+    if (null == L || a.e$(v, h.Plq.ADMINISTRATOR) || (P && (null == (r = e.integration_types) ? void 0 : r.includes(o.Y.USER_INSTALL)))) return 0;
+    if (!A && R && (null == e.integration_types || e.integration_types.includes(o.Y.GUILD_INSTALL))) return 5;
     if (l instanceof c.Sf) {
         i()(void 0 !== C, 'missing applicationAllowedForChannel');
         let t = y(e.permissions, l, L);
         if (b(t) || (!E(t) && b(C))) return 6;
     }
-    let x = v(e.permissions, L, I, S, T);
+    let x = O(e.permissions, L, I, S, T);
     if (E(x)) return 0;
     if (b(x) || b(N)) return 7;
-    if (null != e.defaultMemberPermissions && !(!o.fS(e.defaultMemberPermissions, f.BO) && o.e$(O, e.defaultMemberPermissions))) return 7;
+    if (null != e.defaultMemberPermissions && !(!a.fS(e.defaultMemberPermissions, f.BO) && a.e$(v, e.defaultMemberPermissions))) return 7;
     return 0;
 }
 function E(e) {
@@ -69,26 +69,26 @@ function y(e, t, n) {
         var i;
         r = null != (i = t.parent_id) ? i : t.id;
     }
-    let a = e[(0, l.rE)(r, d.Kw.CHANNEL)];
-    if (null != a) return a.permission;
-    let o = e[(0, l.rE)((0, f.bD)(n), d.Kw.CHANNEL)];
-    return null != o ? o.permission : null;
+    let o = e[(0, l.rE)(r, d.Kw.CHANNEL)];
+    if (null != o) return o.permission;
+    let a = e[(0, l.rE)((0, f.bD)(n), d.Kw.CHANNEL)];
+    return null != a ? a.permission : null;
 }
-function v(e, t, n, r, i) {
+function O(e, t, n, r, i) {
     if (null == e) return null;
     if (!i) {
         let t = e[(0, l.rE)(n, d.Kw.USER)];
         if (null != t) return t.permission;
     }
-    let a = !1;
+    let o = !1;
     for (let t of r) {
         let n = e[(0, l.rE)(t, d.Kw.ROLE)];
         if (null != n) {
             if (n.permission) return !0;
-            a = !0;
+            o = !0;
         }
     }
-    if (a) return !1;
-    let o = null != t ? e[(0, l.rE)(t, d.Kw.ROLE)] : null;
-    return null != o ? o.permission : null;
+    if (o) return !1;
+    let a = null != t ? e[(0, l.rE)(t, d.Kw.ROLE)] : null;
+    return null != a ? a.permission : null;
 }

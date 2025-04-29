@@ -51,8 +51,8 @@ function g(e) {
         b = (0, c.oX)(n);
     if (null == b) return null;
     let y = (0, l.UCu)(g),
-        { name: _, rarity: O } = b,
-        { color: v } = (0, c.F7)(O),
+        { name: _, rarity: v } = b,
+        { color: O } = (0, c.F7)(v),
         C = (0, i.wj)(m) ? p : f,
         j = (y.size - y.offset - 2 * y.stroke) * 0.8,
         S = y.size - y.stroke,
@@ -80,7 +80,7 @@ function g(e) {
                 className: d.trophyIconContainer,
                 children: (0, r.jsx)(l.rm8, {
                     size: 'custom',
-                    color: u ? v : (0, s.Lq)(C.trophy),
+                    color: u ? O : (0, s.Lq)(C.trophy),
                     width: j,
                     height: j
                 })
@@ -101,7 +101,7 @@ function g(e) {
                     )
                 }),
             u &&
-                O === c.EP.LEGENDARY &&
+                v === c.EP.LEGENDARY &&
                 (0, r.jsx)('div', {
                     className: d.lockContainer,
                     style: x,

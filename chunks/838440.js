@@ -2,8 +2,8 @@ n.d(t, { v: () => b }), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(570140),
-    o = n(468026),
+    o = n(570140),
+    a = n(468026),
     s = n(673750),
     l = n(300429),
     c = n(594174),
@@ -44,7 +44,7 @@ function m(e) {
 function g(e, t) {
     (0, i.h7j)((n) =>
         (0, r.jsx)(
-            o.default,
+            a.default,
             m(
                 {
                     title: p.intl.string(p.t.l8rYLi),
@@ -65,23 +65,23 @@ function g(e, t) {
 }
 function E(e) {
     var t;
-    let { openWarningPopout: n, type: c, content: u, stickers: f, uploads: h, channel: E, restrictMentions: b, respectCooldown: y, userCanUsePremiumMessageLength: v, resolve: O } = e;
+    let { openWarningPopout: n, type: c, content: u, stickers: f, uploads: h, channel: E, restrictMentions: b, respectCooldown: y, userCanUsePremiumMessageLength: O, resolve: v } = e;
     if (0 === u.length && !(null == (t = c.submit) ? void 0 : t.allowEmptyMessage) && (null == f || 0 === f.length) && (null == h || 0 === h.length))
-        return void O({
+        return void v({
             valid: !1,
             failureReason: _.zYc.EMPTY_MESSAGE
         });
-    let I = v ? _.en1 : _.J6R,
-        S = !v;
+    let I = O ? _.en1 : _.J6R,
+        S = !O;
     if (u.length > I) {
         S && null != E
-            ? a.Z.dispatch({
+            ? o.Z.dispatch({
                   type: 'MESSAGE_LENGTH_UPSELL',
                   channel: E,
                   content: u
               })
             : g(u.length, I),
-            O({
+            v({
                 valid: !1,
                 failureReason: _.zYc.MESSAGE_TOO_LONG
             });
@@ -89,7 +89,7 @@ function E(e) {
     }
     if (null != E) {
         if (null != E.getGuildId() && y && l.Z.getSlowmodeCooldownGuess(E.id) > 0)
-            return void O({
+            return void v({
                 valid: !1,
                 failureReason: _.zYc.SLOWMODE_COOLDOWN
             });
@@ -101,11 +101,11 @@ function E(e) {
                         analyticsType: t,
                         channel: E,
                         onCancel: () =>
-                            O({
+                            v({
                                 valid: !1,
                                 failureReason: _.zYc.SHOUTING_CANCELLED
                             }),
-                        onConfirm: () => O({ valid: !0 }),
+                        onConfirm: () => v({ valid: !0 }),
                         popoutText: i,
                         animation: r
                     });
@@ -115,7 +115,7 @@ function E(e) {
         (0, i.h7j)(
             (e) =>
                 (0, r.jsx)(
-                    o.default,
+                    a.default,
                     m(
                         {
                             title: p.intl.string(p.t['7Q4eo6']),
@@ -127,16 +127,16 @@ function E(e) {
                 ),
             { onCloseRequest: _.dG4 }
         ),
-            O({
+            v({
                 valid: !1,
                 failureReason: _.zYc.RATE_LIMITED
             });
         return;
     }
-    O({ valid: !0 });
+    v({ valid: !0 });
 }
 function b(e) {
-    let { openWarningPopout: t, type: n, content: r, stickers: i, uploads: a, channel: o, restrictMentions: s = !0, respectCooldown: l = !0 } = e,
+    let { openWarningPopout: t, type: n, content: r, stickers: i, uploads: o, channel: a, restrictMentions: s = !0, respectCooldown: l = !0 } = e,
         u = f.ZP.canUseIncreasedMessageLength(c.default.getCurrentUser());
     return new Promise((e) =>
         E({
@@ -144,8 +144,8 @@ function b(e) {
             type: n,
             content: r,
             stickers: i,
-            uploads: a,
-            channel: o,
+            uploads: o,
+            channel: a,
             restrictMentions: s,
             respectCooldown: l,
             userCanUsePremiumMessageLength: u,

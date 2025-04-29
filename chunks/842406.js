@@ -1,7 +1,7 @@
 var r = n(670575),
     i = n(131604),
-    a = n(3843),
-    o = n(837447);
+    o = n(3843),
+    a = n(837447);
 function s(e) {
     return e.call.bind(e);
 }
@@ -33,11 +33,11 @@ function b(e) {
 function y(e) {
     return '[object WeakSet]' === u(e);
 }
-function v(e) {
+function O(e) {
     return '[object ArrayBuffer]' === u(e);
 }
-function O(e) {
-    return 'undefined' != typeof ArrayBuffer && (v.working ? v(e) : e instanceof ArrayBuffer);
+function v(e) {
+    return 'undefined' != typeof ArrayBuffer && (O.working ? O(e) : e instanceof ArrayBuffer);
 }
 function I(e) {
     return '[object DataView]' === u(e);
@@ -47,45 +47,45 @@ function S(e) {
 }
 (t.isArgumentsObject = r),
     (t.isGeneratorFunction = i),
-    (t.isTypedArray = o),
+    (t.isTypedArray = a),
     (t.isPromise = function (e) {
         return ('undefined' != typeof Promise && e instanceof Promise) || (null !== e && 'object' == typeof e && 'function' == typeof e.then && 'function' == typeof e.catch);
     }),
     (t.isArrayBufferView = function (e) {
-        return 'undefined' != typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : o(e) || S(e);
+        return 'undefined' != typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : a(e) || S(e);
     }),
     (t.isUint8Array = function (e) {
-        return 'Uint8Array' === a(e);
+        return 'Uint8Array' === o(e);
     }),
     (t.isUint8ClampedArray = function (e) {
-        return 'Uint8ClampedArray' === a(e);
+        return 'Uint8ClampedArray' === o(e);
     }),
     (t.isUint16Array = function (e) {
-        return 'Uint16Array' === a(e);
+        return 'Uint16Array' === o(e);
     }),
     (t.isUint32Array = function (e) {
-        return 'Uint32Array' === a(e);
+        return 'Uint32Array' === o(e);
     }),
     (t.isInt8Array = function (e) {
-        return 'Int8Array' === a(e);
+        return 'Int8Array' === o(e);
     }),
     (t.isInt16Array = function (e) {
-        return 'Int16Array' === a(e);
+        return 'Int16Array' === o(e);
     }),
     (t.isInt32Array = function (e) {
-        return 'Int32Array' === a(e);
+        return 'Int32Array' === o(e);
     }),
     (t.isFloat32Array = function (e) {
-        return 'Float32Array' === a(e);
+        return 'Float32Array' === o(e);
     }),
     (t.isFloat64Array = function (e) {
-        return 'Float64Array' === a(e);
+        return 'Float64Array' === o(e);
     }),
     (t.isBigInt64Array = function (e) {
-        return 'BigInt64Array' === a(e);
+        return 'BigInt64Array' === o(e);
     }),
     (t.isBigUint64Array = function (e) {
-        return 'BigUint64Array' === a(e);
+        return 'BigUint64Array' === o(e);
     }),
     (g.working = 'undefined' != typeof Map && g(new Map())),
     (t.isMap = function (e) {
@@ -103,8 +103,8 @@ function S(e) {
     (t.isWeakSet = function (e) {
         return y(e);
     }),
-    (v.working = 'undefined' != typeof ArrayBuffer && v(new ArrayBuffer())),
-    (t.isArrayBuffer = O),
+    (O.working = 'undefined' != typeof ArrayBuffer && O(new ArrayBuffer())),
+    (t.isArrayBuffer = v),
     (I.working = 'undefined' != typeof ArrayBuffer && 'undefined' != typeof DataView && I(new DataView(new ArrayBuffer(1), 0, 1))),
     (t.isDataView = S);
 var T = 'undefined' != typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
@@ -154,7 +154,7 @@ function D(e) {
         return C(e) || R(e) || P(e) || w(e) || D(e);
     }),
     (t.isAnyArrayBuffer = function (e) {
-        return 'undefined' != typeof Uint8Array && (O(e) || N(e));
+        return 'undefined' != typeof Uint8Array && (v(e) || N(e));
     }),
     ['isProxy', 'isExternal', 'isModuleNamespaceObject'].forEach(function (e) {
         Object.defineProperty(t, e, {

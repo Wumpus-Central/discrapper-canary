@@ -16,15 +16,15 @@ var r = n(200651),
     b = n(674552),
     y = n(593364),
     _ = n(905423),
-    O = n(199902),
-    v = n(592125),
+    v = n(199902),
+    O = n(592125),
     C = n(944486),
     j = n(979651),
     S = n(709054),
     E = n(853856),
     x = n(593214),
-    I = n(919755),
-    P = n(110977),
+    P = n(919755),
+    I = n(110977),
     w = n(603274),
     N = n(981631),
     Z = n(388032),
@@ -71,18 +71,18 @@ function D() {
             favoriteServerMuted: E.Z.favoriteServerMuted
         })),
         B = (0, a.e7)([C.Z], () => C.Z.getChannelId(N.I_8)),
-        V = (0, a.e7)([v.Z], () => v.Z.getChannel(B)),
+        V = (0, a.e7)([O.Z], () => O.Z.getChannel(B)),
         H = (0, _.Z)((e) => e.guildId) === N.I_8,
-        { badge: F, unread: z } = (0, I.Z)(G),
+        { badge: F, unread: z } = (0, P.Z)(G),
         W = (function (e) {
             let t = (0, a.e7)([C.Z], () => C.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
-                r = (0, a.e7)([O.Z], () => {
+                r = (0, a.e7)([v.Z], () => {
                     if (!n) return !1;
-                    let t = O.Z.getCurrentUserActiveStream();
+                    let t = v.Z.getCurrentUserActiveStream();
                     return null != t && null != e[t.channelId];
                 }),
-                i = (0, a.e7)([O.Z], () => O.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
+                i = (0, a.e7)([v.Z], () => v.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
                 l = (0, a.e7)([j.Z], () => n && null != t && j.Z.hasVideo(t), [n, t]),
                 o = (0, a.Wu)([h.ZP], () => S.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
                 s = (0, a.e7)([h.ZP], () =>
@@ -124,7 +124,7 @@ function D() {
             }),
             (0, r.jsx)(w.Z, {
                 onShow: q,
-                children: (0, r.jsx)(P.S, {
+                children: (0, r.jsx)(I.S, {
                     children: (0, r.jsx)(c.aRk, {
                         selected: K || H || k,
                         upperBadge: W,

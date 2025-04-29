@@ -50,13 +50,13 @@ function b(e, t, n) {
 }
 let y = i.memo(function (e) {
     let { sectionIndex: t, guildChannels: n, guildChannelsVersion: h, voiceStates: p, guildId: m, selectedChannelId: b, selectedVoiceChannelId: y, optInEnabled: _ } = e,
-        { hasDivider: O, canHaveVoiceSummary: v } = i.useMemo(() => (0, d.ie)(n, _, t), [n, _, t, h]),
+        { hasDivider: v, canHaveVoiceSummary: O } = i.useMemo(() => (0, d.ie)(n, _, t), [n, _, t, h]),
         C = i.useMemo(() => (t === u.wZ ? null : n.getCategoryFromSection(t)), [n, t, h]),
         j = (0, s.DM)(m),
         S = (0, l.Wu)(
             [a.ZP],
             () => {
-                if (null == C || !C.isCollapsed || !v) return [];
+                if (null == C || !C.isCollapsed || !O) return [];
                 let e = C.getChannelRecords(),
                     t = [];
                 for (let n of e) {
@@ -66,7 +66,7 @@ let y = i.memo(function (e) {
                 }
                 return t;
             },
-            [C, v, m, j]
+            [C, O, m, j]
         ),
         E = i.useMemo(
             () =>
@@ -83,8 +83,8 @@ let y = i.memo(function (e) {
             guildChannels: n,
             guildChannelsVersion: h
         });
-    let x = O ? (0, r.jsx)('div', { className: f.sectionDivider }) : null;
-    return v && 0 !== E.length
+    let x = v ? (0, r.jsx)('div', { className: f.sectionDivider }) : null;
+    return O && 0 !== E.length
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)('div', {

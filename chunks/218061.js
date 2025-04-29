@@ -1,21 +1,21 @@
 n.d(t, {
     L: () => i,
-    Z: () => a
+    Z: () => o
 });
 var r = n(200651);
 function i(e) {
     let { size: t, horizontal: n = !1 } = e,
         i = n ? t : 1,
-        a = n ? 1 : t;
+        o = n ? 1 : t;
     return (0, r.jsx)('span', {
         style: {
             display: 'block',
             width: i,
             minWidth: i,
-            height: a,
-            minHeight: a
+            height: o,
+            minHeight: o
         }
     });
 }
 n(192379);
-let a = i;
+let o = i;

@@ -7,9 +7,9 @@ n.d(t, {
     n(35282);
 var r,
     i = n(200651),
-    a = n(192379),
-    o = n(120356),
-    s = n.n(o),
+    o = n(192379),
+    a = n(120356),
+    s = n.n(a),
     l = n(386195);
 function c(e, t, n) {
     return (
@@ -33,7 +33,7 @@ let d = {
     LARGE: l.cardIconLarge,
     XLARGE: l.cardIconXLarge
 };
-class f extends (r = a.PureComponent) {
+class f extends (r = o.PureComponent) {
     static getType(e) {
         return null == e ? 'unknown' : u[e.replace(/[^a-z0-9_]/gi, '').toUpperCase()] || 'unknown';
     }

@@ -1,7 +1,7 @@
 var r = n(754793),
     i = 15,
-    a = 852,
-    o = 592,
+    o = 852,
+    a = 592,
     s = 0,
     l = 1,
     c = 2,
@@ -12,8 +12,8 @@ var r = n(754793),
 e.exports = function (e, t, n, p, h, m, g, E) {
     var b,
         y,
-        v,
         O,
+        v,
         I,
         S,
         T,
@@ -45,7 +45,7 @@ e.exports = function (e, t, n, p, h, m, g, E) {
     if (k > 0 && (e === s || 1 !== D)) return -1;
     for (R = 1, F[1] = 0; R < i; R++) F[R + 1] = F[R] + V[R];
     for (P = 0; P < p; P++) 0 !== t[n + P] && (g[F[t[n + P]]++] = P);
-    if ((e === s ? ((G = Z = g), (S = 19)) : e === l ? ((G = u), (B -= 257), (Z = d), (H -= 257), (S = 256)) : ((G = f), (Z = _), (S = -1)), (U = 0), (P = 0), (R = w), (I = m), (x = L), (M = 0), (v = -1), (O = (j = 1 << L) - 1), (e === l && j > a) || (e === c && j > o))) return 1;
+    if ((e === s ? ((G = Z = g), (S = 19)) : e === l ? ((G = u), (B -= 257), (Z = d), (H -= 257), (S = 256)) : ((G = f), (Z = _), (S = -1)), (U = 0), (P = 0), (R = w), (I = m), (x = L), (M = 0), (O = -1), (v = (j = 1 << L) - 1), (e === l && j > o) || (e === c && j > a))) return 1;
     for (;;) {
         (T = R - M), g[P] < S ? ((A = 0), (N = g[P])) : g[P] > S ? ((A = Z[H + g[P]]), (N = G[B + g[P]])) : ((A = 96), (N = 0)), (b = 1 << (R - M)), (w = y = 1 << x);
         do h[I + (U >> M) + (y -= b)] = (T << 24) | (A << 16) | N | 0;
@@ -55,10 +55,10 @@ e.exports = function (e, t, n, p, h, m, g, E) {
             if (R === D) break;
             R = t[n + g[P]];
         }
-        if (R > L && (U & O) !== v) {
+        if (R > L && (U & v) !== O) {
             for (0 === M && (M = L), I += w, k = 1 << (x = R - M); x + M < D && !((k -= V[x + M]) <= 0); ) x++, (k <<= 1);
-            if (((j += 1 << x), (e === l && j > a) || (e === c && j > o))) return 1;
-            h[(v = U & O)] = (L << 24) | (x << 16) | (I - m) | 0;
+            if (((j += 1 << x), (e === l && j > o) || (e === c && j > a))) return 1;
+            h[(O = U & v)] = (L << 24) | (x << 16) | (I - m) | 0;
         }
     }
     return 0 !== U && (h[I + U] = ((R - M) << 24) | 4194304), (E.bits = L), 0;

@@ -7,9 +7,9 @@ n.d(t, {
     n(415506);
 var r,
     i = n(200651),
-    a = n(192379),
-    o = n(97613),
-    s = n.n(o),
+    o = n(192379),
+    a = n(97613),
+    s = n.n(a),
     l = n(995295),
     c = n(374470),
     u = n(846519),
@@ -50,7 +50,7 @@ function y(e) {
     }
     return e;
 }
-function v(e, t) {
+function O(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -62,12 +62,12 @@ function v(e, t) {
     }
     return n;
 }
-function O(e, t) {
+function v(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : v(Object(t)).forEach(function (n) {
+            : O(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -75,7 +75,7 @@ function O(e, t) {
 }
 let I = Symbol('POPOUT_PREVENT_CLOSE'),
     S = new Set(['Spacebar', ' ', 'Enter']);
-class T extends (r = a.Component) {
+class T extends (r = o.Component) {
     shouldShowPopout(e, t) {
         return null != e.shouldShow ? e.shouldShow : t.shouldShowPopout;
     }
@@ -116,10 +116,10 @@ class T extends (r = a.Component) {
     render() {
         let { children: e, useMouseEnter: t } = this.props,
             n = this.shouldShowPopout(this.props, this.state);
-        return (0, i.jsxs)(a.Fragment, {
+        return (0, i.jsxs)(o.Fragment, {
             children: [
                 e(
-                    O(y({ onMouseDown: this.handlePreload }, t ? { onMouseEnter: this.handleMouseEnter } : {}), {
+                    v(y({ onMouseDown: this.handlePreload }, t ? { onMouseEnter: this.handleMouseEnter } : {}), {
                         onKeyDown: this.handleKeyboardPreload,
                         onClick: this.handleClick,
                         'aria-controls': n ? this.popoutId : void 0,
@@ -144,7 +144,7 @@ class T extends (r = a.Component) {
     }
     renderLayer() {
         if (!this.shouldShowPopout(this.props, this.state) || null == this.domElementRef.current) return null;
-        let { position: e, align: t, nudgeAlignIntoViewport: n, useRawTargetDimensions: r, spacing: a, autoInvert: o, fixed: s, positionKey: l, overridePositionRef: c, disablePointerEvents: u, layerContext: _, clickTrap: p = !1 } = this.props,
+        let { position: e, align: t, nudgeAlignIntoViewport: n, useRawTargetDimensions: r, spacing: o, autoInvert: a, fixed: s, positionKey: l, overridePositionRef: c, disablePointerEvents: u, layerContext: _, clickTrap: p = !1 } = this.props,
             { resizeKey: h, isLoading: g, shouldShowLoadingState: E } = this.state;
         return g && !E
             ? null
@@ -160,8 +160,8 @@ class T extends (r = a.Component) {
                       align: t,
                       nudgeAlignIntoViewport: n,
                       useRawTargetDimensions: r,
-                      spacing: a,
-                      autoInvert: o,
+                      spacing: o,
+                      autoInvert: a,
                       fixed: s,
                       positionKey: null != l ? l : String(h),
                       disablePointerEvents: u,
@@ -176,10 +176,10 @@ class T extends (r = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            b(this, 'domElementRef', a.createRef()),
-            b(this, 'siblingDomRef', a.createRef()),
-            b(this, 'layerRef', a.createRef()),
-            b(this, 'popoutRef', a.createRef()),
+            b(this, 'domElementRef', o.createRef()),
+            b(this, 'siblingDomRef', o.createRef()),
+            b(this, 'layerRef', o.createRef()),
+            b(this, 'popoutRef', o.createRef()),
             b(this, 'resizeObserver', void 0),
             b(this, 'popoutId', 'popout_'.concat(s()())),
             b(this, 'loadingTimeout', new u.V7()),
@@ -217,7 +217,7 @@ class T extends (r = a.Component) {
                 return this.state.isLoading
                     ? this.props.loadingComponent
                     : n(
-                          O(y({}, e), {
+                          v(y({}, e), {
                               updatePosition: t,
                               closePopout: this.close,
                               setPopoutRef: this.handleSetPopoutRef
@@ -231,9 +231,9 @@ class T extends (r = a.Component) {
             b(this, 'handleClick', (e) => {
                 let { onShiftClick: t, shouldShow: n, onRequestOpen: r, onRequestClose: i } = this.props;
                 if ((null == e ? void 0 : e.shiftKey) && null != t) return void t(e);
-                let a = null != n;
-                (a ? n : this.state.shouldShowPopout) ? null == i || i() : null == r || r(),
-                    a ||
+                let o = null != n;
+                (o ? n : this.state.shouldShowPopout) ? null == i || i() : null == r || r(),
+                    o ||
                         this.setState((e) => {
                             let { shouldShowPopout: t } = e;
                             return { shouldShowPopout: !t };

@@ -1,8 +1,8 @@
 n.d(t, { e: () => m }), n(388685);
 var r = n(192379),
     i = n(442837),
-    a = n(634894),
-    o = n(353926),
+    o = n(634894),
+    a = n(353926),
     s = n(335131),
     l = n(597688),
     c = n(228624);
@@ -62,35 +62,35 @@ let p = 600000,
     h = 600000;
 function m(e, t, n) {
     let u = 'useMaybeFetchCollectiblesCategories';
-    (0, a.j)({
+    (0, o.j)({
         location: u + ' auto on',
         autoTrackExposure: !0
     }),
-        (0, a.j)({
+        (0, o.j)({
             location: u + ' auto off',
             autoTrackExposure: !1
         });
-    let f = (0, i.e7)([o.Z], () => o.Z.hasLoadedExperiments),
+    let f = (0, i.e7)([a.Z], () => a.Z.hasLoadedExperiments),
         m = null == e ? void 0 : e.includeBundles,
         g = (0, c.hv)('useMaybeFetchCollectiblesCategoriesShared'),
-        [E, b, y, v, O, I, S] = (0, i.Wu)([l.Z], () => {
+        [E, b, y, O, v, I, S] = (0, i.Wu)([l.Z], () => {
             var e, t;
             return [l.Z.isFetchingCategories, l.Z.lastFetchOptions, l.Z.error, null != (e = l.Z.lastErrorTimestamp) ? e : 0, null != (t = l.Z.lastSuccessfulFetch) ? t : 0, l.Z.categories, l.Z.skipNumCategories];
         });
     return (
         (0, r.useEffect)(() => {
             if (!f || E) return;
-            let r = Date.now() - v < h;
+            let r = Date.now() - O < h;
             if (y && r) return;
             let i = _(d({}, e), {
                     includeBundles: m,
                     variantsReturnStyle: g,
                     skipNumCategories: S
                 }),
-                a = !(0, s.oc)(b, i),
-                o = Date.now() - O < p;
-            (a || !o) && (0, s.F$)(i, t, n);
-        }, [f, E, b, O, e, y, m, v, g, t, n, S]),
+                o = !(0, s.oc)(b, i),
+                a = Date.now() - v < p;
+            (o || !a) && (0, s.F$)(i, t, n);
+        }, [f, E, b, v, e, y, m, O, g, t, n, S]),
         {
             isFetching: E,
             categories: I,

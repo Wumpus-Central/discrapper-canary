@@ -1,11 +1,11 @@
 n.d(t, {
     M: () => _,
-    Z: () => v
+    Z: () => O
 });
 var r,
     i = n(31775),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(570140);
 function l(e, t, n) {
     return (
@@ -67,7 +67,7 @@ function p(e) {
     let { applicationId: t, guildId: n, page: r } = e;
     return 'applicationId:'.concat(t, ' guildId:').concat(n, ' page:').concat(r);
 }
-let h = new (a())({ max: f }),
+let h = new (o())({ max: f }),
     m = {};
 function g(e) {
     let { applicationId: t, guildId: n, page: r } = e,
@@ -79,18 +79,18 @@ function g(e) {
     m = d(c({}, m), { [i]: 1 });
 }
 function E(e) {
-    let { applicationId: t, guildId: n, similarApplications: r, loadId: i, page: a, totalPages: o } = e,
+    let { applicationId: t, guildId: n, similarApplications: r, loadId: i, page: o, totalPages: a } = e,
         s = p({
             applicationId: t,
             guildId: n,
-            page: a
+            page: o
         });
     h.set(s, {
         lastFetchTimeMs: Date.now(),
         applications: r,
         loadId: i,
-        page: a,
-        totalPages: o
+        page: o,
+        totalPages: a
     }),
         (m = d(c({}, m), { [s]: 2 }));
 }
@@ -103,7 +103,7 @@ function b(e) {
         });
     m = d(c({}, m), { [i]: 3 });
 }
-class y extends (r = o.ZP.Store) {
+class y extends (r = a.ZP.Store) {
     getSimilarApplications(e) {
         let { applicationId: t, guildId: n, page: r } = e;
         if (null == t) return;
@@ -127,7 +127,7 @@ class y extends (r = o.ZP.Store) {
     }
 }
 l(y, 'displayName', 'ApplicationDirectorySimilarApplicationsStore');
-let v = new y(s.Z, {
+let O = new y(s.Z, {
     APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS: g,
     APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_SUCCESS: E,
     APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS_FAILURE: b

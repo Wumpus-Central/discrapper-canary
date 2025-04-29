@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(539854);
 var r = n(981631);
 let i = [],
-    a = !1;
-function o() {
+    o = !1;
+function a() {
     let e = window.navigator.connection;
     return null == e
         ? {
@@ -15,17 +15,17 @@ function o() {
           };
 }
 function s() {
-    if (!0 === a) return;
+    if (!0 === o) return;
     let e = window.navigator.connection;
-    null != e && ((a = !0), e.addEventListener('change', c));
+    null != e && ((o = !0), e.addEventListener('change', c));
 }
 function l() {
-    if (!1 === a) return;
+    if (!1 === o) return;
     let e = window.navigator.connection;
-    null != e && 0 === i.length && null != e && (e.removeEventListener('change', c), (a = !1));
+    null != e && 0 === i.length && null != e && (e.removeEventListener('change', c), (o = !1));
 }
 function c() {
-    let e = o();
+    let e = a();
     i.forEach((t) => t(e));
 }
 function u(e) {
@@ -54,7 +54,7 @@ let f = {
     removeChangeCallback(e) {
         d(e);
     },
-    getNetworkInformation: () => Promise.resolve(o()),
+    getNetworkInformation: () => Promise.resolve(a()),
     isOnline() {
         let e = navigator.onLine;
         return void 0 === e || e;

@@ -2,8 +2,8 @@ n.d(t, { Z: () => d }), n(539854);
 var r = n(200651);
 n(192379);
 var i = n(243814),
-    a = n(993365),
-    o = n(481060),
+    o = n(993365),
+    a = n(481060),
     s = n(63063),
     l = n(981631),
     c = n(388032),
@@ -11,56 +11,56 @@ var i = n(243814),
 function d(e) {
     let t,
         { accountScopes: n } = e,
-        a = [];
+        o = [];
     return (n.includes(i.x.SDK_SOCIAL_LAYER)
         ? ((t = c.intl.format(c.t.DfBeUl, { learnMoreURL: s.Z.getArticleURL(l.BhN.SOCIAL_LAYER_CONNECTIONS) })),
-          a.push(
+          o.push(
               {
-                  icon: o.iFz,
+                  icon: a.iFz,
                   text: c.intl.formatToPlainString(c.t.WNKzo6, { maxFriends: l.L4X })
               },
               {
-                  icon: o.mrm,
+                  icon: a.mrm,
                   text: c.intl.string(c.t.j7peBg)
               },
               {
-                  icon: o.iWm,
+                  icon: a.iWm,
                   text: c.intl.string(c.t['feD3+v'])
               },
               {
-                  icon: o.ewm,
+                  icon: a.ewm,
                   text: c.intl.string(c.t.YFFVMz)
               }
           ))
         : n.includes(i.x.SDK_SOCIAL_LAYER_PRESENCE) &&
           ((t = c.intl.format(c.t.DfBeUl, { learnMoreURL: s.Z.getArticleURL(l.BhN.SOCIAL_LAYER_CONNECTIONS) })),
-          a.push(
+          o.push(
               {
-                  icon: o.iFz,
+                  icon: a.iFz,
                   text: c.intl.formatToPlainString(c.t.WNKzo6, { maxFriends: l.L4X })
               },
               {
-                  icon: o.iWm,
+                  icon: a.iWm,
                   text: c.intl.string(c.t['feD3+v'])
               },
               {
-                  icon: o.ewm,
+                  icon: a.ewm,
                   text: c.intl.string(c.t.YFFVMz)
               }
           )),
-    0 === a.length)
+    0 === o.length)
         ? null
         : (0, r.jsxs)('div', {
               className: u.applicationEducation,
               children: [
                   null != t
-                      ? (0, r.jsx)(o.X6q, {
+                      ? (0, r.jsx)(a.X6q, {
                             variant: 'heading-sm/normal',
                             className: u.sectionLabel,
                             children: t
                         })
                       : null,
-                  a.map((e, t) => {
+                  o.map((e, t) => {
                       let { icon: n, text: i } = e;
                       return (0, r.jsx)(
                           f,
@@ -83,7 +83,7 @@ function f(e) {
                 className: u.entryIcon,
                 color: 'currentColor'
             }),
-            (0, r.jsx)(a.x, {
+            (0, r.jsx)(o.x, {
                 variant: 'text-md/normal',
                 className: u.entryText,
                 children: n

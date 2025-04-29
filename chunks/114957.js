@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(388685);
 var r = n(224706),
     i = n(978085),
-    a = n(147913),
-    o = n(77498),
+    o = n(147913),
+    a = n(77498),
     s = n(283595),
     l = n(70956),
     c = n(358085);
@@ -19,9 +19,9 @@ function u(e, t, n) {
         e
     );
 }
-class d extends a.Z {
+class d extends o.Z {
     handlePostConnectionOpen() {
-        (0, c.isDesktop)() && (s.Z.fetched || (0, i.b8)(), r.Z.getDetectableGames(), (this.intervalId = setInterval(r.Z.getDetectableGames, o.Z.detectableGamesTtl + Math.random() * l.Z.Millis.HOUR)));
+        (0, c.isDesktop)() && (s.Z.fetched || (0, i.b8)(), r.Z.getDetectableGames(), (this.intervalId = setInterval(r.Z.getDetectableGames, a.Z.detectableGamesTtl + Math.random() * l.Z.Millis.HOUR)));
     }
     _terminate() {
         null != this.intervalId && (clearInterval(this.intervalId), (this.intervalId = void 0));

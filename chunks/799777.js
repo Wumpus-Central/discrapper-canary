@@ -1,8 +1,8 @@
 let r;
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => v });
 var i,
-    a = n(392711),
-    o = n.n(a),
+    o = n(392711),
+    a = n.n(o),
     s = n(442837),
     l = n(433517),
     c = n(570140),
@@ -25,8 +25,8 @@ let f = 'GameLibraryViewStore',
     p = u.sHY.ASCENDING,
     h = u.iEv.LAST_PLAYED,
     m = !1,
-    g = o().debounce(() => {
-        (m = !1), v.emitChange();
+    g = a().debounce(() => {
+        (m = !1), O.emitChange();
     }, _);
 function E(e) {
     let { key: t, isKeyboardEvent: n } = e;
@@ -61,8 +61,8 @@ class y extends (i = s.ZP.Store) {
     }
 }
 d(y, 'displayName', 'GameLibraryViewStore');
-let v = new y(c.Z, {
+let O = new y(c.Z, {
         LIBRARY_TABLE_SORT_UPDATE: b,
         LIBRARY_TABLE_ACTIVE_ROW_ID_UPDATE: E
     }),
-    O = v;
+    v = O;

@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
 var i = n(442837),
-    a = n(906732),
-    o = n(314897),
+    o = n(906732),
+    a = n(314897),
     s = n(699516),
     l = n(821706),
     c = n(562831),
@@ -11,8 +11,8 @@ var i = n(442837),
     d = n(981631);
 function f(e) {
     let { user: t, friendToken: n, themeType: f, shouldShowTooltip: _ = !1 } = e,
-        { newestAnalyticsLocation: p } = (0, a.ZP)(),
-        h = (0, i.e7)([o.default], () => o.default.getId() === t.id),
+        { newestAnalyticsLocation: p } = (0, o.ZP)(),
+        h = (0, i.e7)([a.default], () => a.default.getId() === t.id),
         m = (0, i.e7)([s.Z], () => s.Z.getRelationshipType(t.id)),
         { gameFriends: g, hasOutgoingPendingGameFriends: E, hasIncomingPendingGameFriends: b } = (0, c.H)({ userId: t.id }),
         y = g.length > 0 || E || b;

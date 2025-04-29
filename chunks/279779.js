@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N }), n(997841), n(539854), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(415506), n(361932), n(187205);
 var r = n(392711),
     i = n.n(r),
-    a = n(772848),
-    o = n(147913),
+    o = n(772848),
+    a = n(147913),
     s = n(131704),
     l = n(598077),
     c = n(592125),
@@ -29,7 +29,7 @@ function b(e, t, n) {
     );
 }
 let y = 10;
-function v(e) {
+function O(e) {
     if (null == e || d.Z.isBlockedOrIgnored(e.id)) return null;
     let t = {
         id: e.id,
@@ -42,7 +42,7 @@ function v(e) {
     } else t.isProvisional = !1;
     return d.Z.isFriend(e.id) && ((t.isFriend = !0), (t.friendNickname = d.Z.getNickname(e.id))), t;
 }
-function O(e, t, n) {
+function v(e, t, n) {
     null != e && (e[t] = null != n && '' !== n ? n : null);
 }
 function I(e) {
@@ -51,8 +51,8 @@ function I(e) {
     let { recipients: n = [] } = e;
     return (
         n.forEach((n) => {
-            let r = v(f.default.getUser(n));
-            null != e && O(r, e.id), t.push(r);
+            let r = O(f.default.getUser(n));
+            null != e && v(r, e.id), t.push(r);
         }),
         t
     );
@@ -61,8 +61,8 @@ function S(e, t) {
     let n = [];
     return (
         e.forEach((e) => {
-            let r = v(e.user);
-            null != r && (O(r, t, e.nick), n.push(r));
+            let r = O(e.user);
+            null != r && (v(r, t, e.nick), n.push(r));
         }),
         n
     );
@@ -127,7 +127,7 @@ class T {
                 null != t && 'USER_RESULTS' === t.type && t.uuid === this._uuid && (!1 !== this._currentQuery && this._callback(t.payload), null != this._currentQuery && (this._currentQuery = null), this._setNextQuery());
             }),
             (this._worker = e),
-            (this._uuid = (0, a.Z)()),
+            (this._uuid = (0, o.Z)()),
             (this._callback = t),
             (this._limit = n),
             (this._currentQuery = null),
@@ -136,7 +136,7 @@ class T {
             this.subscribe();
     }
 }
-class A extends o.Z {
+class A extends a.Z {
     _initialize() {
         this.rebootWebworker();
     }
@@ -209,18 +209,18 @@ class A extends o.Z {
                 setTimeout(() => {
                     let e = f.default.getCurrentUser();
                     if (null == e) return;
-                    let t = v(e),
+                    let t = O(e),
                         n = { [t.id]: t };
                     Object.values(f.default.getUsers()).forEach((e) => {
-                        n[e.id] = v(e);
+                        n[e.id] = O(e);
                     });
                     let r = u.ZP.getMutableAllGuildsAndMembers();
                     for (let e in r)
                         for (let t in r[e]) {
-                            var i, a;
-                            let o = n[t],
-                                s = null != (a = null == (i = r[e][t]) ? void 0 : i.nick) ? a : g.ZP.getGlobalName(o);
-                            null != o && (o[e] = null != s && '' !== s ? s : null);
+                            var i, o;
+                            let a = n[t],
+                                s = null != (o = null == (i = r[e][t]) ? void 0 : i.nick) ? o : g.ZP.getGlobalName(a);
+                            null != a && (a[e] = null != s && '' !== s ? s : null);
                         }
                     this.updateUsers(Object.values(n), 'connection_open');
                 }, 3000);
@@ -238,8 +238,8 @@ class A extends o.Z {
                                         t.participants.forEach((t) => {
                                             let r = t.member;
                                             if (null != r) {
-                                                let t = v(r.user);
-                                                null != t && (O(t, e.id, r.nick), n.push(t));
+                                                let t = O(r.user);
+                                                null != t && (v(t, e.id, r.nick), n.push(t));
                                             }
                                         });
                                     }),
@@ -252,21 +252,21 @@ class A extends o.Z {
             b(this, '_handleOverlayInitialize', (e) => {
                 let { users: t, guildMembers: n } = e,
                     r = new Map();
-                for (let e of t) r.set(e.id, v(e));
+                for (let e of t) r.set(e.id, O(e));
                 for (let e of m.default.keys(n)) {
                     let t = n[e];
                     if (null != t)
                         for (let n of m.default.keys(t)) {
                             let i = r.get(n),
-                                a = t[n];
-                            null != i && null != a && null != a.nick && (O(i, e, a.nick), r.set(n, i));
+                                o = t[n];
+                            null != i && null != o && null != o.nick && (v(i, e, o.nick), r.set(n, i));
                         }
                 }
                 this.updateUsers(Array.from(r.values()), 'overlay_initialize'), r.clear();
             }),
             b(this, '_handleCurrentUserUpdate', (e) => {
                 let { user: t } = e,
-                    n = v(t);
+                    n = O(t);
                 null != n && this.updateUsers([n], 'current_user_update');
             }),
             b(this, '_handleGuildCreate', (e) => {
@@ -282,22 +282,22 @@ class A extends o.Z {
             }),
             b(this, '_handleGuildMemberUpdate', (e) => {
                 let { guildId: t, user: n, nick: r } = e,
-                    i = v(n);
-                null != i && (O(i, t, r), this.updateUsers([i], 'guild_member_update'));
+                    i = O(n);
+                null != i && (v(i, t, r), this.updateUsers([i], 'guild_member_update'));
             }),
             b(this, '_handlePassiveUpdateV2', (e) => {
                 this.updateUsers(S(e.members, e.guildId), 'passive_update_v2');
             }),
             b(this, '_handleRelationshipAdd', (e) => {
-                let t = v(e.relationship.user);
+                let t = O(e.relationship.user);
                 this.updateUsers([t], 'relationship_add');
             }),
             b(this, '_handleRelationshipUpdate', (e) => {
-                let t = v(f.default.getUser(e.relationship.id));
+                let t = O(f.default.getUser(e.relationship.id));
                 this.updateUsers([t], 'relationship_update');
             }),
             b(this, '_handleRelationshipRemove', (e) => {
-                let t = v(f.default.getUser(e.relationship.id));
+                let t = O(f.default.getUser(e.relationship.id));
                 this.updateUsers([t], 'relationship_remove');
             }),
             b(this, '_handleDMCreate', (e) => {
@@ -306,23 +306,23 @@ class A extends o.Z {
                     } = e,
                     n = I(c.Z.getChannel(t));
                 if (0 === n.length) return;
-                let r = v(f.default.getCurrentUser());
-                O(r, t), n.push(r), this.updateUsers(n, 'dm_create');
+                let r = O(f.default.getCurrentUser());
+                v(r, t), n.push(r), this.updateUsers(n, 'dm_create');
             }),
             b(this, '_handleDMUpdates', (e) => {
                 let { channels: t } = e;
                 for (let e of t) {
                     let t = I(c.Z.getChannel(e.id));
                     if (0 === t.length) continue;
-                    let n = v(f.default.getCurrentUser());
-                    O(n, e.id), t.push(n), this.updateUsers(t, 'dm_updates');
+                    let n = O(f.default.getCurrentUser());
+                    v(n, e.id), t.push(n), this.updateUsers(t, 'dm_updates');
                 }
             }),
             b(this, '_handleRecipientChanges', (e) => {
                 let { channelId: t, user: n, isMember: r } = e;
                 if (!r) return;
-                let i = v(n);
-                O(i, t), this.updateUsers([i], 'recipient_changes');
+                let i = O(n);
+                v(i, t), this.updateUsers([i], 'recipient_changes');
             });
     }
 }

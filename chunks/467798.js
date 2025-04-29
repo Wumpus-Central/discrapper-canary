@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => a,
+    Z: () => o,
     v: () => i
 }),
     n(413496),
@@ -8,6 +8,6 @@ n.d(t, {
     n(781311);
 let r = '@silent',
     i = new RegExp('^'.concat(r, '(\\s|$)'));
-function a(e) {
+function o(e) {
     return null == e ? [!1, ''] : null == e.match(i) ? [!1, e] : [!0, e.substring(r.length).trim()];
 }

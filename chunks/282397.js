@@ -1,7 +1,7 @@
 let r, i;
 n.d(t, { ZP: () => G }), n(388685);
-var a,
-    o = n(442837),
+var o,
+    a = n(442837),
     s = n(570140),
     l = n(904245),
     c = n(911969),
@@ -64,13 +64,13 @@ function g(e, t) {
 let E = 5 * f.Z.Millis.MINUTE,
     b = 10 * f.Z.Millis.SECOND,
     y = {},
-    v = {},
     O = {},
+    v = {},
     I = {};
 function S() {
     (y = {}),
-        (v = {}),
         (O = {}),
+        (v = {}),
         (I = {}),
         setInterval(() => {
             let e = Date.now();
@@ -78,14 +78,14 @@ function S() {
         }, E);
 }
 function T(e) {
-    let { nonce: t, messageId: n, data: r, onCreate: i, onCancel: a, onSuccess: o, onFailure: s } = e;
-    null != n && ((v[n] = t), (O[t] = n)),
+    let { nonce: t, messageId: n, data: r, onCreate: i, onCancel: o, onSuccess: a, onFailure: s } = e;
+    null != n && ((O[n] = t), (v[t] = n)),
         (y[t] = {
             state: _.F.QUEUED,
             data: r,
             onCreate: i,
-            onCancel: a,
-            onSuccess: o,
+            onCancel: o,
+            onSuccess: a,
             onFailure: s
         });
 }
@@ -113,11 +113,11 @@ function C(e) {
 }
 function R(e) {
     var t;
-    let { nonce: n, errorCode: r, errorMessage: i, status: a, reasonCode: o } = e;
+    let { nonce: n, errorCode: r, errorMessage: i, status: o, reasonCode: a } = e;
     if (null == n) return !1;
     let s = y[n];
     if (null == s) return !1;
-    null == (t = s.onFailure) || t.call(s, r, i, a, o),
+    null == (t = s.onFailure) || t.call(s, r, i, o, a),
         s.data.interactionType === c.B8.APPLICATION_COMMAND
             ? j(n)
             : (y[n] = g(h({}, s), {
@@ -151,11 +151,11 @@ function M(e) {
         n,
         { participants: r } = e,
         i = u.default.getSessionId(),
-        a = u.default.getId(),
-        o = r.find((e) => e.user_id === a && e.session_id === i);
-    if (null == o || null == o.nonce) return;
-    let s = I[o.nonce];
-    null == s ? ((t = O[o.nonce]), (n = y[o.nonce])) : ((t = s.messageId), (n = s.interaction)), null != n && null != t && (j(o.nonce), null != t && 'channelId' in n.data && l.Z.deleteMessage(n.data.channelId, t, !0));
+        o = u.default.getId(),
+        a = r.find((e) => e.user_id === o && e.session_id === i);
+    if (null == a || null == a.nonce) return;
+    let s = I[a.nonce];
+    null == s ? ((t = v[a.nonce]), (n = y[a.nonce])) : ((t = s.messageId), (n = s.interaction)), null != n && null != t && (j(a.nonce), null != t && 'channelId' in n.data && l.Z.deleteMessage(n.data.channelId, t, !0));
 }
 function k(e) {
     var t;
@@ -168,9 +168,9 @@ function j(e) {
     if (null != I[e]) return void delete I[e];
     let t = y[e];
     delete y[e];
-    let n = O[e];
-    null != n && delete v[n],
-        delete O[e],
+    let n = v[e];
+    null != n && delete O[n],
+        delete v[e],
         (I[e] = {
             insertedAt: Date.now(),
             nonce: e,
@@ -178,21 +178,21 @@ function j(e) {
             interaction: t
         });
 }
-class U extends (a = o.ZP.Store) {
+class U extends (o = a.ZP.Store) {
     getInteraction(e) {
-        let t = v[e.id];
+        let t = O[e.id];
         return null != t ? y[t] : null;
     }
     getMessageInteractionStates() {
         let e = {};
         for (let [t, n] of Object.entries(y)) {
-            let r = O[t];
+            let r = v[t];
             null != r && (e[r] = n.state);
         }
         return e;
     }
     canQueueInteraction(e, t) {
-        let n = v[e];
+        let n = O[e];
         return (null == n || null == y[n] || y[n].state === _.F.FAILED) && (null == y[t] || y[t].state === _.F.FAILED);
     }
     getIFrameModalApplicationId() {

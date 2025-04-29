@@ -2,8 +2,8 @@ n.d(t, { Z: () => N });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(481060),
     l = n(230711),
     c = n(906732),
@@ -18,7 +18,7 @@ var i = n(120356),
     E = n(474936),
     b = n(981631),
     y = n(627268);
-function v(e, t, n) {
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function v(e, t, n) {
         e
     );
 }
-function O(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -42,7 +42,7 @@ function O(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                O(e, t, n[t]);
             });
     }
     return e;
@@ -76,8 +76,8 @@ function T(e, t) {
         r,
         i = A(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -86,16 +86,16 @@ function A(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let N = function (e) {
-    var { isGift: t, subscriptionTier: i, onClick: v, size: I, className: A, isTrialCTA: N, buttonText: C, buttonTextClassName: R, subscribeButtonText: P, iconClassName: w, postSuccessGuild: D, onSubscribeModalClose: L, premiumModalAnalyticsLocation: x, showIcon: M = !0, disableShine: k, applicationId: j, giftMessage: U, shinyButtonClassName: G, showGradient: B = !1, confirmationFooter: V, paymentModalBanner: F } = e,
+    var { isGift: t, subscriptionTier: i, onClick: O, size: I, className: A, isTrialCTA: N, buttonText: C, buttonTextClassName: R, subscribeButtonText: P, iconClassName: w, postSuccessGuild: D, onSubscribeModalClose: L, premiumModalAnalyticsLocation: x, showIcon: M = !0, disableShine: k, applicationId: j, giftMessage: U, shinyButtonClassName: G, showGradient: B = !1, confirmationFooter: V, paymentModalBanner: F } = e,
         Z = T(e, ['isGift', 'subscriptionTier', 'onClick', 'size', 'className', 'isTrialCTA', 'buttonText', 'buttonTextClassName', 'subscribeButtonText', 'iconClassName', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'showIcon', 'disableShine', 'applicationId', 'giftMessage', 'shinyButtonClassName', 'showGradient', 'confirmationFooter', 'paymentModalBanner']);
-    let H = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
-        Y = (0, o.e7)([h.Z], () => h.Z.isFocused()),
-        W = (0, o.e7)([p.ZP], () => p.ZP.getPremiumTypeSubscription()),
+    let H = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
+        Y = (0, a.e7)([h.Z], () => h.Z.isFocused()),
+        W = (0, a.e7)([p.ZP], () => p.ZP.getPremiumTypeSubscription()),
         { analyticsLocations: K } = (0, c.ZP)(),
         z = (0, g.N)(),
         q = !t && null != z && null != i && E.nG[z.trial_id].skus.includes(i),
@@ -107,9 +107,9 @@ let N = function (e) {
             defaultTextOverride: P
         }),
         X = (e) => {
-            var a;
+            var o;
             if ((e.preventDefault(), null == H)) return void (0, f.uL)(b.Z5c.LOGIN, { source: 'premium_subscribe_button' });
-            if ((null == v || v(e), (null == W ? void 0 : W.status) === b.O0b.ACCOUNT_HOLD)) {
+            if ((null == O || O(e), (null == W ? void 0 : W.status) === b.O0b.ACCOUNT_HOLD)) {
                 (0, u.A3)(), l.Z.open(b.oAB.PREMIUM), null == L || L(!1);
                 return;
             }
@@ -119,7 +119,7 @@ let N = function (e) {
                     return (t) => {
                         var { onClose: n } = t,
                             i = T(t, ['onClose']);
-                        return (0, r.jsx)(e, S(O({}, i), { onClose: n }));
+                        return (0, r.jsx)(e, S(v({}, i), { onClose: n }));
                     };
                 });
             if (!H.verified)
@@ -128,25 +128,25 @@ let N = function (e) {
                     return (t) => {
                         var { onClose: n } = t,
                             i = T(t, ['onClose']);
-                        return (0, r.jsx)(e, S(O({}, i), { onClose: n }));
+                        return (0, r.jsx)(e, S(v({}, i), { onClose: n }));
                     };
                 });
-            let o = q ? (null == (a = z.subscription_trial) ? void 0 : a.id) : null,
+            let a = q ? (null == (o = z.subscription_trial) ? void 0 : o.id) : null,
                 c = b.Qqv.BUY;
-            null != o ? (c = b.Qqv.TRIAL) : t && (c = b.Qqv.GIFT),
+            null != a ? (c = b.Qqv.TRIAL) : t && (c = b.Qqv.GIFT),
                 (0, d.Z)({
                     isGift: t,
                     initialPlanId: null,
                     subscriptionTier: i,
                     analyticsLocations: K,
-                    analyticsObject: O(
+                    analyticsObject: v(
                         {
                             object: b.qAy.BUTTON_CTA,
                             objectType: c
                         },
                         x
                     ),
-                    trialId: o,
+                    trialId: a,
                     postSuccessGuild: D,
                     onClose: L,
                     applicationId: j,
@@ -159,7 +159,7 @@ let N = function (e) {
         return (0, r.jsxs)(
             s.zxk,
             S(
-                O(
+                v(
                     {
                         size: I,
                         className: A,
@@ -178,7 +178,7 @@ let N = function (e) {
                                 className: y.premiumIcon
                             }),
                         (0, r.jsx)('span', {
-                            className: a()(y.buttonText, R),
+                            className: o()(y.buttonText, R),
                             children: Q.buttonText
                         })
                     ]
@@ -189,7 +189,7 @@ let N = function (e) {
         return (0, r.jsxs)(
             s.zxk,
             S(
-                O(
+                v(
                     {
                         size: I,
                         className: A,
@@ -207,7 +207,7 @@ let N = function (e) {
                             className: y.giftIcon
                         }),
                         (0, r.jsx)('span', {
-                            className: a()(y.buttonText, R),
+                            className: o()(y.buttonText, R),
                             children: Q.buttonText
                         })
                     ]
@@ -218,7 +218,7 @@ let N = function (e) {
         return (0, r.jsxs)(
             s.gtL,
             S(
-                O(
+                v(
                     {
                         disabled: Q.disabled,
                         onClick: X,
@@ -226,7 +226,7 @@ let N = function (e) {
                         color: i === E.Si.TIER_1 ? s.zxk.Colors.PRIMARY : s.zxk.Colors.GREEN,
                         size: I,
                         className: G,
-                        wrapperClassName: a()(
+                        wrapperClassName: o()(
                             {
                                 [y.tier2Gradient]: B && i === E.Si.TIER_2,
                                 [y.tier1Gradient]: B && i === E.Si.TIER_1
@@ -244,10 +244,10 @@ let N = function (e) {
                             (0, r.jsx)(s.SrA, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: a()(y.premiumIcon, w)
+                                className: o()(y.premiumIcon, w)
                             }),
                         (0, r.jsx)('span', {
-                            className: a()(y.buttonText, R),
+                            className: o()(y.buttonText, R),
                             children: Q.buttonText
                         })
                     ]

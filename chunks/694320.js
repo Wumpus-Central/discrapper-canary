@@ -1,8 +1,8 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => O });
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(100527),
@@ -49,9 +49,9 @@ function y() {
         return (t) => (0, r.jsx)(e, b({ channel: null }, t));
     });
 }
-function v(e) {
+function O(e) {
     let { className: t, iconOnly: n } = e,
-        a = (0, s.e7)([_.Z, f.Z], () => {
+        o = (0, s.e7)([_.Z, f.Z], () => {
             let e = f.Z.getChannel(_.Z.getChannelId());
             return (null == e ? void 0 : e.isPrivate()) ? h.ZY5.DM_CHANNEL : h.ZY5.GUILD_CHANNEL;
         }),
@@ -60,15 +60,15 @@ function v(e) {
         p.default.track(h.rMx.PREMIUM_UPSELL_VIEWED, {
             type: 'longer messages inline',
             location: {
-                location_page: a,
+                location_page: o,
                 location_section: h.jXE.CHANNEL_TEXT_AREA
             },
             location_stack: E
         });
-    }, [a, E]);
-    let v = () =>
+    }, [o, E]);
+    let O = () =>
             (0, r.jsxs)('div', {
-                className: o()(g.root, t),
+                className: a()(g.root, t),
                 children: [
                     (0, r.jsx)(l.SrA, {
                         size: 'md',
@@ -82,7 +82,7 @@ function v(e) {
                     })
                 ]
             }),
-        O = () =>
+        v = () =>
             (0, r.jsx)(l.P3F, {
                 className: g.iconOnly,
                 onClick: () => y(),
@@ -103,5 +103,5 @@ function v(e) {
                         )
                 })
             });
-    return n ? O() : v();
+    return n ? v() : O();
 }

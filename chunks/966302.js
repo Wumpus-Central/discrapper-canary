@@ -1,8 +1,8 @@
 n.d(t, { Z: () => es }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(272573),
     l = n(442837),
     c = n(481060),
@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(933557),
     b = n(686546),
     y = n(703656),
-    v = n(932724),
-    O = n(672339),
+    O = n(932724),
+    v = n(672339),
     I = n(898531),
     S = n(923973),
     T = n(82965),
@@ -109,19 +109,19 @@ let ee = {
     en = 475,
     er = 267,
     ei = 128;
-function ea(e) {
+function eo(e) {
     let { header: t } = e,
         n = L.Z.getCameraComponent(),
-        a = (0, l.e7)([L.Z], () => L.Z.getVideoDeviceId()),
-        o = (0, I.Z)();
+        o = (0, l.e7)([L.Z], () => L.Z.getVideoDeviceId()),
+        a = (0, I.Z)();
     return (
         i.useEffect(() => {
             let e = x.default.getCurrentUser();
-            if (o && null != e) {
-                let t = (0, v.P)(e);
-                (0, O.FU)(t, a, { track: !1 }).catch(H.dG4);
+            if (a && null != e) {
+                let t = (0, O.P)(e);
+                (0, v.FU)(t, o, { track: !1 }).catch(H.dG4);
             }
-        }, [o, a]),
+        }, [a, o]),
         (0, r.jsxs)('div', {
             className: z.previewRoot,
             children: [
@@ -130,7 +130,7 @@ function ea(e) {
                     className: z.preview,
                     children: (0, r.jsx)(n, {
                         disabled: !1,
-                        deviceId: a,
+                        deviceId: o,
                         width: en,
                         height: er
                     })
@@ -143,16 +143,16 @@ function ea(e) {
         })
     );
 }
-function eo(e) {
-    let { canVideo: t, channel: n, numVideoDevices: a } = e,
+function ea(e) {
+    let { canVideo: t, channel: n, numVideoDevices: o } = e,
         { parentAnalyticsLocation: s } = (0, m.ZP)(),
         { cameraUnavailable: l, enabled: d } = (0, S.Z)(),
         _ = (0, A.Z)(n),
         p = (0, T.Z)({ location: 'CallActionButtons' }),
         g = i.useRef(null),
-        E = a > 1;
+        E = o > 1;
     return (0, r.jsxs)('div', {
-        className: o()(z.wrapper, p ? z.experimentActions : z.actions),
+        className: a()(z.wrapper, p ? z.experimentActions : z.actions),
         children: [
             (0, r.jsx)(C.Z, {
                 iconComponent: c.Dio,
@@ -189,19 +189,19 @@ function eo(e) {
                     animation: c.yRy.Animation.FADE,
                     children: (e, t) => {
                         let { onClick: i } = e,
-                            { isShown: a } = t;
+                            { isShown: o } = t;
                         return (0, r.jsx)(P.C, {
                             buttonRef: g,
                             join: !0,
                             enabled: d,
-                            className: o()(z.actionButton, { [z.fullRegionDropdownButtonOverride]: E && p }),
+                            className: a()(z.actionButton, { [z.fullRegionDropdownButtonOverride]: E && p }),
                             color: 'green',
                             centerButton: !0,
                             hasPermission: _,
                             cameraUnavailable: l,
                             channel: n,
                             onPopoutClick: E ? i : null,
-                            popoutOpen: a,
+                            popoutOpen: o,
                             onCameraUnavailable: N.Z,
                             onChange: () => {
                                 var e;
@@ -244,9 +244,9 @@ function eo(e) {
 }
 function es(e) {
     var t;
-    let { animatedStyle: n, y: a, x: f, channel: h } = e,
+    let { animatedStyle: n, y: o, x: f, channel: h } = e,
         { analyticsLocations: y } = (0, m.ZP)(p.Z.INCOMING_CALL_MODAL),
-        [v, O] = i.useState(!1),
+        [O, v] = i.useState(!1),
         I = (0, l.e7)([D.Z], () => D.Z.getGuild(h.guild_id)),
         S =
             null != I
@@ -267,7 +267,7 @@ function es(e) {
         }, []),
         B = (0, c.q_F)(
             {
-                value: +!!v,
+                value: +!!O,
                 config: $(X({}, s.config.stiff), { clamp: !0 })
             },
             'animate-always'
@@ -288,14 +288,14 @@ function es(e) {
             children: [
                 null != I && null == S
                     ? (0, r.jsx)('div', {
-                          className: o()(z.icon, K.wrapper, K.ringingIncoming),
+                          className: a()(z.icon, K.wrapper, K.ringingIncoming),
                           children: (0, r.jsx)(b.ZP, {
                               className: z.mask,
                               mask: b.QS.AVATAR_DEFAULT,
-                              width: v ? 40 : 80,
-                              height: v ? 40 : 80,
+                              width: O ? 40 : 80,
+                              height: O ? 40 : 80,
                               children: (0, r.jsx)('div', {
-                                  className: o()(z.guildIcon, z.guildIconWithoutImage),
+                                  className: a()(z.guildIcon, z.guildIconWithoutImage),
                                   children: (0, r.jsx)('div', {
                                       className: z.guildAcronym,
                                       children: I.acronym
@@ -308,7 +308,7 @@ function es(e) {
                           ringing: P,
                           src: null != T ? T : '',
                           ringingType: G.Z.RingingType.INCOMING,
-                          size: v ? c.EFr.SIZE_40 : c.EFr.SIZE_80
+                          size: O ? c.EFr.SIZE_40 : c.EFr.SIZE_80
                       }),
                 (0, r.jsxs)('div', {
                     className: z.titleGroup,
@@ -316,13 +316,13 @@ function es(e) {
                         (0, r.jsx)(c.Text, {
                             className: z.title,
                             color: 'header-primary',
-                            variant: v ? 'text-md/semibold' : 'text-lg/semibold',
+                            variant: O ? 'text-md/semibold' : 'text-lg/semibold',
                             children: R
                         }),
                         (0, r.jsx)(c.Text, {
                             color: 'header-secondary',
                             className: z.subtitle,
-                            variant: v ? 'text-sm/normal' : 'text-md/normal',
+                            variant: O ? 'text-sm/normal' : 'text-md/normal',
                             children: Z
                         })
                     ]
@@ -338,42 +338,42 @@ function es(e) {
             selector: '.'.concat(z.root),
             initialPosition: {
                 left: f,
-                top: a
+                top: o
             },
             maxX: es.width,
             maxY: es.height,
             onDragEnd: k,
             dragAnywhere: !0,
             children: (0, r.jsx)(c.f6W, {
-                theme: v ? H.BRd.DARK : void 0,
+                theme: O ? H.BRd.DARK : void 0,
                 children: (e) =>
                     (0, r.jsxs)(s.animated.div, {
-                        className: o()(z.root, q.elevationHigh, { [z.previewCamera]: v }, e),
+                        className: a()(z.root, q.elevationHigh, { [z.previewCamera]: O }, e),
                         style: $(X({}, n), {
                             width: B.value.interpolate([0, 1], [J.width, en]),
                             minHeight: B.value.interpolate([0, 1], [J.height, er]),
                             translateX: B.value.interpolate([0, 1], [0, (-1 * Math.abs(en - J.width)) / 2])
                         }),
                         children: [
-                            v
-                                ? (0, r.jsx)(ea, { header: Q })
+                            O
+                                ? (0, r.jsx)(eo, { header: Q })
                                 : (0, r.jsx)('div', {
                                       className: z.mainChannelInfo,
                                       children: Q
                                   }),
-                            (0, r.jsx)(eo, {
+                            (0, r.jsx)(ea, {
                                 canVideo: V,
                                 channel: h,
                                 numVideoDevices: C
                             }),
-                            V && !v
+                            V && !O
                                 ? (0, r.jsx)(c.zxk, {
                                       size: c.zxk.Sizes.SMALL,
                                       fullWidth: !0,
                                       look: c.zxk.Looks.LINK,
                                       color: c.zxk.Colors.PRIMARY,
                                       className: z.previewButton,
-                                      onClick: () => O(!0),
+                                      onClick: () => v(!0),
                                       children: W.intl.string(W.t['8B0UDg'])
                                   })
                                 : null

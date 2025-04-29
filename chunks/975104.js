@@ -1,7 +1,7 @@
-n.d(t, { Z: () => a }), n(415506);
+n.d(t, { Z: () => o }), n(415506);
 var r = n(200651),
     i = n(192379);
-function a() {
+function o() {
     let e = i.createContext(void 0);
     function t() {
         let t = i.useContext(e);

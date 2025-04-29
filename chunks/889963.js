@@ -6,8 +6,8 @@ n.d(t, {
     n(539854);
 var r,
     i = n(192379),
-    a = n(392711),
-    o = n.n(a);
+    o = n(392711),
+    a = n.n(o);
 function s(e, t, n) {
     return (
         t in e
@@ -29,14 +29,14 @@ class c extends (r = i.PureComponent) {
         let { totalPageCount: e, maxVisiblePages: t, selectedPage: n } = this.props,
             r = Math.ceil(t / 2),
             i = Math.floor(t / 2),
-            a = [1, e],
-            [o, s] = (a = n <= r ? [1, t] : n > e - i ? [e - t + 1, e] : [n - r + 1, n + i]);
-        return [Math.max(o, 1), Math.min(s, e)];
+            o = [1, e],
+            [a, s] = (o = n <= r ? [1, t] : n > e - i ? [e - t + 1, e] : [n - r + 1, n + i]);
+        return [Math.max(a, 1), Math.min(s, e)];
     }
     getPageList() {
         let { totalPageCount: e, selectedPage: t, hideMaxPage: n } = this.props,
             [r, i] = this.getNeighborBounds(),
-            a = {
+            o = {
                 type: 'BACK',
                 key: 'back',
                 disabled: 1 === t,
@@ -83,9 +83,9 @@ class c extends (r = i.PureComponent) {
                     }),
                 (i -= 2)),
             [
-                a,
+                o,
                 ...l,
-                ...o()
+                ...a()
                     .range(r, i + 1)
                     .map((e) => ({
                         type: 'PAGE',

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685), n(539854);
+n.d(t, { Z: () => I }), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -16,18 +16,18 @@ var r = n(200651),
     b = n(979651),
     y = n(823379),
     _ = n(355363),
-    O = n(449932),
-    v = n(561788),
+    v = n(449932),
+    O = n(561788),
     C = n(876548),
     j = n(543432),
     S = n(981631),
     E = n(388032),
     x = n(642317),
-    I = n(656855);
-function P(e) {
+    P = n(656855);
+function I(e) {
     var t, l;
     let { channel: o, guild: p, onAction: f, voiceStates: g, isChannelSelected: b, shouldShowSettingNudge: _ } = e,
-        v = i.useMemo(() => {
+        O = i.useMemo(() => {
             var e;
             return null == g || g.length > 50
                 ? {}
@@ -42,18 +42,18 @@ function P(e) {
                               : []
                   };
         }, [o, g]);
-    (0, c.$)(v);
+    (0, c.$)(O);
     let C = (0, u.ZP)(o),
         j = Array.from((0, u.uF)(C).values()),
-        I = null != (t = null == g ? void 0 : g.filter(y.lm)) ? t : [],
-        P = (e) => (t) => ([S.IIU.PLAYING, S.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === S.IIU.LISTENING,
+        P = null != (t = null == g ? void 0 : g.filter(y.lm)) ? t : [],
+        I = (e) => (t) => ([S.IIU.PLAYING, S.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === S.IIU.LISTENING,
         N = (0, s.e7)(
             [m.Z],
             () => {
                 let e = {};
                 return (
-                    I.forEach((t) => {
-                        let n = m.Z.findActivity(t.user.id, P(t));
+                    P.forEach((t) => {
+                        let n = m.Z.findActivity(t.user.id, I(t));
                         if (null != n && !(0, h.Z)(n)) {
                             var r, i, l, o;
                             let s = ''.concat(null != (i = n.application_id) ? i : '', ':').concat(null != (l = null == (r = n.party) ? void 0 : r.id) ? l : t.user.id),
@@ -70,7 +70,7 @@ function P(e) {
                     Object.values(e)
                 );
             },
-            [I],
+            [P],
             s.pF
         );
     return N.length + j.length === 0
@@ -87,7 +87,7 @@ function P(e) {
                   j.map((e, t) => {
                       var n;
                       return (0, r.jsx)(
-                          O.Z,
+                          v.Z,
                           {
                               embeddedApp: e,
                               presenceActivity: null != (n = e.presenceActivity) ? n : void 0,
@@ -100,7 +100,7 @@ function P(e) {
                   N.map((e, t) => {
                       let { members: n, activity: i } = e;
                       return (0, r.jsx)(
-                          O.Z,
+                          v.Z,
                           {
                               presenceActivity: i,
                               channel: o,
@@ -192,9 +192,9 @@ function w(e) {
     return null == (0, p.KS)(t, u)
         ? null
         : (0, r.jsxs)('div', {
-              className: o()(x.popoutHeaderContainer, I.popoutHeaderContainer),
+              className: o()(x.popoutHeaderContainer, P.popoutHeaderContainer),
               children: [
-                  (0, r.jsx)(v.Z, { channel: t }),
+                  (0, r.jsx)(O.Z, { channel: t }),
                   c
                       ? (0, r.jsx)(C.Z, {
                             userCount: i,

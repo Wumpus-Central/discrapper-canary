@@ -2,8 +2,8 @@ n.d(t, { Z: () => y });
 var r = n(200651);
 n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(481060),
     l = n(607070),
     c = n(70097),
@@ -20,11 +20,11 @@ let E = 'https://cdn.discordapp.com/assets/22_211_SuperReactions_GTM_Hero_v09.mp
 function y(e) {
     var t, n;
     let { onDismiss: i } = e,
-        y = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
-        v = m.intl.string(m.t['eikz4+']),
-        O = (0, d.N)(),
+        y = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
+        O = m.intl.string(m.t['eikz4+']),
+        v = (0, d.N)(),
         I = (0, u.Ng)(),
-        S = (null == O ? void 0 : O.subscription_trial) != null || null != I,
+        S = (null == v ? void 0 : v.subscription_trial) != null || null != I,
         T = {
             object: p.qAy.BUTTON_CTA,
             section: p.jXE.SUPER_REACTION_PICKER
@@ -47,7 +47,7 @@ function y(e) {
                     (0, r.jsx)('div', {
                         className: g.contentFill,
                         children: (0, r.jsx)(c.Z, {
-                            className: a()(g.banner, { [g.hasTrialOffer]: S }),
+                            className: o()(g.banner, { [g.hasTrialOffer]: S }),
                             src: E,
                             loop: !0,
                             autoPlay: !y,
@@ -58,12 +58,12 @@ function y(e) {
                     S
                         ? (0, r.jsx)(f.ZP, {
                               type: h.cd.BURST_REACTION_QUICK_ACTION_UPSELL,
-                              subscriptionTier: null != (n = null == O || null == (t = O.subscription_trial) ? void 0 : t.sku_id) ? n : h.Si.TIER_2,
+                              subscriptionTier: null != (n = null == v || null == (t = v.subscription_trial) ? void 0 : t.sku_id) ? n : h.Si.TIER_2,
                               headingText: m.intl.string(m.t.Wfl5zs),
                               analyticsLocationObject: T,
                               discountOffer: I,
-                              trialOffer: O,
-                              children: v
+                              trialOffer: v,
+                              children: O
                           })
                         : (0, r.jsxs)(r.Fragment, {
                               children: [
@@ -87,7 +87,7 @@ function y(e) {
                                   (0, r.jsx)(s.Text, {
                                       className: g.subheaderText,
                                       variant: 'text-md/normal',
-                                      children: v
+                                      children: O
                                   }),
                                   (0, r.jsx)('div', {
                                       className: g.ctaActionWrapper,

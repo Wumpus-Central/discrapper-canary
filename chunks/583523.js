@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(388685);
 var r = n(570140),
     i = n(147913),
-    a = n(314897),
-    o = n(967368),
+    o = n(314897),
+    a = n(967368),
     s = n(592125),
     l = n(944486),
     c = n(631768),
@@ -22,7 +22,7 @@ function d(e, t, n) {
 }
 function f() {
     let e = l.Z.getVoiceChannelId(),
-        t = o.Z.bitrate;
+        t = a.Z.bitrate;
     if (null == e) return;
     let n = s.Z.getChannel(e);
     null != n &&
@@ -39,11 +39,11 @@ function _() {
     if (null == t) return;
     let i = s.Z.getChannel(t);
     if (null == i) return;
-    let a = null != (e = i.videoQualityMode) ? e : u.Ucd.AUTO;
-    n !== a &&
+    let o = null != (e = i.videoQualityMode) ? e : u.Ucd.AUTO;
+    n !== o &&
         r.Z.dispatch({
             type: 'SET_CHANNEL_VIDEO_QUALITY_MODE',
-            mode: a
+            mode: o
         });
 }
 function p() {
@@ -56,7 +56,7 @@ function h(e) {
 function m(e) {
     let { voiceStates: t } = e;
     t.forEach((e) => {
-        a.default.getSessionId() === e.sessionId && p();
+        o.default.getSessionId() === e.sessionId && p();
     });
 }
 class g extends i.Z {

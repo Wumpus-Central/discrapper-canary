@@ -1,8 +1,8 @@
-n.d(t, { Z: () => O }), n(35282), n(388685), n(415506);
+n.d(t, { Z: () => v }), n(35282), n(388685), n(415506);
 var r = n(264344),
     i = n.n(r),
-    a = n(259443),
-    o = n(47770),
+    o = n(259443),
+    a = n(47770),
     s = n(46973),
     l = n(734298),
     c = n(997545),
@@ -67,10 +67,10 @@ function b(e, t) {
 function y(e) {
     return (null != e ? e : h.Qx) / h.Qx;
 }
-function v(e, t, n) {
+function O(e, t, n) {
     return t + ((n - t) * e) / 100;
 }
-class O extends o.Z {
+class v extends a.Z {
     destroy() {
         this.eachConnection((e) => e.destroy()), this.emit(s.aB.Destroy), this.removeAllListeners();
     }
@@ -275,8 +275,8 @@ class O extends o.Z {
                 soundshareId: 0
             });
         let { frameRate: r, resolution: i } = e.quality,
-            a = i <= 480 ? (i / 3) * 4 : (i / 9) * 16,
-            o = i,
+            o = i <= 480 ? (i / 3) * 4 : (i / 9) * 16,
+            a = i,
             { id: l, soundshareId: c, useLoopback: u, useVideoHook: f, useGraphicsCapture: _, useQuartzCapturer: p, allowScreenCaptureKit: m, hdrCaptureMode: g } = e.desktopDescription;
         n.setOnClipsRecordingEvent((t) => {
             this.logger.info('Clips recording event: '.concat(h.Pf[t], ' received for stream ').concat(l, ' and sound ').concat(c, '.')), t === h.Pf.GoLiveEnded ? this.emit(s.aB.ClipsRecordingRestartNeeded) : t === h.Pf.Error ? this.emit(s.aB.ClipsInitFailure, 'Failed to set clips source in media engine', e.applicationName) : (t === h.Pf.Ended || t === h.Pf.StoppedByGoLive) && this.emit(s.aB.ClipsRecordingEnded, l, c);
@@ -290,8 +290,8 @@ class O extends o.Z {
                     hdrCaptureMode: g,
                     soundshareLoopback: u,
                     frameRate: r,
-                    width: a,
-                    height: o
+                    width: o,
+                    height: a
                 });
         let [E, b] = null != l ? l.split(':') : ['', ''];
         n.setClipsSource({
@@ -345,7 +345,7 @@ class O extends o.Z {
         let r = (0, d.zS)();
         return null == r.saveClipForUser
             ? Promise.reject('unsupported')
-            : new Promise((i, a) => {
+            : new Promise((i, o) => {
                   r.saveClipForUser(
                       e,
                       t,
@@ -355,7 +355,7 @@ class O extends o.Z {
                               duration: e,
                               clipStats: JSON.parse(n)
                           }),
-                      (e) => a(JSON.parse(e))
+                      (e) => o(JSON.parse(e))
                   );
               });
     }
@@ -552,12 +552,12 @@ class O extends o.Z {
     setSidechainCompressionStrength(e) {
         var t, n;
         let r = 100 - e,
-            i = v(r, p.Zq, p.WA),
-            a = v(r, p.QO, p.JA);
+            i = O(r, p.Zq, p.WA),
+            o = O(r, p.QO, p.JA);
         null == (t = (n = (0, d.zS)()).applySidechainCompressionSettings) ||
             t.call(n, {
                 threshold: i,
-                ratio: a
+                ratio: o
             });
     }
     setNativeDesktopVideoSourcePickerActive(e) {
@@ -585,7 +585,7 @@ class O extends o.Z {
         return 0 === this.connections.size;
     }
     constructor() {
-        var e, t, n, r, i, o, c, p;
+        var e, t, n, r, i, a, c, p;
         super(),
             (e = this),
             m(this, 'Video', _.Z),
@@ -598,7 +598,7 @@ class O extends o.Z {
             m(this, 'deviceChangeGeneration', 0),
             m(this, 'consecutiveWatchdogFailures', 0),
             m(this, 'codecSurvey', null),
-            m(this, 'logger', new a.Yd('MediaEngineNative')),
+            m(this, 'logger', new o.Yd('MediaEngineNative')),
             m(this, 'handleDeviceChange', function () {
                 let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
                     n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
@@ -664,7 +664,7 @@ class O extends o.Z {
             }),
             null == (r = g.setNativeScreenSharePickerCallbacks) || r.call(g, this.handleNativeScreenSharePickerUpdate, this.handleNativeScreenSharePickerCancel, this.handleNativeScreenSharePickerError),
             null == (i = g.setAudioDeviceModuleErrorCallback) || i.call(g, this.handleAudioDeviceModuleErrorCallback),
-            null == (o = g.setVideoCodecErrorCallback) || o.call(g, this.handleVideoCodecErrorCallback),
+            null == (a = g.setVideoCodecErrorCallback) || a.call(g, this.handleVideoCodecErrorCallback),
             this.on('removeListener', this.handleRemoveListener),
             this.on('newListener', this.handleNewListener),
             null != (0, d.zS)().getAudioSubsystem
@@ -687,14 +687,14 @@ function I(e) {
     let r = async () => {
         if (n) return;
         let i = (0, d.zS)(),
-            a = await new Promise((e) => {
+            o = await new Promise((e) => {
                 var t;
                 null == (t = i.pollQueueMetrics) ||
                     t.call(i, (t) => {
                         e(t);
                     });
             });
-        (a.periodMs = t), e.emit(s.aB.VoiceQueueMetrics, a), setTimeout(r, t);
+        (o.periodMs = t), e.emit(s.aB.VoiceQueueMetrics, o), setTimeout(r, t);
     };
     setTimeout(r, t);
 }

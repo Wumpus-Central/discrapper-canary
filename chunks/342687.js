@@ -1,21 +1,21 @@
 n.d(t, { Z: () => c }), n(953529);
 var r = n(200651),
     i = n(192379),
-    a = n(392711),
-    o = n.n(a),
+    o = n(392711),
+    a = n.n(o),
     s = n(826298),
     l = n(871237);
 let c = (e) => {
     let { showImage: t } = e,
         {
             usageWidth: n,
-            descriptionWidth: a,
+            descriptionWidth: o,
             sourceWidth: c
         } = i.useMemo(
             () => ({
-                usageWidth: o().random(60, 120),
-                descriptionWidth: o().random(200, 600),
-                sourceWidth: o().random(45, 90)
+                usageWidth: a().random(60, 120),
+                descriptionWidth: a().random(200, 600),
+                sourceWidth: a().random(45, 90)
             }),
             []
         );
@@ -31,7 +31,7 @@ let c = (e) => {
                         className: l.usageWrapper
                     }),
                     (0, r.jsx)('div', {
-                        style: { maxWidth: (0, s.Q1)(a) },
+                        style: { maxWidth: (0, s.Q1)(o) },
                         className: l.description
                     })
                 ]

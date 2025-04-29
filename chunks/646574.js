@@ -1,8 +1,8 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(272573),
     l = n(442837),
     c = n(704215),
@@ -22,9 +22,9 @@ let E = {
     b = 20;
 function y(e) {
     let { tooltipText: t, headingText: n, textColor: i } = e,
-        a = null != n;
+        o = null != n;
     return (0, r.jsxs)('span', {
-        className: a ? void 0 : g.tooltipContainer,
+        className: o ? void 0 : g.tooltipContainer,
         children: [
             (0, r.jsxs)('span', {
                 className: g.tooltipContainer,
@@ -34,7 +34,7 @@ function y(e) {
                         color: 'currentColor',
                         className: g.nitroWheel
                     }),
-                    a
+                    o
                         ? (0, r.jsx)(u.X6q, {
                               color: null != i ? i : 'text-normal',
                               variant: 'heading-sm/semibold',
@@ -44,19 +44,19 @@ function y(e) {
                 ]
             }),
             (0, r.jsx)(u.Text, {
-                variant: a ? 'text-xs/normal' : 'text-sm/medium',
+                variant: o ? 'text-xs/normal' : 'text-sm/medium',
                 color: null != i ? i : 'text-normal',
                 children: t
             })
         ]
     });
 }
-function v(e) {
+function O(e) {
     return e ? m.intl.string(m.t['5cRA/f']) : m.intl.string(m.t.buV4am);
 }
-function O(e) {
-    let { checked: t, onClick: n, id: a = 'burst-reaction-toggle-button' } = e,
-        O = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
+function v(e) {
+    let { checked: t, onClick: n, id: o = 'burst-reaction-toggle-button' } = e,
+        v = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         I = _.default.getCurrentUser(),
         S = null == I || (0, p.I5)(I) ? [c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
         [T, A] = (0, f.US)(S),
@@ -76,7 +76,7 @@ function O(e) {
         let e = T === c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP;
         e && (A(h.L.DISMISS), setTimeout(() => C(e), 200));
     }, [T, A]);
-    let L = N ? m.intl.string(m.t['Osi/u7']) : v(t),
+    let L = N ? m.intl.string(m.t['Osi/u7']) : O(t),
         x = N ? m.intl.string(m.t.ORK94u) : void 0;
     return (0, r.jsxs)(u.DY3, {
         position: 'top',
@@ -94,21 +94,21 @@ function O(e) {
                 className: g.visuallyHidden,
                 checked: t,
                 onChange: D,
-                id: a,
+                id: o,
                 type: 'checkbox'
             }),
             (0, r.jsxs)('label', {
-                htmlFor: a,
-                className: o()(g.label, { [g.labelChecked]: t }),
+                htmlFor: o,
+                className: a()(g.label, { [g.labelChecked]: t }),
                 children: [
                     t
                         ? (0, r.jsx)(u.ZX5, {
                               className: g.shine,
-                              shinePaused: O
+                              shinePaused: v
                           })
                         : null,
                     (0, r.jsx)(w, {
-                        style: O ? void 0 : R,
+                        style: v ? void 0 : R,
                         size: 'custom',
                         width: b,
                         height: b,

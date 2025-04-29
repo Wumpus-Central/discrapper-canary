@@ -1,14 +1,14 @@
 n.d(t, {
     GI: () => u,
-    Jt: () => a.Jt,
+    Jt: () => o.Jt,
     Un: () => c,
-    wE: () => a.wE
+    wE: () => o.wE
 }),
     n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(252117);
-function o(e, t, n) {
+    o = n(252117);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -50,26 +50,26 @@ let l = function () {
         });
 };
 function c(e) {
-    let { createPromise: t, webpackId: n, renderLoader: o, name: c, memo: u = !1 } = e,
+    let { createPromise: t, webpackId: n, renderLoader: a, name: c, memo: u = !1 } = e,
         d = i.lazy(() =>
-            (0, a.wE)({
+            (0, o.wE)({
                 createPromise: t,
                 webpackId: n
             })
         ),
         f = (e) =>
             (0, r.jsx)(i.Suspense, {
-                fallback: null != o ? o() : l()(),
+                fallback: null != a ? a() : l()(),
                 children: (0, r.jsx)(d, s({}, e))
             });
     return u && (f = i.memo(f)), (f.displayName = 'Suspense('.concat(c || 'Unknown', ')')), f;
 }
 function u(e) {
-    let { createPromise: t, webpackId: n, render: o, renderFallback: s } = e,
+    let { createPromise: t, webpackId: n, render: a, renderFallback: s } = e,
         [l, c] = i.useState(null);
     return (
         i.useEffect(() => {
-            (0, a.wE)({
+            (0, o.wE)({
                 createPromise: t,
                 webpackId: n
             }).then((e) => {
@@ -77,6 +77,6 @@ function u(e) {
                 return c(t);
             });
         }, []),
-        (0, r.jsx)(r.Fragment, { children: null == l ? s() : o(l) })
+        (0, r.jsx)(r.Fragment, { children: null == l ? s() : a(l) })
     );
 }

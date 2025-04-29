@@ -1,19 +1,19 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(134632),
     i = n(823379),
-    a = n(388032);
-function o(e) {
+    o = n(388032);
+function a(e) {
     switch (e) {
         case r.w.LISTEN:
-            return a.intl.string(a.t.G1b309);
+            return o.intl.string(o.t.G1b309);
         case r.w.WATCH:
-            return a.intl.string(a.t.NcnbEx);
+            return o.intl.string(o.t.NcnbEx);
         case r.w.PLAY:
-            return a.intl.string(a.t.iXcll5);
+            return o.intl.string(o.t.iXcll5);
         case r.w.THINK:
-            return a.intl.string(a.t['45vlm5']);
+            return o.intl.string(o.t['45vlm5']);
         case r.w.LOVE:
-            return a.intl.string(a.t.ISyHmZ);
+            return o.intl.string(o.t.ISyHmZ);
         default:
             (0, i.vE)(e);
     }

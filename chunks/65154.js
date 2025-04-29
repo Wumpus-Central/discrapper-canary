@@ -9,8 +9,8 @@ n.d(t, {
     Er: () => P,
     Gs: () => C,
     H3: () => ee,
-    JA: () => v,
-    Jk: () => O,
+    JA: () => O,
+    Jk: () => v,
     LD: () => D,
     P8: () => R,
     QO: () => y,
@@ -33,14 +33,14 @@ n.d(t, {
     ed: () => p,
     ef: () => L,
     fC: () => c,
-    h7: () => a,
+    h7: () => o,
     iA: () => W,
     jg: () => g,
     kS: () => V,
     mC: () => T,
     mN: () => S,
     n4: () => Z,
-    pM: () => o,
+    pM: () => a,
     pk: () => k,
     ru: () => x,
     u$: () => N,
@@ -56,10 +56,10 @@ var r = n(268146),
     i = (function (e) {
         return (e.DEFAULT = 'default'), (e.STREAM = 'stream'), e;
     })({}),
-    a = (function (e) {
+    o = (function (e) {
         return (e.AUDIO_INPUT = 'audioinput'), (e.AUDIO_OUTPUT = 'audiooutput'), (e.VIDEO_INPUT = 'videoinput'), e;
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return (e.PUSH_TO_TALK = 'PUSH_TO_TALK'), (e.VOICE_ACTIVITY = 'VOICE_ACTIVITY'), e;
     })({}),
     s = (function (e) {
@@ -84,8 +84,8 @@ let d = 100,
     E = -40,
     b = -25,
     y = 1 / 15,
-    v = 0.8,
-    O = 0.4,
+    O = 0.8,
+    v = 0.4,
     I = 600000,
     S = 150000,
     T = 10000000,

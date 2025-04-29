@@ -1,5 +1,5 @@
 n.d(t, {
-    C: () => a,
+    C: () => o,
     M: () => i
 });
 let r = (0, n(818083).B)({
@@ -40,6 +40,6 @@ let r = (0, n(818083).B)({
 function i(e) {
     return r.useExperiment({ location: e }).largerGuildIcons;
 }
-function a(e) {
+function o(e) {
     return r.useExperiment({ location: e }).darkerGuildListBackground;
 }

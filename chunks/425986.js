@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r,
     i = n(392711),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(570140);
 function l(e, t, n) {
     return (
@@ -80,23 +80,23 @@ function E(e) {
     });
 }
 function b(e) {
-    return a().sortBy(e, ['position', 'id']);
+    return o().sortBy(e, ['position', 'id']);
 }
 function y(e) {
-    return a().sortBy(e, ['position', 'id']);
+    return o().sortBy(e, ['position', 'id']);
 }
-function v(e) {
+function O(e) {
     let { collections: t, surface: n, activeState: r } = e,
         i = g({
             surface: n,
             activeState: r
         }),
-        a = b(t.map((e) => ((e.application_directory_collection_items = y(e.application_directory_collection_items)), e)));
-    (p = d(c({}, p), { [i]: a })), (h = d(c({}, h), { [i]: 1 }));
-    let o = Date.now();
-    m = d(c({}, m), { [i]: o });
+        o = b(t.map((e) => ((e.application_directory_collection_items = y(e.application_directory_collection_items)), e)));
+    (p = d(c({}, p), { [i]: o })), (h = d(c({}, h), { [i]: 1 }));
+    let a = Date.now();
+    m = d(c({}, m), { [i]: a });
 }
-function O(e) {
+function v(e) {
     let { surface: t, activeState: n } = e;
     h = d(c({}, h), {
         [g({
@@ -105,7 +105,7 @@ function O(e) {
         })]: 2
     });
 }
-class I extends (r = o.ZP.Store) {
+class I extends (r = a.ZP.Store) {
     getLastFetchTimeMs(e) {
         let { surface: t, activeState: n } = e;
         return m[
@@ -142,6 +142,6 @@ class I extends (r = o.ZP.Store) {
 l(I, 'displayName', void 0);
 let S = new I(s.Z, {
     APPLICATION_DIRECTORY_FETCH_COLLECTIONS: E,
-    APPLICATION_DIRECTORY_FETCH_COLLECTIONS_SUCCESS: v,
-    APPLICATION_DIRECTORY_FETCH_COLLECTIONS_FAILURE: O
+    APPLICATION_DIRECTORY_FETCH_COLLECTIONS_SUCCESS: O,
+    APPLICATION_DIRECTORY_FETCH_COLLECTIONS_FAILURE: v
 });

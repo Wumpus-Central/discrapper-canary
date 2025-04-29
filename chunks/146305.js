@@ -162,7 +162,8 @@ let eO = {
                     notice: {
                         stores: [R.Z],
                         element: ep.Z
-                    }
+                    },
+                    newIndicatorDismissibleContentTypes: [l.z.GUILD_TAG_SERVER_SETTINGS_NEW_BADGE]
                 };
             case eh.pNK.ENGAGEMENT:
                 return {

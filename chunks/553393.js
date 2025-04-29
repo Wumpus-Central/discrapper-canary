@@ -1,8 +1,8 @@
 n.d(t, { Z: () => F }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(272573),
-    o = n(91192),
+    o = n(272573),
+    a = n(91192),
     s = n(442837),
     l = n(780384),
     c = n(481060),
@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(592125),
     b = n(430824),
     y = n(496675),
-    v = n(979651),
-    O = n(617136),
+    O = n(979651),
+    v = n(617136),
     I = n(113434),
     S = n(497505),
     T = n(475595),
@@ -64,11 +64,11 @@ let j = '8px',
     U = '11px',
     G = 222;
 function B(e, t) {
-    return null != e && null != t && (0, m.p9)(t, v.Z, b.Z, y.Z, h.Z)[0];
+    return null != e && null != t && (0, m.p9)(t, O.Z, b.Z, y.Z, h.Z)[0];
 }
 function V(e) {
     var t, n, h, m, b;
-    let { quest: y, memberListItemRef: v, applicationStream: A, position: M, closePopout: k, updatePosition: V, impressionRef: F } = e,
+    let { quest: y, memberListItemRef: O, applicationStream: A, position: M, closePopout: k, updatePosition: V, impressionRef: F } = e,
         Z = (0, s.e7)([E.Z], () => {
             var e;
             return null != (e = E.Z.getChannel(null == A ? void 0 : A.channelId)) ? e : null;
@@ -87,7 +87,7 @@ function V(e) {
         { ref: J, height: $ } = (0, f.ZP)(),
         [ee, et] = i.useState(X),
         en = (0, _.Aq)(),
-        er = (0, o.eg)();
+        er = (0, a.eg)();
     i.useEffect(() => {
         let e = er.current;
         return (
@@ -99,7 +99,7 @@ function V(e) {
     }, [k, er]),
         i.useEffect(() => {
             let e = er.current,
-                t = v.current;
+                t = O.current;
             if (null == e || null == t) return;
             let n = new MutationObserver(() => V());
             return (
@@ -111,7 +111,7 @@ function V(e) {
                     n.disconnect();
                 }
             );
-        }, [v, er, V]);
+        }, [O, er, V]);
     let ei = (0, c.q_F)({
             from: { height: 0 },
             height: null != $ ? $ : 0,
@@ -121,7 +121,7 @@ function V(e) {
             },
             onRest: () => et(!0)
         }),
-        ea = (0, c.Yzy)(ee, {
+        eo = (0, c.Yzy)(ee, {
             from: {
                 opacity: 0,
                 scale: 0
@@ -131,28 +131,28 @@ function V(e) {
                 scale: 1
             }
         }),
-        eo = () => {
+        ea = () => {
             en.dispatch(w.CkL.POPOUT_CLOSE);
         },
         es = 'top' === M ? ''.concat(j, ' ').concat(j, ' 0 0') : '0 0 '.concat(j, ' ').concat(j);
     if (null == y || Y || (W && !B(A, Z))) return null;
     let el = () => {
-            (0, O._3)({
+            (0, v._3)({
                 questId: y.id,
                 questContent: S.jn.MEMBERS_LIST,
-                questContentCTA: O.jZ.OPEN_DISCLOSURE,
+                questContentCTA: v.jZ.OPEN_DISCLOSURE,
                 trackGuildAndChannelMetadata: !0
             }),
                 (0, R.openDisclosureModal)(y, {
                     content: S.jn.MEMBERS_LIST,
-                    ctaContent: O.jZ.OPEN_DISCLOSURE
+                    ctaContent: v.jZ.OPEN_DISCLOSURE
                 });
         },
         ec = () => {
-            (0, O._3)({
+            (0, v._3)({
                 questId: y.id,
                 questContent: S.jn.MEMBERS_LIST,
-                questContentCTA: O.jZ.LEARN_MORE,
+                questContentCTA: v.jZ.LEARN_MORE,
                 trackGuildAndChannelMetadata: !0
             }),
                 (0, R.navigateToQuestHome)({
@@ -166,10 +166,10 @@ function V(e) {
         ed = () => {
             if (B(A, Z) && null != Z)
                 return (
-                    (0, O._3)({
+                    (0, v._3)({
                         questId: y.id,
                         questContent: S.jn.MEMBERS_LIST,
-                        questContentCTA: O.jZ.WATCH_STREAM,
+                        questContentCTA: v.jZ.WATCH_STREAM,
                         trackGuildAndChannelMetadata: !0
                     }),
                     u.default.selectVoiceChannel(Z.id),
@@ -205,14 +205,14 @@ function V(e) {
                           handleClickCta: ec,
                           tileAssetType: 'game'
                       };
-    return (0, r.jsx)(a.animated.div, {
+    return (0, r.jsx)(o.animated.div, {
         ref: (e) => {
             F.current = e;
         },
         'aria-expanded': ee,
         className: x.wrapper,
         style: {
-            width: null != (b = null == (m = v.current) ? void 0 : m.clientWidth) ? b : G,
+            width: null != (b = null == (m = O.current) ? void 0 : m.clientWidth) ? b : G,
             height: ei.height,
             overflow: ee ? 'visible' : 'hidden',
             borderRadius: es
@@ -237,7 +237,7 @@ function V(e) {
                                 (0, r.jsxs)(c.P3F, {
                                     className: x.help,
                                     onClick: (e) => {
-                                        eo(), eu(e);
+                                        ea(), eu(e);
                                     },
                                     children: [
                                         (0, r.jsx)(c.Text, {
@@ -262,10 +262,10 @@ function V(e) {
                             children: (0, r.jsxs)('div', {
                                 className: x.imgWrapper,
                                 children: [
-                                    ea(
+                                    eo(
                                         (e, t) =>
                                             t &&
-                                            (0, r.jsx)(a.animated.div, {
+                                            (0, r.jsx)(o.animated.div, {
                                                 style: e,
                                                 className: x.imgUnderlay
                                             })
@@ -286,7 +286,7 @@ function V(e) {
                                             questContent: S.jn.MEMBERS_LIST,
                                             learnMoreStyle: 'icon',
                                             location: P.dr.MEMBERS_LIST,
-                                            onClick: eo
+                                            onClick: ea
                                         })
                                 ]
                             })
@@ -295,7 +295,7 @@ function V(e) {
                 }),
                 (0, r.jsx)(c.zxk, {
                     onClick: () => {
-                        eo(), ef.handleClickCta();
+                        ea(), ef.handleClickCta();
                     },
                     color: c.zxk.Colors.CUSTOM,
                     className: x.ctaButton,

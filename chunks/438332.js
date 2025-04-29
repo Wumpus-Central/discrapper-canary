@@ -1,8 +1,8 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => v });
 var r,
     i = n(913527),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(570140),
     l = n(709054);
 function c(e, t, n) {
@@ -92,7 +92,7 @@ function b() {
 function y() {
     (p = _), b();
 }
-class v extends (r = o.ZP.PersistedStore) {
+class O extends (r = a.ZP.PersistedStore) {
     initialize(e) {
         p = null != e ? e : _;
     }
@@ -107,14 +107,14 @@ class v extends (r = o.ZP.PersistedStore) {
         let n = this.getLastSeenEmojiByGuild(e);
         if (null == n || l.default.compare(t, n.id) > 0) return !0;
         {
-            let e = a()(n.lastSeen);
-            return a()().isBefore(e.add(2, 'weeks')) && !n.acknowledged;
+            let e = o()(n.lastSeen);
+            return o()().isBefore(e.add(2, 'weeks')) && !n.acknowledged;
         }
     }
 }
-c(v, 'displayName', 'NewlyAddedEmojiStore'),
-    c(v, 'persistKey', 'NewlyAddedEmojiStore'),
-    c(v, 'migrations', [
+c(O, 'displayName', 'NewlyAddedEmojiStore'),
+    c(O, 'persistKey', 'NewlyAddedEmojiStore'),
+    c(O, 'migrations', [
         (e) => {
             let t = e.lastSeenNewlyAddedEmojiIds,
                 n = {};
@@ -129,7 +129,7 @@ c(v, 'displayName', 'NewlyAddedEmojiStore'),
             return { lastSeenNewlyAddedEmojiIds: n };
         }
     ]);
-let O = new v(s.Z, {
+let v = new O(s.Z, {
     LOGOUT: m,
     NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED: g,
     NEWLY_ADDED_EMOJI_SEEN_PENDING: E,

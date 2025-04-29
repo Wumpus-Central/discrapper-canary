@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(298444),
     i = n(570140),
-    a = n(447543),
-    o = n(147913),
+    o = n(447543),
+    a = n(147913),
     s = n(314897),
     l = n(358085),
     c = n(981631);
@@ -24,7 +24,7 @@ function u(e, t, n) {
     );
 }
 let d = 'guestInviteToAccept';
-class f extends o.Z {
+class f extends a.Z {
     constructor(...e) {
         super(...e),
             u(this, 'actions', { POST_CONNECTION_OPEN: () => this.handleConnectionOpen() }),
@@ -32,7 +32,7 @@ class f extends o.Z {
                 if ((0, l.isWeb)()) {
                     let e = r.x.get(d);
                     if (null != e && 'string' == typeof e && s.default.isAuthenticated()) {
-                        let { invite: t } = await a.ZP.resolveInvite(e, 'Desktop Modal');
+                        let { invite: t } = await o.ZP.resolveInvite(e, 'Desktop Modal');
                         null != t &&
                             (i.Z.dispatch({
                                 type: 'INVITE_MODAL_OPEN',

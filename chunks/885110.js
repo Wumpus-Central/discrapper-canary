@@ -1,9 +1,9 @@
 n.d(t, { Z: () => H }), n(997841), n(388685), n(642613);
 var r,
     i = n(348327),
-    a = n.n(i),
-    o = n(392711),
-    s = n.n(o),
+    o = n.n(i),
+    a = n(392711),
+    s = n.n(a),
     l = n(442837),
     c = n(570140),
     u = n(503438),
@@ -17,8 +17,8 @@ var r,
     E = n(283595),
     b = n(293273),
     y = n(158776),
-    v = n(797258),
-    O = n(981631);
+    O = n(797258),
+    v = n(981631);
 function I(e, t, n) {
     return (
         t in e
@@ -33,8 +33,8 @@ function I(e, t, n) {
     );
 }
 let S = !1,
-    T = O.Skl.ONLINE,
-    A = O.Skl.UNKNOWN,
+    T = v.Skl.ONLINE,
+    A = v.Skl.UNKNOWN,
     N = 0,
     C = [],
     R = !1,
@@ -51,16 +51,16 @@ function M(e) {
 }
 function k(e) {
     var t;
-    if ((0, p.yE)(null != (t = e.flags) ? t : 0, O.xjy.CONTEXTLESS)) return !0;
+    if ((0, p.yE)(null != (t = e.flags) ? t : 0, v.xjy.CONTEXTLESS)) return !0;
     switch (e.type) {
-        case O.IIU.LISTENING:
+        case v.IIU.LISTENING:
             if ((0, u.Z)(e)) return d.Z.shouldShowActivity();
             if (null != e.application_id) return x(e.application_id);
             return !1;
-        case O.IIU.PLAYING:
+        case v.IIU.PLAYING:
             return null != e.application_id ? x(e.application_id) : M(e.name);
-        case O.IIU.STREAMING:
-        case O.IIU.WATCHING:
+        case v.IIU.STREAMING:
+        case v.IIU.WATCHING:
         default:
             return null == e.application_id || x(e.application_id);
     }
@@ -71,21 +71,21 @@ function j() {
 function U() {
     var e;
     if (((N = null != (e = g.Z.getIdleSince()) ? e : 0), (R = g.Z.isAFK()), P)) T = A;
-    else if (S) T = O.Skl.INVISIBLE;
+    else if (S) T = v.Skl.INVISIBLE;
     else {
         let e = f.co.getSetting();
-        T = e !== O.Skl.UNKNOWN ? e : O.Skl.ONLINE;
+        T = e !== v.Skl.UNKNOWN ? e : v.Skl.ONLINE;
     }
-    T === O.Skl.ONLINE && N > 0 && (T = O.Skl.IDLE);
+    T === v.Skl.ONLINE && N > 0 && (T = v.Skl.IDLE);
     let t = !1,
-        n = P || T === O.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(k);
-    a()(C, n) || ((C = n), (t = !0));
-    let r = v.Z.getRemoteActivities();
+        n = P || T === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(k);
+    o()(C, n) || ((C = n), (t = !0));
+    let r = O.Z.getRemoteActivities();
     w !== r && ((w = r), (t = !0));
-    let i = v.Z.getHiddenActivities();
+    let i = O.Z.getHiddenActivities();
     D !== i && (D = i),
         t &&
-            (L = s()([...C, ...w.filter((e) => e.type !== O.IIU.CUSTOM_STATUS)].sort(y.f))
+            (L = s()([...C, ...w.filter((e) => e.type !== v.IIU.CUSTOM_STATUS)].sort(y.f))
                 .uniqBy((e) => ''.concat(e.type, ':').concat(e.application_id, ':').concat(e.name))
                 .value());
 }
@@ -96,14 +96,14 @@ function B() {
     return (S = !1), U();
 }
 function V() {
-    (P = !1), (A = O.Skl.UNKNOWN), U(), y.Z.setCurrentUserOnConnectionOpen(T, L);
+    (P = !1), (A = v.Skl.UNKNOWN), U(), y.Z.setCurrentUserOnConnectionOpen(T, L);
 }
 function F() {
     V();
 }
 class Z extends (r = l.ZP.Store) {
     initialize() {
-        this.waitFor(g.Z, _.Z, b.Z, v.Z, E.Z, m.Z), this.syncWith([b.Z], U);
+        this.waitFor(g.Z, _.Z, b.Z, O.Z, E.Z, m.Z), this.syncWith([b.Z], U);
     }
     getLocalPresence() {
         return {

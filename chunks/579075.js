@@ -1,8 +1,8 @@
 n.d(t, { d: () => u });
 var r = n(818083),
     i = n(987338);
-let a = 172800000,
-    o = 86400000,
+let o = 172800000,
+    a = 86400000,
     s = 43200000,
     l = 3600000,
     c = 0,
@@ -13,7 +13,7 @@ let a = 172800000,
         label: 'User Trial Offer TTL Change',
         defaultConfig: {
             enabled: !1,
-            ttl: a
+            ttl: o
         },
         treatments: [
             {
@@ -21,7 +21,7 @@ let a = 172800000,
                 label: 'Reduced trial offer cache TTL (1 day)',
                 config: {
                     enabled: !0,
-                    ttl: o
+                    ttl: a
                 }
             },
             {

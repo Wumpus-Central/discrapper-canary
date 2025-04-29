@@ -6,7 +6,7 @@ n.d(t, {
     lk: () => b,
     tM: () => g,
     xi: () => y,
-    zb: () => v
+    zb: () => O
 }),
     n(413496),
     n(433524),
@@ -17,8 +17,8 @@ n.d(t, {
     n(781311);
 var r = n(911969),
     i = n(555573),
-    a = n(998698),
-    o = n(509716),
+    o = n(998698),
+    a = n(509716),
     s = n(703558),
     l = n(117530),
     c = n(752305),
@@ -62,26 +62,26 @@ function g(e, t, n) {
     let r = {};
     if (null == t.options) return {};
     let i = p(e),
-        a = Object.fromEntries(t.options.map((e) => [e.name, e])),
-        o = null == i ? void 0 : i[0].children;
-    if (null != o) {
-        for (let t of o)
+        o = Object.fromEntries(t.options.map((e) => [e.name, e])),
+        a = null == i ? void 0 : i[0].children;
+    if (null != a) {
+        for (let t of a)
             if (d.aj.isType(t, 'applicationCommandOption')) {
-                let i = a[t.optionName];
+                let i = o[t.optionName];
                 null != i && (r[t.optionName] = E(e, i, t, n));
             }
     }
     return r;
 }
 function E(e, t, n, i) {
-    let a = n.children.map((n) => {
+    let o = n.children.map((n) => {
         if (t.type === r.jw.ATTACHMENT) {
             let e = l.Z.getUpload(i, t.name, s.d.SlashCommand);
             if (null != e) {
-                var a;
+                var o;
                 return {
                     type: 'text',
-                    text: null != (a = e.filename) ? a : ''
+                    text: null != (o = e.filename) ? o : ''
                 };
             }
         }
@@ -100,24 +100,24 @@ function E(e, t, n, i) {
         };
     });
     if (t.type !== r.jw.STRING) {
-        for (; a.length > 0 && 'text' === a[0].type && '' === a[0].text.trim(); ) a.shift();
-        for (; a.length > 0 && 'text' === a[a.length - 1].type && '' === a[a.length - 1].text.trim(); ) a.pop();
+        for (; o.length > 0 && 'text' === o[0].type && '' === o[0].text.trim(); ) o.shift();
+        for (; o.length > 0 && 'text' === o[o.length - 1].type && '' === o[o.length - 1].text.trim(); ) o.pop();
     }
-    return a;
+    return o;
 }
-function b(e, t, n, r, a) {
+function b(e, t, n, r, o) {
     if (null == e.options) return {};
     let s = Object.fromEntries(
         e.options.map((e) => {
             var i;
             return [
                 e.name,
-                o.f({
+                a.f({
                     option: e,
                     content: null != (i = r[e.name]) ? i : null,
                     guildId: t,
                     channelId: n,
-                    allowEmptyValues: a
+                    allowEmptyValues: o
                 })
             ];
         })
@@ -127,11 +127,11 @@ function b(e, t, n, r, a) {
 function y(e, t, n, r, s) {
     var l;
     let [c] = r,
-        u = a.Z.getActiveCommand(n),
+        u = o.Z.getActiveCommand(n),
         d = null == u || null == (l = u.options) ? void 0 : l.find((e) => e.name === c.optionName);
     if (null == d) return;
     let f = E(e, d, c, n),
-        _ = o.f({
+        _ = a.f({
             option: d,
             content: f,
             guildId: t,
@@ -140,14 +140,14 @@ function y(e, t, n, r, s) {
         });
     return i.g7(n, { [c.optionName]: { lastValidationResult: _ } }), _;
 }
-function v(e, t) {
+function O(e, t) {
     if (null == t.options || 0 === t.options.length) return [];
     let n = d.bN.richValue(e),
         r = [],
         i = new Set(m(e)),
-        a = {},
-        o = new Set();
-    for (let e of t.options) (a[e.displayName] = e), i.has(e.name) || o.add(e.displayName);
+        o = {},
+        a = new Set();
+    for (let e of t.options) (o[e.displayName] = e), i.has(e.name) || a.add(e.displayName);
     let s = null;
     for (let t = 0; t < n.length; t++) {
         let i = n[t];
@@ -173,9 +173,9 @@ function v(e, t) {
                     for (_.lastIndex = 0; null != (f = _.exec(p.text)); ) {
                         if (0 !== f.index && null == p.text.charAt(f.index - 1).match(/(\t|\s)/)) continue;
                         let e = f[1];
-                        if (!o.has(e)) continue;
-                        o.delete(e);
-                        let t = a[e];
+                        if (!a.has(e)) continue;
+                        a.delete(e);
+                        let t = o[e];
                         if (null == t) continue;
                         let i = {
                                 path: h,

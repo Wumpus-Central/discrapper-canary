@@ -5,20 +5,20 @@ n.d(t, {
 });
 var r = n(798681),
     i = n(450109);
-let a = 10 * n(70956).Z.Millis.SECOND,
-    o = 15;
+let o = 10 * n(70956).Z.Millis.SECOND,
+    a = 15;
 function s() {
-    return r.w.isIncomingVideoEnabled() && Date.now() - r.w.lastIncomingVideoEnabledChangeTime() > a;
+    return r.w.isIncomingVideoEnabled() && Date.now() - r.w.lastIncomingVideoEnabledChangeTime() > o;
 }
 function l(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o,
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a,
         r = i.Z.getAccumulatedPerformanceStats(e, t, 'short'),
-        a = i.Z.getAccumulatedPerformanceStats(e, t, 'long');
-    return null == r || null == a || r.numDatapoints < n || a.numDatapoints < n
+        o = i.Z.getAccumulatedPerformanceStats(e, t, 'long');
+    return null == r || null == o || r.numDatapoints < n || o.numDatapoints < n
         ? null
         : {
               short: r,
-              long: a
+              long: o
           };
 }
 let c = 30,

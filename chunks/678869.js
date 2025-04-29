@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x }), n(804061), n(704826), n(35282), n(539854);
 var r = n(200651),
     i = n(192379),
-    a = n(423875),
-    o = n(442837),
+    o = n(423875),
+    a = n(442837),
     s = n(902704),
     l = n(481060),
     c = n(952164),
@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(561308),
     b = n(319604),
     y = n(31074),
-    v = n(206295),
-    O = n(551228),
+    O = n(206295),
+    v = n(551228),
     I = n(591853),
     S = n(371991),
     T = n(410441),
@@ -35,12 +35,12 @@ function w(e, t) {
 }
 let D = (e, t, n) => {
     let { artist: r, media: i } = e,
-        a = C.t['6iNxrq'],
-        o = m.ZP.getName(t.guild_id, t.id, n);
+        o = C.t['6iNxrq'],
+        a = m.ZP.getName(t.guild_id, t.id, n);
     return C.intl
-        .formatToMarkdownString(a, {
+        .formatToMarkdownString(o, {
             artist: r,
-            userName: o,
+            userName: a,
             media: i
         })
         .replaceAll('*', '');
@@ -48,19 +48,19 @@ let D = (e, t, n) => {
 function L(e) {
     let { activity: t } = e,
         n = t.timestamps,
-        { now: a } = (0, S.tS)(),
-        { durationTimestamp: o, seekBarStyles: s } = i.useMemo(() => {
+        { now: o } = (0, S.tS)(),
+        { durationTimestamp: a, seekBarStyles: s } = i.useMemo(() => {
             var e;
             let { start: n, end: r } = null != (e = t.timestamps) ? e : {};
             if (null == n || null == r) return {};
-            let i = Math.min(r, a),
-                o = r - n,
-                s = Math.floor((Math.max(i - n, 0) / o) * 100);
+            let i = Math.min(r, o),
+                a = r - n,
+                s = Math.floor((Math.max(i - n, 0) / a) * 100);
             return {
                 seekBarStyles: { width: ''.concat(s, '%') },
-                durationTimestamp: (0, E.T_)({ start: 0 }, o)
+                durationTimestamp: (0, E.T_)({ start: 0 }, a)
             };
-        }, [t, a]);
+        }, [t, o]);
     return null == s
         ? null
         : (0, r.jsxs)('div', {
@@ -79,7 +79,7 @@ function L(e) {
                       variant: 'text-xs/normal',
                       tabularNumbers: !0,
                       color: void 0,
-                      children: o
+                      children: a
                   })
               ]
           });
@@ -91,10 +91,10 @@ function x(e) {
         S,
         { channel: R, entry: x, closePopout: M, onReaction: k, onVoiceChannelPreview: j } = e,
         { largeImage: U } = (0, g.rv)({ entry: x }),
-        { activity: G, currentEntry: B, artist: V, title: F, user: Z } = (0, O.pi)(x),
-        { primaryColor: H, secondaryColor: Y } = (0, v.Z)(null == U ? void 0 : U.src),
+        { activity: G, currentEntry: B, artist: V, title: F, user: Z } = (0, v.pi)(x),
+        { primaryColor: H, secondaryColor: Y } = (0, O.Z)(null == U ? void 0 : U.src),
         W = (0, y.Z)(A.ABu.SPOTIFY),
-        K = (0, o.e7)([u.Z, p.default], () => ((null == G ? void 0 : G.type) === A.IIU.LISTENING && null != Z ? (0, f.Z)(u.Z, p.default, Z, G) : void 0), [G, Z], s.Z),
+        K = (0, a.e7)([u.Z, p.default], () => ((null == G ? void 0 : G.type) === A.IIU.LISTENING && null != Z ? (0, f.Z)(u.Z, p.default, Z, G) : void 0), [G, Z], s.Z),
         z = i.useCallback(() => {
             var e;
             if (null == R || null == Z) return;
@@ -120,7 +120,7 @@ function x(e) {
     if (null == G || null == B) return null;
     let q = V,
         Q = [];
-    if (B.media.provider === a.p.SPOTIFY) {
+    if (B.media.provider === o.p.SPOTIFY) {
         (m = () => {
             (0, c.aG)(G);
         }),
@@ -164,7 +164,7 @@ function x(e) {
         channel: R,
         entry: x,
         headerIcons:
-            B.media.provider === a.p.SPOTIFY
+            B.media.provider === o.p.SPOTIFY
                 ? (0, r.jsx)(T.Z, {
                       onClick: n,
                       'aria-label': C.intl.string(C.t.rRffNz),

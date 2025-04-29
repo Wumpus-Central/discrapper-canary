@@ -1,8 +1,8 @@
-n.d(t, { Z: () => O });
+n.d(t, { Z: () => v });
 var r = n(200651),
     i = n(192379),
-    a = n(996146),
-    o = n(481060),
+    o = n(996146),
+    a = n(481060),
     s = n(100527),
     l = n(906732),
     c = n(540059),
@@ -65,18 +65,18 @@ function y(e, t) {
         e
     );
 }
-function v(e) {
+function O(e) {
     let { disabled: t, channel: i } = e,
         { analyticsLocations: g } = (0, l.ZP)(s.Z.GIFT_BUTTON),
         b = (0, f.Ft)(i),
-        { Component: v, events: O, play: I } = (0, a.$)(),
+        { Component: O, events: v, play: I } = (0, o.$)(),
         { enabled: S } = d.G.useExperiment({ location: 'gift-button' }, { autoTrackExposure: !1 }),
         T = (0, c.Q3)('ChannelPremiumGiftButton'),
         A = i.type === p.d4z.DM;
     if (t) return null;
     let N = () => {
         S && A && null != b
-            ? (0, o.ZDy)(async () => {
+            ? (0, a.ZDy)(async () => {
                   let { default: e } = await n.e('59207').then(n.bind(n, 435626));
                   return (t) =>
                       (0, r.jsx)(
@@ -109,7 +109,7 @@ function v(e) {
                   }
               });
     };
-    return (0, r.jsx)(o.ua7, {
+    return (0, r.jsx)(a.ua7, {
         text: h.intl.string(h.t.sWtWDQ),
         children: (e) =>
             (0, r.jsx)(
@@ -125,10 +125,10 @@ function v(e) {
                                 N(), I();
                             }
                         }),
-                        O
+                        v
                     ),
                     {
-                        children: (0, r.jsx)(v, {
+                        children: (0, r.jsx)(O, {
                             size: T ? 'refresh_sm' : void 0,
                             color: 'currentColor'
                         })
@@ -137,4 +137,4 @@ function v(e) {
             )
     });
 }
-let O = i.memo(v);
+let v = i.memo(O);

@@ -4,8 +4,8 @@ n.d(t, {
     c: () => _
 }),
     n(388685);
-var a,
-    o = n(442837),
+var o,
+    a = n(442837),
     s = n(570140),
     l = n(981631);
 function c(e, t, n) {
@@ -68,8 +68,8 @@ let _ = 'no_payment_source',
     E = null,
     b = {},
     y = null,
-    v = !1,
-    O = null,
+    O = !1,
+    v = null,
     I = !1,
     S = !1,
     T = !1,
@@ -80,7 +80,7 @@ function R(e) {
     null != r && null != y ? r(y) : null != i && i(e), (r = null), (i = null);
 }
 function P(e) {
-    R(), (p = e.skuId), (m = e.applicationId), (S = e.isIAP), (g = e.analyticsLocation), (N = e.context), (A = e.isGift), (T = !0), (I = !1), (r = e.resolve), (i = e.reject), (O = null), (y = null), (E = e.promotionId);
+    R(), (p = e.skuId), (m = e.applicationId), (S = e.isIAP), (g = e.analyticsLocation), (N = e.context), (A = e.isGift), (T = !0), (I = !1), (r = e.resolve), (i = e.reject), (v = null), (y = null), (E = e.promotionId);
 }
 function w(e) {
     let { error: t } = e;
@@ -99,11 +99,11 @@ function x(e) {
     C.delete(t);
 }
 function M() {
-    v = !0;
+    O = !0;
 }
 function k(e) {
     let { entitlements: t, giftCode: n } = e;
-    (v = !1), (y = t), (h = n);
+    (O = !1), (y = t), (h = n);
 }
 function j(e) {
     let { giftCode: t } = e;
@@ -112,13 +112,13 @@ function j(e) {
 }
 function U(e) {
     let { error: t } = e;
-    (v = !1), (O = t);
+    (O = !1), (v = t);
 }
 function G() {
     I = !0;
 }
 function B() {
-    O = null;
+    v = null;
 }
 function V(e) {
     A = e.isGift;
@@ -128,7 +128,7 @@ function F(e) {
     if (!t || null == N) return !1;
     (T = !1), (N = null), R();
 }
-class Z extends (a = o.ZP.Store) {
+class Z extends (o = a.ZP.Store) {
     getPricesForSku(e) {
         return b[e];
     }
@@ -137,13 +137,13 @@ class Z extends (a = o.ZP.Store) {
         return N === e && T;
     }
     get isPurchasingSKU() {
-        return v;
+        return O;
     }
     get forceConfirmationStepOnMount() {
         return I;
     }
     get error() {
-        return O;
+        return v;
     }
     get skuId() {
         return p;

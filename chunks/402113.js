@@ -2,8 +2,8 @@ n.d(t, { Z: () => g });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(513202),
-    o = n(906732),
+    o = n(513202),
+    a = n(906732),
     s = n(522651),
     l = n(82965),
     c = n(871499),
@@ -66,8 +66,8 @@ function h(e, t) {
         r,
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -76,19 +76,19 @@ function m(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function g(e) {
     var { location: t, applicationId: n, centerButton: d = !1 } = e,
         _ = h(e, ['location', 'applicationId', 'centerButton']);
-    let { parentAnalyticsLocation: m } = (0, o.ZP)(),
+    let { parentAnalyticsLocation: m } = (0, a.ZP)(),
         g = (0, l.Z)({ location: 'LeaveActivityButton' }),
         E = d ? c.d : c.Z,
         b = () => {
             (0, s.v)(m, s.d.LEAVE_ACTIVITY),
-                a.Z.leaveActivity({
+                o.Z.leaveActivity({
                     location: t,
                     applicationId: n,
                     showFeedback: !0

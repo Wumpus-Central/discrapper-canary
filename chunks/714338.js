@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T }), n(388685), n(704826), n(35282), n(539854), n(781311);
 var r = n(879443),
     i = n.n(r),
-    a = n(360038),
-    o = n(710845),
+    o = n(360038),
+    a = n(710845),
     s = n(280049),
     l = n(626135),
     c = n(358085),
@@ -14,14 +14,14 @@ let d = {},
     h = (0, c.isMac)() || (0, c.isMacWeb)() ? 'cmd' : 'ctrl',
     m = (0, c.isMac)() || (0, c.isMacWeb)() ? 'opt' : 'alt',
     g = (0, c.isMac)() || (0, c.isMacWeb)() ? 'return' : 'enter',
-    E = [...a.u.binds, 'mod+shift+[', 'mod+shift+]', 'mod+[', 'mod+]', 'alt+[', 'alt+]', 'ctrl+shift+tab', 'ctrl+tab', 'mod+n', 'mod+t', 'mod+shift+t', 'mod+plus', 'mod+minus', 'mod+0'].map((e) => e.replace('mod', h)),
+    E = [...o.u.binds, 'mod+shift+[', 'mod+shift+]', 'mod+[', 'mod+]', 'alt+[', 'alt+]', 'ctrl+shift+tab', 'ctrl+tab', 'mod+n', 'mod+t', 'mod+shift+t', 'mod+plus', 'mod+minus', 'mod+0'].map((e) => e.replace('mod', h)),
     b = () => [],
     y = [];
-function v(e, t) {
+function O(e, t) {
     let n = (e) => t(e, e.key);
     document.addEventListener(e, n), y.push(() => document.removeEventListener(e, n));
 }
-function O(e) {
+function v(e) {
     let t = [];
     for (let n of Object.values(e)) null != n && t.push(...n.binds);
     return t.map((e) => e.replace('mod', h));
@@ -39,7 +39,7 @@ function S(e) {
         let i = n.comboKeysBindGlobal ? p.bindGlobal : p.bind;
         if ((null != n.action && i.call(p, r, I(t, n.action)), null != n.keyup && i.call(p, r, I(t, n.keyup), 'keyup'), null != n.keydown)) {
             let e = r.indexOf('any-character');
-            -1 !== e && (v('keydown', n.keydown), r.splice(e, 1)), r.length > 0 && i.call(p, r, I(t, n.keydown), 'keydown');
+            -1 !== e && (O('keydown', n.keydown), r.splice(e, 1)), r.length > 0 && i.call(p, r, I(t, n.keydown), 'keydown');
         }
         null != n.keypress && i.call(p, r, I(t, n.keypress), 'keypress');
     }
@@ -56,8 +56,8 @@ let T = {
     checkDupes(e) {
         let t = new Set(),
             n = [];
-        for (let r of O(e)) t.has(r) && n.push(r), t.add(r);
-        n.length > 0 && new o.Z('Keybinds').warn('Duplicate keyboard shortcuts defined:', n);
+        for (let r of v(e)) t.has(r) && n.push(r), t.add(r);
+        n.length > 0 && new a.Z('Keybinds').warn('Duplicate keyboard shortcuts defined:', n);
     },
     setLayout(e) {
         d = e;
@@ -79,7 +79,7 @@ let T = {
         _ && this.hasBind(e) && p.unbind(e);
     },
     hasBind(e) {
-        let t = O(d);
+        let t = v(d);
         return (e = (e = e.replace('meta', 'cmd')).replace(/right |left /i, '').trim()), t.includes(e);
     }
 };

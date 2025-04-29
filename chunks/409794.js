@@ -1,8 +1,8 @@
 n.d(t, { X: () => p });
 var r = n(200651),
     i = n(192379),
-    a = n(803997),
-    o = n.n(a),
+    o = n(803997),
+    a = n.n(o),
     s = n(793030),
     l = n(200269),
     c = n(954338);
@@ -41,8 +41,8 @@ function f(e, t) {
         r,
         i = _(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -51,13 +51,13 @@ function _(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let p = i.forwardRef(function (e, t) {
     var { variant: n, className: i } = e,
-        a = f(e, ['variant', 'className']);
+        o = f(e, ['variant', 'className']);
     let u = (0, l.x)(),
         _ = 'h'.concat(Math.min(u, 6));
     return (0, r.jsx)(
@@ -67,10 +67,10 @@ let p = i.forwardRef(function (e, t) {
                 ref: t,
                 variant: n,
                 tag: _,
-                className: o()(c.defaultColor, i)
+                className: a()(c.defaultColor, i)
             },
             u > 6 ? { 'data-excessive-heading-level': u } : {},
-            a
+            o
         )
     );
 });

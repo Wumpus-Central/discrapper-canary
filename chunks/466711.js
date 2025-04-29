@@ -1,8 +1,8 @@
 n.d(t, { Z: () => M }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(442837),
-    o = n(704215),
+    o = n(442837),
+    a = n(704215),
     s = n(996146),
     l = n(481060),
     c = n(100527),
@@ -17,8 +17,8 @@ var r = n(200651),
     E = n(70956),
     b = n(709054),
     y = n(51144),
-    v = n(443603),
-    O = n(981631),
+    O = n(443603),
+    v = n(981631),
     I = n(921944),
     S = n(388032),
     T = n(767980),
@@ -76,7 +76,7 @@ function P(e, t) {
     );
 }
 function w(e) {
-    return (0, r.jsx)(v.Z, {
+    return (0, r.jsx)(O.Z, {
         innerClassName: A.button,
         'aria-label': S.intl.string(S.t.Z1RnTk),
         isActive: !1,
@@ -94,19 +94,19 @@ function w(e) {
 }
 function D(e) {
     let { Component: t, events: n, play: i } = (0, s.$)(),
-        a = () => {
+        o = () => {
             var t;
             i(), null == (t = e.onClick) || t.call(e);
         };
     return (0, r.jsx)(
-        v.Z,
+        O.Z,
         P(
             C(
                 {
                     innerClassName: A.button,
                     'aria-label': S.intl.string(S.t.Z1RnTk),
                     isActive: !1,
-                    onClick: a
+                    onClick: o
                 },
                 n
             ),
@@ -142,15 +142,15 @@ let L = E.Z.Millis.DAYS_30;
 function x(e) {
     var t;
     let { giftingPromotionConfig: n, disabled: s, channel: E } = e,
-        { analyticsLocations: v } = (0, u.ZP)(c.Z.GIFT_BUTTON),
+        { analyticsLocations: O } = (0, u.ZP)(c.Z.GIFT_BUTTON),
         [S, A] = i.useState(!1),
-        N = (0, a.e7)([m.Z], () => !(null === m.Z || void 0 === m.Z ? void 0 : m.Z.hasLayers())),
-        C = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
+        N = (0, o.e7)([m.Z], () => !(null === m.Z || void 0 === m.Z ? void 0 : m.Z.hasLayers())),
+        C = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
         R = null != C ? b.default.age(C.id) : 0,
         { giftBoxAnimation: P, trinketsAnimation: x } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
         M = (0, p.u)(),
         k = void 0 !== M && !s && N && R >= L,
-        [j, U] = (0, f.XR)(k ? o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, (0, d.t)(o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK)),
+        [j, U] = (0, f.XR)(k ? a.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, (0, d.t)(a.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK)),
         G = null != j,
         B = S || G,
         V = (0, y.Ft)(E);
@@ -160,12 +160,12 @@ function x(e) {
                 isGift: !0,
                 giftRecipient: null == V ? void 0 : V,
                 initialPlanId: null,
-                analyticsLocations: v,
+                analyticsLocations: O,
                 analyticsObject: {
-                    page: E.isPrivate() ? O.ZY5.DM_CHANNEL : O.ZY5.GUILD_CHANNEL,
-                    section: O.jXE.CHANNEL_TEXT_AREA,
-                    object: O.qAy.GIFTING_PROMOTION_BUTTON,
-                    objectType: O.Qqv.GIFT
+                    page: E.isPrivate() ? v.ZY5.DM_CHANNEL : v.ZY5.GUILD_CHANNEL,
+                    section: v.jXE.CHANNEL_TEXT_AREA,
+                    object: v.qAy.GIFTING_PROMOTION_BUTTON,
+                    objectType: v.Qqv.GIFT
                 }
             });
         },

@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r,
     i = n(392711),
-    a = n.n(i),
-    o = n(661869),
+    o = n.n(i),
+    a = n(661869),
     s = n(876215),
     l = n(442837),
     c = n(570140),
@@ -35,9 +35,9 @@ function b(e) {
     return ''.concat(e.author_id, ':').concat(e.id);
 }
 function y(e) {
-    return (0, p.n2)(e) ? null : (0, p.kr)(e) && e.author_type === o.i.USER ? u.Z.getActivities(e.author_id).find((t) => (t.type === h.IIU.PLAYING && (0, f.m9)(e) ? (0, _.cN)(e, t) : !!(t.type === h.IIU.LISTENING && (0, f.dU)(e)) && (0, _.pB)(e, t))) : void 0;
+    return (0, p.n2)(e) ? null : (0, p.kr)(e) && e.author_type === a.i.USER ? u.Z.getActivities(e.author_id).find((t) => (t.type === h.IIU.PLAYING && (0, f.m9)(e) ? (0, _.cN)(e, t) : !!(t.type === h.IIU.LISTENING && (0, f.dU)(e)) && (0, _.pB)(e, t))) : void 0;
 }
-function v(e) {
+function O(e) {
     let t = new Set(),
         n = new Set();
     for (let r of e) {
@@ -52,9 +52,9 @@ function v(e) {
         matchedKeys: n
     };
 }
-function O(e) {
+function v(e) {
     let { feed: t } = e,
-        { updatedKeys: n } = v(t.entries);
+        { updatedKeys: n } = O(t.entries);
     return n.size > 0;
 }
 function I() {
@@ -66,12 +66,12 @@ function S() {
         n = new Set(),
         r = new Set();
     for (let t of d.Z.getFeeds().values()) {
-        let { updatedKeys: i, matchedKeys: a } = v(n.size > 0 ? t.entries.filter((e) => !n.has(b(e.content))) : t.entries);
+        let { updatedKeys: i, matchedKeys: o } = O(n.size > 0 ? t.entries.filter((e) => !n.has(b(e.content))) : t.entries);
         for (let e of i) n.add(e);
-        for (let e of a) r.add(e);
+        for (let e of o) r.add(e);
         e = e || i.size > 0;
     }
-    for (let n of a().difference(t, [...r])) E.delete(n), (e = !0);
+    for (let n of o().difference(t, [...r])) E.delete(n), (e = !0);
     return e;
 }
 class T extends (r = l.ZP.Store) {
@@ -88,5 +88,5 @@ class T extends (r = l.ZP.Store) {
 m(T, 'displayName', 'ContentInventoryActivityStore');
 let A = new T(c.Z, {
     CONNECTION_OPEN: I,
-    CONTENT_INVENTORY_SET_FEED: O
+    CONTENT_INVENTORY_SET_FEED: v
 });

@@ -4,8 +4,8 @@ n.d(t, {
     q: () => m
 }),
     n(539854);
-var a,
-    o = n(213919),
+var o,
+    a = n(213919),
     s = n(442837),
     l = n(570140),
     c = n(990492),
@@ -89,7 +89,7 @@ function b(e) {
         (g = n).length > d.$H &&
             g.splice(d.$H).forEach((e) => {
                 let { id: t } = e;
-                v(t);
+                O(t);
             });
 }
 function y(e) {
@@ -101,14 +101,14 @@ function y(e) {
             })),
         (r = null);
 }
-function v(e) {
+function O(e) {
     (g = g.filter((t) => {
         let { id: n } = t;
         return n !== e;
     })),
-        o.removeToken(e);
+        a.removeToken(e);
 }
-function O(e) {
+function v(e) {
     let { user: t } = e,
         n = g.slice(),
         r = n.find((e) => {
@@ -141,7 +141,7 @@ function N(e) {
     let { invalidPushSyncTokens: t } = e;
     g = g.map((e) => (null != e.pushSyncToken && t.includes(e.pushSyncToken) ? h(_({}, e), { pushSyncToken: null }) : e));
 }
-class C extends (a = s.ZP.PersistedStore) {
+class C extends (o = s.ZP.PersistedStore) {
     initialize(e) {
         if (null != e) {
             var t;
@@ -205,9 +205,9 @@ let R = new C(l.Z, {
     MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: (e) => I(e.userId, 1),
     MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: (e) => I(e.userId, 2),
     MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: (e) => I(e.userId, 0),
-    MULTI_ACCOUNT_REMOVE_ACCOUNT: (e) => v(e.userId),
+    MULTI_ACCOUNT_REMOVE_ACCOUNT: (e) => O(e.userId),
     MULTI_ACCOUNT_MOVE_ACCOUNT: S,
-    CURRENT_USER_UPDATE: O,
+    CURRENT_USER_UPDATE: v,
     MULTI_ACCOUNT_MOBILE_EXPERIMENT_UPDATE: T,
     MULTI_ACCOUNT_UPDATE_PUSH_SYNC_TOKEN: A,
     MULTI_ACCOUNT_INVALIDATE_PUSH_SYNC_TOKENS: N

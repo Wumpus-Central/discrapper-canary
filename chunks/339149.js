@@ -1,5 +1,5 @@
 n.d(t, {
-    E: () => P,
+    E: () => I,
     Z: () => w
 }),
     n(388685),
@@ -21,8 +21,8 @@ var r,
     b = n(941128),
     y = n(780570),
     _ = n(353042),
-    O = n(981631),
-    v = n(388032),
+    v = n(981631),
+    O = n(388032),
     C = n(496614);
 function j(e, t, n) {
     return (
@@ -54,56 +54,56 @@ function S(e) {
     return e;
 }
 let E = {
-    [O.vxO.INSTALLING]: {
-        [f.J6.NONE]: (e, t) => v.intl.formatToPlainString(v.t['p+2sEx'], { name: e }),
+    [v.vxO.INSTALLING]: {
+        [f.J6.NONE]: (e, t) => O.intl.formatToPlainString(O.t['p+2sEx'], { name: e }),
         [f.J6.SECONDS]: (e, t) =>
-            v.intl.formatToPlainString(v.t['/0NgPD'], {
+            O.intl.formatToPlainString(O.t['/0NgPD'], {
                 name: e,
                 timeRemaining: t
             }),
         [f.J6.MINUTES]: (e, t) =>
-            v.intl.formatToPlainString(v.t.ZIwMzs, {
+            O.intl.formatToPlainString(O.t.ZIwMzs, {
                 name: e,
                 timeRemaining: t
             }),
         [f.J6.HOURS]: (e, t) =>
-            v.intl.formatToPlainString(v.t['3IQDUl'], {
+            O.intl.formatToPlainString(O.t['3IQDUl'], {
                 name: e,
                 timeRemaining: t
             })
     },
-    [O.vxO.UPDATING]: {
-        [f.J6.NONE]: (e, t) => v.intl.formatToPlainString(v.t['6F9QzM'], { name: e }),
+    [v.vxO.UPDATING]: {
+        [f.J6.NONE]: (e, t) => O.intl.formatToPlainString(O.t['6F9QzM'], { name: e }),
         [f.J6.SECONDS]: (e, t) =>
-            v.intl.formatToPlainString(v.t['2OVgVl'], {
+            O.intl.formatToPlainString(O.t['2OVgVl'], {
                 name: e,
                 timeRemaining: t
             }),
         [f.J6.MINUTES]: (e, t) =>
-            v.intl.formatToPlainString(v.t.mgQg1N, {
+            O.intl.formatToPlainString(O.t.mgQg1N, {
                 name: e,
                 timeRemaining: t
             }),
         [f.J6.HOURS]: (e, t) =>
-            v.intl.formatToPlainString(v.t['aTdq4+'], {
+            O.intl.formatToPlainString(O.t['aTdq4+'], {
                 name: e,
                 timeRemaining: t
             })
     },
-    [O.vxO.REPAIRING]: {
-        [f.J6.NONE]: (e, t) => v.intl.formatToPlainString(v.t['p+2sEx'], { name: e }),
+    [v.vxO.REPAIRING]: {
+        [f.J6.NONE]: (e, t) => O.intl.formatToPlainString(O.t['p+2sEx'], { name: e }),
         [f.J6.SECONDS]: (e, t) =>
-            v.intl.formatToPlainString(v.t['/0NgPD'], {
+            O.intl.formatToPlainString(O.t['/0NgPD'], {
                 name: e,
                 timeRemaining: t
             }),
         [f.J6.MINUTES]: (e, t) =>
-            v.intl.formatToPlainString(v.t.ZIwMzs, {
+            O.intl.formatToPlainString(O.t.ZIwMzs, {
                 name: e,
                 timeRemaining: t
             }),
         [f.J6.HOURS]: (e, t) =>
-            v.intl.formatToPlainString(v.t['3IQDUl'], {
+            O.intl.formatToPlainString(O.t['3IQDUl'], {
                 name: e,
                 timeRemaining: t
             })
@@ -112,9 +112,9 @@ let E = {
 class x extends l.PureComponent {
     renderText() {
         let { state: e, isPaused: t } = this.props;
-        if (e.type === O.vxO.UPDATING || e.type === O.vxO.REPAIRING || e.type === O.vxO.INSTALLING) {
-            if (t) return v.intl.string(v.t['5oxtFR']);
-            else if (e.stage === O.f07.PATCHING || e.stage === O.f07.REPAIRING)
+        if (e.type === v.vxO.UPDATING || e.type === v.vxO.REPAIRING || e.type === v.vxO.INSTALLING) {
+            if (t) return O.intl.string(O.t['5oxtFR']);
+            else if (e.stage === v.f07.PATCHING || e.stage === v.f07.REPAIRING)
                 return (0, i.jsx)(_.Z, {
                     getHistoricalTotalBytes: m.Z.getHistoricalTotalBytesWritten,
                     updateInterval: 5000,
@@ -125,7 +125,7 @@ class x extends l.PureComponent {
     }
     render() {
         let e = this.renderText();
-        return null != e ? e : v.intl.string(v.t.cw57am);
+        return null != e ? e : O.intl.string(O.t.cw57am);
     }
     constructor(...e) {
         super(...e),
@@ -146,7 +146,7 @@ class x extends l.PureComponent {
             });
     }
 }
-class I extends (r = l.PureComponent) {
+class P extends (r = l.PureComponent) {
     componentWillAppear(e) {
         this.state.animationScale.setValue(1), e();
     }
@@ -165,7 +165,7 @@ class I extends (r = l.PureComponent) {
     getTooltipText() {
         let { firstApplication: e, firstState: t, isPaused: n } = this.props;
         return null == e || null == t
-            ? v.intl.string(v.t.cw57am)
+            ? O.intl.string(O.t.cw57am)
             : (0, i.jsx)(x, {
                   application: e,
                   state: t,
@@ -222,21 +222,21 @@ class I extends (r = l.PureComponent) {
             j(this, 'state', { animationScale: new a.Z.Value(0) }),
             j(this, 'handleOnClick', (e) => {
                 let { onClick: t } = this.props;
-                e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, g.uL)(O.Z5c.APPLICATION_LIBRARY);
+                e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, g.uL)(v.Z5c.APPLICATION_LIBRARY);
             });
     }
 }
-function P(e, t) {
+function I(e, t) {
     return e.reduce((e, n) => {
         let { applicationId: r, branchId: i } = n,
             l = t.getState(r, i);
         return null != l && e.push(l), e;
     }, []);
 }
-j(I, 'defaultProps', { strokeSize: h._3P.StrokeSizes.MEDIUM });
+j(P, 'defaultProps', { strokeSize: h._3P.StrokeSizes.MEDIUM });
 let w = c.ZP.connectStores([b.Z, m.Z, p.Z], () => {
     let e = b.Z.activeItems,
-        t = P(e, m.Z),
+        t = I(e, m.Z),
         { total: n, progress: r } = y.lK(t);
     return {
         percent: y.xI(r, n),
@@ -268,7 +268,7 @@ let w = c.ZP.connectStores([b.Z, m.Z, p.Z], () => {
     return t
         ? (0, i.jsx)(d.W, {
               component: l.Fragment,
-              children: n.percent > 0 && n.percent < 100 ? (0, i.jsx)(I, S({}, n)) : null
+              children: n.percent > 0 && n.percent < 100 ? (0, i.jsx)(P, S({}, n)) : null
           })
-        : (0, i.jsx)(I, S({}, n));
+        : (0, i.jsx)(P, S({}, n));
 });

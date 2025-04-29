@@ -1,8 +1,8 @@
 n.d(t, { C: () => p });
 var r = n(200651),
     i = n(120356),
-    a = n.n(i),
-    o = n(979554),
+    o = n.n(i),
+    a = n(979554),
     s = n(442837),
     l = n(481060),
     c = n(597688),
@@ -15,7 +15,7 @@ let _ = (e) => {
         return (0, r.jsxs)('div', {
             className: f.collectiblePreview,
             children: [
-                null != n && n.type !== o.Z.BUNDLE
+                null != n && n.type !== a.Z.BUNDLE
                     ? (0, r.jsx)(u.O, {
                           sku: t,
                           fallbackLabel: null
@@ -31,7 +31,7 @@ let _ = (e) => {
     p = (e) => {
         let { sku: t, value: n, className: i } = e;
         return (0, r.jsxs)('div', {
-            className: a()(d.row, i),
+            className: o()(d.row, i),
             children: [
                 (0, r.jsx)('div', {
                     className: d.rowLabel,

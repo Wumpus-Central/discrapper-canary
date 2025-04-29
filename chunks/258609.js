@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(388685);
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(797258),
+    o = n(570140),
+    a = n(797258),
     s = n(979651);
 function l(e, t, n) {
     return (
@@ -31,14 +31,14 @@ function m() {
     (c = null), (u = null);
 }
 function g(e) {
-    let { sessionType: t, nonce: n, channelId: r, deviceId: i, commandId: a } = e;
+    let { sessionType: t, nonce: n, channelId: r, deviceId: i, commandId: o } = e;
     u = {
         type: t,
         nonce: n,
         channelId: r,
         startedAt: Date.now(),
         deviceId: i,
-        commandId: a
+        commandId: o
     };
 }
 function E(e) {
@@ -57,21 +57,21 @@ function y(e) {
     let { platform: t } = e;
     p.delete(t);
 }
-function v(e) {
+function O(e) {
     let { platform: t, deviceId: n } = e;
     _[t] = n;
 }
-let O = Object.freeze({});
+let v = Object.freeze({});
 class I extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
-        null != e && (_ = e.lastSelectedDeviceByPlatform), this.waitFor(o.Z, s.Z);
+        null != e && (_ = e.lastSelectedDeviceByPlatform), this.waitFor(a.Z, s.Z);
     }
     getUserAgnosticState() {
         return { lastSelectedDeviceByPlatform: _ };
     }
     getDevicesForPlatform(e) {
         var t;
-        return null != (t = f[e]) ? t : O;
+        return null != (t = f[e]) ? t : v;
     }
     getLastSelectedDeviceByPlatform(e) {
         return _[e];
@@ -94,12 +94,12 @@ class I extends (r = i.ZP.DeviceSettingsStore) {
     }
 }
 l(I, 'displayName', 'GameConsoleStore'), l(I, 'persistKey', 'GameConsoleStore');
-let S = new I(a.Z, {
+let S = new I(o.Z, {
     REMOTE_SESSION_CONNECT: h,
     REMOTE_SESSION_DISCONNECT: m,
     WAIT_FOR_REMOTE_SESSION: g,
     GAME_CONSOLE_FETCH_DEVICES_START: E,
     GAME_CONSOLE_FETCH_DEVICES_SUCCESS: b,
     GAME_CONSOLE_FETCH_DEVICES_FAIL: y,
-    GAME_CONSOLE_SELECT_DEVICE: v
+    GAME_CONSOLE_SELECT_DEVICE: O
 });

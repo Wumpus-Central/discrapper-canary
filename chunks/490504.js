@@ -1,16 +1,16 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(200651);
 n(192379);
 var i = n(481060),
-    a = n(903748);
-let o = function (e) {
+    o = n(903748);
+let a = function (e) {
     let { message: t } = e;
     return (0, r.jsxs)('div', {
-        className: a.container,
+        className: o.container,
         children: [
             (0, r.jsx)(i.d3s, {
                 size: 'custom',
-                className: a.icon,
+                className: o.icon,
                 width: 20,
                 height: 20,
                 color: i.TVs.colors.TEXT_WARNING

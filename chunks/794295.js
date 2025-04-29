@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
 var r = n(200651),
     i = n(192379),
-    a = n(477660),
-    o = n.n(a),
+    o = n(477660),
+    a = n.n(o),
     s = n(481060),
     l = n(100527),
     c = n(906732),
@@ -65,8 +65,8 @@ function h(e, t) {
         r,
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -75,33 +75,33 @@ function m(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let g = 1,
     E = i.memo(function (e) {
-        let { onClick: t, trusted: n, title: a, href: d, children: _, messageId: m, channelId: E } = e,
+        let { onClick: t, trusted: n, title: o, href: d, children: _, messageId: m, channelId: E } = e,
             b = h(e, ['onClick', 'trusted', 'title', 'href', 'children', 'messageId', 'channelId']),
             { analyticsLocations: y } = (0, c.ZP)(l.Z.MASKED_LINK),
-            v = i.useCallback((t) => (0, u.q)(e, t, y), [y, e]),
-            O = i.useCallback(
+            O = i.useCallback((t) => (0, u.q)(e, t, y), [y, e]),
+            v = i.useCallback(
                 (e) => {
-                    e.button === g && v(e);
+                    e.button === g && O(e);
                 },
-                [v]
+                [O]
             ),
-            I = o().sanitizeUrl(d);
+            I = a().sanitizeUrl(d);
         return (0, r.jsx)(
             s.eee,
             p(f({}, b), {
-                title: a,
+                title: o,
                 target: '_blank',
                 rel: 'noreferrer noopener',
                 href: I,
-                onClick: v,
-                onAuxClick: O,
-                children: null != _ ? _ : a
+                onClick: O,
+                onAuxClick: v,
+                children: null != _ ? _ : o
             })
         );
     });

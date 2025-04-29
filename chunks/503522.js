@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(388685);
 var r = n(147913),
     i = n(579806),
-    a = n(710845),
-    o = n(199902),
+    o = n(710845),
+    a = n(199902),
     s = n(501787);
 function l(e, t, n) {
     return (
@@ -17,7 +17,7 @@ function l(e, t, n) {
         e
     );
 }
-let c = new a.Z('OverlayContentProtectionManagerV3');
+let c = new o.Z('OverlayContentProtectionManagerV3');
 class u extends r.Z {
     constructor(...e) {
         var t;
@@ -48,7 +48,7 @@ class u extends r.Z {
                     this.setContentProtection(r);
                 },
                 STREAM_STOP: () => {
-                    null == o.Z.getCurrentUserActiveStream() && this.setContentProtection(!1);
+                    null == a.Z.getCurrentUserActiveStream() && this.setContentProtection(!1);
                 }
             });
     }

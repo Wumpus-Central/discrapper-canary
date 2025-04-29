@@ -1,10 +1,10 @@
 var r = n(444675),
     i = n(670575),
-    a = n(165593);
+    o = n(165593);
 if (n(738146)() || n(247131)()) {
-    var o = Symbol.iterator;
+    var a = Symbol.iterator;
     e.exports = function (e) {
-        return null != e && void 0 !== e[o] ? e[o]() : i(e) ? Array.prototype[o].call(e) : void 0;
+        return null != e && void 0 !== e[a] ? e[a]() : i(e) ? Array.prototype[a].call(e) : void 0;
     };
 } else {
     var s = n(189612),
@@ -62,8 +62,8 @@ if (n(738146)() || n(247131)()) {
     if (u || d) {
         var b = n(913306),
             y = n(282702),
-            v = f('Map.prototype.forEach', !0),
-            O = f('Set.prototype.forEach', !0);
+            O = f('Map.prototype.forEach', !0),
+            v = f('Set.prototype.forEach', !0);
         if (void 0 === r || !r.versions || !r.versions.node)
             var I = f('Map.prototype.iterator', !0),
                 S = f('Set.prototype.iterator', !0);
@@ -71,12 +71,12 @@ if (n(738146)() || n(247131)()) {
             A = f('Set.prototype.@@iterator', !0) || f('Set.prototype._es6-shim iterator_', !0),
             N = function (e) {
                 if (b(e)) {
-                    if (I) return a(I(e));
+                    if (I) return o(I(e));
                     if (T) return T(e);
-                    if (v) {
+                    if (O) {
                         var t = [];
                         return (
-                            v(e, function (e, n) {
+                            O(e, function (e, n) {
                                 _(t, [n, e]);
                             }),
                             g(t)
@@ -84,12 +84,12 @@ if (n(738146)() || n(247131)()) {
                     }
                 }
                 if (y(e)) {
-                    if (S) return a(S(e));
+                    if (S) return o(S(e));
                     if (A) return A(e);
-                    if (O) {
+                    if (v) {
                         var n = [];
                         return (
-                            O(e, function (e) {
+                            v(e, function (e) {
                                 _(n, e);
                             }),
                             g(n)

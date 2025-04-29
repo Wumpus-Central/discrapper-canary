@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x });
 var r,
     i = n(442837),
-    a = n(780384),
-    o = n(570140),
+    o = n(780384),
+    a = n(570140),
     s = n(607070),
     l = n(514361),
     c = n(540059),
@@ -55,7 +55,7 @@ function y(e, t) {
     }
     return n;
 }
-function v(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -66,7 +66,7 @@ function v(e, t) {
         e
     );
 }
-let O = 0,
+let v = 0,
     I = (0, c.O_)('ThemeStore') ? m.K2 : m.o5,
     S = (0, u.Z)(),
     T = I[S];
@@ -79,17 +79,17 @@ function N() {
 }
 class C extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (null == e ? void 0 : e.theme) != null && ((O = 1), (T = e.theme), (0, f.Z)(T), null != e.preferences && (I = e.preferences), (0, a.wj)(T) && (I[m.zd.DARK] = T)), this.waitFor(p.ZP, _.Z, h.Z, s.Z);
+        (null == e ? void 0 : e.theme) != null && ((v = 1), (T = e.theme), (0, f.Z)(T), null != e.preferences && (I = e.preferences), (0, o.wj)(T) && (I[m.zd.DARK] = T)), this.waitFor(p.ZP, _.Z, h.Z, s.Z);
     }
     getState() {
         return {
             theme: this.theme,
             preferences: I,
-            status: O
+            status: v
         };
     }
     get darkSidebar() {
-        return (0, a.ap)(this.theme) && p.ZP.darkSidebar && null == l.Z.gradientPreset;
+        return (0, o.ap)(this.theme) && p.ZP.darkSidebar && null == l.Z.gradientPreset;
     }
     get theme() {
         return A();
@@ -102,10 +102,10 @@ class C extends (r = i.ZP.PersistedStore) {
     }
 }
 function R() {
-    return (0, c.O_)('ThemeStore') && 0 === O && ((I = v(b({}, I), { [m.zd.DARK]: g.BRd.DARKER })), (O = 1)), N();
+    return (0, c.O_)('ThemeStore') && 0 === v && ((I = O(b({}, I), { [m.zd.DARK]: g.BRd.DARKER })), (v = 1)), N();
 }
 function P() {
-    return (0, a.ap)(A());
+    return (0, o.ap)(A());
 }
 function w(e) {
     return !e.isSwitchingAccount && T !== g.BRd.DARK && ((T = g.BRd.DARK), (0, f.Z)(T), N());
@@ -122,11 +122,11 @@ E(C, 'displayName', 'ThemeStore'),
     E(C, 'migrations', [
         (e) => {
             let t = e.theme;
-            return 'amoled' === t && (t = 'midnight'), v(b({}, e), { theme: t });
+            return 'amoled' === t && (t = 'midnight'), O(b({}, e), { theme: t });
         },
         (e) => e
     ]);
-let x = new C(o.Z, {
+let x = new C(a.Z, {
     CACHE_LOADED: N,
     CONNECTION_OPEN: R,
     LOGOUT: w,

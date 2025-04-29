@@ -46,11 +46,11 @@ var y = (((r = {})[(r.VOICE = 0)] = 'VOICE'), r);
 let _ = (e) => {
     let { type: t, guildId: r, closePopout: y } = e,
         _ = (0, c.Dt)(),
-        { notClaimed: O, notEmailVerified: v, notPhoneVerified: C, newAccount: j, newMember: S } = (0, l.e7)([d.Z], () => d.Z.getCheck(r), [r]),
+        { notClaimed: v, notEmailVerified: O, notPhoneVerified: C, newAccount: j, newMember: S } = (0, l.e7)([d.Z], () => d.Z.getCheck(r), [r]),
         E = 0 === t ? g.intl.string(g.t['6zY8BA']) : null,
         x = null,
-        I = null;
-    return (0 === t && (O ? ((x = g.intl.string(g.t.IRxUlJ)), (I = g.intl.string(g.t.fiNVio))) : C ? ((x = g.intl.string(g.t.vW8iUF)), (I = g.intl.string(g.t['50gfOj']))) : v ? ((x = g.intl.string(g.t.vdSOp6)), (I = g.intl.string(g.t.lm1UKi))) : S ? ((x = g.intl.formatToPlainString(g.t.v1ktYW, { min: p.YeM.MEMBER_AGE })), (I = g.intl.string(g.t.BddRzc))) : j && ((x = g.intl.formatToPlainString(g.t['sncw4+'], { min: p.YeM.ACCOUNT_AGE })), (I = g.intl.string(g.t.BddRzc)))), null == E || null == x)
+        P = null;
+    return (0 === t && (v ? ((x = g.intl.string(g.t.IRxUlJ)), (P = g.intl.string(g.t.fiNVio))) : C ? ((x = g.intl.string(g.t.vW8iUF)), (P = g.intl.string(g.t['50gfOj']))) : O ? ((x = g.intl.string(g.t.vdSOp6)), (P = g.intl.string(g.t.lm1UKi))) : S ? ((x = g.intl.formatToPlainString(g.t.v1ktYW, { min: p.YeM.MEMBER_AGE })), (P = g.intl.string(g.t.BddRzc))) : j && ((x = g.intl.formatToPlainString(g.t['sncw4+'], { min: p.YeM.ACCOUNT_AGE })), (P = g.intl.string(g.t.BddRzc)))), null == E || null == x)
         ? null
         : (0, i.jsxs)(o.VqE, {
               className: m.container,
@@ -77,10 +77,10 @@ let _ = (e) => {
                           (0, i.jsxs)('div', {
                               className: m.buttonContainer,
                               children: [
-                                  null != I
+                                  null != P
                                       ? (0, i.jsx)(o.zxk, {
                                             onClick: () => {
-                                                O
+                                                v
                                                     ? a.j()
                                                     : C
                                                       ? (0, o.ZDy)(
@@ -90,7 +90,7 @@ let _ = (e) => {
                                                             },
                                                             { modalKey: f.M }
                                                         )
-                                                      : v &&
+                                                      : O &&
                                                         (s.Z.verifyResend(),
                                                         (0, o.h7j)((e) => {
                                                             var t, n, r;
@@ -129,10 +129,10 @@ let _ = (e) => {
                                                     y();
                                             },
                                             className: m.primaryButton,
-                                            children: I
+                                            children: P
                                         })
                                       : null,
-                                  O || C || v
+                                  v || C || O
                                       ? (0, i.jsx)(o.zxk, {
                                             onClick: y,
                                             look: o.zxk.Looks.BLANK,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l }), n(415506);
 var r = n(598077),
     i = n(830181),
-    a = n(484459);
-function o(e, t, n) {
+    o = n(484459);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,14 +26,14 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
 }
 async function l() {
     let e, t, n;
-    for (var o = arguments.length, l = Array(o), c = 0; c < o; c++) l[c] = arguments[c];
+    for (var a = arguments.length, l = Array(a), c = 0; c < a; c++) l[c] = arguments[c];
     let u = l[0],
         d = l[1];
     if ('string' == typeof u && ('string' == typeof d || null == d)) (e = u), (t = d), (n = l[2]);
@@ -41,7 +41,7 @@ async function l() {
     else throw Error('Invalid arguments');
     if (null == e) return Promise.resolve();
     let { waitForRefetch: f } = (0, i.x)({ location: 'preloadUserProfileForPopout' });
-    await (0, a.Z)(
+    await (0, o.Z)(
         e,
         t,
         s(

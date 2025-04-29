@@ -1,8 +1,8 @@
 n.d(t, { Z: () => en }), n(388685), n(642613), n(415506);
 var r = n(772848),
     i = n(259443),
-    a = n(379649),
-    o = n(570140),
+    o = n(379649),
+    a = n(570140),
     s = n(615287),
     l = n(593472),
     c = n(147913),
@@ -17,8 +17,8 @@ var r = n(772848),
     E = n(237997),
     b = n(626135),
     y = n(998502),
-    v = n(145597),
-    O = n(830917),
+    O = n(145597),
+    v = n(830917),
     I = n(554174),
     S = n(938038),
     T = n(981631),
@@ -184,7 +184,7 @@ class k {
         return {
             initialized: !1,
             pinnedToggledCount: 0,
-            visibleDuration: new a.G9(),
+            visibleDuration: new o.G9(),
             pinned: !1
         };
     }
@@ -242,14 +242,14 @@ class j {
             },
             i = Object.entries(r).sort((e, t) => {
                 let [n, r] = e,
-                    [i, a] = t;
-                return a - r;
+                    [i, o] = t;
+                return o - r;
             })[0],
-            a = parseInt(i[0], 10),
-            o = isNaN(a) ? l.Jx.UNKNOWN : a;
-        isNaN(a) && L.error('ScreenTypeAnalytics: Unknown most used screen type: '.concat(i), r);
+            o = parseInt(i[0], 10),
+            a = isNaN(o) ? l.Jx.UNKNOWN : o;
+        isNaN(o) && L.error('ScreenTypeAnalytics: Unknown most used screen type: '.concat(i), r);
         let s = S.c.getGameDisplayMode(null != (e = this.game.name) ? e : this.game.id);
-        S.c.setGameDisplayMode(null != (t = this.game.name) ? t : this.game.id, o);
+        S.c.setGameDisplayMode(null != (t = this.game.name) ? t : this.game.id, a);
         let c = {
             screentype_unknown_duration: r[l.Jx.UNKNOWN],
             screentype_windowed_duration: r[l.Jx.WINDOWED],
@@ -262,7 +262,7 @@ class j {
             screentype_global_supported_duration: c.screentype_windowed_duration + c.screentype_maximized_duration + c.screentype_borderless_fullscreen_duration,
             screentype_global_unsupported_duration: c.screentype_fullscreen_duration,
             screentype_initial: l.Jx[this.game.fullscreenType],
-            screentype_most_used: l.Jx[o],
+            screentype_most_used: l.Jx[a],
             screentype_most_used_previous: null == s ? null : l.Jx[s],
             game_display_mode_is_adjustment_supported: y.ZP.GameDisplayModeIsGameSupported(this.game.name)
         });
@@ -277,12 +277,12 @@ class j {
             N(this, 'updateScreenInterval', void 0),
             (this.game = e),
             (this.counters = {
-                [l.Jx.UNKNOWN]: new a.G9(),
-                [l.Jx.WINDOWED]: new a.G9(),
-                [l.Jx.MAXIMIZED]: new a.G9(),
-                [l.Jx.BORDERLESS_FULLSCREEN]: new a.G9(),
-                [l.Jx.FULLSCREEN]: new a.G9(),
-                [l.Jx.MINIMIZED]: new a.G9()
+                [l.Jx.UNKNOWN]: new o.G9(),
+                [l.Jx.WINDOWED]: new o.G9(),
+                [l.Jx.MAXIMIZED]: new o.G9(),
+                [l.Jx.BORDERLESS_FULLSCREEN]: new o.G9(),
+                [l.Jx.FULLSCREEN]: new o.G9(),
+                [l.Jx.MINIMIZED]: new o.G9()
             }),
             (this.lastscreenType = void 0),
             this.update(),
@@ -313,22 +313,22 @@ class G {
     buildOverlayMethodStats(e, t) {
         let n = this.overlayMethodStats,
             { oopEnabled: r, legacyEnabled: i } = p.default.getPerGameEnabledStatus(t),
-            a = {
+            o = {
                 legacy_override: !0 === i,
                 enabled: r || i,
                 quns_mode: this.getQunsName(l.Ng.QUNS_UNKNOWN)
             };
         if (null != t) {
             let { quns: e } = y.ZP.GetWindowFullscreenTypeExtraByPid(t.pid, t.gameName);
-            a.quns_mode = this.getQunsName(e);
+            o.quns_mode = this.getQunsName(e);
         }
         if (null == e) {
             let e = null != t ? p.default.getRenderMethod(t.pid) : null;
-            return C({ original_method: null != e ? e : s.gl.Disabled }, a);
+            return C({ original_method: null != e ? e : s.gl.Disabled }, o);
         }
-        if (null == n) return C({ original_method: e }, a);
-        let o = n.any_other_method;
-        return C(P(C({}, n), { any_other_method: e !== o ? e : o }), a);
+        if (null == n) return C({ original_method: e }, o);
+        let a = n.any_other_method;
+        return C(P(C({}, n), { any_other_method: e !== a ? e : a }), o);
     }
     static getGameName(e) {
         var t, n;
@@ -386,7 +386,7 @@ class G {
         return null == this.overlayMethod ? s.gl[s.gl.Disabled] : s.gl[this.overlayMethod];
     }
     async getAnalytics() {
-        var e, t, n, r, i, a, o, l, c;
+        var e, t, n, r, i, o, a, l, c;
         let p = null != (n = this.overlayMethod) ? n : s.gl.Disabled,
             m = {
                 setting_is_enabled: g.default.enabled,
@@ -399,8 +399,8 @@ class G {
             },
             b = (0, f.b6)(this.game),
             y = (0, d.G8)(this.game),
-            v = null != (r = this.overlayMethodStats) ? r : this.buildOverlayMethodStats(p, this.game),
-            O = null != v.any_other_method ? s.gl[v.any_other_method] : null,
+            O = null != (r = this.overlayMethodStats) ? r : this.buildOverlayMethodStats(p, this.game),
+            v = null != O.any_other_method ? s.gl[O.any_other_method] : null,
             I = b.enabledLegacy || b.enabledOOP;
         return {
             usage: P(
@@ -420,8 +420,8 @@ class G {
                             overlay_status_game_enabled: I,
                             overlay_status_game_source: b.source,
                             game_name: null != (i = y.gameName) ? i : null,
-                            game_id: null != (a = y.gameId) ? a : null,
-                            game_exe: null != (o = y.exe) ? o : null,
+                            game_id: null != (o = y.gameId) ? o : null,
+                            game_exe: null != (a = y.exe) ? a : null,
                             game_elevated: this.game.elevated,
                             game_is_launcher: null != (l = this.game.isLauncher) && l,
                             game_duration: this.gameTimer.elapsed().asMilliseconds(),
@@ -446,11 +446,11 @@ class G {
                             overlay_successfully_shown: this._successfullyShown
                         }
                     ),
-                    v
+                    O
                 ),
                 {
-                    original_method: s.gl[v.original_method],
-                    any_other_method: O
+                    original_method: s.gl[O.original_method],
+                    any_other_method: v
                 }
             ),
             notifications: this.notificationAnalytics.getCounterAnalytics(this.uuid)
@@ -495,7 +495,7 @@ class G {
     }
     constructor(e) {
         var t, n;
-        N(this, 'game', void 0), N(this, 'uuid', void 0), N(this, 'overlayStatus', void 0), N(this, 'overlayMethod', void 0), N(this, 'overlayMethodStats', void 0), N(this, 'notificationAnalytics', void 0), N(this, 'widgetAnalytics', void 0), N(this, 'screenAnalytics', void 0), N(this, 'uiUnlockedCount', void 0), N(this, 'uiLockedCount', void 0), N(this, 'gameFocusChangedCount', void 0), N(this, 'gameConcurrentGameCount', void 0), N(this, 'overlayMessageAckCount', void 0), N(this, 'overlayMessageCreateCount', void 0), N(this, 'gameTimer', void 0), N(this, 'gameFocusedTimer', void 0), N(this, 'unlockedTimer', void 0), N(this, 'rtcConnectionTimer', void 0), N(this, 'desktopFocusedTimer', void 0), N(this, 'desktopFocusChangedCount', void 0), N(this, 'desktopMessageAckCount', void 0), N(this, 'desktopMessageCreateCount', void 0), N(this, 'soundboardShownTimer', void 0), N(this, 'soundboardShownCount', void 0), N(this, 'soundboardKeepOpenCount', void 0), N(this, 'muteToggledCount', void 0), N(this, '_successfullyShown', void 0), (this.game = e), (this.uuid = U()), (this.overlayMethod = null), (this.overlayMethodStats = null), (this.notificationAnalytics = new M()), (this.widgetAnalytics = new k()), (this.uiUnlockedCount = 0), (this.uiLockedCount = 0), (this.gameFocusChangedCount = 0), (this.gameConcurrentGameCount = 0), (this.overlayMessageAckCount = 0), (this.overlayMessageCreateCount = 0), (this.gameTimer = a.G9.startNew()), (this.gameFocusedTimer = new a.G9()), (this.unlockedTimer = new a.G9()), (this.rtcConnectionTimer = new a.G9()), (this.desktopFocusedTimer = new a.G9()), (this.desktopFocusChangedCount = 0), (this.desktopMessageAckCount = 0), (this.desktopMessageCreateCount = 0), (this.soundboardShownTimer = new a.G9()), (this.soundboardShownCount = 0), (this.soundboardKeepOpenCount = 0), (this.muteToggledCount = 0), (this._successfullyShown = !1), (this.screenAnalytics = new j(e)), (this.overlayStatus = (0, f.b6)(e)), (this.overlayMethod = null != (n = null == (t = this.overlayStatus) ? void 0 : t.overlayMethod) ? n : null), (this.overlayMethodStats = this.buildOverlayMethodStats(this.overlayMethod, e)), G.desktopMainWindowHasFocus && this.desktopFocusedTimer.start(), $.hasConnection() && this.rtcConnectionTimer.start();
+        N(this, 'game', void 0), N(this, 'uuid', void 0), N(this, 'overlayStatus', void 0), N(this, 'overlayMethod', void 0), N(this, 'overlayMethodStats', void 0), N(this, 'notificationAnalytics', void 0), N(this, 'widgetAnalytics', void 0), N(this, 'screenAnalytics', void 0), N(this, 'uiUnlockedCount', void 0), N(this, 'uiLockedCount', void 0), N(this, 'gameFocusChangedCount', void 0), N(this, 'gameConcurrentGameCount', void 0), N(this, 'overlayMessageAckCount', void 0), N(this, 'overlayMessageCreateCount', void 0), N(this, 'gameTimer', void 0), N(this, 'gameFocusedTimer', void 0), N(this, 'unlockedTimer', void 0), N(this, 'rtcConnectionTimer', void 0), N(this, 'desktopFocusedTimer', void 0), N(this, 'desktopFocusChangedCount', void 0), N(this, 'desktopMessageAckCount', void 0), N(this, 'desktopMessageCreateCount', void 0), N(this, 'soundboardShownTimer', void 0), N(this, 'soundboardShownCount', void 0), N(this, 'soundboardKeepOpenCount', void 0), N(this, 'muteToggledCount', void 0), N(this, '_successfullyShown', void 0), (this.game = e), (this.uuid = U()), (this.overlayMethod = null), (this.overlayMethodStats = null), (this.notificationAnalytics = new M()), (this.widgetAnalytics = new k()), (this.uiUnlockedCount = 0), (this.uiLockedCount = 0), (this.gameFocusChangedCount = 0), (this.gameConcurrentGameCount = 0), (this.overlayMessageAckCount = 0), (this.overlayMessageCreateCount = 0), (this.gameTimer = o.G9.startNew()), (this.gameFocusedTimer = new o.G9()), (this.unlockedTimer = new o.G9()), (this.rtcConnectionTimer = new o.G9()), (this.desktopFocusedTimer = new o.G9()), (this.desktopFocusChangedCount = 0), (this.desktopMessageAckCount = 0), (this.desktopMessageCreateCount = 0), (this.soundboardShownTimer = new o.G9()), (this.soundboardShownCount = 0), (this.soundboardKeepOpenCount = 0), (this.muteToggledCount = 0), (this._successfullyShown = !1), (this.screenAnalytics = new j(e)), (this.overlayStatus = (0, f.b6)(e)), (this.overlayMethod = null != (n = null == (t = this.overlayStatus) ? void 0 : t.overlayMethod) ? n : null), (this.overlayMethodStats = this.buildOverlayMethodStats(this.overlayMethod, e)), G.desktopMainWindowHasFocus && this.desktopFocusedTimer.start(), $.hasConnection() && this.rtcConnectionTimer.start();
     }
 }
 function B(e) {
@@ -507,7 +507,7 @@ function B(e) {
     for (let t of e.removed) G.destroy(t), L.verbose('handleRunningGamesChange removed', t);
 }
 function V(e) {
-    if (e.pid === v.DEV_PID) return;
+    if (e.pid === O.DEV_PID) return;
     let t = G.getByPid(e.pid);
     if ((L.verbose('OVERLAY_SET_INPUT_LOCKED', t), null == t)) return void L.error('OVERLAY_SET_INPUT_LOCKED: Unable to find game', e, G.debug);
     t.setLocked(e.locked);
@@ -528,14 +528,14 @@ function Z(e) {
     null != r && (r.initialized || ((r.initialized = !0), (r.pinned = e.pinned)), r.pinned !== e.pinned && ++r.pinnedToggledCount, (r.pinned = e.pinned), r.visibleDuration.toggle(e.visible));
 }
 function H(e) {
-    if ((L.verbose('OVERLAY_FOCUSED', e), G.gameSetAllUnfocused(), null == e.pid || e.pid === v.DEV_PID)) return;
+    if ((L.verbose('OVERLAY_FOCUSED', e), G.gameSetAllUnfocused(), null == e.pid || e.pid === O.DEV_PID)) return;
     let t = G.getByPid(e.pid);
     if (null == t) return void L.error('OVERLAY_FOCUSED: Game not found', e, G.debug);
     t.gameSetFocused(!0);
 }
 function Y(e) {
     var t;
-    if ((L.verbose('SOUNDBOARD_SET_OVERLAY_ENABLED', e), e.pid === v.DEV_PID)) return;
+    if ((L.verbose('SOUNDBOARD_SET_OVERLAY_ENABLED', e), e.pid === O.DEV_PID)) return;
     let n = G.getByPid(e.pid);
     if (null == n) return void L.error('SOUNDBOARD_SET_OVERLAY_ENABLED: Game not found', e, G.debug);
     n.setSoundboardShown(e.enabled, !!e.enabled && null != (t = e.keepOpen) && t);
@@ -561,11 +561,11 @@ function z(e) {
 }
 function q(e) {
     let t = (0, I.Z)();
-    null != t && t !== v.DEV_PID && (L.verbose('AUDIO_TOGGLE_SELF_MUTE', e), G.handleMuteToggled());
+    null != t && t !== O.DEV_PID && (L.verbose('AUDIO_TOGGLE_SELF_MUTE', e), G.handleMuteToggled());
 }
 function Q(e) {
     L.verbose('WINDOW_FOCUS', e);
-    let t = (0, O.UU)();
+    let t = (0, v.UU)();
     if (e.windowId !== t)
         return void L.verbose('WINDOW_FOCUS: Not main window', {
             action: e,
@@ -574,7 +574,7 @@ function Q(e) {
     G.desktopSetFocused(e.focused);
 }
 function X(e) {
-    if (e.pid === v.DEV_PID) return;
+    if (e.pid === O.DEV_PID) return;
     let t = G.getByPid(e.pid);
     if (null == t) return void L.error('OVERLAY_SUCCESSFULLY_SHOWN: Game not found', e, G.debug);
     t.successfullyShown = !0;
@@ -609,7 +609,7 @@ class ee {
         L.verbose('MESSAGE_ACKED', e);
         let t = m.Z.getGame();
         if (null == t) return void L.error('Game not found.');
-        o.Z.dispatch({
+        a.Z.dispatch({
             type: 'OVERLAY_MESSAGE_EVENT_ACTION',
             eventType: 'ack',
             gameName: t.name,
@@ -621,7 +621,7 @@ class ee {
         L.verbose('MESSAGE_CREATE', e, Error().stack);
         let t = m.Z.getGame();
         if (null == t) return void L.error('Game not found.');
-        o.Z.dispatch({
+        a.Z.dispatch({
             type: 'OVERLAY_MESSAGE_EVENT_ACTION',
             eventType: 'create',
             gameName: t.name,

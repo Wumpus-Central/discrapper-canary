@@ -4,10 +4,10 @@ n.d(t, {
 });
 var r = n(697171),
     i = n(288930),
-    a = n(568764),
-    o = 0,
+    o = n(568764),
+    a = 0,
     s = function () {
-        return !!o;
+        return !!a;
     },
     l = 250,
     c = {
@@ -35,7 +35,7 @@ var r = n(697171),
                 if ((void 0 === e && (e = l), !f)) {
                     f = !0;
                     var n = d(e);
-                    (0, a.p)(function () {
+                    (0, o.p)(function () {
                         var i = !1;
                         try {
                             i = (0, r.N)();
@@ -79,5 +79,5 @@ var r = n(697171),
         );
     })())(),
     p = function (e) {
-        !o && e > 0 && _.start(), (o += e) || _.stop();
+        !a && e > 0 && _.start(), (a += e) || _.stop();
     };

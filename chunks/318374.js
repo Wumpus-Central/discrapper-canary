@@ -1,8 +1,8 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(200651),
     i = n(192379),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n.n(s),
     c = n(481060),
@@ -86,10 +86,10 @@ function y() {
             return 'text-xs/medium';
     }
 }
-function v(e) {
-    let { users: t, maxUsers: a, guildId: s, channelId: h, className: g, size: v = c.EFr.SIZE_24, overflowCountVariant: O, overflowCountColor: I = 'interactive-normal', overflowCountClassName: S, hideOverflowCount: T = !1, disableUsernameTooltip: A = !1, disableUserPopout: N = !1, onClick: C, onFocus: R, onUserClick: P, onUserPopoutRequestClose: w } = e,
+function O(e) {
+    let { users: t, maxUsers: o, guildId: s, channelId: h, className: g, size: O = c.EFr.SIZE_24, overflowCountVariant: v, overflowCountColor: I = 'interactive-normal', overflowCountClassName: S, hideOverflowCount: T = !1, disableUsernameTooltip: A = !1, disableUserPopout: N = !1, onClick: C, onFocus: R, onUserClick: P, onUserPopoutRequestClose: w } = e,
         [D, L] = i.useState(!1),
-        x = b(v);
+        x = b(O);
     function M() {
         return (0, r.jsx)(c.VqE, {
             className: p.popoutWrapper,
@@ -133,16 +133,16 @@ function v(e) {
         });
     }
     function k() {
-        let e = t.length - a,
+        let e = t.length - o,
             n = e + 1,
             i = e > 0 && !T,
-            u = Math.min(t.length, a) - 1,
+            u = Math.min(t.length, o) - 1,
             d = l()(t)
-                .take(a)
+                .take(o)
                 .map((e, t) => {
                     let n = _.ZP.getName(e),
-                        a = t === u && !i,
-                        l = o()(p.avatar, x, a && p.isLast);
+                        o = t === u && !i,
+                        l = a()(p.avatar, x, o && p.isLast);
                     return A
                         ? (0, r.jsx)(
                               'div',
@@ -151,7 +151,7 @@ function v(e) {
                                   children: (0, r.jsx)(c.qEK, {
                                       src: e.getAvatarURL(s, 24),
                                       'aria-label': n,
-                                      size: v
+                                      size: O
                                   })
                               },
                               e.id
@@ -164,7 +164,7 @@ function v(e) {
                                   children: (0, r.jsx)(c.qEK, {
                                       src: e.getAvatarURL(s, 24),
                                       'aria-label': n,
-                                      size: v
+                                      size: O
                                   })
                               },
                               e.id
@@ -172,7 +172,7 @@ function v(e) {
                 })
                 .value();
         if (i) {
-            let e = null != O ? O : y(v);
+            let e = null != v ? v : y(O);
             d[d.length - 1] = (0, r.jsx)(
                 c.yRy,
                 {
@@ -182,7 +182,7 @@ function v(e) {
                     onRequestClose: () => L(!1),
                     children: () =>
                         (0, r.jsx)(c.zxk, {
-                            className: o()(p.overflow, x, S),
+                            className: a()(p.overflow, x, S),
                             onFocus: R,
                             onClick: (e) => {
                                 null == C || C(e), L(!0);
@@ -204,7 +204,7 @@ function v(e) {
     return t.length <= 0
         ? null
         : (0, r.jsx)('div', {
-              className: o()(g, p.avatars),
+              className: a()(g, p.avatars),
               children: k()
           });
 }

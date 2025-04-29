@@ -1,13 +1,13 @@
 n.d(t, {
-    U5: () => v,
+    U5: () => O,
     ZP: () => I,
     pp: () => y
 }),
     n(388685);
 var r = n(442837),
     i = n(147913),
-    a = n(460181),
-    o = n(592125),
+    o = n(460181),
+    a = n(592125),
     s = n(131951),
     l = n(944486),
     c = n(979651),
@@ -31,14 +31,14 @@ function h(e, t, n) {
 }
 let m = (e) => e / 400,
     g = !1,
-    E = (0, a.tu)('stage_waiting', 'stage_waiting', m(s.Z.getOutputVolume()));
+    E = (0, o.tu)('stage_waiting', 'stage_waiting', m(s.Z.getOutputVolume()));
 function b() {
     let e = l.Z.getVoiceChannelId();
     if (null == e) {
         E.stop(), (g = !1);
         return;
     }
-    let t = o.Z.getChannel(e);
+    let t = a.Z.getChannel(e);
     if (!(null == t ? void 0 : t.isGuildStageVoice()) || s.Z.isSelfDeaf()) {
         E.stop(), (g = !1);
         return;
@@ -64,17 +64,17 @@ function y(e) {
         i = (0, r.e7)([_.Z], () => _.Z.getStageInstanceByChannel(e));
     return t && null == i && !n;
 }
-function v(e) {
+function O(e) {
     let t = l.Z.getVoiceChannelId() === e,
         n = null != u.Z.getMutableParticipants(e, f.pV.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
         r = _.Z.getStageInstanceByChannel(e);
     return t && null == r && !n;
 }
-class O extends i.Z {
+class v extends i.Z {
     handleVoiceChannelSelect(e) {
         let { channelId: t } = e;
         if (null != t) {
-            let e = o.Z.getChannel(t);
+            let e = a.Z.getChannel(t);
             (null == e ? void 0 : e.isGuildStageVoice()) ? b() : (E.stop(), (g = !1));
         } else E.stop(), (g = !1);
     }
@@ -112,4 +112,4 @@ class O extends i.Z {
             });
     }
 }
-let I = new O();
+let I = new v();
