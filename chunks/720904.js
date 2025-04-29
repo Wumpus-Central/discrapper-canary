@@ -12,8 +12,8 @@ var r = n(120356),
     f = n(695346),
     g = n(496675),
     m = n(768581),
-    b = n(176354),
-    h = n(981631),
+    h = n(176354),
+    b = n(981631),
     p = n(185923),
     O = n(388032),
     y = n(933070);
@@ -72,7 +72,7 @@ function S(e) {
                   animated: !!a,
                   size: 20
               }))
-            : null == s && (s = b.ZP.getURL(c)),
+            : null == s && (s = h.ZP.getURL(c)),
         (0, i.jsx)(
             o.ua7,
             {
@@ -113,7 +113,7 @@ function P(e, t) {
         var n;
         return (
             !(e.useSpriteSheet && j.indexOf(null != (n = e.uniqueName) ? n : '') >= 0) &&
-            !b.ZP.isEmojiPremiumLocked({
+            !h.ZP.isEmojiPremiumLocked({
                 emoji: e,
                 channel: t,
                 intention: p.Hz.REACTION
@@ -123,7 +123,7 @@ function P(e, t) {
     n.length > 4 && (n.length = 4);
     let r = f.nc.useSetting(),
         l = (0, d.$R)(t),
-        m = (0, a.e7)([g.Z], () => r && l && (t.isPrivate() || g.Z.can(h.Plq.ADD_REACTIONS, t)), [t, l, r]),
+        m = (0, a.e7)([g.Z], () => r && l && (t.isPrivate() || g.Z.can(b.Plq.ADD_REACTIONS, t)), [t, l, r]),
         O = (n) => {
             (0, c.rU)(t.id, e.id, (0, u.g1)(n), c.TW.MESSAGE_CONTEXT_MENU);
         };

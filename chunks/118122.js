@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j });
+n.d(t, { Z: () => S });
 var r = n(200651),
     i = n(192379),
     l = n(442837),
@@ -30,7 +30,7 @@ let C = {
         y: 0
     }
 };
-function S(e) {
+function j(e) {
     (0, s.jW)(e, async () => {
         let { default: e } = await n.e('9606').then(n.bind(n, 987578));
         return (t) =>
@@ -64,12 +64,12 @@ function S(e) {
             );
     });
 }
-function j(e) {
+function S(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
         s = (0, l.e7)([f.Z], () => f.Z.getGuilds()),
-        j = i.useMemo(() => Object.values(s), [s]),
+        S = i.useMemo(() => Object.values(s), [s]),
         E = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
-        x = i.useMemo(() => j.some((e) => e.isOwner(E)), [j, E]),
+        x = i.useMemo(() => S.some((e) => e.isOwner(E)), [S, E]),
         I = (0, o.s9z)((e) => (0, o.DEQ)(e, _.PU)),
         { analyticsLocations: P } = (0, a.ZP)(),
         w = (0, u.Q3)('CreateJoinGuildButton'),
@@ -89,7 +89,7 @@ function j(e) {
                     : c.Z.openCreateGuildModal({ location: 'Guild List' });
             },
             selected: I,
-            onContextMenu: S,
+            onContextMenu: j,
             tooltip: O.intl.string(O.t.l5WIbW),
             icon: w ? o.oFk : o.BRu
         });

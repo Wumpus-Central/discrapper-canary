@@ -41,7 +41,7 @@ function _(e) {
     return e;
 }
 function y(e) {
-    var { applicationId: t, stream: i, channel: y, exitFullScreen: C, appContext: x, analyticsLocation: v, guildScheduledEvent: j, shouldPrioritizeGroupPlusIcon: O = !1, isContextlessActivity: E = !1, iconClassName: I, look: P, size: S, buttonText: Z } = e,
+    var { applicationId: t, stream: i, channel: y, exitFullScreen: C, appContext: x, analyticsLocation: v, guildScheduledEvent: j, shouldPrioritizeGroupPlusIcon: O = !1, isContextlessActivity: E = !1, iconClassName: I, look: S, size: P, buttonText: Z } = e,
         N = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -84,8 +84,8 @@ function y(e) {
                   iconComponent: M,
                   label: L,
                   iconClassName: I,
-                  look: P,
-                  size: S,
+                  look: S,
+                  size: P,
                   buttonText: Z
               });
     }
@@ -154,8 +154,8 @@ function y(e) {
                       iconComponent: M,
                       label: L,
                       iconClassName: I,
-                      look: P,
-                      size: S,
+                      look: S,
+                      size: P,
                       buttonText: Z
                   },
                   N

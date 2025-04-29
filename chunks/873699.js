@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var i = n(200651),
     r = n(192379),
     l = n(442837),
@@ -11,12 +11,12 @@ var i = n(200651),
     f = n(768581),
     g = n(176354),
     m = n(981631),
-    b = n(388032);
-function h(e, t) {
+    h = n(388032);
+function b(e, t) {
     let { reducedMotion: n } = r.useContext(a.Sfi),
         f = (0, u.$R)(t),
         g = (0, l.e7)([d.Z], () => d.Z.can(m.Plq.MANAGE_MESSAGES, t) && f, [t, f]),
-        h = e.reactions.reduce((e, t) => {
+        b = e.reactions.reduce((e, t) => {
             var n;
             return (null == (n = t.count_details) ? void 0 : n.vote) != null || null != e.find((e) => (null != e.id && e.id === t.emoji.id) || e.name === t.emoji.name) ? e : [...e, t.emoji];
         }, []),
@@ -24,10 +24,10 @@ function h(e, t) {
             n.shiftKey
                 ? (0, c.$E)(t.id, e.id, i)
                 : o.Z.show({
-                      title: b.intl.string(b.t['73GqT0']),
-                      body: b.intl.string(b.t.dmy5bm),
-                      confirmText: b.intl.string(b.t.p89ACg),
-                      cancelText: b.intl.string(b.t.gm1Ven),
+                      title: h.intl.string(h.t['73GqT0']),
+                      body: h.intl.string(h.t.dmy5bm),
+                      confirmText: h.intl.string(h.t.p89ACg),
+                      cancelText: h.intl.string(h.t.gm1Ven),
                       onConfirm: () => {
                           (0, c.$E)(t.id, e.id, i);
                       }
@@ -37,9 +37,9 @@ function h(e, t) {
         ? null
         : (0, i.jsx)(a.sNh, {
               id: 'remove-emoji-reactions',
-              label: b.intl.string(b.t['zx/e4O']),
+              label: h.intl.string(h.t['zx/e4O']),
               color: 'danger',
-              children: h.map((e) => {
+              children: b.map((e) => {
                   var t, r;
                   return (0, i.jsx)(
                       a.sNh,

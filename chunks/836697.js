@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685), n(539854);
+n.d(t, { Z: () => j }), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -127,14 +127,14 @@ function C(e) {
         })
     );
 }
-function S(e) {
+function j(e) {
     let { onActivate: t } = e,
         n = (0, u.Q3)('PendingGuildJoinRequestsFolderNode'),
-        [l, S] = i.useState(!1),
-        j = (0, s.e7)([f.Z], () => f.Z.getGuildId()),
+        [l, j] = i.useState(!1),
+        S = (0, s.e7)([f.Z], () => f.Z.getGuildId()),
         E = (0, s.e7)([p.Z], () => p.Z.hasFetchedRequestToJoinGuilds),
         x = (0, b.Z)(),
-        I = (0, c.Z)(j),
+        I = (0, c.Z)(S),
         P = i.useMemo(() => {
             let e = (0, m.qQ)({
                 folderId: g.S.PENDING_JOIN_REQUESTS_FOLDER,
@@ -148,10 +148,10 @@ function S(e) {
     i.useEffect(() => {
         l && !E && d.Z.fetchRequestToJoinGuilds();
     }, [l, E]);
-    let w = null != j && x.includes(j);
+    let w = null != S && x.includes(S);
     return (i.useEffect(() => {
-        !l && w && I !== j && S(!0);
-    }, [l, w, I, j]),
+        !l && w && I !== S && j(!0);
+    }, [l, w, I, S]),
     0 === x.length)
         ? null
         : (0, r.jsx)(C, {
@@ -166,7 +166,7 @@ function S(e) {
                       draggable: !1,
                       sorting: !1,
                       onExpandCollapse: () => {
-                          S(!l), h.ZP.clearCoachmark();
+                          j(!l), h.ZP.clearCoachmark();
                       },
                       folderIconContentClassName: v.folderIconContent,
                       folderIconContent: (0, r.jsx)(a.wGF, {

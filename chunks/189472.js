@@ -9,8 +9,8 @@ var r = n(200651),
     d = n(592125),
     u = n(9156),
     m = n(5192),
-    p = n(621600),
-    x = n(981631),
+    x = n(621600),
+    p = n(981631),
     b = n(388032);
 let _ = (e) => {
     let { user: t, channelId: n, reportId: _ } = e,
@@ -22,11 +22,11 @@ let _ = (e) => {
         O = l.useCallback(() => {
             null != h &&
                 (y(!0),
-                o.ZP.trackWithMetadata(x.rMx.IAR_MUTE_USER_BUTTON_CLICKED, {
+                o.ZP.trackWithMetadata(p.rMx.IAR_MUTE_USER_BUTTON_CLICKED, {
                     other_user_id: t.id,
                     report_id: _
                 }),
-                a.Z.updateChannelOverrideSettings(null, h, { muted: !0 }, p.ZB.Muted),
+                a.Z.updateChannelOverrideSettings(null, h, { muted: !0 }, x.ZB.Muted),
                 s.Z.showMuteSuccessToast(t.id, n));
         }, [h, n, t, _]);
     return (0, r.jsx)(c.ZP, {

@@ -9,8 +9,8 @@ var r = n(200651),
     d = n(330010),
     u = n(138201),
     m = n(592125),
-    p = n(430824),
-    x = n(496675),
+    x = n(430824),
+    p = n(496675),
     b = n(944486),
     _ = n(981631),
     h = n(388032);
@@ -63,11 +63,11 @@ let f = (e) => {
                         });
                     });
         }, [t.id, y, O, n]),
-        C = (0, i.e7)([x.Z, p.Z], () => {
-            let e = p.Z.getGuild(y);
+        C = (0, i.e7)([p.Z, x.Z], () => {
+            let e = x.Z.getGuild(y);
             if (null == e) return !1;
-            let n = x.Z.can(_.Plq.MANAGE_GUILD, e),
-                r = null == t.bot || x.Z.canManageUser(_.Plq.MANAGE_GUILD, t.bot.id, e);
+            let n = p.Z.can(_.Plq.MANAGE_GUILD, e),
+                r = null == t.bot || p.Z.canManageUser(_.Plq.MANAGE_GUILD, t.bot.id, e);
             return n && r;
         });
     return null != t && null != y && f && C

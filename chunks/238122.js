@@ -10,7 +10,7 @@ var r = n(200651),
 let u = (e) => {
         var t, n;
         let {
-                data: { title: u, subtitle: m, placeholder: p, rows: x, character_limit: b, pattern: _ },
+                data: { title: u, subtitle: m, placeholder: x, rows: p, character_limit: b, pattern: _ },
                 onChange: h,
                 initialText: f,
                 isRequired: g
@@ -106,8 +106,8 @@ let u = (e) => {
                     onChange: I,
                     value: j,
                     error: O,
-                    rows: x,
-                    placeholder: p,
+                    rows: p,
+                    placeholder: x,
                     autoFocus: !0
                 }),
                 null != m &&

@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(544989),
     E = n(481932),
     I = n(664794),
-    P = n(4517),
-    S = n(277117),
+    S = n(4517),
+    P = n(277117),
     Z = n(52639),
     N = n(228168),
     T = n(388032),
@@ -146,7 +146,7 @@ function R(e) {
                                             themeType: N.lY.SIDEBAR,
                                             onOpenProfile: k ? void 0 : z
                                         }),
-                                        (0, r.jsx)(P.Z, {
+                                        (0, r.jsx)(S.Z, {
                                             location: 'UserProfileSiebar',
                                             user: t,
                                             channelId: R.id,
@@ -155,7 +155,7 @@ function R(e) {
                                         t.isClyde() && (0, r.jsx)(p.Z, { className: A.headerTag })
                                     ]
                                 }),
-                                (0, r.jsx)(S.Z, {
+                                (0, r.jsx)(P.Z, {
                                     user: t,
                                     currentUser: n,
                                     displayProfile: M,

@@ -224,6 +224,8 @@ let eN = (0, u.Un)({
                         guildId: l,
                         powerupSkuId: n.get('powerupSkuId')
                     });
+                case eE.oC.REPORT_TO_MOD:
+                    return (0, r.jsx)(T.Z, {});
                 default:
                     (0, es.vE)(a);
             }

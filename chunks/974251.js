@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(433355),
     E = n(819640),
     I = n(375954),
-    P = n(496675),
-    S = n(885110),
+    S = n(496675),
+    P = n(885110),
     Z = n(585483),
     N = n(358085),
     T = n(127654),
@@ -84,7 +84,7 @@ let F = i.memo(function (e) {
     let { className: F, channel: H, draftType: V, editorTextContent: z, setValue: W, canOnlyUseTextCommands: Y } = e,
         q = (0, p.bp)(),
         K = i.useRef(null),
-        X = (0, a.e7)([S.Z], () => S.Z.getActivities()),
+        X = (0, a.e7)([P.Z], () => P.Z.getActivities()),
         Q = (0, a.e7)([m.Z], () => m.Z.getSettings().clipsEnabled),
         J = (0, a.e7)([m.Z], () => m.Z.getLastClipsSession()),
         $ = (0, a.Wu)([m.Z], () => m.Z.getNewClipIds()),
@@ -97,7 +97,7 @@ let F = i.memo(function (e) {
         [eo, ea] = i.useState(null),
         es = (0, f.Go)() && (Q || el),
         ec = H.isPrivate(),
-        eu = (0, a.e7)([P.Z], () => ec || (P.Z.can(k.Plq.ATTACH_FILES, H) && P.Z.can(k.Plq.SEND_MESSAGES, H))),
+        eu = (0, a.e7)([S.Z], () => ec || (S.Z.can(k.Plq.ATTACH_FILES, H) && S.Z.can(k.Plq.SEND_MESSAGES, H))),
         ed = (0, d.Z)(J);
     (null == ed ? void 0 : ed.newClipIds.length) !== (null == J ? void 0 : J.newClipIds.length) && (null != (t = null == J ? void 0 : J.newClipIds.length) ? t : 0) > 0 && null == eo && en && ee && !er && !et && !ei && ea('recentClips');
     let ep = (e, t, n) => {
@@ -171,7 +171,7 @@ let F = i.memo(function (e) {
                   }
                 : 8
             : void 0,
-        eP = (0, r.jsx)(c.yRy, {
+        eS = (0, r.jsx)(c.yRy, {
             shouldShow: null != eo,
             animation: c.yRy.Animation.NONE,
             align: 'recentClips' === eo ? 'center' : 'left',
@@ -263,7 +263,7 @@ let F = i.memo(function (e) {
                     animationContainerClassName: U.buttonAnimation,
                     glowClassName: U.buttonAnimationGlow,
                     trinketsClassName: U.buttonAnimationTrinkets,
-                    children: eP
+                    children: eS
                 })
             })
         ]

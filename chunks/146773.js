@@ -20,7 +20,7 @@ var i = n(155281),
     O = n(281029),
     v = n(700785),
     C = n(981631);
-function S(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,7 +45,7 @@ function S(e) {
     }
     return e;
 }
-let j = 'DRAGGABLE_GUILD_CHANNEL';
+let S = 'DRAGGABLE_GUILD_CHANNEL';
 function E(e, t) {
     var n, r;
     if (null == e || null == t) return null;
@@ -56,7 +56,7 @@ function E(e, t) {
 }
 function x(e) {
     return (0, i.G)(
-        j,
+        S,
         {
             drop(e, t) {
                 let n,
@@ -97,7 +97,7 @@ function x(e) {
                                 var l, o;
                                 return (0, r.jsx)(
                                     c.default,
-                                    ((l = S({}, t)),
+                                    ((l = j({}, t)),
                                     (o = o =
                                         {
                                             channel: u,
@@ -164,7 +164,7 @@ function x(e) {
         }
     )(
         (0, l.E)(
-            j,
+            S,
             {
                 canDrag(e) {
                     let { channel: t } = e;
@@ -176,7 +176,7 @@ function x(e) {
                             'true' !== o.K.get('doNotShowReorderModal') &&
                                 (0, s.ZDy)(async () => {
                                     let { default: e } = await n.e('82560').then(n.bind(n, 391312));
-                                    return (t) => (0, r.jsx)(e, S({}, t));
+                                    return (t) => (0, r.jsx)(e, j({}, t));
                                 }),
                             !1
                         );

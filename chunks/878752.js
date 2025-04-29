@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(704215),
@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(997614),
     E = n(159909),
     I = n(531675);
-function P(e) {
-    let { channel: t, hasActiveStream: n, showRightDivider: P, themeable: S = !1 } = e,
+function S(e) {
+    let { channel: t, hasActiveStream: n, showRightDivider: S, themeable: P = !1 } = e,
         { analyticsLocations: Z } = (0, a.ZP)(o.Z.VOICE_CONTROL_TRAY),
         N = (0, b.Z)({ location: 'VoiceEffectsActionBar' }),
         T = (0, h.Ou)(t),
@@ -55,7 +55,7 @@ function P(e) {
                     H &&
                         (0, r.jsx)(O.Z, {
                             channel: t,
-                            themeable: S
+                            themeable: P
                         }),
                     V && (0, r.jsx)(v.Z, { channel: t }),
                     z && (0, r.jsx)(y.Z, { channel: t }),
@@ -76,7 +76,7 @@ function P(e) {
                     W && (0, r.jsx)(E.Z, {})
                 ]
             }),
-            P && (H || V || z || B || T || W) && (0, r.jsx)('div', { className: I.divider })
+            S && (H || V || z || B || T || W) && (0, r.jsx)('div', { className: I.divider })
         ]
     });
 }

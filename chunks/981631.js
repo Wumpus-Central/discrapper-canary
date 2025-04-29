@@ -731,6 +731,7 @@ let A = Object.freeze({
         DISCORDIFY_ME: '/users/@me/avatars/discordify',
         BADGE_ICON: (t) => '/badge-icons/'.concat(t, '.png'),
         FINISH_MFA_CHECK: '/mfa/finish',
+        CREATE_REVERSE_TRIAL: '/user-offers/reverse-trial',
         CREATE_USER_OFFER: (t, e) => '/user-offers/create/'.concat(e, '/').concat(t),
         UPDATE_USER_OFFER: (t, e) => '/user-offers/'.concat(e, '/').concat(t),
         USER_OFFERS: '/user-offers',

@@ -19,8 +19,8 @@ var r = n(200651),
     O = n(728492);
 let v = (0, m.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     C = (0, m.Mg)(u.Z.FOLDER_ITEM_GUILD_ICON_SIZE),
-    S = ['13px 4px 4px 4px', '4px 13px 4px 4px', '4px 4px 4px 13px', '4px 4px 13px 4px'];
-function j(e) {
+    j = ['13px 4px 4px 4px', '4px 13px 4px 4px', '4px 4px 4px 13px', '4px 4px 13px 4px'];
+function S(e) {
     let { guildId: t, animate: n, index: i } = e,
         l = (0, c.e7)([g.Z], () => g.Z.getGuild(t), [t]),
         o = (0, p.Q3)('GuildIcon'),
@@ -38,7 +38,7 @@ function j(e) {
               lossless: o,
               className: O.guildIcon,
               tabIndex: -1,
-              style: o ? { borderRadius: S[i] } : void 0
+              style: o ? { borderRadius: j[i] } : void 0
           });
 }
 function E(e) {
@@ -50,7 +50,7 @@ function E(e) {
         g = null != h ? h : y.Wyy,
         m = g === y.Wyy,
         b = f.map((e) => e.id),
-        [_, S] = i.useState(!1),
+        [_, j] = i.useState(!1),
         [E, x] = i.useState(c),
         I = u ? (c ? 22 : -11) : c ? 0 : -C,
         P = (0, d.q_F)(
@@ -58,10 +58,10 @@ function E(e) {
                 transform: 'translate3d(0, '.concat(I, 'px, 0)'),
                 config: { duration: v },
                 onStart() {
-                    S(!0), x(c);
+                    j(!0), x(c);
                 },
                 onRest() {
-                    S(!1), x(c);
+                    j(!1), x(c);
                 }
             },
             'animate-always'
@@ -83,7 +83,7 @@ function E(e) {
                 className: O.closedFolderIconWrapper,
                 children: b.slice(0, 4).map((e, t) =>
                     (0, r.jsx)(
-                        j,
+                        S,
                         {
                             index: t,
                             guildId: e,
@@ -115,8 +115,8 @@ function x(e) {
             folderGroupId: y,
             folderIconContentClassName: v,
             folderIconContent: C,
-            onClick: S,
-            onContextMenu: j,
+            onClick: j,
+            onContextMenu: S,
             onHoverChange: x,
             onKeyDown: I,
             treeItemProps: { onFocus: P },
@@ -194,8 +194,8 @@ function x(e) {
             })(
                 {
                     className: o()(O.folder, { [O.hover]: T }),
-                    onClick: S,
-                    onContextMenu: j,
+                    onClick: j,
+                    onContextMenu: S,
                     onMouseEnter: R,
                     onMouseLeave: D,
                     onKeyDown: I,

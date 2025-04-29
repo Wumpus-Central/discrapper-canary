@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => p });
 var r = n(200651),
     l = n(192379),
     i = n(442837),
@@ -9,9 +9,9 @@ var r = n(200651),
     d = n(699516),
     u = n(5192),
     m = n(981631),
-    p = n(388032);
-let x = (e) => {
-    let { user: t, channelId: n, reportId: x } = e,
+    x = n(388032);
+let p = (e) => {
+    let { user: t, channelId: n, reportId: p } = e,
         { isIgnored: b, isBlocked: _ } = (0, i.cj)(
             [d.Z],
             () => ({
@@ -25,15 +25,15 @@ let x = (e) => {
         g = l.useCallback(() => {
             o.ZP.trackWithMetadata(m.rMx.IAR_IGNORE_USER_BUTTON_CLICKED, {
                 other_user_id: t.id,
-                report_id: x
+                report_id: p
             }),
                 a.Z.ignoreUser(t.id, 'web_iar_ignore_user_element', n);
-        }, [t, x, n]),
+        }, [t, p, n]),
         v = l.useMemo(() => b || _, [b, _]);
     return (0, r.jsx)(s.ZP, {
-        title: p.intl.formatToPlainString(p.t.U3yyFh, { username: f }),
-        description: p.intl.string(p.t.naWE6e),
-        buttonText: v ? p.intl.string(p.t.nDdxOD) : p.intl.string(p.t.ICYEfX),
+        title: x.intl.formatToPlainString(x.t.U3yyFh, { username: f }),
+        description: x.intl.string(x.t.naWE6e),
+        buttonText: v ? x.intl.string(x.t.nDdxOD) : x.intl.string(x.t.ICYEfX),
         buttonDisabled: v,
         onButtonPress: g
     });

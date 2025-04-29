@@ -19,8 +19,8 @@ var r = n(200651),
     O = n(252686),
     v = n(682662),
     C = n(662146),
-    S = n(388032),
-    j = n(728492),
+    j = n(388032),
+    S = n(728492),
     E = n(335426);
 let x = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
     I = (0, a.animated)(d.Kqy),
@@ -56,7 +56,7 @@ let x = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 },
                 [L, a]
             ),
-            et = null != F && '' !== F ? F : null != N && '' !== N ? N : S.intl.string(S.t.xV9hVl),
+            et = null != F && '' !== F ? F : null != N && '' !== N ? N : j.intl.string(j.t.xV9hVl),
             en = (0, c.Ie)(''.concat(H)),
             er = 'folder-items-'.concat(H),
             ei = (function (e) {
@@ -95,7 +95,7 @@ let x = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                       J(e);
                                   }
                                 : void 0,
-                            className: o()(j.folderIcon, { [E.wobble]: !X && K && !a }),
+                            className: o()(S.folderIcon, { [E.wobble]: !X && K && !a }),
                             'data-dnd-name': et,
                             children: X
                                 ? (0, r.jsx)(O.Z, {})
@@ -132,15 +132,15 @@ let x = (0, g.Mg)(u.Z.FOLDER_ITEM_ANIMATION_DURATION),
             });
         return (0, r.jsxs)('div', {
             ref: eo,
-            className: o()(j.wrapper, a && j.isExpanded),
+            className: o()(S.wrapper, a && S.isExpanded),
             'data-drop-hovering': K,
             children: [
                 !X &&
                     a &&
                     (0, r.jsx)('span', {
-                        className: o()(j.expandedFolderBackground, {
-                            [j.collapsed]: !a,
-                            [j.hover]: Q
+                        className: o()(S.expandedFolderBackground, {
+                            [S.collapsed]: !a,
+                            [S.hover]: Q
                         })
                     }),
                 es,

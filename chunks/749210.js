@@ -250,19 +250,25 @@ let G = {
             rejectWithError: !0
         });
     },
-    kickUser: (e, t, n) =>
+    kickUser: (e, t, n, r) =>
         a.tn.del({
             url: A.ANM.GUILD_MEMBER(e, t),
-            reason: n,
+            query: {
+                reason: n,
+                moderator_report_id: r
+            },
             oldFormErrors: !0,
             rejectWithError: !1
         }),
     setCommunicationDisabledUntil(e) {
-        let { guildId: t, userId: n, communicationDisabledUntilTimestamp: i, duration: a, reason: o, location: s } = e;
+        let { guildId: t, userId: n, communicationDisabledUntilTimestamp: i, duration: a, reason: o, location: s, moderatorReportId: l } = e;
         return S.Z.patch({
             url: A.ANM.GUILD_MEMBER(t, n),
             reason: o,
-            body: { communication_disabled_until: i },
+            body: {
+                communication_disabled_until: i,
+                moderator_report_id: l
+            },
             oldFormErrors: !0,
             trackedActionData: {
                 event: r.NetworkActionNames.USER_COMMUNICATION_DISABLED_UPDATE,
@@ -278,11 +284,14 @@ let G = {
             rejectWithError: !1
         });
     },
-    banUser: (e, t, n, r) =>
+    banUser: (e, t, n, r, i) =>
         a.tn.put({
             url: A.ANM.GUILD_BAN(e, t),
             reason: r,
-            body: { delete_message_seconds: n },
+            body: {
+                delete_message_seconds: n,
+                moderator_report_id: i
+            },
             oldFormErrors: !0,
             rejectWithError: !1
         }),

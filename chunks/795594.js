@@ -1,6 +1,6 @@
 n.d(t, {
-    J: () => ev,
-    Z: () => eO
+    J: () => ey,
+    Z: () => ev
 }),
     n(539854),
     n(388685),
@@ -50,25 +50,24 @@ var r = n(200651),
     F = n(246946),
     Z = n(9156),
     H = n(768581),
-    Y = n(585483),
-    W = n(630388),
-    K = n(49012),
-    z = n(621600),
-    q = n(709054),
-    Q = n(706454),
-    X = n(210887),
-    J = n(675478),
-    $ = n(581883),
-    ee = n(436267),
-    et = n(494620),
-    en = n(869743),
-    er = n(981631),
-    ei = n(468788),
-    ea = n(388032),
-    eo = n(989604),
-    es = n(73433),
-    el = n(20493);
-function ec(e, t, n) {
+    Y = n(630388),
+    W = n(49012),
+    K = n(621600),
+    z = n(709054),
+    q = n(706454),
+    Q = n(210887),
+    X = n(675478),
+    J = n(581883),
+    $ = n(436267),
+    ee = n(494620),
+    et = n(869743),
+    en = n(981631),
+    er = n(468788),
+    ei = n(388032),
+    ea = n(989604),
+    eo = n(73433),
+    es = n(20493);
+function el(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -81,7 +80,7 @@ function ec(e, t, n) {
         e
     );
 }
-function eu(e) {
+function ec(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -92,12 +91,12 @@ function eu(e) {
                 })
             )),
             r.forEach(function (t) {
-                ec(e, t, n[t]);
+                el(e, t, n[t]);
             });
     }
     return e;
 }
-function ed(e, t) {
+function eu(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -109,40 +108,40 @@ function ed(e, t) {
     }
     return n;
 }
-function ef(e, t) {
+function ed(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : ed(Object(t)).forEach(function (n) {
+            : eu(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let e_ = _.ZP.connectStores([X.Z], () => ({ theme: X.Z.theme }))(g.ubH);
-function ep(e) {
+let ef = _.ZP.connectStores([Q.Z], () => ({ theme: Q.Z.theme }))(g.ubH);
+function e_(e) {
     let { application: t, className: n } = e;
     return (0, r.jsxs)('div', {
-        className: o()(eo.twoWayWarning, n),
+        className: o()(ea.twoWayWarning, n),
         children: [
             (0, r.jsx)(g.d3s, {
                 size: 'md',
                 color: 'currentColor',
-                className: eo.twoWayWarningIcon
+                className: ea.twoWayWarningIcon
             }),
             (0, r.jsx)(g.Text, {
                 color: 'text-normal',
                 variant: 'text-sm/medium',
-                children: ea.intl.format(ea.t.jUhnwc, {
+                children: ei.intl.format(ei.t.jUhnwc, {
                     applicationName: t.name,
-                    onConnectionPress: () => O.Z.setSection(er.jXE.SETTINGS_CONNECTIONS)
+                    onConnectionPress: () => O.Z.setSection(en.jXE.SETTINGS_CONNECTIONS)
                 })
             })
         ]
     });
 }
-let eh = (e) => {
+let ep = (e) => {
         let { disclosure: t } = e;
         return i.useMemo(() => {
             switch (t) {
@@ -150,16 +149,16 @@ let eh = (e) => {
                     return (0, r.jsx)(g.enf, {
                         size: 'md',
                         color: 'currentColor',
-                        className: eo.disclosureIcon
+                        className: ea.disclosureIcon
                     });
                 case p.u$.DISPLAYS_ADVERTISEMENTS:
-                    return (0, r.jsx)(g.FLu, { className: eo.disclosureIcon });
+                    return (0, r.jsx)(g.FLu, { className: ea.disclosureIcon });
                 default:
-                    return (0, r.jsx)(g.d3s, { className: eo.disclosureIcon });
+                    return (0, r.jsx)(g.d3s, { className: ea.disclosureIcon });
             }
         }, [t]);
     },
-    em = (e, t, n) => {
+    eh = (e, t, n) => {
         (0, M.uu)({
             application: e,
             entrypoint: 'authorized_apps_settings',
@@ -167,42 +166,42 @@ let eh = (e) => {
             contextualChannelId: n
         });
     },
-    eg = (e, t) => {
-        let n = ea.intl.string(ea.t.DT39Aw),
-            i = ea.intl.formatToPlainString(ea.t.QWGvxM, { applicationName: e.name });
+    em = (e, t) => {
+        let n = ei.intl.string(ei.t.DT39Aw),
+            i = ei.intl.formatToPlainString(ei.t.QWGvxM, { applicationName: e.name });
         return (
             (0, w.Z)(e) &&
-                ((n = ea.intl.formatToPlainString(ea.t['paC+UV'], { applicationName: e.name })),
+                ((n = ei.intl.formatToPlainString(ei.t['paC+UV'], { applicationName: e.name })),
                 (i = (0, r.jsxs)(r.Fragment, {
                     children: [
-                        ea.intl.formatToPlainString(ea.t.inM1Ym, { applicationName: e.name }),
-                        (0, r.jsx)(et.Z, {
-                            look: et.z.WARNING,
-                            className: eo.infoBox,
-                            children: ea.intl.string(ea.t.LY35Z2)
+                        ei.intl.formatToPlainString(ei.t.inM1Ym, { applicationName: e.name }),
+                        (0, r.jsx)(ee.Z, {
+                            look: ee.z.WARNING,
+                            className: ea.infoBox,
+                            children: ei.intl.string(ei.t.LY35Z2)
                         })
                     ]
                 }))),
-            (0, ee.Z)(e.id) &&
+            (0, $.Z)(e.id) &&
                 (i = (0, r.jsxs)(r.Fragment, {
                     children: [
                         i,
-                        (0, r.jsx)(et.Z, {
-                            className: eo.infoBox,
-                            children: ea.intl.format(ea.t.KRnERk, { applicationName: e.name })
+                        (0, r.jsx)(ee.Z, {
+                            className: ea.infoBox,
+                            children: ei.intl.format(ei.t.KRnERk, { applicationName: e.name })
                         })
                     ]
                 })),
             (0, g.h7j)((e) =>
                 (0, r.jsx)(
                     S.default,
-                    eu(
+                    ec(
                         {
                             title: n,
                             body: i,
-                            confirmText: ea.intl.string(ea.t.xUqheH),
+                            confirmText: ei.intl.string(ei.t.xUqheH),
                             confirmColor: g.Ttl.RED,
-                            cancelText: ea.intl.string(ea.t['ETE/oK']),
+                            cancelText: ei.intl.string(ei.t['ETE/oK']),
                             onConfirm: t
                         },
                         e
@@ -211,39 +210,39 @@ let eh = (e) => {
             )
         );
     },
-    eE = (e) => {
+    eg = (e) => {
         let { application: t, isVisible: n } = e,
             i = () => {
                 null != t.terms_of_service_url &&
-                    (0, K.q)({
+                    (0, W.q)({
                         href: t.terms_of_service_url,
                         shouldConfirm: !0
                     });
             },
             a = () => {
                 null != t.privacy_policy_url &&
-                    (0, K.q)({
+                    (0, W.q)({
                         href: t.privacy_policy_url,
                         shouldConfirm: !0
                     });
             };
         return null != t.terms_of_service_url || null != t.privacy_policy_url
             ? (0, r.jsxs)('div', {
-                  className: eo.tosPrivacy,
+                  className: ea.tosPrivacy,
                   children: [
                       null != t.terms_of_service_url
                           ? (0, r.jsxs)(m.P, {
                                 tag: 'a',
                                 onClick: i,
-                                className: eo.tos,
+                                className: ea.tos,
                                 tabIndex: n ? 0 : -1,
                                 children: [
                                     (0, r.jsx)(g.R94, {
-                                        className: eo.link,
-                                        children: ea.intl.string(ea.t['lx+GeX'])
+                                        className: ea.link,
+                                        children: ei.intl.string(ei.t['lx+GeX'])
                                     }),
                                     (0, r.jsx)(g.Gr1, {
-                                        className: eo.externalLinkIcon,
+                                        className: ea.externalLinkIcon,
                                         color: 'var(--text-link)'
                                     })
                                 ]
@@ -251,21 +250,21 @@ let eh = (e) => {
                           : null,
                       null != t.privacy_policy_url
                           ? (0, r.jsxs)('div', {
-                                className: eo.privacy,
+                                className: ea.privacy,
                                 children: [
-                                    null != t.terms_of_service_url ? (0, r.jsx)('div', { className: eo.divider }) : null,
+                                    null != t.terms_of_service_url ? (0, r.jsx)('div', { className: ea.divider }) : null,
                                     (0, r.jsxs)(m.P, {
                                         tag: 'a',
                                         onClick: a,
-                                        className: eo.privacy,
+                                        className: ea.privacy,
                                         tabIndex: n ? 0 : -1,
                                         children: [
                                             (0, r.jsx)(g.R94, {
-                                                className: eo.link,
-                                                children: ea.intl.string(ea.t.okSwq6)
+                                                className: ea.link,
+                                                children: ei.intl.string(ei.t.okSwq6)
                                             }),
                                             (0, r.jsx)(g.Gr1, {
-                                                className: eo.externalLinkIcon,
+                                                className: ea.externalLinkIcon,
                                                 color: 'var(--text-link)'
                                             })
                                         ]
@@ -277,26 +276,26 @@ let eh = (e) => {
               })
             : null;
     },
-    eb = (e) => {
+    eE = (e) => {
         let { scopes: t, application: a, selectedChannelId: s, selectedGuildId: l, onDelete: c, disclosures: u, locale: d, id: _ } = e,
             p = i.useMemo(() => U.ZP.createFromServer(a), [a]),
             h = x.Z.useExperiment({ location: 'Authorized Applications' }, { autoTrackExposure: !0 }).enabled,
             m = () => {
                 let e = [];
-                for (let n of t) e.push(...(0, j.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(ea.intl.string(ea.t.Ls2XRk));
+                for (let n of t) e.push(...(0, j.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(ei.intl.string(ei.t.Ls2XRk));
                 if (e.length > 0 || (null != u && u.length > 0))
                     return (0, r.jsx)(g.xJW, {
                         faded: !0,
-                        title: ea.intl.string(ea.t.xrmhRU),
-                        className: el.marginTop20,
+                        title: ei.intl.string(ei.t.xrmhRU),
+                        className: es.marginTop20,
                         children: (0, r.jsxs)('ul', {
                             children: [
                                 e.map((e, t) =>
                                     (0, r.jsxs)(
                                         'li',
                                         {
-                                            className: eo.permission,
-                                            children: [(0, r.jsx)('i', { className: eo.permissionCheckmark }), (0, r.jsx)(g.R94, { children: e })]
+                                            className: ea.permission,
+                                            children: [(0, r.jsx)('i', { className: ea.permissionCheckmark }), (0, r.jsx)(g.R94, { children: e })]
                                         },
                                         t
                                     )
@@ -309,8 +308,8 @@ let eh = (e) => {
                                               ? (0, r.jsxs)(
                                                     'li',
                                                     {
-                                                        className: eo.permission,
-                                                        children: [(0, r.jsx)(eh, { disclosure: t }), (0, r.jsx)(g.R94, { children: i })]
+                                                        className: ea.permission,
+                                                        children: [(0, r.jsx)(ep, { disclosure: t }), (0, r.jsx)(g.R94, { children: i })]
                                                     },
                                                     n + e.length
                                                 )
@@ -324,20 +323,20 @@ let eh = (e) => {
                 if (null != a.description && '' !== a.description)
                     return (0, r.jsx)(g.xJW, {
                         faded: !0,
-                        title: ea.intl.string(ea.t.GfRGra),
+                        title: ei.intl.string(ei.t.GfRGra),
                         children: (0, r.jsx)(g.R94, { children: a.description })
                     });
             },
             b = (0, L.Z)({
                 id: a.id,
-                label: ea.intl.string(ea.t['+NP/b2'])
+                label: ei.intl.string(ei.t['+NP/b2'])
             }),
             v = i.useMemo(() => {
                 if (null != b)
                     return (e) => {
                         (0, y.jW)(e, async () => {
                             let { default: e } = await n.e('78040').then(n.bind(n, 599382));
-                            return (t) => (0, r.jsx)(e, ef(eu({}, t), { items: [b] }));
+                            return (t) => (0, r.jsx)(e, ed(ec({}, t), { items: [b] }));
                         });
                     };
             }, [b]),
@@ -349,7 +348,7 @@ let eh = (e) => {
                     t =
                         null != e
                             ? (0, r.jsx)(D.Z.Child, {
-                                  className: eo.appAvatar,
+                                  className: ea.appAvatar,
                                   grow: 0,
                                   children: (0, r.jsx)('img', {
                                       src: e,
@@ -357,23 +356,23 @@ let eh = (e) => {
                                   })
                               })
                             : null,
-                    n = new Date(q.default.extractTimestamp(_)).toLocaleDateString(d);
+                    n = new Date(z.default.extractTimestamp(_)).toLocaleDateString(d);
                 return (0, r.jsxs)('div', {
-                    className: o()(eo.header, el.marginBottom20),
+                    className: o()(ea.header, es.marginBottom20),
                     children: [
                         t,
                         (0, r.jsxs)('div', {
-                            className: eo.headerTextContainer,
+                            className: ea.headerTextContainer,
                             children: [
                                 (0, r.jsx)(g.X6q, {
                                     variant: 'text-sm/semibold',
-                                    className: eo.headerText,
+                                    className: ea.headerText,
                                     children: a.name
                                 }),
                                 (0, r.jsx)(g.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'text-normal',
-                                    children: ea.intl.format(ea.t.yOApCA, { date: n })
+                                    children: ei.intl.format(ei.t.yOApCA, { date: n })
                                 })
                             ]
                         }),
@@ -382,54 +381,54 @@ let eh = (e) => {
                                   color: g.Ttl.TRANSPARENT,
                                   look: g.iLD.LINK,
                                   size: g.PhG.SMALL,
-                                  className: eo.reportButton,
-                                  onClick: () => em(p, l, s),
-                                  children: ea.intl.string(ea.t['+78Pfn'])
+                                  className: ea.reportButton,
+                                  onClick: () => eh(p, l, s),
+                                  children: ei.intl.string(ei.t['+78Pfn'])
                               })
                             : null,
                         (0, r.jsx)(g.zxk, {
                             color: g.Ttl.RED,
                             look: g.iLD.OUTLINED,
                             size: g.PhG.SMALL,
-                            onClick: () => eg(a, c),
-                            children: ea.intl.string(ea.t.xUqheH)
+                            onClick: () => em(a, c),
+                            children: ei.intl.string(ei.t.xUqheH)
                         })
                     ]
                 });
             },
-            I = (0, ee.O)(a.id);
+            I = (0, $.O)(a.id);
         return (0, r.jsx)(g.Zbd, {
-            className: o()(eo.authedApp, el.marginBottom8),
+            className: o()(ea.authedApp, es.marginBottom8),
             outline: !0,
             onContextMenu: v,
             children: (0, r.jsxs)(g.y5t, {
                 component: O(),
                 children: [
                     E(),
-                    (0, r.jsx)(eE, {
+                    (0, r.jsx)(eg, {
                         application: a,
                         isVisible: !0
                     }),
                     m(),
                     I &&
-                        (0, r.jsx)(ep, {
+                        (0, r.jsx)(e_, {
                             application: a,
-                            className: eo.twoWayWarningV1
+                            className: ea.twoWayWarningV1
                         })
                 ]
             })
         });
     },
-    ey = (e) => {
+    eb = (e) => {
         let { scopes: t, application: a, selectedChannelId: s, selectedGuildId: l, onDelete: c, disclosures: d, locale: p, id: E } = e,
             y = a.id,
             O = i.useMemo(() => U.ZP.createFromServer(a), [a]),
-            I = (0, W.yE)(O.flags, er.udG.EMBEDDED),
+            I = (0, Y.yE)(O.flags, en.udG.EMBEDDED),
             S = (0, _.e7)(
-                [$.Z],
+                [J.Z],
                 () => {
                     var e, t, n, r;
-                    return null == (r = $.Z.settings.applications) || null == (n = r.appSettings) || null == (t = n[y]) || null == (e = t.appDmSettings) ? void 0 : e.allowMobilePush;
+                    return null == (r = J.Z.settings.applications) || null == (n = r.appSettings) || null == (t = n[y]) || null == (e = t.appDmSettings) ? void 0 : e.allowMobilePush;
                 },
                 [y]
             ),
@@ -449,23 +448,23 @@ let eh = (e) => {
             ),
             [M, G] = i.useState(!1),
             [V, F] = i.useState(!1),
-            Y = x.Z.useExperiment({ location: 'Authorized Applications' }, { autoTrackExposure: !0 }).enabled,
-            K = () => {
+            W = x.Z.useExperiment({ location: 'Authorized Applications' }, { autoTrackExposure: !0 }).enabled,
+            q = () => {
                 let e = [];
-                for (let n of t) e.push(...(0, j.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(ea.intl.string(ea.t.Ls2XRk));
+                for (let n of t) e.push(...(0, j.CI)(n, t)), n === f.x.APPLICATIONS_COMMANDS && e.push(ei.intl.string(ei.t.Ls2XRk));
                 if (e.length > 0 || (null != d && d.length > 0))
                     return (0, r.jsx)(g.zF9, {
-                        className: eo.appDetailsSection,
+                        className: ea.appDetailsSection,
                         isExpanded: V,
                         collapsibleContent: (0, r.jsxs)('ul', {
-                            className: eo.appDetailsContent,
+                            className: ea.appDetailsContent,
                             children: [
                                 e.map((e, t) =>
                                     (0, r.jsxs)(
                                         'li',
                                         {
-                                            className: eo.permission,
-                                            children: [(0, r.jsx)('i', { className: eo.permissionCheckmark }), (0, r.jsx)(g.R94, { children: e })]
+                                            className: ea.permission,
+                                            children: [(0, r.jsx)('i', { className: ea.permissionCheckmark }), (0, r.jsx)(g.R94, { children: e })]
                                         },
                                         t
                                     )
@@ -478,8 +477,8 @@ let eh = (e) => {
                                               ? (0, r.jsxs)(
                                                     'li',
                                                     {
-                                                        className: eo.permission,
-                                                        children: [(0, r.jsx)(eh, { disclosure: t }), (0, r.jsx)(g.R94, { children: i })]
+                                                        className: ea.permission,
+                                                        children: [(0, r.jsx)(ep, { disclosure: t }), (0, r.jsx)(g.R94, { children: i })]
                                                     },
                                                     n + e.length
                                                 )
@@ -492,7 +491,7 @@ let eh = (e) => {
                             return (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsxs)(m.P, {
-                                        className: eo.appDetailsSectionHeader,
+                                        className: ea.appDetailsSectionHeader,
                                         onClick: (e) => {
                                             F(!V), n(e);
                                         },
@@ -500,7 +499,7 @@ let eh = (e) => {
                                             (0, r.jsx)(g.X6q, {
                                                 variant: 'heading-sm/medium',
                                                 color: 'header-primary',
-                                                children: ea.intl.string(ea.t.xrmhRU)
+                                                children: ei.intl.string(ei.t.xrmhRU)
                                             }),
                                             V
                                                 ? (0, r.jsx)(g.CJ0, {
@@ -517,8 +516,8 @@ let eh = (e) => {
                                         (0, r.jsx)(g.Text, {
                                             variant: 'text-sm/normal',
                                             color: 'text-secondary',
-                                            className: o()(eo.appDetailsContent, eo.permissionsDescription),
-                                            children: ea.intl.format(ea.t.nZOS8v, { numPermissions: e.length })
+                                            className: o()(ea.appDetailsContent, ea.permissionsDescription),
+                                            children: ei.intl.format(ei.t.nZOS8v, { numPermissions: e.length })
                                         })
                                 ]
                             });
@@ -528,25 +527,25 @@ let eh = (e) => {
             Q = i.useMemo(() => {
                 if (null != a.description && '' !== a.description)
                     return (0, r.jsx)(g.Text, {
-                        className: es.markup,
+                        className: eo.markup,
                         variant: 'text-sm/normal',
                         color: 'text-normal',
                         children: (0, k.parseBioReact)(a.description)
                     });
             }, [a.description]),
-            X = () => {
+            ee = () => {
                 let e = null != a.description && '' !== a.description,
                     t = null != a.terms_of_service_url || null != a.privacy_policy_url;
                 return e || t
                     ? (0, r.jsx)(g.zF9, {
-                          className: eo.appDetailsSection,
+                          className: ea.appDetailsSection,
                           isExpanded: M,
                           collapsibleContent: (0, r.jsxs)('div', {
-                              className: eo.appDetailsContent,
+                              className: ea.appDetailsContent,
                               children: [
                                   e && Q,
                                   t &&
-                                      (0, r.jsx)(eE, {
+                                      (0, r.jsx)(eg, {
                                           application: a,
                                           isVisible: M
                                       })
@@ -555,7 +554,7 @@ let eh = (e) => {
                           children: (e) => {
                               let { onClick: t } = e;
                               return (0, r.jsxs)(m.P, {
-                                  className: eo.appDetailsSectionHeader,
+                                  className: ea.appDetailsSectionHeader,
                                   onClick: (e) => {
                                       G(!M), t(e);
                                   },
@@ -563,7 +562,7 @@ let eh = (e) => {
                                       (0, r.jsx)(g.X6q, {
                                           variant: 'heading-sm/medium',
                                           color: 'header-primary',
-                                          children: ea.intl.string(ea.t.fcYgiY)
+                                          children: ei.intl.string(ei.t.fcYgiY)
                                       }),
                                       M
                                           ? (0, r.jsx)(g.CJ0, {
@@ -580,7 +579,7 @@ let eh = (e) => {
                       })
                     : null;
             },
-            et = () => {
+            el = () => {
                 let e = H.ZP.getApplicationIconURL({
                         id: a.id,
                         icon: a.icon
@@ -588,7 +587,7 @@ let eh = (e) => {
                     t =
                         null != e
                             ? (0, r.jsx)(D.Z.Child, {
-                                  className: eo.appAvatarV2,
+                                  className: ea.appAvatarV2,
                                   grow: 0,
                                   children: (0, r.jsx)('img', {
                                       src: e,
@@ -596,47 +595,47 @@ let eh = (e) => {
                                   })
                               })
                             : null,
-                    n = new Date(q.default.extractTimestamp(E)).toLocaleDateString(p);
+                    n = new Date(z.default.extractTimestamp(E)).toLocaleDateString(p);
                 return (0, r.jsxs)('div', {
-                    className: eo.headerV2,
+                    className: ea.headerV2,
                     children: [
                         t,
                         (0, r.jsxs)('div', {
-                            className: eo.headerTextContainerV2,
+                            className: ea.headerTextContainerV2,
                             children: [
                                 (0, r.jsx)(g.X6q, {
                                     variant: 'heading-md/semibold',
-                                    className: o()(eo.headerText, el.marginBottom4),
+                                    className: o()(ea.headerText, es.marginBottom4),
                                     children: a.name
                                 }),
                                 (0, r.jsx)(g.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'text-normal',
-                                    children: ea.intl.format(ea.t.yOApCA, { date: n })
+                                    children: ei.intl.format(ei.t.yOApCA, { date: n })
                                 })
                             ]
                         }),
-                        (0, r.jsx)(en.Z, {
+                        (0, r.jsx)(et.Z, {
                             appRecord: O,
-                            showAppReportingOption: Y,
+                            showAppReportingOption: W,
                             selectedGuildId: l,
                             selectedChannelId: s
                         })
                     ]
                 });
             },
-            ec = (e) => {
-                J.hW.updateAsync(
+            eu = (e) => {
+                X.hW.updateAsync(
                     'applications',
                     (t) => {
                         y in t.appSettings ? (null == t.appSettings[y].appDmSettings ? (t.appSettings[y].appDmSettings = h.c$.create({ allowMobilePush: e })) : (t.appSettings[y].appDmSettings.allowMobilePush = e)) : (t.appSettings[y] = h.dp.create({ appDmSettings: h.c$.create({ allowMobilePush: e }) }));
                     },
-                    J.fy.INFREQUENT_USER_ACTION
+                    X.fy.INFREQUENT_USER_ACTION
                 ),
-                    N.ZP.trackWithMetadata(er.rMx.NOTIFICATION_SETTINGS_UPDATED, {
-                        update_type: ei.I.AUTHORIZED_APP_DM_PUSH_NOTIFICATION,
+                    N.ZP.trackWithMetadata(en.rMx.NOTIFICATION_SETTINGS_UPDATED, {
+                        update_type: er.I.AUTHORIZED_APP_DM_PUSH_NOTIFICATION,
                         application_id: a.id,
-                        label: e ? z.ZB.Unmuted : z.ZB.Muted
+                        label: e ? K.ZB.Unmuted : K.ZB.Muted
                     });
             },
             ed = i.useCallback(async () => {
@@ -644,13 +643,13 @@ let eh = (e) => {
                 let e = R;
                 null == e && (e = await b.Z.ensurePrivateChannel(A.id)),
                     L
-                        ? v.Z.updateAppDMOverrideSettings(null, e, a.id, { muted: !1 }, z.ZB.Unmuted)
+                        ? v.Z.updateAppDMOverrideSettings(null, e, a.id, { muted: !1 }, K.ZB.Unmuted)
                         : (0, g.ZDy)(async () => {
                               let { default: t } = await n.e('8246').then(n.bind(n, 540679));
                               return (n) =>
                                   (0, r.jsx)(
                                       t,
-                                      eu(
+                                      ec(
                                           {
                                               channelId: e,
                                               applicationId: a.id
@@ -663,23 +662,23 @@ let eh = (e) => {
             ef = () =>
                 T.enabled
                     ? (0, r.jsxs)('div', {
-                          className: eo.directMessagesSection,
+                          className: ea.directMessagesSection,
                           children: [
                               (0, r.jsx)(g.X6q, {
                                   variant: 'heading-sm/medium',
                                   color: 'header-primary',
-                                  className: eo.dmSettingsHeader,
-                                  children: ea.intl.string(ea.t.NaZyYG)
+                                  className: ea.dmSettingsHeader,
+                                  children: ei.intl.string(ei.t.NaZyYG)
                               }),
                               null != A
                                   ? (0, r.jsx)(g.j7V, {
                                         hideBorder: !0,
                                         onChange: ed,
-                                        className: eo.dmSettingsSwitch,
+                                        className: ea.dmSettingsSwitch,
                                         note:
                                             (null == w ? void 0 : w.end_time) != null
-                                                ? ea.intl.format(ea.t.j7h4AA, {
-                                                      endTime: new Date(w.end_time).toLocaleString(ea.intl.currentLocale, {
+                                                ? ei.intl.format(ei.t.j7h4AA, {
+                                                      endTime: new Date(w.end_time).toLocaleString(ei.intl.currentLocale, {
                                                           month: 'numeric',
                                                           day: 'numeric',
                                                           hour: 'numeric',
@@ -690,65 +689,65 @@ let eh = (e) => {
                                         value: L,
                                         children: (0, r.jsx)(g.Text, {
                                             variant: 'text-sm/medium',
-                                            children: ea.intl.string(ea.t.NkwaBg)
+                                            children: ei.intl.string(ei.t.NkwaBg)
                                         })
                                     })
                                   : null,
                               I && T.enabled
                                   ? (0, r.jsx)(g.j7V, {
                                         hideBorder: !0,
-                                        onChange: ec,
-                                        className: eo.dmSettingsSwitch,
-                                        note: ea.intl.string(ea.t.hw1nKS),
+                                        onChange: eu,
+                                        className: ea.dmSettingsSwitch,
+                                        note: ei.intl.string(ei.t.hw1nKS),
                                         value: S,
                                         disabled: L,
                                         children: (0, r.jsx)(g.Text, {
                                             variant: 'text-sm/medium',
-                                            children: ea.intl.string(ea.t['Pkw//v'])
+                                            children: ei.intl.string(ei.t['Pkw//v'])
                                         })
                                     })
                                   : null
                           ]
                       })
                     : null,
-            e_ = (0, ee.O)(a.id),
-            em = () =>
+            eh = (0, $.O)(a.id),
+            eE = () =>
                 (0, r.jsxs)('div', {
-                    className: eo.footer,
+                    className: ea.footer,
                     children: [
-                        e_ &&
-                            (0, r.jsx)(ep, {
+                        eh &&
+                            (0, r.jsx)(e_, {
                                 application: a,
-                                className: eo.twoWayWarningV2
+                                className: ea.twoWayWarningV2
                             }),
                         (0, r.jsx)('div', {
-                            className: eo.deauthorizeButton,
+                            className: ea.deauthorizeButton,
                             children: (0, r.jsx)(g.zxk, {
                                 color: g.Ttl.RED,
                                 look: g.iLD.OUTLINED,
                                 size: g.PhG.SMALL,
-                                onClick: () => eg(a, c),
-                                children: ea.intl.string(ea.t.xUqheH)
+                                onClick: () => em(a, c),
+                                children: ei.intl.string(ei.t.xUqheH)
                             })
                         })
                     ]
                 });
         return (0, r.jsx)('div', {
-            className: eo.authedAppV2,
+            className: ea.authedAppV2,
             children: (0, r.jsx)(g.y5t, {
-                component: et(),
+                component: el(),
                 children: (0, r.jsxs)('div', {
-                    className: eo.appDetailsContainer,
-                    children: [X(), K(), ef(), em()]
+                    className: ea.appDetailsContainer,
+                    children: [ee(), q(), ef(), eE()]
                 })
             })
         });
     },
-    ev = (0, d.U)(() => ({ searchQuery: '' })),
-    eO = () => {
+    ey = (0, d.U)(() => ({ searchQuery: '' })),
+    ev = () => {
         let e = (0, _.e7)([F.Z], () => F.Z.hidePersonalInformation),
             t = (0, _.e7)([G.Z], () => G.Z.getApps()),
-            a = (0, _.e7)([Q.default], () => Q.default.locale),
+            a = (0, _.e7)([q.default], () => q.default.locale),
             o = (0, _.e7)([T.ZP], () => T.ZP.getSelfEmbeddedActivities()),
             s = (0, _.e7)([B.Z, V.Z], () => B.Z.getChannel(V.Z.getChannelId())),
             c = null == s ? void 0 : s.getGuildId(),
@@ -758,13 +757,13 @@ let eh = (e) => {
         }, []),
             i.useEffect(
                 () => () => {
-                    ev.setState({ searchQuery: '' });
+                    ey.setState({ searchQuery: '' });
                 },
                 []
             );
         let d = (e) => {
                 let { id: t, application: n } = e;
-                E.Z.delete(t), Y.S.safeDispatch(er.CkL.HIDE_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, { applicationId: n.id });
+                E.Z.delete(t);
                 let r = o.get(n.id);
                 null != r &&
                     A.Z.leaveActivity({
@@ -773,8 +772,8 @@ let eh = (e) => {
                         showFeedback: !1
                     });
             },
-            f = ev((e) => e.searchQuery),
-            p = (e) => ev.setState({ searchQuery: e }),
+            f = ey((e) => e.searchQuery),
+            p = (e) => ey.setState({ searchQuery: e }),
             h = (e) => {
                 p(e);
             },
@@ -783,19 +782,19 @@ let eh = (e) => {
             },
             b = () =>
                 (0, r.jsx)('div', {
-                    className: eo.searchContainer,
+                    className: ea.searchContainer,
                     children: (0, r.jsx)(g.E1j, {
                         size: g.E1j.Sizes.MEDIUM,
                         query: f,
                         onChange: h,
                         onClear: m,
-                        placeholder: ea.intl.string(ea.t['5prvKS']),
-                        'aria-label': ea.intl.string(ea.t['5prvKS'])
+                        placeholder: ei.intl.string(ei.t['5prvKS']),
+                        'aria-label': ei.intl.string(ei.t['5prvKS'])
                     })
                 }),
             y = (e, t) =>
-                (0, r.jsxs)(e_, {
-                    className: eo.__invalid_marginTop20,
+                (0, r.jsxs)(ef, {
+                    className: ea.__invalid_marginTop20,
                     children: [
                         (0, r.jsx)(g.oxh, {
                             darkSrc: n(701972),
@@ -816,14 +815,14 @@ let eh = (e) => {
             O = () =>
                 null == t || null == v
                     ? (0, r.jsx)(g.$jN, {
-                          className: el.marginTop20,
+                          className: es.marginTop20,
                           type: g.$jN.Type.SPINNING_CIRCLE
                       })
                     : 0 === t.length
-                      ? y(ea.intl.string(ea.t.CpPv5u), ea.intl.string(ea.t['E+SM6e']))
+                      ? y(ei.intl.string(ei.t.CpPv5u), ei.intl.string(ei.t['E+SM6e']))
                       : 0 === v.length
                         ? (0, r.jsxs)(r.Fragment, {
-                              children: [b(), y(null, ea.intl.string(ea.t.EVWFNj))]
+                              children: [b(), y(null, ei.intl.string(ei.t.EVWFNj))]
                           })
                         : (0, r.jsxs)(r.Fragment, {
                               children: [
@@ -833,8 +832,8 @@ let eh = (e) => {
                                       .map((e) =>
                                           u
                                               ? (0, r.jsx)(
-                                                    ey,
-                                                    eu(
+                                                    eb,
+                                                    ec(
                                                         {
                                                             locale: a,
                                                             onDelete: () => d(e),
@@ -846,8 +845,8 @@ let eh = (e) => {
                                                     e.id
                                                 )
                                               : (0, r.jsx)(
-                                                    eb,
-                                                    eu(
+                                                    eE,
+                                                    ec(
                                                         {
                                                             locale: a,
                                                             onDelete: () => d(e),
@@ -865,13 +864,13 @@ let eh = (e) => {
             ? (0, r.jsx)(I.Z, {})
             : (0, r.jsx)(g.hjN, {
                   tag: g.RB0.H1,
-                  title: ea.intl.string(ea.t['f6kk+v']),
+                  title: ei.intl.string(ei.t['f6kk+v']),
                   children: (0, r.jsx)(g.y5t, {
                       component: (0, r.jsx)(g.ToO, {
-                          className: el.marginBottom40,
+                          className: es.marginBottom40,
                           type: g.sje.PRIMARY,
-                          title: ea.intl.string(ea.t.HU3RFx),
-                          body: ea.intl.string(ea.t.Nu5Yi4)
+                          title: ei.intl.string(ei.t.HU3RFx),
+                          body: ei.intl.string(ei.t.Nu5Yi4)
                       }),
                       children: O()
                   })

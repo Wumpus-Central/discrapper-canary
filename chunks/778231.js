@@ -9,8 +9,8 @@ var r = n(200651),
     d = n(359993),
     u = n(146078),
     m = n(881998),
-    p = n(709054),
-    x = n(388032),
+    x = n(709054),
+    p = n(388032),
     b = n(711845),
     _ = n(970952);
 let h = (e) => {
@@ -27,14 +27,14 @@ let h = (e) => {
     l.useEffect(() => {
         y.current || (o.Z.fetch(), (y.current = !0));
     }, []);
-    let O = null != g ? p.default.extractTimestamp(g.id) : void 0;
+    let O = null != g ? x.default.extractTimestamp(g.id) : void 0;
     return (0, r.jsxs)('div', {
         className: b.container,
         children: [
             (0, r.jsx)(a.X6q, {
                 className: b.header,
                 variant: 'heading-sm/semibold',
-                children: x.intl.string(x.t['aYfK//'])
+                children: p.intl.string(p.t['aYfK//'])
             }),
             (0, r.jsx)('div', {
                 className: b.appContainer,
@@ -86,7 +86,7 @@ let h = (e) => {
                                                   (0, r.jsx)(a.Text, {
                                                       color: 'text-normal',
                                                       variant: 'text-md/normal',
-                                                      children: x.intl.formatToPlainString(x.t.C9rUOz, { authorizedAt: O })
+                                                      children: p.intl.formatToPlainString(p.t.C9rUOz, { authorizedAt: O })
                                                   })
                                           ]
                                       })

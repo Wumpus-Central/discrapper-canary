@@ -11,8 +11,8 @@ let s = (e) => {
             d(null != s ? s : '');
         }, [s]);
         let u = t.name,
-            { title: m, options: p } = t.data,
-            x = l.useCallback(
+            { title: m, options: x } = t.data,
+            p = l.useCallback(
                 (e) => {
                     null != e && (d(e), n(e));
                 },
@@ -40,8 +40,8 @@ let s = (e) => {
                         }),
                     (0, r.jsx)(i.q4e, {
                         value: c,
-                        onChange: x,
-                        options: p
+                        onChange: p,
+                        options: x
                     })
                 ]
             },

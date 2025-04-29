@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(233870),
     E = n(51144),
     I = n(998502),
-    P = n(276264),
-    S = n(981631),
+    S = n(276264),
+    P = n(981631),
     Z = n(388032),
     N = n(11847);
 function T(e) {
@@ -94,8 +94,8 @@ function R(e) {
         A = () => {
             let e = '@'.concat(E.ZP.getUserTag(t, { decoration: 'never' })),
                 n = '<@'.concat(t.id, '>');
-            j.S.dispatch(S.CkL.TEXTAREA_FOCUS, { channelId: a.id }),
-                j.S.dispatchToLastSubscribed(S.CkL.INSERT_TEXT, {
+            j.S.dispatch(P.CkL.TEXTAREA_FOCUS, { channelId: a.id }),
+                j.S.dispatchToLastSubscribed(P.CkL.INSERT_TEXT, {
                     plainText: e,
                     rawText: n
                 }),
@@ -138,7 +138,7 @@ function R(e) {
                     return i;
                 })(e, ['onClick', 'onMouseDown']);
             return (0, r.jsx)(
-                P.Z,
+                S.Z,
                 T(
                     {
                         user: t,
@@ -193,11 +193,11 @@ function M(e) {
                     var r, i, l;
                     y.Z.isFriend(t.id) || t.id === (null == (r = x.default.getCurrentUser()) ? void 0 : r.id)
                         ? (n[t.id] = {
-                              status: null != (i = _.Z.getStatus(t.id)) ? i : S.Skl.OFFLINE,
+                              status: null != (i = _.Z.getStatus(t.id)) ? i : P.Skl.OFFLINE,
                               activities: null != (l = _.Z.getActivities(t.id)) ? l : A
                           })
                         : (n[t.id] = {
-                              status: S.Skl.OFFLINE,
+                              status: P.Skl.OFFLINE,
                               activities: A
                           });
                 }
@@ -216,7 +216,7 @@ function M(e) {
             k
         );
     i.useEffect(() => {
-        v.default.track(S.rMx.MEMBER_LIST_VIEWED, {
+        v.default.track(P.rMx.MEMBER_LIST_VIEWED, {
             channel_id: t.id,
             channel_type: t.type,
             guild_id: t.guild_id

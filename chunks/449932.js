@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S });
+n.d(t, { Z: () => j });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -93,31 +93,31 @@ function C(e) {
             )
     });
 }
-let S = (e) => {
+let j = (e) => {
     let { channel: t, presenceActivity: n, members: i, embeddedApp: l, onAction: p } = e,
         b = (0, d.Q3)('ChannelActivityRow'),
         y = null != l,
         v = y ? Array.from(l.embeddedActivity.userIds) : [],
-        S = (0, o.e7)([m.default, g.default], () => {
+        j = (0, o.e7)([m.default, g.default], () => {
             if (y) return m.default.getUser(v[0]);
             if (null != i) {
                 var e, t;
                 return i.length <= 0 ? null : null != (t = null == (e = i.find((e) => e.user.id !== g.default.getId())) ? void 0 : e.user) ? t : i[0].user;
             }
         });
-    if (null == S) return null;
-    let j = y || (0, c.Z)(n),
+    if (null == j) return null;
+    let S = y || (0, c.Z)(n),
         E = (0, f.vd)(t.type);
     return (0, r.jsxs)('div', {
         className: O.activity,
         children: [
             (0, r.jsx)('div', {
                 className: O.channelActivityContainer,
-                children: j
+                children: S
                     ? (0, r.jsx)(_.Z, {
                           activity: n,
                           embeddedApp: l,
-                          user: S,
+                          user: j,
                           channel: t,
                           sortedVoiceStates: i,
                           onOpenSpotifyTrack: E ? h.aG : void 0,
@@ -127,7 +127,7 @@ let S = (e) => {
                     : (0, r.jsx)(a.Z, {
                           type: a.P.VOICE_CHANNEL,
                           activity: n,
-                          user: S,
+                          user: j,
                           guildId: t.getGuildId(),
                           channelId: t.id,
                           renderHeaderAccessory:
@@ -146,7 +146,7 @@ let S = (e) => {
                     type: a.P.VOICE_CHANNEL,
                     activity: n,
                     embeddedActivity: null == l ? void 0 : l.embeddedActivity,
-                    user: S,
+                    user: j,
                     guildId: t.getGuildId(),
                     channelId: t.id,
                     color: b ? s.zxk.Colors.PRIMARY : O.button,

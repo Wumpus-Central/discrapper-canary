@@ -411,84 +411,86 @@ function k(e) {
               children: [t, w]
           });
 }
-function j(e) {
-    let { src: t, isSpeaking: n, className: i } = e;
+let j = i.forwardRef((e, t) => {
+    let { src: n, isSpeaking: i, className: a } = e;
     return (0, r.jsxs)(
         'div',
         {
-            className: o()(b.avatarStack, i),
+            ref: t,
+            className: o()(b.avatarStack, a),
             children: [
                 (0, r.jsx)('img', {
-                    src: null != t ? t : void 0,
+                    src: null != n ? n : void 0,
                     alt: ' ',
                     className: b.avatar,
                     'aria-hidden': !0
                 }),
-                n && (0, r.jsx)('div', { className: b.avatarSpeaking })
+                i && (0, r.jsx)('div', { className: b.avatarSpeaking })
             ]
         },
-        t
+        n
     );
-}
+});
 function U(e) {
-    let { src: t, status: n, size: i, statusColor: a, isMobile: s = !1, isTyping: l = !1, typingIndicatorRef: f, isSpeaking: _ = !1, statusTooltip: g = !1, statusTooltipDelay: E, statusBackdropColor: y, 'aria-hidden': O = !1, 'aria-label': S, imageClassName: T } = e,
-        A = n !== m.Skl.UNKNOWN ? n : null,
-        N = (0, h.UC)(i),
-        C = null != A ? Math.ceil((N.status * h.D6 - N.status) / 2) : 0,
-        R = N.size + C,
-        P = (0, u.vj)(A, a);
+    let { src: t, status: n, size: i, statusColor: a, isMobile: s = !1, isTyping: l = !1, typingIndicatorRef: f, avatarContentRef: _, isSpeaking: g = !1, statusTooltip: E = !1, statusTooltipDelay: y, statusBackdropColor: O, 'aria-hidden': S = !1, 'aria-label': T, imageClassName: A } = e,
+        N = n !== m.Skl.UNKNOWN ? n : null,
+        C = (0, h.UC)(i),
+        R = null != N ? Math.ceil((C.status * h.D6 - C.status) / 2) : 0,
+        P = C.size + R,
+        L = (0, u.vj)(N, a);
     return (0, r.jsx)(
         k,
         I(v({}, e), {
-            ariaLabel: S,
-            ariaHidden: O,
-            status: A,
-            specs: N,
-            typingOffset: C,
+            ariaLabel: T,
+            ariaHidden: S,
+            status: N,
+            specs: C,
+            typingOffset: R,
             children: (0, r.jsxs)('svg', {
-                width: R,
-                height: R,
-                viewBox: '0 0 '.concat(R, ' ').concat(R),
+                width: P,
+                height: P,
+                viewBox: '0 0 '.concat(P, ' ').concat(P),
                 className: o()(b.mask, b.svg),
                 'aria-hidden': !0,
                 children: [
                     (0, r.jsx)('foreignObject', {
                         x: 0,
                         y: 0,
-                        width: N.size,
-                        height: N.size,
-                        mask: 'url(#'.concat(w(A, i, s, l), ')'),
+                        width: C.size,
+                        height: C.size,
+                        mask: 'url(#'.concat(w(N, i, s, l), ')'),
                         children: (0, r.jsx)(j, {
+                            ref: _,
                             src: t,
-                            isSpeaking: _,
-                            className: T
+                            isSpeaking: g,
+                            className: A
                         })
                     }),
-                    null != A && null != y ? x(y, s, N, A) : null,
-                    null != A
+                    null != N && null != O ? x(O, s, C, N) : null,
+                    null != N
                         ? (0, r.jsx)(d.u, {
-                              text: g ? (0, p.u5)(A) : null,
+                              text: E ? (0, p.u5)(N) : null,
                               'aria-label': !1,
                               position: 'top',
-                              spacing: 5 + 1.5 * N.stroke,
-                              delay: E,
+                              spacing: 5 + 1.5 * C.stroke,
+                              delay: y,
                               children: (e) =>
                                   (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(
                                               'rect',
-                                              I(v({}, e, D(N, A, s, l)), {
-                                                  fill: P,
-                                                  mask: 'url(#'.concat((0, u.rs)(A, s, l), ')'),
+                                              I(v({}, e, D(C, N, s, l)), {
+                                                  fill: L,
+                                                  mask: 'url(#'.concat((0, u.rs)(N, s, l), ')'),
                                                   className: b.pointerEvents
                                               })
                                           ),
                                           l
                                               ? (0, r.jsx)(c.b, {
                                                     ref: f,
-                                                    dotRadius: N.status / 4,
-                                                    x: N.size - 1.375 * N.status - N.offset,
-                                                    y: N.size - N.status / 1.333 - N.offset
+                                                    dotRadius: C.status / 4,
+                                                    x: C.size - 1.375 * C.status - C.offset,
+                                                    y: C.size - C.status / 1.333 - C.offset
                                                 })
                                               : null
                                       ]
@@ -677,6 +679,7 @@ function V(e) {
 function F(e, t, n, r, i) {
     return null != n && null != t && (!!e || t !== n || (t === m.Skl.ONLINE && r !== i));
 }
+j.displayName = 'AvatarImg';
 let Z = i.memo(function (e) {
     var { statusColor: t, status: n } = e,
         a = S(e, ['statusColor', 'status']);

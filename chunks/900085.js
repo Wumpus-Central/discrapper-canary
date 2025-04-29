@@ -19,8 +19,8 @@ var r,
     O = n(592125),
     v = n(888369),
     C = n(430824),
-    S = n(306680),
-    j = n(944486),
+    j = n(306680),
+    S = n(944486),
     E = n(938475),
     x = n(483360),
     I = n(585483),
@@ -113,12 +113,12 @@ class V extends (r = l.Component) {
     }
 }
 k(V, 'defaultProps', { unread: !1 });
-let H = c.ZP.connectStores([S.ZP, O.Z], (e) => {
+let H = c.ZP.connectStores([j.ZP, O.Z], (e) => {
         let { channel: t } = e;
         return {
-            unread: S.ZP.hasUnread(t.id),
-            mentions: S.ZP.getMentionCount(t.id),
-            isMentionLowImportance: S.ZP.getIsMentionLowImportance(t.id),
+            unread: j.ZP.hasUnread(t.id),
+            mentions: j.ZP.getMentionCount(t.id),
+            isMentionLowImportance: j.ZP.getIsMentionLowImportance(t.id),
             category: O.Z.getChannel(t.parent_id)
         };
     })(V),
@@ -131,14 +131,14 @@ let H = c.ZP.connectStores([S.ZP, O.Z], (e) => {
         let { guild: t } = e;
         return { unread: v.default.hasUnread(t.id) };
     })(Z.ic),
-    W = c.ZP.connectStores([S.ZP], (e) => {
+    W = c.ZP.connectStores([j.ZP], (e) => {
         let { channel: t } = e;
-        return { mentions: S.ZP.getMentionCount(t.id) };
+        return { mentions: j.ZP.getMentionCount(t.id) };
     })(Z.PZ),
-    Y = c.ZP.connectStores([O.Z, S.ZP], (e) => {
+    Y = c.ZP.connectStores([O.Z, j.ZP], (e) => {
         let { user: t } = e,
             n = O.Z.getDMFromUserId(t.id);
-        return { mentions: null != n ? S.ZP.getMentionCount(n) : 0 };
+        return { mentions: null != n ? j.ZP.getMentionCount(n) : 0 };
     })(Z.n5);
 function K(e, t, n) {
     return (0, i.jsx)(
@@ -388,7 +388,7 @@ class q extends l.PureComponent {
                                     e,
                                     U(M({}, n), {
                                         channel: t.record,
-                                        selected: j.Z.getChannelId() === t.record.id,
+                                        selected: S.Z.getChannelId() === t.record.id,
                                         onSelect: w.Cp
                                     })
                                 );

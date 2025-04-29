@@ -40,7 +40,7 @@ let y = i.memo(function (e) {
             );
         }, [O, _]),
         C = null == _ ? 0 : _.length,
-        S = (0, l.JA)('progress-bar-'.concat(y.id));
+        j = (0, l.JA)('progress-bar-'.concat(y.id));
     return (0, r.jsxs)('li', {
         children: [
             (0, r.jsxs)(
@@ -69,7 +69,7 @@ let y = i.memo(function (e) {
                             });
                     }
                     return e;
-                })({}, S)),
+                })({}, j)),
                 (n = n =
                     {
                         role: 'button',

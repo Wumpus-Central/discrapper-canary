@@ -19,7 +19,7 @@ function y(e) {
         O = (0, s.e7)([u.Z], () => u.Z.getChannelStatus(t)),
         v = null != O && O.length > 0,
         C = (0, c.ZP)(t, !0),
-        S = null != y && y.length > 0;
+        j = null != y && y.length > 0;
     if (
         (i.useEffect(() => {
             v &&
@@ -31,10 +31,10 @@ function y(e) {
         null == t.guild_id)
     )
         return null;
-    let j = o()(m.statusDiv, n && C ? m.hoverable : null);
+    let S = o()(m.statusDiv, n && C ? m.hoverable : null);
     return v
         ? (0, r.jsx)(a.P3F, {
-              className: j,
+              className: S,
               onClick: C ? _ : void 0,
               children: (0, r.jsx)(a.Text, {
                   variant: 'text-xs/medium',
@@ -42,9 +42,9 @@ function y(e) {
                   children: (0, r.jsx)(d.Z, { children: h.Z.parseVoiceChannelStatus(O, !0, { channelId: t.id }) })
               })
           })
-        : n && C && (!S || l)
+        : n && C && (!j || l)
           ? (0, r.jsxs)(a.P3F, {
-                className: j,
+                className: S,
                 onClick: _,
                 children: [
                     (0, r.jsx)(a.Text, {
@@ -59,7 +59,7 @@ function y(e) {
                     })
                 ]
             })
-          : S
+          : j
             ? (0, r.jsx)(d.Z, { children: y })
             : null;
 }

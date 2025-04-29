@@ -20,8 +20,8 @@ var i = n(442837),
     O = n(687352),
     v = n(876548),
     C = n(25601),
-    S = n(981631),
-    j = n(490897),
+    j = n(981631),
+    S = n(490897),
     E = n(388032),
     x = n(990252);
 function I(e) {
@@ -30,7 +30,7 @@ function I(e) {
         k = (0, i.e7)([f.ZP], () => f.ZP.getMentionCount(n.id)),
         M = (0, i.e7)([f.ZP], () => f.ZP.getIsMentionLowImportance(n.id)),
         U = (0, s.ZP)(n),
-        G = (0, i.e7)([p.Z], () => !p.Z.can(S.Plq.CONNECT, n)),
+        G = (0, i.e7)([p.Z], () => !p.Z.can(j.Plq.CONNECT, n)),
         B = (0, i.e7)([g.Z], () => g.Z.hasVideo(n.id)),
         V = (0, u.PK)(n.id) && n.isGuildStageVoice(),
         H = (0, _.ZP)({
@@ -43,7 +43,7 @@ function I(e) {
         z = (0, a.n2)(n.guild_id, n.id),
         W = (0, i.e7)([h.Z], () => {
             var e, t;
-            return null != (t = null == (e = h.Z.getGuild(n.guild_id)) ? void 0 : e.hasFeature(S.oNc.COMMUNITY)) && t;
+            return null != (t = null == (e = h.Z.getGuild(n.guild_id)) ? void 0 : e.hasFeature(j.oNc.COMMUNITY)) && t;
         });
     if ((0, y.Z)(k))
         return (0, r.jsx)(C.Z, {
@@ -57,7 +57,7 @@ function I(e) {
             color: l.Z.unsafe_rawColors.BRAND_260.css,
             className: x.newChannel
         });
-    if (!D && L === j.i.ALL_MESSAGES && n.isForumLikeChannel() && null != F && F > 0)
+    if (!D && L === S.i.ALL_MESSAGES && n.isForumLikeChannel() && null != F && F > 0)
         return (0, r.jsx)(o.Text, {
             variant: 'text-xs/semibold',
             color: 'text-brand',

@@ -9,8 +9,8 @@ var r = n(200651),
     d = n(138201),
     u = n(592125),
     m = n(155647),
-    p = n(185625),
-    x = n(981631),
+    x = n(185625),
+    p = n(981631),
     b = n(388032),
     _ = n(305086);
 function h(e) {
@@ -18,7 +18,7 @@ function h(e) {
         [o, c] = l.useState(!1);
     return (
         (0, s.ZP)(() => {
-            a(p.M4.SETTINGS_UPSELLS_VIEWED);
+            a(x.M4.SETTINGS_UPSELLS_VIEWED);
         }),
         (0, r.jsx)(d.ZP, {
             title: t,
@@ -26,7 +26,7 @@ function h(e) {
             buttonText: o ? b.intl.string(b.t['h+WsPT']) : b.intl.string(b.t.A8t4NT),
             buttonDisabled: o,
             onButtonPress: () => {
-                i(), c(!0), a(p.M4.SETTINGS_UPSELLS_APPLY_CLICKED);
+                i(), c(!0), a(x.M4.SETTINGS_UPSELLS_APPLY_CLICKED);
             }
         })
     );
@@ -35,7 +35,7 @@ function f(e) {
     let { settingsUpsells: t, channelId: n, onModalClose: l, reportId: s, reportType: d, reportSubType: f } = e,
         g = (0, i.e7)([u.Z], () => u.Z.getChannel(n)),
         v = (0, m.jc)(t, null == g ? void 0 : g.type),
-        j = (0, p.i_)(d, f, s);
+        j = (0, x.i_)(d, f, s);
     return 0 === v.length
         ? null
         : (0, r.jsxs)('div', {
@@ -65,13 +65,13 @@ function f(e) {
                   (0, r.jsx)(a.zxk, {
                       className: _.navLinkButton,
                       onClick: () => {
-                          o.Z.open(x.oAB.CONTENT_AND_SOCIAL),
+                          o.Z.open(p.oAB.CONTENT_AND_SOCIAL),
                               l(),
-                              c.ZP.trackWithMetadata(x.rMx.IAR_SETTINGS_UPSELLS_ACTION, {
+                              c.ZP.trackWithMetadata(p.rMx.IAR_SETTINGS_UPSELLS_ACTION, {
                                   report_id: s,
                                   report_type: d.name,
                                   report_subtype: f,
-                                  action: p.M4.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED
+                                  action: x.M4.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED
                               });
                       },
                       look: a.zxk.Looks.LINK,

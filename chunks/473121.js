@@ -11,8 +11,8 @@ let d = (e) => {
     let {
             node: { header: d, subheader: u, button: m }
         } = e,
-        p = (null == m ? void 0 : m.type) === 'submit',
-        x = l.useRef(
+        x = (null == m ? void 0 : m.type) === 'submit',
+        p = l.useRef(
             a.Z.reactParserFor(
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -69,10 +69,10 @@ let d = (e) => {
                 ? (0, r.jsx)(i.Text, {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
-                      children: x.current(u)
+                      children: p.current(u)
                   })
                 : null,
-            p &&
+            x &&
                 (0, r.jsx)(i.Text, {
                     variant: 'text-sm/normal',
                     children: s.intl.format(s.t.Q0tSKS, {})

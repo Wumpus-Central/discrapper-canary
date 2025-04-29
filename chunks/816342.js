@@ -9,16 +9,16 @@ var r = n(200651),
     d = n(138201),
     u = n(592125),
     m = n(699516),
-    p = n(5192),
-    x = n(981631),
+    x = n(5192),
+    p = n(981631),
     b = n(388032);
 let _ = (e) => {
     let { user: t, channelId: n, reportId: _, reportType: h } = e,
         f = (0, i.e7)([m.Z], () => m.Z.isBlocked(t.id), [t.id]),
         g = (0, i.e7)([u.Z], () => u.Z.getChannel(n), [n]),
-        v = l.useMemo(() => p.ZP.getName(null == g ? void 0 : g.guild_id, null == g ? void 0 : g.id, t), [g, t]),
+        v = l.useMemo(() => x.ZP.getName(null == g ? void 0 : g.guild_id, null == g ? void 0 : g.id, t), [g, t]),
         j = l.useCallback(() => {
-            s.ZP.trackWithMetadata(x.rMx.IAR_BLOCK_USER_BUTTON_CLICKED, {
+            s.ZP.trackWithMetadata(p.rMx.IAR_BLOCK_USER_BUTTON_CLICKED, {
                 other_user_id: t.id,
                 report_id: _
             }),

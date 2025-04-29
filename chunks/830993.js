@@ -19,8 +19,8 @@ var r = n(200651),
     O = n(449932),
     v = n(561788),
     C = n(876548),
-    S = n(543432),
-    j = n(981631),
+    j = n(543432),
+    S = n(981631),
     E = n(388032),
     x = n(642317),
     I = n(656855);
@@ -44,9 +44,9 @@ function P(e) {
         }, [o, g]);
     (0, c.$)(v);
     let C = (0, u.ZP)(o),
-        S = Array.from((0, u.uF)(C).values()),
+        j = Array.from((0, u.uF)(C).values()),
         I = null != (t = null == g ? void 0 : g.filter(y.lm)) ? t : [],
-        P = (e) => (t) => ([j.IIU.PLAYING, j.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === j.IIU.LISTENING,
+        P = (e) => (t) => ([S.IIU.PLAYING, S.IIU.WATCHING].includes(t.type) && (null != t.assets || null != t.state || null != t.details || null != t.party) && (null == t.session_id || t.session_id === e.voiceState.sessionId)) || t.type === S.IIU.LISTENING,
         N = (0, s.e7)(
             [m.Z],
             () => {
@@ -64,7 +64,7 @@ function P(e) {
                                               members: [],
                                               activity: n
                                           };
-                            a.members.push(t), (0, d.Z)(a.activity, j.xjy.JOIN) || (a.activity = n), (e[s] = a);
+                            a.members.push(t), (0, d.Z)(a.activity, S.xjy.JOIN) || (a.activity = n), (e[s] = a);
                         }
                     }),
                     Object.values(e)
@@ -73,7 +73,7 @@ function P(e) {
             [I],
             s.pF
         );
-    return N.length + S.length === 0
+    return N.length + j.length === 0
         ? null
         : (0, r.jsxs)(a.Ttm, {
               className: x.container,
@@ -84,7 +84,7 @@ function P(e) {
                       voiceStatesCount: null != (l = null == g ? void 0 : g.length) ? l : 0
                   }),
                   (0, r.jsx)('div', { className: x.headerDivider }),
-                  S.map((e, t) => {
+                  j.map((e, t) => {
                       var n;
                       return (0, r.jsx)(
                           O.Z,
@@ -180,7 +180,7 @@ function P(e) {
 }
 function w(e) {
     let { channel: t, isChannelSelected: n, voiceStatesCount: i } = e,
-        l = (0, s.e7)([g.Z], () => !g.Z.can(j.Plq.CONNECT, t)),
+        l = (0, s.e7)([g.Z], () => !g.Z.can(S.Plq.CONNECT, t)),
         a = (0, s.e7)([b.Z], () => b.Z.hasVideo(t.id)),
         c = (0, _.ZP)({
             channel: t,
@@ -201,7 +201,7 @@ function w(e) {
                             video: a,
                             channel: t
                         })
-                      : (0, r.jsx)(S.Z, { userCount: i })
+                      : (0, r.jsx)(j.Z, { userCount: i })
               ]
           });
 }

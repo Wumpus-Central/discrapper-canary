@@ -9,8 +9,8 @@ var r = n(200651),
     d = n(82554),
     u = n(185625),
     m = n(255514),
-    p = n(981631),
-    x = n(864012);
+    x = n(981631),
+    p = n(864012);
 let b = (e) => {
     let { reportType: t, menu: n, modalProps: b, onSubmit: _, onNavigate: h, emailToken: f, isAuthenticated: g = !0 } = e,
         v = (0, s.Dt)(),
@@ -21,14 +21,14 @@ let b = (e) => {
         [k, E] = l.useState([]),
         [w, R] = l.useState(void 0),
         [D, A] = l.useState(void 0),
-        L = (e) => {
+        M = (e) => {
             var n, r, l;
             let { destination: a } = e,
                 [, s] = a,
                 u = j[s];
             if (void 0 === u) return void c.Z.increment({ name: i.V.IN_APP_REPORT_NAVIGATE_TO_NONEXISTENT_NODE });
             if (u.elements.some((e) => 'skip' === e.type) && (null == (n = u.button) ? void 0 : n.type) === 'next')
-                return L(
+                return M(
                     ((r = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -74,7 +74,7 @@ let b = (e) => {
                 );
             if ((E([...k, e]), null != u.key && (null == h || h(u.key)), P(void 0), T(void 0), t.name === d.b.MESSAGE || t.name === d.b.FIRST_DM)) {
                 let e = t.record.id;
-                o.ZP.trackWithMetadata(p.rMx.IAR_NAVIGATE, {
+                o.ZP.trackWithMetadata(x.rMx.IAR_NAVIGATE, {
                     message_id: e,
                     content_type: t.name,
                     report_sub_type: u.report_type,
@@ -84,7 +84,7 @@ let b = (e) => {
             }
             C(s);
         },
-        M = async (e) => {
+        L = async (e) => {
             var r;
             let l = g ? await (0, u.ZD)(n, t, [...k, e]) : await (0, u.fw)(n, t, [...k, e], f),
                 i = null == l || null == (r = l.body) ? void 0 : r.report_id;
@@ -98,7 +98,7 @@ let b = (e) => {
                 i = null != (n = null == l ? void 0 : l.nodeRef) ? n : y;
             if (t.name === d.b.MESSAGE || t.name === d.b.FIRST_DM) {
                 let e = t.record.id;
-                o.ZP.trackWithMetadata(p.rMx.IAR_NAVIGATE, {
+                o.ZP.trackWithMetadata(x.rMx.IAR_NAVIGATE, {
                     message_id: e,
                     content_type: t.name,
                     report_sub_type: j[i].report_type,
@@ -141,20 +141,20 @@ let b = (e) => {
                     {
                         id: e.id,
                         children: (0, r.jsx)('div', {
-                            className: x.slideContainer,
+                            className: p.slideContainer,
                             children: (0, r.jsx)(m.Z, {
                                 node: e,
                                 reportType: t,
                                 reportSubType: D,
                                 history: k,
                                 onModalClose: b.onClose,
-                                onSelectChild: L,
+                                onSelectChild: M,
                                 onNavigateBack: B,
                                 multiSelect: N,
                                 textInput: S,
                                 successNodeId: O,
                                 failNodeId: Z,
-                                onSubmit: M,
+                                onSubmit: L,
                                 reportId: w
                             })
                         })

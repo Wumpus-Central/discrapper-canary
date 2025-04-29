@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(981631),
     E = n(388032),
     I = n(413384),
-    P = n(359165),
-    S = n(334732);
+    S = n(359165),
+    P = n(334732);
 function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -222,12 +222,12 @@ function w(e) {
                     children: [
                         s > 400 && !p
                             ? (0, r.jsx)('img', {
-                                  src: S,
+                                  src: P,
                                   className: I.art,
                                   alt: E.intl.string(E.t['3Y9xdH'])
                               })
                             : (0, r.jsx)('img', {
-                                  src: P,
+                                  src: S,
                                   className: I.art,
                                   alt: ''
                               }),
@@ -293,7 +293,7 @@ function R(e) {
                 type: 'channel'
             }
         }).slice(0, 3),
-        { analyticsLocations: P } = (0, g.ZP)(m.Z.VC_TILE_ACTIVITY_SUGGESTION),
+        { analyticsLocations: S } = (0, g.ZP)(m.Z.VC_TILE_ACTIVITY_SUGGESTION),
         Z = i.useMemo(
             () => ({
                 channel: t,
@@ -302,14 +302,14 @@ function R(e) {
             [t]
         );
     return (0, r.jsx)(g.Gt, {
-        value: P,
+        value: S,
         children: (0, r.jsxs)(j.Z, {
             className: I.root,
             children: [
                 s > 480 && !f
                     ? (0, r.jsx)('img', {
                           className: I.art,
-                          src: S,
+                          src: P,
                           alt: E.intl.string(E.t['3Y9xdH'])
                       })
                     : null,

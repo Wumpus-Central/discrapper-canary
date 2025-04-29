@@ -24,8 +24,8 @@ var i = n(120356),
     O = n(5192),
     E = n(51144),
     I = n(131085),
-    P = n(388032),
-    S = n(157092);
+    S = n(388032),
+    P = n(157092);
 function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -74,13 +74,13 @@ function T(e) {
         l = t.id,
         s = (0, o.e7)([x.Z, C.Z, g.default], () => (l === g.default.getId() ? x.Z.getStatus() : C.Z.getStatus(l, n)), [l, n]);
     return (0, r.jsxs)('div', {
-        className: S.topRow,
+        className: P.topRow,
         children: [
             (0, r.jsxs)('div', {
-                className: S.memberNameContainer,
+                className: P.memberNameContainer,
                 children: [
                     (0, r.jsx)('div', {
-                        className: S.memberAvatar,
+                        className: P.memberAvatar,
                         children: (0, r.jsx)(a.qEK, {
                             src: t.getAvatarURL(n, 48),
                             'aria-label': t.username,
@@ -89,10 +89,10 @@ function T(e) {
                         })
                     }),
                     (0, r.jsxs)('div', {
-                        className: S.memberNameAndTagContainer,
+                        className: P.memberNameAndTagContainer,
                         children: [
                             (0, r.jsxs)('div', {
-                                className: S.memberNameTextContainer,
+                                className: P.memberNameTextContainer,
                                 children: [
                                     (0, r.jsx)(a.Text, {
                                         variant: 'text-lg/medium',
@@ -107,8 +107,8 @@ function T(e) {
                                         contextGuildId: n,
                                         badgeSize: I.Gg.SIZE_16,
                                         textVariant: 'heading-md/semibold',
-                                        className: S.memberClanTag,
-                                        containerClassName: S.memberClanTagContainer
+                                        className: P.memberClanTag,
+                                        containerClassName: P.memberClanTagContainer
                                     })
                                 ]
                             }),
@@ -125,7 +125,7 @@ function T(e) {
                 variant: 'text-md/medium',
                 color: 'text-normal',
                 children: (0, r.jsx)(a.P3F, {
-                    className: S.closeAction,
+                    className: P.closeAction,
                     onClick: i,
                     children: (0, r.jsx)(a.Dio, {
                         size: 'md',
@@ -165,10 +165,10 @@ function A(e) {
                 N(Z({}, c, e), {
                     tag: t,
                     'aria-label': n,
-                    className: l()(S.bottomRowAction, { [S.bottomRowActionDisabled]: i }),
+                    className: l()(P.bottomRowAction, { [P.bottomRowActionDisabled]: i }),
                     onClick: i ? void 0 : s,
                     children: (0, r.jsx)('div', {
-                        className: S.innerBottomRowAction,
+                        className: P.innerBottomRowAction,
                         children: o
                     })
                 })
@@ -200,11 +200,11 @@ function w(e) {
         }),
         w = (0, o.e7)([g.default], () => g.default.getId() === (null == t ? void 0 : t.id));
     return (0, r.jsxs)('div', {
-        className: S.bottomRow,
+        className: P.bottomRow,
         children: [
             (0, r.jsx)(A, {
                 disabled: w,
-                text: P.intl.string(P.t['g33r/P']),
+                text: S.intl.string(S.t['g33r/P']),
                 onClick: () => {
                     s.Z.openPrivateChannel({ recipientIds: t.id });
                 },
@@ -217,7 +217,7 @@ function w(e) {
             }),
             (0, r.jsx)(A, {
                 disabled: !b,
-                text: P.intl.string(P.t['3glT6e']),
+                text: S.intl.string(S.t['3glT6e']),
                 onClick: () => {
                     (0, a.ZDy)(async () => {
                         let { default: e } = await n.e('5454').then(n.bind(n, 854360));
@@ -241,7 +241,7 @@ function w(e) {
             }),
             (0, r.jsx)(A, {
                 disabled: !C,
-                text: P.intl.string(P.t['5MBJ5O']),
+                text: S.intl.string(S.t['5MBJ5O']),
                 onClick: () => {
                     (0, a.ZDy)(async () => {
                         let { default: e } = await n.e('4114').then(n.bind(n, 98746));
@@ -265,7 +265,7 @@ function w(e) {
             }),
             (0, r.jsx)(A, {
                 disabled: !x,
-                text: O ? P.intl.string(P.t.N86XcH) : P.intl.string(P.t.kTlLr6),
+                text: O ? S.intl.string(S.t.N86XcH) : S.intl.string(S.t.kTlLr6),
                 onClick: () => {
                     O
                         ? (0, d.q)({
@@ -287,7 +287,7 @@ function w(e) {
                 })
             }),
             (0, r.jsx)(A, {
-                text: P.intl.string(P.t.IHTjzM),
+                text: S.intl.string(S.t.IHTjzM),
                 onClick: () => {
                     T(f.jQ.COPY_ID), (0, j.JG)(t.id);
                 },
@@ -309,7 +309,7 @@ function R(e) {
     return null == l || null == a
         ? null
         : (0, r.jsxs)('div', {
-              className: S.container,
+              className: P.container,
               children: [
                   (0, r.jsx)(T, {
                       user: l,

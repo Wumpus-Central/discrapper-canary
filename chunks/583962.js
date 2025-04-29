@@ -24,8 +24,8 @@ var r = n(200651),
     O = n(259580),
     v = n(267642),
     C = n(624138),
-    S = n(667815),
-    j = n(531572),
+    j = n(667815),
+    S = n(531572),
     E = n(26323),
     x = n(30513),
     I = n(981631),
@@ -113,13 +113,13 @@ let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
             A = (0, v.FZ)(b),
             D = null == A,
             L = null != A ? A : b,
-            M = (0, c.e7)([j.Z], () => {
+            M = (0, c.e7)([S.Z], () => {
                 var e;
-                return null != (e = j.Z.getCountForGuild(t.id)) ? e : 0;
+                return null != (e = S.Z.getCountForGuild(t.id)) ? e : 0;
             }),
             U = (0, c.e7)([_.Z], () => _.Z.can(I.Plq.MANAGE_GUILD, t));
         i.useEffect(() => {
-            M !== C && (0, S.v)(t.id, C);
+            M !== C && (0, j.v)(t.id, C);
         }, [t.id, M, C]);
         let G = ''.concat(Math.min(100, (C / I.oCV[L]) * 100), '%'),
             { current: B } = i.useRef(G),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -52,38 +52,38 @@ let C = {
             END: 376
         }
     },
-    S = i.memo(function (e) {
+    j = i.memo(function (e) {
         let { guildId: t, selected: l } = e,
-            S = (0, m.ZP)(t),
-            j = i.useCallback(() => {
+            j = (0, m.ZP)(t),
+            S = i.useCallback(() => {
                 var e;
-                (0, h.jd)(t), (0, f.Z)(t, c.Z.GUILD_POWERUPS_CHANNEL_LIST_ROW), null == S || null == (e = S.popout) || e.markAsDismissed(b.L.INDIRECT_ACTION);
-            }, [t, S]),
+                (0, h.jd)(t), (0, f.Z)(t, c.Z.GUILD_POWERUPS_CHANNEL_LIST_ROW), null == j || null == (e = j.popout) || e.markAsDismissed(b.L.INDIRECT_ACTION);
+            }, [t, j]),
             E = i.useCallback(() => {
                 var e;
-                switch (null == S || null == (e = S.popout) ? void 0 : e.type) {
+                switch (null == j || null == (e = j.popout) ? void 0 : e.type) {
                     case p.J.LEVEL_REACHED:
-                        return (0, r.jsx)(g.jG, v({ guildId: t }, S.popout));
+                        return (0, r.jsx)(g.jG, v({ guildId: t }, j.popout));
                     case p.J.PERKS_AVAILABLE:
-                        return (0, r.jsx)(g.$h, v({ guildId: t }, S.popout));
+                        return (0, r.jsx)(g.$h, v({ guildId: t }, j.popout));
                     case p.J.PERKS_PURCHASABLE:
-                        return (0, r.jsx)(g.yI, v({ guildId: t }, S.popout));
+                        return (0, r.jsx)(g.yI, v({ guildId: t }, j.popout));
                     default:
                         return (0, r.jsx)('div', {});
                 }
-            }, [t, null == S ? void 0 : S.popout]),
+            }, [t, null == j ? void 0 : j.popout]),
             x = (0, a.s9z)(a.JQI),
             I = (0, s.e7)([d.Z], () => d.Z.hasLayers()),
             [P, w] = i.useState(null),
             N = null == P ? 'animation' : 'LOOP';
         i.useEffect(() => {
-            (null == S ? void 0 : S.popout) == null && w(null);
-        }, [null == S ? void 0 : S.popout]);
+            (null == j ? void 0 : j.popout) == null && w(null);
+        }, [null == j ? void 0 : j.popout]);
         let Z = i.useCallback((e) => {
             w(e);
         }, []);
         return (0, r.jsx)(a.yRy, {
-            shouldShow: (null == S ? void 0 : S.popout) != null && !(x || I),
+            shouldShow: (null == j ? void 0 : j.popout) != null && !(x || I),
             nudgeAlignIntoViewport: !0,
             animationPosition: 'bottom',
             position: 'right',
@@ -104,7 +104,7 @@ let C = {
                                     color: 'currentColor'
                                 }),
                             background:
-                                (null == S ? void 0 : S.popout) != null &&
+                                (null == j ? void 0 : j.popout) != null &&
                                 (0, r.jsx)('div', {
                                     className: O.lottieContainer,
                                     children: (0, r.jsx)(a.kci, {
@@ -117,13 +117,13 @@ let C = {
                                     })
                                 }),
                             text: (0, r.jsx)('span', {
-                                className: o()({ [O.textImportant]: (null == S ? void 0 : S.showUnread) === !0 }),
+                                className: o()({ [O.textImportant]: (null == j ? void 0 : j.showUnread) === !0 }),
                                 children: _.intl.string(y.default.yv3DJC)
                             }),
                             selected: l,
-                            onClick: j,
-                            showUnread: (null == S ? void 0 : S.showUnread) === !0,
-                            trailing: null == S ? void 0 : S.trailing
+                            onClick: S,
+                            showUnread: (null == j ? void 0 : j.showUnread) === !0,
+                            trailing: null == j ? void 0 : j.trailing
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(s))

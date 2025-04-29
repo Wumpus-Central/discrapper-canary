@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => b }), n(388685);
 var r = n(200651),
     l = n(192379),
     i = n(442837),
@@ -9,52 +9,51 @@ var r = n(200651),
     d = n(367907),
     u = n(138201),
     m = n(881998),
-    p = n(585483),
     x = n(981631),
-    b = n(388032);
-let _ = (e) => {
+    p = n(388032);
+let b = (e) => {
     let { application: t, reportId: n } = e,
-        [_, h] = l.useState(!1),
-        f = (0, i.e7)([m.Z], () => {
+        [b, _] = l.useState(!1),
+        h = (0, i.e7)([m.Z], () => {
             let e = m.Z.getApps();
             return null != e ? e.find((e) => e.application.id === t.id) : null;
         });
     l.useEffect(() => {
-        null != f && h(!0);
-    }, [f]);
-    let g = l.useRef(!1);
+        null != h && _(!0);
+    }, [h]);
+    let f = l.useRef(!1);
     l.useEffect(() => {
-        g.current || (o.Z.fetch(), (g.current = !0));
+        f.current || (o.Z.fetch(), (f.current = !0));
     }, []);
-    let v = (0, i.e7)([s.ZP], () => s.ZP.getSelfEmbeddedActivities()),
-        j = l.useCallback(() => {
+    let g = (0, i.e7)([s.ZP], () => s.ZP.getSelfEmbeddedActivities()),
+        v = l.useCallback(() => {
             if (
-                (h(!1),
+                (_(!1),
                 d.ZP.trackWithMetadata(x.rMx.IAR_DEAUTHORIZE_APP_BUTTON_CLICKED, {
                     application_id: t.id,
                     report_id: n
                 }),
-                null == f)
+                null == h)
             )
                 return;
-            o.Z.delete(f.id), p.S.safeDispatch(x.CkL.HIDE_APP_LAUNCHER_BUTTON_APP_INSTALLED_EDUCATION, { applicationId: t.id });
-            let e = v.get(t.id);
+            o.Z.delete(h.id);
+            let e = g.get(t.id);
             null != e &&
                 c.Z.leaveActivity({
                     location: e.location,
                     applicationId: t.id,
                     showFeedback: !1
                 });
-        }, [t.id, f, v, n]);
+        }, [t.id, h, g, n]);
     return null == t
         ? null
         : (0, r.jsx)(u.ZP, {
-              title: b.intl.string(b.t.ygG62N),
-              description: b.intl.string(b.t.S51EKi),
-              buttonText: _ ? b.intl.string(b.t.xXpoGR) : b.intl.string(b.t.JsiUnJ),
-              buttonDisabled: !_,
-              buttonColor: _ ? a.zxk.Colors.RED : a.zxk.Colors.WHITE,
-              buttonLook: _ ? a.zxk.Looks.FILLED : a.zxk.Looks.LINK,
-              onButtonPress: j
+              title: p.intl.string(p.t.ygG62N),
+              description: p.intl.string(p.t.S51EKi),
+              buttonText: b ? p.intl.string(p.t.xXpoGR) : p.intl.string(p.t.JsiUnJ),
+              buttonDisabled: !b,
+              buttonColor: b ? a.zxk.Colors.RED : a.zxk.Colors.WHITE,
+              buttonLook: b ? a.zxk.Looks.FILLED : a.zxk.Looks.LINK,
+              onButtonPress: v
           });
 };

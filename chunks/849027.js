@@ -40,6 +40,8 @@ async function E(e) {
                 return (0, o.lv)(t);
             case g.oC.GUILD_BOOSTS:
                 return (0, u.gV)(t, 'isAccessibleChannelOrThread');
+            case g.oC.REPORT_TO_MOD:
+                return null != E && E.getModeratorReportingEnabled();
             default:
                 (0, p.vE)(n);
         }

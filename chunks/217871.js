@@ -144,7 +144,7 @@ let j = i.memo(function (e) {
                 pointerEvents: 'none',
                 config: a.config.stiff
             }),
-            P = i.useMemo(
+            S = i.useMemo(
                 () =>
                     null != x
                         ? x
@@ -154,16 +154,16 @@ let j = i.memo(function (e) {
                           },
                 [x]
             ),
-            S = i.useRef(P);
+            P = i.useRef(S);
         i.useEffect(() => {
-            (P.multiplier > 1 || P.value > 0) && (S.current = P);
-        }, [P]);
+            (S.multiplier > 1 || S.value > 0) && (P.current = S);
+        }, [S]);
         let { multiplier: Z, value: N } = i.useMemo(
             () => ({
-                value: E ? P.value : S.current.value,
-                multiplier: E ? P.multiplier : S.current.multiplier
+                value: E ? S.value : P.current.value,
+                multiplier: E ? S.multiplier : P.current.multiplier
             }),
-            [E, P, S]
+            [E, S, P]
         );
         return (0, r.jsxs)(r.Fragment, {
             children: [
