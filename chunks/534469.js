@@ -27,8 +27,8 @@ var r = n(200651),
     O = n(592125),
     E = n(906467),
     I = n(323873),
-    S = n(709054),
-    P = n(786761),
+    P = n(709054),
+    S = n(786761),
     Z = n(534091),
     N = n(901461),
     T = n(739566),
@@ -203,9 +203,9 @@ function ei(e) {
         } = e,
         E = a.type === K.uaV.REPLY ? a.messageReference : void 0,
         I = (0, c.JA)(null != (t = e.id) ? t : ''),
-        { onFocus: S } = I,
+        { onFocus: P } = I,
         Z = et(I, ['onFocus']),
-        { isFocused: A, handleFocus: U, handleBlur: G } = (0, k.bb)(S),
+        { isFocused: A, handleFocus: U, handleBlur: G } = (0, k.bb)(P),
         { popouts: F, selected: z, setPopout: J } = (0, L.Z)(a.id, q.d$),
         en = j.RS.useSetting(),
         er = j.NA.useSetting(),
@@ -263,7 +263,7 @@ function ei(e) {
                         [Q.message]: !0,
                         [Q.cozyMessage]: !b,
                         [Q.mentioned]: a.mentioned,
-                        [Q.ephemeral]: (0, P.Pv)(a),
+                        [Q.ephemeral]: (0, S.Pv)(a),
                         [Q.systemMessage]: (0, N.Z)(a),
                         [Q.groupStart]: a.id === C || a.type === K.uaV.REPLY,
                         [Q.selected]: eu
@@ -354,24 +354,24 @@ let el = i.memo(function (e) {
             defaultValue: eb,
             popouts: eg
         }),
-        { isFocused: eE, hasFocused: eI, handleFocus: eS, handleBlur: eP } = (0, k.bb)(eu),
+        { isFocused: eE, hasFocused: eI, handleFocus: eP, handleBlur: eS } = (0, k.bb)(eu),
         eZ = i.useCallback(
             (e) => {
-                eS(e), ex(e);
+                eP(e), ex(e);
             },
-            [eS, ex]
+            [eP, ex]
         ),
         eN = i.useCallback(
             (e) => {
-                eP(e), ev();
+                eS(e), ev();
             },
-            [eP, ev]
+            [eS, ev]
         ),
         eT = (0, u.e7)([I.Z], () => I.Z.isEditing(en, Z), [en, Z]),
         eA = (0, u.e7)([p.Z], () => p.Z.keyboardModeEnabled),
         ew = eb || eT || (eA && eE),
         eR = ew || eO,
-        ek = (0, u.e7)([O.Z], () => v.hasFlag(K.iLy.HAS_THREAD) && O.Z.getChannel(S.default.castMessageIdAsChannelId(v.id))),
+        ek = (0, u.e7)([O.Z], () => v.hasFlag(K.iLy.HAS_THREAD) && O.Z.getChannel(P.default.castMessageIdAsChannelId(v.id))),
         eM = v.isFirstMessageInForumPost(J),
         eL = (0, m.A)((null != (n = v.editedTimestamp) ? n : v.timestamp).valueOf()),
         eD = (0, u.e7)([E.Z], () => E.Z.isDeveloper),
@@ -447,7 +447,7 @@ let el = i.memo(function (e) {
                                 [Q.message]: !0,
                                 [Q.cozyMessage]: !er,
                                 [Q.mentioned]: v.mentioned,
-                                [Q.ephemeral]: (0, P.Pv)(v),
+                                [Q.ephemeral]: (0, S.Pv)(v),
                                 [Q.nitroMessage]: v.type === K.uaV.NITRO_NOTIFICATION || v.type === K.uaV.CHAT_WALLPAPER_SET || v.type === K.uaV.CHAT_WALLPAPER_REMOVED,
                                 [Q.systemMessage]: (0, N.Z)(v),
                                 [Q.groupStart]: !ea && (e$ || v.type === K.uaV.REPLY),

@@ -1,21 +1,21 @@
-t.d(n, { Z: () => f }), t(953529), t(997841);
-var l = t(200651);
-t(192379);
-var r = t(597312),
-    i = t(442837),
-    o = t(481060),
-    s = t(860719),
-    a = t(621853),
-    d = t(388032),
-    c = t(989421);
+n.d(t, { Z: () => f }), n(953529), n(997841);
+var l = n(200651);
+n(192379);
+var r = n(597312),
+    i = n(442837),
+    s = n(481060),
+    o = n(860719),
+    c = n(621853),
+    a = n(388032),
+    d = n(989421);
 function u(e) {
-    let { icon: n, title: t, description: r } = e;
+    let { icon: t, title: n, description: r } = e;
     return (0, l.jsxs)('div', {
-        className: c.row,
+        className: d.row,
         children: [
             (0, l.jsx)('div', {
-                className: c.rowIcon,
-                children: (0, l.jsx)(n, {
+                className: d.rowIcon,
+                children: (0, l.jsx)(t, {
                     size: 'custom',
                     width: 20,
                     height: 20,
@@ -23,13 +23,13 @@ function u(e) {
                 })
             }),
             (0, l.jsxs)('div', {
-                className: c.rowText,
+                className: d.rowText,
                 children: [
-                    (0, l.jsx)(o.X6q, {
+                    (0, l.jsx)(s.X6q, {
                         variant: 'text-xs/semibold',
-                        children: t
+                        children: n
                     }),
-                    (0, l.jsx)(o.Text, {
+                    (0, l.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         children: r
                     })
@@ -39,37 +39,37 @@ function u(e) {
     });
 }
 function f(e) {
-    let { user: n } = e,
-        t = (0, i.e7)([a.Z], () => {
+    let { user: t } = e,
+        n = (0, i.e7)([c.Z], () => {
             var e;
-            return null == (e = a.Z.getUserProfile(n.id)) ? void 0 : e.application;
+            return null == (e = c.Z.getUserProfile(t.id)) ? void 0 : e.application;
         }),
-        { hasMessageContent: f, hasGuildPresences: h, hasGuildMembers: p } = (0, s.w)({ flags: null == t ? void 0 : t.flags });
+        { hasMessageContent: f, hasGuildPresences: p, hasGuildMembers: h } = (0, o.w)({ flags: null == n ? void 0 : n.flags });
     return (0, l.jsxs)(r.zJ, {
         fade: !0,
-        className: c.scroller,
+        className: d.scroller,
         children: [
             f &&
                 (0, l.jsx)(u, {
-                    icon: o.kBi,
-                    title: d.intl.string(d.t['7Tmhfn']),
-                    description: d.intl.string(d.t['eu5x7+'])
-                }),
-            h &&
-                (0, l.jsx)(u, {
-                    icon: o.iWm,
-                    title: d.intl.string(d.t.awYSsL),
-                    description: d.intl.string(d.t.TpsXoK)
+                    icon: s.kBi,
+                    title: a.intl.string(a.t['7Tmhfn']),
+                    description: a.intl.string(a.t['eu5x7+'])
                 }),
             p &&
                 (0, l.jsx)(u, {
-                    icon: o.BFJ,
-                    title: d.intl.string(d.t.WuKeSE),
-                    description: d.intl.string(d.t.wOBmtb)
+                    icon: s.iWm,
+                    title: a.intl.string(a.t.awYSsL),
+                    description: a.intl.string(a.t.TpsXoK)
                 }),
-            (0, l.jsx)(o.Text, {
+            h &&
+                (0, l.jsx)(u, {
+                    icon: s.BFJ,
+                    title: a.intl.string(a.t.WuKeSE),
+                    description: a.intl.string(a.t.wOBmtb)
+                }),
+            (0, l.jsx)(s.Text, {
                 variant: 'text-xs/normal',
-                children: d.intl.format(d.t.b6nqk5, { helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975' })
+                children: a.intl.format(a.t.b6nqk5, { helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975' })
             })
         ]
     });

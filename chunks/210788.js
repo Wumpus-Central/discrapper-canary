@@ -1,55 +1,53 @@
-t.d(n, { Z: () => C }), t(388685);
+t.d(n, { Z: () => v }), t(388685);
 var o = t(200651),
     r = t(192379),
-    i = t(120356),
-    c = t.n(i),
-    a = t(481060),
+    c = t(120356),
+    a = t.n(c),
+    i = t(481060),
     l = t(37234),
-    s = t(410030),
-    d = t(81897),
-    u = t(906732),
-    f = t(566898),
-    p = t(769654),
-    m = t(785717),
-    b = t(806729),
-    _ = t(708108),
-    y = t(146078),
+    s = t(81897),
+    d = t(906732),
+    u = t(566898),
+    f = t(769654),
+    p = t(785717),
+    m = t(806729),
+    b = t(708108),
+    _ = t(146078),
     h = t(857302),
-    g = t(892001),
-    x = t(389190),
-    j = t(428927),
-    I = t(228168),
-    v = t(388032),
+    y = t(892001),
+    g = t(252417),
+    x = t(821179),
+    j = t(228168),
+    I = t(388032),
     O = t(714905);
-function C(e) {
-    let { user: n, onClose: t } = e,
-        { analyticsLocations: i } = (0, u.ZP)(),
-        { context: C, trackUserProfileAction: N } = (0, m.KZ)(),
-        P = (0, s.ZP)(),
-        { mutualFriends: A, mutualFriendsCount: Z, mutualGuilds: T, isFetching: w } = (0, b.Z)(n),
-        S = (0, d.Z)(),
+function v(e) {
+    let { user: n, guildId: t, channelId: c, onClose: v } = e,
+        { analyticsLocations: P } = (0, d.ZP)(),
+        { context: C, trackUserProfileAction: N } = (0, p.KZ)(),
+        { mutualFriends: Z, mutualFriendsCount: A, mutualGuilds: T, isFetching: w } = (0, m.Z)(n),
+        S = (0, s.Z)(),
         M = r.useMemo(
             () => [
                 {
-                    section: I.oh.MUTUAL_FRIENDS,
-                    text: (0, _.Z)(Z)
+                    section: j.oh.MUTUAL_FRIENDS,
+                    text: (0, b.Z)(A)
                 },
                 {
-                    section: I.oh.MUTUAL_GUILDS,
-                    text: (0, y.Z)(null == T ? void 0 : T.length)
+                    section: j.oh.MUTUAL_GUILDS,
+                    text: (0, _.Z)(null == T ? void 0 : T.length)
                 }
             ],
-            [Z, null == T ? void 0 : T.length]
+            [A, null == T ? void 0 : T.length]
         ),
         [{ section: E, text: U }, B] = r.useState(M[0]);
     return (
         r.useEffect(() => {
-            E === I.oh.MUTUAL_FRIENDS && (0, h.Z)(n.id, S);
+            E === j.oh.MUTUAL_FRIENDS && (0, h.Z)(n.id, S);
         }, [E, n.id, S]),
         (0, o.jsxs)('div', {
             className: O.container,
             children: [
-                (0, o.jsx)(a.njP, {
+                (0, o.jsx)(i.njP, {
                     className: O.tabBar,
                     selectedItem: E,
                     onItemSelect: (e) => {
@@ -64,12 +62,12 @@ function C(e) {
                     },
                     children: M.map((e) =>
                         (0, o.jsx)(
-                            a.njP.Item,
+                            i.njP.Item,
                             {
                                 id: e.section,
                                 'aria-label': e.text,
                                 className: O.tabBarItem,
-                                children: (0, o.jsx)(a.Text, {
+                                children: (0, o.jsx)(i.Text, {
                                     variant: 'text-sm/semibold',
                                     color: 'text-primary',
                                     children: e.text
@@ -79,27 +77,27 @@ function C(e) {
                         )
                     )
                 }),
-                (0, o.jsx)(a.njP.Panel, {
+                (0, o.jsx)(i.njP.Panel, {
                     id: E,
                     'aria-label': U,
                     className: O.tabBarPanel,
-                    children: (0, o.jsxs)(a.Ttm, {
+                    children: (0, o.jsxs)(i.Ttm, {
                         className: O.scroller,
                         fade: !0,
                         children: [
-                            E === I.oh.MUTUAL_FRIENDS &&
-                                (null == A
-                                    ? Array.from({ length: null != Z ? Z : 10 }).map((e, n) =>
+                            E === j.oh.MUTUAL_FRIENDS &&
+                                (null == Z
+                                    ? Array.from({ length: null != A ? A : 10 }).map((e, n) =>
                                           (0, o.jsxs)(
                                               'div',
                                               {
-                                                  className: c()(O.loadingItem, O.loadingMutualFriend),
+                                                  className: a()(O.loadingItem, O.loadingMutualFriend),
                                                   children: [
-                                                      (0, o.jsx)(f.ZT, {
+                                                      (0, o.jsx)(u.ZT, {
                                                           width: 40,
                                                           opacity: 0.08
                                                       }),
-                                                      (0, o.jsx)(f.ZT, {
+                                                      (0, o.jsx)(u.ZT, {
                                                           width: 135,
                                                           opacity: 0.08
                                                       })
@@ -108,30 +106,32 @@ function C(e) {
                                               n
                                           )
                                       )
-                                    : 0 === A.length
+                                    : 0 === Z.length
                                       ? (0, o.jsxs)('div', {
                                             className: O.empty,
                                             children: [
-                                                (0, o.jsx)('div', { className: c()(O.emptyImage, O.noMutualFriends) }),
-                                                (0, o.jsx)(a.Text, {
+                                                (0, o.jsx)('div', { className: a()(O.emptyImage, O.noMutualFriends) }),
+                                                (0, o.jsx)(i.Text, {
                                                     variant: 'text-sm/normal',
                                                     color: 'header-primary',
-                                                    children: v.intl.string(v.t['ru+2j4'])
+                                                    children: I.intl.string(I.t['ru+2j4'])
                                                 })
                                             ]
                                         })
-                                      : A.map((e) => {
-                                            let { key: n, user: r, status: c } = e;
+                                      : Z.map((e) => {
+                                            let { key: n, user: r, status: a } = e;
                                             return (0, o.jsx)(
-                                                x.T,
+                                                g.Z,
                                                 {
                                                     user: r,
-                                                    status: c,
+                                                    status: a,
+                                                    guildId: t,
+                                                    channelId: c,
                                                     onSelect: () => {
                                                         var e, n;
-                                                        t(),
+                                                        v(),
                                                             N({ action: 'PRESS_MUTUAL_FRIEND' }),
-                                                            (0, g.openUserProfileModal)(
+                                                            (0, y.openUserProfileModal)(
                                                                 ((e = (function (e) {
                                                                     for (var n = 1; n < arguments.length; n++) {
                                                                         var t = null != arguments[n] ? arguments[n] : {},
@@ -160,7 +160,7 @@ function C(e) {
                                                                 (n = n =
                                                                     {
                                                                         userId: r.id,
-                                                                        sourceAnalyticsLocations: i
+                                                                        sourceAnalyticsLocations: P
                                                                     }),
                                                                 Object.getOwnPropertyDescriptors
                                                                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
@@ -181,19 +181,19 @@ function C(e) {
                                                 n
                                             );
                                         })),
-                            E === I.oh.MUTUAL_GUILDS &&
+                            E === j.oh.MUTUAL_GUILDS &&
                                 (null == T && w
                                     ? Array.from({ length: 10 }).map((e, n) =>
                                           (0, o.jsxs)(
                                               'div',
                                               {
-                                                  className: c()(O.loadingItem, O.loadingMutualGuild),
+                                                  className: a()(O.loadingItem, O.loadingMutualGuild),
                                                   children: [
-                                                      (0, o.jsx)(f.ZT, {
+                                                      (0, o.jsx)(u.ZT, {
                                                           width: 40,
                                                           opacity: 0.08
                                                       }),
-                                                      (0, o.jsx)(f.ZT, {
+                                                      (0, o.jsx)(u.ZT, {
                                                           width: 135,
                                                           opacity: 0.08
                                                       })
@@ -206,29 +206,28 @@ function C(e) {
                                       ? null == T
                                           ? void 0
                                           : T.map((e) => {
-                                                let { guild: r, nick: i } = e;
+                                                let { guild: t, nick: r } = e;
                                                 return (0, o.jsx)(
-                                                    j.D,
+                                                    x.Z,
                                                     {
                                                         user: n,
-                                                        guild: r,
-                                                        nick: i,
-                                                        theme: P,
+                                                        guild: t,
+                                                        nick: r,
                                                         onSelect: () => {
-                                                            N({ action: 'PRESS_MUTUAL_GUILD' }), (0, p.X)(r.id), t(), (0, l.xf)();
+                                                            N({ action: 'PRESS_MUTUAL_GUILD' }), (0, f.X)(t.id), v(), (0, l.xf)();
                                                         }
                                                     },
-                                                    r.id
+                                                    t.id
                                                 );
                                             })
                                       : (0, o.jsxs)('div', {
                                             className: O.empty,
                                             children: [
-                                                (0, o.jsx)('div', { className: c()(O.emptyImage, O.noMutualGuilds) }),
-                                                (0, o.jsx)(a.Text, {
+                                                (0, o.jsx)('div', { className: a()(O.emptyImage, O.noMutualGuilds) }),
+                                                (0, o.jsx)(i.Text, {
                                                     variant: 'text-sm/normal',
                                                     color: 'header-primary',
-                                                    children: v.intl.string(v.t.x5y3DA)
+                                                    children: I.intl.string(I.t.x5y3DA)
                                                 })
                                             ]
                                         }))

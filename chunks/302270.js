@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(984370),
     E = n(141321),
     I = n(221241),
-    S = n(618158),
-    P = n(390322),
+    P = n(618158),
+    S = n(390322),
     Z = n(616286),
     N = n(961048),
     T = n(975146),
@@ -101,7 +101,7 @@ function X(e) {
         ),
         w = (0, L.B)(n.id),
         R = (0, k.Rk)(n.id, M.pV.REQUESTED_TO_SPEAK_ONLY),
-        { preventIdle: D, allowIdle: U } = (0, S.Y)('popup'),
+        { preventIdle: D, allowIdle: U } = (0, P.Y)('popup'),
         { hasParticipantsPanel: F } = (0, m.Z)({ location: 'StageChannelCallHeader' }),
         H = F && A,
         z = (0, x.Q3)('StageChannelCallHeader'),
@@ -118,7 +118,7 @@ function X(e) {
                         animation: c.yRy.Animation.NONE,
                         align: 'right',
                         renderPopout: (e) =>
-                            (0, r.jsx)(P.Z, {
+                            (0, r.jsx)(S.Z, {
                                 children: (0, r.jsx)(
                                     G.ZP,
                                     K(q({}, e), {
@@ -205,8 +205,8 @@ function Q(e) {
         C = (null == b ? void 0 : b.isCommunity()) ? y < H.TU7 : (null == b ? void 0 : b.premiumTier) !== H.Eu4.TIER_3 && y <= H.eez,
         E = (0, F.Z)(l),
         I = (0, a.e7)([w.Z], () => w.Z.can(D.yP, l)),
-        S = (0, x.Q3)('StageChannelCallHeader'),
-        P = () => {
+        P = (0, x.Q3)('StageChannelCallHeader'),
+        S = () => {
             u.Z.updateStageVideoLimitBoostUpsellDismissed(l.id, !0),
                 R.default.track(H.rMx.BOOSTING_UPSELL_CLICKED, {
                     guild_id: l.guild_id,
@@ -255,7 +255,7 @@ function Q(e) {
                         disabled: !0,
                         'aria-label': W.intl.string(W.t.EErMzM),
                         className: Y.icon,
-                        color: null != f ? (S ? s.Z.colors.HEADER_MUTED.css : s.Z.unsafe_rawColors.GREEN_360.css) : void 0
+                        color: null != f ? (P ? s.Z.colors.HEADER_MUTED.css : s.Z.unsafe_rawColors.GREEN_360.css) : void 0
                     }),
                     (0, r.jsx)(j.ZP.Title, {
                         className: Y.channelName,
@@ -267,11 +267,11 @@ function Q(e) {
                         children: [
                             (0, r.jsx)(c.S6n, {
                                 size: 'xs',
-                                color: S ? s.Z.colors.TEXT_LOW_CONTRAST.css : 'currentColor'
+                                color: P ? s.Z.colors.TEXT_LOW_CONTRAST.css : 'currentColor'
                             }),
                             (0, r.jsx)(c.Text, {
-                                variant: S ? 'text-sm/normal' : 'text-xs/medium',
-                                color: S ? 'text-muted' : 'header-secondary',
+                                variant: P ? 'text-sm/normal' : 'text-xs/medium',
+                                color: P ? 'text-muted' : 'header-secondary',
                                 className: Y.speakerCount,
                                 children: W.intl.format(W.t.chmM9P, { count: m })
                             }),
@@ -281,8 +281,8 @@ function Q(e) {
                                 color: 'currentColor'
                             }),
                             (0, r.jsx)(c.Text, {
-                                variant: S ? 'text-sm/normal' : 'text-xs/medium',
-                                color: S ? 'text-muted' : 'header-secondary',
+                                variant: P ? 'text-sm/normal' : 'text-xs/medium',
+                                color: P ? 'text-muted' : 'header-secondary',
                                 className: Y.speakerCount,
                                 children: W.intl.format(W.t['+v2pNz'], { count: g })
                             })
@@ -322,7 +322,7 @@ function Q(e) {
                                         children: [
                                             (0, r.jsx)(c.zxk, {
                                                 className: Y.notNowButton,
-                                                onClick: P,
+                                                onClick: S,
                                                 look: c.zxk.Looks.BLANK,
                                                 size: c.zxk.Sizes.SMALL,
                                                 children: W.intl.string(W.t.L5eIZ2)
@@ -348,7 +348,7 @@ function Q(e) {
                                     })
                                   : (0, r.jsx)(c.zxk, {
                                         className: Y.notNowButton,
-                                        onClick: P,
+                                        onClick: S,
                                         look: c.zxk.Looks.BLANK,
                                         size: c.zxk.Sizes.SMALL,
                                         children: W.intl.string(W.t.WAI6xs)

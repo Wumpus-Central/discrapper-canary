@@ -1,4 +1,4 @@
-r.d(t, { a: () => s });
+r.d(t, { a: () => a });
 var n = r(818083),
     i = r(772209);
 let l = (0, n.B)({
@@ -14,7 +14,7 @@ let l = (0, n.B)({
             }
         ]
     }),
-    s = (e) => {
+    a = (e) => {
         let { location: t, autoTrackExposure: r = !0 } = e,
             n = (0, i.q)({
                 location: t,

@@ -1,94 +1,88 @@
-n.d(i, { default: () => k });
-var e = n(200651),
-    s = n(192379),
-    a = n(481060),
-    l = n(313201),
-    o = n(434404),
-    c = n(703656),
-    r = n(392576),
-    d = n(246364),
-    x = n(981631),
-    m = n(176505),
-    p = n(388032),
-    b = n(367503);
-let k = function (t) {
-    let { guildId: i, submittedGuildJoinRequestsCount: n, onClose: k, transitionState: f, onConfirm: h } = t,
-        u = (0, l.Dt)(),
-        z = s.useCallback(
+i.d(n, { default: () => m });
+var e = i(200651),
+    s = i(192379),
+    c = i(481060),
+    o = i(313201),
+    a = i(434404),
+    l = i(703656),
+    r = i(246364),
+    x = i(981631),
+    d = i(176505),
+    h = i(388032),
+    k = i(367503);
+let m = function (t) {
+    let { guildId: n, submittedGuildJoinRequestsCount: i, onClose: m, transitionState: z, onConfirm: u } = t,
+        f = (0, o.Dt)(),
+        b = s.useCallback(
             (t) => {
-                k(), h(t);
+                m(), u(t);
             },
-            [k, h]
+            [m, u]
         ),
         C = s.useCallback(() => {
-            k(), o.Z.close(), (0, c.uL)(x.Z5c.CHANNEL(i, m.oC.MEMBER_SAFETY));
-        }, [i, k]),
-        { disableMassApproval: v } = r.Z.useExperiment({
-            guildId: i,
-            location: 'PendingJoinRequestsWarningModal'
-        }),
-        E = v && n > 200;
-    return (0, e.jsxs)(a.Y0X, {
-        className: b.container,
-        transitionState: f,
-        'aria-labelledby': u,
+            m(), a.Z.close(), (0, l.uL)(x.Z5c.CHANNEL(n, d.oC.MEMBER_SAFETY));
+        }, [n, m]),
+        T = i > 200;
+    return (0, e.jsxs)(c.Y0X, {
+        className: k.container,
+        transitionState: z,
+        'aria-labelledby': f,
         children: [
-            (0, e.jsxs)(a.hzk, {
-                className: b.content,
+            (0, e.jsxs)(c.hzk, {
+                className: k.content,
                 children: [
-                    (0, e.jsx)(a.X6q, {
+                    (0, e.jsx)(c.X6q, {
                         variant: 'heading-md/semibold',
-                        id: u,
-                        children: p.intl.format(p.t.chV4JS, { count: n })
+                        id: f,
+                        children: h.intl.format(h.t.chV4JS, { count: i })
                     }),
-                    (0, e.jsx)(a.Text, {
-                        className: b.descriptionText,
+                    (0, e.jsx)(c.Text, {
+                        className: k.descriptionText,
                         color: 'header-secondary',
                         variant: 'text-sm/normal',
-                        children: E ? p.intl.string(p.t.EPoNRk) : p.intl.string(p.t['8+nq/P'])
+                        children: T ? h.intl.string(h.t.EPoNRk) : h.intl.string(h.t['8+nq/P'])
                     }),
-                    (0, e.jsx)(a.P3F, {
-                        className: b.actionText,
+                    (0, e.jsx)(c.P3F, {
+                        className: k.actionText,
                         onClick: C,
-                        children: (0, e.jsx)(a.Text, {
+                        children: (0, e.jsx)(c.Text, {
                             variant: 'text-sm/normal',
                             color: 'text-link',
-                            children: p.intl.string(p.t.szESVF)
+                            children: h.intl.string(h.t.szESVF)
                         })
                     })
                 ]
             }),
-            (0, e.jsxs)(a.mzw, {
+            (0, e.jsxs)(c.mzw, {
                 children: [
-                    (0, e.jsx)(a.zxk, {
-                        color: a.zxk.Colors.PRIMARY,
-                        onClick: k,
-                        size: a.zxk.Sizes.SMALL,
-                        children: (0, e.jsx)(a.Text, {
+                    (0, e.jsx)(c.zxk, {
+                        color: c.zxk.Colors.PRIMARY,
+                        onClick: m,
+                        size: c.zxk.Sizes.SMALL,
+                        children: (0, e.jsx)(c.Text, {
                             variant: 'text-sm/semibold',
-                            children: p.intl.string(p.t['ETE/oK'])
+                            children: h.intl.string(h.t['ETE/oK'])
                         })
                     }),
-                    v &&
-                        (0, e.jsx)(a.zxk, {
-                            className: b.actionButton,
-                            color: a.zxk.Colors.RED,
-                            onClick: () => z(d.wB.REJECTED),
-                            size: a.zxk.Sizes.SMALL,
-                            children: (0, e.jsx)(a.Text, {
+                    (0, e.jsx)(c.zxk, {
+                        className: k.actionButton,
+                        color: c.zxk.Colors.RED,
+                        onClick: () => b(r.wB.REJECTED),
+                        size: c.zxk.Sizes.SMALL,
+                        children: (0, e.jsx)(c.Text, {
+                            variant: 'text-sm/semibold',
+                            children: h.intl.string(h.t.Gfg0ra)
+                        })
+                    }),
+                    !T &&
+                        (0, e.jsx)(c.zxk, {
+                            className: k.actionButton,
+                            color: c.zxk.Colors.BRAND,
+                            onClick: () => b(r.wB.APPROVED),
+                            size: c.zxk.Sizes.SMALL,
+                            children: (0, e.jsx)(c.Text, {
                                 variant: 'text-sm/semibold',
-                                children: p.intl.string(p.t.Gfg0ra)
-                            })
-                        }),
-                    !E &&
-                        (0, e.jsx)(a.zxk, {
-                            className: b.actionButton,
-                            color: a.zxk.Colors.BRAND,
-                            onClick: () => z(d.wB.APPROVED),
-                            size: a.zxk.Sizes.SMALL,
-                            children: (0, e.jsx)(a.Text, {
-                                variant: 'text-sm/semibold',
-                                children: p.intl.string(p.t.VWqCvL)
+                                children: h.intl.string(h.t.VWqCvL)
                             })
                         })
                 ]

@@ -1,36 +1,38 @@
 t.d(n, { Z: () => p }), t(388685);
 var o = t(200651),
     r = t(192379),
-    i = t(481060),
-    c = t(785717),
-    a = t(128156),
+    c = t(481060),
+    a = t(785717),
+    i = t(128156),
     l = t(210788),
     s = t(228168),
     d = t(388032),
     u = t(662776);
 function f(e) {
-    let { user: n, currentUser: t, section: r, subsection: i, displayProfile: c, guildId: d, onClose: u } = e;
+    let { user: n, currentUser: t, section: r, subsection: c, displayProfile: a, guildId: d, channelId: u, onClose: f } = e;
     return r === s.oh.ACTIVITY
-        ? (0, o.jsx)(a.Z, {
+        ? (0, o.jsx)(i.Z, {
               user: n,
               currentUser: t,
-              displayProfile: c,
+              displayProfile: a,
               guildId: d,
-              subsection: i,
-              onClose: u
+              subsection: c,
+              onClose: f
           })
         : r === s.oh.MUTUALS
           ? (0, o.jsx)(l.Z, {
                 user: n,
-                onClose: u
+                guildId: d,
+                channelId: u,
+                onClose: f
             })
           : null;
 }
 function p(e) {
-    var n, t, a;
-    let { user: l, currentUser: p, displayProfile: m, guildId: b, initialSection: _, initialSubsection: y, onClose: h } = e,
-        { trackUserProfileAction: g } = (0, c.KZ)(),
-        x = r.useMemo(
+    var n, t, i;
+    let { user: l, currentUser: p, displayProfile: m, guildId: b, channelId: _, initialSection: h, initialSubsection: y, onClose: g } = e,
+        { trackUserProfileAction: x } = (0, a.KZ)(),
+        j = r.useMemo(
             () =>
                 l.id === p.id
                     ? [
@@ -54,7 +56,7 @@ function p(e) {
                       ],
             [l.id, p.id]
         ),
-        [{ section: j, subsection: I, text: v }, O] = r.useState(
+        [{ section: I, subsection: O, text: v }, P] = r.useState(
             ((t = (function (e) {
                 for (var n = 1; n < arguments.length; n++) {
                     var t = null != arguments[n] ? arguments[n] : {},
@@ -82,16 +84,16 @@ function p(e) {
             })(
                 {},
                 null !=
-                    (n = x.find((e) => {
+                    (n = j.find((e) => {
                         let { section: n } = e;
-                        return n === _;
+                        return n === h;
                     }))
                     ? n
-                    : x[0]
+                    : j[0]
             )),
-            (a = a = { subsection: y }),
+            (i = i = { subsection: y }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(a))
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
                 : (function (e, n) {
                       var t = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
@@ -99,36 +101,36 @@ function p(e) {
                           t.push.apply(t, o);
                       }
                       return t;
-                  })(Object(a)).forEach(function (e) {
-                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(a, e));
+                  })(Object(i)).forEach(function (e) {
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(i, e));
                   }),
             t)
         );
     return (0, o.jsxs)('div', {
         className: u.container,
         children: [
-            (0, o.jsx)(i.njP, {
+            (0, o.jsx)(c.njP, {
                 type: 'top',
                 className: u.tabBar,
-                selectedItem: j,
+                selectedItem: I,
                 onItemSelect: (e) => {
-                    g({
+                    x({
                         action: 'PRESS_SECTION',
                         section: e
                     }),
-                        O((n) => {
+                        P((n) => {
                             var t;
-                            return null != (t = x.find((n) => n.section === e)) ? t : n;
+                            return null != (t = j.find((n) => n.section === e)) ? t : n;
                         });
                 },
-                children: x.map((e) =>
+                children: j.map((e) =>
                     (0, o.jsx)(
-                        i.njP.Item,
+                        c.njP.Item,
                         {
                             className: u.tabBarItem,
                             id: e.section,
                             'aria-label': e.text,
-                            children: (0, o.jsx)(i.X6q, {
+                            children: (0, o.jsx)(c.X6q, {
                                 variant: 'heading-lg/medium',
                                 children: e.text
                             })
@@ -137,8 +139,8 @@ function p(e) {
                     )
                 )
             }),
-            (0, o.jsx)(i.njP.Panel, {
-                id: j,
+            (0, o.jsx)(c.njP.Panel, {
+                id: I,
                 'aria-label': v,
                 className: u.tabBarPanel,
                 children: (0, o.jsx)(f, {
@@ -146,9 +148,10 @@ function p(e) {
                     currentUser: p,
                     displayProfile: m,
                     guildId: b,
-                    section: j,
-                    subsection: I,
-                    onClose: h
+                    channelId: _,
+                    section: I,
+                    subsection: O,
+                    onClose: g
                 })
             })
         ]

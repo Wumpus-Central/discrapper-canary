@@ -87,7 +87,7 @@ function E(e) {
                                 a.X6q,
                                 g(h({}, e), {
                                     className: _.guildName,
-                                    variant: 'heading-lg/medium',
+                                    variant: 'heading-md/semibold',
                                     color: 'header-primary',
                                     children: t.name
                                 })

@@ -64,7 +64,7 @@ function I(e, t) {
         e
     );
 }
-function S(e) {
+function P(e) {
     let { channel: t } = e,
         [n, o] = i.useState(!1);
     function a() {
@@ -79,7 +79,7 @@ function S(e) {
         autoInvert: !1,
         onRequestClose: () => o(!1),
         renderPopout: function (e) {
-            return (0, r.jsx)(P, I(E({}, e), { channel: t }));
+            return (0, r.jsx)(S, I(E({}, e), { channel: t }));
         },
         children: (e, t) => {
             let { isShown: n } = t;
@@ -96,7 +96,7 @@ function S(e) {
         }
     });
 }
-function P(e) {
+function S(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
         b = (0, s.Z)(t, 'Sidebar Overflow'),
         _ = (0, u.Z)(t),
@@ -104,8 +104,8 @@ function P(e) {
         v = (0, f.Z)(t),
         E = (0, o.Z)(t),
         I = (0, c.Z)(t),
-        S = (0, p.Z)(t.id),
-        P = (0, d.Z)(t),
+        P = (0, p.Z)(t.id),
+        S = (0, d.Z)(t),
         Z = (0, a.Z)(t),
         N = (0, g.Z)({
             id: t.id,
@@ -135,7 +135,7 @@ function P(e) {
                 children: [x, v]
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [P, _, S]
+                children: [S, _, P]
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [
@@ -172,7 +172,7 @@ function Z(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             t.isForumPost() ? null : (0, r.jsx)(x.Z, { channel: t }),
-            (0, r.jsx)(S, { channel: t }),
+            (0, r.jsx)(P, { channel: t }),
             (0, r.jsx)(_.ZP.Icon, {
                 icon: l.Dio,
                 tooltip: O.intl.string(O.t.cpT0Cg),

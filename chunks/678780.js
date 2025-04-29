@@ -1,8 +1,8 @@
 t.r(n), t.d(n, { default: () => s }), t(388685);
 var o = t(200651);
 t(192379);
-var i = t(788111),
-    c = t(752342),
+var c = t(788111),
+    i = t(752342),
     r = t(886794),
     a = t(4599),
     l = t(910364);
@@ -37,22 +37,22 @@ function s(e) {
             if (null == e) return {};
             var t,
                 o,
-                i = (function (e, n) {
+                c = (function (e, n) {
                     if (null == e) return {};
                     var t,
                         o,
-                        i = {},
-                        c = Object.keys(e);
-                    for (o = 0; o < c.length; o++) (t = c[o]), n.indexOf(t) >= 0 || (i[t] = e[t]);
-                    return i;
+                        c = {},
+                        i = Object.keys(e);
+                    for (o = 0; o < i.length; o++) (t = i[o]), n.indexOf(t) >= 0 || (c[t] = e[t]);
+                    return c;
                 })(e, n);
             if (Object.getOwnPropertySymbols) {
-                var c = Object.getOwnPropertySymbols(e);
-                for (o = 0; o < c.length; o++) (t = c[o]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (i[t] = e[t]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (o = 0; o < i.length; o++) (t = i[o]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (c[t] = e[t]);
             }
-            return i;
+            return c;
         })(e, ['hideRestrictedProfile']);
     let { user: s } = t,
-        [u, f] = (0, i.Z)(s.id);
-    return u && !n ? (0, o.jsx)(a.Z, d({ onHide: f }, t)) : s.isNonUserBot() ? (0, o.jsx)(r.Z, d({}, t)) : s.bot ? (0, o.jsx)(c.Z, d({}, t)) : (0, o.jsx)(l.Z, d({}, t));
+        [u, f] = (0, c.Z)(s.id);
+    return u && !n ? (0, o.jsx)(a.Z, d({ onHide: f }, t)) : s.isNonUserBot() ? (0, o.jsx)(r.Z, d({}, t)) : s.bot ? (0, o.jsx)(i.Z, d({}, t)) : (0, o.jsx)(l.Z, d({}, t));
 }

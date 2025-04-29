@@ -25,7 +25,7 @@ function v(e) {
             (0, p.T)(t, [v]);
         }, [t, v]),
         I = (0, b.t)({ location: C.zr }),
-        S = (e) => {
+        P = (e) => {
             a.Z.updateChannelOverrideSettings(null, t, { muted: !0 }, g.ZB.Muted),
                 c.Z.showMuteSuccessToast(j, t),
                 (0, f.qc)({
@@ -37,7 +37,7 @@ function v(e) {
                 }),
                 E();
         },
-        P = () => {
+        S = () => {
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e('59385').then(n.bind(n, 480884));
                 return (n) => {
@@ -69,7 +69,7 @@ function v(e) {
                                     description: x.intl.string(x.t.w2ve0t),
                                     buttonText: x.intl.string(x.t.ftIK2N),
                                     onButtonPress: () => {
-                                        S(f.NM.USER_MODAL_MUTE), l();
+                                        P(f.NM.USER_MODAL_MUTE), l();
                                     }
                                 },
                                 'likely-ato-mute'
@@ -118,7 +118,7 @@ function v(e) {
                       text: x.intl.string(x.t.tC1pvL),
                       color: o.zxk.Colors.BRAND,
                       onclick: () => {
-                          P(),
+                          S(),
                               (0, f.qc)({
                                   channelId: t,
                                   warningId: v,
@@ -131,7 +131,7 @@ function v(e) {
                   {
                       text: x.intl.string(x.t.ftIK2N),
                       color: o.zxk.Colors.PRIMARY,
-                      onclick: () => S(f.NM.USER_BANNER_MUTE)
+                      onclick: () => P(f.NM.USER_BANNER_MUTE)
                   }
               ]
           })

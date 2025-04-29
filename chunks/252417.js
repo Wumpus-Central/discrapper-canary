@@ -1,41 +1,41 @@
-r.d(t, { Z: () => h });
+r.d(t, { Z: () => y });
 var n = r(200651),
     i = r(192379),
     l = r(442837),
-    s = r(481060),
-    a = r(239091),
-    o = r(129861),
+    a = r(481060),
+    o = r(239091),
+    s = r(129861),
     c = r(138182),
     u = r(956221),
     d = r(747017),
-    m = r(140701),
-    p = r(545957),
-    b = r(158776),
+    b = r(140701),
+    m = r(545957),
+    p = r(158776),
     f = r(652853),
     j = r(981631),
     v = r(968823);
-let x = s.EFr.SIZE_40,
-    g = (0, s.pxk)(x);
-function h(e) {
-    let { user: t, status: h, guildId: y, channelId: O, onSelect: P } = e,
-        { theme: N } = (0, f.z)(),
-        w = i.useMemo(() => t.isNonUserBot() || (0, m.W)(t, O), [t, O]),
-        { activities: Z, isMobileOnline: S } = (0, l.cj)([b.Z], () => ({
-            activities: b.Z.getActivities(t.id),
-            isMobileOnline: b.Z.isMobileOnline(t.id)
+let x = a.EFr.SIZE_40,
+    O = (0, a.pxk)(x);
+function y(e) {
+    let { user: t, status: y, guildId: h, channelId: g, onSelect: P } = e,
+        { theme: w } = (0, f.z)(),
+        N = i.useMemo(() => t.isNonUserBot() || (0, b.W)(t, g), [t, g]),
+        { activities: Z, isMobileOnline: S } = (0, l.cj)([p.Z], () => ({
+            activities: p.Z.getActivities(t.id),
+            isMobileOnline: p.Z.isMobileOnline(t.id)
         })),
-        k = (0, p.Z)(t.id),
+        k = (0, m.Z)(t.id),
         { voiceActivityStatusEnabled: C } = (0, c.a)({ location: 'UserProfileMutualFriendRow' }),
         { voiceChannel: E } = (0, u.Z)({
             userId: C ? t.id : void 0,
-            guildId: y
+            guildId: h
         });
-    return (0, n.jsxs)(s.P3F, {
+    return (0, n.jsxs)(a.P3F, {
         focusProps: { offset: { right: 8 } },
         className: v.row,
         onClick: P,
         onContextMenu: (e) => {
-            (0, a.jW)(e, async () => {
+            (0, o.jW)(e, async () => {
                 let { default: e } = await Promise.all([r.e('79695'), r.e('69220'), r.e('70686')]).then(r.bind(r, 881351));
                 return (r) => {
                     var i, l;
@@ -85,19 +85,19 @@ function h(e) {
             });
         },
         children: [
-            (0, n.jsx)(s.qEK, {
-                src: t.getAvatarURL(y, g),
+            (0, n.jsx)(a.qEK, {
+                src: t.getAvatarURL(h, O),
                 'aria-label': t.username,
                 size: x,
-                status: w ? j.Skl.UNKNOWN : h,
-                statusBackdropColor: w ? void 0 : (0, s.QFD)(N),
+                status: N ? j.Skl.UNKNOWN : y,
+                statusBackdropColor: N ? void 0 : (0, a.QFD)(w),
                 isMobile: S,
                 className: v.avatar
             }),
             (0, n.jsxs)('div', {
                 className: v.details,
                 children: [
-                    (0, n.jsx)(o.Z, {
+                    (0, n.jsx)(s.Z, {
                         user: t,
                         className: v.tag,
                         discriminatorClass: v.discriminator

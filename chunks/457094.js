@@ -108,8 +108,8 @@ var r = n(200651),
     e1 = n(346329),
     e3 = n(981631),
     e2 = n(176505),
-    e8 = n(701476),
-    e5 = n(186901);
+    e5 = n(701476),
+    e8 = n(186901);
 function e4(e, t, n) {
     return (
         t in e
@@ -171,7 +171,7 @@ let e7 = (0, m.l)((e) => {
                     })
                 ),
             (0, r.jsxs)(g.Z, {
-                deepLinkType: e5.jE.USER_SETTINGS,
+                deepLinkType: e8.jE.USER_SETTINGS,
                 path: t.pathname,
                 paramsBuilder: function (e, t) {
                     let [, , n, r] = e.split('/');
@@ -368,7 +368,7 @@ let tl = [
         render: function (e) {
             let { match: t } = e,
                 { guildId: n, channelId: i } = t.params;
-            (0, es.c)(e8.M5.MARKETING_UNCLAIMED);
+            (0, es.c)(e5.M5.MARKETING_UNCLAIMED);
             let l = e3.Z5c.CHANNEL(n, i);
             return (0, r.jsx)(a.l_, { to: l });
         },

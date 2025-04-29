@@ -1,54 +1,54 @@
-t.d(n, { Z: () => a });
-var l = t(200651);
-t(192379);
-var r = t(81570),
-    i = t(527790),
-    o = t(248930);
-function s(e) {
-    for (var n = 1; n < arguments.length; n++) {
-        var t = null != arguments[n] ? arguments[n] : {},
-            l = Object.keys(t);
+n.d(t, { Z: () => c });
+var l = n(200651);
+n(192379);
+var r = n(81570),
+    i = n(527790),
+    s = n(248930);
+function o(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            l = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
             (l = l.concat(
-                Object.getOwnPropertySymbols(t).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            l.forEach(function (n) {
+            l.forEach(function (t) {
                 var l;
-                (l = t[n]),
-                    n in e
-                        ? Object.defineProperty(e, n, {
+                (l = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
                               value: l,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[n] = l);
+                        : (e[t] = l);
             });
     }
     return e;
 }
-function a(e) {
-    var { location: n, user: t, currentUser: a } = e,
-        d = (function (e, n) {
+function c(e) {
+    var { location: t, user: n, currentUser: c } = e,
+        a = (function (e, t) {
             if (null == e) return {};
-            var t,
+            var n,
                 l,
-                r = (function (e, n) {
+                r = (function (e, t) {
                     if (null == e) return {};
-                    var t,
+                    var n,
                         l,
                         r = {},
                         i = Object.keys(e);
-                    for (l = 0; l < i.length; l++) (t = i[l]), n.indexOf(t) >= 0 || (r[t] = e[t]);
+                    for (l = 0; l < i.length; l++) (n = i[l]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                     return r;
-                })(e, n);
+                })(e, t);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (l = 0; l < i.length; l++) (t = i[l]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]);
+                for (l = 0; l < i.length; l++) (n = i[l]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
         })(e, ['location', 'user', 'currentUser']);
-    return (0, r.T)({ location: n }) && t.id !== a.id && !t.bot ? (0, l.jsx)(o.Z, s({ user: t }, d)) : (0, l.jsx)(i.Z, s({ user: t }, d));
+    return (0, r.T)({ location: t }) && n.id !== c.id && !n.bot ? (0, l.jsx)(s.Z, o({ user: n }, a)) : (0, l.jsx)(i.Z, o({ user: n }, a));
 }

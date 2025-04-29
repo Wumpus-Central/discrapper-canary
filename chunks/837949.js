@@ -1,25 +1,25 @@
-t.d(n, { Z: () => h });
-var i = t(200651);
-t(192379);
-var l = t(442837),
-    r = t(481060),
-    a = t(430824),
-    s = t(594174),
-    u = t(724213),
-    d = t(398758),
-    o = t(981631),
-    c = t(388032);
-function h(e) {
-    let n = (0, d.DM)(e),
-        t = (0, l.e7)([a.Z], () => a.Z.getGuild(e)),
-        h = (0, l.e7)([s.default], () => s.default.getCurrentUser());
-    return null != h && null != t && (t.hasFeature(o.oNc.COMMUNITY) || h.isStaff())
-        ? (0, i.jsx)(r.S89, {
+r.d(t, { Z: () => p });
+var n = r(200651);
+r(192379);
+var i = r(442837),
+    l = r(481060),
+    o = r(430824),
+    c = r(594174),
+    a = r(724213),
+    u = r(398758),
+    s = r(981631),
+    b = r(388032);
+function p(e) {
+    let t = (0, u.DM)(e),
+        r = (0, i.e7)([o.Z], () => o.Z.getGuild(e)),
+        p = (0, i.e7)([c.default], () => c.default.getCurrentUser());
+    return null != p && null != r && (r.hasFeature(s.oNc.COMMUNITY) || p.isStaff())
+        ? (0, n.jsx)(l.S89, {
               id: 'opt-in',
-              label: c.intl.string(c.t.FB2ZZW),
-              checked: !n,
+              label: b.intl.string(b.t.FB2ZZW),
+              checked: !t,
               action: () => {
-                  (0, u.kH)(e);
+                  (0, a.kH)(e);
               }
           })
         : null;

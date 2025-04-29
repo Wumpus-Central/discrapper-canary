@@ -1,4 +1,4 @@
-t.d(n, { Ac: () => i });
+t.d(n, { Ac: () => c });
 let o = (0, t(818083).B)({
     kind: 'user',
     id: '2024-08_user_profile_blockee_hide_mutuals',
@@ -12,8 +12,8 @@ let o = (0, t(818083).B)({
         }
     ]
 });
-function i(e) {
+function c(e) {
     let { location: n, autoTrackExposure: t = !0 } = e,
-        { enabled: i } = o.useExperiment({ location: n }, { autoTrackExposure: t });
-    return i;
+        { enabled: c } = o.useExperiment({ location: n }, { autoTrackExposure: t });
+    return c;
 }

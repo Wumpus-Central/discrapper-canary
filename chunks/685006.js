@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => S,
+    ZP: () => P,
     xL: () => I
 });
 var r = n(200651),
@@ -30,7 +30,7 @@ let O = (0, a.U)(() => ({ visible: !1 })),
         });
     },
     I = O;
-function S(e) {
+function P(e) {
     let { context: t, entryPointCommandButtonRef: n, type: l } = e,
         { isInitialLoading: o, application: a, primaryEntryPointCommand: s } = (0, h.Z)({ context: t }),
         c = null == a ? void 0 : a.id,
@@ -58,7 +58,7 @@ function S(e) {
         [O]
     ),
     O)
-        ? (0, r.jsx)(P, {
+        ? (0, r.jsx)(S, {
               context: t,
               application: a,
               primaryEntryPointCommand: s,
@@ -68,7 +68,7 @@ function S(e) {
           })
         : null;
 }
-function P(e) {
+function S(e) {
     let { context: t, application: n, primaryEntryPointCommand: i, onOpenButtonPress: l, entryPointCommandButtonRef: a, type: s } = e,
         u = (0, C.Z)({ type: s }),
         {
