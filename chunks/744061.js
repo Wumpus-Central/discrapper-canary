@@ -12,7 +12,7 @@ var r = n(200651),
     h = n(41281),
     f = n(73433);
 function m(e) {
-    let { onClose: t, onConfirm: m, onCancel: g, channel: b, analyticsType: _, popoutText: y, animation: x } = e;
+    let { onClose: t, onConfirm: m, onCancel: g, channel: b, analyticsType: _, popoutText: y, animation: C } = e;
     i.useEffect(() => {
         u.default.track(
             d.rMx.OPEN_POPOUT,
@@ -43,7 +43,7 @@ function m(e) {
             })({ type: _ }, (0, s.v_)(b))
         );
     }, [_, b]);
-    let C = i.useCallback(() => {
+    let x = i.useCallback(() => {
             null == m || m(), t();
         }, [m, t]),
         v = i.useCallback(() => {
@@ -56,9 +56,9 @@ function m(e) {
                 t = c.Z.theme,
                 r = !1;
             return (
-                null != x &&
+                null != C &&
                     (async () => {
-                        let [{ default: i }, l] = await Promise.all([Promise.resolve().then(n.t.bind(n, 500923, 23)), (0, o.wj)(t) ? x.dark() : x.light()]);
+                        let [{ default: i }, l] = await Promise.all([Promise.resolve().then(n.t.bind(n, 500923, 23)), (0, o.wj)(t) ? C.dark() : C.light()]);
                         r ||
                             null == j.current ||
                             (e = i.loadAnimation({
@@ -73,17 +73,17 @@ function m(e) {
                     (r = !0), null != e && (e.destroy(), (e = void 0));
                 }
             );
-        }, [x]),
+        }, [C]),
         (0, r.jsx)(a.VqE, {
             'aria-labelledby': 'content-warning-popout-label',
             children: (0, r.jsxs)('form', {
                 className: h.contentWarningPopout,
-                onSubmit: C,
+                onSubmit: x,
                 children: [
                     (0, r.jsxs)('div', {
                         className: h.body,
                         children: [
-                            null != x &&
+                            null != C &&
                                 (0, r.jsx)('div', {
                                     className: h.animation,
                                     ref: j
@@ -125,7 +125,7 @@ function m(e) {
                                                 children: [
                                                     (0, r.jsx)(a.zxk, {
                                                         className: h.button,
-                                                        onClick: C,
+                                                        onClick: x,
                                                         type: 'submit',
                                                         autoFocus: !0,
                                                         children: p.intl.string(p.t.KJnHq6)

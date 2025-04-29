@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(185413),
     _ = n(42311),
     y = n(626786),
-    x = n(434404),
-    C = n(454585),
+    C = n(434404),
+    x = n(454585),
     v = n(430824),
     j = n(496675),
     O = n(594174),
@@ -101,7 +101,7 @@ function w(e) {
             (0, r.jsx)(S.jz, {
                 children: T.intl.format(T.t.QuwqjI, {
                     channelName: a,
-                    topicHook: () => C.Z.parseTopic(t.topic, !0, { channelId: t.id })
+                    topicHook: () => x.Z.parseTopic(t.topic, !0, { channelId: t.id })
                 })
             }),
             U
@@ -180,7 +180,7 @@ function w(e) {
                                       disabled: !U,
                                       verified: s,
                                       onClick: () => {
-                                          x.Z.open(t.guild_id, N.pNK.MEMBERS), x.Z.selectRole(e.id);
+                                          C.Z.open(t.guild_id, N.pNK.MEMBERS), C.Z.selectRole(e.id);
                                       }
                                   },
                                   e.id

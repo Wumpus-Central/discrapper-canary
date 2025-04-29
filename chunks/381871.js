@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(594174),
     _ = n(176354),
     y = n(823379),
-    x = n(74538),
-    C = n(401062),
+    C = n(74538),
+    x = n(401062),
     v = n(696900),
     j = n(456631),
     O = n(963838),
@@ -43,7 +43,7 @@ function U(e) {
     let { channel: n, closePopout: m, onFocus: y } = e,
         T = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
         U = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
-        B = x.ZP.canUseFancyVoiceChannelReactions(U),
+        B = C.ZP.canUseFancyVoiceChannelReactions(U),
         G = (0, o.e7)([v.Z], () => v.Z.getState().animationType),
         F = i.useRef(!1),
         H = (0, f.wC)(n.guild_id),
@@ -65,10 +65,10 @@ function U(e) {
                 type: 'VOICE_CHANNEL_EFFECT_RECENT_EMOJI',
                 emoji: e
             }),
-                (0, C.Lx)({
+                (0, x.Lx)({
                     channel: n,
                     emoji: e,
-                    location: C.yX.EMOJI_PICKER,
+                    location: x.yX.EMOJI_PICKER,
                     animationType: G,
                     animationId: W,
                     isPremium: B

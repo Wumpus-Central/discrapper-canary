@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(430824),
     _ = n(496675),
     y = n(594174),
-    x = n(233608),
-    C = n(370595),
+    C = n(233608),
+    x = n(370595),
     v = n(351127),
     j = n(981631),
     O = n(388032),
@@ -25,11 +25,11 @@ var r = n(200651),
     I = n(444021);
 function P(e) {
     var t, n, l, a;
-    let { permission: s, roleIds: g, guild: y, specMap: x, categoryTitle: C, userId: E } = e,
+    let { permission: s, roleIds: g, guild: y, specMap: C, categoryTitle: x, userId: E } = e,
         P = (0, c.e7)([b.Z], () => b.Z.getRoles(y.id)),
         S = j.Plq[s],
-        Z = null != (l = null == (t = x[S.toString()]) ? void 0 : t.title) ? l : (0, m.wt)(S),
-        N = null != (a = null == (n = x[S.toString()]) ? void 0 : n.description) ? a : '',
+        Z = null != (l = null == (t = C[S.toString()]) ? void 0 : t.title) ? l : (0, m.wt)(S),
+        N = null != (a = null == (n = C[S.toString()]) ? void 0 : n.description) ? a : '',
         T = v._o.has(S),
         A = v.Qn.includes(s),
         w = g.length,
@@ -54,14 +54,14 @@ function P(e) {
                                 color: 'header-primary',
                                 children: Z
                             }),
-                            null != C &&
+                            null != x &&
                                 (0, r.jsxs)('div', {
                                     className: I.permissionItemSubheader,
                                     children: [
                                         (0, r.jsx)(u.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'header-muted',
-                                            children: C
+                                            children: x
                                         }),
                                         T &&
                                             (0, r.jsxs)(r.Fragment, {
@@ -224,8 +224,8 @@ function Z(e) {
         f = (0, c.e7)([g.ZP], () => g.ZP.getMember(n, t), [n, t]),
         _ = (0, v.B2)(t, n, v.pd),
         Z = Object.keys(_).length,
-        N = i.useMemo(() => (null != h ? x.Z.getGuildPermissionSpecMap(h) : null), [h]),
-        T = i.useMemo(() => (null != h ? x.Z.generateGuildPermissionSpec(h) : null), [h]),
+        N = i.useMemo(() => (null != h ? C.Z.getGuildPermissionSpecMap(h) : null), [h]),
+        T = i.useMemo(() => (null != h ? C.Z.generateGuildPermissionSpec(h) : null), [h]),
         [A, w] = i.useState(''),
         [R, k] = i.useState(''),
         M = i.useMemo(() => s()(k, 300), []),
@@ -294,7 +294,7 @@ function Z(e) {
         : (0, r.jsxs)('div', {
               className: o()(E.container, a),
               children: [
-                  (0, r.jsx)(C.Z, {
+                  (0, r.jsx)(x.Z, {
                       guildId: n,
                       userId: t,
                       onNavigate: d

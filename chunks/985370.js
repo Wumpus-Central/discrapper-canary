@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(82965),
     _ = n(643720),
     y = n(127379),
-    x = n(981631),
-    C = n(393740);
+    C = n(981631),
+    x = n(393740);
 let v = (e) => {
     let { channel: t, className: n, whichPopoutIsOpen: l, setWhichPopoutIsOpen: v } = e,
         { isHovered: j, setIsHovered: O, onMouseEnter: E, onMouseLeave: I, cancelTimers: P } = (0, p.Z)(200, 300),
@@ -74,9 +74,9 @@ let v = (e) => {
                 color: S ? (M ? 'primaryDark' : R === m.BK.GroupedButtonsRedMic || L ? 'green' : void 0) : void 0,
                 totalCooldownSeconds: T,
                 remainingCooldownSeconds: A,
-                className: o()(!k && C.controlButton, n),
+                className: o()(!k && x.controlButton, n),
                 onKeyDown: (e) => {
-                    e.keyCode === x.yXg.ENTER && e.keyCode === x.yXg.SPACE && G(e, i);
+                    e.keyCode === C.yXg.ENTER && e.keyCode === C.yXg.SPACE && G(e, i);
                 },
                 onClick: (e) => {
                     (0, d.v)(D, d.d.EMOJI), G(e, t);

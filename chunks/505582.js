@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(687158),
     _ = n(892001),
     y = n(899007),
-    x = n(648052),
-    C = n(867176),
+    C = n(648052),
+    x = n(867176),
     v = n(280885),
     j = n(900927),
     O = n(678738),
@@ -101,7 +101,7 @@ function R(e) {
                             (0, r.jsxs)('header', {
                                 className: T.header,
                                 children: [
-                                    (0, r.jsx)(C.Z, {
+                                    (0, r.jsx)(x.Z, {
                                         user: t,
                                         displayProfile: k,
                                         themeType: Z.lY.SIDEBAR,
@@ -125,7 +125,7 @@ function R(e) {
                                         nickname: f.ZP.getName(null, n.id, t),
                                         pronouns: null == k ? void 0 : k.pronouns,
                                         onOpenProfile: R ? void 0 : F,
-                                        tags: (0, r.jsx)(x.Z, {
+                                        tags: (0, r.jsx)(C.Z, {
                                             displayProfile: k,
                                             themeType: Z.lY.SIDEBAR
                                         })

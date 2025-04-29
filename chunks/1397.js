@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(246364),
     _ = n(983736),
     y = n(937111),
-    x = n(270801),
-    C = n(652730),
+    C = n(270801),
+    x = n(652730),
     v = n(41776),
     j = n(657352),
     O = n(33154),
@@ -93,11 +93,11 @@ class H extends i.PureComponent {
         r || e.shouldShowLurkerModeSuccessPopout || !t || null == n || this.setState({ shouldShowLurkerModeSuccessPopout: !0 });
     }
     render() {
-        let { isFollowable: e, isLurking: t, notClaimed: l, notPhoneVerified: o, notEmailVerified: a, newMember: c, memberDeadline: u, newAccount: d, accountDeadline: p, theme: h, children: f, canSendMessages: m, channelFollowingUsersSeen: g, showLurkerModeUpsellPopout: _, showMemberVerificationModal: y, useReducedMotion: x, isStaff: C, guildJoinRequest: v } = this.props,
+        let { isFollowable: e, isLurking: t, notClaimed: l, notPhoneVerified: o, notEmailVerified: a, newMember: c, memberDeadline: u, newAccount: d, accountDeadline: p, theme: h, children: f, canSendMessages: m, channelFollowingUsersSeen: g, showLurkerModeUpsellPopout: _, showMemberVerificationModal: y, useReducedMotion: C, isStaff: x, guildJoinRequest: v } = this.props,
             { shouldShowLurkerModeUpsellPopout: j, shouldShowLurkerModeSuccessPopout: O } = this.state,
             E = {
                 theme: h,
-                useReducedMotion: x
+                useReducedMotion: C
             };
         if (e && !m) {
             if (((E.message = D.intl.string(D.t.Hl0Mqq)), null != g && g >= 1000)) {
@@ -128,7 +128,7 @@ class H extends i.PureComponent {
                                     return t;
                                 }));
             }
-        else o && !C ? ((E.message = D.intl.string(D.t['2dThMD'])), (E.buttonText = D.intl.string(D.t['50gfOj'])), (E.onButtonClick = this.handleVerifyPhone), (E.imageSrc = n(98063))) : a ? ((E.message = D.intl.string(D.t.FkGPS0)), (E.buttonText = D.intl.string(D.t.lm1UKi)), (E.onButtonClick = this.handleResendVerification), (E.imageSrc = n(102811))) : c ? ((E.message = D.intl.formatToPlainString(D.t.IH7RMD, { min: M.YeM.MEMBER_AGE })), (E.countdown = u)) : d && ((E.message = D.intl.formatToPlainString(D.t['2JA2GB'], { min: M.YeM.ACCOUNT_AGE })), (E.countdown = p));
+        else o && !x ? ((E.message = D.intl.string(D.t['2dThMD'])), (E.buttonText = D.intl.string(D.t['50gfOj'])), (E.onButtonClick = this.handleVerifyPhone), (E.imageSrc = n(98063))) : a ? ((E.message = D.intl.string(D.t.FkGPS0)), (E.buttonText = D.intl.string(D.t.lm1UKi)), (E.onButtonClick = this.handleResendVerification), (E.imageSrc = n(102811))) : c ? ((E.message = D.intl.formatToPlainString(D.t.IH7RMD, { min: M.YeM.MEMBER_AGE })), (E.countdown = u)) : d && ((E.message = D.intl.formatToPlainString(D.t['2JA2GB'], { min: M.YeM.ACCOUNT_AGE })), (E.countdown = p));
         return (0, r.jsx)(s.yRy, {
             position: 'top',
             align: 'left',
@@ -302,7 +302,7 @@ class H extends i.PureComponent {
                 return (0, r.jsx)(s.u_l, {
                     renderModal: (t) =>
                         (0, r.jsx)(
-                            x.Z,
+                            C.Z,
                             F(G({}, t), {
                                 onAccept: i,
                                 guildName: e.name
@@ -328,9 +328,9 @@ function V(e) {
             var e, t;
             return null != f && null != (t = null == (e = Z.ZP.getMember(o, f.id)) ? void 0 : e.isPending) && t;
         }),
-        x = !!(0, _.Dc)(s),
-        j = (g || c.notClaimed) && x,
-        O = (0, a.e7)([C.Z], () => C.Z.shouldShowPopout(o)),
+        C = !!(0, _.Dc)(s),
+        j = (g || c.notClaimed) && C,
+        O = (0, a.e7)([x.Z], () => x.Z.shouldShowPopout(o)),
         E = (0, a.e7)([A.Z], () => A.Z.can(M.Plq.SEND_MESSAGES, i)),
         I = (0, a.e7)([y.Z], () => y.Z.getRequest(o)),
         k = F(G({}, c), {
@@ -342,7 +342,7 @@ function V(e) {
             theme: P.Z.theme,
             canSendMessages: E,
             channelFollowingUsersSeen: null != d ? d.usersSeenEver : null,
-            hasVerificationGate: x,
+            hasVerificationGate: C,
             showMemberVerificationModal: j,
             guildJoinRequestStatus: null != (n = null == I ? void 0 : I.applicationStatus) ? n : b.wB.STARTED,
             guildJoinRequest: I,

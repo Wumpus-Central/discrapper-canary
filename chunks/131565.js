@@ -21,17 +21,17 @@ function _(e) {
         f = (0, h.Z)(n.wallpaperId),
         _ = (0, o.I)(null != (t = null == f ? void 0 : f.asset) ? t : ''),
         y = (null == f ? void 0 : f.thumbhash) != null ? (0, l.xS)(b.from(f.thumbhash, 'base64')) : void 0,
-        [x, C] = i.useState(y);
+        [C, x] = i.useState(y);
     return (i.useEffect(() => {
         null == _ && n.isViewable && u.Z.shouldFetchWallpapers && (0, p.k9)();
     }, [_, n.isViewable]),
     i.useEffect(() => {
-        if (null == _) return void C(void 0);
+        if (null == _) return void x(void 0);
         let e = performance.now();
-        C(y),
+        x(y),
             (0, a.p)(_, (t) => {
                 if (t === _) {
-                    C(void 0);
+                    x(void 0);
                     let n = performance.now();
                     s.default.track(m.rMx.CHAT_WALLPAPER_DOWNLOADED, {
                         time_used_in_ms: n - e,
@@ -43,11 +43,11 @@ function _(e) {
     n.isViewable && null != f)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  null != x &&
+                  null != C &&
                       (0, r.jsx)('div', {
                           className: g.thumbhashContainer,
                           children: (0, r.jsx)('img', {
-                              src: x,
+                              src: C,
                               alt: '',
                               'aria-hidden': !0
                           })

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => C });
 var r = n(200651);
 n(192379);
 var i = n(442837),
@@ -36,13 +36,13 @@ function y(e) {
           })
         : null;
 }
-function x(e) {
+function C(e) {
     var t, n, u;
     let { channel: h, children: f, user: b } = e,
         _ = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
-        x = null != (t = (0, c.ZP)(h)) ? t : '',
+        C = null != (t = (0, c.ZP)(h)) ? t : '',
         {
-            avatarDecorationSrc: C,
+            avatarDecorationSrc: x,
             eventHandlers: v,
             isAnimating: j
         } = (0, m.Z)({
@@ -92,17 +92,17 @@ function x(e) {
                                       size: l.EFr.SIZE_80,
                                       experimentLocation: 'empty_messages',
                                       animated: e,
-                                      'aria-label': x
+                                      'aria-label': C
                                   })
                               })
                             : (0, r.jsx)(l.qEK, {
-                                  'aria-label': x,
+                                  'aria-label': C,
                                   size: l.EFr.SIZE_80,
                                   src: (0, s.x)(h, 80, e),
-                                  avatarDecoration: C
+                                  avatarDecoration: x
                               });
                     })(),
-                    (0, r.jsx)(g.Ot, { children: x }),
+                    (0, r.jsx)(g.Ot, { children: C }),
                     (0, r.jsx)(g.jz, { children: f }),
                     h.isMultiUserDM() && (0, r.jsx)(y, { channel: h })
                 ]

@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(488131),
     _ = n(375954),
     y = n(626135),
-    x = n(585483),
-    C = n(403182),
+    C = n(585483),
+    x = n(403182),
     v = n(127654),
     j = n(752305),
     O = n(951211),
@@ -138,7 +138,7 @@ function A(e) {
             n = 'txt',
             r = '',
             i = w.match(N);
-        null != i && ((r = i[1]), (n = i[2]), (e = i[3]), (r += i[4])), (0, v.d)([(0, C.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n), 'text/plain')], t, A), x.S.dispatchToLastSubscribed(E.CkL.CLEAR_TEXT), '' !== r && x.S.dispatchToLastSubscribed(E.CkL.INSERT_TEXT, { plainText: r });
+        null != i && ((r = i[1]), (n = i[2]), (e = i[3]), (r += i[4])), (0, v.d)([(0, x.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n), 'text/plain')], t, A), C.S.dispatchToLastSubscribed(E.CkL.CLEAR_TEXT), '' !== r && C.S.dispatchToLastSubscribed(E.CkL.INSERT_TEXT, { plainText: r });
     }
     return (
         i.useEffect(() => {

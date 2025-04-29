@@ -3,8 +3,8 @@ var r = n(200651),
     o = n(192379),
     a = n(481060),
     i = n(782568),
-    l = n(592125),
-    s = n(594174),
+    s = n(592125),
+    l = n(594174),
     c = n(63063),
     u = n(5192),
     d = n(992970),
@@ -20,12 +20,12 @@ let y = (e) => {
     let { message: n } = e,
         y = o.useRef(null),
         v = (0, p.p7)('Message Header') && n.hasPotions(),
-        O = l.Z.getChannel(n.getChannelId()),
+        O = s.Z.getChannel(n.getChannelId()),
         j = null == (t = n.potions) ? void 0 : t[0],
         x = o.useMemo(() => {
             var e;
             if (null == j) return null;
-            let t = s.default.getUser(j.used_by);
+            let t = l.default.getUser(j.used_by);
             return null != (e = (0, u.y)(null == O ? void 0 : O.getGuildId(), null == O ? void 0 : O.id, t)) ? e : null == t ? void 0 : t.globalName;
         }, [j, O]),
         C = o.useCallback(() => {

@@ -12,7 +12,7 @@ function u(e) {
         _ = (0, a.Q)(t),
         y = (0, s.V)(n.id, t);
     if (!_ || null == y) return null;
-    let x = () => {
+    let C = () => {
         null == m || m(), l.Z.closePrivateChannel(n.id, h);
     };
     return (0, r.jsx)(i.zxk, {
@@ -21,7 +21,7 @@ function u(e) {
         color: i.zxk.Colors.RED,
         disabled: null == y,
         onClick: () => {
-            null == f || f(), (0, o.WL)(y, x);
+            null == f || f(), (0, o.WL)(y, C);
         },
         onMouseEnter: g,
         onMouseLeave: b,

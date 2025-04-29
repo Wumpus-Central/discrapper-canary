@@ -8,23 +8,23 @@ var r = n(442837),
     o = n(271383),
     a = n(430824),
     i = n(496675),
-    l = n(594174),
-    s = n(630388),
+    s = n(594174),
+    l = n(630388),
     c = n(372897),
     u = n(981631);
 let d = (e, t) => {
     var n;
     let i = (0, r.e7)([o.ZP], () => {
             var n, r;
-            return (0, s.yE)(null != (r = null == (n = o.ZP.getMember(e, t)) ? void 0 : n.flags) ? r : 0, c.q.DID_REJOIN);
+            return (0, l.yE)(null != (r = null == (n = o.ZP.getMember(e, t)) ? void 0 : n.flags) ? r : 0, c.q.DID_REJOIN);
         }),
         u = (0, r.e7)([a.Z], () => {
             var t;
             return null == (t = a.Z.getGuild(e)) ? void 0 : t.isNew();
         }),
-        d = (0, r.e7)([l.default], () => {
+        d = (0, r.e7)([s.default], () => {
             var e;
-            return null == (e = l.default.getUser(t)) ? void 0 : e.bot;
+            return null == (e = s.default.getUser(t)) ? void 0 : e.bot;
         });
     return (
         (n = { maxDaysOld: 7 }),
@@ -33,14 +33,14 @@ let d = (e, t) => {
             () =>
                 (function (e, t, n) {
                     let { maxDaysOld: r, minDaysOld: i = 0 } = t,
-                        l = a.Z.getGuild(e),
-                        s = null == l ? void 0 : l.joinedAt;
+                        s = a.Z.getGuild(e),
+                        l = null == s ? void 0 : s.joinedAt;
                     if (null != n) {
                         let t = o.ZP.getMember(e, n);
-                        s = (null == t ? void 0 : t.joinedAt) == null ? null : new Date(t.joinedAt);
+                        l = (null == t ? void 0 : t.joinedAt) == null ? null : new Date(t.joinedAt);
                     }
-                    if (null == s) return !1;
-                    let c = Date.now() - s.getTime();
+                    if (null == l) return !1;
+                    let c = Date.now() - l.getTime();
                     return (null == r || c <= 86400000 * r) && c >= 86400000 * i;
                 })(e, n, t),
             [n, e, t]

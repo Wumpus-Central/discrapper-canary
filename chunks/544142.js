@@ -17,8 +17,8 @@ var i = n(120356),
     b = n(967128),
     _ = n(981631),
     y = n(388032),
-    x = n(128337);
-function C(e) {
+    C = n(128337);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -75,7 +75,7 @@ function j(e) {
             return (t) =>
                 (0, r.jsx)(
                     e,
-                    v(C({}, t), {
+                    v(x({}, t), {
                         user: y,
                         guildId: b.guild_id,
                         channel: b
@@ -87,7 +87,7 @@ function j(e) {
         P = null == j ? void 0 : j.colorString;
     return null == y
         ? (0, r.jsx)('span', {
-              className: l()(x.threadCreatorName, x.unknownCreatorName),
+              className: l()(C.threadCreatorName, C.unknownCreatorName),
               children: I
           })
         : (0, r.jsx)(u.Gt, {
@@ -101,9 +101,9 @@ function j(e) {
                   children: (e) =>
                       (0, r.jsx)(
                           a.P3F,
-                          v(C({}, e), {
+                          v(x({}, e), {
                               tag: 'span',
-                              className: x.threadCreatorName,
+                              className: C.threadCreatorName,
                               onContextMenu: E,
                               children: (0, r.jsx)(a.PUh, {
                                   name: I,
@@ -126,7 +126,7 @@ function O(e) {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
                       children: (0, r.jsx)('div', {
-                          className: x.subtitle,
+                          className: C.subtitle,
                           children: y.intl.format(y.t.imPXd3, {
                               usernameHook: (e, n) =>
                                   (0, r.jsx)(
@@ -158,8 +158,8 @@ function E(e) {
         channelId: n.id,
         children: [
             (0, r.jsx)('div', {
-                className: x.iconWrapper,
-                children: (0, r.jsx)(i, { className: x.icon })
+                className: C.iconWrapper,
+                children: (0, r.jsx)(i, { className: C.icon })
             }),
             (0, r.jsx)(b.Ot, { children: n.name }),
             (0, r.jsx)(O, { channel: n })

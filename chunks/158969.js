@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(930282),
     _ = n(318713),
     y = n(981631),
-    x = n(388032),
-    C = n(684525),
+    C = n(388032),
+    x = n(684525),
     v = n(848697),
     j = n(73433);
 let O = i.memo(function (e) {
@@ -25,18 +25,18 @@ let O = i.memo(function (e) {
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)('div', {
-                    className: o()(C.blockedNoticeContainer, { [C.compact]: i }),
+                    className: o()(x.blockedNoticeContainer, { [x.compact]: i }),
                     children: [
                         (0, r.jsx)('div', {
-                            className: C.blockedNoticeIcon,
+                            className: x.blockedNoticeIcon,
                             children: (0, r.jsx)(u.b7C, {
                                 size: 'xs',
                                 color: 'currentColor',
-                                className: C.shieldIcon
+                                className: x.shieldIcon
                             })
                         }),
                         (0, r.jsx)('div', {
-                            className: C.blockedNotice,
+                            className: x.blockedNotice,
                             children: (0, r.jsx)(u.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'interactive-normal',
@@ -46,7 +46,7 @@ let O = i.memo(function (e) {
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    className: o()(C.ephemeralAccessories, { [C.compact]: i }),
+                    className: o()(x.ephemeralAccessories, { [x.compact]: i }),
                     children: (0, r.jsx)(m.Z, {
                         message: t,
                         onDeleteMessage: l,
@@ -54,8 +54,8 @@ let O = i.memo(function (e) {
                             variant: 'text-xs/normal',
                             color: 'interactive-normal',
                             tag: 'span',
-                            className: C.learnMore,
-                            children: x.intl.format(x.t.Nd3Gh4, { helpUrl: f.Z.getArticleURL(y.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
+                            className: x.learnMore,
+                            children: C.intl.format(C.t.Nd3Gh4, { helpUrl: f.Z.getArticleURL(y.BhN.GUILD_AUTOMOD_BLOCKED_MESSAGE) })
                         })
                     })
                 })
@@ -80,8 +80,8 @@ let O = i.memo(function (e) {
                 className: o()(l, j.markup, {
                     [v.messageContent]: !0,
                     [v.markupRtl]: 'rtl' === s()(u.content),
-                    [C.blockedEdit]: null == P ? void 0 : P.isBlockedEdit,
-                    [C.blockedSend]: !(null == P ? void 0 : P.isBlockedEdit)
+                    [x.blockedEdit]: null == P ? void 0 : P.isBlockedEdit,
+                    [x.blockedSend]: !(null == P ? void 0 : P.isBlockedEdit)
                 }),
                 children: [
                     null != f ? f : (0, b.L5)(u, m),
@@ -96,13 +96,13 @@ let O = i.memo(function (e) {
                                     isInline: !1,
                                     children: (0, r.jsxs)('span', {
                                         className: v.edited,
-                                        children: ['(', x.intl.string(x.t.Z7eEx8), ')']
+                                        children: ['(', C.intl.string(C.t.Z7eEx8), ')']
                                     })
                                 })
                             ]
                         }),
                     (0, r.jsx)(O, {
-                        notice: null != (n = null == P ? void 0 : P.errorMessage) ? n : x.intl.string(x.t.zQ69pq),
+                        notice: null != (n = null == P ? void 0 : P.errorMessage) ? n : C.intl.string(C.t.zQ69pq),
                         message: u,
                         compact: a,
                         onDismiss: S

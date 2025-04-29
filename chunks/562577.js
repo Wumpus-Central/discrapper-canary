@@ -1,7 +1,7 @@
-n.d(t, { Z: () => f });
+n.d(e, { Z: () => f });
 var l = n(200651),
-    a = n(120356),
-    r = n.n(a),
+    r = n(120356),
+    a = n.n(r),
     i = n(692547),
     o = n(481060),
     s = n(19391),
@@ -9,18 +9,18 @@ var l = n(200651),
     c = n(875425),
     d = n(388032),
     m = n(73711);
-function h(e) {
-    let { option: t, isSelected: n, onClick: a } = e,
-        c = (0, s.Z)(t.value);
+function h(t) {
+    let { option: e, isSelected: n, onClick: r } = t,
+        c = (0, s.Z)(e.value);
     return (0, l.jsx)(o.DY3, {
         text: c,
         children: (0, l.jsx)(o.P3F, {
-            onClick: a,
+            onClick: r,
             'aria-pressed': n,
-            className: r()(m.customStatusLabelSelectorItem, n && m.customStatusLabelSelectorItemSelected),
+            className: a()(m.customStatusLabelSelectorItem, n && m.customStatusLabelSelectorItemSelected),
             'aria-label': n ? d.intl.formatToPlainString(d.t['+KXSFh'], { label: c }) : d.intl.formatToPlainString(d.t.mDVlTk, { label: c }),
             children: (0, l.jsx)(u.Z, {
-                label: t.value,
+                label: e.value,
                 size: 'xs',
                 color: n ? i.Z.colors.INTERACTIVE_ACTIVE : i.Z.colors.INTERACTIVE_NORMAL,
                 className: m.customStatusLabelSelectorItemIcon
@@ -28,19 +28,19 @@ function h(e) {
         })
     });
 }
-function f(e) {
-    let { currentValue: t, onChange: n } = e;
+function f(t) {
+    let { currentValue: e, onChange: n } = t;
     return (0, l.jsx)('div', {
         className: m.customStatusLabelSelector,
-        children: c.Ub.map((e) =>
+        children: c.Ub.map((t) =>
             (0, l.jsx)(
                 h,
                 {
-                    option: e,
-                    isSelected: t === e.value,
-                    onClick: () => n(e.value)
+                    option: t,
+                    isSelected: e === t.value,
+                    onClick: () => n(t.value)
                 },
-                e.value
+                t.value
             )
         )
     });

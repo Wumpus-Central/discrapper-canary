@@ -1,43 +1,43 @@
-i.d(e, { Z: () => p }), i(388685);
-var s,
-    n = i(200651),
-    a = i(192379),
-    h = i(120356),
-    r = i.n(h),
-    o = i(748780),
-    l = i(481060),
-    d = i(981631),
-    c = i(464425);
-function u(t, e, i) {
+n.d(t, { Z: () => p }), n(388685);
+var r,
+    a = n(200651),
+    o = n(192379),
+    l = n(120356),
+    i = n.n(l),
+    s = n(748780),
+    c = n(481060),
+    d = n(981631),
+    u = n(464425);
+function f(e, t, n) {
     return (
-        e in t
-            ? Object.defineProperty(t, e, {
-                  value: i,
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
                   enumerable: !0,
                   configurable: !0,
                   writable: !0
               })
-            : (t[e] = i),
-        t
+            : (e[t] = n),
+        e
     );
 }
-class p extends (s = a.Component) {
+class p extends (r = o.Component) {
     componentDidMount() {
         this.props.show && this.animate(1);
     }
-    componentDidUpdate(t) {
-        t.show !== this.props.show && this.animate(+!!this.props.show);
+    componentDidUpdate(e) {
+        e.show !== this.props.show && this.animate(+!!this.props.show);
     }
     getAnimatedStyle() {
-        let { anim: t } = this,
-            { reducedMotion: e } = this.context;
+        let { anim: e } = this,
+            { reducedMotion: t } = this.context;
         return {
-            opacity: t,
-            transform: e.enabled
+            opacity: e,
+            transform: t.enabled
                 ? void 0
                 : [
                       {
-                          translateY: t.interpolate({
+                          translateY: e.interpolate({
                               inputRange: [0, 1],
                               outputRange: ['-100px', '0px']
                           })
@@ -47,24 +47,24 @@ class p extends (s = a.Component) {
         };
     }
     render() {
-        return (0, n.jsx)(o.Z.a, {
+        return (0, a.jsx)(s.Z.a, {
             href: d.Z5c.INDEX,
             target: '_blank',
             rel: 'noopener',
-            className: r()(c.logo, this.props.className),
+            className: i()(u.logo, this.props.className),
             style: this.getAnimatedStyle()
         });
     }
-    constructor(...t) {
-        super(...t),
-            u(this, 'anim', new o.Z.Value(0)),
-            u(this, 'animate', (t) => {
-                o.Z.spring(this.anim, {
-                    toValue: t,
+    constructor(...e) {
+        super(...e),
+            f(this, 'anim', new s.Z.Value(0)),
+            f(this, 'animate', (e) => {
+                s.Z.spring(this.anim, {
+                    toValue: e,
                     friction: 10,
                     tension: 100
                 }).start();
             });
     }
 }
-u(p, 'contextType', l.Sfi);
+f(p, 'contextType', c.Sfi);

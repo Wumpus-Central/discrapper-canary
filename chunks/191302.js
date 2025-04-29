@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685), n(539854);
+n.d(t, { Z: () => x }), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -16,7 +16,7 @@ var r = n(200651),
     b = n(921944),
     _ = n(388032),
     y = n(32709);
-function x(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,13 +41,13 @@ function x(e) {
     }
     return e;
 }
-function C(e) {
+function x(e) {
     let { channel: t } = e,
         l = (0, a.e7)([f.default], () => f.default.getUser(t.hdStreamingBuyerId), [t.hdStreamingBuyerId]),
         [o, d] = (0, i.useState)(!1),
         [h, _] = (0, i.useState)(!1),
         y = (0, g.bK)(),
-        [C, j] = (0, i.useState)(!1);
+        [x, j] = (0, i.useState)(!1);
     (0, u.ZP)(() => {
         t.isHDStreamSplashed && j(!0);
     }),
@@ -64,7 +64,7 @@ function C(e) {
                         return (n) =>
                             (0, r.jsx)(
                                 t,
-                                x(
+                                C(
                                     {
                                         markAsDismissed: u,
                                         channel: e
@@ -89,7 +89,7 @@ function C(e) {
         }, 25000);
         return () => clearTimeout(e);
     });
-    let E = C ? [s.z.HD_STREAMING_POTION_BANNER] : [],
+    let E = x ? [s.z.HD_STREAMING_POTION_BANNER] : [],
         [I, P] = (0, p.US)(E);
     return null == l
         ? null
@@ -106,7 +106,7 @@ function C(e) {
                           buyer: l,
                           streaming: !0,
                           onClose: () => {
-                              _(!1), C && P(b.L.DISMISS);
+                              _(!1), x && P(b.L.DISMISS);
                           }
                       })
               ]
@@ -158,7 +158,7 @@ function v(e) {
                 children: [
                     (0, r.jsx)(
                         c.qEK,
-                        x(
+                        C(
                             {
                                 src: m,
                                 'aria-label': n.username,

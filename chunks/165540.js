@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(367907),
     _ = n(213609),
     y = n(499254),
-    x = n(541099),
-    C = n(827498),
+    C = n(541099),
+    x = n(827498),
     v = n(569211),
     j = n(663924),
     O = n(533379),
@@ -39,7 +39,7 @@ var r = n(200651),
 let B = i.forwardRef(function (e, t) {
     var n, l;
     let { type: v, animateRef: j } = e,
-        O = (0, s.e7)([x.Z], () => x.Z.shouldShowPopup() && x.Z.activeViewType() === v),
+        O = (0, s.e7)([C.Z], () => C.Z.shouldShowPopup() && C.Z.activeViewType() === v),
         { badgeTreatment: I } = h.Y.useExperiment({ location: 'ChannelAppLauncherButton' }, { autoTrackExposure: !0 }),
         { Component: Z, events: N, play: T } = (0, E.Z)('ChannelAppLauncherButton'),
         { Component: w, play: U } = (0, u.B)(),
@@ -59,10 +59,10 @@ let B = i.forwardRef(function (e, t) {
         }),
         F = i.useCallback(() => {
             (0, b.yw)(R.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED, {
-                source: C._b.TEXT,
+                source: x._b.TEXT,
                 badge_type: G ? I.valueOf() : null
             }),
-                O ? y.yT(C.ti.DISMISSED) : ((0, S.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: M.L.TAKE_ACTION }), y.__(C._b.TEXT, v), f.ux()),
+                O ? y.yT(x.ti.DISMISSED) : ((0, S.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: M.L.TAKE_ACTION }), y.__(x._b.TEXT, v), f.ux()),
                 T();
         }, [O, v, T, G, I]);
     i.useEffect(() => {
@@ -74,7 +74,7 @@ let B = i.forwardRef(function (e, t) {
                     type: a.ImpressionTypes.VIEW,
                     name: a.ImpressionNames.APP_LAUNCHER_BADGE,
                     properties: {
-                        source: C._b.TEXT,
+                        source: x._b.TEXT,
                         badge_type: I.valueOf()
                     }
                 }));
@@ -252,7 +252,7 @@ let F = i.memo(function (e) {
         }),
         u = (0, w.Z)({ type: n }),
         d = (0, I.h9)(t.id),
-        p = (0, s.e7)([x.Z], () => x.Z.appDMChannelsWithFailedLoads().has(t.id)),
+        p = (0, s.e7)([C.Z], () => C.Z.appDMChannelsWithFailedLoads().has(t.id)),
         { visible: h } = (0, T.xL)();
     return c
         ? (0, r.jsxs)('div', {

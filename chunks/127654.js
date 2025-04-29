@@ -1,6 +1,6 @@
 n.d(t, {
-    G: () => x,
-    d: () => C
+    G: () => C,
+    d: () => x
 }),
     n(539854),
     n(388685),
@@ -22,7 +22,7 @@ var r = n(475179),
     b = n(959517),
     _ = n(474936),
     y = n(388032);
-function x(e, t) {
+function C(e, t) {
     let n = d.default.getCurrentUser(),
         r = e.getGuildId(),
         i = h.dg(r),
@@ -56,12 +56,12 @@ function x(e, t) {
         help: y.intl.formatToPlainString(y.t.tUOJdH, { maxSize: h.Ng(h.OC()) })
     });
 }
-function C(e, t, n) {
+function x(e, t, n) {
     let { filesMetadata: s, requireConfirm: d = !0, showLargeMessageDialog: h = !1, isThumbnail: f = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (e.length < 1) return;
     if (null != s && s.length !== e.length) throw Error('Unexpected mismatch between files and file metadata');
     let b = t.getGuildId();
-    if ((0, m.Bf)(e, b)) return void x(t, e);
+    if ((0, m.Bf)(e, b)) return void C(t, e);
     if (u.Z.getUploadCount(t.id, n) + e.length > g.dN1) {
         (0, o.openUploadError)({
             title: y.intl.string(y.t.wOr6hI),

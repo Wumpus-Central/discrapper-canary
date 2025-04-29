@@ -21,8 +21,8 @@ var r = n(200651),
     b = n(721351),
     _ = n(420529),
     y = n(927923),
-    x = n(981631),
-    C = n(921944),
+    C = n(981631),
+    x = n(921944),
     v = n(388032);
 function j(e) {
     let { onClose: t, channel: n } = e,
@@ -71,7 +71,7 @@ function E(e) {
         S = (0, a.s9z)(a.JQI),
         Z = (0, m.Z)().filter((e) => e.twoWayLink),
         [N, T] = i.useState(!1),
-        A = x.WtW.VOICE !== I && [x.AEg.NO_CHAT, x.AEg.FULL_SCREEN].includes(P) ? 'top' : 'bottom',
+        A = C.WtW.VOICE !== I && [C.AEg.NO_CHAT, C.AEg.FULL_SCREEN].includes(P) ? 'top' : 'bottom',
         w = [];
     return (
         Z.length > 0 && w.push(o.z.DONUT_DESKTOP_NUX),
@@ -92,9 +92,9 @@ function E(e) {
                             children: s
                                 ? (0, r.jsx)(g.Z, {
                                       popoutPosition: A,
-                                      onDismiss: () => l(C.L.UNKNOWN),
+                                      onDismiss: () => l(x.L.UNKNOWN),
                                       onAccept: () => {
-                                          l(C.L.UNKNOWN), T(!0);
+                                          l(x.L.UNKNOWN), T(!0);
                                       },
                                       gameConsoleAccounts: Z
                                   })

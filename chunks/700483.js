@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(522651),
     _ = n(795318),
     y = n(258609),
-    x = n(74299),
-    C = n(924301),
+    C = n(74299),
+    x = n(924301),
     v = n(459502),
     j = n(856691),
     O = n(357156),
@@ -142,11 +142,11 @@ function ep(e) {
         i = (0, u.bp)(),
         { canManageGuildEvent: l } = (0, O.XJ)(t),
         h = (0, a.e7)([X.Z], () => X.Z.getStageInstanceByChannel(t.id), [t.id]),
-        f = (0, a.e7)([C.ZP], () => C.ZP.getGuildScheduledEvent(null == h ? void 0 : h.guild_scheduled_event_id)),
+        f = (0, a.e7)([x.ZP], () => x.ZP.getGuildScheduledEvent(null == h ? void 0 : h.guild_scheduled_event_id)),
         m = (0, a.e7)([F.Z], () => F.Z.getVoiceChannelId() === t.id, [t.id]),
         { suppress: g } = (0, N.Z)(t),
         y = U.default.getId(),
-        [x] = (0, ei.Z)(t),
+        [C] = (0, ei.Z)(t),
         v = K.ZP.isModerator(y, t.id),
         j = (0, Y.B)(t.id),
         E = l(f),
@@ -222,7 +222,7 @@ function ep(e) {
                   });
               }
           })
-        : (g && !j) || x
+        : (g && !j) || C
           ? I
               ? (0, r.jsx)(M.Z, {
                     label: ea.intl.string(ea.t.SMKyio),
@@ -324,11 +324,11 @@ let em = i.memo(function (e) {
         { suppress: i, selfMute: l, mute: c } = (0, N.Z)(t),
         u = (0, Y.B)(t.id),
         d = (0, a.e7)([y.Z], () => null != y.Z.getAwaitingRemoteSessionInfo()),
-        { cameraUnavailable: b, enabled: C } = (0, I.Z)(),
+        { cameraUnavailable: b, enabled: x } = (0, I.Z)(),
         v = (0, Z.Z)(t),
         { limit: j, reachedLimit: O } = (0, P.Z)(t),
         k = (0, a.e7)([H.default], () => H.default.getCurrentUser()),
-        M = (0, a.e7)([B.Z], () => (0, x.Z)(B.Z)),
+        M = (0, a.e7)([B.Z], () => (0, C.Z)(B.Z)),
         U = (0, a.e7)([F.Z], () => F.Z.getVoiceChannelId() === t.id, [t.id]),
         G = (0, a.e7)([h.Z], () => h.Z.getStreamParticipants(t.id)[0], [t.id]),
         V = (0, Q.PK)(t.id),
@@ -361,7 +361,7 @@ let em = i.memo(function (e) {
                     return (0, r.jsx)(D.C, {
                         centerButton: !0,
                         hasPermission: v,
-                        enabled: C,
+                        enabled: x,
                         cameraUnavailable: b,
                         onChange: T.r,
                         onCameraUnavailable: w.Z,

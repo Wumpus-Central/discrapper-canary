@@ -134,7 +134,7 @@ let g = (e) => {
         });
     };
 function _(e) {
-    let { defaultColor: t, colors: r, value: a, onChange: l, disabled: d = !1, customPickerPosition: _ = 'bottom', secondaryValue: j, onChangeGradientColors: y, isGradient: O = !1 } = e,
+    let { defaultColor: t, colors: r, value: a, onChange: l, disabled: d = !1, customPickerPosition: _ = 'bottom', secondaryValue: j, onChangeGradientColors: O, isGradient: y = !1 } = e,
         h = o.useCallback((e) => 0 !== e && e !== t && !r.some((t) => t === e), [r, t]),
         C = o.useRef(null),
         x = o.useRef(null),
@@ -173,9 +173,9 @@ function _(e) {
                     start: e,
                     end: t
                 }),
-                    null == y || y([e, t]);
+                    null == O || O([e, t]);
             },
-            [y]
+            [O]
         ),
         B = o.useCallback((e, t) => {
             E((r) => b(f({}, r), { [e]: t }));
@@ -247,7 +247,7 @@ function _(e) {
                 }),
             [R, P]
         ),
-        A = o.useCallback(
+        G = o.useCallback(
             (e) => {
                 let t = (0, n.jsx)(s.jHW, b(f({}, e), { 'aria-label': u.intl.string(u.t['FHBa//']) }));
                 return d
@@ -267,7 +267,7 @@ function _(e) {
             },
             [_, d, Z]
         ),
-        G = o.useCallback(
+        A = o.useCallback(
             (e) => {
                 let t = (0, n.jsx)(s.AGO, f({}, e));
                 return d
@@ -283,12 +283,12 @@ function _(e) {
     return (0, n.jsx)(
         s.zH8,
         b(f({}, e), {
-            renderDefaultButton: G,
-            renderCustomButton: A,
+            renderDefaultButton: A,
+            renderCustomButton: G,
             renderGradientCustomButton: T,
-            isGradient: O,
+            isGradient: y,
             customColor: P,
-            onChange: O ? N : D
+            onChange: y ? N : D
         })
     );
 }

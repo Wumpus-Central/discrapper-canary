@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(111248),
     _ = n(312703),
     y = n(796638),
-    x = n(981631),
-    C = n(354459),
+    C = n(981631),
+    x = n(354459),
     v = n(363987),
     j = n(999976);
 function O(e) {
@@ -76,13 +76,13 @@ function S(e) {
         Y = (0, c.Z)(z),
         [q, K] = i.useState(!0),
         [X, Q] = i.useState(!1),
-        J = k.type === C.fO.ACTIVITY || k.type === C.fO.PRESENCE_EMBEDDED_ACTIVITY,
+        J = k.type === x.fO.ACTIVITY || k.type === x.fO.PRESENCE_EMBEDDED_ACTIVITY,
         $ = (0, u.Z)(J ? k.applicationId : void 0),
         ee = !J && null != k.streamId,
         et = U <= 2 * P + 144,
         en = M && !et,
         er = (0, c.Z)(en),
-        ei = B === x.AEg.MINIMUM || B === x.AEg.NORMAL,
+        ei = B === C.AEg.MINIMUM || B === C.AEg.NORMAL,
         el = !et && (!ei || J),
         eo = (0, m.Z)(el, 100),
         ea = (null != (t = (0, c.Z)(k.id)) ? t : k.id) !== k.id,
@@ -110,9 +110,9 @@ function S(e) {
                 delay: eh || !en ? 0 : 100,
                 config: E(O({}, a.config.stiff), { clamp: !0 }),
                 onStart: () => Q(!0),
-                onChange: () => f.S.dispatch(x.CkL.REMEASURE_TARGET),
+                onChange: () => f.S.dispatch(C.CkL.REMEASURE_TARGET),
                 onRest: () => {
-                    Q(!1), f.S.dispatch(x.CkL.REMEASURE_TARGET);
+                    Q(!1), f.S.dispatch(C.CkL.REMEASURE_TARGET);
                 }
             },
             em
@@ -138,7 +138,7 @@ function S(e) {
             },
             em
         ),
-        ex = (0, s.Yzy)(
+        eC = (0, s.Yzy)(
             k,
             {
                 keys: (e) => (null == e ? void 0 : e.id),
@@ -150,7 +150,7 @@ function S(e) {
             },
             em
         ),
-        eC = i.useCallback((e) => {
+        ex = i.useCallback((e) => {
             W(e), K(!1);
         }, []),
         ev = en ? [] : (0, _.n3)(N, k, V),
@@ -172,7 +172,7 @@ function S(e) {
                                 children: (0, r.jsx)('div', {
                                     className: v.videoSizer,
                                     style: { aspectRatio: ec },
-                                    children: ex((e, t, n) => {
+                                    children: eC((e, t, n) => {
                                         let { key: i } = n;
                                         return null != t
                                             ? (0, r.jsx)(
@@ -191,7 +191,7 @@ function S(e) {
                                                           onClick: l,
                                                           onDoubleClick: Z,
                                                           onContextMenu: S,
-                                                          onVideoResize: eC,
+                                                          onVideoResize: ex,
                                                           inCall: w,
                                                           inPopout: F
                                                       })

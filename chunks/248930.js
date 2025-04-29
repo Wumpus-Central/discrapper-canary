@@ -1,72 +1,72 @@
-n.d(t, { Z: () => h });
-var r = n(200651),
-    l = n(192379),
-    o = n(120356),
-    i = n.n(o),
-    u = n(100527),
-    c = n(906732),
-    s = n(26033),
-    a = n(960870),
-    d = n(510659),
-    f = n(287954),
-    b = n(660579),
-    p = n(652853),
-    O = n(64621),
-    g = n(382405),
-    y = n(386019),
-    v = n(228168),
-    j = n(227832);
-function h(e) {
-    let { user: t, entry: n, profileGuildId: o, className: h, onClose: m, hideContextMenu: P = !1 } = e,
-        Z = l.useRef(null),
-        { analyticsLocations: w } = (0, c.ZP)(u.Z.USER_PROFILE_RECENT_ACTIVITY_CARD),
-        { themeType: R } = (0, p.z)(),
-        { interactionSource: x, interactionSourceId: E } = (0, d.Xo)(),
-        C = (0, a.Z)({
+t.d(n, { Z: () => Z });
+var l = t(200651),
+    r = t(192379),
+    i = t(120356),
+    o = t.n(i),
+    s = t(100527),
+    a = t(906732),
+    d = t(26033),
+    c = t(960870),
+    u = t(510659),
+    f = t(287954),
+    h = t(660579),
+    p = t(652853),
+    g = t(64621),
+    j = t(382405),
+    v = t(386019),
+    m = t(228168),
+    x = t(227832);
+function Z(e) {
+    let { user: n, entry: t, profileGuildId: i, className: Z, onClose: b, hideContextMenu: O = !1 } = e,
+        y = r.useRef(null),
+        { analyticsLocations: I } = (0, a.ZP)(s.Z.USER_PROFILE_RECENT_ACTIVITY_CARD),
+        { themeType: E } = (0, p.z)(),
+        { interactionSource: P, interactionSourceId: T } = (0, u.Xo)(),
+        N = (0, c.Z)({
             display: 'recent',
-            user: t,
-            entry: n,
-            analyticsLocations: w
+            user: n,
+            entry: t,
+            analyticsLocations: I
         });
-    return null != R && (0, s.Rh)(n)
-        ? (0, r.jsx)(c.Gt, {
-              value: w,
-              children: (0, r.jsx)(O.Z, {
-                  targetElementRef: Z,
-                  sourceType: v.n_.ACTIVITY,
-                  user: t,
-                  children: (0, r.jsx)(f.Z, {
-                      user: t,
-                      guildId: o,
-                      themeType: R,
-                      sourceId: n.id,
-                      entry: n,
-                      onAction: C,
-                      sourceType: v.n_.ACTIVITY,
+    return null != E && (0, d.Rh)(t)
+        ? (0, l.jsx)(a.Gt, {
+              value: I,
+              children: (0, l.jsx)(g.Z, {
+                  targetElementRef: y,
+                  sourceType: m.n_.ACTIVITY,
+                  user: n,
+                  children: (0, l.jsx)(f.Z, {
+                      user: n,
+                      guildId: i,
+                      themeType: E,
+                      sourceId: t.id,
+                      entry: t,
+                      onAction: N,
+                      sourceType: m.n_.ACTIVITY,
                       children: () =>
-                          (0, r.jsx)(b.Z, {
-                              ref: Z,
-                              user: t,
-                              className: j.toolbarContainer,
-                              interactionSourceId: n.id,
-                              sourceType: v.n_.ACTIVITY,
-                              onAction: C,
-                              onShowToolbar: () => C({ action: 'HOVER_ACTIVITY_CARD' }),
-                              renderMoreButtonPopout: P
+                          (0, l.jsx)(h.Z, {
+                              ref: y,
+                              user: n,
+                              className: x.toolbarContainer,
+                              interactionSourceId: t.id,
+                              sourceType: m.n_.ACTIVITY,
+                              onAction: N,
+                              onShowToolbar: () => N({ action: 'HOVER_ACTIVITY_CARD' }),
+                              renderMoreButtonPopout: O
                                   ? void 0
                                   : (e) =>
-                                        (0, r.jsx)(y.Z, {
+                                        (0, l.jsx)(v.Z, {
                                             display: 'recent',
-                                            entry: n,
-                                            user: t,
-                                            onClose: m,
+                                            entry: t,
+                                            user: n,
+                                            onClose: b,
                                             children: e
                                         }),
-                              children: (0, r.jsx)(g.Z, {
-                                  entry: n,
-                                  user: t,
-                                  onClose: m,
-                                  className: i()(h, { [j.hoisted]: x === v.n_.ACTIVITY && E === n.id })
+                              children: (0, l.jsx)(j.Z, {
+                                  entry: t,
+                                  user: n,
+                                  onClose: b,
+                                  className: o()(Z, { [x.hoisted]: P === m.n_.ACTIVITY && T === t.id })
                               })
                           })
                   })

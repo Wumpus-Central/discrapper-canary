@@ -1,29 +1,29 @@
-n.d(t, { Z: () => s });
-var o = n(200651);
-n(192379);
-var r = n(481060),
-    i = n(906732),
-    c = n(335131),
-    a = n(475413),
-    l = n(388032);
+t.d(n, { Z: () => s });
+var o = t(200651);
+t(192379);
+var r = t(481060),
+    i = t(906732),
+    c = t(335131),
+    a = t(475413),
+    l = t(388032);
 function s(e) {
-    var { onClose: t } = e,
-        n = (function (e, t) {
+    var { onClose: n } = e,
+        t = (function (e, n) {
             if (null == e) return {};
-            var n,
+            var t,
                 o,
-                r = (function (e, t) {
+                r = (function (e, n) {
                     if (null == e) return {};
-                    var n,
+                    var t,
                         o,
                         r = {},
                         i = Object.keys(e);
-                    for (o = 0; o < i.length; o++) (n = i[o]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                    for (o = 0; o < i.length; o++) (t = i[o]), n.indexOf(t) >= 0 || (r[t] = e[t]);
                     return r;
-                })(e, t);
+                })(e, n);
             if (Object.getOwnPropertySymbols) {
                 var i = Object.getOwnPropertySymbols(e);
-                for (o = 0; o < i.length; o++) (n = i[o]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+                for (o = 0; o < i.length; o++) (t = i[o]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]);
             }
             return r;
         })(e, ['onClose']);
@@ -31,26 +31,26 @@ function s(e) {
     return (0, o.jsx)(
         a.ef,
         (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    o = Object.keys(n);
+            for (var n = 1; n < arguments.length; n++) {
+                var t = null != arguments[n] ? arguments[n] : {},
+                    o = Object.keys(t);
                 'function' == typeof Object.getOwnPropertySymbols &&
                     (o = o.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                        Object.getOwnPropertySymbols(t).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
                         })
                     )),
-                    o.forEach(function (t) {
+                    o.forEach(function (n) {
                         var o;
-                        (o = n[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
+                        (o = t[n]),
+                            n in e
+                                ? Object.defineProperty(e, n, {
                                       value: o,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[t] = o);
+                                : (e[n] = o);
                     });
             }
             return e;
@@ -66,10 +66,10 @@ function s(e) {
                         openInLayer: !1,
                         analyticsSource: d
                     }),
-                        null == t || t();
+                        null == n || n();
                 }
             },
-            n
+            t
         )
     );
 }

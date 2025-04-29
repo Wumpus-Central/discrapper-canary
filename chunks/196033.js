@@ -1,31 +1,44 @@
-n.d(t, { W: () => p });
+n.d(t, { W: () => f });
 var i = n(192379),
     r = n(115434),
     s = n(264181),
     l = n(442837),
-    a = n(874703),
-    o = n(619899),
-    c = n(281598),
-    d = n(388032),
-    u = n(786792),
-    m = n(161594);
-let p = () => {
-    let e = (0, o.zL)(c.jE.UPSELL_BANNER),
-        t = (0, o.zL)(c.jE.UPSELL_BANNER_POPOUT),
-        n = (0, l.e7)([a.Z], () => a.Z.getMarketingBySurface(r.K.EDIT_PROFILE_SETTINGS)),
-        p = i.useMemo(
+    a = n(442933),
+    o = n(874703),
+    c = n(619899),
+    d = n(281598),
+    u = n(388032),
+    m = n(513767),
+    p = n(78230),
+    g = n(786792),
+    h = n(161594);
+let f = () => {
+    let e = (0, c.zL)(d.jE.UPSELL_BANNER),
+        t = (0, c.zL)(d.jE.UPSELL_BANNER_POPOUT),
+        n = (0, a.H)('upsell_banner'),
+        f = (0, l.e7)([o.Z], () => o.Z.getMarketingBySurface(r.K.EDIT_PROFILE_SETTINGS)),
+        b = i.useMemo(
             () =>
-                null != n
-                    ? n
-                    : {
-                          asset: u,
-                          popoutAsset: m,
-                          title: d.intl.string(d.t['4Emkur']),
-                          body: d.intl.string(d.t.gn7SZW),
-                          version: 0,
-                          revertTextColor: !1
-                      },
-            [n]
+                null != f
+                    ? f
+                    : n
+                      ? {
+                            asset: p,
+                            popoutAsset: m,
+                            title: u.intl.string(u.t.QZVVBg),
+                            body: u.intl.string(u.t.sajmAg),
+                            version: 0,
+                            revertTextColor: !1
+                        }
+                      : {
+                            asset: g,
+                            popoutAsset: h,
+                            title: u.intl.string(u.t['4Emkur']),
+                            body: u.intl.string(u.t.gn7SZW),
+                            version: 0,
+                            revertTextColor: !1
+                        },
+            [f, n]
         );
     return i.useMemo(() => {
         var n, i;
@@ -54,12 +67,12 @@ let p = () => {
                         });
                 }
                 return e;
-            })({}, p)),
+            })({}, b)),
             (i = i =
                 {
                     type: s.Z.BANNER,
-                    asset: null != e ? e : p.asset,
-                    popoutAsset: null != t ? t : p.popoutAsset
+                    asset: null != e ? e : b.asset,
+                    popoutAsset: null != t ? t : b.popoutAsset
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -75,5 +88,5 @@ let p = () => {
                   }),
             n
         );
-    }, [e, t, p]);
+    }, [e, t, b]);
 };

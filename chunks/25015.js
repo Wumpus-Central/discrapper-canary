@@ -3,8 +3,8 @@ var r = n(200651),
     o = n(192379),
     a = n(905405),
     i = n(626135),
-    l = n(937889),
-    s = n(761910),
+    s = n(937889),
+    l = n(761910),
     c = n(488968),
     u = n(479398),
     d = n(981631),
@@ -22,7 +22,7 @@ function f(e, t) {
                 content: p.intl.string(p.t.sWi5ER),
                 hasSpoilerEmbeds: !1
             };
-        if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(d.iLy.LOADING)) return (0, s.Z)(e);
+        if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(d.iLy.LOADING)) return (0, l.Z)(e);
         if (e.type === d.uaV.CHANGELOG) {
             let { renderChangelogMessageMarkup: t } = n(55406);
             return t(e, g, {
@@ -48,7 +48,7 @@ function f(e, t) {
                 hasSpoilerEmbeds: !1
             };
         }
-        return (0, l.ZP)(e, {
+        return (0, s.ZP)(e, {
             hideSimpleEmbedContent: f,
             formatInline: b,
             noStyleAndInteraction: h,

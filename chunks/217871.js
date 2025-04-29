@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(351780),
     _ = n(843693),
     y = n(641033),
-    x = n(989830),
-    C = n(388032),
+    C = n(989830),
+    x = n(388032),
     v = n(837265);
 let j = i.memo(function (e) {
         let { channelId: t, width: n } = e,
@@ -78,7 +78,7 @@ let j = i.memo(function (e) {
                             className: v.comboMultiplier,
                             style: { color: u },
                             variant: 'text-sm/bold',
-                            children: C.intl.format(C.t['6bgVlp'], { multiplier: n })
+                            children: x.intl.format(x.t['6bgVlp'], { multiplier: n })
                         }),
                         a &&
                             (0, r.jsxs)(r.Fragment, {
@@ -116,7 +116,7 @@ let j = i.memo(function (e) {
                             (0, r.jsx)(c.Text, {
                                 className: v.tip,
                                 variant: 'text-sm/bold',
-                                children: C.intl.string(C.t.b5Cpoa)
+                                children: x.intl.string(x.t.b5Cpoa)
                             })
                     ]
                 })
@@ -131,7 +131,7 @@ let j = i.memo(function (e) {
             d = (0, s.e7)([_.ZP], () => _.ZP.isComboing(n, t), [t, n]),
             { ref: p, width: m = 0 } = (0, u.ZP)(),
             [g, y] = i.useState(!1),
-            C = (0, x.Z)(t),
+            x = (0, C.Z)(t),
             E = o && d && l;
         i.useEffect(() => {
             E && y(!0);
@@ -146,13 +146,13 @@ let j = i.memo(function (e) {
             }),
             P = i.useMemo(
                 () =>
-                    null != C
-                        ? C
+                    null != x
+                        ? x
                         : {
                               value: 0,
                               multiplier: 1
                           },
-                [C]
+                [x]
             ),
             S = i.useRef(P);
         i.useEffect(() => {

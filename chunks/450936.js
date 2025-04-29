@@ -22,11 +22,11 @@ function b(e) {
             let e = f.default.getUser(_.getRecipientId());
             return void 0 === e || !0 !== e.bot ? null : e;
         }, [_]),
-        x = (0, i.e7)([d.Z], () => {
+        C = (0, i.e7)([d.Z], () => {
             var e;
             return d.Z.isFetchingProfile(null != (e = null == y ? void 0 : y.id) ? e : m.lds);
         }),
-        C = (0, a.Z)(x),
+        x = (0, a.Z)(C),
         v = (0, i.e7)([c.Z], () => c.Z.getAppIdForBotUserId(null == y ? void 0 : y.id)),
         j = (0, i.e7)([d.Z], () => {
             var e;
@@ -77,8 +77,8 @@ function b(e) {
         application: A,
         isInitialLoading: w,
         primaryEntryPointCommand: I,
-        isProfileFetching: x,
-        wasProfileFetching: null != C ? C : null,
+        isProfileFetching: C,
+        wasProfileFetching: null != x ? x : null,
         applicationId: O,
         channelId: _.id,
         commands: P

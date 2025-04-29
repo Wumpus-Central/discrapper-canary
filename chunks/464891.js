@@ -10,8 +10,8 @@ var r = n(200651),
     o = n(192379),
     a = n(120356),
     i = n.n(a),
-    l = n(873546),
-    s = n(442837),
+    s = n(873546),
+    l = n(442837),
     c = n(481060),
     u = n(100527),
     d = n(906732),
@@ -93,15 +93,15 @@ function q(e, t) {
     );
 }
 function W(e) {
-    let { avatarSrc: t, avatarDecorationSrc: n, compact: o, onClick: a, onContextMenu: l, onMouseDown: s, onMouseEnter: c, onMouseLeave: u, onKeyDown: d, showCommunicationDisabledStyles: p = !1, className: g, avatarImgRef: m } = e;
+    let { avatarSrc: t, avatarDecorationSrc: n, compact: o, onClick: a, onContextMenu: s, onMouseDown: l, onMouseEnter: c, onMouseLeave: u, onKeyDown: d, showCommunicationDisabledStyles: p = !1, className: g, avatarImgRef: m } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('img', {
                 ref: m,
                 onClick: a,
-                onContextMenu: l,
+                onContextMenu: s,
                 onKeyDown: d,
-                onMouseDown: s,
+                onMouseDown: l,
                 onMouseEnter: c,
                 onMouseLeave: u,
                 src: t,
@@ -125,31 +125,31 @@ function W(e) {
     });
 }
 let Y = o.memo(function (e) {
-    let { message: t, author: n, channel: a, guildId: i, compact: l = !1, roleIconProps: u, showUsernamePopout: d, renderPopout: p, onClickUsername: f, onContextMenu: _, displayCompactAvatars: y = !1, onPopoutRequestClose: v, preview: O } = e,
-        j = (0, Z.ZP)(t, n),
-        x = o.useMemo(
+    let { message: t, author: n, channel: a, guildId: i, compact: s = !1, roleIconProps: u, showUsernamePopout: d, renderPopout: p, onClickUsername: f, onContextMenu: _, displayCompactAvatars: y = !1, onPopoutRequestClose: v, preview: O, subscribeToGroupId: j } = e,
+        x = (0, Z.ZP)(t, n),
+        C = o.useMemo(
             () =>
                 (0, G.x)({
                     message: t,
                     channel: a,
                     user: null == t ? void 0 : t.author,
-                    compact: l,
+                    compact: s,
                     isRepliedMessage: !1
                 }),
-            [t, a, l]
+            [t, a, s]
         ),
-        C = o.useRef(null),
-        P = (0, s.e7)([w.Z], () => w.Z.getGuild(i)),
-        T = o.useMemo(() => $(l, y, u, P), [l, y, u, P]),
-        S = o.useMemo(
+        P = o.useRef(null),
+        T = (0, l.e7)([w.Z], () => w.Z.getGuild(i)),
+        S = o.useMemo(() => $(s, y, u, T), [s, y, u, T]),
+        k = o.useMemo(
             () =>
                 null == u
                     ? null
-                    : 1 === T && null != P
+                    : 1 === S && null != T
                       ? (0, r.jsx)(
                             c.yRy,
                             {
-                                targetElementRef: C,
+                                targetElementRef: P,
                                 animation: c.yRy.Animation.TRANSLATE,
                                 align: 'center',
                                 autoInvert: !0,
@@ -158,14 +158,14 @@ let Y = o.memo(function (e) {
                                 renderPopout: () =>
                                     (0, r.jsx)(L.Z, {
                                         roleIcon: u,
-                                        guild: P
+                                        guild: T
                                     }),
                                 clickTrap: !0,
                                 children: (e) => {
                                     let { onClick: t } = e;
                                     return (0, r.jsx)(
                                         m.Z,
-                                        q(K({ ref: C }, u), {
+                                        q(K({ ref: P }, u), {
                                             className: F.roleIcon,
                                             onClick: t
                                         })
@@ -174,21 +174,21 @@ let Y = o.memo(function (e) {
                             },
                             'role-icon-children'
                         )
-                      : 2 === T
+                      : 2 === S
                         ? (0, r.jsx)(m.Z, q(K({}, u), { className: F.roleIcon }), 'role-icon-children')
                         : null,
-            [T, u, P]
+            [S, u, T]
         ),
-        k = (0, s.e7)([I.default], () => I.default.getCurrentUser()),
-        N = o.useMemo(() => {
+        N = (0, l.e7)([I.default], () => I.default.getCurrentUser()),
+        M = o.useMemo(() => {
             let e = [],
                 n = R.ZP.isPremium(t.author),
-                o = R.ZP.isPremium(k),
+                o = R.ZP.isPremium(N),
                 i = null == a ? void 0 : a.isPrivate();
             return (
                 (0, E.R)(null != u, 'Message Username') &&
                     n &&
-                    !l &&
+                    !s &&
                     !i &&
                     e.push(
                         (0, r.jsx)(
@@ -200,13 +200,13 @@ let Y = o.memo(function (e) {
                             'nitro-author'
                         )
                     ),
-                null != S && e.push(S),
-                null != P &&
+                null != k && e.push(k),
+                null != T &&
                     (e.push(
                         (0, r.jsx)(
                             b.Z,
                             {
-                                guild: P,
+                                guild: T,
                                 message: t
                             },
                             'new-member'
@@ -216,19 +216,19 @@ let Y = o.memo(function (e) {
                         (0, r.jsx)(
                             h.Z,
                             {
-                                guild: P,
+                                guild: T,
                                 message: t
                             },
                             'leaderboard-champion'
                         )
                     )),
                 null != a &&
-                    null != P &&
+                    null != T &&
                     e.push(
                         (0, r.jsx)(
                             g.Z,
                             {
-                                guild: P,
+                                guild: T,
                                 channel: a,
                                 userId: t.author.id,
                                 messageId: t.id
@@ -238,16 +238,16 @@ let Y = o.memo(function (e) {
                     ),
                 e
             );
-        }, [t, a, u, l, S, P, k]);
-    return null == j
+        }, [t, a, u, s, k, T, N]);
+    return null == x
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(A.Z, {
                       message: t,
                       channel: a,
-                      author: j,
-                      compact: l,
+                      author: x,
+                      compact: s,
                       roleIcon: u,
                       showPopout: d,
                       renderPopout: p,
@@ -255,14 +255,15 @@ let Y = o.memo(function (e) {
                       onContextMenu: _,
                       onPopoutRequestClose: v,
                       decorations: {
-                          [A.a.SYSTEM_TAG]: x,
-                          [A.a.BADGES]: N
+                          [A.a.SYSTEM_TAG]: C,
+                          [A.a.BADGES]: M
                       },
                       renderRemixTag: !0,
                       previewGuildId: i,
-                      preview: O
+                      preview: O,
+                      subscribeToGroupId: j
                   }),
-                  l &&
+                  s &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)('i', {
@@ -276,25 +277,25 @@ let Y = o.memo(function (e) {
           });
 });
 function Q(e, t, n) {
-    let { message: o, channel: a, author: i, compact: l = !1, onContextMenu: s, showUsernamePopout: c, roleIcon: u, onClickUsername: d, onPopoutRequestClose: p } = e;
+    let { message: o, channel: a, author: i, compact: s = !1, onContextMenu: l, showUsernamePopout: c, roleIcon: u, onClickUsername: d, onPopoutRequestClose: p } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(A.Z, {
                 message: o,
                 channel: a,
                 author: i,
-                compact: l,
+                compact: s,
                 roleIcon: u,
                 showPopout: c,
                 renderPopout: t,
                 onClick: d,
-                onContextMenu: s,
+                onContextMenu: l,
                 onPopoutRequestClose: p,
                 decorations: n,
                 preview: !0,
                 renderRemixTag: !0
             }),
-            l &&
+            s &&
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)('i', {
@@ -308,19 +309,19 @@ function Q(e, t, n) {
     });
 }
 function X(e) {
-    let { message: t, avatar: n, username: o, usernameSpanId: a, usernameClassName: l, compact: s, showTimestamp: u, showTimestampOnHover: d, ariaLabelledBy: g, ariaDescribedBy: m, className: f, messageClassname: b, badges: h } = e,
+    let { message: t, avatar: n, username: o, usernameSpanId: a, usernameClassName: s, compact: l, showTimestamp: u, showTimestampOnHover: d, ariaLabelledBy: g, ariaDescribedBy: m, className: f, messageClassname: b, badges: h } = e,
         _ = (0, M.yE)(t.flags, H.iLy.SENT_BY_SOCIAL_LAYER_INTEGRATION) ? t.applicationId : null,
         y = (0, p.q)(_);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            !s && n,
+            !l && n,
             (0, r.jsxs)(c.H, {
                 className: i()(F.header, f),
                 'aria-describedby': m,
                 'aria-labelledby': g,
                 children: [
                     u &&
-                        s &&
+                        l &&
                         (0, r.jsx)(B.Z, {
                             id: (0, D.Dv)(t),
                             compact: !0,
@@ -330,14 +331,14 @@ function X(e) {
                             isInline: !1,
                             application: y
                         }),
-                    s && n,
+                    l && n,
                     (0, r.jsx)('span', {
                         id: a,
-                        className: l,
+                        className: s,
                         children: o
                     }),
                     u &&
-                        !s &&
+                        !l &&
                         (0, r.jsx)(B.Z, {
                             id: (0, D.Dv)(t),
                             timestamp: t.timestamp,
@@ -363,7 +364,7 @@ function $(e, t, n, r) {
 }
 let ee = o.memo(function (e) {
         let { currentUserIsPremium: t, author: n } = e,
-            o = (0, s.e7)([j.Z], () => {
+            o = (0, l.e7)([j.Z], () => {
                 var e;
                 return null == (e = j.Z.getUserProfile(n.id)) ? void 0 : e.premiumSince;
             });
@@ -395,7 +396,7 @@ let ee = o.memo(function (e) {
         let { message: t, repliedMessage: n, compact: a = !1, renderPopout: p, showTimestampOnHover: g, roleIcon: m, subscribeToGroupId: b, hideTimestamp: h, className: y, channel: j, preview: C } = e,
             I = o.useMemo(() => (null != p ? (e) => p(e, t) : void 0), [p, t]),
             [, R] = (0, f.ZP)(t.author.id, e.guildId),
-            E = (0, s.e7)(
+            E = (0, l.e7)(
                 [S.Z, w.Z],
                 () => {
                     let n = w.Z.getGuild(e.guildId);
@@ -411,7 +412,7 @@ let ee = o.memo(function (e) {
                     C = o.useRef(null),
                     [w, S] = o.useState(!1),
                     { analyticsLocations: I } = (0, d.ZP)(u.Z.AVATAR),
-                    M = (0, s.e7)([T.ZP], () => {
+                    M = (0, l.e7)([T.ZP], () => {
                         var e;
                         return null != (e = a.displayCompactAvatars) ? e : T.ZP.displayCompactAvatars;
                     }),
@@ -464,7 +465,7 @@ let ee = o.memo(function (e) {
                                   shouldShow: j,
                                   shouldPreload: Z,
                                   renderPopout: c,
-                                  position: l.tq ? 'window_center' : 'right',
+                                  position: s.tq ? 'window_center' : 'right',
                                   avatarUrl:
                                       null != f.guildMemberAvatar && null != i
                                           ? k.ZP.getGuildMemberAvatarURLSimple({
@@ -515,7 +516,7 @@ let ee = o.memo(function (e) {
                 handleRenderPopout: I,
                 showCommunicationDisabledStyles: Z
             }),
-            B = (0, s.e7)([T.ZP], () => {
+            B = (0, l.e7)([T.ZP], () => {
                 var t;
                 return null != (t = e.displayCompactAvatars) ? t : T.ZP.displayCompactAvatars;
             }),
@@ -530,7 +531,7 @@ let ee = o.memo(function (e) {
                     }),
                 [t, j, a]
             ),
-            V = (0, s.e7)([w.Z], () => $(a, B, m, w.Z.getGuild(e.guildId)), [a, B, m, e.guildId]),
+            V = (0, l.e7)([w.Z], () => $(a, B, m, w.Z.getGuild(e.guildId)), [a, B, m, e.guildId]),
             Q = o.useMemo(() => {
                 let e = [];
                 return (0, M.yE)(t.flags, H.iLy.SUPPRESS_NOTIFICATIONS) && e.push((0, r.jsx)(O.Z, {}, 'suppress-notifications')), t.hasPotions() && e.push((0, r.jsx)(_.Z, { message: t })), e;
@@ -575,7 +576,8 @@ let ee = o.memo(function (e) {
                             compact: a,
                             roleIconProps: m,
                             renderPopout: I,
-                            preview: C
+                            preview: C,
+                            subscribeToGroupId: b
                         })
                     )
                 ]

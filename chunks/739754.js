@@ -7,8 +7,8 @@ var r = n(200651),
     o = n(192379),
     a = n(120356),
     i = n.n(a),
-    l = n(931609),
-    s = n(442837),
+    s = n(931609),
+    l = n(442837),
     c = n(481060),
     u = n(292419),
     d = n(282397),
@@ -54,8 +54,8 @@ function _(e) {
 }
 let y = o.memo(function (e) {
     let { message: t, className: n, component: a } = e,
-        i = (0, l.Z)(),
-        c = (0, s.e7)([d.ZP], () => d.ZP.getInteraction(t), [t]);
+        i = (0, s.Z)(),
+        c = (0, l.e7)([d.ZP], () => d.ZP.getInteraction(t), [t]);
     o.useEffect(() => {
         let e = null;
         if (t.hasFlag(g.iLy.LOADING) && null != c) {

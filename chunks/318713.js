@@ -14,10 +14,10 @@ let d = l.memo(function (e) {
             P = l.useMemo(() => new Date(d), [d]),
             S = l.useMemo(() => (0, c.Hg)(P), [P]),
             N = l.useMemo(() => (null != b ? (0, c.vc)(P, b) : o ? (0, c.vc)(P, 'LT') : (0, c.Y4)(P, !0)), [P, b, o]),
-            w = l.useMemo(() => (o ? (0, u.Z)(N) : null), [o, N]),
-            R = l.useMemo(() => (v ? m.intl.formatToPlainString(m.t.CDzOFR, { timeFormatted: S }) : S), [v, S]);
+            T = l.useMemo(() => (o ? (0, u.Z)(N) : null), [o, N]),
+            w = l.useMemo(() => (v ? m.intl.formatToPlainString(m.t.CDzOFR, { timeFormatted: S }) : S), [v, S]);
         return (0, n.jsx)('span', {
-            className: i()(r, w, {
+            className: i()(r, T, {
                 [p.timestamp]: !0,
                 [p.timestampVisibleOnHover]: y,
                 [p.timestampInline]: g,
@@ -27,7 +27,7 @@ let d = l.memo(function (e) {
                 null == h
                     ? (0, n.jsx)(a.ua7, {
                           text: () => (0, c.vc)(P, 'LLLL'),
-                          'aria-label': R,
+                          'aria-label': w,
                           tooltipClassName: p.timestampTooltip,
                           position: x,
                           delay: 750,

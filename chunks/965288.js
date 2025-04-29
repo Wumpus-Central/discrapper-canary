@@ -19,8 +19,8 @@ var r = n(200651),
     b = n(213609),
     _ = n(795318),
     y = n(670188),
-    x = n(314897),
-    C = n(271383),
+    C = n(314897),
+    x = n(271383),
     v = n(709586),
     j = n(5192),
     O = n(590415),
@@ -143,14 +143,14 @@ let Z = i.memo(function (e) {
         let { participant: t, channel: l } = e,
             { user: a, blocked: d } = t,
             v = l.getGuildId(),
-            j = x.default.getId(),
+            j = C.default.getId(),
             { newestAnalyticsLocation: O } = (0, g.ZP)(m.Z.AUDIENCE_TILE),
             Z = (0, f.bp)(),
             T = (0, u.e7)(
-                [C.ZP],
+                [x.ZP],
                 () => {
                     var e;
-                    return null != v && (null == (e = C.ZP.getMember(v, a.id)) ? void 0 : e.premiumSince) != null;
+                    return null != v && (null == (e = x.ZP.getMember(v, a.id)) ? void 0 : e.premiumSince) != null;
                 },
                 [v, a.id]
             );

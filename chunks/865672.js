@@ -13,9 +13,9 @@ var r = n(200651),
     u = n(183375);
 function d(e) {
     var t, n;
-    let { primaryColor: r, secondaryColor: i, tertiaryColor: a, useReducedMotion: s, roleStyle: l, includeConvenienceGlow: d } = e,
-        f = 'username' === l,
-        _ = 'dot' === l;
+    let { primaryColor: r, secondaryColor: i, tertiaryColor: a, useReducedMotion: s, roleStyle: l, includeConvenienceGlow: d, animateGradient: f } = e,
+        _ = 'username' === l,
+        p = 'dot' === l;
     return {
         gradientStyle: {
             '--custom-gradient-color-1': null != r ? r : c.p6O,
@@ -23,31 +23,33 @@ function d(e) {
             '--custom-gradient-color-3': null != (n = null != a ? a : r) ? n : c.p6O
         },
         gradientClassname: o()(null != a ? u.threeColorGradient : u.twoColorGradient, {
-            [u.usernameGradient]: f,
-            [u.convenienceGradient]: f && d,
-            [u.gradientUsernameAnimation]: !s && f,
-            [u.gradientDotAnimation]: !s && _
+            [u.usernameGradient]: _,
+            [u.convenienceGradient]: _ && d,
+            [u.gradientUsernameAnimation]: !s && _,
+            [u.gradientDotAnimation]: !s && p,
+            [u.animateGradient]: f
         }),
         gradientGlowClassname: o()(null != a ? u.threeColorGradient : u.twoColorGradient, u.usernameGlow, {
-            [u.usernameGradient]: f,
-            [u.gradientUsernameAnimation]: !s && f
+            [u.usernameGradient]: _,
+            [u.gradientUsernameAnimation]: !s && _
         })
     };
 }
 function f(e) {
-    let { primaryColor: t, secondaryColor: n, tertiaryColor: r, roleStyle: a, includeConvenienceGlow: o } = e,
-        c = (0, s.e7)([l.Z], () => l.Z.useReducedMotion);
+    let { primaryColor: t, secondaryColor: n, tertiaryColor: r, roleStyle: a, includeConvenienceGlow: o, animateGradient: c } = e,
+        u = (0, s.e7)([l.Z], () => l.Z.useReducedMotion);
     return i.useMemo(
         () =>
             d({
                 primaryColor: t,
                 secondaryColor: n,
                 tertiaryColor: r,
-                useReducedMotion: c,
+                useReducedMotion: u,
                 roleStyle: a,
-                includeConvenienceGlow: o
+                includeConvenienceGlow: o,
+                animateGradient: c
             }),
-        [t, n, r, a, o, c]
+        [t, n, r, a, o, u, c]
     );
 }
 function _(e, t, n) {

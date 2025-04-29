@@ -91,24 +91,24 @@ function f(e) {
             }
             return i;
         })(e, ['totalCooldownSeconds', 'remainingCooldownSeconds', 'onClick', 'onKeyDown', 'onMouseEnter', 'onMouseLeave', 'isActive', 'isCenterButton']);
-    let x = n > 0,
-        C = (0, a.q_F)(
+    let C = n > 0,
+        x = (0, a.q_F)(
             {
                 percentComplete: 0 !== n ? (t - n) / t : 0,
                 config: p(d({}, o.config.molasses), { duration: 1000 })
             },
             'animate-always'
         ),
-        v = x ? c.intl.formatToPlainString(c.t.D8Drx8, { seconds: n }) : void 0,
+        v = C ? c.intl.formatToPlainString(c.t.D8Drx8, { seconds: n }) : void 0,
         j = _ ? s.d : s.Z;
     return (0, r.jsxs)('div', {
         className: u.container,
         children: [
-            x ? (0, r.jsx)(h, { percentComplete: C.percentComplete }) : null,
+            C ? (0, r.jsx)(h, { percentComplete: x.percentComplete }) : null,
             (0, r.jsx)(
                 j,
                 p(d({}, y), {
-                    disabled: x,
+                    disabled: C,
                     label: v,
                     iconComponent: a.EO4,
                     iconClassName: l()(u.iconHover, b && u.active),

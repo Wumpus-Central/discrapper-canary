@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(442837),
@@ -16,35 +16,35 @@ var r = n(200651),
     b = n(205822),
     _ = n(731994),
     y = n(981631),
-    x = n(388032);
-let C = function (e) {
-    let { className: t, style: n, channel: C, draftType: v } = e,
+    C = n(388032);
+let x = function (e) {
+    let { className: t, style: n, channel: x, draftType: v } = e,
         [j, O] = i.useState(!0),
         E = (0, l.e7)([d.Z], () => d.Z.hasLayers()),
-        I = (0, l.e7)([p.Z], () => null != C && p.Z.can(y.Plq.ATTACH_FILES, C), [C]),
-        P = null != (0, l.e7)([o.Z], () => o.Z.getActiveCommand(C.id)),
-        S = C.getGuildId(),
+        I = (0, l.e7)([p.Z], () => null != x && p.Z.can(y.Plq.ATTACH_FILES, x), [x]),
+        P = null != (0, l.e7)([o.Z], () => o.Z.getActiveCommand(x.id)),
+        S = x.getGuildId(),
         Z = v === s.d.FirstThreadMessage,
         N = (0, l.e7)([f.default], () => {
             var e;
             return !0 == !(null == (e = f.default.getCurrentUser()) ? void 0 : e.nsfwAllowed);
         }),
         T = (0, l.e7)([c.Z], () => c.Z.didAgree(S)) && !N,
-        A = i.useMemo(() => !E && ((C.isPrivate() && !C.isManaged()) || (null != S && (!C.isNSFW() || T) && I && u.Z.canChatInGuild(S))), [I, T, C, S, E]),
-        w = Z ? (y.TPd.GUILD_THREADS_ONLY.has(C.type) ? x.intl.string(x.t.RBBLhI) : x.intl.string(x.t.gUx4en)) : j ? x.intl.format(x.t.dYP2FR, { destination: (0, a.F6)(C, f.default, h.Z, !0) }) : x.intl.string(x.t.h76ulJ);
+        A = i.useMemo(() => !E && ((x.isPrivate() && !x.isManaged()) || (null != S && (!x.isNSFW() || T) && I && u.Z.canChatInGuild(S))), [I, T, x, S, E]),
+        w = Z ? (y.TPd.GUILD_THREADS_ONLY.has(x.type) ? C.intl.string(C.t.RBBLhI) : C.intl.string(C.t.gUx4en)) : j ? C.intl.format(C.t.dYP2FR, { destination: (0, a.F6)(x, f.default, h.Z, !0) }) : C.intl.string(C.t.h76ulJ);
     return P || !A
         ? null
         : (0, r.jsx)(b.Z, {
               className: t,
               style: n,
               title: w,
-              description: Z ? x.intl.string(x.t.lpgkzs) : x.intl.string(x.t.usQh4O),
+              description: Z ? C.intl.string(C.t.lpgkzs) : C.intl.string(C.t.usQh4O),
               icons: _.J6,
               onDrop: (e) => {
                   if (P) return !1;
                   A &&
-                      null != C &&
-                      ((0, g.d)(e, C, v, {
+                      null != x &&
+                      ((0, g.d)(e, x, v, {
                           requireConfirm: j,
                           showLargeMessageDialog: !1
                       }),

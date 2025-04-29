@@ -1,62 +1,62 @@
-t.d(n, { Z: () => x }), t(539854);
-var i = t(442837),
-    o = t(468363),
-    l = t(158776),
+t.d(n, { Z: () => m }), t(539854);
+var o = t(442837),
+    i = t(468363),
+    c = t(158776),
     r = t(885110),
-    s = t(585305),
-    a = t(369566),
-    c = t(806729),
-    d = t(29899),
+    a = t(585305),
+    l = t(369566),
+    d = t(806729),
+    s = t(29899),
     u = t(708108),
     f = t(146078),
     p = t(228168),
-    m = t(981631),
-    h = t(388032);
-function x(e) {
-    let { user: n, currentUser: t, guildId: x, initialSubsection: I } = e,
-        { voiceActivityStatusEnabled: j } = (0, o.U)({ location: 'useUserProfileModalTabBarItems' }),
-        { live: v, recent: b, stream: _, outbox: g } = (0, a.Z)(n.id),
-        { voiceChannel: Z, voiceActivity: y } = (0, d.Z)({
+    _ = t(981631),
+    b = t(388032);
+function m(e) {
+    let { user: n, currentUser: t, guildId: m, initialSubsection: I } = e,
+        { voiceActivityStatusEnabled: h } = (0, i.U)({ location: 'useUserProfileModalTabBarItems' }),
+        { live: y, recent: x, stream: g, outbox: v } = (0, l.Z)(n.id),
+        { voiceChannel: j, voiceActivity: A } = (0, s.Z)({
             userId: n.id,
-            guildId: x
+            guildId: m
         }),
-        N = n.id === (null == t ? void 0 : t.id),
-        A = (0, i.e7)([r.Z, l.Z], () => {
-            let e = N ? r.Z.getStatus() : l.Z.getStatus(n.id);
-            return e === m.Skl.OFFLINE || e === m.Skl.INVISIBLE;
+        Z = n.id === (null == t ? void 0 : t.id),
+        O = (0, o.e7)([r.Z, c.Z], () => {
+            let e = Z ? r.Z.getStatus() : c.Z.getStatus(n.id);
+            return e === _.Skl.OFFLINE || e === _.Skl.INVISIBLE;
         }),
-        T = null != _ || v.length > 0,
-        O = b.length > 0,
-        { mutualFriendsCount: C, mutualGuilds: E } = (0, c.Z)(n),
-        P = null == E ? void 0 : E.length,
-        S = (0, s.Z)(n),
-        L = [
+        N = null != g || y.length > 0,
+        P = x.length > 0,
+        { mutualFriendsCount: C, mutualGuilds: T } = (0, d.Z)(n),
+        w = null == T ? void 0 : T.length,
+        S = (0, a.Z)(n),
+        M = [
             {
                 section: p.oh.USER_INFO,
-                text: h.intl.string(h.t.jGoPJS)
+                text: b.intl.string(b.t.jGoPJS)
             }
         ];
     return (
-        !A && (T || (j && null == _ && null == y && null != Z))
-            ? L.push({
+        !O && (N || (h && null == g && null == A && null != j))
+            ? M.push({
                   section: p.oh.ACTIVITY,
-                  text: h.intl.string(h.t.chq59f)
+                  text: b.intl.string(b.t.chq59f)
               })
-            : (O || (null == g && I === p.Tb.RECENT_ACTIVITY)) &&
-              L.push({
+            : (P || (null == v && I === p.Tb.RECENT_ACTIVITY)) &&
+              M.push({
                   section: p.oh.ACTIVITY,
-                  text: h.intl.string(h.t.chq59f)
+                  text: b.intl.string(b.t.chq59f)
               }),
-        !N &&
+        !Z &&
             S &&
-            (L.push({
+            (M.push({
                 section: p.oh.MUTUAL_FRIENDS,
                 text: (0, u.Z)(C)
             }),
-            L.push({
+            M.push({
                 section: p.oh.MUTUAL_GUILDS,
-                text: (0, f.Z)(P)
+                text: (0, f.Z)(w)
             })),
-        L
+        M
     );
 }

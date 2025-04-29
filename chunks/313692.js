@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(271383),
     _ = n(594174),
     y = n(189432),
-    x = n(356778),
-    C = n(370595),
+    C = n(356778),
+    x = n(370595),
     v = n(50493),
     j = n(12740),
     O = n(450355);
@@ -28,7 +28,7 @@ function E(e) {
         N = (0, s.e7)([g.ZP], () => g.ZP.getGuildSidebarState(E), [E]),
         T = i.useRef(0),
         [A, w] = i.useState(null != (t = null == N ? void 0 : N.details.additionalSearchQuery) ? t : {}),
-        R = (0, x.z0)(l, E, {
+        R = (0, C.z0)(l, E, {
             addtionalQuery: A,
             shouldDispatch: !0
         }),
@@ -175,7 +175,7 @@ function E(e) {
         : (0, r.jsxs)('div', {
               className: o()(j.container, P),
               children: [
-                  (0, r.jsx)(C.Z, {
+                  (0, r.jsx)(x.Z, {
                       guildId: E,
                       userId: l,
                       onNavigate: S

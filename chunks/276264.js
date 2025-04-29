@@ -153,7 +153,7 @@ let G = (0, C.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
         });
     }),
     Y = i.memo(function (e) {
-        let { colorRoleName: t, colorString: n, name: i, roleColorStrings: a, hideClanTag: o, user: s, guildId: l } = e;
+        let { colorRoleName: t, colorString: n, name: i, roleColorStrings: a, hideClanTag: o, user: s, guildId: l, isHovering: u } = e;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(c.PUh, {
@@ -161,7 +161,8 @@ let G = (0, C.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                     color: null != n ? n : void 0,
                     name: i,
                     className: x.name,
-                    roleColors: a
+                    roleColors: a,
+                    animateRoleGradient: u
                 }),
                 !o &&
                     (0, r.jsx)(b.ZP, {
@@ -350,7 +351,8 @@ let G = (0, C.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                                     roleColorStrings: eI,
                                                     hideClanTag: z,
                                                     user: y,
-                                                    guildId: V
+                                                    guildId: V,
+                                                    isHovering: e_
                                                 })
                                             })
                                           : (0, r.jsx)(c.ua7, {
@@ -367,7 +369,8 @@ let G = (0, C.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                                                                 roleColorStrings: eI,
                                                                 hideClanTag: z,
                                                                 user: y,
-                                                                guildId: V
+                                                                guildId: V,
+                                                                isHovering: e_
                                                             })
                                                         })
                                                     )

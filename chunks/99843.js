@@ -16,8 +16,8 @@ var r = n(200651),
     b = n(210975),
     _ = n(626135),
     y = n(981631),
-    x = n(388032),
-    C = n(791293);
+    C = n(388032),
+    x = n(791293);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -65,13 +65,13 @@ let O = (e) => {
         let { channel: t } = e;
         return (0, b.m$)({ channelId: t.id })
             ? (0, r.jsx)(a.ua7, {
-                  text: x.intl.string(x.t.QyZ4TU),
+                  text: C.intl.string(C.t.QyZ4TU),
                   children: (e) =>
                       (0, r.jsx)(
                           a.tQf,
                           j(v({}, e), {
                               size: 'xs',
-                              'aria-label': x.intl.string(x.t.VHXh8f),
+                              'aria-label': C.intl.string(C.t.VHXh8f),
                               color: a.TVs.colors.INTERACTIVE_NORMAL
                           })
                       )
@@ -152,13 +152,13 @@ let O = (e) => {
             f = (0, p.cO)(t),
             [m, b] = i.useState(!1),
             _ = i.useCallback(() => (l ? b(u) : (0, g.B)(c, d.Z.HEADER_BAR)), [l, u, c]),
-            v = l ? x.t.pYO54e : x.t['5Q9+/P'];
+            v = l ? C.t.pYO54e : C.t['5Q9+/P'];
         return l
             ? (0, r.jsxs)('div', {
-                  className: C.newWrapper,
+                  className: x.newWrapper,
                   children: [
                       (0, r.jsxs)('div', {
-                          className: o()(C.hoverableContainer, { [C.editing]: !1 !== m }),
+                          className: o()(x.hoverableContainer, { [x.editing]: !1 !== m }),
                           onDoubleClick: (e) => e.stopPropagation(),
                           children: [
                               n,
@@ -167,9 +167,9 @@ let O = (e) => {
                                         children: [
                                             (0, r.jsxs)(E, {
                                                 channel: t,
-                                                tooltipText: x.intl.string(v),
+                                                tooltipText: C.intl.string(v),
                                                 onClick: _,
-                                                className: C.clickableTitle,
+                                                className: x.clickableTitle,
                                                 children: [
                                                     (0, r.jsx)(a.Text, {
                                                         variant: 'text-md/semibold',
@@ -177,7 +177,7 @@ let O = (e) => {
                                                         children: null != h ? h : ''
                                                     }),
                                                     (0, r.jsx)(a.vdY, {
-                                                        className: C.editIcon,
+                                                        className: x.editIcon,
                                                         size: 'xs',
                                                         color: 'currentColor'
                                                     })
@@ -193,7 +193,7 @@ let O = (e) => {
                                         children: (0, r.jsx)(a.oil, {
                                             autoFocus: !0,
                                             maxLength: y.HN8,
-                                            inputClassName: C.newInput,
+                                            inputClassName: x.newInput,
                                             name: 'channel_name',
                                             autoComplete: 'off',
                                             value: m,
@@ -207,18 +207,18 @@ let O = (e) => {
                       }),
                       !1 !== m &&
                           (0, r.jsxs)('div', {
-                              className: C.explainer,
+                              className: x.explainer,
                               children: [
                                   (0, r.jsx)(a.Text, {
                                       variant: 'text-xs/medium',
                                       color: 'header-muted',
-                                      children: x.intl.string(x.t.a7oCBg)
+                                      children: C.intl.string(C.t.a7oCBg)
                                   }),
                                   (0, r.jsx)(a.Text, {
                                       variant: 'text-xs/medium',
                                       color: 'header-muted',
-                                      className: C.visibleLink,
-                                      children: x.intl.format(x.t.HVqAgI, { onCancel: () => b(!1) })
+                                      className: x.visibleLink,
+                                      children: C.intl.format(C.t.HVqAgI, { onCancel: () => b(!1) })
                                   })
                               ]
                           })
@@ -226,9 +226,9 @@ let O = (e) => {
               })
             : (0, r.jsxs)(E, {
                   channel: t,
-                  tooltipText: x.intl.string(v),
+                  tooltipText: C.intl.string(v),
                   onClick: _,
-                  className: o()(C.hoverableContainer, C.clickableTitle),
+                  className: o()(x.hoverableContainer, x.clickableTitle),
                   children: [
                       n,
                       (0, r.jsx)(a.Text, {
@@ -237,7 +237,7 @@ let O = (e) => {
                           children: null != h ? h : ''
                       }),
                       (0, r.jsx)(a.vdY, {
-                          className: C.editIcon,
+                          className: x.editIcon,
                           size: 'xs',
                           color: 'currentColor'
                       })
@@ -251,13 +251,13 @@ let O = (e) => {
             children: [
                 n,
                 (0, r.jsxs)('div', {
-                    className: C.container,
+                    className: x.container,
                     onDoubleClick: (e) => e.stopPropagation(),
                     children: [
                         (0, r.jsx)(u.Z, {
                             minLen: 1,
                             maxLen: y.HN8,
-                            className: C.channelName,
+                            className: x.channelName,
                             name: 'channel_name',
                             autoComplete: 'off',
                             value: null != i ? i : '',
@@ -279,7 +279,7 @@ let O = (e) => {
             inlineEditor: !l,
             children: (0, r.jsx)(m.v, {
                 channel: t,
-                className: i ? C.newGdmIcon : n,
+                className: i ? x.newGdmIcon : n,
                 editable: !l,
                 location: d.Z.HEADER_BAR,
                 children: (0, r.jsx)(f.Z, {

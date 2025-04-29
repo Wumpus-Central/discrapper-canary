@@ -18,16 +18,16 @@ let _ = function (e) {
     let { participants: t, channel: n, hasConnectPermission: l } = e,
         _ = t.filter(m.Io),
         y = (0, d.J)(n.guild_id),
-        x = i.useCallback(() => {
+        C = i.useCallback(() => {
             y ? (0, u.hk)(n.guild_id, () => s.default.selectVoiceChannel(n.id)) : s.default.selectVoiceChannel(n.id);
         }, [n.id, n.guild_id, y]),
-        C = (0, c.Q3)('ChannelCallEmpty'),
+        x = (0, c.Q3)('ChannelCallEmpty'),
         v = (0, a._q$)('ChannelCallEmpty'),
         j = 4 === _.length ? 2 : 3;
     return (0, r.jsxs)('div', {
         className: o()(b.container, { [b.withRive]: v }),
         children: [
-            C && (0, r.jsx)(f.Z, {}),
+            x && (0, r.jsx)(f.Z, {}),
             (0, r.jsx)('div', {
                 className: b.tiles,
                 style: { maxWidth: 168 * j },
@@ -78,9 +78,9 @@ let _ = function (e) {
             }),
             (0, r.jsx)(a.zxk, {
                 disabled: !l,
-                className: o()(b.joinButton, { [b.roundButton]: !C }),
-                color: l ? (C ? a.zxk.Colors.WHITE : a.zxk.Colors.GREEN) : a.zxk.Colors.PRIMARY,
-                onClick: x,
+                className: o()(b.joinButton, { [b.roundButton]: !x }),
+                color: l ? (x ? a.zxk.Colors.WHITE : a.zxk.Colors.GREEN) : a.zxk.Colors.PRIMARY,
+                onClick: C,
                 size: a.zxk.Sizes.MEDIUM,
                 children: l ? g.intl.string(g.t['96ANUF']) : g.intl.string(g.t.TVBCKS)
             })

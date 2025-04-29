@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => C });
 var r = n(200651),
     i = n(192379),
     l = n(272573),
@@ -24,10 +24,10 @@ function y(e, t) {
         return i && r && 'left' === e && (l = !0), i && !r && 'right' === e && (l = !0), !i && r && 'right' === e && (l = !0), i || r || 'left' !== e || (l = !0), l ? 'calc('.concat(100 * Math.abs(n), '% + ').concat(Math.round(12 * Math.abs(n)), 'px)') : 'auto';
     };
 }
-function x(e) {
+function C(e) {
     var t;
-    let { userId: n, guildId: x, onClose: C, analyticsLocation: v, className: j } = e,
-        O = (0, o.e7)([p.ZP], () => p.ZP.getGuildSidebarState(x), [x]),
+    let { userId: n, guildId: C, onClose: x, analyticsLocation: v, className: j } = e,
+        O = (0, o.e7)([p.ZP], () => p.ZP.getGuildSidebarState(C), [C]),
         E = null != (t = null == O ? void 0 : O.details.modViewPanel) ? t : b.k.INFO,
         I = (0, c.Z)(n),
         P = null == E ? null : E === b.k.INFO ? 'backwards' : 'forwards',
@@ -35,19 +35,19 @@ function x(e) {
         { reducedMotion: Z } = i.useContext(a.S),
         N = i.useCallback(
             (e) => {
-                null != O && (0, h.r)(x, n, O.baseChannelId, { modViewPanel: e });
+                null != O && (0, h.r)(C, n, O.baseChannelId, { modViewPanel: e });
             },
-            [O, x, n]
+            [O, C, n]
         ),
         T = i.useMemo(
             () => ({
                 [_.EkH.CLOSE_MODAL]: {
                     binds: ['esc'],
                     comboKeysBindGlobal: !0,
-                    action: () => (E === b.k.INFO ? C() : N(b.k.INFO))
+                    action: () => (E === b.k.INFO ? x() : N(b.k.INFO))
                 }
             }),
-            [C, E, N]
+            [x, E, N]
         );
     i.useEffect(() => (u.Z.enable(), u.Z.enableTemp(T), () => u.Z.disableTemp()), [T]);
     let A = (0, s.Yzy)(
@@ -118,21 +118,21 @@ function x(e) {
                             case b.k.INFO:
                                 return (0, r.jsx)(f.Z, {
                                     userId: n,
-                                    guildId: x,
+                                    guildId: C,
                                     onNavigate: N,
                                     className: j
                                 });
                             case b.k.MESSAGE_HISTORY:
                                 return (0, r.jsx)(m.Z, {
                                     userId: n,
-                                    guildId: x,
+                                    guildId: C,
                                     onNavigate: () => N(b.k.INFO),
                                     className: j
                                 });
                             case b.k.PERMISSIONS:
                                 return (0, r.jsx)(g.Z, {
                                     userId: n,
-                                    guildId: x,
+                                    guildId: C,
                                     onNavigate: () => N(b.k.INFO),
                                     className: j
                                 });
