@@ -15447,11 +15447,8 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     border: 1px solid var(--border-subtle);
     border-radius: 16px;
     max-width: 268px;
-    overflow: hidden;
     padding: 4px 8px;
-    text-overflow: ellipsis;
-    transition: border-color .2s ease;
-    white-space: nowrap
+    transition: border-color .2s ease
 }
 
 .trait_d452e4:hover {
@@ -15463,7 +15460,7 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     width: 16px
 }
 
-.traitLabel_d452e4 {
+.ellipsize_d452e4 {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
