@@ -1,6 +1,6 @@
 n.d(t, { Z: () => L }), n(388685), n(539854);
-var r = n(200651),
-    i = n(192379),
+var r = n(255367),
+    i = n(73800),
     o = n(120356),
     a = n.n(o),
     s = n(442837),
@@ -119,7 +119,7 @@ function L(e) {
         F = i.useRef(null),
         Z = i.useRef(null),
         H = i.useRef(null),
-        Y = i.useRef(),
+        Y = i.useRef(null),
         [W, K] = i.useReducer(w, D),
         { height: z, animationPhase: q } = W,
         Q = 'awaitingInput' !== q,

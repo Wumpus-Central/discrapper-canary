@@ -3,6 +3,7 @@ e.exports = {
     threeColorGradient: 'threeColorGradient_e5de78',
     usernameGradient: 'usernameGradient_e5de78',
     usernameGlow: 'usernameGlow_e5de78',
+    emoji: 'emoji_e5de78',
     convenienceGradient: 'convenienceGradient_e5de78',
     animateGradient: 'animateGradient_e5de78',
     gradientUsernameAnimation: 'gradientUsernameAnimation_e5de78',

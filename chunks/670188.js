@@ -3,8 +3,8 @@ n.d(t, {
     Z: () => C
 }),
     n(388685);
-var r = n(200651),
-    i = n(192379),
+var r = n(255367),
+    i = n(73800),
     o = n(442837),
     a = n(481060),
     s = n(493773),
@@ -213,10 +213,11 @@ function A(e) {
                                 openedAt: x.current,
                                 closePopout: () => {
                                     e.closePopout(), null == P || P();
-                                }
+                                },
+                                disableAutoFocus: !w
                             })
                         ),
-            [n, o, N, c, p, E, m, O, I, S, P, j]
+            [n, o, N, c, p, E, m, O, I, S, P, j, w]
         ),
         z = i.useCallback(() => {
             Y(),

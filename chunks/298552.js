@@ -1,5 +1,5 @@
 n.d(t, { Z: () => c }), n(35282);
-var r = n(477660),
+var r = n(159635),
     i = n.n(r),
     o = n(818083);
 let a = /^https:\/\/(?:(?:media|images)\.discordapp\.net|(?:cdn\.discordapp\.com))\/(?:attachments|ephemeral-attachments)\/\d+\/\d+\/([A-Za-z0-9._-]*[A-Za-z0-9_-])(?:[?][a-zA-Z0-9?&=_-]*)?/,

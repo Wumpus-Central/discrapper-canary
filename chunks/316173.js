@@ -1,6 +1,6 @@
 n.d(t, { Z: () => m }), n(388685);
-var r = n(200651),
-    i = n(192379),
+var r = n(255367),
+    i = n(73800),
     l = n(120356),
     a = n.n(l),
     o = n(442837),
@@ -42,7 +42,7 @@ let g = 'isHideDevBanner',
             : 'staging' === window.GLOBAL_ENV.RELEASE_CHANNEL
               ? (0, r.jsxs)('div', {
                     className: a()(f.devBanner, f.staging),
-                    children: [(0, r.jsx)(p.Z, { className: f.icon }), h.intl.format(h.t.uyrfYG, { buildNumber: '394988' }), (0, r.jsx)(b, {})]
+                    children: [(0, r.jsx)(p.Z, { className: f.icon }), h.intl.format(h.t.uyrfYG, { buildNumber: '395080' }), (0, r.jsx)(b, {})]
                 })
               : null;
     };

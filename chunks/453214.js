@@ -1,6 +1,7 @@
 e.exports = {
     footer: 'footer__3d3b0',
     authorize: 'authorize__3d3b0',
+    loadingContainer: 'loadingContainer__3d3b0',
     spinner: 'spinner__3d3b0',
     action: 'action__3d3b0',
     tooltip: 'tooltip__3d3b0',

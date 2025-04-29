@@ -1,6 +1,6 @@
 n.d(t, { Z: () => y }), n(388685);
-var a = n(200651),
-    r = n(192379),
+var a = n(255367),
+    r = n(73800),
     l = n(120356),
     i = n.n(l),
     s = n(544891),
@@ -74,7 +74,7 @@ let j = {
 function y(e) {
     var t, n, l;
     let { subscription: p, onUpdated: y } = e,
-        [O, C] = r.useState(!1),
+        [C, O] = r.useState(!1),
         [E, N] = r.useState(!1),
         [T, S] = r.useState(null),
         P = (e) => ((null == e && (e = p.status), e in j) ? j[e] : 'Unknown status '.concat(e)),
@@ -188,7 +188,7 @@ function y(e) {
                     children: [
                         (0, a.jsxs)(o.P3F, {
                             onClick: () => {
-                                C(!O);
+                                O(!C);
                             },
                             className: v.collapsablePaneHeader,
                             children: [
@@ -198,10 +198,10 @@ function y(e) {
                                         children: 'Metadata'
                                     })
                                 }),
-                                (0, a.jsx)(c.Z, { direction: O ? c.Z.Directions.UP : c.Z.Directions.DOWN })
+                                (0, a.jsx)(c.Z, { direction: C ? c.Z.Directions.UP : c.Z.Directions.DOWN })
                             ]
                         }),
-                        O &&
+                        C &&
                             (0, a.jsx)('ul', {
                                 style: { marginBottom: '15px' },
                                 children: Object.entries(p.metadata).map((e) => {

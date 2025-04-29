@@ -1,5 +1,5 @@
 n.d(t, { Z: () => o }), n(388685);
-var r = n(192379),
+var r = n(73800),
     i = n(920103);
 function o(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'vertical',

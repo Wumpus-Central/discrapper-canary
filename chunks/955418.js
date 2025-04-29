@@ -1,6 +1,6 @@
-n.d(t, { Z: () => g }), n(388685), n(781311);
-var r = n(200651),
-    i = n(192379),
+n.d(t, { Z: () => O }), n(388685), n(781311);
+var r = n(255367),
+    i = n(73800),
     o = n(906732),
     a = n(541716),
     s = n(752305),
@@ -12,44 +12,97 @@ var r = n(200651),
     _ = n(981631),
     p = n(388032),
     h = n(582970);
-let m = (0, c.kt)({
+function m(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function g(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                m(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function E(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function b(e, t) {
+    return (
+        (t = null != t ? t : {}),
+        Object.getOwnPropertyDescriptors
+            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
+            : E(Object(t)).forEach(function (n) {
+                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+              }),
+        e
+    );
+}
+let y = (0, c.kt)({
     id: '1',
     type: _.d4z.DM
 });
-function g(e) {
-    let { user: t, guildId: n, channelId: c, onClose: _ } = e,
-        { newestAnalyticsLocation: g } = (0, o.ZP)(),
-        { trackUserProfileAction: E } = (0, d.KZ)(),
-        [b, y] = i.useState(''),
-        [O, v] = i.useState((0, s.JM)(b)),
-        I = i.useRef(!1);
+function O(e) {
+    let { user: t, guildId: n, channelId: c, onClose: _, disableAutoFocus: m = !1 } = e,
+        { newestAnalyticsLocation: E } = (0, o.ZP)(),
+        { trackUserProfileAction: O } = (0, d.KZ)(),
+        [v, I] = i.useState(''),
+        [S, T] = i.useState((0, s.JM)(v)),
+        A = i.useRef(!1),
+        N = i.useMemo(() => b(g({}, a.Ie.USER_PROFILE), { disableAutoFocus: m }), [m]);
     return (0, r.jsx)(l.Z, {
         className: h.container,
         editorClassName: h.editor,
-        type: a.Ie.USER_PROFILE,
+        type: N,
         placeholder: p.intl.formatToPlainString(p.t['0ZQw/f'], { name: u.ZP.getName(n, c, t) }),
-        channel: m,
-        textValue: b,
-        richValue: O,
+        channel: y,
+        textValue: v,
+        richValue: S,
         onChange: (e, t, n) => {
-            t !== b && (y(t), v(n));
+            t !== v && (I(t), T(n));
         },
-        focused: I.current,
+        focused: A.current,
         onFocus: () => {
-            I.current = !0;
+            A.current = !0;
         },
         onBlur: () => {
-            I.current = !1;
+            A.current = !1;
         },
         onSubmit: async (e) => {
             let { value: n } = e;
             try {
                 return (
-                    E({ action: 'SEND_DIRECT_MESSAGE' }),
+                    O({ action: 'SEND_DIRECT_MESSAGE' }),
                     await (0, f.Z)({
                         userId: t.id,
                         content: n.trim(),
-                        location: g
+                        location: E
                     }),
                     null == _ || _(),
                     {

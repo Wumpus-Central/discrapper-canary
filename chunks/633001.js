@@ -1,6 +1,6 @@
 n.d(t, { Z: () => z }), n(388685), n(539854), n(583741);
-var a = n(200651),
-    r = n(192379),
+var a = n(255367),
+    r = n(73800),
     l = n(120356),
     i = n.n(l),
     s = n(772848),
@@ -19,8 +19,8 @@ var a = n(200651),
     g = n(449224),
     _ = n(808506),
     y = n(572004),
-    O = n(70956),
-    C = n(145597),
+    C = n(70956),
+    O = n(145597),
     E = n(246992),
     N = n(981631),
     T = n(757744),
@@ -365,7 +365,7 @@ function z() {
         F = (0, o.cj)([p.default], () => p.default.getTrackedGames()),
         G = (0, o.e7)([_.default], () => _.default.getFocusedPID()),
         V = (0, o.e7)([_.default], () => _.default.isFocusedPidOutOfProcess()),
-        H = (0, C.getPID)(),
+        H = (0, O.getPID)(),
         W = (0, o.e7)([p.default], () => p.default.isOverlayOOPEnabledForPid(H), [H]),
         [X, K] = (0, o.Wu)([v.Z], () => [v.Z.enabled, v.Z.keepOpen]),
         Y = (0, o.e7)([x.ZP], () => x.ZP.getRunningGames());
@@ -408,7 +408,7 @@ function z() {
                         k({}, e)
                     )
                 );
-            }, 10 * O.Z.Millis.SECOND)),
+            }, 10 * C.Z.Millis.SECOND)),
             () => clearInterval($.current)
         ),
         []

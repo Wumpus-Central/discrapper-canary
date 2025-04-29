@@ -1,6 +1,6 @@
 n.d(t, { Z: () => p }), n(388685), n(704826), n(35282), n(539854);
-var i = n(200651);
-n(192379);
+var i = n(255367);
+n(73800);
 var r = n(525654),
     s = n.n(r),
     l = n(481060),
@@ -13,8 +13,8 @@ var r = n(525654),
 function p() {
     var e, t, n, r, p;
     let g = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        h = '394988',
-        f = 'b8fc8c70f064c91379c2c0ddfdb4ec67dbc9ebef'.substring(0, 7),
+        h = '395080',
+        f = 'db1b085386c11bc95c882c4b30557edafe39fa1d'.substring(0, 7),
         b = null === a.Z || void 0 === a.Z ? void 0 : a.Z.remoteApp.getVersion(),
         _ = null === a.Z || void 0 === a.Z || null == (e = (t = a.Z.remoteApp).getBuildNumber) ? void 0 : e.call(t),
         x = null === a.Z || void 0 === a.Z || null == (n = (r = a.Z.remoteApp).getAppArch) ? void 0 : n.call(r),

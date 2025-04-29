@@ -1,6 +1,6 @@
 n.d(t, { Z: () => en }), n(388685), n(539854), n(997841);
-var i = n(200651),
-    r = n(192379),
+var i = n(255367),
+    r = n(73800),
     l = n(392711),
     o = n.n(l),
     a = n(535655),
@@ -606,7 +606,7 @@ function ec(e) {
                 e.filter((e) => !h || e.application.id !== w.gu)
             );
         }, [a, l.application_directory_collection_items, l.flags, o, h]),
-        _ = l.id;
+        _ = l.title;
     switch (l.type) {
         case p.o.BANNER_CARDS:
         case p.o.SMALL_BANNER_CARDS:

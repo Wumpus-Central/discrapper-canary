@@ -1,6 +1,6 @@
 n.d(t, { Z: () => R }), n(388685), n(49124);
-var a = n(200651),
-    r = n(192379),
+var a = n(255367),
+    r = n(73800),
     l = n(120356),
     i = n.n(l),
     s = n(913527),
@@ -19,8 +19,8 @@ var a = n(200651),
     g = n(257785),
     _ = n(484036),
     y = n(681619),
-    O = n(621060),
-    C = n(388032),
+    C = n(621060),
+    O = n(388032),
     E = n(459100),
     N = n(616257);
 let T = [
@@ -88,7 +88,7 @@ let w = [
         {
             id: 'details',
             name: 'Details',
-            group: O.v0.NONE,
+            group: C.v0.NONE,
             render: (e) => {
                 let {
                         loggedEvent: { event: t, properties: n, timestamp: r, fingerprint: l },
@@ -274,7 +274,7 @@ function R() {
         }),
         [b, f] = r.useState(void 0),
         g = p.find((e) => e.key === b),
-        { TabBar: S, renderSelectedTab: P } = (0, O.ZP)({ tabs: w }, []);
+        { TabBar: S, renderSelectedTab: P } = (0, C.ZP)({ tabs: w }, []);
     return (0, a.jsxs)('div', {
         ref: e,
         className: i()(N.panel, E.panel),
@@ -288,11 +288,11 @@ function R() {
                         size: d.zxk.Sizes.ICON,
                         onClick: j.Zw,
                         children: (0, a.jsx)('span', {
-                            title: C.intl.string(C.t.VkKicX),
+                            title: O.intl.string(O.t.VkKicX),
                             children: (0, a.jsx)(d.XHJ, {
                                 size: 'md',
                                 color: 'currentColor',
-                                'aria-label': C.intl.string(C.t.VkKicX)
+                                'aria-label': O.intl.string(O.t.VkKicX)
                             })
                         })
                     }),

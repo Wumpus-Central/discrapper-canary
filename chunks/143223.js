@@ -1,5 +1,5 @@
 n.d(t, { Z: () => s }), n(413496), n(433524), n(35282);
-var r = n(477660),
+var r = n(159635),
     i = n.n(r),
     o = n(914216);
 let a = RegExp('^https://(?:(?:canary\\.|ptb\\.)?discord(?:app)?\\.com|staging\\.discord\\.co)/shop(?:\\?tab=[a-z]+)?#itemSkuId=(\\d+)'),

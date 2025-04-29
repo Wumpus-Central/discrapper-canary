@@ -1,5 +1,5 @@
 n.d(t, { Z: () => s });
-var r = n(192379);
+var r = n(73800);
 function s(e) {
     let { isPaused: t, onInterval: n, interval: s, onIntervalSet: o, onIntervalCleared: a } = e;
     (0, r.useEffect)(() => {

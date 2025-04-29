@@ -533,11 +533,11 @@ class eP extends (i = a.ZP.PersistedStore) {
     getEmbeddedActivityForUserId(e, t) {
         let n;
         if (void 0 !== t) {
-            s: for (let [r, i] of B)
+            l: for (let [r, i] of B)
                 for (let r of i)
                     if (r.applicationId === t && r.userIds.has(e)) {
                         n = r;
-                        break s;
+                        break l;
                     }
             return n;
         }

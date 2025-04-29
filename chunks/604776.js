@@ -3,8 +3,8 @@ n.d(t, {
     Z: () => g
 }),
     n(388685);
-var a = n(200651),
-    r = n(192379),
+var a = n(255367),
+    r = n(73800),
     l = n(120356),
     i = n.n(l),
     s = n(314794),
@@ -95,7 +95,7 @@ function g() {
         [n, l] = r.useState(s.a.PREMIUM_TIER_2_1_HOUR),
         [d, f] = r.useState([]),
         [g, _] = r.useState([]),
-        { refreshEntitlementList: y, grantFractionalPremium: O, deleteFractionalPremium: C, triggerNextEntitlementFulfillment: E, entitlements: N, loading: T } = (0, m.m)();
+        { refreshEntitlementList: y, grantFractionalPremium: C, deleteFractionalPremium: O, triggerNextEntitlementFulfillment: E, entitlements: N, loading: T } = (0, m.m)();
     r.useEffect(() => {
         y();
     }, [y]);
@@ -169,7 +169,7 @@ function g() {
                             }),
                             (0, a.jsx)(o.zxk, {
                                 size: o.zxk.Sizes.MEDIUM,
-                                onClick: () => O(n),
+                                onClick: () => C(n),
                                 children: 'Grant Fractional Nitro'
                             })
                         ]
@@ -202,7 +202,7 @@ function g() {
                                                 size: o.zxk.Sizes.TINY,
                                                 color: o.zxk.Colors.RED,
                                                 look: o.zxk.Looks.OUTLINED,
-                                                onClick: () => C(),
+                                                onClick: () => O(),
                                                 children: 'Delete all'
                                             }),
                                             (0, a.jsx)(o.zxk, {
@@ -237,7 +237,7 @@ function g() {
                                                     {
                                                         entitlement: e,
                                                         active: !0,
-                                                        onDelete: () => C(e.id)
+                                                        onDelete: () => O(e.id)
                                                     },
                                                     e.id
                                                 )

@@ -1,6 +1,6 @@
 n.d(t, { Z: () => g }), n(49124);
-var a = n(200651),
-    r = n(192379),
+var a = n(255367),
+    r = n(73800),
     l = n(120356),
     i = n.n(l),
     s = n(392711),
@@ -83,28 +83,30 @@ function _() {
         ),
         N = r.useCallback(
             (e) => {
-                C(null == l ? void 0 : l.wallpaperId, e.target.value);
-            },
-            [null == l ? void 0 : l.wallpaperId]
-        ),
-        T = r.useCallback(() => C(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        S = r.useCallback(
-            (e) => {
                 O(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
             [null == l ? void 0 : l.wallpaperId]
         ),
-        P = r.useCallback(
+        T = r.useCallback(
+            (e) => {
+                C(null == l ? void 0 : l.wallpaperId, e.target.value);
+            },
+            [null == l ? void 0 : l.wallpaperId]
+        ),
+        S = r.useCallback(() => y(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        P = r.useCallback(() => O(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        w = r.useCallback(() => C(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        k = r.useCallback(
             (e) => {
                 null != s && (0, m.i)(s, { token_mix_amount: Math.round(e) });
             },
             [s]
         ),
-        w = r.useCallback(() => {
+        I = r.useCallback(() => {
             null != s && (0, m.i)(s, null);
         }, [s]),
-        k = null != (e = null == g ? void 0 : g.opacity) ? e : 1,
-        I = null != (t = null == g ? void 0 : g.token_mix_amount) ? t : 100;
+        R = null != (e = null == g ? void 0 : g.opacity) ? e : 1,
+        Z = null != (t = null == g ? void 0 : g.token_mix_amount) ? t : 100;
     return (0, a.jsxs)('div', {
         children: [
             (0, a.jsx)(o.X6, {
@@ -150,13 +152,13 @@ function _() {
                             d.iRW,
                             {
                                 className: f.slider,
-                                initialValue: k,
+                                initialValue: R,
                                 defaultValue: 1,
                                 minValue: 0,
                                 maxValue: 1,
                                 onValueChange: _
                             },
-                            'opacity-'.concat(k)
+                            'opacity-'.concat(R)
                         ),
                         (0, a.jsx)(d.ua7, {
                             text: 'The most prominent color in the wallpaper. This will be used to adjust the color tokens.',
@@ -175,10 +177,29 @@ function _() {
                                     )
                                 )
                         }),
-                        (0, a.jsx)('input', {
-                            type: 'color',
-                            value: g.primary_color,
-                            onChange: E
+                        (0, a.jsxs)('div', {
+                            className: f.colorInputContainer,
+                            children: [
+                                (0, a.jsx)(
+                                    'input',
+                                    {
+                                        type: 'color',
+                                        value: g.primary_color,
+                                        onChange: E
+                                    },
+                                    'primaryColor-'.concat(g.primary_color)
+                                ),
+                                (0, a.jsx)(d.M0o, {
+                                    color: 'currentColor',
+                                    tooltip: b.intl.string(b.t.N86XcH),
+                                    icon: (0, a.jsx)(d.P$X, {
+                                        size: 'xs',
+                                        color: 'currentColor'
+                                    }),
+                                    onClick: S,
+                                    className: f.removeButton
+                                })
+                            ]
                         }),
                         (0, a.jsx)(d.ua7, {
                             text: 'The second most prominent color in the wallpaper. This will be used to adjust the color tokens.',
@@ -216,7 +237,7 @@ function _() {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
-                                    onClick: T,
+                                    onClick: P,
                                     className: f.removeButton
                                 })
                             ]
@@ -242,13 +263,13 @@ function _() {
                             d.iRW,
                             {
                                 className: f.slider,
-                                initialValue: I,
+                                initialValue: Z,
                                 defaultValue: 100,
                                 minValue: 0,
                                 maxValue: 100,
-                                onValueChange: P
+                                onValueChange: k
                             },
-                            'tokenMixAmount-'.concat(I)
+                            'tokenMixAmount-'.concat(Z)
                         ),
                         (0, a.jsx)(d.ua7, {
                             text: 'The color used for hyperlinks.',
@@ -267,14 +288,33 @@ function _() {
                                     )
                                 )
                         }),
-                        (0, a.jsx)('input', {
-                            type: 'color',
-                            value: g.link_color,
-                            onChange: S
+                        (0, a.jsxs)('div', {
+                            className: f.colorInputContainer,
+                            children: [
+                                (0, a.jsx)(
+                                    'input',
+                                    {
+                                        type: 'color',
+                                        value: g.link_color,
+                                        onChange: T
+                                    },
+                                    'linkColor-'.concat(g.link_color)
+                                ),
+                                (0, a.jsx)(d.M0o, {
+                                    color: 'currentColor',
+                                    tooltip: b.intl.string(b.t.N86XcH),
+                                    icon: (0, a.jsx)(d.P$X, {
+                                        size: 'xs',
+                                        color: 'currentColor'
+                                    }),
+                                    onClick: w,
+                                    className: f.removeButton
+                                })
+                            ]
                         }),
                         (0, a.jsx)(d.zxk, {
                             className: f.resetButton,
-                            onClick: w,
+                            onClick: I,
                             children: 'Reset'
                         })
                     ]
@@ -285,9 +325,9 @@ function _() {
 let y = (0, s.debounce)(function (e, t) {
         null != e && (0, m.i)(e, { primary_color: t });
     }, 200),
-    O = (0, s.debounce)(function (e, t) {
+    C = (0, s.debounce)(function (e, t) {
         null != e && (0, m.i)(e, { link_color: t });
     }, 200),
-    C = (0, s.debounce)(function (e, t) {
+    O = (0, s.debounce)(function (e, t) {
         null != e && (0, m.i)(e, { secondary_color: t });
     }, 200);

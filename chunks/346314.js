@@ -2,8 +2,8 @@ n.d(t, {
     P: () => y,
     r: () => b
 });
-var r = n(200651);
-n(192379);
+var r = n(255367);
+n(73800);
 var i = n(120356),
     o = n.n(i),
     a = n(442837),
@@ -101,7 +101,8 @@ function E(e) {
             roleStyle: 'username',
             animateGradient: p
         }),
-        v = m
+        v = (0, c.EJ)(n),
+        I = m
             ? (0, r.jsx)(u.F, {
                   color: i,
                   colors: g ? s : null,
@@ -112,7 +113,7 @@ function E(e) {
     return (0, r.jsxs)('span', {
         className: o()(f, d.container),
         children: [
-            'left' === l && v,
+            'left' === l && I,
             (0, r.jsxs)('span', {
                 className: d.nameContainer,
                 style: _({ color: h && !g && null != i ? i : void 0 }, E ? b : {}),
@@ -122,7 +123,7 @@ function E(e) {
                             [d.username]: h,
                             [y]: E
                         }),
-                        children: n
+                        children: v
                     }),
                     E &&
                         (0, r.jsx)('span', {
@@ -132,7 +133,7 @@ function E(e) {
                         })
                 ]
             }),
-            'right' === l && v
+            'right' === l && I
         ]
     });
 }

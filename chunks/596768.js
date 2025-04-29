@@ -1,6 +1,6 @@
 n.d(t, { Z: () => T }), n(388685), n(642613);
-var a = n(200651),
-    r = n(192379),
+var a = n(255367),
+    r = n(73800),
     l = n(120356),
     i = n.n(l),
     s = n(658722),
@@ -19,12 +19,12 @@ var a = n(200651),
     g = n(681619),
     _ = n(621060),
     y = n(388032),
-    O = n(459100),
-    C = n(616257);
+    C = n(459100),
+    O = n(616257);
 let E = [
         {
             key: 'id',
-            cellClassName: O.eventColumn,
+            cellClassName: C.eventColumn,
             render(e) {
                 let { experimentId: t } = e;
                 return t;
@@ -32,7 +32,7 @@ let E = [
         },
         {
             key: 'bucket',
-            cellClassName: O.locationColumn,
+            cellClassName: C.locationColumn,
             render(e) {
                 let { descriptor: t } = e;
                 return t.bucket;
@@ -40,7 +40,7 @@ let E = [
         },
         {
             key: 'timestamp',
-            cellClassName: O.locationColumn,
+            cellClassName: C.locationColumn,
             render(e) {
                 let { timestamp: t } = e;
                 return t.toLocaleString();
@@ -60,7 +60,7 @@ let E = [
                 return (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsxs)(h.ZP, {
-                            className: i()(C.headerBar, O.subPanelHeaderBar),
+                            className: i()(O.headerBar, C.subPanelHeaderBar),
                             children: [
                                 (0, a.jsx)(h.ZP.Icon, {
                                     icon: m.IeX,
@@ -70,7 +70,7 @@ let E = [
                             ]
                         }),
                         (0, a.jsxs)(v.E, {
-                            className: O.commonProperties,
+                            className: C.commonProperties,
                             children: [
                                 (0, a.jsx)(v.Z9, {
                                     name: 'Timestamp (local)',
@@ -137,22 +137,22 @@ function T() {
         }, []);
     return (0, a.jsxs)('div', {
         ref: n,
-        className: i()(C.panel, O.panel),
+        className: i()(O.panel, C.panel),
         children: [
             (0, a.jsxs)('div', {
-                className: O.toolbar,
+                className: C.toolbar,
                 children: [
                     (0, a.jsx)('div', {
                         title: 'Enables tracking of all triggers',
-                        className: O.triggersEnable,
+                        className: C.triggersEnable,
                         children: (0, a.jsx)(m.rsf, {
                             checked: T,
                             onChange: S,
-                            className: O.__invalid_toolbarSwitch
+                            className: C.__invalid_toolbarSwitch
                         })
                     }),
                     (0, a.jsx)(m.zxk, {
-                        className: O.toolbarButton,
+                        className: C.toolbarButton,
                         look: m.zxk.Looks.BLANK,
                         size: m.zxk.Sizes.ICON,
                         onClick: f.Zw,
@@ -166,7 +166,7 @@ function T() {
                         })
                     }),
                     (0, a.jsx)(m.E1j, {
-                        className: O.searchBar,
+                        className: C.searchBar,
                         query: e,
                         onChange: t,
                         onClear: () => t(''),
@@ -182,7 +182,7 @@ function T() {
             }),
             null != h &&
                 (0, a.jsxs)(j.Z, {
-                    className: O.subPanel,
+                    className: C.subPanel,
                     minHeight: 100,
                     initialHeight: null != n.current ? n.current.clientHeight / 2 : 300,
                     children: [(0, a.jsx)(p, {}), v({ loggedTrigger: h })]

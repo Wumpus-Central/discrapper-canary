@@ -2,7 +2,7 @@ n.d(t, {
     J: () => o,
     Z: () => a
 });
-var r = n(192379),
+var r = n(73800),
     i = n(149203);
 function o(e) {
     let { topEmojis: t, newlyAddedEmojis: n, rowSize: r = i.N6 } = e,

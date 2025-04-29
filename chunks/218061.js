@@ -2,7 +2,7 @@ n.d(t, {
     L: () => i,
     Z: () => o
 });
-var r = n(200651);
+var r = n(255367);
 function i(e) {
     let { size: t, horizontal: n = !1 } = e,
         i = n ? t : 1,
@@ -17,5 +17,5 @@ function i(e) {
         }
     });
 }
-n(192379);
+n(73800);
 let o = i;

@@ -6,7 +6,7 @@ a.d(e, {
     WU: () => P,
     db: () => h,
     dz: () => M,
-    nm: () => C,
+    nm: () => v,
     ph: () => S,
     x5: () => L
 });
@@ -88,7 +88,7 @@ function y(t) {
     let r = a.profilesSampleRate;
     return (('number' != typeof r && 'boolean' != typeof r) || ('number' == typeof r && isNaN(r)) ? (l.X && o.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be a boolean or a number between 0 and 1. Got ${JSON.stringify(r)} of type ${JSON.stringify(typeof r)}.`), 1) : !0 !== r && !1 !== r && (r < 0 || r > 1) && (l.X && o.kg.warn(`[Profiling] Invalid sample rate. Sample rate must be between 0 and 1. Got ${r}.`), 1)) ? (l.X && o.kg.warn('[Profiling] Discarding profile because of invalid sample rate.'), !1) : r ? !!(!0 === r || Math.random() < r) || (l.X && o.kg.log(`[Profiling] Discarding profile because it's not included in the random sample (sampling rate = ${Number(r)})`), !1) : (l.X && o.kg.log('[Profiling] Discarding profile because a negative sampling decision was inherited or profileSampleRate is set to 0'), !1);
 }
-function C(t, e, a, n) {
+function v(t, e, a, n) {
     var s;
     if (!(a.samples.length < 2 ? (l.X && o.kg.log('[Profiling] Discarding profile because it contains less than 2 samples'), !1) : !!a.frames.length || (l.X && o.kg.log('[Profiling] Discarding profile because it contains no frames'), !1))) return null;
     if ('transaction' !== n.type) throw TypeError('Profiling events may only be attached to transactions, this should never occur.');
@@ -225,17 +225,17 @@ function C(t, e, a, n) {
         ]
     };
 }
-let v = new Map();
+let C = new Map();
 function S() {
-    return v.size;
+    return C.size;
 }
 function G(t) {
-    let e = v.get(t);
-    return e && v.delete(t), e;
+    let e = C.get(t);
+    return e && C.delete(t), e;
 }
 function M(t, e) {
-    if ((v.set(t, e), v.size > 30)) {
-        let t = v.keys().next().value;
-        v.delete(t);
+    if ((C.set(t, e), C.size > 30)) {
+        let t = C.keys().next().value;
+        C.delete(t);
     }
 }

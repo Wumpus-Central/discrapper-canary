@@ -10,13 +10,13 @@ let r = (e) => {
                 }
             },
             i = () => t,
-            a = {
+            o = {
                 setState: r,
                 getState: i,
-                getInitialState: () => o,
+                getInitialState: () => a,
                 subscribe: (e) => (n.add(e), () => n.delete(e))
             },
-            o = (t = e(r, i, a));
-        return a;
+            a = (t = e(r, i, o));
+        return o;
     },
     i = (e) => (e ? r(e) : r);

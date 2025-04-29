@@ -50,7 +50,7 @@ let s = _.n,
         });
     },
     y = 'undefined' == typeof __SENTRY_DEBUG__ || __SENTRY_DEBUG__;
-function C(t, e) {
+function v(t, e) {
     return {
         ...t,
         ...e,
@@ -83,7 +83,7 @@ function C(t, e) {
         }
     };
 }
-function v(t, e) {
+function C(t, e) {
     return (
         Object.entries(e).forEach(([e, a]) => {
             t.setAttributeNS(null, e, a);
@@ -149,8 +149,8 @@ let U =
         colorScheme: K = 'system',
         themeLight: k = {},
         themeDark: x = {},
-        addScreenshotButtonLabel: V = g,
-        cancelButtonLabel: F = I,
+        addScreenshotButtonLabel: F = g,
+        cancelButtonLabel: V = I,
         confirmButtonLabel: j = d,
         emailLabel: X = p,
         emailPlaceholder: $ = f,
@@ -187,7 +187,7 @@ let U =
                 themeLight: k,
                 triggerLabel: tn,
                 triggerAriaLabel: t_,
-                cancelButtonLabel: F,
+                cancelButtonLabel: V,
                 submitButtonLabel: ta,
                 confirmButtonLabel: j,
                 formTitle: q,
@@ -199,7 +199,7 @@ let U =
                 namePlaceholder: tt,
                 successMessageText: tr,
                 isRequiredLabel: z,
-                addScreenshotButtonLabel: V,
+                addScreenshotButtonLabel: F,
                 removeScreenshotButtonLabel: te,
                 onFormClose: ti,
                 onFormOpen: to,
@@ -290,7 +290,7 @@ ${
                 );
             },
             tf = (t, e = {}) => {
-                let a = C(tl, e),
+                let a = v(tl, e),
                     r = 'string' == typeof t ? E.querySelector(t) : 'function' == typeof t.addEventListener ? t : null;
                 if (!r) throw (y && i.kg.error('[Feedback] Unable to attach to target element'), Error('Unable to attach to target element'));
                 let n = null,
@@ -315,7 +315,7 @@ ${
                 return tI.push(o), o;
             },
             tp = (t = {}) => {
-                let e = C(tl, t),
+                let e = v(tl, t),
                     a = tR(e),
                     r = (function ({ triggerLabel: t, triggerAriaLabel: e, shadow: a }) {
                         let r = E.createElement('button');
@@ -327,22 +327,22 @@ ${
                             r.appendChild(
                                 (function () {
                                     let t = (t) => s.document.createElementNS('http://www.w3.org/2000/svg', t),
-                                        e = v(t('svg'), {
+                                        e = C(t('svg'), {
                                             width: '20',
                                             height: '20',
                                             viewBox: '0 0 20 20',
                                             fill: 'var(--foreground)'
                                         }),
-                                        a = v(t('g'), { clipPath: 'url(#clip0_57_80)' }),
-                                        r = v(t('path'), {
+                                        a = C(t('g'), { clipPath: 'url(#clip0_57_80)' }),
+                                        r = C(t('path'), {
                                             'fill-rule': 'evenodd',
                                             'clip-rule': 'evenodd',
                                             d: 'M15.6622 15H12.3997C12.2129 14.9959 12.031 14.9396 11.8747 14.8375L8.04965 12.2H7.49956V19.1C7.4875 19.3348 7.3888 19.5568 7.22256 19.723C7.05632 19.8892 6.83435 19.9879 6.59956 20H2.04956C1.80193 19.9968 1.56535 19.8969 1.39023 19.7218C1.21511 19.5467 1.1153 19.3101 1.11206 19.0625V12.2H0.949652C0.824431 12.2017 0.700142 12.1783 0.584123 12.1311C0.468104 12.084 0.362708 12.014 0.274155 11.9255C0.185602 11.8369 0.115689 11.7315 0.0685419 11.6155C0.0213952 11.4995 -0.00202913 11.3752 -0.00034808 11.25V3.75C-0.00900498 3.62067 0.0092504 3.49095 0.0532651 3.36904C0.0972798 3.24712 0.166097 3.13566 0.255372 3.04168C0.344646 2.94771 0.452437 2.87327 0.571937 2.82307C0.691437 2.77286 0.82005 2.74798 0.949652 2.75H8.04965L11.8747 0.1625C12.031 0.0603649 12.2129 0.00407221 12.3997 0H15.6622C15.9098 0.00323746 16.1464 0.103049 16.3215 0.278167C16.4966 0.453286 16.5964 0.689866 16.5997 0.9375V3.25269C17.3969 3.42959 18.1345 3.83026 18.7211 4.41679C19.5322 5.22788 19.9878 6.32796 19.9878 7.47502C19.9878 8.62209 19.5322 9.72217 18.7211 10.5333C18.1345 11.1198 17.3969 11.5205 16.5997 11.6974V14.0125C16.6047 14.1393 16.5842 14.2659 16.5395 14.3847C16.4948 14.5035 16.4268 14.6121 16.3394 14.7042C16.252 14.7962 16.147 14.8698 16.0307 14.9206C15.9144 14.9714 15.7891 14.9984 15.6622 15ZM1.89695 10.325H1.88715V4.625H8.33715C8.52423 4.62301 8.70666 4.56654 8.86215 4.4625L12.6872 1.875H14.7247V13.125H12.6872L8.86215 10.4875C8.70666 10.3835 8.52423 10.327 8.33715 10.325H2.20217C2.15205 10.3167 2.10102 10.3125 2.04956 10.3125C1.9981 10.3125 1.94708 10.3167 1.89695 10.325ZM2.98706 12.2V18.1625H5.66206V12.2H2.98706ZM16.5997 9.93612V5.01393C16.6536 5.02355 16.7072 5.03495 16.7605 5.04814C17.1202 5.13709 17.4556 5.30487 17.7425 5.53934C18.0293 5.77381 18.2605 6.06912 18.4192 6.40389C18.578 6.73866 18.6603 7.10452 18.6603 7.47502C18.6603 7.84552 18.578 8.21139 18.4192 8.54616C18.2605 8.88093 18.0293 9.17624 17.7425 9.41071C17.4556 9.64518 17.1202 9.81296 16.7605 9.90191C16.7072 9.91509 16.6536 9.9265 16.5997 9.93612Z'
                                         });
                                     e.appendChild(a).appendChild(r);
                                     let n = t('defs'),
-                                        _ = v(t('clipPath'), { id: 'clip0_57_80' }),
-                                        o = v(t('rect'), {
+                                        _ = C(t('clipPath'), { id: 'clip0_57_80' }),
+                                        o = C(t('rect'), {
                                             width: '20',
                                             height: '20',
                                             fill: 'white'
@@ -456,10 +456,10 @@ ${
             },
             attachTo: tf,
             createWidget(t = {}) {
-                let e = tp(C(tl, t));
+                let e = tp(v(tl, t));
                 return e.appendToDom(), e;
             },
-            createForm: async (t = {}) => tA(C(tl, t)),
+            createForm: async (t = {}) => tA(v(tl, t)),
             remove() {
                 tu && (tu.parentElement && tu.parentElement.remove(), (tu = null)), tI.forEach((t) => t()), (tI = []);
             }
@@ -476,8 +476,8 @@ var B,
     K,
     k,
     x,
-    V = {},
-    F = [],
+    F = {},
+    V = [],
     j = /acit|ex(?:s|g|n|p|$)|rph|grid|ows|mnc|ntw|ine[ch]|zoo|^ord|itera/i,
     X = Array.isArray;
 function $(t, e) {
@@ -567,7 +567,7 @@ function ta() {
                             r
                         );
                 })(t, r, n) || e),
-            0 === a || H.length > a ? (ts(r, e, n), (n.length = r.length = 0), (e = void 0), H.sort(x)) : e && W.__c && W.__c(e, F));
+            0 === a || H.length > a ? (ts(r, e, n), (n.length = r.length = 0), (e = void 0), H.sort(x)) : e && W.__c && W.__c(e, V));
     e && ts(r, e, n), (ta.__r = 0);
 }
 function tr(t, e, a, r, n, _, o, i, c, s, E) {
@@ -576,7 +576,7 @@ function tr(t, e, a, r, n, _, o, i, c, s, E) {
         I,
         R,
         d,
-        A = (r && r.__k) || F,
+        A = (r && r.__k) || V,
         f = e.length;
     for (
         a.__d = c,
@@ -629,7 +629,7 @@ function tr(t, e, a, r, n, _, o, i, c, s, E) {
         null != (I = a.__k[l]) &&
             'boolean' != typeof I &&
             'function' != typeof I &&
-            ((u = -1 === I.__i ? V : A[I.__i] || V),
+            ((u = -1 === I.__i ? F : A[I.__i] || F),
             (I.__i = l),
             tc(t, I, u, n, _, o, i, c, s, E),
             (R = I.__e),
@@ -770,7 +770,7 @@ function tc(t, e, a, r, n, _, o, i, c, s) {
                   }
                   if (null === p) A === f || (i && t.data === f) || (t.data = f);
                   else {
-                      if (((_ = _ && B.call(t.childNodes)), (A = a.props || V), !i && null != _)) for (A = {}, s = 0; s < t.attributes.length; s++) A[(I = t.attributes[s]).name] = I.value;
+                      if (((_ = _ && B.call(t.childNodes)), (A = a.props || F), !i && null != _)) for (A = {}, s = 0; s < t.attributes.length; s++) A[(I = t.attributes[s]).name] = I.value;
                       for (s in A) (I = A[s]), 'children' == s || ('dangerouslySetInnerHTML' == s ? (l = I) : 'key' === s || s in f || t_(t, s, null, I, n));
                       for (s in f) (I = f[s]), 'children' == s ? (u = I) : 'dangerouslySetInnerHTML' == s ? (E = I) : 'value' == s ? (R = I) : 'checked' == s ? (d = I) : 'key' === s || (i && 'function' != typeof I) || A[s] === I || t_(t, s, I, A[s], n);
                       if (E) i || (l && (E.__html === l.__html || E.__html === t.innerHTML)) || (t.innerHTML = E.__html), (e.__k = []);
@@ -820,7 +820,7 @@ function tl(t, e, a) {
 function tu(t, e, a) {
     return this.constructor(t, a);
 }
-(B = F.slice),
+(B = V.slice),
     (W = {
         __e: function (t, e, a, r) {
             for (var n, _, o; (e = e.__); )
@@ -873,9 +873,9 @@ function tm(t, e) {
     return t >= a.__.length && a.__.push({ __V: tN }), a.__[t];
 }
 function ty(t) {
-    return (tf = 1), tC(tW, t);
+    return (tf = 1), tv(tW, t);
 }
-function tC(t, e, a) {
+function tv(t, e, a) {
     var r = tm(tI++, 2);
     if (
         ((r.t = t),
@@ -927,7 +927,7 @@ function tC(t, e, a) {
     }
     return r.__N || r.__;
 }
-function tv(t, e) {
+function tC(t, e) {
     var a = tm(tI++, 4);
     !tT.__s && tB(a.__H, e) && ((a.__ = t), (a.i = e), tR.__h.push(a));
 }
@@ -1092,7 +1092,7 @@ let tY = {
         },
         useImperativeHandle: function (t, e, a) {
             (tf = 6),
-                tv(
+                tC(
                     function () {
                         return 'function' == typeof t
                             ? (t(e()),
@@ -1109,9 +1109,9 @@ let tY = {
                     null == a ? a : a.concat(t)
                 );
         },
-        useLayoutEffect: tv,
+        useLayoutEffect: tC,
         useMemo: tS,
-        useReducer: tC,
+        useReducer: tv,
         useRef: function (t) {
             return (
                 (tf = 5),
@@ -1128,13 +1128,13 @@ function tK({ options: t }) {
         () => ({
             __html: (function () {
                 let t = (t) => E.createElementNS('http://www.w3.org/2000/svg', t),
-                    e = v(t('svg'), {
+                    e = C(t('svg'), {
                         width: '32',
                         height: '30',
                         viewBox: '0 0 72 66',
                         fill: 'inherit'
                     }),
-                    a = v(t('path'), {
+                    a = C(t('path'), {
                         transform: 'translate(11, 11)',
                         d: 'M29,2.26a4.67,4.67,0,0,0-8,0L14.42,13.53A32.21,32.21,0,0,1,32.17,40.19H27.55A27.68,27.68,0,0,0,12.09,17.47L6,28a15.92,15.92,0,0,1,9.23,12.17H4.62A.76.76,0,0,1,4,39.06l2.94-5a10.74,10.74,0,0,0-3.36-1.9l-2.91,5a4.54,4.54,0,0,0,1.69,6.24A4.66,4.66,0,0,0,4.62,44H19.15a19.4,19.4,0,0,0-8-17.31l2.31-4A23.87,23.87,0,0,1,23.76,44H36.07a35.88,35.88,0,0,0-16.41-31.8l4.67-8a.77.77,0,0,1,1.05-.27c.53.29,20.29,34.77,20.66,35.17a.76.76,0,0,1-.68,1.13H40.6q.09,1.91,0,3.81h4.78A4.59,4.59,0,0,0,50,39.43a4.49,4.49,0,0,0-.62-2.28Z'
                     });
@@ -1176,14 +1176,14 @@ function tx(t, e) {
     let a = t.get(e);
     return 'string' == typeof a ? a.trim() : '';
 }
-function tV({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSubmit: n, onSubmitSuccess: _, onSubmitError: o, showEmail: c, showName: s, screenshotInput: E }) {
+function tF({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSubmit: n, onSubmitSuccess: _, onSubmitError: o, showEmail: c, showName: s, screenshotInput: E }) {
     let { tags: l, addScreenshotButtonLabel: u, removeScreenshotButtonLabel: I, cancelButtonLabel: R, emailLabel: d, emailPlaceholder: A, isEmailRequired: f, isNameRequired: p, messageLabel: N, messagePlaceholder: T, nameLabel: L, namePlaceholder: h, submitButtonLabel: O, isRequiredLabel: D } = t,
         [g, P] = ty(null),
-        [m, C] = ty(!1),
-        v = E && E.input,
+        [m, v] = ty(!1),
+        C = E && E.input,
         [S, G] = ty(null),
         M = tG((t) => {
-            G(t), C(!1);
+            G(t), v(!1);
         }, []),
         b = tG(
             (t) => {
@@ -1243,8 +1243,8 @@ function tV({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                 lineNumber: 144
             }
         },
-        v && m
-            ? z(v, {
+        C && m
+            ? z(C, {
                   onError: M,
                   __self: this,
                   __source: {
@@ -1300,7 +1300,7 @@ function tV({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                                   lineNumber: 154
                               }
                           },
-                          z(tF, {
+                          z(tV, {
                               label: L,
                               isRequiredLabel: D,
                               isRequired: p,
@@ -1348,7 +1348,7 @@ function tV({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                                   lineNumber: 171
                               }
                           },
-                          z(tF, {
+                          z(tV, {
                               label: d,
                               isRequiredLabel: D,
                               isRequired: f,
@@ -1395,7 +1395,7 @@ function tV({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                             lineNumber: 187
                         }
                     },
-                    z(tF, {
+                    z(tV, {
                         label: N,
                         isRequiredLabel: D,
                         isRequired: !0,
@@ -1420,7 +1420,7 @@ function tV({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                         }
                     })
                 ),
-                v
+                C
                     ? z(
                           'label',
                           {
@@ -1438,7 +1438,7 @@ function tV({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
                                   class: 'btn btn--default',
                                   type: 'button',
                                   onClick: () => {
-                                      G(null), C((t) => !t);
+                                      G(null), v((t) => !t);
                                   },
                                   __self: this,
                                   __source: {
@@ -1506,7 +1506,7 @@ function tV({ options: t, defaultEmail: e, defaultName: a, onFormClose: r, onSub
         )
     );
 }
-function tF({ label: t, isRequired: e, isRequiredLabel: a }) {
+function tV({ label: t, isRequired: e, isRequiredLabel: a }) {
     return z(
         'span',
         {
@@ -1540,23 +1540,23 @@ function tX({ open: t, onFormSubmitted: e, ...a }) {
             () => ({
                 __html: (function () {
                     let t = (t) => s.document.createElementNS('http://www.w3.org/2000/svg', t),
-                        e = v(t('svg'), {
+                        e = C(t('svg'), {
                             width: '16',
                             height: '17',
                             viewBox: '0 0 16 17',
                             fill: 'inherit'
                         }),
-                        a = v(t('g'), { clipPath: 'url(#clip0_57_156)' }),
-                        r = v(t('path'), {
+                        a = C(t('g'), { clipPath: 'url(#clip0_57_156)' }),
+                        r = C(t('path'), {
                             'fill-rule': 'evenodd',
                             'clip-rule': 'evenodd',
                             d: 'M3.55544 15.1518C4.87103 16.0308 6.41775 16.5 8 16.5C10.1217 16.5 12.1566 15.6571 13.6569 14.1569C15.1571 12.6566 16 10.6217 16 8.5C16 6.91775 15.5308 5.37103 14.6518 4.05544C13.7727 2.73985 12.5233 1.71447 11.0615 1.10897C9.59966 0.503466 7.99113 0.34504 6.43928 0.653721C4.88743 0.962403 3.46197 1.72433 2.34315 2.84315C1.22433 3.96197 0.462403 5.38743 0.153721 6.93928C-0.15496 8.49113 0.00346625 10.0997 0.608967 11.5615C1.21447 13.0233 2.23985 14.2727 3.55544 15.1518ZM4.40546 3.1204C5.46945 2.40946 6.72036 2.03 8 2.03C9.71595 2.03 11.3616 2.71166 12.575 3.92502C13.7883 5.13838 14.47 6.78405 14.47 8.5C14.47 9.77965 14.0905 11.0306 13.3796 12.0945C12.6687 13.1585 11.6582 13.9878 10.476 14.4775C9.29373 14.9672 7.99283 15.0953 6.73777 14.8457C5.48271 14.596 4.32987 13.9798 3.42502 13.075C2.52018 12.1701 1.90397 11.0173 1.65432 9.76224C1.40468 8.50718 1.5328 7.20628 2.0225 6.02404C2.5122 4.8418 3.34148 3.83133 4.40546 3.1204Z'
                         }),
-                        n = v(t('path'), { d: 'M6.68775 12.4297C6.78586 12.4745 6.89218 12.4984 7 12.5C7.11275 12.4955 7.22315 12.4664 7.32337 12.4145C7.4236 12.3627 7.51121 12.2894 7.58 12.2L12 5.63999C12.0848 5.47724 12.1071 5.28902 12.0625 5.11098C12.0178 4.93294 11.9095 4.77744 11.7579 4.67392C11.6064 4.57041 11.4221 4.52608 11.24 4.54931C11.0579 4.57254 10.8907 4.66173 10.77 4.79999L6.88 10.57L5.13 8.56999C5.06508 8.49566 4.98613 8.43488 4.89768 8.39111C4.80922 8.34735 4.713 8.32148 4.61453 8.31498C4.51605 8.30847 4.41727 8.32147 4.32382 8.35322C4.23038 8.38497 4.14413 8.43484 4.07 8.49999C3.92511 8.63217 3.83692 8.81523 3.82387 9.01092C3.81083 9.2066 3.87393 9.39976 4 9.54999L6.43 12.24C6.50187 12.3204 6.58964 12.385 6.68775 12.4297Z' });
+                        n = C(t('path'), { d: 'M6.68775 12.4297C6.78586 12.4745 6.89218 12.4984 7 12.5C7.11275 12.4955 7.22315 12.4664 7.32337 12.4145C7.4236 12.3627 7.51121 12.2894 7.58 12.2L12 5.63999C12.0848 5.47724 12.1071 5.28902 12.0625 5.11098C12.0178 4.93294 11.9095 4.77744 11.7579 4.67392C11.6064 4.57041 11.4221 4.52608 11.24 4.54931C11.0579 4.57254 10.8907 4.66173 10.77 4.79999L6.88 10.57L5.13 8.56999C5.06508 8.49566 4.98613 8.43488 4.89768 8.39111C4.80922 8.34735 4.713 8.32148 4.61453 8.31498C4.51605 8.30847 4.41727 8.32147 4.32382 8.35322C4.23038 8.38497 4.14413 8.43484 4.07 8.49999C3.92511 8.63217 3.83692 8.81523 3.82387 9.01092C3.81083 9.2066 3.87393 9.39976 4 9.54999L6.43 12.24C6.50187 12.3204 6.58964 12.385 6.68775 12.4297Z' });
                     e.appendChild(a).append(n, r);
                     let _ = t('defs'),
-                        o = v(t('clipPath'), { id: 'clip0_57_156' }),
-                        i = v(t('rect'), {
+                        o = C(t('clipPath'), { id: 'clip0_57_156' }),
+                        i = C(t('rect'), {
                             width: '16',
                             height: '16',
                             fill: 'white',
@@ -1668,7 +1668,7 @@ function tX({ open: t, onFormSubmitted: e, ...a }) {
                                   lineNumber: 66
                               }
                           }),
-                          z(tV, {
+                          z(tF, {
                               ...a,
                               onSubmitSuccess: c,
                               __self: this,
@@ -2035,7 +2035,7 @@ ${tZ}
                         (c = (n && n.__k) || i.__k),
                         (s = []),
                         (E = []),
-                        tc(i, (r = (n || i).__k = z(Z, null, [r])), c || V, V, void 0 !== i.ownerSVGElement, n ? [n] : c ? null : i.firstChild ? B.call(i.childNodes) : null, s, n ? n : c ? c.__e : i.firstChild, !1, E),
+                        tc(i, (r = (n || i).__k = z(Z, null, [r])), c || F, F, void 0 !== i.ownerSVGElement, n ? [n] : c ? null : i.firstChild ? B.call(i.childNodes) : null, s, n ? n : c ? c.__e : i.firstChild, !1, E),
                         (r.__d = void 0),
                         ts(s, r, E);
                 };

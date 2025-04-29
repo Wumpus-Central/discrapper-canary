@@ -8,8 +8,8 @@ var r =
             return e;
         },
     i = n(512722),
-    a = n(805962),
-    o = n(458648),
+    o = n(805962),
+    a = n(458648),
     s = n(706300),
     l = n(73843),
     c = n(522212),
@@ -24,14 +24,14 @@ var p = n(363545),
     g = function (e, t, n) {
         if (e instanceof s) {
             var i = r({}, t),
-                a = r({}, t);
-            for (var o in t) {
-                var l = t[o],
+                o = r({}, t);
+            for (var a in t) {
+                var l = t[a],
                     c = l.x,
                     u = l.y;
-                void 0 !== c && void 0 !== u && ((i[o] = c), (a[o] = u));
+                void 0 !== c && void 0 !== u && ((i[a] = c), (o[a] = u));
             }
-            return y([n(e.x, i), n(e.y, a)], { stopTogether: !1 });
+            return y([n(e.x, i), n(e.y, o)], { stopTogether: !1 });
         }
         return null;
     },
@@ -41,7 +41,7 @@ var p = n(363545),
                 start: function (e) {
                     var r = t,
                         i = n;
-                    r.stopTracking(), n.toValue instanceof a ? r.track(new f(r, n.toValue, p, i, e)) : r.animate(new p(i), e);
+                    r.stopTracking(), n.toValue instanceof o ? r.track(new f(r, n.toValue, p, i, e)) : r.animate(new p(i), e);
                 },
                 stop: function () {
                     t.stopAnimation();
@@ -71,21 +71,21 @@ var p = n(363545),
         var n = 0,
             r = {},
             i = !(t && !1 === t.stopTogether),
-            a = {
+            o = {
                 start: function (t) {
                     if (n === e.length) {
                         t && t({ finished: !0 });
                         return;
                     }
-                    e.forEach(function (o, s) {
-                        var l = function (o) {
+                    e.forEach(function (a, s) {
+                        var l = function (a) {
                             if (((r[s] = !0), ++n === e.length)) {
-                                (n = 0), t && t(o);
+                                (n = 0), t && t(a);
                                 return;
                             }
-                            !o.finished && i && a.stop();
+                            !a.finished && i && o.stop();
                         };
-                        o ? o.start(l) : l({ finished: !0 });
+                        a ? a.start(l) : l({ finished: !0 });
                     });
                 },
                 stop: function () {
@@ -94,10 +94,10 @@ var p = n(363545),
                     });
                 }
             };
-        return a;
+        return o;
     },
     O = function (e) {
-        return E(new o(0), {
+        return E(new a(0), {
             toValue: 0,
             delay: e,
             duration: 0
@@ -112,10 +112,10 @@ var p = n(363545),
     },
     I = function (e, t) {
         return function () {
-            for (var n = arguments.length, r = Array(n), a = 0; a < n; a++) r[a] = arguments[a];
+            for (var n = arguments.length, r = Array(n), o = 0; o < n; o++) r[o] = arguments[o];
             var s = function e(t, n, r) {
                 if ('number' == typeof n) {
-                    i(t instanceof o, 'Bad mapping of type ' + typeof t + ' for key ' + r + ', event value must map to AnimatedValue'), t.setValue(n);
+                    i(t instanceof a, 'Bad mapping of type ' + typeof t + ' for key ' + r + ', event value must map to AnimatedValue'), t.setValue(n);
                     return;
                 }
                 for (var r in (i('object' == typeof t, 'Bad mapping of type ' + typeof t + ' for key ' + r), i('object' == typeof n, 'Bad event of type ' + typeof n + ' for key ' + r), t)) e(t[r], n[r], r);
@@ -127,7 +127,7 @@ var p = n(363545),
         };
     };
 e.exports = {
-    Value: o,
+    Value: a,
     ValueXY: s,
     decay: function e(t, n) {
         return (
@@ -150,7 +150,7 @@ e.exports = {
                 start: function (e) {
                     var r = t,
                         i = n;
-                    r.stopTracking(), n.toValue instanceof a ? r.track(new f(r, n.toValue, m, i, e)) : r.animate(new m(i), e);
+                    r.stopTracking(), n.toValue instanceof o ? r.track(new f(r, n.toValue, m, i, e)) : r.animate(new m(i), e);
                 },
                 stop: function () {
                     t.stopAnimation();

@@ -7,8 +7,8 @@ n.d(t, {
     n(539854),
     n(388685),
     n(35282);
-var i = n(164484),
-    o = n(993192),
+var i = n(66685),
+    o = n(519772),
     a = n(388032),
     s = n(252517);
 r = n(330711).Z;
@@ -68,7 +68,7 @@ async function d(e) {
     if (null == t) return;
     let r = await t().default;
     {
-        let { registerLocale: t } = n(674091);
+        let { registerLocale: t } = n(352374);
         t(e, r);
     }
 }

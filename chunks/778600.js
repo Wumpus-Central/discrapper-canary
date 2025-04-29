@@ -149,7 +149,7 @@ var g = function (t) {
 let P = new Map(),
     m = (t, e, a) => {
         let r;
-        if (!t || !(C(t, e) || 'object' == typeof t)) return;
+        if (!t || !(v(t, e) || 'object' == typeof t)) return;
         let n = t.constructor.name,
             _ = ((r = P.get(a)) || ((r = new Map()), P.set(a, r)), r.has(n) || r.set(n, []), r.get(n)),
             o = _.indexOf(t);
@@ -192,7 +192,7 @@ let P = new Map(),
                         rr_type: e.constructor.name,
                         args: [t(e.data, a, r), e.width, e.height]
                     };
-                else if (C(e, a) || 'object' == typeof e)
+                else if (v(e, a) || 'object' == typeof e)
                     return {
                         rr_type: e.constructor.name,
                         index: m(e, a, r)
@@ -200,8 +200,8 @@ let P = new Map(),
                 return e;
             })(t, e, a)
         ),
-    C = (t, e) => !!['WebGLActiveInfo', 'WebGLBuffer', 'WebGLFramebuffer', 'WebGLProgram', 'WebGLRenderbuffer', 'WebGLShader', 'WebGLShaderPrecisionFormat', 'WebGLTexture', 'WebGLUniformLocation', 'WebGLVertexArrayObject', 'WebGLVertexArrayObjectOES'].filter((t) => 'function' == typeof e[t]).find((a) => t instanceof e[a]);
-function v(t, e, a, r, n) {
+    v = (t, e) => !!['WebGLActiveInfo', 'WebGLBuffer', 'WebGLFramebuffer', 'WebGLProgram', 'WebGLRenderbuffer', 'WebGLShader', 'WebGLShaderPrecisionFormat', 'WebGLTexture', 'WebGLUniformLocation', 'WebGLVertexArrayObject', 'WebGLVertexArrayObjectOES'].filter((t) => 'function' == typeof e[t]).find((a) => t instanceof e[a]);
+function C(t, e, a, r, n) {
     let _ = [];
     try {
         let o = R(t.HTMLCanvasElement.prototype, 'getContext', function (t) {
@@ -323,7 +323,7 @@ class G {
             }
             L(() => {
                 if ((_ && 'all' === e && this.initCanvasMutationObserver(t, a, r, n), _ && 'number' == typeof e)) {
-                    let e = v(t, a, r, n, !0);
+                    let e = C(t, a, r, n, !0);
                     this.restoreHandlers.push(() => {
                         e();
                     });
@@ -397,7 +397,7 @@ class G {
         });
     }
     initCanvasMutationObserver(t, e, a, r) {
-        let n = v(t, e, a, r, !1),
+        let n = C(t, e, a, r, !1),
             _ = (function (t, e, a, r, n) {
                 let _ = [];
                 for (let o of Object.getOwnPropertyNames(e.CanvasRenderingContext2D.prototype))

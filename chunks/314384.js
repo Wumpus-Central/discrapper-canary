@@ -3,7 +3,7 @@ n.d(t, {
     tf: () => i,
     zH: () => a
 });
-var r = n(192379),
+var r = n(73800),
     i = function (e) {
         return (0, r.useEffect)(e, []);
     },

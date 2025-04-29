@@ -27,13 +27,13 @@ n.d(t, {
     n(361932),
     n(187205),
     n(49124);
-var a = n(200651),
-    r = n(192379),
+var a = n(255367),
+    r = n(73800),
     l = n(688619),
     i = n.n(l),
     s = n(392711),
     o = n.n(s),
-    c = n(765053),
+    c = n(446431),
     d = n(190558),
     u = n(203165),
     m = n(481060),
@@ -88,10 +88,10 @@ function _(e, t) {
     );
 }
 let { SemanticColors: y } = d.V;
-function O(e) {
+function C(e) {
     return e.replaceAll(/_|\./g, '-').toLowerCase();
 }
-function C(e) {
+function O(e) {
     return e.replaceAll(/_|-/g, '.').toLowerCase();
 }
 function E(e, t) {
@@ -109,16 +109,16 @@ function E(e, t) {
 function N() {
     let e = (0, x.Fg)(),
         [t, n, l, s, d, u] = (0, v.zn)(),
-        { semanticColorOverrides: f, rawColorOverrides: y, tab: C, scales: N } = t,
+        { semanticColorOverrides: f, rawColorOverrides: y, tab: O, scales: N } = t,
         S = r.useMemo(() => {
             let t = Object.entries(f).map((t) => {
                     let [n, a] = t,
                         { colors: r, highlight: l } = a,
                         i = r[e];
                     if (null == i) return '';
-                    let s = O(n);
+                    let s = C(n);
                     if (l) return '--'.concat(s, ': magenta !important;');
-                    let o = O(i.color),
+                    let o = C(i.color),
                         c = i.opacity,
                         d = c < 1 ? 'hsl(var(--'.concat(o, '-hsl) / ').concat(c, ')') : 'var(--'.concat(o, ')');
                     return '--'.concat(s, ': color-mix(\n        in oklab,\n        ').concat(d, ' 100%,\n        var(--theme-base-color, black) var(--theme-base-color-amount, 0%)\n      );');
@@ -172,7 +172,7 @@ function N() {
                         className: j.tabBar,
                         type: 'top',
                         look: 'brand',
-                        selectedItem: C,
+                        selectedItem: O,
                         onItemSelect: (e) => {
                             n((t) => _(g({}, t), { tab: e }));
                         },
@@ -257,7 +257,7 @@ function N() {
             }),
             (0, a.jsx)('div', {
                 className: j.tab,
-                hidden: C !== v.H8.TOKENS,
+                hidden: O !== v.H8.TOKENS,
                 children: (0, a.jsx)(T, {
                     state: t,
                     setState: n
@@ -265,7 +265,7 @@ function N() {
             }),
             (0, a.jsx)('div', {
                 className: j.tab,
-                hidden: C !== v.H8.PALETTES,
+                hidden: O !== v.H8.PALETTES,
                 children: (0, a.jsx)(b.P, {
                     state: t,
                     setState: n
@@ -351,7 +351,7 @@ function T(e) {
         ),
         b = Object.keys(y).map((e) => ({
             value: e,
-            label: O(e)
+            label: C(e)
         })),
         E = Object.keys(u.b).map((e) => ({
             value: e,
@@ -384,14 +384,14 @@ function T(e) {
                     let [t, r] = e,
                         i = r.colors[l];
                     if (null == i) return null;
-                    let s = C(i.color),
+                    let s = O(i.color),
                         c = i.opacity,
                         d = v.jC[t][l];
                     return (0, a.jsx)(
                         S,
                         {
-                            title: O(t),
-                            subtitle: 1 === d.opacity ? C(d.raw) : ''.concat(C(d.raw), ' @ ').concat(100 * d.opacity, '%'),
+                            title: C(t),
+                            subtitle: 1 === d.opacity ? O(d.raw) : ''.concat(O(d.raw), ' @ ').concat(100 * d.opacity, '%'),
                             highlight: r.highlight,
                             onReset: () => {
                                 n((e) => {

@@ -1,6 +1,6 @@
 n.d(t, { W: () => _ }), n(539854), n(388685);
 var r,
-    i = n(192379),
+    i = n(73800),
     o = n(830483);
 function a(e, t, n) {
     return (
@@ -86,7 +86,7 @@ class _ extends (r = i.Component) {
         (this._isMounted = !1), (this._keyChildMapping = {}), (this.state.children = {});
     }
     componentDidUpdate(e, t) {
-        if (e !== this.props) {
+        if (e.children !== this.props.children || e.transitionAppear !== this.props.transitionAppear || e.transitionLeave !== this.props.transitionLeave) {
             let e = (0, o.n)(this.props.children),
                 n = t.children;
             if ((this.props.transitionEnter ? this._enqueueTransitions(e, n, this._keysToEnter) : this._keysToEnter.length && (this._keysToEnter = []), this.props.transitionLeave)) this._enqueueTransitions(n, e, this._keysToLeave);

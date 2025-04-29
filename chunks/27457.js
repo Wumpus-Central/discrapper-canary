@@ -3,8 +3,8 @@ n.d(t, {
     ZP: () => em
 }),
     n(388685);
-var r = n(200651),
-    i = n(192379),
+var r = n(255367),
+    i = n(73800),
     l = n(120356),
     o = n.n(l),
     s = n(442837),
@@ -197,23 +197,23 @@ let ec = [ee.fO.ACTIVITY, ee.fO.PRESENCE_EMBEDDED_ACTIVITY],
         let e$ = (0, s.e7)([N.Z], () => (U.type === ee.fO.USER && null != eB ? N.Z.getEffectForUserId(eB) : null)),
             e0 = (0, s.e7)([M.Z], () => M.Z.getVoicePlatformForChannel(em.id, null != eB ? eB : $.lds)),
             { simplifiedSettingsEnabled: e1 } = (0, H.Z)({ location: 'CallTile' }),
-            { showGameIcon: e4 } = _.ZP.useExperiment({ location: 'voice_users' }, { autoTrackExposure: !1 }),
-            e3 = (0, s.e7)([L.Z], () => (e4 && null != eB ? L.Z.findActivity(eB, (e) => null != e.application_id && e.type === $.IIU.PLAYING) : null), [e4, eB]),
-            e6 = (0, s.e7)([R.Z], () => ((null == e3 ? void 0 : e3.application_id) != null ? R.Z.getDetectableGame(e3.application_id) : null)),
-            e2 = (0, s.e7)([p.Z], () => (null != e6 && (null == e3 ? void 0 : e3.application_id) != null ? p.Z.getApplication(null == e3 ? void 0 : e3.application_id) : void 0)),
-            e9 = (0, P.wV)({
+            { showGameIcon: e3 } = _.ZP.useExperiment({ location: 'voice_users' }, { autoTrackExposure: !1 }),
+            e4 = (0, s.e7)([L.Z], () => (e3 && null != eB ? L.Z.findActivity(eB, (e) => null != e.application_id && e.type === $.IIU.PLAYING) : null), [e3, eB]),
+            e6 = (0, s.e7)([R.Z], () => ((null == e4 ? void 0 : e4.application_id) != null ? R.Z.getDetectableGame(e4.application_id) : null)),
+            e5 = (0, s.e7)([p.Z], () => (null != e6 && (null == e4 ? void 0 : e4.application_id) != null ? p.Z.getApplication(null == e4 ? void 0 : e4.application_id) : void 0)),
+            e7 = (0, P.wV)({
                 userId: eB,
                 channelId: em.id
             }),
-            e5 = (0, P.zU)({
+            e8 = (0, P.zU)({
                 streamKey: U.type === ee.fO.STREAM ? U.id : null,
                 channelId: em.id
             }),
-            e7 = i.useMemo(() => (U.type === ee.fO.STREAM ? null != e5 && e5 : U.type === ee.fO.USER && null != e9 && e9), [e5, e9, U.type]);
+            e2 = i.useMemo(() => (U.type === ee.fO.STREAM ? null != e8 && e8 : U.type === ee.fO.USER && null != e7 && e7), [e8, e7, U.type]);
         i.useEffect(() => {
             eR(eS);
         }, [eS]);
-        let [e8, te] = i.useState(!1),
+        let [e9, te] = i.useState(!1),
             tt = i.useCallback(() => {
                 h.Z.useReducedMotion || te(!0);
             }, []);
@@ -332,7 +332,7 @@ let ec = [ee.fO.ACTIVITY, ee.fO.PRESENCE_EMBEDDED_ACTIVITY],
                     eM(!1);
                 },
                 children: [
-                    e8 &&
+                    e9 &&
                         U.type === ee.fO.STREAM &&
                         (0, r.jsx)(E.Z, {
                             baseTileRef: tc.current,
@@ -428,8 +428,8 @@ let ec = [ee.fO.ACTIVITY, ee.fO.PRESENCE_EMBEDDED_ACTIVITY],
                                                           onContextMenu: tl,
                                                           onToggleMute: tn,
                                                           participantUserId: eB,
-                                                          application: e2,
-                                                          secureFramesVerified: e7,
+                                                          application: e5,
+                                                          secureFramesVerified: e2,
                                                           isHovered: ek
                                                       }
                                                   )

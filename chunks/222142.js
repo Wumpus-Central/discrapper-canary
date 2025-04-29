@@ -18,10 +18,10 @@ var r =
             return n && e(t.prototype, n), r && e(t, r), t;
         };
     })();
-function a(e, t) {
+function o(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-function o(e, t) {
+function a(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ('object' == typeof t || 'function' == typeof t) ? t : e;
 }
@@ -41,8 +41,8 @@ var l = n(805962),
     c = n(784493);
 e.exports = (function (e) {
     function t(e, n) {
-        a(this, t);
-        var i = o(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
+        o(this, t);
+        var i = a(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
         return e.style && (e = r({}, e, { style: new c(e.style) })), (i._props = e), (i._callback = n), i.__attach(), i;
     }
     return (

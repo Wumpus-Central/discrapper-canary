@@ -1,6 +1,6 @@
 n.d(t, { P: () => j }), n(388685), n(35282), n(49124);
-var a = n(200651),
-    r = n(192379),
+var a = n(255367),
+    r = n(73800),
     l = n(394900),
     i = n(661105),
     s = n(609067),
@@ -137,7 +137,7 @@ function j(e) {
 }
 function g(e) {
     let { scale: t, setState: n, onClose: r } = e,
-        { name: c, base: p, darkness: b, lightness: v, showColumnarPalettePreview: j, colorSpace: g, easingStrength: _ = 1, useP3ColorSpace: O, steps: C = 26 } = t,
+        { name: c, base: p, darkness: b, lightness: v, showColumnarPalettePreview: j, colorSpace: g, easingStrength: _ = 1, useP3ColorSpace: C, steps: O = 26 } = t,
         E = (0, x.XM)(t),
         N = (0, x.W6)(E, c);
     return (0, a.jsxs)(d.hjN, {
@@ -283,17 +283,17 @@ function g(e) {
                     (0, a.jsx)(d.xJW, {
                         children: (0, a.jsx)(d.j7V, {
                             note: 'Renders the palette preview in a single column, useful for comparing the luminance of each step.',
-                            value: O,
+                            value: C,
                             disabled: !x.S2,
                             onChange: (e) => (0, x.uF)(c, e, n),
                             children: 'Use P3 Color Space'
                         })
                     }),
                     (0, a.jsx)(d.xJW, {
-                        title: 'Steps ('.concat(C, ')'),
+                        title: 'Steps ('.concat(O, ')'),
                         children: (0, a.jsx)(d.iRW, {
                             onValueRender: () => null,
-                            initialValue: C,
+                            initialValue: O,
                             minValue: (0, x.A0)(c).length,
                             maxValue: 100,
                             onValueChange: (e) => (0, x.YC)(c, Math.round(e), n),

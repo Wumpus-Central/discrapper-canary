@@ -1,11 +1,11 @@
 n.d(t, { Z: () => X }), n(388685), n(539854);
-var r = n(200651),
-    l = n(192379),
+var r = n(255367),
+    l = n(73800),
     o = n(120356),
     i = n.n(o),
     a = n(10106),
-    s = n(272573),
-    c = n(359959),
+    s = n(481752),
+    c = n(760907),
     u = n(670081),
     d = n(442837),
     m = n(780384),
@@ -167,8 +167,8 @@ function X(e) {
         e0 = (0, l.useRef)(null),
         e1 = l.useRef(!0),
         e2 = (null == (t = er.userStatus) ? void 0 : t.completedAt) != null,
-        e6 = (0, _.km)((e) => e.transcript),
-        [e8, e4] = l.useState(null),
+        e8 = (0, _.km)((e) => e.transcript),
+        [e6, e4] = l.useState(null),
         [e7, e3] = l.useState(!1),
         [e9, e5] = l.useState(!1),
         [te, tt] = l.useState(null),
@@ -257,7 +257,7 @@ function X(e) {
                 if ((tr.info('[QV] | updatePlayerState | playerState: '.concat(e)), eS(e), null != eJ.current))
                     switch (e) {
                         case R.rq.PLAYING:
-                            eJ.current.paused && tp(e8), e4(null), eJ.current.play();
+                            eJ.current.paused && tp(e6), e4(null), eJ.current.play();
                             break;
                         case R.rq.PAUSED:
                             eJ.current.paused || t_(), eJ.current.pause(), (eQ.current = !1);
@@ -266,11 +266,11 @@ function X(e) {
                             t_(), eu(!1);
                     }
             },
-            [tp, e8, t_, eu, tr]
+            [tp, e6, t_, eu, tr]
         );
     l.useEffect(() => {
-        tf(e8);
-    }, [e8, tf]),
+        tf(e6);
+    }, [e6, tf]),
         l.useEffect(() => {
             eg && tv(ev, eh);
         }, [ev, eg, eh, tv]);
@@ -557,7 +557,7 @@ function X(e) {
                         type: p.$jN.Type.WANDERING_CUBES,
                         className: Q.loadingSpinner
                     }),
-                eh === R.rq.PAUSED && e8 === j.yE.LOST_FOCUS && (0, r.jsx)(H, {}),
+                eh === R.rq.PAUSED && e6 === j.yE.LOST_FOCUS && (0, r.jsx)(H, {}),
                 ec &&
                     eh !== R.rq.ENDED &&
                     (0, r.jsxs)(r.Fragment, {
@@ -720,7 +720,7 @@ function X(e) {
                                 hideCaptionBtn: null == tK,
                                 handlePlaybackBtnClick: tL,
                                 handleTranscriptBtnClick: () => {
-                                    ec || (null != e6 && e6.questId === er.id && e6.fetchStatus !== _.iF.NONE && e6.fetchStatus !== _.iF.FAILURE) || (0, C.lL)(er), eu(!ec), tg(j.jn.VIDEO_MODAL, ec ? S.jZ.TRANSCRIPT_DISABLE : S.jZ.TRANSCRIPT_ENABLE);
+                                    ec || (null != e8 && e8.questId === er.id && e8.fetchStatus !== _.iF.NONE && e8.fetchStatus !== _.iF.FAILURE) || (0, C.lL)(er), eu(!ec), tg(j.jn.VIDEO_MODAL, ec ? S.jZ.TRANSCRIPT_DISABLE : S.jZ.TRANSCRIPT_ENABLE);
                                 },
                                 handleCaptionBtnClick: () => {
                                     em(!ed), tg(j.jn.VIDEO_MODAL, ed ? S.jZ.CLOSED_CAPTIONING_DISABLE : S.jZ.CLOSED_CAPTIONING_ENABLE);

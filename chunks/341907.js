@@ -12,8 +12,8 @@ n.r(t),
         openQuestsRewardCodeModal: () => L,
         openVideoQuestModal: () => F
     });
-var r = n(200651);
-n(192379);
+var r = n(255367);
+n(73800);
 var i = n(772848),
     o = n(271579),
     a = n(756647),
