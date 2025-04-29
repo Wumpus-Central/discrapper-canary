@@ -35,7 +35,7 @@ function h(e) {
                           disabled: O.disabled,
                           submitting: O.loading,
                           size: i.PhG.TINY,
-                          themeColor: 'none',
+                          themeColor: 'secondary',
                           onClick: S
                       })
                   }),
@@ -46,7 +46,7 @@ function h(e) {
                           disabled: v.disabled,
                           submitting: v.loading,
                           size: i.PhG.TINY,
-                          themeColor: 'none',
+                          themeColor: 'secondary',
                           onClick: I
                       })
                   })

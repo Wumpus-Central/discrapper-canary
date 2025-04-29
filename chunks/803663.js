@@ -30,7 +30,7 @@ function g(e) {
         ? (0, r.jsx)(p.tG, {
               text: m.intl.string(m.t.ZYO5OD),
               size: a.PhG.TINY,
-              themeColor: 'none',
+              themeColor: 'secondary',
               disabled: O,
               onClick: T
           })

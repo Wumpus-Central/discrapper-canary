@@ -14,8 +14,8 @@ var r = t(481060),
     p = t(502762),
     g = t(530),
     j = t(871604),
-    v = t(952124),
-    m = t(53558),
+    m = t(952124),
+    v = t(53558),
     x = t(544989),
     Z = t(30556),
     b = t(4517),
@@ -59,7 +59,7 @@ function N(e) {
                     themeType: I.lY.MODAL,
                     children: [
                         (0, l.jsx)(x.Z, {
-                            children: (0, l.jsx)(v.Z, {
+                            children: (0, l.jsx)(m.Z, {
                                 user: n,
                                 guildId: G,
                                 onCloseProfile: D
@@ -104,7 +104,7 @@ function N(e) {
                                                     onClose: D,
                                                     tooltipContainerClassName: T.messageIconButton
                                                 }),
-                                                (0, l.jsx)(m.Z, {
+                                                (0, l.jsx)(v.Z, {
                                                     user: n,
                                                     guildId: G
                                                 }),

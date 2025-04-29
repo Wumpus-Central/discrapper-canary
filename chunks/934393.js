@@ -31,7 +31,7 @@ function h(e) {
               icon: n,
               text: p.intl.formatToPlainString(p.t.XWSHTU, { platform: o.Z.get(t).name }),
               size: a.PhG.TINY,
-              themeColor: 'none',
+              themeColor: 'secondary',
               onClick: E
           })
         : (0, r.jsx)(d.tG, {

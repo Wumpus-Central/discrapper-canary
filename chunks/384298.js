@@ -38,7 +38,7 @@ function y(e) {
                   (0, r.jsx)(h.tG, {
                       text: O ? T() : A(),
                       size: o.PhG.TINY,
-                      themeColor: 'none',
+                      themeColor: 'secondary',
                       onClick: N
                   }),
                   S &&
@@ -48,7 +48,7 @@ function y(e) {
                           tooltipText: O ? E.intl.string(E.t.kkKapK) : E.intl.string(E.t.ZXxLQk),
                           className: b.tinyIconButton,
                           innerClassName: b.tinyIconButtonInner,
-                          themeColor: 'none',
+                          themeColor: 'secondary',
                           onClick: C
                       })
               ]

@@ -13,8 +13,8 @@ var l = t(200651),
     p = t(700785),
     g = t(785717),
     j = t(256226),
-    v = t(678738),
-    m = t(314172),
+    m = t(678738),
+    v = t(314172),
     x = t(981631),
     Z = t(388032),
     b = t(217919);
@@ -82,7 +82,7 @@ function I(e, n) {
 }
 function E(e) {
     let { user: n, currentUser: t, guild: a, guildMember: d, roles: c, highestRole: u, canManageRoles: f, onAddRole: h, onRemoveRole: g } = e,
-        v = f && null != d,
+        m = f && null != d,
         E = r.useRef(null),
         P = r.useMemo(() => 'roles-'.concat((0, i.Z)()), []),
         T = (0, o.ZP)({
@@ -128,8 +128,8 @@ function E(e) {
                         {
                             children: [
                                 S,
-                                v &&
-                                    (0, l.jsx)(m.Z, {
+                                m &&
+                                    (0, l.jsx)(v.Z, {
                                         buttonRef: E,
                                         guild: a,
                                         guildMember: d,
@@ -150,13 +150,13 @@ function P(e) {
         o = I(e, ['user', 'currentUser', 'guild']);
     let { trackUserProfileAction: s } = (0, g.KZ)(),
         j = (0, a.e7)([u.ZP], () => u.ZP.getMember(i.id, n.id)),
-        m = (0, a.e7)([f.Z], () => f.Z.getRoles(i.id)),
+        v = (0, a.e7)([f.Z], () => f.Z.getRoles(i.id)),
         b = null == j ? void 0 : j.roles,
         P = r.useMemo(
             () =>
                 null == b || 0 === b.length
                     ? []
-                    : Object.values(m)
+                    : Object.values(v)
                           .filter((e) => b.includes(e.id))
                           .sort((e, n) => {
                               var t, l;
@@ -164,7 +164,7 @@ function P(e) {
                                   i = (null == (l = n.tags) ? void 0 : l.guild_connections) !== null;
                               return r && !i ? 1 : !r && i ? -1 : 0;
                           }),
-            [m, b]
+            [v, b]
         ),
         T = p.e9(i, t.id),
         [N] = (0, a.Wu)([h.Z], () => [h.Z.can(x.Plq.MANAGE_ROLES, i), null != i ? h.Z.getGuildVersion(i.id) : null]),
@@ -188,7 +188,7 @@ function P(e) {
         C = N && null != j;
     return 0 !== P.length || C
         ? (0, l.jsx)(
-              v.Z,
+              m.Z,
               y(O({ heading: Z.intl.string(Z.t.LPJmLy) }, o), {
                   children: (0, l.jsx)(E, {
                       user: n,

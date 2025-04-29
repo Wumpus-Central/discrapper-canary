@@ -28,7 +28,7 @@ function f(e) {
 }
 function p(e) {
     var n, t, a;
-    let { user: l, currentUser: p, displayProfile: m, guildId: b, initialSection: _, initialSubsection: h, onClose: y } = e,
+    let { user: l, currentUser: p, displayProfile: m, guildId: b, initialSection: _, initialSubsection: y, onClose: h } = e,
         { trackUserProfileAction: g } = (0, c.KZ)(),
         x = r.useMemo(
             () =>
@@ -54,7 +54,7 @@ function p(e) {
                       ],
             [l.id, p.id]
         ),
-        [{ section: j, subsection: I, text: O }, v] = r.useState(
+        [{ section: j, subsection: I, text: v }, O] = r.useState(
             ((t = (function (e) {
                 for (var n = 1; n < arguments.length; n++) {
                     var t = null != arguments[n] ? arguments[n] : {},
@@ -89,7 +89,7 @@ function p(e) {
                     ? n
                     : x[0]
             )),
-            (a = a = { subsection: h }),
+            (a = a = { subsection: y }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(a))
                 : (function (e, n) {
@@ -116,7 +116,7 @@ function p(e) {
                         action: 'PRESS_SECTION',
                         section: e
                     }),
-                        v((n) => {
+                        O((n) => {
                             var t;
                             return null != (t = x.find((n) => n.section === e)) ? t : n;
                         });
@@ -139,7 +139,7 @@ function p(e) {
             }),
             (0, o.jsx)(i.njP.Panel, {
                 id: j,
-                'aria-label': O,
+                'aria-label': v,
                 className: u.tabBarPanel,
                 children: (0, o.jsx)(f, {
                     user: l,
@@ -148,7 +148,7 @@ function p(e) {
                     guildId: b,
                     section: j,
                     subsection: I,
-                    onClose: y
+                    onClose: h
                 })
             })
         ]

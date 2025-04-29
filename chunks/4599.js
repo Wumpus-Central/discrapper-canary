@@ -13,8 +13,8 @@ var l = t(200651),
     p = t(687158),
     g = t(316027),
     j = t(502762),
-    v = t(848780),
-    m = t(907179),
+    m = t(848780),
+    v = t(907179),
     x = t(228168),
     Z = t(981631),
     b = t(388032),
@@ -138,7 +138,7 @@ function E(e) {
                                     (0, l.jsxs)(o.Kqy, {
                                         align: 'center',
                                         children: [
-                                            (0, l.jsx)(m.Z, {
+                                            (0, l.jsx)(v.Z, {
                                                 size: o.PhG.MEDIUM,
                                                 isBlocked: w,
                                                 onClick: () => {
@@ -154,7 +154,7 @@ function E(e) {
                                                         );
                                                 }
                                             }),
-                                            (0, l.jsx)(v.Z, {
+                                            (0, l.jsx)(m.Z, {
                                                 userId: n.id,
                                                 onClick: () => {
                                                     S(),

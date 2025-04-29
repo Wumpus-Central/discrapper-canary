@@ -42,7 +42,7 @@ function h(e) {
                       {
                           text: l ? f.intl.string(f.t['I6JG4+']) : e,
                           size: i.PhG.TINY,
-                          themeColor: 'none',
+                          themeColor: 'secondary',
                           onClick: (e) => {
                               e.stopPropagation(),
                                   null == a || a({ action: l ? 'PRESS_WATCH_ON_CRUNCHYROLL_BUTTON' : 'PRESS_CUSTOM_BUTTON' }),
