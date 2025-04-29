@@ -42322,7 +42322,6 @@ img.thumbnail__0f2e8 {
     border-radius: 12px;
     display: flex;
     max-width: var(--custom-o-auth-2-page-oauth-2-max-width);
-    min-height: var(--custom-o-auth-2-page-oauth-2-min-height);
     min-width: 280px;
     position: relative;
     width: 100%
@@ -42471,6 +42470,10 @@ img.thumbnail__0f2e8 {
 
 .visual-refresh .footer__3d3b0 {
     background: unset
+}
+
+.loadingContainer__3d3b0 {
+    min-height: 270px
 }
 
 .spinner__3d3b0 {
@@ -60042,7 +60045,6 @@ code {
     --custom-voice-widget-top-margin: calc(var(--custom-widget-bar-height) + var(--custom-widget-bar-padding)*2);
     --custom-voice-widget-widget-width: 272px;
     --custom-o-auth-2-page-oauth-2-max-width: 568px;
-    --custom-o-auth-2-page-oauth-2-min-height: 366px;
     --custom-party-avatars-avatar-diameter: 24px;
     --custom-mobile-web-handoff-link-mobile-web-handoff-height: 70px;
     --custom-embedded-application-invite-content-height: 130px;
