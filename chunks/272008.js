@@ -1,24 +1,25 @@
 n.d(t, {
-    AH: () => T,
-    Ag: () => M,
+    AH: () => A,
+    Ag: () => k,
     CS: () => O,
-    EW: () => L,
-    OR: () => x,
-    QB: () => A,
-    T0: () => D,
-    Wf: () => P,
-    cT: () => U,
-    eT: () => w,
-    gU: () => B,
-    gl: () => C,
+    EW: () => x,
+    OR: () => M,
+    QB: () => N,
+    T0: () => L,
+    Wf: () => w,
+    cT: () => G,
+    eT: () => D,
+    gU: () => V,
+    gl: () => R,
     is: () => v,
-    lL: () => G,
-    m0: () => S,
-    nE: () => R,
-    pf: () => N,
-    qm: () => k,
-    w: () => j,
-    xw: () => I
+    it: () => I,
+    lL: () => B,
+    m0: () => T,
+    nE: () => P,
+    pf: () => C,
+    qm: () => j,
+    w: () => U,
+    xw: () => S
 }),
     n(415506);
 var r = n(990547),
@@ -91,6 +92,12 @@ async function v(e) {
     });
 }
 async function I() {
+    await i.tn.del({
+        url: E.ANM.QUESTS_RESET_RECENT_QUEST_COMPLETIONS,
+        rejectWithError: !1
+    });
+}
+async function S() {
     if (!f.Z.isFetchingCurrentQuests) {
         o.Z.dispatch({ type: 'QUESTS_FETCH_CURRENT_QUESTS_BEGIN' }), d.Z.recordQuestRequestAttempt(E.ANM.QUESTS_CURRENT_QUESTS);
         try {
@@ -121,7 +128,7 @@ async function I() {
         }
     }
 }
-async function S(e) {
+async function T(e) {
     let { questId: t, streamKey: n, terminal: i = !1 } = e;
     try {
         var s;
@@ -158,7 +165,7 @@ async function S(e) {
         });
     }
 }
-async function T(e, t) {
+async function A(e, t) {
     if (
         (null != t.questContentCTA &&
             (0, u._3)({
@@ -192,7 +199,7 @@ async function T(e, t) {
         }
     }
 }
-async function A(e, t, n) {
+async function N(e, t, n) {
     if (!f.Z.isClaimingReward(e)) {
         o.Z.dispatch({
             type: 'QUESTS_CLAIM_REWARD_BEGIN',
@@ -234,7 +241,7 @@ async function A(e, t, n) {
         }
     }
 }
-async function N(e) {
+async function C(e) {
     if (!f.Z.isFetchingRewardCode(e)) {
         o.Z.dispatch({
             type: 'QUESTS_FETCH_REWARD_CODE_BEGIN',
@@ -262,7 +269,7 @@ async function N(e) {
         }
     }
 }
-async function C(e, t) {
+async function R(e, t) {
     let n = f.Z.isDismissingContent(e),
         r = (0, p.GN)(t);
     if (!n && r) {
@@ -290,13 +297,13 @@ async function C(e, t) {
         }
     }
 }
-function R(e) {
+function P(e) {
     o.Z.dispatch({
         type: 'QUESTS_DISMISS_PROGRESS_TRACKING_FAILURE_NOTICE',
         streamKey: e
     });
 }
-async function P(e) {
+async function w(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
     try {
         let n = await i.tn.post({
@@ -316,7 +323,7 @@ async function P(e) {
         });
     }
 }
-async function w(e) {
+async function D(e) {
     try {
         let t = await i.tn.del({
             url: E.ANM.QUESTS_PREVIEW_STATUS(e),
@@ -335,7 +342,7 @@ async function w(e) {
         });
     }
 }
-async function D(e) {
+async function L(e) {
     try {
         o.Z.dispatch({ type: 'QUESTS_DOCK_RESET_SOFT_DISMISSAL' });
         let t = await i.tn.del({
@@ -355,20 +362,20 @@ async function D(e) {
         });
     }
 }
-function L(e) {
+function x(e) {
     o.Z.dispatch({
         type: 'QUESTS_DELIVERY_OVERRIDE',
         questId: e
     });
 }
-function x(e, t) {
+function M(e, t) {
     o.Z.dispatch({
         type: 'QUESTS_SELECT_TASK_PLATFORM',
         questId: e,
         platform: t
     });
 }
-async function M() {
+async function k() {
     if (!f.Z.isFetchingClaimedQuests) {
         o.Z.dispatch({ type: 'QUESTS_FETCH_CLAIMED_QUESTS_BEGIN' });
         try {
@@ -390,7 +397,7 @@ async function M() {
         }
     }
 }
-function k(e, t, n) {
+function j(e, t, n) {
     o.Z.dispatch({
         type: 'QUESTS_UPDATE_OPTIMISTIC_PROGRESS',
         questId: e,
@@ -398,7 +405,7 @@ function k(e, t, n) {
         progress: n
     });
 }
-async function j(e) {
+async function U(e) {
     o.Z.dispatch({
         type: 'QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN',
         placement: e
@@ -427,7 +434,7 @@ async function j(e) {
         });
     }
 }
-async function U(e, t) {
+async function G(e, t) {
     var n;
     await c.Z.post({
         url: E.ANM.QUESTS_VIDEO_PROGRESS(e),
@@ -443,7 +450,7 @@ async function U(e, t) {
         rejectWithError: !1
     });
 }
-async function G(e) {
+async function B(e) {
     let t = (0, m.z)(m.i.VIDEO_PLAYER_TRANSCRIPT, e);
     if (null == t)
         return void h.ZP.getState().setTranscriptAsset({
@@ -471,7 +478,7 @@ async function G(e) {
         });
     }
 }
-async function B(e) {
+async function V(e) {
     let t = await i.tn.get({
         url: E.ANM.QUEST(e),
         rejectWithError: !1

@@ -159,58 +159,58 @@ function D(e) {
     return e.map((e) => w(e)).join(', ');
 }
 function L(e) {
-    let { options: t, placeholder: n = E.intl.string(E.t.XqMe3N), className: o, isDisabled: s = !1, maxVisibleItems: l = 7, autoFocus: u = !1, popoutWidth: f, clearable: m = !1, look: y = g.q.FILLED, onClose: v, onOpen: T, renderOptionLabel: A = w, renderOptionValue: N = D, popoutClassName: C, popoutPosition: R = 'bottom', popoutLayerContext: P, optionClassName: L, closeOnSelect: M, select: k, isSelected: j, serialize: U, clear: G, hideIcon: B = !1, 'aria-label': V, 'aria-labelledby': F } = e,
-        [Z, H] = i.useState(!1),
-        { ref: Y, width: W, height: K } = (0, p.ZP)();
+    let { options: t, placeholder: n = E.intl.string(E.t.XqMe3N), className: o, isDisabled: s = !1, maxVisibleItems: l = 7, autoFocus: u = !1, popoutWidth: f, clearable: m = !1, look: y = g.q.FILLED, onClose: v, onOpen: T, renderOptionLabel: A = w, renderOptionValue: N = D, popoutClassName: C, popoutPosition: R = 'bottom', popoutLayerContext: P, optionClassName: L, closeOnSelect: M, select: k, isSelected: j, serialize: U, clear: G, hideIcon: B = !1, isProcessing: V = !1, 'aria-label': F, 'aria-labelledby': Z } = e,
+        [H, Y] = i.useState(!1),
+        { ref: W, width: K, height: z } = (0, p.ZP)();
     i.useLayoutEffect(() => {
-        s && H(!1);
+        s && Y(!1);
     }, [s]);
-    let z = i.useCallback(
+    let q = i.useCallback(
             (e) => {
-                Z === e || s || (H(e), e ? null == T || T() : null == v || v());
+                H === e || s || (Y(e), e ? null == T || T() : null == v || v());
             },
-            [s, v, T, Z]
+            [s, v, T, H]
         ),
-        q = i.useCallback(
+        Q = i.useCallback(
             (e) => {
-                Z && !e && z(!1);
+                H && !e && q(!1);
             },
-            [z, Z]
+            [q, H]
         ),
-        Q = (0, h.O)(q),
-        X = i.useCallback(
+        X = (0, h.O)(Q),
+        J = i.useCallback(
             (e) => {
                 if ((k(e), M)) {
                     var t;
-                    null == (t = Y.current) || t.focus();
+                    null == (t = W.current) || t.focus();
                 }
             },
-            [k, M, Y]
+            [k, M, W]
         ),
-        J = i.useCallback(
+        $ = i.useCallback(
             (e) => {
                 e.stopPropagation(), null == G || G();
             },
             [G]
         ),
-        $ = t.filter((e) => j(e.value));
+        ee = t.filter((e) => j(e.value));
     return (
         i.useLayoutEffect(() => {
             if (u) {
                 var e;
-                null == (e = Y.current) || e.focus();
+                null == (e = W.current) || e.focus();
             }
-        }, [u, Y]),
+        }, [u, W]),
         (0, r.jsx)(d.y, {
-            targetElementRef: Y,
+            targetElementRef: W,
             spacing: 0,
             animation: d.y.Animation.NONE,
-            shouldShow: Z,
+            shouldShow: H,
             onRequestOpen: () => {
-                z(!0);
+                q(!0);
             },
             onRequestClose: () => {
-                z(!1);
+                q(!1);
             },
             renderPopout: (e) => {
                 let { closePopout: n, position: i, updatePosition: o } = e;
@@ -218,11 +218,11 @@ function L(e) {
                     className: C,
                     closeOnSelect: M,
                     maxVisibleItems: l,
-                    width: 'auto' === f ? void 0 : null != f ? f : W,
+                    width: 'auto' === f ? void 0 : null != f ? f : K,
                     isSelected: j,
                     closePopout: n,
-                    buttonHeight: null != K ? K : 0,
-                    onSelect: X,
+                    buttonHeight: null != z ? z : 0,
+                    onSelect: J,
                     options: t,
                     serialize: U,
                     renderOptionLabel: A,
@@ -244,17 +244,18 @@ function L(e) {
                         O(
                             {
                                 role: 'button',
+                                'aria-busy': V,
                                 'aria-disabled': s,
                                 innerRef: (e) => {
-                                    (Y.current = e), (Q.current = e);
+                                    (W.current = e), (X.current = e);
                                 },
                                 onClick: s
                                     ? void 0
                                     : (e) => {
-                                          i(e), z(!Z);
+                                          i(e), q(!H);
                                       },
                                 onKeyDown: (e) => {
-                                    'ArrowDown' === e.key ? z(!0) : 'Escape' === e.key && (e.stopPropagation(), z(!1)), l(e);
+                                    'ArrowDown' === e.key ? q(!0) : 'Escape' === e.key && (e.stopPropagation(), q(!1)), l(e);
                                 }
                             },
                             u
@@ -268,42 +269,49 @@ function L(e) {
                             }),
                             'aria-haspopup': 'listbox',
                             'aria-expanded': d,
-                            'aria-label': V,
-                            'aria-labelledby': F,
+                            'aria-label': F,
+                            'aria-labelledby': Z,
                             children: [
-                                $.length > 0
+                                ee.length > 0
                                     ? (0, r.jsx)(_.Text, {
                                           className: b.value,
                                           variant: 'text-md/medium',
-                                          children: N($)
+                                          children: N(ee)
                                       })
                                     : (0, r.jsx)('span', {
                                           className: b.placeholder,
                                           children: n
                                       }),
-                                (0, r.jsxs)('div', {
+                                (0, r.jsx)('div', {
                                     className: b.icons,
-                                    children: [
-                                        m
-                                            ? (0, r.jsx)(c.P, {
-                                                  role: 'button',
-                                                  'aria-disabled': s,
-                                                  onClick: J,
-                                                  'aria-label': E.intl.string(E.t.VkKicX),
-                                                  children: (0, r.jsx)(_.Dio, {
-                                                      size: 'xs',
-                                                      color: 'currentColor',
-                                                      className: b.clear
-                                                  })
-                                              })
-                                            : null,
-                                        B
-                                            ? null
-                                            : (0, r.jsx)(p, {
-                                                  color: 'currentColor',
-                                                  size: 'sm'
-                                              })
-                                    ]
+                                    children: V
+                                        ? (0, r.jsx)(_.bbz, {
+                                              dotRadius: 3.5,
+                                              themed: !0
+                                          })
+                                        : (0, r.jsxs)(r.Fragment, {
+                                              children: [
+                                                  m
+                                                      ? (0, r.jsx)(c.P, {
+                                                            role: 'button',
+                                                            'aria-disabled': s,
+                                                            onClick: $,
+                                                            'aria-label': E.intl.string(E.t.VkKicX),
+                                                            children: (0, r.jsx)(_.Dio, {
+                                                                size: 'xs',
+                                                                color: 'currentColor',
+                                                                className: b.clear
+                                                            })
+                                                        })
+                                                      : null,
+                                                  B
+                                                      ? null
+                                                      : (0, r.jsx)(p, {
+                                                            color: 'currentColor',
+                                                            size: 'sm'
+                                                        })
+                                              ]
+                                          })
                                 })
                             ]
                         }

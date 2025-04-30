@@ -17,8 +17,8 @@ var r = n(200651),
     b = n(313201),
     x = n(592125),
     y = n(984933),
-    E = n(768119),
-    v = n(944486),
+    v = n(768119),
+    E = n(944486),
     O = n(585483),
     j = n(72006),
     C = n(405656),
@@ -203,14 +203,14 @@ class D extends i.PureComponent {
                     null != n &&
                         (0, N.cy)({
                             searchType: r,
-                            searchAnalyticsId: E.Z.getAnalyticsId(n)
+                            searchAnalyticsId: v.Z.getAnalyticsId(n)
                         }),
                     i || Promise.resolve().then(() => this.blurEditor());
             }),
             Z(this, 'handleFocusSearch', (e) => {
                 let { prefillCurrentChannel: t } = e;
                 if (!t) return void this.focusEditor();
-                let n = v.Z.getChannelId(),
+                let n = E.Z.getChannelId(),
                     r = x.Z.getChannel(n);
                 if (((null == r ? void 0 : r.isThread()) && (r = x.Z.getChannel(null == r ? void 0 : r.parent_id)), null == r || r.isPrivate())) return void this.focusEditor();
                 let i = y.ZP.getTextChannelNameDisambiguations(r.getGuildId())[r.id],
@@ -237,16 +237,16 @@ class D extends i.PureComponent {
             }),
             Z(this, 'onFocus', () => {
                 let { searchType: e, searchId: t } = this.props;
-                this.setState({ focused: !0 }), E.Z.isActive(t) || (0, N.I1)({ searchType: e });
+                this.setState({ focused: !0 }), v.Z.isActive(t) || (0, N.I1)({ searchType: e });
             }),
             Z(this, 'onBlur', () => {
                 let { searchId: e, searchType: t } = this.props;
                 this.setState({ focused: !1 }, () => {
                     null == e ||
-                        E.Z.isActive(e) ||
+                        v.Z.isActive(e) ||
                         (0, N.IZ)({
                             searchType: t,
-                            searchAnalyticsId: E.Z.getAnalyticsId(e)
+                            searchAnalyticsId: v.Z.getAnalyticsId(e)
                         }),
                         j.xb(this.props.editorState) && this.clearSearch();
                 });
@@ -331,20 +331,20 @@ class D extends i.PureComponent {
 }
 function L(e) {
     let { className: t } = e,
-        n = (0, u.e7)([E.Z], () => E.Z.getCurrentSearchId()),
-        l = (0, u.e7)([E.Z], () => E.Z.getSearchType()),
-        a = (0, u.e7)([E.Z], () => E.Z.isActive(n)),
-        o = (0, u.e7)([E.Z], () => E.Z.hasResults(n)),
-        s = (0, u.e7)([E.Z], () => null != n && E.Z.isSearching(n)),
+        n = (0, u.e7)([v.Z], () => v.Z.getCurrentSearchId()),
+        l = (0, u.e7)([v.Z], () => v.Z.getSearchType()),
+        a = (0, u.e7)([v.Z], () => v.Z.isActive(n)),
+        o = (0, u.e7)([v.Z], () => v.Z.hasResults(n)),
+        s = (0, u.e7)([v.Z], () => null != n && v.Z.isSearching(n)),
         c = (0, u.e7)([_.Z], () => _.Z.keyboardModeEnabled),
-        d = (0, u.e7)([E.Z], () => (null != n ? E.Z.getEditorState(n) : null)),
+        d = (0, u.e7)([v.Z], () => (null != n ? v.Z.getEditorState(n) : null)),
         p = i.useMemo(() => (null != d ? d : j.nR(S.Jl(h.ZP))), [d]),
         m = (function (e) {
             let t = i.useRef(null);
             return (
                 i.useEffect(() => {
                     if (null != e) {
-                        let n = E.Z.getAnalyticsId(e);
+                        let n = v.Z.getAnalyticsId(e);
                         null != n && (t.current = n);
                     }
                 }, [e]),

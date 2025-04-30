@@ -1,55 +1,55 @@
-n.d(t, { Z: () => h }), n(388685), n(997841);
-var r = n(200651),
-    l = n(192379),
-    i = n(442837),
-    a = n(481060),
-    o = n(91176),
-    u = n(749210),
-    c = n(616780),
-    s = n(251794),
-    d = n(386696),
-    f = n(71619),
-    O = n(946273),
-    E = n(910693),
-    g = n(592125),
-    b = n(271383),
-    y = n(430824),
-    _ = n(496675),
-    p = n(594174),
-    m = n(979651),
-    j = n(630388),
-    M = n(5192),
+n.d(t, { Z: () => I }), n(388685), n(997841);
+var l = n(200651),
+    i = n(192379),
+    r = n(442837),
+    o = n(481060),
+    a = n(91176),
+    s = n(749210),
+    u = n(616780),
+    d = n(251794),
+    c = n(386696),
+    g = n(71619),
+    f = n(946273),
+    Z = n(910693),
+    b = n(592125),
+    O = n(271383),
+    m = n(430824),
+    h = n(496675),
+    j = n(594174),
+    v = n(979651),
+    E = n(630388),
+    p = n(5192),
     P = n(813872),
-    S = n(981631),
-    A = n(590433),
-    v = n(372897),
-    Z = n(388032);
-function N(e) {
+    y = n(981631),
+    S = n(590433),
+    C = n(372897),
+    M = n(388032);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            l = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (l = l.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                var r;
-                (r = n[t]),
+            l.forEach(function (t) {
+                var l;
+                (l = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: r,
+                              value: l,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = r);
+                        : (e[t] = l);
             });
     }
     return e;
 }
-function I(e, t) {
+function N(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,8 +57,8 @@ function I(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
+                      var l = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, l);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -67,193 +67,193 @@ function I(e, t) {
         e
     );
 }
-function h(e, t, h, T, D) {
-    let C = l.useMemo(() => ({ [t]: [e.id] }), [t, e.id]),
-        U = null != T ? [T] : [];
-    (0, c.$)(C), (0, i.e7)([_.Z], () => _.Z.getGuildVersion(t), [t]);
-    let R = (0, i.e7)([y.Z], () => y.Z.getGuild(t), [t]),
-        L = (0, i.e7)(
-            [p.default],
+function I(e, t, I, T, U) {
+    let _ = i.useMemo(() => ({ [t]: [e.id] }), [t, e.id]),
+        A = null != T ? [T] : [];
+    (0, u.$)(_), (0, r.e7)([h.Z], () => h.Z.getGuildVersion(t), [t]);
+    let D = (0, r.e7)([m.Z], () => m.Z.getGuild(t), [t]),
+        L = (0, r.e7)(
+            [j.default],
             () => {
                 var t;
-                return (null == (t = p.default.getCurrentUser()) ? void 0 : t.id) === e.id;
+                return (null == (t = j.default.getCurrentUser()) ? void 0 : t.id) === e.id;
             },
             [e.id]
         ),
-        w = (0, i.e7)([b.ZP], () => b.ZP.isGuestOrLurker(t, e.id), [t, e.id]),
-        x = (0, i.e7)([g.Z], () => g.Z.getChannel(h), [h]),
-        [, k] = (0, f.ZP)(e.id, t),
-        G = null == x ? void 0 : x.isGuildStageVoice(),
+        w = (0, r.e7)([O.ZP], () => O.ZP.isGuestOrLurker(t, e.id), [t, e.id]),
+        k = (0, r.e7)([b.Z], () => b.Z.getChannel(I), [I]),
+        [, R] = (0, g.ZP)(e.id, t),
+        B = null == k ? void 0 : k.isGuildStageVoice(),
         {
-            muted: B,
+            muted: V,
             deafened: q,
-            suppressed: F,
-            voiceChannelId: K
-        } = (0, i.cj)([m.Z], () => {
-            var n, r, l;
-            let i = m.Z.getVoiceState(t, e.id);
+            suppressed: G,
+            voiceChannelId: F
+        } = (0, r.cj)([v.Z], () => {
+            var n, l, i;
+            let r = v.Z.getVoiceState(t, e.id);
             return {
-                muted: null != (n = null == i ? void 0 : i.mute) && n,
-                deafened: null != (r = null == i ? void 0 : i.deaf) && r,
-                suppressed: null != (l = null == i ? void 0 : i.suppress) && l,
-                voiceChannelId: null == i ? void 0 : i.channelId
+                muted: null != (n = null == r ? void 0 : r.mute) && n,
+                deafened: null != (l = null == r ? void 0 : r.deaf) && l,
+                suppressed: null != (i = null == r ? void 0 : r.suppress) && i,
+                voiceChannelId: null == r ? void 0 : r.channelId
             };
         }),
-        V = (0, i.e7)([b.ZP], () => b.ZP.getMember(t, e.id)),
-        W = (0, P.Z)({
+        Y = (0, r.e7)([O.ZP], () => O.ZP.getMember(t, e.id)),
+        H = (0, P.Z)({
             userId: e.id,
             guildId: t,
-            channelId: h,
+            channelId: I,
             location: T,
-            appContext: D
+            appContext: U
         }),
-        Y = (0, E.sE)(t, {
+        Q = (0, Z.sE)(t, {
             location: T,
             targetUserId: e.id
         }),
-        H = (0, d.Z)(t, e.id),
-        Q =
-            null != K && null != h && _.Z.canWithPartialContext(S.Plq.VIEW_CHANNEL, { channelId: K }) && !w
+        K = (0, c.Z)(t, e.id),
+        W =
+            null != F && null != I && h.Z.canWithPartialContext(y.Plq.VIEW_CHANNEL, { channelId: F }) && !w
                 ? [
-                      (!G || (G && !F)) && _.Z.canWithPartialContext(S.Plq.MUTE_MEMBERS, { channelId: h })
-                          ? (0, r.jsx)(
-                                a.S89,
+                      (!B || (B && !G)) && h.Z.canWithPartialContext(y.Plq.MUTE_MEMBERS, { channelId: I })
+                          ? (0, l.jsx)(
+                                o.S89,
                                 {
                                     id: 'voice-mute',
-                                    label: Z.intl.string(Z.t.e9e9UV),
-                                    checked: B,
+                                    label: M.intl.string(M.t.e9e9UV),
+                                    checked: V,
                                     color: 'danger',
                                     action: () => {
-                                        !1 === B && Y(E.jQ.MUTE), u.Z.setServerMute(t, e.id, !B);
+                                        !1 === V && Q(Z.jQ.MUTE), s.Z.setServerMute(t, e.id, !V);
                                     }
                                 },
                                 'voice-mute'
                             )
                           : null,
-                      (!G || (G && !F)) && _.Z.canWithPartialContext(S.Plq.DEAFEN_MEMBERS, { channelId: h })
-                          ? (0, r.jsx)(
-                                a.S89,
+                      (!B || (B && !G)) && h.Z.canWithPartialContext(y.Plq.DEAFEN_MEMBERS, { channelId: I })
+                          ? (0, l.jsx)(
+                                o.S89,
                                 {
                                     id: 'voice-deafen',
-                                    label: Z.intl.string(Z.t.hMA2GB),
+                                    label: M.intl.string(M.t.hMA2GB),
                                     checked: q,
                                     color: 'danger',
-                                    action: () => u.Z.setServerDeaf(t, e.id, !q)
+                                    action: () => s.Z.setServerDeaf(t, e.id, !q)
                                 },
                                 'voice-deafen'
                             )
                           : null,
-                      !L && null != R && _.Z.canWithPartialContext(S.Plq.MOVE_MEMBERS, { channelId: h })
-                          ? (0, r.jsx)(
-                                a.sNh,
+                      !L && null != D && h.Z.canWithPartialContext(y.Plq.MOVE_MEMBERS, { channelId: I })
+                          ? (0, l.jsx)(
+                                o.sNh,
                                 {
                                     id: 'voice-disconnect',
-                                    label: L ? Z.intl.string(Z.t['6vrfgo']) : Z.intl.string(Z.t['/jERiI']),
+                                    label: L ? M.intl.string(M.t['6vrfgo']) : M.intl.string(M.t['/jERiI']),
                                     color: 'danger',
-                                    action: () => u.Z.setChannel(t, e.id, null)
+                                    action: () => s.Z.setChannel(t, e.id, null)
                                 },
                                 'voice-disconnect'
                             )
                           : null
                   ]
                 : [],
-        X = async (t, n, r) => {
+        J = async (t, n, l) => {
             if (t.ctrlKey || t.metaKey)
                 try {
-                    var l;
-                    await o.Z.setCommunicationDisabledDuration(n, r, A.UK.DURATION_60_SEC, null, T), Y(E.jQ.TIMEOUT), (0, a.showToast)((0, a.createToast)(Z.intl.formatToPlainString(Z.t.O9C3Nj, { user: null != (l = M.ZP.getName(n, null, e)) ? l : '' }), a.ToastType.SUCCESS));
+                    var i;
+                    await a.Z.setCommunicationDisabledDuration(n, l, S.UK.DURATION_60_SEC, null, T), Q(Z.jQ.TIMEOUT), (0, o.showToast)((0, o.createToast)(M.intl.formatToPlainString(M.t.O9C3Nj, { user: null != (i = p.ZP.getName(n, null, e)) ? i : '' }), o.ToastType.SUCCESS));
                 } catch (e) {
-                    (0, a.showToast)((0, a.createToast)(Z.intl.string(Z.t.epyCur), a.ToastType.FAILURE));
+                    (0, o.showToast)((0, o.createToast)(M.intl.string(M.t.epyCur), o.ToastType.FAILURE));
                 }
         },
-        J = null,
-        z = null != R && _.Z.canManageUser(S.Plq.MODERATE_MEMBERS, e, R) && _.Z.canManageUser(S.Plq.KICK_MEMBERS, e, R) && _.Z.canManageUser(S.Plq.BAN_MEMBERS, e, R),
-        $ = null != R && (_.Z.canManageUser(S.Plq.MANAGE_GUILD, e, R) || _.Z.canManageUser(S.Plq.MANAGE_ROLES, e, R));
-    if (!L && null != R && null != V && null != V.joinedAt && (z || $) && R.hasFeature(S.oNc.GUILD_ONBOARDING_EVER_ENABLED)) {
+        X = null,
+        z = null != D && h.Z.canManageUser(y.Plq.MODERATE_MEMBERS, e, D) && h.Z.canManageUser(y.Plq.KICK_MEMBERS, e, D) && h.Z.canManageUser(y.Plq.BAN_MEMBERS, e, D),
+        $ = null != D && (h.Z.canManageUser(y.Plq.MANAGE_GUILD, e, D) || h.Z.canManageUser(y.Plq.MANAGE_ROLES, e, D));
+    if (!L && null != D && null != Y && null != Y.joinedAt && (z || $) && D.hasFeature(y.oNc.GUILD_ONBOARDING_EVER_ENABLED)) {
         var ee;
-        J = (0, j.yE)(null != (ee = V.flags) ? ee : 0, v.q.BYPASSES_VERIFICATION)
-            ? (0, r.jsx)(
-                  a.sNh,
+        X = (0, E.yE)(null != (ee = Y.flags) ? ee : 0, C.q.BYPASSES_VERIFICATION)
+            ? (0, l.jsx)(
+                  o.sNh,
                   {
                       id: 'verify',
-                      label: Z.intl.string(Z.t.NbhSIy),
+                      label: M.intl.string(M.t.NbhSIy),
                       action: () => {
                           var t;
-                          return u.Z.setMemberFlags(R.id, e.id, (0, j.mB)(null != (t = V.flags) ? t : 0, v.q.BYPASSES_VERIFICATION, !1));
+                          return s.Z.setMemberFlags(D.id, e.id, (0, E.mB)(null != (t = Y.flags) ? t : 0, C.q.BYPASSES_VERIFICATION, !1));
                       }
                   },
                   'verify'
               )
-            : (0, r.jsx)(
-                  a.sNh,
+            : (0, l.jsx)(
+                  o.sNh,
                   {
                       id: 'verify',
-                      label: Z.intl.string(Z.t['6QlTeH']),
+                      label: M.intl.string(M.t['6QlTeH']),
                       action: () => {
                           var t;
-                          return u.Z.setMemberFlags(R.id, e.id, (0, j.mB)(null != (t = V.flags) ? t : 0, v.q.BYPASSES_VERIFICATION, !0));
+                          return s.Z.setMemberFlags(D.id, e.id, (0, E.mB)(null != (t = Y.flags) ? t : 0, C.q.BYPASSES_VERIFICATION, !0));
                       }
                   },
                   'verify'
               );
     }
     return [
-        W,
-        ...Q,
-        ...(L || null == R
+        H,
+        ...W,
+        ...(L || null == D
             ? []
             : [
-                  J,
-                  H && !w
-                      ? k
-                          ? (0, r.jsx)(
-                                a.sNh,
+                  X,
+                  K && !w
+                      ? R
+                          ? (0, l.jsx)(
+                                o.sNh,
                                 {
                                     id: 'removetimeout',
-                                    label: Z.intl.formatToPlainString(Z.t.csKetb, { user: e.username }),
+                                    label: M.intl.formatToPlainString(M.t.csKetb, { user: e.username }),
                                     color: 'danger',
                                     action: () => {
-                                        (0, s.q)({
+                                        (0, d.q)({
                                             guildId: t,
                                             userId: e.id,
-                                            anaylticsLocations: U
+                                            anaylticsLocations: A
                                         });
                                     }
                                 },
                                 'removetimeout'
                             )
-                          : (0, r.jsx)(
-                                a.sNh,
+                          : (0, l.jsx)(
+                                o.sNh,
                                 {
                                     id: 'timeout',
-                                    label: Z.intl.formatToPlainString(Z.t.OhsOy8, { user: e.username }),
+                                    label: M.intl.formatToPlainString(M.t.OhsOy8, { user: e.username }),
                                     color: 'danger',
                                     action: (n) => {
-                                        if (n.ctrlKey || n.metaKey) return X(n, t, e.id);
-                                        (0, s.z)({
+                                        if (n.ctrlKey || n.metaKey) return J(n, t, e.id);
+                                        (0, d.z)({
                                             guildId: t,
                                             userId: e.id,
-                                            anaylticsLocations: U
+                                            anaylticsLocations: A
                                         });
                                     }
                                 },
                                 'timeout'
                             )
                       : null,
-                  (0, O.BK)(e, R)
-                      ? (0, r.jsx)(
-                            a.sNh,
+                  (0, f.BK)(e, D)
+                      ? (0, l.jsx)(
+                            o.sNh,
                             {
                                 id: 'kick',
-                                label: Z.intl.formatToPlainString(Z.t['9l/iTU'], { user: e.username }),
+                                label: M.intl.formatToPlainString(M.t['9l/iTU'], { user: e.username }),
                                 color: 'danger',
                                 action: () =>
-                                    (0, a.ZDy)(async () => {
-                                        let { default: l } = await n.e('5454').then(n.bind(n, 854360));
+                                    (0, o.ZDy)(async () => {
+                                        let { default: i } = await n.e('5454').then(n.bind(n, 854360));
                                         return (n) =>
-                                            (0, r.jsx)(
-                                                l,
-                                                I(N({}, n), {
+                                            (0, l.jsx)(
+                                                i,
+                                                N(x({}, n), {
                                                     location: T,
                                                     guildId: t,
                                                     user: e
@@ -264,20 +264,20 @@ function h(e, t, h, T, D) {
                             'kick'
                         )
                       : null,
-                  (0, O.mm)(e, R)
-                      ? (0, r.jsx)(
-                            a.sNh,
+                  (0, f.mm)(e, D)
+                      ? (0, l.jsx)(
+                            o.sNh,
                             {
                                 id: 'ban',
-                                label: Z.intl.formatToPlainString(Z.t.WnpUBg, { user: e.username }),
+                                label: M.intl.formatToPlainString(M.t.WnpUBg, { user: e.username }),
                                 color: 'danger',
                                 action: () =>
-                                    (0, a.ZDy)(async () => {
-                                        let { default: l } = await n.e('4114').then(n.bind(n, 98746));
+                                    (0, o.ZDy)(async () => {
+                                        let { default: i } = await n.e('4114').then(n.bind(n, 98746));
                                         return (n) =>
-                                            (0, r.jsx)(
-                                                l,
-                                                I(N({}, n), {
+                                            (0, l.jsx)(
+                                                i,
+                                                N(x({}, n), {
                                                     location: T,
                                                     guildId: t,
                                                     user: e

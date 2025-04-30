@@ -1,7 +1,8 @@
 n.d(t, {
     ED: () => o,
     Jo: () => a,
-    g9: () => i
+    g9: () => i,
+    jE: () => s
 }),
     n(953529);
 var r = n(72703);
@@ -28,4 +29,8 @@ function a(e) {
         t.nick = null != (n = e.pendingNickname) ? n : '';
     }
     return void 0 !== e.pendingAvatarDecoration && (t.avatarDecoration = e.pendingAvatarDecoration), t;
+}
+function s(e) {
+    let t = {};
+    return void 0 !== e.pendingPrimaryGuildId && (t.primaryGuildId = e.pendingPrimaryGuildId), t;
 }

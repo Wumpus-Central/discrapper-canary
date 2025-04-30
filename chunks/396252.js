@@ -19,9 +19,9 @@ function _(e) {
     let { message: n, compact: i, usernameHook: _, channel: b } = e,
         x = (0, a.e7)([c.Z], () => c.Z.getGuild(b.guild_id)),
         y = (0, u.ZP)(n),
-        E = _(y),
+        v = _(y),
         {
-            avatarSrc: v,
+            avatarSrc: E,
             eventHandlers: { onMouseEnter: O, onMouseLeave: j }
         } = (0, p.m)(!0);
     return (0, r.jsx)('div', {
@@ -29,7 +29,7 @@ function _(e) {
         onMouseLeave: j,
         children: (0, r.jsx)(m.Z, {
             className: l()(g.mainContainer, { [g.compact]: i }),
-            iconNode: i ? null : (0, r.jsx)(p.S, { src: v }),
+            iconNode: i ? null : (0, r.jsx)(p.S, { src: E }),
             iconContainerClassName: g.iconContainer,
             compact: i,
             children: (0, r.jsxs)('div', {
@@ -62,7 +62,7 @@ function _(e) {
                         className: l()(g.__invalid_messageContent, { [g.compact]: i }),
                         children: h.intl.format(h.t.W0UBIy, {
                             username: y.nick,
-                            usernameHook: E,
+                            usernameHook: v,
                             guildName: null != (t = null == x ? void 0 : x.name) ? t : ''
                         })
                     })

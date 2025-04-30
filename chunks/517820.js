@@ -17,8 +17,8 @@ var r = n(200651),
     b = n(533244),
     x = n(825829),
     y = n(226192),
-    E = n(36459),
-    v = n(434404),
+    v = n(36459),
+    E = n(434404),
     O = n(518950),
     j = n(670188),
     C = n(592125),
@@ -249,14 +249,14 @@ function H(e) {
     var t;
     let { message: n, compact: l } = e,
         { joinAttempts: a, raidDatetime: o, dmsSent: u, raidType: h, resolvedReason: g } = (0, x.FL)(n),
-        E = (0, p.e7)([C.Z], () => C.Z.getChannel(n.channel_id), [n.channel_id]),
-        v = null != (t = null == E ? void 0 : E.guild_id) ? t : null,
-        { shouldShowIncidentActions: O } = (0, _.mI)(v),
+        v = (0, p.e7)([C.Z], () => C.Z.getChannel(n.channel_id), [n.channel_id]),
+        E = null != (t = null == v ? void 0 : v.guild_id) ? t : null,
+        { shouldShowIncidentActions: O } = (0, _.mI)(E),
         j = (0, T.sR)(n.author.id, n.channel_id),
         S = i.useCallback(() => {
-            let e = null == E ? void 0 : E.guild_id;
+            let e = null == v ? void 0 : v.guild_id;
             null != e && (0, y.kW)(n.id, e);
-        }, [n.id, E]),
+        }, [n.id, v]),
         I = h === d.$.DM_RAID,
         N = I ? f.P4T : f.b6m;
     return (0, r.jsx)(z, {
@@ -401,8 +401,8 @@ function V(e) {
                     onClick: function () {
                         null != a &&
                             null != c &&
-                            (0, E.UE)(a, c, () => {
-                                (0, h.c)(u), (0, E.T9)(a);
+                            (0, v.UE)(a, c, () => {
+                                (0, h.c)(u), (0, v.T9)(a);
                             });
                     },
                     color: f.zxk.Colors.LINK,
@@ -421,7 +421,7 @@ function V(e) {
                 (0, r.jsx)(M, {}),
                 (0, r.jsx)(f.zxk, {
                     onClick: function () {
-                        null != a && v.Z.open(a, w.pNK.GUILD_AUTOMOD, void 0, w.KsC.AUTOMOD_MENTION_SPAM);
+                        null != a && E.Z.open(a, w.pNK.GUILD_AUTOMOD, void 0, w.KsC.AUTOMOD_MENTION_SPAM);
                     },
                     color: f.zxk.Colors.LINK,
                     look: f.zxk.Looks.LINK,

@@ -30,9 +30,9 @@ function f(e) {
 }
 function p(e) {
     var n, t, i;
-    let { user: l, currentUser: p, displayProfile: m, guildId: b, channelId: _, initialSection: h, initialSubsection: y, onClose: g } = e,
-        { trackUserProfileAction: x } = (0, a.KZ)(),
-        j = r.useMemo(
+    let { user: l, currentUser: p, displayProfile: m, guildId: _, channelId: b, initialSection: y, initialSubsection: h, onClose: x } = e,
+        { trackUserProfileAction: j } = (0, a.KZ)(),
+        g = r.useMemo(
             () =>
                 l.id === p.id
                     ? [
@@ -84,14 +84,14 @@ function p(e) {
             })(
                 {},
                 null !=
-                    (n = j.find((e) => {
+                    (n = g.find((e) => {
                         let { section: n } = e;
-                        return n === h;
+                        return n === y;
                     }))
                     ? n
-                    : j[0]
+                    : g[0]
             )),
-            (i = i = { subsection: y }),
+            (i = i = { subsection: h }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(i))
                 : (function (e, n) {
@@ -114,16 +114,16 @@ function p(e) {
                 className: u.tabBar,
                 selectedItem: I,
                 onItemSelect: (e) => {
-                    x({
+                    j({
                         action: 'PRESS_SECTION',
                         section: e
                     }),
                         P((n) => {
                             var t;
-                            return null != (t = j.find((n) => n.section === e)) ? t : n;
+                            return null != (t = g.find((n) => n.section === e)) ? t : n;
                         });
                 },
-                children: j.map((e) =>
+                children: g.map((e) =>
                     (0, o.jsx)(
                         c.njP.Item,
                         {
@@ -147,11 +147,11 @@ function p(e) {
                     user: l,
                     currentUser: p,
                     displayProfile: m,
-                    guildId: b,
-                    channelId: _,
+                    guildId: _,
+                    channelId: b,
                     section: I,
                     subsection: O,
-                    onClose: g
+                    onClose: x
                 })
             })
         ]

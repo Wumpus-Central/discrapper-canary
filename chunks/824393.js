@@ -252,6 +252,7 @@ function j(e) {
                                 className: R.headerForeground,
                                 children: [
                                     (0, r.jsx)('div', {
+                                        className: R.rewardAssetContainer,
                                         children: (0, r.jsx)('img', {
                                             src: D,
                                             alt: C.intl.string(C.t.OhPMam),

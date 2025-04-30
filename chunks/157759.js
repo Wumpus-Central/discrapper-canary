@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var r = n(200651),
     l = n(192379),
     i = n(442837),
@@ -9,14 +9,14 @@ var r = n(200651),
     d = n(330010),
     u = n(138201),
     m = n(592125),
-    x = n(430824),
-    p = n(496675),
+    p = n(430824),
+    x = n(496675),
     b = n(944486),
     _ = n(981631),
-    h = n(388032);
-let f = (e) => {
+    f = n(388032);
+let h = (e) => {
     let { application: t, reportId: n } = e,
-        [f, g] = l.useState(!1),
+        [h, g] = l.useState(!1),
         [v, j] = l.useState(!1),
         y = (0, i.e7)([b.Z, m.Z], () => {
             var e;
@@ -58,23 +58,23 @@ let f = (e) => {
                     null != O &&
                     c.Z.disableIntegration(y, O.id).catch(() => {
                         o.Z.show({
-                            title: h.intl.string(h.t.wYqMmJ),
-                            body: h.intl.string(h.t.A4Mnsr)
+                            title: f.intl.string(f.t.wYqMmJ),
+                            body: f.intl.string(f.t.A4Mnsr)
                         });
                     });
         }, [t.id, y, O, n]),
-        C = (0, i.e7)([p.Z, x.Z], () => {
-            let e = x.Z.getGuild(y);
+        C = (0, i.e7)([x.Z, p.Z], () => {
+            let e = p.Z.getGuild(y);
             if (null == e) return !1;
-            let n = p.Z.can(_.Plq.MANAGE_GUILD, e),
-                r = null == t.bot || p.Z.canManageUser(_.Plq.MANAGE_GUILD, t.bot.id, e);
+            let n = x.Z.can(_.Plq.MANAGE_GUILD, e),
+                r = null == t.bot || x.Z.canManageUser(_.Plq.MANAGE_GUILD, t.bot.id, e);
             return n && r;
         });
-    return null != t && null != y && f && C
+    return null != t && null != y && h && C
         ? (0, r.jsx)(u.ZP, {
-              title: h.intl.string(h.t['WV/CsL']),
-              description: h.intl.string(h.t['FlcC+/']),
-              buttonText: v ? h.intl.string(h.t.aCJlq6) : h.intl.string(h.t['6I1F3t']),
+              title: f.intl.string(f.t['WV/CsL']),
+              description: f.intl.string(f.t['FlcC+/']),
+              buttonText: v ? f.intl.string(f.t.aCJlq6) : f.intl.string(f.t['6I1F3t']),
               buttonDisabled: !v,
               buttonColor: v ? a.zxk.Colors.RED : a.zxk.Colors.WHITE,
               buttonLook: v ? a.zxk.Looks.FILLED : a.zxk.Looks.LINK,

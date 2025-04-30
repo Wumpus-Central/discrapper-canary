@@ -1,57 +1,57 @@
 n.d(e, { default: () => L }), n(388685);
 var s = n(200651),
-    a = n(192379),
-    i = n(948789),
-    o = n(704215),
-    r = n(100527),
-    c = n(906732),
-    u = n(243778),
-    d = n(790527),
-    l = n(981631),
-    b = n(921944),
-    C = n(388032),
-    _ = n(970248),
-    A = n(746458);
+    i = n(192379),
+    r = n(948789),
+    a = n(704215),
+    o = n(100527),
+    u = n(906732),
+    c = n(243778),
+    l = n(790527),
+    b = n(981631),
+    d = n(921944),
+    _ = n(388032),
+    A = n(970248),
+    C = n(309389);
 function L(t) {
     let { upsellType: e, onClose: n, transitionState: L } = t,
-        [p, E] = (0, u.US)([o.z.Q2_2025_MARKETING_MOMENT_FOLLOW_UP_MODAL]);
+        [S, T] = (0, c.US)([a.z.Q2_2025_MARKETING_MOMENT_FOLLOW_UP_MODAL]);
     return (
-        (0, c.ZP)(r.Z.REVERSE_TRIAL_UPSELL_MODAL),
-        a.useEffect(
+        (0, u.ZP)(o.Z.REVERSE_TRIAL_UPSELL_MODAL),
+        i.useEffect(
             () => () => {
-                E(b.L.USER_DISMISS);
+                T(d.L.USER_DISMISS);
             },
-            [E]
+            [T]
         ),
-        (0, s.jsx)(d.Z, {
-            artURL: A.Z,
-            artContainerClassName: _.artContainer,
+        (0, s.jsx)(l.Z, {
+            artURL: C,
+            artContainerClassName: A.artContainer,
             enableArtBoxShadow: !1,
             type: e,
-            title: C.intl.string(C.t.CCMEZW),
-            body: C.intl.string(C.t.gFGZZG),
-            bodyClassName: _.subHeader,
-            glowUp: C.intl.string(C.t.gFGZZG),
+            title: _.intl.string(_.t.aupMtb),
+            body: _.intl.string(_.t.AXmOUV),
+            bodyClassName: A.subHeader,
+            glowUp: _.intl.string(_.t.AXmOUV),
             onSubscribeClick: () => {
-                E(b.L.TAKE_ACTION);
+                T(d.L.TAKE_ACTION);
             },
-            secondaryCTA: C.intl.string(C.t.ZnqyZ2),
-            secondaryCTAClassName: _.secondaryCTA,
+            secondaryCTA: _.intl.string(_.t.SXYIpK),
+            secondaryCTAClassName: A.secondaryCTA,
             onSecondaryClick: function () {
-                E(b.L.TAKE_ACTION), n(), (0, i.uL)(l.Z5c.APPLICATION_STORE);
+                T(d.L.TAKE_ACTION), n(), (0, r.uL)(b.Z5c.APPLICATION_STORE);
             },
-            subscribeButtonText: C.intl.string(C.t.J61px8),
-            subscribeButtonClassname: _.subscribeButton,
+            subscribeButtonText: _.intl.string(_.t.J61px8),
+            subscribeButtonClassname: A.subscribeButton,
             useSubscribeButtonGradient: !0,
             hidePremiumOfferUpsell: !0,
             showEnhancedUpsell: !0,
             hideBackButton: !0,
             analyticsLocation: {
-                section: l.jXE.REVERSE_TRIAL_UPSELL_MODAL,
-                object: l.qAy.BUTTON_CTA
+                section: b.jXE.REVERSE_TRIAL_UPSELL_MODAL,
+                object: b.qAy.BUTTON_CTA
             },
             transitionState: L,
-            onClose: () => (E(b.L.USER_DISMISS), n())
+            onClose: () => (T(d.L.USER_DISMISS), n())
         })
     );
 }

@@ -10,9 +10,9 @@ var r = n(200651),
 let u = (e) => {
         var t, n;
         let {
-                data: { title: u, subtitle: m, placeholder: x, rows: p, character_limit: b, pattern: _ },
-                onChange: h,
-                initialText: f,
+                data: { title: u, subtitle: m, placeholder: p, rows: x, character_limit: b, pattern: _ },
+                onChange: f,
+                initialText: h,
                 isRequired: g
             } = e,
             v = l.useRef(
@@ -62,8 +62,8 @@ let u = (e) => {
             [O, Z] = l.useState(null);
         l.useEffect(() => {
             var e;
-            y(null != (e = null == f ? void 0 : f.value) ? e : '');
-        }, [f]);
+            y(null != (e = null == h ? void 0 : h.value) ? e : '');
+        }, [h]);
         let I = l.useCallback(
             (e) => {
                 let t = null != _ ? new RegExp(_) : null;
@@ -71,17 +71,17 @@ let u = (e) => {
                     ? null != e &&
                       (Z(null),
                       y(e),
-                      h({
+                      f({
                           value: e,
                           isValid: !0
                       }))
                     : (Z(s.intl.string(s.t['24xrGR'])),
-                      h({
+                      f({
                           value: e,
                           isValid: !1
                       }));
             },
-            [h, _]
+            [f, _]
         );
         return (0, r.jsxs)('div', {
             className: d.marginBottom8,
@@ -106,8 +106,8 @@ let u = (e) => {
                     onChange: I,
                     value: j,
                     error: O,
-                    rows: p,
-                    placeholder: x,
+                    rows: x,
+                    placeholder: p,
                     autoFocus: !0
                 }),
                 null != m &&

@@ -767,6 +767,7 @@ let A = Object.freeze({
         QUESTS_PREVIEW_STATUS: (t) => '/quests/'.concat(t, '/preview/status'),
         QUESTS_PREVIEW_DISMISSIBILITY: (t) => '/quests/'.concat(t, '/preview/dismissibility'),
         QUESTS_PREVIEW_COMPLETE: (t) => '/quests/'.concat(t, '/preview/complete'),
+        QUESTS_RESET_RECENT_QUEST_COMPLETIONS: '/quests/reset-recent-quest-completions',
         QUEST_FETCH_QUEST_TO_DELIVER: (t, e, a) =>
             '/quests/decision?placement='
                 .concat(t)
@@ -1112,6 +1113,7 @@ let A = Object.freeze({
         HIGHLIGHT_NOTIFICATIONS: 'Highlight notification settings',
         QUESTS: 'Quests',
         QUEST_PREVIEW_TOOL: 'Quest Preview Tool',
+        QUEST_MINOR_REWARD_CAPPING_CONFIG: 'Quest Minor Reward Capping Config',
         SECURE_FRAMES: 'Secure Frames',
         SECURE_FRAMES_VERIFIED_DEVICES: 'Secure Frames Verified Devices',
         WEB_SETTING_TREE_TOOL: 'Web Setting Tree Tool'

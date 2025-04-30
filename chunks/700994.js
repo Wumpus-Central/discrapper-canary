@@ -1,30 +1,30 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => f });
 var l = n(200651);
 n(192379);
-var r = n(442837),
-    i = n(481060),
+var i = n(442837),
+    r = n(481060),
     o = n(846027),
     a = n(131951),
-    u = n(594174),
-    c = n(36703),
-    s = n(358085),
-    d = n(65154),
-    f = n(388032);
-function g(e) {
+    s = n(594174),
+    u = n(36703),
+    d = n(358085),
+    c = n(65154),
+    g = n(388032);
+function f(e) {
     var t;
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.Yn.DEFAULT,
-        g = (0, r.e7)([a.Z], () => a.Z.getLocalVolume(e, n), [e, n]),
-        b = e === (null == (t = u.default.getCurrentUser()) ? void 0 : t.id),
-        O = n === d.Yn.STREAM;
-    return b
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.Yn.DEFAULT,
+        f = (0, i.e7)([a.Z], () => a.Z.getLocalVolume(e, n), [e, n]),
+        Z = e === (null == (t = s.default.getCurrentUser()) ? void 0 : t.id),
+        b = n === c.Yn.STREAM;
+    return Z
         ? null
-        : (0, l.jsx)(i.II_, {
+        : (0, l.jsx)(r.II_, {
               id: 'user-volume',
-              label: O ? f.intl.string(f.t.t4JBnJ) : f.intl.string(f.t.m7TNdH),
-              control: (t, r) => {
-                  var a, u;
+              label: b ? g.intl.string(g.t.t4JBnJ) : g.intl.string(g.t.m7TNdH),
+              control: (t, i) => {
+                  var a, s;
                   return (0, l.jsx)(
-                      i._wy,
+                      r._wy,
                       ((a = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
@@ -50,16 +50,16 @@ function g(e) {
                           }
                           return e;
                       })({}, t)),
-                      (u = u =
+                      (s = s =
                           {
-                              ref: r,
-                              value: (0, c.P)(g),
-                              maxValue: s.isPlatformEmbedded ? 200 : 100,
-                              onChange: (t) => o.Z.setLocalVolume(e, (0, c.A)(t), n),
-                              'aria-label': O ? f.intl.string(f.t.t4JBnJ) : f.intl.string(f.t.m7TNdH)
+                              ref: i,
+                              value: (0, u.P)(f),
+                              maxValue: d.isPlatformEmbedded ? 200 : 100,
+                              onChange: (t) => o.Z.setLocalVolume(e, (0, u.A)(t), n),
+                              'aria-label': b ? g.intl.string(g.t.t4JBnJ) : g.intl.string(g.t.m7TNdH)
                           }),
                       Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(u))
+                          ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(s))
                           : (function (e, t) {
                                 var n = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
@@ -67,8 +67,8 @@ function g(e) {
                                     n.push.apply(n, l);
                                 }
                                 return n;
-                            })(Object(u)).forEach(function (e) {
-                                Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(u, e));
+                            })(Object(s)).forEach(function (e) {
+                                Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(s, e));
                             }),
                       a)
                   );

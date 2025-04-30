@@ -15,8 +15,7 @@ let p = (0, l.pxk)(l.EFr.SIZE_16);
 function f(e) {
     let { user: t, guild: f, nick: j, onSelect: v } = e,
         x = (0, o.ZP)(),
-        O = t.hasAvatarForGuild(f.id),
-        y = null != j ? j : u.ZP.getName(null == f ? void 0 : f.id, void 0, t);
+        O = t.hasAvatarForGuild(f.id);
     return (0, n.jsxs)(l.P3F, {
         focusProps: { offset: { right: 8 } },
         className: m.row,
@@ -100,13 +99,14 @@ function f(e) {
                                     className: m.avatar,
                                     'aria-hidden': !0
                                 }),
-                                y
+                                null != j ? j : u.ZP.getName(f.id, void 0, t)
                             ]
                         }),
                     !O &&
+                        null != j &&
                         (0, n.jsx)('div', {
                             className: m.nick,
-                            children: y
+                            children: j
                         })
                 ]
             })

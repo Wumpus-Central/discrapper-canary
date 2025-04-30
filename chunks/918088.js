@@ -24,8 +24,8 @@ var r = n(278074),
     b = n(79390),
     x = n(839963),
     y = n(897325),
-    E = n(57101),
-    v = n(562293),
+    v = n(57101),
+    E = n(562293),
     O = n(981631),
     j = n(388032);
 let C = {
@@ -96,17 +96,17 @@ function T(e, t) {
         { poll: o } = e;
     if (null == o) return;
     let m = e.state === O.yb.SENT,
-        f = m ? (null != a ? a : (0, v.H)(o.expiry)) : '',
+        f = m ? (null != a ? a : (0, E.H)(o.expiry)) : '',
         h = null == f && m,
         { selectedAnswerIds: g, submitting: b, editing: x, showResults: y } = null != (i = null != t ? t : (0, _.fU)(e.getChannelId(), e.id)) ? i : C,
-        E = e.reactions,
+        v = e.reactions,
         j = !0;
     if (!N(e)) {
         let t = p.Z.getMessage(e.channel_id, e.id);
-        (j = !e.isSearchHit && null != t), (E = null != (l = null == t ? void 0 : t.reactions) ? l : E);
+        (j = !e.isSearchHit && null != t), (v = null != (l = null == t ? void 0 : t.reactions) ? l : v);
     }
     let S = g.size > 0,
-        I = E.some((e) => !0 === e.me_vote),
+        I = v.some((e) => !0 === e.me_vote),
         T = !x && I,
         P = T || h || y,
         A = m && j && (!I || x || P),
@@ -129,7 +129,7 @@ function T(e, t) {
         isExpired: h,
         isInteractive: j,
         isSent: m,
-        reactions: E,
+        reactions: v,
         selectedAnswerIds: g,
         submitting: b,
         tapShouldOpenVotersModal: P,
@@ -141,11 +141,11 @@ function P(e, t) {
     let { animateEmoji: c = !1, theme: d = 'dark', formattedExpirationLabel: p } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { poll: _ } = e;
     if (null == _) return;
-    let v = m.default.getCurrentUser();
-    if (null == v) return;
+    let E = m.default.getCurrentUser();
+    if (null == E) return;
     let O = l.Z.useReducedMotion,
         C = null == (s = u.Z.getChannel(e.getChannelId())) || null == (n = s.getGuildId) ? void 0 : n.call(s),
-        N = (0, y.E)(v, C),
+        N = (0, y.E)(E, C),
         P = _.answers,
         A = _.layout_type,
         w = T(e, t, { formattedExpirationLabel: p });
@@ -326,7 +326,7 @@ function P(e, t) {
             .exhaustive(),
         answerTapAccessibilityLabel: W ? $ : void 0,
         layoutType: A,
-        resources: (0, E.Z)({
+        resources: (0, v.Z)({
             theme: d,
             layoutType: A
         }),

@@ -24,5 +24,6 @@ e.exports = {
     errorModalCloseButton: 'errorModalCloseButton__5ce63',
     errorContent: 'errorContent__5ce63',
     errorModalFooter: 'errorModalFooter__5ce63',
+    rewardAssetContainer: 'rewardAssetContainer__5ce63',
     spinnerContainer: 'spinnerContainer__5ce63'
 };

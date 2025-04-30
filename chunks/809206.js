@@ -3,15 +3,17 @@ n.d(t, {
     I5: () => O,
     KP: () => S,
     Mn: () => b,
-    P6: () => R,
+    OU: () => w,
+    P6: () => P,
     S2: () => E,
     V3: () => y,
     W0: () => v,
-    W3: () => C,
+    W3: () => R,
     Zy: () => m,
-    b9: () => A,
+    b9: () => N,
     cV: () => I,
-    si: () => N,
+    s4: () => A,
+    si: () => C,
     ss: () => g,
     xn: () => T
 });
@@ -198,15 +200,24 @@ function T(e) {
         profileEffectId: e
     });
 }
-function A() {
-    a.Z.dispatch({ type: 'USER_SETTINGS_CLEAR_ERRORS' });
+function A(e) {
+    a.Z.dispatch({
+        type: 'USER_SETTINGS_SET_PENDING_PRIMARY_GUILD_ID',
+        primaryGuildId: e
+    });
 }
 function N() {
-    a.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES' });
+    a.Z.dispatch({ type: 'USER_SETTINGS_CLEAR_ERRORS' });
 }
 function C() {
-    a.Z.dispatch({ type: 'USER_SETTINGS_RESET_ALL_PENDING' });
+    a.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES' });
 }
 function R() {
+    a.Z.dispatch({ type: 'USER_SETTINGS_RESET_ALL_PENDING' });
+}
+function P() {
     a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM' });
+}
+function w() {
+    a.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES' });
 }

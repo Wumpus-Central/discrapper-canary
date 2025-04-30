@@ -11,30 +11,30 @@ var o = t(200651),
     f = t(769654),
     p = t(785717),
     m = t(806729),
-    b = t(708108),
-    _ = t(146078),
-    h = t(857302),
-    y = t(892001),
-    g = t(252417),
-    x = t(821179),
-    j = t(228168),
+    _ = t(708108),
+    b = t(146078),
+    y = t(857302),
+    h = t(892001),
+    x = t(252417),
+    j = t(821179),
+    g = t(228168),
     I = t(388032),
     O = t(714905);
 function v(e) {
     let { user: n, guildId: t, channelId: c, onClose: v } = e,
         { analyticsLocations: P } = (0, d.ZP)(),
-        { context: C, trackUserProfileAction: N } = (0, p.KZ)(),
+        { context: N, trackUserProfileAction: C } = (0, p.KZ)(),
         { mutualFriends: Z, mutualFriendsCount: A, mutualGuilds: T, isFetching: w } = (0, m.Z)(n),
         S = (0, s.Z)(),
         M = r.useMemo(
             () => [
                 {
-                    section: j.oh.MUTUAL_FRIENDS,
-                    text: (0, b.Z)(A)
+                    section: g.oh.MUTUAL_FRIENDS,
+                    text: (0, _.Z)(A)
                 },
                 {
-                    section: j.oh.MUTUAL_GUILDS,
-                    text: (0, _.Z)(null == T ? void 0 : T.length)
+                    section: g.oh.MUTUAL_GUILDS,
+                    text: (0, b.Z)(null == T ? void 0 : T.length)
                 }
             ],
             [A, null == T ? void 0 : T.length]
@@ -42,7 +42,7 @@ function v(e) {
         [{ section: E, text: U }, B] = r.useState(M[0]);
     return (
         r.useEffect(() => {
-            E === j.oh.MUTUAL_FRIENDS && (0, h.Z)(n.id, S);
+            E === g.oh.MUTUAL_FRIENDS && (0, y.Z)(n.id, S);
         }, [E, n.id, S]),
         (0, o.jsxs)('div', {
             className: O.container,
@@ -55,7 +55,7 @@ function v(e) {
                             var t;
                             return null != (t = M.find((n) => n.section === e)) ? t : n;
                         }),
-                            N({
+                            C({
                                 action: 'PRESS_SECTION',
                                 section: e
                             });
@@ -85,7 +85,7 @@ function v(e) {
                         className: O.scroller,
                         fade: !0,
                         children: [
-                            E === j.oh.MUTUAL_FRIENDS &&
+                            E === g.oh.MUTUAL_FRIENDS &&
                                 (null == Z
                                     ? Array.from({ length: null != A ? A : 10 }).map((e, n) =>
                                           (0, o.jsxs)(
@@ -121,7 +121,7 @@ function v(e) {
                                       : Z.map((e) => {
                                             let { key: n, user: r, status: a } = e;
                                             return (0, o.jsx)(
-                                                g.Z,
+                                                x.Z,
                                                 {
                                                     user: r,
                                                     status: a,
@@ -130,8 +130,8 @@ function v(e) {
                                                     onSelect: () => {
                                                         var e, n;
                                                         v(),
-                                                            N({ action: 'PRESS_MUTUAL_FRIEND' }),
-                                                            (0, y.openUserProfileModal)(
+                                                            C({ action: 'PRESS_MUTUAL_FRIEND' }),
+                                                            (0, h.openUserProfileModal)(
                                                                 ((e = (function (e) {
                                                                     for (var n = 1; n < arguments.length; n++) {
                                                                         var t = null != arguments[n] ? arguments[n] : {},
@@ -156,7 +156,7 @@ function v(e) {
                                                                             });
                                                                     }
                                                                     return e;
-                                                                })({}, C)),
+                                                                })({}, N)),
                                                                 (n = n =
                                                                     {
                                                                         userId: r.id,
@@ -181,7 +181,7 @@ function v(e) {
                                                 n
                                             );
                                         })),
-                            E === j.oh.MUTUAL_GUILDS &&
+                            E === g.oh.MUTUAL_GUILDS &&
                                 (null == T && w
                                     ? Array.from({ length: 10 }).map((e, n) =>
                                           (0, o.jsxs)(
@@ -208,13 +208,13 @@ function v(e) {
                                           : T.map((e) => {
                                                 let { guild: t, nick: r } = e;
                                                 return (0, o.jsx)(
-                                                    x.Z,
+                                                    j.Z,
                                                     {
                                                         user: n,
                                                         guild: t,
                                                         nick: r,
                                                         onSelect: () => {
-                                                            N({ action: 'PRESS_MUTUAL_GUILD' }), (0, f.X)(t.id), v(), (0, l.xf)();
+                                                            C({ action: 'PRESS_MUTUAL_GUILD' }), (0, f.X)(t.id), v(), (0, l.xf)();
                                                         }
                                                     },
                                                     t.id
