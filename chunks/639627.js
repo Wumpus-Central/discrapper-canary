@@ -76,6 +76,9 @@ let f = i.forwardRef(function (e, t) {
                 );
         });
     }
+    function p(e) {
+        e.stopPropagation();
+    }
     return (
         i.useImperativeHandle(
             t,
@@ -94,7 +97,8 @@ let f = i.forwardRef(function (e, t) {
                 s.ZP,
                 d(c({}, e), {
                     ref: f,
-                    onChange: _
+                    onChange: _,
+                    onClick: p
                 })
             )
         })

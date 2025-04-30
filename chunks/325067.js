@@ -69,5 +69,6 @@ let b = new f(d.Z, {
     },
     MFA_SEEN_BACKUP_CODE_PROMPT: function () {
         g = !0;
-    }
+    },
+    CONNECTION_OPEN: () => {}
 });

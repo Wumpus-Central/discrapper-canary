@@ -66,6 +66,7 @@ class _ extends (r = o.PureComponent) {
         let { multiple: e, disabled: t, className: n, tabIndex: r, 'aria-label': o, filters: s } = this.props;
         return (0, i.jsx)(a.Z, {
             ref: this._ref,
+            onClick: this.props.onClick,
             onChange: this.handleFileChange,
             filters: null != s ? s : u(),
             multiple: e,

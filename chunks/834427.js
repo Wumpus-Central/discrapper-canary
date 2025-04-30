@@ -41,6 +41,7 @@ class c extends (r = o.Component) {
                 tabIndex: t,
                 onMouseDown: this.handleBrowserInputMouseDown,
                 onChange: this.props.onChange,
+                onClick: this.props.onClick,
                 multiple: this.props.multiple,
                 accept: u,
                 name: r,

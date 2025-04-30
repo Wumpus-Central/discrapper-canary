@@ -2,17 +2,17 @@ n.d(t, {
     $Z: () => Z,
     B8: () => I,
     F4: () => P,
-    HH: () => D,
+    HH: () => A,
     Hd: () => N,
     Xl: () => T,
     dF: () => C,
-    eM: () => L,
+    eM: () => R,
     fB: () => _,
-    gK: () => w,
+    gK: () => D,
     mG: () => M,
-    qe: () => A,
+    qe: () => w,
     rY: () => x,
-    ts: () => R,
+    ts: () => L,
     zW: () => S
 }),
     n(200651),
@@ -72,7 +72,7 @@ function T(e, t) {
 function M(e, t) {
     (0, v.Z)(e, t, void 0, y.Z.getOptions(t.id));
 }
-function D(e, t, n) {
+function A(e, t, n) {
     let i = e.isPrivate(),
         r = t.author.id === f.default.getId();
     (0, c.fE)({
@@ -83,10 +83,10 @@ function D(e, t, n) {
     }),
         p.S.dispatchToLastSubscribed(j.CkL.TEXTAREA_FOCUS);
 }
-function w(e, t) {
+function D(e, t) {
     (0, d.R6)(e, t, 'Message');
 }
-function A(e, t) {
+function w(e, t) {
     let n = g.Z.getChannel(O.default.castMessageIdAsChannelId(t.id));
     null != n && (0, d.ok)(n);
 }
@@ -96,13 +96,13 @@ function C(e, t) {
         messageId: t.id
     });
 }
-function L(e, t) {
+function R(e, t) {
     (0, u.x)({
         channelId: e.id,
         messageId: t.id
     });
 }
-function R(e, t) {
+function L(e, t) {
     (0, o.l8)({
         message: t,
         source: 'message-actions'

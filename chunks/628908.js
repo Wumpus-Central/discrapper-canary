@@ -158,10 +158,10 @@ class C extends o.PureComponent {
                   })
               });
     }
-    renderBackupCodesSection() {
+    renderBackupCodesSection(e) {
         return (0, r.jsx)(M, {
             label: m.intl.string(m.t.qZZUy8),
-            text: m.intl.format(m.t.M0Dogo, {}),
+            text: e,
             children: (0, r.jsx)(u.Z, {
                 fileContents: this.getDownloadFileContents,
                 contentType: 'text/plain',
@@ -175,7 +175,7 @@ class C extends o.PureComponent {
             })
         });
     }
-    renderHeader(e) {
+    renderHeader(e, t) {
         return (0, r.jsxs)(l.xBx, {
             separator: !1,
             children: [
@@ -186,12 +186,12 @@ class C extends o.PureComponent {
                         (0, r.jsx)(l.X6q, {
                             variant: 'heading-lg/semibold',
                             className: O.header,
-                            children: h.Z.parse(m.intl.string(m.t['681MPT']))
+                            children: h.Z.parse(e)
                         }),
                         (0, r.jsx)(l.Text, {
                             variant: 'text-xs/normal',
                             className: O.subHeader,
-                            children: e
+                            children: t
                         })
                     ]
                 }),
@@ -231,10 +231,10 @@ class C extends o.PureComponent {
             transitionState: e,
             className: O.modal,
             children: [
-                this.renderHeader(m.intl.format(m.t.pQioMz, {})),
+                this.renderHeader(m.intl.string(m.t['681MPT']), m.intl.format(m.t.pQioMz, {})),
                 (0, r.jsxs)(l.hzk, {
                     className: O.modalInner,
-                    children: [this.renderSMSSection(), (0, r.jsx)(l.$i$, { className: O.divider }), this.renderBackupCodesSection()]
+                    children: [this.renderSMSSection(), (0, r.jsx)(l.$i$, { className: O.divider }), this.renderBackupCodesSection(m.intl.format(m.t.M0Dogo, {}))]
                 }),
                 t && this.renderConfirmModal(m.intl.string(m.t.WJFPHB))
             ]
@@ -247,10 +247,10 @@ class C extends o.PureComponent {
             transitionState: e,
             className: O.modal,
             children: [
-                this.renderHeader(m.intl.format(m.t.Xb5JGh, {})),
+                this.renderHeader(m.intl.string(m.t.x6ielJ), m.intl.format(m.t.Xb5JGh, {})),
                 (0, r.jsx)(l.hzk, {
                     className: O.modalInner,
-                    children: this.renderBackupCodesSection()
+                    children: this.renderBackupCodesSection(m.intl.format(m.t.p59QLS, {}))
                 }),
                 t && this.renderConfirmModal(m.intl.string(m.t.aoNIXF))
             ]

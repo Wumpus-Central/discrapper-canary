@@ -30,12 +30,13 @@ async function h(e) {
 function m() {
     let e = (0, r.e7)([a.default], () => a.default.getCurrentUser()),
         t = s.ZP.getPremiumTypeSubscription(),
-        n = (0, r.e7)([c.Z], () => c.Z.getReverseTrialEntitlement(!1));
+        n = null != t && !t.isBoostOnly,
+        l = (0, r.e7)([c.Z], () => c.Z.getReverseTrialEntitlement(!1));
     return (
         (0, o.ZP)(() => {
-            null != e && (0, u.I5)(e) && null == t && (c.Z.fetchedAllEntitlements || c.Z.fetchingAllEntitlements || (0, i.p0)({ entitlementType: _.qc2.FRACTIONAL_REDEMPTION }));
+            null != e && (0, u.I5)(e) && !n && (c.Z.fetchedAllEntitlements || c.Z.fetchingAllEntitlements || (0, i.p0)({ entitlementType: _.qc2.FRACTIONAL_REDEMPTION }));
         }),
-        null != t ? null : n
+        n ? null : l
     );
 }
 function g() {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => T }), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(873546),
@@ -19,10 +19,9 @@ var i = n(873546),
     E = n(29920),
     O = n(346497),
     y = n(727310),
-    I = n(231541),
-    v = n(318199),
-    C = n(474936);
-function S(e, t, n) {
+    I = n(318199),
+    v = n(474936);
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -35,8 +34,8 @@ function S(e, t, n) {
         e
     );
 }
-let N = 'PremiumServerDriveAnnouncementModal';
-class T extends s.Z {
+let S = 'PremiumServerDriveAnnouncementModal';
+class N extends s.Z {
     _initialize() {
         o.Z.subscribe('PREMIUM_MARKETING_DATA_READY', this.mayShowAnnouncementModal), o.Z.subscribe('PREMIUM_MARKETING_PREVIEW', this.handlePreview);
     }
@@ -45,19 +44,15 @@ class T extends s.Z {
     }
     constructor(...e) {
         super(...e),
-            S(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
-                let i = (0, v.r)({
+            C(this, 'maybeOpenServerDriveAnnouncementModal', async (e, t) => {
+                let i = (0, I.r)({
                     content: e,
                     isPreview: t
                 });
-                if (null != i) {
-                    if (!1 === t) {
-                        if ((null == i ? void 0 : i.contentIdentifier) === 'summer_bogo_content') {
-                            if (!(await (0, O.k)())) return !1;
-                        } else if ((null == i ? void 0 : i.contentIdentifier) === 'Q1_MARKETING_MOMENT_ANNOUNCEMENT_CONTENT_IDENTIFIER' && !1 === (0, I.M)({ location: 'OfferAnnouncementManager' })) return !1;
-                    }
+                if (null != i)
                     return (
-                        (0, a.Mr3)(N),
+                        (!1 !== t || (null == i ? void 0 : i.contentIdentifier) !== 'summer_bogo_content' || !!(await (0, O.k)())) &&
+                        ((0, a.Mr3)(S),
                         (0, a.ZDy)(
                             async () => {
                                 let { default: e } = await Promise.resolve().then(n.bind(n, 318199));
@@ -67,21 +62,20 @@ class T extends s.Z {
                                         properties: i
                                     });
                             },
-                            { modalKey: N }
+                            { modalKey: S }
                         ),
-                        !0
+                        !0)
                     );
-                }
                 return !1;
             }),
-            S(this, 'handlePreview', (e) => {
+            C(this, 'handlePreview', (e) => {
                 let { properties: t } = e;
                 this.maybeOpenServerDriveAnnouncementModal(t, !0);
             }),
-            S(this, 'getOfferFromStore', () => {
+            C(this, 'getOfferFromStore', () => {
                 let e = u.default.getCurrentUser();
                 if ((0, p.I5)(e)) return {};
-                let t = [C.hs, C.RU, C.rB, C.ih]
+                let t = [v.hs, v.RU, v.rB, v.ih]
                     .map((e) => d.Z.getUserDiscountOffer(e))
                     .filter((e) => null != e && !(0, _.kA)(e))
                     .shift();
@@ -89,16 +83,16 @@ class T extends s.Z {
                 let n = (0, f.J0)();
                 return null != n ? { userTrialOffer: n } : {};
             }),
-            S(this, 'mayShowAnnouncementModal', async () => {
+            C(this, 'mayShowAnnouncementModal', async () => {
                 if ((await (0, O.l2)(), h.s.isDisallowPopupsSet())) return;
                 let e = this.getOfferFromStore(),
                     t = b.Z.getCurrentConfig({ location: 'announcementManager' }, { autoTrackExposure: !1 }).enabled,
                     n = (0, c.un)(l.z.Q1_2025_FOLLOW_UP_REVERSE_TRIAL_OFFER),
                     r = u.default.getCurrentUser();
-                if ((!t || n || (0, a.$sL)() || (0, p.I5)(r) || ((await (0, g.G)(e.userTrialOffer)) && (0, y.Z)({ upsellType: C.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL })), (null == r || r.verified) && !(0, a.$sL)() && m.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !i.tq)) {
+                if ((!t || n || (0, a.$sL)() || (0, p.I5)(r) || ((await (0, g.G)(e.userTrialOffer)) && (0, y.Z)({ upsellType: v.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL })), (null == r || r.verified) && !(0, a.$sL)() && m.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !i.tq)) {
                     for (let t of await (0, E.He)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;
                 }
             });
     }
 }
-let P = new T();
+let T = new N();
