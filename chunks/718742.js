@@ -36,7 +36,7 @@ function m(e) {
             return a;
         })(e, ['onClose', 'onCaptchaVerify', 'onReject', 'transitionState', 'headerText', 'bodyText', 'rqtoken', 'serveInvisible']);
     let w = (0, l.Z)(i),
-        R = (0, s.Q3)('CaptchaModal');
+        _ = (0, s.Q3)('CaptchaModal');
     return (a.useEffect(() => {
         p.S.subscribe(d.CkL.LAYER_POP_ESCAPE_KEY, t);
     }, [t]),
@@ -61,7 +61,7 @@ function m(e) {
                                         children: [
                                             (0, n.jsx)('div', {
                                                 children: (0, n.jsx)('img', {
-                                                    src: R ? b : y,
+                                                    src: _ ? b : y,
                                                     alt: ''
                                                 })
                                             }),

@@ -250,7 +250,8 @@ function er() {
             tertiaryColor: (0, c.Rf)(z.SK.tertiary_color),
             useReducedMotion: e,
             roleStyle: 'username',
-            includeConvenienceGlow: !0
+            includeConvenienceGlow: !0,
+            animateGradient: !0
         });
     return (0, r.jsx)('span', {
         style: Q({}, t),

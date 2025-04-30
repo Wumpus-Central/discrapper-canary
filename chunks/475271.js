@@ -63,8 +63,8 @@ let l = {
     },
     showCaptchaAsync: function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            { sitekey: l, captchaService: d, options: c } = e;
-        return new Promise((e, u) => {
+            { sitekey: l, captchaService: d, captchaSessionId: c, options: u } = e;
+        return new Promise((e, p) => {
             (0, o.ZDy)(
                 async () => {
                     let { default: o } = await r.e('12192').then(r.bind(r, 718742));
@@ -76,14 +76,15 @@ let l = {
                                     onCaptchaVerify: (t, r) =>
                                         e({
                                             captcha_key: t,
-                                            captcha_rqtoken: r
+                                            captcha_rqtoken: r,
+                                            captcha_session_id: c
                                         }),
                                     captchaService: d,
                                     sitekey: l,
-                                    onReject: () => u(Error('cancel captcha'))
+                                    onReject: () => p(Error('cancel captcha'))
                                 },
                                 t,
-                                c,
+                                u,
                                 r
                             )
                         );

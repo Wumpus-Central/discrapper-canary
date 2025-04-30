@@ -55,8 +55,8 @@ function b(e, t) {
     );
 }
 let v = (e) => {
-    var { captchaService: t = p.hP.RECAPTCHA, sitekey: r, rqdata: v, onRender: m, onVerify: O, onError: g, onOpen: C, onClose: E, onChalExpired: j, size: w, userflow: R } = e,
-        _ = (function (e, t) {
+    var { captchaService: t = p.hP.RECAPTCHA, sitekey: r, rqdata: v, onRender: m, onVerify: O, onError: g, onOpen: C, onClose: E, onChalExpired: j, size: w, userflow: _ } = e,
+        R = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -123,11 +123,11 @@ let v = (e) => {
             [I, O, A]
         ),
         T = a.useCallback(() => {
-            A('render'), (0, d.emitCaptchaDistributionMetric)(R), null == m || m();
-        }, [m, A, R]),
+            A('render'), (0, d.emitCaptchaDistributionMetric)(_), null == m || m();
+        }, [m, A, _]),
         Z = a.useCallback(() => {
-            A('open'), I('open'), (0, d.emitCaptchaDistributionMetric)(R), null == C || C();
-        }, [I, C, A, R]),
+            A('open'), I('open'), (0, d.emitCaptchaDistributionMetric)(_), null == C || C();
+        }, [I, C, A, _]),
         M = a.useCallback(() => {
             A('close'), null == E || E(), D();
         }, [E, A, D]),
@@ -137,7 +137,7 @@ let v = (e) => {
     return ((null == r || '' === r) && (r = f.OL7), t === p.hP.RECAPTCHA)
         ? (0, n.jsx)(
               c.Z,
-              b(y({}, _), {
+              b(y({}, R), {
                   onLoad: N,
                   onRender: T,
                   onVerify: V,
@@ -148,19 +148,19 @@ let v = (e) => {
         : t === p.hP.RECAPTCHA_ENTERPRISE
           ? (0, n.jsx)(
                 h._,
-                b(y({}, _), {
+                b(y({}, R), {
                     onLoad: N,
                     onRender: T,
                     onVerify: V,
                     onError: L,
                     sitekey: r,
-                    action: R
+                    action: _
                 })
             )
           : t === p.hP.HCAPTCHA
             ? (0, n.jsx)(
                   i.Z,
-                  b(y({ ref: x }, _), {
+                  b(y({ ref: x }, R), {
                       sitekey: r,
                       onLoad: N,
                       onError: L,
@@ -174,7 +174,7 @@ let v = (e) => {
               )
             : (0, n.jsx)(
                   c.Z,
-                  b(y({}, _), {
+                  b(y({}, R), {
                       sitekey: r,
                       onLoad: N,
                       onRender: T,

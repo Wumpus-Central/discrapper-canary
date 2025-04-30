@@ -115,9 +115,9 @@ function E(e) {
                       return n.showCaptchaAsync(r(e.body));
                   })
                   .then((e) => {
-                      let { captcha_key: n, captcha_rqtoken: r } = e,
-                          i = { 'X-Captcha-Key': n };
-                      null != r && (i['X-Captcha-Rqtoken'] = r), t(i);
+                      let { captcha_key: n, captcha_rqtoken: r, captcha_session_id: i } = e,
+                          o = { 'X-Captcha-Key': n };
+                      null != r && (o['X-Captcha-Rqtoken'] = r), null != i && (o['X-Captcha-Session-Id'] = i), t(o);
                   })
                   .catch(r),
               !0)

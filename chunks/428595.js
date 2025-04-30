@@ -155,7 +155,7 @@ let F = (e) => {
         }),
         tel: M(L({}, a().defaultRules.mailto), {
             requiredFirstCharacters: ['<'],
-            match: a().inlineRegex(/^<((?:(?:tel|sms):\+?|\+)(?:([0-9]+|\([0-9]+\)))(?:[- .\/]?([0-9]+|\([0-9]+\)))+)>/),
+            match: a().inlineRegex(/^<((?:(?:tel|sms):\+?|\+)(?:(?:[0-9]|\([0-9]+\)))(?:[- .\/]?(?:[0-9]|\([0-9]+\)))+)>/),
             parse(e) {
                 let t = e[1],
                     n = e[1].replaceAll(/[ \/]+/g, '-');

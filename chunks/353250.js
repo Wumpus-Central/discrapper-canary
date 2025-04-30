@@ -13,6 +13,7 @@ function o(e) {
     return {
         captchaService: e.captcha_service,
         sitekey: e.captcha_sitekey,
+        captchaSessionId: e.captcha_session_id,
         options: {
             rqdata: e.captcha_rqdata,
             rqtoken: e.captcha_rqtoken,
