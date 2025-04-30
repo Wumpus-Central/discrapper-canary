@@ -58,12 +58,12 @@ let f = (e, t) => ({
         }
     };
 function m(e) {
-    let t = {};
+    let t = new Map();
     for (let n of e) g(t, n);
     return t;
 }
 function g(e, t) {
-    switch (((e[t.id] = t), t.type)) {
+    switch ((e.set(t.id, t), t.type)) {
         case i.re.ACTION_ROW:
             t.components.forEach((t) => g(e, t));
             break;
@@ -87,9 +87,11 @@ function E(e, t) {
     }
 }
 function b(e) {
-    let t = Object.values(m(e))
+    let t = m(e)
+        .values()
         .filter((e) => e.type === i.re.TEXT_DISPLAY)
         .map((e) => e.content)
+        .toArray()
         .join('\n');
     return '' !== t ? t : null;
 }

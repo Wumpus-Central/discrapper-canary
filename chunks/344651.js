@@ -1900,10 +1900,4 @@ Y(
             guildId: e.guild_id,
             entitlements: e.entitlements
         });
-    }),
-    H(['GUILD_APPLIED_BOOSTS_UPDATE'], (e, t) => {
-        K({
-            type: t,
-            guildId: e.guild_id
-        });
     });
