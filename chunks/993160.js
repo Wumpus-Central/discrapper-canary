@@ -3,29 +3,29 @@ var o = t(200651);
 t(192379);
 var r = t(481060),
     c = t(906732),
-    a = t(705556),
-    i = t(30556),
+    i = t(705556),
+    a = t(30556),
     l = t(664794),
     s = t(522182),
     d = t(821706),
     u = t(562831),
     f = t(981631);
 function p(e) {
-    let { user: n, currentUser: t, guildId: p, relationshipType: m, friendToken: _, onClose: b } = e,
+    let { user: n, currentUser: t, guildId: p, relationshipType: m, friendToken: b, onClose: _ } = e,
         { newestAnalyticsLocation: y } = (0, c.ZP)(),
-        { gameFriends: h, hasOutgoingPendingGameFriends: x, hasIncomingPendingGameFriends: j } = (0, u.H)({ userId: n.id }),
-        g = h.length > 0 || x || j;
+        { gameFriends: h, hasOutgoingPendingGameFriends: j, hasIncomingPendingGameFriends: x } = (0, u.H)({ userId: n.id }),
+        g = h.length > 0 || j || x;
     return m === f.OGo.BLOCKED
         ? null
         : n.id === t.id
           ? (0, o.jsxs)(o.Fragment, {
                 children: [
-                    (0, o.jsx)(a.Z, {
+                    (0, o.jsx)(i.Z, {
                         user: n,
                         guildId: p,
-                        onClose: b
+                        onClose: _
                     }),
-                    (0, o.jsx)(s.Z, { onClose: b }),
+                    (0, o.jsx)(s.Z, { onClose: _ }),
                     (0, o.jsx)(l.Z, {
                         type: 'icon',
                         user: n,
@@ -37,10 +37,10 @@ function p(e) {
           : n.bot
             ? (0, o.jsxs)(o.Fragment, {
                   children: [
-                      (0, o.jsx)(i.Z, {
+                      (0, o.jsx)(a.Z, {
                           type: 'text',
                           userId: n.id,
-                          onClose: b,
+                          onClose: _,
                           autoFocus: !0
                       }),
                       (0, o.jsx)(l.Z, {
@@ -54,11 +54,11 @@ function p(e) {
             : m === f.OGo.FRIEND || m === f.OGo.PENDING_OUTGOING || m === f.OGo.PENDING_INCOMING
               ? (0, o.jsxs)(o.Fragment, {
                     children: [
-                        (0, o.jsx)(i.Z, {
+                        (0, o.jsx)(a.Z, {
                             type: 'text',
                             userId: n.id,
                             color: r.zxk.Colors.BRAND,
-                            onClose: b,
+                            onClose: _,
                             autoFocus: !0
                         }),
                         (0, o.jsx)(d.g, {
@@ -80,10 +80,10 @@ function p(e) {
               : m === f.OGo.NONE && g
                 ? (0, o.jsxs)(o.Fragment, {
                       children: [
-                          (0, o.jsx)(i.Z, {
+                          (0, o.jsx)(a.Z, {
                               type: 'text',
                               userId: n.id,
-                              onClose: b,
+                              onClose: _,
                               autoFocus: !0
                           }),
                           (0, o.jsx)(d.k9, {
@@ -93,8 +93,8 @@ function p(e) {
                               themeColor: 'secondary',
                               gameFriends: h,
                               shouldShowTooltip: !0,
-                              hasIncomingPendingGameFriends: j,
-                              hasOutgoingPendingGameFriends: x
+                              hasIncomingPendingGameFriends: x,
+                              hasOutgoingPendingGameFriends: j
                           }),
                           (0, o.jsx)(l.Z, {
                               type: 'icon',
@@ -109,15 +109,15 @@ function p(e) {
                           (0, o.jsx)(d.Z7, {
                               type: 'text',
                               userId: n.id,
-                              friendToken: _,
+                              friendToken: b,
                               analyticsLocation: y,
                               color: r.zxk.Colors.BRAND,
                               autoFocus: !0
                           }),
-                          (0, o.jsx)(i.Z, {
+                          (0, o.jsx)(a.Z, {
                               type: 'icon',
                               userId: n.id,
-                              onClose: b,
+                              onClose: _,
                               themeColor: 'secondary'
                           }),
                           (0, o.jsx)(l.Z, {

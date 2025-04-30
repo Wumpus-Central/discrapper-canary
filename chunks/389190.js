@@ -1,84 +1,84 @@
-n.d(t, { Z: () => j });
-var l = n(200651),
-    r = n(192379),
-    i = n(481060),
-    s = n(81897),
-    o = n(906732),
-    c = n(785717),
-    a = n(806729),
-    d = n(857302),
-    u = n(892001),
-    f = n(252417),
-    p = n(388032),
-    h = n(301150);
-function j(e) {
-    let { user: t, guildId: n, channelId: j, onClose: g } = e,
-        { mutualFriends: v } = (0, a.Z)(t),
+t.d(n, { Z: () => v });
+var l = t(200651),
+    r = t(192379),
+    i = t(481060),
+    s = t(81897),
+    o = t(906732),
+    a = t(785717),
+    c = t(806729),
+    d = t(857302),
+    u = t(892001),
+    f = t(252417),
+    p = t(388032),
+    h = t(301150);
+function v(e) {
+    let { user: n, guildId: t, channelId: v, onClose: g } = e,
+        { mutualFriends: j } = (0, c.Z)(n),
         { analyticsLocations: m } = (0, o.ZP)(),
-        { context: x, trackUserProfileAction: b } = (0, c.KZ)(),
-        O = (0, s.Z)();
+        { context: b, trackUserProfileAction: x } = (0, a.KZ)(),
+        Z = (0, s.Z)();
     r.useEffect(() => {
-        (0, d.Z)(t.id, O);
-    }, [t.id, O]);
-    let Z = (e) => {
-        var t, n;
+        (0, d.Z)(n.id, Z);
+    }, [n.id, Z]);
+    let O = (e) => {
+        var n, t;
         g(),
             (0, u.openUserProfileModal)(
-                ((t = (function (e) {
-                    for (var t = 1; t < arguments.length; t++) {
-                        var n = null != arguments[t] ? arguments[t] : {},
-                            l = Object.keys(n);
+                ((n = (function (e) {
+                    for (var n = 1; n < arguments.length; n++) {
+                        var t = null != arguments[n] ? arguments[n] : {},
+                            l = Object.keys(t);
                         'function' == typeof Object.getOwnPropertySymbols &&
                             (l = l.concat(
-                                Object.getOwnPropertySymbols(n).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                Object.getOwnPropertySymbols(t).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(t, e).enumerable;
                                 })
                             )),
-                            l.forEach(function (t) {
+                            l.forEach(function (n) {
                                 var l;
-                                (l = n[t]),
-                                    t in e
-                                        ? Object.defineProperty(e, t, {
+                                (l = t[n]),
+                                    n in e
+                                        ? Object.defineProperty(e, n, {
                                               value: l,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = l);
+                                        : (e[n] = l);
                             });
                     }
                     return e;
-                })({}, x)),
-                (n = n =
+                })({}, b)),
+                (t = t =
                     {
                         userId: e,
                         sourceAnalyticsLocations: m
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
+                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(t))
+                    : (function (e, n) {
+                          var t = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
                               var l = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, l);
+                              t.push.apply(t, l);
                           }
-                          return n;
-                      })(Object(n)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                          return t;
+                      })(Object(t)).forEach(function (e) {
+                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(t, e));
                       }),
-                t)
+                n)
             );
     };
     return (0, l.jsx)(i.zJl, {
         className: h.listScroller,
         fade: !0,
         children:
-            null == v
+            null == j
                 ? (0, l.jsx)('div', {
                       className: h.empty,
                       children: (0, l.jsx)(i.$jN, {})
                   })
-                : 0 === v.length
+                : 0 === j.length
                   ? (0, l.jsxs)('div', {
                         className: h.empty,
                         children: [
@@ -89,20 +89,20 @@ function j(e) {
                             })
                         ]
                     })
-                  : v.map((e) => {
-                        let { key: t, user: r, status: i } = e;
+                  : j.map((e) => {
+                        let { key: n, user: r, status: i } = e;
                         return (0, l.jsx)(
                             f.Z,
                             {
                                 user: r,
                                 status: i,
-                                guildId: n,
-                                channelId: j,
+                                guildId: t,
+                                channelId: v,
                                 onSelect: () => {
-                                    b({ action: 'PRESS_MUTUAL_FRIEND' }), Z(r.id);
+                                    x({ action: 'PRESS_MUTUAL_FRIEND' }), O(r.id);
                                 }
                             },
-                            t
+                            n
                         );
                     })
     });

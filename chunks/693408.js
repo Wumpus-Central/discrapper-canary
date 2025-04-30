@@ -1,9 +1,9 @@
-t.d(n, { Z: () => a });
+t.d(n, { Z: () => i });
 var o = t(200651);
 t(192379);
 var r = t(678738),
     c = t(362258);
-function a(e) {
+function i(e) {
     return (0, o.jsx)(
         r.Z,
         (function (e) {

@@ -1,4 +1,4 @@
-n.d(t, { j: () => v }), n(388685);
+n.d(t, { j: () => O }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(442837),
@@ -14,16 +14,16 @@ var r = n(200651),
     g = n(316496),
     m = n(55185),
     b = n(981631),
-    y = n(921944),
-    _ = n(46140);
-let v = (e) => {
-    let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: v } = e,
-        [O, C] = (0, i.useState)(!1),
+    _ = n(921944),
+    y = n(46140);
+let O = (e) => {
+    let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: O } = e,
+        [v, C] = (0, i.useState)(!1),
         j = (function (e) {
             let { isForceShowSharingPopout: t } = e,
                 { rtcPopoutEnabled: n } = (0, g.SN)('SharingPrivacyPopout'),
                 { rtcPopoutEnabled: r } = (0, g.m_)('SharingPrivacyPopout'),
-                i = (0, u.Ws)({ location: _.dr.CONFLICT_CHECKS }),
+                i = (0, u.Ws)({ location: y.dr.CONFLICT_CHECKS }),
                 o = d.G6.useSetting(),
                 s = (0, l.e7)([h.Z], () => h.Z.getLayers().includes(b.S9g.USER_SETTINGS)),
                 a = (0, l.e7)([p.Z], () => p.Z.getStatus()),
@@ -39,14 +39,14 @@ let v = (e) => {
     return ((0, i.useEffect)(() => {
         n && f.default.track(b.rMx.OPEN_POPOUT, { type: 'SharingPrivacyPopout' });
     }, [n]),
-    null != j || O)
+    null != j || v)
         ? (0, r.jsx)(c.ZP, {
               contentTypes: n ? [] : [o.z.SHARE_ACTIVITY_COACHMARK_V2],
               children: (e) => {
                   let { visibleContent: i } = e;
                   if (i === o.z.SHARE_ACTIVITY_COACHMARK_V2 || n) {
                       let e = () => {
-                          (0, a.EW)(o.z.SHARE_ACTIVITY_COACHMARK_V2, { dismissAction: y.L.USER_DISMISS }), v(!1), C(!1);
+                          (0, a.EW)(o.z.SHARE_ACTIVITY_COACHMARK_V2, { dismissAction: _.L.USER_DISMISS }), O(!1), C(!1);
                       };
                       return (0, r.jsx)(s.yRy, {
                           targetElementRef: S,

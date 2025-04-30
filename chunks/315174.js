@@ -18,10 +18,10 @@ var r = n(200651),
     g = n(210887),
     m = n(695346),
     b = n(496675),
-    y = n(768581),
-    _ = n(358555),
-    v = n(981631),
-    O = n(647086),
+    _ = n(768581),
+    y = n(358555),
+    O = n(981631),
+    v = n(647086),
     C = n(388032),
     j = n(917669);
 function S(e) {
@@ -85,7 +85,7 @@ function x(e) {
                 className: o()(j.bannerImg, { [j.bannerImgFullWidth]: a.tq }),
                 src:
                     null !=
-                    (t = y.ZP.getGuildBannerURL(
+                    (t = _.ZP.getGuildBannerURL(
                         {
                             id: i.id,
                             banner: c
@@ -103,7 +103,7 @@ function x(e) {
 function P(e) {
     let { guild: t, controller: n, hasBanner: i, hasSubheader: l } = e,
         { value: a } = n.springs,
-        c = t.hasFeature(v.oNc.DISCOVERABLE),
+        c = t.hasFeature(O.oNc.DISCOVERABLE),
         d = (0, r.jsx)('div', {
             className: j.communityInfo,
             children:
@@ -175,11 +175,11 @@ function Z(e) {
     let { bannerVisible: n, guild: i, onClick: l, onContextMenu: o, ariaControls: s, ariaExpanded: a, guildHeaderRef: c, children: d } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(_.Z, {
+            (0, r.jsx)(y.Z, {
                 guild: i,
                 isBannerVisible: n
             }),
-            i.id === O._ && (0, r.jsx)(I, {}),
+            i.id === v._ && (0, r.jsx)(I, {}),
             (0, r.jsx)(N, { guild: i }),
             null != l &&
                 (0, r.jsx)(u.P3F, {
@@ -231,7 +231,7 @@ function T(e) {
                               e,
                               E(S({}, t), {
                                   guild: l,
-                                  source: v.t4x.GUILD_HEADER
+                                  source: O.t4x.GUILD_HEADER
                               })
                           );
                   })
@@ -270,11 +270,11 @@ function T(e) {
                                     (0, r.jsxs)('div', {
                                         className: j.guildBadgeAndName,
                                         children: [
-                                            (0, r.jsx)(_.Z, {
+                                            (0, r.jsx)(y.Z, {
                                                 guild: l,
                                                 isBannerVisible: t
                                             }),
-                                            l.id === O._ && (0, r.jsx)(I, {}),
+                                            l.id === v._ && (0, r.jsx)(I, {}),
                                             (0, r.jsx)(N, { guild: l })
                                         ]
                                     }),
@@ -288,7 +288,7 @@ function T(e) {
                     );
                 }
             }),
-            l.id !== O._ &&
+            l.id !== v._ &&
                 (0, r.jsx)(u.ua7, {
                     text: C.intl.string(C.t.Sd8Ix8),
                     position: 'bottom',
@@ -311,12 +311,12 @@ function T(e) {
     });
 }
 let A = i.memo(function (e) {
-    let { bannerVisible: t, controller: n, className: l, onClick: s, onContextMenu: c, onMouseDown: f, disableBannerAnimation: g, 'aria-expanded': b, 'aria-controls': _, guild: O, guildBanner: C, animationOverlayHeight: I, children: w, headerClassName: N, communityInfoVisible: A, hasSubheader: D } = e,
-        L = O.hasFeature(v.oNc.ANIMATED_BANNER),
-        k = (0, h.Z)(O),
-        M = !k && O.hasCommunityInfoSubheader(),
+    let { bannerVisible: t, controller: n, className: l, onClick: s, onContextMenu: c, onMouseDown: f, disableBannerAnimation: g, 'aria-expanded': b, 'aria-controls': y, guild: v, guildBanner: C, animationOverlayHeight: I, children: w, headerClassName: N, communityInfoVisible: A, hasSubheader: D } = e,
+        L = v.hasFeature(O.oNc.ANIMATED_BANNER),
+        k = (0, h.Z)(v),
+        M = !k && v.hasCommunityInfoSubheader(),
         U = !k && A,
-        G = (0, y.xR)(C) && L && !g,
+        G = (0, _.xR)(C) && L && !g,
         [B, V] = i.useState(!1),
         H = i.useRef(!1),
         F = i.useRef(null),
@@ -345,15 +345,15 @@ let A = i.memo(function (e) {
         { entrypoints: q } = (0, p._k)({ location: 'guild_header' }),
         Q = {
             bannerVisible: t,
-            guild: O,
+            guild: v,
             onClick: s,
             onContextMenu: c,
-            ariaControls: _,
+            ariaControls: y,
             ariaExpanded: b,
             guildHeaderRef: F
         };
     return (0, r.jsx)(u.f6W, {
-        theme: t ? v.BRd.DARK : void 0,
+        theme: t ? O.BRd.DARK : void 0,
         children: (e) =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
@@ -382,7 +382,7 @@ let A = i.memo(function (e) {
                                     }),
                                     M &&
                                         (0, r.jsx)(P, {
-                                            guild: O,
+                                            guild: v,
                                             controller: n,
                                             hasBanner: null != C,
                                             hasSubheader: null != D && D
@@ -391,7 +391,7 @@ let A = i.memo(function (e) {
                             }),
                             null != C
                                 ? (0, r.jsx)(x, {
-                                      guild: O,
+                                      guild: v,
                                       controller: n,
                                       guildBanner: C,
                                       animate: B,

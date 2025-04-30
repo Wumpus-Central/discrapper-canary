@@ -50,12 +50,12 @@ function g(e) {
         m = (0, o.ZP)(),
         b = (0, c.oX)(n);
     if (null == b) return null;
-    let y = (0, l.UCu)(g),
-        { name: _, rarity: v } = b,
-        { color: O } = (0, c.F7)(v),
+    let _ = (0, l.UCu)(g),
+        { name: y, rarity: O } = b,
+        { color: v } = (0, c.F7)(O),
         C = (0, i.wj)(m) ? p : f,
-        j = (y.size - y.offset - 2 * y.stroke) * 0.8,
-        S = y.size - y.stroke,
+        j = (_.size - _.offset - 2 * _.stroke) * 0.8,
+        S = _.size - _.stroke,
         E = {
             width: 0.4 * j,
             height: 0.4 * j
@@ -63,8 +63,8 @@ function g(e) {
         x = {
             width: E.width + 1,
             height: E.height + 1,
-            right: y.stroke + 1,
-            bottom: y.stroke + 1,
+            right: _.stroke + 1,
+            bottom: _.stroke + 1,
             padding: 0
         };
     return (0, r.jsxs)('div', {
@@ -72,15 +72,15 @@ function g(e) {
         style: {
             width: S,
             height: S,
-            padding: y.stroke
+            padding: _.stroke
         },
-        'aria-label': ''.concat(null != (t = _()) ? t : ''),
+        'aria-label': ''.concat(null != (t = y()) ? t : ''),
         children: [
             (0, r.jsx)('div', {
                 className: d.trophyIconContainer,
                 children: (0, r.jsx)(l.rm8, {
                     size: 'custom',
-                    color: u ? O : (0, s.Lq)(C.trophy),
+                    color: u ? v : (0, s.Lq)(C.trophy),
                     width: j,
                     height: j
                 })
@@ -101,7 +101,7 @@ function g(e) {
                     )
                 }),
             u &&
-                v === c.EP.LEGENDARY &&
+                O === c.EP.LEGENDARY &&
                 (0, r.jsx)('div', {
                     className: d.lockContainer,
                     style: x,

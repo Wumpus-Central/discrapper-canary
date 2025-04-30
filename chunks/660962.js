@@ -365,12 +365,12 @@ function es(e) {
         children: (0, r.jsx)('div', {
             className: s()(V.previewContainer, { [V.disableInteraction]: c }),
             'aria-hidden': !0,
-            'data-disable-adaptive-theme': !0,
             children: x.map((e) =>
                 (0, r.jsx)(
                     g.f6W,
                     {
                         theme: e,
+                        disableAdaptiveTheme: !0,
                         children: (t) =>
                             (0, r.jsx)('div', {
                                 className: t,

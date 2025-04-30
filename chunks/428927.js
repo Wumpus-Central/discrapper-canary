@@ -1,20 +1,20 @@
-n.d(t, { Z: () => f });
-var l = n(200651);
-n(192379);
-var r = n(481060),
-    i = n(37234),
-    s = n(769654),
-    o = n(785717),
-    c = n(806729),
-    a = n(821179),
-    d = n(388032),
-    u = n(301150);
+t.d(n, { Z: () => f });
+var l = t(200651);
+t(192379);
+var r = t(481060),
+    i = t(37234),
+    s = t(769654),
+    o = t(785717),
+    a = t(806729),
+    c = t(821179),
+    d = t(388032),
+    u = t(301150);
 function f(e) {
-    let { user: t, onClose: n } = e,
+    let { user: n, onClose: t } = e,
         { trackUserProfileAction: f } = (0, o.KZ)(),
-        { mutualGuilds: p, isFetching: h } = (0, c.Z)(t),
-        j = (e) => {
-            (0, s.X)(e), n(), (0, i.xf)();
+        { mutualGuilds: p, isFetching: h } = (0, a.Z)(n),
+        v = (e) => {
+            (0, s.X)(e), t(), (0, i.xf)();
         };
     return (0, l.jsx)(r.zJl, {
         className: u.listScroller,
@@ -29,18 +29,18 @@ function f(e) {
                   ? null == p
                       ? void 0
                       : p.map((e) => {
-                            let { guild: n, nick: r } = e;
+                            let { guild: t, nick: r } = e;
                             return (0, l.jsx)(
-                                a.Z,
+                                c.Z,
                                 {
-                                    user: t,
-                                    guild: n,
+                                    user: n,
+                                    guild: t,
                                     nick: r,
                                     onSelect: () => {
-                                        f({ action: 'PRESS_MUTUAL_GUILD' }), j(n.id);
+                                        f({ action: 'PRESS_MUTUAL_GUILD' }), v(t.id);
                                     }
                                 },
-                                n.id
+                                t.id
                             );
                         })
                   : (0, l.jsxs)('div', {

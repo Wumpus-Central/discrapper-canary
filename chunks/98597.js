@@ -20,10 +20,10 @@ var r,
     g = n(427679),
     m = n(155409),
     b = n(131704),
-    y = n(199902),
-    _ = n(430824),
-    v = n(496675),
-    O = n(914010),
+    _ = n(199902),
+    y = n(430824),
+    O = n(496675),
+    v = n(914010),
     C = n(281029),
     j = n(981631),
     S = n(388032),
@@ -107,7 +107,7 @@ function Z(e) {
 }
 function T(e) {
     let { channel: t, disableManageChannels: n, tabIndex: r, forceShowButtons: l, hasChannelInfo: o = !1 } = e;
-    if ((0, a.e7)([v.Z, O.Z], () => n || O.Z.getGuildId() === j.I_8 || (!v.Z.can(j.Plq.MANAGE_CHANNELS, t) && !v.Z.can(j.Plq.MANAGE_ROLES, t) && !v.Z.can(j.Plq.MANAGE_WEBHOOKS, t)) || ((0, b.r8)(t.type) && !v.Z.can(j.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !v.Z.can(j.Plq.CONNECT, t)) || !b.dF.has(t.type))) return null;
+    if ((0, a.e7)([O.Z, v.Z], () => n || v.Z.getGuildId() === j.I_8 || (!O.Z.can(j.Plq.MANAGE_CHANNELS, t) && !O.Z.can(j.Plq.MANAGE_ROLES, t) && !O.Z.can(j.Plq.MANAGE_WEBHOOKS, t)) || ((0, b.r8)(t.type) && !O.Z.can(j.Plq.VIEW_CHANNEL, t)) || (t.isGuildVocal() && !O.Z.can(j.Plq.CONNECT, t)) || !b.dF.has(t.type))) return null;
     function d() {
         u.ZP.open(t.id);
     }
@@ -135,18 +135,18 @@ function T(e) {
 }
 function A(e) {
     let { channel: t, isDefaultChannel: r = !1, locked: o, tabIndex: u, forceShowButtons: f, hasChannelInfo: b = !1 } = e,
-        { entrypoints: O } = (0, h._k)({ location: 'channel_base' }),
-        C = (0, a.e7)([_.Z], () => _.Z.getGuild(t.getGuildId())),
+        { entrypoints: v } = (0, h._k)({ location: 'channel_base' }),
+        C = (0, a.e7)([y.Z], () => y.Z.getGuild(t.getGuildId())),
         x = (0, a.e7)([g.Z], () => g.Z.getStageInstanceByChannel(t.id), [t.id]),
         w = (0, a.e7)([d.ZP], () => d.ZP.getActiveEventByChannel(t.id), [t.id]),
-        N = (0, a.e7)([v.Z], () => (0, p.b)(v.Z, C, t, x)),
-        Z = (0, a.e7)([v.Z], () => (v.Z.can(j.Plq.CREATE_INSTANT_INVITE, t) ? S.intl.string(S.t.zJrgTE) : S.intl.string(S.t.Sd8Ix8))),
-        T = O ? S.intl.string(S.t['EE+P0N']) : Z,
+        N = (0, a.e7)([O.Z], () => (0, p.b)(O.Z, C, t, x)),
+        Z = (0, a.e7)([O.Z], () => (O.Z.can(j.Plq.CREATE_INSTANT_INVITE, t) ? S.intl.string(S.t.zJrgTE) : S.intl.string(S.t.Sd8Ix8))),
+        T = v ? S.intl.string(S.t['EE+P0N']) : Z,
         A = l.useRef(null);
     if (o || !N) return null;
     function R() {
         if (null != C) {
-            let e = y.Z.getAllActiveStreams().filter((e) => e.state !== j.jm8.ENDED && e.channelId === t.id);
+            let e = _.Z.getAllActiveStreams().filter((e) => e.state !== j.jm8.ENDED && e.channelId === t.id);
             (0, c.ZDy)(async () => {
                 let { default: r } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
                 return (n) =>
@@ -163,7 +163,7 @@ function A(e) {
             });
         }
     }
-    let D = O ? c.oLu : c.ejJ,
+    let D = v ? c.oLu : c.ejJ,
         L = (0, i.jsx)(D, {
             size: 'xs',
             className: E.actionIcon,

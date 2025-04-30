@@ -14,10 +14,10 @@ var r,
     g = n(93687),
     m = n(266076),
     b = n(199902),
-    y = n(19780),
-    _ = n(306680),
-    v = n(944486),
-    O = n(594174),
+    _ = n(19780),
+    y = n(306680),
+    O = n(944486),
+    v = n(594174),
     C = n(451478),
     j = n(276952),
     S = n(682662),
@@ -145,13 +145,13 @@ class D extends (r = l.PureComponent) {
     }
     getChannelIcon() {
         let { channel: e } = this.props,
-            t = e.type === P.d4z.DM ? O.default.getUser(e.getRecipientId()) : null;
+            t = e.type === P.d4z.DM ? v.default.getUser(e.getRecipientId()) : null;
         return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, h.x)(e);
     }
     render() {
         let { channel: e, channelName: t, selected: n, badge: r, audio: l, video: s, stream: a, isCurrentUserInThisDMCall: u, unread: d, isGDMFacepileEnabled: h, isVisualRefreshEnabled: p, treeItemProps: f } = this.props,
             { hovered: g, animating: b } = this.state,
-            y = e.isMultiUserDM() && null == e.icon && h;
+            _ = e.isMultiUserDM() && null == e.icon && h;
         return (0, i.jsx)(o.animated.div, {
             style: this.getAnimatedStyle(),
             children: (0, i.jsxs)(S.H, {
@@ -192,9 +192,9 @@ class D extends (r = l.PureComponent) {
                                                   })
                                                 : '',
                                         onContextMenu: this.handleContextMenu,
-                                        icon: y ? void 0 : this.getChannelIcon(),
-                                        backgroundStyle: y ? 'on-hover' : 'always',
-                                        children: y
+                                        icon: _ ? void 0 : this.getChannelIcon(),
+                                        backgroundStyle: _ ? 'on-hover' : 'always',
+                                        children: _
                                             ? (0, i.jsx)(m.Z, {
                                                   channel: e,
                                                   size: c.EFr.SIZE_40,
@@ -227,7 +227,7 @@ class D extends (r = l.PureComponent) {
             }),
             N(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
-                    r = t.type === P.d4z.DM ? O.default.getUser(t.getRecipientId()) : null;
+                    r = t.type === P.d4z.DM ? v.default.getUser(t.getRecipientId()) : null;
                 null != r
                     ? (0, u.jW)(e, async () => {
                           let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('53912'), n.e('56826'), n.e('45903')]).then(n.bind(n, 131404));
@@ -264,11 +264,11 @@ let L = l.forwardRef(function (e, t) {
     let n = e.channel.id,
         r = (0, p.ZP)(e.channel),
         l = (0, s.Ie)(n, 2),
-        o = (0, a.e7)([y.Z], () => y.Z.getChannelId(), []),
+        o = (0, a.e7)([_.Z], () => _.Z.getChannelId(), []),
         u = (0, a.e7)([d.Z], () => (null != o ? d.Z.getMode(o) : P.WtW.VOICE), [o]),
         h = (0, a.e7)([b.Z], () => b.Z.getAllApplicationStreamsForChannel(n).length > 0),
-        m = (0, a.e7)([v.Z], () => v.Z.getChannelId(), []),
-        O = (0, a.e7)([_.ZP], () => _.ZP.getMentionCount(n), [n]),
+        m = (0, a.e7)([O.Z], () => O.Z.getChannelId(), []),
+        v = (0, a.e7)([y.ZP], () => y.ZP.getMentionCount(n), [n]),
         { isFacepileEnabled: C } = g.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
         j = o === n,
         S = !1,
@@ -281,9 +281,9 @@ let L = l.forwardRef(function (e, t) {
         T(Z({}, e), {
             ref: t,
             channelName: r,
-            unread: O > 0,
+            unread: v > 0,
             selected: m === n,
-            badge: O,
+            badge: v,
             audio: S,
             video: E,
             stream: h,

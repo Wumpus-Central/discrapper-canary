@@ -1,48 +1,48 @@
-n.d(t, { Z: () => S }), n(388685);
-var l = n(200651),
-    r = n(192379),
-    i = n(481060),
-    s = n(727637),
-    o = n(100527),
-    c = n(906732),
-    a = n(680295),
-    d = n(5192),
-    u = n(785717),
-    f = n(687158),
-    p = n(899007),
-    h = n(648052),
-    j = n(867176),
-    g = n(280885),
-    v = n(900927),
-    m = n(678738),
-    x = n(502762),
-    b = n(530),
-    O = n(679332),
-    Z = n(544989),
-    y = n(228168),
-    I = n(981631),
-    P = n(388032),
-    E = n(405666),
-    N = n(349966),
-    T = n(923243);
+t.d(n, { Z: () => S }), t(388685);
+var l = t(200651),
+    r = t(192379),
+    i = t(481060),
+    s = t(727637),
+    o = t(100527),
+    a = t(906732),
+    c = t(680295),
+    d = t(5192),
+    u = t(785717),
+    f = t(687158),
+    p = t(899007),
+    h = t(648052),
+    v = t(867176),
+    g = t(280885),
+    j = t(900927),
+    m = t(678738),
+    b = t(502762),
+    x = t(530),
+    Z = t(679332),
+    O = t(544989),
+    y = t(228168),
+    I = t(981631),
+    P = t(388032),
+    E = t(405666),
+    N = t(349966),
+    T = t(923243);
 function S(e) {
-    let { user: t, guildId: n, channelId: S, messageId: A, roleId: C, sessionId: _, transitionState: w, openedAt: R, onClose: L, sourceAnalyticsLocations: M = [] } = e,
-        D = n === I.ME ? void 0 : n,
-        U = (0, f.ZP)(t.id, D),
-        { analyticsLocations: G } = (0, c.ZP)([...M, o.Z.USER_PROFILE_MODAL]),
+    let { user: n, guildId: t, channelId: S, messageId: A, roleId: C, sessionId: _, transitionState: w, openedAt: R, onClose: M, sourceAnalyticsLocations: L = [] } = e,
+        D = t === I.ME ? void 0 : t,
+        U = (0, f.ZP)(n.id, D),
+        { analyticsLocations: k } = (0, a.ZP)([...L, o.Z.USER_PROFILE_MODAL]),
         B = (0, u.ZB)({
             layout: 'MODAL',
-            userId: t.id,
+            userId: n.id,
             sourceSessionId: _,
             guildId: D,
             channelId: S,
             messageId: A,
             roleId: C
         }),
-        k = r.createRef(),
-        Y = (0, s.Z)(k);
-    return (0, l.jsx)(c.Gt, {
-        value: G,
+        G = r.createRef(),
+        Y = (0, s.Z)(G);
+    return (0, l.jsx)(a.Gt, {
+        value: k,
         children: (0, l.jsx)(u.Mt, {
             value: B,
             openedAt: R,
@@ -55,24 +55,24 @@ function S(e) {
                 hideShadow: !0,
                 'aria-label': P.intl.string(P.t['3N/J2t']),
                 children: [
-                    (0, l.jsxs)(x.Z, {
-                        user: t,
+                    (0, l.jsxs)(b.Z, {
+                        user: n,
                         displayProfile: U,
                         themeType: y.lY.MODAL,
-                        ref: k,
+                        ref: G,
                         children: [
-                            (0, l.jsx)(Z.Z, { children: (0, l.jsx)(O.Z, { user: t }) }),
+                            (0, l.jsx)(O.Z, { children: (0, l.jsx)(Z.Z, { user: n }) }),
                             (0, l.jsxs)('header', {
                                 children: [
-                                    (0, l.jsx)(j.Z, {
-                                        user: t,
+                                    (0, l.jsx)(v.Z, {
+                                        user: n,
                                         displayProfile: U,
                                         themeType: y.lY.MODAL
                                     }),
                                     (0, l.jsx)('div', {
                                         className: E.headerInner,
                                         children: (0, l.jsx)(p.Z, {
-                                            user: t,
+                                            user: n,
                                             displayProfile: U,
                                             guildId: D,
                                             channelId: S,
@@ -84,16 +84,16 @@ function S(e) {
                             (0, l.jsxs)('div', {
                                 className: E.body,
                                 children: [
-                                    (0, l.jsx)(b.Z, {
+                                    (0, l.jsx)(x.Z, {
                                         className: E.username,
-                                        user: t,
-                                        nickname: d.ZP.getName(D, S, t),
+                                        user: n,
+                                        nickname: d.ZP.getName(D, S, n),
                                         pronouns: null == U ? void 0 : U.pronouns,
                                         nicknameVariant: 'heading-xl/bold',
                                         tags: (0, l.jsx)(h.Z, {
                                             displayProfile: U,
                                             themeType: y.lY.MODAL,
-                                            onClose: L
+                                            onClose: M
                                         })
                                     }),
                                     (0, l.jsxs)('div', {
@@ -123,14 +123,14 @@ function S(e) {
                                                 className: N.scroller,
                                                 children: [
                                                     (0, l.jsx)(g.Z, {
-                                                        userId: t.id,
+                                                        userId: n.id,
                                                         userBio: null == U ? void 0 : U.bio,
                                                         setLineClamp: !1
                                                     }),
                                                     (0, l.jsx)(m.Z, {
                                                         heading: P.intl.string(P.t['A//N4u']),
-                                                        children: (0, l.jsx)(v.Z, {
-                                                            userId: t.id,
+                                                        children: (0, l.jsx)(j.Z, {
+                                                            userId: n.id,
                                                             guildId: D,
                                                             tooltipDelay: y.vB
                                                         })
@@ -144,7 +144,7 @@ function S(e) {
                         ]
                     }),
                     (null == U ? void 0 : U.profileEffectId) != null &&
-                        (0, l.jsx)(a.Z, {
+                        (0, l.jsx)(c.Z, {
                             profileEffectId: null == U ? void 0 : U.profileEffectId,
                             isHovering: Y
                         })

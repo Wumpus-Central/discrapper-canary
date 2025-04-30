@@ -1,6 +1,6 @@
 n.d(t, {
     NQ: () => m,
-    U1: () => _,
+    U1: () => y,
     XW: () => u,
     _J: () => g,
     aP: () => p,
@@ -8,8 +8,8 @@ n.d(t, {
     h6: () => b,
     oE: () => h,
     pB: () => d,
-    y: () => y,
-    yS: () => v
+    y: () => _,
+    yS: () => O
 });
 var r = n(290486),
     i = n(524437),
@@ -153,6 +153,6 @@ let u = (0, r.U)((e) => ({
     g = () => u.getState().guildId,
     m = () => u.getState().touched,
     b = () => u.getState().dmsAllowed,
-    y = () => u.getState().nickname,
-    _ = () => u.getState().showActivity,
-    v = () => u.getState().mutedServer;
+    _ = () => u.getState().nickname,
+    y = () => u.getState().showActivity,
+    O = () => u.getState().mutedServer;

@@ -4,8 +4,8 @@ n(192379);
 var o = n(442837),
     a = n(481060),
     i = n(493773),
-    s = n(367907),
-    l = n(111028),
+    l = n(367907),
+    s = n(111028),
     c = n(91218),
     u = n(829883),
     d = n(623624),
@@ -75,7 +75,7 @@ let T = (e) => {
                     type: 'Role Icon Popout',
                     guild_id: n.id
                 },
-                (0, s.v_)(m.Z.getChannel(b.Z.getChannelId(n.id)))
+                (0, l.v_)(m.Z.getChannel(b.Z.getChannelId(n.id)))
             )
         );
     });
@@ -121,7 +121,7 @@ let T = (e) => {
                                     (0, r.jsx)(a.X6q, {
                                         variant: 'heading-md/semibold',
                                         className: x.roleName,
-                                        children: (0, r.jsx)(l.Z, { children: T })
+                                        children: (0, r.jsx)(s.Z, { children: T })
                                     }),
                                     (0, r.jsx)(a.Text, {
                                         variant: 'text-sm/normal',

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685), n(539854);
+n.d(t, { Z: () => O }), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
     l = n(442837),
@@ -14,8 +14,8 @@ var r = n(200651),
     g = n(179809),
     m = n(588275),
     b = n(388032),
-    y = n(315268);
-function _(e) {
+    _ = n(315268);
+function y(e) {
     let { onActivate: t, children: n } = e,
         a = (0, l.e7)([u.Z], () => u.Z.hasJoinRequestCoackmark()),
         d = i.useCallback(() => {
@@ -31,20 +31,20 @@ function _(e) {
             }
         }, [p, a, h, t]),
         (0, r.jsxs)('div', {
-            className: y.container,
+            className: _.container,
             children: [
                 (0, r.jsx)(o.yRy, {
                     ref: p,
                     shouldShow: a,
                     renderPopout: () =>
                         (0, r.jsxs)('div', {
-                            className: y.popoutContainer,
+                            className: _.popoutContainer,
                             children: [
                                 (0, r.jsxs)('div', {
-                                    className: y.popoutContent,
+                                    className: _.popoutContent,
                                     children: [
                                         (0, r.jsxs)('div', {
-                                            className: y.coachmarkTextContainer,
+                                            className: _.coachmarkTextContainer,
                                             children: [
                                                 (0, r.jsx)(o.X6q, {
                                                     variant: 'heading-md/medium',
@@ -66,7 +66,7 @@ function _(e) {
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)('div', { className: y.popoutCaretLeft })
+                                (0, r.jsx)('div', { className: _.popoutCaretLeft })
                             ]
                         }),
                     position: 'right',
@@ -102,7 +102,7 @@ function _(e) {
                                 }
                                 return e;
                             })({}, e)),
-                            (n = n = { className: y.popoutAnchor }),
+                            (n = n = { className: _.popoutAnchor }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                                 : (function (e, t) {
@@ -124,13 +124,13 @@ function _(e) {
         })
     );
 }
-function v(e) {
+function O(e) {
     let { onActivate: t } = e,
-        [n, v] = i.useState(!1),
-        O = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
+        [n, O] = i.useState(!1),
+        v = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
         C = (0, l.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
         j = (0, f.Z)(),
-        S = (0, s.Z)(O),
+        S = (0, s.Z)(v),
         E = i.useMemo(() => {
             let e = (0, p.qQ)({
                 folderId: h.S.PENDING_JOIN_REQUESTS_FOLDER,
@@ -144,13 +144,13 @@ function v(e) {
     i.useEffect(() => {
         n && !C && a.Z.fetchRequestToJoinGuilds();
     }, [n, C]);
-    let x = null != O && j.includes(O);
+    let x = null != v && j.includes(v);
     return (i.useEffect(() => {
-        !n && x && S !== O && v(!0);
-    }, [n, x, S, O]),
+        !n && x && S !== v && O(!0);
+    }, [n, x, S, v]),
     0 === j.length)
         ? null
-        : (0, r.jsx)(_, {
+        : (0, r.jsx)(y, {
               onActivate: t,
               children: (0, r.jsx)(g.Z, {
                   folderNode: E,
@@ -159,11 +159,11 @@ function v(e) {
                   draggable: !1,
                   sorting: !1,
                   onExpandCollapse: () => {
-                      v(!n), c.ZP.clearCoachmark();
+                      O(!n), c.ZP.clearCoachmark();
                   },
                   folderButtonSize: 'icon',
                   folderButtonContent: (0, r.jsx)('div', {
-                      className: y.pendingFolderButtonIcon,
+                      className: _.pendingFolderButtonIcon,
                       children: (0, r.jsx)(o.wGF, {
                           size: 'sm',
                           color: 'currentColor'

@@ -133,11 +133,11 @@ function v(e) {
         null != j && (w.background = 'linear-gradient(45deg, '.concat(E, ', ').concat(N, ')')),
         (0, n.jsx)(o.f6W, {
             theme: f.BR.DARK,
+            disableAdaptiveTheme: !0,
             children: (e) =>
                 (0, n.jsxs)('figure', {
                     'aria-roledescription': b.intl.string(b.t.zFfUhI),
                     'aria-labelledby': C,
-                    'data-disable-adaptive-theme': !0,
                     className: i()(O.container, e),
                     style: w,
                     children: [

@@ -33,9 +33,9 @@ let h = i.memo(function (e) {
         })(e, ['children', 'isOverlay', 'contextGuildId']);
     let [g, m] = i.useState({ maskImage: 'none' }),
         b = i.useRef(null),
-        y = (0, a.Z)(() => {
+        _ = (0, a.Z)(() => {
             var e, t, n, r;
-            let i = null != (n = null == (e = _.current) ? void 0 : e.getBoundingClientRect()) ? n : null,
+            let i = null != (n = null == (e = y.current) ? void 0 : e.getBoundingClientRect()) ? n : null,
                 l = null != (r = null == (t = b.current) ? void 0 : t.getBoundingClientRect()) ? r : null;
             if (h || null == i || null == l) return void m({ maskImage: 'none' });
             let o = l.right - i.right,
@@ -43,11 +43,11 @@ let h = i.memo(function (e) {
             if (s > l.width) return void m({ maskImage: 'none' });
             m({ maskImage: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) '.concat(s, 'px)') });
         }),
-        _ = (0, s.y)(y),
-        v = (0, c.yF)(f.userId, p);
+        y = (0, s.y)(_),
+        O = (0, c.yF)(f.userId, p);
     return (0, r.jsxs)('div', {
         className: o()(d.container, h && d.isOverlayContainer),
-        ref: _,
+        ref: y,
         children: [
             (0, r.jsx)('div', {
                 className: d.usernameContainer,
@@ -56,7 +56,7 @@ let h = i.memo(function (e) {
             (0, r.jsx)('div', {
                 className: d.chipletParent,
                 children: (0, r.jsx)('span', {
-                    className: o()(d.chipletContainer, !v && h && d.noPadding),
+                    className: o()(d.chipletContainer, !O && h && d.noPadding),
                     ref: b,
                     style: g,
                     children: (0, r.jsx)(

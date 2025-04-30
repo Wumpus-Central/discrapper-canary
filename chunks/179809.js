@@ -14,10 +14,10 @@ var r = n(200651),
     g = n(771845),
     m = n(624138),
     b = n(727258),
-    y = n(276952),
-    _ = n(199540),
-    v = n(40153),
-    O = n(252686),
+    _ = n(276952),
+    y = n(199540),
+    O = n(40153),
+    v = n(252686),
     C = n(682662),
     j = n(662146),
     S = n(981631),
@@ -77,7 +77,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
             ea = i.useCallback((e) => (null == n ? void 0 : n(F, e)), [n, F]),
             ec = (0, r.jsxs)(C.H, {
                 children: [
-                    (0, r.jsx)(y.Z, {
+                    (0, r.jsx)(_.Z, {
                         disabled: $ || a,
                         hovered: Y,
                         selected: l,
@@ -101,8 +101,8 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                             }),
                             'data-dnd-name': er,
                             children: $
-                                ? (0, r.jsx)(O.Z, { isFolder: !0 })
-                                : (0, r.jsx)(_.Z, {
+                                ? (0, r.jsx)(v.Z, { isFolder: !0 })
+                                : (0, r.jsx)(y.Z, {
                                       folderNode: t,
                                       expanded: a,
                                       sorting: R,
@@ -123,7 +123,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                         })
                     }),
                     A
-                        ? (0, r.jsx)(v.ZP, {
+                        ? (0, r.jsx)(O.ZP, {
                               name: er,
                               targetNode: t,
                               onDragOverChanged: et
@@ -165,7 +165,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                     );
                 }),
                 A && a
-                    ? (0, r.jsx)(v.Zu, {
+                    ? (0, r.jsx)(O.Zu, {
                           name: er,
                           targetNode: t
                       })

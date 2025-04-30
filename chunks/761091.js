@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(539854);
+n.d(t, { Z: () => O }), n(539854);
 var r = n(399606),
     i = n(897345),
     l = n(697379),
@@ -14,25 +14,25 @@ var r = n(399606),
     g = n(639777),
     m = n(216572),
     b = n(330791),
-    y = n(443063),
-    _ = n(981631);
-function v(e) {
+    _ = n(443063),
+    y = n(981631);
+function O(e) {
     let t = (0, h.Z)(e.id),
         n = (0, l.W)(e.id),
-        v = (0, d.j0)(e.id),
-        O = (0, i.u)(e),
+        O = (0, d.j0)(e.id),
+        v = (0, i.u)(e),
         C = (0, c.g)(e.id),
         j = (0, r.e7)([s.Z], () => s.Z.getNewMemberActions(e.id), [e.id]),
         S = (0, u.Z)(e.id),
         E = (0, a.PE)(e.id),
         x = (0, o.n2)(e.id),
         P = [],
-        I = e.hasFeature(_.oNc.HUB),
-        w = e.hasFeature(_.oNc.COMMUNITY),
+        I = e.hasFeature(y.oNc.HUB),
+        w = e.hasFeature(y.oNc.COMMUNITY),
         N = (0, b.lN)(!(0, p.r1)(e.id)),
-        Z = e.hasFeature(_.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
+        Z = e.hasFeature(y.oNc.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY),
         T = (0, f.Ek)(e.id, 'useGuildActionRow'),
         A = (0, g.Z)(e.id),
         R = (0, m.Q_)(e.id);
-    return I && P.push(y.z.GUILD_HUB_HEADER_OPTIONS), !E && C && S && null != j && j.length > 0 ? P.push(y.z.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR) : e.premiumProgressBarEnabled && P.push(y.z.GUILD_PREMIUM_PROGRESS_BAR), !I && C && P.push(y.z.GUILD_HOME), t && P.push(y.z.GUILD_SCHEDULED_EVENTS), !I && w && N && P.push(y.z.CHANNELS_AND_ROLES), v && P.push(y.z.GUILD_ROLE_SUBSCRIPTIONS), O && P.push(y.z.GUILD_SHOP), ((x && (w || Z)) || (n && e.hasFeature(_.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL))) && P.push(y.z.GUILD_MOD_DASH_MEMBER_SAFETY), T && A && P.push(y.z.GUILD_BOOSTS), R && P.push(y.z.REPORT_TO_MOD_CHANNEL), P;
+    return I && P.push(_.z.GUILD_HUB_HEADER_OPTIONS), !E && C && S && null != j && j.length > 0 ? P.push(_.z.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR) : e.premiumProgressBarEnabled && P.push(_.z.GUILD_PREMIUM_PROGRESS_BAR), !I && C && P.push(_.z.GUILD_HOME), t && P.push(_.z.GUILD_SCHEDULED_EVENTS), !I && w && N && P.push(_.z.CHANNELS_AND_ROLES), O && P.push(_.z.GUILD_ROLE_SUBSCRIPTIONS), v && P.push(_.z.GUILD_SHOP), ((x && (w || Z)) || (n && e.hasFeature(y.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL))) && P.push(_.z.GUILD_MOD_DASH_MEMBER_SAFETY), T && A && P.push(_.z.GUILD_BOOSTS), R && P.push(_.z.REPORT_TO_MOD_CHANNEL), P;
 }

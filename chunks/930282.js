@@ -7,8 +7,8 @@ var r = n(200651),
     o = n(192379),
     a = n(120356),
     i = n.n(a),
-    s = n(653603),
-    l = n.n(s),
+    l = n(653603),
+    s = n.n(l),
     c = n(902704),
     u = n(453687),
     d = n(318713),
@@ -27,7 +27,7 @@ function h(e, t) {
 }
 let _ = o.memo(function (e) {
     var t;
-    let { className: n, message: a, children: s, content: c, onUpdate: h, contentRef: _ } = e,
+    let { className: n, message: a, children: l, content: c, onUpdate: h, contentRef: _ } = e,
         y = a.isEdited(),
         v = a.state === p.yb.SEND_FAILED,
         O = a.state === p.yb.SENDING,
@@ -37,19 +37,19 @@ let _ = o.memo(function (e) {
     return (
         o.useLayoutEffect(() => {
             C.current ? null != h && h() : (C.current = !0);
-        }, [h, a.content, c, x, s]),
+        }, [h, a.content, c, x, l]),
         (0, r.jsxs)('div', {
             id: (0, u.ut)(a),
             ref: _,
             className: i()(n, f.markup, {
                 [m.messageContent]: !0,
                 [m.isSending]: O && !j,
-                [m.markupRtl]: 'rtl' === l()(a.content),
+                [m.markupRtl]: 'rtl' === s()(a.content),
                 [m.isFailed]: v,
                 [m.isUnsupported]: a.isUnsupported
             }),
             children: [
-                null != s ? s : b(a, c),
+                null != l ? l : b(a, c),
                 y &&
                     null != a.editedTimestamp &&
                     (0, r.jsxs)(r.Fragment, {

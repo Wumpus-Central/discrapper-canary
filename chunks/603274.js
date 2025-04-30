@@ -15,10 +15,10 @@ var i = n(120356),
     g = n(501655),
     m = n(199902),
     b = n(592125),
-    y = n(594174),
-    _ = n(938475),
-    v = n(823379),
-    O = n(709054),
+    _ = n(594174),
+    y = n(938475),
+    O = n(823379),
+    v = n(709054),
     C = n(853856),
     j = n(981631),
     S = n(388032),
@@ -44,19 +44,19 @@ function P(e, t) {
 }
 function I() {
     let e = (0, a.Wu)([C.Z, b.Z], () =>
-            O.default
+            v.default
                 .keys(C.Z.getFavoriteChannels())
                 .map((e) => b.Z.getChannel(e))
-                .filter(v.lm)
+                .filter(O.lm)
         ),
         t = e.map((e) => e.id),
         n = e.filter((e) => e.type === j.d4z.GUILD_VOICE),
         i = e.filter((e) => e.type === j.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
         l = (0, a.Wu)(
-            [_.ZP],
+            [y.ZP],
             () =>
                 s().flatMap(n, (e) =>
-                    _.ZP.getVoiceStatesForChannel(e).map((e) => {
+                    y.ZP.getVoiceStatesForChannel(e).map((e) => {
                         let { user: t } = e;
                         return t;
                     })
@@ -99,8 +99,8 @@ function I() {
             },
             [t]
         ),
-        I = (0, a.Wu)([y.default], () => x.map((e) => y.default.getUser(e)), [x]),
-        w = (0, a.Wu)([y.default], () => S.map((e) => y.default.getUser(e)), [S]),
+        I = (0, a.Wu)([_.default], () => x.map((e) => _.default.getUser(e)), [x]),
+        w = (0, a.Wu)([_.default], () => S.map((e) => _.default.getUser(e)), [S]),
         N = P(
             c.gj8,
             l.filter((e) => !S.includes(e.id) && !x.includes(e.id))

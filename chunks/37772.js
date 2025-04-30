@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B });
+n.d(t, { Z: () => G });
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -17,25 +17,26 @@ var r = n(200651),
     b = n(709054),
     x = n(594173),
     y = n(786761),
+    E = n(750030),
     v = n(493892),
-    E = n(901461),
-    O = n(739566),
-    j = n(443877),
-    C = n(492593),
-    S = n(938353),
-    I = n(25015),
-    N = n(689674),
-    T = n(963550),
-    P = n(845080),
-    A = n(295790),
-    w = n(145807),
-    Z = n(56744),
-    R = n(834129),
-    k = n(981631),
-    D = n(388032),
-    L = n(758010),
-    M = n(30804);
-function U(e) {
+    O = n(901461),
+    j = n(739566),
+    C = n(443877),
+    S = n(492593),
+    I = n(938353),
+    N = n(25015),
+    T = n(689674),
+    P = n(963550),
+    A = n(845080),
+    w = n(295790),
+    Z = n(145807),
+    R = n(56744),
+    k = n(834129),
+    D = n(981631),
+    L = n(388032),
+    M = n(758010),
+    U = n(30804);
+function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -60,7 +61,7 @@ function U(e) {
     }
     return e;
 }
-function F(e, t) {
+function B(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -78,76 +79,76 @@ function F(e, t) {
         e
     );
 }
-let B = i.memo(function e(t) {
-    var n, i;
-    let l,
-        { channel: s, message: R, compact: L = !1, className: B, onContextMenu: H, onClick: V, disableInteraction: z = !1, hasThread: W, treatSpam: K } = t,
-        Y = k.OBS.has(R.type) ? R.messageReference : void 0,
+let G = i.memo(function e(t) {
+    var n;
+    let i,
+        { channel: l, message: s, compact: k = !1, className: M, onContextMenu: G, onClick: V, disableInteraction: z = !1, hasThread: W, treatSpam: K } = t,
+        Y = D.OBS.has(s.type) ? s.messageReference : void 0,
         X = (0, o.e7)([f.Z], () => f.Z.getMessageByReference(Y)),
-        q = (0, o.e7)([g.Z], () => (R.type === k.uaV.THREAD_STARTER_MESSAGE && X.state === f.Y.LOADED ? g.Z.getChannel(X.message.channel_id) : null)),
+        q = (0, o.e7)([g.Z], () => (s.type === D.uaV.THREAD_STARTER_MESSAGE && X.state === f.Y.LOADED ? g.Z.getChannel(X.message.channel_id) : null)),
         Q = h.x4.useSetting(),
         J = h.RS.useSetting(),
         $ = h.NA.useSetting(),
         ee = h.QK.useSetting(),
-        et = (0, u.A)((null != (n = R.editedTimestamp) ? n : R.timestamp).valueOf()),
-        en = (0, d.Z)(null == s ? void 0 : s.id),
-        { disableReactionCreates: er } = (0, j.Z)(s),
-        { content: ei, hasSpoilerEmbeds: el } = (0, I.Z)(R, {
+        et = (0, u.A)((null != (n = s.editedTimestamp) ? n : s.timestamp).valueOf()),
+        en = (0, d.Z)(null == l ? void 0 : l.id),
+        { disableReactionCreates: er } = (0, C.Z)(l),
+        { content: ei, hasSpoilerEmbeds: el } = (0, N.Z)(s, {
             hideSimpleEmbedContent: J && $,
             allowList: et,
             allowHeading: et,
             allowLinks: !0,
             previewLinkTarget: !0
         }),
-        ea = (0, O.ZP)(R),
-        eo = null != (i = R.getGuildId()) ? i : void 0,
+        ea = (0, j.ZP)(s),
+        eo = (0, E.k)(s),
         es = (0, m.Z)(ea),
-        ec = (0, o.e7)([g.Z], () => R.hasFlag(k.iLy.HAS_THREAD) && g.Z.getChannel(b.default.castMessageIdAsChannelId(R.id))),
-        eu = R.type === k.uaV.THREAD_STARTER_MESSAGE && X.state === f.Y.LOADED && null != q,
-        ed = !eu && void 0 === l,
-        ep = (0, N.Z)({
-            message: R,
-            channel: s,
+        ec = (0, o.e7)([g.Z], () => s.hasFlag(D.iLy.HAS_THREAD) && g.Z.getChannel(b.default.castMessageIdAsChannelId(s.id))),
+        eu = s.type === D.uaV.THREAD_STARTER_MESSAGE && X.state === f.Y.LOADED && null != q,
+        ed = !eu && void 0 === i,
+        ep = (0, T.Z)({
+            message: s,
+            channel: l,
             enabled: ed
         }),
-        em = (0, c.V)(s.id, R.author.id),
-        ef = (0, x.ro)(R.id, R.channel_id),
-        eh = (0, p.Z)(R);
+        em = (0, c.V)(l.id, s.author.id),
+        ef = (0, x.ro)(s.id, s.channel_id),
+        eh = (0, p.Z)(s);
     return eu
         ? (0, r.jsx)(
               e,
-              F(U({}, t), {
+              B(F({}, t), {
                   message: X.message,
                   channel: q,
                   hasThread: !1
               })
           )
-        : (_.Z.isBlockedForMessage(R) ? (l = D.t['+FcYMz']) : _.Z.isIgnoredForMessage(R) ? (l = D.t.VFWjc3) : (0, v.DQ)(R) && K && (l = D.t.xfkfTE), void 0 !== l)
-          ? (0, r.jsx)(G, {
-                className: B,
-                compact: L,
+        : (_.Z.isBlockedForMessage(s) ? (i = L.t['+FcYMz']) : _.Z.isIgnoredForMessage(s) ? (i = L.t.VFWjc3) : (0, v.DQ)(s) && K && (i = L.t.xfkfTE), void 0 !== i)
+          ? (0, r.jsx)(H, {
+                className: M,
+                compact: k,
                 count: 1,
-                collapsedReason: l
+                collapsedReason: i
             })
-          : (0, r.jsx)(C.Z, {
-                compact: L,
-                className: a()(B, {
-                    [M.ephemeral]: (0, y.Pv)(R),
-                    [M.disableInteraction]: z,
-                    [M.groupStart]: t.isGroupStart
+          : (0, r.jsx)(S.Z, {
+                compact: k,
+                className: a()(M, {
+                    [U.ephemeral]: (0, y.Pv)(s),
+                    [U.disableInteraction]: z,
+                    [U.groupStart]: t.isGroupStart
                 }),
-                childrenRepliedMessage: (0, Z.Z)(R, s, Y, X, L),
-                childrenHeader: (0, P.Z)(
-                    F(U({}, t), {
+                childrenRepliedMessage: (0, R.Z)(s, l, Y, X, k),
+                childrenHeader: (0, A.Z)(
+                    B(F({}, t), {
                         author: ea,
-                        guildId: s.guild_id
+                        guildId: l.guild_id
                     })
                 ),
-                childrenAccessories: (0, r.jsx)(S.BB, {
-                    channel: s,
-                    message: R,
+                childrenAccessories: (0, r.jsx)(I.BB, {
+                    channel: l,
+                    message: s,
                     hasSpoilerEmbeds: el,
-                    compact: L,
+                    compact: k,
                     canSuppressEmbeds: !1,
                     canDeleteAttachments: !1,
                     disableReactionReads: !1,
@@ -166,36 +167,36 @@ let B = i.memo(function e(t) {
                     shouldRedactExplicitContent: em,
                     ctaButtonType: ef
                 }),
-                childrenExecutedCommand: (0, w.Z)(R, s, L),
-                childrenMessageContent: (0, T.Z)(t, ei),
-                childrenSystemMessage: (0, A.Z)(t),
-                onContextMenu: H,
+                childrenExecutedCommand: (0, Z.Z)(s, l, k),
+                childrenMessageContent: (0, P.Z)(t, ei),
+                childrenSystemMessage: (0, w.Z)(t),
+                onContextMenu: G,
                 onClick: V,
-                hasThread: !1 !== W && null != ec && R.hasFlag(k.iLy.HAS_THREAD),
-                hasReply: R.type === k.uaV.REPLY,
-                isSystemMessage: (0, E.Z)(R),
+                hasThread: !1 !== W && null != ec && s.hasFlag(D.iLy.HAS_THREAD),
+                hasReply: s.type === D.uaV.REPLY,
+                isSystemMessage: (0, O.Z)(s),
                 messageRef: ep,
                 guildId: eo,
                 authorHasGradientRole: es
             });
 });
-function G(e) {
+function H(e) {
     let { className: t, count: n, compact: i, collapsedReason: l } = e;
-    return (0, r.jsx)(C.Z, {
+    return (0, r.jsx)(S.Z, {
         className: t,
         compact: i,
         role: 'group',
-        childrenMessageContent: (0, r.jsx)(R.Z, {
+        childrenMessageContent: (0, r.jsx)(k.Z, {
             compact: i,
-            className: L.blockedSystemMessage,
+            className: M.blockedSystemMessage,
             iconNode: (0, r.jsx)(s.Dio, {
                 size: 'md',
                 color: 'currentColor',
-                className: L.blockedIcon
+                className: M.blockedIcon
             }),
             children: (0, r.jsx)('div', {
-                className: L.blockedMessageText,
-                children: D.intl.format(l, { count: n })
+                className: M.blockedMessageText,
+                children: L.intl.format(l, { count: n })
             })
         })
     });

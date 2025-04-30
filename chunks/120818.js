@@ -1,4 +1,4 @@
-n.d(t, { T: () => y });
+n.d(t, { T: () => _ });
 var r = n(200651),
     i = n(192379),
     l = n(91192),
@@ -24,23 +24,23 @@ function b(e, t) {
         t
     );
 }
-let y = i.memo(function (e) {
+let _ = i.memo(function (e) {
     var t, n;
-    let { guild: y } = e,
-        _ = (0, o.e7)([c.Z], () => c.Z.getNewMemberActions(y.id), [y.id]),
-        v = (0, o.e7)([u.Z], () => u.Z.getCompletedActions(y.id)),
-        O = i.useMemo(() => {
-            if (null == _ || null == v) return 0;
+    let { guild: _ } = e,
+        y = (0, o.e7)([c.Z], () => c.Z.getNewMemberActions(_.id), [_.id]),
+        O = (0, o.e7)([u.Z], () => u.Z.getCompletedActions(_.id)),
+        v = i.useMemo(() => {
+            if (null == y || null == O) return 0;
             let e = 0;
             return (
-                _.forEach((t) => {
-                    null != v[t.channelId] && e++;
+                y.forEach((t) => {
+                    null != O[t.channelId] && e++;
                 }),
                 e
             );
-        }, [v, _]),
-        C = null == _ ? 0 : _.length,
-        j = (0, l.JA)('progress-bar-'.concat(y.id));
+        }, [O, y]),
+        C = null == y ? 0 : y.length,
+        j = (0, l.JA)('progress-bar-'.concat(_.id));
     return (0, r.jsxs)('li', {
         children: [
             (0, r.jsxs)(
@@ -76,7 +76,7 @@ let y = i.memo(function (e) {
                         focusProps: { offset: { right: 4 } },
                         className: m.progressBarContainer,
                         onClick: function () {
-                            (0, d.uL)(p.Z5c.CHANNEL(y.id, f.oC.GUILD_HOME));
+                            (0, d.uL)(p.Z5c.CHANNEL(_.id, f.oC.GUILD_HOME));
                         },
                         children: [
                             (0, r.jsxs)('div', {
@@ -96,7 +96,7 @@ let y = i.memo(function (e) {
                                                 children: g.intl.format(g.t.eqZ1lZ, {
                                                     numberHook: b,
                                                     total: C.toString(),
-                                                    completed: O.toString()
+                                                    completed: v.toString()
                                                 })
                                             }),
                                             (0, r.jsx)(h.Z, {
@@ -112,7 +112,7 @@ let y = i.memo(function (e) {
                             (0, r.jsx)(s.Exd, {
                                 className: m.progressBar,
                                 foregroundGradientColor: [(0, a.Lq)(p.Ilk.GREEN_300), (0, a.Lq)(p.Ilk.GREEN_230)],
-                                percent: (O / C) * 100 + 3,
+                                percent: (v / C) * 100 + 3,
                                 animate: !0
                             })
                         ]

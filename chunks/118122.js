@@ -14,10 +14,10 @@ var r = n(200651),
     g = n(594174),
     m = n(40153),
     b = n(603592),
-    y = n(981631),
-    _ = n(675999),
-    v = n(388032),
-    O = n(176330);
+    _ = n(981631),
+    y = n(675999),
+    O = n(388032),
+    v = n(176330);
 let C = {
     origin: {
         x: -16,
@@ -70,7 +70,7 @@ function S(e) {
         S = i.useMemo(() => Object.values(s), [s]),
         E = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
         x = i.useMemo(() => S.some((e) => e.isOwner(E)), [S, E]),
-        P = (0, o.s9z)((e) => (0, o.DEQ)(e, _.PU)),
+        P = (0, o.s9z)((e) => (0, o.DEQ)(e, y.PU)),
         { analyticsLocations: I } = (0, a.ZP)(),
         w = (0, u.Q3)('CreateJoinGuildButton'),
         N = (0, r.jsx)(b.Z, {
@@ -79,10 +79,10 @@ function S(e) {
             onClick: () => {
                 (0, d.yU)()
                     ? (0, h.Z)({
-                          analyticsSource: { page: y.Sbl.CREATE_JOIN_GUILD_MODAL },
+                          analyticsSource: { page: _.Sbl.CREATE_JOIN_GUILD_MODAL },
                           analyticsLocation: {
-                              page: y.Sbl.CREATE_JOIN_GUILD_MODAL,
-                              section: y.jXE.GUILD_CAP_UPSELL_MODAL
+                              page: _.Sbl.CREATE_JOIN_GUILD_MODAL,
+                              section: _.jXE.GUILD_CAP_UPSELL_MODAL
                           },
                           analyticsLocations: I
                       })
@@ -90,13 +90,13 @@ function S(e) {
             },
             selected: P,
             onContextMenu: j,
-            tooltip: v.intl.string(v.t.l5WIbW),
+            tooltip: O.intl.string(O.t.l5WIbW),
             icon: w ? o.oFk : o.BRu
         });
     return t
         ? N
         : (0, r.jsx)('div', {
-              className: O.tutorialContainer,
+              className: v.tutorialContainer,
               children: (0, r.jsxs)(p.Z, {
                   tutorialId: x ? 'create-more-servers' : 'create-first-server',
                   inlineSpecs: C,
@@ -105,7 +105,7 @@ function S(e) {
                       N,
                       null != n &&
                           (0, r.jsx)(m.ZP, {
-                              name: v.intl.string(v.t['45xjMz']),
+                              name: O.intl.string(O.t['45xjMz']),
                               targetNode: n,
                               below: !0,
                               noCombine: !0

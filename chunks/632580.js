@@ -100,7 +100,7 @@ async function y(e) {
                     amount: F.total,
                     currency: F.currency
                 },
-                n = (0, f.BK)((0, f.aS)(A.id, !1));
+                n = (0, f.BK)((0, f.aS)(A.id, !1, !1, R));
             if (null != L) {
                 let e = (0, f.al)(L, A.id, 1, new Set(N));
                 (e = (0, f.gB)(e)), (n = (0, f.UX)(e, R.currency.toLowerCase()));

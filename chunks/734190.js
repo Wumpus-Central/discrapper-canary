@@ -14,10 +14,10 @@ var r = n(200651),
     g = n(488131),
     m = n(592125),
     b = n(306680),
-    y = n(979651),
-    _ = n(938475),
-    v = n(714794),
-    O = n(876548),
+    _ = n(979651),
+    y = n(938475),
+    O = n(714794),
+    v = n(876548),
     C = n(25601),
     j = n(207055),
     S = n(981631),
@@ -160,8 +160,8 @@ function A(e) {
 }
 let R = i.memo(function (e) {
     let { thread: t, isSelectedChannel: l, isSelectedVoice: w, isLast: R, withGuildIcon: D } = e,
-        L = (0, a.e7)([_.ZP], () => _.ZP.getVoiceStatesForChannel(t), [t]),
-        k = (0, a.e7)([y.Z], () => y.Z.hasVideo(t.id)),
+        L = (0, a.e7)([y.ZP], () => y.ZP.getVoiceStatesForChannel(t), [t]),
+        k = (0, a.e7)([_.Z], () => _.Z.hasVideo(t.id)),
         {
             unread: M,
             mentionCount: U,
@@ -276,13 +276,13 @@ let R = i.memo(function (e) {
                                             className: I.children,
                                             children: [
                                                 z > 0 && t.userLimit > 0
-                                                    ? (0, r.jsx)(O.Z, {
+                                                    ? (0, r.jsx)(v.Z, {
                                                           userCount: z,
                                                           video: k,
                                                           channel: t
                                                       })
                                                     : null,
-                                                (0, v.Z)(U)
+                                                (0, O.Z)(U)
                                                     ? (0, r.jsx)(C.Z, {
                                                           mentionsCount: U,
                                                           isMentionLowImportance: G

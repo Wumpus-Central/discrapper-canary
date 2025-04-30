@@ -1,65 +1,64 @@
-n.d(t, { Z: () => f });
+n.d(t, { Z: () => b });
 var r = n(200651),
     o = n(192379),
     a = n(905405),
     i = n(626135),
+    l = n(750030),
     s = n(937889),
-    l = n(761910),
-    c = n(488968),
-    u = n(479398),
-    d = n(981631),
-    p = n(388032),
-    g = n(875231);
-let m = o.lazy(() => n.e('85831').then(n.bind(n, 120314)));
-function f(e, t) {
-    let { hideSimpleEmbedContent: f, formatInline: b = !1, noStyleAndInteraction: h = !1, isInteracting: _ = !1, allowHeading: y = !1, allowList: v = !1, allowLinks: O = !1, allowDevLinks: j = !1, previewLinkTarget: x = !1, viewingChannelId: C } = t,
-        P = (0, a.p)(),
-        T = (0, u.o)({ location: 'useMessageRenderedContent' });
+    c = n(761910),
+    u = n(488968),
+    d = n(479398),
+    p = n(981631),
+    g = n(388032),
+    m = n(875231);
+let f = o.lazy(() => n.e('85831').then(n.bind(n, 120314)));
+function b(e, t) {
+    let { hideSimpleEmbedContent: b, formatInline: h = !1, noStyleAndInteraction: _ = !1, isInteracting: y = !1, allowHeading: v = !1, allowList: O = !1, allowLinks: j = !1, allowDevLinks: x = !1, previewLinkTarget: C = !1, viewingChannelId: P } = t,
+        T = (0, a.p)(),
+        w = (0, d.o)({ location: 'useMessageRenderedContent' });
     return o.useMemo(() => {
         if (null != e.customRenderedContent) return e.customRenderedContent;
         if (e.isUnsupported)
             return {
-                content: p.intl.string(p.t.sWi5ER),
+                content: g.intl.string(g.t.sWi5ER),
                 hasSpoilerEmbeds: !1
             };
-        if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(d.iLy.LOADING)) return (0, l.Z)(e);
-        if (e.type === d.uaV.CHANGELOG) {
+        if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(p.iLy.LOADING)) return (0, c.Z)(e);
+        if (e.type === p.uaV.CHANGELOG) {
             let { renderChangelogMessageMarkup: t } = n(55406);
-            return t(e, g, {
+            return t(e, m, {
                 track: (e, t) => {
                     i.default.track(e, t);
                 }
             });
         }
-        if (T.enabled) {
-            var t;
-            return {
-                content: (0, r.jsx)(o.Suspense, {
-                    children: (0, r.jsx)(c.v.Provider, {
-                        value: {
-                            messageId: e.id,
-                            channelId: e.channel_id,
-                            viewingChannelId: C,
-                            guildId: null != (t = e.getGuildId()) ? t : void 0
-                        },
-                        children: (0, r.jsx)(m, { content: e.content })
-                    })
-                }),
-                hasSpoilerEmbeds: !1
-            };
-        }
-        return (0, s.ZP)(e, {
-            hideSimpleEmbedContent: f,
-            formatInline: b,
-            noStyleAndInteraction: h,
-            isInteracting: _,
-            allowHeading: y,
-            allowList: v,
-            allowLinks: O,
-            allowDevLinks: j,
-            previewLinkTarget: x,
-            shouldFilterKeywords: P,
-            viewingChannelId: C
-        });
-    }, [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, f, b, h, _, y, v, O, x, P, j, C, T.enabled]);
+        return w.enabled
+            ? {
+                  content: (0, r.jsx)(o.Suspense, {
+                      children: (0, r.jsx)(u.v.Provider, {
+                          value: {
+                              messageId: e.id,
+                              channelId: e.channel_id,
+                              viewingChannelId: P,
+                              guildId: (0, l.k)(e)
+                          },
+                          children: (0, r.jsx)(f, { content: e.content })
+                      })
+                  }),
+                  hasSpoilerEmbeds: !1
+              }
+            : (0, s.ZP)(e, {
+                  hideSimpleEmbedContent: b,
+                  formatInline: h,
+                  noStyleAndInteraction: _,
+                  isInteracting: y,
+                  allowHeading: v,
+                  allowList: O,
+                  allowLinks: j,
+                  allowDevLinks: x,
+                  previewLinkTarget: C,
+                  shouldFilterKeywords: T,
+                  viewingChannelId: P
+              });
+    }, [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, b, h, _, y, v, O, j, C, T, x, P, w.enabled]);
 }

@@ -1,6 +1,6 @@
 n.d(t, {
     Wj: () => C,
-    ZP: () => O
+    ZP: () => v
 }),
     n(388685);
 var r = n(200651),
@@ -18,13 +18,13 @@ var r = n(200651),
     g = n(905128),
     m = n(326660),
     b = n(317169),
-    y = n(19394),
-    _ = n(535396),
-    v = n(921944);
-function O(e) {
+    _ = n(19394),
+    y = n(535396),
+    O = n(921944);
+function v(e) {
     let t = (0, l.e7)([f.Z], () => f.Z.getNotificationStateForGuild(e), [e]),
         n = (0, l.e7)([g.Z], () => g.Z.getStateForGuild(e)),
-        { trailing: p, showUnread: v } = (function (e, t, n) {
+        { trailing: p, showUnread: O } = (function (e, t, n) {
             let l = (0, b.Z)(e).available;
             return i.useMemo(() => {
                 var e, i, o;
@@ -34,7 +34,7 @@ function O(e) {
                         showUnread: !1
                     };
                 let { unlockedPowerups: c } = t,
-                    u = (0, y.h)(c),
+                    u = (0, _.h)(c),
                     d = null != (i = null == n ? void 0 : n.lastSeenWarningNotification) ? i : Date.now(),
                     h = new Date(null == (e = u[u.length - 1]) ? void 0 : e.ends_at).getTime(),
                     p = null != (o = null == n ? void 0 : n.lastBoostCount) ? o : 0;
@@ -60,21 +60,21 @@ function O(e) {
                         };
             }, [l, null == n ? void 0 : n.lastBoostCount, null == n ? void 0 : n.lastSeenWarningNotification, t]);
         })(e, n, t),
-        O = (function (e, t) {
+        v = (function (e, t) {
             let [n, r] = (0, c.cv)(null != t ? [o.z.GUILD_POWERUP_PERKS_COACHMARK] : []),
                 { available: l } = (0, b.Z)(e),
                 s = i.useMemo(() => {
                     if (null == t || n === o.z.GUILD_POWERUP_PERKS_COACHMARK) return;
                     let r = (function (e, t) {
                         let n = h.Oe.find((e) => {
-                            let n = _.Cp[e],
+                            let n = y.Cp[e],
                                 r = null != n ? t.unlockedPowerups[n] : void 0;
-                            return null != r && r.user_id !== _.Fq;
+                            return null != r && r.user_id !== y.Fq;
                         });
                         if (null == n) return;
-                        let r = _.Q1[n];
+                        let r = y.Q1[n];
                         if (null == r || (0, u.OY)(r, e)) return;
-                        let i = _.Cp[n],
+                        let i = y.Cp[n],
                             l = null != i ? t.allPowerups[i] : void 0;
                         if (null != l)
                             return {
@@ -87,7 +87,7 @@ function O(e) {
                     })(e, t);
                     if (null != r) return r;
                     let i = (function (e, t, n) {
-                        let r = Array.from(_.KW.values())
+                        let r = Array.from(y.KW.values())
                             .map((e) => {
                                 if (null == t.unlockedPowerups[e]) return t.allPowerups[e];
                             })
@@ -178,27 +178,27 @@ function O(e) {
                 }
             }, [t, n, r, s, a, p]);
         })(e, n);
-    if (null !== n && (null != p || v || null != O))
+    if (null !== n && (null != p || O || null != v))
         return {
             trailing: p,
-            showUnread: v,
-            popout: O
+            showUnread: O,
+            popout: v
         };
 }
 function C(e) {
     let t = (0, l.e7)([g.Z], () => g.Z.getStateForGuild(e)),
-        n = O(e);
+        n = v(e);
     i.useEffect(() => {
         var t;
-        (0, p.jd)(e), null == n || null == (t = n.popout) || t.markAsDismissed(v.L.AUTO_DISMISS);
+        (0, p.jd)(e), null == n || null == (t = n.popout) || t.markAsDismissed(O.L.AUTO_DISMISS);
     }, [e, n]),
         i.useEffect(() => {
             null != t &&
                 h.Oe.forEach((n) => {
-                    let r = _.Cp[n];
+                    let r = y.Cp[n];
                     if (null == r || null == t.unlockedPowerups[r]) return;
-                    let i = _.Q1[n];
-                    null != i && (0, u.Qd)(i, e, !1, v.L.AUTO_DISMISS);
+                    let i = y.Q1[n];
+                    null != i && (0, u.Qd)(i, e, !1, O.L.AUTO_DISMISS);
                 });
         }, [e, t]);
 }

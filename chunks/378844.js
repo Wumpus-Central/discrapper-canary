@@ -1,6 +1,6 @@
 n.d(t, {
-    R: () => y,
-    Z: () => _
+    R: () => _,
+    Z: () => y
 });
 var r,
     i = n(200651);
@@ -42,19 +42,19 @@ function b(e) {
     }
     return e;
 }
-var y = (((r = {})[(r.VOICE = 0)] = 'VOICE'), r);
-let _ = (e) => {
-    let { type: t, guildId: r, closePopout: y } = e,
-        _ = (0, c.Dt)(),
-        { notClaimed: v, notEmailVerified: O, notPhoneVerified: C, newAccount: j, newMember: S } = (0, l.e7)([d.Z], () => d.Z.getCheck(r), [r]),
+var _ = (((r = {})[(r.VOICE = 0)] = 'VOICE'), r);
+let y = (e) => {
+    let { type: t, guildId: r, closePopout: _ } = e,
+        y = (0, c.Dt)(),
+        { notClaimed: O, notEmailVerified: v, notPhoneVerified: C, newAccount: j, newMember: S } = (0, l.e7)([d.Z], () => d.Z.getCheck(r), [r]),
         E = 0 === t ? g.intl.string(g.t['6zY8BA']) : null,
         x = null,
         P = null;
-    return (0 === t && (v ? ((x = g.intl.string(g.t.IRxUlJ)), (P = g.intl.string(g.t.fiNVio))) : C ? ((x = g.intl.string(g.t.vW8iUF)), (P = g.intl.string(g.t['50gfOj']))) : O ? ((x = g.intl.string(g.t.vdSOp6)), (P = g.intl.string(g.t.lm1UKi))) : S ? ((x = g.intl.formatToPlainString(g.t.v1ktYW, { min: p.YeM.MEMBER_AGE })), (P = g.intl.string(g.t.BddRzc))) : j && ((x = g.intl.formatToPlainString(g.t['sncw4+'], { min: p.YeM.ACCOUNT_AGE })), (P = g.intl.string(g.t.BddRzc)))), null == E || null == x)
+    return (0 === t && (O ? ((x = g.intl.string(g.t.IRxUlJ)), (P = g.intl.string(g.t.fiNVio))) : C ? ((x = g.intl.string(g.t.vW8iUF)), (P = g.intl.string(g.t['50gfOj']))) : v ? ((x = g.intl.string(g.t.vdSOp6)), (P = g.intl.string(g.t.lm1UKi))) : S ? ((x = g.intl.formatToPlainString(g.t.v1ktYW, { min: p.YeM.MEMBER_AGE })), (P = g.intl.string(g.t.BddRzc))) : j && ((x = g.intl.formatToPlainString(g.t['sncw4+'], { min: p.YeM.ACCOUNT_AGE })), (P = g.intl.string(g.t.BddRzc)))), null == E || null == x)
         ? null
         : (0, i.jsxs)(o.VqE, {
               className: m.container,
-              'aria-labelledby': _,
+              'aria-labelledby': y,
               children: [
                   (0, i.jsx)('img', {
                       alt: '',
@@ -66,7 +66,7 @@ let _ = (e) => {
                       children: [
                           (0, i.jsx)(o.X6q, {
                               variant: 'heading-md/semibold',
-                              id: _,
+                              id: y,
                               children: E
                           }),
                           (0, i.jsx)(o.Text, {
@@ -80,7 +80,7 @@ let _ = (e) => {
                                   null != P
                                       ? (0, i.jsx)(o.zxk, {
                                             onClick: () => {
-                                                v
+                                                O
                                                     ? a.j()
                                                     : C
                                                       ? (0, o.ZDy)(
@@ -90,7 +90,7 @@ let _ = (e) => {
                                                             },
                                                             { modalKey: f.M }
                                                         )
-                                                      : O &&
+                                                      : v &&
                                                         (s.Z.verifyResend(),
                                                         (0, o.h7j)((e) => {
                                                             var t, n, r;
@@ -126,15 +126,15 @@ let _ = (e) => {
                                                                 n)
                                                             );
                                                         })),
-                                                    y();
+                                                    _();
                                             },
                                             className: m.primaryButton,
                                             children: P
                                         })
                                       : null,
-                                  v || C || O
+                                  O || C || v
                                       ? (0, i.jsx)(o.zxk, {
-                                            onClick: y,
+                                            onClick: _,
                                             look: o.zxk.Looks.BLANK,
                                             className: m.cancel,
                                             children: g.intl.string(g.t.oEAioK)

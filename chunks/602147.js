@@ -13,8 +13,8 @@ var r = n(200651),
     f = n(46140),
     g = n(388032);
 let m = i.forwardRef(function (e, t) {
-    let { selected: n, onClick: m, questId: b, className: y } = e,
-        _ = i.useCallback(() => {
+    let { selected: n, onClick: m, questId: b, className: _ } = e,
+        y = i.useCallback(() => {
             (0, s.k5)({ source: h.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON });
             let e = void 0 !== b ? h.GlobalDiscoveryTab.QUESTS : a.Z.getField('selectedTab');
             switch (e) {
@@ -45,9 +45,9 @@ let m = i.forwardRef(function (e, t) {
     return (0, r.jsx)(d.Z, {
         id: 'guild-discover-button',
         ref: t,
-        className: y,
+        className: _,
         onClick: () => {
-            _(), void 0 !== m && m();
+            y(), void 0 !== m && m();
         },
         selected: n,
         tooltip: g.intl.string(g.t['4nEZLi']),

@@ -1,7 +1,7 @@
 n.d(t, {
     KE: () => b,
     KT: () => m,
-    ZP: () => y
+    ZP: () => _
 }),
     n(388685),
     n(457542);
@@ -83,11 +83,11 @@ function b(e, t) {
         { modalKey: p.H2 }
     );
 }
-function y(e, t) {
+function _(e, t) {
     var m;
-    let { analyticsLocations: y } = (0, s.ZP)(),
-        [_, v] = i.useState(!1),
-        [O, C] = i.useState(void 0),
+    let { analyticsLocations: _ } = (0, s.ZP)(),
+        [y, O] = i.useState(!1),
+        [v, C] = i.useState(void 0),
         j = (0, l.e7)([h.Z], () => {
             var t, n;
             return null != (n = null == (t = h.Z.getStateForGuild(e)) ? void 0 : t.appliedBoosts) ? n : 0;
@@ -98,7 +98,7 @@ function y(e, t) {
             (n) => {
                 let r = n ? d.H6 : d.Th;
                 return (
-                    v(!0),
+                    O(!0),
                     C(void 0),
                     r(e, t.skuId)
                         .catch((e) => {
@@ -106,7 +106,7 @@ function y(e, t) {
                             throw (C(null != (t = e.body.message) ? t : void 0), e);
                         })
                         .finally(() => {
-                            v(!1);
+                            O(!1);
                         })
                 );
             },
@@ -122,7 +122,7 @@ function y(e, t) {
                                   section: f.jXE.GUILD_POWERUPS_OVERVIEW_CARD
                               },
                               numberOfBoostsToAdd: t.cost - E,
-                              analyticsLocations: y,
+                              analyticsLocations: _,
                               guild: S,
                               intent: t.type === p.Us.LEVEL ? c.P.LEVEL : c.P.PERK,
                               onSubscribeComplete: () =>
@@ -160,12 +160,12 @@ function y(e, t) {
                               });
                           });
             },
-            [x, t, E, y, S]
+            [x, t, E, _, S]
         ),
         I = i.useCallback((e) => (e.stopPropagation(), x(!1)), [x]);
     return {
-        isLoading: _,
-        error: O,
+        isLoading: y,
+        error: v,
         onActivate: P,
         onDeactivate: I,
         onShowDeactivate: i.useCallback(

@@ -1,7 +1,7 @@
 n.d(t, { Z: () => U }), n(953529);
 var i = n(200651),
-    l = n(192379),
-    a = n(286379),
+    a = n(192379),
+    l = n(286379),
     r = n(692547),
     o = n(481060),
     s = n(442837),
@@ -66,7 +66,7 @@ function A(e, t) {
 }
 let P = (e) => {
         let { classificationTypeText: t, guildMetadata: n } = e,
-            a = l.useMemo(() => {
+            l = a.useMemo(() => {
                 let e = {
                     classification_type: t,
                     classificationHook: (e, t) => (0, i.jsx)('strong', { children: e }, t)
@@ -77,13 +77,13 @@ let P = (e) => {
             className: _.classificationHeader,
             children: (0, i.jsx)(o.X6q, {
                 variant: 'heading-xl/normal',
-                children: a
+                children: l
             })
         });
     },
     T = (e) => {
         let { actions: t, classificationExpiration: n } = e,
-            l = (0, s.e7)([d.default], () => d.default.locale);
+            a = (0, s.e7)([d.default], () => d.default.locale);
         return 0 === t.filter((e) => e.descriptions.length > 0).length && null == n
             ? null
             : (0, i.jsxs)('div', {
@@ -107,7 +107,7 @@ let P = (e) => {
                                                 tag: 'span',
                                                 variant: 'heading-md/normal',
                                                 color: 'text-normal',
-                                                children: E.intl.format(E.t.TByIjY, { expirationDate: n.toLocaleDateString(l, { dateStyle: 'medium' }) })
+                                                children: E.intl.format(E.t.TByIjY, { expirationDate: n.toLocaleDateString(a, { dateStyle: 'medium' }) })
                                             })
                                         },
                                         'expiration'
@@ -192,7 +192,7 @@ let P = (e) => {
                     )
             })
         }),
-    I = (e) =>
+    L = (e) =>
         (0, i.jsx)('div', {
             className: _.classificationLetUsKnowContainer,
             children: e.hasBeenAppealed
@@ -203,8 +203,8 @@ let P = (e) => {
                       isAppealEligible: e.isAppealEligible
                   })
         }),
-    L = (e) => {
-        let { tosLink: t, communityGuidelinesLink: n, classificationTypeText: l, policyExplainerLink: a, appealComponent: r } = e;
+    I = (e) => {
+        let { tosLink: t, communityGuidelinesLink: n, classificationTypeText: a, policyExplainerLink: l, appealComponent: r } = e;
         return (0, i.jsxs)('div', {
             className: _.classificationActionExplanationContainer,
             children: [
@@ -222,8 +222,8 @@ let P = (e) => {
                     })
                 }),
                 (0, i.jsx)(S, {
-                    classificationTypeText: l,
-                    policyExplainerLink: a
+                    classificationTypeText: a,
+                    policyExplainerLink: l
                 }),
                 r
             ]
@@ -246,21 +246,21 @@ let P = (e) => {
                 source: r,
                 violationType: S
             },
-            R = l.useRef(M);
-        return (l.useEffect(() => {
+            R = a.useRef(M);
+        return (a.useEffect(() => {
             R.current = M;
         }),
-        l.useEffect(() => {
-            let { accountStanding: e, classificationId: t, hasFlaggedContent: n, isDsaEligible: i, source: l, violationType: a } = R.current;
+        a.useEffect(() => {
+            let { accountStanding: e, classificationId: t, hasFlaggedContent: n, isDsaEligible: i, source: a, violationType: l } = R.current;
             D &&
                 u.default.track(O.rMx.SAFETY_HUB_ACTION, {
                     action: b.n0.ViewViolationDetail,
                     account_standing: e.state,
                     classification_ids: [Number(t)],
-                    source: l,
+                    source: a,
                     is_violative_content_shown: n,
                     is_dsa_eligible: i,
-                    violation_type: a
+                    violation_type: l
                 });
         }, [D]),
         null == E && w === p.OY.FAILED)
@@ -279,12 +279,12 @@ let P = (e) => {
                             actions: E.actions,
                             classificationExpiration: (0, f.Pu)(E)
                         }),
-                        (0, i.jsx)(L, {
+                        (0, i.jsx)(I, {
                             classificationTypeText: E.description,
                             tosLink: b.sQ.TOS_LINK,
                             communityGuidelinesLink: b.sQ.COMMUNITY_GUIDELINES,
                             policyExplainerLink: E.explainer_link,
-                            appealComponent: (0, i.jsx)(I, {
+                            appealComponent: (0, i.jsx)(L, {
                                 hasBeenAppealed: null != E.appeal_status,
                                 onLetUsKnowClick: () => {
                                     u.default.track(O.rMx.SAFETY_HUB_ACTION, {
@@ -296,7 +296,7 @@ let P = (e) => {
                                         is_dsa_eligible: C,
                                         violation_type: S
                                     }),
-                                        Z ? m.Z.open(n, d) : A && (c.Z.increment({ name: a.V.APPEAL_INGESTION_VIEW }), j.Z.open(n));
+                                        Z ? m.Z.open(n, d) : A && (c.Z.increment({ name: l.V.APPEAL_INGESTION_VIEW }), j.Z.open(n));
                                 },
                                 isAppealEligible: A || Z
                             })

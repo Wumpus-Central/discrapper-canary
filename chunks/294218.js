@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z });
+n.d(t, { Z: () => R });
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -13,21 +13,22 @@ var r = n(200651),
     f = n(496675),
     h = n(709054),
     g = n(786761),
-    _ = n(900164),
-    b = n(739566),
-    x = n(492593),
-    y = n(453687),
+    _ = n(750030),
+    b = n(900164),
+    x = n(739566),
+    y = n(492593),
+    E = n(453687),
     v = n(25015),
-    E = n(689674),
-    O = n(438075),
-    j = n(963550),
-    C = n(845080),
-    S = n(295790),
-    I = n(145807),
-    N = n(56744),
-    T = n(981631),
-    P = n(30804);
-function A(e) {
+    O = n(689674),
+    j = n(438075),
+    C = n(963550),
+    S = n(845080),
+    I = n(295790),
+    N = n(145807),
+    T = n(56744),
+    P = n(981631),
+    A = n(30804);
+function w(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -52,7 +53,7 @@ function A(e) {
     }
     return e;
 }
-function w(e, t) {
+function Z(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -70,9 +71,9 @@ function w(e, t) {
         e
     );
 }
-let Z = i.memo(function (e) {
-    var t, n, i;
-    let { message: l, compact: Z = !1, className: R, onContextMenu: k, onClick: D, hideSimpleEmbedContent: L = !0, channel: M, isGroupStart: U, animateAvatar: F, subscribeToComponentDispatch: B, renderThreadAccessory: G, trackAnnouncementViews: H = !1 } = e,
+let R = i.memo(function (e) {
+    var t, n;
+    let { message: i, compact: l = !1, className: R, onContextMenu: k, onClick: D, hideSimpleEmbedContent: L = !0, channel: M, isGroupStart: U, animateAvatar: F, subscribeToComponentDispatch: B, renderThreadAccessory: G, trackAnnouncementViews: H = !1 } = e,
         V = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -92,62 +93,62 @@ let Z = i.memo(function (e) {
             }
             return i;
         })(e, ['message', 'compact', 'className', 'onContextMenu', 'onClick', 'hideSimpleEmbedContent', 'channel', 'isGroupStart', 'animateAvatar', 'subscribeToComponentDispatch', 'renderThreadAccessory', 'trackAnnouncementViews']),
-        z = l.type === T.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
-        W = l.isFirstMessageInForumPost(M),
-        K = (0, u.A)((null != (n = l.editedTimestamp) ? n : l.timestamp).valueOf()),
-        { content: Y, hasSpoilerEmbeds: X } = (0, v.Z)(l, {
+        z = i.type === P.uaV.POLL_RESULT || (null != (t = e.disableInteraction) && t),
+        W = i.isFirstMessageInForumPost(M),
+        K = (0, u.A)((null != (n = i.editedTimestamp) ? n : i.timestamp).valueOf()),
+        { content: Y, hasSpoilerEmbeds: X } = (0, v.Z)(i, {
             hideSimpleEmbedContent: L,
             allowList: W || K,
             allowHeading: W || K,
             allowLinks: !0,
             previewLinkTarget: !0
         }),
-        q = l.type === T.uaV.REPLY ? l.messageReference : void 0,
+        q = i.type === P.uaV.REPLY ? i.messageReference : void 0,
         Q = (0, s.e7)([p.Z], () => p.Z.getMessageByReference(q)),
-        J = (0, o.JA)(l.id),
-        $ = (0, b.ZP)(l),
-        ee = null != (i = l.getGuildId()) ? i : void 0,
+        J = (0, o.JA)(i.id),
+        $ = (0, x.ZP)(i),
+        ee = (0, _.k)(i),
         et = (0, d.Z)($),
-        en = (0, s.e7)([m.Z], () => l.hasFlag(T.iLy.HAS_THREAD) && m.Z.getChannel(h.default.castMessageIdAsChannelId(l.id))),
+        en = (0, s.e7)([m.Z], () => i.hasFlag(P.iLy.HAS_THREAD) && m.Z.getChannel(h.default.castMessageIdAsChannelId(i.id))),
         er = (0, c.p9)({
             guildId: M.guild_id,
             roleId: $.iconRoleId
         }),
-        ei = (0, s.e7)([f.Z], () => f.Z.can(T.Plq.CREATE_INSTANT_INVITE, M)),
-        el = (0, E.Z)({
-            message: l,
+        ei = (0, s.e7)([f.Z], () => f.Z.can(P.Plq.CREATE_INSTANT_INVITE, M)),
+        el = (0, O.Z)({
+            message: i,
             channel: M,
             enabled: H
         });
-    if ((0, _.Z)(l, ei)) return null;
-    let ea = (0, y.iG)(l),
-        eo = (0, y.Gx)(l);
+    if ((0, b.Z)(i, ei)) return null;
+    let ea = (0, E.iG)(i),
+        eo = (0, E.Gx)(i);
     return (0, r.jsx)(
-        x.Z,
-        A(
+        y.Z,
+        w(
             {
-                compact: Z,
+                compact: l,
                 className: a()(R, {
-                    [P.ephemeral]: (0, g.Pv)(l),
-                    [P.disableInteraction]: z
+                    [A.ephemeral]: (0, g.Pv)(i),
+                    [A.disableInteraction]: z
                 }),
                 disableInteraction: z,
-                childrenRepliedMessage: (0, N.Z)(l, M, q, Q, Z),
-                childrenExecutedCommand: (0, I.Z)(l, M, Z),
-                childrenHeader: (0, C.Z)(
-                    w(A({}, e), {
+                childrenRepliedMessage: (0, T.Z)(i, M, q, Q, l),
+                childrenExecutedCommand: (0, N.Z)(i, M, l),
+                childrenHeader: (0, S.Z)(
+                    Z(w({}, e), {
                         guildId: M.guild_id,
                         author: $,
                         roleIcon: er
                     })
                 ),
-                childrenAccessories: e.hideAccessories ? void 0 : (0, O.Q)(e, X),
-                childrenMessageContent: (0, j.Z)(e, Y),
-                childrenSystemMessage: (0, S.Z)(w(A({}, e), { disableInteraction: z })),
+                childrenAccessories: e.hideAccessories ? void 0 : (0, j.Q)(e, X),
+                childrenMessageContent: (0, C.Z)(e, Y),
+                childrenSystemMessage: (0, I.Z)(Z(w({}, e), { disableInteraction: z })),
                 onContextMenu: k,
                 onClick: D,
-                hasThread: G && null != en && l.hasFlag(T.iLy.HAS_THREAD),
-                hasReply: l.type === T.uaV.REPLY,
+                hasThread: G && null != en && i.hasFlag(P.iLy.HAS_THREAD),
+                hasReply: i.type === P.uaV.REPLY,
                 'aria-labelledby': ea,
                 'aria-describedby': eo,
                 messageRef: el,

@@ -1,6 +1,6 @@
 n.d(t, {
     W: () => O,
-    u: () => E
+    u: () => v
 }),
     n(190126),
     n(368063),
@@ -37,7 +37,7 @@ function y() {
             return e;
         }).apply(this, arguments);
 }
-function v(e) {
+function E(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -62,10 +62,10 @@ function v(e) {
     }
     return e;
 }
-var E = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
+var v = (((r = {})[(r.BOT = 0)] = 'BOT'), (r[(r.ACTIVITY = 1)] = 'ACTIVITY'), r);
 function O(e) {
     var t, n, r, a;
-    let { title: E, header: O, info: j, staticBannerSrc: C, videoBannerSrc: S, bannerAspectRatio: I = 0, iconSrc: N, embedUrl: T, infoUrl: P, actions: A = [], trackingConfig: w } = e;
+    let { title: v, header: O, info: j, staticBannerSrc: C, videoBannerSrc: S, bannerAspectRatio: I = 0, iconSrc: N, embedUrl: T, infoUrl: P, actions: A = [], trackingConfig: w } = e;
     w = {
         id: null != (n = null == (t = w) ? void 0 : t.id) ? n : '0',
         linkType: null != (r = null == t ? void 0 : t.linkType) ? r : g.Un.UNKNOWN,
@@ -186,7 +186,7 @@ function O(e) {
                                         variant: 'text-md/semibold',
                                         color: 'none',
                                         lineClamp: 1,
-                                        children: E
+                                        children: v
                                     }),
                                     j
                                 ]
@@ -224,12 +224,12 @@ function O(e) {
                                                           return e;
                                                       })(e)
                                                   );
-                                                  return (0, i.jsx)(c.zxk, v({}, d, t));
+                                                  return (0, i.jsx)(c.zxk, E({}, d, t));
                                               }
                                           },
                                           n
                                       )
-                                    : (0, i.jsx)(c.zxk, v({}, d), n);
+                                    : (0, i.jsx)(c.zxk, E({}, d), n);
                             })
                         })
                 ]

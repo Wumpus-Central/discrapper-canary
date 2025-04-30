@@ -115,11 +115,6 @@ let i = {
         inlineRequire: () => n(951755).Z,
         hasStoreChangeListeners: !0
     },
-    SignUpManager: {
-        actions: ['POST_CONNECTION_OPEN', 'CHANNEL_SELECT'],
-        inlineRequire: () => n(207269).Z,
-        neverLoadBeforeConnectionOpen: !0
-    },
     GuildOnboardingManager: {
         actions: ['POST_CONNECTION_OPEN', 'CHANNEL_SELECT', 'GUILD_DELETE'],
         inlineRequire: () => n(495649).Z,

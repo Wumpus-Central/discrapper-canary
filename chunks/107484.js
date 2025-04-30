@@ -3,11 +3,11 @@ var r,
     o,
     a,
     i = n(442837),
-    s = n(570140);
-let l = new Map();
+    l = n(570140);
+let s = new Map();
 class c extends (r = i.ZP.Store) {
     getGuildRoleConnectionEligibility(e) {
-        return null != e ? l.get(e) : void 0;
+        return null != e ? s.get(e) : void 0;
     }
 }
 (a = 'GuildRoleConnectionEligibilityStore'),
@@ -19,9 +19,9 @@ class c extends (r = i.ZP.Store) {
               writable: !0
           })
         : (c[o] = a);
-let u = new c(s.Z, {
+let u = new c(l.Z, {
     GUILD_ROLE_CONNECTION_ELIGIBILITY_FETCH_SUCCESS: (e) => {
         let { roleId: t, roleConnectionEligibility: n } = e;
-        l.set(t, n);
+        s.set(t, n);
     }
 });

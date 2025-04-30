@@ -1,4 +1,4 @@
-s.d(t, { Z: () => I }), s(35282), s(704826);
+s.d(t, { Z: () => T }), s(35282), s(704826);
 var n,
     r = s(200651),
     o = s(192379),
@@ -23,7 +23,7 @@ var n,
     R = s(388032),
     P = s(472645),
     y = s(20493);
-function N(e, t, s) {
+function A(e, t, s) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,7 +36,7 @@ function N(e, t, s) {
         e
     );
 }
-function A(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var s = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(s);
@@ -47,7 +47,7 @@ function A(e) {
                 })
             )),
             n.forEach(function (t) {
-                N(e, t, s[t]);
+                A(e, t, s[t]);
             });
     }
     return e;
@@ -157,10 +157,10 @@ class v extends (n = o.PureComponent) {
                 }),
                 (0, r.jsx)(c.f6W, {
                     theme: n,
+                    disableAdaptiveTheme: !0,
                     children: (e) =>
                         (0, r.jsx)('div', {
                             'data-theme': n,
-                            'data-disable-adaptive-theme': !0,
                             className: a()(e, P.navRow),
                             children: (0, r.jsx)(S, {
                                 loginStatus: t,
@@ -231,7 +231,7 @@ class v extends (n = o.PureComponent) {
         let { resetPasswordPhoneToken: e } = this.state;
         return (0, r.jsx)(
             u.Z,
-            A(
+            N(
                 {
                     resetToken: e,
                     onLoginSuccess: (e) => {
@@ -282,33 +282,33 @@ class v extends (n = o.PureComponent) {
     }
     constructor(e) {
         super(e),
-            N(this, 'loginRef', void 0),
-            N(this, 'passwordRef', void 0),
-            N(this, 'codeRef', void 0),
-            N(this, 'handleAuthToken', async (e) => {
+            A(this, 'loginRef', void 0),
+            A(this, 'passwordRef', void 0),
+            A(this, 'codeRef', void 0),
+            A(this, 'handleAuthToken', async (e) => {
                 this.setState({ errors: {} }), await d.Z.loginToken(e, !1);
             }),
-            N(this, 'handleTabOrEnter', (e) => {
+            A(this, 'handleTabOrEnter', (e) => {
                 if ('Tab' === e.key && !e.shiftKey && e.target === this.loginRef) {
                     var t;
                     null == (t = this.passwordRef) || t.focus(), e.stopPropagation(), e.preventDefault();
                 }
                 'Enter' === e.key && (e.target === this.loginRef || e.target === this.passwordRef) && (this.handleLogin(), e.stopPropagation(), e.preventDefault());
             }),
-            N(this, 'setLoginRef', (e) => {
+            A(this, 'setLoginRef', (e) => {
                 this.loginRef = e;
             }),
-            N(this, 'setPasswordRef', (e) => {
+            A(this, 'setPasswordRef', (e) => {
                 this.passwordRef = e;
             }),
-            N(this, 'setCodeRef', (e) => {
+            A(this, 'setCodeRef', (e) => {
                 this.codeRef = e;
             }),
-            N(this, 'getFullLogin', () => {
+            A(this, 'getFullLogin', () => {
                 let { loginPrefix: e, login: t } = this.state;
                 return e + t;
             }),
-            N(this, 'renderError', (e) => {
+            A(this, 'renderError', (e) => {
                 let { errors: t } = this.state;
                 if (this.hasError(e)) {
                     let s = t[e];
@@ -316,7 +316,7 @@ class v extends (n = o.PureComponent) {
                 }
                 return null;
             }),
-            N(this, 'handleForgotPassword', async (e) => {
+            A(this, 'handleForgotPassword', async (e) => {
                 var t;
                 null == e || e.preventDefault(), null == (t = this.loginRef) || t.focus();
                 let s = this.getFullLogin();
@@ -327,7 +327,7 @@ class v extends (n = o.PureComponent) {
                         var t, n;
                         return (0, r.jsx)(
                             c.ConfirmModal,
-                            ((t = A(
+                            ((t = N(
                                 {
                                     header: R.intl.string(R.t.f5Pi7O),
                                     confirmText: R.intl.string(R.t.BddRzc),
@@ -362,7 +362,7 @@ class v extends (n = o.PureComponent) {
                     this.setState({ errors: e });
                 }
             }),
-            N(this, 'handleLogin', async (e) => {
+            A(this, 'handleLogin', async (e) => {
                 let { password: t, undelete: s } = this.state;
                 null == e || e.preventDefault(), this.setState({ errors: {} });
                 try {
@@ -377,7 +377,7 @@ class v extends (n = o.PureComponent) {
                     this.setState({ errors: e });
                 }
             }),
-            N(this, 'handlePasswordReset', async (e) => {
+            A(this, 'handlePasswordReset', async (e) => {
                 this.setState({
                     phoneVerifyError: null,
                     errors: {}
@@ -389,7 +389,7 @@ class v extends (n = o.PureComponent) {
                     null != e.body && null != e.body.message && this.setState({ phoneVerifyError: e.body.message });
                 }
             }),
-            N(this, 'handleTokenSubmitMFA', (e) => {
+            A(this, 'handleTokenSubmitMFA', (e) => {
                 let { mfaType: t, data: s, ticket: n } = e;
                 return d.Z.loginMFAv2({
                     code: s,
@@ -398,10 +398,10 @@ class v extends (n = o.PureComponent) {
                     isMultiAccount: !0
                 });
             }),
-            N(this, 'handleResendCode', () => {
+            A(this, 'handleResendCode', () => {
                 g.Z.resendCode(this.getFullLogin());
             }),
-            N(this, 'handleReset', (e) => {
+            A(this, 'handleReset', (e) => {
                 null == e || e.preventDefault(),
                     d.Z.loginReset(!0),
                     this.setState({
@@ -415,7 +415,7 @@ class v extends (n = o.PureComponent) {
                         errors: {}
                     });
             }),
-            N(this, 'handleCancelAccountDeletion', () => {
+            A(this, 'handleCancelAccountDeletion', () => {
                 this.setState({ undelete: !0 }, this.handleLogin);
             }),
             (this.state = {
@@ -454,11 +454,11 @@ function S(e) {
         ]
     });
 }
-N(v, 'defaultProps', {
+A(v, 'defaultProps', {
     transitionTo: (e) => s.g.location.assign(e),
     replaceWith: (e) => s.g.location.replace(e)
 });
-let I = function (e) {
+let T = function (e) {
     let t = (0, l.cj)([j.Z, C.default, _.Z, b.Z], () => ({
         authenticated: C.default.isAuthenticated(),
         loginStatus: C.default.getLoginStatus(),
@@ -468,5 +468,5 @@ let I = function (e) {
         country: _.Z.getCountryCode(),
         theme: b.Z.theme
     }));
-    return (0, r.jsx)(v, A({}, e, t));
+    return (0, r.jsx)(v, N({}, e, t));
 };

@@ -17,10 +17,10 @@ var r = n(200651),
     g = n(668519),
     m = n(562224),
     b = n(803647),
-    y = n(131704),
-    _ = n(944486),
-    v = n(626135),
-    O = n(870569),
+    _ = n(131704),
+    y = n(944486),
+    O = n(626135),
+    v = n(870569),
     C = n(981631),
     j = n(388032),
     S = n(390648);
@@ -42,7 +42,7 @@ let x = i.memo(function (e) {
         V = i.useCallback(() => {
             o()(null != D, 'Received null activity'),
                 (0, p.v)(G, p.d.INVITE),
-                v.default.track(C.rMx.OPEN_MODAL, {
+                O.default.track(C.rMx.OPEN_MODAL, {
                     type: 'Send Join Invite',
                     application_id: D.application_id,
                     location: k.location
@@ -64,9 +64,9 @@ let x = i.memo(function (e) {
             (0, b.Z)(P);
         }, [P]),
         z = i.useCallback(() => {
-            let e = null != Z && (0, y.vd)(Z.type) ? Z : null,
+            let e = null != Z && (0, _.vd)(Z.type) ? Z : null,
                 t = null != e ? e.getGuildId() : w;
-            if (M && null != A && null != _.Z.getVoiceChannelId()) {
+            if (M && null != A && null != y.Z.getVoiceChannelId()) {
                 (0, g.s)('Activity Panel'), (0, m.Z)(A.pid);
                 return;
             }
@@ -104,7 +104,7 @@ let x = i.memo(function (e) {
                         (l = l =
                             {
                                 sourcePID: null == A ? void 0 : A.pid,
-                                selectSource: !!U && null != _.Z.getVoiceChannelId(),
+                                selectSource: !!U && null != y.Z.getVoiceChannelId(),
                                 guildId: t,
                                 analyticsLocation: C.Sbl.ACTIVITY_PANEL
                             }),
@@ -141,10 +141,10 @@ let x = i.memo(function (e) {
                           }),
                           (u = s.hGI),
                           (x = null != A ? j.intl.formatToPlainString(j.t.AB5gT0, { game: A.name }) : j.intl.string(j.t.FeUKeH)))
-                        : ((t = !0), (l = null), (u = s.hGI), (x = null != Z && (0, y.vd)(Z.type) ? j.intl.string(j.t.uQn9Bw) : null != w ? j.intl.string(j.t.fBXEoK) : j.intl.string(j.t.n3feND))),
+                        : ((t = !0), (l = null), (u = s.hGI), (x = null != Z && (0, _.vd)(Z.type) ? j.intl.string(j.t.uQn9Bw) : null != w ? j.intl.string(j.t.fBXEoK) : j.intl.string(j.t.n3feND))),
                   (0, r.jsx)('div', {
                       className: S.panelButtonContainer,
-                      children: (0, r.jsx)(O.Z, {
+                      children: (0, r.jsx)(v.Z, {
                           tooltipText: x,
                           disabled: t,
                           onClick: l,
@@ -154,7 +154,7 @@ let x = i.memo(function (e) {
                 : null,
         Y =
             B && null == R
-                ? (0, r.jsx)(O.Z, {
+                ? (0, r.jsx)(v.Z, {
                       tooltipText: j.intl.string(j.t['hC/Ze3']),
                       onClick: V,
                       icon: s.ejJ
@@ -163,7 +163,7 @@ let x = i.memo(function (e) {
         K =
             null == R
                 ? null
-                : (0, r.jsx)(O.Z, {
+                : (0, r.jsx)(v.Z, {
                       tooltipText: j.intl.string(j.t['R/FK4O']),
                       onClick: H(R.applicationId, R.location),
                       icon: s.PBZ

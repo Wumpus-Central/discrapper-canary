@@ -1,10 +1,10 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => l });
 var r = n(200651);
 n(192379);
 var o = n(481060),
     a = n(388032),
     i = n(156189);
-function s() {
+function l() {
     return (0, r.jsx)(o.ua7, {
         text: a.intl.string(a.t['RO/KYm']),
         children: (e) => {

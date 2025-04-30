@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => y });
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -17,7 +17,7 @@ let b = {
     friction: 30,
     tension: 300
 };
-function y(e) {
+function _(e) {
     var t;
     let { guildChannels: n, jumpToVoiceChannels: l } = e,
         s = n.getCategoryFromSection(n.voiceChannelsSectionNumber),
@@ -62,18 +62,18 @@ function y(e) {
         ]
     });
 }
-function _(e) {
+function y(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: l, jumpToVoiceChannels: u, jumpToChannel: d } = e,
-        { bottomBar: p, topBar: _ } = (0, a.cj)([f.Z], () => f.Z.getUnreadStateForGuildId(n.id)),
-        v = (0, a.e7)([h.Z], () => h.Z.isFocused()),
-        { mode: O, mentionCount: C, targetChannelId: j } = 'bottom' === t ? p : _,
-        S = O === f.x.HIDDEN,
+        { bottomBar: p, topBar: y } = (0, a.cj)([f.Z], () => f.Z.getUnreadStateForGuildId(n.id)),
+        O = (0, a.e7)([h.Z], () => h.Z.isFocused()),
+        { mode: v, mentionCount: C, targetChannelId: j } = 'bottom' === t ? p : y,
+        S = v === f.x.HIDDEN,
         E = (0, c.q_F)(
             {
                 to: { transform: S ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
                 config: b
             },
-            v ? 'respect-motion-settings' : 'animate-never'
+            O ? 'respect-motion-settings' : 'animate-never'
         ),
         x = i.useCallback(
             (e) => {
@@ -91,9 +91,9 @@ function _(e) {
             style: E,
             'aria-hidden': S,
             children:
-                O === f.x.HIDDEN
+                v === f.x.HIDDEN
                     ? (0, r.jsx)('div', { className: o()(m.bar, m.emptyBar) })
-                    : O === f.x.UNREAD
+                    : v === f.x.UNREAD
                       ? (0, r.jsxs)(c.P3F, {
                             className: m.bar,
                             onClick: x,
@@ -121,7 +121,7 @@ function _(e) {
                                 })
                             ]
                         })
-                      : O === f.x.MENTIONS
+                      : v === f.x.MENTIONS
                         ? (0, r.jsx)(c.P3F, {
                               className: o()(m.bar, m.mentionsBar),
                               onClick: x,
@@ -132,8 +132,8 @@ function _(e) {
                                   children: g.intl.format(g.t.EQcLys, { count: C })
                               })
                           })
-                        : O === f.x.VOICE_CHANNELS
-                          ? (0, r.jsx)(y, {
+                        : v === f.x.VOICE_CHANNELS
+                          ? (0, r.jsx)(_, {
                                 jumpToVoiceChannels: u,
                                 guildChannels: n,
                                 guildChannelsVersion: l

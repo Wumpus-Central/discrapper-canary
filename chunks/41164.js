@@ -1,8 +1,8 @@
 n.d(t, { default: () => p });
 var i = n(200651);
 n(192379);
-var l = n(481060),
-    a = n(230711),
+var a = n(481060),
+    l = n(230711),
     r = n(181211),
     o = n(188879),
     s = n(981631),
@@ -14,9 +14,9 @@ let p = (e) => {
     let { transitionState: t, onClose: n, classificationId: p, source: h } = e,
         f = (0, r.Z)(),
         g = () => {
-            n(), a.Z.open(s.oAB.ACCOUNT, c.s6.PRIVACY_AND_SAFETY_STANDING);
+            n(), l.Z.open(s.oAB.ACCOUNT, c.s6.PRIVACY_AND_SAFETY_STANDING);
         };
-    return (0, i.jsxs)(l.Y0X, {
+    return (0, i.jsxs)(a.Y0X, {
         className: u.modalRoot,
         transitionState: t,
         children: [
@@ -28,16 +28,16 @@ let p = (e) => {
                         src: m,
                         alt: ''
                     }),
-                    (0, i.jsx)(l.olH, {
+                    (0, i.jsx)(a.olH, {
                         className: u.modalClose,
                         onClick: n
                     })
                 ]
             }),
-            (0, i.jsx)(l.hzk, {
+            (0, i.jsx)(a.hzk, {
                 className: u.modalContent,
                 children: f
-                    ? (0, i.jsx)(l.$jN, {})
+                    ? (0, i.jsx)(a.$jN, {})
                     : (0, i.jsx)(o.Z, {
                           classificationId: p,
                           source: h,
@@ -45,11 +45,11 @@ let p = (e) => {
                           onClose: g
                       })
             }),
-            (0, i.jsx)(l.mzw, {
-                children: (0, i.jsx)(l.zxk, {
+            (0, i.jsx)(a.mzw, {
+                children: (0, i.jsx)(a.zxk, {
                     className: u.__invalid_button,
                     type: 'button',
-                    color: l.zxk.Colors.BRAND,
+                    color: a.zxk.Colors.BRAND,
                     onClick: g,
                     children: d.intl.string(d.t.elrEjI)
                 })

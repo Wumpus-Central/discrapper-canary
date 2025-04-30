@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(539854), n(388685);
+n.d(t, { Z: () => _ }), n(539854), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(442837),
@@ -55,9 +55,9 @@ function b(e, t) {
         e
     );
 }
-let y = i.memo(function (e) {
+let _ = i.memo(function (e) {
     var { folderNode: t } = e,
-        y = (function (e, t) {
+        _ = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -76,10 +76,10 @@ let y = i.memo(function (e) {
             }
             return i;
         })(e, ['folderNode']);
-    let { id: _, name: v, color: O, children: C } = t,
+    let { id: y, name: O, color: v, children: C } = t,
         j = C.map((e) => e.id),
         S = (0, a.Z)((e) => e.guildId),
-        E = (0, l.e7)([c.Z], () => c.Z.isFolderExpanded(_)),
+        E = (0, l.e7)([c.Z], () => c.Z.isFolderExpanded(y)),
         x = (function (e) {
             let t = e.children
                     .map((e) => {
@@ -104,8 +104,8 @@ let y = i.memo(function (e) {
             unread: j.some((e) => u.default.hasUnread(e))
         })),
         Z = i.useCallback(() => {
-            s.Z.toggleGuildFolderExpand(_);
-        }, [_]),
+            s.Z.toggleGuildFolderExpand(y);
+        }, [y]),
         T = i.useCallback(
             (e) => {
                 (0, o.jW)(e, async () => {
@@ -114,19 +114,19 @@ let y = i.memo(function (e) {
                         (0, r.jsx)(
                             e,
                             b(m({}, t), {
-                                folderId: _,
-                                folderName: v,
-                                folderColor: O,
+                                folderId: y,
+                                folderName: O,
+                                folderColor: v,
                                 unread: N || I > 0
                             })
                         );
                 });
             },
-            [_, v, O, N, I]
+            [y, O, v, N, I]
         );
     return (0, r.jsx)(
         p.Z,
-        b(m({}, y), {
+        b(m({}, _), {
             folderNode: t,
             expanded: E,
             selected: null != S && j.includes(S),

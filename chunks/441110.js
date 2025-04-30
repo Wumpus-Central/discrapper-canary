@@ -4,8 +4,8 @@ n(192379);
 var o = n(481060),
     a = n(493773),
     i = n(367907),
-    s = n(524444),
-    l = n(297047),
+    l = n(524444),
+    s = n(297047),
     c = n(592125),
     u = n(944486),
     d = n(626135),
@@ -24,7 +24,7 @@ let f = function (e) {
     }),
     null == b)
         ? null
-        : (0, r.jsx)(s.W_, {
+        : (0, r.jsx)(l.W_, {
               className: m.messagePopoutContent,
               children: (0, r.jsxs)('div', {
                   className: m.popoutContainer,
@@ -62,7 +62,7 @@ let f = function (e) {
                           className: m.ctaButton,
                           fullWidth: !0,
                           onClick: () => {
-                              i.ZP.trackWithMetadata(p.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), f(), (0, l.q)(n.author, b.id);
+                              i.ZP.trackWithMetadata(p.rMx.NEW_MEMBER_MENTION_CTA_CLICKED, { target_user_id: n.author.id }), f(), (0, s.q)(n.author, b.id);
                           },
                           children: g.intl.format(g.t['+xsVS0'], { username: n.author.username })
                       })
