@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
 var r = n(544891),
     i = n(570140),
-    o = n(802098),
-    a = n(695346),
+    a = n(802098),
+    o = n(695346),
     s = n(981631),
     l = n(596401);
 function c() {
@@ -28,7 +28,7 @@ let u = {
             changelogId: e,
             changelogDate: t
         }),
-            a.l4.updateSetting(e);
+            o.l4.updateSetting(e);
     },
     setChangelogOverride(e) {
         i.Z.dispatch({
@@ -52,10 +52,10 @@ let u = {
         });
     },
     async fetchChangelog(e, t) {
-        if ((arguments.length > 2 && void 0 !== arguments[2] && arguments[2], null != o.Z.getChangelog(e, t))) return null;
+        if ((arguments.length > 2 && void 0 !== arguments[2] && arguments[2], null != a.Z.getChangelog(e, t))) return null;
         let n = l.Vw.DESKTOP;
         try {
-            let o = await r.tn.get({
+            let a = await r.tn.get({
                 url: 'https://cdn.discordapp.com/changelogs/'.concat(n, '/').concat(e, '/').concat(t, '.json?').concat(c()),
                 rejectWithError: !0
             });
@@ -63,9 +63,9 @@ let u = {
                 i.Z.dispatch({
                     type: 'CHANGE_LOG_FETCH_SUCCESS',
                     id: e,
-                    changelog: o.body
+                    changelog: a.body
                 }),
-                o.body
+                a.body
             );
         } catch (n) {
             if (

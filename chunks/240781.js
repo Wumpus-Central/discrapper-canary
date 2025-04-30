@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T }), n(314940);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(278074),
     l = n(442837),
     c = n(481060),
@@ -40,8 +40,8 @@ let I = [
     S = (e) => {
         let { purchase: t, shouldHideProductDescription: n } = e,
             i = (0, l.e7)([m.default], () => m.default.locale),
-            o = (0, u.qS)(t),
-            a = null != t.expiresAt ? (0, E.TD)(Date.now(), t.expiresAt) : null,
+            a = (0, u.qS)(t),
+            o = null != t.expiresAt ? (0, E.TD)(Date.now(), t.expiresAt) : null,
             s = (0, p.a)(t),
             d = t.purchasedAt.toLocaleDateString(i, {
                 month: 'long',
@@ -61,17 +61,17 @@ let I = [
                           variant: 'text-sm/normal',
                           children: t.summary
                       }),
-                null != a &&
+                null != o &&
                     (0, r.jsx)(c.Text, {
                         variant: 'text-xxs/normal',
                         color: 'text-muted',
-                        children: O.intl.format(O.t.Io7ozs, { days: a.days.toString() })
+                        children: O.intl.format(O.t.Io7ozs, { days: o.days.toString() })
                     }),
                 (0, r.jsxs)(c.Text, {
                     variant: 'text-xxs/normal',
                     color: 'text-muted',
                     children: [
-                        o ? O.intl.format(O.t.LFVi6O, { dateAcquired: d }) : O.intl.format(O.t.gW9R4O, { date: d }),
+                        a ? O.intl.format(O.t.LFVi6O, { dateAcquired: d }) : O.intl.format(O.t.gW9R4O, { date: d }),
                         null != t.expiresAt &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
@@ -89,7 +89,7 @@ let I = [
                             })
                     ]
                 }),
-                o &&
+                a &&
                     (0, r.jsx)(c.Text, {
                         variant: 'text-xxs/normal',
                         color: 'text-muted',
@@ -99,10 +99,10 @@ let I = [
         });
     },
     T = (e) => {
-        let { user: t, guildId: n, avatarDecorationOverride: o, className: p } = e,
+        let { user: t, guildId: n, avatarDecorationOverride: a, className: p } = e,
             m = (0, d.P)('AvatarDecorationModalPreview'),
             E = (0, l.e7)([g.Z], () => g.Z.getStatus(t.id)),
-            { product: T, purchase: A } = (0, f.Z)(null == o ? void 0 : o.skuId),
+            { product: T, purchase: A } = (0, f.Z)(null == a ? void 0 : a.skuId),
             N = b.ZP.canUseCollectibles(t),
             C = (0, u.qS)(A),
             R = (0, u.G1)(T),
@@ -122,14 +122,14 @@ let I = [
             );
         return null != T && (null == A || P)
             ? (0, r.jsxs)('div', {
-                  className: a()(v.modalPreview, v.shopPreviewContainer, p),
+                  className: o()(v.modalPreview, v.shopPreviewContainer, p),
                   children: [
                       (0, r.jsx)('div', {
                           className: v.shopPreviewBanner,
                           children: (0, r.jsx)(y.Z, {
                               user: t,
                               guildId: n,
-                              avatarDecorationOverride: o
+                              avatarDecorationOverride: a
                           })
                       }),
                       (0, r.jsxs)('div', {
@@ -148,7 +148,7 @@ let I = [
                   ]
               })
             : (0, r.jsxs)('div', {
-                  className: a()(v.modalPreview, p),
+                  className: o()(v.modalPreview, p),
                   children: [
                       (0, r.jsxs)('div', {
                           className: v.previewSections,
@@ -158,13 +158,13 @@ let I = [
                                   children: (0, r.jsx)(y.Z, {
                                       user: t,
                                       guildId: n,
-                                      avatarDecorationOverride: o
+                                      avatarDecorationOverride: a
                                   })
                               }),
                               (0, r.jsx)('div', {
                                   className: v.smallDecorationPreviewsContainer,
                                   children: I.map((e) => {
-                                      let { avatarSize: i, showStatus: a } = e;
+                                      let { avatarSize: i, showStatus: o } = e;
                                       return (0, r.jsx)(
                                           'div',
                                           {
@@ -173,12 +173,12 @@ let I = [
                                                   user: t,
                                                   guildId: n,
                                                   avatarSize: i,
-                                                  avatarDecorationOverride: o,
-                                                  status: a ? E : void 0,
+                                                  avatarDecorationOverride: a,
+                                                  status: o ? E : void 0,
                                                   'aria-hidden': !0
                                               })
                                           },
-                                          ''.concat(i).concat(a)
+                                          ''.concat(i).concat(o)
                                       );
                                   })
                               })

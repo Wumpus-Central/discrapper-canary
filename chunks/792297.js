@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(519160),
     l = n(956664),
     c = n(212459),
@@ -25,25 +25,25 @@ function g(e, t) {
             width: n,
             height: r
         };
-    let { width: i, height: o } = t,
-        a = window.innerWidth - 2 * m,
+    let { width: i, height: a } = t,
+        o = window.innerWidth - 2 * m,
         s = window.innerHeight - (e ? h : _) * 2,
         c = (0, l.Tj)({
             width: i,
-            height: o,
+            height: a,
             maxWidth: n,
             maxHeight: r
         }),
         u = (0, l.Tj)({
             width: i,
-            height: o,
-            maxWidth: a,
+            height: a,
+            maxWidth: o,
             maxHeight: s
         });
     return c.width >= u.width ? c : u;
 }
 function E(e) {
-    let { items: t, currentIndex: n, children: o } = e,
+    let { items: t, currentIndex: n, children: a } = e,
         { entering: l } = (0, c.Y)(),
         f = t[n],
         _ = g(t.length > 1, {
@@ -66,8 +66,8 @@ function E(e) {
         (0, r.jsx)(
             'div',
             {
-                className: a()(d.mediaArea, { [d.animated]: l }),
-                children: _.width > 0 && _.height > 0 && o(_.width, _.height)
+                className: o()(d.mediaArea, { [d.animated]: l }),
+                children: _.width > 0 && _.height > 0 && a(_.width, _.height)
             },
             f.url
         )

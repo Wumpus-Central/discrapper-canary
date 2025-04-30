@@ -8,15 +8,15 @@ n.d(t, {
     n(388685);
 var r = n(73800),
     i = n(902704),
-    o = n(250919);
-function a(e, t) {
+    a = n(250919);
+function o(e, t) {
     return e === t;
 }
 function s(e, t) {
     return !1;
 }
 function l(e, t, n) {
-    let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a,
+    let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o,
         l = (0, r.useRef)(null);
     null == l.current &&
         (l.current = {
@@ -42,7 +42,7 @@ function l(e, t, n) {
                     let e;
                     (e = c.getStateFromStores()), s(c.state, e) || ((c.state = e), d({}));
                 },
-                n = new o.F(e, t);
+                n = new a.F(e, t);
             return n.attach('useStateFromStores'), () => n.detach();
         }, []),
         u

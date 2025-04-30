@@ -1,18 +1,18 @@
 n.d(t, {
-    Eq: () => a,
+    Eq: () => o,
     NV: () => s,
-    Uw: () => o
+    Uw: () => a
 });
 var r = n(358085),
     i = n(477931);
-let o = (e) => {
+let a = (e) => {
         var t;
         if (!e.hasPotions()) return !1;
         let n = null != (t = e.potions) ? t : [],
-            o = (0, r.isAndroid)();
-        return n.some((e) => e.type === i.B.CONFETTI && (!o || null != e.emoji[0].id));
+            a = (0, r.isAndroid)();
+        return n.some((e) => e.type === i.B.CONFETTI && (!a || null != e.emoji[0].id));
     },
-    a = (e) => {
+    o = (e) => {
         var t;
         if (e.hasPotions()) return (null != (t = e.potions) ? t : []).find((e) => e.type === i.B.CONFETTI);
     },

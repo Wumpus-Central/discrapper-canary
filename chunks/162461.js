@@ -1,16 +1,16 @@
 n.d(t, {
-    DG: () => a,
-    E2: () => l,
-    Mc: () => c,
-    iC: () => p,
-    nP: () => _,
-    sA: () => u,
-    wm: () => d
+    DG: () => o,
+    Mc: () => l,
+    iC: () => _,
+    me: () => s,
+    nP: () => f,
+    sA: () => c,
+    wm: () => u
 });
 var r = n(818083),
     i = n(109911),
-    o = n(987338);
-let a = (0, r.B)({
+    a = n(987338);
+let o = (0, r.B)({
         kind: 'user',
         id: '2024-03_content_inventory_memberlist_and_ranker',
         label: 'Enables the memberlist content feed',
@@ -35,6 +35,7 @@ let a = (0, r.B)({
         kind: 'user',
         id: '2025-04_hotwheels_holdout_the_sequel',
         label: 'Tracking a holdout hashed to member list experiment for data readouts',
+        commonTriggerPoint: a.$P.CONNECTION_OPEN,
         defaultConfig: {},
         treatments: [
             {
@@ -48,39 +49,36 @@ let a = (0, r.B)({
                 config: {}
             }
         ]
+    }),
+    l = (0, r.B)({
+        kind: 'user',
+        id: '2025-04_hotwheels_v3_model',
+        label: 'Next iteration of the activity feed ranking model.',
+        commonTriggerPoint: a.$P.CONNECTION_OPEN,
+        defaultConfig: {},
+        treatments: [
+            {
+                id: 3,
+                label: 'Noteworthy',
+                config: {}
+            },
+            {
+                id: 15,
+                label: 'ML model V3',
+                config: {}
+            }
+        ]
     });
-function l(e) {
-    return s.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
-}
-let c = (0, r.B)({
-    kind: 'user',
-    id: '2025-04_hotwheels_v3_model',
-    label: 'Next iteration of the activity feed ranking model.',
-    commonTriggerPoint: o.$P.CONNECTION_OPEN,
-    defaultConfig: {},
-    treatments: [
-        {
-            id: 3,
-            label: 'Noteworthy',
-            config: {}
-        },
-        {
-            id: 15,
-            label: 'ML model V3',
-            config: {}
-        }
-    ]
-});
-function u(e) {
-    let { enabled: t } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }),
+function c(e) {
+    let { enabled: t } = o.getCurrentConfig({ location: e }, { autoTrackExposure: !0 }),
         n = (0, i.Ji)(e, !1);
     return t || n;
 }
-function d(e) {
-    let { enabled: t, impressionCappingEnabled: n } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
+function u(e) {
+    let { enabled: t, impressionCappingEnabled: n } = o.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
     return t && !0 === n;
 }
-let f = (0, r.B)({
+let d = (0, r.B)({
     kind: 'user',
     id: '2024-08_content_inventory_analytics_sampling',
     label: 'Content Inventory Analytics Sampling',
@@ -93,10 +91,10 @@ let f = (0, r.B)({
         }
     ]
 });
-function _(e) {
-    return f.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
+function f(e) {
+    return d.getCurrentConfig({ location: e }, { autoTrackExposure: !0 });
 }
-let p = (0, r.B)({
+let _ = (0, r.B)({
     kind: 'user',
     id: '2025-02_game_profile_reenable',
     label: 'Re-enable content inventory on game profile',

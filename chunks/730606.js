@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(95398),
     c = n(247206),
@@ -28,27 +28,27 @@ var r = n(255367),
     S = n(388032),
     T = n(606584);
 function A(e) {
-    let { src: t, width: n, height: r, hasMultiple: i = !1, options: o } = e,
-        { width: a, height: s } = (0, E.p)(i, {
+    let { src: t, width: n, height: r, hasMultiple: i = !1, options: a } = e,
+        { width: o, height: s } = (0, E.p)(i, {
             width: n,
             height: r
         });
     d.ZP.preloadImage({
         src: t,
         dimensions: {
-            maxWidth: a,
+            maxWidth: o,
             maxHeight: s,
             imageWidth: n,
             imageHeight: r
         },
-        options: o
+        options: a
     });
 }
 function N(e, t) {
     return ((e % t) + t) % t;
 }
 function C(e) {
-    let { children: t, isObscured: n, src: o } = e,
+    let { children: t, isObscured: n, src: a } = e,
         [s, c] = i.useState(!1),
         u = i.useCallback(() => {
             c((e) => !e);
@@ -66,11 +66,11 @@ function C(e) {
                       onToggleObscurity: u,
                       children: (e) =>
                           (0, r.jsx)('div', {
-                              className: a()(T.obscureWrapper, { [T.obscure]: e }),
+                              className: o()(T.obscureWrapper, { [T.obscure]: e }),
                               children: t(e)
                           })
                   },
-                  o
+                  a
               )
           })
         : (0, r.jsx)(r.Fragment, { children: t(!1) });
@@ -91,9 +91,9 @@ function R(e, t) {
     }
 }
 function P(e) {
-    let { items: t, onIndexChange: n, startIndex: o = 0, shouldRedactExplicitContent: l = !1, shouldHideMediaOptions: u = !1 } = e,
-        [d, f] = i.useState(o),
-        _ = i.useRef(o),
+    let { items: t, onIndexChange: n, startIndex: a = 0, shouldRedactExplicitContent: l = !1, shouldHideMediaOptions: u = !1 } = e,
+        [d, f] = i.useState(a),
+        _ = i.useRef(a),
         { zoomed: h, setZoomed: A } = (0, g.Y)(),
         R = i.useCallback(
             (e) => {
@@ -139,7 +139,7 @@ function P(e) {
                                       },
                                       icon: s.j9r,
                                       tooltip: S.intl.string(S.t.vgfxaG),
-                                      className: a()(T.navPrev, e)
+                                      className: o()(T.navPrev, e)
                                   }),
                                   (0, r.jsx)(O.Z, {
                                       onClick: (e) => {
@@ -147,7 +147,7 @@ function P(e) {
                                       },
                                       icon: s.d4D,
                                       tooltip: S.intl.string(S.t.XiOHRU),
-                                      className: a()(T.navNext, e)
+                                      className: o()(T.navNext, e)
                                   })
                               ]
                           })

@@ -1,8 +1,8 @@
 let r;
 n.r(t), n.d(t, { default: () => eT }), n(388685), n(415506);
 var i,
-    o = n(442837),
-    a = n(433517),
+    a = n(442837),
+    o = n(433517),
     s = n(570140),
     l = n(284737),
     c = n(490029),
@@ -78,8 +78,8 @@ function C(e, t) {
         r,
         i = R(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -88,8 +88,8 @@ function R(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let P = Object.freeze({
@@ -130,18 +130,18 @@ function Y(e) {
 }
 function W(e) {
     if (('OVERLAY_INITIALIZE' === e.type && Y(e) && (j = !0), j)) {
-        var t, n, r, i, o;
+        var t, n, r, i, a;
         switch (e.type) {
             case 'CHANNEL_CREATE':
             case 'THREAD_CREATE':
             case 'THREAD_UPDATE':
             case 'CHANNEL_DELETE':
             case 'THREAD_DELETE':
-                let a = (0, f.kt)(e.channel);
-                if (!f.AW.has(a.type)) break;
+                let o = (0, f.kt)(e.channel);
+                if (!f.AW.has(o.type)) break;
                 s.Z.dispatch({
                     type: e.type,
-                    channel: a
+                    channel: o
                 });
                 break;
             case 'CHANNEL_UPDATES':
@@ -161,7 +161,7 @@ function W(e) {
                     c = e.guild;
                 (c.channels = null != (i = null == (n = c.channels) ? void 0 : n.map(l)) ? i : null),
                     (c.threads = null == (r = c.threads) ? void 0 : r.map(l)),
-                    null != c.channelUpdates && (c.channelUpdates.writes = null == (o = c.channelUpdates.writes) ? void 0 : o.map(l)),
+                    null != c.channelUpdates && (c.channelUpdates.writes = null == (a = c.channelUpdates.writes) ? void 0 : a.map(l)),
                     s.Z.dispatch({
                         type: 'GUILD_CREATE',
                         guild: c
@@ -232,11 +232,11 @@ function ei(e) {
     let { guildId: t, channelId: n } = e;
     (F.selectedGuildId = t), (F.selectedChannelId = n);
 }
-function eo(e) {
+function ea(e) {
     let { callId: t } = e;
     L = t;
 }
-function ea() {
+function eo() {
     L = null;
 }
 function es() {
@@ -337,7 +337,7 @@ function eO(e) {
     if (null == e.pid || e.pid === t)
         switch (e.type) {
             case v.BmY.STORAGE_SYNC:
-                o.ZP.PersistedStore.initializeAll(e.states);
+                a.ZP.PersistedStore.initializeAll(e.states);
                 break;
             case v.BmY.DISPATCH:
                 null != e.payloads && ((k = !0), e.payloads.forEach((e) => W(e)), (k = !1));
@@ -356,7 +356,7 @@ function ev() {
 function eI(e) {
     x.delete(e.previousAssociatedGamePID);
 }
-class eS extends (i = o.ZP.PersistedStore) {
+class eS extends (i = a.ZP.PersistedStore) {
     initialize(e) {
         if (
             (this.waitFor(_.default),
@@ -466,10 +466,10 @@ S(eS, 'displayName', 'OverlayStore'),
     S(eS, 'persistKey', 'OverlayStoreV2'),
     S(eS, 'migrations', [
         () => {
-            let e = T({}, a.K.get('OverlayStore')),
+            let e = T({}, o.K.get('OverlayStore')),
                 { pinnedWidgets: t, positions: n, sizes: r, v: i } = e,
-                o = C(e, ['pinnedWidgets', 'positions', 'sizes', 'v']);
-            return T({}, P, 5 === i ? o : null);
+                a = C(e, ['pinnedWidgets', 'positions', 'sizes', 'v']);
+            return T({}, P, 5 === i ? a : null);
         },
         (e) => {
             let t = _.default.getId();
@@ -485,8 +485,8 @@ let eT = new eS(s.Z, {
     OVERLAY_READY: X,
     OVERLAY_FOCUSED: er,
     OVERLAY_SELECT_CHANNEL: ei,
-    OVERLAY_SELECT_CALL: eo,
-    CALL_DELETE: ea,
+    OVERLAY_SELECT_CALL: ea,
+    CALL_DELETE: eo,
     LAYOUT_CREATE: $,
     OVERLAY_SET_DISPLAY_NAME_MODE: ec,
     OVERLAY_SET_DISPLAY_USER_MODE: eu,

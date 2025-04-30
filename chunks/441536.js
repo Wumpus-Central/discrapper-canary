@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d });
 var r = n(593473),
     i = n(703656),
-    o = n(981631),
-    a = n(176505);
+    a = n(981631),
+    o = n(176505);
 function s(e, t, n) {
     return (
         t in e
@@ -57,5 +57,5 @@ function u(e, t) {
 }
 function d(e, t, n) {
     let s = null != n ? { search: (0, r.stringify)({ powerupSkuId: n }) } : void 0;
-    (0, i.uL)(o.Z5c.CHANNEL(e, a.oC.GUILD_BOOSTS), u(l({}, s), { source: t }));
+    (0, i.uL)(a.Z5c.CHANNEL(e, o.oC.GUILD_BOOSTS), u(l({}, s), { source: t }));
 }

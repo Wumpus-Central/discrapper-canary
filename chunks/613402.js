@@ -1,8 +1,8 @@
 n.d(t, { Z: () => c }), n(388685);
 var r = n(570140),
     i = n(147913),
-    o = n(885110);
-function a(e, t, n) {
+    a = n(885110);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,15 +17,15 @@ function a(e, t, n) {
 }
 class s extends i.Z {
     constructor(...e) {
-        super(...e), a(this, 'stores', new Map().set(o.Z, l));
+        super(...e), o(this, 'stores', new Map().set(a.Z, l));
     }
 }
 function l() {
     r.Z.dispatch({
         type: 'SELF_PRESENCE_STORE_UPDATE',
-        status: o.Z.getStatus(),
-        activities: o.Z.getActivities(!0),
-        hiddenActivities: o.Z.getHiddenActivities()
+        status: a.Z.getStatus(),
+        activities: a.Z.getActivities(!0),
+        hiddenActivities: a.Z.getHiddenActivities()
     });
 }
 let c = new s();

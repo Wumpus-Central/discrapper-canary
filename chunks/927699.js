@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(541716),
     c = n(752305),
@@ -18,12 +18,12 @@ let g = (0, f.kt)({
     type: p.d4z.DM
 });
 function E(e) {
-    let { sectionTitle: t, errors: n, onTextChange: o, pendingText: f, placeholder: p, currentText: E, className: b, innerClassName: y, disabled: O = !1, disableThemedBackground: v = !1 } = e,
+    let { sectionTitle: t, errors: n, onTextChange: a, pendingText: f, placeholder: p, currentText: E, className: b, innerClassName: y, disabled: O = !1, disableThemedBackground: v = !1 } = e,
         [I, S] = i.useState(null != f ? f : E),
         [T, A] = i.useState((0, c.JM)(I)),
         N = i.useRef(!1);
     function C(e, t, n) {
-        t !== I && (S(t), A(n), o(t));
+        t !== I && (S(t), A(n), a(t));
     }
     function R() {
         return new Promise((e) => {
@@ -44,14 +44,14 @@ function E(e) {
             }
         }, [f, E]),
         (0, r.jsx)('div', {
-            className: a()(m.body, b),
+            className: o()(m.body, b),
             children: (0, r.jsxs)(d.Z, {
                 title: t,
                 errors: n,
                 disabled: O,
                 children: [
                     (0, r.jsx)(u.Z, {
-                        innerClassName: a()(m.textArea, y),
+                        innerClassName: o()(m.textArea, y),
                         editorClassName: m.editorTextArea,
                         maxCharacterCount: _.$n,
                         onChange: C,

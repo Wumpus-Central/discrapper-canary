@@ -1,12 +1,12 @@
 n.d(t, {
     P: () => i,
-    Z: () => o
+    Z: () => a
 });
 var r = n(818083),
     i = (function (e) {
         return (e[(e.None = 0)] = 'None'), (e[(e.DefaultOn = 1)] = 'DefaultOn'), (e[(e.DefaultOff = 2)] = 'DefaultOff'), (e[(e.ComingSoon = 3)] = 'ComingSoon'), (e[(e.ClydeProfiles = 4)] = 'ClydeProfiles'), e;
     })({});
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: 'guild',
     id: '2023-03_clyde_ai',
     label: 'ClydeAI',

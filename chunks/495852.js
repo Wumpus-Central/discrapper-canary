@@ -1,8 +1,8 @@
 n.d(t, { C: () => m });
 var r = n(36056),
     i = n(950697),
-    o = n(614456),
-    a = n(528046),
+    a = n(614456),
+    o = n(528046),
     s = n(727037),
     l = n(297584),
     c = n(349992),
@@ -14,7 +14,7 @@ var r = n(36056),
     h = n(647943);
 class m {
     constructor(e, t, n) {
-        (this.defaultCheckDepth = 16), (this.typeName = e), (this.fields = t.map(r.nb)), (this.options = null != n ? n : {}), (this.refTypeCheck = new i.Z(this)), (this.refJsonReader = new o.C(this)), (this.refJsonWriter = new a.k(this)), (this.refBinReader = new s.I(this)), (this.refBinWriter = new l.R(this));
+        (this.defaultCheckDepth = 16), (this.typeName = e), (this.fields = t.map(r.nb)), (this.options = null != n ? n : {}), (this.refTypeCheck = new i.Z(this)), (this.refJsonReader = new a.C(this)), (this.refJsonWriter = new o.k(this)), (this.refBinReader = new s.I(this)), (this.refBinWriter = new l.R(this));
     }
     create(e) {
         let t = (0, c.t)(this);

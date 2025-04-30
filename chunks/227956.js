@@ -1,6 +1,6 @@
 var r = n(443980),
     i = n(704446),
-    o = n(118666);
+    a = n(118666);
 e.exports = i
     ? function (e, t) {
           return i(e, 'toString', {
@@ -10,4 +10,4 @@ e.exports = i
               writable: !0
           });
       }
-    : o;
+    : a;

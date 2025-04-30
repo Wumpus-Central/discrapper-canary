@@ -7,8 +7,8 @@ n.d(t, {
 });
 var r,
     i,
-    o,
     a,
+    o,
     s,
     l = n(525654),
     c = n.n(l);
@@ -17,11 +17,11 @@ let u = (null != (r = c().name) ? r : 'unknown').toLowerCase(),
 function f() {
     return d;
 }
-let _ = 'electron' === u.toLowerCase() ? parseInt(null != (o = c().version) ? o : '', 10) : -1;
+let _ = 'electron' === u.toLowerCase() ? parseInt(null != (a = c().version) ? a : '', 10) : -1;
 function p() {
     return _;
 }
-let h = 'firefox' === u.toLowerCase() ? parseInt(null != (a = c().version) ? a : '', 10) : -1;
+let h = 'firefox' === u.toLowerCase() ? parseInt(null != (o = c().version) ? o : '', 10) : -1;
 function m() {
     return h;
 }

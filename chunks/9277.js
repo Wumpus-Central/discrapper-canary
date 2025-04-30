@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(760907),
     l = n(442837),
     c = n(114101),
@@ -69,7 +69,7 @@ function I(e, t) {
     );
 }
 function S(e, t) {
-    let { disabled: n, type: o } = e,
+    let { disabled: n, type: a } = e,
         [y, v] = i.useState(!1),
         S = (0, l.e7)([_.Z], () => {
             var e, t;
@@ -89,12 +89,12 @@ function S(e, t) {
         handler: R
     });
     let P = i.useCallback(() => {
-            (0, f.RO)(g.X1.GIF, o);
-        }, [o]),
+            (0, f.RO)(g.X1.GIF, a);
+        }, [a]),
         { Component: w, events: D, play: L } = (0, c.V)(),
         x = (0, d.Q3)('ChannelGIFPickerButton');
     if (n) return null;
-    let M = T === g.X1.GIF && A === o;
+    let M = T === g.X1.GIF && A === a;
     return (0, r.jsx)(u.ua7, {
         text: S ? E.intl.string(E.t.mE2e8P) : null,
         forceOpen: !0,
@@ -105,7 +105,7 @@ function S(e, t) {
                     O(
                         {
                             ref: t,
-                            className: a()(g.CT, b.buttonContainer)
+                            className: o()(g.CT, b.buttonContainer)
                         },
                         e
                     ),

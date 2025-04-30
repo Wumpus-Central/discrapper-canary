@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(388685);
 var r = n(268146),
     i = n(46973),
-    o = n(147913),
-    a = n(314897),
+    a = n(147913),
+    o = n(314897),
     s = n(998502),
     l = n(981631);
 function c(e, t, n) {
@@ -46,19 +46,19 @@ function p(e) {
     }
 }
 function h(e) {
-    let t = e.userId === a.default.getId(),
+    let t = e.userId === o.default.getId(),
         n = null != e.streamId,
-        o = null;
+        a = null;
     switch (e.context) {
         case i.Yn.DEFAULT:
-            o = t ? r.X4.IsSendingVideo : r.X4.IsReceivingVideo;
+            a = t ? r.X4.IsSendingVideo : r.X4.IsReceivingVideo;
             break;
         case i.Yn.STREAM:
-            o = t ? r.X4.IsSendingStream : r.X4.IsReceivingStream;
+            a = t ? r.X4.IsSendingStream : r.X4.IsReceivingStream;
     }
-    s.ZP.setCrashInformation(o, +!!n);
+    s.ZP.setCrashInformation(a, +!!n);
 }
-class m extends o.Z {
+class m extends a.Z {
     constructor(...e) {
         super(...e),
             c(this, 'actions', {

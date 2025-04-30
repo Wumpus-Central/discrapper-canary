@@ -6,7 +6,7 @@ e.exports = function (e) {
             className: 'symbol',
             begin: /&[a-z]+;|&#[0-9]+;|&#x[a-f0-9]+;/
         },
-        o = {
+        a = {
             begin: /\s/,
             contains: [
                 {
@@ -16,7 +16,7 @@ e.exports = function (e) {
                 }
             ]
         },
-        a = e.inherit(o, {
+        o = e.inherit(a, {
             begin: /\(/,
             end: /\)/
         }),
@@ -69,10 +69,10 @@ e.exports = function (e) {
                 end: />/,
                 relevance: 10,
                 contains: [
-                    o,
+                    a,
                     l,
                     s,
-                    a,
+                    o,
                     {
                         begin: /\[/,
                         end: /\]/,
@@ -81,7 +81,7 @@ e.exports = function (e) {
                                 className: 'meta',
                                 begin: /<![a-z]/,
                                 end: />/,
-                                contains: [o, a, l, s]
+                                contains: [a, o, l, s]
                             }
                         ]
                     }

@@ -1,17 +1,17 @@
 n.d(t, { Z: () => s });
 var r = n(442837),
     i = n(353647),
-    o = n(146282),
-    a = n(206583);
+    a = n(146282),
+    o = n(206583);
 function s(e) {
     let { activity: t, user: n } = e,
         s = (0, r.e7)(
-            [o.Z],
+            [a.Z],
             () => {
-                o.Z.getMatchingInboxEntry({
+                a.Z.getMatchingInboxEntry({
                     activity: t,
                     userId: n.id,
-                    feedId: a.YN.GLOBAL_FEED
+                    feedId: o.YN.GLOBAL_FEED
                 });
             },
             [t, n.id]

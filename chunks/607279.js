@@ -1,9 +1,9 @@
 n.d(t, { Z: () => m }), n(388685);
 var r,
     i = n(255367),
-    o = n(73800),
-    a = n(120356),
-    s = n.n(a),
+    a = n(73800),
+    o = n(120356),
+    s = n.n(o),
     l = n(481060),
     c = n(388032),
     u = n(449101);
@@ -38,16 +38,16 @@ function f(e) {
 }
 let _ = 100,
     p = 'search';
-class h extends (r = o.Component) {
+class h extends (r = a.Component) {
     render() {
-        let { autoFocus: e, label: t, placeholder: n, searchTerm: r, inputClassName: o, className: a, onChange: d, onFocus: f, onBlur: h, onKeyPress: m, autoComplete: g, forwardedRef: E, closeIconClassName: b, searchIconClassName: y, cta: O } = this.props,
+        let { autoFocus: e, label: t, placeholder: n, searchTerm: r, inputClassName: a, className: o, onChange: d, onFocus: f, onBlur: h, onKeyPress: m, autoComplete: g, forwardedRef: E, closeIconClassName: b, searchIconClassName: y, cta: O } = this.props,
             v = null != r && r.length > 0,
             I = null != E ? E : this._textInputRef;
         return (0, i.jsx)(l.tEY, {
             focusTarget: I,
             ringTarget: this._containerRef,
             children: (0, i.jsxs)('div', {
-                className: s()(u.searchBox, a),
+                className: s()(u.searchBox, o),
                 ref: this._containerRef,
                 children: [
                     (0, i.jsx)(l.oil, {
@@ -56,7 +56,7 @@ class h extends (r = o.Component) {
                         name: p,
                         maxLength: _,
                         className: u.searchBoxInputWrapper,
-                        inputClassName: s()(u.searchBoxInput, o),
+                        inputClassName: s()(u.searchBoxInput, a),
                         onChange: d,
                         onFocus: f,
                         onBlur: h,
@@ -98,8 +98,8 @@ class h extends (r = o.Component) {
     }
     constructor(...e) {
         super(...e),
-            d(this, '_textInputRef', o.createRef()),
-            d(this, '_containerRef', o.createRef()),
+            d(this, '_textInputRef', a.createRef()),
+            d(this, '_containerRef', a.createRef()),
             d(this, 'handleClear', () => {
                 let { onClear: e, forwardedRef: t } = this.props,
                     { current: n } = null != t ? t : this._textInputRef;
@@ -108,4 +108,4 @@ class h extends (r = o.Component) {
     }
 }
 d(h, 'defaultProps', { autoComplete: !1 });
-let m = o.forwardRef((e, t) => (0, i.jsx)(h, f({ forwardedRef: t }, e)));
+let m = a.forwardRef((e, t) => (0, i.jsx)(h, f({ forwardedRef: t }, e)));

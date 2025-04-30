@@ -1,15 +1,15 @@
-var e = r(98405),
-    o = r(127849),
-    i = r(391246),
-    u = r(108015),
-    c = 'ArrayBuffer',
-    a = i[c];
-e(
+var r = n(98405),
+    i = n(127849),
+    a = n(391246),
+    o = n(108015),
+    s = 'ArrayBuffer',
+    l = a[s];
+r(
     {
         global: !0,
         constructor: !0,
-        forced: o[c] !== a
+        forced: i[s] !== l
     },
-    { ArrayBuffer: a }
+    { ArrayBuffer: l }
 ),
-    u(c);
+    o(s);

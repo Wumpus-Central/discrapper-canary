@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N }), n(457542), n(415506), n(388685), n(600040);
 var r = n(512722),
     i = n.n(r),
-    o = n(264344),
-    a = n.n(o),
+    a = n(264344),
+    o = n.n(a),
     s = n(259443),
     l = n(47770),
     c = n(174498),
@@ -43,7 +43,7 @@ class N extends l.Z {
         this.interacted || (document.createElement('audio').play(), (this.interacted = !0)), this.eachConnection((e) => e.interact());
     }
     static supported() {
-        return !__OVERLAY__ && (S.fi && null != window.AudioContext && null != window.RTCPeerConnection ? (n(266370), !0) : (A.info('WebRTC is not supported on', a().name, a().version), !1));
+        return !__OVERLAY__ && (S.fi && null != window.AudioContext && null != window.RTCPeerConnection ? (n(266370), !0) : (A.info('WebRTC is not supported on', o().name, o().version), !1));
     }
     supported() {
         return !0;
@@ -60,7 +60,7 @@ class N extends l.Z {
                 var t;
                 return (null == (t = navigator.mediaDevices) ? void 0 : t.getDisplayMedia) != null;
             case I.AN.VOICE_PROCESSING:
-                return 'Chrome' === a().name;
+                return 'Chrome' === o().name;
             case I.AN.NATIVE_PING:
             case I.AN.DIAGNOSTICS:
                 return S.Fo;
@@ -68,7 +68,7 @@ class N extends l.Z {
             case I.AN.LOOPBACK:
             case I.AN.NOISE_SUPPRESSION:
             case I.AN.AUTOMATIC_GAIN_CONTROL:
-                return 'Safari' !== a().name;
+                return 'Safari' !== o().name;
             case I.AN.NOISE_CANCELLATION:
                 return u()();
             case I.AN.QOS:
@@ -97,7 +97,7 @@ class N extends l.Z {
         return null == this._audioContext && (this._audioContext = new AudioContext()), this._audioContext;
     }
     connect(e, t, n) {
-        let { ssrc: r, address: i, port: o, modes: a, streamUserId: s, streamParameters: l } = n,
+        let { ssrc: r, address: i, port: a, modes: o, streamUserId: s, streamParameters: l } = n,
             c = (0, m.Q)(e, t, this.getAudioContext(), l);
         return (c.streamUserId = s), c.setOutputVolume(this.outputVolume), c.setSinkId(this.sinkId), c.once(d.S.Destroy, (e) => this.connections.delete(e)), c.on(d.S.Silence, (e) => this.emit(f.aB.Silence, e)), c.on(d.S.DesktopSourceEnd, this.handleDesktopSourceEnd), c.on(d.S.AudioPermission, this.handleAudioPermission), c.on(d.S.VideoPermission, this.handleVideoPermission), this.interacted && c.interact(), e === I.Yn.DEFAULT && (c.setAudioSource(this.sourceId), this.enabled && c.input.enableAudioInput()), this.connections.add(c), this.emit(f.aB.Connection, c), c;
     }
@@ -125,7 +125,7 @@ class N extends l.Z {
         e.on('permission', this.handleAudioPermission);
         try {
             var t;
-            await e.enable(), 'Firefox' === a().name && (await this.handleDeviceChange()), (this.enabled = !0), this.eachConnection((e) => e.input.enableAudioInput(), I.Yn.DEFAULT), null == (t = this.voiceActivityInput) || t.enable();
+            await e.enable(), 'Firefox' === o().name && (await this.handleDeviceChange()), (this.enabled = !0), this.eachConnection((e) => e.input.enableAudioInput(), I.Yn.DEFAULT), null == (t = this.voiceActivityInput) || t.enable();
         } finally {
             e.destroy();
         }

@@ -10,7 +10,7 @@ function i(e, t) {
     }
     e.push(t);
 }
-function o(e) {
+function a(e) {
     let t = null;
     for (let n = 0; n < e.length; n++) {
         let r = e[n];
@@ -21,20 +21,20 @@ function o(e) {
         (t.content += r.content), e.splice(n, 1), n--;
     }
 }
-function a(e, t) {
+function o(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
     if (Array.isArray(t)) {
         let r = t.length,
             s = [];
-        for (let o = 0; o < r; o++) i(s, a(e, t[o], n));
-        return e.isSlate || o(s), s;
+        for (let a = 0; a < r; a++) i(s, o(e, t[a], n));
+        return e.isSlate || a(s), s;
     }
-    return (null != t.content && (t.content = a(e, t.content, t)), 'inlineCode' === t.type && delete t.validationChildContent, 'list' === t.type && (t.items = t.items.map((t) => (Array.isArray(t) ? a(e, t, null) : t))), null != n && t.type === n.type) ? t.content : t;
+    return (null != t.content && (t.content = o(e, t.content, t)), 'inlineCode' === t.type && delete t.validationChildContent, 'list' === t.type && (t.items = t.items.map((t) => (Array.isArray(t) ? o(e, t, null) : t))), null != n && t.type === n.type) ? t.content : t;
 }
 n.d(t, {
     RA: () => l,
     Rp: () => c,
-    ge: () => a
+    ge: () => o
 }),
     n(539854);
 let s = {};

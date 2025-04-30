@@ -1,5 +1,5 @@
 n.d(t, {
-    X: () => o,
+    X: () => a,
     j: () => i
 });
 let r = (0, n(818083).B)({
@@ -21,4 +21,4 @@ let r = (0, n(818083).B)({
         ]
     }),
     i = (e) => r.useExperiment({ location: e }).enabled,
-    o = (e) => r.getCurrentConfig({ location: e }).enabled;
+    a = (e) => r.getCurrentConfig({ location: e }).enabled;

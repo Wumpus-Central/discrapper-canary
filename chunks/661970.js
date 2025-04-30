@@ -1,13 +1,13 @@
-var e = r(154028),
-    o = r(880181),
-    i = r(568033),
-    u = r(677671),
-    c = Object;
-t.exports = u
+var r = a(154028),
+    n = a(880181),
+    _ = a(568033),
+    o = a(677671),
+    i = Object;
+t.exports = o
     ? function (t) {
           return 'symbol' == typeof t;
       }
     : function (t) {
-          var n = e('Symbol');
-          return o(n) && i(n.prototype, c(t));
+          var e = r('Symbol');
+          return n(e) && _(e.prototype, i(t));
       };

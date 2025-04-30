@@ -9,8 +9,8 @@ n.d(t, {
     n(388685);
 var r = n(570140),
     i = n(367907),
-    o = n(703656),
-    a = n(592125),
+    a = n(703656),
+    o = n(592125),
     s = n(984933),
     l = n(271383),
     c = n(430824),
@@ -103,10 +103,10 @@ function S(e) {
 }
 function T(e) {
     let t = d.Z.getChannelId(e),
-        n = a.Z.getChannel(t);
+        n = o.Z.getChannel(t);
     if (!(null != t && (0, g.AB)(t)) && !u.Z.can(m.Plq.VIEW_CHANNEL, n)) {
         let t = s.ZP.getDefaultChannel(e);
-        null != t && (0, o.uL)(m.Z5c.CHANNEL(e, t.id));
+        null != t && (0, a.uL)(m.Z5c.CHANNEL(e, t.id));
     }
 }
 function A(e, t) {

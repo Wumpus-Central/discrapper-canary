@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N }), n(388685), n(781311);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(106351),
     l = n(507274),
     c = n(541716),
@@ -28,9 +28,9 @@ let S = (0, f.kt)({
         let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
         switch (r) {
             case y.n_.ACTIVITY:
-                let o = v.intl.formatToPlainString(v.t.WmvMCg, { username: n }),
-                    a = '\n> '.concat(i);
-                return null != i ? ''.concat(E.jd).concat(o, '*').concat(a, '\n').concat(t) : ''.concat(E.jd).concat(o, '*\n').concat(t);
+                let a = v.intl.formatToPlainString(v.t.WmvMCg, { username: n }),
+                    o = '\n> '.concat(i);
+                return null != i ? ''.concat(E.jd).concat(a, '*').concat(o, '\n').concat(t) : ''.concat(E.jd).concat(a, '*\n').concat(t);
             case y.n_.AVATAR:
                 let s = v.intl.formatToPlainString(v.t.lpaBsL, { username: n });
                 return ''.concat(E.jd).concat(s, '*\n').concat(t);
@@ -55,7 +55,7 @@ let S = (0, f.kt)({
         }
     };
 function N(e) {
-    let { user: t, guildId: n, channelId: o, sourceType: s, sourceDetails: f, setPopoutRef: _, modalKey: E, onAction: N, onClose: C, entry: R } = e,
+    let { user: t, guildId: n, channelId: a, sourceType: s, sourceDetails: f, setPopoutRef: _, modalKey: E, onAction: N, onClose: C, entry: R } = e,
         { resetInteraction: P, setInteractionToast: w } = (0, g.Xo)(),
         { primaryColor: D } = (0, b.z)(),
         [L, x] = i.useState(''),
@@ -102,7 +102,7 @@ function N(e) {
         ref: U,
         onKeyDown: G,
         children: (0, r.jsx)('div', {
-            className: a()(I.container, V, { [I.customProfileTheme]: null != D }),
+            className: o()(I.container, V, { [I.customProfileTheme]: null != D }),
             children: (0, r.jsx)(d.Z, {
                 parentModalKey: E,
                 emojiPickerCloseOnModalOuterClick: !0,
@@ -110,7 +110,7 @@ function N(e) {
                 innerClassName: I.inputInner,
                 editorClassName: I.editor,
                 type: c.Ie.USER_PROFILE_REPLY,
-                placeholder: v.intl.formatToPlainString(A(s), { username: p.ZP.getName(n, o, t) }),
+                placeholder: v.intl.formatToPlainString(A(s), { username: p.ZP.getName(n, a, t) }),
                 channel: S,
                 textValue: L,
                 richValue: M,

@@ -12,12 +12,12 @@ function r(e, t, n) {
     );
 }
 function i(e, t, n) {
-    o(e, t), t.set(e, n);
-}
-function o(e, t) {
-    if (t.has(e)) throw TypeError('Cannot initialize the same private elements twice on an object');
+    a(e, t), t.set(e, n);
 }
 function a(e, t) {
+    if (t.has(e)) throw TypeError('Cannot initialize the same private elements twice on an object');
+}
+function o(e, t) {
     var n = c(e, t, 'get');
     return s(e, n);
 }
@@ -48,14 +48,14 @@ class f {
             value: void 0
         }),
             r(this, 'register', (e) => {
-                a(this, d).push(e);
+                o(this, d).push(e);
             }),
             r(this, 'unregister', (e) => {
                 let t;
-                for (; -1 !== (t = a(this, d).indexOf(e)); ) a(this, d).splice(t, 1);
+                for (; -1 !== (t = o(this, d).indexOf(e)); ) o(this, d).splice(t, 1);
             }),
             r(this, 'backendChanged', (e) => {
-                for (let t of a(this, d)) t.backendChanged(e);
+                for (let t of o(this, d)) t.backendChanged(e);
             }),
             l(this, d, []);
     }

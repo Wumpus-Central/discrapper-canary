@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r,
     i = n(442837),
-    o = n(570140);
-function a(e, t, n) {
+    a = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -30,7 +30,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -74,8 +74,8 @@ function b(e) {
         i = u[n];
     if (null == i) return !1;
     i.resourceChannels = null != (t = i.resourceChannels) ? t : [];
-    let o = i.resourceChannels.findIndex((e) => e.channelId === r.channelId);
-    return -1 !== o && ((i.resourceChannels[o] = s({}, r)), !0);
+    let a = i.resourceChannels.findIndex((e) => e.channelId === r.channelId);
+    return -1 !== a && ((i.resourceChannels[a] = s({}, r)), !0);
 }
 function y(e) {
     var t;
@@ -83,8 +83,8 @@ function y(e) {
         i = u[n];
     if (null == i) return !1;
     i.newMemberActions = null != (t = i.newMemberActions) ? t : [];
-    let o = i.newMemberActions.findIndex((e) => e.channelId === r.channelId);
-    return -1 !== o && ((i.newMemberActions[o] = s({}, r)), !0);
+    let a = i.newMemberActions.findIndex((e) => e.channelId === r.channelId);
+    return -1 !== a && ((i.newMemberActions[a] = s({}, r)), !0);
 }
 class O extends (r = i.ZP.Store) {
     getSettings(e) {
@@ -131,8 +131,8 @@ class O extends (r = i.ZP.Store) {
         return null == e || null == t ? null : null != (i = null == (r = u[e]) || null == (n = r.newMemberActions) ? void 0 : n.find((e) => e.channelId === t)) ? i : null;
     }
 }
-a(O, 'displayName', 'GuildOnboardingHomeSettingsStore');
-let v = new O(o.Z, {
+o(O, 'displayName', 'GuildOnboardingHomeSettingsStore');
+let v = new O(a.Z, {
     GUILD_HOME_SETTINGS_FETCH_START: h,
     GUILD_HOME_SETTINGS_FETCH_SUCCESS: p,
     GUILD_HOME_SETTINGS_FETCH_FAIL: m,

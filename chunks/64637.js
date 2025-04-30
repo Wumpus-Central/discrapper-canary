@@ -1,12 +1,12 @@
-var e = r(507604),
-    o = r(621523),
-    i = r(809290);
+var r = a(507604),
+    n = a(621523),
+    _ = a(809290);
 t.exports =
-    !e &&
-    !o(function () {
+    !r &&
+    !n(function () {
         return (
             7 !==
-            Object.defineProperty(i('div'), 'a', {
+            Object.defineProperty(_('div'), 'a', {
                 get: function () {
                     return 7;
                 }

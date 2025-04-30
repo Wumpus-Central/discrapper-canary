@@ -1,13 +1,13 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(63063),
     i = n(927923),
-    o = n(388032);
-function a(e, t, n) {
+    a = n(388032);
+function o(e, t, n) {
     let i = null;
     return (
         'failed' === t ? (i = s(e, n.code)) : 'n/a' === t && (i = l(e, n.code)),
         null != i &&
-            (i.errorCodeMessage = o.intl.format(o.t['1Bi9CQ'], {
+            (i.errorCodeMessage = a.intl.format(a.t['1Bi9CQ'], {
                 supportURL: r.Z.getSubmitRequestURL(),
                 errorCode: n.code
             })),
@@ -19,29 +19,29 @@ function s(e, t) {
     switch (t) {
         case i.Ry.CONSOLE_DEVICE_COMMUNICATION_RESTRICTED:
             return {
-                title: o.intl.string(o.t['GSZ+HB']),
-                body: o.intl.formatToPlainString(o.t['cYX/3N'], { deviceType: n })
+                title: a.intl.string(a.t['GSZ+HB']),
+                body: a.intl.formatToPlainString(a.t['cYX/3N'], { deviceType: n })
             };
         case i.Ry.CONSOLE_DEVICE_INVALID_POWER_MODE:
             return {
-                title: o.intl.formatToPlainString(o.t.akd6S0, { deviceType: n }),
-                body: o.intl.formatToPlainString(o.t.RyOvpK, { deviceName: r })
+                title: a.intl.formatToPlainString(a.t.akd6S0, { deviceType: n }),
+                body: a.intl.formatToPlainString(a.t.RyOvpK, { deviceName: r })
             };
         case i.Ry.CONSOLE_DEVICE_UNVAILABLE_FROM_OTHER_USERS:
             return {
-                title: o.intl.formatToPlainString(o.t.M6Vzam, { deviceType: n }),
-                body: o.intl.formatToPlainString(o.t.InKtnJ, { deviceName: r })
+                title: a.intl.formatToPlainString(a.t.M6Vzam, { deviceType: n }),
+                body: a.intl.formatToPlainString(a.t.InKtnJ, { deviceName: r })
             };
         case i.Ry.CONSOLE_DEVICE_ACCOUNT_LINK_ERROR:
             return {
-                title: o.intl.string(o.t['QL1y9/']),
-                body: o.intl.formatToPlainString(o.t.D18eZm, { deviceType: n }),
+                title: a.intl.string(a.t['QL1y9/']),
+                body: a.intl.formatToPlainString(a.t.D18eZm, { deviceType: n }),
                 isAccountLinkError: !0
             };
         default:
             return {
-                title: o.intl.string(o.t['QL1y9/']),
-                body: o.intl.formatToPlainString(o.t['6ZyNHx'], { deviceName: r })
+                title: a.intl.string(a.t['QL1y9/']),
+                body: a.intl.formatToPlainString(a.t['6ZyNHx'], { deviceName: r })
             };
     }
 }
@@ -49,8 +49,8 @@ function l(e, t) {
     let { platform: n, name: r } = e;
     return t === i.Ry.CONSOLE_DEVICE_PASSCODE_UNLOCK_REQUIRED
         ? {
-              title: o.intl.formatToPlainString(o.t.KchfhI, { deviceType: n }),
-              body: o.intl.formatToPlainString(o.t['21ndz8'], { deviceName: r })
+              title: a.intl.formatToPlainString(a.t.KchfhI, { deviceType: n }),
+              body: a.intl.formatToPlainString(a.t['21ndz8'], { deviceName: r })
           }
         : null;
 }

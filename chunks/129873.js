@@ -1,8 +1,8 @@
 n.d(t, { B: () => _ }), n(539854);
 var r = n(569545),
     i = n(199902),
-    o = n(314897),
-    a = n(959457),
+    a = n(314897),
+    o = n(959457),
     s = n(458725),
     l = n(442741),
     c = n(150457);
@@ -41,8 +41,8 @@ let f = 10,
             (0, c.LN)()
                 ? i.Z.getAllActiveStreams().reduce((e, t) => {
                       var n;
-                      let i = null == (n = a.Z.getRTCConnection((0, r.V9)(t))) ? void 0 : n.getMediaEngineConnectionId();
-                      if (null == i || t.ownerId === o.default.getId()) return e;
+                      let i = null == (n = o.Z.getRTCConnection((0, r.V9)(t))) ? void 0 : n.getMediaEngineConnectionId();
+                      if (null == i || t.ownerId === a.default.getId()) return e;
                       let u = (0, c.hj)(i, t.ownerId);
                       return null == u || ((100 * u.short.packetLossRate > f || 100 * u.long.packetLossRate > f) && e.push(d({ type: s.u.STREAM_VIEW_HIGH_PACKET_LOSS }, (0, l.rT)((0, r.V9)(t))))), e;
                   }, [])

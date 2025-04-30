@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(873546),
+    a = n.n(i),
+    o = n(873546),
     s = n(481060),
     l = n(388032),
     c = n(594619),
@@ -13,10 +13,10 @@ var i = n(120356),
 function d(e) {
     let { closeAction: t, variant: n = '', keybind: i, className: u } = e;
     return (0, r.jsxs)('div', {
-        className: o()(c.container, u),
+        className: a()(c.container, u),
         children: [
             (0, r.jsx)(s.P3F, {
-                className: o()(c.closeButton, {
+                className: a()(c.closeButton, {
                     [c.closeButtonBold]: 'Bold' === n,
                     [c.closeButtonSolid]: 'Solid' === n
                 }),
@@ -35,7 +35,7 @@ function d(e) {
                               'aria-hidden': !0
                           })
             }),
-            a.tq
+            o.tq
                 ? null
                 : (0, r.jsx)('div', {
                       className: c.keybind,

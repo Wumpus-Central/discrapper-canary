@@ -17,8 +17,8 @@ n.d(t, {
     n(415506);
 var r = n(990547),
     i = n(252258),
-    o = n(544891),
-    a = n(570140),
+    a = n(544891),
+    o = n(570140),
     s = n(668781),
     l = n(493683),
     c = n(475179),
@@ -109,9 +109,9 @@ function en(e) {
         n,
         r,
         i,
-        o,
-        { isContextlessActivity: a, instanceId: s, partyId: l, channelId: c } = e;
-    if (a) {
+        a,
+        { isContextlessActivity: o, instanceId: s, partyId: l, channelId: c } = e;
+    if (o) {
         let e = null != s ? s : l,
             { channelId: t, guildId: n } =
                 null != e
@@ -120,21 +120,21 @@ function en(e) {
                           channelId: void 0,
                           guildId: void 0
                       };
-        (i = t), (o = n);
+        (i = t), (a = n);
     } else {
         var u;
-        (t = c), (r = null != (u = null == (n = C.Z.getChannel(t)) ? void 0 : n.getGuildId()) ? u : void 0), (i = t), (o = r);
+        (t = c), (r = null != (u = null == (n = C.Z.getChannel(t)) ? void 0 : n.getGuildId()) ? u : void 0), (i = t), (a = r);
     }
     return {
         channelIdForLaunch: t,
         channelForLaunch: n,
         guildIdForLaunch: r,
         channelIdForAnalytics: i,
-        guildIdForAnalytics: o
+        guildIdForAnalytics: a
     };
 }
 async function er(e) {
-    let { channelId: t, applicationId: n, isStart: r, analyticsLocations: o, locationObject: s, embeddedActivitiesManager: l, componentId: c, commandOrigin: u, sectionName: d, source: _, partyId: p, onExecutedCallback: h, referrerId: m, customId: g, joinUserId: E, joinSessionId: b, secret: y, inviterUserId: I, instanceId: T, isContextlessActivity: A, onConfirmActivityLaunchChecksAlertOpen: N } = e,
+    let { channelId: t, applicationId: n, isStart: r, analyticsLocations: a, locationObject: s, embeddedActivitiesManager: l, componentId: c, commandOrigin: u, sectionName: d, source: _, partyId: p, onExecutedCallback: h, referrerId: m, customId: g, joinUserId: E, joinSessionId: b, secret: y, inviterUserId: I, instanceId: T, isContextlessActivity: A, onConfirmActivityLaunchChecksAlertOpen: N } = e,
         C = null != p ? p : T,
         {
             channelIdForLaunch: R,
@@ -155,13 +155,13 @@ async function er(e) {
     }
     let j = (0, S.r)();
     try {
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_START',
             nonce: j,
             applicationId: n,
             channelId: null != R ? R : null,
             componentId: c,
-            analyticsLocations: o,
+            analyticsLocations: a,
             source: _,
             commandOrigin: u,
             inviterUserId: I,
@@ -181,7 +181,7 @@ async function er(e) {
                     channelType: null == P ? void 0 : P.type,
                     applicationId: n,
                     locationObject: s,
-                    analyticsLocations: null != o ? o : [],
+                    analyticsLocations: null != a ? a : [],
                     source: _,
                     partyId: C,
                     referrerId: m,
@@ -190,7 +190,7 @@ async function er(e) {
             r)
         ) {
             if (null == R || !ei(n, P)) throw new O.Z(O.Z.Reasons.INVALID_CHANNEL);
-            let e = await eo({
+            let e = await ea({
                 applicationId: n,
                 nonce: j,
                 channelId: R,
@@ -206,7 +206,7 @@ async function er(e) {
             });
             if ('failure' === e.result && 4 !== e.reason) throw new O.Z(O.Z.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
         } else {
-            let e = await ea({
+            let e = await eo({
                 applicationId: n,
                 channelId: R,
                 embeddedActivitiesManager: l,
@@ -220,7 +220,7 @@ async function er(e) {
             });
             if ((null == h || h(), 'failure' === e.result)) throw new O.Z(O.Z.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED, e.reason);
         }
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_LAUNCH_SUCCESS',
             nonce: j,
             applicationId: n,
@@ -229,7 +229,7 @@ async function er(e) {
     } catch (t) {
         let e = A ? i.E.CONTEXTLESS : null != D ? i.E.GUILD_CHANNEL : i.E.PRIVATE_CHANNEL;
         return (
-            a.Z.dispatch({
+            o.Z.dispatch({
                 type: 'EMBEDDED_ACTIVITY_LAUNCH_FAIL',
                 nonce: j,
                 applicationId: n,
@@ -248,11 +248,11 @@ function ei(e, t) {
     let n = (null == t ? void 0 : t.type) === q.d4z.GUILD_VOICE,
         r = g.Z.getApplication(e),
         i = null != r && (0, M.yE)(r.flags, q.udG.EMBEDDED),
-        o = (0, U.l5)(t);
-    return (n && i) || o;
+        a = (0, U.l5)(t);
+    return (n && i) || a;
 }
-async function eo(e) {
-    let { applicationId: t, nonce: n, channelId: r, guildId: i, commandOrigin: o, sectionName: a, source: s, onExecutedCallback: l, clientSupportsContextlessActivityLaunch: c, onConfirmActivityLaunchChecksAlertOpen: u, embeddedActivitiesManager: d, isContextlessActivity: b } = e,
+async function ea(e) {
+    let { applicationId: t, nonce: n, channelId: r, guildId: i, commandOrigin: a, sectionName: o, source: s, onExecutedCallback: l, clientSupportsContextlessActivityLaunch: c, onConfirmActivityLaunchChecksAlertOpen: u, embeddedActivitiesManager: d, isContextlessActivity: b } = e,
         y = null;
     try {
         y = await (0, m.ZP)(r, t);
@@ -325,8 +325,8 @@ async function eo(e) {
                     channel: I,
                     guild: S
                 },
-                commandOrigin: o,
-                sectionName: a,
+                commandOrigin: a,
+                sectionName: o,
                 source: s,
                 clientSupportsContextlessActivityLaunch: c,
                 interactionLifecycleOptionsFactory: () => ({
@@ -334,7 +334,7 @@ async function eo(e) {
                     onSuccess: () => {
                         null == l || l(), e();
                     },
-                    onFailure: (e, n, o, a) => {
+                    onFailure: (e, n, a, o) => {
                         null == l || l(),
                             L.default.track(q.rMx.ACTIVITY_INTERACTION_CALLBACK_ERROR, {
                                 channel_id: r,
@@ -343,22 +343,22 @@ async function eo(e) {
                                 channel_type: null == I ? void 0 : I.type,
                                 error_code: e,
                                 error_message: n,
-                                error_status: o,
-                                error_reason_code: a,
+                                error_status: a,
+                                error_reason_code: o,
                                 source: s
                             }),
-                            null != e && null != n && null != o
+                            null != e && null != n && null != a
                                 ? u(
                                       new f.Z({
-                                          status: o,
+                                          status: a,
                                           body: {
                                               message: n,
                                               code: e
                                           }
                                       })
                                   )
-                                : null != a && a in v.Z.ReasonCodes
-                                  ? u(new v.Z(a))
+                                : null != o && o in v.Z.ReasonCodes
+                                  ? u(new v.Z(o))
                                   : u(new v.Z(v.Z.ReasonCodes.UNKNOWN));
                     }
                 })
@@ -367,9 +367,9 @@ async function eo(e) {
         { result: 'success' }
     );
 }
-async function ea(e) {
+async function eo(e) {
     let t,
-        { applicationId: n, channelId: i, embeddedActivitiesManager: o, isStart: a, guildId: l, joinUserId: c, joinSessionId: u, secret: d, instanceId: f, isContextlessActivity: _ } = e,
+        { applicationId: n, channelId: i, embeddedActivitiesManager: a, isStart: o, guildId: l, joinUserId: c, joinSessionId: u, secret: d, instanceId: f, isContextlessActivity: _ } = e,
         p = N.default.getSessionId(),
         h = w.default.getCurrentUser(),
         m = n;
@@ -428,13 +428,13 @@ async function ea(e) {
     if (
         ((null == v ? void 0 : v.applicationId) != null && (t = g.Z.getApplication(null == v ? void 0 : v.applicationId)),
         !(
-            !a ||
+            !o ||
             (await (0, V.p)({
                 applicationId: n,
                 application: b,
                 channel: y,
                 currentEmbeddedApplication: t,
-                embeddedActivitiesManager: o,
+                embeddedActivitiesManager: a,
                 user: h,
                 isContextless: null != _ && _
             }))
@@ -542,31 +542,31 @@ async function ea(e) {
 function es(e) {
     let { location: t, applicationId: n, showFeedback: r = !0 } = e,
         i = B.ZP.getSelfEmbeddedActivityForLocation(t);
-    a.Z.dispatch({
+    o.Z.dispatch({
         type: 'EMBEDDED_ACTIVITY_CLOSE',
         applicationId: n,
         location: t,
         instanceId: null == i ? void 0 : i.launchId,
         showFeedback: r
     });
-    let o = (0, F.pY)(t);
-    if (null != o) {
+    let a = (0, F.pY)(t);
+    if (null != a) {
         var s;
-        let e = y.Z.getSelectedParticipantId(o),
+        let e = y.Z.getSelectedParticipantId(a),
             t = null == (s = w.default.getCurrentUser()) ? void 0 : s.id,
-            r = B.ZP.getEmbeddedActivitiesForChannel(o).find((e) => e.applicationId === n);
+            r = B.ZP.getEmbeddedActivitiesForChannel(a).find((e) => e.applicationId === n);
         if (null == r || null == t || '' === t) return;
         e ===
             (0, b.gN)({
                 applicationId: n,
                 instanceId: null == r ? void 0 : r.compositeInstanceId
-            }) && c.Z.selectParticipant(o, null);
+            }) && c.Z.selectParticipant(a, null);
     }
 }
 async function el() {
     try {
-        a.Z.dispatch({ type: 'DEVELOPER_ACTIVITY_SHELF_FETCH_START' });
-        let e = await o.tn.get({
+        o.Z.dispatch({ type: 'DEVELOPER_ACTIVITY_SHELF_FETCH_START' });
+        let e = await a.tn.get({
                 url: q.ANM.APPLICATIONS_WITH_ASSETS,
                 query: { with_team_applications: !0 },
                 oldFormErrors: !0,
@@ -574,23 +574,23 @@ async function el() {
             }),
             t = e.body.applications,
             n = t.map((e) => A.ZP.createFromServer(e));
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS',
             applications: n,
             assets: e.body.assets
         }),
-            a.Z.dispatch({
+            o.Z.dispatch({
                 type: 'APPLICATIONS_FETCH_SUCCESS',
                 applications: t
             });
     } catch (e) {
-        a.Z.dispatch({ type: 'DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL' });
+        o.Z.dispatch({ type: 'DEVELOPER_ACTIVITY_SHELF_FETCH_FAIL' });
     }
 }
 async function ec(e, t, n) {
     try {
-        a.Z.dispatch({ type: 'UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_START' });
-        let r = await o.tn.post({
+        o.Z.dispatch({ type: 'UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_START' });
+        let r = await a.tn.post({
             url: q.ANM.APPLICATION_UPLOAD_ATTACHMENT(e),
             query: { channel_id: t },
             attachments: [
@@ -602,14 +602,14 @@ async function ec(e, t, n) {
             rejectWithError: !0
         });
         return (
-            a.Z.dispatch({
+            o.Z.dispatch({
                 type: 'UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_SUCCESS',
                 attachment: r.body.attachment
             }),
             r.body.attachment
         );
     } catch (e) {
-        return a.Z.dispatch({ type: 'UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL' }), new f.Z(e);
+        return o.Z.dispatch({ type: 'UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL' }), new f.Z(e);
     }
 }
 let eu = (e, t, n) => {
@@ -617,7 +617,7 @@ let eu = (e, t, n) => {
     (r === e || (null == r && null == e)) && t();
 };
 async function ed(e) {
-    var t, n, i, o;
+    var t, n, i, a;
     let { guildId: s, force: l = !1 } = e,
         c = B.ZP.getShelfActivities(s),
         u = c.map((e) => g.Z.getApplication(e.application_id)).filter(k.lm);
@@ -626,12 +626,12 @@ async function ed(e) {
             let e,
                 t,
                 n = new Promise((t) => {
-                    (e = eu.bind(null, s, t)), a.Z.subscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS', e);
+                    (e = eu.bind(null, s, t)), o.Z.subscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS', e);
                 }),
                 r = new Promise((e) => {
-                    (t = eu.bind(null, s, e)), a.Z.subscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL', t);
+                    (t = eu.bind(null, s, e)), o.Z.subscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL', t);
                 });
-            await Promise.race([n, r]), null != e && (a.Z.unsubscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS', e), (e = null)), null != t && (a.Z.unsubscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL', t), (t = null));
+            await Promise.race([n, r]), null != e && (o.Z.unsubscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS', e), (e = null)), null != t && (o.Z.unsubscribe('EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL', t), (t = null));
         }
         return {
             activityConfigs: c,
@@ -639,7 +639,7 @@ async function ed(e) {
         };
     }
     try {
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'EMBEDDED_ACTIVITY_FETCH_SHELF',
             guildId: s
         });
@@ -657,9 +657,9 @@ async function ed(e) {
             }),
             l = null != (n = t.body.activities) ? n : [],
             c = null != (i = t.body.applications) ? i : [],
-            u = null != (o = t.body.assets) ? o : {};
+            u = null != (a = t.body.assets) ? a : {};
         return (
-            a.Z.dispatch({
+            o.Z.dispatch({
                 type: 'EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS',
                 guildId: s,
                 activities: l,
@@ -667,7 +667,7 @@ async function ed(e) {
                 assets: u
             }),
             c.length > 0 &&
-                a.Z.dispatch({
+                o.Z.dispatch({
                     type: 'APPLICATIONS_FETCH_SUCCESS',
                     applications: c
                 }),
@@ -678,7 +678,7 @@ async function ed(e) {
         );
     } catch (e) {
         return (
-            a.Z.dispatch({
+            o.Z.dispatch({
                 type: 'EMBEDDED_ACTIVITY_FETCH_SHELF_FAIL',
                 guildId: s
             }),
@@ -691,7 +691,7 @@ async function ed(e) {
 }
 async function ef(e) {
     let { activityChannelId: t, invitedChannelId: n, applicationId: r, location: i } = e,
-        o = await u.ZP.createInvite(
+        a = await u.ZP.createInvite(
             t,
             {
                 target_type: X.Iq.EMBEDDED_APPLICATION,
@@ -699,11 +699,11 @@ async function ef(e) {
             },
             i
         );
-    null != C.Z.getChannel(n) && d.Z.sendInvite(n, o.code, i, null);
+    null != C.Z.getChannel(n) && d.Z.sendInvite(n, a.code, i, null);
 }
 async function e_(e) {
-    let { channelId: t, applicationId: n, userId: r, location: i, prefixedContent: o } = e,
-        a = await u.ZP.createInvite(
+    let { channelId: t, applicationId: n, userId: r, location: i, prefixedContent: a } = e,
+        o = await u.ZP.createInvite(
             t,
             {
                 target_type: X.Iq.EMBEDDED_APPLICATION,
@@ -715,17 +715,17 @@ async function e_(e) {
         let t,
             n = C.Z.getChannel(e);
         if (null == n) throw Error('Private channel not found');
-        null != o && (t = I.ZP.parse(n, o).content), d.Z.sendInvite(e, a.code, i, null, t);
+        null != a && (t = I.ZP.parse(n, a).content), d.Z.sendInvite(e, o.code, i, null, t);
     });
 }
 function ep() {
-    a.Z.dispatch({ type: 'EMBEDDED_ACTIVITY_DISMISS_NEW_INDICATOR' });
+    o.Z.dispatch({ type: 'EMBEDDED_ACTIVITY_DISMISS_NEW_INDICATOR' });
 }
 async function eh(e) {
     let t = q.ANM.ACTIVITY_TEST_MODE(e);
     try {
         return (
-            await o.tn.get({
+            await a.tn.get({
                 url: t,
                 oldFormErrors: !0,
                 rejectWithError: !0
@@ -737,13 +737,13 @@ async function eh(e) {
     }
 }
 function em(e) {
-    a.Z.dispatch({
+    o.Z.dispatch({
         type: 'EMBEDDED_ACTIVITY_SET_PANEL_MODE',
         activityPanelMode: e
     });
 }
 function eg(e) {
-    a.Z.dispatch({
+    o.Z.dispatch({
         type: 'EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT',
         focusedActivityLayout: e
     });

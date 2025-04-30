@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(367907),
@@ -37,14 +37,14 @@ function I(e, t) {
     );
 }
 function S(e) {
-    let { channel: t, message: n, replyChainLength: o } = e;
-    function a() {
+    let { channel: t, message: n, replyChainLength: a } = e;
+    function o() {
         (0, f.A6)(t.id), (0, h.R6)(t, n, 'Reply Chain Nudge');
     }
-    let s = i.useRef(o);
+    let s = i.useRef(a);
     return (
         i.useEffect(() => {
-            s.current = o;
+            s.current = a;
         }),
         i.useEffect(() => {
             (0, c.yw)(E.rMx.THREAD_NUDGE_SHOWN, {
@@ -55,7 +55,7 @@ function S(e) {
             });
         }, [t]),
         (0, r.jsxs)(l.P3F, {
-            onClick: a,
+            onClick: o,
             className: y.threadSuggestionBar,
             focusProps: {
                 offset: {
@@ -68,7 +68,7 @@ function S(e) {
                     color: 'header-secondary',
                     className: y.text,
                     variant: 'text-sm/normal',
-                    children: b.intl.format(b.t.B3V0FB, { count: Math.min(v, o + 1) })
+                    children: b.intl.format(b.t.B3V0FB, { count: Math.min(v, a + 1) })
                 }),
                 (0, r.jsx)(l.Text, {
                     color: 'text-link',
@@ -82,13 +82,13 @@ function S(e) {
 }
 function T(e) {
     let { reply: t, chatInputType: n } = e,
-        { channel: i, message: o, shouldMention: s, showMentionToggle: c } = t,
-        { guildId: h, nick: m, colorString: v, colorStrings: T, colorRoleName: A } = (0, u.ZP)(o),
+        { channel: i, message: a, shouldMention: s, showMentionToggle: c } = t,
+        { guildId: h, nick: m, colorString: v, colorStrings: T, colorRoleName: A } = (0, u.ZP)(a),
         N = (0, d.X)(h, T),
-        C = I(i, o),
-        R = (0, p.NE)(i, o),
+        C = I(i, a),
+        R = (0, p.NE)(i, a),
         P = n.showThreadPromptOnReply && C >= O && R,
-        w = () => (0, _.uL)(E.Z5c.CHANNEL(i.getGuildId(), i.id, o.id));
+        w = () => (0, _.uL)(E.Z5c.CHANNEL(i.getGuildId(), i.id, a.id));
     function D(e) {
         e.stopPropagation(), (0, f.qx)(i.id, !s);
     }
@@ -115,7 +115,7 @@ function T(e) {
                             },
                             children: (0, r.jsx)(l.Text, {
                                 color: 'header-secondary',
-                                className: a()(y.text, y.replyLabel),
+                                className: o()(y.text, y.replyLabel),
                                 variant: 'text-sm/normal',
                                 children: b.intl.format(b.t['8E4Gxc'], {
                                     userHook: (e, t) =>
@@ -142,7 +142,7 @@ function T(e) {
                                             (0, r.jsx)(l.ua7, {
                                                 text: s ? b.intl.string(b.t.DH2o6e) : b.intl.string(b.t.utGGIS),
                                                 children: (e) => {
-                                                    let { onMouseEnter: t, onMouseLeave: n, onFocus: i, onBlur: o } = e;
+                                                    let { onMouseEnter: t, onMouseLeave: n, onFocus: i, onBlur: a } = e;
                                                     return (0, r.jsx)(l.P3F, {
                                                         role: 'switch',
                                                         'aria-checked': s,
@@ -150,7 +150,7 @@ function T(e) {
                                                         onMouseEnter: t,
                                                         onMouseLeave: n,
                                                         onFocus: i,
-                                                        onBlur: o,
+                                                        onBlur: a,
                                                         children: (0, r.jsxs)(l.Text, {
                                                             variant: 'text-sm/bold',
                                                             color: s ? 'text-link' : 'text-muted',
@@ -182,7 +182,7 @@ function T(e) {
                 P &&
                     (0, r.jsx)(S, {
                         channel: i,
-                        message: o,
+                        message: a,
                         replyChainLength: C
                     })
             ]

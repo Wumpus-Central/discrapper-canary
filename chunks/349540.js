@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(388685);
 var r = n(147913),
     i = n(594174),
-    o = n(74538),
-    a = n(163684),
+    a = n(74538),
+    o = n(163684),
     s = n(748770),
     l = n(474936);
 function c(e, t, n) {
@@ -24,8 +24,8 @@ class u extends r.Z {
     }
     maybeFetchActiveOutboundPromotions() {
         let e = i.default.getCurrentUser(),
-            t = o.ZP.isPremiumExactly(e, l.p9.TIER_2),
-            n = a.g.getCurrentConfig(
+            t = a.ZP.isPremiumExactly(e, l.p9.TIER_2),
+            n = o.g.getCurrentConfig(
                 { location: 'maybeFetchActiveOutboundPromotions' },
                 {
                     autoTrackExposure: !1,

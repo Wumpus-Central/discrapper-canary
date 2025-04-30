@@ -1,7 +1,7 @@
 n.d(t, { Z: () => c }), n(415506);
 var r = n(73800),
     i = n(960048);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,7 +25,7 @@ function a(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -53,28 +53,28 @@ function l(e, t) {
         e
     );
 }
-let c = (e, t, n, o, s) => {
+let c = (e, t, n, a, s) => {
     let c = (0, r.useRef)(!1),
         u = {
             componentName: e,
             sentryErrorOptions: s,
-            stateToCapture: o
+            stateToCapture: a
         },
         d = (0, r.useRef)(u);
     (0, r.useEffect)(() => {
         d.current = u;
     }),
         (0, r.useEffect)(() => {
-            let { componentName: e, sentryErrorOptions: r, stateToCapture: o } = d.current;
+            let { componentName: e, sentryErrorOptions: r, stateToCapture: a } = d.current;
             if (t && !c.current) {
                 c.current = !0;
                 let t = setTimeout(() => {
                     let t = Error(''.concat(e, ' is taking too long to load.'));
                     i.Z.setExtra({
-                        loadingState: o,
+                        loadingState: a,
                         loadingTimeSeconds: n
                     }),
-                        i.Z.captureException(t, l(a({}, r), { tags: a({}, null == r ? void 0 : r.tags) }));
+                        i.Z.captureException(t, l(o({}, r), { tags: o({}, null == r ? void 0 : r.tags) }));
                 }, 1000 * n);
                 return () => {
                     clearTimeout(t);

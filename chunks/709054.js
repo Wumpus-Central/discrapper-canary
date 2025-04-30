@@ -1,33 +1,33 @@
 n.r(t),
     n.d(t, {
-        DISCORD_EPOCH: () => o.cj,
-        SnowflakeSequence: () => o.Tk,
+        DISCORD_EPOCH: () => a.cj,
+        SnowflakeSequence: () => a.Tk,
         default: () => s
     });
 var r = n(392711),
     i = n.n(r),
-    o = n(67423);
-function a(e) {
+    a = n(67423);
+function o(e) {
     return e;
 }
 let s = {
     age: function (e) {
-        return o.B_(e);
+        return a.B_(e);
     },
     extractTimestamp: function (e) {
-        return o.Lm(e);
+        return a.Lm(e);
     },
     compare: function (e, t) {
-        return o.qu(e, t);
+        return a.qu(e, t);
     },
     atPreviousMillisecond: function (e) {
-        return o.cO(e);
+        return a.cO(e);
     },
     fromTimestamp: function (e) {
-        return o.Ol(e);
+        return a.Ol(e);
     },
     fromTimestampWithSequence: function (e, t) {
-        return o.P4(e, t);
+        return a.P4(e, t);
     },
     keys: function (e) {
         return Object.keys(e);
@@ -42,16 +42,16 @@ let s = {
         return Object.entries(e);
     },
     isProbablyAValidSnowflake: function (e) {
-        return o.qi(e);
+        return a.qi(e);
     },
     castChannelIdAsMessageId: function (e) {
-        return a(e);
+        return o(e);
     },
     castMessageIdAsChannelId: function (e) {
-        return a(e);
+        return o(e);
     },
     castGuildIdAsEveryoneGuildRoleId: function (e) {
-        return a(e);
+        return o(e);
     },
-    cast: a
+    cast: o
 };

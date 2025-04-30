@@ -1,4 +1,4 @@
-n.d(t, { Xr: () => a });
+n.d(t, { Xr: () => o });
 var r = n(474936);
 function i(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
@@ -8,20 +8,20 @@ function i(e) {
         });
     return null != n ? n : r.Xh.NONE_MONTH;
 }
-function o(e) {
+function a(e) {
     return e.find((e) => {
         let t = r.GP[e.planId];
         return null != t && null != t.premiumType;
     });
 }
-function a(e, t, n) {
-    let a = o(e);
-    if (null == a) {
+function o(e, t, n) {
+    let o = a(e);
+    if (null == o) {
         if (e.length > 0) {
             let i = r.GP[e[0].planId];
             (t = i.interval), (n = i.intervalCount);
         }
         return i(t, n);
     }
-    return a.planId;
+    return o.planId;
 }

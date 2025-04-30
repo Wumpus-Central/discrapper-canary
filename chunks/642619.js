@@ -2,7 +2,7 @@ n.d(t, { H: () => c });
 var r = n(255367);
 n(73800);
 var i = n(481060);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,7 +26,7 @@ function a(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -55,15 +55,15 @@ function l(e, t) {
     );
 }
 let c = (e) => {
-    let { analyticsLocations: t, initialSelectedEffectId: o, guild: s } = e;
+    let { analyticsLocations: t, initialSelectedEffectId: a, guild: s } = e;
     (0, i.ZDy)(async () => {
         let { default: e } = await n.e('55183').then(n.bind(n, 191564));
         return (n) =>
             (0, r.jsx)(
                 e,
-                l(a({}, n), {
+                l(o({}, n), {
                     guild: s,
-                    initialSelectedEffectId: o,
+                    initialSelectedEffectId: a,
                     analyticsLocations: t
                 })
             );

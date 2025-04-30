@@ -1,12 +1,12 @@
 n.d(t, {
-    KV: () => a.KV,
+    KV: () => o.KV,
     ZP: () => _
 }),
     n(388685);
 var r = n(392711),
     i = n.n(r),
-    o = n(846519),
-    a = n(509848),
+    a = n(846519),
+    o = n(509848),
     s = n(483019),
     l = n(945689),
     c = n(981631);
@@ -117,6 +117,6 @@ class _ {
         f(e) && (t.has(e) || (t.add(e), this._enqueue(e, n)));
     }
     constructor(e) {
-        u(this, '_members', new s.Z((e, t) => this._enqueue(e, { members: t }))), u(this, '_channels', new a.ZP((e, t) => this._enqueue(e, { channels: t }))), u(this, '_threadMemberLists', new l.Z((e, t) => this._enqueue(e, { thread_member_lists: t }))), u(this, '_typing', new Set()), u(this, '_threads', new Set()), u(this, '_activities', new Set()), u(this, '_memberUpdates', new Set()), u(this, '_subscribed', new Set()), u(this, '_pending', {}), u(this, '_flush', new o.sW(0, () => this.flush())), u(this, '_onChange', void 0), (this._onChange = e);
+        u(this, '_members', new s.Z((e, t) => this._enqueue(e, { members: t }))), u(this, '_channels', new o.ZP((e, t) => this._enqueue(e, { channels: t }))), u(this, '_threadMemberLists', new l.Z((e, t) => this._enqueue(e, { thread_member_lists: t }))), u(this, '_typing', new Set()), u(this, '_threads', new Set()), u(this, '_activities', new Set()), u(this, '_memberUpdates', new Set()), u(this, '_subscribed', new Set()), u(this, '_pending', {}), u(this, '_flush', new a.sW(0, () => this.flush())), u(this, '_onChange', void 0), (this._onChange = e);
     }
 }

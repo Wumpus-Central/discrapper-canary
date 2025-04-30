@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(906732),
     c = n(785717),
@@ -71,8 +71,8 @@ function O(e, t) {
         r,
         i = v(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -81,12 +81,12 @@ function v(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let I = i.forwardRef(function (e, t) {
-    var { children: n, className: i, subsection: o, onAction: g, onClose: b } = e,
+    var { children: n, className: i, subsection: a, onAction: g, onClose: b } = e,
         v = O(e, ['children', 'className', 'subsection', 'onAction', 'onClose']);
     let { themeType: I } = (0, _.z)(),
         { analyticsLocations: S } = (0, l.ZP)(),
@@ -99,7 +99,7 @@ let I = i.forwardRef(function (e, t) {
                   E(
                       {
                           ref: t,
-                          className: a()(m.card, i)
+                          className: o()(m.card, i)
                       },
                       v
                   ),
@@ -117,7 +117,7 @@ let I = i.forwardRef(function (e, t) {
                               {
                                   section: p.oh.ACTIVITY,
                                   sourceAnalyticsLocations: S,
-                                  subsection: o
+                                  subsection: a
                               },
                               T
                           )
@@ -130,7 +130,7 @@ let I = i.forwardRef(function (e, t) {
                       E(
                           {
                               ref: t,
-                              className: a()(m.card, i)
+                              className: o()(m.card, i)
                           },
                           v
                       ),

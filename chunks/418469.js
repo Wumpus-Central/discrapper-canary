@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(481060),
-    a = n(569545),
+    a = n(481060),
+    o = n(569545),
     s = n(687516),
     l = n(221241),
     c = n(314897),
@@ -43,7 +43,7 @@ function p(e, t, f) {
     let { simplifiedSettingsEnabled: h } = (0, l.Z)({ location: 'ReportProblemItem' }),
         m = (0, s.Cf)(e),
         g = (0, i.e7)([c.default], () => c.default.getId()),
-        E = null != e ? (0, a.V9)(e) : u.Z.getActiveStreamKey(),
+        E = null != e ? (0, o.V9)(e) : u.Z.getActiveStreamKey(),
         b = null != (p = u.Z.getVideoStats(E)) ? p : {},
         y = _(
             {
@@ -57,7 +57,7 @@ function p(e, t, f) {
         O = () => {
             null == f || f(),
                 null != e &&
-                    (0, o.ZDy)(async () => {
+                    (0, a.ZDy)(async () => {
                         let { default: t } = await n.e('18912').then(n.bind(n, 340140));
                         return (n) =>
                             (0, r.jsx)(
@@ -77,14 +77,14 @@ function p(e, t, f) {
     return null == e
         ? null
         : h
-          ? (0, r.jsx)(o.sNh, {
+          ? (0, r.jsx)(a.sNh, {
                 id: 'report-stream-problem',
                 color: 'danger',
                 label: d.intl.string(d.t.sdnCxc),
                 action: O,
-                icon: o.P4T
+                icon: a.P4T
             })
-          : (0, r.jsx)(o.sNh, {
+          : (0, r.jsx)(a.sNh, {
                 id: 'report-stream-problem',
                 label: d.intl.string(d.t.sdnCxc),
                 action: O

@@ -14,8 +14,8 @@ n.d(t, {
     n(997841);
 var r = n(392711),
     i = n.n(r),
-    o = n(913527),
-    a = n.n(o),
+    a = n(913527),
+    o = n.n(a),
     s = n(991637),
     l = n.n(s),
     c = n(873546),
@@ -65,7 +65,7 @@ n(388032), l().shim();
 let S = !c.tq && !c.Em && -1 !== (0, g.vu)(),
     T = 3;
 function A(e, t) {
-    let { analyticsSource: n, analyticsProperties: r, storeListingId: i, slug: o, channelId: a, guildId: s } = t,
+    let { analyticsSource: n, analyticsProperties: r, storeListingId: i, slug: a, channelId: o, guildId: s } = t,
         l = {
             state: {
                 analyticsSource: n,
@@ -73,12 +73,12 @@ function A(e, t) {
             },
             search: null != i ? '?store_listing_id='.concat(i) : ''
         };
-    return I({ pathname: null != a && null != s ? O.Z5c.CHANNEL(s, a, e) : O.Z5c.APPLICATION_STORE_LISTING_SKU(e, o) }, l);
+    return I({ pathname: null != o && null != s ? O.Z5c.CHANNEL(s, o, e) : O.Z5c.APPLICATION_STORE_LISTING_SKU(e, a) }, l);
 }
 function N(e, t, n, r) {
     var i;
-    let o,
-        a = window.GLOBAL_ENV.CDN_HOST;
+    let a,
+        o = window.GLOBAL_ENV.CDN_HOST;
     if (null == r)
         switch (t.mimeType || t.mime_type) {
             case 'video/quicktime':
@@ -95,15 +95,15 @@ function N(e, t, n, r) {
     let s = 'string' == typeof t ? t : t.id,
         l = (i = 'https:');
     return (
-        (o =
-            null != a
-                ? ''.concat(l, '//').concat(a, '/app-assets/').concat(e, '/store/').concat(s, '.').concat(r)
+        (a =
+            null != o
+                ? ''.concat(l, '//').concat(o, '/app-assets/').concat(e, '/store/').concat(s, '.').concat(r)
                 : ''
                       .concat(l)
                       .concat(window.GLOBAL_ENV.API_ENDPOINT)
                       .concat(O.ANM.STORE_ASSET(e, s, r))),
-        null != n && (o += '?size='.concat((0, f.oO)(n * (0, f.x_)()))),
-        o
+        null != n && (a += '?size='.concat((0, f.oO)(n * (0, f.x_)()))),
+        a
     );
 }
 function C() {
@@ -119,9 +119,9 @@ function C() {
 }
 async function R(e) {
     var t, n, r, i;
-    let o = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        a = _.default.isAuthenticated();
-    if (o && a) {
+    let a = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        o = _.default.isAuthenticated();
+    if (a && o) {
         let e = [];
         h.Z.hasFetchedPaymentSources || e.push(null != (n = p.Z.paymentSourcesFetchRequest) ? n : (0, d.tZ)()), p.Z.ipCountryCodeLoaded || e.push((0, d.GE)()), e.push(C()), await Promise.race([Promise.allSettled(e), new Promise((e) => setTimeout(e, 10000))]);
     }
@@ -152,7 +152,7 @@ function P(e, t, n) {
 function w(e, t, n) {
     var r;
     let i = null != (r = n.getNowPlaying(e)) ? r : {},
-        o = y.default
+        a = y.default
             .keys(i)
             .map((e) => {
                 let n = t.getUser(e);
@@ -165,11 +165,11 @@ function w(e, t, n) {
             })
             .filter(b.lm)
             .sort((e, t) => t.startTime - e.startTime);
-    return 0 === o.length
+    return 0 === a.length
         ? null
         : {
               type: O.AzA.NOW_PLAYING,
-              userInfo: o
+              userInfo: a
           };
 }
 function D(e, t, n) {
@@ -195,10 +195,10 @@ function D(e, t, n) {
           };
 }
 let L = [];
-function x(e, t, n, r, o) {
-    let a = t.get(e);
-    if (null == a) return L;
-    let s = a.applicationId,
+function x(e, t, n, r, a) {
+    let o = t.get(e);
+    if (null == o) return L;
+    let s = o.applicationId,
         l = [],
         c = [],
         u = w(s, n, r);
@@ -208,11 +208,11 @@ function x(e, t, n, r, o) {
             let { user: t } = e;
             return t.id;
         })));
-    let d = o.getStatisticsForApplication(s);
+    let d = a.getStatisticsForApplication(s);
     if (null != d) {
         let e = d.map((e) => e.user_id);
         if (i().difference(e, c).length > 0) {
-            let e = D(s, n, o);
+            let e = D(s, n, a);
             null != e && l.push(e);
         }
     }
@@ -223,26 +223,26 @@ function k(e, t, n) {
     let r = t.get(e),
         i = n.getForSKU(e);
     if (null == r || null == i) return M;
-    let o = [];
-    (0, E.yE)(r.flags, O.l4R.HAS_FREE_PREMIUM_CONTENT) && o.push({ type: O.AzA.HAS_FREE_PREMIUM_CONTENT });
+    let a = [];
+    (0, E.yE)(r.flags, O.l4R.HAS_FREE_PREMIUM_CONTENT) && a.push({ type: O.AzA.HAS_FREE_PREMIUM_CONTENT });
     let s = r.releaseDate;
     return (
         null != s &&
-            a()().diff(s, 'months') < T &&
+            o()().diff(s, 'months') < T &&
             (r.accessType === O.kGb.EARLY_ACCESS
-                ? o.push({
+                ? a.push({
                       type: O.AzA.EARLY_ACCESS,
                       releaseDate: s
                   })
-                : o.push({
+                : a.push({
                       type: O.AzA.RECENT_RELEASE_DATE,
                       releaseDate: s
                   })),
         null != i.flavorText &&
-            o.push({
+            a.push({
                 type: O.AzA.FLAVOR_TEXT,
                 flavorText: i.flavorText
             }),
-        o
+        a
     );
 }

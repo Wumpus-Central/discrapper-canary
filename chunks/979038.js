@@ -2,8 +2,8 @@ n.d(t, { Z: () => T });
 var r = n(255367);
 n(73800);
 var i = n(40851),
-    o = n(620662),
-    a = n(841784),
+    a = n(620662),
+    o = n(841784),
     s = n(834353),
     l = n(802856),
     c = n(420660),
@@ -22,11 +22,11 @@ var i = n(40851),
     v = n(388032),
     I = n(622802);
 let S = (e) => {
-    let { user: t, activity: n, onAction: o } = e,
-        a = (0, i.Aq)(),
+    let { user: t, activity: n, onAction: a } = e,
+        o = (0, i.Aq)(),
         s = (e) => {
             let { action: t } = e;
-            a.dispatch(y.CkL.POPOUT_CLOSE), (0, _.closeUserProfileModal)(), null == o || o({ action: t });
+            o.dispatch(y.CkL.POPOUT_CLOSE), (0, _.closeUserProfileModal)(), null == a || a({ action: t });
         };
     return (0, r.jsx)(p.Z, {
         user: t,
@@ -61,7 +61,7 @@ function T(e) {
                     activity: n,
                     onAction: i
                 })
-              : (0, o.Z)(n, y.xjy.JOIN) || (0, a.Z)(n)
+              : (0, a.Z)(n, y.xjy.JOIN) || (0, o.Z)(n)
                 ? (0, r.jsx)(h.Z, {
                       user: t,
                       activity: n,
@@ -74,7 +74,7 @@ function T(e) {
                         activity: n,
                         onAction: i
                     })
-                  : (0, o.Z)(n, y.xjy.INSTANCE)
+                  : (0, a.Z)(n, y.xjy.INSTANCE)
                     ? (0, r.jsx)(m.Z, {
                           user: t,
                           activity: n,

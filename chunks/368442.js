@@ -5,21 +5,21 @@ n.d(t, {
 });
 var r = n(442837),
     i = n(430824),
-    o = n(979651),
-    a = n(565799),
+    a = n(979651),
+    o = n(565799),
     s = n(501655);
 function l(e) {
     let t = c(e);
-    return (0, r.e7)([o.Z], () => o.Z.hasVideo(e), [e]) || t;
+    return (0, r.e7)([a.Z], () => a.Z.hasVideo(e), [e]) || t;
 }
 function c(e) {
-    return (0, r.e7)([a.Z], () => null != a.Z.getMutableParticipants(e, s.pV.SPEAKER).find((e) => e.type === s.Ui.STREAM), [e]);
+    return (0, r.e7)([o.Z], () => null != o.Z.getMutableParticipants(e, s.pV.SPEAKER).find((e) => e.type === s.Ui.STREAM), [e]);
 }
 function u(e) {
-    return d(e) || o.Z.hasVideo(e);
+    return d(e) || a.Z.hasVideo(e);
 }
 function d(e) {
-    return null != a.Z.getMutableParticipants(e, s.pV.SPEAKER).find((e) => e.type === s.Ui.STREAM);
+    return null != o.Z.getMutableParticipants(e, s.pV.SPEAKER).find((e) => e.type === s.Ui.STREAM);
 }
 function f(e) {
     var t;

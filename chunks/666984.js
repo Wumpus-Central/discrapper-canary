@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(620662),
-    a = n(503438),
+    a = n(620662),
+    o = n(503438),
     s = n(829820),
     l = n(395361),
     c = n(652853),
@@ -18,7 +18,7 @@ function h(e) {
         { themeType: y } = (0, c.z)(),
         O = (0, s.Ih)(E, g),
         v = (0, s.Fe)(E, g);
-    if (!(0, a.Z)(E) || (!(0, o.Z)(E, f.xjy.PLAY) && !(0, o.Z)(E, f.xjy.SYNC))) return null;
+    if (!(0, o.Z)(E) || (!(0, a.Z)(E, f.xjy.PLAY) && !(0, a.Z)(E, f.xjy.SYNC))) return null;
     let I = (e) => {
             null == e || e.stopPropagation(), null == b || b({ action: 'PRESS_PLAY_ON_SPOTIFY_BUTTON' }), O.onClick();
         },

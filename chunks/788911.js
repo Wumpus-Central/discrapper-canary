@@ -2,18 +2,18 @@ n.d(t, { Z: () => s });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(651750);
+    a = n.n(i),
+    o = n(651750);
 let s = (e) => {
     let { message: t, className: n, noResultsImageURL: i, forceLightTheme: s, suggestions: l } = e,
         c = null != i ? { backgroundImage: 'url('.concat(i, ')') } : {};
     return (0, r.jsx)('div', {
-        className: o()({ [a.forceLightTheme]: s }, n),
+        className: a()({ [o.forceLightTheme]: s }, n),
         children: (0, r.jsxs)('div', {
-            className: a.wrapper,
+            className: o.wrapper,
             children: [
                 (0, r.jsx)('div', {
-                    className: a.sadImage,
+                    className: o.sadImage,
                     style: c
                 }),
                 (0, r.jsx)('div', { children: t }),

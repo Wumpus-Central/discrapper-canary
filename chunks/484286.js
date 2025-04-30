@@ -1,9 +1,9 @@
 n.d(t, { Z: () => f }), n(388685);
 var r,
     i = n(255367),
-    o = n(73800),
-    a = n(120356),
-    s = n.n(a),
+    a = n(73800),
+    o = n(120356),
+    s = n.n(o),
     l = n(640103);
 function c(e, t, n) {
     return (
@@ -34,7 +34,7 @@ function u(e) {
     }
     return e;
 }
-class d extends (r = o.PureComponent) {
+class d extends (r = a.PureComponent) {
     static getDerivedStateFromProps(e, t) {
         let { streamId: n } = e;
         if (t.aReady) {
@@ -67,14 +67,14 @@ class d extends (r = o.PureComponent) {
         return null;
     }
     renderVideo(e, t) {
-        let { children: n, mirror: r, paused: a, component: s } = this.props;
+        let { children: n, mirror: r, paused: o, component: s } = this.props;
         if (null == e) {
             if (null == n) return null;
-            let e = o.Children.only(n);
-            return o.cloneElement(e, u({ style: { display: t && !r ? void 0 : 'none' } }, e.props));
+            let e = a.Children.only(n);
+            return a.cloneElement(e, u({ style: { display: t && !r ? void 0 : 'none' } }, e.props));
         }
         return (0, i.jsx)(s, {
-            paused: a,
+            paused: o,
             className: l.media,
             streamId: e,
             onReady: t ? null : this.handleReady

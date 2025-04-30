@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(481060),
-    a = n(970321),
+    a = n(481060),
+    o = n(970321),
     s = n(283836),
     l = n(621853),
     c = n(475413),
@@ -43,8 +43,8 @@ function _(e, t) {
         r,
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -53,8 +53,8 @@ function p(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function h(e) {
@@ -67,9 +67,9 @@ function h(e) {
             f(
                 {
                     action: 'PRESS_APP_STOREFRONT',
-                    icon: o.EOn,
+                    icon: a.EOn,
                     text: u.intl.string(u.t.V7j5aW),
-                    color: o.Ttl.BRAND,
+                    color: a.Ttl.BRAND,
                     themeColor: 'none',
                     onClick: n
                 },
@@ -86,10 +86,10 @@ function m(e) {
             var e;
             return null == (e = l.Z.getUserProfile(s.id)) ? void 0 : e.application;
         }),
-        p = (0, a.R)(null != (t = null == d ? void 0 : d.id) ? t : '');
+        p = (0, o.R)(null != (t = null == d ? void 0 : d.id) ? t : '');
     if (null == d || !p) return null;
     let m = () => {
-        (0, o.ZDy)(async () => {
+        (0, a.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e('74891'), n.e('77803'), n.e('53458')]).then(n.bind(n, 7225));
             return (t) =>
                 (0, r.jsx)(

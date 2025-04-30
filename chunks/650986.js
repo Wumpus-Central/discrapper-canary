@@ -36,13 +36,13 @@ e.exports = function (e) {
                 }
             ]
         },
-        o = {
+        a = {
             className: 'bullet',
             begin: '^[ \t]*([*+-]|(\\d+\\.))(?=\\s+)',
             end: '\\s+',
             excludeEnd: !0
         },
-        a = {
+        o = {
             begin: /^\[[^\n]+\]:/,
             returnBegin: !0,
             contains: [
@@ -177,7 +177,7 @@ e.exports = function (e) {
                     ]
                 },
                 n,
-                o,
+                a,
                 c,
                 u,
                 {
@@ -189,7 +189,7 @@ e.exports = function (e) {
                 i,
                 r,
                 l,
-                a,
+                o,
                 {
                     scope: 'literal',
                     match: /&([a-zA-Z0-9]+|#[0-9]{1,7}|#[Xx][0-9a-fA-F]{1,6});/

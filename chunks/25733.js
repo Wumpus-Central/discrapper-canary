@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var r = n(255367);
 n(73800);
 var i = n(433517),
-    o = n(481060),
-    a = n(920133),
+    a = n(481060),
+    o = n(920133),
     s = n(338096);
 function l(e, t, n) {
     return (
@@ -63,10 +63,10 @@ let f = {
             l = Date.now();
         null == t || l - t > s.k
             ? (i.K.set(s.G, l),
-              (0, o.ZDy)(async () => {
+              (0, a.ZDy)(async () => {
                   let { default: t } = await n.e('35489').then(n.bind(n, 582712));
                   return (n) => (0, r.jsx)(t, d(c({}, n), { guildId: e }));
               }))
-            : (0, a.L)(a.Q.SUPPRESSED_BY_COOLDOWN, e);
+            : (0, o.L)(o.Q.SUPPRESSED_BY_COOLDOWN, e);
     }
 };

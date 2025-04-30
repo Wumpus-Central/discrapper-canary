@@ -1,7 +1,7 @@
 let r, i;
 n.d(t, { Z: () => C });
-var o,
-    a = n(392711),
+var a,
+    o = n(392711),
     s = n(442837),
     l = n(570140);
 function c(e, t, n) {
@@ -28,12 +28,12 @@ let u = [],
     E = 60000,
     b = 3600000,
     y = (e) => {
-        _ = (0, a.cloneDeep)(e);
+        _ = (0, o.cloneDeep)(e);
         let t = {};
         _.forEach((e) => {
             if (((t[e.id] = e), d.length > 0)) {
                 var n;
-                t[e.id].config.effects = null != (n = (0, a.sample)(d)) ? n : [];
+                t[e.id].config.effects = null != (n = (0, o.sample)(d)) ? n : [];
             }
         }),
             (p = t);
@@ -59,7 +59,7 @@ let u = [],
     A = (e) => {
         T();
     };
-class N extends (o = s.ZP.Store) {
+class N extends (a = s.ZP.Store) {
     get isFetching() {
         return f;
     }

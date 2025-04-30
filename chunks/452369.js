@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(388685);
 var r = n(442837),
     i = n(570140),
-    o = n(699516),
-    a = n(979651),
+    a = n(699516),
+    o = n(979651),
     s = n(414509);
 let l = {},
     c = {},
@@ -12,14 +12,14 @@ function d() {
 }
 function f() {
     d();
-    let e = a.Z.getAllVoiceStates(),
+    let e = o.Z.getAllVoiceStates(),
         t = !1;
     for (let n of Object.values(e)) for (let e of Object.values(n)) null != e.channelId && (t = h(e.channelId, e.userId) || t);
     return t;
 }
 function _(e) {
     let { relationship: t } = e,
-        n = a.Z.getVoiceStateForUser(t.id);
+        n = o.Z.getVoiceStateForUser(t.id);
     return null != n && null != n.channelId && h(n.channelId, t.id);
 }
 function p(e) {
@@ -40,15 +40,15 @@ function h(e, t) {
     let n = !1,
         r = !1,
         i = new Set(l[e]),
-        a = o.Z.isBlocked(t);
-    a && !i.has(t) ? (i.add(t), (r = !0), (n = !0)) : a || (n = i.delete(t)), 0 === i.size && n ? delete l[e] : n && (l[e] = i);
+        o = a.Z.isBlocked(t);
+    o && !i.has(t) ? (i.add(t), (r = !0), (n = !0)) : o || (n = i.delete(t)), 0 === i.size && n ? delete l[e] : n && (l[e] = i);
     let u = new Set(c[e]),
-        d = o.Z.isIgnored(t);
+        d = a.Z.isIgnored(t);
     return d && !u.has(t) ? (u.add(t), (r = !0), (n = !0)) : d || (n = u.delete(t)), 0 === u.size && n ? delete c[e] : n && (c[e] = u), r && s.Z.handleBlockedOrIgnoredUserVoiceChannelJoin(e, t), n;
 }
 class m extends r.ZP.Store {
     initialize() {
-        this.waitFor(o.Z, a.Z);
+        this.waitFor(a.Z, o.Z);
     }
     getBlockedUsersForVoiceChannel(e) {
         var t;

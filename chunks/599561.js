@@ -7237,8 +7237,8 @@ e.exports = function (e) {
     let n = e.regex,
         r = /([2-9]|[1-2]\d|[3][0-5])\^\^/,
         i = /(\w*\.\w+|\w+\.\w*|\w+)/,
-        o = /(\d*\.\d+|\d+\.\d*|\d+)/,
-        a = n.either(n.concat(r, i), o),
+        a = /(\d*\.\d+|\d+\.\d*|\d+)/,
+        o = n.either(n.concat(r, i), a),
         s = /``[+-]?(\d*\.\d+|\d+\.\d*|\d+)/,
         l = /`([+-]?(\d*\.\d+|\d+\.\d*|\d+))?/,
         c = n.either(s, l),
@@ -7246,7 +7246,7 @@ e.exports = function (e) {
         d = {
             className: 'number',
             relevance: 0,
-            begin: n.concat(a, n.optional(c), n.optional(u))
+            begin: n.concat(o, n.optional(c), n.optional(u))
         },
         f = /[a-zA-Z$][a-zA-Z0-9$]*/,
         _ = new Set(t),

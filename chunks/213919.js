@@ -10,8 +10,8 @@ n.r(t),
         showToken: () => I
     }),
     n(388685);
-var o = n(433517),
-    a = n(231338);
+var a = n(433517),
+    o = n(231338);
 let s = 'dQw4w9WgXcQ:';
 function l(e) {
     return [...e].reduce((e, t) => {
@@ -29,10 +29,10 @@ let d = !1,
     h = !1;
 function m() {
     if (p) {
-        o.K.remove(a.B1), o.K.remove(a.XM);
+        a.K.remove(o.B1), a.K.remove(o.XM);
         return;
     }
-    null != i ? o.K.set(a.B1, i) : o.K.remove(a.B1), o.K.set(a.XM, _);
+    null != i ? a.K.set(o.B1, i) : a.K.remove(o.B1), a.K.set(o.XM, _);
 }
 function g(e) {
     return null == e || 0 === e.length
@@ -55,7 +55,7 @@ function E(e) {
 }
 function b() {
     if (h) return;
-    (i = o.K.get(a.B1)), (_ = o.K.get(a.XM) || {});
+    (i = a.K.get(o.B1)), (_ = a.K.get(o.XM) || {});
     let { decryptedToken: e, wasEncrypted: t } = g(i);
     (d = t),
         (r = e),

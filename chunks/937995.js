@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(846519);
-function a(e, t, n) {
+    a = n(846519);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -45,12 +45,12 @@ let l = i.createContext({
     c = i.createContext(!1);
 function u(e) {
     let { children: t, timeout: n } = e,
-        [a, u] = i.useState(!1),
+        [o, u] = i.useState(!1),
         d = i.useRef(new Set()),
         f = i.useRef(null);
     i.useEffect(
         () => (
-            (f.current = new o.sW(n, () => u(!0))),
+            (f.current = new a.sW(n, () => u(!0))),
             f.current.delay(),
             () => {
                 var e;
@@ -95,10 +95,10 @@ function u(e) {
             [p, _, h, m]
         );
     return (0, r.jsx)(c.Provider, {
-        value: a,
+        value: o,
         children: (0, r.jsx)(l.Provider, {
             value: g,
-            children: t(s({ idle: a }, g))
+            children: t(s({ idle: o }, g))
         })
     });
 }

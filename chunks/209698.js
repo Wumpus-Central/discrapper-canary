@@ -1,7 +1,7 @@
-n.d(t, { b: () => a });
+n.d(t, { b: () => o });
 var r = n(818083),
     i = n(772209);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: 'user',
     id: '2025-04_stacked_activity_cards',
     label: 'User Profile Stacked Activity Cards',
@@ -14,18 +14,18 @@ let o = (0, r.B)({
         }
     ]
 });
-function a(e) {
+function o(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         r = (0, i.q)({
             location: t,
             autoTrackExposure: n
         }),
-        { enabled: a } = o.useExperiment(
+        { enabled: o } = a.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
                 disable: r
             }
         );
-    return a;
+    return o;
 }

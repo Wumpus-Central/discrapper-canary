@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481752),
     l = n(442837),
     c = n(704215),
@@ -22,9 +22,9 @@ let E = {
     b = 20;
 function y(e) {
     let { tooltipText: t, headingText: n, textColor: i } = e,
-        o = null != n;
+        a = null != n;
     return (0, r.jsxs)('span', {
-        className: o ? void 0 : g.tooltipContainer,
+        className: a ? void 0 : g.tooltipContainer,
         children: [
             (0, r.jsxs)('span', {
                 className: g.tooltipContainer,
@@ -34,7 +34,7 @@ function y(e) {
                         color: 'currentColor',
                         className: g.nitroWheel
                     }),
-                    o
+                    a
                         ? (0, r.jsx)(u.X6q, {
                               color: null != i ? i : 'text-normal',
                               variant: 'heading-sm/semibold',
@@ -44,7 +44,7 @@ function y(e) {
                 ]
             }),
             (0, r.jsx)(u.Text, {
-                variant: o ? 'text-xs/normal' : 'text-sm/medium',
+                variant: a ? 'text-xs/normal' : 'text-sm/medium',
                 color: null != i ? i : 'text-normal',
                 children: t
             })
@@ -55,7 +55,7 @@ function O(e) {
     return e ? m.intl.string(m.t['5cRA/f']) : m.intl.string(m.t.buV4am);
 }
 function v(e) {
-    let { checked: t, onClick: n, id: o = 'burst-reaction-toggle-button' } = e,
+    let { checked: t, onClick: n, id: a = 'burst-reaction-toggle-button' } = e,
         v = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
         I = _.default.getCurrentUser(),
         S = null == I || (0, p.I5)(I) ? [c.z.SUPER_REACTION_TOGGLE_EDUCATION_DESKTOP] : [],
@@ -94,12 +94,12 @@ function v(e) {
                 className: g.visuallyHidden,
                 checked: t,
                 onChange: D,
-                id: o,
+                id: a,
                 type: 'checkbox'
             }),
             (0, r.jsxs)('label', {
-                htmlFor: o,
-                className: a()(g.label, { [g.labelChecked]: t }),
+                htmlFor: a,
+                className: o()(g.label, { [g.labelChecked]: t }),
                 children: [
                     t
                         ? (0, r.jsx)(u.ZX5, {

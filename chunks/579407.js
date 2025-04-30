@@ -1,12 +1,12 @@
 n.d(t, {
-    EU: () => a,
+    EU: () => o,
     Xm: () => i
 });
 var r = n(4242);
 function i(e) {
-    return null == e ? null : { nameplate: o(e.nameplate) };
+    return null == e ? null : { nameplate: a(e.nameplate) };
 }
-function o(e) {
+function a(e) {
     return null == e
         ? null
         : {
@@ -17,7 +17,7 @@ function o(e) {
               palette: e.palette
           };
 }
-function a(e) {
+function o(e) {
     return {
         src: e.asset,
         imgAlt: e.label,

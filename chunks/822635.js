@@ -1,9 +1,9 @@
-var r = {}.propertyIsEnumerable,
-    e = Object.getOwnPropertyDescriptor;
-n.f =
-    e && !r.call({ 1: 2 }, 1)
+var a = {}.propertyIsEnumerable,
+    r = Object.getOwnPropertyDescriptor;
+e.f =
+    r && !a.call({ 1: 2 }, 1)
         ? function (t) {
-              var n = e(this, t);
-              return !!n && n.enumerable;
+              var e = r(this, t);
+              return !!e && e.enumerable;
           }
-        : r;
+        : a;

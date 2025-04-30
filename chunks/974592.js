@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(100527),
     i = n(717401),
-    o = n(474936),
-    a = n(981631),
+    a = n(474936),
+    o = n(981631),
     s = n(388032),
     l = n(36128),
     c = n(501536),
@@ -22,7 +22,7 @@ let f = [
         rewards: f,
         rewardAssetIdMap: (0, i.YV)(f),
         dismissibleContentVersion: _,
-        eligiblePlanIds: [o.Xh.PREMIUM_YEAR_TIER_2, o.Xh.PREMIUM_MONTH_TIER_2],
+        eligiblePlanIds: [a.Xh.PREMIUM_YEAR_TIER_2, a.Xh.PREMIUM_MONTH_TIER_2],
         planSelection: {
             heading: () => s.intl.string(s.t['o2XB4+']),
             gradient: ['rgba(255, 144, 144, 1)', 'rgba(243, 14, 216, 1)'],
@@ -41,7 +41,7 @@ let f = [
             description: () => s.intl.string(s.t.B7R16u),
             cta: () => s.intl.string(s.t.RzWDqa),
             analyticsLocation: r.Z.VALENTINES_GIFTING_COACHMARK,
-            analyticsPage: a.ZY5.PREMIUM_UPSELL_VALENTINES_GIFTING_CAMPAIGN
+            analyticsPage: o.ZY5.PREMIUM_UPSELL_VALENTINES_GIFTING_CAMPAIGN
         },
         planSelectionBanner: {
             desktopBannerText: () => s.intl.string(s.t['wxgA+v']),

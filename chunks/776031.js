@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T });
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(846027),
     l = n(2052),
     c = n(451467),
@@ -69,24 +69,24 @@ function I(e, t) {
     );
 }
 function S(e, t) {
-    (0, a.ZDy)(
+    (0, o.ZDy)(
         async () => {
             let { default: e } = await n.e('28479').then(n.bind(n, 78865));
             return (n) => (0, r.jsx)(e, I(O({}, n), { analyticsSource: t }));
         },
-        { contextKey: e === m.IlC.POPOUT ? a.u1M : a.z1l }
+        { contextKey: e === m.IlC.POPOUT ? o.u1M : o.z1l }
     );
 }
 function T(e, t) {
-    let { preset: n, resolution: y, fps: v } = (0, o.cj)([u.Z], () => u.Z.getState()),
-        T = (0, o.e7)([_.Z], () => _.Z.getGoLiveSource()),
-        A = (0, o.e7)([h.default], () => h.default.getCurrentUser()),
-        N = (0, o.e7)([f.Z], () => {
+    let { preset: n, resolution: y, fps: v } = (0, a.cj)([u.Z], () => u.Z.getState()),
+        T = (0, a.e7)([_.Z], () => _.Z.getGoLiveSource()),
+        A = (0, a.e7)([h.default], () => h.default.getCurrentUser()),
+        N = (0, a.e7)([f.Z], () => {
             var t;
             return null == (t = f.Z.getGuild(null == e ? void 0 : e.guildId)) ? void 0 : t.premiumTier;
         }),
         { location: C } = (0, l.O)(),
-        R = (0, o.e7)([p.Z, d.Z], () => d.Z.getChannel(p.Z.getVoiceChannelId())),
+        R = (0, a.e7)([p.Z, d.Z], () => d.Z.getChannel(p.Z.getVoiceChannelId())),
         P = i.useCallback(
             (e, n, r, i) => {
                 if (e) {
@@ -128,7 +128,7 @@ function T(e, t) {
             let { value: t, label: n } = e,
                 i = (0, c.Z)(g.tI.PRESET_CUSTOM, y, t, A, N, R);
             return (0, r.jsx)(
-                a.k5B,
+                o.k5B,
                 {
                     group: 'stream-settings-fps',
                     id: 'stream-settings-fps-'.concat(t),
@@ -143,7 +143,7 @@ function T(e, t) {
             let { value: t, label: n } = e,
                 i = (0, c.Z)(g.tI.PRESET_CUSTOM, t, w, A, N, R);
             return (0, r.jsx)(
-                a.k5B,
+                o.k5B,
                 {
                     group: 'stream-settings-resolution',
                     id: 'stream-settings-resolution-'.concat(t),
@@ -156,11 +156,11 @@ function T(e, t) {
         });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(a.kSQ, {
+            (0, r.jsx)(o.kSQ, {
                 label: b.intl.string(b.t.SkkeIi),
                 children: D
             }),
-            (0, r.jsx)(a.kSQ, {
+            (0, r.jsx)(o.kSQ, {
                 label: b.intl.string(b.t.rHyPXl),
                 children: L
             })

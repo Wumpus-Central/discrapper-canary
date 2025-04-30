@@ -1,7 +1,7 @@
 n.d(t, { Z: () => c }), n(415506);
 var r = n(836560),
     i = n(376398);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,7 +25,7 @@ function a(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -62,7 +62,7 @@ class c extends r.EventEmitter {
                 noiseSuppression: !1,
                 autoGainControl: !1
             },
-            video: l(a({}, e), { frameRate: 30 })
+            video: l(o({}, e), { frameRate: 30 })
         };
         if ((null == (n = navigator.mediaDevices) ? void 0 : n.getDisplayMedia) != null) return new c(await navigator.mediaDevices.getDisplayMedia(r));
         throw Error('UNKNOWN');
@@ -84,9 +84,9 @@ class c extends r.EventEmitter {
     }
     constructor(e) {
         super(),
-            o(this, 'id', void 0),
-            o(this, 'stream', void 0),
-            o(this, 'streamId', void 0),
+            a(this, 'id', void 0),
+            a(this, 'stream', void 0),
+            a(this, 'streamId', void 0),
             e.getVideoTracks().forEach((e) => {
                 e.onended = () => {
                     this.emit('desktopsourceend');

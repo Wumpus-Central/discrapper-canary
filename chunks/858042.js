@@ -1,8 +1,8 @@
 n.d(t, { M: () => l });
 var r = n(255367),
     i = n(481060),
-    o = n(388032);
-function a(e, t, n) {
+    a = n(388032);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,13 +26,13 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
 }
 function l(e) {
-    let { applicationId: t, viewId: a, showOutdatedInfoOption: l = !0 } = e;
+    let { applicationId: t, viewId: o, showOutdatedInfoOption: l = !0 } = e;
     if (null == t) return null;
     let c = () =>
         (0, i.ZDy)(async () => {
@@ -44,7 +44,7 @@ function l(e) {
                         {
                             showOutdatedInfoOption: l,
                             applicationId: t,
-                            viewId: a
+                            viewId: o
                         },
                         n
                     )
@@ -52,7 +52,7 @@ function l(e) {
         });
     return (0, r.jsx)(i.sNh, {
         id: 'game-profile-something-wrong',
-        label: o.intl.string(o.t.qP2cXV),
+        label: a.intl.string(a.t.qP2cXV),
         action: c
     });
 }

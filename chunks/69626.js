@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(555573),
     l = n(10718),
     c = n(895924),
@@ -74,20 +74,20 @@ function A(e, t) {
         e
     );
 }
-function N(e, t, n, i, o) {
+function N(e, t, n, i, a) {
     if (null == e) return;
     let u = () => {
         let r = _.Z.getChannel(e);
         if (null == r) return;
-        let { command: a, application: u } = l.Xq(
+        let { command: o, application: u } = l.Xq(
             {
                 channel: r,
                 type: 'channel'
             },
             n,
-            o
+            a
         );
-        if (null != a && a.untranslatedName === t) {
+        if (null != o && o.untranslatedName === t) {
             var d, f;
             g.S.dispatch(E.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
             let t =
@@ -107,16 +107,16 @@ function N(e, t, n, i, o) {
             }),
                 s.Po({
                     channelId: e,
-                    command: a,
+                    command: o,
                     section: t,
                     location: i
                 });
         }
     };
     '' !== p.Z.getDraft(e, p.d.ChannelMessage)
-        ? (0, a.h7j)((t) =>
+        ? (0, o.h7j)((t) =>
               (0, r.jsx)(
-                  a.ConfirmModal,
+                  o.ConfirmModal,
                   A(
                       S(
                           {
@@ -124,7 +124,7 @@ function N(e, t, n, i, o) {
                               confirmText: O.intl.string(O.t.VkKicX),
                               cancelText: O.intl.string(O.t['ETE/oK']),
                               onConfirm: () => u(),
-                              confirmButtonColor: a.zxk.Colors.BRAND,
+                              confirmButtonColor: o.zxk.Colors.BRAND,
                               onCloseCallback: () => {
                                   g.S.dispatch(E.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
                               }
@@ -132,7 +132,7 @@ function N(e, t, n, i, o) {
                           t
                       ),
                       {
-                          children: (0, r.jsx)(a.Text, {
+                          children: (0, r.jsx)(o.Text, {
                               variant: 'text-md/normal',
                               children: O.intl.string(O.t['+awCIy'])
                           })
@@ -145,7 +145,7 @@ function N(e, t, n, i, o) {
 function C(e) {
     var t;
     let { node: n, output: s, state: p } = e,
-        g = (0, o.e7)(
+        g = (0, a.e7)(
             [_.Z, m.Z],
             () => {
                 var e;
@@ -153,7 +153,7 @@ function C(e) {
             },
             [n.channelId]
         ),
-        { hasSendMessagePerm: O, hasUseAppCommandsPerm: v } = (0, o.cj)([h.Z], () => ({
+        { hasSendMessagePerm: O, hasUseAppCommandsPerm: v } = (0, a.cj)([h.Z], () => ({
             hasSendMessagePerm: h.Z.can(E.Plq.SEND_MESSAGES, g),
             hasUseAppCommandsPerm: h.Z.can(E.Plq.USE_APPLICATION_COMMANDS, g)
         })),
@@ -181,7 +181,7 @@ function C(e) {
         );
     return A
         ? (0, r.jsx)(
-              a.ua7,
+              o.ua7,
               {
                   text: n.output,
                   position: 'top',
@@ -208,19 +208,19 @@ function C(e) {
 }
 function R(e) {
     let { commandId: t, commandName: n, commandDescription: i, applicationId: s, onClick: l } = e,
-        u = (0, o.e7)([m.Z], () => m.Z.getChannelId()),
+        u = (0, a.e7)([m.Z], () => m.Z.getChannelId()),
         d = (e) => {
             null == e || e.stopPropagation(), N(u, n, t, c.Vh.POPULAR_COMMANDS, s), null == l || l(t);
         };
-    return (0, r.jsx)(a.ua7, {
+    return (0, r.jsx)(o.ua7, {
         text: i,
         position: 'top',
         tooltipContentClassName: v.tooltip,
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: i } = e;
-            return (0, r.jsxs)(a.zxk, {
-                color: a.Ttl.PRIMARY,
-                size: a.PhG.ICON,
+            return (0, r.jsxs)(o.zxk, {
+                color: o.Ttl.PRIMARY,
+                size: o.PhG.ICON,
                 onClick: d,
                 onMouseEnter: t,
                 onMouseLeave: i,

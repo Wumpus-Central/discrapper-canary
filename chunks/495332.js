@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ });
 var r = n(73800),
     i = n(806966),
-    o = n(697426),
-    a = n(294206),
+    a = n(697426),
+    o = n(294206),
     s = n(51234),
     l = n(280880);
 function c(e, t, n) {
@@ -63,9 +63,9 @@ function _(e) {
         S = ''.concat(c, '-').concat(d),
         T = _ && I.rowIndex === c && I.columnIndex === d;
     switch (t.item.type) {
-        case o.vB.SOUND:
+        case a.vB.SOUND:
             return (0, r.createElement)(
-                a.ZP,
+                o.ZP,
                 f(u({}, h(d), n), {
                     key: S,
                     sound: t.item.sound,
@@ -81,7 +81,7 @@ function _(e) {
                     isSoundmoji: !0 === v
                 })
             );
-        case o.vB.ADD_SOUND:
+        case a.vB.ADD_SOUND:
             return (0, r.createElement)(
                 l.Z,
                 f(u({}, h(d)), {
@@ -92,7 +92,7 @@ function _(e) {
                     refreshEnabled: O
                 })
             );
-        case o.vB.SHOW_ALL:
+        case a.vB.SHOW_ALL:
             return (0, r.createElement)(
                 s.Z,
                 f(u({}, h(d)), {

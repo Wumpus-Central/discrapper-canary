@@ -1,12 +1,12 @@
 n.d(t, {
-    J2: () => o,
+    J2: () => a,
     V2: () => s,
-    dX: () => a,
+    dX: () => o,
     g2: () => l
 });
 var r = n(818083),
     i = n(987338);
-let o = (0, r.B)({
+let a = (0, r.B)({
     id: '2024-11_soundmoji_sending',
     label: 'Send soundmojis',
     kind: 'user',
@@ -34,15 +34,15 @@ let o = (0, r.B)({
         }
     ]
 });
-function a(e) {
+function o(e) {
     let { location: t } = e;
-    return o.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
+    return a.getCurrentConfig({ location: t }, { autoTrackExposure: !1 }).enabled;
 }
 function s(e) {
     let { location: t } = e;
-    return o.useExperiment({ location: t }, { autoTrackExposure: !1 }).enabled;
+    return a.useExperiment({ location: t }, { autoTrackExposure: !1 }).enabled;
 }
 function l(e) {
     let { location: t } = e;
-    return o.useExperiment({ location: t }, { autoTrackExposure: !1 }).showSoundmojiInEmojiPicker;
+    return a.useExperiment({ location: t }, { autoTrackExposure: !1 }).showSoundmojiInEmojiPicker;
 }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C }), n(539854), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(493683),
     l = n(447543),
     c = n(904245),
@@ -78,8 +78,8 @@ function N(e, t) {
 }
 function C(e) {
     let { user: t, guildId: n, onAction: s } = e,
-        c = (0, o.e7)([g.default], () => g.default.getCurrentUser(), []),
-        d = (0, o.Wu)(
+        c = (0, a.e7)([g.default], () => g.default.getCurrentUser(), []),
+        d = (0, a.Wu)(
             [m.ZP, _.Z, p.Z],
             () => {
                 let e = m.ZP.getFlattenedGuildIds(),
@@ -111,13 +111,13 @@ function C(e) {
     }
     return (null == c ? void 0 : c.id) === t.id || t.bot || 0 === d.length || h.Z.isBlockedOrIgnored(t.id)
         ? null
-        : (0, r.jsx)(a.sNh, {
+        : (0, r.jsx)(o.sNh, {
               id: 'invite-to-server',
               label: b.intl.string(b.t.Sd8Ix8),
               children: d.map((e) =>
                   y[e.id]
                       ? (0, r.jsx)(
-                            a.sNh,
+                            o.sNh,
                             {
                                 id: e.id,
                                 disabled: !0,
@@ -126,7 +126,7 @@ function C(e) {
                             e.id
                         )
                       : (0, r.jsx)(
-                            a.sNh,
+                            o.sNh,
                             {
                                 id: e.id,
                                 label: e.name,

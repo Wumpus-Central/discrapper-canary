@@ -5,9 +5,9 @@
         t,
         r,
         i,
-        o = 'undefined' != typeof window ? window : (n.g, n.g),
-        a = (o.cancelRequestAnimationFrame && o.requestAnimationFrame) || setTimeout,
-        s = o.cancelRequestAnimationFrame || clearTimeout,
+        a = 'undefined' != typeof window ? window : (n.g, n.g),
+        o = (a.cancelRequestAnimationFrame && a.requestAnimationFrame) || setTimeout,
+        s = a.cancelRequestAnimationFrame || clearTimeout,
         l = [],
         c = 0,
         u = !1,
@@ -34,8 +34,8 @@
             n,
             r = 99,
             i = function () {
-                var o = Date.now() - n;
-                o < r ? (t = setTimeout(i, r - o)) : ((t = null), e());
+                var a = Date.now() - n;
+                a < r ? (t = setTimeout(i, r - a)) : ((t = null), e());
             };
         return function () {
             (n = Date.now()), t || (t = setTimeout(i, r));
@@ -51,7 +51,7 @@
         (i = null), (r = setTimeout(T, 0));
     }
     function I() {
-        (r = null), a(v);
+        (r = null), o(v);
     }
     function S() {
         u || ((t = _ - (Date.now() - h)), (e = Date.now()), (u = !0), f && t < f && (t = f), t > 9 ? (r = setTimeout(I, t)) : ((t = 0), I()));
@@ -59,9 +59,9 @@
     function T() {
         var n,
             i,
-            o,
-            a = d > 9 ? 9 : 1;
-        if (((h = Date.now()), (u = !1), (r = null), c > 2 || h - t - 50 < e)) for (i = 0, o = l.length; i < o && g.timeRemaining() > a; i++) (n = l.shift()), m++, n && n(g);
+            a,
+            o = d > 9 ? 9 : 1;
+        if (((h = Date.now()), (u = !1), (r = null), c > 2 || h - t - 50 < e)) for (i = 0, a = l.length; i < a && g.timeRemaining() > o; i++) (n = l.shift()), m++, n && n(g);
         l.length ? S() : (c = 0);
     }
     function A(e) {
@@ -71,17 +71,17 @@
         var t = e - 1 - m;
         l[t] && (l[t] = null);
     }
-    if (o.requestIdleCallback && o.cancelIdleCallback)
+    if (a.requestIdleCallback && a.cancelIdleCallback)
         try {
-            o.requestIdleCallback(function () {}, { timeout: 0 });
+            a.requestIdleCallback(function () {}, { timeout: 0 });
         } catch (e) {
             !(function (e) {
                 var t, n;
                 if (
-                    ((o.requestIdleCallback = function (t, n) {
+                    ((a.requestIdleCallback = function (t, n) {
                         return n && 'number' == typeof n.timeout ? e(t, n.timeout) : e(t);
                     }),
-                    o.IdleCallbackDeadline && (t = IdleCallbackDeadline.prototype))
+                    a.IdleCallbackDeadline && (t = IdleCallbackDeadline.prototype))
                 ) {
                     if (!(n = Object.getOwnPropertyDescriptor(t, 'timeRemaining')) || !n.configurable || !n.get) return;
                     Object.defineProperty(t, 'timeRemaining', {
@@ -92,15 +92,15 @@
                         configurable: !0
                     });
                 }
-            })(o.requestIdleCallback);
+            })(a.requestIdleCallback);
         }
     else
-        (o.requestIdleCallback = A),
-            (o.cancelIdleCallback = N),
-            o.document &&
+        (a.requestIdleCallback = A),
+            (a.cancelIdleCallback = N),
+            a.document &&
                 document.addEventListener &&
-                (o.addEventListener('scroll', O, !0),
-                o.addEventListener('resize', O),
+                (a.addEventListener('scroll', O, !0),
+                a.addEventListener('resize', O),
                 document.addEventListener('focus', O, !0),
                 document.addEventListener('mouseover', O, !0),
                 ['click', 'keypress', 'touchstart', 'mousedown'].forEach(function (e) {
@@ -109,7 +109,7 @@
                         passive: !0
                     });
                 }),
-                o.MutationObserver &&
+                a.MutationObserver &&
                     new MutationObserver(O).observe(document.documentElement, {
                         childList: !0,
                         subtree: !0,

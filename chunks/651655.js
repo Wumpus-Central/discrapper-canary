@@ -1,7 +1,7 @@
 n.d(t, { Z: () => s }), n(539854), n(358797), n(290780);
 var r = n(427786),
     i = n.n(r);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function o(e, t, n) {
         e
     );
 }
-let a = new (n(710845).Z)('Queue');
+let o = new (n(710845).Z)('Queue');
 class s {
     enqueue(e, t, n) {
         this.queue.push({
@@ -41,8 +41,8 @@ class s {
                         this.logger.error('', e);
                     }
                 } else {
-                    var o;
-                    let n = null != (o = t.retryAfter) ? o : this.defaultRetryAfter;
+                    var a;
+                    let n = null != (a = t.retryAfter) ? a : this.defaultRetryAfter;
                     this.logger.info('Rate limited. Delaying draining of queue for '.concat(n, ' ms. LogId:').concat(r, ' QueueLength: ').concat(this.queue.length)),
                         (this.timeout = setTimeout(() => {
                             this.queue.unshift(e), (this.timeout = null), this._drainIfNecessary();
@@ -51,7 +51,7 @@ class s {
             };
         this.logger.log('Draining message from queue LogId:'.concat(r, ' QueueLength: ').concat(this.queue.length)), this.drain(t, i);
     }
-    constructor(e = a, t = 100) {
-        o(this, 'logger', void 0), o(this, 'defaultRetryAfter', void 0), o(this, 'queue', void 0), o(this, 'timeout', void 0), o(this, 'draining', void 0), (this.logger = e), (this.defaultRetryAfter = t), (this.queue = new (i())()), (this.timeout = null), (this.draining = !1);
+    constructor(e = o, t = 100) {
+        a(this, 'logger', void 0), a(this, 'defaultRetryAfter', void 0), a(this, 'queue', void 0), a(this, 'timeout', void 0), a(this, 'draining', void 0), (this.logger = e), (this.defaultRetryAfter = t), (this.queue = new (i())()), (this.timeout = null), (this.draining = !1);
     }
 }

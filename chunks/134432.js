@@ -9,8 +9,8 @@ n.d(t, {
     n(35282);
 var r = n(392711),
     i = n.n(r),
-    o = n(31775),
-    a = n.n(o),
+    a = n(31775),
+    o = n.n(a),
     s = n(664751),
     l = n(261470),
     c = n(956664),
@@ -46,7 +46,7 @@ let h = 5,
     m = /\.webp($|\?|#)/i,
     g = /\.avif($|\?|#)/i,
     E = [16, 20, 22, 24, 28, 32, 40, 44, 48, 56, 60, 64, 80, 96, 100, 128, 160, 240, 256, 300, 320, 480, 512, 600, 640, 1024, 1280, 1536, 2048, 3072, 4096],
-    b = new (a())({ max: 1000 });
+    b = new (o())({ max: 1000 });
 function y(e, t) {
     null == e.backoff && (e.backoff = new l.Z());
     let { backoff: n } = e;
@@ -137,23 +137,23 @@ function A(e) {
     return [t, s.parse(n)];
 }
 function N(e) {
-    let { src: t, sourceWidth: n, sourceHeight: r, targetWidth: o, targetHeight: a, format: l = null, quality: u = null, animated: d = !1, srcIsAnimated: _ = !1 } = e;
+    let { src: t, sourceWidth: n, sourceHeight: r, targetWidth: a, targetHeight: o, format: l = null, quality: u = null, animated: d = !1, srcIsAnimated: _ = !1 } = e;
     if (t.startsWith('data:image')) return t;
     let [p, h] = A(t);
     null != l && (h.format = l), null != u && (h.quality = u), d && _ && (m.test(t) || g.test(t)) && (h.animated = !0), g.test(t) && (h.format = 'webp');
     let E = (0, c.Tj)({
-        width: o,
-        height: a,
+        width: a,
+        height: o,
         maxWidth: f.hiG,
         maxHeight: f.hiG
     });
-    return (o = E.width), (a = E.height), (o !== n || a !== r) && ((h.width = 0 | o), (h.height = 0 | a)), i().isEmpty(h) || (p += '?' + s.stringify(h)), p;
+    return (a = E.width), (o = E.height), (a !== n || o !== r) && ((h.width = 0 | a), (h.height = 0 | o)), i().isEmpty(h) || (p += '?' + s.stringify(h)), p;
 }
 function C(e) {
-    let { src: t, width: n, height: r, maxWidth: i, maxHeight: o, ratio: a = 1, format: s = null, quality: l = null, animated: c = !1, srcIsAnimated: u = !1 } = e,
+    let { src: t, width: n, height: r, maxWidth: i, maxHeight: a, ratio: o = 1, format: s = null, quality: l = null, animated: c = !1, srcIsAnimated: u = !1 } = e,
         f = n,
         _ = r;
-    a < 1 && ((f = Math.round(n * a)), (_ = Math.round(r * a))), null != i && (f = Math.min(f, i)), null != o && (_ = Math.min(_, o));
+    o < 1 && ((f = Math.round(n * o)), (_ = Math.round(r * o))), null != i && (f = Math.min(f, i)), null != a && (_ = Math.min(_, a));
     let p = (0, d.Z)();
     return N({
         src: t,

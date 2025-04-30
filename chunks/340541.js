@@ -1,11 +1,11 @@
 n.d(t, {
     ZP: () => l,
     _k: () => s,
-    jW: () => a
+    jW: () => o
 });
 var r = n(818083),
     i = n(987338);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: 'user',
     id: '2025-03_invites_refresh',
     label: 'Invites Refresh',
@@ -45,9 +45,9 @@ let o = (0, r.B)({
         }
     ]
 });
-function a(e) {
+function o(e) {
     let { location: t } = e,
-        { enabled: n, entrypoints: r, modal: i } = o.getCurrentConfig({ location: t });
+        { enabled: n, entrypoints: r, modal: i } = a.getCurrentConfig({ location: t });
     return {
         enabled: n,
         entrypoints: r,
@@ -56,11 +56,11 @@ function a(e) {
 }
 function s(e) {
     let { location: t } = e,
-        { enabled: n, entrypoints: r, modal: i } = o.useExperiment({ location: t });
+        { enabled: n, entrypoints: r, modal: i } = a.useExperiment({ location: t });
     return {
         enabled: n,
         entrypoints: r,
         modal: i
     };
 }
-let l = o;
+let l = a;

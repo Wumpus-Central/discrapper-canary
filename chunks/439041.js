@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ });
 var r,
     i = n(442837),
-    o = n(570140);
-function a(e, t, n) {
+    a = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,8 +36,8 @@ class f extends (r = i.ZP.Store) {
         return l;
     }
 }
-a(f, 'displayName', 'AdyenStore');
-let _ = new f(o.Z, {
+o(f, 'displayName', 'AdyenStore');
+let _ = new f(a.Z, {
     ADYEN_CREATE_CLIENT_SUCCESS: c,
     ADYEN_TEARDOWN_CLIENT: u,
     ADYEN_CREATE_CASH_APP_PAY_COMPONENT_SUCCESS: d

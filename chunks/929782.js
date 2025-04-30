@@ -8,8 +8,8 @@ n.r(t),
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(570140),
-    a = n(710845),
+    a = n(570140),
+    o = n(710845),
     s = n(592125),
     l = n(131951),
     c = n(944486),
@@ -73,7 +73,7 @@ function O(e, t) {
         e
     );
 }
-let v = new a.Z('AudioActionCreators');
+let v = new o.Z('AudioActionCreators');
 function I() {
     (0, i.ZDy)(async () => {
         let { default: e } = await n.e('74023').then(n.bind(n, 431583));
@@ -124,7 +124,7 @@ function A() {
               .enable()
               .then(
                   () => {
-                      o.Z.dispatch({
+                      a.Z.dispatch({
                           type: 'MEDIA_ENGINE_SET_AUDIO_ENABLED',
                           enabled: !0,
                           unmute: e
@@ -153,14 +153,14 @@ function N(e) {
     let { usedKeybind: t = !1, location: n } = e,
         r = u.ZP.getKeybindForAction(h.kg4.TOGGLE_MUTE, !1, !0),
         i = c.Z.getVoiceChannelId(),
-        o = null != i ? s.Z.getChannel(i) : null;
+        a = null != i ? s.Z.getChannel(i) : null;
     f.default.track(h.rMx.INPUT_MUTE_TOGGLED, {
         enabled: !l.Z.isSelfMute(),
         custom_keybind_assigned: null != r && r.id !== u.Ek.id,
         used_keybind: t,
         app_in_focus: d.Z.isFocused(),
         overlay_activated: null != (0, p.Z)(),
-        voice_channel_type: null != o ? o.type : null,
+        voice_channel_type: null != a ? a.type : null,
         location: n
     });
 }
@@ -168,14 +168,14 @@ function C(e) {
     let { usedKeybind: t = !1, location: n } = e,
         r = u.ZP.getKeybindForAction(h.kg4.TOGGLE_DEAFEN, !1, !0),
         i = c.Z.getVoiceChannelId(),
-        o = null != i ? s.Z.getChannel(i) : null;
+        a = null != i ? s.Z.getChannel(i) : null;
     f.default.track(h.rMx.SELF_DEAFEN_TOGGLED, {
         enabled: !l.Z.isSelfDeaf(),
         keybind_assigned: null != r ? (0, _.BB)(r.shortcut) : void 0,
         used_keybind: t,
         app_in_focus: d.Z.isFocused(),
         overlay_activated: null != (0, p.Z)(),
-        voice_channel_type: null != o ? o.type : null,
+        voice_channel_type: null != a ? a.type : null,
         location: n
     });
 }

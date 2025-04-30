@@ -1,11 +1,11 @@
-var e = r(511696),
-    o = r(127849),
-    i = r(587218),
-    u = '__core-js_shared__',
-    c = (t.exports = o[u] || i(u, {}));
-(c.versions || (c.versions = [])).push({
+var r = a(511696),
+    n = a(127849),
+    _ = a(587218),
+    o = '__core-js_shared__',
+    i = (t.exports = n[o] || _(o, {}));
+(i.versions || (i.versions = [])).push({
     version: '3.41.0',
-    mode: e ? 'pure' : 'global',
+    mode: r ? 'pure' : 'global',
     copyright: '\xA9 2014-2025 Denis Pushkarev (zloirock.ru)',
     license: 'https://github.com/zloirock/core-js/blob/v3.41.0/LICENSE',
     source: 'https://github.com/zloirock/core-js'

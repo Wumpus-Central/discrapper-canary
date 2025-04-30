@@ -1,18 +1,18 @@
 n.d(t, {
-    N7: () => a,
+    N7: () => o,
     aG: () => l,
     jC: () => s
 });
 var r = n(39383),
     i = n.n(r);
-let o = {};
-function a(e) {
+let a = {};
+function o(e) {
     let t = i()('VideoStream');
-    return (o[t] = e), t;
+    return (a[t] = e), t;
 }
 function s(e) {
-    delete o[e];
+    delete a[e];
 }
 function l(e) {
-    return o[e];
+    return a[e];
 }

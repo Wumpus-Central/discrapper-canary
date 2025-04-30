@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v });
 var r = n(252258),
     i = n(812206),
-    o = n(592125),
-    a = n(944486),
+    a = n(592125),
+    o = n(944486),
     s = n(594174),
     l = n(595519),
     c = n(636449),
@@ -25,7 +25,7 @@ async function I(e) {
     let t,
         { applicationId: n, activityChannelId: c, locationObject: v, analyticsLocations: I, componentId: S, sectionName: T, source: A, partyId: N, joinUserId: C, joinSessionId: R, secret: P, inviterUserId: w, instanceId: D, isContextlessActivity: L, customId: x, referrerId: M } = e,
         k = (0, g.Z)(),
-        j = o.Z.getChannel(c),
+        j = a.Z.getChannel(c),
         U = null == j ? void 0 : j.getGuildId(),
         G = null == U || '' === U,
         B = s.default.getCurrentUser();
@@ -34,7 +34,7 @@ async function I(e) {
     let V = f.ZP.getCurrentEmbeddedActivity();
     (null == V ? void 0 : V.applicationId) != null && (t = i.Z.getApplication(null == V ? void 0 : V.applicationId));
     let F = (null == V ? void 0 : V.location.kind) === r.E.CONTEXTLESS;
-    if ((F || a.Z.getVoiceChannelId() === c) && null != V && V.applicationId === n && (F || (0, h.pY)(V.location) === a.Z.getVoiceChannelId())) return (0, y.Z)(U, V.location), Promise.resolve(!0);
+    if ((F || o.Z.getVoiceChannelId() === c) && null != V && V.applicationId === n && (F || (0, h.pY)(V.location) === o.Z.getVoiceChannelId())) return (0, y.Z)(U, V.location), Promise.resolve(!0);
     let Z = await (0, m.Z)(n, c),
         H = (0, u.Kb)(Z);
     if (

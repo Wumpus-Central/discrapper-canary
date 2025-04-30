@@ -8,8 +8,8 @@ n.r(t),
     n(781311);
 var r = n(392711),
     i = n.n(r),
-    o = n(31775),
-    a = n.n(o),
+    a = n(31775),
+    o = n.n(a),
     s = n(159635),
     l = n.n(s),
     c = n(25209),
@@ -24,7 +24,7 @@ let _ = (0, f.Z)([
             mustConfirmExternalLink: !0
         })
     ]),
-    p = new (a())({ max: 2000 }),
+    p = new (o())({ max: 2000 }),
     h = c.w4(_),
     m = void 0;
 function g(e) {

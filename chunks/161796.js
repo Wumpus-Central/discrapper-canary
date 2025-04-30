@@ -7,22 +7,22 @@ function n(e, t, n) {
 }
 function r(e, t, r) {
     var i = r < 0.5 ? r * (1 + t) : r + t - r * t,
-        o = 2 * r - i;
-    return (Math.round(255 * n(o, i, e + 1 / 3)) << 24) | (Math.round(255 * n(o, i, e)) << 16) | (Math.round(255 * n(o, i, e - 1 / 3)) << 8);
+        a = 2 * r - i;
+    return (Math.round(255 * n(a, i, e + 1 / 3)) << 24) | (Math.round(255 * n(a, i, e)) << 16) | (Math.round(255 * n(a, i, e - 1 / 3)) << 8);
 }
 var i = '[-+]?\\d*\\.?\\d+',
-    o = i + '%';
-function a(e) {
+    a = i + '%';
+function o(e) {
     return Array.prototype.slice.call(e, 0);
 }
 function s() {
-    return '\\(\\s*(' + a(arguments).join(')\\s*,\\s*(') + ')\\s*\\)';
+    return '\\(\\s*(' + o(arguments).join(')\\s*,\\s*(') + ')\\s*\\)';
 }
 var l = {
     rgb: RegExp('rgb' + s(i, i, i)),
     rgba: RegExp('rgba' + s(i, i, i, i)),
-    hsl: RegExp('hsl' + s(i, o, o)),
-    hsla: RegExp('hsla' + s(i, o, o, i)),
+    hsl: RegExp('hsl' + s(i, a, a)),
+    hsla: RegExp('hsla' + s(i, a, a, i)),
     hex3: /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
     hex4: /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
     hex6: /^#([0-9a-fA-F]{6})$/,

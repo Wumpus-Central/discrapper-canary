@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r = n(255367),
     i = n(73800),
-    o = n(335854),
-    a = n(481060),
+    a = n(335854),
+    o = n(481060),
     s = n(626135),
     l = n(981631),
     c = n(388032);
@@ -64,8 +64,8 @@ function p(e, t) {
         r,
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -74,14 +74,14 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let m = (e) => {
     var { href: t, className: n, iconClassName: u, rel: f, target: h, mimeType: m, fileName: g, focusProps: E, onClick: b } = e,
         y = p(e, ['href', 'className', 'iconClassName', 'rel', 'target', 'mimeType', 'fileName', 'focusProps', 'onClick']);
-    let O = i.useMemo(() => o.X.getDefaultLinkInterceptor(t), [t]),
+    let O = i.useMemo(() => a.X.getDefaultLinkInterceptor(t), [t]),
         v = i.useCallback(
             (e) => {
                 s.default.track(l.rMx.MEDIA_DOWNLOAD_BUTTON_TAPPED, {
@@ -95,7 +95,7 @@ let m = (e) => {
         );
     return null != g
         ? (0, r.jsx)(
-              a.eee,
+              o.eee,
               _(
                   d(
                       {
@@ -113,7 +113,7 @@ let m = (e) => {
               )
           )
         : (0, r.jsx)(
-              a.eee,
+              o.eee,
               _(
                   d(
                       {
@@ -128,7 +128,7 @@ let m = (e) => {
                       y
                   ),
                   {
-                      children: (0, r.jsx)(a._8t, {
+                      children: (0, r.jsx)(o._8t, {
                           size: 'md',
                           color: 'currentColor',
                           className: u

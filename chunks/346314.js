@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(756715),
     l = n(607070),
     c = n(865672),
@@ -70,8 +70,8 @@ function m(e, t) {
         r,
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -80,12 +80,12 @@ function g(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function E(e) {
-    let { roleStyle: t, name: n, color: i, roleName: a, roleColors: s, dotAlignment: l = 'left', className: f, animateRoleGradient: p } = e,
+    let { roleStyle: t, name: n, color: i, roleName: o, roleColors: s, dotAlignment: l = 'left', className: f, animateRoleGradient: p } = e,
         h = 'username' === t,
         m = 'dot' === t,
         g = null != s && null != s.primaryColor && null != s.secondaryColor,
@@ -106,12 +106,12 @@ function E(e) {
             ? (0, r.jsx)(u.F, {
                   color: i,
                   colors: g ? s : null,
-                  name: a,
+                  name: o,
                   className: 'left' === l ? d.roleDotLeft : d.roleDotRight
               })
             : null;
     return (0, r.jsxs)('span', {
-        className: o()(f, d.container),
+        className: a()(f, d.container),
         children: [
             'left' === l && I,
             (0, r.jsxs)('span', {
@@ -119,7 +119,7 @@ function E(e) {
                 style: _({ color: h && !g && null != i ? i : void 0 }, E ? b : {}),
                 children: [
                     (0, r.jsx)('span', {
-                        className: o()(d.name, {
+                        className: a()(d.name, {
                             [d.username]: h,
                             [y]: E
                         }),
@@ -128,7 +128,7 @@ function E(e) {
                     E &&
                         (0, r.jsx)('span', {
                             'aria-hidden': !0,
-                            className: o()(d.nameGlow, O),
+                            className: a()(d.nameGlow, O),
                             children: n
                         })
                 ]
@@ -138,16 +138,16 @@ function E(e) {
     });
 }
 function b(e) {
-    let { name: t, color: n, roleName: i, dotAlignment: o, className: c, roleColors: u, animateRoleGradient: d } = e,
+    let { name: t, color: n, roleName: i, dotAlignment: a, className: c, roleColors: u, animateRoleGradient: d } = e,
         f = m(e, ['name', 'color', 'roleName', 'dotAlignment', 'className', 'roleColors', 'animateRoleGradient']),
-        p = (0, a.e7)([l.Z], () => l.Z.roleStyle),
+        p = (0, o.e7)([l.Z], () => l.Z.roleStyle),
         g = 'username' === p,
         b = (0, r.jsx)(E, {
             roleStyle: p,
             name: t,
             color: n,
             roleName: i,
-            dotAlignment: o,
+            dotAlignment: a,
             className: c,
             roleColors: u,
             animateRoleGradient: d
@@ -162,6 +162,6 @@ function b(e) {
     );
 }
 function y(e) {
-    let t = (0, a.e7)([l.Z], () => l.Z.roleStyle);
+    let t = (0, o.e7)([l.Z], () => l.Z.roleStyle);
     return (0, r.jsx)(E, h(_({}, e), { roleStyle: t }));
 }

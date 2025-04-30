@@ -1,22 +1,22 @@
-var e = r(98405),
-    o = r(127849),
-    i = r(91520),
-    u = r(896471),
-    c = r(338045),
-    a = r(621523),
-    f = r(507604);
-e(
+var r = n(98405),
+    i = n(127849),
+    a = n(91520),
+    o = n(896471),
+    s = n(338045),
+    l = n(621523),
+    c = n(507604);
+r(
     {
         global: !0,
         enumerable: !0,
         dontCallGetSet: !0,
-        forced: a(function () {
-            return f && 1 !== Object.getOwnPropertyDescriptor(o, 'queueMicrotask').value.length;
+        forced: l(function () {
+            return c && 1 !== Object.getOwnPropertyDescriptor(i, 'queueMicrotask').value.length;
         })
     },
     {
-        queueMicrotask: function (t) {
-            c(arguments.length, 1), i(u(t));
+        queueMicrotask: function (e) {
+            s(arguments.length, 1), a(o(e));
         }
     }
 );

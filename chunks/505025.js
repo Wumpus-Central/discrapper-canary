@@ -1,8 +1,8 @@
-var e = r(209957),
-    o = r(840475),
-    i = o.aTypedArray,
-    u = o.exportTypedArrayMethod,
-    c = o.getTypedArrayConstructor;
-u('toReversed', function () {
-    return e(i(this), c(this));
+var r = n(209957),
+    i = n(840475),
+    a = i.aTypedArray,
+    o = i.exportTypedArrayMethod,
+    s = i.getTypedArrayConstructor;
+o('toReversed', function () {
+    return r(a(this), s(this));
 });

@@ -14,8 +14,8 @@ n.d(t, {
 });
 var r = n(512722),
     i = n.n(r),
-    o = n(990547),
-    a = n(544891),
+    a = n(990547),
+    o = n(544891),
     s = n(570140),
     l = n(258609),
     c = n(569545),
@@ -98,7 +98,7 @@ function D(e, t) {
     let { guildId: n, channelId: r } = e;
     if (null != n && w(n, r)) return;
     let i = (0, c.V9)(e),
-        o =
+        a =
             (null == t ? void 0 : t.forceMultiple) ||
             _.Z.getAllActiveStreamsForChannel(r).filter((e) => {
                 let { ownerId: t } = e;
@@ -107,9 +107,9 @@ function D(e, t) {
     s.Z.dispatch({
         type: 'STREAM_WATCH',
         streamKey: i,
-        allowMultiple: o
+        allowMultiple: a
     }),
-        o || (null != t && t.noFocus) || I.Z.selectParticipant(e.channelId, i);
+        a || (null != t && t.noFocus) || I.Z.selectParticipant(e.channelId, i);
 }
 function L(e, t) {
     s.Z.dispatch({
@@ -123,8 +123,8 @@ function x(e, t) {
     if (null != n && w(n, r)) return;
     D(e, t);
     let i = d.Z.getWindowOpen(S.KJ3.CHANNEL_CALL_POPOUT),
-        o = g.Z.getVoiceChannelId();
-    (i && o === r) || (0, u.Z)(e);
+        a = g.Z.getVoiceChannelId();
+    (i && a === r) || (0, u.Z)(e);
 }
 function M(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -156,7 +156,7 @@ async function j(e, t, n) {
         streamKey: r
     });
     try {
-        let e = await a.tn.get({
+        let e = await o.tn.get({
             url: S.ANM.STREAM_PREVIEW(r),
             query: { version: Date.now() },
             oldFormErrors: !0,
@@ -182,7 +182,7 @@ async function U(e) {
         await v.Z.post({
             url: S.ANM.STREAM_NOTIFY(e),
             oldFormErrors: !0,
-            trackedActionData: { event: o.NetworkActionNames.STREAM_NOTIFY },
+            trackedActionData: { event: a.NetworkActionNames.STREAM_NOTIFY },
             rejectWithError: !0
         });
     } catch (e) {}
@@ -191,7 +191,7 @@ function G(e) {
     (0, O.Ye)(e.preset, e.resolution, e.frameRate), s.Z.dispatch(N({ type: 'STREAM_UPDATE_SETTINGS' }, e));
 }
 function B(e, t) {
-    a.tn.patch({
+    o.tn.patch({
         url: S.ANM.STREAM(e),
         body: { region: t },
         oldFormErrors: !0,

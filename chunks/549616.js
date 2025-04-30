@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ }), n(539854);
 var r = n(979554),
     i = n(778787),
-    o = n(803358);
-function a(e, t, n) {
+    a = n(803358);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -60,8 +60,8 @@ function u(e, t) {
         r,
         i = d(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -70,14 +70,14 @@ function d(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let f = (e) => e === r.Z.VARIANTS_GROUP || e === r.Z.EXTERNAL_SKU;
-class _ extends o.Z {
+class _ extends a.Z {
     static fromServer(e) {
-        var { products: t, logo: n, hero_ranking: r, pdp_bg: o, mobile_bg: a, success_modal_bg: l, mobile_banner: d, hero_banner: p, hero_banner_asset: h, featured_block: m, hero_logo: g, banner_text_color: E } = e,
+        var { products: t, logo: n, hero_ranking: r, pdp_bg: a, mobile_bg: o, success_modal_bg: l, mobile_banner: d, hero_banner: p, hero_banner_asset: h, featured_block: m, hero_logo: g, banner_text_color: E } = e,
             b = u(e, ['products', 'logo', 'hero_ranking', 'pdp_bg', 'mobile_bg', 'success_modal_bg', 'mobile_banner', 'hero_banner', 'hero_banner_asset', 'featured_block', 'hero_logo', 'banner_text_color']);
         return new _(
             c(s({}, super.fromServer(b)), {
@@ -87,8 +87,8 @@ class _ extends o.Z {
                 }, []),
                 logo: n,
                 heroRanking: r,
-                pdpBg: o,
-                mobileBg: a,
+                pdpBg: a,
+                mobileBg: o,
                 successModalBg: l,
                 mobileBanner: d,
                 heroBanner: p,
@@ -100,6 +100,6 @@ class _ extends o.Z {
         );
     }
     constructor(e) {
-        super(e), a(this, 'products', void 0), a(this, 'logo', void 0), a(this, 'heroRanking', void 0), a(this, 'pdpBg', void 0), a(this, 'mobileBg', void 0), a(this, 'successModalBg', void 0), a(this, 'mobileBanner', void 0), a(this, 'heroBanner', void 0), a(this, 'heroBannerAsset', void 0), a(this, 'featuredBlock', void 0), a(this, 'heroLogo', void 0), a(this, 'bannerTextColor', void 0), (this.products = e.products), (this.logo = e.logo), (this.heroRanking = e.heroRanking), (this.pdpBg = e.pdpBg), (this.mobileBg = e.mobileBg), (this.successModalBg = e.successModalBg), (this.mobileBanner = e.mobileBanner), (this.heroBanner = e.heroBanner), (this.featuredBlock = e.featuredBlock), (this.heroLogo = e.heroLogo), (this.heroBannerAsset = e.heroBannerAsset), (this.bannerTextColor = e.bannerTextColor);
+        super(e), o(this, 'products', void 0), o(this, 'logo', void 0), o(this, 'heroRanking', void 0), o(this, 'pdpBg', void 0), o(this, 'mobileBg', void 0), o(this, 'successModalBg', void 0), o(this, 'mobileBanner', void 0), o(this, 'heroBanner', void 0), o(this, 'heroBannerAsset', void 0), o(this, 'featuredBlock', void 0), o(this, 'heroLogo', void 0), o(this, 'bannerTextColor', void 0), (this.products = e.products), (this.logo = e.logo), (this.heroRanking = e.heroRanking), (this.pdpBg = e.pdpBg), (this.mobileBg = e.mobileBg), (this.successModalBg = e.successModalBg), (this.mobileBanner = e.mobileBanner), (this.heroBanner = e.heroBanner), (this.featuredBlock = e.featuredBlock), (this.heroLogo = e.heroLogo), (this.heroBannerAsset = e.heroBannerAsset), (this.bannerTextColor = e.bannerTextColor);
     }
 }

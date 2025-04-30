@@ -9,8 +9,8 @@ n.d(t, {
 });
 var r = n(97613),
     i = n.n(r),
-    o = n(734641),
-    a = n(519772),
+    a = n(734641),
+    o = n(519772),
     s = n(731965),
     l = n(957825);
 let c = Object.freeze({
@@ -24,8 +24,8 @@ let c = Object.freeze({
             return i()(e);
         })()
     }),
-    u = (0, a.F)()(
-        (0, o.tJ)((e, t) => c, {
+    u = (0, o.F)()(
+        (0, a.tJ)((e, t) => c, {
             name: 'expression-picker-last-active-view',
             partialize: (e) => ({ lastActiveView: e.lastActiveView })
         })

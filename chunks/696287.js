@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(388685);
 var r = n(846519),
     i = n(147913),
-    o = n(77498),
-    a = n(19780),
+    a = n(77498),
+    o = n(19780),
     s = n(626135),
     l = n(70956),
     c = n(581567),
@@ -69,15 +69,15 @@ class h extends i.Z {
             f(this, 'logRunningGameHeartbeats', () => {
                 let e = u.ZP.getRunningGames(),
                     t = {
-                        rtc_connection_id: a.Z.getRTCConnectionId(),
-                        media_session_id: a.Z.getMediaSessionId()
+                        rtc_connection_id: o.Z.getRTCConnectionId(),
+                        media_session_id: o.Z.getMediaSessionId()
                     },
                     n = new Set();
                 e.forEach((e) => {
                     var r, i;
-                    let a = (0, u.rH)(e),
-                        l = !this.runningGameKeys.has(a),
-                        f = null != (i = e.id) ? i : null == (r = o.Z.getGameByName(e.name)) ? void 0 : r.id;
+                    let o = (0, u.rH)(e),
+                        l = !this.runningGameKeys.has(o),
+                        f = null != (i = e.id) ? i : null == (r = a.Z.getGameByName(e.name)) ? void 0 : r.id;
                     s.default.track(
                         d.rMx.RUNNING_GAME_HEARTBEAT,
                         _(

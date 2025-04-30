@@ -1,5 +1,5 @@
 function t(e) {
-    if (((this._capacity = o(e)), (this._length = 0), (this._front = 0), this._makeCapacity(), n(e))) {
+    if (((this._capacity = a(e)), (this._length = 0), (this._front = 0), this._makeCapacity(), n(e))) {
         for (var t = e.length, r = 0; r < t; ++r) this[r] = e[r];
         this._length = t;
     }
@@ -16,12 +16,12 @@ function t(e) {
             if (n + t > r) {
                 for (var i = 0; i < t; ++i) {
                     this._checkCapacity(n + 1);
-                    var o = (this._front + n) & (this._capacity - 1);
-                    (this[o] = arguments[i]), n++, (this._length = n);
+                    var a = (this._front + n) & (this._capacity - 1);
+                    (this[a] = arguments[i]), n++, (this._length = n);
                 }
                 return n;
             }
-            for (var o = this._front, i = 0; i < t; ++i) (this[(o + n) & (r - 1)] = arguments[i]), o++;
+            for (var a = this._front, i = 0; i < t; ++i) (this[(a + n) & (r - 1)] = arguments[i]), a++;
             return (this._length = n + t), n + t;
         }
         if (0 === t) return n;
@@ -54,16 +54,16 @@ function t(e) {
                 for (var i = n - 1; i >= 0; i--) {
                     this._checkCapacity(t + 1);
                     var r = this._capacity,
-                        o = (((this._front - 1) & (r - 1)) ^ r) - r;
-                    (this[o] = arguments[i]), t++, (this._length = t), (this._front = o);
+                        a = (((this._front - 1) & (r - 1)) ^ r) - r;
+                    (this[a] = arguments[i]), t++, (this._length = t), (this._front = a);
                 }
                 return t;
             }
-            for (var a = this._front, i = n - 1; i >= 0; i--) {
-                var o = (((a - 1) & (r - 1)) ^ r) - r;
-                (this[o] = arguments[i]), (a = o);
+            for (var o = this._front, i = n - 1; i >= 0; i--) {
+                var a = (((o - 1) & (r - 1)) ^ r) - r;
+                (this[a] = arguments[i]), (o = a);
             }
-            return (this._front = a), (this._length = t + n), t + n;
+            return (this._front = o), (this._length = t + n), t + n;
         }
         if (0 === n) return t;
         this._checkCapacity(t + 1);
@@ -117,27 +117,27 @@ function t(e) {
         for (var e = this._capacity, t = 0; t < e; ++t) this[t] = void 0;
     }),
     (t.prototype._checkCapacity = function (e) {
-        this._capacity < e && this._resizeTo(o(1.5 * this._capacity + 16));
+        this._capacity < e && this._resizeTo(a(1.5 * this._capacity + 16));
     }),
     (t.prototype._resizeTo = function (e) {
         var t = this._front,
             n = this._capacity,
             i = Array(n),
-            o = this._length;
-        if ((r(this, 0, i, 0, n), (this._capacity = e), this._makeCapacity(), (this._front = 0), t + o <= n)) r(i, t, this, 0, o);
+            a = this._length;
+        if ((r(this, 0, i, 0, n), (this._capacity = e), this._makeCapacity(), (this._front = 0), t + a <= n)) r(i, t, this, 0, a);
         else {
-            var a = o - ((t + o) & (n - 1));
-            r(i, t, this, 0, a), r(i, 0, this, a, o - a);
+            var o = a - ((t + a) & (n - 1));
+            r(i, t, this, 0, o), r(i, 0, this, o, a - o);
         }
     });
 var n = Array.isArray;
 function r(e, t, n, r, i) {
-    for (var o = 0; o < i; ++o) n[o + r] = e[o + t];
+    for (var a = 0; a < i; ++a) n[a + r] = e[a + t];
 }
 function i(e) {
     return (e >>>= 0), (e -= 1), (e |= e >> 1), (e |= e >> 2), (e |= e >> 4), (e |= e >> 8), (e |= e >> 16) + 1;
 }
-function o(e) {
+function a(e) {
     if ('number' != typeof e)
         if (!n(e)) return 16;
         else e = e.length;

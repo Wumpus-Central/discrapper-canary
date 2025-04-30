@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(91192),
     l = n(866442),
     c = n(442837),
@@ -75,8 +75,8 @@ function T(e, t) {
         r,
         i = A(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -85,12 +85,12 @@ function A(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let N = i.forwardRef(function (e, t) {
-    var o, O, I;
+    var a, O, I;
     let A,
         { canRemove: N, className: C, role: R, onRemove: P, guildId: w, disableBorderColor: D, onMouseDown: L } = e,
         x = (0, s.JA)(R.id),
@@ -102,7 +102,7 @@ let N = i.forwardRef(function (e, t) {
             guildId: w
         }),
         U = (0, c.e7)([_.Z], () => _.Z.roleStyle),
-        G = (null == (o = R.tags) ? void 0 : o.guild_connections) === null,
+        G = (null == (a = R.tags) ? void 0 : a.guild_connections) === null,
         B = i.useCallback(
             (e) => {
                 (0, f.jW)(e, async () => {
@@ -155,7 +155,7 @@ let N = i.forwardRef(function (e, t) {
                 ? (0, r.jsx)(d.DY3, {
                       text: b.intl.string(b.t.u3RVsL),
                       children: (0, r.jsxs)(d.P3F, {
-                          className: a()(y.roleRemoveButtonCanRemove, y.roleRemoveButton),
+                          className: o()(y.roleRemoveButtonCanRemove, y.roleRemoveButton),
                           onClick: P,
                           tabIndex: M,
                           focusProps: { focusClassName: y.roleRemoveIconFocused },
@@ -187,7 +187,7 @@ let N = i.forwardRef(function (e, t) {
                 v(
                     {
                         ref: t,
-                        className: a()(y.role, C),
+                        className: o()(y.role, C),
                         style: K,
                         onContextMenu: B,
                         onMouseDown: L,

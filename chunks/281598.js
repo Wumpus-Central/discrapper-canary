@@ -17,8 +17,8 @@ n.d(t, {
     n(642613);
 var r = n(73800),
     i = n(481060),
-    o = n(406432),
-    a = n(619899);
+    a = n(406432),
+    o = n(619899);
 function s(e, t, n) {
     return (
         t in e
@@ -125,7 +125,7 @@ let m = (e) => {
         for (let n of e) E(n, t);
     },
     y = (e, t) => ''.concat(e, '/').concat(t),
-    O = (e) => (0, o.tw)(e.type) || (0, o.X2)(e.type),
+    O = (e) => (0, a.tw)(e.type) || (0, a.X2)(e.type),
     v = (e) => {
         var t;
         return null != (t = _[e.name]) ? t : null;
@@ -158,8 +158,8 @@ let m = (e) => {
         for (let i of await new Promise((e) => r.readEntries(e)))
             if (i.isFile) {
                 let r = i,
-                    o = await new Promise((e) => r.file(e));
-                T(e.name, o, t, n);
+                    a = await new Promise((e) => r.file(e));
+                T(e.name, a, t, n);
             } else {
                 let e = await I(i);
                 n.ignoredFilenames.push(...e.map((e) => y(i.name, e.name)));
@@ -212,8 +212,8 @@ let m = (e) => {
                 profileEffectFilesMap: {},
                 ignoredFilenames: []
             })),
-            { upsertCollectionAsset: n, upsertAvatarDecorationAsset: i } = (0, a.N9)(),
-            o = r.useCallback(
+            { upsertCollectionAsset: n, upsertAvatarDecorationAsset: i } = (0, o.N9)(),
+            a = r.useCallback(
                 async (e) => {
                     let r = await R(e);
                     t(r),
@@ -248,6 +248,6 @@ let m = (e) => {
             ignoredFilenames: e.ignoredFilenames,
             clearAssets: s,
             clearIgnoredFilenames: c,
-            processAndUpsertAssets: o
+            processAndUpsertAssets: a
         };
     };

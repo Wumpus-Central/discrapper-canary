@@ -1,8 +1,8 @@
 n.d(t, { F: () => u }), n(388685);
 var r,
     i = n(255367),
-    o = n(73800),
-    a = n(846519);
+    a = n(73800),
+    o = n(846519);
 function s(e, t, n) {
     return (
         t in e
@@ -35,7 +35,7 @@ function l(e) {
 var c = (function (e) {
     return (e.SVG = 'svg'), (e.CANVAS = 'canvas'), e;
 })(c || {});
-class u extends (r = o.Component) {
+class u extends (r = a.Component) {
     componentDidMount() {
         (null != this.props.versionKey && this.props.versionKey < 0) || this.loadAnimation();
     }
@@ -56,11 +56,11 @@ class u extends (r = o.Component) {
     }
     constructor(...e) {
         super(...e),
-            s(this, 'animationRef', o.createRef()),
+            s(this, 'animationRef', a.createRef()),
             s(this, 'animation', void 0),
-            s(this, 'delayTimeout', new a.V7()),
+            s(this, 'delayTimeout', new o.V7()),
             s(this, 'loadAnimation', async () => {
-                let { importData: e, loop: t, autoplay: r, delay: i, renderer: o, rendererSettings: a, shouldAnimate: s } = this.props;
+                let { importData: e, loop: t, autoplay: r, delay: i, renderer: a, rendererSettings: o, shouldAnimate: s } = this.props;
                 null != this.animation && this.animation.destroy();
                 let [c, { default: u }] = await Promise.all([e(), Promise.resolve().then(n.t.bind(n, 500923, 23))]);
                 if (null == this.animationRef.current) return;
@@ -69,10 +69,10 @@ class u extends (r = o.Component) {
                     l(
                         {
                             container: this.animationRef.current,
-                            renderer: o,
+                            renderer: a,
                             loop: t,
                             autoplay: r && null == i && s,
-                            rendererSettings: a
+                            rendererSettings: o
                         },
                         d
                     )

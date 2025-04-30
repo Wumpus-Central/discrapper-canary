@@ -13,8 +13,8 @@ n.d(t, {
 });
 var r = n(381814),
     i = n(731965),
-    o = n(626135),
-    a = n(981631);
+    a = n(626135),
+    o = n(981631);
 function s(e, t, n) {
     return (
         t in e
@@ -73,7 +73,7 @@ let d = Object.freeze({
     }),
     f = (0, r.U)(() => d),
     _ = (e, t) => {
-        o.default.track(a.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: t }),
+        a.default.track(o.rMx.CONFETTI_POTION_ENTRYPOINT_CLICKED, { location: t }),
             (0, i.j)(() => {
                 f.setState((t) => {
                     let { messageSendConfetti: n } = t;

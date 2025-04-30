@@ -1,1 +1,1 @@
-n.f = Object.getOwnPropertySymbols;
+e.f = Object.getOwnPropertySymbols;

@@ -1,16 +1,16 @@
-var e = r(77025),
-    o = r(880181),
-    i = r(527160),
-    u = r(661314),
-    c = r(87185),
-    a = u('IE_PROTO'),
-    f = Object,
-    s = f.prototype;
-t.exports = c
-    ? f.getPrototypeOf
+var r = a(77025),
+    n = a(880181),
+    _ = a(527160),
+    o = a(661314),
+    i = a(87185),
+    c = o('IE_PROTO'),
+    s = Object,
+    E = s.prototype;
+t.exports = i
+    ? s.getPrototypeOf
     : function (t) {
-          var n = i(t);
-          if (e(n, a)) return n[a];
-          var r = n.constructor;
-          return o(r) && n instanceof r ? r.prototype : n instanceof f ? s : null;
+          var e = _(t);
+          if (r(e, c)) return e[c];
+          var a = e.constructor;
+          return n(a) && e instanceof a ? a.prototype : e instanceof s ? E : null;
       };

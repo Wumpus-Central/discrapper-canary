@@ -1,7 +1,7 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(818083),
     i = n(987338);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: 'guild',
     id: '2024-12_guild_voice_channel_ringing',
     label: 'Guild Voice Ringing',

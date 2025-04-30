@@ -1,6 +1,6 @@
 n.d(t, {
-    Jj: () => o,
-    OF: () => a,
+    Jj: () => a,
+    OF: () => o,
     WW: () => l,
     Y9: () => i,
     hV: () => s,
@@ -8,8 +8,8 @@ n.d(t, {
 });
 let r = 550,
     i = 600,
-    o = 350,
-    a = 40;
+    a = 350,
+    o = 40;
 var s = (function (e) {
     return (e.STATIC = 'STATIC'), (e.RESPONSIVE = 'RESPONSIVE'), (e.MOSAIC = 'MOSAIC'), e;
 })({});

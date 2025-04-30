@@ -1,8 +1,8 @@
 n.d(t, { q: () => y }), n(49124), n(388685);
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(353926),
+    a = n(570140),
+    o = n(353926),
     s = n(626135),
     l = n(358085),
     c = n(998502);
@@ -81,7 +81,7 @@ function g() {
 }
 class E extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (p = null != e && 'object' == typeof e.hashes ? e : { hashes: {} }), this.waitFor(a.Z);
+        (p = null != e && 'object' == typeof e.hashes ? e : { hashes: {} }), this.waitFor(o.Z);
     }
     getState() {
         return p;
@@ -95,7 +95,7 @@ class E extends (r = i.ZP.PersistedStore) {
     }
 }
 u(E, 'displayName', 'SystemAnalyticsStore'), u(E, 'persistKey', 'SystemAnalyticsStore');
-let b = new E(o.Z, { START_SESSION: g });
+let b = new E(a.Z, { START_SESSION: g });
 function y() {
     return b.info();
 }

@@ -11,8 +11,8 @@ n.d(t, {
     n(35282);
 var r = n(442837),
     i = n(353926),
-    o = n(699516),
-    a = n(594174),
+    a = n(699516),
+    o = n(594174),
     s = n(823379),
     l = n(51144),
     c = n(981631),
@@ -31,19 +31,19 @@ function f(e, t, n) {
     return d(e.recipients, t, n);
 }
 function _(e) {
-    return (0, r.e7)([a.default, o.Z], () => (null != e && e.isMultiUserDM() ? f(e, a.default, o.Z) : null));
+    return (0, r.e7)([o.default, a.Z], () => (null != e && e.isMultiUserDM() ? f(e, o.default, a.Z) : null));
 }
 function p(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         i = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
     switch (e.type) {
         case c.d4z.DM:
-            var o;
-            let [a] = e.recipients.map(t.getUser).filter(s.lm);
-            if (null == a) return '???';
-            if (a.isProvisional && null != a.globalName) return a.globalName;
-            let u = n.getNickname(a.id),
-                d = null != (o = null != u ? u : l.ZP.getName(a)) ? o : '???';
+            var a;
+            let [o] = e.recipients.map(t.getUser).filter(s.lm);
+            if (null == o) return '???';
+            if (o.isProvisional && null != o.globalName) return o.globalName;
+            let u = n.getNickname(o.id),
+                d = null != (a = null != u ? u : l.ZP.getName(o)) ? a : '???';
             return r ? '@'.concat(d) : d;
         case c.d4z.GROUP_DM:
             if ('' !== e.name) return e.name;
@@ -75,5 +75,5 @@ function m(e) {
 }
 function g(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return (0, r.e7)([a.default, i.Z, o.Z], () => (null == e ? null : p(e, a.default, o.Z, t)));
+    return (0, r.e7)([o.default, i.Z, a.Z], () => (null == e ? null : p(e, o.default, a.Z, t)));
 }

@@ -4,9 +4,9 @@ n.d(t, {
 });
 var r = n(73800),
     i = n(476400),
-    o = n.n(i),
-    a = n(427753),
-    s = n.n(a),
+    a = n.n(i),
+    o = n(427753),
+    s = n.n(o),
     l = n(512722),
     c = n.n(l),
     u = n(335218),
@@ -37,8 +37,8 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) t.indexOf((n = o[r])) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) t.indexOf((n = a[r])) >= 0 || (i[n] = e[n]);
     return i;
 }
 var m = {
@@ -123,8 +123,8 @@ var m = {
             .reduce(function (t, n) {
                 if (!t.length)
                     for (var r = Object.keys(n), i = 0; i < r.length; i += 1) {
-                        var o = r[i].toLowerCase();
-                        if (-1 !== e.indexOf(o) && n[o]) return t.concat(n);
+                        var a = r[i].toLowerCase();
+                        if (-1 !== e.indexOf(a) && n[a]) return t.concat(n);
                     }
                 return t;
             }, []);
@@ -142,8 +142,8 @@ var m = {
             .reduce(function (e, n) {
                 var i = {};
                 n.filter(function (e) {
-                    for (var n, o = Object.keys(e), a = 0; a < o.length; a += 1) {
-                        var s = o[a],
+                    for (var n, a = Object.keys(e), o = 0; o < a.length; o += 1) {
+                        var s = a[o],
                             l = s.toLowerCase();
                         -1 === t.indexOf(l) || ('rel' === n && 'canonical' === e[n].toLowerCase()) || ('rel' === l && 'stylesheet' === e[l].toLowerCase()) || (n = l), -1 === t.indexOf(s) || ('innerHTML' !== s && 'cssText' !== s && 'itemprop' !== s) || (n = s);
                     }
@@ -155,8 +155,8 @@ var m = {
                     .forEach(function (t) {
                         return e.push(t);
                     });
-                for (var o = Object.keys(i), a = 0; a < o.length; a += 1) {
-                    var s = o[a],
+                for (var a = Object.keys(i), o = 0; o < a.length; o += 1) {
+                    var s = a[o],
                         l = f({}, r[s], i[s]);
                     r[s] = l;
                 }
@@ -219,13 +219,13 @@ var m = {
     j = function (e, t) {
         return t.map(function (t, n) {
             var i,
-                o = (((i = { key: n })['data-rh'] = !0), i);
+                a = (((i = { key: n })['data-rh'] = !0), i);
             return (
                 Object.keys(t).forEach(function (e) {
                     var n = O[e] || e;
-                    'innerHTML' === n || 'cssText' === n ? (o.dangerouslySetInnerHTML = { __html: t.innerHTML || t.cssText }) : (o[n] = t[e]);
+                    'innerHTML' === n || 'cssText' === n ? (a.dangerouslySetInnerHTML = { __html: t.innerHTML || t.cssText }) : (a[n] = t[e]);
                 }),
-                r.createElement(e, o)
+                r.createElement(e, a)
             );
         });
     },
@@ -234,14 +234,14 @@ var m = {
             case m.TITLE:
                 return {
                     toComponent: function () {
-                        var e, n, i, o;
-                        return (n = t.titleAttributes), ((i = { key: (e = t.title) })['data-rh'] = !0), (o = k(n, i)), [r.createElement(m.TITLE, o, e)];
+                        var e, n, i, a;
+                        return (n = t.titleAttributes), ((i = { key: (e = t.title) })['data-rh'] = !0), (a = k(n, i)), [r.createElement(m.TITLE, a, e)];
                     },
                     toString: function () {
                         return (function (e, t, n, r) {
                             var i = M(n),
-                                o = P(t);
-                            return i ? '<' + e + ' data-rh="true" ' + i + '>' + x(o, r) + '</' + e + '>' : '<' + e + ' data-rh="true">' + x(o, r) + '</' + e + '>';
+                                a = P(t);
+                            return i ? '<' + e + ' data-rh="true" ' + i + '>' + x(a, r) + '</' + e + '>' : '<' + e + ' data-rh="true">' + x(a, r) + '</' + e + '>';
                         })(e, t.title, t.titleAttributes, n);
                     }
                 };
@@ -271,9 +271,9 @@ var m = {
                                             var i = void 0 === r[t] ? t : t + '="' + x(r[t], n) + '"';
                                             return e ? e + ' ' + i : i;
                                         }, ''),
-                                    o = r.innerHTML || r.cssText || '',
-                                    a = -1 === L.indexOf(e);
-                                return t + '<' + e + ' data-rh="true" ' + i + (a ? '/>' : '>' + o + '</' + e + '>');
+                                    a = r.innerHTML || r.cssText || '',
+                                    o = -1 === L.indexOf(e);
+                                return t + '<' + e + ' data-rh="true" ' + i + (o ? '/>' : '>' + a + '</' + e + '>');
                             }, '');
                         })(e, t, n);
                     }
@@ -285,8 +285,8 @@ var m = {
             n = e.bodyAttributes,
             r = e.encode,
             i = e.htmlAttributes,
-            o = e.noscriptTags,
-            a = e.styleTags,
+            a = e.noscriptTags,
+            o = e.styleTags,
             s = e.title,
             l = void 0 === s ? '' : s,
             c = e.titleAttributes,
@@ -305,20 +305,20 @@ var m = {
                     n = e.scriptTags,
                     r = e.encode,
                     i = w(e.metaTags, b),
-                    o = w(t, g),
-                    a = w(n, E);
+                    a = w(t, g),
+                    o = w(n, E);
                 return {
                     priorityMethods: {
                         toComponent: function () {
-                            return [].concat(j(m.META, i.priority), j(m.LINK, o.priority), j(m.SCRIPT, a.priority));
+                            return [].concat(j(m.META, i.priority), j(m.LINK, a.priority), j(m.SCRIPT, o.priority));
                         },
                         toString: function () {
-                            return U(m.META, i.priority, r) + ' ' + U(m.LINK, o.priority, r) + ' ' + U(m.SCRIPT, a.priority, r);
+                            return U(m.META, i.priority, r) + ' ' + U(m.LINK, a.priority, r) + ' ' + U(m.SCRIPT, o.priority, r);
                         }
                     },
                     metaTags: i.default,
-                    linkTags: o.default,
-                    scriptTags: a.default
+                    linkTags: a.default,
+                    scriptTags: o.default
                 };
             })(e);
             (_ = p.priorityMethods), (u = p.linkTags), (d = p.metaTags), (f = p.scriptTags);
@@ -330,9 +330,9 @@ var m = {
             htmlAttributes: U('htmlAttributes', i, r),
             link: U(m.LINK, u, r),
             meta: U(m.META, d, r),
-            noscript: U(m.NOSCRIPT, o, r),
+            noscript: U(m.NOSCRIPT, a, r),
             script: U(m.SCRIPT, f, r),
-            style: U(m.STYLE, a, r),
+            style: U(m.STYLE, o, r),
             title: U(
                 m.TITLE,
                 {
@@ -383,12 +383,12 @@ var m = {
                 }));
     },
     F = r.createContext({}),
-    Z = o().shape({
-        setHelmet: o().func,
-        helmetInstances: o().shape({
-            get: o().func,
-            add: o().func,
-            remove: o().func
+    Z = a().shape({
+        setHelmet: a().func,
+        helmetInstances: a().shape({
+            get: a().func,
+            add: a().func,
+            remove: a().func
         })
     }),
     H = 'undefined' != typeof document,
@@ -407,8 +407,8 @@ var m = {
     })(r.Component);
 (Y.canUseDOM = H),
     (Y.propTypes = {
-        context: o().shape({ helmet: o().shape() }),
-        children: o().node.isRequired
+        context: a().shape({ helmet: a().shape() }),
+        children: a().node.isRequired
     }),
     (Y.defaultProps = { context: {} }),
     (Y.displayName = 'HelmetProvider');
@@ -416,8 +416,8 @@ var W = function (e, t) {
         var n,
             r = document.head || document.querySelector(m.HEAD),
             i = r.querySelectorAll(e + '[data-rh]'),
-            o = [].slice.call(i),
-            a = [];
+            a = [].slice.call(i),
+            o = [];
         return (
             t &&
                 t.length &&
@@ -425,44 +425,44 @@ var W = function (e, t) {
                     var r = document.createElement(e);
                     for (var i in t) Object.prototype.hasOwnProperty.call(t, i) && ('innerHTML' === i ? (r.innerHTML = t.innerHTML) : 'cssText' === i ? (r.styleSheet ? (r.styleSheet.cssText = t.cssText) : r.appendChild(document.createTextNode(t.cssText))) : r.setAttribute(i, void 0 === t[i] ? '' : t[i]));
                     r.setAttribute('data-rh', 'true'),
-                        o.some(function (e, t) {
+                        a.some(function (e, t) {
                             return (n = t), r.isEqualNode(e);
                         })
-                            ? o.splice(n, 1)
-                            : a.push(r);
+                            ? a.splice(n, 1)
+                            : o.push(r);
                 }),
-            o.forEach(function (e) {
+            a.forEach(function (e) {
                 return e.parentNode.removeChild(e);
             }),
-            a.forEach(function (e) {
+            o.forEach(function (e) {
                 return r.appendChild(e);
             }),
             {
-                oldTags: o,
-                newTags: a
+                oldTags: a,
+                newTags: o
             }
         );
     },
     K = function (e, t) {
         var n = document.getElementsByTagName(e)[0];
         if (n) {
-            for (var r = n.getAttribute('data-rh'), i = r ? r.split(',') : [], o = [].concat(i), a = Object.keys(t), s = 0; s < a.length; s += 1) {
-                var l = a[s],
+            for (var r = n.getAttribute('data-rh'), i = r ? r.split(',') : [], a = [].concat(i), o = Object.keys(t), s = 0; s < o.length; s += 1) {
+                var l = o[s],
                     c = t[l] || '';
                 n.getAttribute(l) !== c && n.setAttribute(l, c), -1 === i.indexOf(l) && i.push(l);
-                var u = o.indexOf(l);
-                -1 !== u && o.splice(u, 1);
+                var u = a.indexOf(l);
+                -1 !== u && a.splice(u, 1);
             }
-            for (var d = o.length - 1; d >= 0; d -= 1) n.removeAttribute(o[d]);
-            i.length === o.length ? n.removeAttribute('data-rh') : n.getAttribute('data-rh') !== a.join(',') && n.setAttribute('data-rh', a.join(','));
+            for (var d = a.length - 1; d >= 0; d -= 1) n.removeAttribute(a[d]);
+            i.length === a.length ? n.removeAttribute('data-rh') : n.getAttribute('data-rh') !== o.join(',') && n.setAttribute('data-rh', o.join(','));
         }
     },
     z = function (e, t) {
         var n = e.baseTag,
             r = e.htmlAttributes,
             i = e.linkTags,
-            o = e.metaTags,
-            a = e.noscriptTags,
+            a = e.metaTags,
+            o = e.noscriptTags,
             s = e.onChangeClientState,
             l = e.scriptTags,
             c = e.styleTags,
@@ -476,8 +476,8 @@ var W = function (e, t) {
         var f = {
                 baseTag: W(m.BASE, n),
                 linkTags: W(m.LINK, i),
-                metaTags: W(m.META, o),
-                noscriptTags: W(m.NOSCRIPT, a),
+                metaTags: W(m.META, a),
+                noscriptTags: W(m.NOSCRIPT, o),
                 scriptTags: W(m.SCRIPT, l),
                 styleTags: W(m.STYLE, c)
             },
@@ -516,7 +516,7 @@ var W = function (e, t) {
                     n = this.props.context,
                     r = n.setHelmet,
                     i = null,
-                    o = {
+                    a = {
                         baseTag: N(
                             ['href'],
                             (e = n.helmetInstances.get().map(function (e) {
@@ -539,7 +539,7 @@ var W = function (e, t) {
                         prioritizeSeoTags: R(e, 'prioritizeSeoTags')
                     };
                 Y.canUseDOM
-                    ? ((t = o),
+                    ? ((t = a),
                       q && cancelAnimationFrame(q),
                       t.defer
                           ? (q = requestAnimationFrame(function () {
@@ -548,7 +548,7 @@ var W = function (e, t) {
                                 });
                             }))
                           : (z(t), (q = null)))
-                    : G && (i = G(o)),
+                    : G && (i = G(a)),
                     r(i);
             }),
             (n.init = function () {
@@ -596,17 +596,17 @@ var X = ['children'],
                     n,
                     r = e.child,
                     i = e.newProps,
-                    o = e.newChildProps,
-                    a = e.nestedChildren;
+                    a = e.newChildProps,
+                    o = e.nestedChildren;
                 switch (r.type) {
                     case m.TITLE:
-                        return f({}, i, (((t = {})[r.type] = a), (t.titleAttributes = f({}, o)), t));
+                        return f({}, i, (((t = {})[r.type] = o), (t.titleAttributes = f({}, a)), t));
                     case m.BODY:
-                        return f({}, i, { bodyAttributes: f({}, o) });
+                        return f({}, i, { bodyAttributes: f({}, a) });
                     case m.HTML:
-                        return f({}, i, { htmlAttributes: f({}, o) });
+                        return f({}, i, { htmlAttributes: f({}, a) });
                     default:
-                        return f({}, i, (((n = {})[r.type] = f({}, o)), n));
+                        return f({}, i, (((n = {})[r.type] = f({}, a)), n));
                 }
             }),
             (n.mapArrayTypeChildrenToProps = function (e, t) {
@@ -646,15 +646,15 @@ var X = ['children'],
                     r.Children.forEach(e, function (e) {
                         if (e && e.props) {
                             var r = e.props,
-                                o = r.children,
-                                a = h(r, X),
-                                s = Object.keys(a).reduce(function (e, t) {
-                                    return (e[v[t] || t] = a[t]), e;
+                                a = r.children,
+                                o = h(r, X),
+                                s = Object.keys(o).reduce(function (e, t) {
+                                    return (e[v[t] || t] = o[t]), e;
                                 }, {}),
                                 l = e.type;
-                            switch (('symbol' == typeof l ? (l = l.toString()) : n.warnOnInvalidChildren(e, o), l)) {
+                            switch (('symbol' == typeof l ? (l = l.toString()) : n.warnOnInvalidChildren(e, a), l)) {
                                 case m.FRAGMENT:
-                                    t = n.mapChildrenToProps(o, t);
+                                    t = n.mapChildrenToProps(a, t);
                                     break;
                                 case m.LINK:
                                 case m.META:
@@ -665,7 +665,7 @@ var X = ['children'],
                                         child: e,
                                         arrayTypeChildren: i,
                                         newChildProps: s,
-                                        nestedChildren: o
+                                        nestedChildren: a
                                     });
                                     break;
                                 default:
@@ -673,7 +673,7 @@ var X = ['children'],
                                         child: e,
                                         newProps: t,
                                         newChildProps: s,
-                                        nestedChildren: o
+                                        nestedChildren: a
                                     });
                             }
                         }
@@ -686,15 +686,15 @@ var X = ['children'],
                     t = e.children,
                     n = h(e, J),
                     i = f({}, n),
-                    o = n.helmetData;
+                    a = n.helmetData;
                 return (
                     t && (i = this.mapChildrenToProps(t, i)),
-                    !o || o instanceof V || (o = new V(o.context, o.instances)),
-                    o
+                    !a || a instanceof V || (a = new V(a.context, a.instances)),
+                    a
                         ? r.createElement(
                               Q,
                               f({}, i, {
-                                  context: o.value,
+                                  context: a.value,
                                   helmetData: void 0
                               })
                           )
@@ -707,24 +707,24 @@ var X = ['children'],
         );
     })(r.Component);
 ($.propTypes = {
-    base: o().object,
-    bodyAttributes: o().object,
-    children: o().oneOfType([o().arrayOf(o().node), o().node]),
-    defaultTitle: o().string,
-    defer: o().bool,
-    encodeSpecialCharacters: o().bool,
-    htmlAttributes: o().object,
-    link: o().arrayOf(o().object),
-    meta: o().arrayOf(o().object),
-    noscript: o().arrayOf(o().object),
-    onChangeClientState: o().func,
-    script: o().arrayOf(o().object),
-    style: o().arrayOf(o().object),
-    title: o().string,
-    titleAttributes: o().object,
-    titleTemplate: o().string,
-    prioritizeSeoTags: o().bool,
-    helmetData: o().object
+    base: a().object,
+    bodyAttributes: a().object,
+    children: a().oneOfType([a().arrayOf(a().node), a().node]),
+    defaultTitle: a().string,
+    defer: a().bool,
+    encodeSpecialCharacters: a().bool,
+    htmlAttributes: a().object,
+    link: a().arrayOf(a().object),
+    meta: a().arrayOf(a().object),
+    noscript: a().arrayOf(a().object),
+    onChangeClientState: a().func,
+    script: a().arrayOf(a().object),
+    style: a().arrayOf(a().object),
+    title: a().string,
+    titleAttributes: a().object,
+    titleTemplate: a().string,
+    prioritizeSeoTags: a().bool,
+    helmetData: a().object
 }),
     ($.defaultProps = {
         defer: !0,

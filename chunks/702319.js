@@ -1,11 +1,11 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(255367),
     i = n(225893);
-function o(e, t, n, o) {
+function a(e, t, n, a) {
     return (0, r.jsx)(
         'img',
         {
-            className: o,
+            className: a,
             src: i,
             alt: ''
         },

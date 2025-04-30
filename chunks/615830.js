@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(539854), n(388685);
 var r,
     i = n(442837),
-    o = n(570140);
-function a(e, t, n) {
+    a = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -50,8 +50,8 @@ class _ extends (r = i.ZP.PersistedStore) {
         return c;
     }
 }
-a(_, 'displayName', 'SecureFramesPersistedStore'), a(_, 'persistKey', 'SecureFramesPersistedStore');
-let p = new _(o.Z, {
+o(_, 'displayName', 'SecureFramesPersistedStore'), o(_, 'persistKey', 'SecureFramesPersistedStore');
+let p = new _(a.Z, {
     SECURE_FRAMES_SETTINGS_UPDATE: u,
     SECURE_FRAMES_UPLOADED_KEY_VERSION_ADD: d,
     SECURE_FRAMES_UPLOADED_KEY_VERSION_CLEAR: f

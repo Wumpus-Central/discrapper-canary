@@ -20,11 +20,11 @@ e.exports = function (e) {
             className: 'variable',
             variants: [{ begin: /\$[\w\d"][\w\d_]*/ }, { begin: /\$\{(.*?)\}/ }]
         },
-        o = {
+        a = {
             className: 'literal',
             begin: /\bon|off|true|false|yes|no\b/
         },
-        a = {
+        o = {
             className: 'string',
             contains: [e.BACKSLASH_ESCAPE],
             variants: [
@@ -51,7 +51,7 @@ e.exports = function (e) {
         s = {
             begin: /\[/,
             end: /\]/,
-            contains: [r, o, i, a, n, 'self'],
+            contains: [r, a, i, o, n, 'self'],
             relevance: 0
         },
         l = /[A-Za-z0-9_-]+/,
@@ -75,7 +75,7 @@ e.exports = function (e) {
                 className: 'attr',
                 starts: {
                     end: /$/,
-                    contains: [r, s, o, i, a, n]
+                    contains: [r, s, a, i, o, n]
                 }
             }
         ]

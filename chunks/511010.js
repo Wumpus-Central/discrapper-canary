@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(661824),
     l = n(30804);
 function c(e, t, n) {
@@ -63,8 +63,8 @@ function _(e, t) {
         r,
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -73,21 +73,21 @@ function p(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let h = i.forwardRef(function (e, t) {
         var { className: n, isBeforeGroup: i = !1 } = e,
-            o = _(e, ['className', 'isBeforeGroup']);
-        let { children: c } = o;
+            a = _(e, ['className', 'isBeforeGroup']);
+        let { children: c } = a;
         return (0, r.jsx)(
             s.Z,
-            f(u({}, o), {
+            f(u({}, a), {
                 ref: t,
                 role: 'separator',
                 'aria-label': 'string' == typeof c ? c : void 0,
-                className: a()(n, {
+                className: o()(n, {
                     [l.divider]: !0,
                     [l.hasContent]: null != c,
                     [l.beforeGroup]: i

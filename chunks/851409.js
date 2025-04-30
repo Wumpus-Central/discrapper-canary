@@ -3,9 +3,9 @@ Object.defineProperty(t, '__esModule', { value: !0 }),
         let r = 0,
             i = e.length;
         for (; i > 0; ) {
-            let o = (i / 2) | 0,
-                a = r + o;
-            0 >= n(e[a], t) ? ((r = ++a), (i -= o + 1)) : (i = o);
+            let a = (i / 2) | 0,
+                o = r + a;
+            0 >= n(e[o], t) ? ((r = ++o), (i -= a + 1)) : (i = a);
         }
         return r;
     });

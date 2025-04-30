@@ -1,7 +1,7 @@
 var r = n(815329),
     i = n(699367),
-    o = n(243647),
-    a = n(744145),
+    a = n(243647),
+    o = n(744145),
     s = n(883367),
     l = n(163567),
     c = n(414235),
@@ -12,5 +12,5 @@ e.exports = function (e, t, n) {
     if (!l(t)) throw new r('Assertion failed: P is not a Property Key');
     var f = i(n) ? n : u(n);
     if (!i(f)) throw new r('Assertion failed: Desc is not a valid Property Descriptor');
-    return o(s, c, a, e, t, f);
+    return a(s, c, o, e, t, f);
 };

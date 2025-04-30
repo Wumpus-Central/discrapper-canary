@@ -1,7 +1,7 @@
 var r = n(556585),
     i = n(46015),
-    o = n(382698),
-    a = n(338045),
+    a = n(382698),
+    o = n(338045),
     s = URLSearchParams,
     l = s.prototype,
     c = i(l.getAll),
@@ -16,8 +16,8 @@ var r = n(556585),
                 n = t < 2 ? void 0 : arguments[1];
             if (t && void 0 === n) return u(this, e);
             var r = c(this, e);
-            a(t, 1);
-            for (var i = o(n), s = 0; s < r.length; ) if (r[s++] === i) return !0;
+            o(t, 1);
+            for (var i = a(n), s = 0; s < r.length; ) if (r[s++] === i) return !0;
             return !1;
         },
         {

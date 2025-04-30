@@ -1,10 +1,10 @@
 n.d(t, {
-    FO: () => eo,
+    FO: () => ea,
     Sq: () => ee,
     ZP: () => er,
     el: () => ei,
     oO: () => G,
-    zO: () => ea
+    zO: () => eo
 }),
     n(413496),
     n(433524),
@@ -15,8 +15,8 @@ n.d(t, {
     n(539854);
 var r,
     i,
-    o,
     a,
+    o,
     s,
     l,
     c,
@@ -54,7 +54,7 @@ let A = 10,
     G = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
     B = q(window.GLOBAL_ENV.INVITE_HOST),
     V = q(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
-    F = q(null != (a = window.GLOBAL_ENV.WEBAPP_ENDPOINT) ? a : '//canary.'.concat(T.$R1)),
+    F = q(null != (o = window.GLOBAL_ENV.WEBAPP_ENDPOINT) ? o : '//canary.'.concat(T.$R1)),
     Z = q('//canary.'.concat(T.$R1)),
     H = q('//ptb.'.concat(T.$R1)),
     Y = q('discordapp.com'),
@@ -80,16 +80,16 @@ function q(e) {
     };
 }
 let Q = (e) => e.replaceAll(J, ' $2 '),
-    X = null == (o = h().defaultRules.link) || null == (i = o.match) || null == (r = i.regex) ? void 0 : r.source;
+    X = null == (a = h().defaultRules.link) || null == (i = a.match) || null == (r = i.regex) ? void 0 : r.source;
 _()(X, 'SimpleMarkdown link regex is not set.'), '^' === X[0] && (X = X.substring(1));
 let J = RegExp(X, 'g');
 function $(e, t) {
     var n, r, i;
     if ((null == (n = t.host) ? void 0 : n.replace(/^www[.]/i, '')) !== e.host) return null;
-    let o = null != (r = t.pathname) ? r : '',
-        a = null != (i = e.pathPrefix) ? i : '';
-    if (!o.startsWith(a)) return null;
-    let s = o.substring(a.length);
+    let a = null != (r = t.pathname) ? r : '',
+        o = null != (i = e.pathPrefix) ? i : '';
+    if (!a.startsWith(o)) return null;
+    let s = a.substring(o.length);
     return '' === s ? null : s;
 }
 function ee(e) {
@@ -109,20 +109,20 @@ function et(e) {
 }
 function en(e) {
     var t, n, r, i;
-    let o = eo(e);
-    if (null == o || null == o.pathname)
+    let a = ea(e);
+    if (null == a || null == a.pathname)
         return {
             url: null,
             inviteHostRemainingPath: null,
             templateHostRemainingPath: null,
             primaryHostRemainingPath: null
         };
-    let a = $(B, o),
-        s = $(V, o),
-        l = null != (i = null != (r = null != (n = null != (t = $(F, o)) ? t : $(Z, o)) ? n : $(H, o)) ? r : $(Y, o)) ? i : $(W, o);
+    let o = $(B, a),
+        s = $(V, a),
+        l = null != (i = null != (r = null != (n = null != (t = $(F, a)) ? t : $(Z, a)) ? n : $(H, a)) ? r : $(Y, a)) ? i : $(W, a);
     return {
-        url: o,
-        inviteHostRemainingPath: a,
+        url: a,
+        inviteHostRemainingPath: o,
         templateHostRemainingPath: s,
         primaryHostRemainingPath: l
     };
@@ -135,7 +135,7 @@ function er(e) {
         i = e.match(G);
     if (null == (r = (null != r ? r : []).concat(null != i ? i : [])) || 0 === r.length) return [];
     for (let e of r) {
-        var o, a, s;
+        var a, o, s;
         if (n.length >= A) break;
         let { url: r, inviteHostRemainingPath: i, templateHostRemainingPath: l, primaryHostRemainingPath: c } = en(e);
         if (null == r || null == r.pathname) continue;
@@ -166,7 +166,7 @@ function er(e) {
         if ((null != f && u(S.g.EVENT, ''.concat(f.guildId, '-').concat(f.guildEventId) + (null != f.recurrenceId ? '-'.concat(f.recurrenceId) : '')), null != (null == c ? void 0 : c.match(j)) && null != r.query)) {
             let e = (0, y.y)(r.query),
                 t = e.clientId;
-            null == t || '' === t || (null == (o = e.scopes) ? void 0 : o.some((e) => e !== g.x.APPLICATIONS_COMMANDS)) || u(S.g.APP_OAUTH2_LINK, t);
+            null == t || '' === t || (null == (a = e.scopes) ? void 0 : a.some((e) => e !== g.x.APPLICATIONS_COMMANDS)) || u(S.g.APP_OAUTH2_LINK, t);
         }
         let _ = null == c ? void 0 : c.match(w);
         if (null != _) {
@@ -193,7 +193,7 @@ function er(e) {
         null != v && u(S.g.SERVER_SHOP, v[1]);
         let I = ei(e);
         if ((null != I && u(S.g.QUESTS_EMBED, I), '/shop' === c)) {
-            let e = null == (a = r.hash) ? void 0 : a.match(U);
+            let e = null == (o = r.hash) ? void 0 : o.match(U);
             u(S.g.COLLECTIBLES_SHOP, null != (s = null == e ? void 0 : e[1]) ? s : '');
         }
     }
@@ -205,13 +205,13 @@ function ei(e) {
         i = null == r || null == (t = r.primaryHostRemainingPath) ? void 0 : t.match(k);
     return null != (n = null == i ? void 0 : i[1]) ? n : null;
 }
-function eo(e) {
+function ea(e) {
     try {
         return (0, m.parse)(e);
     } catch (e) {
         return null;
     }
 }
-function ea(e) {
+function eo(e) {
     return er(e)[0];
 }

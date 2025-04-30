@@ -1,9 +1,9 @@
 n.r(t),
     n.d(t, {
         useCallback: () => l,
-        useCallbackOne: () => a,
+        useCallbackOne: () => o,
         useMemo: () => s,
-        useMemoOne: () => o
+        useMemoOne: () => a
     });
 var r = n(73800);
 function i(e, t) {
@@ -11,18 +11,18 @@ function i(e, t) {
     for (var n = 0; n < e.length; n++) if (e[n] !== t[n]) return !1;
     return !0;
 }
-function o(e, t) {
+function a(e, t) {
     var n = (0, r.useState)(function () {
             return {
                 inputs: t,
                 result: e()
             };
         })[0],
-        o = (0, r.useRef)(!0),
-        a = (0, r.useRef)(n),
+        a = (0, r.useRef)(!0),
+        o = (0, r.useRef)(n),
         s =
-            o.current || (t && a.current.inputs && i(t, a.current.inputs))
-                ? a.current
+            a.current || (t && o.current.inputs && i(t, o.current.inputs))
+                ? o.current
                 : {
                       inputs: t,
                       result: e()
@@ -30,17 +30,17 @@ function o(e, t) {
     return (
         (0, r.useEffect)(
             function () {
-                (o.current = !1), (a.current = s);
+                (a.current = !1), (o.current = s);
             },
             [s]
         ),
         s.result
     );
 }
-function a(e, t) {
-    return o(function () {
+function o(e, t) {
+    return a(function () {
         return e;
     }, t);
 }
-var s = o,
-    l = a;
+var s = a,
+    l = o;

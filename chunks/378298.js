@@ -8,8 +8,8 @@ n.d(t, {
 });
 var r = n(544891),
     i = n(570140),
-    o = n(359119),
-    a = n(981631);
+    a = n(359119),
+    o = n(981631);
 function s(e, t) {
     return (
         i.Z.dispatch({
@@ -18,7 +18,7 @@ function s(e, t) {
             warningIds: t
         }),
         r.tn.post({
-            url: a.ANM.CHANNEL_SAFETY_WARNINGS_ACK(e),
+            url: o.ANM.CHANNEL_SAFETY_WARNINGS_ACK(e),
             body: { warning_ids: t },
             oldFormErrors: !0,
             rejectWithError: !1
@@ -47,14 +47,14 @@ function u(e) {
 }
 function d(e) {
     return r.tn.post({
-        url: a.ANM.SAFETY_WARNING_FALSE_POSITIVE(e),
+        url: o.ANM.SAFETY_WARNING_FALSE_POSITIVE(e),
         rejectWithError: !1
     });
 }
 function f(e) {
     return r.tn.post({
-        url: a.ANM.ADD_SAFETY_WARNING(e),
-        body: { safety_warning_type: o.pj.STRANGER_DANGER },
+        url: o.ANM.ADD_SAFETY_WARNING(e),
+        body: { safety_warning_type: a.pj.STRANGER_DANGER },
         rejectWithError: !1
     });
 }

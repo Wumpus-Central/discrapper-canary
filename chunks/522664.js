@@ -1,31 +1,31 @@
 n.d(t, {
-    Eq: () => a,
-    Uj: () => o,
+    Eq: () => o,
+    Uj: () => a,
     gx: () => l,
     qO: () => s
 });
 var r = n(544891),
     i = n(981631);
-function o(e, t, n, o) {
+function a(e, t, n, a) {
     return r.tn.post({
         url: i.ANM.EXPLICIT_MEDIA_REPORT_FALSE_POSITIVE,
         body: {
             channel_id: e,
             message_id: t,
             attachment_ids: n,
-            embed_ids: o
+            embed_ids: a
         },
         rejectWithError: !1
     });
 }
-function a(e, t, n, o) {
+function o(e, t, n, a) {
     return r.tn.post({
         url: i.ANM.EXPLICIT_MEDIA_SENDER_REPORT_FALSE_POSITIVE,
         body: {
             channel_id: e,
             message_id: t,
             attachment_ids: n,
-            filenames: o
+            filenames: a
         },
         rejectWithError: !1
     });

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(415506);
 var r = n(544891),
     i = n(433517),
-    o = n(570140),
-    a = n(330055),
+    a = n(570140),
+    o = n(330055),
     s = n(663389),
     l = n(546796),
     c = n(37234),
@@ -66,7 +66,7 @@ let g = {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
             t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { openWithoutBackstack: !1 };
-        o.Z.dispatch(
+        a.Z.dispatch(
             p(
                 {
                     type: 'USER_SETTINGS_MODAL_OPEN',
@@ -81,7 +81,7 @@ let g = {
     init: function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
             n = arguments.length > 2 ? arguments[2] : void 0;
-        o.Z.dispatch(
+        a.Z.dispatch(
             p(
                 {
                     type: 'USER_SETTINGS_MODAL_INIT',
@@ -94,12 +94,12 @@ let g = {
     },
     close() {
         let e = s.Z.onClose;
-        o.Z.dispatch({ type: 'USER_SETTINGS_MODAL_CLOSE' }), null != e && e();
+        a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_CLOSE' }), null != e && e();
     },
     setSection(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        o.Z.dispatch(
+        a.Z.dispatch(
             p(
                 {
                     type: 'USER_SETTINGS_MODAL_SET_SECTION',
@@ -111,31 +111,31 @@ let g = {
         );
     },
     clearSubsection(e) {
-        o.Z.dispatch({
+        a.Z.dispatch({
             type: 'USER_SETTINGS_MODAL_CLEAR_SUBSECTION',
             forSection: e
         });
     },
     clearScrollPosition(e) {
-        o.Z.dispatch({
+        a.Z.dispatch({
             type: 'USER_SETTINGS_MODAL_CLEAR_SCROLL_POSITION',
             forSection: e
         });
     },
     updateAccount(e) {
-        o.Z.dispatch({
+        a.Z.dispatch({
             type: 'USER_SETTINGS_MODAL_UPDATE_ACCOUNT',
             settings: e
         });
     },
     submitComplete() {
-        o.Z.dispatch({ type: 'USER_SETTINGS_MODAL_SUBMIT_COMPLETE' });
+        a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_SUBMIT_COMPLETE' });
     },
     reset() {
-        o.Z.dispatch({ type: 'USER_SETTINGS_MODAL_RESET' });
+        a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_RESET' });
     },
     saveAccountChanges(e, t) {
-        o.Z.dispatch({ type: 'USER_SETTINGS_MODAL_SUBMIT' });
+        a.Z.dispatch({ type: 'USER_SETTINGS_MODAL_SUBMIT' });
         let { username: n, email: s, emailToken: c, password: _, avatar: h, newPassword: g, discriminator: E } = e,
             { close: b } = t;
         return (0, l.Z)(
@@ -154,9 +154,9 @@ let g = {
                         ),
                         { discriminator: null != E && '' !== E ? E : void 0 }
                     ),
-                    o = i.K.get(u.JkL),
-                    a = (0, d.xJ)();
-                null != a && null != o && ((t.push_provider = a), (t.push_token = o));
+                    a = i.K.get(u.JkL),
+                    o = (0, d.xJ)();
+                null != o && null != a && ((t.push_provider = o), (t.push_token = a));
                 let l = i.K.get(u.scU);
                 return (
                     null != d.mv && null != l && ((t.push_voip_provider = d.mv), (t.push_voip_token = l)),
@@ -173,7 +173,7 @@ let g = {
                 modalProps: { title: f.intl.string(f.t.clQc1d) },
                 hooks: {
                     onEarlyClose: () =>
-                        o.Z.dispatch({
+                        a.Z.dispatch({
                             type: 'USER_SETTINGS_MODAL_SUBMIT_FAILURE',
                             errors: {}
                         })
@@ -185,25 +185,25 @@ let g = {
                     n = t.token;
                 return (
                     delete t.token,
-                    o.Z.dispatch({
+                    a.Z.dispatch({
                         type: 'UPDATE_TOKEN',
                         token: n,
                         userId: t.id
                     }),
-                    o.Z.dispatch({
+                    a.Z.dispatch({
                         type: 'CURRENT_USER_UPDATE',
                         user: t
                     }),
-                    void 0 !== h && (0, a.Z)({ avatarHash: t.avatar }),
+                    void 0 !== h && (0, o.Z)({ avatarHash: t.avatar }),
                     null != g &&
-                        o.Z.dispatch({
+                        a.Z.dispatch({
                             type: 'USER_PASSWORD_UPDATE',
                             user: t,
                             newPassword: g
                         }),
                     null != _ &&
                         null != g &&
-                        o.Z.dispatch({
+                        a.Z.dispatch({
                             type: 'PASSWORD_UPDATED',
                             userId: t.id
                         }),
@@ -212,7 +212,7 @@ let g = {
                 );
             },
             (e) => (
-                o.Z.dispatch({
+                a.Z.dispatch({
                     type: 'USER_SETTINGS_MODAL_SUBMIT_FAILURE',
                     errors: e.body
                 }),

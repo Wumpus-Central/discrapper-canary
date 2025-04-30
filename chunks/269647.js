@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v });
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(314897),
+    a = n(570140),
+    o = n(314897),
     s = n(592125),
     l = n(131951),
     c = n(496675),
@@ -33,13 +33,13 @@ function g() {
     if (null == t) e = !0;
     else {
         let n = s.Z.getChannel(t),
-            r = d.Z.getVoiceState(null == n ? void 0 : n.getGuildId(), a.default.getId());
+            r = d.Z.getVoiceState(null == n ? void 0 : n.getGuildId(), o.default.getId());
         e = l.Z.getMode() !== f.pM4.VOICE_ACTIVITY || null == n || n.isPrivate() || n.isGuildStageVoice() || c.Z.can(f.Plq.USE_VAD, n) || m(r);
     }
     if (p === e) return !1;
     (h = e),
         (p = e),
-        o.Z.dispatch({
+        a.Z.dispatch({
             type: 'SET_VAD_PERMISSION',
             hasPermission: p
         });
@@ -48,7 +48,7 @@ function E(e) {
     let { voiceStates: t } = e;
     return t.some((e) => {
         let { userId: t } = e;
-        return t === a.default.getId() && g();
+        return t === o.default.getId() && g();
     });
 }
 function b() {
@@ -69,7 +69,7 @@ class O extends (r = i.ZP.Store) {
     }
 }
 _(O, 'displayName', 'PermissionVADStore');
-let v = new O(o.Z, {
+let v = new O(a.Z, {
     RTC_CONNECTION_STATE: g,
     MEDIA_ENGINE_SET_AUDIO_ENABLED: g,
     AUDIO_SET_MODE: g,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => R }), n(388685);
 var r = n(73800),
     i = n(836560),
-    o = n(327432),
-    a = n(40851),
+    a = n(327432),
+    o = n(40851),
     s = n(213459),
     l = n(998698),
     c = n(695346),
@@ -75,10 +75,10 @@ function C(e, t) {
     );
 }
 function R(e) {
-    let t = r.useContext(a.ZP),
+    let t = r.useContext(o.ZP),
         n = c.R$.useSetting(),
         [i] = r.useState(() => {
-            let r = (0, o.Jh)();
+            let r = (0, a.Jh)();
             return (
                 (r.children = (0, u.JM)('')),
                 (r.selection = {
@@ -114,10 +114,10 @@ function R(e) {
 }
 function P(e) {
     var t, n, r;
-    let { editor: o, chatInputType: a, channel: s, canUseCommands: l, canOnlyUseTextCommands: c, windowContext: u, previewMarkdown: S, forTests: T, onChangeStart: A, onChangeEnd: N, updateState: C } = e,
-        R = o,
+    let { editor: a, chatInputType: o, channel: s, canUseCommands: l, canOnlyUseTextCommands: c, windowContext: u, previewMarkdown: S, forTests: T, onChangeStart: A, onChangeEnd: N, updateState: C } = e,
+        R = a,
         { onChange: P } = R;
-    (R.chatInputType = a),
+    (R.chatInputType = o),
         (R.windowContext = u),
         (R.previewMarkdown = S),
         (R.composition = null),
@@ -129,10 +129,10 @@ function P(e) {
         (R = (0, y.B)(R, !0 === T)),
         (R = (0, b.Z)(R)),
         (R = (0, E.Z)(R)),
-        (null == (t = a.commands) ? void 0 : t.enabled) && (R = (0, d.Z)(R, s, !0 === l, !0 === c)),
+        (null == (t = o.commands) ? void 0 : t.enabled) && (R = (0, d.Z)(R, s, !0 === l, !0 === c)),
         (R = (0, g.ZP)(R, s.guild_id, s.id)),
-        (null == (n = a.markdown) ? void 0 : n.disableBlockQuotes) || (R = (0, f.Z)(R)),
-        (null == (r = a.markdown) ? void 0 : r.disableCodeBlocks) || (R = (0, _.ZP)(R)),
+        (null == (n = o.markdown) ? void 0 : n.disableBlockQuotes) || (R = (0, f.Z)(R)),
+        (null == (r = o.markdown) ? void 0 : r.disableCodeBlocks) || (R = (0, _.ZP)(R)),
         T && (R = (0, v.Z)(R)),
         (R = (0, m.Z)(R)),
         (R = (0, p.Z)(R)),

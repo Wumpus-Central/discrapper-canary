@@ -2,8 +2,8 @@ n.d(t, { Z: () => b });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481752),
+    a = n.n(i),
+    o = n(481752),
     s = n(442837),
     l = n(481060),
     c = n(493683),
@@ -16,9 +16,9 @@ var i = n(120356),
     m = n(986449);
 let g = (e) => {
         let { message: t, userId: n, onClose: i } = e,
-            { trackUserProfileAction: a } = (0, d.KZ)();
+            { trackUserProfileAction: o } = (0, d.KZ)();
         return (0, r.jsxs)('div', {
-            className: o()(m.toast, h.toastPadding),
+            className: a()(m.toast, h.toastPadding),
             children: [
                 (0, r.jsx)(l.dz2, {
                     size: 'sm',
@@ -37,7 +37,7 @@ let g = (e) => {
                             variant: 'text-sm/semibold',
                             children: p.intl.format(p.t.QEW8Mj, {
                                 onClick: () => {
-                                    a({ action: 'PRESS_REACT_REPLY_TOAST' }), null == i || i(), c.Z.openPrivateChannel({ recipientIds: n });
+                                    o({ action: 'PRESS_REACT_REPLY_TOAST' }), null == i || i(), c.Z.openPrivateChannel({ recipientIds: n });
                                 }
                             })
                         })
@@ -48,7 +48,7 @@ let g = (e) => {
     },
     E = () =>
         (0, r.jsxs)('div', {
-            className: o()(m.toast, h.toastPadding),
+            className: a()(m.toast, h.toastPadding),
             children: [
                 (0, r.jsx)(l.$jN, {
                     type: l.RAz.SPINNING_CIRCLE_SIMPLE,
@@ -95,8 +95,8 @@ let g = (e) => {
             children: y(
                 (e, s) =>
                     s &&
-                    (0, r.jsx)(a.animated.div, {
-                        className: o()(h.toastContainer, i),
+                    (0, r.jsx)(o.animated.div, {
+                        className: a()(h.toastContainer, i),
                         style: e,
                         children:
                             null != c

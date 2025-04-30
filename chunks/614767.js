@@ -1,4 +1,4 @@
-var e = r(434431);
+var r = a(434431);
 t.exports = function (t) {
-    return e(t) || null === t;
+    return r(t) || null === t;
 };

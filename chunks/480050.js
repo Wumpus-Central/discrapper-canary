@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481752),
     l = n(481060),
     c = n(607070),
@@ -44,16 +44,16 @@ let p = 400,
     });
 function m(e) {
     let { width: t, height: n, offset: r, delta: i } = e,
-        o = t > window.innerWidth,
-        a = n > window.innerHeight,
+        a = t > window.innerWidth,
+        o = n > window.innerHeight,
         s = (window.innerWidth - t) / 2 + r.x,
         l = (window.innerHeight - n) / 2 + r.y,
         c = (window.innerWidth + t) / 2 + r.x,
         u = (window.innerHeight + n) / 2 + r.y,
         { x: d, y: f } = r;
     return (
-        o && ((d += i.x), s + i.x > 0 && (d = (t - window.innerWidth) / 2), c + i.x < window.innerWidth && (d = (window.innerWidth - t) / 2)),
-        a && ((f += i.y), l + i.y > 0 && (f = (n - window.innerHeight) / 2), u + i.y < window.innerHeight && (f = (window.innerHeight - n) / 2)),
+        a && ((d += i.x), s + i.x > 0 && (d = (t - window.innerWidth) / 2), c + i.x < window.innerWidth && (d = (window.innerWidth - t) / 2)),
+        o && ((f += i.y), l + i.y > 0 && (f = (n - window.innerHeight) / 2), u + i.y < window.innerHeight && (f = (window.innerHeight - n) / 2)),
         {
             x: d,
             y: f
@@ -66,20 +66,20 @@ function g(e, t, n, r, i) {
             width: void 0,
             height: void 0
         };
-    let o = i ? (0, u.vV)(e, t, n, r) : 1,
-        a = (0, u.Tj)({
+    let a = i ? (0, u.vV)(e, t, n, r) : 1,
+        o = (0, u.Tj)({
             width: e,
             height: t,
             maxWidth: n,
             maxHeight: r
         });
     return {
-        width: a.width * o,
-        height: a.height * o
+        width: o.width * a,
+        height: o.height * a
     };
 }
 function E(e) {
-    let { children: t, active: n, onClick: o, className: f, width: E, height: b, maxWidth: y, maxHeight: O } = e,
+    let { children: t, active: n, onClick: a, className: f, width: E, height: b, maxWidth: y, maxHeight: O } = e,
         v = i.useRef(null),
         I = (0, u.vV)(E, b, y, O),
         { width: S, height: T } = g(E, b, y, O, n),
@@ -144,10 +144,10 @@ function E(e) {
         },
         j = (e) => {
             if (!n) {
-                0 === e.button && (null == o || o(e));
+                0 === e.button && (null == a || a(e));
                 return;
             }
-            (e.clientX - D.x) ** 2 + (e.clientY - D.y) ** 2 < p && (null == o || o(e)), w(!1);
+            (e.clientX - D.x) ** 2 + (e.clientY - D.y) ** 2 < p && (null == a || a(e)), w(!1);
         };
     return (0, r.jsx)(s.animated.div, {
         ref: v,
@@ -157,7 +157,7 @@ function E(e) {
         onWheel: (e) => !e.ctrlKey && M(-e.deltaX, -e.deltaY),
         onMouseLeave: () => w(!1),
         onClick: (e) => e.stopPropagation(),
-        className: a()(f, d.wrapper, {
+        className: o()(f, d.wrapper, {
             [d.panning]: n && P,
             [d.pannable]: n && x
         }),

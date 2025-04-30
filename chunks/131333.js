@@ -1,8 +1,8 @@
 n.d(t, { t: () => j }), n(388685), n(35282), n(413496), n(433524);
 var r = n(255367),
     i = n(73800),
-    o = n(505266),
-    a = n(481060),
+    a = n(505266),
+    o = n(481060),
     s = n(40851),
     l = n(745510),
     c = n(661637),
@@ -122,9 +122,9 @@ function M(e) {
 }
 let k = i.forwardRef(function (e, t) {
     let { sprites: n } = e,
-        [a, s] = i.useState(null),
+        [o, s] = i.useState(null),
         { confettiCanvas: c } = i.useContext(l.h),
-        u = (0, o.uR)(c, a);
+        u = (0, a.uR)(c, o);
     return (
         i.useImperativeHandle(
             t,
@@ -166,7 +166,7 @@ let k = i.forwardRef(function (e, t) {
             }),
             [u]
         ),
-        (0, r.jsx)(o.Ji, {
+        (0, r.jsx)(a.Ji, {
             ref: s,
             colors: b,
             sprites: n,
@@ -178,8 +178,8 @@ let k = i.forwardRef(function (e, t) {
 function j(e) {
     let { children: t } = e,
         n = i.useRef({}),
-        [o, l] = i.useState(null),
-        c = M(o),
+        [a, l] = i.useState(null),
+        c = M(a),
         _ = i.useRef(null),
         [h, m] = i.useState(!1),
         g = i.useRef('jack_o_lantern'),
@@ -210,7 +210,7 @@ function j(e) {
             _.current = e;
         }, []);
     return (i.useEffect(() => {
-        if ('confetti' === o) {
+        if ('confetti' === a) {
             if (null == _.current) return;
             let e = _.current.getBoundingClientRect(),
                 t = e.left - S,
@@ -218,7 +218,7 @@ function j(e) {
                 i = n.current[g.current];
             null == i || i.fireConfetti(t, r);
         }
-    }, [o]),
+    }, [a]),
     E !== f.IlC.APP)
         ? t
         : (0, r.jsxs)(d.Rm.Provider, {
@@ -242,7 +242,7 @@ function j(e) {
                       ? (0, r.jsx)(u.ZP, {
                             children: (0, r.jsx)('div', {
                                 className: p.animationWrapper,
-                                children: (0, r.jsx)(a.kci, {
+                                children: (0, r.jsx)(o.kci, {
                                     animationRef: I,
                                     className: p.lottieAnimation,
                                     nextScene: c,

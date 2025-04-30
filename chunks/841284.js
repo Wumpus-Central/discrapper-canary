@@ -2,8 +2,8 @@ n.d(t, { y: () => d });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(777207),
+    a = n.n(i),
+    o = n(777207),
     s = n(962293),
     l = n(45251),
     c = n(388032),
@@ -21,9 +21,9 @@ function d(e) {
             children: (0, r.jsxs)('div', {
                 className: u.scheduledMessageBar,
                 children: [
-                    (0, r.jsx)(a.x, {
+                    (0, r.jsx)(o.x, {
                         color: 'header-secondary',
-                        className: o()(u.text, u.scheduledMessageBarLabel),
+                        className: a()(u.text, u.scheduledMessageBarLabel),
                         variant: 'text-sm/normal',
                         children: c.intl.formatToPlainString(c.t.MQcRX1, { timestamp: new Date(i).valueOf() })
                     }),

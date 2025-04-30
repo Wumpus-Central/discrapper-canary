@@ -1,7 +1,7 @@
 n.d(t, { Z: () => s });
 var r = n(570140),
     i = n(188785);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,14 +25,14 @@ function a(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
 }
 let s = {
     openNativeAppModal(e, t) {
-        let o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        let a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         i.a ||
             (r.Z.dispatch({
                 type: 'NATIVE_APP_MODAL_OPENING',
@@ -42,7 +42,7 @@ let s = {
                 .then(n.bind(n, 536285))
                 .then((n) => {
                     let { default: r } = n;
-                    r.request(t, a({ code: e }, o))
+                    r.request(t, o({ code: e }, a))
                         .then((t) => {
                             var n;
                             this.nativeModalOpened(null != (n = null == t ? void 0 : t.code) ? n : e);

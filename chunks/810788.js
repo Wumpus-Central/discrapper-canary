@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(388685);
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(374023),
+    a = n(570140),
+    o = n(374023),
     s = n(188785);
 function l(e, t, n) {
     return (
@@ -44,7 +44,7 @@ class h extends (r = i.ZP.PersistedStore) {
     hasHotspot(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = !t && u[e];
-        return !(s.a || a.s.isDisallowPopupsSet()) && (n || !c.has(e));
+        return !(s.a || o.s.isDisallowPopupsSet()) && (n || !c.has(e));
     }
     hasHiddenHotspot(e) {
         return c.has(e);
@@ -67,7 +67,7 @@ l(h, 'displayName', 'HotspotStore'),
             hotspotOverrides: {}
         })
     ]);
-let m = new h(o.Z, {
+let m = new h(a.Z, {
     OVERLAY_INITIALIZE: p,
     HOTSPOT_HIDE: d,
     HOTSPOT_OVERRIDE_SET: f,

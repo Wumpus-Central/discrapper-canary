@@ -1,7 +1,7 @@
-n.d(t, { ZP: () => o });
+n.d(t, { ZP: () => a });
 let r = -1,
     i = (e) => new Promise((e) => e(r)),
-    o = {
+    a = {
         backgroundTaskIdentifierInvalid: r,
         backgroundify: function (e, t) {
             return e;

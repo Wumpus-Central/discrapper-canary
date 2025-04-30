@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(607070),
@@ -78,7 +78,7 @@ let y = 300,
                 );
         });
 function v(e) {
-    let { isVisible: t, isExpandable: n, onCloseProfile: o } = e,
+    let { isVisible: t, isExpandable: n, onCloseProfile: a } = e,
         { analyticsLocations: m } = (0, u.ZP)(),
         { trackUserProfileAction: g } = (0, _.KZ)(),
         E = i.useRef(null),
@@ -86,13 +86,13 @@ function v(e) {
         [v, I] = (0, s.Wu)([c.Z], () => [c.Z.useReducedMotion, c.Z.keyboardModeEnabled]),
         S = !n || v || I ? 0 : y,
         T = () => {
-            g({ action: 'PRESS_EDIT_CUSTOM_STATUS' }), O(m), null == o || o();
+            g({ action: 'PRESS_EDIT_CUSTOM_STATUS' }), O(m), null == a || a();
         },
         A = () => {
             g({ action: 'PRESS_CLEAR_CUSTOM_STATUS' }), f.Ok.updateSetting(void 0);
         };
     return (0, r.jsxs)(d.ZP, {
-        className: a()(h.popover, {
+        className: o()(h.popover, {
             [h.visible]: t,
             [h.expandable]: n
         }),
@@ -104,7 +104,7 @@ function v(e) {
                 'aria-label': !1,
                 children: (0, r.jsx)(d.zx, {
                     ref: E,
-                    className: a()(h.button, h.left),
+                    className: o()(h.button, h.left),
                     'aria-label': p.intl.string(p.t.QdHxoq),
                     'aria-haspopup': 'dialog',
                     onClick: T,
@@ -120,7 +120,7 @@ function v(e) {
                 'aria-label': !1,
                 children: (0, r.jsx)(d.zx, {
                     ref: b,
-                    className: a()(h.button, h.right),
+                    className: o()(h.button, h.right),
                     'aria-label': p.intl.string(p.t.wfYTHR),
                     onClick: A,
                     children: (0, r.jsx)(l.XHJ, {

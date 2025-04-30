@@ -1,20 +1,20 @@
 n.d(t, {
     Zg: () => l,
-    pj: () => a,
+    pj: () => o,
     pr: () => s
 }),
     n(642613);
 var r = n(544891),
     i = n(570140),
-    o = n(981631);
-function a(e) {
+    a = n(981631);
+function o(e) {
     i.Z.dispatch({
         type: 'TOP_EMOJIS_FETCH',
         guildId: e
     }),
         r.tn
             .get({
-                url: o.ANM.TOP_EMOJIS_FOR_GUILD(e),
+                url: a.ANM.TOP_EMOJIS_FOR_GUILD(e),
                 oldFormErrors: !0,
                 rejectWithError: !0
             })

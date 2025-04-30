@@ -1,19 +1,19 @@
-n.d(t, { G: () => a });
+n.d(t, { G: () => o });
 var r,
     i = [],
-    o = function () {
+    a = function () {
         return i.splice(0).forEach(function (e) {
             return e();
         });
     },
-    a = function (e) {
+    o = function (e) {
         if (!r) {
             var t = 0,
                 n = document.createTextNode(''),
-                a = { characterData: !0 };
+                o = { characterData: !0 };
             new MutationObserver(function () {
-                return o();
-            }).observe(n, a),
+                return a();
+            }).observe(n, o),
                 (r = function () {
                     n.textContent = '' + (t ? t-- : t++);
                 });

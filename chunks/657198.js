@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(650557),
     l = n(442837),
     c = n(911969),
@@ -67,13 +67,13 @@ function O(e, t) {
     );
 }
 function v(e, t, n) {
-    let { attributes: i, children: o, element: a } = t;
-    switch (a.type) {
+    let { attributes: i, children: a, element: o } = t;
+    switch (o.type) {
         case 'applicationCommand':
             let s = u.Z.getActiveCommand(n),
                 l = 0,
                 c = 0;
-            if (null != s && s.id === a.command.id) {
+            if (null != s && s.id === o.command.id) {
                 var d;
                 let t = _.cu(e);
                 for (let e of null != (d = s.options) ? d : []) t.includes(e.name) ? c++ : l++;
@@ -83,13 +83,13 @@ function v(e, t, n) {
                 let e;
                 (e = c > 0 ? m.intl.formatToPlainString(m.t.BP8N0N, { count: l }) : m.intl.formatToPlainString(m.t.lziVCw, { count: l })), (f['data-trailing-placeholder'] = e);
             }
-            return (0, r.jsx)('div', O(b({ className: g.applicationCommand }, i, f), { children: o }));
+            return (0, r.jsx)('div', O(b({ className: g.applicationCommand }, i, f), { children: a }));
         case 'applicationCommandOption':
             return (0, r.jsx)(I, {
                 attributes: i,
                 channelId: n,
-                element: a,
-                children: o
+                element: o,
+                children: a
             });
         default:
             return null;
@@ -97,7 +97,7 @@ function v(e, t, n) {
 }
 let I = (e) => {
     let t,
-        { channelId: n, element: o, attributes: _, children: E } = e,
+        { channelId: n, element: a, attributes: _, children: E } = e,
         y = (0, s.vt)(),
         v = (0, s.UE)(),
         I = (0, s._7)(),
@@ -106,33 +106,33 @@ let I = (e) => {
             () => {
                 var e, t, r;
                 return {
-                    optionType: null == (e = u.Z.getOption(n, o.optionName)) ? void 0 : e.type,
-                    errored: (null == (r = u.Z.getOptionState(n, o.optionName)) || null == (t = r.lastValidationResult) ? void 0 : t.success) !== !0
+                    optionType: null == (e = u.Z.getOption(n, a.optionName)) ? void 0 : e.type,
+                    errored: (null == (r = u.Z.getOptionState(n, a.optionName)) || null == (t = r.lastValidationResult) ? void 0 : t.success) !== !0
                 };
             },
-            [n, o.optionName]
+            [n, a.optionName]
         ),
-        A = (0, l.e7)([f.Z], () => f.Z.getUpload(n, o.optionName, d.d.SlashCommand), [n, o.optionName]),
-        N = o.children[o.children.length - 1],
+        A = (0, l.e7)([f.Z], () => f.Z.getUpload(n, a.optionName, d.d.SlashCommand), [n, a.optionName]),
+        N = a.children[a.children.length - 1],
         C = null != N && h.LC.isText(N) && N.text.endsWith('\n'),
-        R = a()(g.inlineElement, g.optionPill, {
+        R = o()(g.inlineElement, g.optionPill, {
             [g.selectedPill]: v && y,
             [g.erroredPill]: (!v || !y) && T
         }),
         P = i.useCallback(() => {
-            h.bN.isVoid(I, o) || p.Q.selectCommandOption(I, o.optionName, !0);
-        }, [I, o]);
+            h.bN.isVoid(I, a) || p.Q.selectCommandOption(I, a.optionName, !0);
+        }, [I, a]);
     return (
         (t =
             S === c.jw.ATTACHMENT
                 ? (null == A ? void 0 : A.filename) != null
                     ? (0, r.jsxs)('span', {
-                          className: a()(g.optionPillValue, g.attachmentFilename),
+                          className: o()(g.optionPillValue, g.attachmentFilename),
                           contentEditable: !1,
                           children: [A.filename, E]
                       })
                     : (0, r.jsxs)('span', {
-                          className: a()(g.optionPillValue, g.readonlyPillValue),
+                          className: o()(g.optionPillValue, g.readonlyPillValue),
                           contentEditable: !1,
                           children: [m.intl.string(m.t.GRdFnp), E]
                       })
@@ -157,7 +157,7 @@ let I = (e) => {
                         className: g.optionPillKey,
                         contentEditable: !1,
                         onClick: P,
-                        children: [o.optionDisplayName, '\u200B']
+                        children: [a.optionDisplayName, '\u200B']
                     }),
                     t,
                     (0, r.jsx)('span', {

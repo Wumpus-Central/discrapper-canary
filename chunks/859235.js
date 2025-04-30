@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(91192),
     l = n(481060),
     c = n(166459),
@@ -73,8 +73,8 @@ function y(e, t) {
         r,
         i = O(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -83,8 +83,8 @@ function O(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 var v = (function (e) {
@@ -94,7 +94,7 @@ function I(e) {
     e.stopPropagation();
 }
 function S(e, t) {
-    let { id: n, channelId: i, className: o, children: m, actions: E, handleEditModal: O, keyboardModeEnabled: v, onKeyDown: S, draftType: T, size: A = 1 } = e,
+    let { id: n, channelId: i, className: a, children: m, actions: E, handleEditModal: O, keyboardModeEnabled: v, onKeyDown: S, draftType: T, size: A = 1 } = e,
         N = (0, s.JA)(n),
         { onFocus: C } = N,
         R = y(N, ['onFocus']),
@@ -128,7 +128,7 @@ function S(e, t) {
                 onFocus: P,
                 onBlur: w,
                 onKeyDown: x,
-                className: a()(h.upload, o, { [h.sizeClip]: 2 === A }),
+                className: o()(h.upload, a, { [h.sizeClip]: 2 === A }),
                 ref: t,
                 children: (0, r.jsxs)('div', {
                     className: h.uploadContainer,
@@ -138,11 +138,11 @@ function S(e, t) {
                             ? (0, r.jsx)('div', {
                                   className: h.actionBarContainer,
                                   children: (0, r.jsx)('div', {
-                                      className: a()(h.actionBar, { [h.smallActionBar]: D }),
+                                      className: o()(h.actionBar, { [h.smallActionBar]: D }),
                                       onContextMenu: I,
                                       'aria-label': p.intl.string(p.t['8Lu3Dg']),
                                       children: (0, r.jsx)(u.ZP, {
-                                          className: a()({ [h.miniPopover]: D }),
+                                          className: o()({ [h.miniPopover]: D }),
                                           children: E
                                       })
                                   })

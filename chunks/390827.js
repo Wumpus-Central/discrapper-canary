@@ -1,88 +1,88 @@
-var e,
-    o,
+var r,
     i,
-    u,
-    c = r(127849),
-    a = r(636881),
-    f = r(48657),
-    s = r(880181),
-    l = r(77025),
-    p = r(621523),
-    d = r(620394),
-    _ = r(992174),
-    h = r(809290),
-    y = r(338045),
-    b = r(266782),
-    g = r(426625),
-    v = c.setImmediate,
-    w = c.clearImmediate,
-    m = c.process,
-    x = c.Dispatch,
-    A = c.Function,
-    O = c.MessageChannel,
-    T = c.String,
-    E = 0,
-    S = {},
-    I = 'onreadystatechange';
-p(function () {
-    e = c.location;
+    a,
+    o,
+    s = n(127849),
+    l = n(636881),
+    c = n(48657),
+    u = n(880181),
+    d = n(77025),
+    f = n(621523),
+    _ = n(620394),
+    p = n(992174),
+    h = n(809290),
+    m = n(338045),
+    g = n(266782),
+    E = n(426625),
+    b = s.setImmediate,
+    y = s.clearImmediate,
+    O = s.process,
+    v = s.Dispatch,
+    I = s.Function,
+    S = s.MessageChannel,
+    T = s.String,
+    A = 0,
+    N = {},
+    C = 'onreadystatechange';
+f(function () {
+    r = s.location;
 });
-var R = function (t) {
-        if (l(S, t)) {
-            var n = S[t];
-            delete S[t], n();
+var R = function (e) {
+        if (d(N, e)) {
+            var t = N[e];
+            delete N[e], t();
         }
     },
-    k = function (t) {
+    P = function (e) {
         return function () {
-            R(t);
+            R(e);
         };
     },
-    j = function (t) {
-        R(t.data);
+    w = function (e) {
+        R(e.data);
     },
-    P = function (t) {
-        c.postMessage(T(t), e.protocol + '//' + e.host);
+    D = function (e) {
+        s.postMessage(T(e), r.protocol + '//' + r.host);
     };
-(v && w) ||
-    ((v = function (t) {
-        y(arguments.length, 1);
-        var n = s(t) ? t : A(t),
-            r = _(arguments, 1);
+(b && y) ||
+    ((b = function (e) {
+        m(arguments.length, 1);
+        var t = u(e) ? e : I(e),
+            n = p(arguments, 1);
         return (
-            (S[++E] = function () {
-                a(n, void 0, r);
+            (N[++A] = function () {
+                l(t, void 0, n);
             }),
-            o(E),
-            E
+            i(A),
+            A
         );
     }),
-    (w = function (t) {
-        delete S[t];
+    (y = function (e) {
+        delete N[e];
     }),
-    g
-        ? (o = function (t) {
-              m.nextTick(k(t));
+    E
+        ? (i = function (e) {
+              O.nextTick(P(e));
           })
-        : x && x.now
-          ? (o = function (t) {
-                x.now(k(t));
+        : v && v.now
+          ? (i = function (e) {
+                v.now(P(e));
             })
-          : O && !b
-            ? ((u = (i = new O()).port2), (i.port1.onmessage = j), (o = f(u.postMessage, u)))
-            : c.addEventListener && s(c.postMessage) && !c.importScripts && e && 'file:' !== e.protocol && !p(P)
-              ? ((o = P), c.addEventListener('message', j, !1))
-              : (o =
-                    I in h('script')
-                        ? function (t) {
-                              d.appendChild(h('script'))[I] = function () {
-                                  d.removeChild(this), R(t);
+          : S && !g
+            ? ((o = (a = new S()).port2), (a.port1.onmessage = w), (i = c(o.postMessage, o)))
+            : s.addEventListener && u(s.postMessage) && !s.importScripts && r && 'file:' !== r.protocol && !f(D)
+              ? ((i = D), s.addEventListener('message', w, !1))
+              : (i =
+                    C in h('script')
+                        ? function (e) {
+                              _.appendChild(h('script'))[C] = function () {
+                                  _.removeChild(this), R(e);
                               };
                           }
-                        : function (t) {
-                              setTimeout(k(t), 0);
+                        : function (e) {
+                              setTimeout(P(e), 0);
                           })),
-    (t.exports = {
-        set: v,
-        clear: w
+    (e.exports = {
+        set: b,
+        clear: y
     });

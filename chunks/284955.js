@@ -1,7 +1,9 @@
-var e = r(127849),
-    o = r(476078),
-    i = r(796138),
-    u = function (t) {
-        return o.slice(0, t.length) === t;
+var r = n(127849),
+    i = n(476078),
+    a = n(796138),
+    o = function (e) {
+        return i.slice(0, e.length) === e;
     };
-t.exports = u('Bun/') ? 'BUN' : u('Cloudflare-Workers') ? 'CLOUDFLARE' : u('Deno/') ? 'DENO' : u('Node.js/') ? 'NODE' : e.Bun && 'string' == typeof Bun.version ? 'BUN' : e.Deno && 'object' == typeof Deno.version ? 'DENO' : 'process' === i(e.process) ? 'NODE' : e.window && e.document ? 'BROWSER' : 'REST';
+e.exports = (function () {
+    return o('Bun/') ? 'BUN' : o('Cloudflare-Workers') ? 'CLOUDFLARE' : o('Deno/') ? 'DENO' : o('Node.js/') ? 'NODE' : r.Bun && 'string' == typeof Bun.version ? 'BUN' : r.Deno && 'object' == typeof Deno.version ? 'DENO' : 'process' === a(r.process) ? 'NODE' : r.window && r.document ? 'BROWSER' : 'REST';
+})();

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(388685), n(467055);
 var r = n(442837),
     i = n(570140),
-    o = n(710845),
-    a = n(93093);
+    a = n(710845),
+    o = n(93093);
 function s(e, t, n) {
     return (
         t in e
@@ -16,7 +16,7 @@ function s(e, t, n) {
         e
     );
 }
-let l = new o.Z('BasicChannelCacheStore'),
+let l = new a.Z('BasicChannelCacheStore'),
     c = !1;
 class u extends r.ZP.Store {
     hasChannel(e) {
@@ -40,7 +40,7 @@ class u extends r.ZP.Store {
         this.delete(e);
     }
     initialize() {
-        this.waitFor(a.Z);
+        this.waitFor(o.Z);
     }
     handleCacheLoadedLazy(e) {
         for (let [t, n] of ((this.guilds = new Map()), (this.channels = new Map()), e.basicGuildChannels)) for (let e of (this.guilds.set(t, Object.fromEntries(n.map((e) => [e.id, e]))), n)) this.channels.set(e.id, e);
@@ -49,7 +49,7 @@ class u extends r.ZP.Store {
         this.guilds.clear(), this.channels.clear();
     }
     handleConnectionOpen(e) {
-        let t = a.Z.allGuildIds();
+        let t = o.Z.allGuildIds();
         for (let e of this.guilds.keys()) t.has(e) || this.delete(e);
     }
     handleLogout(e) {

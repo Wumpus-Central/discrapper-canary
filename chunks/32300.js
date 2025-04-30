@@ -1,14 +1,14 @@
 n.d(t, {
     NW: () => l,
-    OV: () => o,
+    OV: () => a,
     Rb: () => s,
     XE: () => c,
     Yo: () => u,
-    o4: () => a
+    o4: () => o
 });
 var r = n(818083),
     i = n(987338);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: 'user',
     id: '2024-10_overlay_v3',
     label: 'Overlay V3 Shared Context OOP',
@@ -62,19 +62,19 @@ let o = (0, r.B)({
         }
     ]
 });
-function a(e) {
-    return o.useExperiment({ location: e });
+function o(e) {
+    return a.useExperiment({ location: e });
 }
 function s(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return o.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return a.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }
 function l(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return s(e, t).overlayV3tech;
 }
 function c(e) {
-    return a(e).overlayV3tech;
+    return o(e).overlayV3tech;
 }
 function u(e) {
     return s(e).allowNowPlaying;

@@ -1,24 +1,24 @@
-n.d(t, { Z: () => a }), n(388685), n(539854);
+n.d(t, { Z: () => o }), n(388685), n(539854);
 var r = n(73800),
     i = n(442837),
-    o = n(235587);
-function a(e) {
-    let { guildId: t, leaderboardId: n, intervalStart: a } = e,
+    a = n(235587);
+function o(e) {
+    let { guildId: t, leaderboardId: n, intervalStart: o } = e,
         s = (0, i.Wu)(
-            [o.Z],
+            [a.Z],
             () => {
                 var e, r;
-                return null != (r = null == (e = o.Z.getPrevLeaderboardRanks(t, n, a)) ? void 0 : e.ranks) ? r : [];
+                return null != (r = null == (e = a.Z.getPrevLeaderboardRanks(t, n, o)) ? void 0 : e.ranks) ? r : [];
             },
-            [t, a, n]
+            [t, o, n]
         ),
         l = (0, i.Wu)(
-            [o.Z],
+            [a.Z],
             () => {
                 var e, r;
-                return null != (r = null == (e = o.Z.getCurrentLeaderboardRanks(t, n, a)) ? void 0 : e.ranks) ? r : [];
+                return null != (r = null == (e = a.Z.getCurrentLeaderboardRanks(t, n, o)) ? void 0 : e.ranks) ? r : [];
             },
-            [t, a, n]
+            [t, o, n]
         );
     return {
         rankChanges: r.useMemo(() => {
@@ -30,12 +30,12 @@ function a(e) {
             return (
                 l.forEach((n, r) => {
                     let i = r + 1,
-                        o = e.get(n);
-                    o !== i &&
+                        a = e.get(n);
+                    a !== i &&
                         t.push({
                             userId: n,
                             currentRank: i,
-                            previousRank: o
+                            previousRank: a
                         });
                 }),
                 t

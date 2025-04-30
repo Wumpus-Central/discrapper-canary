@@ -1,9 +1,9 @@
 n.d(t, { Z: () => O }), n(388685), n(415506);
 var r = n(255367),
     i = n(73800),
-    o = n(957957),
-    a = n(120356),
-    s = n.n(a),
+    a = n(957957),
+    o = n(120356),
+    s = n.n(o),
     l = n(846519),
     c = n(481060),
     u = n(609194),
@@ -19,7 +19,7 @@ var h = n(122289),
     b = n(106194);
 let y = new Set([p.h8.SKU_SELECT, p.h8.AWAITING_AUTHENTICATION, p.h8.AWAITING_PURCHASE_TOKEN_AUTH, p.h8.CONFIRM]);
 function O(e) {
-    let { steps: t, currentStep: n, body: a, paymentError: O, header: v, footer: I, isGift: S = !1, giftMessage: T = E.intl.string(E.t.DrgnS0), hideBreadcrumbs: A = !1, isLoading: N = !1, purchaseError: C, purchaseErrorBlockRef: R, planError: P, onScroll: w, scrollerClassName: D, hasCurrencies: L = !1 } = e,
+    let { steps: t, currentStep: n, body: o, paymentError: O, header: v, footer: I, isGift: S = !1, giftMessage: T = E.intl.string(E.t.DrgnS0), hideBreadcrumbs: A = !1, isLoading: N = !1, purchaseError: C, purchaseErrorBlockRef: R, planError: P, onScroll: w, scrollerClassName: D, hasCurrencies: L = !1 } = e,
         x = null;
     null != O && null == (0, p.ly)(O) ? (x = O) : null != C ? (x = C) : null != P && (x = P);
     let M = null != x ? x.message : '';
@@ -42,7 +42,7 @@ function O(e) {
         );
     }, [k]);
     let U = t.includes(p.h8.PAYMENT_TYPE) ? p.h8.PAYMENT_TYPE : p.h8.ADD_PAYMENT_STEPS;
-    return (0, r.jsxs)(o.Elements, {
+    return (0, r.jsxs)(a.Elements, {
         options: g.OBo,
         stripe: k,
         children: [
@@ -98,7 +98,7 @@ function O(e) {
                                       children: (0, r.jsx)(c.h21, {
                                           onScroll: w,
                                           className: s()(b.scroller, D),
-                                          children: a
+                                          children: o
                                       })
                                   })
                         ]

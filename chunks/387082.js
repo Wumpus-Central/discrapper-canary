@@ -1,7 +1,7 @@
-n.d(t, { s: () => a });
+n.d(t, { s: () => o });
 var r = n(818083),
     i = n(772209);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: 'user',
     id: '2025-03_user_profile_voice_activity_card_chat_button',
     label: 'User Profile Voice Activity Card Chat Button Experiment',
@@ -14,13 +14,13 @@ let o = (0, r.B)({
         }
     ]
 });
-function a(e) {
+function o(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         r = (0, i.q)({
             location: t,
             autoTrackExposure: n
         });
-    return o.useExperiment(
+    return a.useExperiment(
         { location: t },
         {
             autoTrackExposure: n,

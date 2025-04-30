@@ -7,8 +7,8 @@ n.d(t, {
     n(482853);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(392711),
     l = n.n(s),
     c = n(215569),
@@ -38,12 +38,12 @@ let y = [f.ZP, _.ZP];
 class O extends i.PureComponent {
     render() {
         let { render: e, LayerComponent: t, isTopModal: n, instant: i } = this.props,
-            o = i ? m.Dv.ENTERED : this.state.transitionState;
+            a = i ? m.Dv.ENTERED : this.state.transitionState;
         return (0, r.jsx)(t, {
             children: (0, r.jsx)('div', {
-                className: a()(E.layer, !n && E.hidden),
+                className: o()(E.layer, !n && E.hidden),
                 children: e({
-                    transitionState: o,
+                    transitionState: a,
                     onClose: this.close
                 })
             })
@@ -102,9 +102,9 @@ function S() {
     i.useLayoutEffect(() => {
         n.current = t[t.length - 1];
     }, [t]);
-    let o = t.length > 0;
+    let a = t.length > 0;
     i.useLayoutEffect(() => {
-        if (!o) return;
+        if (!a) return;
         let e = () => {
             let e = n.current;
             null != e && null != e.onCloseRequest && e.onCloseRequest();
@@ -115,8 +115,8 @@ function S() {
                 p.S.unsubscribe(g.CkL.MODAL_CLOSE, e);
             }
         );
-    }, [o]);
-    let a = i.useCallback(() => {
+    }, [a]);
+    let o = i.useCallback(() => {
             let e = n.current;
             null != e && null != e.onCloseRequest && e.onCloseRequest();
         }, []),
@@ -132,28 +132,28 @@ function S() {
         children: [
             y.map((e, n) => {
                 var i;
-                let o = l().findLast(t, (t) => t.Layer === e || (null == t.Layer && e === f.ZP));
+                let a = l().findLast(t, (t) => t.Layer === e || (null == t.Layer && e === f.ZP));
                 return (0, r.jsx)(
                     u.YMn,
                     {
                         isVisible: d[n],
-                        backdropStyle: null != (i = null == o ? void 0 : o.backdropStyle) ? i : u.fCB.DARK,
-                        onClose: a,
+                        backdropStyle: null != (i = null == a ? void 0 : a.backdropStyle) ? i : u.fCB.DARK,
+                        onClose: o,
                         LayerComponent: e,
-                        backdropInstant: null == o ? void 0 : o.instant
+                        backdropInstant: null == a ? void 0 : a.instant
                     },
                     'layer-'.concat(n)
                 );
             }),
             t.map((e, n) => {
-                let { key: i, Layer: o, render: a, instant: l } = e;
+                let { key: i, Layer: a, render: o, instant: l } = e;
                 return (0, r.jsx)(
                     O,
                     {
                         modalKey: i,
-                        LayerComponent: null != o ? o : f.ZP,
+                        LayerComponent: null != a ? a : f.ZP,
                         isTopModal: n === t.length - 1,
-                        render: a,
+                        render: o,
                         closeModal: s,
                         instant: l
                     },

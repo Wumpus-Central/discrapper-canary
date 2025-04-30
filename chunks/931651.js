@@ -1,16 +1,16 @@
-n.d(t, { $: () => a });
+n.d(t, { $: () => o });
 var r = n(255367);
 n(73800);
 var i = n(907040),
-    o = n(185923);
-function a(e) {
-    let { channel: t, closePopout: n, analyticsOverride: a, onSelectEmoji: s, messageId: l } = e;
+    a = n(185923);
+function o(e) {
+    let { channel: t, closePopout: n, analyticsOverride: o, onSelectEmoji: s, messageId: l } = e;
     return (0, r.jsx)(i.Z, {
         closePopout: n,
         channel: t,
         onSelectEmoji: s,
-        pickerIntention: o.Hz.REACTION,
-        analyticsOverride: a,
+        pickerIntention: a.Hz.REACTION,
+        analyticsOverride: o,
         messageId: l
     });
 }

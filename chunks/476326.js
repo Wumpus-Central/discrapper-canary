@@ -6,8 +6,8 @@ n.d(t, {
     n(953529);
 var r = n(836560),
     i = n(392711),
-    o = n.n(i),
-    a = n(772848),
+    a = n.n(i),
+    o = n(772848),
     s = n(403182),
     l = n(861990);
 function c(e, t, n) {
@@ -44,7 +44,7 @@ class f extends r.EventEmitter {
                 overrideType: e.mimeType
             });
             (this.filename = t.filename), (this.isImage = t.isImage), (this.isVideo = t.isVideo), (this.mimeType = t.type), (this.origin = e.origin), (this.durationSecs = e.durationSecs), (this.waveform = e.waveform), (this.isRemix = e.isRemix);
-        } else (this.id = null != (r = e.id) ? r : o().uniqueId('upload')), (this.classification = s.f3(e.file)), (this.isImage = 'image' === this.classification), (this.isVideo = 'video' === this.classification), (this.filename = e.file.name), (this.mimeType = e.file.type);
-        (this.isThumbnail = e.isThumbnail), (this.clip = e.clip), (this.uniqueId = (0, a.Z)()), (this.showLargeMessageDialog = t), (this.spoiler = !1), (this.description = null);
+        } else (this.id = null != (r = e.id) ? r : a().uniqueId('upload')), (this.classification = s.f3(e.file)), (this.isImage = 'image' === this.classification), (this.isVideo = 'video' === this.classification), (this.filename = e.file.name), (this.mimeType = e.file.type);
+        (this.isThumbnail = e.isThumbnail), (this.clip = e.clip), (this.uniqueId = (0, o.Z)()), (this.showLargeMessageDialog = t), (this.spoiler = !1), (this.description = null);
     }
 }

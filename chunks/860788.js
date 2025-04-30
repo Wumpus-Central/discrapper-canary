@@ -1,7 +1,7 @@
-var e = r(46015),
-    o = r(896471);
-t.exports = function (t, n, r) {
+var r = a(46015),
+    n = a(896471);
+t.exports = function (t, e, a) {
     try {
-        return e(o(Object.getOwnPropertyDescriptor(t, n)[r]));
+        return r(n(Object.getOwnPropertyDescriptor(t, e)[a]));
     } catch (t) {}
 };

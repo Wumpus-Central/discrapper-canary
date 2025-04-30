@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(727637),
     l = n(100527),
     c = n(906732),
@@ -63,7 +63,7 @@ function C(e) {
             roleId: P
         }),
         G = (0, _.ZP)(t.id, A),
-        B = (0, o.e7)([u.Z], () => (null != A ? u.Z.getGuild(A) : null)),
+        B = (0, a.e7)([u.Z], () => (null != A ? u.Z.getGuild(A) : null)),
         V = i.useRef(null),
         F = (0, s.Z)(V);
     i.useEffect(() => {
@@ -85,7 +85,7 @@ function C(e) {
         H = () =>
             x
                 ? null
-                : (0, r.jsx)(a.sNh, {
+                : (0, r.jsx)(o.sNh, {
                       id: 'view-profile',
                       label: S.intl.string(S.t['+Xp3ho']),
                       action: () => {
@@ -101,7 +101,7 @@ function C(e) {
                               );
                       }
                   }),
-        Y = k ? 'div' : a.VqE;
+        Y = k ? 'div' : o.VqE;
     return (0, r.jsx)(c.Gt, {
         value: j,
         children: (0, r.jsx)(d.Mt, {

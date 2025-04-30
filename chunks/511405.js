@@ -17,16 +17,16 @@ n.d(t, {
     n(146733);
 var r = n(392711),
     i = n.n(r),
-    o = n(149765),
-    a = n(915486);
+    a = n(149765),
+    o = n(915486);
 function s(e) {
     return i().cloneDeepWith(e, (e) =>
-        (0, o.Bw)(e)
+        (0, a.Bw)(e)
             ? {
                   __tag__: 'bigflag',
                   data: e.toJSON()
               }
-            : (0, a.lq)(e)
+            : (0, o.lq)(e)
               ? {
                     __tag__: 'uint8array',
                     data: Array.from(e)
@@ -35,5 +35,5 @@ function s(e) {
     );
 }
 function l(e) {
-    return i().cloneDeepWith(e, (e) => (null != e && 'object' == typeof e && '__tag__' in e && 'bigflag' === e.__tag__ ? o.vB(e.data) : (0, a.Bx)(e) ? new Uint8Array(e.data) : void 0));
+    return i().cloneDeepWith(e, (e) => (null != e && 'object' == typeof e && '__tag__' in e && 'bigflag' === e.__tag__ ? a.vB(e.data) : (0, o.Bx)(e) ? new Uint8Array(e.data) : void 0));
 }

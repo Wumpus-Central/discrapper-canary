@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(388685), n(35282), n(704826);
 var r = n(73800),
     i = n(650557),
-    o = n(911969),
-    a = n(998698),
+    a = n(911969),
+    o = n(998698),
     s = n(91313),
     l = n(53529),
     c = n(436660),
@@ -29,11 +29,11 @@ let p = (e, t, n) => ({
                 isAtStart: !1
             };
         let [n, r] = u.bN.node(e, u.C0.parent(t.anchor.path)),
-            [i, o] = u.bN.node(e, t.anchor.path),
-            a = t.anchor.offset;
-        if (!u.C0.hasPrevious(o) && u.LC.isText(i)) {
-            let e = i.text.substring(0, a);
-            if (u.aj.isType(n, 'applicationCommand') && a < n.command.displayName.length + 2)
+            [i, a] = u.bN.node(e, t.anchor.path),
+            o = t.anchor.offset;
+        if (!u.C0.hasPrevious(a) && u.LC.isText(i)) {
+            let e = i.text.substring(0, o);
+            if (u.aj.isType(n, 'applicationCommand') && o < n.command.displayName.length + 2)
                 return {
                     word: e,
                     isAtStart: !0
@@ -42,15 +42,15 @@ let p = (e, t, n) => ({
         let s = '',
             l = !1;
         for (;;) {
-            if (--a < 0) {
-                if (!u.C0.hasPrevious(o)) {
+            if (--o < 0) {
+                if (!u.C0.hasPrevious(a)) {
                     l = !0;
                     break;
                 }
-                [i, o] = u.bN.node(e, u.C0.previous(o));
+                [i, a] = u.bN.node(e, u.C0.previous(a));
             }
             if (!u.LC.isText(i)) break;
-            let t = i.text[a];
+            let t = i.text[o];
             if (_.i$.test(t)) break;
             s = t + s;
         }
@@ -71,27 +71,27 @@ let p = (e, t, n) => ({
         var n;
         let r = s.HZ(e);
         if (null == r) return [];
-        let i = a.Z.getActiveCommand(t.id),
-            o = null == i || null == (n = i.options) ? void 0 : n.find((e) => e.name === r[0].optionName);
-        return null == o ? [] : s.IB(e, o, r[0], t.id);
+        let i = o.Z.getActiveCommand(t.id),
+            a = null == i || null == (n = i.options) ? void 0 : n.find((e) => e.name === r[0].optionName);
+        return null == a ? [] : s.IB(e, a, r[0], t.id);
     },
     getCommandOptionValues() {
-        let n = a.Z.getActiveCommand(t.id);
+        let n = o.Z.getActiveCommand(t.id);
         return null == n ? {} : s.tM(e, n, t.id);
     },
     insertText(n) {
         let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
             i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         l.T.withSingleEntry(e, () => {
-            let o = s.HZ(e),
-                a = null != o && h(t, o[0]);
-            if ((null != r && a && (c.Q.removeInlineChildren(e, o), (i = !1)), m(e, n, r, i), null != r && a)) {
+            let a = s.HZ(e),
+                o = null != a && h(t, a[0]);
+            if ((null != r && o && (c.Q.removeInlineChildren(e, a), (i = !1)), m(e, n, r, i), null != r && o)) {
                 let n = s.cr(e);
-                if (((o = u.q.updateElement(e, o)), null != n)) {
+                if (((a = u.q.updateElement(e, a)), null != n)) {
                     let r = u.q.markdown(n[0], t.guild_id);
-                    (0, f.Gg)(e, o, t.id, r) && (o = u.q.updateElement(e, o));
+                    (0, f.Gg)(e, a, t.id, r) && (a = u.q.updateElement(e, a));
                 }
-                s.xi(e, t.guild_id, t.id, u.q.updateElement(e, o), !1), c.Q.selectNextCommandOption(e);
+                s.xi(e, t.guild_id, t.id, u.q.updateElement(e, a), !1), c.Q.selectNextCommandOption(e);
             }
         });
     },
@@ -99,9 +99,9 @@ let p = (e, t, n) => ({
         let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
             i = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
         l.T.withSingleEntry(e, () => {
-            let o = s.HZ(e),
-                a = null != o && h(t, o[0]);
-            if (a) c.Q.removeInlineChildren(e, o), (i = !1);
+            let a = s.HZ(e),
+                o = null != a && h(t, a[0]);
+            if (o) c.Q.removeInlineChildren(e, a), (i = !1);
             else {
                 let { word: t } = this.getCurrentWord();
                 null != t &&
@@ -112,24 +112,24 @@ let p = (e, t, n) => ({
                         reverse: !0
                     });
             }
-            m(e, n, r, i), a && c.Q.selectNextCommandOption(e);
+            m(e, n, r, i), o && c.Q.selectNextCommandOption(e);
         });
     },
     insertEmoji(t) {
         let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         l.T.withSingleEntry(e, () => {
             var r, i;
-            let o = t.animated ? 'a' : '',
-                a = null != (i = null != (r = t.originalName) ? r : t.name) ? i : '';
-            m(e, ':'.concat(t.name, ':'), null != t.id ? '<'.concat(o, ':').concat(a.replace(/:/g, ''), ':').concat(t.id, '>') : null, n);
+            let a = t.animated ? 'a' : '',
+                o = null != (i = null != (r = t.originalName) ? r : t.name) ? i : '';
+            m(e, ':'.concat(t.name, ':'), null != t.id ? '<'.concat(a, ':').concat(o.replace(/:/g, ''), ':').concat(t.id, '>') : null, n);
         });
     }
 });
 function h(e, t) {
     var n;
-    let r = a.Z.getActiveCommand(e.id),
+    let r = o.Z.getActiveCommand(e.id),
         i = null == r || null == (n = r.options) ? void 0 : n.find((e) => e.name === t.optionName);
-    return null != i && (i.type !== o.jw.STRING || (null == i ? void 0 : i.choices) != null || (null == i ? void 0 : i.autocomplete));
+    return null != i && (i.type !== a.jw.STRING || (null == i ? void 0 : i.choices) != null || (null == i ? void 0 : i.autocomplete));
 }
 function m(e, t, n, r) {
     let i = u.bN.areStylesDisabled(e) || null == n ? t : n;

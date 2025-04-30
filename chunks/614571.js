@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v }), n(388685);
 var r = n(846519),
     i = n(147913),
-    o = n(553795),
-    a = n(430824),
+    a = n(553795),
+    o = n(430824),
     s = n(626135),
     l = n(425128),
     c = n(276344),
@@ -28,8 +28,8 @@ function m(e) {
     return e.some((e) => e.name === f);
 }
 function g() {
-    let e = o.Z.getAccount(null, u.ABu.RIOT_GAMES),
-        t = o.Z.getAccount(null, u.ABu.LEAGUE_OF_LEGENDS);
+    let e = a.Z.getAccount(null, u.ABu.RIOT_GAMES),
+        t = a.Z.getAccount(null, u.ABu.LEAGUE_OF_LEGENDS);
     return null == e && null == t
         ? 'missing_connections'
         : null == e
@@ -54,9 +54,9 @@ async function E(e) {
             });
             (p = !1), (h = !1);
             let i = new Date(1000 * e),
-                o = new Date(),
-                a = Math.max(0, i.getTime() - o.getTime());
-            _.start(a, () =>
+                a = new Date(),
+                o = Math.max(0, i.getTime() - a.getTime());
+            _.start(o, () =>
                 (0, l._7)({
                     riotConnectionId: t,
                     lolConnectionId: n
@@ -68,7 +68,7 @@ async function E(e) {
     }
 }
 function b() {
-    return Object.values(a.Z.getGuilds()).some(
+    return Object.values(o.Z.getGuilds()).some(
         (e) =>
             e.hasFeature(u.oNc.LEADERBOARD_ENABLED) &&
             (0, c.NM)({
@@ -108,7 +108,7 @@ class O extends i.Z {
               });
     }
     constructor(...e) {
-        super(...e), d(this, 'actions', { RUNNING_GAMES_CHANGE: this.handleRunningGameChange }), d(this, 'stores', new Map().set(a.Z, this.handleDependantStoreChanges).set(o.Z, this.handleDependantStoreChanges));
+        super(...e), d(this, 'actions', { RUNNING_GAMES_CHANGE: this.handleRunningGameChange }), d(this, 'stores', new Map().set(o.Z, this.handleDependantStoreChanges).set(a.Z, this.handleDependantStoreChanges));
     }
 }
 let v = new O();

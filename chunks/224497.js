@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l });
 var r = n(512722),
     i = n.n(r),
-    o = n(392711),
-    a = n.n(o),
+    a = n(392711),
+    o = n.n(a),
     s = n(830496);
 let l = {
     getUploadPayload: function (e) {
@@ -13,7 +13,7 @@ let l = {
             {
                 filename: r.name,
                 file_size: r.size,
-                id: a().uniqueId(),
+                id: o().uniqueId(),
                 is_clip: null != e.clip,
                 title: null == (t = e.clip) ? void 0 : t.name,
                 application_id: null == (n = e.clip) ? void 0 : n.applicationId,

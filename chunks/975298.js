@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(388685), n(642613), n(583741), n(415506);
 var r = n(73800),
     i = n(512722),
-    o = n.n(i),
-    a = n(392711),
+    a = n.n(i),
+    o = n(392711),
     s = n(913527),
     l = n.n(s),
     c = n(442837),
@@ -52,10 +52,10 @@ function b() {
                     unactivatedUnits: [],
                     fetched: s
                 };
-                v((t) => ((0, a.isEqual)(t, e) ? t : e));
+                v((t) => ((0, o.isEqual)(t, e) ? t : e));
                 return;
             }
-            let e = i.filter((e) => null != e.endsAt && null != e.startsAt).sort((e, t) => ((o()(null != e.endsAt && null != t.endsAt, 'endsAt should not be null'), e.endsAt < t.endsAt) ? -1 : +(e.endsAt > t.endsAt)));
+            let e = i.filter((e) => null != e.endsAt && null != e.startsAt).sort((e, t) => ((a()(null != e.endsAt && null != t.endsAt, 'endsAt should not be null'), e.endsAt < t.endsAt) ? -1 : +(e.endsAt > t.endsAt)));
             if ((e.reverse(), e.length > 0 && (e.length !== i.length || null == e[0].startsAt || null == e[0].endsAt))) {
                 let e = Array.from(i.values()).map((e) => e.id),
                     t = 'fractional redemption entitlements should have startsAt/endsAt';

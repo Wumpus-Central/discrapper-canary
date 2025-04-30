@@ -2,8 +2,8 @@ n.d(t, { Z: () => S });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(481060),
     l = n(607070),
     c = n(600164),
@@ -34,15 +34,15 @@ function v(e, t) {
 let I = (e) => {
         let { isTier0: t, discountAmount: n } = e,
             i = (0, g.N)(),
-            a = null != i && i.trial_id === b.a7,
+            o = null != i && i.trial_id === b.a7,
             l = y.intl.string(y.t.IBYG5e);
         return (
-            void 0 !== n ? (l = y.intl.formatToPlainString(y.t.iiLbvr, { percent: n })) : a && (l = y.intl.string(y.t.gtNqJS)),
+            void 0 !== n ? (l = y.intl.formatToPlainString(y.t.iiLbvr, { percent: n })) : o && (l = y.intl.string(y.t.gtNqJS)),
             (0, r.jsx)('div', {
                 className: O.trialBadgeContainer,
                 children: (0, r.jsx)(s.Text, {
                     variant: 'text-xs/bold',
-                    className: o()(O.trialOfferText, { [O.tier0TrialOffer]: t }),
+                    className: a()(O.trialOfferText, { [O.tier0TrialOffer]: t }),
                     children: l
                 })
             })
@@ -54,12 +54,12 @@ let I = (e) => {
             { hideCloseButton: i = !1, hideCloseOnFullScreen: p, shouldShowPrice: h, plan: g, renderAnimation: y, onClose: S, isGift: T, upgradeToPremiumType: A, headerTheme: N = b.nL.DEFAULT, className: C, showTrialBadge: R = !1, showDiscountBadge: P = !1 } = e,
             w = A === b.p9.TIER_2;
         n = A === b.p9.TIER_0 ? d.Z : A === b.p9.TIER_1 ? f.Z : u.Z;
-        let D = (0, a.e7)([l.Z], () => l.Z.useReducedMotion),
+        let D = (0, o.e7)([l.Z], () => l.Z.useReducedMotion),
             L = (0, m.Ng)(),
             x = null == L || null == (t = L.discount) ? void 0 : t.amount;
         return (0, r.jsxs)('div', {
             'aria-hidden': !0,
-            className: o()(
+            className: a()(
                 {
                     [O.headerBackground]: !w,
                     [O.tier2HeaderBackground]: w
@@ -82,7 +82,7 @@ let I = (e) => {
                     children: [
                         (0, r.jsxs)('div', {
                             children: [
-                                (0, r.jsx)(n, { className: o()(O.headerIcon, { [O.nonTier2]: !w }) }),
+                                (0, r.jsx)(n, { className: a()(O.headerIcon, { [O.nonTier2]: !w }) }),
                                 (R || P) &&
                                     (0, r.jsx)(I, {
                                         isTier0: A === b.p9.TIER_0,

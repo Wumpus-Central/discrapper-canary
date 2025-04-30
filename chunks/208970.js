@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I });
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(592125);
+    a = n(570140),
+    o = n(592125);
 function s(e, t, n) {
     return (
         t in e
@@ -57,7 +57,7 @@ function u(e, t) {
 }
 let d = {};
 function f(e) {
-    let t = a.Z.getChannel(e);
+    let t = o.Z.getChannel(e);
     return null != t && !!t.isForumLikeChannel();
 }
 function _(e) {
@@ -145,7 +145,7 @@ class v extends (r = i.ZP.Store) {
     }
 }
 s(v, 'displayName', 'ForumSearchStore');
-let I = new v(o.Z, {
+let I = new v(a.Z, {
     CONNECTION_OPEN: O,
     THREAD_DELETE: b,
     CHANNEL_DELETE: y,

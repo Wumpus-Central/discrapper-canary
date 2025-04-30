@@ -1,8 +1,8 @@
 n.d(t, { ZP: () => D }), n(804061), n(704826), n(35282);
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(456100),
     l = n(620662),
     c = n(841784),
@@ -60,19 +60,19 @@ let R = (e, t) =>
     P = (e, t, n) => {
         let r = A.t['bES+y8'],
             i = m.ZP.getName(t.guild_id, t.id, n),
-            o = e.extra.activity_name;
+            a = e.extra.activity_name;
         return A.intl
             .formatToMarkdownString(r, {
-                gameName: o,
+                gameName: a,
                 userName: i
             })
             .replaceAll('*', '');
     },
     w = (e) => {
         let { entry: t, channel: n, users: r, countOthers: i } = e,
-            o = A.t['7j/5mp'];
+            a = A.t['7j/5mp'];
         return A.intl
-            .formatToMarkdownString(o, {
+            .formatToMarkdownString(a, {
                 gameName: t.extra.activity_name,
                 user1: m.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, r[0]),
                 user2: m.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, r[1]),
@@ -88,7 +88,7 @@ let R = (e, t) =>
             }),
             { user: x, details: M, activity: k, embeddedActivity: j } = (0, S.n)(n),
             { primaryColor: U, secondaryColor: G } = (0, O.Z)(null == L ? void 0 : L.src),
-            B = (0, o.e7)([p.default], () => p.default.locale),
+            B = (0, a.e7)([p.default], () => p.default.locale),
             { displayParticipants: V, participant1: F, participant2: Z, numOtherParticipants: H } = (0, E.Z)(n, 3),
             Y = () => {
                 d.__(f._b.TEXT, _.Ie.NORMAL, { applicationId: n.extra.application_id });
@@ -141,10 +141,10 @@ let R = (e, t) =>
                       embeddedActivity: j,
                       activity: k,
                       user: x,
-                      ButtonComponent: (e) => (0, r.jsx)(I.Ll, C({ IconComponent: a.YVR }, e))
+                      ButtonComponent: (e) => (0, r.jsx)(I.Ll, C({ IconComponent: o.YVR }, e))
                   })
                 : null,
-            J = K ? a.iWm : a.jje,
+            J = K ? o.iWm : o.jje,
             $ = D
                 ? null
                 : (0, r.jsx)(I.Ll, {

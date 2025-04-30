@@ -1,19 +1,19 @@
 n.d(t, {
-    VG: () => a,
+    VG: () => o,
     uB: () => s
 }),
     n(388685),
     n(35282);
 let r = /input/i,
     i = /textarea/i,
-    o = new Set(['text', 'password', 'number', 'date', 'datetime-local', 'time', 'week', 'month', 'email', 'search', 'tel', 'url']);
-function a(e) {
+    a = new Set(['text', 'password', 'number', 'date', 'datetime-local', 'time', 'week', 'month', 'email', 'search', 'tel', 'url']);
+function o(e) {
     if (null == e) return !1;
     if ('true' === e.getAttribute('contenteditable') || i.test(e.tagName)) return !0;
     if (r.test(e.tagName)) {
         var t;
         let n = null != (t = e.getAttribute('type')) ? t : 'text';
-        if (o.has(n)) return !0;
+        if (a.has(n)) return !0;
     }
     return !1;
 }

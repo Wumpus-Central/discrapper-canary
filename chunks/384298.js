@@ -2,8 +2,8 @@ n.d(t, { Z: () => y });
 var r = n(255367);
 n(73800);
 var i = n(657707),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(475179),
     l = n(287734),
     c = n(359110),
@@ -20,8 +20,8 @@ var i = n(657707),
 function y(e) {
     let { channel: t, onAction: n, onClose: y } = e,
         { themeType: O } = (0, p.z)(),
-        v = (0, o.e7)([f.Z], () => f.Z.isInChannel(t.id)),
-        I = (0, o.e7)([d.Z], () => t.isPrivate() || d.Z.can(g.Plq.CONNECT, t)),
+        v = (0, a.e7)([f.Z], () => f.Z.isInChannel(t.id)),
+        I = (0, a.e7)([d.Z], () => t.isPrivate() || d.Z.can(g.Plq.CONNECT, t)),
         { chatButtonEnabled: S } = (0, _.s)({ location: 'UserProfileActivityVoiceChannelButtons' });
     if (!I) return null;
     let T = () => (O === m.lY.MODAL || O === m.lY.MODAL_V2 ? E.intl.string(E.t['3xjX0d']) : t.isDM() || t.isGroupDM() ? E.intl.string(E.t['7hwn2N']) : t.isGuildStageVoice() ? E.intl.string(E.t.Acqcoq) : E.intl.string(E.t.BXxdl5)),
@@ -37,7 +37,7 @@ function y(e) {
               children: [
                   (0, r.jsx)(h.tG, {
                       text: v ? T() : A(),
-                      size: a.PhG.TINY,
+                      size: o.PhG.TINY,
                       themeColor: 'secondary',
                       onClick: N
                   }),

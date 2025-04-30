@@ -1,7 +1,7 @@
 let r, i;
 n.d(t, { Z: () => V }), n(388685);
-var o,
-    a = n(442837),
+var a,
+    o = n(442837),
     s = n(704215),
     l = n(570140),
     c = n(605236),
@@ -104,7 +104,7 @@ let j = () => {
             n = (null == r ? void 0 : r.id) === (null == t ? void 0 : t.id);
         null == t || n || (r = t);
     };
-class B extends (o = a.ZP.PersistedStore) {
+class B extends (a = o.ZP.PersistedStore) {
     initialize(e) {
         null != e && (r = (null == e ? void 0 : e.gradientPresetId) != null ? v.qt[e.gradientPresetId] : void 0), this.waitFor(E.default, f.Z, g.Z, u.Z, h.Z), this.syncWith([E.default], j), this.syncWith([u.Z], U), this.syncWith([h.Z], G);
     }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ }), n(388685);
 var r = n(147913),
     i = n(716364),
-    o = n(474873),
-    a = n(135906),
+    a = n(474873),
+    o = n(135906),
     s = n(378364),
     l = n(197344),
     c = n(860973),
@@ -29,15 +29,15 @@ class f extends r.Z {
         null == (e = (t = this).subscription) || e.call(t), (this.subscription = void 0);
     }
     updateSoundpack() {
-        let e = o.Z.getSoundpack(),
-            t = o.Z.getLastSoundpackExperimentId(),
+        let e = a.Z.getSoundpack(),
+            t = a.Z.getLastSoundpackExperimentId(),
             n = s.Z.experiment.definition.id,
             r = l.Z.isEligible();
         r || (null == t && e === u.YC.CLASSIC) ? r && null != s.Z.soundpack && n !== t && e !== s.Z.soundpack && (0, i.c)(s.Z.soundpack, n) : (0, i.c)(u.YC.CLASSIC, null);
     }
     updateRingtone() {
         if (l.Z.isEligible()) {
-            let e = (0, a.Z)(o.Z.getSoundpack());
+            let e = (0, o.Z)(a.Z.getSoundpack());
             null != e.call_ringing && (0, c._)('call_ringing', e.call_ringing + '.mp3');
         } else (0, c._)('call_ringing', 'call_ringing.mp3');
     }

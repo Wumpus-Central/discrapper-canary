@@ -5,12 +5,12 @@ let r = (0, n(381814).U)((e) => ({
         utmCampaignCurrent: void 0,
         utmContentCurrent: void 0,
         setUtmCurrentContext: (t) => {
-            let { utmSourceCurrent: n, utmMediumCurrent: r, utmCampaignCurrent: i, utmContentCurrent: o } = t;
+            let { utmSourceCurrent: n, utmMediumCurrent: r, utmCampaignCurrent: i, utmContentCurrent: a } = t;
             return e({
                 utmSourceCurrent: n,
                 utmMediumCurrent: r,
                 utmCampaignCurrent: i,
-                utmContentCurrent: o
+                utmContentCurrent: a
             });
         },
         getUtmCurrentContext: () => r.getState()

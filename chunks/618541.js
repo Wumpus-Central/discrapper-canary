@@ -1,7 +1,7 @@
 let r, i;
 n.d(t, { Z: () => S }), n(415506);
-var o,
-    a = n(442837),
+var a,
+    o = n(442837),
     s = n(544891),
     l = n(570140),
     c = n(358085),
@@ -35,13 +35,13 @@ function g(e) {
     p = t;
 }
 function E(e) {
-    let { paymentSourceType: t, state: n, path: i, query: o } = e;
+    let { paymentSourceType: t, state: n, path: i, query: a } = e;
     if (t !== u.HeQ.PAYPAL || n !== r) return;
-    let a = window.popupBridge.onComplete;
-    'function' == typeof a &&
-        a(null, {
+    let o = window.popupBridge.onComplete;
+    'function' == typeof o &&
+        o(null, {
             path: i,
-            queryItems: o
+            queryItems: a
         });
 }
 function b(e) {
@@ -64,7 +64,7 @@ function O() {
             (i = e), window.open(e), I.emitChange();
         }
     });
-class v extends (o = a.ZP.Store) {
+class v extends (a = o.ZP.Store) {
     getClient() {
         return f;
     }

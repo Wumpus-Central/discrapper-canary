@@ -1,6 +1,6 @@
-let r, i, o;
+let r, i, a;
 n.d(t, { Z: () => Y }), n(388685);
-var a,
+var o,
     s = n(392711),
     l = n(442837),
     c = n(570140),
@@ -52,11 +52,11 @@ let m = new Map(),
         v.set(t, n), (C = new Set(C)).delete(t), (R = new Map(R)).delete(t), (P = new Map(P)).delete(t);
     },
     k = (e) => {
-        (N = !0), (r = void 0), (o = void 0), (w = e.options);
+        (N = !0), (r = void 0), (a = void 0), (w = e.options);
     },
     j = (e) => {
         let { error: t } = e;
-        (O = m), (v = g), (T = y), (N = !1), (C = new Set()), (r = t), (o = Date.now());
+        (O = m), (v = g), (T = y), (N = !1), (C = new Set()), (r = t), (a = Date.now());
     },
     U = (e) => {
         if (0 === e.categories.length) (O = m), (v = g);
@@ -70,7 +70,7 @@ let m = new Map(),
                 (v = new Map((0, _.Cs)(O, !0).map((e) => [e.skuId, e]))),
                 (I = new Map((0, _.Cs)(O, !1).map((e) => [e.storeListingId, e])));
         }
-        B(e.categories, v), (i = Date.now()), (N = !1), (r = void 0), (o = void 0);
+        B(e.categories, v), (i = Date.now()), (N = !1), (r = void 0), (a = void 0);
     },
     G = (e) => {
         if (0 === e.shopHome.categories.length) return;
@@ -95,7 +95,7 @@ let m = new Map(),
         }
     },
     V = () => {
-        (O = m), (v = g), (T = y), (i = void 0), (N = !1), (C = new Set()), (r = void 0), (o = void 0), (w = {}), (D = 0);
+        (O = m), (v = g), (T = y), (i = void 0), (N = !1), (C = new Set()), (r = void 0), (a = void 0), (w = {}), (D = 0);
     },
     F = () => {
         if (!u.Z.hasLoadedExperiments) return;
@@ -105,7 +105,7 @@ let m = new Map(),
     Z = (e) => {
         D = e.skipNumCategories;
     };
-class H extends (a = l.ZP.Store) {
+class H extends (o = l.ZP.Store) {
     initialize() {
         this.syncWith([f.default], V), this.syncWith([u.Z], F);
     }
@@ -119,7 +119,7 @@ class H extends (a = l.ZP.Store) {
         return r;
     }
     get lastErrorTimestamp() {
-        return o;
+        return a;
     }
     get lastSuccessfulFetch() {
         return i;

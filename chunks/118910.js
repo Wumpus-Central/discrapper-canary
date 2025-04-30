@@ -2,20 +2,20 @@ n.d(t, { a: () => l });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(378298),
-    a = n(473092),
+    a = n(378298),
+    o = n(473092),
     s = n(237292);
 function l(e) {
     let { channelId: t, warningId: l, senderId: c, warningType: u } = e;
     if (!(0, s.mG)({ location: 'takeover-modal' })) return;
     let d = () => {
-        (0, o.T)(t, [l]),
-            (0, a.qc)({
+        (0, a.T)(t, [l]),
+            (0, o.qc)({
                 channelId: t,
                 senderId: c,
                 warningId: l,
                 warningType: u,
-                cta: a.NM.USER_TAKEOVER_MODAL_DISMISS,
+                cta: o.NM.USER_TAKEOVER_MODAL_DISMISS,
                 isNudgeWarning: !1
             });
     };

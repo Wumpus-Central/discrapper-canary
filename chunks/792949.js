@@ -1,7 +1,7 @@
 var r = n(804336),
     i = n(201187),
-    o = n(34533),
-    a = n(622788),
+    a = n(34533),
+    o = n(622788),
     s = n(261768),
     l = n(983018),
     c = n(154605),
@@ -21,8 +21,8 @@ e.exports = function (e) {
     for (var p = r(n, f), g = 0; g < f; ) {
         var E = d(g);
         if (s(n, E)) {
-            var b = i(e, t, [a(n, E), g, n]);
-            o(p, E, b);
+            var b = i(e, t, [o(n, E), g, n]);
+            a(p, E, b);
         }
         g += 1;
     }

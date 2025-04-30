@@ -12,30 +12,30 @@ function r() {
 function i(e) {
     return {
         textValue: e,
-        richValue: a(e)
+        richValue: o(e)
     };
 }
 n.d(t, {
     H2: () => r,
-    JM: () => a,
+    JM: () => o,
     VI: () => s,
     eK: () => i
 }),
     n(35282),
     n(415506);
-let o = Object.freeze([
+let a = Object.freeze([
     Object.freeze({
         type: 'line',
         children: Object.freeze([Object.freeze({ text: '' })])
     })
 ]);
-function a(e) {
+function o(e) {
     return '' !== e
         ? e.split('\n').map((e) => ({
               type: 'line',
               children: [{ text: e }]
           }))
-        : o;
+        : a;
 }
 function s(e) {
     switch (e.type) {

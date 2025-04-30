@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(623113);
-function a(e, t, n) {
+    a = n(623113);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -37,8 +37,8 @@ function l(e, t) {
         r,
         i = c(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -47,14 +47,14 @@ function c(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let u = i.forwardRef(function (e, t) {
-    var { muted: n, volume: a, playing: c } = e,
+    var { muted: n, volume: o, playing: c } = e,
         u = l(e, ['muted', 'volume', 'playing']);
-    let [d, f] = (0, o.Z)(t);
+    let [d, f] = (0, a.Z)(t);
     return (
         i.useEffect(() => {
             let e = d.current;
@@ -62,8 +62,8 @@ let u = i.forwardRef(function (e, t) {
         }, [d, n]),
         i.useEffect(() => {
             let e = d.current;
-            null != e && void 0 !== a && (e.volume = a);
-        }, [d, a]),
+            null != e && void 0 !== o && (e.volume = o);
+        }, [d, o]),
         i.useEffect(() => {
             let e = d.current;
             null != e && void 0 !== c && (c ? e.play() : e.pause());

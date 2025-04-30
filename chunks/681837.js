@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(692547),
-    a = n(981729),
+    a = n(692547),
+    o = n(981729),
     s = n(481060),
     l = n(320582),
     c = n(621853),
@@ -20,13 +20,13 @@ function _(e) {
         });
     return n.length > 0 || _.length > 0 || null == p
         ? null
-        : (0, r.jsx)(a.DY, {
+        : (0, r.jsx)(o.DY, {
               className: f.container,
               text: d.intl.string(d.t.p3Q9Y2),
               delay: u.vB,
               children: (0, r.jsx)(s.P4T, {
                   size: 'xs',
-                  color: o.Z.colors.STATUS_WARNING.css
+                  color: a.Z.colors.STATUS_WARNING.css
               })
           });
 }

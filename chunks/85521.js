@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(997841);
 var r = n(913527),
     i = n.n(r),
-    o = n(81825),
-    a = n(812206),
+    a = n(81825),
+    o = n(812206),
     s = n(630388),
     l = n(959546),
     c = n(981631);
@@ -20,7 +20,7 @@ function u(e, t, n) {
     );
 }
 let d = 'master';
-class f extends o.Z {
+class f extends a.Z {
     static createFromServer(e) {
         return new f({
             id: e.application.id,
@@ -97,7 +97,7 @@ class f extends o.Z {
         return this.sku.id;
     }
     getAnalyticsData() {
-        let e = a.Z.getApplication(this.id);
+        let e = o.Z.getApplication(this.id);
         return {
             application_id: null != e ? e.id : null,
             application_name: null != e ? e.name : null,

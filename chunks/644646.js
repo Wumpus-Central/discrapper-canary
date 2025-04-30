@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(374470),
     l = n(442837),
     c = n(481060),
@@ -20,32 +20,32 @@ var r = n(255367),
     O = n(734506);
 let v = function (e) {
     let t,
-        { className: n, quest: o, autoplay: v = !0, learnMoreStyle: I = null } = e,
+        { className: n, quest: a, autoplay: v = !0, learnMoreStyle: I = null } = e,
         S = (0, _.O5)(),
         T = (0, l.e7)([f.Z], () => f.Z.isFocused()),
         A = (0, l.e7)([u.Z], () => u.Z.useReducedMotion),
-        N = i.useMemo(() => (0, h.fh)(o, h.eC.REWARD), [o]),
+        N = i.useMemo(() => (0, h.fh)(a, h.eC.REWARD), [a]),
         C = i.useCallback(
             (t) => {
                 var n;
                 (0, s.k)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
                     S({
-                        questId: o.id,
+                        questId: a.id,
                         questContent: e.questContent,
                         questContentPosition: e.questContentPosition,
                         questContentCTA: _.jZ.REWARD_LEARN_MORE
                     }),
                     (0, b.navigateToQuestHome)({
                         fromContent: e.questContent,
-                        questId: o.id
+                        questId: a.id
                     }),
                     null == (n = e.onClick) || n.call(e, t);
             },
-            [S, o.id, e]
+            [S, a.id, e]
         ),
         R = i.useRef(null),
         P = i.useRef(v),
-        w = (0, p.Bg)(o.config);
+        w = (0, p.Bg)(a.config);
     return (
         i.useEffect(() => {
             if (null != R.current) {
@@ -92,18 +92,18 @@ let v = function (e) {
                     children: (e) =>
                         (0, r.jsx)('img', {
                             ref: e,
-                            alt: m.r.build(o.config).defaultReward.messages.name,
-                            className: a()(O.questRewardTileAsset, O.questRewardTileAssetStatic),
+                            alt: m.r.build(a.config).defaultReward.messages.name,
+                            className: o()(O.questRewardTileAsset, O.questRewardTileAssetStatic),
                             src: N.url
                         })
                 })),
         null == I
             ? (0, r.jsx)('div', {
-                  className: a()(O.questRewardTile, n),
+                  className: o()(O.questRewardTile, n),
                   children: t
               })
             : (0, r.jsxs)(c.P3F, {
-                  className: a()(O.questRewardTileInteractive, O.questRewardTile, O.rewardHighlight, n),
+                  className: o()(O.questRewardTileInteractive, O.questRewardTile, O.rewardHighlight, n),
                   onClick: C,
                   children: [
                       t,

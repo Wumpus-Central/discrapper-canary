@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C }), n(388685), n(415506);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(990169),
     c = n(249458),
@@ -73,8 +73,8 @@ function I(e, t) {
         r,
         i = S(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -83,8 +83,8 @@ function S(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 n(477526);
@@ -92,7 +92,7 @@ let T = __OVERLAY__ ? () => (0, s.e7)([p.default], () => p.default.isInstanceFoc
 function A(e) {
     var t,
         n,
-        { src: o, alt: s, className: c, emojiId: f, emojiName: p, channelId: g, messageId: b, animated: O, size: S = 'default', isInteracting: A = !1, shouldAnimate: N, onMouseEnter: C, onMouseLeave: R, canSelect: P = !0, autoplay: w, registerInnerRef: D, registerAnimatedElementRef: L } = e,
+        { src: a, alt: s, className: c, emojiId: f, emojiName: p, channelId: g, messageId: b, animated: O, size: S = 'default', isInteracting: A = !1, shouldAnimate: N, onMouseEnter: C, onMouseLeave: R, canSelect: P = !0, autoplay: w, registerInnerRef: D, registerAnimatedElementRef: L } = e,
         x = I(e, ['src', 'alt', 'className', 'emojiId', 'emojiName', 'channelId', 'messageId', 'animated', 'size', 'isInteracting', 'shouldAnimate', 'onMouseEnter', 'onMouseLeave', 'canSelect', 'autoplay', 'registerInnerRef', 'registerAnimatedElementRef']);
     let [M, k] = i.useState(!1),
         [j, U] = i.useState(void 0),
@@ -104,7 +104,7 @@ function A(e) {
         Y = E.kV[S],
         W = i.useRef(null),
         K = i.useMemo(() => {
-            if (null != o) return o;
+            if (null != a) return a;
             if (null != f) {
                 let e = !0 === N && H;
                 return h.ZP.getEmojiURL({
@@ -115,7 +115,7 @@ function A(e) {
             }
             if (null != p) return m.ZP.getURL(p);
             throw Error('Unknown Src for Emoji');
-        }, [O, H, f, p, Y, Z, M, A, N, o]),
+        }, [O, H, f, p, Y, Z, M, A, N, a]),
         z = i.useCallback(() => {
             null != K &&
                 (G.current = (0, d.po)(K, (e) => {
@@ -138,7 +138,7 @@ function A(e) {
             let e = null != f && '' !== f ? { 'data-id': f } : { 'data-name': p };
             return y(
                 v(y({}, x), {
-                    className: a()('emoji', c, { jumboable: 'jumbo' === S }),
+                    className: o()('emoji', c, { jumboable: 'jumbo' === S }),
                     onError: z,
                     onMouseEnter: q,
                     onMouseLeave: Q,
@@ -163,7 +163,7 @@ function A(e) {
         $ = (0, l.Z)(W);
     return null == K || '' === K
         ? (0, r.jsx)('span', {
-              className: a()('emoji', 'emoji-text'),
+              className: o()('emoji', 'emoji-text'),
               children: p
           })
         : (0, r.jsxs)(r.Fragment, {
@@ -206,13 +206,13 @@ function A(e) {
 }
 function N(e) {
     let { useThoughtfullyAnimated: t } = i.useContext(f.q),
-        { animate: n, registerRef: o } = t(),
-        { disableAnimations: a } = i.useContext(c.G);
+        { animate: n, registerRef: a } = t(),
+        { disableAnimations: o } = i.useContext(c.G);
     return (0, r.jsx)(
         A,
         v(y({}, e), {
-            registerAnimatedElementRef: o,
-            shouldAnimate: n && !a
+            registerAnimatedElementRef: a,
+            shouldAnimate: n && !o
         })
     );
 }

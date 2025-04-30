@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(147913),
     i = n(592125),
-    o = n(19780),
-    a = n(699516),
+    a = n(19780),
+    o = n(699516),
     s = n(70956),
     l = n(33194);
 n(452369);
@@ -33,8 +33,8 @@ function p(e) {
     if (null == t) return;
     let n = i.Z.getChannel(t);
     if (null != n && n.isGroupDM()) {
-        let e = n.recipients.filter((e) => a.Z.isBlocked(e)),
-            r = n.recipients.filter((e) => a.Z.isIgnored(e));
+        let e = n.recipients.filter((e) => o.Z.isBlocked(e)),
+            r = n.recipients.filter((e) => o.Z.isIgnored(e));
         (e.length > 0 || r.length > 0) &&
             !n.blockedUserWarningDismissed &&
             !g(t) &&
@@ -56,7 +56,7 @@ function g(e) {
 }
 class E extends r.Z {
     handleBlockedOrIgnoredUserVoiceChannelJoin(e, t) {
-        let n = o.Z.getChannelId();
+        let n = a.Z.getChannelId();
         e === n && null != i.Z.getChannel(e) && (m(e) || (0, u.H)(n, t));
     }
     constructor(...e) {

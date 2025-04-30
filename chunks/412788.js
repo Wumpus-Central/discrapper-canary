@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ }), n(539854);
 var r,
     i = n(512722),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(433517),
     l = n(570140);
 function c(e, t, n) {
@@ -57,7 +57,7 @@ function f(e, t) {
         e
     );
 }
-class _ extends (r = a.ZP.Store) {
+class _ extends (r = o.ZP.Store) {
     static clearAll() {
         _.allStores.forEach((e) => e.clear());
     }
@@ -86,9 +86,9 @@ class _ extends (r = a.ZP.Store) {
             }),
             t
         ),
-            o()(null != this.getClass().displayName, 'Snapshot stores need a display name'),
-            o()(!('CLEAR_CACHES' in e), "SnapshotStores cannot use the 'CLEAR_CACHES' action"),
-            o()(!('WRITE_CACHES' in e), "SnapshotStores cannot use the 'WRITE_CACHES' action"),
+            a()(null != this.getClass().displayName, 'Snapshot stores need a display name'),
+            a()(!('CLEAR_CACHES' in e), "SnapshotStores cannot use the 'CLEAR_CACHES' action"),
+            a()(!('WRITE_CACHES' in e), "SnapshotStores cannot use the 'WRITE_CACHES' action"),
             _.allStores.push(this);
     }
 }

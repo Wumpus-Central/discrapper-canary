@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r = n(727429),
     i = n(703656),
-    o = n(769654),
-    a = n(592125),
+    a = n(769654),
+    o = n(592125),
     s = n(754688),
     l = n(849027),
     c = n(927723),
@@ -61,7 +61,7 @@ function p(e, t) {
 }
 function h(e) {
     if (null == e.channelId) return e;
-    let t = a.Z.getChannel(e.channelId);
+    let t = o.Z.getChannel(e.channelId);
     if (null == t) return e;
     let n = (0, r.e)(t);
     return p(f({}, e), { guildId: null != n ? n : u.ME });
@@ -71,6 +71,6 @@ async function m(e, t) {
     if (null != n && !(await (0, l.Z)(n))) return void (0, c.k)({ kind: 'channel' });
     if (null == n) return void (0, i.uL)(e, t);
     let r = h(n);
-    if (null == r.channelId) return void (0, o.X)(r.guildId);
+    if (null == r.channelId) return void (0, a.X)(r.guildId);
     null != r.threadId ? (0, i.uL)(u.Z5c.CHANNEL_THREAD_VIEW(r.guildId, r.channelId, r.threadId, r.messageId), t) : (0, i.uL)(u.Z5c.CHANNEL(r.guildId, r.channelId, r.messageId), t);
 }

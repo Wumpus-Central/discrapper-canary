@@ -2,8 +2,8 @@ n.d(t, { Z: () => s });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(388032);
-let a = (e, t) => {
+    a = n(388032);
+let o = (e, t) => {
         let n = {
             display: 'flex',
             gap: '4px',
@@ -31,9 +31,9 @@ let a = (e, t) => {
     },
     s = {
         getTextInVoiceSendMessageChannelPermissionText: function (e) {
-            return e ? o.intl.format(o.t.Q1rwpq, { warningHook: a }) : o.intl.string(o.t.WQ6zpa);
+            return e ? a.intl.format(a.t.Q1rwpq, { warningHook: o }) : a.intl.string(a.t.WQ6zpa);
         },
         getTextInVoiceReadMessageHistoryChannelPermissionText: function (e) {
-            return e ? o.intl.format(o.t.Rx4pbG, { warningHook: a }) : o.intl.string(o.t.cuMfHx);
+            return e ? a.intl.format(a.t.Rx4pbG, { warningHook: o }) : a.intl.string(a.t.cuMfHx);
         }
     };

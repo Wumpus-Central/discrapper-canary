@@ -1,9 +1,9 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(493683),
     i = n(333023),
-    o = n(592125);
-function a(e) {
+    a = n(592125);
+function o(e) {
     if (e !== i.V) return null;
-    let t = o.Z.getChannel(e);
+    let t = a.Z.getChannel(e);
     return null == t ? null : r.Z.ensurePrivateChannel(t.recipients);
 }

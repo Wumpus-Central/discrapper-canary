@@ -1,7 +1,7 @@
-n.d(t, { Z: () => o }), n(388685);
+n.d(t, { Z: () => a }), n(388685);
 var r = n(73800),
     i = n(920103);
-function o(e) {
+function a(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'vertical',
         [n] = (0, r.useState)(
             () =>

@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(784712),
-    a = n(531578),
+    a = n(784712),
+    o = n(531578),
     s = n(388032);
 function l(e, t, n) {
     return (
@@ -59,34 +59,34 @@ function d(e, t) {
 }
 function f(e, t, n) {
     var r;
-    let { rating: a, problem: l, feedback: c } = n;
-    (0, o.Z)({
+    let { rating: o, problem: l, feedback: c } = n;
+    (0, a.Z)({
         problem: null != (r = null == l ? void 0 : l.value) ? r : null,
         summary: e,
         feedback: c,
         guildId: t.guild_id,
         channelId: t.id,
         location: 'Summary divider',
-        rating: a
+        rating: o
     }),
         (0, i.showToast)((0, i.createToast)(s.intl.string(s.t['d9+vQ0']), i.ToastType.SUCCESS));
 }
 function _(e) {
-    let { summary: t, channel: o, rating: s } = e;
+    let { summary: t, channel: a, rating: s } = e;
     null != t &&
-        (s === a.aZ.BAD
+        (s === o.aZ.BAD
             ? (0, i.ZDy)(async () => {
                   let { default: e } = await n.e('62104').then(n.bind(n, 580584));
                   return (n) =>
                       (0, r.jsx)(
                           e,
                           d(c({}, n), {
-                              onSubmit: (e) => f(t, o, e),
+                              onSubmit: (e) => f(t, a, e),
                               startRating: s
                           })
                       );
               })
-            : f(t, o, {
+            : f(t, a, {
                   rating: s,
                   problem: null,
                   feedback: '',

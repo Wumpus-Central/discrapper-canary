@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = function (e, t) {
         switch (e) {
             case 'P':
@@ -23,13 +23,13 @@ var r = function (e, t) {
                 return t.time({ width: 'full' });
         }
     },
-    o = function (e, t) {
+    a = function (e, t) {
         var n,
-            o = e.match(/(P+)(p+)?/) || [],
-            a = o[1],
-            s = o[2];
+            a = e.match(/(P+)(p+)?/) || [],
+            o = a[1],
+            s = a[2];
         if (!s) return r(e, t);
-        switch (a) {
+        switch (o) {
             case 'P':
                 n = t.dateTime({ width: 'short' });
                 break;
@@ -42,9 +42,9 @@ var r = function (e, t) {
             default:
                 n = t.dateTime({ width: 'full' });
         }
-        return n.replace('{{date}}', r(a, t)).replace('{{time}}', i(s, t));
+        return n.replace('{{date}}', r(o, t)).replace('{{time}}', i(s, t));
     };
-let a = {
+let o = {
     p: i,
-    P: o
+    P: a
 };

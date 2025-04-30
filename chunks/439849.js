@@ -8,8 +8,8 @@ n.d(t, {
     n(539854),
     n(642613);
 var i = n(392711),
-    o = n.n(i),
-    a = n(579806),
+    a = n.n(i),
+    o = n(579806),
     s = n(710845),
     l = n(358085),
     c = n(998502);
@@ -39,9 +39,9 @@ async function h() {
         new s.Z('GamesActionCreators').error('could not load discord_game_utils', e);
     }
     if ((0, l.isWindows)()) {
-        let e = a.Z.process.env;
+        let e = o.Z.process.env;
         _(e.LOCALAPPDATA), _(e['PROGRAMFILES(X86)']), _(e.PROGRAMFILES), _(e.PROGRAMW6432), _(e.PROGRAMDATA), _('/games/'), _('/steamlibrary/steamapps/common/');
     }
-    let e = a.Z.remoteApp.getPath;
-    return _(await e('home')), _(await e('appData')), _(await e('desktop')), _(await e('documents')), _(await e('downloads')), (u = o().uniq(u)).sort((e, t) => t.length - e.length), r;
+    let e = o.Z.remoteApp.getPath;
+    return _(await e('home')), _(await e('appData')), _(await e('desktop')), _(await e('documents')), _(await e('downloads')), (u = a().uniq(u)).sort((e, t) => t.length - e.length), r;
 }

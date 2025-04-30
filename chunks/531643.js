@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(952265),
+    a = n.n(i),
+    o = n(952265),
     s = n(466377),
     l = n(313201),
     c = n(355314),
@@ -43,21 +43,21 @@ function p(e) {
     return e;
 }
 function h(e) {
-    let { title: t, help: n, showPremiumUpsell: i, transitionState: a, icons: _, fileSize: p, onClose: h } = e,
+    let { title: t, help: n, showPremiumUpsell: i, transitionState: o, icons: _, fileSize: p, onClose: h } = e,
         m = (0, l.Dt)(),
         g = null != _ ? _ : d.J6;
     return i
         ? (0, r.jsx)(c.Z, {
-              transitionState: a,
+              transitionState: o,
               onClose: h,
               fileSize: p
           })
         : (0, r.jsx)(s.Y0, {
               size: s.Cg.DYNAMIC,
               'aria-labelledby': m,
-              transitionState: a,
+              transitionState: o,
               children: (0, r.jsx)('div', {
-                  className: o()(f.uploadDropModal, f.error),
+                  className: a()(f.uploadDropModal, f.error),
                   children: (0, r.jsxs)('div', {
                       className: f.inner,
                       children: [
@@ -78,5 +78,5 @@ function h(e) {
 }
 let m = 'UPLOAD_ERROR_MODAL_KEY';
 function g(e) {
-    (0, a.h7)((t) => (0, r.jsx)(h, p({}, t, e)), { modalKey: m });
+    (0, o.h7)((t) => (0, r.jsx)(h, p({}, t, e)), { modalKey: m });
 }

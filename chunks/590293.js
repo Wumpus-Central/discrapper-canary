@@ -1,6 +1,6 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(442837),
     i = n(258609);
-function o() {
+function a() {
     return (0, r.e7)([i.Z], () => null != i.Z.getRemoteSessionId() || null != i.Z.getAwaitingRemoteSessionInfo());
 }

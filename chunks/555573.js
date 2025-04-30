@@ -10,8 +10,8 @@ n.d(t, {
     n(388685);
 var r = n(512722),
     i = n.n(r),
-    o = n(544891),
-    a = n(570140),
+    a = n(544891),
+    o = n(570140),
     s = n(911969),
     l = n(314897),
     c = n(709054),
@@ -19,15 +19,15 @@ var r = n(512722),
     d = n(895924),
     f = n(981631);
 function _(e) {
-    let { channelId: t, command: n, section: r, location: o, initialValues: s, triggerSection: l, queryLength: c, sectionName: u, query: f, searchResultsPosition: _, source: p, commandOrigin: h } = e;
+    let { channelId: t, command: n, section: r, location: a, initialValues: s, triggerSection: l, queryLength: c, sectionName: u, query: f, searchResultsPosition: _, source: p, commandOrigin: h } = e;
     null != n && i()(n.inputType !== d.iw.PLACEHOLDER, 'command should not be placeholder'),
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'APPLICATION_COMMAND_SET_ACTIVE_COMMAND',
             channelId: t,
             command: n,
             section: r,
             initialValues: s,
-            location: o,
+            location: a,
             triggerSection: l,
             queryLength: c,
             sectionName: u,
@@ -38,14 +38,14 @@ function _(e) {
         });
 }
 function p(e, t) {
-    a.Z.dispatch({
+    o.Z.dispatch({
         type: 'APPLICATION_COMMAND_SET_PREFERRED_COMMAND',
         channelId: e,
         commandId: t
     });
 }
 function h(e, t) {
-    a.Z.dispatch({
+    o.Z.dispatch({
         type: 'APPLICATION_COMMAND_UPDATE_OPTIONS',
         channelId: e,
         changedOptionStates: t
@@ -63,7 +63,7 @@ function m(e, t) {
     );
 }
 function g(e, t, n, r) {
-    return o.tn.put({
+    return a.tn.put({
         body: { permissions: r },
         url: f.ANM.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n),
         rejectWithError: !1
@@ -75,7 +75,7 @@ function E(e, t, n) {
     let { query: d, name: _ } = t.autocomplete,
         p = c.default.fromTimestamp(Date.now());
     null != t.channel &&
-        (a.Z.dispatch({
+        (o.Z.dispatch({
             type: 'APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST',
             nonce: p,
             channelId: t.channel.id,
@@ -83,7 +83,7 @@ function E(e, t, n) {
             name: _
         }),
         null == u.Z.getAutocompleteChoices(t.channel.id, _, d) &&
-            o.tn
+            a.tn
                 .post({
                     url: f.ANM.INTERACTIONS,
                     body: {
@@ -99,7 +99,7 @@ function E(e, t, n) {
                     rejectWithError: !0
                 })
                 .catch(() => {
-                    a.Z.dispatch({
+                    o.Z.dispatch({
                         type: 'INTERACTION_FAILURE',
                         nonce: p
                     });

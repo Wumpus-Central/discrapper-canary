@@ -7,16 +7,16 @@ n.r(t),
         GlobalDiscoveryAnalyticsLocations: () => f,
         GlobalDiscoveryRoutes: () => d,
         GlobalDiscoverySearchBarState: () => u,
-        GlobalDiscoverySharedTabId: () => a,
+        GlobalDiscoverySharedTabId: () => o,
         GlobalDiscoveryTab: () => r,
-        MOBILE_GLOBAL_DISCOVERY_TABS: () => o
+        MOBILE_GLOBAL_DISCOVERY_TABS: () => a
     });
 var r = (function (e) {
     return (e.SERVERS = 'servers'), (e.QUESTS = 'quests'), (e.APPS = 'apps'), e;
 })({});
 let i = ['apps', 'servers', 'quests'],
-    o = ['servers', 'quests'];
-var a = (function (e) {
+    a = ['servers', 'quests'];
+var o = (function (e) {
     return (e.MORE = 'More'), e;
 })({});
 let s = 'servers',

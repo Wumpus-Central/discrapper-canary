@@ -2,8 +2,8 @@ n.d(t, { Z: () => h }), n(472816), n(794429);
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(373793),
+    a = n.n(i),
+    o = n(373793),
     s = n(243814),
     l = n(993365),
     c = n(481060),
@@ -20,12 +20,12 @@ function p(e) {
                 ? (0, r.jsx)(c.k$p, {
                       size: 'md',
                       color: 'currentColor',
-                      className: o()(_.icon, _.fakeScopeIcon)
+                      className: a()(_.icon, _.fakeScopeIcon)
                   })
                 : (0, r.jsx)(c.owK, {
                       size: 'md',
                       color: 'currentColor',
-                      className: o()(_.icon, _.scopeIcon)
+                      className: a()(_.icon, _.scopeIcon)
                   }),
             (0, r.jsxs)('div', {
                 className: _.scopeInner,
@@ -54,9 +54,9 @@ function h(e) {
     if (0 === i.length) return null;
     let y = b(),
         O = g ? f.t.PZpY9f : f.t['1Hz+Sk'],
-        v = h === a.Y.USER_INSTALL && l.includes(s.x.APPLICATIONS_COMMANDS);
+        v = h === o.Y.USER_INSTALL && l.includes(s.x.APPLICATIONS_COMMANDS);
     return (0, r.jsxs)('div', {
-        className: o()(_.scopes, E ? _.noDivider : void 0),
+        className: a()(_.scopes, E ? _.noDivider : void 0),
         children: [
             (0, r.jsx)(c.X6q, {
                 variant: 'heading-sm/normal',

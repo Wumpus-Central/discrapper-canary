@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(442837),
     i = n(147913),
-    o = n(460181),
-    a = n(592125),
+    a = n(460181),
+    o = n(592125),
     s = n(131951),
     l = n(944486),
     c = n(979651),
@@ -31,14 +31,14 @@ function h(e, t, n) {
 }
 let m = (e) => e / 400,
     g = !1,
-    E = (0, o.tu)('stage_waiting', 'stage_waiting', m(s.Z.getOutputVolume()));
+    E = (0, a.tu)('stage_waiting', 'stage_waiting', m(s.Z.getOutputVolume()));
 function b() {
     let e = l.Z.getVoiceChannelId();
     if (null == e) {
         E.stop(), (g = !1);
         return;
     }
-    let t = a.Z.getChannel(e);
+    let t = o.Z.getChannel(e);
     if (!(null == t ? void 0 : t.isGuildStageVoice()) || s.Z.isSelfDeaf()) {
         E.stop(), (g = !1);
         return;
@@ -74,7 +74,7 @@ class v extends i.Z {
     handleVoiceChannelSelect(e) {
         let { channelId: t } = e;
         if (null != t) {
-            let e = a.Z.getChannel(t);
+            let e = o.Z.getChannel(t);
             (null == e ? void 0 : e.isGuildStageVoice()) ? b() : (E.stop(), (g = !1));
         } else E.stop(), (g = !1);
     }

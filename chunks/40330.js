@@ -5,9 +5,9 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(112456),
-    s = n.n(a),
+    a = n.n(i),
+    o = n(112456),
+    s = n.n(o),
     l = n(481060),
     c = n(403182),
     u = n(388032),
@@ -15,16 +15,16 @@ var i = n(120356),
 let f = (e) => {
         let { filename: t } = e,
             i = (0, c.uV)(t),
-            o = n(148660)('./icon-file-'.concat(i, '.svg'));
+            a = n(148660)('./icon-file-'.concat(i, '.svg'));
         return (0, r.jsx)('img', {
             className: d.icon,
-            src: o,
+            src: a,
             alt: u.intl.formatToPlainString(u.t.g6KdFh, { fileType: i }),
             title: i
         });
     },
     _ = (e) => {
-        let { filename: t, size: n, progress: i, onCancelUpload: o, onClick: a, onContextMenu: c } = e,
+        let { filename: t, size: n, progress: i, onCancelUpload: a, onClick: o, onContextMenu: c } = e,
             _ = 100 === i,
             p = !_ && n > 0;
         return (0, r.jsx)('div', {
@@ -41,7 +41,7 @@ let f = (e) => {
                                 children: [
                                     (0, r.jsx)(l.P3F, {
                                         className: d.filename,
-                                        onClick: a,
+                                        onClick: o,
                                         onContextMenu: c,
                                         children: t
                                     }),
@@ -67,7 +67,7 @@ let f = (e) => {
                     _
                         ? null
                         : (0, r.jsx)(l.P3F, {
-                              onClick: o,
+                              onClick: a,
                               children: (0, r.jsx)(l.Dio, {
                                   size: 'md',
                                   color: 'currentColor',
@@ -79,9 +79,9 @@ let f = (e) => {
         });
     },
     p = (e) => {
-        let { className: t, url: n, fileName: i, fileSize: a, onClick: c, onContextMenu: u, renderAdjacentContent: _ } = e;
+        let { className: t, url: n, fileName: i, fileSize: o, onClick: c, onContextMenu: u, renderAdjacentContent: _ } = e;
         return (0, r.jsxs)('div', {
-            className: o()(d.fileWrapper, t),
+            className: a()(d.fileWrapper, t),
             children: [
                 (0, r.jsxs)('div', {
                     className: d.file,
@@ -103,7 +103,7 @@ let f = (e) => {
                                 (0, r.jsx)(l.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'text-muted',
-                                    children: s().filesize(a)
+                                    children: s().filesize(o)
                                 })
                             ]
                         })

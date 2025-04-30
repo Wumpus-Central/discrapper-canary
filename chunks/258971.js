@@ -13,8 +13,8 @@ n.d(t, {
     n(388685);
 var r = n(114858),
     i = n(972959),
-    o = n(703656),
-    a = n(370210),
+    a = n(703656),
+    o = n(370210),
     s = n(216780),
     l = n(979007),
     c = n(981631),
@@ -34,14 +34,14 @@ let _ = (0, i.H)(() => ({
 function p() {
     let {
         location: { state: e }
-    } = (0, o.s1)();
+    } = (0, a.s1)();
     return null == e ? void 0 : e.previousView;
 }
 function h() {
     var e, t, n;
     let {
         location: { pathname: i, search: u }
-    } = (0, o.s1)();
+    } = (0, a.s1)();
     if (
         null !=
         (0, r.LX)(i, {
@@ -82,7 +82,7 @@ function h() {
         }),
         { applicationId: p, section: h, skuId: m } = null != (t = null == _ ? void 0 : _.params) ? t : {};
     if (null != _ && null != p) {
-        let e = null == (n = a.Z.getApplication(p)) ? void 0 : n.name;
+        let e = null == (n = o.Z.getApplication(p)) ? void 0 : n.name;
         return {
             type: 'application',
             applicationId: p,

@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481752),
+    a = n.n(i),
+    o = n(481752),
     s = n(481060),
     l = n(527018);
 let c = Object.freeze({
@@ -37,12 +37,12 @@ function d(e) {
             n || document.hasFocus() ? 'animate-always' : 'animate-never'
         );
     return (0, r.jsx)('div', {
-        className: o()(f, l.wrapper),
+        className: a()(f, l.wrapper),
         'aria-hidden': !0,
         children: p(
             (e, t) =>
                 t &&
-                (0, r.jsx)(a.animated.span, {
+                (0, r.jsx)(o.animated.span, {
                     className: l.item,
                     style: e
                 })

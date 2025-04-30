@@ -7,8 +7,8 @@ n.d(t, {
     n(642613),
     n(583741);
 var i,
-    o = n(392711),
-    a = n.n(o),
+    a = n(392711),
+    o = n.n(a),
     s = n(697988),
     l = n(683860),
     c = n(442837),
@@ -82,15 +82,15 @@ function M() {
     let e = !I,
         t = p.Z.getChannel(N[N.length - 1]),
         n = null == t ? null : w(t, A);
-    N = a()(p.Z.getAllThreadsForParent(T))
+    N = o()(p.Z.getAllThreadsForParent(T))
         .filter((e) => e.isArchivedThread())
         .filter((t) => {
             if (0 !== r.size) {
-                var i, o;
+                var i, a;
                 if (R === s.z.MATCH_SOME) {
                     if ((null == (i = t.appliedTags) ? void 0 : i.some((e) => r.has(e))) !== !0) return !1;
                 } else if (R === s.z.MATCH_ALL) {
-                    for (let e of r.values()) if ((null == (o = t.appliedTags) ? void 0 : o.includes(e)) !== !0) return !1;
+                    for (let e of r.values()) if ((null == (a = t.appliedTags) ? void 0 : a.includes(e)) !== !0) return !1;
                 }
             }
             if (e || null == n) return !0;

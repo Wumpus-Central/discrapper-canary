@@ -13,10 +13,10 @@ function r(e, t, n) {
 }
 n.d(t, { Z: () => s }), n(290780), n(539854);
 let i = null == n.g.__getTotalRequireTime ? () => 0 : () => n.g.__getTotalRequireTime(),
-    o = 'undefined' != typeof performance;
-class a {
+    a = 'undefined' != typeof performance;
+class o {
     get isTracing() {
-        return !!o && !!this.isTracing_ && (!(Date.now() > this.endTime_) || ((this.isTracing_ = !1), !1));
+        return !!a && !!this.isTracing_ && (!(Date.now() > this.endTime_) || ((this.isTracing_ = !1), !1));
     }
     get endTime() {
         return this.endTime_;
@@ -69,16 +69,16 @@ class a {
     markAt(e, t, n) {
         var r, i;
         if (!this.isTracing) return;
-        let o = 0;
-        for (; o < this.logs.length; o++) {
-            let { timestamp: e } = this.logs[o];
+        let a = 0;
+        for (; a < this.logs.length; a++) {
+            let { timestamp: e } = this.logs[a];
             if (null != e && e > n) break;
         }
-        this.logs.splice(o, 0, {
+        this.logs.splice(a, 0, {
             emoji: e,
             log: t,
             timestamp: n,
-            prefix: null != (i = null == (r = this.logs[o]) ? void 0 : r.prefix) ? i : ''
+            prefix: null != (i = null == (r = this.logs[a]) ? void 0 : r.prefix) ? i : ''
         });
     }
     addDetail(e, t) {
@@ -94,17 +94,17 @@ class a {
         let r = this.prefix;
         this.mark(e, 'Start '.concat(t)), (this.prefix += '| ');
         let i = Date.now(),
-            o = n(),
-            a = Date.now() - i;
-        return (this.prefix = r), this.mark(e, 'Finish '.concat(t), a), o;
+            a = n(),
+            o = Date.now() - i;
+        return (this.prefix = r), this.mark(e, 'Finish '.concat(t), o), a;
     }
     async timeAsync(e, t, n) {
         if (!this.isTracing) return n();
         this.mark(e, 'Start '.concat(t));
         let r = Date.now(),
             i = await n(),
-            o = Date.now() - r;
-        return this.mark(e, 'Finish '.concat(t), o), i;
+            a = Date.now() - r;
+        return this.mark(e, 'Finish '.concat(t), a), i;
     }
     setServerTrace(e) {
         this.logGroups[0].serverTrace = e;
@@ -125,4 +125,4 @@ class a {
             r(this, 'prefix', '');
     }
 }
-let s = new a();
+let s = new o();

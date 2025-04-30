@@ -5,15 +5,15 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    o = n(481060),
     s = n(388032),
     l = n(315116);
 let c = (e) => {
         let { className: t, onClick: n, children: i } = e;
-        return (0, r.jsx)(a.eee, {
+        return (0, r.jsx)(o.eee, {
             onClick: n,
-            className: o()(l.link, t),
+            className: a()(l.link, t),
             children: i
         });
     },

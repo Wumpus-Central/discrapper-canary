@@ -14,8 +14,8 @@ n.d(t, {
     n(781311);
 var r = n(392711),
     i = n.n(r),
-    o = n(31775),
-    a = n.n(o);
+    a = n(31775),
+    o = n.n(a);
 n(711739);
 var s = n(159635),
     l = n.n(s),
@@ -75,18 +75,18 @@ function m(e, t) {
         e
     );
 }
-let g = new (a())({ max: 50 });
+let g = new (o())({ max: 50 });
 function E(e) {
     let t = e,
         n = g.get(t);
     if (null != n) return n;
     let r = (0, f.yx)(e),
         i = (0, f.zq)(r),
-        o = {
+        a = {
             whitespaceSanitized: r,
             fullySanitized: i
         };
-    return g.set(t, o), o;
+    return g.set(t, a), a;
 }
 let b = ['http:', 'https:', 'discord:', 'tel:', 'sms:', 'mailto:'],
     y = [d.b.TEXT, d.b.UNDERLINE, d.b.STRONG, d.b.ITALICS, d.b.STRIKETHROUGH, d.b.INLINE_CODE, d.b.SPOILER, d.b.LINE_BREAK, d.b.TIMESTAMP],
@@ -153,10 +153,10 @@ function N(e) {
         if (('http:' === r || 'https:' === r) && (null == n.hostname || 0 === n.hostname.length)) throw Error('no hostname');
         let i = (0, f.MO)(n);
         (n.username = ''), (n.password = '');
-        let o = (0, f.MO)(n);
+        let a = (0, f.MO)(n);
         return {
             target: i,
-            displayTarget: o
+            displayTarget: a
         };
     } catch (e) {
         return null;
@@ -165,22 +165,22 @@ function N(e) {
 let C = m(p({}, l().defaultRules.link), {
     match: (e, t, n) => (t.allowLinks ? l().defaultRules.link.match(e, t, n) : null),
     parse(e, t, n) {
-        let [r, o, a, s] = e,
+        let [r, a, o, s] = e,
             u = () => ({
                 type: d.b.TEXT,
                 content: r
             }),
-            f = E(a),
-            _ = E(o),
+            f = E(o),
+            _ = E(a),
             h = E(null != s ? s : ''),
             g = f.whitespaceSanitized,
             b = _.fullySanitized,
             C = h.fullySanitized,
             R = b.trim();
         if (0 === g.trim().length || 0 === R.length) return u();
-        let P = N(l().unescapeUrl(a)),
+        let P = N(l().unescapeUrl(o)),
             w = null == P,
-            D = (0, c.ZP)(o).length > 0 || (0, c.ZP)(s).length > 0;
+            D = (0, c.ZP)(a).length > 0 || (0, c.ZP)(s).length > 0;
         if (w || D) return u();
         let L = m(p({}, n), {
                 allowEscape: !1,

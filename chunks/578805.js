@@ -1,10 +1,10 @@
 var r = n(444675),
     i = n(670575),
-    o = n(165593);
+    a = n(165593);
 if (n(738146)() || n(247131)()) {
-    var a = Symbol.iterator;
+    var o = Symbol.iterator;
     e.exports = function (e) {
-        return null != e && void 0 !== e[a] ? e[a]() : i(e) ? Array.prototype[a].call(e) : void 0;
+        return null != e && void 0 !== e[o] ? e[o]() : i(e) ? Array.prototype[o].call(e) : void 0;
     };
 } else {
     var s = n(189612),
@@ -71,7 +71,7 @@ if (n(738146)() || n(247131)()) {
             A = f('Set.prototype.@@iterator', !0) || f('Set.prototype._es6-shim iterator_', !0),
             N = function (e) {
                 if (b(e)) {
-                    if (I) return o(I(e));
+                    if (I) return a(I(e));
                     if (T) return T(e);
                     if (O) {
                         var t = [];
@@ -84,7 +84,7 @@ if (n(738146)() || n(247131)()) {
                     }
                 }
                 if (y(e)) {
-                    if (S) return o(S(e));
+                    if (S) return a(S(e));
                     if (A) return A(e);
                     if (v) {
                         var n = [];

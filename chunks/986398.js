@@ -1,15 +1,15 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(255367),
     i = n(81063),
-    o = n(388032);
-function a(e) {
+    a = n(388032);
+function o(e) {
     let { leaderboard: t, className: n } = e,
-        a = (0, i.xF)(t.settings.application_id, t.settings.winner_asset_id);
-    return null == a
+        o = (0, i.xF)(t.settings.application_id, t.settings.winner_asset_id);
+    return null == o
         ? null
         : (0, r.jsx)('img', {
               className: n,
-              src: a,
-              alt: o.intl.string(o.t.QyRmzc)
+              src: o,
+              alt: a.intl.string(a.t.QyRmzc)
           });
 }

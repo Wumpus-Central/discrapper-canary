@@ -8,8 +8,8 @@ n.d(t, {
     n(388685);
 var r = n(73800),
     i = n(760907),
-    o = n(519772),
-    a = n(731965);
+    a = n(519772),
+    o = n(731965);
 function s(e, t, n) {
     return (
         t in e
@@ -69,7 +69,7 @@ let d = { base: n(358085).isPlatformEmbedded ? void 0 : 'Discord' },
         onlyWhenBlurred: !1,
         interval: 1000
     },
-    p = (0, o.F)(() => ({
+    p = (0, a.F)(() => ({
         titles: [d],
         notificationCount: void 0,
         flashQueue: []
@@ -87,17 +87,17 @@ function m(e) {
     return null == t || 0 === t ? '' : t < 0 ? '\u2022 ' : '('.concat(t, ') ');
 }
 function g(e) {
-    (0, a.j)(() => p.setState({ notificationCount: e }));
+    (0, o.j)(() => p.setState({ notificationCount: e }));
 }
 function E(e) {
     return (
-        (0, a.j)(() =>
+        (0, o.j)(() =>
             p.setState((t) => ({
                 titles: [e, ...t.titles]
             }))
         ),
         () => {
-            (0, a.j)(() => p.setState((t) => ({ titles: t.titles.filter((t) => t !== e) })));
+            (0, o.j)(() => p.setState((t) => ({ titles: t.titles.filter((t) => t !== e) })));
         }
     );
 }
@@ -132,25 +132,25 @@ function S() {
                 r = m(e);
             return [''.concat(r).concat(n), t[0]];
         }, i.X),
-        [n, o] = r.useState(!1),
-        a = r.useRef(0),
-        s = null == t ? void 0 : t.messages[a.current % t.messages.length];
+        [n, a] = r.useState(!1),
+        o = r.useRef(0),
+        s = null == t ? void 0 : t.messages[o.current % t.messages.length];
     return (
         r.useEffect(() => {
             if (null == t) {
-                (a.current = 0), o(!1);
+                (o.current = 0), a(!1);
                 return;
             }
             if (document.hasFocus() && t.onlyWhenBlurred) {
-                y(t.id), o(!1);
+                y(t.id), a(!1);
                 return;
             }
             let e = setInterval(() => {
-                if (a.current >= t.count) {
-                    y(t.id), o(!1);
+                if (o.current >= t.count) {
+                    y(t.id), a(!1);
                     return;
                 }
-                o((e) => !e || ((a.current += 1), !1));
+                a((e) => !e || ((o.current += 1), !1));
             }, t.interval);
             return () => clearInterval(e);
         }, [t]),

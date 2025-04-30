@@ -4,11 +4,11 @@ n.d(t, {
     Kk: () => i,
     Nv: () => _,
     P9: () => g,
-    Vj: () => o,
+    Vj: () => a,
     _c: () => p,
     mX: () => d,
     oY: () => E,
-    qo: () => a
+    qo: () => o
 });
 var r = n(444675);
 function i(e, t) {
@@ -20,12 +20,12 @@ function i(e, t) {
         i = n.createElement('a');
     return n.head.appendChild(r), n.body.appendChild(i), t && (r.href = t), (i.href = e), i.href;
 }
-let o = (() => {
+let a = (() => {
     let e = 0,
         t = () => `0000${((1679616 * Math.random()) << 0).toString(36)}`.slice(-4);
     return () => ((e += 1), `u${t()}${e}`);
 })();
-function a(e) {
+function o(e) {
     let t = [];
     for (let n = 0, r = e.length; n < r; n++) t.push(e[n]);
     return t;
@@ -71,9 +71,9 @@ function p(e, t = {}) {
             : (n) => {
                   let r = window.atob(e.toDataURL(t.type ? t.type : void 0, t.quality ? t.quality : void 0).split(',')[1]),
                       i = r.length,
-                      o = new Uint8Array(i);
-                  for (let e = 0; e < i; e += 1) o[e] = r.charCodeAt(e);
-                  n(new Blob([o], { type: t.type ? t.type : 'image/png' }));
+                      a = new Uint8Array(i);
+                  for (let e = 0; e < i; e += 1) a[e] = r.charCodeAt(e);
+                  n(new Blob([a], { type: t.type ? t.type : 'image/png' }));
               }
     );
 }
@@ -92,8 +92,8 @@ async function m(e) {
 async function g(e, t, n) {
     let r = 'http://www.w3.org/2000/svg',
         i = document.createElementNS(r, 'svg'),
-        o = document.createElementNS(r, 'foreignObject');
-    return i.setAttribute('width', `${t}`), i.setAttribute('height', `${n}`), i.setAttribute('viewBox', `0 0 ${t} ${n}`), o.setAttribute('width', '100%'), o.setAttribute('height', '100%'), o.setAttribute('x', '0'), o.setAttribute('y', '0'), o.setAttribute('externalResourcesRequired', 'true'), i.appendChild(o), o.appendChild(e), m(i);
+        a = document.createElementNS(r, 'foreignObject');
+    return i.setAttribute('width', `${t}`), i.setAttribute('height', `${n}`), i.setAttribute('viewBox', `0 0 ${t} ${n}`), a.setAttribute('width', '100%'), a.setAttribute('height', '100%'), a.setAttribute('x', '0'), a.setAttribute('y', '0'), a.setAttribute('externalResourcesRequired', 'true'), i.appendChild(a), a.appendChild(e), m(i);
 }
 let E = (e, t) => {
     if (e instanceof t) return !0;

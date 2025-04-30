@@ -1,8 +1,8 @@
 n.d(t, { Z: () => w }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(442837),
     l = n(481060),
     c = n(179360),
@@ -79,8 +79,8 @@ function R(e, t) {
         r,
         i = P(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -89,12 +89,12 @@ function P(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let w = (e) => {
-    let { analyticsLocation: t, analyticsSourceLocation: n, guild: o, buttonText: T, targetBoostedGuildTier: N, onClose: P = () => {}, closeLayer: w = () => {}, pauseAnimation: D = !1, applicationId: L, handleSubscribeModalClose: x, withHighlight: M = !1, icon: k, intent: j } = e,
+    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: T, targetBoostedGuildTier: N, onClose: P = () => {}, closeLayer: w = () => {}, pauseAnimation: D = !1, applicationId: L, handleSubscribeModalClose: x, withHighlight: M = !1, icon: k, intent: j } = e,
         U = R(e, ['analyticsLocation', 'analyticsSourceLocation', 'guild', 'buttonText', 'targetBoostedGuildTier', 'onClose', 'closeLayer', 'pauseAnimation', 'applicationId', 'handleSubscribeModalClose', 'withHighlight', 'icon', 'intent']),
         { analyticsLocations: G } = (0, d.ZP)(),
         B = (0, u.bp)() === O.IlC.POPOUT,
@@ -104,7 +104,7 @@ let w = (e) => {
         Y = (0, p.y)('guild_boosting_subscribe_button', Z, H);
     g.Z.hasFetched || (0, c.X8)();
     let W = (0, b.vx)(g.Z.boostSlots),
-        K = null != N ? Math.max((0, b.KK)(o, N), 1) : 1,
+        K = null != N ? Math.max((0, b.KK)(a, N), 1) : 1,
         z = (0, b.aq)({ isBoostManagementDisabledForFractionalPremium: Y }),
         q = async () => {
             F(!0),
@@ -112,7 +112,7 @@ let w = (e) => {
                     analyticsLocations: G,
                     analyticsLocation: t,
                     analyticsSourceLocation: n,
-                    guild: o,
+                    guild: a,
                     numberOfBoostsToAdd: K,
                     onClose: P,
                     closeLayer: w,
@@ -166,7 +166,7 @@ let w = (e) => {
         : (0, r.jsx)(
               l.gtL,
               C(A({ size: l.zxk.Sizes.SMALL }, U), {
-                  className: a()(U.className, { [S.buttonHighlighted]: M }),
+                  className: o()(U.className, { [S.buttonHighlighted]: M }),
                   submitting: V,
                   onClick: q,
                   pauseAnimation: D,

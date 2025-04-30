@@ -19,8 +19,8 @@ n.d(t, {
     n(997841);
 var r = n(512722),
     i = n.n(r),
-    o = n(261470),
-    a = n(47770),
+    a = n(261470),
+    o = n(47770),
     s = n(710845),
     l = n(857192),
     c = n(70956),
@@ -155,7 +155,7 @@ function P(e) {
 var w = (function (e) {
     return (e.Connecting = 'connecting'), (e.Connect = 'connect'), (e.Disconnect = 'disconnect'), (e.Resuming = 'resuming'), (e.Ready = 'ready'), (e.Speaking = 'speaking'), (e.Video = 'video'), (e.Ping = 'ping'), (e.ClientConnect = 'client-connect'), (e.ClientDisconnect = 'client-disconnect'), (e.Codecs = 'codecs'), (e.MediaSessionId = 'media-session-id'), (e.MediaSinkWants = 'media-sink-wants'), (e.VoiceBackendVersion = 'voice-backend-version'), (e.KeyframeInterval = 'keyframe-interval'), (e.ChannelOptionsUpdateSecureFramesProtocol = 'update-secure-frames-protocol'), (e.Flags = 'flags'), (e.Platform = 'platform'), (e.SDP = 'sdp'), (e.Encryption = 'encryption'), (e.BandwidthEstimationExperiment = 'bandwidth-estimation-experiment'), (e.SecureFramesInit = 'secure-frames-init'), (e.SecureFramesPrepareTransition = 'secure-frames-prepare-transition'), (e.SecureFramesExecuteTransition = 'secure-frames-execute-transition'), (e.SecureFramesPrepareEpoch = 'secure-frames-prepare-epoch'), (e.MLSExternalSenderPackage = 'mls-external-sender-package'), (e.MLSProposals = 'mls-proposals'), (e.MLSPrepareCommitTransition = 'mls-prepare-commit-transition'), (e.MLSWelcome = 'mls-welcome'), e;
 })({});
-class D extends a.Z {
+class D extends o.Z {
     createWebSocket() {
         this.logger.info('[CONNECT] '.concat(this.url)),
             null !== this.webSocket && (this.logger.error('Connect called with already existing websocket'), this.cleanupWebSocket((e) => e.close(4000))),
@@ -415,7 +415,7 @@ class D extends a.Z {
         return 0 !== this.connectionState ? (this.logger.error('Cannot start a new connection, connection state is not disconnected'), !1) : ((this.connectionState = 1), this.createWebSocket(), this.emit('connecting'), !0);
     }
     identify(e) {
-        let { serverId: t, userId: n, sessionId: r, token: i, maxDaveProtocolVersion: o, video: a = !1, streamParameters: s } = e;
+        let { serverId: t, userId: n, sessionId: r, token: i, maxDaveProtocolVersion: a, video: o = !1, streamParameters: s } = e;
         (this.serverId = t),
             (this.sessionId = r),
             (this.token = i),
@@ -425,8 +425,8 @@ class D extends a.Z {
                 user_id: n,
                 session_id: r,
                 token: i,
-                max_dave_protocol_version: o,
-                video: a,
+                max_dave_protocol_version: a,
+                video: o,
                 streams: C(s)
             });
     }
@@ -459,12 +459,12 @@ class D extends a.Z {
     }
     selectProtocol(e, t, n, r) {
         let i,
-            o = {};
+            a = {};
         null == n
             ? (i = null)
             : 'sdp' in n && null != n.sdp && '' !== n.sdp
               ? ((i = n.sdp),
-                (o = h(_({}, n), {
+                (a = h(_({}, n), {
                     codecs: N(n.codecs),
                     rtc_connection_id: t
                 })))
@@ -479,7 +479,7 @@ class D extends a.Z {
                     port: n.port,
                     mode: n.mode
                 }),
-                (o = h(_({}, n), {
+                (a = h(_({}, n), {
                     codecs: N(n.codecs),
                     rtc_connection_id: t,
                     experiments: r
@@ -491,7 +491,7 @@ class D extends a.Z {
                         protocol: e,
                         data: i
                     },
-                    o
+                    a
                 )
             );
     }
@@ -537,6 +537,6 @@ class D extends a.Z {
         this.heartbeatIntervalModifier = e;
     }
     constructor(e, t = d.Yn.DEFAULT) {
-        super(), f(this, 'url', void 0), f(this, 'logger', void 0), f(this, 'backoff', new o.Z(1000, 5000)), f(this, 'webSocket', void 0), f(this, 'connectionState', void 0), f(this, 'heartbeatInterval', void 0), f(this, 'helloTimeout', void 0), f(this, 'heartbeater', void 0), f(this, 'lastHeartbeatAckTime', void 0), f(this, 'expeditedHeartbeatTimeout', void 0), f(this, 'heartbeatAck', void 0), f(this, 'heartbeatIntervalModifier', void 0), f(this, 'connectionStartTime', void 0), f(this, 'lastRecvSeqNum', void 0), f(this, 'sessionId', void 0), f(this, 'serverId', void 0), f(this, 'token', void 0), f(this, 'resumable', void 0), f(this, 'serverVersion', 0), (this.url = e), (this.logger = new s.Z('RTCControlSocket('.concat(t, ')'))), this.logger.enableNativeLogger(!0), (this.webSocket = null), (this.connectionState = 0), (this.helloTimeout = null), (this.lastHeartbeatAckTime = null), (this.heartbeatInterval = null), (this.heartbeater = null), (this.heartbeatAck = !0), (this.expeditedHeartbeatTimeout = null), (this.heartbeatIntervalModifier = 1), (this.connectionStartTime = 0), (this.lastRecvSeqNum = null), (this.sessionId = null), (this.serverId = null), (this.token = null), (this.resumable = !1);
+        super(), f(this, 'url', void 0), f(this, 'logger', void 0), f(this, 'backoff', new a.Z(1000, 5000)), f(this, 'webSocket', void 0), f(this, 'connectionState', void 0), f(this, 'heartbeatInterval', void 0), f(this, 'helloTimeout', void 0), f(this, 'heartbeater', void 0), f(this, 'lastHeartbeatAckTime', void 0), f(this, 'expeditedHeartbeatTimeout', void 0), f(this, 'heartbeatAck', void 0), f(this, 'heartbeatIntervalModifier', void 0), f(this, 'connectionStartTime', void 0), f(this, 'lastRecvSeqNum', void 0), f(this, 'sessionId', void 0), f(this, 'serverId', void 0), f(this, 'token', void 0), f(this, 'resumable', void 0), f(this, 'serverVersion', 0), (this.url = e), (this.logger = new s.Z('RTCControlSocket('.concat(t, ')'))), this.logger.enableNativeLogger(!0), (this.webSocket = null), (this.connectionState = 0), (this.helloTimeout = null), (this.lastHeartbeatAckTime = null), (this.heartbeatInterval = null), (this.heartbeater = null), (this.heartbeatAck = !0), (this.expeditedHeartbeatTimeout = null), (this.heartbeatIntervalModifier = 1), (this.connectionStartTime = 0), (this.lastRecvSeqNum = null), (this.sessionId = null), (this.serverId = null), (this.token = null), (this.resumable = !1);
     }
 }

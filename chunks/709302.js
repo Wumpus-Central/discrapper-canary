@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(81825);
 function i(e, t, n) {
     return (
@@ -13,9 +13,9 @@ function i(e, t, n) {
         e
     );
 }
-class o extends r.Z {
+class a extends r.Z {
     static fromPath(e) {
-        return new o({
+        return new a({
             id: e,
             path: e
         });
@@ -24,4 +24,4 @@ class o extends r.Z {
         super(), i(this, 'id', void 0), i(this, 'path', void 0), (this.id = e.id), (this.path = e.path);
     }
 }
-let a = o;
+let o = a;

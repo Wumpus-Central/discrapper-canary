@@ -1,8 +1,8 @@
 n.d(t, { L: () => E }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(906280),
     l = n.n(s),
     c = n(186325),
@@ -41,7 +41,7 @@ function m(e) {
     return e;
 }
 function g(e, t) {
-    let { color: o, useLottieDefaultColors: s, src: h, size: g = 'md', width: E, height: b, className: y, initialAnimation: O, initialFrame: v, markers: I, onBeforeDismount: S } = e,
+    let { color: a, useLottieDefaultColors: s, src: h, size: g = 'md', width: E, height: b, className: y, initialAnimation: O, initialFrame: v, markers: I, onBeforeDismount: S } = e,
         [T, A] = i.useState(null),
         N = i.useRef(null),
         C = i.useRef(null),
@@ -100,10 +100,10 @@ function g(e, t) {
                         var t, n;
                         let r,
                             { default: i } = e,
-                            o = 1 === Object.keys(I).length ? Object.values(I)[0].name : void 0,
-                            a = null != (n = null != (t = C.current) ? t : M.current) ? n : o;
-                        if (null != a && null != I[a]) {
-                            let e = I[a];
+                            a = 1 === Object.keys(I).length ? Object.values(I)[0].name : void 0,
+                            o = null != (n = null != (t = C.current) ? t : M.current) ? n : a;
+                        if (null != o && null != I[o]) {
+                            let e = I[o];
                             r = [x ? e.start : null != v ? v : e.start, e.start + e.duration];
                         }
                         null != N.current &&
@@ -126,12 +126,12 @@ function g(e, t) {
         (0, r.jsx)('div', {
             style: m(
                 {
-                    '--__lottieIconColor': null != o && 'string' == typeof o ? o : null == o ? void 0 : o.css,
+                    '--__lottieIconColor': null != a && 'string' == typeof a ? a : null == a ? void 0 : a.css,
                     display: 'flex'
                 },
                 P
             ),
-            className: a()(p.lottieIcon, s ? void 0 : p.lottieIconColors, y),
+            className: o()(p.lottieIcon, s ? void 0 : p.lottieIconColors, y),
             ref: N
         })
     );

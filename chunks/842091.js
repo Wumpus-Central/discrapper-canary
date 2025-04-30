@@ -1,8 +1,8 @@
 n.d(t, { Z: () => c });
 var r = n(159635),
     i = n.n(r),
-    o = n(840498);
-function a(e, t, n) {
+    a = n(840498);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,14 +26,14 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
 }
 function l(e, t, n, r, i) {
-    let a;
-    return n || (t += '\n\n'), (a = e(t, s({ inline: n }, r))), (a = (0, o.ge)(r, a)), (a = (0, o.RA)(a)), null != i && (a = i(a, n)), a;
+    let o;
+    return n || (t += '\n\n'), (o = e(t, s({ inline: n }, r))), (o = (0, a.ge)(r, o)), (o = (0, a.RA)(o)), null != i && (o = i(o, n)), o;
 }
 let c = {
     reactParserFor(e) {
@@ -43,8 +43,8 @@ let c = {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : '',
                 r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                 i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-            return n(l(t, e, r, i, o), i);
+                a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+            return n(l(t, e, r, i, a), i);
         };
     },
     astParserFor(e) {

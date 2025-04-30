@@ -7,7 +7,7 @@ e.exports = function (e) {
         },
         r = /(_[a-z_\d]+)?/,
         i = /([de][+-]?\d+)?/,
-        o = {
+        a = {
             className: 'number',
             variants: [{ begin: t.concat(/\b\d+/, /\.(\d*)/, i, r) }, { begin: t.concat(/\b\d+/, i, r) }, { begin: t.concat(/\.\d+/, i, r) }],
             relevance: 0
@@ -38,7 +38,7 @@ e.exports = function (e) {
             },
             e.COMMENT('!', '$', { relevance: 0 }),
             e.COMMENT('begin_doc', 'end_doc', { relevance: 10 }),
-            o
+            a
         ]
     };
 };

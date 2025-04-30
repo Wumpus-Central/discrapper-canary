@@ -4,9 +4,9 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(73800),
-    o = n(588468);
+    a = n(588468);
 n(419922);
-var a = n(388032);
+var o = n(388032);
 function s(e, t, n) {
     return (
         t in e
@@ -61,9 +61,9 @@ function u(e, t) {
 }
 function d(e) {
     let { titleWithQuery: t, titleWithoutQuery: n, query: i, getQuery: s, headerClassName: l, headerTrailingContent: c } = e,
-        u = i.length > 0 ? a.intl.formatToPlainString(t, { prefix: s(i) }) : n;
+        u = i.length > 0 ? o.intl.formatToPlainString(t, { prefix: s(i) }) : n;
     return (0, r.jsx)(
-        o.ZP.Title,
+        a.ZP.Title,
         {
             className: l,
             title: u,
@@ -73,27 +73,27 @@ function d(e) {
     );
 }
 function f(e) {
-    let { query: t, selectedIndex: n, autocompletes: o, onHover: a, onClick: s, titleWithQuery: c, titleWithoutQuery: f, Component: _, getProps: p, getQuery: h, key: m, indexOffset: g = 0, headerClassName: E, headerTrailingContent: b, footer: y } = e;
-    if (null == y && (null == o || 0 === o.length)) return null;
+    let { query: t, selectedIndex: n, autocompletes: a, onHover: o, onClick: s, titleWithQuery: c, titleWithoutQuery: f, Component: _, getProps: p, getQuery: h, key: m, indexOffset: g = 0, headerClassName: E, headerTrailingContent: b, footer: y } = e;
+    if (null == y && (null == a || 0 === a.length)) return null;
     let O =
-        null == o
+        null == a
             ? void 0
-            : o.map((e, t) => {
+            : a.map((e, t) => {
                   let r = t + g,
-                      o = p(e, r);
+                      a = p(e, r);
                   return (0, i.createElement)(
                       _,
                       u(
                           l(
                               {
                                   onClick: s,
-                                  onHover: a,
+                                  onHover: o,
                                   selected: n === r,
                                   index: r
                               },
-                              o
+                              a
                           ),
-                          { key: o.key }
+                          { key: a.key }
                       )
                   );
               });

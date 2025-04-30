@@ -1,47 +1,47 @@
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.makeDataFormatters = o);
+Object.defineProperty(t, '__esModule', { value: !0 }), (t.makeDataFormatters = a);
 let r = n(692406),
     i = n(141306);
-function o(e, t, n = !1) {
-    function a(e) {
+function a(e, t, n = !1) {
+    function o(e) {
         return n ? Object.assign(Object.assign({}, e), { localeMatcher: 'lookup' }) : e;
     }
     return {
-        formatDate(n, o) {
-            let s = (0, r.resolveFormatConfigOptions)(t.date, o);
-            return i.dataFormatterCache.getDateTimeFormatter(e, a(s)).format(n);
+        formatDate(n, a) {
+            let s = (0, r.resolveFormatConfigOptions)(t.date, a);
+            return i.dataFormatterCache.getDateTimeFormatter(e, o(s)).format(n);
         },
-        formatDuration(n, o) {
-            let s = (0, r.resolveFormatConfigOptions)(t.time, o);
-            return i.dataFormatterCache.getDurationFormatter(e, a(s)).format(n);
+        formatDuration(n, a) {
+            let s = (0, r.resolveFormatConfigOptions)(t.time, a);
+            return i.dataFormatterCache.getDurationFormatter(e, o(s)).format(n);
         },
-        formatNumber(n, o) {
-            let s = (0, r.resolveFormatConfigOptions)(t.number, o);
-            return i.dataFormatterCache.getNumberFormatter(e, a(s)).format(n);
+        formatNumber(n, a) {
+            let s = (0, r.resolveFormatConfigOptions)(t.number, a);
+            return i.dataFormatterCache.getNumberFormatter(e, o(s)).format(n);
         },
-        formatList(n, o) {
-            let s = (0, r.resolveFormatConfigOptions)(t.list, o);
-            return i.dataFormatterCache.getListFormatter(e, a(s)).format(n);
+        formatList(n, a) {
+            let s = (0, r.resolveFormatConfigOptions)(t.list, a);
+            return i.dataFormatterCache.getListFormatter(e, o(s)).format(n);
         },
-        formatListToParts(n, o) {
-            let s = (0, r.resolveFormatConfigOptions)(t.list, o),
+        formatListToParts(n, a) {
+            let s = (0, r.resolveFormatConfigOptions)(t.list, a),
                 l = {};
             for (let e in n) l['$+/-$placeholder.' + e] = n[e];
             return i.dataFormatterCache
-                .getListFormatter(e, a(s))
+                .getListFormatter(e, o(s))
                 .formatToParts(Object.keys(l))
                 .map((e) => {
                     var t;
                     return (e.value = null != (t = l[e.value]) ? t : e.value);
                 });
         },
-        formatRelativeTime(n, o, s) {
+        formatRelativeTime(n, a, s) {
             let l = (0, r.resolveFormatConfigOptions)(t.relativeTime, s);
-            return i.dataFormatterCache.getRelativeTimeFormatter(e, a(l)).format(n, o);
+            return i.dataFormatterCache.getRelativeTimeFormatter(e, o(l)).format(n, a);
         },
-        formatTime(n, o) {
-            let s = (0, r.resolveFormatConfigOptions)(t.time, o);
-            return i.dataFormatterCache.getDateTimeFormatter(e, a(s)).format(n);
+        formatTime(n, a) {
+            let s = (0, r.resolveFormatConfigOptions)(t.time, a);
+            return i.dataFormatterCache.getDateTimeFormatter(e, o(s)).format(n);
         },
-        getPluralRules: (t) => i.dataFormatterCache.getPluralRules(e, a(t))
+        getPluralRules: (t) => i.dataFormatterCache.getPluralRules(e, o(t))
     };
 }

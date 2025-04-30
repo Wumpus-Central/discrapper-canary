@@ -1,8 +1,8 @@
 n.d(t, { Z: () => c }), n(388685);
 var r = n(846519),
     i = n(570140),
-    o = n(147913);
-function a(e, t, n) {
+    a = n(147913);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,15 +16,15 @@ function a(e, t, n) {
     );
 }
 let s = 3000;
-class l extends o.Z {
+class l extends a.Z {
     _terminate() {
         this.clearErrorTimeout.stop();
     }
     constructor(...e) {
         super(...e),
-            a(this, 'clearErrorTimeout', new r.V7()),
-            a(this, 'actions', { MEDIA_ENGINE_NOISE_CANCELLATION_ERROR: () => this.handleNoiseCancellationError() }),
-            a(this, 'handleNoiseCancellationError', () => {
+            o(this, 'clearErrorTimeout', new r.V7()),
+            o(this, 'actions', { MEDIA_ENGINE_NOISE_CANCELLATION_ERROR: () => this.handleNoiseCancellationError() }),
+            o(this, 'handleNoiseCancellationError', () => {
                 this.clearErrorTimeout.start(s, () => i.Z.dispatch({ type: 'MEDIA_ENGINE_NOISE_CANCELLATION_ERROR_RESET' }));
             });
     }

@@ -1,8 +1,8 @@
-n.d(t, { Z: () => a }), n(388685);
+n.d(t, { Z: () => o }), n(388685);
 var r = n(436660),
     i = n(887490),
-    o = n(42530);
-function a(e) {
+    a = n(42530);
+function o(e) {
     let { apply: t, onChange: n } = e;
     return (
         (e.apply = (n) => {
@@ -12,21 +12,21 @@ function a(e) {
             if ((i.Ew.isValid(e, e.selection) || (e.selection = s(e)), null != e.selection)) {
                 let t,
                     n,
-                    [a, s] = i.M8.edges(e.selection),
+                    [o, s] = i.M8.edges(e.selection),
                     l = !1;
-                for (; null != a && null != (t = i.bN.getParentVoid(e, a)) && !o.On.includes(t[0].type); ) (a = i.bN.before(e, a, { unit: 'offset' })), (l = !0);
-                for (; null != s && null != (n = i.bN.getParentVoid(e, s)) && !o.On.includes(n[0].type); ) (s = i.bN.after(e, s, { unit: 'offset' })), (l = !0);
+                for (; null != o && null != (t = i.bN.getParentVoid(e, o)) && !a.On.includes(t[0].type); ) (o = i.bN.before(e, o, { unit: 'offset' })), (l = !0);
+                for (; null != s && null != (n = i.bN.getParentVoid(e, s)) && !a.On.includes(n[0].type); ) (s = i.bN.after(e, s, { unit: 'offset' })), (l = !0);
                 l &&
-                    null != a &&
+                    null != o &&
                     null != s &&
                     (i.M8.isForward(e.selection)
                         ? r.Q.select(e, {
-                              anchor: a,
+                              anchor: o,
                               focus: s
                           })
                         : r.Q.select(e, {
                               anchor: s,
-                              focus: a
+                              focus: o
                           }));
             }
             n();

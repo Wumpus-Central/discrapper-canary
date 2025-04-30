@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(760907),
     l = n(532772),
     c = n(570220),
@@ -65,7 +65,7 @@ function b(e, t) {
     );
 }
 function y(e, t) {
-    let { disabled: n, type: o } = e,
+    let { disabled: n, type: a } = e,
         [m, E] = (0, d.Iu)((e) => [e.activeView, e.pickerId], s.X),
         y = i.useContext(c.ZP),
         O = !1,
@@ -73,8 +73,8 @@ function y(e, t) {
         S = m === _.X1.STICKER,
         T = !1,
         A = i.useCallback(() => {
-            (0, d.RO)(_.X1.STICKER, o);
-        }, [o]);
+            (0, d.RO)(_.X1.STICKER, a);
+        }, [a]);
     i.useEffect(() => {
         let e = () => {
                 requestAnimationFrame(() => {
@@ -99,11 +99,11 @@ function y(e, t) {
     if (n) return null;
     let w = v;
     return (0, r.jsx)('div', {
-        className: a()(_.CT, h.buttonContainer),
+        className: o()(_.CT, h.buttonContainer),
         ref: t,
         children: (0, r.jsx)(
             f.Z,
-            b(g({ innerClassName: a()(h.button, h.stickerButton, { [h.stickerButtonTilted]: w && !S }) }, C), {
+            b(g({ innerClassName: o()(h.button, h.stickerButton, { [h.stickerButtonTilted]: w && !S }) }, C), {
                 onClick: () => {
                     A(), R();
                 },

@@ -12,8 +12,8 @@ n.d(t, {
     n(539854);
 var r = n(73800),
     i = n(442837),
-    o = n(430824),
-    a = n(823379),
+    a = n(430824),
+    o = n(823379),
     s = n(254711),
     l = n(213459),
     c = n(367790),
@@ -74,7 +74,7 @@ function g(e, t) {
     );
 }
 function E(e, t, n) {
-    var r, i, o, a;
+    var r, i, a, o;
     if (null == t)
         return {
             application: void 0,
@@ -82,7 +82,7 @@ function E(e, t, n) {
         };
     let s = l.ZP.getUserState(),
         c = l.ZP.getContextState(e),
-        u = Object.values(null != (o = null == (r = s.result) ? void 0 : r.sections) ? o : {}).concat(Object.values(null != (a = null == (i = c.result) ? void 0 : i.sections) ? a : {}));
+        u = Object.values(null != (a = null == (r = s.result) ? void 0 : r.sections) ? a : {}).concat(Object.values(null != (o = null == (i = c.result) ? void 0 : i.sections) ? o : {}));
     if (null != n) {
         let e = u.find((e) => {
             var t;
@@ -113,7 +113,7 @@ function b(e, t) {
     var n, r, i;
     if (null == t) return;
     if (null != e.commands[t]) return e.commands[t];
-    let o =
+    let a =
         null ==
         (n = Object.values(e.commands).find((e) => {
             var n;
@@ -121,20 +121,20 @@ function b(e, t) {
         }))
             ? void 0
             : n.rootCommand;
-    return null != o
+    return null != a
         ? (0, d.Z8)({
-              rootCommand: o,
-              command: o,
+              rootCommand: a,
+              command: a,
               applicationId: null != (i = null == (r = e.descriptor.application) ? void 0 : r.id) ? i : ''
           })
         : void 0;
 }
 function y(e, t, n) {
-    var r, i, o, a, s, c, u, d;
+    var r, i, a, o, s, c, u, d;
     let f = l.ZP.getUserState(),
         _ = l.ZP.getContextState(e),
         p = l.ZP.getApplicationState(n),
-        h = null != (d = null != (u = null == (i = f.result) || null == (r = i.sections) ? void 0 : r[n]) ? u : null == (a = _.result) || null == (o = a.sections) ? void 0 : o[n]) ? d : null == (c = p.result) || null == (s = c.sections) ? void 0 : s[n];
+        h = null != (d = null != (u = null == (i = f.result) || null == (r = i.sections) ? void 0 : r[n]) ? u : null == (o = _.result) || null == (a = o.sections) ? void 0 : a[n]) ? d : null == (c = p.result) || null == (s = c.sections) ? void 0 : s[n];
     return null == h ? void 0 : h.descriptor;
 }
 function O(e, t, n) {
@@ -160,15 +160,15 @@ function v(e) {
     return [null == t ? void 0 : t.result, null == n ? void 0 : n.result];
 }
 function I(e) {
-    let { context: t, filters: n, options: a, allowFetch: c } = e,
+    let { context: t, filters: n, options: o, allowFetch: c } = e,
         u = 'channel' === t.type ? t.channel.guild_id : null,
-        d = (0, i.e7)([o.Z], () => o.Z.getGuild(u), [u]),
-        { descriptors: p, commands: m, sectionedCommands: E, loading: b } = (0, l.JK)(t, d, n, g(h({}, a), { allowFetch: c })),
+        d = (0, i.e7)([a.Z], () => a.Z.getGuild(u), [u]),
+        { descriptors: p, commands: m, sectionedCommands: E, loading: b } = (0, l.JK)(t, d, n, g(h({}, o), { allowFetch: c })),
         [y, O] = r.useState(null),
         v = r.useMemo(() => {
             var e;
-            return C(null != (e = a.placeholderCount) ? e : 0, n.commandTypes[0]);
-        }, [n.commandTypes, a.placeholderCount]);
+            return C(null != (e = o.placeholderCount) ? e : 0, n.commandTypes[0]);
+        }, [n.commandTypes, o.placeholderCount]);
     return r.useMemo(() => {
         let e = {
             loading: b,
@@ -215,11 +215,11 @@ function I(e) {
 }
 function S(e, t, n) {
     var r;
-    let { descriptors: i, commands: o, loading: a } = l.ZP.query(e, t, n),
-        c = C(a && null != (r = n.placeholderCount) ? r : 0, t.commandTypes[0]);
+    let { descriptors: i, commands: a, loading: o } = l.ZP.query(e, t, n),
+        c = C(o && null != (r = n.placeholderCount) ? r : 0, t.commandTypes[0]);
     return {
-        commands: a ? [...o, ...c] : o,
-        sections: a && 0 === i.length ? [s.Tm[f.bi.BUILT_IN]] : i
+        commands: o ? [...a, ...c] : a,
+        sections: o && 0 === i.length ? [s.Tm[f.bi.BUILT_IN]] : i
     };
 }
 function T(e, t) {
@@ -227,8 +227,8 @@ function T(e, t) {
         i = (0, l.em)(e, !0, !0);
     return r.useMemo(() => {
         if (null != t) {
-            var e, r, o, a;
-            for (let s of Object.values(null != (o = null == (e = n.result) ? void 0 : e.sections) ? o : {}).concat(Object.values(null != (a = null == (r = i.result) ? void 0 : r.sections) ? a : {}))) {
+            var e, r, a, o;
+            for (let s of Object.values(null != (a = null == (e = n.result) ? void 0 : e.sections) ? a : {}).concat(Object.values(null != (o = null == (r = i.result) ? void 0 : r.sections) ? o : {}))) {
                 let e = s.commands[t];
                 if (null != e)
                     return {
@@ -245,10 +245,10 @@ function T(e, t) {
 }
 function A(e, t, n) {
     let i = (0, l.PL)(!0, !0),
-        o = (0, l.em)(e, !0, !0);
+        a = (0, l.em)(e, !0, !0);
     return r.useMemo(() => {
         var e, r, s, l, c, u;
-        let f = null != (c = null == (r = i.result) || null == (e = r.sections) ? void 0 : e[t]) ? c : null == (s = o.result) ? void 0 : s.sections[t],
+        let f = null != (c = null == (r = i.result) || null == (e = r.sections) ? void 0 : e[t]) ? c : null == (s = a.result) ? void 0 : s.sections[t],
             _ = Object.values(null != (u = null == f ? void 0 : f.commands) ? u : {})
                 .map((e) =>
                     null == e.rootCommand
@@ -262,9 +262,9 @@ function A(e, t, n) {
                 .reduce((e, t) => ((e[t.id] = t), e), {});
         return {
             application: null == f || null == (l = f.descriptor) ? void 0 : l.application,
-            commands: n.map((e) => _[e]).filter(a.lm)
+            commands: n.map((e) => _[e]).filter(o.lm)
         };
-    }, [null == i ? void 0 : i.result, null == o ? void 0 : o.result, t, n]);
+    }, [null == i ? void 0 : i.result, null == a ? void 0 : a.result, t, n]);
 }
 let N = {
     id: 'placeholder-section',

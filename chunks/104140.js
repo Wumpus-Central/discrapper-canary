@@ -1,8 +1,8 @@
 n.d(t, { a: () => O }), n(415506), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(722770),
     l = n(481060),
     c = n(591146),
@@ -65,8 +65,8 @@ function h(e, t) {
         r,
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -75,8 +75,8 @@ function m(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let g = 16,
@@ -115,10 +115,10 @@ function O(e) {
                 height: g
             },
             highlight: i = !1,
-            rounded: o = !1
+            rounded: a = !1
         } = e,
-        a = h(e, ['selected', 'lowerBadgeSize', 'highlight', 'rounded']);
-    let s = !!a.isFolder,
+        o = h(e, ['selected', 'lowerBadgeSize', 'highlight', 'rounded']);
+    let s = !!o.isFolder,
         u = (0, c.M)('BlobMask'),
         d = (0, l.dQu)(l.TVs.modules.guildbar.AVATAR_SIZE),
         _ = (0, l.dQu)(l.TVs.modules.guildbar.FOLDER_SIZE),
@@ -126,9 +126,9 @@ function O(e) {
         E = m / 2;
     return (0, r.jsx)(
         v,
-        p(f({}, a), {
+        p(f({}, o), {
             selected: t,
-            rounded: o,
+            rounded: a,
             baseViewBoxSize: m,
             viewBoxSize: m,
             style: {
@@ -143,7 +143,7 @@ function O(e) {
     );
 }
 function v(e) {
-    let { children: t, viewBoxSize: n, className: o, style: l, innerClassName: c, isFolder: d, lowerBadgeSize: f, highlight: _, badgeMaskStroke: p, badgeMaskSize: h, upperBadge: m, lowerBadge: O, rounded: v = !1 } = e,
+    let { children: t, viewBoxSize: n, className: a, style: l, innerClassName: c, isFolder: d, lowerBadgeSize: f, highlight: _, badgeMaskStroke: p, badgeMaskSize: h, upperBadge: m, lowerBadge: O, rounded: v = !1 } = e,
         [I, S] = i.useState(!1),
         T = () => {
             S(!0);
@@ -172,7 +172,7 @@ function v(e) {
     return (0, r.jsxs)(
         'div',
         {
-            className: a()(o, u.wrapper),
+            className: o()(a, u.wrapper),
             style: l,
             onFocus: T,
             onBlur: A,
@@ -183,7 +183,7 @@ function v(e) {
                         width: j.width,
                         height: j.height,
                         viewBox: ''.concat(j.x, ' ').concat(j.y, ' ').concat(j.width, ' ').concat(j.height),
-                        className: a()(u.svg, { [u.noContain]: _ }),
+                        className: o()(u.svg, { [u.noContain]: _ }),
                         overflow: 'visible',
                         role: 'none',
                         children: [
@@ -240,7 +240,7 @@ function v(e) {
                                     (0, r.jsx)('use', {
                                         href: '#'.concat(D),
                                         fill: 'white',
-                                        className: a()({ [u.isHighlighted]: _ })
+                                        className: o()({ [u.isHighlighted]: _ })
                                     }),
                                     N
                                         ? (0, r.jsx)('use', {

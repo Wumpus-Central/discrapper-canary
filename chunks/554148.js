@@ -1,6 +1,6 @@
-var e = r(77826),
-    o = Math.min;
+var r = a(77826),
+    n = Math.min;
 t.exports = function (t) {
-    var n = e(t);
-    return n > 0 ? o(n, 9007199254740991) : 0;
+    var e = r(t);
+    return e > 0 ? n(e, 9007199254740991) : 0;
 };

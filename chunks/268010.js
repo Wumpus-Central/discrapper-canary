@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T }), n(804061), n(704826), n(35282);
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(706454),
     l = n(594174),
     c = n(49012),
@@ -22,10 +22,10 @@ var r = n(255367),
 let I = (e, t, n) => {
         let r = v.t.LHF6Dw,
             i = u.ZP.getName(null == t ? void 0 : t.guild_id, null == t ? void 0 : t.id, n),
-            o = e.extra.media_title;
+            a = e.extra.media_title;
         return v.intl
             .formatToMarkdownString(r, {
-                mediaTitle: o,
+                mediaTitle: a,
                 userName: i,
                 episodeDescription: e.extra.media_subtitle
             })
@@ -38,10 +38,10 @@ let I = (e, t, n) => {
         }),
     T = (e) => {
         let { channel: t, entry: n, onReaction: u, onVoiceChannelPreview: T } = e,
-            A = (0, o.e7)([l.default], () => l.default.getUser(n.author_id)),
+            A = (0, a.e7)([l.default], () => l.default.getUser(n.author_id)),
             { largeImage: N } = (0, f.rv)({ entry: n }),
             { primaryColor: C, secondaryColor: R } = (0, m.Z)(null == N ? void 0 : N.src),
-            P = (0, o.e7)([s.default], () => s.default.locale),
+            P = (0, a.e7)([s.default], () => s.default.locale),
             w = (0, h.Z)(O.ABu.CRUNCHYROLL),
             D = (0, _.ap)(n.extra.media_assets_large_text),
             L = i.useCallback(
@@ -83,7 +83,7 @@ let I = (e, t, n) => {
                           subtitle: n.extra.media_subtitle,
                           headerIcons: (0, r.jsx)(y.Z, {
                               onClick: w,
-                              Icon: a.omf,
+                              Icon: o.omf,
                               'aria-label': v.intl.string(v.t.jdJYX1)
                           }),
                           badges: (0, r.jsx)(E.Gk, {

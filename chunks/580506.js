@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u }), n(388685);
 var r = n(147913),
     i = n(2818),
-    o = n(192720),
-    a = n(742989);
+    a = n(192720),
+    o = n(742989);
 function s(e, t, n) {
     return (
         t in e
@@ -17,7 +17,7 @@ function s(e, t, n) {
     );
 }
 function l() {
-    (i.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).enabled || a.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).showReminders) && (0, o.sE)();
+    (i.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).enabled || o.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).showReminders) && (0, a.sE)();
 }
 class c extends r.Z {
     constructor(...e) {

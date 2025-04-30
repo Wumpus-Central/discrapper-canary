@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r = n(255367),
     i = n(73800),
-    o = n(367907),
-    a = n(10718),
+    a = n(367907),
+    o = n(10718),
     s = n(69626),
     l = n(626135),
     c = n(785717),
@@ -49,7 +49,7 @@ function m(e) {
             }),
             [m]
         ),
-        { commands: y } = a.Qm(b, t, n),
+        { commands: y } = o.Qm(b, t, n),
         O = i.useMemo(
             () =>
                 null == y
@@ -72,7 +72,7 @@ function m(e) {
                         command_id: e,
                         guild_id: p
                     },
-                    (0, o.JS)(m.id)
+                    (0, a.JS)(m.id)
                 )
             );
     };

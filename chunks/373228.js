@@ -2,10 +2,10 @@ n.d(t, {
     Ih: () => c,
     MO: () => u,
     V0: () => d,
-    aQ: () => a,
+    aQ: () => o,
     al: () => l,
     n0: () => i,
-    og: () => o,
+    og: () => a,
     u3: () => r,
     z: () => s
 });
@@ -15,10 +15,10 @@ var r = (function (e) {
     i = (function (e) {
         return (e[(e.STANDARD = 1)] = 'STANDARD'), (e[(e.GUILD = 2)] = 'GUILD'), e;
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return (e.PNG = 'png'), (e.APNG = 'png'), (e.LOTTIE = 'json'), (e.WEBP = 'webp'), (e.GIF = 'gif'), e;
     })({});
-let a = (e) => 1 !== e,
+let o = (e) => 1 !== e,
     s = (e) => 1 !== e;
 var l = (function (e) {
         return (e[(e.STICKER = 0)] = 'STICKER'), (e[(e.CREATE_STICKER = 1)] = 'CREATE_STICKER'), e;

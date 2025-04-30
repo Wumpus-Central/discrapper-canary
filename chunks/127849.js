@@ -1,12 +1,12 @@
-var e = function (t) {
+var r = function (t) {
     return t && t.Math === Math && t;
 };
 t.exports =
-    e('object' == typeof globalThis && globalThis) ||
-    e('object' == typeof window && window) ||
-    e('object' == typeof self && self) ||
-    e('object' == typeof r.g && r.g) ||
-    e('object' == typeof this && this) ||
+    r('object' == typeof globalThis && globalThis) ||
+    r('object' == typeof window && window) ||
+    r('object' == typeof self && self) ||
+    r('object' == typeof a.g && a.g) ||
+    r('object' == typeof this && this) ||
     (function () {
         return this;
     })() ||
