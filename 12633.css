@@ -60414,10 +60414,14 @@ code {
     --bg-overlay-floating: linear-gradient(rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-floating)), rgb(var(--bg-overlay-color)/var(--bg-overlay-opacity-floating))) fixed 0 0 /cover, var(--custom-theme-background) fixed 0 0 /cover
 }
 
-.disable-adaptive-theme,
-[data-disable-adaptive-theme=true] {
+.disable-adaptive-theme {
     --theme-base-color-amount: 0% !important;
     --theme-text-color-amount: 0% !important
+}
+
+.reduce-adaptive-theme {
+    --theme-base-color-amount: 20% !important;
+    --theme-text-color-amount: 20% !important
 }
 
 .visual-refresh.custom-theme-background {
