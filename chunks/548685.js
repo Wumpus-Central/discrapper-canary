@@ -25,7 +25,7 @@ let x = (e) => {
         S = l.useMemo(() => k(n), [t, k, n]),
         P = (0, b.a)()(S),
         E = (0, p.l)(P),
-        w = (0, h.St)(E);
+        B = (0, h.St)(E);
     return null == j
         ? null
         : (0, r.jsxs)('div', {
@@ -53,7 +53,7 @@ let x = (e) => {
                       children: t
                           ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(f.K, {}, t + 1)) })
                           : (0, r.jsx)(r.Fragment, {
-                                children: w.slice(0, x).map((e, t) => {
+                                children: B.slice(0, x).map((e, t) => {
                                     let n = d.Z.getCategoryForProduct(e.skuId);
                                     return null == e || null == n
                                         ? null

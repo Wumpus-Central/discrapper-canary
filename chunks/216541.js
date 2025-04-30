@@ -15,7 +15,7 @@ var i = n(120356),
     h = n(244488);
 let m = (e) => {
     let { product: t, isPurchased: n, isHighlighted: i, user: m, forCollectedModal: g, profileEffectClassName: E } = e,
-        { firstProfileEffect: b, firstAvatarDecoration: y } = (0, u.R)(t),
+        { firstProfileEffect: b, firstAvatarDecoration: y } = (0, u.Rj)(t),
         O = (0, d.O1)(y),
         v = (0, l.ZP)(),
         I = (0, a.ap)(v);

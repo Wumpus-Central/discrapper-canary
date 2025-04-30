@@ -33,8 +33,8 @@ function k(e) {
 function S(e) {
     let { isFullScreen: t, isLayer: n, onClose: a, selectedTab: S, handleTransition: P } = e,
         E = (0, b.ZP)(),
-        w = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
-        B = (null == w ? void 0 : w.isStaff()) || (null == w ? void 0 : w.isStaffPersonal()) || !1,
+        B = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
+        w = (null == B ? void 0 : B.isStaff()) || (null == B ? void 0 : B.isStaffPersonal()) || !1,
         { enabled: I } = (0, h.W)({ location: 'collectibles_shop_header_bar' }),
         T = [
             {
@@ -68,7 +68,7 @@ function S(e) {
             (0, r.jsxs)(p.Z, {
                 className: i()(e, y.headerBar, { [y.fullscreenHeaderBar]: t }),
                 innerClassname: I ? y.headerBarInner : void 0,
-                toolbar: t || !B ? null : (0, r.jsx)(l.Fragment, {}),
+                toolbar: t || !w ? null : (0, r.jsx)(l.Fragment, {}),
                 children: [
                     (0, r.jsx)(C.Z, { className: y.discordLogo }),
                     (0, r.jsx)(p.Z.Title, { children: j.intl.string(j.t.pWG4zc) }),

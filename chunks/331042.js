@@ -1,6 +1,6 @@
 n.d(t, {
-    default: () => eE,
-    e: () => e_
+    default: () => eb,
+    e: () => ep
 }),
     n(388685),
     n(314940);
@@ -113,7 +113,8 @@ function el(e, t) {
     );
 }
 let ec = 880,
-    eu = (e) => {
+    eu = (e) => (null != e ? er.intl.format(er.t['4kp0AA'], { itemName: e }) : null),
+    ed = (e) => {
         let { product: t, pairedProduct: n } = e,
             [i] = t.items,
             o = null == n ? void 0 : n.items[0],
@@ -196,7 +197,7 @@ let ec = 880,
             )
             .otherwise(() => null);
     },
-    ed = (e) => {
+    ef = (e) => {
         let { reducedMotion: t, displayOptions: n } = e,
             [o, a] = i.useState(!1),
             s = (0, _.q_F)({
@@ -245,7 +246,7 @@ let ec = 880,
                 (0, r.jsx)(l.animated.div, {
                     className: ei.easterEggContainer,
                     style: s,
-                    children: (0, r.jsx)(eu, ea({}, e))
+                    children: (0, r.jsx)(ed, ea({}, e))
                 }),
                 (0, r.jsx)(l.animated.div, {
                     className: ei.easterEggContainer,
@@ -260,11 +261,11 @@ let ec = 880,
             ]
         });
     },
-    ef = (e) => {
-        let t = (0, J.v)(e.product.categorySkuId);
-        return null != t ? (0, r.jsx)(ed, el(ea({}, e), { displayOptions: t })) : (0, r.jsx)(eu, ea({}, e));
-    },
     e_ = (e) => {
+        let t = (0, J.v)(e.product.categorySkuId);
+        return null != t ? (0, r.jsx)(ef, el(ea({}, e), { displayOptions: t })) : (0, r.jsx)(ed, ea({}, e));
+    },
+    ep = (e) => {
         let { product: t, onClose: n, confettiTarget: o, confettiCanvas: a, hideConfetti: s = !1, analyticsLocations: l, overrideTitle: c, overrideDescription: p, selectedVariantIndex: E, shouldShowPromotionalExperience: b, itemConsumed: y = !0, purchaseType: O = $.o8.FIAT } = e,
             v = (0, M.o)('CollectiblesCollectedModal'),
             I = (0, Q.W)(t, E),
@@ -308,14 +309,14 @@ let ec = 880,
                                       className: ei.decorationBanner,
                                       categoryBannerOverride: (0, $.ZS)(I.categorySkuId)
                                   }),
-                            (0, r.jsx)(ef, {
+                            (0, r.jsx)(e_, {
                                 product: I,
                                 pairedProduct: A,
                                 reducedMotion: R
                             })
                         ]
                     }),
-                    (0, r.jsx)(eh, {
+                    (0, r.jsx)(em, {
                         product: I,
                         pairedProduct: A,
                         onClose: n,
@@ -353,8 +354,8 @@ let ec = 880,
             ]
         });
     },
-    ep = 600,
-    eh = (e) => {
+    eh = 600,
+    em = (e) => {
         var t;
         let { product: n, pairedProduct: o, onClose: a, analyticsLocations: s, overrideTitle: l, overrideDescription: d, shouldShowPromotionalExperience: f } = e,
             p = (0, k.ed)('CollectiblesCollectedModal'),
@@ -368,10 +369,10 @@ let ec = 880,
                 onSuccess: a,
                 onError: a
             }),
-            { firstAvatarDecoration: I, firstProfileEffect: S } = (0, G.R)(n),
+            { firstAvatarDecoration: I, firstProfileEffect: S } = (0, G.Rj)(n),
             C = (0, x.x6)(n) ? null != I && null != S : null != I || null != S || n.type === u.Z.NAMEPLATE;
         i.useEffect(() => {
-            $.Vt.ORB_PROFILE_BADGE === n.skuId && (0, A.Ls)([(0, W.X2)()], ep);
+            $.Vt.ORB_PROFILE_BADGE === n.skuId && (0, A.Ls)([(0, W.X2)()], eh);
         }, [n.skuId]);
         let R = i.useMemo(
                 () =>
@@ -385,7 +386,7 @@ let ec = 880,
                                   suggested_item: m
                               })
                             : p && !f
-                              ? er.intl.string(er.t['1xr2SU'])
+                              ? er.intl.string(er.t.IMffmp)
                               : er.intl.format(er.t.YNaxMj, { itemName: h }),
                 [l, n.skuId, g, p, f, h, m]
             ),
@@ -401,11 +402,16 @@ let ec = 880,
                                   suggested_item: m
                               })
                             : (0, c.EQ)(null == n ? void 0 : n.type)
-                                  .with(u.Z.BUNDLE, () => er.intl.string(er.t.zJPoLy))
-                                  .with(u.Z.PROFILE_EFFECT, () => er.intl.string(er.t.f9M1YG))
-                                  .with(u.Z.NAMEPLATE, () => er.intl.string(er.t.lvwvIi))
-                                  .otherwise(() => (f && null != b ? b : er.intl.string(er.t['44b50t']))),
-                [d, n.skuId, null == n ? void 0 : n.type, g, h, m, f, b]
+                                  .with(u.Z.BUNDLE, () => {
+                                      let { itemOneName: e, itemTwoName: t } = (0, G.Ws)(n);
+                                      return er.intl.format(er.t.fXw44e, {
+                                          itemOneName: e,
+                                          itemTwoName: t
+                                      });
+                                  })
+                                  .with(u.Z.AVATAR_DECORATION, () => (f && null != b ? b : eu(h)))
+                                  .otherwise(() => eu(h)),
+                [d, n, g, h, m, f, b]
             ),
             D = i.useMemo(
                 () =>
@@ -458,14 +464,14 @@ let ec = 880,
                     className: ei.buttons,
                     children: [
                         g
-                            ? (0, r.jsx)(em, {
+                            ? (0, r.jsx)(eg, {
                                   onClose: a,
                                   product: o,
                                   analyticsLocations: s
                               })
                             : null != D
                               ? D
-                              : (0, r.jsx)(eg, {
+                              : (0, r.jsx)(eE, {
                                     product: n,
                                     onClose: a,
                                     isPrimary: C,
@@ -483,7 +489,7 @@ let ec = 880,
             ]
         });
     },
-    em = (e) => {
+    eg = (e) => {
         let { onClose: t, product: n, analyticsLocations: o } = e,
             a = (0, k.hv)('CollectiblesShopGiftButton'),
             s = i.useCallback(
@@ -515,7 +521,7 @@ let ec = 880,
             ]
         });
     },
-    eg = (e) => {
+    eE = (e) => {
         let { product: t, onClose: n, isPrimary: o, analyticsLocations: a, text: l } = e,
             c = (0, O.Z)({ analyticsLocations: a }),
             [d] = t.items,
@@ -540,7 +546,7 @@ let ec = 880,
             children: null != l ? l : er.intl.string(er.t['2p2aY2'])
         });
     },
-    eE = (e) => {
+    eb = (e) => {
         let { transitionState: t, product: n, onClose: a, analyticsLocations: s, overrideTitle: l, overrideDescription: c, shouldShowPromotionalExperience: u, itemConsumed: d, purchaseType: p = $.o8.FIAT } = e,
             h = (0, f.e7)([D.Z], () => D.Z.purchases),
             E = (0, L.o)(n, h),
@@ -578,7 +584,7 @@ let ec = 880,
                         children: (0, r.jsx)(_.hzk, {
                             className: ei.modalContent,
                             scrollbarType: 'none',
-                            children: (0, r.jsx)(e_, {
+                            children: (0, r.jsx)(ep, {
                                 product: b,
                                 onClose: a,
                                 confettiCanvas: O,

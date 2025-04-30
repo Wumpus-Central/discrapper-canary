@@ -261,7 +261,7 @@ function L(e) {
                                     (0, r.jsx)(
                                         'li',
                                         {
-                                            className: a()(S.remainingCardContainer, 0 === t && S.secondCardContainer, X && S.isShown),
+                                            className: a()(S.remainingCardContainer, X && S.isShown),
                                             children: e
                                         },
                                         'activity-'.concat(t)

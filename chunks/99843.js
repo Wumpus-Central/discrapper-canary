@@ -246,7 +246,34 @@ let O = (e) => {
     },
     P = (e) => {
         let { channel: t, children: n } = e,
-            i = (0, p.ZP)(t);
+            l = (0, p.ZP)(t),
+            o = i.useCallback(
+                (e) => {
+                    l !== e.currentTarget.value && s.Z.setName(t.id, e.currentTarget.value);
+                },
+                [t, l]
+            ),
+            a = i.useCallback(
+                (e) => {
+                    _.default.track(y.rMx.GDM_EDIT_INTERACTED, {
+                        action: 'opened',
+                        channel_id: t.id,
+                        channel_type: y.d4z.GROUP_DM,
+                        location: d.Z.HEADER_BAR
+                    });
+                },
+                [t]
+            ),
+            c = i.useCallback(
+                (e) => {
+                    _.default.track(y.rMx.GDM_EDIT_INTERACTED, {
+                        channel_id: t.id,
+                        action: 'entry_point_hovered',
+                        location: d.Z.HEADER_BAR
+                    });
+                },
+                [t]
+            );
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 n,
@@ -260,10 +287,10 @@ let O = (e) => {
                             className: x.channelName,
                             name: 'channel_name',
                             autoComplete: 'off',
-                            value: null != i ? i : '',
-                            onBlur: (e) => {
-                                i !== e.currentTarget.value && s.Z.setName(t.id, e.currentTarget.value);
-                            }
+                            value: null != l ? l : '',
+                            onFocus: a,
+                            onBlur: o,
+                            onMouseEnter: c
                         }),
                         (0, r.jsx)(O, { channel: t })
                     ]

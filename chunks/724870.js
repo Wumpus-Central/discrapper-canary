@@ -21,8 +21,8 @@ var l = n(512722),
     m = n(981631);
 function v(e) {
     let { initialPlanId: t, activeSubscription: l, analyticsObject: i, analyticsLocation: u, analyticsLocations: d, analyticsSubscriptionType: p, renderHeader: f, planGroup: v, skuId: g, guildId: h, reviewWarningMessage: j, applicationId: S, showBenefitsFirst: P, onComplete: I, forcesTransitionToGuild: E } = e,
-        x = (0, o.Z)(),
-        Z = !1;
+        Z = (0, o.Z)(),
+        x = !1;
     (0, a.ZDy)(
         async () => {
             let { PaymentContextProvider: e } = await Promise.resolve().then(n.bind(n, 563132)),
@@ -35,7 +35,7 @@ function v(e) {
             return (n) => {
                 var a, c;
                 return (0, r.jsx)(e, {
-                    loadId: x,
+                    loadId: Z,
                     applicationId: S,
                     activeSubscription: l,
                     stepConfigs: s,
@@ -83,7 +83,7 @@ function v(e) {
                                         applicationId: S,
                                         guildId: null != h ? h : void 0,
                                         onComplete: () => {
-                                            (Z = !0), null == I || I();
+                                            (x = !0), null == I || I();
                                         },
                                         forcesTransitionToGuild: E
                                     }),
@@ -108,9 +108,9 @@ function v(e) {
         },
         {
             onCloseCallback: () => {
-                Z ||
+                x ||
                     (b.default.track(m.rMx.PAYMENT_FLOW_CANCELED, {
-                        load_id: x,
+                        load_id: Z,
                         payment_type: m.Zuq[m.GZQ.SUBSCRIPTION],
                         location: null != u ? u : i,
                         is_gift: !1,

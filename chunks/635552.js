@@ -10,7 +10,7 @@ let u = 6000,
     d = (e) => {
         let { product: t, onSuccess: d, onError: f } = e,
             [_, p] = r.useState(!1),
-            { firstAvatarDecoration: h, firstProfileEffect: m } = (0, l.R)(t),
+            { firstAvatarDecoration: h, firstProfileEffect: m } = (0, l.Rj)(t),
             g = (0, s.x6)(t) ? c.intl.string(c.t.tf1ZZ2) : t.type === i.Z.AVATAR_DECORATION ? c.intl.string(c.t.zOA4a2) : t.type === i.Z.NAMEPLATE ? c.intl.string(c.t.gOzMv7) : c.intl.string(c.t.SWm2am);
         return {
             handleUseNow: r.useCallback(async () => {

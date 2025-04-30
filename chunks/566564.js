@@ -39,7 +39,7 @@ let j = (e) => {
                 isFetchingShopHome: S,
                 fetchShopHomeError: P,
                 shopBlocks: E,
-                refreshShopHome: w
+                refreshShopHome: B
             } = (0, d.E)(
                 u,
                 {
@@ -54,9 +54,9 @@ let j = (e) => {
                     isFullScreen: v
                 }
             ),
-            B = l.useCallback(() => {
-                w();
-            }, [w]);
+            w = l.useCallback(() => {
+                B();
+            }, [B]);
         if (
             (l.useEffect(() => {
                 null != P ||
@@ -74,7 +74,7 @@ let j = (e) => {
             null != P)
         )
             return (0, r.jsx)(p.Z, {
-                onRetry: B,
+                onRetry: w,
                 errorOrigin: p.i.SHOP_PAGE,
                 errorMessage: P.message
             });

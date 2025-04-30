@@ -1,21 +1,21 @@
-e.d(n, { Z: () => o });
+e.d(t, { Z: () => s });
 var i = e(200651);
 e(192379);
-var r = e(481060),
-    l = e(787014),
+var l = e(481060),
+    r = e(787014),
     a = e(665906),
-    s = e(388032);
-function o(t) {
-    let n = (0, a.C7)(t),
-        e = (0, a.$R)(t),
-        o = (0, a.Gu)(t);
-    return !n || !e || o || __OVERLAY__
+    o = e(388032);
+function s(n) {
+    let t = (0, a.C7)(n),
+        e = (0, a.$R)(n),
+        s = (0, a.Gu)(n);
+    return !t || !e || s || __OVERLAY__
         ? null
-        : (0, i.jsx)(r.sNh, {
+        : (0, i.jsx)(l.sNh, {
               id: 'edit-thread',
-              label: t.isForumPost() ? s.intl.string(s.t.NP1yHB) : s.intl.string(s.t['2Mk1TE']),
+              label: n.isForumPost() ? o.intl.string(o.t.NP1yHB) : o.intl.string(o.t['2Mk1TE']),
               action: () => {
-                  (0, r.pTH)(), l.ZP.open(t.id);
+                  (0, l.pTH)(), r.ZP.open(n.id);
               }
           });
 }

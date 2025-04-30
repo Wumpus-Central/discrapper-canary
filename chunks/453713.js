@@ -97,7 +97,7 @@ let x = s()((e) => {
                 [k, t, a]
             );
         return (0, r.jsx)(b.ua7, {
-            text: h.intl.string(h.t['/bUsx8']),
+            text: h.intl.string(h.t['6cfuDg']),
             'aria-label': !1,
             shouldShow: !O && j,
             children: (e) =>

@@ -4,12 +4,12 @@ var r = n(200651),
     a = n(481060),
     l = n(493683),
     o = n(699516),
-    s = n(594174),
-    c = n(933557),
+    c = n(594174),
+    s = n(933557),
     u = n(388032);
 function d(e, t) {
     let d = i.useCallback(() => {
-        let i = (0, c.F6)(e, s.default, o.Z),
+        let i = (0, s.F6)(e, c.default, o.Z),
             d = u.intl.formatToPlainString(u.t.hJ5Ap6, { name: i }),
             f = u.intl.format(u.t.SSIVOj, { name: i });
         e.isManaged() && ((d = u.intl.formatToPlainString(u.t.hVGjER, { name: i })), (f = u.intl.format(u.t.IK1Qvr, { name: i })));

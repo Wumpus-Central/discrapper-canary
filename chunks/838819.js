@@ -25,8 +25,8 @@ var r = n(200651),
     S = n(960048),
     P = n(381585),
     E = n(597688),
-    w = n(328347),
-    B = n(744112),
+    B = n(328347),
+    w = n(744112),
     I = n(951904),
     T = n(139668),
     L = n(223143),
@@ -46,9 +46,9 @@ var r = n(200651),
     q = n(981631),
     Y = n(921944),
     $ = n(420212),
-    X = n(474936),
-    J = n(484920);
-let K = (e) => {
+    K = n(474936),
+    X = n(484920);
+let J = (e) => {
         let { isFullScreen: t, tab: n } = e;
         return !t && n !== z.AW.CATALOG;
     },
@@ -70,7 +70,7 @@ let K = (e) => {
         var t;
         let { isFullScreen: n = !0, tab: a = z.AW.HOME } = e;
         (0, C.z)(_.f);
-        let { analyticsSource: u, analyticsLocations: $ } = (0, s.cj)([w.Z], () => w.Z.getAnalytics()),
+        let { analyticsSource: u, analyticsLocations: $ } = (0, s.cj)([B.Z], () => B.Z.getAnalytics()),
             ee = l.useMemo(() => {
                 switch (a) {
                     case z.AW.ORBS:
@@ -106,8 +106,8 @@ let K = (e) => {
                 isFetchingCategories: eS,
                 fetchCategoriesError: eP,
                 fetchPurchasesError: eE,
-                claimError: ew,
-                refreshCategories: eB
+                claimError: eB,
+                refreshCategories: ew
             } = (0, L.ZP)(
                 {
                     location: 'CollectiblesShop.web',
@@ -119,7 +119,7 @@ let K = (e) => {
                     isFullScreen: n
                 }
             ),
-            eI = null != (t = null != eP ? eP : eE) ? t : ew;
+            eI = null != (t = null != eP ? eP : eE) ? t : eB;
         (0, v.P)();
         let eT = (0, N.O)(ek),
             eL = l.useRef(null),
@@ -147,7 +147,7 @@ let K = (e) => {
                 null == ej ||
                     ey ||
                     y.default.track(q.rMx.PREMIUM_UPSELL_VIEWED, {
-                        type: X.cd.COLLECTIBLES_SHOP,
+                        type: K.cd.COLLECTIBLES_SHOP,
                         location_stack: et
                     });
             }, [ey, et, ej]);
@@ -164,8 +164,8 @@ let K = (e) => {
                 n || (0, p.Y)(q.Z5c.COLLECTIBLES_SHOP);
             }, [n]);
         let eR = l.useCallback(() => {
-                eB();
-            }, [eB]),
+                ew();
+            }, [ew]),
             { setCategoryRef: eF, handleScrollToCategory: eH } = (0, R.xV)(el.current),
             { reducedMotion: eD } = l.useContext(b.Sfi),
             eM = l.useRef(null),
@@ -201,16 +201,16 @@ let K = (e) => {
                 },
                 [eH, n, eD.enabled, es, eG, ez, eq, eV, eU]
             ),
-            e$ = (0, B.b)('Collectibles Shop Button'),
-            eX = l.useMemo(() => {
+            e$ = (0, w.b)('Collectibles Shop Button'),
+            eK = l.useMemo(() => {
                 if (!eG) return eT;
                 let e = (eV - 1) * ez;
                 return eT.slice(e, e + ez);
             }, [eT, eG, ez, eV]),
-            eJ = l.useRef(null),
-            eK = l.useCallback(
+            eX = l.useRef(null),
+            eJ = l.useCallback(
                 (e) => {
-                    eU(e), null != el.current && null != eJ.current ? el.current.scrollTo({ to: eJ.current.getBoundingClientRect().top }) : null != el.current && el.current.scrollTo({ to: 0 });
+                    eU(e), null != el.current && null != eX.current ? el.current.scrollTo({ to: eX.current.getBoundingClientRect().top }) : null != el.current && el.current.scrollTo({ to: 0 });
                 },
                 [el, eU]
             ),
@@ -230,11 +230,11 @@ let K = (e) => {
                     shouldAddEventListener: n && !ex,
                     children: [
                         (0, r.jsx)('div', {
-                            className: J.shop,
+                            className: X.shop,
                             ref: n ? eM : eW,
                             tabIndex: -1,
                             children: (0, r.jsx)(b.Den, {
-                                className: J.shopScroll,
+                                className: X.shopScroll,
                                 ref: el,
                                 onScroll: () => {
                                     if ((ea(), null != el.current)) {
@@ -243,10 +243,10 @@ let K = (e) => {
                                     }
                                 },
                                 children: (0, r.jsxs)('div', {
-                                    className: i()(J.shopViewWrapper, {
-                                        [J.visible]: eo === z.f7.VISIBLE,
-                                        [J.in]: eo === z.f7.IN,
-                                        [J.out]: eo === z.f7.OUT
+                                    className: i()(X.shopViewWrapper, {
+                                        [X.visible]: eo === z.f7.VISIBLE,
+                                        [X.in]: eo === z.f7.IN,
+                                        [X.out]: eo === z.f7.OUT
                                     }),
                                     children: [
                                         (0, r.jsx)(H.I, {
@@ -289,16 +289,16 @@ let K = (e) => {
                                                     });
                                                 case z.AW.CATALOG:
                                                     return (0, r.jsx)('div', {
-                                                        className: J.pageWrapper,
+                                                        className: X.pageWrapper,
                                                         children: (0, r.jsxs)('main', {
-                                                            className: i()(J.page, {
-                                                                [J.pageFullscreen]: n,
-                                                                [J.pageWithPagination]: eG && (null == eT ? void 0 : eT.length) > ez
+                                                            className: i()(X.page, {
+                                                                [X.pageFullscreen]: n,
+                                                                [X.pageWithPagination]: eG && (null == eT ? void 0 : eT.length) > ez
                                                             }),
                                                             children: [
                                                                 (0, r.jsx)(Z.Z, {
                                                                     isFetchingCategories: eS,
-                                                                    sortedCategories: eX,
+                                                                    sortedCategories: eK,
                                                                     setCategoryRef: eF,
                                                                     isPremiumUser: ey,
                                                                     initialItemCardRef: eL,
@@ -309,13 +309,13 @@ let K = (e) => {
                                                                 eG &&
                                                                     eT.length > ez &&
                                                                     (0, r.jsx)('div', {
-                                                                        className: J.paginationContainer,
+                                                                        className: X.paginationContainer,
                                                                         children: (0, r.jsx)('div', {
                                                                             children: (0, r.jsx)(d.D, {
                                                                                 currentPage: eV,
                                                                                 totalCount: eT.length,
                                                                                 pageSize: ez,
-                                                                                onPageChange: eK,
+                                                                                onPageChange: eJ,
                                                                                 disablePaginationGap: !0
                                                                             })
                                                                         })
@@ -332,7 +332,7 @@ let K = (e) => {
                             })
                         }),
                         eN && (0, r.jsx)(M.Z, {}),
-                        K({
+                        J({
                             isFullScreen: n,
                             tab: a
                         }) &&

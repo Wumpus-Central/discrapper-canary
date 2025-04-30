@@ -68,7 +68,7 @@ function E(e) {
               ]
           });
 }
-function w(e) {
+function B(e) {
     var { category: t, initialItemCardRef: n } = e,
         a = (function (e, t) {
             if (null == e) return {};
@@ -135,7 +135,7 @@ function w(e) {
         )
     );
 }
-function B(e) {
+function w(e) {
     let { category: t, isPremiumUser: n, initialItemCardRef: a, isGiftEasterEggEnabled: o, setIsGiftEasterEggEnabled: b, showEasterEggToggle: p, isFullScreen: f } = e,
         g = l.useRef(10 + 70 * Math.random()),
         [h, m] = l.useState(!1),
@@ -164,7 +164,7 @@ function B(e) {
                 category: t,
                 hideLimitedTimeBadge: null != v
             }),
-            (0, r.jsx)(w, {
+            (0, r.jsx)(B, {
                 category: t,
                 initialItemCardRef: a,
                 isPremiumUser: n,
@@ -226,7 +226,7 @@ function I(e) {
                               ref: (t) => i(e.skuId, t),
                               children: (0, r.jsx)(p.k0, {
                                   newValue: { categoryPosition: t },
-                                  children: (0, r.jsx)(B, {
+                                  children: (0, r.jsx)(w, {
                                       isPremiumUser: o,
                                       category: e,
                                       initialItemCardRef: s,

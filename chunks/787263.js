@@ -1,15 +1,15 @@
-n.d(t, { w: () => l });
+n.d(t, { w: () => r });
 var i = n(200651);
 n(192379);
-var r = n(481060);
-function l(e, t) {
-    return (0, r.ZDy)(async () => {
-        let { default: r } = await Promise.all([n.e('42743'), n.e('30557')]).then(n.bind(n, 207540));
+var l = n(481060);
+function r(e, t) {
+    return (0, l.ZDy)(async () => {
+        let { default: l } = await Promise.all([n.e('42743'), n.e('30557')]).then(n.bind(n, 207540));
         return (n) => {
-            var l, a;
+            var r, a;
             return (0, i.jsx)(
-                r,
-                ((l = (function (e) {
+                l,
+                ((r = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             i = Object.keys(n);
@@ -42,7 +42,7 @@ function l(e, t) {
                         channel: e
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
+                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -51,9 +51,9 @@ function l(e, t) {
                           }
                           return n;
                       })(Object(a)).forEach(function (e) {
-                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
+                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
                       }),
-                l)
+                r)
             );
         };
     });

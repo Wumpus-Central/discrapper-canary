@@ -60,6 +60,7 @@ class u extends l.Component {
                             onChange: this.handleChange,
                             onFocus: this.handleFocus,
                             onBlur: this.handleBlur,
+                            onMouseEnter: this.handleMouseEnter,
                             disabled: a
                         }),
                         (0, r.jsx)('div', {
@@ -102,6 +103,10 @@ class u extends l.Component {
                         focused: !1,
                         value: this.state.lastGoodValue
                     });
+            }),
+            E(this, 'handleMouseEnter', (e) => {
+                let { onMouseEnter: t } = this.props;
+                null == t || t(e);
             }),
             E(this, 'handleKeyPress', (e) => {
                 if (e.which === a.yXg.ENTER) {

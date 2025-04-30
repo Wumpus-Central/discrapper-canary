@@ -31,8 +31,8 @@ var r = n(200651),
     y = n(822857),
     L = n(82856),
     Z = n(960919),
-    R = n(275388),
-    A = n(25990),
+    A = n(275388),
+    R = n(25990),
     B = n(594174),
     D = n(626135),
     M = n(63063),
@@ -231,7 +231,7 @@ let ey = {
             })
         });
     },
-    eR = (e) => {
+    eA = (e) => {
         let { product: t, user: n } = e;
         return (0, V.x6)(t)
             ? (0, r.jsx)(eZ, {
@@ -250,7 +250,7 @@ let ey = {
                   })
                 : null;
     },
-    eA = (e) => {
+    eR = (e) => {
         let { skuId: t } = e;
         return t === m.a.PREMIUM_TIER_2_3_DAY
             ? (0, r.jsx)(h.Text, {
@@ -270,11 +270,11 @@ let ey = {
             S = (0, ex.W)(n, C);
         o()(null != S, 'Selected product should not be null');
         let N = (0, J.L)(n),
-            { isPurchased: T, isPartiallyOwnedBundle: A } = (0, J.L)(S),
+            { isPurchased: T, isPartiallyOwnedBundle: R } = (0, J.L)(S),
             { isDisabled: B, disabledReason: D } = (0, Q.G)(S.skuId),
             M = (0, V.ne)({
                 product: S,
-                isPartiallyOwnedBundle: A,
+                isPartiallyOwnedBundle: R,
                 isPurchased: T
             }),
             G = (0, p.e7)([F.Z], () => F.Z.purchases),
@@ -284,7 +284,7 @@ let ey = {
             er = (0, V.G1)(S),
             ec = (0, V.ql)(S, eI.tuJ.DEFAULT),
             eu = (null == ec ? void 0 : ec.amount) === 0,
-            { firstAvatarDecoration: ed } = (0, $.R)(null != E ? E : S),
+            { firstAvatarDecoration: ed } = (0, $.Rj)(null != E ? E : S),
             em = i.useMemo(() => (0, V.BH)(S, w), [S, w]),
             { handleUseNow: ep, isApplying: ev } = (0, q.W)({
                 product: S,
@@ -317,7 +317,7 @@ let ey = {
         }, [ed]);
         let eD = (e, t) => {
                 let n = () => {
-                        (0, R.q)({
+                        (0, A.q)({
                             skuId: S.skuId,
                             onCheckoutSuccess: (e) => {
                                 var t;
@@ -399,7 +399,7 @@ let ey = {
                         display: 'modal'
                     })
                 }),
-                (0, r.jsx)(eR, {
+                (0, r.jsx)(eA, {
                     product: null != E ? E : S,
                     user: a
                 }),
@@ -422,11 +422,11 @@ let ey = {
                                     variant: 'text-sm/normal',
                                     children: eU
                                 }),
-                                (0, r.jsx)(eA, { skuId: S.skuId }),
+                                (0, r.jsx)(eR, { skuId: S.skuId }),
                                 N.isPurchased || N.isPartiallyOwnedBundle
                                     ? (0, r.jsx)(ee.U, {
                                           className: eS.priceTag,
-                                          isPartiallyPurchased: A
+                                          isPartiallyPurchased: R
                                       })
                                     : er
                                       ? (0, r.jsx)(h.Text, {
@@ -522,7 +522,7 @@ let ey = {
                         (0, r.jsx)(h.Text, {
                             className: l()(eS.disclaimer, !en && eS.disclaimerLight),
                             variant: 'text-xxs/normal',
-                            children: er && !T ? eE.intl.string(eE.t.O2K0xM) : null
+                            children: er && !T ? eE.intl.string(eE.t.nKdAlJ) : null
                         })
                     ]
                 })
@@ -597,7 +597,7 @@ let ey = {
     eU = (e) => {
         let { product: t, user: n } = e,
             i = U.ZP.canUsePremiumProfileCustomization(n),
-            a = (0, p.cj)([A.Z], () => A.Z.getAllPending()),
+            a = (0, p.cj)([R.Z], () => R.Z.getAllPending()),
             { pendingAvatar: l } = a,
             s = (function (e, t) {
                 if (null == e) return {};
@@ -624,7 +624,7 @@ let ey = {
             }),
             c = t.type === d.Z.AVATAR_DECORATION,
             [u] = t.items,
-            { firstAvatarDecoration: m, firstProfileEffect: f } = (0, $.R)(t),
+            { firstAvatarDecoration: m, firstProfileEffect: f } = (0, $.Rj)(t),
             h = null != f;
         return (0, r.jsx)('div', {
             className: (null == u ? void 0 : u.type) === d.Z.AVATAR_DECORATION ? eS.previewsContainerInner : eS.profileEffectPreviewsContainerInner,
@@ -740,10 +740,10 @@ let ey = {
             }),
                 I.items.forEach(H.oK);
         }, [c, k, I.skuId, I.items, N]);
-        let y = (0, R.r)(),
+        let y = (0, A.r)(),
             Z = t === h.Dvm.EXITING;
         if (null == b) return null;
-        let A = (0, ew.ZS)(l.skuId),
+        let R = (0, ew.ZS)(l.skuId),
             M = function () {
                 let { keepBalancePillOverlayOpen: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 n(), e || (0, L.vp)();
@@ -776,7 +776,7 @@ let ey = {
                                     asset: E,
                                     size: (0, ec.ML)(540),
                                     className: eS.categoryBanner,
-                                    categoryBannerOverride: A
+                                    categoryBannerOverride: R
                                 }),
                                 (0, ep.o0)(a.skuId)
                                     ? a.skuId === ew.Vt.ORB_PROFILE_BADGE
@@ -800,7 +800,7 @@ let ey = {
                                             className: eS.titleImageContainer,
                                             children: (0, r.jsx)('img', {
                                                 className: eS.titleImage,
-                                                style: null == A ? void 0 : A.pdpLogoStyle,
+                                                style: null == R ? void 0 : R.pdpLogoStyle,
                                                 src: S,
                                                 alt: l.name
                                             })

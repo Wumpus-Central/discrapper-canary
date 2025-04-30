@@ -70,7 +70,7 @@ function h(e) {
         : g
           ? (0, l.jsx)(S, {
                 className: n,
-                children: y.intl.string(y.t['/bUsx8'])
+                children: y.intl.string(y.t['6cfuDg'])
             })
           : (0, l.jsx)(j, {
                 appId: t,

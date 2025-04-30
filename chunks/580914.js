@@ -25,8 +25,8 @@ var r = n(200651),
     S = n(957058),
     P = n(215023),
     E = n(981631),
-    w = n(388032),
-    B = n(806734);
+    B = n(388032),
+    w = n(806734);
 let I = {
         rankedSkuIds: [],
         name: '',
@@ -72,22 +72,22 @@ let I = {
             G = (0, C.a)()(U),
             z = (0, v.l)(G).slice(0, 4),
             q = (0, k.St)(z),
-            Y = _ === P.AW.ORBS ? w.intl.string(w.t.hvVgAQ) : w.intl.formatToPlainString(w.t.wvKYCg, { category_name: Z.name });
+            Y = _ === P.AW.ORBS ? B.intl.string(B.t.hvVgAQ) : B.intl.formatToPlainString(B.t.wvKYCg, { category_name: Z.name });
         return null != N && (t || Z !== I)
             ? (0, r.jsxs)('div', {
-                  className: i()(B.heroBlock, { [B.responsiveHero]: null == H ? void 0 : H.responsive }),
+                  className: i()(w.heroBlock, { [w.responsiveHero]: null == H ? void 0 : H.responsive }),
                   children: [
                       (0, r.jsxs)('div', {
-                          className: B.banner,
+                          className: w.banner,
                           style: (null == H ? void 0 : H.backgroundStyle) != null ? { background: H.backgroundStyle } : void 0,
                           children: [
                               null == W || x || !L || R
                                   ? (0, r.jsx)('div', {
-                                        className: B.bannerImage,
+                                        className: w.bannerImage,
                                         style: { backgroundImage: 'url('.concat(M, ')') }
                                     })
                                   : (0, r.jsx)(b.Z, {
-                                        className: B.bannerVideoBackground,
+                                        className: w.bannerVideoBackground,
                                         src: W,
                                         autoPlay: !0,
                                         loop: !0
@@ -96,11 +96,11 @@ let I = {
                                   (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)('div', {
-                                              className: i()(B.bannerShadow, B.left, { [B.darker]: null == V ? void 0 : V.darker }),
+                                              className: i()(w.bannerShadow, w.left, { [w.darker]: null == V ? void 0 : V.darker }),
                                               style: (null == V ? void 0 : V.gradientLeft) != null ? { background: null == V ? void 0 : V.gradientLeft } : void 0
                                           }),
                                           (0, r.jsx)('div', {
-                                              className: i()(B.bannerShadow, B.right, { [B.darker]: null == V ? void 0 : V.darker }),
+                                              className: i()(w.bannerShadow, w.right, { [w.darker]: null == V ? void 0 : V.darker }),
                                               style: (null == V ? void 0 : V.gradientRight) != null ? { background: null == V ? void 0 : V.gradientRight } : void 0
                                           })
                                       ]
@@ -108,41 +108,41 @@ let I = {
                           ]
                       }),
                       (0, r.jsxs)('div', {
-                          className: B.heroBlockContent,
+                          className: w.heroBlockContent,
                           children: [
                               (0, r.jsxs)('div', {
-                                  className: B.heroHeaderContainer,
+                                  className: w.heroHeaderContainer,
                                   children: [
                                       t
-                                          ? (0, r.jsx)('div', { className: B.heroHeaderBadgeLogoSummaryContainer })
+                                          ? (0, r.jsx)('div', { className: w.heroHeaderBadgeLogoSummaryContainer })
                                           : (0, r.jsxs)('div', {
-                                                className: B.heroHeaderBadgeLogoSummaryContainer,
+                                                className: w.heroHeaderBadgeLogoSummaryContainer,
                                                 children: [
                                                     null != Z.unpublishedAt &&
                                                         (0, r.jsx)(c.IGR, {
                                                             disableColor: !0,
-                                                            text: w.intl.string(w.t['h/uBCQ']),
-                                                            className: B.limitedTimeBadge
+                                                            text: B.intl.string(B.t['h/uBCQ']),
+                                                            className: w.limitedTimeBadge
                                                         }),
                                                     (0, r.jsxs)('div', {
-                                                        className: B.heroLogoNameContainer,
+                                                        className: w.heroLogoNameContainer,
                                                         children: [
                                                             null != Z.logoUrl &&
                                                                 (0, r.jsx)('img', {
-                                                                    className: B.heroHeaderLogo,
+                                                                    className: w.heroHeaderLogo,
                                                                     src: D,
                                                                     alt: Z.name
                                                                 }),
                                                             null != Z.title &&
                                                                 (0, r.jsx)(c.X6q, {
                                                                     variant: 'heading-xxl/bold',
-                                                                    className: B.title,
+                                                                    className: w.title,
                                                                     color: 'header-primary',
                                                                     children: Z.title
                                                                 }),
                                                             (0, r.jsx)(c.Text, {
                                                                 variant: _ === P.AW.ORBS ? 'text-lg/medium' : 'text-md/normal',
-                                                                className: _ === P.AW.ORBS ? B.orbsSubHeaderText : (null == F ? void 0 : F.showDarkBannerText) ? B.subHeaderTextDark : B.subHeaderText,
+                                                                className: _ === P.AW.ORBS ? w.orbsSubHeaderText : (null == F ? void 0 : F.showDarkBannerText) ? w.subHeaderTextDark : w.subHeaderText,
                                                                 style: null != Z.bannerTextColor ? { color: Z.bannerTextColor } : void 0,
                                                                 children: Z.summary
                                                             })
@@ -152,9 +152,9 @@ let I = {
                                             }),
                                       !t &&
                                           (0, r.jsx)('div', {
-                                              className: B.heroHeaderButtonContainer,
+                                              className: w.heroHeaderButtonContainer,
                                               children: (0, r.jsx)(c.zxk, {
-                                                  className: B.heroHeaderButton,
+                                                  className: w.heroHeaderButton,
                                                   color: c.Ttl.WHITE,
                                                   onClick: () => {
                                                       _ === P.AW.ORBS ? (0, u.Z)(g.Z.getArticleURL(E.BhN.VIRTUAL_CURRENCY_LEARN_MORE)) : n('shop latest category hero', Z.categorySkuId);
@@ -165,7 +165,7 @@ let I = {
                                   ]
                               }),
                               (0, r.jsx)('div', {
-                                  className: i()(B.row, B.feed, { [B.feedSingleRow]: _ !== P.AW.ORBS }),
+                                  className: i()(w.row, w.feed, { [w.feedSingleRow]: _ !== P.AW.ORBS }),
                                   children: t
                                       ? (0, r.jsx)(r.Fragment, {
                                             children: [void 0, void 0, void 0, void 0].map((e, t) => (0, r.jsx)(O.K, {}, t))

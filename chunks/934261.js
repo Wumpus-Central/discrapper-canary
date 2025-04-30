@@ -18,8 +18,8 @@ var i = r(392711),
     j = r(687158),
     x = r(706454),
     y = r(695346),
-    P = r(265159),
-    O = r(25990),
+    O = r(265159),
+    P = r(25990),
     v = r(594174),
     _ = r(55935),
     E = r(74538),
@@ -57,14 +57,14 @@ let S = (e) => {
             b = (0, l.e7)([s.Z], () => s.Z.getProduct(null == r ? void 0 : r.skuId)),
             j = (0, l.e7)([x.default], () => x.default.locale),
             y = E.ZP.canUseCollectibles(h),
-            P = (0, c.qS)(p),
-            O = (0, c.G1)(f),
-            I = !y && P,
+            O = (0, c.qS)(p),
+            P = (0, c.G1)(f),
+            I = !y && O,
             S = (null == p ? void 0 : p.expiresAt) != null ? (0, _.TD)(Date.now(), p.expiresAt) : null,
             Z = (0, d.a)(p),
             k = (0, u.k)(b),
-            D = (0, m.M)(!O || y),
-            A = N(I, O, y, D);
+            D = (0, m.M)(!P || y),
+            A = N(I, P, y, D);
         return null != r
             ? (0, n.jsx)('div', {
                   className: t ? w.effectDescriptionNoGradient : w.effectDescriptionBorderWithGradient,
@@ -121,12 +121,12 @@ let S = (e) => {
                                           })
                                   ]
                               }),
-                          P &&
+                          O &&
                               (0, n.jsx)(o.Text, {
                                   variant: 'text-xxs/normal',
                                   color: 'text-muted',
                                   className: w.effectPurchasedAt,
-                                  children: C.intl.string(C.t.UewH9P)
+                                  children: C.intl.string(C.t.nKdAlJ)
                               })
                       ]
                   })
@@ -147,14 +147,14 @@ let S = (e) => {
                 pendingAvatarDecoration: Z,
                 pendingThemeColors: k,
                 pendingAccentColor: D
-            } = (0, l.cj)([f.Z, O.Z], () =>
+            } = (0, l.cj)([f.Z, P.Z], () =>
                 I(
                     {
                         pendingNickname: void 0,
                         pendingGlobalName: void 0,
                         pendingAccentColor: void 0
                     },
-                    null != d ? f.Z.getAllPending() : O.Z.getAllPending()
+                    null != d ? f.Z.getAllPending() : P.Z.getAllPending()
                 )
             ),
             A = E.ZP.isPremium(o),
@@ -180,7 +180,7 @@ let S = (e) => {
                 pendingProfileEffectId: null != (t = null == s ? void 0 : s.id) ? t : null,
                 hideFakeActivity: G,
                 canUsePremiumCustomization: T,
-                onUpsellClick: P.Z,
+                onUpsellClick: O.Z,
                 onBannerChange: b.g_
             };
         return (0, n.jsxs)('div', {

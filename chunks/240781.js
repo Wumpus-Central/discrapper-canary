@@ -93,7 +93,7 @@ let I = [
                     (0, r.jsx)(c.Text, {
                         variant: 'text-xxs/normal',
                         color: 'text-muted',
-                        children: O.intl.string(O.t.UewH9P)
+                        children: O.intl.string(O.t.nKdAlJ)
                     })
             ]
         });

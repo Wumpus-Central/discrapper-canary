@@ -13,7 +13,7 @@ let c = (e) => {
               tooltipClassName: s.partiallyOwnedDisclaimer,
               position: 'top',
               align: 'left',
-              text: o.intl.string(o.t['2MCxfX']),
+              text: o.intl.string(o.t.y1VWkZ),
               children: (e) => {
                   var n, l;
                   return (0, r.jsxs)(
@@ -56,7 +56,7 @@ let c = (e) => {
                                   }),
                                   (0, r.jsx)(i.Text, {
                                       variant: 'text-md/semibold',
-                                      children: o.intl.string(o.t['5b+JhY'])
+                                      children: o.intl.string(o.t.BEjTio)
                                   })
                               ]
                           }),
@@ -79,6 +79,6 @@ let c = (e) => {
         : (0, r.jsx)(i.Text, {
               variant: 'text-md/semibold',
               className: t,
-              children: o.intl.string(o.t['/bUsx8'])
+              children: o.intl.string(o.t['6cfuDg'])
           });
 };

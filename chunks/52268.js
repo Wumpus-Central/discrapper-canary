@@ -41,7 +41,7 @@ function y(e) {
     }
     return e;
 }
-function P(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,7 +59,7 @@ function P(e, t) {
         e
     );
 }
-function O(e, t) {
+function P(e, t) {
     if (null == e) return {};
     var r,
         n,
@@ -81,10 +81,10 @@ function O(e, t) {
 let v = () => 80,
     _ = (e) => {
         var { children: t, className: r, isSelected: i = !1 } = e,
-            l = O(e, ['children', 'className', 'isSelected']);
+            l = P(e, ['children', 'className', 'isSelected']);
         return (0, n.jsx)(
             u.P3F,
-            P(y({ className: o()(j.effectGridItem, r, { [j.selected]: i }) }, l), {
+            O(y({ className: o()(j.effectGridItem, r, { [j.selected]: i }) }, l), {
                 onClick: l.onSelect,
                 children: t
             })
@@ -93,7 +93,7 @@ let v = () => 80,
     E = (e) => {
         var t,
             { user: r, profileEffect: l, innerRef: o, section: s, isSelected: v } = e,
-            E = O(e, ['user', 'profileEffect', 'innerRef', 'section', 'isSelected']);
+            E = P(e, ['user', 'profileEffect', 'innerRef', 'section', 'isSelected']);
         let C = (0, g.V)(l.id),
             w = (0, a.e7)([d.Z], () => {
                 let e = d.Z.getProduct(l.skuId);
@@ -107,7 +107,7 @@ let v = () => 80,
             T = (0, p.M)();
         return (0, n.jsxs)(
             _,
-            P(
+            O(
                 y(
                     {
                         className: !A || v || T ? void 0 : j.decorationGridItemChurned,
@@ -254,7 +254,7 @@ let v = () => 80,
                 renderSection: (e, t) => {
                     let { header: r } = a[e];
                     return (0, n.jsx)('div', {
-                        style: P(y({}, t), {
+                        style: O(y({}, t), {
                             height: ''.concat(16, 'px'),
                             position: 'absolute'
                         }),

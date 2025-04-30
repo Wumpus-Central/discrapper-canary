@@ -1,29 +1,31 @@
-n.r(t), n.d(t, { default: () => Z });
+n.r(t), n.d(t, { default: () => I }), n(388685);
 var r = n(200651);
 n(192379);
 var i = n(481060),
     a = n(493683),
     l = n(239091),
     o = n(883385),
-    s = n(108843),
-    c = n(947440),
+    c = n(108843),
+    s = n(947440),
     u = n(100527),
-    d = n(658138),
-    f = n(299206),
-    p = n(895563),
-    b = n(212205),
-    h = n(62420),
-    v = n(641360),
-    y = n(769409),
-    O = n(140106),
-    g = n(122074),
-    _ = n(314897),
+    d = n(906732),
+    f = n(658138),
+    p = n(299206),
+    b = n(895563),
+    h = n(212205),
+    v = n(62420),
+    y = n(641360),
+    O = n(769409),
+    _ = n(140106),
+    E = n(122074),
+    g = n(314897),
+    C = n(626135),
     j = n(858687),
     m = n(461535),
-    C = n(776568),
-    E = n(981631),
+    N = n(776568),
+    T = n(981631),
     P = n(388032);
-function N(e) {
+function Z(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,58 +50,59 @@ function N(e) {
     }
     return e;
 }
-let Z = (0, s.Z)(
+let I = (0, c.Z)(
     (0, o.Z)(
         function (e) {
-            let { channel: t, selected: o, onSelect: s } = e,
-                Z = t.isOwner(_.default.getId()),
-                w = (0, m.Z)(t),
-                I = (0, C.ZP)(t),
-                T = (0, g.Uf)(E.aIL, t.id, 'top'),
-                x = (0, j.Z)(t, o),
-                A = (0, f.Z)({
+            let { channel: t, selected: o, onSelect: c } = e,
+                I = t.isOwner(g.default.getId()),
+                R = (0, m.Z)(t),
+                U = (0, N.ZP)(t),
+                D = (0, E.Uf)(T.aIL, t.id, 'top'),
+                w = (0, j.Z)(t, o),
+                x = (0, p.Z)({
                     id: t.id,
                     label: P.intl.string(P.t.gFHI3t)
                 }),
-                R = (0, c.Z)(t),
-                U = (0, p.l)(t),
-                S = (0, p.P)(t),
-                D = (0, b.Z)(t),
-                F = (0, h.Z)(t),
-                k = (0, d.D)(t),
-                M = (0, v.p1)(u.Z.GROUP_DM_CONTEXT_MENU, t.id),
-                Q = (0, v.I3)(u.Z.GROUP_DM_CONTEXT_MENU, t.id);
+                A = (0, s.Z)(t),
+                S = (0, b.l)(t),
+                M = (0, b.P)(t),
+                k = (0, h.Z)(t),
+                F = (0, v.Z)(t),
+                G = (0, f.D)(t),
+                { analyticsLocations: Q } = (0, d.ZP)(u.Z.GROUP_DM_CONTEXT_MENU),
+                W = (0, y.p1)(u.Z.GROUP_DM_CONTEXT_MENU, t.id),
+                X = (0, y.I3)(u.Z.GROUP_DM_CONTEXT_MENU, t.id);
             return null == t || t.isManaged()
                 ? null
                 : (0, r.jsxs)(i.v2r, {
                       navId: 'gdm-context',
                       'aria-label': P.intl.string(P.t.Xm41aW),
                       onClose: l.Zy,
-                      onSelect: s,
+                      onSelect: c,
                       children: [
-                          (0, r.jsx)(i.kSQ, { children: w }),
+                          (0, r.jsx)(i.kSQ, { children: R }),
                           (0, r.jsxs)(i.kSQ, {
-                              children: [U, D, F]
+                              children: [S, k, F]
                           }),
                           (0, r.jsxs)(i.kSQ, {
                               children: [
-                                  Z
+                                  I
                                       ? (0, r.jsx)(i.sNh, {
                                             id: 'instant-invites',
                                             label: P.intl.string(P.t.ngRFjY),
                                             action: () =>
                                                 (0, i.ZDy)(async () => {
                                                     let { default: e } = await n.e('97573').then(n.bind(n, 892382));
-                                                    return (n) => (0, r.jsx)(e, N({ channelId: t.id }, n));
+                                                    return (n) => (0, r.jsx)(e, Z({ channelId: t.id }, n));
                                                 })
                                         })
                                       : null,
-                                  M &&
-                                      (Q
+                                  W &&
+                                      (X
                                           ? (0, r.jsx)(i.sNh, {
                                                 id: 'change-icon',
                                                 label: P.intl.string(P.t['6yrpFR']),
-                                                action: () => (0, O.P5)(t.id, u.Z.GROUP_DM_CONTEXT_MENU)
+                                                action: () => (0, _.P5)(t.id, u.Z.GROUP_DM_CONTEXT_MENU)
                                             })
                                           : (0, r.jsx)(i.II_, {
                                                 id: 'change-icon',
@@ -108,7 +111,7 @@ let Z = (0, s.Z)(
                                                     var l, o;
                                                     return (0, r.jsx)(
                                                         i.TEe,
-                                                        ((l = N(
+                                                        ((l = Z(
                                                             {
                                                                 onChange: (n) => {
                                                                     var r;
@@ -120,7 +123,19 @@ let Z = (0, s.Z)(
                                                             },
                                                             e
                                                         )),
-                                                        (o = o = { ref: n }),
+                                                        (o = o =
+                                                            {
+                                                                onInteraction: () => {
+                                                                    var t;
+                                                                    null == (t = e.onInteraction) || t.call(e),
+                                                                        C.default.track(T.rMx.GDM_EDIT_INTERACTED, {
+                                                                            action: 'open',
+                                                                            location: u.Z.GROUP_DM_CONTEXT_MENU,
+                                                                            location_stack: [...Q, u.Z.GROUP_DM_CONTEXT_MENU_CHANGE_ICON]
+                                                                        });
+                                                                },
+                                                                ref: n
+                                                            }),
                                                         Object.getOwnPropertyDescriptors
                                                             ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
                                                             : (function (e, t) {
@@ -138,33 +153,40 @@ let Z = (0, s.Z)(
                                                 },
                                                 label: P.intl.string(P.t['6yrpFR'])
                                             })),
-                                  M && null != t.icon
+                                  W && null != t.icon
                                       ? (0, r.jsx)(i.sNh, {
                                             id: 'remove-icon',
                                             label: P.intl.string(P.t['uY+Nk5']),
-                                            action: () => a.Z.setIcon(t.id, null)
+                                            action: () => {
+                                                C.default.track(T.rMx.GDM_EDIT_INTERACTED, {
+                                                    action: 'open',
+                                                    location: u.Z.GROUP_DM_CONTEXT_MENU,
+                                                    location_stack: [...Q, u.Z.GROUP_DM_CONTEXT_MENU_REMOVE_ICON]
+                                                }),
+                                                    a.Z.setIcon(t.id, null);
+                                            }
                                         })
                                       : null,
-                                  Q &&
+                                  X &&
                                       (0, r.jsx)(i.sNh, {
                                           id: 'edit-gdm',
                                           label: P.intl.string(P.t['5Q9+/P']),
-                                          action: () => (0, y.B)(t.id, u.Z.GROUP_DM_CONTEXT_MENU)
+                                          action: () => (0, O.B)(t.id, u.Z.GROUP_DM_CONTEXT_MENU)
                                       }),
-                                  k
+                                  G
                               ]
                           }),
-                          (0, r.jsx)(i.kSQ, { children: R }),
+                          (0, r.jsx)(i.kSQ, { children: A }),
                           (0, r.jsxs)(i.kSQ, {
-                              children: [I, T]
+                              children: [U, D]
                           }),
-                          (0, r.jsx)(i.kSQ, { children: x }),
-                          (0, r.jsx)(i.kSQ, { children: S }),
-                          (0, r.jsx)(i.kSQ, { children: A })
+                          (0, r.jsx)(i.kSQ, { children: w }),
+                          (0, r.jsx)(i.kSQ, { children: M }),
+                          (0, r.jsx)(i.kSQ, { children: x })
                       ]
                   });
         },
-        { object: E.qAy.CONTEXT_MENU }
+        { object: T.qAy.CONTEXT_MENU }
     ),
     [u.Z.CONTEXT_MENU, u.Z.GROUP_DM_MENU]
 );

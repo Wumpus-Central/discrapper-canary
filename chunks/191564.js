@@ -17,8 +17,8 @@ var n = r(200651),
     j = r(626135),
     x = r(74538),
     y = r(934261),
-    P = r(52268),
-    O = r(981631),
+    O = r(52268),
+    P = r(981631),
     v = r(474936),
     _ = r(388032),
     E = r(287975);
@@ -68,7 +68,7 @@ function C(e) {
 function w(e) {
     let { user: t, guild: r, categories: l, purchases: c, onClose: f, initialSelectedProfileEffectId: p, currentSavedEffectId: m, analyticsLocations: g } = e,
         { pendingProfileEffectId: b } = (0, h.bd)(r),
-        [j, O] = i.useMemo(() => {
+        [j, P] = i.useMemo(() => {
             let e = (0, u.bl)(l, c);
             return [e.purchased, e.shopPreviews];
         }, [l, c]),
@@ -77,8 +77,8 @@ function w(e) {
             var e;
             let t = j.find((e) => (null == e ? void 0 : e.id) === v),
                 r = null != t || null === v;
-            return [null != (e = null != t ? t : O.find((e) => (null == e ? void 0 : e.id) === v)) ? e : null, r];
-        }, [v, j, O]),
+            return [null != (e = null != t ? t : P.find((e) => (null == e ? void 0 : e.id) === v)) ? e : null, r];
+        }, [v, j, P]),
         { product: N, purchase: Z } = (0, d.Z)(null == I ? void 0 : I.skuId),
         k = i.useRef(null),
         D = x.ZP.canUseCollectibles(t),
@@ -119,7 +119,7 @@ function w(e) {
             (0, n.jsxs)(o.hzk, {
                 className: E.modalContent,
                 children: [
-                    (0, n.jsx)(P.Z, {
+                    (0, n.jsx)(O.Z, {
                         user: t,
                         guild: r,
                         pendingProfileEffect: v,
@@ -160,11 +160,11 @@ function I(e) {
         { isFetching: p, categories: m, purchases: g } = (0, f.Z)('ProfileEffectModal'),
         x = (0, l.e7)([b.default], () => b.default.getCurrentUser()),
         { analyticsLocations: y } = (0, c.ZP)(r, s.Z.EDIT_PROFILE_EFFECT_MODAL),
-        P = (0, h.Kg)(x, u);
+        O = (0, h.Kg)(x, u);
     return (
         i.useEffect(() => {
-            j.default.track(O.rMx.OPEN_MODAL, {
-                type: O.jXE.PROFILE_EFFECT_CUSTOMIZATION,
+            j.default.track(P.rMx.OPEN_MODAL, {
+                type: P.jXE.PROFILE_EFFECT_CUSTOMIZATION,
                 location_stack: y
             });
         }, [y]),
@@ -185,7 +185,7 @@ function I(e) {
                           categories: m,
                           purchases: g,
                           initialSelectedProfileEffectId: a,
-                          currentSavedEffectId: P,
+                          currentSavedEffectId: O,
                           onClose: d,
                           analyticsLocations: y
                       })
