@@ -2,11 +2,11 @@ n.d(t, {
     B: () => _,
     y: () => f
 });
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(442837),
-    a = n(481060),
-    o = n(26033),
+    o = n(481060),
+    a = n(26033),
     s = n(594174),
     l = n(324745),
     c = n(388032);
@@ -40,15 +40,15 @@ function d(e) {
     return e;
 }
 function f(e) {
-    return (0, o.dX)(e) ? c.intl.string(c.t['4f8iur']) : (0, o.y0)(e) ? c.intl.string(c.t.yX2hNz) : (0, o.kq)(e) ? c.intl.string(c.t.oSs8en) : c.intl.string(c.t.bK9GT0);
+    return (0, a.dX)(e) ? c.intl.string(c.t['4f8iur']) : (0, a.y0)(e) ? c.intl.string(c.t.yX2hNz) : (0, a.kq)(e) ? c.intl.string(c.t.oSs8en) : c.intl.string(c.t.bK9GT0);
 }
 function _(e) {
     let { user: t, entry: c, display: u, onAction: _, onClose: p } = e,
         h = (0, l.Z)({ onClose: p }),
         m = (0, i.e7)([s.default], () => s.default.getCurrentUser());
-    if (t.id !== (null == m ? void 0 : m.id) || 'recent' !== u || !(0, o.Rh)(c)) return null;
+    if (t.id !== (null == m ? void 0 : m.id) || 'recent' !== u || !(0, a.Rh)(c)) return null;
     let g = () => {
-        (0, a.ZDy)(async () => {
+        (0, o.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e('62880'), n.e('26545')]).then(n.bind(n, 81596));
             return (n) =>
                 (0, r.jsx)(
@@ -65,7 +65,7 @@ function _(e) {
                 );
         });
     };
-    return (0, r.jsx)(a.sNh, {
+    return (0, r.jsx)(o.sNh, {
         id: 'delete-entry-history',
         label: f(c),
         action: () => {

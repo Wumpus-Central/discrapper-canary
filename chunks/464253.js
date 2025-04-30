@@ -1,9 +1,9 @@
 n.d(t, { Z: () => g }), n(415506), n(35282);
 var r = n(570140),
     i = n(846027),
-    a = n(872810),
-    o = n(710845),
-    s = n(252759),
+    o = n(872810),
+    a = n(710845),
+    s = n(77014),
     l = n(361291),
     c = n(199902),
     u = n(314897),
@@ -84,7 +84,7 @@ class m {
             n = l.Z.getState();
         switch (e.type) {
             case s.A.STREAM:
-                if ((null != t && (0, a.tK)(t, !1), e.sourceId.startsWith('camera') && null != e.audioSourceId)) {
+                if ((null != t && (0, o.tK)(t, !1), e.sourceId.startsWith('camera') && null != e.audioSourceId)) {
                     let t = e.sourceId.split(':')[1];
                     i.Z.setGoLiveSource({
                         cameraSettings: {
@@ -115,7 +115,7 @@ class m {
                 }
                 break;
             case s.A.PAUSE:
-                null != t && (0, a.tK)(t, !0);
+                null != t && (0, o.tK)(t, !0);
                 break;
             case s.A.STOP:
                 null != t && (0, f.Z)(t);
@@ -126,7 +126,7 @@ class m {
     }
     _onCapturePaused(e) {
         let t = c.Z.getCurrentUserActiveStream();
-        null != t && (0, a.tK)(t, e);
+        null != t && (0, o.tK)(t, e);
     }
     _onCaptureEnded() {
         switch (this.mode) {
@@ -150,7 +150,7 @@ class m {
             (this.applications = []),
             (this.director = new s.a((e) => this._onDirectorAction(e))),
             r.Z.subscribe('STREAM_START', (e) => {
-                let { streamType: t, guildId: n, channelId: r, pid: i, sourceId: a, audioSourceId: s, sound: l } = e,
+                let { streamType: t, guildId: n, channelId: r, pid: i, sourceId: o, audioSourceId: s, sound: l } = e,
                     c = u.default.getId(),
                     f = (0, d.V9)({
                         streamType: t,
@@ -158,7 +158,7 @@ class m {
                         channelId: r,
                         ownerId: c
                     });
-                (null == i) != (null == a) ? (null != i && this._onStreamApplication(f, i, null == l || l), null != a && this._onStreamDirectSource(f, a, s, l)) : new o.Z('ApplicationSwitchingManager').warn('invalid start_stream: both application + display modes were specified (pid: '.concat(i, ', source-id: ').concat(a, ')'));
+                (null == i) != (null == o) ? (null != i && this._onStreamApplication(f, i, null == l || l), null != o && this._onStreamDirectSource(f, o, s, l)) : new a.Z('ApplicationSwitchingManager').warn('invalid start_stream: both application + display modes were specified (pid: '.concat(i, ', source-id: ').concat(o, ')'));
             }),
             r.Z.subscribe('STREAM_DELETE', (e) => {
                 let { streamKey: t } = e;

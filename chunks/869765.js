@@ -6,8 +6,8 @@ n.d(t, {
     n(539854);
 var r,
     i = n(31775),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(570140),
     l = n(247206),
     c = n(786761),
@@ -52,7 +52,7 @@ class g {
         _(
             this,
             '_cachedMessages',
-            new (a())({
+            new (o())({
                 max: 100,
                 dispose: (e, t) => this.handleCacheDisposed(e, t)
             })
@@ -217,7 +217,7 @@ function k(e) {
         return null != t && y(t);
     });
 }
-class j extends (r = o.ZP.Store) {
+class j extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(d.Z, u.Z);
     }

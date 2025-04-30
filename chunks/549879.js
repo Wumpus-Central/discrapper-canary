@@ -1,8 +1,8 @@
 n.d(t, { i: () => h });
-var r = n(255367),
+var r = n(200651),
     i = n(481060),
-    a = n(451478),
-    o = n(358085),
+    o = n(451478),
+    a = n(358085),
     s = n(998502),
     l = n(40851),
     c = n(981631);
@@ -74,7 +74,7 @@ function h() {
         t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = null != e ? e : (0, l.GB)();
     if (n !== c.IlC.APP && null != n) {
-        if (a.Z.isFocused()) return;
-        t ? (o.isPlatformEmbedded ? s.ZP.focus() : window.focus()) : p(e);
+        if (o.Z.isFocused()) return;
+        t ? (a.isPlatformEmbedded ? s.ZP.focus() : window.focus()) : p(e);
     }
 }

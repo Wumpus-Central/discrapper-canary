@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(615287),
     i = n(594190),
-    a = n(371651),
-    o = n(388627),
+    o = n(371651),
+    a = n(388627),
     s = n(131951),
     l = n(19780),
     c = n(449224),
@@ -46,28 +46,28 @@ function h() {
         t,
         n,
         r,
-        a,
-        o = s.Z.getGoLiveSource();
-    if (null != o && ((e = o.quality.resolution), (t = o.quality.frameRate), null != o.desktopSource)) {
+        o,
+        a = s.Z.getGoLiveSource();
+    if (null != a && ((e = a.quality.resolution), (t = a.quality.frameRate), null != a.desktopSource)) {
         var l, c;
-        n = o.desktopSource.soundshareSession;
-        let e = null != o.desktopSource.sourcePid ? i.ZP.getGameForPID(o.desktopSource.sourcePid) : null;
-        (r = null != (l = null == e ? void 0 : e.name) ? l : null), (a = null != (c = null == e ? void 0 : e.id) ? c : null);
+        n = a.desktopSource.soundshareSession;
+        let e = null != a.desktopSource.sourcePid ? i.ZP.getGameForPID(a.desktopSource.sourcePid) : null;
+        (r = null != (l = null == e ? void 0 : e.name) ? l : null), (o = null != (c = null == e ? void 0 : e.id) ? c : null);
     }
     return {
         video_input_resolution: e,
         video_input_frame_rate: t,
         soundshare_session: n,
         share_game_name: r,
-        share_game_id: a
+        share_game_id: o
     };
 }
 function m(e, t) {
     var n;
     let s = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        _ = __OVERLAY__ ? c.Z.getGame() : (0, o.pL)(),
+        _ = __OVERLAY__ ? c.Z.getGame() : (0, a.pL)(),
         h = i.ZP.getRunningGames().find((e) => e.name === (null == _ ? void 0 : _.name)),
-        m = null != (n = a.default.getRenderMethod(null == h ? void 0 : h.pid)) ? n : null;
+        m = null != (n = o.default.getRenderMethod(null == h ? void 0 : h.pid)) ? n : null;
     switch (
         ((t = p(
             {},

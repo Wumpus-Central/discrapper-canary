@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y });
 var r,
     i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -74,11 +74,11 @@ function m(e) {
 }
 function g(e) {
     var t;
-    let { completingEmoji: n, completingUserId: r, waitingUserId: i, channelId: a } = e,
-        o = null != (t = d[a]) ? t : {},
-        l = o[i];
-    if ((delete o[i], null == l)) return !1;
-    f[a] = c(s({}, f[a]), {
+    let { completingEmoji: n, completingUserId: r, waitingUserId: i, channelId: o } = e,
+        a = null != (t = d[o]) ? t : {},
+        l = a[i];
+    if ((delete a[i], null == l)) return !1;
+    f[o] = c(s({}, f[o]), {
         [i]: [l, n],
         [r]: [n, l]
     });
@@ -86,8 +86,8 @@ function g(e) {
 function E(e) {
     var t;
     let { firstUserId: n, secondUserId: r, channelId: i } = e,
-        a = null != (t = f[i]) ? t : {};
-    delete a[n], delete a[r];
+        o = null != (t = f[i]) ? t : {};
+    delete o[n], delete o[r];
 }
 class b extends (r = i.ZP.DeviceSettingsStore) {
     initialize() {
@@ -109,8 +109,8 @@ class b extends (r = i.ZP.DeviceSettingsStore) {
         return { enabled: _ };
     }
 }
-o(b, 'persistKey', 'HighFiveStore');
-let y = new b(a.Z, {
+a(b, 'persistKey', 'HighFiveStore');
+let y = new b(o.Z, {
     HIGH_FIVE_QUEUE: p,
     HIGH_FIVE_REMOVE: h,
     HIGH_FIVE_SET_ENABLED: m,

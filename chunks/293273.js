@@ -1,8 +1,8 @@
 let r;
 n.d(t, { Z: () => j }), n(539854), n(388685), n(997841);
 var i,
-    a = n(348327),
-    o = n.n(a),
+    o = n(348327),
+    a = n.n(o),
     s = n(392711),
     l = n.n(s),
     c = n(442837),
@@ -86,29 +86,29 @@ function R() {
         let [, n] = t;
         null != n.application_id && (i.add(n.name), e.push(n));
     });
-    let a = p.ZP.getVisibleGame(),
-        s = null != a && null != a.name && i.has(a.name),
-        c = null != a && a.isLauncher,
+    let o = p.ZP.getVisibleGame(),
+        s = null != o && null != o.name && i.has(o.name),
+        c = null != o && o.isLauncher,
         u = null != b.Z.getCurrentUserActiveStream(),
         d = s || (c && !u);
-    if (null != a && null != a.name && !d) {
+    if (null != o && null != o.name && !d) {
         var f, E;
         e.push({
             type: v.IIU.PLAYING,
-            name: a.name,
-            application_id: null != (E = a.id) ? E : null == (f = O.Z.getGameByName(a.name)) ? void 0 : f.id,
-            timestamps: { start: a.start }
+            name: o.name,
+            application_id: null != (E = o.id) ? E : null == (f = O.Z.getGameByName(o.name)) ? void 0 : f.id,
+            timestamps: { start: o.start }
         });
     }
     let I = m.Z.getActivity();
-    null != I && e.push(S({ type: v.IIU.LISTENING }, I)), o()(N, e) || (N = e);
+    null != I && e.push(S({ type: v.IIU.LISTENING }, I)), a()(N, e) || (N = e);
 }
 function P() {
     (C = {}), R();
 }
 function w(e) {
     let { socketId: t, pid: n, activity: r } = e;
-    if (o()(C[t], [n, r])) return !1;
+    if (a()(C[t], [n, r])) return !1;
     null != r ? (C[t] = [n, r]) : delete C[t], R();
 }
 function D(e) {
@@ -122,11 +122,11 @@ function L(e) {
 function x(e) {
     let t = {},
         n = !1;
-    for (let [a, [o, s]] of Object.entries(C)) {
+    for (let [o, [a, s]] of Object.entries(C)) {
         var r, i;
         let l = null != (i = s.flags) ? i : 0,
             c = (0, f.Ix)(l);
-        'string' == typeof (null == (r = s.metadata) ? void 0 : r.embedded_activity_instance_id) && (c = (0, f.Pu)(c, e, s.metadata.embedded_activity_instance_id)), c !== l ? ((t[a] = [o, A(S({}, s), { flags: c })]), (n = !0)) : (t[a] = [o, s]);
+        'string' == typeof (null == (r = s.metadata) ? void 0 : r.embedded_activity_instance_id) && (c = (0, f.Pu)(c, e, s.metadata.embedded_activity_instance_id)), c !== l ? ((t[o] = [a, A(S({}, s), { flags: c })]), (n = !0)) : (t[o] = [a, s]);
     }
     n && ((C = t), R());
 }

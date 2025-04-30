@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(544891),
     i = n(570140),
-    a = n(668781),
-    o = n(346479),
+    o = n(668781),
+    a = n(346479),
     s = n(929991),
     l = n(480739),
     c = n(985518),
@@ -13,15 +13,15 @@ async function _(e, t, n) {
     try {
         return await e();
     } catch (e) {
-        var r, i, o;
+        var r, i, a;
         (null == (r = e.body) ? void 0 : r.code) === d.evJ.NON_MODERATED_TAG_REQUIRED
-            ? a.Z.show({
+            ? o.Z.show({
                   title: t,
                   body: n
               })
             : (null == (i = e.body) ? void 0 : i.code) === d.evJ.INVALID_FORM_BODY &&
-              (null == (o = e.body) ? void 0 : o.errors.emoji) &&
-              a.Z.show({
+              (null == (a = e.body) ? void 0 : a.errors.emoji) &&
+              o.Z.show({
                   title: f.intl.string(f.t.T8sBLC),
                   body: f.intl.string(f.t.aHt1BQ)
               });
@@ -66,7 +66,7 @@ let p = {
         _(() => n, f.intl.string(f.t['0ZkNDQ']), f.intl.string(f.t.imcb5u));
     },
     updateForumPostTags: async (e, t) => (
-        await o.Z.unarchiveThreadIfNecessary(e),
+        await a.Z.unarchiveThreadIfNecessary(e),
         r.tn.patch({
             url: d.ANM.CHANNEL(e),
             body: { applied_tags: t },
@@ -90,13 +90,13 @@ let p = {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.cs.IMMEDIATE_WITH_COOLDOWN;
         (0, s.rS)((0, c.UP)(e), t);
     },
-    async searchForumPosts(e, t, n, r, a) {
+    async searchForumPosts(e, t, n, r, o) {
         i.Z.dispatch({
             type: 'FORUM_SEARCH_START',
             channelId: t
         });
         try {
-            let s = await o.Z.searchThreads(e, t, n, r, a);
+            let s = await a.Z.searchThreads(e, t, n, r, o);
             (0, u.Js)({
                 guildId: e,
                 channelId: t,

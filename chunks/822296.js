@@ -1,9 +1,9 @@
 n.d(t, { Z: () => E });
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(481060),
     l = n(872810),
     c = n(493773),
@@ -17,7 +17,7 @@ var i = n(120356),
 let g = n(340109);
 function E(e) {
     let { stream: t, width: n, noArt: i = !1, selected: E = !1 } = e,
-        b = (0, o.e7)([f.Z], () => f.Z.getChannel(t.channelId)),
+        b = (0, a.e7)([f.Z], () => f.Z.getChannel(t.channelId)),
         y = (0, u.Q3)('StreamEnded');
     function O(e) {
         return e < 550 ? 'small' : e < 1000 ? 'medium' : 'large';
@@ -34,13 +34,13 @@ function E(e) {
               theme: p.BR.MIDNIGHT,
               children: (e) =>
                   (0, r.jsx)('div', {
-                      className: a()(m.container, e),
+                      className: o()(m.container, e),
                       children: (0, r.jsxs)('div', {
                           className: m.content,
                           children: [
                               (0, r.jsx)('div', {
-                                  className: a()(m.artContainer, m[S]),
-                                  children: (0, r.jsx)('div', { className: a()(m.art, m[S]) })
+                                  className: o()(m.artContainer, m[S]),
+                                  children: (0, r.jsx)('div', { className: o()(m.art, m[S]) })
                               }),
                               (0, r.jsxs)('div', {
                                   className: m.cta,

@@ -1,12 +1,12 @@
 n.d(t, { t: () => l });
-var r = n(73800),
+var r = n(192379),
     i = n(611144),
-    a = n(2052),
-    o = n(691251),
+    o = n(2052),
+    a = n(691251),
     s = n(98528);
 let l = (e) => {
     let { columnCounts: t, stickersGrid: n, stickersListRef: l, store: c, gridNavigatorId: u, setInspectedStickerPosition: d, onGridItemSelect: f } = e,
-        _ = (0, a.O)(),
+        _ = (0, o.O)(),
         p = r.useCallback(
             (e) => {
                 f(e, _);
@@ -15,7 +15,7 @@ let l = (e) => {
         ),
         h = r.useCallback(
             (e, t) => {
-                d(e, t, o.u.GRID_NAVIGATOR_EVENT);
+                d(e, t, a.u.GRID_NAVIGATOR_EVENT);
             },
             [d]
         ),
@@ -42,7 +42,7 @@ let l = (e) => {
                     (e) => {
                         if (null == e) return;
                         let { columnIndex: t, rowIndex: n, source: r } = e;
-                        r !== o.u.GRID_NAVIGATOR_EVENT &&
+                        r !== a.u.GRID_NAVIGATOR_EVENT &&
                             m({
                                 type: i.s.SET_FOCUSED_POSITION,
                                 x: t,

@@ -1,7 +1,7 @@
 n.d(t, {
     gw: () => i,
-    rE: () => a,
-    tk: () => o
+    rE: () => o,
+    tk: () => a
 }),
     n(467055),
     n(388685);
@@ -9,10 +9,10 @@ var r = n(911969);
 function i(e, t) {
     return e === r.yU.CHAT ? '/' + t : t;
 }
-function a(e, t) {
+function o(e, t) {
     return ''.concat(e, ':').concat(t);
 }
-function o(e) {
-    return Object.fromEntries(e.map((e) => [a(e.id, e.type), e]));
+function a(e) {
+    return Object.fromEntries(e.map((e) => [o(e.id, e.type), e]));
 }
 n(895924);

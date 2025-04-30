@@ -31,16 +31,16 @@ n.d(t, {
     n(146733);
 var r = n(605387),
     i = n.n(r);
-let a = (e) => i().decode(e),
-    o = (e) => Math.round(e.frames.reduce((e, t) => e + t.delay, 0)),
+let o = (e) => i().decode(e),
+    a = (e) => Math.round(e.frames.reduce((e, t) => e + t.delay, 0)),
     s = async (e, t, n) => {
-        let r = a(await t.arrayBuffer());
+        let r = o(await t.arrayBuffer());
         return {
             src: URL.createObjectURL(t),
             base64: e,
             loop: !1,
             loopDelay: 0,
-            duration: o(r),
+            duration: a(r),
             start: 0,
             position: {
                 x: 0,
@@ -95,9 +95,9 @@ let c = (e, t) => ({
         let [t, n] = e.split(','),
             r = atob(n),
             i = t.split(';')[0],
-            a = new Uint8Array(r.length);
-        for (let e = 0; e < r.length; e++) a[e] = r.charCodeAt(e);
-        return new Blob([a], { type: i });
+            o = new Uint8Array(r.length);
+        for (let e = 0; e < r.length; e++) o[e] = r.charCodeAt(e);
+        return new Blob([o], { type: i });
     },
     _ = (e) => {
         let t = f(e);

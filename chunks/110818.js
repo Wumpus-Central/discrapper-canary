@@ -7,13 +7,13 @@ n.d(t, {
     n(388685);
 var r,
     i,
-    a,
     o,
-    s = n(255367),
-    l = n(73800),
+    a,
+    s = n(200651),
+    l = n(192379),
     c = n(120356),
     u = n.n(c),
-    d = n(481752),
+    d = n(272573),
     f = n(748780),
     _ = n(481060),
     p = n(800929);
@@ -77,7 +77,7 @@ class E extends (r = l.PureComponent) {
             });
     }
     render() {
-        let { className: e, nextScene: t, onScenePlay: n, onSceneComplete: r, pause: i, pauseWhileUnfocused: a } = this.props;
+        let { className: e, nextScene: t, onScenePlay: n, onSceneComplete: r, pause: i, pauseWhileUnfocused: o } = this.props;
         return (0, s.jsx)(_.kci, {
             className: u()(p.sequencedAnimation, e),
             importData: this.importDefault,
@@ -85,7 +85,7 @@ class E extends (r = l.PureComponent) {
             sceneSegments: g,
             onScenePlay: n,
             onSceneComplete: r,
-            pauseWhileUnfocused: a,
+            pauseWhileUnfocused: o,
             pause: i
         });
     }
@@ -138,7 +138,7 @@ class O extends (i = l.PureComponent) {
             });
     }
     render() {
-        let { className: e, nextScene: t, onScenePlay: n, onSceneComplete: r, pause: i, pauseWhileUnfocused: a } = this.props;
+        let { className: e, nextScene: t, onScenePlay: n, onSceneComplete: r, pause: i, pauseWhileUnfocused: o } = this.props;
         return (0, s.jsx)(_.kci, {
             className: u()(p.sequencedAnimation, e),
             importData: this.importDefault,
@@ -146,7 +146,7 @@ class O extends (i = l.PureComponent) {
             sceneSegments: y,
             onScenePlay: n,
             onSceneComplete: r,
-            pauseWhileUnfocused: a,
+            pauseWhileUnfocused: o,
             pause: i
         });
     }
@@ -245,7 +245,7 @@ let T = Object.freeze({
         }
     }),
     A = 1.2;
-class N extends (a = l.PureComponent) {
+class N extends (o = l.PureComponent) {
     static getNextScene(e) {
         switch (e) {
             case N.Scenes.IDLE_ENTRY:
@@ -486,23 +486,23 @@ function L(e) {
         i = (0, _.bYB)(
             w.length,
             w.map((e, i) => {
-                let a = i > 0 ? D.DELAY_STAGGER * i + Math.random() * (D.DELAY_MAX - D.DELAY_MIN) + D.DELAY_MIN : 0,
-                    o = Math.random() * (D.SIZE_MAX - D.SIZE_MIN) + D.SIZE_MIN;
+                let o = i > 0 ? D.DELAY_STAGGER * i + Math.random() * (D.DELAY_MAX - D.DELAY_MIN) + D.DELAY_MIN : 0,
+                    a = Math.random() * (D.SIZE_MAX - D.SIZE_MIN) + D.SIZE_MIN;
                 return {
                     from: {
                         scale: D.SCALE_INITIAL,
                         rotate: D.ROTATE_INITIAL,
                         top: e.top,
                         left: e.left,
-                        width: o,
-                        height: o
+                        width: a,
+                        height: a
                     },
                     to: async (e) => {
                         t
                             ? (await e({
                                   scale: D.SCALE_MIDDLE,
                                   rotate: D.ROTATE_MIDDLE,
-                                  delay: a,
+                                  delay: o,
                                   config: {
                                       duration: D.DURATION_MIDDLE,
                                       easing: D.EASING_MIDDLE
@@ -550,7 +550,7 @@ function L(e) {
         })
     });
 }
-class x extends (o = l.PureComponent) {
+class x extends (a = l.PureComponent) {
     static getNextScene(e) {
         switch (e) {
             case 'entry':
@@ -571,7 +571,7 @@ class x extends (o = l.PureComponent) {
             });
     }
     render() {
-        let { className: e, nextScene: t, pause: n, onScenePlay: r, onSceneComplete: i, pauseWhileUnfocused: a } = this.props;
+        let { className: e, nextScene: t, pause: n, onScenePlay: r, onSceneComplete: i, pauseWhileUnfocused: o } = this.props;
         return (0, s.jsxs)('div', {
             className: u()(p.guildWrapper, e),
             children: [
@@ -582,7 +582,7 @@ class x extends (o = l.PureComponent) {
                     sceneSegments: R,
                     onScenePlay: r,
                     onSceneComplete: i,
-                    pauseWhileUnfocused: a,
+                    pauseWhileUnfocused: o,
                     pause: n
                 }),
                 (0, s.jsx)(L, { animate: !n && 'stars' === t })

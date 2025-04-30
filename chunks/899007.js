@@ -1,8 +1,8 @@
 n.d(t, { Z: () => R }), n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(420660),
@@ -74,7 +74,7 @@ function N(e, t) {
 }
 let C = h.ZP.getEnableHardwareAcceleration() ? l.Xo$ : l.qEK;
 function R(e) {
-    let { user: t, displayProfile: n, guildId: a, channelId: h, themeType: S, animateOnHover: A, onOpenProfile: R, className: P, previewStatus: w } = e,
+    let { user: t, displayProfile: n, guildId: o, channelId: h, themeType: S, animateOnHover: A, onOpenProfile: R, className: P, previewStatus: w } = e,
         { theme: D } = (0, b.z)(),
         { analyticsLocations: L } = (0, d.ZP)(u.Z.AVATAR),
         { trackUserProfileAction: x } = (0, m.KZ)(),
@@ -88,14 +88,14 @@ function R(e) {
         })),
         V = void 0 !== w ? w : G,
         F = S === y.lY.MODAL ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
-        Z = o()(I.avatar, P),
+        Z = a()(I.avatar, P),
         {
             avatarDecorationSrc: H,
             avatarSrc: Y,
             eventHandlers: W
         } = (0, E.Z)({
             user: t,
-            guildId: null != n ? n.guildId : a,
+            guildId: null != n ? n.guildId : o,
             size: F,
             animateOnHover: A
         }),
@@ -122,7 +122,7 @@ function R(e) {
         : (0, r.jsx)(
               l.P3F,
               N(T({}, W), {
-                  className: o()(Z, I.clickable),
+                  className: a()(Z, I.clickable),
                   focusProps: { ringClassName: I.focusRing },
                   onClick: () => {
                       x({

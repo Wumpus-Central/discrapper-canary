@@ -1,15 +1,15 @@
 n.d(t, { Z: () => f }), n(388685);
 var r = n(626135),
     i = n(591759),
-    a = n(777754),
-    o = n(754688),
+    o = n(777754),
+    a = n(754688),
     s = n(981631);
 let l = [
-    (e) => (a.Z.isInvite(e) ? 'Discord Server Invite' : null),
+    (e) => (o.Z.isInvite(e) ? 'Discord Server Invite' : null),
     (e) => {
         let t = i.Z.safeParseWithQuery(e);
         if (null == t) return null;
-        let n = (0, o.Qj)(t.path);
+        let n = (0, a.Qj)(t.path);
         return null == n
             ? null
             : c({
@@ -18,7 +18,7 @@ let l = [
                   messageId: n.messageId
               });
     },
-    (e) => (a.Z.isDiscoveryLink(e) ? 'Discord Discovery Link' : null)
+    (e) => (o.Z.isDiscoveryLink(e) ? 'Discord Discovery Link' : null)
 ];
 function c(e) {
     return null != e.guildId && null != e.channelId && null != e.messageId ? 'Discord Message Link' : null != e.guildId && null != e.channelId ? 'Discord Channel Link' : 'Unknown';
@@ -49,13 +49,13 @@ let f = {
         });
     },
     trackAnnouncementMessageLinkClicked: function (e) {
-        let { messageId: t, channelId: n, guildId: i, sourceChannelId: a, sourceGuildId: o } = e;
+        let { messageId: t, channelId: n, guildId: i, sourceChannelId: o, sourceGuildId: a } = e;
         r.default.track(s.rMx.ANNOUNCEMENT_MESSAGE_LINK_CLICKED, {
             message_id: t,
             channel_id: n,
             guild_id: i,
-            source_channel_id: a,
-            source_guild_id: o
+            source_channel_id: o,
+            source_guild_id: a
         });
     }
 };

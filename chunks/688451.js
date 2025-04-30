@@ -17,7 +17,7 @@ function r(e) {
 function i(e) {
     return !!e && !!e[W];
 }
-function a(e) {
+function o(e) {
     var t;
     return (
         !!e &&
@@ -35,7 +35,7 @@ function a(e) {
             _(e))
     );
 }
-function o(e, t, n) {
+function a(e, t, n) {
     void 0 === n && (n = !1),
         0 === s(e)
             ? (n ? Object.keys : q)(e).forEach(function (r) {
@@ -77,13 +77,13 @@ function h(e) {
     delete t[W];
     for (var n = q(t), r = 0; r < n.length; r++) {
         var i = n[r],
-            a = t[i];
-        !1 === a.writable && ((a.writable = !0), (a.configurable = !0)),
-            (a.get || a.set) &&
+            o = t[i];
+        !1 === o.writable && ((o.writable = !0), (o.configurable = !0)),
+            (o.get || o.set) &&
                 (t[i] = {
                     configurable: !0,
                     writable: !0,
-                    enumerable: a.enumerable,
+                    enumerable: o.enumerable,
                     value: e[i]
                 });
     }
@@ -94,11 +94,11 @@ function m(e, t) {
         void 0 === t && (t = !1),
         E(e) ||
             i(e) ||
-            !a(e) ||
+            !o(e) ||
             (s(e) > 1 && (e.set = e.add = e.clear = e.delete = g),
             Object.freeze(e),
             t &&
-                o(
+                a(
                     e,
                     function (e, t) {
                         return m(t, !0);
@@ -150,17 +150,17 @@ function N(e, t) {
     t._ = t.p.length;
     var n = t.p[0],
         i = void 0 !== e && e !== n;
-    return t.h.O || b('ES5').S(t, e, i), i ? (n[W].P && (I(t), r(4)), a(e) && ((e = C(t, e)), t.l || P(t, e)), t.u && b('Patches').M(n[W].t, e, t.u, t.s)) : (e = C(t, n, [])), I(t), t.u && t.v(t.u, t.s), e !== H ? e : void 0;
+    return t.h.O || b('ES5').S(t, e, i), i ? (n[W].P && (I(t), r(4)), o(e) && ((e = C(t, e)), t.l || P(t, e)), t.u && b('Patches').M(n[W].t, e, t.u, t.s)) : (e = C(t, n, [])), I(t), t.u && t.v(t.u, t.s), e !== H ? e : void 0;
 }
 function C(e, t, n) {
     if (E(t)) return t;
     var r = t[W];
     if (!r)
         return (
-            o(
+            a(
                 t,
-                function (i, a) {
-                    return R(e, r, t, i, a, n);
+                function (i, o) {
+                    return R(e, r, t, i, o, n);
                 },
                 !0
             ),
@@ -171,26 +171,26 @@ function C(e, t, n) {
     if (!r.I) {
         (r.I = !0), r.A._--;
         var i = 4 === r.i || 5 === r.i ? (r.o = h(r.k)) : r.o,
-            a = i,
+            o = i,
             s = !1;
-        3 === r.i && ((a = new Set(i)), i.clear(), (s = !0)),
-            o(a, function (t, a) {
-                return R(e, r, i, t, a, n, s);
+        3 === r.i && ((o = new Set(i)), i.clear(), (s = !0)),
+            a(o, function (t, o) {
+                return R(e, r, i, t, o, n, s);
             }),
             P(e, i, !1),
             n && e.u && b('Patches').N(r, n, e.u, e.s);
     }
     return r.o;
 }
-function R(e, t, n, r, o, s, c) {
-    if (i(o)) {
-        var d = C(e, o, s && t && 3 !== t.i && !l(t.R, r) ? s.concat(r) : void 0);
+function R(e, t, n, r, a, s, c) {
+    if (i(a)) {
+        var d = C(e, a, s && t && 3 !== t.i && !l(t.R, r) ? s.concat(r) : void 0);
         if ((u(n, r, d), !i(d))) return;
         e.m = !1;
-    } else c && n.add(o);
-    if (a(o) && !E(o)) {
+    } else c && n.add(a);
+    if (o(a) && !E(a)) {
         if (!e.h.D && e._ < 1) return;
-        C(e, o), (t && t.A.l) || P(e, o);
+        C(e, a), (t && t.A.l) || P(e, a);
     }
 }
 function P(e, t, n) {
@@ -236,11 +236,11 @@ function M(e, t, n) {
                           C: !1
                       },
                       i = r,
-                      a = J;
-                  n && ((i = [r]), (a = $));
-                  var o = Proxy.revocable(i, a),
-                      s = o.revoke,
-                      l = o.proxy;
+                      o = J;
+                  n && ((i = [r]), (o = $));
+                  var a = Proxy.revocable(i, o),
+                      s = a.revoke,
+                      l = a.proxy;
                   return (r.k = l), (r.j = s), l;
               })(t, n)
             : b('ES5').J(t, n);
@@ -250,7 +250,7 @@ function k(e) {
     return (
         i(e) || r(22, e),
         (function e(t) {
-            if (!a(t)) return t;
+            if (!o(t)) return t;
             var n,
                 r = t[W],
                 i = s(t);
@@ -259,7 +259,7 @@ function k(e) {
                 (r.I = !0), (n = j(t, i)), (r.I = !1);
             } else n = j(t, i);
             return (
-                o(n, function (t, i) {
+                a(n, function (t, i) {
                     (r && c(r.t, t) === i) || u(n, t, e(i));
                 }),
                 3 === i ? new Set(n) : n
@@ -324,7 +324,7 @@ var U,
                     return i ? ('value' in i ? i.value : null == (r = i.get) ? void 0 : r.call(e.k)) : void 0;
                 })(e, n, t);
             var r = n[t];
-            return e.I || !a(r) ? r : r === w(e.t, t) ? (x(e), (e.o[t] = M(e.A.h, r, e))) : r;
+            return e.I || !o(r) ? r : r === w(e.t, t) ? (x(e), (e.o[t] = M(e.A.h, r, e))) : r;
         },
         has: function (e, t) {
             return t in p(e);
@@ -337,8 +337,8 @@ var U,
             if (null == r ? void 0 : r.set) return r.set.call(e.k, n), !0;
             if (!e.P) {
                 var i = w(p(e), t),
-                    a = null == i ? void 0 : i[W];
-                if (a && a.t === n) return (e.o[t] = n), (e.R[t] = !1), !0;
+                    o = null == i ? void 0 : i[W];
+                if (o && o.t === n) return (e.o[t] = n), (e.R[t] = !1), !0;
                 if (d(n, i) && (void 0 !== n || l(e.t, t))) return !0;
                 x(e), L(e);
             }
@@ -370,7 +370,7 @@ var U,
         }
     },
     $ = {};
-o(J, function (e, t) {
+a(J, function (e, t) {
     $[e] = function () {
         return (arguments[0] = arguments[0][0]), t.apply(this, arguments);
     };
@@ -388,31 +388,31 @@ var ee = new ((function () {
                 (this.D = !0),
                 (this.produce = function (e, n, i) {
                     if ('function' == typeof e && 'function' != typeof n) {
-                        var o,
+                        var a,
                             s = n;
                         n = e;
                         var l = t;
                         return function (e) {
                             var t = this;
                             void 0 === e && (e = s);
-                            for (var r = arguments.length, i = Array(r > 1 ? r - 1 : 0), a = 1; a < r; a++) i[a - 1] = arguments[a];
+                            for (var r = arguments.length, i = Array(r > 1 ? r - 1 : 0), o = 1; o < r; o++) i[o - 1] = arguments[o];
                             return l.produce(e, function (e) {
                                 var r;
                                 return (r = n).call.apply(r, [t, e].concat(i));
                             });
                         };
                     }
-                    if (('function' != typeof n && r(6), void 0 !== i && 'function' != typeof i && r(7), a(e))) {
+                    if (('function' != typeof n && r(6), void 0 !== i && 'function' != typeof i && r(7), o(e))) {
                         var c = T(t),
                             u = M(t, e, void 0),
                             d = !0;
                         try {
-                            (o = n(u)), (d = !1);
+                            (a = n(u)), (d = !1);
                         } finally {
                             d ? I(c) : S(c);
                         }
-                        return 'undefined' != typeof Promise && o instanceof Promise
-                            ? o.then(
+                        return 'undefined' != typeof Promise && a instanceof Promise
+                            ? a.then(
                                   function (e) {
                                       return v(c, i), N(e, c);
                                   },
@@ -420,36 +420,36 @@ var ee = new ((function () {
                                       throw (I(c), e);
                                   }
                               )
-                            : (v(c, i), N(o, c));
+                            : (v(c, i), N(a, c));
                     }
                     if (!e || 'object' != typeof e) {
-                        if ((void 0 === (o = n(e)) && (o = e), o === H && (o = void 0), t.D && m(o, !0), i)) {
+                        if ((void 0 === (a = n(e)) && (a = e), a === H && (a = void 0), t.D && m(a, !0), i)) {
                             var f = [],
                                 _ = [];
-                            b('Patches').M(e, o, f, _), i(f, _);
+                            b('Patches').M(e, a, f, _), i(f, _);
                         }
-                        return o;
+                        return a;
                     }
                     r(21, e);
                 }),
                 (this.produceWithPatches = function (e, n) {
                     if ('function' == typeof e)
                         return function (n) {
-                            for (var r = arguments.length, i = Array(r > 1 ? r - 1 : 0), a = 1; a < r; a++) i[a - 1] = arguments[a];
+                            for (var r = arguments.length, i = Array(r > 1 ? r - 1 : 0), o = 1; o < r; o++) i[o - 1] = arguments[o];
                             return t.produceWithPatches(n, function (t) {
                                 return e.apply(void 0, [t].concat(i));
                             });
                         };
                     var r,
                         i,
-                        a = t.produce(e, n, function (e, t) {
+                        o = t.produce(e, n, function (e, t) {
                             (r = e), (i = t);
                         });
-                    return 'undefined' != typeof Promise && a instanceof Promise
-                        ? a.then(function (e) {
+                    return 'undefined' != typeof Promise && o instanceof Promise
+                        ? o.then(function (e) {
                               return [e, r, i];
                           })
-                        : [a, r, i];
+                        : [o, r, i];
                 }),
                 'boolean' == typeof (null == e ? void 0 : e.useProxies) && this.setUseProxies(e.useProxies),
                 'boolean' == typeof (null == e ? void 0 : e.autoFreeze) && this.setAutoFreeze(e.autoFreeze);
@@ -457,7 +457,7 @@ var ee = new ((function () {
         var t = e.prototype;
         return (
             (t.createDraft = function (e) {
-                a(e) || r(8), i(e) && (e = k(e));
+                o(e) || r(8), i(e) && (e = k(e));
                 var t = T(this),
                     n = M(this, e, void 0);
                 return (n[W].C = !0), S(t), n;
@@ -482,11 +482,11 @@ var ee = new ((function () {
                     }
                 }
                 n > -1 && (t = t.slice(n + 1));
-                var a = b('Patches').$;
+                var o = b('Patches').$;
                 return i(e)
-                    ? a(e, t)
+                    ? o(e, t)
                     : this.produce(e, function (e) {
-                          return a(e, t);
+                          return o(e, t);
                       });
             }),
             e

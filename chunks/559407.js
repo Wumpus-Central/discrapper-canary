@@ -1,13 +1,13 @@
 n.d(t, {
     F: () => i,
-    Z: () => o
+    Z: () => a
 });
-var r = n(255367);
-n(73800), n(269499);
+var r = n(200651);
+n(192379), n(269499);
 let i = 'cash-app-pay-container';
-function a() {
+function o() {
     return (0, r.jsx)('div', { id: i });
 }
-function o() {
-    return (0, r.jsx)(a, {});
+function a() {
+    return (0, r.jsx)(o, {});
 }

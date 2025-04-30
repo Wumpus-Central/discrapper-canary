@@ -1,10 +1,10 @@
 n.d(t, {
-    W: () => o,
-    l: () => a
+    W: () => a,
+    l: () => o
 });
 var r = n(430824),
     i = n(388032);
-let a = (e) => {
+let o = (e) => {
         switch (e) {
             case 'home':
             case 'guide':
@@ -18,7 +18,7 @@ let a = (e) => {
         }
         return null;
     },
-    o = (e, t, n) => {
+    a = (e, t, n) => {
         if ('linked-roles' === e) {
             var i;
             if (null == n) return null;

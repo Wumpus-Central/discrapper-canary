@@ -1,8 +1,8 @@
 n.d(t, { Z: () => D });
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(287734),
+    o = n(570140),
+    a = n(287734),
     s = n(579806),
     l = n(695346),
     c = n(70956),
@@ -35,12 +35,12 @@ function O() {
 function v() {
     Date.now() - h > Math.min(l.CM.getSetting() * c.Z.Millis.SECOND, f.OSm) || O()
         ? g ||
-          a.Z.dispatch({
+          o.Z.dispatch({
               type: 'AFK',
               afk: !0
           })
         : g &&
-          a.Z.dispatch({
+          o.Z.dispatch({
               type: 'AFK',
               afk: !1
           });
@@ -48,13 +48,13 @@ function v() {
 function I() {
     Date.now() - h > f.OSm || O()
         ? m ||
-          a.Z.dispatch({
+          o.Z.dispatch({
               type: 'IDLE',
               idle: !0,
               idleSince: h
           })
         : m &&
-          a.Z.dispatch({
+          o.Z.dispatch({
               type: 'IDLE',
               idle: !1
           });
@@ -93,7 +93,7 @@ function P(e) {
         (!r || !(t <= h)) &&
         ((h = r ? t : Date.now()),
         __OVERLAY__
-            ? a.Z.dispatch({
+            ? o.Z.dispatch({
                   type: 'OVERLAY_SET_NOT_IDLE',
                   timestamp: h
               })
@@ -108,7 +108,7 @@ __OVERLAY__ ||
               (E = !1), P({});
           }),
           s.Z.remotePowerMonitor.on('suspend', () => {
-              (E = !0), P({}), o.default.disconnect();
+              (E = !0), P({}), a.default.disconnect();
           }),
           s.Z.remotePowerMonitor.on('lock-screen', () => {
               (b = !0), P({});
@@ -129,7 +129,7 @@ class w extends (r = i.ZP.Store) {
     }
 }
 p(w, 'displayName', 'IdleStore');
-let D = new w(a.Z, {
+let D = new w(o.Z, {
     IDLE: A,
     AFK: N,
     SPEAKING: C,

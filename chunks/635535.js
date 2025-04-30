@@ -6,14 +6,14 @@ var n = /(?:[Eec]{1,6}|G{1,5}|(?:[yYu]+|U{1,5})|[ML]{1,5}|d{1,2}|a|[hkHK]{1,2}|m
         weekday: ['short', 'short', 'short', 'long', 'narrow'],
         era: ['short', 'short', 'short', 'long', 'narrow']
     },
-    a = ['weekday', 'era', 'year', 'month', 'day'],
-    o = ['hour', 'minute', 'second', 'timeZoneName'];
+    o = ['weekday', 'era', 'year', 'month', 'day'],
+    a = ['hour', 'minute', 'second', 'timeZoneName'];
 function s(e) {
-    for (var t = 0; t < o.length; t += 1) if (e.hasOwnProperty(o[t])) return !1;
+    for (var t = 0; t < a.length; t += 1) if (e.hasOwnProperty(a[t])) return !1;
     return !0;
 }
 function l(e) {
-    for (var t = 0; t < a.length; t += 1) if (e.hasOwnProperty(a[t])) return !1;
+    for (var t = 0; t < o.length; t += 1) if (e.hasOwnProperty(o[t])) return !1;
     return !0;
 }
 function c(e) {
@@ -66,8 +66,8 @@ function u(e) {
         n,
         r,
         i,
-        a,
-        o = e.availableFormats,
+        o,
+        a = e.availableFormats,
         u = e.timeFormats,
         d = e.dateFormats,
         f = e.medium,
@@ -79,13 +79,13 @@ function u(e) {
             r = Array((e.match(/E/g) || []).length + 1);
         return n.length > 2 && (t = t.replace(/(M|L)+/, n.join('$1'))), r.length > 2 && (t = t.replace(/([Eec])+/, r.join('$1'))), t;
     }
-    for (t in o) o.hasOwnProperty(t) && (r = c((n = m(t, o[t])))) && (_.push(r), s(r) ? h.push(n) : l(r) && p.push(n));
+    for (t in a) a.hasOwnProperty(t) && (r = c((n = m(t, a[t])))) && (_.push(r), s(r) ? h.push(n) : l(r) && p.push(n));
     for (i = 0; i < p.length; i += 1)
-        for (a = 0; a < h.length; a += 1)
+        for (o = 0; o < h.length; o += 1)
             (r = c(
                 (n = f
                     .replace('{0}', p[i])
-                    .replace('{1}', h[a])
+                    .replace('{1}', h[o])
                     .replace(/^[,\s]+|[,\s]+$/gi, ''))
             )) && _.push(r);
     for (t in u) u.hasOwnProperty(t) && (r = c((n = m(t, u[t])))) && _.push(r);

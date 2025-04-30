@@ -2,11 +2,11 @@ n.d(t, {
     Z: () => I,
     h: () => v
 });
-var r = n(73800),
+var r = n(192379),
     i = n(348327),
-    a = n.n(i),
-    o = n(97613),
-    s = n.n(o),
+    o = n.n(i),
+    a = n(97613),
+    s = n.n(a),
     l = n(990547),
     c = n(570140),
     u = n(493773),
@@ -76,7 +76,7 @@ let O = (0, l.trackMaker)({
 function v(e) {
     var t, n;
     let r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        { name: i, type: a, properties: o } = e;
+        { name: i, type: o, properties: a } = e;
     if (
         e.type === l.ImpressionTypes.MODAL &&
         null == e.name &&
@@ -87,21 +87,21 @@ function v(e) {
     )
         return;
     (0, m.Ps)(e);
-    let s = null != (t = null == o ? void 0 : o.guild_id) ? t : _.Z.getGuildId(),
-        c = null != (n = null == o ? void 0 : o.channel_id) ? n : f.Z.getChannelId(s),
+    let s = null != (t = null == a ? void 0 : a.guild_id) ? t : _.Z.getGuildId(),
+        c = null != (n = null == a ? void 0 : a.channel_id) ? n : f.Z.getChannelId(s),
         u = (0, p.expandEventProperties)(
             E(
                 {
-                    impression_type: a,
+                    impression_type: o,
                     location: (0, m.k$)()
                 },
                 (0, h.hH)(s),
                 (0, h.v_)(d.Z.getChannel(c)),
-                o
+                a
             )
         );
     if (r) return void (0, m.dT)(null, null);
-    null != i && null != a && ((0, p.debugLogEvent)(i, u), O(i, u)), (0, m.dT)(i, u);
+    null != i && null != o && ((0, p.debugLogEvent)(i, u), O(i, u)), (0, m.dT)(i, u);
 }
 function I(e) {
     let t =
@@ -113,12 +113,12 @@ function I(e) {
                   },
         n = arguments.length > 2 ? arguments[2] : void 0,
         i = r.useRef(void 0),
-        o = r.useRef(void 0),
+        a = r.useRef(void 0),
         l = () => {
-            let r = !a()(i.current, e);
+            let r = !o()(i.current, e);
             r && (i.current = e);
-            let l = !a()(o.current, n);
-            if ((l && (o.current = n), !r && !l)) return;
+            let l = !o()(a.current, n);
+            if ((l && (a.current = n), !r && !l)) return;
             let c = y(E({}, e), { sequenceId: s()('impression_') });
             return (
                 v(c, t.disableTrack),

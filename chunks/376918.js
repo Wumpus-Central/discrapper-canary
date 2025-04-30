@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(367907),
     i = n(373228),
-    a = n(626135),
-    o = n(981631);
+    o = n(626135),
+    a = n(981631);
 function s(e, t, n) {
     return (
         t in e
@@ -61,8 +61,8 @@ function u(e, t) {
 }
 function d(e, t, n) {
     var i, s, c;
-    a.default.track(
-        o.rMx.CHANNEL_AUTOCOMPLETE_OPEN,
+    o.default.track(
+        a.rMx.CHANNEL_AUTOCOMPLETE_OPEN,
         u(l({}, (0, r.v_)(t), (0, r.hH)(t.guild_id)), {
             autocomplete_type: e,
             num_emoji_results: null != (i = null == n ? void 0 : n.numEmojiResults) ? i : 0,
@@ -73,8 +73,8 @@ function d(e, t, n) {
 }
 function f(e, t, n, i) {
     var s, c, d, f, _;
-    a.default.track(
-        o.rMx.CHANNEL_AUTOCOMPLETE_SELECTED,
+    o.default.track(
+        a.rMx.CHANNEL_AUTOCOMPLETE_SELECTED,
         u(l({}, (0, r.v_)(n), (0, r.hH)(n.guild_id)), {
             autocomplete_type: e,
             selection_type: t,
@@ -104,7 +104,7 @@ function _(e) {
 }
 function p(e) {
     let { sticker: t, stickerSelectLocation: n, isReplacement: r, analyticsLocations: i } = e;
-    a.default.track(o.rMx.STICKER_ATTACHED, {
+    o.default.track(a.rMx.STICKER_ATTACHED, {
         replaced: r,
         source: _(n),
         sticker_id: t.id,

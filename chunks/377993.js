@@ -1,6 +1,6 @@
 n.d(t, { Z: () => M }), n(388685), n(539854);
-var r = n(255367),
-    i = n(73800),
+var r = n(200651),
+    i = n(192379),
     l = n(873546),
     o = n(442837),
     a = n(481060),
@@ -156,6 +156,7 @@ function R(e) {
                         isMobile: v,
                         nick: O,
                         nameplate: R,
+                        hideTooltip: L,
                         onClick: (e) => {
                             e.shiftKey ? null == A || A() : M((e) => !e);
                         },

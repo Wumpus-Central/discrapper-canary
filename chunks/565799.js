@@ -1,9 +1,9 @@
 n.d(t, { Z: () => en }), n(388685), n(539854);
 var r,
     i = n(348327),
-    a = n.n(i),
-    o = n(392711),
-    s = n.n(o),
+    o = n.n(i),
+    a = n(392711),
+    s = n.n(a),
     l = n(442837),
     c = n(759174),
     u = n(570140),
@@ -155,7 +155,7 @@ function J(e) {
         n = t.reduce((e, t) => {
             if (!t.isGuildStageVoice() || !C.has(t.guild_id)) return e;
             let n = N.get(t.id);
-            return null == n || a()(t.permissionOverwrites, n.permissionOverwrites) || (e.push(t.id), N.set(t.id, t)), e;
+            return null == n || o()(t.permissionOverwrites, n.permissionOverwrites) || (e.push(t.id), N.set(t.id, t)), e;
         }, []);
     return j((e) => e.rebuild(), n), n.length > 0;
 }

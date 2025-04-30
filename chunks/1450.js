@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v });
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(2052),
@@ -19,7 +19,7 @@ var r = n(255367),
     y = n(388032),
     O = n(427774);
 let v = (e) => {
-    let { className: t, guildId: n, channel: a, shouldTrackUpsellViewed: v, setTrackedUpsellViewed: I } = e,
+    let { className: t, guildId: n, channel: o, shouldTrackUpsellViewed: v, setTrackedUpsellViewed: I } = e,
         { location: S } = (0, c.O)(),
         { analyticsLocations: T } = (0, d.ZP)(),
         A = (0, s.e7)([m.Z], () => m.Z.getGuild(n)),
@@ -33,12 +33,12 @@ let v = (e) => {
                 ((0, u.yw)(E.rMx.PREMIUM_GUILD_UPSELL_VIEWED, {
                     location: S,
                     guild_id: null == A ? void 0 : A.id,
-                    channel_id: null == a ? void 0 : a.id,
+                    channel_id: null == o ? void 0 : o.id,
                     type: 'Expression Picker Inline Sticker Upsell',
                     location_stack: T
                 }),
                 I(!0));
-        }, [C, A, a, S, v, I, T, N]),
+        }, [C, A, o, S, v, I, T, N]),
         null == A || !N)
     )
         return null;
@@ -52,7 +52,7 @@ let v = (e) => {
             });
         };
         return (0, r.jsxs)('div', {
-            className: o()(O.upsell, t),
+            className: a()(O.upsell, t),
             children: [
                 (0, r.jsx)(l.$zw, {
                     size: 'md',
@@ -79,7 +79,7 @@ let v = (e) => {
             (0, f._Q)(), p.Z.open(n, E.pNK.STICKERS, S);
         };
         return (0, r.jsxs)('div', {
-            className: o()(O.upsell, t),
+            className: a()(O.upsell, t),
             children: [
                 (0, r.jsx)(l.SlE, {
                     size: 'custom',

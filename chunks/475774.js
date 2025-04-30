@@ -1,9 +1,9 @@
 n.d(t, { Z: () => l });
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(481060),
-    a = n(570140);
-function o(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +27,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -40,14 +40,14 @@ async function l(e) {
         },
         {
             onCloseCallback: () => {
-                a.Z.dispatch({
+                o.Z.dispatch({
                     type: 'INTERACTION_IFRAME_MODAL_CLOSE',
                     applicationId: e.application.id
                 });
             }
         }
     );
-    a.Z.dispatch({
+    o.Z.dispatch({
         type: 'INTERACTION_IFRAME_MODAL_KEY_CREATE',
         modalKey: t
     });

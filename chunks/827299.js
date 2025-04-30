@@ -1,10 +1,10 @@
 n.d(t, { K: () => E }), n(388685), n(35282), n(539854), n(415506);
-var r = n(73800),
+var r = n(192379),
     i = n(399606);
-function a(e, t) {
+function o(e, t) {
     if (t.has(e)) throw TypeError('Cannot initialize the same private elements twice on an object');
 }
-function o(e, t) {
+function a(e, t) {
     return t.get ? t.get.call(e) : t.value;
 }
 function s(e, t, n) {
@@ -13,10 +13,10 @@ function s(e, t, n) {
 }
 function l(e, t) {
     var n = s(e, t, 'get');
-    return o(e, n);
+    return a(e, n);
 }
 function c(e, t, n) {
-    a(e, t), t.set(e, n);
+    o(e, t), t.set(e, n);
 }
 function u(e, t, n) {
     return (
@@ -125,11 +125,11 @@ function g(e) {
     return Error(String(e));
 }
 function E(e, t) {
-    let { dangerousAbortOnCleanup: n = !1, get: a, load: o, maxNumFetchErrors: s = h, queryId: l, useStateHook: c } = t;
+    let { dangerousAbortOnCleanup: n = !1, get: o, load: a, maxNumFetchErrors: s = h, queryId: l, useStateHook: c } = t;
     return function () {
         for (var t = arguments.length, u = Array(t), d = 0; d < t; d++) u[d] = arguments[d];
         let f = (0, r.useMemo)(() => l(...u), u),
-            _ = c(Array.isArray(e) ? e : [e], () => a(...u), u),
+            _ = c(Array.isArray(e) ? e : [e], () => o(...u), u),
             h = p.getState(f),
             E = h.error,
             b = (0, r.useRef)(u);
@@ -148,7 +148,7 @@ function E(e, t) {
                 if (null == f || !y()) return;
                 let e = new AbortController();
                 p.loadingStart(f, n ? e : void 0),
-                    o(e.signal, ...b.current)
+                    a(e.signal, ...b.current)
                         .then((e) => (p.loadingDone(f, !0), e))
                         .catch((t) => {
                             if ((p.loadingDone(f), e.signal.aborted)) return;

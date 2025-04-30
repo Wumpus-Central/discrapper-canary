@@ -1,8 +1,8 @@
 n(65234), n(111804), n(490233), n(97749), n(388685), n(539854), n(190126), n(368063), n(35282), n(203651);
 var r = n(544891),
     i = n(569611),
-    a = n(547010),
-    o = n(580189),
+    o = n(547010),
+    a = n(580189),
     s = n(397550),
     l = n(931619);
 n(358085);
@@ -27,8 +27,8 @@ function E(e) {
 (0, r.lg)({
     prepareRequest(e) {
         let { default: t } = n(314897),
-            { default: a } = n(857192),
-            { default: o } = n(706454),
+            { default: o } = n(857192),
+            { default: a } = n(706454),
             { default: s } = n(594174),
             { default: l } = n(626135),
             { isPlatformEmbedded: u } = n(358085);
@@ -44,11 +44,11 @@ function E(e) {
                 let n = E(t);
                 e.set('Accept-Language', n);
             }
-            e.set('X-Discord-Locale', o.locale);
+            e.set('X-Discord-Locale', a.locale);
             let c = (0, f.Z)();
             null != c && e.set('X-Discord-Timezone', c);
-            let p = a.getDebugOptionsHeaderValue();
-            if ((null != p && '' !== p && e.set('X-Debug-Options', p), a.isTracingRequests)) {
+            let p = o.getDebugOptionsHeaderValue();
+            if ((null != p && '' !== p && e.set('X-Debug-Options', p), o.isTracingRequests)) {
                 let t = s.getCurrentUser(),
                     n = h.generate(null != (_ = null == t ? void 0 : t.id) ? _ : '0');
                 e.set('x-client-trace-id', n);
@@ -90,8 +90,8 @@ function E(e) {
                 ) {
                     let n = '[FILTERED]';
                     if (p.includes(e.url)) {
-                        var r, a;
-                        n = null == (a = e.xhr) || null == (r = a.responseText) ? void 0 : r.slice(0, 1000);
+                        var r, o;
+                        n = null == (o = e.xhr) || null == (r = o.responseText) ? void 0 : r.slice(0, 1000);
                     }
                     c.Z.addBreadcrumb({
                         category: 'superagent',
@@ -137,7 +137,7 @@ function E(e) {
                               let { default: t } = e;
                               t();
                           })
-                    : (0, a.b)(e.statusCode, null == (d = e.body) ? void 0 : d.code)
+                    : (0, o.b)(e.statusCode, null == (d = e.body) ? void 0 : d.code)
                       ? n
                             .e('76731')
                             .then(n.bind(n, 626892))
@@ -146,7 +146,7 @@ function E(e) {
                                 let { default: r } = t;
                                 r(null == (n = e.body) ? void 0 : n.guild_id);
                             })
-                      : (0, o.X)(e) &&
+                      : (0, a.X)(e) &&
                         n
                             .e('89715')
                             .then(n.bind(n, 707708))

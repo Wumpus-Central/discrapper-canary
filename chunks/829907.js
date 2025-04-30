@@ -14,17 +14,17 @@ n.d(t, {
     n(388685);
 var r = n(615287),
     i = n(593472),
-    a = n(710845),
-    o = n(594190),
+    o = n(710845),
+    a = n(594190),
     s = n(370862),
     l = n(77498),
     c = n(998502);
-let u = new a.Z('OverlayRenderUtils'),
+let u = new o.Z('OverlayRenderUtils'),
     d = 5000,
     f = 8000,
     _ = 12000;
 function p(e) {
-    let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.ZP],
+    let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.ZP],
         n = t.getGameForPID(e);
     try {
         return null == n ? c.ZP.GetWindowFullscreenTypeByPid(e) : c.ZP.GetWindowFullscreenTypeByPid(n.pid, n.name, n.fullscreenType);
@@ -35,7 +35,7 @@ function p(e) {
 }
 function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-        [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [o.ZP];
+        [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [a.ZP];
     return new Promise((r) => {
         setTimeout(() => {
             r(p(e, [n]));
@@ -82,11 +82,11 @@ async function I(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : O,
         r = await h(e, n),
-        i = o.ZP.getGameForPID(e);
+        i = a.ZP.getGameForPID(e);
     if (null == i || null == i.name) return r;
-    let a = null == (t = l.Z.getGameByName(i.name)) ? void 0 : t.id;
-    if (null == a) return r;
-    let s = b[a];
+    let o = null == (t = l.Z.getGameByName(i.name)) ? void 0 : t.id;
+    if (null == o) return r;
+    let s = b[o];
     return null != s ? s(e, i, r) : r;
 }
 function S(e) {
@@ -95,7 +95,7 @@ function S(e) {
     return null != n && y.has(n);
 }
 function T(e) {
-    let t = o.ZP.getGameForPID(e);
+    let t = a.ZP.getGameForPID(e);
     return null != t && null != t.name && S(t);
 }
 let A = new Set([i.Jx.UNKNOWN, i.Jx.FULLSCREEN]);
@@ -128,5 +128,5 @@ function R(e) {
               enabledLegacy: !1,
               overlayMethod: r.gl.Disabled
           }
-        : (0, o.b6)(e, v);
+        : (0, a.b6)(e, v);
 }

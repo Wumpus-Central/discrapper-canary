@@ -1,6 +1,6 @@
 n.d(t, { Z: () => tn }), n(388685), n(35282), n(781311), n(997841);
-var r = n(255367),
-    i = n(73800),
+var r = n(200651),
+    i = n(192379),
     l = n(120356),
     o = n.n(l),
     a = n(512722),
@@ -136,7 +136,7 @@ function e7(e) {
     }
     return e;
 }
-function e8(e, t) {
+function e4(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -154,11 +154,11 @@ function e8(e, t) {
         e
     );
 }
-function e5(e) {
+function e6(e) {
     e.preventDefault();
 }
-let e4 = /^\+(?!\w+):?(?!:)(\w+)?:?$/;
-function e6(e) {
+let e8 = /^\+(?!\w+):?(?!:)(\w+)?:?$/;
+function e5(e) {
     var { isSidebar: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -179,9 +179,9 @@ function e6(e) {
             }
             return i;
         })(e, ['isSidebar']);
-    return t ? (0, r.jsx)('section', e8(e7({}, n), { role: 'complementary' })) : (0, r.jsx)('main', e7({}, n));
+    return t ? (0, r.jsx)('section', e4(e7({}, n), { role: 'complementary' })) : (0, r.jsx)('main', e7({}, n));
 }
-let e9 = i.forwardRef((e, t) => (0, r.jsx)(te, e8(e7({}, e), { refInstance: t })));
+let e9 = i.forwardRef((e, t) => (0, r.jsx)(te, e4(e7({}, e), { refInstance: t })));
 e9.displayName = 'ChannelTextAreaForm';
 class te extends i.PureComponent {
     componentDidMount() {
@@ -295,7 +295,7 @@ class te extends i.PureComponent {
             (t = this),
             e3(this, 'isFirstChange', !0),
             e3(this, 'editorRef', null),
-            e3(this, 'state', e8(e7({}, (0, G.eK)(eS.Z.getDraft(this.props.channel.id, eS.d.ChannelMessage))), { contentWarningProps: null })),
+            e3(this, 'state', e4(e7({}, (0, G.eK)(eS.Z.getDraft(this.props.channel.id, eS.d.ChannelMessage))), { contentWarningProps: null })),
             e3(this, 'draftDidChange', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : t.props,
                     { textValue: n } = t.state,
@@ -355,7 +355,7 @@ class te extends i.PureComponent {
                 } = this.props;
                 h.Z.changeDraft(i, t, eS.d.ChannelMessage);
                 let l = '' !== t && n !== this.state.richValue,
-                    o = l && !e4.test(t) && !t.startsWith('/') && (!this.isFirstChange || t !== this.state.textValue);
+                    o = l && !e8.test(t) && !t.startsWith('/') && (!this.isFirstChange || t !== this.state.textValue);
                 (this.isFirstChange = !1),
                     o && this.state.textValue.length < t.length && this.handleIncrementCombo(),
                     o ? m.Z.startTyping(i) : '' === t && m.Z.stopTyping(i),
@@ -674,7 +674,7 @@ class tt extends i.PureComponent {
                                     event: e$.CkL.OPEN_APP_LAUNCHER,
                                     handler: this.handleOpenAppLauncher
                                 }),
-                                (0, r.jsxs)(e6, {
+                                (0, r.jsxs)(e5, {
                                     isSidebar: L,
                                     className: o()(e1.chatContent, {
                                         [e1.hasWallpaper]: null == w ? void 0 : w.isViewable,
@@ -721,7 +721,7 @@ class tt extends i.PureComponent {
                                                       ? t
                                                       : (0, r.jsxs)('form', {
                                                             ref: this.inputFormRef,
-                                                            onSubmit: e5,
+                                                            onSubmit: e6,
                                                             className: o()(e1.form, { [e1.formWithLoadedChatInput]: !G }),
                                                             children: [
                                                                 x && (0, r.jsx)(ef.Z, { channelId: i.id }),

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => R }), n(388685);
 var r = n(152057),
     i = n(570140),
-    a = n(147913),
-    o = n(38618),
+    o = n(147913),
+    a = n(38618),
     s = n(517100),
     l = n(914010),
     c = n(451478),
@@ -43,7 +43,7 @@ function v(e, t) {
             location: 'GuildLeaderboardManager'
         }) ||
         !c.Z.isFocused() ||
-        !o.Z.isConnected()
+        !a.Z.isConnected()
     )
         return !1;
     let i = s.Z.getIdleSince();
@@ -72,18 +72,18 @@ function S() {
 async function T(e) {
     let { guildId: t, leaderboardId: n, force: r = !1 } = e;
     if (!(v(t, n) || r)) return;
-    let a = O(t, n);
-    if (!b.has(a))
+    let o = O(t, n);
+    if (!b.has(o))
         try {
-            b.add(a);
+            b.add(o);
             let e = await (0, u.pV)({
                     guildId: t,
                     leaderboardId: n,
                     intervalOffset: 0,
                     force: r
                 }),
-                o = d.Z.get(t, n);
-            if ((null == o ? void 0 : o.interval_start) !== e.leaderboard.interval_start) {
+                a = d.Z.get(t, n);
+            if ((null == a ? void 0 : a.interval_start) !== e.leaderboard.interval_start) {
                 let e = await (0, u.pV)({
                     guildId: t,
                     leaderboardId: n,
@@ -101,16 +101,16 @@ async function T(e) {
                 leaderboardResponse: e,
                 intervalOffset: 0
             }),
-                y.delete(a),
-                b.delete(a),
+                y.delete(o),
+                b.delete(o),
                 S();
         } catch (i) {
-            var o;
-            let e = (null != (o = y.get(a)) ? o : 0) + 1;
-            if ((y.set(a, e), !v(t, n))) return;
+            var a;
+            let e = (null != (a = y.get(o)) ? a : 0) + 1;
+            if ((y.set(o, e), !v(t, n))) return;
             let r = 1000 * Math.pow(m, e);
             E.set(
-                a,
+                o,
                 setTimeout(
                     () =>
                         T({
@@ -129,7 +129,7 @@ function A() {
 function N() {
     I(), (E = new Map()), (b = new Set()), (y = new Map()), A();
 }
-class C extends a.Z {
+class C extends o.Z {
     fetchLeaderboard(e) {
         return T(e);
     }

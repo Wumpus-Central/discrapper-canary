@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(388685);
 var r,
     i = n(106351),
-    a = n(442837),
-    o = n(570140),
+    o = n(442837),
+    a = n(570140),
     s = n(38618);
 function l(e, t, n) {
     return (
@@ -31,14 +31,14 @@ function _(e) {
 function p(e) {
     for (let { id: t, status: n } of ((u[e.guildId] = {}), e.channels)) u[e.guildId][t] = n;
 }
-class h extends (r = a.ZP.Store) {
+class h extends (r = o.ZP.Store) {
     getChannelStatus(e) {
         var t;
         if (null != e && null != e.guild_id && e.type === i.d.GUILD_VOICE) return c.has(e.guild_id) || (c.add(e.guild_id), s.Z.getSocket().requestChannelStatuses(e.guild_id)), null == (t = u[e.guild_id]) ? void 0 : t[e.id];
     }
 }
 l(h, 'displayName', 'ChannelStatusStore');
-let m = new h(o.Z, {
+let m = new h(a.Z, {
     GUILD_CREATE: f,
     GUILD_DELETE: f,
     CONNECTION_RESUMED: d,

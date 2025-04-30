@@ -1,13 +1,13 @@
 n.d(t, { Z: () => s });
-var r = n(73800),
+var r = n(192379),
     i = n(442837),
-    a = n(355467),
-    o = n(78839);
+    o = n(355467),
+    a = n(78839);
 function s() {
-    let e = (0, i.e7)([o.ZP], () => o.ZP.hasFetchedSubscriptions());
+    let e = (0, i.e7)([a.ZP], () => a.ZP.hasFetchedSubscriptions());
     return (
         r.useEffect(() => {
-            e || (0, a.jg)();
+            e || (0, o.jg)();
         }, [e]),
         e
     );

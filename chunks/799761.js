@@ -3,12 +3,12 @@ function r(e) {
         var r;
         if ('formatting' === (null != n && n.context ? String(n.context) : 'standalone') && e.formattingValues) {
             var i = e.defaultFormattingWidth || e.defaultWidth,
-                a = null != n && n.width ? String(n.width) : i;
-            r = e.formattingValues[a] || e.formattingValues[i];
+                o = null != n && n.width ? String(n.width) : i;
+            r = e.formattingValues[o] || e.formattingValues[i];
         } else {
-            var o = e.defaultWidth,
+            var a = e.defaultWidth,
                 s = null != n && n.width ? String(n.width) : e.defaultWidth;
-            r = e.values[s] || e.values[o];
+            r = e.values[s] || e.values[a];
         }
         return r[e.argumentCallback ? e.argumentCallback(t) : t];
     };

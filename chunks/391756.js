@@ -1,9 +1,9 @@
 n.d(t, { Q: () => s });
 var r = n(644387),
     i = n(219845),
-    a = n(383466),
-    o = function (e) {
-        return !(0, a.zd)(e) && !(0, a.jD)(e) && 'inline' === getComputedStyle(e).display;
+    o = n(383466),
+    a = function (e) {
+        return !(0, o.zd)(e) && !(0, o.jD)(e) && 'inline' === getComputedStyle(e).display;
     },
     s = (function () {
         function e(e, t) {
@@ -17,7 +17,7 @@ var r = n(644387),
         return (
             (e.prototype.isActive = function () {
                 var e = (0, i.Y9)(this.target, this.observedBox);
-                return o(this.target) && (this.lastReportedSize = e), this.lastReportedSize.inlineSize !== e.inlineSize || this.lastReportedSize.blockSize !== e.blockSize;
+                return a(this.target) && (this.lastReportedSize = e), this.lastReportedSize.inlineSize !== e.inlineSize || this.lastReportedSize.blockSize !== e.blockSize;
             }),
             e
         );

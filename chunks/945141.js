@@ -1,7 +1,7 @@
 n.d(t, { Z: () => l }), n(388685);
 var r = n(433517),
     i = n(147913);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,23 +14,23 @@ function a(e, t, n) {
         e
     );
 }
-let o = 'formGuidelinesStorageKey';
+let a = 'formGuidelinesStorageKey';
 class s extends i.Z {
     _initialize() {
-        let e = r.K.get(o);
+        let e = r.K.get(a);
         null != e && (this.seenForumGuidelines = new Set(e));
     }
     _terminate() {
-        r.K.set(o, this.seenForumGuidelines);
+        r.K.set(a, this.seenForumGuidelines);
     }
     markAsSeen(e) {
-        this.seenForumGuidelines.add(e), r.K.set(o, this.seenForumGuidelines);
+        this.seenForumGuidelines.add(e), r.K.set(a, this.seenForumGuidelines);
     }
     hasSeen(e) {
         return this.seenForumGuidelines.has(e);
     }
     constructor(...e) {
-        super(...e), a(this, 'seenForumGuidelines', new Set());
+        super(...e), o(this, 'seenForumGuidelines', new Set());
     }
 }
 let l = new s();

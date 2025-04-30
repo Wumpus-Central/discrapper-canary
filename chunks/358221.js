@@ -1,9 +1,9 @@
 n.d(t, { Z: () => ej }), n(388685), n(539854);
 var r,
     i = n(512722),
-    a = n.n(i),
-    o = n(392711),
-    s = n.n(o),
+    o = n.n(i),
+    a = n(392711),
+    s = n.n(a),
     l = n(442837),
     c = n(570140),
     u = n(317381),
@@ -96,7 +96,7 @@ function W(e) {
 }
 function K() {
     for (let e of x) ei(e);
-    ea();
+    eo();
 }
 function z() {
     let e = [],
@@ -107,8 +107,8 @@ function z() {
     let r = f.Z.getRemoteSessionId(),
         i = S.Z.getVoiceStateForSession(m.default.getId(), r);
     (null == i ? void 0 : i.channelId) != null && e.push(null == i ? void 0 : i.channelId), s().difference(x, e).forEach(ei);
-    let a = s().difference(e, x);
-    return (x = e), a;
+    let o = s().difference(e, x);
+    return (x = e), o;
 }
 function q(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : x;
@@ -160,16 +160,16 @@ function en(e) {
     if (0 === n.size() || y.Z.getVoiceChannelId() !== e) return void ee(e, null);
     let r = A.dF.NONE,
         i = n.toArray(T.sI.STREAM).find((e) => e.type === A.fO.STREAM && h.Z.getActiveStreamForStreamKey(e.id));
-    if (null != i) a()(i.type === A.fO.STREAM, 'Impossible condition'), (r = i.id);
+    if (null != i) o()(i.type === A.fO.STREAM, 'Impossible condition'), (r = i.id);
     else if (1 === n.size()) r = t;
     else if (1 === n.size(T.sI.VIDEO)) {
         let [e] = n.toArray(T.sI.VIDEO);
         r = e.id;
     } else if (n.size(T.sI.ACTIVITY) > 0) r = A.dF.NONE;
     else {
-        var o;
+        var a;
         let e = n.toArray().find((e) => e.type === A.fO.USER && e.id !== t && !e.ringing);
-        r = null != (o = null == e ? void 0 : e.id) ? o : t;
+        r = null != (a = null == e ? void 0 : e.id) ? a : t;
     }
     let [s] = X(e);
     if (s !== A.dF.AUTO && s !== A.dF.NONE) {
@@ -187,28 +187,28 @@ function er(e) {
 function ei(e) {
     delete M[e], delete k[e], delete U[e], delete G[e];
 }
-function ea() {
+function eo() {
     return q((e) => e.rebuild(), z());
 }
-function eo(e) {
+function ea(e) {
     let { channelId: t, currentVoiceChannelId: n } = e;
-    return null != t ? delete j[t] : null != n && (delete F[n], delete H[n], $(n)), ea();
+    return null != t ? delete j[t] : null != n && (delete F[n], delete H[n], $(n)), eo();
 }
 function es(e) {
     let { channelId: t, messageId: n } = e,
-        r = ea(),
+        r = eo(),
         i = E.Z.getChannel(t);
     return null == t || null == n || ((null == i ? void 0 : i.type) !== N.d4z.GUILD_VOICE && (null == i ? void 0 : i.type) !== N.d4z.GUILD_STAGE_VOICE) || F[t] ? r : ((Z[t] = !1), (F[t] = !0), !0);
 }
 function el(e) {
     let { voiceStates: t, initial: n } = e;
     return t.reduce((e, t) => {
-        let { userId: r, channelId: i, guildId: a } = t;
-        return (null != a &&
+        let { userId: r, channelId: i, guildId: o } = t;
+        return (null != o &&
             null != i &&
             p.Z.getCurrentConfig(
                 {
-                    guildId: a,
+                    guildId: o,
                     location: 'voice_status_update'
                 },
                 { autoTrackExposure: !1 }
@@ -382,7 +382,7 @@ function eM(e) {
 }
 class ek extends (r = l.ZP.PersistedStore) {
     initialize(e) {
-        this.waitFor(h.Z, m.default, g.Z, E.Z, u.ZP, b.Z, y.Z, O.Z, v.default, I.Z, S.Z), this.syncWith([u.ZP], ec), this.syncWith([b.Z], eu), this.syncWith([f.Z], ea), (null == e ? void 0 : e.voiceParticipantsHidden) !== void 0 && Object.assign(V, null == e ? void 0 : e.voiceParticipantsHidden);
+        this.waitFor(h.Z, m.default, g.Z, E.Z, u.ZP, b.Z, y.Z, O.Z, v.default, I.Z, S.Z), this.syncWith([u.ZP], ec), this.syncWith([b.Z], eu), this.syncWith([f.Z], eo), (null == e ? void 0 : e.voiceParticipantsHidden) !== void 0 && Object.assign(V, null == e ? void 0 : e.voiceParticipantsHidden);
     }
     getState() {
         return { voiceParticipantsHidden: V };
@@ -485,12 +485,12 @@ class ek extends (r = l.ZP.PersistedStore) {
 C(ek, 'displayName', 'ChannelRTCStore'), C(ek, 'persistKey', 'ChannelRTCStore');
 let ej = new ek(c.Z, {
     CONNECTION_OPEN: K,
-    CONNECTION_OPEN_SUPPLEMENTAL: ea,
-    THREAD_LIST_SYNC: ea,
-    OVERLAY_INITIALIZE: ea,
-    VOICE_CHANNEL_SELECT: eo,
+    CONNECTION_OPEN_SUPPLEMENTAL: eo,
+    THREAD_LIST_SYNC: eo,
+    OVERLAY_INITIALIZE: eo,
+    VOICE_CHANNEL_SELECT: ea,
     CHANNEL_SELECT: es,
-    CHANNEL_RTC_ACTIVE_CHANNELS: ea,
+    CHANNEL_RTC_ACTIVE_CHANNELS: eo,
     VOICE_STATE_UPDATES: el,
     CHANNEL_CREATE: eS,
     CHANNEL_DELETE: eT,

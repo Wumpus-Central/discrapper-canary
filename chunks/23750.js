@@ -7,8 +7,8 @@ n.d(t, {
     n(539854);
 var r = n(373793),
     i = n(81825),
-    a = n(712057),
-    o = n(978003),
+    o = n(712057),
+    a = n(978003),
     s = n(566006),
     l = n(995774),
     c = n(592125),
@@ -72,8 +72,8 @@ class g extends i.Z {
         return (0, u.yE)(this.flags, e);
     }
     constructor(e) {
-        var t, n, r, i, a, o, s, l, c, u, d, p, h;
-        super(), _(this, 'type', void 0), _(this, 'content', void 0), _(this, 'attachments', void 0), _(this, 'embeds', void 0), _(this, 'timestamp', void 0), _(this, 'editedTimestamp', void 0), _(this, 'flags', void 0), _(this, 'components', void 0), _(this, 'codedLinks', void 0), _(this, 'stickers', void 0), _(this, 'stickerItems', void 0), _(this, 'soundboardSounds', void 0), (this.type = null != (t = e.type) ? t : f.uaV.DEFAULT), (this.content = null != (n = e.content) ? n : ''), (this.attachments = null != (r = e.attachments) ? r : []), (this.embeds = null != (i = e.embeds) ? i : []), (this.timestamp = null != (a = e.timestamp) ? a : new Date()), (this.editedTimestamp = null != (o = e.editedTimestamp) ? o : null), (this.flags = null != (s = e.flags) ? s : 0), (this.components = null != (l = e.components) ? l : []), (this.codedLinks = null != (c = e.codedLinks) ? c : []), (this.stickers = null != (u = e.stickers) ? u : []), (this.stickerItems = null != (p = null != (d = e.sticker_items) ? d : e.stickerItems) ? p : []), (this.soundboardSounds = null != (h = e.soundboard_sounds) ? h : e.soundboardSounds);
+        var t, n, r, i, o, a, s, l, c, u, d, p, h;
+        super(), _(this, 'type', void 0), _(this, 'content', void 0), _(this, 'attachments', void 0), _(this, 'embeds', void 0), _(this, 'timestamp', void 0), _(this, 'editedTimestamp', void 0), _(this, 'flags', void 0), _(this, 'components', void 0), _(this, 'codedLinks', void 0), _(this, 'stickers', void 0), _(this, 'stickerItems', void 0), _(this, 'soundboardSounds', void 0), (this.type = null != (t = e.type) ? t : f.uaV.DEFAULT), (this.content = null != (n = e.content) ? n : ''), (this.attachments = null != (r = e.attachments) ? r : []), (this.embeds = null != (i = e.embeds) ? i : []), (this.timestamp = null != (o = e.timestamp) ? o : new Date()), (this.editedTimestamp = null != (a = e.editedTimestamp) ? a : null), (this.flags = null != (s = e.flags) ? s : 0), (this.components = null != (l = e.components) ? l : []), (this.codedLinks = null != (c = e.codedLinks) ? c : []), (this.stickers = null != (u = e.stickers) ? u : []), (this.stickerItems = null != (p = null != (d = e.sticker_items) ? d : e.stickerItems) ? p : []), (this.soundboardSounds = null != (h = e.soundboard_sounds) ? h : e.soundboardSounds);
     }
 }
 class E extends i.Z {
@@ -96,7 +96,7 @@ class b extends g {
         return this.reactions.find((t) => (0, l.ir)(t.emoji, e));
     }
     getContentMessage() {
-        if ((0, o.Z)(this)) {
+        if ((0, a.Z)(this)) {
             var e;
             return null == (e = this.messageSnapshots[0]) ? void 0 : e.message;
         }
@@ -112,45 +112,45 @@ class b extends g {
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
             r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.O.NORMAL,
             i = -1,
-            o = this.reactions.map((o, c) => {
-                if ((0, l.ir)(o.emoji, e))
+            a = this.reactions.map((a, c) => {
+                if ((0, l.ir)(a.emoji, e))
                     if (((i = c), r === s.O.BURST)) {
-                        if (t && o.me) return o;
-                        let e = t && o.me_burst ? o.burst_count : o.burst_count + 1,
-                            r = null != o.burst_colors && o.burst_colors.length > 0 ? o.burst_colors : n;
-                        o = m(p({}, o), {
-                            me_burst: !!t || o.me_burst,
+                        if (t && a.me) return a;
+                        let e = t && a.me_burst ? a.burst_count : a.burst_count + 1,
+                            r = null != a.burst_colors && a.burst_colors.length > 0 ? a.burst_colors : n;
+                        a = m(p({}, a), {
+                            me_burst: !!t || a.me_burst,
                             burst_count: e,
-                            count_details: m(p({}, o.count_details), { burst: e }),
+                            count_details: m(p({}, a.count_details), { burst: e }),
                             burst_colors: r,
-                            themedBurstColors: (0, a.u)({
+                            themedBurstColors: (0, o.u)({
                                 colors: r,
                                 shouldProcessMobileColors: (0, d.isIOS)()
                             })
                         });
                     } else if (r === s.O.VOTE) {
                         var u, f;
-                        let e = null != (f = null == (u = o.count_details) ? void 0 : u.vote) ? f : 0,
-                            n = t && o.me_vote ? e : e + 1;
-                        o = m(p({}, o), {
-                            count_details: m(p({}, o.count_details), { vote: n }),
-                            me_vote: !!t || o.me_vote
+                        let e = null != (f = null == (u = a.count_details) ? void 0 : u.vote) ? f : 0,
+                            n = t && a.me_vote ? e : e + 1;
+                        a = m(p({}, a), {
+                            count_details: m(p({}, a.count_details), { vote: n }),
+                            me_vote: !!t || a.me_vote
                         });
                     } else {
-                        if (t && o.me_burst) return o;
-                        let e = t && o.me ? o.count : o.count + 1;
-                        o = m(p({}, o), {
+                        if (t && a.me_burst) return a;
+                        let e = t && a.me ? a.count : a.count + 1;
+                        a = m(p({}, a), {
                             count: e,
-                            count_details: m(p({}, o.count_details), { normal: e }),
-                            me: !!t || o.me
+                            count_details: m(p({}, a.count_details), { normal: e }),
+                            me: !!t || a.me
                         });
                     }
-                return o;
+                return a;
             });
         return (
             -1 === i &&
                 (r === s.O.BURST
-                    ? o.push({
+                    ? a.push({
                           emoji: e,
                           me: !1,
                           me_burst: t,
@@ -161,13 +161,13 @@ class b extends g {
                           },
                           burst_count: 1,
                           burst_colors: n,
-                          themedBurstColors: (0, a.u)({
+                          themedBurstColors: (0, o.u)({
                               colors: null != n ? n : [],
                               shouldProcessMobileColors: (0, d.isIOS)()
                           })
                       })
                     : r === s.O.VOTE
-                      ? o.push({
+                      ? a.push({
                             emoji: e,
                             me: !1,
                             me_burst: !1,
@@ -181,7 +181,7 @@ class b extends g {
                             burst_count: 0,
                             burst_colors: []
                         })
-                      : o.push({
+                      : a.push({
                             emoji: e,
                             me: t,
                             me_burst: !1,
@@ -193,7 +193,7 @@ class b extends g {
                             burst_count: 0,
                             burst_colors: []
                         })),
-            this.set('reactions', o)
+            this.set('reactions', a)
         );
     }
     addReactionBatch(e, t) {
@@ -204,31 +204,31 @@ class b extends g {
     }
     removeReaction(e) {
         var t, n, r, i;
-        let a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.O.NORMAL,
+        let o = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            a = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.O.NORMAL,
             c = -1,
             u = this.reactions.map((t, n) => {
                 if ((0, l.ir)(t.emoji, e)) {
-                    if (o === s.O.BURST) {
-                        let e = a && !t.me_burst ? t.burst_count : t.burst_count - 1;
+                    if (a === s.O.BURST) {
+                        let e = o && !t.me_burst ? t.burst_count : t.burst_count - 1;
                         t = m(p({}, t), {
                             burst_count: e,
-                            me_burst: !a && t.me_burst,
+                            me_burst: !o && t.me_burst,
                             count_details: m(p({}, t.count_details), { burst: e })
                         });
-                    } else if (o === s.O.VOTE) {
+                    } else if (a === s.O.VOTE) {
                         var r, i;
                         let e = null != (i = null == (r = t.count_details) ? void 0 : r.vote) ? i : 0,
-                            n = a && !t.me_vote ? e : e - 1;
+                            n = o && !t.me_vote ? e : e - 1;
                         t = m(p({}, t), {
                             count_details: m(p({}, t.count_details), { vote: n }),
-                            me_vote: !a && t.me_vote
+                            me_vote: !o && t.me_vote
                         });
                     } else {
-                        let e = a && !t.me ? t.count : t.count - 1;
+                        let e = o && !t.me ? t.count : t.count - 1;
                         t = m(p({}, t), {
                             count: e,
-                            me: !a && t.me,
+                            me: !o && t.me,
                             count_details: m(p({}, t.count_details), { normal: e })
                         });
                     }
@@ -270,8 +270,8 @@ class b extends g {
     canDeleteOwnMessage(e) {
         var t, n, i;
         if (this.author.id === e) return !0;
-        let a = null != (i = null == (t = this.interactionMetadata) ? void 0 : t.authorizing_integration_owners) ? i : {};
-        return (null == (n = this.interactionMetadata) ? void 0 : n.user.id) === e && 1 === Object.keys(a).length && r.Y.USER_INSTALL in a;
+        let o = null != (i = null == (t = this.interactionMetadata) ? void 0 : t.authorizing_integration_owners) ? i : {};
+        return (null == (n = this.interactionMetadata) ? void 0 : n.user.id) === e && 1 === Object.keys(o).length && r.Y.USER_INSTALL in o;
     }
     toJS() {
         return m(p({}, this), {

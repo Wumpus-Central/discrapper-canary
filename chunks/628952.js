@@ -1,9 +1,9 @@
 n.d(t, { Z: () => v }), n(388685);
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(979554),
+    o = n.n(i),
+    a = n(979554),
     s = n(442837),
     l = n(481060),
     c = n(987209),
@@ -75,7 +75,7 @@ let v = (e) => {
         N = (0, p.k)(I);
     if (null == I) return null;
     let [C] = I.items,
-        R = () => (C.type === o.Z.AVATAR_DECORATION ? m.intl.string(m.t['7v0T9P']) : C.type === o.Z.PROFILE_EFFECT ? m.intl.string(m.t.wR5wOj) : null),
+        R = () => (C.type === a.Z.AVATAR_DECORATION ? m.intl.string(m.t['7v0T9P']) : C.type === a.Z.PROFILE_EFFECT ? m.intl.string(m.t.wR5wOj) : null),
         P = null != S && S.id !== (null == A ? void 0 : A.id),
         w = () => {
             null != t && null != E && E(t);
@@ -102,8 +102,8 @@ let v = (e) => {
                                             O(b({}, e), {
                                                 user: S,
                                                 pendingAvatar: S.getAvatarURL(null, (0, l.pxk)(l.EFr.SIZE_80)),
-                                                pendingAvatarDecoration: C.type === o.Z.AVATAR_DECORATION ? C : null,
-                                                pendingProfileEffectId: C.type === o.Z.PROFILE_EFFECT ? C.id : null,
+                                                pendingAvatarDecoration: C.type === a.Z.AVATAR_DECORATION ? C : null,
+                                                pendingProfileEffectId: C.type === a.Z.PROFILE_EFFECT ? C.id : null,
                                                 canUsePremiumCustomization: !0,
                                                 disabledInputs: !0
                                             })
@@ -130,7 +130,7 @@ let v = (e) => {
             (0, r.jsxs)(l.P3F, {
                 tag: 'div',
                 onClick: w,
-                className: a()(g.previewContainer, {
+                className: o()(g.previewContainer, {
                     [g.previewContainerSelected]: n && null == T,
                     [g.previewContainerError]: n && null != T
                 }),

@@ -1,9 +1,9 @@
 n.d(t, { Z: () => h });
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(442837),
-    a = n(481060),
-    o = n(726542),
+    o = n(481060),
+    a = n(726542),
     s = n(906732),
     l = n(231757),
     c = n(553795),
@@ -29,14 +29,14 @@ function h(e) {
     return g === f.lY.MODAL_V2
         ? (0, r.jsx)(d.tG, {
               icon: n,
-              text: p.intl.formatToPlainString(p.t.XWSHTU, { platform: o.Z.get(t).name }),
-              size: a.PhG.TINY,
+              text: p.intl.formatToPlainString(p.t.XWSHTU, { platform: a.Z.get(t).name }),
+              size: o.PhG.TINY,
               themeColor: 'secondary',
               onClick: E
           })
         : (0, r.jsx)(d.tG, {
               icon: n,
-              text: p.intl.formatToPlainString(p.t.XWSHTU, { platform: o.Z.get(t).name }),
+              text: p.intl.formatToPlainString(p.t.XWSHTU, { platform: a.Z.get(t).name }),
               fullWidth: !0,
               onClick: E
           });

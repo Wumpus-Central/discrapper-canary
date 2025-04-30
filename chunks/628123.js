@@ -1,8 +1,8 @@
 n.d(t, { Z: () => R }), n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(392711),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(392711),
+    a = n.n(o),
     s = n(818405),
     l = n(587158),
     c = n(286379),
@@ -59,7 +59,7 @@ function A() {
         children: I.intl.string(I.t['/Nz9ra'])
     });
 }
-let N = o().throttle(
+let N = a().throttle(
     (e) => {
         g.Z.increment(
             {

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(953529), n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(373793),
-    o = n(481060),
+var r = n(200651),
+    i = n(192379),
+    o = n(373793),
+    a = n(481060),
     s = n(783097),
     l = n(753972),
     c = n(520315),
@@ -55,15 +55,15 @@ function E(e) {
             () =>
                 [
                     {
-                        type: a.Y.USER_INSTALL,
-                        icon: o.oLu,
+                        type: o.Y.USER_INSTALL,
+                        icon: a.oLu,
                         title: d.intl.string(d.t.aCg60N),
                         subtitle: d.intl.string(d.t.YeiIUV),
                         beta: !1
                     },
                     {
-                        type: a.Y.GUILD_INSTALL,
-                        icon: o.QTo,
+                        type: o.Y.GUILD_INSTALL,
+                        icon: a.QTo,
                         title: d.intl.string(d.t.E64YCw),
                         subtitle: d.intl.string(d.t.bbtoKi),
                         beta: !1
@@ -81,11 +81,11 @@ function E(e) {
                 className: f.header,
                 children: [
                     null != c
-                        ? (0, r.jsx)(o.P3F, {
+                        ? (0, r.jsx)(a.P3F, {
                               onClick: c,
                               className: f.closeButton,
                               'aria-label': d.intl.string(d.t.cpT0Cg),
-                              children: (0, r.jsx)(o.Dio, {
+                              children: (0, r.jsx)(a.Dio, {
                                   size: 'md',
                                   color: 'currentColor'
                               })
@@ -104,7 +104,7 @@ function E(e) {
                 className: f.rows,
                 children: h.map((e) =>
                     (0, r.jsxs)(
-                        o.P3F,
+                        a.P3F,
                         {
                             tag: 'li',
                             className: f.row,
@@ -121,12 +121,12 @@ function E(e) {
                                         (0, r.jsxs)('div', {
                                             className: f.rowDetails,
                                             children: [
-                                                (0, r.jsx)(o.Text, {
+                                                (0, r.jsx)(a.Text, {
                                                     variant: 'text-md/medium',
                                                     color: 'interactive-active',
                                                     children: e.title
                                                 }),
-                                                (0, r.jsx)(o.Text, {
+                                                (0, r.jsx)(a.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'text-muted',
                                                     children: e.subtitle
@@ -134,7 +134,7 @@ function E(e) {
                                             ]
                                         }),
                                         e.beta && (0, r.jsx)(u.Z, {}),
-                                        (0, r.jsx)(o.Fbu, {
+                                        (0, r.jsx)(a.Fbu, {
                                             size: 'md',
                                             color: 'currentColor',
                                             className: f.rightIcon
@@ -170,7 +170,7 @@ function y(e) {
     return (0, r.jsxs)('div', {
         className: f.titleContainer,
         children: [
-            (0, r.jsx)(o.X6q, {
+            (0, r.jsx)(a.X6q, {
                 variant: 'heading-xl/extrabold',
                 lineClamp: 1,
                 children: n
@@ -178,7 +178,7 @@ function y(e) {
             i
                 ? (0, r.jsx)('div', {
                       className: f.partnerLabelContainer,
-                      children: (0, r.jsx)(o.Text, {
+                      children: (0, r.jsx)(a.Text, {
                           variant: 'text-xs/medium',
                           color: 'text-normal',
                           children: d.intl.string(d.t.LO4f0N)
@@ -191,7 +191,7 @@ function y(e) {
 let O = 3;
 function v(e) {
     let { description: t } = e,
-        [a, s] = i.useState(!0);
+        [o, s] = i.useState(!0);
     i.useLayoutEffect(() => s(!1), []);
     let l = i.useMemo(() => {
             let { parseBioReact: e } = n(240991);
@@ -207,8 +207,8 @@ function v(e) {
                 maxHeightOverride: e
             };
         }, [h, p]),
-        { ref: E, isTransitioning: b, onTransitionEnd: y } = (0, c.Z)(m({ isExpanded: a }, g)),
-        v = a || b;
+        { ref: E, isTransitioning: b, onTransitionEnd: y } = (0, c.Z)(m({ isExpanded: o }, g)),
+        v = o || b;
     return (0, r.jsxs)('div', {
         className: f.descriptionContainer,
         children: [
@@ -216,7 +216,7 @@ function v(e) {
                 ref: E,
                 className: f.overflowHidden,
                 onTransitionEnd: y,
-                children: (0, r.jsx)(o.Text, {
+                children: (0, r.jsx)(a.Text, {
                     ref: u,
                     className: _.markup,
                     variant: 'text-sm/medium',
@@ -226,23 +226,23 @@ function v(e) {
                 })
             }),
             null != h && h > O
-                ? (0, r.jsxs)(o.P3F, {
+                ? (0, r.jsxs)(a.P3F, {
                       className: f.expandableDescriptionClickable,
                       onClick: () => s((e) => !e),
                       children: [
-                          (0, r.jsx)(o.Text, {
+                          (0, r.jsx)(a.Text, {
                               variant: 'text-sm/semibold',
                               color: 'text-brand',
                               children: v ? d.intl.string(d.t.u4YJ8v) : d.intl.string(d.t['N/tajI'])
                           }),
                           v
-                              ? (0, r.jsx)(o.u04, {
+                              ? (0, r.jsx)(a.u04, {
                                     size: 'sm',
-                                    color: o.TVs.colors.TEXT_BRAND
+                                    color: a.TVs.colors.TEXT_BRAND
                                 })
-                              : (0, r.jsx)(o.CJ0, {
+                              : (0, r.jsx)(a.CJ0, {
                                     size: 'sm',
-                                    color: o.TVs.colors.TEXT_BRAND
+                                    color: a.TVs.colors.TEXT_BRAND
                                 })
                       ]
                   })
@@ -253,13 +253,13 @@ function v(e) {
 function I() {
     let e = i.useRef(null),
         [t, n] = i.useState(null),
-        [r, a] = i.useState(null);
+        [r, o] = i.useState(null);
     return (
         i.useLayoutEffect(() => {
             let t = e.current;
             if (null === t || 0 === t.clientHeight) return;
             let r = parseInt(getComputedStyle(t).lineHeight);
-            isNaN(r) || (n(r), a(Math.floor(t.clientHeight / r)));
+            isNaN(r) || (n(r), o(Math.floor(t.clientHeight / r)));
         }, []),
         {
             ref: e,

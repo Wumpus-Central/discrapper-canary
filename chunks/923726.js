@@ -1,9 +1,9 @@
 n.d(t, {
     $F: () => _,
-    Bt: () => a,
+    Bt: () => o,
     Gp: () => p,
     hQ: () => u,
-    kT: () => o,
+    kT: () => a,
     s1: () => s,
     ss: () => d,
     sy: () => c,
@@ -12,7 +12,7 @@ n.d(t, {
     n(223892);
 var r = n(644542),
     i = n(981631);
-function a(e) {
+function o(e) {
     let { enableRoleSubscriptionsForGuild: t } = r.Xv.useExperiment(
             {
                 guildId: null != e ? e : i.lds,
@@ -23,7 +23,7 @@ function a(e) {
         { enableRoleSubscriptionsForUser: n } = r.Zo.useExperiment({ location: '504714_2' }, { autoTrackExposure: !1 });
     return null != e && t && n;
 }
-function o(e) {
+function a(e) {
     let { enableRoleSubscriptionsForGuild: t } = r.Xv.getCurrentConfig({
             guildId: null != e ? e : i.lds,
             location: '504714_3'

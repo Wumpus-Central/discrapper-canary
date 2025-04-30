@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
 var r,
     i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -70,8 +70,8 @@ class g extends (r = i.ZP.Store) {
         return d;
     }
 }
-o(g, 'displayName', 'ConsentStore');
-let E = new g(a.Z, {
+a(g, 'displayName', 'ConsentStore');
+let E = new g(o.Z, {
     CONNECTION_OPEN: f,
     OVERLAY_INITIALIZE: _,
     UPDATE_CONSENTS: p,

@@ -1,5 +1,5 @@
 n.d(t, { Z: () => l }), n(388685);
-var r = n(73800),
+var r = n(192379),
     i = n(388032);
 function l(e) {
     let [t, n] = r.useState(i.intl.string(i.t.jBSYCA));

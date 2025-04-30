@@ -8,10 +8,10 @@ n.d(t, {
     n(388685),
     n(642613),
     n(415506);
-var r = n(255367),
-    i = n(73800),
-    a = n(772848),
-    o = n(286379),
+var r = n(200651),
+    i = n(192379),
+    o = n(772848),
+    a = n(286379),
     s = n(442837),
     l = n(493773),
     c = n(110924),
@@ -207,7 +207,7 @@ class N {
                     }),
                     (0, h.a)('QuestImpressionTracker') &&
                         u.Z.increment({
-                            name: o.V.QUEST_CONTENT_IMPRESSION,
+                            name: a.V.QUEST_CONTENT_IMPRESSION,
                             tags: ['quest_content:'.concat((0, d._b)(this.questContent))]
                         }),
                     (this.isRunning = !0);
@@ -216,7 +216,7 @@ class N {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
                 e && _.beat(!0), (_.lastBeatTime = void 0), clearInterval(_.heartbeatTimeoutId), clearTimeout(_.minViewTimeReachedTimeoutId), (_.isRunning = !1);
             }),
-            (this.id = (0, a.Z)()),
+            (this.id = (0, o.Z)()),
             (this.adDecisionData = n),
             (this.questContent = t),
             (this.questContentPosition = s),
@@ -253,7 +253,7 @@ function D() {
     return null == (e = w()) ? void 0 : e.getId();
 }
 function L(e) {
-    let { visible: t, visibleChanged: n, focused: a, reference: o, focusedChanged: c } = e,
+    let { visible: t, visibleChanged: n, focused: o, reference: a, focusedChanged: c } = e,
         u = R(e.questOrQuests),
         d = (0, f.KZ)(e.questContent),
         p = i.useRef(null),
@@ -263,10 +263,10 @@ function L(e) {
             null != p.current && p.current.stop();
         }),
         i.useEffect(() => {
-            let r = a && t,
+            let r = o && t,
                 i = (n || c || u) && r,
-                o = ((n || c) && !r) || u;
-            (i || o) && null != p.current && p.current.stop(),
+                a = ((n || c) && !r) || u;
+            (i || a) && null != p.current && p.current.stop(),
                 i &&
                     ((p.current = new N({
                         adDecisionData: d,
@@ -280,10 +280,10 @@ function L(e) {
                         isQuestEnrollmentBlocked: h
                     })),
                     p.current.start());
-        }, [a, t, c, n, e.questOrQuests, e.questContent, e.questContentPosition, e.questContentRowIndex, e.trackGuildAndChannelMetadata, u, e.minViewTimeSeconds, d, h]),
+        }, [o, t, c, n, e.questOrQuests, e.questContent, e.questContentPosition, e.questContentRowIndex, e.trackGuildAndChannelMetadata, u, e.minViewTimeSeconds, d, h]),
         (0, r.jsx)(P.Provider, {
             value: p,
-            children: e.children(o, p)
+            children: e.children(a, p)
         })
     );
 }

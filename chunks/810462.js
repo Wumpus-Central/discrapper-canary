@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(760907),
-    o = n(260866),
+var r = n(200651),
+    i = n(192379),
+    o = n(359959),
+    a = n(260866),
     s = n(481060),
     l = n(806966),
     c = n(28546),
@@ -10,9 +10,9 @@ var r = n(255367),
 let d = i.forwardRef(function (e, t) {
     let { store: n, hasSendableExpressions: d, onKeyDown: f, gridNavigatorId: _, expressionsListRef: p, defaultSearchPlaceholder: h, emptySearchPlaceholder: m } = e,
         g = i.useRef(null),
-        [E, b] = (0, c.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], a.X),
+        [E, b] = (0, c.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], o.X),
         y = n.useStore((e) => e.searchPlaceholder),
-        O = n.useStore((e) => e.inspectedExpressionPosition, a.X),
+        O = n.useStore((e) => e.inspectedExpressionPosition, o.X),
         v = i.useCallback(
             (e) => {
                 var t;
@@ -53,7 +53,7 @@ let d = i.forwardRef(function (e, t) {
                 'aria-haspopup': 'grid',
                 'aria-controls': _,
                 'aria-expanded': !0,
-                'aria-activedescendant': (0, o.NE)(_, O.columnIndex, O.rowIndex)
+                'aria-activedescendant': (0, a.NE)(_, O.columnIndex, O.rowIndex)
             }
         })
     });

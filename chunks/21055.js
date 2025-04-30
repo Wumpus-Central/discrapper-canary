@@ -1,7 +1,7 @@
-n.d(t, { B: () => o });
+n.d(t, { B: () => a });
 var r = n(503461),
     i = n(190313);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,12 +14,12 @@ function a(e, t, n) {
         e
     );
 }
-class o {
+class a {
     get prefix() {
         return this.table.prefix;
     }
     withoutLogging() {
-        return new o(this.originalPrefix, this.table.tableId, this.table.database, !1);
+        return new a(this.originalPrefix, this.table.tableId, this.table.database, !1);
     }
     get(e, t) {
         return this.table.get([e, t]);
@@ -50,14 +50,14 @@ class o {
         return this.putWithGeneration(e, t, n, null, i);
     }
     putWithGeneration(e, t, n, i) {
-        let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : r.Sn.Replace;
+        let o = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : r.Sn.Replace;
         return this.table.put(
             {
                 key: [e, t],
                 data: n,
                 generation: i
             },
-            a
+            o
         );
     }
     delete(e, t) {
@@ -86,7 +86,7 @@ class o {
         return this.table.getMapEntriesSyncUnsafe();
     }
     constructor(e, t, n, r = !0) {
-        a(this, 'originalPrefix', void 0), a(this, 'table', void 0), (this.originalPrefix = e), (this.table = new i.i([e], t, n, r));
+        o(this, 'originalPrefix', void 0), o(this, 'table', void 0), (this.originalPrefix = e), (this.table = new i.i([e], t, n, r));
     }
 }
 class s {
@@ -98,14 +98,14 @@ class s {
         this.putWithGeneration(e, t, n, null, i);
     }
     putWithGeneration(e, t, n, i) {
-        let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : r.Sn.Replace;
+        let o = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : r.Sn.Replace;
         return this.state.put(
             {
                 key: [e, t],
                 data: n,
                 generation: i
             },
-            a
+            o
         );
     }
     delete(e, t) {
@@ -124,6 +124,6 @@ class s {
         return this.state.deleteGeneration([], e, t);
     }
     constructor(e) {
-        a(this, 'state', void 0), (this.state = e);
+        o(this, 'state', void 0), (this.state = e);
     }
 }

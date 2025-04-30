@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O });
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(626135),
+    o = n(570140),
+    a = n(626135),
     s = n(314897),
     l = n(981631);
 function c(e, t, n) {
@@ -35,7 +35,7 @@ function u(e) {
     return e;
 }
 function d(e, t) {
-    o.default.track(l.rMx.STREAMER_MODE_TOGGLE, {
+    a.default.track(l.rMx.STREAMER_MODE_TOGGLE, {
         enabled: e,
         automatic: t
     });
@@ -67,7 +67,7 @@ function E(e) {
         (p[e.key] = e.value),
         'enabled' === e.key
             ? d(e.value, !1)
-            : o.default.track(l.rMx.UPDATE_STREAMER_MODE_SETTINGS, {
+            : a.default.track(l.rMx.UPDATE_STREAMER_MODE_SETTINGS, {
                   enabled: p.enabled,
                   automatic: p.autoToggle,
                   disable_notifications: p.disableNotifications,
@@ -137,7 +137,7 @@ c(y, 'displayName', 'StreamerModeStore'),
             return null == e || null == t ? {} : { [t]: u({}, e) };
         }
     ]);
-let O = new y(a.Z, {
+let O = new y(o.Z, {
     LOGOUT: m,
     MULTI_ACCOUNT_REMOVE_ACCOUNT: g,
     STREAMER_MODE_UPDATE: E,

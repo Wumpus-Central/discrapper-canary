@@ -1,6 +1,6 @@
 n.d(t, { default: () => T }), n(388685), n(415506);
-var i = n(255367),
-    r = n(73800),
+var i = n(200651),
+    r = n(192379),
     s = n(512722),
     l = n.n(s),
     a = n(442837),
@@ -20,7 +20,18 @@ var i = n(255367),
     j = n(388032),
     C = n(485312);
 async function O(e, t, n, i) {
-    await (0, u.bG)(n), await (0, d.Mg)(e, { items: (0, E.MY)(e, t) }, i);
+    let r = (0, E.MY)(e, t);
+    await (0, u.bG)(n),
+        await (0, d.Mg)(
+            e,
+            { items: r },
+            {
+                amount: 0,
+                currency: e.currency
+            },
+            (0, E.UX)(r, e.currency),
+            i
+        );
 }
 function S(e) {
     let { premiumSubscription: t, guildBoostSlotId: n, onNext: s, onClose: d } = e,

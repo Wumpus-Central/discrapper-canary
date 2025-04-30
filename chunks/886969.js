@@ -1,8 +1,8 @@
 n.d(t, { Z: () => s });
 var r = n(774078);
 let i = 60000,
-    a = 1200000;
-function o(e) {
+    o = 1200000;
+function a(e) {
     return e.minutes > 0 || e.seconds > 0
         ? 23 === e.hours
             ? {
@@ -22,5 +22,5 @@ function o(e) {
 function s(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = e.clone();
-    return t && (n = n.subtract(a, 'milliseconds')), o((0, r.Z)(n.toDate(), i));
+    return t && (n = n.subtract(o, 'milliseconds')), a((0, r.Z)(n.toDate(), i));
 }

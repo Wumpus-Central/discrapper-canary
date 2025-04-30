@@ -1,8 +1,8 @@
 let r;
 n.d(t, { Z: () => R }), n(388685), n(704826), n(35282);
 var i,
-    a = n(442837),
-    o = n(570140),
+    o = n(442837),
+    a = n(570140),
     s = n(579806),
     l = n(358085),
     c = n(417363),
@@ -122,7 +122,7 @@ function N(e) {
     let { metadataPayload: t } = e;
     for (let e in t) g(e, t[e]);
 }
-class C extends (i = a.ZP.PersistedStore) {
+class C extends (i = o.ZP.PersistedStore) {
     initialize(e) {
         let t = f({}, e);
         null == t.installations && (t.installations = {}), null == t.defaultInstallationPath && (t.defaultInstallationPath = m), null == t.installationPaths ? (t.installationPaths = new Set([t.defaultInstallationPath])) : (t.installationPaths = new Set(Array.from(t.installationPaths))), null == t.pathLabels && (t.pathLabels = {}), (r = t);
@@ -170,7 +170,7 @@ class C extends (i = a.ZP.PersistedStore) {
     }
 }
 d(C, 'displayName', 'InstallationManagerStore'), d(C, 'persistKey', 'InstallationManagerStore');
-let R = new C(o.Z, {
+let R = new C(a.Z, {
     DISPATCH_APPLICATION_INSTALL: O,
     DISPATCH_APPLICATION_UNINSTALL: I,
     DISPATCH_APPLICATION_CANCEL: v,

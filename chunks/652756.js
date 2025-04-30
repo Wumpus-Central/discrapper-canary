@@ -1,13 +1,13 @@
 n.d(t, {
     K5: () => s,
-    g2: () => o,
+    g2: () => a,
     rK: () => u
 });
 var r = n(868635),
     i = n(816383),
-    a = 1;
-function o(e) {
-    var t = e.nodeType === a ? e : e.parentElement;
+    o = 1;
+function a(e) {
+    var t = e.nodeType === o ? e : e.parentElement;
     if (!t) return null;
     var n = t.getBoundingClientRect(),
         r = n.top;
@@ -27,27 +27,27 @@ function l(e) {
     return 'IMG' === e.nodeName && ((0, r.v)() || !(null != (t = document.documentElement) && t.contains(e)));
 }
 function c(e, t, n, i) {
-    var a = e ? t.width : n,
-        o = e ? t.height : i;
+    var o = e ? t.width : n,
+        a = e ? t.height : i;
     return (
-        (0, r.G)() && e && ((o /= window.devicePixelRatio), (a /= window.devicePixelRatio)),
+        (0, r.G)() && e && ((a /= window.devicePixelRatio), (o /= window.devicePixelRatio)),
         {
-            dragPreviewWidth: a,
-            dragPreviewHeight: o
+            dragPreviewWidth: o,
+            dragPreviewHeight: a
         }
     );
 }
-function u(e, t, n, a, s) {
+function u(e, t, n, o, s) {
     var u = l(t),
-        d = o(u ? e : t),
+        d = a(u ? e : t),
         f = {
             x: n.x - d.x,
             y: n.y - d.y
         },
         _ = e.offsetWidth,
         p = e.offsetHeight,
-        h = a.anchorX,
-        m = a.anchorY,
+        h = o.anchorX,
+        m = o.anchorY,
         g = c(u, t, _, p),
         E = g.dragPreviewWidth,
         b = g.dragPreviewHeight,

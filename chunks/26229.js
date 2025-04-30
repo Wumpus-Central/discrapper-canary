@@ -1,6 +1,6 @@
 n.d(t, { Z: () => r });
-var i = n(255367);
-let r = n(73800).memo(function (e) {
+var i = n(200651);
+let r = n(192379).memo(function (e) {
     let { layout: t, layoutSize: n, className: r, renderWidget: s } = e;
     return null != t
         ? (0, i.jsx)('div', {

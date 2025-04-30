@@ -9,8 +9,8 @@ n.d(t, {
     n(539854);
 var r,
     i = n(442837),
-    a = n(46973),
-    o = n(570140),
+    o = n(46973),
+    a = n(570140),
     s = n(304680),
     l = n(131951),
     c = n(594174),
@@ -143,29 +143,29 @@ function M(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
         r = {};
-    for (let [i, a] of Object.entries(e)) {
+    for (let [i, o] of Object.entries(e)) {
         let e = t[i];
-        if (Array.isArray(a))
-            if ('object' == typeof a[0]) {
+        if (Array.isArray(o))
+            if ('object' == typeof o[0]) {
                 let t = Array.isArray(e) ? e : [],
-                    o = (r[i] = []);
-                for (let e = 0; e < a.length; e++) {
+                    a = (r[i] = []);
+                for (let e = 0; e < o.length; e++) {
                     let r = t[e],
                         i = 'object' == typeof r ? r : {};
-                    o.push(M(a[e], i, n));
+                    a.push(M(o[e], i, n));
                 }
-            } else r[i] = a;
-        else if ('object' == typeof a && null !== a) {
+            } else r[i] = o;
+        else if ('object' == typeof o && null !== o) {
             let t = 'object' == typeof e && null !== e ? e : {};
-            r[i] = M(a, t, n);
-        } else if (i in E && 'number' == typeof a) {
+            r[i] = M(o, t, n);
+        } else if (i in E && 'number' == typeof o) {
             let t = (r[i] = Array.isArray(e) ? e : []);
             t.push({
-                value: a,
+                value: o,
                 time: n
             }),
                 t.length > b && t.shift();
-        } else r[i] = a;
+        } else r[i] = o;
     }
     return r;
 }
@@ -188,12 +188,12 @@ function j(e) {
     let { context: t, stats: n, index: r } = e,
         i = m[t];
     if (null != n) {
-        let [e, a, o] = h.split(':');
-        if (e === t && parseInt(o) === r && null != c.default.getUser(a)) {
+        let [e, o, a] = h.split(':');
+        if (e === t && parseInt(a) === r && null != c.default.getUser(o)) {
             let {
                 rtp: { inbound: e }
             } = n;
-            Object.keys(e).includes(a) || (h = p);
+            Object.keys(e).includes(o) || (h = p);
         }
         i[r] = M(n, i[r]);
     } else delete i[r];
@@ -208,8 +208,8 @@ function G(e) {
     let r = n.createReplayConnection(d.Yn.DEFAULT, t);
     null != r &&
         ((T = r),
-        r.on(a.Sh.Video, (e, t, n, i, a) => {
-            o.Z.dispatch({
+        r.on(o.Sh.Video, (e, t, n, i, o) => {
+            a.Z.dispatch({
                 type: 'RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT',
                 mediaEngineConnectionId: r.mediaEngineConnectionId,
                 userId: e,
@@ -217,7 +217,7 @@ function G(e) {
                 streamId: null != t ? t : ''
             });
         }),
-        o.Z.wait(() => s.bA()));
+        a.Z.wait(() => s.bA()));
 }
 function B(e) {
     I = I.put(e.mediaEngineConnectionId, e.userId, e.videoSsrc, e.streamId);
@@ -242,22 +242,22 @@ class Z extends (r = i.ZP.Store) {
     getInboundStats(e, t) {
         var n, r;
         let i = null == (r = this.getAllStats(t)[0]) || null == (n = r.rtp) ? void 0 : n.inbound[e],
-            a = null == i ? void 0 : i.find((e) => 'video' === e.type);
+            o = null == i ? void 0 : i.find((e) => 'video' === e.type);
         return {
-            codec: null == a ? void 0 : a.codec.name,
-            resolution: null == a ? void 0 : a.resolution,
+            codec: null == o ? void 0 : o.codec.name,
+            resolution: null == o ? void 0 : o.resolution,
             bitrateEstimate: void 0
         };
     }
     getOutboundStats(e) {
         var t, n, r;
         let i,
-            a = this.getAllStats(e),
-            o = null == (t = a[0]) ? void 0 : t.transport,
-            s = null == (r = a[0]) || null == (n = r.rtp) ? void 0 : n.outbound,
+            o = this.getAllStats(e),
+            a = null == (t = o[0]) ? void 0 : t.transport,
+            s = null == (r = o[0]) || null == (n = r.rtp) ? void 0 : n.outbound,
             l = null == s ? void 0 : s.find((e) => 'video' === e.type);
         return (
-            Array.isArray(null == o ? void 0 : o.availableOutgoingBitrate) && o.availableOutgoingBitrate.length > 0 && (i = o.availableOutgoingBitrate[o.availableOutgoingBitrate.length - 1].value),
+            Array.isArray(null == a ? void 0 : a.availableOutgoingBitrate) && a.availableOutgoingBitrate.length > 0 && (i = a.availableOutgoingBitrate[a.availableOutgoingBitrate.length - 1].value),
             {
                 codec: null == l ? void 0 : l.codec.name,
                 resolution: null == l ? void 0 : l.resolution,
@@ -281,7 +281,7 @@ class Z extends (r = i.ZP.Store) {
     }
 }
 f(Z, 'displayName', 'RTCDebugStore');
-let H = new Z(o.Z, {
+let H = new Z(a.Z, {
     RTC_DEBUG_MODAL_OPEN: P,
     RTC_DEBUG_MODAL_CLOSE: w,
     RTC_DEBUG_MODAL_SET_SECTION: x,

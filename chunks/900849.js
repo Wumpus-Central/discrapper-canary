@@ -17,8 +17,8 @@ n.d(t, {
     n(544891);
 var r = n(749210),
     i = n(336197),
-    a = n(41776),
-    o = n(703656),
+    o = n(41776),
+    a = n(703656),
     s = n(769654),
     l = n(650774),
     c = n(430824),
@@ -78,16 +78,16 @@ function h(e, t) {
 }
 async function m(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { channelId: a, onSuccess: l, joinSource: u, loadId: f, shouldNavigate: p = !0 } = n,
-        m = (0, o.s1)(),
+        { channelId: o, onSuccess: l, joinSource: u, loadId: f, shouldNavigate: p = !0 } = n,
+        m = (0, a.s1)(),
         g = c.Z.getGuild(e),
         E = { state: { analyticsSource: t } };
     null != g && null != g.joinedAt
         ? p &&
-          (null == a
+          (null == o
               ? (0, s.X)(e, E)
               : (0, i.Z)(
-                    d.Z5c.CHANNEL(e, a, n.messageId),
+                    d.Z5c.CHANNEL(e, o, n.messageId),
                     h(_({}, E), {
                         navigationReplace: !0,
                         openChannel: !0
@@ -103,12 +103,12 @@ async function m(e, t) {
               (await r.Z.transitionToGuildSync(
                   e,
                   h(_({}, E), {
-                      welcomeModalChannelId: a,
-                      navigationReplace: null != a,
-                      openChannel: null != a,
+                      welcomeModalChannelId: o,
+                      navigationReplace: null != o,
+                      openChannel: null != o,
                       search: m.location.search
                   }),
-                  a,
+                  o,
                   n.messageId
               ))),
         null == l || l();
@@ -176,7 +176,7 @@ function I(e) {
     u.default.track(d.rMx.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: t });
 }
 function S(e) {
-    let { loadId: t, searchId: n, query: r, guildResults: i, analyticsContext: a, categoryId: o, isTagSearch: s } = e;
+    let { loadId: t, searchId: n, query: r, guildResults: i, analyticsContext: o, categoryId: a, isTagSearch: s } = e;
     u.default.track(d.rMx.SEARCH_RESULT_VIEWED, {
         search_type: s ? d.aib.GUILD_DISCOVERY_TAG : d.aib.GUILD_DISCOVERY,
         load_id: t,
@@ -184,12 +184,12 @@ function S(e) {
         total_results: void 0 !== i ? i.length : null,
         guild_ids: void 0 !== i ? i.map((e) => e.id) : null,
         query: r,
-        location: a.location,
-        category_id: o
+        location: o.location,
+        category_id: a
     });
 }
 function T(e) {
-    let t = a.Z.getLoadId(e);
+    let t = o.Z.getLoadId(e);
     u.default.track(d.rMx.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
         guild_id: e,
         load_id: t,

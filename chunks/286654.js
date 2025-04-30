@@ -1,8 +1,8 @@
 n.d(t, { z: () => p });
-var r = n(255367),
-    i = n(73800),
-    a = n(239091),
-    o = n(430824),
+var r = n(200651),
+    i = n(192379),
+    o = n(239091),
+    a = n(430824),
     s = n(594174),
     l = n(74538);
 function c(e, t, n) {
@@ -57,17 +57,17 @@ function f(e, t) {
         e
     );
 }
-function _(e, t, i, o) {
+function _(e, t, i, a) {
     let c = s.default.getCurrentUser();
     (null != t || l.ZP.canUseCustomCallSounds(c)) &&
-        (0, a.jW)(e, async () => {
+        (0, o.jW)(e, async () => {
             let { default: e } = await n.e('93741').then(n.bind(n, 547652));
             return (n) =>
                 (0, r.jsx)(
                     e,
                     f(u({}, n), {
                         soundGuild: t,
-                        activeCallGuildId: o,
+                        activeCallGuildId: a,
                         sound: i
                     })
                 );
@@ -77,7 +77,7 @@ function p(e, t) {
     return i.useCallback(
         (n) => {
             n.stopPropagation();
-            let r = o.Z.getGuild(e.guildId),
+            let r = a.Z.getGuild(e.guildId),
                 i = s.default.getCurrentUser();
             (null != r || l.ZP.canUseCustomCallSounds(i)) && _(n, r, e, t);
         },

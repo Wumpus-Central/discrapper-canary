@@ -1,9 +1,9 @@
-n.d(t, { Z: () => ea }), n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(954955),
-    o = n.n(a),
-    s = n(760907),
+n.d(t, { Z: () => eo }), n(388685);
+var r = n(200651),
+    i = n(192379),
+    o = n(954955),
+    a = n.n(o),
+    s = n(359959),
     l = n(442837),
     c = n(477690),
     u = n(481060),
@@ -99,26 +99,26 @@ let Z = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     J = q + 2 * Q,
     $ = 8,
     ee = 200,
-    et = o()(T.Iw, ee),
-    en = o()(T.m1, ee),
+    et = a()(T.Iw, ee),
+    en = a()(T.m1, ee),
     er = i.forwardRef(function (e, t) {
-        var a;
-        let { containerWidth: o, channel: c, onSelectSticker: v, closePopout: G } = e,
+        var o;
+        let { containerWidth: a, channel: c, onSelectSticker: v, closePopout: G } = e,
             { location: V } = (0, d.O)(),
             { analyticsLocations: z } = (0, _.ZP)(f.Z.STICKER_PICKER),
-            q = (null == (a = (0, E.N)()) ? void 0 : a.subscription_trial) != null,
+            q = (null == (o = (0, E.N)()) ? void 0 : o.subscription_trial) != null,
             Q = i.useRef(null),
             ee = i.useRef(null),
             er = i.useRef(null),
             ei = (0, I.Q)((e) => e.showPremiumUpsell),
-            [ea, eo] = (0, h.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], s.X),
+            [eo, ea] = (0, h.Iu)((e) => [e.searchQuery, e.isSearchSuggestion], s.X),
             es = i.useRef('');
         i.useImperativeHandle(t, () => ({ onPickerOpen: ex }));
         let el = (0, A.Sd)(c),
             ec = 0 === el.filter((e) => e.type !== C.Ih.EMPTY_GUILD_UPSELL).length,
             eu = (0, m.ep)({
                 gridWrapperRef: Q,
-                containerWidth: o,
+                containerWidth: a,
                 showingEmptyState: ec,
                 listPaddingLeft: H,
                 listScrollbarWidth: $
@@ -126,7 +126,7 @@ let Z = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             ed = b._O.useSetting(),
             ef = i.useMemo(() => new Set(ed), [ed]),
             e_ = (0, l.e7)([y.default], () => y.default.getCurrentUser()),
-            ep = i.useMemo(() => (0, M.S)(ea, e_, c), [ea, e_, c]),
+            ep = i.useMemo(() => (0, M.S)(eo, e_, c), [eo, e_, c]),
             eh = (0, A.RJ)(),
             em = (0, A.LZ)(),
             eg = (0, l.cj)([N.Z], () => N.Z.getAllGuildStickers()),
@@ -134,9 +134,9 @@ let Z = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             ey = eE.length + eb.length,
             eO = i.useCallback(
                 (e) => {
-                    '' === ea ? (0, T.On)(e) : (0, T.Yk)(e, ea, ey), v(e.sticker, C.V0.STICKER_PICKER);
+                    '' === eo ? (0, T.On)(e) : (0, T.Yk)(e, eo, ey), v(e.sticker, C.V0.STICKER_PICKER);
                 },
-                [v, ea, ey]
+                [v, eo, ey]
             ),
             ev = null != eu && eu > Z,
             {
@@ -203,7 +203,7 @@ let Z = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     r += e.length;
                 }),
                 (0, T.ev)({
-                    containerWidth: o,
+                    containerWidth: a,
                     favoriteStickers: eh,
                     frequentlyUsedStickers: em,
                     guildStickers: t,
@@ -211,11 +211,11 @@ let Z = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 });
         };
         i.useEffect(() => {
-            '' === es.current && '' !== ea && (0, T.n8)(), (es.current = ea);
-        }, [ea]),
+            '' === es.current && '' !== eo && (0, T.n8)(), (es.current = eo);
+        }, [eo]),
             i.useEffect(() => {
-                0 === ey ? et(ea) : en(ea, ey, eo);
-            }, [ea, ey, eo]),
+                0 === ey ? et(eo) : en(eo, ey, ea);
+            }, [eo, ey, ea]),
             i.useLayoutEffect(() => {
                 var e;
                 null == (e = er.current) || e.focus();
@@ -297,4 +297,4 @@ let Z = (0, v.Mg)(c.Z.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             children: e.isLoading ? (0, r.jsx)(u.$jN, { className: U.loadingIndicator }) : (0, r.jsx)(er, F(B({}, e), { ref: t }))
         })
     ),
-    ea = i.forwardRef(ei);
+    eo = i.forwardRef(ei);

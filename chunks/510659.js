@@ -5,10 +5,10 @@ n.d(t, {
     yi: () => f
 }),
     n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(512722),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(512722),
+    a = n.n(o),
     s = n(846519),
     l = n(810097);
 let c = i.createContext(void 0);
@@ -22,10 +22,10 @@ function u(e) {
 function d() {
     let [e, t] = i.useState(null),
         [n, r] = i.useState(null),
-        [a, o] = i.useState(null),
+        [o, a] = i.useState(null),
         [c, u] = i.useState(null),
         d = i.useCallback((e) => {
-            t(e.interactionType), r(e.interactionSource), o(e.interactionSourceId);
+            t(e.interactionType), r(e.interactionSource), a(e.interactionSourceId);
         }, []),
         f = i.useCallback((e) => {
             u(e);
@@ -54,7 +54,7 @@ function d() {
             () => ({
                 interactionType: e,
                 interactionSource: n,
-                interactionSourceId: a,
+                interactionSourceId: o,
                 onInteraction: d,
                 setInteractionToast: b,
                 resetInteraction: _,
@@ -63,7 +63,7 @@ function d() {
                 interactionPopoutTargetRef: c,
                 onInteractionPopoutTargetRefChange: f
             }),
-            [d, b, n, a, p, e, m, _, c, f]
+            [d, b, n, o, p, e, m, _, c, f]
         )
     );
 }
@@ -72,5 +72,5 @@ function f() {
 }
 function _() {
     let e = f();
-    return o()(null != e, 'must use useUserProfileInteractionContext within a UserProfileInteractionContextProvider'), e;
+    return a()(null != e, 'must use useUserProfileInteractionContext within a UserProfileInteractionContextProvider'), e;
 }

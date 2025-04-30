@@ -1,8 +1,8 @@
 n.d(t, { q: () => A }), n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(987209),
     c = n(321051),
@@ -74,8 +74,8 @@ function S(e, t) {
         r,
         i = T(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -84,12 +84,12 @@ function T(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let A = (e) => {
-    let { isShopGift: t, className: n, optionsContainerClassName: a } = e,
+    let { isShopGift: t, className: n, optionsContainerClassName: o } = e,
         { giftRecipient: y, selectedGiftStyle: v, setSelectedGiftStyle: T, emojiConfetti: A, soundEffect: N, setEmojiConfetti: C, setSoundEffect: R } = (0, l.wD)(),
         [P, w] = i.useState(!1),
         D = i.useRef(null),
@@ -111,7 +111,7 @@ let A = (e) => {
         children: [
             U &&
                 (0, r.jsxs)('div', {
-                    className: o()(b.giftMainAnimation, n),
+                    className: a()(b.giftMainAnimation, n),
                     children: [
                         null != v
                             ? (0, r.jsx)(p.Z, {
@@ -154,7 +154,7 @@ let A = (e) => {
                                 var t;
                                 e.target === e.currentTarget && (null == (t = D.current) || t.focus());
                             },
-                            className: o()(b.giftBoxOptionContainer, a),
+                            className: a()(b.giftBoxOptionContainer, o),
                             'aria-label': E.intl.string(E.t.v54NrK),
                             ref: x
                         },

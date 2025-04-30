@@ -3,11 +3,11 @@ n.d(t, {
     b: () => S
 }),
     n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
-    s = n(481752),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(272573),
     l = n(481060),
     c = n(58178);
 function u(e, t, n) {
@@ -94,7 +94,7 @@ function v(e) {
     return t > 1 ? 1 - (t - 1) : t;
 }
 let I = i.memo(function (e) {
-        let { dotRadius: t, dotPosition: n, fill: a = 'currentColor', spacing: o = 2.5 } = e,
+        let { dotRadius: t, dotPosition: n, fill: o = 'currentColor', spacing: a = 2.5 } = e,
             c = i.useRef(h()),
             u = i.useRef(!0);
         i.useEffect(() => () => void (u.current = !1), []);
@@ -126,7 +126,7 @@ let I = i.memo(function (e) {
         return (0, r.jsx)(r.Fragment, {
             children: [0, 1, 2].map((e) => {
                 let i = m * e,
-                    l = t + t * o * e;
+                    l = t + t * a * e;
                 return (0, r.jsx)(
                     s.animated.circle,
                     {
@@ -136,7 +136,7 @@ let I = i.memo(function (e) {
                             .to((e) => v(e - i))
                             .to([0, 0.4, 0.8, 1], [0.8 * t, 0.8 * t, t, t])
                             .to((e) => (c.current ? e : t)),
-                        fill: a,
+                        fill: o,
                         style: {
                             opacity: f.dotCycle
                                 .to((e) => v(e - i))
@@ -151,7 +151,7 @@ let I = i.memo(function (e) {
     }),
     S = i.memo(
         i.forwardRef(function (e, t) {
-            let { dotRadius: n, x: i, y: a, hide: u = !1, themed: f = !1, className: p } = e;
+            let { dotRadius: n, x: i, y: o, hide: u = !1, themed: f = !1, className: p } = e;
             return (0, l.Yzy)(
                 u,
                 _(d({}, y), { key: (e) => (e ? 'true' : 'false') }),
@@ -166,10 +166,10 @@ let I = i.memo(function (e) {
                           {
                               ref: t,
                               x: i,
-                              y: a,
+                              y: o,
                               width: 2 * n * 3 + (n / 2) * 2,
                               height: 2 * n,
-                              className: o()(p, c.dots, f ? c.themed : null),
+                              className: a()(p, c.dots, f ? c.themed : null),
                               children: (0, r.jsx)(s.animated.g, {
                                   style: { opacity: d.to((e) => Math.min(1, Math.max(e, 0))) },
                                   children: (0, r.jsx)(I, {

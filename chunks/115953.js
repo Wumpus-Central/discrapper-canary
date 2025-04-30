@@ -14,14 +14,14 @@ function i(e, t) {
         );
     if ('object' == typeof e || 'object' == typeof t) {
         var n = r(e),
-            a = r(t);
-        return n !== e || a !== t
-            ? i(n, a)
+            o = r(t);
+        return n !== e || o !== t
+            ? i(n, o)
             : Object.keys(Object.assign({}, e, t)).every(function (n) {
                   return i(e[n], t[n]);
               });
     }
     return !1;
 }
-n.d(t, { Z: () => a });
-let a = i;
+n.d(t, { Z: () => o });
+let o = i;

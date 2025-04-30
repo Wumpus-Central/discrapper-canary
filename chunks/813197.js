@@ -5,9 +5,9 @@ n.d(t, {
 }),
     n(388685);
 var r,
-    i = n(255367),
-    a = n(73800),
-    o = n(53281),
+    i = n(200651),
+    o = n(192379),
+    a = n(53281),
     s = n(869783),
     l = n(388032);
 function c(e, t, n) {
@@ -54,7 +54,7 @@ function f(e, t, n) {
             });
     });
 }
-class _ extends (r = a.PureComponent) {
+class _ extends (r = o.PureComponent) {
     componentDidMount() {
         this._isMounted = !0;
     }
@@ -63,8 +63,8 @@ class _ extends (r = a.PureComponent) {
         null == (e = this._ref.current) || e.activateUploadDialogue();
     }
     render() {
-        let { multiple: e, disabled: t, className: n, tabIndex: r, 'aria-label': a, filters: s } = this.props;
-        return (0, i.jsx)(o.Z, {
+        let { multiple: e, disabled: t, className: n, tabIndex: r, 'aria-label': o, filters: s } = this.props;
+        return (0, i.jsx)(a.Z, {
             ref: this._ref,
             onChange: this.handleFileChange,
             filters: null != s ? s : u(),
@@ -72,12 +72,12 @@ class _ extends (r = a.PureComponent) {
             disabled: t,
             className: n,
             tabIndex: r,
-            'aria-label': a
+            'aria-label': o
         });
     }
     constructor(...e) {
         super(...e),
-            c(this, '_ref', a.createRef()),
+            c(this, '_ref', o.createRef()),
             c(this, '_isMounted', !1),
             c(this, 'handleFileChange', (e) => {
                 let { onFileSizeError: t, maxFileSizeBytes: n } = this.props;

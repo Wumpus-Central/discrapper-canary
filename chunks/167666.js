@@ -1,8 +1,8 @@
 var r,
-    i = n(255367),
-    a = n(73800),
-    o = n(120356),
-    s = n.n(o),
+    i = n(200651),
+    o = n(192379),
+    a = n(120356),
+    s = n.n(a),
     l = n(481060),
     c = n(972849);
 function u(e, t, n) {
@@ -63,8 +63,8 @@ function p(e, t) {
         r,
         i = h(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -73,8 +73,8 @@ function h(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let m = {
@@ -82,7 +82,7 @@ let m = {
     MEDIUM: c.sizeMedium,
     LARGE: c.sizeLarge
 };
-class g extends (r = a.PureComponent) {
+class g extends (r = o.PureComponent) {
     calculateScroll() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this._scroller;
         if (null == e) return;
@@ -95,25 +95,25 @@ class g extends (r = a.PureComponent) {
     }
     renderChildren() {
         let { hideSeparator: e } = this.state;
-        return a.Children.map(this.props.children, (t) =>
-            a.isValidElement(t)
+        return o.Children.map(this.props.children, (t) =>
+            o.isValidElement(t)
                 ? t.type === l.hzk || t.type === l.YAO
-                    ? a.cloneElement(t, {
+                    ? o.cloneElement(t, {
                           scrollerRef: this.setRef,
                           onScroll: this.handleScroll,
                           onResize: this.handleScroll
                       })
                     : t.type === l.xBx && e
-                      ? a.cloneElement(t, { separator: !1 })
+                      ? o.cloneElement(t, { separator: !1 })
                       : t
                 : t
         );
     }
     render() {
         let e = this.props,
-            { className: t, children: n, tag: r, size: a, fullscreenOnMobile: o } = e,
+            { className: t, children: n, tag: r, size: o, fullscreenOnMobile: a } = e,
             l = p(e, ['className', 'children', 'tag', 'size', 'fullscreenOnMobile']);
-        return (0, i.jsx)(r, _(d({ className: s()(c.modal, t, a, { [c.fullscreenOnMobile]: o }) }, l), { children: this.renderChildren() }));
+        return (0, i.jsx)(r, _(d({ className: s()(c.modal, t, o, { [c.fullscreenOnMobile]: a }) }, l), { children: this.renderChildren() }));
     }
     constructor(e) {
         super(e),

@@ -1,9 +1,9 @@
 n.d(t, { Z: () => V });
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     s = n(394821),
     l = n(841784),
     c = n(833664),
@@ -143,9 +143,9 @@ function V(e) {
                 ? (0, r.jsxs)('div', {
                       className: k.voiceChannelText,
                       children: [
-                          (0, r.jsx)(o.gj8, {
+                          (0, r.jsx)(a.gj8, {
                               size: 'xxs',
-                              color: o.TVs.colors.TEXT_NORMAL,
+                              color: a.TVs.colors.TEXT_NORMAL,
                               className: k.voiceIcon
                           }),
                           (0, r.jsx)(N.Z, {
@@ -191,13 +191,13 @@ function V(e) {
             });
         },
         er = () => {
-            var e, t, n, a, o, s;
+            var e, t, n, o, a, s;
             if (i.type === L.IIU.WATCHING) return null;
             if ((0, c.Z)(i)) return ei();
             if ((0, g.dS)(i) && (null == (e = i.party) ? void 0 : e.size) != null && (null == (t = i.party) ? void 0 : t.size.length) >= 2) {
                 let e = M.intl.formatToPlainString(M.t['JC/3x8'], {
-                    numSpeakers: null == (a = i.party) ? void 0 : a.size[0],
-                    numListeners: (null == (o = i.party) ? void 0 : o.size[1]) - (null == (s = i.party) ? void 0 : s.size[0])
+                    numSpeakers: null == (o = i.party) ? void 0 : o.size[0],
+                    numListeners: (null == (a = i.party) ? void 0 : a.size[1]) - (null == (s = i.party) ? void 0 : s.size[0])
                 });
                 return (0, r.jsx)(N.Z, {
                     variant: 'text-xs/normal',
@@ -210,7 +210,7 @@ function V(e) {
             });
         },
         ei = () => {
-            var e, t, n, a;
+            var e, t, n, o;
             return (null == (e = i.party) ? void 0 : e.size) == null && i.application_id === x.Zc
                 ? (0, r.jsxs)('div', {
                       className: k.gameState,
@@ -223,7 +223,7 @@ function V(e) {
                               variant: 'text-xs/normal',
                               text: M.intl.formatToPlainString(M.t['u//9Bw'], {
                                   count: '0',
-                                  max: null != (a = null == j ? void 0 : j.getMaxParticipants()) ? a : 0
+                                  max: null != (o = null == j ? void 0 : j.getMaxParticipants()) ? o : 0
                               })
                           })
                       ]
@@ -255,7 +255,7 @@ function V(e) {
                       })
                     : null;
         },
-        ea = () => {
+        eo = () => {
             if (!(0, O.Z)(i)) return null;
             let { start: e, end: t } = i.timestamps;
             return (0, r.jsx)(R.Z, {
@@ -263,12 +263,12 @@ function V(e) {
                 end: t
             });
         },
-        eo = () =>
+        ea = () =>
             null == $
                 ? (0, r.jsxs)('div', {
                       children: [et(), en(), er()]
                   })
-                : (0, r.jsxs)(o.P3F, {
+                : (0, r.jsxs)(a.P3F, {
                       className: k.clickableText,
                       onClick: (e) => {
                           z({ action: 'PRESS_TEXT' }), $(e);
@@ -301,7 +301,7 @@ function V(e) {
         value: Y,
         children: (0, r.jsxs)(T.Z, {
             ref: q,
-            className: a()(k.card, F),
+            className: o()(k.card, F),
             onAction: z,
             onClose: Z,
             children: [
@@ -328,14 +328,14 @@ function V(e) {
                                 (0, r.jsxs)('div', {
                                     className: k.details,
                                     children: [
-                                        eo(),
+                                        ea(),
                                         !t.bot &&
                                             (0, r.jsx)(S.Z, {
                                                 user: t,
                                                 activity: i,
                                                 className: k.badges
                                             }),
-                                        ea(),
+                                        eo(),
                                         W === D.lY.MODAL_V2 && el()
                                     ]
                                 }),

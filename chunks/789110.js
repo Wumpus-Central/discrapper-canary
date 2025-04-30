@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l }), n(388685);
 var r = n(147913),
     i = n(626135),
-    a = n(981631);
-function o(e, t, n) {
+    o = n(981631);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +34,7 @@ class s extends r.Z {
     _trackIfSessionMetadataExists(e) {
         if (null != e.session_metadata) {
             var t;
-            i.default.track(a.rMx.MESSAGE_DISPATCH_SESSION_METADATA_FOUND, {
+            i.default.track(o.rMx.MESSAGE_DISPATCH_SESSION_METADATA_FOUND, {
                 message_id: e.id,
                 channel_id: e.channel_id,
                 author_id: null == (t = e.author) ? void 0 : t.id,
@@ -44,7 +44,7 @@ class s extends r.Z {
     }
     constructor(...e) {
         super(...e),
-            o(this, 'actions', {
+            a(this, 'actions', {
                 MESSAGE_CREATE: (e) => this.handleMessageCreate(e),
                 MESSAGE_UPDATE: (e) => this.handleMessageUpdate(e)
             });

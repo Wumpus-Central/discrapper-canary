@@ -1,6 +1,6 @@
 n.d(t, { Z: () => J }), n(388685), n(583741);
-var r = n(255367),
-    i = n(73800),
+var r = n(200651),
+    i = n(192379),
     l = n(120356),
     o = n.n(l),
     a = n(392711),
@@ -215,6 +215,7 @@ let Y = B.ZP.getEnableHardwareAcceleration(),
                             lostPermissionTooltipText: M ? void 0 : H.intl.string(H.t['/QcoT0']),
                             isOwner: D,
                             nameplate: q,
+                            hideTooltip: Q,
                             onClick: (e) => {
                                 e.shiftKey ? null == V || V() : X((e) => !e);
                             },

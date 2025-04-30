@@ -3,10 +3,10 @@ n.d(t, {
     c: () => I
 }),
     n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(772848),
     l = n(481060),
     c = n(596454),
@@ -73,7 +73,7 @@ function v(e, t) {
 }
 let I = (e) => {
         var t;
-        let { node: n, tooltipPosition: a = p.b_.position, enableClick: s = !0, channelId: u, messageId: d } = e,
+        let { node: n, tooltipPosition: o = p.b_.position, enableClick: s = !0, channelId: u, messageId: d } = e,
             f = i.useRef(null),
             h = null == (t = n.originalMatch) ? void 0 : t[0],
             m = null != h ? h : n.name,
@@ -103,7 +103,7 @@ let I = (e) => {
                             p.b_
                         ),
                         {
-                            position: a,
+                            position: o,
                             shouldShow: !g,
                             onTooltipShow: () => {
                                 s &&
@@ -122,7 +122,7 @@ let I = (e) => {
                                             var n;
                                             b(!0), null == e || null == (n = e.onClick) || n.call(e, t);
                                         },
-                                        className: o()(E.emojiContainer, {
+                                        className: a()(E.emojiContainer, {
                                             [E.emojiContainerClickable]: s,
                                             [E.emojiJumbo]: n.jumboable
                                         }),
@@ -149,7 +149,7 @@ let I = (e) => {
         });
     },
     S = (e) => {
-        let { node: t, isInteracting: n, tooltipPosition: a = p.b_.position, enableClick: u = !0, channelId: g, messageId: b } = e,
+        let { node: t, isInteracting: n, tooltipPosition: o = p.b_.position, enableClick: u = !0, channelId: g, messageId: b } = e,
             [O, I] = i.useState(String(Date.now())),
             [S, A] = i.useState(!1),
             [N, C] = i.useState(!1),
@@ -182,7 +182,7 @@ let I = (e) => {
                             p.b_
                         ),
                         {
-                            position: a,
+                            position: o,
                             shouldShow: !N,
                             onTooltipShow: () => {
                                 A(!0),
@@ -213,7 +213,7 @@ let I = (e) => {
                                             S && (f.default.track(h.rMx.CLOSE_POPOUT, { nonce: w }), A(!1));
                                         },
                                         tag: 'span',
-                                        className: o()(E.emojiContainer, {
+                                        className: a()(E.emojiContainer, {
                                             [E.emojiContainerClickable]: u,
                                             [E.emojiJumbo]: t.jumboable
                                         }),

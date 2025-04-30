@@ -1,17 +1,17 @@
 t.d(r, { Z: () => u });
-var n = t(255367);
-t(73800);
+var n = t(200651);
+t(192379);
 var o = t(481060),
-    l = t(198952),
-    s = t(329242),
-    i = t(332495),
-    c = t(388032),
+    s = t(198952),
+    l = t(329242),
+    c = t(332495),
+    i = t(388032),
     a = t(305623);
 let d = (e) => {
     var r,
         t,
-        { children: l, className: s } = e,
-        i = (function (e, r) {
+        { children: s, className: l } = e,
+        c = (function (e, r) {
             if (null == e) return {};
             var t,
                 n,
@@ -20,13 +20,13 @@ let d = (e) => {
                     var t,
                         n,
                         o = {},
-                        l = Object.keys(e);
-                    for (n = 0; n < l.length; n++) (t = l[n]), r.indexOf(t) >= 0 || (o[t] = e[t]);
+                        s = Object.keys(e);
+                    for (n = 0; n < s.length; n++) (t = s[n]), r.indexOf(t) >= 0 || (o[t] = e[t]);
                     return o;
                 })(e, r);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (n = 0; n < l.length; n++) (t = l[n]), !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]);
+                var s = Object.getOwnPropertySymbols(e);
+                for (n = 0; n < s.length; n++) (t = s[n]), !(r.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (o[t] = e[t]);
             }
             return o;
         })(e, ['children', 'className']);
@@ -56,8 +56,8 @@ let d = (e) => {
                     });
             }
             return e;
-        })({ className: s }, i)),
-        (t = t = { children: l }),
+        })({ className: l }, c)),
+        (t = t = { children: s }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(t))
             : (function (e, r) {
@@ -81,13 +81,13 @@ let d = (e) => {
     });
 }),
     (d.Header = (e) => {
-        let { icon: r, currentUser: t, otherUser: i, header: c } = e;
+        let { icon: r, currentUser: t, otherUser: c, header: i } = e;
         return (0, n.jsxs)('div', {
             className: a.header,
             children: [
-                (0, n.jsx)(l.Z, {
+                (0, n.jsx)(s.Z, {
                     currentUser: t,
-                    otherUser: i,
+                    otherUser: c,
                     children: r
                 }),
                 (0, n.jsxs)('div', {
@@ -95,9 +95,9 @@ let d = (e) => {
                     children: [
                         (0, n.jsx)(o.X6q, {
                             variant: 'text-lg/bold',
-                            children: c
+                            children: i
                         }),
-                        (0, n.jsx)(s.Z, { user: i })
+                        (0, n.jsx)(l.Z, { user: c })
                     ]
                 })
             ]
@@ -118,7 +118,7 @@ let d = (e) => {
                 (0, n.jsx)(o.Text, {
                     variant: 'eyebrow',
                     color: 'header-primary',
-                    children: c.intl.string(i.default.cXgKMD)
+                    children: i.intl.string(c.default.cXgKMD)
                 }),
                 (0, n.jsx)(o.Text, {
                     variant: 'text-sm/normal',

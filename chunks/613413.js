@@ -1,9 +1,9 @@
 n.d(t, { Z: () => b }), n(388685), n(49124);
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
-    s = n(760907),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(359959),
     l = n(442837),
     c = n(481060),
     u = n(314910),
@@ -19,8 +19,8 @@ function g(e, t) {
         r,
         i = E(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -29,8 +29,8 @@ function E(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function b() {
@@ -42,16 +42,16 @@ function b() {
             s.X
         ),
         n = (0, l.e7)([f.default], () => f.default.isAnalyticsDebuggerEnabled),
-        a = (0, l.e7)([d.Z], () => d.Z.isDeveloper),
+        o = (0, l.e7)([d.Z], () => d.Z.isDeveloper),
         [E, b] = i.useState(!1),
         y = null != e ? e : {},
         { name: O } = y,
         v = g(y, ['name']),
         I = null != O;
-    return a && n
+    return o && n
         ? (0, r.jsx)(u.ZP, {
               children: (0, r.jsxs)('div', {
-                  className: o()(m.container, {
+                  className: a()(m.container, {
                       [m.containerMinimized]: E,
                       [m.notTracked]: !I
                   }),
@@ -64,10 +64,10 @@ function b() {
                           children: E ? (0, r.jsx)(_.Z, {}) : (0, r.jsx)(p.Z, {})
                       }),
                       (0, r.jsxs)('div', {
-                          className: o()(m.content, { [m.contentMinimized]: E }),
+                          className: a()(m.content, { [m.contentMinimized]: E }),
                           children: [
                               (0, r.jsxs)(c.Text, {
-                                  className: o()(m.label, { [m.notTracked]: !I }),
+                                  className: a()(m.label, { [m.notTracked]: !I }),
                                   variant: 'text-xxs/normal',
                                   children: [
                                       I
@@ -89,7 +89,7 @@ function b() {
                                   children: JSON.stringify(v, void 0, 2)
                               }),
                               (0, r.jsx)(c.Text, {
-                                  className: o()(m.label, { [m.notTracked]: !I }),
+                                  className: a()(m.label, { [m.notTracked]: !I }),
                                   variant: 'text-xxs/normal',
                                   children: 'impressions stack'
                               }),

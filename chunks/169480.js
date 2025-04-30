@@ -3,11 +3,11 @@ n.r(t),
         showModal: () => c,
         updateModalProps: () => u
     });
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(952265),
-    a = n(712364);
-function o(e, t, n) {
+    o = n(712364);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -39,7 +39,7 @@ function s(e) {
 let l = (e, t, n) =>
     function (i) {
         return (0, r.jsx)(
-            a.Z,
+            o.Z,
             s(
                 {
                     handleSubmit: e,

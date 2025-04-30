@@ -1,5 +1,5 @@
 n.d(t, { Z: () => i });
-var r = n(255367);
+var r = n(200651);
 function i(e) {
     let { className: t } = e;
     return (0, r.jsxs)('svg', {
@@ -29,4 +29,4 @@ function i(e) {
         ]
     });
 }
-n(73800);
+n(192379);

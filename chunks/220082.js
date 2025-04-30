@@ -6,10 +6,10 @@ n.d(t, {
     vM: () => E
 }),
     n(388685);
-var r = n(73800),
+var r = n(192379),
     i = n(979590),
-    a = n.n(i),
-    o = n(381814),
+    o = n.n(i),
+    a = n(290486),
     s = n(731965),
     l = n(442837),
     c = n(607070),
@@ -67,7 +67,7 @@ function h(e, t) {
         e
     );
 }
-let m = (0, o.U)(() => ({
+let m = (0, a.U)(() => ({
     palette: {},
     fetching: {}
 }));
@@ -107,7 +107,7 @@ function O(e, t) {
 function v(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         i = m((t) => (null == e ? void 0 : t.palette[e])),
-        o = (0, l.e7)([c.Z], () => (n && c.Z.desaturateUserColors ? c.Z.saturation : 1));
+        a = (0, l.e7)([c.Z], () => (n && c.Z.desaturateUserColors ? c.Z.saturation : 1));
     r.useEffect(() => {
         null != e && null == i && b(e);
     }, [e, i]);
@@ -121,18 +121,18 @@ function v(e, t) {
                               h: i,
                               s,
                               l
-                          } = a()({
+                          } = o()({
                               r: t,
                               g: n,
                               b: r
                           }).toHsl();
-                      return a()({
+                      return o()({
                           h: i,
-                          s: s * o,
+                          s: s * a,
                           l
                       }).toHexString();
                   }),
-        [i, o]
+        [i, a]
     );
     return null != s ? s : [t, t];
 }

@@ -1,6 +1,6 @@
-let r, i, a;
+let r, i, o;
 n.d(t, { Z: () => I }), n(388685);
-var o,
+var a,
     s = n(392711),
     l = n(442837),
     c = n(570140);
@@ -32,19 +32,19 @@ let d = new Map(),
         0 === e.purchases.length ? (f = d) : (0, s.isEqual)([...f.values()], e.purchases) || (f = new Map(e.purchases.map((e) => [e.skuId, e]))), (p = !0), (_ = !1), (i = void 0);
     },
     E = (e) => {
-        (r = e.skuId), (a = void 0);
+        (r = e.skuId), (o = void 0);
     },
     b = (e) => {
-        null == e.purchases || 0 === e.purchases.length ? (f = d) : (0, s.isEqual)([...f.values()], e.purchases) || (f = new Map(e.purchases.map((e) => [e.skuId, e]))), (r = void 0), (a = void 0);
+        null == e.purchases || 0 === e.purchases.length ? (f = d) : (0, s.isEqual)([...f.values()], e.purchases) || (f = new Map(e.purchases.map((e) => [e.skuId, e]))), (r = void 0), (o = void 0);
     },
     y = (e) => {
         let { error: t, skuId: n } = e;
-        (r = n), (a = t);
+        (r = n), (o = t);
     },
     O = (e) => {
-        (f = d), (_ = !1), (r = void 0), (i = void 0), (a = void 0), (p = !1);
+        (f = d), (_ = !1), (r = void 0), (i = void 0), (o = void 0), (p = !1);
     };
-class v extends (o = l.ZP.Store) {
+class v extends (a = l.ZP.Store) {
     get isFetching() {
         return _;
     }
@@ -58,7 +58,7 @@ class v extends (o = l.ZP.Store) {
         return i;
     }
     get claimError() {
-        return a;
+        return o;
     }
     get hasPreviouslyFetched() {
         return p;

@@ -3,10 +3,10 @@ n.d(t, {
     ox: () => b,
     ub: () => O
 });
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(780384),
     l = n(481060),
     c = n(600164),
@@ -68,16 +68,16 @@ function m(e, t) {
 let { Provider: g, Consumer: E } = i.createContext(u.BRd.DARK);
 class b extends i.PureComponent {
     render() {
-        let { lightSrc: e, darkSrc: t, width: n, height: i, offsetX: a, offsetY: l, style: u } = this.props;
+        let { lightSrc: e, darkSrc: t, width: n, height: i, offsetX: o, offsetY: l, style: u } = this.props;
         return (0, r.jsx)(E, {
             children: (_) =>
                 (0, r.jsx)(c.Z.Child, {
                     grow: 0,
-                    className: o()(d.image, f.marginBottom40),
+                    className: a()(d.image, f.marginBottom40),
                     style: m(p({}, u), {
                         width: n,
                         height: i,
-                        marginLeft: a,
+                        marginLeft: o,
                         marginTop: l,
                         backgroundImage: 'url('.concat((0, s.wj)(_) ? t : e, ')')
                     })
@@ -86,7 +86,7 @@ class b extends i.PureComponent {
     }
 }
 let y = (e) => {
-    let { children: t, className: n, noteClassName: i, note: a, style: s } = e;
+    let { children: t, className: n, noteClassName: i, note: o, style: s } = e;
     return (0, r.jsxs)(c.Z.Child, {
         grow: 0,
         direction: c.Z.Direction.VERTICAL,
@@ -94,28 +94,28 @@ let y = (e) => {
         children: [
             null != t &&
                 (0, r.jsx)(l.H, {
-                    className: o()(n, d.title),
+                    className: a()(n, d.title),
                     children: t
                 }),
-            null != a
+            null != o
                 ? (0, r.jsx)('div', {
-                      className: o()(i, d.text, f.marginTop8),
-                      children: a
+                      className: a()(i, d.text, f.marginTop8),
+                      children: o
                   })
                 : null
         ]
     });
 };
 function O(e) {
-    let { children: t, theme: n, className: i, style: a } = e;
+    let { children: t, theme: n, className: i, style: o } = e;
     return (0, r.jsx)(g, {
         value: n,
         children: (0, r.jsx)(c.Z, {
             direction: c.Z.Direction.VERTICAL,
             align: c.Z.Align.CENTER,
             justify: c.Z.Justify.CENTER,
-            className: o()(d.wrapper, i),
-            style: a,
+            className: a()(d.wrapper, i),
+            style: o,
             children: t
         })
     });

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
-var r = n(255367),
+var r = n(200651),
     i = n(46973),
-    a = n(846027),
-    o = n(878001),
+    o = n(846027),
+    a = n(878001),
     s = n(458725),
     l = n(386146),
     c = n(63063),
@@ -16,10 +16,10 @@ function p(e) {
         { avErrorUIEnabled: E } = (0, l.JN)({ location: 'UserVideoFailed' }),
         b = null == (t = (0, s.hp)(h)) ? void 0 : t.errorCode;
     function y() {
-        (0, o.w)(i.Yn.DEFAULT, n),
-            a.Z.setDisableLocalVideo(n, d.ZUi.DISABLED, i.Yn.DEFAULT, !1),
+        (0, a.w)(i.Yn.DEFAULT, n),
+            o.Z.setDisableLocalVideo(n, d.ZUi.DISABLED, i.Yn.DEFAULT, !1),
             setTimeout(() => {
-                a.Z.setDisableLocalVideo(n, d.ZUi.MANUAL_ENABLED, i.Yn.DEFAULT, !1);
+                o.Z.setDisableLocalVideo(n, d.ZUi.MANUAL_ENABLED, i.Yn.DEFAULT, !1);
             }, 1000);
     }
     return (0, r.jsx)(u.Z, {

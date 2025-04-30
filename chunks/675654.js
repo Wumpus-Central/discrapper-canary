@@ -1,15 +1,15 @@
 n.d(t, {
-    Br: () => a,
-    CA: () => o,
+    Br: () => o,
+    CA: () => a,
     Ko: () => s,
     We: () => l,
     rq: () => c,
     vv: () => i
 });
-var r = n(505266);
+var r = n(995899);
 let i = n(177351),
-    a = ['#FF73FA', '#FFC0FF', '#FFD836', '#FF9A15', '#A5F7DE', '#51BC9D', '#AEC7FF', '#3E70DD'],
-    o = [
+    o = ['#FF73FA', '#FFC0FF', '#FFD836', '#FF9A15', '#A5F7DE', '#51BC9D', '#AEC7FF', '#3E70DD'],
+    a = [
         n(294521),
         i,
         n(817812),

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => z }), n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n.n(s),
     c = n(91192),
@@ -92,7 +92,7 @@ let x = (0, y.Mg)(d.Z.EMOJI_PICKER_CONSTANTS_GUILD_CATEGORY_ICON_SIZE),
     Y = k + j + 2 * U,
     W = 7;
 function K(e) {
-    let { activeIndex: t, categoryIndex: n, analyticsContext: a, categories: s, category: l, handleCategorySelect: u, isWindowFocused: d, useReducedMotion: _ } = e,
+    let { activeIndex: t, categoryIndex: n, analyticsContext: o, categories: s, category: l, handleCategorySelect: u, isWindowFocused: d, useReducedMotion: _ } = e,
         p = (0, c.JA)('expression-guild-'.concat(n)),
         h = l.type === T.En.GUILD ? null : l.id,
         m = t === n,
@@ -101,7 +101,7 @@ function K(e) {
             f.P3F,
             L(w({}, p), {
                 'aria-label': (0, O.Nf)(l, E),
-                className: o()({
+                className: a()({
                     [R.categoryItemGuildCategory]: null != E,
                     [R.categoryItemDefaultCategory]: null == E,
                     [R.categoryItemDefaultCategorySelected]: null == E && m,
@@ -110,7 +110,7 @@ function K(e) {
                 onClick: () => {
                     null != E &&
                         b.default.track(A.rMx.EXPRESSION_PICKER_CATEGORY_SELECTED, {
-                            location: null == a ? void 0 : a.location,
+                            location: null == o ? void 0 : o.location,
                             tab: N.X1.EMOJI,
                             guild_id: E.id
                         }),
@@ -153,10 +153,10 @@ function K(e) {
         : y;
 }
 let z = (e) => {
-    let { className: t, emojiListRef: n, sectionDescriptors: a, intention: s, channel: c, shouldShowSoundmojiInEmojiPicker: d = !1 } = e,
+    let { className: t, emojiListRef: n, sectionDescriptors: o, intention: s, channel: c, shouldShowSoundmojiInEmojiPicker: d = !1 } = e,
         g = h.kJ.useStore((e) => e.activeCategoryIndex),
         b = (0, S.Ni)({
-            sectionDescriptors: a,
+            sectionDescriptors: o,
             emojiListRef: n
         }),
         y = (0, _.O)(),
@@ -282,7 +282,7 @@ let z = (e) => {
                 {
                     'aria-hidden': !q,
                     'aria-label': C.intl.string(C.t.dT0ct7),
-                    className: o()(R.unicodeShortcut, { [R.unicodeShortcutInvisible]: !q }),
+                    className: a()(R.unicodeShortcut, { [R.unicodeShortcutInvisible]: !q }),
                     tabIndex: q ? 0 : -1,
                     onClick: () => J(e),
                     children: (0, r.jsx)(f.EO4, {

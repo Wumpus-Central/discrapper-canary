@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O }), n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n.n(s),
     c = n(481060),
@@ -87,7 +87,7 @@ function y() {
     }
 }
 function O(e) {
-    let { users: t, maxUsers: a, guildId: s, channelId: h, className: g, size: O = c.EFr.SIZE_24, overflowCountVariant: v, overflowCountColor: I = 'interactive-normal', overflowCountClassName: S, hideOverflowCount: T = !1, disableUsernameTooltip: A = !1, disableUserPopout: N = !1, onClick: C, onFocus: R, onUserClick: P, onUserPopoutRequestClose: w } = e,
+    let { users: t, maxUsers: o, guildId: s, channelId: h, className: g, size: O = c.EFr.SIZE_24, overflowCountVariant: v, overflowCountColor: I = 'interactive-normal', overflowCountClassName: S, hideOverflowCount: T = !1, disableUsernameTooltip: A = !1, disableUserPopout: N = !1, onClick: C, onFocus: R, onUserClick: P, onUserPopoutRequestClose: w } = e,
         [D, L] = i.useState(!1),
         x = b(O);
     function M() {
@@ -133,16 +133,16 @@ function O(e) {
         });
     }
     function k() {
-        let e = t.length - a,
+        let e = t.length - o,
             n = e + 1,
             i = e > 0 && !T,
-            u = Math.min(t.length, a) - 1,
+            u = Math.min(t.length, o) - 1,
             d = l()(t)
-                .take(a)
+                .take(o)
                 .map((e, t) => {
                     let n = _.ZP.getName(e),
-                        a = t === u && !i,
-                        l = o()(p.avatar, x, a && p.isLast);
+                        o = t === u && !i,
+                        l = a()(p.avatar, x, o && p.isLast);
                     return A
                         ? (0, r.jsx)(
                               'div',
@@ -182,7 +182,7 @@ function O(e) {
                     onRequestClose: () => L(!1),
                     children: () =>
                         (0, r.jsx)(c.zxk, {
-                            className: o()(p.overflow, x, S),
+                            className: a()(p.overflow, x, S),
                             onFocus: R,
                             onClick: (e) => {
                                 null == C || C(e), L(!0);
@@ -204,7 +204,7 @@ function O(e) {
     return t.length <= 0
         ? null
         : (0, r.jsx)('div', {
-              className: o()(g, p.avatars),
+              className: a()(g, p.avatars),
               children: k()
           });
 }

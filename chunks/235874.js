@@ -6,9 +6,9 @@ n.d(t, {
     n(388685),
     n(49124);
 var r,
-    i = n(255367),
-    a = n(73800),
-    o = n(922770),
+    i = n(200651),
+    o = n(192379),
+    a = n(922770),
     s = n(493773),
     l = n(930295),
     c = n(126306),
@@ -71,8 +71,8 @@ function h(e, t) {
         r,
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -81,8 +81,8 @@ function m(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 var g = (function (e) {
@@ -107,18 +107,18 @@ function b(e) {
     }
     throw Error('Unexpected position: '.concat(e));
 }
-class y extends (r = a.Component) {
+class y extends (r = o.Component) {
     render() {
-        let { children: e, shouldShow: t, onRequestOpen: n, onRequestClose: r, align: a, fixed: o, useRawTargetDimensions: s, onShiftClick: c, positionKey: u, popoutKey: d, overridePositionRef: f, preload: _, disablePointerEvents: p, ignoreModalClicks: h, closeOnScroll: m, useMouseEnter: g, renderPopout: E, layerContext: y, position: O = 'right', autoInvert: v = !0, nudgeAlignIntoViewport: I = !0, spacing: S = 8, clickTrap: T = !1 } = this.props;
+        let { children: e, shouldShow: t, onRequestOpen: n, onRequestClose: r, align: o, fixed: a, useRawTargetDimensions: s, onShiftClick: c, positionKey: u, popoutKey: d, overridePositionRef: f, preload: _, disablePointerEvents: p, ignoreModalClicks: h, closeOnScroll: m, useMouseEnter: g, renderPopout: E, layerContext: y, position: O = 'right', autoInvert: v = !0, nudgeAlignIntoViewport: I = !0, spacing: S = 8, clickTrap: T = !1 } = this.props;
         return (0, i.jsx)(l.H, {
             ref: this.ref,
             targetElementRef: this.props.targetElementRef,
             overridePositionRef: f,
             preload: _,
             position: O,
-            align: null != a ? a : b(O),
+            align: null != o ? o : b(O),
             autoInvert: v,
-            fixed: o,
+            fixed: a,
             nudgeAlignIntoViewport: I,
             useRawTargetDimensions: s,
             renderPopout: this.renderPopout,
@@ -140,7 +140,7 @@ class y extends (r = a.Component) {
     }
     constructor(...e) {
         super(...e),
-            d(this, 'ref', a.createRef()),
+            d(this, 'ref', o.createRef()),
             d(this, 'renderPopout', (e) => {
                 let { renderPopout: t, animation: n = '2', animationPosition: r } = this.props;
                 switch ((null != r && null != e.position && (e.position = r), n)) {
@@ -162,22 +162,22 @@ class y extends (r = a.Component) {
 function O(e) {
     var { renderPopout: t } = e,
         n = h(e, ['renderPopout']);
-    let r = a.useRef(null),
-        [l, c] = a.useState(0);
+    let r = o.useRef(null),
+        [l, c] = o.useState(0);
     function d() {
         return m(), (0, i.jsx)(i.Fragment, {});
     }
-    a.useLayoutEffect(() => {
+    o.useLayoutEffect(() => {
         if (l > 0) {
-            var e, t, n, i, a;
-            null == (a = r.current) || null == (i = a.ref) || null == (n = i.current) || null == (t = n.layerRef) || null == (e = t.current) || e.updatePosition();
+            var e, t, n, i, o;
+            null == (o = r.current) || null == (i = o.ref) || null == (n = i.current) || null == (t = n.layerRef) || null == (e = t.current) || e.updatePosition();
         }
     }, [l]),
         (0, s.ZP)(() => {
             let e = setTimeout(t, 20 + 20 * Math.random());
             return () => clearTimeout(e);
         });
-    let _ = a.useRef(!1);
+    let _ = o.useRef(!1);
     async function m() {
         if (!_.current) {
             _.current = !0;
@@ -189,22 +189,22 @@ function O(e) {
         }
     }
     function g() {
-        var e, t, n, a;
-        let s = null == (a = r.current) || null == (n = a.ref) || null == (t = n.current) || null == (e = t.domElementRef) ? void 0 : e.current,
+        var e, t, n, o;
+        let s = null == (o = r.current) || null == (n = o.ref) || null == (t = n.current) || null == (e = t.domElementRef) ? void 0 : e.current,
             l = Math.max(100, null == s ? 100 : s.offsetWidth - 20);
         return (0, i.jsx)('div', {
             className: u.loader,
             style: { width: l },
-            children: (0, i.jsx)(o.$, {})
+            children: (0, i.jsx)(a.$, {})
         });
     }
-    let [E, b] = a.useState(() => d),
-        O = a.useRef(d);
+    let [E, b] = o.useState(() => d),
+        O = o.useRef(d);
     return (
-        a.useEffect(() => {
+        o.useEffect(() => {
             O.current = d;
         }),
-        a.useEffect(() => {
+        o.useEffect(() => {
             _.current
                 ? t().then((e) => {
                       b(() => e), c((e) => e + 1);

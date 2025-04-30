@@ -1,9 +1,9 @@
 n.d(t, { Z: () => h }), n(388685);
 var r,
-    i = n(255367),
-    a = n(73800),
-    o = n(120356),
-    s = n.n(o),
+    i = n(200651),
+    o = n(192379),
+    a = n(120356),
+    s = n.n(a),
     l = n(481060),
     c = n(600164),
     u = n(171076);
@@ -27,9 +27,9 @@ let _ = {
     [l.EFr.SIZE_32]: u.avatarSmall,
     [l.EFr.SIZE_40]: u.avatarLarge
 };
-class p extends (r = a.Component) {
+class p extends (r = o.Component) {
     render() {
-        let { type: e, avatarSize: t, className: n, childrenClassName: r, doNotAnimate: a } = this.props;
+        let { type: e, avatarSize: t, className: n, childrenClassName: r, doNotAnimate: o } = this.props;
         return '2' === e
             ? (0, i.jsxs)('div', {
                   className: s()(u.multiplePlaceholder, u.multiplePlaceholderAnimated, n),
@@ -45,7 +45,7 @@ class p extends (r = a.Component) {
                   ]
               })
             : (0, i.jsxs)(c.Z, {
-                  className: s()(u.placeholder, !a && u.placeholderAnimated, n),
+                  className: s()(u.placeholder, !o && u.placeholderAnimated, n),
                   children: [
                       (0, i.jsx)('div', { className: s()(u.placeholderAvatar, _[t], r) }),
                       (0, i.jsx)(c.Z, {

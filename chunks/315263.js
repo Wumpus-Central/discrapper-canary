@@ -1,8 +1,8 @@
 n.r(t), n.d(t, { default: () => B }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282);
 var r = n(873546),
     i = n(636977),
-    a = n(570140),
-    o = n(493683),
+    o = n(570140),
+    a = n(493683),
     s = n(447543),
     l = n(230711),
     c = n(566620),
@@ -34,7 +34,7 @@ var r = n(873546),
     M = n(981631),
     k = n(46140);
 async function j(e, t) {
-    await a.Z.dispatch({
+    await o.Z.dispatch({
         type: 'INVITE_MODAL_OPEN',
         invite: e,
         code: t,
@@ -60,27 +60,27 @@ let G = {
 };
 function B(e) {
     var t;
-    let { skipExtensionCheck: a, analyticsLocations: s } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : G,
+    let { skipExtensionCheck: o, analyticsLocations: s } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : G,
         C = (0, E.zO)(e);
     if (null != C && (C.type === g.g.INVITE || C.type === g.g.EMBEDDED_ACTIVITY_INVITE)) return (e) => (null == e || e.preventDefault(), U(C), !0);
     if (null != C && (C.type === g.g.APP_DIRECTORY_PROFILE || C.type === g.g.APP_DIRECTORY_STOREFRONT || C.type === g.g.APP_DIRECTORY_STOREFRONT_SKU))
         return (t) => {
-            var i, a;
+            var i, o;
             null == t || t.preventDefault();
-            let { code: o } = C,
+            let { code: a } = C,
                 { applicationId: s, skuId: l } =
                     C.type === g.g.APP_DIRECTORY_PROFILE || C.type === g.g.APP_DIRECTORY_STOREFRONT
                         ? {
-                              applicationId: o,
+                              applicationId: a,
                               skuId: void 0
                           }
-                        : null != (i = (0, p.Q)(o))
+                        : null != (i = (0, p.Q)(a))
                           ? i
                           : {
                                 applicationId: void 0,
                                 skuId: void 0
                             },
-                c = null != (a = P.Z.getGuildId()) ? a : void 0;
+                c = null != (o = P.Z.getGuildId()) ? o : void 0;
             return (
                 null == s
                     ? (0, x.Z)(e)
@@ -112,7 +112,7 @@ function B(e) {
             var t, n;
             null == e || e.preventDefault();
             let { code: r, url: i } = C,
-                a = h.Z.getApplication(r),
+                o = h.Z.getApplication(r),
                 l = new URL(i),
                 _ = null != (t = l.searchParams.get('referrer_id')) ? t : void 0,
                 p = (0, f.Z)(),
@@ -139,10 +139,10 @@ function B(e) {
                     !0)
                 );
             {
-                let e = null == a || null == (n = a.bot) ? void 0 : n.id;
+                let e = null == o || null == (n = o.bot) ? void 0 : n.id;
                 return (
                     null != e &&
-                    (o.Z.openPrivateChannel({ recipientIds: e })
+                    (a.Z.openPrivateChannel({ recipientIds: e })
                         .then(async (e) => {
                             let { customId: t } = await (0, d.ur)(r, l.searchParams.get('link_id'), l.searchParams.get('custom_id'));
                             (0, u.Z)({
@@ -194,14 +194,14 @@ function B(e) {
             t = null == B ? void 0 : B.startsWith('/discovery/applications'),
             r = e[t ? 3 : 2],
             i = 'search' === r,
-            a = t && 'categories' === r && 'featured' !== e[4];
+            o = t && 'categories' === r && 'featured' !== e[4];
         return (t) => {
-            let r, o, s;
+            let r, a, s;
             if ((null == t || t.preventDefault(), i)) {
                 var l, c, u;
                 let e = new URLSearchParams(V);
-                (r = null != (l = e.get('q')) ? l : void 0), (o = null != (c = e.get('category_id')) ? c : void 0), (s = null != (u = e.get('page')) ? u : void 0);
-            } else a && (o = e[4]);
+                (r = null != (l = e.get('q')) ? l : void 0), (a = null != (c = e.get('category_id')) ? c : void 0), (s = null != (u = e.get('page')) ? u : void 0);
+            } else o && (a = e[4]);
             return (
                 n
                     .e('11866')
@@ -211,7 +211,7 @@ function B(e) {
                             { GlobalDiscoveryTab: i } = n(49898);
                         t({
                             tab: i.APPS,
-                            categoryId: null == o || Number.isNaN(o) ? void 0 : Number(o),
+                            categoryId: null == a || Number.isNaN(a) ? void 0 : Number(a),
                             page: null == s || Number.isNaN(s) ? void 0 : Number(s),
                             query: r
                         });
@@ -270,7 +270,7 @@ function B(e) {
                     }),
                 !0
             )
-          : a || null == (0, N.v)(e)
+          : o || null == (0, N.v)(e)
             ? void 0
             : (t) => (null == t || t.preventDefault(), A.Z.show(e), !0);
 }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
-var r = n(255367),
-    i = n(73800),
-    a = n(66685),
-    o = n(374470),
+var r = n(200651),
+    i = n(192379),
+    o = n(164484),
+    a = n(374470),
     s = n(442837),
     l = n(481060),
     c = n(626135),
@@ -16,7 +16,7 @@ function h(e) {
     if (e.ctrlKey || e.altKey || e.metaKey || e.keyCode !== _.yXg.TAB || null == e.target) return;
     let { target: n } = e,
         r = null == (t = (0, u.uB)(e)) ? void 0 : t.activeElement;
-    (0, o.k)(n) &&
+    (0, a.k)(n) &&
         c.default.track(_.rMx.KEYBOARD_SHORTCUT_USED, {
             shortcut_name: 'tab_navigation',
             source_class_list: null != r ? Array.from(r.classList) : [],
@@ -29,7 +29,7 @@ function m(e) {
             enabled: d.Z.useReducedMotion,
             rawValue: d.Z.rawPrefersReducedMotion
         })),
-        o = (0, s.cj)([d.Z], () => ({
+        a = (0, s.cj)([d.Z], () => ({
             enabled: d.Z.useForcedColors,
             rawValue: d.Z.systemForcedColors
         })),
@@ -38,13 +38,13 @@ function m(e) {
             () => ({
                 reducedMotion: n,
                 prefersCrossfades: !1,
-                forcedColors: o,
+                forcedColors: a,
                 alwaysShowLinkDecorations: c
             }),
-            [n, o, c]
+            [n, a, c]
         );
     return (
-        i.useEffect(() => ((0, a.waitForAllDefaultIntlMessagesLoaded)().then(() => (0, f.d1)()), p.intl.onLocaleChange(() => (0, f.d1)()), window.addEventListener('keydown', h), () => window.removeEventListener('keydown', h)), []),
+        i.useEffect(() => ((0, o.waitForAllDefaultIntlMessagesLoaded)().then(() => (0, f.d1)()), p.intl.onLocaleChange(() => (0, f.d1)()), window.addEventListener('keydown', h), () => window.removeEventListener('keydown', h)), []),
         (0, r.jsx)(l.Sfi.Provider, {
             value: u,
             children: t

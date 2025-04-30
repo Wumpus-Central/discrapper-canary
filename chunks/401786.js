@@ -1,6 +1,6 @@
 n.d(t, { default: () => k }), n(415506), n(388685);
-var i = n(255367),
-    r = n(73800),
+var i = n(200651),
+    r = n(192379),
     s = n(392711),
     l = n.n(s),
     a = n(442837),
@@ -89,7 +89,18 @@ async function D(e, t, n, i) {
                   return null != t ? t.id : null;
               })();
     if (null == r) throw Error('No slot to cancel');
-    await (0, d.pD)(r), await (0, c.Mg)(e, { items: (0, v.MY)(e, t) }, n);
+    let s = (0, v.MY)(e, t);
+    await (0, d.pD)(r),
+        await (0, c.Mg)(
+            e,
+            { items: s },
+            {
+                amount: 0,
+                currency: e.currency
+            },
+            (0, v.UX)(s, e.currency),
+            n
+        );
 }
 function Z(e) {
     var t, n, s;

@@ -1,8 +1,8 @@
 n.d(t, { x: () => b }), n(467055);
-var r = n(255367),
-    i = n(73800),
-    a = n(803997),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(803997),
+    a = n.n(o),
     s = n(696689),
     l = n.n(s),
     c = n(692547),
@@ -66,8 +66,8 @@ function m(e, t) {
         r,
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -76,15 +76,15 @@ function g(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let E = Object.fromEntries(Object.keys(c.Z.colors).map((e) => [l()(e), e])),
     b = i.forwardRef(function (e, t) {
         let n;
         var i,
-            { variant: a, tag: s = 'div', selectable: l = !1, className: f, lineClamp: p, color: g, tabularNumbers: b = !1, scaleFontToUserSetting: y = !1 } = e,
+            { variant: o, tag: s = 'div', selectable: l = !1, className: f, lineClamp: p, color: g, tabularNumbers: b = !1, scaleFontToUserSetting: y = !1 } = e,
             O = m(e, ['variant', 'tag', 'selectable', 'className', 'lineClamp', 'color', 'tabularNumbers', 'scaleFontToUserSetting']);
         let v = s,
             I = '',
@@ -120,7 +120,7 @@ let E = Object.fromEntries(Object.keys(c.Z.colors).map((e) => [l()(e), e])),
                 _(
                     {
                         ref: t,
-                        className: o()(
+                        className: a()(
                             {
                                 [u.defaultColor]: void 0 === g,
                                 [u.selectable]: l,
@@ -128,7 +128,7 @@ let E = Object.fromEntries(Object.keys(c.Z.colors).map((e) => [l()(e), e])),
                                 [d.fontScaling]: y
                             },
                             I,
-                            d[a],
+                            d[o],
                             f
                         )
                     },
@@ -136,7 +136,7 @@ let E = Object.fromEntries(Object.keys(c.Z.colors).map((e) => [l()(e), e])),
                 ),
                 {
                     style: Object.values(T).filter(Boolean).length > 0 ? T : void 0,
-                    'data-text-variant': a
+                    'data-text-variant': o
                 }
             )
         );

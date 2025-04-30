@@ -1,8 +1,8 @@
 n.d(t, { Z: () => D }), n(35282);
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(503438),
     c = n(100527),
@@ -77,19 +77,19 @@ function w(e, t) {
     );
 }
 function D(e) {
-    let { user: t, currentUser: n, activity: a, className: C, onClose: P } = e,
+    let { user: t, currentUser: n, activity: o, className: C, onClose: P } = e,
         { themeType: D } = (0, E.z)(),
         L = (0, _.Z)({
-            activity: a,
+            activity: o,
             user: t
         }),
-        x = (0, g.Z)(a),
-        { largeImage: M } = (0, d.FO)(a),
+        x = (0, g.Z)(o),
+        { largeImage: M } = (0, d.FO)(o),
         { analyticsLocations: k } = (0, u.ZP)(c.Z.USER_PROFILE_LIVE_ACTIVITY_CARD),
         j = (0, h.Z)({
             display: 'live',
             user: t,
-            activity: a,
+            activity: o,
             entry: L,
             analyticsLocations: k
         }),
@@ -97,13 +97,13 @@ function D(e) {
             userId: t.id,
             onAction: j
         });
-    if (!(0, l.Z)(a)) return null;
+    if (!(0, l.Z)(o)) return null;
     let G = () => {
             var e, n;
-            let l = null != (n = null == (e = a.state) ? void 0 : e.split(';')) ? n : [];
+            let l = null != (n = null == (e = o.state) ? void 0 : e.split(';')) ? n : [];
             return 0 === l.length
                 ? null
-                : null == a.sync_id
+                : null == o.sync_id
                   ? (0, r.jsx)(v.Z, {
                         variant: 'text-xs/normal',
                         text: l.join(', ')
@@ -116,9 +116,9 @@ function D(e) {
                                 {
                                     children: [
                                         (0, r.jsx)(s.P3F, {
-                                            className: o()(N.clickableText, N.inline),
+                                            className: a()(N.clickableText, N.inline),
                                             onClick: (e) => {
-                                                e.stopPropagation(), j({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, p.d$)(a, t.id, n);
+                                                e.stopPropagation(), j({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, p.d$)(o, t.id, n);
                                             },
                                             children: e
                                         }),
@@ -131,7 +131,7 @@ function D(e) {
                     });
         },
         B = () => {
-            let { timestamps: e } = a;
+            let { timestamps: e } = o;
             if (null == e) return null;
             let { start: t, end: n } = e;
             return null == t || null == n
@@ -148,7 +148,7 @@ function D(e) {
                       className: N.actions,
                       children: (0, r.jsx)(S.Z, {
                           user: t,
-                          activity: a,
+                          activity: o,
                           onAction: j
                       })
                   });
@@ -156,7 +156,7 @@ function D(e) {
         value: k,
         children: (0, r.jsxs)(y.Z, {
             ref: U,
-            className: o()(N.card, C),
+            className: a()(N.card, C),
             onAction: j,
             onClose: P,
             children: [
@@ -166,7 +166,7 @@ function D(e) {
                         contextMenu: (0, r.jsx)(T.Z, {
                             display: 'live',
                             user: t,
-                            activity: a,
+                            activity: o,
                             entry: L,
                             onClose: P
                         })
@@ -182,7 +182,7 @@ function D(e) {
                                 size: D === A.lY.MODAL_V2 ? f.J.SIZE_100 : f.J.SIZE_60,
                                 className: N.clickableImage,
                                 onClick: (e) => {
-                                    e.stopPropagation(), j({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, p.Z5)(a, t.id);
+                                    e.stopPropagation(), j({ action: 'OPEN_SPOTIFY_ALBUM' }), (0, p.Z5)(o, t.id);
                                 }
                             }),
                             (0, r.jsxs)('div', {
@@ -192,9 +192,9 @@ function D(e) {
                                         children: [
                                             (0, r.jsx)(v.Z, {
                                                 variant: 'heading-sm/semibold',
-                                                text: a.details,
+                                                text: o.details,
                                                 onClick: () => {
-                                                    j({ action: 'OPEN_SPOTIFY_TRACK' }), (0, p.aG)(a);
+                                                    j({ action: 'OPEN_SPOTIFY_TRACK' }), (0, p.aG)(o);
                                                 }
                                             }),
                                             G()
@@ -202,7 +202,7 @@ function D(e) {
                                     }),
                                     (0, r.jsx)(b.Z, {
                                         user: t,
-                                        activity: a,
+                                        activity: o,
                                         className: N.badges
                                     }),
                                     B(),

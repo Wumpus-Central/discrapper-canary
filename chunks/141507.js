@@ -1,8 +1,8 @@
 n.d(t, { k: () => w });
-var r = n(255367),
-    i = n(73800),
-    a = n(442837),
-    o = n(780384),
+var r = n(200651),
+    i = n(192379),
+    o = n(442837),
+    a = n(780384),
     s = n(481060),
     l = n(607070),
     c = n(339085),
@@ -67,12 +67,12 @@ let P = (e) => {
                     allNamesString: null == B ? void 0 : B.name
                 };
         }
-        let V = (0, a.e7)([g.Z], () => (null !== t && t.type === u.B.GUILD ? g.Z.getGuild(t.guildId) : null), [t]),
-            F = (0, a.e7)([E.Z], () => E.Z.isFocused()),
-            Z = (0, a.e7)([l.Z], () => l.Z.useReducedMotion, []),
+        let V = (0, o.e7)([g.Z], () => (null !== t && t.type === u.B.GUILD ? g.Z.getGuild(t.guildId) : null), [t]),
+            F = (0, o.e7)([E.Z], () => E.Z.isFocused()),
+            Z = (0, o.e7)([l.Z], () => l.Z.useReducedMotion, []),
             H = m.Yk.useSetting(),
             Y = (0, O.C1)(M, R(t) ? t : null),
-            W = (0, a.e7)([c.ZP], () => c.ZP.expandedSectionsByGuildIds),
+            W = (0, o.e7)([c.ZP], () => c.ZP.expandedSectionsByGuildIds),
             { newlyAddedEmojis: K } = (0, v.Z)(M, k),
             z = (null == B ? void 0 : B.type) === S.ld.EMOJI ? B.subCategory : T.t0.NONE;
         if (
@@ -128,17 +128,17 @@ let P = (e) => {
         else if ('EXPAND_OR_COLLAPSE_EMOJI' === t.type) {
             let e = n(187119),
                 i = n(39874),
-                a = n(853871),
+                o = n(853871),
                 s = n(63149);
             w = W.has(t.guildId)
                 ? (0, r.jsx)('img', {
                       className: N.icon,
-                      src: (0, o.wj)(q) ? a : s,
+                      src: (0, a.wj)(q) ? o : s,
                       alt: ''
                   })
                 : (0, r.jsx)('img', {
                       className: N.icon,
-                      src: (0, o.wj)(q) ? e : i,
+                      src: (0, a.wj)(q) ? e : i,
                       alt: ''
                   });
         }

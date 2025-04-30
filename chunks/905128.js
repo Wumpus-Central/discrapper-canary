@@ -1,7 +1,7 @@
 n.d(t, { Z: () => T });
 var r = n(442837),
     i = n(570140);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function a(e, t, n) {
         e
     );
 }
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,7 +25,7 @@ function o(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -81,8 +81,8 @@ function g(e) {
 function E(e) {
     let { guildId: t, allPowerups: n, powerupCatalog: r } = e,
         i = g(t);
-    (d = l(o({}, d), {
-        [t]: l(o({}, i), {
+    (d = l(a({}, d), {
+        [t]: l(a({}, i), {
             allPowerups: n,
             powerupCatalog: r
         })
@@ -94,8 +94,8 @@ function b(e) {
     let { guildId: t, unlockedPowerups: n } = e,
         r = g(t),
         i = m(n);
-    (d = l(o({}, d), {
-        [t]: l(o({}, r), {
+    (d = l(a({}, d), {
+        [t]: l(a({}, r), {
             unlockedPowerups: n,
             appliedBoosts: i
         })
@@ -109,8 +109,8 @@ function y(e, t) {
     r.forEach((e) => {
         t ? (i.unlockedPowerups[e.sku_id] = e) : delete i.unlockedPowerups[e.sku_id];
     });
-    let a = m(i.unlockedPowerups);
-    d = l(o({}, d), { [n]: l(o({}, i), { appliedBoosts: a }) });
+    let o = m(i.unlockedPowerups);
+    d = l(a({}, d), { [n]: l(a({}, i), { appliedBoosts: o }) });
 }
 function O(e) {
     y(e, !0);

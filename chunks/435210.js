@@ -5,7 +5,7 @@ var r = n(444675),
             for (var t = Object.keys(e), n = {}, r = 0; r < t.length; r++) n[t[r]] = Object.getOwnPropertyDescriptor(e, t[r]);
             return n;
         },
-    a = /%[sdj%]/g;
+    o = /%[sdj%]/g;
 (t.format = function (e) {
     if (!I(e)) {
         for (var t = [], n = 0; n < arguments.length; n++) t.push(c(arguments[n]));
@@ -15,7 +15,7 @@ var r = n(444675),
         var n = 1,
             r = arguments,
             i = r.length,
-            o = String(e).replace(a, function (e) {
+            a = String(e).replace(o, function (e) {
                 if ('%%' === e) return '%';
                 if (n >= i) return e;
                 switch (e) {
@@ -37,8 +37,8 @@ var r = n(444675),
         n < i;
         s = r[++n]
     )
-        O(s) || !A(s) ? (o += ' ' + s) : (o += ' ' + c(s));
-    return o;
+        O(s) || !A(s) ? (a += ' ' + s) : (a += ' ' + c(s));
+    return a;
 }),
     (t.deprecate = function (e, n) {
         if (void 0 !== r && !0 === r.noDeprecation) return e;
@@ -55,7 +55,7 @@ var r = n(444675),
             return e.apply(this, arguments);
         };
     });
-var o = {},
+var a = {},
     s = /^$/;
 if (r.env.NODE_DEBUG) {
     var l = r.env.NODE_DEBUG;
@@ -96,11 +96,11 @@ function f(e) {
 function _(e, n, r) {
     if (e.customInspect && n && R(n.inspect) && n.inspect !== t.inspect && !(n.constructor && n.constructor.prototype === n)) {
         var i,
-            a = n.inspect(r, e);
-        return I(a) || (a = _(e, a, r)), a;
+            o = n.inspect(r, e);
+        return I(o) || (o = _(e, o, r)), o;
     }
-    var o = p(e, n);
-    if (o) return o;
+    var a = p(e, n);
+    if (a) return a;
     var s = Object.keys(n),
         l = f(s);
     if ((e.showHidden && (s = Object.getOwnPropertyNames(n)), C(n) && (s.indexOf('message') >= 0 || s.indexOf('description') >= 0))) return h(n);
@@ -143,23 +143,23 @@ function h(e) {
     return '[' + Error.prototype.toString.call(e) + ']';
 }
 function m(e, t, n, r, i) {
-    for (var a = [], o = 0, s = t.length; o < s; ++o) x(t, String(o)) ? a.push(g(e, t, n, r, String(o), !0)) : a.push('');
+    for (var o = [], a = 0, s = t.length; a < s; ++a) x(t, String(a)) ? o.push(g(e, t, n, r, String(a), !0)) : o.push('');
     return (
         i.forEach(function (i) {
-            i.match(/^\d+$/) || a.push(g(e, t, n, r, i, !0));
+            i.match(/^\d+$/) || o.push(g(e, t, n, r, i, !0));
         }),
-        a
+        o
     );
 }
-function g(e, t, n, r, i, a) {
-    var o, s, l;
+function g(e, t, n, r, i, o) {
+    var a, s, l;
     if (
         ((l = Object.getOwnPropertyDescriptor(t, i) || { value: t[i] }).get ? (s = l.set ? e.stylize('[Getter/Setter]', 'special') : e.stylize('[Getter]', 'special')) : l.set && (s = e.stylize('[Setter]', 'special')),
-        x(r, i) || (o = '[' + i + ']'),
+        x(r, i) || (a = '[' + i + ']'),
         !s &&
             (0 > e.seen.indexOf(l.value)
                 ? (s = O(n) ? _(e, l.value, null) : _(e, l.value, n - 1)).indexOf('\n') > -1 &&
-                  (s = a
+                  (s = o
                       ? s
                             .split('\n')
                             .map(function (e) {
@@ -175,18 +175,18 @@ function g(e, t, n, r, i, a) {
                             })
                             .join('\n'))
                 : (s = e.stylize('[Circular]', 'special'))),
-        S(o))
+        S(a))
     ) {
-        if (a && i.match(/^\d+$/)) return s;
-        (o = JSON.stringify('' + i)).match(/^"([a-zA-Z_][a-zA-Z_0-9]*)"$/)
-            ? ((o = o.slice(1, -1)), (o = e.stylize(o, 'name')))
-            : ((o = o
+        if (o && i.match(/^\d+$/)) return s;
+        (a = JSON.stringify('' + i)).match(/^"([a-zA-Z_][a-zA-Z_0-9]*)"$/)
+            ? ((a = a.slice(1, -1)), (a = e.stylize(a, 'name')))
+            : ((a = a
                   .replace(/'/g, "\\'")
                   .replace(/\\"/g, '"')
                   .replace(/(^"|"$)/g, "'")),
-              (o = e.stylize(o, 'string')));
+              (a = e.stylize(a, 'string')));
     }
-    return o + ': ' + s;
+    return a + ': ' + s;
 }
 function E(e, t, n) {
     var r = 0;
@@ -236,15 +236,15 @@ function w(e) {
     return e < 10 ? '0' + e.toString(10) : e.toString(10);
 }
 (t.debuglog = function (e) {
-    if (!o[(e = e.toUpperCase())])
+    if (!a[(e = e.toUpperCase())])
         if (s.test(e)) {
             var n = r.pid;
-            o[e] = function () {
+            a[e] = function () {
                 var r = t.format.apply(t, arguments);
                 console.error('%s %d: %s', e, n, r);
             };
-        } else o[e] = function () {};
-    return o[e];
+        } else a[e] = function () {};
+    return a[e];
 }),
     (t.inspect = c),
     (c.colors = {
@@ -346,11 +346,11 @@ function k(e, t) {
                     (t = e), (n = r);
                 }),
                 i = [],
-                a = 0;
-            a < arguments.length;
-            a++
+                o = 0;
+            o < arguments.length;
+            o++
         )
-            i.push(arguments[a]);
+            i.push(arguments[o]);
         i.push(function (e, r) {
             e ? n(e) : t(r);
         });
@@ -380,16 +380,16 @@ function k(e, t) {
             for (var t = [], n = 0; n < arguments.length; n++) t.push(arguments[n]);
             var i = t.pop();
             if ('function' != typeof i) throw TypeError('The last argument must be of type Function');
-            var a = this,
-                o = function () {
-                    return i.apply(a, arguments);
+            var o = this,
+                a = function () {
+                    return i.apply(o, arguments);
                 };
             e.apply(this, t).then(
                 function (e) {
-                    r.nextTick(o.bind(null, null, e));
+                    r.nextTick(a.bind(null, null, e));
                 },
                 function (e) {
-                    r.nextTick(k.bind(null, e, o));
+                    r.nextTick(k.bind(null, e, a));
                 }
             );
         }

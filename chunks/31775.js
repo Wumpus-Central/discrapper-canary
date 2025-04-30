@@ -1,8 +1,8 @@
 e.exports = u;
 var r,
     i = n(54673),
-    a = n(435210),
-    o = n(465170),
+    o = n(435210),
+    a = n(465170),
     s = {};
 function l(e, t, n) {
     var i;
@@ -152,7 +152,7 @@ function m(e, t, n, r, i) {
                 l(this, 'dispose').call(this, e.key, e.value);
             }, this),
             l(this, 'cache', new i()),
-            l(this, 'lruList', new o()),
+            l(this, 'lruList', new a()),
             l(this, 'length', 0);
     }),
     (u.prototype.dump = function () {
@@ -178,18 +178,18 @@ function m(e, t, n, r, i) {
             r = !1;
         l(this, 'allowStale') && ((n += '\n  allowStale: true'), (r = !0));
         var i = l(this, 'max');
-        i && i !== 1 / 0 && (r && (n += ','), (n += '\n  max: ' + a.inspect(i, t)), (r = !0));
-        var o = l(this, 'maxAge');
-        o && (r && (n += ','), (n += '\n  maxAge: ' + a.inspect(o, t)), (r = !0));
+        i && i !== 1 / 0 && (r && (n += ','), (n += '\n  max: ' + o.inspect(i, t)), (r = !0));
+        var a = l(this, 'maxAge');
+        a && (r && (n += ','), (n += '\n  maxAge: ' + o.inspect(a, t)), (r = !0));
         var s = l(this, 'lengthCalculator');
-        s && s !== c && (r && (n += ','), (n += '\n  length: ' + a.inspect(l(this, 'length'), t)), (r = !0));
+        s && s !== c && (r && (n += ','), (n += '\n  length: ' + o.inspect(l(this, 'length'), t)), (r = !0));
         var u = !1;
         return (
             l(this, 'lruList').forEach(function (e) {
                 u ? (n += ',\n  ') : (r && (n += ',\n'), (u = !0), (n += '\n  '));
-                var i = a.inspect(e.key).split('\n').join('\n  '),
+                var i = o.inspect(e.key).split('\n').join('\n  '),
                     l = { value: e.value };
-                e.maxAge !== o && (l.maxAge = e.maxAge), s !== c && (l.length = e.length), _(this, e) && (l.stale = !0), (l = a.inspect(l, t).split('\n').join('\n  ')), (n += i + ' => ' + l);
+                e.maxAge !== a && (l.maxAge = e.maxAge), s !== c && (l.length = e.length), _(this, e) && (l.stale = !0), (l = o.inspect(l, t).split('\n').join('\n  ')), (n += i + ' => ' + l);
             }),
             (u || r) && (n += '\n'),
             (n += '}')
@@ -200,11 +200,11 @@ function m(e, t, n, r, i) {
             i = l(this, 'lengthCalculator').call(this, t, e);
         if (l(this, 'cache').has(e)) {
             if (i > l(this, 'max')) return h(this, l(this, 'cache').get(e)), !1;
-            var a = l(this, 'cache').get(e).value;
-            return l(this, 'dispose') && l(this, 'dispose').call(this, e, a.value), (a.now = r), (a.maxAge = n), (a.value = t), l(this, 'length', l(this, 'length') + (i - a.length)), (a.length = i), this.get(e), p(this), !0;
+            var o = l(this, 'cache').get(e).value;
+            return l(this, 'dispose') && l(this, 'dispose').call(this, e, o.value), (o.now = r), (o.maxAge = n), (o.value = t), l(this, 'length', l(this, 'length') + (i - o.length)), (o.length = i), this.get(e), p(this), !0;
         }
-        var o = new m(e, t, i, r, n);
-        return o.length > l(this, 'max') ? (l(this, 'dispose') && l(this, 'dispose').call(this, e, t), !1) : (l(this, 'length', l(this, 'length') + o.length), l(this, 'lruList').unshift(o), l(this, 'cache').set(e, l(this, 'lruList').head), p(this), !0);
+        var a = new m(e, t, i, r, n);
+        return a.length > l(this, 'max') ? (l(this, 'dispose') && l(this, 'dispose').call(this, e, t), !1) : (l(this, 'length', l(this, 'length') + a.length), l(this, 'lruList').unshift(a), l(this, 'cache').set(e, l(this, 'lruList').head), p(this), !0);
     }),
     (u.prototype.has = function (e) {
         return !(!l(this, 'cache').has(e) || _(this, l(this, 'cache').get(e).value));
@@ -229,8 +229,8 @@ function m(e, t, n, r, i) {
                 i = r.e || 0;
             if (0 === i) this.set(r.k, r.v);
             else {
-                var a = i - t;
-                a > 0 && this.set(r.k, r.v, a);
+                var o = i - t;
+                o > 0 && this.set(r.k, r.v, o);
             }
         }
     }),

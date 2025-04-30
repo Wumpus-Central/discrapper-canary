@@ -11,14 +11,14 @@ n.d(t, {
     g0: () => g
 }),
     n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(374470),
-    o = n(585483),
+var r = n(200651),
+    i = n(192379),
+    o = n(374470),
+    a = n(585483),
     s = n(830917),
     l = n(919570),
     c = n(981631);
-let u = new o.b(),
+let u = new a.b(),
     d = i.createContext({
         appContext: c.IlC.APP,
         renderWindow: window,
@@ -28,15 +28,15 @@ let u = new o.b(),
     f = new Map();
 function _(e, t) {
     let [n, r] = i.useState((0, s.ZY)(t)),
-        a = i.useMemo(() => new o.b(), []),
+        o = i.useMemo(() => new a.b(), []),
         l = i.useMemo(
             () => ({
                 appContext: e,
                 renderWindow: t,
-                windowDispatch: a,
+                windowDispatch: o,
                 windowId: n
             }),
-            [e, t, a, n]
+            [e, t, o, n]
         );
     return (
         i.useEffect(() => {
@@ -66,7 +66,7 @@ function p(e) {
 }
 function h(e) {
     var t;
-    return (0, a.k)(null == e ? void 0 : e.target) && null != (t = p(e.target)) ? t : null;
+    return (0, o.k)(null == e ? void 0 : e.target) && null != (t = p(e.target)) ? t : null;
 }
 function m() {
     var e;
@@ -82,9 +82,9 @@ function E() {
 }
 function b(e) {
     let { appContext: t, renderWindow: n, children: i } = e,
-        a = _(t, n);
+        o = _(t, n);
     return (0, r.jsx)(d.Provider, {
-        value: a,
+        value: o,
         children: i
     });
 }

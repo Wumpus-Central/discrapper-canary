@@ -11,10 +11,10 @@ n.d(t, {
 });
 var r = n(570140),
     i = n(444295),
-    a = n(355863),
-    o = n(145597);
+    o = n(355863),
+    a = n(145597);
 function s(e, t, n) {
-    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.OVERLAY_DEFAULT_RESOLUTION;
+    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a.OVERLAY_DEFAULT_RESOLUTION;
     r.Z.dispatch({
         type: 'LAYOUT_CREATE',
         layoutId: e,
@@ -24,13 +24,13 @@ function s(e, t, n) {
     });
 }
 function l(e) {
-    let { widgetId: t, anchor: n, size: i, opacity: a } = e;
+    let { widgetId: t, anchor: n, size: i, opacity: o } = e;
     r.Z.dispatch({
         type: 'LAYOUT_UPDATE_WIDGET',
         widgetId: t,
         anchor: n,
         size: i,
-        opacity: a
+        opacity: o
     });
 }
 function c(e) {
@@ -44,7 +44,7 @@ function u(e) {
         type: 'LAYOUT_SET_PINNED',
         widgetId: e
     });
-    let t = a.Z.getWidget(e);
+    let t = o.Z.getWidget(e);
     null != t && (0, i.JS)(t.type, { pinned: !t.pinned });
 }
 function d(e) {

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d });
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(325767);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function a(e, t, n) {
         e
     );
 }
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,7 +26,7 @@ function o(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -60,8 +60,8 @@ function c(e, t) {
         r,
         i = u(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -70,16 +70,16 @@ function u(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function d(e) {
-    var { width: t = 24, height: n = 24, color: a = 'currentColor', className: s, background: u, foreground: d } = e,
+    var { width: t = 24, height: n = 24, color: o = 'currentColor', className: s, background: u, foreground: d } = e,
         f = c(e, ['width', 'height', 'color', 'className', 'background', 'foreground']);
     return (0, r.jsxs)(
         'svg',
-        l(o({}, (0, i.Z)(f)), {
+        l(a({}, (0, i.Z)(f)), {
             className: s,
             width: t,
             height: n,
@@ -90,12 +90,12 @@ function d(e) {
                     clipRule: 'evenodd',
                     d: 'M5.37499 3H18.625C19.9197 3 21.0056 4.08803 21 5.375V18.625C21 19.936 19.9359 21 18.625 21H5.37499C4.06518 21 3 19.936 3 18.625V5.375C3 4.06519 4.06518 3 5.37499 3Z',
                     className: u,
-                    fill: a
+                    fill: o
                 }),
                 (0, r.jsx)('path', {
                     d: 'M9.58473 14.8636L6.04944 11.4051L4.50003 12.9978L9.58473 18L19.5 8.26174L17.9656 6.64795L9.58473 14.8636Z',
                     className: d,
-                    fill: a
+                    fill: o
                 })
             ]
         })

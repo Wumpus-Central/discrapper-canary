@@ -2,11 +2,11 @@ n.d(t, {
     Z: () => T,
     r: () => S
 });
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(692547),
     l = n(215569),
     c = n(481060),
@@ -55,8 +55,8 @@ function v(e, t) {
         r,
         i = I(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -65,18 +65,18 @@ function I(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function S(e) {
-    let { title: t, onJumpToChannel: n, onHide: i, idle: a, preventIdleComponent: l } = e,
-        u = (0, o.e7)([p.Z], () => p.Z.getChannelId()),
+    let { title: t, onJumpToChannel: n, onHide: i, idle: o, preventIdleComponent: l } = e,
+        u = (0, a.e7)([p.Z], () => p.Z.getChannelId()),
         _ =
             null != u
                 ? (0, r.jsx)(h.Z, {
                       voiceChannelId: u,
-                      idle: a
+                      idle: o
                   })
                 : null,
         { enabled: m } = f.Z.useExperiment({ location: 'PictureInPicturePlayer' });
@@ -114,13 +114,13 @@ function S(e) {
     });
 }
 function T(e) {
-    var { children: t, idle: n, onJumpToChannel: i, onHide: o, backgroundKey: s, onActive: c, onForceIdle: d, renderBottomLeftControls: f, renderBottomRightControls: p, screenMessage: h, hideControls: g = !1, className: E, innerClassName: y, videoControlsClassName: I } = e,
+    var { children: t, idle: n, onJumpToChannel: i, onHide: a, backgroundKey: s, onActive: c, onForceIdle: d, renderBottomLeftControls: f, renderBottomRightControls: p, screenMessage: h, hideControls: g = !1, className: E, innerClassName: y, videoControlsClassName: I } = e,
         T = v(e, ['children', 'idle', 'onJumpToChannel', 'onHide', 'backgroundKey', 'onActive', 'onForceIdle', 'renderBottomLeftControls', 'renderBottomRightControls', 'screenMessage', 'hideControls', 'className', 'innerClassName', 'videoControlsClassName']);
     return (0, r.jsxs)('div', {
         onMouseMove: c,
         onMouseDown: c,
         onMouseLeave: d,
-        className: a()(b.pictureInPictureVideo, { [b.idle]: n }, E),
+        className: o()(b.pictureInPictureVideo, { [b.idle]: n }, E),
         onDoubleClick: i,
         children: [
             (0, r.jsx)(l.W, {
@@ -136,7 +136,7 @@ function T(e) {
             null != h ? (0, r.jsx)(m.Z, O({ size: 'small' }, h)) : null,
             !g &&
                 (0, r.jsxs)('div', {
-                    className: a()(b.videoControls, I, 'theme-dark'),
+                    className: o()(b.videoControls, I, 'theme-dark'),
                     children: [
                         (0, r.jsx)('div', {
                             className: b.topControls,
@@ -146,7 +146,7 @@ function T(e) {
                                     {
                                         idle: n,
                                         onJumpToChannel: i,
-                                        onHide: o
+                                        onHide: a
                                     },
                                     T
                                 )

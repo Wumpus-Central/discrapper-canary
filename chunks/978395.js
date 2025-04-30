@@ -1,8 +1,8 @@
 n.d(t, { Z: () => P });
-var r = n(255367),
+var r = n(200651),
     i = n(442837),
-    a = n(481060),
-    o = n(320582),
+    o = n(481060),
+    a = n(320582),
     s = n(189156),
     l = n(699516),
     c = n(246946),
@@ -33,12 +33,12 @@ function P(e) {
             relationshipType: l.Z.getRelationshipType(t.id),
             originApplicationId: l.Z.getOriginApplicationId(t.id)
         })),
-        G = (0, o.vh)(t.id),
+        G = (0, a.vh)(t.id),
         B = (0, i.e7)([c.Z], () => c.Z.hidePersonalInformation),
         V = (0, f.b)({ location: 'UserProfilePopoutBody' }),
         F = t.id === n.id,
         Z = (0, d.I5)(n);
-    return (0, r.jsxs)(a.Ttm, {
+    return (0, r.jsxs)(o.Ttm, {
         fade: !0,
         className: R.body,
         children: [

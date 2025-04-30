@@ -1,13 +1,13 @@
 var r = n(98405),
     i = n(511696),
-    a = n(630489),
-    o = n(621523),
+    o = n(630489),
+    a = n(621523),
     s = n(154028),
     l = n(880181),
     c = n(733375),
     u = n(423582),
     d = n(556585),
-    f = a && a.prototype;
+    f = o && o.prototype;
 if (
     (r(
         {
@@ -15,8 +15,8 @@ if (
             proto: !0,
             real: !0,
             forced:
-                !!a &&
-                o(function () {
+                !!o &&
+                a(function () {
                     f.finally.call(
                         {
                             then: function () {}
@@ -48,7 +48,7 @@ if (
             }
         }
     ),
-    !i && l(a))
+    !i && l(o))
 ) {
     var _ = s('Promise').prototype.finally;
     f.finally !== _ && d(f, 'finally', _, { unsafe: !0 });

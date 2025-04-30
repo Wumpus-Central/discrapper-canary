@@ -1,14 +1,14 @@
-n.d(t, { Z: () => o });
-var r = n(255367),
+n.d(t, { Z: () => a });
+var r = n(200651),
     i = n(925329),
-    a = n(238454);
-function o(e) {
+    o = n(238454);
+function a(e) {
     let { application: t, useComma: n = !1 } = e;
     return (0, r.jsxs)('div', {
-        className: a.applicationNameWrapper,
+        className: o.applicationNameWrapper,
         children: [
             (0, r.jsx)(i.Z, {
-                className: a.applicationIcon,
+                className: o.applicationIcon,
                 game: t,
                 size: i.Z.Sizes.XSMALL
             }),

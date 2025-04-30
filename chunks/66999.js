@@ -4,20 +4,20 @@ n.d(t, {
 });
 var r = n(442837),
     i = n(430198),
-    a = n(592125),
-    o = n(496675),
+    o = n(592125),
+    a = n(496675),
     s = n(981631);
 let l = {
     needSubscriptionToAccess: !1,
     isSubscriptionGated: !1
 };
 function c(e) {
-    return (0, r.cj)([a.Z, i.Z, o.Z], () => u(e, a.Z, i.Z, o.Z), [e]);
+    return (0, r.cj)([o.Z, i.Z, a.Z], () => u(e, o.Z, i.Z, a.Z), [e]);
 }
 function u(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.Z,
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.Z,
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : i.Z,
-        r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.Z,
+        r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a.Z,
         c = t.getChannel(e);
     return (null == c ? void 0 : c.isRoleSubscriptionTemplatePreviewChannel())
         ? {

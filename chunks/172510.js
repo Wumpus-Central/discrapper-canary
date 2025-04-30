@@ -7,8 +7,8 @@ e.exports = function (e) {
         (n >= '0' && n <= '9') || ('_' !== n && t.ignoreMatch());
     }
     let i = /[+-]?((\.\d+)|(\d+)(\.\d*)?)/,
-        a = /[GM]\s*\d+(\.\d+)?/,
-        o = /T\s*\d+/,
+        o = /[GM]\s*\d+(\.\d+)?/,
+        a = /T\s*\d+/,
         s = /O\s*\d+/,
         l = /O<.+>/,
         c = /[ABCUVWXYZ]\s*/,
@@ -32,14 +32,14 @@ e.exports = function (e) {
             {
                 scope: 'title.function',
                 variants: [
-                    { match: t.concat(n, a) },
-                    {
-                        begin: a,
-                        'on:begin': r
-                    },
                     { match: t.concat(n, o) },
                     {
                         begin: o,
+                        'on:begin': r
+                    },
+                    { match: t.concat(n, a) },
+                    {
+                        begin: a,
                         'on:begin': r
                     }
                 ]

@@ -4,11 +4,11 @@ n.d(t, {
     j: () => k
 }),
     n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
-    s = n(505266),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(995899),
     l = n(442837),
     c = n(481060),
     u = n(230711),
@@ -35,7 +35,7 @@ var r = n(255367),
     w = n(946790),
     D = n(593639);
 function L(e) {
-    var t, n, a, u, d;
+    var t, n, o, u, d;
     let { transitionState: f, onClose: p, quest: m, location: g } = e,
         E = i.useRef(null),
         [b, y] = i.useState(null),
@@ -79,7 +79,7 @@ function L(e) {
                 children: (0, r.jsx)(c.Y0X, {
                     transitionState: f,
                     size: c.CgR.DYNAMIC,
-                    className: o()(R.rootContainer, { [R.rootContainerLoading]: P }),
+                    className: a()(R.rootContainer, { [R.rootContainerLoading]: P }),
                     hideShadow: !0,
                     children: P
                         ? (0, r.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE })
@@ -94,7 +94,7 @@ function L(e) {
                                   onClose: p
                               })
                             : (0, r.jsx)(j, {
-                                  duration: M(null != (d = null == (a = N.entitlements) ? void 0 : a.items) ? d : []),
+                                  duration: M(null != (d = null == (o = N.entitlements) ? void 0 : o.items) ? d : []),
                                   onClose: p
                               })
                 })
@@ -154,13 +154,13 @@ function M(e) {
 }
 function k(e) {
     let { duration: t, onClose: n } = e,
-        { theme: a } = (0, c.TCT)(),
-        o = (0, p.Z)({ forceFetch: !0 }),
-        s = (0, y.vc)(o.endsAt, 'L'),
+        { theme: o } = (0, c.TCT)(),
+        a = (0, p.Z)({ forceFetch: !0 }),
+        s = (0, y.vc)(a.endsAt, 'L'),
         l = i.useCallback(() => {
             (0, g.$)(n);
         }, [n]);
-    return o.fractionalState === N.a$.NONE
+    return a.fractionalState === N.a$.NONE
         ? (0, r.jsx)('div', {
               className: R.spinnerContainer,
               children: (0, r.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE })
@@ -194,7 +194,7 @@ function k(e) {
                               className: R.nitroHeading,
                               premiumType: N.p9.TIER_2,
                               type: E.C.Types.PREMIUM_ACTIVATED,
-                              theme: a
+                              theme: o
                           }),
                           (0, r.jsx)(c.Text, {
                               variant: 'text-md/normal',
@@ -217,17 +217,17 @@ function k(e) {
 }
 function j(e) {
     let { duration: t, onClose: n } = e,
-        a = (0, p.Z)({ forceFetch: !0 }),
+        o = (0, p.Z)({ forceFetch: !0 }),
         s = (0, f.ZP)(),
         l = i.useCallback(() => {
             u.Z.open(T.oAB.SUBSCRIPTIONS, null, {}), n();
         }, [n]);
-    if (!a.fetched)
+    if (!o.fetched)
         return (0, r.jsx)('div', {
             className: R.spinnerContainer,
             children: (0, r.jsx)(c.$jN, { type: c.$jN.Type.SPINNING_CIRCLE })
         });
-    let d = a.isFractionalPremiumActive
+    let d = o.isFractionalPremiumActive
         ? C.intl.string(C.t['1ku8i4'])
         : C.intl.format(C.t.fI1nLy, {
               helpCenterLink: O.Z.getArticleURL(T.BhN.FRACTIONAL_PREMIUM_ABOUT),
@@ -237,7 +237,7 @@ function j(e) {
         theme: s,
         children: (e) =>
             (0, r.jsxs)('div', {
-                className: o()(R.claimedRootContainer, e),
+                className: a()(R.claimedRootContainer, e),
                 children: [
                     (0, r.jsxs)('div', {
                         className: R.headerContainer,
@@ -293,19 +293,19 @@ function j(e) {
     });
 }
 function U(e) {
-    let { quest: t, location: n, onClose: a, transitionState: o } = e,
+    let { quest: t, location: n, onClose: o, transitionState: a } = e,
         s = (0, d.Z)(() => {
             var e;
             return (null == (e = t.userStatus) ? void 0 : e.claimedAt) != null;
         });
     return (i.useEffect(() => {
-        s && a();
-    }, [a, s]),
+        s && o();
+    }, [o, s]),
     s)
         ? null
         : (0, r.jsx)(L, {
-              onClose: a,
-              transitionState: o,
+              onClose: o,
+              transitionState: a,
               quest: t,
               location: n
           });

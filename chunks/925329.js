@@ -1,9 +1,9 @@
 n.d(t, { Z: () => g });
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     s = n(829968),
     l = n(565138),
     c = n(474936),
@@ -68,17 +68,17 @@ let m = (e) => {
     if ((null != c && (t = p(c)), null != n && null == t && (t = n.getIconURL(_(b))), null == (t = (0, s.Z)(m, t)) && null != i)) {
         let e = h(b);
         return (0, r.jsx)(l.Z, {
-            className: a()(d.gameIcon, E, g),
+            className: o()(d.gameIcon, E, g),
             guild: i,
             size: e
         });
     }
     if (null == t)
         return y
-            ? (0, r.jsx)(o.IMN, {
+            ? (0, r.jsx)(a.IMN, {
                   size: 'md',
                   color: 'currentColor',
-                  className: a()(d.gameIcon, b, g)
+                  className: o()(d.gameIcon, b, g)
               })
             : null;
     let O = null == n ? void 0 : n.name,
@@ -86,7 +86,7 @@ let m = (e) => {
     return (0, r.jsx)('img', {
         alt: v,
         src: t,
-        className: a()(d.gameIcon, b, g)
+        className: o()(d.gameIcon, b, g)
     });
 };
 m.Sizes = f;

@@ -8,11 +8,11 @@ n.d(t, {
     Zl: () => T,
     vu: () => I
 });
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(952265),
-    a = n(359110),
-    o = n(314897),
+    o = n(359110),
+    a = n(314897),
     s = n(88751),
     l = n(427679),
     c = n(513449),
@@ -72,7 +72,7 @@ function m(e, t) {
     );
 }
 function g(e) {
-    let t = o.default.getId(),
+    let t = a.default.getId(),
         n = s.ZP.isModerator(t, e.id),
         r = l.Z.isLive(e.id);
     n && !r ? E(e) : n && r && b(e);
@@ -103,7 +103,7 @@ function y(e, t) {
 }
 function O(e) {}
 function v(e) {
-    (0, a.Kh)(e.id);
+    (0, o.Kh)(e.id);
 }
 function I(e, t) {
     (0, i.ZD)(async () => {
@@ -128,7 +128,7 @@ function S(e, t) {
     );
 }
 function T(e) {
-    let t = o.default.getId(),
+    let t = a.default.getId(),
         n = (0, u.Z7)(e),
         r = (0, u.wK)(e);
     return !s.ZP.isModerator(t, e) && (n > 0 || r > 0);

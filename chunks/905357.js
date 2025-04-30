@@ -1,16 +1,16 @@
 n.d(t, {
     T: () => s,
-    k: () => o
+    k: () => a
 });
 var r = n(311570),
     i = n(228624),
-    a = n(388032);
-let o = (e) => {
+    o = n(388032);
+let a = (e) => {
         let t = (0, i.hv)('useProductName') === r.v.VARIANTS_GROUP;
         if (null == e) return '';
-        let n = a.intl.string(a.t.z7y5vL);
+        let n = o.intl.string(o.t.z7y5vL);
         return t && 'baseVariantName' in e && null != e.baseVariantName && e.variantLabel !== n
-            ? a.intl.formatToPlainString(a.t.BZN5k5, {
+            ? o.intl.formatToPlainString(o.t.BZN5k5, {
                   baseVariantName: e.baseVariantName,
                   variantLabel: e.variantLabel
               })

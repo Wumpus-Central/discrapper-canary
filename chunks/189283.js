@@ -1,8 +1,8 @@
 n.d(t, { s: () => h });
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(1561),
     l = n(993365),
     c = n(964423);
@@ -37,13 +37,13 @@ function _(e) {
     return 'pill' === e ? c.pillItemText : void 0;
 }
 function p(e) {
-    let { option: t, selected: n, onClick: a, look: u, className: p } = e,
-        h = i.useCallback((e) => a(t, e), [a, t]);
+    let { option: t, selected: n, onClick: o, look: u, className: p } = e,
+        h = i.useCallback((e) => o(t, e), [o, t]);
     return (0, r.jsx)(s.P, {
-        className: o()(d(u), p, { [f(u)]: n }),
+        className: a()(d(u), p, { [f(u)]: n }),
         onClick: h,
         children: (0, r.jsxs)(l.x, {
-            className: o()(c.controlText, _(u)),
+            className: a()(c.controlText, _(u)),
             variant: 'text-sm/medium',
             color: 'none',
             children: [null != t.icon ? (0, r.jsx)(t.icon, { className: c.icon }) : null, t.name]
@@ -51,7 +51,7 @@ function p(e) {
     });
 }
 function h(e) {
-    let { options: t, value: n, onChange: a, look: s = 'tab', className: l, optionClassName: c } = e,
+    let { options: t, value: n, onChange: o, look: s = 'tab', className: l, optionClassName: c } = e,
         d = i.useCallback(
             (e) => {
                 var t;
@@ -62,16 +62,16 @@ function h(e) {
                         selected: i,
                         option: e,
                         look: s,
-                        onClick: a,
+                        onClick: o,
                         className: c
                     },
                     null != (t = e.key) ? t : String(e.value)
                 );
             },
-            [n, s, a, c]
+            [n, s, o, c]
         );
     return (0, r.jsx)('div', {
-        className: o()(u(s), l),
+        className: a()(u(s), l),
         children: t.map(d)
     });
 }

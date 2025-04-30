@@ -11,11 +11,11 @@ n.r(t),
         useSyncMessages: () => b
     }),
     n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(66685),
-    o = n(159635),
-    s = n.n(o),
+var r = n(200651),
+    i = n(192379),
+    o = n(164484),
+    a = n(477660),
+    s = n.n(a),
     l = n(253185),
     c = n(424395),
     u = n(120235);
@@ -76,38 +76,38 @@ function h(e) {
 }
 let m = h('en-US'),
     g = (0, c.YI)(m, 'en-US'),
-    E = new a.IntlManager({
+    E = new o.IntlManager({
         initialLocale: g,
         defaultLocale: 'en-US'
     }).withFormatters({
-        format: (0, a.makeReactFormatter)({
+        format: (0, o.makeReactFormatter)({
             $i: (e, t) => (0, r.jsx)('em', { children: e }, t),
             $b: (e, t) => (0, r.jsx)('strong', { children: e }, t),
             $del: (e, t) => (0, r.jsx)('del', { children: e }, t),
             $p: (e, t) => (0, r.jsx)('p', { children: e }, t),
             $code: (e, t) => (0, r.jsx)('code', { children: e }, t),
             $link: (e, t, r) => {
-                let [a] = r,
-                    { Anchor: o } = n(756715),
+                let [o] = r,
+                    { Anchor: a } = n(756715),
                     l = {};
-                switch (typeof a) {
+                switch (typeof o) {
                     case 'string':
-                        l.href = s().sanitizeUrl(a);
+                        l.href = s().sanitizeUrl(o);
                         break;
                     case 'function':
                     default:
-                        l.onClick = a;
+                        l.onClick = o;
                         break;
                     case 'object':
                         var c;
-                        if (null == a) break;
-                        (l.onClick = null != (c = a.onClick) ? c : a), (l.onContextMenu = a.onContextMenu);
+                        if (null == o) break;
+                        (l.onClick = null != (c = o.onClick) ? c : o), (l.onContextMenu = o.onContextMenu);
                 }
-                return (0, i.createElement)(o, p(f({}, l), { key: t }), e);
+                return (0, i.createElement)(a, p(f({}, l), { key: t }), e);
             }
         }),
-        formatToPlainString: a.stringFormatter,
-        formatToMarkdownString: a.markdownFormatter,
-        formatToParts: a.astFormatter
+        formatToPlainString: o.stringFormatter,
+        formatToMarkdownString: o.markdownFormatter,
+        formatToParts: o.astFormatter
     }),
     b = (e) => (0, c.j1)(e, E);

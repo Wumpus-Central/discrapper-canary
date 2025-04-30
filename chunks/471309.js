@@ -1,10 +1,10 @@
 n.d(t, {
-    E: () => a,
-    Z: () => o
+    E: () => o,
+    Z: () => a
 });
 var r = n(818083),
     i = n(987338);
-let a = (0, r.B)({
+let o = (0, r.B)({
         kind: 'user',
         id: '2024-08_tiered_tenure_badges',
         label: 'Tiered Tenure Badging',
@@ -18,4 +18,4 @@ let a = (0, r.B)({
             }
         ]
     }),
-    o = a;
+    a = o;

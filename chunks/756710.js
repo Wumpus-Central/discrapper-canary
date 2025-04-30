@@ -1,8 +1,8 @@
 n.d(t, { o: () => h });
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(1561),
     l = n(743236),
     c = n(939350),
@@ -60,11 +60,11 @@ function p(e, t) {
     );
 }
 function h(e) {
-    let { children: t, color: n = 'default', isFocused: a = !1, disabled: d = !1, keepItemStyles: _ = !1, menuItemProps: h, action: m, dontCloseOnActionIfHoldingShiftKey: g, dontCloseOnAction: E, onClose: b } = e,
+    let { children: t, color: n = 'default', isFocused: o = !1, disabled: d = !1, keepItemStyles: _ = !1, menuItemProps: h, action: m, dontCloseOnActionIfHoldingShiftKey: g, dontCloseOnAction: E, onClose: b } = e,
         y = i.useRef(null);
     i.useEffect(() => {
-        a && (0, l.F)(y);
-    }, [a]);
+        o && (0, l.F)(y);
+    }, [o]);
     let O = i.useCallback(
             (e) => {
                 if (null == m) return !1;
@@ -72,7 +72,7 @@ function h(e) {
             },
             [m, b, g, E]
         ),
-        v = _ ? o()(u.item, c._[n], { [u.focused]: a }) : u.customItem;
+        v = _ ? a()(u.item, c._[n], { [u.focused]: o }) : u.customItem;
     return (0, r.jsx)(
         s.P,
         p(
@@ -89,7 +89,7 @@ function h(e) {
                 children: t({
                     color: n,
                     disabled: d,
-                    isFocused: a
+                    isFocused: o
                 })
             }
         )

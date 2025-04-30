@@ -6,12 +6,12 @@ n.d(t, {
 }),
     n(704826),
     n(35282);
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(866442),
-    a = n(481060);
+    o = n(481060);
 n(531643);
-var o = n(643879),
+var a = n(643879),
     s = n(768581);
 n(403182);
 var l = n(51144),
@@ -50,7 +50,7 @@ function p(e) {
 }
 function h(e) {
     let { uploadType: t, guildId: i, analyticsSource: s, filters: l, isTryItOutFlow: _ = !1 } = e;
-    (0, a.ZDy)(async () => {
+    (0, o.ZDy)(async () => {
         let { default: e } = await Promise.all([n.e('91689'), n.e('89289'), n.e('78701')]).then(n.bind(n, 28130));
         return (n) =>
             (0, r.jsx)(
@@ -61,13 +61,13 @@ function h(e) {
                         maxFileSizeBytes: u.B,
                         imageSpecifications: t === d.pC.BANNER ? f.intl.string(f.t.IhzZlp) : void 0,
                         onComplete: (e) => {
-                            let { assetOrigin: n, imageUri: r, file: a, originalAsset: l } = e,
-                                u = a.name.replace(/\.[^/.]+$/, ''),
-                                d = (0, o.Z1)({
+                            let { assetOrigin: n, imageUri: r, file: o, originalAsset: l } = e,
+                                u = o.name.replace(/\.[^/.]+$/, ''),
+                                d = (0, a.Z1)({
                                     filename: u,
                                     assetOrigin: n
                                 }),
-                                f = (0, o.cN)({
+                                f = (0, a.cN)({
                                     assetOrigin: n,
                                     imageUri: r,
                                     description: d,
@@ -75,7 +75,7 @@ function h(e) {
                                 });
                             (0, c.j)({
                                 image: f,
-                                file: a,
+                                file: o,
                                 uploadType: t,
                                 guildId: i,
                                 analyticsSource: s,
@@ -93,16 +93,16 @@ function h(e) {
 function m(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (null != e) return e;
-    let { size: i = 80, canAnimate: a = !0 } = r,
-        o = null === e;
-    return o && null == t ? s.ZP.getDefaultAvatarURL(n.id, n.discriminator) : o || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, i, a) : n.getAvatarURL(null == t ? void 0 : t.guildId, i, a);
+    let { size: i = 80, canAnimate: o = !0 } = r,
+        a = null === e;
+    return a && null == t ? s.ZP.getDefaultAvatarURL(n.id, n.discriminator) : a || (null == t ? void 0 : t.avatar) == null ? n.getAvatarURL(void 0, i, o) : n.getAvatarURL(null == t ? void 0 : t.guildId, i, o);
 }
 function g(e) {
     var t;
-    let { pendingNickname: n, pendingGlobalName: r, user: i, guildMember: a } = e,
-        o = '' === n ? null : null != n ? n : null == a ? void 0 : a.nick,
+    let { pendingNickname: n, pendingGlobalName: r, user: i, guildMember: o } = e,
+        a = '' === n ? null : null != n ? n : null == o ? void 0 : o.nick,
         s = '' === r ? i.username : r;
-    return null != (t = null != o ? o : s) ? t : l.ZP.getName(i);
+    return null != (t = null != a ? a : s) ? t : l.ZP.getName(i);
 }
 function E(e) {
     return (null != e ? (0, i.Bd)(e) : 1) > 0.25;

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
-var r = n(255367),
-    i = n(73800),
-    a = n(906732),
-    o = n(965386),
+var r = n(200651),
+    i = n(192379),
+    o = n(906732),
+    a = n(965386),
     s = n(686546),
     l = n(626135),
     c = n(768581),
@@ -14,7 +14,7 @@ var r = n(255367),
 let h = 3,
     m = (e) => {
         let { emojis: t } = e,
-            { analyticsLocations: n } = (0, a.ZP)();
+            { analyticsLocations: n } = (0, o.ZP)();
         i.useEffect(() => {
             l.default.track(u.rMx.PREMIUM_UPSELL_VIEWED, {
                 type: f.cd.EMOJI_AUTOCOMPLETE_INLINE,
@@ -55,8 +55,8 @@ let h = 3,
                       );
             })
         });
-        return (0, r.jsxs)(o.RX, {
+        return (0, r.jsxs)(a.RX, {
             className: p.upsell,
-            children: [(0, r.jsx)(o.z5, { children: (0, r.jsx)(o.BR, { children: _.intl.format(_.t['uEky4+'], { count: t.length }) }) }), (0, r.jsx)(o.dY, { children: m })]
+            children: [(0, r.jsx)(a.z5, { children: (0, r.jsx)(a.BR, { children: _.intl.format(_.t['uEky4+'], { count: t.length }) }) }), (0, r.jsx)(a.dY, { children: m })]
         });
     };

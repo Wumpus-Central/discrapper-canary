@@ -1,9 +1,9 @@
 n.d(t, {
     Vb: () => l,
-    Yz: () => o,
+    Yz: () => a,
     by: () => s,
     is: () => i,
-    lx: () => a
+    lx: () => o
 });
 var r = n(570140);
 function i() {
@@ -13,21 +13,21 @@ function i() {
         timeout: e
     });
 }
-function a(e, t) {
+function o(e, t) {
     r.Z.dispatch({
         type: 'BROWSER_HANDOFF_END',
         handoffToken: e,
         fingerprint: t
     });
 }
-function o(e) {
-    let { handoffKey: t, handoffToken: n, handoffSource: i, timeout: a = 10000 } = e;
+function a(e) {
+    let { handoffKey: t, handoffToken: n, handoffSource: i, timeout: o = 10000 } = e;
     r.Z.dispatch({
         type: 'BROWSER_HANDOFF_FROM_APP',
         handoffKey: t,
         handoffToken: n,
         handoffSource: i,
-        timeout: a
+        timeout: o
     });
 }
 function s() {

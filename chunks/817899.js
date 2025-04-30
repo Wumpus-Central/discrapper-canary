@@ -1,9 +1,9 @@
 n.d(t, { o: () => _ });
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(692547),
-    a = n(331595),
-    o = n(267843);
+    o = n(331595),
+    a = n(267843);
 function s(e, t, n) {
     return (
         t in e
@@ -62,8 +62,8 @@ function d(e, t) {
         r,
         i = f(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -72,8 +72,8 @@ function f(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let _ = (e) => {
@@ -81,12 +81,12 @@ let _ = (e) => {
         n,
         { size: s = 'md', width: c, height: f, secondaryColor: _ = 'transparent', secondaryColorClass: p = '', color: h = i.Z.colors.INTERACTIVE_NORMAL, colorClass: m = '' } = e,
         g = d(e, ['size', 'width', 'height', 'secondaryColor', 'secondaryColorClass', 'color', 'colorClass']);
-    let E = (0, o.m)(s),
+    let E = (0, a.m)(s),
         b = null != (t = null == E ? void 0 : E.width) ? t : c,
         y = null != (n = null == E ? void 0 : E.height) ? n : f;
     return (0, r.jsxs)(
         'svg',
-        u(l({}, (0, a.Z)(g)), {
+        u(l({}, (0, o.Z)(g)), {
             xmlns: 'http://www.w3.org/2000/svg',
             width: b,
             height: y,

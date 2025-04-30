@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d });
-var r = n(73800),
+var r = n(192379),
     i = n(442837),
-    a = n(906732),
-    o = n(353647),
+    o = n(906732),
+    a = n(353647),
     s = n(785717),
     l = n(221292);
 function c(e, t, n) {
@@ -37,9 +37,9 @@ function u(e) {
 function d(e) {
     let { user: t, display: n, activity: c, entry: d, stream: f, voiceChannelId: _, analyticsLocations: p } = e,
         { context: h, trackUserProfileAction: m } = (0, s.KZ)(),
-        { analyticsLocations: g } = (0, a.ZP)(),
+        { analyticsLocations: g } = (0, o.ZP)(),
         E = null != p ? p : g,
-        b = (0, i.e7)([o.Z], () => o.Z.getUserOutbox(t.id));
+        b = (0, i.e7)([a.Z], () => a.Z.getUserOutbox(t.id));
     return (0, r.useCallback)(
         (e) => {
             let { action: t } = e;

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
-var r = n(255367),
-    i = n(73800),
-    a = n(442837),
-    o = n(481060),
+var r = n(200651),
+    i = n(192379),
+    o = n(442837),
+    a = n(481060),
     s = n(541716),
     l = n(28546),
     c = n(970731),
@@ -16,7 +16,7 @@ var r = n(255367),
     g = n(179998);
 function E(e) {
     let { markAsDismissed: t } = e,
-        n = (0, a.e7)([u.Z], () => u.Z.theme) === _.BR.LIGHT ? g.Z : m.Z,
+        n = (0, o.e7)([u.Z], () => u.Z.theme) === _.BR.LIGHT ? g.Z : m.Z,
         E = i.useCallback(() => {
             (0, l.RO)(f.X1.SOUNDBOARD, s.Ie.NORMAL);
         }, []);
@@ -30,13 +30,13 @@ function E(e) {
                     src: n,
                     alt: ''
                 }),
-                (0, r.jsx)(o.zxk, {
+                (0, r.jsx)(a.zxk, {
                     className: h.close,
                     'aria-label': p.intl.string(p.t.cpT0Cg),
-                    look: o.zxk.Looks.BLANK,
-                    size: o.zxk.Sizes.NONE,
+                    look: a.zxk.Looks.BLANK,
+                    size: a.zxk.Sizes.NONE,
                     onClick: () => t(d.L.USER_DISMISS),
-                    children: (0, r.jsx)(o.Dio, {
+                    children: (0, r.jsx)(a.Dio, {
                         size: 'xs',
                         className: h.closeIcon,
                         color: 'white'
@@ -47,7 +47,7 @@ function E(e) {
         header: p.intl.string(p.t.dDj3ER),
         content: p.intl.string(p.t['0lZmoa']),
         buttonCTA: p.intl.string(p.t.RzWDqa),
-        buttonProps: { color: o.Ttl.WHITE },
+        buttonProps: { color: a.Ttl.WHITE },
         caretPosition: c.DF.BOTTOM_RIGHT,
         onClick: E,
         markAsDismissed: t

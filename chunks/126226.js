@@ -6,11 +6,11 @@ n.d(t, {
     n(433524),
     n(35282),
     n(781311);
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(693789),
-    a = n(952265),
-    o = n(911969),
+    o = n(952265),
+    a = n(911969),
     s = n(555573),
     l = n(254711),
     c = n(213459),
@@ -60,7 +60,7 @@ function A(e) {
 }
 let N = { results: { entries: [] } };
 function C() {
-    (0, a.ZD)(async () => {
+    (0, o.ZD)(async () => {
         let { default: e } = await n.e('87549').then(n.bind(n, 913962));
         return (t) => (0, r.jsx)(e, A({}, t));
     });
@@ -75,9 +75,9 @@ let P = {
     queryResults(e, t, n, r, i) {
         if (0 === n.length && r.commands !== y.L8.OLD_BUILT_INS) return N;
         if (r.commands === y.L8.OLD_BUILT_INS) {
-            let r = (0, l.Kh)([o.yU.CHAT], !1, !1),
+            let r = (0, l.Kh)([a.yU.CHAT], !1, !1),
                 i = RegExp('^'.concat(E.Z.escape(n)), 'i'),
-                a = (0, p.Dd)(
+                o = (0, p.Dd)(
                     r,
                     i,
                     {
@@ -87,26 +87,26 @@ let P = {
                     y.AQ
                 ),
                 s = l.Tm[v.bi.BUILT_IN];
-            return 0 === a.length
+            return 0 === o.length
                 ? N
                 : {
                       results: {
-                          entries: a.map((e) => ({
+                          entries: o.map((e) => ({
                               command: e,
                               section: s
                           }))
                       }
                   };
         }
-        let a = (0, h.hV)(e, n),
+        let o = (0, h.hV)(e, n),
             { commands: s, sections: c } = u.JT(
                 {
                     channel: e,
                     type: 'channel'
                 },
                 {
-                    commandTypes: [o.yU.CHAT],
-                    text: a.text
+                    commandTypes: [a.yU.CHAT],
+                    text: o.text
                 },
                 {
                     limit: y.AQ,
@@ -117,8 +117,8 @@ let P = {
             );
         if (null == s) return N;
         let f = s;
-        if (a.hasSpaceTerminator) {
-            let e = a.text.trim(),
+        if (o.hasSpaceTerminator) {
+            let e = o.text.trim(),
                 t = e + ' ';
             f = f.filter((n) => n.displayName === e || n.displayName.startsWith(t));
         }
@@ -137,13 +137,13 @@ let P = {
         let {
                 results: { entries: t },
                 selectedIndex: n,
-                channel: a,
-                query: o,
+                channel: o,
+                query: a,
                 options: s,
                 onHover: l,
                 onClick: c
             } = e,
-            u = (0, h.hV)(a, o),
+            u = (0, h.hV)(o, a),
             d = s.commands === y.L8.OLD_BUILT_INS;
         return (0, b.HI)({
             query: u.text,
@@ -160,8 +160,8 @@ let P = {
                 return {
                     key: t.id,
                     command: t,
-                    channel: a,
-                    guildId: a.guild_id,
+                    channel: o,
+                    guildId: o.guild_id,
                     showImage: !0,
                     section: n
                 };
@@ -186,18 +186,18 @@ let P = {
                 index: n,
                 queryText: r,
                 options: i,
-                channel: a,
-                location: o,
+                channel: o,
+                location: a,
                 tabOrEnter: l
             } = e,
             { command: c, section: u } = t[n];
         if (c.inputType === _.iw.PLACEHOLDER) return null;
         if (i.commands === y.L8.OLD_BUILT_INS) i.insertText(R(c));
         else {
-            let e = o;
+            let e = a;
             null == e && (e = l ? _.Vh.QUERY : _.Vh.DISCOVERY),
                 s.Po({
-                    channelId: a.id,
+                    channelId: o.id,
                     command: c,
                     section: null != u ? u : null,
                     location: e,

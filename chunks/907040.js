@@ -4,10 +4,10 @@ n.d(t, {
 }),
     n(388685),
     n(539854);
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(954955),
     l = n.n(s),
     c = n(611144),
@@ -108,8 +108,8 @@ function er(e, t) {
     );
 }
 let ei = (0, k.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_HORIZONTAL),
-    ea = (0, k.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
-    eo = 8,
+    eo = (0, k.Mg)(f.Z.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
+    ea = 8,
     es = (e) => e.stopPropagation();
 var el = (function (e) {
     return (e[(e.NONE = 0)] = 'NONE'), (e[(e.TABS_EXPRESSION_PICKER = 1)] = 'TABS_EXPRESSION_PICKER'), (e[(e.NO_TABS_EXPRESSION_PICKER = 2)] = 'NO_TABS_EXPRESSION_PICKER'), e;
@@ -118,13 +118,13 @@ let ec = (e, t) => {
         I.kJ.setInspectedExpressionPosition(e, t, T.u.GRID_NAVIGATOR_EVENT);
     },
     eu = (e) => {
-        let { analyticsLocation: t, pickerIntention: n, columnCounts: r, onSelectEmoji: a, emojiGrid: o, emojiList: s, channelGuildId: l, isBurstReaction: d } = e,
+        let { analyticsLocation: t, pickerIntention: n, columnCounts: r, onSelectEmoji: o, emojiGrid: a, emojiList: s, channelGuildId: l, isBurstReaction: d } = e,
             f = (0, u.e7)([y.ZP], () => y.ZP.getDisambiguatedEmojiContext(l), [l]),
             _ = i.useCallback(
                 (e, r) => {
                     switch (e.type) {
                         case H.ld.CREATE_EMOJI:
-                            a(void 0, !0), C.Z.open(e.guildId, Q.pNK.EMOJI);
+                            o(void 0, !0), C.Z.open(e.guildId, Q.pNK.EMOJI);
                             return;
                         case H.ld.EMOJI: {
                             if (null != e.emoji && r.altKey)
@@ -154,11 +154,11 @@ let ec = (e, t) => {
                                     subCategory: e.subCategory,
                                     newlyAddedHighlight: e.subCategory === q.t0.NEWLY_ADDED_EMOJI && O.Z.isNewerThanLastSeen(l, e.emoji.id)
                                 }),
-                                a(e.emoji, !r.shiftKey, d);
+                                o(e.emoji, !r.shiftKey, d);
                         }
                     }
                 },
-                [a, l, n, f, t, d]
+                [o, l, n, f, t, d]
             ),
             {
                 gridDispatch: h,
@@ -170,7 +170,7 @@ let ec = (e, t) => {
             } = (0, A.VO)({
                 columnCounts: r,
                 gridNavigatorId: q.Vr,
-                itemGrid: o,
+                itemGrid: a,
                 itemList: s,
                 onGridNavigatorItemSelect: _,
                 onGridNavigatorPositionChange: ec
@@ -230,7 +230,7 @@ let ec = (e, t) => {
         openPopoutType: void 0
     },
     eg = function (e, t) {
-        var n, a;
+        var n, o;
         let s,
             { pickerIntention: l, channel: c, guildId: f, closePopout: p, emojiSize: T = q.Su.MEDIUM, hasTabWrapper: C = !1, containerContext: k = 0, includeCreateEmojiButton: ee, onSelectEmoji: en, onSelectSoundmoji: el, containerWidth: ec, onNavigateAway: e_, persistSearch: eg, className: eE, headerClassName: eb, analyticsOverride: ey = em, searchProps: eO = {}, wrapper: ev, shouldHidePickerActions: eI = !1, messageId: eS, renderHeader: eT, listHeaderClassName: eA, categoryListClassName: eN, shouldShowSoundmojiInEmojiPicker: eC = !1 } = e,
             { onFocus: eR, onKeyDown: eP, autoFocus: ew = !0, accessory: eD } = eO,
@@ -242,7 +242,7 @@ let ec = (e, t) => {
             eG = i.useRef(null),
             eB = i.useRef(null);
         null == c && null != eL && (c = eL);
-        let eV = null != (a = null != (n = null == c ? void 0 : c.getGuildId()) ? n : f) ? a : null,
+        let eV = null != (o = null != (n = null == c ? void 0 : c.getGuildId()) ? n : f) ? o : null,
             [eF, eZ] = i.useState(!1),
             eH = L.default.getCurrentUser(),
             eY = (0, M.I5)(eH);
@@ -262,8 +262,8 @@ let ec = (e, t) => {
             e5 = (0, A.ep)({
                 gridWrapperRef: eU,
                 containerWidth: ec,
-                listPaddingLeft: ea,
-                listScrollbarWidth: eo
+                listPaddingLeft: eo,
+                listScrollbarWidth: ea
             }),
             {
                 rowCountBySection: e6,
@@ -333,8 +333,8 @@ let ec = (e, t) => {
             }, [p, e_]),
             {
                 getItemProps: ti,
-                getRowProps: ta,
-                gridContainerProps: to,
+                getRowProps: to,
+                gridContainerProps: ta,
                 handleGridContainerKeyDown: ts,
                 isUsingKeyboardNavigation: tl
             } = eu({
@@ -431,14 +431,14 @@ let ec = (e, t) => {
                     id: q.cZ,
                     'aria-labelledby': C ? q.td : void 0,
                     role: C ? 'tabpanel' : void 0,
-                    className: o()($.wrapper, {
+                    className: a()($.wrapper, {
                         [$.emojiPickerHasTabWrapper]: C,
                         [$.isBurstReactionPicker]: eF && eY
                     }),
                     children: [
                         C ? null : t_,
                         (0, r.jsxs)('div', {
-                            className: o()($.emojiPicker, eE),
+                            className: a()($.emojiPicker, eE),
                             onScroll: es,
                             children: [
                                 C ? t_ : null,
@@ -467,7 +467,7 @@ let ec = (e, t) => {
                                                               className: $.emojiPickerListWrapper,
                                                               id: q.Vr
                                                           },
-                                                          to
+                                                          ta
                                                       ),
                                                       {
                                                           children: tu
@@ -478,7 +478,7 @@ let ec = (e, t) => {
                                                                     emojiListRef: eG,
                                                                     emojiSize: T,
                                                                     getEmojiItemProps: ti,
-                                                                    getEmojiRowProps: ta,
+                                                                    getEmojiRowProps: to,
                                                                     gridWidth: e5,
                                                                     isUsingKeyboardNavigation: tl,
                                                                     onEmojiSelect: td,
@@ -513,7 +513,7 @@ let ec = (e, t) => {
                         eI
                             ? null
                             : (0, r.jsx)(V.Z, {
-                                  className: o()($.categoryList, eN),
+                                  className: a()($.categoryList, eN),
                                   emojiListRef: eG,
                                   sectionDescriptors: e8,
                                   intention: l,

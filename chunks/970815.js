@@ -3,10 +3,10 @@ n.d(t, {
     b6: () => l.b
 }),
     n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(317257),
     c = n(583478),
@@ -50,9 +50,9 @@ let p = () =>
     h = 'balance-widget-pill',
     m = (e, t) => (e === l.b.SELECTED ? d.selected : t ? d.highlighted : d.default),
     g = (0, i.forwardRef)(function (e, t) {
-        let { balance: n, balanceWidgetMode: a = l.b.DEFAULT, showNotificationBadge: f, onClick: g, onMouseDown: E, className: b } = e,
+        let { balance: n, balanceWidgetMode: o = l.b.DEFAULT, showNotificationBadge: f, onClick: g, onMouseDown: E, className: b } = e,
             [y, O] = (0, i.useState)(!1),
-            v = (0, i.useMemo)(() => m(a, y), [a, y]),
+            v = (0, i.useMemo)(() => m(o, y), [o, y]),
             [I, S] = (0, i.useState)(!1),
             [T, A] = (0, i.useState)(!1),
             [N, C] = (0, i.useState)(0.9 * u.D2),
@@ -96,10 +96,10 @@ let p = () =>
                 onMouseLeave: () => O(!1),
                 id: h,
                 ref: t,
-                className: o()(d.container, v, b, { [d.containerLoading]: P }),
+                className: a()(d.container, v, b, { [d.containerLoading]: P }),
                 children: [
                     (0, r.jsx)('div', {
-                        className: o()(d.orbsLottieContainer, P ? d.orbIconloading : void 0),
+                        className: a()(d.orbsLottieContainer, P ? d.orbIconloading : void 0),
                         children: (0, r.jsx)(u.ZP, _({}, j))
                     }),
                     (0, r.jsx)(c.Z, {

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v });
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(780384),
     c = n(481060),
@@ -19,14 +19,14 @@ var r = n(255367),
     y = n(460400),
     O = n(943549);
 let v = (e) => {
-    let { user: t, nameplate: n, nameplateData: a, className: v, innerClassName: I, isHighlighted: S, showStatus: T, showWumpus: A, isPurchased: N = !1 } = e,
+    let { user: t, nameplate: n, nameplateData: o, className: v, innerClassName: I, isHighlighted: S, showStatus: T, showWumpus: A, isPurchased: N = !1 } = e,
         C = (0, s.e7)([p.Z], () => (0, l.wj)(p.Z.theme)),
-        R = null != n ? (0, g.EU)(n) : a,
+        R = null != n ? (0, g.EU)(n) : o,
         P = (0, s.e7)([h.Z], () => h.Z.getStatus(t.id)),
         w = C ? '#706F74' : '#aaaab2',
         D = i.useRef(null);
     return (0, r.jsxs)('div', {
-        className: o()(v, b.nameplatePreview, { [b.nameplatePurchased]: N && !S }),
+        className: a()(v, b.nameplatePreview, { [b.nameplatePurchased]: N && !S }),
         style: { color: C ? 'white' : 'black' },
         children: [
             null != R &&
@@ -44,7 +44,7 @@ let v = (e) => {
                 className: b.overlayContainer,
                 children: [
                     (0, r.jsx)('div', {
-                        className: o()(b.avatarContainer, !A && b.avatarVisible),
+                        className: a()(b.avatarContainer, !A && b.avatarVisible),
                         children: (0, r.jsx)(u.Z, {
                             ref: D,
                             avatar: (0, r.jsx)(d.Z, {
@@ -59,7 +59,7 @@ let v = (e) => {
                         })
                     }),
                     (0, r.jsx)('div', {
-                        className: o()(b.avatarContainer, A && b.avatarVisible),
+                        className: a()(b.avatarContainer, A && b.avatarVisible),
                         children: (0, r.jsx)(u.Z, {
                             avatar: (0, r.jsx)(c.qEK, {
                                 src: C ? y : O,
@@ -68,7 +68,7 @@ let v = (e) => {
                                 status: c.Skl.ONLINE,
                                 statusColor: w
                             }),
-                            name: (0, r.jsx)('div', { className: o()(b.placeholderUsername, b.placeholderUsernameColor) })
+                            name: (0, r.jsx)('div', { className: a()(b.placeholderUsername, b.placeholderUsernameColor) })
                         })
                     })
                 ]

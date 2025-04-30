@@ -1,8 +1,8 @@
 n.d(t, { Z: () => J }), n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(954955),
     l = n.n(s),
     c = n(990547),
@@ -158,7 +158,7 @@ function W(e) {
     });
 }
 function K(e) {
-    let { isSelected: t, onSelect: n, selectionId: a, tooltipText: s, label: u, className: f, children: _ } = e,
+    let { isSelected: t, onSelect: n, selectionId: o, tooltipText: s, label: u, className: f, children: _ } = e,
         p = (0, d.xUy)({
             label: u,
             isSelected: t
@@ -172,7 +172,7 @@ function K(e) {
                         (0, h.h)({
                             type: c.ImpressionTypes.VIEW,
                             name: c.ImpressionNames.CHAT_WALLPAPER_WALLPAPER_OPTION,
-                            properties: { design_group_id: a }
+                            properties: { design_group_id: o }
                         });
                 });
             },
@@ -184,7 +184,7 @@ function K(e) {
                 e.disconnect();
             }
         );
-    }, [a, m]);
+    }, [o, m]);
     let [g, E] = i.useState('top');
     return (
         i.useEffect(() => {
@@ -216,13 +216,13 @@ function K(e) {
             children: (e) =>
                 (0, r.jsx)('div', {
                     ref: m,
-                    className: o()(f, t && k.wallpaperSelected),
+                    className: a()(f, t && k.wallpaperSelected),
                     children: (0, r.jsx)(
                         d.P3F,
                         B(U({}, e, p), {
                             className: k.wallpaperSelectionClickableContainer,
                             tabIndex: p.tabIndex,
-                            onClick: t ? D.dG4 : () => n(a),
+                            onClick: t ? D.dG4 : () => n(o),
                             children: _
                         })
                     )
@@ -231,16 +231,16 @@ function K(e) {
     );
 }
 function z(e) {
-    let { isSelected: t, onSelect: n, chatWallpaperMetadata: a } = e,
-        o = (0, P.Z)(a.id),
-        { label: s, designGroupId: l } = a,
+    let { isSelected: t, onSelect: n, chatWallpaperMetadata: o } = e,
+        a = (0, P.Z)(o.id),
+        { label: s, designGroupId: l } = o,
         [c, u] = i.useState(!1);
     return (i.useEffect(() => {
         let e;
         if (t) {
             var n;
             let t = !1,
-                r = (0, m.I)(null != (n = null == o ? void 0 : o.asset) ? n : '');
+                r = (0, m.I)(null != (n = null == a ? void 0 : a.asset) ? n : '');
             (0, g.p)(r, () => {
                 u(!1), (t = !0);
             }),
@@ -251,8 +251,8 @@ function z(e) {
         return () => {
             clearTimeout(e), u(!1);
         };
-    }, [t, o]),
-    null == o)
+    }, [t, a]),
+    null == a)
         ? null
         : (0, r.jsxs)(K, {
               isSelected: t,
@@ -264,7 +264,7 @@ function z(e) {
               children: [
                   c && (0, r.jsx)(d.$jN, { className: k.previewLoadingSpinner }),
                   (0, r.jsx)('img', {
-                      src: (0, m.I)(o.icon),
+                      src: (0, m.I)(a.icon),
                       alt: s,
                       width: V,
                       height: V,
@@ -290,7 +290,7 @@ function q(e) {
     });
 }
 function Q(e) {
-    let { canApply: t, isUpdating: n, isBlurEnabled: i, onBlurEnabledChange: a, onClose: o, onApply: s } = e;
+    let { canApply: t, isUpdating: n, isBlurEnabled: i, onBlurEnabledChange: o, onClose: a, onApply: s } = e;
     return (0, r.jsxs)(d.Kqy, {
         direction: 'horizontal',
         justify: 'space-between',
@@ -302,7 +302,7 @@ function Q(e) {
                 type: d.XZJ.Types.INVERTED,
                 value: i,
                 onChange: (e, t) => {
-                    I.default.track(D.rMx.CHAT_WALLPAPER_PICKER_BLUR_TOGGLED, { selected: t }), a(t);
+                    I.default.track(D.rMx.CHAT_WALLPAPER_PICKER_BLUR_TOGGLED, { selected: t }), o(t);
                 },
                 children: M.intl.string(M.t['3nPvdH'])
             }),
@@ -316,7 +316,7 @@ function Q(e) {
                         size: d.zxk.Sizes.MEDIUM,
                         color: d.zxk.Colors.PRIMARY,
                         onClick: () => {
-                            I.default.track(D.rMx.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED, { cta_location: 'footer' }), o();
+                            I.default.track(D.rMx.CHAT_WALLPAPER_PICKER_CANCEL_CLICKED, { cta_location: 'footer' }), a();
                         },
                         disabled: n,
                         children: M.intl.string(M.t['ETE/oK'])
@@ -361,7 +361,7 @@ function X() {
     });
 }
 let J = function (e) {
-    let { className: t, position: a = D.VD2.TOP_RIGHT, config: s } = e,
+    let { className: t, position: o = D.VD2.TOP_RIGHT, config: s } = e,
         { analyticsLocations: l } = (0, p.ZP)(_.Z.CHAT_WALLPAPER_PICKER),
         { activePickerChannelId: c, closePicker: h, setPreviewWallpaperId: m } = (0, S.B)(),
         g = (0, w.Z)(c),
@@ -455,9 +455,9 @@ let J = function (e) {
         );
     }, [F]);
     let ei = null == c && (null == s ? void 0 : s.pickerType) !== S.j.COACHMARK,
-        ea = null;
+        eo = null;
     return (
-        (ea =
+        (eo =
             B || ei
                 ? (0, r.jsxs)('div', {
                       className: k.errorContainer,
@@ -524,8 +524,8 @@ let J = function (e) {
         (0, r.jsx)(p.Gt, {
             value: l,
             children: (0, r.jsx)(O.Z, {
-                className: o()(k.draggableContainer, t),
-                defaultPosition: a,
+                className: a()(k.draggableContainer, t),
+                defaultPosition: o,
                 topOffset: 88,
                 children: (0, r.jsxs)('div', {
                     className: k.container,
@@ -544,7 +544,7 @@ let J = function (e) {
                         (0, r.jsx)('div', { className: k.divider }),
                         (0, r.jsx)(d.JcV, {
                             containerRef: F,
-                            children: ea
+                            children: eo
                         })
                     ]
                 })

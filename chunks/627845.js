@@ -2,11 +2,11 @@ n.d(t, {
     Z: () => T,
     b: () => S
 });
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(481060),
-    a = n(570140),
-    o = n(781391),
+    o = n(570140),
+    a = n(781391),
     s = n(594174),
     l = n(626135),
     c = n(358085),
@@ -63,10 +63,10 @@ let T = {
     },
     init() {
         this.initBasic(),
-            a.Z.subscribe('ACCESSIBILITY_COLORBLIND_TOGGLE', () => {
+            o.Z.subscribe('ACCESSIBILITY_COLORBLIND_TOGGLE', () => {
                 l.default.track(f.rMx.LOCAL_SETTINGS_UPDATED, { colorblind_enabled: d.Z.colorblindMode });
             }),
-            a.Z.subscribe('ACCESSIBILITY_SET_SATURATION', (e) => {
+            o.Z.subscribe('ACCESSIBILITY_SET_SATURATION', (e) => {
                 l.default.track(f.rMx.LOCAL_SETTINGS_UPDATED, { saturation_level: e.saturation });
             });
     },
@@ -81,7 +81,7 @@ let T = {
                 });
     },
     handleSystemPrefersReducedMotionChanged(e) {
-        a.Z.wait(() => {
+        o.Z.wait(() => {
             u.Nc(e.matches ? 'reduce' : 'no-preference');
         });
     },
@@ -89,14 +89,14 @@ let T = {
         let e = _.zd.NO_PREFERENCE;
         b.matches ? (e = _.zd.DARK) : y.matches && (e = _.zd.LIGHT);
         let t = (!c.isPlatformEmbedded || S()) && O.matches ? 'active' : 'none';
-        a.Z.wait(() => {
-            o.Q_(e), u.Ej(t);
+        o.Z.wait(() => {
+            a.Q_(e), u.Ej(t);
         });
     },
     handleSystemPrefersContrastChanged() {
         let e = 'no-preference';
         g.matches ? (e = 'more') : E.matches && (e = 'less'),
-            a.Z.wait(() => {
+            o.Z.wait(() => {
                 u.TX(e);
             });
     }

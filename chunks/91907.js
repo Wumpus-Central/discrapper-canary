@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
-var r = n(255367),
-    i = n(73800),
-    a = n(793030),
-    o = n(256139),
+var r = n(200651),
+    i = n(192379),
+    o = n(793030),
+    a = n(256139),
     s = n(866040);
 function l(e, t, n) {
     return (
@@ -65,10 +65,10 @@ function f(e) {
         onPopoutClosed: f,
         children: (e) =>
             (0, r.jsx)(
-                o.Z,
+                a.Z,
                 d(c({}, e), {
                     tag: 'span',
-                    children: (0, r.jsx)(a.xv, {
+                    children: (0, r.jsx)(o.xv, {
                         className: u,
                         variant: 'text-sm/semibold',
                         color: 'text-primary',

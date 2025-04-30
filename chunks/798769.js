@@ -1,9 +1,9 @@
 n.d(t, { Z: () => p });
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(442837),
-    a = n(481060),
-    o = n(607070),
+    o = n(481060),
+    a = n(607070),
     s = n(409813),
     l = n(669079),
     c = n(170579),
@@ -13,7 +13,7 @@ var i = n(442837),
     _ = n(451316);
 function p(e) {
     let { currentStep: t, className: n, purchaseState: p, premiumType: h, useWinterTheme: m = !1, onClose: g, hideCloseButton: E, showTrialBadge: b, showDiscountBadge: y, isGift: O, giftRecipient: v } = e,
-        I = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
+        I = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
         S = m ? d.nL.WINTER : d.nL.DEFAULT,
         T = () => {
             switch (t) {
@@ -28,15 +28,15 @@ function p(e) {
             }
         };
     return O && (0, l.pO)(v) && t !== s.h8.CONFIRM
-        ? (0, r.jsxs)(a.xBx, {
+        ? (0, r.jsxs)(o.xBx, {
               className: _.modalHeaderCustomGift,
               separator: !1,
               children: [
-                  (0, r.jsx)(a.X6q, {
+                  (0, r.jsx)(o.X6q, {
                       variant: 'heading-lg/semibold',
                       children: T()
                   }),
-                  (0, r.jsx)(a.olH, {
+                  (0, r.jsx)(o.olH, {
                       onClick: g,
                       className: _.closeButton,
                       innerClassName: _.closeButtonInner

@@ -1,9 +1,9 @@
 n.d(t, { Z: () => f });
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(297700),
+    o = n.n(i),
+    a = n(297700),
     s = n(471885),
     l = n(981631),
     c = n(306641);
@@ -21,13 +21,13 @@ let u = {
     };
 function f(e) {
     let { premiumTier: t, iconBackgroundClassName: n, iconClassName: i, size: l } = e;
-    return (0, r.jsx)(o.Z, {
-        className: a()(n, u[t]),
+    return (0, r.jsx)(a.Z, {
+        className: o()(n, u[t]),
         size: l,
         children: (0, r.jsx)(s.Z, {
             tier: t,
             color: 'currentColor',
-            className: a()(i, c.boostedGuildIconGem, d[t])
+            className: o()(i, c.boostedGuildIconGem, d[t])
         })
     });
 }

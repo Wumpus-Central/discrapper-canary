@@ -12,8 +12,8 @@ n.d(t, {
     n(35282);
 var r = n(695346),
     i = n(594174),
-    a = n(55563),
-    o = n(981631);
+    o = n(55563),
+    a = n(981631);
 function s(e, t) {
     return ''.concat(e, ':').concat(t);
 }
@@ -25,24 +25,24 @@ function l(e) {
     };
 }
 function c(e, t) {
-    if (!r.G6.getSetting() || r.co.getSetting() === o.Skl.INVISIBLE) return !1;
+    if (!r.G6.getSetting() || r.co.getSetting() === a.Skl.INVISIBLE) return !1;
     let n = t.getActiveLibraryApplication(e);
-    return null == n || !n.hasFlag(o.eHb.PRIVATE);
+    return null == n || !n.hasFlag(a.eHb.PRIVATE);
 }
 function u(e, t) {
     return 0 === t ? 100 : (e / t) * 100;
 }
 function d(e, t, n) {
-    return !(null == t || (n.enabled && t.hasFlag(o.eHb.PRIVATE))) && !t.isHidden();
+    return !(null == t || (n.enabled && t.hasFlag(a.eHb.PRIVATE))) && !t.isHidden();
 }
 function f(e) {
-    return null == e ? null : e.type === o.vxO.INSTALLING || e.type === o.vxO.UPDATING || e.type === o.vxO.UNINSTALLING ? e : null;
+    return null == e ? null : e.type === a.vxO.INSTALLING || e.type === a.vxO.UPDATING || e.type === a.vxO.UNINSTALLING ? e : null;
 }
 function _(e) {
     return e.reduce(
         (e, t) => {
             let n = f(t);
-            return null == n || t.type === o.vxO.UP_TO_DATE
+            return null == n || t.type === a.vxO.UP_TO_DATE
                 ? e
                 : {
                       total: e.total + Number(n.total),
@@ -56,5 +56,5 @@ function _(e) {
     );
 }
 function p(e) {
-    return !!e.isDiscordApplication() && e.isEntitled(i.default.getCurrentUser(), a.Z);
+    return !!e.isDiscordApplication() && e.isEntitled(i.default.getCurrentUser(), o.Z);
 }

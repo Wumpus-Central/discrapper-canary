@@ -1,8 +1,8 @@
 n.d(t, { Z: () => Y }), n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(287734),
@@ -42,12 +42,12 @@ var r = n(255367),
     Z = n(924482),
     H = n(774797);
 function Y(e) {
-    let { user: t, currentUser: n, stream: a, className: Y, onClose: W, profileGuildId: K } = e,
+    let { user: t, currentUser: n, stream: o, className: Y, onClose: W, profileGuildId: K } = e,
         z = i.useRef(null),
         { themeType: q, theme: Q } = (0, P.z)(),
         { interactionSource: X, interactionSourceId: J } = (0, N.Xo)(),
-        $ = (0, s.e7)([O.Z], () => O.Z.getGuild(null == a ? void 0 : a.guildId)),
-        ee = (0, s.e7)([y.Z], () => y.Z.getChannel(null == a ? void 0 : a.channelId)),
+        $ = (0, s.e7)([O.Z], () => O.Z.getGuild(null == o ? void 0 : o.guildId)),
+        ee = (0, s.e7)([y.Z], () => y.Z.getChannel(null == o ? void 0 : o.channelId)),
         et = (0, s.Wu)([S.ZP], () =>
             null != ee
                 ? S.ZP.getVoiceStatesForChannel(ee).map((e) => {
@@ -62,22 +62,22 @@ function Y(e) {
             display: 'live',
             voiceChannelId: null == ee ? void 0 : ee.id,
             user: t,
-            stream: a,
+            stream: o,
             analyticsLocations: er
         }),
-        ea = (0, A.Z)({
+        eo = (0, A.Z)({
             userId: t.id,
             onAction: ei
         }),
-        [eo, es] = (0, b.wq)(ee),
-        { previewUrl: el, isLoading: ec } = (0, E.Z)(a.guildId, a.channelId, a.ownerId),
+        [ea, es] = (0, b.wq)(ee),
+        { previewUrl: el, isLoading: ec } = (0, E.Z)(o.guildId, o.channelId, o.ownerId),
         eu = (0, s.e7)([v.Z], () => null != ee && v.Z.canBasicChannel(G.S7T.CONNECT, ee)),
         ed = (0, d.Z)(ec ? null : el),
         ef = ec || null == el ? ed : el;
-    if (null == $ || null == ee || !1 === a.discoverable || null === q) return null;
+    if (null == $ || null == ee || !1 === o.discoverable || null === q) return null;
     let e_ = () => {
             let e = (e) => {
-                e.stopPropagation(), ei({ action: 'PRESS_IMAGE' }), c.default.selectVoiceChannel(a.channelId), (0, u.iV)(a), null == W || W();
+                e.stopPropagation(), ei({ action: 'PRESS_IMAGE' }), c.default.selectVoiceChannel(o.channelId), (0, u.iV)(o), null == W || W();
             };
             return null == ef && ec
                 ? (0, r.jsx)('div', {
@@ -86,8 +86,8 @@ function Y(e) {
                   })
                 : null == ef
                   ? (0, r.jsxs)(l.P3F, {
-                        className: o()(F.preview, F.overlay, { [F.clickable]: eo }),
-                        onClick: eo ? e : void 0,
+                        className: a()(F.preview, F.overlay, { [F.clickable]: ea }),
+                        onClick: ea ? e : void 0,
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
@@ -112,8 +112,8 @@ function Y(e) {
                         ]
                     })
                   : (0, r.jsxs)(l.P3F, {
-                        className: o()(F.preview, F.overlay, { [F.clickable]: eo }),
-                        onClick: eo ? e : void 0,
+                        className: a()(F.preview, F.overlay, { [F.clickable]: ea }),
+                        onClick: ea ? e : void 0,
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
@@ -223,8 +223,8 @@ function Y(e) {
                                 children: e
                             }),
                         children: (0, r.jsxs)(D.Z, {
-                            ref: ea,
-                            className: o()(Y, { [V.hoisted]: eE }),
+                            ref: eo,
+                            className: a()(Y, { [V.hoisted]: eE }),
                             onAction: ei,
                             onClose: W,
                             children: [

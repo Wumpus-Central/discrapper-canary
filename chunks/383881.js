@@ -1,14 +1,14 @@
 n.d(t, {
     A: () => l,
-    O: () => o
+    O: () => a
 });
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(772848),
-    a = n(585998);
-function o() {
+    o = n(585998);
+function a() {
     return (0, r.jsx)('svg', {
-        className: a.headerWave,
+        className: o.headerWave,
         version: '1.1',
         preserveAspectRatio: 'none',
         xmlns: 'http://www.w3.org/2000/svg',
@@ -26,7 +26,7 @@ function o() {
 let s = (0, i.Z)();
 function l() {
     return (0, r.jsxs)('svg', {
-        className: a.bodyWave,
+        className: o.bodyWave,
         version: '1.1',
         preserveAspectRatio: 'none',
         xmlns: 'http://www.w3.org/2000/svg',
@@ -46,15 +46,15 @@ function l() {
                 children: [
                     (0, r.jsx)('stop', {
                         offset: '0',
-                        className: a.bodyWaveGradientStop1
+                        className: o.bodyWaveGradientStop1
                     }),
                     (0, r.jsx)('stop', {
                         offset: '0.5',
-                        className: a.bodyWaveGradientStop2
+                        className: o.bodyWaveGradientStop2
                     }),
                     (0, r.jsx)('stop', {
                         offset: '1',
-                        className: a.bodyWaveGradientStop3
+                        className: o.bodyWaveGradientStop3
                     })
                 ]
             }),

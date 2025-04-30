@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A }), n(388685), n(457542), n(953529);
-var r = n(255367),
-    i = n(73800),
-    a = n(831209),
-    o = n(793030),
+var r = n(200651),
+    i = n(192379),
+    o = n(831209),
+    a = n(793030),
     s = n(442837),
     l = n(481060),
     c = n(749210),
@@ -22,14 +22,14 @@ var r = n(255367),
     I = n(388032),
     S = n(367753);
 function T(e) {
-    let { discoverableGuildId: t, closePopout: n, buttonType: a } = e,
-        o = i.useCallback(async () => {
+    let { discoverableGuildId: t, closePopout: n, buttonType: o } = e,
+        a = i.useCallback(async () => {
             if ((n(), null != t))
                 try {
                     await c.Z.joinGuild(t), c.Z.transitionToGuildSync(t);
                 } catch (e) {}
         }, [n, t]);
-    return a === b.y.GET_NITRO
+    return o === b.y.GET_NITRO
         ? (0, r.jsx)(g.Z, {
               fullWidth: !0,
               showGradient: !0,
@@ -40,11 +40,11 @@ function T(e) {
               onClick: n,
               buttonText: I.intl.string(I.t.pj0XBA)
           })
-        : a === b.y.JOIN_GUILD
+        : o === b.y.JOIN_GUILD
           ? (0, r.jsx)(l.zxk, {
                 size: l.zxk.Sizes.SMALL,
                 fullWidth: !0,
-                onClick: o,
+                onClick: a,
                 children: I.intl.string(I.t.riu2R0)
             })
           : null;
@@ -91,7 +91,7 @@ function A(e) {
                                       isSoundmoji: !0,
                                       onSelectItem: () => {}
                                   }),
-                                  (0, r.jsx)(o.xv, {
+                                  (0, r.jsx)(a.xv, {
                                       variant: 'text-sm/normal',
                                       children: x
                                   })
@@ -101,7 +101,7 @@ function A(e) {
                               (0, r.jsxs)('div', {
                                   className: S.infoExpandedGuildContainer,
                                   children: [
-                                      (0, r.jsx)(o.xv, {
+                                      (0, r.jsx)(a.xv, {
                                           variant: 'eyebrow',
                                           color: 'header-muted',
                                           className: S.infoExpandedGuildTitle,
@@ -126,7 +126,7 @@ function A(e) {
                   }),
                   (0, r.jsx)(l.IGR, {
                       text: 'BETA',
-                      color: a.Z.BG_BRAND,
+                      color: o.Z.BG_BRAND,
                       className: S.betaBadge
                   })
               ]

@@ -6,8 +6,8 @@ n.d(t, {
     n(457542);
 var r = n(570140),
     i = n(40851),
-    a = n(358085),
-    o = n(601993),
+    o = n(358085),
+    a = n(601993),
     s = n(981631);
 function l(e, t, n) {
     return (
@@ -46,7 +46,7 @@ function u(e) {
 }
 function d(e) {
     {
-        let { flushSync: t } = n(867309);
+        let { flushSync: t } = n(995295);
         t(() => {
             r.Z.wait(() => {
                 r.Z.dispatch({ type: 'CONTEXT_MENU_CLOSE' }).finally(e);
@@ -61,8 +61,8 @@ function f(e, t, n, r) {
         p = 0;
     if (('pageX' in e && ((_ = e.pageX), (p = e.pageY)), 0 === _ && 0 === p)) {
         let t = null == (l = e.target) ? void 0 : l.getBoundingClientRect(),
-            { left: n = 0, top: r = 0, width: i = 0, height: a = 0 } = null != t ? t : {};
-        (_ = n + i / 2), (p = r + a / 2);
+            { left: n = 0, top: r = 0, width: i = 0, height: o = 0 } = null != t ? t : {};
+        (_ = n + i / 2), (p = r + o / 2);
     }
     let h = {
         render: t,
@@ -71,11 +71,11 @@ function f(e, t, n, r) {
         rect: new DOMRect(_, p, 0, 0),
         config: c({ context: __OVERLAY__ ? s.IlC.OVERLAY : null != (f = (0, i.GB)()) ? f : s.IlC.APP }, n)
     };
-    if ((null == n ? void 0 : n.enableSpellCheck) && (0, a.isDesktop)()) {
+    if ((null == n ? void 0 : n.enableSpellCheck) && (0, o.isDesktop)()) {
         let e = () => {
                 t(), u(h);
             },
-            t = (0, o.RD)(e);
+            t = (0, a.RD)(e);
     } else e.preventDefault(), u(h);
 }
 function _(e, t, n) {

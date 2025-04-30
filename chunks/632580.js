@@ -1,8 +1,8 @@
 n.d(t, { H: () => y }), n(388685);
 var r = n(512722),
     i = n.n(r),
-    a = n(570140),
-    o = n(355467),
+    o = n(570140),
+    a = n(355467),
     s = n(159351),
     l = n(366939),
     c = n(16084),
@@ -66,7 +66,7 @@ function b(e, t) {
 }
 async function y(e) {
     let { setPurchaseState: t, setHasAcceptedTerms: n, setIsSubmitting: r, setPurchaseError: m, hasRedirectURL: E, setHasRedirectURL: y, isGift: O, baseAnalyticsData: v, analyticsLocation: I, analyticsLocations: S, flowStartTime: T, subscriptionPlan: A, planGroup: N, trialId: C, priceOptions: R, paymentSource: P, isPrepaidPaymentPastDue: w, openInvoiceId: D, premiumSubscription: L, onNext: x, metadata: M, sku: k, skuPricePreview: j, purchaseType: U, referralCode: G, loadId: B, giftInfoOptions: V, invoicePreview: F } = e;
-    t(_.A.PURCHASING), n(!0), r(!0), a.Z.wait(s.fw), m(null);
+    t(_.A.PURCHASING), n(!0), r(!0), o.Z.wait(s.fw), m(null);
     try {
         let e, n, r;
         if (
@@ -94,49 +94,64 @@ async function y(e) {
                     loadId: B,
                     giftInfoOptions: V
                 }));
-        else if ((i()(null != A, 'Missing subscriptionPlan'), O)) {
-            i()(null != F, 'Missing invoicePreview');
-            let t = F.total,
-                n = F.currency;
-            e = await (0, c.ZZ)(h.CL, A.skuId, {
-                expectedAmount: t,
-                expectedCurrency: n,
-                paymentSource: P,
-                subscriptionPlanId: A.id,
-                isGift: !0,
-                loadId: B,
-                giftInfoOptions: V
-            });
-        } else if (w && null != D && null != P && null != L)
-            e = p.Uk1.has(P.type)
-                ? await (0, o.G)(L, D, P, R.currency)
-                : await (0, o.Mg)(
-                      L,
-                      {
-                          paymentSource: P,
-                          currency: R.currency
-                      },
-                      S,
-                      I,
-                      B
-                  );
-        else if (null != L) {
-            let t = (0, f.al)(L, A.id, 1, new Set(N)),
-                n = {
+        else {
+            i()(null != A, 'Missing subscriptionPlan'), i()(null != F, 'Missing invoicePreview');
+            let t = {
+                    amount: F.total,
+                    currency: F.currency
+                },
+                n = (0, f.BK)((0, f.aS)(A.id, !1));
+            if (null != L) {
+                let e = (0, f.al)(L, A.id, 1, new Set(N));
+                (e = (0, f.gB)(e)), (n = (0, f.UX)(e, R.currency.toLowerCase()));
+            }
+            if (O) {
+                let t = F.total,
+                    n = F.currency;
+                e = await (0, c.ZZ)(h.CL, A.skuId, {
+                    expectedAmount: t,
+                    expectedCurrency: n,
                     paymentSource: P,
-                    currency: R.currency
-                };
-            L.status === p.O0b.PAUSED && (n.status = p.O0b.ACTIVE), L.isPausedAllowsResumeButNotUpdates || (n.items = t), (e = await (0, o.Mg)(L, n, S, I, B));
-        } else
-            e = await (0, l.Ld)({
-                planId: A.id,
-                currency: R.currency,
-                paymentSource: P,
-                trialId: C,
-                metadata: M,
-                referralCode: G,
-                loadId: B
-            });
+                    subscriptionPlanId: A.id,
+                    isGift: !0,
+                    loadId: B,
+                    giftInfoOptions: V
+                });
+            } else if (w && null != D && null != P && null != L)
+                e = p.Uk1.has(P.type)
+                    ? await (0, a.G)(L, D, P, R.currency)
+                    : await (0, a.Mg)(
+                          L,
+                          {
+                              paymentSource: P,
+                              currency: R.currency
+                          },
+                          t,
+                          n,
+                          S,
+                          I,
+                          B
+                      );
+            else if (null != L) {
+                let r = (0, f.al)(L, A.id, 1, new Set(N)),
+                    i = {
+                        paymentSource: P,
+                        currency: R.currency
+                    };
+                L.status === p.O0b.PAUSED && (i.status = p.O0b.ACTIVE), L.isPausedAllowsResumeButNotUpdates || (i.items = r), (e = await (0, a.Mg)(L, i, t, n, S, I, B));
+            } else
+                e = await (0, l.Ld)({
+                    planId: A.id,
+                    currency: R.currency,
+                    paymentSource: P,
+                    trialId: C,
+                    metadata: M,
+                    referralCode: G,
+                    loadId: B,
+                    expectedInvoicePrice: t,
+                    expectedRenewalPrice: n
+                });
+        }
         if (e.redirectConfirmation) return void y(null != e.redirectURL);
         t(_.A.COMPLETED), 'subscription' in e ? (n = null != e.subscription ? u.Z.createFromServer(e.subscription) : null) : 'entitlements' in e && (r = null != e.entitlements ? e.entitlements : void 0), x(n, r);
     } catch (e) {

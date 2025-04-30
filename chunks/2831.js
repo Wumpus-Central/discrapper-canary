@@ -3,8 +3,8 @@ var r = n(444675);
     if (!e.setImmediate) {
         var n,
             i = 1,
-            a = {},
-            o = !1,
+            o = {},
+            a = !1,
             s = e.document,
             l = Object.getPrototypeOf && Object.getPrototypeOf(e);
         (l = l && l.setTimeout ? l : e), '[object process]' === {}.toString.call(e.process) ? _() : p() ? h() : e.MessageChannel ? m() : s && 'onreadystatechange' in s.createElement('script') ? g() : E(), (l.setImmediate = c), (l.clearImmediate = u);
@@ -12,14 +12,14 @@ var r = n(444675);
     function c(e) {
         'function' != typeof e && (e = Function('' + e));
         for (var t = Array(arguments.length - 1), r = 0; r < t.length; r++) t[r] = arguments[r + 1];
-        var o = {
+        var a = {
             callback: e,
             args: t
         };
-        return (a[i] = o), n(i), i++;
+        return (o[i] = a), n(i), i++;
     }
     function u(e) {
-        delete a[e];
+        delete o[e];
     }
     function d(e) {
         var n = e.callback,
@@ -42,15 +42,15 @@ var r = n(444675);
         }
     }
     function f(e) {
-        if (o) setTimeout(f, 0, e);
+        if (a) setTimeout(f, 0, e);
         else {
-            var t = a[e];
+            var t = o[e];
             if (t) {
-                o = !0;
+                a = !0;
                 try {
                     d(t);
                 } finally {
-                    u(e), (o = !1);
+                    u(e), (a = !1);
                 }
             }
         }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S });
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(97028),
     l = n(481060),
     c = n(686546),
@@ -67,15 +67,15 @@ let b = 10,
     y = 2;
 function O(e) {
     let { game: t, activityLevel: n, hideTooltip: i } = e,
-        a = t.getIconURL(24),
-        o = (0, f.B)(),
+        o = t.getIconURL(24),
+        a = (0, f.B)(),
         _ = (0, d.Z)({
             location: 'GuildProfile',
             source: u.m1.GuildProfile,
             trackEntryPointImpression: !0,
             applicationId: t.id
         });
-    if (null == a) return null;
+    if (null == o) return null;
     let h = !i,
         g = (null == n ? void 0 : n.level) === s.m.HIGH,
         O = (0, r.jsx)(l.Text, {
@@ -96,7 +96,7 @@ function O(e) {
                         children: [
                             (0, r.jsx)('img', {
                                 className: p.gameIconImage,
-                                src: a,
+                                src: o,
                                 alt: t.name
                             }),
                             g &&
@@ -119,7 +119,7 @@ function O(e) {
                     })
                 )
         });
-    return o
+    return a
         ? (0, r.jsx)(l.P3F, {
               onClick: _,
               className: p.gameIconWrapper,
@@ -174,7 +174,7 @@ function I(e) {
 function S(e) {
     let { profile: t } = e,
         n = t.gameActivity,
-        { gamesToDisplay: a, lastGameToDisplay: s, remainingGames: c } = (0, _.Z)(t),
+        { gamesToDisplay: o, lastGameToDisplay: s, remainingGames: c } = (0, _.Z)(t),
         u = i.useMemo(() => {
             if (null == s) return null;
             let e = s.getIconURL(24);
@@ -196,10 +196,10 @@ function S(e) {
                     (0, r.jsxs)(
                         'div',
                         E(m({}, n), {
-                            className: o()(p.gameIcon, p.extraGameItem),
+                            className: a()(p.gameIcon, p.extraGameItem),
                             children: [
                                 (0, r.jsx)('img', {
-                                    className: o()(p.gameIconImage, p.extraGameIconImage),
+                                    className: a()(p.gameIconImage, p.extraGameIconImage),
                                     src: e,
                                     alt: s.name
                                 }),
@@ -217,20 +217,20 @@ function S(e) {
                     )
             });
         }, [s, c, n]);
-    return null == a || 0 === a.length
+    return null == o || 0 === o.length
         ? null
-        : 1 === a.length
+        : 1 === o.length
           ? (0, r.jsx)('div', {
                 className: p.container,
                 children: (0, r.jsx)(I, {
-                    game: a[0],
-                    activityLevel: n[a[0].id]
+                    game: o[0],
+                    activityLevel: n[o[0].id]
                 })
             })
           : (0, r.jsxs)('div', {
                 className: p.container,
                 children: [
-                    a.map((e) =>
+                    o.map((e) =>
                         (0, r.jsx)(
                             O,
                             {

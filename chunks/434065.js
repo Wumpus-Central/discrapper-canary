@@ -1,5 +1,5 @@
 n.d(t, { r: () => l });
-var i = n(381814),
+var i = n(290486),
     r = n(731965);
 let l = (0, i.U)((e) => ({
     favoriteAdded: !1,

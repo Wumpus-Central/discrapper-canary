@@ -1,8 +1,8 @@
 n.d(t, { b: () => D }), n(388685);
 var r = n(392711),
     i = n.n(r),
-    a = n(674466),
-    o = n(798681),
+    o = n(674466),
+    a = n(798681),
     s = n(581567),
     l = n(569545),
     c = n(450109),
@@ -50,9 +50,9 @@ function R(e) {
     if (null == t || null == n) return null;
     let r = {};
     for (let e of ['videohookFrames', 'hybridDxgiFrames', 'hybridGdiFrames', 'hybridVideohookFrames', 'hybridGraphicsCaptureFrames', 'hybridGdiBitBltFrames', 'hybridGdiPrintWindowFrames', 'quartzFrames', 'screenCaptureKitFrames']) {
-        var i, a, o, s;
-        let l = null != (o = null == (i = n.stats.screenshare) ? void 0 : i[e]) ? o : 0,
-            c = null != (s = null == (a = t.stats.screenshare) ? void 0 : a[e]) ? s : 0;
+        var i, o, a, s;
+        let l = null != (a = null == (i = n.stats.screenshare) ? void 0 : i[e]) ? a : 0,
+            c = null != (s = null == (o = t.stats.screenshare) ? void 0 : o[e]) ? s : 0;
         r[e] = c - l;
     }
     let l = -1,
@@ -66,8 +66,8 @@ function P(e) {
     return null != (n = null != (t = 'channelId' in e ? e.channelId : void 0) ? t : r) ? n : null;
 }
 function w(e, t, n) {
-    var r, i, a, o;
-    return e ? (null != (i = null == (r = S(t)) ? void 0 : r.frameRateEncode) ? i : null) : null != (o = null == (a = T(t, n)) ? void 0 : a.frameRateDecode) ? o : null;
+    var r, i, o, a;
+    return e ? (null != (i = null == (r = S(t)) ? void 0 : r.frameRateEncode) ? i : null) : null != (a = null == (o = T(t, n)) ? void 0 : o.frameRateDecode) ? a : null;
 }
 function D(e, t) {
     var n, r, c, h, D;
@@ -94,7 +94,7 @@ function D(e, t) {
         $ = null != j ? J : _.Z.getRTCConnection(),
         ee = null != j ? (null == J || null == (n = J.analyticsContext) ? void 0 : n.streamApplication) : null,
         { resolution: et, fps: en } = u.Z.getState(),
-        { gameName: er, gameId: ei, exe: ea, distributor: eo } = (0, s.G8)(ee),
+        { gameName: er, gameId: ei, exe: eo, distributor: ea } = (0, s.G8)(ee),
         es = x.isErrorOutbound,
         el = null != U ? U : I.Yn.DEFAULT,
         ec = null != X ? X.ownerId : Q,
@@ -127,11 +127,11 @@ function D(e, t) {
                 num_packets: null != (eE = null == L ? void 0 : L.num_packets) ? eE : 0,
                 num_bytes: null != (eb = null == L ? void 0 : L.num_bytes) ? eb : 0,
                 num_packets_lost: null != (ey = null == (i = A(es, ed, ec)) ? void 0 : i.packetsLost) ? ey : 0,
-                video_codec: null != (eO = null != Z ? Z : (0, a.bU)(null == (s = A(es, ed, ec)) ? void 0 : s.codec.name)) ? eO : null,
-                video_encoder: null != (ev = null != H ? H : (0, a.lG)(null == (l = S(ed)) ? void 0 : l.encoderImplementationName)) ? ev : null,
-                video_decoder: null != (eI = null != Y ? Y : (0, a.z_)(null == (c = T(ed, ec)) ? void 0 : c.decoderImplementationName)) ? eI : null,
+                video_codec: null != (eO = null != Z ? Z : (0, o.bU)(null == (s = A(es, ed, ec)) ? void 0 : s.codec.name)) ? eO : null,
+                video_encoder: null != (ev = null != H ? H : (0, o.lG)(null == (l = S(ed)) ? void 0 : l.encoderImplementationName)) ? ev : null,
+                video_decoder: null != (eI = null != Y ? Y : (0, o.z_)(null == (c = T(ed, ec)) ? void 0 : c.decoderImplementationName)) ? eI : null,
                 audio_capture_sample_rate_mismatch_percent: null != W ? W : null,
-                incoming_video_stopped_for_occlusion: !o.w.isIncomingVideoEnabled(),
+                incoming_video_stopped_for_occlusion: !a.w.isIncomingVideoEnabled(),
                 bitrate: null != (eS = null == (u = A(es, ed, ec)) ? void 0 : u.bitrate) ? eS : null,
                 target_bitrate: es && null != (eT = null == (d = S(ed)) ? void 0 : d.bitrateTarget) ? eT : null,
                 fps: null != (eA = w(es, el, ec)) ? eA : null,
@@ -145,8 +145,8 @@ function D(e, t) {
                 screenshare_capture_method: R(ed),
                 share_application_name: null != er ? er : null,
                 share_application_id: null != ei ? ei : null,
-                share_application_executable: null != ea ? ea : null,
-                share_application_distributor: null != eo ? eo : null,
+                share_application_executable: null != eo ? eo : null,
+                share_application_distributor: null != ea ? ea : null,
                 cpu_brand: null != (ew = null == t ? void 0 : t.cpu_brand) ? ew : null,
                 cpu_vendor: null != (eD = null == t ? void 0 : t.cpu_vendor) ? eD : null,
                 cpu_memory: null != (eL = null == t ? void 0 : t.cpu_memory) ? eL : null,

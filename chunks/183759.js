@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(565294);
 function i(e, t) {
     var n = Object.keys(e);
@@ -12,7 +12,7 @@ function i(e, t) {
     }
     return n;
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {};
         t % 2

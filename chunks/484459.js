@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ });
 var r = n(570140),
     i = n(232567),
-    a = n(220082),
-    o = n(275759),
+    o = n(220082),
+    a = n(275759),
     s = n(365943),
     l = n(592125),
     c = n(271383),
@@ -26,7 +26,7 @@ function _(e, t) {
         k = null == I ? null == N : null == R,
         j = !k && (C || M);
     if (!k && !j) return Promise.resolve();
-    (0, s.z)(), null != t && (0, a.vM)(t);
+    (0, s.z)(), null != t && (0, o.vM)(t);
     let U = {
         type: m,
         withMutualGuilds: g,
@@ -39,7 +39,7 @@ function _(e, t) {
         connectionsRoleId:
             null == I ||
             null ==
-                (p = (0, o.Ur)({
+                (p = (0, a.Ur)({
                     guildMember: c.ZP.getMember(I, e),
                     channel: l.Z.getChannel(S)
                 }))

@@ -13,11 +13,11 @@ n.d(t, {
     n(35282),
     n(388685),
     n(704826);
-var r = n(255367),
+var r = n(200651),
     i = n(112456),
-    a = n.n(i),
-    o = n(392711),
-    s = n.n(o),
+    o = n.n(i),
+    a = n(392711),
+    s = n.n(a),
     l = n(430824),
     c = n(594174),
     u = n(424218),
@@ -101,7 +101,7 @@ function O(e, t) {
     return null != r ? r.klass : 'unknown';
 }
 function v(e) {
-    return a().filesize(e);
+    return o().filesize(e);
 }
 function I(e) {
     let t = c.default.getCurrentUser(),
@@ -129,11 +129,11 @@ function N() {
 function C(e) {
     let { guildId: t, onClick: n } = e,
         i = (0, u.BU)(I(t) / 1024, { useKibibytes: !0 }),
-        a = (0, u.BU)(_.Uq / 1024, { useKibibytes: !0 }),
-        o = p.intl.formatToPlainString(p.t.q5fTZm, { maxSize: i }),
-        s = p.intl.formatToPlainString(p.t.htbuIS, { premiumMaxSize: a }),
+        o = (0, u.BU)(_.Uq / 1024, { useKibibytes: !0 }),
+        a = p.intl.formatToPlainString(p.t.q5fTZm, { maxSize: i }),
+        s = p.intl.formatToPlainString(p.t.htbuIS, { premiumMaxSize: o }),
         l = p.intl.format(p.t.fjSvsL, { onClick: n });
     return (0, r.jsxs)(r.Fragment, {
-        children: [o, ' ', s.replace('\n', ' '), '. ', l]
+        children: [a, ' ', s.replace('\n', ' '), '. ', l]
     });
 }

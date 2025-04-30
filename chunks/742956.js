@@ -1,16 +1,16 @@
 n.d(t, { Z: () => d }), n(314940);
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(278074),
-    a = n(481060),
-    o = n(109213),
+    o = n(481060),
+    a = n(109213),
     s = n(409813),
     l = n(474936),
     c = n(388032),
     u = n(368159);
 function d(e) {
     let { step: t, onClose: n, giftingOrigin: d } = e,
-        { enabled: f } = o.G.useExperiment({ location: 'CollectiblesGiftPaymentModalHeader' }, { autoTrackExposure: !1 }),
+        { enabled: f } = a.G.useExperiment({ location: 'CollectiblesGiftPaymentModalHeader' }, { autoTrackExposure: !1 }),
         _ = (0, i.EQ)(t)
             .with(s.h8.REVIEW, () => c.intl.string(c.t.JbRd5u))
             .with(s.h8.ADD_PAYMENT_STEPS, () => c.intl.string(c.t.QiGOam))
@@ -20,15 +20,15 @@ function d(e) {
             .otherwise(() => null);
     return null == _
         ? null
-        : (0, r.jsxs)(a.xBx, {
+        : (0, r.jsxs)(o.xBx, {
               className: u.headerContainerGift,
               separator: t !== s.h8.CONFIRM,
               children: [
-                  (0, r.jsx)(a.X6q, {
+                  (0, r.jsx)(o.X6q, {
                       variant: 'heading-lg/semibold',
                       children: _
                   }),
-                  (0, r.jsx)(a.olH, {
+                  (0, r.jsx)(o.olH, {
                       onClick: n,
                       className: u.closeButtonGift
                   })

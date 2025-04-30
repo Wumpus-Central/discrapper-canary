@@ -1,9 +1,9 @@
 n.d(t, { Z: () => M }), n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
-    s = n(505266),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(995899),
     l = n(442837),
     c = n(570140),
     u = n(100527),
@@ -81,7 +81,7 @@ function x(e, t) {
 }
 function M(e) {
     var t;
-    let { onClose: n, onComplete: a, onStepChange: w, transitionState: L, loadId: M, skuId: k, isGift: j = !1, giftRecipient: U, giftMessage: G, giftingOrigin: B, analyticsLocations: V, returnRef: F } = e,
+    let { onClose: n, onComplete: o, onStepChange: w, transitionState: L, loadId: M, skuId: k, isGift: j = !1, giftRecipient: U, giftMessage: G, giftingOrigin: B, analyticsLocations: V, returnRef: F } = e,
         { analyticsLocations: Z } = (0, d.ZP)([...V, u.Z.COLLECTIBLES_PAYMENT_MODAL]),
         H = i.useRef(new s.qA()),
         [Y, W] = i.useState(null),
@@ -99,8 +99,8 @@ function M(e) {
         J = null != (t = X[0]) ? t : null,
         $ = null != k && p.Rm.has(k),
         ee = i.useCallback(() => {
-            z(!0), null == a || a();
-        }, [a]),
+            z(!0), null == o || o();
+        }, [o]),
         et = i.useCallback(
             (e) => {
                 z(!1),
@@ -159,7 +159,7 @@ function M(e) {
             }),
             (0, r.jsx)(_.i, {
                 options: q,
-                className: o()(P.customConfetti, { [P.hidden]: !K })
+                className: a()(P.customConfetti, { [P.hidden]: !K })
             }),
             (0, r.jsx)(m.PaymentContextProvider, {
                 loadId: M,

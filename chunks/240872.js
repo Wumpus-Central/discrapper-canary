@@ -1,9 +1,9 @@
 n.d(t, { Z: () => d });
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(952265),
-    a = n(468026),
-    o = n(388032);
+    o = n(468026),
+    a = n(388032);
 function s(e, t, n) {
     return (
         t in e
@@ -58,15 +58,15 @@ function u(e, t) {
 }
 let d = {
     show(e) {
-        let { title: t, body: n, confirmColor: o, confirmText: s, cancelText: c, onConfirm: d, onCancel: f, onCloseCallback: _, secondaryConfirmText: p, onConfirmSecondary: h, className: m, titleClassName: g, contextKey: E } = e;
+        let { title: t, body: n, confirmColor: a, confirmText: s, cancelText: c, onConfirm: d, onCancel: f, onCloseCallback: _, secondaryConfirmText: p, onConfirmSecondary: h, className: m, titleClassName: g, contextKey: E } = e;
         (0, i.h7)(
             (e) =>
                 (0, r.jsx)(
-                    a.default,
+                    o.default,
                     u(l({}, e), {
                         title: t,
                         body: n,
-                        confirmColor: o,
+                        confirmColor: a,
                         confirmText: s,
                         cancelText: c,
                         onConfirm: d,
@@ -90,7 +90,7 @@ let d = {
                         onConfirm() {
                             t(!0);
                         },
-                        cancelText: o.intl.string(o.t['ETE/oK']),
+                        cancelText: a.intl.string(a.t['ETE/oK']),
                         onCancel() {
                             t(!1);
                         }

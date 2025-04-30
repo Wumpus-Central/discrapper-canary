@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
-var r = n(255367),
+var r = n(200651),
     i = n(120356),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     s = n(72378);
 function l(e, t, n) {
     return (
@@ -62,8 +62,8 @@ function f(e, t) {
         r,
         i = _(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -72,19 +72,19 @@ function _(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function p(e) {
     var { className: t, onClick: n } = e,
         i = f(e, ['className', 'onClick']);
     let l = (0, r.jsx)(
-        o.P3F,
+        a.P3F,
         d(c({}, i), {
-            className: a()(null != n && s.clickable, t),
+            className: o()(null != n && s.clickable, t),
             onClick: n
         })
     );
-    return null == n ? (0, r.jsx)(o.nuw, { children: l }) : l;
+    return null == n ? (0, r.jsx)(a.nuw, { children: l }) : l;
 }

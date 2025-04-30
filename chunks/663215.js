@@ -5,10 +5,10 @@ n.d(t, {
     n(642613),
     n(388685),
     n(539854);
-var r = n(73800),
+var r = n(192379),
     i = n(442837),
-    a = n(357156),
-    o = n(675478),
+    o = n(357156),
+    a = n(675478),
     s = n(430824),
     l = n(496675),
     c = n(594174),
@@ -34,7 +34,7 @@ function v(e) {
     return t ? n.sort((e, t) => f.default.compare(e.sound.soundId, t.sound.soundId)) : n;
 }
 function I(e) {
-    let { sections: t, guildIds: n, allSounds: r, potentialSoundIdsForSection: i, sectionType: a, sortById: o } = e,
+    let { sections: t, guildIds: n, allSounds: r, potentialSoundIdsForSection: i, sectionType: o, sortById: a } = e,
         s = {};
     for (let e of [...n, b.X8]) {
         var l;
@@ -45,22 +45,22 @@ function I(e) {
         let t = s[e];
         null != t && c.push(t);
     }
-    let u = v(c, o);
+    let u = v(c, a);
     u.length > 0 &&
         t.push({
-            key: a,
-            categoryInfo: { type: a },
+            key: o,
+            categoryInfo: { type: o },
             items: u
         });
 }
 function S(e) {
-    let { sections: t, guilds: n, currentGuildId: r, allSounds: i, hasNitro: a, rowLimit: o, shownAllGuildIds: s } = e;
+    let { sections: t, guilds: n, currentGuildId: r, allSounds: i, hasNitro: o, rowLimit: a, shownAllGuildIds: s } = e;
     for (let e of n) {
         var l;
         if (e.id === r) continue;
         let n = v(null != (l = i.get(e.id)) ? l : []);
         if (n.length > 0) {
-            let r = void 0 !== o ? O * o : Number.MAX_VALUE;
+            let r = void 0 !== a ? O * a : Number.MAX_VALUE;
             n.length > r &&
                 (s.includes(e.id) || (n = n.slice(0, r - 1)),
                 n.push({
@@ -71,7 +71,7 @@ function S(e) {
                     categoryInfo: {
                         type: g.bg.GUILD,
                         guild: e,
-                        isNitroLocked: !a
+                        isNitroLocked: !o
                     },
                     key: e.id,
                     items: n
@@ -81,12 +81,12 @@ function S(e) {
 }
 function T(e, t, n) {
     var r;
-    let { currentGuildHasAddPermissions: i, allSounds: a, filterOutEmptyCurrentGuild: o, rowLimit: s, shownAllGuildIds: l } = n,
-        c = null != (r = a.get(t.id)) ? r : [],
+    let { currentGuildHasAddPermissions: i, allSounds: o, filterOutEmptyCurrentGuild: a, rowLimit: s, shownAllGuildIds: l } = n,
+        c = null != (r = o.get(t.id)) ? r : [],
         d = v(c),
         f = c.length < (0, u.nL)(t) && i,
         _ = 0 === d.length,
-        p = (f || _) && !o,
+        p = (f || _) && !a,
         h = void 0 !== s ? O * s - +!!p : Number.MAX_VALUE,
         m = d.length;
     m > h && !l.includes(t.id) && (d = d.slice(0, h - 1)),
@@ -100,7 +100,7 @@ function T(e, t, n) {
                 type: g.vB.SHOW_ALL,
                 guild: t
             }),
-        (o && _) ||
+        (a && _) ||
             e.push({
                 categoryInfo: {
                     type: g.bg.GUILD,
@@ -122,7 +122,7 @@ function A(e, t) {
 }
 function N(e) {
     let { filterOutEmptyCurrentGuild: t = !1, shownAllGuildIds: n = [] } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        o = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         u = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
         f = d.ZP.isPremium(u, y.p9.TIER_2),
         [b, O, v] = (0, i.Wu)([m.Z], () => [m.Z.getSounds(), m.Z.getFavorites(), m.Z.isFetching()]),
@@ -142,7 +142,7 @@ function N(e) {
         D = (0, i.e7)(
             [l.Z],
             () => {
-                let { canCreateExpressions: e } = (0, a.Gw)(w);
+                let { canCreateExpressions: e } = (0, o.Gw)(w);
                 return e;
             },
             [w]
@@ -158,7 +158,7 @@ function N(e) {
         let e = 0,
             r = 0,
             i = [];
-        return o
+        return a
             ? (A(i, b),
               {
                   categories: i,
@@ -228,7 +228,7 @@ function N(e) {
                       lockedCustomSoundCount: r
                   }
               });
-    }, [N, b, O, k, M, x, L, w, D, t, P, C, o, v, f, j.numRows, n]);
+    }, [N, b, O, k, M, x, L, w, D, t, P, C, a, v, f, j.numRows, n]);
 }
 function C(e, t, n) {
     return r.useMemo(
@@ -248,7 +248,7 @@ function C(e, t, n) {
 function R() {
     return (
         r.useEffect(() => {
-            o.DZ.loadIfNecessary();
+            a.DZ.loadIfNecessary();
         }, []),
         (0, i.e7)([p.Z], () => p.Z.frecentlyPlayedSounds)
     );

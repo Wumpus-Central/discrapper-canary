@@ -1,16 +1,16 @@
 n.d(t, {
-    Fg: () => a,
+    Fg: () => o,
     ZP: () => l,
-    i6: () => o
+    i6: () => a
 });
 var r = n(780384),
     i = n(981631);
-function a() {
+function o() {
     let { theme: e } = (0, r.TC)();
     return e;
 }
-function o() {
-    return s(a());
+function a() {
+    return s(o());
 }
 function s(e) {
     switch (e) {
@@ -20,4 +20,4 @@ function s(e) {
             return 1;
     }
 }
-let l = a;
+let l = o;

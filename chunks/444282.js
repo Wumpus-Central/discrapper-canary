@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(166459),
     c = n(53281),
@@ -15,7 +15,7 @@ var r = n(255367),
     m = n(98030),
     g = n(451328);
 function E(e) {
-    let { channelId: t, option: n, keyboardModeEnabled: a } = e,
+    let { channelId: t, option: n, keyboardModeEnabled: o } = e,
         E = i.useRef(null),
         [b, y] = i.useState(!1),
         O = f.Z.getUpload(t, n.name, d.d.SlashCommand),
@@ -80,7 +80,7 @@ function E(e) {
         ? (0, r.jsx)(p.Z, {
               channelId: t,
               upload: O,
-              keyboardModeEnabled: a,
+              keyboardModeEnabled: o,
               draftType: d.d.SlashCommand,
               label: (0, r.jsxs)(i.Fragment, {
                   children: [
@@ -102,14 +102,14 @@ function E(e) {
         : (0, r.jsxs)(_.Z, {
               id: n.name,
               channelId: t,
-              keyboardModeEnabled: a,
+              keyboardModeEnabled: o,
               onKeyDown: I,
-              className: o()(m.emptyOption, { [m.emptyOptionActive]: b }),
+              className: a()(m.emptyOption, { [m.emptyOptionActive]: b }),
               draftType: d.d.SlashCommand,
               ref: v,
               children: [
                   (0, r.jsx)('span', {
-                      className: o()(m.optionName, { [m.optionNameActive]: b }),
+                      className: a()(m.optionName, { [m.optionNameActive]: b }),
                       children: n.name
                   }),
                   (0, r.jsx)(s.P3F, {

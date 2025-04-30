@@ -4,7 +4,7 @@
     var t = 'nolla yksi kaksi kolme neljä viisi kuusi seitsemän kahdeksan yhdeksän'.split(' '),
         n = ['nolla', 'yhden', 'kahden', 'kolmen', 'neljän', 'viiden', 'kuuden', t[7], t[8], t[9]];
     function r(e, t, n, r) {
-        var a = '';
+        var o = '';
         switch (n) {
             case 's':
                 return r ? 'muutaman sekunnin' : 'muutama sekunti';
@@ -13,29 +13,29 @@
             case 'm':
                 return r ? 'minuutin' : 'minuutti';
             case 'mm':
-                a = r ? 'minuutin' : 'minuuttia';
+                o = r ? 'minuutin' : 'minuuttia';
                 break;
             case 'h':
                 return r ? 'tunnin' : 'tunti';
             case 'hh':
-                a = r ? 'tunnin' : 'tuntia';
+                o = r ? 'tunnin' : 'tuntia';
                 break;
             case 'd':
                 return r ? 'päivän' : 'päivä';
             case 'dd':
-                a = r ? 'päivän' : 'päivää';
+                o = r ? 'päivän' : 'päivää';
                 break;
             case 'M':
                 return r ? 'kuukauden' : 'kuukausi';
             case 'MM':
-                a = r ? 'kuukauden' : 'kuukautta';
+                o = r ? 'kuukauden' : 'kuukautta';
                 break;
             case 'y':
                 return r ? 'vuoden' : 'vuosi';
             case 'yy':
-                a = r ? 'vuoden' : 'vuotta';
+                o = r ? 'vuoden' : 'vuotta';
         }
-        return i(e, r) + ' ' + a;
+        return i(e, r) + ' ' + o;
     }
     function i(e, r) {
         return e < 10 ? (r ? n[e] : t[e]) : e;

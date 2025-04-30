@@ -1,8 +1,8 @@
 n.d(t, { C: () => c });
 var r = n(660284),
     i = n(581282),
-    a = n(36056),
-    o = n(69122),
+    o = n(36056),
+    a = n(69122),
     s = n(17146),
     l = n(929412);
 class c {
@@ -22,11 +22,11 @@ class c {
     read(e, t, n) {
         this.prepare();
         let i = [];
-        for (let [o, s] of Object.entries(e)) {
+        for (let [a, s] of Object.entries(e)) {
             let e,
-                l = this.fMap[o];
+                l = this.fMap[a];
             if (!l) {
-                if (!n.ignoreUnknownFields) throw Error(`Found unknown field while reading ${this.info.typeName} from JSON format. JSON key: ${o}`);
+                if (!n.ignoreUnknownFields) throw Error(`Found unknown field while reading ${this.info.typeName} from JSON format. JSON key: ${a}`);
                 continue;
             }
             let c = l.localName;
@@ -51,8 +51,8 @@ class c {
                             i = this.scalar(r, l.V.T, l.V.L, l.name);
                     }
                     this.assert(void 0 !== i, l.name + ' map value', r);
-                    let o = e;
-                    l.K == a.wx.BOOL && (o = 'true' == o || ('false' != o && o)), (t[(o = this.scalar(o, l.K, a.pz.STRING, l.name).toString())] = i);
+                    let a = e;
+                    l.K == o.wx.BOOL && (a = 'true' == a || ('false' != a && a)), (t[(a = this.scalar(a, l.K, o.pz.STRING, l.name).toString())] = i);
                 }
             } else if (l.repeat) {
                 if (null === s) continue;
@@ -99,9 +99,9 @@ class c {
             case 'string':
                 let i = t;
                 e[2] && t.substring(0, e[2].length) === e[2] && (i = t.substring(e[2].length));
-                let a = e[1][i];
-                if (void 0 === a && r) return !1;
-                return (0, s.hu)('number' == typeof a, `Unable to parse field ${this.info.typeName}#${n}, enum ${e[0]} has no value for "${t}".`), a;
+                let o = e[1][i];
+                if (void 0 === o && r) return !1;
+                return (0, s.hu)('number' == typeof o, `Unable to parse field ${this.info.typeName}#${n}, enum ${e[0]} has no value for "${t}".`), o;
         }
         (0, s.hu)(!1, `Unable to parse field ${this.info.typeName}#${n}, cannot parse enum value from ${typeof t}".`);
     }
@@ -109,8 +109,8 @@ class c {
         let c;
         try {
             switch (t) {
-                case a.wx.DOUBLE:
-                case a.wx.FLOAT:
+                case o.wx.DOUBLE:
+                case o.wx.FLOAT:
                     if (null === e) return 0;
                     if ('NaN' === e) return Number.NaN;
                     if ('Infinity' === e) return Number.POSITIVE_INFINITY;
@@ -133,32 +133,32 @@ class c {
                         c = 'too large or small';
                         break;
                     }
-                    return t == a.wx.FLOAT && (0, s.E_)(r), r;
-                case a.wx.INT32:
-                case a.wx.FIXED32:
-                case a.wx.SFIXED32:
-                case a.wx.SINT32:
-                case a.wx.UINT32:
+                    return t == o.wx.FLOAT && (0, s.E_)(r), r;
+                case o.wx.INT32:
+                case o.wx.FIXED32:
+                case o.wx.SFIXED32:
+                case o.wx.SINT32:
+                case o.wx.UINT32:
                     let u;
                     if (null === e) return 0;
                     if (('number' == typeof e ? (u = e) : '' === e ? (c = 'empty string') : 'string' == typeof e && (e.trim().length !== e.length ? (c = 'extra whitespace') : (u = Number(e))), void 0 === u)) break;
-                    return t == a.wx.UINT32 ? (0, s.fp)(u) : (0, s.ug)(u), u;
-                case a.wx.INT64:
-                case a.wx.SFIXED64:
-                case a.wx.SINT64:
-                    if (null === e) return (0, l._)(o.M.ZERO, n);
+                    return t == o.wx.UINT32 ? (0, s.fp)(u) : (0, s.ug)(u), u;
+                case o.wx.INT64:
+                case o.wx.SFIXED64:
+                case o.wx.SINT64:
+                    if (null === e) return (0, l._)(a.M.ZERO, n);
                     if ('number' != typeof e && 'string' != typeof e) break;
-                    return (0, l._)(o.M.from(e), n);
-                case a.wx.FIXED64:
-                case a.wx.UINT64:
-                    if (null === e) return (0, l._)(o.p.ZERO, n);
+                    return (0, l._)(a.M.from(e), n);
+                case o.wx.FIXED64:
+                case o.wx.UINT64:
+                    if (null === e) return (0, l._)(a.p.ZERO, n);
                     if ('number' != typeof e && 'string' != typeof e) break;
-                    return (0, l._)(o.p.from(e), n);
-                case a.wx.BOOL:
+                    return (0, l._)(a.p.from(e), n);
+                case o.wx.BOOL:
                     if (null === e) return !1;
                     if ('boolean' != typeof e) break;
                     return e;
-                case a.wx.STRING:
+                case o.wx.STRING:
                     if (null === e) return '';
                     if ('string' != typeof e) {
                         c = 'extra whitespace';
@@ -171,7 +171,7 @@ class c {
                         break;
                     }
                     return e;
-                case a.wx.BYTES:
+                case o.wx.BYTES:
                     if (null === e || '' === e) return new Uint8Array(0);
                     if ('string' != typeof e) break;
                     return (0, i.c)(e);

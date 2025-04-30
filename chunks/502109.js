@@ -4,10 +4,10 @@ n.d(t, {
 }),
     n(642613),
     n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(710845),
     c = n(219929),
@@ -76,8 +76,8 @@ function O(e, t) {
         r,
         i = v(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -86,8 +86,8 @@ function v(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let I = new l.Z('PaymentRequest'),
@@ -171,8 +171,8 @@ class T extends i.Component {
     renderButton(e) {
         var t,
             n,
-            { iconType: i, buttonText: a } = e,
-            o = O(e, ['iconType', 'buttonText']);
+            { iconType: i, buttonText: o } = e,
+            a = O(e, ['iconType', 'buttonText']);
         return (0, r.jsx)(
             s.zxk,
             y(
@@ -182,7 +182,7 @@ class T extends i.Component {
                         className: null != (t = this.props.className) ? t : m.button,
                         submitting: this.state.submitting
                     },
-                    o
+                    a
                 ),
                 {
                     children: (0, r.jsxs)('div', {
@@ -192,7 +192,7 @@ class T extends i.Component {
                                 className: null != (n = this.props.iconClassName) ? n : m.buttonIcon,
                                 type: i
                             }),
-                            a
+                            o
                         ]
                     })
                 }
@@ -412,7 +412,7 @@ class N extends T {
                 (0, r.jsx)(c.ZP, {
                     type: c.ZP.Types.APPLE,
                     size: c.Uy.MEDIUM,
-                    className: o()(m.paymentRequestIcon, m.appleConnectorIcon)
+                    className: a()(m.paymentRequestIcon, m.appleConnectorIcon)
                 }),
                 (0, r.jsx)(s.Text, {
                     variant: 'text-md/medium',

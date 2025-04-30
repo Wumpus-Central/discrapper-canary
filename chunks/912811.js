@@ -3,13 +3,13 @@ n.d(t, {
     L: () => s
 }),
     n(388685);
-var r = n(898517),
+var r = n(530548),
     i = n(392711),
-    a = n.n(i);
-function o(e) {
+    o = n.n(i);
+function a(e) {
     let t = {};
-    for (let n of Object.keys(e)) t[a().kebabCase(n)] = e[n];
+    for (let n of Object.keys(e)) t[o().kebabCase(n)] = e[n];
     return t;
 }
-let s = o(r.Fit),
-    l = o(r.Alignment);
+let s = a(r.Fit),
+    l = a(r.Alignment);

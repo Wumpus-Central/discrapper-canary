@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
 var r,
     i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,8 +32,8 @@ function f(e) {
     let { guildId: t, roleId: n, added: r } = e,
         i = l[t];
     if (null == i || null == i[n]) return !1;
-    let a = Object.keys(r).length;
-    i[n] += a;
+    let o = Object.keys(r).length;
+    i[n] += o;
 }
 function _(e) {
     let { guildId: t, roleId: n } = e,
@@ -65,8 +65,8 @@ class g extends (r = i.ZP.Store) {
         return null == t || Date.now() - t > s;
     }
 }
-o(g, 'displayName', 'GuildRoleMemberCountStore');
-let E = new g(a.Z, {
+a(g, 'displayName', 'GuildRoleMemberCountStore');
+let E = new g(o.Z, {
     GUILD_ROLE_MEMBER_COUNT_FETCH_SUCCESS: u,
     GUILD_ROLE_MEMBER_COUNT_UPDATE: d,
     GUILD_ROLE_MEMBER_BULK_ADD: f,

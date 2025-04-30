@@ -1,10 +1,10 @@
 n.d(t, { Z: () => P });
 var r,
-    i = n(255367),
-    a = n(73800),
-    o = n(120356),
-    s = n.n(o),
-    l = n(688642),
+    i = n(200651),
+    o = n(192379),
+    a = n(120356),
+    s = n.n(a),
+    l = n(568611),
     c = n(442837),
     u = n(692547),
     d = n(481060),
@@ -72,8 +72,8 @@ function v(e, t) {
         r,
         i = I(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -82,8 +82,8 @@ function I(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let S = {
@@ -116,7 +116,7 @@ let S = {
         [S.LARGER]: [19, 19, 17, 17, 15, 13, 11],
         [S.XLARGE]: [20, 20, 18, 18, 16, 14, 12]
     };
-class N extends a.PureComponent {
+class N extends o.PureComponent {
     renderAcronym() {
         let { guild: e, iconSrc: t } = this.props;
         return null != e.icon || null != t
@@ -127,21 +127,21 @@ class N extends a.PureComponent {
               });
     }
     renderBadge() {
-        let { showBadge: e, guild: t, badgeStrokeColor: n, badgeTooltipColor: r, badgeTooltipDelay: a } = this.props;
+        let { showBadge: e, guild: t, badgeStrokeColor: n, badgeTooltipColor: r, badgeTooltipDelay: o } = this.props;
         return e && null != t.hasFeature
             ? (0, i.jsx)(_.Z, {
                   className: g.guildIconBadge,
                   guild: t,
                   badgeStrokeColor: n,
                   tooltipColor: r,
-                  tooltipDelay: a
+                  tooltipDelay: o
               })
             : null;
     }
     renderIcon() {
         var e, t;
         let n = this.props,
-            { guild: r, className: a, showBadge: o, active: l, size: c, style: u = {}, textScale: f, showTooltip: _, tooltipPosition: p, onClick: h, to: E, badgeStrokeColor: y, animate: I, tabIndex: S, iconSrc: T, 'aria-hidden': N, lossless: C, iconSize: R } = n,
+            { guild: r, className: o, showBadge: a, active: l, size: c, style: u = {}, textScale: f, showTooltip: _, tooltipPosition: p, onClick: h, to: E, badgeStrokeColor: y, animate: I, tabIndex: S, iconSrc: T, 'aria-hidden': N, lossless: C, iconSize: R } = n,
             P = v(n, ['guild', 'className', 'showBadge', 'active', 'size', 'style', 'textScale', 'showTooltip', 'tooltipPosition', 'onClick', 'to', 'badgeStrokeColor', 'animate', 'tabIndex', 'iconSrc', 'aria-hidden', 'lossless', 'iconSize']),
             w = A[c],
             D = null != h ? d.P3F : 'div';
@@ -150,7 +150,7 @@ class N extends a.PureComponent {
             O(
                 b(
                     {
-                        className: s()(g.icon, a, (0, m.l)(g, 'iconSize', c), {
+                        className: s()(g.icon, o, (0, m.l)(g, 'iconSize', c), {
                             [null != (e = (0, m.l)(g, 'iconActive', c)) ? e : '']: l,
                             [g.iconInactive]: !l,
                             [g.noIcon]: null == r.icon
@@ -175,15 +175,15 @@ class N extends a.PureComponent {
                   text: e.name,
                   position: n,
                   'aria-label': !1,
-                  children: (e) => a.cloneElement(a.Children.only(this.renderIcon()), b({}, e))
+                  children: (e) => o.cloneElement(o.Children.only(this.renderIcon()), b({}, e))
               })
             : this.renderIcon();
     }
     render() {
-        let { to: e, guild: t, source: n, tabIndex: r, 'aria-hidden': a } = this.props;
+        let { to: e, guild: t, source: n, tabIndex: r, 'aria-hidden': o } = this.props;
         return null != e
             ? (0, i.jsx)(l.rU, {
-                  'aria-hidden': a,
+                  'aria-hidden': o,
                   to: {
                       pathname: e,
                       state: null != n ? { analyticsSource: n } : null
@@ -196,10 +196,10 @@ class N extends a.PureComponent {
     }
 }
 let C = c.ZP.connectStores([p.Z], (e) => {
-    let { guild: t, animate: n, iconSrc: r, style: i, size: a, iconSize: o, lossless: s } = e;
-    return { style: O(b({}, i), { backgroundImage: (0, h.rv)(null != r ? r : t.getIconURL(null != o ? o : T[a], n && p.Z.isFocused(), s)) }) };
+    let { guild: t, animate: n, iconSrc: r, style: i, size: o, iconSize: a, lossless: s } = e;
+    return { style: O(b({}, i), { backgroundImage: (0, h.rv)(null != r ? r : t.getIconURL(null != a ? a : T[o], n && p.Z.isFocused(), s)) }) };
 })((0, f.N)((e) => (0, i.jsx)(N, b({}, e))));
-class R extends (r = a.PureComponent) {
+class R extends (r = o.PureComponent) {
     render() {
         return (0, i.jsx)(C, b({}, this.props));
     }

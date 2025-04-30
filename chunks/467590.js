@@ -10,8 +10,8 @@ n.d(t, {
     n(415506);
 var r = n(608787),
     i = n(259443);
-let a = null,
-    o = null,
+let o = null,
+    a = null,
     s = new i.Yd('libdiscore');
 function l(e) {
     s.error(e);
@@ -29,7 +29,7 @@ function f(e) {
     s.trace(e);
 }
 function _() {
-    return null !== a;
+    return null !== o;
 }
 function p(e) {
     return new Promise((t) => setTimeout(t, e));
@@ -49,32 +49,32 @@ async function h() {
         }
 }
 function m() {
-    if (null == o)
-        return (o = (async () => {
+    if (null == a)
+        return (a = (async () => {
             await h();
             let e = await (0, r.wE)({
                 createPromise: () => n.e('18639').then(n.bind(n, 718493)),
                 webpackId: 718493
             });
-            e.installLogCallback(l, c, u, d, f), await e.initLibdiscore(), (a = e);
+            e.installLogCallback(l, c, u, d, f), await e.initLibdiscore(), (o = e);
         })());
     throw Error('initLibdiscore called multiple times');
 }
 function g(e) {
     var t;
-    return null === a ? null : null != (t = a.BlockedDomainsStore.isBlockedDomain(e)) ? t : null;
+    return null === o ? null : null != (t = o.BlockedDomainsStore.isBlockedDomain(e)) ? t : null;
 }
 function E(e) {
-    null !== a && a.BlockedDomainsStore.startFetchingBlockedDomains(e);
+    null !== o && o.BlockedDomainsStore.startFetchingBlockedDomains(e);
 }
 function b() {
     return 'libdiscore logs are part of the main app logs';
 }
 function y(e, t) {
-    if (null === a) throw Error('libdiscore not initialized');
-    return a.rustMultiply(e, t);
+    if (null === o) throw Error('libdiscore not initialized');
+    return o.rustMultiply(e, t);
 }
 function O() {
-    if (null === a) throw Error('libdiscore not initialized');
-    a.crash();
+    if (null === o) throw Error('libdiscore not initialized');
+    o.crash();
 }

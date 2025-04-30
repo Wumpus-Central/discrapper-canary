@@ -1,5 +1,5 @@
 s.d(t, { Z: () => i });
-var l = s(255367);
+var l = s(200651);
 function i(e) {
     let { width: t = 24, height: s = 24, boxColor: i, ribbonColor: r, style: n } = e;
     return (0, l.jsxs)('svg', {
@@ -54,4 +54,4 @@ function i(e) {
         ]
     });
 }
-s(73800);
+s(192379);

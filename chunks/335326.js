@@ -2,17 +2,17 @@ n.d(t, {
     Z: () => f,
     t: () => u
 });
-var r = n(255367),
-    i = n(73800),
-    a = n(379357),
-    o = n(442550),
+var r = n(200651),
+    i = n(192379),
+    o = n(379357),
+    a = n(442550),
     s = n(297781),
     l = n(443487),
     c = n(522314);
 let u = [s.Yl, s.Rg],
     d = (e) => {
         let { entry: t, channel: n, selected: i } = e,
-            { largeImage: d } = (0, a.rv)({ entry: t });
+            { largeImage: d } = (0, o.rv)({ entry: t });
         return (0, r.jsxs)(l.Zb, {
             selected: i,
             children: [
@@ -30,7 +30,7 @@ let u = [s.Yl, s.Rg],
                         })
                     ]
                 }),
-                (0, r.jsx)(o.f, {
+                (0, r.jsx)(a.f, {
                     src: null == d ? void 0 : d.src,
                     size: 48,
                     className: c.thumbnail,

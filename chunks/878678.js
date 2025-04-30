@@ -2,10 +2,10 @@ n.d(t, {
     ConfirmModal: () => p,
     s: () => h
 });
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(693789),
     l = n(481060),
     c = n(540059),
@@ -43,7 +43,7 @@ function _(e) {
 function p(e) {
     let t,
         n,
-        { header: a, children: f, confirmText: _, cancelText: p, className: h, onConfirm: m, onCancel: g, onClose: E, onCloseCallback: b, bodyClassName: y, transitionState: O, loading: v = !1, confirmButtonColor: I = s.zx.Colors.RED, focusCancel: S = !1, impression: T } = e,
+        { header: o, children: f, confirmText: _, cancelText: p, className: h, onConfirm: m, onCancel: g, onClose: E, onCloseCallback: b, bodyClassName: y, transitionState: O, loading: v = !1, confirmButtonColor: I = s.zx.Colors.RED, focusCancel: S = !1, impression: T } = e,
         A = i.useRef(null),
         N = (0, c.Q3)('ConfirmModal');
     return (
@@ -91,17 +91,17 @@ function p(e) {
             transitionState: O,
             impression: T,
             children: [
-                null != a
+                null != o
                     ? (0, r.jsx)(u.xB, {
                           separator: !1,
                           children: (0, r.jsx)(l.X6q, {
                               variant: 'heading-lg/semibold',
-                              children: a
+                              children: o
                           })
                       })
                     : null,
                 (0, r.jsx)(u.hz, {
-                    className: o()(d.content, y),
+                    className: a()(d.content, y),
                     children: f
                 }),
                 (0, r.jsxs)(u.mz, {

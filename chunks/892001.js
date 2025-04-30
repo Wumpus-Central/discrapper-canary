@@ -5,8 +5,8 @@ n.r(t),
     });
 var r = n(259443),
     i = n(481060),
-    a = n(570140),
-    o = n(232567),
+    o = n(570140),
+    a = n(232567),
     s = n(911284),
     l = n(314897),
     c = n(594174),
@@ -31,7 +31,7 @@ async function m(e) {
     h(t);
     let { withMutualFriendsCount: S } = (0, d.R)({ location: 'openUserProfileModal' });
     null == I
-        ? await (0, o.In)(t, {
+        ? await (0, a.In)(t, {
               type: 'modal',
               guildId: E && null != n ? n : void 0,
               withMutualFriendsCount: S,
@@ -49,7 +49,7 @@ async function m(e) {
               friendToken: g,
               joinRequestId: u
           }),
-        a.Z.dispatch({
+        o.Z.dispatch({
             type: 'USER_PROFILE_MODAL_OPEN',
             userId: t,
             guildId: null != n ? n : void 0,
@@ -69,5 +69,5 @@ async function m(e) {
         });
 }
 function g() {
-    a.Z.dispatch({ type: 'USER_PROFILE_MODAL_CLOSE' });
+    o.Z.dispatch({ type: 'USER_PROFILE_MODAL_CLOSE' });
 }

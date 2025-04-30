@@ -18,7 +18,7 @@ e.exports = function (e) {
                 }
             ]
         },
-        a = {
+        o = {
             className: 'string',
             relevance: 0,
             begin: /'/,
@@ -31,7 +31,7 @@ e.exports = function (e) {
                 }
             ]
         },
-        o = {
+        a = {
             className: 'string',
             relevance: 0,
             variants: [
@@ -43,7 +43,7 @@ e.exports = function (e) {
             ],
             contains: [e.BACKSLASH_ESCAPE, i]
         },
-        s = e.inherit(o, {
+        s = e.inherit(a, {
             variants: [
                 {
                     begin: /'/,
@@ -148,8 +148,8 @@ e.exports = function (e) {
             },
             u,
             d,
-            a,
-            o
+            o,
+            a
         ],
         _ = [...f];
     return (

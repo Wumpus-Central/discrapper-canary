@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(388685);
 var r = n(754700),
     i = n(147913),
-    a = n(317381),
-    o = n(594190),
+    o = n(317381),
+    a = n(594190),
     s = n(569545),
     l = n(199902),
     c = n(938475),
@@ -56,7 +56,7 @@ class I extends i.Z {
     }
     getActivelyProgressingPlayOnDesktopQuestIds() {
         let e = new Set(),
-            t = o.ZP.getRunningGames(),
+            t = a.ZP.getRunningGames(),
             n = _.Z.quests;
         for (let r of (O.log('~ getActivelyProgressingPlayOnDesktopQuestIds -> Running games: ', t), t)) if (null != r.id) for (let t of n.values()) v(t) && (0, p.Nj)({ quest: t }) && t.config.application.id === r.id && e.add(t.id);
         return O.log('~ getActivelyProgressingPlayOnDesktopQuestIds -> Actively progressing questIds: ', e), e;
@@ -75,7 +75,7 @@ class I extends i.Z {
     }
     getActivelyProgressingActivityQuestIds() {
         let e = new Set(),
-            t = a.ZP.getSelfEmbeddedActivities(),
+            t = o.ZP.getSelfEmbeddedActivities(),
             n = t.size > 0;
         if ((O.log('~ getActivelyProgressingActivityQuestIds -> Embedded activities: ', t), !n)) return e;
         let r = _.Z.quests;
@@ -94,8 +94,8 @@ class I extends i.Z {
                 let t = _.Z.quests.get(e);
                 if (null == t || null == t.config || null == t.userStatus) return E;
                 let { progressSeconds: n, targetSeconds: i } = (0, p.il)(t, r.T.DESKTOP),
-                    a = Math.max(0, (i - n) * u.Z.Millis.SECOND);
-                return a <= E ? a + y : E;
+                    o = Math.max(0, (i - n) * u.Z.Millis.SECOND);
+                return o <= E ? o + y : E;
             }),
             g(this, 'initiateHeartbeat', (e, t) => {
                 let n = this.heartbeats[t];
@@ -115,9 +115,9 @@ class I extends i.Z {
                                     streamKey: r
                                 });
                         } else O.log('~ initiateHeartbeat -> Sending heartbeat for questId: '.concat(e)), (0, f.m0)({ questId: e });
-                        let a = this.calculateHeartbeatDurationMs(e),
-                            o = window.setTimeout(i, a);
-                        n.set(e, o);
+                        let o = this.calculateHeartbeatDurationMs(e),
+                            a = window.setTimeout(i, o);
+                        n.set(e, a);
                     } else O.log('~ initiateHeartbeat -> Quest '.concat(e, ' is no longer actively progressing, terminating heartbeat')), this.terminateHeartbeat(e, t);
                 };
                 O.log('~ initiateHeartbeat -> Initiating heartbeat for Quest '.concat(e)), i();

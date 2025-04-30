@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(128069),
+    o = n(570140),
+    a = n(128069),
     s = n(38618);
 function l(e, t, n) {
     return (
@@ -28,8 +28,8 @@ let u = 0,
     f = null;
 function _(e) {
     let { error: t } = e,
-        n = t instanceof o.ZP ? t : new o.ZP(t);
-    s.Z.isConnected() && n.code === o.ZP.ErrorCodes.PURCHASE_TOKEN_AUTHORIZATION_REQUIRED && (u = 1);
+        n = t instanceof a.ZP ? t : new a.ZP(t);
+    s.Z.isConnected() && n.code === a.ZP.ErrorCodes.PURCHASE_TOKEN_AUTHORIZATION_REQUIRED && (u = 1);
 }
 function p(e) {
     (u = 2), (d = e.purchaseTokenHash), (f = e.expiresAt);
@@ -49,7 +49,7 @@ class m extends (r = i.ZP.Store) {
     }
 }
 l(m, 'displayName', 'PurchaseTokenAuthStore');
-let g = new m(a.Z, {
+let g = new m(o.Z, {
     SKU_PURCHASE_FAIL: _,
     PREMIUM_PAYMENT_SUBSCRIBE_FAIL: _,
     USER_PAYMENT_CLIENT_ADD: p,

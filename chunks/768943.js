@@ -1,8 +1,8 @@
 n.d(t, { Z: () => V }), n(415506), n(388685);
 var r,
     i = n(442837),
-    a = n(759174),
-    o = n(570140),
+    o = n(759174),
+    a = n(570140),
     s = n(786761),
     l = n(594174),
     c = n(686478);
@@ -47,7 +47,7 @@ function _(e) {
 function p(e) {
     return _(e.dueAt) - _(e.savedAt);
 }
-let h = new a.h(
+let h = new o.h(
         (e) => {
             let { saveData: t } = e;
             return [c._l.ALL, null != t.dueAt ? c._l.REMINDER : c._l.BOOKMARK];
@@ -76,8 +76,8 @@ function I(e) {
     null == h.get(n) && (g = Date.now()), h.set(n, e);
     let r = e.saveData.messageId,
         i = e.saveData.channelId,
-        a = null != (t = y.get(i)) ? t : new Set();
-    a.add(r), y.set(i, a), null == e.message && b.add(r), null != e.saveData.dueAt && new Date() > e.saveData.dueAt ? E.add(r) : E.delete(r);
+        o = null != (t = y.get(i)) ? t : new Set();
+    o.add(r), y.set(i, o), null == e.message && b.add(r), null != e.saveData.dueAt && new Date() > e.saveData.dueAt ? E.add(r) : E.delete(r);
 }
 function S(e) {
     var t;
@@ -114,8 +114,8 @@ function P(e) {
         }),
         i = h.get(r);
     if ((null == i ? void 0 : i.message) == null) return !1;
-    let a = d({}, i);
-    return (a.message = null), h.set(r, a), !0;
+    let o = d({}, i);
+    return (o.message = null), h.set(r, o), !0;
 }
 function w(e) {
     let { id: t, channelId: n } = e;
@@ -229,7 +229,7 @@ class B extends (r = i.ZP.Store) {
     }
 }
 u(B, 'displayName', 'SavedMessagesStore');
-let V = new B(o.Z, {
+let V = new B(a.Z, {
     POST_CONNECTION_OPEN: T,
     LOGOUT: A,
     SAVED_MESSAGES_UPDATE: N,

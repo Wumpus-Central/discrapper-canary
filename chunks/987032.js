@@ -1,13 +1,13 @@
 n.d(t, {
     Ul: () => u,
     YE: () => l,
-    ZP: () => o
+    ZP: () => a
 }),
     n(388685);
 var r = n(818083),
     i = n(981631),
-    a = n(388032);
-let o = (0, r.B)({
+    o = n(388032);
+let a = (0, r.B)({
         kind: 'user',
         id: '2021-08_regional_payment_methods',
         label: 'Regional Payment Methods',
@@ -181,7 +181,7 @@ let o = (0, r.B)({
         ['handelsbanken', 'Handelsbanken']
     ]);
 function l(e) {
-    return void 0 !== e && s.has(e) ? s.get(e) : a.intl.string(a.t.jdPblp);
+    return void 0 !== e && s.has(e) ? s.get(e) : o.intl.string(o.t.jdPblp);
 }
 let c = new Map([
     ['arzte_und_apotheker_bank', 'Ärzte- und Apothekerbank'],
@@ -213,5 +213,5 @@ let c = new Map([
     ['vr_bank_braunau', 'VR-Bank Braunau']
 ]);
 function u(e) {
-    return void 0 !== e && c.has(e) ? c.get(e) : a.intl.string(a.t.jdPblp);
+    return void 0 !== e && c.has(e) ? c.get(e) : o.intl.string(o.t.jdPblp);
 }

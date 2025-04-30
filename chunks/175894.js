@@ -1,7 +1,7 @@
-n.d(t, { Z: () => a });
-var r = n(73800),
+n.d(t, { Z: () => o });
+var r = n(192379),
     i = n(570140);
-function a(e) {
+function o(e) {
     let { connectedEmbeddedActivity: t } = e,
         n = null == t ? void 0 : t.applicationId;
     r.useEffect(() => {

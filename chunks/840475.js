@@ -1,7 +1,7 @@
 var r,
     i,
-    a,
-    o = n(848120),
+    o,
+    a = n(848120),
     s = n(507604),
     l = n(127849),
     c = n(880181),
@@ -31,7 +31,7 @@ var r,
     L = y('toStringTag'),
     x = O('TYPED_ARRAY_TAG'),
     M = 'TypedArrayConstructor',
-    k = o && !!b && 'Opera' !== f(l.opera),
+    k = a && !!b && 'Opera' !== f(l.opera),
     j = !1,
     U = {
         Int8Array: 1,
@@ -77,13 +77,13 @@ var r,
         if (s) {
             if (n)
                 for (var i in U) {
-                    var a = l[i];
-                    if (a && d(a.prototype, e))
+                    var o = l[i];
+                    if (o && d(o.prototype, e))
                         try {
-                            delete a.prototype[e];
+                            delete o.prototype[e];
                         } catch (n) {
                             try {
-                                a.prototype[e] = t;
+                                o.prototype[e] = t;
                             } catch (e) {}
                         }
                 }
@@ -109,8 +109,8 @@ var r,
             for (r in U) (i = l[r]) && (!i[e] || n) && h(i, e, t);
         }
     };
-for (r in U) (a = (i = l[r]) && i.prototype) ? (I(a)[M] = i) : (k = !1);
-for (r in G) (a = (i = l[r]) && i.prototype) && (I(a)[M] = i);
+for (r in U) (o = (i = l[r]) && i.prototype) ? (I(o)[M] = i) : (k = !1);
+for (r in G) (o = (i = l[r]) && i.prototype) && (I(o)[M] = i);
 if (
     (!k || !c(R) || R === Function.prototype) &&
     ((R = function () {

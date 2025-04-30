@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
-var r = n(114858),
+var r = n(512969),
     i = n(544891),
-    a = n(570140),
-    o = n(333023),
+    o = n(570140),
+    a = n(333023),
     s = n(38618),
     l = n(893607),
     c = n(131704),
@@ -15,7 +15,7 @@ let p = {},
 function m() {
     h ||
         ((h = !0),
-        a.Z.subscribe('CONNECTION_OPEN', () => {
+        o.Z.subscribe('CONNECTION_OPEN', () => {
             p = {};
             let e = d.Z.getChannelId(),
                 t = u.Z.getChannel(e);
@@ -23,7 +23,7 @@ function m() {
         }));
 }
 function g(e) {
-    if (null == e || e === o.V || (0, _.AB)(e) || null != u.Z.getChannel(e) || (m(), !s.Z.isConnected())) return Promise.resolve();
+    if (null == e || e === a.V || (0, _.AB)(e) || null != u.Z.getChannel(e) || (m(), !s.Z.isConnected())) return Promise.resolve();
     let t = p[e];
     if (null != t)
         if ('LOADING' === t.type) return t.promise;
@@ -41,7 +41,7 @@ function g(e) {
                 let { body: r } = t;
                 if (((p[e] = { type: 'LOADED' }), c.Ec.has(r.type))) {
                     var i;
-                    a.Z.dispatch({
+                    o.Z.dispatch({
                         type: 'THREAD_CREATE',
                         channel: (0, c.q_)(r),
                         messageId: null == n || null == (i = n.params) ? void 0 : i.messageId
@@ -51,7 +51,7 @@ function g(e) {
             .catch(() => {
                 var t;
                 (p[e] = { type: 'NOT_FOUND' }),
-                    a.Z.dispatch({
+                    o.Z.dispatch({
                         type: 'CHANNEL_DELETE',
                         channel: {
                             id: e,

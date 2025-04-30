@@ -2,10 +2,10 @@ n.d(t, {
     k: () => d,
     m: () => u
 });
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(1561),
     l = n(481060),
     c = n(220087);
@@ -15,13 +15,13 @@ let u = {
         BACKGROUND_ACCENT: c.backgroundAccent
     },
     d = i.forwardRef(function (e, t) {
-        let { role: n, children: i, className: a, onDismiss: d, backgroundColor: f = u.RED, icon: _ = l.P4T, iconClassName: p } = e;
+        let { role: n, children: i, className: o, onDismiss: d, backgroundColor: f = u.RED, icon: _ = l.P4T, iconClassName: p } = e;
         return (0, r.jsxs)('div', {
-            className: o()(c.error, a, f),
+            className: a()(c.error, o, f),
             ref: t,
             children: [
                 (0, r.jsx)(_, {
-                    className: o()(c.icon, p),
+                    className: a()(c.icon, p),
                     color: 'currentColor'
                 }),
                 (0, r.jsx)('div', {

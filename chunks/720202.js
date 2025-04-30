@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O }), n(388685);
 var r,
     i = n(392711),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(570140),
     l = n(537986),
     c = n(592125),
@@ -61,9 +61,9 @@ function E(e) {
 }
 function b(e) {
     let { guildId: t, messages: n } = e;
-    return null != t && g(t, a().flatten(n));
+    return null != t && g(t, o().flatten(n));
 }
-class y extends (r = o.ZP.Store) {
+class y extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(c.Z, u.ZP);
     }

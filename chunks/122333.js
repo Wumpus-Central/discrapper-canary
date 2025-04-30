@@ -1,7 +1,7 @@
 let r;
 n.d(t, { Z: () => w }), n(388685), n(583741);
-var i = n(255367);
-n(73800);
+var i = n(200651);
+n(192379);
 var l = n(481060),
     a = n(570140),
     o = n(317770),
@@ -137,7 +137,7 @@ class x extends o.Z {
                     };
                     r = await (0, l.ZDy)(
                         async () => {
-                            let { default: e } = await Promise.all([n.e('6583'), n.e('1337'), n.e('42483'), n.e('57015')]).then(n.bind(n, 599219));
+                            let { default: e } = await Promise.all([n.e('4181'), n.e('1337'), n.e('42483'), n.e('57015')]).then(n.bind(n, 599219));
                             return (n) => (0, i.jsx)(e, A(j({}, n), { onSlideChange: t }));
                         },
                         {

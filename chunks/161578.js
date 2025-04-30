@@ -4,7 +4,7 @@ function i(e) {
     let t = e.getPropertyValue('content');
     return `${e.cssText} content: '${t.replace(/'|"/g, '')}';`;
 }
-function a(e) {
+function o(e) {
     return (0, r.qo)(e)
         .map((t) => {
             let n = e.getPropertyValue(t),
@@ -13,15 +13,15 @@ function a(e) {
         })
         .join(' ');
 }
-function o(e, t, n) {
+function a(e, t, n) {
     let r = `.${e}:${t}`,
-        o = n.cssText ? i(n) : a(n);
-    return document.createTextNode(`${r}{${o}}`);
+        a = n.cssText ? i(n) : o(n);
+    return document.createTextNode(`${r}{${a}}`);
 }
 function s(e, t, n) {
     let i = window.getComputedStyle(e, n),
-        a = i.getPropertyValue('content');
-    if ('' === a || 'none' === a) return;
+        o = i.getPropertyValue('content');
+    if ('' === o || 'none' === o) return;
     let s = (0, r.Vj)();
     try {
         t.className = `${t.className} ${s}`;
@@ -29,7 +29,7 @@ function s(e, t, n) {
         return;
     }
     let l = document.createElement('style');
-    l.appendChild(o(s, n, i)), t.appendChild(l);
+    l.appendChild(a(s, n, i)), t.appendChild(l);
 }
 function l(e, t) {
     s(e, t, ':before'), s(e, t, ':after');

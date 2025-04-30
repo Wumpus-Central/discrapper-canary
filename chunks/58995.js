@@ -1,8 +1,8 @@
 n.d(t, { Z: () => k }), n(388685), n(539854);
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(704215),
     c = n(996146),
@@ -79,13 +79,13 @@ function D(e, t) {
 }
 let L = y.Z.Millis.DAYS_30;
 function x(e) {
-    let { animatedIconComponent: t, hovered: i, isCoachmarkDismissed: a } = e,
-        s = !a || i;
+    let { animatedIconComponent: t, hovered: i, isCoachmarkDismissed: o } = e,
+        s = !o || i;
     return (0, r.jsxs)('div', {
         className: N.iconContainer,
         children: [
             (0, r.jsx)('div', {
-                className: o()(N.decorativeLayer, { [N.decorativeLayerActive]: s }),
+                className: a()(N.decorativeLayer, { [N.decorativeLayerActive]: s }),
                 style: { zIndex: 3 },
                 children: (0, r.jsx)(u.Fmz, {
                     shouldAnimate: s,
@@ -93,12 +93,12 @@ function x(e) {
                 })
             }),
             (0, r.jsx)('div', {
-                className: o()(N.giftIconButton, { [N.giftIconButtonActive]: s }),
+                className: a()(N.giftIconButton, { [N.giftIconButtonActive]: s }),
                 style: { zIndex: 2 },
                 children: (0, r.jsx)(t, { color: 'currentColor' })
             }),
             (0, r.jsx)('div', {
-                className: o()(N.decorativeLayer, { [N.decorativeLayerActive]: s }),
+                className: a()(N.decorativeLayer, { [N.decorativeLayerActive]: s }),
                 style: { zIndex: 1 },
                 children: (0, r.jsx)(u.Fmz, {
                     shouldAnimate: s,
@@ -110,8 +110,8 @@ function x(e) {
 }
 function M(e) {
     let { disabled: t, channel: n } = e,
-        { analyticsLocations: a } = (0, f.ZP)(d.Z.GIFT_BUTTON),
-        [o, u] = i.useState(!1),
+        { analyticsLocations: o } = (0, f.ZP)(d.Z.GIFT_BUTTON),
+        [a, u] = i.useState(!1),
         y = (0, s.e7)([E.Z], () => !(null === E.Z || void 0 === E.Z ? void 0 : E.Z.hasLayers())),
         R = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
         w = null != R ? O.default.age(R.id) : 0,
@@ -130,7 +130,7 @@ function M(e) {
             giftRecipient: null == V ? void 0 : V,
             giftMessage: A.intl.string(A.t['rX/m/f']),
             initialPlanId: null,
-            analyticsLocations: a,
+            analyticsLocations: o,
             analyticsObject: {
                 page: n.isPrivate() ? S.ZY5.DM_CHANNEL : S.ZY5.GUILD_CHANNEL,
                 section: S.jXE.CHANNEL_TEXT_AREA,
@@ -142,7 +142,7 @@ function M(e) {
     return (0, r.jsxs)('div', {
         className: N.container,
         onMouseEnter: () => {
-            o || u(!0);
+            a || u(!0);
         },
         onMouseLeave: () => {
             u(!1);
@@ -171,7 +171,7 @@ function M(e) {
                     {
                         children: (0, r.jsx)(x, {
                             animatedIconComponent: F,
-                            hovered: o,
+                            hovered: a,
                             isCoachmarkDismissed: !B
                         })
                     }

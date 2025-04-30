@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N }), n(997841), n(539854), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(415506), n(361932), n(187205);
 var r = n(392711),
     i = n.n(r),
-    a = n(772848),
-    o = n(147913),
+    o = n(772848),
+    a = n(147913),
     s = n(131704),
     l = n(598077),
     c = n(592125),
@@ -127,7 +127,7 @@ class T {
                 null != t && 'USER_RESULTS' === t.type && t.uuid === this._uuid && (!1 !== this._currentQuery && this._callback(t.payload), null != this._currentQuery && (this._currentQuery = null), this._setNextQuery());
             }),
             (this._worker = e),
-            (this._uuid = (0, a.Z)()),
+            (this._uuid = (0, o.Z)()),
             (this._callback = t),
             (this._limit = n),
             (this._currentQuery = null),
@@ -136,7 +136,7 @@ class T {
             this.subscribe();
     }
 }
-class A extends o.Z {
+class A extends a.Z {
     _initialize() {
         this.rebootWebworker();
     }
@@ -217,10 +217,10 @@ class A extends o.Z {
                     let r = u.ZP.getMutableAllGuildsAndMembers();
                     for (let e in r)
                         for (let t in r[e]) {
-                            var i, a;
-                            let o = n[t],
-                                s = null != (a = null == (i = r[e][t]) ? void 0 : i.nick) ? a : g.ZP.getGlobalName(o);
-                            null != o && (o[e] = null != s && '' !== s ? s : null);
+                            var i, o;
+                            let a = n[t],
+                                s = null != (o = null == (i = r[e][t]) ? void 0 : i.nick) ? o : g.ZP.getGlobalName(a);
+                            null != a && (a[e] = null != s && '' !== s ? s : null);
                         }
                     this.updateUsers(Object.values(n), 'connection_open');
                 }, 3000);
@@ -258,8 +258,8 @@ class A extends o.Z {
                     if (null != t)
                         for (let n of m.default.keys(t)) {
                             let i = r.get(n),
-                                a = t[n];
-                            null != i && null != a && null != a.nick && (v(i, e, a.nick), r.set(n, i));
+                                o = t[n];
+                            null != i && null != o && null != o.nick && (v(i, e, o.nick), r.set(n, i));
                         }
                 }
                 this.updateUsers(Array.from(r.values()), 'overlay_initialize'), r.clear();

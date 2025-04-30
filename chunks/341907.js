@@ -12,11 +12,11 @@ n.r(t),
         openQuestsRewardCodeModal: () => L,
         openVideoQuestModal: () => F
     });
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(772848),
-    a = n(271579),
-    o = n(756647),
+    o = n(271579),
+    a = n(756647),
     s = n(481060),
     l = n(836768),
     c = n(98278),
@@ -92,7 +92,7 @@ function P(e, t) {
 let w = 'in-app',
     D = 'Discord Widget';
 function L(e) {
-    let { questId: t, location: i, questContentPosition: a, preview: o = !1, previewQuest: l = null } = e;
+    let { questId: t, location: i, questContentPosition: o, preview: a = !1, previewQuest: l = null } = e;
     (0, s.ZDy)(async () => {
         let { default: e } = await Promise.all([n.e('37447'), n.e('64838'), n.e('27458'), n.e('78900'), n.e('37560')]).then(n.bind(n, 985866));
         return (n) =>
@@ -100,9 +100,9 @@ function L(e) {
                 e,
                 P(C({}, n), {
                     questId: t,
-                    questContentPosition: a,
+                    questContentPosition: o,
                     location: i,
-                    preview: o,
+                    preview: a,
                     previewQuest: l
                 })
             );
@@ -215,10 +215,10 @@ function F(e) {
     (0, s.ZDy)(
         async () => {
             let { default: i } = await V();
-            return (a) =>
+            return (o) =>
                 (0, r.jsx)(
                     i,
-                    P(C({}, a), {
+                    P(C({}, o), {
                         openStartClockTime: performance.now(),
                         questId: e.id,
                         autoplay: t,
@@ -243,9 +243,9 @@ function Z(e) {
         r = 'quest';
     if ('Android' === n || 'iOS' === n) {
         let t = _.default.getFingerprint(),
-            n = (0, a.WS)(),
+            n = (0, o.WS)(),
             i = ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT, '/quests/').concat(e);
-        return (0, a.ZP)(i, {
+        return (0, o.ZP)(i, {
             utmSource: r,
             fingerprint: t,
             attemptId: n
@@ -255,10 +255,10 @@ function Z(e) {
 }
 function H(e) {
     let t = Z(e),
-        n = (0, a.zS)(t);
+        n = (0, o.zS)(t);
     null != n &&
         p.default.track(T.rMx.DEEP_LINK_CLICKED, {
-            fingerprint: (0, o.K)(n.fingerprint),
+            fingerprint: (0, a.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource
         }),

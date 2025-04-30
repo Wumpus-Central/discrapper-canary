@@ -5,10 +5,10 @@ n.d(t, {
     hq: () => T
 }),
     n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(831209),
     l = n(442837),
     c = n(481060),
@@ -97,9 +97,9 @@ function T() {
 function A(e) {
     let { sound: t, forceShowBetaLabel: n = !1 } = e,
         i = (0, p.V2)({ location: 'SoundmojiBanner' }),
-        a = (0, l.e7)([d.default], () => _.ZP.canUseSoundboardEverywhere(d.default.getCurrentUser())),
-        o = (0, l.e7)([u.Z], () => u.Z.getGuildId());
-    return n || a || t.guildId === g.X8 || t.guildId === o || !i
+        o = (0, l.e7)([d.default], () => _.ZP.canUseSoundboardEverywhere(d.default.getCurrentUser())),
+        a = (0, l.e7)([u.Z], () => u.Z.getGuildId());
+    return n || o || t.guildId === g.X8 || t.guildId === a || !i
         ? (0, r.jsx)(c.IGR, {
               text: 'BETA',
               color: s.Z.BG_BRAND,
@@ -136,7 +136,7 @@ function A(e) {
 function N(e) {
     let { sound: t } = e;
     return (0, r.jsxs)('div', {
-        className: o()(b.infoContainer, b.infoTooltip),
+        className: a()(b.infoContainer, b.infoTooltip),
         children: [
             (0, r.jsx)(A, { sound: t }),
             (0, r.jsxs)('div', {
@@ -169,7 +169,7 @@ function N(e) {
     });
 }
 function C(e) {
-    let { renderPopout: t, position: n, tooltipText: a, children: s, setTooltipShowing: l, clickableClassName: u } = e,
+    let { renderPopout: t, position: n, tooltipText: o, children: s, setTooltipShowing: l, clickableClassName: u } = e,
         [d, f] = i.useState(!1),
         [_, p] = i.useState(String(Date.now())),
         h = i.useCallback(
@@ -210,16 +210,16 @@ function C(e) {
                 onTooltipShow: () => {
                     E && (null == l || l(!0));
                 },
-                text: a,
+                text: o,
                 position: 'top',
                 shouldShow: E,
                 children: (t) =>
                     (0, r.jsx)(
                         c.P3F,
                         S(v({ innerRef: g }, t, e), {
-                            'aria-label': a,
+                            'aria-label': o,
                             onClick: h,
-                            className: o()(y.secondaryButtonRefresh, u),
+                            className: a()(y.secondaryButtonRefresh, u),
                             children: s
                         })
                     )

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
-var r = n(255367),
-    i = n(73800),
-    a = n(760907),
-    o = n(260866),
+var r = n(200651),
+    i = n(192379),
+    o = n(359959),
+    a = n(260866),
     s = n(481060),
     l = n(806966),
     c = n(28546),
@@ -19,10 +19,10 @@ let p = i.forwardRef(function (e, t) {
                 searchQuery: e.searchQuery,
                 isSearchSuggestion: e.isSearchSuggestion
             }),
-            a.X
+            o.X
         ),
         y = l.ZN.useStore((e) => e.searchPlaceholder),
-        O = l.ZN.useStore((e) => e.inspectedExpressionPosition, a.X),
+        O = l.ZN.useStore((e) => e.inspectedExpressionPosition, o.X),
         v = i.useCallback(
             (e) => {
                 var t;
@@ -63,7 +63,7 @@ let p = i.forwardRef(function (e, t) {
                     'aria-haspopup': 'grid',
                     'aria-controls': d.Vr,
                     'aria-expanded': !0,
-                    'aria-activedescendant': (0, o.NE)(d.Vr, O.columnIndex, O.rowIndex)
+                    'aria-activedescendant': (0, a.NE)(d.Vr, O.columnIndex, O.rowIndex)
                 }
             })
         })

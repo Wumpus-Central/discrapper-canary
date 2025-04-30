@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(388685);
 var r = n(179360),
     i = n(147913),
-    a = n(430824),
-    o = n(914010),
+    o = n(430824),
+    a = n(914010),
     s = n(713081),
     l = n(905128),
     c = n(50101);
@@ -21,9 +21,9 @@ function u(e, t, n) {
 }
 class d extends i.Z {
     handleSelectedGuildChange() {
-        let e = o.Z.getGuildId();
+        let e = a.Z.getGuildId();
         if (null == e) return;
-        let t = a.Z.getGuild(e);
+        let t = o.Z.getGuild(e);
         null != t &&
             (c.ZP.trackExposure({
                 guildId: t.id,
@@ -37,7 +37,7 @@ class d extends i.Z {
     }
     constructor(...e) {
         super(...e),
-            u(this, 'stores', new Map().set(o.Z, this.handleSelectedGuildChange)),
+            u(this, 'stores', new Map().set(a.Z, this.handleSelectedGuildChange)),
             u(this, 'actions', {
                 GUILD_POWERUP_ENTITLEMENTS_CREATE: this.handleEntitlementUpdate,
                 GUILD_POWERUP_ENTITLEMENTS_DELETE: this.handleEntitlementUpdate

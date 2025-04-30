@@ -1,6 +1,6 @@
 n.d(t, { Z: () => T }), n(388685);
-var i = n(255367),
-    r = n(73800),
+var i = n(200651),
+    r = n(192379),
     s = n(120356),
     l = n.n(s),
     a = n(512722),
@@ -24,17 +24,28 @@ var i = n(255367),
 function v(e) {
     let { subscription: t, renewalMutations: n, transitionState: r, onClose: s, analyticsLocation: l } = e,
         a = (0, c.e7)([b.Z], () => b.Z.theme),
-        { analyticsLocations: h } = (0, g.ZP)(p.Z.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL);
-    async function C() {
-        await (0, m.dP)(t, t.planId, h, l), s();
-    }
-    let v = x.Z.get(t.planId);
-    o()(null != v, 'Missing subscriptionPlan');
-    let T = (0, E.aS)(t.planId, !1, !1, {
+        { analyticsLocations: h } = (0, g.ZP)(p.Z.SUBSCRIPTION_CANCEL_DOWNGRADE_MODAL),
+        C = x.Z.get(t.planId);
+    o()(null != C, 'Missing subscriptionPlan');
+    let v = (0, E.aS)(t.planId, !1, !1, {
             paymentSourceId: t.paymentSourceId,
             currency: t.currency
         }),
-        N = (0, j.og)((0, j.T4)(T.amount, T.currency), v.interval, v.intervalCount);
+        T = (0, j.og)((0, j.T4)(v.amount, v.currency), C.interval, C.intervalCount);
+    async function N() {
+        await (0, m.dP)(
+            t,
+            t.planId,
+            {
+                amount: 0,
+                currency: v.currency
+            },
+            (0, E.UX)(t.items, v.currency),
+            h,
+            l
+        ),
+            s();
+    }
     return (0, i.jsxs)(u.Y0X, {
         transitionState: r,
         'aria-label': O.intl.string(O.t['E9kB4+']),
@@ -55,18 +66,18 @@ function v(e) {
                 children: (0, _.Q0)(t.planId)
                     ? O.intl.format(O.t.GMp54O, {
                           downgradedPlan: E.ZP.getDisplayName(n.planId),
-                          existingRate: N
+                          existingRate: T
                       })
                     : O.intl.format(O.t['vx/NZ2'], {
                           existingPlan: E.ZP.getDisplayName(t.planId),
                           downgradedPlan: E.ZP.getDisplayName(n.planId),
-                          existingRate: N
+                          existingRate: T
                       })
             }),
             (0, i.jsxs)(u.mzw, {
                 children: [
                     (0, i.jsx)(u.zxk, {
-                        onClick: C,
+                        onClick: N,
                         children: O.intl.string(O.t.frE8KC)
                     }),
                     (0, i.jsx)(u.zxk, {

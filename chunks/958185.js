@@ -3,6 +3,6 @@ var r = n(981631);
 function i(e) {
     let { LayerStore: t, PopoutWindowStore: n } = e,
         i = t.hasLayers(),
-        a = n.getWindowOpen(r.KJ3.CHANNEL_CALL_POPOUT) || n.getWindowOpen(r.KJ3.ACTIVITY_POPOUT);
-    return i && !a;
+        o = n.getWindowOpen(r.KJ3.CHANNEL_CALL_POPOUT) || n.getWindowOpen(r.KJ3.ACTIVITY_POPOUT);
+    return i && !o;
 }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(388685), n(642613);
-var r = n(255367),
-    i = n(73800),
-    a = n(793030),
-    o = n(993365),
+var r = n(200651),
+    i = n(192379),
+    o = n(793030),
+    a = n(993365),
     s = n(481060),
     l = n(489863),
     c = n(388032),
@@ -43,13 +43,13 @@ function f(e) {
     return (0, r.jsxs)('div', {
         className: u.selectorGroup,
         children: [
-            (0, r.jsx)(a.X6, {
+            (0, r.jsx)(o.X6, {
                 variant: 'heading-deprecated-12/semibold',
                 className: u.sectionLabel,
                 children: c.intl.string(c.t['8qKd+P'])
             }),
             null != p && '' !== p
-                ? (0, r.jsx)(o.x, {
+                ? (0, r.jsx)(a.x, {
                       variant: 'text-xs/normal',
                       color: 'text-danger',
                       children: p
@@ -63,17 +63,17 @@ function f(e) {
                 options: E,
                 value: f,
                 renderOptionLabel: (e) =>
-                    (0, r.jsx)(o.x, {
+                    (0, r.jsx)(a.x, {
                         variant: 'text-md/normal',
                         children: e.label
                     }),
                 renderOptionValue: (e) =>
-                    (0, r.jsx)(o.x, {
+                    (0, r.jsx)(a.x, {
                         variant: 'text-md/normal',
                         children: e[0].label
                     })
             }),
-            (0, r.jsx)(o.x, {
+            (0, r.jsx)(a.x, {
                 variant: 'text-xs/normal',
                 color: 'header-secondary',
                 className: u.label,

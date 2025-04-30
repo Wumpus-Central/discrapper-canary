@@ -4,15 +4,15 @@ n.d(t, {
     Az: () => s,
     Dv: () => u,
     WA: () => l,
-    fw: () => o,
-    gY: () => a,
+    fw: () => a,
+    gY: () => o,
     lc: () => d
 }),
     n(388685);
 var r = n(957825);
 let i = 'POLL_CREATION_MODAL_KEY',
-    a = 1,
-    o = 10,
+    o = 1,
+    a = 10,
     s = 300,
     l = 55,
     c = 3,

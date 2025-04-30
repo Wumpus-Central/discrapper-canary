@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A });
-var r = n(255367),
-    i = n(73800),
-    a = n(442837),
-    o = n(481060),
+var r = n(200651),
+    i = n(192379),
+    o = n(442837),
+    a = n(481060),
     s = n(174609),
     l = n(703656),
     c = n(210887),
@@ -53,8 +53,8 @@ function S(e, t) {
         r,
         i = T(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -63,16 +63,16 @@ function T(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function A(e) {
     var { onClose: t } = e,
         n = S(e, ['onClose']);
-    let v = (0, a.e7)([d.default], () => d.default.getCurrentUser()),
-        T = (0, a.e7)([c.Z], () => c.Z.theme),
-        A = (0, a.e7)([u.Z], () => u.Z.getGuildId()),
+    let v = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
+        T = (0, o.e7)([c.Z], () => c.Z.theme),
+        A = (0, o.e7)([u.Z], () => u.Z.getGuildId()),
         N = T === b.BRd.LIGHT ? 'light' : 'dark',
         C = (0, r.jsx)('img', {
             className: O.art,
@@ -91,7 +91,7 @@ function A(e) {
         }),
         w = (0, r.jsx)('div', {
             className: O.body,
-            children: (0, r.jsx)(o.Text, {
+            children: (0, r.jsx)(a.Text, {
                 variant: 'text-sm/medium',
                 children: P
             })

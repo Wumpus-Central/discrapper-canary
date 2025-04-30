@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T }), n(388685), n(704826), n(35282), n(539854), n(781311);
 var r = n(879443),
     i = n.n(r),
-    a = n(360038),
-    o = n(710845),
+    o = n(360038),
+    a = n(710845),
     s = n(280049),
     l = n(626135),
     c = n(358085),
@@ -14,7 +14,7 @@ let d = {},
     h = (0, c.isMac)() || (0, c.isMacWeb)() ? 'cmd' : 'ctrl',
     m = (0, c.isMac)() || (0, c.isMacWeb)() ? 'opt' : 'alt',
     g = (0, c.isMac)() || (0, c.isMacWeb)() ? 'return' : 'enter',
-    E = [...a.u.binds, 'mod+shift+[', 'mod+shift+]', 'mod+[', 'mod+]', 'alt+[', 'alt+]', 'ctrl+shift+tab', 'ctrl+tab', 'mod+n', 'mod+t', 'mod+shift+t', 'mod+plus', 'mod+minus', 'mod+0'].map((e) => e.replace('mod', h)),
+    E = [...o.u.binds, 'mod+shift+[', 'mod+shift+]', 'mod+[', 'mod+]', 'alt+[', 'alt+]', 'ctrl+shift+tab', 'ctrl+tab', 'mod+n', 'mod+t', 'mod+shift+t', 'mod+plus', 'mod+minus', 'mod+0'].map((e) => e.replace('mod', h)),
     b = () => [],
     y = [];
 function O(e, t) {
@@ -57,7 +57,7 @@ let T = {
         let t = new Set(),
             n = [];
         for (let r of v(e)) t.has(r) && n.push(r), t.add(r);
-        n.length > 0 && new o.Z('Keybinds').warn('Duplicate keyboard shortcuts defined:', n);
+        n.length > 0 && new a.Z('Keybinds').warn('Duplicate keyboard shortcuts defined:', n);
     },
     setLayout(e) {
         d = e;

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => L }), n(415506), n(388685);
 var r = n(274616),
     i = n(710845),
-    a = n(893988),
-    o = n(812967),
+    o = n(893988),
+    a = n(812967),
     s = n(314897),
     l = n(757266),
     c = n(906467),
@@ -137,7 +137,7 @@ function D(e) {
     );
 }
 let L = {
-    waitSubscribed: (e, t) => new Promise((n, r) => w(() => o.Z.isSubscribed(e, t), n, r)),
+    waitSubscribed: (e, t) => new Promise((n, r) => w(() => a.Z.isSubscribed(e, t), n, r)),
     waitConnected(e) {
         return new Promise(w.bind(this, () => l.Z.isConnected(e)));
     },
@@ -146,11 +146,11 @@ let L = {
             .then((e) => null != e)
             .catch(() => !1),
     launch: (e) => P(C(e)).then(D),
-    launchDispatchApplication(e, t, n, i, o) {
+    launchDispatchApplication(e, t, n, i, a) {
         let { launchOptions: l, defaultLaunchOptionId: c, installPath: f, applicationId: _, branchId: p, buildId: m, shouldPatch: g } = e;
         if (null == l || null == c || null == f) throw Error("Couldn't construct launchable for ".concat(e.applicationId));
-        null == o && (o = c);
-        let E = l[o];
+        null == a && (a = c);
+        let E = l[a];
         if (null == E) throw Error("Couldn't construct launchable for ".concat(e.applicationId, '. No launch option.'));
         return (0, r.o)([p])
             .then((e) => {
@@ -161,7 +161,7 @@ let L = {
             })
             .then(() => d.Z.runLaunchSetup(_, p))
             .then(() => {
-                let e = (0, a.Z)(f),
+                let e = (0, o.Z)(f),
                     r = {
                         DISCORD_INSTANCE_ID: u.Z.getId().toString(),
                         DISCORD_ACCESS_TOKEN: null != t ? t : '',
@@ -181,11 +181,11 @@ let L = {
             : Promise.resolve(!1),
     createShortcuts(e, t, n, r, i) {
         if (null == i || !(0, f.isWindows)()) return Promise.resolve(!1);
-        let a = 'discord:///library/'.concat(r, '/launch'),
-            o = ''.concat(i, '\\icon.ico');
+        let o = 'discord:///library/'.concat(r, '/launch'),
+            a = ''.concat(i, '\\icon.ico');
         return N().then((r) => {
             var i, s;
-            return null != (s = null == (i = r.createShortcuts) ? void 0 : i.call(r, e, t, n, a, o)) && s;
+            return null != (s = null == (i = r.createShortcuts) ? void 0 : i.call(r, e, t, n, o, a)) && s;
         });
     },
     isGameLaunchable: (e) =>

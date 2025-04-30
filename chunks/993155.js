@@ -1,7 +1,7 @@
 var r = n(98405),
     i = n(580983),
-    a = n(896471),
-    o = n(655745),
+    o = n(896471),
+    a = n(655745),
     s = n(555648),
     l = n(683385);
 r(
@@ -13,40 +13,40 @@ r(
     {
         allSettled: function (e) {
             var t = this,
-                n = o.f(t),
+                n = a.f(t),
                 r = n.resolve,
                 c = n.reject,
                 u = s(function () {
-                    var n = a(t.resolve),
-                        o = [],
+                    var n = o(t.resolve),
+                        a = [],
                         s = 0,
                         c = 1;
                     l(e, function (e) {
-                        var a = s++,
+                        var o = s++,
                             l = !1;
                         c++,
                             i(n, t, e).then(
                                 function (e) {
                                     !l &&
                                         ((l = !0),
-                                        (o[a] = {
+                                        (a[o] = {
                                             status: 'fulfilled',
                                             value: e
                                         }),
-                                        --c || r(o));
+                                        --c || r(a));
                                 },
                                 function (e) {
                                     !l &&
                                         ((l = !0),
-                                        (o[a] = {
+                                        (a[o] = {
                                             status: 'rejected',
                                             reason: e
                                         }),
-                                        --c || r(o));
+                                        --c || r(a));
                                 }
                             );
                     }),
-                        --c || r(o);
+                        --c || r(a);
                 });
             return u.error && c(u.value), n.promise;
         }

@@ -1,9 +1,9 @@
 n.d(t, { Z: () => g }), n(953529);
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(442837),
-    a = n(780384),
-    o = n(481060),
+    o = n(780384),
+    a = n(481060),
     s = n(410030),
     l = n(607070),
     c = n(921944),
@@ -70,35 +70,35 @@ function m(e) {
         children: [
             (0, r.jsx)('img', {
                 alt: u.intl.string(u.t.X4IxWF),
-                src: c.getImageUrl((0, a.wj)(_), f),
+                src: c.getImageUrl((0, o.wj)(_), f),
                 className: d.coachmark
             }),
             (0, r.jsxs)('div', {
                 className: d.body,
                 children: [
-                    (0, r.jsx)(o.X6q, {
+                    (0, r.jsx)(a.X6q, {
                         className: d.text,
                         variant: 'heading-sm/semibold',
                         children: c.title()
                     }),
-                    (0, r.jsx)(o.Text, {
+                    (0, r.jsx)(a.Text, {
                         className: d.text,
                         variant: 'text-sm/normal',
                         children: c.description()
                     })
                 ]
             }),
-            (0, r.jsx)(o.zxk, {
+            (0, r.jsx)(a.zxk, {
                 className: d.button,
-                color: o.zxk.Colors.BRAND_INVERTED,
+                color: a.zxk.Colors.BRAND_INVERTED,
                 onClick: () => n(),
                 children: c.cta()
             }),
-            (0, r.jsx)(o.P3F, {
+            (0, r.jsx)(a.P3F, {
                 onClick: t,
                 className: d.closeButton,
                 'aria-label': u.intl.string(u.t.cpT0Cg),
-                children: (0, r.jsx)(o.Dio, {
+                children: (0, r.jsx)(a.Dio, {
                     size: 'md',
                     color: 'currentColor',
                     className: d.closeIcon
@@ -109,8 +109,8 @@ function m(e) {
     });
 }
 function g(e) {
-    let { onComplete: t, onCheckItOutClick: n, markAsDismissed: i, config: a, children: s } = e;
-    return (0, r.jsx)(o.yRy, {
+    let { onComplete: t, onCheckItOutClick: n, markAsDismissed: i, config: o, children: s } = e;
+    return (0, r.jsx)(a.yRy, {
         spacing: 16,
         shouldShow: !0,
         position: 'top',
@@ -125,7 +125,7 @@ function g(e) {
                     onCheckItOutClick: () => {
                         n(), t(), i(c.L.TAKE_ACTION);
                     },
-                    config: a
+                    config: o
                 })
             ),
         onRequestClose: () => void 0,

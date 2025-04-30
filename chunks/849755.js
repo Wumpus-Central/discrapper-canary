@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v });
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(906732),
@@ -19,7 +19,7 @@ var r = n(255367),
     y = n(388032),
     O = n(588015);
 function v(e) {
-    let { voiceChannel: t, onAction: n, onClose: a } = e,
+    let { voiceChannel: t, onAction: n, onClose: o } = e,
         { themeType: v } = (0, m.z)(),
         { analyticsLocations: I } = (0, c.ZP)(),
         S = (0, p.W)(t),
@@ -37,7 +37,7 @@ function v(e) {
     let C = (e) => {
         e.stopPropagation(),
             n({ action: 'PRESS_VOICE_CHANNEL_STATUS' }),
-            v === E.lY.POPOUT && (null == a || a()),
+            v === E.lY.POPOUT && (null == o || o()),
             (0, d.Z)({
                 channel: t,
                 sourceAnalyticsLocations: I
@@ -57,7 +57,7 @@ function v(e) {
                   (0, r.jsx)(l.vdY, {
                       color: 'currentColor',
                       size: 'xxs',
-                      className: o()(O.pencilIcon, null != N ? O.hidden : void 0),
+                      className: a()(O.pencilIcon, null != N ? O.hidden : void 0),
                       'aria-label': y.intl.string(y.t.bt75u7)
                   })
               ]

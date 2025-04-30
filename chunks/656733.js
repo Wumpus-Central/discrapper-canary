@@ -1,8 +1,8 @@
 n.d(t, { Z: () => x }), n(704826), n(35282), n(388685);
 var r,
     i = n(442837),
-    a = n(377108),
-    o = n(570140),
+    o = n(377108),
+    a = n(570140),
     s = n(981631),
     l = n(388032);
 function c(e, t, n) {
@@ -114,15 +114,15 @@ function C(e) {
     if (null != e.query && g === E) return !1;
     null != e.query && (E = e.query),
         (b = e.items.map((e) => {
-            let { width: t, height: n, src: r, gif_src: i, url: o, id: s } = e;
+            let { width: t, height: n, src: r, gif_src: i, url: a, id: s } = e;
             return {
                 width: t,
                 height: n,
                 src: N(r),
                 gifSrc: N(i),
-                url: o,
+                url: a,
                 id: s,
-                format: A(O) ? a.EO.VIDEO : a.EO.IMAGE
+                format: A(O) ? o.EO.VIDEO : o.EO.IMAGE
             };
         }));
 }
@@ -140,7 +140,7 @@ function P(e) {
                       type: s.wI2.TRENDING_GIFS,
                       name: l.intl.string(l.t.H6zNFx),
                       src: N(e.trendingGIFPreview.src),
-                      format: a.EO.IMAGE
+                      format: o.EO.IMAGE
                   }
               ]
             : []),
@@ -148,7 +148,7 @@ function P(e) {
             f(u({}, e), {
                 src: N(e.src),
                 type: s.wI2.TRENDING_CATEGORY,
-                format: a.EO.VIDEO
+                format: o.EO.VIDEO
             })
         )
     ];
@@ -188,7 +188,7 @@ class L extends (r = i.ZP.Store) {
     }
 }
 c(L, 'displayName', 'GIFPickerViewStore');
-let x = new L(o.Z, {
+let x = new L(a.Z, {
     GIF_PICKER_INITIALIZE: S,
     GIF_PICKER_QUERY: T,
     GIF_PICKER_QUERY_SUCCESS: C,

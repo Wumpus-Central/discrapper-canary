@@ -1,8 +1,8 @@
 n.d(t, { Z: () => L }), n(388685), n(539854);
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(493773),
@@ -101,7 +101,7 @@ let D = {
     height: 'auto'
 };
 function L(e) {
-    let { user: t, currentUser: n, displayProfile: a, guildId: p, onOpenUserProfileModal: T, onClose: N } = e,
+    let { user: t, currentUser: n, displayProfile: o, guildId: p, onOpenUserProfileModal: T, onClose: N } = e,
         { analyticsLocations: C } = (0, d.ZP)(),
         { trackUserProfileAction: L } = (0, h.KZ)(),
         { live: x, stream: M } = (0, m.Z)(t.id),
@@ -119,7 +119,7 @@ function L(e) {
         F = i.useRef(null),
         Z = i.useRef(null),
         H = i.useRef(null),
-        Y = i.useRef(null),
+        Y = i.useRef(),
         [W, K] = i.useReducer(w, D),
         { height: z, animationPhase: q } = W,
         Q = 'awaitingInput' !== q,
@@ -139,7 +139,7 @@ function L(e) {
                     {
                         location: 'UserProfileStackedActivity',
                         stream: M,
-                        profileGuildId: null == a ? void 0 : a.guildId
+                        profileGuildId: null == o ? void 0 : o.guildId
                     },
                     $
                 )
@@ -152,7 +152,7 @@ function L(e) {
                     A(
                         {
                             activity: e,
-                            profileGuildId: null == a ? void 0 : a.guildId
+                            profileGuildId: null == o ? void 0 : o.guildId
                         },
                         $
                     )
@@ -168,7 +168,7 @@ function L(e) {
                       look: l.zxk.Looks.BLANK,
                       size: l.zxk.Sizes.NONE,
                       color: l.zxk.Colors.TRANSPARENT,
-                      className: o()(S.viewAllButton, X && S.isShown),
+                      className: a()(S.viewAllButton, X && S.isShown),
                       onClick: () => {
                           L({
                               action: 'PRESS_VIEW_PROFILE',
@@ -217,8 +217,8 @@ function L(e) {
         G || 0 === J.length)
     )
         return null;
-    let ea = 'en-US' === I.intl.currentLocale || 'en-GB' === I.intl.currentLocale,
-        eo = I.intl.string(ea ? I.t.J6STd3 : I.t.IC5Anp);
+    let eo = 'en-US' === I.intl.currentLocale || 'en-GB' === I.intl.currentLocale,
+        ea = I.intl.string(eo ? I.t.J6STd3 : I.t.IC5Anp);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
@@ -229,11 +229,11 @@ function L(e) {
                     (0, r.jsxs)('ul', {
                         ref: Z,
                         className: S.cardsList,
-                        'aria-label': eo,
+                        'aria-label': ea,
                         tabIndex: -1,
                         children: [
                             (0, r.jsxs)('li', {
-                                className: o()(S.firstCardContainer, !X && et.length > 0 && S.hasShowMoreButton),
+                                className: a()(S.firstCardContainer, !X && et.length > 0 && S.hasShowMoreButton),
                                 children: [
                                     ee,
                                     en &&
@@ -244,7 +244,7 @@ function L(e) {
                                                 look: l.zxk.Looks.BLANK,
                                                 size: l.zxk.Sizes.NONE,
                                                 color: l.zxk.Colors.TRANSPARENT,
-                                                className: o()(S.showMoreButton, X && S.isHidden),
+                                                className: a()(S.showMoreButton, X && S.isHidden),
                                                 onClick: ei,
                                                 children: (0, r.jsx)(l.Text, {
                                                     variant: 'text-xs/medium',
@@ -261,7 +261,7 @@ function L(e) {
                                     (0, r.jsx)(
                                         'li',
                                         {
-                                            className: o()(S.remainingCardContainer, 0 === t && S.secondCardContainer, X && S.isShown),
+                                            className: a()(S.remainingCardContainer, 0 === t && S.secondCardContainer, X && S.isShown),
                                             children: e
                                         },
                                         'activity-'.concat(t)
@@ -275,7 +275,7 @@ function L(e) {
             en &&
                 (0, r.jsxs)('div', {
                     ref: H,
-                    className: o()(S.cardsList, S.remainingCardsCopyToMeasure),
+                    className: a()(S.cardsList, S.remainingCardsCopyToMeasure),
                     children: [et, er]
                 })
         ]

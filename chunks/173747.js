@@ -1,8 +1,8 @@
 n.d(t, { Z: () => W }), n(388685), n(539854);
 var r,
     i = n(392711),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(846519),
     l = n(570140),
     c = n(274616),
@@ -66,7 +66,7 @@ function x(e, t) {
             i = p.Z.getState(e, t);
         null != i &&
             i.shouldPatch &&
-            (i.buildId !== n.id || !a().isEqual(i.manifestIds, r)) &&
+            (i.buildId !== n.id || !o().isEqual(i.manifestIds, r)) &&
             l.Z.wait(() => {
                 let i = f.Z.getApplication(e);
                 null != i ? (S.delete((0, g.Tu)(e, t)), (0, d.li)(i, t, n.id, r, !0)) : S.add((0, g.Tu)(e, t));
@@ -80,18 +80,18 @@ function M(e) {
 function k(e) {
     let { applicationId: t, branchId: n, locale: r, build: i } = e;
     y.delete(n);
-    let a = i.manifests.map((e) => {
+    let o = i.manifests.map((e) => {
             let { id: t } = e;
             return t;
         }),
-        o = i.id;
+        a = i.id;
     v.delete(n),
         (O[n] = {
-            id: o,
+            id: a,
             applicationId: t,
             branchId: n,
             locale: r,
-            manifestIds: a
+            manifestIds: o
         }),
         x(t, n);
 }
@@ -144,7 +144,7 @@ function H(e) {
         n.has(t.id) && (0, g.Je)(t) && l.Z.wait(() => u.l(t.id, t.branchId));
     }
 }
-class Y extends (r = o.ZP.Store) {
+class Y extends (r = a.ZP.Store) {
     initialize() {
         this.syncWith([_.Z], D), this.waitFor(p.Z, _.Z, f.Z);
     }

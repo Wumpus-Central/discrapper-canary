@@ -13,7 +13,7 @@
         if (Array.isArray(e)) return n.apply(null, e);
         if (e.toString !== Object.prototype.toString && !e.toString.toString().includes('[native code]')) return e.toString();
         var r = '';
-        for (var a in e) t.call(e, a) && e[a] && (r = i(r, a));
+        for (var o in e) t.call(e, o) && e[o] && (r = i(r, o));
         return r;
     }
     function i(e, t) {

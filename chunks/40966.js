@@ -1,15 +1,15 @@
 n.d(t, { Z: () => u });
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(481060),
-    a = n(626135),
-    o = n(596401),
+    o = n(626135),
+    a = n(596401),
     s = n(981631),
     l = n(388032);
 let c = () => {
-    a.default.track(s.rMx.CHANGE_LOG_CTA_CLICKED, {
+    o.default.track(s.rMx.CHANGE_LOG_CTA_CLICKED, {
         cta_type: 'profile_bio',
-        target: o.D2
+        target: a.D2
     });
 };
 function u() {
@@ -27,7 +27,7 @@ function u() {
                                 onClick: c,
                                 target: '_blank',
                                 rel: 'noreferrer noopener',
-                                href: o.D2,
+                                href: a.D2,
                                 children: e
                             },
                             t

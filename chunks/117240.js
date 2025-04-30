@@ -1,6 +1,6 @@
-let r, i, a;
+let r, i, o;
 n.d(t, { Z: () => R });
-var o,
+var a,
     s = n(772848),
     l = n(442837),
     c = n(433517),
@@ -46,12 +46,12 @@ function T(e) {
     (b = !0), y.start(r, () => (0, f.lx)());
 }
 function A(e) {
-    a = new _.Z(e.user);
+    o = new _.Z(e.user);
 }
 function N() {
     v();
 }
-class C extends (o = l.ZP.Store) {
+class C extends (a = l.ZP.Store) {
     initialize() {
         !1 !== c.K.get(E) && (b = h.isPlatformEmbedded && 'stable' === window.GLOBAL_ENV.RELEASE_CHANNEL);
     }
@@ -59,7 +59,7 @@ class C extends (o = l.ZP.Store) {
         return !m.s.isDisallowPopupsSet() && b;
     }
     get user() {
-        return a;
+        return o;
     }
     get key() {
         return i;

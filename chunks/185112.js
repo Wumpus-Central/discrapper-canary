@@ -1,8 +1,8 @@
 n.d(t, { l: () => f });
 var r = n(314897),
     i = n(131951),
-    a = n(19780),
-    o = n(458725),
+    o = n(19780),
+    a = n(458725),
     s = n(442741),
     l = n(150457);
 function c(e, t, n) {
@@ -38,7 +38,7 @@ let d = 10,
     f = {
         getActiveErrors: () => {
             var e;
-            let t = null == (e = a.Z.getRTCConnection()) ? void 0 : e.getMediaEngineConnectionId();
+            let t = null == (e = o.Z.getRTCConnection()) ? void 0 : e.getMediaEngineConnectionId();
             if (null == t || !i.Z.isVideoEnabled()) return null;
             let n = (0, l.hj)(t, r.default.getId());
             return null == n
@@ -47,7 +47,7 @@ let d = 10,
                   ? [
                         u(
                             {
-                                type: o.u.CAMERA_SEND_LOW_FPS,
+                                type: a.u.CAMERA_SEND_LOW_FPS,
                                 userId: r.default.getId()
                             },
                             (0, s.Y9)()

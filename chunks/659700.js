@@ -2,7 +2,7 @@ t.d(n, {
     X: () => l,
     x: () => i
 });
-var r = t(255367);
+var r = t(200651);
 function l(e) {
     let { level: n, children: t } = e;
     return (0, r.jsx)('h'.concat(n), { children: t });

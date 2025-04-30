@@ -5,11 +5,11 @@ n.d(t, {
     e$: () => b,
     ll: () => v
 });
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(481060),
     l = n(686546),
     c = n(884902),
@@ -29,7 +29,7 @@ function g() {
 function E(e) {
     let { children: t, selected: n } = e;
     return (0, r.jsx)('div', {
-        className: a()(m.container, m.openOnHover, { [m.selected]: n }),
+        className: o()(m.container, m.openOnHover, { [m.selected]: n }),
         children: t
     });
 }
@@ -44,19 +44,19 @@ function y(e) {
     let { users: t, guildId: n, 'aria-hidden': i } = e;
     return (0, r.jsx)('div', {
         className: m.facePile,
-        children: t.map((e, a) => {
-            let o = (0, r.jsx)(s.qEK, {
+        children: t.map((e, o) => {
+            let a = (0, r.jsx)(s.qEK, {
                 src: e.getAvatarURL(n, 80),
                 size: s.EFr.SIZE_16,
                 'aria-label': i ? void 0 : e.username,
                 'aria-hidden': i
             });
-            return a === t.length - 1
+            return o === t.length - 1
                 ? (0, r.jsx)(
                       'div',
                       {
                           className: m.facePileItem,
-                          children: o
+                          children: a
                       },
                       e.id
                   )
@@ -67,7 +67,7 @@ function y(e) {
                           height: 16,
                           className: m.facePileItem,
                           mask: l.ZP.Masks.CONTENT_INVENTORY_CARD_FACE_PILE_AVATAR,
-                          children: o
+                          children: a
                       },
                       e.id
                   );
@@ -75,12 +75,12 @@ function y(e) {
     });
 }
 function O(e) {
-    let { guildId: t, channelId: n, entry: i, maxAvatars: a = 3 } = e,
+    let { guildId: t, channelId: n, entry: i, maxAvatars: o = 3 } = e,
         l = i.author_id,
-        g = (0, o.e7)([f.default], () => f.default.getUser(l)),
-        { displayParticipants: E, participant1: b, participant2: O, numOtherParticipants: v } = (0, p.Z)(i, a),
-        I = (0, o.e7)([u.ZP], () => u.ZP.getMember(t, l)),
-        S = (0, o.e7)(
+        g = (0, a.e7)([f.default], () => f.default.getUser(l)),
+        { displayParticipants: E, participant1: b, participant2: O, numOtherParticipants: v } = (0, p.Z)(i, o),
+        I = (0, a.e7)([u.ZP], () => u.ZP.getMember(t, l)),
+        S = (0, a.e7)(
             [d.Z],
             () => {
                 var e;

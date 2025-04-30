@@ -3,24 +3,24 @@ n.d(t, {
     ZP: () => m,
     qy: () => p
 });
-var r = n(255367),
-    i = n(73800),
-    a = n(317261),
-    o = n(379357),
+var r = n(200651),
+    i = n(192379),
+    o = n(317261),
+    a = n(379357),
     s = n(442550),
     l = n(561308),
     c = n(297781),
     u = n(443487),
     d = n(522314);
 let f = [c.E6],
-    _ = [a._.WEEK];
+    _ = [o._.WEEK];
 function p(e) {
     let t = _;
     return null != e && t.includes(e);
 }
 let h = (e) => {
         let { entry: t, channel: n, selected: i } = e,
-            { largeImage: a } = (0, o.rv)({
+            { largeImage: o } = (0, a.rv)({
                 entry: t,
                 showCoverImage: !1
             }),
@@ -44,10 +44,10 @@ let h = (e) => {
                           ]
                       }),
                       (0, r.jsx)(s.f, {
-                          src: null == a ? void 0 : a.src,
+                          src: null == o ? void 0 : o.src,
                           size: 48,
                           className: d.thumbnail,
-                          alt: null == a ? void 0 : a.alt
+                          alt: null == o ? void 0 : o.alt
                       })
                   ]
               })

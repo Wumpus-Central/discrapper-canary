@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(997945),
     i = n(388032),
-    a = n(105797),
-    o = n(63725),
+    o = n(105797),
+    a = n(63725),
     s = n(924997),
     l = n(861498),
     c = n(749834),
@@ -33,7 +33,7 @@ let C = 60;
 function R() {
     return {
         id: r.aH.DEFAULT,
-        iconSource: o,
+        iconSource: a,
         name: i.intl.string(i.t.ANxkLy),
         isPremium: !1
     };
@@ -138,7 +138,7 @@ function P() {
         },
         {
             id: r.Ru.ANGRY,
-            iconSource: a,
+            iconSource: o,
             isPremium: !0,
             name: i.intl.string(i.t['9PUXpK'])
         },

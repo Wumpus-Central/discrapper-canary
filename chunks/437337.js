@@ -1,9 +1,9 @@
 n.d(t, { r: () => v }), n(388685);
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
-    s = n(481752),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
+    s = n(272573),
     l = n(692547),
     c = n(186325),
     u = n(84735),
@@ -82,24 +82,24 @@ let b = {
         }
     };
 function O(e, t, n, i) {
-    let a = e.to({
+    let o = e.to({
             output: [t, n]
         }),
-        o = i ? [y.X.TOP, y.X.TOP, y.CHECK.TOP, y.CHECK.TOP] : [y.X.TOP, y.BAR.TOP, y.BAR.TOP, y.CHECK.TOP],
+        a = i ? [y.X.TOP, y.X.TOP, y.CHECK.TOP, y.CHECK.TOP] : [y.X.TOP, y.BAR.TOP, y.BAR.TOP, y.CHECK.TOP],
         l = i ? [y.X.BOTTOM, y.X.BOTTOM, y.CHECK.BOTTOM, y.CHECK.BOTTOM] : [y.X.BOTTOM, y.BAR.BOTTOM, y.BAR.BOTTOM, y.CHECK.BOTTOM];
     return (0, r.jsxs)('svg', {
         viewBox: '0 0 20 20',
         fill: 'none',
         children: [
             (0, r.jsx)(s.animated.path, {
-                fill: a,
+                fill: o,
                 d: e.to({
                     range: [0, 0.3, 0.7, 1],
-                    output: o
+                    output: a
                 })
             }),
             (0, r.jsx)(s.animated.path, {
-                fill: a,
+                fill: o,
                 d: e.to({
                     range: [0, 0.3, 0.7, 1],
                     output: l
@@ -109,7 +109,7 @@ function O(e, t, n, i) {
     });
 }
 let v = function (e) {
-    let { id: t, onChange: n, checked: a, disabled: h, className: g, focusProps: y, innerRef: v } = e,
+    let { id: t, onChange: n, checked: o, disabled: h, className: g, focusProps: y, innerRef: v } = e,
         { reducedMotion: I } = i.useContext(c.S),
         S = i.useRef(null),
         [T, A] = i.useState(!1),
@@ -120,7 +120,7 @@ let v = function (e) {
             {
                 config: b,
                 opacity: h ? (N ? 0.5 : 0.3) : 1,
-                state: T ? (a ? 0.7 : 0.3) : +!!a
+                state: T ? (o ? 0.7 : 0.3) : +!!o
             },
             'animate-always'
         );
@@ -140,8 +140,8 @@ let v = function (e) {
             within: !0,
             offset: -2,
             children: (0, r.jsxs)(s.animated.div, {
-                className: o()(p.container, g, {
-                    [p.checked]: a,
+                className: a()(p.container, g, {
+                    [p.checked]: o,
                     [p.disabled]: h
                 }),
                 onMouseDown: () => !h && A(!0),
@@ -200,7 +200,7 @@ let v = function (e) {
                         onKeyDown: L,
                         onKeyUp: x,
                         onChange: D,
-                        checked: a,
+                        checked: o,
                         disabled: h
                     })
                 ]

@@ -1,6 +1,6 @@
 let r = n(40231),
     i = n(889658),
-    a = n(393808);
+    o = n(393808);
 e.exports = (e, t) => {
     e = new i(e, t);
     let n = new r('0.0.0');
@@ -8,7 +8,7 @@ e.exports = (e, t) => {
     n = null;
     for (let t = 0; t < e.set.length; ++t) {
         let i = e.set[t],
-            o = null;
+            a = null;
         i.forEach((e) => {
             let t = new r(e.semver.version);
             switch (e.operator) {
@@ -16,7 +16,7 @@ e.exports = (e, t) => {
                     0 === t.prerelease.length ? t.patch++ : t.prerelease.push(0), (t.raw = t.format());
                 case '':
                 case '>=':
-                    (!o || a(t, o)) && (o = t);
+                    (!a || o(t, a)) && (a = t);
                     break;
                 case '<':
                 case '<=':
@@ -25,7 +25,7 @@ e.exports = (e, t) => {
                     throw Error(`Unexpected operation: ${e.operator}`);
             }
         }),
-            o && (!n || a(n, o)) && (n = o);
+            a && (!n || o(n, a)) && (n = a);
     }
     return n && e.test(n) ? n : null;
 };

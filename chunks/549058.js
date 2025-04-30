@@ -1,13 +1,13 @@
 n.d(t, {
     J7: () => l,
-    gf: () => o,
+    gf: () => a,
     qm: () => i,
-    t7: () => a,
+    t7: () => o,
     xv: () => s
 });
 var r = n(70956);
 let i = 4,
-    a = 5,
-    o = 350,
+    o = 5,
+    a = 350,
     s = r.Z.Millis.MINUTE,
     l = 2 * r.Z.Millis.MINUTE;

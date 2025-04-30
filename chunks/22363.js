@@ -1,9 +1,9 @@
 n.d(t, { Z: () => _ });
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(646574),
+    o = n.n(i),
+    a = n(646574),
     s = n(543241),
     l = n(747613),
     c = n(533432),
@@ -28,7 +28,7 @@ let _ = (e) => {
                 n === d.Hz.REACTION
                     ? (0, r.jsx)('div', {
                           className: f.burstToggle,
-                          children: (0, r.jsx)(o.Z, {
+                          children: (0, r.jsx)(a.Z, {
                               checked: y,
                               onClick: O
                           })
@@ -45,7 +45,7 @@ let _ = (e) => {
             ]
         });
     return (0, r.jsx)('div', {
-        className: a()(f.header, i),
+        className: o()(f.header, i),
         children: null != v ? v(I) : I
     });
 };

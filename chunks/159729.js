@@ -1,8 +1,8 @@
 n.d(t, { y: () => l });
 var r = n(314897),
     i = n(33039),
-    a = n(458725);
-function o(e, t, n) {
+    o = n(458725);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -38,6 +38,6 @@ let l = {
                 let { userId: t, videoStreamId: n } = e;
                 return r.default.getId() === t && null == n;
             })
-            .map((e) => s({ type: a.u.VIDEO_STREAM_SENDER_READY_TIMEOUT_NO_STREAM }, e)),
+            .map((e) => s({ type: o.u.VIDEO_STREAM_SENDER_READY_TIMEOUT_NO_STREAM }, e)),
     makeErrorContextKey: (e) => ''.concat(e.mediaContext, ':').concat(e.userId)
 };

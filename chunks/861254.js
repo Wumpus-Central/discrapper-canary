@@ -1,14 +1,14 @@
 n.d(t, {
-    BK: () => a,
+    BK: () => o,
     ZP: () => s,
-    kX: () => o
+    kX: () => a
 });
 var r = n(818083),
     i = n(987338),
-    a = (function (e) {
+    o = (function (e) {
         return (e.MicPushToEnable = 'mic-push-to-enable'), (e.MicButtonMovedLeft = 'mic-button-moved-left'), (e.GroupedButtonsControlColors = 'grouped-buttons-control-colors'), (e.GroupedButtonsRedMic = 'grouped-buttons-red-mic'), e;
     })({});
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: 'user',
     id: '2024-12_voice_call_buttons',
     label: 'Voice/Video icon states',
@@ -45,5 +45,5 @@ let o = (0, r.B)({
     ]
 });
 function s(e) {
-    return o.useExperiment(e, { autoTrackExposure: !1 });
+    return a.useExperiment(e, { autoTrackExposure: !1 });
 }

@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(70956);
+    o = n(570140),
+    a = n(70956);
 function s(e, t, n) {
     return (
         t in e
@@ -55,7 +55,7 @@ function p(e) {
 function h(e) {
     let { retryAfterSeconds: t } = e;
     if (((c.fetchState = 3), null != t)) {
-        let e = t * o.Z.Millis.SECOND;
+        let e = t * a.Z.Millis.SECOND;
         c.nextFetchRetryTimeMs = Date.now() + e;
     }
 }
@@ -96,7 +96,7 @@ class E extends (r = i.ZP.PersistedStore) {
     }
 }
 s(E, 'displayName', 'MyGuildApplicationsStore'), s(E, 'persistKey', 'MyGuildApplicationsStore');
-let b = new E(a.Z, {
+let b = new E(o.Z, {
     LOGOUT: u,
     FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS: d,
     FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS_SUCCESS: p,

@@ -3,11 +3,11 @@ n.d(t, {
     Z: () => T
 }),
     n(997841);
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(512722),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     s = n(115130),
     l = n(906732),
     c = n(563132),
@@ -73,11 +73,11 @@ function v(e, t) {
     );
 }
 function I(e) {
-    let { purchaseType: t, plan: n, premiumSubscription: r, productLine: i, isGift: o, planGroup: s, isPrepaidPaymentSource: l, inReverseTrial: c, paymentSourceId: u, hasPaymentSources: _ } = e;
+    let { purchaseType: t, plan: n, premiumSubscription: r, productLine: i, isGift: a, planGroup: s, isPrepaidPaymentSource: l, inReverseTrial: c, paymentSourceId: u, hasPaymentSources: _ } = e;
     if (null === u && _) return m.intl.string(m.t.CpOiEB);
-    if (t === h.GZ.ONE_TIME) return o ? m.intl.string(m.t.ouo4FB) : m.intl.string(m.t.ExD0Nj);
-    if ((a()(null != n, 'Subscription plan must be selected to render SubscriptionReviewButton'), i === p.POd.BOOST)) return m.intl.string(m.t.eUEeCg);
-    if (o) return m.intl.string(m.t.ouo4FB);
+    if (t === h.GZ.ONE_TIME) return a ? m.intl.string(m.t.ouo4FB) : m.intl.string(m.t.ExD0Nj);
+    if ((o()(null != n, 'Subscription plan must be selected to render SubscriptionReviewButton'), i === p.POd.BOOST)) return m.intl.string(m.t.eUEeCg);
+    if (a) return m.intl.string(m.t.ouo4FB);
     if (c) return m.intl.string(m.t.LQVQIi);
     if ((0, d.PV)(n.id)) return l ? m.intl.string(m.t.cRCCJy) : null != r ? (r.isPausedAllowsResumeButNotUpdates ? m.intl.string(m.t.zpi5pq) : (0, f.R4)(r, n.id, s) ? m.intl.string(m.t.IJI7ys) : m.intl.string(m.t.VPuTc3)) : (0, d.W_)(null, n);
     return m.intl.string(m.t.YScQSE);
@@ -87,7 +87,7 @@ function S(e, t) {
 }
 function T(e) {
     var t;
-    let { legalTermsNodeRef: n, invoiceError: i, planError: a, disablePurchase: d, flashLegalTerms: f, isSubmitting: h, premiumSubscription: b, isGift: O, planGroup: T, isPrepaid: A, isTrial: N, makePurchase: C, needsPaymentSource: R, inReverseTrial: P, onNext: w, onPaymentSourceAdd: D } = e,
+    let { legalTermsNodeRef: n, invoiceError: i, planError: o, disablePurchase: d, flashLegalTerms: f, isSubmitting: h, premiumSubscription: b, isGift: O, planGroup: T, isPrepaid: A, isTrial: N, makePurchase: C, needsPaymentSource: R, inReverseTrial: P, onNext: w, onPaymentSourceAdd: D } = e,
         { application: L, selectedPlan: x, hasAcceptedTerms: M, purchaseType: k, paymentSourceId: j, activeSubscription: U, devShelfFetchState: G, hasPaymentSources: B } = (0, c.JL)(),
         V = I({
             purchaseType: k,
@@ -101,20 +101,20 @@ function T(e) {
             hasPaymentSources: B
         }),
         { analyticsLocations: F } = (0, l.ZP)();
-    if (null != i || null != a || d)
-        return (0, r.jsx)(o.zxk, {
-            color: o.zxk.Colors.GREEN,
+    if (null != i || null != o || d)
+        return (0, r.jsx)(a.zxk, {
+            color: a.zxk.Colors.GREEN,
             disabled: !0,
             children: V
         });
     if (R && B)
-        return (0, r.jsx)(o.ua7, {
+        return (0, r.jsx)(a.ua7, {
             text: m.intl.string(m.t.L7jbQU),
             children: (e) =>
                 (0, r.jsx)(
-                    o.zxk,
+                    a.zxk,
                     v(y({}, e), {
-                        color: o.zxk.Colors.BRAND,
+                        color: a.zxk.Colors.BRAND,
                         type: 'submit',
                         'data-testid': 'submitButton',
                         onClick: D,
@@ -123,13 +123,13 @@ function T(e) {
                 )
         });
     if (R && !B)
-        return (0, r.jsx)(o.ua7, {
+        return (0, r.jsx)(a.ua7, {
             text: m.intl.string(m.t.L7jbQU),
             children: (e) =>
                 (0, r.jsx)(
-                    o.zxk,
+                    a.zxk,
                     v(y({}, e), {
-                        color: o.zxk.Colors.GREEN,
+                        color: a.zxk.Colors.GREEN,
                         type: 'submit',
                         'data-testid': 'submitButton',
                         disabled: !0,
@@ -138,13 +138,13 @@ function T(e) {
                 )
         });
     if ((0, u.yE)(null != (t = null == L ? void 0 : L.flags) ? t : 0, p.udG.EMBEDDED) && G === s.O.LOADING)
-        return (0, r.jsx)(o.ua7, {
+        return (0, r.jsx)(a.ua7, {
             text: m.intl.string(m.t.cjA5tr),
             children: (e) =>
                 (0, r.jsx)(
-                    o.zxk,
+                    a.zxk,
                     v(y({}, e), {
-                        color: o.zxk.Colors.GREEN,
+                        color: a.zxk.Colors.GREEN,
                         type: 'submit',
                         'data-testid': 'submitButton',
                         disabled: !0,
@@ -153,11 +153,11 @@ function T(e) {
                 )
         });
     if (N)
-        return (0, r.jsxs)(o.gtL, {
+        return (0, r.jsxs)(a.gtL, {
             innerClassName: g.innerButton,
             'data-testid': M ? 'purchase' : 'submitButton',
             onClick: M ? C : () => S(n, f),
-            color: o.zxk.Colors.GREEN,
+            color: a.zxk.Colors.GREEN,
             submitting: h,
             children: [
                 (0, r.jsx)('img', {
@@ -169,13 +169,13 @@ function T(e) {
             ]
         });
     else if (!M)
-        return (0, r.jsx)(o.ua7, {
+        return (0, r.jsx)(a.ua7, {
             text: m.intl.string(m.t.XdvBLS),
             children: (e) =>
                 (0, r.jsx)(
-                    o.zxk,
+                    a.zxk,
                     v(y({}, e), {
-                        color: o.zxk.Colors.GREEN,
+                        color: a.zxk.Colors.GREEN,
                         type: 'submit',
                         onClick: () => S(n, f),
                         'data-testid': 'submitButton',
@@ -193,10 +193,10 @@ function T(e) {
             analyticsLocations: F
         });
     else
-        return (0, r.jsx)(o.zxk, {
+        return (0, r.jsx)(a.zxk, {
             'data-testid': 'purchase',
             onClick: C,
-            color: o.zxk.Colors.GREEN,
+            color: a.zxk.Colors.GREEN,
             submitting: h,
             children: V
         });

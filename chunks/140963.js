@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I }), n(781311), n(35282), n(388685), n(704826);
-var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+var r = n(200651),
+    i = n(192379),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(239091),
     c = n(555573),
@@ -121,8 +121,8 @@ class v extends i.PureComponent {
             let t = this._ref;
             if (null == t) return;
             let i = t.value.slice(0, t.selectionStart - r.length),
-                a = t.value.slice(t.selectionEnd);
-            this._insertText(e, i, a, n);
+                o = t.value.slice(t.selectionEnd);
+            this._insertText(e, i, o, n);
         }
     }
     insertText(e, t) {
@@ -130,17 +130,17 @@ class v extends i.PureComponent {
             r = this._ref;
         if (null == r) return;
         let i = r.value.slice(0, r.selectionStart),
-            a = r.value.slice(r.selectionEnd);
-        this._insertText(e, i, a, n);
+            o = r.value.slice(r.selectionEnd);
+        this._insertText(e, i, o, n);
     }
     _insertText(e, t, n, r) {
         if (null == this._ref) return;
         r && (e += ' ');
         let i = t + e + n,
-            { onChange: a } = this.props;
-        null == a || a(null, i, (0, p.JM)(i));
-        let o = t.length + e.length;
-        this.setState({ nextSelection: o }, () => {
+            { onChange: o } = this.props;
+        null == o || o(null, i, (0, p.JM)(i));
+        let a = t.length + e.length;
+        this.setState({ nextSelection: a }, () => {
             this.props.maybeShowAutocomplete();
         });
     }
@@ -151,7 +151,7 @@ class v extends i.PureComponent {
         return null != t && t.length > 0 && t.length % 2 != 0;
     }
     render() {
-        let { value: e, disabled: t, placeholder: n, required: i, onResize: a, className: l, id: c, submitting: u, textAreaPaddingClassName: f, spellcheckEnabled: _, 'aria-controls': p, 'aria-expanded': m, 'aria-activedescendant': g } = this.props;
+        let { value: e, disabled: t, placeholder: n, required: i, onResize: o, className: l, id: c, submitting: u, textAreaPaddingClassName: f, spellcheckEnabled: _, 'aria-controls': p, 'aria-expanded': m, 'aria-activedescendant': g } = this.props;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(d.d9, {
@@ -160,7 +160,7 @@ class v extends i.PureComponent {
                 }),
                 (0, r.jsx)(s.lcI, {
                     ref: this.handleSetRef,
-                    className: o()(l, f),
+                    className: a()(l, f),
                     id: c,
                     rows: 1,
                     fontWidthEstimate: 6,
@@ -168,7 +168,7 @@ class v extends i.PureComponent {
                     disabled: t || u,
                     required: i,
                     onChange: this.handleOnChange,
-                    onResize: a,
+                    onResize: o,
                     onKeyPress: this.handleKeyPress,
                     onKeyDown: this.handleKeyDown,
                     onKeyUp: this.handleKeyUp,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O });
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(881052);
+    o = n(570140),
+    a = n(881052);
 function s(e, t, n) {
     return (
         t in e
@@ -28,11 +28,11 @@ function f() {
 }
 function _(e) {
     let { message: t, code: n } = e;
-    l = new o.HF(t, n);
+    l = new a.HF(t, n);
 }
 function p(e) {
     let { message: t, code: n } = e;
-    l = new o.HF(t, n);
+    l = new a.HF(t, n);
 }
 function h() {
     l = null;
@@ -60,7 +60,7 @@ class y extends (r = i.ZP.Store) {
     }
 }
 s(y, 'displayName', 'PremiumPaymentModalStore');
-let O = new y(a.Z, {
+let O = new y(o.Z, {
     PREMIUM_PAYMENT_SUBSCRIBE_FAIL: d,
     PREMIUM_PAYMENT_UPDATE_FAIL: d,
     PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: f,

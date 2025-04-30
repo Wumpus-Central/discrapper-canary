@@ -21,18 +21,18 @@ if ('function' == typeof i && 'function' == typeof Object.defineProperty)
         e !== n && (i = null);
     }
 else i = null;
-var a = /^\s*class\b/,
-    o = function (e) {
+var o = /^\s*class\b/,
+    a = function (e) {
         try {
             var t = r.call(e);
-            return a.test(t);
+            return o.test(t);
         } catch (e) {
             return !1;
         }
     },
     s = function (e) {
         try {
-            if (o(e)) return !1;
+            if (a(e)) return !1;
             return r.call(e), !0;
         } catch (e) {
             return !1;
@@ -71,13 +71,13 @@ e.exports = i
           } catch (e) {
               if (e !== n) return !1;
           }
-          return !o(e) && s(e);
+          return !a(e) && s(e);
       }
     : function (e) {
           if (g(e)) return !0;
           if (!e || ('function' != typeof e && 'object' != typeof e)) return !1;
           if (h) return s(e);
-          if (o(e)) return !1;
+          if (a(e)) return !1;
           var t = l.call(e);
           return (t === u || t === d || !!/^\[object HTML/.test(t)) && s(e);
       };

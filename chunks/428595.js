@@ -1,8 +1,8 @@
 n.d(t, { Z: () => er }), n(35282), n(704826), n(539854), n(804061), n(388685), n(781311), n(413496), n(433524);
 var r = n(392711),
     i = n.n(r),
-    a = n(159635),
-    o = n.n(a),
+    o = n(477660),
+    a = n.n(o),
     s = n(797610),
     l = n(633302),
     c = n(181918),
@@ -111,27 +111,27 @@ let F = (e) => {
     },
     Z = (e) => (null != e.guildId ? f.Z.getGuild(e.guildId) : null != e.channelId ? f.Z.getGuild(F(e.channelId)) : null),
     H = {
-        newline: o().defaultRules.newline,
-        paragraph: o().defaultRules.paragraph,
-        escape: M(L({}, o().defaultRules.escape), { match: (e, t, n) => (!1 === t.allowEscape ? null : o().defaultRules.escape.match(e, t, n)) }),
-        blockQuote: M(L({}, o().defaultRules.blockQuote), {
+        newline: a().defaultRules.newline,
+        paragraph: a().defaultRules.paragraph,
+        escape: M(L({}, a().defaultRules.escape), { match: (e, t, n) => (!1 === t.allowEscape ? null : a().defaultRules.escape.match(e, t, n)) }),
+        blockQuote: M(L({}, a().defaultRules.blockQuote), {
             requiredFirstCharacters: [' ', '>'],
             match(e, t) {
                 let { prevCapture: n, inQuote: r, nested: i } = t;
                 if (r || i) return null;
                 if (null == n) return k.exec(e);
-                let a = n[0];
-                return j.test(a) ? k.exec(e) : null;
+                let o = n[0];
+                return j.test(o) ? k.exec(e) : null;
             },
             parse(e, t, n) {
                 let r = e[0],
                     i = !!U.exec(r),
-                    a = i ? U : G,
-                    o = r.replace(a, ''),
+                    o = i ? U : G,
+                    a = r.replace(o, ''),
                     s = n.inQuote || !1,
                     l = n.inline || !1;
                 (n.inQuote = !0), i || (n.inline = !0);
-                let c = t(o, n);
+                let c = t(a, n);
                 return (
                     (n.inQuote = s),
                     (n.inline = l),
@@ -148,14 +148,14 @@ let F = (e) => {
             }
         }),
         link: b.ZP,
-        autolink: M(L({}, o().defaultRules.autolink), { parse: V }),
-        mailto: M(L({}, o().defaultRules.mailto), {
-            match: o().inlineRegex(/^<([^\s<>@]+@[^\s<>@]+\.[^\s<>@]+)>/),
+        autolink: M(L({}, a().defaultRules.autolink), { parse: V }),
+        mailto: M(L({}, a().defaultRules.mailto), {
+            match: a().inlineRegex(/^<([^\s<>@]+@[^\s<>@]+\.[^\s<>@]+)>/),
             requiredFirstCharacters: ['<']
         }),
-        tel: M(L({}, o().defaultRules.mailto), {
+        tel: M(L({}, a().defaultRules.mailto), {
             requiredFirstCharacters: ['<'],
-            match: o().inlineRegex(/^<((?:(?:tel|sms):\+?|\+)(?:([0-9]+|\([0-9]+\)))(?:[- .\/]?([0-9]+|\([0-9]+\)))+)>/),
+            match: a().inlineRegex(/^<((?:(?:tel|sms):\+?|\+)(?:([0-9]+|\([0-9]+\)))(?:[- .\/]?([0-9]+|\([0-9]+\)))+)>/),
             parse(e) {
                 let t = e[1],
                     n = e[1].replaceAll(/[ \/]+/g, '-');
@@ -174,7 +174,7 @@ let F = (e) => {
                 );
             }
         }),
-        url: M(L({}, o().defaultRules.url), {
+        url: M(L({}, a().defaultRules.url), {
             requiredFirstCharacters: ['h', 's'],
             match(e, t) {
                 if (!t.inline) return null;
@@ -196,14 +196,14 @@ let F = (e) => {
             },
             parse: V
         }),
-        strong: o().defaultRules.strong,
-        em: o().defaultRules.em,
-        u: o().defaultRules.u,
-        br: o().defaultRules.br,
+        strong: a().defaultRules.strong,
+        em: a().defaultRules.em,
+        u: a().defaultRules.u,
+        br: a().defaultRules.br,
         text: I.ZP,
-        inlineCode: M(L({}, o().defaultRules.inlineCode), {
+        inlineCode: M(L({}, a().defaultRules.inlineCode), {
             parse(e, t, n) {
-                let r = o().defaultRules.inlineCode.parse(e, t, n);
+                let r = a().defaultRules.inlineCode.parse(e, t, n);
                 return !0 === n.parseInlineCodeChildContent ? M(L({}, r), { validationChildContent: t(r.content, n) }) : r;
             }
         }),
@@ -217,7 +217,7 @@ let F = (e) => {
             })
         },
         codeBlock: {
-            order: o().defaultRules.codeBlock.order,
+            order: a().defaultRules.codeBlock.order,
             requiredFirstCharacters: ['`'],
             match: (e) => /^```(?:([a-z0-9_+\-.#]+?)\n)?\n*([^\n][^]*?)\n*```/i.exec(e),
             parse(e, t, n) {
@@ -234,7 +234,7 @@ let F = (e) => {
             requiredFirstCharacters: ['<'],
             match: (e) => /^<@&(\d+)>/.exec(e),
             parse(e, t, n) {
-                var r, i, a, o, s, l;
+                var r, i, o, a, s, l;
                 let [u, d] = e;
                 if (n.returnMentionIds)
                     return {
@@ -249,7 +249,7 @@ let F = (e) => {
                         content: '@'.concat(w.intl.string(w.t['YV4F/v']))
                     };
                 let h = (0, c.OC)(null == _ ? void 0 : _.id, 'parse'),
-                    m = (null == (r = p.colors) ? void 0 : r.primary_color) === 0 && (null == (i = p.colors) ? void 0 : i.secondary_color) == null && (null == (a = p.colors) ? void 0 : a.tertiary_color) == null;
+                    m = (null == (r = p.colors) ? void 0 : r.primary_color) === 0 && (null == (i = p.colors) ? void 0 : i.secondary_color) == null && (null == (o = p.colors) ? void 0 : o.tertiary_color) == null;
                 return {
                     type: 'mention',
                     channelId: n.channelId,
@@ -259,7 +259,7 @@ let F = (e) => {
                     roleColors:
                         h && !m
                             ? {
-                                  primaryColor: null == (o = p.colors) ? void 0 : o.primary_color,
+                                  primaryColor: null == (a = p.colors) ? void 0 : a.primary_color,
                                   secondaryColor: null == (s = p.colors) ? void 0 : s.secondary_color,
                                   tertiaryColor: null == (l = p.colors) ? void 0 : l.tertiary_color
                               }
@@ -295,13 +295,13 @@ let F = (e) => {
                               type: 'mention',
                               id: e[1]
                           };
-                let a = _.default.getUser(e[1]),
-                    o = d.Z.getChannel(n.channelId);
-                if (null != a && ((i = a.id), (r = a.toString()), null != o)) {
+                let o = _.default.getUser(e[1]),
+                    a = d.Z.getChannel(n.channelId);
+                if (null != o && ((i = o.id), (r = o.toString()), null != a)) {
                     var l;
-                    r = null != (l = p.ZP.getNickname(o.getGuildId(), n.channelId, a)) ? l : h.ZP.getName(a);
+                    r = null != (l = p.ZP.getNickname(a.getGuildId(), n.channelId, o)) ? l : h.ZP.getName(o);
                 }
-                null == a && '@Clyde' === e[0] && (0, s.gJ)(Z(n), o) && (i = P.fL);
+                null == o && '@Clyde' === e[0] && (0, s.gJ)(Z(n), a) && (i = P.fL);
                 let c = e[1],
                     u = null != c && C.Xyh.test(c.trim()),
                     f = u && n.unknownUserMentionPlaceholder ? '@'.concat(w.intl.string(w.t.sKdZ6e)) : e[0];
@@ -309,7 +309,7 @@ let F = (e) => {
                     userId: i,
                     channelId: n.channelId,
                     viewingChannelId: n.viewingChannelId,
-                    guildId: null == o ? void 0 : o.getGuildId(),
+                    guildId: null == a ? void 0 : a.getGuildId(),
                     parsedUserId: u ? c : null,
                     roleName: e[2],
                     content: [
@@ -338,7 +338,7 @@ let F = (e) => {
         attachmentLink: m.Z.attachmentLink,
         shopLink: O.Z.shopLink,
         commandMention: {
-            order: o().defaultRules.text.order,
+            order: a().defaultRules.text.order,
             requiredFirstCharacters: ['<'],
             match: (e) => RegExp('^<\\/((?:[-_\\p{Letter}\\p{Number}\\p{sc=Deva}\\p{sc=Thai}]{1,32})(?: [-_\\p{Letter}\\p{Number}\\p{sc=Deva}\\p{sc=Thai}]{1,32})?(?: [-_\\p{Letter}\\p{Number}\\p{sc=Deva}\\p{sc=Thai}]{1,32})?):(\\d+)>', 'u').exec(e),
             parse(e, t, n) {
@@ -409,10 +409,10 @@ let F = (e) => {
             }
         },
         s: {
-            order: o().defaultRules.u.order,
+            order: a().defaultRules.u.order,
             requiredFirstCharacters: ['~'],
-            match: o().inlineRegex(/^~~([\s\S]+?)~~(?!_)/),
-            parse: o().defaultRules.u.parse
+            match: a().inlineRegex(/^~~([\s\S]+?)~~(?!_)/),
+            parse: a().defaultRules.u.parse
         },
         spoiler: {
             order: I.ZP.order,
@@ -429,9 +429,9 @@ let F = (e) => {
             match: (e) => C.PEY.exec(e),
             parse(e, t, n) {
                 var r;
-                let [, i, a] = e,
-                    o = (0, T.l)(i),
-                    s = (0, T.W)(i, a, null == (r = Z(n)) ? void 0 : r.id);
+                let [, i, o] = e,
+                    a = (0, T.l)(i),
+                    s = (0, T.W)(i, o, null == (r = Z(n)) ? void 0 : r.id);
                 function l(e) {
                     return null == e
                         ? null
@@ -443,10 +443,10 @@ let F = (e) => {
                           ];
                 }
                 return {
-                    content: l(o + (null != s ? ' \u203A '.concat(s) : '')),
-                    mainContent: l(o),
+                    content: l(a + (null != s ? ' \u203A '.concat(s) : '')),
+                    mainContent: l(a),
                     itemContent: l(s),
-                    itemId: a,
+                    itemId: o,
                     id: i,
                     guildId: F(n.channelId),
                     channelId: i
@@ -499,17 +499,17 @@ let et = 10,
                         while (r && -1 !== n);
                     if (-1 === n) return null;
                     let i = e.substring(0, n),
-                        a = e.substring(n + t.highlightWord.length);
-                    return [e, t.highlightWord, i, a];
+                        o = e.substring(n + t.highlightWord.length);
+                    return [e, t.highlightWord, i, o];
                 },
                 parse(e, t, n) {
                     var r;
                     let i = null != (r = n.parseDepth) ? r : 0,
-                        a = M(L({}, n), { parseDepth: i + 1 }),
-                        o = t(e[2], a),
-                        s = t(e[3], a);
+                        o = M(L({}, n), { parseDepth: i + 1 }),
+                        a = t(e[2], o),
+                        s = t(e[3], o);
                     return [
-                        ...o,
+                        ...a,
                         {
                             type: 'highlight',
                             content: e[1]

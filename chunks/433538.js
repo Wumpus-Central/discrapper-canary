@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l }), n(388685);
 var r = n(241601),
     i = n(147913),
-    a = n(405656);
-function o(e, t, n) {
+    o = n(405656);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +17,7 @@ function o(e, t, n) {
 }
 class s extends i.Z {
     _initialize() {
-        this._unsubscribeIntlLoadingStore = (0, r.Ql)(a.Pe);
+        this._unsubscribeIntlLoadingStore = (0, r.Ql)(o.Pe);
     }
     _terminate() {
         var e, t;
@@ -25,11 +25,11 @@ class s extends i.Z {
     }
     constructor(...e) {
         super(...e),
-            o(this, 'actions', {
-                USER_SETTINGS_PROTO_UPDATE: a.Pe,
-                POST_CONNECTION_OPEN: a.Pe
+            a(this, 'actions', {
+                USER_SETTINGS_PROTO_UPDATE: o.Pe,
+                POST_CONNECTION_OPEN: o.Pe
             }),
-            o(this, '_unsubscribeIntlLoadingStore', void 0);
+            a(this, '_unsubscribeIntlLoadingStore', void 0);
     }
 }
 let l = new s();

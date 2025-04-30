@@ -1,9 +1,9 @@
 n.d(t, { z: () => c });
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(723938),
-    a = n(931989),
-    o = n(396704);
+    o = n(931989),
+    a = n(396704);
 function s(e, t, n) {
     return (
         t in e
@@ -34,6 +34,6 @@ function l(e) {
     return e;
 }
 function c(e) {
-    let { status: t, buffer: n } = (0, o.V)(i.Z);
-    return 'loading' === t ? null : (0, r.jsx)(a.Z, l({ buffer: n }, e));
+    let { status: t, buffer: n } = (0, a.V)(i.Z);
+    return 'loading' === t ? null : (0, r.jsx)(o.Z, l({ buffer: n }, e));
 }

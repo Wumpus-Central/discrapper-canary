@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O }), n(388685), n(781311);
-var r = n(255367),
-    i = n(73800),
-    a = n(906732),
-    o = n(541716),
+var r = n(200651),
+    i = n(192379),
+    o = n(906732),
+    a = n(541716),
     s = n(752305),
     l = n(893718),
     c = n(131704),
@@ -70,12 +70,12 @@ let y = (0, c.kt)({
 });
 function O(e) {
     let { user: t, guildId: n, channelId: c, onClose: _, disableAutoFocus: m = !1 } = e,
-        { newestAnalyticsLocation: E } = (0, a.ZP)(),
+        { newestAnalyticsLocation: E } = (0, o.ZP)(),
         { trackUserProfileAction: O } = (0, d.KZ)(),
         [v, I] = i.useState(''),
         [S, T] = i.useState((0, s.JM)(v)),
         A = i.useRef(!1),
-        N = i.useMemo(() => b(g({}, o.Ie.USER_PROFILE), { disableAutoFocus: m }), [m]);
+        N = i.useMemo(() => b(g({}, a.Ie.USER_PROFILE), { disableAutoFocus: m }), [m]);
     return (0, r.jsx)(l.Z, {
         className: h.container,
         editorClassName: h.editor,

@@ -1,6 +1,6 @@
 n.d(t, {
-    FN: () => a,
-    ld: () => o,
+    FN: () => o,
+    ld: () => a,
     qM: () => u,
     rr: () => l,
     sQ: () => c,
@@ -8,10 +8,10 @@ n.d(t, {
 });
 var r = n(818083),
     i = n(987338),
-    a = (function (e) {
+    o = (function (e) {
         return (e.CONTEXT_MENU = 'context_menu'), (e.TOOLBAR = 'toolbar'), e;
     })({});
-let o = (0, r.B)({
+let a = (0, r.B)({
     id: '2025-03_dm_chat_wallpapers_setter',
     kind: 'user',
     label: 'DM Chat Wallpapers',
@@ -38,7 +38,7 @@ let o = (0, r.B)({
 });
 function s(e) {
     let { location: t } = e;
-    return o.useExperiment({ location: t });
+    return a.useExperiment({ location: t });
 }
 let l = (0, r.B)({
     id: '2025-03_dm_chat_wallpapers_viewer',

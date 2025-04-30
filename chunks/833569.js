@@ -5,11 +5,11 @@ n.d(t, {
     n(388685),
     n(415506);
 var i,
-    r = n(255367),
-    s = n(73800),
+    r = n(200651),
+    s = n(192379),
     l = n(120356),
     a = n.n(l),
-    o = n(505266),
+    o = n(995899),
     c = n(512722),
     d = n.n(c),
     u = n(442837),
@@ -77,8 +77,19 @@ async function W(e) {
         if ((r(!0), i(!1), [V.O0b.PAST_DUE, V.O0b.PAUSED, V.O0b.BILLING_RETRY].includes(t.status))) await (0, g.EO)(t.id, s, l);
         else {
             var a, o;
-            let e = null != (o = null == (a = t.renewalMutations) ? void 0 : a.items) ? o : t.items;
-            await (0, g.Mg)(t, { items: (0, S.Ue)(e) }, s, l);
+            let e = null != (o = null == (a = t.renewalMutations) ? void 0 : a.items) ? o : t.items,
+                n = (0, S.Ue)(e);
+            await (0, g.Mg)(
+                t,
+                { items: n },
+                {
+                    amount: 0,
+                    currency: t.currency
+                },
+                (0, S.UX)(n, t.currency),
+                s,
+                l
+            );
         }
         n();
     } catch (e) {

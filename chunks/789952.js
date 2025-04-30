@@ -1,12 +1,12 @@
 n.r(t),
     n.d(t, {
-        hasDomParent: () => o,
+        hasDomParent: () => a,
         isDOMRangeCollapsed: () => s,
         normalizeDOMPoint: () => l
     }),
     n(415506),
     n(388685);
-var r = n(650557);
+var r = n(270445);
 function i(e) {
     return f(e)
         ? {
@@ -22,25 +22,25 @@ function i(e) {
               focusOffset: e.endOffset
           };
 }
-let a = !1;
+let o = !1;
 {
     r.F3.toSlateRange = (e, t, n) => {
-        let { exactMatch: a, suppressThrow: o } = n,
+        let { exactMatch: o, suppressThrow: a } = n,
             { anchorNode: l, anchorOffset: c, focusNode: u, focusOffset: d } = i(t),
             f = s(l, c, u, d);
         if (null == l || null == u || null == c || null == d) {
-            if (o) return null;
+            if (a) return null;
             throw Error('Cannot resolve a Slate range from DOM range');
         }
         let _ = r.F3.toSlatePoint(e, [l, c], {
-                exactMatch: a,
-                suppressThrow: o
+                exactMatch: o,
+                suppressThrow: a
             }),
             p = f
                 ? _
                 : r.F3.toSlatePoint(e, [u, d], {
-                      exactMatch: a,
-                      suppressThrow: o
+                      exactMatch: o,
+                      suppressThrow: a
                   });
         return null != _ && null != p
             ? {
@@ -51,21 +51,21 @@ let a = !1;
     };
     let e = r.F3.toSlatePoint;
     (r.F3.toSlatePoint = (t, n, r) => {
-        let { exactMatch: i, suppressThrow: a, direction: o = 'forward' } = r;
-        i || (n = l(n, o));
+        let { exactMatch: i, suppressThrow: o, direction: a = 'forward' } = r;
+        i || (n = l(n, a));
         try {
             return e(t, n, {
                 exactMatch: !0,
-                suppressThrow: a
+                suppressThrow: o
             });
         } catch (e) {
-            if (a) return null;
+            if (o) return null;
             throw e;
         }
     }),
-        (a = !0);
+        (o = !0);
 }
-function o(e, t) {
+function a(e, t) {
     if (null == t) return !1;
     for (; null != e; ) {
         if (e === t) return !0;
@@ -84,25 +84,25 @@ function l(e, t) {
         let e = 'backward' === t ? r.childNodes.length - 1 : 0;
         r = c(r, e, t)[0];
     }
-    let a = 'backward' === t && null != r.textContent ? r.textContent.length : 0;
-    return [r, a];
+    let o = 'backward' === t && null != r.textContent ? r.textContent.length : 0;
+    return [r, o];
 }
 function c(e, t, n) {
     let { childNodes: r } = e,
         i = r[t],
-        a = t,
-        o = !1,
+        o = t,
+        a = !1,
         s = !1;
-    for (; (u(i) || (d(i) && 0 === i.childNodes.length) || (d(i) && 'false' === i.getAttribute('contenteditable'))) && (!o || !s); ) {
-        if (a >= r.length) {
-            (o = !0), (a = t - 1), (n = 'backward');
+    for (; (u(i) || (d(i) && 0 === i.childNodes.length) || (d(i) && 'false' === i.getAttribute('contenteditable'))) && (!a || !s); ) {
+        if (o >= r.length) {
+            (a = !0), (o = t - 1), (n = 'backward');
             continue;
         }
-        if (a < 0) {
-            (s = !0), (a = t + 1), (n = 'forward');
+        if (o < 0) {
+            (s = !0), (o = t + 1), (n = 'forward');
             continue;
         }
-        (i = r[a]), (t = a), (a += 'forward' === n ? 1 : -1);
+        (i = r[o]), (t = o), (o += 'forward' === n ? 1 : -1);
     }
     return [i, t];
 }

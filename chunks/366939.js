@@ -8,13 +8,13 @@ n.d(t, {
 });
 var r = n(512722),
     i = n.n(r),
-    a = n(570140),
-    o = n(74538),
+    o = n(570140),
+    a = n(74538),
     s = n(355467),
     l = n(981631);
 async function c(e) {
-    let { planId: t, currency: n, paymentSource: r, trialId: i, code: o, metadata: l, referralCode: c, loadId: u } = e;
-    a.Z.dispatch({ type: 'PREMIUM_PAYMENT_SUBSCRIBE_START' });
+    let { planId: t, currency: n, paymentSource: r, trialId: i, code: a, metadata: l, referralCode: c, loadId: u, expectedInvoicePrice: d, expectedRenewalPrice: f } = e;
+    o.Z.dispatch({ type: 'PREMIUM_PAYMENT_SUBSCRIBE_START' });
     try {
         let e = await s.XW({
             items: [
@@ -25,15 +25,17 @@ async function c(e) {
             ],
             paymentSource: r,
             trialId: i,
-            code: o,
+            code: a,
             currency: n,
             metadata: l,
             referralCode: c,
-            loadId: u
+            loadId: u,
+            expectedInvoicePrice: d,
+            expectedRenewalPrice: f
         });
         return (
             null != e.subscription &&
-                a.Z.dispatch({
+                o.Z.dispatch({
                     type: 'PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS',
                     subscription: e.subscription
                 }),
@@ -41,7 +43,7 @@ async function c(e) {
         );
     } catch (e) {
         throw (
-            (a.Z.dispatch({
+            (o.Z.dispatch({
                 type: 'PREMIUM_PAYMENT_SUBSCRIBE_FAIL',
                 error: e
             }),
@@ -51,9 +53,10 @@ async function c(e) {
 }
 async function u(e, t, n, r, c, u) {
     try {
-        let d = (0, o.Af)(e);
+        let d = (0, a.Af)(e);
         i()(d, 'Expected existing premium plan');
-        let f = (0, o.XK)(e, d.planId);
+        let f = (0, a.XK)(e, d.planId),
+            _ = void 0 !== n ? n.toLowerCase() : e.currency;
         await s.Mg(
             e,
             {
@@ -62,14 +65,19 @@ async function u(e, t, n, r, c, u) {
                 items: f,
                 currency: n
             },
+            {
+                amount: 0,
+                currency: _
+            },
+            (0, a.UX)(f, _),
             t,
             c,
             u
         ),
-            a.Z.dispatch({ type: 'PREMIUM_PAYMENT_UPDATE_SUCCESS' });
+            o.Z.dispatch({ type: 'PREMIUM_PAYMENT_UPDATE_SUCCESS' });
     } catch (e) {
         throw (
-            (a.Z.dispatch({
+            (o.Z.dispatch({
                 type: 'PREMIUM_PAYMENT_UPDATE_FAIL',
                 error: e
             }),
@@ -79,17 +87,27 @@ async function u(e, t, n, r, c, u) {
 }
 async function d(e, t, n) {
     try {
-        await s.Mg(e, { status: l.O0b.ACTIVE }, t, n);
+        await s.Mg(
+            e,
+            { status: l.O0b.ACTIVE },
+            {
+                amount: 0,
+                currency: e.currency
+            },
+            (0, a.UX)(e.items, e.currency),
+            t,
+            n
+        );
     } catch (e) {
         throw e;
     }
 }
-async function f(e, t, n, r) {
+async function f(e, t, n, r, i) {
     try {
-        await s.fG(e, t, n, r), a.Z.dispatch({ type: 'PREMIUM_PAYMENT_UPDATE_SUCCESS' });
+        await s.fG(e, t, n, r, i), o.Z.dispatch({ type: 'PREMIUM_PAYMENT_UPDATE_SUCCESS' });
     } catch (e) {
         throw (
-            (a.Z.dispatch({
+            (o.Z.dispatch({
                 type: 'PREMIUM_PAYMENT_UPDATE_FAIL',
                 error: e
             }),
@@ -97,12 +115,12 @@ async function f(e, t, n, r) {
         );
     }
 }
-async function _(e, t, n, r, i) {
+async function _(e, t, n, r, i, a) {
     try {
-        await s.tq(e, t, n, r, i), a.Z.dispatch({ type: 'PREMIUM_PAYMENT_UPDATE_SUCCESS' });
+        await s.tq(e, t, n, r, i, a), o.Z.dispatch({ type: 'PREMIUM_PAYMENT_UPDATE_SUCCESS' });
     } catch (e) {
         throw (
-            (a.Z.dispatch({
+            (o.Z.dispatch({
                 type: 'PREMIUM_PAYMENT_UPDATE_FAIL',
                 error: e
             }),
@@ -111,5 +129,5 @@ async function _(e, t, n, r, i) {
     }
 }
 function p() {
-    a.Z.dispatch({ type: 'PREMIUM_PAYMENT_ERROR_CLEAR' });
+    o.Z.dispatch({ type: 'PREMIUM_PAYMENT_ERROR_CLEAR' });
 }

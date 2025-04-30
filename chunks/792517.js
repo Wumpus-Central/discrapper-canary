@@ -1,9 +1,9 @@
 n.d(t, { Z: () => E });
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(481060),
     l = n(872810),
     c = n(199902),
@@ -18,14 +18,14 @@ let h = 175,
 function E(e) {
     let { participant: t, width: n, noArt: i = !1, selected: E = !1 } = e,
         b = n < m,
-        y = (0, o.e7)([c.Z, u.default], () =>
+        y = (0, a.e7)([c.Z, u.default], () =>
             c.Z.getAllActiveStreams().some((e) => {
                 let { ownerId: t } = e;
                 return t !== u.default.getId();
             })
         );
     return (0, r.jsx)('div', {
-        className: a()(p.content, p.streamHidden, { [p.__invalid_small]: b }),
+        className: o()(p.content, p.streamHidden, { [p.__invalid_small]: b }),
         children: (0, r.jsx)(f.Z, {
             className: p.streamHiddenEmptyState,
             artURL: g,
@@ -36,7 +36,7 @@ function E(e) {
             description: E
                 ? null
                 : (0, r.jsxs)('div', {
-                      className: a()(p.streamHiddenCTA, { [p.largePaddingTop]: !b }),
+                      className: o()(p.streamHiddenCTA, { [p.largePaddingTop]: !b }),
                       children: [
                           (0, r.jsx)(d.a, {
                               isSmall: b,

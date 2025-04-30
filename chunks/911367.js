@@ -1,7 +1,7 @@
-n.d(t, { t: () => a });
-var r = n(73800),
+n.d(t, { t: () => o });
+var r = n(192379),
     i = n(365943);
-function a() {
+function o() {
     r.useEffect(() => {
         (0, i.z)();
     }, []);

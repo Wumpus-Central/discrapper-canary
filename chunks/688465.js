@@ -1,9 +1,9 @@
 n.d(t, { Z: () => _ });
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(692547),
-    a = n(481060),
-    o = n(388032);
+    o = n(481060),
+    a = n(388032);
 function s(e, t, n) {
     return (
         t in e
@@ -62,8 +62,8 @@ function d(e, t) {
         r,
         i = f(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -72,17 +72,17 @@ function f(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function _(e) {
     var { className: t, color: n = i.Z.unsafe_rawColors.BRAND_500.css } = e,
         s = d(e, ['className', 'color']);
     return (0, r.jsx)(
-        a.IGR,
+        o.IGR,
         u(l({}, s), {
-            text: o.intl.string(o.t.oW0eUV),
+            text: a.intl.string(a.t.oW0eUV),
             color: n,
             className: t
         })

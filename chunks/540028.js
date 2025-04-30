@@ -1,9 +1,9 @@
 n.d(t, { Z: () => S }), n(539854), n(388685);
-var r = n(255367);
-n(73800);
+var r = n(200651);
+n(192379);
 var i = n(442837),
-    a = n(692547),
-    o = n(481060),
+    o = n(692547),
+    a = n(481060),
     s = n(475179),
     l = n(519938),
     c = n(317381),
@@ -69,7 +69,7 @@ function v(e, t) {
     );
 }
 function I(e) {
-    let { closePopout: t, idle: n, pipWindows: a, voiceChannelId: p, onSelect: E } = e;
+    let { closePopout: t, idle: n, pipWindows: o, voiceChannelId: p, onSelect: E } = e;
     n && t();
     let b = (0, i.e7)([c.ZP], () => c.ZP.getCurrentEmbeddedActivity()),
         y = (0, i.e7)([_.Z], () => _.Z.pipWindow),
@@ -90,7 +90,7 @@ function I(e) {
     }
     function T() {
         let e = [],
-            t = a.find((e) => e.component === h.NYg.VIDEO);
+            t = o.find((e) => e.component === h.NYg.VIDEO);
         return (
             null != t &&
                 v.forEach((n) => {
@@ -111,19 +111,19 @@ function I(e) {
         var t;
         let n = e.pipWindow.id,
             i = null == (t = e.participant) ? void 0 : t.id,
-            a = S(e),
+            o = S(e),
             s = ''.concat(n).concat(null != i ? i : '');
         return (0, r.jsx)(
-            o.sNh,
+            a.sNh,
             {
                 id: s,
-                label: a,
+                label: o,
                 action: () => I(e)
             },
             s
         );
     }
-    return (0, r.jsx)(o.v2r, {
+    return (0, r.jsx)(a.v2r, {
         navId: 'pip-menu',
         'aria-label': 'switch PIP',
         onClose: t,
@@ -142,7 +142,7 @@ let S = function (e) {
         u = 1 === s.length && l.length <= 1;
     return c || u
         ? null
-        : (0, r.jsx)(o.yRy, {
+        : (0, r.jsx)(a.yRy, {
               position: 'bottom',
               renderPopout: (e) =>
                   (0, r.jsx)(
@@ -158,11 +158,11 @@ let S = function (e) {
                   ),
               children: (e) =>
                   (0, r.jsx)(
-                      o.P3F,
+                      a.P3F,
                       v(y({ className: E.menuIcon }, e), {
-                          children: (0, r.jsx)(o.Huf, {
+                          children: (0, r.jsx)(a.Huf, {
                               size: 'md',
-                              color: a.Z.unsafe_rawColors.WHITE_500.css
+                              color: o.Z.unsafe_rawColors.WHITE_500.css
                           })
                       })
                   )
