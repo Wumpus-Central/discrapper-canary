@@ -41568,8 +41568,11 @@ img.thumbnail__0f2e8 {
 }
 
 .firstCardContainer__84832 {
-    margin-bottom: 24px;
     position: relative
+}
+
+.firstCardContainer__84832.hasShowMoreButton__84832 {
+    margin-bottom: 24px
 }
 
 .firstCardContainer__84832 .card__84832 {
@@ -41641,10 +41644,6 @@ img.thumbnail__0f2e8 {
 .full-motion .showMoreButton__84832:focus,
 .full-motion .showMoreButton__84832:hover {
     transition: transform .2s ease-in-out, opacity .1s ease-in-out
-}
-
-.secondCardContainer__84832 {
-    margin-top: -24px
 }
 
 .remainingCardContainer__84832 {
