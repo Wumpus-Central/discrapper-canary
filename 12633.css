@@ -34125,6 +34125,10 @@ html:not(.visual-refresh) .root_e5f3a9 {
     width: 100%
 }
 
+.user-profile-modal-v2 .inner__01370 {
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0
+}
+
 .innerNoRadius__01370 {
     border-radius: 0
 }
