@@ -1,2 +1,2 @@
-e.r(p), e.d(p, { default: () => k });
-let k = JSON.parse('{"bvzo6u":"bvzo6u","iCIEAQ":"iCIEAQ","kI3X9/":"kI3X9/","/wHkWV":"/wHkWV","1D+vq6":"1D+vq6","iBypeX":"iBypeX"}');
+s.r(o), s.d(o, { default: () => u });
+let u = JSON.parse('{"8N4c5+":["Celebrate with some ",[8,"airhornHook",[]]],"h6QNk5":"Your queue is clean!","bvzo6u":"The moderator queue feature is not accessible on mobile. Please visit on desktop.","iCIEAQ":"Moderator Queue Inaccessible","kI3X9/":"Mod Queue","/wHkWV":["Mod Queue (",[1,"count"],")"],"1D+vq6":"Flag to Mods","iBypeX":"Sent to mods successfully"}');
