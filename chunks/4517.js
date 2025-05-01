@@ -126,7 +126,7 @@ function Q(e) {
     });
 }
 let X = 200,
-    J = 2000;
+    J = 3000;
 function $(e) {
     let { onCloseProfile: t, prompt: o } = e,
         { analyticsLocations: s } = (0, h.ZP)(),

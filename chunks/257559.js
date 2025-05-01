@@ -11,9 +11,9 @@ var i = n(200651),
     f = n(372900),
     g = n(726521),
     m = n(294218),
-    b = n(699516),
-    h = n(594174),
-    p = n(630388),
+    p = n(699516),
+    b = n(594174),
+    h = n(630388),
     O = n(970257),
     y = n(981631),
     E = n(388032),
@@ -91,7 +91,7 @@ class _ extends r.PureComponent {
                 }
                 return r;
             })(r, ['channel', 'message', 'showContextMenuHint']),
-            u = l.type === y.d4z.GUILD_ANNOUNCEMENT && (0, p.yE)(a.flags, y.iLy.CROSSPOSTED);
+            u = l.type === y.d4z.GUILD_ANNOUNCEMENT && (0, h.yE)(a.flags, y.iLy.CROSSPOSTED);
         return (
             s &&
                 (e = (0, i.jsx)(d.Z, {
@@ -161,7 +161,7 @@ let N = {
     confirmPin: function (e, t) {
         (0, o.h7j)((n) => {
             let r,
-                l = (0, u.F6)(e, h.default, b.Z);
+                l = (0, u.F6)(e, b.default, p.Z);
             return (
                 (r = e.isPrivate() ? E.intl.string(E.t.hMRngI) : E.intl.formatToPlainString(E.t['3IRluL'], { channelName: l })),
                 (0, i.jsx)(f.Z.Provider, {

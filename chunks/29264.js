@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => b });
 var i = n(200651);
 n(192379);
 var r = n(481060),
@@ -36,24 +36,24 @@ function m(e) {
     }
     return e;
 }
-function b(e, t) {
+function p(e, t) {
     (0, r.showToast)((0, r.createToast)(e, r.ToastType.FAILURE)), c.Z.captureException(t);
 }
-function h(e, t, n) {
+function b(e, t, n) {
     if ((0, a.Z)(null == t ? void 0 : t.getChannelId()) || (null == n ? void 0 : n.shouldHideMediaOptions) === !0 || !s.isPlatformEmbedded || null == e || !(0, l.gS)(e)) return null;
     let c = (0, l.s$)(e),
-        h = async () => {
+        b = async () => {
             try {
                 await u.ZP.saveImage(c), o.default.track(f.rMx.CONTEXT_MENU_IMAGE_SAVED, m({}, (0, d.v)())), (0, r.showToast)((0, r.createToast)(g.intl.string(g.t.cqpdJS), r.ToastType.SUCCESS));
             } catch (e) {
-                o.default.track(f.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, m({}, (0, d.v)())), b(g.intl.string(g.t['8Ve/S0']), e);
+                o.default.track(f.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, m({}, (0, d.v)())), p(g.intl.string(g.t['8Ve/S0']), e);
             }
         },
-        p = async () => {
+        h = async () => {
             try {
                 await u.ZP.copyImage(c), o.default.track(f.rMx.CONTEXT_MENU_IMAGE_COPIED, m({}, (0, d.v)())), (0, r.showToast)((0, r.createToast)(g.intl.string(g.t.bhUpvL), r.ToastType.SUCCESS));
             } catch (e) {
-                b(g.intl.string(g.t.PTPbj4), e), o.default.track(f.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, m({}, (0, d.v)()));
+                p(g.intl.string(g.t.PTPbj4), e), o.default.track(f.rMx.CONTEXT_MENU_IMAGE_COPY_FAILED, m({}, (0, d.v)()));
             }
         };
     return [
@@ -63,7 +63,7 @@ function h(e, t, n) {
                   {
                       id: 'copy-image',
                       label: g.intl.string(g.t.tvUqWl),
-                      action: p
+                      action: h
                   },
                   'copy-image'
               )
@@ -73,7 +73,7 @@ function h(e, t, n) {
             {
                 id: 'save-image',
                 label: g.intl.string(g.t.PeXhgI),
-                action: h
+                action: b
             },
             'save-image'
         )

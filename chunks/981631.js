@@ -801,7 +801,6 @@ let A = Object.freeze({
         SCHEDULED_MESSAGES: '/users/@me/scheduled-messages',
         SCHEDULED_MESSAGE: (t) => '/users/@me/scheduled-messages/'.concat(t),
         HOLIDAY_REDEEM_PRIZE: '/holidays/redeem-prize',
-        REPORT_TO_MOD: (t, e) => '/channels/'.concat(t, '/').concat(e, '/mod-report'),
         APPLIED_BOOST_MODIFY_END_DATE: (t) => '/debug/applied-boosts/'.concat(t, '/ends-at')
     }),
     f = Object.freeze({

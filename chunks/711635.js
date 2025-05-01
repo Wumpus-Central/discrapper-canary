@@ -1,77 +1,80 @@
 r.r(t), r.d(t, { default: () => s }), r(388685);
-var n = r(200651),
-    u = r(192379),
+var u = r(200651),
+    n = r(192379),
     d = r(399882);
-let s = u.forwardRef(function (e, t) {
-    let { className: r, src: s, playing: a, preload: f = '', onEnded: l, onLoadedMetadata: i, onError: o, muted: c, volume: v } = e,
-        E = u.useRef(null),
-        [p] = u.useState(() => {
+let s = n.forwardRef(function (e, t) {
+    let { className: r, src: s, playing: a, preload: l = '', onEnded: f, onLoadedMetadata: i, onError: o, muted: c, volume: v, playbackRate: E } = e,
+        p = n.useRef(null),
+        [m] = n.useState(() => {
             let e = new d.Z.OGVPlayer();
-            return (e.preload = f), (e.controls = !1), e;
+            return (e.preload = l), (e.controls = !1), e;
         });
     return (
-        u.useImperativeHandle(t, () => p, [p]),
-        u.useEffect(() => {
-            let e = E.current;
-            if (null != p && null != e)
+        n.useImperativeHandle(t, () => m, [m]),
+        n.useEffect(() => {
+            let e = p.current;
+            if (null != m && null != e)
                 return (
-                    e.appendChild(p),
+                    e.appendChild(m),
                     () => {
-                        e.removeChild(p);
+                        e.removeChild(m);
                     }
                 );
-        }, [p]),
-        u.useEffect(() => {
-            p.src = s;
-        }, [p, s]),
-        u.useEffect(() => {
-            p.preload = f;
-        }, [p, f]),
-        u.useEffect(() => {
+        }, [m]),
+        n.useEffect(() => {
+            m.src = s;
+        }, [m, s]),
+        n.useEffect(() => {
+            m.preload = l;
+        }, [m, l]),
+        n.useEffect(() => {
             void 0 !== a &&
                 (a
                     ? setTimeout(() => {
-                          p.play();
+                          m.play();
                       }, 0)
                     : setTimeout(() => {
-                          p.pause();
+                          m.pause();
                       }, 0));
-        }, [s, p, a]),
-        u.useEffect(() => {
-            void 0 !== c && (p.muted = c);
-        }, [p, c]),
-        u.useEffect(() => {
-            void 0 !== v && (p.volume = v);
-        }, [p, v]),
-        u.useEffect(() => {
-            if (null != l)
+        }, [s, m, a]),
+        n.useEffect(() => {
+            void 0 !== c && (m.muted = c);
+        }, [m, c]),
+        n.useEffect(() => {
+            void 0 !== v && (m.volume = v);
+        }, [m, v]),
+        n.useEffect(() => {
+            null != E && (m.playbackRate = E);
+        }, [m, E]),
+        n.useEffect(() => {
+            if (null != f)
                 return (
-                    p.addEventListener('ended', l),
+                    m.addEventListener('ended', f),
                     () => {
-                        p.removeEventListener('ended', l);
+                        m.removeEventListener('ended', f);
                     }
                 );
-        }, [p, l]),
-        u.useEffect(() => {
+        }, [m, f]),
+        n.useEffect(() => {
             if (null != i)
                 return (
-                    p.addEventListener('loadedmetadata', i),
+                    m.addEventListener('loadedmetadata', i),
                     () => {
-                        p.removeEventListener('loadedmetadata', i);
+                        m.removeEventListener('loadedmetadata', i);
                     }
                 );
-        }, [p, i]),
-        u.useEffect(() => {
+        }, [m, i]),
+        n.useEffect(() => {
             if (null != o)
                 return (
-                    p.addEventListener('error', o),
+                    m.addEventListener('error', o),
                     () => {
-                        p.removeEventListener('error', o);
+                        m.removeEventListener('error', o);
                     }
                 );
-        }, [p, o]),
-        (0, n.jsx)('div', {
-            ref: E,
+        }, [m, o]),
+        (0, u.jsx)('div', {
+            ref: p,
             className: r
         })
     );

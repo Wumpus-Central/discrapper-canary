@@ -11,9 +11,9 @@ var i = n(200651),
     f = n(691251),
     g = n(268350),
     m = n(217590),
-    b = n(453070),
-    h = n(926491),
-    p = n(378233),
+    p = n(453070),
+    b = n(926491),
+    h = n(378233),
     O = n(981631),
     y = n(388032);
 function E(e) {
@@ -66,8 +66,8 @@ function S(e) {
     let { type: t, id: n, name: S, isInExpressionPicker: P = !1 } = e,
         { location: _ } = (0, s.O)(),
         N = r.useMemo(() => v(E({}, _), { section: P ? O.jXE.EXPRESSION_PICKER : O.jXE.CONTEXT_MENU }), [_, P]),
-        Z = (0, b.Go)(),
-        I = (0, l.e7)([h.Z], () => (t === f.S.STICKER && null != n ? h.Z.getStickerById(n) : null)),
+        Z = (0, p.Go)(),
+        I = (0, l.e7)([b.Z], () => (t === f.S.STICKER && null != n ? b.Z.getStickerById(n) : null)),
         x = null != I && Z.includes(I.id),
         T = (0, l.e7)([u.ZP], () => {
             if (t === f.S.EMOJI) {
@@ -78,9 +78,9 @@ function S(e) {
                 }
             }
         }),
-        A = (0, c.C1)(null, T);
+        M = (0, c.C1)(null, T);
     return null != I && t === f.S.STICKER
-        ? (0, p.J8)(I) && !(0, p.V9)(I)
+        ? (0, h.J8)(I) && !(0, h.V9)(I)
             ? null
             : x
               ? (0, i.jsx)(a.sNh, {
@@ -100,7 +100,7 @@ function S(e) {
                     label: y.intl.string(y.t.kWmiPT)
                 })
         : null != T && t === f.S.EMOJI
-          ? A
+          ? M
               ? (0, i.jsx)(a.sNh, {
                     id: 'unfavorite',
                     action: () => (0, o.Xe)(T),

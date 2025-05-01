@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => p });
 var i = n(200651),
     r = n(192379),
     l = n(481060),
@@ -11,11 +11,11 @@ var i = n(200651),
     f = n(626135),
     g = n(981631),
     m = n(388032);
-function b(e, t) {
+function p(e, t) {
     let n = (0, d.Z)(t, e),
-        b = e.hasPotions(),
-        h = (0, u.Nt)(),
-        p = r.useCallback(
+        p = e.hasPotions(),
+        b = (0, u.Nt)(),
+        h = r.useCallback(
             (n) => {
                 try {
                     (0, a.qc)(t.id, e.id, n);
@@ -30,12 +30,12 @@ function b(e, t) {
                 (0, c.s)({
                     channelId: t.id,
                     message: e,
-                    onRedeem: p,
+                    onRedeem: h,
                     onClose: o.Qy,
                     source: s.YD.MessageContextMenu
                 });
-        }, [t.id, e, p]);
-    return n && !b && h
+        }, [t.id, e, h]);
+    return n && !p && b
         ? (0, i.jsx)(l.sNh, {
               id: 'add-confetti-potion',
               label: m.intl.string(m.t.icaJW1),

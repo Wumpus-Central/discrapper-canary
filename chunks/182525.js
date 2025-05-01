@@ -4,6 +4,8 @@ e.exports = {
     playing: 'playing_a8e786',
     playButtonContainer: 'playButtonContainer_a8e786',
     audioElement: 'audioElement_a8e786',
+    playbackRate: 'playbackRate_a8e786',
+    playbackRateContainer: 'playbackRateContainer_a8e786',
     volumeButton: 'volumeButton_a8e786',
     volumeButtonIcon: 'volumeButtonIcon_a8e786',
     volumeSlider: 'volumeSlider_a8e786',

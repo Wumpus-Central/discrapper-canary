@@ -87,13 +87,6 @@ function R(e) {
                 hidePersonalInformation: U,
                 onClose: x
             }),
-            (0, r.jsx)(p.Z, {
-                user: t,
-                currentUser: n,
-                displayProfile: R,
-                guildId: null == P ? void 0 : P.id,
-                onClose: x
-            }),
             G
                 ? (0, r.jsx)(g.Z, {
                       user: t,

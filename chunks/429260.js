@@ -1,7 +1,7 @@
 n.d(t, {
-    ZP: () => y,
-    eH: () => j,
-    wY: () => v
+    ZP: () => E,
+    eH: () => S,
+    wY: () => j
 });
 var i = n(200651);
 n(192379);
@@ -14,24 +14,25 @@ var r = n(442837),
     u = n(605236),
     d = n(243778),
     f = n(726521),
-    g = n(982168),
-    m = n(594174),
+    g = n(993706),
+    m = n(982168),
+    p = n(594174),
     b = n(970257),
     h = n(921944),
-    p = n(388032),
-    O = n(776571);
-function y(e) {
+    O = n(388032),
+    y = n(776571);
+function E(e) {
     return (0, b.a4)(e)
         ? (0, i.jsx)(a.sNh, {
               id: 'report',
-              label: p.intl.string(p.t.GwbdGR),
+              label: O.intl.string(O.t.GwbdGR),
               action: () => (0, f.ak)(e, 'web_message_context_menu'),
               icon: a.U65,
               color: 'danger'
           })
         : null;
 }
-function E() {
+function v() {
     return (0, i.jsx)(d.ZP, {
         contentTypes: [l.z.REPORT_TO_MOD_NEW_TAG],
         children: (e) => {
@@ -39,7 +40,7 @@ function E() {
             return t === l.z.REPORT_TO_MOD_NEW_TAG
                 ? (0, i.jsx)(a.IGR, {
                       color: s.Z.BG_BRAND,
-                      text: p.intl.string(p.t.y2b7CA)
+                      text: O.intl.string(O.t.y2b7CA)
                   })
                 : (0, i.jsx)(a.U65, {
                       color: 'currentColor',
@@ -48,24 +49,26 @@ function E() {
         }
     });
 }
-function v(e) {
+function j(e) {
+    let t = (0, r.e7)([g.Z], () => g.Z.hasReportedMessage(e.channel_id, e.id)),
+        n = (0, m.sP)(e) && !t;
     return ((0, o.zq)(() => {
-        (0, u.EW)(l.z.REPORT_TO_MOD_NEW_TAG, { dismissAction: h.L.AUTO_DISMISS });
+        n && (0, u.EW)(l.z.REPORT_TO_MOD_NEW_TAG, { dismissAction: h.L.AUTO_DISMISS });
     }),
-    (0, g.sP)(e))
+    n)
         ? (0, i.jsx)(a.sNh, {
               id: 'report-to-mod',
-              label: p.intl.string(O.default['1D+vq6']),
+              label: O.intl.string(y.default['1D+vq6']),
               action: () => {
                   (0, u.EW)(l.z.REPORT_TO_MOD_NEW_TAG, { dismissAction: h.L.USER_DISMISS }), (0, f.tV)(e);
               },
-              icon: (0, i.jsx)(E, {})
+              icon: (0, i.jsx)(v, {})
           })
         : null;
 }
-function j(e) {
+function S(e) {
     let t = (0, r.e7)([c.ZP], () => c.ZP.get('iar_testing')),
-        n = (0, r.e7)([m.default], () => m.default.getCurrentUser());
+        n = (0, r.e7)([p.default], () => p.default.getCurrentUser());
     return (0, b.a4)(e) && null != n && n.isStaff() && t
         ? (0, i.jsx)(a.sNh, {
               id: 'staff-test-message-report',

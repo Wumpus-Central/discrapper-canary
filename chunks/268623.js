@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => h }), n(388685);
 var i = n(200651),
     r = n(192379),
     l = n(442837),
@@ -11,17 +11,17 @@ var i = n(200651),
     f = n(175006),
     g = n(742989),
     m = n(898150),
-    b = n(70956),
-    h = n(388032);
-function p(e) {
+    p = n(70956),
+    b = n(388032);
+function h(e) {
     let { enabled: t } = s.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
         { showReminders: n } = g.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
-        p = (0, l.e7)([d.Z], () => d.Z.getSavedMessage(e.channel_id, e.id)),
+        h = (0, l.e7)([d.Z], () => d.Z.getSavedMessage(e.channel_id, e.id)),
         O = (function (e) {
             let { message: t, savedMessage: n } = e,
                 [l, o] = r.useState(new Date());
             r.useEffect(() => {
-                let e = setInterval(() => o(new Date()), b.Z.Millis.MINUTE);
+                let e = setInterval(() => o(new Date()), p.Z.Millis.MINUTE);
                 return () => {
                     clearInterval(e);
                 };
@@ -44,7 +44,7 @@ function p(e) {
                 });
             return (null == n ? void 0 : n.saveData.dueAt) == null
                 ? (0, i.jsx)(a.kSQ, {
-                      label: h.intl.string(h.t.roMu1N),
+                      label: b.intl.string(b.t.roMu1N),
                       children: d
                   })
                 : (0, i.jsxs)(a.kSQ, {
@@ -52,7 +52,7 @@ function p(e) {
                       children: [
                           (0, i.jsx)(a.sNh, {
                               id: 'mark-complete',
-                              label: h.intl.string(h.t.yjGtdH),
+                              label: b.intl.string(b.t.yjGtdH),
                               icon: a.kmB,
                               action: () =>
                                   (0, c.z)({
@@ -63,22 +63,22 @@ function p(e) {
                           }),
                           (0, i.jsx)(a.sNh, {
                               id: 'edit-reminder',
-                              label: h.intl.string(h.t.vrbqs7),
+                              label: b.intl.string(b.t.vrbqs7),
                               children: d
                           })
                       ]
                   });
         })({
             message: e,
-            savedMessage: p
+            savedMessage: h
         });
     return t || n
-        ? null != p || (0, f.Z)()
+        ? null != h || (0, f.Z)()
             ? (0, i.jsxs)(a.sNh, {
                   id: 'save-for-later',
-                  label: h.intl.string(h.t.tpxJtr),
+                  label: b.intl.string(b.t.tpxJtr),
                   action: () =>
-                      null == p
+                      null == h
                           ? (0, c.z)({
                                 channelId: e.channel_id,
                                 messageId: e.id,
@@ -87,26 +87,26 @@ function p(e) {
                           : (0, c.x)({
                                 channelId: e.channel_id,
                                 messageId: e.id,
-                                dueAt: p.saveData.dueAt,
+                                dueAt: h.saveData.dueAt,
                                 displayToast: !0
                             }),
                   children: [
-                      null != p
+                      null != h
                           ? (0, i.jsx)(a.sNh, {
                                 id: 'remove-from-for-later',
-                                label: h.intl.string(h.t.SvXS1d),
+                                label: b.intl.string(b.t.SvXS1d),
                                 icon: a.plf,
                                 action: () =>
                                     (0, c.x)({
                                         channelId: e.channel_id,
                                         messageId: e.id,
-                                        dueAt: p.saveData.dueAt,
+                                        dueAt: h.saveData.dueAt,
                                         displayToast: !0
                                     })
                             })
                           : (0, i.jsx)(a.sNh, {
                                 id: 'create-bookmark',
-                                label: h.intl.string(h.t['9p3D9v']),
+                                label: b.intl.string(b.t['9p3D9v']),
                                 icon: a.gt9,
                                 action: () =>
                                     (0, c.z)({
@@ -121,7 +121,7 @@ function p(e) {
               })
             : (0, i.jsx)(a.sNh, {
                   id: 'save-for-later-upsell',
-                  label: h.intl.string(h.t.tpxJtr),
+                  label: b.intl.string(b.t.tpxJtr),
                   icon: a.SrA,
                   iconProps: { color: o.JX.PREMIUM_TIER_2 },
                   action: () =>
