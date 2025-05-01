@@ -66,13 +66,15 @@ class S extends i.Component {
                         }),
                     0 === n
                         ? (0, y.Qb)({
+                              searchId: t.props.searchId,
                               searchType: t.props.searchType,
                               searchAnalyticsId: t.props.searchAnalyticsId
                           })
                         : (0, y.hM)({
                               searchType: t.props.searchType,
+                              searchId: t.props.searchId,
                               searchAnalyticsId: t.props.searchAnalyticsId,
-                              prevSearchId: e !== t.props.searchAnalyticsId ? e : null,
+                              prevSearchAnalyticsId: e !== t.props.searchAnalyticsId ? e : null,
                               isError: t.props.searchHasError,
                               limit: t.props.searchLimit,
                               offset: t.props.searchOffset,
@@ -126,8 +128,8 @@ class N extends i.PureComponent {
             });
     }
     render() {
-        let { searchAnalyticsId: e, searchType: t, searchResults: n } = this.props,
-            { offset: i, hasError: l, totalResults: o, isHistoricalIndexing: a, isSearching: s } = this.props.search;
+        let { searchAnalyticsId: e, searchType: t, searchResults: n, searchId: i } = this.props,
+            { offset: l, hasError: o, totalResults: a, isHistoricalIndexing: s, isSearching: c } = this.props.search;
         return (0, r.jsxs)('section', {
             className: I.searchResultsWrap,
             'aria-label': E.intl.string(E.t.zkoeq6),
@@ -139,15 +141,16 @@ class N extends i.PureComponent {
                     children: this.renderContent()
                 }),
                 (0, r.jsx)(S, {
+                    searchId: i,
                     searchType: t,
                     searchAnalyticsId: e,
                     searchResults: n,
-                    searchOffset: i,
+                    searchOffset: l,
                     searchLimit: O.vpv,
-                    searchHasError: l,
-                    searchTotalResults: o,
-                    searchIsIndexing: a,
-                    isSearching: s
+                    searchHasError: o,
+                    searchTotalResults: a,
+                    searchIsIndexing: s,
+                    isSearching: c
                 })
             ]
         });
@@ -193,14 +196,17 @@ class N extends i.PureComponent {
             P(this, 'searchByMode', (e) => {
                 let {
                         searchId: t,
-                        search: { isSearching: n },
-                        searchAnalyticsId: r
+                        searchType: n,
+                        search: { isSearching: r },
+                        searchAnalyticsId: i
                     } = this.props,
-                    { searchMode: i } = this.state;
-                e === i ||
-                    n ||
+                    { searchMode: l } = this.state;
+                e === l ||
+                    r ||
                     ((0, y.zW)({
-                        searchAnalyticsId: r,
+                        searchId: t,
+                        searchType: n,
+                        searchAnalyticsId: i,
                         mode: e
                     }),
                     p.Nz(t, e),
@@ -264,18 +270,19 @@ class N extends i.PureComponent {
             P(this, 'handleSearchResultClick', (e, t) => {
                 let n = m.Z.getChannel(e.channel_id),
                     r = null != n ? n.getGuildId() : null,
-                    { searchType: i, searchAnalyticsId: l } = this.props,
-                    { offset: o, totalResults: a } = this.props.search;
+                    { searchId: i, searchType: l, searchAnalyticsId: o } = this.props,
+                    { offset: a, totalResults: s } = this.props.search;
                 (0, y.sL)({
-                    searchType: i,
-                    searchAnalyticsId: l,
+                    searchId: i,
+                    searchType: l,
+                    searchAnalyticsId: o,
                     guildId: r,
                     channelId: e.channel_id,
                     pageResults: null != this.props.searchResults ? this.props.searchResults.length : null,
-                    totalResults: a,
+                    totalResults: s,
                     limit: O.vpv,
-                    page: Math.floor(o / O.vpv) + 1,
-                    offset: o,
+                    page: Math.floor(a / O.vpv) + 1,
+                    offset: a,
                     index: t
                 });
             }),

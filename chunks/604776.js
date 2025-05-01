@@ -21,7 +21,8 @@ let f = {
         [x.kNB.QUEST_REWARD]: 'Quest Reward',
         [x.kNB.DEVELOPER_GIFT]: 'Developer Gift',
         [x.kNB.INVOICE]: 'Invoice',
-        [x.kNB.REVERSE_TRIAL]: 'Reverse Trial'
+        [x.kNB.REVERSE_TRIAL]: 'Reverse Trial',
+        [x.kNB.FRACTIONAL_PREMIUM_GIVEBACK]: 'Giveback'
     },
     v = (e) => {
         var t;

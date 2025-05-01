@@ -1,12 +1,12 @@
 n.d(t, { B: () => a }), n(539854);
-var l = n(392711),
-    r = n.n(l);
+var o = n(392711),
+    i = n.n(o);
 let a = (e, t) => {
-    let n = r().shuffle(e),
-        l = n.findIndex((e) => e.value === t);
-    if (l > -1) {
-        let e = n[l];
-        n.splice(l, 1), n.push(e);
+    let n = i().shuffle(e),
+        o = n.findIndex((e) => e.value === t);
+    if (o > -1) {
+        let e = n[o];
+        n.splice(o, 1), n.push(e);
     }
     return n;
 };

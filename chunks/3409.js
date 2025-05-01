@@ -337,7 +337,7 @@ function eT(e) {
     function ta(e) {
         eW(e.id), eY(e);
     }
-    let ts = !(0, G.isDesktop)() || X ? ['applePay', 'googlePay'] : [],
+    let ts = !(0, G.isDesktop)() || X ? ['googlePay', 'applePay'] : [],
         [tl, tc] = i.useState(!1),
         tu = i.useRef(null),
         td = () => {

@@ -1,4 +1,4 @@
-n.d(t, { F: () => E });
+n.d(t, { F: () => m });
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -10,36 +10,7 @@ var r = n(200651),
     d = n(607070),
     f = n(176354),
     _ = n(942466);
-function p(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function h(e) {
-    for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
-        'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                })
-            )),
-            r.forEach(function (t) {
-                p(e, t, n[t]);
-            });
-    }
-    return e;
-}
-function m(e) {
+function p(e) {
     let { emoji: t, shouldAnimate: n } = e;
     if (null == t) return null;
     let i = f.ZP.isCustomEmoji(t) ? t.name : t.surrogates;
@@ -51,7 +22,7 @@ function m(e) {
         shouldAnimate: n
     });
 }
-function g(e) {
+function h(e) {
     let { trait: t, ellipsize: n } = e,
         o = i.useRef(null),
         c = (0, u.Z)(o),
@@ -62,7 +33,7 @@ function g(e) {
               ref: o,
               className: a()(_.trait, { [_.ellipsize]: n }),
               children: [
-                  (0, r.jsx)(m, {
+                  (0, r.jsx)(p, {
                       emoji: t.emoji,
                       shouldAnimate: f
                   }),
@@ -76,10 +47,9 @@ function g(e) {
               ]
           });
 }
-function E(e) {
-    let { profile: t } = e,
-        n = i.useMemo(() => t.traits.map((e, t) => h({ key: 'trait-'.concat(t) }, e)).filter((e) => e.label.length > 0), [t]),
-        o = i.useCallback(
+function m(e) {
+    let { items: t } = e,
+        n = i.useCallback(
             (e, t) =>
                 'string' == typeof e
                     ? (0, r.jsx)(
@@ -96,7 +66,7 @@ function E(e) {
                           'overflow'
                       )
                     : (0, r.jsx)(
-                          g,
+                          h,
                           {
                               trait: e,
                               ellipsize: t.ellipsize
@@ -105,23 +75,23 @@ function E(e) {
                       ),
             []
         ),
-        s = i.useCallback((e) => o(e, { ellipsize: !0 }), [o]),
-        c = i.useCallback((e) => o(e, { ellipsize: !1 }), [o]),
-        u = i.useCallback(
+        o = i.useCallback((e) => n(e, { ellipsize: !0 }), [n]),
+        s = i.useCallback((e) => n(e, { ellipsize: !1 }), [n]),
+        c = i.useCallback(
             (e) =>
                 (0, r.jsx)(l.te1, {
                     items: e,
-                    renderItem: c
+                    renderItem: s
                 }),
-            [c]
+            [s]
         );
-    return 0 === n.length
+    return 0 === t.length
         ? null
         : (0, r.jsx)(l.Epb, {
               className: _.container,
-              items: n,
-              renderItem: s,
-              renderOverflow: u,
+              items: t,
+              renderItem: o,
+              renderOverflow: c,
               maxLines: 2,
               itemGapPx: 4
           });

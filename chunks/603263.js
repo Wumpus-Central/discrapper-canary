@@ -63,8 +63,8 @@ function u(e, t, n, o) {
     (0, a.jW)(t, e),
         o && (t.search_everywhere = !0),
         (0, i.tI)({
-            searchType: l.Z.getSearchType(),
-            searchAnalyticsId: l.Z.getAnalyticsId(e),
+            searchType: l.Z.getSearchType(e),
+            searchId: e,
             query: t
         }),
         r.Z.dispatch({

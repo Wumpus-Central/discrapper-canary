@@ -203,7 +203,7 @@ class D extends i.PureComponent {
                     null != n &&
                         (0, N.cy)({
                             searchType: r,
-                            searchAnalyticsId: E.Z.getAnalyticsId(n)
+                            searchId: n
                         }),
                     i || Promise.resolve().then(() => this.blurEditor());
             }),
@@ -236,8 +236,14 @@ class D extends i.PureComponent {
                 this._editorRef = e;
             }),
             Z(this, 'onFocus', () => {
-                let { searchType: e, searchId: t } = this.props;
-                this.setState({ focused: !0 }), E.Z.isActive(t) || (0, N.I1)({ searchType: e });
+                let { searchId: e, searchType: t } = this.props;
+                this.setState({ focused: !0 }),
+                    null == e ||
+                        E.Z.isActive(e) ||
+                        (0, N.I1)({
+                            searchId: e,
+                            searchType: null != t ? t : (0, E.g)(e)
+                        });
             }),
             Z(this, 'onBlur', () => {
                 let { searchId: e, searchType: t } = this.props;
@@ -245,8 +251,8 @@ class D extends i.PureComponent {
                     null == e ||
                         E.Z.isActive(e) ||
                         (0, N.IZ)({
-                            searchType: t,
-                            searchAnalyticsId: E.Z.getAnalyticsId(e)
+                            searchId: e,
+                            searchType: null != t ? t : (0, E.g)(e)
                         }),
                         j.xb(this.props.editorState) && this.clearSearch();
                 });
@@ -339,30 +345,18 @@ function L(e) {
         c = (0, u.e7)([_.Z], () => _.Z.keyboardModeEnabled),
         d = (0, u.e7)([E.Z], () => (null != n ? E.Z.getEditorState(n) : null)),
         p = i.useMemo(() => (null != d ? d : j.nR(S.Jl(h.ZP))), [d]),
-        m = (function (e) {
-            let t = i.useRef(null);
-            return (
-                i.useEffect(() => {
-                    if (null != e) {
-                        let n = E.Z.getAnalyticsId(e);
-                        null != n && (t.current = n);
-                    }
-                }, [e]),
-                t
-            );
-        })(n),
-        f = i.useRef(a);
+        m = i.useRef(a);
     return (
         i.useEffect(() => {
-            f.current &&
+            m.current &&
                 !a &&
-                ((f.current = !1),
+                ((m.current = !1),
                 (0, N.IZ)({
-                    searchType: l,
-                    searchAnalyticsId: m.current
+                    searchId: n,
+                    searchType: l
                 })),
-                !f.current && a && (f.current = !0);
-        }, [a, m, l]),
+                !m.current && a && (m.current = !0);
+        }, [a, n, l]),
         (0, r.jsx)(D, {
             className: t,
             searchId: n,
