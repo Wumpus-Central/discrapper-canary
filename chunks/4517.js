@@ -277,14 +277,8 @@ let ee = i.forwardRef(function (e, t) {
         [J, $] = i.useState(!1),
         [ee, et] = i.useState(!0),
         [en, er] = i.useState(!X && S),
-        ei = S && J;
-    i.useLayoutEffect(() => {
-        if (($(!0), null == G.current || null == B.current || !ei)) return;
-        let e = G.current.getBoundingClientRect().height,
-            t = B.current.getBoundingClientRect().height;
-        er(t > e), (V.current = e), (F.current = t);
-    }, [ei, p, d, I]);
-    let eo = (0, l.e7)([f.Z], () => f.Z.useReducedMotion),
+        ei = S && J,
+        eo = (0, l.e7)([f.Z], () => f.Z.useReducedMotion),
         [ea] = i.useState(() => new c.V7());
     i.useEffect(() => () => ea.stop(), [ea]),
         i.useEffect(() => {
@@ -297,13 +291,18 @@ let ee = i.forwardRef(function (e, t) {
             duration: W
         }
     }));
-    i.useEffect(() => {
-        J &&
+    i.useLayoutEffect(() => {
+        if (($(!0), null == G.current || null == B.current || !ei)) return;
+        let e = G.current.getBoundingClientRect().height,
+            t = B.current.getBoundingClientRect().height;
+        er(t > e),
+            (V.current = e),
+            (F.current = t),
             el({
-                maxHeight: ''.concat(Math.min(V.current, x), 'px'),
+                maxHeight: ''.concat(Math.min(ee ? V.current : F.current, ee ? x : j), 'px'),
                 immediate: !0
             });
-    }, [J, I, el, x]);
+    }, [ei, p, d, I, el, ee, x, j]);
     let ec = (e) => {
             en &&
                 (e

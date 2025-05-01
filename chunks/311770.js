@@ -9,8 +9,8 @@ var t = n(200651),
     u = n(430824),
     c = n(496675),
     m = n(914010),
-    h = n(375727),
-    x = n(841776),
+    h = n(841776),
+    x = n(535455),
     j = n(981631),
     p = n(388032),
     g = n(807179);
@@ -19,9 +19,9 @@ let v = (e) => {
             { guilds: n, currentGuildId: o } = f(),
             [d, u] = r.useState(o),
             [c, m] = r.useState(null),
-            [j, v] = r.useState(null),
-            b = async () => {
-                if ((m(null), v(null), null == d)) return void m('Please select a server for the emoji.');
+            [x, j] = r.useState(null),
+            v = async () => {
+                if ((m(null), j(null), null == d)) return void m('Please select a server for the emoji.');
                 if (null == l || (null == l ? void 0 : l.data) == null || (null == l ? void 0 : l.file) == null || (null == l ? void 0 : l.image) == null) return void m('Missing image data');
                 let { data: e, file: n, image: t } = l;
                 try {
@@ -33,13 +33,13 @@ let v = (e) => {
                         uploadId: (0, a.Z)(),
                         hideErrorModal: !1
                     });
-                    if (l) return void v(l);
+                    if (l) return void j(l);
                 } catch (e) {
                     var r;
                     m(null != (r = null == e ? void 0 : e.message) ? r : 'Failed to upload');
                     return;
                 }
-                (0, h.y)();
+                E();
             };
         return (0, t.jsxs)('main', {
             children: [
@@ -60,9 +60,9 @@ let v = (e) => {
                         (0, t.jsxs)('div', {
                             className: g.uploadContainer,
                             children: [
-                                (0, t.jsx)(x.H, {
+                                (0, t.jsx)(h.H, {
                                     error: c,
-                                    uploadErrorCode: j
+                                    uploadErrorCode: x
                                 }),
                                 (0, t.jsx)(i.q4e, {
                                     options: n.map((e) => ({
@@ -73,7 +73,7 @@ let v = (e) => {
                                     onChange: (e) => u(e)
                                 }),
                                 (0, t.jsx)(i.zxk, {
-                                    onClick: b,
+                                    onClick: v,
                                     fullWidth: !0,
                                     disabled: null == l || null == d,
                                     children: 'Upload'
@@ -81,7 +81,7 @@ let v = (e) => {
                             ]
                         }),
                         (0, t.jsx)(i.olH, {
-                            onClick: h.y,
+                            onClick: E,
                             className: g.closeButton
                         })
                     ]
@@ -145,7 +145,7 @@ let v = (e) => {
                     ]
                 }),
                 (0, t.jsx)(i.olH, {
-                    onClick: h.y,
+                    onClick: E,
                     className: g.closeButton
                 })
             ]
@@ -171,4 +171,7 @@ let v = (e) => {
                 })
             ]
         });
+    },
+    E = () => {
+        (0, i.Mr3)(x.H);
     };

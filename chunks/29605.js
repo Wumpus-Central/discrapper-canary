@@ -24,7 +24,7 @@ var r = n(200651),
     j = n(110924),
     _ = n(200876),
     v = n(556019),
-    O = n(59769),
+    O = n(748523),
     C = n(730089),
     y = n(372444),
     N = n(889564),
@@ -451,7 +451,10 @@ let z = u().throttle(h.OQ, 1000),
                                         children: G.intl.format(G.t.uMkfTk, { onClick: () => D.Z.open(e.id, L.pNK.ROLE_SUBSCRIPTIONS, void 0, L.KsC.ROLE_SUBSCRIPTION_EMOJI) })
                                     }),
                                 $
-                                    ? (0, r.jsx)(O.b, {})
+                                    ? (0, r.jsx)(g.zxk, {
+                                          onClick: () => (0, O.i)(),
+                                          children: G.intl.string(G.t.DU0dy8)
+                                      })
                                     : (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)(X, {}),
