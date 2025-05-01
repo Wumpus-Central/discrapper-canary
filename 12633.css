@@ -37959,6 +37959,13 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     top: 0
 }
 
+.referenceContainer_ab8609>.outer_ab8609 {
+    max-width: none;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content
+}
+
 .outer_ab8609 {
     background: var(--custom-status-bubble-background);
     border: 1px solid var(--border-faint);
