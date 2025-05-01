@@ -119,7 +119,7 @@ function O(e) {
         } = e,
         a = h(e, ['selected', 'lowerBadgeSize', 'highlight', 'rounded']);
     let s = !!a.isFolder,
-        u = (0, c.M)('BlobMask'),
+        u = (0, c.Ml)('BlobMask'),
         d = (0, l.dQu)(l.TVs.modules.guildbar.AVATAR_SIZE),
         _ = (0, l.dQu)(l.TVs.modules.guildbar.FOLDER_SIZE),
         m = !u && s ? _ : d,

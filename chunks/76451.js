@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => T,
-    _: () => P
+    _: () => N
 }),
     n(388685);
 var r = n(200651),
@@ -16,8 +16,8 @@ var r = n(200651),
     h = n(859235),
     g = n(898463),
     f = n(592125),
-    p = n(703558),
-    x = n(117530),
+    x = n(703558),
+    p = n(117530),
     b = n(585483),
     j = n(127654),
     v = n(228392),
@@ -39,7 +39,7 @@ let y = {
         tension: 2400,
         friction: 52
     };
-function P(e) {
+function N(e) {
     let { channelId: t, onClick: n, onClose: l, onMouseEnter: s } = e,
         u = i.useRef(null),
         m = (0, o.e7)([f.Z], () => f.Z.getChannel(t), [t]);
@@ -62,7 +62,7 @@ function P(e) {
                     className: _.fileInput,
                     ref: u,
                     onChange: (e) => {
-                        null == l || l(), (0, j.d)(e.currentTarget.files, m, p.d.FirstThreadMessage, { requireConfirm: !0 }), b.S.dispatch(C.CkL.TEXTAREA_FOCUS), (e.currentTarget.value = null);
+                        null == l || l(), (0, j.d)(e.currentTarget.files, m, x.d.FirstThreadMessage, { requireConfirm: !0 }), b.S.dispatch(C.CkL.TEXTAREA_FOCUS), (e.currentTarget.value = null);
                     },
                     multiple: m.rateLimitPerUser <= 0,
                     tabIndex: -1,
@@ -79,7 +79,7 @@ function P(e) {
         })
     );
 }
-function N(e) {
+function P(e) {
     let { channelId: t, closePopout: n } = e,
         [l, a] = i.useState(!1),
         { reducedMotion: d } = i.useContext(c.Sfi),
@@ -91,8 +91,8 @@ function N(e) {
             },
             'animate-always'
         ),
-        p = (0, o.e7)([u.Z], () => u.Z.keyboardModeEnabled),
-        b = (0, o.e7)([x.Z], () => x.Z.getUploads(t, m.Ie.CREATE_FORUM_POST.drafts.type));
+        x = (0, o.e7)([u.Z], () => u.Z.keyboardModeEnabled),
+        b = (0, o.e7)([p.Z], () => p.Z.getUploads(t, m.Ie.CREATE_FORUM_POST.drafts.type));
     return (0, r.jsx)(s.animated.div, {
         className: _.popoutContainer,
         onMouseLeave: () => {
@@ -105,7 +105,7 @@ function N(e) {
             paddingFix: !1,
             fade: !0,
             children: [
-                (0, r.jsx)(P, {
+                (0, r.jsx)(N, {
                     channelId: t,
                     onClick: () => {
                         a(!0);
@@ -123,7 +123,7 @@ function N(e) {
                                 channelId: t,
                                 draftType: m.Ie.CREATE_FORUM_POST.drafts.type,
                                 upload: e,
-                                keyboardModeEnabled: p,
+                                keyboardModeEnabled: x,
                                 hideFileName: !0,
                                 size: h.q.SMALL
                             },
@@ -138,7 +138,7 @@ function N(e) {
 function T(e) {
     let { channelId: t } = e,
         [n, l] = i.useState(!1),
-        a = (0, o.e7)([x.Z], () => x.Z.getUploads(t, m.Ie.CREATE_FORUM_POST.drafts.type)),
+        a = (0, o.e7)([p.Z], () => p.Z.getUploads(t, m.Ie.CREATE_FORUM_POST.drafts.type)),
         s = a.length,
         c = s > 0;
     i.useEffect(() => {
@@ -165,12 +165,12 @@ function T(e) {
                               })
                       ]
                   })
-                : (0, r.jsx)(P, {
+                : (0, r.jsx)(N, {
                       onMouseEnter: d,
                       channelId: t
                   }),
             n &&
-                (0, r.jsx)(N, {
+                (0, r.jsx)(P, {
                     channelId: t,
                     closePopout: () => {
                         l(!1);

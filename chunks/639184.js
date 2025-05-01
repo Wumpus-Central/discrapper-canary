@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => x });
 var r = n(200651);
 n(192379);
 var i = n(120356),
@@ -13,7 +13,7 @@ var i = n(120356),
     h = n(297731),
     g = n(602512),
     f = n(504764);
-function p(e) {
+function x(e) {
     let { onDismiss: t } = e;
     return (0, r.jsxs)(a.P3F, {
         onClick: () => {

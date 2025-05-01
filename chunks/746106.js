@@ -58,8 +58,9 @@ function y(e) {
         k = 0;
     1 !== C && (k = (0, l.OdO)(k, l.bgu.REDUCE_SATURATION_ENABLED));
     let j = (0, E.A)(),
-        U = (0, d.M)('RootThemeContextProvider'),
-        G = (0, d.C)('RootThemeContextProvider');
+        U = (0, d.Ml)('RootThemeContextProvider'),
+        G = (0, d.CL)('RootThemeContextProvider'),
+        B = (0, d.VM)('RootThemeContextProvider');
     return (0, r.jsx)(l.wMY, {
         theme: v,
         flags: k,
@@ -84,7 +85,8 @@ function y(e) {
             rootClassName: a()({
                 'confetti-mode': x,
                 'refresh-fast-follow-avatars': U,
-                'refresh-fast-follow-guild-bg': G
+                'refresh-fast-follow-guild-bg': G,
+                'refresh-fast-follow-distinct-borders': B
             }),
             children: n
         })

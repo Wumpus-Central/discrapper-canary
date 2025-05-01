@@ -79,20 +79,28 @@ function h(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function m(e, t) {
-    return e === c.P.REACT
+function m(e) {
+    let { interactionType: t, interactionSource: n, themeType: r } = e;
+    return t === c.P.REACT
         ? {
               position: 'left',
               align: 'top',
               animationPosition: 'right',
               spacing: 8
           }
-        : {
-              position: 'bottom',
-              align: t === c.lY.MODAL ? 'center' : 'left',
-              animationPosition: 'top',
-              spacing: 6
-          };
+        : r === c.lY.MODAL || r === c.lY.MODAL_V2 || n === c.n_.ACTIVITY
+          ? {
+                position: 'bottom',
+                align: 'center',
+                animationPosition: 'top',
+                spacing: 6
+            }
+          : {
+                position: 'bottom',
+                align: 'left',
+                animationPosition: 'top',
+                spacing: 6
+            };
 }
 function g(e) {
     var { user: t, guildId: n, channelId: u, themeType: f, onClose: h, children: g } = e,
@@ -132,7 +140,11 @@ function g(e) {
                     },
                     shouldShow: N
                 },
-                m(b, f)
+                m({
+                    interactionType: b,
+                    interactionSource: y,
+                    themeType: f
+                })
             ),
             { children: g }
         )

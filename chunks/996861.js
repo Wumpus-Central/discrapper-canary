@@ -1,18 +1,18 @@
 n.d(t, {
-    $Z: () => Z,
+    $Z: () => N,
     B8: () => I,
     F4: () => P,
-    HH: () => A,
-    Hd: () => N,
+    HH: () => D,
+    Hd: () => Z,
     Xl: () => T,
     dF: () => C,
-    eM: () => R,
+    eM: () => L,
     fB: () => _,
-    gK: () => D,
-    mG: () => M,
+    gK: () => M,
+    mG: () => A,
     qe: () => w,
     rY: () => x,
-    ts: () => L,
+    ts: () => R,
     zW: () => S
 }),
     n(200651),
@@ -31,8 +31,8 @@ var c = n(623292),
     f = n(314897),
     g = n(592125),
     m = n(626135),
-    h = n(934415),
-    b = n(572004),
+    b = n(934415),
+    h = n(572004),
     p = n(585483),
     O = n(709054),
     y = n(111618),
@@ -44,19 +44,19 @@ function S(e) {
     null != t && s.Z.open(t, j.pNK.ENGAGEMENT);
 }
 function P(e, t, n) {
-    (0, b.JG)(n.shiftKey ? ''.concat(t.channel_id, '-').concat(t.id) : t.id);
+    (0, h.JG)(n.shiftKey ? ''.concat(t.channel_id, '-').concat(t.id) : t.id);
 }
 function _(e, t) {
     m.default.track(j.rMx.MESSAGE_LINK_COPIED, {
         message_id: t.id,
         channel: t.channel_id
     }),
-        (0, b.JG)((0, h.wR)(e.guild_id, e.id, t.id));
+        (0, h.JG)((0, b.wR)(e.guild_id, e.id, t.id));
 }
-function Z(e, t, n) {
+function N(e, t, n) {
     t.state === j.yb.SEND_FAILED || n.shiftKey ? r.Z.deleteMessage(e.id, t.id, t.state === j.yb.SEND_FAILED) : l.Z.confirmDelete(e, t);
 }
-function N(e, t) {
+function Z(e, t) {
     r.Z.startEditMessage(e.id, t.id, t.content);
 }
 function I(e, t) {
@@ -69,10 +69,10 @@ function x(e, t, n) {
 function T(e, t) {
     (0, a.Z)(e.id, t.id);
 }
-function M(e, t) {
+function A(e, t) {
     (0, v.Z)(e, t, void 0, y.Z.getOptions(t.id));
 }
-function A(e, t, n) {
+function D(e, t, n) {
     let i = e.isPrivate(),
         r = t.author.id === f.default.getId();
     (0, c.fE)({
@@ -83,7 +83,7 @@ function A(e, t, n) {
     }),
         p.S.dispatchToLastSubscribed(j.CkL.TEXTAREA_FOCUS);
 }
-function D(e, t) {
+function M(e, t) {
     (0, d.R6)(e, t, 'Message');
 }
 function w(e, t) {
@@ -96,13 +96,13 @@ function C(e, t) {
         messageId: t.id
     });
 }
-function R(e, t) {
+function L(e, t) {
     (0, u.x)({
         channelId: e.id,
         messageId: t.id
     });
 }
-function L(e, t) {
+function R(e, t) {
     (0, o.l8)({
         message: t,
         source: 'message-actions'

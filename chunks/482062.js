@@ -1,7 +1,7 @@
 n.d(t, {
     KT: () => b,
     ZP: () => h,
-    nX: () => x
+    nX: () => p
 }),
     n(388685);
 var r = n(200651),
@@ -29,11 +29,11 @@ function h(e) {
     i.useLayoutEffect(() => {
         f.current = n;
     }, [n]);
-    let p = i.useCallback((e) => {
+    let x = i.useCallback((e) => {
             var t;
             return (null != (t = g.current) ? t : document).querySelector(e);
         }, []),
-        x = i.useCallback(
+        p = i.useCallback(
             (e, t) => {
                 f.current && r(e, t);
             },
@@ -50,9 +50,9 @@ function h(e) {
                 c.current = e;
                 let n = (0, s.P1)(e, o),
                     r = (0, s.x3)(e);
-                x(n, r), (0, l.h)(t, r, !0);
+                p(n, r), (0, l.h)(t, r, !0);
             },
-            [t, x]
+            [t, p]
         ),
         [v, C] = i.useState(!1),
         _ = i.useRef(v);
@@ -79,7 +79,7 @@ function h(e) {
                     (C(!1),
                     requestAnimationFrame(() => {
                         let e = c.current;
-                        null !== e && null == p((0, s.P1)(e, o)) && b((0, s.P1)(t, 'data-grid-id'));
+                        null !== e && null == x((0, s.P1)(e, o)) && b((0, s.P1)(t, 'data-grid-id'));
                     }));
             }
             function i() {
@@ -89,7 +89,7 @@ function h(e) {
             function l() {
                 h.current = !0;
             }
-        }, [t, x, b, j, p]);
+        }, [t, p, b, j, x]);
     let y = i.useCallback(
             (e) => {
                 var t, n;
@@ -100,14 +100,14 @@ function h(e) {
                 let l = (0, s.P1)(r, o),
                     h = null == i ? void 0 : i.querySelector(l);
                 if (null == h) return;
-                let x = parseInt(null != (t = h.getAttribute('data-grid-section')) ? t : ''),
+                let p = parseInt(null != (t = h.getAttribute('data-grid-section')) ? t : ''),
                     b = parseInt(h.getAttribute('aria-rowindex')),
                     v = parseInt(h.getAttribute('aria-colindex'));
                 switch ((u.has(e.key) && (e.stopPropagation(), e.preventDefault()), e.key)) {
                     case a.R8.RIGHT: {
-                        let e = p(
+                        let e = x(
                             m({
-                                section: x,
+                                section: p,
                                 row: b,
                                 column: v + 1
                             })
@@ -119,9 +119,9 @@ function h(e) {
                         return;
                     }
                     case a.R8.LEFT: {
-                        let e = p(
+                        let e = x(
                             m({
-                                section: x,
+                                section: p,
                                 row: b,
                                 column: v - 1
                             })
@@ -133,18 +133,18 @@ function h(e) {
                         return;
                     }
                     case a.R8.DOWN: {
-                        let e = p(
+                        let e = x(
                             m({
-                                section: x,
+                                section: p,
                                 row: b + 1,
                                 column: v
                             })
                         );
                         if (
                             (null == e &&
-                                (e = p(
+                                (e = x(
                                     m({
-                                        section: x + 1,
+                                        section: p + 1,
                                         row: 0,
                                         column: v
                                     })
@@ -161,24 +161,24 @@ function h(e) {
                         if (0 === b) {
                             let t = parseInt(h.getAttribute(d));
                             null ==
-                                (e = p(
+                                (e = x(
                                     m({
-                                        section: x - 1,
+                                        section: p - 1,
                                         row: t,
                                         column: v
                                     })
                                 )) &&
-                                (e = p(
+                                (e = x(
                                     m({
-                                        section: x - 1,
+                                        section: p - 1,
                                         row: t - 1,
                                         column: v
                                     })
                                 ));
                         } else
-                            e = p(
+                            e = x(
                                 m({
-                                    section: x,
+                                    section: p,
                                     row: b - 1,
                                     column: v
                                 })
@@ -194,7 +194,7 @@ function h(e) {
                         if (e.repeat) return;
                         let t = c.current;
                         if (null != t) {
-                            let r = p((0, s.P1)(t, o)),
+                            let r = x((0, s.P1)(t, o)),
                                 i = null != (n = null == r ? void 0 : r.ownerDocument) ? n : document,
                                 l = r === i.activeElement;
                             null != r && l && (e.preventDefault(), e.stopPropagation(), null == r || r.click());
@@ -202,7 +202,7 @@ function h(e) {
                     }
                 }
             },
-            [p, j]
+            [x, j]
         ),
         O = i.useCallback(
             (e) => {
@@ -231,12 +231,12 @@ let g = {
         id: 'NO_LIST',
         setFocus() {}
     }),
-    p = i.createContext(g);
-function x(e) {
+    x = i.createContext(g);
+function p(e) {
     let { id: t, section: n, row: r, column: a, boundaries: u } = e,
         [m, h] = i.useState(0 === r && 0 === a ? 0 : -1),
-        { id: g, setFocus: p } = i.useContext(f),
-        x = i.useCallback(() => p(t), [t, p]);
+        { id: g, setFocus: x } = i.useContext(f),
+        p = i.useCallback(() => x(t), [t, x]);
     return (
         i.useLayoutEffect(
             () =>
@@ -253,7 +253,7 @@ function x(e) {
             'aria-rowindex': r,
             'aria-colindex': a,
             tabIndex: m,
-            onFocus: x
+            onFocus: p
         }
     );
 }
@@ -279,7 +279,7 @@ function b(e) {
             }),
             [s, o, l]
         );
-    return (0, r.jsx)(p.Provider, {
+    return (0, r.jsx)(x.Provider, {
         value: d,
         children: (0, r.jsx)(f.Provider, {
             value: c,

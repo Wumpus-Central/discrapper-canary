@@ -12,7 +12,7 @@ let m = i.memo(
     i.forwardRef(function (e, t) {
         let { disabled: n, type: l, className: m, onClick: h } = e,
             [g, f] = (0, c.Iu)((e) => [e.activeView, e.activeViewType], s.X),
-            p = i.useCallback(() => {
+            x = i.useCallback(() => {
                 (0, c.j9)(l), null == h || h();
             }, [l, h]);
         return n
@@ -22,7 +22,7 @@ let m = i.memo(
                   ref: t,
                   children: (0, r.jsx)(o.Z, {
                       className: a()(u.emojiButton, m),
-                      onClick: p,
+                      onClick: x,
                       active: (g === d.X1.GIF || g === d.X1.EMOJI || g === d.X1.STICKER) && f === l,
                       tabIndex: 0,
                       focusProps: {

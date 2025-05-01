@@ -377,7 +377,7 @@ let k = (e) => {
         let { level: t, handleContextMenu: n, handleClick: l } = e;
         return (0, r.jsxs)(i.Fragment, {
             children: [
-                D(c._XJ, N.intl.string(N.t.Pnajj4)),
+                D(c.U65, N.intl.string(N.t.Pnajj4)),
                 (0, r.jsx)(I.Z.Title, {
                     level: t,
                     onContextMenu: n,

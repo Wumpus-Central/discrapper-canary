@@ -11,8 +11,8 @@ var i = n(200651),
     f = n(691251),
     g = n(268350),
     m = n(217590),
-    h = n(453070),
-    b = n(926491),
+    b = n(453070),
+    h = n(926491),
     p = n(378233),
     O = n(981631),
     y = n(388032);
@@ -65,10 +65,10 @@ function j(e) {
 function S(e) {
     let { type: t, id: n, name: S, isInExpressionPicker: P = !1 } = e,
         { location: _ } = (0, s.O)(),
-        Z = r.useMemo(() => v(E({}, _), { section: P ? O.jXE.EXPRESSION_PICKER : O.jXE.CONTEXT_MENU }), [_, P]),
-        N = (0, h.Go)(),
-        I = (0, l.e7)([b.Z], () => (t === f.S.STICKER && null != n ? b.Z.getStickerById(n) : null)),
-        x = null != I && N.includes(I.id),
+        N = r.useMemo(() => v(E({}, _), { section: P ? O.jXE.EXPRESSION_PICKER : O.jXE.CONTEXT_MENU }), [_, P]),
+        Z = (0, b.Go)(),
+        I = (0, l.e7)([h.Z], () => (t === f.S.STICKER && null != n ? h.Z.getStickerById(n) : null)),
+        x = null != I && Z.includes(I.id),
         T = (0, l.e7)([u.ZP], () => {
             if (t === f.S.EMOJI) {
                 if (null != n) return u.ZP.getDisambiguatedEmojiContext().getById(n);
@@ -78,7 +78,7 @@ function S(e) {
                 }
             }
         }),
-        M = (0, c.C1)(null, T);
+        A = (0, c.C1)(null, T);
     return null != I && t === f.S.STICKER
         ? (0, p.J8)(I) && !(0, p.V9)(I)
             ? null
@@ -93,14 +93,14 @@ function S(e) {
                     action: () => {
                         (0, m.cQ)({
                             sticker: I,
-                            location: v(E({}, Z), { object: O.qAy.STICKER })
+                            location: v(E({}, N), { object: O.qAy.STICKER })
                         }),
                             (0, g.SA)(null == I ? void 0 : I.id);
                     },
                     label: y.intl.string(y.t.kWmiPT)
                 })
         : null != T && t === f.S.EMOJI
-          ? M
+          ? A
               ? (0, i.jsx)(a.sNh, {
                     id: 'unfavorite',
                     action: () => (0, o.Xe)(T),
@@ -111,7 +111,7 @@ function S(e) {
                     action: () => {
                         (0, c.J1)({
                             emoji: T,
-                            location: v(E({}, Z), { object: O.qAy.EMOJI })
+                            location: v(E({}, N), { object: O.qAy.EMOJI })
                         }),
                             (0, o.$K)(T);
                     },

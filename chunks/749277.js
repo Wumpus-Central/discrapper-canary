@@ -311,13 +311,13 @@ let b = (e) => {
                                 onClick: () => i(C.L.USER_DISMISS),
                                 noticeType: D.kVF.REPORT_TO_MOD_SURVEY
                             }),
-                            m.intl.string(m.t.G1AFm5),
+                            m.intl.string(m.t['Aa+l7e']),
                             (0, r.jsx)(o.NoS, {
                                 onClick: () => {
                                     i(C.L.TAKE_ACTION);
                                 },
                                 noticeType: D.kVF.REPORT_TO_MOD_SURVEY,
-                                children: m.intl.string(m.t['LPxt+P'])
+                                children: m.intl.string(m.t['iT+wQ0'])
                             })
                         ]
                     });

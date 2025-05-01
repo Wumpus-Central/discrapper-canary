@@ -12,8 +12,8 @@ var r = n(200651),
     h = n(607070),
     g = n(541716),
     f = n(273031),
-    p = n(859235),
-    x = n(313201),
+    x = n(859235),
+    p = n(313201),
     b = n(70097),
     j = n(374794),
     v = n(470623),
@@ -28,8 +28,8 @@ let S = [
             extensions: ['jpg', 'jpeg', 'png', 'gif', 'webp']
         }
     ],
-    P = (0, x.hQ)();
-function N(e) {
+    N = (0, p.hQ)();
+function P(e) {
     let { mediaAttachments: t, containerWidth: n, containerHeight: i } = e,
         l = (0, C.tu)({
             numAttachments: t.length,
@@ -69,7 +69,7 @@ let T = (e) => {
             let { textAreaState: t } = e;
             return { textAreaState: t };
         }, c.X),
-        x = (0, d.e7)([h.Z], () => h.Z.keyboardModeEnabled),
+        p = (0, d.e7)([h.Z], () => h.Z.keyboardModeEnabled),
         b = (0, y.Z)(l, null == (t = s.textValue) ? void 0 : t.trim()),
         C = i.useMemo(() => b.find((e) => e.isThumbnail), [b]),
         T = null != b && b.length > 0,
@@ -167,12 +167,12 @@ let T = (e) => {
             multiple: !1,
             'aria-hidden': !0,
             filters: S,
-            'aria-describedby': P,
+            'aria-describedby': N,
             'aria-label': T ? O.intl.string(O.t.MxJI3d) : O.intl.string(O.t.CbiofX),
             children: T
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, r.jsx)(N, {
+                          (0, r.jsx)(P, {
                               mediaAttachments: b,
                               containerWidth: I.width,
                               containerHeight: I.height
@@ -217,7 +217,7 @@ let T = (e) => {
         style: I,
         children:
             null != C
-                ? (0, r.jsx)(p.Z, {
+                ? (0, r.jsx)(x.Z, {
                       actions: (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(f.Z, {
@@ -245,8 +245,8 @@ let T = (e) => {
                       id: C.id,
                       channelId: l.id,
                       handleEditModal: k,
-                      keyboardModeEnabled: x,
-                      size: p.q.SMALL,
+                      keyboardModeEnabled: p,
+                      size: x.q.SMALL,
                       className: w.attachmentListItem,
                       children: R
                   })

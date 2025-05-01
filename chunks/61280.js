@@ -45,7 +45,7 @@ function _(e) {
                 },
                 id: 'report-to-mod-'.concat(t.id),
                 renderIcon: (e) =>
-                    (0, r.jsx)(l._XJ, {
+                    (0, r.jsx)(l.U65, {
                         size: 'md',
                         color: 'currentColor',
                         className: e

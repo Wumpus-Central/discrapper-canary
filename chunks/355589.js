@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ed }), n(539854), n(388685), n(953529);
+n.d(t, { Z: () => em }), n(539854), n(388685), n(953529);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -12,30 +12,32 @@ var r = n(200651),
     h = n(442837),
     g = n(481060),
     f = n(787014),
-    p = n(412899),
-    x = n(493773),
+    x = n(412899),
+    p = n(493773),
     b = n(447003),
     j = n(605436),
     v = n(621516),
-    C = n(430824),
-    _ = n(186523),
-    y = n(585483),
-    O = n(70956),
-    w = n(709054),
-    S = n(961675),
-    P = n(883429),
-    N = n(993259),
-    T = n(109434),
-    I = n(456269),
-    E = n(228392),
-    k = n(432771),
-    R = n(538366),
-    Z = n(470623),
-    M = n(710352),
-    A = n(981631),
-    L = n(388032),
-    F = n(354094);
-function D(e, t, n) {
+    C = n(982168),
+    _ = n(474366),
+    y = n(430824),
+    O = n(186523),
+    w = n(585483),
+    S = n(70956),
+    N = n(709054),
+    P = n(961675),
+    T = n(883429),
+    I = n(993259),
+    E = n(109434),
+    k = n(456269),
+    R = n(228392),
+    Z = n(432771),
+    M = n(538366),
+    A = n(470623),
+    L = n(710352),
+    F = n(981631),
+    D = n(388032),
+    z = n(354094);
+function B(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -48,7 +50,7 @@ function D(e, t, n) {
         e
     );
 }
-function z(e) {
+function H(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -59,12 +61,12 @@ function z(e) {
                 })
             )),
             r.forEach(function (t) {
-                D(e, t, n[t]);
+                B(e, t, n[t]);
             });
     }
     return e;
 }
-function B(e, t) {
+function U(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -82,21 +84,21 @@ function B(e, t) {
         e
     );
 }
-let H = {
+let V = {
         width: 28,
         height: 28
     },
-    U = {
+    G = {
         width: 20,
         height: 20,
         borderRadius: 10
     },
-    V = (e) => {
-        (0, E.e5)({ onboardingCTA: e });
+    q = (e) => {
+        (0, R.e5)({ onboardingCTA: e });
     };
-class G {
+class X {
     addStep(e) {
-        ++this.currentIndex, this.steps.push(z({ index: this.currentIndex }, e)), e.isDone && this.completedSteps++;
+        ++this.currentIndex, this.steps.push(H({ index: this.currentIndex }, e)), e.isDone && this.completedSteps++;
     }
     getSteps() {
         return this.steps;
@@ -105,34 +107,34 @@ class G {
         return this.steps.every((e) => e.isDone);
     }
     constructor() {
-        D(this, 'currentIndex', 0), D(this, 'steps', []), D(this, 'completedSteps', 0);
+        B(this, 'currentIndex', 0), B(this, 'steps', []), B(this, 'completedSteps', 0);
     }
 }
-let q = (e) => {
+let W = (e) => {
         let t = null != e.topic && e.topic.length > 0;
         return {
-            name: L.intl.string(L.t.UgJu1d),
-            description: L.intl.string(L.t['3C6/Gx']),
+            name: D.intl.string(D.t.UgJu1d),
+            description: D.intl.string(D.t['3C6/Gx']),
             clickHandler: () => {
-                V(M.ZI.GUIDELINES), f.ZP.open(e.id, void 0, A.ZfP.TOPIC);
+                q(L.ZI.GUIDELINES), f.ZP.open(e.id, void 0, F.ZfP.TOPIC);
             },
             isDone: t
         };
     },
-    X = (e) => {
+    K = (e) => {
         let t = null != e.availableTags && e.availableTags.length > 0;
         return {
-            name: L.intl.string(L.t.xiBFCg),
-            description: L.intl.string(L.t.wCv4Oz),
+            name: D.intl.string(D.t.xiBFCg),
+            description: D.intl.string(D.t.wCv4Oz),
             clickHandler: () => {
-                V(M.ZI.TAGS),
+                q(L.ZI.TAGS),
                     f.ZP.open(e.id),
                     (0, g.ZDy)(async () => {
                         let { default: t } = await n.e('21971').then(n.bind(n, 201049));
                         return (n) =>
                             (0, r.jsx)(
                                 t,
-                                B(z({}, n), {
+                                U(H({}, n), {
                                     channelId: e.id,
                                     guildId: e.guild_id
                                 })
@@ -142,53 +144,53 @@ let q = (e) => {
             isDone: t
         };
     },
-    W = (e) => {
+    J = (e) => {
         let t = null != e.defaultReactionEmoji;
         return {
-            name: L.intl.string(L.t.QlyC9v),
-            description: L.intl.string(L.t['+50LJi']),
+            name: D.intl.string(D.t.QlyC9v),
+            description: D.intl.string(D.t['+50LJi']),
             clickHandler: () => {
-                V(M.ZI.DEFAULT_REACTION),
+                q(L.ZI.DEFAULT_REACTION),
                     (0, g.ZDy)(async () => {
                         let { default: t } = await n.e('80404').then(n.bind(n, 158586));
-                        return (n) => (0, r.jsx)(t, B(z({}, n), { channel: e }));
+                        return (n) => (0, r.jsx)(t, U(H({}, n), { channel: e }));
                     });
             },
             isDone: t
         };
     },
-    K = (e, t, i) => ({
-        name: L.intl.string(L.t['6A0O6+']),
+    Y = (e, t, i) => ({
+        name: D.intl.string(D.t['6A0O6+']),
         description: t
-            ? L.intl.string(L.t['8hI5vr'])
-            : L.intl.format(L.t.ysxcAw, {
+            ? D.intl.string(D.t['8hI5vr'])
+            : D.intl.format(D.t.ysxcAw, {
                   onClick: (e) => {
                       null != i &&
                           (e.preventDefault(),
                           e.stopPropagation(),
-                          (0, E.qz)(),
+                          (0, R.qz)(),
                           (0, g.ZDy)(async () => {
                               let { default: e } = await n.e('18417').then(n.bind(n, 740696));
-                              return (t) => (0, r.jsx)(e, B(z({}, t), { guildId: i }));
+                              return (t) => (0, r.jsx)(e, U(H({}, t), { guildId: i }));
                           }));
                   }
               }),
         clickHandler: () => {
-            V(M.ZI.CREATE_POST), y.S.dispatch(A.CkL.FOCUS_COMPOSER_TITLE);
+            q(L.ZI.CREATE_POST), w.S.dispatch(F.CkL.FOCUS_COMPOSER_TITLE);
         },
         isDone: e
     }),
-    J = (e, t) => i.useCallback(() => (t(!1), P.Z.hideAdminOnboarding(e, !0)), [e, t]),
-    Y = (e) => {
-        let t = w.default.extractTimestamp(e);
+    Q = (e, t) => i.useCallback(() => (t(!1), T.Z.hideAdminOnboarding(e, !0)), [e, t]),
+    $ = (e) => {
+        let t = N.default.extractTimestamp(e);
         return o()().isBefore(o()(t).add(o().duration(15, 'days')));
     },
-    Q = (e, t, n) => {
+    ee = (e, t, n) => {
         i.useEffect(() => {
             e || n(!t);
         }, [e, n, t]);
     },
-    $ = (e, t, n, r) => {
+    et = (e, t, n, r) => {
         let l = i.useRef(0);
         i.useEffect(
             () => (
@@ -196,33 +198,33 @@ let q = (e) => {
                     ? clearTimeout(l.current)
                     : (l.current = setTimeout(() => {
                           r();
-                      }, 60 * O.Z.Millis.SECOND)),
+                      }, 60 * S.Z.Millis.SECOND)),
                 () => clearTimeout(l.current)
             ),
             [e, t, r, n]
         );
     },
-    ee = (e, t, n) => {
-        (0, x.ZP)(() => {
+    en = (e, t, n) => {
+        (0, p.ZP)(() => {
             e && t && n();
         });
     },
-    et = (e) => {
+    er = (e) => {
         let { isAllDone: t, isVisible: n, canManageChannel: r, guildId: l, channel: a } = e,
-            s = (0, h.e7)([C.Z], () => (null != l ? C.Z.getRoles(l) : void 0)),
+            s = (0, h.e7)([y.Z], () => (null != l ? y.Z.getRoles(l) : void 0)),
             o = i.useCallback(() => {
-                y.S.dispatch(A.CkL.REMEASURE_TARGET);
+                w.S.dispatch(F.CkL.REMEASURE_TARGET);
             }, []);
         i.useEffect(() => {
             o();
         }, [o, t, n, r, s, a.id, a.permissionOverwrites]);
     },
-    en = () => {
+    ei = () => {
         let [e, t] = i.useState(!0);
         return {
             transitions: (0, g.Yzy)(e, {
                 keys: (e) => (e ? 'shown' : 'hidden'),
-                config: el,
+                config: es,
                 from: { opacity: 0 },
                 enter: { opacity: 1 },
                 leave: { opacity: 0 },
@@ -231,49 +233,49 @@ let q = (e) => {
             setVisible: t
         };
     },
-    er = (e) =>
+    el = (e) =>
         (0, g.Yzy)(e, {
             from: { maxHeight: 0 },
             enter: { maxHeight: 500 },
             leave: { maxHeight: 0 },
             config: { duration: 200 }
         }),
-    ei = (e) => {
+    ea = (e) => {
         let { guild: t, roles: n } = e;
         return (0, r.jsx)('div', {
-            className: F.rolesList,
-            'aria-label': L.intl.formatToPlainString(L.t.PCs0oq, { numRoles: n.length }),
+            className: z.rolesList,
+            'aria-label': D.intl.formatToPlainString(D.t.PCs0oq, { numRoles: n.length }),
             children: n.map((e) =>
                 (0, r.jsx)(
-                    p.UB,
+                    x.UB,
                     {
                         role: e,
                         canRemove: !1,
-                        onRemove: A.VqG,
+                        onRemove: F.VqG,
                         guildId: t.id,
-                        className: F.rolePill
+                        className: z.rolePill
                     },
                     e.id
                 )
             )
         });
     },
-    el = {
+    es = {
         mass: 1,
         tension: 250,
         friction: 18,
         clamp: !0
     },
-    ea = (e) => {
+    eo = (e) => {
         let { guild: t, channel: l, hasAnyThread: a, handleHide: s } = e,
             [o, c] = i.useState(!1),
-            d = (0, k.c)(l.id),
-            u = (0, h.e7)([S.Z], () => S.Z.hasHidden(l.id)),
+            d = (0, Z.c)(l.id),
+            u = (0, h.e7)([P.Z], () => P.Z.hasHidden(l.id)),
             f = (function (e, t, l, a) {
                 let s = null == e ? void 0 : e.id,
-                    o = (0, h.e7)([C.Z], () => (null != s ? C.Z.getRoles(s) : void 0));
+                    o = (0, h.e7)([y.Z], () => (null != s ? y.Z.getRoles(s) : void 0));
                 return i.useMemo(() => {
-                    let i = new G(),
+                    let i = new X(),
                         s = (null == t ? void 0 : t.isMediaChannel()) === !0;
                     return (
                         null == e ||
@@ -282,23 +284,23 @@ let q = (e) => {
                             null == o ||
                             i.addStep(
                                 (function (e, t, i, l) {
-                                    let a = (0, b.Z)(i) ? m.$e(A.Plq.VIEW_CHANNEL, A.Plq.SEND_MESSAGES) : A.Plq.SEND_MESSAGES,
-                                        s = null != e ? (0, N.E$)(e, t, i, a).filter((t) => i.permissionOverwrites.hasOwnProperty(t.id) || (0, j.pM)(e.id, t.id)) : [],
+                                    let a = (0, b.Z)(i) ? m.$e(F.Plq.VIEW_CHANNEL, F.Plq.SEND_MESSAGES) : F.Plq.SEND_MESSAGES,
+                                        s = null != e ? (0, I.E$)(e, t, i, a).filter((t) => i.permissionOverwrites.hasOwnProperty(t.id) || (0, j.pM)(e.id, t.id)) : [],
                                         o = s.length > 0,
                                         c = s.some((t) => (0, j.pM)(e.id, t.id));
                                     return {
-                                        name: L.intl.string(L.t['/Ax2go']),
-                                        description: L.intl.string(L.t.oMIexc),
+                                        name: D.intl.string(D.t['/Ax2go']),
+                                        description: D.intl.string(D.t.oMIexc),
                                         isDone: o && c,
                                         shouldWarn: o && !c,
                                         children: o
-                                            ? (0, r.jsx)(ei, {
+                                            ? (0, r.jsx)(ea, {
                                                   guild: e,
                                                   roles: s
                                               })
                                             : null,
                                         clickHandler: () => {
-                                            V(M.ZI.PERMISSIONS),
+                                            q(L.ZI.PERMISSIONS),
                                                 (0, g.ZDy)(
                                                     async () => {
                                                         let { default: t } = await n.e('78704').then(n.bind(n, 560602));
@@ -307,7 +309,7 @@ let q = (e) => {
                                                             (n) =>
                                                                 (0, r.jsx)(
                                                                     t,
-                                                                    B(z({}, n), {
+                                                                    U(H({}, n), {
                                                                         channel: i,
                                                                         guild: e,
                                                                         permission: a,
@@ -318,7 +320,7 @@ let q = (e) => {
                                                     },
                                                     {
                                                         modalKey: 'SEND_MESSAGE_ROLE_PERMISSION_FIX_MODAL_KEY',
-                                                        onCloseRequest: A.VqG,
+                                                        onCloseRequest: F.VqG,
                                                         onCloseCallback: () => l(!1)
                                                     }
                                                 );
@@ -326,236 +328,236 @@ let q = (e) => {
                                     };
                                 })(e, o, t, a)
                             ),
-                        s || i.addStep(q(t)),
-                        i.addStep(X(t)),
-                        i.addStep(W(t)),
-                        i.addStep(K(l, s, null == e ? void 0 : e.id)),
+                        s || i.addStep(W(t)),
+                        i.addStep(K(t)),
+                        i.addStep(J(t)),
+                        i.addStep(Y(l, s, null == e ? void 0 : e.id)),
                         i
                     );
                 }, [t, e, o, l, a]);
             })(t, l, a, c),
-            p = f.isAllDone();
+            x = f.isAllDone();
         return (
-            $(p, d || u || !Y(l.id), o, s),
+            et(x, d || u || !$(l.id), o, s),
             {
                 onboardingSteps: f,
                 isHidden: u,
                 isDismissed: d,
-                isAllDone: p
+                isAllDone: x
             }
         );
     },
-    es = () =>
+    ec = () =>
         i.useCallback((e) => {
             var t;
             null == (t = e.clickHandler) || t.call(e);
         }, []),
-    eo = (e) => {
+    ed = (e) => {
         let { handleHide: t } = e;
         return (0, r.jsx)(g.P3F, {
             onClick: t,
-            className: F.closeButton,
-            'aria-label': L.intl.string(L.t.WAI6xs),
+            className: z.closeButton,
+            'aria-label': D.intl.string(D.t.WAI6xs),
             children: (0, r.jsx)(g.Dio, {
                 size: 'md',
                 color: 'currentColor',
-                className: F.closeIcon
+                className: z.closeIcon
             })
         });
     },
-    ec = (e) => {
+    eu = (e) => {
         let { expanded: t, onClick: n } = e;
         return (0, r.jsx)(g.P3F, {
             onClick: n,
-            className: F.closeButton,
-            'aria-label': t ? L.intl.string(L.t.iTcumZ) : L.intl.string(L.t.dcl9MT),
+            className: z.closeButton,
+            'aria-label': t ? D.intl.string(D.t.iTcumZ) : D.intl.string(D.t.dcl9MT),
             children: t
                 ? (0, r.jsx)(g.dOc, {
                       size: 'xs',
                       color: 'currentColor',
-                      className: F.closeIcon
+                      className: z.closeIcon
                   })
                 : (0, r.jsx)(g.bJT, {
                       size: 'xs',
                       color: 'currentColor',
-                      className: F.closeIcon
+                      className: z.closeIcon
                   })
         });
     },
-    ed = (e) => {
-        let { hasAnyThread: t, channel: n } = e,
-            { onboardingExpanded: i } = (0, Z.xH)((e) => {
+    em = (e) => {
+        let { hasAnyThread: t, hasActiveThreads: n, channel: i } = e,
+            { onboardingExpanded: l } = (0, A.xH)((e) => {
                 let { onboardingExpanded: t } = e;
                 return { onboardingExpanded: t };
             }, d.X),
-            { tagFilter: l } = (0, T.H)(n.id),
-            s = (0, h.e7)([C.Z], () => C.Z.getGuild(n.getGuildId())),
-            o = (0, I.r_)(n),
-            { transitions: m, setVisible: f } = en(),
-            p = er(i),
-            b = es(),
-            j = J(n.id, f),
+            { tagFilter: s } = (0, E.H)(i.id),
+            o = (0, h.e7)([y.Z], () => y.Z.getGuild(i.getGuildId())),
+            m = (0, k.r_)(i),
+            { transitions: f, setVisible: x } = ei(),
+            b = el(l),
+            j = ec(),
+            w = Q(i.id, x),
             {
-                onboardingSteps: y,
-                isDismissed: O,
-                isHidden: w,
-                isAllDone: S
-            } = ea({
-                guild: s,
-                channel: n,
+                onboardingSteps: S,
+                isDismissed: N,
+                isHidden: P,
+                isAllDone: T
+            } = eo({
+                guild: o,
+                channel: i,
                 hasAnyThread: t,
-                handleHide: j
+                handleHide: w
             }),
-            P = !w && !O,
-            N = (0, Z.AF)(),
-            E = n.isMediaChannel(),
-            k = (e) => N.getState().setOnboardingExpanded(e);
-        return (ee(S, P, j),
-        et({
-            isAllDone: S,
-            isVisible: P,
-            canManageChannel: o,
-            guildId: null == s ? void 0 : s.id,
-            channel: n
+            I = !P && !N,
+            R = (0, A.AF)(),
+            Z = i.isMediaChannel(),
+            L = (e) => R.getState().setOnboardingExpanded(e);
+        return (en(T, I, w),
+        er({
+            isAllDone: T,
+            isVisible: I,
+            canManageChannel: m,
+            guildId: null == o ? void 0 : o.id,
+            channel: i
         }),
-        Q(O, w, f),
-        (0, x.ZP)(() => {
-            (t && P) || k(!0);
+        ee(N, P, x),
+        (0, p.ZP)(() => {
+            (t && I) || L(!0);
         }),
-        null == s)
+        null == o)
             ? null
-            : P && o
-              ? E
-                  ? t
-                      ? null
-                      : (0, r.jsx)(v.Z, { channel: n })
-                  : (0, r.jsx)(r.Fragment, {
-                        children: m((e, t) =>
-                            t
-                                ? (0, r.jsx)(c.animated.div, {
-                                      style: e,
-                                      className: F.container,
-                                      children: (0, r.jsxs)('div', {
-                                          className: F.wrapper,
-                                          children: [
-                                              (0, r.jsx)('div', {
-                                                  className: F.headerRow,
-                                                  children: (0, r.jsxs)(g.y5t, {
-                                                      component: (0, r.jsx)(g.X6q, {
-                                                          variant: 'heading-md/semibold',
-                                                          children: L.intl.string(L.t.LhlgY2)
-                                                      }),
-                                                      children: [
-                                                          (0, r.jsx)(g.X6q, {
-                                                              variant: 'heading-md/medium',
-                                                              className: F.header,
-                                                              children: L.intl.format(L.t['9L+8b2'], {
-                                                                  numCompleted: y.completedSteps.toString(),
-                                                                  numSteps: y.steps.length.toString()
-                                                              })
-                                                          }),
-                                                          (0, r.jsxs)(g.Text, {
-                                                              variant: 'text-xs/normal',
-                                                              className: F.visibilityInfo,
-                                                              children: [
-                                                                  (0, r.jsx)(g.d3s, {
-                                                                      size: 'xxs',
-                                                                      color: 'currentColor',
-                                                                      className: F.icon
-                                                                  }),
-                                                                  L.intl.string(L.t.znhX2d)
-                                                              ]
-                                                          }),
-                                                          (0, r.jsx)(ec, {
-                                                              expanded: i,
-                                                              onClick: () => k(!i)
-                                                          }),
-                                                          (0, r.jsx)(eo, { handleHide: j })
-                                                      ]
-                                                  })
-                                              }),
-                                              p((e, t) =>
-                                                  t
-                                                      ? (0, r.jsx)(c.animated.div, {
-                                                            style: e,
-                                                            className: F.listContainer,
-                                                            children: (0, r.jsx)('ol', {
-                                                                className: F.checklist,
-                                                                children: y.getSteps().map((e) =>
-                                                                    (0, r.jsxs)(
-                                                                        g.P3F,
-                                                                        {
-                                                                            tag: 'li',
-                                                                            'aria-label': e.name,
-                                                                            onClick: () => b(e),
-                                                                            className: a()(F.stepContainer, { [F.completed]: e.isDone }),
-                                                                            children: [
-                                                                                e.shouldWarn
-                                                                                    ? (0, r.jsx)(g.P4T, {
-                                                                                          size: 'custom',
-                                                                                          width: 20,
-                                                                                          height: 20,
-                                                                                          color: u.Z.STATUS_DANGER,
-                                                                                          className: F.stepStatus
-                                                                                      })
-                                                                                    : e.isDone
-                                                                                      ? (0, r.jsx)(g.G2e, {
-                                                                                            color: u.Z.STATUS_POSITIVE_BACKGROUND,
-                                                                                            icon: g.dz2,
-                                                                                            style: U,
-                                                                                            className: F.stepStatus
+            : !n && (0, C.gT)(i)
+              ? (0, r.jsx)(_.q, {})
+              : I && m
+                ? Z
+                    ? t
+                        ? null
+                        : (0, r.jsx)(v.Z, { channel: i })
+                    : (0, r.jsx)(r.Fragment, {
+                          children: f((e, t) =>
+                              t
+                                  ? (0, r.jsx)(c.animated.div, {
+                                        style: e,
+                                        className: z.container,
+                                        children: (0, r.jsxs)('div', {
+                                            className: z.wrapper,
+                                            children: [
+                                                (0, r.jsx)('div', {
+                                                    className: z.headerRow,
+                                                    children: (0, r.jsxs)(g.y5t, {
+                                                        component: (0, r.jsx)(g.X6q, {
+                                                            variant: 'heading-md/semibold',
+                                                            children: D.intl.string(D.t.LhlgY2)
+                                                        }),
+                                                        children: [
+                                                            (0, r.jsx)(g.X6q, {
+                                                                variant: 'heading-md/medium',
+                                                                className: z.header,
+                                                                children: D.intl.format(D.t['9L+8b2'], {
+                                                                    numCompleted: S.completedSteps.toString(),
+                                                                    numSteps: S.steps.length.toString()
+                                                                })
+                                                            }),
+                                                            (0, r.jsxs)(g.Text, {
+                                                                variant: 'text-xs/normal',
+                                                                className: z.visibilityInfo,
+                                                                children: [
+                                                                    (0, r.jsx)(g.d3s, {
+                                                                        size: 'xxs',
+                                                                        color: 'currentColor',
+                                                                        className: z.icon
+                                                                    }),
+                                                                    D.intl.string(D.t.znhX2d)
+                                                                ]
+                                                            }),
+                                                            (0, r.jsx)(eu, {
+                                                                expanded: l,
+                                                                onClick: () => L(!l)
+                                                            }),
+                                                            (0, r.jsx)(ed, { handleHide: w })
+                                                        ]
+                                                    })
+                                                }),
+                                                b((e, t) =>
+                                                    t
+                                                        ? (0, r.jsx)(c.animated.div, {
+                                                              style: e,
+                                                              className: z.listContainer,
+                                                              children: (0, r.jsx)('ol', {
+                                                                  className: z.checklist,
+                                                                  children: S.getSteps().map((e) =>
+                                                                      (0, r.jsxs)(
+                                                                          g.P3F,
+                                                                          {
+                                                                              tag: 'li',
+                                                                              'aria-label': e.name,
+                                                                              onClick: () => j(e),
+                                                                              className: a()(z.stepContainer, { [z.completed]: e.isDone }),
+                                                                              children: [
+                                                                                  e.shouldWarn
+                                                                                      ? (0, r.jsx)(g.P4T, {
+                                                                                            size: 'custom',
+                                                                                            width: 20,
+                                                                                            height: 20,
+                                                                                            color: u.Z.STATUS_DANGER,
+                                                                                            className: z.stepStatus
                                                                                         })
-                                                                                      : (0, r.jsx)(g.G2e, {
-                                                                                            disableColor: !0,
-                                                                                            icon: (0, g.GSL)(_.Z),
-                                                                                            style: H,
-                                                                                            className: a()(F.stepStatus, F.completed)
-                                                                                        }),
-                                                                                (0, r.jsxs)('div', {
-                                                                                    className: F.step,
-                                                                                    children: [
-                                                                                        (0, r.jsx)(g.Text, {
-                                                                                            variant: 'text-md/medium',
-                                                                                            color: e.isDone ? 'header-secondary' : 'header-primary',
-                                                                                            className: F.stepName,
-                                                                                            children: e.name
-                                                                                        }),
-                                                                                        (0, r.jsx)(g.Text, {
-                                                                                            variant: 'text-sm/normal',
-                                                                                            color: 'header-secondary',
-                                                                                            className: F.stepDescription,
-                                                                                            children: e.description
-                                                                                        }),
-                                                                                        e.children
-                                                                                    ]
-                                                                                }),
-                                                                                (0, r.jsx)(g.Fbu, {
-                                                                                    size: 'custom',
-                                                                                    color: 'currentColor',
-                                                                                    width: 12,
-                                                                                    className: F.stepStatus
-                                                                                })
-                                                                            ]
-                                                                        },
-                                                                        'onboard-step-'.concat(e.index)
-                                                                    )
-                                                                )
-                                                            })
-                                                        })
-                                                      : null
-                                              )
-                                          ]
-                                      })
-                                  })
-                                : null
-                        )
-                    })
-              : t
-                ? null
-                : (0, r.jsx)(R.Z, {
-                      channelName: n.name,
-                      guildId: n.guild_id,
-                      tagFilter: l,
-                      channel: n
+                                                                                      : e.isDone
+                                                                                        ? (0, r.jsx)(g.G2e, {
+                                                                                              color: u.Z.STATUS_POSITIVE_BACKGROUND,
+                                                                                              icon: g.dz2,
+                                                                                              style: G,
+                                                                                              className: z.stepStatus
+                                                                                          })
+                                                                                        : (0, r.jsx)(g.G2e, {
+                                                                                              disableColor: !0,
+                                                                                              icon: (0, g.GSL)(O.Z),
+                                                                                              style: V,
+                                                                                              className: a()(z.stepStatus, z.completed)
+                                                                                          }),
+                                                                                  (0, r.jsxs)('div', {
+                                                                                      className: z.step,
+                                                                                      children: [
+                                                                                          (0, r.jsx)(g.Text, {
+                                                                                              variant: 'text-md/medium',
+                                                                                              color: e.isDone ? 'header-secondary' : 'header-primary',
+                                                                                              className: z.stepName,
+                                                                                              children: e.name
+                                                                                          }),
+                                                                                          (0, r.jsx)(g.Text, {
+                                                                                              variant: 'text-sm/normal',
+                                                                                              color: 'header-secondary',
+                                                                                              className: z.stepDescription,
+                                                                                              children: e.description
+                                                                                          }),
+                                                                                          e.children
+                                                                                      ]
+                                                                                  }),
+                                                                                  (0, r.jsx)(g.Fbu, {
+                                                                                      size: 'custom',
+                                                                                      color: 'currentColor',
+                                                                                      width: 12,
+                                                                                      className: z.stepStatus
+                                                                                  })
+                                                                              ]
+                                                                          },
+                                                                          'onboard-step-'.concat(e.index)
+                                                                      )
+                                                                  )
+                                                              })
+                                                          })
+                                                        : null
+                                                )
+                                            ]
+                                        })
+                                    })
+                                  : null
+                          )
+                      })
+                : (0, r.jsx)(M.Z, {
+                      channelName: i.name,
+                      guildId: i.guild_id,
+                      tagFilter: s,
+                      channel: i
                   });
     };

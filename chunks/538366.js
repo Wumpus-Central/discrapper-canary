@@ -11,10 +11,10 @@ var r = n(200651),
     m = n(388032),
     h = n(272219);
 function g(e) {
-    let { channelName: t, guildId: g, tagFilter: f, channel: p } = e,
-        x = (0, c.r_)(p),
-        b = (0, a.cD)(p),
-        j = p.isMediaChannel(),
+    let { channelName: t, guildId: g, tagFilter: f, channel: x } = e,
+        p = (0, c.r_)(x),
+        b = (0, a.cD)(x),
+        j = x.isMediaChannel(),
         v = i.useCallback(() => {
             (0, d.qz)(),
                 (0, l.ZDy)(async () => {
@@ -67,8 +67,8 @@ function g(e) {
                 });
         }, [g]),
         C = f.size > 0,
-        _ = b || x,
-        y = !C && x && !j,
+        _ = b || p,
+        y = !C && p && !j,
         O = i.useCallback(() => (y ? v() : b ? void o.S.dispatch(u.CkL.FOCUS_COMPOSER_TITLE) : (0, u.VqG)()), [v, y, b]);
     return (0, r.jsxs)('div', {
         className: h.container,

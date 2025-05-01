@@ -12,8 +12,8 @@ var r = n(200651),
     h = n(470623),
     g = n(981631),
     f = n(388032),
-    p = n(761852),
-    x = n(73433);
+    x = n(761852),
+    p = n(73433);
 let b = i.memo(function (e) {
     let { channel: t, onChange: l } = e,
         b = (0, h.AF)(),
@@ -44,16 +44,16 @@ let b = i.memo(function (e) {
     return null != t.topic && t.topic.length > 0
         ? (0, r.jsx)(s.animated.div, {
               style: S,
-              className: O ? p.hiddenVisually : void 0,
+              className: O ? x.hiddenVisually : void 0,
               children: (0, r.jsxs)('div', {
-                  className: p.container,
+                  className: x.container,
                   children: [
                       (0, r.jsxs)('div', {
-                          className: p.headerContainer,
+                          className: x.headerContainer,
                           children: [
                               (0, r.jsxs)(c.X6q, {
                                   variant: 'heading-lg/semibold',
-                                  className: p.guidelinesHeader,
+                                  className: x.guidelinesHeader,
                                   children: [
                                       (0, r.jsx)(c.snC, {
                                           size: 'custom',
@@ -68,7 +68,7 @@ let b = i.memo(function (e) {
                                                   d.ZP.open(t.id, void 0, g.ZfP.TOPIC);
                                               },
                                               tag: 'span',
-                                              className: p.clickable,
+                                              className: x.clickable,
                                               children: (0, r.jsx)(c.vdY, {
                                                   size: 'xs',
                                                   color: 'currentColor'
@@ -78,7 +78,7 @@ let b = i.memo(function (e) {
                               }),
                               (0, r.jsx)(c.P3F, {
                                   'aria-label': f.intl.string(f.t.cpT0Cg),
-                                  className: p.clickable,
+                                  className: x.clickable,
                                   onClick: () => {
                                       b.getState().setGuidelinesOpen(!1);
                                   },
@@ -90,14 +90,14 @@ let b = i.memo(function (e) {
                           ]
                       }),
                       (0, r.jsxs)('div', {
-                          className: p.descriptionContainer,
+                          className: x.descriptionContainer,
                           children: [
                               (0, r.jsx)(c.Text, {
                                   selectable: !0,
                                   variant: 'text-sm/normal',
                                   color: 'header-secondary',
                                   style: { maxHeight: 220 },
-                                  className: a()(p.guidelines, x.markup),
+                                  className: a()(x.guidelines, p.markup),
                                   children: (0, r.jsx)('div', {
                                       ref: y,
                                       children: u.Z.parseForumPostGuidelines(t.topic, !0, {
@@ -109,13 +109,13 @@ let b = i.memo(function (e) {
                               }),
                               C &&
                                   (0, r.jsxs)('div', {
-                                      className: p.showMore,
+                                      className: x.showMore,
                                       children: [
-                                          (0, r.jsx)('div', { className: p.gradient }),
+                                          (0, r.jsx)('div', { className: x.gradient }),
                                           (0, r.jsx)('div', {
-                                              className: p.linkContainer,
+                                              className: x.linkContainer,
                                               children: (0, r.jsx)(c.P3F, {
-                                                  className: p.showMoreLink,
+                                                  className: x.showMoreLink,
                                                   onClick: () => {
                                                       (0, c.ZDy)(async () => {
                                                           let { default: e } = await n.e('78712').then(n.bind(n, 223164));
@@ -169,13 +169,13 @@ let b = i.memo(function (e) {
                                                   children: (0, r.jsxs)(c.Text, {
                                                       variant: 'text-sm/semibold',
                                                       color: 'text-brand',
-                                                      className: p.showMoreText,
+                                                      className: x.showMoreText,
                                                       children: [
                                                           f.intl.string(f.t.Vu7odH),
                                                           (0, r.jsx)(c.bJT, {
                                                               size: 'xs',
                                                               color: 'currentColor',
-                                                              className: p.showMoreIcon
+                                                              className: x.showMoreIcon
                                                           })
                                                       ]
                                                   })

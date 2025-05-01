@@ -9,18 +9,20 @@ function l(e, t) {
         c = (0, r.e7)([o.Z], () => o.Z.saturation),
         u = (0, s.Q3)('useToken'),
         d = (0, s.R6)('useToken'),
-        f = (0, a.M)('useToken'),
-        _ = (0, a.C)('useToken'),
-        p = [];
+        f = (0, a.Ml)('useToken'),
+        _ = (0, a.CL)('useToken'),
+        p = (0, a.VM)('useToken'),
+        h = [];
     return (
-        f && p.push('refresh-fast-follow-avatars'),
-        _ && p.push('refresh-fast-follow-guild-bg'),
-        u && p.push('visual-refresh'),
-        d && p.push('visual-refresh-chat-input'),
+        f && h.push('refresh-fast-follow-avatars'),
+        _ && h.push('refresh-fast-follow-guild-bg'),
+        p && h.push('refresh-fast-follow-distinct-borders'),
+        u && h.push('visual-refresh'),
+        d && h.push('visual-refresh-chat-input'),
         e.resolve({
             theme: null != t ? t : n,
             saturation: c,
-            enabledExperiments: p,
+            enabledExperiments: h,
             density: l
         })
     );

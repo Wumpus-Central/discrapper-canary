@@ -12,8 +12,8 @@ var r = n(200651),
     h = n(442837),
     g = n(481060),
     f = n(430742),
-    p = n(166459),
-    x = n(541716),
+    x = n(166459),
+    p = n(541716),
     b = n(67158),
     j = n(893718),
     v = n(472243),
@@ -23,8 +23,8 @@ var r = n(200651),
     O = n(957730),
     w = n(25015),
     S = n(252032),
-    P = n(216572),
-    N = n(913663),
+    N = n(216572),
+    P = n(913663),
     T = n(268350),
     I = n(456077),
     E = n(488131),
@@ -97,10 +97,10 @@ function el(e, t) {
         e
     );
 }
-let ea = x.Ie.CREATE_FORUM_POST;
+let ea = p.Ie.CREATE_FORUM_POST;
 function es(e) {
     let { parentChannel: t, isSearchLoading: n, onChange: l, canCreatePost: s, inputRef: o } = e,
-        d = !(0, P.wL)(t) && s,
+        d = !(0, N.wL)(t) && s,
         {
             textAreaState: u,
             formOpen: m,
@@ -113,7 +113,7 @@ function es(e) {
                 previewing: r
             };
         }, c.X),
-        [p, x] = i.useState(null),
+        [x, p] = i.useState(null),
         b = i.useContext(D.oo),
         j = i.useCallback(() => {
             b.bumpDispatchPriority();
@@ -155,7 +155,7 @@ function es(e) {
                     let { content: s } = O.ZP.parse(e, t);
                     if (((t = s), null == r || 0 === r.length)) {
                         var o;
-                        r = null == (o = N.Z.getStickerPreview(e.id, ea.drafts.type)) ? void 0 : o.map((e) => e.id);
+                        r = null == (o = P.Z.getStickerPreview(e.id, ea.drafts.type)) ? void 0 : o.map((e) => e.id);
                     }
                     if (((null == i || 0 === i.length) && (i = L.Z.getUploads(e.id, Z.d.FirstThreadMessage)), null != i && i.length > 0 && e.isMediaChannel())) {
                         let e = i.findIndex((e) => !0 === e.isThumbnail);
@@ -179,21 +179,21 @@ function es(e) {
             return i.useCallback(
                 async (t, i, a) => {
                     let { setNameError: s, setMessageError: o, setSubmitting: c, resetFormState: d, formOpen: u, setFormOpen: m, setPreviewing: h, setFormOpenFromUserAction: g, setGuidelinesOpen: f } = n.getState(),
-                        p = V.Z.hasSeen(e.id);
+                        x = V.Z.hasSeen(e.id);
                     if (!u)
                         return (
                             (0, q.P_)({
                                 guildId: e.guild_id,
                                 channelId: e.id
                             }),
-                            p || n.getState().setGuidelinesOpen(!0),
+                            x || n.getState().setGuidelinesOpen(!0),
                             g(),
                             {
                                 shouldClear: !1,
                                 shouldRefocus: !1
                             }
                         );
-                    let { content: x, stickers: b, uploads: j, hasNameError: v, hasMessageError: C } = l(t, i, a);
+                    let { content: p, stickers: b, uploads: j, hasNameError: v, hasMessageError: C } = l(t, i, a);
                     if ((s(v ? (0, H.V_)() : null), o(C ? (0, H.T4)() : null), v || C))
                         return {
                             shouldClear: !1,
@@ -202,7 +202,7 @@ function es(e) {
                     try {
                         c(!0);
                         let { valid: t } = await (0, z.v)({
-                            content: x,
+                            content: p,
                             stickers: b,
                             uploads: j,
                             type: ea,
@@ -213,7 +213,7 @@ function es(e) {
                                 shouldClear: !1,
                                 shouldRefocus: !0
                             };
-                        let n = await r(x, b, j);
+                        let n = await r(p, b, j);
                         return (
                             (0, E.ok)(n),
                             U.Z.resort(e.id),
@@ -270,7 +270,7 @@ function es(e) {
                                     className: f ? er.previewForm : er.form,
                                     children: [
                                         (0, r.jsx)(ec, {
-                                            editorRef: p,
+                                            editorRef: x,
                                             parentChannel: t,
                                             isSearchLoading: n,
                                             inputRef: o,
@@ -278,8 +278,8 @@ function es(e) {
                                         }),
                                         m &&
                                             (0, r.jsx)(em, {
-                                                editorRef: p,
-                                                setEditorRef: x,
+                                                editorRef: x,
+                                                setEditorRef: p,
                                                 parentChannel: t,
                                                 submit: R,
                                                 disabled: !d
@@ -330,12 +330,12 @@ let eo = i.memo(function (e) {
             }, c.X),
             m = (0, K.AF)(),
             h = (0, G.ql)(t),
-            x = i.useCallback(() => {
+            p = i.useCallback(() => {
                 var e;
                 m.getState().resetFormState(),
                     f.Z.clearDraft(t.id, Z.d.ThreadSettings),
                     f.Z.clearDraft(t.id, Z.d.FirstThreadMessage),
-                    p.Z.clearAll(t.id, Z.d.FirstThreadMessage),
+                    x.Z.clearAll(t.id, Z.d.FirstThreadMessage),
                     m.getState().setFormOpen(!1),
                     m.getState().setBodyFocused(!1),
                     m.getState().setTitleFocused(!1),
@@ -370,7 +370,7 @@ let eo = i.memo(function (e) {
                                           (0, r.jsx)(
                                               g.P3F,
                                               el(ei({}, e), {
-                                                  onClick: x,
+                                                  onClick: p,
                                                   children: (0, r.jsx)(g.k$p, {
                                                       size: 'md',
                                                       color: 'currentColor',
@@ -384,7 +384,7 @@ let eo = i.memo(function (e) {
                                 color: 'currentColor',
                                 className: er.searchIcon
                             }),
-                [n, a, d, s, o.textValue, x, t.id, h, u]
+                [n, a, d, s, o.textValue, p, t.id, h, u]
             );
         return (0, r.jsx)('div', {
             className: er.prefixElement,
@@ -411,8 +411,8 @@ let eo = i.memo(function (e) {
                     submitting: s
                 };
             }, c.X),
-            p = (0, K.AF)(),
-            x = null != t.topic && 0 !== t.topic.length,
+            x = (0, K.AF)(),
+            p = null != t.topic && 0 !== t.topic.length,
             b = V.Z.hasSeen(t.id),
             j = (0, G.ql)(t),
             v = (0, h.e7)([F.default], () => F.default.getCurrentUser());
@@ -422,15 +422,15 @@ let eo = i.memo(function (e) {
                 handler: () => {
                     var e;
                     let t = n.current instanceof g.lcI ? (null == (e = n.current) ? void 0 : e._textArea) : n.current;
-                    null == t || t.focus(), p.getState().setTitleFocused(!0), p.getState().setFormOpen(!0), p.getState().setHasClickedForm(!0);
+                    null == t || t.focus(), x.getState().setTitleFocused(!0), x.getState().setFormOpen(!0), x.getState().setHasClickedForm(!0);
                 }
             });
         let C = i.useCallback(
                 (e) => {
                     let n = e.clipboardData.files[0];
-                    null != n && n.type.startsWith('image/') && (e.preventDefault(), (0, B.d)([n], t, Z.d.FirstThreadMessage), p.getState().setFormOpenFromUserAction());
+                    null != n && n.type.startsWith('image/') && (e.preventDefault(), (0, B.d)([n], t, Z.d.FirstThreadMessage), x.getState().setFormOpenFromUserAction());
                 },
-                [t, p]
+                [t, x]
             ),
             _ = (0, H.Op)(d, { content: u });
         return (0, r.jsxs)('div', {
@@ -454,19 +454,19 @@ let eo = i.memo(function (e) {
                           maxLength: ee.HN8,
                           onChange: (e) => {
                               let n = (0, I.Z)(e, !1);
-                              p.getState().setName(n);
+                              x.getState().setName(n);
                               let r = 0 === n.trim().length,
                                   i = 0 === m.textValue.trim().length,
                                   l = m.textValue.trim() === j;
-                              r && (i || l) && p.getState().setHasClickedForm(!1), s || U.Z.updateForumSearchQuery(t.id, n);
+                              r && (i || l) && x.getState().setHasClickedForm(!1), s || U.Z.updateForumSearchQuery(t.id, n);
                           },
                           onFocus: () => {
-                              p.getState().setTitleFocused(!0), p.getState().setBodyFocused(!1);
+                              x.getState().setTitleFocused(!0), x.getState().setBodyFocused(!1);
                           },
                           onBlur: () => {
-                              p.getState().setTitleFocused(!1);
+                              x.getState().setTitleFocused(!1);
                               let e = (0, I.Z)(u, !0);
-                              e !== u && (p.getState().setName(e), s || U.Z.updateForumSearchQuery(t.id, e));
+                              e !== u && (x.getState().setName(e), s || U.Z.updateForumSearchQuery(t.id, e));
                           },
                           onKeyDown: (e) => {
                               var r, i;
@@ -481,9 +481,9 @@ let eo = i.memo(function (e) {
                                             guildId: t.guild_id,
                                             channelId: t.id
                                         }),
-                                        x && !b && p.getState().setGuidelinesOpen(!0),
-                                        p.getState().setFormOpenFromUserAction(),
-                                        u.trim().length > 0 && (p.getState().setBodyFocused(!0), null == a || a.focus())));
+                                        p && !b && x.getState().setGuidelinesOpen(!0),
+                                        x.getState().setFormOpenFromUserAction(),
+                                        u.trim().length > 0 && (x.getState().setBodyFocused(!0), null == a || a.focus())));
                               let o = n.current instanceof g.lcI ? (null == (r = n.current) ? void 0 : r._textArea) : n.current;
                               if ('Home' === e.key || 'End' === e.key) {
                                   if (null == o) return;
@@ -493,7 +493,7 @@ let eo = i.memo(function (e) {
                                       o.setSelectionRange(e, e);
                                   }
                               }
-                              'Escape' !== e.key || p.getState().submitting || (null == (i = n.current) || i.blur(), p.getState().setFormOpen(!1), p.getState().setTitleFocused(!1), p.getState().setBodyFocused(!1), p.getState().setPreviewing(!1));
+                              'Escape' !== e.key || x.getState().submitting || (null == (i = n.current) || i.blur(), x.getState().setFormOpen(!1), x.getState().setTitleFocused(!1), x.getState().setBodyFocused(!1), x.getState().setPreviewing(!1));
                           },
                           error: _,
                           className: er.title,
@@ -504,7 +504,7 @@ let eo = i.memo(function (e) {
                     : (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(ed, { parentChannel: t }),
-                              (0, r.jsx)(ep, {
+                              (0, r.jsx)(ex, {
                                   parentChannel: t,
                                   canCreatePost: l
                               })
@@ -583,8 +583,8 @@ let eu = i.memo(function (e) {
         let {
                 messageError: m,
                 previewing: f,
-                textAreaState: p,
-                bodyFocused: x,
+                textAreaState: x,
+                bodyFocused: p,
                 formOpen: b
             } = (0, K.xH)((e) => {
                 let { messageError: t, textAreaState: n, previewing: r, bodyFocused: i, formOpen: l } = e;
@@ -636,7 +636,7 @@ let eu = i.memo(function (e) {
                 event: ee.CkL.TEXTAREA_BLUR,
                 handler: y
             });
-        let S = (0, H.Op)(m, { content: p.textValue });
+        let S = (0, H.Op)(m, { content: x.textValue });
         return (0, r.jsx)('div', {
             className: er.bodyContainer,
             children: (0, r.jsxs)('div', {
@@ -645,7 +645,7 @@ let eu = i.memo(function (e) {
                     f
                         ? (0, r.jsx)(eu, {
                               parentChannel: t,
-                              textValue: p.textValue
+                              textValue: x.textValue
                           })
                         : (0, r.jsx)('div', {
                               onClick: _,
@@ -654,9 +654,9 @@ let eu = i.memo(function (e) {
                                   setEditorRef: d,
                                   channel: t,
                                   placeholder: en.intl.string(en.t['8IPnv7']),
-                                  textValue: p.textValue,
-                                  richValue: p.richValue,
-                                  focused: x,
+                                  textValue: x.textValue,
+                                  richValue: x.richValue,
+                                  focused: p,
                                   className: er.channelTextArea,
                                   innerClassName: a()(er.channelTextAreaInner, { [er.channelTextAreaInnerError]: null != S }),
                                   onChange: O,
@@ -751,16 +751,16 @@ let ef = i.memo(function (e) {
         u = d > 0,
         m = (0, h.e7)([A.Z], () => A.Z.getSlowmodeCooldownGuess(t.id, A.S.CreateThread)),
         f = (0, h.e7)([M.Z], () => M.Z.can(ee.Plq.MANAGE_THREADS, t) || M.Z.can(ee.Plq.MANAGE_CHANNELS, t)),
-        p = t.hasFlag(et.zZ.REQUIRE_TAG) && 0 === s.size && o.length > 0 && a.textValue.length > 0,
-        x = (0, K.AF)(),
+        x = t.hasFlag(et.zZ.REQUIRE_TAG) && 0 === s.size && o.length > 0 && a.textValue.length > 0,
+        p = (0, K.AF)(),
         j = i.useCallback(() => {
-            x.getState().setBodyFocused(!1);
-        }, [x]),
+            p.getState().setBodyFocused(!1);
+        }, [p]),
         C = i.useMemo(() => '' !== o.trim() && '' !== a.textValue.trim(), [o, a.textValue]);
     return (
         i.useEffect(() => {
-            C || x.getState().setPreviewing(!1);
-        }, [C, x]),
+            C || p.getState().setPreviewing(!1);
+        }, [C, p]),
         (0, r.jsxs)('div', {
             className: l,
             children: [
@@ -791,7 +791,7 @@ let ef = i.memo(function (e) {
                                 }),
                                 (0, r.jsx)(ed, { parentChannel: t }),
                                 C && (0, r.jsx)(eg, {}),
-                                (0, r.jsx)(ep, {
+                                (0, r.jsx)(ex, {
                                     parentChannel: t,
                                     disableIfInvalid: !0,
                                     canCreatePost: n,
@@ -810,7 +810,7 @@ let ef = i.memo(function (e) {
                         )
                     ]
                 }),
-                p &&
+                x &&
                     (0, r.jsx)(g.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-danger',
@@ -821,9 +821,9 @@ let ef = i.memo(function (e) {
         })
     );
 });
-function ep(e) {
+function ex(e) {
     let { parentChannel: t, canCreatePost: n, disabled: i, disableIfInvalid: l = !1 } = e,
-        a = (0, P.wL)(t),
+        a = (0, N.wL)(t),
         {
             submitting: s,
             textAreaState: o,
@@ -841,9 +841,9 @@ function ep(e) {
             };
         }, c.X),
         f = t.hasFlag(et.zZ.REQUIRE_TAG) && 0 === u.size && d.length > 0 && o.textValue.length > 0,
-        p = (0, h.Wu)([L.Z], () => L.Z.getUploads(t.id, Z.d.FirstThreadMessage)),
-        x = o.textValue.trim().length > 0 || p.length > 0,
-        b = !f && x && d.trim().length > 0;
+        x = (0, h.Wu)([L.Z], () => L.Z.getUploads(t.id, Z.d.FirstThreadMessage)),
+        p = o.textValue.trim().length > 0 || x.length > 0,
+        b = !f && p && d.trim().length > 0;
     if (__OVERLAY__ || a) return null;
     let j = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -878,7 +878,7 @@ function ep(e) {
               children: (e) => j(e)
           });
 }
-function ex() {
+function ep() {
     return Promise.resolve();
 }
 function eb(e) {
@@ -900,18 +900,18 @@ function eb(e) {
             id: ''.concat(t.id, '-post-form-tags-navigator'),
             isEnabled: !0,
             wrap: !0,
-            scrollToStart: ex,
-            scrollToEnd: ex,
+            scrollToStart: ep,
+            scrollToEnd: ep,
             orientation: m.hy.HORIZONTAL
         }),
-        { containerRef: f, containerWidth: p } = (0, Q.Z)(),
-        x = i.useRef(null),
+        { containerRef: f, containerWidth: x } = (0, Q.Z)(),
+        p = i.useRef(null),
         [b, j] = i.useState(!0),
         v = (0, G.Vm)(t),
         [C, _] = i.useState(0);
     return (i.useLayoutEffect(() => {
         var e;
-        let t = x.current,
+        let t = p.current,
             n = null == t || null == (e = t.children) ? void 0 : e[0],
             r = null == t || null == n || n.clientHeight > t.clientHeight;
         if ((r !== b && j(r), r && null != f.current && null != n && null != n.children)) {
@@ -924,7 +924,7 @@ function eb(e) {
             }
             _(r);
         }
-    }, [v, b, f, p]),
+    }, [v, b, f, x]),
     0 === v.length)
         ? null
         : (0, r.jsxs)('div', {
@@ -938,7 +938,7 @@ function eb(e) {
                   }),
                   (0, r.jsx)('div', {
                       className: er.tagList,
-                      ref: x,
+                      ref: p,
                       children: (0, r.jsx)(u.bG, {
                           navigator: h,
                           children: (0, r.jsx)(u.SJ, {
