@@ -19,8 +19,8 @@ var r = n(200651),
     O = n(774343),
     v = n(417363),
     C = n(941128),
-    j = n(780570),
-    S = n(278464),
+    S = n(780570),
+    j = n(278464),
     E = n(276952),
     x = n(682662),
     P = n(662146),
@@ -47,7 +47,7 @@ function D(e) {
     let { selected: p, user: f, badge: b, link: _, showProgressBadge: y } = e,
         O = (0, o.e7)([u.Z], () => u.Z.isEditorOpen),
         [v, C] = i.useState(!1),
-        [j, S] = i.useState(!1),
+        [S, j] = i.useState(!1),
         [N, D] = i.useState(null),
         [L, k] = i.useState(0),
         M = (0, l.Ie)('home'),
@@ -57,7 +57,7 @@ function D(e) {
         };
     if (null == f) return null;
     let B = T.intl.string(T.t.YUU0RE);
-    j && (B = s.K.get(w.wli) ? T.intl.string(T.t.nkq1l5) : T.intl.string(T.t.Be8Q5O));
+    S && (B = s.K.get(w.wli) ? T.intl.string(T.t.nkq1l5) : T.intl.string(T.t.Be8Q5O));
     let V = null;
     !p &&
         y &&
@@ -108,9 +108,9 @@ function D(e) {
                                 s.K.set(w.wli, e),
                                     e && s.K.set(Z.O5, !0),
                                     e ? (0, g.GN)('discodo') : (0, g.GN)('user_leave'),
-                                    S(!0),
+                                    j(!0),
                                     setTimeout(() => {
-                                        S(!1);
+                                        j(!1);
                                     }, 1000);
                             }
                         },
@@ -176,11 +176,11 @@ function D(e) {
     });
 }
 function L() {
-    let e = (0, S.n)(),
+    let e = (0, j.n)(),
         t = (0, o.e7)([C.Z, v.Z], () => {
             let e = (0, c.E)(C.Z.activeItems, v.Z),
-                { total: t, progress: n } = j.lK(e),
-                r = j.xI(n, t);
+                { total: t, progress: n } = S.lK(e),
+                r = S.xI(n, t);
             return r > 0 && r < 100;
         }),
         n = (0, f.If)(),

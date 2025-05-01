@@ -18,7 +18,7 @@ var i = n(442837),
 function _(e) {
     let { guild: t, selectedChannelId: n, selectedVoiceChannelId: _, selectedChannel: y, channelListRow: O } = e,
         v = t.getModeratorReportChannelId(),
-        { hasUnread: C, numUnread: j } = (0, i.cj)(
+        { hasUnread: C, numUnread: S } = (0, i.cj)(
             [d.ZP],
             () =>
                 null == v
@@ -32,9 +32,9 @@ function _(e) {
                       },
             [v]
         ),
-        S = (0, i.e7)([c.Z], () => (null == v ? 0 : c.Z.getNewThreadCount(t.id, v)));
+        j = (0, i.e7)([c.Z], () => (null == v ? 0 : c.Z.getNewThreadCount(t.id, v)));
     if (!(0, s._5)(t.id)) return null;
-    let E = j > 0 ? m.intl.format(b.default['/wHkWV'], { count: j }) : m.intl.string(b.default['kI3X9/']),
+    let E = S > 0 ? m.intl.format(b.default['/wHkWV'], { count: S }) : m.intl.string(b.default['kI3X9/']),
         { record: x, threadIds: P = [], threadCount: I = 0 } = null != O ? O : {};
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -54,11 +54,11 @@ function _(e) {
                 selected: n === g.oC.REPORT_TO_MOD || n === v,
                 showUnread: C,
                 trailing:
-                    S > 0
+                    j > 0
                         ? (0, r.jsx)(l.Text, {
                               variant: 'text-xs/semibold',
                               color: 'text-brand',
-                              children: m.intl.format(m.t.GkAbqa, { count: (0, l.NGo)(S) })
+                              children: m.intl.format(m.t.GkAbqa, { count: (0, l.NGo)(j) })
                           })
                         : null
             }),

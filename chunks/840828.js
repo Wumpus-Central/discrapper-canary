@@ -11,30 +11,28 @@ var r = n(442837),
     f = n(981631),
     _ = n(388032);
 function p(e) {
-    let { subscriptionTier: t, isTrialCTA: n, isGift: p, buttonTextOverride: m, defaultTextOverride: g } = e,
-        E = (0, r.e7)([a.default], () => a.default.getCurrentUser()),
-        b = (0, r.e7)([s.ZP], () => s.ZP.getPremiumTypeSubscription()),
-        { fractionalState: y } = (0, i.Z)({ forceFetch: !1 }),
-        O = (0, r.e7)([c.Z], () => c.Z.getPremiumTypeOverride());
-    if (n) return { buttonText: null != m ? m : _.intl.string(_.t['Gd/XHB']) };
-    if (p) return { buttonText: null != m ? m : _.intl.string(_.t.PEjaCw) };
-    let v = null != g ? g : _.intl.string(_.t['2pG5GR']),
-        I = null != b ? (0, l.Af)(b) : null,
-        S = void 0 !== O ? O : null != I ? (0, l.Rd)(I.planId) : null == E ? void 0 : E.premiumType,
-        T = t === d.Si.TIER_2 && null != S && [d.p9.TIER_0, d.p9.TIER_1].includes(S);
-    T && (v = _.intl.string(_.t.IJI7ys));
-    let A = (null != b && (0, l.m3)(b)) || (null != b && (0, u.o)('PremiumSubscribeButton', E, y));
-    if (!((null != b && b.status !== f.O0b.ACCOUNT_HOLD && !(0, o.Q0)(b.planId) && !T && void 0 === O) || A)) return { buttonText: null != m ? m : v };
+    let { subscriptionTier: t, buttonTextOverride: n, defaultTextOverride: p } = e,
+        m = (0, r.e7)([a.default], () => a.default.getCurrentUser()),
+        g = (0, r.e7)([s.ZP], () => s.ZP.getPremiumTypeSubscription()),
+        { fractionalState: E } = (0, i.Z)({ forceFetch: !1 }),
+        b = (0, r.e7)([c.Z], () => c.Z.getPremiumTypeOverride()),
+        y = null != p ? p : _.intl.string(_.t['2pG5GR']),
+        O = null != g ? (0, l.Af)(g) : null,
+        v = void 0 !== b ? b : null != O ? (0, l.Rd)(O.planId) : null == m ? void 0 : m.premiumType,
+        I = t === d.Si.TIER_2 && null != v && [d.p9.TIER_0, d.p9.TIER_1].includes(v);
+    I && (y = _.intl.string(_.t.IJI7ys));
+    let S = (null != g && (0, l.m3)(g)) || (null != g && (0, u.o)('PremiumSubscribeButton', m, E));
+    if (!((null != g && g.status !== f.O0b.ACCOUNT_HOLD && !(0, o.Q0)(g.planId) && !I && void 0 === b) || S)) return { buttonText: null != n ? n : y };
     {
-        var N, C;
+        var T, A;
         let e = h({
             ctaSubscriptionSkuId: t,
-            currentPremiumType: S,
-            isSwitchingDisabled: A,
-            subscription: b
+            currentPremiumType: v,
+            isSwitchingDisabled: S,
+            subscription: g
         });
         return {
-            buttonText: null != (C = null != (N = e.disabledButtonText) ? N : m) ? C : v,
+            buttonText: null != (A = null != (T = e.disabledButtonText) ? T : n) ? A : y,
             buttonTooltipText: e.disabledButtonTooltipText,
             disabled: !0
         };

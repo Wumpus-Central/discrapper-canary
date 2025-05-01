@@ -20,8 +20,8 @@ var i = n(120356),
     O = n(823379),
     v = n(709054),
     C = n(853856),
-    j = n(981631),
-    S = n(388032),
+    S = n(981631),
+    j = n(388032),
     E = n(714509),
     x = n(375613);
 function P(e, t) {
@@ -50,8 +50,8 @@ function I() {
                 .filter(O.lm)
         ),
         t = e.map((e) => e.id),
-        n = e.filter((e) => e.type === j.d4z.GUILD_VOICE),
-        i = e.filter((e) => e.type === j.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
+        n = e.filter((e) => e.type === S.d4z.GUILD_VOICE),
+        i = e.filter((e) => e.type === S.d4z.GUILD_STAGE_VOICE).map((e) => e.id),
         l = (0, a.Wu)(
             [y.ZP],
             () =>
@@ -78,7 +78,7 @@ function I() {
             for (let t of i) e += f.Z.getParticipantCount(t, g.pV.AUDIENCE);
             return e;
         }),
-        S = (0, a.Wu)(
+        j = (0, a.Wu)(
             [m.Z],
             () =>
                 m.Z.getAllApplicationStreams()
@@ -100,10 +100,10 @@ function I() {
             [t]
         ),
         I = (0, a.Wu)([_.default], () => x.map((e) => _.default.getUser(e)), [x]),
-        w = (0, a.Wu)([_.default], () => S.map((e) => _.default.getUser(e)), [S]),
+        w = (0, a.Wu)([_.default], () => j.map((e) => _.default.getUser(e)), [j]),
         N = P(
             c.gj8,
-            l.filter((e) => !S.includes(e.id) && !x.includes(e.id))
+            l.filter((e) => !j.includes(e.id) && !x.includes(e.id))
         ),
         Z =
             0 === o.length
@@ -155,7 +155,7 @@ function w() {
                 className: l()(E.row, E.rowGuildName),
                 children: (0, r.jsx)('span', {
                     className: l()(E.guildNameText, E.guildNameTextLimitedSize),
-                    children: S.intl.string(S.t.wMWycn)
+                    children: j.intl.string(j.t.wMWycn)
                 })
             }),
             (0, r.jsx)(I, {})

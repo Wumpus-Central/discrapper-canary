@@ -40,7 +40,7 @@ function v(e) {
                 amount: 0,
                 currency: v.currency
             },
-            (0, E.UX)(t.items, v.currency),
+            (0, E.UX)(t.items, v.currency, t.paymentSourceId),
             h,
             l
         ),

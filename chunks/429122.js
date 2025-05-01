@@ -52,8 +52,8 @@ let _ = i.memo(function (e) {
     let { sectionIndex: t, guildChannels: n, guildChannelsVersion: h, voiceStates: p, guildId: m, selectedChannelId: b, selectedVoiceChannelId: _, optInEnabled: y } = e,
         { hasDivider: O, canHaveVoiceSummary: v } = i.useMemo(() => (0, d.ie)(n, y, t), [n, y, t, h]),
         C = i.useMemo(() => (t === u.wZ ? null : n.getCategoryFromSection(t)), [n, t, h]),
-        j = (0, s.DM)(m),
-        S = (0, l.Wu)(
+        S = (0, s.DM)(m),
+        j = (0, l.Wu)(
             [a.ZP],
             () => {
                 if (null == C || !C.isCollapsed || !v) return [];
@@ -62,21 +62,21 @@ let _ = i.memo(function (e) {
                 for (let n of e) {
                     if (!n.isGuildVocal()) continue;
                     let e = a.ZP.isChannelOrParentOptedIn(m, n.id);
-                    (!j || e) && t.push(n);
+                    (!S || e) && t.push(n);
                 }
                 return t;
             },
-            [C, v, m, j]
+            [C, v, m, S]
         ),
         E = i.useMemo(
             () =>
                 (0, c.c4)({
-                    channels: S,
+                    channels: j,
                     selectedChannelId: b,
                     selectedVoiceChannelId: _,
                     voiceStates: p
                 }),
-            [S, b, _, p]
+            [j, b, _, p]
         );
     if (t === n.voiceChannelsSectionNumber)
         return (0, r.jsx)(g, {

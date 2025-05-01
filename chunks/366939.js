@@ -69,7 +69,7 @@ async function u(e, t, n, r, c, u) {
                 amount: 0,
                 currency: _
             },
-            (0, a.UX)(f, _),
+            (0, a.UX)(f, _, null == r ? void 0 : r.id),
             t,
             c,
             u
@@ -94,7 +94,7 @@ async function d(e, t, n) {
                 amount: 0,
                 currency: e.currency
             },
-            (0, a.UX)(e.items, e.currency),
+            (0, a.UX)(e.items, e.currency, e.paymentSourceId),
             t,
             n
         );

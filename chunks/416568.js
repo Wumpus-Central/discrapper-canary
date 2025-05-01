@@ -19,8 +19,8 @@ var r = n(200651),
     O = n(100527),
     v = n(906732),
     C = n(358221),
-    j = n(540059),
-    S = n(706590),
+    S = n(540059),
+    j = n(706590),
     E = n(940777),
     x = n(41776),
     P = n(905423),
@@ -229,7 +229,7 @@ class ea {
 }
 function ec(e) {
     let { hideDms: t, scrollToTop: n, lurkingGuildIds: i } = e,
-        l = (0, S.Z)(),
+        l = (0, j.Z)(),
         { pathname: o } = (0, c.TH)(),
         s = o.startsWith(ee.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB('')),
         a = (0, h.Wu)([A.Z, T.ZP], () => L.default.keys(A.Z.getGuilds()).filter((e) => T.ZP.isCurrentUserGuest(e))),
@@ -279,7 +279,7 @@ function eu(e) {
 }
 function ed(e) {
     let { disableAppDownload: t = D.isPlatformEmbedded, isOverlay: n = !1, className: l, themeOverride: s } = e,
-        a = (0, j.Q3)('GuildsBar'),
+        a = (0, S.Q3)('GuildsBar'),
         [d] = (0, h.Wu)([R.ZP], () => {
             let e = R.ZP.getGuildsTree();
             return [e, e.version];
@@ -287,7 +287,7 @@ function ed(e) {
         p = (0, h.e7)([x.Z], () => x.Z.lurkingGuildIds()),
         b = i.useMemo(() => (n ? [] : p), [p, n]),
         y = (0, h.e7)([C.Z], () => C.Z.isFullscreenInContext()),
-        [S, E] = i.useState(!1),
+        [j, E] = i.useState(!1),
         T = i.useCallback(() => E(!0), []),
         A = i.useCallback(() => E(!1), []),
         L = i.useRef(!1),
@@ -379,7 +379,7 @@ function ed(e) {
                                 folderNode: t,
                                 setNodeRef: eg.setNodeRef,
                                 draggable: !0,
-                                sorting: S,
+                                sorting: j,
                                 onDragStart: T,
                                 onDragEnd: A,
                                 renderChildNode: e,
@@ -395,7 +395,7 @@ function ed(e) {
                                 guildNode: t,
                                 setRef: eg.setNodeRef,
                                 draggable: !0,
-                                sorting: S,
+                                sorting: j,
                                 onDragStart: T,
                                 onDragEnd: A,
                                 'aria-setsize': i,
@@ -407,19 +407,19 @@ function ed(e) {
                         return null;
                 }
             },
-            [T, A, S, eg.setNodeRef]
+            [T, A, j, eg.setNodeRef]
         ),
         { enabled: ev } = (0, I.W)({ location: 'GuildsBar' });
     (0, N.i)();
     let eC = i.useRef(null),
-        ej = (0, w.qp)({
+        eS = (0, w.qp)({
             isVirtualCurrencyEnabled: ev,
             discoveryButtonRef: eC,
             scrollToBottom: eg.scrollToBottom
         }),
-        { shouldShow: eS, questId: eE, onDiscoveryButtonClick: ex } = ej,
-        eP = eo(ej, ['shouldShow', 'questId', 'onDiscoveryButtonClick']),
-        eI = ev && eS,
+        { shouldShow: ej, questId: eE, onDiscoveryButtonClick: ex } = eS,
+        eP = eo(eS, ['shouldShow', 'questId', 'onDiscoveryButtonClick']),
+        eI = ev && ej,
         ew = (0, r.jsx)(z.Z, {
             ref: eC,
             questId: eI ? eE : void 0,

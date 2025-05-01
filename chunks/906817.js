@@ -63,9 +63,9 @@ let O = i.memo(function (e) {
                 r = e.getShownChannelAndThreadIds();
             null != y && r.includes(y) && (t = (0, c.KY)(b)), (0, c.Uo)(n.id, r, t);
         }, [n.id, y, b, _]),
-        j = (0, s.Q3)('ChannelListSection'),
-        { density: S } = (0, l.TCT)(),
-        E = j && 'compact' === S ? 8 : p.$k;
+        S = (0, s.Q3)('ChannelListSection'),
+        { density: j } = (0, l.TCT)(),
+        E = S && 'compact' === j ? 8 : p.$k;
     switch (t) {
         case d.wZ:
             return (0, r.jsx)('div', { style: { height: E } });

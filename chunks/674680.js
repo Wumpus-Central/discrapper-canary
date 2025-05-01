@@ -54,11 +54,11 @@ function g(e) {
         { name: y, rarity: O } = b,
         { color: v } = (0, c.F7)(O),
         C = (0, i.wj)(m) ? p : f,
-        j = (_.size - _.offset - 2 * _.stroke) * 0.8,
-        S = _.size - _.stroke,
+        S = (_.size - _.offset - 2 * _.stroke) * 0.8,
+        j = _.size - _.stroke,
         E = {
-            width: 0.4 * j,
-            height: 0.4 * j
+            width: 0.4 * S,
+            height: 0.4 * S
         },
         x = {
             width: E.width + 1,
@@ -70,8 +70,8 @@ function g(e) {
     return (0, r.jsxs)('div', {
         className: d.container,
         style: {
-            width: S,
-            height: S,
+            width: j,
+            height: j,
             padding: _.stroke
         },
         'aria-label': ''.concat(null != (t = y()) ? t : ''),
@@ -81,8 +81,8 @@ function g(e) {
                 children: (0, r.jsx)(l.rm8, {
                     size: 'custom',
                     color: u ? v : (0, s.Lq)(C.trophy),
-                    width: j,
-                    height: j
+                    width: S,
+                    height: S
                 })
             }),
             !u &&

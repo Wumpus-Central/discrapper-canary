@@ -19,8 +19,8 @@ var r = n(200651),
     O = n(199902),
     v = n(592125),
     C = n(944486),
-    j = n(979651),
-    S = n(709054),
+    S = n(979651),
+    j = n(709054),
     E = n(853856),
     x = n(593214),
     P = n(919755),
@@ -83,8 +83,8 @@ function D() {
                     return null != t && null != e[t.channelId];
                 }),
                 i = (0, a.e7)([O.Z], () => O.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
-                l = (0, a.e7)([j.Z], () => n && null != t && j.Z.hasVideo(t), [n, t]),
-                o = (0, a.Wu)([h.ZP], () => S.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
+                l = (0, a.e7)([S.Z], () => n && null != t && S.Z.hasVideo(t), [n, t]),
+                o = (0, a.Wu)([h.ZP], () => j.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
                 s = (0, a.e7)([h.ZP], () =>
                     Array.from(h.ZP.getSelfEmbeddedActivities().values()).some((t) => {
                         let { location: n } = t,

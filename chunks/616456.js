@@ -27,8 +27,8 @@ var s,
     C = a(467510),
     S = a(101284),
     G = a(622916),
-    M = a(394798),
-    b = a(886115),
+    b = a(394798),
+    M = a(886115),
     U = a(617726),
     w = a(928541),
     B = a(14588),
@@ -323,8 +323,8 @@ function tv(t) {
 function tC(t, e) {
     let a,
         { doc: _, mirror: o, blockClass: i, blockSelector: c, unblockSelector: s, maskAllText: E, maskTextClass: l, unmaskTextClass: u, maskTextSelector: I, unmaskTextSelector: R, skipChild: A = !1, inlineStylesheet: f = !0, maskInputOptions: p = {}, maskAttributeFn: N, maskTextFn: T, maskInputFn: L, slimDOMOptions: h, dataURLOptions: O = {}, inlineImages: D = !1, recordCanvas: g = !1, onSerialize: P, onIframeLoad: m, iframeLoadTimeout: y = 5000, onStylesheetLoad: v, stylesheetLoadTimeout: C = 5000, keepIframeSrcFn: S = () => !1, newlyAddedElement: G = !1 } = e,
-        { preserveWhiteSpace: M = !0 } = e,
-        b = (function (t, e) {
+        { preserveWhiteSpace: b = !0 } = e,
+        M = (function (t, e) {
             let { doc: a, mirror: _, blockClass: o, blockSelector: i, unblockSelector: c, maskAllText: s, maskAttributeFn: E, maskTextClass: l, unmaskTextClass: u, maskTextSelector: I, unmaskTextSelector: R, inlineStylesheet: A, maskInputOptions: f = {}, maskTextFn: p, maskInputFn: N, dataURLOptions: T = {}, inlineImages: L, recordCanvas: h, keepIframeSrcFn: O, newlyAddedElement: D = !1 } = e,
                 g = (function (t, e) {
                     if (!e.hasNode(t)) return;
@@ -586,7 +586,7 @@ function tC(t, e) {
             keepIframeSrcFn: S,
             newlyAddedElement: G
         });
-    if (!b) return console.warn(t, 'not serialized'), null;
+    if (!M) return console.warn(t, 'not serialized'), null;
     a = o.hasNode(t)
         ? o.getId(t)
         : !(function (t, e) {
@@ -604,11 +604,11 @@ function tC(t, e) {
                     }
                 }
                 return !1;
-            })(b, h) &&
-            (M || b.type !== d.Text || b.isStyle || b.textContent.replace(/^\s+|\s+$/gm, '').length)
+            })(M, h) &&
+            (b || M.type !== d.Text || M.isStyle || M.textContent.replace(/^\s+|\s+$/gm, '').length)
           ? tR()
           : -2;
-    let U = Object.assign(b, { id: a });
+    let U = Object.assign(M, { id: a });
     if ((o.add(t, U), -2 === a)) return null;
     P && P(t);
     let w = !A;
@@ -618,7 +618,7 @@ function tC(t, e) {
         e && z(e) && (U.isShadowHost = !0);
     }
     if ((U.type === d.Document || U.type === d.Element) && w) {
-        h.headWhitespace && U.type === d.Element && 'head' === U.tagName && (M = !1);
+        h.headWhitespace && U.type === d.Element && 'head' === U.tagName && (b = !1);
         let e = {
             doc: _,
             mirror: o,
@@ -640,7 +640,7 @@ function tC(t, e) {
             dataURLOptions: O,
             inlineImages: D,
             recordCanvas: g,
-            preserveWhiteSpace: M,
+            preserveWhiteSpace: b,
             onSerialize: P,
             onIframeLoad: m,
             iframeLoadTimeout: y,
@@ -710,7 +710,7 @@ function tC(t, e) {
                             dataURLOptions: O,
                             inlineImages: D,
                             recordCanvas: g,
-                            preserveWhiteSpace: M,
+                            preserveWhiteSpace: b,
                             onSerialize: P,
                             onIframeLoad: m,
                             iframeLoadTimeout: y,
@@ -767,7 +767,7 @@ function tC(t, e) {
                             dataURLOptions: O,
                             inlineImages: D,
                             recordCanvas: g,
-                            preserveWhiteSpace: M,
+                            preserveWhiteSpace: b,
                             onSerialize: P,
                             onIframeLoad: m,
                             iframeLoadTimeout: y,
@@ -802,17 +802,17 @@ function tG(t, e, a = document) {
     };
     return a.addEventListener(t, e, r), () => a.removeEventListener(t, e, r);
 }
-let tM = 'Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.',
-    tb = {
+let tb = 'Please stop import mirror directly. Instead of that,\r\nnow you can use replayer.getMirror() to access the mirror instance of a replayer,\r\nor you can use record.mirror to access the mirror instance during recording.',
+    tM = {
         map: {},
-        getId: () => (console.error(tM), -1),
-        getNode: () => (console.error(tM), null),
+        getId: () => (console.error(tb), -1),
+        getNode: () => (console.error(tb), null),
         removeNodeFromMap() {
-            console.error(tM);
+            console.error(tb);
         },
-        has: () => (console.error(tM), !1),
+        has: () => (console.error(tb), !1),
         reset() {
-            console.error(tM);
+            console.error(tb);
         }
     };
 function tU(t, e, a = {}) {
@@ -861,7 +861,7 @@ function tw(t, e, a) {
         return () => {};
     }
 }
-'undefined' != typeof window && window.Proxy && window.Reflect && (tb = new Proxy(tb, { get: (t, e, a) => ('map' === e && console.error(tM), Reflect.get(t, e, a)) }));
+'undefined' != typeof window && window.Proxy && window.Reflect && (tM = new Proxy(tM, { get: (t, e, a) => ('map' === e && console.error(tb), Reflect.get(t, e, a)) }));
 let tB = Date.now;
 function tW(t) {
     let e = t.document;
@@ -2427,9 +2427,9 @@ try {
 let eO = new Q();
 function eD(t = {}) {
     let e,
-        { emit: a, checkoutEveryNms: r, checkoutEveryNth: n, blockClass: c = 'rr-block', blockSelector: s = null, unblockSelector: E = null, ignoreClass: l = 'rr-ignore', ignoreSelector: u = null, maskAllText: I = !1, maskTextClass: R = 'rr-mask', unmaskTextClass: d = null, maskTextSelector: A = null, unmaskTextSelector: f = null, inlineStylesheet: N = !0, maskAllInputs: T, maskInputOptions: L, slimDOMOptions: h, maskAttributeFn: O, maskInputFn: D, maskTextFn: g, maxCanvasSize: P = null, packFn: m, sampling: y = {}, dataURLOptions: v = {}, mousemoveWait: C, recordDOM: S = !0, recordCanvas: G = !1, recordCrossOriginIframes: M = !1, recordAfter: b = 'DOMContentLoaded' === t.recordAfter ? t.recordAfter : 'load', userTriggeredOnInput: U = !1, collectFonts: w = !1, inlineImages: B = !1, plugins: W, keepIframeSrcFn: Y = () => !1, ignoreCSSAttributes: H = new Set([]), errorHandler: K, onMutation: k, getCanvasManager: x } = t;
+        { emit: a, checkoutEveryNms: r, checkoutEveryNth: n, blockClass: c = 'rr-block', blockSelector: s = null, unblockSelector: E = null, ignoreClass: l = 'rr-ignore', ignoreSelector: u = null, maskAllText: I = !1, maskTextClass: R = 'rr-mask', unmaskTextClass: d = null, maskTextSelector: A = null, unmaskTextSelector: f = null, inlineStylesheet: N = !0, maskAllInputs: T, maskInputOptions: L, slimDOMOptions: h, maskAttributeFn: O, maskInputFn: D, maskTextFn: g, maxCanvasSize: P = null, packFn: m, sampling: y = {}, dataURLOptions: v = {}, mousemoveWait: C, recordDOM: S = !0, recordCanvas: G = !1, recordCrossOriginIframes: b = !1, recordAfter: M = 'DOMContentLoaded' === t.recordAfter ? t.recordAfter : 'load', userTriggeredOnInput: U = !1, collectFonts: w = !1, inlineImages: B = !1, plugins: W, keepIframeSrcFn: Y = () => !1, ignoreCSSAttributes: H = new Set([]), errorHandler: K, onMutation: k, getCanvasManager: x } = t;
     _ = K;
-    let F = !M || window.parent === window,
+    let F = !b || window.parent === window,
         V = !1;
     if (!F)
         try {
@@ -2558,7 +2558,7 @@ function eD(t = {}) {
                       mirror: eO,
                       mutationCb: z,
                       stylesheetManager: tt,
-                      recordCrossOriginIframes: M,
+                      recordCrossOriginIframes: b,
                       wrappedEmit: o
                   });
     for (let t of W || [])
@@ -2925,7 +2925,7 @@ function eD(t = {}) {
                               type: t0.DomContentLoaded,
                               data: {}
                           }),
-                              'DOMContentLoaded' === b && a();
+                              'DOMContentLoaded' === M && a();
                       })
                   ),
                   t.push(
@@ -2936,7 +2936,7 @@ function eD(t = {}) {
                                   type: t0.Load,
                                   data: {}
                               }),
-                                  'load' === b && a();
+                                  'load' === M && a();
                           },
                           window
                       )
@@ -2996,7 +2996,7 @@ class eS {
         var t;
         let e =
             ((t = () => {
-                this._lastMutation = eM();
+                this._lastMutation = eb();
             }),
             c ||
                 ((c = []),
@@ -3052,7 +3052,7 @@ class eS {
     }
     _checkClicks() {
         let t = [],
-            e = eM();
+            e = eb();
         for (let a of (this._clicks.forEach((a) => {
             !a.mutationAfter && this._lastMutation && (a.mutationAfter = a.timestamp <= this._lastMutation ? this._lastMutation - a.timestamp : void 0), !a.scrollAfter && this._lastScroll && (a.scrollAfter = a.timestamp <= this._lastScroll ? this._lastScroll - a.timestamp : void 0), a.timestamp + this._timeout <= e && t.push(a);
         }),
@@ -3109,10 +3109,10 @@ class eS {
     }
 }
 let eG = ['A', 'BUTTON', 'INPUT'];
-function eM() {
+function eb() {
     return Date.now() / 1000;
 }
-function eb(t) {
+function eM(t) {
     return {
         timestamp: Date.now() / 1000,
         type: 'default',
@@ -3139,7 +3139,7 @@ let eU = new Set(['id', 'class', 'aria-label', 'role', 'name', 'alt', 'title', '
                     message: e
                 };
             })(t);
-            return eb({
+            return eM({
                 category: `ui.${t.name}`,
                 ...eB(e, a)
             });
@@ -3504,7 +3504,7 @@ function e3(t) {
 }
 function e6(t) {
     let e = Date.now(),
-        a = t.id || (0, M.DM)(),
+        a = t.id || (0, b.DM)(),
         r = t.started || e,
         n = t.lastActivity || e,
         _ = t.segmentId || 0;
@@ -3751,7 +3751,7 @@ function ap(t, e) {
         let r = a.href;
         return !t.endsWith('/') && r.endsWith('/') ? r.slice(0, -1) : r;
     })(t);
-    return (0, b.U0)(a, e);
+    return (0, M.U0)(a, e);
 }
 async function aN(t, e, a) {
     try {
@@ -4058,7 +4058,7 @@ class aG extends Error {
         super('Rate limit hit'), (this.rateLimits = t);
     }
 }
-async function aM(
+async function ab(
     t,
     e = {
         count: 0,
@@ -4083,7 +4083,7 @@ async function aM(
                 new Promise((a, r) => {
                     (0, Y.iK)(async () => {
                         try {
-                            await aM(t, e), a(!0);
+                            await ab(t, e), a(!0);
                         } catch (t) {
                             r(t);
                         }
@@ -4092,7 +4092,7 @@ async function aM(
             );
         }
 }
-let ab = '__THROTTLED';
+let aM = '__THROTTLED';
 class aU {
     constructor({ options: t, recordingOptions: e }) {
         aU.prototype.__init.call(this),
@@ -4159,7 +4159,7 @@ class aU {
                     let a = Math.floor(Date.now() / 1000);
                     if ((n(a), _() >= 300)) {
                         let t = o;
-                        return (o = !0), t ? '__SKIPPED' : ab;
+                        return (o = !0), t ? '__SKIPPED' : aM;
                     }
                     o = !1;
                     let i = r.get(a) || 0;
@@ -4422,8 +4422,8 @@ class aU {
     }
     throttledAddEvent(t, e) {
         let a = this._throttledAddEvent(t, e);
-        if (a === ab) {
-            let t = eb({ category: 'replay.throttled' });
+        if (a === aM) {
+            let t = eM({ category: 'replay.throttled' });
             this.addUpdate(
                 () =>
                     !ae(this, {
@@ -4553,7 +4553,7 @@ class aU {
                                             : 'console' === a.category
                                               ? (function (t) {
                                                     let e = t.data && t.data.arguments;
-                                                    if (!Array.isArray(e) || 0 === e.length) return eb(t);
+                                                    if (!Array.isArray(e) || 0 === e.length) return eM(t);
                                                     let a = !1,
                                                         r = e.map((t) => {
                                                             if (!t) return t;
@@ -4566,7 +4566,7 @@ class aU {
                                                                 } catch (t) {}
                                                             return t;
                                                         });
-                                                    return eb({
+                                                    return eM({
                                                         ...t,
                                                         data: {
                                                             ...t.data,
@@ -4575,7 +4575,7 @@ class aU {
                                                         }
                                                     });
                                                 })(a)
-                                              : eb(a));
+                                              : eM(a));
                                     r && em(t, r);
                                 })(t, e)
                             );
@@ -4684,7 +4684,7 @@ class aU {
                                                 (a.match(/(reactjs\.org\/docs\/error-decoder\.html\?invariant=|react\.dev\/errors\/)(418|419|422|423|425)/) || a.match(/(does not match server-rendered HTML|Hydration failed because)/i)) &&
                                                 em(
                                                     t,
-                                                    eb({
+                                                    eM({
                                                         category: 'replay.hydrate-error',
                                                         data: { url: (0, C.l4)() }
                                                     })
@@ -4763,13 +4763,13 @@ class aU {
     }
     __init2() {
         this._handleWindowBlur = () => {
-            let t = eb({ category: 'ui.blur' });
+            let t = eM({ category: 'ui.blur' });
             this._doChangeToBackgroundTasks(t);
         };
     }
     __init3() {
         this._handleWindowFocus = () => {
-            let t = eb({ category: 'ui.focus' });
+            let t = eM({ category: 'ui.focus' });
             this._doChangeToForegroundTasks(t);
         };
     }
@@ -4787,7 +4787,7 @@ class aU {
                     if (!c && s) return null;
                     let E = (0, C.Rt)(i, { maxStringLength: 200 }) || '<unknown>',
                         l = eB(i, E);
-                    return eb({
+                    return eM({
                         category: 'ui.keyDown',
                         message: E,
                         data: {
@@ -4875,7 +4875,7 @@ class aU {
                         r = this.session.segmentId++;
                     this._maybeSaveSession();
                     let n = await this.eventBuffer.finish();
-                    await aM({
+                    await ab({
                         replayId: t,
                         recordingData: n,
                         segmentId: r,
@@ -4932,7 +4932,7 @@ class aU {
                 r = this._options.mutationBreadcrumbLimit,
                 n = a && e > a;
             if (e > r || n) {
-                let t = eb({
+                let t = eM({
                     category: 'replay.mutations',
                     data: {
                         count: e,

@@ -1065,7 +1065,7 @@ function em(e, t) {
             amount: 0,
             currency: e.currency
         },
-        (0, h.UX)(e.items, e.currency),
+        (0, h.UX)(e.items, e.currency, e.paymentSourceId),
         t
     );
 }
@@ -1142,7 +1142,7 @@ function eE(e, t, n, r, i) {
             amount: 0,
             currency: e.currency
         },
-        (0, h.UX)(e.items, e.currency),
+        (0, h.UX)(e.items, e.currency, null == n ? void 0 : n.id),
         t,
         i
     );

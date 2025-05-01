@@ -19,8 +19,8 @@ var r = n(200651),
     O = n(873696),
     v = n(446226),
     C = n(305325),
-    j = n(281956),
-    S = n(66999),
+    S = n(281956),
+    j = n(66999),
     E = n(554747),
     x = n(378844),
     P = n(340541),
@@ -179,7 +179,7 @@ class en extends H.ZP {
               });
     }
     render() {
-        let { channel: e, selected: t, connected: n, unread: i, resolvedUnreadSetting: l, mentionCount: s, locked: a, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: _, canMoveMembers: y, showTutorial: O, hasActiveEvent: v, embeddedApps: C, isSubscriptionGated: j, isFavoriteSuggestion: S, withGuildIcon: E } = this.props,
+        let { channel: e, selected: t, connected: n, unread: i, resolvedUnreadSetting: l, mentionCount: s, locked: a, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: _, canMoveMembers: y, showTutorial: O, hasActiveEvent: v, embeddedApps: C, isSubscriptionGated: S, isFavoriteSuggestion: j, withGuildIcon: E } = this.props,
             { shouldShowActivities: x, shouldShowGuildVerificationPopout: w } = this.state,
             N = (0, P.jW)({ location: 'voice_channel' }).entrypoints,
             T = this.getVoiceStatesCount(),
@@ -234,7 +234,7 @@ class en extends H.ZP {
                                                             iconClassName: o()({ [J.iconLive]: v }),
                                                             hasActiveEvent: v,
                                                             channel: e,
-                                                            selected: !S && t,
+                                                            selected: !j && t,
                                                             connected: n,
                                                             unread: n ? i : void 0,
                                                             resolvedUnreadSetting: l,
@@ -248,14 +248,14 @@ class en extends H.ZP {
                                                                 this.handleContextMenu(e), null == d || d();
                                                             },
                                                             connectDragPreview: g,
-                                                            isFavoriteSuggestion: S,
+                                                            isFavoriteSuggestion: j,
                                                             'aria-label': (0, m.ZP)({
                                                                 channel: e,
                                                                 unread: i,
                                                                 mentionCount: s,
                                                                 userCount: T,
                                                                 embeddedActivitiesCount: C.length,
-                                                                isSubscriptionGated: j
+                                                                isSubscriptionGated: S
                                                             }),
                                                             'aria-describedby': (0, b.Z)({
                                                                 channel: e,
@@ -267,11 +267,11 @@ class en extends H.ZP {
                                                     ),
                                                     {
                                                         children: [
-                                                            S &&
+                                                            j &&
                                                                 (0, r.jsxs)(r.Fragment, {
                                                                     children: [this.renderAcceptSuggestionButton(), this.renderRemoveSuggestionButton()]
                                                                 }),
-                                                            !S &&
+                                                            !j &&
                                                                 (0, r.jsxs)(r.Fragment, {
                                                                     children: [this.renderOpenChatButton(), this.renderInviteButton(), N ? this.renderOptionsButton({ onContextMenu: this.handleContextMenu }) : this.renderEditButton(), this.renderChannelInfo(), this.renderHDSplashedIcon()]
                                                                 })
@@ -361,7 +361,7 @@ class en extends H.ZP {
             $(this, 'handleClick', () => {
                 let { channel: e } = this.props,
                     t = e.getGuildId();
-                null != t && (0, j.n)(t) && (0, C.hk)(t), this.handleVoiceConnect();
+                null != t && (0, S.n)(t) && (0, C.hk)(t), this.handleVoiceConnect();
             }),
             $(this, 'handleVoiceStatusClick', (e) => {
                 let { connected: t, channel: n } = this.props;
@@ -445,9 +445,9 @@ function ei(e) {
         g = (0, f.ZP)(n),
         m = (0, _.ZP)(n),
         b = (0, E.qY)(n.id),
-        { isSubscriptionGated: y, needSubscriptionToAccess: O } = (0, S.Z)(n.id),
+        { isSubscriptionGated: y, needSubscriptionToAccess: O } = (0, j.Z)(n.id),
         C = (0, v.Z)(),
-        j = (0, s.e7)([U.ZP], () => U.ZP.isFavorite(t.id, n.id)),
+        S = (0, s.e7)([U.ZP], () => U.ZP.isFavorite(t.id, n.id)),
         x = e.connected || (null == C ? void 0 : C.channelId) === n.id,
         P = (0, F.Z)({
             channel: n,
@@ -479,7 +479,7 @@ function ei(e) {
             ),
             {
                 connected: x,
-                isFavoriteSuggestion: l && !j,
+                isFavoriteSuggestion: l && !S,
                 forceShowButtons: I,
                 channelInfo: P,
                 resolvedUnreadSetting: d

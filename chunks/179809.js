@@ -19,8 +19,8 @@ var r = n(200651),
     O = n(40153),
     v = n(252686),
     C = n(682662),
-    j = n(662146),
-    S = n(981631),
+    S = n(662146),
+    j = n(981631),
     E = n(388032),
     x = n(728492),
     P = n(335426);
@@ -84,7 +84,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                         unread: Z,
                         className: P.pill
                     }),
-                    (0, r.jsx)(j.Z, {
+                    (0, r.jsx)(S.Z, {
                         text: er,
                         disabled: R,
                         selected: l,
@@ -131,8 +131,8 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                         : null
                 ]
             }),
-            eu = null != t.color ? t.color : S.Wyy,
-            ed = eu === S.Wyy ? void 0 : (0, u.Rf)(eu);
+            eu = null != t.color ? t.color : j.Wyy,
+            ed = eu === j.Wyy ? void 0 : (0, u.Rf)(eu);
         return (0, r.jsxs)('div', {
             ref: ea,
             className: o()(x.folderGroup, {

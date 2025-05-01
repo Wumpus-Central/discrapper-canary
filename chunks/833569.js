@@ -86,7 +86,7 @@ async function W(e) {
                     amount: 0,
                     currency: t.currency
                 },
-                (0, S.UX)(n, t.currency),
+                (0, S.UX)(n, t.currency, t.paymentSourceId),
                 s,
                 l
             );

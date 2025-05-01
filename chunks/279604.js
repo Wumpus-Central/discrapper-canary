@@ -88,12 +88,12 @@ function _(e, t) {
     let { analyticsLocations: _ } = (0, s.ZP)(),
         [y, O] = i.useState(!1),
         [v, C] = i.useState(void 0),
-        j = (0, l.e7)([h.Z], () => {
+        S = (0, l.e7)([h.Z], () => {
             var t, n;
             return null != (n = null == (t = h.Z.getStateForGuild(e)) ? void 0 : t.appliedBoosts) ? n : 0;
         }),
-        S = (0, l.e7)([u.Z], () => u.Z.getGuild(e)),
-        E = Math.max((null != (m = null == S ? void 0 : S.premiumSubscriberCount) ? m : 0) - j, 0),
+        j = (0, l.e7)([u.Z], () => u.Z.getGuild(e)),
+        E = Math.max((null != (m = null == j ? void 0 : j.premiumSubscriberCount) ? m : 0) - S, 0),
         x = i.useCallback(
             (n) => {
                 let r = n ? d.H6 : d.Th;
@@ -114,7 +114,7 @@ function _(e, t) {
         ),
         P = i.useCallback(
             (e) => {
-                if ((e.stopPropagation(), null != S))
+                if ((e.stopPropagation(), null != j))
                     return E < t.cost
                         ? void (0, a.u)({
                               analyticsLocation: {
@@ -123,7 +123,7 @@ function _(e, t) {
                               },
                               numberOfBoostsToAdd: t.cost - E,
                               analyticsLocations: _,
-                              guild: S,
+                              guild: j,
                               intent: t.type === p.Us.LEVEL ? c.P.LEVEL : c.P.PERK,
                               onSubscribeComplete: () =>
                                   x(!0).then(() => {
@@ -134,7 +134,7 @@ function _(e, t) {
                                                   e,
                                                   g(
                                                       {
-                                                          guildId: S.id,
+                                                          guildId: j.id,
                                                           powerup: t
                                                       },
                                                       n
@@ -151,7 +151,7 @@ function _(e, t) {
                                           e,
                                           g(
                                               {
-                                                  guildId: S.id,
+                                                  guildId: j.id,
                                                   powerup: t
                                               },
                                               n
@@ -160,7 +160,7 @@ function _(e, t) {
                               });
                           });
             },
-            [x, t, E, _, S]
+            [x, t, E, _, j]
         ),
         I = i.useCallback((e) => (e.stopPropagation(), x(!1)), [x]);
     return {

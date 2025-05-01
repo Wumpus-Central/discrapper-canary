@@ -1445,7 +1445,7 @@ let { Themes: r } = n(15202).V,
             INFO_DANGER_TEXT: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'RED_NEW_21',
+                        raw: 'RED_NEW_22',
                         opacity: 1
                     },
                     [r.LIGHT]: {
@@ -1525,7 +1525,7 @@ let { Themes: r } = n(15202).V,
             INFO_POSITIVE_TEXT: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'GREEN_NEW_24',
+                        raw: 'GREEN_NEW_25',
                         opacity: 1
                     },
                     [r.LIGHT]: {
@@ -1749,7 +1749,7 @@ let { Themes: r } = n(15202).V,
                         opacity: 1
                     },
                     [r.DARKER]: {
-                        raw: 'BLURPLE_18',
+                        raw: 'BLURPLE_19',
                         opacity: 1
                     }
                 }
@@ -1777,7 +1777,7 @@ let { Themes: r } = n(15202).V,
             MESSAGE_REACTED_TEXT: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'BLURPLE_2',
+                        raw: 'BLURPLE_3',
                         opacity: 1
                     },
                     [r.LIGHT]: {
@@ -1837,7 +1837,7 @@ let { Themes: r } = n(15202).V,
             PREMIUM_NITRO_PINK_TEXT: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'PINK_33',
+                        raw: 'PINK_34',
                         opacity: 1
                     },
                     [r.LIGHT]: {
@@ -1997,7 +1997,7 @@ let { Themes: r } = n(15202).V,
             TEXT_BRAND: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'BLURPLE_25',
+                        raw: 'BLURPLE_26',
                         opacity: 1
                     },
                     [r.LIGHT]: {
@@ -2077,7 +2077,7 @@ let { Themes: r } = n(15202).V,
             TEXT_POSITIVE: {
                 'visual-refresh': {
                     [r.DARK]: {
-                        raw: 'GREEN_NEW_24',
+                        raw: 'GREEN_NEW_25',
                         opacity: 1
                     },
                     [r.LIGHT]: {

@@ -19,8 +19,8 @@ var r = n(200651),
     O = n(214629),
     v = n(566620),
     C = n(317381),
-    j = n(736409),
-    S = n(367907),
+    S = n(736409),
+    j = n(367907),
     E = n(835473),
     x = n(413523),
     P = n(933557),
@@ -219,7 +219,7 @@ class e_ extends i.PureComponent {
                     game: n,
                     size: R.Z.Sizes.SMALL
                 }),
-                (0, r.jsx)(j.j, {
+                (0, r.jsx)(S.j, {
                     isForceShowSharingPopout: d,
                     setIsForceShowSharingPopout: f,
                     children: (0, r.jsxs)('div', {
@@ -257,7 +257,7 @@ class e_ extends i.PureComponent {
                           em(eg({}, e), {
                               className: o()(ep.gameWrapper, ep.clickableGameWrapper, { [ep.clickableGameWrapperForceHover]: c }),
                               onClick: () => {
-                                  p.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' }), c && u(ed.L.TAKE_ACTION), (0, S.yw)(ec.rMx.ACTIVITY_PANEL_GAME_CARD_ACTIVITY_POPOUT_REFOCUS_CLICKED);
+                                  p.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' }), c && u(ed.L.TAKE_ACTION), (0, j.yw)(ec.rMx.ACTIVITY_PANEL_GAME_CARD_ACTIVITY_POPOUT_REFOCUS_CLICKED);
                               },
                               children: O
                           })
@@ -335,8 +335,8 @@ let ey = (0, b.Z)(function (e) {
         m = (0, u.e7)([_.Z], () => _.Z.useReducedMotion),
         b = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
         v = (0, u.e7)([q.Z, X.Z, K.ZP], () => (null != a ? D.JL(a, q.Z, X.Z, !1) : null != n && D.h_(K.ZP.getChannels(n), q.Z, X.Z).length > 0)),
-        [j] = (0, E.Z)([null != (t = null != g && null != g.id ? g.id : null != s && null != s.id ? s.id : null != b ? b.applicationId : void 0) ? t : '']),
-        S = (0, u.e7)([w.Z], () => w.Z.getFakeGameData()),
+        [S] = (0, E.Z)([null != (t = null != g && null != g.id ? g.id : null != s && null != s.id ? s.id : null != b ? b.applicationId : void 0) ? t : '']),
+        j = (0, u.e7)([w.Z], () => w.Z.getFakeGameData()),
         x = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
         I = (0, O.Z0)() && null != x && (0, y.R)(),
         N = (0, u.e7)([Q.Z], () => (0, L.Z)(Q.Z) && (0, ei.isWindows)()),
@@ -360,12 +360,12 @@ let ey = (0, b.Z)(function (e) {
         e_,
         em(eg({}, l), {
             guildId: n,
-            canGoLive: N || I || void 0 !== S,
+            canGoLive: N || I || void 0 !== j,
             activity: R,
             embeddedActivity: b,
             userId: o,
-            runningGame: null != S ? S : s,
-            application: j,
+            runningGame: null != j ? j : s,
+            application: S,
             useReducedMotion: m,
             isStreaming: k,
             channel: h,

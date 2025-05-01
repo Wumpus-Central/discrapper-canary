@@ -171,7 +171,7 @@ function T(e) {
             },
             [null == H ? void 0 : H.loadId, n, k]
         ),
-        q = (0, g.K)();
+        K = (0, g.K)();
     return (0, r.jsxs)('div', {
         className: N.container,
         children: [
@@ -199,8 +199,8 @@ function T(e) {
                                         children:
                                             B === _.M.FETCHED && (null == H || (null == H ? void 0 : H.results.length) === 0)
                                                 ? (0, r.jsx)(P.Z, {
-                                                      selectedCategoryId: null != D ? D : q.id,
-                                                      searchAllCategories: () => W(q)
+                                                      selectedCategoryId: null != D ? D : K.id,
+                                                      searchAllCategories: () => W(K)
                                                   })
                                                 : (0, r.jsx)('div', {
                                                       className: N.content,

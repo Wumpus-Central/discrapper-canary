@@ -19,8 +19,8 @@ var r = n(200651),
     O = n(769654),
     v = n(271383),
     C = n(771845),
-    j = n(727258),
-    S = n(276952),
+    S = n(727258),
+    j = n(276952),
     E = n(249792),
     x = n(40153),
     P = n(593618),
@@ -96,7 +96,7 @@ let M = i.memo(function (e) {
     null == eu && Q > 0 ? (eu = null != (l = (0, N.Ne)(Q, X ? m.Z.BACKGROUND_ACCENT : m.Z.STATUS_DANGER)) ? l : void 0) : null == eu && null != en && (eu = null != (f = (0, N.jt)({ guildJoinRequestStatus: en })) ? f : void 0);
     let ed = null != (M = e.lowerBadgeSize) ? M : { width: (0, h.OVM)(Q) },
         [{ dragging: eh }, ep] = (0, s.c)({
-            type: j.eD.GUILD,
+            type: S.eD.GUILD,
             item: () => (
                 requestAnimationFrame(() => {
                     null == B || B();
@@ -118,11 +118,11 @@ let M = i.memo(function (e) {
         [eO, ev] = i.useState(!1),
         [eC] = i.useState(() => new d.sW(70, () => ev(!0)));
     i.useEffect(() => () => eC.cancel(), [eC]);
-    let ej = i.useCallback(() => {
+    let eS = i.useCallback(() => {
             if (null != H) return void (0, y.uL)(H, { state: L });
             (0, O.X)(eo, { state: L });
         }, [eo, H]),
-        eS = i.useCallback(() => {
+        ej = i.useCallback(() => {
             if (null != H || null == F || q || !et) return;
             let e = (0, _.V)(F.id);
             null != e && p.Z.preload(F.id, e);
@@ -181,14 +181,14 @@ let M = i.memo(function (e) {
                                       mentions: Q
                                   }),
                                   name: F.toString(),
-                                  onClick: ej,
+                                  onClick: eS,
                                   onMouseEnter: function () {
                                       ee || em(!0);
                                   },
                                   onMouseLeave: function () {
                                       ee || em(!1);
                                   },
-                                  onMouseDown: eS,
+                                  onMouseDown: ej,
                                   onContextMenu: ex,
                                   onKeyDown: eP,
                                   icon: F.getIconURL(2 * eN, eb && z, ea),
@@ -230,7 +230,7 @@ let M = i.memo(function (e) {
     return (0, r.jsxs)(w.H, {
         ref: ew,
         children: [
-            (0, r.jsx)(S.Z, {
+            (0, r.jsx)(j.Z, {
                 hovered: !eh && eb,
                 selected: !eh && W,
                 unread: !eh && Y,

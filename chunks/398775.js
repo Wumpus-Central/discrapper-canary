@@ -35,7 +35,7 @@ async function j(e) {
                     amount: 0,
                     currency: t.currency
                 },
-                (0, h.UX)(t.items, t.currency),
+                (0, h.UX)(t.items, t.currency, t.paymentSourceId),
                 l,
                 a
             ),

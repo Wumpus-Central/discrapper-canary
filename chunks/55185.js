@@ -31,7 +31,7 @@ async function C(e) {
         f.fy.INFREQUENT_USER_ACTION
     );
 }
-function j(e) {
+function S(e) {
     let { showCurrentGame: t, shouldShowStatus: n = !1 } = e,
         r = (0, s.e7)([g.Z], () => g.Z.getStatus());
     return (0, i.jsxs)('div', {
@@ -71,7 +71,7 @@ function j(e) {
         ]
     });
 }
-function S(e) {
+function j(e) {
     let { children: t, closePopout: n } = e,
         r = (0, l.useRef)(null);
     return (
@@ -122,7 +122,7 @@ function E(e) {
     let { closePopout: t } = e,
         { analyticsLocations: n } = (0, h.ZP)(d.Z.SHARING_CONTROLS_COACHMARK),
         r = p.G6.useSetting();
-    return (0, i.jsxs)(S, {
+    return (0, i.jsxs)(j, {
         closePopout: t,
         children: [
             (0, i.jsx)(c.Text, {
@@ -137,7 +137,7 @@ function E(e) {
             }),
             (0, i.jsx)('div', {
                 className: O.toggleContainerWrapper,
-                children: (0, i.jsx)(j, { showCurrentGame: r })
+                children: (0, i.jsx)(S, { showCurrentGame: r })
             })
         ]
     });
@@ -146,7 +146,7 @@ function x(e) {
     let { closePopout: t } = e,
         { analyticsLocations: n } = (0, h.ZP)(d.Z.SHARING_CONTROLS_COACHMARK),
         r = p.G6.useSetting();
-    return (0, i.jsxs)(S, {
+    return (0, i.jsxs)(j, {
         children: [
             (0, i.jsx)(o.X6, {
                 variant: 'heading-sm/semibold',
@@ -165,7 +165,7 @@ function x(e) {
             }),
             (0, i.jsx)('div', {
                 className: O.toggleContainerWrapper,
-                children: (0, i.jsx)(j, { showCurrentGame: r })
+                children: (0, i.jsx)(S, { showCurrentGame: r })
             })
         ]
     });
@@ -173,7 +173,7 @@ function x(e) {
 function P(e) {
     let { closePopout: t } = e,
         n = p.G6.useSetting();
-    return (0, i.jsxs)(S, {
+    return (0, i.jsxs)(j, {
         closePopout: t,
         children: [
             (0, i.jsx)(c.Text, {
@@ -184,7 +184,7 @@ function P(e) {
             }),
             (0, i.jsx)('div', {
                 className: O.toggleContainerWrapper,
-                children: (0, i.jsx)(j, { showCurrentGame: n })
+                children: (0, i.jsx)(S, { showCurrentGame: n })
             })
         ]
     });
@@ -192,7 +192,7 @@ function P(e) {
 function I(e) {
     let { closePopout: t } = e,
         n = p.G6.useSetting();
-    return (0, i.jsxs)(S, {
+    return (0, i.jsxs)(j, {
         closePopout: t,
         children: [
             (0, i.jsx)(c.Text, {
@@ -203,7 +203,7 @@ function I(e) {
             }),
             (0, i.jsx)('div', {
                 className: O.toggleContainerWrapper,
-                children: (0, i.jsx)(j, {
+                children: (0, i.jsx)(S, {
                     showCurrentGame: n,
                     shouldShowStatus: !0
                 })
@@ -213,9 +213,9 @@ function I(e) {
 }
 function w() {
     let e = p.G6.useSetting();
-    return (0, i.jsxs)(S, {
+    return (0, i.jsxs)(j, {
         children: [
-            (0, i.jsx)(j, { showCurrentGame: e }),
+            (0, i.jsx)(S, { showCurrentGame: e }),
             (0, i.jsx)(c.$i$, { className: O.divider }),
             (0, i.jsx)(c.Text, {
                 variant: 'text-xs/normal',
@@ -227,7 +227,7 @@ function w() {
 }
 function N(e) {
     let { closePopout: t } = e;
-    return (0, i.jsxs)(S, {
+    return (0, i.jsxs)(j, {
         children: [
             (0, i.jsx)(o.X6, {
                 variant: 'heading-sm/semibold',
@@ -256,9 +256,9 @@ function N(e) {
 }
 function Z() {
     let e = p.G6.useSetting();
-    return (0, i.jsxs)(S, {
+    return (0, i.jsxs)(j, {
         children: [
-            (0, i.jsx)(j, {
+            (0, i.jsx)(S, {
                 showCurrentGame: e,
                 shouldShowStatus: !0
             }),

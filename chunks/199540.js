@@ -84,8 +84,8 @@ function b(e) {
             onClick: O,
             onContextMenu: v,
             onHoverChange: C,
-            onKeyDown: j,
-            treeItemProps: { onFocus: S },
+            onKeyDown: S,
+            treeItemProps: { onFocus: j },
             'aria-setsize': E,
             'aria-posinset': x
         } = e,
@@ -151,8 +151,8 @@ function b(e) {
                     onContextMenu: v,
                     onMouseEnter: N,
                     onMouseLeave: Z,
-                    onKeyDown: j,
-                    onFocus: S,
+                    onKeyDown: S,
+                    onFocus: j,
                     focusProps: { enabled: !1 }
                 },
                 P

@@ -24,7 +24,7 @@ var r,
     O = n(981631),
     v = n(388032),
     C = n(496614);
-function j(e, t, n) {
+function S(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -37,7 +37,7 @@ function j(e, t, n) {
         e
     );
 }
-function S(e) {
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -48,7 +48,7 @@ function S(e) {
                 })
             )),
             r.forEach(function (t) {
-                j(e, t, n[t]);
+                S(e, t, n[t]);
             });
     }
     return e;
@@ -129,7 +129,7 @@ class x extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            j(this, 'renderProgressBody', (e, t) => {
+            S(this, 'renderProgressBody', (e, t) => {
                 let { state: n, application: r } = this.props,
                     { stage: i, progress: l, total: o, type: s } = n;
                 if (null == l || null == o || null == i) return null;
@@ -186,7 +186,7 @@ class P extends (r = l.PureComponent) {
                     var r, l;
                     return (0, i.jsx)(
                         'div',
-                        ((r = S({}, n)),
+                        ((r = j({}, n)),
                         (l = l =
                             {
                                 children: (0, i.jsx)(h._3P, {
@@ -219,8 +219,8 @@ class P extends (r = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            j(this, 'state', { animationScale: new a.Z.Value(0) }),
-            j(this, 'handleOnClick', (e) => {
+            S(this, 'state', { animationScale: new a.Z.Value(0) }),
+            S(this, 'handleOnClick', (e) => {
                 let { onClick: t } = this.props;
                 e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, g.uL)(O.Z5c.APPLICATION_LIBRARY);
             });
@@ -233,7 +233,7 @@ function I(e, t) {
         return null != l && e.push(l), e;
     }, []);
 }
-j(P, 'defaultProps', { strokeSize: h._3P.StrokeSizes.MEDIUM });
+S(P, 'defaultProps', { strokeSize: h._3P.StrokeSizes.MEDIUM });
 let w = c.ZP.connectStores([b.Z, m.Z, p.Z], () => {
     let e = b.Z.activeItems,
         t = I(e, m.Z),
@@ -268,7 +268,7 @@ let w = c.ZP.connectStores([b.Z, m.Z, p.Z], () => {
     return t
         ? (0, i.jsx)(d.W, {
               component: l.Fragment,
-              children: n.percent > 0 && n.percent < 100 ? (0, i.jsx)(P, S({}, n)) : null
+              children: n.percent > 0 && n.percent < 100 ? (0, i.jsx)(P, j({}, n)) : null
           })
-        : (0, i.jsx)(P, S({}, n));
+        : (0, i.jsx)(P, j({}, n));
 });

@@ -226,7 +226,7 @@ function F(e) {
     return null != t && t.displays_advertisements;
 }
 function Z(e) {
-    return e === b._b.TEXT || e === b._b.PLAY_TAB || e === b._b.QUICK_LAUNCHER;
+    return e === b._b.TEXT;
 }
 function H(e) {
     return null == e ? '' : (e.charAt(0).toLocaleUpperCase() + e.slice(1)).replaceAll('_', ' ');

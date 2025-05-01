@@ -22,8 +22,8 @@ let C = (e, t) => {
         let n = null != t && !t.isPreview;
         return e ? (e && !n ? 'no-wallpaper-nitro' : 'has-wallpaper-nitro') : 'non-nitro';
     },
-    j = (e) => ('has-wallpaper-nitro' === e ? y.intl.string(y.t.T9dXPj) : y.intl.string(y.t.zyvzQ0)),
-    S = (e) => {
+    S = (e) => ('has-wallpaper-nitro' === e ? y.intl.string(y.t.T9dXPj) : y.intl.string(y.t.zyvzQ0)),
+    j = (e) => {
         switch (e) {
             case 'non-nitro':
                 return y.intl.string(y.t.VU8fxM);
@@ -69,8 +69,8 @@ let C = (e, t) => {
                 A(b.L.USER_DISMISS);
             },
             V = C(R, null != D ? D : null),
-            H = j(V),
-            F = S(V);
+            H = S(V),
+            F = j(V);
         return (0, r.jsx)('div', {
             ref: k,
             children: (0, r.jsx)(s.yRy, {

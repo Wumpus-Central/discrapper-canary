@@ -38,8 +38,8 @@ var r = n(512722),
     O = n(569471),
     v = n(131704),
     C = n(680089),
-    j = n(592125),
-    S = n(58468),
+    S = n(592125),
+    j = n(58468),
     E = n(430824),
     x = n(496675),
     P = n(306680),
@@ -145,8 +145,8 @@ class J {
         return null != e && e in this.guilds && null != (n = null == (t = this.guilds[e]) ? void 0 : t.updateRecentsCategory()) && n;
     }
     nonPositionalChannelIdUpdate(e) {
-        let t = j.Z.getBasicChannel(e);
-        return null != t && null != t.guild_id && null != this.guilds[t.guild_id] && (t instanceof v.Sf || null != (t = j.Z.getChannel(e))) && this.nonPositionalChannelUpdate(t);
+        let t = S.Z.getBasicChannel(e);
+        return null != t && null != t.guild_id && null != this.guilds[t.guild_id] && (t instanceof v.Sf || null != (t = S.Z.getChannel(e))) && this.nonPositionalChannelUpdate(t);
     }
     nonPositionalChannelUpdate(e) {
         if (null == e.guild_id) return !1;
@@ -165,7 +165,7 @@ class J {
 class $ {
     get initializationData() {
         return {
-            selectedChannel: j.Z.getChannel(I.Z.getChannelId()),
+            selectedChannel: S.Z.getChannel(I.Z.getChannelId()),
             selectedVoiceChannelId: I.Z.getVoiceChannelId(),
             activeJoinedRelevantThreads: y.Z.getActiveJoinedRelevantThreadsForGuild(this.id),
             activeJoinedUnreadThreads: y.Z.getActiveJoinedUnreadThreadsForGuild(this.id)
@@ -248,7 +248,7 @@ class $ {
         let t = (function (e) {
             if (null == e) return null;
             if (eO.has(e)) return e;
-            let t = j.Z.getChannel(e);
+            let t = S.Z.getChannel(e);
             return (null == t ? void 0 : t.isDirectory()) ? L.z.GUILD_DIRECTORY : null;
         })(e);
         if (null != t)
@@ -259,10 +259,10 @@ class $ {
                 }
             ];
         let n = [],
-            r = j.Z.getChannel(e);
+            r = S.Z.getChannel(e);
         if (null == r || null == e) return n;
         let i = r.isThread();
-        if ((i && (r = j.Z.getChannel(r.parent_id)), null == r)) return n;
+        if ((i && (r = S.Z.getChannel(r.parent_id)), null == r)) return n;
         let l = this.favoritesCategory.getShownChannelIds().indexOf(r.id);
         l >= 0 &&
             n.push({
@@ -346,7 +346,7 @@ class $ {
     updateSubtitles(e) {
         let t = [];
         if (null != e) {
-            let n = j.Z.getChannel(e);
+            let n = S.Z.getChannel(e);
             if (null != n)
                 if (n.id in this.favoritesCategory.channels) t = [this.favoritesCategory.channels[n.id]];
                 else if (n.id in this.recentsCategory.channels) t = [this.recentsCategory.channels[n.id]];
@@ -374,7 +374,7 @@ class $ {
                 for (let t of n.getShownChannelIds()) {
                     let r = n.channels[t];
                     for (let t of (e(r.record), r.threadIds)) {
-                        let n = j.Z.getChannel(t);
+                        let n = S.Z.getChannel(t);
                         null != n && e(n);
                     }
                 }
@@ -385,7 +385,7 @@ class $ {
     constructor(e, t, n) {
         var r, l, s, a;
         G(this, 'id', void 0), G(this, 'hideMutedChannels', void 0), G(this, 'favoritesSectionNumber', void 0), G(this, 'recentsSectionNumber', void 0), G(this, 'voiceChannelsSectionNumber', void 0), G(this, 'mutedChannelIds', void 0), G(this, 'optedInChannels', void 0), G(this, 'optInEnabled', void 0), G(this, 'hideResourceChannels', void 0), G(this, 'favoriteChannelIds', void 0), G(this, 'suggestedFavoriteChannelId', void 0), G(this, 'collapsedCategoryIds', void 0), G(this, 'moderatorReportChannelId', void 0), G(this, 'categories', void 0), G(this, 'noParentCategory', void 0), G(this, 'favoritesCategory', void 0), G(this, 'recentsCategory', void 0), G(this, 'voiceChannelsCategory', void 0), G(this, 'guildActionSection', void 0), G(this, 'channelNoticeSection', void 0), G(this, 'sortedNamedCategories', void 0), G(this, 'sections', void 0), G(this, 'rows', void 0), G(this, 'firstVoiceChannel', void 0), G(this, 'allChannelsById', void 0), G(this, 'version', void 0), (this.id = e), (this.sortedNamedCategories = null), (this.sections = null), (this.rows = null), (this.firstVoiceChannel = void 0), (this.allChannelsById = null), (this.version = 0), (this.hideMutedChannels = w.ZP.isGuildCollapsed(this.id)), (this.mutedChannelIds = w.ZP.getMutedChannels(this.id)), (this.optedInChannels = null != (l = w.ZP.getOptedInChannelsWithPendingUpdates(this.id)) ? l : w.ZP.getOptedInChannels(this.id)), (this.optInEnabled = (0, b.r1)(this.id)), (this.hideResourceChannels = (0, d.s)(this.id)), (this.favoriteChannelIds = new Set(null != (s = w.ZP.getGuildFavorites(this.id)) ? s : [])), (this.suggestedFavoriteChannelId = g.Z.getSuggestedChannelId(this.id)), (this.collapsedCategoryIds = C.Z.getCollapsedCategories()), (this.moderatorReportChannelId = null != (a = null == (r = E.Z.getGuild(this.id)) ? void 0 : r.getModeratorReportChannelId()) ? a : null);
-        let c = j.Z.getMutableGuildChannelsForGuild(this.id),
+        let c = S.Z.getMutableGuildChannelsForGuild(this.id),
             u = E.Z.getGuild(this.id),
             h = {},
             p = [],
@@ -506,13 +506,13 @@ class er extends ee {
         var n;
         if ((super(e), !e.optInEnabled)) return;
         this.channels = o()(null != (n = w.ZP.getGuildFavorites(e.id)) ? n : [])
-            .map((e) => j.Z.getChannel(e))
+            .map((e) => S.Z.getChannel(e))
             .filter(T.lm)
             .map((e) => new ed(this, e, t))
             .keyBy((e) => e.id)
             .value();
         let r = g.Z.getSuggestedChannelId(e.id),
-            i = j.Z.getChannel(r);
+            i = S.Z.getChannel(r);
         null != i &&
             null != r &&
             (this.channels[r] = new ed(
@@ -744,7 +744,7 @@ class ec {
         return this.category.guild.mutedChannelIds.has(this.id);
     }
     get isCollapsed() {
-        return S.Z.isCollapsed(this.id);
+        return j.Z.isCollapsed(this.id);
     }
     get isFirstVoiceChannel() {
         return this.category.getFirstVoiceChannel() === this;

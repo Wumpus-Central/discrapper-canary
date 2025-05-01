@@ -288,7 +288,7 @@ function W(e) {
             paymentSourceId: t,
             purchaseType: n
         });
-    return (0 === i.length && j.warn('No prices found for planId: '.concat(e, ', paymentSourceId: ').concat(t, ', purchaseType: ').concat(n)), null != r) ? i.find((e) => e.currency === r) : i[0];
+    return (0 === i.length && j.warn('No prices found for planId: '.concat(e, ', paymentSourceId: ').concat(t, ', purchaseType: ').concat(n)), null != r) ? i.find((e) => e.currency === r.toLowerCase()) : i[0];
 }
 function K(e) {
     return {
@@ -297,29 +297,36 @@ function K(e) {
         exponent: e.exponent
     };
 }
-function z(e, t) {
-    let n,
-        r,
-        i = {
+function z(e, t, n) {
+    let r,
+        i,
+        o = {
             currency: t,
             amount: 0,
             tax: 0,
             taxInclusive: !1
         },
-        o = (0, u.MY)(e);
-    null != o && (n = C.GP[o.planId].premiumType);
-    let a = (0, S.yd)(n, C.p9.TIER_0),
-        s = (0, S.yd)(n, C.p9.TIER_2);
-    for (let n of e) {
-        r = C.Z1.has(n.planId) ? s : a;
-        let e = F(n.planId, r, !1, t);
-        i.amount += e.amount * n.quantity;
+        a = (0, u.MY)(e);
+    null != a && (r = C.GP[a.planId].premiumType);
+    let s = (0, S.yd)(r, C.p9.TIER_0),
+        l = (0, S.yd)(r, C.p9.TIER_2);
+    for (let r of e) {
+        let e;
+        (i = C.Z1.has(r.planId) ? l : !C.dJ.has(r.planId) && s),
+            (e =
+                void 0 === n
+                    ? F(r.planId, i, !1, t)
+                    : Z(r.planId, i, !1, {
+                          paymentSourceId: n,
+                          currency: t
+                      })),
+            (o.amount += e.amount * r.quantity);
     }
-    return K(i);
+    return K(o);
 }
-function q(e, t, n) {
-    let r;
-    return null === t && (i()(null !== e, "Subscription can't be null"), (t = [])), z((r = null !== e ? eQ(e, t) : eX(t)), n);
+function q(e, t, n, r) {
+    let o;
+    return null === t && (i()(null !== e, "Subscription can't be null"), (t = [])), z((o = null !== e ? eQ(e, t) : eX(t)), n, r);
 }
 function Q(e) {
     let t = C.GP[e];

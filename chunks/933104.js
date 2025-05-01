@@ -1,6 +1,6 @@
 n.d(t, {
     $h: () => E,
-    jG: () => S,
+    jG: () => j,
     yI: () => x
 });
 var r = n(200651);
@@ -24,8 +24,8 @@ var i = n(120356),
     O = n(680278),
     v = n(388032),
     C = n(423151),
-    j = n(928381);
-function S(e) {
+    S = n(928381);
+function j(e) {
     let { guildId: t, powerup: n, markAsDismissed: i } = e;
     return (0, r.jsx)(P, {
         asset: (0, r.jsx)(m.g, { className: C.image }),
@@ -43,7 +43,7 @@ function E(e) {
         return (0, r.jsx)(P, {
             asset: (0, r.jsx)('img', {
                 alt: '',
-                src: j.Z,
+                src: S.Z,
                 className: l()(C.image, C.newPerksImage)
             }),
             header: v.intl.string(O.default.QpQBPT),

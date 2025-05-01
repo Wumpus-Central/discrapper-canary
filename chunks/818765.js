@@ -30,12 +30,12 @@ let f = (0, l.uk)('poggermode_applause', o.Z.getSoundpack()),
         if (0 === b.length || !v() || m) return;
         m = !0;
         let [e, t] = b[b.length - 1];
-        (0, l.GN)(e, t), (_ = setTimeout(j, 1000));
+        (0, l.GN)(e, t), (_ = setTimeout(S, 1000));
     },
-    j = () => {
+    S = () => {
         b.pop(), (m = !1), C();
     },
-    S = function (e) {
+    j = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
             n = a.Z.isConnected();
         b.push([e, t * (n ? 0.1 : 1)]), C();
@@ -70,7 +70,7 @@ class E extends i.Z {
         r && l >= 7 ? y() : O();
     }
     playAchievementUnlockSound() {
-        v() && S('poggermode_achievement_unlock');
+        v() && j('poggermode_achievement_unlock');
     }
 }
 let x = new E();

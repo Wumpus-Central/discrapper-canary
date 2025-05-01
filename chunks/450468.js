@@ -29,7 +29,7 @@ async function O(e, t, n, i) {
                 amount: 0,
                 currency: e.currency
             },
-            (0, E.UX)(r, e.currency),
+            (0, E.UX)(r, e.currency, e.paymentSourceId),
             i
         );
 }
