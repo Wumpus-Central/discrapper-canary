@@ -41674,11 +41674,16 @@ img.thumbnail__0f2e8 {
     padding: 4px 8px;
     position: relative;
     transform: translateY(-50%);
-    transition: opacity .1s ease-in-out
+    transition: opacity .1s ease-in-out, background-color var(--custom-button-transition-duration) ease-in-out
 }
 
 .showMoreButton__84832.isHidden__84832 {
     opacity: 0
+}
+
+.theme-light .showMoreButton__84832 {
+    border: 1px solid var(--border-faint);
+    border-top: none
 }
 
 .showMoreButton__84832:hover {
@@ -41700,7 +41705,7 @@ img.thumbnail__0f2e8 {
 .full-motion .firstCardContainer__84832:hover .showMoreButton__84832,
 .full-motion .showMoreButton__84832:focus,
 .full-motion .showMoreButton__84832:hover {
-    transition: transform .2s ease-in-out, opacity .1s ease-in-out
+    transition: transform .2s ease-in-out, opacity .1s ease-in-out, background-color var(--custom-button-transition-duration) ease-in-out
 }
 
 .remainingCardContainer__84832 {
