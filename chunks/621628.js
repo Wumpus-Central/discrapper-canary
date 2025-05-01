@@ -125,10 +125,10 @@ function C() {
                 return i.unshift(e), i;
             });
         },
-        N = t.map((e) => o.z[e]),
-        I = S.filter((e) => e.toLowerCase().includes(E.toLowerCase())).filter((e) => !N.includes(e)),
+        I = t.map((e) => o.z[e]),
+        N = S.filter((e) => e.toLowerCase().includes(E.toLowerCase())).filter((e) => !I.includes(e)),
         y = Object.keys(o.z)
-            .filter((e) => !N.includes(e))
+            .filter((e) => !I.includes(e))
             .filter((e) => !S.includes(e))
             .filter((e) => e.toLowerCase().includes(E.toLowerCase()))
             .sort((e, t) => e.localeCompare(t));
@@ -202,14 +202,14 @@ function C() {
                                       children: (0, i.jsx)(d.vwX, { children: 'Recently Shown' })
                                   }),
                                   (0, i.jsx)(j, {
-                                      items: N,
+                                      items: I,
                                       dismissedContents: O,
                                       handleChange: T
                                   })
                               ]
                           })
                         : null,
-                    I.length > 0
+                    N.length > 0
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)('div', {
@@ -217,7 +217,7 @@ function C() {
                                       children: (0, i.jsx)(d.vwX, { children: 'Recent Overrides' })
                                   }),
                                   (0, i.jsx)(j, {
-                                      items: I,
+                                      items: N,
                                       dismissedContents: O,
                                       handleChange: T
                                   })

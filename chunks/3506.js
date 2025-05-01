@@ -25,14 +25,14 @@ var r = n(512722),
     v = n(626135);
 n(63063);
 var T = n(13140),
-    N = n(981631),
-    I = n(388032),
+    I = n(981631),
+    N = n(388032),
     y = n(967122);
 let A = P(null);
 function P(e) {
     var t;
     let n = S.default.getNotificationPositionMode(),
-        i = n !== N._vf.DISABLED,
+        i = n !== I._vf.DISABLED,
         r = C.ZP.getOverlayKeybind(),
         s = C.ZP.getOverlayChatKeybind();
     return {
@@ -77,26 +77,26 @@ function D(e) {
         B = (0, p.$1)(),
         U = P(A);
     return (
-        a().isEqual(U, A) || (v.default.track(N.rMx.OVERLAY_SETTINGS_UPDATED, U), (A = U)),
+        a().isEqual(U, A) || (v.default.track(I.rMx.OVERLAY_SETTINGS_UPDATED, U), (A = U)),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)(c.hjN, {
                     className: t,
                     tag: c.RB0.H1,
-                    title: n ? I.intl.string(I.t['9cb1U1']) : null,
+                    title: n ? N.intl.string(N.t['9cb1U1']) : null,
                     children: [
                         !1,
                         (0, i.jsxs)('div', {
                             className: y.enableOverlaySection,
                             children: [
                                 (0, i.jsx)(c.xJW, {
-                                    title: I.intl.string(I.t.XkaTrq),
+                                    title: N.intl.string(N.t.XkaTrq),
                                     className: y.enableOverlayItem,
                                     children: (0, i.jsx)(c.j7V, {
                                         className: y.enableSwitch,
                                         value: l,
                                         disabled: B,
-                                        note: B ? I.intl.string(I.t.Eb0lnJ) : null,
+                                        note: B ? N.intl.string(N.t.Eb0lnJ) : null,
                                         hideBorder: !0,
                                         onChange: function (e) {
                                             var t, n;
@@ -104,11 +104,11 @@ function D(e) {
                                             let i = null != (n = null == (t = g.ZP.getCurrentGameForAnalytics()) ? void 0 : t.id) ? n : null;
                                             (0, f.ou)(e, f.AE.LEGACY, i), !e && l && (0, j.l)(f.AE.LEGACY, i);
                                         },
-                                        children: I.intl.string(I.t.vSP6c3)
+                                        children: N.intl.string(N.t.vSP6c3)
                                     })
                                 }),
                                 (0, i.jsx)(c.xJW, {
-                                    title: I.intl.string(I.t.VsAZcH),
+                                    title: N.intl.string(N.t.VsAZcH),
                                     className: y.enableOverlayItem,
                                     children: (0, i.jsx)(m.Z, {
                                         disabled: !l,
@@ -163,16 +163,16 @@ function D(e) {
                             ]
                         }),
                         (0, i.jsx)(R, {
-                            title: I.intl.string(I.t.dnvZSk),
+                            title: N.intl.string(N.t.dnvZSk),
                             children: (0, i.jsx)(c.FXm, {
                                 options: [
                                     {
-                                        name: I.intl.string(I.t.YcOxtr),
-                                        value: N.ipw.LARGE
+                                        name: N.intl.string(N.t.YcOxtr),
+                                        value: I.ipw.LARGE
                                     },
                                     {
-                                        name: I.intl.string(I.t.BKIKq6),
-                                        value: N.ipw.SMALL
+                                        name: N.intl.string(N.t.BKIKq6),
+                                        value: I.ipw.SMALL
                                     }
                                 ],
                                 onChange: (e) => {
@@ -183,20 +183,20 @@ function D(e) {
                             })
                         }),
                         (0, i.jsx)(R, {
-                            title: I.intl.string(I.t.J0dpcH),
+                            title: N.intl.string(N.t.J0dpcH),
                             children: (0, i.jsx)(c.FXm, {
                                 options: [
                                     {
-                                        name: I.intl.string(I.t.nBmDra),
-                                        value: N.wC$.ALWAYS
+                                        name: N.intl.string(N.t.nBmDra),
+                                        value: I.wC$.ALWAYS
                                     },
                                     {
-                                        name: I.intl.string(I.t['2OvIZW']),
-                                        value: N.wC$.ONLY_WHILE_SPEAKING
+                                        name: N.intl.string(N.t['2OvIZW']),
+                                        value: I.wC$.ONLY_WHILE_SPEAKING
                                     },
                                     {
-                                        name: I.intl.string(I.t.ekjlPD),
-                                        value: N.wC$.NEVER
+                                        name: N.intl.string(N.t.ekjlPD),
+                                        value: I.wC$.NEVER
                                     }
                                 ],
                                 onChange: (e) => {
@@ -207,16 +207,16 @@ function D(e) {
                             })
                         }),
                         (0, i.jsx)(R, {
-                            title: I.intl.string(I.t.swsWWF),
+                            title: N.intl.string(N.t.swsWWF),
                             children: (0, i.jsx)(c.FXm, {
                                 options: [
                                     {
-                                        name: I.intl.string(I.t.nBmDra),
-                                        value: N.OYC.ALWAYS
+                                        name: N.intl.string(N.t.nBmDra),
+                                        value: I.OYC.ALWAYS
                                     },
                                     {
-                                        name: I.intl.string(I.t['2OvIZW']),
-                                        value: N.OYC.ONLY_WHILE_SPEAKING
+                                        name: N.intl.string(N.t['2OvIZW']),
+                                        value: I.OYC.ONLY_WHILE_SPEAKING
                                     }
                                 ],
                                 onChange: (e) => {
@@ -232,18 +232,18 @@ function D(e) {
                                     value: k,
                                     onChange: (e) => u.Z.setShowKeybindIndicators(e),
                                     hideBorder: !0,
-                                    children: I.intl.string(I.t.XZTl9v)
+                                    children: N.intl.string(N.t.XZTl9v)
                                 })
                             })
                     ]
                 }),
                 (0, i.jsxs)(c.hjN, {
                     tag: c.RB0.H1,
-                    title: I.intl.string(I.t['3GMnLi']),
+                    title: N.intl.string(N.t['3GMnLi']),
                     className: y.notificationSection,
                     children: [
                         (0, i.jsx)(R, {
-                            title: I.intl.string(I.t.IQv8Eh),
+                            title: N.intl.string(N.t.IQv8Eh),
                             children: (0, i.jsx)('div', {
                                 className: y.notificationSettings,
                                 children: (0, i.jsx)(h.Z, {
@@ -254,14 +254,14 @@ function D(e) {
                         }),
                         (0, i.jsx)(R, {
                             children: (0, i.jsx)(c.j7V, {
-                                value: w !== N._vf.DISABLED && !Z,
-                                disabled: w === N._vf.DISABLED,
+                                value: w !== I._vf.DISABLED && !Z,
+                                disabled: w === I._vf.DISABLED,
                                 onChange: function () {
                                     let e = E.Z.isNotificationDisabled(b.OverlayNotificationDisabledSetting.TEXT_CHAT);
                                     u.Z.setNotificationDisabledSetting(b.OverlayNotificationDisabledSetting.TEXT_CHAT, !e);
                                 },
                                 hideBorder: !0,
-                                children: I.intl.string(I.t.Fy5kPj)
+                                children: N.intl.string(N.t.Fy5kPj)
                             })
                         })
                     ]

@@ -23,8 +23,8 @@ var i = n(200651),
     S = n(867176),
     v = n(537006),
     T = n(483517),
-    N = n(483424),
-    I = n(681837),
+    I = n(483424),
+    N = n(681837),
     y = n(638970),
     A = n(502762),
     P = n(530),
@@ -177,7 +177,7 @@ function $(e) {
                                     }),
                                     nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                         children: [
-                                            (0, i.jsx)(I.Z, { userId: t.id }),
+                                            (0, i.jsx)(N.Z, { userId: t.id }),
                                             (0, i.jsx)(R.Z, {
                                                 user: t,
                                                 isHovering: ea
@@ -202,7 +202,7 @@ function $(e) {
                                           displayProfile: ei,
                                           onOpenUserProfileModal: eC
                                       })
-                                    : (0, i.jsx)(N.Z, {
+                                    : (0, i.jsx)(I.Z, {
                                           user: t,
                                           currentUser: t,
                                           displayProfile: ei,

@@ -155,19 +155,23 @@ let E = function (e) {
                       e.preventDefault();
                       let r = N !== S,
                           i = void 0 !== A;
-                      b.default.track(
-                          y.rMx.GDM_EDIT_INTERACTED,
-                          j(v({}, M), {
-                              action: 'saved',
-                              new_name_set: '' !== N,
-                              new_icon_set: (i ? A : null == P ? void 0 : P.icon) != null,
-                              name_changed: r,
-                              icon_changed: i
-                          })
-                      ),
-                          r && c.Z.setName(t, N),
-                          i && c.Z.setIcon(t, A, E).catch(_.es),
-                          n();
+                      if (
+                          (b.default.track(
+                              y.rMx.GDM_EDIT_INTERACTED,
+                              j(v({}, M), {
+                                  action: 'saved',
+                                  new_name_set: '' !== N,
+                                  new_icon_set: (i ? A : null == P ? void 0 : P.icon) != null,
+                                  name_changed: r,
+                                  icon_changed: i
+                              })
+                          ),
+                          r || i)
+                      ) {
+                          let e = {};
+                          r && (e.name = N), i && (e.icon = A), c.Z.updateChannel(t, e, E).catch(_.g6);
+                      }
+                      n();
                   },
                   children: (0, r.jsxs)(s.Y0X, {
                       transitionState: l,

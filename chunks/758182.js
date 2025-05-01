@@ -24,8 +24,8 @@ var a = n(149765),
     S = n(218543),
     v = n(314897),
     T = n(944486),
-    N = n(914010),
-    I = n(449934),
+    I = n(914010),
+    N = n(449934),
     y = n(576376),
     A = n(38217),
     P = n(864631),
@@ -75,7 +75,7 @@ async function F(e, t, n) {
     D.verbose('loading early cache');
     let a = O.Z.getSocket();
     a.connect();
-    let c = null != (i = N.Z.getGuildId()) ? i : null,
+    let c = null != (i = I.Z.getGuildId()) ? i : null,
         u = null != (r = T.Z.getChannelId()) ? r : null,
         m = performance.now(),
         p = S.Z.loadCachedMessages.measureAsyncWithoutNesting(() => G(e, c, u)),
@@ -85,9 +85,9 @@ async function F(e, t, n) {
         j = null == e ? Promise.resolve({}) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_settings', () => x.Z.getAll(e)),
         C = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: read_states', () => b.Z.getAll(e)),
         v = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_guild_settings', () => _.Z.getAll(e)),
-        [[I, y], A, R, Z, w, k, L] = await Promise.all([p, g, h, f, j, C, v]),
+        [[N, y], A, R, Z, w, k, L] = await Promise.all([p, g, h, f, j, C, v]),
         M = performance.now() - m;
-    if ((D.verbose('cache loaded in '.concat(M, 'ms (channel_history ').concat(I, 'ms)')), null == y)) return (0, P.Z)('database:history_cache_null'), D.verbose('finished without dispatching CACHE_LOADED'), [!1, null, 0];
+    if ((D.verbose('cache loaded in '.concat(M, 'ms (channel_history ').concat(N, 'ms)')), null == y)) return (0, P.Z)('database:history_cache_null'), D.verbose('finished without dispatching CACHE_LOADED'), [!1, null, 0];
     {
         let i = Object.fromEntries(y.members.map((e) => [e.userId, e])),
             r = null != R.guildId && null != R.channels,
@@ -352,7 +352,7 @@ class q extends (i = o.ZP.Store) {
         return L;
     }
     canWriteCaches(e) {
-        return (0, I.$8)() ? (w ? (D.log('Not writing cache because caches cleared'), !1) : !!e || !!U || (D.log('Not writing cache because never connected'), !1)) : (D.log('Not writing cache because not authenticated'), !1);
+        return (0, N.$8)() ? (w ? (D.log('Not writing cache because caches cleared'), !1) : !!e || !!U || (D.log('Not writing cache because never connected'), !1)) : (D.log('Not writing cache because not authenticated'), !1);
     }
     async loadCacheAsync(e, t) {
         let n = (0, y.h)(t);

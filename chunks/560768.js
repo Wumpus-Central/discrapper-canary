@@ -1,10 +1,11 @@
-n.d(t, { Z: () => a }), n(997841);
+n.d(t, { Z: () => s }), n(997841);
 var r = n(630388),
-    i = n(620662),
-    o = n(981631);
-function a(e, t, n, a) {
-    let s = null == t ? void 0 : t.application_id;
-    if (null == e || null == t || !(0, i.Z)(t, o.xjy.JOIN) || null == s) return !1;
-    let l = a.getApplication(s);
-    return !(null == l || (0, r.yE)(l.flags, o.udG.EMBEDDED)) && n.shouldShowEducation(s);
+    i = n(774226),
+    o = n(620662),
+    a = n(981631);
+function s(e, t, n, s) {
+    let l = null == t ? void 0 : t.application_id;
+    if (null == e || null == t || !(0, o.Z)(t, a.xjy.JOIN) || null == l) return !1;
+    let c = s.getApplication(l);
+    return !(null == c || ((0, r.yE)(c.flags, a.udG.EMBEDDED) && !(0, i.Kb)(c))) && n.shouldShowEducation(l);
 }

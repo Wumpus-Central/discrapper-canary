@@ -24,8 +24,8 @@ var r = n(512722),
     S = n(906364),
     v = n(643879),
     T = n(350327),
-    N = n(621853),
-    I = n(687158),
+    I = n(621853),
+    N = n(687158),
     y = n(25990),
     A = n(594174),
     P = n(74538),
@@ -37,7 +37,7 @@ function Z() {
             let e = A.default.getCurrentUser();
             return s()(null != e, 'DefaultCustomizationSections: user cannot be undefined'), e;
         }),
-        B = (0, l.e7)([N.Z], () => N.Z.getUserProfile(M.id)),
+        B = (0, l.e7)([I.Z], () => I.Z.getUserProfile(M.id)),
         {
             pendingAvatar: U,
             pendingGlobalName: V,
@@ -112,7 +112,7 @@ function Z() {
             location: et + ' auto off',
             autoTrackExposure: !1
         });
-    let en = (0, I.ZP)(M.id),
+    let en = (0, N.ZP)(M.id),
         ei = null == en ? void 0 : en.getLegacyUsername(),
         er = (null != (n = null == (e = q.global_name) ? void 0 : e.length) ? n : 0) > 0 ? q.global_name : null != (r = null == Q ? void 0 : Q.nick) ? r : [],
         es = (null != (Z = null == (t = q.bio) ? void 0 : t.length) ? Z : 0) > 0 ? q.bio : null != (w = null == Q ? void 0 : Q.bio) ? w : [],

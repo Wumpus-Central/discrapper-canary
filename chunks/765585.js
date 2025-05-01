@@ -11,7 +11,7 @@ var i = n(200651),
     m = n(388032),
     p = n(418952);
 let g = r.forwardRef(function (e, t) {
-    let { body: n, header: s, artClassName: g, headerClassName: h, contentClassName: f, tryItText: b, dismissText: _, onTryFeature: x, onClose: E, className: j, inlineArt: C = !1, isPremiumFeature: O = !1, shouldUseHorizontalButtons: S = !1, showGIFTag: v = !1, dismissibleContent: T, position: N = 'top', align: I = 'center', art: y, isPremiumEarlyAccess: A = !1, maxWidth: P = 280, hideDismissButton: R = !1, pointerClassName: D, dismissIconClassName: Z, dismissIcon: w, onDismissIconClick: k, tryItButtonColor: L } = e,
+    let { body: n, header: s, artClassName: g, headerClassName: h, contentClassName: f, tryItText: b, dismissText: _, onTryFeature: x, onClose: E, className: j, inlineArt: C = !1, isPremiumFeature: O = !1, shouldUseHorizontalButtons: S = !1, showGIFTag: v = !1, dismissibleContent: T, position: I = 'top', align: N = 'center', art: y, isPremiumEarlyAccess: A = !1, maxWidth: P = 280, hideDismissButton: R = !1, pointerClassName: D, dismissIconClassName: Z, dismissIcon: w, onDismissIconClick: k, tryItButtonColor: L } = e,
         M = S ? a.zxk.Sizes.LARGE : a.zxk.Sizes.MAX,
         [B, U] = r.useState(!1),
         { ref: V, width: G } = (0, o.ZP)();
@@ -134,9 +134,9 @@ let g = r.forwardRef(function (e, t) {
                     }),
                     (0, i.jsx)('div', {
                         className: l()(p.pointer, D, {
-                            [p.bottomPointer]: 'top' === N,
-                            [p.centerLeftPointer]: 'right' === N && 'center' === I,
-                            [p.topLeftPointer]: 'right' === N && 'top' === I
+                            [p.bottomPointer]: 'top' === I,
+                            [p.centerLeftPointer]: 'right' === I && 'center' === N,
+                            [p.topLeftPointer]: 'right' === I && 'top' === N
                         })
                     })
                 ]

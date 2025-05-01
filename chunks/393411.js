@@ -28,8 +28,8 @@ var r = n(120356),
     S = n(296848),
     v = n(140465),
     T = n(695349),
-    N = n(404380),
-    I = n(879463),
+    I = n(404380),
+    N = n(879463),
     y = n(104494),
     A = n(987997),
     P = n(833569),
@@ -208,7 +208,7 @@ let W = function (e) {
         K = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
         { fractionalState: q } = (0, p.Z)({ forceFetch: !1 }),
         X = q === D.a$.FP_SUB_PAUSED,
-        { enabled: Q } = (0, I.ZP)({ location: W });
+        { enabled: Q } = (0, N.ZP)({ location: W });
     (D.pj.has(r.planId) && Z.JwP.ALL_PAUSEABLE.has(r.status) && !X) || (Q = !1);
     let J = (0, y.Ng)(),
         $ = null == J || null == (t = J.discount) ? void 0 : t.amount,
@@ -356,7 +356,7 @@ let W = function (e) {
                 });
             }
             function t() {
-                let e = C.ZP.isSwitchingPlansDisabled(r) || (0, N.o)(W, K, q),
+                let e = C.ZP.isSwitchingPlansDisabled(r) || (0, I.o)(W, K, q),
                     t = C.ZP.getSwitchingPlansDisabledMessage(r);
                 return (0, i.jsxs)('div', {
                     className: k.toolsButtons,

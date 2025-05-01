@@ -23,8 +23,8 @@ var i = n(200651),
     S = n(374649),
     v = n(981631),
     T = n(388032),
-    N = n(628654),
-    I = n(893354);
+    I = n(628654),
+    N = n(893354);
 function y(e) {
     let { subscription: t, onPaymentSourceAdded: n, highlightAddPaymentMethodButton: s, dropdownClassName: a, analyticsLocation: y, currentInvoicePreview: P, disabled: R = !1 } = e,
         D = (0, c.e7)([_.Z], () => _.Z.hidePersonalInformation),
@@ -144,7 +144,7 @@ function y(e) {
         return (0, i.jsx)(d.eee, {
             href: e,
             useDefaultUnderlineStyles: !1,
-            className: N.externalLink,
+            className: I.externalLink,
             children: (0, i.jsx)(d.zxk, {
                 fullWidth: !0,
                 look: d.zxk.Looks.FILLED,
@@ -193,11 +193,11 @@ function y(e) {
                     ? (0, i.jsx)(g.b, {
                           currencies: n,
                           children: (0, i.jsxs)('div', {
-                              className: l()(N.currency, I.flex, I.alignCenter),
+                              className: l()(I.currency, N.flex, N.alignCenter),
                               children: [
                                   (0, i.jsx)('div', { children: T.intl.string(T.t['0YjaXV']) }),
                                   (0, i.jsx)(g.Z, {
-                                      className: N.currencyDropdown,
+                                      className: I.currencyDropdown,
                                       selectedCurrency: V,
                                       currencies: n,
                                       onChange: (e) => {

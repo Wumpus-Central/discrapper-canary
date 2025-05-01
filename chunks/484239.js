@@ -17,10 +17,10 @@ let h = (e) => {
     let n,
         r,
         { title: h, titleClassName: f, buttonClassName: b, perkImage: _, isCarousel: x, onCtaClick: E, perkComponent: j, subtitle: C = '', descriptionCta: O = '', cardVariant: S, subtitleClassName: v, imageOverlayText: T } = e,
-        N = (0, o._)(S),
-        I = (0, a.Er)(),
-        y = (null == I ? void 0 : I.nitroTenureStatus) === d.EB.REDEEMABLE;
-    switch (null == I ? void 0 : I.nitroTenureStatus) {
+        I = (0, o._)(S),
+        N = (0, a.Er)(),
+        y = (null == N ? void 0 : N.nitroTenureStatus) === d.EB.REDEEMABLE;
+    switch (null == N ? void 0 : N.nitroTenureStatus) {
         case d.EB.REDEEMABLE:
             (n = g), (r = 'unlocked icon');
             break;
@@ -40,7 +40,7 @@ let h = (e) => {
             (0, i.jsx)(c.Z, {
                 title: h,
                 shouldShowElement: (e) => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
-                cardVariantStyleInfo: N,
+                cardVariantStyleInfo: I,
                 titleClassName: f,
                 subtitle: C,
                 subtitleClassName: v
@@ -79,7 +79,7 @@ let h = (e) => {
                                 fullWidth: !0,
                                 onClick: E,
                                 children: (0, i.jsxs)('div', {
-                                    className: null == N || null == (t = N.descriptionCta) ? void 0 : t.className,
+                                    className: null == I || null == (t = I.descriptionCta) ? void 0 : t.className,
                                     children: [
                                         (0, i.jsx)('img', {
                                             alt: r,

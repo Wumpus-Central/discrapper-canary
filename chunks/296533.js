@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => y,
-    r: () => I
+    r: () => N
 }),
     n(539854),
     n(388685);
@@ -226,7 +226,7 @@ function T(e) {
         ]
     });
 }
-function N(e) {
+function I(e) {
     let { guildId: t, appliedGuildBoosts: n, premiumSubscription: r } = e,
         s = (0, l.e7)([m.Z], () => m.Z.getGuild(t), [t]),
         a = f.default.fromTimestamp(Date.now());
@@ -274,7 +274,7 @@ function N(e) {
         ]
     });
 }
-function I(e) {
+function N(e) {
     let { appliedGuildBoosts: t, premiumSubscription: n } = e,
         s = r.useMemo(() => {
             let e = {};
@@ -295,7 +295,7 @@ function I(e) {
                       className: O.container,
                       children: f.default.keys(s).map((e) =>
                           (0, i.jsx)(
-                              N,
+                              I,
                               {
                                   guildId: e,
                                   premiumSubscription: n,

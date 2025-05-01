@@ -61,11 +61,11 @@ function C(e, t) {
     );
 }
 function O(e) {
-    let { onLearnMore: t, selectedBackgroundOption: O, onSelectBackgroundOption: S, currentDeviceId: v, smallerBackgroundOptions: T, className: N } = e,
-        I = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
+    let { onLearnMore: t, selectedBackgroundOption: O, onSelectBackgroundOption: S, currentDeviceId: v, smallerBackgroundOptions: T, className: I } = e,
+        N = (0, s.e7)([o.default], () => o.default.getCurrentUser()),
         [y, A] = r.useState(null),
         P = (0, g.Z)(),
-        R = c.ZP.canUseCustomBackgrounds(I);
+        R = c.ZP.canUseCustomBackgrounds(N);
     r.useEffect(() => {
         (0, d.XV)();
     }, []);
@@ -96,7 +96,7 @@ function O(e) {
     return P
         ? (0, i.jsxs)(l.xJW, {
               title: x.intl.string(x.t.lZTUPj),
-              className: N,
+              className: I,
               children: [
                   null != y
                       ? (0, i.jsx)(l.kzN, {

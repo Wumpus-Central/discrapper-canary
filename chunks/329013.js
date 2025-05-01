@@ -26,14 +26,14 @@ var i = n(200651),
     S = n(504983),
     v = n(626135),
     T = n(210887),
-    N = n(981631),
-    I = n(921944),
+    I = n(981631),
+    N = n(921944),
     y = n(474936),
     A = n(388032),
     P = n(967655);
 let R = () => {
         (0, _.EW)(l.z.CLIENT_THEMES_SPARKLE_PREVIEW, {
-            dismissAction: I.L.PRIMARY,
+            dismissAction: N.L.PRIMARY,
             forceTrack: !0
         }),
             (0, g.Kq)(),
@@ -78,7 +78,7 @@ let R = () => {
         return (
             r.useEffect(() => {
                 l &&
-                    v.default.track(N.rMx.PREMIUM_UPSELL_VIEWED, {
+                    v.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, {
                         type: y.cd.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                         location_stack: n
                     });
@@ -149,12 +149,12 @@ function Z() {
         darkSidebar: T.Z.darkSidebar,
         gradientPreset: h.Z.gradientPreset
     }));
-    return e !== N.BRd.LIGHT
+    return e !== I.BRd.LIGHT
         ? null
         : (0, i.jsx)(o.j7V, {
               hideBorder: !0,
               value: r && (0, a.ap)(e) && !t,
-              disabled: e !== N.BRd.LIGHT || t || null != n,
+              disabled: e !== I.BRd.LIGHT || t || null != n,
               onChange: d.lq,
               className: P.darkSidebarToggle,
               children: (0, i.jsx)('span', {

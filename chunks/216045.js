@@ -23,8 +23,8 @@ var i = n(200651),
     S = n(296810),
     v = n(678135),
     T = n(610794),
-    N = n(935147),
-    I = n(643879),
+    I = n(935147),
+    N = n(643879),
     y = n(373230),
     A = n(246946),
     P = n(25990),
@@ -67,7 +67,7 @@ function F() {
             }
             return r;
         })(F, ['pendingBio', 'pendingAvatar']),
-        Y = (0, I.SD)({
+        Y = (0, N.SD)({
             userId: n.id,
             image: z
         }),
@@ -172,7 +172,7 @@ function F() {
                       active: ed,
                       children: (0, i.jsx)('div', {
                           ref: eu,
-                          children: (0, i.jsx)(N.Z, {
+                          children: (0, i.jsx)(I.Z, {
                               user: n,
                               shouldShow: ed,
                               isVisible: ea

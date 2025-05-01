@@ -23,8 +23,8 @@ var i = n(200651),
     S = n(714565),
     v = n(202858),
     T = n(726985),
-    N = n(981631),
-    I = n(815660),
+    I = n(981631),
+    N = n(815660),
     y = n(388032),
     A = n(951839),
     P = n(20493);
@@ -119,7 +119,7 @@ class k extends r.PureComponent {
             { revealed: n } = this.state,
             { currentUser: r, togglingSMS: s, hasTOTPEnabled: l } = this.props,
             a = null != r.phone,
-            c = r.hasFlag(N.xW$.MFA_SMS);
+            c = r.hasFlag(I.xW$.MFA_SMS);
         if (l) {
             if (a || c) {
                 let e = n ? r.phone : this.maskPhoneNumber(r.phone);
@@ -342,7 +342,7 @@ class k extends r.PureComponent {
     }
     openPhoneVerificationModal() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        (0, o.h7j)((t) => (0, i.jsx)(b.default, D({ reason: h.L.USER_SETTINGS_UPDATE }, t, e)), { modalKey: I.M });
+        (0, o.h7j)((t) => (0, i.jsx)(b.default, D({ reason: h.L.USER_SETTINGS_UPDATE }, t, e)), { modalKey: N.M });
     }
     constructor(...e) {
         super(...e),

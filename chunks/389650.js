@@ -23,8 +23,8 @@ var i = n(200651),
     S = n(808506),
     v = n(63063),
     T = n(358085),
-    N = n(13140),
-    I = n(210887),
+    I = n(13140),
+    N = n(210887),
     y = n(659947),
     A = n(981631),
     P = n(420212),
@@ -87,11 +87,11 @@ let U = o()((0, f.Rv)())
         .filter((e) => e.description !== R.intl.string(R.t.HnNtEB))
         .groupBy((e) => e.group)
         .value(),
-    V = c.ZP.connectStores([I.Z], () => ({ theme: I.Z.theme }))(u.ubH);
+    V = c.ZP.connectStores([N.Z], () => ({ theme: N.Z.theme }))(u.ubH);
 class G extends r.PureComponent {
     renderMessage() {
         let { keybind: e } = this.props,
-            t = N.BB(e.shortcut);
+            t = I.BB(e.shortcut);
         return b.Z.hasBind(t)
             ? (0, i.jsx)(u.R94, {
                   className: D.keybindMessage,

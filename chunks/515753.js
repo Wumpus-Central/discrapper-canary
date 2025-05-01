@@ -29,8 +29,8 @@ var i = n(200651),
     S = n(201895),
     v = n(43267),
     T = n(933557),
-    N = n(163889),
-    I = n(111028),
+    I = n(163889),
+    N = n(111028),
     y = n(540059),
     A = n(853856),
     P = n(93687),
@@ -181,7 +181,7 @@ let en = q.ZP.getEnableHardwareAcceleration() ? p.Xo$ : p.qEK,
         var { route: t, selected: n, icon: r, iconClassName: s, avatarWithTextClassName: a, interactiveClassName: o, text: d, children: m, locationState: g, onClick: h, className: f, role: b, 'aria-posinset': _, 'aria-setsize': x, listItemRef: E } = e,
             j = et(e, ['route', 'selected', 'icon', 'iconClassName', 'avatarWithTextClassName', 'interactiveClassName', 'text', 'children', 'locationState', 'onClick', 'className', 'role', 'aria-posinset', 'aria-setsize', 'listItemRef']);
         let O = (0, y.Q3)('PrivateChannelLinkButton');
-        return (0, i.jsx)(N.Z, {
+        return (0, i.jsx)(I.Z, {
             className: l()(J.channel, { [J.fullWidth]: u.tq }, f),
             onClick: h,
             role: b,
@@ -257,8 +257,8 @@ function ec(e) {
         eS = (0, T.ZP)(t),
         ev = (0, m.e7)([A.Z], () => A.Z.isFavorite(t.id)),
         eT = (0, M.L)('PrivateChannel'),
-        eN = null != V && (a || Y),
-        eI = () => {
+        eI = null != V && (a || Y),
+        eN = () => {
             K(!0);
         },
         ey = () => {
@@ -419,7 +419,7 @@ function ec(e) {
         children: (e) => {
             var { role: n } = e,
                 r = et(e, ['role']);
-            return (0, i.jsxs)(N.Z, {
+            return (0, i.jsxs)(I.Z, {
                 className: l()(J.channel, J.dm),
                 role: n,
                 focusProps: ee($({}, ei), {
@@ -427,7 +427,7 @@ function ec(e) {
                     ringTarget: eo
                 }),
                 ref: eo,
-                onMouseEnter: eI,
+                onMouseEnter: eN,
                 onMouseLeave: ey,
                 onMouseDown: eP,
                 onContextMenu: eZ,
@@ -446,7 +446,7 @@ function ec(e) {
                         selected: a,
                         children: [
                             (0, i.jsx)(L.Z, {
-                                nameplate: eN ? V : void 0,
+                                nameplate: eI ? V : void 0,
                                 selected: a,
                                 hovered: Y,
                                 content: eB,
@@ -459,7 +459,7 @@ function ec(e) {
                                         {
                                             innerRef: q,
                                             to: X.Z5c.CHANNEL(X.ME, t.id),
-                                            className: l()(J.link, { [J.linkPlated]: eN }),
+                                            className: l()(J.link, { [J.linkPlated]: eI }),
                                             'aria-label': (0, S.ZP)({
                                                 channel: t,
                                                 unread: eO
@@ -474,7 +474,7 @@ function ec(e) {
                                             highlighted: eO && !(eT && eC),
                                             muted: eC,
                                             subText: ek(),
-                                            name: (0, i.jsx)(I.Z, {
+                                            name: (0, i.jsx)(N.Z, {
                                                 tooltipClassName: J.overflowTooltip,
                                                 children: eM
                                             }),

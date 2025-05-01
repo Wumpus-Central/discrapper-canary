@@ -23,8 +23,8 @@ var i = n(200651),
     S = n(887278),
     v = n(812206),
     T = n(835473),
-    N = n(243778),
-    I = n(594190),
+    I = n(243778),
+    N = n(594190),
     y = n(320724),
     A = n(925329),
     P = n(297700),
@@ -286,14 +286,14 @@ function ev(e) {
                         enabledOOP: null != (t = null == d ? void 0 : d.oopEnabled) && t
                     };
                 }
-                return (0, I.b6)(l, !1, [K.Z, X.Z]);
+                return (0, N.b6)(l, !1, [K.Z, X.Z]);
             },
             [l, d]
         ),
-        g = (0, p.e7)([I.ZP, K.Z, X.Z], () => (null == l ? null : (0, I.FZ)(l, [I.ZP, K.Z, X.Z])), [l], o()),
+        g = (0, p.e7)([N.ZP, K.Z, X.Z], () => (null == l ? null : (0, N.FZ)(l, [N.ZP, K.Z, X.Z])), [l], o()),
         [b, _] = r.useState(m),
         [E, v] = r.useState(u),
-        [T, N] = r.useState(!1);
+        [T, I] = r.useState(!1);
     r.useEffect(() => {
         _(m), v(u);
     }, [m, u]);
@@ -471,7 +471,7 @@ function ev(e) {
     return null == l
         ? null
         : (0, i.jsxs)(eC, {
-              onExpand: N,
+              onExpand: I,
               className: T ? eu.expandedContainer : void 0,
               title: (0, i.jsxs)(i.Fragment, {
                   children: [
@@ -587,10 +587,10 @@ function eT(e) {
         size: A.Z.Sizes.SMALL
     });
 }
-function eN(e) {
+function eI(e) {
     let { rawGame: t, gameApplication: n, supportDisabled: s, getEnabledFromStatus: l, onChange: a, clientSettingType: o, ariaLabel: c } = e,
-        d = (0, p.cj)([I.ZP, K.Z, X.Z], () => (0, I.FZ)(t, [I.ZP, K.Z, X.Z])),
-        u = (0, p.cj)([K.Z, X.Z], () => (0, I.b6)(t, !1, [K.Z, X.Z]), [t]),
+        d = (0, p.cj)([N.ZP, K.Z, X.Z], () => (0, N.FZ)(t, [N.ZP, K.Z, X.Z])),
+        u = (0, p.cj)([K.Z, X.Z], () => (0, N.b6)(t, !1, [K.Z, X.Z]), [t]),
         m = l(u),
         [g, f] = r.useState(m);
     r.useEffect(() => {
@@ -622,16 +622,16 @@ function eN(e) {
         })
     });
 }
-function eI() {
+function eN() {
     let [e, t] = r.useState(!1),
         { legacyEnabled: n, oopEnabled: s } = (0, p.cj)([k.default], () => k.default.getGlobalEnabledStatus()),
-        l = (0, p.Wu)([I.ZP], () => I.ZP.getGamesSeen(!0)),
+        l = (0, p.Wu)([N.ZP], () => N.ZP.getGamesSeen(!0)),
         a = (0, T.Z)(l.map((e) => e.id)),
         o = (0, S.$1)(),
         c = (e, t) => {
             var i, r;
             eS(t), x.Z.setEnabled(e, s);
-            let l = null != (r = null == (i = I.ZP.getCurrentGameForAnalytics()) ? void 0 : i.id) ? r : null;
+            let l = null != (r = null == (i = N.ZP.getCurrentGameForAnalytics()) ? void 0 : i.id) ? r : null;
             (0, R.ou)(e, R.AE.LEGACY, l), !e && n && (0, U.l)(R.AE.LEGACY, l);
         },
         d = (e, t, n) => {
@@ -683,7 +683,7 @@ function eI() {
                       className: eu.scroller,
                       children: l.map((e, t) =>
                           (0, i.jsx)(
-                              eN,
+                              eI,
                               {
                                   rawGame: e,
                                   clientSettingType: R.AE.LEGACY_GAME,
@@ -707,14 +707,14 @@ function ey() {
     let [e, t] = r.useState(!1),
         { oopEnabled: n, legacyEnabled: s } = (0, p.cj)([k.default], () => k.default.getGlobalEnabledStatus()),
         l = !(0, es.supportsOutOfProcess)(),
-        a = (0, p.Wu)([I.ZP], () => I.ZP.getGamesSeen(!0)),
+        a = (0, p.Wu)([N.ZP], () => N.ZP.getGamesSeen(!0)),
         o = (0, T.Z)(a.map((e) => e.id)),
         c = (e, t) => {
             var i, r;
             eS(t);
             let l = !e && n;
             x.Z.setEnabled(s, e);
-            let a = null != (r = null == (i = I.ZP.getCurrentGameForAnalytics()) ? void 0 : i.id) ? r : null;
+            let a = null != (r = null == (i = N.ZP.getCurrentGameForAnalytics()) ? void 0 : i.id) ? r : null;
             (0, R.ou)(e, R.AE.OOP, a), l && (0, U.l)(R.AE.OOP, a);
         },
         d = (e, t, n) => {
@@ -766,7 +766,7 @@ function ey() {
                       className: eu.scroller,
                       children: a.map((e, t) =>
                           (0, i.jsx)(
-                              eN,
+                              eI,
                               {
                                   rawGame: e,
                                   clientSettingType: R.AE.OOP_GAME,
@@ -790,7 +790,7 @@ function eA() {
     let e = (0, p.e7)([J.ZP], () => J.ZP.getOverlayKeybind()),
         t = (0, S.$1)(),
         n = !(0, es.supportsOutOfProcess)(),
-        [r, s] = (0, p.Wu)([I.ZP], () => [I.ZP.canShowAdminWarning, I.ZP.getVisibleGame()], []),
+        [r, s] = (0, p.Wu)([N.ZP], () => [N.ZP.canShowAdminWarning, N.ZP.getVisibleGame()], []),
         l = null != s && s.elevated && r;
     return (0, i.jsx)(eE, {
         children: (0, i.jsx)('div', {
@@ -1106,7 +1106,7 @@ function eZ() {
     });
 }
 function ew() {
-    let [e, t] = (0, N.US)([g.z.OVERLAY_OOP_SETTINGS_NUX], void 0, !0),
+    let [e, t] = (0, I.US)([g.z.OVERLAY_OOP_SETTINGS_NUX], void 0, !0),
         n = () => {
             t(ea.L.DISMISS);
         };
@@ -1243,9 +1243,9 @@ function eL(e) {
         { runningGame: r, runningGameApplication: s } = (function () {
             let e = (0, p.e7)([Y.Z], () => Y.Z.getStreamerActiveStreamMetadata()),
                 t = (0, p.e7)(
-                    [I.ZP],
+                    [N.ZP],
                     () => {
-                        let e = I.ZP.getVisibleGame();
+                        let e = N.ZP.getVisibleGame();
                         return null == e ? null : e;
                     },
                     [],
@@ -1280,7 +1280,7 @@ function eL(e) {
                                       runningGameApplication: s
                                   }),
                                   (0, i.jsx)(ey, {}),
-                                  (0, i.jsx)(eI, {})
+                                  (0, i.jsx)(eN, {})
                               ]
                           }),
                           (0, i.jsx)('div', { className: eu.settingsDivider })

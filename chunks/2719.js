@@ -23,8 +23,8 @@ var i = n(200651),
     S = n(921801),
     v = n(485341),
     T = n(687158),
-    N = n(518950),
-    I = n(184325),
+    I = n(518950),
+    N = n(184325),
     y = n(867176),
     A = n(25990),
     P = n(594174),
@@ -545,7 +545,7 @@ function ee() {
         s = w.co.useSetting(),
         l = (0, c.e7)([A.Z], () => A.Z.getErrors()),
         a = null == l || null == (e = l.avatar) ? void 0 : e[0],
-        { avatarSrc: d, avatarDecorationSrc: m } = (0, N.Z)({
+        { avatarSrc: d, avatarDecorationSrc: m } = (0, I.Z)({
             user: t,
             size: u.EFr.SIZE_80
         });
@@ -586,7 +586,7 @@ function ee() {
                                     (0, i.jsx)(Q, { user: t })
                                 ]
                             }),
-                            (0, i.jsx)(I.Z, {
+                            (0, i.jsx)(N.Z, {
                                 badges: r,
                                 className: G.badgeList,
                                 badgeClassName: G.badge

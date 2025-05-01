@@ -23,8 +23,8 @@ var i = n(200651),
     S = n(726985),
     v = n(981631),
     T = n(710111),
-    N = n(388032),
-    I = n(576813),
+    I = n(388032),
+    N = n(576813),
     y = n(20493);
 function A(e) {
     return (0, a.e7)([h.Z], () => {
@@ -43,17 +43,17 @@ function P(e) {
                 }),
                 (0, i.jsxs)(p.F, {
                     setting: S.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
-                    children: [t ? null : (0, i.jsx)(o.$i$, { className: I.callSoundsDivider }), (0, i.jsx)(R, { refreshStyles: t })]
+                    children: [t ? null : (0, i.jsx)(o.$i$, { className: N.callSoundsDivider }), (0, i.jsx)(R, { refreshStyles: t })]
                 })
             ]
         });
     return t
         ? n
         : (0, i.jsx)(o.hjN, {
-              className: I.container,
+              className: N.container,
               tag: o.RB0.H1,
               titleClassName: y.__invalid_marginBottom16,
-              title: N.intl.string(N.t.ABjMWF),
+              title: I.intl.string(I.t.ABjMWF),
               children: n
           });
 }
@@ -78,14 +78,14 @@ function R(e) {
         P = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(o.xJW, {
-                    title: N.intl.string(N.t.nzUc3N),
-                    children: (0, i.jsx)(o.R94, { children: N.intl.format(N.t.u9RWmp, { helpdeskArticle: x.Z.getArticleURL(v.BhN.SOUNDBOARD) }) })
+                    title: I.intl.string(I.t.nzUc3N),
+                    children: (0, i.jsx)(o.R94, { children: I.intl.format(I.t.u9RWmp, { helpdeskArticle: x.Z.getArticleURL(v.BhN.SOUNDBOARD) }) })
                 }),
                 (0, i.jsx)(u.Z, {
                     guildId: s,
-                    className: l()(I.guildSelector, { [I.refreshGuildSelector]: t }),
+                    className: l()(N.guildSelector, { [N.refreshGuildSelector]: t }),
                     globalOption: {
-                        label: N.intl.string(N.t.CpEUPz),
+                        label: I.intl.string(I.t.CpEUPz),
                         value: T.hY
                     },
                     onChange: (e) => {
@@ -96,12 +96,12 @@ function R(e) {
                 }),
                 (0, i.jsxs)(m.Z, {
                     className: l()({ [y.marginTop20]: !t }),
-                    title: N.intl.format(N.t.I2TsYG, {
+                    title: I.intl.format(I.t.I2TsYG, {
                         nitroWheelHook: () =>
                             (0, i.jsx)(o.SrA, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: I.nitroWheel
+                                className: N.nitroWheel
                             })
                     }),
                     forcedDivider: !t,
@@ -115,9 +115,9 @@ function R(e) {
                         }),
                         O &&
                             (0, i.jsx)(o.Wn, {
-                                className: I.notice,
+                                className: N.notice,
                                 messageType: o.QYI.WARNING,
-                                children: N.intl.string(N.t.WkPsFR)
+                                children: I.intl.string(I.t.WkPsFR)
                             })
                     ]
                 })
@@ -136,21 +136,21 @@ function D(e) {
     let { emojiId: s, emojiName: l } = r,
         d = null != s || null != l;
     return (0, i.jsxs)('div', {
-        className: I.pill,
+        className: N.pill,
         children: [
             d
                 ? (0, i.jsx)(c.Z, {
                       emojiId: s,
                       emojiName: l,
-                      className: I.pillIcon
+                      className: N.pillIcon
                   })
                 : (0, i.jsx)(o.gj8, {
                       size: 'md',
                       color: 'currentColor',
-                      className: I.pillIcon
+                      className: N.pillIcon
                   }),
             (0, i.jsx)(o.Text, {
-                className: I.pillText,
+                className: N.pillText,
                 variant: 'text-xs/medium',
                 children: r.name
             })

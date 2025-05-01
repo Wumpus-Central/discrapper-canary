@@ -64,11 +64,11 @@ function T(e, t) {
         e
     );
 }
-async function N() {
+async function I() {
     let e = await d.Z.fileManager.getLogPath();
     d.Z.fileManager.showItemInFolder(e);
 }
-function I(e) {
+function N(e) {
     (0, l.h7j)((t) =>
         (0, i.jsx)(
             l.ConfirmModal,
@@ -235,7 +235,7 @@ function y(e) {
                         (0, i.jsx)(l.j7V, {
                             hideBorder: !0,
                             value: y,
-                            onChange: I,
+                            onChange: N,
                             note: O.intl.string(O.t['/7ak9f']),
                             children: O.intl.string(O.t['726JHB'])
                         }),
@@ -257,7 +257,7 @@ function y(e) {
                                         shrink: 0,
                                         children: (0, i.jsx)(l.zxk, {
                                             size: l.zxk.Sizes.SMALL,
-                                            onClick: N,
+                                            onClick: I,
                                             children: O.intl.string(O.t.nuPtYm)
                                         })
                                     })

@@ -21,10 +21,10 @@ var i = n(200651),
 let C = function (e) {
     let { premiumSubscription: t, premiumType: n, onClose: s, onConfirm: C, userDiscountOffer: O } = e,
         [S, v] = r.useState(!1),
-        [T, N] = r.useState(!1),
-        I = async (e) => {
+        [T, I] = r.useState(!1),
+        N = async (e) => {
             try {
-                N(!0),
+                I(!0),
                     v(!1),
                     await a.tn.post({
                         url: b.ANM.USER_OFFER_REDEEM,
@@ -35,7 +35,7 @@ let C = function (e) {
             } catch (e) {
                 v(!0);
             }
-            N(!1);
+            I(!1);
         },
         y = (0, d.ZP)(),
         A = (0, o.wj)(y) ? E : j,
@@ -117,7 +117,7 @@ let C = function (e) {
                                       (0, i.jsx)(c.zxk, {
                                           size: c.PhG.SMALL,
                                           submitting: T,
-                                          onClick: () => I(O.id),
+                                          onClick: () => N(O.id),
                                           children: _.intl.string(_.t.CKSuZG)
                                       })
                                   ]

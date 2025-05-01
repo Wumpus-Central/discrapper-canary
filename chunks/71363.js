@@ -24,8 +24,8 @@ var i = n(200651),
 let v = (e) => {
     let t,
         n,
-        { isAllPerksVisible: s, setIsAllPerksVisible: v, previousComponent: T, isFullScreen: N } = e,
-        I = r.useRef(null),
+        { isAllPerksVisible: s, setIsAllPerksVisible: v, previousComponent: T, isFullScreen: I } = e,
+        N = r.useRef(null),
         y = r.useRef(null),
         A = Object.entries((0, _.Z)()).reduce((e, t) => {
             let [n, i] = t;
@@ -44,7 +44,7 @@ let v = (e) => {
                 [O.open]: s,
                 [O.openCloseReduceMotion]: Z
             }),
-            ref: I,
+            ref: N,
             children: (0, i.jsx)('div', {
                 className: O.container,
                 children: (0, i.jsxs)(m.Gt, {
@@ -76,7 +76,7 @@ let v = (e) => {
                                         perksCards: A,
                                         variant: x.R0.CARD_CAROUSEL_FIRST_ROW,
                                         isPremiumSubscriber: w,
-                                        isFullScreen: N,
+                                        isFullScreen: I,
                                         fractionalState: k,
                                         isInReverseTrial: L
                                     }),
@@ -94,7 +94,7 @@ let v = (e) => {
                                         perksCards: A,
                                         variant: x.R0.CARD_CAROUSEL_SECOND_ROW,
                                         isPremiumSubscriber: w,
-                                        isFullScreen: N,
+                                        isFullScreen: I,
                                         fractionalState: k,
                                         isInReverseTrial: L
                                     }),
@@ -112,7 +112,7 @@ let v = (e) => {
                                         perksCards: A,
                                         variant: x.R0.CARD_CAROUSEL_THIRD_ROW,
                                         isPremiumSubscriber: w,
-                                        isFullScreen: N,
+                                        isFullScreen: I,
                                         fractionalState: k,
                                         isInReverseTrial: L
                                     }),

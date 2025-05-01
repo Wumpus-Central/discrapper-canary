@@ -35,8 +35,8 @@ var i = n(192379),
     S = n(314897),
     v = n(906467),
     T = n(283595),
-    N = n(699516),
-    I = n(663389),
+    I = n(699516),
+    N = n(663389),
     y = n(594174),
     A = n(202527),
     P = n(413182),
@@ -95,7 +95,7 @@ function V() {
     var e, t, n, l;
     let v = (0, x.YO)().length,
         P = (0, _.U)(),
-        k = (0, r.e7)([I.Z], () => I.Z.getProps().impressionSource),
+        k = (0, r.e7)([N.Z], () => N.Z.getProps().impressionSource),
         L = (0, f.gU)(),
         B = (0, w.bC)(),
         U = (0, c.Go)(),
@@ -124,9 +124,9 @@ function V() {
         { hypeSquadRemoved: et } = m.Z.useExperiment({ location: 'settings' }),
         en = null == (l = (0, h.Z)()) || l,
         ei = (null == (t = (0, j.s)()) ? void 0 : t.length) > 0,
-        { hasBlockedUsers: er, hasIgnoredUsers: es } = (0, r.cj)([N.Z], () => ({
-            hasBlockedUsers: N.Z.getBlockedIDs().length > 0,
-            hasIgnoredUsers: N.Z.getIgnoredIDs().length > 0
+        { hasBlockedUsers: er, hasIgnoredUsers: es } = (0, r.cj)([I.Z], () => ({
+            hasBlockedUsers: I.Z.getBlockedIDs().length > 0,
+            hasIgnoredUsers: I.Z.getIgnoredIDs().length > 0
         })),
         { showRefreshedSettings: el } = (0, Z.F)({
             location: 'SettingRendererUtils',

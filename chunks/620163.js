@@ -24,8 +24,8 @@ var r = n(990547),
     S = n(540059),
     v = n(621628),
     T = n(243778),
-    N = n(18438),
-    I = n(778825),
+    I = n(18438),
+    N = n(778825),
     y = n(665166),
     A = n(442933),
     P = n(715495),
@@ -78,8 +78,8 @@ var r = n(990547),
     eS = n(593648),
     ev = n(327885),
     eT = n(595242),
-    eN = n(463153),
-    eI = n(36192),
+    eI = n(463153),
+    eN = n(36192),
     ey = n(889029),
     eA = n(400287),
     eP = n(554042),
@@ -118,7 +118,7 @@ let eQ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
         return Object.freeze({
             [eG.s6.SEARCH_NO_RESULTS]: {
                 section: p.ID.CUSTOM,
-                element: eN.Z
+                element: eI.Z
             },
             [eG.s6.ACCOUNT_SECURITY_TAB]: {
                 section: eH.oAB.ACCOUNT,
@@ -264,12 +264,12 @@ let eQ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 newIndicator: (0, i.jsx)(e$, {}),
                 newIndicatorDismissibleContentTypes: [...eJ()],
                 notice: {
-                    stores: [Y.Z, I.Z],
+                    stores: [Y.Z, N.Z],
                     element: k.Z
                 },
                 onSettingsClose: () => {
                     o.Z.wait(() => {
-                        (0, N.It)(), (0, u.P6)(), m.Z.clearSubsection(eH.oAB.PROFILE_CUSTOMIZATION);
+                        (0, I.It)(), (0, u.P6)(), m.Z.clearSubsection(eH.oAB.PROFILE_CUSTOMIZATION);
                     });
                 },
                 url: eH.Z5c.SETTINGS('profile-customization')
@@ -498,7 +498,7 @@ let eQ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eY.intl.string(eY.t['+1h0k5'])],
                 label: eY.intl.string(eY.t['+1h0k5']),
                 ariaLabel: eY.intl.string(eY.t['+1h0k5']),
-                element: eI.Z,
+                element: eN.Z,
                 newIndicatorDismissibleContentTypes: [s.z.AUTH_SESSIONS_NEW],
                 impressionName: r.ImpressionNames.USER_SETTINGS_SESSIONS,
                 impressionProperties: { source: A }

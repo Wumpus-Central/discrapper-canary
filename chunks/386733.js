@@ -47,7 +47,7 @@ function T(e) {
     }
     return e;
 }
-function N(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,7 +65,7 @@ function N(e, t) {
         e
     );
 }
-let I = (e) => {
+let N = (e) => {
         let { userRecord: t, placement: n } = e,
             { avatarSrc: r, eventHandlers: s } = (0, u.Z)({
                 user: t,
@@ -94,7 +94,7 @@ let I = (e) => {
             text: O.intl.string(O.t.UnKHdn),
             shouldShow: !l,
             tooltipContentClassName: S.unsentTooltipContent,
-            children: (e) => (0, i.jsx)('div', N(T({ className: S.userAvatarProgressBarUnit }, e), { children: a }))
+            children: (e) => (0, i.jsx)('div', I(T({ className: S.userAvatarProgressBarUnit }, e), { children: a }))
         });
     },
     y = (e) => {
@@ -121,7 +121,7 @@ let I = (e) => {
         return (0, i.jsxs)('div', {
             className: S.userAvatarProgressBarContainer,
             children: [
-                (0, i.jsx)(I, {
+                (0, i.jsx)(N, {
                     userRecord: r,
                     placement: 1
                 }),
@@ -129,7 +129,7 @@ let I = (e) => {
                     numSentReferrals: n,
                     placement: 1
                 }),
-                (0, i.jsx)(I, {
+                (0, i.jsx)(N, {
                     userRecord: s,
                     placement: 2
                 }),
@@ -137,7 +137,7 @@ let I = (e) => {
                     numSentReferrals: n,
                     placement: 2
                 }),
-                (0, i.jsx)(I, {
+                (0, i.jsx)(N, {
                     userRecord: l,
                     placement: 3
                 })
@@ -148,7 +148,7 @@ let I = (e) => {
         let { isInSettings: t = !1 } = e,
             s = (0, a.e7)([f.Z], () => f.Z.getRecipientStatus()),
             { referralSentUsers: u } = (0, _.G)(),
-            I = r.useMemo(() => u.map((e) => new m.Z(e)), [u]),
+            N = r.useMemo(() => u.map((e) => new m.Z(e)), [u]),
             { subscriberHomeVariant: y } = b.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
             P = y === b.p.VARIANT_2,
             R = {
@@ -183,7 +183,7 @@ let I = (e) => {
                                 className: S.expandedProgressBarHeader,
                                 children: (0, j.$s)({ hasSentAll: D })
                             }),
-                            (0, i.jsx)(A, { userRecords: I }),
+                            (0, i.jsx)(A, { userRecords: N }),
                             (0, i.jsx)(o.Text, {
                                 variant: t ? 'text-sm/normal' : 'text-lg/medium',
                                 children: (0, j.Hg)({
@@ -210,7 +210,7 @@ let I = (e) => {
                                             p.default.track(C.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: w }),
                                                 (0, o.ZDy)(async () => {
                                                     let { default: e } = await n.e('47435').then(n.bind(n, 204387));
-                                                    return (t) => (0, i.jsx)(e, N(T({}, t), { sourceAnalyticsLocations: w }));
+                                                    return (t) => (0, i.jsx)(e, I(T({}, t), { sourceAnalyticsLocations: w }));
                                                 });
                                         },
                                         onlyShineOnHover: !0,

@@ -30,9 +30,9 @@ function b(e) {
         !c.wS)
     )
         return (0, i.jsx)(i.Fragment, { children: d({}) });
-    let N = x >= f.length - 1,
-        I = N ? a.FGA.RED : a.FGA.GREEN,
-        y = j ? I : a.FGA.PRIMARY,
+    let I = x >= f.length - 1,
+        N = I ? a.FGA.RED : a.FGA.GREEN,
+        y = j ? N : a.FGA.PRIMARY,
         A = () => {
             null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), O || E(x + 1), S(!0), C(!0), v.start(p, () => S(!1)), T.start(g, () => E(0));
         };
@@ -43,7 +43,7 @@ function b(e) {
             let n = (0, s.clamp)(x - 1, 0, f.length - 1),
                 r = null != (e = f[n]) ? e : f[0];
             return (0, i.jsx)(a.UkV, {
-                isShaking: N,
+                isShaking: I,
                 children: r()
             });
         })(),

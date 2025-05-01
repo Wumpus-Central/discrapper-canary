@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N });
+n.d(t, { Z: () => I });
 var i = n(200651),
     r = n(192379),
     s = n(442837),
@@ -23,19 +23,19 @@ var i = n(200651),
     S = n(615603),
     v = n(474936),
     T = n(551084);
-function N(e) {
+function I(e) {
     let { premiumSubscription: t } = e,
         n = (0, s.e7)([f.Z], () => f.Z.boostSlots),
-        N = r.useMemo(() => Object.values(n), [n]),
-        I = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
-        y = b.ZP.isPremium(I, v.p9.TIER_2),
+        I = r.useMemo(() => Object.values(n), [n]),
+        N = (0, s.e7)([h.default], () => h.default.getCurrentUser()),
+        y = b.ZP.isPremium(N, v.p9.TIER_2),
         A = (0, s.e7)([p.Z], () => p.Z.affinities),
         P = (0, s.e7)([g.ZP], () => g.ZP.getFlattenedGuildIds()),
         R = A.length > 0 || P.length > 0,
-        D = N.length > 0,
-        Z = r.useMemo(() => N.filter((e) => null != e.premiumGuildSubscription), [N]),
+        D = I.length > 0,
+        Z = r.useMemo(() => I.filter((e) => null != e.premiumGuildSubscription), [I]),
         w = Z.length > 0,
-        k = N.length > Z.length,
+        k = I.length > Z.length,
         L = (0, s.e7)([m.Z], () => m.Z.getCurrentUserAppliedBoosts()),
         { fractionalState: M } = (0, l.Z)({ forceFetch: !0 }),
         B = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && M === v.a$.NONE,
@@ -50,7 +50,7 @@ function N(e) {
                 hasBoostPerk: V,
                 canAddBoosts: U
             }),
-            !(0, u.y)('guild_boosting_settings', I, M) &&
+            !(0, u.y)('guild_boosting_settings', N, M) &&
                 (0, i.jsx)(O.Z, {
                     hasAppliedGuildBoosts: w,
                     hasBoostPerk: V,
@@ -73,7 +73,7 @@ function N(e) {
                       premiumSubscription: t
                   }),
             (0, i.jsx)(S.Z, {
-                guildBoostSlots: N,
+                guildBoostSlots: I,
                 fractionalPremiumState: M
             }),
             (0, i.jsx)(C.Z, {

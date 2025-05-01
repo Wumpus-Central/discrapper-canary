@@ -301,6 +301,42 @@ let A = {
             oldFormErrors: !0,
             rejectWithError: !0
         }),
+    async updateChannel(e, t, n) {
+        let i = 'icon' in t,
+            o = p.Z.getChannel(e),
+            a = t.icon,
+            s = {
+                channel_id: e,
+                channel_type: null == o ? void 0 : o.type,
+                old_icon_set: (null == o ? void 0 : o.icon) != null,
+                new_icon_set: null != a,
+                location: n
+            };
+        i && m.default.track(y.rMx.CHANNEL_ICON_EDIT_PROGRESSED, T(I({}, s), { status: 'initiated' }));
+        try {
+            let n = await r.tn.patch({
+                    url: y.ANM.CHANNEL(e),
+                    body: t,
+                    oldFormErrors: !0,
+                    rejectWithError: !0
+                }),
+                a = null == o ? void 0 : o.getGuildId();
+            return null == a || (null == o ? void 0 : o.isThread()) || l.Z.checkGuildTemplateDirty(a), i && m.default.track(y.rMx.CHANNEL_ICON_EDIT_PROGRESSED, T(I({}, s), { status: 'success' })), n;
+        } catch (e) {
+            if (i) {
+                var c, u;
+                m.default.track(
+                    y.rMx.CHANNEL_ICON_EDIT_PROGRESSED,
+                    T(I({}, s), {
+                        status: 'failed',
+                        is_rate_limited: (null == e || null == (c = e.body) ? void 0 : c.retry_after) != null,
+                        error_message: null == e || null == (u = e.body) ? void 0 : u.message
+                    })
+                );
+            }
+            throw e;
+        }
+    },
     convertToGuild: (e) =>
         r.tn.post({
             url: y.ANM.CHANNEL_CONVERT(e),

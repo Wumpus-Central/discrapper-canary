@@ -16,7 +16,7 @@ function g(e) {
         [j, C] = r.useState(''),
         [O, S] = r.useState(''),
         [v, T] = r.useState(''),
-        [N, I] = r.useState(null),
+        [I, N] = r.useState(null),
         [y, A] = r.useState(null),
         P = (0, s.e7)([c.Z], () => c.Z.getErrors()),
         R = (0, s.e7)([c.Z], () => c.Z.getFormState()),
@@ -24,7 +24,7 @@ function g(e) {
     async function Z(e) {
         e.preventDefault(), (0, a.b9)();
         let t = !1;
-        if (('' === O ? (I(m.intl.string(m.t['/7/oPT'])), (t = !0)) : I(null), O !== v ? (A(m.intl.string(m.t.IEKYZ2)), (t = !0)) : A(null), t)) return;
+        if (('' === O ? (N(m.intl.string(m.t['/7/oPT'])), (t = !0)) : N(null), O !== v ? (A(m.intl.string(m.t.IEKYZ2)), (t = !0)) : A(null), t)) return;
         let n = await (0, a.Mn)({
             password: j,
             newPassword: O
@@ -87,7 +87,7 @@ function g(e) {
                                 (0, i.jsx)(l.xJW, {
                                     className: p.newPassword,
                                     title: m.intl.string(m.t['8dM4FB']),
-                                    error: null != (h = null != (g = null == P || null == (n = P.new_password) ? void 0 : n[0]) ? g : N) ? h : void 0,
+                                    error: null != (h = null != (g = null == P || null == (n = P.new_password) ? void 0 : n[0]) ? g : I) ? h : void 0,
                                     children: (0, i.jsx)(l.oil, {
                                         type: 'password',
                                         value: O,

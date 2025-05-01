@@ -1,4 +1,4 @@
-n.d(t, { O: () => N }), n(388685);
+n.d(t, { O: () => I }), n(388685);
 var i = n(200651),
     r = n(192379),
     s = n(693789),
@@ -23,28 +23,28 @@ var i = n(200651),
     S = n(981631),
     v = n(388032),
     T = n(751318);
-function N() {
+function I() {
     let { enabled: e } = (0, h.W)({ location: 'revenue_storybook' });
     return (0, i.jsxs)('div', {
-        children: [e && (0, i.jsx)(y, {}), (0, i.jsx)(I, {}), (0, i.jsx)(A, {})]
+        children: [e && (0, i.jsx)(y, {}), (0, i.jsx)(N, {}), (0, i.jsx)(A, {})]
     });
 }
-function I() {
+function N() {
     let { openIntroToOrbsClaimedCoachmark: e } = (0, p.l)({ location: 'VirtualCurrencyComponents' }),
         [t, n] = r.useState(150),
         [g, h] = r.useState(150),
         [E, j] = r.useState(500),
-        [C, N] = r.useState(f.b.DEFAULT),
-        I = () => {
+        [C, I] = r.useState(f.b.DEFAULT),
+        N = () => {
             switch (C) {
                 case f.b.DEFAULT:
-                    N(f.b.HIGHLIGHTED);
+                    I(f.b.HIGHLIGHTED);
                     break;
                 case f.b.HIGHLIGHTED:
-                    N(f.b.SELECTED);
+                    I(f.b.SELECTED);
                     break;
                 case f.b.SELECTED:
-                    N(f.b.DEFAULT);
+                    I(f.b.DEFAULT);
             }
         },
         { analyticsLocations: y } = (0, c.ZP)(o.Z.PAYMENT_FLOW_TEST_PAGE);
@@ -176,7 +176,7 @@ function I() {
                         children: (0, i.jsx)(x.A4, {
                             balance: g,
                             balanceWidgetMode: C,
-                            onClick: () => I()
+                            onClick: () => N()
                         })
                     }),
                     (0, i.jsx)(l.Text, {
@@ -203,7 +203,7 @@ function I() {
                         children: (0, i.jsx)(x.A4, {
                             balance: g,
                             balanceWidgetMode: C,
-                            onClick: () => I()
+                            onClick: () => N()
                         })
                     })
                 ]

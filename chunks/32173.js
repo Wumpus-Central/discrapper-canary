@@ -28,8 +28,8 @@ var s = n(399606),
     S = n(74538),
     v = n(314684),
     T = n(687362),
-    N = n(943180),
-    I = n(229555),
+    I = n(943180),
+    N = n(229555),
     y = n(768865),
     A = n(119269),
     P = n(391110),
@@ -88,8 +88,8 @@ let ex = () => {
         eS = null != eO ? eO.initialPercentage : void 0,
         ev = null != eO ? eO.percentage : void 0,
         eT = (0, m.Z)(x.Z),
-        eN = (0, h.H)('usePerksDiscoverabilityCards'),
-        eI = (0, T.a)(),
+        eI = (0, h.H)('usePerksDiscoverabilityCards'),
+        eN = (0, T.a)(),
         ey = (0, v.Kb)(Z.qY),
         { isFractionalPremiumActive: eA } = (0, u.Z)(),
         eP = null != i && i.hasPremiumAtLeast(D.p9.TIER_2),
@@ -271,7 +271,7 @@ let ex = () => {
                 perkImage: eh.Z,
                 imageOverlayText: U.intl.string(U.t.lcYttb)
             },
-            specialMemberPricing: eN
+            specialMemberPricing: eI
                 ? {
                       name: 'specialMemberPricing',
                       title: U.intl.string(U.t['0Mykgo']),
@@ -299,7 +299,7 @@ let ex = () => {
                         isPremiumGetCta: !0,
                         perkImage: eo
                     },
-            specialMemberPricingSeeAllVariant: eN
+            specialMemberPricingSeeAllVariant: eI
                 ? {
                       name: 'specialMemberPricingSeeAllVariant',
                       title: U.intl.string(U.t['0Mykgo']),
@@ -327,7 +327,7 @@ let ex = () => {
                         isPremiumGetCta: !0,
                         perkImage: ec
                     },
-            specialShopPerks: eN
+            specialShopPerks: eI
                 ? {
                       name: 'specialShopPerks',
                       title: U.intl.string(U.t.U68LpK),
@@ -498,8 +498,8 @@ let ex = () => {
                 onCtaClick: ew
             }
         };
-    if (null != eI) {
-        let { title: t, subtitle: n, description: i, pillText: s, ctaDescription: l, dismissibleContentType: a } = eI;
+    if (null != eN) {
+        let { title: t, subtitle: n, description: i, pillText: s, ctaDescription: l, dismissibleContentType: a } = eN;
         eL.tenureRewardCollectible = {
             name: 'tenureRewardCollectible',
             title: t,
@@ -532,7 +532,7 @@ let ex = () => {
             dismissibleContentType: a
         };
     }
-    let { enabled: eM } = (0, N.D)();
+    let { enabled: eM } = (0, I.D)();
     return (
         eM &&
             ej &&
@@ -541,7 +541,7 @@ let ex = () => {
                 name: 'tenureBadge',
                 title: U.intl.string(U.t.rnsqpa),
                 pillText: U.intl.string(U.t.jyYgZ2).toLocaleUpperCase(),
-                perkComponent: (0, r.jsx)(I.Z, {}),
+                perkComponent: (0, r.jsx)(N.Z, {}),
                 cardVariant: P.zW.NITRO_GRADIENT_HOVER_BORDER,
                 onClick: () => (0, y.k)({ analyticsLocations: e })
             }),
