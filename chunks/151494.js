@@ -23,6 +23,12 @@ function u(e) {
             var t, n;
             return null != (n = null == (t = i.Z.getGuild(e)) ? void 0 : t.premiumTier) ? n : l.Eu4.NONE;
         }),
-        u = (0, r.e7)([o.Z], () => o.Z.hasFetchedUnlockedPowerups(e));
-    return t ? (u ? l.oCV[c] + n.available : 0) : n.total;
+        u = (0, r.e7)([o.Z], () => o.Z.hasFetchedUnlockedPowerups(e)),
+        d = (0, r.e7)([i.Z], () => {
+            var t;
+            return (null == (t = i.Z.getGuild(e)) ? void 0 : t.hasFeature(l.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0;
+        })
+            ? 0
+            : l.oCV[c];
+    return t ? (u ? d + n.available : 0) : n.total;
 }

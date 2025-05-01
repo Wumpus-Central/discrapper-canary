@@ -1,4 +1,4 @@
-n.d(t, { I: () => S }), n(539854);
+n.d(t, { I: () => k }), n(539854);
 var r = n(200651),
     l = n(192379),
     a = n(120356),
@@ -21,7 +21,7 @@ var r = n(200651),
     O = n(981631),
     j = n(388032),
     y = n(774457);
-function k(e) {
+function S(e) {
     let { tab: t, displayText: n, selected: l, handleTransition: a } = e;
     return (0, r.jsx)(p.Z.Title, {
         onClick: () => a(t),
@@ -30,8 +30,8 @@ function k(e) {
         children: n
     });
 }
-function S(e) {
-    let { isFullScreen: t, isLayer: n, onClose: a, selectedTab: S, handleTransition: P } = e,
+function k(e) {
+    let { isFullScreen: t, isLayer: n, onClose: a, selectedTab: k, handleTransition: P } = e,
         E = (0, b.ZP)(),
         B = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
         w = (null == B ? void 0 : B.isStaff()) || (null == B ? void 0 : B.isStaffPersonal()) || !1,
@@ -52,7 +52,7 @@ function S(e) {
             displayText: j.intl.string(j.t['KUYR+P'])
         });
     let L = n ? v.DR : a,
-        N = S === x.AW.ORBS ? O.ZY5.SHOP_ORBS_TAB : O.ZY5.COLLECTIBLES_SHOP,
+        N = k === x.AW.ORBS ? O.ZY5.SHOP_ORBS_TAB : O.ZY5.COLLECTIBLES_SHOP,
         A = l.useCallback(() => {
             t && (L(), (0, u.Ou)()),
                 (0, g.Y)({
@@ -77,11 +77,11 @@ function S(e) {
                         children: T.map((e) => {
                             let { tab: t, displayText: n } = e;
                             return (0, r.jsx)(
-                                k,
+                                S,
                                 {
                                     tab: t,
                                     displayText: n,
-                                    selected: S === t,
+                                    selected: k === t,
                                     handleTransition: P
                                 },
                                 t

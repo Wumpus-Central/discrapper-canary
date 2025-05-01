@@ -121,7 +121,7 @@ let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
         i.useEffect(() => {
             M !== C && (0, j.v)(t.id, C);
         }, [t.id, M, C]);
-        let G = ''.concat(Math.min(100, (C / P.oCV[L]) * 100), '%'),
+        let G = D ? '100%' : ''.concat(Math.min(100, (C / P.oCV[L]) * 100), '%'),
             { current: B } = i.useRef(G),
             [V] = (0, d.q_F)(
                 () => ({
