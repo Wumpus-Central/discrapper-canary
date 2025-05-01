@@ -25,9 +25,9 @@ var i = n(120356),
     T = n(388032),
     A = n(997926);
 function N(e) {
-    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: a, pendingBanner: l, pendingAccentColor: m, pendingBio: g, pendingPronouns: T, pendingAvatar: N, pendingAvatarDecoration: R, pendingNickname: P, pendingGlobalName: w, pendingThemeColors: D, pendingProfileEffectId: L, avatarClassName: x, containerClassName: M, isTryItOutFlow: k = !1, disabledInputs: j = !1, hideCustomStatus: U = !1, hideBioSection: G = !1, hideMessageInput: B = !0, hideExampleButton: V = !1, pendingBadges: F, shouldOpenBadgeTooltip: Z, showNameplatePreview: H = !1 } = e,
-        Y = (0, d.ZP)(t.id, null == n ? void 0 : n.id),
-        { avatarSrc: W, avatarDecorationSrc: K } = (0, _.Z)({
+    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: a, pendingBanner: l, pendingAccentColor: m, pendingBio: g, pendingPronouns: T, pendingAvatar: N, pendingAvatarDecoration: R, pendingNickname: P, pendingGlobalName: w, pendingThemeColors: D, pendingProfileEffectId: L, pendingLegacyUsernameDisabled: x, avatarClassName: M, containerClassName: k, isTryItOutFlow: j = !1, disabledInputs: U = !1, hideCustomStatus: G = !1, hideBioSection: B = !1, hideMessageInput: V = !0, hideExampleButton: F = !1, pendingBadges: Z, shouldOpenBadgeTooltip: H, showNameplatePreview: Y = !1 } = e,
+        W = (0, d.ZP)(t.id, null == n ? void 0 : n.id),
+        { avatarSrc: K, avatarDecorationSrc: z } = (0, _.Z)({
             user: t,
             guildId: null == n ? void 0 : n.id,
             avatarDecorationOverride: R,
@@ -35,26 +35,26 @@ function N(e) {
             size: s.EFr.SIZE_80,
             showPending: !0
         }),
-        z = (0, E.ZT)({
+        q = (0, E.ZT)({
             pendingProfileEffectId: L,
-            displayProfile: Y
+            displayProfile: W
         }),
-        { theme: q, primaryColor: Q } = (0, f.Z)({
+        { theme: Q, primaryColor: X } = (0, f.Z)({
             user: t,
-            displayProfile: Y,
+            displayProfile: W,
             pendingThemeColors: D,
             isPreview: i
         }),
-        X = (0, c.H)('UserProfilePreview');
+        J = (0, c.H)('UserProfilePreview');
     return (0, r.jsxs)('div', {
         className: A.column,
         children: [
             (0, r.jsxs)(p.Z, {
                 user: t,
-                displayProfile: Y,
+                displayProfile: W,
                 themeType: S.lY.POPOUT,
                 pendingThemeColors: D,
-                className: o()(A.container, M),
+                className: o()(A.container, k),
                 forceShowPremium: i,
                 children: [
                     (0, r.jsxs)('header', {
@@ -62,61 +62,62 @@ function N(e) {
                         children: [
                             (0, r.jsx)(y.Z, {
                                 user: t,
-                                displayProfile: Y,
+                                displayProfile: W,
                                 guildId: null == n ? void 0 : n.id,
                                 canUsePremiumCustomization: i,
                                 pendingBanner: l,
                                 pendingAccentColor: m,
-                                isTryItOutFlow: k,
-                                disabledInputs: j,
+                                isTryItOutFlow: j,
+                                disabledInputs: U,
                                 onUpsellClick: () => (null == a ? void 0 : a({ object: I.qAy.EDIT_PROFILE_BANNER }))
                             }),
                             (0, r.jsx)(b.Z, {
                                 user: t,
                                 guild: n,
-                                displayProfile: Y,
+                                displayProfile: W,
                                 canUsePremiumCustomization: i,
-                                previewAvatar: W,
-                                previewAvatarDecoration: K,
-                                previewTheme: q,
-                                previewPrimaryColor: Q,
-                                className: x,
-                                disabledInputs: j,
-                                isTryItOutFlow: k,
+                                previewAvatar: K,
+                                previewAvatarDecoration: z,
+                                previewTheme: Q,
+                                previewPrimaryColor: X,
+                                className: M,
+                                disabledInputs: U,
+                                isTryItOutFlow: j,
                                 onUpsellClick: () => (null == a ? void 0 : a({ object: I.qAy.AVATAR }))
                             }),
-                            !U &&
+                            !G &&
                                 (0, r.jsx)(h.Z, {
                                     location: 'UserProfilePreview',
                                     user: t,
                                     themeType: S.lY.POPOUT,
-                                    disableEdit: j
+                                    disableEdit: U
                                 })
                         ]
                     }),
                     (0, r.jsx)(O.Z, {
                         user: t,
-                        displayProfile: Y,
+                        displayProfile: W,
                         guild: n,
                         pendingAvatar: N,
                         pendingNickname: P,
                         pendingGlobalName: w,
                         pendingBio: g,
                         pendingPronouns: T,
-                        isTryItOutFlow: k,
-                        hideBioSection: G,
-                        pendingBadges: F,
-                        shouldOpenBadgeTooltip: Z
+                        pendingLegacyUsernameDisabled: x,
+                        isTryItOutFlow: j,
+                        hideBioSection: B,
+                        pendingBadges: Z,
+                        shouldOpenBadgeTooltip: H
                     }),
                     (0, r.jsx)(v.Z, {
                         user: t,
-                        hideMessageInput: B,
-                        hideExampleButton: V
+                        hideMessageInput: V,
+                        hideExampleButton: F
                     }),
-                    null != z && (0, r.jsx)(u.Z, { profileEffectId: z })
+                    null != q && (0, r.jsx)(u.Z, { profileEffectId: q })
                 ]
             }),
-            X && H && (0, r.jsx)(C, {})
+            J && Y && (0, r.jsx)(C, {})
         ]
     });
 }

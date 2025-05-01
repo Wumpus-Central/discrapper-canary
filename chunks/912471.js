@@ -21,7 +21,7 @@ let _ = 'LATEST_HEARTBEAST_EVENT_TIMESTAMP',
     I = !1;
 async function v() {
     if (I) return;
-    (I = !0), (0, g.f)(!0);
+    (I = !0), (0, g.fr)(!0);
     let e = await i.K.getAfterRefresh(_).then(m.Hg);
     if (!I) return;
     let t = Date.now(),
@@ -46,7 +46,7 @@ function C() {
 async function S() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = Date.now(),
-        n = await (0, g.G)(),
+        n = await (0, g.Gg)(),
         l = Date.now();
     if (null == n) return void f.Z.captureException(Error('Null session when tracking session heartbeat. Waited '.concat(l - t, 'ms')));
     if (!I && !e) {
@@ -60,7 +60,7 @@ async function S() {
     });
     let u = {
         client_heartbeat_initialization_timestamp: n.initialized,
-        client_heartbeat_version: 17
+        client_heartbeat_version: 18
     };
     {
         let e = h.Z.getMemoryUsageElectronRenderer();
@@ -93,7 +93,7 @@ function P() {
                 category: E,
                 message: 'Stopping Analytics Heartbeat'
             }),
-            (0, g.f)(!1),
+            (0, g.fr)(!1),
             C(),
             (0, a.Z)());
 }

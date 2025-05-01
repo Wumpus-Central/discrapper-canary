@@ -1,21 +1,23 @@
 n.d(t, {
     FD: () => h,
     I5: () => O,
-    KP: () => S,
+    KP: () => T,
     Mn: () => b,
-    OU: () => w,
-    P6: () => P,
+    OU: () => L,
+    P6: () => w,
     S2: () => E,
     V3: () => y,
     W0: () => v,
-    W3: () => R,
+    W3: () => P,
     Zy: () => m,
-    b9: () => N,
-    cV: () => I,
-    s4: () => A,
-    si: () => C,
+    b9: () => C,
+    cV: () => S,
+    e1: () => I,
+    iR: () => D,
+    s4: () => N,
+    si: () => R,
     ss: () => g,
-    xn: () => T
+    xn: () => A
 });
 var r = n(544891),
     i = n(433517),
@@ -111,7 +113,7 @@ async function E(e) {
     );
 }
 function b(e) {
-    let { username: t, discriminator: n, email: r, emailToken: o, password: s, avatar: c, avatarDescription: _, avatarId: h, avatarDecoration: m, newPassword: g, globalName: b, nameplate: y, primaryGuildId: O } = e;
+    let { username: t, discriminator: n, email: r, emailToken: o, password: s, avatar: c, avatarDescription: _, avatarId: h, avatarDecoration: m, newPassword: g, globalName: b, legacyUsername: y, nameplate: O, primaryGuildId: v } = e;
     return (
         a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT' }),
         (0, l.Z)(
@@ -127,16 +129,17 @@ function b(e) {
                         avatar_id: h,
                         discriminator: n,
                         global_name: b,
+                        legacy_username: y,
                         new_password: g
                     },
                     e
                 );
-                null === m && (a.avatar_decoration_id = null), null != m && ((a.avatar_decoration_id = m.id), (a.avatar_decoration_sku_id = m.skuId)), null === y && (a.nameplate_id = null), null != y && ((a.nameplate_id = y.id), (a.nameplate_sku_id = y.skuId)), void 0 !== O && (a.primary_guild_id = O);
+                null === m && (a.avatar_decoration_id = null), null != m && ((a.avatar_decoration_id = m.id), (a.avatar_decoration_sku_id = m.skuId)), null === O && (a.nameplate_id = null), null != O && ((a.nameplate_id = O.id), (a.nameplate_sku_id = O.skuId)), void 0 !== v && (a.primary_guild_id = v);
                 let l = i.K.get(u.JkL),
                     f = (0, d.xJ)();
                 null != f && null != l && ((a.push_provider = f), (a.push_token = l));
-                let v = i.K.get(u.scU);
-                return null != d.mv && null != v && ((a.push_voip_provider = d.mv), (a.push_voip_token = v)), E(a);
+                let I = i.K.get(u.scU);
+                return null != d.mv && null != I && ((a.push_voip_provider = d.mv), (a.push_voip_token = I)), E(a);
             },
             {
                 checkEnabled: !1,
@@ -184,40 +187,49 @@ function v(e) {
 }
 function I(e) {
     a.Z.dispatch({
+        type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_LEGACY_USERNAME_DISABLED',
+        legacyUsernameDisabled: e
+    });
+}
+function S(e) {
+    a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION',
         avatarDecoration: e
     });
 }
-function S(e) {
+function T(e) {
     a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_NAMEPLATE',
         nameplate: e
     });
 }
-function T(e) {
+function A(e) {
     a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID',
         profileEffectId: e
     });
 }
-function A(e) {
+function N(e) {
     a.Z.dispatch({
         type: 'USER_SETTINGS_SET_PENDING_PRIMARY_GUILD_ID',
         primaryGuildId: e
     });
 }
-function N() {
+function C() {
     a.Z.dispatch({ type: 'USER_SETTINGS_CLEAR_ERRORS' });
 }
-function C() {
+function R() {
     a.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES' });
 }
-function R() {
+function P() {
     a.Z.dispatch({ type: 'USER_SETTINGS_RESET_ALL_PENDING' });
 }
-function P() {
+function w() {
     a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM' });
 }
-function w() {
+function D() {
+    a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_RESET_PENDING_LEGACY_USERNAME_DISABLED' });
+}
+function L() {
     a.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES' });
 }

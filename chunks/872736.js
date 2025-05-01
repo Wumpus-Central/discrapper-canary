@@ -1,16 +1,21 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var i = n(200651);
 n(192379);
 var r = n(481060),
-    s = n(695346),
-    l = n(388032);
-function a(e) {
-    let t = s.R_.useSetting();
+    s = n(809206),
+    l = n(695346),
+    a = n(388032);
+function o(e) {
+    let { legacyUsername: t, pendingLegacyUsernameDisabled: n } = e,
+        o = l.R_.useSetting(),
+        c = void 0 !== n ? n : o;
     return (0, i.jsx)(r.j7V, {
         hideBorder: !0,
-        value: !t,
-        onChange: () => s.R_.updateSetting(!t),
-        note: t ? null : l.intl.formatToPlainString(l.t.aYhclZ, { username: e.legacyUsername }),
-        children: l.intl.string(l.t['3cWDuL'])
+        value: !c,
+        onChange: (e) => {
+            !e === o ? (0, s.iR)() : (0, s.e1)(!e);
+        },
+        note: c ? null : a.intl.formatToPlainString(a.t.aYhclZ, { username: t }),
+        children: a.intl.string(a.t['3cWDuL'])
     });
 }

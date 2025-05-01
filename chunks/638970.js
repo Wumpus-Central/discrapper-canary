@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685), n(539854);
+n.d(t, { Z: () => x }), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
     o = n(120356),
@@ -14,14 +14,15 @@ var r = n(200651),
     h = n(785717),
     m = n(369566),
     g = n(29899),
-    E = n(151545),
-    b = n(493043),
-    y = n(864141),
-    O = n(228168),
-    v = n(231338),
-    I = n(388032),
-    S = n(608459);
-function T(e, t, n) {
+    E = n(510659),
+    b = n(151545),
+    y = n(493043),
+    O = n(864141),
+    v = n(228168),
+    I = n(231338),
+    S = n(388032),
+    T = n(608459);
+function A(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -34,7 +35,7 @@ function T(e, t, n) {
         e
     );
 }
-function A(e) {
+function N(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -45,12 +46,12 @@ function A(e) {
                 })
             )),
             r.forEach(function (t) {
-                T(e, t, n[t]);
+                A(e, t, n[t]);
             });
     }
     return e;
 }
-function N(e, t) {
+function C(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -62,33 +63,33 @@ function N(e, t) {
     }
     return n;
 }
-function C(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : N(Object(t)).forEach(function (n) {
+            : C(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let R = 250,
-    P = 24;
-function w(e, t) {
+let P = 250,
+    w = 24;
+function D(e, t) {
     switch (t.type) {
         case 'MEASUREMENT_COMPLETE':
-            return C(A({}, e), {
+            return R(N({}, e), {
                 animationPhase: 'ready',
                 height: t.height
             });
         case 'START_EXPAND_ANIMATION':
-            return C(A({}, e), {
+            return R(N({}, e), {
                 animationPhase: 'animating',
                 height: t.height
             });
         case 'ANIMATION_COMPLETE':
-            return C(A({}, e), {
+            return R(N({}, e), {
                 animationPhase: 'done',
                 height: 'auto'
             });
@@ -96,172 +97,174 @@ function w(e, t) {
             return (0, p.vE)(t);
     }
 }
-let D = {
+let L = {
     animationPhase: 'awaitingInput',
     height: 'auto'
 };
-function L(e) {
-    let { user: t, currentUser: n, displayProfile: o, guildId: p, onOpenUserProfileModal: T, onClose: N } = e,
-        { analyticsLocations: C } = (0, d.ZP)(),
-        { trackUserProfileAction: L } = (0, h.KZ)(),
-        { live: x, stream: M } = (0, m.Z)(t.id),
-        { voiceChannel: k, voiceActivity: j } = (0, g.Z)({
+function x(e) {
+    let { user: t, currentUser: n, displayProfile: o, guildId: p, onOpenUserProfileModal: A, onClose: C } = e,
+        { analyticsLocations: R } = (0, d.ZP)(),
+        { trackUserProfileAction: x } = (0, h.KZ)(),
+        { live: M, stream: k } = (0, m.Z)(t.id),
+        { voiceChannel: j, voiceActivity: U } = (0, g.Z)({
             userId: t.id,
             guildId: p
         }),
-        U = t.id === n.id,
-        G = (0, s.e7)([_.Z, f.Z], () => {
-            let e = U ? _.Z.getStatus() : f.Z.getStatus(t.id, p);
-            return e === v.Sk.OFFLINE || e === v.Sk.INVISIBLE;
+        G = t.id === n.id,
+        B = (0, s.e7)([_.Z, f.Z], () => {
+            let e = G ? _.Z.getStatus() : f.Z.getStatus(t.id, p);
+            return e === I.Sk.OFFLINE || e === I.Sk.INVISIBLE;
         }),
-        { voiceActivityStatusEnabled: B } = (0, u.U)({ location: 'UserProfileStackedActivity' }),
-        V = B && null == M && null == j && null != k,
-        F = i.useRef(null),
-        Z = i.useRef(null),
-        H = i.useRef(null),
-        Y = i.useRef(),
-        [W, K] = i.useReducer(w, D),
-        { height: z, animationPhase: q } = W,
-        Q = 'awaitingInput' !== q,
-        X = 'animating' === q || 'done' === q,
-        J = [],
-        $ = {
+        { voiceActivityStatusEnabled: V } = (0, u.U)({ location: 'UserProfileStackedActivity' }),
+        F = V && null == k && null == U && null != j,
+        { interactionSource: Z } = (0, E.Xo)(),
+        H = Z === v.n_.ACTIVITY,
+        Y = i.useRef(null),
+        W = i.useRef(null),
+        K = i.useRef(null),
+        z = i.useRef(),
+        [q, Q] = i.useReducer(D, L),
+        { height: X, animationPhase: J } = q,
+        $ = 'awaitingInput' !== J,
+        ee = 'animating' === J || 'done' === J,
+        et = [],
+        en = {
             user: t,
             currentUser: n,
-            className: S.card,
-            onClose: N
+            className: T.card,
+            onClose: C
         };
-    null != M &&
-        J.push(
+    null != k &&
+        et.push(
             (0, r.jsx)(
-                b.Z,
-                A(
+                y.Z,
+                N(
                     {
                         location: 'UserProfileStackedActivity',
-                        stream: M,
+                        stream: k,
                         profileGuildId: null == o ? void 0 : o.guildId
                     },
-                    $
+                    en
                 )
             )
         ),
-        x.forEach((e) => {
-            J.push(
+        M.forEach((e) => {
+            et.push(
                 (0, r.jsx)(
-                    E.Z,
-                    A(
+                    b.Z,
+                    N(
                         {
                             activity: e,
                             profileGuildId: null == o ? void 0 : o.guildId
                         },
-                        $
+                        en
                     )
                 )
             );
         }),
-        V && J.push((0, r.jsx)(y.Z, A({ voiceChannel: k }, $)));
-    let [ee, ...et] = J,
-        en = et.length > 0,
-        er =
-            null != T && en
+        F && et.push((0, r.jsx)(O.Z, N({ voiceChannel: j }, en)));
+    let [er, ...ei] = et,
+        eo = ei.length > 0,
+        ea =
+            null != A && eo
                 ? (0, r.jsx)(l.zxk, {
                       look: l.zxk.Looks.BLANK,
                       size: l.zxk.Sizes.NONE,
                       color: l.zxk.Colors.TRANSPARENT,
-                      className: a()(S.viewAllButton, X && S.isShown),
+                      className: a()(T.viewAllButton, ee && T.isShown),
                       onClick: () => {
-                          L({
+                          x({
                               action: 'PRESS_VIEW_PROFILE',
-                              analyticsLocations: C
+                              analyticsLocations: R
                           }),
-                              T({ section: O.oh.ACTIVITY });
+                              A({ section: v.oh.ACTIVITY });
                       },
                       children: (0, r.jsx)(l.Text, {
                           variant: 'text-xs/medium',
                           color: 'header-primary',
-                          children: I.intl.string(I.t.pD1L1t)
+                          children: S.intl.string(S.t.pD1L1t)
                       })
                   })
                 : null,
-        ei = i.useCallback(() => {
-            if (null == F.current || null == H.current) return;
-            L({
+        es = i.useCallback(() => {
+            if (null == Y.current || null == K.current) return;
+            x({
                 action: 'PRESS_SHOW_MORE_ACTIVITY',
-                analyticsLocations: C
+                analyticsLocations: R
             });
-            let e = F.current.getBoundingClientRect().height,
-                t = H.current.getBoundingClientRect().height;
-            K({
+            let e = Y.current.getBoundingClientRect().height,
+                t = K.current.getBoundingClientRect().height;
+            Q({
                 type: 'MEASUREMENT_COMPLETE',
                 height: e
             }),
                 requestAnimationFrame(() => {
-                    K({
+                    Q({
                         type: 'START_EXPAND_ANIMATION',
-                        height: e + t - P
+                        height: e + t - w
                     }),
-                        (Y.current = setTimeout(() => {
+                        (z.current = setTimeout(() => {
                             var e;
-                            K({
+                            Q({
                                 type: 'ANIMATION_COMPLETE',
                                 height: 'auto'
                             }),
-                                null == (e = Z.current) || e.focus();
-                        }, R));
+                                null == (e = W.current) || e.focus();
+                        }, P));
                 });
-        }, [C, L]);
+        }, [R, x]);
     if (
         ((0, c.zq)(() => {
-            null != Y.current && window.clearTimeout(Y.current);
+            null != z.current && window.clearTimeout(z.current);
         }),
-        G || 0 === J.length)
+        B || 0 === et.length)
     )
         return null;
-    let eo = 'en-US' === I.intl.currentLocale || 'en-GB' === I.intl.currentLocale,
-        ea = I.intl.string(eo ? I.t.J6STd3 : I.t.IC5Anp);
+    let el = 'en-US' === S.intl.currentLocale || 'en-GB' === S.intl.currentLocale,
+        ec = S.intl.string(el ? S.t.J6STd3 : S.t.IC5Anp);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                ref: F,
-                className: S.activityContainer,
-                style: { height: 'auto' !== z ? ''.concat(z, 'px') : z },
+                ref: Y,
+                className: T.activityContainer,
+                style: { height: 'auto' !== X ? ''.concat(X, 'px') : X },
                 children: [
                     (0, r.jsxs)('ul', {
-                        ref: Z,
-                        className: S.cardsList,
-                        'aria-label': ea,
+                        ref: W,
+                        className: T.cardsList,
+                        'aria-label': ec,
                         tabIndex: -1,
                         children: [
                             (0, r.jsxs)('li', {
-                                className: a()(S.firstCardContainer, !X && et.length > 0 && S.hasShowMoreButton),
+                                className: a()(T.firstCardContainer, !ee && ei.length > 0 && T.hasShowMoreButton, H && T.isInteracting),
                                 children: [
-                                    ee,
-                                    en &&
-                                        'done' !== q &&
+                                    er,
+                                    eo &&
+                                        'done' !== J &&
                                         (0, r.jsx)('div', {
-                                            className: S.showMoreButtonContainer,
+                                            className: T.showMoreButtonContainer,
                                             children: (0, r.jsx)(l.zxk, {
                                                 look: l.zxk.Looks.BLANK,
                                                 size: l.zxk.Sizes.NONE,
                                                 color: l.zxk.Colors.TRANSPARENT,
-                                                className: a()(S.showMoreButton, X && S.isHidden),
-                                                onClick: ei,
+                                                className: a()(T.showMoreButton, ee && T.isHidden),
+                                                onClick: es,
                                                 children: (0, r.jsx)(l.Text, {
                                                     variant: 'text-xs/medium',
                                                     color: 'header-primary',
-                                                    children: '+ '.concat(I.intl.format(I.t.O6PLYW, { activitiesCount: et.length }))
+                                                    children: '+ '.concat(S.intl.format(S.t.O6PLYW, { activitiesCount: ei.length }))
                                                 })
                                             })
                                         })
                                 ]
                             }),
-                            en &&
-                                Q &&
-                                et.map((e, t) =>
+                            eo &&
+                                $ &&
+                                ei.map((e, t) =>
                                     (0, r.jsx)(
                                         'li',
                                         {
-                                            className: a()(S.remainingCardContainer, X && S.isShown),
+                                            className: a()(T.remainingCardContainer, ee && T.isShown),
                                             children: e
                                         },
                                         'activity-'.concat(t)
@@ -269,14 +272,14 @@ function L(e) {
                                 )
                         ]
                     }),
-                    en && Q && er
+                    eo && $ && ea
                 ]
             }),
-            en &&
+            eo &&
                 (0, r.jsxs)('div', {
-                    ref: H,
-                    className: a()(S.cardsList, S.remainingCardsCopyToMeasure),
-                    children: [et, er]
+                    ref: K,
+                    className: a()(T.cardsList, T.remainingCardsCopyToMeasure),
+                    children: [ei, ea]
                 })
         ]
     });

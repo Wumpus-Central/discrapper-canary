@@ -13,25 +13,25 @@ let u = {
     [c.lY.SIDEBAR]: 13
 };
 function d(e) {
-    let { displayProfile: t, themeType: n, onClose: c, pendingBadges: d, shouldOpenBadgeTooltip: f } = e,
-        _ = (0, a.Z)(t),
-        p = i.useMemo(() => {
-            if (null == d) return (0, s.w)(_);
-            let e = new Set(_.map((e) => e.id)),
-                t = [..._, ...d.filter((t) => !e.has(t.id))];
+    let { displayProfile: t, themeType: n, pendingLegacyUsernameDisabled: c, pendingBadges: d, onClose: f, shouldOpenBadgeTooltip: _ } = e,
+        p = (0, a.Z)(t, c),
+        h = i.useMemo(() => {
+            if (null == d) return (0, s.w)(p);
+            let e = new Set(p.map((e) => e.id)),
+                t = [...p, ...d.filter((t) => !e.has(t.id))];
             return (0, s.w)(t);
-        }, [_, d]);
-    return 0 === p.length
+        }, [p, d]);
+    return 0 === h.length
         ? null
         : (0, r.jsx)(r.Fragment, {
-              children: (0, o.chunk)(p, u[n]).map((e) =>
+              children: (0, o.chunk)(h, u[n]).map((e) =>
                   (0, r.jsx)(
                       l.Z,
                       {
                           badges: e,
                           displayProfile: t,
-                          onClose: c,
-                          shouldOpenBadgeTooltip: f
+                          onClose: f,
+                          shouldOpenBadgeTooltip: _
                       },
                       e[0].id
                   )
