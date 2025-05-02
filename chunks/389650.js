@@ -61,7 +61,7 @@ function L(e) {
     }
     return e;
 }
-function M(e, t) {
+function B(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -79,7 +79,7 @@ function M(e, t) {
         e
     );
 }
-function B(e) {
+function M(e) {
     let { children: t } = e;
     return t([f.Q2.MESSAGE, f.Q2.NAVIGATION, f.Q2.DND, f.Q2.CHAT, f.Q2.VOICE_AND_VIDEO, f.Q2.MISCELLANEOUS]);
 }
@@ -162,7 +162,7 @@ class G extends r.PureComponent {
                                     children: (e) =>
                                         (0, i.jsx)(
                                             'div',
-                                            M(L({}, e), {
+                                            B(L({}, e), {
                                                 children: (0, i.jsx)(u.rsf, {
                                                     checked: t,
                                                     onChange: this.handleEnableDisable
@@ -186,17 +186,17 @@ class G extends r.PureComponent {
     constructor(...e) {
         super(...e),
             k(this, 'handleActionChanged', (e) => {
-                m.Z.setKeybind(M(L({}, this.props.keybind), { action: e }));
+                m.Z.setKeybind(B(L({}, this.props.keybind), { action: e }));
             }),
             k(this, 'handleShortcutChange', (e) => {
-                m.Z.setKeybind(M(L({}, this.props.keybind), { shortcut: e }));
+                m.Z.setKeybind(B(L({}, this.props.keybind), { shortcut: e }));
             }),
             k(this, 'handleDeleteKeybind', () => {
                 m.Z.deleteKeybind(this.props.keybind.id);
             }),
             k(this, 'handleEnableDisable', () => {
                 let { keybind: e } = this.props;
-                m.Z.setKeybind(M(L({}, this.props.keybind), { enabled: !e.enabled }));
+                m.Z.setKeybind(B(L({}, this.props.keybind), { enabled: !e.enabled }));
             });
     }
 }
@@ -423,7 +423,7 @@ class F extends r.PureComponent {
                             ]
                         }),
                         (0, i.jsx)(u.$i$, {}),
-                        (0, i.jsx)(B, {
+                        (0, i.jsx)(M, {
                             children: (e) =>
                                 (0, i.jsx)(i.Fragment, {
                                     children: e.map((e, t) => {

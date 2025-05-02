@@ -33,11 +33,11 @@ var r = n(512722),
     D = n(596677);
 function Z() {
     var e, t, n, r, Z, w, k, L;
-    let M = (0, l.e7)([A.default], () => {
+    let B = (0, l.e7)([A.default], () => {
             let e = A.default.getCurrentUser();
             return s()(null != e, 'DefaultCustomizationSections: user cannot be undefined'), e;
         }),
-        B = (0, l.e7)([I.Z], () => I.Z.getUserProfile(M.id)),
+        M = (0, l.e7)([I.Z], () => I.Z.getUserProfile(B.id)),
         {
             pendingAvatar: U,
             pendingGlobalName: V,
@@ -96,13 +96,13 @@ function Z() {
             );
         }),
         X = (0, v.SD)({
-            userId: M.id,
+            userId: B.id,
             image: U
         }),
         Q = (0, c.gS)(),
-        J = P.ZP.canUsePremiumProfileCustomization(M),
-        $ = (0, p.gd)(U, M.avatar),
-        ee = (0, p.f$)(G, null == B ? void 0 : B.banner),
+        J = P.ZP.canUsePremiumProfileCustomization(B),
+        $ = (0, p.gd)(U, B.avatar),
+        ee = (0, p.f$)(G, null == M ? void 0 : M.banner),
         et = 'DefaultCustomizationSections';
     (0, o.j)({
         location: et + ' auto on',
@@ -112,7 +112,7 @@ function Z() {
             location: et + ' auto off',
             autoTrackExposure: !1
         });
-    let en = (0, N.ZP)(M.id),
+    let en = (0, N.ZP)(B.id),
         ei = null == en ? void 0 : en.getLegacyUsername(),
         er = (null != (n = null == (e = q.global_name) ? void 0 : e.length) ? n : 0) > 0 ? q.global_name : null != (r = null == Q ? void 0 : Q.nick) ? r : [],
         es = (null != (Z = null == (t = q.bio) ? void 0 : t.length) ? Z : 0) > 0 ? q.bio : null != (w = null == Q ? void 0 : Q.bio) ? w : [],
@@ -122,9 +122,9 @@ function Z() {
         className: D.sectionsContainer,
         children: [
             (0, i.jsx)(b.Z, {
-                placeholder: M.username,
+                placeholder: B.username,
                 errors: er,
-                currentGlobalName: M.globalName,
+                currentGlobalName: B.globalName,
                 pendingGlobalName: V,
                 onGlobalNameChange: a.W0
             }),
@@ -135,7 +135,7 @@ function Z() {
                     errors: q.pronouns,
                     onPronounsChange: T.ID,
                     pendingPronouns: H,
-                    currentPronouns: null != (k = null == B ? void 0 : B.pronouns) ? k : ''
+                    currentPronouns: null != (k = null == M ? void 0 : M.pronouns) ? k : ''
                 },
                 'pronouns'
             ),
@@ -153,16 +153,16 @@ function Z() {
             (0, i.jsx)(
                 h.Z,
                 {
-                    user: M,
+                    user: B,
                     sectionTitle: R.intl.string(R.t['7v0T9P'])
                 },
                 'decoration'
             ),
-            ea && (0, i.jsx)(x.Z, { user: M }),
+            ea && (0, i.jsx)(x.Z, { user: B }),
             (0, i.jsx)(
                 C.Z,
                 {
-                    user: M,
+                    user: B,
                     sectionTitle: R.intl.string(R.t.wR5wOj)
                 },
                 'effect'
@@ -181,7 +181,7 @@ function Z() {
                               'banner'
                           ),
                           (0, i.jsx)(O.Z, {
-                              user: M,
+                              user: B,
                               pendingAvatarSrc: X,
                               pendingColors: W,
                               onThemeColorsChange: T.z5,
@@ -192,8 +192,8 @@ function Z() {
                 : (0, i.jsx)(
                       j.Z,
                       {
-                          user: M,
-                          savedUserColor: null == B ? void 0 : B.accentColor,
+                          user: B,
+                          savedUserColor: null == M ? void 0 : M.accentColor,
                           pendingColor: z,
                           setPendingAccentColor: T.CM
                       },
@@ -204,9 +204,9 @@ function Z() {
                 {
                     sectionTitle: R.intl.string(R.t.NepzEx),
                     errors: es,
-                    onBioChange: (e) => (0, p.xQ)(e, null == B ? void 0 : B.bio),
+                    onBioChange: (e) => (0, p.xQ)(e, null == M ? void 0 : M.bio),
                     pendingBio: F,
-                    currentBio: null != (L = null == B ? void 0 : B.bio) ? L : ''
+                    currentBio: null != (L = null == M ? void 0 : M.bio) ? L : ''
                 },
                 'bio'
             ),

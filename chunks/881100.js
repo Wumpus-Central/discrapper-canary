@@ -34,8 +34,8 @@ var i = n(399606),
     w = n(472656),
     k = n(912429),
     L = n(772969),
-    M = n(926262);
-let B = (e, t, n) => ((0, r.wj)(e) ? t : n),
+    B = n(926262);
+let M = (e, t, n) => ((0, r.wj)(e) ? t : n),
     U = (e) => {
         let { styles: t } = e,
             n = (0, l.ZP)(),
@@ -54,7 +54,7 @@ let B = (e, t, n) => ((0, r.wj)(e) ? t : n),
             badgeAlt: {
                 title: p.intl.string(p.t['5cYMu7']),
                 description: p.intl.string(p.t.vxk9vb),
-                imageSource: B(n, g, h),
+                imageSource: M(n, g, h),
                 imageClassName: t.badgeNewImage
             },
             clientThemes: {
@@ -93,50 +93,50 @@ let B = (e, t, n) => ((0, r.wj)(e) ? t : n),
             longerMessages: {
                 title: p.intl.string(p.t.BUSciY),
                 description: p.intl.string(p.t.vN6Xpa),
-                imageSource: B(n, D, Z),
+                imageSource: M(n, D, Z),
                 imageClassName: t.longerMessagesImage
             },
             moreGuilds: {
                 title: p.intl.string(p.t.Bv8Pfn),
                 description: p.intl.string(p.t.JMfaTU),
-                imageSource: B(n, b, w),
+                imageSource: M(n, b, w),
                 imageClassName: t.moreGuildsImage
             },
             moreGuildsAlt: {
                 title: p.intl.string(p.t.Bv8Pfn),
                 description: p.intl.string(p.t.JMfaTU),
-                imageSource: B(n, j, C),
+                imageSource: M(n, j, C),
                 imageClassName: t.moreGuildsAltImage
             },
             remix: {
                 title: p.intl.string(p.t.ZvulDg),
                 description: p.intl.string(p.t['8GwCPT']),
-                imageSource: B(n, x, E),
+                imageSource: M(n, x, E),
                 imageClassName: t.remixingImage,
                 isEarlyAccess: !0
             },
             soundboard: {
                 title: p.intl.string(p.t['lGcW+f']),
                 description: p.intl.string(p.t['/fDyOz']),
-                imageSource: B(n, O, S),
+                imageSource: M(n, O, S),
                 imageClassName: t.soundboardImage
             },
             stickers: {
                 title: p.intl.string(p.t['1c+xwc']),
                 description: p.intl.string(p.t.hJG8ZG),
-                imageSource: B(n, v, k),
+                imageSource: M(n, v, k),
                 imageClassName: t.stickersImage
             },
             stickersBurst: {
                 title: p.intl.string(p.t.tzdIwM),
                 description: p.intl.string(p.t.hJG8ZG),
-                imageSource: B(n, v, k),
+                imageSource: M(n, v, k),
                 imageClassName: t.stickersImage
             },
             stickersPerkDiscoverability: {
                 title: p.intl.string(p.t.tzdIwM),
                 description: p.intl.string(p.t.FXlU29),
-                imageSource: B(n, v, k),
+                imageSource: M(n, v, k),
                 imageClassName: t.stickersImage
             },
             streaming: {
@@ -148,19 +148,19 @@ let B = (e, t, n) => ((0, r.wj)(e) ? t : n),
             superReactions: {
                 title: p.intl.string(p.t.uZt5q6),
                 description: p.intl.string(p.t.ZK3Zoa),
-                imageSource: B(n, T, I),
+                imageSource: M(n, T, I),
                 imageClassName: t.superReactionsImage
             },
             upload: {
                 title: p.intl.formatToPlainString(p.t.jqhAdH, { premiumMaxSize: U }),
                 description: p.intl.formatToPlainString(p.t['HI+cfn'], { premiumMaxSize: U }),
-                imageSource: M,
+                imageSource: B,
                 imageClassName: t.uploadImage
             },
             videoBackground: {
                 title: p.intl.string(p.t.NaGpTU),
                 description: p.intl.string(p.t['A8O/Q0']),
-                imageSource: B(n, N, y),
+                imageSource: M(n, N, y),
                 imageClassName: t.videoBackgroundImage
             }
         };

@@ -9,8 +9,8 @@ var i = n(200651),
     u = n(944486),
     d = n(594174),
     p = n(5192),
-    h = n(620954),
-    f = n(987650),
+    f = n(620954),
+    h = n(987650),
     m = n(388032),
     g = n(484762);
 function y(e, t, n) {
@@ -19,10 +19,10 @@ function y(e, t, n) {
     if (null == O) return null;
     let v = u.Z.getCurrentlySelectedChannelId(),
         b = c.Z.getChannel(v),
-        _ = l.Z.getApplication(t),
-        E = a.ZP.getRunningGames().find((e) => e.id === t),
-        x = null != (y = null == E ? void 0 : E.name) ? y : null == _ ? void 0 : _.name,
-        I = (0, p.oY)(null == b ? void 0 : b.guild_id, null == b ? void 0 : b.id, O),
+        E = l.Z.getApplication(t),
+        _ = a.ZP.getRunningGames().find((e) => e.id === t),
+        I = null != (y = null == _ ? void 0 : _.name) ? y : null == E ? void 0 : E.name,
+        x = (0, p.oY)(null == b ? void 0 : b.guild_id, null == b ? void 0 : b.id, O),
         j = (0, i.jsxs)('div', {
             className: g.nowPlayingNotification,
             children: [
@@ -41,13 +41,13 @@ function y(e, t, n) {
                         color: 'interactive-normal',
                         className: g.bodyText,
                         children: m.intl.format(m.t['q7/rgo'], {
-                            username: null != I ? I : O.username,
-                            gameName: x,
+                            username: null != x ? x : O.username,
+                            gameName: I,
                             gameIcon: () =>
-                                null != _ || null != E
+                                null != E || null != _
                                     ? (0, i.jsx)(s.Z, {
-                                          game: _,
-                                          pid: null == E ? void 0 : E.pid,
+                                          game: E,
+                                          pid: null == _ ? void 0 : _.pid,
                                           size: s.Z.Sizes.XSMALL,
                                           className: g.gameIcon
                                       })
@@ -57,11 +57,11 @@ function y(e, t, n) {
                 })
             ]
         }),
-        { trackView: C, trackClick: S } = (0, h.R)(f.n0.NowPlayingNotification, {
-            notif_type: f.n0.NowPlayingNotification,
+        { trackView: S, trackClick: C } = (0, f.R)(h.n0.NowPlayingNotification, {
+            notif_type: h.n0.NowPlayingNotification,
             notif_user_id: O.id,
             activity_type: n.type,
-            activity_name: null != x ? x : n.name
+            activity_name: null != I ? I : n.name
         });
     return {
         body: j,
@@ -71,10 +71,10 @@ function y(e, t, n) {
         maxBodyLines: 1,
         disableClickableRegions: !0,
         onNotificationShow: () => {
-            C();
+            S();
         },
         onDismissClick: () => {
-            S('dismiss');
+            C('dismiss');
         }
     };
 }

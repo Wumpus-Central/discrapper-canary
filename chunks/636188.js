@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685), n(642613);
+n.d(t, { Z: () => B }), n(388685), n(642613);
 var i = n(200651),
     r = n(192379),
     s = n(120356),
@@ -344,7 +344,7 @@ function L(e) {
         tooltipText: l
     });
 }
-function M(e) {
+function B(e) {
     let { canUseCustomBackgrounds: t, customBackgroundOptions: n, selectedOption: s, onSelectOption: l, onUpsellClick: a, onAddBackgroundImage: c, smallerOptions: d } = e,
         u = r.useMemo(() => n.sort((e, t) => (null == e.last_used || null == t.last_used ? x.default.compare(t.id, e.id) : new Date(t.last_used).getTime() - new Date(e.last_used).getTime())), [n]),
         g = u.length >= 25,

@@ -40,7 +40,7 @@ var i = n(200651),
     w = n(362786),
     k = n(388032),
     L = n(772526);
-function M(e) {
+function B(e) {
     let t,
         { subscription: n, renewalInvoicePreview: r, fractionalPremiumInfo: s, fromStandaloneBillingPage: a = !0, className: c } = e,
         d = (0, u.e7)([O.default], () => {
@@ -103,7 +103,7 @@ function M(e) {
         ]
     });
 }
-function B() {
+function M() {
     return (
         r.useEffect(() => {
             S.default.track(Z.rMx.TOOLTIP_VIEWED, { type: 'subscription_settings_missing_payment_method' });
@@ -274,7 +274,7 @@ function H(e) {
                               busy: s,
                               analyticsLocation: n
                           }),
-                          (0, i.jsx)(M, {
+                          (0, i.jsx)(B, {
                               subscription: t,
                               renewalInvoicePreview: b,
                               fromStandaloneBillingPage: a,
@@ -402,7 +402,7 @@ function Y(e) {
                       children: k.intl.string(k.t['/gs+Pz'])
                   }),
                   children: [
-                      T ? (0, i.jsx)(B, {}) : null,
+                      T ? (0, i.jsx)(M, {}) : null,
                       I ? (0, i.jsx)(U, {}) : null,
                       P && null != w
                           ? (0, i.jsx)(V, {

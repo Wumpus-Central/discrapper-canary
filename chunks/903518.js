@@ -1,25 +1,25 @@
-t.d(n, { Y: () => a });
-var l = t(700785),
-    r = t(981631);
-function a(e, n) {
+n.d(t, { Y: () => r });
+var l = n(700785),
+    i = n(981631);
+function r(e, t) {
     return (
         !!(
-            e.isOwner(n) ||
+            e.isOwner(t) ||
             l.BT({
-                permission: r.Plq.ADMINISTRATOR,
+                permission: i.Plq.ADMINISTRATOR,
                 context: e,
-                user: n
+                user: t
             })
         ) ||
         (l.BT({
-            permission: r.Plq.MANAGE_GUILD,
+            permission: i.Plq.MANAGE_GUILD,
             context: e,
-            user: n
+            user: t
         }) &&
             l.BT({
-                permission: r.Plq.MANAGE_ROLES,
+                permission: i.Plq.MANAGE_ROLES,
                 context: e,
-                user: n
+                user: t
             }))
     );
 }

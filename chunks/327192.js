@@ -34,8 +34,8 @@ var i = n(200651),
     w = n(205266),
     k = n(216153),
     L = n(981631),
-    M = n(856651),
-    B = n(921944),
+    B = n(856651),
+    M = n(921944),
     U = n(388032),
     V = n(741138),
     G = n(20493);
@@ -145,7 +145,7 @@ function z(e) {
         [T, I] = r.useState(o.metadataVisibility),
         [N, y] = r.useState(o.showActivity),
         [A, R] = r.useState(null),
-        [B, G] = r.useState(null),
+        [M, G] = r.useState(null),
         [z, W] = r.useState(!1),
         [Y, K] = r.useState([]),
         q = (0, x.rR)(o.type),
@@ -155,7 +155,7 @@ function z(e) {
     }, [o]);
     let Q = {
             inProgressVisibility: A,
-            inProgressMetadataVisibility: B
+            inProgressMetadataVisibility: M
         },
         J = r.useRef(Q);
     r.useEffect(() => {
@@ -202,7 +202,7 @@ function z(e) {
                 var t;
                 let n = _.Z.get(e.type),
                     r = _.Z.get(q),
-                    s = '1' === (null != (t = e.metadata) ? t : {})[M.PC.TWITTER_VERIFIED],
+                    s = '1' === (null != (t = e.metadata) ? t : {})[B.PC.TWITTER_VERIFIED],
                     l = null;
                 return (
                     n.type === L.ABu.TWITTER &&
@@ -309,7 +309,7 @@ function z(e) {
                 var t;
                 let n = null != (t = e.metadata) ? t : {},
                     r = null,
-                    s = (0, E.FI)(n[M.PC.CREATED_AT], g);
+                    s = (0, E.FI)(n[B.PC.CREATED_AT], g);
                 switch (e.type) {
                     case L.ABu.REDDIT:
                         r = (0, C.oP)(n, V.metadataItem);
@@ -527,7 +527,7 @@ function W() {
     return (
         r.useEffect(
             () => () => {
-                (0, O.EW)(o.z.NEW_CRUNCHYROLL_CONNECTION, { dismissAction: B.L.AUTO });
+                (0, O.EW)(o.z.NEW_CRUNCHYROLL_CONNECTION, { dismissAction: M.L.AUTO });
             },
             []
         ),

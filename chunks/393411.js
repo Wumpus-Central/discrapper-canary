@@ -63,7 +63,7 @@ function L(e) {
     }
     return e;
 }
-function M(e, t) {
+function B(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -81,7 +81,7 @@ function M(e, t) {
         e
     );
 }
-let B = new g.Z('SubscriptionHeader.tsx'),
+let M = new g.Z('SubscriptionHeader.tsx'),
     U = {
         page: Z.ZY5.USER_SETTINGS,
         section: Z.jXE.SETTINGS_PREMIUM,
@@ -230,7 +230,7 @@ let W = function (e) {
                 return (n) =>
                     (0, i.jsx)(
                         t,
-                        M(L({}, n), {
+                        B(L({}, n), {
                             premiumSubscription: r,
                             analyticsLocation: z,
                             analyticsLocations: Y,
@@ -242,7 +242,7 @@ let W = function (e) {
         ea = () => {
             if (null != r && null != r.premiumPlanIdFromItems) {
                 let e = _.Z.get(r.premiumPlanIdFromItems);
-                if (null == e) return void B.info('Plan not fetched for plan id: '.concat(r.premiumPlanIdFromItems));
+                if (null == e) return void M.info('Plan not fetched for plan id: '.concat(r.premiumPlanIdFromItems));
                 let t = (0, O.DE)(e, null == g ? void 0 : g.id, !1),
                     n = t.length > 0 ? t[0] : r.currency,
                     i = !1;
@@ -385,7 +385,7 @@ let W = function (e) {
                             children: (t) =>
                                 (0, i.jsx)(
                                     A.Z,
-                                    M(L({}, t), {
+                                    B(L({}, t), {
                                         disabled: e,
                                         className: k.toolsButton,
                                         onClick: () => {

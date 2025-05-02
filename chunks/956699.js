@@ -34,8 +34,8 @@ var i = n(200651),
     w = n(808506),
     k = n(709054),
     L = n(998502),
-    M = n(210887),
-    B = n(695346),
+    B = n(210887),
+    M = n(695346),
     U = n(601948),
     V = n(726985),
     G = n(981631),
@@ -208,7 +208,7 @@ class et extends r.Component {
     }
     renderEmpty() {
         return (0, i.jsxs)(p.ubH, {
-            theme: M.Z.theme,
+            theme: B.Z.theme,
             className: l()(W.marginTop40, W.marginBottom20),
             children: [
                 (0, i.jsx)(p.oxh, {
@@ -1027,7 +1027,7 @@ let el = d.ZP.connectStores([D.default], () => ({
     preventPopoutClose: D.default.preventPopoutClose
 }))((e) => {
     let { isTracingRequests: t, isForcedCanary: n, isLoggingGatewayEvents: r, isLoggingOverlayEvents: s, isLoggingAnalyticsEvents: l, isAxeEnabled: a, cssDebuggingEnabled: o, layoutDebuggingEnabled: c, isSourceMapsEnabled: d, isAnalyticsDebuggerEnabled: u, isIdleStatusIndicatorEnabled: m, onlyShowPreviewAppCollections: g, disableAppCollectionsCache: h, preventPopoutClose: b } = e,
-        _ = B.zY.useSetting();
+        _ = M.zY.useSetting();
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(R.F, {
@@ -1086,7 +1086,7 @@ let el = d.ZP.connectStores([D.default], () => ({
                             children: (0, i.jsx)(p.j7V, {
                                 value: _,
                                 note: 'Make user targetable for all active ads',
-                                onChange: (e) => B.zY.updateSetting(e),
+                                onChange: (e) => M.zY.updateSetting(e),
                                 children: 'Ads auto-targeting'
                             })
                         }),
@@ -1250,7 +1250,7 @@ function eo() {
                             (0, i.jsx)(p.zxk, {
                                 onClick: () => {
                                     let e = new Date('2018-01-01');
-                                    B.l4.updateSetting(k.default.fromTimestamp(e.getTime())), u.K.set('lastChangeLogDate', e);
+                                    M.l4.updateSetting(k.default.fromTimestamp(e.getTime())), u.K.set('lastChangeLogDate', e);
                                 },
                                 children: 'Reset Changelog'
                             })

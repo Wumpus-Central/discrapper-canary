@@ -34,8 +34,8 @@ var i = n(200651),
     w = n(418632),
     k = n(10298),
     L = n(526156),
-    M = n(730820),
-    B = n(888256),
+    B = n(730820),
+    M = n(888256),
     U = n(2719),
     V = n(194530),
     G = n(726985),
@@ -224,7 +224,7 @@ class X extends r.PureComponent {
                         children: [
                             (0, i.jsx)(b.Z.Child, {
                                 wrap: !0,
-                                children: (0, i.jsx)(M.Z, { backupCodes: e })
+                                children: (0, i.jsx)(B.Z, { backupCodes: e })
                             }),
                             t.mfaEnabled
                                 ? null
@@ -299,7 +299,7 @@ class X extends r.PureComponent {
     }
     renderAccountRemovalSettings() {
         let { currentUser: e } = this.props;
-        return (0, i.jsx)(B.Z, {
+        return (0, i.jsx)(M.Z, {
             className: Y.marginTop40,
             currentUser: e,
             handleDisableAccount: () => this.handleDisableAccount(!1),

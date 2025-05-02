@@ -164,7 +164,7 @@ let N = (e) => {
             { analyticsLocations: w } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
             k = r.useRef(null),
             L = (R.sent / _.Q) * 100,
-            M = (0, i.jsxs)('div', {
+            B = (0, i.jsxs)('div', {
                 className: S.referralInfoContent,
                 children: [
                     (0, i.jsx)(E.ZP, {
@@ -232,15 +232,15 @@ let N = (e) => {
                     })
                 ]
             }),
-            B = R.redeemed === _.Q;
+            M = R.redeemed === _.Q;
         return (0, i.jsx)(d.Gt, {
             value: w,
             children: (0, i.jsx)('div', {
                 className: l()({
-                    [S.containerWithGlowWithoutBanner]: B,
-                    [S.containerWithoutGlow]: !B,
+                    [S.containerWithGlowWithoutBanner]: M,
+                    [S.containerWithoutGlow]: !M,
                     [S.containerWithMargins]: !t,
-                    [S.containerWithGlowOnSettingsPage]: B && t
+                    [S.containerWithGlowOnSettingsPage]: M && t
                 }),
                 children: (0, i.jsx)('div', {
                     ref: k,
@@ -249,9 +249,9 @@ let N = (e) => {
                         [S.expandedProgressBarContainerSettingsPage]: t,
                         [S.expandedProgressBarContainerVariant1]: !P && !t,
                         [S.expandedProgressBarContainerVariant2]: P && !t,
-                        [S.allReferralsSentBorder]: B
+                        [S.allReferralsSentBorder]: M
                     }),
-                    children: M
+                    children: B
                 })
             })
         });

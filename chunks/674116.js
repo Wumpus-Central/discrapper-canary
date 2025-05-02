@@ -34,8 +34,8 @@ var i = n(200651),
     w = n(726985),
     k = n(981631),
     L = n(65154),
-    M = n(388032),
-    B = n(20493);
+    B = n(388032),
+    M = n(20493);
 let U = ''.concat(m.Z.getArticleURL(k.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
 function V() {
     let { inputMode: e } = (0, s.cj)([d.Z], () => ({ inputMode: d.Z.getMode() })),
@@ -49,7 +49,7 @@ function V() {
     let k = (0, g.Z)();
     return (0, i.jsxs)(l.hjN, {
         tag: l.RB0.H1,
-        title: M.intl.string(M.t.NiTd0d),
+        title: B.intl.string(B.t.NiTd0d),
         children: [
             (0, i.jsxs)(c.F, {
                 setting: w.s6.VOICE_AND_VIDEO_VOICE,
@@ -67,11 +67,11 @@ function V() {
                         children: [
                             (0, i.jsx)(C.Z, {}),
                             (0, i.jsx)(l.R94, {
-                                className: B.marginBottom20,
+                                className: M.marginBottom20,
                                 type: l.R94.Types.DESCRIPTION,
-                                children: M.intl.format(M.t['V+B3FB'], { guideURL: U })
+                                children: B.intl.format(B.t['V+B3FB'], { guideURL: U })
                             }),
-                            (0, i.jsx)(l.$i$, { className: B.marginBottom20 })
+                            (0, i.jsx)(l.$i$, { className: M.marginBottom20 })
                         ]
                     }),
                     (0, i.jsx)(c.F, {
@@ -82,7 +82,7 @@ function V() {
                         setting: w.s6.VOICE_AND_VIDEO_SENSITIVITY,
                         children: e === L.pM.VOICE_ACTIVITY && (0, i.jsx)(R.Z, {})
                     }),
-                    (0, i.jsx)(l.$i$, { className: B.marginBottom40 })
+                    (0, i.jsx)(l.$i$, { className: M.marginBottom40 })
                 ]
             }),
             (0, i.jsx)(c.F, {
@@ -111,8 +111,8 @@ function V() {
                 children: (0, i.jsxs)(l.y5t, {
                     component: (0, i.jsx)(l.vwX, {
                         tag: l.RB0.H1,
-                        className: B.marginBottom20,
-                        children: M.intl.string(M.t['8/udY2'])
+                        className: M.marginBottom20,
+                        children: B.intl.string(B.t['8/udY2'])
                     }),
                     children: [
                         (0, i.jsx)(f.Z, {}),
@@ -129,7 +129,7 @@ function V() {
                         (0, i.jsx)(S.Z, {}),
                         (0, i.jsx)(T.Z, {}),
                         (0, i.jsx)(N.Z, { refreshStyles: !0 }),
-                        (0, i.jsx)(l.$i$, { className: B.marginBottom40 }),
+                        (0, i.jsx)(l.$i$, { className: M.marginBottom40 }),
                         (0, i.jsx)(c.F, {
                             setting: w.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
                             children: (0, i.jsx)(x.Z, {})
@@ -141,10 +141,10 @@ function V() {
                                     look: l.zxk.Looks.OUTLINED,
                                     color: l.zxk.Colors.RED,
                                     onClick: () => {
-                                        (0, p.Z)(M.intl.string(M.t['/RXu6+']), M.intl.string(M.t.sQ42iY), a.Z.reset);
+                                        (0, p.Z)(B.intl.string(B.t['/RXu6+']), B.intl.string(B.t.sQ42iY), a.Z.reset);
                                     },
                                     size: l.zxk.Sizes.SMALL,
-                                    children: M.intl.string(M.t['/RXu6+'])
+                                    children: B.intl.string(B.t['/RXu6+'])
                                 })
                             })
                         })

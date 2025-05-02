@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => x }), n(388685);
 var i = n(200651),
     r = n(192379),
     s = n(120356),
@@ -15,17 +15,19 @@ var i = n(200651),
     f = n(388032),
     b = n(493456);
 function _(e) {
-    let { openModal: t, hasCustomStatus: n, className: r } = e,
-        s = (e) => {
+    let { openModal: t, hasCustomStatus: n, className: r, onFocus: s, onBlur: o } = e,
+        c = (e) => {
             e.stopPropagation(), t();
         };
     return (0, i.jsxs)(a.P3F, {
         ignoreKeyPress: !0,
         className: l()(b.customStatusAction, r),
-        onClick: s,
+        onClick: c,
         onKeyDown: (e) => {
-            ('Enter' === e.key || ' ' === e.key) && s(e);
+            ('Enter' === e.key || ' ' === e.key) && (e.preventDefault(), c(e));
         },
+        onFocus: s,
+        onBlur: o,
         'aria-label': n ? f.intl.string(f.t.PwknJC) : f.intl.string(f.t.Vq4UmZ),
         children: [
             n ? (0, i.jsx)(a.vdY, { size: 'xxs' }) : (0, i.jsx)(a.oFk, { size: 'xxs' }),
@@ -104,29 +106,32 @@ function x(e) {
         }, [O]),
         T = r.useMemo(() => (null != E && E !== a.Skl.UNKNOWN && null != l && l.isPomelo() ? (0, i.jsx)(c.Z, { text: p.ZP.humanizeStatus(E) }) : j), [E, l, j]),
         I = void 0 !== S,
-        N = r.useMemo(
+        [N, y] = r.useState(!1),
+        A = r.useMemo(
             () =>
                 (0, i.jsx)(_, {
                     openModal: v,
                     hasCustomStatus: I,
-                    className: b.customStatusActionHoverText
+                    className: b.customStatusActionHoverText,
+                    onFocus: () => y(!0),
+                    onBlur: () => y(!1)
                 }),
             [v, I]
         ),
-        y = C
+        P = C
             ? (0, i.jsx)(d.Z, {
-                  hoverText: N,
-                  forceHover: t,
+                  hoverText: A,
+                  forceHover: t || N,
                   children: T
               })
-            : N;
+            : A;
     return (0, i.jsx)(m.Gt, {
         value: O,
         children:
             null != s && s.length > 0
                 ? (0, i.jsx)(d.Z, {
-                      hoverText: y,
-                      forceHover: t,
+                      hoverText: P,
+                      forceHover: t || N,
                       children: (0, i.jsx)(o.Z, {
                           user: l,
                           activities: s,
@@ -135,6 +140,6 @@ function x(e) {
                           hideTooltip: !0
                       })
                   })
-                : y
+                : P
     });
 }

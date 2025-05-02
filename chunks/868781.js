@@ -19,7 +19,7 @@ function h(e) {
     let { activity: t, textVariant: n, textClassName: i, iconClassName: a, hideIcon: l = !1, hideText: _ = !1, hideTooltip: h = !1 } = e,
         { enabled: m } = o.c.useExperiment({ location: 'PresenceActivityStatus' }, { autoTrackExposure: !0 }),
         { descriptiveTextEnabled: g } = (0, c.f)({ location: 'PresenceActivityStatus' }),
-        { enableTopNavButton: E } = (0, s.C)({ location: 'PresenceActivityStatus' });
+        { enableTopNavButton: E } = (0, s.Cq)({ location: 'PresenceActivityStatus' });
     if (l && _) return null;
     let { text: b, tooltip: y } = (0, u.Z)(t, g || E),
         O = p(t, m);

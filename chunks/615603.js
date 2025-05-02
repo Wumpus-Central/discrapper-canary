@@ -171,9 +171,9 @@ let w = function (e) {
         w = (0, o.e7)([_.default], () => _.default.getCurrentUser()),
         k = S === I.a$.FP_SUB_PAUSED,
         L = (0, b.y)('guild_boost_settings_unapplied', w, S),
-        M = h && !k,
+        B = h && !k,
         {
-            appliedGuildBoostSlots: B,
+            appliedGuildBoostSlots: M,
             unappliedGuildBoostSlots: U,
             numActiveGuildBoostSlots: V,
             hasCooldownBoosts: G,
@@ -198,7 +198,7 @@ let w = function (e) {
             );
         }, [s]),
         H = null != g ? C.ZP.getNumIncludedPremiumGuildSubscriptionSlots(g.planId) : 0,
-        z = Math.max(0, H - B.length),
+        z = Math.max(0, H - M.length),
         W = V > H,
         Y = H === s.length,
         K = Y ? z : 1,
@@ -296,14 +296,14 @@ let w = function (e) {
                         (0, i.jsx)('div', {
                             className: y.headerContentSecondary,
                             children: (0, i.jsx)(m.Z, {
-                                shouldShow: null == X || M,
+                                shouldShow: null == X || B,
                                 text: J,
                                 'aria-label': J.toString(),
                                 children: (e) =>
                                     (0, i.jsx)(
                                         c.zxk,
                                         P(A({}, e), {
-                                            disabled: null == X || M,
+                                            disabled: null == X || B,
                                             onClick:
                                                 null != X
                                                     ? () => {

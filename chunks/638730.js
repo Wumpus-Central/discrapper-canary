@@ -1,38 +1,38 @@
 n.d(t, {
-    T: () => o,
-    h: () => a
+    T: () => a,
+    h: () => o
 }),
     n(388685);
 var r = n(192379),
-    i = n(392711);
-let l = (e) => e,
-    o = function (e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-            i = arguments.length > 3 ? arguments[3] : void 0,
-            o = a(l, t, n, i),
-            s = r.useRef(e);
-        return (
-            r.useEffect(() => {
-                s.current = o(e);
-            }, [e, o]),
-            0 === t ? e : s.current
-        );
-    },
+    l = n(392711);
+let i = (e) => e,
     a = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
             l = arguments.length > 3 ? arguments[3] : void 0,
-            o = r.useRef((0, i.throttle)(e, t, l));
+            a = o(i, t, n, l),
+            s = r.useRef(e);
+        return (
+            r.useEffect(() => {
+                s.current = a(e);
+            }, [e, a]),
+            0 === t ? e : s.current
+        );
+    },
+    o = function (e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
+            i = arguments.length > 3 ? arguments[3] : void 0,
+            a = r.useRef((0, l.throttle)(e, t, i));
         return (
             r.useEffect(
                 () => (
-                    (o.current = (0, i.throttle)(e, t, l)),
+                    (a.current = (0, l.throttle)(e, t, i)),
                     () => {
                         var e;
-                        null == (e = o.current) || e.cancel();
+                        null == (e = a.current) || e.cancel();
                     }
                 ),
-                [e, t, l, ...n]
+                [e, t, i, ...n]
             ),
-            o.current
+            a.current
         );
     };

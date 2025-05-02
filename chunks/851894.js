@@ -104,7 +104,7 @@ function R(e) {
             }
             return r;
         })(Z, ['source', 'pendingAvatar']),
-        M = (0, f.SD)({
+        B = (0, f.SD)({
             userId: s.id,
             image: k
         });
@@ -141,7 +141,7 @@ function R(e) {
                                       profilePreview: (0, i.jsx)(
                                           h.Z,
                                           A(y({}, L), {
-                                              pendingAvatar: M,
+                                              pendingAvatar: B,
                                               user: s,
                                               guild: t,
                                               canUsePremiumCustomization: j.ZP.canUsePremiumProfileCustomization(s),

@@ -101,7 +101,7 @@ let Z = function () {
             label: e.name
         })),
         [k, L] = r.useState(w.length > 0 ? w[0].value : null),
-        [M, B] = r.useState(''),
+        [B, M] = r.useState(''),
         [U, V] = r.useState({
             plan_id: y.Xh.PREMIUM_MONTH_TIER_2,
             gift: 'true'
@@ -227,20 +227,20 @@ let Z = function () {
                     children: [
                         (0, i.jsx)(a.oil, {
                             placeholder: 'Promotion Code',
-                            value: M,
-                            onChange: (e) => B(e)
+                            value: B,
+                            onChange: (e) => M(e)
                         }),
                         (0, i.jsx)(a.ua7, {
                             text: 'Need Promotion Code',
-                            shouldShow: M.length < 1,
+                            shouldShow: B.length < 1,
                             children: (e) => {
                                 let { onMouseEnter: t, onMouseLeave: n } = e;
                                 return (0, i.jsx)(a.zxk, {
-                                    disabled: M.length < 1,
+                                    disabled: B.length < 1,
                                     onMouseEnter: t,
                                     onMouseLeave: n,
                                     onClick: () => {
-                                        window.open(N.Z5c.BILLING_PROMOTION_REDEMPTION(M));
+                                        window.open(N.Z5c.BILLING_PROMOTION_REDEMPTION(B));
                                     },
                                     children: 'Open Link'
                                 });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(388685);
+n.d(t, { Z: () => M }), n(388685);
 var i = n(200651),
     r = n(192379),
     s = n(120356),
@@ -34,12 +34,12 @@ var i = n(200651),
     w = n(132547),
     k = n(474936),
     L = n(981631),
-    M = n(126867);
-let B = function (e) {
+    B = n(126867);
+let M = function (e) {
     let { entrypoint: t = k.EZ.UserSettings } = e;
     (0, E.z)(x.X);
     let n = (0, f.Q)(),
-        { sourceAnalyticsLocations: s, analyticsLocations: B } = (0, h.ZP)(g.Z.PREMIUM_MARKETING),
+        { sourceAnalyticsLocations: s, analyticsLocations: M } = (0, h.ZP)(g.Z.PREMIUM_MARKETING),
         U = (0, a.e7)([v.ZP], () => v.ZP.hasFetchedSubscriptions()),
         V = (0, a.e7)([S.default], () => S.default.getCurrentUser()),
         G = null == V ? void 0 : V.id,
@@ -80,20 +80,20 @@ let B = function (e) {
           : t === k.EZ.ApplicationStoreHome && q
             ? J && null == $
                 ? (0, i.jsx)('div', {
-                      className: l()(M.container, M.loading),
+                      className: l()(B.container, B.loading),
                       children: (0, i.jsx)(o.$jN, {})
                   })
                 : (0, i.jsx)(h.Gt, {
-                      value: B,
+                      value: M,
                       children: (0, i.jsx)(w.Z, {})
                   })
             : U && z && !W
               ? (0, i.jsx)(h.Gt, {
-                    value: B,
+                    value: M,
                     children: (0, i.jsx)(Z.Z, { entrypoint: t })
                 })
               : (0, i.jsx)('div', {
-                    className: l()(M.container, M.loading),
+                    className: l()(B.container, B.loading),
                     children: (0, i.jsx)(o.$jN, {})
                 });
 };

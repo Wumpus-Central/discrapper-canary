@@ -35,7 +35,7 @@ var r = n(120356),
 let w = (e) => {
         var t, n;
         let { className: r } = e,
-            { headingText: o, headingTop: c } = B(),
+            { headingText: o, headingTop: c } = M(),
             d = p.default.getCurrentUser(),
             m = (0, l.e7)([g.ZP], () => g.ZP.getPremiumTypeSubscription()),
             h = (0, C.N)(),
@@ -89,7 +89,7 @@ let w = (e) => {
         let { location: t } = e,
             { subscriberHomeVariant: n } = E.g.useExperiment({ location: t }, { autoTrackExposure: !1 }),
             r = n === E.p.VARIANT_2,
-            { headingText: s, headingTop: l } = B();
+            { headingText: s, headingTop: l } = M();
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('img', {
@@ -127,7 +127,7 @@ let w = (e) => {
         });
     },
     L = () => {
-        let { headingText: e } = B();
+        let { headingText: e } = M();
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('img', {
@@ -162,7 +162,7 @@ let w = (e) => {
             ]
         });
     },
-    [M, B] = (0, h.Z)(),
+    [B, M] = (0, h.Z)(),
     U = (e) => {
         let { className: t, location: n } = e,
             { analyticsLocations: r } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
@@ -259,7 +259,7 @@ let w = (e) => {
         }
         return (0, i.jsx)(c.Gt, {
             value: r,
-            children: (0, i.jsx)(M.Provider, {
+            children: (0, i.jsx)(B.Provider, {
                 value: {
                     headingText: E,
                     headingTop: T

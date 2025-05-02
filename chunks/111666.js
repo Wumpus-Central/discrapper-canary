@@ -259,6 +259,6 @@ function N(e) {
 }
 function T(e) {
     let { className: t } = e,
-        { enableTopNavButton: n } = (0, _.C)({ location: 'friends-button' });
+        { enableTopNavButton: n } = (0, _.Cq)({ location: 'friends-button' });
     return n ? (0, r.jsx)(N, { className: t }) : null;
 }

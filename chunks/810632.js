@@ -9,8 +9,8 @@ var i = n(200651),
     u = n(131951),
     d = n(944486),
     p = n(594174),
-    h = n(145597),
-    f = n(981631),
+    f = n(145597),
+    h = n(981631),
     m = n(388032);
 function g(e, t) {
     let g = (0, o.e7)([d.Z], () => d.Z.getVoiceChannelId()),
@@ -57,10 +57,10 @@ function g(e, t) {
                             })({}, t)),
                             (r = r =
                                 {
-                                    sourcePID: (0, h.getPID)(),
+                                    sourcePID: (0, f.getPID)(),
                                     selectSource: !1,
                                     guildId: v,
-                                    analyticsLocation: f.Sbl.UNLOCKED_OVERLAY
+                                    analyticsLocation: h.Sbl.UNLOCKED_OVERLAY
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))

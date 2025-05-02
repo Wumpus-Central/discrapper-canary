@@ -69,7 +69,7 @@ function b(e) {
         y = (0, s.vjg)(s.Skl.ONLINE),
         O = (0, c.ZP)(t),
         v = t.isDM() || t.isGroupDM(),
-        { enableTopNavButton: I } = (0, u.C)({ location: 'VoiceActivityStatus' }),
+        { enableTopNavButton: I } = (0, u.Cq)({ location: 'VoiceActivityStatus' }),
         S = () =>
             b || v
                 ? (0, r.jsx)(d.Z, {

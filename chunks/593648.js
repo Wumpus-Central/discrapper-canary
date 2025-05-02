@@ -34,8 +34,8 @@ var i = n(200651),
     w = n(695346),
     k = n(675478),
     L = n(33656),
-    M = n(726985),
-    B = n(981631),
+    B = n(726985),
+    M = n(981631),
     U = n(468788),
     V = n(388032),
     G = n(589848),
@@ -228,7 +228,7 @@ function K(e) {
         ],
         g = null != x.Z.useHolidaySoundpack();
     return (0, i.jsx)(N.F, {
-        setting: M.s6.NOTIFICATIONS_SOUNDS,
+        setting: B.s6.NOTIFICATIONS_SOUNDS,
         children: (0, i.jsxs)(u.hjN, {
             children: [
                 g
@@ -290,7 +290,7 @@ function q() {
     return 0 === Object.keys(e).length
         ? null
         : (0, i.jsxs)(N.F, {
-              setting: M.s6.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS,
+              setting: B.s6.NOTIFICATIONS_COMMUNITY_ACTIVITY_ALERTS,
               children: [
                   (0, i.jsxs)(u.X6q, {
                       variant: 'heading-lg/semibold',
@@ -318,7 +318,7 @@ function q() {
                                     className: F.marginTop20,
                                     children: [
                                         (0, i.jsxs)(N.F, {
-                                            setting: M.s6.NOTIFICATIONS_COMMUNITY_IN_APP_ALERTS,
+                                            setting: B.s6.NOTIFICATIONS_COMMUNITY_IN_APP_ALERTS,
                                             children: [
                                                 (0, i.jsx)(u.j7V, {
                                                     className: F.marginBottom20,
@@ -340,7 +340,7 @@ function q() {
                                             ]
                                         }),
                                         (0, i.jsxs)(N.F, {
-                                            setting: M.s6.NOTIFICATIONS_COMMUNITY_PUSH_NOTIFICATIONS,
+                                            setting: B.s6.NOTIFICATIONS_COMMUNITY_PUSH_NOTIFICATIONS,
                                             children: [
                                                 (0, i.jsx)(u.j7V, {
                                                     className: F.marginBottom20,
@@ -372,10 +372,10 @@ function q() {
 }
 class X extends r.PureComponent {
     handleDesktopChange(e) {
-        let t = e ? B.qrD.ALL : B.qrD.NEVER;
-        if (t !== B.qrD.NEVER)
+        let t = e ? M.qrD.ALL : M.qrD.NEVER;
+        if (t !== M.qrD.NEVER)
             R.Z.requestPermission((e) => {
-                let t = e ? B.$Ab.ENABLED : B.$Ab.BLOCKED;
+                let t = e ? M.$Ab.ENABLED : M.$Ab.BLOCKED;
                 p.default.setPermissionsState(t, 'UserSettingsModal');
             });
         else p.default.setDesktopType(t);
@@ -398,10 +398,10 @@ class X extends r.PureComponent {
             title: V.intl.string(V.t.HcoRu7),
             children: [
                 (0, i.jsx)(N.F, {
-                    setting: M.s6.NOTIFICATIONS_ENABLE_DESKTOP,
+                    setting: B.s6.NOTIFICATIONS_ENABLE_DESKTOP,
                     children: (0, i.jsx)(u.j7V, {
                         className: F.marginBottom20,
-                        value: e !== B.qrD.NEVER && !d,
+                        value: e !== M.qrD.NEVER && !d,
                         onChange: this.handleDesktopChange,
                         note: V.intl.string(V.t.wF9ih4),
                         disabled: d,
@@ -411,7 +411,7 @@ class X extends r.PureComponent {
                 }),
                 (0, i.jsx)(J, {}),
                 (0, i.jsx)(N.F, {
-                    setting: M.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE,
+                    setting: B.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE,
                     children: (0, i.jsx)(u.j7V, {
                         className: m ? F.marginBottom20 : F.marginBottom40,
                         value: !n,
@@ -421,7 +421,7 @@ class X extends r.PureComponent {
                     })
                 }),
                 (0, i.jsx)(N.F, {
-                    setting: M.s6.NOTIFICATIONS_ENABLE_TASKBAR_FLASHING,
+                    setting: B.s6.NOTIFICATIONS_ENABLE_TASKBAR_FLASHING,
                     children: (0, i.jsx)(u.j7V, {
                         className: F.marginBottom40,
                         value: r,
@@ -433,7 +433,7 @@ class X extends r.PureComponent {
                 (0, i.jsx)($, {}),
                 (0, i.jsx)(ei, {}),
                 (0, i.jsx)(N.F, {
-                    setting: M.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT,
+                    setting: B.s6.NOTIFICATIONS_PUSH_INACTIVE_TIMEOUT,
                     children: (0, i.jsxs)(u.xJW, {
                         title: V.intl.string(V.t.TTvjd3),
                         children: [
@@ -477,19 +477,19 @@ class X extends r.PureComponent {
                 let e = [
                     {
                         name: V.intl.string(V.t.B1AGeH),
-                        value: B.PrB.ALL_CHANNELS
+                        value: M.PrB.ALL_CHANNELS
                     },
                     {
                         name: V.intl.string(V.t.uM2rNj),
-                        value: B.PrB.SELECTED_CHANNEL
+                        value: M.PrB.SELECTED_CHANNEL
                     },
                     {
                         name: V.intl.string(V.t.DYO5Oj),
-                        value: B.PrB.NEVER
+                        value: M.PrB.NEVER
                     }
                 ];
                 return (0, i.jsxs)(N.F, {
-                    setting: M.s6.NOTIFICATIONS_TEXT_TO_SPEECH,
+                    setting: B.s6.NOTIFICATIONS_TEXT_TO_SPEECH,
                     children: [
                         (0, i.jsxs)(u.xJW, {
                             title: V.intl.string(V.t.VIm5MD),
@@ -530,7 +530,7 @@ function J() {
         t = (0, c.e7)([P.ZP], () => P.ZP.mentionOnAllMessages);
     return e
         ? (0, i.jsx)(N.F, {
-              setting: M.s6.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES,
+              setting: B.s6.NOTIFICATIONS_MENTION_ON_ALL_MESSAGES,
               children: (0, i.jsx)(u.j7V, {
                   className: F.marginBottom20,
                   value: t,
@@ -553,7 +553,7 @@ function $() {
               children: [
                   n
                       ? (0, i.jsx)(N.F, {
-                            setting: M.s6.NOTIFICATIONS_UNREAD_SETTINGS,
+                            setting: B.s6.NOTIFICATIONS_UNREAD_SETTINGS,
                             children: (0, i.jsx)(u.j7V, {
                                 className: F.marginBottom40,
                                 value: n,
@@ -565,7 +565,7 @@ function $() {
                         })
                       : t
                         ? (0, i.jsx)(N.F, {
-                              setting: M.s6.NOTIFICATIONS_UNREAD_SETTINGS,
+                              setting: B.s6.NOTIFICATIONS_UNREAD_SETTINGS,
                               children: (0, i.jsx)(u.j7V, {
                                   className: F.marginBottom40,
                                   value: n,
@@ -579,7 +579,7 @@ function $() {
                           })
                         : null,
                   (0, i.jsxs)(N.F, {
-                      setting: M.s6.NOTIFICATIONS_NEW_SETTINGS,
+                      setting: B.s6.NOTIFICATIONS_NEW_SETTINGS,
                       children: [
                           (0, i.jsx)(u.xJW, {
                               title: 'New Notification Settings (Advanced, Staff Only)',
@@ -590,14 +590,14 @@ function $() {
                                   },
                                   children: [
                                       (0, i.jsx)(N.F, {
-                                          setting: M.s6.NOTIFICATIONS_RESTORE_MOST_RECENT_SNAPSHOT,
+                                          setting: B.s6.NOTIFICATIONS_RESTORE_MOST_RECENT_SNAPSHOT,
                                           children: (0, i.jsx)(u.zxk, {
                                               onClick: C.KP,
                                               children: 'Restore most recent snapshot'
                                           })
                                       }),
                                       (0, i.jsx)(N.F, {
-                                          setting: M.s6.NOTIFICATIONS_LAUNCH_MIGRATION,
+                                          setting: B.s6.NOTIFICATIONS_LAUNCH_MIGRATION,
                                           children: (0, i.jsx)(u.zxk, {
                                               onClick: () => {
                                                   (0, v.R)(!0);
@@ -606,7 +606,7 @@ function $() {
                                           })
                                       }),
                                       (0, i.jsx)(N.F, {
-                                          setting: M.s6.NOTIFICATIONS_TOGGLE_NEW_SYSTEM,
+                                          setting: B.s6.NOTIFICATIONS_TOGGLE_NEW_SYSTEM,
                                           children: (0, i.jsx)(u.j7V, {
                                               hideBorder: !0,
                                               value: n,
@@ -674,7 +674,7 @@ function ei() {
         ];
     return T.Z.getCurrentConfig({ location: 'webSettings' }).enableInAppNotifications
         ? (0, i.jsxs)(N.F, {
-              setting: M.s6.NOTIFICATIONS_REACTIONS,
+              setting: B.s6.NOTIFICATIONS_REACTIONS,
               children: [
                   (0, i.jsxs)(u.xJW, {
                       title: V.intl.string(V.t.Rq0NFh),

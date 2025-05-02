@@ -1,11 +1,15 @@
 n.d(t, {
-    C: () => i,
-    X: () => o
+    Cq: () => a,
+    Ht: () => o,
+    XU: () => s
 });
-let r = (0, n(818083).B)({
+var r = n(818083),
+    i = n(987338);
+let o = (0, r.B)({
     kind: 'user',
     id: '2025-03_friends_popout',
     label: 'Friends Popout',
+    commonTriggerPoint: i.$P.CONNECTION_OPEN,
     defaultConfig: {
         enableTopNavButton: !1,
         enableOverlayWidget: !1
@@ -29,11 +33,11 @@ let r = (0, n(818083).B)({
         }
     ]
 });
-function i(e) {
+function a(e) {
     let { location: t } = e;
-    return r.useExperiment({ location: t }, { autoTrackExposure: !0 });
+    return o.useExperiment({ location: t }, { autoTrackExposure: !0 });
 }
-function o(e) {
+function s(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return r.getCurrentConfig({ location: e }, { autoTrackExposure: t });
+    return o.getCurrentConfig({ location: e }, { autoTrackExposure: t });
 }

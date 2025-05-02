@@ -19,11 +19,11 @@ function c(e, t, n) {
     );
 }
 let u = [],
-    f = new Set();
-class d extends (i = r.ZP.PersistedStore) {
+    d = new Set();
+class f extends (i = r.ZP.PersistedStore) {
     initialize(e) {
         var t;
-        this.waitFor(a.ZP, o.Z, s.Z), (f = new Set([...(u = null != (t = null == e ? void 0 : e.channelHistory) ? t : [])]));
+        this.waitFor(a.ZP, o.Z, s.Z), (d = new Set([...(u = null != (t = null == e ? void 0 : e.channelHistory) ? t : [])]));
     }
     getState() {
         return { channelHistory: u };
@@ -32,14 +32,14 @@ class d extends (i = r.ZP.PersistedStore) {
         return u;
     }
 }
-c(d, 'displayName', 'RecentVoiceChannelStore'), c(d, 'persistKey', 'RecentVoiceChannelStore');
-let p = new d(l.Z, {
+c(f, 'displayName', 'RecentVoiceChannelStore'), c(f, 'persistKey', 'RecentVoiceChannelStore');
+let p = new f(l.Z, {
     POST_CONNECTION_OPEN: function () {
-        f = new Set([...u]);
+        d = new Set([...u]);
     },
     VOICE_CHANNEL_SELECT: function (e) {
         var t, n;
         let { channelId: i } = e;
-        return null != i && !!(null != (n = null == (t = s.Z.getChannel(i)) ? void 0 : t.isVocal()) && n) && (f.has(i) ? ((u = u.filter((e) => e !== i)).unshift(i), (f = new Set([...u]))) : (u.unshift(i), f.add(i)), u.length > 10 && ((u.length = 10), (f = new Set([...u]))), !0);
+        return null != i && !!(null != (n = null == (t = s.Z.getChannel(i)) ? void 0 : t.isVocal()) && n) && (d.has(i) ? ((u = u.filter((e) => e !== i)).unshift(i), (d = new Set([...u]))) : (u.unshift(i), d.add(i)), u.length > 10 && ((u.length = 10), (d = new Set([...u]))), !0);
     }
 });

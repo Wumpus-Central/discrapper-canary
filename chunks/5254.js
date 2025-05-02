@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var i,
     r = n(392711),
     l = n.n(r),
@@ -7,8 +7,8 @@ var i,
     o = n(598077),
     c = n(594174),
     u = n(388380),
-    f = n(72937);
-function d(e, t, n) {
+    d = n(72937);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -24,8 +24,8 @@ function d(e, t, n) {
 let p = {},
     g = 0,
     O = !1,
-    y = !1;
-function h(e) {
+    E = !1;
+function N(e) {
     var t;
     let n = null != e.contact_names && e.contact_names.length >= 2 ? e.contact_names.slice(0, 2) : [];
     return {
@@ -53,14 +53,14 @@ class m extends (i = s.ZP.Store) {
         return p[e];
     }
 }
-d(m, 'displayName', 'FriendSuggestionStore');
-let N = new m(a.Z, {
+f(m, 'displayName', 'FriendSuggestionStore');
+let y = new m(a.Z, {
     CONNECTION_OPEN: function (e) {
-        (p = {}), (g = e.friendSuggestionCount) > 0 ? ((y = !0), !O && y && ((O = !0), (y = !1), u.Z.fetch())) : (0, f.Z)();
+        (p = {}), (g = e.friendSuggestionCount) > 0 ? ((E = !0), !O && E && ((O = !0), (E = !1), u.Z.fetch())) : (0, d.Z)();
     },
     FRIEND_SUGGESTION_CREATE: function (e) {
         var t, n;
-        let i = h(e.suggestion);
+        let i = N(e.suggestion);
         if (null != p[i.key]) return !1;
         g++,
             (t = (function (e) {
@@ -74,7 +74,7 @@ let N = new m(a.Z, {
                             })
                         )),
                         i.forEach(function (t) {
-                            d(e, t, n[t]);
+                            f(e, t, n[t]);
                         });
                 }
                 return e;
@@ -103,7 +103,7 @@ let N = new m(a.Z, {
             (t = e.suggestions),
             (p = l()
                 .chain(t)
-                .map((e) => h(e))
+                .map((e) => N(e))
                 .keyBy((e) => e.key)
                 .value()),
             (g = l().keys(p).length);

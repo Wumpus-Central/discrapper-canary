@@ -39,8 +39,8 @@ var s = n(399606),
     w = n(981631),
     k = n(215023),
     L = n(921944),
-    M = n(526761),
-    B = n(332325),
+    B = n(526761),
+    M = n(332325),
     U = n(388032),
     V = n(344253),
     G = n(660372),
@@ -95,11 +95,11 @@ let ex = () => {
         eP = null != i && i.hasPremiumAtLeast(D.p9.TIER_2),
         eR = (0, g.wE)(l.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE),
         eD = (0, f.Z)({
-            scrollPosition: M.Y_.TRY_IT_OUT,
+            scrollPosition: B.Y_.TRY_IT_OUT,
             analyticsLocations: e
         }),
         eZ = () => {
-            a.Z.open(w.oAB.VOICE, M.GA, {
+            a.Z.open(w.oAB.VOICE, B.GA, {
                 openWithoutBackstack: !0,
                 analyticsLocations: e
             });
@@ -108,7 +108,7 @@ let ex = () => {
             (0, b.uL)(w.Z5c.COLLECTIBLES_SHOP);
         },
         ek = () => {
-            a.Z.open(w.oAB.APPEARANCE, null, { scrollPosition: M.h1.CUSTOM_APP_ICONS });
+            a.Z.open(w.oAB.APPEARANCE, null, { scrollPosition: B.h1.CUSTOM_APP_ICONS });
         },
         eL = {
             clientThemes: {
@@ -135,7 +135,7 @@ let ex = () => {
                       pillText: U.intl.string(U.t.EYxi0t),
                       onCtaClick: eT
                           ? () => {
-                                (0, _.Z)(B.Z.CLIPS, {
+                                (0, _.Z)(M.Z.CLIPS, {
                                     openWithoutBackstack: !0,
                                     analyticsLocations: e
                                 });
@@ -532,9 +532,9 @@ let ex = () => {
             dismissibleContentType: a
         };
     }
-    let { enabled: eM } = (0, I.D)();
+    let { enabled: eB } = (0, I.D)();
     return (
-        eM &&
+        eB &&
             ej &&
             eP &&
             (eL.tenureBadge = {

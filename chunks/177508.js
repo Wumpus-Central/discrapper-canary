@@ -80,7 +80,7 @@ function v() {
             (0, i.jsx)(Z, {}),
             (0, i.jsx)(U, {}),
             (0, i.jsx)(V, {}),
-            (0, i.jsx)(M, {}),
+            (0, i.jsx)(B, {}),
             (0, i.jsx)(L, {}),
             (0, i.jsx)(k, {}),
             (0, i.jsx)(w, {}),
@@ -443,7 +443,7 @@ function Z() {
                     children: 'Large'
                 })
             }),
-            (0, i.jsx)(B, {})
+            (0, i.jsx)(M, {})
         ]
     });
 }
@@ -643,7 +643,7 @@ function L() {
         ]
     });
 }
-function M() {
+function B() {
     let [e, t] = r.useState(!1),
         [n, s] = r.useState(!1),
         [l, a] = r.useState('auto');
@@ -845,7 +845,7 @@ function M() {
         ]
     });
 }
-function B() {
+function M() {
     return (0, i.jsxs)('div', {
         className: x.shinyButtonExamples,
         children: [

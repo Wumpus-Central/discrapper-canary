@@ -37,10 +37,10 @@ function I(e) {
         w = Z.length > 0,
         k = I.length > Z.length,
         L = (0, s.e7)([m.Z], () => m.Z.getCurrentUserAppliedBoosts()),
-        { fractionalState: M } = (0, l.Z)({ forceFetch: !0 }),
-        B = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && M === v.a$.NONE,
-        U = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && M === v.a$.NONE,
-        V = y && M === v.a$.FP_SUB_PAUSED;
+        { fractionalState: B } = (0, l.Z)({ forceFetch: !0 }),
+        M = (null == t ? void 0 : t.isPausedOrPausePending) === !0 && B === v.a$.NONE,
+        U = (null == t ? void 0 : t.isPausedOrPausePending) !== !0 && B === v.a$.NONE,
+        V = y && B === v.a$.FP_SUB_PAUSED;
     return (0, i.jsxs)('div', {
         children: [
             (0, i.jsx)(a.oQ, { className: T.blockedPaymentsWarning }),
@@ -50,12 +50,12 @@ function I(e) {
                 hasBoostPerk: V,
                 canAddBoosts: U
             }),
-            !(0, u.y)('guild_boosting_settings', N, M) &&
+            !(0, u.y)('guild_boosting_settings', N, B) &&
                 (0, i.jsx)(O.Z, {
                     hasAppliedGuildBoosts: w,
                     hasBoostPerk: V,
                     hasGuildAffinitiesOrInGuild: R,
-                    subscriptionIsPausedOrPausePending: B
+                    subscriptionIsPausedOrPausePending: M
                 }),
             (0, i.jsx)(_.Z, {
                 hide: k,
@@ -63,7 +63,7 @@ function I(e) {
                 pillClassName: T.FPPill
             }),
             !R && (0, i.jsx)(j.Z, {}),
-            (null == t ? void 0 : t.isPaused) && M !== v.a$.FP_SUB_PAUSED
+            (null == t ? void 0 : t.isPaused) && B !== v.a$.FP_SUB_PAUSED
                 ? (0, i.jsx)(x.r, {
                       appliedGuildBoosts: L,
                       premiumSubscription: t
@@ -74,7 +74,7 @@ function I(e) {
                   }),
             (0, i.jsx)(S.Z, {
                 guildBoostSlots: I,
-                fractionalPremiumState: M
+                fractionalPremiumState: B
             }),
             (0, i.jsx)(C.Z, {
                 canAddBoosts: w && U,

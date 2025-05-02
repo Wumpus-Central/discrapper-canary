@@ -35,8 +35,8 @@ let D = new C.Z('CacheStore'),
     w = !1,
     k = 'initializing',
     L = 0,
-    M = !1,
     B = !1,
+    M = !1,
     U = !1;
 function V(e) {
     D.log('Clearing cache store'), (L = Date.now()), c.K.remove(R.FsG), c.K.remove(R.ihW), c.K.remove(R.O42), (k = 'no-cache'), 'CLEAR_CACHES' === e.type && e.preventWritingCachesAgainThisSession && (w = !0);
@@ -86,8 +86,8 @@ async function F(e, t, n) {
         C = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: read_states', () => b.Z.getAll(e)),
         v = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_guild_settings', () => _.Z.getAll(e)),
         [[N, y], A, R, Z, w, k, L] = await Promise.all([p, g, h, f, j, C, v]),
-        M = performance.now() - m;
-    if ((D.verbose('cache loaded in '.concat(M, 'ms (channel_history ').concat(N, 'ms)')), null == y)) return (0, P.Z)('database:history_cache_null'), D.verbose('finished without dispatching CACHE_LOADED'), [!1, null, 0];
+        B = performance.now() - m;
+    if ((D.verbose('cache loaded in '.concat(B, 'ms (channel_history ').concat(N, 'ms)')), null == y)) return (0, P.Z)('database:history_cache_null'), D.verbose('finished without dispatching CACHE_LOADED'), [!1, null, 0];
     {
         let i = Object.fromEntries(y.members.map((e) => [e.userId, e])),
             r = null != R.guildId && null != R.channels,
@@ -239,7 +239,7 @@ async function Y(e, t, n, i) {
                 d.Z.dispatch({ type: 'CACHE_LOADED_LAZY_NO_CACHE' });
             return;
         }
-        if (B) {
+        if (M) {
             (0, P.Z)('already_connected'), D.log('Skipping lazy cache; already connected.'), d.Z.dispatch({ type: 'CACHE_LOADED_LAZY_NO_CACHE' });
             return;
         }
@@ -343,7 +343,7 @@ class q extends (i = o.ZP.Store) {
         Z || O.Z.getSocket().dispatcher.unpauseDispatchQueue();
     }
     hasCache() {
-        return !Z || M;
+        return !Z || B;
     }
     getLazyCacheStatus() {
         return Z ? k : 'no-cache';
@@ -398,24 +398,24 @@ class q extends (i = o.ZP.Store) {
         Z
             ? {
                   CONNECTION_OPEN: function () {
-                      return (B = !0), (U = !0), !1;
+                      return (M = !0), (U = !0), !1;
                   },
                   LOGOUT: V,
                   CONNECTION_CLOSED: function () {
-                      return (B = !1), (U = !0), !1;
+                      return (M = !1), (U = !0), !1;
                   },
                   CACHE_LOADED: function () {
-                      M = !0;
+                      B = !0;
                   },
                   CACHE_LOADED_LAZY: function () {
-                      (M = !0), (k = 'cache-loaded');
+                      (B = !0), (k = 'cache-loaded');
                   },
                   CACHE_LOADED_LAZY_NO_CACHE: function () {
                       k = 'no-cache';
                   },
                   CLEAR_CACHES: V,
                   WRITE_CACHES: function () {
-                      D.verbose('Writing cache now'), (L = Date.now()), (M = !0), c.K.remove(R.FsG), c.K.remove(R.O42), c.K.remove(R.ihW);
+                      D.verbose('Writing cache now'), (L = Date.now()), (B = !0), c.K.remove(R.FsG), c.K.remove(R.O42), c.K.remove(R.ihW);
                   }
               }
             : {}

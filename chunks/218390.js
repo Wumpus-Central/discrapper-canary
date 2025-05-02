@@ -38,8 +38,8 @@ var i = n(200651),
     w = n(63063),
     k = n(74538),
     L = n(140465),
-    M = n(695349),
-    B = n(249689),
+    B = n(695349),
+    M = n(249689),
     U = n(286961),
     V = n(91802),
     G = n(533525),
@@ -114,7 +114,7 @@ function el() {
         r = (0, E.ZP)(),
         s = (0, c.e7)([R.ZP], () => R.ZP.getPremiumTypeSubscription()),
         a = (0, v.Z)(),
-        o = (0, M.W)(),
+        o = (0, B.W)(),
         d = null !== s && null !== s.planIdFromItems;
     if (!d && !a.isFractionalPremiumActive) return null;
     let p = a.isFractionalPremiumActive,
@@ -167,7 +167,7 @@ function el() {
                               })
                             : null,
                     (0, i.jsx)(z.nT, { featureSet: p && !o ? z.uZ.FRACTIONAL_PREMIUM : z.uZ.DEFAULT }),
-                    p && !d && (0, B.C)('nitro-settings-hero', e)
+                    p && !d && (0, M.C)('nitro-settings-hero', e)
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(H.Z, {
@@ -387,7 +387,7 @@ let ec = function () {
             note: null
         });
     if ((!k && !L) || a) return (0, i.jsx)(m.$jN, {});
-    let M = !!(null == n ? void 0 : n.hasActiveTrial);
+    let B = !!(null == n ? void 0 : n.hasActiveTrial);
     return (0, i.jsx)(O.Gt, {
         value: t,
         children: (0, i.jsxs)(i.Fragment, {
@@ -402,7 +402,7 @@ let ec = function () {
                             className: J.__invalid_planComparisonTable,
                             hideCTAs: !0,
                             headingOverride: Q.intl.string(Q.t.dnVvQU),
-                            hidePill: !M,
+                            hidePill: !B,
                             selectedPlanColumnClassName: J.tier2PlanComparisonTableBackground,
                             selectedPlanTier: q.p9.TIER_2
                         })

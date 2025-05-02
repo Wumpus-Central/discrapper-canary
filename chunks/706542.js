@@ -128,10 +128,10 @@ let N = () =>
             w = (0, x.A)(j.Xh.PREMIUM_MONTH_TIER_2),
             k = ''.concat(w, '/').concat((0, f.eP)(j.rV.MONTH)),
             L = (0, f.CY)(j.Xh.PREMIUM_MONTH_TIER_0),
-            M = (0, f.CY)(j.Xh.PREMIUM_MONTH_TIER_2),
-            B = (0, E.a)(L, M, Z, k);
+            B = (0, f.CY)(j.Xh.PREMIUM_MONTH_TIER_2),
+            M = (0, E.a)(L, B, Z, k);
         if (!S || !v) return null;
-        B.push({
+        M.push({
             label: null,
             tier0Column: null,
             tier2Column: null,
@@ -167,7 +167,7 @@ let N = () =>
                             children: [
                                 (0, i.jsx)(P, {}),
                                 (0, i.jsx)('tbody', {
-                                    children: B.map((e, t) => {
+                                    children: M.map((e, t) => {
                                         var n, i;
                                         return (0, r.createElement)(
                                             R,

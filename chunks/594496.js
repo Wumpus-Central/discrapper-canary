@@ -81,8 +81,8 @@ function R(e) {
             pendingAvatar: w,
             pendingNickname: k,
             pendingBanner: L,
-            pendingBio: M,
-            pendingPronouns: B,
+            pendingBio: B,
+            pendingPronouns: M,
             pendingThemeColors: U,
             errors: V,
             guild: G
@@ -139,7 +139,7 @@ function R(e) {
                     onPronounsChange: (e) => {
                         (0, v.xs)(e, $);
                     },
-                    pendingPronouns: B,
+                    pendingPronouns: M,
                     currentPronouns: $
                 },
                 'pronouns'
@@ -290,7 +290,7 @@ function R(e) {
                             }),
                             onBioChange: (e) => (0, v.qN)(e, J),
                             errors: null != (R = null == V ? void 0 : V.bio) ? R : null == z ? void 0 : z.bio,
-                            pendingBio: M,
+                            pendingBio: B,
                             currentBio: J,
                             disabled: !K
                         },

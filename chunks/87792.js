@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685);
+n.d(t, { Z: () => B }), n(388685);
 var i = n(200651),
     r = n(192379),
     s = n(512722),
@@ -264,7 +264,7 @@ let Z = () => {
                   subText: l
               });
     },
-    M = (e) => {
+    B = (e) => {
         let { user: t } = e,
             n = Array.from(T.tx.entries()),
             r = (0, f.kE)(),

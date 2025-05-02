@@ -78,11 +78,11 @@ let A = r.forwardRef((e, t) => {
         w = (0, h.Wp)(Z, S.Si.TIER_2) ? S.Si.TIER_2 : void 0,
         k = (0, f.N)(),
         L = (0, p.Nx)(),
-        M = (0, _.Vi)(),
-        B = (0, a.e7)([m.Z], () => m.Z.affinities),
+        B = (0, _.Vi)(),
+        M = (0, a.e7)([m.Z], () => m.Z.affinities),
         U = (0, b.Z)(),
         V = A === S.EZ.ApplicationStoreHome && null != U,
-        G = B.length > 0;
+        G = M.length > 0;
     return (0, i.jsx)(d.Gt, {
         value: R,
         children: (0, i.jsxs)('div', {
@@ -112,7 +112,7 @@ let A = r.forwardRef((e, t) => {
                                     })
                                 })
                               : (0, i.jsx)(y, {}),
-                        M || D
+                        B || D
                             ? (0, i.jsx)('div', {
                                   className: T.buttonContainer,
                                   children: (0, i.jsx)(C.Z, {
