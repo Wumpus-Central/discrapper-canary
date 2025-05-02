@@ -5182,6 +5182,8 @@
   "U6vLcH": "This emoji is from a server that is either invite-only or unavailable. [Learn more](Learn more) about using custom emoji.",
   "aBUcp6": "Remove from Favorites",
   "sgL8sL": "{count, plural, =0 {no slots} one {!!{count}!! slot} other {!!{count}!! slots} } available",
+  "41/Kbm": "Please select a different image, this one is not valid.",
+  "8RCtpK": "Please select a server for the emoji.",
   "515vjI": "Click to learn more",
   "kIO9j4": "That emoji was too big! Emoji must be under !!{maxSize}!! KB.",
   "r0w9m5": "Emoji uploaded",
