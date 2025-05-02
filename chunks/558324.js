@@ -10,7 +10,7 @@ var r = n(200651),
 let d = (e) => {
     var t,
         n,
-        { className: l, tags: d, value: m, onRemoveTag: g, onAddTag: p, onAddTagError: h, maxTaxLength: f, maxTags: x, disabled: b, placeholder: j } = e,
+        { className: l, tags: d, value: m, onRemoveTag: g, onAddTag: p, onAddTagError: f, maxTaxLength: h, maxTags: x, disabled: b, placeholder: j } = e,
         _ = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -57,12 +57,12 @@ let d = (e) => {
             let e = v.trim();
             if (0 !== e.length) {
                 if (null != x && d.length >= x) {
-                    null == h || h(c.intl.string(c.t.Xx7XeH));
+                    null == f || f(c.intl.string(c.t.Xx7XeH));
                     return;
                 }
                 p(e), O('');
             }
-        }, [v, x, p, h, d.length]),
+        }, [v, x, p, f, d.length]),
         N = i.useCallback(
             (e) => {
                 switch (e.keyCode) {
@@ -119,7 +119,7 @@ let d = (e) => {
                         value: v,
                         onKeyDown: N,
                         onChange: O,
-                        maxLength: f,
+                        maxLength: h,
                         disabled: b,
                         onBlur: y,
                         placeholder: j

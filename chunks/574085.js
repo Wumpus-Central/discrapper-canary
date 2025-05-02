@@ -55,7 +55,7 @@ function g(e, t) {
 function p() {
     let { editStateId: e, guildId: t } = (0, s.N)(),
         [n, p] = a.R7(e);
-    function h(e, t) {
+    function f(e, t) {
         let { name: r, description: i, emojiId: l, emojiName: s } = e,
             a = [...n],
             o = {
@@ -68,7 +68,7 @@ function p() {
             };
         null != t ? (a[t] = o) : a.push(o), p(a);
     }
-    let f = (0, l.mY)();
+    let h = (0, l.mY)();
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(c.p, {
@@ -80,7 +80,7 @@ function p() {
                             g(m({}, i), {
                                 guildId: t,
                                 initialData: n[e],
-                                onSave: (t) => h(t, e),
+                                onSave: (t) => f(t, e),
                                 onDelete: () =>
                                     (function (e) {
                                         let t = [...n];
@@ -105,12 +105,12 @@ function p() {
                             o.DI,
                             g(m({}, e), {
                                 guildId: t,
-                                onSave: (e) => h(e)
+                                onSave: (e) => f(e)
                             })
                         )
                     );
                 },
-                disabled: f,
+                disabled: h,
                 children: d.intl.string(d.t['6dwqo6'])
             })
         ]

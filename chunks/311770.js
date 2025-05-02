@@ -1,193 +1,184 @@
-n.d(l, { EmojiStudioModal: () => _ }), n(388685);
-var r = n(200651),
-    t = n(192379),
-    a = n(772848),
-    s = n(442837),
-    i = n(481060),
-    o = n(730089),
-    d = n(372129),
-    u = n(430824),
-    c = n(496675),
-    m = n(914010),
-    x = n(176354),
-    h = n(841776),
-    b = n(535455),
-    j = n(981631),
-    g = n(388032),
-    p = n(807179);
-let v = (e) => {
-        let { userImage: l, back: n } = e,
-            { guilds: s, currentGuildId: d } = k(),
-            [u, c] = t.useState(d),
-            [m, j] = t.useState(null),
-            [g, v] = t.useState(null),
-            [_, I] = t.useState(''),
-            f = async () => {
-                if ((j(null), v(null), null == u)) return void j('Please select a server for the emoji.');
-                if (null == l || (null == l ? void 0 : l.data) == null || (null == l ? void 0 : l.file) == null || (null == l ? void 0 : l.image) == null) return void j('Missing image data');
-                let { data: e, file: n, image: r } = l;
+r.d(t, { EmojiStudioModal: () => I }), r(388685);
+var n = r(200651),
+    l = r(192379),
+    i = r(259443),
+    o = r(442837),
+    a = r(481060),
+    s = r(80932),
+    c = r(372129),
+    u = r(430824),
+    d = r(496675),
+    b = r(914010),
+    m = r(176354),
+    f = r(746622),
+    g = r(535455),
+    p = r(981631),
+    j = r(388032),
+    h = r(807179);
+let _ = new i.Yd('EmojiStudioModal'),
+    O = (e) => {
+        let { userImage: t, back: r } = e,
+            { guilds: i, currentGuildId: o } = x(),
+            [c, u] = l.useState(o),
+            [d, b] = l.useState(null),
+            [p, j] = l.useState(''),
+            O = async () => {
+                if ((b(null), null == c)) return void b(g.z.MISSING_GUILD);
+                if (null == t || (null == t ? void 0 : t.file) == null || (null == t ? void 0 : t.data) == null) return void b(g.z.MISSING_IMAGE_DATA);
                 try {
-                    let l = await (0, o.G)({
-                        data: e,
-                        file: n,
-                        image: r,
-                        guildId: u,
-                        uploadId: (0, a.Z)(),
-                        hideErrorModal: !1
+                    await (0, s.rS)({
+                        image: t.data,
+                        guildId: c,
+                        name: p
                     });
-                    if (l) return void v(l);
                 } catch (e) {
-                    var t;
-                    j(null != (t = null == e ? void 0 : e.message) ? t : 'Failed to upload');
+                    b((0, f.z)(e)), _.error('Failed to upload emoji.', e);
                     return;
                 }
-                (0, i.Mr3)(b.H);
+                (0, a.Mr3)(g.H);
             };
-        return (0, r.jsxs)('main', {
+        return (0, n.jsxs)('main', {
             children: [
-                (0, r.jsx)(i.X6q, {
+                (0, n.jsx)(a.X6q, {
                     variant: 'heading-lg/semibold',
-                    className: p.heading,
+                    className: h.heading,
                     children: 'Add Custom Emoji'
                 }),
-                (0, r.jsx)('div', {
-                    className: p.editor,
-                    children: (0, r.jsx)('img', {
-                        src: l.data,
+                (0, n.jsx)('div', {
+                    className: h.editor,
+                    children: (0, n.jsx)('img', {
+                        src: t.data,
                         alt: 'Uploaded content'
                     })
                 }),
-                (0, r.jsxs)('footer', {
+                (0, n.jsxs)('footer', {
                     children: [
-                        (0, r.jsx)(h.H, {
-                            error: m,
-                            uploadErrorCode: g
-                        }),
-                        (0, r.jsxs)('div', {
-                            className: p.grid,
+                        null != d && (0, n.jsx)(f.H, { error: d }),
+                        (0, n.jsxs)('div', {
+                            className: h.grid,
                             children: [
-                                (0, r.jsxs)('div', {
+                                (0, n.jsxs)('div', {
                                     children: [
-                                        (0, r.jsx)(i.oil, {
+                                        (0, n.jsx)(a.oil, {
                                             placeholder: ':emoji:',
                                             onChange: (e) => {
-                                                I(e.length < 2 ? e : x.ZP.sanitizeEmojiName(e));
+                                                j(e.length < 2 ? e : m.ZP.sanitizeEmojiName(e));
                                             },
-                                            value: _
+                                            value: p
                                         }),
-                                        (0, r.jsx)(i.Text, {
+                                        (0, n.jsx)(a.Text, {
                                             variant: 'text-xs/normal',
                                             color: 'header-muted',
                                             children: 'Min. 2 characters (letters, numbers & underscores only).'
                                         })
                                     ]
                                 }),
-                                (0, r.jsx)(i.q4e, {
-                                    options: s.map((e) => ({
+                                (0, n.jsx)(a.q4e, {
+                                    options: i.map((e) => ({
                                         label: e.name,
                                         value: e.id
                                     })),
-                                    value: u,
-                                    onChange: (e) => c(e),
-                                    className: p.select
+                                    value: c,
+                                    onChange: (e) => u(e),
+                                    className: h.select
                                 }),
-                                (0, r.jsx)(i.zxk, {
-                                    className: p.submit,
-                                    onClick: f,
+                                (0, n.jsx)(a.zxk, {
+                                    className: h.submit,
+                                    onClick: O,
                                     fullWidth: !0,
-                                    disabled: null == l || null == u || _.length < 2,
+                                    disabled: null == t || null == c || p.length < 2,
                                     children: 'Upload'
                                 })
                             ]
                         })
                     ]
                 }),
-                (0, r.jsx)(E, { back: n })
+                (0, n.jsx)(N, { back: r })
             ]
         });
     },
-    _ = (e) => {
-        let { transitionState: l, userImage: n } = e,
-            [a, s] = t.useState(n),
-            o = t.useCallback(() => s(null), [s]);
-        return (0, r.jsx)(i.Y0X, {
-            transitionState: l,
-            size: i.CgR.MEDIUM,
-            children: (0, r.jsxs)(i.hzk, {
+    I = (e) => {
+        let { transitionState: t, userImage: r } = e,
+            [i, o] = l.useState(r),
+            s = l.useCallback(() => o(null), [o]);
+        return (0, n.jsx)(a.Y0X, {
+            transitionState: t,
+            size: a.CgR.MEDIUM,
+            children: (0, n.jsxs)(a.hzk, {
                 scrollbarType: 'none',
-                className: p.modalContent,
+                className: h.modalContent,
                 children: [
-                    null == a
-                        ? (0, r.jsx)(I, { setUserImage: s })
-                        : (0, r.jsx)(v, {
-                              userImage: a,
-                              back: o
+                    null == i
+                        ? (0, n.jsx)(v, { setUserImage: o })
+                        : (0, n.jsx)(O, {
+                              userImage: i,
+                              back: s
                           }),
-                    (0, r.jsx)(i.olH, {
-                        onClick: () => (0, i.Mr3)(b.H),
-                        className: p.closeButton
+                    (0, n.jsx)(a.olH, {
+                        onClick: () => (0, a.Mr3)(g.H),
+                        className: h.closeButton
                     })
                 ]
             })
         });
     },
-    k = () => ({
-        guilds: (0, s.Wu)([u.Z, c.Z], () => Object.values(u.Z.getGuilds()).filter((e) => c.Z.can(j.Plq.CREATE_GUILD_EXPRESSIONS, e))),
-        currentGuildId: (0, s.e7)([u.Z, m.Z, c.Z], () => {
-            let e = m.Z.getGuildId(),
-                l = u.Z.getGuild(e);
-            return c.Z.can(j.Plq.CREATE_GUILD_EXPRESSIONS, l) && null != l ? l.id : null;
+    x = () => ({
+        guilds: (0, o.Wu)([u.Z, d.Z], () => Object.values(u.Z.getGuilds()).filter((e) => d.Z.can(p.Plq.CREATE_GUILD_EXPRESSIONS, e))),
+        currentGuildId: (0, o.e7)([u.Z, b.Z, d.Z], () => {
+            let e = b.Z.getGuildId(),
+                t = u.Z.getGuild(e);
+            return d.Z.can(p.Plq.CREATE_GUILD_EXPRESSIONS, t) && null != t ? t.id : null;
         })
     }),
-    I = (e) => {
-        let { setUserImage: l } = e;
-        return (0, r.jsxs)('div', {
-            className: p.emptyState,
+    v = (e) => {
+        let { setUserImage: t } = e;
+        return (0, n.jsxs)('div', {
+            className: h.emptyState,
             children: [
-                (0, r.jsxs)('header', {
+                (0, n.jsxs)('header', {
                     children: [
-                        (0, r.jsx)(i.X6q, {
+                        (0, n.jsx)(a.X6q, {
                             variant: 'heading-lg/medium',
                             color: 'header-primary',
                             children: 'Add Emoji'
                         }),
-                        (0, r.jsx)(i.Text, {
+                        (0, n.jsx)(a.Text, {
                             variant: 'text-sm/normal',
                             color: 'header-muted',
                             children: "Select an image or GIF. You'll be able to edit & preview."
                         })
                     ]
                 }),
-                (0, r.jsxs)('div', {
-                    className: p.dropZone,
+                (0, n.jsxs)('div', {
+                    className: h.dropZone,
                     children: [
-                        (0, r.jsx)(i.dZu, {
+                        (0, n.jsx)(a.dZu, {
                             size: 'lg',
-                            color: i.TVs.colors.HEADER_MUTED
+                            color: a.TVs.colors.HEADER_MUTED
                         }),
-                        (0, r.jsxs)(i.Text, {
+                        (0, n.jsxs)(a.Text, {
                             variant: 'text-md/medium',
-                            children: ['Drag & drop or ', (0, r.jsx)(f, { setUserImage: l })]
+                            children: ['Drag & drop or ', (0, n.jsx)(E, { setUserImage: t })]
                         })
                     ]
                 })
             ]
         });
     },
-    f = (e) => {
-        let { setUserImage: l } = e;
-        return (0, r.jsxs)(i.P3F, {
+    E = (e) => {
+        let { setUserImage: t } = e;
+        return (0, n.jsxs)(a.P3F, {
             focusProps: { within: !0 },
             tag: 'a',
             children: [
                 'Select an image',
-                (0, r.jsx)(d.Z, {
+                (0, n.jsx)(c.Z, {
                     tabIndex: 0,
-                    onChange: (e, n, r) => (
-                        l({
+                    onChange: (e, r, n) => (
+                        t({
                             data: e,
-                            file: n,
-                            image: r
+                            file: r,
+                            image: n
                         }),
                         Promise.resolve(void 0)
                     )
@@ -195,17 +186,17 @@ let v = (e) => {
             ]
         });
     },
-    E = (e) => {
-        let { back: l } = e;
-        return (0, r.jsxs)(i.zxk, {
-            'aria-label': g.intl.string(g.t['13/7kZ']),
-            onClick: l,
-            look: i.zxk.Looks.BLANK,
-            size: i.zxk.Sizes.MIN,
-            innerClassName: p.backButtonInnner,
-            className: p.backButton,
+    N = (e) => {
+        let { back: t } = e;
+        return (0, n.jsxs)(a.zxk, {
+            'aria-label': j.intl.string(j.t['13/7kZ']),
+            onClick: t,
+            look: a.zxk.Looks.BLANK,
+            size: a.zxk.Sizes.MIN,
+            innerClassName: h.backButtonInnner,
+            className: h.backButton,
             children: [
-                (0, r.jsx)(i.j9r, {
+                (0, n.jsx)(a.j9r, {
                     color: 'currentColor',
                     size: 'xs'
                 }),

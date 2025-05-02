@@ -18,8 +18,8 @@ var r = n(200651),
     m = n(974513),
     g = n(290511),
     p = n(388032),
-    h = n(271254);
-function f(e) {
+    f = n(271254);
+function h(e) {
     let t,
         { title: n, description: i, icon: l, hasStarted: a, status: o, onEdit: c, extra: u } = e;
     switch (o) {
@@ -29,12 +29,12 @@ function f(e) {
                     (0, r.jsx)(s.dz2, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: h.checkmark
+                        className: f.checkmark
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: 'text-xs/semibold',
                         color: 'status-positive',
-                        className: h.statusText,
+                        className: f.statusText,
                         children: p.intl.string(p.t.rPnzRU)
                     })
                 ]
@@ -46,12 +46,12 @@ function f(e) {
                     (0, r.jsx)(s.P4T, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: h.warning
+                        className: f.warning
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: 'text-xs/semibold',
                         color: 'status-warning',
-                        className: h.statusText,
+                        className: f.statusText,
                         children: p.intl.string(p.t['yTa+dn'])
                     })
                 ]
@@ -63,29 +63,29 @@ function f(e) {
                     (0, r.jsx)(s.P4T, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: h.danger
+                        className: f.danger
                     }),
                     (0, r.jsx)(s.Text, {
                         variant: 'text-xs/semibold',
                         color: 'status-danger',
-                        className: h.statusText,
+                        className: f.statusText,
                         children: p.intl.string(p.t.EkokLy)
                     })
                 ]
             });
     }
     return (0, r.jsxs)('div', {
-        className: h.onboardingStepContainer,
+        className: f.onboardingStepContainer,
         children: [
             (0, r.jsxs)('div', {
-                className: h.leftContainer,
+                className: f.leftContainer,
                 children: [
                     (0, r.jsx)('div', {
-                        className: h.iconContainer,
+                        className: f.iconContainer,
                         children: l
                     }),
                     (0, r.jsxs)('div', {
-                        className: h.onboardingStepText,
+                        className: f.onboardingStepText,
                         children: [
                             (0, r.jsx)(s.X6q, {
                                 variant: 'heading-md/semibold',
@@ -101,13 +101,13 @@ function f(e) {
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: h.rightContainer,
+                className: f.rightContainer,
                 children: [
                     t,
                     u,
                     a
                         ? (0, r.jsx)(s.zxk, {
-                              className: h.cta,
+                              className: f.cta,
                               size: s.zxk.Sizes.SMALL,
                               color: s.zxk.Colors.PRIMARY,
                               look: s.zxk.Looks.OUTLINED,
@@ -115,8 +115,8 @@ function f(e) {
                               children: p.intl.string(p.t.bt75u7)
                           })
                         : (0, r.jsxs)(s.zxk, {
-                              className: h.cta,
-                              innerClassName: h.ctaInner,
+                              className: f.cta,
+                              innerClassName: f.ctaInner,
                               size: s.zxk.Sizes.SMALL,
                               color: s.zxk.Colors.PRIMARY,
                               onClick: c,
@@ -165,13 +165,13 @@ function j(e) {
                     numDefaultChannels: g.md,
                     numChattableChannels: g.X
                 });
-    return (0, r.jsx)(f, {
+    return (0, r.jsx)(h, {
         title: C ? p.intl.string(p.t.YZookZ) : p.intl.string(p.t['4GSygo']),
         description: y,
         icon: (0, r.jsx)(s.VL1, {
             size: 'md',
             color: 'currentColor',
-            className: h.channelIcon
+            className: f.channelIcon
         }),
         hasStarted: _ > 0 || C,
         status: v || O ? (c ? 'none' : 'good') : 'required',
@@ -192,7 +192,7 @@ function _(e) {
         O = 'none';
     return (
         v && (j >= 85 && !i ? (O = 'good') : j < 85 && (O = 'warning')),
-        (0, r.jsx)(f, {
+        (0, r.jsx)(h, {
             title: _ ? p.intl.string(p.t.AGjtFh) : p.intl.string(p.t.dqCzoa),
             description: p.intl.format(p.t.iuNisr, {
                 numChannels: x,
@@ -210,7 +210,7 @@ function _(e) {
             icon: (0, r.jsx)(s.iFz, {
                 size: 'md',
                 color: 'currentColor',
-                className: h.channelIcon
+                className: f.channelIcon
             }),
             hasStarted: v,
             status: O,
@@ -237,18 +237,18 @@ function v(e) {
         _ &&
             g &&
             (C = (0, r.jsx)(s.rsf, {
-                className: h.inlineSwitch,
+                className: f.inlineSwitch,
                 checked: b,
                 onChange: j,
                 disabled: !x
             })),
-        (0, r.jsx)(f, {
+        (0, r.jsx)(h, {
             title: p.intl.string(p.t.mRHqsr),
             description: O,
             icon: (0, r.jsx)(s.Vy8, {
                 size: 'md',
                 color: 'currentColor',
-                className: h.channelIcon
+                className: f.channelIcon
             }),
             hasStarted: _,
             status: v,

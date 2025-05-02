@@ -9,8 +9,8 @@ var l = n(200651),
     c = n(410575),
     d = n(318766),
     m = n(907040),
-    h = n(246133),
-    f = n(695346),
+    f = n(246133),
+    h = n(695346),
     p = n(293273),
     b = n(594174),
     S = n(626135),
@@ -305,9 +305,9 @@ class I extends r.PureComponent {
             N(this, 'handleSaveStatus', () => {
                 let { sourceAnalyticsContext: t, onClose: e } = this.props,
                     { emojiInfo: n, text: l, clearAfter: r, status: a } = this.state,
-                    i = f.co.getSetting();
+                    i = h.co.getSetting();
                 i !== a &&
-                    (0, h.Z)({
+                    (0, f.Z)({
                         nextStatus: a,
                         prevStatus: i,
                         analyticsContext: t

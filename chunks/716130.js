@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(430824),
     g = n(570961),
     p = n(208665),
-    h = n(959508),
-    f = n(290511),
+    f = n(959508),
+    h = n(290511),
     x = n(388032),
     b = n(795808);
 function j(e) {
@@ -64,7 +64,7 @@ function v(e) {
         d = c.filter((e) => e.inOnboarding),
         m = d.length,
         {
-            drag: h,
+            drag: f,
             drop: j,
             dragSourcePosition: _,
             setIsDraggable: v
@@ -82,8 +82,8 @@ function v(e) {
             v(!1);
         }, [v]),
         i.useEffect(() => {
-            h(j(O));
-        }, [h, j, O]),
+            f(j(O));
+        }, [f, j, O]),
         (0, r.jsxs)('div', {
             ref: O,
             className: s()(b.separatorSection, {
@@ -91,10 +91,10 @@ function v(e) {
                 [b.dropIndicatorAfter]: null != _ && m > _
             }),
             children: [
-                !l && d.length < f.b3
+                !l && d.length < h.b3
                     ? (0, r.jsxs)(o.P3F, {
                           className: b.addPrompt,
-                          onClick: () => (0, g.tS)(t, [...c, (0, f.yZ)(!0)], !1),
+                          onClick: () => (0, g.tS)(t, [...c, (0, h.yZ)(!0)], !1),
                           children: [
                               (0, r.jsx)(o.oFk, {
                                   size: 'custom',
@@ -145,7 +145,7 @@ function O(e) {
             })),
             {
                 id: 'separator',
-                data: (0, f.ae)()
+                data: (0, h.ae)()
             },
             ...y.map((e) => ({
                 id: e.id,
@@ -165,10 +165,10 @@ function O(e) {
                         required: !1
                     })
                 );
-            if (n.length > f.b3)
+            if (n.length > h.b3)
                 return void c.Z.show({
                     title: x.intl.string(x.t['Cxtq5+']),
-                    body: x.intl.formatToPlainString(x.t['pkbZ+f'], { numQuestions: f.b3 })
+                    body: x.intl.formatToPlainString(x.t['pkbZ+f'], { numQuestions: h.b3 })
                 });
             (0, g.tS)(u, [...n, ...r]);
         });
@@ -198,7 +198,7 @@ function O(e) {
                                       }),
                                 C.map((e, t) =>
                                     (0, r.jsx)(
-                                        h.Z,
+                                        f.Z,
                                         {
                                             guild: u,
                                             prompt: e,
@@ -227,7 +227,7 @@ function O(e) {
                             children: [
                                 y.map((e, t) =>
                                     (0, r.jsx)(
-                                        h.Z,
+                                        f.Z,
                                         {
                                             guild: u,
                                             prompt: e,
@@ -240,10 +240,10 @@ function O(e) {
                                         e.id
                                     )
                                 ),
-                                O.length < f.YW
+                                O.length < h.YW
                                     ? (0, r.jsxs)(o.P3F, {
                                           className: b.addPrompt,
-                                          onClick: () => (0, g.tS)(u, [...O, (0, f.yZ)(!1)], !1),
+                                          onClick: () => (0, g.tS)(u, [...O, (0, h.yZ)(!1)], !1),
                                           children: [
                                               (0, r.jsx)(o.oFk, {
                                                   size: 'custom',

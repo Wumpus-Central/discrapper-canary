@@ -137,7 +137,7 @@ function c(e, t) {
             },
             [d, n]
         ),
-        h = r.useCallback(
+        f = r.useCallback(
             (e) => {
                 d((t) => {
                     let { tags: n, value: r } = t;
@@ -151,7 +151,7 @@ function c(e, t) {
             },
             [d]
         ),
-        f = r.useCallback(
+        h = r.useCallback(
             (e) => (t) => {
                 d((n) => {
                     let { tags: r, value: i } = n,
@@ -352,8 +352,8 @@ function c(e, t) {
             },
             [C, O, y, j, l]
         ),
-        handleRemoveTag: h,
-        handleTagChangeEvent: f,
+        handleRemoveTag: f,
+        handleTagChangeEvent: h,
         handleSelectTag: x,
         handleUnselectTag: b,
         handleResetTagSelections: j,

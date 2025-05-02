@@ -15,8 +15,8 @@ var r = n(200651),
     m = n(324067),
     g = n(699516),
     p = n(594174),
-    h = n(434404),
-    f = n(388032);
+    f = n(434404),
+    h = n(388032);
 let x = 'NO_CHANNEL';
 function b(e) {
     return {
@@ -53,14 +53,14 @@ function _(e) {
             return (
                 e.unshift({
                     value: x,
-                    label: f.intl.string(f.t.wGiHkJ)
+                    label: h.intl.string(h.t.wGiHkJ)
                 }),
                 e
             );
         }, [c]),
         d = i.useCallback((e) => {
             let t = e === x ? null : e;
-            h.Z.updateGuild({ afkChannelId: t });
+            f.Z.updateGuild({ afkChannelId: t });
         }, []);
     return (0, r.jsx)(O, {
         value: null != a ? a : x,
@@ -85,14 +85,14 @@ function v(e) {
             return (
                 e.unshift({
                     value: x,
-                    label: f.intl.string(f.t.ibUhoa)
+                    label: h.intl.string(h.t.ibUhoa)
                 }),
                 e
             );
         }, [c]),
         d = i.useCallback((e) => {
             let t = e === x ? null : e;
-            h.Z.updateGuild({ systemChannelId: t });
+            f.Z.updateGuild({ systemChannelId: t });
         }, []);
     return (0, r.jsx)(O, {
         value: null != a ? a : x,

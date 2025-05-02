@@ -1,4 +1,4 @@
-n.d(e, { Z: () => f });
+n.d(e, { Z: () => h });
 var l = n(200651),
     r = n(120356),
     a = n.n(r),
@@ -9,7 +9,7 @@ var l = n(200651),
     c = n(875425),
     d = n(388032),
     m = n(73711);
-function h(t) {
+function f(t) {
     let { option: e, isSelected: n, onClick: r } = t,
         c = (0, s.Z)(e.value);
     return (0, l.jsx)(o.DY3, {
@@ -28,13 +28,13 @@ function h(t) {
         })
     });
 }
-function f(t) {
+function h(t) {
     let { currentValue: e, onChange: n } = t;
     return (0, l.jsx)('div', {
         className: m.customStatusLabelSelector,
         children: c.Ub.map((t) =>
             (0, l.jsx)(
-                h,
+                f,
                 {
                     option: t,
                     isSelected: e === t.value,

@@ -1,5 +1,5 @@
 n.d(t, {
-    Md: () => h,
+    Md: () => f,
     a0: () => p
 });
 var r = n(200651);
@@ -56,7 +56,7 @@ function g(e, t) {
     );
 }
 function p(e) {
-    let { dropHoveredIndex: t, formField: p, guild: h, index: x, isDragEnabled: b, submittedGuildJoinRequestsCount: j, removeFormField: _, updateFormField: v, updateFormFieldOrder: O, canRemove: C, actionsLocation: y, fieldStyle: N } = e,
+    let { dropHoveredIndex: t, formField: p, guild: f, index: x, isDragEnabled: b, submittedGuildJoinRequestsCount: j, removeFormField: _, updateFormField: v, updateFormFieldOrder: O, canRemove: C, actionsLocation: y, fieldStyle: N } = e,
         I = async () => {
             await _(x);
         },
@@ -75,16 +75,16 @@ function p(e) {
             isDropHovered: P,
             onEdit: () => {
                 0 === j
-                    ? f(p, E, h)
+                    ? h(p, E, f)
                     : (0, l.ZDy)(async () => {
                           let { default: e } = await n.e('74673').then(n.bind(n, 394045));
                           return (t) =>
                               (0, r.jsx)(
                                   e,
                                   g(m({}, t), {
-                                      guildId: h.id,
+                                      guildId: f.id,
                                       submittedGuildJoinRequestsCount: j,
-                                      onConfirm: () => f(p, E, h)
+                                      onConfirm: () => h(p, E, f)
                                   })
                               );
                       });
@@ -101,7 +101,7 @@ function p(e) {
                 c.Z,
                 m(
                     {
-                        channelId: h.rulesChannelId,
+                        channelId: f.rulesChannelId,
                         title: N === s.it.COMPACT ? d.intl.string(d.t['55+giY']) : d.intl.string(d.t['53vNcH']),
                         formField: p
                     },
@@ -118,7 +118,7 @@ function p(e) {
             return null;
     }
 }
-function h(e, t, i) {
+function f(e, t, i) {
     switch (e) {
         case s.QJ.TERMS:
             return (0, l.ZDy)(async () => {
@@ -171,7 +171,7 @@ function h(e, t, i) {
             });
     }
 }
-function f(e, t, i) {
+function h(e, t, i) {
     switch (e.field_type) {
         case s.QJ.TERMS:
             return (0, l.ZDy)(async () => {

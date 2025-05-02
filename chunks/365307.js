@@ -24,7 +24,7 @@ function g(e) {
             webhooks: m,
             editedWebhook: g,
             isFetching: p,
-            errors: h
+            errors: f
         } = (0, i.cj)([c.default], () => ({
             editedIntegration: c.default.editedIntegration,
             editedWebhook: c.default.editedWebhook,
@@ -47,7 +47,7 @@ function g(e) {
               editedWebhook: g,
               isFetchingWebhooks: p,
               hasChanges: c.default.hasChanges,
-              errors: h,
+              errors: f,
               refToScroller: t
           });
 }

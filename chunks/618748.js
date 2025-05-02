@@ -12,8 +12,8 @@ var i = n(442837),
     m = n(703656),
     g = n(577275),
     p = n(430824),
-    h = n(594174),
-    f = n(823379),
+    f = n(594174),
+    h = n(823379),
     x = n(730647),
     b = n(584825),
     j = n(723047),
@@ -132,7 +132,7 @@ function M(e) {
         c = null != a && n.hasFeature(P.oNc.ROLE_SUBSCRIPTIONS_ENABLED),
         { currentTab: g, setCurrentTab: b } = (0, S.dw)(),
         j = (0, x.f)(),
-        C = (0, i.e7)([h.default], () => h.default.getCurrentUser()),
+        C = (0, i.e7)([f.default], () => f.default.getCurrentUser()),
         I = (0, v.Z)(n.id),
         R = n.isOwner(C),
         L = () => {
@@ -164,7 +164,7 @@ function M(e) {
             t = (0, r.jsx)(T.Z, { guild: n });
             break;
         default:
-            (0, f.vE)(g);
+            (0, h.vE)(g);
     }
     return (0, r.jsxs)('div', {
         className: D.container,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
 var i = n(990547),
@@ -52,7 +52,7 @@ function p(e) {
         ]
     });
 }
-function h(e) {
+function f(e) {
     let { guild: t, config: n } = e,
         { isLoading: o, error: c, creatorMonetizationOnboardingMarketing: d } = (0, a.Z)(t.id);
     return ((0, s.Z)({

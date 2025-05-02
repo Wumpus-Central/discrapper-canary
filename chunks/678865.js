@@ -1,12 +1,15 @@
-n.d(e, { Z: () => i }), n(314940);
-var l = n(278074),
-    r = n(481060),
-    a = n(695346);
-function i() {
-    let t = a.co.getSetting();
-    return (0, l.EQ)(t)
-        .with(r.Skl.IDLE, () => r.Skl.IDLE)
-        .with(r.Skl.DND, () => r.Skl.DND)
-        .with(r.Skl.INVISIBLE, () => r.Skl.INVISIBLE)
-        .otherwise(() => r.Skl.ONLINE);
+n.d(e, { Z: () => a });
+var l = n(481060),
+    r = n(695346);
+function a() {
+    switch (r.co.getSetting()) {
+        case l.Skl.IDLE:
+            return l.Skl.IDLE;
+        case l.Skl.DND:
+            return l.Skl.DND;
+        case l.Skl.INVISIBLE:
+            return l.Skl.INVISIBLE;
+        default:
+            return l.Skl.ONLINE;
+    }
 }

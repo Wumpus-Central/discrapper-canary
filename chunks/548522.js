@@ -1,4 +1,4 @@
-n.d(t, { y: () => h }), n(388685);
+n.d(t, { y: () => f }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(793030),
@@ -11,15 +11,15 @@ var r = n(200651),
     m = n(592286),
     g = n(388032),
     p = n(539482);
-function h(e) {
+function f(e) {
     var t;
     let { guild: n, formFields: c } = e,
-        [h, x] = i.useState(c);
+        [f, x] = i.useState(c);
     i.useEffect(() => x(c), [c]);
     let b = null != (t = (0, a.A)({ guildId: n.id })) ? t : 0,
         [j, _] = i.useState(null),
-        v = i.useMemo(() => (null == h ? void 0 : h.some((e) => (0, s.J)(e))), [h]),
-        O = i.useMemo(() => h.length === m.nx, [h]),
+        v = i.useMemo(() => (null == f ? void 0 : f.some((e) => (0, s.J)(e))), [f]),
+        O = i.useMemo(() => f.length === m.nx, [f]),
         C = i.useCallback(
             (e) => {
                 d.Z.setPendingMemberVerificationRules(n.id, e), x(e), null != j && _(null);
@@ -28,31 +28,31 @@ function h(e) {
         ),
         y = i.useCallback(
             (e) => {
-                C([...h, e]);
+                C([...f, e]);
             },
-            [h, C]
+            [f, C]
         ),
         N = i.useCallback(
             (e) => {
-                C([...h.slice(0, e), ...h.slice(e + 1)]);
+                C([...f.slice(0, e), ...f.slice(e + 1)]);
             },
-            [h, C]
+            [f, C]
         ),
         I = i.useCallback(
             (e, t) => {
-                if (h[e] === t) return;
-                let n = [...h];
+                if (f[e] === t) return;
+                let n = [...f];
                 (n[e] = t), C(n);
             },
-            [h, C]
+            [f, C]
         ),
         E = i.useCallback(
             (e, t, n) => {
-                let r = h.indexOf(e),
-                    i = [...h];
+                let r = f.indexOf(e),
+                    i = [...f];
                 null != t && t !== r && (i.splice(r, 1), i.splice(t, 0, e), x(i)), n ? (C(i), null !== j && _(null)) : j !== t && _(t);
             },
-            [j, h, C]
+            [j, f, C]
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -61,22 +61,22 @@ function h(e) {
                 color: 'text-muted',
                 className: p.title,
                 children: g.intl.format(g.t['sm+75u'], {
-                    currentCount: h.length,
+                    currentCount: f.length,
                     maxCount: m.nx
                 })
             }),
-            h.map((e) =>
+            f.map((e) =>
                 (0, u.a0)({
                     dropHoveredIndex: j,
                     formField: e,
                     guild: n,
-                    index: h.indexOf(e),
-                    isDragEnabled: h.length > 1,
+                    index: f.indexOf(e),
+                    isDragEnabled: f.length > 1,
                     submittedGuildJoinRequestsCount: b,
                     removeFormField: N,
                     updateFormField: I,
                     updateFormFieldOrder: E,
-                    canRemove: h.length > 1,
+                    canRemove: f.length > 1,
                     actionsLocation: 'side',
                     fieldStyle: s.it.COMPACT
                 })
@@ -90,11 +90,11 @@ function h(e) {
                         allowTerms: !v
                     })
                 }),
-            !O && (0, r.jsx)(f, { addFormField: y })
+            !O && (0, r.jsx)(h, { addFormField: y })
         ]
     });
 }
-function f(e) {
+function h(e) {
     let { addFormField: t } = e,
         n = i.useMemo(
             () => [

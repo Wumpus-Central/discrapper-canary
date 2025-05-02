@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(780384),
     g = n(481060),
     p = n(37234),
-    h = n(410030),
-    f = n(607070),
+    f = n(410030),
+    h = n(607070),
     x = n(100527),
     b = n(605436),
     j = n(663993),
@@ -120,7 +120,7 @@ function en(e) {
     let { role: t, guildId: n, selectedStyle: i, disabled: l, shouldShowUpsell: a } = e,
         o = (e) => l || (a && [k.g.HOLOGRAPHIC, k.g.GRADIENT].includes(e)),
         u = el(H.intl.string(H.t.Mi9KbW)),
-        f = (0, h.ZP)(),
+        h = (0, f.ZP)(),
         b = (0, O.oC)(n, t),
         j = {
             dark: {
@@ -182,7 +182,7 @@ function en(e) {
                                             },
                                             message: u,
                                             preview: !0,
-                                            roleIcon: null != b ? b : (0, m.ap)(f) ? j.light : j.dark,
+                                            roleIcon: null != b ? b : (0, m.ap)(h) ? j.light : j.dark,
                                             isGroupStart: !0,
                                             disableInteraction: !0,
                                             previewGuildId: n
@@ -243,7 +243,7 @@ function en(e) {
     });
 }
 function er() {
-    let e = (0, u.e7)([f.Z], () => f.Z.useReducedMotion),
+    let e = (0, u.e7)([h.Z], () => h.Z.useReducedMotion),
         { gradientStyle: t, gradientClassname: n } = (0, g.JUn)({
             primaryColor: (0, c.Rf)(z.SK.primary_color),
             secondaryColor: (0, c.Rf)(z.SK.secondary_color),
@@ -355,11 +355,11 @@ function es(e) {
             src: K,
             name: a.name
         },
-        h = {
+        f = {
             src: X,
             name: a.name
         },
-        f = (0, O.oC)(o, a),
+        h = (0, O.oC)(o, a),
         x = (0, _.Q3)('RolePreview') ? [F.BRd.LIGHT, F.BRd.DARK, F.BRd.DARKER, F.BRd.MIDNIGHT] : [F.BRd.LIGHT, F.BRd.DARK];
     return (0, r.jsx)(g.Rny, {
         children: (0, r.jsx)('div', {
@@ -379,7 +379,7 @@ function es(e) {
                                     children: (0, r.jsx)(N.Z, {
                                         author: d,
                                         message: u,
-                                        roleIcon: null != f ? f : (0, m.ap)(e) ? h : p,
+                                        roleIcon: null != h ? h : (0, m.ap)(e) ? f : p,
                                         previewGuildId: o,
                                         isGroupStart: !0
                                     })
@@ -423,12 +423,12 @@ function eo(e) {
         d = (0, E.Ek)(t.id, 'GuildSettingsRolesEditDisplay') && (0, I.QZ)('GuildSettingsRolesEditDisplay') && !(0, I.OC)(t.id, 'GuildSettingsRolesEditDisplay'),
         m = (0, b.pM)(null == t ? void 0 : t.id, n.id),
         p = i || m,
-        h = (0, u.e7)([R.Z], () => R.Z.canImpersonateRole(t, n)),
-        { headerHeight: f, headerRef: x } = (0, A.Z)(0),
+        f = (0, u.e7)([R.Z], () => R.Z.canImpersonateRole(t, n)),
+        { headerHeight: h, headerRef: x } = (0, A.Z)(0),
         { scrolledToTop: j, handleScroll: _ } = (0, M.V)();
     return (0, r.jsx)(g.yWw, {
         className: V.scroller,
-        style: { scrollPaddingTop: f },
+        style: { scrollPaddingTop: h },
         onScroll: _,
         children: (0, r.jsxs)('div', {
             className: Y.contentWidth,
@@ -492,7 +492,7 @@ function eo(e) {
                     role: n,
                     disabled: p
                 }),
-                h
+                f
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(g.$i$, { className: V.divider }),

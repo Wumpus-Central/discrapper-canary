@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(999382),
     g = n(743475),
     p = n(983135),
-    h = n(570961),
-    f = n(208665),
+    f = n(570961),
+    h = n(208665),
     x = n(359191),
     b = n(84658),
     j = n(142961),
@@ -36,8 +36,8 @@ function T(e) {
             let e = (0, b.lg)(l);
             return null != e && !x.Z.isEducationUpsellDismissed(e);
         }),
-        f = (0, j.Z)(n),
-        S = !f && m;
+        h = (0, j.Z)(n),
+        S = !h && m;
     switch (
         (i.useEffect(() => {
             (0, u.EW)(o.z.COMMUNITY_ONBOARDING_NEW_BADGE);
@@ -45,7 +45,7 @@ function T(e) {
         l)
     ) {
         case b.PG.LANDING:
-            t = f
+            t = h
                 ? (0, r.jsx)(O.Z, {
                       completed: !0,
                       guildId: n
@@ -56,31 +56,31 @@ function T(e) {
             t = (0, r.jsx)(N.Z, {});
             break;
         case b.PG.DEFAULT_CHANNELS:
-            t = (0, r.jsx)(_.Z, { saveOnClose: !f });
+            t = (0, r.jsx)(_.Z, { saveOnClose: !h });
             break;
         case b.PG.CUSTOMIZATION_QUESTIONS:
-            t = (0, r.jsx)(C.ZP, { saveOnClose: !f });
+            t = (0, r.jsx)(C.ZP, { saveOnClose: !h });
             break;
         case b.PG.HOME_SETTINGS:
-            t = (0, r.jsx)(v.Z, { saveOnClose: !f });
+            t = (0, r.jsx)(v.Z, { saveOnClose: !h });
             break;
         case b.PG.REVIEW:
             t = (0, r.jsx)(O.Z, {
-                completed: f,
+                completed: h,
                 guildId: n
             });
     }
     return (0, r.jsxs)('div', {
         className: s()(E.onboardingContainer, { [E.upsellOnTop]: S }),
         children: [
-            !f &&
+            !h &&
                 l !== b.PG.LANDING &&
                 (0, r.jsx)(P, {
                     setOnboardingStep: p.$K,
                     page: l,
                     homeSettingsEnabled: !0
                 }),
-            f &&
+            h &&
                 l !== b.PG.LANDING &&
                 (0, r.jsx)('div', {
                     children: (0, r.jsxs)(c.zxk, {
@@ -88,7 +88,7 @@ function T(e) {
                         look: c.zxk.Looks.BLANK,
                         size: c.zxk.Sizes.MIN,
                         onClick: () => {
-                            (0, h.NB)(), (0, g.BG)(), (0, p.$K)(b.PG.LANDING);
+                            (0, f.NB)(), (0, g.BG)(), (0, p.$K)(b.PG.LANDING);
                         },
                         children: [
                             (0, r.jsx)(d.Z, {
@@ -113,7 +113,7 @@ function P(e) {
         o = (e) => {
             if (!l) return () => n(e);
         },
-        u = (0, a.e7)([f.Z], () => f.Z.advancedMode);
+        u = (0, a.e7)([h.Z], () => h.Z.advancedMode);
     return (0, r.jsxs)('div', {
         className: E.progressContainer,
         children: [

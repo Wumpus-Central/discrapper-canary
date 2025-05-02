@@ -11,7 +11,7 @@ var r = n(200651),
     m = n(981631),
     g = n(388032),
     p = n(499650);
-function h(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function h(e) {
     }
     return e;
 }
-function f(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -113,8 +113,8 @@ function j(e) {
         });
     return (0, r.jsxs)(
         'div',
-        f(
-            h(
+        h(
+            f(
                 {
                     className: p.buttonsContainer,
                     'aria-label': g.intl.string(g.t.FJjrIy),
@@ -128,8 +128,8 @@ function j(e) {
                         className: s()(p.colorSwatch, { [p.disabled]: l }),
                         children: (0, r.jsxs)(
                             o.P3F,
-                            f(
-                                h(
+                            h(
+                                f(
                                     {
                                         onClick: l
                                             ? void 0
@@ -164,8 +164,8 @@ function j(e) {
                         children: [
                             (0, r.jsxs)(
                                 o.P3F,
-                                f(
-                                    h(
+                                h(
+                                    f(
                                         {
                                             onClick: l ? void 0 : d,
                                             'aria-disabled': l
@@ -196,7 +196,7 @@ function j(e) {
                                     renderPopout: (e) =>
                                         (0, r.jsx)(
                                             o.Z$W,
-                                            f(h({}, e), {
+                                            h(f({}, e), {
                                                 value: t,
                                                 onChange: x
                                             })
@@ -204,7 +204,7 @@ function j(e) {
                                     children: (e) =>
                                         (0, r.jsx)(
                                             o.P3F,
-                                            f(h({}, e), {
+                                            h(f({}, e), {
                                                 className: p.dropperIconButton,
                                                 'aria-label': g.intl.string(g.t.Qp04hI),
                                                 children: (0, r.jsx)(o.ilE, {

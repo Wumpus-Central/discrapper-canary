@@ -1,4 +1,4 @@
-n.d(t, { W: () => h });
+n.d(t, { W: () => f });
 var r = n(200651),
     i = n(192379),
     l = n(481060),
@@ -11,9 +11,9 @@ var r = n(200651),
     m = n(388032),
     g = n(387136);
 let p = 'NO_SYSTEM_CHANNEL';
-function h(e) {
+function f(e) {
     var t;
-    let { guild: n, canManageGuild: h, switchClassName: f } = e,
+    let { guild: n, canManageGuild: f, switchClassName: h } = e,
         { enableDeadchat: x } = s.Z.useExperiment(
             {
                 guildId: n.id,
@@ -45,62 +45,62 @@ function h(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.j7V, {
-                className: f,
+                className: h,
                 onChange: j,
                 value: !(0, c.yE)(n.systemChannelFlags, d.xmn.SUPPRESS_JOIN_NOTIFICATIONS),
                 hideBorder: !0,
-                disabled: !h || I === p,
+                disabled: !f || I === p,
                 children: m.intl.string(m.t['+f0bXV'])
             }),
             (0, r.jsx)(l.j7V, {
-                className: f,
+                className: h,
                 onChange: O,
                 value: !(0, c.yE)(n.systemChannelFlags, d.xmn.SUPPRESS_JOIN_NOTIFICATION_REPLIES),
                 hideBorder: !0,
-                disabled: !h || I === p,
+                disabled: !f || I === p,
                 children: m.intl.string(m.t['72k7jY'])
             }),
             (0, r.jsx)(l.j7V, {
-                className: f,
+                className: h,
                 onChange: _,
                 value: !(0, c.yE)(n.systemChannelFlags, d.xmn.SUPPRESS_PREMIUM_SUBSCRIPTIONS),
                 hideBorder: !0,
-                disabled: !h || I === p,
+                disabled: !f || I === p,
                 children: m.intl.string(m.t['2L8NCA'])
             }),
             (0, r.jsx)(l.j7V, {
-                className: f,
+                className: h,
                 onChange: v,
                 value: !(0, c.yE)(n.systemChannelFlags, d.xmn.SUPPRESS_GUILD_REMINDER_NOTIFICATIONS),
                 hideBorder: !0,
-                disabled: !h || I === p,
+                disabled: !f || I === p,
                 children: m.intl.string(m.t['NvnW+f'])
             }),
             S &&
                 (0, r.jsx)(l.j7V, {
-                    className: f,
+                    className: h,
                     onChange: C,
                     value: !(0, c.yE)(n.systemChannelFlags, d.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATIONS),
                     hideBorder: !0,
-                    disabled: !h || I === p,
+                    disabled: !f || I === p,
                     children: m.intl.string(m.t['54n19f'])
                 }),
             T &&
                 (0, r.jsx)(l.j7V, {
-                    className: f,
+                    className: h,
                     onChange: N,
                     value: !(0, c.yE)(n.systemChannelFlags, d.xmn.SUPPRESS_ROLE_SUBSCRIPTION_PURCHASE_NOTIFICATION_REPLIES),
                     hideBorder: !0,
-                    disabled: !h || I === p,
+                    disabled: !f || I === p,
                     children: m.intl.string(m.t.IhF5d3)
                 }),
             x &&
                 (0, r.jsx)(l.j7V, {
-                    className: f,
+                    className: h,
                     onChange: y,
                     value: !(0, c.yE)(n.systemChannelFlags, d.xmn.SUPPRESS_CHANNEL_PROMPT_DEADCHAT),
                     hideBorder: !0,
-                    disabled: !h || I === p,
+                    disabled: !f || I === p,
                     children: (0, r.jsxs)('div', {
                         className: g.flexRow,
                         children: [m.intl.string(m.t['3yOX19']), (0, r.jsx)(a.Z, {})]

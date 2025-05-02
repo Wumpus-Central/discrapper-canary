@@ -6,8 +6,8 @@ var i = n(73880),
     s = n(388032),
     a = n(664305);
 let o = function (e) {
-    let { formField: t, index: n, isDragEnabled: o, isDropHovered: c, onDrop: u, onEdit: d, onRemove: m, canRemove: g, actionsLocation: p, fieldStyle: h } = e,
-        { label: f, placeholder: x } = t;
+    let { formField: t, index: n, isDragEnabled: o, isDropHovered: c, onDrop: u, onEdit: d, onRemove: m, canRemove: g, actionsLocation: p, fieldStyle: f } = e,
+        { label: h, placeholder: x } = t;
     return (0, r.jsx)(l.Z, {
         field: t,
         index: n,
@@ -16,10 +16,10 @@ let o = function (e) {
         onDrop: u,
         onEdit: d,
         onRemove: m,
-        title: f,
+        title: h,
         canRemove: g,
         actionsLocation: p,
-        fieldStyle: h,
+        fieldStyle: f,
         children: (0, r.jsx)(i.Q8, {
             className: a.fieldBackground,
             placeholder: null != x ? x : s.intl.string(s.t['Sqn+Wl']),

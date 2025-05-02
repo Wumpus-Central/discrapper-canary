@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(981631),
     g = n(388032),
     p = n(409866);
-let h = o.Z.getArticleURL(m.BhN.GUILD_AUTOMOD_REGEX);
-function f(e) {
+let f = o.Z.getArticleURL(m.BhN.GUILD_AUTOMOD_REGEX);
+function h(e) {
     let { hasErrors: t, text: n, errorText: i } = e;
     return t
         ? (0, r.jsx)('div', {
@@ -21,7 +21,7 @@ function f(e) {
                   className: p.errorSpan,
                   variant: 'text-xs/medium',
                   color: 'text-danger',
-                  children: null != i ? i : g.intl.format(g.t.jKYAPj, { helpArticle: h })
+                  children: null != i ? i : g.intl.format(g.t.jKYAPj, { helpArticle: f })
               })
           })
         : (0, r.jsx)(a.Text, {
@@ -81,8 +81,8 @@ function x(e) {
                 tagErrors: O,
                 maxTags: d.VW
             }),
-            (0, r.jsx)(f, {
-                text: g.intl.format(g.t['PGC/AA'], { helpArticle: h }),
+            (0, r.jsx)(h, {
+                text: g.intl.format(g.t['PGC/AA'], { helpArticle: f }),
                 hasErrors: b.length > 0 || null != x,
                 errorText:
                     null !=

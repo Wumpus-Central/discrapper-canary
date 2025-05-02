@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(481060),
     g = n(410030),
     p = n(367907),
-    h = n(768762),
-    f = n(626135),
+    f = n(768762),
+    h = n(626135),
     x = n(585483),
     b = n(999382),
     j = n(743475),
@@ -151,7 +151,7 @@ function M(e) {
             return !0;
         },
         $ = async () => {
-            f.default.track(
+            h.default.track(
                 R.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
                 A(k({}, (0, p.hH)(l)), {
                     step: I.PG[b],
@@ -163,7 +163,7 @@ function M(e) {
                 (await J()) && (0, _.IG)(l, b);
         },
         ee = async () => {
-            f.default.track(
+            h.default.track(
                 R.rMx.GUILD_SETTINGS_ONBOARDING_WIZARD_PROGRESS_CTA_CLICKED,
                 A(k({}, (0, p.hH)(l)), {
                     step: I.PG[b],
@@ -185,9 +185,9 @@ function M(e) {
             children: (0, r.jsxs)('span', {
                 className: D.button,
                 children: [
-                    (0, r.jsx)(h.Z, {
+                    (0, r.jsx)(f.Z, {
                         className: D.arrow,
-                        direction: h.Z.Directions.LEFT
+                        direction: f.Z.Directions.LEFT
                     }),
                     Z.intl.string(Z.t['13/7kZ'])
                 ]
@@ -205,9 +205,9 @@ function M(e) {
                 style: { color: X },
                 children: [
                     G ? Z.intl.string(Z.t.PDTjLC) : Z.intl.string(Z.t['5WxrcX']),
-                    (0, r.jsx)(h.Z, {
+                    (0, r.jsx)(f.Z, {
                         className: D.arrow,
-                        direction: h.Z.Directions.RIGHT
+                        direction: f.Z.Directions.RIGHT
                     })
                 ]
             })

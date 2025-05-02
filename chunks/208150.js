@@ -12,8 +12,8 @@ var i = n(442837),
     m = n(926491),
     g = n(145499),
     p = n(424218),
-    h = n(267642),
-    f = n(63063),
+    f = n(267642),
+    h = n(63063),
     x = n(999382),
     b = n(981631),
     j = n(611480),
@@ -83,7 +83,7 @@ let O = {
                 }),
                 (0, r.jsx)(l.R94, {
                     type: l.geA.DESCRIPTION,
-                    children: _.intl.format(_.t.UBj0aW, { articleUrl: f.Z.getArticleURL(b.BhN.STICKERS_UPLOAD) })
+                    children: _.intl.format(_.t.UBj0aW, { articleUrl: h.Z.getArticleURL(b.BhN.STICKERS_UPLOAD) })
                 })
             ]
         }),
@@ -93,9 +93,9 @@ let O = {
             i,
             { guild: l, guildStickers: s } = e,
             a = l.premiumTier,
-            o = (0, h.Qi)(s, a),
-            u = (0, h.FZ)(a),
-            d = (0, h.A3)(a),
+            o = (0, f.Qi)(s, a),
+            u = (0, f.FZ)(a),
+            d = (0, f.A3)(a),
             m = s.length;
         return null == u || a === b.Eu4.TIER_3 || o > 0
             ? null
@@ -104,7 +104,7 @@ let O = {
                   : ((t = _.intl.string(_.t.zT9Sxc)),
                     (n = _.intl.formatToPlainString(_.t.YaW9wM, {
                         level: u,
-                        numAdditional: (0, h.ig)(u)
+                        numAdditional: (0, f.ig)(u)
                     })),
                     (i = b.qAy.BOOST_UPSELL_BANNER_SLOTS_FULL)),
               (0, r.jsx)(c.Z, {
@@ -115,7 +115,7 @@ let O = {
                       page: b.ZY5.GUILD_SETTINGS,
                       section: b.jXE.GUILD_SETTINGS_STICKERS,
                       object: i,
-                      objectType: (0, h.ge)(u)
+                      objectType: (0, f.ge)(u)
                   }
               }));
     },

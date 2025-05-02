@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(637853),
     g = n(473403),
     p = n(216306),
-    h = n(743475),
-    f = n(827907),
+    f = n(743475),
+    h = n(827907),
     x = n(868814),
     b = n(981631),
     j = n(388032),
@@ -62,7 +62,7 @@ function O(e, t) {
 }
 function C(e) {
     let { guild: t, channel: i } = e,
-        l = (0, f.Mf)(i.id);
+        l = (0, h.Mf)(i.id);
     return 'null' === i.id
         ? (0, r.jsx)('div', {
               className: s()(_.categoryRow, _.uncategorized),
@@ -92,7 +92,7 @@ function C(e) {
               onClick: (e) => (
                   e.stopPropagation(),
                   (0, d.s)(t.id, i.id)
-                      ? (0, h.pt)(i.id)
+                      ? (0, f.pt)(i.id)
                       : (0, o.ZDy)(async () => {
                             let { default: e } = await n.e('35641').then(n.bind(n, 89216));
                             return (n) =>
@@ -141,10 +141,10 @@ let y = i.memo(function () {
     }),
     I = i.memo(function (e) {
         let { channel: t, category: i, guild: l, isFirstChannel: p, isLastChannel: C, tooltipDirection: I = 'right' } = e,
-            E = (0, f.Mf)(t.id, i.id),
-            S = (0, f.t4)(t.id, i.id),
-            T = (0, f.EH)(t.id, i.id),
-            P = (0, f.lL)(l.id, i.id),
+            E = (0, h.Mf)(t.id, i.id),
+            S = (0, h.t4)(t.id, i.id),
+            T = (0, h.EH)(t.id, i.id),
+            P = (0, h.lL)(l.id, i.id),
             w = null != (0, x.Z)(l).find((e) => e.id === t.id),
             R = (0, m.mn)(t.id),
             Z = (e) => {
@@ -152,7 +152,7 @@ let y = i.memo(function () {
                     return (
                         e.stopPropagation(),
                         (0, d.s)(l.id, t.id)
-                            ? (0, h.pt)(t.id)
+                            ? (0, f.pt)(t.id)
                             : (0, o.ZDy)(async () => {
                                   let { default: e } = await n.e('35641').then(n.bind(n, 89216));
                                   return (n) =>

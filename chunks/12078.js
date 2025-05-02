@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(768581),
     g = n(921948),
     p = n(434404),
-    h = n(981631),
-    f = n(570911),
+    f = n(981631),
+    h = n(570911),
     x = n(388032),
     b = n(364313);
 function j(e) {
@@ -137,7 +137,7 @@ function C(e) {
     var t;
     let { profile: n, onCustomBannerChange: l, canManageGuild: u } = e,
         m = (0, a.e7)([d.Z], () => d.Z.getGuild(n.id)),
-        g = null != (t = null == m ? void 0 : m.hasFeature(h.oNc.DISCOVERABLE)) && t,
+        g = null != (t = null == m ? void 0 : m.hasFeature(f.oNc.DISCOVERABLE)) && t,
         C = n.id,
         y = i.useCallback(
             (e) => () => {
@@ -160,7 +160,7 @@ function C(e) {
                     handleClick: y(null),
                     hasCustomBanner: g && null != n.customBanner
                 }),
-                f.cb.map((e) => {
+                h.cb.map((e) => {
                     let { name: t, color: n } = e;
                     return (0, r.jsx)(
                         o.ua7,

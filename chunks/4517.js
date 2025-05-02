@@ -444,21 +444,22 @@ let ee = i.forwardRef(function (e, t) {
           });
 });
 function et(e) {
-    var { emoji: t, text: n, onCloseProfile: o } = e,
-        a = V(e, ['emoji', 'text', 'onCloseProfile']);
-    let [s, l] = i.useState(!1);
+    var { emoji: t, text: n, label: o, onCloseProfile: a } = e,
+        s = V(e, ['emoji', 'text', 'label', 'onCloseProfile']);
+    let [l, c] = i.useState(!1);
     return (0, r.jsx)(
         ee,
-        B(U({}, a), {
+        B(U({}, s), {
             emoji: t,
             text: n,
+            label: o,
             className: k.editable,
-            onShowToolbar: l,
+            onShowToolbar: c,
             renderToolbar: (e) =>
                 (0, r.jsx)(D.Z, {
-                    isVisible: s,
+                    isVisible: l,
                     isExpandable: e,
-                    onCloseProfile: o
+                    onCloseProfile: a
                 })
         })
     );
@@ -511,6 +512,7 @@ function en(e) {
                         ref: y,
                         emoji: t,
                         text: n,
+                        label: o,
                         themeType: c,
                         className: E ? k.hoisted : void 0,
                         onShowToolbar: D,

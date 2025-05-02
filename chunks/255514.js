@@ -30,8 +30,8 @@ var r = n(200651),
     k = n(749534),
     E = n(157759),
     w = n(521332),
-    R = n(905434),
-    D = n(196627),
+    D = n(905434),
+    R = n(196627),
     A = n(289809),
     M = n(739319),
     L = n(842401),
@@ -93,8 +93,23 @@ let V = (e) => {
         [ep, ex] = l.useState(() => ({})),
         [eb, e_] = l.useState(() => ({})),
         ef = l.useMemo(() => ('message' === n.name ? n.record.channel_id : void 0), [n]),
-        eh = l.useMemo(() => (0, s.VP)(el, ei, et, eb, ep), [el, ei, et, eb, ep]),
-        eg = function (e, t) {
+        eh = l.useCallback(
+            (e) => ({
+                nodeRef: t.id,
+                destination: e,
+                textInput: null != el || null != ei ? eb : void 0,
+                multiSelect:
+                    null != et
+                        ? {
+                              name: et.name,
+                              state: ep
+                          }
+                        : void 0
+            }),
+            [t, el, ei, et, ep, eb]
+        ),
+        eg = l.useMemo(() => (0, s.VP)(el, ei, et, eb, ep), [el, ei, et, eb, ep]),
+        ev = function (e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                 r = W({}, eb);
             (r[e] = {
@@ -103,23 +118,9 @@ let V = (e) => {
             }),
                 e_(r);
         },
-        ev = l.useMemo(
-            () => (e) => {
-                K({
-                    nodeRef: t.id,
-                    destination: e,
-                    textInput: null != el || null != ei ? eb : void 0,
-                    multiSelect:
-                        null != et
-                            ? {
-                                  name: et.name,
-                                  state: ep
-                              }
-                            : void 0
-                });
-            },
-            [t, K, et, ep, eb, el, ei]
-        );
+        ej = (e) => {
+            K(eh(e));
+        };
     l.useEffect(() => {
         null != J && ex(J), null != ee && e_(ee);
     }, [J, ee]),
@@ -151,35 +152,28 @@ let V = (e) => {
                             );
             }
         }, [et]);
-    let ej = (e) => {
+    let ey = (e) => {
             e === z.evJ.INVALID_FORM_BODY ? em(U.intl.string(U.t.VjAAuL)) : em(U.intl.string(U.t.h6D8V1));
         },
-        ey = () =>
-            Q({
-                nodeRef: t.id,
-                destination: ['', e.successNodeId]
-            })
+        eO = () => {
+            let t = ['', e.successNodeId];
+            Q(eh(t))
                 .then(() => {
-                    em(''), ev(['', e.successNodeId]);
+                    em(''), ej(t);
                 })
                 .catch((e) => {
                     var t;
-                    ej(null == (t = e.body) ? void 0 : t.code);
+                    ey(null == (t = e.body) ? void 0 : t.code);
                 })
                 .finally(() => {
                     es(!1);
                 });
+        };
     l.useEffect(() => {
-        t.is_auto_submit &&
-            !ec &&
-            (ed(!0),
-            Q({
-                nodeRef: t.id,
-                destination: ['', t.id]
-            }));
-    }, [t.is_auto_submit, ec, Q, t.id]);
-    let eO = (0, o.fW)(V),
-        eZ = null != q(t, 'ignore_users') && ('message' === n.name || 'first_dm' === n.name || 'user' === n.name);
+        t.is_auto_submit && !ec && (ed(!0), Q(eh(['', t.id])));
+    }, [t.is_auto_submit, ec, Q, eh, t.id]);
+    let eZ = (0, o.fW)(V),
+        eI = null != q(t, 'ignore_users') && ('message' === n.name || 'first_dm' === n.name || 'user' === n.name);
     return (0, r.jsxs)('div', {
         className: G.container,
         children: [
@@ -187,7 +181,7 @@ let V = (e) => {
                 separator: !1,
                 direction: a.Z.Direction.VERTICAL,
                 className: G.header,
-                children: [(0, r.jsx)(D.Z, { element: q(t, 'success') }), (0, r.jsx)(Z.Z, { node: t }), (0, r.jsx)(C.Z, { node: t })]
+                children: [(0, r.jsx)(R.Z, { element: q(t, 'success') }), (0, r.jsx)(Z.Z, { node: t }), (0, r.jsx)(C.Z, { node: t })]
             }),
             (0, r.jsxs)(i.hzk, {
                 className: G.body,
@@ -207,7 +201,7 @@ let V = (e) => {
                     })(t) &&
                         (0, r.jsxs)(k.Z, {
                             children: [
-                                eZ &&
+                                eI &&
                                     (0, r.jsx)(I.Z, {
                                         user: 'user' === n.name ? n.record : n.record.author,
                                         channelId: ef,
@@ -221,7 +215,7 @@ let V = (e) => {
                                         reportId: $,
                                         reportType: n
                                     }),
-                                !eZ &&
+                                !eI &&
                                     null != q(t, 'mute_users') &&
                                     ('message' === n.name || 'first_dm' === n.name || 'user' === n.name || 'report_to_mod_message' === n.name) &&
                                     (0, r.jsx)(T.Z, {
@@ -257,16 +251,16 @@ let V = (e) => {
                         }),
                     null != q(t, 'settings_upsells') &&
                         ('message' === n.name || 'report_to_mod_message' === n.name) &&
-                        null != eO &&
+                        null != eZ &&
                         (0, r.jsx)(w.Z, {
-                            settingsUpsells: eO,
+                            settingsUpsells: eZ,
                             channelId: n.record.channel_id,
                             onModalClose: Y,
                             reportId: $,
                             reportType: n,
                             reportSubType: V
                         }),
-                    null != q(t, 'channel_preview') && 'stage_channel' === n.name && (0, r.jsx)(R.Z, { stageInstance: n.record }),
+                    null != q(t, 'channel_preview') && 'stage_channel' === n.name && (0, r.jsx)(D.Z, { stageInstance: n.record }),
                     null != q(t, 'guild_scheduled_event_preview') && 'guild_scheduled_event' === n.name && (0, r.jsx)(O.Z, { event: n.record }),
                     null != q(t, 'guild_directory_entry_preview') && 'guild_directory_entry' === n.name && (0, r.jsx)(v.Z, { entry: n.record }),
                     null != q(t, 'guild_discovery_preview') && 'guild_discovery' === n.name && (0, r.jsx)(j.Z, { entry: n.record }),
@@ -285,7 +279,7 @@ let V = (e) => {
                         ei.length > 0 &&
                         (0, r.jsx)(_.Z, {
                             elements: ei,
-                            onChange: eg,
+                            onChange: ev,
                             state: eb
                         }),
                     F.includes(n.name) &&
@@ -293,7 +287,7 @@ let V = (e) => {
                         el.length > 0 &&
                         (0, r.jsx)(g.Z, {
                             elements: el,
-                            onChange: eg,
+                            onChange: ev,
                             state: eb
                         }),
                     (0, r.jsxs)('div', {
@@ -301,7 +295,7 @@ let V = (e) => {
                         children: [
                             (0, r.jsx)(p.Z, {
                                 node: t,
-                                onSelectChild: ev
+                                onSelectChild: ej
                             }),
                             null != er && er.length > 0 ? (0, r.jsx)(h.Z, { elements: er }) : null
                         ]
@@ -317,7 +311,7 @@ let V = (e) => {
             (0, r.jsx)(c.Z, {
                 button: t.button,
                 submitting: eo,
-                disableNext: eh,
+                disableNext: eg,
                 onClick: (e) => {
                     switch (e.type) {
                         case 'done':
@@ -325,10 +319,10 @@ let V = (e) => {
                             Y();
                             break;
                         case 'next':
-                            ev(['', e.target]);
+                            ej(['', e.target]);
                             break;
                         case 'submit':
-                            es(!0), ey();
+                            es(!0), eO();
                     }
                 },
                 onBackClicked: e.onNavigateBack,

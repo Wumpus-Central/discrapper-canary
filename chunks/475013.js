@@ -15,8 +15,8 @@ var r = n(200651),
     m = n(650774),
     g = n(823379),
     p = n(434404),
-    h = n(764260),
-    f = n(946724),
+    f = n(764260),
+    h = n(946724),
     x = n(999382),
     b = n(130341),
     j = n(853813),
@@ -29,30 +29,30 @@ function y(e) {
 }
 let N = () => {
     let { guild: e } = (0, a.cj)([x.Z], () => x.Z.getProps()),
-        t = (0, a.e7)([f.Z], () => f.Z.formState),
-        n = (0, a.e7)([f.Z], () => f.Z.errorMessage);
+        t = (0, a.e7)([h.Z], () => h.Z.formState),
+        n = (0, a.e7)([h.Z], () => h.Z.errorMessage);
     return (0, r.jsx)(c.Z, {
         errorMessage: n,
         onSave: () => {
             if (null == e) return;
             let { id: t } = e,
-                n = f.Z.editedRoleIds.map((e) => f.Z.getRole(e)).filter(g.lm),
-                r = f.Z.getSortDeltas(),
+                n = h.Z.editedRoleIds.map((e) => h.Z.getRole(e)).filter(g.lm),
+                r = h.Z.getSortDeltas(),
                 i = null,
                 l = null;
-            f.Z.hasRoleConfigurationChanges && ((l = f.Z.editedRoleIdsForConfigurations), (i = f.Z.getEditedRoleConnectionConfigurationsMap())), (0, h.Gf)(t, n, r, l, i);
+            h.Z.hasRoleConfigurationChanges && ((l = h.Z.editedRoleIdsForConfigurations), (i = h.Z.getEditedRoleConnectionConfigurationsMap())), (0, f.Gf)(t, n, r, l, i);
         },
         submitting: t === C.QZA.SUBMITTING,
-        onReset: h.S1
+        onReset: f.S1
     });
 };
 function I(e) {
     let { refToScroller: t } = e,
         { guild: n, roles: l } = (0, a.cj)(
-            [f.Z],
+            [h.Z],
             () => ({
-                guild: f.Z.guild,
-                roles: f.Z.roles
+                guild: h.Z.guild,
+                roles: h.Z.roles
             }),
             []
         );
@@ -61,10 +61,10 @@ function I(e) {
     s()(null != c, 'Guild must have an everyone role');
     let g = i.useMemo(() => l.filter((e) => !(0, d.pM)(n.id, e.id)), [l, n]),
         p = (0, a.e7)([x.Z], () => x.Z.getSelectedRoleId()),
-        [h, C] = i.useState(g.length > 0);
+        [f, C] = i.useState(g.length > 0);
     i.useEffect(() => {
-        C(h || g.length > 0);
-    }, [h, g.length]),
+        C(f || g.length > 0);
+    }, [f, g.length]),
         (0, u.ZP)(() => {
             let e = m.Z.getMemberCount(n.id);
             null != e && e <= b.cm && o.Z.requestMembers(n.id, '', 0, !1);
@@ -80,7 +80,7 @@ function I(e) {
               selectedSection: N,
               setSelectedSection: I
           })
-        : h
+        : f
           ? (0, r.jsx)(v.Z, {
                 setEditRoleId: y,
                 guild: n,

@@ -3,12 +3,12 @@ n.d(t, {
     x: () => l
 });
 var a = n(818083);
-let r = (0, n(427164).le)({
+let i = (0, n(427164).le)({
         id: '2025-04_apex_app_sdk_aa',
         kind: 'user',
         defaultConfig: { value: 'default' }
     }),
-    i = (0, a.B)({
+    r = (0, a.B)({
         id: '2025-04_apex_start_session',
         kind: 'user',
         label: 'Apex App SDK Rollout',
@@ -23,9 +23,9 @@ let r = (0, n(427164).le)({
     });
 function l(e) {
     let { location: t } = e;
-    return r.useCurrentConfig({ location: t });
+    return i.useCurrentConfig({ location: t });
 }
 function s(e) {
     let { location: t } = e;
-    return i.useExperiment({ location: t }, { autoTrackExposure: !1 });
+    return r.useExperiment({ location: t }, { autoTrackExposure: !1 });
 }

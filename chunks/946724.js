@@ -15,8 +15,8 @@ var s,
     m = n(442837),
     g = n(570140),
     p = n(561654),
-    h = n(956226),
-    f = n(430824),
+    f = n(956226),
+    h = n(430824),
     x = n(990492),
     b = n(823379),
     j = n(700785),
@@ -50,7 +50,7 @@ let N = new Set(),
     k = new Map();
 function A() {
     if (null == r || null == T) return [];
-    let e = c()(f.Z.getRoles(r.id))
+    let e = c()(h.Z.getRoles(r.id))
         .values()
         .sortBy((e) => {
             let { position: t } = e;
@@ -90,7 +90,7 @@ function M() {
             (P = [
                 ...(T =
                     null != r
-                        ? c()(f.Z.getRoles(r.id))
+                        ? c()(h.Z.getRoles(r.id))
                               .values()
                               .sortBy((e) => {
                                   let { position: t } = e;
@@ -194,7 +194,7 @@ function z(e) {
     r = _.Z.getProps().guild;
     let n = [];
     null != r &&
-        (n = c()(f.Z.getRoles(r.id))
+        (n = c()(h.Z.getRoles(r.id))
             .values()
             .sortBy((e) => {
                 let { position: t } = e;
@@ -229,7 +229,7 @@ function z(e) {
 }
 class H extends (s = m.ZP.Store) {
     initialize() {
-        this.waitFor(_.Z, p.Z, f.Z);
+        this.waitFor(_.Z, p.Z, h.Z);
     }
     hasChanges() {
         return E || S || w;
@@ -353,7 +353,7 @@ let W = new H(
                       let { id: t, colors: n, currentStyle: r } = e,
                           i = F(t);
                       if (null == i) return !1;
-                      let l = (0, h.D)(n),
+                      let l = (0, f.D)(n),
                           s = k.get(t);
                       return (
                           null != s &&
@@ -409,7 +409,7 @@ let W = new H(
                           styleColors: l.styleColors
                       });
                       let s = l.styleColors[r],
-                          a = (0, h.D)(s);
+                          a = (0, f.D)(s);
                       return B(i, {
                           color: null != (t = s.primary_color) ? t : void 0,
                           colors: s,

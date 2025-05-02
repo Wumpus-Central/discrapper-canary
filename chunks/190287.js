@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(388685), n(539854);
+n.d(t, { Z: () => h }), n(388685), n(539854);
 var r = n(200651),
     i = n(192379),
     l = n(442837),
@@ -11,9 +11,9 @@ var r = n(200651),
     m = n(185923),
     g = n(388032),
     p = n(727138);
-let h = (e) => {
+let f = (e) => {
         var t;
-        let { reason: n = '', emoji_name: u, onSetReason: g, onSelectEmoji: h, onClearPressed: f, reasonMinLength: x, reasonMaxLength: b, placeholder: j, position: _ } = e,
+        let { reason: n = '', emoji_name: u, onSetReason: g, onSelectEmoji: f, onClearPressed: h, reasonMinLength: x, reasonMaxLength: b, placeholder: j, position: _ } = e,
             [v, O] = i.useState(!1),
             C = (0, l.e7)([d.Z], () => d.Z.isGuildMetadataLoaded());
         return (0, r.jsxs)('div', {
@@ -33,7 +33,7 @@ let h = (e) => {
                             pickerIntention: m.Hz.COMMUNITY_CONTENT,
                             closePopout: t,
                             onSelectEmoji: (e, n) => {
-                                null != e && h(e), n && t();
+                                null != e && f(e), n && t();
                             }
                         });
                     },
@@ -78,7 +78,7 @@ let h = (e) => {
                         (null != (t = null == n ? void 0 : n.length) ? t : 0) > 0 || null != u
                             ? (0, r.jsx)(s.zxk, {
                                   className: p.clearStatusButton,
-                                  onClick: f,
+                                  onClick: h,
                                   look: s.zxk.Looks.BLANK,
                                   size: s.zxk.Sizes.NONE,
                                   tabIndex: -1,
@@ -95,14 +95,14 @@ let h = (e) => {
             ]
         });
     },
-    f = (e) => {
+    h = (e) => {
         let { reasonMinLength: t, reasonMaxLength: n, guildId: i, reasons: l } = e,
             s = [g.intl.string(g.t['9dhBGh']), g.intl.string(g.t['8RmhKC']), g.intl.string(g.t['2t0V8/']), g.intl.string(g.t.l8WqCQ)],
             a = [];
         for (let e = 0; e < 4; e++)
             a.push(
                 (0, r.jsx)(
-                    h,
+                    f,
                     (function (e, t) {
                         return (
                             (t = null != t ? t : {}),

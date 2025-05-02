@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(273039),
     g = n(176354),
     p = n(434404),
-    h = n(185923),
-    f = n(388032),
+    f = n(185923),
+    h = n(388032),
     x = n(186667),
     b = n(381109);
 function j(e) {
@@ -44,7 +44,7 @@ let _ = { label: '' };
 function v(e) {
     let { emoji: t, disabled: n, handleClearEmoji: l, handleSelectEmoji: s } = e,
         p = i.useRef(null),
-        f = i.useMemo(
+        h = i.useMemo(
             () =>
                 null == t || null == t.name
                     ? null
@@ -63,7 +63,7 @@ function v(e) {
         ? (0, r.jsx)(u.Z, {
               tabIndex: -1,
               active: !1,
-              renderButtonContents: f
+              renderButtonContents: h
           })
         : (0, r.jsx)(m.Z, {
               className: x.emojiWrapper,
@@ -79,7 +79,7 @@ function v(e) {
                       return (0, r.jsx)(d.Z, {
                           closePopout: t,
                           onSelectEmoji: s(t),
-                          pickerIntention: h.Hz.GUILD_PROFILE
+                          pickerIntention: f.Hz.GUILD_PROFILE
                       });
                   },
                   children: (e, t) => {
@@ -93,7 +93,7 @@ function v(e) {
                                   ref: p,
                                   tabIndex: 0,
                                   active: l,
-                                  renderButtonContents: f
+                                  renderButtonContents: h
                               }),
                           Object.getOwnPropertyDescriptors
                               ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
@@ -126,8 +126,8 @@ function O(e) {
         ),
         [m, g] = i.useState(!1),
         p = i.useCallback(() => g(!0), []),
-        h = i.useCallback(() => g(!1), []),
-        f = i.useCallback(
+        f = i.useCallback(() => g(!1), []),
+        h = i.useCallback(
             (e) => {
                 o(t, l, { label: e });
             },
@@ -138,7 +138,7 @@ function O(e) {
         'aria-disabled': c,
         disabled: c,
         value: n.label,
-        onChange: f,
+        onChange: h,
         maxLength: 24,
         prefixElement: (0, r.jsx)(v, {
             emoji: b,
@@ -149,7 +149,7 @@ function O(e) {
         className: s()(x.traitContainer, { [x.traitContainerFocused]: m }),
         inputClassName: x.traitInput,
         onFocus: p,
-        onBlur: h
+        onBlur: f
     });
 }
 let C = [0, 1, 2, 3, 4];
@@ -169,10 +169,10 @@ function y(e) {
             (0, r.jsxs)('div', {
                 className: b.sectionHeader,
                 children: [
-                    (0, r.jsx)(a.vwX, { children: f.intl.string(f.t.S6JNrq) }),
+                    (0, r.jsx)(a.vwX, { children: h.intl.string(h.t.S6JNrq) }),
                     (0, r.jsx)(a.R94, {
                         type: 'description',
-                        children: f.intl.string(f.t.l7Ig5e)
+                        children: h.intl.string(h.t.l7Ig5e)
                     })
                 ]
             }),

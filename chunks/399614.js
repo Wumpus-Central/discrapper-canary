@@ -35,7 +35,7 @@ function p(e) {
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,14 +53,14 @@ function h(e, t) {
         e
     );
 }
-let f = [],
+let h = [],
     x = function (e) {
         let { guildId: t } = e,
             x = (0, l.Wu)([u.Z], () => {
                 var e;
-                return null != (e = u.Z.getSettings().resourceChannels) ? e : f;
+                return null != (e = u.Z.getSettings().resourceChannels) ? e : h;
             }),
-            b = i.useMemo(() => x.map((e) => h(p({}, e), { id: e.channelId })), [x]),
+            b = i.useMemo(() => x.map((e) => f(p({}, e), { id: e.channelId })), [x]),
             { handleDragStart: j, handleDragReset: _, handleDragComplete: v } = (0, a.Z)(b, c.lq),
             O = i.useCallback(
                 (e, n) => {
@@ -80,7 +80,7 @@ let f = [],
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                h(p({}, n), {
+                                f(p({}, n), {
                                     guildId: t,
                                     onSave: c.r2,
                                     onIconUpload: O

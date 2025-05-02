@@ -22,6 +22,9 @@ class m extends (r = s.ZP.Store) {
     initialize() {
         this.waitFor(u.default);
     }
+    handleConnectionOpen(e) {
+        this.processExperimentsMessage(e.apexUserExperiments), this.trackCurrentEvaluationExposure('user', u.default.getId(), 'connection_open');
+    }
     processExperimentsMessage(e) {
         var t;
         if (null == e || null == e.header || null == e.body) return !1;
@@ -70,13 +73,22 @@ class m extends (r = s.ZP.Store) {
         var n, r;
         return null == (r = h[e]) || null == (n = r[t]) ? void 0 : n.evaluationId;
     }
-    trackExposure(e, t, n, r) {
-        'user' === t &&
-            d.default.track(p.rMx.EXPERIMENT_USER_EVALUATION_EXPOSED, {
-                evaluation: e,
-                experiment: n,
-                exposure_location: r,
-                unit_type: t
+    trackEvaluationExposure(e) {
+        let { evaluationId: t, kind: n, experimentId: r, location: i } = e;
+        d.default.track(p.rMx.EXPERIMENT_USER_EVALUATION_EXPOSED, {
+            evaluation: t,
+            experiment: r,
+            exposure_location: i,
+            unit_type: n
+        });
+    }
+    trackCurrentEvaluationExposure(e, t, n) {
+        let r = this.getEvaluation(e, t);
+        null != r &&
+            this.trackEvaluationExposure({
+                evaluationId: r,
+                kind: e,
+                location: n
             });
     }
     isCompatibleConfig(e, t) {
@@ -91,7 +103,7 @@ class m extends (r = s.ZP.Store) {
         super(
             c.Z,
             {
-                CONNECTION_OPEN: (e) => this.processExperimentsMessage(e.apexUserExperiments),
+                CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
                 CONNECTION_OPEN_STATE_UPDATE: (e) => this.processExperimentsMessage(e.apexUserExperiments)
             },
             c.c.Early

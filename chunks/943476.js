@@ -1,13 +1,13 @@
 n.d(t, { Z: () => s }), n(388685);
 var a = n(192379),
-    r = n(314897),
-    i = n(823379),
+    i = n(314897),
+    r = n(823379),
     l = n(633289);
 function s(e) {
     let t = e.id,
         n = e.kind,
-        r = e.defaultConfig,
-        i = l.Z.registerExperiment(t, n, r);
+        i = e.defaultConfig,
+        r = l.Z.registerExperiment(t, n, i);
     return {
         definition: e,
         useCurrentConfig: function (e) {
@@ -20,12 +20,18 @@ function s(e) {
                             unitId: s,
                             kind: n
                         },
-                        i
+                        r
                     )
                 );
             return (
                 (0, a.useEffect)(() => {
-                    null != u && l.Z.trackExposure(u, n, t, e.location);
+                    null != u &&
+                        l.Z.trackEvaluationExposure({
+                            evaluationId: u,
+                            kind: n,
+                            experimentId: t,
+                            location: e.location
+                        });
                 }, [s, u, e.location]),
                 (0, a.useEffect)(() => {
                     let e = (function (e, t, n) {
@@ -44,8 +50,8 @@ function s(e) {
                             unitId: s,
                             kind: n
                         },
-                        i,
-                        (e) => c(null != e ? e : r)
+                        r,
+                        (e) => c(null != e ? e : i)
                     );
                     return () => e();
                 }, [s, u]),
@@ -54,16 +60,22 @@ function s(e) {
         },
         getCurrentConfig: function (e) {
             let a = d(n, e),
-                r = l.Z.getEvaluation(n, a);
+                i = l.Z.getEvaluation(n, a);
             return (
-                null != r && l.Z.trackExposure(r, n, t, e.location),
+                null != i &&
+                    l.Z.trackEvaluationExposure({
+                        evaluationId: i,
+                        kind: n,
+                        experimentId: t,
+                        location: e.location
+                    }),
                 l.Z.getAssignedConfig(
                     {
                         experimentId: t,
                         unitId: a,
                         kind: n
                     },
-                    i
+                    r
                 )
             );
         }
@@ -74,8 +86,8 @@ function d(e, t) {
         case 'guild':
             return t.guildId;
         case 'user':
-            return r.default.getId();
+            return i.default.getId();
         default:
-            (0, i.vE)(e);
+            (0, r.vE)(e);
     }
 }

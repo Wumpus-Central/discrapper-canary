@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => f });
 var r = n(200651);
 n(192379);
 var i = n(392711),
@@ -12,15 +12,15 @@ var i = n(392711),
     m = n(981631),
     g = n(388032),
     p = n(296205);
-function h(e) {
+function f(e) {
     let t,
         { guild: n } = e,
-        h = n.mfaLevel,
-        f = (0, l.e7)([o.Z], () => null != n && o.Z.can(m.Plq.MANAGE_GUILD, n), [n]),
+        f = n.mfaLevel,
+        h = (0, l.e7)([o.Z], () => null != n && o.Z.can(m.Plq.MANAGE_GUILD, n), [n]),
         x = (0, l.e7)([c.default], () => c.default.getCurrentUser()),
         b = n.isOwner(x),
         j = null == x ? void 0 : x.mfaEnabled,
-        _ = h === m.BpS.ELEVATED,
+        _ = f === m.BpS.ELEVATED,
         v = b && j,
         O = (0, i.throttle)(async (e) => {
             v &&
@@ -30,7 +30,7 @@ function h(e) {
                     isEnabled: !e
                 }));
         }, 1000);
-    if (!f) return null;
+    if (!h) return null;
     v || (t = b ? g.intl.format(g.t.nFwNyc, { settingsHook: () => a.Z.open(m.oAB.ACCOUNT) }) : g.intl.string(g.t['9Ghu4+']));
     let C = n.hasFeature(m.oNc.DISCOVERABLE);
     return (0, r.jsxs)('div', {

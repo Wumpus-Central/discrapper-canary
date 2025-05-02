@@ -21,7 +21,7 @@ var i = n(200651),
     O = n(981631),
     E = n(388032),
     _ = n(549607);
-function w(e) {
+function A(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -46,7 +46,7 @@ function w(e) {
     }
     return e;
 }
-function A(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,7 +71,7 @@ let P = (e) => {
                     classification_type: t,
                     classificationHook: (e, t) => (0, i.jsx)('strong', { children: e }, t)
                 };
-                return null == n ? E.intl.format(E.t.HpvELi, e) : (null == n ? void 0 : n.member_type) === p.wO.OWNER ? E.intl.format(E.t.X1ngSU, A(w({}, e), { guildName: null == n ? void 0 : n.name })) : E.intl.format(E.t.rmpEPD, A(w({}, e), { guildName: null == n ? void 0 : n.name }));
+                return null == n ? E.intl.format(E.t.HpvELi, e) : (null == n ? void 0 : n.member_type) === p.wO.OWNER ? E.intl.format(E.t.X1ngSU, w(A({}, e), { guildName: null == n ? void 0 : n.name })) : E.intl.format(E.t.rmpEPD, w(A({}, e), { guildName: null == n ? void 0 : n.name }));
             }, [t, n]);
         return (0, i.jsx)('div', {
             className: _.classificationHeader,
@@ -97,7 +97,7 @@ let P = (e) => {
                       (0, i.jsxs)('ul', {
                           className: _.classificationActionsTakenList,
                           children: [
-                              t.map((e) => (0, i.jsx)(C, { action: e }, e.id)),
+                              t.map((e) => (0, i.jsx)(S, { action: e }, e.id)),
                               null != n
                                   ? (0, i.jsx)(
                                         'li',
@@ -118,7 +118,7 @@ let P = (e) => {
                   ]
               });
     },
-    C = (e) => {
+    S = (e) => {
         let { action: t } = e;
         return (0, i.jsx)(i.Fragment, {
             children: t.descriptions.map((e, t) =>
@@ -138,7 +138,7 @@ let P = (e) => {
             )
         });
     },
-    S = (e) => {
+    C = (e) => {
         let { classificationTypeText: t, policyExplainerLink: n } = e;
         return (0, i.jsxs)(o.eee, {
             href: n,
@@ -192,7 +192,7 @@ let P = (e) => {
                     )
             })
         }),
-    L = (e) =>
+    I = (e) =>
         (0, i.jsx)('div', {
             className: _.classificationLetUsKnowContainer,
             children: e.hasBeenAppealed
@@ -203,7 +203,7 @@ let P = (e) => {
                       isAppealEligible: e.isAppealEligible
                   })
         }),
-    I = (e) => {
+    L = (e) => {
         let { tosLink: t, communityGuidelinesLink: n, classificationTypeText: a, policyExplainerLink: l, appealComponent: r } = e;
         return (0, i.jsxs)('div', {
             className: _.classificationActionExplanationContainer,
@@ -221,7 +221,7 @@ let P = (e) => {
                         communityGuidelinesLink: n
                     })
                 }),
-                (0, i.jsx)(S, {
+                (0, i.jsx)(C, {
                     classificationTypeText: a,
                     policyExplainerLink: l
                 }),
@@ -232,7 +232,7 @@ let P = (e) => {
     U = (e) => {
         var t;
         let { classificationId: n, source: r, onError: o, onClose: d } = e,
-            { classification: E, classificationRequestState: w, isAppealEligible: A, isDsaEligible: C, violationType: S } = (0, y.YG)(n),
+            { classification: E, classificationRequestState: A, isAppealEligible: w, isDsaEligible: S, violationType: C } = (0, y.YG)(n),
             N = (0, s.e7)([h.Z], () => h.Z.getAppealEligibility()),
             k = (0, g.P)(),
             U = null != E && null != E.flagged_content && E.flagged_content.length > 0,
@@ -242,9 +242,9 @@ let P = (e) => {
                 accountStanding: k,
                 classificationId: n,
                 hasFlaggedContent: U,
-                isDsaEligible: C,
+                isDsaEligible: S,
                 source: r,
-                violationType: S
+                violationType: C
             },
             R = a.useRef(M);
         return (a.useEffect(() => {
@@ -263,7 +263,7 @@ let P = (e) => {
                     violation_type: l
                 });
         }, [D]),
-        null == E && w === p.OY.FAILED)
+        null == E && A === p.OY.FAILED)
             ? (o(), null)
             : null == E
               ? null
@@ -279,12 +279,12 @@ let P = (e) => {
                             actions: E.actions,
                             classificationExpiration: (0, f.Pu)(E)
                         }),
-                        (0, i.jsx)(I, {
+                        (0, i.jsx)(L, {
                             classificationTypeText: E.description,
                             tosLink: b.sQ.TOS_LINK,
                             communityGuidelinesLink: b.sQ.COMMUNITY_GUIDELINES,
                             policyExplainerLink: E.explainer_link,
-                            appealComponent: (0, i.jsx)(L, {
+                            appealComponent: (0, i.jsx)(I, {
                                 hasBeenAppealed: null != E.appeal_status,
                                 onLetUsKnowClick: () => {
                                     u.default.track(O.rMx.SAFETY_HUB_ACTION, {
@@ -293,12 +293,12 @@ let P = (e) => {
                                         classification_ids: [Number(n)],
                                         source: r,
                                         is_violative_content_shown: U,
-                                        is_dsa_eligible: C,
-                                        violation_type: S
+                                        is_dsa_eligible: S,
+                                        violation_type: C
                                     }),
-                                        Z ? m.Z.open(n, d) : A && (c.Z.increment({ name: l.V.APPEAL_INGESTION_VIEW }), j.Z.open(n));
+                                        Z ? m.Z.open(n, d) : w && (c.Z.increment({ name: l.V.APPEAL_INGESTION_VIEW }), j.Z.open(n));
                                 },
-                                isAppealEligible: A || Z
+                                isAppealEligible: w || Z
                             })
                         })
                     ]

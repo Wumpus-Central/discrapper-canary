@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(676317),
     g = n(874993),
     p = n(45966),
-    h = n(637853),
-    f = n(352981),
+    f = n(637853),
+    h = n(352981),
     x = n(610403),
     b = n(923726),
     j = n(303737),
@@ -65,8 +65,8 @@ var r = n(200651),
     em = n(308619),
     eg = n(254925),
     ep = n(209402),
-    eh = n(981631),
-    ef = n(49898),
+    ef = n(981631),
+    eh = n(49898),
     ex = n(135899),
     eb = n(388032),
     ej = n(474913);
@@ -115,8 +115,8 @@ function ev(e, t) {
 }
 let eO = {
     getSectionDefinition: function (e, t) {
-        let eO = (0, f.p)(t.guild.id, 'guild_settings'),
-            eC = !1 === t.guild.hasFeature(eh.oNc.CREATOR_MONETIZABLE) && !1 === t.guild.hasFeature(eh.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
+        let eO = (0, h.p)(t.guild.id, 'guild_settings'),
+            eC = !1 === t.guild.hasFeature(ef.oNc.CREATOR_MONETIZABLE) && !1 === t.guild.hasFeature(ef.oNc.CREATOR_MONETIZABLE_PROVISIONAL),
             ey =
                 eO && eC
                     ? {
@@ -133,11 +133,11 @@ let eO = {
                           }),
                           ariaLabel: eb.intl.string(eb.t['KzCF//'])
                       },
-            eN = t.guild.hasFeature(eh.oNc.COMMUNITY) && t.canViewGuildAnalytics;
+            eN = t.guild.hasFeature(ef.oNc.COMMUNITY) && t.canViewGuildAnalytics;
         switch (e) {
-            case eh.pNK.PROFILE:
+            case ef.pNK.PROFILE:
                 return {
-                    section: eh.pNK.PROFILE,
+                    section: ef.pNK.PROFILE,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_PROFILE,
                     label: eb.intl.string(eb.t.txdaxc),
                     ariaLabel: eb.intl.string(eb.t.txdaxc),
@@ -148,9 +148,9 @@ let eO = {
                         element: em.Z
                     }
                 };
-            case eh.pNK.TAG:
+            case ef.pNK.TAG:
                 return {
-                    section: eh.pNK.TAG,
+                    section: ef.pNK.TAG,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_TAG,
                     label: eb.intl.string(eb.t['2QmKZ2']),
                     ariaLabel: eb.intl.string(eb.t['2QmKZ2']),
@@ -165,9 +165,9 @@ let eO = {
                     },
                     newIndicatorDismissibleContentTypes: [l.z.GUILD_TAG_SERVER_SETTINGS_NEW_BADGE]
                 };
-            case eh.pNK.ENGAGEMENT:
+            case ef.pNK.ENGAGEMENT:
                 return {
-                    section: eh.pNK.ENGAGEMENT,
+                    section: ef.pNK.ENGAGEMENT,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_ENGAGEMENT,
                     label: eb.intl.string(eb.t['6TAHb2']),
                     ariaLabel: eb.intl.string(eb.t['6TAHb2']),
@@ -177,9 +177,9 @@ let eO = {
                         element: es.R
                     }
                 };
-            case eh.pNK.BOOST_PERKS:
+            case ef.pNK.BOOST_PERKS:
                 return {
-                    section: eh.pNK.BOOST_PERKS,
+                    section: ef.pNK.BOOST_PERKS,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_BOOST_PERKS,
                     label: eb.intl.string(eb.t.UKgg5O),
                     ariaLabel: eb.intl.string(eb.t.UKgg5O),
@@ -189,9 +189,9 @@ let eO = {
                         element: ei.C
                     }
                 };
-            case eh.pNK.INVITES:
+            case ef.pNK.INVITES:
                 return {
-                    section: eh.pNK.INVITES,
+                    section: ef.pNK.INVITES,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_INVITES_V2,
                     label: eb.intl.string(eb.t.YOt3Oj),
                     ariaLabel: eb.intl.string(eb.t.YOt3Oj),
@@ -199,9 +199,9 @@ let eO = {
                     type: o.bT.CUSTOM,
                     predicate: () => t.canManageGuild
                 };
-            case eh.pNK.ROLES:
+            case ef.pNK.ROLES:
                 return {
-                    section: eh.pNK.ROLES,
+                    section: ef.pNK.ROLES,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_ROLES,
                     label: eb.intl.string(eb.t.LPJmLy),
                     element: G.Z,
@@ -213,35 +213,35 @@ let eO = {
                     },
                     predicate: () => t.canManageRoles
                 };
-            case eh.pNK.EMOJI:
+            case ef.pNK.EMOJI:
                 return {
-                    section: eh.pNK.EMOJI,
+                    section: ef.pNK.EMOJI,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_EMOJI,
                     label: eb.intl.string(eb.t.sMOuub),
                     element: V.ZP,
                     predicate: () => t.canManageGuildExpressions
                 };
-            case eh.pNK.STICKERS:
+            case ef.pNK.STICKERS:
                 return {
-                    section: eh.pNK.STICKERS,
+                    section: ef.pNK.STICKERS,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_STICKERS,
                     label: eb.intl.string(eb.t.R5nQkZ),
                     ariaLabel: eb.intl.string(eb.t.R5nQkZ),
                     element: ee.Z,
                     predicate: () => t.canManageGuildExpressions
                 };
-            case eh.pNK.SOUNDBOARD:
+            case ef.pNK.SOUNDBOARD:
                 return {
-                    section: eh.pNK.SOUNDBOARD,
+                    section: ef.pNK.SOUNDBOARD,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_SOUNDBOARD,
                     label: eb.intl.string(eb.t.OWQNYm),
                     ariaLabel: eb.intl.string(eb.t.OWQNYm),
                     element: $.Z,
                     predicate: () => t.canManageGuildExpressions
                 };
-            case eh.pNK.GUILD_TEMPLATES:
+            case ef.pNK.GUILD_TEMPLATES:
                 return {
-                    section: eh.pNK.GUILD_TEMPLATES,
+                    section: ef.pNK.GUILD_TEMPLATES,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_TEMPLATE,
                     label: (0, r.jsx)(en.Z, { showDirtyIndicator: t.showDirtyGuildTemplateIndicator }),
                     ariaLabel: eb.intl.string(eb.t.KUw7Sk),
@@ -252,9 +252,9 @@ let eO = {
                     },
                     predicate: () => t.canManageGuild
                 };
-            case eh.pNK.ACCESS:
+            case ef.pNK.ACCESS:
                 return {
-                    section: eh.pNK.ACCESS,
+                    section: ef.pNK.ACCESS,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_ACCESS,
                     label: eb.intl.string(eb.t.YJlvBA),
                     element: eo.O,
@@ -265,9 +265,9 @@ let eO = {
                     predicate: () => t.canManageGuild,
                     ariaLabel: eb.intl.string(eb.t.YJlvBA)
                 };
-            case eh.pNK.INTEGRATIONS:
+            case ef.pNK.INTEGRATIONS:
                 return {
-                    section: eh.pNK.INTEGRATIONS,
+                    section: ef.pNK.INTEGRATIONS,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_INTEGRATION,
                     label: eb.intl.string(eb.t.CIsNZ2),
                     ariaLabel: eb.intl.string(eb.t.CIsNZ2),
@@ -278,14 +278,14 @@ let eO = {
                     },
                     predicate: () => t.canManageGuild || t.canManageWebhooks || t.canUnlinkChannels
                 };
-            case eh.pNK.APP_DIRECTORY:
+            case ef.pNK.APP_DIRECTORY:
                 return {
-                    section: eh.pNK.APP_DIRECTORY,
+                    section: ef.pNK.APP_DIRECTORY,
                     label: eb.intl.string(eb.t.AKcFUl),
                     ariaLabel: eb.intl.string(eb.t.AKcFUl),
                     onClick() {
                         (0, u.transitionToGlobalDiscovery)({
-                            tab: ef.GlobalDiscoveryTab.APPS,
+                            tab: eh.GlobalDiscoveryTab.APPS,
                             newSessionState: {
                                 guildId: t.guild.id,
                                 entrypoint: {
@@ -297,27 +297,27 @@ let eO = {
                             (0, a.xf)();
                     }
                 };
-            case eh.pNK.SAFETY:
+            case ef.pNK.SAFETY:
                 return {
-                    section: eh.pNK.SAFETY,
+                    section: ef.pNK.SAFETY,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_SAFETY,
                     label: eb.intl.string(eb.t['suhY+f']),
                     ariaLabel: eb.intl.string(eb.t['suhY+f']),
                     element: U.Z,
                     newIndicatorDismissibleContentTypes: [l.z.COMMUNITY_GUILD_SETTINGS_SAFETY],
-                    predicate: () => t.canManageGuild && t.guild.hasFeature(eh.oNc.COMMUNITY)
+                    predicate: () => t.canManageGuild && t.guild.hasFeature(ef.oNc.COMMUNITY)
                 };
-            case eh.pNK.MODERATION:
+            case ef.pNK.MODERATION:
                 return {
-                    section: eh.pNK.MODERATION,
+                    section: ef.pNK.MODERATION,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_MODERATION,
                     label: eb.intl.string(eb.t['suhY+f']),
                     element: Q.ZP,
-                    predicate: () => t.canManageGuild && !t.guild.hasFeature(eh.oNc.COMMUNITY)
+                    predicate: () => t.canManageGuild && !t.guild.hasFeature(ef.oNc.COMMUNITY)
                 };
-            case eh.pNK.GUILD_AUTOMOD:
+            case ef.pNK.GUILD_AUTOMOD:
                 return {
-                    section: eh.pNK.GUILD_AUTOMOD,
+                    section: ef.pNK.GUILD_AUTOMOD,
                     label: (0, r.jsx)('div', {
                         className: ej.landingPageTabLink,
                         children: eb.intl.string(eb.t.uRelg4)
@@ -325,45 +325,45 @@ let eO = {
                     ariaLabel: eb.intl.string(eb.t.uRelg4),
                     element: g.Z,
                     newIndicatorDismissibleContentTypes: null,
-                    predicate: () => !t.guild.hasFeature(eh.oNc.COMMUNITY) && ((0, m.Nb)(t.guild.id) || (0, m.ze)(t.guild.id))
+                    predicate: () => !t.guild.hasFeature(ef.oNc.COMMUNITY) && ((0, m.Nb)(t.guild.id) || (0, m.ze)(t.guild.id))
                 };
-            case eh.pNK.AUDIT_LOG:
+            case ef.pNK.AUDIT_LOG:
                 return {
-                    section: eh.pNK.AUDIT_LOG,
+                    section: ef.pNK.AUDIT_LOG,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_AUDIT_LOG,
                     label: eb.intl.string(eb.t.SPWLyc),
                     element: D.Z,
                     type: o.bT.CUSTOM,
                     predicate: () => t.canViewAuditLog
                 };
-            case eh.pNK.BANS:
+            case ef.pNK.BANS:
                 return {
-                    section: eh.pNK.BANS,
+                    section: ef.pNK.BANS,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_BANS,
                     label: eb.intl.string(eb.t.ZbeITU),
                     element: F.Z,
                     predicate: () => t.canManageBans
                 };
-            case eh.pNK.COMMUNITY:
+            case ef.pNK.COMMUNITY:
                 let eI = eb.intl.string(eb.t.ElKTeX);
                 return (
-                    t.guild.hasFeature(eh.oNc.COMMUNITY) && (eI = eb.intl.string(eb.t['8nY2LC'])),
+                    t.guild.hasFeature(ef.oNc.COMMUNITY) && (eI = eb.intl.string(eb.t['8nY2LC'])),
                     {
-                        section: eh.pNK.COMMUNITY,
-                        impressionName: t.guild.hasFeature(eh.oNc.COMMUNITY) ? i.ImpressionNames.GUILD_SETTINGS_COMMUNITY_OVERVIEW : i.ImpressionNames.GUILD_SETTINGS_ENABLE_COMMUNITY,
+                        section: ef.pNK.COMMUNITY,
+                        impressionName: t.guild.hasFeature(ef.oNc.COMMUNITY) ? i.ImpressionNames.GUILD_SETTINGS_COMMUNITY_OVERVIEW : i.ImpressionNames.GUILD_SETTINGS_ENABLE_COMMUNITY,
                         label: eI,
                         element: z.Z,
                         ariaLabel: eI,
-                        newIndicator: !t.guild.hasFeature(eh.oNc.COMMUNITY) && null != t.memberCount && t.memberCount >= ex.U3 && O.qc.hasHotspot(O.v6.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
+                        newIndicator: !t.guild.hasFeature(ef.oNc.COMMUNITY) && null != t.memberCount && t.memberCount >= ex.U3 && O.qc.hasHotspot(O.v6.GUILD_SETTINGS_COMMUNITY_GUILD_UPSELL),
                         notice: {
                             stores: [R.Z],
                             element: z.X
                         }
                     }
                 );
-            case eh.pNK.ONBOARDING:
+            case ef.pNK.ONBOARDING:
                 return {
-                    section: eh.pNK.ONBOARDING,
+                    section: ef.pNK.ONBOARDING,
                     label: eb.intl.string(eb.t.LdxCKy),
                     element: X.Z,
                     ariaLabel: eb.intl.string(eb.t.LdxCKy),
@@ -372,7 +372,7 @@ let eO = {
                         stores: [k.Z],
                         element: M.Z
                     },
-                    predicate: () => (0, h.wC)(t.guild.id),
+                    predicate: () => (0, f.wC)(t.guild.id),
                     decoration: (function (e, t) {
                         if (p.Z.getEnabled(e)) return eb.intl.string(eb.t.pPSmxs).toUpperCase();
                         if ((0, L.C)(e)) return eb.intl.string(eb.t.HDF4o6).toUpperCase();
@@ -385,18 +385,18 @@ let eO = {
                             });
                     })(t.guild.id, t.onboardingStep)
                 };
-            case eh.pNK.ANALYTICS:
+            case ef.pNK.ANALYTICS:
                 return {
-                    section: eh.pNK.ANALYTICS,
+                    section: ef.pNK.ANALYTICS,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_ANALYTICS,
                     label: eb.intl.string(eb.t['0wWfUF']),
                     ariaLabel: eb.intl.string(eb.t['0wWfUF']),
                     element: B.Z,
                     predicate: () => eN
                 };
-            case eh.pNK.DISCOVERY_LANDING_PAGE:
+            case ef.pNK.DISCOVERY_LANDING_PAGE:
                 return {
-                    section: eh.pNK.DISCOVERY_LANDING_PAGE,
+                    section: ef.pNK.DISCOVERY_LANDING_PAGE,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_DISCOVERY_LANDING_PAGE,
                     label: (0, r.jsxs)('div', {
                         className: ej.landingPageTabLink,
@@ -411,12 +411,12 @@ let eO = {
                     type: o.bT.CUSTOM,
                     predicate() {
                         var e;
-                        return t.canManageGuild && (t.guild.hasFeature(eh.oNc.DISCOVERABLE) || !!(null == (e = t.guildMetadata) ? void 0 : e.isPublished));
+                        return t.canManageGuild && (t.guild.hasFeature(ef.oNc.DISCOVERABLE) || !!(null == (e = t.guildMetadata) ? void 0 : e.isPublished));
                     }
                 };
-            case eh.pNK.COMMUNITY_WELCOME:
+            case ef.pNK.COMMUNITY_WELCOME:
                 return {
-                    section: eh.pNK.COMMUNITY_WELCOME,
+                    section: ef.pNK.COMMUNITY_WELCOME,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_COMMUNITY_WELCOME,
                     label: eb.intl.string(eb.t['2rkmDg']),
                     ariaLabel: eb.intl.string(eb.t['2rkmDg']),
@@ -425,27 +425,27 @@ let eO = {
                         stores: [y.Z],
                         element: N.Z
                     },
-                    predicate: () => t.canManageGuild && t.guild.hasFeature(eh.oNc.COMMUNITY) && !t.welcomeScreenEmpty && !t.guild.hasFeature(eh.oNc.GUILD_SERVER_GUIDE)
+                    predicate: () => t.canManageGuild && t.guild.hasFeature(ef.oNc.COMMUNITY) && !t.welcomeScreenEmpty && !t.guild.hasFeature(ef.oNc.GUILD_SERVER_GUIDE)
                 };
-            case eh.pNK.ROLE_SUBSCRIPTIONS:
+            case ef.pNK.ROLE_SUBSCRIPTIONS:
                 return ev(e_({}, ey), {
-                    section: eh.pNK.ROLE_SUBSCRIPTIONS,
+                    section: ef.pNK.ROLE_SUBSCRIPTIONS,
                     element: _.Z,
                     type: o.bT.CUSTOM,
                     predicate: t.monetizationPredicate,
                     newIndicatorDismissibleContentTypes: (0, j.sO)(t.guild) ? [l.z.SERVER_SUBSCRIPTION_SETTINGS_NEW_BADGE_TIER_TEMPLATE] : null
                 });
-            case eh.pNK.GUILD_PRODUCTS:
+            case ef.pNK.GUILD_PRODUCTS:
                 return {
-                    section: eh.pNK.GUILD_PRODUCTS,
+                    section: ef.pNK.GUILD_PRODUCTS,
                     label: eb.intl.string(eb.t.X6h2g4),
                     ariaLabel: eb.intl.string(eb.t.X6h2g4),
                     element: x.Z,
-                    predicate: () => t.monetizationPredicate() && (0, f.p)(t.guild.id, 'guild_product_settings_predicate') && (0, b.sy)(t.guild)
+                    predicate: () => t.monetizationPredicate() && (0, h.p)(t.guild.id, 'guild_product_settings_predicate') && (0, b.sy)(t.guild)
                 };
-            case eh.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE:
+            case ef.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE:
                 return {
-                    section: eh.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE,
+                    section: ef.pNK.ROLE_SUBSCRIPTIONS_STORE_PAGE,
                     impressionName: i.ImpressionNames.GUILD_ROLE_SUBSCRIPTION_STORE_PAGE_GUILD_SETTINGS,
                     newIndicator: 2022 === new Date().getFullYear(),
                     label: eb.intl.string(eb.t.ipTYsr),
@@ -453,9 +453,9 @@ let eO = {
                     element: v.Z,
                     predicate: () => t.monetizationPredicate() && (0, b.sy)(t.guild)
                 };
-            case eh.pNK.GUILD_PREMIUM:
+            case ef.pNK.GUILD_PREMIUM:
                 return {
-                    section: eh.pNK.GUILD_PREMIUM,
+                    section: ef.pNK.GUILD_PREMIUM,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_BOOST_STATUS,
                     label: eb.intl.string(eb.t['8+VX4+']),
                     ariaLabel: eb.intl.string(eb.t['8+VX4+']),
@@ -463,9 +463,9 @@ let eO = {
                     className: ej.serverBoostTabItem,
                     icon: (0, r.jsx)(J.Z, { className: ej.icon })
                 };
-            case eh.pNK.MEMBERS:
+            case ef.pNK.MEMBERS:
                 return {
-                    section: eh.pNK.MEMBERS,
+                    section: ef.pNK.MEMBERS,
                     impressionName: i.ImpressionNames.GUILD_SETTINGS_MEMBERS,
                     label: (0, r.jsx)(K.$, {}),
                     ariaLabel: eb.intl.string(eb.t['9Oq93t']),
@@ -473,9 +473,9 @@ let eO = {
                     type: o.bT.CUSTOM,
                     predicate: () => t.canAccessMembersPage
                 };
-            case eh.pNK.DELETE:
+            case ef.pNK.DELETE:
                 return {
-                    section: eh.pNK.DELETE,
+                    section: ef.pNK.DELETE,
                     onClick() {
                         let e = I.default.getCurrentUser();
                         if (null == e) return;
@@ -485,7 +485,7 @@ let eO = {
                                 confirmText: eb.intl.string(eb.t.l3hWPz),
                                 cancelText: eb.intl.string(eb.t['ETE/oK']),
                                 onConfirm: () => {
-                                    E.S.subscribeOnce(eh.CkL.LAYER_POP_COMPLETE, () => {
+                                    E.S.subscribeOnce(ef.CkL.LAYER_POP_COMPLETE, () => {
                                         T.Z.deleteGuild(t.guild.id, i);
                                     }),
                                         (0, a.xf)();
@@ -525,37 +525,37 @@ let eO = {
                     }),
                     predicate: () => t.isOwnerWithRequiredMfaLevel
                 };
-            case eh.pNK.LANDING:
-            case eh.pNK.MEMBER_EDIT:
-            case eh.pNK.MEMBER_TIMEOUT:
-            case eh.pNK.MEMBER_KICK:
-            case eh.pNK.MEMBER_BAN:
-            case eh.pNK.CHANNELS:
-            case eh.pNK.ROLE_EDIT:
-            case eh.pNK.ROLE_PERMISSIONS:
-            case eh.pNK.MEMBER_VERIFICATION:
-            case eh.pNK.CLYDE:
-            case eh.pNK.INTEGRATION_SETTINGS:
-            case eh.pNK.SECURITY:
-            case eh.pNK.AUDIT_LOG_FILTER:
-            case eh.pNK.ROLE_SUBSCRIPTIONS_TIER_EDIT:
-            case eh.pNK.VANITY_URL:
-            case eh.pNK.INSTANT_INVITES:
-            case eh.pNK.OVERVIEW:
-            case eh.pNK.WEBHOOKS:
-            case eh.pNK.EDIT_WEBHOOK:
-            case eh.pNK.INTEGRATION_PLATFORM:
-            case eh.pNK.LOBBIES_LINKED:
-            case eh.pNK.EDIT_LINKED_LOBBY:
-            case eh.pNK.CHANNELS_FOLLOWED:
-            case eh.pNK.COMMUNITY_INTRO:
-            case eh.pNK.ROLE_EDIT_REFRESH:
-            case eh.pNK.ROLE_SUBSCRIPTIONS_ENABLE_MONETIZATION:
-            case eh.pNK.ROLE_SUBSCRIPTIONS_BASIC:
-            case eh.pNK.ROLE_SUBSCRIPTIONS_TIERS:
-            case eh.pNK.ROLE_SUBSCRIPTIONS_PAYMENTS:
-            case eh.pNK.ROLE_SUBSCRIPTIONS_EMOJIS:
-            case eh.pNK.ROLE_SUBSCRIPTIONS_TIER_TEMPLATE_SELECTION:
+            case ef.pNK.LANDING:
+            case ef.pNK.MEMBER_EDIT:
+            case ef.pNK.MEMBER_TIMEOUT:
+            case ef.pNK.MEMBER_KICK:
+            case ef.pNK.MEMBER_BAN:
+            case ef.pNK.CHANNELS:
+            case ef.pNK.ROLE_EDIT:
+            case ef.pNK.ROLE_PERMISSIONS:
+            case ef.pNK.MEMBER_VERIFICATION:
+            case ef.pNK.CLYDE:
+            case ef.pNK.INTEGRATION_SETTINGS:
+            case ef.pNK.SECURITY:
+            case ef.pNK.AUDIT_LOG_FILTER:
+            case ef.pNK.ROLE_SUBSCRIPTIONS_TIER_EDIT:
+            case ef.pNK.VANITY_URL:
+            case ef.pNK.INSTANT_INVITES:
+            case ef.pNK.OVERVIEW:
+            case ef.pNK.WEBHOOKS:
+            case ef.pNK.EDIT_WEBHOOK:
+            case ef.pNK.INTEGRATION_PLATFORM:
+            case ef.pNK.LOBBIES_LINKED:
+            case ef.pNK.EDIT_LINKED_LOBBY:
+            case ef.pNK.CHANNELS_FOLLOWED:
+            case ef.pNK.COMMUNITY_INTRO:
+            case ef.pNK.ROLE_EDIT_REFRESH:
+            case ef.pNK.ROLE_SUBSCRIPTIONS_ENABLE_MONETIZATION:
+            case ef.pNK.ROLE_SUBSCRIPTIONS_BASIC:
+            case ef.pNK.ROLE_SUBSCRIPTIONS_TIERS:
+            case ef.pNK.ROLE_SUBSCRIPTIONS_PAYMENTS:
+            case ef.pNK.ROLE_SUBSCRIPTIONS_EMOJIS:
+            case ef.pNK.ROLE_SUBSCRIPTIONS_TIER_TEMPLATE_SELECTION:
                 return null;
             default:
                 (0, S.vE)(e);

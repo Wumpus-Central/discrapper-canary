@@ -17,8 +17,8 @@ var i = n(120356),
     m = n(216701),
     g = n(570961),
     p = n(290511),
-    h = n(388032),
-    f = n(311400);
+    f = n(388032),
+    h = n(311400);
 function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -82,13 +82,13 @@ function j(e) {
         }),
         { customEmoji: D, unicodeEmoji: k } = (0, d.Z)(null == (t = C.emoji) ? void 0 : t.id, null == (i = C.emoji) ? void 0 : i.name);
     return (
-        (0, p.Oq)(C.emoji) || null != D || null != k || (S = h.intl.string(h.t['61wfmp'])),
+        (0, p.Oq)(C.emoji) || null != D || null != k || (S = f.intl.string(f.t['61wfmp'])),
         (0, r.jsxs)(o.P3F, {
-            className: l()(f.optionCard, {
-                [f.hasError]: y || null != S,
-                [f.dropIndicatorBefore]: null != w && T < w,
-                [f.dropIndicatorAfter]: null != w && T > w,
-                [f.singleColumn]: v
+            className: l()(h.optionCard, {
+                [h.hasError]: y || null != S,
+                [h.dropIndicatorBefore]: null != w && T < w,
+                [h.dropIndicatorAfter]: null != w && T > w,
+                [h.singleColumn]: v
             }),
             onClick: () =>
                 (0, o.ZDy)(async () => {
@@ -115,18 +115,18 @@ function j(e) {
             innerRef: (e) => P(R(e)),
             children: [
                 (0, r.jsx)('div', {
-                    className: f.dragContainer,
+                    className: h.dragContainer,
                     children: (0, r.jsx)(o.Vni, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: f.__invalid_dragIcon
+                        className: h.__invalid_dragIcon
                     })
                 }),
                 (0, r.jsxs)('div', {
-                    className: f.optionCardRow,
+                    className: h.optionCardRow,
                     children: [
                         (0, r.jsx)('div', {
-                            className: f.emoji,
+                            className: h.emoji,
                             children: (0, r.jsx)(m.Z, {
                                 emojiId: null == (s = C.emoji) ? void 0 : s.id,
                                 emojiName: null == (c = C.emoji) ? void 0 : c.name,
@@ -134,7 +134,7 @@ function j(e) {
                             })
                         }),
                         (0, r.jsxs)('div', {
-                            className: f.text,
+                            className: h.text,
                             children: [
                                 (0, r.jsx)(o.Text, {
                                     variant: 'text-md/medium',
@@ -144,7 +144,7 @@ function j(e) {
                                 }),
                                 '' !== C.description &&
                                     (0, r.jsx)(o.Text, {
-                                        className: f.description,
+                                        className: h.description,
                                         variant: 'text-xs/normal',
                                         color: 'header-secondary',
                                         children: C.description
@@ -185,33 +185,33 @@ function _(e) {
             });
         };
     return (0, r.jsx)(o.P3F, {
-        className: l()(f.optionCard, f.addOptionCard, {
-            [f.addFirstOptionCard]: 0 === i.options.length,
-            [f.singleColumn]: a
+        className: l()(h.optionCard, h.addOptionCard, {
+            [h.addFirstOptionCard]: 0 === i.options.length,
+            [h.singleColumn]: a
         }),
         onClick: () => {
             i.options.length + 1 === p.fY
                 ? c.Z.show({
-                      title: h.intl.string(h.t.TggC7u),
-                      body: h.intl.formatToPlainString(h.t.kPQKam, { thresholdCount: p.fY }),
-                      confirmText: h.intl.string(h.t.BddRzc),
-                      cancelText: h.intl.string(h.t['ETE/oK']),
+                      title: f.intl.string(f.t.TggC7u),
+                      body: f.intl.formatToPlainString(f.t.kPQKam, { thresholdCount: p.fY }),
+                      confirmText: f.intl.string(f.t.BddRzc),
+                      cancelText: f.intl.string(f.t['ETE/oK']),
                       onConfirm: u
                   })
                 : u();
         },
         children: (0, r.jsxs)('div', {
-            className: f.optionCardRow,
+            className: h.optionCardRow,
             children: [
                 (0, r.jsx)(o.oFk, {
                     size: 'md',
                     color: 'currentColor',
-                    className: f.plusIcon
+                    className: h.plusIcon
                 }),
                 (0, r.jsx)(o.Text, {
                     variant: 'text-md/medium',
                     color: 'header-primary',
-                    children: h.intl.string(h.t.Ty3lgo)
+                    children: f.intl.string(f.t.Ty3lgo)
                 })
             ]
         })

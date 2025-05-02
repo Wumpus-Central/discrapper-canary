@@ -35,7 +35,7 @@ function p(e) {
     }
     return e;
 }
-function h(e, t) {
+function f(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,7 +53,7 @@ function h(e, t) {
         e
     );
 }
-let f = [];
+let h = [];
 function x() {
     return (0, r.jsx)('div', {
         className: g.actionItemContainer,
@@ -90,7 +90,7 @@ function b(e) {
                     return (n) =>
                         (0, r.jsx)(
                             e,
-                            h(p({}, n), {
+                            f(p({}, n), {
                                 guildId: t,
                                 onSave: l
                             })
@@ -117,7 +117,7 @@ let j = function (e) {
     let { guildId: t } = e,
         n = (0, l.Wu)([u.Z], () => {
             var e;
-            return null != (e = u.Z.getSettings().newMemberActions) ? e : f;
+            return null != (e = u.Z.getSettings().newMemberActions) ? e : h;
         }),
         s = i.useCallback(
             (e, n) => {
@@ -156,7 +156,7 @@ let j = function (e) {
             },
             [n, t]
         ),
-        _ = n.map((e) => h(p({}, e), { id: e.channelId })),
+        _ = n.map((e) => f(p({}, e), { id: e.channelId })),
         v = i.useCallback(
             (e) => {
                 (0, c.hS)(e);

@@ -9,8 +9,8 @@ var l = n(200651),
     c = n(393238),
     d = n(493773),
     m = n(100527),
-    h = n(318766),
-    f = n(907040),
+    f = n(318766),
+    h = n(907040),
     p = n(594174),
     b = n(626135),
     S = n(644540),
@@ -45,8 +45,8 @@ function L(t) {
         [V, K] = r.useState(null != (e = null == H ? void 0 : H.state) ? e : ''),
         [G, q] = r.useState(null != (n = null == H ? void 0 : H.emoji) ? n : null),
         [X, $] = r.useState((0, O.Z)()),
-        Q = r.useRef(null),
         J = r.useRef(null),
+        Q = r.useRef(null),
         tt = r.useRef(null),
         [te, tn] = r.useState(null != H && F && null == U ? (0, _.Z)(H) : U),
         [tl, tr] = r.useState(M),
@@ -74,7 +74,7 @@ function L(t) {
         }, [B]),
         (0, d.ZP)(() => {
             var t, e;
-            null == (t = Q.current) || t.focus(), null == (e = Q.current) || e.setSelection(V.length, V.length);
+            null == (t = J.current) || t.focus(), null == (e = J.current) || e.setSelection(V.length, V.length);
         });
     let td = (t) => {
             null != t &&
@@ -103,7 +103,7 @@ function L(t) {
             }),
                 L();
         },
-        th = () =>
+        tf = () =>
             null == G
                 ? null
                 : () =>
@@ -113,7 +113,7 @@ function L(t) {
                           emojiName: G.name,
                           animated: !!G.animated
                       }),
-        tf = z ? D.intl.string(D.t.rp0aho) : D.intl.string(D.t.UcdRn5),
+        th = z ? D.intl.string(D.t.rp0aho) : D.intl.string(D.t.UcdRn5),
         tp = 'custom-status-placeholder-text';
     return (0, l.jsxs)(s.Y0X, {
         transitionState: a,
@@ -152,7 +152,7 @@ function L(t) {
                     (0, l.jsxs)(s.hjN, {
                         className: A.formGroup,
                         titleClassName: A.customStatusInputTitle,
-                        title: tf,
+                        title: th,
                         children: [
                             F &&
                                 (0, l.jsx)('div', {
@@ -193,10 +193,10 @@ function L(t) {
                                     (0, l.jsx)('div', {
                                         className: i()(A.emojiButtonContainer, null != te && A.emojiButtonContainerWithLabel),
                                         children: (0, l.jsx)(s.yRy, {
-                                            targetElementRef: J,
+                                            targetElementRef: Q,
                                             renderPopout: (t) => {
                                                 let { closePopout: e } = t;
-                                                return (0, l.jsx)(f.Z, {
+                                                return (0, l.jsx)(h.Z, {
                                                     closePopout: e,
                                                     onSelectEmoji: (t, n) => {
                                                         td(t), n && e();
@@ -212,7 +212,7 @@ function L(t) {
                                                 var n, r;
                                                 let { isShown: a } = e;
                                                 return (0, l.jsx)(
-                                                    h.Z,
+                                                    f.Z,
                                                     ((n = (function (t) {
                                                         for (var e = 1; e < arguments.length; e++) {
                                                             var n = null != arguments[e] ? arguments[e] : {},
@@ -240,11 +240,11 @@ function L(t) {
                                                     })({}, t)),
                                                     (r = r =
                                                         {
-                                                            ref: J,
+                                                            ref: Q,
                                                             active: a,
                                                             className: A.emojiButton,
                                                             tabIndex: 0,
-                                                            renderButtonContents: th()
+                                                            renderButtonContents: tf()
                                                         }),
                                                     Object.getOwnPropertyDescriptors
                                                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
@@ -280,7 +280,7 @@ function L(t) {
                                                 'Enter' === t.key && tm();
                                             },
                                             className: i()(A.input, null != te && A.inputWithLabel),
-                                            inputRef: Q
+                                            inputRef: J
                                         },
                                         null != te ? 'with-label' : 'without-label'
                                     ),

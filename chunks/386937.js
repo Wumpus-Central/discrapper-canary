@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(179360),
     g = n(129861),
     p = n(999382),
-    h = n(905128),
-    f = n(151494),
+    f = n(905128),
+    h = n(151494),
     x = n(733683),
     b = n(237583),
     j = n(899667),
@@ -277,11 +277,11 @@ class R extends i.Component {
             );
     }
 }
-let Z = c.ZP.connectStores([v.Z, h.Z, p.Z, j.Z, O.default, _.ZP], () => {
+let Z = c.ZP.connectStores([v.Z, f.Z, p.Z, j.Z, O.default, _.ZP], () => {
     var e, t;
     let n = p.Z.getGuildId(),
         r = null != (t = null == (e = v.Z.getGuild(n)) ? void 0 : e.premiumTier) ? t : N.Eu4.NONE,
-        i = (0, f.I)(n),
+        i = (0, h.I)(n),
         l = null != n ? j.Z.getAppliedGuildBoostsForGuild(n) : null,
         s = o()(null != l ? l : []).uniqBy((e) => e.userId),
         a = s

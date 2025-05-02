@@ -12,8 +12,8 @@ var i = n(481060),
     m = n(613810),
     g = n(391181),
     p = n(388032),
-    h = n(520880);
-let f = 'guild-product-listings-header';
+    f = n(520880);
+let h = 'guild-product-listings-header';
 function x(e) {
     let { guildId: t, handleCreateOrEditProduct: d } = e,
         x = (0, c.ue)(t, { publishedOnly: !1 }),
@@ -69,14 +69,14 @@ function x(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(i.vwX, {
-                className: h.productListingsHeader,
-                id: f,
+                className: f.productListingsHeader,
+                id: h,
                 children: O ? p.intl.string(p.t.RwuStb) : p.intl.string(p.t.WKMcMT)
             }),
             O
                 ? (0, r.jsx)('ul', {
-                      className: h.productListings,
-                      'aria-labelledby': f,
+                      className: f.productListings,
+                      'aria-labelledby': h,
                       children: x.map((e) =>
                           (0, r.jsx)(
                               'li',
@@ -118,8 +118,8 @@ function b(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)(i.zxk, {
-                className: h.addButton,
-                innerClassName: h.addButtonInner,
+                className: f.addButton,
+                innerClassName: f.addButtonInner,
                 onClick: () => l(null),
                 disabled: n,
                 children: [

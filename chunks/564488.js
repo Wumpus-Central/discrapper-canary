@@ -10,7 +10,7 @@ var r = n(200651),
     d = n(495892);
 let m = i.memo(function (e) {
     let { rule: t, persistEdit: n = !1, initWithEdit: m = !1 } = e,
-        { hasChanges: g, editingRule: p, createNewEditingRule: h, setEditingRule: f } = (0, a.V)(),
+        { hasChanges: g, editingRule: p, createNewEditingRule: f, setEditingRule: h } = (0, a.V)(),
         { isLoading: x } = (0, a.w)(),
         [b] = i.useState(() => !(0, l.Vb)(t)),
         j = (null == p ? void 0 : p.id) === t.id || n,
@@ -18,26 +18,26 @@ let m = i.memo(function (e) {
         v = j && null != p ? p : t,
         O = i.useMemo(() => (0, o.af)(t.name), [null == t ? void 0 : t.name]),
         C = i.useCallback(() => {
-            h(t.guildId, t.triggerType);
-        }, [t.guildId, t.triggerType, h]),
+            f(t.guildId, t.triggerType);
+        }, [t.guildId, t.triggerType, f]),
         y = i.useCallback(
             (e) => {
-                x || f(e, !0);
+                x || h(e, !0);
             },
-            [x, f]
+            [x, h]
         );
     i.useEffect(() => {
-        m && f(t, !0);
-    }, [m, t, f]);
+        m && h(t, !0);
+    }, [m, t, h]);
     let N = i.useCallback(() => {
         j
-            ? g || f(null)
+            ? g || h(null)
             : g
               ? O(() => {
-                    f(t);
+                    h(t);
                 })
-              : f(t);
-    }, [j, g, O, t, f]);
+              : h(t);
+    }, [j, g, O, t, h]);
     return (0, r.jsx)(u.Z, {
         renderHeader: (0, r.jsx)(d.Z, {
             rule: v,

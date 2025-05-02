@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(100527),
     g = n(933557),
     p = n(670188),
-    h = n(210887),
-    f = n(598077),
+    f = n(210887),
+    h = n(598077),
     x = n(699516),
     b = n(594174),
     j = n(259580),
@@ -89,7 +89,7 @@ class T extends i.PureComponent {
 }
 let P = i.forwardRef((e, t) => {
     let n,
-        { log: i, className: l, expanded: o, guildId: h, guild: _, onChannelContextMenu: P, onContentClick: w, onHeaderClick: R, onTargetContextMenu: Z, onUserContextMenu: D, theme: k } = e,
+        { log: i, className: l, expanded: o, guildId: f, guild: _, onChannelContextMenu: P, onContentClick: w, onHeaderClick: R, onTargetContextMenu: Z, onUserContextMenu: D, theme: k } = e,
         A = (function () {
             let { changes: e } = i;
             return (i.actionType !== y.vB8.DELETE || i.action === y.rsA.MEMBER_BAN_ADD || i.action === y.rsA.MEMBER_KICK || i.action === y.rsA.MEMBER_PRUNE) && null != e && e.some((e) => !(0, C.xO)(i, e));
@@ -145,7 +145,7 @@ let P = i.forwardRef((e, t) => {
                                         if (null != e && null != t)
                                             return (0, r.jsx)(p.Z, {
                                                 user: e,
-                                                guildId: h,
+                                                guildId: f,
                                                 newAnalyticsLocations: [m.Z.AVATAR],
                                                 children: (e) => {
                                                     var t;
@@ -156,7 +156,7 @@ let P = i.forwardRef((e, t) => {
                                                                 t.stopPropagation(), e.onClick(t);
                                                             },
                                                             className: I.avatar,
-                                                            src: i.action === y.rsA.AUTO_MODERATION_BLOCK_MESSAGE || i.action === y.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || i.action === y.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || i.action === y.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, v.j)() : null == (t = i.user) ? void 0 : t.getAvatarURL(h, 40),
+                                                            src: i.action === y.rsA.AUTO_MODERATION_BLOCK_MESSAGE || i.action === y.rsA.AUTO_MODERATION_FLAG_TO_CHANNEL || i.action === y.rsA.AUTO_MODERATION_USER_COMMUNICATION_DISABLED || i.action === y.rsA.AUTO_MODERATION_QUARANTINE_USER ? (0, v.j)() : null == (t = i.user) ? void 0 : t.getAvatarURL(f, 40),
                                                             'aria-hidden': !0,
                                                             size: u.EFr.SIZE_40
                                                         })
@@ -209,7 +209,7 @@ let P = i.forwardRef((e, t) => {
                                                                       return N.intl.string(N.t['30mdIy']);
                                                                   },
                                                                   targetHook: (e, t) =>
-                                                                      i.targetType === y.KFR.USER && i.target instanceof f.Z
+                                                                      i.targetType === y.KFR.USER && i.target instanceof h.Z
                                                                           ? (0, r.jsx)(
                                                                                 T,
                                                                                 {
@@ -271,4 +271,4 @@ let P = i.forwardRef((e, t) => {
     });
 });
 P.displayName = 'GuildSettingsAuditLogEntry';
-let w = o.ZP.connectStores([h.Z], () => ({ theme: h.Z.theme }), { forwardRef: !0 })(P);
+let w = o.ZP.connectStores([f.Z], () => ({ theme: f.Z.theme }), { forwardRef: !0 })(P);

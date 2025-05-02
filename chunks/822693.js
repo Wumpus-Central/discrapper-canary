@@ -11,12 +11,12 @@ var r = n(200651),
     m = n(594174),
     g = n(434404),
     p = n(800223),
-    h = n(981631),
-    f = n(388032);
+    f = n(981631),
+    h = n(388032);
 let x = 'NO_CHANNEL',
-    b = l.$e(h.Plq.VIEW_CHANNEL, h.Plq.CREATE_INSTANT_INVITE);
+    b = l.$e(f.Plq.VIEW_CHANNEL, f.Plq.CREATE_INSTANT_INVITE);
 function j(e) {
-    let { guildId: t, widgetEnabled: n, widgetChannelId: l, className: h, enableLocalUpdate: j } = e,
+    let { guildId: t, widgetEnabled: n, widgetChannelId: l, className: f, enableLocalUpdate: j } = e,
         _ = (0, s.e7)([c.ZP], () => c.ZP.getChannels(t)),
         v = i.useMemo(() => {
             let e = [..._[c.sH], ..._[c.Zb]]
@@ -38,7 +38,7 @@ function j(e) {
             return (
                 e.unshift({
                     value: x,
-                    label: f.intl.string(f.t.u197b2)
+                    label: h.intl.string(h.t.u197b2)
                 }),
                 e
             );
@@ -53,6 +53,6 @@ function j(e) {
         options: v,
         value: l,
         onChange: O,
-        className: h
+        className: f
     });
 }

@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(910200),
     g = n(496675),
     p = n(434404),
-    h = n(999382),
-    f = n(12078),
+    f = n(999382),
+    h = n(12078),
     x = n(934638),
     b = n(566036),
     j = n(979664),
@@ -25,10 +25,10 @@ var r = n(200651),
     I = n(83951);
 let E = function () {
     let { analyticsLocations: e } = (0, c.ZP)(o.Z.GUILD_SETTINGS_PROFILE_PAGE),
-        t = (0, l.e7)([h.Z], () => h.Z.getGuild(), []),
+        t = (0, l.e7)([f.Z], () => f.Z.getGuild(), []),
         n = null == t ? void 0 : t.id,
         { fetchGuildProfile: E, fetchStatus: S } = (0, d.u)(null == t ? void 0 : t.id),
-        T = (0, l.e7)([h.Z], () => h.Z.getGuildProfile(), []),
+        T = (0, l.e7)([f.Z], () => f.Z.getGuildProfile(), []),
         P = (0, l.e7)([g.Z], () => g.Z.can(y.Plq.MANAGE_GUILD, t)),
         w = i.useCallback(
             (e) => {
@@ -94,7 +94,7 @@ let E = function () {
                                       onIconChange: w
                                   }),
                                   (0, r.jsx)('div', { className: I.divider }),
-                                  (0, r.jsx)(f.Z, {
+                                  (0, r.jsx)(h.Z, {
                                       profile: T,
                                       onCustomBannerChange: R,
                                       canManageGuild: P

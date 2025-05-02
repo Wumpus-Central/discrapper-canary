@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(426563),
     g = n(727072),
     p = n(85960),
-    h = n(577330),
-    f = n(65912),
+    f = n(577330),
+    h = n(65912),
     x = n(51248),
     b = n(546513),
     j = n(572456),
@@ -23,7 +23,7 @@ var r = n(200651),
 function y(e) {
     var t, n;
     let { guildId: y, setPreventNavigation: N = () => {} } = e,
-        { editingRule: I, setEditingRule: E } = (0, f.V)(),
+        { editingRule: I, setEditingRule: E } = (0, h.V)(),
         { guild: S, subsection: T } = (0, l.cj)([o.Z], () => o.Z.getProps()),
         P = null != (n = null != (t = null == S ? void 0 : S.id) ? t : y) ? n : v.lds,
         w = null != I,
@@ -152,7 +152,7 @@ function y(e) {
                 ]
             }),
             R
-                ? (0, r.jsx)(h.Z, {})
+                ? (0, r.jsx)(f.Z, {})
                 : Object.entries(U).map((e) => {
                       let [t, n] = e;
                       if (0 === n.length) return (0, r.jsx)(i.Fragment, {}, t);

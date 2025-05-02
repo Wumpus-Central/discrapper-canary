@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(142497),
     g = n(706454),
     p = n(650774),
-    h = n(430824),
-    f = n(246946),
+    f = n(430824),
+    h = n(246946),
     x = n(626135),
     b = n(146596),
     j = n(559368),
@@ -113,13 +113,13 @@ let I = function (e, t, n) {
     T = () => {
         let e = (0, a.e7)([_.Z], () => _.Z.getGuildId()),
             t = (0, a.e7)([p.Z], () => p.Z.getMemberCount(e)),
-            n = (0, a.e7)([h.Z], () => h.Z.getGuild(e)),
+            n = (0, a.e7)([f.Z], () => f.Z.getGuild(e)),
             l = (0, a.e7)([g.default], () => g.default.locale),
             { analytics: s, errorCode: o } = (0, a.cj)([j.Z], () => ({
                 analytics: null != e ? j.Z.getOverviewAnalytics(e) : null,
                 errorCode: j.Z.getError()
             })),
-            x = (0, a.e7)([f.Z], () => f.Z.getSettings().enabled),
+            x = (0, a.e7)([h.Z], () => h.Z.getSettings().enabled),
             T = null == t || null == n || (null != t && t < 500 && null != n && !n.hasFeature(v.oNc.PARTNERED) && !n.hasFeature(v.oNc.VERIFIED));
         i.useEffect(() => {
             null == e || T || ((0, b.Vk)(e), (0, b.SR)(e), (0, b.xl)(e));

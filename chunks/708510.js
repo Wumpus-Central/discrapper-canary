@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(217472),
     g = n(202905),
     p = n(44867),
-    h = n(557359),
-    f = n(658666),
+    f = n(557359),
+    h = n(658666),
     x = n(307375),
     b = n(384632),
     j = n(388032),
@@ -33,7 +33,7 @@ function v(e) {
         );
     switch (t.joinType) {
         case b.A.INVITE:
-            return (0, r.jsx)(h.A, {
+            return (0, r.jsx)(f.A, {
                 requireTerms: t.requireTerms,
                 rules: t.termRules
             });
@@ -50,7 +50,7 @@ function v(e) {
 }
 function O() {
     let e = (0, l.e7)([c.Z], () => c.Z.getProps().guild),
-        t = (0, l.e7)([f.Z], () => f.Z.pendingState);
+        t = (0, l.e7)([h.Z], () => h.Z.pendingState);
     i.useEffect(() => {
         (null == e ? void 0 : e.id) != null && o.ZP.fetchVerificationForm(e.id);
     }, [null == e ? void 0 : e.id]);

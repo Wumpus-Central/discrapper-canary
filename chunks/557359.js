@@ -1,4 +1,4 @@
-n.d(t, { A: () => f }), n(388685);
+n.d(t, { A: () => h }), n(388685);
 var r = n(200651),
     i = n(192379),
     l = n(120356),
@@ -11,24 +11,24 @@ var r = n(200651),
     m = n(217472),
     g = n(651390),
     p = n(388032),
-    h = n(52930);
-function f(e) {
+    f = n(52930);
+function h(e) {
     let { requireTerms: t, rules: n } = e,
         l = (0, o.e7)([d.Z], () => d.Z.getProps().guild),
-        f = null == l ? void 0 : l.id,
+        h = null == l ? void 0 : l.id,
         x = i.useCallback(
             (e) => {
-                if (null == f || null == n) return null;
-                m.Z.setPendingInviteRules(f, e, [...n]);
+                if (null == h || null == n) return null;
+                m.Z.setPendingInviteRules(h, e, [...n]);
             },
-            [f, n]
+            [h, n]
         ),
         b = i.useCallback(
             (e) => {
-                if (null == f) return null;
-                m.Z.setPendingInviteRules(f, t, e);
+                if (null == h) return null;
+                m.Z.setPendingInviteRules(h, t, e);
             },
-            [f, t]
+            [h, t]
         );
     return null == l
         ? null
@@ -37,10 +37,10 @@ function f(e) {
           : (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)('div', {
-                        className: h.headerContainer,
+                        className: f.headerContainer,
                         children: [
                             (0, r.jsxs)('div', {
-                                className: h.headerText,
+                                className: f.headerText,
                                 children: [
                                     (0, r.jsx)(a.X6, {
                                         variant: 'heading-md/semibold',
@@ -51,7 +51,7 @@ function f(e) {
                                         tag: 'p',
                                         variant: 'text-sm/medium',
                                         color: 'text-secondary',
-                                        className: h.bodyText,
+                                        className: f.bodyText,
                                         children: p.intl.string(p.t.SzpUBA)
                                     })
                                 ]
@@ -64,14 +64,14 @@ function f(e) {
                     }),
                     t && (0, r.jsx)(g.c, { guildId: l.id }),
                     (0, r.jsx)('div', {
-                        className: s()(h.rules, { [h.disabled]: !t }),
+                        className: s()(f.rules, { [f.disabled]: !t }),
                         children: (0, r.jsxs)('div', {
                             inert: t ? void 0 : '',
                             children: [
                                 (0, r.jsx)(a.X6, {
                                     variant: 'text-xs/bold',
                                     color: 'text-muted',
-                                    className: h.rulesHeader,
+                                    className: f.rulesHeader,
                                     children: p.intl.string(p.t.XcAzbm)
                                 }),
                                 (0, r.jsx)(u.k, {

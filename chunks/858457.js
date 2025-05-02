@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => f,
+    Z: () => h,
     r: () => m
 }),
     n(388685),
@@ -141,16 +141,16 @@ async function p(e, t) {
         r.length > 0 && t(r);
     }
 }
-let h = (0, i.throttle)(p, 1000, { leading: !1 });
-function f(e, t) {
+let f = (0, i.throttle)(p, 1000, { leading: !1 });
+function h(e, t) {
     var n, l;
     let [s, a] = r.useState([]),
         [u, d] = r.useState(null),
         [m, g] = r.useState(null != (l = null == e || null == (n = e.triggerMetadata) ? void 0 : n.regexPatterns) ? l : []),
-        f = r.useCallback(
+        h = r.useCallback(
             (t) => {
                 t.length < 3 ||
-                    h(c(o({}, e), { triggerMetadata: c(o({}, e.triggerMetadata), { regexPatterns: [t] }) }), (e) => {
+                    f(c(o({}, e), { triggerMetadata: c(o({}, e.triggerMetadata), { regexPatterns: [t] }) }), (e) => {
                         var t;
                         return d(null != (t = e[0]) ? t : null);
                     });
@@ -164,7 +164,7 @@ function f(e, t) {
         validatePatternsChanged: r.useCallback(
             (n, r) => {
                 (0, i.isEqual)(n, r) ||
-                    (h.cancel(),
+                    (f.cancel(),
                     p(c(o({}, e), { triggerMetadata: c(o({}, e.triggerMetadata), { regexPatterns: n }) }), (e) => {
                         a(e), 0 === e.length && d(null);
                     }),
@@ -173,6 +173,6 @@ function f(e, t) {
             },
             [e, t]
         ),
-        validateEditingValueChanged: f
+        validateEditingValueChanged: h
     };
 }

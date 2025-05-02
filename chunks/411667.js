@@ -10,8 +10,8 @@ var i = n(346163),
 function u(e) {
     let t,
         { guild: n } = e,
-        { resubmittingEnableRequest: u, resubmissionError: d, createEnableRequest: m, resubmittedRequest: g, requestRejectedNoticeText: p, reapplyNoticeText: h } = (0, i.Z)(n),
-        f = n.hasFeature(a.oNc.CREATOR_MONETIZABLE_RESTRICTED),
+        { resubmittingEnableRequest: u, resubmissionError: d, createEnableRequest: m, resubmittedRequest: g, requestRejectedNoticeText: p, reapplyNoticeText: f } = (0, i.Z)(n),
+        h = n.hasFeature(a.oNc.CREATOR_MONETIZABLE_RESTRICTED),
         x = n.hasFeature(a.oNc.CREATOR_MONETIZABLE_PENDING_NEW_OWNER_ONBOARDING);
     if (null != d)
         return (0, r.jsx)(l.Z, {
@@ -20,7 +20,7 @@ function u(e) {
         });
     let b = null;
     return (
-        null != p ? (b = p) : g ? (b = o.intl.string(o.t.MyJpJS)) : null != h ? ((b = h), (t = o.intl.string(o.t['YKw/NT']))) : x ? (b = o.intl.string(o.t.e2g9sb)) : f && (b = o.intl.string(o.t.rxI9sr)),
+        null != p ? (b = p) : g ? (b = o.intl.string(o.t.MyJpJS)) : null != f ? ((b = f), (t = o.intl.string(o.t['YKw/NT']))) : x ? (b = o.intl.string(o.t.e2g9sb)) : h && (b = o.intl.string(o.t.rxI9sr)),
         null != b
             ? (0, r.jsx)(s.Z, {
                   className: c.noticeContainer,

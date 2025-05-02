@@ -11,8 +11,8 @@ var r = n(200651),
     m = n(259580),
     g = n(823379),
     p = n(889369),
-    h = n(570961),
-    f = n(208665),
+    f = n(570961),
+    h = n(208665),
     x = n(976983),
     b = n(290511),
     j = n(388032),
@@ -35,9 +35,9 @@ function O(e) {
             onDragComplete: E,
             onDragReset: T
         }),
-        k = (0, a.cj)([f.Z], () => {
+        k = (0, a.cj)([h.Z], () => {
             var e;
-            return null != (e = f.Z.errors[x]) ? e : v;
+            return null != (e = h.Z.errors[x]) ? e : v;
         }),
         [A, L] = i.useState(!1),
         [M, G] = i.useState(!1),
@@ -109,7 +109,7 @@ function O(e) {
                           className: _.removeButton,
                           children: (0, r.jsx)(o.P3F, {
                               className: _.closeIcon,
-                              onClick: () => (0, h.fi)(n, l.id),
+                              onClick: () => (0, f.fi)(n, l.id),
                               children: (0, r.jsx)(o.XHJ, {
                                   size: 'xs',
                                   color: 'currentColor'
@@ -154,7 +154,7 @@ function O(e) {
                           inputClassName: _.titleInput,
                           inputRef: H,
                           value: l.title,
-                          onChange: (e) => (0, h.Kk)(n, l.id, { title: e }),
+                          onChange: (e) => (0, f.Kk)(n, l.id, { title: e }),
                           placeholder: j.intl.string(j.t.QMCuCg),
                           maxLength: b.iU,
                           error: k.title
@@ -195,7 +195,7 @@ function O(e) {
                                           size: 20,
                                           type: o.XZJ.Types.INVERTED,
                                           value: !l.singleSelect,
-                                          onChange: (e, t) => (0, h.Kk)(n, l.id, { singleSelect: !t }),
+                                          onChange: (e, t) => (0, f.Kk)(n, l.id, { singleSelect: !t }),
                                           children: (0, r.jsx)(o.Text, {
                                               variant: 'text-sm/normal',
                                               color: 'interactive-normal',
@@ -207,7 +207,7 @@ function O(e) {
                                                 size: 20,
                                                 type: o.XZJ.Types.INVERTED,
                                                 value: l.inOnboarding && l.required,
-                                                onChange: (e, t) => (0, h.Kk)(n, l.id, { required: t }),
+                                                onChange: (e, t) => (0, f.Kk)(n, l.id, { required: t }),
                                                 disabled: !l.inOnboarding,
                                                 children: (0, r.jsx)(o.Text, {
                                                     variant: 'text-sm/normal',
@@ -232,7 +232,7 @@ function O(e) {
                                   className: _.removeButton,
                                   children: (0, r.jsx)(o.P3F, {
                                       className: _.closeIcon,
-                                      onClick: () => (0, h.fi)(n, l.id),
+                                      onClick: () => (0, f.fi)(n, l.id),
                                       children: (0, r.jsx)(o.XHJ, {
                                           size: 'xs',
                                           color: 'currentColor'
@@ -259,7 +259,7 @@ function C(e) {
     function a(e) {
         return (0, r.jsx)(o.P3F, {
             className: _.example,
-            onClick: () => (0, h.Kk)(n, t.id, { title: e }),
+            onClick: () => (0, f.Kk)(n, t.id, { title: e }),
             children: (0, r.jsx)(o.Text, {
                 variant: 'text-xs/normal',
                 children: e
@@ -283,7 +283,7 @@ function C(e) {
 }
 function y(e) {
     let { guild: t, prompt: n, promptIndex: i, singleColumn: l, errors: s } = e,
-        { handleDragStart: a, handleDragReset: o, handleDragComplete: c } = (0, u.Z)(n.options, (e) => (0, h.Kk)(t, n.id, { options: e }));
+        { handleDragStart: a, handleDragReset: o, handleDragComplete: c } = (0, u.Z)(n.options, (e) => (0, f.Kk)(t, n.id, { options: e }));
     return (0, r.jsxs)('div', {
         className: _.options,
         children: [
