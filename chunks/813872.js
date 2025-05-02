@@ -1,36 +1,36 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => _ });
 var l = n(200651),
-    i = n(192379),
-    r = n(442837),
+    r = n(192379),
+    i = n(442837),
     o = n(481060),
     a = n(40851),
-    s = n(549879),
-    u = n(189432),
-    d = n(189357),
-    c = n(944486),
-    g = n(626135),
-    f = n(981631),
-    Z = n(176505),
-    b = n(50493),
-    O = n(388032);
-function m(e) {
-    let { userId: t, guildId: n, channelId: m, location: h, onAction: j, appContext: v } = e,
-        E = i.useContext(g.AnalyticsContext),
+    u = n(549879),
+    c = n(189432),
+    s = n(189357),
+    d = n(944486),
+    f = n(626135),
+    g = n(981631),
+    b = n(176505),
+    O = n(50493),
+    E = n(388032);
+function _(e) {
+    let { userId: t, guildId: n, channelId: _, location: y, onAction: v, appContext: h } = e,
+        Z = r.useContext(f.AnalyticsContext),
         p = (0, a.Aq)(),
-        P = (0, r.e7)([c.Z], () => (null != m ? m : c.Z.getChannelId(n, !0)), [m, n]),
-        y = (0, d.m)(n);
-    return null != n && y
+        m = (0, i.e7)([d.Z], () => (null != _ ? _ : d.Z.getChannelId(n, !0)), [_, n]),
+        S = (0, s.m)(n);
+    return null != n && S
         ? (0, l.jsx)(o.sNh, {
               id: 'mod-view',
-              label: O.intl.string(O.t.kj3tz8),
+              label: E.intl.string(E.t.kj3tz8),
               action: () => {
-                  null == j || j(),
-                      (0, s.i)(v),
-                      (0, u.r)(n, t, null != P ? P : Z.oC.MEMBER_SAFETY, {
-                          modViewPanel: b.k.INFO,
-                          sourceLocation: null != h ? h : E.location
+                  null == v || v(),
+                      (0, u.i)(h),
+                      (0, c.r)(n, t, null != m ? m : b.oC.MEMBER_SAFETY, {
+                          modViewPanel: O.k.INFO,
+                          sourceLocation: null != y ? y : Z.location
                       }),
-                      p.dispatch(f.CkL.POPOUT_CLOSE);
+                      p.dispatch(g.CkL.POPOUT_CLOSE);
               }
           })
         : null;

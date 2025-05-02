@@ -1,19 +1,20 @@
 n.d(t, {
-    GC: () => y,
-    RR: () => b,
-    Wb: () => E
+    GC: () => O,
+    RR: () => y,
+    Wb: () => b
 });
 var r = n(570140),
     i = n(579806),
-    o = n(710845),
-    a = n(314897),
-    s = n(626135),
-    l = n(931619),
-    c = n(358085),
-    u = n(548570),
-    d = n(616810),
-    f = n(755278);
-function _(e, t, n) {
+    o = n(15624),
+    a = n(710845),
+    s = n(314897),
+    l = n(626135),
+    c = n(931619),
+    u = n(358085),
+    d = n(548570),
+    f = n(616810),
+    _ = n(755278);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +27,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -37,12 +38,12 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -54,45 +55,45 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let g = new o.Z('ConnectionStore'),
-    E = new u.Z(),
-    b = new d.Z(E),
-    y = new f.Z(E);
-(E.handleIdentify = () => {
-    let e = a.default.getToken();
-    if ((g.verbose('handleIdentify called', { hasToken: null != e }), null == e)) return null;
-    let t = null;
+let E = new a.Z('ConnectionStore'),
+    b = new d.Z(),
+    y = new f.Z(b),
+    O = new _.Z(b);
+(b.handleIdentify = () => {
+    let e = s.default.getToken();
+    if ((E.verbose('handleIdentify called', { hasToken: null != e }), null == e)) return null;
+    let t = o.Z.getState();
     return {
         token: e,
-        properties: m(p({}, s.default.getSuperProperties()), {
+        properties: g(h({}, l.default.getSuperProperties()), {
             client_app_state: t,
             is_fast_connect: !1
         }),
-        presence: b.getInitialState()
+        presence: y.getInitialState()
     };
 }),
-    (0, c.isDesktop)() &&
+    (0, u.isDesktop)() &&
         i.Z.remotePowerMonitor.on('resume', () => {
-            E.expeditedHeartbeat(5000, 'power monitor resumed');
+            b.expeditedHeartbeat(5000, 'power monitor resumed');
         }),
-    l.Z.addOfflineCallback(() => {
-        E.networkStateChange(15000, 'network detected offline.', !1);
+    c.Z.addOfflineCallback(() => {
+        b.networkStateChange(15000, 'network detected offline.', !1);
     }),
-    l.Z.addOnlineCallback(() => {
-        E.networkStateChange(5000, 'network detected online.');
+    c.Z.addOnlineCallback(() => {
+        b.networkStateChange(5000, 'network detected online.');
     }),
-    E.on('disconnect', (e) => {
+    b.on('disconnect', (e) => {
         let { code: t, reason: n } = e;
         r.Z.dispatch({
             type: 'CONNECTION_CLOSED',
@@ -100,7 +101,7 @@ let g = new o.Z('ConnectionStore'),
             reason: n
         });
     }),
-    E.on('close', (e) => {
+    b.on('close', (e) => {
         let { code: t, reason: n } = e;
         r.Z.dispatch({
             type: 'CONNECTION_INTERRUPTED',

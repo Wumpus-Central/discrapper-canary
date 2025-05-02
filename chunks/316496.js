@@ -1,4 +1,5 @@
 n.d(t, {
+    Do: () => p,
     SN: () => c,
     m_: () => d
 });
@@ -48,7 +49,7 @@ function d(e) {
         }
     );
 }
-(0, i.B)({
+let h = (0, i.B)({
     kind: 'user',
     id: '2025-05_activity_sharing_popout_per_server',
     label: 'Activity Sharing Popout Per Server',
@@ -117,3 +118,6 @@ function d(e) {
         }
     ]
 });
+function p(e) {
+    return h.useExperiment({ location: e }, { autoTrackExposure: !0 });
+}
