@@ -151,7 +151,7 @@ function A() {
                         (0, i.jsx)(p.Z, {
                             look: p.z.WARNING,
                             className: N.formItem,
-                            children: T.intl.format(T.t.kiaF4e, { onClick: () => d.Z.open(O.oAB.VOICE, null, { scrollPosition: v.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
+                            children: T.intl.format(T.t.kiaF4e, { onClick: () => d.Z.open(O.oAB.VOICE, v.gP, { scrollPosition: v.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION }) })
                         }),
                     R === _.x.BELOW_MINIMUM
                         ? (0, i.jsx)(p.Z, {

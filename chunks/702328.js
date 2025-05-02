@@ -29,10 +29,10 @@ var i = n(200651),
     A = n(8647),
     P = n(568126),
     R = n(605289),
-    D = n(41739),
-    Z = n(346497),
-    w = n(218390),
-    k = n(823188),
+    D = n(346497),
+    Z = n(218390),
+    w = n(823188),
+    k = n(611116),
     L = n(135785),
     B = n(498765),
     M = n(635921),
@@ -80,7 +80,7 @@ let ed = (e) => {
                               isFullScreen: t
                           }),
                       a &&
-                          (0, i.jsx)(D.Z, {
+                          (0, i.jsx)(k.Z, {
                               shouldLoadVideo: s,
                               isReducedMotion: o
                           }),
@@ -112,9 +112,9 @@ let ed = (e) => {
     },
     ep = (e) => {
         var t, n;
-        let { isFullscreen: s, entrypoint: D } = e;
+        let { isFullscreen: s, entrypoint: k } = e;
         (0, _.z)(b.X);
-        let B = D === J.EZ.ApplicationStoreHome,
+        let B = k === J.EZ.ApplicationStoreHome,
             U = r.useRef(null),
             V = r.useRef(null),
             G = r.useRef(null),
@@ -146,7 +146,7 @@ let ed = (e) => {
             eF = (0, y.N)(),
             eH = null == eF || null == (t = eF.subscription_trial) ? void 0 : t.sku_id,
             ez = (0, S.Nx)(),
-            eW = (0, Z.Vi)(),
+            eW = (0, D.Vi)(),
             eY = null != eW && eW,
             eK = null == (n = (0, I.Z)()) ? void 0 : n.billingSettingsMarketingBanner,
             { analyticsLocations: eq } = (0, h.ZP)(g.Z.PREMIUM_MARKETING),
@@ -172,9 +172,9 @@ let ed = (e) => {
                     onChange: (e) => ey(e),
                     threshold: 0.1,
                     active: !0,
-                    children: (0, i.jsx)(k.ZP, {
+                    children: (0, i.jsx)(w.ZP, {
                         innerRef: G,
-                        variant: eO ? k.NN.MARKETING_PAGE_V2 : k.NN.DEFAULT,
+                        variant: eO ? w.NN.MARKETING_PAGE_V2 : w.NN.DEFAULT,
                         showWumpus: !eO,
                         tier0CTAButton: eO
                             ? (0, i.jsx)(K.Z, {
@@ -260,7 +260,7 @@ let ed = (e) => {
                                                 ref: Q,
                                                 subscriptionTier: eB,
                                                 isFullscreen: s || ez,
-                                                entrypoint: D,
+                                                entrypoint: k,
                                                 isDarkMode: e_
                                             })
                                           : (0, i.jsx)(M.ZP, {
@@ -276,7 +276,7 @@ let ed = (e) => {
                                                     [en.settingsHeroBogoMarginFullscreen]: s && eW,
                                                     [en.noTopPaddingOverride]: null != ew
                                                 }),
-                                                entrypoint: D,
+                                                entrypoint: k,
                                                 isDarkMode: e_
                                             })
                                   }),
@@ -304,9 +304,9 @@ let ed = (e) => {
                         children: [(0, i.jsx)(A.Z, { isFullScreen: s }), s && eU && (0, i.jsx)(P.Z, { localizedPricingPromo: eM })]
                     }),
                     !eO && eQ,
-                    D === J.EZ.UserSettings &&
+                    k === J.EZ.UserSettings &&
                         null != eK &&
-                        (0, i.jsx)(w.C, {
+                        (0, i.jsx)(Z.C, {
                             className: en.giftPromoCard,
                             config: eK
                         }),
