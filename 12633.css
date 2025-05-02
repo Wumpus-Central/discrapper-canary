@@ -38125,7 +38125,7 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
 }
 
 :not(.keyboard-mode).full-motion .labelToolbar_ab8609.labelToolbarVisible_ab8609 {
-    animation: labelToolbarFadeIn_ab8609 .15s ease-out forwards;
+    animation: labelToolbarFadeIn_ab8609 .15s ease-in forwards;
     opacity: 0
 }
 
@@ -38154,6 +38154,7 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
 @keyframes labelToolbarFadeOut_ab8609 {
     0% {
         bottom: -30px;
+        opacity: 1;
         pointer-events: all
     }
 
