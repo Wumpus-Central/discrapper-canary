@@ -18,6 +18,6 @@ class o {
         return new o(e);
     }
     constructor(e) {
-        i(this, 'rankedSkuIds', void 0), (this.type = r.z.FEED), (this.rankedSkuIds = e.ranked_sku_ids);
+        i(this, 'rankedSkuIds', void 0), i(this, 'sortedSkuIds', void 0), (this.type = r.z.FEED), (this.rankedSkuIds = e.ranked_sku_ids), (this.sortedSkuIds = e.sorted_sku_ids);
     }
 }

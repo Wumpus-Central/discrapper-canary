@@ -133,6 +133,9 @@ class H extends (a = l.ZP.Store) {
     get products() {
         return v;
     }
+    get productsWithVariantsAsGroup() {
+        return [...I.values()];
+    }
     get recommendedGiftSkuIds() {
         return T;
     }

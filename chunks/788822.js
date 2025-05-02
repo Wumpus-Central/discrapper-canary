@@ -17,19 +17,19 @@ let g = (e) => {
         { category: h, subblock: m, badgeText: _, handleTransition: C } = e;
     null != m && (g = null == (t = u.Z.getCategoryByStoreListingId(null == m ? void 0 : m.categoryStoreListingId)) ? void 0 : t.skuId);
     let v = null != (n = null != g ? g : null == h ? void 0 : h.skuId) ? n : '',
-        { handleCardVisibilityChange: x } = (0, d.E)(v, 'home', 'marketing featured block'),
-        { featuredBlockBanner: O } = (0, b.YG)(h, m),
+        { handleCardVisibilityChange: O } = (0, d.E)(v, 'home', 'marketing featured block'),
+        { featuredBlockBanner: x } = (0, b.YG)(h, m),
         j = l.useRef(null),
         y = v === o.T.NAMEPLATE,
         S = y ? p.intl.string(p.t['/Rk1dn']) : null == m ? void 0 : m.bodyText;
     return (0, r.jsx)(s.$, {
         innerRef: j,
-        onChange: x,
+        onChange: O,
         threshold: 0,
         children: (0, r.jsxs)(c.P3F, {
             className: f.featuredBlock,
             innerRef: j,
-            style: { backgroundImage: 'url('.concat(O, ')') },
+            style: { backgroundImage: 'url('.concat(x, ')') },
             onClick: () => C('shop marketing tile', v),
             children: [
                 null != _ &&

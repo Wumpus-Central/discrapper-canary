@@ -19,7 +19,7 @@ function x(e) {
     return (0, r.jsxs)('div', {
         className: m.inline,
         children: [
-            (0, r.jsx)(s.owK, {
+            (0, r.jsx)(s.P4T, {
                 size: 'xs',
                 color: s.TVs.colors.STATUS_WARNING
             }),

@@ -76,7 +76,7 @@ let m = {
         ]
     },
     _ = (e) => {
-        let { product: t, selectedVariantIndex: n, returnRef: _, onSuccess: C, tooltipDelay: v, isGiftEasterEggEnabled: x, color: O = a.Ttl.BRAND } = e,
+        let { product: t, selectedVariantIndex: n, returnRef: _, onSuccess: C, tooltipDelay: v, isGiftEasterEggEnabled: O, color: x = a.Ttl.BRAND } = e,
             { analyticsLocations: j } = (0, o.ZP)(),
             y = l.useRef(null),
             S = (0, i.Z)(y),
@@ -119,7 +119,7 @@ let m = {
                               {
                                   buttonRef: y,
                                   className: h.giftButton,
-                                  color: O,
+                                  color: x,
                                   look: a.zxk.Looks.FILLED,
                                   size: a.PhG.ICON,
                                   innerClassName: h.giftButtonInner,
@@ -144,7 +144,7 @@ let m = {
                                                       : void 0
                                           });
                                   },
-                                  children: x
+                                  children: O
                                       ? (0, r.jsx)(c.Z, {
                                             hovered: S,
                                             isContentDismissed: !0,

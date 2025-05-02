@@ -17,10 +17,10 @@ let h = (e) => {
     let { wideBannerBlock: h, handleTransition: m, tab: _ } = e,
         C = null == (t = u.Z.getCategoryByStoreListingId(h.categoryStoreListingId)) ? void 0 : t.skuId,
         v = l.useRef(null),
-        x = l.useRef(null),
-        [O, j] = l.useState();
+        O = l.useRef(null),
+        [x, j] = l.useState();
     l.useEffect(() => {
-        let e = x.current;
+        let e = O.current;
         if (null == e) return;
         let t = () => {
             e.naturalWidth > 0 && e.naturalHeight > 0 && j(1080 * (e.naturalHeight / e.naturalWidth));
@@ -48,16 +48,16 @@ let h = (e) => {
                 (0, r.jsx)('div', {
                     className: i()(g.wideBannerBackgroundImg, { [g.extraRounded]: P }),
                     children: (0, r.jsx)('img', {
-                        ref: x,
+                        ref: O,
                         src: k,
                         alt: h.title,
                         className: i()(g.wideBannerArt, { [g.wideBannerArtOrbs]: P }),
-                        style: { height: null != O ? ''.concat(O, 'px') : 'auto' }
+                        style: { height: null != x ? ''.concat(x, 'px') : 'auto' }
                     })
                 }),
                 (0, r.jsx)('div', {
                     className: g.wideBannerContentContainer,
-                    style: { maxHeight: null != O ? ''.concat(O, 'px') : 'auto' },
+                    style: { maxHeight: null != x ? ''.concat(x, 'px') : 'auto' },
                     children: (0, r.jsxs)('div', {
                         className: g.wideBannerTextContainer,
                         children: [

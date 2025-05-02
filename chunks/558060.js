@@ -74,8 +74,8 @@ function h(e) {
             children: (0, r.jsx)(s.F, { price: C })
         });
     let v = (0, o.ql)(t, u.tuJ.PREMIUM_TIER_2),
-        x = !n && !(0, o.x6)(t),
-        O = (0, o.x6)(t) && n ? g(f({}, C), { amount: l.original }) : C,
+        O = !n && !(0, o.x6)(t),
+        x = (0, o.x6)(t) && n ? g(f({}, C), { amount: l.original }) : C,
         j = _ && n,
         y = _ && !n;
     return (0, r.jsxs)('div', {
@@ -83,12 +83,12 @@ function h(e) {
         children: [
             !j &&
                 (0, r.jsx)(s.F, {
-                    price: O,
+                    price: x,
                     discount: n ? o.f_ : l,
                     className: a()(b.price, {
                         [b.striked]: n,
                         [b.dimmed]: n,
-                        [b.fullPrice]: x
+                        [b.fullPrice]: O
                     })
                 }),
             null != v &&
@@ -105,12 +105,12 @@ function h(e) {
                                       subscribeNowHook: (e) => (0, r.jsx)(c.F, { text: e })
                                   })
                               })
-                        : x
+                        : O
                           ? (e) => d.intl.formatToPlainString(d.t.W3gIWF, { price: e })
                           : void 0,
                     className: a()(b.price, {
                         [b.dimmed]: !n,
-                        [b.fullPrice]: x
+                        [b.fullPrice]: O
                     }),
                     variant: n ? void 0 : 'text-xs/semibold',
                     icon: (0, r.jsx)(i.ua7, {
@@ -134,7 +134,7 @@ function h(e) {
                                         },
                                         t
                                     ),
-                                    { className: a()(b.premiumIcon, { [b.fullPrice]: x }) }
+                                    { className: a()(b.premiumIcon, { [b.fullPrice]: O }) }
                                 )
                             );
                         }

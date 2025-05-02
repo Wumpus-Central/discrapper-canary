@@ -313,15 +313,18 @@ class tr extends r.PureComponent {
     }
     renderStatus() {
         let { hovered: e } = this.state,
-            { activities: t, applicationStream: n, currentUser: r, status: s, userTag: l, voiceActivityStatusEnabled: a, voiceChannel: o, customStatusRTCEntrypointEnabled: c } = this.props;
+            { activities: t, applicationStream: n, currentUser: r, status: s, userTag: l, voiceActivityStatusEnabled: a, voiceChannel: o, customStatusRTCEntrypointEnabled: c, customStatusHoverOnlyRTCEntrypointEnabled: d } = this.props;
         if (null == r) return null;
-        if (c)
+        if (c || d)
             return (0, i.jsx)(Y.Z, {
                 user: r,
                 applicationStream: n,
                 voiceChannel: a ? o : void 0,
                 activities: t,
-                hovered: e
+                hovered: e,
+                status: s,
+                userTag: l,
+                customStatusHoverOnlyRTCEntrypointEnabled: d
             });
         if (
             (0, T.Z)({
@@ -343,19 +346,19 @@ class tr extends r.PureComponent {
                     hideTooltip: !0
                 })
             });
-        let d =
+        let u =
             null == t
                 ? void 0
                 : t.find((e) => {
                       let { type: t } = e;
                       return t === e1.IIU.CUSTOM_STATUS;
                   });
-        return null != d
+        return null != u
             ? (0, i.jsx)(y.Z, {
                   hoverText: l,
                   forceHover: e,
                   children: (0, i.jsx)(W.Z, {
-                      activity: d,
+                      activity: u,
                       emojiClassName: e8.emoji,
                       className: e8.customStatus
                   })
@@ -742,18 +745,18 @@ function tl() {
         { simplifiedSettingsEnabled: F } = (0, eO.Z)({ location: 'Account' }),
         W = (0, en.m)(),
         [Y, K] = (0, ee.G)(null != L ? L : null),
-        { enabled: q } = (0, z.Z)({ location: 'Account' }),
-        Q = 'account';
+        { customStatusRTCEntrypointEnabled: q, customStatusHoverOnlyRTCEntrypointEnabled: Q } = (0, z.Z)({ location: 'Account' }),
+        $ = 'account';
     (0, C.j)({
-        location: Q + ' auto on',
+        location: $ + ' auto on',
         autoTrackExposure: !0
     }),
         (0, C.j)({
-            location: Q + ' auto off',
+            location: $ + ' auto off',
             autoTrackExposure: !1
         });
-    let $ = (0, o.e7)([eb.Z], () => eb.Z.hasHadOtherUserPlaySoundInSession()),
-        et = (function () {
+    let et = (0, o.e7)([eb.Z], () => eb.Z.hasHadOtherUserPlaySoundInSession()),
+        ei = (function () {
             let e = (0, X.wE)(c.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2),
                 [t, n] = (0, o.Wu)([ed.Z], () => [ed.Z.hasFetchedRelevance, ed.Z.profileThemesRelevanceExceeded]),
                 [i, s] = (0, o.Wu)([eG.ZP], () => [eG.ZP.hasFetchedMostRecentPremiumTypeSubscription(), eG.ZP.getMostRecentPremiumTypeSubscription()]),
@@ -774,27 +777,27 @@ function tl() {
                 !e && !!l && !a && null != n && n
             );
         })(),
-        { analyticsLocations: ei } = (0, P.ZP)(A.Z.ACCOUNT),
-        er = (0, es.K)({
+        { analyticsLocations: er } = (0, P.ZP)(A.Z.ACCOUNT),
+        el = (0, es.K)({
             location: 'Account',
             user: t
         }),
-        el = (0, ep.Ws)({ location: e3.dr.CONFLICT_CHECKS }),
-        ea = (0, H.Z)({ location: 'AccountConnected' }),
-        eo = {
+        ea = (0, ep.Ws)({ location: e3.dr.CONFLICT_CHECKS }),
+        eo = (0, H.Z)({ location: 'AccountConnected' }),
+        em = {
             avatar: [],
             settings: []
         };
     return (
-        !R && (et && eo.settings.push(c.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), M && (1 === B ? eo.settings.push(c.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : eo.settings.push(c.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), $ && eo.settings.push(c.z.SOUNDBOARD_VOLUME_EDUCATION), U && eo.settings.push(c.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), V && eo.avatar.push(c.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP), W && eo.avatar.push(c.z.EXPIRING_STATUS_COACHMARK), ea && eo.avatar.push(c.z.CUSTOM_STATUS_PROMPTS_COACHMARK)),
+        !R && (ei && em.settings.push(c.z.PROFILE_THEMES_FEATURE_EDUCATION_TOOLTIP_TAKE_2), M && (1 === B ? em.settings.push(c.z.USER_SAFETY_CONSUMER_EDUCATION_MUTE) : em.settings.push(c.z.USER_SAFETY_CONSUMER_EDUCATION_BLOCK)), et && em.settings.push(c.z.SOUNDBOARD_VOLUME_EDUCATION), U && em.settings.push(c.z.PER_GUILD_COLLECTIBLES_CUSTOMIZATION_COACHMARK), V && em.avatar.push(c.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP), W && em.avatar.push(c.z.EXPIRING_STATUS_COACHMARK), eo && em.avatar.push(c.z.CUSTOM_STATUS_PROMPTS_COACHMARK)),
         (0, i.jsx)(P.Gt, {
-            value: ei,
+            value: er,
             children: (0, i.jsx)(tr, {
                 currentUser: t,
                 activities: s,
                 applicationStream: d,
                 voiceChannel: g,
-                dismissibleContents: eo,
+                dismissibleContents: em,
                 visibleRecurringAvatarDc: Y,
                 markRecurringAvatarDcAsDismissed: K,
                 userTag: m,
@@ -815,10 +818,11 @@ function tl() {
                 isEligibleForPomelo: D,
                 simplifiedCallSettingsEnabled: F,
                 voiceActivityStatusEnabled: G,
-                nameplate: er,
+                nameplate: el,
                 selectedGuildId: L,
                 customStatusRTCEntrypointEnabled: q,
-                isQuestBarEmpty: el
+                customStatusHoverOnlyRTCEntrypointEnabled: Q,
+                isQuestBarEmpty: ea
             })
         })
     );

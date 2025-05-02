@@ -54,7 +54,7 @@ let l = (e) => {
             n = o.intl.string(o.t.wR5wOj);
         if (null != e.bundledProducts) {
             var r, i;
-            e.bundledProducts.length > 0 && (t = null == (r = e.bundledProducts[0]) ? void 0 : r.name), e.bundledProducts.length > 1 && (n = null == (i = e.bundledProducts[0]) ? void 0 : i.name);
+            e.bundledProducts.length > 0 && (t = null == (r = e.bundledProducts[0]) ? void 0 : r.name), e.bundledProducts.length > 1 && (n = null == (i = e.bundledProducts[1]) ? void 0 : i.name);
         }
         return {
             itemOneName: t,

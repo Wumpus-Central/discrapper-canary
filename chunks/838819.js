@@ -17,26 +17,26 @@ var r = n(200651),
     _ = n(977395),
     C = n(214852),
     v = n(290026),
-    x = n(511050),
-    O = n(819640),
+    O = n(511050),
+    x = n(819640),
     j = n(594174),
     y = n(626135),
     S = n(74538),
     k = n(960048),
     P = n(381585),
     E = n(597688),
-    B = n(328347),
-    w = n(744112),
-    I = n(951904),
-    T = n(139668),
+    w = n(328347),
+    B = n(744112),
+    T = n(951904),
+    I = n(139668),
     L = n(223143),
     N = n(298228),
     A = n(309956),
-    Z = n(193227),
-    R = n(426171),
+    R = n(193227),
+    Z = n(426171),
     F = n(752053),
-    H = n(963102),
-    D = n(508498),
+    D = n(963102),
+    H = n(508498),
     M = n(373113),
     W = n(681435),
     V = n(81136),
@@ -70,7 +70,7 @@ let J = (e) => {
         var t;
         let { isFullScreen: n = !0, tab: a = z.AW.HOME } = e;
         (0, C.z)(_.f);
-        let { analyticsSource: u, analyticsLocations: $ } = (0, s.cj)([B.Z], () => B.Z.getAnalytics()),
+        let { analyticsSource: u, analyticsLocations: $ } = (0, s.cj)([w.Z], () => w.Z.getAnalytics()),
             ee = l.useMemo(() => {
                 switch (a) {
                     case z.AW.ORBS:
@@ -85,20 +85,20 @@ let J = (e) => {
             { sessionId: er, scrollerRef: el, scrollHandler: ea } = (0, h._)(q.rMx.COLLECTIBLES_SHOP_SCROLLED, u),
             { selectedTab: ei, transitionState: eo, transitionToTab: es } = (0, A.B)(el, a, n),
             [ec, eu] = l.useState(!1),
-            ed = (0, T.R)('CollectiblesShop'),
+            ed = (0, I.R)('CollectiblesShop'),
             [eb, ep] = l.useState(z.IV),
             [ef, eg] = l.useState(),
             [eh, em] = l.useState(),
             { noCache: e_, includeUnpublished: eC } = (0, V.Z)(),
-            { closeIntroToOrbsClaimedCoachmark: ev } = (0, x.Z)({ location: 'CollectiblesShop' });
+            { closeIntroToOrbsClaimedCoachmark: ev } = (0, O.Z)({ location: 'CollectiblesShop' });
         l.useEffect(
             () => () => {
                 ev();
             },
             [u, ev]
         );
-        let ex = (0, s.e7)([O.Z], () => O.Z.getLayers().includes(q.S9g.COLLECTIBLES_SHOP)),
-            { onClose: eO } = (0, D.Db)(),
+        let eO = (0, s.e7)([x.Z], () => x.Z.getLayers().includes(q.S9g.COLLECTIBLES_SHOP)),
+            { onClose: ex } = (0, H.Db)(),
             ej = (0, s.e7)([j.default], () => j.default.getCurrentUser()),
             ey = S.ZP.canUseCollectibles(ej),
             {
@@ -106,8 +106,8 @@ let J = (e) => {
                 isFetchingCategories: ek,
                 fetchCategoriesError: eP,
                 fetchPurchasesError: eE,
-                claimError: eB,
-                refreshCategories: ew
+                claimError: ew,
+                refreshCategories: eB
             } = (0, L.ZP)(
                 {
                     location: 'CollectiblesShop.web',
@@ -119,14 +119,14 @@ let J = (e) => {
                     isFullScreen: n
                 }
             ),
-            eI = null != (t = null != eP ? eP : eE) ? t : eB;
+            eT = null != (t = null != eP ? eP : eE) ? t : ew;
         (0, v.P)();
-        let eT = (0, N.O)(eS),
+        let eI = (0, N.O)(eS),
             eL = l.useRef(null),
             [eN, eA] = l.useState(!1);
-        (0, R.Kp)({
+        (0, Z.Kp)({
             isFetchingCategories: ek,
-            isLayer: ex,
+            isLayer: eO,
             initialItemCardRef: eL
         }),
             l.useEffect(() => {
@@ -151,23 +151,23 @@ let J = (e) => {
                         location_stack: et
                     });
             }, [ey, et, ej]);
-        let { dismissShopButtonDC: eZ } = (0, W.Z)();
+        let { dismissShopButtonDC: eR } = (0, W.Z)();
         l.useEffect(() => {
-            eZ(),
+            eR(),
                 (0, m.un)(c.z.COLLECTIBLES_GIFTING_COACHMARK) ||
                     (0, m.EW)(c.z.COLLECTIBLES_GIFTING_COACHMARK, {
                         dismissAction: Y.L.AUTO_DISMISS,
                         forceTrack: !0
                     });
-        }, [eZ]),
+        }, [eR]),
             l.useEffect(() => {
                 n || (0, p.Y)(q.Z5c.COLLECTIBLES_SHOP);
             }, [n]);
-        let eR = l.useCallback(() => {
-                ew();
-            }, [ew]),
-            { setCategoryRef: eF, handleScrollToCategory: eH } = (0, R.xV)(el.current),
-            { reducedMotion: eD } = l.useContext(b.Sfi),
+        let eZ = l.useCallback(() => {
+                eB();
+            }, [eB]),
+            { setCategoryRef: eF, handleScrollToCategory: eD } = (0, Z.xV)(el.current),
+            { reducedMotion: eH } = l.useContext(b.Sfi),
             eM = l.useRef(null),
             eW = l.useRef(null);
         (0, b.Tbt)(eM),
@@ -178,35 +178,35 @@ let J = (e) => {
                 }
             }, [n]);
         let [eV, eU] = l.useState(1),
-            { isPaginationEnabled: eG, categoriesPerPage: ez } = (0, I.a)('CollectiblesShop'),
+            { isPaginationEnabled: eG, categoriesPerPage: ez } = (0, T.a)('CollectiblesShop'),
             eq = l.useCallback(
                 (e) => {
                     if (!eG || ez <= 0) return 1;
-                    let t = eT.findIndex((t) => t.skuId === e);
+                    let t = eI.findIndex((t) => t.skuId === e);
                     return -1 === t ? 1 : Math.floor(t / ez) + 1;
                 },
-                [eT, eG, ez]
+                [eI, eG, ez]
             ),
             eY = l.useCallback(
                 async (e, t, r) => {
-                    let l = r && !n && !eD.enabled;
+                    let l = r && !n && !eH.enabled;
                     if ((em(e), eg(t), t === o.T.ORB)) await es(z.AW.ORBS, r);
                     else if ((await es(z.AW.CATALOG, l), t)) {
                         if (eG && ez > 0) {
                             let e = eq(t);
                             e !== eV && eU(e);
                         }
-                        eH(t);
+                        eD(t);
                     }
                 },
-                [eH, n, eD.enabled, es, eG, ez, eq, eV, eU]
+                [eD, n, eH.enabled, es, eG, ez, eq, eV, eU]
             ),
-            e$ = (0, w.b)('Collectibles Shop Button'),
+            e$ = (0, B.b)('Collectibles Shop Button'),
             eK = l.useMemo(() => {
-                if (!eG) return eT;
+                if (!eG) return eI;
                 let e = (eV - 1) * ez;
-                return eT.slice(e, e + ez);
-            }, [eT, eG, ez, eV]),
+                return eI.slice(e, e + ez);
+            }, [eI, eG, ez, eV]),
             eX = l.useRef(null),
             eJ = l.useCallback(
                 (e) => {
@@ -226,8 +226,8 @@ let J = (e) => {
                     pageCategory: eQ
                 },
                 children: (0, r.jsxs)(Q, {
-                    onClose: eO,
-                    shouldAddEventListener: n && !ex,
+                    onClose: ex,
+                    shouldAddEventListener: n && !eO,
                     children: [
                         (0, r.jsx)('div', {
                             className: X.shop,
@@ -249,19 +249,19 @@ let J = (e) => {
                                         [X.out]: eo === z.f7.OUT
                                     }),
                                     children: [
-                                        (0, r.jsx)(H.I, {
+                                        (0, r.jsx)(D.I, {
                                             isFullScreen: n,
-                                            isLayer: ex,
-                                            onClose: eO,
+                                            isLayer: eO,
+                                            onClose: ex,
                                             handleTransition: es,
                                             selectedTab: ei
                                         }),
                                         (function (e) {
-                                            if (null != eI) {
+                                            if (null != eT) {
                                                 var t, l;
                                                 let e = [];
                                                 return (
-                                                    null != eP ? e.push('shop load fetch categories error: '.concat(eI.message)) : null != eE ? e.push('shop load fetch purchase error: '.concat(eI.message)) : e.push('shop load claim error: '.concat(eI.message)),
+                                                    null != eP ? e.push('shop load fetch categories error: '.concat(eT.message)) : null != eE ? e.push('shop load fetch purchase error: '.concat(eT.message)) : e.push('shop load claim error: '.concat(eT.message)),
                                                     k.Z.captureMessage(e.join('\n'), {
                                                         tags: {
                                                             isStaff: null != (l = null == ej || null == (t = ej.isStaff()) ? void 0 : t.toString()) ? l : 'unknown',
@@ -271,7 +271,7 @@ let J = (e) => {
                                                         }
                                                     }),
                                                     (0, r.jsx)(F.Z, {
-                                                        onRetry: eR,
+                                                        onRetry: eZ,
                                                         errorOrigin: F.i.SHOP_PAGE,
                                                         errorMessage: null == eP ? void 0 : eP.message
                                                     })
@@ -293,10 +293,10 @@ let J = (e) => {
                                                         children: (0, r.jsxs)('main', {
                                                             className: i()(X.page, {
                                                                 [X.pageFullscreen]: n,
-                                                                [X.pageWithPagination]: eG && (null == eT ? void 0 : eT.length) > ez
+                                                                [X.pageWithPagination]: eG && (null == eI ? void 0 : eI.length) > ez
                                                             }),
                                                             children: [
-                                                                (0, r.jsx)(Z.Z, {
+                                                                (0, r.jsx)(R.Z, {
                                                                     isFetchingCategories: ek,
                                                                     sortedCategories: eK,
                                                                     setCategoryRef: eF,
@@ -307,13 +307,13 @@ let J = (e) => {
                                                                     isFullScreen: n
                                                                 }),
                                                                 eG &&
-                                                                    eT.length > ez &&
+                                                                    eI.length > ez &&
                                                                     (0, r.jsx)('div', {
                                                                         className: X.paginationContainer,
                                                                         children: (0, r.jsx)('div', {
                                                                             children: (0, r.jsx)(d.D, {
                                                                                 currentPage: eV,
-                                                                                totalCount: eT.length,
+                                                                                totalCount: eI.length,
                                                                                 pageSize: ez,
                                                                                 onPageChange: eJ,
                                                                                 disablePaginationGap: !0

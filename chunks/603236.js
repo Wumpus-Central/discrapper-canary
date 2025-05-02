@@ -1,81 +1,81 @@
 n.d(t, {
-    I: () => N,
-    S: () => O
+    I: () => S,
+    S: () => _
 }),
     n(997841);
 var l = n(200651),
-    r = n(192379),
-    i = n(120356),
-    a = n.n(i),
-    s = n(533800),
+    i = n(192379),
+    r = n(120356),
+    s = n.n(r),
+    a = n(533800),
     o = n(442837),
-    c = n(481060),
-    u = n(484614),
-    d = n(914010),
-    m = n(246946),
-    x = n(626135),
-    g = n(630388),
-    h = n(971130),
+    u = n(481060),
+    d = n(484614),
+    c = n(914010),
+    g = n(246946),
+    h = n(626135),
+    m = n(630388),
+    p = n(971130),
     v = n(530436),
-    f = n(245335),
-    p = n(981631),
-    j = n(388032),
-    b = n(821022),
-    y = n(20493);
-let O = o.ZP.connectStores([m.Z], () => ({ hideValue: m.Z.hideInstantInvites }))((e) => {
-        let { value: t, autoFocus: n, hideValue: r, onCopy: i, disabled: a } = e;
-        return (0, l.jsx)(u.Z, {
-            value: r ? j.intl.string(j.t['6HzNgY']) : t,
-            buttonColor: c.zxk.Colors.BRAND,
-            onCopy: i,
+    x = n(245335),
+    I = n(981631),
+    f = n(388032),
+    j = n(821022),
+    N = n(20493);
+let _ = o.ZP.connectStores([g.Z], () => ({ hideValue: g.Z.hideInstantInvites }))((e) => {
+        let { value: t, autoFocus: n, hideValue: i, onCopy: r, disabled: s } = e;
+        return (0, l.jsx)(d.Z, {
+            value: i ? f.intl.string(f.t['6HzNgY']) : t,
+            buttonColor: u.zxk.Colors.BRAND,
+            onCopy: r,
             autoFocus: n,
-            disabled: a
+            disabled: s
         });
     }),
-    N = (e) => {
-        let { guild: t, noInvitesAvailable: n, showFriends: i, onClose: o, modalState: u, isApplicationBypassToggleEnabled: m, setInviteFlags: N, copyValue: E, changePage: C, inviteChannel: I, source: S, code: T, guildScheduledEvent: P, disabled: w, application: Z } = e,
-            { maxAge: k, maxUses: _, networkError: D, showVanityURL: R, flags: A } = u,
-            z = r.useCallback(() => {
-                x.default.track(p.rMx.COPY_INSTANT_INVITE, {
-                    server: d.Z.getGuildId(),
-                    channel: null == I ? void 0 : I.id,
-                    channel_type: null == I ? void 0 : I.type,
-                    location: S,
-                    code: T,
-                    guild_scheduled_event_id: null == P ? void 0 : P.id,
+    S = (e) => {
+        let { guild: t, noInvitesAvailable: n, showFriends: r, onClose: o, modalState: d, isApplicationBypassToggleEnabled: g, setInviteFlags: S, copyValue: E, changePage: b, inviteChannel: T, source: O, code: y, guildScheduledEvent: C, disabled: P, application: Z } = e,
+            { maxAge: w, maxUses: A, networkError: k, showVanityURL: M, flags: R } = d,
+            D = i.useCallback(() => {
+                h.default.track(I.rMx.COPY_INSTANT_INVITE, {
+                    server: c.Z.getGuildId(),
+                    channel: null == T ? void 0 : T.id,
+                    channel_type: null == T ? void 0 : T.type,
+                    location: O,
+                    code: y,
+                    guild_scheduled_event_id: null == C ? void 0 : C.id,
                     application_id: null == Z ? void 0 : Z.id
                 });
-            }, [null == Z ? void 0 : Z.id, I, S, T, P]);
+            }, [null == Z ? void 0 : Z.id, T, O, y, C]);
         return (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(O, {
+                (0, l.jsx)(_, {
                     value: E,
-                    autoFocus: i,
-                    onCopy: z,
-                    disabled: w
+                    autoFocus: r,
+                    onCopy: D,
+                    disabled: P
                 }),
-                m &&
+                g &&
                     (0, l.jsxs)(l.Fragment, {
                         children: [
-                            (0, l.jsx)('div', { className: b.divider }),
-                            (0, l.jsx)(c.j7V, {
-                                className: b.toggle,
-                                value: (0, g.yE)(A, s.$.IS_APPLICATION_BYPASS),
-                                onChange: (e) => N((0, g.mB)(A, s.$.IS_APPLICATION_BYPASS, e)),
-                                disabled: w,
+                            (0, l.jsx)('div', { className: j.divider }),
+                            (0, l.jsx)(u.j7V, {
+                                className: j.toggle,
+                                value: (0, m.yE)(R, a.$.IS_APPLICATION_BYPASS),
+                                onChange: (e) => S((0, m.mB)(R, a.$.IS_APPLICATION_BYPASS, e)),
+                                disabled: P,
                                 hideBorder: !0,
                                 children: (0, l.jsxs)('div', {
-                                    className: b.formText,
+                                    className: j.formText,
                                     children: [
-                                        (0, l.jsx)(c.Text, {
+                                        (0, l.jsx)(u.Text, {
                                             variant: 'text-md/semibold',
-                                            children: j.intl.string(j.t['1i1bUl'])
+                                            children: f.intl.string(f.t['1i1bUl'])
                                         }),
-                                        (0, l.jsx)(c.ua7, {
-                                            text: j.intl.string(j.t['jvd/LC']),
+                                        (0, l.jsx)(u.ua7, {
+                                            text: f.intl.string(f.t['jvd/LC']),
                                             children: (e) =>
                                                 (0, l.jsx)(
-                                                    c.d3s,
+                                                    u.d3s,
                                                     (function (e) {
                                                         for (var t = 1; t < arguments.length; t++) {
                                                             var n = null != arguments[t] ? arguments[t] : {},
@@ -114,33 +114,33 @@ let O = o.ZP.connectStores([m.Z], () => ({ hideValue: m.Z.hideInstantInvites }))
                             })
                         ]
                     }),
-                n || R
+                n || M
                     ? null
-                    : (0, l.jsxs)(c.Text, {
+                    : (0, l.jsxs)(u.Text, {
                           variant: 'text-xs/normal',
-                          className: a()(y.marginTop8, b.footerText),
+                          className: s()(N.marginTop8, j.footerText),
                           children: [
-                              (0, h.Vg)(k, _),
+                              (0, p.Vg)(w, A),
                               ' ',
-                              i
-                                  ? (0, l.jsx)(c.eee, {
-                                        onClick: () => C(f.RV.SETTINGS),
-                                        children: j.intl.string(j.t.VNe8Pz)
+                              r
+                                  ? (0, l.jsx)(u.eee, {
+                                        onClick: () => b(x.RV.SETTINGS),
+                                        children: f.intl.string(f.t.VNe8Pz)
                                     })
                                   : null
                           ]
                       }),
-                !n && i && R
-                    ? (0, l.jsxs)(c.Text, {
+                !n && r && M
+                    ? (0, l.jsxs)(u.Text, {
                           variant: 'text-xs/normal',
-                          className: a()(y.marginTop8, b.footerText),
-                          children: [j.intl.string(j.t['0M2U9/']), ' ']
+                          className: s()(N.marginTop8, j.footerText),
+                          children: [f.intl.string(f.t['0M2U9/']), ' ']
                       })
                     : null,
-                null != D
+                null != k
                     ? (0, l.jsx)(v.W, {
                           guild: t,
-                          error: D,
+                          error: k,
                           onClose: o
                       })
                     : null

@@ -1,52 +1,54 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => x });
 var i = n(200651),
     r = n(192379),
     s = n(120356),
     l = n.n(s),
     a = n(481060),
     o = n(747017),
-    c = n(570928),
-    d = n(100527),
-    u = n(906732),
-    m = n(429467),
-    p = n(981631),
-    g = n(388032),
-    h = n(493456);
-function f(e) {
+    c = n(963056),
+    d = n(570928),
+    u = n(100527),
+    m = n(906732),
+    p = n(51144),
+    g = n(429467),
+    h = n(981631),
+    f = n(388032),
+    b = n(493456);
+function _(e) {
     let { openModal: t, hasCustomStatus: n, className: r } = e,
         s = (e) => {
             e.stopPropagation(), t();
         };
     return (0, i.jsxs)(a.P3F, {
         ignoreKeyPress: !0,
-        className: l()(h.customStatusAction, r),
+        className: l()(b.customStatusAction, r),
         onClick: s,
         onKeyDown: (e) => {
             ('Enter' === e.key || ' ' === e.key) && s(e);
         },
-        'aria-label': n ? g.intl.string(g.t.PwknJC) : g.intl.string(g.t.Vq4UmZ),
+        'aria-label': n ? f.intl.string(f.t.PwknJC) : f.intl.string(f.t.Vq4UmZ),
         children: [
             n ? (0, i.jsx)(a.vdY, { size: 'xxs' }) : (0, i.jsx)(a.oFk, { size: 'xxs' }),
             (0, i.jsx)(a.Text, {
                 variant: 'text-xs/medium',
-                children: n ? g.intl.string(g.t.PwknJC) : g.intl.string(g.t.Vq4UmZ)
+                children: n ? f.intl.string(f.t.PwknJC) : f.intl.string(f.t.Vq4UmZ)
             })
         ]
     });
 }
-function b(e) {
-    let { hovered: t, activities: s, user: l, applicationStream: g, voiceChannel: b } = e,
-        { analyticsLocations: _ } = (0, u.ZP)(d.Z.RTC_PANEL),
-        x =
+function x(e) {
+    let { hovered: t, activities: s, user: l, applicationStream: f, voiceChannel: x, status: E, userTag: j, customStatusHoverOnlyRTCEntrypointEnabled: C } = e,
+        { analyticsLocations: O } = (0, m.ZP)(u.Z.RTC_PANEL),
+        S =
             null == s
                 ? void 0
                 : s.find((e) => {
                       let { type: t } = e;
-                      return t === p.IIU.CUSTOM_STATUS;
+                      return t === h.IIU.CUSTOM_STATUS;
                   }),
-        E = r.useCallback(() => {
+        v = r.useCallback(() => {
             (0, a.ZDy)(async () => {
-                let e = (0, m.Z)(),
+                let e = (0, g.Z)(),
                     { default: t } = await n.e('31649').then(n.bind(n, 475613));
                 return (n) => {
                     var r, s;
@@ -79,7 +81,7 @@ function b(e) {
                         })({}, n)),
                         (s = s =
                             {
-                                sourceAnalyticsLocations: _,
+                                sourceAnalyticsLocations: O,
                                 location: 'CustomStatusRTCEntrypoint',
                                 prompt: e
                             }),
@@ -99,29 +101,40 @@ function b(e) {
                     );
                 };
             });
-        }, [_]);
-    return (0, i.jsx)(u.Gt, {
-        value: _,
+        }, [O]),
+        T = r.useMemo(() => (null != E && E !== a.Skl.UNKNOWN && null != l && l.isPomelo() ? (0, i.jsx)(c.Z, { text: p.ZP.humanizeStatus(E) }) : j), [E, l, j]),
+        I = void 0 !== S,
+        N = r.useMemo(
+            () =>
+                (0, i.jsx)(_, {
+                    openModal: v,
+                    hasCustomStatus: I,
+                    className: b.customStatusActionHoverText
+                }),
+            [v, I]
+        ),
+        y = C
+            ? (0, i.jsx)(d.Z, {
+                  hoverText: N,
+                  forceHover: t,
+                  children: T
+              })
+            : N;
+    return (0, i.jsx)(m.Gt, {
+        value: O,
         children:
             null != s && s.length > 0
-                ? (0, i.jsx)(c.Z, {
-                      hoverText: (0, i.jsx)(f, {
-                          openModal: E,
-                          hasCustomStatus: void 0 !== x,
-                          className: h.customStatusActionHoverText
-                      }),
+                ? (0, i.jsx)(d.Z, {
+                      hoverText: y,
                       forceHover: t,
                       children: (0, i.jsx)(o.Z, {
                           user: l,
                           activities: s,
-                          applicationStream: g,
-                          voiceChannel: b,
+                          applicationStream: f,
+                          voiceChannel: x,
                           hideTooltip: !0
                       })
                   })
-                : (0, i.jsx)(f, {
-                      openModal: E,
-                      hasCustomStatus: !1
-                  })
+                : y
     });
 }

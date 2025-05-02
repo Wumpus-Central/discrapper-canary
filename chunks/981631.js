@@ -2181,6 +2181,7 @@ var N =
     (r.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED = 'referral_program_share_modal_cta_clicked'),
     (r.REFERRAL_PROGRAM_SHARE_CTA_CLICKED = 'referral_program_share_cta_clicked'),
     (r.CACHE_STORE_CACHE_SKIPPED = 'cache_store_cache_skipped'),
+    (r.GATEWAY_CONNECT_SKIPPED = 'gateway_connect_skipped'),
     (r.GATEWAY_SOCKET_RESET = 'gateway_socket_reset'),
     (r.SESSION_START_CLIENT = 'session_start_client'),
     (r.APPLE_PARTNER_IAP_REQUEST_SENT = 'apple_partner_iap_request_sent'),

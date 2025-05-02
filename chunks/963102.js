@@ -17,8 +17,8 @@ var r = n(200651),
     _ = n(594174),
     C = n(471731),
     v = n(335131),
-    x = n(215023),
-    O = n(981631),
+    O = n(215023),
+    x = n(981631),
     j = n(388032),
     y = n(774457);
 function S(e) {
@@ -33,32 +33,32 @@ function S(e) {
 function k(e) {
     let { isFullScreen: t, isLayer: n, onClose: a, selectedTab: k, handleTransition: P } = e,
         E = (0, b.ZP)(),
-        B = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
-        w = (null == B ? void 0 : B.isStaff()) || (null == B ? void 0 : B.isStaffPersonal()) || !1,
-        { enabled: I } = (0, h.W)({ location: 'collectibles_shop_header_bar' }),
-        T = [
+        w = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
+        B = (null == w ? void 0 : w.isStaff()) || (null == w ? void 0 : w.isStaffPersonal()) || !1,
+        { enabled: T } = (0, h.W)({ location: 'collectibles_shop_header_bar' }),
+        I = [
             {
-                tab: x.AW.HOME,
+                tab: O.AW.HOME,
                 displayText: j.intl.string(j.t.ijDDw8)
             },
             {
-                tab: x.AW.CATALOG,
+                tab: O.AW.CATALOG,
                 displayText: j.intl.string(j.t.xFcotb)
             }
         ];
-    I &&
-        T.push({
-            tab: x.AW.ORBS,
+    T &&
+        I.push({
+            tab: O.AW.ORBS,
             displayText: j.intl.string(j.t['KUYR+P'])
         });
     let L = n ? v.DR : a,
-        N = k === x.AW.ORBS ? O.ZY5.SHOP_ORBS_TAB : O.ZY5.COLLECTIBLES_SHOP,
+        N = k === O.AW.ORBS ? x.ZY5.SHOP_ORBS_TAB : x.ZY5.COLLECTIBLES_SHOP,
         A = l.useCallback(() => {
             t && (L(), (0, u.Ou)()),
                 (0, g.Y)({
                     pageType: N,
-                    sectionType: O.jXE.ORBS_BALANCE_MENU,
-                    ctaObject: O.qAy.CTA_TO_QUEST_HOME
+                    sectionType: x.jXE.ORBS_BALANCE_MENU,
+                    ctaObject: x.qAy.CTA_TO_QUEST_HOME
                 }),
                 (0, f.navigateToQuestHome)({ fromContent: o.j.ORBS_BALANCE_MENU });
         }, [L, t, N]);
@@ -67,14 +67,14 @@ function k(e) {
         children: (e) =>
             (0, r.jsxs)(p.Z, {
                 className: i()(e, y.headerBar, { [y.fullscreenHeaderBar]: t }),
-                innerClassname: I ? y.headerBarInner : void 0,
-                toolbar: t || !w ? null : (0, r.jsx)(l.Fragment, {}),
+                innerClassname: T ? y.headerBarInner : void 0,
+                toolbar: t || !B ? null : (0, r.jsx)(l.Fragment, {}),
                 children: [
                     (0, r.jsx)(C.Z, { className: y.discordLogo }),
                     (0, r.jsx)(p.Z.Title, { children: j.intl.string(j.t.pWG4zc) }),
                     (0, r.jsx)('div', {
                         className: y.tabs,
-                        children: T.map((e) => {
+                        children: I.map((e) => {
                             let { tab: t, displayText: n } = e;
                             return (0, r.jsx)(
                                 S,
@@ -88,11 +88,11 @@ function k(e) {
                             );
                         })
                     }),
-                    (I || t) &&
+                    (T || t) &&
                         (0, r.jsxs)('div', {
                             className: y.alignedRightContent,
                             children: [
-                                I &&
+                                T &&
                                     (0, r.jsx)(m.V9, {
                                         analyticsPage: N,
                                         cardAlignment: m.V9.CardAlignment.END,

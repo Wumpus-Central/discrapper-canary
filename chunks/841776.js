@@ -1,20 +1,20 @@
-n.d(l, { H: () => o });
-var t = n(200651),
-    r = n(426642),
+n.d(l, { H: () => s });
+var r = n(200651),
+    t = n(426642),
     a = n(839388);
-let o = (e) => {
+let s = (e) => {
     let { error: l, uploadErrorCode: n } = e;
     return null == l && null == n
         ? null
         : null != n
-          ? (0, t.jsx)(r.Z, {
+          ? (0, r.jsx)(t.Z, {
                 error: {
                     type: n,
                     filename: ''
                 }
             })
-          : (0, t.jsx)('div', {
+          : (0, r.jsx)('div', {
                 className: a.errorBanner,
-                children: (0, t.jsx)('p', { children: l })
+                children: (0, r.jsx)('p', { children: l })
             });
 };

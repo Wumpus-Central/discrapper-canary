@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     section: 'section__82d84',
     emojiInput: 'emojiInput__82d84',
     emojiButton: 'emojiButton__82d84',
