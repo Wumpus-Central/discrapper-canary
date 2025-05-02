@@ -155,11 +155,12 @@ let g = (t, e) => null != t && O.ZP.isMember(t, e),
                 limit: 3,
                 guildId: void 0
             }).forEach((t) => {
-                let { record: e } = t;
+                let { record: e, score: i } = t;
                 n.push({
                     type: 'CHANNEL',
                     item: e,
-                    isSuggested: !1
+                    isSuggested: !1,
+                    score: i
                 }),
                     I.numChannels++;
             });
@@ -170,16 +171,17 @@ let g = (t, e) => null != t && O.ZP.isMember(t, e),
             query: e,
             limit: 50
         }).forEach((t) => {
-            let { record: e } = t;
+            let { record: e, score: O } = t;
             if (n.has(e.id)) return;
-            let O = l.Z.getDMFromUserId(e.id);
-            null != O &&
-                null != u.ZP.lastMessageId(O) &&
+            let _ = l.Z.getDMFromUserId(e.id);
+            null != _ &&
+                null != u.ZP.lastMessageId(_) &&
                 (I.add(e.id),
                 i.push({
                     type: 'DM',
                     item: e,
-                    isSuggested: !1
+                    isSuggested: !1,
+                    score: O
                 }),
                 r.numDms++);
         });
@@ -191,11 +193,12 @@ let g = (t, e) => null != t && O.ZP.isMember(t, e),
             limit: 50,
             fuzzy: !1
         }).forEach((t) => {
-            let { record: e } = t;
+            let { record: e, score: i } = t;
             n.push({
                 type: 'GROUP_DM',
                 item: e,
-                isSuggested: !1
+                isSuggested: !1,
+                score: i
             }),
                 I.numGroupDms++;
         });
@@ -207,13 +210,14 @@ let g = (t, e) => null != t && O.ZP.isMember(t, e),
             limit: 500,
             _fuzzy: !1
         }).forEach((t) => {
-            let { record: e } = t;
+            let { record: e, score: l } = t;
             !(i.has(e.id) || r.has(e.id)) &&
                 (r.add(e.id),
                 n.push({
                     type: 'FRIEND',
                     item: e,
-                    isSuggested: !1
+                    isSuggested: !1,
+                    score: l
                 }),
                 I.numFriends++);
         });

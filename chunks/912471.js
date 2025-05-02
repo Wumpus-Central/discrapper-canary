@@ -60,7 +60,7 @@ async function S() {
     });
     let u = {
         client_heartbeat_initialization_timestamp: n.initialized,
-        client_heartbeat_version: 18
+        client_heartbeat_version: 19
     };
     {
         let e = h.Z.getMemoryUsageElectronRenderer();

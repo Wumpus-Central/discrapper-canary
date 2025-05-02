@@ -203,14 +203,14 @@ function $(e) {
                         (E.current = !0), O(!0);
                     },
                     onMouseLeave: () => {
-                        (E.current = !1), O(!1);
+                        (E.current = !1), I();
                     },
                     onFocus: () => {
                         (E.current = !0), O(!0);
                     },
                     onBlur: (e) => {
                         var t;
-                        (null == (t = g.current) ? void 0 : t.contains(e.relatedTarget)) || ((E.current = !1), O(!1));
+                        (null == (t = g.current) ? void 0 : t.contains(e.relatedTarget)) || ((E.current = !1), I());
                     },
                     children: [
                         (0, r.jsx)(u.P3F, {
@@ -487,9 +487,10 @@ function en(e) {
             [E]
         ),
         x = (e) => (null == e ? null : null != e.id ? '`' + ':'.concat(e.name, ':') + '`' : I.ZP.translateSurrogatesToInlineEmoji(e.name)),
-        M = () => {
+        M = (e, t) => (null == e ? t : ''.concat(e, ' ').concat(t)),
+        j = () => {
             let e = x(t),
-                r = null == n ? e : ''.concat(e, ' ').concat(n);
+                r = null == n ? e : M(e, n);
             return null != o && S ? ''.concat((0, b.Z)(o), ':\n> ').concat(r) : r;
         };
     return (0, r.jsx)(R.Z, {
@@ -497,7 +498,7 @@ function en(e) {
         guildId: s,
         channelId: l,
         themeType: c,
-        sourceDetails: M(),
+        sourceDetails: j(),
         sourceType: L.n_.STATUS,
         onAction: d,
         onClose: () => N(!1),

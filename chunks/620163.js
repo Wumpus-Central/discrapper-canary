@@ -1341,6 +1341,11 @@ let eQ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eY.intl.string(eY.t.Rq0NFh)],
                 parent: eG.s6.NOTIFICATIONS
             },
+            [eG.s6.NOTIFICATIONS_GAME_ACTIVITY]: {
+                section: eH.oAB.NOTIFICATIONS,
+                searchableTitles: [eY.intl.string(eY.t.omtoJy)],
+                parent: eG.s6.NOTIFICATIONS_GAME_ACTIVITY
+            },
             [eG.s6.KEYBINDS]: {
                 section: eH.oAB.KEYBINDS,
                 searchableTitles: [eY.intl.string(eY.t.T9DA2N)],

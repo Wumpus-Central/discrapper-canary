@@ -279,6 +279,7 @@ var r = (function (e) {
         (e.ACTIVITY_BOOKMARK_LAUNCHER = 'activity bookmark launcher'),
         (e.ACTIVITY_INSTANCE_EMBED = 'activity instance embed'),
         (e.ACTIVITY_DETAIL_PAGE = 'activity detail page'),
+        (e.ACTIVITY_INVITE_SHEET = 'activity invite sheet'),
         (e.ACTIVITIES_PAGE = 'activities page'),
         (e.ACTIVITIES_PAGE_NOTIFICATION_DOT = 'activities page cta'),
         (e.ACTIVITIES_PAGE_WHATS_NEW_TILE = 'activities page whats new tile'),

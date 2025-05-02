@@ -68,7 +68,8 @@ class p extends r.EventEmitter {
         null != this.processingMessageChangeInterval && (clearInterval(this.processingMessageChangeInterval), (this.processingMessageChangeInterval = void 0));
     }
     cancel() {
-        _.log('cancel() for '.concat(this.id)), (this._aborted = !0), null != this._cancel && this._cancel(), this._handleComplete();
+        var e, t;
+        _.log('cancel() for '.concat(this.id)), (this._aborted = !0), null == (e = (t = this)._cancel) || e.call(t), this._handleComplete();
     }
     cancelItem(e) {
         throw Error('cancelItem() is not implemented on UploaderBase; must implement cancelItem() on subclass');

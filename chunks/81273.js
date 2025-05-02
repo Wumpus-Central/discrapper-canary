@@ -17,8 +17,8 @@ var r = n(200651),
     v = n(41776),
     b = n(738737),
     y = n(509545),
-    x = n(63063),
-    j = n(817460),
+    j = n(63063),
+    x = n(817460),
     C = n(584825),
     I = n(697227),
     O = n(934826),
@@ -76,12 +76,12 @@ let L = (e, t, n, a) => {
                     (null == K ? void 0 : K.active_trial) != null
                         ? T.intl.format(T.t.zyGyNj, {
                               buttonText: T.intl.string(T.t.BEeXiY),
-                              interval: (0, j.iG)(A),
+                              interval: (0, x.iG)(A),
                               days: 1,
                               contactLink: w.EYA.CONTACT,
-                              cancelSubscriptionArticle: x.Z.getArticleURL(w.BhN.ROLE_SUBSCRIPTION_CANCEL),
-                              helpdeskArticle: x.Z.getArticleURL(w.BhN.ROLE_SUBSCRIPTION_TRIAL),
-                              paidServiceTermsArticle: x.Z.getArticleURL(w.BhN.PAID_TERMS),
+                              cancelSubscriptionArticle: j.Z.getArticleURL(w.BhN.ROLE_SUBSCRIPTION_CANCEL),
+                              helpdeskArticle: j.Z.getArticleURL(w.BhN.ROLE_SUBSCRIPTION_TRIAL),
+                              paidServiceTermsArticle: j.Z.getArticleURL(w.BhN.PAID_TERMS),
                               tierName: A.name
                           })
                         : void 0,

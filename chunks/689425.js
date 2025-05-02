@@ -123,6 +123,7 @@ class _ extends (r = o.PureComponent) {
             className: n,
             onMouseDown: this.handleMouseDown,
             style: l,
+            onDragStart: this.handleHTMLDragStart,
             children: r
         });
     }
@@ -138,6 +139,9 @@ class _ extends (r = o.PureComponent) {
             c(this, '_offsetX', 0),
             c(this, '_offsetY', 0),
             c(this, '_removeListeners', () => {}),
+            c(this, 'handleHTMLDragStart', (e) => {
+                e.preventDefault();
+            }),
             c(this, 'handleMouseDown', (e) => {
                 let { dragAnywhere: t, disabled: n, selector: r } = this.props;
                 if (n) return;
