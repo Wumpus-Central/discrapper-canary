@@ -1,58 +1,58 @@
-n.d(e, { Z: () => f });
+n.d(e, { Z: () => x });
 var i = n(200651);
 n(192379);
 var o = n(442837),
-    r = n(481060),
-    a = n(906732),
+    a = n(481060),
+    r = n(906732),
     l = n(48217),
-    c = n(26323),
-    s = n(430824),
-    u = n(914010),
-    d = n(709586),
+    s = n(26323),
+    d = n(430824),
+    c = n(914010),
+    u = n(709586),
     _ = n(981631),
     g = n(30513),
     h = n(388032),
     m = n(273233);
-function f(t) {
-    let { analyticsSection: e, analyticsPage: n, isGIF: f, banner: p } = t,
-        b = (0, o.e7)([u.Z], () => u.Z.getGuildId()),
-        x = (0, o.e7)([s.Z], () => s.Z.getGuild(b)),
-        { analyticsLocations: y } = (0, a.ZP)();
-    return null == x || x.hasFeature(_.oNc.ANIMATED_BANNER) || (!f && x.hasFeature(_.oNc.BANNER))
+function x(t) {
+    let { analyticsSection: e, analyticsPage: n, isGIF: x, banner: f } = t,
+        p = (0, o.e7)([c.Z], () => c.Z.getGuildId()),
+        N = (0, o.e7)([d.Z], () => d.Z.getGuild(p)),
+        { analyticsLocations: b } = (0, r.ZP)();
+    return null == N || N.hasFeature(_.oNc.ANIMATED_BANNER) || (!x && N.hasFeature(_.oNc.BANNER))
         ? null
         : (0, i.jsxs)('div', {
               className: m.container,
               children: [
-                  (0, i.jsx)(d.Z, { className: m.guildBoostingIcon }),
-                  (0, i.jsx)(r.Text, {
+                  (0, i.jsx)(u.Z, { className: m.guildBoostingIcon }),
+                  (0, i.jsx)(a.Text, {
                       color: 'header-primary',
                       variant: 'text-sm/semibold',
                       children: h.intl.string(h.t['56M7xc'])
                   }),
-                  (0, i.jsx)(r.zxk, {
-                      look: r.zxk.Looks.LINK,
-                      color: r.zxk.Colors.LINK,
+                  (0, i.jsx)(a.zxk, {
+                      look: a.zxk.Looks.LINK,
+                      color: a.zxk.Colors.LINK,
                       className: m.subscribeButton,
                       onClick: () => {
-                          if (null == x) return;
+                          if (null == N) return;
                           let t = {
                               section: e,
                               page: n,
                               object: _.qAy.UPSELL_HEADER
                           };
-                          null != p
+                          null != f
                               ? (0, l.c)({
-                                    analyticsLocations: y,
+                                    analyticsLocations: b,
                                     analyticsLocation: t,
-                                    guild: x,
-                                    isGIF: f,
-                                    banner: p
+                                    guild: N,
+                                    isGIF: x,
+                                    banner: f
                                 })
-                              : (0, c.Z)({
-                                    analyticsLocations: y,
+                              : (0, s.Z)({
+                                    analyticsLocations: b,
                                     analyticsSourceLocation: t,
-                                    guild: x,
-                                    perks: f ? (0, g.zC)() : (0, g.XO)()
+                                    guild: N,
+                                    perks: x ? (0, g.zC)() : (0, g.XO)()
                                 });
                       },
                       children: h.intl.string(h.t.WUHdZW)

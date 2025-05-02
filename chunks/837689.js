@@ -87,7 +87,7 @@ class N extends s.Z {
                 if ((await (0, O.l2)(), h.s.isDisallowPopupsSet())) return;
                 let e = this.getOfferFromStore(),
                     t = b.Z.getCurrentConfig({ location: 'announcementManager' }, { autoTrackExposure: !1 }).enabled,
-                    n = (0, c.un)(l.z.Q1_2025_FOLLOW_UP_REVERSE_TRIAL_OFFER),
+                    n = (0, c.un)(l.z.Q2_2025_MARKETING_MOMENT_FOLLOW_UP_MODAL),
                     r = u.default.getCurrentUser();
                 if ((!t || n || (0, a.$sL)() || (0, p.I5)(r) || ((await (0, g.G)(e.userTrialOffer)) && (0, y.Z)({ upsellType: v.cd.REVERSE_TRIAL_FOLLOWUP_UPSELL })), (null == r || r.verified) && !(0, a.$sL)() && m.Z.getCurrentConfig({ location: 'OfferAnnouncementManager' }).enabled && !i.tq)) {
                     for (let t of await (0, E.He)(e)) if (await this.maybeOpenServerDriveAnnouncementModal(t, !1)) break;

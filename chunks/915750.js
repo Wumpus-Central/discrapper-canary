@@ -168,7 +168,7 @@ class N {
             }),
             E(this, 'commonProperties', (e) =>
                 b(
-                    O(b({ impression_id: this.id }, (0, p.eE)(this.adDecisionData)), {
+                    O(b({ impression_id: this.id }, this.adDecisionData), {
                         is_quest_enrollment_blocked: this.isQuestEnrollmentBlocked,
                         quest_status: (0, d.uk)(e)
                     }),

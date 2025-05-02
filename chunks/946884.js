@@ -3,15 +3,15 @@ t.a(e, async function (e, r) {
         t.d(n, { ZP: () => a });
         var l = t(818140),
             i = t(192379),
-            u = e([l]);
-        function c(e, n) {
+            c = e([l]);
+        function u(e, n) {
             if (null == e) throw Error(`Attempted to render "${n}" but no renderer was provided`);
         }
-        l = (u.then ? (await u)() : u)[0];
+        l = (c.then ? (await c)() : c)[0];
         let d = new Set(['bold', 'italic', 'underline', 'strikethrough', 'spoiler', 'emoji', 'timestamp', 'mention', 'link', 'code', 'code_block', 'heading', 'list', 'quote', 'small']);
         function o({ node: e, renderers: n }) {
             let t = n[e.type];
-            if ((c(t, e.type), Array.isArray(e.value)))
+            if ((u(t, e.type), Array.isArray(e.value)))
                 return i.createElement(
                     t,
                     null,
@@ -42,15 +42,15 @@ t.a(e, async function (e, r) {
                     }
                     return i.createElement(t, e.value, l);
                 case 'quote':
-                    let u = n.paragraph;
+                    let c = n.paragraph;
                     return (
-                        c(u, 'paragraph'),
+                        u(c, 'paragraph'),
                         i.createElement(
                             t,
                             null,
                             e.value.lines.map((e) =>
                                 i.createElement(
-                                    u,
+                                    c,
                                     {
                                         key: e,
                                         value: e,

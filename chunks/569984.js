@@ -266,13 +266,12 @@ function eI(e) {
     o.set(r, i), j.set(n, o);
 }
 function eS(e) {
-    let { decisionId: t, quest: n, placement: r, adIdentifiers: i } = e;
-    null == n
-        ? b.delete(r)
-        : b.set(r, {
-              decisionId: t,
-              quest: n,
-              adIdentifiers: i
+    let { quest: t, placement: n, adDecisionData: r } = e;
+    null == t
+        ? b.delete(n)
+        : b.set(n, {
+              quest: t,
+              adDecisionData: r
           });
 }
 function eT(e) {

@@ -411,19 +411,27 @@ async function U(e) {
         placement: e
     });
     try {
-        let t = await (0, l.Gg)(),
-            n = await (0, s.Gy)(),
-            r = (
+        var t, n, r, c, u, d;
+        let a = await (0, l.Gg)(),
+            f = await (0, s.Gy)(),
+            _ = (
                 await i.tn.get({
-                    url: E.ANM.QUEST_FETCH_QUEST_TO_DELIVER(e, null == t ? void 0 : t.uuid, n.uuid),
+                    url: E.ANM.QUEST_FETCH_QUEST_TO_DELIVER(e, null == a ? void 0 : a.uuid, f.uuid),
                     rejectWithError: !1
                 })
             ).body;
         o.Z.dispatch({
             type: 'QUESTS_FETCH_QUEST_TO_DELIVER_SUCCESS',
-            decisionId: r.request_id,
-            quest: (0, p.q6)(r.quest),
-            adIdentifiers: (0, p.Sf)(r.ad_identifiers),
+            quest: (0, p.q6)(_.quest),
+            adDecisionData: {
+                ad_id: null == (t = _.ad_identifiers) ? void 0 : t.ad_id,
+                adset_id: null == (n = _.ad_identifiers) ? void 0 : n.adset_id,
+                ad_set_id: null == (r = _.ad_identifiers) ? void 0 : r.ad_set_id,
+                campaign_id: null == (c = _.ad_identifiers) ? void 0 : c.campaign_id,
+                creative_id: null == (u = _.ad_identifiers) ? void 0 : u.creative_id,
+                creative_type: null == (d = _.ad_identifiers) ? void 0 : d.creative_type,
+                decision_id: _.request_id
+            },
             placement: e
         });
     } catch (t) {

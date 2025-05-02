@@ -22,14 +22,13 @@ n.d(t, {
     KM: () => eL,
     Kr: () => eg,
     LM: () => eI,
-    MM: () => tT,
-    Mo: () => tA,
+    MM: () => tI,
+    Mo: () => tS,
     Nj: () => eR,
     OG: () => tn,
     PM: () => eu,
     Qe: () => V,
     Rs: () => ec,
-    Sf: () => ty,
     U3: () => $,
     V$: () => tt,
     VB: () => tm,
@@ -44,12 +43,11 @@ n.d(t, {
     _p: () => tu,
     b7: () => ez,
     bA: () => tE,
-    eE: () => tv,
     f$: () => tc,
     f2: () => ej,
     fY: () => e9,
     gI: () => te,
-    hF: () => tI,
+    hF: () => tO,
     hQ: () => er,
     iQ: () => q,
     il: () => eK,
@@ -59,7 +57,7 @@ n.d(t, {
     pO: () => ew,
     q6: () => Q,
     q8: () => e2,
-    qe: () => tO,
+    qe: () => ty,
     t2: () => ed,
     u7: () => tf,
     vQ: () => eO,
@@ -840,54 +838,31 @@ function tb(e) {
     return null != (i = null != (r = null == (t = e.videoMetadata) ? void 0 : t.messages.videoEndCtaButtonLabel) ? r : null == (n = e.videoMetadata) ? void 0 : n.messages.videoEndCtaTitle) ? i : x.intl.string(x.t.iiTtpK);
 }
 function ty(e) {
-    return null != e
-        ? {
-              campaignId: e.campaign_id,
-              adsetId: e.adset_id,
-              adSetId: e.ad_set_id,
-              adId: e.ad_id,
-              creativeId: e.creative_id,
-              creativeType: e.creative_type
-          }
-        : void 0;
+    var t;
+    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T.Z,
+        r = th(e),
+        i = null != r ? n.questToDeliverForPlacement.get(r) : void 0;
+    return null != (t = null == i ? void 0 : i.adDecisionData) ? t : {};
 }
 function tO(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : T.Z,
-        n = th(e),
-        r = null != n ? t.questToDeliverForPlacement.get(n) : void 0;
-    return k({ decisionId: null == r ? void 0 : r.decisionId }, null == r ? void 0 : r.adIdentifiers);
-}
-function tv(e) {
-    return null != e
-        ? {
-              ad_id: e.adId,
-              adset_id: e.adsetId,
-              campaign_id: e.campaignId,
-              creative_id: e.creativeId,
-              creative_type: e.creativeType,
-              decision_id: e.decisionId
-          }
-        : {};
-}
-function tI(e) {
     var t, n;
     let r = null != (n = null == (t = e.userStatus) ? void 0 : t.claimedTier) ? n : 0;
     return 'rewardsConfig' in e.config ? e.config.rewardsConfig.rewards[r] : e.config.rewards[r];
 }
-function tS(e) {
+function tv(e) {
     return new Set(e.config.taskConfig.type === u.L.FIRST_PARTY ? Object.keys(e.config.taskConfig.tasks) : [a.X.ACHIEVEMENT_IN_ACTIVITY]);
 }
-function tT(e, t) {
+function tI(e, t) {
     let n = new Map();
     for (let [r, i] of e)
-        for (let e of tS(i))
+        for (let e of tv(i))
             if (t.has(e)) {
                 n.set(r, i);
                 break;
             }
     return n;
 }
-function tA(e) {
+function tS(e) {
     var t, n;
     let { questId: r, videoSessionId: i } = e,
         o = N.ZP.getState().getVideoProgress(r);

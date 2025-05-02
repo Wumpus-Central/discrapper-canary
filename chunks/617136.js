@@ -161,12 +161,11 @@ function D() {
     let e = w();
     return r.useCallback(
         (t) => {
-            let { questId: n, questContent: r, questContentCTA: i, questContentPosition: o, questContentRowIndex: a, trackGuildAndChannelMetadata: s = !1 } = t,
-                l = (0, f.qe)(r);
+            let { questId: n, questContent: r, questContentCTA: i, questContentPosition: o, questContentRowIndex: a, trackGuildAndChannelMetadata: s = !1 } = t;
             e({
                 questId: n,
                 event: m.rMx.QUEST_CONTENT_CLICKED,
-                properties: y(E({}, (0, f.eE)(l), A(r, o, a)), { cta_name: i }),
+                properties: y(E({}, (0, f.qe)(r), A(r, o, a)), { cta_name: i }),
                 trackGuildAndChannelMetadata: s,
                 shouldExtendSession: (0, f.VB)(r)
             });

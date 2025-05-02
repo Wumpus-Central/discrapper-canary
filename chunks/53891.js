@@ -43,7 +43,13 @@ function b(e) {
 function _(e) {
     function t(t) {
         var n;
-        (0, c.Qd)(s.C.ADOPT_CLAN_IDENTITY_NOTICE, e.guild.id, !0, g.L.DISMISS), null == (n = e.onDismiss) || n.call(e, t);
+        a.Z.dispatch({
+            type: 'GUILD_TAG_CHANGED_COACHMARK_SEEN',
+            guildId: e.guild.id,
+            lastSeenInfo: { tag: e.guild.profile.tag }
+        }),
+            (0, c.Qd)(s.C.ADOPT_CLAN_IDENTITY_NOTICE, e.guild.id, !0, g.L.DISMISS),
+            null == (n = e.onDismiss) || n.call(e, t);
     }
     return (0, i.jsx)(l.yRy, {
         position: 'top',
