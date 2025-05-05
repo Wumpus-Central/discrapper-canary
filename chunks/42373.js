@@ -15,7 +15,7 @@ var i = n(255367),
     f = n(869783),
     b = n(888723);
 let _ = (e) => {
-    let { name: t, title: n, description: s, descriptionCta: _, previewImage: x, videoUrl: E, shouldLoadVideo: C, index: j, size: O, isReducedMotion: S, onClick: v } = e,
+    let { name: t, title: n, description: s, descriptionCta: _, previewImage: x, videoUrl: E, shouldLoadVideo: j, index: C, size: O, isReducedMotion: S, onClick: v } = e,
         T = (0, g.rO)(),
         I = r.useRef(null),
         N = r.useRef(0),
@@ -109,7 +109,7 @@ let _ = (e) => {
                     u.Z,
                     {
                         playsInline: !0,
-                        preload: C ? 'auto' : 'none',
+                        preload: j ? 'auto' : 'none',
                         muted: !0,
                         poster: x,
                         loop: !0,
@@ -129,7 +129,7 @@ let _ = (e) => {
                 )
             });
         },
-        B = j % 2 != 0;
+        B = C % 2 != 0;
     return (0, i.jsx)('div', {
         className: l()(y, {
             [b.largeBoxContainer]: O === p.y$.LARGE,

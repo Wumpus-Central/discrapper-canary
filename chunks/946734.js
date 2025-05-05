@@ -91,6 +91,10 @@ class E {
                                     .filter(y.lm)
                             ];
                         })
+                        .filter((t) => {
+                            let [n] = t;
+                            return n !== (null == e ? void 0 : e.globalName);
+                        })
                         .value();
                 })
             ),

@@ -5,12 +5,26 @@ let a = (0, r.B)({
     kind: 'user',
     id: '2025-04_custom_status_labels',
     label: 'Custom Status Labels Experiment',
-    defaultConfig: { enabled: !1 },
+    defaultConfig: {
+        enabledWithActivityStatus: !1,
+        enabledWithoutActivityStatus: !1
+    },
     treatments: [
         {
             id: 1,
             label: 'Enable custom status labels',
-            config: { enabled: !0 }
+            config: {
+                enabledWithActivityStatus: !0,
+                enabledWithoutActivityStatus: !1
+            }
+        },
+        {
+            id: 2,
+            label: 'Enable custom status labels without activity status text update',
+            config: {
+                enabledWithActivityStatus: !1,
+                enabledWithoutActivityStatus: !0
+            }
         }
     ]
 });
@@ -20,12 +34,16 @@ function o(e) {
             location: t,
             autoTrackExposure: n
         }),
-        { enabled: o } = a.useExperiment(
+        { enabledWithActivityStatus: o, enabledWithoutActivityStatus: s } = a.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
                 disable: r
             }
         );
-    return o;
+    return {
+        isEligibleForCustomStatusLabels: o || s,
+        enabledWithActivityStatus: o,
+        enabledWithoutActivityStatus: s
+    };
 }

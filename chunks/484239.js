@@ -16,7 +16,7 @@ let h = (e) => {
     var t;
     let n,
         r,
-        { title: h, titleClassName: f, buttonClassName: b, perkImage: _, isCarousel: x, onCtaClick: E, perkComponent: C, subtitle: j = '', descriptionCta: O = '', cardVariant: S, subtitleClassName: v, imageOverlayText: T } = e,
+        { title: h, titleClassName: f, buttonClassName: b, perkImage: _, isCarousel: x, onCtaClick: E, perkComponent: j, subtitle: C = '', descriptionCta: O = '', cardVariant: S, subtitleClassName: v, imageOverlayText: T } = e,
         I = (0, o._)(S),
         N = (0, a.Er)(),
         y = (null == N ? void 0 : N.nitroTenureStatus) === d.EB.REDEEMABLE;
@@ -42,7 +42,7 @@ let h = (e) => {
                 shouldShowElement: (e) => (null == e ? void 0 : e.onlyShowOnHover) !== !0,
                 cardVariantStyleInfo: I,
                 titleClassName: f,
-                subtitle: j,
+                subtitle: C,
                 subtitleClassName: v
             }),
             null != _ &&
@@ -66,11 +66,11 @@ let h = (e) => {
                             : null
                     ]
                 }),
-            null != C &&
+            null != j &&
                 (0, i.jsxs)('div', {
                     className: u.cardIllustrationNoHover,
                     children: [
-                        C,
+                        j,
                         0 !== O.length &&
                             null != E &&
                             (0, i.jsx)(l.zxk, {

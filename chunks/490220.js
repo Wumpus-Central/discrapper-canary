@@ -18,8 +18,8 @@ function m(e) {
             pendingThemeColors: _,
             pendingPronouns: x,
             pendingBio: E,
-            tryItOutThemeColors: C,
-            tryItOutAvatar: j,
+            tryItOutThemeColors: j,
+            tryItOutAvatar: C,
             tryItOutBanner: O,
             tryItOutAvatarDecoration: S,
             tryItOutProfileEffectId: v
@@ -52,7 +52,7 @@ function m(e) {
         ),
         T = (0, o.SD)({
             userId: m.id,
-            image: null != j ? j : f
+            image: null != C ? C : f
         }),
         I = (0, a.Z)(S, !1);
     return (0, i.jsx)(d.Z, {
@@ -62,10 +62,10 @@ function m(e) {
         pendingBio: E,
         pendingBanner: null != (t = null != O ? O : b) ? t : n(466045),
         pendingAvatar: T,
-        pendingThemeColors: null != C ? C : _,
+        pendingThemeColors: null != j ? j : _,
         pendingAvatarDecoration: I,
         pendingProfileEffectId: v,
-        avatarClassName: null != j || null != f || h.enabled ? void 0 : u.spinningAvatar,
+        avatarClassName: null != C || null != f || h.enabled ? void 0 : u.spinningAvatar,
         canUsePremiumCustomization: !0,
         isTryItOutFlow: !0,
         hideExampleButton: !0,

@@ -135,7 +135,7 @@ function $(e) {
         [_, p] = i.useState(!1),
         g = i.useRef(null),
         E = i.useRef(!1),
-        b = (0, m.Z)({ location: 'AddCustomStatusBubble' });
+        { isEligibleForCustomStatusLabels: b } = (0, m.Z)({ location: 'AddCustomStatusBubble' });
     (0, d.ZP)(() => {
         if (!b) return;
         let e = setTimeout(() => {
@@ -263,7 +263,7 @@ let ee = i.forwardRef(function (e, t) {
         T = (0, C.yi)(),
         { trackUserProfileAction: N } = (0, A.KZ)(),
         R = (0, g.p)({ location: 'CustomStatusBubble' }),
-        P = (0, m.Z)({ location: 'UserProfileCustomStatusBubble' }),
+        { isEligibleForCustomStatusLabels: P } = (0, m.Z)({ location: 'UserProfileCustomStatusBubble' }),
         w = null != d ? Z : 0,
         D = null != I && P ? q : 0,
         x = H + w + D,
@@ -475,7 +475,7 @@ function en(e) {
         y = i.useRef(null),
         O = i.useRef(t),
         v = i.useRef(n),
-        S = (0, m.Z)({ location: 'CustomStatusBubbleWithInteractionToolbar' });
+        { isEligibleForCustomStatusLabels: S } = (0, m.Z)({ location: 'CustomStatusBubbleWithInteractionToolbar' });
     i.useEffect(() => {
         _ === L.n_.STATUS && ((O.current !== t || v.current !== n) && p(), (O.current = t), (v.current = n));
     }, [_, p, t, n]);

@@ -17,8 +17,8 @@ var i = n(255367),
     _ = n(890022),
     x = n(487419),
     E = n(197344),
-    C = n(476756),
-    j = n(734934),
+    j = n(476756),
+    C = n(734934),
     O = n(223683),
     S = n(312400),
     v = n(115345),
@@ -121,7 +121,7 @@ function K(e) {
 function q(e) {
     let { disabledSounds: t, disableAllSounds: n, notifyMessagesInSelectedChannel: s } = e,
         a = r.useRef(null),
-        o = (0, j.p)(),
+        o = (0, C.p)(),
         c = r.useCallback((e, t) => {
             t.stopPropagation(), t.preventDefault(), null != a.current && a.current.stop(), (a.current = (0, A.GN)(e));
         }, []),
@@ -239,7 +239,7 @@ function q(e) {
                                   className: H.marginBottom20,
                                   children: G.intl.string(G.t.fgSHf3)
                               }),
-                              (0, i.jsx)(C.Z, {})
+                              (0, i.jsx)(j.Z, {})
                           ]
                       })
                     : null,
@@ -643,7 +643,7 @@ async function et(e) {
         e(!1);
 }
 function en(e) {
-    let t = (0, j.p)();
+    let t = (0, C.p)();
     return (0, i.jsx)(Q, Y(W({}, e), { focusMode: t }));
 }
 function ei() {

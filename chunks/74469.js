@@ -18,8 +18,8 @@ var i = n(255367),
 let x = (0, o.hQ)(),
     E = r.memo(function (e) {
         let { availablePrimaryGuilds: t, pendingPrimaryGuildId: n, onChange: o } = e,
-            [E, C] = (0, c.US)([l.z.GUILD_TAG_USER_PROFILE_NEW_BADGE]),
-            j = r.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
+            [E, j] = (0, c.US)([l.z.GUILD_TAG_USER_PROFILE_NEW_BADGE]),
+            C = r.useMemo(() => new Map(t.map((e) => [e.id, e])), [t]),
             O = (0, s.e7)([g.default], () => {
                 var e;
                 return (0, d.Pb)(null == (e = g.default.getCurrentUser()) ? void 0 : e.primaryGuild).guildId;
@@ -44,7 +44,7 @@ let x = (0, o.hQ)(),
                 (e) => {
                     var t, n, r;
                     if (null == e) return null;
-                    let s = j.get(e.value);
+                    let s = C.get(e.value);
                     if (null == s) return null;
                     let l = null == (t = s.profile) ? void 0 : t.tag;
                     return null == l
@@ -58,7 +58,7 @@ let x = (0, o.hQ)(),
                               guildIconSize: 32
                           });
                 },
-                [j]
+                [C]
             ),
             I = r.useCallback(
                 (e) => {
@@ -69,15 +69,15 @@ let x = (0, o.hQ)(),
             ),
             N = r.useCallback(
                 (e) => {
-                    C(h.L.TAKE_ACTION), null == o || o(e);
+                    j(h.L.TAKE_ACTION), null == o || o(e);
                 },
-                [C, o]
+                [j, o]
             ),
             y = r.useCallback((e) => e === S, [S]),
             A = r.useCallback((e) => e, []),
             P = r.useCallback(() => {
-                C(h.L.TAKE_ACTION), null == o || o(null);
-            }, [C, o]),
+                j(h.L.TAKE_ACTION), null == o || o(null);
+            }, [j, o]),
             R = r.useRef(null);
         return (
             (0, m.Z)(R, f.Y_.GUILD_TAG),

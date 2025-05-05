@@ -1,7 +1,7 @@
 n.d(t, {
-    BV: () => j,
+    BV: () => C,
     FW: () => O,
-    Kt: () => C,
+    Kt: () => j,
     ZC: () => S
 });
 var i = n(442837),
@@ -22,7 +22,7 @@ var i = n(442837),
     _ = n(728345),
     x = n(812206),
     E = n(981631);
-async function C(e, t, n) {
+async function j(e, t, n) {
     t(e.id);
     let i = e.bot;
     if (null == i)
@@ -75,7 +75,7 @@ async function C(e, t, n) {
         });
     } else t(void 0);
 }
-function j(e, t) {
+function C(e, t) {
     s.ZP.updatedUnsyncedSettings({ showPlayAgain: e }), e || f.default.track(E.rMx.APP_DMS_QUICK_LAUNCHER_HIDDEN, { source: t });
 }
 function O() {

@@ -22,8 +22,8 @@ var s = n(399606),
     _ = n(547972),
     x = n(131951),
     E = n(594174),
-    C = n(78839),
-    j = n(424218),
+    j = n(78839),
+    C = n(424218),
     O = n(63063),
     S = n(74538),
     v = n(314684),
@@ -77,13 +77,13 @@ var s = n(399606),
 let ex = () => {
     let { analyticsLocations: e } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_PERK_CARD),
         t = (0, o.ZP)(),
-        n = (0, j.BU)(D.Uq / 1024, { useKibibytes: !0 }),
-        i = (0, s.e7)([C.ZP], () => C.ZP.getPremiumTypeSubscription()),
+        n = (0, C.BU)(D.Uq / 1024, { useKibibytes: !0 }),
+        i = (0, s.e7)([j.ZP], () => j.ZP.getPremiumTypeSubscription()),
         e_ = null != i ? S.ZP.getPremiumPlanItem(i) : null,
         ex = (null != e_ ? S.ZP.getSkuIdForPlan(e_.planId) : null) === D.Si.TIER_2,
         eE = E.default.getCurrentUser(),
-        eC = (0, S.I5)(eE, D.p9.TIER_2),
-        ej = (0, S.I5)(eE, D.p9.TIER_0),
+        ej = (0, S.I5)(eE, D.p9.TIER_2),
+        eC = (0, S.I5)(eE, D.p9.TIER_0),
         eO = (0, v.bq)({ showAnimations: !0 }),
         eS = null != eO ? eO.initialPercentage : void 0,
         ev = null != eO ? eO.percentage : void 0,
@@ -125,7 +125,7 @@ let ex = () => {
                 },
                 perkImage: W
             },
-            clips: eC
+            clips: ej
                 ? {
                       name: 'clips',
                       title: U.intl.string(U.t.z2jK6e),
@@ -153,7 +153,7 @@ let ex = () => {
                       pillText: U.intl.string(U.t.EYxi0t),
                       perkImage: q
                   },
-            earlyAccess: eC
+            earlyAccess: ej
                 ? {
                       name: 'earlyAccess',
                       title: U.intl.string(U.t.UkLVeH),
@@ -169,7 +169,7 @@ let ex = () => {
                       isPremiumGetCta: !0,
                       perkImage: Q
                   },
-            earlyAccessSeeAllVariant: eC
+            earlyAccessSeeAllVariant: ej
                 ? {
                       name: 'earlyAccessSeeAllVariant',
                       title: U.intl.string(U.t.UkLVeH),
@@ -185,7 +185,7 @@ let ex = () => {
                       isPremiumGetCta: !0,
                       perkImage: J
                   },
-            entranceSounds: eC
+            entranceSounds: ej
                 ? {
                       name: 'entranceSounds',
                       title: U.intl.string(U.t['f4M+Hx']),
@@ -202,7 +202,7 @@ let ex = () => {
                       description: U.intl.string(U.t['3smf/f']),
                       perkImage: ee
                   },
-            entranceSoundsSeeAllVariation: eC
+            entranceSoundsSeeAllVariation: ej
                 ? {
                       name: 'entranceSoundsSeeAllVariation',
                       title: U.intl.string(U.t['f4M+Hx']),
@@ -228,7 +228,7 @@ let ex = () => {
                 onCtaClick: eD,
                 perkImage: Y
             },
-            remixing: eC
+            remixing: ej
                 ? {
                       name: 'remixing',
                       title: U.intl.string(U.t['H+v6eX']),
@@ -281,7 +281,7 @@ let ex = () => {
                       onCtaClick: ew,
                       perkImage: en
                   }
-                : eC
+                : ej
                   ? {
                         name: 'specialMemberPricing',
                         title: U.intl.string(U.t['0Mykgo']),
@@ -309,7 +309,7 @@ let ex = () => {
                       onCtaClick: ew,
                       perkImage: en
                   }
-                : eC
+                : ej
                   ? {
                         name: 'specialMemberPricingSeeAllVariant',
                         title: U.intl.string(U.t['0Mykgo']),
@@ -337,7 +337,7 @@ let ex = () => {
                       onCtaClick: ew,
                       perkImage: en
                   }
-                : eC
+                : ej
                   ? {
                         name: 'specialShopPerks',
                         title: U.intl.string(U.t.U68LpK),
@@ -356,7 +356,7 @@ let ex = () => {
                         onCtaClick: ew,
                         perkImage: eo
                     },
-            unlimitedSuperReactions: eC
+            unlimitedSuperReactions: ej
                 ? {
                       name: 'unlimitedSuperReactions',
                       title: U.intl.string(U.t.hpgmOz),
@@ -451,9 +451,9 @@ let ex = () => {
                 title: U.intl.string(U.t.XQCSrq),
                 subtitle: U.intl.string(U.t.HC5wVV),
                 description: U.intl.string(U.t.ee7wQ0),
-                descriptionCta: eC || ej ? U.intl.string(U.t.y9TxXV) : U.intl.string(U.t.d8o6lZ),
-                isPremiumGetCta: !(eC || ej),
-                onCtaClick: eC || ej ? ek : void 0,
+                descriptionCta: ej || eC ? U.intl.string(U.t.y9TxXV) : U.intl.string(U.t.d8o6lZ),
+                isPremiumGetCta: !(ej || eC),
+                onCtaClick: ej || eC ? ek : void 0,
                 perkImage: ei
             },
             referralProgram: {
@@ -469,9 +469,9 @@ let ex = () => {
                 name: 'serverProfiles',
                 title: U.intl.string(U.t.I9TYMj),
                 subtitle: U.intl.string(U.t.HMSHeH),
-                descriptionCta: eC ? U.intl.string(U.t.jVcuVV) : U.intl.string(U.t.JST6jo),
-                isPremiumGetCta: !eC,
-                onCtaClick: eC ? eD : void 0,
+                descriptionCta: ej ? U.intl.string(U.t.jVcuVV) : U.intl.string(U.t.JST6jo),
+                isPremiumGetCta: !ej,
+                onCtaClick: ej ? eD : void 0,
                 perkImage: ea
             },
             permadecos: {
@@ -479,14 +479,14 @@ let ex = () => {
                 title: U.intl.string(U.t['57ngoq']),
                 subtitle: U.intl.string(U.t.piFFjY),
                 description: U.intl.format(U.t.Pd7olp, { learnMoreLink: O.Z.getArticleURL(w.BhN.PERMADECOS) }),
-                descriptionCta: eC ? U.intl.string(U.t.jVcuVV) : U.intl.string(U.t.JST6jo),
-                isPremiumGetCta: !eC,
-                onCtaClick: eC
+                descriptionCta: ej ? U.intl.string(U.t.jVcuVV) : U.intl.string(U.t.JST6jo),
+                isPremiumGetCta: !ej,
+                onCtaClick: ej
                     ? () => {
                           eR || (0, p.EW)(l.z.PERMADECOS_NITRO_HOME_CARD_NEW_BADGE, { dismissAction: L.L.TAKE_ACTION }), eD();
                       }
                     : void 0,
-                pillText: eR || !eC ? void 0 : U.intl.string(U.t.y2b7CA).toLocaleUpperCase(),
+                pillText: eR || !ej ? void 0 : U.intl.string(U.t.y2b7CA).toLocaleUpperCase(),
                 perkImage: eb.Z
             },
             nameplates: {
@@ -535,7 +535,7 @@ let ex = () => {
     let { enabled: eB } = (0, I.D)();
     return (
         eB &&
-            eC &&
+            ej &&
             eP &&
             (eL.tenureBadge = {
                 name: 'tenureBadge',

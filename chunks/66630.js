@@ -33,10 +33,10 @@ var l = n(255367),
     A = n(782628);
 function L(t) {
     var e, n;
-    let { transitionState: a, onClose: L, sourceAnalyticsContext: Z, sourceAnalyticsLocations: B, prompt: R = null, label: U = null, showLabelSelectorNewTooltip: M = !1 } = t,
+    let { transitionState: a, onClose: L, sourceAnalyticsContext: Z, sourceAnalyticsLocations: R, prompt: B = null, label: U = null, showLabelSelectorNewTooltip: M = !1 } = t,
         z = (0, g.p)({ location: 'CustomStatusModalWithPreview' }),
         Y = (0, S.P)({ location: 'CustomStatusModalWithPreview' }),
-        F = (0, j.Z)({ location: 'CustomStatusModalWithPreview' }),
+        { isEligibleForCustomStatusLabels: F } = (0, j.Z)({ location: 'CustomStatusModalWithPreview' }),
         W = (0, o.e7)([p.default], () => {
             var t;
             return null != (t = p.default.getCurrentUser()) ? t : null;
@@ -50,7 +50,7 @@ function L(t) {
         tt = r.useRef(null),
         [te, tn] = r.useState(null != H && F && null == U ? (0, _.Z)(H) : U),
         [tl, tr] = r.useState(M),
-        [ta, ti] = r.useState(() => (null != U ? (0, P.Z)(U) : z && null != R ? R.label() : D.intl.string(D.t['xod36+']))),
+        [ta, ti] = r.useState(() => (null != U ? (0, P.Z)(U) : z && null != B ? B.label() : D.intl.string(D.t['xod36+']))),
         [to, ts] = r.useState(ta),
         { ref: tu, width: tc } = (0, c.ZP)(ta);
     r.useEffect(() => {
@@ -69,9 +69,9 @@ function L(t) {
         r.useEffect(() => {
             b.default.track(I.rMx.OPEN_MODAL, {
                 type: m.Z.CUSTOM_STATUS_MODAL,
-                location_stack: B
+                location_stack: R
             });
-        }, [B]),
+        }, [R]),
         (0, d.ZP)(() => {
             var t, e;
             null == (t = J.current) || t.focus(), null == (e = J.current) || e.setSelection(V.length, V.length);
@@ -97,7 +97,7 @@ function L(t) {
                 text: V,
                 emojiInfo: G,
                 clearAfter: X,
-                prompt: R,
+                prompt: B,
                 customStatusLabel: te,
                 analyticsContext: Z
             }),
@@ -172,7 +172,7 @@ function L(t) {
                                                 b.default.track(I.rMx.CUSTOM_STATUS_LABEL_CLICKED, {
                                                     previous_label: te,
                                                     new_label: e,
-                                                    location_stack: B
+                                                    location_stack: R
                                                 }),
                                                     tn(e),
                                                     tr(!1),
@@ -305,6 +305,7 @@ function L(t) {
                                                         right: -2
                                                     }
                                                 },
+                                                'aria-label': D.intl.string(D.t.wfYTHR),
                                                 className: A.clearButton,
                                                 onClick: () => {
                                                     K(''), q(null);
