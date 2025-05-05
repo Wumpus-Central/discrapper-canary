@@ -15,21 +15,21 @@ n.d(t, {
     Ws: () => v,
     Zc: () => _,
     cE: () => N,
-    cc: () => a,
-    d: () => o,
+    cc: () => o,
+    d: () => a,
     eB: () => E,
     jT: () => f,
     qm: () => l,
     um: () => A,
-    wP: () => P,
-    wT: () => R,
+    wP: () => R,
+    wT: () => P,
     xK: () => S
 }),
     n(388685);
 var r = n(911969),
     i = n(981631);
-let a = 160,
-    o = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
+let o = 160,
+    a = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
     s = '438122941302046720',
     l = '773336526917861400',
     c = '755600276941176913',
@@ -70,7 +70,7 @@ let C = {
         label_until: null,
         omit_badge_from_surfaces: []
     },
-    R = {
+    P = {
         application_id: '',
         requires_age_gate: !1,
         legacy_responsive_aspect_ratio: !1,
@@ -85,7 +85,7 @@ let C = {
         has_csp_exception: !1,
         displays_advertisements: !1
     },
-    P = [i.d4z.GUILD_TEXT, i.d4z.DM, i.d4z.GROUP_DM],
+    R = [i.d4z.GUILD_TEXT, i.d4z.DM, i.d4z.GROUP_DM],
     w = 'https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety';
 var D = (function (e) {
     return (e.NORMAL = 'normal'), (e.FULL_SCREEN = 'full-screen'), e;

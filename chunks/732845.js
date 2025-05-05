@@ -1,5 +1,5 @@
 n.d(t, {
-    a: () => a,
+    a: () => o,
     x: () => i
 });
 var r = n(818083);
@@ -16,7 +16,7 @@ let i = (0, r.B)({
             }
         ]
     }),
-    a = (0, r.B)({
+    o = (0, r.B)({
         kind: 'user',
         id: '2023-09_server_shop_phantom_preview',
         label: 'Server Shop Phantom Preview',

@@ -1,9 +1,9 @@
 n.d(t, { Z: () => H }), n(997841), n(388685), n(642613);
 var r,
     i = n(348327),
-    a = n.n(i),
-    o = n(392711),
-    s = n.n(o),
+    o = n.n(i),
+    a = n(392711),
+    s = n.n(a),
     l = n(442837),
     c = n(570140),
     u = n(503438),
@@ -37,19 +37,19 @@ let S = !1,
     A = v.Skl.UNKNOWN,
     N = 0,
     C = [],
-    R = !1,
-    P = !0,
+    P = !1,
+    R = !0,
     w = Object.freeze([]),
     D = Object.freeze([]),
     L = [];
 function x(e) {
     return (0, h.OT)(e, E.Z);
 }
-function M(e) {
+function k(e) {
     let t = m.Z.getGameByName(e);
     return null != t ? x(t.id) : f.G6.getSetting();
 }
-function k(e) {
+function M(e) {
     var t;
     if ((0, p.yE)(null != (t = e.flags) ? t : 0, v.xjy.CONTEXTLESS)) return !0;
     switch (e.type) {
@@ -58,7 +58,7 @@ function k(e) {
             if (null != e.application_id) return x(e.application_id);
             return !1;
         case v.IIU.PLAYING:
-            return null != e.application_id ? x(e.application_id) : M(e.name);
+            return null != e.application_id ? x(e.application_id) : k(e.name);
         case v.IIU.STREAMING:
         case v.IIU.WATCHING:
         default:
@@ -66,11 +66,11 @@ function k(e) {
     }
 }
 function j() {
-    (P = !0), (A = T), U();
+    (R = !0), (A = T), U();
 }
 function U() {
     var e;
-    if (((N = null != (e = g.Z.getIdleSince()) ? e : 0), (R = g.Z.isAFK()), P)) T = A;
+    if (((N = null != (e = g.Z.getIdleSince()) ? e : 0), (P = g.Z.isAFK()), R)) T = A;
     else if (S) T = v.Skl.INVISIBLE;
     else {
         let e = f.co.getSetting();
@@ -78,8 +78,8 @@ function U() {
     }
     T === v.Skl.ONLINE && N > 0 && (T = v.Skl.IDLE);
     let t = !1,
-        n = P || T === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(k);
-    a()(C, n) || ((C = n), (t = !0));
+        n = R || T === v.Skl.INVISIBLE ? [] : b.Z.getActivities().filter(M);
+    o()(C, n) || ((C = n), (t = !0));
     let r = O.Z.getRemoteActivities();
     w !== r && ((w = r), (t = !0));
     let i = O.Z.getHiddenActivities();
@@ -95,11 +95,11 @@ function G(e) {
 function B() {
     return (S = !1), U();
 }
-function V() {
-    (P = !1), (A = v.Skl.UNKNOWN), U(), y.Z.setCurrentUserOnConnectionOpen(T, L);
-}
 function F() {
-    V();
+    (R = !1), (A = v.Skl.UNKNOWN), U(), y.Z.setCurrentUserOnConnectionOpen(T, L);
+}
+function V() {
+    F();
 }
 class Z extends (r = l.ZP.Store) {
     initialize() {
@@ -110,7 +110,7 @@ class Z extends (r = l.ZP.Store) {
             status: T,
             since: N,
             activities: C,
-            afk: R
+            afk: P
         };
     }
     getStatus() {
@@ -139,9 +139,9 @@ class Z extends (r = l.ZP.Store) {
 I(Z, 'displayName', 'SelfPresenceStore');
 let H = new Z(c.Z, {
     START_SESSION: U,
-    CONNECTION_OPEN: F,
-    CONNECTION_OPEN_SUPPLEMENTAL: V,
-    OVERLAY_INITIALIZE: V,
+    CONNECTION_OPEN: V,
+    CONNECTION_OPEN_SUPPLEMENTAL: F,
+    OVERLAY_INITIALIZE: F,
     CONNECTION_CLOSED: U,
     IDLE: U,
     AFK: U,

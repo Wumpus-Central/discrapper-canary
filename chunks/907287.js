@@ -14,17 +14,17 @@ t.exports = function (t, e, a, _, o, i) {
     if (I && R) return I == e && R == t;
     var d = !0;
     i.set(t, e), i.set(e, t);
-    for (var A = c; ++l < E; ) {
-        var f = t[(u = s[l])],
+    for (var f = c; ++l < E; ) {
+        var A = t[(u = s[l])],
             p = e[u];
-        if (_) var N = c ? _(p, f, u, e, t, i) : _(f, p, u, t, e, i);
-        if (!(void 0 === N ? f === p || o(f, p, a, _, i) : N)) {
+        if (_) var N = c ? _(p, A, u, e, t, i) : _(A, p, u, t, e, i);
+        if (!(void 0 === N ? A === p || o(A, p, a, _, i) : N)) {
             d = !1;
             break;
         }
-        A || (A = 'constructor' == u);
+        f || (f = 'constructor' == u);
     }
-    if (d && !A) {
+    if (d && !f) {
         var T = t.constructor,
             L = e.constructor;
         T != L && 'constructor' in t && 'constructor' in e && !('function' == typeof T && T instanceof T && 'function' == typeof L && L instanceof L) && (d = !1);

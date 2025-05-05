@@ -2,11 +2,11 @@ n.d(t, { Z: () => i });
 var r = n(358085);
 async function i(e, t) {
     let { default: i } = await Promise.resolve().then(n.bind(n, 315263)),
-        a = i(e, {
+        o = i(e, {
             skipExtensionCheck: t,
             analyticsLocations: []
         });
-    if (null != a) a(null);
+    if (null != o) o(null);
     else if (r.isPlatformEmbedded) window.open(e);
     else {
         let t = document.createElement('a');

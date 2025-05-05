@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h });
 var r = n(394821),
     i = n(841784),
-    a = n(833664),
-    o = n(499254),
+    o = n(833664),
+    a = n(499254),
     s = n(827498),
     l = n(541716),
     c = n(810568),
@@ -57,9 +57,9 @@ function h(e) {
         y = (0, i.Z)(h);
     return y && null != m
         ? () => {
-              null == E || E(), o.__(s._b.TEXT, l.Ie.NORMAL, { applicationId: m.id });
+              null == E || E(), a.__(s._b.TEXT, l.Ie.NORMAL, { applicationId: m.id });
           }
-        : !y && (0, a.Z)(h)
+        : !y && (0, o.Z)(h)
           ? b
           : (0, r.Z)(h) && n.id !== _.id
             ? () =>

@@ -12,15 +12,15 @@ n.d(t, {
     ic: () => E,
     pX: () => v,
     sq: () => p,
-    tV: () => P,
-    uu: () => R,
+    tV: () => R,
+    uu: () => P,
     wk: () => C,
     zd: () => O
 });
 var r = n(367907),
     i = n(427679),
-    a = n(601964),
-    o = n(23750),
+    o = n(601964),
+    a = n(23750),
     s = n(598077),
     l = n(82554),
     c = n(185625),
@@ -219,7 +219,7 @@ function S(e, t) {
         );
 }
 function T(e, t) {
-    let n = new a.ZP({});
+    let n = new o.ZP({});
     w(l.BM.GUILD, { guild_id: n.id }),
         (0, u.m)(
             {
@@ -236,7 +236,7 @@ function T(e, t) {
         );
 }
 function A(e, t) {
-    let n = new o.ZP({});
+    let n = new a.ZP({});
     w(l.BM.MESSAGE, {
         message_id: void 0,
         channel_id: void 0
@@ -283,8 +283,8 @@ function C(e, t) {
             { onSubmit: t }
         );
 }
-function R(e) {
-    let { application: t, entrypoint: n, contextualGuildId: i, contextualChannelId: a, onSubmit: o, appContext: s } = e;
+function P(e) {
+    let { application: t, entrypoint: n, contextualGuildId: i, contextualChannelId: o, onSubmit: a, appContext: s } = e;
     r.ZP.trackWithMetadata(d.rMx.REPORT_APPLICATION_CLICKED, {
         application_id: t.id,
         location: n
@@ -292,24 +292,24 @@ function R(e) {
         w(l.b.APPLICATION, {
             application_id: t.id,
             guild_id: i,
-            channel_id: a
+            channel_id: o
         }),
         (0, u.m)(
             {
                 name: l.b.APPLICATION,
                 record: t,
                 contextualGuildId: i,
-                contextualChannelId: a,
+                contextualChannelId: o,
                 entrypoint: n
             },
             {},
             {
-                onSubmit: o,
+                onSubmit: a,
                 appContext: s
             }
         );
 }
-function P(e, t) {
+function R(e, t) {
     (0, u.m)(
         {
             name: l.xw.MESSAGE,

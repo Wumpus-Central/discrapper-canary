@@ -31,11 +31,11 @@ let m = i.memo(function (e) {
             }),
             [f]
         ),
-        x = (0, u.Uj)(f),
-        y = (0, u.Uj)(t);
+        y = (0, u.Uj)(f),
+        x = (0, u.Uj)(t);
     return (0, r.jsx)(d.Z, {
-        repliedAuthor: x,
-        baseAuthor: y,
+        repliedAuthor: y,
+        baseAuthor: x,
         baseMessage: t,
         channel: n,
         referencedMessage: p,

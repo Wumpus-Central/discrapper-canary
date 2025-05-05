@@ -1,7 +1,7 @@
 var r,
     i,
-    a,
     o,
+    a,
     s = n(127849),
     l = n(636881),
     c = n(48657),
@@ -27,19 +27,19 @@ var r,
 f(function () {
     r = s.location;
 });
-var R = function (e) {
+var P = function (e) {
         if (d(N, e)) {
             var t = N[e];
             delete N[e], t();
         }
     },
-    P = function (e) {
+    R = function (e) {
         return function () {
-            R(e);
+            P(e);
         };
     },
     w = function (e) {
-        R(e.data);
+        P(e.data);
     },
     D = function (e) {
         s.postMessage(T(e), r.protocol + '//' + r.host);
@@ -62,25 +62,25 @@ var R = function (e) {
     }),
     E
         ? (i = function (e) {
-              O.nextTick(P(e));
+              O.nextTick(R(e));
           })
         : v && v.now
           ? (i = function (e) {
-                v.now(P(e));
+                v.now(R(e));
             })
           : S && !g
-            ? ((o = (a = new S()).port2), (a.port1.onmessage = w), (i = c(o.postMessage, o)))
+            ? ((a = (o = new S()).port2), (o.port1.onmessage = w), (i = c(a.postMessage, a)))
             : s.addEventListener && u(s.postMessage) && !s.importScripts && r && 'file:' !== r.protocol && !f(D)
               ? ((i = D), s.addEventListener('message', w, !1))
               : (i =
                     C in h('script')
                         ? function (e) {
                               _.appendChild(h('script'))[C] = function () {
-                                  _.removeChild(this), R(e);
+                                  _.removeChild(this), P(e);
                               };
                           }
                         : function (e) {
-                              setTimeout(P(e), 0);
+                              setTimeout(R(e), 0);
                           })),
     (e.exports = {
         set: b,

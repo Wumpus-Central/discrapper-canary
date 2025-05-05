@@ -1,8 +1,8 @@
 a.d(e, {
-    $X: () => y,
+    $X: () => m,
     AJ: () => O,
-    Ei: () => m,
-    GC: () => G,
+    Ei: () => y,
+    GC: () => U,
     WU: () => P,
     db: () => h,
     dz: () => b,
@@ -23,8 +23,8 @@ var r = a(559508),
 let I = String(0),
     R = '',
     d = '',
-    A = '',
-    f = (u.m9.navigator && u.m9.navigator.userAgent) || '',
+    f = '',
+    A = (u.m9.navigator && u.m9.navigator.userAgent) || '',
     p = '',
     N = (u.m9.navigator && u.m9.navigator.language) || (u.m9.navigator && u.m9.navigator.languages && u.m9.navigator.languages['0']) || '',
     T = u.m9.navigator && u.m9.navigator.userAgentData;
@@ -54,16 +54,16 @@ function O(t) {
     'getHighEntropyValues' in T &&
     T.getHighEntropyValues(['architecture', 'model', 'platform', 'platformVersion', 'fullVersionList'])
         .then((t) => {
-            if (((R = t.platform || ''), (A = t.architecture || ''), (p = t.model || ''), (d = t.platformVersion || ''), t.fullVersionList && t.fullVersionList.length > 0)) {
+            if (((R = t.platform || ''), (f = t.architecture || ''), (p = t.model || ''), (d = t.platformVersion || ''), t.fullVersionList && t.fullVersionList.length > 0)) {
                 let e = t.fullVersionList[t.fullVersionList.length - 1];
-                f = `${e.brand} ${e.version}`;
+                A = `${e.brand} ${e.version}`;
             }
         })
         .catch((t) => void 0);
 let D = new WeakMap(),
     g = !1,
     P = 30000;
-function m() {
+function y() {
     let t = u.m9.Profiler;
     if ('function' != typeof t) {
         l.X && o.kg.log('[Profiling] Profiling is not supported by this browser, Profiler interface missing on window object.');
@@ -79,7 +79,7 @@ function m() {
         l.X && (o.kg.log("[Profiling] Failed to initialize the Profiling constructor, this is likely due to a missing 'Document-Policy': 'js-profiling' header."), o.kg.log('[Profiling] Disabling profiling for current user session.')), (g = !0);
     }
 }
-function y(t) {
+function m(t) {
     if (g) return l.X && o.kg.log('[Profiling] Profiling has been disabled for the duration of the current user session.'), !1;
     if (!t.isRecording()) return l.X && o.kg.log('[Profiling] Discarding profile because transaction was not sampled.'), !1;
     let e = (0, _.s3)(),
@@ -166,13 +166,13 @@ function v(t, e, a, n) {
         os: {
             name: R,
             version: d,
-            build_number: f
+            build_number: A
         },
         device: {
             locale: N,
             model: p,
-            manufacturer: f,
-            architecture: A,
+            manufacturer: A,
+            architecture: f,
             is_emulator: !1
         },
         debug_meta: {
@@ -229,7 +229,7 @@ let C = new Map();
 function S() {
     return C.size;
 }
-function G(t) {
+function U(t) {
     let e = C.get(t);
     return e && C.delete(t), e;
 }

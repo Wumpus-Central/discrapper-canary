@@ -4,8 +4,8 @@ t.a(e, async function (e, r) {
         var l = t(255367);
         t(73800);
         var i = t(946884),
-            c = t(222082),
-            u = t(63681),
+            u = t(222082),
+            c = t(63681),
             o = t(743965),
             a = t(12781),
             d = t(980426),
@@ -17,14 +17,14 @@ t.a(e, async function (e, r) {
             h = e([i]);
         i = (h.then ? (await h)() : h)[0];
         let y = {
-            text: c.xv,
-            paragraph: c.nv,
-            empty: c.HY,
+            text: u.xv,
+            paragraph: u.nv,
+            empty: u.HY,
             emoji: a.d,
             link: f.r,
             list: _.a,
             listItem: _.H,
-            code: u.E,
+            code: c.E,
             code_block: o.d,
             quote: b.p,
             bold: d.d8,

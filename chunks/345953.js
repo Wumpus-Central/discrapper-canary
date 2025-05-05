@@ -1,8 +1,8 @@
 n.d(t, { Z: () => Z }), n(388685), n(642613);
 var r = n(392711),
     i = n.n(r),
-    a = n(51407),
-    o = n(524437),
+    o = n(51407),
+    a = n(524437),
     s = n(433517),
     l = n(147913),
     c = n(254238),
@@ -70,7 +70,7 @@ function v(e, t) {
 let I = 300,
     S = 2000,
     T = (e) => 'AudioContextSettingsMigrated:'.concat(e),
-    A = (e) => (e === E.Yn.STREAM ? a.h.STREAM : a.h.USER);
+    A = (e) => (e === E.Yn.STREAM ? o.h.STREAM : o.h.USER);
 function N(e, t, n) {
     return e[t].volume !== A(n) || e[t].muted || e[t].soundboardMuted || delete e[t], e;
 }
@@ -80,8 +80,8 @@ function C(e) {
     if (n <= I) return;
     let r = t.sort((e, t) => {
             let [n, { modifiedAt: r }] = e,
-                [i, { modifiedAt: a }] = t;
-            return Number(r) - Number(a);
+                [i, { modifiedAt: o }] = t;
+            return Number(r) - Number(o);
         }),
         i = n - I;
     for (let t = 0; t < i; t++) {
@@ -89,13 +89,13 @@ function C(e) {
         delete e[n];
     }
 }
-function R(e) {
-    return o.JY.create({
+function P(e) {
+    return a.JY.create({
         muted: !1,
         volume: A(e)
     });
 }
-function P() {
+function R() {
     s.K.get(T(f.default.getId())) ||
         g.hW.updateAsync(
             'audioContextSettings',
@@ -104,14 +104,14 @@ function P() {
                 for (let [n, r] of Object.entries(_.Z.getState().settingsByContext)) {
                     let i = (0, m.z)(n);
                     if (null == i) continue;
-                    let a = e[i],
-                        o = String(Date.now()),
+                    let o = e[i],
+                        a = String(Date.now()),
                         s = {};
                     for (let [e, t] of Object.entries(r.localMutes))
                         s[e] = {
                             muted: t,
                             volume: A(n),
-                            modifiedAt: o,
+                            modifiedAt: a,
                             soundboardMuted: !1
                         };
                     for (let [e, t] of Object.entries(r.localVolumes))
@@ -119,16 +119,16 @@ function P() {
                             y(
                                 {
                                     muted: !1,
-                                    modifiedAt: o
+                                    modifiedAt: a
                                 },
                                 s[e]
                             ),
                             { volume: (0, m.r)(t, n) }
                         );
-                    let l = Object.keys(a).length;
+                    let l = Object.keys(o).length;
                     for (let [e, [n, r]] of Object.entries(s).entries()) {
                         if (I - l - (e + 1) <= 0) break;
-                        null == a[n] && ((t = !0), (a[n] = r));
+                        null == o[n] && ((t = !0), (o[n] = r));
                     }
                 }
                 return s.K.set(T(f.default.getId()), !0), t;
@@ -138,14 +138,14 @@ function P() {
 }
 function w(e, t, n, r) {
     var i;
-    let a = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4],
-        o = (0, m.z)(n);
-    if (null == o) return !1;
-    let s = e[o];
-    return (s[t] = null != (i = s[t]) ? i : R(n)), r(s[t]), (s[t].modifiedAt = String(Date.now())), a && N(s, t, n), C(s), !0;
+    let o = !(arguments.length > 4) || void 0 === arguments[4] || arguments[4],
+        a = (0, m.z)(n);
+    if (null == a) return !1;
+    let s = e[a];
+    return (s[t] = null != (i = s[t]) ? i : P(n)), r(s[t]), (s[t].modifiedAt = String(Date.now())), o && N(s, t, n), C(s), !0;
 }
 function D() {
-    P();
+    R();
 }
 let L = i().debounce(() => {
     U();
@@ -153,10 +153,10 @@ let L = i().debounce(() => {
 function x(e, t, n) {
     (0, h.RF)(e, t, { volume: n }), L();
 }
-function M(e, t, n) {
+function k(e, t, n) {
     (0, h.RF)(e, t, { muted: n }), L.cancel(), U();
 }
-function k(e, t, n) {
+function M(e, t, n) {
     (0, h.RF)(e, t, { soundboardMuted: n }), L.cancel(), U();
 }
 let j = i().debounce(c.On, 500, { maxWait: 500 });
@@ -167,10 +167,10 @@ function U() {
             let t = !1;
             return (
                 (0, h.$E)((n, r, i) => {
-                    let a = w(e, r, n, (e) => {
+                    let o = w(e, r, n, (e) => {
                         Object.assign(e, i);
                     });
-                    t = t || a;
+                    t = t || o;
                 }),
                 t
             );
@@ -191,21 +191,21 @@ function G(e) {
 }
 function B(e) {
     let { context: t, userId: n } = e;
-    n !== f.default.getId() && M(t, n, _.Z.isLocalMute(n, t));
+    n !== f.default.getId() && k(t, n, _.Z.isLocalMute(n, t));
 }
-function V(e) {
+function F(e) {
     let { context: t, userId: n } = e;
-    n !== f.default.getId() && k(t, n, d.Z.isLocalSoundboardMuted(n));
+    n !== f.default.getId() && M(t, n, d.Z.isLocalSoundboardMuted(n));
 }
-class F extends l.Z {
+class V extends l.Z {
     constructor(...e) {
         super(...e),
             b(this, 'actions', {
                 POST_CONNECTION_OPEN: D,
                 AUDIO_SET_LOCAL_VOLUME: G,
                 AUDIO_TOGGLE_LOCAL_MUTE: B,
-                AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: V
+                AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: F
             });
     }
 }
-let Z = new F();
+let Z = new V();

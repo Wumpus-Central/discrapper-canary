@@ -8,7 +8,7 @@ var r =
             return e;
         },
     i = 'src/createAnimatedComponent.js',
-    a = (function () {
+    o = (function () {
         function e(e, t) {
             for (var n = 0; n < t.length; n++) {
                 var r = t[n];
@@ -19,7 +19,7 @@ var r =
             return n && e(t.prototype, n), r && e(t, r), t;
         };
     })();
-function o(e, t) {
+function a(e, t) {
     var n = {};
     for (var r in e) !(t.indexOf(r) >= 0) && Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
     return n;
@@ -53,7 +53,7 @@ e.exports = function (e) {
         }
         return (
             c(n, t),
-            a(n, [
+            o(n, [
                 {
                     key: 'componentWillUnmount',
                     value: function () {
@@ -94,12 +94,12 @@ e.exports = function (e) {
                     value: function () {
                         var t = this,
                             n = this._propsAnimated.__getValue(),
-                            a = n.style,
-                            s = o(n, ['style']);
+                            o = n.style,
+                            s = a(n, ['style']);
                         return u.createElement(
                             e,
                             r({}, s, {
-                                style: f.transformStyles(a),
+                                style: f.transformStyles(o),
                                 ref: function (e) {
                                     t.componentRef = e;
                                 },

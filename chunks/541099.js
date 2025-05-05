@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g }), n(388685);
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(827498);
+    o = n(570140),
+    a = n(827498);
 function s(e, t, n) {
     return (
         t in e
@@ -18,28 +18,28 @@ function s(e, t, n) {
 }
 let l = {
     show: !1,
-    entrypoint: o._b.NONE,
-    lastShownEntrypoint: o._b.NONE,
+    entrypoint: a._b.NONE,
+    lastShownEntrypoint: a._b.NONE,
     activeViewType: null,
-    closeReason: o.ti.DISMISSED,
+    closeReason: a.ti.DISMISSED,
     initialState: void 0
 };
 function c(e) {
     let { entrypoint: t, activeViewType: n, initialState: r } = e;
-    return (l.show = !0), (l.entrypoint = t), (l.lastShownEntrypoint = t), (l.closeReason = o.ti.DISMISSED), (l.activeViewType = n), (l.initialState = r), !0;
+    return (l.show = !0), (l.entrypoint = t), (l.lastShownEntrypoint = t), (l.closeReason = a.ti.DISMISSED), (l.activeViewType = n), (l.initialState = r), !0;
 }
 function u(e) {
-    let { closeReason: t = o.ti.DISMISSED } = e;
-    return (l.show = !1), (l.entrypoint = o._b.NONE), (l.closeReason = t), (l.initialState = void 0), !0;
+    let { closeReason: t = a.ti.DISMISSED } = e;
+    return (l.show = !1), (l.entrypoint = a._b.NONE), (l.closeReason = t), (l.initialState = void 0), !0;
 }
 let d = new Set();
 class f extends (r = i.ZP.Store) {
     initialize() {}
     shouldShowPopup() {
-        return l.show && l.entrypoint === o._b.TEXT;
+        return l.show && l.entrypoint === a._b.TEXT;
     }
     shouldShowModal() {
-        return l.show && l.entrypoint === o._b.VOICE;
+        return l.show && l.entrypoint === a._b.VOICE;
     }
     entrypoint() {
         return l.entrypoint;
@@ -61,10 +61,10 @@ class f extends (r = i.ZP.Store) {
     }
 }
 function _() {
-    u({ closeReason: o.ti.DISMISSED });
+    u({ closeReason: a.ti.DISMISSED });
 }
 function p() {
-    u({ closeReason: o.ti.COMMAND });
+    u({ closeReason: a.ti.COMMAND });
 }
 function h(e) {
     let { channelId: t } = e;
@@ -75,7 +75,7 @@ function m(e) {
     d.delete(t);
 }
 s(f, 'displayName', 'AppLauncherStore');
-let g = new f(a.Z, {
+let g = new f(o.Z, {
     APP_LAUNCHER_SHOW: c,
     APP_LAUNCHER_DISMISS: u,
     CONNECTION_OPEN: _,

@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481752),
     l = n(442837),
     c = n(704215),
@@ -77,8 +77,8 @@ function C(e, t) {
         e
     );
 }
-let R = 20,
-    P = 24,
+let P = 20,
+    R = 24,
     w = 18,
     D = 77,
     L = {
@@ -91,7 +91,7 @@ let R = 20,
             className: S.premiumTooltipContainer,
             children: [
                 (0, r.jsx)(u.Fmz, {
-                    className: o()(S.premiumUnlockAnimation, { [S.reducedMotion]: e }),
+                    className: a()(S.premiumUnlockAnimation, { [S.reducedMotion]: e }),
                     loop: !1,
                     shouldAnimate: !e,
                     pauseAtFrame: e ? 149 : void 0,
@@ -105,25 +105,25 @@ let R = 20,
             ]
         });
     };
-function M(e, t) {
+function k(e, t) {
     return {
-        '--custom-emoji-sprite-size': ''.concat(t ? w : P, 'px'),
-        '--custom-emoji-sprite-row': Math.floor(e / R),
-        '--custom-emoji-sprite-col': e % R
+        '--custom-emoji-sprite-size': ''.concat(t ? w : R, 'px'),
+        '--custom-emoji-sprite-row': Math.floor(e / P),
+        '--custom-emoji-sprite-col': e % P
     };
 }
-function k(e, t) {
-    let { tabIndex: n, className: a, renderButtonContents: T, active: N, onClick: R, 'aria-controls': P, focusProps: w, shouldShowSoundmojiCoachmark: k = !1 } = e,
+function M(e, t) {
+    let { tabIndex: n, className: o, renderButtonContents: T, active: N, onClick: P, 'aria-controls': R, focusProps: w, shouldShowSoundmojiCoachmark: M = !1 } = e,
         [j, U] = i.useState(!1),
         [G, B] = i.useState(50),
-        V = j || N,
-        F = (0, b.l)(S, 'emojiButton', V ? 'Hovered' : 'Normal'),
-        Z = M(G, (0, f.Q3)('EmojiButton')),
+        F = j || N,
+        V = (0, b.l)(S, 'emojiButton', F ? 'Hovered' : 'Normal'),
+        Z = k(G, (0, f.Q3)('EmojiButton')),
         H = i.useCallback(() => {
-            if (V) return;
+            if (F) return;
             let e = Math.floor(Math.random() * D);
             U(!0), B(e), (0, p.x)(v.qR.EmojiButtonMouseEntered);
-        }, [V, U, B]),
+        }, [F, U, B]),
         Y = i.useCallback(() => {
             U(!1);
         }, [U]),
@@ -136,13 +136,13 @@ function k(e, t) {
         [$, ee] = i.useState(!1),
         [et, en] = i.useState(!1),
         er = (0, m.V2)({ location: 'EmojiButton' }),
-        [ei, ea] = (0, _.US)(k && er ? [c.z.SOUNDMOJI_COACHMARK] : []),
-        eo = !$ && ei === c.z.SOUNDMOJI_COACHMARK && !et;
+        [ei, eo] = (0, _.US)(M && er ? [c.z.SOUNDMOJI_COACHMARK] : []),
+        ea = !$ && ei === c.z.SOUNDMOJI_COACHMARK && !et;
     return (0, r.jsx)(u.yRy, {
-        renderPopout: () => (0, r.jsx)(g.Z, { markAsDismissed: ea }),
+        renderPopout: () => (0, r.jsx)(g.Z, { markAsDismissed: eo }),
         position: 'top',
         align: 'right',
-        shouldShow: eo,
+        shouldShow: ea,
         animationPosition: 'bottom',
         onRequestClose: () => en(!0),
         children: (e) =>
@@ -163,7 +163,7 @@ function k(e, t) {
                             look: u.zxk.Looks.BLANK,
                             size: u.zxk.Sizes.NONE,
                             tabIndex: n,
-                            className: o()(F, a),
+                            className: a()(V, o),
                             onMouseEnter: () => {
                                 var e;
                                 H(), null == (e = i.onMouseEnter) || e.call(i), E.default.track(y.rMx.EMOJI_PICKER_BUTTON_HOVERED);
@@ -176,10 +176,10 @@ function k(e, t) {
                             onFocus: W,
                             onClick: (e) => {
                                 var t;
-                                null == R || R(e), null == (t = i.onClick) || t.call(i);
+                                null == P || P(e), null == (t = i.onClick) || t.call(i);
                             },
                             'aria-label': I.intl.string(I.t['59QgaG']),
-                            'aria-controls': P,
+                            'aria-controls': R,
                             'aria-expanded': N,
                             'aria-haspopup': 'dialog',
                             focusProps: w,
@@ -189,7 +189,7 @@ function k(e, t) {
                                     ? T()
                                     : (0, r.jsx)(u.AMe, {
                                           config: L,
-                                          to: { value: +!!V },
+                                          to: { value: +!!F },
                                           children: (e) => {
                                               let { value: t } = e;
                                               return (0, r.jsxs)(s.animated.div, {
@@ -197,7 +197,7 @@ function k(e, t) {
                                                   style: C(A({}, Z), {
                                                       transform: t.to([0, 1], [1, 1.14]).to((e) => 'scale('.concat(e, ')'))
                                                   }),
-                                                  children: [(0, r.jsx)('div', { className: o()(S.sprite, S.spriteColored, V ? S.active : S.inactive) }), (0, r.jsx)('div', { className: o()(S.sprite, Q ? S.spritePremiumColored : S.spriteGreyscale, V ? S.inactive : S.active, { [S.reducedMotion]: J }) })]
+                                                  children: [(0, r.jsx)('div', { className: a()(S.sprite, S.spriteColored, F ? S.active : S.inactive) }), (0, r.jsx)('div', { className: a()(S.sprite, Q ? S.spritePremiumColored : S.spriteGreyscale, F ? S.inactive : S.active, { [S.reducedMotion]: J }) })]
                                               });
                                           }
                                       })
@@ -206,4 +206,4 @@ function k(e, t) {
             })
     });
 }
-let j = i.forwardRef(k);
+let j = i.forwardRef(M);

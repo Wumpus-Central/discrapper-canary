@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r = n(685516),
     i = n(285363),
-    a = n(175922),
-    o = n(406434),
+    o = n(175922),
+    a = n(406434),
     s = n(6138),
     l = n(740078),
     c = n(882159),
@@ -28,10 +28,10 @@ function f(e, t) {
         A = (0, u.Z)('number' != typeof T ? T : (0, d.Z)(T, l.mv)),
         N = O === l.k5 ? l.YP : l.k5,
         C = e.rects.popper,
-        R = e.elements[I ? N : O],
-        P = (0, r.Z)((0, c.kK)(R) ? R : R.contextElement || (0, i.Z)(e.elements.popper), g, b, h),
-        w = (0, a.Z)(e.elements.reference),
-        D = (0, o.Z)({
+        P = e.elements[I ? N : O],
+        R = (0, r.Z)((0, c.kK)(P) ? P : P.contextElement || (0, i.Z)(e.elements.popper), g, b, h),
+        w = (0, o.Z)(e.elements.reference),
+        D = (0, a.Z)({
             reference: w,
             element: C,
             strategy: 'absolute',
@@ -39,20 +39,20 @@ function f(e, t) {
         }),
         L = (0, s.Z)(Object.assign({}, C, D)),
         x = O === l.k5 ? L : w,
-        M = {
-            top: P.top - x.top + A.top,
-            bottom: x.bottom - P.bottom + A.bottom,
-            left: P.left - x.left + A.left,
-            right: x.right - P.right + A.right
+        k = {
+            top: R.top - x.top + A.top,
+            bottom: x.bottom - R.bottom + A.bottom,
+            left: R.left - x.left + A.left,
+            right: x.right - R.right + A.right
         },
-        k = e.modifiersData.offset;
-    if (O === l.k5 && k) {
-        var j = k[_];
-        Object.keys(M).forEach(function (e) {
+        M = e.modifiersData.offset;
+    if (O === l.k5 && M) {
+        var j = M[_];
+        Object.keys(k).forEach(function (e) {
             var t = [l.F2, l.I].indexOf(e) >= 0 ? 1 : -1,
                 n = [l.we, l.I].indexOf(e) >= 0 ? 'y' : 'x';
-            M[e] += j[n] * t;
+            k[e] += j[n] * t;
         });
     }
-    return M;
+    return k;
 }

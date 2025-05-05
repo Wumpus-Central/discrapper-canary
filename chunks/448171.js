@@ -12,8 +12,8 @@ var r = a(967752),
     I = a(263449),
     R = a(255768),
     d = a(380132),
-    A = a(151122),
-    f = a(112797),
+    f = a(151122),
+    A = a(112797),
     p = a(305625),
     N = a(820754),
     T = a(822578);
@@ -59,7 +59,7 @@ class h {
         return this._process(this._captureEvent(t, o, i || a)), o.event_id;
     }
     captureSession(t) {
-        'string' != typeof t.release ? R.X && n.kg.warn('Discarded session because of missing or non-string release') : (this.sendSession(t), (0, f.CT)(t, { init: !1 }));
+        'string' != typeof t.release ? R.X && n.kg.warn('Discarded session because of missing or non-string release') : (this.sendSession(t), (0, A.CT)(t, { init: !1 }));
     }
     getDsn() {
         return this._dsn;
@@ -94,7 +94,7 @@ class h {
     }
     addIntegration(t) {
         let e = this._integrations[t.name];
-        (0, A.m7)(this, t, this._integrations), e || (0, A.uf)(this, [t]);
+        (0, f.m7)(this, t, this._integrations), e || (0, f.uf)(this, [t]);
     }
     sendEvent(t, e = {}) {
         this.emit('beforeSendEvent', t, e);
@@ -133,7 +133,7 @@ class h {
     }
     _setupIntegrations() {
         let { integrations: t } = this._options;
-        (this._integrations = (0, A.q4)(this, t)), (0, A.uf)(this, t);
+        (this._integrations = (0, f.q4)(this, t)), (0, f.uf)(this, t);
     }
     _updateSessionFromEvent(t, e) {
         let a = !1,
@@ -149,7 +149,7 @@ class h {
             }
         let _ = 'ok' === t.status;
         ((_ && 0 === t.errors) || (_ && a)) &&
-            ((0, f.CT)(t, {
+            ((0, A.CT)(t, {
                 ...(a && { status: 'crashed' }),
                 errors: t.errors || Number(r || a)
             }),

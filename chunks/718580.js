@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(73800),
-    a = n(481752),
-    o = n(990547),
+    o = n(481752),
+    a = n(990547),
     s = n(873546),
     l = n(186325),
     c = n(481060),
@@ -72,8 +72,8 @@ function b(e, t) {
         r,
         i = y(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -82,8 +82,8 @@ function y(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let O = {
@@ -100,8 +100,8 @@ function I(e, t) {
         if (0 === n) return 'auto';
         let r = 'forwards' === t.current,
             i = n > 0,
-            a = !1;
-        return i && r && 'left' === e && (a = !0), i && !r && 'right' === e && (a = !0), !i && r && 'right' === e && (a = !0), i || r || 'left' !== e || (a = !0), a ? ''.concat(100 * Math.abs(n), '%') : 'auto';
+            o = !1;
+        return i && r && 'left' === e && (o = !0), i && !r && 'right' === e && (o = !0), !i && r && 'right' === e && (o = !0), i || r || 'left' !== e || (o = !0), o ? ''.concat(100 * Math.abs(n), '%') : 'auto';
     };
 }
 function S(e) {
@@ -125,23 +125,23 @@ function T(e) {
     });
     let N = S.activeSlide,
         C = (0, d.Z)(S.activeSlide),
-        R = null != (t = S.directionOverride) ? t : v(null != C ? T[C] : null, T[N]),
-        { reducedMotion: P } = i.useContext(l.S),
+        P = null != (t = S.directionOverride) ? t : v(null != C ? T[C] : null, T[N]),
+        { reducedMotion: R } = i.useContext(l.S),
         w = i.useContext(f.Z),
         D = T[N].impressionName,
         L = E(m({}, T[N].impressionProperties), { location_stack: A });
     w({
-        type: o.ImpressionTypes.MODAL,
+        type: a.ImpressionTypes.MODAL,
         name: D,
         properties: L,
         _stackContext: { isSlide: !0 }
     });
-    let { ref: x, width: M = 0, height: k = 0 } = (0, u.ZP)(N),
-        j = m({}, O, S.springConfig, P.enabled ? { clamp: !0 } : null),
+    let { ref: x, width: k = 0, height: M = 0 } = (0, u.ZP)(N),
+        j = m({}, O, S.springConfig, R.enabled ? { clamp: !0 } : null),
         U = (0, c.q_F)(
             {
-                width: null != (n = S.width) ? n : M,
-                height: k,
+                width: null != (n = S.width) ? n : k,
+                height: M,
                 config: j
             },
             null == C ? 'animate-never' : 'respect-motion-settings'
@@ -161,20 +161,20 @@ function T(e) {
             },
             null == C ? 'animate-never' : 'respect-motion-settings'
         ),
-        B = (0, p.Z)(R),
-        { width: V, centered: F = !0 } = S,
+        B = (0, p.Z)(P),
+        { width: F, centered: V = !0 } = S,
         Z = s.tq ? '100%' : U.width.to((e) => ('string' == typeof e ? e : Math.round(e))),
         H = s.tq ? '100%' : U.height.to((e) => Math.round(e)),
         Y = s.tq
             ? {}
-            : F
+            : V
               ? {
                     transform: 'translate3d(0, -50%, 0) scale(1.0, 1.0)',
                     top: '50%'
                 }
               : { transform: 'scale(1.0, 1.0)' },
         W = s.tq ? {} : { overflow: null != (h = S.overflow) ? h : 'hidden' };
-    return (0, r.jsx)(a.animated.div, {
+    return (0, r.jsx)(o.animated.div, {
         style: m(
             {
                 position: 'relative',
@@ -185,9 +185,9 @@ function T(e) {
         ),
         children: G((e, t, n) => {
             let { key: i } = n,
-                o = { opacity: e.value.to((e) => 1 - Math.abs(e)) };
+                a = { opacity: e.value.to((e) => 1 - Math.abs(e)) };
             return (0, r.jsx)(
-                a.animated.div,
+                o.animated.div,
                 {
                     ref: t === N ? x : null,
                     style: m(
@@ -196,17 +196,17 @@ function T(e) {
                             display: g,
                             flexDirection: 'column',
                             backfaceVisibility: 'hidden',
-                            width: s.tq ? '100%' : V
+                            width: s.tq ? '100%' : F
                         },
                         Y,
-                        P.enabled
-                            ? o
+                        R.enabled
+                            ? a
                             : m(
                                   {
                                       left: e.value.to(I('left', B)),
                                       right: e.value.to(I('right', B))
                                   },
-                                  y && o
+                                  y && a
                               )
                     ),
                     children: T[t].children

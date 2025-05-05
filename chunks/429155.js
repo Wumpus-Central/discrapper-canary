@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(218867),
-    o = n(74538),
+    o = n(218867),
+    a = n(74538),
     s = n(28546),
     l = n(98528),
     c = n(204922);
@@ -11,22 +11,22 @@ let u = 20,
         let { categories: n, store: d, hasSearchResults: f, listPadding: _, renderRow: p, renderSection: h, renderSectionHeader: m, renderSectionFooter: g, renderInspector: E, renderEmptySearchState: b, rowCount: y, rowCountBySection: O, rowHeight: v, sectionHeaderHeight: I, sectionFooterHeight: S, renderUpsell: T, setShowUpsell: A } = e,
             N = i.useRef(!1),
             C = i.useRef(null),
-            R = (0, s.Iu)((e) => e.searchQuery),
-            P = d.useStore((e) => e.activeCategoryIndex),
-            w = n.map((e) => ((0, o._O)(e.categoryInfo) ? { isNitroLocked: e.categoryInfo.isNitroLocked } : { isNitroLocked: !1 })),
+            P = (0, s.Iu)((e) => e.searchQuery),
+            R = d.useStore((e) => e.activeCategoryIndex),
+            w = n.map((e) => ((0, a._O)(e.categoryInfo) ? { isNitroLocked: e.categoryInfo.isNitroLocked } : { isNitroLocked: !1 })),
             D = (0, l.Uf)({
                 listRef: C,
-                searchQuery: R,
+                searchQuery: P,
                 nitroLockedSectionStates: w,
                 setShowUpsell: A
             }),
             L = (0, l.Qs)({
-                activeCategoryIndex: P,
+                activeCategoryIndex: R,
                 isScrolling: N,
                 listRef: C,
                 onActiveCategoryIndexChange: d.setActiveCategoryIndex,
                 scrollOffset: u,
-                searchQuery: R
+                searchQuery: P
             }),
             x = i.useCallback(
                 (e) => {
@@ -36,8 +36,8 @@ let u = 20,
             );
         return (
             (0, l.Xs)({
-                searchQuery: R,
-                activeCategoryIndex: P,
+                searchQuery: P,
+                activeCategoryIndex: R,
                 listRef: C
             }),
             i.useImperativeHandle(
@@ -86,9 +86,9 @@ let u = 20,
             (0, r.jsxs)('div', {
                 className: c.wrapper,
                 children: [
-                    R.length > 0 && !f && null != b
+                    P.length > 0 && !f && null != b
                         ? b()
-                        : (0, r.jsx)(a.Z, {
+                        : (0, r.jsx)(o.Z, {
                               role: 'none presentation',
                               listPadding: _,
                               onScroll: x,

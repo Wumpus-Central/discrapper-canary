@@ -1,8 +1,8 @@
-n.d(t, { ZP: () => k }), n(388685);
+n.d(t, { ZP: () => M }), n(388685);
 var r = n(592125),
     i = n(650774),
-    a = n(944486),
-    o = n(412788),
+    o = n(944486),
+    a = n(412788),
     s = n(368321),
     l = n(553245),
     c = n(143806),
@@ -33,9 +33,9 @@ let h = 750,
     v = new l.b(h, g),
     I = new c.S(m),
     S = !1;
-class T extends o.Z {
+class T extends a.Z {
     initialize() {
-        this.waitFor(r.Z), this.waitFor(a.Z), this.waitFor(i.Z), this.syncWith([s.Z], () => !0), this.syncWith([a.Z], A);
+        this.waitFor(r.Z), this.waitFor(o.Z), this.waitFor(i.Z), this.syncWith([s.Z], () => !0), this.syncWith([o.Z], A);
     }
     loadCache() {
         let e = this.readSnapshot(T.LATEST_SNAPSHOT_VERSION);
@@ -103,10 +103,10 @@ class T extends o.Z {
     }
     constructor() {
         super({
-            CACHE_LOADED_LAZY_NO_CACHE: M,
+            CACHE_LOADED_LAZY_NO_CACHE: k,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            CHANNEL_DELETE: P,
-            CHANNEL_UPDATES: R,
+            CHANNEL_DELETE: R,
+            CHANNEL_UPDATES: P,
             CONNECTION_OPEN_SUPPLEMENTAL: N,
             GUILD_DELETE: L,
             LOGIN_SUCCESS: x,
@@ -116,7 +116,7 @@ class T extends o.Z {
     }
 }
 function A() {
-    let e = a.Z.getChannelId();
+    let e = o.Z.getChannelId();
     null != e && T.recordChannel(e);
 }
 function N() {
@@ -125,13 +125,13 @@ function N() {
 function C(e) {
     let t = e.id,
         n = (0, f.v)(e),
-        r = a.Z.getChannelId();
+        r = o.Z.getChannelId();
     n && t === r && T.recordChannel(t), n || T.deleteChannel(t);
 }
-function R(e) {
+function P(e) {
     for (let t of e.channels) C(t);
 }
-function P(e) {
+function R(e) {
     T.deleteChannel(e.channel.id);
 }
 function w(e) {
@@ -146,8 +146,8 @@ function L(e) {
 function x(e) {
     v.clear(), I.clear(), (S = !1);
 }
-function M(e) {
+function k(e) {
     S = !0;
 }
 p(T, 'displayName', 'SaveableChannelsStore'), p(T, 'LATEST_SNAPSHOT_VERSION', 1);
-let k = new T();
+let M = new T();

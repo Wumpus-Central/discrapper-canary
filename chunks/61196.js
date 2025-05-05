@@ -1,6 +1,6 @@
 n.d(t, {
     Am: () => r,
-    ZP: () => a,
+    ZP: () => o,
     aW: () => i
 });
 let r = (0, n(818083).B)({
@@ -20,7 +20,7 @@ let r = (0, n(818083).B)({
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return r.getCurrentConfig({ location: '489551_2' }, { autoTrackExposure: e });
     },
-    a = function () {
+    o = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return r.useExperiment({ location: '489551_1' }, { autoTrackExposure: e });
     };

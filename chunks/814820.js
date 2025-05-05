@@ -1,4 +1,4 @@
-n.d(t, { f: () => y }), n(388685);
+n.d(t, { f: () => x }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -15,7 +15,7 @@ var r = n(255367),
     g = n(981631),
     _ = n(388032),
     b = n(429495);
-let x = (e) => {
+let y = (e) => {
         let { channel: t, message: n } = e,
             [l, c] = i.useState(!1),
             u = (0, h.y6)(n.id),
@@ -50,7 +50,7 @@ let x = (e) => {
             })
         });
     },
-    y = (e) => {
+    x = (e) => {
         let { message: t, channel: n } = e,
             i = n.getGuildId(),
             a = (0, l.e7)([m.default, p.Z, d.Z, u.ZP], () => {
@@ -65,7 +65,7 @@ let x = (e) => {
                 return a && !l && !o && !s && h;
             });
         return null != i && a
-            ? (0, r.jsx)(x, {
+            ? (0, r.jsx)(y, {
                   message: t,
                   channel: n
               })

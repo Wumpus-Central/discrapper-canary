@@ -1,7 +1,7 @@
 n.d(t, { Z: () => s }), n(388685);
 var r = n(442837),
     i = n(570140);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function a(e, t, n) {
         e
     );
 }
-class o extends r.ZP.Store {
+class a extends r.ZP.Store {
     allGuildIds() {
         return this.guildIds;
     }
@@ -48,7 +48,7 @@ class o extends r.ZP.Store {
             },
             i.c.Early
         ),
-            a(this, 'guildIds', new Set());
+            o(this, 'guildIds', new Set());
     }
 }
-let s = new o();
+let s = new a();

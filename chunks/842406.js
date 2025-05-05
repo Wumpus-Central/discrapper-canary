@@ -1,7 +1,7 @@
 var r = n(670575),
     i = n(131604),
-    a = n(3843),
-    o = n(837447);
+    o = n(3843),
+    a = n(837447);
 function s(e) {
     return e.call.bind(e);
 }
@@ -47,45 +47,45 @@ function S(e) {
 }
 (t.isArgumentsObject = r),
     (t.isGeneratorFunction = i),
-    (t.isTypedArray = o),
+    (t.isTypedArray = a),
     (t.isPromise = function (e) {
         return ('undefined' != typeof Promise && e instanceof Promise) || (null !== e && 'object' == typeof e && 'function' == typeof e.then && 'function' == typeof e.catch);
     }),
     (t.isArrayBufferView = function (e) {
-        return 'undefined' != typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : o(e) || S(e);
+        return 'undefined' != typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : a(e) || S(e);
     }),
     (t.isUint8Array = function (e) {
-        return 'Uint8Array' === a(e);
+        return 'Uint8Array' === o(e);
     }),
     (t.isUint8ClampedArray = function (e) {
-        return 'Uint8ClampedArray' === a(e);
+        return 'Uint8ClampedArray' === o(e);
     }),
     (t.isUint16Array = function (e) {
-        return 'Uint16Array' === a(e);
+        return 'Uint16Array' === o(e);
     }),
     (t.isUint32Array = function (e) {
-        return 'Uint32Array' === a(e);
+        return 'Uint32Array' === o(e);
     }),
     (t.isInt8Array = function (e) {
-        return 'Int8Array' === a(e);
+        return 'Int8Array' === o(e);
     }),
     (t.isInt16Array = function (e) {
-        return 'Int16Array' === a(e);
+        return 'Int16Array' === o(e);
     }),
     (t.isInt32Array = function (e) {
-        return 'Int32Array' === a(e);
+        return 'Int32Array' === o(e);
     }),
     (t.isFloat32Array = function (e) {
-        return 'Float32Array' === a(e);
+        return 'Float32Array' === o(e);
     }),
     (t.isFloat64Array = function (e) {
-        return 'Float64Array' === a(e);
+        return 'Float64Array' === o(e);
     }),
     (t.isBigInt64Array = function (e) {
-        return 'BigInt64Array' === a(e);
+        return 'BigInt64Array' === o(e);
     }),
     (t.isBigUint64Array = function (e) {
-        return 'BigUint64Array' === a(e);
+        return 'BigUint64Array' === o(e);
     }),
     (g.working = 'undefined' != typeof Map && g(new Map())),
     (t.isMap = function (e) {
@@ -117,10 +117,10 @@ function N(e) {
 function C(e) {
     return m(e, d);
 }
-function R(e) {
+function P(e) {
     return m(e, f);
 }
-function P(e) {
+function R(e) {
     return m(e, _);
 }
 function w(e) {
@@ -146,12 +146,12 @@ function D(e) {
         return '[object WebAssembly.Module]' === u(e);
     }),
     (t.isNumberObject = C),
-    (t.isStringObject = R),
-    (t.isBooleanObject = P),
+    (t.isStringObject = P),
+    (t.isBooleanObject = R),
     (t.isBigIntObject = w),
     (t.isSymbolObject = D),
     (t.isBoxedPrimitive = function (e) {
-        return C(e) || R(e) || P(e) || w(e) || D(e);
+        return C(e) || P(e) || R(e) || w(e) || D(e);
     }),
     (t.isAnyArrayBuffer = function (e) {
         return 'undefined' != typeof Uint8Array && (v(e) || N(e));

@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(570140),
     i = n(579806),
-    a = n(15624),
-    o = n(710845),
+    o = n(15624),
+    a = n(710845),
     s = n(314897),
     l = n(626135),
     c = n(931619),
@@ -66,14 +66,14 @@ function g(e, t) {
         e
     );
 }
-let E = new o.Z('ConnectionStore'),
+let E = new a.Z('ConnectionStore'),
     b = new d.Z(),
     y = new f.Z(b),
     O = new _.Z(b);
 (b.handleIdentify = () => {
     let e = s.default.getToken();
     if ((E.verbose('handleIdentify called', { hasToken: null != e }), null == e)) return null;
-    let t = a.Z.getState();
+    let t = o.Z.getState();
     return {
         token: e,
         properties: g(h({}, l.default.getSuperProperties()), {

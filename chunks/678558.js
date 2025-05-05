@@ -1,8 +1,8 @@
 n.d(t, { Z: () => w }), n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(179360),
@@ -73,60 +73,60 @@ function C(e, t) {
         e
     );
 }
-function R(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = P(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
 function P(e, t) {
     if (null == e) return {};
     var n,
         r,
+        i = R(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function R(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let w = (e) => {
-    let { analyticsLocation: t, analyticsSourceLocation: n, guild: a, buttonText: T, targetBoostedGuildTier: N, onClose: P = () => {}, closeLayer: w = () => {}, pauseAnimation: D = !1, applicationId: L, handleSubscribeModalClose: x, withHighlight: M = !1, icon: k, intent: j } = e,
-        U = R(e, ['analyticsLocation', 'analyticsSourceLocation', 'guild', 'buttonText', 'targetBoostedGuildTier', 'onClose', 'closeLayer', 'pauseAnimation', 'applicationId', 'handleSubscribeModalClose', 'withHighlight', 'icon', 'intent']),
+    let { analyticsLocation: t, analyticsSourceLocation: n, guild: o, buttonText: T, targetBoostedGuildTier: N, onClose: R = () => {}, closeLayer: w = () => {}, pauseAnimation: D = !1, applicationId: L, handleSubscribeModalClose: x, withHighlight: k = !1, icon: M, intent: j } = e,
+        U = P(e, ['analyticsLocation', 'analyticsSourceLocation', 'guild', 'buttonText', 'targetBoostedGuildTier', 'onClose', 'closeLayer', 'pauseAnimation', 'applicationId', 'handleSubscribeModalClose', 'withHighlight', 'icon', 'intent']),
         { analyticsLocations: G } = (0, d.ZP)(),
         B = (0, u.bp)() === O.IlC.POPOUT,
-        [V, F] = i.useState(!1),
+        [F, V] = i.useState(!1),
         Z = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
         { fractionalState: H } = (0, f.Z)(),
         Y = (0, p.y)('guild_boosting_subscribe_button', Z, H);
     g.Z.hasFetched || (0, c.X8)();
     let W = (0, b.vx)(g.Z.boostSlots),
-        K = null != N ? Math.max((0, b.KK)(a, N), 1) : 1,
+        K = null != N ? Math.max((0, b.KK)(o, N), 1) : 1,
         z = (0, b.aq)({ isBoostManagementDisabledForFractionalPremium: Y }),
         q = async () => {
-            F(!0),
+            V(!0),
                 await (0, y.u)({
                     analyticsLocations: G,
                     analyticsLocation: t,
                     analyticsSourceLocation: n,
-                    guild: a,
+                    guild: o,
                     numberOfBoostsToAdd: K,
-                    onClose: P,
+                    onClose: R,
                     closeLayer: w,
                     inPopout: B,
                     applicationId: L,
                     handleSubscribeModalClose: x,
                     intent: j
                 }),
-                F(!1);
+                V(!1);
         },
         Q = E.ZP.getPremiumTypeSubscription(),
         X = (0, r.jsxs)('div', {
             className: S.button,
-            children: [k, null != T ? T : I.intl.string(I.t.gKmQ1N)]
+            children: [M, null != T ? T : I.intl.string(I.t.gKmQ1N)]
         }),
         J = (0, h.o)('GuildBoostingSubscribeButton', Z, H),
         $ = !1;
@@ -166,8 +166,8 @@ let w = (e) => {
         : (0, r.jsx)(
               l.gtL,
               C(A({ size: l.zxk.Sizes.SMALL }, U), {
-                  className: o()(U.className, { [S.buttonHighlighted]: M }),
-                  submitting: V,
+                  className: a()(U.className, { [S.buttonHighlighted]: k }),
+                  submitting: F,
                   onClick: q,
                   pauseAnimation: D,
                   children: X

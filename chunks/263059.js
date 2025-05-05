@@ -1,8 +1,8 @@
-n.d(t, { Z: () => M }), n(35282);
+n.d(t, { Z: () => k }), n(35282);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(503438),
     c = n(100527),
@@ -25,8 +25,8 @@ var r = n(255367),
     A = n(194811),
     N = n(373826),
     C = n(262210),
-    R = n(666984),
-    P = n(386019),
+    P = n(666984),
+    R = n(386019),
     w = n(228168),
     D = n(227832);
 function L(e, t, n) {
@@ -58,13 +58,13 @@ function x(e) {
     }
     return e;
 }
-function M(e) {
+function k(e) {
     var t;
-    let { user: n, currentUser: a, activity: L, profileGuildId: M, className: k, onClose: j } = e,
+    let { user: n, currentUser: o, activity: L, profileGuildId: k, className: M, onClose: j } = e,
         U = i.useRef(null),
         { themeType: G } = (0, v.z)(),
-        { interactionSource: B, interactionSourceId: V } = (0, b.Xo)(),
-        F = (0, _.Z)({
+        { interactionSource: B, interactionSourceId: F } = (0, b.Xo)(),
+        V = (0, _.Z)({
             activity: L,
             user: n
         }),
@@ -75,7 +75,7 @@ function M(e) {
             display: 'live',
             user: n,
             activity: L,
-            entry: F,
+            entry: V,
             analyticsLocations: Y
         }),
         K = (0, m.Z)({
@@ -85,29 +85,29 @@ function M(e) {
     if (!(0, l.Z)(L)) return null;
     let z = () => {
             var e, t;
-            let a = null != (t = null == (e = L.state) ? void 0 : e.split(';')) ? t : [];
-            return 0 === a.length
+            let o = null != (t = null == (e = L.state) ? void 0 : e.split(';')) ? t : [];
+            return 0 === o.length
                 ? null
                 : null == L.sync_id
                   ? (0, r.jsx)(N.Z, {
                         variant: 'text-xs/normal',
-                        text: a.join(', ')
+                        text: o.join(', ')
                     })
                   : (0, r.jsx)(N.Z, {
                         variant: 'text-xs/normal',
-                        text: a.map((e, t) =>
+                        text: o.map((e, t) =>
                             (0, r.jsxs)(
                                 i.Fragment,
                                 {
                                     children: [
                                         (0, r.jsx)(s.P3F, {
-                                            className: o()(D.clickableText, D.inline),
+                                            className: a()(D.clickableText, D.inline),
                                             onClick: (e) => {
                                                 e.stopPropagation(), W({ action: 'OPEN_SPOTIFY_ARTIST' }), (0, p.d$)(L, n.id, t);
                                             },
                                             children: e
                                         }),
-                                        t < a.length - 1 ? ', ' : ''
+                                        t < o.length - 1 ? ', ' : ''
                                     ]
                                 },
                                 t
@@ -127,11 +127,11 @@ function M(e) {
                   });
         },
         Q = () =>
-            n.id === a.id
+            n.id === o.id
                 ? null
                 : (0, r.jsx)('div', {
                       className: D.actions,
-                      children: (0, r.jsx)(R.Z, {
+                      children: (0, r.jsx)(P.Z, {
                           user: n,
                           activity: L,
                           onAction: W
@@ -139,7 +139,7 @@ function M(e) {
                   });
     if (null === G) return null;
     let X = null != (t = L.application_id) ? t : L.name,
-        J = B === w.n_.ACTIVITY && V === X;
+        J = B === w.n_.ACTIVITY && F === X;
     return (0, r.jsx)(u.Gt, {
         value: Y,
         children: (0, r.jsx)(I.Z, {
@@ -148,11 +148,11 @@ function M(e) {
             user: n,
             children: (0, r.jsx)(y.Z, {
                 user: n,
-                guildId: M,
+                guildId: k,
                 themeType: G,
                 sourceId: X,
-                sourceDetails: null == F ? (0, E.Z)(L) : null,
-                entry: F,
+                sourceDetails: null == V ? (0, E.Z)(L) : null,
+                entry: V,
                 sourceType: w.n_.ACTIVITY,
                 onAction: W,
                 children: () =>
@@ -165,17 +165,17 @@ function M(e) {
                         onAction: W,
                         onShowToolbar: () => W({ action: 'HOVER_ACTIVITY_CARD' }),
                         renderMoreButtonPopout: (e) =>
-                            (0, r.jsx)(P.Z, {
+                            (0, r.jsx)(R.Z, {
                                 display: 'live',
                                 user: n,
                                 activity: L,
-                                entry: F,
+                                entry: V,
                                 onClose: j,
                                 children: e
                             }),
                         children: (0, r.jsxs)(T.Z, {
                             ref: K,
-                            className: o()(k, { [D.hoisted]: J }),
+                            className: a()(M, { [D.hoisted]: J }),
                             onAction: W,
                             onClose: j,
                             children: [

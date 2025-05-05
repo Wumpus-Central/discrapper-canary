@@ -2,8 +2,8 @@ n.d(t, { Z: () => A });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(481060),
-    o = n(40851),
+    o = n(481060),
+    a = n(40851),
     s = n(456100),
     l = n(841784),
     c = n(906732),
@@ -75,33 +75,33 @@ function A(e) {
     let { user: t, activity: n, onAction: v, onClose: S } = e,
         { newestAnalyticsLocation: A } = (0, c.ZP)(),
         { themeType: N } = (0, g.z)(),
-        C = (0, o.bp)() === y.IlC.POPOUT,
-        R = (0, i.e7)([h.Z, m.Z], () => h.Z.getChannel(m.Z.getChannelId())),
-        P = (0, p.e)({
+        C = (0, a.bp)() === y.IlC.POPOUT,
+        P = (0, i.e7)([h.Z, m.Z], () => h.Z.getChannel(m.Z.getChannelId())),
+        R = (0, p.e)({
             activity: null != n ? n : void 0,
             embeddedActivity: void 0,
             user: t,
             onClose: S
         }),
         { enabled: w } = s.c.useExperiment({ location: 'ActivityButton' }, { autoTrackExposure: !0 }),
-        D = w ? a.iWm : a.jje;
-    if (null == P && null != n && (0, l.Z)(n))
+        D = w ? o.iWm : o.jje;
+    if (null == R && null != n && (0, l.Z)(n))
         return (0, r.jsx)(E.tG, {
             icon: D,
             text: O.intl.string(O.t.RscU7O),
-            color: a.Ttl.BRAND,
-            size: N === b.lY.MODAL_V2 ? a.PhG.TINY : void 0,
+            color: o.Ttl.BRAND,
+            size: N === b.lY.MODAL_V2 ? o.PhG.TINY : void 0,
             fullWidth: N !== b.lY.MODAL_V2,
             themeColor: 'none',
             onClick: (e) => {
                 e.stopPropagation(),
                     null == S || S(),
                     null == v || v({ action: 'PRESS_PLAY_BUTTON' }),
-                    (null == R ? void 0 : R.isVocal())
+                    (null == P ? void 0 : P.isVocal())
                         ? (0, f.Z)({
                               context: {
                                   type: 'channel',
-                                  channel: R
+                                  channel: P
                               },
                               analyticsLocation: A,
                               openInPopout: C
@@ -109,20 +109,20 @@ function A(e) {
                         : (0, u.__)(d._b.TEXT, _.Ie.NORMAL, { applicationId: n.application_id });
             }
         });
-    if (null == P) return null;
-    let { isJoining: L, handleJoinRequest: x, buttonCTA: M, tooltip: k, isEnabled: j, isEmbedded: U } = P;
+    if (null == R) return null;
+    let { isJoining: L, handleJoinRequest: x, buttonCTA: k, tooltip: M, isEnabled: j, isEmbedded: U } = R;
     return U
-        ? (0, r.jsx)(a.ua7, {
-              text: k,
+        ? (0, r.jsx)(o.ua7, {
+              text: M,
               children: (e) =>
                   (0, r.jsx)(
                       E.tG,
                       T(I({}, e), {
-                          icon: a.YVR,
-                          text: M,
+                          icon: o.YVR,
+                          text: k,
                           disabled: !j,
                           submitting: L,
-                          size: N === b.lY.MODAL_V2 ? a.PhG.TINY : void 0,
+                          size: N === b.lY.MODAL_V2 ? o.PhG.TINY : void 0,
                           fullWidth: N !== b.lY.MODAL_V2,
                           themeColor: N === b.lY.MODAL_V2 ? 'secondary' : void 0,
                           onClick: (e) => {
@@ -131,17 +131,17 @@ function A(e) {
                       })
                   )
           })
-        : (0, r.jsx)(a.ua7, {
-              text: k,
+        : (0, r.jsx)(o.ua7, {
+              text: M,
               children: (e) =>
                   (0, r.jsx)(
                       E.tG,
                       T(I({}, e), {
-                          icon: a.iWm,
-                          text: M,
+                          icon: o.iWm,
+                          text: k,
                           disabled: !j,
                           submitting: L,
-                          size: N === b.lY.MODAL_V2 ? a.PhG.TINY : void 0,
+                          size: N === b.lY.MODAL_V2 ? o.PhG.TINY : void 0,
                           fullWidth: N !== b.lY.MODAL_V2,
                           themeColor: N === b.lY.MODAL_V2 ? 'secondary' : void 0,
                           onClick: (e) => {

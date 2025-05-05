@@ -1,8 +1,8 @@
-n.d(t, { Z: () => P }), n(539854), n(388685);
+n.d(t, { Z: () => R }), n(539854), n(388685);
 var r = n(392711),
     i = n.n(r),
-    a = n(377108),
-    o = n(147913),
+    o = n(377108),
+    a = n(147913),
     s = n(654455),
     l = n(822245),
     c = n(339085),
@@ -32,48 +32,48 @@ let y = 10 + Math.random() * (10 * _.Z.Millis.SECOND),
     O = 2 * _.Z.Millis.HOUR + Math.floor(Math.random() * (10 * _.Z.Millis.MINUTE)),
     v = null,
     I = !1;
-class S extends o.Z {
+class S extends a.Z {
     _initialize() {
         p.DZ.beforeSendCallbacks.push({
             hasChanges: () => !1,
             processProto: () => {
-                R(O, !1);
+                P(O, !1);
             }
         }),
             p.DZ.beforeSendCallbacks.push({
                 hasChanges: () => d.Z.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
                 processProto: (e) => {
-                    d.Z.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && ((e.stickerFrecency = a.ls.create()), (e.stickerFrecency.stickers = (0, m.tU)(d.Z.stickerFrecencyWithoutFetchingLatest.usageHistory, 100)));
+                    d.Z.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && ((e.stickerFrecency = o.ls.create()), (e.stickerFrecency.stickers = (0, m.tU)(d.Z.stickerFrecencyWithoutFetchingLatest.usageHistory, 100)));
                 }
             }),
             p.DZ.beforeSendCallbacks.push({
                 hasChanges: () => c.ZP.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
                 processProto: (e) => {
-                    c.ZP.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && ((e.emojiFrecency = a.PL.create()), (e.emojiReactionFrecency = a.PL.create()), (e.emojiFrecency.emojis = (0, m.tU)(c.ZP.emojiFrecencyWithoutFetchingLatest.usageHistory, 100)), (e.emojiReactionFrecency.emojis = (0, m.tU)(c.ZP.emojiReactionFrecencyWithoutFetchingLatest.usageHistory, 100)));
+                    c.ZP.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && ((e.emojiFrecency = o.PL.create()), (e.emojiReactionFrecency = o.PL.create()), (e.emojiFrecency.emojis = (0, m.tU)(c.ZP.emojiFrecencyWithoutFetchingLatest.usageHistory, 100)), (e.emojiReactionFrecency.emojis = (0, m.tU)(c.ZP.emojiReactionFrecencyWithoutFetchingLatest.usageHistory, 100)));
                 }
             }),
             p.DZ.beforeSendCallbacks.push({
                 hasChanges: () => u.Z.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
                 processProto: (e) => {
-                    u.Z.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (i().isEmpty(u.Z.playedSoundHistory) || ((e.playedSoundFrecency = a.pL.create()), (e.playedSoundFrecency.playedSounds = (0, m.tU)(u.Z.playedSoundHistory, 100))));
+                    u.Z.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (i().isEmpty(u.Z.playedSoundHistory) || ((e.playedSoundFrecency = o.pL.create()), (e.playedSoundFrecency.playedSounds = (0, m.tU)(u.Z.playedSoundHistory, 100))));
                 }
             }),
             p.DZ.beforeSendCallbacks.push({
                 hasChanges: () => s.ZP.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
                 processProto: (e) => {
-                    s.ZP.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && ((e.applicationCommandFrecency = a.YI.create()), (e.applicationCommandFrecency.applicationCommands = (0, m.tU)(s.ZP.getCommandFrecencyWithoutLoadingLatest().usageHistory, 500)));
+                    s.ZP.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && ((e.applicationCommandFrecency = o.YI.create()), (e.applicationCommandFrecency.applicationCommands = (0, m.tU)(s.ZP.getCommandFrecencyWithoutLoadingLatest().usageHistory, 500)));
                 }
             }),
             p.DZ.beforeSendCallbacks.push({
                 hasChanges: () => l.Z.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
                 processProto: (e) => {
-                    l.Z.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && ((e.applicationFrecency = a.UY.create()), (e.applicationFrecency.applications = (0, m.tU)(l.Z.getApplicationFrecencyWithoutLoadingLatest().usageHistory, E.yP)));
+                    l.Z.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && ((e.applicationFrecency = o.UY.create()), (e.applicationFrecency.applications = (0, m.tU)(l.Z.getApplicationFrecencyWithoutLoadingLatest().usageHistory, E.yP)));
                 }
             }),
             p.DZ.beforeSendCallbacks.push({
                 hasChanges: () => f.Z.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
                 processProto: (e) => {
-                    f.Z.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && ((e.guildAndChannelFrecency = a.lG.create()), (e.guildAndChannelFrecency.guildAndChannels = (0, m.tU)(f.Z.frecencyWithoutFetchingLatest.usageHistory, f.C)));
+                    f.Z.hasPendingUsage() && h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && ((e.guildAndChannelFrecency = o.lG.create()), (e.guildAndChannelFrecency.guildAndChannels = (0, m.tU)(f.Z.frecencyWithoutFetchingLatest.usageHistory, f.C)));
                 }
             });
     }
@@ -88,7 +88,7 @@ class S extends o.Z {
     }
 }
 function T() {
-    (I = !0), R(y, !0);
+    (I = !0), P(y, !0);
 }
 function A(e) {
     I && 'active' !== e.state && (clearTimeout(v), (v = null), C(!1));
@@ -97,13 +97,13 @@ function N() {
     I && (clearTimeout(v), (v = null), C(!1));
 }
 async function C(e) {
-    R(O, !1),
+    P(O, !1),
         !h.Z.hasLoaded(g.yP.FRECENCY_AND_FAVORITES_SETTINGS) && (d.Z.hasPendingUsage() || c.ZP.hasPendingUsage() || s.ZP.hasPendingUsage() || l.Z.hasPendingUsage() || (f.Z.hasPendingUsage() && !e)) && ((0, p.T6)(), await p.DZ.loadIfNecessary()),
         i().forEach(p.aj, (e) => {
             e.markDirtyIfHasPendingChange();
         });
 }
-function R(e, t) {
+function P(e, t) {
     null != v && clearTimeout(v), (v = setTimeout(() => C(t), e));
 }
-let P = new S();
+let R = new S();

@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(151480),
     _ = n(680783),
     b = n(66420),
-    x = n(981631),
-    y = n(474936),
+    y = n(981631),
+    x = n(474936),
     E = n(388032),
     v = n(510064);
 function O(e) {
@@ -31,8 +31,8 @@ function O(e) {
         R = (0, s.ZP)(N),
         k = (0, a.wjy)((0, o.ZP)()),
         {
-            chatWallpaper: D,
-            isUpdatingChatWallpaperFlag: L,
+            chatWallpaper: L,
+            isUpdatingChatWallpaperFlag: D,
             lastSetMessageId: M
         } = (0, l.cj)([f.Z], () => ({
             chatWallpaper: f.Z.getWallpaperById(A),
@@ -43,32 +43,32 @@ function O(e) {
         F = M === N.id,
         B = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
         G = (null == B ? void 0 : B.id) === N.author.id,
-        H = (0, c.m)(y.p9.TIER_2),
+        H = (0, c.m)(x.p9.TIER_2),
         V = h.t(T);
     return (i.useEffect(() => {
-        null == D && f.Z.shouldFetchWallpapers && g.k9();
-    }, [D]),
+        null == L && f.Z.shouldFetchWallpapers && g.k9();
+    }, [L]),
     null == A)
         ? null
         : ((C = G
-              ? E.intl.format(E.t.z847Tk, { wallpaper_name: null != (n = null == D ? void 0 : D.label) ? n : E.intl.string(E.t['UQMV/P']) })
+              ? E.intl.format(E.t.z847Tk, { wallpaper_name: null != (n = null == L ? void 0 : L.label) ? n : E.intl.string(E.t['UQMV/P']) })
               : E.intl.format(E.t['+lKndX'], {
                     username: null == R ? void 0 : R.nick,
-                    wallpaper_name: null != (O = null == D ? void 0 : D.label) ? O : E.intl.string(E.t['UQMV/P'])
+                    wallpaper_name: null != (O = null == L ? void 0 : L.label) ? O : E.intl.string(E.t['UQMV/P'])
                 })),
           w
               ? k || Z
                   ? V && F
-                      ? (S = E.intl.formatToPlainString(E.t.PzTpVV, { wallpaperName: null != (j = null == D ? void 0 : D.label) ? j : E.intl.string(E.t['UQMV/P']) }))
+                      ? (S = E.intl.formatToPlainString(E.t.PzTpVV, { wallpaperName: null != (j = null == L ? void 0 : L.label) ? j : E.intl.string(E.t['UQMV/P']) }))
                       : G ||
                         H ||
                         !F ||
                         (S = E.intl.format(E.t.JwUhHh, {
                             onClickNitro: () => {
-                                (0, u.uL)(x.Z5c.NITRO_HOME);
+                                (0, u.uL)(y.Z5c.NITRO_HOME);
                             }
                         }))
-                  : (S = E.intl.format(E.t.dBxFsL, { learnMoreLink: p.Z.getArticleURL(x.BhN.DM_WALLPAPERS) }))
+                  : (S = E.intl.format(E.t.dBxFsL, { learnMoreLink: p.Z.getArticleURL(y.BhN.DM_WALLPAPERS) }))
               : (S = E.intl.string(E.t['6JSOu7'])),
           (null == U ? void 0 : U.isViewable) &&
               F &&
@@ -83,7 +83,7 @@ function O(e) {
                           }
                       });
                   },
-                  submitting: L,
+                  submitting: D,
                   children: E.intl.string(V ? E.t.o6850d : E.t['/ubFp6'])
               })),
           (0, r.jsx)(b.Z, {

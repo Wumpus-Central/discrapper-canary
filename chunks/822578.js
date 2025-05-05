@@ -12,8 +12,8 @@ var r = a(394798),
     E = a(574054),
     l = a(307854),
     u = a(396234);
-function I(t, e, a, I, d, A) {
-    var f, p;
+function I(t, e, a, I, d, f) {
+    var A, p;
     let { normalizeDepth: N = 3, normalizeMaxBreadth: T = 1000 } = t,
         L = {
             ...e,
@@ -29,8 +29,8 @@ function I(t, e, a, I, d, A) {
         let s = t.request;
         s && s.url && (s.url = (0, _.$G)(s.url, o));
     })(L, t),
-        (f = L),
-        (p = h).length > 0 && ((f.sdk = f.sdk || {}), (f.sdk.integrations = [...(f.sdk.integrations || []), ...p])),
+        (A = L),
+        (p = h).length > 0 && ((A.sdk = A.sdk || {}), (A.sdk.integrations = [...(A.sdk.integrations || []), ...p])),
         d && d.emit('applyFrameMetadata', e),
         void 0 === e.type &&
             (function (t, e) {
@@ -68,8 +68,8 @@ function I(t, e, a, I, d, A) {
     a.mechanism && (0, r.EG)(L, a.mechanism);
     let D = d ? d.getEventProcessors() : [],
         g = (0, s.lW)().getScopeData();
-    if (A) {
-        let t = A.getScopeData();
+    if (f) {
+        let t = f.getScopeData();
         (0, u.yo)(g, t);
     }
     if (O) {
@@ -78,8 +78,8 @@ function I(t, e, a, I, d, A) {
     }
     let P = [...(a.attachments || []), ...g.attachments];
     P.length && (a.attachments = P), (0, u.gi)(L, g);
-    let m = [...D, ...g.eventProcessors];
-    return (0, E.R)(m, L, a).then((t) =>
+    let y = [...D, ...g.eventProcessors];
+    return (0, E.R)(y, L, a).then((t) =>
         (t &&
             (function (t) {
                 let e = {};
@@ -133,7 +133,7 @@ let R = new WeakMap();
 function d(t) {
     if (t) {
         var e;
-        return (e = t) instanceof l.s || 'function' == typeof e || Object.keys(t).some((t) => A.includes(t)) ? { captureContext: t } : t;
+        return (e = t) instanceof l.s || 'function' == typeof e || Object.keys(t).some((t) => f.includes(t)) ? { captureContext: t } : t;
     }
 }
-let A = ['user', 'level', 'extra', 'contexts', 'tags', 'fingerprint', 'requestSession', 'propagationContext'];
+let f = ['user', 'level', 'extra', 'contexts', 'tags', 'fingerprint', 'requestSession', 'propagationContext'];

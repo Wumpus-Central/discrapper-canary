@@ -1,4 +1,4 @@
-n.d(t, { O: () => a });
+n.d(t, { O: () => o });
 var r = n(685816);
 function i(e, t, n) {
     return (
@@ -13,9 +13,9 @@ function i(e, t, n) {
         e
     );
 }
-class a {
+class o {
     static fromServer(e) {
-        return new a(e);
+        return new o(e);
     }
     constructor(e) {
         i(this, 'name', void 0), i(this, 'categorySkuId', void 0), i(this, 'rankedSkuIds', void 0), (this.type = r.z.SHELF), (this.name = e.name), (this.categorySkuId = e.category_sku_id), (this.rankedSkuIds = e.ranked_sku_ids);

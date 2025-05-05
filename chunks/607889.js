@@ -13,13 +13,13 @@ function i(e, t, n) {
         e
     );
 }
-let a = 500,
-    o = 150;
+let o = 500,
+    a = 150;
 class s {
     getCurrentValue() {
         if (null == this.animationDetails) return this.value;
         let e = performance.now() - this.animationDetails.animationStart,
-            t = this.value < this.animationDetails.lastValue ? o : a;
+            t = this.value < this.animationDetails.lastValue ? a : o;
         return e > t ? ((this.animationDetails = null), this.value) : this.value < this.animationDetails.lastValue ? r.easeOutQuint(e, this.animationDetails.lastValue, this.value, t) : r.easeOutBack(e, this.animationDetails.lastValue, this.value, t, 4);
     }
     animateTo(e) {

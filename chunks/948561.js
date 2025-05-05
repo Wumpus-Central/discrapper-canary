@@ -1,12 +1,12 @@
 n.d(t, {
     ZP: () => er,
-    b2: () => P
+    b2: () => R
 }),
     n(388685);
 var r = n(952639),
     i = n.n(r),
-    a = n(605906),
-    o = n.n(a),
+    o = n(605906),
+    a = n.n(o),
     s = n(286379),
     l = n(570140),
     c = n(147913),
@@ -29,7 +29,7 @@ var r = n(952639),
     A = n(799525),
     N = n(981631),
     C = n(526761);
-function R(e, t, n) {
+function P(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ function R(e, t, n) {
         e
     );
 }
-let P = 3000,
+let R = 3000,
     w = 800,
     D = {};
 function L(e) {
@@ -55,22 +55,22 @@ function x() {
     }),
         (D = {});
 }
-function M(e, t) {
+function k(e, t) {
     if (null == e.id || null == e.channel_id) return !1;
     let n = L(e);
     if (null != D[n]) {
         let { timeout: r } = D[n];
-        return clearTimeout(r), k(e, t), delete D[n], !0;
+        return clearTimeout(r), M(e, t), delete D[n], !0;
     }
     return !1;
 }
-function k(e, t) {
+function M(e, t) {
     let { setAt: n } = D[L(e)];
     if (t === v.Pq.UPDATE) {
         var r, i;
         let t = null != (r = e.attachments) ? r : [],
             n = null != (i = e.embeds) ? i : [],
-            a = t.filter((e) =>
+            o = t.filter((e) =>
                 (0, v.KP)(
                     {
                         type: v.lJ.Attachment,
@@ -79,7 +79,7 @@ function k(e, t) {
                     !0
                 )
             ),
-            o = n.filter((e) =>
+            a = n.filter((e) =>
                 (0, v.KP)(
                     {
                         type: v.lJ.Embed,
@@ -93,14 +93,14 @@ function k(e, t) {
             channelId: e.channel_id,
             numOfAttachments: t.length,
             numOfEmbeds: n.length,
-            numOfExplicitAttachments: a.length,
-            numOfExplicitEmbeds: o.length
+            numOfExplicitAttachments: o.length,
+            numOfExplicitEmbeds: a.length
         });
     }
     (0, v.OP)(n, t);
 }
 function j(e) {
-    if (M(e, v.Pq.TIMEOUT)) {
+    if (k(e, v.Pq.TIMEOUT)) {
         let t = m.Z.getMessage(e.channel_id, e.id),
             { attachmentIds: n, embedIds: r } = (0, y.ZW)(t);
         (0, v.Hc)({
@@ -136,18 +136,18 @@ function G(e, t) {
                 setAt: Date.now(),
                 timeout: setTimeout(() => {
                     j(e);
-                }, P)
+                }, R)
             }));
     });
-    let a = n || new Set(i.map((e) => e.channel_id)).size > 1;
+    let o = n || new Set(i.map((e) => e.channel_id)).size > 1;
     r
         ? setTimeout(() => {
               U(
                   i.filter((e) => null != D[L(e)]),
-                  a
+                  o
               );
           }, Math.random() * w)
-        : U(i, a);
+        : U(i, o);
 }
 function B(e) {
     let t = S.Z.validContentScanVersion,
@@ -155,7 +155,7 @@ function B(e) {
         r = {};
     return (
         e.forEach((e) => {
-            var i, a, o, s, l, c, u, d, f, _, p, h;
+            var i, o, a, s, l, c, u, d, f, _, p, h;
             null == n[e.channel_id] &&
                 (n[e.channel_id] = {
                     numOfAttachments: 0,
@@ -174,8 +174,8 @@ function B(e) {
                         numOfExplicitEmbeds: 0
                     });
             let m = null != (u = null == (i = e.attachments) ? void 0 : i.length) ? u : 0,
-                g = null != (d = null == (a = e.embeds) ? void 0 : a.length) ? d : 0,
-                E = null != (f = null == (o = e.attachments) ? void 0 : o.filter((e) => (0, y.CN)(e, t)).length) ? f : 0,
+                g = null != (d = null == (o = e.embeds) ? void 0 : o.length) ? d : 0,
+                E = null != (f = null == (a = e.attachments) ? void 0 : a.filter((e) => (0, y.CN)(e, t)).length) ? f : 0,
                 b = null != (_ = null == (s = e.embeds) ? void 0 : s.filter((e) => (0, y.fj)(e, t)).length) ? _ : 0,
                 O = n[e.channel_id];
             (O.numOfAttachments += m), (O.numOfEmbeds += g), (O.numOfAttachmentsPendingScan += E), (O.numOfEmbedsPendingScan += b);
@@ -223,7 +223,7 @@ function B(e) {
         }
     );
 }
-function V(e) {
+function F(e) {
     function t(e) {
         return null != e;
     }
@@ -234,16 +234,16 @@ function V(e) {
             })
             .filter(t);
     r.length > 0 && (n = [...n, ...r]);
-    let i = o()(n, (e, t) => e.id === t.id && e.channel_id === t.channel_id),
-        a = i.filter((e) => (0, y.xG)(e)),
+    let i = a()(n, (e, t) => e.id === t.id && e.channel_id === t.channel_id),
+        o = i.filter((e) => (0, y.xG)(e)),
         s = B(i);
     return {
-        messagesPendingScan: a,
+        messagesPendingScan: o,
         attributesByMessageId: s.messageLookup,
         attributesByChannelId: s.channelLookup
     };
 }
-function F(e) {
+function V(e) {
     function t(e) {
         return null != e;
     }
@@ -257,17 +257,17 @@ function F(e) {
             })
             .filter(t);
     r.length > 0 && (n = [...n, ...r]);
-    let i = o()(n, (e, t) => e.id === t.id && e.channel_id === t.channel_id),
-        a = i.filter((e) => (0, y.xG)(e)),
+    let i = a()(n, (e, t) => e.id === t.id && e.channel_id === t.channel_id),
+        o = i.filter((e) => (0, y.xG)(e)),
         s = B(i);
     return {
-        messagesPendingScan: a,
+        messagesPendingScan: o,
         attributesByChannelId: s.channelLookup,
         attributesByMessageId: s.messageLookup
     };
 }
 function Z(e, t) {
-    let { messagesPendingScan: n, attributesByChannelId: r, attributesByMessageId: i } = V(e);
+    let { messagesPendingScan: n, attributesByChannelId: r, attributesByMessageId: i } = F(e);
     return (
         b.default.entries(r).forEach((e) => {
             let [t, n] = e;
@@ -297,7 +297,7 @@ function Z(e, t) {
     );
 }
 function H(e) {
-    let { messagesPendingScan: t, attributesByChannelId: n, attributesByMessageId: r } = F(e);
+    let { messagesPendingScan: t, attributesByChannelId: n, attributesByMessageId: r } = V(e);
     return (
         b.default.entries(n).forEach((e) => {
             let [t, n] = e;
@@ -327,12 +327,12 @@ function H(e) {
     );
 }
 function Y(e) {
-    var t, n, r, i, a, o;
+    var t, n, r, i, o, a;
     let { message: s } = e;
     if (null == s.channel_id || null == s.id || (null == (t = s.author) ? void 0 : t.id) === _.default.getId() || (null == s.embeds && null == s.attachments) || ((null == (n = s.embeds) ? void 0 : n.length) === 0 && (null == (r = s.attachments) ? void 0 : r.length) === 0)) return !1;
     if (!(0, y.N7)(s)) {
-        let e = null != (o = null != (a = m.Z.getMessage(s.channel_id, s.id)) ? a : I.Z.getMessage(s.id, s.channel_id)) ? o : null == (i = f.Z.getMessage(s.channel_id, s.id)) ? void 0 : i.message;
-        null == e || (0, y.N7)((0, u.wi)(e, s)) || M(e, v.Pq.UPDATE);
+        let e = null != (a = null != (o = m.Z.getMessage(s.channel_id, s.id)) ? o : I.Z.getMessage(s.id, s.channel_id)) ? a : null == (i = f.Z.getMessage(s.channel_id, s.id)) ? void 0 : i.message;
+        null == e || (0, y.N7)((0, u.wi)(e, s)) || k(e, v.Pq.UPDATE);
     }
     let l = g.Z.getChannelId(),
         c = p.ZP.getCurrentSidebarChannelId(l);
@@ -342,8 +342,8 @@ function Y(e) {
 }
 function W(e) {
     var t, n;
-    let { channelId: r, message: i, optimistic: a, isPushNotification: o } = e;
-    if (a || o || null == r || (null == (t = i.author) ? void 0 : t.id) === _.default.getId()) return !1;
+    let { channelId: r, message: i, optimistic: o, isPushNotification: a } = e;
+    if (o || a || null == r || (null == (t = i.author) ? void 0 : t.id) === _.default.getId()) return !1;
     let s = g.Z.getChannelId(),
         l = p.ZP.getCurrentSidebarChannelId(s),
         c = r === s || r === l,
@@ -364,7 +364,7 @@ function z(e) {
     let { messages: t } = e;
     if (null == t) return !1;
     let n = i()(t);
-    return Z(o()(n, (e, t) => e.id === t.id && e.channel_id === t.channel_id));
+    return Z(a()(n, (e, t) => e.id === t.id && e.channel_id === t.channel_id));
 }
 function q(e) {
     let { guildId: t, threads: n } = e;
@@ -399,7 +399,7 @@ function et(e) {
 class en extends c.Z {
     constructor(...e) {
         super(...e),
-            R(this, 'actions', {
+            P(this, 'actions', {
                 LOAD_MESSAGES_SUCCESS: K,
                 LOAD_FORUM_POSTS: q,
                 LOAD_THREADS_SUCCESS: Q,

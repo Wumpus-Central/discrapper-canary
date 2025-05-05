@@ -8,7 +8,7 @@ a.d(e, {
     V$: () => u,
     f4: () => I,
     gv: () => s,
-    mL: () => f,
+    mL: () => A,
     zQ: () => d
 });
 var r = a(967752),
@@ -105,7 +105,7 @@ function d(t) {
         e
     ];
 }
-let A = {
+let f = {
     session: 'session',
     sessions: 'session',
     attachment: 'attachment',
@@ -122,8 +122,8 @@ let A = {
     span: 'span',
     statsd: 'metric_bucket'
 };
-function f(t) {
-    return A[t];
+function A(t) {
+    return f[t];
 }
 function p(t) {
     if (!t || !t.sdk) return;

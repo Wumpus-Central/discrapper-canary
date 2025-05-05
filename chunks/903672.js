@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(216789),
     _ = n(695346),
     b = n(592125),
-    x = n(731290),
-    y = n(944486),
+    y = n(731290),
+    x = n(944486),
     E = n(455199),
     v = n(655354),
     O = n(999671),
@@ -41,10 +41,10 @@ function A(e, t, n) {
 }
 function w(e) {
     let { setTab: t, onJump: n, badgeState: l, closePopout: c } = e,
-        h = (0, o.e7)([b.Z, y.Z], () => b.Z.getChannel(y.Z.getChannelId())),
+        h = (0, o.e7)([b.Z, x.Z], () => b.Z.getChannel(x.Z.getChannelId())),
         {
             messages: _,
-            hasMore: x,
+            hasMore: y,
             loading: v,
             guildFilter: j,
             roleFilter: C,
@@ -59,12 +59,12 @@ function w(e) {
         })),
         w = (0, g.Us)({ location: 'RecentMentions' }),
         R = (0, m.Z)(j),
-        D = (0, m.Z)(C),
-        L = (0, m.Z)(P);
+        L = (0, m.Z)(C),
+        D = (0, m.Z)(P);
     i.useEffect(() => {
         if (!E.Z.hasLoadedEver) return void A(h, !0);
-        ((null != R && j !== R) || (null != D && C !== D) || (null != L && P !== L)) && A(h, !0);
-    }, [R, j, D, C, L, P, h, !0]),
+        ((null != R && j !== R) || (null != L && C !== L) || (null != D && P !== D)) && A(h, !0);
+    }, [R, j, L, C, D, P, h, !0]),
         (0, p.ZP)(() => {
             (null == _ ? void 0 : _.some(f.k5)) && (u.Z.clearMentions(), A(h, !0));
         }),
@@ -96,7 +96,7 @@ function w(e) {
         channel: h,
         messages: _,
         loading: v,
-        hasMore: x,
+        hasMore: y,
         analyticsName: 'Recent Mentions',
         loadMore: function () {
             A(h, !0, null != _ && _.length > 0 ? _[_.length - 1].id : null);
@@ -127,7 +127,7 @@ function R(e) {
     if (null == t) return null;
     let l = b.Z.getChannel(t.channel_id);
     if (null == l) return null;
-    let a = x.Z.didAgree(l.getGuildId()),
+    let a = y.Z.didAgree(l.getGuildId()),
         o = !!l.isNSFW() && !a;
     return (0, r.jsxs)('div', {
         className: T.container,

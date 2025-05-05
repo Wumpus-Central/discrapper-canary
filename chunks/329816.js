@@ -1,8 +1,8 @@
 n.d(t, { Z: () => eb }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(670481),
     l = n(114858),
     c = n(873546),
@@ -25,20 +25,20 @@ var r = n(255367),
     A = n(94795),
     N = n(327943),
     C = n(907459),
-    R = n(559407),
-    P = n(556766),
+    P = n(559407),
+    R = n(556766),
     w = n(514361),
     D = n(724145),
     L = n(195302),
     x = n(260035),
-    M = n(482215),
-    k = n(540059),
+    k = n(482215),
+    M = n(540059),
     j = n(366841),
     U = n(947519),
     G = n(605236),
     B = n(243778),
-    V = n(314910),
-    F = n(84615),
+    F = n(314910),
+    V = n(84615),
     Z = n(429142),
     H = n(813744),
     Y = n(311476),
@@ -55,8 +55,8 @@ var r = n(255367),
     en = n(766127),
     er = n(823453),
     ei = n(628123),
-    ea = n(436774),
-    eo = n(686546),
+    eo = n(436774),
+    ea = n(686546),
     es = n(950796),
     el = n(151851),
     ec = n(981631),
@@ -141,7 +141,7 @@ let em = (0, et.Un)({
         let t = (0, u.e7)([J.Z], () => J.Z.isFocused()),
             n = (0, u.e7)([Q.Z], () => Q.Z.hasLayers()),
             i = (0, _.s9z)(_.$sL);
-        return (0, k.Q3)('ConnectedTitleBar')
+        return (0, M.Q3)('ConnectedTitleBar')
             ? (0, r.jsx)(es.D, {
                   fixed: !0,
                   show: n || i || !q.default.isAuthenticated()
@@ -150,11 +150,11 @@ let em = (0, et.Un)({
     }),
     eb = function (e) {
         let { children: t, skipsSettingDefaultPageTitle: n } = e,
-            { pathname: a } = (0, l.TH)(),
+            { pathname: o } = (0, l.TH)(),
             f = (0, $.getPlatform)(),
             b = c.tq || c.Em,
             q = (0, u.e7)([K.Z], () => (K.Z.darkSidebar ? ec.BRd.DARK : void 0)),
-            J = (0, k.Q3)('AppSkeleton'),
+            J = (0, M.Q3)('AppSkeleton'),
             et = (0, u.e7)([O.Z], () => (O.Z.useForcedColors ? 'yes' : 'no')),
             [es, el, ef] = (0, u.Wu)([w.Z], () => [w.Z.isEditorOpen, w.Z.isCoachmark, w.Z.isPreview]),
             [e_, ep] = (0, u.Wu)([N.Z], () => [N.Z.isEditorOpen, N.Z.isUpsellPreview]),
@@ -170,7 +170,7 @@ let em = (0, et.Un)({
             eA = eI === d.z.CLIENT_THEMES_COACHMARK;
         i.useEffect(() => {
             null ==
-                (0, l.LX)(a, {
+                (0, l.LX)(o, {
                     path: 'invite',
                     exact: !1,
                     strict: !1
@@ -182,16 +182,16 @@ let em = (0, et.Un)({
                     type: 'APP_ICON_TRACK_IMPRESSION',
                     markAsDismissed: eS
                 }));
-        }, [eT, eA, eS, a]);
+        }, [eT, eA, eS, o]);
         let eN = i.useRef(document.body),
             eC = ey || eA,
-            eR = eO && !eA,
-            eP = ef || ep,
+            eP = eO && !eA,
+            eR = ef || ep,
             { enabled: ew } = Y.Z.useExperiment(
                 { location: 'AppSkeleton' },
                 {
-                    autoTrackExposure: eP && (eC || eR),
-                    disable: !eP
+                    autoTrackExposure: eR && (eC || eP),
+                    disable: !eR
                 }
             ),
             eD = ''.concat(J ? 'enabled' : 'disabled').concat(et);
@@ -208,13 +208,13 @@ let em = (0, et.Un)({
                                     children: (0, r.jsxs)(_.JcV, {
                                         containerRef: eN,
                                         children: [
-                                            (0, r.jsx)(eo.Co, {}),
-                                            (0, r.jsx)(ea.ZP, {}),
+                                            (0, r.jsx)(ea.Co, {}),
+                                            (0, r.jsx)(eo.ZP, {}),
                                             (0, r.jsx)(s.OU, {}),
                                             (0, r.jsx)(y.Wu, {
                                                 appContext: ec.IlC.APP,
                                                 renderWindow: window,
-                                                children: (0, r.jsxs)(V.yP, {
+                                                children: (0, r.jsxs)(F.yP, {
                                                     children: [
                                                         null != f
                                                             ? (0, r.jsx)(eE, {
@@ -223,9 +223,9 @@ let em = (0, et.Un)({
                                                               })
                                                             : null,
                                                         (0, r.jsxs)('div', {
-                                                            className: o()(ed.appAsidePanelWrapper, b && ed.mobileAppAsidePanelWrapper),
+                                                            className: a()(ed.appAsidePanelWrapper, b && ed.mobileAppAsidePanelWrapper),
                                                             children: [
-                                                                (0, r.jsx)(M.K, {}),
+                                                                (0, r.jsx)(k.K, {}),
                                                                 (0, r.jsx)('div', {
                                                                     className: ed.notAppAsidePanel,
                                                                     'data-app-not-dev-tools': !0,
@@ -236,15 +236,15 @@ let em = (0, et.Un)({
                                                                                 children: (0, r.jsxs)(L.p, {
                                                                                     children: [
                                                                                         (0, r.jsx)('div', {
-                                                                                            className: o()(b ? ed.mobileApp : ed.app),
+                                                                                            className: a()(b ? ed.mobileApp : ed.app),
                                                                                             children: t
                                                                                         }),
-                                                                                        (0, r.jsx)(R.Z, {}),
+                                                                                        (0, r.jsx)(P.Z, {}),
                                                                                         (0, r.jsx)(m.Z, {}),
                                                                                         (0, r.jsx)(_.nKe, {}),
                                                                                         (0, r.jsx)(g.Z, {}),
-                                                                                        (0, r.jsx)(F.Ox, {}),
-                                                                                        (0, r.jsx)(V.Un, {}),
+                                                                                        (0, r.jsx)(V.Ox, {}),
+                                                                                        (0, r.jsx)(F.Un, {}),
                                                                                         (0, r.jsx)(Z.ot, {}),
                                                                                         (0, r.jsx)(_.Ixi, {}),
                                                                                         (0, r.jsx)(T.Z, {}),
@@ -257,7 +257,7 @@ let em = (0, et.Un)({
                                                                         })
                                                                     })
                                                                 }),
-                                                                (0, r.jsx)(P.Z, {}),
+                                                                (0, r.jsx)(R.Z, {}),
                                                                 (0, r.jsx)(h.Z, {}),
                                                                 eC &&
                                                                     !ew &&
@@ -272,16 +272,16 @@ let em = (0, et.Un)({
                                                                               },
                                                                         showClientThemesCoachmark: eA
                                                                     }),
-                                                                eR &&
+                                                                eP &&
                                                                     !ew &&
                                                                     (0, r.jsx)(C.Z, {
                                                                         isCoachmark: eT,
                                                                         markAsDismissed: eS
                                                                     }),
-                                                                (eC || eR) &&
+                                                                (eC || eP) &&
                                                                     ew &&
                                                                     (0, r.jsx)(z.Z, {
-                                                                        initialTab: eR ? z._.APP_ICONS : z._.CLIENT_THEMES,
+                                                                        initialTab: eP ? z._.APP_ICONS : z._.CLIENT_THEMES,
                                                                         markAsDismissed: eS,
                                                                         isCoachmark: eA
                                                                     }),

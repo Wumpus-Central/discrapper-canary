@@ -11,9 +11,9 @@ var r = a(154028),
     I = a(903225),
     R = a(507604),
     d = a(511696);
-t.exports = function (t, e, a, A) {
-    var f = 'stackTraceLimit',
-        p = A ? 2 : 1,
+t.exports = function (t, e, a, f) {
+    var A = 'stackTraceLimit',
+        p = f ? 2 : 1,
         N = t.split('.'),
         T = N[N.length - 1],
         L = r.apply(null, N);
@@ -22,11 +22,11 @@ t.exports = function (t, e, a, A) {
         if ((!d && n(h, 'cause') && delete h.cause, !a)) return L;
         var O = r('Error'),
             D = e(function (t, e) {
-                var a = l(A ? e : t, void 0),
-                    r = A ? new L(t) : new L();
+                var a = l(f ? e : t, void 0),
+                    r = f ? new L(t) : new L();
                 return void 0 !== a && _(r, 'message', a), I(r, D, r.stack, 2), this && o(h, this) && E(r, this, D), arguments.length > p && u(r, arguments[p]), r;
             });
-        if (((D.prototype = h), 'Error' !== T ? (i ? i(D, O) : c(D, O, { name: !0 })) : R && f in L && (s(D, L, f), s(D, L, 'prepareStackTrace')), c(D, L), !d))
+        if (((D.prototype = h), 'Error' !== T ? (i ? i(D, O) : c(D, O, { name: !0 })) : R && A in L && (s(D, L, A), s(D, L, 'prepareStackTrace')), c(D, L), !d))
             try {
                 h.name !== T && _(h, 'name', T), (h.constructor = D);
             } catch (t) {}

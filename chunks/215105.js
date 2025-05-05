@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N }), n(388685), n(781311);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(106351),
     l = n(507274),
     c = n(541716),
@@ -28,9 +28,9 @@ let S = (0, f.kt)({
         let { input: t, username: n, sourceType: r, sourceDetails: i } = e;
         switch (r) {
             case y.n_.ACTIVITY:
-                let a = v.intl.formatToPlainString(v.t.WmvMCg, { username: n }),
-                    o = '\n> '.concat(i);
-                return null != i ? ''.concat(E.jd).concat(a, '*').concat(o, '\n').concat(t) : ''.concat(E.jd).concat(a, '*\n').concat(t);
+                let o = v.intl.formatToPlainString(v.t.WmvMCg, { username: n }),
+                    a = '\n> '.concat(i);
+                return null != i ? ''.concat(E.jd).concat(o, '*').concat(a, '\n').concat(t) : ''.concat(E.jd).concat(o, '*\n').concat(t);
             case y.n_.AVATAR:
                 let s = v.intl.formatToPlainString(v.t.lpaBsL, { username: n });
                 return ''.concat(E.jd).concat(s, '*\n').concat(t);
@@ -55,18 +55,18 @@ let S = (0, f.kt)({
         }
     };
 function N(e) {
-    let { user: t, guildId: n, channelId: a, sourceType: s, sourceDetails: f, setPopoutRef: _, modalKey: E, onAction: N, onClose: C, entry: R } = e,
-        { resetInteraction: P, setInteractionToast: w } = (0, g.Xo)(),
+    let { user: t, guildId: n, channelId: o, sourceType: s, sourceDetails: f, setPopoutRef: _, modalKey: E, onAction: N, onClose: C, entry: P } = e,
+        { resetInteraction: R, setInteractionToast: w } = (0, g.Xo)(),
         { primaryColor: D } = (0, b.z)(),
         [L, x] = i.useState(''),
-        [M, k] = i.useState((0, u.JM)(L)),
+        [k, M] = i.useState((0, u.JM)(L)),
         j = i.useRef(!1),
         U = i.useRef(null),
         G = i.useCallback(
             (e) => {
-                e.key === O.vn.ESCAPE && (e.stopPropagation(), P());
+                e.key === O.vn.ESCAPE && (e.stopPropagation(), R());
             },
-            [P]
+            [R]
         );
     i.useEffect(() => {
         null == _ || _(null == U ? void 0 : U.current);
@@ -88,12 +88,12 @@ function N(e) {
                     location: 'UserProfileReplyPopout',
                     openChannel: !1,
                     whenReady: !1,
-                    entry: R
+                    entry: P
                 });
             } catch (e) {}
             w(y.P.REPLY);
         },
-        V = {
+        F = {
             [I.status]: s === y.n_.STATUS,
             [I.avatar]: s === y.n_.AVATAR,
             [I.activity]: s === y.n_.ACTIVITY
@@ -102,7 +102,7 @@ function N(e) {
         ref: U,
         onKeyDown: G,
         children: (0, r.jsx)('div', {
-            className: o()(I.container, V, { [I.customProfileTheme]: null != D }),
+            className: a()(I.container, F, { [I.customProfileTheme]: null != D }),
             children: (0, r.jsx)(d.Z, {
                 parentModalKey: E,
                 emojiPickerCloseOnModalOuterClick: !0,
@@ -110,12 +110,12 @@ function N(e) {
                 innerClassName: I.inputInner,
                 editorClassName: I.editor,
                 type: c.Ie.USER_PROFILE_REPLY,
-                placeholder: v.intl.formatToPlainString(A(s), { username: p.ZP.getName(n, a, t) }),
+                placeholder: v.intl.formatToPlainString(A(s), { username: p.ZP.getName(n, o, t) }),
                 channel: S,
                 textValue: L,
-                richValue: M,
+                richValue: k,
                 onChange: (e, t, n) => {
-                    t !== L && (x(t), k(n));
+                    t !== L && (x(t), M(n));
                 },
                 focused: j.current,
                 onFocus: () => {
@@ -132,7 +132,7 @@ function N(e) {
                     try {
                         return (
                             await B(n),
-                            P(),
+                            R(),
                             null == C || C(),
                             {
                                 shouldClear: !0,

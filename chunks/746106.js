@@ -1,8 +1,8 @@
 n.d(t, { w: () => y }), n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(607070),
@@ -18,7 +18,7 @@ var r = n(255367),
     b = n(892071);
 function y(e) {
     let { windowKey: t, children: n } = e,
-        a = null != t,
+        o = null != t,
         [y] = i.useState(() => g.ZP.getEnableHardwareAcceleration()),
         {
             locale: O,
@@ -29,8 +29,8 @@ function y(e) {
             fontScaleClass: A,
             keyboardModeEnabled: N,
             saturation: C,
-            desaturateUserColors: R,
-            useForcedColors: P,
+            desaturateUserColors: P,
+            useForcedColors: R,
             systemForcedColors: w,
             useReducedMotion: D,
             alwaysShowLinkDecorations: L,
@@ -40,8 +40,8 @@ function y(e) {
             return {
                 locale: p.default.locale,
                 theme: h.Z.theme,
-                focused: a ? f.Z.getWindowFocused(t) : m.Z.isFocused(),
-                currentWindow: a && null != (e = f.Z.getWindow(t)) ? e : window,
+                focused: o ? f.Z.getWindowFocused(t) : m.Z.isFocused(),
+                currentWindow: o && null != (e = f.Z.getWindow(t)) ? e : window,
                 fontScale: c.Z.fontScale,
                 fontScaleClass: c.Z.fontScaleClass,
                 keyboardModeEnabled: c.Z.keyboardModeEnabled,
@@ -54,16 +54,16 @@ function y(e) {
                 confettiMode: _.Z.confettiMode
             };
         }),
-        M = (0, u.Z)(S, __OVERLAY__ || I),
-        k = 0;
-    1 !== C && (k = (0, l.OdO)(k, l.bgu.REDUCE_SATURATION_ENABLED));
+        k = (0, u.Z)(S, __OVERLAY__ || I),
+        M = 0;
+    1 !== C && (M = (0, l.OdO)(M, l.bgu.REDUCE_SATURATION_ENABLED));
     let j = (0, E.A)(),
         U = (0, d.Ml)('RootThemeContextProvider'),
         G = (0, d.CL)('RootThemeContextProvider'),
         B = (0, d.VM)('RootThemeContextProvider');
     return (0, r.jsx)(l.wMY, {
         theme: v,
-        flags: k,
+        flags: M,
         saturation: C,
         density: j,
         children: (0, r.jsx)(b.cE, {
@@ -74,15 +74,15 @@ function y(e) {
             fontScale: T,
             fontScaleClass: A,
             keyboardModeEnabled: N,
-            mouseMode: M,
+            mouseMode: k,
             saturation: C,
-            desaturateUserColors: R,
-            useForcedColors: P,
+            desaturateUserColors: P,
+            useForcedColors: R,
             systemForcedColors: w,
             useReducedMotion: D,
             alwaysShowLinkDecorations: L,
             hardwareAccelerationEnabled: y,
-            rootClassName: o()({
+            rootClassName: a()({
                 'confetti-mode': x,
                 'refresh-fast-follow-avatars': U,
                 'refresh-fast-follow-guild-bg': G,

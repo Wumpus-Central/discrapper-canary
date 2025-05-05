@@ -31,8 +31,8 @@ t.exports = function (t, e, a, r, s, l, u) {
             var d = u.get(t);
             if (d) return d == e;
             (r |= 2), u.set(t, e);
-            var A = o(I(t), I(e), r, s, l, u);
-            return u.delete(t), A;
+            var f = o(I(t), I(e), r, s, l, u);
+            return u.delete(t), f;
         case '[object Symbol]':
             if (E) return E.call(t) == E.call(e);
     }

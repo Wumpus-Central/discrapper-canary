@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l });
 var r = n(358085),
     i = n(782769),
-    a = n(527805),
-    o = n(620662),
+    o = n(527805),
+    a = n(620662),
     s = n(981631);
 function l(e) {
     let { user: t, activity: n, application: l, channelId: c, currentUser: u, isEmbedded: d, ChannelStore: f, GuildStore: _, GuildMemberCountStore: p, RelationshipStore: h, SelectedChannelStore: m, VoiceStateStore: g, PermissionStore: E } = e,
@@ -11,7 +11,7 @@ function l(e) {
     if (null == t) return !1;
     if (d && null != c)
         return (
-            (0, a.ZP)({
+            (0, o.ZP)({
                 userId: t.id,
                 activity: n,
                 channelId: c,
@@ -22,11 +22,11 @@ function l(e) {
                 VoiceStateStore: g,
                 PermissionStore: E,
                 GuildStore: _
-            }) === a.Fw.CAN_JOIN
+            }) === o.Fw.CAN_JOIN
         );
-    if ((d && null == c && !(0, o.Z)(n, s.xjy.CONTEXTLESS)) || (!(0, r.isDesktop)() && !d)) return !1;
-    if ((0, o.Z)(n, s.xjy.PARTY_PRIVACY_FRIENDS) && h.isFriend(t.id)) return !0;
-    if ((0, o.Z)(n, s.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) {
+    if ((d && null == c && !(0, a.Z)(n, s.xjy.CONTEXTLESS)) || (!(0, r.isDesktop)() && !d)) return !1;
+    if ((0, a.Z)(n, s.xjy.PARTY_PRIVACY_FRIENDS) && h.isFriend(t.id)) return !0;
+    if ((0, a.Z)(n, s.xjy.PARTY_PRIVACY_VOICE_CHANNEL)) {
         let e = f.getChannel(m.getVoiceChannelId());
         if (null == e || !g.isInChannel(e.id, t.id)) return !1;
         switch (e.type) {

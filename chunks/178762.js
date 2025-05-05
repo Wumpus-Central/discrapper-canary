@@ -1,15 +1,15 @@
 n.d(t, {
     Ir: () => z,
     J: () => K,
-    YN: () => F,
+    YN: () => V,
     ZP: () => Q,
     iZ: () => H
 }),
     n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(392711),
-    o = n.n(a),
+    o = n(392711),
+    a = n.n(o),
     s = n(91192),
     l = n(876215),
     c = n(442837),
@@ -32,14 +32,14 @@ var r = n(255367),
     A = n(678869),
     N = n(278399),
     C = n(886217),
-    R = n(555672),
-    P = n(644548),
+    P = n(555672),
+    R = n(644548),
     w = n(335326),
     D = n(268010),
     L = n(797342),
     x = n(206583),
-    M = n(921944);
-function k(e, t, n) {
+    k = n(921944);
+function M(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -63,7 +63,7 @@ function j(e) {
                 })
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                M(e, t, n[t]);
             });
     }
     return e;
@@ -95,26 +95,26 @@ function B(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = V(e, t);
+        i = F(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function V(e, t) {
+function F(e, t) {
     if (null == e) return {};
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let F = 72,
+let V = 72,
     Z = 2000;
 function H(e) {
-    return (null == e ? void 0 : e.type) === E.so.CONTENT_INVENTORY ? F : 0;
+    return (null == e ? void 0 : e.type) === E.so.CONTENT_INVENTORY ? V : 0;
 }
 let Y = (e) => {
         var { entry: t } = e,
@@ -125,7 +125,7 @@ let Y = (e) => {
             case l.s.WATCHED_MEDIA:
                 return (0, r.jsx)(w.Z, G(j({}, n), { entry: t }));
             case l.s.TOP_GAME:
-                return (0, r.jsx)(R.ZP, G(j({}, n), { entry: t }));
+                return (0, r.jsx)(P.ZP, G(j({}, n), { entry: t }));
             case l.s.TOP_ARTIST:
                 return (0, r.jsx)(N.ZP, G(j({}, n), { entry: t }));
             case l.s.LISTENED_SESSION:
@@ -174,7 +174,7 @@ let Y = (e) => {
             case l.s.WATCHED_MEDIA:
                 return (0, r.jsx)(D.Z, G(j({}, i), { entry: n }));
             case l.s.TOP_GAME:
-                return (0, r.jsx)(P.Z, G(j({}, i), { entry: n }));
+                return (0, r.jsx)(R.Z, G(j({}, i), { entry: n }));
             case l.s.TOP_ARTIST:
                 return (0, r.jsx)(C.Z, G(j({}, i), { entry: n }));
             case l.s.LISTENED_SESSION:
@@ -197,10 +197,10 @@ let Y = (e) => {
     z = i.createContext(void 0),
     q = (e) => {
         var t,
-            { index: a } = e,
+            { index: o } = e,
             p = B(e, ['index']);
         let [m, g] = i.useState('default'),
-            E = (0, s.JA)(''.concat(a)),
+            E = (0, s.JA)(''.concat(o)),
             O = null == (t = b.default.getCurrentUser()) ? void 0 : t.isStaff(),
             { isRich: v, appName: I } = (0, L.n)(p.entry),
             S = i.useMemo(
@@ -215,11 +215,11 @@ let Y = (e) => {
             ),
             T = i.useRef(!1),
             [A, N] = i.useState(!1),
-            [C, R] = i.useState(!1),
-            P = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled);
+            [C, P] = i.useState(!1),
+            R = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled);
         i.useEffect(() => {
-            A && P && R(!0);
-        }, [A, P]);
+            A && R && P(!0);
+        }, [A, R]);
         let w = i.useCallback(
                 (e) => {
                     O &&
@@ -237,7 +237,7 @@ let Y = (e) => {
             D = i.useCallback(() => {
                 g(String(Date.now()));
             }, []),
-            k = i.useCallback(
+            M = i.useCallback(
                 function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                     (0, y.L)(e, j({}, S, t));
@@ -246,7 +246,7 @@ let Y = (e) => {
             ),
             U = i.useMemo(
                 () =>
-                    o().throttle(
+                    a().throttle(
                         (e) => {
                             (0, y.L)(x.xP.CARD_POPOUT_OPEN, e);
                         },
@@ -258,33 +258,33 @@ let Y = (e) => {
                     ),
                 []
             ),
-            V = () => {
+            F = () => {
                 (T.current = !1),
                     setTimeout(() => {
-                        T.current || (N(!1), R(P));
+                        T.current || (N(!1), P(R));
                     }, 100);
             };
         return (0, r.jsx)('div', {
             onMouseEnter: () => {
-                p.entry.content_type !== l.s.LEADERBOARD || (0, h.un)(u.z.LEADERBOARD_NUX_COACHMARK) || (0, h.EW)(u.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: M.L.SECONDARY }),
+                p.entry.content_type !== l.s.LEADERBOARD || (0, h.un)(u.z.LEADERBOARD_NUX_COACHMARK) || (0, h.EW)(u.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: k.L.SECONDARY }),
                     (T.current = !0),
                     setTimeout(() => {
                         T.current && N(!0), U(S);
                     }, 100);
             },
-            onMouseLeave: V,
+            onMouseLeave: F,
             children: (0, r.jsx)(d.yRy, {
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, r.jsx)(z.Provider, {
-                        value: V,
+                        value: F,
                         children: (0, r.jsx)(
                             W,
                             j(
                                 {
                                     closePopout: t,
                                     updatePopoutPosition: D,
-                                    trackRankingItemInteraction: k
+                                    trackRankingItemInteraction: M
                                 },
                                 p
                             )
@@ -296,7 +296,7 @@ let Y = (e) => {
                 positionKey: m,
                 onRequestOpen: () => U(S),
                 onRequestClose: () => {
-                    C && V();
+                    C && F();
                 },
                 spacing: 8,
                 children: (e, t) => {

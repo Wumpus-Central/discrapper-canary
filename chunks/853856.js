@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r,
     i = n(442837),
-    a = n(524437),
-    o = n(570140),
+    o = n(524437),
+    a = n(570140),
     s = n(581883),
     l = n(131704),
     c = n(981631);
@@ -64,7 +64,7 @@ class h extends (r = i.ZP.Store) {
         if (null != e) return d[e];
     }
     getCategoryRecord(e) {
-        return e in d && d[e].type === a.Dd.CATEGORY ? _(d[e]) : null;
+        return e in d && d[e].type === o.Dd.CATEGORY ? _(d[e]) : null;
     }
     getNickname(e) {
         var t;
@@ -73,4 +73,4 @@ class h extends (r = i.ZP.Store) {
     }
 }
 u(h, 'displayName', 'FavoriteStore');
-let m = new h(o.Z, {});
+let m = new h(a.Z, {});

@@ -2,8 +2,8 @@ n.d(t, { Dd: () => L });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(481060),
-    o = n(493773),
+    o = n(481060),
+    a = n(493773),
     s = n(100527),
     l = n(906732),
     c = n(335131),
@@ -26,8 +26,8 @@ var i = n(442837),
     A = n(981631),
     N = n(474936),
     C = n(388032),
-    R = n(997433),
-    P = n(651427);
+    P = n(997433),
+    R = n(651427);
 function w(e, t, n) {
     return (
         t in e
@@ -59,21 +59,21 @@ function D(e) {
 }
 let L = {
     key: S.h8.GIFT_CUSTOMIZATION,
-    renderStep: (e) => (0, r.jsx)(M, D({}, e)),
+    renderStep: (e) => (0, r.jsx)(k, D({}, e)),
     options: {
         isLargeModal: !0,
         useBreadcrumbLabel: () => C.intl.string(C.t['W685+f'])
     }
 };
 function x(e) {
-    let { onStepChange: t, onBackClick: n, showBackButton: i = !1, disabled: o = !1, loading: s = !1 } = e,
+    let { onStepChange: t, onBackClick: n, showBackButton: i = !1, disabled: a = !1, loading: s = !1 } = e,
         { hasPaymentSources: l } = (0, I.JL)(),
         c = l ? S.h8.REVIEW : S.h8.ADD_PAYMENT_STEPS;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(a.zxk, {
+            (0, r.jsx)(o.zxk, {
                 onClick: () => t(c),
-                disabled: o,
+                disabled: a,
                 submitting: s,
                 children: C.intl.string(C.t.XiOHRU)
             }),
@@ -81,40 +81,40 @@ function x(e) {
         ]
     });
 }
-function M(e) {
+function k(e) {
     let { handleStepChange: t, handleClose: n } = e,
-        { customGiftMessage: s = '', setCustomGiftMessage: l, giftRecipientError: m, setGiftRecipientError: S, validatingGiftRecipient: w, giftRecipient: D, recommendedGiftSkuIds: L, giftingOrigin: M, setValidatingGiftRecipient: j } = (0, v.wD)(),
-        { selectedSkuId: U, setSelectedSkuId: G, selectedSkuPricePreview: B, paymentSourceId: V, skuPricePreviewsById: F } = (0, I.JL)(),
+        { customGiftMessage: s = '', setCustomGiftMessage: l, giftRecipientError: m, setGiftRecipientError: S, validatingGiftRecipient: w, giftRecipient: D, recommendedGiftSkuIds: L, giftingOrigin: k, setValidatingGiftRecipient: j } = (0, v.wD)(),
+        { selectedSkuId: U, setSelectedSkuId: G, selectedSkuPricePreview: B, paymentSourceId: F, skuPricePreviewsById: V } = (0, I.JL)(),
         Z = (0, i.e7)([E.default], () => E.default.getCurrentUser()),
         { enabled: H, giftRecommendationAlgorithm: Y } = _.G.useExperiment({ location: 'CollectiblesPaymentModalGiftCustomizationStep' }, { autoTrackExposure: !1 }),
-        W = H && M === N.Wt.DM_CHANNEL,
+        W = H && k === N.Wt.DM_CHANNEL,
         K = Y === _.u.POPULAR ? C.intl.string(C.t.Kwgrrq) : C.intl.string(C.t.r1huYW),
         z = async (e, t) => {
             j(!0), null != m && S(), (await (0, c.B1)(e.id, t)) || S(C.intl.string(C.t['4kgVqa'])), j(!1);
         };
-    (0, o.ZP)(() => {
+    (0, a.ZP)(() => {
         null != U && null != D && (y.default.track(A.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: U }), z(D, U));
     });
     let q = (e) => {
             y.default.track(A.rMx.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: e }), null != D && z(D, e), G(e);
         },
         Q = (e) => {
-            let t = F[e],
+            let t = V[e],
                 n = null;
             if (null != t) {
                 var i;
-                n = null != V && null != (i = t[V]) ? i : t[b.c];
+                n = null != F && null != (i = t[F]) ? i : t[b.c];
             }
             if (null == n) return;
-            let a = (0, O.T4)(n.amount, n.currency);
+            let o = (0, O.T4)(n.amount, n.currency);
             return (0, r.jsx)(
                 u.Z,
                 {
                     skuId: e,
-                    price: a,
+                    price: o,
                     isSelected: e === U,
                     onSelect: (e) => q(e),
-                    className: R.recommendedGiftPreview
+                    className: P.recommendedGiftPreview
                 },
                 e
             );
@@ -126,49 +126,49 @@ function M(e) {
                 pendingText: s,
                 currentText: s,
                 disableThemedBackground: !0,
-                className: R.customGiftMessageWrapper,
-                innerClassName: R.customGiftMessage
+                className: P.customGiftMessageWrapper,
+                innerClassName: P.customGiftMessage
             }),
         J = () =>
             W
                 ? (0, r.jsxs)('div', {
-                      className: R.bodyColumnLeft,
+                      className: P.bodyColumnLeft,
                       children: [
-                          (0, r.jsx)(a.Text, {
+                          (0, r.jsx)(o.Text, {
                               variant: 'text-xs/bold',
                               color: 'header-secondary',
-                              className: R.selectGiftTitle,
+                              className: P.selectGiftTitle,
                               children: K.toLocaleUpperCase()
                           }),
                           L.map((e) => Q(e)),
-                          (0, r.jsx)(k, { handleClose: n })
+                          (0, r.jsx)(M, { handleClose: n })
                       ]
                   })
                 : (0, r.jsx)('div', {
-                      className: R.bodyColumnMiddle,
+                      className: P.bodyColumnMiddle,
                       children: (0, r.jsx)(h.q, { isShopGift: !0 })
                   }),
         $ = () => {
             if (W)
                 return (0, r.jsxs)('div', {
-                    className: R.bodyColumnRight,
+                    className: P.bodyColumnRight,
                     children: [
                         (0, r.jsx)(g.s, { giftRecipient: D }),
                         (0, r.jsx)(h.q, {
                             isShopGift: !0,
-                            className: P.adjustedGiftMainAnimation,
-                            optionsContainerClassName: P.adjustedGiftBoxOptionContainer
+                            className: R.adjustedGiftMainAnimation,
+                            optionsContainerClassName: R.adjustedGiftBoxOptionContainer
                         }),
                         X()
                     ]
                 });
             let e = null != B ? (0, O.T4)(B.amount, B.currency) : void 0;
             return (0, r.jsxs)('div', {
-                className: R.bodyColumnRight,
+                className: P.bodyColumnRight,
                 children: [
                     (0, r.jsx)(d.Z, {
                         selectedSkuId: U,
-                        className: R.sendTo,
+                        className: P.sendTo,
                         validateSelectedGift: z
                     }),
                     X(),
@@ -176,7 +176,7 @@ function M(e) {
                         (0, r.jsx)(u.Z, {
                             skuId: U,
                             price: e,
-                            className: R.giftPreview,
+                            className: P.giftPreview,
                             isSelected: !0,
                             shouldDisplayHeader: !0
                         })
@@ -187,12 +187,12 @@ function M(e) {
         children: [
             (0, r.jsx)(T.C3, {
                 children: (0, r.jsxs)('div', {
-                    className: R.stepBody,
+                    className: P.stepBody,
                     children: [J(), $()]
                 })
             }),
             (0, r.jsx)(T.O3, {
-                children: (0, r.jsx)(a.mzw, {
+                children: (0, r.jsx)(o.mzw, {
                     justify: f.Z.Justify.BETWEEN,
                     align: f.Z.Align.CENTER,
                     children: (0, r.jsx)(x, {
@@ -206,29 +206,29 @@ function M(e) {
         ]
     });
 }
-function k(e) {
+function M(e) {
     let { handleClose: t } = e,
         { analyticsLocations: n } = (0, l.ZP)(s.Z.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
     function i() {
         t(),
-            (0, a.pTH)(),
+            (0, o.pTH)(),
             (0, c.mK)({
                 openInLayer: !1,
                 analyticsLocations: n,
                 analyticsSource: s.Z.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL
             });
     }
-    return (0, r.jsx)(a.P3F, {
+    return (0, r.jsx)(o.P3F, {
         onClick: i,
         children: (0, r.jsxs)('div', {
-            className: R.navigateToShopButton,
+            className: P.navigateToShopButton,
             children: [
                 (0, r.jsxs)('div', {
-                    className: R.navigateToShopBody,
+                    className: P.navigateToShopBody,
                     children: [
                         (0, r.jsx)('div', {
-                            className: R.shopIcon,
-                            children: (0, r.jsx)(a.EOn, {
+                            className: P.shopIcon,
+                            children: (0, r.jsx)(o.EOn, {
                                 size: 'custom',
                                 width: 18,
                                 height: 18,
@@ -236,14 +236,14 @@ function k(e) {
                             })
                         }),
                         (0, r.jsxs)('div', {
-                            className: R.navigateToShopTextWrapper,
+                            className: P.navigateToShopTextWrapper,
                             children: [
-                                (0, r.jsx)(a.Text, {
+                                (0, r.jsx)(o.Text, {
                                     color: 'header-primary',
                                     variant: 'text-md/semibold',
                                     children: C.intl.string(C.t['1+Co8P'])
                                 }),
-                                (0, r.jsx)(a.X6q, {
+                                (0, r.jsx)(o.X6q, {
                                     color: 'header-secondary',
                                     variant: 'heading-sm/medium',
                                     children: C.intl.string(C.t.nYn52N)
@@ -253,7 +253,7 @@ function k(e) {
                     ]
                 }),
                 (0, r.jsx)('div', {
-                    children: (0, r.jsx)(a.d4D, {
+                    children: (0, r.jsx)(o.d4D, {
                         size: 'custom',
                         width: 20,
                         height: 20,

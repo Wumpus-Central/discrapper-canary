@@ -22,8 +22,8 @@ function h(e) {
             messageId: n.id
         })(g),
         b = (0, a.j)('HDStreamingUpgradedMessage'),
-        x = () => (0, o.k)(h, 'HDStreamingUpgradedMessage'),
-        y = b ? x : s.Z.getArticleURL(p.BhN.HD_STREAMING_POTION);
+        y = () => (0, o.k)(h, 'HDStreamingUpgradedMessage'),
+        x = b ? y : s.Z.getArticleURL(p.BhN.HD_STREAMING_POTION);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', {
@@ -40,7 +40,7 @@ function h(e) {
             }),
             (0, r.jsxs)(i.P3F, {
                 onClick: () => {
-                    b ? x() : window.open(s.Z.getArticleURL(p.BhN.HD_STREAMING_POTION), '_blank');
+                    b ? y() : window.open(s.Z.getArticleURL(p.BhN.HD_STREAMING_POTION), '_blank');
                 },
                 className: f.embed,
                 children: [
@@ -57,7 +57,7 @@ function h(e) {
                             (0, r.jsx)(i.Text, {
                                 color: 'text-primary',
                                 variant: 'text-xs/normal',
-                                children: m.intl.format(m.t['bmGF+f'], { helpCenterLink: y })
+                                children: m.intl.format(m.t['bmGF+f'], { helpCenterLink: x })
                             })
                         ]
                     })

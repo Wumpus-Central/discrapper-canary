@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(100527),
     l = n(906732),
     c = n(699516),
@@ -48,9 +48,9 @@ function I(e) {
     return e;
 }
 function S(e) {
-    let { user: t, guildId: n, setPopoutRef: v, channelId: S, messageId: T, roleId: A, openedAt: N, onHide: C, newAnalyticsLocations: R = [], disableAutoFocus: P = !1 } = e,
-        w = (0, a.e7)([c.Z], () => c.Z.isBlocked(t.id)),
-        { analyticsLocations: D } = (0, l.ZP)([...R, w ? s.Z.BLOCKED_PROFILE_POPOUT : s.Z.IGNORED_PROFILE_POPOUT]),
+    let { user: t, guildId: n, setPopoutRef: v, channelId: S, messageId: T, roleId: A, openedAt: N, onHide: C, newAnalyticsLocations: P = [], disableAutoFocus: R = !1 } = e,
+        w = (0, o.e7)([c.Z], () => c.Z.isBlocked(t.id)),
+        { analyticsLocations: D } = (0, l.ZP)([...P, w ? s.Z.BLOCKED_PROFILE_POPOUT : s.Z.IGNORED_PROFILE_POPOUT]),
         L = (0, d.ZB)({
             layout: 'POPOUT',
             userId: t.id,
@@ -60,26 +60,26 @@ function S(e) {
             roleId: A
         }),
         x = i.useRef(null),
-        M = (0, _.ZP)(t.id, n);
+        k = (0, _.ZP)(t.id, n);
     i.useEffect(() => {
         null == v || v(null == x ? void 0 : x.current);
     }, [x, v]);
-    let k = w ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
-        j = P ? 'div' : o.VqE;
+    let M = w ? 'VIEW_BLOCKED_PROFILE' : 'VIEW_IGNORED_PROFILE',
+        j = R ? 'div' : a.VqE;
     return (0, r.jsx)(l.Gt, {
         value: D,
         children: (0, r.jsx)(d.Mt, {
             value: L,
             openedAt: N,
-            fetchStartedAt: null == M ? void 0 : M.fetchStartedAt,
-            fetchEndedAt: null == M ? void 0 : M.fetchEndedAt,
-            isLoaded: null == M ? void 0 : M.isLoaded,
+            fetchStartedAt: null == k ? void 0 : k.fetchStartedAt,
+            fetchEndedAt: null == k ? void 0 : k.fetchEndedAt,
+            isLoaded: null == k ? void 0 : k.isLoaded,
             children: (0, r.jsx)(j, {
                 ref: x,
                 'aria-label': t.username,
                 children: (0, r.jsx)(h.Z, {
                     user: t,
-                    displayProfile: M,
+                    displayProfile: k,
                     themeType: E.lY.POPOUT,
                     children: (0, r.jsxs)('div', {
                         className: y.container,
@@ -100,17 +100,17 @@ function S(e) {
                                                 user: t,
                                                 guildId: n
                                             }),
-                                            (0, r.jsx)(o.X6q, {
+                                            (0, r.jsx)(a.X6q, {
                                                 variant: 'heading-lg/bold',
                                                 children: b.intl.string(b.t.b33pLC)
                                             }),
-                                            (0, r.jsx)(o.Text, {
+                                            (0, r.jsx)(a.Text, {
                                                 variant: 'text-sm/medium',
                                                 children: b.intl.format(w ? b.t['8F+WNz'] : b.t['/cZp5u'], { username: u.ZP.getName(n, S, t) })
                                             })
                                         ]
                                     }),
-                                    (0, r.jsxs)(o.Kqy, {
+                                    (0, r.jsxs)(a.Kqy, {
                                         align: 'center',
                                         children: [
                                             (0, r.jsx)(g.Z, {
@@ -120,7 +120,7 @@ function S(e) {
                                                         (0, f.pQ)(
                                                             I(
                                                                 {
-                                                                    action: k,
+                                                                    action: M,
                                                                     analyticsLocations: D
                                                                 },
                                                                 L

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v }), n(804061), n(704826), n(35282);
 var r = n(255367),
     i = n(73800),
-    a = n(317261),
-    o = n(70956),
+    o = n(317261),
+    a = n(70956),
     s = n(5192),
     l = n(379357),
     c = n(561308),
@@ -16,16 +16,16 @@ var r = n(255367),
     g = n(797342),
     E = n(388032);
 function b(e) {
-    if (e === a._.WEEK) return E.t['7TXfc3'];
+    if (e === o._.WEEK) return E.t['7TXfc3'];
 }
 let y = (e, t, n, r) => {
         let i = b(r),
-            a = s.ZP.getName(t.guild_id, t.id, n),
-            o = e.extra.game_name;
+            o = s.ZP.getName(t.guild_id, t.id, n),
+            a = e.extra.game_name;
         return E.intl
             .formatToMarkdownString(i, {
-                gameName: o,
-                userName: a
+                gameName: a,
+                userName: o
             })
             .replaceAll('*', '');
     },
@@ -35,28 +35,28 @@ let y = (e, t, n, r) => {
             activity: e.extra.game_name
         }),
     v = (e) => {
-        let { channel: t, entry: n, disableGameProfileLinks: a, onReaction: s, onVoiceChannelPreview: b } = e,
+        let { channel: t, entry: n, disableGameProfileLinks: o, onReaction: s, onVoiceChannelPreview: b } = e,
             { largeImage: v } = (0, l.rv)({ entry: n }),
             { user: I, details: S, appName: T } = (0, g.n)(n),
             { primaryColor: A, secondaryColor: N } = (0, d.Z)(null == v ? void 0 : v.src),
             C = (0, c.yA)(n),
-            R = (0, c.Nq)(n),
-            P = i.useCallback(
+            P = (0, c.Nq)(n),
+            R = i.useCallback(
                 (e) => {
-                    if (null != t && null != I && null != C && null != R && (0, _.qy)(R))
+                    if (null != t && null != I && null != C && null != P && (0, _.qy)(P))
                         return (0, u.SO)({
                             entry: n,
                             applicationImageSrc: null == v ? void 0 : v.src,
                             avatarSrcs: [I.getAvatarURL(null == t ? void 0 : t.guild_id, 128)],
-                            description: y(n, t, I, R),
-                            timestamp: E.intl.formatToPlainString(E.t.YL7UEx, { hours: Math.round(C / o.Z.Seconds.HOUR) }),
+                            description: y(n, t, I, P),
+                            timestamp: E.intl.formatToPlainString(E.t.YL7UEx, { hours: Math.round(C / a.Z.Seconds.HOUR) }),
                             colors: [A, N],
                             channelId: e
                         });
                 },
-                [null == v ? void 0 : v.src, t, C, n, A, R, N, I]
+                [null == v ? void 0 : v.src, t, C, n, A, P, N, I]
             );
-        if (null == I || null == C || null == R || !(0, _.qy)(R)) return null;
+        if (null == I || null == C || null == P || !(0, _.qy)(P)) return null;
         let w = null != n.extra.platform ? f.v[n.extra.platform] : null;
         return (0, r.jsxs)(h.yR, {
             children: [
@@ -77,7 +77,7 @@ let y = (e, t, n, r) => {
                         location: p.Gt.POPOUT,
                         children: _.Hs.map((e, t) => (0, r.jsx)(e, { entry: n }, t))
                     }),
-                    disableGameProfileLinks: a
+                    disableGameProfileLinks: o
                 }),
                 (0, r.jsx)(h.St, {
                     children: (0, r.jsx)(h.WT, {
@@ -85,7 +85,7 @@ let y = (e, t, n, r) => {
                         onVoiceChannelPreview: b,
                         user: I,
                         channel: t,
-                        generateReactionImage: P,
+                        generateReactionImage: R,
                         reactionImageAltText: O(n, I),
                         entry: n
                     })

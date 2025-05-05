@@ -13,10 +13,10 @@ t.exports = function (t, e) {
         I,
         R = t.target,
         d = t.global,
-        A = t.stat;
-    if ((a = d ? r : A ? r[R] || i(R, {}) : r[R] && r[R].prototype))
+        f = t.stat;
+    if ((a = d ? r : f ? r[R] || i(R, {}) : r[R] && r[R].prototype))
         for (E in e) {
-            if (((u = e[E]), (l = t.dontCallGetSet ? (I = n(a, E)) && I.value : a[E]), !s(d ? E : R + (A ? '.' : '#') + E, t.forced) && void 0 !== l)) {
+            if (((u = e[E]), (l = t.dontCallGetSet ? (I = n(a, E)) && I.value : a[E]), !s(d ? E : R + (f ? '.' : '#') + E, t.forced) && void 0 !== l)) {
                 if (typeof u == typeof l) continue;
                 c(u, l);
             }

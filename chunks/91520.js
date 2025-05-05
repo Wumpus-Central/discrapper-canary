@@ -1,7 +1,7 @@
 var r,
     i,
-    a,
     o,
+    a,
     s,
     l = n(127849),
     c = n(242606),
@@ -31,8 +31,8 @@ if (!O) {
         };
     _ || m || h || !g || !E
         ? !p && y && y.resolve
-            ? (((o = y.resolve(void 0)).constructor = y),
-              (s = u(o.then, o)),
+            ? (((a = y.resolve(void 0)).constructor = y),
+              (s = u(a.then, a)),
               (r = function () {
                   s(I);
               }))
@@ -45,10 +45,10 @@ if (!O) {
                     d(I);
                 }))
         : ((i = !0),
-          (a = E.createTextNode('')),
-          new g(I).observe(a, { characterData: !0 }),
+          (o = E.createTextNode('')),
+          new g(I).observe(o, { characterData: !0 }),
           (r = function () {
-              a.data = i = !i;
+              o.data = i = !i;
           })),
         (O = function (e) {
             v.head || r(), v.add(e);

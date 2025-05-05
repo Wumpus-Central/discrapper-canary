@@ -1,7 +1,7 @@
 var r = n(46015),
     i = 2147483647,
-    a = 36,
-    o = 1,
+    o = 36,
+    a = 1,
     s = 26,
     l = 38,
     c = 700,
@@ -26,8 +26,8 @@ var r = n(46015),
         for (var t = [], n = 0, r = e.length; n < r; ) {
             var i = O(e, n++);
             if (i >= 55296 && i <= 56319 && n < r) {
-                var a = O(e, n++);
-                (64512 & a) == 56320 ? I(t, ((1023 & i) << 10) + (1023 & a) + 65536) : (I(t, i), n--);
+                var o = O(e, n++);
+                (64512 & o) == 56320 ? I(t, ((1023 & i) << 10) + (1023 & o) + 65536) : (I(t, i), n--);
             } else I(t, i);
         }
         return t;
@@ -35,12 +35,12 @@ var r = n(46015),
     C = function (e) {
         return e + 22 + 75 * (e < 26);
     },
-    R = function (e, t, n) {
+    P = function (e, t, n) {
         var r = 0;
-        for (e = n ? b(e / c) : e >> 1, e += b(e / t); e > (m * s) >> 1; ) (e = b(e / m)), (r += a);
+        for (e = n ? b(e / c) : e >> 1, e += b(e / t); e > (m * s) >> 1; ) (e = b(e / m)), (r += o);
         return b(r + ((m + 1) * e) / (e + l));
     },
-    P = function (e) {
+    R = function (e) {
         var t,
             n,
             r = [],
@@ -59,14 +59,14 @@ var r = n(46015),
             for (_ += (O - c) * S, c = O, t = 0; t < e.length; t++) {
                 if ((n = e[t]) < c && ++_ > i) throw new g(h);
                 if (n === c) {
-                    for (var T = _, A = a; ; ) {
-                        var P = A <= p ? o : A >= p + s ? s : A - p;
-                        if (T < P) break;
-                        var w = T - P,
-                            D = a - P;
-                        I(r, y(C(P + (w % D)))), (T = b(w / D)), (A += a);
+                    for (var T = _, A = o; ; ) {
+                        var R = A <= p ? a : A >= p + s ? s : A - p;
+                        if (T < R) break;
+                        var w = T - R,
+                            D = o - R;
+                        I(r, y(C(R + (w % D)))), (T = b(w / D)), (A += o);
                     }
-                    I(r, y(C(T))), (p = R(_, S, E === m)), (_ = 0), E++;
+                    I(r, y(C(T))), (p = P(_, S, E === m)), (_ = 0), E++;
                 }
             }
             _++, c++;
@@ -78,6 +78,6 @@ e.exports = function (e) {
         n,
         r = [],
         i = T(S(A(e), p, '.'), '.');
-    for (t = 0; t < i.length; t++) I(r, E(_, (n = i[t])) ? 'xn--' + P(n) : n);
+    for (t = 0; t < i.length; t++) I(r, E(_, (n = i[t])) ? 'xn--' + R(n) : n);
     return v(r, '.');
 };

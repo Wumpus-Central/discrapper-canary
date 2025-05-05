@@ -1,8 +1,8 @@
-n.d(t, { Z: () => F }), n(388685);
+n.d(t, { Z: () => V }), n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(481752),
-    o = n(91192),
+    o = n(481752),
+    a = n(91192),
     s = n(442837),
     l = n(780384),
     c = n(481060),
@@ -25,13 +25,13 @@ var r = n(255367),
     A = n(602667),
     N = n(644646),
     C = n(667105),
-    R = n(341907),
-    P = n(46140),
+    P = n(341907),
+    R = n(46140),
     w = n(981631),
     D = n(231338),
     L = n(388032),
     x = n(777444);
-function M(e, t, n) {
+function k(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,7 +44,7 @@ function M(e, t, n) {
         e
     );
 }
-function k(e) {
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -55,7 +55,7 @@ function k(e) {
                 })
             )),
             r.forEach(function (t) {
-                M(e, t, n[t]);
+                k(e, t, n[t]);
             });
     }
     return e;
@@ -66,12 +66,12 @@ let j = '8px',
 function B(e, t) {
     return null != e && null != t && (0, m.p9)(t, O.Z, b.Z, y.Z, h.Z)[0];
 }
-function V(e) {
+function F(e) {
     var t, h, m, b, y;
-    let { quest: O, memberListItemRef: A, applicationStream: M, position: V, closePopout: F, updatePosition: Z, impressionRef: H, name: Y } = e,
+    let { quest: O, memberListItemRef: A, applicationStream: k, position: F, closePopout: V, updatePosition: Z, impressionRef: H, name: Y } = e,
         W = (0, s.e7)([E.Z], () => {
             var e;
-            return null != (e = E.Z.getChannel(null == M ? void 0 : M.channelId)) ? e : null;
+            return null != (e = E.Z.getChannel(null == k ? void 0 : k.channelId)) ? e : null;
         }),
         K = (0, C.hf)({
             quest: O,
@@ -86,19 +86,19 @@ function V(e) {
         ee = (0, s.e7)([p.Z], () => p.Z.useReducedMotion),
         { ref: et, height: en } = (0, f.ZP)(),
         [er, ei] = i.useState(ee),
-        ea = (0, _.Aq)(),
-        eo = (0, o.eg)();
+        eo = (0, _.Aq)(),
+        ea = (0, a.eg)();
     i.useEffect(() => {
-        let e = eo.current;
+        let e = ea.current;
         return (
-            null == e || e.addEventListener('scroll', F),
+            null == e || e.addEventListener('scroll', V),
             () => {
-                null == e || e.removeEventListener('scroll', F);
+                null == e || e.removeEventListener('scroll', V);
             }
         );
-    }, [F, eo]),
+    }, [V, ea]),
         i.useEffect(() => {
-            let e = eo.current,
+            let e = ea.current,
                 t = A.current;
             if (null == e || null == t) return;
             let n = new MutationObserver(() => Z());
@@ -111,7 +111,7 @@ function V(e) {
                     n.disconnect();
                 }
             );
-        }, [A, eo, Z]);
+        }, [A, ea, Z]);
     let es = (0, c.q_F)({
             from: { height: 0 },
             height: null != en ? en : 0,
@@ -132,10 +132,10 @@ function V(e) {
             }
         }),
         ec = () => {
-            ea.dispatch(w.CkL.POPOUT_CLOSE);
+            eo.dispatch(w.CkL.POPOUT_CLOSE);
         },
-        eu = 'top' === V ? ''.concat(j, ' ').concat(j, ' 0 0') : '0 0 '.concat(j, ' ').concat(j);
-    if (null == O || z || (q && !B(M, W))) return null;
+        eu = 'top' === F ? ''.concat(j, ' ').concat(j, ' 0 0') : '0 0 '.concat(j, ' ').concat(j);
+    if (null == O || z || (q && !B(k, W))) return null;
     let ed = () => {
             (0, v._3)({
                 questId: O.id,
@@ -143,7 +143,7 @@ function V(e) {
                 questContentCTA: v.jZ.OPEN_DISCLOSURE,
                 trackGuildAndChannelMetadata: !0
             }),
-                (0, R.openDisclosureModal)(O, {
+                (0, P.openDisclosureModal)(O, {
                     content: S.jn.MEMBERS_LIST,
                     ctaContent: v.jZ.OPEN_DISCLOSURE
                 });
@@ -155,7 +155,7 @@ function V(e) {
                 questContentCTA: v.jZ.LEARN_MORE,
                 trackGuildAndChannelMetadata: !0
             }),
-                (0, R.navigateToQuestHome)({
+                (0, P.navigateToQuestHome)({
                     fromContent: S.jn.MEMBERS_LIST,
                     questId: O.id
                 });
@@ -164,7 +164,7 @@ function V(e) {
             e.stopPropagation(), ed();
         },
         ep = () => {
-            B(M, W) && null != W
+            B(k, W) && null != W
                 ? ((0, v._3)({
                       questId: O.id,
                       questContent: S.jn.MEMBERS_LIST,
@@ -176,7 +176,7 @@ function V(e) {
                       return (t) =>
                           (0, r.jsx)(
                               e,
-                              k(
+                              M(
                                   {
                                       username: null != Y ? Y : '',
                                       onConfirm: () => (
@@ -187,7 +187,7 @@ function V(e) {
                                               trackGuildAndChannelMetadata: !0
                                           }),
                                           u.default.selectVoiceChannel(W.id),
-                                          (0, d.iV)(M)
+                                          (0, d.iV)(k)
                                       )
                                   },
                                   t
@@ -211,7 +211,7 @@ function V(e) {
                         handleClickCta: ef,
                         tileAssetType: 'reward'
                     }
-                  : B(M, W)
+                  : B(k, W)
                     ? {
                           headerText: L.intl.string(L.t.Bz6SkJ),
                           ctaText: L.intl.string(L.t.BXFP39),
@@ -224,7 +224,7 @@ function V(e) {
                           handleClickCta: ef,
                           tileAssetType: 'game'
                       };
-    return (0, r.jsx)(a.animated.div, {
+    return (0, r.jsx)(o.animated.div, {
         ref: (e) => {
             H.current = e;
         },
@@ -284,7 +284,7 @@ function V(e) {
                                     el(
                                         (e, t) =>
                                             t &&
-                                            (0, r.jsx)(a.animated.div, {
+                                            (0, r.jsx)(o.animated.div, {
                                                 style: e,
                                                 className: x.imgUnderlay
                                             })
@@ -304,7 +304,7 @@ function V(e) {
                                             quest: O,
                                             questContent: S.jn.MEMBERS_LIST,
                                             learnMoreStyle: 'icon',
-                                            location: P.dr.MEMBERS_LIST,
+                                            location: R.dr.MEMBERS_LIST,
                                             onClick: ec
                                         })
                                 ]
@@ -324,13 +324,13 @@ function V(e) {
         })
     });
 }
-function F(e) {
+function V(e) {
     return null == e.quest || e.isQuestEnrollmentBlocked
         ? null
         : (0, r.jsx)(A.A, {
               questOrQuests: e.quest,
               questContent: S.jn.MEMBERS_LIST,
               trackGuildAndChannelMetadata: !0,
-              children: (t) => (0, r.jsx)(V, k({ impressionRef: t }, e))
+              children: (t) => (0, r.jsx)(F, M({ impressionRef: t }, e))
           });
 }

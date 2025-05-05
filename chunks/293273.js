@@ -1,8 +1,8 @@
 let r;
 n.d(t, { Z: () => j }), n(539854), n(388685), n(997841);
 var i,
-    a = n(348327),
-    o = n.n(a),
+    o = n(348327),
+    a = n.n(o),
     s = n(392711),
     l = n.n(s),
     c = n(442837),
@@ -73,7 +73,7 @@ function A(e, t) {
 }
 let N = [],
     C = {};
-function R() {
+function P() {
     let e = [],
         t = g.Ok.getSetting();
     null != t && ('0' === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) && e.push((0, _.I)(t));
@@ -86,57 +86,57 @@ function R() {
         let [, n] = t;
         null != n.application_id && (i.add(n.name), e.push(n));
     });
-    let a = p.ZP.getVisibleGame(),
-        s = null != a && null != a.name && i.has(a.name),
-        c = null != a && a.isLauncher,
+    let o = p.ZP.getVisibleGame(),
+        s = null != o && null != o.name && i.has(o.name),
+        c = null != o && o.isLauncher,
         u = null != b.Z.getCurrentUserActiveStream(),
         d = s || (c && !u);
-    if (null != a && null != a.name && !d) {
+    if (null != o && null != o.name && !d) {
         var f, E;
         e.push({
             type: v.IIU.PLAYING,
-            name: a.name,
-            application_id: null != (E = a.id) ? E : null == (f = O.Z.getGameByName(a.name)) ? void 0 : f.id,
-            timestamps: { start: a.start }
+            name: o.name,
+            application_id: null != (E = o.id) ? E : null == (f = O.Z.getGameByName(o.name)) ? void 0 : f.id,
+            timestamps: { start: o.start }
         });
     }
     let I = m.Z.getActivity();
-    null != I && e.push(S({ type: v.IIU.LISTENING }, I)), o()(N, e) || (N = e);
+    null != I && e.push(S({ type: v.IIU.LISTENING }, I)), a()(N, e) || (N = e);
 }
-function P() {
-    (C = {}), R();
+function R() {
+    (C = {}), P();
 }
 function w(e) {
     let { socketId: t, pid: n, activity: r } = e;
-    if (o()(C[t], [n, r])) return !1;
-    null != r ? (C[t] = [n, r]) : delete C[t], R();
+    if (a()(C[t], [n, r])) return !1;
+    null != r ? (C[t] = [n, r]) : delete C[t], P();
 }
 function D(e) {
     let { socketId: t } = e;
-    delete C[t], R();
+    delete C[t], P();
 }
 function L(e) {
     let { localActivities: t } = e;
-    (C = S({}, t)), R();
+    (C = S({}, t)), P();
 }
 function x(e) {
     let t = {},
         n = !1;
-    for (let [a, [o, s]] of Object.entries(C)) {
+    for (let [o, [a, s]] of Object.entries(C)) {
         var r, i;
         let l = null != (i = s.flags) ? i : 0,
             c = (0, f.Ix)(l);
-        'string' == typeof (null == (r = s.metadata) ? void 0 : r.embedded_activity_instance_id) && (c = (0, f.Pu)(c, e, s.metadata.embedded_activity_instance_id)), c !== l ? ((t[a] = [o, A(S({}, s), { flags: c })]), (n = !0)) : (t[a] = [o, s]);
+        'string' == typeof (null == (r = s.metadata) ? void 0 : r.embedded_activity_instance_id) && (c = (0, f.Pu)(c, e, s.metadata.embedded_activity_instance_id)), c !== l ? ((t[o] = [a, A(S({}, s), { flags: c })]), (n = !0)) : (t[o] = [a, s]);
     }
-    n && ((C = t), R());
+    n && ((C = t), P());
 }
-function M(e) {
+function k(e) {
     let { state: t, channelId: n } = e;
     t === v.hes.RTC_CONNECTED ? n !== r && ((r = n), x(n)) : t === v.hes.DISCONNECTED && n === r && ((r = void 0), x(void 0));
 }
-class k extends (i = c.ZP.Store) {
+class M extends (i = c.ZP.Store) {
     initialize() {
-        this.waitFor(p.ZP, d.ZP, y.Z, b.Z, m.Z, E.Z, O.Z), this.syncWith([h.Z], () => R());
+        this.waitFor(p.ZP, d.ZP, y.Z, b.Z, m.Z, E.Z, O.Z), this.syncWith([h.Z], () => P());
     }
     getActivities() {
         return N;
@@ -161,21 +161,21 @@ class k extends (i = c.ZP.Store) {
         return null;
     }
 }
-I(k, 'displayName', 'LocalActivityStore');
-let j = new k(u.Z, {
+I(M, 'displayName', 'LocalActivityStore');
+let j = new M(u.Z, {
     OVERLAY_INITIALIZE: L,
-    START_SESSION: P,
+    START_SESSION: R,
     LOCAL_ACTIVITY_UPDATE: w,
     RPC_APP_DISCONNECTED: D,
-    RUNNING_GAMES_CHANGE: R,
-    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: R,
-    SPOTIFY_PLAYER_STATE: R,
-    SPOTIFY_PLAYER_PLAY: R,
-    STREAMING_UPDATE: R,
-    USER_CONNECTIONS_UPDATE: R,
-    STREAM_START: R,
-    STREAM_STOP: R,
-    USER_SETTINGS_PROTO_UPDATE: R,
-    EMBEDDED_ACTIVITY_CLOSE: R,
-    RTC_CONNECTION_STATE: M
+    RUNNING_GAMES_CHANGE: P,
+    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: P,
+    SPOTIFY_PLAYER_STATE: P,
+    SPOTIFY_PLAYER_PLAY: P,
+    STREAMING_UPDATE: P,
+    USER_CONNECTIONS_UPDATE: P,
+    STREAM_START: P,
+    STREAM_STOP: P,
+    USER_SETTINGS_PROTO_UPDATE: P,
+    EMBEDDED_ACTIVITY_CLOSE: P,
+    RTC_CONNECTION_STATE: k
 });

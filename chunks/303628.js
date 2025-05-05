@@ -1,8 +1,8 @@
-n.d(t, { Z: () => M }), n(388685), n(539854);
+n.d(t, { Z: () => k }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(91192),
     l = n(536895),
     c = n(442837),
@@ -63,7 +63,7 @@ function C(e, t) {
     }
     return n;
 }
-function R(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,14 +74,14 @@ function R(e, t) {
         e
     );
 }
-function P(e, t) {
+function R(e, t) {
     if (null == e) return {};
     var n,
         r,
         i = w(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -90,14 +90,14 @@ function w(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let D = [];
 function L(e) {
     let { channelId: t, type: n } = e,
-        a = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled),
+        o = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled),
         A = (0, p.Z)('attachments', l.hy.HORIZONTAL),
         C = (0, c.e7)([b.Z], () => b.Z.getUploads(t, n.drafts.type)),
         {
@@ -119,7 +119,7 @@ function L(e) {
                 commandOptionStates: n
             };
         }),
-        M = i.useMemo(() => {
+        k = i.useMemo(() => {
             var e;
             return null !=
                 (e =
@@ -132,7 +132,7 @@ function L(e) {
                 ? e
                 : [];
         }, [L, x]),
-        [k, j] = i.useState([]);
+        [M, j] = i.useState([]);
     i.useEffect(() => {
         let e = () => {
             d.Z.clearAll(t, n.drafts.type);
@@ -148,8 +148,8 @@ function L(e) {
     });
     let G = {
             isApplicationCommand: w,
-            previousUploadOptions: k,
-            uploadOptions: M
+            previousUploadOptions: M,
+            uploadOptions: k
         },
         B = i.useRef(G);
     i.useEffect(() => {
@@ -167,9 +167,9 @@ function L(e) {
                     }),
                     j(i);
             }
-        }, [t, M.length, n]);
-    let V = (0, m.Q3)('ChannelAttachmentArea');
-    return (!w && 0 === C.length) || (w && 0 === M.length)
+        }, [t, k.length, n]);
+    let F = (0, m.Q3)('ChannelAttachmentArea');
+    return (!w && 0 === C.length) || (w && 0 === k.length)
         ? null
         : (0, r.jsxs)(i.Fragment, {
               children: [
@@ -178,18 +178,18 @@ function L(e) {
                       children: (0, r.jsx)(s.SJ, {
                           children: (e) => {
                               var { ref: i } = e,
-                                  s = P(e, ['ref']);
+                                  s = R(e, ['ref']);
                               return (0, r.jsx)(
                                   'ul',
-                                  R(N({ ref: i }, s), {
-                                      className: o()(S.channelAttachmentArea, T.scrollbarGhost),
+                                  P(N({ ref: i }, s), {
+                                      className: a()(S.channelAttachmentArea, T.scrollbarGhost),
                                       children: w
-                                          ? M.map((e) =>
+                                          ? k.map((e) =>
                                                 (0, r.jsx)(
                                                     O.Z,
                                                     {
                                                         channelId: t,
-                                                        keyboardModeEnabled: a,
+                                                        keyboardModeEnabled: o,
                                                         option: e
                                                     },
                                                     e.name
@@ -202,7 +202,7 @@ function L(e) {
                                                         channelId: t,
                                                         draftType: n.drafts.type,
                                                         upload: e,
-                                                        keyboardModeEnabled: a,
+                                                        keyboardModeEnabled: o,
                                                         clip: e.clip
                                                     },
                                                     e.id
@@ -213,7 +213,7 @@ function L(e) {
                           }
                       })
                   }),
-                  n.drafts.type === E.d.FirstThreadMessage || V ? null : (0, r.jsx)(g.Z, {})
+                  n.drafts.type === E.d.FirstThreadMessage || F ? null : (0, r.jsx)(g.Z, {})
               ]
           });
 }
@@ -226,4 +226,4 @@ function x(e) {
           })
         : null;
 }
-let M = i.memo(x);
+let k = i.memo(x);

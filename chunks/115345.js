@@ -11,8 +11,8 @@ n.d(t, {
     n(415506);
 var r = n(73800),
     i = n(392711),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(433517),
     l = n(570140),
     c = n(668781),
@@ -35,8 +35,8 @@ var r = n(73800),
     A = n(630114),
     N = n(506712),
     C = n(468788),
-    R = n(789662),
-    P = n(981631),
+    P = n(789662),
+    R = n(981631),
     w = n(490897),
     D = n(526761),
     L = n(388032);
@@ -53,7 +53,7 @@ function x(e, t, n) {
         e
     );
 }
-function M(e) {
+function k(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -69,7 +69,7 @@ function M(e) {
     }
     return e;
 }
-function k(e, t) {
+function M(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -86,39 +86,39 @@ function j(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : k(Object(t)).forEach(function (n) {
+            : M(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
 function U(e, t) {
-    let [n, i] = r.useState(R.nf),
-        [a, s] = r.useState({});
+    let [n, i] = r.useState(P.nf),
+        [o, s] = r.useState({});
     (0, _.D)();
-    let l = (0, o.Wu)([g.Z], () => Object.values(g.Z.getGuilds())),
+    let l = (0, a.Wu)([g.Z], () => Object.values(g.Z.getGuilds())),
         c = r.useCallback(() => {
             let r = {};
-            for (let i of l) r[i.id] = V(i, n, e, t, a[i.id]);
+            for (let i of l) r[i.id] = F(i, n, e, t, o[i.id]);
             return r;
-        }, [l, n, e, t, a]),
+        }, [l, n, e, t, o]),
         [u, d] = r.useState(() => c());
     return (
         r.useEffect(() => d(c()), [c]),
         {
             guildPlans: u,
             overrideGuild: r.useCallback((e, t) => {
-                s((n) => j(M({}, n), { [e]: t }));
+                s((n) => j(k({}, n), { [e]: t }));
             }, []),
             setThresholds: i,
-            getDebug: () => F(Object.values(u), t)
+            getDebug: () => V(Object.values(u), t)
         }
     );
 }
 function G(e, t) {
     return Object.values(g.Z.getGuilds()).some((n) => {
-        let [r] = p.Z.hasConsented(P.pjP.PERSONALIZATION) ? (0, N.q)(n, R.nf, e, t, !1) : (0, N.A)(n, e);
-        return r === R.AR.UseGreyDot;
+        let [r] = p.Z.hasConsented(R.pjP.PERSONALIZATION) ? (0, N.q)(n, P.nf, e, t, !1) : (0, N.A)(n, e);
+        return r === P.AR.UseGreyDot;
     });
 }
 function B() {
@@ -130,28 +130,28 @@ function B() {
         (e = (0, O.mB)(e, D.vc.UNREADS_ALL_MESSAGES, !0)), (e = (0, O.mB)(e, D.vc.UNREADS_ONLY_MENTIONS, !1)), (t[i.id] = { flags: e });
     }
     W(t),
-        y.default.track(P.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
+        y.default.track(R.rMx.NOTIFICATION_MIGRATION_COMPLETED, {
             auto_migrated: !0,
             num_unread_guids_after: e.filter((e) => m.default.hasUnread(e.id)).length
         });
 }
-function V(e, t, n, r, i) {
-    var a;
-    let [o, s, l] = p.Z.hasConsented(P.pjP.PERSONALIZATION) ? (0, N.q)(e, t, n, r, !0) : (0, N.A)(e, n),
-        c = null != (a = n.filter((t) => t.guild_id === e.id)[0]) ? a : {},
-        u = (0, A.Z)(e, null != i ? i : o, c, r, t);
+function F(e, t, n, r, i) {
+    var o;
+    let [a, s, l] = p.Z.hasConsented(R.pjP.PERSONALIZATION) ? (0, N.q)(e, t, n, r, !0) : (0, N.A)(e, n),
+        c = null != (o = n.filter((t) => t.guild_id === e.id)[0]) ? o : {},
+        u = (0, A.Z)(e, null != i ? i : a, c, r, t);
     return {
         guildId: e.id,
-        mode: o,
+        mode: a,
         debugReason: l,
         actions: u,
         overrideMode: i,
-        messagePain: c.messages === R.XR.High,
+        messagePain: c.messages === P.XR.High,
         visitsALot: s,
         muted: b.ZP.isMuted(e.id) && !b.ZP.isTemporarilyMuted(e.id)
     };
 }
-function F(e, t) {
+function V(e, t) {
     let n = t.reduce((e, t) => {
             var n;
             return e + Number(null != (n = t.num_year_opens) ? n : 0);
@@ -161,16 +161,16 @@ function F(e, t) {
             return e + Number(null != (n = t.num_month_opens) ? n : 0);
         }, 0),
         i = E.ZP.getFlattenedGuildIds(),
-        o = a().sortBy(Object.values(e), (e) => {
+        a = o().sortBy(Object.values(e), (e) => {
             let t = i.indexOf(e.guildId);
             return -1 === t ? i.length : t;
         }),
         s = [
-            ['Use Grey Dot', new Set([R.AR.UseGreyDot])],
-            ['Keep As Is', new Set([R.AR.KeepAsIs])]
+            ['Use Grey Dot', new Set([P.AR.UseGreyDot])],
+            ['Keep As Is', new Set([P.AR.KeepAsIs])]
         ].map((e) => {
             let [t, n] = e,
-                r = o
+                r = a
                     .filter((e) => {
                         var t;
                         return n.has(null != (t = e.overrideMode) ? t : e.mode);
@@ -191,13 +191,13 @@ function F(e, t) {
 }
 function Z(e) {
     let [t, n] = r.useState(!1),
-        [i, a] = r.useState(!1),
-        o = r.useCallback(
+        [i, o] = r.useState(!1),
+        a = r.useCallback(
             async (t) => {
                 if (i) throw Error('Already submitted notifications migration');
                 n(!0);
                 try {
-                    await H(t, e), a(!0);
+                    await H(t, e), o(!0);
                 } finally {
                     n(!1);
                 }
@@ -207,7 +207,7 @@ function Z(e) {
     return {
         submitting: t,
         submitted: i,
-        saveSettings: o
+        saveSettings: a
     };
 }
 async function H(e, t) {
@@ -222,17 +222,17 @@ async function H(e, t) {
         for (let n of Object.values(e)) {
             var r, i;
             let e = null != (r = b.ZP.getAllSettings().userGuildSettings[n.guildId]) ? r : {},
-                a = {};
-            for (let t of n.actions) null == (i = t.apply) || i.call(t, a, e);
-            t[n.guildId] = a;
+                o = {};
+            for (let t of n.actions) null == (i = t.apply) || i.call(t, o, e);
+            t[n.guildId] = o;
         }
         await W(t);
-        let a = Object.values(e)
+        let o = Object.values(e)
             .filter((e) => e.actions.some((e) => e.needsMarkedAsRead))
             .map((e) => e.guildId);
-        if (a.length > 0) {
+        if (o.length > 0) {
             let e = setTimeout(n, 5000);
-            (0, d.Z)(a, void 0, () => {
+            (0, d.Z)(o, void 0, () => {
                 l.Z.dispatch({ type: 'RECOMPUTE_READ_STATES' }), clearTimeout(e), n();
             });
         } else n();
@@ -249,7 +249,7 @@ function Y(e) {
     let t = Object.values(e)
             .filter((e) => {
                 var t;
-                return (null != (t = e.overrideMode) ? t : e.mode) === R.AR.UseGreyDot;
+                return (null != (t = e.overrideMode) ? t : e.mode) === P.AR.UseGreyDot;
             })
             .map((e) => {
                 var t;
@@ -264,11 +264,11 @@ function Y(e) {
         };
     return () => {
         y.default.track(
-            P.rMx.NOTIFICATION_MIGRATION_COMPLETED,
-            j(M({}, n), {
+            R.rMx.NOTIFICATION_MIGRATION_COMPLETED,
+            j(k({}, n), {
                 auto_migrated: !0,
                 pre_selected_server_ids: Object.values(e)
-                    .filter((e) => e.mode === R.AR.UseGreyDot)
+                    .filter((e) => e.mode === P.AR.UseGreyDot)
                     .map((e) => e.guildId),
                 final_selected_server_ids: t.map((e) => e.plan.guildId),
                 num_unread_guids_after: S.default.keys(e).filter((e) => m.default.hasUnread(e)).length,
@@ -319,9 +319,9 @@ function q() {
     });
 }
 async function Q() {
-    s.K.set('turnedOffNewNotifications', !0), y.default.track(P.rMx.NOTIFICATION_MIGRATION_OPTOUT, { num_guilds_with_new_setting: Object.values(g.Z.getGuilds()).filter((e) => b.ZP.resolveGuildUnreadSetting(e) === w.i.ONLY_MENTIONS).length });
+    s.K.set('turnedOffNewNotifications', !0), y.default.track(R.rMx.NOTIFICATION_MIGRATION_OPTOUT, { num_guilds_with_new_setting: Object.values(g.Z.getGuilds()).filter((e) => b.ZP.resolveGuildUnreadSetting(e) === w.i.ONLY_MENTIONS).length });
     let e = await (0, T.Tn)(),
-        t = a().sortBy(e, (e) => new Date(e.recorded_at).getTime());
+        t = o().sortBy(e, (e) => new Date(e.recorded_at).getTime());
     if (t.length > 0) {
         let e = t[t.length - 1];
         await new Promise((t) =>
@@ -340,17 +340,17 @@ async function Q() {
 function X(e) {
     var t, n, r;
     if (null == e) return [];
-    let i = a().keyBy(null != (t = e.voice_joins) ? t : [], 'channel_id'),
-        o = a().keyBy(null != (n = e.message_sends) ? n : [], 'channel_id');
+    let i = o().keyBy(null != (t = e.voice_joins) ? t : [], 'channel_id'),
+        a = o().keyBy(null != (n = e.message_sends) ? n : [], 'channel_id');
     return (null != (r = e.channel_opens) ? r : [])
         .map((e) => {
-            var t, n, r, a, s, l, c, u, d, f, _;
+            var t, n, r, o, s, l, c, u, d, f, _;
             let p = null != (t = i[e.channel_id]) ? t : {},
-                h = null != (n = o[e.channel_id]) ? n : {};
+                h = null != (n = a[e.channel_id]) ? n : {};
             return {
                 channel_id: e.channel_id,
                 num_year_opens: Number(null != (r = e.year_opens) ? r : 0),
-                num_month_opens: Number(null != (a = e.one_month_opens) ? a : 0),
+                num_month_opens: Number(null != (o = e.one_month_opens) ? o : 0),
                 num_three_month_opens: Number(null != (s = e.three_month_opens) ? s : 0),
                 num_six_month_opens: Number(null != (l = e.six_month_opens) ? l : 0),
                 num_messages: Number(null != (c = null == h ? void 0 : h.num_messages) ? c : 0),

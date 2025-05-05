@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(317257),
     c = n(583478),
@@ -50,32 +50,32 @@ let p = () =>
     h = 'balance-widget-pill',
     m = (e, t) => (e === l.b.SELECTED ? d.selected : t ? d.highlighted : d.default),
     g = (0, i.forwardRef)(function (e, t) {
-        let { balance: n, balanceWidgetMode: a = l.b.DEFAULT, showNotificationBadge: f, onClick: g, onMouseDown: E, className: b } = e,
+        let { balance: n, balanceWidgetMode: o = l.b.DEFAULT, showNotificationBadge: f, onClick: g, onMouseDown: E, className: b } = e,
             [y, O] = (0, i.useState)(!1),
-            v = (0, i.useMemo)(() => m(a, y), [a, y]),
+            v = (0, i.useMemo)(() => m(o, y), [o, y]),
             [I, S] = (0, i.useState)(!1),
             [T, A] = (0, i.useState)(!1),
             [N, C] = (0, i.useState)(0.9 * u.D2),
-            R = null === n;
+            P = null === n;
         (0, i.useEffect)(() => {
-            R &&
+            P &&
                 !I &&
                 (S(!0),
                 setTimeout(() => {
                     A(!0);
                 }, 500));
-        }, [R, S, I]),
+        }, [P, S, I]),
             (0, i.useEffect)(() => {
-                T && !R && S(!1);
-            }, [R, T]);
-        let P = R || I,
+                T && !P && S(!1);
+            }, [P, T]);
+        let R = P || I,
             w = I ? null : n,
             [D, L] = (0, i.useState)(null),
             x = (0, i.useRef)(null),
-            M = (0, i.useCallback)(() => {
+            k = (0, i.useCallback)(() => {
                 (x.current = null), L(null);
             }, []),
-            k = (0, i.useCallback)(
+            M = (0, i.useCallback)(
                 (e) => {
                     let t = D === x.current;
                     e > 0 && ('earn' !== D || !t) ? L('earn') : e < 0 && ('spend' !== D || !t) && L('spend');
@@ -88,7 +88,7 @@ let p = () =>
                 onSetAnimationDurationMS: C
             };
         return (0, r.jsx)(s.P3F, {
-            onClick: P ? void 0 : g,
+            onClick: R ? void 0 : g,
             className: d.clickable,
             children: (0, r.jsxs)('span', {
                 onMouseDown: E,
@@ -96,18 +96,18 @@ let p = () =>
                 onMouseLeave: () => O(!1),
                 id: h,
                 ref: t,
-                className: o()(d.container, v, b, { [d.containerLoading]: P }),
+                className: a()(d.container, v, b, { [d.containerLoading]: R }),
                 children: [
                     (0, r.jsx)('div', {
-                        className: o()(d.orbsLottieContainer, P ? d.orbIconloading : void 0),
+                        className: a()(d.orbsLottieContainer, R ? d.orbIconloading : void 0),
                         children: (0, r.jsx)(u.ZP, _({}, j))
                     }),
                     (0, r.jsx)(c.Z, {
                         value: w,
-                        onValueChange: k,
-                        onValueReached: M,
+                        onValueChange: M,
+                        onValueReached: k,
                         targetTotalCounterTime: N,
-                        className: P ? d.counterLoading : void 0
+                        className: R ? d.counterLoading : void 0
                     }),
                     f && (0, r.jsx)(p, {})
                 ]

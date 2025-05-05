@@ -29,7 +29,7 @@ let R = (0, n._I)((t = {}) => {
                             [i, c] = r;
                         e &&
                             (function (t, e, a, r) {
-                                if (f(t, a.status, a.url)) {
+                                if (A(t, a.status, a.url)) {
                                     var n, o;
                                     let t,
                                         i,
@@ -61,12 +61,12 @@ let R = (0, n._I)((t = {}) => {
                         let { method: n, request_headers: s } = a;
                         try {
                             !(function (t, e, a, r) {
-                                if (f(t, e.status, e.responseURL)) {
+                                if (A(t, e.status, e.responseURL)) {
                                     let t, n, o;
                                     if (N()) {
                                         try {
                                             let t = e.getResponseHeader('Set-Cookie') || e.getResponseHeader('set-cookie') || void 0;
-                                            t && (n = A(t));
+                                            t && (n = f(t));
                                         } catch (t) {
                                             I.X && c.kg.log('Could not extract cookies from response headers');
                                         }
@@ -116,19 +116,19 @@ function d(t, e) {
         })(e.headers);
     try {
         let e = r[t] || r[t.toLowerCase()] || void 0;
-        e && (a = A(e));
+        e && (a = f(e));
     } catch (e) {
         I.X && c.kg.log(`Could not extract cookies from header ${t}`);
     }
     return [r, a];
 }
-function A(t) {
+function f(t) {
     return t.split('; ').reduce((t, e) => {
         let [a, r] = e.split('=');
         return a && r && (t[a] = r), t;
     }, {});
 }
-function f(t, e, a) {
+function A(t, e, a) {
     var r, n;
     return (r = t.failedRequestStatusCodes), r.some((t) => ('number' == typeof t ? t === e : e >= t[0] && e <= t[1])) && ((n = t.failedRequestTargets), n.some((t) => ('string' == typeof t ? a.includes(t) : t.test(a)))) && !(0, i.W)(a, (0, o.s3)());
 }

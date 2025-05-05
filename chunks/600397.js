@@ -22,7 +22,7 @@ function f(e) {
         })(),
         b = (0, l.q)(t.applicationId);
     if (null == b) return null;
-    let x = p.intl.format(p.t.m7Lwam, {
+    let y = p.intl.format(p.t.m7Lwam, {
         username: g,
         usernameHook: _,
         gameName: b.name,
@@ -45,6 +45,6 @@ function f(e) {
         iconNode: (0, r.jsx)(i.iWm, { size: 'sm' }),
         compact: h,
         contentClassName: m.content,
-        children: (0, r.jsx)('div', { children: x })
+        children: (0, r.jsx)('div', { children: y })
     });
 }

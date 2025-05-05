@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(100527),
@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(526617),
     g = n(268365);
 function E(e) {
-    let { guildId: t, channel: n, containerWidth: a, onClose: E, onSelect: b, analyticsSource: y, suppressPlaySound: O, shouldValidateSelectedSound: v, shouldShowUpsell: I = !0, gridNotice: S, inExpressionPicker: T, soundButtonOverlay: A, listPadding: N, renderHeader: C, defaultSoundsOnly: R } = e,
-        P = (0, s.e7)([h.Z], () => h.Z.isFetchingSounds() || h.Z.isFetchingDefaultSounds()),
+    let { guildId: t, channel: n, containerWidth: o, onClose: E, onSelect: b, analyticsSource: y, suppressPlaySound: O, shouldValidateSelectedSound: v, shouldShowUpsell: I = !0, gridNotice: S, inExpressionPicker: T, soundButtonOverlay: A, listPadding: N, renderHeader: C, defaultSoundsOnly: P } = e,
+        R = (0, s.e7)([h.Z], () => h.Z.isFetchingSounds() || h.Z.isFetchingDefaultSounds()),
         { analyticsLocations: w } = (0, u.ZP)(c.Z.SOUNDBOARD_POPOUT);
     i.useEffect(() => {
         _.w(), f.DZ.loadIfNecessary(), T || (0, d.ql)('');
@@ -25,12 +25,12 @@ function E(e) {
     return (0, r.jsx)(u.Gt, {
         value: w,
         children: (0, r.jsx)(l.VqE, {
-            className: o()(g.picker, {
-                [g.fetching]: P,
+            className: a()(g.picker, {
+                [g.fetching]: R,
                 [g.inExpressionPicker]: T,
                 [g.refresh]: D
             }),
-            children: P
+            children: R
                 ? (0, r.jsx)(l.$jN, {})
                 : (0, r.jsx)(m.Z, {
                       guildId: t,
@@ -38,14 +38,14 @@ function E(e) {
                       onClose: E,
                       onSelect: b,
                       shouldValidateSelectedSound: v,
-                      containerWidth: a,
+                      containerWidth: o,
                       suppressPlaySound: O,
                       shouldShowUpsell: I,
                       gridNotice: S,
                       soundButtonOverlay: A,
                       listPadding: N,
                       renderHeader: C,
-                      defaultSoundsOnly: R,
+                      defaultSoundsOnly: P,
                       inExpressionPicker: T,
                       refreshEnabled: D,
                       analyticsSource: y

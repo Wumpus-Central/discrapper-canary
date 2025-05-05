@@ -1,7 +1,7 @@
 var r,
     i = n(533937),
-    a = n(401801),
-    o = n(104509),
+    o = n(401801),
+    a = n(104509),
     s = n(333567),
     l = n(284456),
     c = n(429675),
@@ -41,8 +41,8 @@ var r,
     A = n(143988),
     N = n(764459),
     C = n(138676),
-    R = n(365088),
-    P = n(947599),
+    P = n(365088),
+    R = n(947599),
     w = {},
     D = 'undefined' != typeof Uint8Array && A ? A(Uint8Array) : r,
     L = {
@@ -67,9 +67,9 @@ var r,
         '%decodeURIComponent%': decodeURIComponent,
         '%encodeURI%': encodeURI,
         '%encodeURIComponent%': encodeURIComponent,
-        '%Error%': a,
+        '%Error%': o,
         '%eval%': eval,
-        '%EvalError%': o,
+        '%EvalError%': a,
         '%Float16Array%': 'undefined' == typeof Float16Array ? r : Float16Array,
         '%Float32Array%': 'undefined' == typeof Float32Array ? r : Float32Array,
         '%Float64Array%': 'undefined' == typeof Float64Array ? r : Float64Array,
@@ -115,8 +115,8 @@ var r,
         '%WeakMap%': 'undefined' == typeof WeakMap ? r : WeakMap,
         '%WeakRef%': 'undefined' == typeof WeakRef ? r : WeakRef,
         '%WeakSet%': 'undefined' == typeof WeakSet ? r : WeakSet,
-        '%Function.prototype.call%': P,
-        '%Function.prototype.apply%': R,
+        '%Function.prototype.call%': R,
+        '%Function.prototype.apply%': P,
         '%Object.defineProperty%': v,
         '%Object.getPrototypeOf%': N,
         '%Math.abs%': f,
@@ -135,7 +135,7 @@ if (A)
         var x = A(A(e));
         L['%Error.prototype%'] = x;
     }
-var M = function e(t) {
+var k = function e(t) {
         var n;
         if ('%AsyncFunction%' === t) n = y('async function () {}');
         else if ('%GeneratorFunction%' === t) n = y('function* () {}');
@@ -149,7 +149,7 @@ var M = function e(t) {
         }
         return (L[t] = n), n;
     },
-    k = {
+    M = {
         __proto__: null,
         '%ArrayBufferPrototype%': ['ArrayBuffer', 'prototype'],
         '%ArrayPrototype%': ['Array', 'prototype'],
@@ -205,22 +205,22 @@ var M = function e(t) {
     },
     j = n(390976),
     U = n(706165),
-    G = j.call(P, Array.prototype.concat),
-    B = j.call(R, Array.prototype.splice),
-    V = j.call(P, String.prototype.replace),
-    F = j.call(P, String.prototype.slice),
-    Z = j.call(P, RegExp.prototype.exec),
+    G = j.call(R, Array.prototype.concat),
+    B = j.call(P, Array.prototype.splice),
+    F = j.call(R, String.prototype.replace),
+    V = j.call(R, String.prototype.slice),
+    Z = j.call(R, RegExp.prototype.exec),
     H = /[^%.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|%$))/g,
     Y = /\\(\\)?/g,
     W = function (e) {
-        var t = F(e, 0, 1),
-            n = F(e, -1);
+        var t = V(e, 0, 1),
+            n = V(e, -1);
         if ('%' === t && '%' !== n) throw new c('invalid intrinsic syntax, expected closing `%`');
         if ('%' === n && '%' !== t) throw new c('invalid intrinsic syntax, expected opening `%`');
         var r = [];
         return (
-            V(e, H, function (e, t, n, i) {
-                r[r.length] = n ? V(i, Y, '$1') : t || e;
+            F(e, H, function (e, t, n, i) {
+                r[r.length] = n ? F(i, Y, '$1') : t || e;
             }),
             r
         );
@@ -228,9 +228,9 @@ var M = function e(t) {
     K = function (e, t) {
         var n,
             r = e;
-        if ((U(k, r) && (r = '%' + (n = k[r])[0] + '%'), U(L, r))) {
+        if ((U(M, r) && (r = '%' + (n = M[r])[0] + '%'), U(L, r))) {
             var i = L[r];
-            if ((i === w && (i = M(r)), void 0 === i && !t)) throw new u('intrinsic ' + e + ' exists, but is not available. Please file an issue!');
+            if ((i === w && (i = k(r)), void 0 === i && !t)) throw new u('intrinsic ' + e + ' exists, but is not available. Please file an issue!');
             return {
                 alias: n,
                 name: r,
@@ -246,28 +246,28 @@ e.exports = function (e, t) {
     var n = W(e),
         r = n.length > 0 ? n[0] : '',
         i = K('%' + r + '%', t),
-        a = i.name,
-        o = i.value,
+        o = i.name,
+        a = i.value,
         s = !1,
         l = i.alias;
     l && ((r = l[0]), B(n, G([0, 1], l)));
     for (var d = 1, f = !0; d < n.length; d += 1) {
         var _ = n[d],
-            p = F(_, 0, 1),
-            h = F(_, -1);
+            p = V(_, 0, 1),
+            h = V(_, -1);
         if (('"' === p || "'" === p || '`' === p || '"' === h || "'" === h || '`' === h) && p !== h) throw new c('property names with quotes must have matching quotes');
-        if ((('constructor' !== _ && f) || (s = !0), (r += '.' + _), U(L, (a = '%' + r + '%')))) o = L[a];
-        else if (null != o) {
-            if (!(_ in o)) {
+        if ((('constructor' !== _ && f) || (s = !0), (r += '.' + _), U(L, (o = '%' + r + '%')))) a = L[o];
+        else if (null != a) {
+            if (!(_ in a)) {
                 if (!t) throw new u('base intrinsic for ' + e + ' exists, but the property is not available.');
                 return;
             }
             if (O && d + 1 >= n.length) {
-                var m = O(o, _);
-                o = (f = !!m) && 'get' in m && !('originalValue' in m.get) ? m.get : o[_];
-            } else (f = U(o, _)), (o = o[_]);
-            f && !s && (L[a] = o);
+                var m = O(a, _);
+                a = (f = !!m) && 'get' in m && !('originalValue' in m.get) ? m.get : a[_];
+            } else (f = U(a, _)), (a = a[_]);
+            f && !s && (L[o] = a);
         }
     }
-    return o;
+    return a;
 };

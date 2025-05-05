@@ -1,8 +1,8 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => R });
 var r = n(255367),
     i = n(442837),
-    a = n(481060),
-    o = n(320582),
+    o = n(481060),
+    a = n(320582),
     s = n(189156),
     l = n(699516),
     c = n(246946),
@@ -25,39 +25,39 @@ var r = n(255367),
     A = n(915014),
     N = n(228168),
     C = n(981631),
-    R = n(200669);
-function P(e) {
-    let { user: t, currentUser: n, displayProfile: P, guild: w, isHovering: D, onOpenProfile: L, channelId: x, onClose: M } = e,
-        k = u.ZP.useName(null == w ? void 0 : w.id, x, t),
+    P = n(200669);
+function R(e) {
+    let { user: t, currentUser: n, displayProfile: R, guild: w, isHovering: D, onOpenProfile: L, channelId: x, onClose: k } = e,
+        M = u.ZP.useName(null == w ? void 0 : w.id, x, t),
         { relationshipType: j, originApplicationId: U } = (0, i.cj)([l.Z], () => ({
             relationshipType: l.Z.getRelationshipType(t.id),
             originApplicationId: l.Z.getOriginApplicationId(t.id)
         })),
-        G = (0, o.vh)(t.id),
+        G = (0, a.vh)(t.id),
         B = (0, i.e7)([c.Z], () => c.Z.hidePersonalInformation),
-        V = (0, f.b)({ location: 'UserProfilePopoutBody' }),
-        F = t.id === n.id,
+        F = (0, f.b)({ location: 'UserProfilePopoutBody' }),
+        V = t.id === n.id,
         Z = (0, d.I5)(n);
-    return (0, r.jsxs)(a.Ttm, {
+    return (0, r.jsxs)(o.Ttm, {
         fade: !0,
-        className: R.body,
+        className: P.body,
         children: [
             (0, r.jsx)(O.Z, {
                 user: t,
                 onOpenProfile: L,
-                onClose: M,
+                onClose: k,
                 usernameIcon:
                     t.hasAvatarForGuild(null == w ? void 0 : w.id) &&
                     (0, r.jsx)(S.Z, {
                         user: t,
-                        nickname: k
+                        nickname: M
                     }),
-                nickname: k,
-                pronouns: null == P ? void 0 : P.pronouns,
+                nickname: M,
+                pronouns: null == R ? void 0 : R.pronouns,
                 tags: (0, r.jsx)(_.Z, {
-                    displayProfile: P,
+                    displayProfile: R,
                     themeType: N.lY.POPOUT,
-                    onClose: M
+                    onClose: k
                 }),
                 nicknameIcons: (0, r.jsxs)(r.Fragment, {
                     children: [
@@ -95,7 +95,7 @@ function P(e) {
                 )
             ),
             (0, r.jsx)(E.Z, { user: t }),
-            !F &&
+            !V &&
                 (0, r.jsx)(A.Z, {
                     user: t,
                     onOpenProfile: (e) => (null == L ? void 0 : L({ section: e }))
@@ -107,30 +107,30 @@ function P(e) {
                   })
                 : (0, r.jsx)(I.Z, {
                       user: t,
-                      bio: null == P ? void 0 : P.bio,
+                      bio: null == R ? void 0 : R.bio,
                       hidePersonalInformation: B,
-                      onClose: M
+                      onClose: k
                   }),
-            F &&
+            V &&
                 (0, r.jsx)(p.Z, {
                     isPremiumUser: Z,
-                    onInteraction: M
+                    onInteraction: k
                 }),
-            V
+            F
                 ? (0, r.jsx)(b.Z, {
                       user: t,
                       currentUser: n,
-                      displayProfile: P,
+                      displayProfile: R,
                       guildId: null == w ? void 0 : w.id,
                       onOpenUserProfileModal: L,
-                      onClose: M
+                      onClose: k
                   })
                 : (0, r.jsx)(h.Z, {
                       user: t,
                       currentUser: n,
-                      displayProfile: P,
+                      displayProfile: R,
                       guildId: null == w ? void 0 : w.id,
-                      onClose: M
+                      onClose: k
                   }),
             null != w &&
                 (0, r.jsx)(T.Z, {

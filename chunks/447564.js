@@ -19,8 +19,8 @@ var r = n(255367),
     g = n(937615),
     _ = n(82950),
     b = n(981631),
-    x = n(388032),
-    y = n(668275),
+    y = n(388032),
+    x = n(668275),
     E = n(99713);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -71,15 +71,15 @@ function S(e) {
         n = (0, m.T$)(t),
         [a, u] = (0, i.useState)(!1),
         { price: h, fetchingPrice: g, error: _ } = (0, m.R2)(f.FX),
-        { entitlement: x, fetchedEntitlement: y, error: E } = (0, m.t6)(f.FX),
+        { entitlement: y, fetchedEntitlement: x, error: E } = (0, m.t6)(f.FX),
         v = _ || E,
         { analyticsLocations: O } = (0, c.ZP)([s.Z.HD_STREAMING_POTION_MODAL]),
-        j = null != x && !x.consumed;
+        j = null != y && !y.consumed;
     (0, i.useEffect)(
         () => () => {
             v && (0, p.SN)(f.FX);
         },
-        [x, t, a, v]
+        [y, t, a, v]
     );
     let C = (0, i.useCallback)(() => {
             (0, p.Zu)(t.id), (0, o.pTH)();
@@ -92,7 +92,7 @@ function S(e) {
                 variantsReturnStyle: l.v.INDIVIDUAL_PRODUCTS
             });
         }, [O, C]),
-        N = (0, i.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == x ? void 0 : x.type) === b.qc2.DEVELOPER_GIFT ? 1 : 2 * !!j) : 3), [t.isHDStreamSplashed, n, null == x ? void 0 : x.type, j]),
+        N = (0, i.useMemo)(() => () => (t.isHDStreamSplashed ? 4 : n ? ((null == y ? void 0 : y.type) === b.qc2.DEVELOPER_GIFT ? 1 : 2 * !!j) : 3), [t.isHDStreamSplashed, n, null == y ? void 0 : y.type, j]),
         T = (0, i.useMemo)(() => N(), [N]);
     return (0, r.jsx)(I, {
         channel: t,
@@ -101,7 +101,7 @@ function S(e) {
         onActionClick: () => {
             u(!0), (j ? C : S)();
         },
-        loading: g || !y
+        loading: g || !x
     });
 }
 let I = (e) => {
@@ -113,7 +113,7 @@ let I = (e) => {
               : (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)('div', {
-                            className: y.modal,
+                            className: x.modal,
                             children: [(0, r.jsx)(N, {}), (0, r.jsx)(T, { channel: t })]
                         }),
                         (0, r.jsx)(P, {
@@ -126,50 +126,50 @@ let I = (e) => {
     },
     N = () =>
         (0, r.jsx)('img', {
-            className: y.image,
+            className: x.image,
             src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
-            alt: x.intl.string(x.t.DdigcX)
+            alt: y.intl.string(y.t.DdigcX)
         }),
     T = (e) => {
         let { channel: t } = e;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsxs)('div', {
-                    className: y.body,
+                    className: x.body,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: y.heading,
+                            className: x.heading,
                             children: [
                                 (0, r.jsx)(o.X6q, {
                                     variant: 'heading-lg/bold',
-                                    children: x.intl.string(x.t.K04rOD)
+                                    children: y.intl.string(y.t.K04rOD)
                                 }),
                                 (0, r.jsx)(u.Z, {})
                             ]
                         }),
                         (0, r.jsx)(o.Text, {
                             variant: 'text-sm/normal',
-                            children: x.intl.string(x.t.lq40Pz)
+                            children: y.intl.string(y.t.lq40Pz)
                         }),
                         (0, r.jsx)(o.Text, {
                             color: 'text-link',
                             variant: 'text-sm/normal',
-                            children: x.intl.format(x.t['1wV4qq'], { helpCenterLink: h.Z.getArticleURL(b.BhN.HD_STREAMING_POTION) })
+                            children: y.intl.format(y.t['1wV4qq'], { helpCenterLink: h.Z.getArticleURL(b.BhN.HD_STREAMING_POTION) })
                         }),
                         (0, r.jsx)(o.Text, {
                             color: 'text-muted',
                             variant: 'text-xs/medium',
-                            children: x.intl.string(x.t.qk07Mj)
+                            children: y.intl.string(y.t.qk07Mj)
                         })
                     ]
                 }),
-                (0, r.jsx)('div', { className: y.divider }),
+                (0, r.jsx)('div', { className: x.divider }),
                 (0, r.jsxs)('div', {
-                    className: y.applyingTo,
+                    className: x.applyingTo,
                     children: [
                         (0, r.jsx)(o.Text, {
                             variant: 'eyebrow',
-                            children: x.intl.string(x.t.tZyXg4)
+                            children: y.intl.string(y.t.tZyXg4)
                         }),
                         (0, r.jsx)(_.Z, { channel: t })
                     ]
@@ -180,14 +180,14 @@ let I = (e) => {
     P = (e) => {
         let { buttonState: t, price: n, onActionClick: i } = e;
         return (0, r.jsxs)('div', {
-            className: y.footer,
+            className: x.footer,
             children: [
                 (0, r.jsx)(o.zxk, {
                     onClick: () => {
                         (0, o.Mr3)(C);
                     },
                     color: o.zxk.Colors.PRIMARY,
-                    children: x.intl.string(x.t.Avt5KS)
+                    children: y.intl.string(y.t.Avt5KS)
                 }),
                 (0, r.jsx)(A, {
                     buttonState: t,
@@ -199,14 +199,14 @@ let I = (e) => {
     },
     A = (e) => {
         let { buttonState: t, price: n, onActionClick: i } = e,
-            l = x.intl.formatToPlainString(x.t.S9LAdX, { price: (0, g.T4)(n.amount, n.currency) });
+            l = y.intl.formatToPlainString(y.t.S9LAdX, { price: (0, g.T4)(n.amount, n.currency) });
         if (3 === t || 4 === t) {
             let e = {
-                3: x.intl.string(x.t.Qrh2BQ),
-                4: x.intl.string(x.t.utRdl5)
+                3: y.intl.string(y.t.Qrh2BQ),
+                4: y.intl.string(y.t.utRdl5)
             }[t];
             return (0, r.jsx)(o.ua7, {
-                tooltipContentClassName: y.tooltip,
+                tooltipContentClassName: x.tooltip,
                 text: e,
                 children: (e) => {
                     var t, n;
@@ -237,13 +237,13 @@ let I = (e) => {
         }
         let s = {
             0: l,
-            1: x.intl.string(x.t.sl6Tcn),
-            2: x.intl.string(x.t.XJ9INj)
+            1: y.intl.string(y.t.sl6Tcn),
+            2: y.intl.string(y.t.XJ9INj)
         }[t];
         return (0, r.jsx)(o.zxk, {
             onClick: i,
             children: (0, r.jsxs)('div', {
-                className: y.buttonCopy,
+                className: x.buttonCopy,
                 children: [
                     (0, r.jsx)(o.hh5, {
                         color: a.Z.colors.WHITE,
@@ -256,9 +256,9 @@ let I = (e) => {
     },
     w = () =>
         (0, r.jsx)('div', {
-            className: y.anomaly,
+            className: x.anomaly,
             children: (0, r.jsxs)('div', {
-                className: y.error,
+                className: x.error,
                 children: [
                     (0, r.jsx)(o.Eep, {
                         src: E,
@@ -267,16 +267,16 @@ let I = (e) => {
                     }),
                     (0, r.jsx)(o.Text, {
                         variant: 'text-md/normal',
-                        children: x.intl.string(x.t.sIA0OD)
+                        children: y.intl.string(y.t.sIA0OD)
                     })
                 ]
             })
         }),
     Z = () =>
         (0, r.jsx)('div', {
-            className: y.anomaly,
+            className: x.anomaly,
             children: (0, r.jsx)('div', {
-                className: y.spinner,
+                className: x.spinner,
                 children: (0, r.jsx)(o.$jN, {})
             })
         });

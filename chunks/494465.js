@@ -11,8 +11,8 @@ var r = a(46015),
     I = String,
     R = Object.defineProperty,
     d = r(''.slice),
-    A = r(''.replace),
-    f = r([].join),
+    f = r(''.replace),
+    A = r([].join),
     p =
         i &&
         !n(function () {
@@ -20,7 +20,7 @@ var r = a(46015),
         }),
     N = String(String).split('String'),
     T = (t.exports = function (t, e, a) {
-        'Symbol(' === d(I(e), 0, 7) && (e = '[' + A(I(e), /^Symbol\(([^)]*)\).*$/, '$1') + ']'),
+        'Symbol(' === d(I(e), 0, 7) && (e = '[' + f(I(e), /^Symbol\(([^)]*)\).*$/, '$1') + ']'),
             a && a.getter && (e = 'get ' + e),
             a && a.setter && (e = 'set ' + e),
             (!o(t, 'name') || (c && t.name !== e)) &&
@@ -35,7 +35,7 @@ var r = a(46015),
             a && o(a, 'constructor') && a.constructor ? i && R(t, 'prototype', { writable: !1 }) : t.prototype && (t.prototype = void 0);
         } catch (t) {}
         var r = l(t);
-        return o(r, 'source') || (r.source = f(N, 'string' == typeof e ? e : '')), t;
+        return o(r, 'source') || (r.source = A(N, 'string' == typeof e ? e : '')), t;
     });
 Function.prototype.toString = T(function () {
     return (_(this) && u(this).source) || s(this);

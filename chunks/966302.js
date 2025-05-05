@@ -1,8 +1,8 @@
 n.d(t, { Z: () => es }), n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481752),
     l = n(442837),
     c = n(481060),
@@ -25,20 +25,20 @@ var r = n(255367),
     A = n(189771),
     N = n(560688),
     C = n(88479),
-    R = n(136995),
-    P = n(25827),
+    P = n(136995),
+    R = n(25827),
     w = n(163612),
     D = n(430824),
     L = n(131951),
     x = n(594174),
-    M = n(451478),
-    k = n(626135),
+    k = n(451478),
+    M = n(626135),
     j = n(768581),
     U = n(358221),
     G = n(584511),
     B = n(793865),
-    V = n(522651),
-    F = n(795318),
+    F = n(522651),
+    V = n(795318),
     Z = n(354459),
     H = n(981631),
     Y = n(65154),
@@ -109,19 +109,19 @@ let ee = {
     en = 475,
     er = 267,
     ei = 128;
-function ea(e) {
+function eo(e) {
     let { header: t } = e,
         n = L.Z.getCameraComponent(),
-        a = (0, l.e7)([L.Z], () => L.Z.getVideoDeviceId()),
-        o = (0, I.Z)();
+        o = (0, l.e7)([L.Z], () => L.Z.getVideoDeviceId()),
+        a = (0, I.Z)();
     return (
         i.useEffect(() => {
             let e = x.default.getCurrentUser();
-            if (o && null != e) {
+            if (a && null != e) {
                 let t = (0, O.P)(e);
-                (0, v.FU)(t, a, { track: !1 }).catch(H.dG4);
+                (0, v.FU)(t, o, { track: !1 }).catch(H.dG4);
             }
-        }, [o, a]),
+        }, [a, o]),
         (0, r.jsxs)('div', {
             className: z.previewRoot,
             children: [
@@ -130,7 +130,7 @@ function ea(e) {
                     className: z.preview,
                     children: (0, r.jsx)(n, {
                         disabled: !1,
-                        deviceId: a,
+                        deviceId: o,
                         width: en,
                         height: er
                     })
@@ -143,16 +143,16 @@ function ea(e) {
         })
     );
 }
-function eo(e) {
-    let { canVideo: t, channel: n, numVideoDevices: a } = e,
+function ea(e) {
+    let { canVideo: t, channel: n, numVideoDevices: o } = e,
         { parentAnalyticsLocation: s } = (0, m.ZP)(),
         { cameraUnavailable: l, enabled: d } = (0, S.Z)(),
         _ = (0, A.Z)(n),
         p = (0, T.Z)({ location: 'CallActionButtons' }),
         g = i.useRef(null),
-        E = a > 1;
+        E = o > 1;
     return (0, r.jsxs)('div', {
-        className: o()(z.wrapper, p ? z.experimentActions : z.actions),
+        className: a()(z.wrapper, p ? z.experimentActions : z.actions),
         children: [
             (0, r.jsx)(C.Z, {
                 iconComponent: c.Dio,
@@ -160,8 +160,8 @@ function eo(e) {
                 className: z.actionButton,
                 fullRegionButton: p,
                 onClick: () => {
-                    (0, V.v)(s, V.d.DISCONNECT),
-                        k.default.track(
+                    (0, F.v)(s, F.d.DISCONNECT),
+                        M.default.track(
                             H.rMx.RING_CALL_DECLINED,
                             X(
                                 {
@@ -181,7 +181,7 @@ function eo(e) {
                         let { closePopout: t } = e;
                         return (0, r.jsx)(B.Z, {
                             onClose: t,
-                            onInteraction: (0, F.u)('VideoDeviceMenu', s, { entrypoint: Z.A5.CARET })
+                            onInteraction: (0, V.u)('VideoDeviceMenu', s, { entrypoint: Z.A5.CARET })
                         });
                     },
                     position: 'top',
@@ -189,24 +189,24 @@ function eo(e) {
                     animation: c.yRy.Animation.FADE,
                     children: (e, t) => {
                         let { onClick: i } = e,
-                            { isShown: a } = t;
-                        return (0, r.jsx)(P.C, {
+                            { isShown: o } = t;
+                        return (0, r.jsx)(R.C, {
                             buttonRef: g,
                             join: !0,
                             enabled: d,
-                            className: o()(z.actionButton, { [z.fullRegionDropdownButtonOverride]: E && p }),
+                            className: a()(z.actionButton, { [z.fullRegionDropdownButtonOverride]: E && p }),
                             color: 'green',
                             centerButton: !0,
                             hasPermission: _,
                             cameraUnavailable: l,
                             channel: n,
                             onPopoutClick: E ? i : null,
-                            popoutOpen: a,
+                            popoutOpen: o,
                             onCameraUnavailable: N.Z,
                             onChange: () => {
                                 var e;
-                                (0, V.v)(s, V.d.JOIN_VIDEO_CALL),
-                                    k.default.track(
+                                (0, F.v)(s, F.d.JOIN_VIDEO_CALL),
+                                    M.default.track(
                                         H.rMx.RING_CALL_ACCEPTED,
                                         X(
                                             {
@@ -222,12 +222,12 @@ function eo(e) {
                         });
                     }
                 }),
-            (0, r.jsx)(R.Z, {
+            (0, r.jsx)(P.Z, {
                 channel: n,
                 color: 'join',
                 centerButton: !0,
                 onCallJoined: () =>
-                    k.default.track(
+                    M.default.track(
                         H.rMx.RING_CALL_ACCEPTED,
                         X(
                             {
@@ -244,7 +244,7 @@ function eo(e) {
 }
 function es(e) {
     var t;
-    let { animatedStyle: n, y: a, x: f, channel: h } = e,
+    let { animatedStyle: n, y: o, x: f, channel: h } = e,
         { analyticsLocations: y } = (0, m.ZP)(p.Z.INCOMING_CALL_MODAL),
         [O, v] = i.useState(!1),
         I = (0, l.e7)([D.Z], () => D.Z.getGuild(h.guild_id)),
@@ -259,10 +259,10 @@ function es(e) {
         T = null != (t = (0, g.x)(h, ei, !0)) ? t : S,
         A = (0, E.ZP)(h),
         [N, C] = (0, l.Wu)([L.Z], () => [L.Z.supports(Y.AN.VIDEO), Object.keys(L.Z.getVideoDevices()).length]),
-        R = null != I ? ''.concat(A, ', ').concat(I.name) : A,
-        P = (0, l.e7)([M.Z], () => M.Z.isFocused()),
+        P = null != I ? ''.concat(A, ', ').concat(I.name) : A,
+        R = (0, l.e7)([k.Z], () => k.Z.isFocused()),
         x = (0, l.e7)([U.Z], () => U.Z.getMode(h.id)),
-        k = i.useCallback((e) => {
+        M = i.useCallback((e) => {
             null != e.top && null != e.left && d.Z.move(e.left, e.top);
         }, []),
         B = (0, c.q_F)(
@@ -278,24 +278,24 @@ function es(e) {
         };
         return window.addEventListener('keydown', e), () => window.removeEventListener('keydown', e);
     }, [h]);
-    let V = x === H.WtW.VIDEO && N && C > 0,
-        { enabled: F } = w.Z.useExperiment({
+    let F = x === H.WtW.VIDEO && N && C > 0,
+        { enabled: V } = w.Z.useExperiment({
             guildId: null == h ? void 0 : h.guild_id,
             location: 'IncomingCallModal'
         }),
-        Z = x === H.WtW.VOICE || (F && h.type === H.d4z.GUILD_VOICE) ? W.intl.string(W.t.Js8cKy) : W.intl.string(W.t.KcnWCA),
+        Z = x === H.WtW.VOICE || (V && h.type === H.d4z.GUILD_VOICE) ? W.intl.string(W.t.Js8cKy) : W.intl.string(W.t.KcnWCA),
         Q = (0, r.jsxs)(r.Fragment, {
             children: [
                 null != I && null == S
                     ? (0, r.jsx)('div', {
-                          className: o()(z.icon, K.wrapper, K.ringingIncoming),
+                          className: a()(z.icon, K.wrapper, K.ringingIncoming),
                           children: (0, r.jsx)(b.ZP, {
                               className: z.mask,
                               mask: b.QS.AVATAR_DEFAULT,
                               width: O ? 40 : 80,
                               height: O ? 40 : 80,
                               children: (0, r.jsx)('div', {
-                                  className: o()(z.guildIcon, z.guildIconWithoutImage),
+                                  className: a()(z.guildIcon, z.guildIconWithoutImage),
                                   children: (0, r.jsx)('div', {
                                       className: z.guildAcronym,
                                       children: I.acronym
@@ -305,7 +305,7 @@ function es(e) {
                       })
                     : (0, r.jsx)(G.Z, {
                           className: z.icon,
-                          ringing: P,
+                          ringing: R,
                           src: null != T ? T : '',
                           ringingType: G.Z.RingingType.INCOMING,
                           size: O ? c.EFr.SIZE_40 : c.EFr.SIZE_80
@@ -317,7 +317,7 @@ function es(e) {
                             className: z.title,
                             color: 'header-primary',
                             variant: O ? 'text-md/semibold' : 'text-lg/semibold',
-                            children: R
+                            children: P
                         }),
                         (0, r.jsx)(c.Text, {
                             color: 'header-secondary',
@@ -329,8 +329,8 @@ function es(e) {
                 })
             ]
         }),
-        J = V ? ee : et,
-        es = (0, l.e7)([M.Z], () => M.Z.windowSize());
+        J = F ? ee : et,
+        es = (0, l.e7)([k.Z], () => k.Z.windowSize());
     return (0, r.jsx)(m.Gt, {
         value: y,
         children: (0, r.jsx)(_.Z, {
@@ -338,17 +338,17 @@ function es(e) {
             selector: '.'.concat(z.root),
             initialPosition: {
                 left: f,
-                top: a
+                top: o
             },
             maxX: es.width,
             maxY: es.height,
-            onDragEnd: k,
+            onDragEnd: M,
             dragAnywhere: !0,
             children: (0, r.jsx)(c.f6W, {
                 theme: O ? H.BRd.DARK : void 0,
                 children: (e) =>
                     (0, r.jsxs)(s.animated.div, {
-                        className: o()(z.root, q.elevationHigh, { [z.previewCamera]: O }, e),
+                        className: a()(z.root, q.elevationHigh, { [z.previewCamera]: O }, e),
                         style: $(X({}, n), {
                             width: B.value.interpolate([0, 1], [J.width, en]),
                             minHeight: B.value.interpolate([0, 1], [J.height, er]),
@@ -356,17 +356,17 @@ function es(e) {
                         }),
                         children: [
                             O
-                                ? (0, r.jsx)(ea, { header: Q })
+                                ? (0, r.jsx)(eo, { header: Q })
                                 : (0, r.jsx)('div', {
                                       className: z.mainChannelInfo,
                                       children: Q
                                   }),
-                            (0, r.jsx)(eo, {
-                                canVideo: V,
+                            (0, r.jsx)(ea, {
+                                canVideo: F,
                                 channel: h,
                                 numVideoDevices: C
                             }),
-                            V && !O
+                            F && !O
                                 ? (0, r.jsx)(c.zxk, {
                                       size: c.zxk.Sizes.SMALL,
                                       fullWidth: !0,

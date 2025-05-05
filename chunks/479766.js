@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l }), n(539854);
 var r,
     i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -104,7 +104,7 @@ class s extends (r = i.ZP.Store) {
         (this._earnedOrbsCoachmarkOpen = !1), (this._earnedOrbsCoachmarkQuantity = 0);
     }
     constructor() {
-        super(a.Z, {
+        super(o.Z, {
             VIRTUAL_CURRENCY_REDEEM_START: (e) => this.handleRedeemVirtualCurrencyStart(e),
             VIRTUAL_CURRENCY_REDEEM_SUCCESS: (e) => this.handleRedeemVirtualCurrencySuccess(e),
             VIRTUAL_CURRENCY_REDEEM_FAIL: (e) => this.handleRedeemVirtualCurrencyFail(e),
@@ -119,20 +119,20 @@ class s extends (r = i.ZP.Store) {
             VIRTUAL_CURRENCY_BALANCE_PILL_OVERLAY_OPEN: (e) => this.toggleBalanceWidgetPillOverlay(e),
             VIRTUAL_CURRENCY_BALANCE_PILL_OVERLAY_CLOSE: (e) => this.toggleBalanceWidgetPillOverlay(e)
         }),
-            o(this, '_entitlements', null),
-            o(this, '_redeemingSkuId', null),
-            o(this, '_isRedeemingVirtualCurrency', !1),
-            o(this, '_redeemVirtualCurrencyError', null),
-            o(this, '_balance', null),
-            o(this, '_fetchBalanceError', null),
-            o(this, '_isFetchingBalance', !1),
-            o(this, '_balanceWidgetPillIsOverlaid', !1),
-            o(this, '_hidePillOverlayImmediately', !1),
-            o(this, '_onboardingModalOpenedPrior', !1),
-            o(this, '_earnedOrbsCoachmarkOpen', !1),
-            o(this, '_earnedOrbsCoachmarkDedupeKeys', []),
-            o(this, '_earnedOrbsCoachmarkQuantity', 0);
+            a(this, '_entitlements', null),
+            a(this, '_redeemingSkuId', null),
+            a(this, '_isRedeemingVirtualCurrency', !1),
+            a(this, '_redeemVirtualCurrencyError', null),
+            a(this, '_balance', null),
+            a(this, '_fetchBalanceError', null),
+            a(this, '_isFetchingBalance', !1),
+            a(this, '_balanceWidgetPillIsOverlaid', !1),
+            a(this, '_hidePillOverlayImmediately', !1),
+            a(this, '_onboardingModalOpenedPrior', !1),
+            a(this, '_earnedOrbsCoachmarkOpen', !1),
+            a(this, '_earnedOrbsCoachmarkDedupeKeys', []),
+            a(this, '_earnedOrbsCoachmarkQuantity', 0);
     }
 }
-o(s, 'displayName', 'VirtualCurrencyStore');
+a(s, 'displayName', 'VirtualCurrencyStore');
 let l = new s();

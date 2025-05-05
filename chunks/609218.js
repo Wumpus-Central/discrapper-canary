@@ -5,8 +5,8 @@ n.d(t, {
     n(953529);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(355467),
@@ -27,8 +27,8 @@ var r = n(255367),
         return (e[(e.NONE = 0)] = 'NONE'), (e[(e.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'), (e[(e.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER'), e;
     })({});
 function S(e) {
-    let { containerContext: t, image: n, title: a, description: I, enableSocialProof: S, analyticsLocationSection: T, upsellViewedTrackingData: A, onClose: N, onDisplay: C, onLearnMore: R } = e,
-        P = (0, s.e7)([h.Z], () => h.Z.affinities),
+    let { containerContext: t, image: n, title: o, description: I, enableSocialProof: S, analyticsLocationSection: T, upsellViewedTrackingData: A, onClose: N, onDisplay: C, onLearnMore: P } = e,
+        R = (0, s.e7)([h.Z], () => h.Z.affinities),
         w = (0, s.e7)([h.Z], () => h.Z.hasFetched);
     i.useEffect(() => {
         !w && S && c.MH();
@@ -36,24 +36,24 @@ function S(e) {
         i.useEffect(() => {
             _.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, A), null == C || C();
         }, [C, A]);
-    let D = P.length > 1 && S,
+    let D = R.length > 1 && S,
         L = () => (2 === t ? v.hasTabParentContainer : 1 === t ? v.hasParentContainer : v.noParentContainer),
         x = () => {
             _.default.track(y.rMx.PREMIUM_PROMOTION_OPENED, {
                 location_section: T,
                 location_object: y.qAy.NAVIGATION_LINK
             }),
-                null == R || R(),
+                null == P || P(),
                 (0, d.Z)(),
                 N(),
                 (0, u.xf)(),
                 (0, f.uL)(y.Z5c.APPLICATION_STORE);
         },
-        M = (0, m.N)(),
-        k = i.useCallback(() => {
+        k = (0, m.N)(),
+        M = i.useCallback(() => {
             var e;
-            return null != (e = (0, p.fr)(M)) ? e : O.intl.string(O.t.pj0XBA);
-        }, [M]);
+            return null != (e = (0, p.fr)(k)) ? e : O.intl.string(O.t.pj0XBA);
+        }, [k]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(l.YMn, {
@@ -63,7 +63,7 @@ function S(e) {
                 isVisible: !0
             }),
             (0, r.jsxs)('div', {
-                className: o()(v.container, L()),
+                className: a()(v.container, L()),
                 children: [
                     (0, r.jsx)(l.olH, {
                         onClick: N,
@@ -80,11 +80,11 @@ function S(e) {
                                 alt: 'Nitro Perk'
                             }),
                             (0, r.jsx)(l.X6q, {
-                                className: o()(v.title, { [v.titleNoSocialProof]: !D }),
+                                className: a()(v.title, { [v.titleNoSocialProof]: !D }),
                                 variant: 'heading-xl/bold',
-                                children: a
+                                children: o
                             }),
-                            D && (0, r.jsx)(E.Z, { affinities: P }),
+                            D && (0, r.jsx)(E.Z, { affinities: R }),
                             (0, r.jsx)(l.Text, {
                                 variant: 'text-sm/medium',
                                 className: v.body,
@@ -115,7 +115,7 @@ function S(e) {
                                 onClick: () => {
                                     N();
                                 },
-                                textOptions: { textOverride: k() }
+                                textOptions: { textOverride: M() }
                             })
                         ]
                     })

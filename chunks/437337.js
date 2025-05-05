@@ -1,8 +1,8 @@
 n.d(t, { r: () => v }), n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481752),
     l = n(692547),
     c = n(186325),
@@ -82,24 +82,24 @@ let b = {
         }
     };
 function O(e, t, n, i) {
-    let a = e.to({
+    let o = e.to({
             output: [t, n]
         }),
-        o = i ? [y.X.TOP, y.X.TOP, y.CHECK.TOP, y.CHECK.TOP] : [y.X.TOP, y.BAR.TOP, y.BAR.TOP, y.CHECK.TOP],
+        a = i ? [y.X.TOP, y.X.TOP, y.CHECK.TOP, y.CHECK.TOP] : [y.X.TOP, y.BAR.TOP, y.BAR.TOP, y.CHECK.TOP],
         l = i ? [y.X.BOTTOM, y.X.BOTTOM, y.CHECK.BOTTOM, y.CHECK.BOTTOM] : [y.X.BOTTOM, y.BAR.BOTTOM, y.BAR.BOTTOM, y.CHECK.BOTTOM];
     return (0, r.jsxs)('svg', {
         viewBox: '0 0 20 20',
         fill: 'none',
         children: [
             (0, r.jsx)(s.animated.path, {
-                fill: a,
+                fill: o,
                 d: e.to({
                     range: [0, 0.3, 0.7, 1],
-                    output: o
+                    output: a
                 })
             }),
             (0, r.jsx)(s.animated.path, {
-                fill: a,
+                fill: o,
                 d: e.to({
                     range: [0, 0.3, 0.7, 1],
                     output: l
@@ -109,18 +109,18 @@ function O(e, t, n, i) {
     });
 }
 let v = function (e) {
-    let { id: t, onChange: n, checked: a, disabled: h, className: g, focusProps: y, innerRef: v } = e,
+    let { id: t, onChange: n, checked: o, disabled: h, className: g, focusProps: y, innerRef: v } = e,
         { reducedMotion: I } = i.useContext(c.S),
         S = i.useRef(null),
         [T, A] = i.useState(!1),
         N = (0, _.Q3)('Switch'),
         C = (0, d.d)(N ? l.Z.colors.INTERACTIVE_MUTED : l.Z.unsafe_rawColors.PRIMARY_400).spring(),
-        R = (0, d.d)(N ? l.Z.colors.REDESIGN_INPUT_CONTROL_SELECTED : l.Z.unsafe_rawColors.GREEN_360).spring(),
-        { state: P, opacity: w } = (0, f.q_F)(
+        P = (0, d.d)(N ? l.Z.colors.REDESIGN_INPUT_CONTROL_SELECTED : l.Z.unsafe_rawColors.GREEN_360).spring(),
+        { state: R, opacity: w } = (0, f.q_F)(
             {
                 config: b,
                 opacity: h ? (N ? 0.5 : 0.3) : 1,
-                state: T ? (a ? 0.7 : 0.3) : +!!a
+                state: T ? (o ? 0.7 : 0.3) : +!!o
             },
             'animate-always'
         );
@@ -140,8 +140,8 @@ let v = function (e) {
             within: !0,
             offset: -2,
             children: (0, r.jsxs)(s.animated.div, {
-                className: o()(p.container, g, {
-                    [p.checked]: a,
+                className: a()(p.container, g, {
+                    [p.checked]: o,
                     [p.disabled]: h
                 }),
                 onMouseDown: () => !h && A(!0),
@@ -149,8 +149,8 @@ let v = function (e) {
                 onMouseLeave: () => A(!1),
                 style: {
                     opacity: w,
-                    backgroundColor: P.to({
-                        output: [C, R]
+                    backgroundColor: R.to({
+                        output: [C, P]
                     })
                 },
                 children: [
@@ -159,7 +159,7 @@ let v = function (e) {
                         viewBox: '0 0 28 20',
                         preserveAspectRatio: 'xMinYMid meet',
                         style: {
-                            left: P.to({
+                            left: R.to({
                                 range: [0, 0.3, 0.7, 1],
                                 output: [N ? -4 : -3, 1, 8, 12]
                             })
@@ -168,25 +168,25 @@ let v = function (e) {
                         children: [
                             (0, r.jsx)(s.animated.rect, {
                                 fill: 'white',
-                                x: P.to({
+                                x: R.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [4, 0, 0, 4]
                                 }),
-                                y: P.to({
+                                y: R.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [0, 1, 1, 0]
                                 }),
-                                height: P.to({
+                                height: R.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [20, 18, 18, 20]
                                 }),
-                                width: P.to({
+                                width: R.to({
                                     range: [0, 0.3, 0.7, 1],
                                     output: [20, 28, 28, 20]
                                 }),
                                 rx: '10'
                             }),
-                            O(P, C, R, I.enabled)
+                            O(R, C, P, I.enabled)
                         ]
                     }),
                     (0, r.jsx)('input', {
@@ -200,7 +200,7 @@ let v = function (e) {
                         onKeyDown: L,
                         onKeyUp: x,
                         onChange: D,
-                        checked: a,
+                        checked: o,
                         disabled: h
                     })
                 ]

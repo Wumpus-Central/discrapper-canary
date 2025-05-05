@@ -1,8 +1,8 @@
 n.d(t, { Z: () => B }), n(388685);
 var r,
     i = n(392711),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(570140),
     l = n(23750),
     c = n(709054),
@@ -73,12 +73,12 @@ let m = 300000,
     A = 0,
     N = 0,
     C = 0,
-    R = 0,
-    P = 0;
+    P = 0,
+    R = 0;
 function w() {
     C = Object.values(g).length;
-    let { [d.OGo.PENDING_INCOMING]: e = 0, [d.OGo.PENDING_OUTGOING]: t = 0, [d.OGo.FRIEND]: n = 0 } = a().countBy(Object.values(g), (e) => e);
-    (A = t), (N = n), (R = y.size), (P = v.size), (T = Math.max(e - R - P, 0));
+    let { [d.OGo.PENDING_INCOMING]: e = 0, [d.OGo.PENDING_OUTGOING]: t = 0, [d.OGo.FRIEND]: n = 0 } = o().countBy(Object.values(g), (e) => e);
+    (A = t), (N = n), (P = y.size), (R = v.size), (T = Math.max(e - P - R, 0));
 }
 function D(e) {
     (g = {}),
@@ -113,10 +113,10 @@ function x(e) {
                 user: e.relationship.user
             });
 }
-function M(e) {
+function k(e) {
     (g = _({}, g)), delete g[e.relationship.id], null != E[e.relationship.id] && ((E = _({}, E)), delete E[e.relationship.id]), null != b[e.relationship.id] && ((b = _({}, b)), delete b[e.relationship.id]), null != I[e.relationship.id] && ((I = _({}, I)), delete I[e.relationship.id]), e.relationship.userIgnored || (O.delete(e.relationship.id), v.delete(e.relationship.id)), y.delete(e.relationship.id), w();
 }
-function k(e) {
+function M(e) {
     let { relationship: t } = e;
     (g = h(_({}, g), { [t.id]: t.type })), null == t.since ? delete b[t.id] : (b[t.id] = t.since), null == t.nickname ? delete E[t.id] : (E[t.id] = t.nickname), t.isSpamRequest ? y.add(t.id) : y.delete(t.id), null != S[t.id] && delete S[t.id], null == t.originApplicationId ? delete I[t.id] : (I[t.id] = t.originApplicationId), t.userIgnored ? (O.add(t.id), t.type === d.OGo.PENDING_INCOMING && v.add(t.id)) : (O.delete(t.id), v.delete(t.id)), w();
 }
@@ -133,7 +133,7 @@ function U(e) {
         isStranger: e.isStranger
     };
 }
-class G extends (r = o.ZP.Store) {
+class G extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(u.default);
     }
@@ -175,10 +175,10 @@ class G extends (r = o.ZP.Store) {
         return T;
     }
     getSpamCount() {
-        return R;
+        return P;
     }
     getPendingIgnoredCount() {
-        return P;
+        return R;
     }
     getOutgoingCount() {
         return A;
@@ -232,8 +232,8 @@ let B = new G(s.Z, {
     CONNECTION_OPEN: D,
     OVERLAY_INITIALIZE: L,
     RELATIONSHIP_ADD: x,
-    RELATIONSHIP_REMOVE: M,
-    RELATIONSHIP_UPDATE: k,
+    RELATIONSHIP_REMOVE: k,
+    RELATIONSHIP_UPDATE: M,
     RELATIONSHIP_PENDING_INCOMING_REMOVED: j,
     UPDATE_STRANGER_STATUS: U
 });

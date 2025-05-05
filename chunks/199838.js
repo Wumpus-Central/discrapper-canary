@@ -11,21 +11,21 @@ var r,
     I = a(485073),
     R = 'Object already initialized',
     d = i.TypeError,
-    A = i.WeakMap;
+    f = i.WeakMap;
 if (o || l.state) {
-    var f = l.state || (l.state = new A());
-    (f.get = f.get),
-        (f.has = f.has),
-        (f.set = f.set),
+    var A = l.state || (l.state = new f());
+    (A.get = A.get),
+        (A.has = A.has),
+        (A.set = A.set),
         (r = function (t, e) {
-            if (f.has(t)) throw new d(R);
-            return (e.facade = t), f.set(t, e), e;
+            if (A.has(t)) throw new d(R);
+            return (e.facade = t), A.set(t, e), e;
         }),
         (n = function (t) {
-            return f.get(t) || {};
+            return A.get(t) || {};
         }),
         (_ = function (t) {
-            return f.has(t);
+            return A.has(t);
         });
 } else {
     var p = u('state');

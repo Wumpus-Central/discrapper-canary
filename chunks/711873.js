@@ -17,14 +17,14 @@ var t = {
         arity: !0
     },
     r = 'function' == typeof Object.getOwnPropertySymbols;
-e.exports = function (e, i, a) {
+e.exports = function (e, i, o) {
     if ('string' != typeof i) {
-        var o = Object.getOwnPropertyNames(i);
-        r && (o = o.concat(Object.getOwnPropertySymbols(i)));
-        for (var s = 0; s < o.length; ++s)
-            if (!t[o[s]] && !n[o[s]] && (!a || !a[o[s]]))
+        var a = Object.getOwnPropertyNames(i);
+        r && (a = a.concat(Object.getOwnPropertySymbols(i)));
+        for (var s = 0; s < a.length; ++s)
+            if (!t[a[s]] && !n[a[s]] && (!o || !o[a[s]]))
                 try {
-                    e[o[s]] = i[o[s]];
+                    e[a[s]] = i[a[s]];
                 } catch (e) {}
     }
     return e;

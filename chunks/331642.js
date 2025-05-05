@@ -18,11 +18,13 @@ function _(e) {
     let { onSelect: t } = e,
         [n, l] = r.useState(!1),
         o = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
-        u = d.ZP.canUseCustomCallSounds(o);
-    function m(e) {
+        u = d.ZP.canUseCustomCallSounds(o),
+        m = r.useRef(null);
+    function _(e) {
         u && (l(!1), null == t || t(e));
     }
     return (0, i.jsx)(a.yRy, {
+        targetElementRef: m,
         shouldShow: n,
         position: 'left',
         onRequestClose: () => l(!1),
@@ -35,7 +37,7 @@ function _(e) {
                     guildId: null,
                     channel: null,
                     onClose: t,
-                    onSelect: m,
+                    onSelect: _,
                     gridNotice: u ? null : (0, i.jsx)(g.o, {}),
                     analyticsSource: 'call sounds edit setting'
                 })
@@ -72,6 +74,7 @@ function _(e) {
                 })({}, e)),
                 (r = r =
                     {
+                        ref: m,
                         onClick: () => {
                             l(!n);
                         },

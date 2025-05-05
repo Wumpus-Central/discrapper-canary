@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(15210),
     _ = n(43542),
     b = n(910200),
-    x = n(358595),
-    y = n(981631),
+    y = n(358595),
+    x = n(981631),
     E = n(388032),
     v = n(583136);
 function O(e) {
@@ -24,7 +24,7 @@ function O(e) {
         p = i.useRef(null),
         [f, g] = i.useState(!0),
         [O, C] = i.useState(!1),
-        S = t.state === y.r2o.ACCEPTING,
+        S = t.state === x.r2o.ACCEPTING,
         I = (0, o.e7)([u.Z], () => u.Z.useReducedMotion);
     i.useLayoutEffect(() => {
         var e, t;
@@ -47,7 +47,7 @@ function O(e) {
                 : {};
         }, [f, O, I]);
     return null == N
-        ? (0, r.jsx)(x.Z, {})
+        ? (0, r.jsx)(y.Z, {})
         : (0, r.jsxs)(s.P3F, {
               className: a()(v.guildInviteContainer, { [v.clickable]: O && f }),
               onClick: T,

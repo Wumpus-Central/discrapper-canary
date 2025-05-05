@@ -50,14 +50,14 @@ function i(t, e = 100, a = Infinity) {
                 } catch (t) {}
             let R = Array.isArray(a) ? [] : {},
                 d = 0,
-                A = (0, _.Sh)(a);
-            for (let e in A) {
-                if (!Object.prototype.hasOwnProperty.call(A, e)) continue;
+                f = (0, _.Sh)(a);
+            for (let e in f) {
+                if (!Object.prototype.hasOwnProperty.call(f, e)) continue;
                 if (d >= c) {
                     R[e] = '[MaxProperties ~]';
                     break;
                 }
-                let a = A[e];
+                let a = f[e];
                 (R[e] = t(e, a, I - 1, c, s)), d++;
             }
             return l(a), R;

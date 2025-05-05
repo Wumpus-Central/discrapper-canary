@@ -1,17 +1,17 @@
 n.d(t, {
     K2: () => l,
-    KW: () => a,
+    KW: () => o,
     Q5: () => c,
     o5: () => s,
     yW: () => u,
-    zd: () => o
+    zd: () => a
 });
 var r = n(524437),
     i = n(981631),
-    a = (function (e) {
+    o = (function (e) {
         return (e[(e.UNSET = 0)] = 'UNSET'), (e[(e.OFF = 1)] = 'OFF'), (e[(e.ON = 2)] = 'ON'), e;
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return (e.DARK = 'dark'), (e.LIGHT = 'light'), (e.NO_PREFERENCE = 'unknown'), e;
     })({});
 i.BRd.DARKER, i.BRd.LIGHT, i.BRd.DARKER;

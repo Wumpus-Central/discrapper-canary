@@ -9,17 +9,17 @@ function i(e) {
     let t = null,
         n = null;
     return function () {
-        for (var i = arguments.length, a = Array(i), o = 0; o < i; o++) a[o] = arguments[o];
-        return r(t, a) || (n = e(...a)), (t = a), n;
+        for (var i = arguments.length, o = Array(i), a = 0; a < i; a++) o[a] = arguments[a];
+        return r(t, o) || (n = e(...o)), (t = o), n;
     };
 }
-function a(e) {
+function o(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 5000,
         n = -1,
         r = null;
     return () => ((null == r || Date.now() >= n) && ((n = Date.now() + t), (r = e())), r);
 }
-function o(e) {
+function a(e) {
     for (var t in e) e.hasOwnProperty(t) && delete e[t];
 }
 function s(e) {
@@ -28,8 +28,8 @@ function s(e) {
 }
 n.d(t, {
     EF: () => r,
-    Ti: () => o,
-    ad: () => a,
+    Ti: () => a,
+    ad: () => o,
     ld: () => s,
     oH: () => i
 }),

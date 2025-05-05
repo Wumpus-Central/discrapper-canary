@@ -1,8 +1,8 @@
 n.d(t, { S: () => O });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(1561),
     l = n(761224),
     c = n(670596),
@@ -66,14 +66,14 @@ function y(e, t) {
     );
 }
 function O(e) {
-    let { color: t = 'default', label: n, checked: a, subtext: g, disabled: b, isFocused: O, menuItemProps: v, action: I, className: S, focusedClassName: T } = e,
+    let { color: t = 'default', label: n, checked: o, subtext: g, disabled: b, isFocused: O, menuItemProps: v, action: I, className: S, focusedClassName: T } = e,
         { onInteraction: A } = i.useContext(c.p),
         N = i.useRef(null),
         C = (0, f.Q3)('MenuCheckboxItem');
     i.useEffect(() => {
         O && (0, u.F)(N);
     }, [O]);
-    let R = i.useCallback(
+    let P = i.useCallback(
         (e) => {
             I(e), null == A || A({ type: c.U.CHECKBOX });
         },
@@ -85,17 +85,17 @@ function O(e) {
             E(
                 {
                     innerRef: N,
-                    className: o()(m.item, m.checkboxContainer, m.labelContainer, h._[t], S, {
+                    className: a()(m.item, m.checkboxContainer, m.labelContainer, h._[t], S, {
                         [m.disabled]: b,
                         [m.focused]: O,
                         [null != T ? T : '']: O
                     }),
-                    onClick: b ? void 0 : R
+                    onClick: b ? void 0 : P
                 },
                 v
             ),
             {
-                'aria-checked': a,
+                'aria-checked': o,
                 'aria-disabled': b,
                 children: [
                     (0, r.jsxs)('div', {
@@ -115,10 +115,10 @@ function O(e) {
                             ? (0, r.jsx)(d.FZ5, {
                                   shape: d.XZJ.Shapes.BOX,
                                   size: 20,
-                                  value: a,
+                                  value: o,
                                   disabled: b
                               })
-                            : a
+                            : o
                               ? (0, r.jsx)(p.Z, {
                                     className: m.icon,
                                     background: m.checkbox,

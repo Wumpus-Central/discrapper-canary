@@ -15,12 +15,12 @@ var r = n(255367),
 let g = i.memo(function (e) {
         let t,
             n,
-            { useChatFontScaling: i, hideEmoji: l, emoji: c, className: g, count: _, me: b, me_burst: x, burst_count: y, burst_colors: E, readOnly: v, isLurking: O, isGuest: j, isPendingMember: C, type: S, emojiSize: I } = e,
+            { useChatFontScaling: i, hideEmoji: l, emoji: c, className: g, count: _, me: b, me_burst: y, burst_count: x, burst_colors: E, readOnly: v, isLurking: O, isGuest: j, isPendingMember: C, type: S, emojiSize: I } = e,
             N = S === p.O.BURST,
-            T = (0, m.y4)(b, x, S),
+            T = (0, m.y4)(b, y, S),
             P = (0, d.v)(N && null != E ? E : []),
             A = i ? h : f,
-            w = N ? y : _,
+            w = N ? x : _,
             Z = (0, u.y)(w, m.aO),
             R = {};
         if (N && null != P) {
@@ -29,7 +29,7 @@ let g = i.memo(function (e) {
                 l = null != (k = (0, o.wK)(null != r ? r : '', i)) ? k : '';
             T && (R.borderColor = r), (R.background = l), (t = e), (n = e);
         }
-        let D = {
+        let L = {
             minWidth: Z,
             color: t,
             borderColor: n
@@ -50,7 +50,7 @@ let g = i.memo(function (e) {
                 }),
                 (0, r.jsx)('div', {
                     className: A.reactionCount,
-                    style: D,
+                    style: L,
                     children: w
                 })
             ]

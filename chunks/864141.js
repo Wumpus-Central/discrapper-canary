@@ -1,9 +1,9 @@
-n.d(t, { Z: () => P });
+n.d(t, { Z: () => R });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(481060),
     l = n(100527),
     c = n(906732),
@@ -64,7 +64,7 @@ function C(e, t) {
     }
     return n;
 }
-function R(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -75,9 +75,9 @@ function R(e, t) {
         e
     );
 }
-function P(e) {
+function R(e) {
     let { user: t, currentUser: n, voiceChannel: i, className: A, onClose: C } = e,
-        { themeType: P } = (0, h.z)(),
+        { themeType: R } = (0, h.z)(),
         { analyticsLocations: w } = (0, c.ZP)(l.Z.USER_PROFILE_VOICE_ACTIVITY_CARD),
         D = (0, _.Z)({
             display: 'voice',
@@ -90,16 +90,16 @@ function P(e) {
             userId: t.id,
             onAction: D
         }),
-        x = (0, o.e7)([u.Z], () => u.Z.getGuild(i.guild_id)),
-        M = (0, f.Z)(i),
-        { channelStatusEnabled: k } = (0, d.D)({ location: 'UserProfileVoiceActivityCard' }),
+        x = (0, a.e7)([u.Z], () => u.Z.getGuild(i.guild_id)),
+        k = (0, f.Z)(i),
+        { channelStatusEnabled: M } = (0, d.D)({ location: 'UserProfileVoiceActivityCard' }),
         j = () => (i.isDM() || i.isGroupDM() ? S.intl.string(S.t['9FaEzs']) : i.isGuildStageVoice() ? S.intl.string(S.t.QygGCA) : S.intl.string(S.t.msxteH)),
         U = () => {
             if (t.id !== n.id) return null;
             let e = i.isDM() || i.isGroupDM() ? S.intl.string(S.t['+DsWbW']) : S.intl.string(S.t.xOVEjY);
             return (0, r.jsx)(s.ua7, {
                 text: e,
-                children: (e) => (0, r.jsx)(s.d3s, R(N({}, e), { size: 'xxs' }))
+                children: (e) => (0, r.jsx)(s.d3s, P(N({}, e), { size: 'xxs' }))
             });
         },
         G = () =>
@@ -115,7 +115,7 @@ function P(e) {
         value: w,
         children: (0, r.jsxs)(m.Z, {
             ref: L,
-            className: a()(T.card, A),
+            className: o()(T.card, A),
             onAction: D,
             onClose: C,
             children: [
@@ -134,7 +134,7 @@ function P(e) {
                         className: T.content,
                         children: [
                             (0, r.jsx)(b.Z, {
-                                users: M,
+                                users: k,
                                 channel: i
                             }),
                             (0, r.jsxs)('div', {
@@ -146,21 +146,21 @@ function P(e) {
                                         onAction: D,
                                         onClose: C
                                     }),
-                                    k &&
+                                    M &&
                                         i.isGuildVoice() &&
                                         (0, r.jsx)(y.Z, {
                                             voiceChannel: i,
                                             onAction: D,
                                             onClose: C
                                         }),
-                                    P === I.lY.MODAL_V2 && G()
+                                    R === I.lY.MODAL_V2 && G()
                                 ]
                             }),
-                            P === I.lY.MODAL && G()
+                            R === I.lY.MODAL && G()
                         ]
                     })
                 }),
-                P !== I.lY.MODAL && P !== I.lY.MODAL_V2 && G()
+                R !== I.lY.MODAL && R !== I.lY.MODAL_V2 && G()
             ]
         })
     });

@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(505266),
     l = n(979554),
     c = n(442837),
@@ -30,14 +30,14 @@ var r = n(255367),
     A = n(960048),
     N = n(272008),
     C = n(113434),
-    R = n(497505),
-    P = n(918701),
+    P = n(497505),
+    R = n(918701),
     w = n(475595),
     D = n(566078),
     L = n(114732),
     x = n(46140),
-    M = n(981631),
-    k = n(675654),
+    k = n(981631),
+    M = n(675654),
     j = n(474936),
     U = n(388032),
     G = n(335626);
@@ -54,7 +54,7 @@ function B(e, t, n) {
         e
     );
 }
-function V(e) {
+function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -70,7 +70,7 @@ function V(e) {
     }
     return e;
 }
-function F(e, t) {
+function V(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -87,7 +87,7 @@ function Z(e, t) {
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : F(Object(t)).forEach(function (n) {
+            : V(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -99,7 +99,7 @@ function H() {
     return (0, d.Mn)(t).finally(d.si);
 }
 function Y() {
-    f.Z.open(M.oAB.PREMIUM, null, {});
+    f.Z.open(k.oAB.PREMIUM, null, {});
 }
 function W(e) {
     let { product: t, isFetching: n } = (0, g.T)(e),
@@ -109,12 +109,12 @@ function W(e) {
             let e = t.items.find((e) => e.type === l.Z.AVATAR_DECORATION);
             return null == e ? null : e;
         }, [t, n]),
-        a = () => (null == r ? (A.Z.addBreadcrumb({ message: 'Error saving avatar decoration; it is null' }), Promise.reject()) : ((0, d.cV)(r), H()));
-    return [r, a];
+        o = () => (null == r ? (A.Z.addBreadcrumb({ message: 'Error saving avatar decoration; it is null' }), Promise.reject()) : ((0, d.cV)(r), H()));
+    return [r, o];
 }
 function K(e) {
     var t;
-    let { transitionState: n, onClose: a, quest: l, location: d, reward: f, decoration: p, onUseNow: h, preview: m } = e,
+    let { transitionState: n, onClose: o, quest: l, location: d, reward: f, decoration: p, onUseNow: h, preview: m } = e,
         g = i.useRef(null),
         [b, y] = i.useState(null),
         O = i.useRef(new s.qA()),
@@ -125,17 +125,17 @@ function K(e) {
     i.useEffect(() => {
         S ||
             !0 === m ||
-            (0, N.QB)(l.id, R.y$.CROSS_PLATFORM, d)
+            (0, N.QB)(l.id, P.y$.CROSS_PLATFORM, d)
                 .then(() => C('claimed'))
                 .catch(() => C('error'));
     }, [l, d, S, m]);
-    let P = () => {
-            C('applying'), h().finally(a);
+    let R = () => {
+            C('applying'), h().finally(o);
         },
         w = !0 === m && null === p && (null == f ? void 0 : f.skuId) !== '',
         D = null == p && !0 !== m,
         x = null == I || D || w || 'loading' === A,
-        M = !v && !S && 'claimed' === A;
+        k = !v && !S && 'claimed' === A;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(s.O_, {
@@ -148,11 +148,11 @@ function K(e) {
                 children: (0, r.jsx)(u.Y0X, {
                     transitionState: n,
                     size: u.CgR.DYNAMIC,
-                    className: o()(G.rootContainer, { [G.rootContainerLoading]: x }),
+                    className: a()(G.rootContainer, { [G.rootContainerLoading]: x }),
                     hideShadow: !0,
                     children:
                         'error' === A
-                            ? (0, r.jsx)(L.Z, { onClose: a })
+                            ? (0, r.jsx)(L.Z, { onClose: o })
                             : x
                               ? (0, r.jsx)('div', {
                                     className: G.loadingIndicatorWrapper,
@@ -164,17 +164,17 @@ function K(e) {
                                     decoration: p,
                                     isSaving: 'applying' === A,
                                     useReducedMotion: v,
-                                    onClose: a,
-                                    onConfirm: P
+                                    onClose: o,
+                                    onConfirm: R
                                 })
                 })
             }),
-            M &&
+            k &&
                 (0, r.jsx)(E.Z, {
                     confettiTarget: g.current,
                     confettiCanvas: b,
-                    sprites: k.CA,
-                    colors: k.Br
+                    sprites: M.CA,
+                    colors: M.Br
                 })
         ]
     });
@@ -182,7 +182,7 @@ function K(e) {
 function z(e) {
     let { quest: t } = e,
         n = i.useMemo(() => (0, w.fh)(t, w.eC.LOGO_TYPE, 'dark'), [t]),
-        a = D.r.build(t.config).defaultRewardRedemptionInstructionsByPlatform[R.y$.CROSS_PLATFORM];
+        o = D.r.build(t.config).defaultRewardRedemptionInstructionsByPlatform[P.y$.CROSS_PLATFORM];
     return (0, r.jsxs)('div', {
         className: G.additionalRedemptionInstructions,
         children: [
@@ -194,17 +194,17 @@ function z(e) {
             (0, r.jsx)(u.Text, {
                 variant: 'text-sm/normal',
                 color: 'always-white',
-                children: y.Z.parse(a, !1, { allowLinks: !0 })
+                children: y.Z.parse(o, !1, { allowLinks: !0 })
             })
         ]
     });
 }
 function q(e) {
-    let { quest: t, user: n, decoration: i, isSaving: a, useReducedMotion: o, onClose: s, onConfirm: l } = e,
+    let { quest: t, user: n, decoration: i, isSaving: o, useReducedMotion: a, onClose: s, onConfirm: l } = e,
         c = (0, w.fh)(t, w.eC.HERO),
-        d = c.isAnimated && !o,
+        d = c.isAnimated && !a,
         f = (0, w.fh)(t, w.eC.REWARD).url,
-        _ = (0, P.f$)(t.config),
+        _ = (0, R.f$)(t.config),
         { fractionalState: p } = (0, m.Z)(),
         g = p === j.a$.FP_ONLY,
         E = (0, C.Qy)(t.config),
@@ -263,11 +263,11 @@ function q(e) {
                             children: E
                         }),
                         (0, r.jsx)(u.zxk, {
-                            submitting: a,
+                            submitting: o,
                             onClick: l,
                             children: U.intl.string(U.t.MAS7uL)
                         }),
-                        (0, P.zK)(t, x.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, r.jsx)(z, { quest: t }),
+                        (0, R.zK)(t, x.S7.ADDITIONAL_REDEMPTION_INSTRUCTIONS) && (0, r.jsx)(z, { quest: t }),
                         y &&
                             (0, r.jsx)(O.p, {
                                 className: G.upsell,
@@ -276,7 +276,7 @@ function q(e) {
                                         Y(), s();
                                     }
                                 }),
-                                buttonAnalyticsObject: { section: M.jXE.PERMADECOS_MARKETING_UPSELL }
+                                buttonAnalyticsObject: { section: k.jXE.PERMADECOS_MARKETING_UPSELL }
                             })
                     ]
                 })
@@ -286,12 +286,12 @@ function q(e) {
 }
 function Q(e) {
     var t, n;
-    let { quest: a, location: o, onClose: s, transitionState: l, preview: c } = e,
-        u = i.useMemo(() => (0, P.xn)(a.config), [a]),
+    let { quest: o, location: a, onClose: s, transitionState: l, preview: c } = e,
+        u = i.useMemo(() => (0, R.xn)(o.config), [o]),
         [d, f] = W(null != (n = null == u ? void 0 : u.skuId) ? n : null);
     return null == u
         ? null
-        : (null == (t = a.userStatus) ? void 0 : t.claimedAt) != null
+        : (null == (t = o.userStatus) ? void 0 : t.claimedAt) != null
           ? (0, r.jsx)(p.default, {
                 transitionState: l,
                 onCloseModal: H,
@@ -302,8 +302,8 @@ function Q(e) {
           : (0, r.jsx)(K, {
                 onClose: s,
                 transitionState: l,
-                quest: a,
-                location: o,
+                quest: o,
+                location: a,
                 reward: u,
                 decoration: d,
                 onUseNow: f,
@@ -312,11 +312,11 @@ function Q(e) {
 }
 function X(e, t, i) {
     (0, u.ZDy)(async () => {
-        let { default: a } = await Promise.resolve().then(n.bind(n, 920916));
+        let { default: o } = await Promise.resolve().then(n.bind(n, 920916));
         return (n) =>
             (0, r.jsx)(
-                a,
-                Z(V({}, n), {
+                o,
+                Z(F({}, n), {
                     quest: e,
                     location: t,
                     preview: i

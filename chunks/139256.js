@@ -1,6 +1,6 @@
 n.d(t, {
     $e: () => w,
-    $w: () => L,
+    $w: () => D,
     Og: () => U,
     ZY: () => M,
     sc: () => k,
@@ -24,8 +24,8 @@ var r = n(255367),
     g = n(506071),
     _ = n(203143),
     b = n(79390),
-    x = n(839963),
-    y = n(294608),
+    y = n(839963),
+    x = n(294608),
     E = n(65145),
     v = n(981631),
     O = n(388032),
@@ -161,18 +161,18 @@ function w(e) {
             canTapAnswers: l,
             answersInteraction: n
         })
-            .with({ answersInteraction: x.Y7.RADIO_BUTTONS }, () => ({
+            .with({ answersInteraction: y.Y7.RADIO_BUTTONS }, () => ({
                 ContainerComponent: T,
                 answerElementType: 1
             }))
-            .with({ answersInteraction: x.Y7.CHECKBOXES }, () => ({
+            .with({ answersInteraction: y.Y7.CHECKBOXES }, () => ({
                 ContainerComponent: N,
                 answerElementType: 2
             }))
             .with(
                 {
                     canTapAnswers: !0,
-                    answersInteraction: x.Y7.LIST
+                    answersInteraction: y.Y7.LIST
                 },
                 () => ({
                     ContainerComponent: I,
@@ -204,8 +204,8 @@ function w(e) {
 }
 function Z(e) {
     let { className: t, answer: n, children: l, hasSelectedAnyAnswer: o, isFirstAnswer: s, elementType: c } = e,
-        { channelId: u, messageId: d } = (0, y.pE)(),
-        p = (0, y.$B)(n.style),
+        { channelId: u, messageId: d } = (0, x.pE)(),
+        p = (0, x.$B)(n.style),
         m = !0 === n.isSelected,
         f = i.useCallback(() => {
             _.Z.handlePollAnswerTapped({
@@ -267,7 +267,7 @@ function k(e) {
         animated: n.animated
     });
 }
-function D(e, t) {
+function L(e, t) {
     return null != e
         ? (0, r.jsx)('div', {
               className: e,
@@ -275,16 +275,16 @@ function D(e, t) {
           })
         : t;
 }
-function L(e) {
+function D(e) {
     let { media: t, containerClassName: n, attachmentClassName: i, emojiClassName: l, fallback: a } = e,
-        { message: o } = (0, y.GF)();
+        { message: o } = (0, x.GF)();
     if (null != t.attachmentIds && t.attachmentIds.length > 0) {
         let e = o.attachments.find((e) => {
             var n;
             return e.id === (null == (n = t.attachmentIds) ? void 0 : n[0]);
         });
         if (null != e)
-            return D(
+            return L(
                 n,
                 (0, r.jsx)(R, {
                     className: i,
@@ -293,7 +293,7 @@ function L(e) {
             );
     }
     return null != t.emoji
-        ? D(
+        ? L(
               n,
               (0, r.jsx)(k, {
                   className: l,

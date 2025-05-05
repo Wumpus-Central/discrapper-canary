@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(442837),
     i = n(818083),
-    a = n(430824),
-    o = n(981631),
+    o = n(430824),
+    a = n(981631),
     s = n(987338);
 let l = (0, i.B)({
     kind: 'user',
@@ -30,13 +30,13 @@ function u(e) {
 }
 function d(e, t) {
     let n = c(t),
-        i = (0, r.e7)([a.Z], () => {
-            let t = a.Z.getGuild(e);
-            return null != t && t.hasFeature(o.oNc.ENHANCED_ROLE_COLORS);
+        i = (0, r.e7)([o.Z], () => {
+            let t = o.Z.getGuild(e);
+            return null != t && t.hasFeature(a.oNc.ENHANCED_ROLE_COLORS);
         });
     return n && i;
 }
 function f(e, t) {
-    let n = a.Z.getGuild(e);
-    return u(t) && null != n && n.hasFeature(o.oNc.ENHANCED_ROLE_COLORS);
+    let n = o.Z.getGuild(e);
+    return u(t) && null != n && n.hasFeature(a.oNc.ENHANCED_ROLE_COLORS);
 }

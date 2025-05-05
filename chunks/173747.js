@@ -1,8 +1,8 @@
 n.d(t, { Z: () => W }), n(388685), n(539854);
 var r,
     i = n(392711),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(846519),
     l = n(570140),
     c = n(274616),
@@ -37,12 +37,12 @@ let y = new Set(),
     A = 10 * m.Z.Millis.MINUTE,
     N = 6 * m.Z.Millis.HOUR,
     C = 10 * m.Z.Millis.MINUTE,
-    R = new s.V7();
-function P(e) {
-    R.start(e + Math.random() * A, c.o);
+    P = new s.V7();
+function R(e) {
+    P.start(e + Math.random() * A, c.o);
 }
 function w() {
-    return P(N), D();
+    return R(N), D();
 }
 function D() {
     if (!(0, E.Q)()) return !1;
@@ -66,32 +66,32 @@ function x(e, t) {
             i = p.Z.getState(e, t);
         null != i &&
             i.shouldPatch &&
-            (i.buildId !== n.id || !a().isEqual(i.manifestIds, r)) &&
+            (i.buildId !== n.id || !o().isEqual(i.manifestIds, r)) &&
             l.Z.wait(() => {
                 let i = f.Z.getApplication(e);
                 null != i ? (S.delete((0, g.Tu)(e, t)), (0, d.li)(i, t, n.id, r, !0)) : S.add((0, g.Tu)(e, t));
             });
     }
 }
-function M(e) {
+function k(e) {
     let { branchId: t } = e;
     y.add(t);
 }
-function k(e) {
+function M(e) {
     let { applicationId: t, branchId: n, locale: r, build: i } = e;
     y.delete(n);
-    let a = i.manifests.map((e) => {
+    let o = i.manifests.map((e) => {
             let { id: t } = e;
             return t;
         }),
-        o = i.id;
+        a = i.id;
     v.delete(n),
         (O[n] = {
-            id: o,
+            id: a,
             applicationId: t,
             branchId: n,
             locale: r,
-            manifestIds: a
+            manifestIds: o
         }),
         x(t, n);
 }
@@ -111,7 +111,7 @@ function B(e) {
     let { buildId: t } = e;
     null == I[t] && delete I[t];
 }
-function V(e) {
+function F(e) {
     let { branches: t } = e,
         n = {};
     for (let e in _.Z.libraryApplications) {
@@ -126,13 +126,13 @@ function V(e) {
         }
         T[t] = r;
     }
-    P(N);
+    R(N);
 }
-function F() {
-    P(C);
+function V() {
+    R(C);
 }
 function Z() {
-    R.stop();
+    P.stop();
 }
 function H(e) {
     let { entitlements: t } = e;
@@ -144,7 +144,7 @@ function H(e) {
         n.has(t.id) && (0, g.Je)(t) && l.Z.wait(() => u.l(t.id, t.branchId));
     }
 }
-class Y extends (r = o.ZP.Store) {
+class Y extends (r = a.ZP.Store) {
     initialize() {
         this.syncWith([_.Z], D), this.waitFor(p.Z, _.Z, f.Z);
     }
@@ -171,14 +171,14 @@ b(Y, 'displayName', 'ApplicationBuildStore');
 let W = new Y(l.Z, {
     CONNECTION_OPEN: w,
     GAMES_DATABASE_UPDATE: L,
-    APPLICATION_BUILD_FETCH_START: M,
-    APPLICATION_BUILD_FETCH_SUCCESS: k,
+    APPLICATION_BUILD_FETCH_START: k,
+    APPLICATION_BUILD_FETCH_SUCCESS: M,
     APPLICATION_BUILD_NOT_FOUND: j,
     APPLICATION_BUILD_SIZE_FETCH_START: U,
     APPLICATION_BUILD_SIZE_FETCH_SUCCESS: G,
     APPLICATION_BUILD_SIZE_FETCH_FAIL: B,
-    APPLICATION_BRANCHES_FETCH_SUCCESS: V,
-    APPLICATION_BRANCHES_FETCH_FAIL: F,
+    APPLICATION_BRANCHES_FETCH_SUCCESS: F,
+    APPLICATION_BRANCHES_FETCH_FAIL: V,
     CONNECTION_CLOSED: Z,
     LOGOUT: Z,
     SKU_PURCHASE_SUCCESS: H

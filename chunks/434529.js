@@ -2,17 +2,17 @@ function r(e) {
     return Math.max(Math.min(e, 1), 0);
 }
 function i(e, t) {
-    let { top: n, bottom: i, left: a, right: o } = e;
+    let { top: n, bottom: i, left: o, right: a } = e;
     return {
         top: null != n ? Math.floor(r(n) * t.height) : void 0,
-        left: null != a ? Math.floor(r(a) * t.width) : void 0,
+        left: null != o ? Math.floor(r(o) * t.width) : void 0,
         bottom: null != i ? Math.floor(r(i) * t.height) : void 0,
-        right: null != o ? Math.floor(r(o) * t.width) : void 0
+        right: null != a ? Math.floor(r(a) * t.width) : void 0
     };
 }
-function a(e, t) {
-    let { width: n, height: i, fixed: a = !1 } = e;
-    return a
+function o(e, t) {
+    let { width: n, height: i, fixed: o = !1 } = e;
+    return o
         ? {
               width: n,
               height: i
@@ -22,13 +22,13 @@ function a(e, t) {
               height: 'auto' === i ? i : Math.floor(r(i) * t.height)
           };
 }
-function o(e, t) {
-    let { top: n, bottom: i, left: a, right: o } = e;
+function a(e, t) {
+    let { top: n, bottom: i, left: o, right: a } = e;
     return {
         top: null != n ? r(n / t.height) : void 0,
-        left: null != a ? r(a / t.width) : void 0,
+        left: null != o ? r(o / t.width) : void 0,
         bottom: null != i ? r(i / t.height) : void 0,
-        right: null != o ? r(o / t.width) : void 0
+        right: null != a ? r(a / t.width) : void 0
     };
 }
 function s(e, t) {
@@ -39,12 +39,12 @@ function s(e, t) {
     };
 }
 function l(e, t, n, r, i) {
-    let { top: a, bottom: o, left: s, right: l } = e;
-    if ((null == a && null == o ? ((a = 0), (o = n - i)) : null == a && null != o ? (a = n - (o + i)) : null != a && (o = n - (a + i)), null == s && null == l ? ((s = 0), (l = t - r)) : null == s && null != l ? (s = t - (l + r)) : null == l && null != s && (l = t - (s + r)), null == a || null == o || null == s || null == l)) throw Error('Logically this can never happen based on our if/else statements');
+    let { top: o, bottom: a, left: s, right: l } = e;
+    if ((null == o && null == a ? ((o = 0), (a = n - i)) : null == o && null != a ? (o = n - (a + i)) : null != o && (a = n - (o + i)), null == s && null == l ? ((s = 0), (l = t - r)) : null == s && null != l ? (s = t - (l + r)) : null == l && null != s && (l = t - (s + r)), null == o || null == a || null == s || null == l)) throw Error('Logically this can never happen based on our if/else statements');
     return {
-        top: a,
+        top: o,
         left: s,
-        bottom: o,
+        bottom: a,
         right: l
     };
 }
@@ -78,12 +78,12 @@ function u(e) {
 }
 function d(e, t, n) {
     e = i(e, n);
-    let { width: r, height: o } = a(t, n);
-    return (r = 'string' == typeof r ? 0 : r), (o = 'string' == typeof o ? 0 : o), l(e, n.width, n.height, r, o);
+    let { width: r, height: a } = o(t, n);
+    return (r = 'string' == typeof r ? 0 : r), (a = 'string' == typeof a ? 0 : a), l(e, n.width, n.height, r, a);
 }
 function f(e, t, n) {
     let { top: r, left: i } = e,
-        { x: a, y: d } =
+        { x: o, y: d } =
             arguments.length > 3 && void 0 !== arguments[3]
                 ? arguments[3]
                 : {
@@ -92,13 +92,13 @@ function f(e, t, n) {
                   },
         { width: f, height: _ } = t;
     return [
-        o(
+        a(
             c(
                 u(
                     l(
                         {
                             top: r + d,
-                            left: i + a,
+                            left: i + o,
                             bottom: void 0,
                             right: void 0
                         },
@@ -116,7 +116,7 @@ function f(e, t, n) {
 }
 function _(e, t, n) {
     let { top: r, right: i } = e,
-        { x: a, y: d } =
+        { x: o, y: d } =
             arguments.length > 3 && void 0 !== arguments[3]
                 ? arguments[3]
                 : {
@@ -125,7 +125,7 @@ function _(e, t, n) {
                   },
         { width: f, height: _ } = t;
     return [
-        o(
+        a(
             c(
                 u(
                     l(
@@ -133,7 +133,7 @@ function _(e, t, n) {
                             top: r + d,
                             left: void 0,
                             bottom: void 0,
-                            right: i - a
+                            right: i - o
                         },
                         n.width,
                         n.height,
@@ -162,11 +162,11 @@ n.d(t, {
     Ox: () => s,
     PY: () => l,
     R: () => c,
-    jL: () => o,
+    jL: () => a,
     o4: () => f,
     ou: () => u,
     uq: () => _,
     vS: () => d,
-    w_: () => a
+    w_: () => o
 }),
     n(415506);

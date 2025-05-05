@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(442837),
     i = n(592125),
-    a = n(430824),
-    o = n(496675),
+    o = n(430824),
+    a = n(496675),
     s = n(594174),
     l = n(979651),
     c = n(934415),
@@ -18,12 +18,12 @@ var r = n(442837),
     })({});
 function p(e) {
     var t, n, r;
-    let { userId: i, activity: a, application: o, channelId: s, currentUser: l, isActivitiesEnabledForCurrentPlatform: u, ChannelStore: _, VoiceStateStore: p, PermissionStore: h, GuildStore: m } = e;
+    let { userId: i, activity: o, application: a, channelId: s, currentUser: l, isActivitiesEnabledForCurrentPlatform: u, ChannelStore: _, VoiceStateStore: p, PermissionStore: h, GuildStore: m } = e;
     if (null == i) return 8;
-    if ((null == l ? void 0 : l.nsfwAllowed) === !1 && (null == o || null == (t = o.embeddedActivityConfig) ? void 0 : t.requires_age_gate) === !0) return 7;
+    if ((null == l ? void 0 : l.nsfwAllowed) === !1 && (null == a || null == (t = a.embeddedActivityConfig) ? void 0 : t.requires_age_gate) === !0) return 7;
     if (!u) return 5;
-    if (!(0, d.Z)(null == o || null == (n = o.embeddedActivityConfig) ? void 0 : n.supported_platforms)) return 6;
-    let g = null != s ? s : null == (r = p.getVoiceStateForSession(i, null == a ? void 0 : a.session_id)) ? void 0 : r.channelId;
+    if (!(0, d.Z)(null == a || null == (n = a.embeddedActivityConfig) ? void 0 : n.supported_platforms)) return 6;
+    let g = null != s ? s : null == (r = p.getVoiceStateForSession(i, null == o ? void 0 : o.session_id)) ? void 0 : r.channelId;
     if (null == g) return 4;
     let E = _.getChannel(s);
     if (null == E) return 4;
@@ -48,7 +48,7 @@ function h(e) {
         f = (0, u.z)(null != c ? c : void 0),
         _ = (0, r.e7)([s.default], () => s.default.getCurrentUser());
     return (0, r.e7)(
-        [i.Z, l.Z, o.Z, a.Z],
+        [i.Z, l.Z, a.Z, o.Z],
         () =>
             p({
                 userId: t,
@@ -59,8 +59,8 @@ function h(e) {
                 isActivitiesEnabledForCurrentPlatform: f,
                 ChannelStore: i.Z,
                 VoiceStateStore: l.Z,
-                PermissionStore: o.Z,
-                GuildStore: a.Z
+                PermissionStore: a.Z,
+                GuildStore: o.Z
             }),
         [n, d, c, _, f, t]
     );

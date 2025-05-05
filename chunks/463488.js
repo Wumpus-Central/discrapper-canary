@@ -3,8 +3,8 @@ e.exports = function (e) {
         n = /[a-zA-Z]\w*/,
         r = ['as', 'break', 'class', 'construct', 'continue', 'else', 'for', 'foreign', 'if', 'import', 'in', 'is', 'return', 'static', 'var', 'while'],
         i = ['true', 'false', 'null'],
-        a = ['this', 'super'],
-        o = ['Bool', 'Class', 'Fiber', 'Fn', 'List', 'Map', 'Null', 'Num', 'Object', 'Range', 'Sequence', 'String', 'System'],
+        o = ['this', 'super'],
+        a = ['Bool', 'Class', 'Fiber', 'Fn', 'List', 'Map', 'Null', 'Num', 'Object', 'Range', 'Sequence', 'String', 'System'],
         s = ['-', '~', /\*/, '%', /\.\.\./, /\.\./, /\+/, '<<', '>>', '>=', '<=', '<', '>', /\^/, /!=/, /!/, /\bis\b/, '==', '&&', '&', /\|\|/, /\|/, /\?:/, '='],
         l = {
             relevance: 0,
@@ -71,7 +71,7 @@ e.exports = function (e) {
             relevance: 0,
             match: /\b[A-Z]+[a-z]+([A-Z]+[a-z]+)*/,
             scope: 'title.class',
-            keywords: { _: o }
+            keywords: { _: a }
         },
         m = e.C_NUMBER_MODE,
         g = {
@@ -110,7 +110,7 @@ e.exports = function (e) {
             ]
         };
     b.contains.push(y);
-    let O = [...r, ...a, ...i],
+    let O = [...r, ...o, ...i],
         v = {
             relevance: 0,
             match: t.concat('\\b(?!', O.join('|'), '\\b)', /[a-zA-Z_]\w*(?:[?!]|\b)/),
@@ -137,7 +137,7 @@ e.exports = function (e) {
         name: 'Wren',
         keywords: {
             keyword: r,
-            'variable.language': a,
+            'variable.language': o,
             literal: i
         },
         contains: [I, m, y, f, E, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE, h, u, g, c, l, d, p, _, v]

@@ -1,17 +1,17 @@
-t.d(n, { r: () => u }), t(49124);
+t.d(n, { r: () => c }), t(49124);
 var r = t(255367);
 t(73800);
 var l = t(481060),
     i = t(823379),
-    c = t(312539);
-function u(e) {
-    let { type: n, value: t, children: u } = e;
+    u = t(312539);
+function c(e) {
+    let { type: n, value: t, children: c } = e;
     switch (n) {
         case 'normal':
             return (0, r.jsx)(l.eee, {
                 href: t.url,
                 title: t.title,
-                children: u
+                children: c
             });
         case 'mention':
             switch (t.type) {
@@ -20,7 +20,7 @@ function u(e) {
                     let {
                         value: { guild_id: o, channel_id: a, message_id: d }
                     } = t;
-                    return (0, r.jsx)(c.d, {
+                    return (0, r.jsx)(u.d, {
                         channelId: a,
                         guildId: o,
                         messageId: d

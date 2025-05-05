@@ -1,11 +1,11 @@
 n.d(t, {
-    G: () => a,
+    G: () => o,
     v: () => i
 });
 var r = n(708644),
     i = (0, r.HP)(function () {
         return /firefox/i.test(navigator.userAgent);
     }),
-    a = (0, r.HP)(function () {
+    o = (0, r.HP)(function () {
         return !!window.safari;
     });

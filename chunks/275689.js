@@ -1,4 +1,4 @@
-a.d(e, { s: () => f });
+a.d(e, { s: () => A });
 var r = a(394798),
     n = a(101284),
     _ = a(370336),
@@ -12,8 +12,8 @@ var r = a(394798),
     I = a(305625),
     R = a(966497),
     d = a(241225),
-    A = a(881243);
-class f {
+    f = a(881243);
+class A {
     constructor(t = {}) {
         (this._traceId = t.traceId || (0, r.DM)()),
             (this._spanId = t.spanId || (0, r.DM)().substring(16)),
@@ -120,12 +120,12 @@ class f {
                   })((0, s.uE)([this], t))
                 : (c.X && o.kg.log('[Tracing] Discarding standalone span because its trace was not chosen to be sampled.'), t && t.recordDroppedEvent('sample_rate', 'span')));
         let e = this._convertSpanToTransaction();
-        e && ((0, A.I1)(this).scope || (0, i.nZ)()).captureEvent(e);
+        e && ((0, f.I1)(this).scope || (0, i.nZ)()).captureEvent(e);
     }
     _convertSpanToTransaction() {
         if (!N((0, u.XU)(this))) return;
         this._name || (c.X && o.kg.warn('Transaction has no name, falling back to `<unlabeled transaction>`.'), (this._name = '<unlabeled transaction>'));
-        let { scope: t, isolationScope: e } = (0, A.I1)(this),
+        let { scope: t, isolationScope: e } = (0, f.I1)(this),
             a = (t || (0, i.nZ)()).getClient() || (0, i.s3)();
         if (!0 !== this._sampled) {
             c.X && o.kg.log('[Tracing] Discarding transaction because its trace was not chosen to be sampled.'), a && a.recordDroppedEvent('sample_rate', 'transaction');
@@ -134,7 +134,7 @@ class f {
         let r = (0, u.Dp)(this)
                 .filter((t) => {
                     var e;
-                    return t !== this && !((e = t) instanceof f && e.isStandaloneSpan());
+                    return t !== this && !((e = t) instanceof A && e.isStandaloneSpan());
                 })
                 .map((t) => (0, u.XU)(t))
                 .filter(N),

@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(841762),
     _ = n(336197),
     b = n(406432),
-    x = n(348238),
-    y = n(38267),
+    y = n(348238),
+    x = n(38267),
     E = n(884902),
     v = n(670188),
     O = n(695346),
@@ -32,7 +32,7 @@ var r = n(255367),
     Z = n(388032),
     R = n(70249),
     k = n(527455);
-function D(e) {
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,7 +57,7 @@ function D(e) {
     }
     return e;
 }
-function L(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -79,8 +79,8 @@ function M(e) {
     var t, n, l;
     let { embedUrl: M, message: U, channel: F } = e,
         B = (0, P.J)(M, U),
-        { setPopout: G } = (0, y.Z)(U.id, w.d$),
-        H = (0, x.qo)(U, F, G, !0),
+        { setPopout: G } = (0, x.Z)(U.id, w.d$),
+        H = (0, y.qo)(U, F, G, !0),
         V = O.QK.useSetting(),
         z = (0, N.n)(),
         [W, K] = i.useState(!1),
@@ -218,7 +218,7 @@ function M(e) {
                                             onMouseLeave: ep,
                                             children: (0, r.jsx)(
                                                 u.qEK,
-                                                L(D({}, e), {
+                                                D(L({}, e), {
                                                     size: u.EFr.SIZE_40,
                                                     src: ed,
                                                     'aria-label': Z.intl.string(Z.t.KXz3XF),
@@ -278,7 +278,7 @@ function M(e) {
                                                                   children: (e) =>
                                                                       (0, r.jsx)(
                                                                           u.rz2,
-                                                                          L(D({}, e), {
+                                                                          D(L({}, e), {
                                                                               name: B.authorName,
                                                                               color: ee,
                                                                               roleColors: er,

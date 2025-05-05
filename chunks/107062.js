@@ -1,8 +1,8 @@
 n.d(t, { ZP: () => D }), n(804061), n(704826), n(35282);
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(481060),
+    o = n(442837),
+    a = n(481060),
     s = n(456100),
     l = n(620662),
     c = n(841784),
@@ -52,27 +52,27 @@ function C(e) {
     }
     return e;
 }
-let R = (e, t) =>
+let P = (e, t) =>
         A.intl.formatToPlainString(A.t.tAwI1t, {
             username: t.username,
             activity: e.extra.activity_name
         }),
-    P = (e, t, n) => {
+    R = (e, t, n) => {
         let r = A.t['bES+y8'],
             i = m.ZP.getName(t.guild_id, t.id, n),
-            a = e.extra.activity_name;
+            o = e.extra.activity_name;
         return A.intl
             .formatToMarkdownString(r, {
-                gameName: a,
+                gameName: o,
                 userName: i
             })
             .replaceAll('*', '');
     },
     w = (e) => {
         let { entry: t, channel: n, users: r, countOthers: i } = e,
-            a = A.t['7j/5mp'];
+            o = A.t['7j/5mp'];
         return A.intl
-            .formatToMarkdownString(a, {
+            .formatToMarkdownString(o, {
                 gameName: t.extra.activity_name,
                 user1: m.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, r[0]),
                 user2: m.ZP.getName(null == n ? void 0 : n.guild_id, null == n ? void 0 : n.id, r[1]),
@@ -86,10 +86,10 @@ let R = (e, t) =>
                 entry: n,
                 showCoverImage: !1
             }),
-            { user: x, details: M, activity: k, embeddedActivity: j } = (0, S.n)(n),
+            { user: x, details: k, activity: M, embeddedActivity: j } = (0, S.n)(n),
             { primaryColor: U, secondaryColor: G } = (0, O.Z)(null == L ? void 0 : L.src),
-            B = (0, a.e7)([p.default], () => p.default.locale),
-            { displayParticipants: V, participant1: F, participant2: Z, numOtherParticipants: H } = (0, E.Z)(n, 3),
+            B = (0, o.e7)([p.default], () => p.default.locale),
+            { displayParticipants: F, participant1: V, participant2: Z, numOtherParticipants: H } = (0, E.Z)(n, 3),
             Y = () => {
                 d.__(f._b.TEXT, _.Ie.NORMAL, { applicationId: n.extra.application_id });
             },
@@ -101,21 +101,21 @@ let R = (e, t) =>
                             ? w({
                                   entry: n,
                                   channel: t,
-                                  users: [F, Z],
+                                  users: [V, Z],
                                   countOthers: H
                               })
-                            : P(n, t, x);
+                            : R(n, t, x);
                     return (0, y.C4)({
                         entry: n,
                         applicationImageSrc: null == L ? void 0 : L.src,
-                        avatarSrcs: V.map((e) => e.getAvatarURL(t.guild_id, 128)),
+                        avatarSrcs: F.map((e) => e.getAvatarURL(t.guild_id, 128)),
                         description: r,
                         timestamp: (0, b.yh)(n, B),
                         colors: [U, G],
                         channelId: e
                     });
                 },
-                [null == L ? void 0 : L.src, t, V, n, B, H, F, Z, U, G, x]
+                [null == L ? void 0 : L.src, t, F, n, B, H, V, Z, U, G, x]
             ),
             { enabled: K } = s.c.useExperiment({ location: 'MemberListAcitivtyContentPopout' }, { autoTrackExposure: !0 });
         if (null == x) return null;
@@ -127,7 +127,7 @@ let R = (e, t) =>
                 channel: t,
                 userDescription: (0, b.kr)(n) ? A.t.vPg1JS : A.t.rPqqtr,
                 title: n.extra.activity_name,
-                subtitle: M,
+                subtitle: k,
                 badges: z,
                 entry: n,
                 showCoverImage: !1,
@@ -135,16 +135,16 @@ let R = (e, t) =>
                 onClickSubtitle: D ? void 0 : Y,
                 onClickThumbnail: D ? void 0 : Y
             }),
-            Q = (0, l.Z)(k, T.xjy.JOIN) || (0, c.Z)(k),
+            Q = (0, l.Z)(M, T.xjy.JOIN) || (0, c.Z)(M),
             X = Q
                 ? (0, r.jsx)(u.Z, {
                       embeddedActivity: j,
-                      activity: k,
+                      activity: M,
                       user: x,
-                      ButtonComponent: (e) => (0, r.jsx)(I.Ll, C({ IconComponent: o.YVR }, e))
+                      ButtonComponent: (e) => (0, r.jsx)(I.Ll, C({ IconComponent: a.YVR }, e))
                   })
                 : null,
-            J = K ? o.iWm : o.jje,
+            J = K ? a.iWm : a.jje,
             $ = D
                 ? null
                 : (0, r.jsx)(I.Ll, {
@@ -163,7 +163,7 @@ let R = (e, t) =>
                         user: x,
                         channel: t,
                         generateReactionImage: W,
-                        reactionImageAltText: R(n, x),
+                        reactionImageAltText: P(n, x),
                         entry: n,
                         buttons: ee
                     })

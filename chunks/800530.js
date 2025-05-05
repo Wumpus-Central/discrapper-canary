@@ -5,11 +5,11 @@ n.d(t, {
     EY: () => v,
     I5: () => g,
     JQ: () => C,
-    RY: () => y,
+    RY: () => x,
     Sv: () => E,
     TX: () => N,
     ZW: () => O,
-    bK: () => x,
+    bK: () => y,
     n0: () => _,
     o6: () => P,
     oE: () => I,
@@ -57,8 +57,8 @@ Object.freeze({
     THANKS: d.jXE.APPEAL_INGESTION_THANKS,
     SPAM: d.jXE.APPEAL_INGESTION_SPAM
 });
-var x = (((a = {})[(a.DIDNT_VIOLATE_POLICY = 0)] = 'DIDNT_VIOLATE_POLICY'), (a[(a.TOO_STRICT_UNFAIR = 1)] = 'TOO_STRICT_UNFAIR'), (a[(a.DONT_AGREE_PENALTY = 2)] = 'DONT_AGREE_PENALTY'), (a[(a.SOMETHING_ELSE = 3)] = 'SOMETHING_ELSE'), a);
-let y = [0, 1, 2, 3],
+var y = (((a = {})[(a.DIDNT_VIOLATE_POLICY = 0)] = 'DIDNT_VIOLATE_POLICY'), (a[(a.TOO_STRICT_UNFAIR = 1)] = 'TOO_STRICT_UNFAIR'), (a[(a.DONT_AGREE_PENALTY = 2)] = 'DONT_AGREE_PENALTY'), (a[(a.SOMETHING_ELSE = 3)] = 'SOMETHING_ELSE'), a);
+let x = [0, 1, 2, 3],
     E = 372,
     v = 279,
     O = { impression_group: u.ImpressionGroups.APPEAL_INGESTION };

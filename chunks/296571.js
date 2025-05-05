@@ -17,7 +17,7 @@ function d(e) {
             var e;
             return a.Z.getChannel(null == (e = n.messageReference) ? void 0 : e.channel_id);
         }),
-        x = c.intl.format(c.t.cZ9Uf3, {
+        y = c.intl.format(c.t.cZ9Uf3, {
             actorName: g.nick,
             actorHook: _,
             threadName: null != (t = null == b ? void 0 : b.name) ? t : n.content,
@@ -35,6 +35,6 @@ function d(e) {
         }),
         timestamp: n.timestamp,
         compact: d,
-        children: x
+        children: y
     });
 }

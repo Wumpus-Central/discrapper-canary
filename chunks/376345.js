@@ -11,14 +11,14 @@ var r = a(688619),
     u = a(211468);
 let { Themes: I } = l.V,
     { SemanticColors: R, RawColors: d } = i.V,
-    { Shadows: A } = s.V,
-    { Spacing: f } = E.V,
+    { Shadows: f } = s.V,
+    { Spacing: A } = E.V,
     p = Symbol('semanticColor'),
     N = {
         themes: I,
         colors: o()(R, (t, e) => ({ [p]: e })),
         unsafe_rawColors: d,
-        shadows: o()(A, (t) => {
+        shadows: o()(f, (t) => {
             function e(e) {
                 return { resolve: (a, r) => e(t[a].nativeStyles, r) };
             }
@@ -31,7 +31,7 @@ let { Themes: I } = l.V,
             };
         }),
         radii: c.w,
-        spacing: f,
+        spacing: A,
         internal: {
             isSemanticColor: (t) => 'object' == typeof t && null !== t && p in t,
             getSemanticColorName: (t) => t[p],
@@ -58,8 +58,8 @@ let { Themes: I } = l.V,
                     }
                 }
                 let l = null != (r = null == a ? void 0 : a.contrast) ? r : 1,
-                    A = null != (_ = null == a ? void 0 : a.saturation) ? _ : 1;
-                return (A < 1 && (s = (0, u.dO)(s, i, A)), 1 !== l && (s = (0, u.pq)(s, i, t, l)), 1 === E) ? s : n()(s).alpha(E).hex();
+                    f = null != (_ = null == a ? void 0 : a.saturation) ? _ : 1;
+                return (f < 1 && (s = (0, u.dO)(s, i, f)), 1 !== l && (s = (0, u.pq)(s, i, t, l)), 1 === E) ? s : n()(s).alpha(E).hex();
             },
             adjustColorSaturation: (t, e, a) => (0, u.dO)(t, a, e),
             adjustColorContrast: (t, e, a, r) => (0, u.pq)(t, a, r, e)

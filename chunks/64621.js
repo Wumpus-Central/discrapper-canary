@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T }), n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(704215),
+    o = n(442837),
+    a = n(704215),
     s = n(481060),
     l = n(980591),
     c = n(605236),
@@ -25,23 +25,23 @@ function T(e) {
     let { sourceType: t, children: n, user: T, targetElementRef: A } = e,
         { themeType: N } = (0, h.z)(),
         C = (0, p.T)({ location: 'UserProfilePopoutInteractionCoachmark' }),
-        R = (0, a.e7)([_.default], () => {
+        P = (0, o.e7)([_.default], () => {
             var e;
             return (null == (e = _.default.getCurrentUser()) ? void 0 : e.id) === T.id;
         }),
-        P = (0, a.e7)([f.Z], () =>
+        R = (0, o.e7)([f.Z], () =>
             f.Z.findActivity(T.id, (e) => {
                 let { type: t } = e;
                 return t === g.IIU.CUSTOM_STATUS;
             })
         ),
-        w = () => !R && N === m.lY.POPOUT && (t === m.n_.AVATAR ? C && null == P : t === m.n_.STATUS ? C : t === m.n_.ACTIVITY && !C),
+        w = () => !P && N === m.lY.POPOUT && (t === m.n_.AVATAR ? C && null == R : t === m.n_.STATUS ? C : t === m.n_.ACTIVITY && !C),
         [D, L] = i.useState(!1);
     (0, l.Z)(() => L(!0), w() ? v : null);
     let {
             asset: x,
-            assetClassName: M,
-            className: k,
+            assetClassName: k,
+            className: M,
             content: j,
             header: U,
             spacing: G,
@@ -54,7 +54,7 @@ function T(e) {
                   content: E.intl.string(E.t.HEGlIC),
                   header: E.intl.string(E.t['R/RaKy']),
                   spacing: S,
-                  dismissibleContentType: o.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ALL
+                  dismissibleContentType: a.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ALL
               }
             : {
                   asset: y,
@@ -63,11 +63,11 @@ function T(e) {
                   content: E.intl.string(E.t.LQ32TU),
                   header: E.intl.string(E.t.XDBiPT),
                   spacing: I,
-                  dismissibleContentType: o.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ACTIVITY
+                  dismissibleContentType: a.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK_ACTIVITY
               },
-        V = (0, c.wE)(o.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK),
-        F = D && !V ? [B] : [],
-        [Z, H] = (0, u.US)(F);
+        F = (0, c.wE)(a.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK),
+        V = D && !F ? [B] : [],
+        [Z, H] = (0, u.US)(V);
     return (0, r.jsx)(s.yRy, {
         targetElementRef: A,
         align: 'center',
@@ -81,11 +81,11 @@ function T(e) {
                     null == i || i(e);
                 },
                 children: (0, r.jsx)(d.ZP, {
-                    className: k,
+                    className: M,
                     asset: (0, r.jsx)('img', {
                         alt: '',
                         src: x,
-                        className: M
+                        className: k
                     }),
                     buttonCTA: E.intl.string(E.t['+IrDzM']),
                     buttonLayout: d._F.STACKED,

@@ -9,17 +9,17 @@ n.d(t, {
     N8: () => _,
     NN: () => l,
     bS: () => r,
-    e9: () => a,
+    e9: () => o,
     lv: () => f,
-    t4: () => o,
+    t4: () => a,
     u$: () => h
 });
 var r = (function (e) {
     return (e[(e.POPULAR = 0)] = 'POPULAR'), (e[(e.ALPHABETICAL = 1)] = 'ALPHABETICAL'), e;
 })({});
 let i = 'app-launcher-element',
-    a = 'app-launcher-modal',
-    o = 'app-launcher-entrypoint',
+    o = 'app-launcher-modal',
+    a = 'app-launcher-entrypoint',
     s = 'app-launcher-app-dm-entrypoint',
     l = 'app-launcher-app-details-more-menu',
     c = 'app-launcher-profile-friend-activity-entry',

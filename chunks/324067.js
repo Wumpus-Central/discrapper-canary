@@ -1,8 +1,8 @@
-n.d(t, { Z: () => k }), n(539854), n(388685);
+n.d(t, { Z: () => M }), n(539854), n(388685);
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(740504),
+    o = n(570140),
+    a = n(740504),
     s = n(853856),
     l = n(314897),
     c = n(592125),
@@ -57,7 +57,7 @@ function y(e) {
         }),
         t[u.sH].forEach(r),
         t[u.Zb].forEach(r),
-        (0, o.Z)(n._categories, n).forEach(b),
+        (0, a.Z)(n._categories, n).forEach(b),
         (h[e] = n),
         n
     );
@@ -103,20 +103,20 @@ function C(e) {
     let { guildId: t } = e;
     (h[t] = void 0), t === p && y(t);
 }
-function R(e, t) {
+function P(e, t) {
     if (((m = t), null == e || null == e.getGuildId())) return !1;
     let n = e.getGuildId();
     return null != n && ((h[n] = void 0), n === p && y(n), !0);
 }
-function P(e) {
+function R(e) {
     let { channelId: t } = e;
-    return null == t && null != m ? R(c.Z.getChannel(m), null) : R(c.Z.getChannel(t), t);
+    return null == t && null != m ? P(c.Z.getChannel(m), null) : P(c.Z.getChannel(t), t);
 }
 function w(e) {
     let { voiceStates: t } = e;
     return t.reduce((e, t) => {
         let { channelId: n, sessionId: r } = t;
-        return l.default.getSessionId() !== r ? e : R(c.Z.getChannel(n), n) || e;
+        return l.default.getSessionId() !== r ? e : P(c.Z.getChannel(n), n) || e;
     }, !1);
 }
 function D(e) {
@@ -131,7 +131,7 @@ function x(e) {
     let t = h[e];
     return null != t ? t : y(e);
 }
-class M extends (r = i.ZP.Store) {
+class k extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(u.ZP, d.Z, l.default, c.Z, s.Z), this.syncWith([s.Z], L);
     }
@@ -139,8 +139,8 @@ class M extends (r = i.ZP.Store) {
         return null != e ? x(e) : E;
     }
 }
-_(M, 'displayName', 'GuildCategoryStore');
-let k = new M(a.Z, {
+_(k, 'displayName', 'GuildCategoryStore');
+let M = new k(o.Z, {
     CHANNEL_SELECT: D,
     CONNECTION_OPEN: O,
     OVERLAY_INITIALIZE: O,
@@ -158,6 +158,6 @@ let k = new M(a.Z, {
     GUILD_ROLE_DELETE: C,
     IMPERSONATE_UPDATE: C,
     IMPERSONATE_STOP: C,
-    VOICE_CHANNEL_SELECT: P,
+    VOICE_CHANNEL_SELECT: R,
     VOICE_STATE_UPDATES: w
 });

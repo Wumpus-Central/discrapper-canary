@@ -20,7 +20,7 @@ function f(e) {
         : m.intl.format(l, { username: t });
 }
 function h(e) {
-    var t, n, r, h, g, _, b, x, y, E, v, O, j, C, S;
+    var t, n, r, h, g, _, b, y, x, E, v, O, j, C, S;
     let { item: I, renderApplication: N } = e,
         T = null != (r = null == (t = I.other_user) ? void 0 : t.id) ? r : p.lds,
         P = u.ZP.getName(s.default.getUser(null == (n = I.other_user) ? void 0 : n.id)),
@@ -29,7 +29,7 @@ function h(e) {
         case d.O7.FRIEND_REQUESTS_GROUPED:
             let w = u.ZP.getName(s.default.getUser(null == (g = I.other_users) || null == (h = g[0]) ? void 0 : h.id)),
                 Z = u.ZP.getName(s.default.getUser(null == (b = I.other_users) || null == (_ = b[1]) ? void 0 : _.id)),
-                R = Math.max((null != (y = null == (x = I.other_users) ? void 0 : x.length) ? y : 0) - 2, 0);
+                R = Math.max((null != (x = null == (y = I.other_users) ? void 0 : y.length) ? x : 0) - 2, 0);
             return m.intl.format(m.t.g5xyIC, {
                 user: w,
                 user2: Z,
@@ -41,11 +41,11 @@ function h(e) {
         case d.DY.FRIEND_SUGGESTION_CREATED:
             return o.Z.getRelationshipType(T), p.OGo.PENDING_OUTGOING, null != (O = I.body) ? O : '';
         case d.DY.GUILD_SCHEDULED_EVENT_STARTED:
-            let D = I.guild_scheduled_event_id,
-                L = null != D ? l.ZP.getGuildScheduledEvent(D) : null,
-                M = null == L ? void 0 : L.name,
-                U = null == (j = a.Z.getGuild(null == L ? void 0 : L.guild_id)) ? void 0 : j.name,
-                F = (0, l.Z2)(null != L ? L : void 0);
+            let L = I.guild_scheduled_event_id,
+                D = null != L ? l.ZP.getGuildScheduledEvent(L) : null,
+                M = null == D ? void 0 : D.name,
+                U = null == (j = a.Z.getGuild(null == D ? void 0 : D.guild_id)) ? void 0 : j.name,
+                F = (0, l.Z2)(null != D ? D : void 0);
             return (0, c.Ew)(U) || (0, c.Ew)(M) || !F
                 ? null != (C = I.body)
                     ? C

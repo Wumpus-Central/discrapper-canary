@@ -2,14 +2,14 @@ n.d(t, {
     Iu: () => G,
     Jw: () => j,
     _r: () => B,
-    cX: () => F,
+    cX: () => V,
     lv: () => U,
     v: () => x
 });
 var r = n(392711),
     i = n.n(r),
-    a = n(490757),
-    o = n(429827),
+    o = n(490757),
+    a = n(429827),
     s = n(353928),
     l = n(336892),
     c = n(624833),
@@ -32,8 +32,8 @@ var r = n(392711),
     A = n(200997),
     N = n(633302),
     C = n(134432),
-    R = n(594174),
-    P = n(768581),
+    P = n(594174),
+    R = n(768581),
     w = n(176354),
     D = n(353368),
     L = n(388032);
@@ -41,11 +41,11 @@ let x = {
         start: 10,
         end: 15
     },
-    M = [a],
-    k = [o, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, S, T, A],
+    k = [o],
+    M = [a, s, l, c, u, d, f, _, p, h, m, g, E, b, y, O, v, I, S, T, A],
     j = {
-        [D.q.BASIC]: M,
-        [D.q.PREMIUM]: k
+        [D.q.BASIC]: k,
+        [D.q.PREMIUM]: M
     },
     U = i().memoize(
         (e) =>
@@ -76,7 +76,7 @@ function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : D.v;
     if (null != e.id) {
         var n;
-        return P.ZP.getEmojiURL({
+        return R.ZP.getEmojiURL({
             id: e.id,
             animated: null != (n = e.animated) && n,
             size: t
@@ -86,7 +86,7 @@ function B(e) {
         i = N.ZP.getByName(r);
     return null != i ? w.ZP.getURL(i.surrogates) : '';
 }
-function V(e, t) {
+function F(e, t) {
     return i()(e)
         .map((e) => {
             var n;
@@ -96,28 +96,28 @@ function V(e, t) {
         .uniq()
         .value();
 }
-function F(e) {
-    var t, n, r, i, a, o;
+function V(e) {
+    var t, n, r, i, o, a;
     if (e.length < 1) return '';
-    let s = V(e, 'userId'),
-        l = V(e, 'emojiName'),
+    let s = F(e, 'userId'),
+        l = F(e, 'emojiName'),
         c = l.length < 2 ? (null != (t = null == l ? void 0 : l[0]) ? t : '') : l.join(', ');
     return s.length < 1
         ? ''
         : 1 === s.length
           ? L.intl.formatToPlainString(L.t.yZYxzM, {
-                firstUsername: null == (n = R.default.getUser(s[0])) ? void 0 : n.username,
+                firstUsername: null == (n = P.default.getUser(s[0])) ? void 0 : n.username,
                 emojiNames: c
             })
           : 2 === s.length
             ? L.intl.formatToPlainString(L.t['8rmtbW'], {
-                  firstUsername: null == (r = R.default.getUser(s[0])) ? void 0 : r.username,
-                  secondUsername: null == (i = R.default.getUser(s[1])) ? void 0 : i.username,
+                  firstUsername: null == (r = P.default.getUser(s[0])) ? void 0 : r.username,
+                  secondUsername: null == (i = P.default.getUser(s[1])) ? void 0 : i.username,
                   emojiNames: c
               })
             : L.intl.formatToPlainString(L.t['/okjv7'], {
-                  firstUsername: null == (a = R.default.getUser(s[0])) ? void 0 : a.username,
-                  secondUsername: null == (o = R.default.getUser(s[1])) ? void 0 : o.username,
+                  firstUsername: null == (o = P.default.getUser(s[0])) ? void 0 : o.username,
+                  secondUsername: null == (a = P.default.getUser(s[1])) ? void 0 : a.username,
                   count: s.length - 2,
                   emojiNames: c
               });

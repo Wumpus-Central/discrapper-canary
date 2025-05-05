@@ -15,8 +15,8 @@ var r,
     g = n(594174),
     _ = n(580130),
     b = n(55563),
-    x = n(981631);
-let y = 'DetectedOffPlatformPremiumPerksStore',
+    y = n(981631);
+let x = 'DetectedOffPlatformPremiumPerksStore',
     E = {},
     v = {},
     O = [];
@@ -47,7 +47,7 @@ function j() {
 class C extends (r = s.ZP.Store) {
     initialize() {
         var e;
-        this.waitFor(h.ZP, b.Z, _.Z), (O = null != (e = c.K.get(y)) ? e : O);
+        this.waitFor(h.ZP, b.Z, _.Z), (O = null != (e = c.K.get(x)) ? e : O);
     }
     getDetectedOffPlatformPremiumPerks() {
         return o().values(E);
@@ -73,13 +73,13 @@ let S = new C(u.Z, {
     DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS: function (e) {
         let { skuId: t } = e;
         if ((delete E[t], O.includes(t))) return !1;
-        O.push(t), c.K.set(y, O);
+        O.push(t), c.K.set(x, O);
     },
     RUNNING_GAMES_CHANGE: function () {
         let e = !1;
         for (let { id: t, distributor: n } of h.ZP.getRunningGames())
-            if (null != t && n !== x.GQo.DISCORD)
-                for (let { skuId: n, applicationId: r } of x.Lg6)
+            if (null != t && n !== y.GQo.DISCORD)
+                for (let { skuId: n, applicationId: r } of y.Lg6)
                     r !== t ||
                         O.includes(n) ||
                         (null == v[n] &&

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(35282), n(704826);
+n.d(t, { Z: () => D }), n(35282), n(704826);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(857595),
     _ = n(607070),
     b = n(313201),
-    x = n(592125),
-    y = n(984933),
+    y = n(592125),
+    x = n(984933),
     E = n(768119),
     v = n(944486),
     O = n(585483),
@@ -45,7 +45,7 @@ function Z(e, t, n) {
 n(539658);
 let R = (0, b.hQ)(),
     k = c()(p.yC, 500);
-class D extends i.PureComponent {
+class L extends i.PureComponent {
     componentDidMount() {
         var e, t;
         O.S.subscribe(P.CkL.PERFORM_SEARCH, this.search), O.S.subscribe(P.CkL.SET_SEARCH_QUERY, this.handleSetSearchQuery), O.S.subscribe(P.CkL.FOCUS_SEARCH, this.handleFocusSearch), null == (t = this._editorRef) || null == (e = t.editor) || e.setAttribute('aria-haspopup', 'listbox');
@@ -211,9 +211,9 @@ class D extends i.PureComponent {
                 let { prefillCurrentChannel: t } = e;
                 if (!t) return void this.focusEditor();
                 let n = v.Z.getChannelId(),
-                    r = x.Z.getChannel(n);
-                if (((null == r ? void 0 : r.isThread()) && (r = x.Z.getChannel(null == r ? void 0 : r.parent_id)), null == r || r.isPrivate())) return void this.focusEditor();
-                let i = y.ZP.getTextChannelNameDisambiguations(r.getGuildId())[r.id],
+                    r = y.Z.getChannel(n);
+                if (((null == r ? void 0 : r.isThread()) && (r = y.Z.getChannel(null == r ? void 0 : r.parent_id)), null == r || r.isPrivate())) return void this.focusEditor();
+                let i = x.ZP.getTextChannelNameDisambiguations(r.getGuildId())[r.id],
                     l = null != i ? i.name : r.name;
                 Promise.resolve().then(() => {
                     let { _editorRef: e } = this;
@@ -335,7 +335,7 @@ class D extends i.PureComponent {
             C.WU();
     }
 }
-function L(e) {
+function D(e) {
     let { className: t } = e,
         n = (0, u.e7)([E.Z], () => E.Z.getCurrentSearchId()),
         l = (0, u.e7)([E.Z], () => E.Z.getSearchType()),
@@ -357,7 +357,7 @@ function L(e) {
                 })),
                 !m.current && a && (m.current = !0);
         }, [a, n, l]),
-        (0, r.jsx)(D, {
+        (0, r.jsx)(L, {
             className: t,
             searchId: n,
             searchType: l,

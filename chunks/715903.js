@@ -9,11 +9,11 @@ n.d(t, {
     n(997841);
 var r = n(442837),
     i = n(271383),
-    a = n(630388),
-    o = n(372897);
-let s = [o.q.AUTOMOD_QUARANTINED_BIO, o.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME, o.q.AUTOMOD_QUARANTINED_CLAN_TAG];
+    o = n(630388),
+    a = n(372897);
+let s = [a.q.AUTOMOD_QUARANTINED_BIO, a.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME, a.q.AUTOMOD_QUARANTINED_CLAN_TAG];
 function l(e) {
-    return null == e ? new Set() : new Set(s.reduce((t, n) => ((0, a.yE)(null != e ? e : 0, n) && t.push(n), t), []));
+    return null == e ? new Set() : new Set(s.reduce((t, n) => ((0, o.yE)(null != e ? e : 0, n) && t.push(n), t), []));
 }
 function c(e) {
     return null == e ? new Set() : l(e.flags);
@@ -24,7 +24,7 @@ function u(e) {
         null != e.flags &&
         s.some((t) => {
             var n;
-            return (0, a.yE)(null != (n = e.flags) ? n : 0, t);
+            return (0, o.yE)(null != (n = e.flags) ? n : 0, t);
         })
     );
 }

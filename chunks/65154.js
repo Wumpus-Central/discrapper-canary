@@ -6,17 +6,17 @@ n.d(t, {
     AS: () => Y,
     Av: () => m,
     Dg: () => z,
-    Er: () => P,
+    Er: () => R,
     Gs: () => C,
     H3: () => ee,
     JA: () => O,
     Jk: () => v,
     LD: () => D,
-    P8: () => R,
+    P8: () => P,
     QO: () => y,
     QP: () => l,
     Qx: () => d,
-    R$: () => M,
+    R$: () => k,
     Tr: () => q,
     UC: () => j,
     Uc: () => $,
@@ -33,19 +33,19 @@ n.d(t, {
     ed: () => p,
     ef: () => L,
     fC: () => c,
-    h7: () => a,
+    h7: () => o,
     iA: () => W,
     jg: () => g,
-    kS: () => V,
+    kS: () => F,
     mC: () => T,
     mN: () => S,
     n4: () => Z,
-    pM: () => o,
-    pk: () => k,
+    pM: () => a,
+    pk: () => M,
     ru: () => x,
     u$: () => N,
     uA: () => Q,
-    ux: () => F,
+    ux: () => V,
     vA: () => r.vA,
     w5: () => h,
     y7: () => w,
@@ -56,10 +56,10 @@ var r = n(268146),
     i = (function (e) {
         return (e.DEFAULT = 'default'), (e.STREAM = 'stream'), e;
     })({}),
-    a = (function (e) {
+    o = (function (e) {
         return (e.AUDIO_INPUT = 'audioinput'), (e.AUDIO_OUTPUT = 'audiooutput'), (e.VIDEO_INPUT = 'videoinput'), e;
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return (e.PUSH_TO_TALK = 'PUSH_TO_TALK'), (e.VOICE_ACTIVITY = 'VOICE_ACTIVITY'), e;
     })({}),
     s = (function (e) {
@@ -92,19 +92,19 @@ let d = 100,
     A = 5000,
     N = 15000,
     C = 30,
-    R = 20,
-    P = 12,
+    P = 20,
+    R = 12,
     w = 100,
     D = 50,
     L = 1280,
     x = 720,
-    M = 30,
-    k = 1500000,
+    k = 30,
+    M = 1500000,
     j = 500000,
     U = 3500000,
     G = 9000000,
     B = ['remoteSinkWantsPixelCount', 'remoteSinkWantsMaxFramerate', 'encodingVideoMinBitRate', 'encodingVideoMaxBitRate', 'encodingVideoBitRate', 'streamParameters'],
-    V = {
+    F = {
         videoBudget: {
             width: 1280,
             height: 720,
@@ -126,7 +126,7 @@ let d = 100,
         },
         videoBitrateFloor: 150000
     },
-    F = 60000,
+    V = 60000,
     Z = '>=22.0.0';
 var H = (function (e) {
         return (e.AUTO_ENABLE = 'AUTO_ENABLE'), (e.ATTENUATION = 'ATTENUATION'), (e.AUDIO_INPUT_DEVICE = 'AUDIO_INPUT_DEVICE'), (e.AUDIO_OUTPUT_DEVICE = 'AUDIO_OUTPUT_DEVICE'), (e.VOICE_PROCESSING = 'VOICE_PROCESSING'), (e.QOS = 'QOS'), (e.NATIVE_PING = 'NATIVE_PING'), (e.LEGACY_AUDIO_SUBSYSTEM = 'LEGACY_AUDIO_SUBSYSTEM'), (e.EXPERIMENTAL_AUDIO_SUBSYSTEM = 'EXPERIMENTAL_AUDIO_SUBSYSTEM'), (e.AUTOMATIC_AUDIO_SUBSYSTEM = 'AUTOMATIC_AUDIO_SUBSYSTEM'), (e.AUDIO_SUBSYSTEM_DEFERRED_SWITCH = 'AUDIO_SUBSYSTEM_DEFERRED_SWITCH'), (e.AUDIO_BYPASS_SYSTEM_INPUT_PROCESSING = 'AUDIO_BYPASS_SYSTEM_INPUT_PROCESSING'), (e.DEBUG_LOGGING = 'DEBUG_LOGGING'), (e.AUTOMATIC_VAD = 'AUTOMATIC_VAD'), (e.VOICE_PANNING = 'VOICE_PANNING'), (e.DIAGNOSTICS = 'DIAGNOSTICS'), (e.VIDEO = 'VIDEO'), (e.DESKTOP_CAPTURE = 'DESKTOP_CAPTURE'), (e.DESKTOP_CAPTURE_FORMAT = 'DESKTOP_CAPTURE_FORMAT'), (e.DESKTOP_CAPTURE_APPLICATIONS = 'DESKTOP_CAPTURE_APPLICATIONS'), (e.SOUNDSHARE = 'SOUNDSHARE'), (e.LOOPBACK = 'LOOPBACK'), (e.VIDEO_HOOK = 'VIDEO_HOOK'), (e.EXPERIMENTAL_SOUNDSHARE = 'EXPERIMENTAL_SOUNDSHARE'), (e.WUMPUS_VIDEO = 'WUMPUS_VIDEO'), (e.ELEVATED_HOOK = 'ELEVATED_HOOK'), (e.HYBRID_VIDEO = 'HYBRID_VIDEO'), (e.OPEN_H264 = 'OPEN_H264'), (e.EXPERIMENTAL_ENCODERS = 'EXPERIMENTAL_ENCODERS'), (e.REMOTE_LOCUS_NETWORK_CONTROL = 'REMOTE_LOCUS_NETWORK_CONTROL'), (e.SCREEN_PREVIEWS = 'SCREEN_PREVIEWS'), (e.WINDOW_PREVIEWS = 'WINDOW_PREVIEWS'), (e.AUDIO_DEBUG_STATE = 'AUDIO_DEBUG_STATE'), (e.AEC_DUMP = 'AEC_DUMP'), (e.DISABLE_VIDEO = 'DISABLE_VIDEO'), (e.CONNECTION_REPLAY = 'CONNECTION_REPLAY'), (e.SIMULCAST = 'SIMULCAST'), (e.RTC_REGION_RANKING = 'RTC_REGION_RANKING'), (e.ELECTRON_VIDEO = 'ELECTRON_VIDEO'), (e.MEDIAPIPE = 'MEDIAPIPE'), (e.FIXED_KEYFRAME_INTERVAL = 'FIXED_KEYFRAME_INTERVAL'), (e.SAMPLE_PLAYBACK = 'SAMPLE_PLAYBACK'), (e.FIRST_FRAME_CALLBACK = 'FIRST_FRAME_CALLBACK'), (e.REMOTE_USER_MULTI_STREAM = 'REMOTE_USER_MULTI_STREAM'), (e.NOISE_SUPPRESSION = 'NOISE_SUPPRESSION'), (e.NOISE_CANCELLATION = 'NOISE_CANCELLATION'), (e.VOICE_FILTERS = 'VOICE_FILTERS'), (e.AUTOMATIC_GAIN_CONTROL = 'AUTOMATIC_GAIN_CONTROL'), (e.CLIPS = 'CLIPS'), (e.SPEED_TEST = 'SPEED_TEST'), (e.IMAGE_QUALITY_MEASUREMENT = 'IMAGE_QUALITY_MEASUREMENT'), (e.GO_LIVE_HARDWARE = 'GO_LIVE_HARDWARE'), (e.SCREEN_CAPTURE_KIT = 'SCREEN_CAPTURE_KIT'), (e.SCREEN_SOUNDSHARE = 'SCREEN_SOUNDSHARE'), (e.NATIVE_SCREENSHARE_PICKER = 'NATIVE_SCREENSHARE_PICKER'), (e.MLS_PAIRWISE_FINGERPRINTS = 'MLS_PAIRWISE_FINGERPRINTS'), e;

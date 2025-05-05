@@ -1,8 +1,8 @@
 n.d(t, {
-    $0: () => R,
-    AN: () => k,
+    $0: () => P,
+    AN: () => M,
     Ct: () => A,
-    DU: () => V,
+    DU: () => F,
     EQ: () => B,
     Ej: () => S,
     ME: () => m,
@@ -10,12 +10,12 @@ n.d(t, {
     O8: () => w,
     Pl: () => I,
     Uw: () => L,
-    ZE: () => M,
+    ZE: () => k,
     _G: () => O,
     _O: () => T,
     _y: () => g,
     do: () => j,
-    g7: () => P,
+    g7: () => R,
     g_: () => p,
     hs: () => b,
     j4: () => C,
@@ -32,8 +32,8 @@ n.d(t, {
     n(49124);
 var r = n(848246),
     i = n(710845),
-    a = n(380684),
-    o = n(533293),
+    o = n(380684),
+    a = n(533293),
     s = n(526998),
     l = n(575691),
     c = n(474936);
@@ -48,7 +48,7 @@ function f(e, t) {
     try {
         let n = d[t.premiumType];
         if (null == n) return u.warn("Cannot find the corresponding SKU to the user's premium type ".concat(t.premiumType)), !1;
-        let r = F[n];
+        let r = V[n];
         if (null == r) return u.warn("Cannot find the corresponding product catalog entry to the user's SKU ".concat(n, ' and premium type ').concat(t.premiumType)), !1;
         return r.skuFeatures.includes(e);
     } catch (e) {
@@ -57,7 +57,7 @@ function f(e, t) {
     }
     return !1;
 }
-class _ extends o.Z {
+class _ extends a.Z {
     constructor(e, t) {
         super(e, (e) => f(this, e), t);
     }
@@ -77,26 +77,26 @@ let p = new _(r.q.ANIMATED_EMOJIS),
     A = new _('appIcons'),
     N = new _(r.q.CLIENT_THEMES),
     C = new _('boostDiscount'),
-    R = new _('freeBoosts'),
-    P = new _(r.q.STREAM_MID_QUALITY),
+    P = new _('freeBoosts'),
+    R = new _(r.q.STREAM_MID_QUALITY),
     w = new _(r.q.STREAM_HIGH_QUALITY),
     D = new _(r.q.CUSTOM_NOTIFICATION_SOUNDS),
     L = new _('fancyVoiceChannelReactions'),
     x = new _('installPremiumApplications'),
-    M = new _('redeemPremiumPerks'),
-    k = new _(r.q.VIDEO_FILTER_ASSETS);
-new o.Z(r.q.INCREASED_FILE_UPLOAD_SIZE, a.h);
+    k = new _('redeemPremiumPerks'),
+    M = new _(r.q.VIDEO_FILTER_ASSETS);
+new a.Z(r.q.INCREASED_FILE_UPLOAD_SIZE, o.h);
 let j = new _(r.q.INCREASED_GUILD_LIMIT),
     U = new _(r.q.INCREASED_MESSAGE_LENGTH),
     G = new _('increasedVideoUploadQuality'),
     B = new _('uploadLargeFiles'),
-    V = new _(r.q.CHAT_WALLPAPERS),
-    F = Object.freeze({
-        [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, h, m, I, k, G, B, A]),
-        [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, h, y, O, I, C, P, L, G, B, A]),
-        [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [p, h, m, g, E, y, O, v, I, S, N, C, R, P, w, L, x, M, k, j, U, G, B, A, T, D, b, V])
+    F = new _(r.q.CHAT_WALLPAPERS),
+    V = Object.freeze({
+        [c.Si.TIER_0]: new l.Z(c.Si.TIER_0, [p, h, m, I, M, G, B, A]),
+        [c.Si.TIER_1]: new l.Z(c.Si.TIER_1, [p, h, y, O, I, C, R, L, G, B, A]),
+        [c.Si.TIER_2]: new l.Z(c.Si.TIER_2, [p, h, m, g, E, y, O, v, I, S, N, C, P, R, w, L, x, k, M, j, U, G, B, A, T, D, b, F])
     }),
-    Z = [C, R];
+    Z = [C, P];
 function H(e, t, n) {
     return !((0, s.U)('canUserUse', t) || (null !== n && n === c.a$.FP_ONLY && Z.includes(e))) && e.getFeatureValue(t);
 }

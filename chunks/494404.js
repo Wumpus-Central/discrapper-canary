@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => L,
+    ZP: () => D,
     h4: () => w,
     nH: () => Z
 }),
@@ -21,8 +21,8 @@ var r = n(255367),
     g = n(540059),
     _ = n(294218),
     b = n(703656),
-    x = n(210887),
-    y = n(592125),
+    y = n(210887),
+    x = n(592125),
     E = n(375954),
     v = n(496675),
     O = n(933429),
@@ -141,13 +141,13 @@ let k = u.ZP.connectStores([v.Z], (e) => {
     let { channel: t } = e;
     return { canManageMessages: null != t && v.Z.can(I.Plq.MANAGE_MESSAGES, t) };
 })(R);
-function D(e) {
-    let { analyticsName: t, items: n, hasMore: l, loading: o, loadMore: p, renderHeader: m, renderEmptyState: _, renderItem: b, getProTip: y, scrollerClassName: E, className: v, listName: w } = e,
+function L(e) {
+    let { analyticsName: t, items: n, hasMore: l, loading: o, loadMore: p, renderHeader: m, renderEmptyState: _, renderItem: b, getProTip: x, scrollerClassName: E, className: v, listName: w } = e,
         Z = i.useRef(null),
         R = (0, f.Z)(w, Z),
         k = (0, u.e7)([O.ZP], () => O.ZP.hasNotice()),
-        D = (0, u.e7)([j.Z], () => j.Z.windowSize()),
-        L = (0, g.Q3)('ItemsPopout');
+        L = (0, u.e7)([j.Z], () => j.Z.windowSize()),
+        D = (0, g.Q3)('ItemsPopout');
     i.useEffect(() => {
         C.default.track(I.rMx.OPEN_POPOUT, { type: t });
     }, [t]),
@@ -187,7 +187,7 @@ function D(e) {
               )
           ])
         : 0 === n.length
-          ? U.push((0, r.jsx)(i.Fragment, { children: _(x.Z.theme) }, 'empty-state'))
+          ? U.push((0, r.jsx)(i.Fragment, { children: _(y.Z.theme) }, 'empty-state'))
           : ((F = !1),
             (U = []),
             s().each(n, (e) => {
@@ -219,9 +219,9 @@ function D(e) {
                 })
               : (0, r.jsx)('div', {
                     className: T.scrollingFooterWrap,
-                    children: _(x.Z.theme)
+                    children: _(y.Z.theme)
                 }));
-    let G = null == y ? void 0 : y(),
+    let G = null == x ? void 0 : x(),
         H =
             F && null != G
                 ? (0, r.jsx)('div', {
@@ -236,8 +236,8 @@ function D(e) {
                       })
                   })
                 : null,
-        V = { maxHeight: D.height - 43 - 25 };
-    k && (V.maxHeight -= 40), L && (V.maxHeight -= 48);
+        V = { maxHeight: L.height - 43 - 25 };
+    k && (V.maxHeight -= 40), D && (V.maxHeight -= 48);
     let z = null != p && l;
     return (0, r.jsx)('div', {
         className: a()(v, T.messagesPopoutWrap),
@@ -323,8 +323,8 @@ function D(e) {
         })
     });
 }
-function L(e) {
-    let { analyticsName: t, onFetch: n, channel: l, messages: a, hasMore: o, loading: s, loadMore: c, onJump: d, canCloseAllMessages: f = !1, renderHeader: h, renderEmptyState: g, renderMessage: x, getProTip: v, scrollerClassName: O, className: j, onCloseMessage: C, listName: S } = e,
+function D(e) {
+    let { analyticsName: t, onFetch: n, channel: l, messages: a, hasMore: o, loading: s, loadMore: c, onJump: d, canCloseAllMessages: f = !1, renderHeader: h, renderEmptyState: g, renderMessage: y, getProTip: v, scrollerClassName: O, className: j, onCloseMessage: C, listName: S } = e,
         P = (0, u.e7)([E.Z], () => {
             let e = null != l ? E.Z.getMessages(l.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
@@ -344,7 +344,7 @@ function L(e) {
                 confirmText: N.intl.string(N.t.BddRzc)
             });
         else if (!P) {
-            let e = y.Z.getChannel(o);
+            let e = x.Z.getChannel(o);
             null != e && (m.Z.trackJump(o, r, t), (0, b.uL)(I.Z5c.CHANNEL(e.getGuildId(), o, r))), null == d || d(n);
         }
     }
@@ -361,7 +361,7 @@ function L(e) {
                   })),
         [a, l]
     );
-    return (0, r.jsx)(D, {
+    return (0, r.jsx)(L, {
         className: j,
         scrollerClassName: O,
         items: w,
@@ -375,7 +375,7 @@ function L(e) {
         renderItem: function (e) {
             let { message: t, channel: n } = e;
             if (null == t) return [];
-            if (null != x) return x(t, (e) => A(t, e));
+            if (null != y) return y(t, (e) => A(t, e));
             let i = [];
             return null == n
                 ? []

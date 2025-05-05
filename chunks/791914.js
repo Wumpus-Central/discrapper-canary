@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => _ });
 var r = n(255367);
 n(73800);
 var i = n(399606),
@@ -10,114 +10,104 @@ var i = n(399606),
     u = n(602478),
     d = n(2818),
     p = n(768943),
-    m = n(742989),
-    f = n(216789),
-    h = n(818186),
-    g = n(388032),
-    _ = n(413813);
-function b(e) {
-    let { tab: t, setTab: n, children: b, badgeState: x, closePopout: y } = e,
-        { showReminders: E } = m.Z.useExperiment({ location: 'RecentsHeader' }, { autoTrackExposure: !1 }),
-        { enabled: v, inInbox: O } = d.Z.useExperiment({ location: 'RecentsPopout' }),
-        j = (0, f.Us)({ location: 'RecentsHeader' }),
-        { enabled: C } = u.Z.useExperiment({ location: 'RecentsHeader' }),
-        S = (0, i.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
-        I = (0, i.e7)([p.Z], () => p.Z.getOverdueMessageReminderCount());
+    m = n(216789),
+    f = n(818186),
+    h = n(388032),
+    g = n(413813);
+function _(e) {
+    let { tab: t, setTab: n, children: _, badgeState: b, closePopout: y } = e,
+        { enabled: x, inInbox: E } = d.Z.useExperiment({ location: 'RecentsPopout' }),
+        v = (0, m.Us)({ location: 'RecentsHeader' }),
+        { enabled: O } = u.Z.useExperiment({ location: 'RecentsHeader' }),
+        j = (0, i.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
+        C = (0, i.e7)([p.Z], () => p.Z.getOverdueMessageReminderCount());
     return (0, r.jsxs)(o.h4, {
-        className: _.header,
+        className: g.header,
         children: [
             (0, r.jsxs)('div', {
-                className: _.headerTitle,
+                className: g.headerTitle,
                 children: [
                     (0, r.jsx)(a.xx7, {
                         size: 'md',
                         color: 'currentColor',
-                        className: _.inboxIcon
+                        className: g.inboxIcon
                     }),
                     (0, r.jsx)(a.Text, {
-                        className: _.inboxTitle,
+                        className: g.inboxTitle,
                         variant: 'text-lg/semibold',
                         color: 'interactive-active',
-                        children: g.intl.string(g.t.GSmTKC)
+                        children: h.intl.string(h.t.GSmTKC)
                     }),
                     (0, r.jsxs)('div', {
-                        className: _.controls,
-                        children: [b, (0, r.jsx)(h.Z, { closePopout: y })]
+                        className: g.controls,
+                        children: [_, (0, r.jsx)(f.Z, { closePopout: y })]
                     })
                 ]
             }),
             (0, r.jsx)('div', {
-                className: _.headerTabs,
+                className: g.headerTabs,
                 children: (0, r.jsxs)(a.njP, {
                     selectedItem: t,
                     type: 'top',
                     look: 'brand',
                     onItemSelect: n,
-                    className: _.tabBar,
+                    className: g.tabBar,
                     children: [
                         (0, r.jsxs)(a.njP.Item, {
                             id: l.X.FOR_YOU,
-                            'aria-label': g.intl.string(g.t['En+D+v']),
-                            className: _.tab,
+                            'aria-label': h.intl.string(h.t['En+D+v']),
+                            className: g.tab,
                             children: [
-                                g.intl.string(g.t['En+D+v']),
-                                (null == x ? void 0 : x.badgeForYou)
+                                h.intl.string(h.t['En+D+v']),
+                                (null == b ? void 0 : b.badgeForYou)
                                     ? (0, r.jsx)(a.fWl, {
                                           color: s.Z.STATUS_DANGER,
-                                          className: _.iconBadge
+                                          className: g.iconBadge
                                       })
                                     : null
                             ]
                         }),
                         (0, r.jsx)(a.njP.Item, {
                             id: l.X.UNREADS,
-                            className: _.tab,
-                            children: g.intl.string(g.t.sRUdBw)
+                            className: g.tab,
+                            children: h.intl.string(h.t.sRUdBw)
                         }),
                         (0, r.jsx)(a.njP.Item, {
-                            'aria-label': g.intl.string(g.t['GRZF9/']),
+                            'aria-label': h.intl.string(h.t['GRZF9/']),
                             id: l.X.MENTIONS,
-                            className: _.tab,
-                            children: g.intl.string(g.t['GRZF9/'])
+                            className: g.tab,
+                            children: h.intl.string(h.t['GRZF9/'])
                         }),
-                        C
+                        O
                             ? (0, r.jsxs)(a.njP.Item, {
                                   'aria-label': 'game_invites',
                                   id: l.X.GAME_INVITES,
-                                  className: _.tab,
+                                  className: g.tab,
                                   children: [
-                                      g.intl.string(g.t.apq3cX),
-                                      S > 0
+                                      h.intl.string(h.t.apq3cX),
+                                      j > 0
                                           ? (0, r.jsx)(a.fWl, {
                                                 color: s.Z.STATUS_DANGER,
-                                                className: _.iconBadge
+                                                className: g.iconBadge
                                             })
                                           : null
                                   ]
                               })
                             : null,
-                        v && O
+                        x && E
                             ? (0, r.jsx)(a.njP.Item, {
-                                  'aria-label': g.intl.string(g.t['2pAkDA']),
+                                  'aria-label': h.intl.string(h.t['2pAkDA']),
                                   id: l.X.BOOKMARKS,
-                                  className: _.tab,
-                                  children: 0 === I ? g.intl.string(g.t['2pAkDA']) : g.intl.formatToPlainString(g.t.I4fryM, { count: I })
+                                  className: g.tab,
+                                  children: 0 === C ? h.intl.string(h.t['2pAkDA']) : h.intl.formatToPlainString(h.t.I4fryM, { count: C })
                               })
                             : null,
-                        E && !v
-                            ? (0, r.jsx)(a.njP.Item, {
-                                  'aria-label': 'todos',
-                                  id: l.X.TODOS,
-                                  className: _.tab,
-                                  children: 0 === I ? g.intl.string(g.t.aUXxzc) : g.intl.formatToPlainString(g.t['5en8yc'], { count: I })
-                              })
-                            : null,
-                        j
+                        v
                             ? (0, r.jsx)(a.njP.Item, {
                                   'aria-label': 'scheduled',
                                   id: l.X.SCHEDULED,
-                                  className: _.tab,
-                                  children: g.intl.string(g.t.Fn6Odn)
+                                  className: g.tab,
+                                  children: h.intl.string(h.t.Fn6Odn)
                               })
                             : null
                     ]

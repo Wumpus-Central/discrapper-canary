@@ -1,8 +1,8 @@
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => M }), n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(91192),
     l = n(442837),
     c = n(481060),
@@ -73,45 +73,45 @@ function C(e, t) {
         e
     );
 }
-function R(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = P(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
 function P(e, t) {
     if (null == e) return {};
     var n,
         r,
+        i = R(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function R(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let w = 490,
     D = 490,
     L = 245,
     x = 200,
-    M = 120,
-    k = i.forwardRef(function (e, t) {
-        var n, a, T, N, P;
-        let { channel: k, type: j, editorHeight: U, onVisibilityChange: G } = e,
+    k = 120,
+    M = i.forwardRef(function (e, t) {
+        var n, o, T, N, R;
+        let { channel: M, type: j, editorHeight: U, onVisibilityChange: G } = e,
             B = (0, h.Dt)(),
-            V = (0, l.e7)(
+            F = (0, l.e7)(
                 [E.Z],
                 () => {
                     var e;
-                    return null != (e = E.Z.getGuild(k.guild_id)) ? e : null;
+                    return null != (e = E.Z.getGuild(M.guild_id)) ? e : null;
                 },
-                [k.guild_id]
+                [M.guild_id]
             ),
-            F = i.useRef(null),
-            [Z, H, Y] = (0, v.Z)(C(A({}, e), { guild: V }), t, F),
+            V = i.useRef(null),
+            [Z, H, Y] = (0, v.Z)(C(A({}, e), { guild: F }), t, V),
             W = (null == (n = j.autocomplete) ? void 0 : n.forceChatLayer) ? g.ZP : m.ZP,
             K = (0, _.DJ)(Z.selectedIndex);
         (0, p.KR)(B, Z.isVisible, K), b.Z.trackExposure({ location: '6e9811_1' });
@@ -125,11 +125,11 @@ let w = 490,
             Q = (0, l.e7)(
                 [d.ZP],
                 () => {
-                    let e = d.ZP.getSelfEmbeddedActivityForChannel(k.id),
+                    let e = d.ZP.getSelfEmbeddedActivityForChannel(M.id),
                         t = d.ZP.getActivityPanelMode();
-                    return (0, u.l5)(k) && null != e && (0, f.pY)(e.location) === k.id && t === I.Ez.PANEL;
+                    return (0, u.l5)(M) && null != e && (0, f.pY)(e.location) === M.id && t === I.Ez.PANEL;
                 },
-                [k]
+                [M]
             ),
             X = i.useMemo(() => ((null == q ? void 0 : q.top) == null && (null == q ? void 0 : q.left) == null && (null == q ? void 0 : q.bottom) == null && (null == q ? void 0 : q.right) == null ? '' : String(Date.now())), [null == q ? void 0 : q.top, null == q ? void 0 : q.left, null == q ? void 0 : q.bottom, null == q ? void 0 : q.right]);
         if (
@@ -141,17 +141,17 @@ let w = 490,
             return null;
         let J =
             null !=
-            (a = Z.query.typeInfo.renderResults({
+            (o = Z.query.typeInfo.renderResults({
                 results: Z.query.results,
                 selectedIndex: Z.selectedIndex,
-                channel: k,
-                guild: V,
+                channel: M,
+                guild: F,
                 query: Z.query.queryText,
                 options: Z.query.options,
                 onHover: (e) => H.onResultHover(e),
                 onClick: (e) => H.onResultClick(e)
             }))
-                ? a
+                ? o
                 : null;
         if (null == J) return null;
         let $ = {
@@ -163,10 +163,10 @@ let w = 490,
             ee = w;
         null != q && (ee = (null == (T = j.autocomplete) ? void 0 : T.small) ? x : (null == (N = Z.query) ? void 0 : N.type) === y.eq.EMOJIS_AND_STICKERS ? D : L);
         let et = Math.min(0.5 * window.innerHeight, U);
-        ee = Math.min(window.innerHeight - M - et, ee);
+        ee = Math.min(window.innerHeight - k - et, ee);
         let en = (0, r.jsx)(_.ZP, {
             id: B,
-            className: o()(S.autocomplete, $),
+            className: a()(S.autocomplete, $),
             innerClassName: S.autocompleteInner,
             onMouseDown: (e) => e.preventDefault(),
             children: (0, r.jsx)(s.bG, {
@@ -174,7 +174,7 @@ let w = 490,
                 children: (0, r.jsx)(s.SJ, {
                     children: (e) => {
                         var { ref: t } = e,
-                            n = R(e, ['ref']);
+                            n = P(e, ['ref']);
                         return (0, r.jsx)(
                             c.h21,
                             C(
@@ -183,7 +183,7 @@ let w = 490,
                                         id: B,
                                         ref: (e) => {
                                             var n;
-                                            (t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null), (F.current = e);
+                                            (t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null), (V.current = e);
                                         }
                                     },
                                     n
@@ -207,7 +207,7 @@ let w = 490,
                       targetRef: e.targetRef,
                       overrideTargetRect: q,
                       positionKey: X,
-                      position: null != (P = e.position) ? P : 'top',
+                      position: null != (R = e.position) ? R : 'top',
                       align: 'left',
                       spacing: 8,
                       autoInvert: !0,

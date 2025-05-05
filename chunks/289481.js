@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(259580),
     _ = n(617379),
     b = n(324081),
-    x = n(305248),
-    y = n(520116),
+    y = n(305248),
+    x = n(520116),
     E = n(981631),
     v = n(388032),
     O = n(28007);
@@ -125,13 +125,13 @@ let C = i.memo(function (e) {
                 children: t.collapsed
                     ? null
                     : 'messages' === t.type
-                      ? (0, r.jsx)(y.Z, {
+                      ? (0, r.jsx)(x.Z, {
                             channel: t,
                             channelRecord: o,
                             gotoChannel: m
                         })
                       : 'forum' === t.type
-                        ? (0, r.jsx)(x.Z, {
+                        ? (0, r.jsx)(y.Z, {
                               channel: t,
                               channelRecord: o,
                               deleteChannel: l

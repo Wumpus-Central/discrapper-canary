@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(710845),
     _ = n(825829),
     b = n(623624),
-    x = n(29887),
-    y = n(533694),
+    y = n(29887),
+    x = n(533694),
     E = n(345114),
     v = n(924301),
     O = n(225890),
@@ -32,8 +32,8 @@ var r = n(255367),
     Z = n(488131),
     R = n(814820),
     k = n(314897),
-    D = n(523746),
-    L = n(592125),
+    L = n(523746),
+    D = n(592125),
     M = n(430824),
     U = n(496675),
     F = n(158776),
@@ -69,8 +69,8 @@ var r = n(255367),
     eg = n(857640),
     e_ = n(614972),
     eb = n(701181),
-    ex = n(29338),
-    ey = n(461135),
+    ey = n(29338),
+    ex = n(461135),
     eE = n(296571),
     ev = n(587737),
     eO = n(482239),
@@ -237,7 +237,7 @@ let eR = Object.freeze({
                 { id: o, author: s } = t,
                 u = k.default.getId(),
                 d = t.getChannelId(),
-                p = (0, l.e7)([D.Z], () => D.Z.isCallActive(d, o), [d, o]),
+                p = (0, l.e7)([L.Z], () => L.Z.isCallActive(d, o), [d, o]),
                 m = (0, l.e7)([H.Z], () => H.Z.getVoiceState(eI.ME, u)),
                 f = !p && null != t.call && !t.call.participants.includes(u),
                 h = p && (null == m || m.channelId !== d),
@@ -296,7 +296,7 @@ let eR = Object.freeze({
                 o = t.getChannelId(),
                 s = i.useCallback(() => {
                     if (B.Z.getChannelId() !== o) {
-                        let e = L.Z.getChannel(o);
+                        let e = D.Z.getChannel(o);
                         null != e && (0, N.XU)(e.guild_id, e.id);
                     }
                     setTimeout(() => V.S.dispatch(eI.CkL.TOGGLE_CHANNEL_PINS), 0);
@@ -367,7 +367,7 @@ let eR = Object.freeze({
                 } = t,
                 d = t.getChannelId(),
                 p = (0, l.e7)([F.Z], () => F.Z.findActivity(s, (e) => e.type === eI.IIU.PLAYING), [s]),
-                m = (0, l.e7)([L.Z], () => (null != c ? L.Z.getChannel(c.channel_id) : null), [c]),
+                m = (0, l.e7)([D.Z], () => (null != c ? D.Z.getChannel(c.channel_id) : null), [c]),
                 f = null == c ? void 0 : c.guild_id,
                 h = (0, $.l)({
                     user: o,
@@ -399,7 +399,7 @@ let eR = Object.freeze({
         [eI.uaV.GUILD_DISCOVERY_DISQUALIFIED]: function (e) {
             let { message: t, compact: n } = e,
                 i = t.getChannelId(),
-                a = (0, l.e7)([L.Z], () => L.Z.getChannel(i), [i]),
+                a = (0, l.e7)([D.Z], () => D.Z.getChannel(i), [i]),
                 o = null != a ? a.getGuildId() : null;
             return (0, r.jsx)(es.FJ, {
                 message: t,
@@ -426,7 +426,7 @@ let eR = Object.freeze({
                         let r = null == (n = t.messageReference) ? void 0 : n.channel_id;
                         if (null != r) {
                             await w.Z.loadThread(r);
-                            let t = L.Z.getChannel(r);
+                            let t = D.Z.getChannel(r);
                             null != t && (0, Z.ok)(t, e.shiftKey);
                         }
                     },
@@ -441,7 +441,7 @@ let eR = Object.freeze({
                 p = i.useCallback(
                     (e) => {
                         var i;
-                        let l = L.Z.getChannel(null == (i = t.messageReference) ? void 0 : i.channel_id);
+                        let l = D.Z.getChannel(null == (i = t.messageReference) ? void 0 : i.channel_id);
                         null != l &&
                             (0, o.jW)(e, async () => {
                                 let { default: e } = await Promise.all([n.e('22356'), n.e('48334')]).then(n.bind(n, 422200));
@@ -541,7 +541,7 @@ let eR = Object.freeze({
             var t;
             let { message: n, channel: i, compact: l } = e;
             return (null == (t = n.purchaseNotification) ? void 0 : t.type) === d.Eh.GUILD_PRODUCT
-                ? (0, r.jsx)(y.Z, {
+                ? (0, r.jsx)(x.Z, {
                       message: n,
                       channel: i,
                       compact: l
@@ -560,7 +560,7 @@ let eR = Object.freeze({
                 o = (0, l.e7)([v.ZP], () => v.ZP.getActiveEventByChannel(n.id), [n.id]);
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(ex.Z, {
+                    (0, r.jsx)(ey.Z, {
                         message: t,
                         compact: i,
                         usernameHook: a
@@ -648,7 +648,7 @@ let eR = Object.freeze({
                     guildId: n.guild_id,
                     messageId: t.id
                 });
-            return (0, r.jsx)(ey.Z, {
+            return (0, r.jsx)(ex.Z, {
                 message: t,
                 compact: i,
                 usernameHook: l
@@ -715,9 +715,9 @@ let eR = Object.freeze({
                 compact: i
             });
         },
-        [eI.uaV.GUILD_JOIN_REQUEST_ACCEPT_NOTIFICATION]: x.Cn,
-        [eI.uaV.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION]: x.Ue,
-        [eI.uaV.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION]: x.R6,
+        [eI.uaV.GUILD_JOIN_REQUEST_ACCEPT_NOTIFICATION]: y.Cn,
+        [eI.uaV.GUILD_JOIN_REQUEST_REJECT_NOTIFICATION]: y.Ue,
+        [eI.uaV.GUILD_JOIN_REQUEST_WITHDRAWN_NOTIFICATION]: y.R6,
         [eI.uaV.HD_STREAMING_UPGRADED]: function (e) {
             let { message: t, channel: n, compact: i } = e;
             return (0, r.jsx)(q.Z, {

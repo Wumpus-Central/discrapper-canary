@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ });
 var r = n(570140),
     i = n(232567),
-    a = n(220082),
-    o = n(275759),
+    o = n(220082),
+    a = n(275759),
     s = n(365943),
     l = n(592125),
     c = n(271383),
@@ -16,17 +16,17 @@ function _(e, t) {
     let N = u.Z.getUserProfile(e),
         C = Date.now() - (null != (h = null == N ? void 0 : N.fetchEndedAt) ? h : 0) >= f;
     if (((null == N || null == (n = N.fetchError) ? void 0 : n.status) === 404 || (null == N || null == (_ = N.fetchError) ? void 0 : _.status) === 429) && !C) return Promise.resolve();
-    let R = u.Z.getGuildMemberProfile(e, I),
-        P = u.Z.getMutualGuilds(e),
+    let P = u.Z.getGuildMemberProfile(e, I),
+        R = u.Z.getMutualGuilds(e),
         w = u.Z.getMutualFriends(e),
         D = u.Z.getMutualFriendsCount(e),
         L = null == w && b,
         x = null == D && E,
-        M = (null == P && g) || L || x,
-        k = null == I ? null == N : null == R,
-        j = !k && (C || M);
-    if (!k && !j) return Promise.resolve();
-    (0, s.z)(), null != t && (0, a.vM)(t);
+        k = (null == R && g) || L || x,
+        M = null == I ? null == N : null == P,
+        j = !M && (C || k);
+    if (!M && !j) return Promise.resolve();
+    (0, s.z)(), null != t && (0, o.vM)(t);
     let U = {
         type: m,
         withMutualGuilds: g,
@@ -39,7 +39,7 @@ function _(e, t) {
         connectionsRoleId:
             null == I ||
             null ==
-                (p = (0, o.Ur)({
+                (p = (0, a.Ur)({
                     guildMember: c.ZP.getMember(I, e),
                     channel: l.Z.getChannel(S)
                 }))

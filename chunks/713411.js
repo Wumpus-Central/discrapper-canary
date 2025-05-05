@@ -13,12 +13,12 @@ var r,
     d = function (t) {
         return '<' + u + '>' + t + '</' + u + '>';
     },
-    A = function (t) {
+    f = function (t) {
         t.write(d('')), t.close();
         var e = t.parentWindow.Object;
         return (t = null), e;
     },
-    f = function () {
+    A = function () {
         var t,
             e = s('iframe');
         return (e.style.display = 'none'), c.appendChild(e), (e.src = String('java' + u + ':')), (t = e.contentWindow.document).open(), t.write(d('document.F=Object')), t.close(), t.F;
@@ -27,7 +27,7 @@ var r,
         try {
             r = new ActiveXObject('htmlfile');
         } catch (t) {}
-        p = 'undefined' != typeof document ? (document.domain && r ? A(r) : f()) : A(r);
+        p = 'undefined' != typeof document ? (document.domain && r ? f(r) : A()) : f(r);
         for (var t = o.length; t--; ) delete p[l][o[t]];
         return p();
     };

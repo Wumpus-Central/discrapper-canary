@@ -30,7 +30,7 @@ a(334431),
         ACCOUNT_AGE: 5,
         MEMBER_AGE: 10
     });
-let A = Object.freeze({
+let f = Object.freeze({
         USER: (t) => '/users/'.concat(t),
         USER_RELATIONSHIPS: function () {
             let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : '@me';
@@ -803,7 +803,7 @@ let A = Object.freeze({
         HOLIDAY_REDEEM_PRIZE: '/holidays/redeem-prize',
         APPLIED_BOOST_MODIFY_END_DATE: (t) => '/debug/applied-boosts/'.concat(t, '/ends-at')
     }),
-    f = Object.freeze({
+    A = Object.freeze({
         INDEX: '/',
         APP: '/app',
         APP_WITH_INVITE_AND_GUILD_ONBOARDING: (t) => '/app/invite-with-guild-onboarding/'.concat(t),
@@ -946,8 +946,8 @@ let A = Object.freeze({
         QUESTS: (t) => '/quests/'.concat(t),
         ACCOUNT_REVERT: (t) => '/wasntme/'.concat(t)
     });
-(0, s.Ft)(A),
-    (0, s.Ft)(f, [':', '?', '@']),
+(0, s.Ft)(f),
+    (0, s.Ft)(A, [':', '?', '@']),
     E.Z.Seconds.HOUR,
     E.Z.Seconds.MINUTE,
     E.Z.Seconds.MINUTE,

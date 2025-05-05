@@ -1,8 +1,8 @@
 n.d(t, { Z: () => T }), n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(760907),
     l = n(442837),
     c = n(114101),
@@ -69,7 +69,7 @@ function I(e, t) {
     );
 }
 function S(e, t) {
-    let { disabled: n, type: a } = e,
+    let { disabled: n, type: o } = e,
         [y, v] = i.useState(!1),
         S = (0, l.e7)([_.Z], () => {
             var e, t;
@@ -77,7 +77,7 @@ function S(e, t) {
         }),
         [T, A, N] = (0, f.Iu)((e) => [e.activeView, e.activeViewType, e.pickerId], s.X),
         C = i.useRef(0),
-        R = i.useCallback(() => {
+        P = i.useCallback(() => {
             v(!0),
                 clearTimeout(C.current),
                 (C.current = setTimeout(() => {
@@ -86,15 +86,15 @@ function S(e, t) {
         }, []);
     (0, p.yp)({
         event: m.CkL.FAVORITE_GIF,
-        handler: R
+        handler: P
     });
-    let P = i.useCallback(() => {
-            (0, f.RO)(g.X1.GIF, a);
-        }, [a]),
+    let R = i.useCallback(() => {
+            (0, f.RO)(g.X1.GIF, o);
+        }, [o]),
         { Component: w, events: D, play: L } = (0, c.V)(),
         x = (0, d.Q3)('ChannelGIFPickerButton');
     if (n) return null;
-    let M = T === g.X1.GIF && A === a;
+    let k = T === g.X1.GIF && A === o;
     return (0, r.jsx)(u.ua7, {
         text: S ? E.intl.string(E.t.mE2e8P) : null,
         forceOpen: !0,
@@ -105,7 +105,7 @@ function S(e, t) {
                     O(
                         {
                             ref: t,
-                            className: o()(g.CT, b.buttonContainer)
+                            className: a()(g.CT, b.buttonContainer)
                         },
                         e
                     ),
@@ -115,12 +115,12 @@ function S(e, t) {
                             onMouseEnter: D.onMouseEnter,
                             onMouseLeave: D.onMouseLeave,
                             onClick: () => {
-                                P(), L();
+                                R(), L();
                             },
-                            isActive: M,
+                            isActive: k,
                             pulse: y,
                             'aria-label': E.intl.string(E.t.PtVpk5),
-                            'aria-expanded': M,
+                            'aria-expanded': k,
                             'aria-haspopup': 'dialog',
                             'aria-controls': N,
                             children: (0, r.jsx)(w, {

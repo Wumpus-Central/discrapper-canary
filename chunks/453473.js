@@ -19,8 +19,8 @@ var r = n(255367),
     g = n(494404),
     _ = n(724757),
     b = n(213609),
-    x = n(294218),
-    y = n(373662),
+    y = n(294218),
+    x = n(373662),
     E = n(695346),
     v = n(496675),
     O = n(626135),
@@ -36,8 +36,8 @@ var r = n(255367),
     Z = n(74551),
     R = n(981631),
     k = n(388032),
-    D = n(585693);
-function L(e) {
+    L = n(585693);
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -91,7 +91,7 @@ function F(e) {
     return (0, r.jsx)(f.VqE, {
         'aria-label': k.intl.string(k.t['2pAkDA']),
         children: (0, r.jsxs)('div', {
-            className: D.popoutContainer,
+            className: L.popoutContainer,
             children: [
                 (0, r.jsx)(g.h4, {
                     icon: f.plf,
@@ -191,13 +191,13 @@ function H(e) {
                     return (0, r.jsx)(
                         f.h21,
                         M(
-                            L(
+                            D(
                                 {
                                     ref: (e) => {
                                         var t;
                                         (l.current = e), (i.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null);
                                     },
-                                    className: D.messagesScroller
+                                    className: L.messagesScroller
                                 },
                                 a
                             ),
@@ -242,10 +242,10 @@ function V(e) {
         c = (0, m.e7)([v.Z], () => !!((null == o ? void 0 : o.type) === R.d4z.UNKNOWN || (null == o ? void 0 : o.isPrivate())) || v.Z.can(R.Plq.VIEW_CHANNEL, o));
     return null != o && null != t.message && c
         ? (0, r.jsxs)('div', {
-              className: D.messageContainer,
+              className: L.messageContainer,
               children: [
                   (0, r.jsx)(f.P3F, {
-                      className: D.clickableMessageBackground,
+                      className: L.clickableMessageBackground,
                       onClick: s,
                       'aria-label': k.intl.string(k.t['+TSRGB'])
                   }),
@@ -257,11 +257,11 @@ function V(e) {
                       : null,
                   (0, r.jsx)(A.Z, { channel: o }),
                   (0, r.jsx)(
-                      x.Z,
+                      y.Z,
                       {
                           message: t.message,
                           channel: o,
-                          className: D.message,
+                          className: L.message,
                           compact: E.jU.getSetting(),
                           animateAvatar: !1,
                           focusProps: U,
@@ -269,8 +269,8 @@ function V(e) {
                       },
                       t.message.id
                   ),
-                  (0, r.jsx)(y.ZP, {
-                      className: D.hoverBar,
+                  (0, r.jsx)(x.ZP, {
+                      className: L.hoverBar,
                       children: (0, r.jsx)(W, {
                           savedMessage: t,
                           jumpToMessage: s
@@ -279,10 +279,10 @@ function V(e) {
               ]
           })
         : (0, r.jsxs)('div', {
-              className: a()(D.messageContainer, D.deletedMessage),
+              className: a()(L.messageContainer, L.deletedMessage),
               children: [
                   (0, r.jsx)('div', {
-                      className: D.deleteIcon,
+                      className: L.deleteIcon,
                       children: (0, r.jsx)(f.P4T, {
                           size: 'xxs',
                           color: f.TVs.colors.INTERACTIVE_ACTIVE
@@ -293,10 +293,10 @@ function V(e) {
                       color: 'header-secondary',
                       children: null != t.saveData.dueAt ? k.intl.string(k.t['wuQm+v']) : k.intl.string(k.t.o572FR)
                   }),
-                  (0, r.jsx)(y.ZP, {
-                      className: D.hoverBar,
+                  (0, r.jsx)(x.ZP, {
+                      className: L.hoverBar,
                       children: (0, r.jsx)(
-                          y.sF,
+                          x.sF,
                           {
                               label: k.intl.string(k.t.SvXS1d),
                               icon: f.XHJ,
@@ -326,7 +326,7 @@ function W(e) {
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(
-                      y.sF,
+                      x.sF,
                       {
                           label: k.intl.string(k.t.yjGtdH),
                           icon: f.dz2,
@@ -340,7 +340,7 @@ function W(e) {
                       'mark-complete'
                   ),
                   (0, r.jsx)(
-                      y.sF,
+                      x.sF,
                       {
                           label: k.intl.string(k.t.vrbqs7),
                           icon: f.vdY,
@@ -350,7 +350,7 @@ function W(e) {
                                   return (n) =>
                                       (0, r.jsx)(
                                           e,
-                                          M(L({}, n), {
+                                          M(D({}, n), {
                                               label: k.intl.string(k.t.roMu1N),
                                               message: t.message
                                           })
@@ -359,9 +359,9 @@ function W(e) {
                       },
                       'edit-reminder'
                   ),
-                  (0, r.jsx)(y.fO, {}),
+                  (0, r.jsx)(x.fO, {}),
                   (0, r.jsx)(
-                      y.sF,
+                      x.sF,
                       {
                           label: k.intl.string(k.t['+TSRGB']),
                           icon: f.d4D,
@@ -370,7 +370,7 @@ function W(e) {
                       'jump-to-message'
                   ),
                   (0, r.jsx)(
-                      y.sF,
+                      x.sF,
                       {
                           label: k.intl.string(k.t.SvXS1d),
                           icon: f.plf,
@@ -383,7 +383,7 @@ function W(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(
-                      y.sF,
+                      x.sF,
                       {
                           label: k.intl.string(k.t.mJ3P0N),
                           icon: f.T39,
@@ -393,7 +393,7 @@ function W(e) {
                                   return (n) =>
                                       (0, r.jsx)(
                                           e,
-                                          M(L({}, n), {
+                                          M(D({}, n), {
                                               label: k.intl.string(k.t.mJ3P0N),
                                               message: t.message
                                           })
@@ -403,7 +403,7 @@ function W(e) {
                       'create-reminder'
                   ),
                   (0, r.jsx)(
-                      y.sF,
+                      x.sF,
                       {
                           label: k.intl.string(k.t['+TSRGB']),
                           icon: f.d4D,
@@ -412,7 +412,7 @@ function W(e) {
                       'jump-to-message'
                   ),
                   (0, r.jsx)(
-                      y.sF,
+                      x.sF,
                       {
                           label: k.intl.string(k.t.SvXS1d),
                           icon: f.plf,

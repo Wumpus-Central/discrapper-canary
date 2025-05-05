@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(481060),
     i = n(281956),
-    a = n(982168),
-    o = n(271383),
+    o = n(982168),
+    a = n(271383),
     s = n(430824),
     l = n(607744),
     c = n(594174),
@@ -66,8 +66,8 @@ function h(e, t) {
         { locked: _ = !1, video: p = !1, stream: h = !1, hasActiveThreads: m = !1, textFocused: g = !1 } = n;
     if (null == e) return null;
     null == t && (t = s.Z.getGuild(e.getGuildId()));
-    let E = (0, i.n)(null == t ? void 0 : t.id, [s.Z, l.Z, c.default, o.ZP]);
-    if ((0, a.gT)(e)) return r.U65;
+    let E = (0, i.n)(null == t ? void 0 : t.id, [s.Z, l.Z, c.default, a.ZP]);
+    if ((0, o.gT)(e)) return r.U65;
     if ((null == e ? void 0 : e.id) === (null == t ? void 0 : t.rulesChannelId)) return r.snC;
     switch (e.type) {
         case f.d4z.GUILD_ANNOUNCEMENT:

@@ -1,5 +1,5 @@
 n.d(t, {
-    G7: () => o,
+    G7: () => a,
     UQ: () => s,
     bc: () => c,
     g2: () => l
@@ -35,7 +35,7 @@ let i = (0, r.B)({
             }
         ]
     }),
-    a = (0, r.B)({
+    o = (0, r.B)({
         kind: 'user',
         id: '2025-01_sensitive_content_defaults_new_users',
         label: 'Sensitive Content Defaults - New Users',
@@ -65,14 +65,14 @@ let i = (0, r.B)({
             }
         ]
     });
-function o(e) {
+function a(e) {
     let { enabled: t } = i.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }),
-        { enabled: n } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
+        { enabled: n } = o.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
     return t || n;
 }
 function s(e) {
     let { enabled: t } = i.useExperiment({ location: e }, { autoTrackExposure: !1 }),
-        { enabled: n } = a.useExperiment({ location: e }, { autoTrackExposure: !1 });
+        { enabled: n } = o.useExperiment({ location: e }, { autoTrackExposure: !1 });
     return t || n;
 }
 function l(e) {

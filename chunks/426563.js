@@ -1,11 +1,11 @@
 n.d(t, {
     Z: () => w,
-    j: () => P
+    j: () => R
 });
 var r = n(526167),
     i = n(621554),
-    a = n(328756),
-    o = n(639525),
+    o = n(328756),
+    a = n(639525),
     s = n(131812),
     l = n(265174),
     c = n(926425),
@@ -28,13 +28,13 @@ var r = n(526167),
     A = n(34721),
     N = n(410693),
     C = n(185672),
-    R = n(235731);
-function P() {
+    P = n(235731);
+function R() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return e ? R : i;
+    return e ? P : i;
 }
 let w = {
-    DEFAULT_AVATARS: [a, o, s, l, c, u],
+    DEFAULT_AVATARS: [o, a, s, l, c, u],
     DEFAULT_PROVISIONAL_AVATARS: [v, I, S, T, A, N],
     DEFAULT_GROUP_DM_AVATARS: [d, f, _, p, h, m, g, E],
     BOT_AVATARS: {

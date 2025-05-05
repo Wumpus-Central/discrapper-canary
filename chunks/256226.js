@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(91192),
     l = n(866442),
     c = n(442837),
@@ -75,8 +75,8 @@ function T(e, t) {
         r,
         i = A(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -85,24 +85,24 @@ function A(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let N = i.forwardRef(function (e, t) {
-    var a, O, I;
+    var o, O, I;
     let A,
-        { canRemove: N, className: C, role: R, onRemove: P, guildId: w, disableBorderColor: D, onMouseDown: L } = e,
-        x = (0, s.JA)(R.id),
-        { tabIndex: M } = x,
-        k = T(x, ['tabIndex']),
+        { canRemove: N, className: C, role: P, onRemove: R, guildId: w, disableBorderColor: D, onMouseDown: L } = e,
+        x = (0, s.JA)(P.id),
+        { tabIndex: k } = x,
+        M = T(x, ['tabIndex']),
         j = (0, g.p9)({
-            roleId: R.id,
+            roleId: P.id,
             size: 16,
             guildId: w
         }),
         U = (0, c.e7)([_.Z], () => _.Z.roleStyle),
-        G = (null == (a = R.tags) ? void 0 : a.guild_connections) === null,
+        G = (null == (o = P.tags) ? void 0 : o.guild_connections) === null,
         B = i.useCallback(
             (e) => {
                 (0, f.jW)(e, async () => {
@@ -111,38 +111,38 @@ let N = i.forwardRef(function (e, t) {
                         (0, r.jsx)(
                             e,
                             S(v({}, t), {
-                                id: R.id,
+                                id: P.id,
                                 label: b.intl.string(b.t.sMsaLi)
                             })
                         );
                 });
             },
-            [R.id]
+            [P.id]
         ),
-        V = (0, d.dQu)(u.Z.unsafe_rawColors.PRIMARY_300).hsl(),
-        F = null != (O = R.colorString) ? O : V,
-        Z = null != (I = (0, l.wK)(F, 0.6)) ? I : void 0,
+        F = (0, d.dQu)(u.Z.unsafe_rawColors.PRIMARY_300).hsl(),
+        V = null != (O = P.colorString) ? O : F,
+        Z = null != (I = (0, l.wK)(V, 0.6)) ? I : void 0,
         H = u.Z.unsafe_rawColors.WHITE_500.css,
-        Y = (0, l._i)(F);
+        Y = (0, l._i)(V);
     null != Y && 0.3 > (0, l.Bd)(Y) && (H = u.Z.unsafe_rawColors.PRIMARY_630.css);
-    let W = (0, E.X)(w, R.colorStrings);
+    let W = (0, E.X)(w, P.colorStrings);
     A = G
         ? (0, r.jsx)(p.Z, {
               className: y.roleFlowerStar,
               iconClassName: N ? y.roleVerifiedIcon : void 0,
-              color: F,
+              color: V,
               size: 14
           })
         : 'dot' === U
           ? (0, r.jsx)(d.FhE, {
                 className: y.roleDot,
-                color: F,
+                color: V,
                 background: !1,
                 colors: W,
                 tooltip: !1
             })
           : (0, r.jsx)(d.xko, {
-                color: F,
+                color: V,
                 colors: W,
                 className: y.roleCircle
             });
@@ -155,12 +155,12 @@ let N = i.forwardRef(function (e, t) {
                 ? (0, r.jsx)(d.DY3, {
                       text: b.intl.string(b.t.u3RVsL),
                       children: (0, r.jsxs)(d.P3F, {
-                          className: o()(y.roleRemoveButtonCanRemove, y.roleRemoveButton),
-                          onClick: P,
-                          tabIndex: M,
+                          className: a()(y.roleRemoveButtonCanRemove, y.roleRemoveButton),
+                          onClick: R,
+                          tabIndex: k,
                           focusProps: { focusClassName: y.roleRemoveIconFocused },
                           'aria-hidden': !1,
-                          'aria-label': b.intl.formatToPlainString(b.t.QrxwhY, { roleName: R.name }),
+                          'aria-label': b.intl.formatToPlainString(b.t.QrxwhY, { roleName: P.name }),
                           children: [
                               A,
                               (0, r.jsx)(d.Dio, {
@@ -177,7 +177,7 @@ let N = i.forwardRef(function (e, t) {
                       tabIndex: -1,
                       focusProps: { focusClassName: y.roleRemoveIconFocused },
                       'aria-hidden': !0,
-                      'aria-label': b.intl.formatToPlainString(b.t.QrxwhY, { roleName: R.name }),
+                      'aria-label': b.intl.formatToPlainString(b.t.QrxwhY, { roleName: P.name }),
                       children: A
                   });
     return (0, r.jsx)(d.tEY, {
@@ -187,14 +187,14 @@ let N = i.forwardRef(function (e, t) {
                 v(
                     {
                         ref: t,
-                        className: o()(y.role, C),
+                        className: a()(y.role, C),
                         style: K,
                         onContextMenu: B,
                         onMouseDown: L,
-                        'aria-label': R.name,
-                        tabIndex: M
+                        'aria-label': P.name,
+                        tabIndex: k
                     },
-                    k
+                    M
                 ),
                 {
                     children: [
@@ -205,7 +205,7 @@ let N = i.forwardRef(function (e, t) {
                             className: y.roleName,
                             children: (0, r.jsx)(d.Text, {
                                 variant: 'text-xs/medium',
-                                children: (0, r.jsx)(h.Z, { children: R.name })
+                                children: (0, r.jsx)(h.Z, { children: P.name })
                             })
                         })
                     ]

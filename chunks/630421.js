@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(740078),
     i = n(343713),
-    a = n(49691),
-    o = n(285363),
+    o = n(49691),
+    a = n(285363),
     s = n(874900),
     l = n(126387),
     c = n(632471),
@@ -54,12 +54,12 @@ function _(e) {
         A = p.hasOwnProperty('y'),
         N = r.t$,
         C = r.we,
-        R = window;
+        P = window;
     if (g) {
-        var P = (0, i.Z)(l),
+        var R = (0, i.Z)(l),
             w = 'clientHeight',
             D = 'clientWidth';
-        P === (0, a.Z)(l) && ((P = (0, o.Z)(l)), 'static' !== (0, s.Z)(P).position && 'absolute' === h && ((w = 'scrollHeight'), (D = 'scrollWidth'))), (u === r.we || ((u === r.t$ || u === r.F2) && _ === r.ut)) && ((C = r.I), (I -= (b && P === R && R.visualViewport ? R.visualViewport.height : P[w]) - c.height), (I *= m ? 1 : -1)), (u === r.t$ || ((u === r.we || u === r.I) && _ === r.ut)) && ((N = r.F2), (O -= (b && P === R && R.visualViewport ? R.visualViewport.width : P[D]) - c.width), (O *= m ? 1 : -1));
+        R === (0, o.Z)(l) && ((R = (0, a.Z)(l)), 'static' !== (0, s.Z)(R).position && 'absolute' === h && ((w = 'scrollHeight'), (D = 'scrollWidth'))), (u === r.we || ((u === r.t$ || u === r.F2) && _ === r.ut)) && ((C = r.I), (I -= (b && R === P && P.visualViewport ? P.visualViewport.height : R[w]) - c.height), (I *= m ? 1 : -1)), (u === r.t$ || ((u === r.we || u === r.I) && _ === r.ut)) && ((N = r.F2), (O -= (b && R === P && P.visualViewport ? P.visualViewport.width : R[D]) - c.width), (O *= m ? 1 : -1));
     }
     var L = Object.assign({ position: h }, g && d),
         x =
@@ -69,13 +69,13 @@ function _(e) {
                           x: O,
                           y: I
                       },
-                      (0, a.Z)(l)
+                      (0, o.Z)(l)
                   )
                 : {
                       x: O,
                       y: I
                   };
-    return ((O = x.x), (I = x.y), m) ? Object.assign({}, L, (((n = {})[C] = A ? '0' : ''), (n[N] = T ? '0' : ''), (n.transform = 1 >= (R.devicePixelRatio || 1) ? 'translate(' + O + 'px, ' + I + 'px)' : 'translate3d(' + O + 'px, ' + I + 'px, 0)'), n)) : Object.assign({}, L, (((t = {})[C] = A ? I + 'px' : ''), (t[N] = T ? O + 'px' : ''), (t.transform = ''), t));
+    return ((O = x.x), (I = x.y), m) ? Object.assign({}, L, (((n = {})[C] = A ? '0' : ''), (n[N] = T ? '0' : ''), (n.transform = 1 >= (P.devicePixelRatio || 1) ? 'translate(' + O + 'px, ' + I + 'px)' : 'translate3d(' + O + 'px, ' + I + 'px, 0)'), n)) : Object.assign({}, L, (((t = {})[C] = A ? I + 'px' : ''), (t[N] = T ? O + 'px' : ''), (t.transform = ''), t));
 }
 let p = {
     name: 'computeStyles',
@@ -86,8 +86,8 @@ let p = {
             n = e.options,
             r = n.gpuAcceleration,
             i = void 0 === r || r,
-            a = n.adaptive,
-            o = void 0 === a || a,
+            o = n.adaptive,
+            a = void 0 === o || o,
             s = n.roundOffsets,
             u = void 0 === s || s,
             d = {
@@ -106,7 +106,7 @@ let p = {
                     Object.assign({}, d, {
                         offsets: t.modifiersData.popperOffsets,
                         position: t.options.strategy,
-                        adaptive: o,
+                        adaptive: a,
                         roundOffsets: u
                     })
                 )

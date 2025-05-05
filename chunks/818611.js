@@ -1,8 +1,8 @@
 n.d(t, { Z: () => L }), n(314940);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(278074),
     l = n(831209),
     c = n(399606),
@@ -74,8 +74,8 @@ function S(e, t) {
         r,
         i = T(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -84,28 +84,28 @@ function T(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let A = 3,
     N = 80,
     C = 12,
-    R = 16,
-    P = () => N,
+    P = 16,
+    R = () => N,
     w = (e) => {
-        var { children: t, className: n, onSelect: i, isSelected: a = !1 } = e,
+        var { children: t, className: n, onSelect: i, isSelected: o = !1 } = e,
             s = S(e, ['children', 'className', 'onSelect', 'isSelected']);
         return (0, r.jsx)(
             u.P3F,
-            I(O({ className: o()(b.decorationGridItem, a ? b.selected : void 0, n) }, s), {
+            I(O({ className: a()(b.decorationGridItem, o ? b.selected : void 0, n) }, s), {
                 onClick: i,
                 children: t
             })
         );
     },
     D = (e) => {
-        var { user: t, avatarDecoration: n, innerRef: a, section: o, isSelected: s = !1 } = e,
+        var { user: t, avatarDecoration: n, innerRef: o, section: a, isSelected: s = !1 } = e,
             h = S(e, ['user', 'avatarDecoration', 'innerRef', 'section', 'isSelected']);
         let y = (0, c.e7)([f.Z], () => {
                 let e = f.Z.getProduct(n.skuId);
@@ -113,17 +113,17 @@ let A = 3,
             }),
             v = (0, _.Yq)(n.skuId),
             T = p.ZP.canUseCollectibles(t),
-            A = o === m.$0.PREMIUM_PURCHASE && !T,
+            A = a === m.$0.PREMIUM_PURCHASE && !T,
             C = i.useRef(null),
-            R = (0, d.Z)(null != a ? a : C),
-            { avatarDecorationSrc: P } = (0, g.Z)({
+            P = (0, d.Z)(null != o ? o : C),
+            { avatarDecorationSrc: R } = (0, g.Z)({
                 user: t,
                 avatarDecorationOverride: n,
                 size: N,
-                onlyAnimateOnHover: !R
+                onlyAnimateOnHover: !P
             }),
             D = () =>
-                o === m.$0.PURCHASE || (o === m.$0.PREMIUM_PURCHASE && T)
+                a === m.$0.PURCHASE || (a === m.$0.PREMIUM_PURCHASE && T)
                     ? null
                     : v
                       ? (0, r.jsx)(u.lBU, {
@@ -162,7 +162,7 @@ let A = 3,
                 O(
                     {
                         className: A ? b.decorationGridItemChurned : void 0,
-                        innerRef: null != a ? a : C,
+                        innerRef: null != o ? o : C,
                         isSelected: s
                     },
                     h
@@ -171,7 +171,7 @@ let A = 3,
                     children: [
                         (0, r.jsx)('img', {
                             className: b.presetDecorationImg,
-                            src: P,
+                            src: R,
                             alt: n.label
                         }),
                         D()
@@ -181,7 +181,7 @@ let A = 3,
         );
     },
     L = (e) => {
-        let { user: t, guild: n, pendingAvatarDecoration: i, selectedAvatarDecorationRef: a, onSelect: o, onOpenShop: l } = e,
+        let { user: t, guild: n, pendingAvatarDecoration: i, selectedAvatarDecorationRef: o, onSelect: a, onOpenShop: l } = e,
             c = (0, m.ZP)(),
             d = (e, d, f, _) => {
                 let { section: p, items: g } = c[e];
@@ -192,7 +192,7 @@ let A = 3,
                             {
                                 style: O({}, f),
                                 isSelected: null === i,
-                                onSelect: () => o(null),
+                                onSelect: () => a(null),
                                 children: [
                                     (0, r.jsx)(u.t6m, {
                                         size: 'md',
@@ -242,9 +242,9 @@ let A = 3,
                                 user: t,
                                 avatarDecoration: e,
                                 section: p,
-                                innerRef: n ? a : void 0,
+                                innerRef: n ? o : void 0,
                                 isSelected: n,
-                                onSelect: () => o(e)
+                                onSelect: () => a(e)
                             },
                             _
                         );
@@ -266,7 +266,7 @@ let A = 3,
                 let { items: t } = e;
                 return t.length;
             }),
-            sectionGutter: R,
+            sectionGutter: P,
             itemGutter: C,
             paddingHorizontal: C,
             paddingVertical: 0,
@@ -275,6 +275,6 @@ let A = 3,
             renderSection: f,
             getSectionHeight: (e) => c[e].height,
             getItemKey: (e, t) => c[e].items[t].id,
-            getItemHeight: P
+            getItemHeight: R
         });
     };

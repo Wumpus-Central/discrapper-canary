@@ -1,9 +1,9 @@
 let r;
 n.d(t, { Z: () => B }), n(259475), n(227481), n(730884), n(20464), n(341884), n(364341), n(629680), n(505025), n(918970), n(121784), n(644351), n(146733), n(415506), n(457542);
 var i = n(512722),
-    a = n.n(i),
-    o = n(392711),
-    s = n.n(o),
+    o = n.n(i),
+    a = n(392711),
+    s = n.n(a),
     l = n(544891),
     c = n(992774),
     u = n(649754),
@@ -25,16 +25,16 @@ let S = 300000,
     A = {},
     N = new f.V7(),
     C = !1,
-    R = window.document.createElement('canvas'),
-    P = 512,
+    P = window.document.createElement('canvas'),
+    R = 512,
     w = 288;
-(R.width = 512), (R.height = w);
-let D = R.getContext('2d');
+(P.width = 512), (P.height = w);
+let D = P.getContext('2d');
 function L() {
     N.stop(), null != r && (u.Z.removeSink(r, A), (r = null));
 }
 let x = s().debounce((e, t, n, r) => {
-    k(
+    M(
         e,
         (0, y.V9)({
             streamType: null != t ? O.lo.GUILD : O.lo.CALL,
@@ -44,30 +44,30 @@ let x = s().debounce((e, t, n, r) => {
         })
     );
 }, 500);
-function M(e) {
-    let t = Math.min(P / e.width, w / e.height),
+function k(e) {
+    let t = Math.min(R / e.width, w / e.height),
         n = e.width * t,
         r = e.height * t;
-    (R.width = n), (R.height = r);
+    (P.width = n), (P.height = r);
     let i = window.document.createElement('canvas'),
-        a = i.getContext('2d');
+        o = i.getContext('2d');
     (i.width = e.width), (i.height = e.height);
-    let o = new ImageData(e.data, e.width, e.height);
+    let a = new ImageData(e.data, e.width, e.height);
     return (
-        null == a || a.putImageData(o, 0, 0),
+        null == o || o.putImageData(a, 0, 0),
         new Promise((t) => {
             null == D || D.drawImage(i, 0, 0, e.width, e.height, 0, 0, n, r), t();
         })
     );
 }
-async function k(e, t) {
+async function M(e, t) {
     if (r !== e || ((0, E.isWeb)() && h.I0.getSetting()) || m.Z.getIsActiveStreamPreviewDisabled(t)) return;
-    let n = () => k(e, t);
+    let n = () => M(e, t);
     if (!C)
         try {
             let n = await j(e, 60);
-            await M(n);
-            let r = R.toDataURL('image/jpeg');
+            await k(n);
+            let r = P.toDataURL('image/jpeg');
             if (
                 (_.Z.dispatch({
                     type: 'STREAM_PREVIEW_FETCH_SUCCESS',
@@ -77,7 +77,7 @@ async function k(e, t) {
                 E.isPlatformEmbedded)
             ) {
                 let e = g.default.getToken();
-                a()(null != e, 'Auth token was null while sending screenshot.'),
+                o()(null != e, 'Auth token was null while sending screenshot.'),
                     await b.ZP.makeChunkedRequest(
                         v.ANM.STREAM_PREVIEW(t),
                         { thumbnail: r },
@@ -111,14 +111,14 @@ function U(e, t) {
     let n = (0, d.aG)(e);
     if (null == n) return Promise.resolve(new ImageData(0, 0));
     let { width: r, height: i } = n.getVideoTracks()[0].getSettings(),
-        a = document.createElement('video'),
-        o = document.createElement('canvas');
-    (a.width = o.width = null != r ? r : P), (a.height = o.height = null != i ? i : w), (a.srcObject = n), a.play();
-    let s = o.getContext('2d');
+        o = document.createElement('video'),
+        a = document.createElement('canvas');
+    (o.width = a.width = null != r ? r : R), (o.height = a.height = null != i ? i : w), (o.srcObject = n), o.play();
+    let s = a.getContext('2d');
     return new Promise((e, n) => {
-        a.ontimeupdate = () => {
-            null == s || s.drawImage(a, 0, 0, o.width, o.height);
-            let r = null == s ? void 0 : s.getImageData(0, 0, o.width, o.height);
+        o.ontimeupdate = () => {
+            null == s || s.drawImage(o, 0, 0, a.width, a.height);
+            let r = null == s ? void 0 : s.getImageData(0, 0, a.width, a.height);
             try {
                 null != r && t(r) && e(r);
             } catch (e) {
@@ -126,18 +126,18 @@ function U(e, t) {
             }
         };
     }).finally(() => {
-        (a.ontimeupdate = null), a.removeAttribute('srcObject'), a.load();
+        (o.ontimeupdate = null), o.removeAttribute('srcObject'), o.load();
     });
 }
 function G(e, t) {
     let n = (0, c.zS)(),
         i = (null == n ? void 0 : n.getNextVideoOutputFrame) != null;
-    return new Promise((a, o) => {
+    return new Promise((o, a) => {
         let s = (e) => {
             try {
-                null != e && t(e) && a(e);
+                null != e && t(e) && o(e);
             } catch (e) {
-                o(e);
+                a(e);
             }
         };
         i
@@ -155,8 +155,8 @@ let B = {
             _.Z.subscribe('LOGOUT', L),
             _.Z.subscribe('STREAM_DELETE', L),
             _.Z.subscribe('RTC_CONNECTION_VIDEO', (e) => {
-                let { guildId: t, channelId: n, userId: i, streamId: a, context: o } = e;
-                null == a || o !== I.Yn.STREAM || i !== g.default.getId() || __OVERLAY__ || (L(), (r = a), x(a, t, n, i));
+                let { guildId: t, channelId: n, userId: i, streamId: o, context: a } = e;
+                null == o || a !== I.Yn.STREAM || i !== g.default.getId() || __OVERLAY__ || (L(), (r = o), x(o, t, n, i));
             }),
             _.Z.subscribe('MEDIA_ENGINE_VIDEO_STATE_CHANGED', (e) => {
                 let { videoState: t } = e;

@@ -1,11 +1,11 @@
 n.d(t, {
     Ej: () => p,
     Ig: () => s,
-    JX: () => o,
+    JX: () => a,
     P: () => m,
     Tb: () => u,
     Tg: () => l,
-    a6: () => a,
+    a6: () => o,
     cm: () => f,
     lY: () => d,
     n_: () => h,
@@ -15,8 +15,8 @@ n.d(t, {
 });
 var r = n(981631);
 let i = 300,
-    a = 100,
-    o = 750,
+    o = 100,
+    a = 750,
     s = 100,
     l = 'user-profile-popout';
 var c = (function (e) {

@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         ASSISTANT_WUMPUS_VOICE_USER: () => O,
-        default: () => eP,
+        default: () => eR,
         mergeUser: () => N,
         transformUser: () => T,
         users: () => b
@@ -13,8 +13,8 @@ n.r(t),
     n(642613);
 var r = n(392711),
     i = n(911969),
-    a = n(2572),
-    o = n(864106),
+    o = n(2572),
+    a = n(864106),
     s = n(579407),
     l = n(602210),
     c = n(502087),
@@ -47,8 +47,8 @@ function v(e, t, n) {
     if (null == r) return !1;
     let i = r;
     (i = null == n ? r.removeGuildAvatarHash(t) : r.addGuildAvatarHash(t, n)), (b[r.id] = i);
-    let a = r !== i;
-    return a && y++, a;
+    let o = r !== i;
+    return o && y++, o;
 }
 function I(e, t) {
     let n = b[e];
@@ -76,14 +76,14 @@ function T(e) {
     null != r && ((e.nsfwAllowed = r), delete e.nsfw_allowed);
     let i = e.age_verification_status;
     null != i && ((e.ageVerificationStatus = i), delete e.age_verification_status);
-    let a = e.public_flags;
-    null != a && ((e.publicFlags = a), delete e.public_flags);
+    let o = e.public_flags;
+    null != o && ((e.publicFlags = o), delete e.public_flags);
     let c = e.purchased_flags;
     void 0 !== c && ((e.purchasedFlags = c), delete e.purchased_flags);
     let d = e.premium_usage_flags;
     void 0 !== d && ((e.premiumUsageFlags = d), delete e.premium_usage_flags), null === e.banner_color && delete e.banner_color;
     let f = e.avatar_decoration_data;
-    void 0 !== f && ((e.avatarDecorationData = (0, o.FG)(f)), delete e.avatar_decoration_data);
+    void 0 !== f && ((e.avatarDecorationData = (0, a.FG)(f)), delete e.avatar_decoration_data);
     let _ = e.collectibles;
     void 0 !== _ && (delete e.collectibles, (e.collectibles = (0, s.Xm)(_)));
     let p = e.global_name;
@@ -99,30 +99,30 @@ function N(e) {
         n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         r = b[e.id],
         i = void 0 !== e.id && e.id === p.default.getId();
-    if (null == r) void 0 !== (t = (r = new d.Z(e)).premiumType) && i && (r.premiumType = R((0, u.QI)(r), r.premiumType));
+    if (null == r) void 0 !== (t = (r = new d.Z(e)).premiumType) && i && (r.premiumType = P((0, u.QI)(r), r.premiumType));
     else if (n) {
-        var a;
+        var o;
         let n = T(e);
-        void 0 !== (t = null != (a = n.premium_type) ? a : n.premiumType) && i && (0, u.VR)(n) && (n = C(n)), (n = S(r, n)), (r = r.merge(n));
+        void 0 !== (t = null != (o = n.premium_type) ? o : n.premiumType) && i && (0, u.VR)(n) && (n = C(n)), (n = S(r, n)), (r = r.merge(n));
     }
     (0, u.jX)((0, u.QI)(r), t, r.premiumType);
-    let o = b[e.id] !== r;
-    return (b[e.id] = r), o && y++, o;
+    let a = b[e.id] !== r;
+    return (b[e.id] = r), a && y++, a;
 }
 function C(e) {
     var t;
     let n = null != (t = e.premium_type) ? t : e.premiumType,
-        r = R((0, u.VR)(e), n);
+        r = P((0, u.VR)(e), n);
     return void 0 !== e.premiumType ? (e.premiumType = r) : void 0 !== e.premium_type && (e.premium_type = r), e;
 }
-function R(e, t) {
+function P(e, t) {
     if (!e) return t;
     let n = c.Z.getPremiumTypeOverride(),
         r = c.Z.getPremiumTypeActual();
     return n === g.F_ ? r : n;
 }
-function P(e, t) {
-    var n, r, i, a, o, s;
+function R(e, t) {
+    var n, r, i, o, a, s;
     if (
         (null != e.author && 'SENDING' !== e.state && A(e.author) && N(e.author, t),
         null == (n = e.mentions) ||
@@ -130,15 +130,15 @@ function P(e, t) {
                 A(e) && N(e, t);
             }),
         (null == (r = e.interaction) ? void 0 : r.user) != null && A(null == (i = e.interaction) ? void 0 : i.user) && N(e.interaction.user, t),
-        null == (a = e.attachments) ||
-            a.forEach((e) => {
+        null == (o = e.attachments) ||
+            o.forEach((e) => {
                 var n;
                 null == (n = e.clip_participants) ||
                     n.forEach((e) => {
                         A(e) && N(e, t);
                     });
             }),
-        (null == (o = e.resolved) ? void 0 : o.users) != null)
+        (null == (a = e.resolved) ? void 0 : a.users) != null)
     )
         for (let n in e.resolved.users) {
             let r = e.resolved.users[n];
@@ -190,11 +190,11 @@ function L(e) {
 function x(e) {
     if (null != e.users) for (let t of e.users) (t.id in b && L(t)) || (b[t.id] = new d.Z(t));
 }
-function M(e) {
+function k(e) {
     let { user: t } = e;
     t.id !== p.default.getId() && N(t);
 }
-function k(e) {
+function M(e) {
     let { user: t } = e;
     N(t);
 }
@@ -204,32 +204,32 @@ function j(e) {
 }
 function U(e) {
     let { messages: t } = e;
-    return t.forEach((e) => P(e, !0)), !1;
+    return t.forEach((e) => R(e, !0)), !1;
 }
 function G(e) {
     let { mostRecentMessages: t } = e;
-    return null == t || t.forEach((e) => P(e, !1)), !1;
+    return null == t || t.forEach((e) => R(e, !1)), !1;
 }
 function B(e) {
     let { messages: t } = e;
     return t.forEach((e) => U({ messages: e })), !1;
 }
-function V(e) {
-    let { firstMessages: t, owners: n } = e;
-    null != t && t.forEach((e) => P(e, !0)), null != n && n.forEach((e) => N(e.user, !0));
-}
 function F(e) {
+    let { firstMessages: t, owners: n } = e;
+    null != t && t.forEach((e) => R(e, !0)), null != n && n.forEach((e) => N(e.user, !0));
+}
+function V(e) {
     let { threads: t } = e;
     Object.values(t).forEach((e) => {
         let { first_message: t, most_recent_message: n, owner: r } = e;
-        null != t && P(t, !0), null != n && P(n, !0), null != r && null != r.user && N(r.user, !0);
+        null != t && R(t, !0), null != n && R(n, !0), null != r && null != r.user && N(r.user, !0);
     });
 }
 function Z(e) {
     let { supplementalData: t } = e;
     Object.values(t).forEach((e) => {
         let { message_preview: t } = e;
-        null != t && P(t, !0);
+        null != t && R(t, !0);
     });
 }
 function H(e) {
@@ -254,7 +254,7 @@ function W(e) {
 }
 function K(e) {
     let { message: t } = e;
-    if ((P(t, !0), null != t.flags && f.yE(t.flags, m.iLy.URGENT))) {
+    if ((R(t, !0), null != t.flags && f.yE(t.flags, m.iLy.URGENT))) {
         let e = b[p.default.getId()];
         return null != e && ((b[p.default.getId()] = e.set('flags', f.mB(e.flags, m.xW$.HAS_UNREAD_URGENT_MESSAGES, !0))), !0);
     }
@@ -280,8 +280,8 @@ function X(e) {
             if (null == t) return !1;
             let n = Q.reduce((n, i) => {
                 if (e.user.hasOwnProperty(i)) {
-                    let a = t.set((0, r.camelCase)(i), e.user[i]);
-                    (n = n || a !== t), (t = a);
+                    let o = t.set((0, r.camelCase)(i), e.user[i]);
+                    (n = n || o !== t), (t = o);
                 }
                 return n;
             }, !1);
@@ -329,12 +329,12 @@ function ei(e) {
             }, !1) || n;
     return n;
 }
-function ea(e) {
+function eo(e) {
     let t = !1;
     for (let n of e.members) N(n.user) && (t = !0), v(n.user.id, e.guildId, n.avatar) && (t = !0);
     return t;
 }
-function eo(e) {
+function ea(e) {
     var t;
     let n = !1;
     for (let r of null != (t = e.users) ? t : []) Object.hasOwn(b, r.id) || (n = N(r) || n);
@@ -365,7 +365,7 @@ function ec(e) {
     let { guild: t } = e;
     t.members.forEach((e) => {
         let {
-            user: { id: n, username: r, avatar: i, discriminator: a, bot: o },
+            user: { id: n, username: r, avatar: i, discriminator: o, bot: a },
             avatar: s
         } = e;
         n !== p.default.getId() &&
@@ -373,8 +373,8 @@ function ec(e) {
                 id: n,
                 username: r,
                 avatar: i,
-                discriminator: a,
-                bot: o
+                discriminator: o,
+                bot: a
             }),
             v(n, t.id, s);
     });
@@ -451,12 +451,12 @@ function eS(e) {
 function eT(e) {
     let { messageItems: t } = e;
     t.forEach((e) => {
-        null != e.message && P(e.message, !0);
+        null != e.message && R(e.message, !0);
     }, !1);
 }
 function eA(e) {
     let { participants: t } = e;
-    return t.reduce((e, t) => ((0, a.Z)(t) && N(t.member.user)) || e, !1);
+    return t.reduce((e, t) => ((0, o.Z)(t) && N(t.member.user)) || e, !1);
 }
 function eN(e) {
     let {} = e,
@@ -468,19 +468,19 @@ function eC(e) {
         n = b[p.default.getId()];
     return null != n && n.ageVerificationStatus === i.F$.CLIENT_ONLY_PENDING && ((b[p.default.getId()] = n.set('ageVerificationStatus', t)), !0);
 }
-class eR extends h.Z {
+class eP extends h.Z {
     initialize() {
         this.waitFor(p.default, c.Z);
     }
     takeSnapshot() {
         let e = this.getCurrentUser();
         return {
-            version: eR.LATEST_SNAPSHOT_VERSION,
+            version: eP.LATEST_SNAPSHOT_VERSION,
             data: { users: [e].filter(_.lm) }
         };
     }
     handleLoadCache(e) {
-        let t = this.readSnapshot(eR.LATEST_SNAPSHOT_VERSION);
+        let t = this.readSnapshot(eP.LATEST_SNAPSHOT_VERSION);
         if (null != t) for (let e of t.users) b[e.id] = new d.Z(e);
         if (null != e.users) for (let t of e.users) (t.id in b && L(t)) || (b[t.id] = new d.Z(t));
         for (let t of [e.privateChannels, e.initialGuildChannels])
@@ -526,8 +526,8 @@ class eR extends h.Z {
             UPDATE_CLIENT_PREMIUM_TYPE: j,
             OVERLAY_INITIALIZE: x,
             CACHE_LOADED: (e) => this.handleLoadCache(e),
-            USER_UPDATE: M,
-            CURRENT_USER_UPDATE: k,
+            USER_UPDATE: k,
+            CURRENT_USER_UPDATE: M,
             PRESENCE_UPDATES: X,
             SEARCH_FINISH: B,
             MOD_VIEW_SEARCH_FINISH: B,
@@ -564,15 +564,15 @@ class eR extends h.Z {
             AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: eh,
             GIFT_CODE_RESOLVE_SUCCESS: em,
             GUILD_APPLIED_BOOSTS_FETCH_SUCCESS: eg,
-            LOAD_THREADS_SUCCESS: V,
-            LOAD_ARCHIVED_THREADS_SUCCESS: V,
-            LOAD_FORUM_POSTS: F,
+            LOAD_THREADS_SUCCESS: F,
+            LOAD_ARCHIVED_THREADS_SUCCESS: F,
+            LOAD_FORUM_POSTS: V,
             GUILD_SCHEDULED_EVENT_USERS_FETCH_SUCCESS: H,
             LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: Y,
             NOTIFICATION_CENTER_ITEM_CREATE: W,
             LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: Z,
-            PASSIVE_UPDATE_V2: ea,
-            LOCAL_MESSAGES_LOADED: eo,
+            PASSIVE_UPDATE_V2: eo,
+            LOCAL_MESSAGES_LOADED: ea,
             FAMILY_CENTER_INITIAL_LOAD: eb,
             FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS: ey,
             FAMILY_CENTER_TEEN_ACTIVITY_FETCH_SUCCESS: ev,
@@ -586,5 +586,5 @@ class eR extends h.Z {
         });
     }
 }
-E(eR, 'displayName', 'UserStore'), E(eR, 'LATEST_SNAPSHOT_VERSION', 1);
-let eP = new eR();
+E(eP, 'displayName', 'UserStore'), E(eP, 'LATEST_SNAPSHOT_VERSION', 1);
+let eR = new eP();

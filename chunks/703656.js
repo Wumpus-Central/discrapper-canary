@@ -1,4 +1,4 @@
-let r, i, a;
+let r, i, o;
 n.d(t, {
     At: () => S,
     DB: () => C,
@@ -6,9 +6,9 @@ n.d(t, {
     Wf: () => N,
     XU: () => y,
     dL: () => v,
-    eH: () => P,
+    eH: () => R,
     m1: () => A,
-    op: () => R,
+    op: () => P,
     s1: () => I,
     uL: () => b,
     uv: () => O
@@ -24,7 +24,7 @@ n.d(t, {
     n(35282),
     n(49124),
     n(704826);
-var o = n(539528),
+var a = n(539528),
     s = n(710845),
     l = n(585483),
     c = n(143816),
@@ -60,7 +60,7 @@ function f(e) {
 }
 let _ = new s.Z('Routing/Utils'),
     p = [u.E07.DEVELOPER_PORTAL];
-r = __OVERLAY__ ? (0, o.PP)() : (0, o.lX)();
+r = __OVERLAY__ ? (0, a.PP)() : (0, a.lX)();
 let h = !1,
     m = r.listen((e, t) => {
         'REPLACE' !== t && ((h = !0), m());
@@ -76,7 +76,7 @@ function b(e, t) {
     _.log('transitionTo - Transitioning to '.concat(e));
     let n = null == t ? void 0 : t.source;
     null == t || delete t.source;
-    let o = null == t ? void 0 : t.sourceLocationStack;
+    let a = null == t ? void 0 : t.sourceLocationStack;
     if ((null == t || delete t.sourceLocationStack, null == t)) r.push(e);
     else {
         let n = new URL(e, 'https:'.concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT));
@@ -91,7 +91,7 @@ function b(e, t) {
             )
         );
     }
-    (i = n), (a = o);
+    (i = n), (o = a);
 }
 function y(e, t, n, r) {
     _.log(
@@ -118,7 +118,7 @@ function S() {
     return i;
 }
 function T() {
-    return a;
+    return o;
 }
 function A(e) {
     if (null == e) {
@@ -151,9 +151,9 @@ function N(e) {
 function C() {
     return h;
 }
-function R() {
+function P() {
     g() && ((i = null), r.goBack());
 }
-function P() {
+function R() {
     g() && ((i = null), r.goForward());
 }

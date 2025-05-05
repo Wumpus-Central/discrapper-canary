@@ -1,8 +1,8 @@
 n.d(t, { Z: () => Q }), n(388685);
 var r,
     i = n(392711),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(570140),
     l = n(786761),
     c = n(131704),
@@ -69,16 +69,16 @@ let O = new Set(),
     v = {},
     I = {};
 function S(e) {
-    v = a().omitBy(v, (t) => {
+    v = o().omitBy(v, (t) => {
         let n = t.guildId === e;
         return n && delete I[t.parentId], n;
     });
 }
 function T(e) {
-    (v = a().omitBy(v, (t) => t.parentId === e)), delete I[e];
+    (v = o().omitBy(v, (t) => t.parentId === e)), delete I[e];
 }
 function A(e, t) {
-    c.AW.has(e.type) && N(R(e), t);
+    c.AW.has(e.type) && N(P(e), t);
 }
 function N(e, t) {
     var n;
@@ -87,9 +87,9 @@ function N(e, t) {
 }
 function C(e) {
     var t;
-    null == (t = e.threads) || t.forEach(P);
+    null == (t = e.threads) || t.forEach(R);
 }
-function R(e) {
+function P(e) {
     if (!(e.id in v)) {
         var t;
         v[e.id] = {
@@ -102,7 +102,7 @@ function R(e) {
     }
     return v[e.id];
 }
-function P(e) {
+function R(e) {
     A(e, (t) => {
         var n;
         null != e.messageCount && (t.count = e.messageCount);
@@ -113,7 +113,7 @@ function P(e) {
 function w(e) {
     if (null != e && !(e.id in v)) {
         let t = f.Z.getChannel(e.id);
-        if (null != t) return P(t), !0;
+        if (null != t) return R(t), !0;
     }
     return !1;
 }
@@ -131,17 +131,17 @@ function x(e) {
     let { guild: t } = e;
     C(t);
 }
-function M(e) {
+function k(e) {
     let { guild: t } = e;
     S(t.id);
 }
-function k(e) {
+function M(e) {
     let { channel: t } = e;
-    P(t);
+    R(t);
 }
 function j(e) {
     let { threads: t, mostRecentMessages: n } = e;
-    t.forEach(P),
+    t.forEach(R),
         null == n ||
             n.forEach((e) => {
                 let t = f.Z.getChannel(e.channel_id);
@@ -165,16 +165,16 @@ function B(e) {
     let { channel: t } = e;
     T(t.id);
 }
-function V(e) {
+function F(e) {
     let { channel: t } = e;
     delete v[t.id];
 }
-function F(e) {
+function V(e) {
     let { message: t, optimistic: n, isPushNotification: r, sendMessageOptions: i } = e;
     if (n || r || null != i) return !1;
-    let a = f.Z.getChannel(t.channel_id);
-    if (null == a || !c.Ec.has(a.type) || !Z(a, t)) return !1;
-    A(a, (e) => {
+    let o = f.Z.getChannel(t.channel_id);
+    if (null == o || !c.Ec.has(o.type) || !Z(o, t)) return !1;
+    A(o, (e) => {
         (e.count = Math.min(e.count + 1, h.M3)), (e.mostRecentRawMessage = t), (e.mostRecentMessage = null);
     });
 }
@@ -196,11 +196,11 @@ function Y(e) {
         r = v[n];
     if (null == r) return !1;
     let i = p.default.castChannelIdAsMessageId(n) !== t,
-        a = !O.has(t);
+        o = !O.has(t);
     N(r, (e) => {
         var n;
         let r = null != (n = e.mostRecentRawMessage) ? n : e.mostRecentMessage;
-        null != r && r.id === t && ((e.mostRecentMessage = null), (e.mostRecentRawMessage = null)), (e.count = i && a ? Math.max(e.count - 1, 0) : e.count), O.add(t);
+        null != r && r.id === t && ((e.mostRecentMessage = null), (e.mostRecentRawMessage = null)), (e.count = i && o ? Math.max(e.count - 1, 0) : e.count), O.add(t);
     });
 }
 function W(e) {
@@ -244,7 +244,7 @@ function z() {
         }
     }
 }
-class q extends (r = o.ZP.Store) {
+class q extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(f.Z, _.Z);
     }
@@ -269,9 +269,9 @@ let Q = new q(s.Z, {
     CONNECTION_OPEN: D,
     OVERLAY_INITIALIZE: L,
     GUILD_CREATE: x,
-    GUILD_DELETE: M,
-    THREAD_CREATE: k,
-    THREAD_UPDATE: k,
+    GUILD_DELETE: k,
+    THREAD_CREATE: M,
+    THREAD_UPDATE: M,
     THREAD_LIST_SYNC: j,
     LOAD_THREADS_SUCCESS: U,
     LOAD_ARCHIVED_THREADS_SUCCESS: U,
@@ -280,9 +280,9 @@ let Q = new q(s.Z, {
     RELATIONSHIP_REMOVE: z,
     SEARCH_FINISH: G,
     MOD_VIEW_SEARCH_FINISH: G,
-    THREAD_DELETE: V,
+    THREAD_DELETE: F,
     CHANNEL_DELETE: B,
-    MESSAGE_CREATE: F,
+    MESSAGE_CREATE: V,
     MESSAGE_UPDATE: H,
     MESSAGE_DELETE: Y,
     MESSAGE_DELETE_BULK: W,

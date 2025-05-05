@@ -1,4 +1,4 @@
-a.d(e, { Y: () => A });
+a.d(e, { Y: () => f });
 var r = a(395848),
     n = a(140955),
     _ = a(596308),
@@ -33,7 +33,7 @@ let E = [200, 500],
         let t = Math.min(u.length - 1, Math.floor(l() / 50));
         return u[t];
     },
-    A = (t, e = {}) => {
+    f = (t, e = {}) => {
         (0, s.A)(() => {
             let a;
             (0, c.Y)();
@@ -45,17 +45,17 @@ let E = [200, 500],
                     let e = d();
                     e && e.latency !== s.value && ((s.value = e.latency), (s.entries = e.entries), a());
                 },
-                A = (0, o.N)('event', I, { durationThreshold: null != e.durationThreshold ? e.durationThreshold : 40 });
+                f = (0, o.N)('event', I, { durationThreshold: null != e.durationThreshold ? e.durationThreshold : 40 });
             (a = (0, n._)(t, s, E, e.reportAllChanges)),
-                A &&
+                f &&
                     ('PerformanceEventTiming' in r.m &&
                         'interactionId' in PerformanceEventTiming.prototype &&
-                        A.observe({
+                        f.observe({
                             type: 'first-input',
                             buffered: !0
                         }),
                     (0, i.u)(() => {
-                        I(A.takeRecords()), s.value < 0 && l() > 0 && ((s.value = 0), (s.entries = [])), a(!0);
+                        I(f.takeRecords()), s.value < 0 && l() > 0 && ((s.value = 0), (s.entries = [])), a(!0);
                     }));
         });
     };

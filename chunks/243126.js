@@ -25,7 +25,7 @@ let h = (e, t) => {
         m = l.length > 0 && n,
         [_, C] = r.useState(m ? i.m.RECOMMENDED : i.m.POPULAR),
         v = (0, d.u)(),
-        O = (0, o.Wu)([c.Z], () => c.Z.productsWithVariantsAsGroup),
+        O = (0, o.e7)([c.Z], () => c.Z.productsWithVariantsAsGroup),
         x = (0, b.a)(),
         [j, y] = r.useState([]),
         S = r.useCallback(

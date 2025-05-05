@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => P,
+    ZP: () => R,
     _1: () => A,
     jd: () => N
 }),
@@ -7,8 +7,8 @@ n.d(t, {
     n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n(278074),
     c = n(442837),
@@ -83,21 +83,21 @@ let A = 2700,
         [b.n_.STATUS]: () => y.intl.string(y.t.TKdBCw),
         [b.n_.ACTIVITY]: () => y.intl.string(y.t.bSe71N)
     },
-    R = {
+    P = {
         [b.n_.AVATAR]: () => y.intl.string(y.t.xvN0fX),
         [b.n_.STATUS]: () => y.intl.string(y.t['C/vzS0']),
         [b.n_.ACTIVITY]: () => y.intl.string(y.t.ObfsSk)
     };
-function P(e) {
-    let { user: t, sourceType: n, isVisible: a, isExpandable: v, interactionSourceId: S, targetRef: A, onAction: N, renderMoreButtonPopout: P } = e,
+function R(e) {
+    let { user: t, sourceType: n, isVisible: o, isExpandable: v, interactionSourceId: S, targetRef: A, onAction: N, renderMoreButtonPopout: R } = e,
         w = i.useRef(null),
         D = (0, c.e7)([p.default], () => p.default.getId() === t.id),
         L = (0, h.Z)(t.id),
         { themeType: x } = (0, E.z)(),
-        { onInteraction: M, onInteractionPopoutTargetRefChange: k } = (0, g.Xo)(),
+        { onInteraction: k, onInteractionPopoutTargetRefChange: M } = (0, g.Xo)(),
         { live: j, stream: U } = (0, m.Z)(t.id),
         G =
-            !a &&
+            !o &&
             x !== b.lY.MODAL &&
             x !== b.lY.MODAL_V2 &&
             (0, l.EQ)(n)
@@ -105,19 +105,19 @@ function P(e) {
                 .with(b.n_.ACTIVITY, () => !0)
                 .with(b.n_.AVATAR, () => !1)
                 .exhaustive(),
-        [B, V] = i.useState(G);
+        [B, F] = i.useState(G);
     if (
         (i.useEffect(() => {
-            B && !G && V(!1);
+            B && !G && F(!1);
         }, [B, G]),
         t.bot || D || !L)
     )
         return null;
-    let F = () => {
-            k(A),
+    let V = () => {
+            M(A),
                 n === b.n_.AVATAR ? N({ action: 'PRESS_REACT_AVATAR' }) : n === b.n_.STATUS ? N({ action: 'PRESS_REACT_CUSTOM_STATUS' }) : N({ action: 'PRESS_REACT_ACTIVITY' }),
-                null == M ||
-                    M({
+                null == k ||
+                    k({
                         interactionType: b.P.REACT,
                         interactionSource: n,
                         interactionSourceId: S
@@ -125,10 +125,10 @@ function P(e) {
                 x === b.lY.POPOUT && (0, _.EW)(u.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
         },
         Z = () => {
-            k(A),
+            M(A),
                 n === b.n_.AVATAR ? N({ action: 'PRESS_REPLY_AVATAR' }) : n === b.n_.STATUS ? N({ action: 'PRESS_REPLY_CUSTOM_STATUS' }) : N({ action: 'PRESS_REPLY_ACTIVITY' }),
-                null == M ||
-                    M({
+                null == k ||
+                    k({
                         interactionType: b.P.REPLY,
                         interactionSource: n,
                         interactionSourceId: S
@@ -136,12 +136,12 @@ function P(e) {
                 x === b.lY.POPOUT && (0, _.EW)(u.z.USER_PROFILE_POPOUT_INTERACTION_COACHMARK);
         },
         H = (e) => {
-            e.animationName === (0, s.get)(O, 'fadeInAndOut') && V(!1);
+            e.animationName === (0, s.get)(O, 'fadeInAndOut') && F(!1);
         };
     return (0, r.jsxs)(f.ZP, {
-        className: o()(O.popover, {
+        className: a()(O.popover, {
             [O.fadeInAndOut]: B,
-            [O.visible]: a,
+            [O.visible]: o,
             [O.expandable]: v,
             [O.statusPopover]: n === b.n_.STATUS,
             [O.avatarPopover]: n === b.n_.AVATAR,
@@ -151,12 +151,12 @@ function P(e) {
         children: [
             (0, r.jsx)(d.DY3, {
                 text: y.intl.string(y.t.nhaI4e),
-                shouldShow: a,
+                shouldShow: o,
                 className: O.tooltipContainer,
                 delay: 0,
                 'aria-label': !1,
                 children: (0, r.jsx)(f.zx, {
-                    onClick: F,
+                    onClick: V,
                     className: O.button,
                     'aria-label': C[n](),
                     'aria-haspopup': 'dialog',
@@ -168,14 +168,14 @@ function P(e) {
             }),
             (0, r.jsx)(d.DY3, {
                 text: y.intl.string(y.t.RmDYKC),
-                shouldShow: a,
+                shouldShow: o,
                 className: O.tooltipContainer,
                 delay: 0,
                 'aria-label': !1,
                 children: (0, r.jsx)(f.zx, {
                     onClick: Z,
                     className: O.button,
-                    'aria-label': R[n](),
+                    'aria-label': P[n](),
                     'aria-haspopup': 'dialog',
                     children: (0, r.jsx)(d.n$P, {
                         size: 'xs',
@@ -183,16 +183,16 @@ function P(e) {
                     })
                 })
             }),
-            null == P
+            null == R
                 ? void 0
-                : P((e) => {
+                : R((e) => {
                       let t = () => {
                           var t;
-                          k(w), null == (t = e.onClick) || t.call(e);
+                          M(w), null == (t = e.onClick) || t.call(e);
                       };
                       return (0, r.jsx)(d.DY3, {
                           text: y.intl.string(y.t.UKOtz8),
-                          shouldShow: a,
+                          shouldShow: o,
                           className: O.tooltipContainer,
                           delay: 0,
                           'aria-label': !1,

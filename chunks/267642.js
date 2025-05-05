@@ -2,13 +2,13 @@ n.d(t, {
     A3: () => N,
     FZ: () => A,
     Hl: () => et,
-    Je: () => P,
-    Jh: () => k,
+    Je: () => R,
+    Jh: () => M,
     KK: () => Q,
     Oe: () => T,
     Qi: () => W,
     Ro: () => I,
-    Vx: () => F,
+    Vx: () => V,
     _k: () => Z,
     _p: () => x,
     aq: () => B,
@@ -17,7 +17,7 @@ n.d(t, {
     ee: () => J,
     f2: () => U,
     gZ: () => Y,
-    ge: () => M,
+    ge: () => k,
     ig: () => C,
     nL: () => z,
     nW: () => D,
@@ -35,8 +35,8 @@ n.d(t, {
 var r = n(392711),
     i = n.n(r);
 n(913527);
-var a = n(278074),
-    o = n(274136),
+var o = n(278074),
+    a = n(274136),
     s = n(179360),
     l = n(50101),
     c = n(317169),
@@ -73,10 +73,10 @@ let S = [b.Eu4.NONE, b.Eu4.TIER_1, b.Eu4.TIER_2, b.Eu4.TIER_3],
         var t;
         return e === b.Eu4.NONE ? b.Eu4.TIER_1 : null == (t = H.find((t) => t.tier === e)) ? void 0 : t.nextTier;
     },
-    N = (e, t) => (null != t && t.hasFeature(b.oNc.MORE_STICKERS) && e === b.Eu4.TIER_3 ? o.D.MAX_STICKER_SLOTS : O.$8[e]),
+    N = (e, t) => (null != t && t.hasFeature(b.oNc.MORE_STICKERS) && e === b.Eu4.TIER_3 ? a.D.MAX_STICKER_SLOTS : O.$8[e]),
     C = (e) => O.pH[e],
-    R = (e, t) => (null != t && t.hasFeature(b.oNc.MORE_SOUNDBOARD) ? O.w1 : O._k[e]),
-    P = (e) => {
+    P = (e, t) => (null != t && t.hasFeature(b.oNc.MORE_SOUNDBOARD) ? O.w1 : O._k[e]),
+    R = (e) => {
         if (e === b.Eu4.NONE) return O._k[e];
         let t = S[S.indexOf(e) - 1];
         return O._k[e] - O._k[t];
@@ -104,8 +104,8 @@ let S = [b.Eu4.NONE, b.Eu4.TIER_1, b.Eu4.TIER_2, b.Eu4.TIER_3],
                 },
                 {
                     title: v.intl.formatToPlainString(v.t.NRuk5u, {
-                        soundCount: P(b.Eu4.TIER_1),
-                        totalSoundCount: R(b.Eu4.TIER_1)
+                        soundCount: R(b.Eu4.TIER_1),
+                        totalSoundCount: P(b.Eu4.TIER_1)
                     }),
                     description: v.intl.string(v.t.Oq7OVl),
                     icon: 13
@@ -154,8 +154,8 @@ let S = [b.Eu4.NONE, b.Eu4.TIER_1, b.Eu4.TIER_2, b.Eu4.TIER_3],
                 },
                 {
                     title: v.intl.formatToPlainString(v.t.NRuk5u, {
-                        soundCount: P(b.Eu4.TIER_2),
-                        totalSoundCount: R(b.Eu4.TIER_2)
+                        soundCount: R(b.Eu4.TIER_2),
+                        totalSoundCount: P(b.Eu4.TIER_2)
                     }),
                     description: v.intl.string(v.t.pEYlPT),
                     icon: 13
@@ -216,8 +216,8 @@ let S = [b.Eu4.NONE, b.Eu4.TIER_1, b.Eu4.TIER_2, b.Eu4.TIER_3],
                 },
                 {
                     title: v.intl.formatToPlainString(v.t.NRuk5u, {
-                        soundCount: P(b.Eu4.TIER_3),
-                        totalSoundCount: R(b.Eu4.TIER_3)
+                        soundCount: R(b.Eu4.TIER_3),
+                        totalSoundCount: P(b.Eu4.TIER_3)
                     }),
                     description: v.intl.string(v.t['8omJSU']),
                     icon: 13
@@ -283,8 +283,8 @@ function L(e) {
     }
 }
 let x = i().memoize((e) => (O.HO[b.Eu4.TIER_1].features.includes(e) ? b.Eu4.TIER_1 : O.HO[b.Eu4.TIER_2].features.includes(e) ? b.Eu4.TIER_2 : O.HO[b.Eu4.TIER_3].features.includes(e) ? b.Eu4.TIER_3 : null)),
-    M = (e) => (e === b.Eu4.NONE ? b.Qqv.NONE : e === b.Eu4.TIER_1 ? b.Qqv.TIER_1 : e === b.Eu4.TIER_2 ? b.Qqv.TIER_2 : e === b.Eu4.TIER_3 ? b.Qqv.TIER_3 : null);
-function k(e) {
+    k = (e) => (e === b.Eu4.NONE ? b.Qqv.NONE : e === b.Eu4.TIER_1 ? b.Qqv.TIER_1 : e === b.Eu4.TIER_2 ? b.Qqv.TIER_2 : e === b.Eu4.TIER_3 ? b.Qqv.TIER_3 : null);
+function M(e) {
     var t;
     let n = null == (t = d.Z.getGuild(e)) ? void 0 : t.premiumTier;
     return null != n ? n : b.Eu4.NONE;
@@ -306,12 +306,12 @@ function B(e) {
     f.Z.hasFetched || (0, s.X8)();
     let r = G(f.Z.boostSlots),
         i = null == n ? void 0 : n.isPausedOrPausePending,
-        o = r.length > 0,
+        a = r.length > 0,
         l = v.intl.format(v.t.kJ1AZG, { helpCenterLink: m.Z.getArticleURL(b.BhN.FRACTIONAL_PREMIUM_ABOUT) }),
-        c = (0, a.EQ)({
+        c = (0, o.EQ)({
             isPausedOrPausePending: i,
             isBoostManagementDisabledForFractionalPremium: t,
-            canApplyBoosts: o
+            canApplyBoosts: a
         })
             .with(
                 {
@@ -356,19 +356,19 @@ function B(e) {
     let p = g.uV(n.renewalMutations.additionalPlans);
     return g.uV(n.additionalPlans) > p ? v.intl.string(v.t.x25mZW) : v.intl.string(v.t['W/bb8f']);
 }
-function V(e) {
+function F(e) {
     return e.sort((e, t) => (null != e.endsAt && null != t.endsAt ? e.endsAt.getTime() - t.endsAt.getTime() : -1));
 }
-function F(e, t) {
+function V(e, t) {
     return Z(e, t) > 0;
 }
 function Z(e, t) {
     var n;
     if ((null == (n = d.Z.getGuild(t)) ? void 0 : n.hasFeature(b.oNc.PREMIUM_TIER_3_OVERRIDE)) === !0) return 0;
-    let r = k(t),
+    let r = M(t),
         i = b.oCV[r],
-        a = e.filter((e) => null != e.endsAt);
-    return i - (e.length - a.length);
+        o = e.filter((e) => null != e.endsAt);
+    return i - (e.length - o.length);
 }
 let H = [
     {
@@ -390,7 +390,7 @@ let H = [
 function Y(e, t) {
     let n = Z(e, t);
     if (n > 0) {
-        let r = V(e).filter((e) => null != e.endsAt),
+        let r = F(e).filter((e) => null != e.endsAt),
             i = r.length - n;
         i < 0 &&
             E.Z.addBreadcrumb({
@@ -398,12 +398,12 @@ function Y(e, t) {
                 message: 'Negative index while checking grace period ending date.',
                 data: {
                     subscriptionLength: e.length,
-                    subscriptionsNeededForPremiumTier: b.oCV[k(t)],
+                    subscriptionsNeededForPremiumTier: b.oCV[M(t)],
                     endingSubscriptionLength: r.length
                 }
             });
-        let a = r[Math.max(i, 0)];
-        return null == a ? void 0 : a.endsAt;
+        let o = r[Math.max(i, 0)];
+        return null == o ? void 0 : o.endsAt;
     }
     return null;
 }
@@ -412,9 +412,9 @@ function W(e, t) {
         r = S.indexOf(t);
     if (-1 === r) return 0;
     let i = S[r - 1],
-        a = null != i ? N(i) : 0,
-        o = N(t);
-    return Math.max(0, n - e.slice(a, o).length);
+        o = null != i ? N(i) : 0,
+        a = N(t);
+    return Math.max(0, n - e.slice(o, a).length);
 }
 function K(e, t, n) {
     return -1 === S.indexOf(n) ? 0 : Math.max(0, z(e) - t.length);
@@ -464,11 +464,11 @@ function et(e) {
         n = J(t),
         r = $(t),
         i = b.oCV[n],
-        a = (t - i) / (b.oCV[r] - i),
-        o = ee[n],
+        o = (t - i) / (b.oCV[r] - i),
+        a = ee[n],
         s = ee[r];
     return {
-        fillFactor: n === b.Eu4.TIER_3 ? 1 : a * (s - o) + o,
+        fillFactor: n === b.Eu4.TIER_3 ? 1 : o * (s - a) + a,
         totalAvailableBoostsCount: t
     };
 }

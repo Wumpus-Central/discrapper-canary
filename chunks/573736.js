@@ -1,7 +1,7 @@
 a.d(e, {
-    Cy: () => f,
+    Cy: () => A,
     HD: () => s,
-    J8: () => A,
+    J8: () => f,
     Kj: () => d,
     Le: () => E,
     PO: () => u,
@@ -59,10 +59,10 @@ function R(t) {
 function d(t) {
     return _(t, 'RegExp');
 }
-function A(t) {
+function f(t) {
     return !!(t && t.then && 'function' == typeof t.then);
 }
-function f(t) {
+function A(t) {
     return u(t) && 'nativeEvent' in t && 'preventDefault' in t && 'stopPropagation' in t;
 }
 function p(t, e) {

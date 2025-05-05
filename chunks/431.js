@@ -1,8 +1,8 @@
-n.d(t, { Z: () => M }), n(388685), n(825670);
+n.d(t, { Z: () => k }), n(388685), n(825670);
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(276444),
+    o = n(570140),
+    a = n(276444),
     s = n(937579),
     l = n(249689),
     c = n(579075),
@@ -79,14 +79,14 @@ function I() {
 }
 function S(e) {
     let { userTrialOffer: t } = e;
-    null != t ? (v.userTrialOffers[t.trial_id] = t) : R(), (v.userOffersLastFetchedAtDate = Date.now()), (v.isFetching = !1);
+    null != t ? (v.userTrialOffers[t.trial_id] = t) : P(), (v.userOffersLastFetchedAtDate = Date.now()), (v.isFetching = !1);
 }
 function T(e) {
     let { userTrialOffer: t, userDiscount: n, userDiscountOffer: r } = e;
-    null == t && null == n && null == r && R(), null != t ? ((v.userTrialOffers[t.trial_id] = t), (v.userDiscountOffers = {})) : null != n ? ((v.userDiscountOffers[n.discount_id] = n), (v.userTrialOffers = {})) : null != r && ((v.userDiscountOffers[r.discount_id] = r), (v.userTrialOffers = {})), (v.userOffersLastFetchedAtDate = Date.now()), (v.isFetching = !1), (v.lastFetchSuccessful = !0);
+    null == t && null == n && null == r && P(), null != t ? ((v.userTrialOffers[t.trial_id] = t), (v.userDiscountOffers = {})) : null != n ? ((v.userDiscountOffers[n.discount_id] = n), (v.userTrialOffers = {})) : null != r && ((v.userDiscountOffers[r.discount_id] = r), (v.userTrialOffers = {})), (v.userOffersLastFetchedAtDate = Date.now()), (v.isFetching = !1), (v.lastFetchSuccessful = !0);
 }
 function A() {
-    R(), (v.userOffersLastFetchedAtDate = Date.now()), (v.isFetching = !1), (v.lastFetchSuccessful = !1);
+    P(), (v.userOffersLastFetchedAtDate = Date.now()), (v.isFetching = !1), (v.lastFetchSuccessful = !1);
 }
 function N(e) {
     let { userTrialOffer: t } = e;
@@ -96,10 +96,10 @@ function C(e) {
     let { userTrialOffer: t, userDiscount: n, userDiscountOffer: r } = e;
     null != t ? (v.userTrialOffers[t.trial_id] = t) : (v.userTrialOffers = {}), null != n ? (v.userDiscountOffers[n.discount_id] = n) : null != r ? (v.userDiscountOffers[r.discount_id] = r) : (v.userDiscountOffers = {}), (v.userOffersLastFetchedAtDate = Date.now());
 }
-function R() {
+function P() {
     (v.userTrialOffers = {}), (v.userDiscountOffers = {}), (v.userOffersLastFetchedAtDate = void 0), (v.isFetching = !1);
 }
-let P = () => !0;
+let R = () => !0;
 function w() {
     return null != _.ZP.getPremiumTypeSubscription() && ((v.userDiscountOffers = {}), (v.userTrialOffers = {}), !0);
 }
@@ -111,7 +111,7 @@ function L() {
     var e;
     let t = null == (e = u.default.getCurrentUser()) ? void 0 : e.id;
     if (null == t) return !1;
-    let n = o.Z.getAllRelevantReferralTrialOffers().filter((e) => e.user_id === t);
+    let n = a.Z.getAllRelevantReferralTrialOffers().filter((e) => e.user_id === t);
     if (n.length > 0) {
         let e = n[0];
         return (v.userTrialOffers[e.trial_id] = e), !0;
@@ -120,7 +120,7 @@ function L() {
 }
 class x extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (v = null != e ? e : O), this.waitFor(u.default), this.syncWith([u.default], P), this.syncWith([_.ZP], w), this.syncWith([o.Z], L);
+        (v = null != e ? e : O), this.waitFor(u.default), this.syncWith([u.default], R), this.syncWith([_.ZP], w), this.syncWith([a.Z], L);
     }
     getUserTrialOffer(e) {
         if (null !== e) return v.userTrialOffers[e];
@@ -140,8 +140,8 @@ class x extends (r = i.ZP.PersistedStore) {
         let { enabled: t, ttl: n } = c.d.getCurrentConfig({ location: 'UserOfferStore.shouldFetchOffer' }),
             r = t ? n : b,
             i = v.userOffersLastFetchedAtDate,
-            a = null != (e = v.isFetching) && e;
-        return null == i ? !a : !a && Date.now() - r > i;
+            o = null != (e = v.isFetching) && e;
+        return null == i ? !o : !o && Date.now() - r > i;
     }
     shouldFetchReferralOffer(e) {
         var t;
@@ -149,8 +149,8 @@ class x extends (r = i.ZP.PersistedStore) {
             r = null != (t = v.isFetching) && t;
         if (null == n) return !r;
         let i = Date.now() - y > n,
-            a = (null != e ? e : 0) > n;
-        return !r && (i || a);
+            o = (null != e ? e : 0) > n;
+        return !r && (i || o);
     }
     getAlmostExpiringTrialOffers(e) {
         let t = Object.values(p.nG).map((e) => e.id),
@@ -188,7 +188,7 @@ class x extends (r = i.ZP.PersistedStore) {
         return v;
     }
     forceReset() {
-        R();
+        P();
     }
     lastFetchSuccessful() {
         return v.lastFetchSuccessful;
@@ -208,7 +208,7 @@ h(x, 'displayName', 'UserOfferStore'),
             if (null != e) return (null == e ? void 0 : e.isFetching) == null ? E(m({}, e), { isFetching: !1 }) : e;
         }
     ]);
-let M = new x(a.Z, {
+let k = new x(o.Z, {
     BILLING_USER_OFFER_FETCH_START: I,
     BILLING_USER_TRIAL_OFFER_FETCH_SUCCESS: S,
     BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS: N,
@@ -218,5 +218,5 @@ let M = new x(a.Z, {
     BILLING_PAYMENT_SOURCE_CREATE_SUCCESS: D,
     BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS: D,
     BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS: D,
-    LOGOUT: R
+    LOGOUT: P
 });

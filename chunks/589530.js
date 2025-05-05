@@ -1,17 +1,17 @@
 n.d(t, {
-    FC: () => a,
+    FC: () => o,
     Zj: () => l,
-    jA: () => o,
+    jA: () => a,
     rs: () => s
 });
 var r = n(433517);
 let i = 'MediaPlayerVolume';
-function a() {
+function o() {
     var e;
     let { volume: t } = null != (e = r.K.get(i)) ? e : {};
     return 'number' != typeof t && (t = 1), (t = Math.min(1, Math.max(0, t)));
 }
-function o(e) {
+function a(e) {
     r.K.set(i, {
         volume: e,
         muted: s()
@@ -24,7 +24,7 @@ function s() {
 }
 function l(e) {
     r.K.set(i, {
-        volume: a(),
+        volume: o(),
         muted: e
     });
 }

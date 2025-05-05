@@ -1,22 +1,22 @@
 n.r(t),
     n.d(t, {
-        loadVideoQuestModal: () => V,
+        loadVideoQuestModal: () => F,
         maybeShowSurveyForQuest: () => B,
         navigateToQuestHome: () => G,
         openAppWithQuest: () => H,
         openDisclosureModal: () => U,
-        openQuestInGameRewardModal: () => M,
+        openQuestInGameRewardModal: () => k,
         openQuestMinorEnrollmentBlockModal: () => j,
-        openQuestOrbsRewardModal: () => k,
+        openQuestOrbsRewardModal: () => M,
         openQuestsNitroRewardModal: () => x,
         openQuestsRewardCodeModal: () => L,
-        openVideoQuestModal: () => F
+        openVideoQuestModal: () => V
     });
 var r = n(255367);
 n(73800);
 var i = n(772848),
-    a = n(271579),
-    o = n(756647),
+    o = n(271579),
+    a = n(756647),
     s = n(481060),
     l = n(836768),
     c = n(98278),
@@ -66,7 +66,7 @@ function C(e) {
     }
     return e;
 }
-function R(e, t) {
+function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -78,12 +78,12 @@ function R(e, t) {
     }
     return n;
 }
-function P(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : R(Object(t)).forEach(function (n) {
+            : P(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -92,17 +92,17 @@ function P(e, t) {
 let w = 'in-app',
     D = 'Discord Widget';
 function L(e) {
-    let { questId: t, location: i, questContentPosition: a, preview: o = !1, previewQuest: l = null } = e;
+    let { questId: t, location: i, questContentPosition: o, preview: a = !1, previewQuest: l = null } = e;
     (0, s.ZDy)(async () => {
         let { default: e } = await Promise.all([n.e('37447'), n.e('64838'), n.e('27458'), n.e('78900'), n.e('37560')]).then(n.bind(n, 985866));
         return (n) =>
             (0, r.jsx)(
                 e,
-                P(C({}, n), {
+                R(C({}, n), {
                     questId: t,
-                    questContentPosition: a,
+                    questContentPosition: o,
                     location: i,
-                    preview: o,
+                    preview: a,
                     previewQuest: l
                 })
             );
@@ -116,7 +116,7 @@ function x(e, t) {
               return (n) =>
                   (0, r.jsx)(
                       i,
-                      P(C({}, n), {
+                      R(C({}, n), {
                           quest: e,
                           location: t
                       })
@@ -124,20 +124,20 @@ function x(e, t) {
           })
         : (0, c.$)();
 }
-function M(e, t) {
+function k(e, t) {
     (0, s.ZDy)(async () => {
         let { default: i } = await n.e('88938').then(n.bind(n, 390238));
         return (n) =>
             (0, r.jsx)(
                 i,
-                P(C({}, n), {
+                R(C({}, n), {
                     quest: e,
                     location: t
                 })
             );
     });
 }
-function k(e, t) {
+function M(e, t) {
     (0, d.S6)(),
         (0, s.ZDy)(
             async () => {
@@ -145,7 +145,7 @@ function k(e, t) {
                 return (n) =>
                     (0, r.jsx)(
                         i,
-                        P(C({}, n), {
+                        R(C({}, n), {
                             quest: e,
                             location: t
                         })
@@ -161,7 +161,7 @@ function k(e, t) {
 function j(e) {
     (0, s.ZDy)(async () => {
         let { default: t } = await n.e('58641').then(n.bind(n, 828664));
-        return (n) => (0, r.jsx)(t, P(C({}, n), { location: e }));
+        return (n) => (0, r.jsx)(t, R(C({}, n), { location: e }));
     });
 }
 function U(e, t) {
@@ -177,7 +177,7 @@ function U(e, t) {
             return (n) =>
                 (0, r.jsx)(
                     i,
-                    P(C({}, n), {
+                    R(C({}, n), {
                         questContent: t.content,
                         quest: e
                     })
@@ -206,19 +206,19 @@ function B(e) {
             survey: r
         });
 }
-function V() {
+function F() {
     return Promise.all([n.e('66816'), n.e('27458'), n.e('32249'), n.e('60333')]).then(n.bind(n, 536687));
 }
-function F(e) {
+function V(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = (0, i.Z)();
     (0, s.ZDy)(
         async () => {
-            let { default: i } = await V();
-            return (a) =>
+            let { default: i } = await F();
+            return (o) =>
                 (0, r.jsx)(
                     i,
-                    P(C({}, a), {
+                    R(C({}, o), {
                         openStartClockTime: performance.now(),
                         questId: e.id,
                         autoplay: t,
@@ -243,9 +243,9 @@ function Z(e) {
         r = 'quest';
     if ('Android' === n || 'iOS' === n) {
         let t = _.default.getFingerprint(),
-            n = (0, a.WS)(),
+            n = (0, o.WS)(),
             i = ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT, '/quests/').concat(e);
-        return (0, a.ZP)(i, {
+        return (0, o.ZP)(i, {
             utmSource: r,
             fingerprint: t,
             attemptId: n
@@ -255,10 +255,10 @@ function Z(e) {
 }
 function H(e) {
     let t = Z(e),
-        n = (0, a.zS)(t);
+        n = (0, o.zS)(t);
     null != n &&
         p.default.track(T.rMx.DEEP_LINK_CLICKED, {
-            fingerprint: (0, o.K)(n.fingerprint),
+            fingerprint: (0, a.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource
         }),

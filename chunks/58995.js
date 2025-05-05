@@ -1,8 +1,8 @@
-n.d(t, { Z: () => k }), n(388685), n(539854);
+n.d(t, { Z: () => M }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(704215),
     c = n(996146),
@@ -25,7 +25,7 @@ var r = n(255367),
     A = n(388032),
     N = n(870751),
     C = n(302195);
-function R(e, t, n) {
+function P(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -38,7 +38,7 @@ function R(e, t, n) {
         e
     );
 }
-function P(e) {
+function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -49,7 +49,7 @@ function P(e) {
                 })
             )),
             r.forEach(function (t) {
-                R(e, t, n[t]);
+                P(e, t, n[t]);
             });
     }
     return e;
@@ -79,13 +79,13 @@ function D(e, t) {
 }
 let L = y.Z.Millis.DAYS_30;
 function x(e) {
-    let { animatedIconComponent: t, hovered: i, isCoachmarkDismissed: a } = e,
-        s = !a || i;
+    let { animatedIconComponent: t, hovered: i, isCoachmarkDismissed: o } = e,
+        s = !o || i;
     return (0, r.jsxs)('div', {
         className: N.iconContainer,
         children: [
             (0, r.jsx)('div', {
-                className: o()(N.decorativeLayer, { [N.decorativeLayerActive]: s }),
+                className: a()(N.decorativeLayer, { [N.decorativeLayerActive]: s }),
                 style: { zIndex: 3 },
                 children: (0, r.jsx)(u.Fmz, {
                     shouldAnimate: s,
@@ -93,12 +93,12 @@ function x(e) {
                 })
             }),
             (0, r.jsx)('div', {
-                className: o()(N.giftIconButton, { [N.giftIconButtonActive]: s }),
+                className: a()(N.giftIconButton, { [N.giftIconButtonActive]: s }),
                 style: { zIndex: 2 },
                 children: (0, r.jsx)(t, { color: 'currentColor' })
             }),
             (0, r.jsx)('div', {
-                className: o()(N.decorativeLayer, { [N.decorativeLayerActive]: s }),
+                className: a()(N.decorativeLayer, { [N.decorativeLayerActive]: s }),
                 style: { zIndex: 1 },
                 children: (0, r.jsx)(u.Fmz, {
                     shouldAnimate: s,
@@ -108,29 +108,29 @@ function x(e) {
         ]
     });
 }
-function M(e) {
+function k(e) {
     let { disabled: t, channel: n } = e,
-        { analyticsLocations: a } = (0, f.ZP)(d.Z.GIFT_BUTTON),
-        [o, u] = i.useState(!1),
+        { analyticsLocations: o } = (0, f.ZP)(d.Z.GIFT_BUTTON),
+        [a, u] = i.useState(!1),
         y = (0, s.e7)([E.Z], () => !(null === E.Z || void 0 === E.Z ? void 0 : E.Z.hasLayers())),
-        R = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
-        w = null != R ? O.default.age(R.id) : 0,
-        M = !t && y && w >= L,
-        { enabled: k } = m.O.useExperiment({ location: 'gift-button' }),
+        P = (0, s.e7)([b.default], () => b.default.getCurrentUser()),
+        w = null != P ? O.default.age(P.id) : 0,
+        k = !t && y && w >= L,
+        { enabled: M } = m.O.useExperiment({ location: 'gift-button' }),
         j = [];
-    k && M && j.push(l.z.NITROWEEN_COACHMARKS);
+    M && k && j.push(l.z.NITROWEEN_COACHMARKS);
     let [U, G] = (0, p.US)(j),
         B = null != U,
-        V = (0, v.Ft)(n),
-        { Component: F, events: Z, play: H } = (0, c.$)();
+        F = (0, v.Ft)(n),
+        { Component: V, events: Z, play: H } = (0, c.$)();
     if (t) return null;
     let Y = () => {
         (0, h.Z)({
             isGift: !0,
-            giftRecipient: null == V ? void 0 : V,
+            giftRecipient: null == F ? void 0 : F,
             giftMessage: A.intl.string(A.t['rX/m/f']),
             initialPlanId: null,
-            analyticsLocations: a,
+            analyticsLocations: o,
             analyticsObject: {
                 page: n.isPrivate() ? S.ZY5.DM_CHANNEL : S.ZY5.GUILD_CHANNEL,
                 section: S.jXE.CHANNEL_TEXT_AREA,
@@ -142,7 +142,7 @@ function M(e) {
     return (0, r.jsxs)('div', {
         className: N.container,
         onMouseEnter: () => {
-            o || u(!0);
+            a || u(!0);
         },
         onMouseLeave: () => {
             u(!1);
@@ -157,7 +157,7 @@ function M(e) {
             (0, r.jsx)(
                 I.Z,
                 D(
-                    P(
+                    R(
                         {
                             innerClassName: C.button,
                             'aria-label': A.intl.string(A.t.Z1RnTk),
@@ -170,8 +170,8 @@ function M(e) {
                     ),
                     {
                         children: (0, r.jsx)(x, {
-                            animatedIconComponent: F,
-                            hovered: o,
+                            animatedIconComponent: V,
+                            hovered: a,
                             isCoachmarkDismissed: !B
                         })
                     }
@@ -180,4 +180,4 @@ function M(e) {
         ]
     });
 }
-let k = i.memo(M);
+let M = i.memo(k);

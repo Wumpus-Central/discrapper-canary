@@ -6,14 +6,14 @@ n.d(t, {
     Qs: () => l,
     Xy: () => s,
     e3: () => c,
-    fF: () => a,
-    iP: () => o,
+    fF: () => o,
+    iP: () => a,
     iv: () => p
 });
 var r = n(474936),
     i = n(231338);
-let a = 3,
-    o = '(max-width: 485px)',
+let o = 3,
+    a = '(max-width: 485px)',
     s = '(max-height: 450px)';
 var l = (function (e) {
         return (e[(e.CHANNEL = 1)] = 'CHANNEL'), (e[(e.INTANGIBLE = 2)] = 'INTANGIBLE'), e;

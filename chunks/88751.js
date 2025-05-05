@@ -1,8 +1,8 @@
 n.d(t, { ZP: () => x }), n(388685);
 var r,
     i = n(392711),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(570140),
     l = n(592125),
     c = n(271383),
@@ -47,11 +47,11 @@ function O(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         r = l.Z.getChannel(t),
         i = null == r ? void 0 : r.getGuildId(),
-        a = u.Z.getGuild(i);
-    return null != a && null != r && r.isGuildStageVoice()
+        o = u.Z.getGuild(i);
+    return null != o && null != r && r.isGuildStageVoice()
         ? {
               speaker: b(e, t),
-              moderator: n ? y(e, a, r) : null
+              moderator: n ? y(e, o, r) : null
           }
         : E;
 }
@@ -91,17 +91,17 @@ function C(e) {
     let { guildId: t, user: n } = e;
     return null != n && null != t && S(n.id, t);
 }
-function R(e) {
+function P(e) {
     let { voiceStates: t } = e;
     return (
-        !a().isEmpty(g) &&
+        !o().isEmpty(g) &&
         t.reduce((e, t) => {
             let { userId: n, channelId: r } = t;
             return I(n, r) || e;
         }, !1)
     );
 }
-function P(e) {
+function R(e) {
     return T(e.guildId);
 }
 function w() {
@@ -114,7 +114,7 @@ function D(e) {
         (null == n || n.guild_id === t.id) && delete g[e];
     }
 }
-class L extends (r = o.ZP.Store) {
+class L extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(c.ZP, l.Z, u.Z, d.default, f.Z);
     }
@@ -147,8 +147,8 @@ let x = new L(s.Z, {
     GUILD_MEMBER_REMOVE: C,
     GUILD_MEMBER_UPDATE: C,
     GUILD_ROLE_UPDATE: N,
-    PASSIVE_UPDATE_V2: P,
-    VOICE_STATE_UPDATES: R,
+    PASSIVE_UPDATE_V2: R,
+    VOICE_STATE_UPDATES: P,
     GUILD_CREATE: D,
     GUILD_DELETE: D
 });

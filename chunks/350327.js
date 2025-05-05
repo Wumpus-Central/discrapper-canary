@@ -11,13 +11,13 @@ n.d(t, {
     ho: () => b,
     pG: () => E,
     rf: () => C,
-    x3: () => R,
+    x3: () => P,
     z5: () => S
 });
 var r = n(544891),
     i = n(570140),
-    a = n(881052),
-    o = n(957730),
+    o = n(881052),
+    a = n(957730),
     s = n(695346),
     l = n(594174),
     c = n(626135),
@@ -64,7 +64,7 @@ async function m(e, t) {
     let f = null == (n = l.default.getCurrentUser()) ? void 0 : n.id;
     if (null == f) return;
     let _ = s.dN.getSetting();
-    null != e.bio && _ && (e.bio = o.ZP.parse(void 0, e.bio).content);
+    null != e.bio && _ && (e.bio = a.ZP.parse(void 0, e.bio).content);
     try {
         i.Z.dispatch({
             type: 'USER_PROFILE_UPDATE_START',
@@ -90,7 +90,7 @@ async function m(e, t) {
                 )
             );
         } else {
-            let e = new a.Hx(n);
+            let e = new o.Hx(n);
             i.Z.dispatch({
                 type: 'USER_PROFILE_UPDATE_FAILURE',
                 errors: n.body,
@@ -99,7 +99,7 @@ async function m(e, t) {
         }
         return n;
     } catch (t) {
-        let e = new a.Hx(t);
+        let e = new o.Hx(t);
         return (
             i.Z.dispatch({
                 type: 'USER_PROFILE_UPDATE_FAILURE',
@@ -190,6 +190,6 @@ function C(e) {
     }),
         h(f.QP.PROFILE_THEME_COLOR);
 }
-function R(e) {
+function P(e) {
     i.Z.dispatch(p({ type: 'USER_SETTINGS_ACCOUNT_SET_TRY_IT_OUT_PRESET' }, e)), h(f.QP.PRESET);
 }

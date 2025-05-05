@@ -1,8 +1,8 @@
 n.d(t, { Z: () => K });
 var r,
     i = n(442837),
-    a = n(433517),
-    o = n(780384),
+    o = n(433517),
+    a = n(780384),
     s = n(570140),
     l = n(695346),
     c = n(581883),
@@ -67,8 +67,8 @@ function g(e, t) {
         r,
         i = E(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -77,8 +77,8 @@ function E(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let b = {
@@ -143,10 +143,10 @@ function N() {
 function C() {
     (y = p({}, y)).colorblindMode = !y.colorblindMode;
 }
-function R() {
+function P() {
     (y = p({}, y)).lowContrastMode = !y.lowContrastMode;
 }
-function P(e) {
+function R(e) {
     y.syncForcedColors = e.syncForcedColors;
 }
 function w(e) {
@@ -161,10 +161,10 @@ function L(e) {
 function x() {
     (y = p({}, y)).submitButtonEnabled = !y.submitButtonEnabled;
 }
-function M() {
+function k() {
     (y = p({}, y)).syncProfileThemeWithUserTheme = !y.syncProfileThemeWithUserTheme;
 }
-function k(e) {
+function M(e) {
     if (y.systemPrefersReducedMotion === e.systemPrefersReducedMotion) return !1;
     y = m(p({}, y), { systemPrefersReducedMotion: e.systemPrefersReducedMotion });
 }
@@ -183,11 +183,11 @@ function G(e) {
 function B(e) {
     y = m(p({}, y), { alwaysShowLinkDecorations: e.alwaysShowLinkDecorations });
 }
-function V(e) {
+function F(e) {
     var t;
     return (y = m(p({}, y), { systemForcedColors: null != (t = e.systemForcedColors) ? t : 'none' })), !0;
 }
-function F() {
+function V() {
     y.forcedColorsModalSeen = !0;
 }
 function Z() {
@@ -320,17 +320,17 @@ _(W, 'displayName', 'AccessibilityStore'),
             let e = 'a11yFontScale',
                 t = 'a11yZoom',
                 n = 'a11yColorblindMode',
-                r = a.K.get(e) || 100,
-                i = a.K.get(t) || d.yqN.ZOOM_DEFAULT,
-                o = a.K.get(n) || !1;
+                r = o.K.get(e) || 100,
+                i = o.K.get(t) || d.yqN.ZOOM_DEFAULT,
+                a = o.K.get(n) || !1;
             return (
-                a.K.remove(e),
-                a.K.remove(t),
-                a.K.remove(n),
+                o.K.remove(e),
+                o.K.remove(t),
+                o.K.remove(n),
                 {
                     fontScale: r,
                     zoom: i,
-                    colorblindMode: o,
+                    colorblindMode: a,
                     keyboardModeEnabled: !1
                 }
             );
@@ -367,7 +367,7 @@ _(W, 'displayName', 'AccessibilityStore'),
                 systemPrefersReducedMotion: 'no-preference',
                 prefersReducedMotion: 'auto'
             }),
-        (e) => m(p({}, e), { alwaysShowLinkDecorations: e.saturation <= o.AE }),
+        (e) => m(p({}, e), { alwaysShowLinkDecorations: e.saturation <= a.AE }),
         (e) => m(p({}, e), { disableVoiceBackgrounds: !1 }),
         (e) => {
             try {
@@ -389,21 +389,21 @@ let K = new W(s.Z, {
     ACCESSIBILITY_KEYBOARD_MODE_ENABLE: A,
     ACCESSIBILITY_KEYBOARD_MODE_DISABLE: N,
     ACCESSIBILITY_COLORBLIND_TOGGLE: C,
-    ACCESSIBILITY_LOW_CONTRAST_TOGGLE: R,
+    ACCESSIBILITY_LOW_CONTRAST_TOGGLE: P,
     ACCESSIBILITY_SET_SATURATION: w,
     ACCESSIBILITY_DESATURATE_ROLES_TOGGLE: D,
-    ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: V,
+    ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED: F,
     ACCESSIBILITY_SYSTEM_PREFERS_CONTRAST_CHANGED: G,
-    ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: k,
+    ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED: M,
     ACCESSIBILITY_SYSTEM_PREFERS_CROSSFADES_CHANGED: j,
     ACCESSIBILITY_SET_PREFERS_REDUCED_MOTION: U,
-    ACCESSIBILITY_SET_SYNC_FORCED_COLORS: P,
+    ACCESSIBILITY_SET_SYNC_FORCED_COLORS: R,
     ACCESSIBILITY_SET_ALWAYS_SHOW_LINK_DECORATIONS: B,
     ACCESSIBILITY_SET_ROLE_STYLE: L,
-    ACCESSIBILITY_FORCED_COLORS_MODAL_SEEN: F,
+    ACCESSIBILITY_FORCED_COLORS_MODAL_SEEN: V,
     KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN: Z,
     ACCESSIBILITY_SET_MESSAGE_GROUP_SPACING: H,
     ACCESSIBILITY_SUBMIT_BUTTON_TOGGLE: x,
-    ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: M,
+    ACCESSIBILITY_SYNC_PROFILE_THEME_WITH_USER_THEME_TOGGLE: k,
     ACCESSIBILITY_SET_CONTRAST: Y
 });

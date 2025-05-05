@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(772848),
     i = n(990547),
-    a = n(433517),
-    o = n(960048),
+    o = n(433517),
+    a = n(960048),
     s = n(686325);
 let l = 'LATEST_SESSION_TIMESTAMP',
     c = 'LATEST_SESSION_UUID',
@@ -26,11 +26,11 @@ async function p() {
                 initialized: Date.now(),
                 lastUsed: Date.now()
             };
-            a.K.set(c, t.uuid), a.K.set(u, t.initialized.toString()), a.K.set(l, Date.now().toString()), (e = t);
-        } else f && a.K.set(l, Date.now().toString());
+            o.K.set(c, t.uuid), o.K.set(u, t.initialized.toString()), o.K.set(l, Date.now().toString()), (e = t);
+        } else f && o.K.set(l, Date.now().toString());
         return e;
     } catch (e) {
-        return o.Z.captureException(e), null;
+        return a.Z.captureException(e), null;
     }
 }
 function h() {
@@ -38,9 +38,9 @@ function h() {
 }
 async function m() {
     try {
-        let e = await a.K.getAfterRefresh(c),
-            t = await a.K.getAfterRefresh(u).then(s.Hg),
-            n = await a.K.getAfterRefresh(l).then(s.Hg);
+        let e = await o.K.getAfterRefresh(c),
+            t = await o.K.getAfterRefresh(u).then(s.Hg),
+            n = await o.K.getAfterRefresh(l).then(s.Hg);
         return null != e && null != t
             ? {
                   uuid: e,
@@ -49,13 +49,13 @@ async function m() {
               }
             : null;
     } catch (e) {
-        return o.Z.captureException(e), null;
+        return a.Z.captureException(e), null;
     }
 }
 function g() {
-    let e = a.K.get(c),
-        t = (0, s.Hg)(a.K.get(u)),
-        n = (0, s.Hg)(a.K.get(l));
+    let e = o.K.get(c),
+        t = (0, s.Hg)(o.K.get(u)),
+        n = (0, s.Hg)(o.K.get(l));
     return null != e && null != t
         ? {
               uuid: e,

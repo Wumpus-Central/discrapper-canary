@@ -1,14 +1,14 @@
 n.d(t, {
-    B: () => P,
-    E: () => R
+    B: () => R,
+    E: () => P
 }),
     n(953529);
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(512722),
-    s = n.n(o),
+    o = n.n(i),
+    a = n(512722),
+    s = n.n(a),
     l = n(979554),
     c = n(442837),
     u = n(481060),
@@ -31,21 +31,21 @@ let O = (e, t, n) => (null != n && e.productLine === E.POd.COLLECTIBLES && n.typ
     I = (e) => {
         let { children: t, className: n } = e;
         return (0, r.jsx)('div', {
-            className: a()(y.invoiceRow, n),
+            className: o()(y.invoiceRow, n),
             children: t
         });
     },
     S = (e) => {
         let { children: t, className: n } = e;
         return (0, r.jsx)('div', {
-            className: a()(y.invoiceTagColumn, n),
+            className: o()(y.invoiceTagColumn, n),
             children: t
         });
     },
     T = (e) => {
         let { children: t, className: n } = e;
         return (0, r.jsx)('div', {
-            className: a()(y.invoiceDescriptionColumn, n),
+            className: o()(y.invoiceDescriptionColumn, n),
             children: t
         });
     },
@@ -78,16 +78,16 @@ let O = (e, t, n) => (null != n && e.productLine === E.POd.COLLECTIBLES && n.typ
             })
         });
     },
-    R = (e) => {
+    P = (e) => {
         let { sku: t, value: n } = e,
             i = (0, f.ed)('SKUInvoicePreview'),
-            a = (0, c.e7)([d.Z], () => d.Z.getProduct(t.id)),
-            o = O(t, i, a);
+            o = (0, c.e7)([d.Z], () => d.Z.getProduct(t.id)),
+            a = O(t, i, o);
         return (0, r.jsx)(p.aO, {
             className: y.invoiceTable,
             children: (0, r.jsxs)(I, {
                 children: [
-                    'THREE_COLUMN' === o && (0, r.jsx)(S, { children: (0, r.jsx)(N, { sku: t }) }),
+                    'THREE_COLUMN' === a && (0, r.jsx)(S, { children: (0, r.jsx)(N, { sku: t }) }),
                     (0, r.jsx)(T, {
                         className: y.invoiceRegularText,
                         children: t.name
@@ -100,12 +100,12 @@ let O = (e, t, n) => (null != n && e.productLine === E.POd.COLLECTIBLES && n.typ
             })
         });
     };
-function P(e) {
+function R(e) {
     let { sku: t, skuPricePreview: n } = e;
     s()(null != n.amount, 'SKU must have a price set.'), s()(null != n.invoice_items && 1 === n.invoice_items.length, 'SKU preview must have single line item');
     let i = (0, f.ed)('SKUInvoicePreview'),
-        a = (0, c.e7)([d.Z], () => d.Z.getProduct(t.id)),
-        o = O(t, i, a),
+        o = (0, c.e7)([d.Z], () => d.Z.getProduct(t.id)),
+        a = O(t, i, o),
         l = n.invoice_items[0],
         u = l.unit_price.amount,
         _ = !n.tax_inclusive && n.tax > 0,
@@ -116,7 +116,7 @@ function P(e) {
         children: [
             (0, r.jsxs)(I, {
                 children: [
-                    'THREE_COLUMN' === o && (0, r.jsx)(S, { children: (0, r.jsx)(N, { sku: t }) }),
+                    'THREE_COLUMN' === a && (0, r.jsx)(S, { children: (0, r.jsx)(N, { sku: t }) }),
                     (0, r.jsx)(T, {
                         className: y.invoiceRegularText,
                         children: t.name
@@ -130,7 +130,7 @@ function P(e) {
             null != h &&
                 (0, r.jsxs)(I, {
                     children: [
-                        'THREE_COLUMN' === o && (0, r.jsx)(S, { children: (0, r.jsx)(C, { discount: h }) }),
+                        'THREE_COLUMN' === a && (0, r.jsx)(S, { children: (0, r.jsx)(C, { discount: h }) }),
                         (0, r.jsx)(T, {
                             className: y.invoiceDiscountText,
                             children: h.description
@@ -144,7 +144,7 @@ function P(e) {
             _ &&
                 (0, r.jsxs)(I, {
                     children: [
-                        'THREE_COLUMN' === o && (0, r.jsx)(S, {}),
+                        'THREE_COLUMN' === a && (0, r.jsx)(S, {}),
                         (0, r.jsx)(T, {
                             className: y.invoiceRegularText,
                             children: b.intl.string(b.t['/I8zmJ'])
@@ -166,7 +166,7 @@ function P(e) {
                                     className: y.invoiceRegularText,
                                     children: b.intl.format(b.t['+B5KfH'], {})
                                 }),
-                                'THREE_COLUMN' === o && (0, r.jsx)(T, {}),
+                                'THREE_COLUMN' === a && (0, r.jsx)(T, {}),
                                 (0, r.jsx)(A, {
                                     className: y.invoiceRegularText,
                                     children: (0, g.T4)(n.amount, n.currency)

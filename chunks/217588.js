@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(183023),
     _ = n(524444),
     b = n(98278),
-    x = n(197115),
-    y = n(430824),
+    y = n(197115),
+    x = n(430824),
     E = n(594174),
     v = n(626135),
     O = n(74538),
@@ -73,8 +73,8 @@ function k(e, t) {
         e
     );
 }
-let D = (e, t) => (t ? A.intl.format(A.t.auckX1, { stickerPackName: e.name }) : A.intl.format(A.t.OzB6e3, { stickerPackName: e.name })),
-    L = (e) => {
+let L = (e, t) => (t ? A.intl.format(A.t.auckX1, { stickerPackName: e.name }) : A.intl.format(A.t.OzB6e3, { stickerPackName: e.name })),
+    D = (e) => {
         let { sticker: t, stickerPack: n } = e;
         return i.useMemo(() => (null == n ? [] : n.stickers.slice(0, 4).reduce((e, n) => (3 !== e.length && n.id !== t.id ? e.concat(n) : e), [])), [t, n]);
     };
@@ -117,7 +117,7 @@ function U(e) {
 let F = (e) => {
         let { closePopout: t, sticker: n, channel: l, refreshPositionKey: a } = e,
             [c, u, p] = (0, o.Wu)([C.Z], () => [C.Z.getStickerPack(n.pack_id), !C.Z.hasLoadedStickerPacks, C.Z.isPremiumPack(n.pack_id)], [n]),
-            m = L({
+            m = D({
                 sticker: n,
                 stickerPack: c
             });
@@ -160,7 +160,7 @@ let F = (e) => {
                       }),
                       (0, r.jsx)(s.Text, {
                           variant: 'text-sm/normal',
-                          children: D(c, p)
+                          children: L(c, p)
                       }),
                       (0, r.jsx)('ul', {
                           className: w.stickersList,
@@ -205,9 +205,9 @@ let F = (e) => {
             { sticker: n, channel: l, closePopout: m, refreshPositionKey: b } = e,
             [j, C] = i.useState(null),
             [S, N] = i.useState(!1),
-            D = E.default.getCurrentUser(),
-            L = O.ZP.canUseCustomStickersEverywhere(D),
-            F = (0, o.e7)([y.Z], () => y.Z.getGuild(n.guild_id)),
+            L = E.default.getCurrentUser(),
+            D = O.ZP.canUseCustomStickersEverywhere(L),
+            F = (0, o.e7)([x.Z], () => x.Z.getGuild(n.guild_id)),
             B = null != F,
             [G, H] = i.useState(!1),
             [V, z] = i.useState(null),
@@ -237,7 +237,7 @@ let F = (e) => {
             Q = null != j,
             J = !1,
             $ = 'Custom Sticker Popout';
-        L
+        D
             ? (t = B ? (q ? A.intl.string(A.t.fZ0DiI) : A.intl.string(A.t['1f6D9v'])) : Q ? A.intl.string(A.t.yHmoR0) : A.intl.string(A.t.vZaScH))
             : B
               ? ((t = q ? A.intl.string(A.t.jNphpq) : A.intl.string(A.t.lyD5ZW)), (J = !0), ($ = 'Custom Sticker Popout (Upsell)'))
@@ -249,7 +249,7 @@ let F = (e) => {
                       }
                   })),
                   ($ = 'Custom Sticker Popout (Soft Upsell)'));
-        let ee = !J && !B && Q && L;
+        let ee = !J && !B && Q && D;
         return (i.useEffect(() => {
             let { refreshPositionKey: e } = X.current;
             e();
@@ -278,7 +278,7 @@ let F = (e) => {
                                       sticker: n
                                   }),
                                   J &&
-                                      (0, r.jsx)(x.Z, {
+                                      (0, r.jsx)(y.Z, {
                                           className: Z.ctaButton,
                                           subscriptionTier: P.Si.TIER_2,
                                           size: s.zxk.Sizes.SMALL,

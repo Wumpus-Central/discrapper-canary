@@ -11,9 +11,9 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { S: () => a }), n(953529), n(388685), n(583741);
+n.d(t, { S: () => o }), n(953529), n(388685), n(583741);
 let i = Symbol.iterator;
-class a {
+class o {
     get length() {
         return this.items.size;
     }

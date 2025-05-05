@@ -1,6 +1,6 @@
 n.d(t, {
     Pv: () => G,
-    e5: () => P,
+    e5: () => R,
     gx: () => w,
     lp: () => U,
     wi: () => D
@@ -9,8 +9,8 @@ n.d(t, {
     n(388685);
 var r = n(913527),
     i = n.n(r),
-    a = n(920412),
-    o = n(830121);
+    o = n(920412),
+    a = n(830121);
 n(712057);
 var s = n(292419),
     l = n(330044),
@@ -92,38 +92,38 @@ function N(e) {
 function C(e) {
     return !1;
 }
-function R(e) {
+function P(e) {
     var t;
     return new d.pi(
         T(I({}, e), {
             timestamp: new Date(e.timestamp),
             editedTimestamp: null != e.edited_timestamp ? new Date(e.edited_timestamp) : null,
             attachments: L(e),
-            embeds: M(e),
+            embeds: k(e),
             components: (0, s.uZ)(null != (t = e.components) ? t : [], { includeEmojiSrc: !1 }),
-            codedLinks: e.type === O.uaV.THREAD_CREATED ? [] : (0, o.ZP)(e.content)
+            codedLinks: e.type === O.uaV.THREAD_CREATED ? [] : (0, a.ZP)(e.content)
         })
     );
 }
-function P(e) {
-    var t, n, r, i, o, s, c;
+function R(e) {
+    var t, n, r, i, a, s, c;
     let f,
         h,
         { reactions: m, interactionData: y } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        v = R(e),
+        v = P(e),
         S = null != (i = null == (t = e.mentions) ? void 0 : t.map((e) => e.id)) ? i : [],
-        A = null != (o = e.mention_roles) ? o : [],
-        P = null != (s = e.mention_channels) ? s : [],
+        A = null != (a = e.mention_roles) ? a : [],
+        R = null != (s = e.mention_channels) ? s : [],
         w = e.message_reference,
         D = N(e),
         L = null,
-        M = null == e ? void 0 : e.gift_info,
+        k = null == e ? void 0 : e.gift_info,
         U = e.gifting_prompt,
         G = null != e.interaction ? u.Z.createFromServer(e.interaction) : null,
         B = e.type === O.uaV.THREAD_STARTER_MESSAGE ? (null == (r = e.referenced_message) || null == (n = r.author) ? void 0 : n.id) : void 0,
-        V = e.content;
+        F = e.content;
     return new d.ZP(
-        (e.type === O.uaV.PREMIUM_REFERRAL ? ((f = E.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (V = '')) : e.type === O.uaV.CHAT_WALLPAPER_SET && ((h = (0, a.Z)(e.content)), (V = '')), C(e))
+        (e.type === O.uaV.PREMIUM_REFERRAL ? ((f = E.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (F = '')) : e.type === O.uaV.CHAT_WALLPAPER_SET && ((h = (0, o.Z)(e.content)), (F = '')), C(e))
             ? T(I({}, L), {
                   id: e.id,
                   channel_id: e.channel_id,
@@ -140,7 +140,7 @@ function P(e) {
                   mentionEveryone: e.mention_everyone,
                   mentions: S,
                   mentionRoles: A,
-                  mentionChannels: P,
+                  mentionChannels: R,
                   messageReference: w,
                   mentioned: (0, b.Sz)({
                       userId: _.default.getId(),
@@ -150,11 +150,11 @@ function P(e) {
                       mentionRoles: A
                   }),
                   giftCodes: (0, g.Fp)(e) ? (0, g.Q_)(null == e ? void 0 : e.embeds[0].url) : (0, g.Q_)(e.content),
-                  content: V,
+                  content: F,
                   referralTrialOfferId: f,
                   call: x(e.call, v.timestamp),
                   messageSnapshots: j(e),
-                  reactions: k(null != m ? m : e.reactions, e.poll),
+                  reactions: M(null != m ? m : e.reactions, e.poll),
                   interaction: G,
                   interactionData: null != y ? y : e.interaction_data,
                   interactionMetadata: e.interaction_metadata,
@@ -162,7 +162,7 @@ function P(e) {
                   purchaseNotification: e.purchase_notification,
                   poll: null == e.poll ? void 0 : (0, l.Z)(e.poll),
                   potions: e.potions,
-                  giftInfo: null == M ? void 0 : M,
+                  giftInfo: null == k ? void 0 : k,
                   giftingPrompt: U,
                   chatWallpaperInfo: h
               })
@@ -178,15 +178,15 @@ function w(e, t) {
 }
 function D(e, t) {
     if (null != t.edited_timestamp)
-        return P(t, {
+        return R(t, {
             reactions: e.reactions,
             interactionData: e.interactionData
         });
     let n = e,
         r = !1;
-    if ((null != t.call && (n = n.set('call', x(t.call, e.timestamp))), null != t.attachments && (n = n.set('attachments', L(t))), null != t.content && '' !== t.content && (n = n.set('content', t.content)), null != t.embeds && (n = n.set('embeds', M(t))), null != t.message_snapshots && (n = n.set('messageSnapshots', j(t))), t.pinned !== n.pinned && (n = n.set('pinned', t.pinned)), null != n.webhookId && null != t.author && (n = n.set('author', new f.Z(t.author))), null != t.flags && t.flags !== n.flags && (n = n.set('flags', t.flags)), null != t.components && (n = n.set('components', (0, s.uZ)(t.components, { includeEmojiSrc: !1 }))), null != t.role_subscription_data && (n = n.set('roleSubscriptionData', t.role_subscription_data)), null != t.reactions)) {
+    if ((null != t.call && (n = n.set('call', x(t.call, e.timestamp))), null != t.attachments && (n = n.set('attachments', L(t))), null != t.content && '' !== t.content && (n = n.set('content', t.content)), null != t.embeds && (n = n.set('embeds', k(t))), null != t.message_snapshots && (n = n.set('messageSnapshots', j(t))), t.pinned !== n.pinned && (n = n.set('pinned', t.pinned)), null != n.webhookId && null != t.author && (n = n.set('author', new f.Z(t.author))), null != t.flags && t.flags !== n.flags && (n = n.set('flags', t.flags)), null != t.components && (n = n.set('components', (0, s.uZ)(t.components, { includeEmojiSrc: !1 }))), null != t.role_subscription_data && (n = n.set('roleSubscriptionData', t.role_subscription_data)), null != t.reactions)) {
         var i;
-        n = n.set('reactions', k(null != (i = e.reactions) ? i : t.reactions));
+        n = n.set('reactions', M(null != (i = e.reactions) ? i : t.reactions));
     }
     return (
         null != t.poll && (n = n.set('poll', (0, l.Z)(t.poll))),
@@ -225,12 +225,12 @@ function x(e, t) {
     }
     return null;
 }
-function M(e) {
+function k(e) {
     if (null == e.embeds) return [];
     let t = e.embeds.map((t) => (0, m.kC)(e.channel_id, e.id, t));
     return (0, m.o3)(t);
 }
-function k(e, t) {
+function M(e, t) {
     var n;
     if (null == e && (null == t ? void 0 : t.results) == null) return [];
     let r =
@@ -263,7 +263,7 @@ function j(e) {
         ? []
         : e.message_snapshots.map((e) => {
               let { message: t } = e;
-              return new d.Hx({ message: R(t) });
+              return new d.Hx({ message: P(t) });
           });
 }
 let U = (e) => 0 === (0, c.cv)(e).length || '' !== e.content;

@@ -28,7 +28,7 @@ function h(e) {
                 (0, a.K)(t.id, n.id),
                 l.default.selectVoiceChannel(n.id);
         }, [h, t, n, g, _]),
-        x = (0, r.jsx)(s.Z.Channel, { channel: n });
+        y = (0, r.jsx)(s.Z.Channel, { channel: n });
     return (0, r.jsx)(s.Z, {
         children: (0, r.jsxs)(s.Z.Body, {
             children: [
@@ -37,7 +37,7 @@ function h(e) {
                     children: [
                         (0, r.jsx)(s.Z.Icon, { guild: t }),
                         (0, r.jsx)(s.Z.Info, {
-                            title: x,
+                            title: y,
                             onClick: b,
                             children: (0, r.jsxs)('span', {
                                 className: f.infoTitle,

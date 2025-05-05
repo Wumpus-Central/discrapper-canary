@@ -11,8 +11,8 @@ var r = a(135839),
     I = '[object WeakMap]',
     R = '[object DataView]',
     d = s(r),
-    A = s(n),
-    f = s(_),
+    f = s(n),
+    A = s(_),
     p = s(o),
     N = s(i),
     T = c;
@@ -25,9 +25,9 @@ var r = a(135839),
             switch (r) {
                 case d:
                     return R;
-                case A:
-                    return E;
                 case f:
+                    return E;
+                case A:
                     return l;
                 case p:
                     return u;

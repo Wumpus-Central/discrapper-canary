@@ -8,21 +8,21 @@ n.d(t, {
     S2: () => E,
     V3: () => y,
     W0: () => v,
-    W3: () => P,
+    W3: () => R,
     Zy: () => m,
     b9: () => C,
     cV: () => S,
     e1: () => I,
     iR: () => D,
     s4: () => N,
-    si: () => R,
+    si: () => P,
     ss: () => g,
     xn: () => A
 });
 var r = n(544891),
     i = n(433517),
-    a = n(780384),
-    o = n(570140),
+    o = n(780384),
+    a = n(570140),
     s = n(703656),
     l = n(546796),
     c = n(893776),
@@ -59,22 +59,22 @@ function p(e) {
     return e;
 }
 function h() {
-    o.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_INIT' });
+    a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_INIT' });
 }
 function m() {
-    o.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_CLOSE' });
+    a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_CLOSE' });
 }
 function g(e, t) {
     let n = t ? f.intl.string(f.t['8lQ2ra']) : f.intl.string(f.t.jf5GGR),
         i = t ? u.ANM.DELETE_ACCOUNT : u.ANM.DISABLE_ACCOUNT,
-        a = (t) =>
+        o = (t) =>
             r.tn.post({
                 url: i,
                 body: p({ password: e }, t),
                 oldFormErrors: !0,
                 rejectWithError: !1
             });
-    return (0, l.Z)(a, {
+    return (0, l.Z)(o, {
         modalProps: { title: n },
         checkEnabled: !1
     }).then(() => {
@@ -92,20 +92,20 @@ async function E(e) {
     if (n.token) {
         let t = n.token;
         delete n.token,
-            o.Z.dispatch({
+            a.Z.dispatch({
                 type: 'UPDATE_TOKEN',
                 token: t,
                 userId: n.id
             }),
             (null == e ? void 0 : e.password) != null &&
                 (null == e ? void 0 : e.new_password) != null &&
-                o.Z.dispatch({
+                a.Z.dispatch({
                     type: 'PASSWORD_UPDATED',
                     userId: n.id
                 });
     }
     return (
-        o.Z.dispatch({
+        a.Z.dispatch({
             type: 'CURRENT_USER_UPDATE',
             user: n
         }),
@@ -113,16 +113,16 @@ async function E(e) {
     );
 }
 function b(e) {
-    let { username: t, discriminator: n, email: r, emailToken: a, password: s, avatar: c, avatarDescription: _, avatarId: h, avatarDecoration: m, newPassword: g, globalName: b, legacyUsername: y, nameplate: O, primaryGuildId: v } = e;
+    let { username: t, discriminator: n, email: r, emailToken: o, password: s, avatar: c, avatarDescription: _, avatarId: h, avatarDecoration: m, newPassword: g, globalName: b, legacyUsername: y, nameplate: O, primaryGuildId: v } = e;
     return (
-        o.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT' }),
+        a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT' }),
         (0, l.Z)(
             (e) => {
-                let o = p(
+                let a = p(
                     {
                         username: t,
                         email: r,
-                        email_token: a,
+                        email_token: o,
                         password: s,
                         avatar: c,
                         avatar_description: _,
@@ -134,28 +134,28 @@ function b(e) {
                     },
                     e
                 );
-                null === m && (o.avatar_decoration_id = null), null != m && ((o.avatar_decoration_id = m.id), (o.avatar_decoration_sku_id = m.skuId)), null === O && (o.nameplate_id = null), null != O && ((o.nameplate_id = O.id), (o.nameplate_sku_id = O.skuId)), void 0 !== v && (o.primary_guild_id = v);
+                null === m && (a.avatar_decoration_id = null), null != m && ((a.avatar_decoration_id = m.id), (a.avatar_decoration_sku_id = m.skuId)), null === O && (a.nameplate_id = null), null != O && ((a.nameplate_id = O.id), (a.nameplate_sku_id = O.skuId)), void 0 !== v && (a.primary_guild_id = v);
                 let l = i.K.get(u.JkL),
                     f = (0, d.xJ)();
-                null != f && null != l && ((o.push_provider = f), (o.push_token = l));
+                null != f && null != l && ((a.push_provider = f), (a.push_token = l));
                 let I = i.K.get(u.scU);
-                return null != d.mv && null != I && ((o.push_voip_provider = d.mv), (o.push_voip_token = I)), E(o);
+                return null != d.mv && null != I && ((a.push_voip_provider = d.mv), (a.push_voip_token = I)), E(a);
             },
             {
                 checkEnabled: !1,
                 modalProps: { title: f.intl.string(f.t.clQc1d) },
                 hooks: {
                     onEarlyClose: () =>
-                        o.Z.dispatch({
+                        a.Z.dispatch({
                             type: 'USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE',
                             errors: {}
                         })
                 }
             }
         ).then(
-            (e) => (o.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS' }), (null != c || null != h) && o.Z.dispatch({ type: 'RECENT_AVATARS_UPDATE' }), e),
+            (e) => (a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_SUBMIT_SUCCESS' }), (null != c || null != h) && a.Z.dispatch({ type: 'RECENT_AVATARS_UPDATE' }), e),
             (e) => (
-                o.Z.dispatch({
+                a.Z.dispatch({
                     type: 'USER_SETTINGS_ACCOUNT_SUBMIT_FAILURE',
                     errors: e.body
                 }),
@@ -173,63 +173,63 @@ function y(e) {
     });
 }
 function O(e) {
-    o.Z.dispatch({
+    a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR',
         avatar: e
     }),
-        null == e ? a.uv.announce(f.intl.string(f.t['f1+oNj'])) : a.uv.announce(f.intl.string(f.t.NstziY));
+        null == e ? o.uv.announce(f.intl.string(f.t['f1+oNj'])) : o.uv.announce(f.intl.string(f.t.NstziY));
 }
 function v(e) {
-    o.Z.dispatch({
+    a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_GLOBAL_NAME',
         globalName: e
     });
 }
 function I(e) {
-    o.Z.dispatch({
+    a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_LEGACY_USERNAME_DISABLED',
         legacyUsernameDisabled: e
     });
 }
 function S(e) {
-    o.Z.dispatch({
+    a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_AVATAR_DECORATION',
         avatarDecoration: e
     });
 }
 function T(e) {
-    o.Z.dispatch({
+    a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_NAMEPLATE',
         nameplate: e
     });
 }
 function A(e) {
-    o.Z.dispatch({
+    a.Z.dispatch({
         type: 'USER_SETTINGS_ACCOUNT_SET_PENDING_PROFILE_EFFECT_ID',
         profileEffectId: e
     });
 }
 function N(e) {
-    o.Z.dispatch({
+    a.Z.dispatch({
         type: 'USER_SETTINGS_SET_PENDING_PRIMARY_GUILD_ID',
         primaryGuildId: e
     });
 }
 function C() {
-    o.Z.dispatch({ type: 'USER_SETTINGS_CLEAR_ERRORS' });
-}
-function R() {
-    o.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES' });
+    a.Z.dispatch({ type: 'USER_SETTINGS_CLEAR_ERRORS' });
 }
 function P() {
-    o.Z.dispatch({ type: 'USER_SETTINGS_RESET_ALL_PENDING' });
+    a.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES' });
+}
+function R() {
+    a.Z.dispatch({ type: 'USER_SETTINGS_RESET_ALL_PENDING' });
 }
 function w() {
-    o.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM' });
+    a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_RESET_AND_CLOSE_FORM' });
 }
 function D() {
-    o.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_RESET_PENDING_LEGACY_USERNAME_DISABLED' });
+    a.Z.dispatch({ type: 'USER_SETTINGS_ACCOUNT_RESET_PENDING_LEGACY_USERNAME_DISABLED' });
 }
 function L() {
-    o.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES' });
+    a.Z.dispatch({ type: 'USER_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES' });
 }

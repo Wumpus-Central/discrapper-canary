@@ -13,6 +13,6 @@ t.exports = function (t, e) {
         I = a || E || l || u,
         R = I ? r(t.length, String) : [],
         d = R.length;
-    for (var A in t) (e || s.call(t, A)) && !(I && ('length' == A || (l && ('offset' == A || 'parent' == A)) || (u && ('buffer' == A || 'byteLength' == A || 'byteOffset' == A)) || i(A, d))) && R.push(A);
+    for (var f in t) (e || s.call(t, f)) && !(I && ('length' == f || (l && ('offset' == f || 'parent' == f)) || (u && ('buffer' == f || 'byteLength' == f || 'byteOffset' == f)) || i(f, d))) && R.push(f);
     return R;
 };

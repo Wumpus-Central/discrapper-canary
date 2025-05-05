@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481752),
     l = n(481060),
     c = n(686546),
@@ -94,20 +94,20 @@ let b = 24,
         }
     };
 function v(e) {
-    let { className: t, disabled: n = !1, innerClassName: i, childClassName: a, iconClassName: p, icon: m, children: E, onClick: v, isActive: I, onMouseEnter: S, onMouseLeave: T, onFocus: A, onBlur: N, pulse: C, sparkle: R, notification: P, 'aria-label': w, 'aria-expanded': D, 'aria-haspopup': L, 'aria-controls': x } = e,
-        M = (0, u.Q3)('ChannelTextAreaButton'),
-        k = (0, l.Yzy)(null != E, g(h({}, O), { keys: (e) => (e ? 'children' : 'icon') })),
+    let { className: t, disabled: n = !1, innerClassName: i, childClassName: o, iconClassName: p, icon: m, children: E, onClick: v, isActive: I, onMouseEnter: S, onMouseLeave: T, onFocus: A, onBlur: N, pulse: C, sparkle: P, notification: R, 'aria-label': w, 'aria-expanded': D, 'aria-haspopup': L, 'aria-controls': x } = e,
+        k = (0, u.Q3)('ChannelTextAreaButton'),
+        M = (0, l.Yzy)(null != E, g(h({}, O), { keys: (e) => (e ? 'children' : 'icon') })),
         j = (e) => {
             let { component: t } = e;
-            return null != P
+            return null != R
                 ? (0, r.jsxs)('div', {
                       className: _.buttonContent,
                       children: [
                           (0, r.jsx)(c.ZP, {
                               className: _.iconMask,
                               mask: c.QS.CHAT_INPUT_BUTTON_NOTIFICATION,
-                              width: M ? y : b,
-                              height: M ? y : b,
+                              width: k ? y : b,
+                              height: k ? y : b,
                               children: t
                           }),
                           (0, r.jsx)('span', { className: _.notificationDot })
@@ -123,8 +123,8 @@ function v(e) {
         'aria-haspopup': L,
         'aria-controls': x,
         disabled: n,
-        className: o()(t, { [_.active]: I }),
-        innerClassName: o()(_.button, i, { [_.pulseButton]: C }),
+        className: a()(t, { [_.active]: I }),
+        innerClassName: a()(_.button, i, { [_.pulseButton]: C }),
         onClick: v,
         onMouseEnter: S,
         onMouseLeave: T,
@@ -137,14 +137,14 @@ function v(e) {
             }
         },
         children: [
-            k((e, t, n) => {
+            M((e, t, n) => {
                 let { key: i } = n;
                 return t
                     ? (0, r.jsx)(
                           s.animated.div,
                           {
                               style: e,
-                              className: o()(_.buttonWrapper, a),
+                              className: a()(_.buttonWrapper, o),
                               children: j({ component: E })
                           },
                           i
@@ -154,10 +154,10 @@ function v(e) {
                             s.animated.div,
                             {
                                 style: e,
-                                className: o()(_.buttonWrapper, a),
+                                className: a()(_.buttonWrapper, o),
                                 children: j({
                                     component: (0, r.jsx)(m, {
-                                        className: o()(_.icon, p, { [_.pulseIcon]: C }),
+                                        className: a()(_.icon, p, { [_.pulseIcon]: C }),
                                         color: 'currentColor'
                                     })
                                 })
@@ -166,7 +166,7 @@ function v(e) {
                         )
                       : void 0;
             }),
-            R &&
+            P &&
                 (0, r.jsxs)('div', {
                     className: _.sparkleContainer,
                     children: [(0, r.jsx)(f.Z, { className: _.sparkleStar }), (0, r.jsx)(d.Z, { className: _.sparklePlus })]

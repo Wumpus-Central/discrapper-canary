@@ -1,12 +1,12 @@
 let r;
 n.d(t, {
     RI: () => S,
-    ZP: () => R,
+    ZP: () => P,
     jy: () => T
 });
 var i = n(252258),
-    a = n(570140),
-    o = n(519938),
+    o = n(570140),
+    a = n(519938),
     s = n(317770),
     l = n(928518),
     c = n(592125),
@@ -26,29 +26,29 @@ function v(e, t) {
     if ((0, m.R)() || d.Z.isOpen(t)) return !1;
     if (null != r) {
         let e = r;
-        a.Z.wait(() => o.xv(e));
+        o.Z.wait(() => a.xv(e));
     }
-    a.Z.wait(() => o.bA(t, O.NYg.EMBED_IFRAME, { channel: e })), (r = t);
+    o.Z.wait(() => a.bA(t, O.NYg.EMBED_IFRAME, { channel: e })), (r = t);
 }
 function I() {
     let e = r;
-    null != e && d.Z.isOpen(e) && (a.Z.wait(() => o.xv(e)), (r = null));
+    null != e && d.Z.isOpen(e) && (o.Z.wait(() => a.xv(e)), (r = null));
 }
 function S(e) {
     let t = null != e ? e : r;
-    null != t && d.Z.isOpen(t) && a.Z.wait(() => o.Cp(t));
+    null != t && d.Z.isOpen(t) && o.Z.wait(() => a.Cp(t));
 }
 function T(e) {
     let t = null != e ? e : r;
-    null != t && d.Z.isOpen(t) && a.Z.wait(() => o.$Z(t));
+    null != t && d.Z.isOpen(t) && o.Z.wait(() => a.$Z(t));
 }
 function A() {
     let e = g.ZP.getConnectedActivityLocation(),
         t = (null == e ? void 0 : e.kind) === i.E.CONTEXTLESS,
         n = null != e ? g.ZP.getSelfEmbeddedActivityForLocation(e) : null,
         r = (0, E.pY)(e),
-        a = c.Z.getChannel(r);
-    return null != n && (t || null != a) ? v(a, (0, b.Z)(n.location.id, n.applicationId)) : I();
+        o = c.Z.getChannel(r);
+    return null != n && (t || null != o) ? v(o, (0, b.Z)(n.location.id, n.applicationId)) : I();
 }
 function N() {
     return (0, y.Z)({
@@ -66,4 +66,4 @@ class C extends s.Z {
         _.Z.removeChangeListener(A), p.Z.removeChangeListener(A), f.Z.removeChangeListener(A), h.Z.removeChangeListener(A), l.Z.removeChangeListener(A), g.ZP.removeChangeListener(A), u.Z.removeChangeListener(N);
     }
 }
-let R = new C();
+let P = new C();

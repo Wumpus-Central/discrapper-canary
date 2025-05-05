@@ -1,8 +1,8 @@
 n.d(t, { Z: () => D }), n(388685), n(953529);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(570140),
@@ -63,7 +63,7 @@ function C(e, t) {
     }
     return n;
 }
-function R(e, t) {
+function P(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -74,14 +74,14 @@ function R(e, t) {
         e
     );
 }
-function P(e, t) {
+function R(e, t) {
     if (null == e) return {};
     var n,
         r,
         i = w(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -90,12 +90,12 @@ function w(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function D(e) {
-    let { className: t, disabled: a, isEditor: A, renderCTAButtons: C } = e,
+    let { className: t, disabled: o, isEditor: A, renderCTAButtons: C } = e,
         [w, D] = (0, s.Wu)([g.Z], () => [g.Z.getCurrentDesktopIcon(), g.Z.isUpsellPreview]),
         { enabled: L } = p.Z.getCurrentConfig(
             { location: 'UserSettingsAppearanceInAppIcon' },
@@ -106,13 +106,13 @@ function D(e) {
         ),
         x = i.useRef(null);
     (0, m.Z)(x, v.h1.CUSTOM_APP_ICONS);
-    let M = (0, d.Dt)(),
-        k = (0, l.arW)({
+    let k = (0, d.Dt)(),
+        M = (0, l.arW)({
             orientation: 'horizontal',
-            labelledBy: M
+            labelledBy: k
         }),
-        { ref: j } = k,
-        U = P(k, ['ref']),
+        { ref: j } = M,
+        U = R(M, ['ref']),
         G = (0, f.Q3)('AppIconSelectionGroup'),
         B = (e) => {
             if (L && !A && e !== E.aH.DEFAULT)
@@ -142,7 +142,7 @@ function D(e) {
         ref: x,
         children: (0, r.jsx)(
             'div',
-            R(N({}, U), {
+            P(N({}, U), {
                 ref: j,
                 className: S.__invalid_container,
                 children: (0, r.jsxs)('div', {
@@ -189,7 +189,7 @@ function D(e) {
                                                   })
                                             : (0, r.jsx)(l.X6q, {
                                                   variant: 'text-sm/normal',
-                                                  className: o()({ [T.subtext]: G }),
+                                                  className: a()({ [T.subtext]: G }),
                                                   children: I.intl.string(I.t.IgENJi)
                                               })
                                     ]
@@ -198,7 +198,7 @@ function D(e) {
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: o()(S.presets, { [S.presetsJustified]: L && A }),
+                            className: a()(S.presets, { [S.presetsJustified]: L && A }),
                             children: (0, y.wu)()
                                 .filter((e) => {
                                     let { isHidden: t } = e;
@@ -211,8 +211,8 @@ function D(e) {
                                             icon: e,
                                             isSelected: w === e.id,
                                             onSelect: (e) => B(e),
-                                            disabled: a,
-                                            tabIndex: 0 !== t || a ? void 0 : 0,
+                                            disabled: o,
+                                            tabIndex: 0 !== t || o ? void 0 : 0,
                                             locked: L && !A && e.id !== E.aH.DEFAULT
                                         },
                                         e.id

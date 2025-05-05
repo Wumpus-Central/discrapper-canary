@@ -2,8 +2,8 @@ n.d(t, { Z: () => O });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(692547),
-    o = n(481060),
+    o = n(692547),
+    a = n(481060),
     s = n(726542),
     l = n(231757),
     c = n(511010),
@@ -81,10 +81,10 @@ let O = function (e) {
         A = S && null == O && null == v,
         N = S && null != O && null == v,
         C = S && null == O && null != v,
-        R = N || C;
-    function P() {
+        P = N || C;
+    function R() {
         null != I &&
-            (0, o.ZDy)(async () => {
+            (0, a.ZDy)(async () => {
                 let { default: e } = await n.e('73217').then(n.bind(n, 139964));
                 return (n) =>
                     (0, r.jsx)(
@@ -97,17 +97,17 @@ let O = function (e) {
             });
     }
     function w() {
-        return A || R ? (0, l.Z)({ platformType: p.ABu.RIOT_GAMES }) : P();
+        return A || P ? (0, l.Z)({ platformType: p.ABu.RIOT_GAMES }) : R();
     }
     function D() {
-        return A ? h.intl.string(h.t.w6VSSE) : R ? h.intl.string(h.t.CHNBdn) : h.intl.string(h.t['0yRXHx']);
+        return A ? h.intl.string(h.t.w6VSSE) : P ? h.intl.string(h.t.CHNBdn) : h.intl.string(h.t['0yRXHx']);
     }
     function L() {
         if (b) return null;
         let e = A
-                ? (0, r.jsx)(o.d3s, { className: m.infoMessageIcon })
-                : (0, r.jsx)(o.aNP, {
-                      color: a.Z.colors.STATUS_WARNING,
+                ? (0, r.jsx)(a.d3s, { className: m.infoMessageIcon })
+                : (0, r.jsx)(a.aNP, {
+                      color: o.Z.colors.STATUS_WARNING,
                       className: m.infoMessageIcon
                   }),
             t = A ? h.intl.string(h.t['Ihg/Dg']) : h.intl.string(h.t['J8U+Iy']);
@@ -115,7 +115,7 @@ let O = function (e) {
             className: m.updateMessage,
             children: [
                 e,
-                (0, r.jsx)(o.Text, {
+                (0, r.jsx)(a.Text, {
                     variant: 'text-xs/medium',
                     color: 'text-muted',
                     children: t
@@ -127,7 +127,7 @@ let O = function (e) {
         children: [
             (0, r.jsx)(c.Z, { className: m.divider }),
             L(),
-            (0, r.jsxs)(o.zxk, {
+            (0, r.jsxs)(a.zxk, {
                 className: m.joinLeaderboardButton,
                 innerClassName: m.joinLeaderboardButtonInner,
                 onClick: w,

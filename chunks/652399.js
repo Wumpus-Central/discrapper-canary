@@ -5,7 +5,7 @@ n.d(t, {
     cy: () => b,
     hM: () => p,
     sL: () => m,
-    tI: () => x,
+    tI: () => y,
     zW: () => f
 });
 var r = n(367907),
@@ -122,7 +122,7 @@ function b(e) {
         search_type: t
     });
 }
-function x(e) {
+function y(e) {
     let { searchType: t, searchId: n, query: i } = e,
         l = Object.keys(i),
         o = l.reduce((e, t) => {

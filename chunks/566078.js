@@ -1,8 +1,8 @@
 n.d(t, { r: () => u }), n(415506), n(388685);
 var r = n(742635),
     i = n(319245),
-    a = n(918701);
-function o(e, t, n) {
+    o = n(918701);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -81,12 +81,12 @@ class u {
         return this.quest.rewardsConfig.platforms;
     }
     get questType() {
-        return (0, a.q8)({ config: this.quest }) ? i.W.VIDEO : i.W.GAMEPLAY;
+        return (0, o.q8)({ config: this.quest }) ? i.W.VIDEO : i.W.GAMEPLAY;
     }
     get defaultInGameTask() {
         return this.quest.taskConfig.type !== r.L.THIRD_PARTY || 0 === Object.keys(this.quest.taskConfig.tasks).length ? null : Object.values(this.quest.taskConfig.tasks)[0];
     }
     constructor(e) {
-        o(this, 'quest', void 0), (this.quest = e);
+        a(this, 'quest', void 0), (this.quest = e);
     }
 }

@@ -1,8 +1,8 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => R }), n(388685);
 var r,
     i = n(442837),
-    a = n(433517),
-    o = n(570140),
+    o = n(433517),
+    a = n(570140),
     s = n(706454),
     l = n(695346),
     c = n(581883),
@@ -68,20 +68,20 @@ function A(e) {
 }
 function N(e) {
     let { changelogDate: t } = e;
-    (b = new Date(t)), a.K.set(g, t);
+    (b = new Date(t)), o.K.set(g, t);
 }
 function C() {
     E = l.l4.getSetting();
 }
-class R extends (r = i.ZP.Store) {
+class P extends (r = i.ZP.Store) {
     initialize() {
         this.waitFor(s.default, c.Z), this.syncWith([s.default], () => !0), this.syncWith([c.Z], C);
-        let e = a.K.get(g);
+        let e = o.K.get(g);
         if (null != e)
             try {
                 b = new Date(e);
             } catch (e) {
-                a.K.remove(g);
+                o.K.remove(g);
             }
     }
     getChangelog(e, t) {
@@ -122,8 +122,8 @@ class R extends (r = i.ZP.Store) {
         return y.size > 0;
     }
 }
-d(R, 'displayName', 'ChangelogStore');
-let P = new R(o.Z, {
+d(P, 'displayName', 'ChangelogStore');
+let R = new P(a.Z, {
     CHANGE_LOG_LOCK: O,
     CHANGE_LOG_UNLOCK: v,
     CHANGE_LOG_SET_CONFIG: I,

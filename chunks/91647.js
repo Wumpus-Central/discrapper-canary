@@ -15,11 +15,11 @@ class s {
             I = (0, c.Bg)(s),
             R = (0, c.OC)(o),
             d = (0, c.Ic)(t, u, R, I),
-            A = this._buckets.get(d),
-            f = A && t === _.is ? A.metric.weight : 0;
-        A
-            ? (A.metric.add(a), A.timestamp < l && (A.timestamp = l))
-            : ((A = {
+            f = this._buckets.get(d),
+            A = f && t === _.is ? f.metric.weight : 0;
+        f
+            ? (f.metric.add(a), f.timestamp < l && (f.timestamp = l))
+            : ((f = {
                   metric: new i.ZN[t](a),
                   timestamp: l,
                   metricType: t,
@@ -27,8 +27,8 @@ class s {
                   unit: R,
                   tags: I
               }),
-              this._buckets.set(d, A));
-        let p = 'string' == typeof a ? A.metric.weight - f : a;
+              this._buckets.set(d, f));
+        let p = 'string' == typeof a ? f.metric.weight - A : a;
         (0, n.yc)(t, u, p, R, s, d);
     }
     flush() {

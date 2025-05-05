@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(648052),
-    o = n(530),
+    o = n(648052),
+    a = n(530),
     s = n(420654),
     l = n(116854),
     c = n(271383),
@@ -17,8 +17,8 @@ function p(e) {
         A = (0, i.e7)([c.ZP], () => (null == h ? null : c.ZP.getMember(h.id, n.id))),
         N = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
         C = null == p || null == (t = p.getPreviewBio(b)) ? void 0 : t.value,
-        R = null != y ? y : null == p ? void 0 : p.pronouns,
-        P = (0, d.Ly)({
+        P = null != y ? y : null == p ? void 0 : p.pronouns,
+        R = (0, d.Ly)({
             pendingNickname: g,
             pendingGlobalName: E,
             user: n,
@@ -28,20 +28,20 @@ function p(e) {
             if (null != A && null !== m && (null != A.avatar || null != m))
                 return (0, r.jsx)(l.Z, {
                     user: n,
-                    nickname: P
+                    nickname: R
                 });
         };
     return (0, r.jsxs)('div', {
         inert: '',
         className: _.body,
         children: [
-            (0, r.jsx)(o.Z, {
+            (0, r.jsx)(a.Z, {
                 user: n,
                 usernameIcon: w(),
-                nickname: P,
-                pronouns: R,
+                nickname: R,
+                pronouns: P,
                 isTryItOut: I,
-                tags: (0, r.jsx)(a.Z, {
+                tags: (0, r.jsx)(o.Z, {
                     displayProfile: p,
                     themeType: f.lY.POPOUT,
                     pendingLegacyUsernameDisabled: O,

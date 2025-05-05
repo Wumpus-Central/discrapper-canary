@@ -2,8 +2,8 @@ n.d(t, { Z: () => v }), n(415506);
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(287734),
-    o = n(258609),
+    o = n(287734),
+    a = n(258609),
     s = n(703656),
     l = n(414509),
     c = n(452369),
@@ -55,12 +55,12 @@ let v = {
     async handleVoiceConnect(e) {
         let { channel: t, connected: s, needSubscriptionToAccess: b, locked: v = !1, routeDirectlyToChannel: I = !1, bypassChangeModal: S, bypassBlockedWarningModal: T, bypassGuildIdCheck: A = !1 } = e;
         t.isThread() && (await d.Z.unarchiveThreadIfNecessary(t.id), u.Z.hasJoined(t.id) || (await d.Z.joinThread(t, 'Join Voice')));
-        let N = o.Z.getRemoteSessionId(),
+        let N = a.Z.getRemoteSessionId(),
             C = p.Z.getVoiceStateForSession(f.default.getId(), N),
-            R = (null == C ? void 0 : C.channelId) === t.id || _.Z.getChannelId() === p.Z.getCurrentClientVoiceChannelId(t.guild_id),
-            P = c.Z.getBlockedUsersForVoiceChannel(t.id),
+            P = (null == C ? void 0 : C.channelId) === t.id || _.Z.getChannelId() === p.Z.getCurrentClientVoiceChannelId(t.guild_id),
+            R = c.Z.getBlockedUsersForVoiceChannel(t.id),
             w = c.Z.getIgnoredUsersForVoiceChannel(t.id);
-        return ((0, l.B)(t.id) && (T = !0), T || v || s || (!(P.size > 0) && !(w.size > 0)))
+        return ((0, l.B)(t.id) && (T = !0), T || v || s || (!(R.size > 0) && !(w.size > 0)))
             ? !S && !v && (0, m._)(t)
                 ? new Promise((e) => {
                       (0, i.ZDy)(async () => {
@@ -88,19 +88,19 @@ let v = {
                               );
                       });
                   })
-                : (v || s || a.default.selectVoiceChannel(t.id), !__OVERLAY__ && (s || R || b || I) && O(t, A), !0)
+                : (v || s || o.default.selectVoiceChannel(t.id), !__OVERLAY__ && (s || P || b || I) && O(t, A), !0)
             : new Promise((e) => {
                   (0, i.ZDy)(
                       async () => {
                           let { default: i } = await n.e('12858').then(n.bind(n, 404339));
                           return (n) => {
-                              let { onClose: a, transitionState: o } = n;
+                              let { onClose: o, transitionState: a } = n;
                               return (0, r.jsx)(i, {
                                   channelId: t.id,
-                                  blockedUserIds: P,
+                                  blockedUserIds: R,
                                   ignoredUserIds: w,
-                                  transitionState: o,
-                                  onClose: a,
+                                  transitionState: a,
+                                  onClose: o,
                                   onJoin: () =>
                                       e(
                                           this.handleVoiceConnect({
@@ -121,7 +121,7 @@ let v = {
                               h.default.track(g.rMx.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
                                   action: E.q.DISMISS,
                                   channel_id: t.id,
-                                  blocked_user_ids: Array.from(P),
+                                  blocked_user_ids: Array.from(R),
                                   ignored_user_ids: Array.from(w),
                                   warning_surface: E.fz.PRE_JOIN_MODAL
                               });

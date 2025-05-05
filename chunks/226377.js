@@ -21,7 +21,7 @@ function I(t, e, a, r, _ = {}) {
     let E = (0, c.HN)(),
         l = E ? (0, c.Gx)(E) : void 0,
         R = l && (0, c.XU)(l).description,
-        { unit: d, tags: A, timestamp: f } = _,
+        { unit: d, tags: f, timestamp: A } = _,
         { release: p, environment: N } = s.getOptions(),
         T = {};
     p && (T.release = p),
@@ -35,24 +35,24 @@ function I(t, e, a, r, _ = {}) {
             d,
             {
                 ...T,
-                ...A
+                ...f
             },
-            f
+            A
         );
 }
 function R(t, e, a, r) {
-    I(t, l.g_, e, A(a), r);
+    I(t, l.g_, e, f(a), r);
 }
 let d = {
     increment: function (t, e, a = 1, r) {
-        I(t, l.JM, e, A(a), r);
+        I(t, l.JM, e, f(a), r);
     },
     distribution: R,
     set: function (t, e, a, r) {
         I(t, l.is, e, a, r);
     },
     gauge: function (t, e, a, r) {
-        I(t, l.uG, e, A(a), r);
+        I(t, l.uG, e, f(a), r);
     },
     timing: function (t, e, a, r = 'second', n) {
         if ('function' == typeof a) {
@@ -86,6 +86,6 @@ let d = {
     },
     getMetricsAggregatorForClient: u
 };
-function A(t) {
+function f(t) {
     return 'string' == typeof t ? parseInt(t) : t;
 }

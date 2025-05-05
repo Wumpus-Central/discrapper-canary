@@ -1,8 +1,8 @@
 n.d(t, { Z: () => Y }), n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(442837),
     l = n(481060),
     c = n(287734),
@@ -25,29 +25,29 @@ var r = n(255367),
     A = n(139793),
     N = n(510659),
     C = n(287954),
-    R = n(660579),
-    P = n(652853),
+    P = n(660579),
+    R = n(652853),
     w = n(64621),
     D = n(336383),
     L = n(194811),
     x = n(265386),
-    M = n(668700),
-    k = n(384298),
+    k = n(668700),
+    M = n(384298),
     j = n(386019),
     U = n(228168),
     G = n(981631),
     B = n(388032),
-    V = n(227832),
-    F = n(162509),
+    F = n(227832),
+    V = n(162509),
     Z = n(924482),
     H = n(774797);
 function Y(e) {
-    let { user: t, currentUser: n, stream: a, className: Y, onClose: W, profileGuildId: K } = e,
+    let { user: t, currentUser: n, stream: o, className: Y, onClose: W, profileGuildId: K } = e,
         z = i.useRef(null),
-        { themeType: q, theme: Q } = (0, P.z)(),
+        { themeType: q, theme: Q } = (0, R.z)(),
         { interactionSource: X, interactionSourceId: J } = (0, N.Xo)(),
-        $ = (0, s.e7)([O.Z], () => O.Z.getGuild(null == a ? void 0 : a.guildId)),
-        ee = (0, s.e7)([y.Z], () => y.Z.getChannel(null == a ? void 0 : a.channelId)),
+        $ = (0, s.e7)([O.Z], () => O.Z.getGuild(null == o ? void 0 : o.guildId)),
+        ee = (0, s.e7)([y.Z], () => y.Z.getChannel(null == o ? void 0 : o.channelId)),
         et = (0, s.Wu)([S.ZP], () =>
             null != ee
                 ? S.ZP.getVoiceStatesForChannel(ee).map((e) => {
@@ -62,32 +62,32 @@ function Y(e) {
             display: 'live',
             voiceChannelId: null == ee ? void 0 : ee.id,
             user: t,
-            stream: a,
+            stream: o,
             analyticsLocations: er
         }),
-        ea = (0, A.Z)({
+        eo = (0, A.Z)({
             userId: t.id,
             onAction: ei
         }),
-        [eo, es] = (0, b.wq)(ee),
-        { previewUrl: el, isLoading: ec } = (0, E.Z)(a.guildId, a.channelId, a.ownerId),
+        [ea, es] = (0, b.wq)(ee),
+        { previewUrl: el, isLoading: ec } = (0, E.Z)(o.guildId, o.channelId, o.ownerId),
         eu = (0, s.e7)([v.Z], () => null != ee && v.Z.canBasicChannel(G.S7T.CONNECT, ee)),
         ed = (0, d.Z)(ec ? null : el),
         ef = ec || null == el ? ed : el;
-    if (null == $ || null == ee || !1 === a.discoverable || null === q) return null;
+    if (null == $ || null == ee || !1 === o.discoverable || null === q) return null;
     let e_ = () => {
             let e = (e) => {
-                e.stopPropagation(), ei({ action: 'PRESS_IMAGE' }), c.default.selectVoiceChannel(a.channelId), (0, u.iV)(a), null == W || W();
+                e.stopPropagation(), ei({ action: 'PRESS_IMAGE' }), c.default.selectVoiceChannel(o.channelId), (0, u.iV)(o), null == W || W();
             };
             return null == ef && ec
                 ? (0, r.jsx)('div', {
-                      className: F.preview,
+                      className: V.preview,
                       children: (0, r.jsx)(l.$jN, {})
                   })
                 : null == ef
                   ? (0, r.jsxs)(l.P3F, {
-                        className: o()(F.preview, F.overlay, { [F.clickable]: eo }),
-                        onClick: eo ? e : void 0,
+                        className: a()(V.preview, V.overlay, { [V.clickable]: ea }),
+                        onClick: ea ? e : void 0,
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
@@ -98,7 +98,7 @@ function Y(e) {
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(l.Text, {
-                                            className: F.overlayText,
+                                            className: V.overlayText,
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
                                             children: (0, b.P9)(es)
@@ -112,20 +112,20 @@ function Y(e) {
                         ]
                     })
                   : (0, r.jsxs)(l.P3F, {
-                        className: o()(F.preview, F.overlay, { [F.clickable]: eo }),
-                        onClick: eo ? e : void 0,
+                        className: a()(V.preview, V.overlay, { [V.clickable]: ea }),
+                        onClick: ea ? e : void 0,
                         children: [
                             (0, r.jsx)('img', {
                                 alt: '',
                                 src: ef,
-                                className: F.image
+                                className: V.image
                             }),
                             q !== U.lY.MODAL &&
                                 q !== U.lY.MODAL_V2 &&
                                 (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(l.Text, {
-                                            className: F.overlayText,
+                                            className: V.overlayText,
                                             variant: 'text-sm/medium',
                                             color: 'always-white',
                                             children: (0, b.P9)(es)
@@ -133,7 +133,7 @@ function Y(e) {
                                         (0, r.jsx)(l.gw7, {
                                             size: 'xs',
                                             color: 'currentColor',
-                                            className: F.clyde
+                                            className: V.clyde
                                         })
                                     ]
                                 })
@@ -144,7 +144,7 @@ function Y(e) {
             q !== U.lY.MODAL && q !== U.lY.MODAL_V2
                 ? null
                 : (0, r.jsxs)('div', {
-                      className: V.details,
+                      className: F.details,
                       children: [
                           (0, r.jsx)(x.Z, {
                               channel: ee,
@@ -156,7 +156,7 @@ function Y(e) {
                               users: et,
                               guildId: $.id,
                               channelId: ee.id,
-                              maxUsers: M.W,
+                              maxUsers: k.W,
                               size: l.EFr.SIZE_16,
                               onClick: (e) => {
                                   null == e || e.stopPropagation(), null == ei || ei({ action: 'PRESS_VOICE_CHANNEL_AVATARS' });
@@ -171,7 +171,7 @@ function Y(e) {
         eh = () =>
             q === U.lY.MODAL || q === U.lY.MODAL_V2
                 ? null
-                : (0, r.jsx)(M.Z, {
+                : (0, r.jsx)(k.Z, {
                       user: t,
                       guild: $,
                       channel: ee,
@@ -182,8 +182,8 @@ function Y(e) {
             t.id === n.id
                 ? null
                 : (0, r.jsx)('div', {
-                      className: V.actions,
-                      children: (0, r.jsx)(k.Z, {
+                      className: F.actions,
+                      children: (0, r.jsx)(M.Z, {
                           channel: ee,
                           onAction: ei,
                           onClose: W
@@ -207,10 +207,10 @@ function Y(e) {
                 sourceType: U.n_.ACTIVITY,
                 onAction: ei,
                 children: () =>
-                    (0, r.jsx)(R.Z, {
+                    (0, r.jsx)(P.Z, {
                         ref: z,
                         user: t,
-                        className: V.toolbarContainer,
+                        className: F.toolbarContainer,
                         interactionSourceId: eg,
                         sourceType: U.n_.ACTIVITY,
                         onAction: ei,
@@ -223,8 +223,8 @@ function Y(e) {
                                 children: e
                             }),
                         children: (0, r.jsxs)(D.Z, {
-                            ref: ea,
-                            className: o()(Y, { [V.hoisted]: eE }),
+                            ref: eo,
+                            className: a()(Y, { [F.hoisted]: eE }),
                             onAction: ei,
                             onClose: W,
                             children: [
@@ -233,10 +233,10 @@ function Y(e) {
                                     tags: (0, r.jsx)(m.ZP, { size: m.OH.SMALL })
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: V.body,
+                                    className: F.body,
                                     children: [
                                         (0, r.jsxs)('div', {
-                                            className: V.content,
+                                            className: F.content,
                                             children: [e_(), ep(), q === U.lY.MODAL && em()]
                                         }),
                                         eh()

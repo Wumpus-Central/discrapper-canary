@@ -15,8 +15,8 @@ var r,
     g = n(917621),
     _ = n(431583),
     b = n(592745),
-    x = n(952164),
-    y = n(768419),
+    y = n(952164),
+    x = n(768419),
     E = n(456432),
     v = n(789407),
     O = n(598077),
@@ -32,8 +32,8 @@ var r,
     Z = n(768581),
     R = n(358085),
     k = n(804739),
-    D = n(410575),
-    L = n(981631),
+    L = n(410575),
+    D = n(981631),
     M = n(701488);
 function U(e, t, n) {
     return (
@@ -81,21 +81,21 @@ class G extends (r = l.PureComponent) {
               });
     }
     handleOpenSpotifyTrack(e) {
-        (0, x.aG)(e);
+        (0, y.aG)(e);
     }
     handleOpenSpotifyArtist(e, t, n) {
-        (0, x.d$)(e, t, n);
+        (0, y.d$)(e, t, n);
     }
     handleOpenSpotifyAlbum(e, t) {
-        (0, x.Z5)(e, t);
+        (0, y.Z5)(e, t);
     }
     shouldRenderCustomButton() {
         let { isLaunchable: e, application: t } = this.props;
         return null != t && null != t.primarySkuId && !e && R.isPlatformEmbedded;
     }
     render() {
-        return (0, i.jsx)(D.Z, {
-            section: D.Z.Sections.APPLICATION_EMBED,
+        return (0, i.jsx)(L.Z, {
+            section: L.Z.Sections.APPLICATION_EMBED,
             children: this.renderEmbed()
         });
     }
@@ -106,14 +106,14 @@ class G extends (r = l.PureComponent) {
                 let { activity: e, analyticsLocations: t, userId: n, message: r, guildId: i, channelId: l } = this.props;
                 if (null != e && null != n && null != r && null != e.session_id && null != e.application_id) {
                     var a, o;
-                    let s = (0, m.Z)(e, L.xjy.EMBEDDED);
+                    let s = (0, m.Z)(e, D.xjy.EMBEDDED);
                     c.Z.join({
                         userId: n,
                         sessionId: e.session_id,
                         applicationId: e.application_id,
                         channelId: l,
                         messageId: r.id,
-                        source: L.Sbl.MESSAGE_EMBED,
+                        source: D.Sbl.MESSAGE_EMBED,
                         analyticsLocations: t,
                         partyId: null == (a = e.party) ? void 0 : a.id,
                         embedded: s,
@@ -121,8 +121,8 @@ class G extends (r = l.PureComponent) {
                     }),
                         s ||
                             (0, h.Z)({
-                                type: L.q5t.JOIN,
-                                source: L.Sbl.MESSAGE_EMBED,
+                                type: D.q5t.JOIN,
+                                source: D.Sbl.MESSAGE_EMBED,
                                 userId: n,
                                 guildId: i,
                                 channelId: l,
@@ -139,10 +139,10 @@ class G extends (r = l.PureComponent) {
                     try {
                         this.setState({ sending: !0 }),
                             await s.Z.sendActivityInvite({
-                                type: L.mFx.JOIN,
+                                type: D.mFx.JOIN,
                                 channelId: t,
                                 activity: e,
-                                location: L.Sbl.MESSAGE_EMBED
+                                location: D.Sbl.MESSAGE_EMBED
                             });
                     } finally {
                         this.setState({ sending: !1 });
@@ -177,7 +177,7 @@ class G extends (r = l.PureComponent) {
                     ((t = F({}, e)),
                     (n = n =
                         {
-                            source: L.Sbl.MESSAGE_EMBED,
+                            source: D.Sbl.MESSAGE_EMBED,
                             application: r
                         }),
                     Object.getOwnPropertyDescriptors
@@ -197,7 +197,7 @@ class G extends (r = l.PureComponent) {
             }),
             U(this, 'renderEmbed', () => {
                 let e,
-                    { activity: t, partyId: n, myPartyId: r, application: l, partyMembers: a, isPreview: o, isLaunching: s, isSender: c, activityActionType: u, className: d, channelId: p, message: m, hideParty: f, isSyncable: h, isLaunchable: _, guildId: b, analyticsLocations: x } = this.props;
+                    { activity: t, partyId: n, myPartyId: r, application: l, partyMembers: a, isPreview: o, isLaunching: s, isSender: c, activityActionType: u, className: d, channelId: p, message: m, hideParty: f, isSyncable: h, isLaunchable: _, guildId: b, analyticsLocations: y } = this.props;
                 if (null != l) e = l.name;
                 else if (null != n) {
                     let [t] = n.split(':');
@@ -222,7 +222,7 @@ class G extends (r = l.PureComponent) {
                     channelId: p,
                     guildId: null != b ? b : void 0,
                     message: m,
-                    analyticsLocations: x,
+                    analyticsLocations: y,
                     hideParty: f,
                     onJoin: this.handleJoin,
                     onInvite: this.handleInvite,
@@ -238,14 +238,14 @@ class G extends (r = l.PureComponent) {
     }
 }
 U(G, 'defaultProps', { isPreview: !1 });
-let H = a.ZP.connectStores([y.Z, C.Z, N.Z, T.Z, j.Z, A.Z, I.Z, b.Z, w.Z, P.default, S.ZP], (e) => {
+let H = a.ZP.connectStores([x.Z, C.Z, N.Z, T.Z, j.Z, A.Z, I.Z, b.Z, w.Z, P.default, S.ZP], (e) => {
     var t;
     let { activity: n, analyticsLocations: r, application: i, partyId: l, userId: a, guildId: o } = e,
         { id: s } = null != i ? i : {},
         c = null != n && null != n.party && n.party.id === l ? C.Z.getParty(n.party.id) : null,
-        u = null != s ? (null != (t = N.Z.getApplicationActivity(s)) ? t : T.Z.getApplicationActivity(s, !0)) : N.Z.findActivity((e) => e.type === L.IIU.LISTENING),
+        u = null != s ? (null != (t = N.Z.getApplicationActivity(s)) ? t : T.Z.getApplicationActivity(s, !0)) : N.Z.findActivity((e) => e.type === D.IIU.LISTENING),
         d = !1;
-    null != s && (d = A.Z.getState(s, L.mFx.JOIN) === L.OcF.LOADING);
+    null != s && (d = A.Z.getState(s, D.mFx.JOIN) === D.OcF.LOADING);
     let p = Array.from(null != c ? c : []).map((e) => {
             let t = null != o ? S.ZP.getMember(o, e) : null,
                 n = null != t ? t.nick : null,
@@ -260,8 +260,8 @@ let H = a.ZP.connectStores([y.Z, C.Z, N.Z, T.Z, j.Z, A.Z, I.Z, b.Z, w.Z, P.defau
                 }
             );
         }),
-        m = null != n && y.Z.canPlay(n),
-        f = y.Z.getSyncingWith(),
+        m = null != n && x.Z.canPlay(n),
+        f = x.Z.getSyncingWith(),
         h = null != f && null != a && f.userId === a;
     return {
         analyticsLocations: r,

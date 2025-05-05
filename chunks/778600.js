@@ -1,5 +1,5 @@
 let r;
-a.d(e, { m: () => M });
+a.d(e, { m: () => G });
 var n,
     _,
     o,
@@ -104,9 +104,9 @@ function d(t, e, a, r, n) {
     return !(i < 0) && (r && (c = s(_, E(null, r))), (i > -1 && c < 0) || i < c);
 }
 'undefined' != typeof window && window.Proxy && window.Reflect && (u = new Proxy(u, { get: (t, e, a) => ('map' === e && console.error(l), Reflect.get(t, e, a)) })), /[1-9][0-9]{12}/.test(Date.now().toString());
-let A = {};
-function f(t) {
-    let e = A[t];
+let f = {};
+function A(t) {
+    let e = f[t];
     if (e) return e;
     let a = window.document,
         r = window[t];
@@ -117,13 +117,13 @@ function f(t) {
             let n = e.contentWindow;
             n && n[t] && (r = n[t]), a.head.removeChild(e);
         } catch (t) {}
-    return (A[t] = r.bind(window));
+    return (f[t] = r.bind(window));
 }
 function p(...t) {
-    return f('requestAnimationFrame')(...t);
+    return A('requestAnimationFrame')(...t);
 }
 function N(...t) {
-    return f('setTimeout')(...t);
+    return A('setTimeout')(...t);
 }
 var T = (((_ = T || {})[(_['2D'] = 0)] = '2D'), (_[(_.WebGL = 1)] = 'WebGL'), (_[(_.WebGL2 = 2)] = 'WebGL2'), _);
 let L = (t) =>
@@ -147,7 +147,7 @@ var g = function (t) {
     return r % 3 == 2 ? (n = n.substring(0, n.length - 1) + '=') : r % 3 == 1 && (n = n.substring(0, n.length - 2) + '=='), n;
 };
 let P = new Map(),
-    m = (t, e, a) => {
+    y = (t, e, a) => {
         let r;
         if (!t || !(v(t, e) || 'object' == typeof t)) return;
         let n = t.constructor.name,
@@ -155,7 +155,7 @@ let P = new Map(),
             o = _.indexOf(t);
         return -1 === o && ((o = _.length), _.push(t)), o;
     },
-    y = (t, e, a) =>
+    m = (t, e, a) =>
         t.map((t) =>
             (function t(e, a, r) {
                 if (e instanceof Array) return e.map((e) => t(e, a, r));
@@ -195,7 +195,7 @@ let P = new Map(),
                 else if (v(e, a) || 'object' == typeof e)
                     return {
                         rr_type: e.constructor.name,
-                        index: m(e, a, r)
+                        index: y(e, a, r)
                     };
                 return e;
             })(t, e, a)
@@ -234,8 +234,8 @@ function S(t, e, a, r, n, _, o, i) {
                 let s = R(t, o, function (t) {
                     return function (...c) {
                         let s = t.apply(this, c);
-                        if ((m(s, i, this), 'tagName' in this.canvas && !d(this.canvas, r, n, _, !0))) {
-                            let t = y(c, i, this),
+                        if ((y(s, i, this), 'tagName' in this.canvas && !d(this.canvas, r, n, _, !0))) {
+                            let t = m(c, i, this),
                                 r = {
                                     type: e,
                                     property: o,
@@ -262,7 +262,7 @@ function S(t, e, a, r, n, _, o, i) {
             }
     return c;
 }
-class G {
+class U {
     reset() {
         this.pendingCanvasMutations.clear(),
             this.restoreHandlers.forEach((t) => {
@@ -408,7 +408,7 @@ class G {
                                 return (
                                     d(this.canvas, a, r, n, !0) ||
                                         N(() => {
-                                            let a = y(i, e, this);
+                                            let a = m(i, e, this);
                                             t(this.canvas, {
                                                 type: T['2D'],
                                                 property: o,
@@ -583,7 +583,7 @@ let b = {
             }
         }
     },
-    M = (0, c._I)((t = {}) => {
+    G = (0, c._I)((t = {}) => {
         let e,
             [a, r] = t.maxCanvasSize || [],
             n = {
@@ -600,7 +600,7 @@ let b = {
                     enableManualSnapshot: a,
                     recordCanvas: !0,
                     getCanvasManager: (t) => {
-                        let n = new G({
+                        let n = new U({
                             ...t,
                             enableManualSnapshot: a,
                             maxCanvasSize: r,

@@ -2,10 +2,10 @@ let t = '[A-Za-z$_][0-9A-Za-z$_]*',
     n = ['as', 'in', 'of', 'if', 'for', 'while', 'finally', 'var', 'new', 'function', 'do', 'return', 'void', 'else', 'break', 'catch', 'instanceof', 'with', 'throw', 'case', 'default', 'try', 'switch', 'continue', 'typeof', 'delete', 'let', 'yield', 'const', 'class', 'debugger', 'async', 'await', 'static', 'import', 'from', 'export', 'extends', 'using'],
     r = ['true', 'false', 'null', 'undefined', 'NaN', 'Infinity'],
     i = ['Object', 'Function', 'Boolean', 'Symbol', 'Math', 'Date', 'Number', 'BigInt', 'String', 'RegExp', 'Array', 'Float32Array', 'Float64Array', 'Int8Array', 'Uint8Array', 'Uint8ClampedArray', 'Int16Array', 'Int32Array', 'Uint16Array', 'Uint32Array', 'BigInt64Array', 'BigUint64Array', 'Set', 'Map', 'WeakSet', 'WeakMap', 'ArrayBuffer', 'SharedArrayBuffer', 'Atomics', 'DataView', 'JSON', 'Promise', 'Generator', 'GeneratorFunction', 'AsyncFunction', 'Reflect', 'Proxy', 'Intl', 'WebAssembly'],
-    a = ['Error', 'EvalError', 'InternalError', 'RangeError', 'ReferenceError', 'SyntaxError', 'TypeError', 'URIError'],
-    o = ['setInterval', 'setTimeout', 'clearInterval', 'clearTimeout', 'require', 'exports', 'eval', 'isFinite', 'isNaN', 'parseFloat', 'parseInt', 'decodeURI', 'decodeURIComponent', 'encodeURI', 'encodeURIComponent', 'escape', 'unescape'],
+    o = ['Error', 'EvalError', 'InternalError', 'RangeError', 'ReferenceError', 'SyntaxError', 'TypeError', 'URIError'],
+    a = ['setInterval', 'setTimeout', 'clearInterval', 'clearTimeout', 'require', 'exports', 'eval', 'isFinite', 'isNaN', 'parseFloat', 'parseInt', 'decodeURI', 'decodeURIComponent', 'encodeURI', 'encodeURIComponent', 'escape', 'unescape'],
     s = ['arguments', 'this', 'super', 'console', 'window', 'document', 'localStorage', 'sessionStorage', 'module', 'global'],
-    l = [].concat(o, i, a);
+    l = [].concat(a, i, o);
 e.exports = function (e) {
     let c = e.regex,
         u = (e, { after: t }) => {
@@ -24,8 +24,8 @@ e.exports = function (e) {
                 i = e.input[r];
             if ('<' === i || ',' === i) return void t.ignoreMatch();
             '>' !== i || u(e, { after: r }) || t.ignoreMatch();
-            let a = e.input.substring(r);
-            if ((n = a.match(/^\s*=/)) || ((n = a.match(/^\s+extends\s+/)) && 0 === n.index)) return void t.ignoreMatch();
+            let o = e.input.substring(r);
+            if ((n = o.match(/^\s*=/)) || ((n = o.match(/^\s+extends\s+/)) && 0 === n.index)) return void t.ignoreMatch();
         },
         E = {
             $pattern: t,
@@ -125,20 +125,20 @@ e.exports = function (e) {
                 e.C_LINE_COMMENT_MODE
             ]
         },
-        R = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, S, T, A, N, { match: /\$\d+/ }, v];
-    I.contains = R.concat({
+        P = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, S, T, A, N, { match: /\$\d+/ }, v];
+    I.contains = P.concat({
         begin: /\{/,
         end: /\}/,
         keywords: E,
-        contains: ['self'].concat(R)
+        contains: ['self'].concat(P)
     });
-    let P = [].concat(C, I.contains),
-        w = P.concat([
+    let R = [].concat(C, I.contains),
+        w = R.concat([
             {
                 begin: /(\s*)\(/,
                 end: /\)/,
                 keywords: E,
-                contains: ['self'].concat(P)
+                contains: ['self'].concat(R)
             }
         ]),
         D = {
@@ -175,16 +175,16 @@ e.exports = function (e) {
             match: c.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
             className: 'title.class',
             keywords: {
-                _: [...i, ...a]
+                _: [...i, ...o]
             }
         },
-        M = {
+        k = {
             label: 'use_strict',
             className: 'meta',
             relevance: 10,
             begin: /^\s*['"]use (strict|asm)['"]/
         },
-        k = {
+        M = {
             variants: [
                 {
                     match: [/function/, /\s+/, d, /(?=\s*\()/]
@@ -210,7 +210,7 @@ e.exports = function (e) {
         return c.concat('(?!', e.join('|'), ')');
     }
     let G = {
-            match: c.concat(/\b/, U([...o, 'super', 'import'].map((e) => `${e}\\s*\\(`)), d, c.lookahead(/\s*\(/)),
+            match: c.concat(/\b/, U([...a, 'super', 'import'].map((e) => `${e}\\s*\\(`)), d, c.lookahead(/\s*\(/)),
             className: 'title.function',
             relevance: 0
         },
@@ -222,7 +222,7 @@ e.exports = function (e) {
             className: 'property',
             relevance: 0
         },
-        V = {
+        F = {
             match: [/get|set/, /\s+/, d, /(?=\()/],
             className: {
                 1: 'keyword',
@@ -230,9 +230,9 @@ e.exports = function (e) {
             },
             contains: [{ begin: /\(\)/ }, D]
         },
-        F = '(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|' + e.UNDERSCORE_IDENT_RE + ')\\s*=>',
+        V = '(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|' + e.UNDERSCORE_IDENT_RE + ')\\s*=>',
         Z = {
-            match: [/const|var|let/, /\s+/, d, /\s*/, /=\s*/, /(async\s*)?/, c.lookahead(F)],
+            match: [/const|var|let/, /\s+/, d, /\s*/, /=\s*/, /(async\s*)?/, c.lookahead(V)],
             keywords: 'async',
             className: {
                 1: 'keyword',
@@ -255,7 +255,7 @@ e.exports = function (e) {
                 binary: 'node',
                 relevance: 5
             }),
-            M,
+            k,
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
             S,
@@ -281,7 +281,7 @@ e.exports = function (e) {
                     e.REGEXP_MODE,
                     {
                         className: 'function',
-                        begin: F,
+                        begin: V,
                         returnBegin: !0,
                         end: '\\s*=>',
                         contains: [
@@ -342,7 +342,7 @@ e.exports = function (e) {
                     }
                 ]
             },
-            k,
+            M,
             { beginKeywords: 'while if switch catch for' },
             {
                 begin: '\\b(?!function)' + e.UNDERSCORE_IDENT_RE + '\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{',
@@ -373,7 +373,7 @@ e.exports = function (e) {
             G,
             j,
             L,
-            V,
+            F,
             { match: /\$[(.]/ }
         ]
     };

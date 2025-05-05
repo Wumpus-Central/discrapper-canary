@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ }), n(388685);
 var r = n(147913),
     i = n(430824),
-    a = n(70956),
-    o = n(709054),
+    o = n(70956),
+    a = n(709054),
     s = n(553385),
     l = n(556178),
     c = n(890477);
@@ -31,11 +31,11 @@ class f extends r.Z {
                 this._attemptDeadchatPrompt(), this._triggerGamingStatsSetupExperiment();
             }),
             u(this, 'handleIdleChange', () => {
-                Date.now() - d > a.Z.Millis.HOUR && this._attemptDeadchatPrompt();
+                Date.now() - d > o.Z.Millis.HOUR && this._attemptDeadchatPrompt();
             }),
             u(this, '_attemptDeadchatPrompt', () => {
                 let e = i.Z.getGuilds(),
-                    t = o.default.keys(e).filter(
+                    t = a.default.keys(e).filter(
                         (e) =>
                             c.Z.getCurrentConfig({
                                 guildId: e,
@@ -46,7 +46,7 @@ class f extends r.Z {
             }),
             u(this, '_triggerGamingStatsSetupExperiment', () => {
                 let e = i.Z.getGuilds();
-                o.default.keys(e).forEach((e) => {
+                a.default.keys(e).forEach((e) => {
                     l.g.trackExposure({
                         guildId: e,
                         location: 'manager'

@@ -4,46 +4,46 @@ n.d(t, {
 });
 let r = Symbol.for('@ts-pattern/matcher'),
     i = Symbol.for('@ts-pattern/isVariadic'),
-    a = '@ts-pattern/anonymous-select-key',
-    o = (e) => !!(e && 'object' == typeof e),
+    o = '@ts-pattern/anonymous-select-key',
+    a = (e) => !!(e && 'object' == typeof e),
     s = (e) => e && !!e[r],
     l = (e, t, n) => {
         if (s(e)) {
-            let { matched: i, selections: a } = e[r]().match(t);
-            return i && a && Object.keys(a).forEach((e) => n(e, a[e])), i;
+            let { matched: i, selections: o } = e[r]().match(t);
+            return i && o && Object.keys(o).forEach((e) => n(e, o[e])), i;
         }
-        if (o(e)) {
-            if (!o(t)) return !1;
+        if (a(e)) {
+            if (!a(t)) return !1;
             if (Array.isArray(e)) {
                 if (!Array.isArray(t)) return !1;
                 let r = [],
-                    a = [],
-                    o = [];
+                    o = [],
+                    a = [];
                 for (let t of e.keys()) {
                     let n = e[t];
-                    s(n) && n[i] ? o.push(n) : o.length ? a.push(n) : r.push(n);
+                    s(n) && n[i] ? a.push(n) : a.length ? o.push(n) : r.push(n);
                 }
-                if (o.length) {
-                    if (o.length > 1) throw Error('Pattern error: Using `...P.array(...)` several times in a single pattern is not allowed.');
-                    if (t.length < r.length + a.length) return !1;
+                if (a.length) {
+                    if (a.length > 1) throw Error('Pattern error: Using `...P.array(...)` several times in a single pattern is not allowed.');
+                    if (t.length < r.length + o.length) return !1;
                     let e = t.slice(0, r.length),
-                        i = 0 === a.length ? [] : t.slice(-a.length),
-                        s = t.slice(r.length, 0 === a.length ? 1 / 0 : -a.length);
-                    return r.every((t, r) => l(t, e[r], n)) && a.every((e, t) => l(e, i[t], n)) && (0 === o.length || l(o[0], s, n));
+                        i = 0 === o.length ? [] : t.slice(-o.length),
+                        s = t.slice(r.length, 0 === o.length ? 1 / 0 : -o.length);
+                    return r.every((t, r) => l(t, e[r], n)) && o.every((e, t) => l(e, i[t], n)) && (0 === a.length || l(a[0], s, n));
                 }
                 return e.length === t.length && e.every((e, r) => l(e, t[r], n));
             }
             return Object.keys(e).every((i) => {
-                var a;
-                let o = e[i];
-                return (i in t || (s((a = o)) && 'optional' === a[r]().matcherType)) && l(o, t[i], n);
+                var o;
+                let a = e[i];
+                return (i in t || (s((o = a)) && 'optional' === o[r]().matcherType)) && l(a, t[i], n);
             });
         }
         return Object.is(t, e);
     },
     c = (e) => {
         var t, n, i;
-        return o(e) ? (s(e) ? (null != (t = null == (n = (i = e[r]()).getSelectionKeys) ? void 0 : n.call(i)) ? t : []) : Array.isArray(e) ? u(e, c) : u(Object.values(e), c)) : [];
+        return a(e) ? (s(e) ? (null != (t = null == (n = (i = e[r]()).getSelectionKeys) ? void 0 : n.call(i)) ? t : []) : Array.isArray(e) ? u(e, c) : u(Object.values(e), c)) : [];
     },
     u = (e, t) => e.reduce((e, n) => e.concat(t(n)), []);
 function d(...e) {
@@ -159,7 +159,7 @@ function y(...e) {
     return f({
         [r]: () => ({
             match: (e) => {
-                let r = { [null != t ? t : a]: e };
+                let r = { [null != t ? t : o]: e };
                 return {
                     matched:
                         void 0 === n ||
@@ -169,7 +169,7 @@ function y(...e) {
                     selections: r
                 };
             },
-            getSelectionKeys: () => [null != t ? t : a].concat(void 0 === n ? [] : c(n))
+            getSelectionKeys: () => [null != t ? t : o].concat(void 0 === n ? [] : c(n))
         })
     });
 }
@@ -217,31 +217,31 @@ let S = f(
         }),
     N = A(b(v)),
     C = (e, t) => b((n) => O(n) && e <= n && t >= n),
-    R = (e) => b((t) => O(t) && t < e),
-    P = (e) => b((t) => O(t) && t > e),
+    P = (e) => b((t) => O(t) && t < e),
+    R = (e) => b((t) => O(t) && t > e),
     w = (e) => b((t) => O(t) && t <= e),
     D = (e) => b((t) => O(t) && t >= e),
     L = () => b((e) => O(e) && Number.isInteger(e)),
     x = () => b((e) => O(e) && Number.isFinite(e)),
-    M = () => b((e) => O(e) && e > 0),
-    k = () => b((e) => O(e) && e < 0),
+    k = () => b((e) => O(e) && e > 0),
+    M = () => b((e) => O(e) && e < 0),
     j = (e) =>
         Object.assign(f(e), {
             between: (t, n) => j(g(e, C(t, n))),
-            lt: (t) => j(g(e, R(t))),
-            gt: (t) => j(g(e, P(t))),
+            lt: (t) => j(g(e, P(t))),
+            gt: (t) => j(g(e, R(t))),
             lte: (t) => j(g(e, w(t))),
             gte: (t) => j(g(e, D(t))),
             int: () => j(g(e, L())),
             finite: () => j(g(e, x())),
-            positive: () => j(g(e, M())),
-            negative: () => j(g(e, k()))
+            positive: () => j(g(e, k())),
+            negative: () => j(g(e, M()))
         }),
     U = j(b(O)),
     G = (e, t) => b((n) => I(n) && e <= n && t >= n),
     B = (e) => b((t) => I(t) && t < e),
-    V = (e) => b((t) => I(t) && t > e),
-    F = (e) => b((t) => I(t) && t <= e),
+    F = (e) => b((t) => I(t) && t > e),
+    V = (e) => b((t) => I(t) && t <= e),
     Z = (e) => b((t) => I(t) && t >= e),
     H = () => b((e) => I(e) && e > 0),
     Y = () => b((e) => I(e) && e < 0),
@@ -249,8 +249,8 @@ let S = f(
         Object.assign(f(e), {
             between: (t, n) => W(g(e, G(t, n))),
             lt: (t) => W(g(e, B(t))),
-            gt: (t) => W(g(e, V(t))),
-            lte: (t) => W(g(e, F(t))),
+            gt: (t) => W(g(e, F(t))),
+            lte: (t) => W(g(e, V(t))),
             gte: (t) => W(g(e, Z(t))),
             positive: () => W(g(e, H())),
             negative: () => W(g(e, Y()))
@@ -347,11 +347,11 @@ var X = {
                     };
                     if (0 === e.length) return { matched: !0 };
                     if (1 === e.length) throw Error(`\`P.map\` wasn't given enough arguments. Expected (key, value), received ${null == (n = e[0]) ? void 0 : n.toString()}`);
-                    let [a, o] = e;
+                    let [o, a] = e;
                     return {
                         matched: m(t, (e, t) => {
-                            let n = l(a, t, i),
-                                r = l(o, e, i);
+                            let n = l(o, t, i),
+                                r = l(a, e, i);
                             return n && r;
                         }),
                         selections: r
@@ -380,19 +380,19 @@ var X = {
     _: T,
     string: N,
     between: C,
-    lt: R,
-    gt: P,
+    lt: P,
+    gt: R,
     lte: w,
     gte: D,
     int: L,
     finite: x,
-    positive: M,
-    negative: k,
+    positive: k,
+    negative: M,
     number: U,
     betweenBigInt: G,
     ltBigInt: B,
-    gtBigInt: V,
-    lteBigInt: F,
+    gtBigInt: F,
+    lteBigInt: V,
     gteBigInt: Z,
     positiveBigInt: H,
     negativeBigInt: Y,
@@ -431,15 +431,15 @@ class ee {
             r = [e[0]];
         3 === e.length && 'function' == typeof e[1] ? (r.push(e[0]), (t = e[1])) : e.length > 2 && r.push(...e.slice(1, e.length - 1));
         let i = !1,
-            o = {},
+            a = {},
             s = (e, t) => {
-                (i = !0), (o[e] = t);
+                (i = !0), (a[e] = t);
             },
             c =
                 r.some((e) => l(e, this.input, s)) && (!t || t(this.input))
                     ? {
                           matched: !0,
-                          value: n(i ? (a in o ? o[a] : o) : this.input, this.input)
+                          value: n(i ? (o in a ? a[o] : a) : this.input, this.input)
                       }
                     : J;
         return new ee(this.input, c);

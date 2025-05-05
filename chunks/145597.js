@@ -23,8 +23,8 @@ n.r(t),
     n(388685),
     n(35282);
 var i = n(490029),
-    a = n(358085),
-    o = n(981631);
+    o = n(358085),
+    a = n(981631);
 let s = 2,
     l = {
         width: 3840,
@@ -55,14 +55,14 @@ function g() {
 }
 function E(e) {
     (0, i.lW)({
-        type: o.BmY.LOG_MESSAGES,
+        type: a.BmY.LOG_MESSAGES,
         pid: p(),
         token: g(),
         payload: e
     });
 }
 function b(e) {
-    return !a.isPlatformEmbedded || (e.width >= c.width && e.height >= c.height);
+    return !o.isPlatformEmbedded || (e.width >= c.width && e.height >= c.height);
 }
 function y(e) {
     _ = e;

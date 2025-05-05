@@ -1,11 +1,11 @@
 n.d(t, {
-    Y: () => a,
+    Y: () => o,
     a: () => i
 });
 let r = !1;
 function i() {
     return r;
 }
-function a(e) {
+function o(e) {
     r = e;
 }

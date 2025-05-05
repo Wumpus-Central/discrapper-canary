@@ -1,7 +1,7 @@
 var r = n(98405),
     i = n(154028),
-    a = n(10693),
-    o = n(621523),
+    o = n(10693),
+    a = n(621523),
     s = n(713411),
     l = n(530575),
     c = n(117895).f,
@@ -24,7 +24,7 @@ var r = n(98405),
         i(v) ||
         (function () {
             try {
-                new (i('MessageChannel') || a('worker_threads').MessageChannel)().port1.postMessage(new WeakMap());
+                new (i('MessageChannel') || o('worker_threads').MessageChannel)().port1.postMessage(new WeakMap());
             } catch (e) {
                 if (e.name === I && 25 === e.code) return e.constructor;
             }
@@ -32,8 +32,8 @@ var r = n(98405),
     A = T && T.prototype,
     N = S.prototype,
     C = b.set,
-    R = b.getterFor(v),
-    P = 'stack' in new S(v),
+    P = b.getterFor(v),
+    R = 'stack' in new S(v),
     w = function (e) {
         return f(g, e) && g[e].m ? g[e].c : 0;
     },
@@ -51,7 +51,7 @@ var r = n(98405),
                 code: r
             }),
             y || ((this.name = n), (this.message = t), (this.code = r)),
-            P)
+            R)
         ) {
             var i = new S(t);
             (i.name = v), c(this, 'stack', l(1, E(i.stack, 1)));
@@ -65,27 +65,27 @@ var r = n(98405),
             get: e
         };
     },
-    M = function (e) {
+    k = function (e) {
         return x(function () {
-            return R(this)[e];
+            return P(this)[e];
         });
     };
-y && (d(L, 'code', M('code')), d(L, 'message', M('message')), d(L, 'name', M('name'))), c(L, 'constructor', l(1, D));
-var k = o(function () {
+y && (d(L, 'code', k('code')), d(L, 'message', k('message')), d(L, 'name', k('name'))), c(L, 'constructor', l(1, D));
+var M = a(function () {
         return !(new T() instanceof S);
     }),
     j =
-        k ||
-        o(function () {
+        M ||
+        a(function () {
             return N.toString !== h || '2: 1' !== String(new T(1, 2));
         }),
     U =
-        k ||
-        o(function () {
+        M ||
+        a(function () {
             return 25 !== new T(1, 'DataCloneError').code;
         }),
-    G = k || 25 !== T[I] || 25 !== A[I],
-    B = O ? j || U || G : k;
+    G = M || 25 !== T[I] || 25 !== A[I],
+    B = O ? j || U || G : M;
 r(
     {
         global: !0,
@@ -94,14 +94,14 @@ r(
     },
     { DOMException: B ? D : T }
 );
-var V = i(v),
-    F = V.prototype;
-for (var Z in (j && (O || T === V) && u(F, 'toString', h),
+var F = i(v),
+    V = F.prototype;
+for (var Z in (j && (O || T === F) && u(V, 'toString', h),
 U &&
     y &&
-    T === V &&
+    T === F &&
     d(
-        F,
+        V,
         'code',
         x(function () {
             return w(p(this).name);
@@ -112,5 +112,5 @@ g))
         var H = g[Z],
             Y = H.s,
             W = l(6, H.c);
-        f(V, Y) || c(V, Y, W), f(F, Y) || c(F, Y, W);
+        f(F, Y) || c(F, Y, W), f(V, Y) || c(V, Y, W);
     }

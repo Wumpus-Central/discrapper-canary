@@ -1,8 +1,8 @@
 a.d(e, {
     GK: () => O,
-    Iw: () => y,
+    Iw: () => m,
     V0: () => D,
-    _d: () => m,
+    _d: () => y,
     qp: () => g,
     yn: () => P
 });
@@ -19,8 +19,8 @@ var r = a(370541),
     I = a(99342),
     R = a(696486),
     d = a(305625),
-    A = a(966497),
-    f = a(787659),
+    f = a(966497),
+    A = a(787659),
     p = a(789112),
     N = a(275689),
     T = a(793373),
@@ -32,7 +32,7 @@ function O(t, e) {
     let r = C(t),
         { forceTransaction: n, parentSpan: _ } = t;
     return (0, i.$e)(t.scope, () =>
-        M(_)(() => {
+        G(_)(() => {
             let a = (0, i.nZ)(),
                 _ = b(a),
                 o =
@@ -69,7 +69,7 @@ function D(t, e) {
     let r = C(t),
         { forceTransaction: n, parentSpan: _ } = t;
     return (0, i.$e)(t.scope, () =>
-        M(_)(() => {
+        G(_)(() => {
             let a = (0, i.nZ)(),
                 _ = b(a),
                 o =
@@ -107,7 +107,7 @@ function g(t) {
     if (e.startInactiveSpan) return e.startInactiveSpan(t);
     let a = C(t),
         { forceTransaction: r, parentSpan: n } = t;
-    return (t.scope ? (e) => (0, i.$e)(t.scope, e) : void 0 !== n ? (t) => m(n, t) : (t) => t())(() => {
+    return (t.scope ? (e) => (0, i.$e)(t.scope, e) : void 0 !== n ? (t) => y(n, t) : (t) => t())(() => {
         let e = (0, i.nZ)(),
             n = b(e);
         return t.onlyIfParent && !n
@@ -125,12 +125,12 @@ let P = ({ sentryTrace: t, baggage: e }, a) =>
         let _ = (0, r.pT)(t, e);
         return n.setPropagationContext(_), a();
     });
-function m(t, e) {
+function y(t, e) {
     let a = S();
     return a.withActiveSpan ? a.withActiveSpan(t, e) : (0, i.$e)((a) => ((0, I.D)(a, t || void 0), e(a)));
 }
-function y(t) {
-    return (0, i.$e)((e) => (e.setPropagationContext((0, n.Q)()), s.X && _.kg.info(`Starting a new trace with id ${e.getPropagationContext().traceId}`), m(null, t)));
+function m(t) {
+    return (0, i.$e)((e) => (e.setPropagationContext((0, n.Q)()), s.X && _.kg.info(`Starting a new trace with id ${e.getPropagationContext().traceId}`), y(null, t)));
 }
 function v({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
     let n;
@@ -157,7 +157,7 @@ function v({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
         let a = (0, d.jC)(t),
             { traceId: _, spanId: o } = t.spanContext(),
             i = (0, R.Tt)(t);
-        (n = G(
+        (n = U(
             {
                 traceId: _,
                 parentSpanId: o,
@@ -177,7 +177,7 @@ function v({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
             ..._.getPropagationContext(),
             ...r.getPropagationContext()
         };
-        (n = G(
+        (n = U(
             {
                 traceId: t,
                 parentSpanId: o,
@@ -188,7 +188,7 @@ function v({ parentSpan: t, spanArguments: e, forceTransaction: a, scope: r }) {
         )),
             a && (0, d.Lh)(n, a);
     }
-    return (0, A.Z)(n), (0, L.YJ)(n, r, _), n;
+    return (0, f.Z)(n), (0, L.YJ)(n, r, _), n;
 }
 function C(t) {
     let e = {
@@ -205,13 +205,13 @@ function S() {
     let t = (0, o.c)();
     return (0, c.G)(t);
 }
-function G(t, e, a) {
+function U(t, e, a) {
     let r = (0, i.s3)(),
         n = (r && r.getOptions()) || {},
         { name: _ = '', attributes: o } = t,
         [c, s] = e.getScopeData().sdkProcessingMetadata[h]
             ? [!1]
-            : (0, f.R)(n, {
+            : (0, A.R)(n, {
                   name: _,
                   parentSampled: a,
                   attributes: o,
@@ -236,6 +236,6 @@ function b(t) {
     let a = (0, i.s3)();
     return (a ? a.getOptions() : {}).parentSpanIsAlwaysRootSpan ? (0, R.Gx)(e) : e;
 }
-function M(t) {
-    return void 0 !== t ? (e) => m(t, e) : (t) => t();
+function G(t) {
+    return void 0 !== t ? (e) => y(t, e) : (t) => t();
 }

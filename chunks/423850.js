@@ -1,5 +1,5 @@
 a.d(e, {
-    D: () => f,
+    D: () => A,
     N: () => d
 });
 var r = a(263449),
@@ -20,11 +20,11 @@ function d() {
             let e,
                 a = (0, r.s3)();
             if (!a || void 0 == t.value) return;
-            let l = t.entries.find((e) => e.duration === t.value && A[e.name]);
+            let l = t.entries.find((e) => e.duration === t.value && f[e.name]);
             if (!l) return;
             let { interactionId: I } = l,
-                d = A[l.name],
-                f = a.getOptions(),
+                d = f[l.name],
+                A = a.getOptions(),
                 p = (0, u.XL)(i.Z1 + l.startTime),
                 N = (0, u.XL)(t.value),
                 T = (0, r.nZ)(),
@@ -34,21 +34,21 @@ function d() {
                 D = O ? (0, n.XU)(O).description : T.getScopeData().transactionName,
                 g = T.getUser(),
                 P = a.getIntegrationByName('Replay'),
-                m = P && P.getReplayId(),
-                y = void 0 !== g ? g.email || g.id || g.ip_address : void 0;
+                y = P && P.getReplayId(),
+                m = void 0 !== g ? g.email || g.id || g.ip_address : void 0;
             try {
                 e = T.getScopeData().contexts.profile.profile_id;
             } catch (t) {}
             let v = (0, c.Rt)(l.target),
                 C = (0, s.Jr)({
-                    release: f.release,
-                    environment: f.environment,
+                    release: A.release,
+                    environment: A.environment,
                     transaction: D,
                     [_.JQ]: t.value,
                     [_.S3]: 'auto.http.browser.inp',
-                    user: y || void 0,
+                    user: m || void 0,
                     profile_id: e || void 0,
-                    replay_id: m || void 0,
+                    replay_id: y || void 0,
                     'user_agent.original': E.m.navigator && E.m.navigator.userAgent
                 }),
                 S = (0, o.qp)({
@@ -70,7 +70,7 @@ function d() {
     }
     return () => void 0;
 }
-let A = {
+let f = {
     click: 'click',
     pointerdown: 'click',
     pointerup: 'click',
@@ -98,7 +98,7 @@ let A = {
     keypress: 'press',
     input: 'press'
 };
-function f(t) {
+function A(t) {
     let e = ({ entries: t }) => {
         let e = (0, n.HN)(),
             a = e && (0, n.Gx)(e);

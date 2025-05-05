@@ -5,7 +5,7 @@ a.d(e, {
     YF: () => O,
     _4: () => h,
     _j: () => D,
-    cN: () => M,
+    cN: () => G,
     to: () => L
 });
 var c = a(622916),
@@ -16,17 +16,17 @@ var c = a(622916),
     I = a(231550),
     R = a(428983),
     d = a(622574),
-    A = a(288570);
-let f = {},
+    f = a(288570);
+let A = {},
     p = {};
 function N(t, e = !1) {
     return S('cls', t, P, r, e);
 }
 function T(t, e = !1) {
-    return S('lcp', t, y, _, e);
+    return S('lcp', t, m, _, e);
 }
 function L(t) {
-    return S('fid', t, m, n);
+    return S('fid', t, y, n);
 }
 function h(t) {
     return S('ttfb', t, v, o);
@@ -36,7 +36,7 @@ function O(t) {
 }
 function D(t, e) {
     return (
-        G(t, e),
+        U(t, e),
         p[t] ||
             ((function (t) {
                 let e = {};
@@ -54,7 +54,7 @@ function D(t, e) {
     );
 }
 function g(t, e) {
-    let a = f[t];
+    let a = A[t];
     if (a && a.length)
         for (let r of a)
             try {
@@ -78,12 +78,12 @@ function P() {
         { reportAllChanges: !0 }
     );
 }
-function m() {
+function y() {
     return (0, u.F)((t) => {
         g('fid', { metric: t }), (n = t);
     });
 }
-function y() {
+function m() {
     return (0, R.N)(
         (t) => {
             g('lcp', { metric: t }), (_ = t);
@@ -92,7 +92,7 @@ function y() {
     );
 }
 function v() {
-    return (0, A.m)((t) => {
+    return (0, f.m)((t) => {
         g('ttfb', { metric: t }), (o = t);
     });
 }
@@ -103,20 +103,20 @@ function C() {
 }
 function S(t, e, a, r, n = !1) {
     let _;
-    return G(t, e), p[t] || ((_ = a()), (p[t] = !0)), r && e({ metric: r }), b(t, e, n ? _ : void 0);
+    return U(t, e), p[t] || ((_ = a()), (p[t] = !0)), r && e({ metric: r }), b(t, e, n ? _ : void 0);
 }
-function G(t, e) {
-    (f[t] = f[t] || []), f[t].push(e);
+function U(t, e) {
+    (A[t] = A[t] || []), A[t].push(e);
 }
 function b(t, e, a) {
     return () => {
         a && a();
-        let r = f[t];
+        let r = A[t];
         if (!r) return;
         let n = r.indexOf(e);
         -1 !== n && r.splice(n, 1);
     };
 }
-function M(t) {
+function G(t) {
     return 'duration' in t;
 }

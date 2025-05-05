@@ -1,8 +1,8 @@
-n.d(t, { Z: () => M }), n(388685);
+n.d(t, { Z: () => k }), n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(442837),
-    o = n(704215),
+    o = n(442837),
+    a = n(704215),
     s = n(996146),
     l = n(481060),
     c = n(100527),
@@ -52,7 +52,7 @@ function C(e) {
     }
     return e;
 }
-function R(e, t) {
+function P(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -64,12 +64,12 @@ function R(e, t) {
     }
     return n;
 }
-function P(e, t) {
+function R(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : R(Object(t)).forEach(function (n) {
+            : P(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -94,19 +94,19 @@ function w(e) {
 }
 function D(e) {
     let { Component: t, events: n, play: i } = (0, s.$)(),
-        a = () => {
+        o = () => {
             var t;
             i(), null == (t = e.onClick) || t.call(e);
         };
     return (0, r.jsx)(
         O.Z,
-        P(
+        R(
             C(
                 {
                     innerClassName: A.button,
                     'aria-label': S.intl.string(S.t.Z1RnTk),
                     isActive: !1,
-                    onClick: a
+                    onClick: o
                 },
                 n
             ),
@@ -144,21 +144,21 @@ function x(e) {
     let { giftingPromotionConfig: n, disabled: s, channel: E } = e,
         { analyticsLocations: O } = (0, u.ZP)(c.Z.GIFT_BUTTON),
         [S, A] = i.useState(!1),
-        N = (0, a.e7)([m.Z], () => !(null === m.Z || void 0 === m.Z ? void 0 : m.Z.hasLayers())),
-        C = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
-        R = null != C ? b.default.age(C.id) : 0,
-        { giftBoxAnimation: P, trinketsAnimation: x } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
-        M = (0, p.u)(),
-        k = void 0 !== M && !s && N && R >= L,
-        [j, U] = (0, f.XR)(k ? o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, (0, d.t)(o.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK)),
+        N = (0, o.e7)([m.Z], () => !(null === m.Z || void 0 === m.Z ? void 0 : m.Z.hasLayers())),
+        C = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
+        P = null != C ? b.default.age(C.id) : 0,
+        { giftBoxAnimation: R, trinketsAnimation: x } = null != (t = null == n ? void 0 : n.chatGiftIcon) ? t : {},
+        k = (0, p.u)(),
+        M = void 0 !== k && !s && N && P >= L,
+        [j, U] = (0, f.XR)(M ? a.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, (0, d.t)(a.z.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK)),
         G = null != j,
         B = S || G,
-        V = (0, y.Ft)(E);
+        F = (0, y.Ft)(E);
     if (s) return null;
-    let F = () => {
+    let V = () => {
             (0, _.Z)({
                 isGift: !0,
-                giftRecipient: null == V ? void 0 : V,
+                giftRecipient: null == F ? void 0 : F,
                 initialPlanId: null,
                 analyticsLocations: O,
                 analyticsObject: {
@@ -170,12 +170,12 @@ function x(e) {
             });
         },
         Z = () => {
-            A(!1), U(I.L.TAKE_ACTION), F();
+            A(!1), U(I.L.TAKE_ACTION), V();
         },
         H =
-            void 0 !== P
+            void 0 !== R
                 ? (0, r.jsx)(w, {
-                      config: P,
+                      config: R,
                       hovered: B,
                       onClick: Z
                   })
@@ -195,15 +195,15 @@ function x(e) {
             A(!1);
         },
         children:
-            void 0 !== M && G
+            void 0 !== k && G
                 ? (0, r.jsx)(h.Z, {
                       onComplete: () => A(!1),
-                      onCheckItOutClick: F,
+                      onCheckItOutClick: V,
                       markAsDismissed: U,
-                      config: M,
+                      config: k,
                       children: H
                   })
                 : H
     });
 }
-let M = i.memo(x);
+let k = i.memo(x);

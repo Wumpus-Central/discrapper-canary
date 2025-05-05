@@ -1,6 +1,6 @@
 n.d(t, {
     FB: () => _,
-    Pu: () => x,
+    Pu: () => y,
     Vt: () => f,
     XX: () => d,
     Zs: () => b,
@@ -55,7 +55,7 @@ function _(e) {
     return null != e && null != e.guild_metadata;
 }
 let b = (e) => (e === s.evJ.DSA_APPEAL_REQUEST_DEFLECTION ? u.intl.string(u.t['0qyXXF']) : u.intl.string(u.t.aPmsx8));
-function x(e) {
+function y(e) {
     let t = e.max_expiration_time;
     if (null == t) return null;
     try {

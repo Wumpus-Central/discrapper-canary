@@ -1,8 +1,8 @@
 n.d(t, { Z: () => N });
 var r = n(255367),
     i = n(73800),
-    a = n(873546),
-    o = n(442837),
+    o = n(873546),
+    a = n(442837),
     s = n(239091),
     l = n(100527),
     c = n(906732),
@@ -71,7 +71,7 @@ function T(e, t) {
     );
 }
 function A(e) {
-    let { userId: t, className: a, children: o } = e,
+    let { userId: t, className: o, children: a } = e,
         l = i.useCallback(() => {
             (0, d.k)({ kind: 'user' });
         }, []),
@@ -86,20 +86,20 @@ function A(e) {
             [t]
         );
     return (0, r.jsx)(f.Z, {
-        className: a,
+        className: o,
         onClick: l,
         onContextMenu: c,
-        children: o
+        children: a
     });
 }
 function N(e) {
     let { className: t, userId: i, channelId: d, parsedUserId: v, content: S, inlinePreview: N = !1, viewingChannelId: C } = e,
-        { analyticsLocations: R } = (0, c.ZP)(l.Z.USER_MENTION),
-        P = (0, o.e7)([E.default], () => E.default.getUser(i)),
-        w = (0, o.e7)([p.Z], () => p.Z.getChannel(d)),
+        { analyticsLocations: P } = (0, c.ZP)(l.Z.USER_MENTION),
+        R = (0, a.e7)([E.default], () => E.default.getUser(i)),
+        w = (0, a.e7)([p.Z], () => p.Z.getChannel(d)),
         D = null != w ? w.getGuildId() : null,
         L =
-            N || null == P || null == D || null == d
+            N || null == R || null == D || null == d
                 ? void 0
                 : (e) => {
                       null != w &&
@@ -110,18 +110,18 @@ function N(e) {
                                       e,
                                       T(I({}, t), {
                                           viewingChannelId: C,
-                                          user: P,
+                                          user: R,
                                           channel: w,
                                           guildId: D
                                       })
                                   );
                           });
                   },
-        x = y.ZP.useName(P),
-        M = (0, o.e7)([p.Z, h.ZP, g.Z], () => b.ZP.getNickname(D, d, P)),
-        k = m.Z.getGuild(D),
-        j = (0, u.Ib)(k, w) && i === O.fL ? O.jM : null;
-    if (null == P)
+        x = y.ZP.useName(R),
+        k = (0, a.e7)([p.Z, h.ZP, g.Z], () => b.ZP.getNickname(D, d, R)),
+        M = m.Z.getGuild(D),
+        j = (0, u.Ib)(M, w) && i === O.fL ? O.jM : null;
+    if (null == R)
         return (0, r.jsx)(A, {
             userId: v,
             className: t,
@@ -139,21 +139,21 @@ function N(e) {
                     },
                     e
                 ),
-                { children: '@'.concat(null != M ? M : x) }
+                { children: '@'.concat(null != k ? k : x) }
             )
         );
     return N
         ? (0, r.jsx)(c.Gt, {
-              value: R,
+              value: P,
               children: U()
           })
         : (0, r.jsx)(c.Gt, {
-              value: R,
+              value: P,
               children: (0, r.jsx)(_.Z, {
-                  user: P,
+                  user: R,
                   guildId: null != D ? D : void 0,
                   channelId: d,
-                  position: a.tq ? 'top' : 'right',
+                  position: o.tq ? 'top' : 'right',
                   clickTrap: !0,
                   children: (e) => U(e)
               })

@@ -17,9 +17,9 @@ var i = n(120356),
 function _(e) {
     var t;
     let { message: n, compact: i, usernameHook: _, channel: b } = e,
-        x = (0, a.e7)([c.Z], () => c.Z.getGuild(b.guild_id)),
-        y = (0, u.ZP)(n),
-        E = _(y),
+        y = (0, a.e7)([c.Z], () => c.Z.getGuild(b.guild_id)),
+        x = (0, u.ZP)(n),
+        E = _(x),
         {
             avatarSrc: v,
             eventHandlers: { onMouseEnter: O, onMouseLeave: j }
@@ -61,9 +61,9 @@ function _(e) {
                     (0, r.jsx)('div', {
                         className: l()(g.__invalid_messageContent, { [g.compact]: i }),
                         children: h.intl.format(h.t.W0UBIy, {
-                            username: y.nick,
+                            username: x.nick,
                             usernameHook: E,
-                            guildName: null != (t = null == x ? void 0 : x.name) ? t : ''
+                            guildName: null != (t = null == y ? void 0 : y.name) ? t : ''
                         })
                     })
                 ]
