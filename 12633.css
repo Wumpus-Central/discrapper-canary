@@ -1629,8 +1629,11 @@ html.decorate-links .lowSaturationUnderline__41f68 {
 
 .svg_cc5dd2 {
     contain: paint;
+    position: absolute
+}
+
+.shiftSVG_cc5dd2 {
     left: -4px;
-    position: absolute;
     top: -4px
 }
 
