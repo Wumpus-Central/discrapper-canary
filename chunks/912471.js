@@ -1,4 +1,4 @@
-n.d(t, { D: () => j }), n(415506);
+n.d(t, { D: () => A }), n(415506);
 var r = n(903772),
     i = n(433517),
     l = n(570140),
@@ -6,112 +6,160 @@ var r = n(903772),
     o = n(581567),
     s = n(594190),
     c = n(709706),
-    u = n(19780),
-    d = n(626135),
-    p = n(70956),
-    h = n(848479),
-    f = n(960048),
-    g = n(844889),
-    m = n(686325),
-    b = n(981631);
-let _ = 'LATEST_HEARTBEAST_EVENT_TIMESTAMP',
-    E = 'user',
-    O = null,
+    u = n(517100),
+    d = n(19780),
+    p = n(626135),
+    h = n(70956),
+    f = n(848479),
+    g = n(960048),
+    m = n(844889),
+    b = n(686325),
+    _ = n(981631);
+let E = 'LATEST_HEARTBEAST_EVENT_TIMESTAMP',
+    O = 'user',
     y = null,
-    I = !1;
-async function v() {
-    if (I) return;
-    (I = !0), (0, g.fr)(!0);
-    let e = await i.K.getAfterRefresh(_).then(m.Hg);
-    if (!I) return;
+    I = null,
+    v = !1;
+async function C() {
+    if (v) return;
+    (v = !0), (0, m.fr)(!0);
+    let e = await i.K.getAfterRefresh(E).then(b.Hg);
+    if (!v) return;
     let t = Date.now(),
-        n = 15 * p.Z.Millis.MINUTE + e - t;
-    n > p.Z.Millis.HOUR && f.Z.addBreadcrumb({ message: 'Received invalid Date.now() when generating a heartbeat. Date.now() = '.concat(t, ', timeUntilNextHeartbeat = ').concat(n, ', latestHeartbeatEventTimestamp = ').concat(e) }),
+        n = 15 * h.Z.Millis.MINUTE + e - t;
+    n > h.Z.Millis.HOUR && g.Z.addBreadcrumb({ message: 'Received invalid Date.now() when generating a heartbeat. Date.now() = '.concat(t, ', timeUntilNextHeartbeat = ').concat(n, ', latestHeartbeatEventTimestamp = ').concat(e) }),
         e > t && (n = 0),
-        f.Z.addBreadcrumb({ message: 'Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: '.concat(n / 1000, ' seconds. Scheduling Heartbeat') }),
-        C(),
-        (y = setTimeout(
+        g.Z.addBreadcrumb({ message: 'Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: '.concat(n / 1000, ' seconds. Scheduling Heartbeat') }),
+        S(),
+        (I = setTimeout(
             () => {
-                S(),
-                    (O = setInterval(() => {
-                        S();
-                    }, 15 * p.Z.Millis.MINUTE));
+                N(),
+                    (y = setInterval(() => {
+                        N();
+                    }, 15 * h.Z.Millis.MINUTE));
             },
             Math.max(n, 0)
         ));
 }
-function C() {
-    null != y && (clearTimeout(y), (y = null)), null != O && (clearInterval(O), (O = null));
+function S() {
+    null != I && (clearTimeout(I), (I = null)), null != y && (clearInterval(y), (y = null));
 }
-async function S() {
+async function N() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = Date.now(),
-        n = await (0, g.Gg)(),
+        n = await (0, m.Gg)(),
         l = Date.now();
-    if (null == n) return void f.Z.captureException(Error('Null session when tracking session heartbeat. Waited '.concat(l - t, 'ms')));
-    if (!I && !e) {
-        f.Z.captureException(Error('Heartbeat scheduler not started when tracking session heartbeat.')), C();
+    if (null == n) return void g.Z.captureException(Error('Null session when tracking session heartbeat. Waited '.concat(l - t, 'ms')));
+    if (!v && !e) {
+        g.Z.captureException(Error('Heartbeat scheduler not started when tracking session heartbeat.')), S();
         return;
     }
-    f.Z.addBreadcrumb({
-        category: E,
+    g.Z.addBreadcrumb({
+        category: O,
         message: 'Tracking Heartbeat',
         data: { initialized: n.initialized }
     });
-    let u = {
-        client_heartbeat_initialization_timestamp: n.initialized,
-        client_heartbeat_version: 19
-    };
-    {
-        let e = h.Z.getMemoryUsageElectronRenderer();
-        null != e && (u.client_heartbeat_renderer_memory = e);
-        let t = h.Z.getMemoryUsageElectronRendererUsedHeapSize();
-        null != t && (u.client_heartbeat_renderer_memory_used_heap = t);
-        let n = h.Z.getMemoryUsageElectronProcessTypeDetails();
-        if (null != n) {
-            var p, m, O, y, v, S, N, T, P, j, A, Z, x, w, L, R, D, k, M, U, G, V, B, H;
-            (u.electron_process_memory_private = [null != (x = null == (p = n.unknown) ? void 0 : p.wss_priv_kb) ? x : -1, null != (w = null == (m = n.main) ? void 0 : m.wss_priv_kb) ? w : -1, null != (L = null == (O = n.renderer) ? void 0 : O.wss_priv_kb) ? L : -1, null != (R = null == (y = n.gpu) ? void 0 : y.wss_priv_kb) ? R : -1, null != (D = null == (v = n.crashpad) ? void 0 : v.wss_priv_kb) ? D : -1, null != (k = null == (S = n.utility) ? void 0 : S.wss_priv_kb) ? k : -1]), (u.electron_process_memory_private_and_shared = [null != (M = null == (N = n.unknown) ? void 0 : N.wss_kb) ? M : -1, null != (U = null == (T = n.main) ? void 0 : T.wss_kb) ? U : -1, null != (G = null == (P = n.renderer) ? void 0 : P.wss_kb) ? G : -1, null != (V = null == (j = n.gpu) ? void 0 : j.wss_kb) ? V : -1, null != (B = null == (A = n.crashpad) ? void 0 : A.wss_kb) ? B : -1, null != (H = null == (Z = n.utility) ? void 0 : Z.wss_kb) ? H : -1]);
+    let d = (function (e) {
+        for (var t = 1; t < arguments.length; t++) {
+            var n = null != arguments[t] ? arguments[t] : {},
+                r = Object.keys(n);
+            'function' == typeof Object.getOwnPropertySymbols &&
+                (r = r.concat(
+                    Object.getOwnPropertySymbols(n).filter(function (e) {
+                        return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                    })
+                )),
+                r.forEach(function (t) {
+                    var r;
+                    (r = n[t]),
+                        t in e
+                            ? Object.defineProperty(e, t, {
+                                  value: r,
+                                  enumerable: !0,
+                                  configurable: !0,
+                                  writable: !0
+                              })
+                            : (e[t] = r);
+                });
         }
-        let i = s.ZP.getCurrentGameForAnalytics();
-        null != i && ((u.client_heartbeat_current_game_id = i.id), (u.client_heartbeat_current_game_name = i.name), (u.client_heartbeat_current_game_executable = (0, o.N6)(i.exePath)), (u.client_heartbeat_current_game_distributor = i.distributor), (u.uses_client_mods = (0, r.e)())), c.Z.isNativeModuleLoaded() && (u.voice_filters_native_module_loaded = !0);
-    }
-    d.default.track(b.rMx.CLIENT_HEARTBEAT, u), i.K.set(_, Date.now().toString()), (0, a.Z)();
+        return e;
+    })(
+        {
+            client_heartbeat_initialization_timestamp: n.initialized,
+            client_heartbeat_version: 20
+        },
+        (function () {
+            let e = {};
+            {
+                let N = f.Z.getMemoryUsageElectronRenderer();
+                null != N && (e.client_heartbeat_renderer_memory = N);
+                let T = f.Z.getMemoryUsageElectronRendererUsedHeapSize();
+                null != T && (e.client_heartbeat_renderer_memory_used_heap = T);
+                let P = f.Z.getMemoryUsageElectronProcessTypeDetails();
+                if (null != P) {
+                    var t, n, r, i, l, a, o, s, c, u, d, p, h, g, m, b, _, E, O, y, I, v, C, S;
+                    (e.electron_process_memory_private = [null != (h = null == (t = P.unknown) ? void 0 : t.wss_priv_kb) ? h : -1, null != (g = null == (n = P.main) ? void 0 : n.wss_priv_kb) ? g : -1, null != (m = null == (r = P.renderer) ? void 0 : r.wss_priv_kb) ? m : -1, null != (b = null == (i = P.gpu) ? void 0 : i.wss_priv_kb) ? b : -1, null != (_ = null == (l = P.crashpad) ? void 0 : l.wss_priv_kb) ? _ : -1, null != (E = null == (a = P.utility) ? void 0 : a.wss_priv_kb) ? E : -1]), (e.electron_process_memory_private_and_shared = [null != (O = null == (o = P.unknown) ? void 0 : o.wss_kb) ? O : -1, null != (y = null == (s = P.main) ? void 0 : s.wss_kb) ? y : -1, null != (I = null == (c = P.renderer) ? void 0 : c.wss_kb) ? I : -1, null != (v = null == (u = P.gpu) ? void 0 : u.wss_kb) ? v : -1, null != (C = null == (d = P.crashpad) ? void 0 : d.wss_kb) ? C : -1, null != (S = null == (p = P.utility) ? void 0 : p.wss_kb) ? S : -1]);
+                }
+            }
+            return e;
+        })(),
+        (function () {
+            let e = {};
+            {
+                let t = s.ZP.getCurrentGameForAnalytics();
+                null != t && ((e.client_heartbeat_current_game_id = t.id), (e.client_heartbeat_current_game_name = t.name), (e.client_heartbeat_current_game_executable = (0, o.N6)(t.exePath)), (e.client_heartbeat_current_game_distributor = t.distributor), (e.uses_client_mods = (0, r.e)())), c.Z.isNativeModuleLoaded() && (e.voice_filters_native_module_loaded = !0);
+            }
+            return e;
+        })(),
+        (function () {
+            var e;
+            let t = null != (e = u.Z.getIdleSince()) ? e : 0;
+            return {
+                is_idle: u.Z.isIdle(),
+                idle_duration_ms: Date.now() - t,
+                is_afk: u.Z.isAFK(),
+                is_system_suspended: u.Z.getSystemSuspended(),
+                is_system_locked: u.Z.getSystemLocked()
+            };
+        })()
+    );
+    p.default.track(_.rMx.CLIENT_HEARTBEAT, d), i.K.set(E, Date.now().toString()), (0, a.Z)();
 }
-let N = null,
-    T = !0;
-function P() {
-    if (T || (null != N && N !== b.hes.DISCONNECTED && N !== b.hes.RTC_DISCONNECTED))
+let T = null,
+    P = !0;
+function j() {
+    if (P || (null != T && T !== _.hes.DISCONNECTED && T !== _.hes.RTC_DISCONNECTED))
         try {
-            v();
+            C();
         } catch (e) {
-            f.Z.captureException(e);
+            g.Z.captureException(e);
         }
     else
-        I &&
-            ((I = !1),
-            f.Z.addBreadcrumb({
-                category: E,
+        v &&
+            ((v = !1),
+            g.Z.addBreadcrumb({
+                category: O,
                 message: 'Stopping Analytics Heartbeat'
             }),
-            (0, g.fr)(!1),
-            C(),
+            (0, m.fr)(!1),
+            S(),
             (0, a.Z)());
 }
-function j() {
-    f.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), u.Z.addChangeListener(Z), l.Z.subscribe('WINDOW_FOCUS', x), l.Z.subscribe('APP_STATE_UPDATE', w), l.Z.subscribe('LOGIN_SUCCESS', A), P();
-}
 function A() {
-    S(!0);
+    g.Z.addBreadcrumb({ message: 'Initializing SessionHeartbeatScheduler' }), d.Z.addChangeListener(x), l.Z.subscribe('WINDOW_FOCUS', w), l.Z.subscribe('APP_STATE_UPDATE', L), l.Z.subscribe('LOGIN_SUCCESS', Z), j();
 }
 function Z() {
-    let e = u.Z.getState();
-    N !== e && ((N = e), P());
+    N(!0);
 }
-function x(e) {
-    let { focused: t } = e;
-    (T = t), P();
+function x() {
+    let e = d.Z.getState();
+    T !== e && ((T = e), j());
 }
 function w(e) {
+    let { focused: t } = e;
+    (P = t), j();
+}
+function L(e) {
     let { state: t } = e;
-    (T = t === b.$7l.ACTIVE), P();
+    (P = t === _.$7l.ACTIVE), j();
 }

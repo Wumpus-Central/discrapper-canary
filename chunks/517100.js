@@ -127,6 +127,12 @@ class w extends (r = i.ZP.Store) {
     getIdleSince() {
         return m ? h : null;
     }
+    getSystemSuspended() {
+        return E;
+    }
+    getSystemLocked() {
+        return b;
+    }
 }
 p(w, 'displayName', 'IdleStore');
 let D = new w(o.Z, {
