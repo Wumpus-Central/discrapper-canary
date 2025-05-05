@@ -1,23 +1,23 @@
 n.d(t, { Z: () => u });
 var r = n(200651);
 n(192379);
-var i = n(442837),
+var c = n(442837),
     l = n(481060),
-    o = n(496675),
-    c = n(981631),
+    i = n(496675),
+    o = n(981631),
     a = n(388032);
 function u(e, t) {
     let u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e.type,
-        s = (0, i.e7)([o.Z], () => o.Z.can(c.Plq.MANAGE_CHANNELS, e), [e]);
+        s = (0, c.e7)([i.Z], () => i.Z.can(o.Plq.MANAGE_CHANNELS, e), [e]);
     if (__OVERLAY__ || !s) return null;
-    let d = () => {
+    let b = () => {
         (0, l.ZDy)(async () => {
             let { default: t } = await Promise.all([n.e('7590'), n.e('45094'), n.e('7911')]).then(n.bind(n, 218613));
             return (n) => {
-                var i, l;
+                var c, l;
                 return (0, r.jsx)(
                     t,
-                    ((i = (function (e) {
+                    ((c = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
                                 r = Object.keys(n);
@@ -49,7 +49,7 @@ function u(e, t) {
                             categoryId: e.parent_id
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                        ? Object.defineProperties(c, Object.getOwnPropertyDescriptors(l))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -58,25 +58,25 @@ function u(e, t) {
                               }
                               return n;
                           })(Object(l)).forEach(function (e) {
-                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                              Object.defineProperty(c, e, Object.getOwnPropertyDescriptor(l, e));
                           }),
-                    i)
+                    c)
                 );
             };
         });
     };
     switch (u) {
-        case c.d4z.GUILD_TEXT:
+        case o.d4z.GUILD_TEXT:
             return (0, r.jsx)(l.sNh, {
                 id: 'create-text-channel',
                 label: a.intl.string(a.t.HHkTJC),
-                action: d
+                action: b
             });
-        case c.d4z.GUILD_VOICE:
+        case o.d4z.GUILD_VOICE:
             return (0, r.jsx)(l.sNh, {
                 id: 'create-voice-channel',
                 label: a.intl.string(a.t.AlbZaG),
-                action: d
+                action: b
             });
         default:
             return null;

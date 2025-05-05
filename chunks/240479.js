@@ -38,7 +38,7 @@ function T(e) {
               size: l.zxk.Sizes.SMALL,
               color: l.zxk.Colors.CUSTOM,
               onClick: n,
-              buttonText: I.intl.string(I.t.pj0XBA)
+              textOptions: { textOverride: I.intl.string(I.t.pj0XBA) }
           })
         : o === b.y.JOIN_GUILD
           ? (0, r.jsx)(l.zxk, {

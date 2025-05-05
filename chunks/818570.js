@@ -46,7 +46,7 @@ function d(e) {
                         showGradient: !0,
                         iconClassName: u.premiumIcon,
                         subscriptionTier: s.Si.TIER_2,
-                        buttonText: c.intl.string(c.t.Y2WKTk),
+                        textOptions: { textOverride: c.intl.string(c.t.Y2WKTk) },
                         size: i.zxk.Sizes.SMALL,
                         premiumModalAnalyticsLocation: {
                             section: d,

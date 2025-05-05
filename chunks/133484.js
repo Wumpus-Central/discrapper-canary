@@ -63,7 +63,7 @@ function _(e) {
                           (0, i.jsx)(c.Z, {
                               size: s.zxk.Sizes.LARGE,
                               color: s.zxk.Colors.GREEN,
-                              buttonText: u.ZP.isPremium(t) ? p.intl.string(p.t.AfRWIy) : p.intl.string(p.t.nkdUys),
+                              textOptions: { textOverride: u.ZP.isPremium(t) ? p.intl.string(p.t.AfRWIy) : p.intl.string(p.t.nkdUys) },
                               subscriptionTier: g.Si.TIER_2
                           })
                       ]

@@ -41,10 +41,10 @@ function p(e, t) {
 }
 function b(e, t, n) {
     if ((0, a.Z)(null == t ? void 0 : t.getChannelId()) || (null == n ? void 0 : n.shouldHideMediaOptions) === !0 || !s.isPlatformEmbedded || null == e || !(0, l.gS)(e)) return null;
-    let c = (0, l.s$)(e),
+    let c = (0, l.s$)(e, l.wV),
         b = async () => {
             try {
-                await u.ZP.saveImage(c), o.default.track(f.rMx.CONTEXT_MENU_IMAGE_SAVED, m({}, (0, d.v)())), (0, r.showToast)((0, r.createToast)(g.intl.string(g.t.cqpdJS), r.ToastType.SUCCESS));
+                await u.ZP.saveImage(c, l.wV), o.default.track(f.rMx.CONTEXT_MENU_IMAGE_SAVED, m({}, (0, d.v)())), (0, r.showToast)((0, r.createToast)(g.intl.string(g.t.cqpdJS), r.ToastType.SUCCESS));
             } catch (e) {
                 o.default.track(f.rMx.CONTEXT_MENU_IMAGE_SAVE_FAILED, m({}, (0, d.v)())), p(g.intl.string(g.t['8Ve/S0']), e);
             }

@@ -1,4 +1,4 @@
-n.d(t, { default: () => b }), n(388685);
+n.d(t, { default: () => P }), n(388685);
 var i = n(200651),
     a = n(192379),
     o = n(120356),
@@ -17,11 +17,11 @@ var i = n(200651),
     x = n(486324),
     A = n(388032),
     h = n(922349);
-function b(e) {
-    let { transitionState: t, onClose: o, onComplete: b, uploadType: P, showUpsellHeader: E, analyticsPage: R } = e,
+function P(e) {
+    let { transitionState: t, onClose: o, onComplete: P, uploadType: b, showUpsellHeader: E, analyticsPage: R } = e,
         [j, Z] = a.useState(!1),
-        C = (0, r.vRw)(),
-        v = (0, d.Dt)(),
+        v = (0, r.vRw)(),
+        C = (0, d.Dt)(),
         { analyticsLocations: y, newestAnalyticsLocation: I } = (0, s.ZP)(c.Z.GIF_PICKER);
     async function k(e) {
         let { gifSrc: t } = e;
@@ -65,15 +65,15 @@ function b(e) {
                                 {
                                     imageUri: a,
                                     file: new File([c], 'tenor.gif', { type: 'image/gif' }),
-                                    onCrop: b,
-                                    uploadType: P,
+                                    onCrop: P,
+                                    uploadType: b,
                                     showUpsellHeader: E
                                 },
                                 t
                             )
                         );
                 },
-                { contextKey: C }
+                { contextKey: v }
             );
     }
     a.useEffect(() => {
@@ -83,19 +83,19 @@ function b(e) {
             location: { page: R }
         });
     }, [y, R]);
-    let S = P === x.pC.AVATAR || P === x.pC.BANNER,
+    let S = b === x.pC.AVATAR || b === x.pC.BANNER,
         L = (0, _.M)(!S);
     return (0, i.jsx)(s.Gt, {
         value: y,
         children: (0, i.jsxs)(r.Y0X, {
-            'aria-labelledby': v,
+            'aria-labelledby': C,
             transitionState: t,
             size: r.CgR.SMALL,
             children: [
                 E &&
                     !L &&
                     (0, i.jsx)(p.Z, {
-                        type: P,
+                        type: b,
                         analyticsPage: R,
                         analyticsSection: m.jXE.GIF_PICKER_AVATAR_OR_BANNER_MODAL,
                         isGIF: !0
@@ -129,7 +129,7 @@ function b(e) {
                 E &&
                     L &&
                     (0, i.jsx)(f.Z, {
-                        uploadType: P,
+                        uploadType: b,
                         analyticsSource: I,
                         showUpsell: !0,
                         className: h.nitroUpsell

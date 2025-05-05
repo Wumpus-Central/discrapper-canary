@@ -39,8 +39,10 @@ let p = (e) => {
                             isGift: !0,
                             className: u.giftCardButton,
                             look: l.zxk.Looks.OUTLINED,
-                            buttonText: d.intl.string(d.t.Ve9Ge3),
-                            buttonTextClassName: u.giftButtonCTA,
+                            textOptions: {
+                                textOverride: d.intl.string(d.t.Ve9Ge3),
+                                textClassName: u.giftButtonCTA
+                            },
                             color: l.zxk.Colors.CUSTOM,
                             premiumModalAnalyticsLocation: h
                         })

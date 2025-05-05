@@ -60,8 +60,10 @@ let C = function (e) {
                             ]
                         }),
                         (0, i.jsx)(h.Z, {
-                            buttonText: x.intl.string(x.t.J61px8),
-                            buttonTextClassName: E.subscribeButtonText,
+                            textOptions: {
+                                textOverride: x.intl.string(x.t.J61px8),
+                                textClassName: E.subscribeButtonText
+                            },
                             subscriptionTier: b.Si.TIER_2,
                             showIcon: !1,
                             className: null != r ? r : E.subscribeButton,

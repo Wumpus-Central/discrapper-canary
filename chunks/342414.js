@@ -74,7 +74,7 @@ let w = (e) => {
                                 (0, i.jsx)(S.Z, {
                                     color: O ? a.Ttl.WHITE : a.Ttl.BRAND,
                                     look: O ? a.zxk.Looks.OUTLINED : a.zxk.Looks.FILLED,
-                                    buttonText: P.intl.string(P.t['3KomGR']),
+                                    textOptions: { textOverride: P.intl.string(P.t['3KomGR']) },
                                     className: R.button,
                                     isGift: !0
                                 })
@@ -114,7 +114,7 @@ let w = (e) => {
                                     className: R.buttonContainer,
                                     children: (0, i.jsx)(S.Z, {
                                         color: a.Ttl.BRAND,
-                                        buttonText: P.intl.string(P.t['3KomGR']),
+                                        textOptions: { textOverride: P.intl.string(P.t['3KomGR']) },
                                         className: R.button,
                                         isGift: !0
                                     })
@@ -151,7 +151,7 @@ let w = (e) => {
                             className: R.buttonContainer,
                             children: (0, i.jsx)(S.Z, {
                                 color: a.Ttl.BRAND,
-                                buttonText: P.intl.string(P.t['3KomGR']),
+                                textOptions: { textOverride: P.intl.string(P.t['3KomGR']) },
                                 className: R.button,
                                 isGift: !0
                             })

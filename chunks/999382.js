@@ -280,7 +280,10 @@ function ek(e) {
     {
         let e = C.Z.getGuild(s.id);
         if (null == e) return !1;
-        (l = I.Z.getProfile(s.id)), r !== M.pNK.PROFILE && r !== M.pNK.TAG && (c = l);
+        if (((l = I.Z.getProfile(s.id)), r !== M.pNK.PROFILE && r !== M.pNK.TAG && (c = l), r === M.pNK.PROFILE)) {
+            (a = e), (s = e);
+            return;
+        }
         let t = (a = e),
             n = s.toJS();
         Z.forEach((e) => {

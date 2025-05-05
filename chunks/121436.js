@@ -150,7 +150,7 @@ let T = (e) => {
                                   (0, a.jsx)(m.Z, {
                                       className: h.subscribeButton,
                                       premiumModalAnalyticsLocation: { page: b.ZY5.TIERED_TENURE_BADGES_MODAL },
-                                      subscribeButtonText: N.intl.string(N.t.JST6jo),
+                                      textOptions: { subscribeText: N.intl.string(N.t.JST6jo) },
                                       subscriptionTier: p.Si.TIER_2,
                                       showGradient: !0
                                   })

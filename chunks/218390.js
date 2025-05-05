@@ -171,8 +171,10 @@ function el() {
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(H.Z, {
-                                      buttonText: o ? Q.intl.string(Q.t.YScQSE) : Q.intl.string(Q.t['0b3YRk']),
-                                      buttonTextClassName: J.tierCardButtonCTA,
+                                      textOptions: {
+                                          textOverride: o ? Q.intl.string(Q.t.YScQSE) : Q.intl.string(Q.t['0b3YRk']),
+                                          textClassName: J.tierCardButtonCTA
+                                      },
                                       className: J.tierCardButton,
                                       color: m.zxk.Colors.WHITE,
                                       disableShine: !0,
@@ -288,8 +290,10 @@ function ea(e) {
                         isGift: !0,
                         className: l()(J.giftCardButton, J.halloweenColor),
                         look: m.zxk.Looks.OUTLINED,
-                        buttonText: Q.intl.string(Q.t.Ve9Ge3),
-                        buttonTextClassName: J.giftButtonCTA,
+                        textOptions: {
+                            textOverride: Q.intl.string(Q.t.Ve9Ge3),
+                            textClassName: J.giftButtonCTA
+                        },
                         color: m.zxk.Colors.CUSTOM,
                         onClick: () => {
                             Z.default.track(X.rMx.PREMIUM_SETTINGS_INTERACTED, {
@@ -333,8 +337,10 @@ function eo() {
                               isGift: !0,
                               className: l()(J.giftCardButton, J.giftCardButtonColor),
                               look: m.zxk.Looks.OUTLINED,
-                              buttonText: Q.intl.string(Q.t.Ve9Ge3),
-                              buttonTextClassName: J.giftButtonCTA,
+                              textOptions: {
+                                  textOverride: Q.intl.string(Q.t.Ve9Ge3),
+                                  textClassName: J.giftButtonCTA
+                              },
                               color: m.zxk.Colors.CUSTOM,
                               onClick: () => {
                                   Z.default.track(X.rMx.PREMIUM_SETTINGS_INTERACTED, {

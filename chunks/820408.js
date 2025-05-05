@@ -60,7 +60,7 @@ function j(e) {
                 className: v.nitroButton,
                 children: (0, i.jsx)(g.Z, {
                     showGradient: !0,
-                    buttonText: p.intl.string(p.t.pj0XBA),
+                    textOptions: { textOverride: p.intl.string(p.t.pj0XBA) },
                     size: l.zxk.Sizes.SMALL,
                     shinyButtonClassName: v.nitroButton,
                     subscriptionTier: m.Si.TIER_2,

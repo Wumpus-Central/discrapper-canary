@@ -506,7 +506,7 @@ let ey = {
                                       (0, r.jsx)(O.Z, {
                                           subscriptionTier: ek.Si.TIER_2,
                                           fullWidth: !0,
-                                          buttonText: t,
+                                          textOptions: { textOverride: t },
                                           onClick: eo.v,
                                           onSubscribeModalClose: () => {
                                               (0, eo.T)({

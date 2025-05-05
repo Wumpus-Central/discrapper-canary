@@ -80,7 +80,7 @@ function C(e) {
                   : (0, r.jsx)(m.Z, {
                         subscriptionTier: T.Si.TIER_2,
                         showGradient: Z,
-                        buttonText: y.ZP.isPremium(t) ? A.intl.string(A.t.KXLX7u) : Z ? A.intl.string(A.t.pj0XBA) : A.intl.string(A.t.mr4K7O)
+                        textOptions: { textOverride: y.ZP.isPremium(t) ? A.intl.string(A.t.KXLX7u) : Z ? A.intl.string(A.t.pj0XBA) : A.intl.string(A.t.mr4K7O) }
                     });
     return (0, r.jsxs)(r.Fragment, {
         children: [

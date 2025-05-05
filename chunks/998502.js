@@ -1,7 +1,8 @@
 n.d(t, {
-    ZP: () => G,
-    jK: () => M,
-    tS: () => k
+    ZP: () => B,
+    jK: () => k,
+    mD: () => G,
+    tS: () => j
 }),
     n(388685),
     n(35282),
@@ -79,21 +80,22 @@ function v(e, t) {
 let I = window.DiscordNative,
     S = new Set(['jpg', 'jpeg', 'png']),
     T = new Set(['jpg', 'jpeg', 'png', 'webp', 'gif', 'tiff', 'bmp', 'avif']),
-    A = null,
+    A = 5,
     N = null,
     C = null,
-    R = {};
+    R = null,
+    P = {};
 null != I &&
-    ((A = I.remoteApp
+    ((N = I.remoteApp
         .getVersion()
         .split('.')
         .map((e) => parseInt(e))),
-    (C = null == (r = (i = I.remoteApp).getModuleVersions) ? void 0 : r.call(i)),
-    (N = null == (o = (a = I.remoteApp).getBuildNumber) ? void 0 : o.call(a)));
-let P = new Set(['discord_erlpack', 'discord_game_utils', 'discord_rpc', 'discord_spellcheck', 'discord_utils', 'discord_voice']),
-    w = !1,
-    D = 'lastImageSaveDirectory';
-async function L(e) {
+    (R = null == (r = (i = I.remoteApp).getModuleVersions) ? void 0 : r.call(i)),
+    (C = null == (o = (a = I.remoteApp).getBuildNumber) ? void 0 : o.call(a)));
+let w = new Set(['discord_erlpack', 'discord_game_utils', 'discord_rpc', 'discord_spellcheck', 'discord_utils', 'discord_voice']),
+    D = !1,
+    L = 'lastImageSaveDirectory';
+async function x(e) {
     let t = {
             method: 'GET',
             mode: 'cors'
@@ -103,19 +105,19 @@ async function L(e) {
     let r = await n.arrayBuffer();
     return l()(null != r, 'Data is null'), r;
 }
-function x(e) {
-    return L(e);
+function M(e) {
+    return x(e);
 }
-var M = (function (e) {
+var k = (function (e) {
         return (e[(e.Camera = 0)] = 'Camera'), (e[(e.Microphone = 1)] = 'Microphone'), (e[(e.Photo = 2)] = 'Photo'), (e[(e.InputMonitoring = 3)] = 'InputMonitoring'), (e[(e.ScreenRecording = 4)] = 'ScreenRecording'), e;
     })({}),
-    k = (function (e) {
+    j = (function (e) {
         return (e.VIDEO = 'VIDEO'), (e.MUTE = 'MUTE'), (e.DEAFEN = 'DEAFEN'), (e.DISCONNECT = 'DISCONNECT'), e;
     })({});
-function j(e) {
+function U(e) {
     var t, n, r, i, o, a, s, l, c;
     return {
-        id: R[null != (t = e.id) ? t : ''],
+        id: P[null != (t = e.id) ? t : ''],
         nativeProcessObserverId: parseInt(null != (n = e.id) ? n : '', 10),
         name: null != (r = e.gameName) ? r : e.name,
         processName: null != (i = e.name) ? i : '',
@@ -135,13 +137,14 @@ function j(e) {
         isLauncher: null != (c = e.isLauncher) && c
     };
 }
-function U(e) {
+function G(e) {
     var t, n, r, i;
-    return null == (i = m.Z.toURLSafe(e)) || null == (r = i.pathname) || null == (n = r.split('.')) || null == (t = n.pop()) ? void 0 : t.toLowerCase();
+    let o = null == (i = m.Z.toURLSafe(e)) || null == (r = i.pathname) || null == (n = r.split('.')) || null == (t = n.pop()) ? void 0 : t.toLowerCase();
+    return null != o && (null == o ? void 0 : o.length) <= A ? o : void 0;
 }
-let G = {
+let B = {
     requireModule: (e) => I.nativeModules.requireModule(e),
-    ensureModule: (e) => (h.isPlatformEmbedded ? (__OVERLAY__ && P.has(e) ? Promise.resolve() : I.nativeModules.ensureModule(e)) : Promise.reject(Error('not embedded'))),
+    ensureModule: (e) => (h.isPlatformEmbedded ? (__OVERLAY__ && w.has(e) ? Promise.resolve() : I.nativeModules.ensureModule(e)) : Promise.reject(Error('not embedded'))),
     get canBootstrapNewUpdater() {
         return I.nativeModules.canBootstrapNewUpdater || !1;
     },
@@ -177,25 +180,25 @@ let G = {
     },
     setObservedGamesCallback(e, t) {
         try {
-            R = {};
+            P = {};
             let n = 0;
             this.getDiscordUtils().setObservedGamesCallback(
                 e.map((e) => {
                     let t = ++n;
                     return (
-                        null != e.id && (R[t] = e.id),
+                        null != e.id && (P[t] = e.id),
                         v(y({}, e), {
                             cmdline: e.cmdLine,
                             id: t
                         })
                     );
                 }),
-                (e) => t(e.map(j))
+                (e) => t(e.map(U))
             );
         } catch (e) {}
     },
     setCandidateGamesCallback(e) {
-        this.getDiscordUtils().setCandidateGamesCallback((t) => e(t.map(j)));
+        this.getDiscordUtils().setCandidateGamesCallback((t) => e(t.map(U)));
     },
     clearCandidateGamesCallback() {
         this.getDiscordUtils().clearCandidateGamesCallback();
@@ -223,16 +226,16 @@ let G = {
         if (__OVERLAY__) throw Error('cannot require discord_voice in overlay');
         let e = this.requireModule('discord_voice');
         return (
-            w ||
+            D ||
                 (0, c.Bl)((t, n, r) => {
                     e.consoleLog(n, '['.concat(t, '] ').concat(r));
                 }),
-            (w = !0),
+            (D = !0),
             e
         );
     },
     getDiscordUtils() {
-        if (!w)
+        if (!D)
             try {
                 this.getVoiceEngine();
             } catch (e) {}
@@ -292,13 +295,13 @@ let G = {
         return '';
     },
     get version() {
-        return A;
-    },
-    get buildNumber() {
         return N;
     },
-    get moduleVersions() {
+    get buildNumber() {
         return C;
+    },
+    get moduleVersions() {
+        return R;
     },
     get parsedOSRelease() {
         if (!h.isPlatformEmbedded) return [];
@@ -309,7 +312,7 @@ let G = {
     },
     async copyImage(e) {
         l()(h.isPlatformEmbedded, 'Copy image method called outside native app'), l()('function' == typeof I.clipboard.copyImage, 'Copy image not supported');
-        let t = await x(e);
+        let t = await M(e);
         I.clipboard.copyImage(E.from(t), e);
     },
     async copyImageBlob(e, t) {
@@ -317,21 +320,21 @@ let G = {
         I.clipboard.copyImage(E.from(n), t);
     },
     canSaveImage(e) {
-        if (null == e || !h.isPlatformEmbedded) return !1;
-        let t = U(e);
-        return null != t && T.has(t);
+        let t = G(e);
+        return null != e && !!h.isPlatformEmbedded && (null == t || T.has(t));
     },
-    async saveImage(e) {
-        var t;
+    async saveImage(e, t) {
+        var n;
         l()(h.isPlatformEmbedded, 'Save image method called outside native app');
-        let n = m.Z.toURLSafe(e);
-        if (null == n) return;
-        let r = null != (t = n.pathname.split('/').pop()) ? t : 'unknown',
-            i = f.K.get(D),
-            o = await x(e),
-            a = E.from(o),
-            s = await I.fileManager.saveWithDialog(a, r, null != i ? i : void 0);
-        null != s && f.K.set(D, s);
+        let r = m.Z.toURLSafe(e);
+        if (null == r) return;
+        let i = null != (n = r.pathname.split('/').pop()) ? n : 'unknown';
+        i.includes('.') || null == t || (i = ''.concat(i, '.').concat(t));
+        let o = f.K.get(L),
+            a = await M(e),
+            s = E.from(a),
+            c = await I.fileManager.saveWithDialog(s, i, null != o ? o : void 0);
+        null != c && f.K.set(L, c);
     },
     async saveFile(e, t) {
         var n;
@@ -339,7 +342,7 @@ let G = {
         let r = m.Z.toURLSafe(e);
         if (null == r) return null;
         let i = null != (n = null != t ? t : r.pathname.split('/').pop()) ? n : 'unknown',
-            o = await L(e),
+            o = await x(e),
             a = E.from(o);
         return I.fileManager.saveWithDialog(a, i);
     },
@@ -355,8 +358,8 @@ let G = {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : void 0;
         if (!h.isPlatformEmbedded) return !1;
         if (null != e) {
-            let t = U(e);
-            if (null == t || !S.has(t)) return !1;
+            let t = G(e);
+            if (null != t && !S.has(t)) return !1;
         }
         return 'function' == typeof I.clipboard.copyImage;
     },
@@ -627,7 +630,7 @@ let G = {
     },
     isModuleVersionAtLeast(e, t) {
         var n, r, i;
-        let o = [...(null != A ? A : [0, 0, 0])];
+        let o = [...(null != N ? N : [0, 0, 0])];
         o.push(null != (r = null == (n = this.moduleVersions) ? void 0 : n[e]) ? r : 0);
         let a = null != (i = t[this.releaseChannel]) ? i : t.stable;
         for (let [e, t] of o.entries())

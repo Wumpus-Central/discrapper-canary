@@ -17,7 +17,7 @@ function x(t) {
     let { analyticsSection: e, analyticsPage: n, isGIF: x, banner: f } = t,
         p = (0, o.e7)([c.Z], () => c.Z.getGuildId()),
         N = (0, o.e7)([d.Z], () => d.Z.getGuild(p)),
-        { analyticsLocations: b } = (0, r.ZP)();
+        { analyticsLocations: v } = (0, r.ZP)();
     return null == N || N.hasFeature(_.oNc.ANIMATED_BANNER) || (!x && N.hasFeature(_.oNc.BANNER))
         ? null
         : (0, i.jsxs)('div', {
@@ -42,14 +42,14 @@ function x(t) {
                           };
                           null != f
                               ? (0, l.c)({
-                                    analyticsLocations: b,
+                                    analyticsLocations: v,
                                     analyticsLocation: t,
                                     guild: N,
                                     isGIF: x,
                                     banner: f
                                 })
                               : (0, s.Z)({
-                                    analyticsLocations: b,
+                                    analyticsLocations: v,
                                     analyticsSourceLocation: t,
                                     guild: N,
                                     perks: x ? (0, g.zC)() : (0, g.XO)()

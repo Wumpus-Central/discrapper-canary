@@ -43,7 +43,7 @@ function b(e) {
     }
     return e;
 }
-function C(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -61,7 +61,7 @@ function C(e, t) {
         e
     );
 }
-let O = () => [
+let C = () => [
     {
         value: x.s8.ALL_MESSAGES,
         name: S.intl.string(S.t.hZrr6u)
@@ -100,7 +100,7 @@ function E(e) {
                 className: N.segmentedControlsContainer,
                 children: (0, i.jsx)(o.sY7, {
                     value: T,
-                    options: O(),
+                    options: C(),
                     onChange: (e) => {
                         let { value: t } = e;
                         return L(t);
@@ -177,7 +177,7 @@ function E(e) {
                                                     children: (e) =>
                                                         (0, i.jsx)(
                                                             o.t6m,
-                                                            C(b({ size: 'custom' }, e), {
+                                                            O(b({ size: 'custom' }, e), {
                                                                 width: 20,
                                                                 height: 20,
                                                                 className: N.muted
@@ -211,7 +211,7 @@ function E(e) {
                                                     children: (e) =>
                                                         (0, i.jsx)(
                                                             o.d3s,
-                                                            C(b({ size: 'custom' }, e), {
+                                                            O(b({ size: 'custom' }, e), {
                                                                 width: 20,
                                                                 height: 20,
                                                                 className: N.muted

@@ -58,8 +58,8 @@ function y(e, t) {
         e
     );
 }
-let j = (e) => 1 - Math.pow(1 - e, 4),
-    x = {
+let x = (e) => 1 - Math.pow(1 - e, 4),
+    j = {
         mass: 1,
         friction: 64,
         tension: 1000,
@@ -125,10 +125,10 @@ function O(e) {
                 config: (e) =>
                     'backgroundColor' === e
                         ? {
-                              easing: j,
+                              easing: x,
                               duration: 200
                           }
-                        : x,
+                        : j,
                 delay: 100 * !!A
             },
             'respect-motion-settings'
@@ -150,7 +150,7 @@ function O(e) {
                     delay: A ? 100 : 150
                 },
                 config: {
-                    easing: j,
+                    easing: x,
                     duration: A ? 250 : 200
                 }
             },
@@ -183,7 +183,7 @@ function O(e) {
                 config: (e) =>
                     'opacity' === e
                         ? {
-                              easing: j,
+                              easing: x,
                               duration: 200
                           }
                         : C,
@@ -216,11 +216,11 @@ function O(e) {
                 config: (e) =>
                     'opacity' === e
                         ? {
-                              easing: j,
+                              easing: x,
                               duration: 200
                           }
                         : Z
-                          ? x
+                          ? j
                           : I
             },
             'respect-motion-settings'
@@ -243,11 +243,11 @@ function O(e) {
                     config: (e) =>
                         'opacity' === e
                             ? {
-                                  easing: j,
+                                  easing: x,
                                   duration: 200
                               }
                             : A
-                              ? x
+                              ? j
                               : C
                 },
                 leave: {
@@ -258,11 +258,11 @@ function O(e) {
                     config: (e) =>
                         'opacity' === e
                             ? {
-                                  easing: j,
+                                  easing: x,
                                   duration: 200
                               }
                             : A
-                              ? x
+                              ? j
                               : C
                 }
             },

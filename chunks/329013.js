@@ -70,7 +70,7 @@ let R = () => {
                               (0, i.jsx)(O.Z, {
                                   showGradient: p,
                                   subscriptionTier: y.Si.TIER_2,
-                                  buttonText: p ? A.intl.string(A.t.pj0XBA) : d ? A.intl.formatToPlainString(A.t.bkQ4bG, { percent: null == c ? void 0 : c.discount.amount }) : A.intl.string(A.t.mr4K7O),
+                                  textOptions: { textOverride: p ? A.intl.string(A.t.pj0XBA) : d ? A.intl.formatToPlainString(A.t.bkQ4bG, { percent: null == c ? void 0 : c.discount.amount }) : A.intl.string(A.t.mr4K7O) },
                                   className: P.premiumCta
                               })
                           ]

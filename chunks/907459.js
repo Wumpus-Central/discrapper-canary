@@ -31,14 +31,16 @@ let C = () => {
             a = (null == o || null == (e = o.subscription_trial) ? void 0 : e.sku_id) === T.Si.TIER_2;
         return (0, r.jsx)(h.Z, {
             size: l.zxk.Sizes.MEDIUM,
-            buttonText: i
-                ? A.intl.string(A.t.IJI7ys)
-                : a
-                  ? (0, b.Rt)({
-                        intervalType: null == o || null == (t = o.subscription_trial) ? void 0 : t.interval,
-                        intervalCount: null == o || null == (n = o.subscription_trial) ? void 0 : n.interval_count
-                    })
-                  : A.intl.string(A.t.mr4K7O),
+            textOptions: {
+                textOverride: i
+                    ? A.intl.string(A.t.IJI7ys)
+                    : a
+                      ? (0, b.Rt)({
+                            intervalType: null == o || null == (t = o.subscription_trial) ? void 0 : t.interval,
+                            intervalCount: null == o || null == (n = o.subscription_trial) ? void 0 : n.interval_count
+                        })
+                      : A.intl.string(A.t.mr4K7O)
+            },
             subscriptionTier: T.Si.TIER_2
         });
     },

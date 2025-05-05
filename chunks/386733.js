@@ -198,7 +198,7 @@ let N = (e) => {
                                         !P &&
                                         (0, i.jsx)(x.Z, {
                                             color: o.Ttl.CUSTOM,
-                                            buttonText: O.intl.string(O.t.Ve9Ge3),
+                                            textOptions: { textOverride: O.intl.string(O.t.Ve9Ge3) },
                                             className: l()(S.expandedProgressBarGiftingCTA, { [S.expandedProgressBarGiftingCTALayout]: !t }),
                                             look: o.iLD.OUTLINED,
                                             isGift: !0

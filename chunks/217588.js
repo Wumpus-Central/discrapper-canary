@@ -283,7 +283,7 @@ let F = (e) => {
                                           subscriptionTier: P.Si.TIER_2,
                                           size: s.zxk.Sizes.SMALL,
                                           fullWidth: !0,
-                                          buttonText: A.intl.string(A.t['gl/XHB']),
+                                          textOptions: { textOverride: A.intl.string(A.t['gl/XHB']) },
                                           onSubscribeModalClose: (t) => (t ? e() : m()),
                                           postSuccessGuild: B || null == j ? void 0 : j,
                                           premiumModalAnalyticsLocation: W

@@ -58,7 +58,7 @@ let E = () => {
                                               className: x.tryItOutButton,
                                               showGradient: n,
                                               subscriptionTier: b.Si.TIER_2,
-                                              buttonText: n ? _.intl.string(_.t.pj0XBA) : _.intl.string(_.t.mr4K7O)
+                                              textOptions: { textOverride: n ? _.intl.string(_.t.pj0XBA) : _.intl.string(_.t.mr4K7O) }
                                           })
                                         : null
                                 ]

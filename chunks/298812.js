@@ -19,8 +19,8 @@ var i = n(200651),
     N = n(594174),
     f = n(823379),
     b = n(621600),
-    C = n(423589),
-    O = n(221259),
+    O = n(423589),
+    C = n(221259),
     E = n(113449),
     Z = n(686660),
     _ = n(958648),
@@ -31,7 +31,7 @@ var i = n(200651),
 let I = s.forwardRef(function (e, t) {
     let { guildId: n, requestScrollToBottom: s } = e,
         l = (0, a.Wu)([p.Z, S.ZP], () =>
-            (0, C.OD)(S.ZP.getChannelOverrides(n), {
+            (0, O.OD)(S.ZP.getChannelOverrides(n), {
                 ignoreMute: !0,
                 ignoreUnreadSetting: !1,
                 ignoreNotificationSetting: !1
@@ -135,11 +135,11 @@ function P(e) {
     let { channel: t, categories: n } = e,
         l = (0, d.dQu)(o.Z.unsafe_rawColors.GREEN_360).hex(),
         u = (0, a.e7)([p.Z], () => p.Z.getChannel(null == t ? void 0 : t.parent_id)),
-        v = (0, O.ZA)(t),
+        v = (0, C.ZA)(t),
         [S, f] = s.useState(!1);
     if (null == t) return null;
     let b = y.intl.string(y.t.uIzfCA),
-        C = (0, x.KS)(t);
+        O = (0, x.KS)(t);
     t.type === L.d4z.GUILD_CATEGORY && null != t.guild_id && '' !== t.guild_id ? (b = y.intl.formatToPlainString(y.t['2KzH8/'], { num: null != n[t.id] ? n[t.id].length : 0 })) : null != u && (b = y.intl.formatToPlainString(y.t.L1zJgY, { categoryName: (0, g.F6)(u, N.default, j.Z) }));
     let E = S ? Z.s8.CUSTOM : v.preset;
     return (0, i.jsx)('div', {
@@ -149,8 +149,8 @@ function P(e) {
                 (0, i.jsxs)('div', {
                     className: r()(M.rowName, M.modColor),
                     children: [
-                        null != C
-                            ? (0, i.jsx)(C, {
+                        null != O
+                            ? (0, i.jsx)(O, {
                                   size: 'custom',
                                   color: 'currentColor',
                                   height: 20,
@@ -182,7 +182,7 @@ function P(e) {
                             shape: d.XZJ.Shapes.ROUND,
                             type: d.XZJ.Types.INVERTED,
                             value: E === Z.s8.ALL_MESSAGES,
-                            onChange: () => ((0, O._m)(t.guild_id, t.id, Z.s8.ALL_MESSAGES), f(!1))
+                            onChange: () => ((0, C._m)(t.guild_id, t.id, Z.s8.ALL_MESSAGES), f(!1))
                         })
                     })
                 }),
@@ -194,7 +194,7 @@ function P(e) {
                             shape: d.XZJ.Shapes.ROUND,
                             type: d.XZJ.Types.INVERTED,
                             value: E === Z.s8.MENTIONS,
-                            onChange: () => ((0, O._m)(t.guild_id, t.id, Z.s8.MENTIONS), f(!1))
+                            onChange: () => ((0, C._m)(t.guild_id, t.id, Z.s8.MENTIONS), f(!1))
                         })
                     })
                 }),
@@ -206,7 +206,7 @@ function P(e) {
                             shape: d.XZJ.Shapes.ROUND,
                             type: d.XZJ.Types.INVERTED,
                             value: E === Z.s8.NOTHING,
-                            onChange: () => ((0, O._m)(t.guild_id, t.id, Z.s8.NOTHING), f(!1))
+                            onChange: () => ((0, C._m)(t.guild_id, t.id, Z.s8.NOTHING), f(!1))
                         })
                     })
                 }),
@@ -234,7 +234,7 @@ function P(e) {
                     })
                 }),
                 (0, i.jsx)(h.Z, {
-                    onClick: () => (0, O.JK)(t.guild_id, t.id),
+                    onClick: () => (0, C.JK)(t.guild_id, t.id),
                     className: M.removeButton
                 })
             ]

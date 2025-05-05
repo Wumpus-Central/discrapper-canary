@@ -173,7 +173,7 @@ function j(e) {
                             subscriptionTier: R.Si.TIER_2,
                             showGradient: !0,
                             fullWidth: !0,
-                            buttonText: P.intl.string(P.t.pj0XBA)
+                            textOptions: { textOverride: P.intl.string(P.t.pj0XBA) }
                         })
                 ]
             })

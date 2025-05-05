@@ -52,7 +52,7 @@ function C(e) {
                           : (0, n.jsx)(g.Z, {
                                 subscriptionTier: v.Si.TIER_2,
                                 showGradient: b,
-                                buttonText: x.ZP.isPremium(t) ? _.intl.string(_.t.KXLX7u) : b ? _.intl.string(_.t.pj0XBA) : _.intl.string(_.t.mr4K7O)
+                                textOptions: { textOverride: x.ZP.isPremium(t) ? _.intl.string(_.t.KXLX7u) : b ? _.intl.string(_.t.pj0XBA) : _.intl.string(_.t.mr4K7O) }
                             })
                 ]
             }),

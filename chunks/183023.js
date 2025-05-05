@@ -394,7 +394,7 @@ let Q = 32,
                                   subscriptionTier: Z.Si.TIER_2,
                                   size: u.zxk.Sizes.SMALL,
                                   fullWidth: !0,
-                                  buttonText: el.text,
+                                  textOptions: { textOverride: el.text },
                                   onSubscribeModalClose: (t) => (t ? e() : C()),
                                   postSuccessGuild: n && null != I ? I : void 0,
                                   premiumModalAnalyticsLocation: $
@@ -555,7 +555,7 @@ let Q = 32,
                           children: [
                               (0, r.jsx)(P.Z, {
                                   subscriptionTier: Z.Si.TIER_2,
-                                  buttonText: a.text,
+                                  textOptions: { textOverride: a.text },
                                   className: Y.ctaButton,
                                   fullWidth: !0,
                                   onClick: () => s()

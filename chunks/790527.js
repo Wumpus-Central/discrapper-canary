@@ -118,7 +118,7 @@ function P(e) {
                     null == H || H(), Z();
                 },
                 onSubscribeModalClose: Y,
-                buttonText: null != q ? q : e
+                textOptions: { textOverride: null != q ? q : e }
             });
         },
         eS = J ? a()(A.artContainer, A.artContainerBoxShadow, G) : a()(A.artContainer, G),

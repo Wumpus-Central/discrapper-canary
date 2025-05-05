@@ -1,4 +1,4 @@
-n.d(e, { Z: () => b });
+n.d(e, { Z: () => v });
 var i = n(200651),
     o = n(192379),
     a = n(442837),
@@ -16,12 +16,12 @@ var i = n(200651),
     f = n(474936),
     p = n(388032),
     N = n(886563);
-function b(t) {
+function v(t) {
     let { analyticsSection: e, type: n } = t,
-        b = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
-        A = h.ZP.canUseAnimatedAvatar(b),
-        v = h.ZP.canUsePremiumProfileCustomization(b),
-        E = (n === x.pC.BANNER && v) || (n === x.pC.AVATAR && A),
+        v = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
+        A = h.ZP.canUseAnimatedAvatar(v),
+        b = h.ZP.canUsePremiumProfileCustomization(v),
+        E = (n === x.pC.BANNER && b) || (n === x.pC.AVATAR && A),
         { sourceAnalyticsLocations: C } = (0, s.ZP)(l.Z.PREMIUM_PREVIEW_UPSELL_HEADER);
     if (
         (o.useEffect(() => {
@@ -40,7 +40,7 @@ function b(t) {
         look: r.zxk.Looks.LINK,
         color: r.zxk.Colors.LINK,
         subscriptionTier: f.Si.TIER_2,
-        buttonText: p.intl.format(p.t['944tDg'], {}),
+        textOptions: { textOverride: p.intl.format(p.t['944tDg'], {}) },
         showIcon: !1,
         premiumModalAnalyticsLocation: {
             section: e,

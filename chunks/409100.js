@@ -75,46 +75,51 @@ let E = (e) => {
     },
     b = (e, t, n, r) => (t || n ? f.intl.string(f.t.fkPGam) : e === d.Si.TIER_2 ? f.intl.formatToPlainString(f.t.bkQ4bG, { percent: r }) : void 0),
     y = (e) => {
-        var { forceInverted: t, subscriptionTier: n, hasActivePromotion: p = !1, isPersistentCTA: g = !1, useShorterCTA: y = !1, showGradient: O, confirmationFooter: v, paymentModalBanner: I } = e,
-            S = m(e, ['forceInverted', 'subscriptionTier', 'hasActivePromotion', 'isPersistentCTA', 'useShorterCTA', 'showGradient', 'confirmationFooter', 'paymentModalBanner']);
-        let T = (0, a.ZP)(),
-            A = !O && ((0, i.wj)(T) || t),
-            N = (0, c.N)(),
-            C = null == N ? void 0 : N.subscription_trial,
-            R = (0, s.a5)({
-                intervalType: null == C ? void 0 : C.interval,
-                intervalCount: null == C ? void 0 : C.interval_count
+        var { textOptions: t, forceInverted: n, subscriptionTier: p, hasActivePromotion: g = !1, isPersistentCTA: y = !1, useShorterCTA: O = !1, showGradient: v, confirmationFooter: I, paymentModalBanner: S } = e,
+            T = m(e, ['textOptions', 'forceInverted', 'subscriptionTier', 'hasActivePromotion', 'isPersistentCTA', 'useShorterCTA', 'showGradient', 'confirmationFooter', 'paymentModalBanner']);
+        let A = (0, a.ZP)(),
+            N = !v && ((0, i.wj)(A) || n),
+            C = (0, c.N)(),
+            R = null == C ? void 0 : C.subscription_trial,
+            P = (0, s.a5)({
+                intervalType: null == R ? void 0 : R.interval,
+                intervalCount: null == R ? void 0 : R.interval_count
             }),
-            P = (0, l.Ng)(),
-            w = null != C && n === C.sku_id,
-            D = (null == N ? void 0 : N.trial_id) === d.a7,
-            L = p
+            w = (0, l.Ng)(),
+            D = null != R && p === R.sku_id,
+            L = (null == C ? void 0 : C.trial_id) === d.a7,
+            x = g
                 ? f.intl.string(f.t.J61px8)
-                : null != P
-                  ? b(n, y, g, P.discount.amount)
+                : null != w
+                  ? b(p, O, y, w.discount.amount)
                   : E({
-                        showTrialCTA: w,
-                        subscriptionTier: n,
-                        trialDurationCopy: R,
-                        isPersistentCTA: g,
-                        shouldShowReferralTrialCopy: D,
-                        subscriptionTrial: C
+                        showTrialCTA: D,
+                        subscriptionTier: p,
+                        trialDurationCopy: P,
+                        isPersistentCTA: y,
+                        shouldShowReferralTrialCopy: L,
+                        subscriptionTrial: R
                     });
         return (0, r.jsx)(
             u.Z,
             h(
                 {
-                    color: A ? o.Ttl.BRAND_INVERTED : o.Ttl.BRAND,
-                    buttonShineClassName: 'buttonShineClassName' in S ? S.buttonShineClassName : A ? _.brandShine : void 0,
-                    buttonText: L,
-                    buttonTextClassName: w ? _.freeTrialText : void 0,
+                    color: N ? o.Ttl.BRAND_INVERTED : o.Ttl.BRAND,
+                    buttonShineClassName: 'buttonShineClassName' in T ? T.buttonShineClassName : N ? _.brandShine : void 0,
+                    textOptions: h(
+                        {
+                            textOverride: x,
+                            textClassName: D ? _.freeTrialText : void 0
+                        },
+                        t
+                    ),
                     onlyShineOnHover: !0,
-                    subscriptionTier: n,
-                    showGradient: O,
-                    confirmationFooter: v,
-                    paymentModalBanner: I
+                    subscriptionTier: p,
+                    showGradient: v,
+                    confirmationFooter: I,
+                    paymentModalBanner: S
                 },
-                S
+                T
             )
         );
     };

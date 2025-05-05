@@ -84,7 +84,7 @@ function p(e) {
                       className: d.upsellButton,
                       shinyButtonClassName: null != m ? m : d.upsellButton,
                       subscriptionTier: u.Si.TIER_2,
-                      buttonText: f,
+                      textOptions: { textOverride: f },
                       premiumModalAnalyticsLocation: p,
                       tabIndex: t ? 0 : -1,
                       onSubscribeModalClose: g

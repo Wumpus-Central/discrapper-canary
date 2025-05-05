@@ -351,8 +351,10 @@ function X() {
             }),
             (0, r.jsx)(b.Z, {
                 className: k.getNitroButton,
-                buttonTextClassName: k.getNitroButtonText,
-                subscribeButtonText: M.intl.string(M.t.JST6jo),
+                textOptions: {
+                    textOverride: M.intl.string(M.t.JST6jo),
+                    textClassName: k.getNitroButtonText
+                },
                 subscriptionTier: x.Si.TIER_2,
                 showGradient: !0,
                 size: d.zxk.Sizes.MEDIUM

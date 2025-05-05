@@ -113,7 +113,7 @@ function k(e) {
         onSubscribeModalClose: (e) => {
             f(!1), e && (null == a || a());
         },
-        buttonText: _
+        textOptions: { textOverride: _ }
     });
 }
 function j(e) {

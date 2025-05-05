@@ -13,8 +13,8 @@ function s(e) {
                 { PaymentModal: i } = await Promise.resolve().then(n.bind(n, 791785)),
                 { STEPS: l } = await Promise.all([n.e('17938'), n.e('8854')]).then(n.bind(n, 7305));
             return (n) => {
-                var j,
-                    x,
+                var x,
+                    j,
                     { onClose: C } = n,
                     I = (function (e, t) {
                         if (null == e) return {};
@@ -43,7 +43,7 @@ function s(e) {
                         children: (0, r.jsx)(a.KB, {
                             children: (0, r.jsx)(
                                 i,
-                                ((j = (function (e) {
+                                ((x = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
@@ -68,7 +68,7 @@ function s(e) {
                                     }
                                     return e;
                                 })({}, I)),
-                                (x = x =
+                                (j = j =
                                     {
                                         initialPlanId: t,
                                         onClose: (e) => {
@@ -87,7 +87,7 @@ function s(e) {
                                         reviewWarningMessage: b
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(j, Object.getOwnPropertyDescriptors(x))
+                                    ? Object.defineProperties(x, Object.getOwnPropertyDescriptors(j))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -95,10 +95,10 @@ function s(e) {
                                               n.push.apply(n, r);
                                           }
                                           return n;
-                                      })(Object(x)).forEach(function (e) {
-                                          Object.defineProperty(j, e, Object.getOwnPropertyDescriptor(x, e));
+                                      })(Object(j)).forEach(function (e) {
+                                          Object.defineProperty(x, e, Object.getOwnPropertyDescriptor(j, e));
                                       }),
-                                j)
+                                x)
                             )
                         })
                     })

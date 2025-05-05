@@ -1,44 +1,44 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => s });
 var r = n(200651);
 n(192379);
-var o = n(481060),
-    c = n(313201),
-    i = n(268999);
-function l(e) {
-    let { transitionState: t, title: n, subtitle: l, children: s } = e,
-        a = (0, c.Dt)();
-    return (0, r.jsxs)(o.Y0X, {
+var l = n(481060),
+    i = n(313201),
+    u = n(268999);
+function s(e) {
+    let { transitionState: t, title: n, subtitle: s, children: a } = e,
+        o = (0, i.Dt)();
+    return (0, r.jsxs)(l.Y0X, {
         transitionState: t,
-        'aria-labelledby': a,
+        'aria-labelledby': o,
         children: [
             (0, r.jsx)('div', {
-                className: i.shieldIconContainer,
+                className: u.shieldIconContainer,
                 children: (0, r.jsx)('div', {
-                    className: i.shieldIcon,
-                    children: (0, r.jsx)(o.tQf, {
+                    className: u.shieldIcon,
+                    children: (0, r.jsx)(l.tQf, {
                         size: 'custom',
                         width: 55,
                         height: 55,
-                        color: o.TVs.colors.HEADER_SECONDARY
+                        color: l.TVs.colors.HEADER_SECONDARY
                     })
                 })
             }),
-            (0, r.jsxs)(o.hzk, {
-                className: i.content,
+            (0, r.jsxs)(l.hzk, {
+                className: u.content,
                 children: [
-                    (0, r.jsx)(o.X6q, {
-                        className: i.title,
+                    (0, r.jsx)(l.X6q, {
+                        className: u.title,
                         variant: 'heading-lg/bold',
                         color: 'header-primary',
                         children: n
                     }),
-                    (0, r.jsx)(o.Text, {
-                        className: i.subtitle,
+                    (0, r.jsx)(l.Text, {
+                        className: u.subtitle,
                         variant: 'text-md/normal',
                         color: 'header-secondary',
-                        children: l
+                        children: s
                     }),
-                    s
+                    a
                 ]
             })
         ]

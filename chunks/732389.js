@@ -47,7 +47,7 @@ let g = (e) => {
                       look: l.zxk.Looks.BLANK,
                       color: l.zxk.Colors.CUSTOM,
                       subscriptionTier: p.Si.TIER_2,
-                      buttonText: b,
+                      textOptions: { textOverride: b },
                       premiumModalAnalyticsLocation: t,
                       showGradient: !0
                   })

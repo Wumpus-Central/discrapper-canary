@@ -1,35 +1,35 @@
-n.d(t, { Z: () => a });
-var i = n(200651);
+n.d(t, { Z: () => i });
+var r = n(200651);
 n(192379);
-var r = n(906732);
-function a(e, t) {
+var o = n(906732);
+function i(e, t) {
     return function (n) {
-        let { analyticsLocations: a } = (0, r.ZP)(t);
-        return (0, i.jsx)(r.Gt, {
-            value: a,
-            children: (0, i.jsx)(
+        let { analyticsLocations: i } = (0, o.ZP)(t);
+        return (0, r.jsx)(o.Gt, {
+            value: i,
+            children: (0, r.jsx)(
                 e,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
-                            i = Object.keys(n);
+                            r = Object.keys(n);
                         'function' == typeof Object.getOwnPropertySymbols &&
-                            (i = i.concat(
+                            (r = r.concat(
                                 Object.getOwnPropertySymbols(n).filter(function (e) {
                                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 })
                             )),
-                            i.forEach(function (t) {
-                                var i;
-                                (i = n[t]),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: i,
+                                              value: r,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = i);
+                                        : (e[t] = r);
                             });
                     }
                     return e;

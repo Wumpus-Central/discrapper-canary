@@ -25,12 +25,12 @@ var l = s(200651),
     v = s(333867),
     F = s(197115),
     Z = s(876917),
-    b = s(210887),
-    E = s(751648),
+    E = s(210887),
+    b = s(751648),
     w = s(822857),
     y = s(82856),
-    k = s(960919),
-    O = s(275388),
+    O = s(960919),
+    k = s(275388),
     P = s(74538),
     N = s(335131),
     _ = s(1870),
@@ -280,15 +280,15 @@ let eh = (e) => {
                       ev = ep || em,
                       eF = (0, el.f)(t),
                       { previewingVariantIndex: eZ } = eF,
-                      eb = (0, B.T)(t),
-                      eE = (0, p.e7)([j.Z], () => j.Z.useReducedMotion),
+                      eE = (0, B.T)(t),
+                      eb = (0, p.e7)([j.Z], () => j.Z.useReducedMotion),
                       ew = P.ZP.canUseCollectibles(s),
                       ey = i.useMemo(() => (0, S.BH)(t, ew), [t, ew]),
-                      ek = (0, S.G1)(t),
-                      eO = (0, S.rN)(t),
+                      eO = (0, S.G1)(t),
+                      ek = (0, S.rN)(t),
                       [eP, eN, e_] = (0, p.Wu)([_.Z], () => [_.Z.isClaiming === t.skuId, null != _.Z.isClaiming && _.Z.isClaiming !== t.skuId, _.Z.purchases]),
                       eR = (0, es.o)(t, e_, eZ),
-                      eS = (0, p.e7)([b.Z], () => (0, x.wjy)(b.Z.theme)),
+                      eS = (0, p.e7)([E.Z], () => (0, x.wjy)(E.Z.theme)),
                       eI = (0, S.Yq)(t.skuId),
                       eM = r.skuId === c.T.ANIME_V3 && (0, S.WW)(t.skuId),
                       { hoverVariant: eA } = (0, I.E)('CollectiblesShopTallCard'),
@@ -363,15 +363,15 @@ let eh = (e) => {
                                   className: ed.__invalid_premiumSubscribeButton,
                                   disabled: eN,
                                   onClick: (e) => e.stopPropagation(),
-                                  buttonText: eC.intl.string(eC.t.sEAnVF),
+                                  textOptions: { textOverride: eC.intl.string(eC.t.sEAnVF) },
                                   subscriptionTier: ea.Si.TIER_2
                               })
                           });
                   if (0 === e5.length) return null;
                   let tt = () =>
-                          ek || d.tq || e9 || t.type === u.Z.NAMEPLATE || !eW || Q === en.AW.ORBS
+                          eO || d.tq || e9 || t.type === u.Z.NAMEPLATE || !eW || Q === en.AW.ORBS
                               ? null
-                              : eO
+                              : ek
                                 ? (0, l.jsx)(ex, { onClick: e4 })
                                 : (0, l.jsx)(W.Z, {
                                       product: t,
@@ -403,7 +403,7 @@ let eh = (e) => {
                       ti = () =>
                           (0, l.jsx)(eh, {
                               onClick: () => {
-                                  (0, O.q)({
+                                  (0, k.q)({
                                       skuId: (0, ee.S)({
                                           product: t,
                                           selectedVariantIndex: eH
@@ -427,11 +427,11 @@ let eh = (e) => {
                                       },
                                       analyticsLocations: $
                                   }),
-                                      (0, E.S6)();
+                                      (0, b.S6)();
                               },
                               children: eC.intl.format(eC.t.kAgx5O, {
                                   orbPrice: e8[0].amount,
-                                  orbIconHook: () => (0, l.jsx)(k.Z, {})
+                                  orbIconHook: () => (0, l.jsx)(O.Z, {})
                               })
                           }),
                       tr = () => {
@@ -464,10 +464,10 @@ let eh = (e) => {
                               children: eC.intl.string(eC.t.GpnHfH)
                           }),
                       ta = () => {
-                          if (ek && !ew && !eO) return te();
+                          if (eO && !ew && !ek) return te();
                           if (!eW || eG) return ts();
                           if (eV) return tn();
-                          if (ek) return tr();
+                          if (eO) return tr();
                           if (e0)
                               if (e7) return ti();
                               else return ts();
@@ -483,14 +483,14 @@ let eh = (e) => {
                                 children: (0, l.jsxs)(x.kL8, {
                                     className: n()(eS ? ed.shopCardDark : ed.shopCard, {
                                         [ed.partiallyOwned]: eU && !ev,
-                                        [ed.shopCardAnimation]: !eE && eA !== I.D.NO_MOVEMENT,
+                                        [ed.shopCardAnimation]: !eb && eA !== I.D.NO_MOVEMENT,
                                         [eS ? ed.shopCardDarkHighlighted : ed.shopCardHighlighted]: ev
                                     }),
                                     ref: eo,
                                     onClick: e6,
                                     'aria-label': t.name,
                                     children: [
-                                        ek &&
+                                        eO &&
                                             (0, l.jsx)(x.ua7, {
                                                 tooltipContentClassName: ed.premiumWheelTooltipContent,
                                                 color: x.ua7.Colors.PRIMARY,
@@ -604,7 +604,7 @@ let eh = (e) => {
                                                 (0, l.jsx)(x.Text, {
                                                     variant: 'text-lg/bold',
                                                     className: ed.productName,
-                                                    children: eb
+                                                    children: eE
                                                 }),
                                                 t.type === u.Z.VARIANTS_GROUP
                                                     ? (0, l.jsx)(X.P, {
@@ -633,7 +633,7 @@ let eh = (e) => {
                                                                         className: ed.priceTag,
                                                                         isPartiallyPurchased: eU
                                                                     })
-                                                                  : ek
+                                                                  : eO
                                                                     ? (0, l.jsx)(x.Text, {
                                                                           variant: 'text-md/semibold',
                                                                           className: ed.priceTag,

@@ -240,24 +240,28 @@ class D extends (r = o.Component) {
                 throw Error('Unsupported align: '.concat(i));
         }
     }
-    calculatePositionStyle(e, t, n) {
-        let { spacing: r = 0 } = this.props,
-            i = P(this.props),
-            o = n.getBoundingClientRect(),
-            a = N(i, o.left, o.top);
+    calculatePositionStyle(e, t, n, r) {
+        let { spacing: i = 0 } = this.props,
+            o = P(this.props),
+            a = n.getBoundingClientRect(),
+            s = N(o, a.left, a.top);
         switch (e) {
             case 'top':
-                return this.getHorizontalAlignmentStyle(a, t, n, { bottom: n.offsetHeight - a.top + r });
+                return this.getHorizontalAlignmentStyle(s, t, n, { bottom: n.offsetHeight - s.top + i });
             case 'bottom':
-                return this.getHorizontalAlignmentStyle(a, t, n, { top: a.bottom + r });
+                return this.getHorizontalAlignmentStyle(s, t, n, { top: s.bottom + i });
             case 'left':
-                return this.getVerticalAlignmentStyle(a, t, n, { right: n.offsetWidth - a.left + r });
+                return this.getVerticalAlignmentStyle(s, t, n, { right: n.offsetWidth - s.left + i });
             case 'right':
-                return this.getVerticalAlignmentStyle(a, t, n, { left: a.right + r });
+                return this.getVerticalAlignmentStyle(s, t, n, { left: s.right + i });
+            case 'overlap_vertical':
+                return this.getHorizontalAlignmentStyle(s, t, n, { [r]: 0 });
+            case 'overlap_horizontal':
+                return this.getVerticalAlignmentStyle(s, t, n, { [r]: 8 });
             case 'center':
-                return this.getVerticalAlignmentStyle(a, t, n, { left: a.left + a.width / 2 - t.offsetWidth / 2 + r });
+                return this.getVerticalAlignmentStyle(s, t, n, { left: s.left + s.width / 2 - t.offsetWidth / 2 + i });
             case 'window_center':
-                return this.getVerticalAlignmentStyle(a, t, n, { left: Math.max((window.innerWidth - t.offsetWidth) / 2, 0) });
+                return this.getVerticalAlignmentStyle(s, t, n, { left: Math.max((window.innerWidth - t.offsetWidth) / 2, 0) });
             default:
                 throw Error('Unexpected position: '.concat(e));
         }
@@ -268,23 +272,40 @@ class D extends (r = o.Component) {
         c()(null != n, 'Unexpected null element');
         let r = (0, h.wL)(n),
             { style: i, nudge: o } = this.calculatePositionStyle(e, n, r),
-            a = null,
-            s = null;
-        if (t && (a = A(e, i, n, r)) < 0) {
+            a = {
+                position: e,
+                style: i,
+                nudge: o
+            },
+            s = A(e, i, n, r),
+            l = s,
+            u = null,
+            d = 0;
+        if (t && s < 0) {
             let t = C(e),
-                { style: i, nudge: o } = this.calculatePositionStyle(t, n, r);
-            if ((s = A(t, i, n, r)) > a)
-                return R(s, n, {
-                    position: t,
-                    nudge: o,
-                    style: i
-                });
+                i = this.calculatePositionStyle(t, n, r);
+            (u = i.style), (d = i.nudge);
+            let o = A(t, u, n, r);
+            if (
+                (o > s &&
+                    ((a = {
+                        position: t,
+                        style: u,
+                        nudge: d
+                    }),
+                    (l = o)),
+                s < 0 && o < 0)
+            ) {
+                let i,
+                    o = a.position;
+                if ((i = 'top' === o || 'bottom' === o ? 'overlap_vertical' : 'left' === o || 'right' === o ? 'overlap_horizontal' : o) !== e && i !== t) {
+                    let e = this.calculatePositionStyle(i, n, r, o),
+                        t = A(C(o), e.style, n, r);
+                    t > l && ((a = b({ position: o }, e)), (l = t));
+                }
+            }
         }
-        return R(a, n, {
-            position: e,
-            nudge: o,
-            style: i
-        });
+        return R(l, n, a);
     }
     componentDidMount() {
         var e, t;

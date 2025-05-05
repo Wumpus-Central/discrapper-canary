@@ -1,11 +1,10 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => f });
 var r = n(192379),
     i = n(806966),
     o = n(697426),
     a = n(294206),
-    s = n(51234),
-    l = n(280880);
-function c(e, t, n) {
+    s = n(280880);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +17,7 @@ function c(e, t, n) {
         e
     );
 }
-function u(e) {
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,12 +28,12 @@ function u(e) {
                 })
             )),
             r.forEach(function (t) {
-                c(e, t, n[t]);
+                l(e, t, n[t]);
             });
     }
     return e;
 }
-function d(e, t) {
+function u(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -46,59 +45,50 @@ function d(e, t) {
     }
     return n;
 }
-function f(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : d(Object(t)).forEach(function (n) {
+            : u(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function _(e) {
-    let { descriptor: t, soundButtonProps: n, rowIndex: c, columnIndex: d, isUsingKeyboardNavigation: _, suppressPlaySound: p, getItemProps: h, onSelectItem: m, onItemMouseEnter: g, buttonOverlay: E, isNitroLocked: b, shouldShowUpsell: y, refreshEnabled: O, inExpressionPicker: v } = e,
-        I = i.Wq.useStore((e) => e.inspectedExpressionPosition),
-        S = ''.concat(c, '-').concat(d),
-        T = _ && I.rowIndex === c && I.columnIndex === d;
+function f(e) {
+    let { descriptor: t, soundButtonProps: n, rowIndex: l, columnIndex: u, isUsingKeyboardNavigation: f, suppressPlaySound: _, getItemProps: p, onSelectItem: h, onItemMouseEnter: m, buttonOverlay: g, isNitroLocked: E, shouldShowUpsell: b, refreshEnabled: y, inExpressionPicker: O } = e,
+        v = i.Wq.useStore((e) => e.inspectedExpressionPosition),
+        I = ''.concat(l, '-').concat(u),
+        S = f && v.rowIndex === l && v.columnIndex === u;
     switch (t.item.type) {
         case o.vB.SOUND:
             return (0, r.createElement)(
                 a.ZP,
-                f(u({}, h(d), n), {
-                    key: S,
+                d(c({}, p(u), n), {
+                    key: I,
                     sound: t.item.sound,
-                    suppressPlaySound: p,
-                    focused: T,
-                    onMouseEnter: () => g(d),
-                    onSelectItem: (e) => m(t, e),
+                    suppressPlaySound: _,
+                    focused: S,
+                    onMouseEnter: () => m(u),
+                    onSelectItem: (e) => h(t, e),
                     enableSecondaryActions: !0,
-                    buttonOverlay: E,
-                    inNitroLockedSection: b,
-                    showLockForDisabledSound: y,
-                    refreshEnabled: O,
-                    isSoundmoji: !0 === v
+                    buttonOverlay: g,
+                    inNitroLockedSection: E,
+                    showLockForDisabledSound: b,
+                    refreshEnabled: y,
+                    isSoundmoji: !0 === O
                 })
             );
         case o.vB.ADD_SOUND:
             return (0, r.createElement)(
-                l.Z,
-                f(u({}, h(d)), {
-                    key: S,
-                    guild: t.item.guild,
-                    focused: T,
-                    onSelectItem: () => m(t),
-                    refreshEnabled: O
-                })
-            );
-        case o.vB.SHOW_ALL:
-            return (0, r.createElement)(
                 s.Z,
-                f(u({}, h(d)), {
-                    key: S,
+                d(c({}, p(u)), {
+                    key: I,
                     guild: t.item.guild,
-                    focused: T
+                    focused: S,
+                    onSelectItem: () => h(t),
+                    refreshEnabled: y
                 })
             );
     }

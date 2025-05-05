@@ -19,8 +19,8 @@ var i = n(200651),
     N = n(74888),
     f = n(444899),
     b = n(11352),
-    C = n(610617),
-    O = n(777861),
+    O = n(610617),
+    C = n(777861),
     E = n(131704),
     Z = n(592125),
     _ = n(324067),
@@ -208,7 +208,7 @@ class B extends s.PureComponent {
                                                 className: U.muteUntilTitle,
                                                 children: D.intl.string(D.t.Ztu2Ym)
                                             }),
-                                            (0, i.jsx)(O.Z, {
+                                            (0, i.jsx)(C.Z, {
                                                 className: U.muteUntilText,
                                                 muteConfig: n
                                             })
@@ -317,7 +317,7 @@ class B extends s.PureComponent {
         if (e)
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(C.Z, {
+                    (0, i.jsx)(O.Z, {
                         guildId: t,
                         onClose: n
                     }),

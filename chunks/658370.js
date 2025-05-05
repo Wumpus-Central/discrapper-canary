@@ -49,7 +49,7 @@ let b = (e) => {
                     look: l.zxk.Looks.BLANK,
                     color: l.zxk.Colors.CUSTOM,
                     subscriptionTier: p.Si.TIER_2,
-                    buttonText: y,
+                    textOptions: { textOverride: y },
                     showGradient: !0
                 }),
             0 !== C.length &&
