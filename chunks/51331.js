@@ -8,15 +8,15 @@ var i = n(200651),
     c = n(169957);
 function d(e) {
     let { value: t, onChange: n, className: s, note: d, title: u, disabled: m } = e,
-        p = r.useRef(null),
         g = r.useRef(null),
+        p = r.useRef(null),
         h = r.useId(),
         f = (0, i.jsx)(a.rsf, {
             id: h,
             checked: t,
             onChange: n,
             focusProps: { enabled: !1 },
-            innerRef: p,
+            innerRef: g,
             disabled: m
         });
     return (0, i.jsx)('div', {
@@ -24,8 +24,8 @@ function d(e) {
         children: (0, i.jsx)(a.tEY, {
             within: !0,
             offset: -4,
-            focusTarget: p,
-            ringTarget: g,
+            focusTarget: g,
+            ringTarget: p,
             children: (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)('div', {

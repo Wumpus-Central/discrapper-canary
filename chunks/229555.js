@@ -10,7 +10,7 @@ var r = n(120356),
     d = n(474936),
     u = n(388032),
     m = n(536564);
-let p = (e, t) =>
+let g = (e, t) =>
         (null == e ? void 0 : e.status) === o.Vq.EARNED
             ? u.intl.format(u.t.Hu4jfn, { date: null != t ? t : new Date() })
             : (null == e ? void 0 : e.status) === o.Vq.UPCOMING
@@ -19,7 +19,7 @@ let p = (e, t) =>
                     days: e.daysLeft
                 })
               : null,
-    g = (e) => {
+    p = (e) => {
         switch (e) {
             case d.VU.PREMIUM_TENURE_1_MONTH:
                 return m.badgeBronzeGlow;
@@ -51,7 +51,7 @@ let p = (e, t) =>
             _ = u.intl.string(h),
             x = (0, a.q)(d, f);
         return (0, i.jsxs)('div', {
-            className: s()(m.container, g(d)),
+            className: s()(m.container, p(d)),
             children: [
                 (0, i.jsx)('div', {}),
                 ' ',
@@ -78,7 +78,7 @@ let p = (e, t) =>
                         }),
                         (0, i.jsx)(l.xv, {
                             variant: 'text-xs/normal',
-                            children: p(t, n)
+                            children: g(t, n)
                         })
                     ]
                 })

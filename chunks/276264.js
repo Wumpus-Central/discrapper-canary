@@ -296,6 +296,7 @@ let G = (0, C.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                         U(
                             k(
                                 {
+                                    name: null != b ? b : ed,
                                     quest: eC,
                                     memberListItemRef: e_,
                                     applicationStream: w,
@@ -306,7 +307,7 @@ let G = (0, C.Mg)(l.Z.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING),
                             { closePopout: () => eN(!0) }
                         )
                     ),
-                [eC, e_, w, eT]
+                [eC, e_, w, eT, b, ed]
             );
         return null == y
             ? (0, r.jsx)(m.Z, {

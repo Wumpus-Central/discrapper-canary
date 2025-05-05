@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => g });
 var i = n(200651),
     r = n(192379),
     s = n(481060),
@@ -9,19 +9,19 @@ var i = n(200651),
     d = n(726985),
     u = n(388032),
     m = n(20493);
-function p(e) {
+function g(e) {
     let { refreshStyles: t = !1 } = e,
         n = o.I0.useSetting(),
-        { analyticsLocations: p } = (0, l.ZP)(),
-        g = r.useCallback(
+        { analyticsLocations: g } = (0, l.ZP)(),
+        p = r.useCallback(
             (e) => {
-                (0, c.Z)('stream_previews_disabled', e, o.I0.getSetting(), p), o.I0.updateSetting(e);
+                (0, c.Z)('stream_previews_disabled', e, o.I0.getSetting(), g), o.I0.updateSetting(e);
             },
-            [p]
+            [g]
         ),
         h = (0, i.jsx)(s.j7V, {
             value: n,
-            onChange: g,
+            onChange: p,
             note: u.intl.string(u.t.jTNPHB),
             hideBorder: t,
             children: u.intl.string(u.t['1CzWUF'])

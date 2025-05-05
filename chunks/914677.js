@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var i = n(200651),
     r = n(192379),
     s = n(780384),
@@ -38,22 +38,22 @@ let c = 'url(#gradient)',
                 return;
         }
     },
-    p = (e) => {
-        let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: p = 0, progressCircleStrokeSize: g = 2, progressCircleVariation: h, progressCircleStroke: f } = e,
-            b = 43 + g / 2,
+    g = (e) => {
+        let { percentage: t = 0, children: n, animationClassName: c, initialPercentage: g = 0, progressCircleStrokeSize: p = 2, progressCircleVariation: h, progressCircleStroke: f } = e,
+            b = 43 + p / 2,
             _ = 2 * Math.PI * b,
-            [x, E] = r.useState(p);
+            [x, E] = r.useState(g);
         r.useEffect(() => {
             let e = setTimeout(() => {
                 E(t);
             }, 200);
             return () => clearTimeout(e);
         }, [t]);
-        let j = (0, l.ZP)(),
-            C = (0, s.ap)(j),
+        let C = (0, l.ZP)(),
+            j = (0, s.ap)(C),
             O = u(h),
-            S = d(h, C),
-            v = null != f ? f : m(C, h);
+            S = d(h, j),
+            v = null != f ? f : m(j, h);
         return (0, i.jsxs)('div', {
             className: o.circleContainer,
             children: [
@@ -64,7 +64,7 @@ let c = 'url(#gradient)',
                         (0, i.jsx)('circle', {
                             className: h === a.Qo.NITRO_GEM || h === a.Qo.AVATAR_DECO ? o.baseProgressCircle : void 0,
                             fill: 'transparent',
-                            strokeWidth: g,
+                            strokeWidth: p,
                             r: ''.concat(b),
                             cx: '50%',
                             cy: '50%',
@@ -73,7 +73,7 @@ let c = 'url(#gradient)',
                         }),
                         (0, i.jsx)('circle', {
                             stroke: v,
-                            strokeWidth: g,
+                            strokeWidth: p,
                             strokeLinecap: 'round',
                             strokeDasharray: ''.concat(_, ' ').concat(_),
                             className: c,

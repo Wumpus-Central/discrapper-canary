@@ -1,6 +1,6 @@
 n.d(t, {
-    F: () => j,
-    I: () => C
+    F: () => C,
+    I: () => j
 }),
     n(953529),
     n(388685);
@@ -14,8 +14,8 @@ var i = n(200651),
     d = n(695346),
     u = n(70956),
     m = n(51144),
-    p = n(246133),
-    g = n(981631),
+    g = n(246133),
+    p = n(981631),
     h = n(388032),
     f = n(404255);
 let b = [
@@ -68,10 +68,10 @@ function x(e, t) {
 function E(e) {
     let { status: t, currentStatus: n, description: s } = e,
         { showTempStatusOptions: o, hasDefaultClickOption: c, hasButtonStyling: d } = a.Y.useExperiment({ location: 'UserProfileAccountPopout' }),
-        h = o && t !== g.Skl.ONLINE,
+        h = o && t !== p.Skl.ONLINE,
         [x, E] = r.useState(void 0),
-        j = void 0 !== x && t === n,
-        C = (0, i.jsx)(i.Fragment, {
+        C = void 0 !== x && t === n,
+        j = (0, i.jsx)(i.Fragment, {
             children: b.map((e) => {
                 let { duration: r, label: s } = e;
                 return (0, i.jsx)(
@@ -80,7 +80,7 @@ function E(e) {
                         id: ''.concat(t, '-').concat(r),
                         label: s(),
                         action: () =>
-                            (0, p.Z)({
+                            (0, g.Z)({
                                 nextStatus: t,
                                 prevStatus: n,
                                 durationMillis: r
@@ -102,7 +102,7 @@ function E(e) {
                         onClick: (e) => {
                             e.stopPropagation(),
                                 E(r),
-                                (0, p.Z)({
+                                (0, g.Z)({
                                     nextStatus: t,
                                     prevStatus: n,
                                     durationMillis: null != r ? r : void 0
@@ -143,23 +143,23 @@ function E(e) {
                             className: f.description,
                             children: s
                         }),
-                    h && d && j ? O : void 0
+                    h && d && C ? O : void 0
                 ]
             });
         },
         action: () => {
             E(h ? u.Z.Millis.DAY : null),
-                (0, p.Z)({
+                (0, g.Z)({
                     nextStatus: t,
                     prevStatus: n,
                     durationMillis: c && h ? u.Z.Millis.DAY : void 0
                 });
         },
         dontCloseOnAction: !0,
-        children: h && !d ? C : void 0
+        children: h && !d ? j : void 0
     });
 }
-function j(e) {
+function C(e) {
     if (null == e || '0' === e) return;
     let t = new Date(Number(e)),
         n = x(t, new Date()),
@@ -173,20 +173,20 @@ function j(e) {
               timeString: h.intl.data.formatTime(t, { format: 'short' })
           });
 }
-function C(e) {
+function j(e) {
     let { hasNewStrings: t } = a.Y.useExperiment({ location: 'UserProfileAccountPopout' }),
         n = d.Cr.useSetting(),
         r = (0, o.p)(),
         u = c.e.useExperiment({ location: 'UserProfileAccountPopout' }).allowQuietMode || r,
         m = d.fv.useSetting(),
-        p = e === g.Skl.DND,
+        g = e === p.Skl.DND,
         _ = (i) => {
-            let r = j(n);
+            let r = C(n);
             if (e === i && null != r) return r;
             switch (i) {
-                case g.Skl.DND:
+                case p.Skl.DND:
                     return u ? h.intl.string(h.t.day5Aw) : t ? h.intl.string(h.t['tq/fMD']) : h.intl.string(h.t.U9Vv19);
-                case g.Skl.INVISIBLE:
+                case p.Skl.INVISIBLE:
                     return t ? h.intl.string(h.t.zPc6MT) : h.intl.string(h.t.MqanVF);
                 default:
                     return;
@@ -209,28 +209,28 @@ function C(e) {
                 );
             })
         }),
-        C = E({
-            status: g.Skl.ONLINE,
+        j = E({
+            status: p.Skl.ONLINE,
             currentStatus: e
         }),
         O = E({
-            status: g.Skl.IDLE,
+            status: p.Skl.IDLE,
             currentStatus: e,
-            description: _(g.Skl.IDLE)
+            description: _(p.Skl.IDLE)
         }),
         S = E({
-            status: g.Skl.DND,
+            status: p.Skl.DND,
             currentStatus: e,
-            description: _(g.Skl.DND)
+            description: _(p.Skl.DND)
         }),
         v = E({
-            status: g.Skl.INVISIBLE,
+            status: p.Skl.INVISIBLE,
             currentStatus: e,
-            description: _(g.Skl.INVISIBLE)
+            description: _(p.Skl.INVISIBLE)
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            C,
+            j,
             (0, i.jsx)(l.Clw, {}, 'menu-separator-statuses'),
             O,
             S,
@@ -260,8 +260,8 @@ function C(e) {
                                                   children: [
                                                       h.intl.string(h.t.gJRnwM),
                                                       (0, i.jsx)(l.IGR, {
-                                                          text: r ? h.intl.string(h.t.ApAu9f) : p ? h.intl.string(h.t.gH3Fra) : h.intl.string(h.t['64pl8/']),
-                                                          color: r ? s.Z.BRAND_500 : p ? s.Z.RED_400 : s.Z.PRIMARY_500
+                                                          text: r ? h.intl.string(h.t.ApAu9f) : g ? h.intl.string(h.t.gH3Fra) : h.intl.string(h.t['64pl8/']),
+                                                          color: r ? s.Z.BRAND_500 : g ? s.Z.RED_400 : s.Z.PRIMARY_500
                                                       })
                                                   ]
                                               }),

@@ -67,41 +67,41 @@ function B(e, t) {
     return null != e && null != t && (0, m.p9)(t, O.Z, b.Z, y.Z, h.Z)[0];
 }
 function V(e) {
-    var t, n, h, m, b;
-    let { quest: y, memberListItemRef: O, applicationStream: A, position: M, closePopout: k, updatePosition: V, impressionRef: F } = e,
-        Z = (0, s.e7)([E.Z], () => {
+    var t, h, m, b, y;
+    let { quest: O, memberListItemRef: A, applicationStream: M, position: V, closePopout: F, updatePosition: Z, impressionRef: H, name: Y } = e,
+        W = (0, s.e7)([E.Z], () => {
             var e;
-            return null != (e = E.Z.getChannel(null == A ? void 0 : A.channelId)) ? e : null;
+            return null != (e = E.Z.getChannel(null == M ? void 0 : M.channelId)) ? e : null;
         }),
-        H = (0, C.hf)({
-            quest: y,
+        K = (0, C.hf)({
+            quest: O,
             location: S.jn.MEMBERS_LIST
         }),
-        Y = (0, I.tP)(y),
-        W = (null == y || null == (t = y.userStatus) ? void 0 : t.claimedAt) != null,
-        K = (null == y || null == (n = y.userStatus) ? void 0 : n.enrolledAt) != null,
-        z = (null == y || null == (h = y.userStatus) ? void 0 : h.completedAt) != null,
-        q = (0, s.e7)([g.Z], () => g.Z.getState().theme),
-        Q = (0, l.wj)(q) ? D.BR.DARK : D.BR.LIGHT,
-        X = (0, s.e7)([p.Z], () => p.Z.useReducedMotion),
-        { ref: J, height: $ } = (0, f.ZP)(),
-        [ee, et] = i.useState(X),
-        en = (0, _.Aq)(),
-        er = (0, a.eg)();
+        z = (0, I.tP)(O),
+        q = (null == O || null == (t = O.userStatus) ? void 0 : t.claimedAt) != null,
+        Q = (null == O || null == (h = O.userStatus) ? void 0 : h.enrolledAt) != null,
+        X = (null == O || null == (m = O.userStatus) ? void 0 : m.completedAt) != null,
+        J = (0, s.e7)([g.Z], () => g.Z.getState().theme),
+        $ = (0, l.wj)(J) ? D.BR.DARK : D.BR.LIGHT,
+        ee = (0, s.e7)([p.Z], () => p.Z.useReducedMotion),
+        { ref: et, height: en } = (0, f.ZP)(),
+        [er, ei] = i.useState(ee),
+        eo = (0, _.Aq)(),
+        ea = (0, a.eg)();
     i.useEffect(() => {
-        let e = er.current;
+        let e = ea.current;
         return (
-            null == e || e.addEventListener('scroll', k),
+            null == e || e.addEventListener('scroll', F),
             () => {
-                null == e || e.removeEventListener('scroll', k);
+                null == e || e.removeEventListener('scroll', F);
             }
         );
-    }, [k, er]),
+    }, [F, ea]),
         i.useEffect(() => {
-            let e = er.current,
-                t = O.current;
+            let e = ea.current,
+                t = A.current;
             if (null == e || null == t) return;
-            let n = new MutationObserver(() => V());
+            let n = new MutationObserver(() => Z());
             return (
                 n.observe(e, {
                     childList: !0,
@@ -111,17 +111,17 @@ function V(e) {
                     n.disconnect();
                 }
             );
-        }, [O, er, V]);
-    let ei = (0, c.q_F)({
+        }, [A, ea, Z]);
+    let es = (0, c.q_F)({
             from: { height: 0 },
-            height: null != $ ? $ : 0,
+            height: null != en ? en : 0,
             config: {
                 tension: 450,
                 friction: 45
             },
-            onRest: () => et(!0)
+            onRest: () => ei(!0)
         }),
-        eo = (0, c.Yzy)(ee, {
+        el = (0, c.Yzy)(er, {
             from: {
                 opacity: 0,
                 scale: 0
@@ -131,98 +131,117 @@ function V(e) {
                 scale: 1
             }
         }),
-        ea = () => {
-            en.dispatch(w.CkL.POPOUT_CLOSE);
+        ec = () => {
+            eo.dispatch(w.CkL.POPOUT_CLOSE);
         },
-        es = 'top' === M ? ''.concat(j, ' ').concat(j, ' 0 0') : '0 0 '.concat(j, ' ').concat(j);
-    if (null == y || Y || (W && !B(A, Z))) return null;
-    let el = () => {
+        eu = 'top' === V ? ''.concat(j, ' ').concat(j, ' 0 0') : '0 0 '.concat(j, ' ').concat(j);
+    if (null == O || z || (q && !B(M, W))) return null;
+    let ed = () => {
             (0, v._3)({
-                questId: y.id,
+                questId: O.id,
                 questContent: S.jn.MEMBERS_LIST,
                 questContentCTA: v.jZ.OPEN_DISCLOSURE,
                 trackGuildAndChannelMetadata: !0
             }),
-                (0, R.openDisclosureModal)(y, {
+                (0, R.openDisclosureModal)(O, {
                     content: S.jn.MEMBERS_LIST,
                     ctaContent: v.jZ.OPEN_DISCLOSURE
                 });
         },
-        ec = () => {
+        ef = () => {
             (0, v._3)({
-                questId: y.id,
+                questId: O.id,
                 questContent: S.jn.MEMBERS_LIST,
                 questContentCTA: v.jZ.LEARN_MORE,
                 trackGuildAndChannelMetadata: !0
             }),
                 (0, R.navigateToQuestHome)({
                     fromContent: S.jn.MEMBERS_LIST,
-                    questId: y.id
+                    questId: O.id
                 });
         },
-        eu = (e) => {
-            e.stopPropagation(), el();
+        e_ = (e) => {
+            e.stopPropagation(), ed();
         },
-        ed = () => {
-            if (B(A, Z) && null != Z)
-                return (
-                    (0, v._3)({
-                        questId: y.id,
-                        questContent: S.jn.MEMBERS_LIST,
-                        questContentCTA: v.jZ.WATCH_STREAM,
-                        trackGuildAndChannelMetadata: !0
-                    }),
-                    u.default.selectVoiceChannel(Z.id),
-                    (0, d.iV)(A)
-                );
-            ec();
+        ep = () => {
+            B(M, W) && null != W
+                ? ((0, v._3)({
+                      questId: O.id,
+                      questContent: S.jn.MEMBERS_LIST,
+                      questContentCTA: v.jZ.WATCH_STREAM,
+                      trackGuildAndChannelMetadata: !0
+                  }),
+                  (0, c.ZDy)(async () => {
+                      let { default: e } = await n.e('85045').then(n.bind(n, 748862));
+                      return (t) =>
+                          (0, r.jsx)(
+                              e,
+                              k(
+                                  {
+                                      username: null != Y ? Y : '',
+                                      onConfirm: () => (
+                                          (0, v._3)({
+                                              questId: O.id,
+                                              questContent: S.jn.MEMBERS_LIST,
+                                              questContentCTA: v.jZ.WATCH_STREAM_CONFIRM,
+                                              trackGuildAndChannelMetadata: !0
+                                          }),
+                                          u.default.selectVoiceChannel(W.id),
+                                          (0, d.iV)(M)
+                                      )
+                                  },
+                                  t
+                              )
+                          );
+                  }))
+                : ef();
         },
-        ef =
-            z && !W
+        eh =
+            X && !q
                 ? {
                       headerText: L.intl.string(L.t.gHerLS),
                       ctaText: L.intl.string(L.t.cfY4PD),
-                      handleClickCta: H,
+                      handleClickCta: K,
                       tileAssetType: 'reward'
                   }
-                : K && !W
+                : Q && !q
                   ? {
                         headerText: L.intl.string(L.t.uH2sf3),
                         ctaText: L.intl.string(L.t.VN1Ajo),
-                        handleClickCta: ec,
+                        handleClickCta: ef,
                         tileAssetType: 'reward'
                     }
-                  : B(A, Z)
+                  : B(M, W)
                     ? {
                           headerText: L.intl.string(L.t.Bz6SkJ),
                           ctaText: L.intl.string(L.t.BXFP39),
-                          handleClickCta: ed,
+                          handleClickCta: ep,
                           tileAssetType: 'game'
                       }
                     : {
                           headerText: L.intl.string(L.t.Bz6SkJ),
                           ctaText: L.intl.string(L.t.BSXPZ2),
-                          handleClickCta: ec,
+                          handleClickCta: ef,
                           tileAssetType: 'game'
                       };
     return (0, r.jsx)(o.animated.div, {
         ref: (e) => {
-            F.current = e;
+            H.current = e;
         },
-        'aria-expanded': ee,
+        'aria-expanded': er,
         className: x.wrapper,
         style: {
-            width: null != (b = null == (m = O.current) ? void 0 : m.clientWidth) ? b : G,
-            height: ei.height,
-            overflow: ee ? 'visible' : 'hidden',
-            borderRadius: es
+            width: null != (y = null == (b = A.current) ? void 0 : b.clientWidth) ? y : G,
+            height: es.height,
+            overflow: er ? 'visible' : 'hidden',
+            borderRadius: eu
         },
         children: (0, r.jsxs)('div', {
             ref: (e) => {
-                J.current = e;
+                et.current = e;
             },
             className: x.container,
-            style: { borderRadius: es },
+            style: { borderRadius: eu },
             children: [
                 (0, r.jsxs)('div', {
                     className: x.top,
@@ -232,19 +251,19 @@ function V(e) {
                             children: [
                                 (0, r.jsx)(c.X6q, {
                                     variant: 'heading-sm/semibold',
-                                    children: ef.headerText
+                                    children: eh.headerText
                                 }),
                                 (0, r.jsxs)(c.P3F, {
                                     className: x.help,
                                     onClick: (e) => {
-                                        ea(), eu(e);
+                                        ec(), e_(e);
                                     },
                                     children: [
                                         (0, r.jsx)(c.Text, {
                                             variant: 'text-xs/medium',
                                             color: 'text-muted',
                                             className: x.helpText,
-                                            children: L.intl.format(L.t['Lm8/mJ'], { gamePublisher: y.config.messages.gamePublisher })
+                                            children: L.intl.format(L.t['Lm8/mJ'], { gamePublisher: O.config.messages.gamePublisher })
                                         }),
                                         (0, r.jsx)(c.idN, {
                                             size: 'custom',
@@ -262,7 +281,7 @@ function V(e) {
                             children: (0, r.jsxs)('div', {
                                 className: x.imgWrapper,
                                 children: [
-                                    eo(
+                                    el(
                                         (e, t) =>
                                             t &&
                                             (0, r.jsx)(o.animated.div, {
@@ -270,23 +289,23 @@ function V(e) {
                                                 className: x.imgUnderlay
                                             })
                                     ),
-                                    'game' === ef.tileAssetType &&
+                                    'game' === eh.tileAssetType &&
                                         (0, r.jsx)('img', {
                                             alt: L.intl.formatToPlainString(L.t.IskzPj, {
-                                                gameTitle: y.config.messages.gameTitle,
-                                                gamePublisher: y.config.messages.gamePublisher
+                                                gameTitle: O.config.messages.gameTitle,
+                                                gamePublisher: O.config.messages.gamePublisher
                                             }),
                                             className: x.assetTile,
-                                            src: (0, T.fh)(y, T.eC.GAME_TILE, Q).url
+                                            src: (0, T.fh)(O, T.eC.GAME_TILE, $).url
                                         }),
-                                    'reward' === ef.tileAssetType &&
+                                    'reward' === eh.tileAssetType &&
                                         (0, r.jsx)(N.Z, {
                                             className: x.assetTile,
-                                            quest: y,
+                                            quest: O,
                                             questContent: S.jn.MEMBERS_LIST,
                                             learnMoreStyle: 'icon',
                                             location: P.dr.MEMBERS_LIST,
-                                            onClick: ea
+                                            onClick: ec
                                         })
                                 ]
                             })
@@ -295,11 +314,11 @@ function V(e) {
                 }),
                 (0, r.jsx)(c.zxk, {
                     onClick: () => {
-                        ea(), ef.handleClickCta();
+                        ec(), eh.handleClickCta();
                     },
                     color: c.zxk.Colors.CUSTOM,
                     className: x.ctaButton,
-                    children: ef.ctaText
+                    children: eh.ctaText
                 })
             ]
         })

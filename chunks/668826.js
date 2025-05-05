@@ -3,9 +3,9 @@ n.d(t, {
     TD: () => d,
     YM: () => h,
     Z_: () => c,
-    Zj: () => g,
+    Zj: () => p,
     cn: () => u,
-    jA: () => p,
+    jA: () => g,
     xD: () => o,
     yW: () => m
 }),
@@ -50,13 +50,13 @@ function u(e, t) {
 function m() {
     return r.Z.dispatch({ type: 'CLICKER_GAME_RESET' });
 }
-function p(e) {
+function g(e) {
     return r.Z.dispatch({
         type: 'CLICKER_GAME_SET_VOLUME',
         volume: e
     });
 }
-function g(e) {
+function p(e) {
     return r.Z.dispatch({
         type: 'CLICKER_GAME_SET_MUTED',
         isMuted: e

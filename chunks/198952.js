@@ -17,7 +17,7 @@ let d = l.ZP.getEnableHardwareAcceleration() ? r.Xo$ : r.qEK,
             {
                 avatarSrc: u,
                 avatarDecorationSrc: m,
-                eventHandlers: p
+                eventHandlers: g
             } = (0, s.Z)({
                 user: l,
                 size: c
@@ -48,7 +48,7 @@ let d = l.ZP.getEnableHardwareAcceleration() ? r.Xo$ : r.qEK,
                         });
                 }
                 return e;
-            })({}, p)),
+            })({}, g)),
             (n = n =
                 {
                     children: (0, i.jsx)(d, {

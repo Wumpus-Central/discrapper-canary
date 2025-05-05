@@ -28,13 +28,13 @@ function c(e) {
             }
             return r;
         })(e, ['children', 'lineClamp']);
-    let [m, p] = r.useState(!1),
-        [g, h] = r.useState(null),
+    let [m, g] = r.useState(!1),
+        [p, h] = r.useState(null),
         f =
-            null != g &&
+            null != p &&
             (0, i.jsx)('button', {
                 className: o.button,
-                onClick: () => p((e) => !e),
+                onClick: () => g((e) => !e),
                 children: (0, i.jsxs)(l.Text, {
                     className: o.seeMore,
                     variant: 'text-sm/medium',
@@ -68,7 +68,7 @@ function c(e) {
     }, [x, c, d]);
     let E = 'auto';
     return (
-        null != g && (E = m ? ''.concat(g.expandedHeight, 'px') : ''.concat(g.truncatedHeight, 'px')),
+        null != p && (E = m ? ''.concat(p.expandedHeight, 'px') : ''.concat(p.truncatedHeight, 'px')),
         (0, i.jsxs)('div', {
             children: [
                 (0, i.jsx)(

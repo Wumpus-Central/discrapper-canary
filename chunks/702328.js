@@ -1,4 +1,4 @@
-n.d(t, { Z: () => ep }), n(388685);
+n.d(t, { Z: () => eg }), n(388685);
 var i = n(200651),
     r = n(192379),
     s = n(120356),
@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(481060),
     u = n(634894),
     m = n(410030),
-    p = n(607070),
-    g = n(100527),
+    g = n(607070),
+    p = n(100527),
     h = n(906732),
     f = n(70097),
     b = n(433811),
     _ = n(214852),
     x = n(594174),
     E = n(78839),
-    j = n(626135),
-    C = n(526167),
+    C = n(626135),
+    j = n(526167),
     O = n(74538),
     S = n(140465),
     v = n(278605),
@@ -110,7 +110,7 @@ let ed = (e) => {
               })
             : null;
     },
-    ep = (e) => {
+    eg = (e) => {
         var t, n;
         let { isFullscreen: s, entrypoint: k } = e;
         (0, _.z)(b.X);
@@ -119,22 +119,22 @@ let ed = (e) => {
             V = r.useRef(null),
             G = r.useRef(null),
             Q = r.useRef(null),
-            ep = r.useRef(null),
             eg = r.useRef(null),
+            ep = r.useRef(null),
             eh = r.useRef(null),
-            ef = (0, a.e7)([p.Z], () => p.Z.useReducedMotion),
+            ef = (0, a.e7)([g.Z], () => g.Z.useReducedMotion),
             eb = (0, m.ZP)(),
             e_ = (0, c.wj)(eb),
             ex = x.default.getCurrentUser(),
             eE = (0, O.I5)(ex),
-            ej = (0, v.xP)('PremiumMarketingHome'),
-            eC = (0, T.C)('PremiumMarketingHome'),
-            eO = ((ej && !eE) || (eE && eC)) && B,
+            eC = (0, v.xP)('PremiumMarketingHome'),
+            ej = (0, T.C)('PremiumMarketingHome'),
+            eO = ((eC && !eE) || (eE && ej)) && B,
             [eS, ev] = r.useState(!1),
             [eT, eI] = r.useState(!1),
             [eN, ey] = r.useState(!1),
             [eA, eP] = r.useState(!1),
-            eR = (0, C.rO)(),
+            eR = (0, j.rO)(),
             [eD, eZ] = r.useState(!1),
             ew = (0, a.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()),
             ek = null != ew ? (0, O.Af)(ew) : null,
@@ -149,7 +149,7 @@ let ed = (e) => {
             eW = (0, D.Vi)(),
             eY = null != eW && eW,
             eK = null == (n = (0, I.Z)()) ? void 0 : n.billingSettingsMarketingBanner,
-            { analyticsLocations: eq } = (0, h.ZP)(g.Z.PREMIUM_MARKETING),
+            { analyticsLocations: eq } = (0, h.ZP)(p.Z.PREMIUM_MARKETING),
             eX = 'PremiumMarketingHome';
         (0, u.j)({
             location: eX + ' auto on',
@@ -251,7 +251,7 @@ let ed = (e) => {
                               className: l()({ [en.heroHeadingV2Container]: eO }),
                               children: [
                                   (0, i.jsx)(o.$, {
-                                      innerRef: eO ? Q : ep,
+                                      innerRef: eO ? Q : eg,
                                       onChange: (e) => ev(e),
                                       threshold: 0,
                                       active: !0,
@@ -264,7 +264,7 @@ let ed = (e) => {
                                                 isDarkMode: e_
                                             })
                                           : (0, i.jsx)(M.ZP, {
-                                                ref: ep,
+                                                ref: eg,
                                                 subscriptionTier: eB,
                                                 isFullscreen: s || ez,
                                                 isMarketingPageV2Enabled: eO,
@@ -359,12 +359,12 @@ let ed = (e) => {
                         isMarketingPageV2: eO
                     }),
                     (0, i.jsx)(o.$, {
-                        innerRef: eg,
+                        innerRef: ep,
                         onChange: (e) => {
-                            e && !eA && (j.default.track($.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eq }), eP(!0));
+                            e && !eA && (C.default.track($.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eq }), eP(!0));
                         },
                         children: (0, i.jsx)('div', {
-                            ref: eg,
+                            ref: ep,
                             className: en.bottomOfPageVisibilitySensor
                         })
                     }),

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var i = n(200651),
     r = n(192379),
     s = n(823379),
@@ -33,7 +33,7 @@ function m(e) {
     }
     return e;
 }
-function p(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -51,10 +51,10 @@ function p(e, t) {
         e
     );
 }
-function g(e) {
+function p(e) {
     let { subscriptions: t, updateHeader: n } = e,
-        [g, h] = r.useState({ route: c.j.HOME }),
-        { route: f } = g,
+        [p, h] = r.useState({ route: c.j.HOME }),
+        { route: f } = p,
         b = () => {
             h({ route: c.j.HOME });
         },
@@ -67,18 +67,18 @@ function g(e) {
             var e;
             let t = null == (e = n.items[0]) ? void 0 : e.planId;
             null != t &&
-                (E((e) => p(m({}, e), { [n.id]: o.G.LOADING })),
+                (E((e) => g(m({}, e), { [n.id]: o.G.LOADING })),
                 (0, l.vY)(t)
                     .then(() => {
-                        E((e) => p(m({}, e), { [n.id]: o.G.DONE }));
+                        E((e) => g(m({}, e), { [n.id]: o.G.DONE }));
                     })
                     .catch(() => {
-                        E((e) => p(m({}, e), { [n.id]: o.G.ERROR }));
+                        E((e) => g(m({}, e), { [n.id]: o.G.ERROR }));
                     }));
         }
     }, [t]);
-    let { loadState: j } = (0, a.qz)(),
-        C = j !== a.jd.LOADED;
+    let { loadState: C } = (0, a.qz)(),
+        j = C !== a.jd.LOADED;
     switch (f) {
         case c.j.HOME:
             return (0, i.jsx)(i.Fragment, {
@@ -89,14 +89,14 @@ function g(e) {
                         {
                             subscription: e,
                             navigateToSwitchPlan: _,
-                            loadingState: C ? o.G.LOADING : null != (t = x[e.id]) ? t : o.G.LOADING
+                            loadingState: j ? o.G.LOADING : null != (t = x[e.id]) ? t : o.G.LOADING
                         },
                         e.id
                     );
                 })
             });
         case c.j.SWITCH_APP_PLANS:
-            let { route: O } = g,
+            let { route: O } = p,
                 S = (function (e, t) {
                     if (null == e) return {};
                     var n,
@@ -115,8 +115,8 @@ function g(e) {
                         for (i = 0; i < s.length; i++) (n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
                     }
                     return r;
-                })(g, ['route']);
-            return (0, i.jsx)(d.Z, p(m({}, S), { navigateToHome: b }));
+                })(p, ['route']);
+            return (0, i.jsx)(d.Z, g(m({}, S), { navigateToHome: b }));
         default:
             (0, s.vE)(f);
     }

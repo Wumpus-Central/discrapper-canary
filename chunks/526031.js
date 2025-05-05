@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => p });
 var i = n(200651),
     r = n(704215),
     s = n(481060),
@@ -9,9 +9,9 @@ var i = n(200651),
     d = n(921944),
     u = n(388032),
     m = n(385255);
-function p(e) {
+function g(e) {
     let { markAsDismissed: t } = e,
-        { analyticsLocations: p } = (0, a.ZP)(l.Z.CUSTOM_STATUS_TAGS_COACHMARK);
+        { analyticsLocations: g } = (0, a.ZP)(l.Z.CUSTOM_STATUS_TAGS_COACHMARK);
     return (0, i.jsx)(o.Z, {
         inlineArt: !0,
         dismissibleContent: r.z.CUSTOM_STATUS_PROMPTS_COACHMARK,
@@ -63,7 +63,7 @@ function p(e) {
                                 {
                                     showLabelSelectorNewTooltip: !0,
                                     location: 'CustomStatusTagsCoachmark',
-                                    sourceAnalyticsLocations: p,
+                                    sourceAnalyticsLocations: g,
                                     prompt: t
                                 }),
                             Object.getOwnPropertyDescriptors
@@ -101,7 +101,7 @@ function p(e) {
         className: m.container
     });
 }
-function g(e) {
+function p(e) {
     let { children: t, markAsDismissed: n } = e;
     return (0, i.jsx)(s.yRy, {
         onRequestClose: () => n(d.L.INDIRECT_ACTION),
@@ -109,7 +109,7 @@ function g(e) {
         align: 'center',
         shouldShow: !0,
         animation: s.yRy.Animation.TRANSLATE,
-        renderPopout: () => (0, i.jsx)(p, { markAsDismissed: n }),
+        renderPopout: () => (0, i.jsx)(g, { markAsDismissed: n }),
         children: t
     });
 }

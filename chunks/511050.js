@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => h,
-    l: () => g
+    l: () => p
 });
 var i = n(192379),
     r = n(442837),
@@ -12,8 +12,8 @@ var i = n(192379),
     d = n(822857),
     u = n(981631),
     m = n(46140);
-let p = new s.Z('VirtualCurrency'),
-    g = (e) => {
+let g = new s.Z('VirtualCurrency'),
+    p = (e) => {
         let { location: t } = e,
             { enabled: n } = (0, d.W)({ location: t }),
             s = (0, r.e7)(
@@ -25,10 +25,10 @@ let p = new s.Z('VirtualCurrency'),
                 },
                 [n]
             ),
-            g = (0, i.useCallback)(
+            p = (0, i.useCallback)(
                 (e) => {
                     let { forceOpen: t, delayMS: n = 500 } = e;
-                    if (null == s && !t) return void p.warn('Could not open Intro to Orbs Claimed Coachmark. Reward orb quantity not found or quest does not exist with ID '.concat(m.V6));
+                    if (null == s && !t) return void g.warn('Could not open Intro to Orbs Claimed Coachmark. Reward orb quantity not found or quest does not exist with ID '.concat(m.V6));
                     if (!(0, c.wH)()) {
                         let e = () =>
                             (0, o.hF)({
@@ -49,7 +49,7 @@ let p = new s.Z('VirtualCurrency'),
         return n
             ? {
                   rewardOrbQuantity: s,
-                  openIntroToOrbsClaimedCoachmark: g,
+                  openIntroToOrbsClaimedCoachmark: p,
                   closeIntroToOrbsClaimedCoachmark: h
               }
             : {
@@ -58,4 +58,4 @@ let p = new s.Z('VirtualCurrency'),
                   closeIntroToOrbsClaimedCoachmark: u.dG4
               };
     },
-    h = g;
+    h = p;

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => g });
 var i = n(200651);
 n(192379);
 var r = n(120356),
@@ -12,8 +12,8 @@ var r = n(120356),
 function m(e) {
     let { showChargingUpState: t, rowValueText: n, endsAt: r, fractionalState: a, activationDate: o } = e,
         m = t ? d.intl.string(d.t['hT6i//']) : d.intl.string(d.t['3G0CTE']),
-        p = t ? (void 0 === o ? null : d.intl.format(d.t['0Vwb/v'], { activateDate: o })) : a === c.a$.FP_SUB_PAUSED ? d.intl.format(d.t.MMvaIC, { resumeDate: r.toDate() }) : null,
-        g = s()({
+        g = t ? (void 0 === o ? null : d.intl.format(d.t['0Vwb/v'], { activateDate: o })) : a === c.a$.FP_SUB_PAUSED ? d.intl.format(d.t.MMvaIC, { resumeDate: r.toDate() }) : null,
+        p = s()({
             [u.fractionalUnactivatedPill]: t,
             [u.fractionalTimeRemainingPill]: !t
         }),
@@ -33,17 +33,17 @@ function m(e) {
                         className: f,
                         children: m
                     }),
-                    null !== p &&
+                    null !== g &&
                         (0, i.jsx)(l.Text, {
                             variant: 'text-sm/normal',
-                            children: p
+                            children: g
                         })
                 ]
             }),
             (0, i.jsx)('div', {
                 className: u.fractionalTimeRemainingPillWrapper,
                 children: (0, i.jsx)('div', {
-                    className: g,
+                    className: p,
                     children: (0, i.jsx)(l.Text, {
                         variant: 'text-sm/semibold',
                         className: h,
@@ -54,12 +54,12 @@ function m(e) {
         ]
     });
 }
-let p = function (e) {
+let g = function (e) {
     let { fractionalPremiumInfo: t, className: n, activationDate: r } = e,
         c = (0, o.jp)(t),
-        p = c.length > 0,
-        g = (0, a.ZP)(t.endsAt, a.aj.SHORT_TIME),
-        h = p ? c : g;
+        g = c.length > 0,
+        p = (0, a.ZP)(t.endsAt, a.aj.SHORT_TIME),
+        h = g ? c : p;
     return (0, i.jsx)('div', {
         children: (0, i.jsxs)('div', {
             className: s()(n, u.fractionalPremiumAccountCredit),
@@ -93,7 +93,7 @@ let p = function (e) {
                     })
                 }),
                 (0, i.jsx)(m, {
-                    showChargingUpState: p,
+                    showChargingUpState: g,
                     rowValueText: h,
                     endsAt: t.endsAt,
                     fractionalState: t.fractionalState,

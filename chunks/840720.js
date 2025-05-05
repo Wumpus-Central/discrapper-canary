@@ -9,7 +9,7 @@ var i = n(200651),
     d = n(131085),
     u = n(919563);
 function m(e) {
-    let { className: t, guildTag: n, guildBadge: s, onTagClick: m, guildId: p, guildName: g, guildIcon: h, guildIconSize: f } = e,
+    let { className: t, guildTag: n, guildBadge: s, onTagClick: m, guildId: g, guildName: p, guildIcon: h, guildIconSize: f } = e,
         b = r.useRef(null),
         [_, x] = r.useState(!1);
     return (
@@ -24,8 +24,8 @@ function m(e) {
                     className: u.guildPrefixContainer,
                     children: [
                         (0, i.jsx)(o.Ft, {
-                            guildId: p,
-                            guildName: g,
+                            guildId: g,
+                            guildName: p,
                             guildIcon: h,
                             iconSize: f,
                             className: u.guildPrefixIcon,
@@ -34,7 +34,7 @@ function m(e) {
                         (0, i.jsx)('div', {
                             className: u.details,
                             children: (0, i.jsx)(a.ua7, {
-                                text: g,
+                                text: p,
                                 color: a.ua7.Colors.PRIMARY,
                                 shouldShow: _,
                                 children: (e) => {
@@ -69,7 +69,7 @@ function m(e) {
                                         (n = n =
                                             {
                                                 className: u.guildName,
-                                                children: g
+                                                children: p
                                             }),
                                         Object.getOwnPropertyDescriptors
                                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -93,7 +93,7 @@ function m(e) {
                 (0, i.jsx)('div', {
                     className: u.tagContainer,
                     children: (0, i.jsx)(c.m0, {
-                        guildId: p,
+                        guildId: g,
                         className: u.tag,
                         guildTag: n,
                         guildBadge: s,

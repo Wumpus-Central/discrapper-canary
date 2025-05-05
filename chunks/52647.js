@@ -20,12 +20,12 @@ let u = () => {
         n = (0, a.x)(s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL, t),
         u = (0, a.x)(s.z.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK, t),
         m = (0, a.x)(s.z.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK, t),
-        p = i.useCallback(() => {
+        g = i.useCallback(() => {
             n.isDismissed && n.handleToggleDismissState(), u.isDismissed && u.handleToggleDismissState(), m.isDismissed && m.handleToggleDismissState(), l.Z.dispatch({ type: 'VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET' });
         }, [u, m, n]),
-        { handleResetStatusClick: g } = (0, o.kJ)(d.V6);
+        { handleResetStatusClick: p } = (0, o.kJ)(d.V6);
     return {
-        resetOnboardingAnnouncementModal: p,
-        resetQuestStatus: g
+        resetOnboardingAnnouncementModal: g,
+        resetQuestStatus: p
     };
 };

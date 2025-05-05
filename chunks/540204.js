@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(823379),
     u = n(997950),
     m = n(816108),
-    p = n(388032),
-    g = n(867198);
+    g = n(388032),
+    p = n(867198);
 let h = {
-    label: () => p.intl.string(p.t['32u1Dw']),
+    label: () => g.intl.string(g.t['32u1Dw']),
     value: u.Th
 };
 function f() {
     let { selectedGuildId: e, setSelectedGuildId: t } = (0, u.xu)(),
         n = (0, s.e7)([c.ZP], () => c.ZP.getFlattenedGuildIds()),
-        p = (0, s.e7)([o.Z], () => o.Z.getGuilds()),
+        g = (0, s.e7)([o.Z], () => o.Z.getGuilds()),
         { hideGuildOptions: f, hideGlobalOption: b } = (0, m.b)(),
         _ = n[0];
     r.useEffect(() => {
@@ -30,7 +30,7 @@ function f() {
                 ? []
                 : n
                       .map((e) => {
-                          let t = p[e];
+                          let t = g[e];
                           return null == t
                               ? null
                               : {
@@ -84,31 +84,31 @@ function f() {
                     ),
                 i
             );
-        }, [f, n, b, p]),
+        }, [f, n, b, g]),
         E = r.useCallback(
             (e) => {
                 let t = (null == e ? void 0 : e.label) === h.label() && (null == e ? void 0 : e.value) === h.value;
                 return null == e || '' === e.value || t
                     ? (0, i.jsx)('div', {
-                          className: g.clydeIconContainer,
+                          className: p.clydeIconContainer,
                           children: (0, i.jsx)(l.gw7, {
                               size: 'sm',
                               color: 'white',
                               'aria-hidden': !0,
-                              className: g.guildSelectOptionIcon
+                              className: p.guildSelectOptionIcon
                           })
                       })
                     : (0, i.jsx)(a.Z, {
-                          className: g.guildSelectOptionIcon,
-                          guild: p[e.value],
+                          className: p.guildSelectOptionIcon,
+                          guild: g[e.value],
                           size: a.Z.Sizes.SMALLER,
                           active: !0
                       });
             },
-            [p]
+            [g]
         );
     return (0, i.jsx)(l.VcW, {
-        wrapperClassName: g.searchableSelect,
+        wrapperClassName: p.searchableSelect,
         onChange: (e) => {
             t(e);
         },

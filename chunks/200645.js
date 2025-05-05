@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => p });
 var i = n(200651),
     r = n(192379),
     s = n(120356),
@@ -21,7 +21,7 @@ function m(e, t, n) {
         e
     );
 }
-class p extends r.PureComponent {
+class g extends r.PureComponent {
     async componentDidMount() {
         this.setState({
             openOnStartup: await c.ZP.getSetting('OPEN_ON_STARTUP', !0),
@@ -89,4 +89,4 @@ class p extends r.PureComponent {
             });
     }
 }
-let g = p;
+let p = g;

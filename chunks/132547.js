@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(214852),
     u = n(626135),
     m = n(314684),
-    p = n(794484),
-    g = n(347475),
+    g = n(794484),
+    p = n(347475),
     h = n(342414),
     f = n(391110),
     b = n(71363),
     _ = n(781800),
     x = n(981631),
     E = n(388032),
-    j = n(614729),
-    C = n(865215);
+    C = n(614729),
+    j = n(865215);
 let O = () => {
     (0, d.z)(c.X);
     let e = r.useRef(null),
@@ -33,26 +33,26 @@ let O = () => {
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(l.yWw, {
-                    className: j.mainPageScroller,
+                    className: C.mainPageScroller,
                     ref: e,
                     children: (0, i.jsx)('div', {
-                        className: j.container,
+                        className: C.container,
                         children: (0, i.jsxs)(o.Gt, {
                             value: S,
                             children: [
                                 (0, i.jsx)(h.Z, {
-                                    className: j.heroHeading,
+                                    className: C.heroHeading,
                                     location: f.MQ.HOME
                                 }),
-                                (0, i.jsx)(p.Z, {
+                                (0, i.jsx)(g.Z, {
                                     variant: f.R0.WHATS_NEW,
-                                    className: j.whatsNew,
+                                    className: C.whatsNew,
                                     noBackground: !0,
                                     leftAlignHeaders: !0,
                                     shouldAutoScroll: I
                                 }),
-                                (0, i.jsx)(p.Z, {
-                                    className: j.perksDiscoverability,
+                                (0, i.jsx)(g.Z, {
+                                    className: C.perksDiscoverability,
                                     noBackground: !0,
                                     leftAlignHeaders: !0,
                                     showAllPerksButton: (0, i.jsx)(_.Z, {
@@ -60,15 +60,15 @@ let O = () => {
                                         previousComponent: f.MQ.HOME
                                     })
                                 }),
-                                (0, i.jsx)(g.Z, {
-                                    className: j.giftNitro,
+                                (0, i.jsx)(p.Z, {
+                                    className: C.giftNitro,
                                     location: a.Z.PREMIUM_MARKETING_GIFT_SECTION,
                                     analyticsLocation: {
                                         page: x.ZY5.NITRO_HOME,
                                         section: x.jXE.GIFT_BANNER
                                     }
                                 }),
-                                (0, i.jsx)('div', { className: j.footerSpacing }),
+                                (0, i.jsx)('div', { className: C.footerSpacing }),
                                 (0, i.jsx)(s.$, {
                                     innerRef: t,
                                     onChange: (e) => {
@@ -76,12 +76,12 @@ let O = () => {
                                     },
                                     children: (0, i.jsx)('div', {
                                         ref: t,
-                                        className: j.bottomOfPageVisibilitySensor
+                                        className: C.bottomOfPageVisibilitySensor
                                     })
                                 }),
                                 (0, i.jsx)('img', {
-                                    src: C,
-                                    className: j.bottomIllustration,
+                                    src: j,
+                                    className: C.bottomIllustration,
                                     width: 112,
                                     height: 85,
                                     alt: E.intl.string(E.t.X4IxWF)

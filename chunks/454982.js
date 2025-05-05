@@ -41,21 +41,21 @@ function u(e) {
     });
 }
 let m = function (e) {
-    let { onClose: t, onClaim: n, code: m, outboundPromotion: p, transitionState: g } = e,
+    let { onClose: t, onClaim: n, code: m, outboundPromotion: g, transitionState: p } = e,
         [h, f] = r.useState(null),
         b = (0, a.Dt)();
     return (
         r.useEffect(() => {
             null == m &&
-                (0, o.A2)(p.id)
+                (0, o.A2)(g.id)
                     .then((e) => n(e))
                     .catch((e) => {
                         var t;
                         return f(null == e || null == (t = e.body) ? void 0 : t.code);
                     });
-        }, [m, p.id, n]),
+        }, [m, g.id, n]),
         (0, i.jsx)(s.Y0X, {
-            transitionState: g,
+            transitionState: p,
             'aria-labelledby': b,
             children:
                 null != h
@@ -80,7 +80,7 @@ let m = function (e) {
                                         (0, i.jsx)(s.Text, {
                                             variant: 'text-md/normal',
                                             className: d.bodyText,
-                                            children: p.outboundRedemptionModalBody
+                                            children: g.outboundRedemptionModalBody
                                         }),
                                         (0, i.jsx)(s.$i$, { className: d.formDivider }),
                                         (0, i.jsxs)(s.hjN, {
@@ -108,7 +108,7 @@ let m = function (e) {
                                         (0, i.jsx)(s.zxk, {
                                             color: s.zxk.Colors.BRAND,
                                             onClick: () => {
-                                                let e = (0, o.BU)(m, p);
+                                                let e = (0, o.BU)(m, g);
                                                 window.open(e, '_blank');
                                             },
                                             children: c.intl.string(c.t['+zx47e'])

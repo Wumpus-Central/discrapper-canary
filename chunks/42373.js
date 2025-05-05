@@ -9,41 +9,41 @@ var i = n(200651),
     d = n(410030),
     u = n(70097),
     m = n(626135),
-    p = n(526167),
-    g = n(572995),
+    g = n(526167),
+    p = n(572995),
     h = n(981631),
     f = n(869783),
     b = n(888723);
 let _ = (e) => {
-    let { name: t, title: n, description: s, descriptionCta: _, previewImage: x, videoUrl: E, shouldLoadVideo: j, index: C, isCompact: O, isReducedMotion: S, onClick: v } = e,
-        T = (0, p.rO)(),
+    let { name: t, title: n, description: s, descriptionCta: _, previewImage: x, videoUrl: E, shouldLoadVideo: C, index: j, size: O, isReducedMotion: S, onClick: v } = e,
+        T = (0, g.rO)(),
         I = r.useRef(null),
         N = r.useRef(0),
         y = (function (e) {
             let t;
             switch (e) {
-                case g.N.EMOJIS:
+                case p.NA.EMOJIS:
                     t = b.emojisBackground;
                     break;
-                case g.N.REFERRAL_PROGRAM:
+                case p.NA.REFERRAL_PROGRAM:
                     t = b.referralProgramBackground;
                     break;
-                case g.N.NO_LIMITS:
+                case p.NA.NO_LIMITS:
                     t = b.noLimitsBackground;
                     break;
-                case g.N.NEW_APP_STYLES:
+                case p.NA.NEW_APP_STYLES:
                     t = b.newStylesBackground;
                     break;
-                case g.N.YOUR_SPACE:
+                case p.NA.YOUR_SPACE:
                     t = b.yourSpaceBackground;
                     break;
-                case g.N.SERVER_PROFILES:
+                case p.NA.SERVER_PROFILES:
                     t = b.serverProfilesBackground;
                     break;
-                case g.N.SHOW_YOUR_STYLE:
+                case p.NA.SHOW_YOUR_STYLE:
                     t = b.yourStyleBackground;
                     break;
-                case g.N.PERMADECOS:
+                case p.NA.PERMADECOS:
                     t = b.permadecosBackground;
             }
             return t;
@@ -63,16 +63,18 @@ let _ = (e) => {
         k = () =>
             (0, i.jsxs)('div', {
                 className: l()({
-                    [b.bentoTextBoxOuter]: !O,
-                    [b.compactTextBox]: O
+                    [b.largeTextBox]: O === p.y$.LARGE,
+                    [b.mediumTextBox]: O === p.y$.MEDIUM,
+                    [b.smallTextBox]: O === p.y$.SMALL
                 }),
                 children: [
                     (0, i.jsx)(c.X6q, {
                         variant: 'heading-xxl/extrabold',
                         color: 'header-primary',
                         className: l()({
-                            [b.bentoBoxHeader]: !O,
-                            [b.compactBoxHeader]: O
+                            [b.largeBoxHeader]: O === p.y$.LARGE,
+                            [b.mediumBoxHeader]: O === p.y$.MEDIUM,
+                            [b.smallBoxHeader]: O === p.y$.SMALL
                         }),
                         children: n
                     }),
@@ -87,7 +89,7 @@ let _ = (e) => {
                         (0, i.jsx)(c.zxk, {
                             look: c.iLD.OUTLINED,
                             color: R,
-                            className: l()(b.bentoBoxButton, P ? b.bentoBoxButtonWhite : b.bentoBoxButtonBrand),
+                            className: l()(b.bentoBoxButton, P ? b.bentoBoxButtonWhite : b.bentoBoxButtonBrand, { [b.bentoBoxButtonPadding]: O !== p.y$.LARGE }),
                             onClick: () => {
                                 D(), v();
                             },
@@ -99,21 +101,23 @@ let _ = (e) => {
             let { isLeft: t } = e;
             return (0, i.jsx)('div', {
                 className: l()({
-                    [b.bentoArtContainer]: !O,
-                    [b.compactBoxArtContainer]: O
+                    [b.largeBoxArtContainer]: O === p.y$.LARGE,
+                    [b.mediumBoxArtContainer]: O === p.y$.MEDIUM,
+                    [b.smallBoxArtContainer]: O === p.y$.SMALL
                 }),
                 children: (0, i.jsx)(
                     u.Z,
                     {
                         playsInline: !0,
-                        preload: j ? 'auto' : 'none',
+                        preload: C ? 'auto' : 'none',
                         muted: !0,
                         poster: x,
                         loop: !0,
                         className: l()({
-                            [b.perkBoxVideo]: !O,
-                            [b.leftSideArt]: t && !O,
-                            [b.compactBoxVideo]: O
+                            [b.largeBoxVideo]: O === p.y$.LARGE,
+                            [b.largeBoxVideoLeft]: t && O === p.y$.LARGE,
+                            [b.mediumBoxVideo]: O === p.y$.MEDIUM,
+                            [b.smallBoxVideo]: O === p.y$.SMALL
                         }),
                         ref: I,
                         children: (0, i.jsx)('source', {
@@ -125,11 +129,12 @@ let _ = (e) => {
                 )
             });
         },
-        B = C % 2 != 0;
+        B = j % 2 != 0;
     return (0, i.jsx)('div', {
         className: l()(y, {
-            [b.bentoBoxContainer]: !O,
-            [b.compactBoxContainer]: O
+            [b.largeBoxContainer]: O === p.y$.LARGE,
+            [b.mediumBoxContainer]: O === p.y$.MEDIUM,
+            [b.smallBoxContainer]: O === p.y$.SMALL
         }),
         onMouseEnter: Z,
         onFocus: Z,

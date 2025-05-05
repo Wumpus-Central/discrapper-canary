@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var i = n(200651),
     r = n(192379),
     s = n(544891),
@@ -22,19 +22,19 @@ async function m(e) {
         throw e;
     }
 }
-function p(e) {
+function g(e) {
     let { payment: t } = e,
         [n, s] = r.useState(null),
-        [o, p] = r.useState(null),
-        g = async (e) => {
+        [o, g] = r.useState(null),
+        p = async (e) => {
             try {
                 let n = await m(t.id);
                 s(n);
                 let i = e ? n.refundInvoiceLinks[0] : n.invoiceLink;
-                window.open(i, '_blank'), p(null);
+                window.open(i, '_blank'), g(null);
             } catch (e) {
                 var n;
-                p(null == (n = e.body) ? void 0 : n.message);
+                g(null == (n = e.body) ? void 0 : n.message);
             }
         },
         h = null != t.paymentSource && t.status === c.Py.COMPLETED,
@@ -45,13 +45,13 @@ function p(e) {
               className: u.downloadInvoice,
               children: [
                   (0, i.jsx)(l.eee, {
-                      onClick: () => g(!1),
+                      onClick: () => p(!1),
                       children: d.intl.string(d.t.R0xzCA)
                   }),
                   t.hasRefundInvoiceURLs
                       ? (0, i.jsx)(l.eee, {
                             className: u.downloadRefundInvoice,
-                            onClick: () => g(!0),
+                            onClick: () => p(!0),
                             children: d.intl.string(d.t['3x6NGx'])
                         })
                       : null,

@@ -1,10 +1,10 @@
 n.d(t, {
-    Dp: () => g,
+    Dp: () => p,
     Gw: () => f,
-    Op: () => j,
+    Op: () => C,
     gx: () => _,
     iG: () => b,
-    mN: () => C,
+    mN: () => j,
     oo: () => h,
     sP: () => E
 }),
@@ -20,14 +20,14 @@ var i = n(278074),
     d = n(391110),
     u = n(474936),
     m = n(735825),
-    p = n(388032);
-let g = (e) => {
+    g = n(388032);
+let p = (e) => {
         switch (e) {
             case m.EB.PENDING:
-                return p.intl.string(p.t['9o4F4+']);
+                return g.intl.string(g.t['9o4F4+']);
             case m.EB.REDEEMABLE:
             case m.EB.REDEEMED:
-                return p.intl.string(p.t['3R9pPD']);
+                return g.intl.string(g.t['3R9pPD']);
             default:
                 return '';
         }
@@ -35,10 +35,10 @@ let g = (e) => {
     h = (e) => {
         switch (e) {
             case m.EB.PENDING:
-                return p.intl.string(p.t.nlcs6O);
+                return g.intl.string(g.t.nlcs6O);
             case m.EB.REDEEMABLE:
             case m.EB.REDEEMED:
-                return p.intl.string(p.t.F915ra);
+                return g.intl.string(g.t.F915ra);
             default:
                 return;
         }
@@ -46,10 +46,10 @@ let g = (e) => {
     f = (e) => {
         switch (e) {
             case m.EB.PENDING:
-                return p.intl.string(p.t.LAFMBQ);
+                return g.intl.string(g.t.LAFMBQ);
             case m.EB.REDEEMABLE:
             case m.EB.REDEEMED:
-                return p.intl.string(p.t['4cCWPT']);
+                return g.intl.string(g.t['4cCWPT']);
             default:
                 return;
         }
@@ -57,11 +57,11 @@ let g = (e) => {
 function b(e, t) {
     switch (e) {
         case m.EB.PENDING:
-            return null != t ? p.intl.formatToPlainString(p.t.a1eKDg, { days: t }) : '';
+            return null != t ? g.intl.formatToPlainString(g.t.a1eKDg, { days: t }) : '';
         case m.EB.REDEEMABLE:
-            return p.intl.string(p.t.B9eJyc);
+            return g.intl.string(g.t.B9eJyc);
         case m.EB.REDEEMED:
-            return p.intl.string(p.t.hpy7PD);
+            return g.intl.string(g.t.hpy7PD);
         default:
             return '';
     }
@@ -123,26 +123,26 @@ let _ = (e, t, n) => ((0, s.wj)(e) ? t : n),
         }
         return r || (c = c.filter((e) => !e.hideOnNarrowScreen)), c;
     },
-    j = (e) => {
+    C = (e) => {
         let t = (0, r.e7)([o.ZP], () => o.ZP.getPremiumTypeSubscription()),
             n = null != t ? c.ZP.getPremiumPlanItem(t) : null,
             i = (null != n ? c.ZP.getSkuIdForPlan(n.planId) : null) === u.Si.TIER_2;
         return e
             ? i
                 ? {
-                      title: p.intl.string(p.t.Aw5DRk),
-                      subtitle: p.intl.string(p.t.aHdO6u)
+                      title: g.intl.string(g.t.Aw5DRk),
+                      subtitle: g.intl.string(g.t.aHdO6u)
                   }
                 : {
-                      title: p.intl.string(p.t.N30YEx),
-                      subtitle: p.intl.string(p.t.GTUdNT)
+                      title: g.intl.string(g.t.N30YEx),
+                      subtitle: g.intl.string(g.t.GTUdNT)
                   }
             : {
-                  title: p.intl.string(p.t['Uh3+CA']),
-                  subtitle: p.intl.string(p.t['5TFEXl'])
+                  title: g.intl.string(g.t['Uh3+CA']),
+                  subtitle: g.intl.string(g.t['5TFEXl'])
               };
     },
-    C = () => {
+    j = () => {
         let e = (0, r.e7)([a.default], () => a.default.getCurrentUser());
         return (0, c.I5)(e);
     },

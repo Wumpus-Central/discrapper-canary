@@ -1,5 +1,5 @@
 n.d(t, {
-    H: () => p,
+    H: () => g,
     U: () => f
 }),
     n(953529);
@@ -38,7 +38,7 @@ function m(e) {
     }
     return e;
 }
-function p(e) {
+function g(e) {
     let { header: t, description: n, relatedId: r, disabled: a } = e;
     return (0, i.jsxs)('div', {
         className: u.header,
@@ -61,7 +61,7 @@ function p(e) {
         ]
     });
 }
-function g(e) {
+function p(e) {
     let { setting: t, className: n, children: r } = e;
     return (0, i.jsx)(a.F, {
         setting: t,
@@ -73,12 +73,12 @@ function g(e) {
 }
 function h(e) {
     let { setting: t, className: n, children: r, scrollPosition: l, scrollHighlightDelay: m } = e,
-        p = (0, o.a)(l);
+        g = (0, o.a)(l);
     return (0, i.jsx)(a.F, {
         setting: t,
         children: (0, i.jsxs)('div', {
             className: s()(u.container, n, { [d.settingsBackgroundFlashElement]: null != l }),
-            ref: p,
+            ref: g,
             children: [
                 r,
                 null != l
@@ -92,5 +92,5 @@ function h(e) {
     });
 }
 function f(e) {
-    return null != e.scrollPosition ? (0, i.jsx)(h, m({}, e)) : (0, i.jsx)(g, m({}, e));
+    return null != e.scrollPosition ? (0, i.jsx)(h, m({}, e)) : (0, i.jsx)(p, m({}, e));
 }

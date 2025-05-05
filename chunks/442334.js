@@ -39,7 +39,7 @@ function d(e) {
     var t,
         n,
         { options: s, value: d, select: u, selectClassName: m } = e,
-        p = (function (e, t) {
+        g = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -58,7 +58,7 @@ function d(e) {
             }
             return r;
         })(e, ['options', 'value', 'select', 'selectClassName']);
-    let g = r.useId();
+    let p = r.useId();
     return (0, i.jsx)(
         c,
         ((t = (function (e) {
@@ -85,12 +85,12 @@ function d(e) {
                     });
             }
             return e;
-        })({}, p)),
+        })({}, g)),
         (n = n =
             {
-                id: g,
+                id: p,
                 children: (0, i.jsx)(a.PhF, {
-                    'aria-labelledby': g,
+                    'aria-labelledby': p,
                     className: l()(o.selectControl, m),
                     options: s,
                     isSelected: (e) => e === d,

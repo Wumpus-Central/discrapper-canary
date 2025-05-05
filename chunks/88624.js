@@ -10,8 +10,8 @@ var r = n(512722),
     d = n(792423),
     u = n(674985),
     m = n(594174),
-    p = n(843200),
-    g = n(388032),
+    g = n(843200),
+    p = n(388032),
     h = n(647573);
 function f() {
     let {
@@ -36,19 +36,19 @@ function f() {
                 (0, i.jsx)(a.X6q, {
                     variant: 'heading-xxl/semibold',
                     className: h.introHeader,
-                    children: null == e ? g.intl.string(g.t.iZowCQ) : g.intl.string(g.t.e7fL7O)
+                    children: null == e ? p.intl.string(p.t.iZowCQ) : p.intl.string(p.t.e7fL7O)
                 }),
                 (0, i.jsx)(a.Text, {
                     variant: 'text-lg/normal',
-                    children: g.intl.string(g.t['6FaVFB'])
+                    children: p.intl.string(p.t['6FaVFB'])
                 })
             ]
         }),
         children: [
-            (0, i.jsx)(p.Z, {
+            (0, i.jsx)(g.Z, {
                 className: h.verificationNotice,
-                unclaimedNotice: g.intl.string(g.t.vZU8Ki),
-                unverifiedNotice: g.intl.string(g.t.T7TYEB)
+                unclaimedNotice: p.intl.string(p.t.vZU8Ki),
+                unverifiedNotice: p.intl.string(p.t.T7TYEB)
             }),
             (0, i.jsx)(c.Z, {
                 houseMembership: e,

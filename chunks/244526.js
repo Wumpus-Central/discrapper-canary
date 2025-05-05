@@ -9,8 +9,8 @@ var i,
     d = n(481060),
     u = n(987032),
     m = n(600164),
-    p = n(219929),
-    g = n(46141),
+    g = n(219929),
+    p = n(46141),
     h = n(122289),
     f = n(624138),
     b = n(388032),
@@ -18,64 +18,64 @@ var i,
 class x extends (i = a.PureComponent) {
     get typeString() {
         let { paymentSource: e } = this.props;
-        if (e instanceof g.qo) return p.ZP.Types.PAYPAL;
-        if (e instanceof g.Sf) return p.ZP.Types.SOFORT;
-        if (e instanceof g.dm) return p.ZP.getType(e.brand);
-        if (e instanceof g.fv) return p.ZP.Types.GIROPAY;
-        if (e instanceof g.Vg) return p.ZP.Types.PRZELEWY24;
-        else if (e instanceof g.sn) return p.ZP.Types.PAYSAFECARD;
-        else if (e instanceof g.o_) return p.ZP.Types.GCASH;
-        else if (e instanceof g.kX) return p.ZP.Types.GRABPAY;
-        else if (e instanceof g.z) return p.ZP.Types.MOMO_WALLET;
-        else if (e instanceof g.Xc) return p.ZP.Types.VENMO;
-        else if (e instanceof g.Om) return p.ZP.Types.KAKAOPAY;
-        else if (e instanceof g.JC) return p.ZP.Types.GOPAY_WALLET;
-        else if (e instanceof g.U4) return p.ZP.Types.BANCONTACT;
-        else if (e instanceof g.D0) return p.ZP.Types.EPS;
-        else if (e instanceof g.jc) return p.ZP.Types.IDEAL;
-        else if (e instanceof g.u_) return p.ZP.Types.CASH_APP;
-        else if (e instanceof g.$z) return p.ZP.Types.APPLE;
-        return p.ZP.Types.UNKNOWN;
+        if (e instanceof p.qo) return g.ZP.Types.PAYPAL;
+        if (e instanceof p.Sf) return g.ZP.Types.SOFORT;
+        if (e instanceof p.dm) return g.ZP.getType(e.brand);
+        if (e instanceof p.fv) return g.ZP.Types.GIROPAY;
+        if (e instanceof p.Vg) return g.ZP.Types.PRZELEWY24;
+        else if (e instanceof p.sn) return g.ZP.Types.PAYSAFECARD;
+        else if (e instanceof p.o_) return g.ZP.Types.GCASH;
+        else if (e instanceof p.kX) return g.ZP.Types.GRABPAY;
+        else if (e instanceof p.z) return g.ZP.Types.MOMO_WALLET;
+        else if (e instanceof p.Xc) return g.ZP.Types.VENMO;
+        else if (e instanceof p.Om) return g.ZP.Types.KAKAOPAY;
+        else if (e instanceof p.JC) return g.ZP.Types.GOPAY_WALLET;
+        else if (e instanceof p.U4) return g.ZP.Types.BANCONTACT;
+        else if (e instanceof p.D0) return g.ZP.Types.EPS;
+        else if (e instanceof p.jc) return g.ZP.Types.IDEAL;
+        else if (e instanceof p.u_) return g.ZP.Types.CASH_APP;
+        else if (e instanceof p.$z) return g.ZP.Types.APPLE;
+        return g.ZP.Types.UNKNOWN;
     }
     getLabel(e) {
-        return e instanceof g.dm
+        return e instanceof p.dm
             ? b.intl.format(b.t['o/dsrK'], {
                   brand: (0, f.De)(e.brand),
                   last_4: e.last4
               })
-            : e instanceof g.qo
+            : e instanceof p.qo
               ? b.intl.string(b.t['2dgEq6'])
-              : e instanceof g.Sf
+              : e instanceof p.Sf
                 ? b.intl.string(b.t['edKX//'])
-                : e instanceof g.fv
+                : e instanceof p.fv
                   ? b.intl.string(b.t['y+0MQU'])
-                  : e instanceof g.Vg
+                  : e instanceof p.Vg
                     ? b.intl.string(b.t.u25uLy)
-                    : e instanceof g.sn
+                    : e instanceof p.sn
                       ? b.intl.string(b.t.boznHB)
-                      : e instanceof g.o_
+                      : e instanceof p.o_
                         ? b.intl.string(b.t.PjehcH)
-                        : e instanceof g.kX
+                        : e instanceof p.kX
                           ? b.intl.string(b.t.T5davL)
-                          : e instanceof g.z
+                          : e instanceof p.z
                             ? b.intl.string(b.t.J0A1Vl)
-                            : e instanceof g.Xc
+                            : e instanceof p.Xc
                               ? b.intl.string(b.t.jYOezc)
-                              : e instanceof g.Om
+                              : e instanceof p.Om
                                 ? b.intl.string(b.t.CSVexs)
-                                : e instanceof g.JC
+                                : e instanceof p.JC
                                   ? b.intl.string(b.t['43J8JC'])
-                                  : e instanceof g.U4
+                                  : e instanceof p.U4
                                     ? b.intl.string(b.t['1ITkfn'])
-                                    : e instanceof g.jc
+                                    : e instanceof p.jc
                                       ? null == e.bank
                                           ? b.intl.string(b.t.nSbwqK)
                                           : b.intl.format(b.t['9kUlRU'], { bank: (0, u.YE)(e.bank) })
-                                      : e instanceof g.D0
+                                      : e instanceof p.D0
                                         ? b.intl.format(b.t.hSPoZ2, { bank: (0, u.Ul)(e.bank) })
-                                        : e instanceof g.u_
+                                        : e instanceof p.u_
                                           ? b.intl.string(b.t['+rbTmJ'])
-                                          : e instanceof g.$z
+                                          : e instanceof p.$z
                                             ? b.intl.string(b.t.RFi12t)
                                             : b.intl.string(b.t.jdPblp);
     }
@@ -91,16 +91,16 @@ class x extends (i = a.PureComponent) {
         let { paymentSource: e, locale: t } = this.props,
             n = null;
         return (
-            e instanceof g.dm
+            e instanceof p.dm
                 ? (n = b.intl.formatToPlainString(b.t['8rTTub'], {
                       month: (0, h.E2)(e.expiresMonth, t),
                       year: e.expiresYear
                   }))
-                : e instanceof g.qo || e instanceof g.Sf || e instanceof g.Vg
+                : e instanceof p.qo || e instanceof p.Sf || e instanceof p.Vg
                   ? (n = e.email)
-                  : e instanceof g.Xc
+                  : e instanceof p.Xc
                     ? (n = '@' + e.username)
-                    : e instanceof g.u_ && (n = e.username),
+                    : e instanceof p.u_ && (n = e.username),
             n
         );
     }
@@ -109,7 +109,7 @@ class x extends (i = a.PureComponent) {
             a = this.renderSubText();
         return (0, l.jsxs)(m.Z, {
             children: [
-                r && (0, l.jsx)(p.ZP, { type: this.typeString }),
+                r && (0, l.jsx)(g.ZP, { type: this.typeString }),
                 (0, l.jsxs)(m.Z, {
                     direction: m.Z.Direction.VERTICAL,
                     className: _.descriptionWrapper,

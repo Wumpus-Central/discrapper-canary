@@ -9,16 +9,16 @@ var i = n(200651),
     d = n(100527),
     u = n(906732),
     m = n(368326),
-    p = n(429467),
-    g = n(440051),
+    g = n(429467),
+    p = n(440051),
     h = n(734934),
     f = n(300284),
     b = n(680295),
     _ = n(785717),
     x = n(209698),
     E = n(687158),
-    j = n(892001),
-    C = n(899007),
+    C = n(892001),
+    j = n(899007),
     O = n(648052),
     S = n(867176),
     v = n(537006),
@@ -91,23 +91,23 @@ function $(e) {
     let eo = (0, l.e7)([k.Z], () => k.Z.getStatus(t.id)),
         ec = w.Cr.useSetting(),
         ed = (0, z.F)(ec),
-        { expiringStatusProfileFeedback: eu } = g.Y.useExperiment({ location: 'UserProfileAccountPopout' }, { autoTrackExposure: !1 }),
+        { expiringStatusProfileFeedback: eu } = p.Y.useExperiment({ location: 'UserProfileAccountPopout' }, { autoTrackExposure: !1 }),
         em = (0, l.e7)([L.Z], () => L.Z.hidePersonalInformation),
-        ep = (0, h.p)(),
-        eg = w.Sb.useSetting(),
+        eg = (0, h.p)(),
+        ep = w.Sb.useSetting(),
         eh = (0, z.I)(eo),
         ef = (0, G.g)(n),
         eb = (0, f.Z)({ analyticsLocations: er }),
         e_ = (0, U.I5)(t),
         ex = (0, m.p)({ location: 'UserProfileAccountPopout' }),
         eE = (0, x.b)({ location: 'UserProfileAccountPopout' }),
-        ej = r.useMemo(() => (0, p.Z)(), []),
-        eC = (e) => {
+        eC = r.useMemo(() => (0, g.Z)(), []),
+        ej = (e) => {
             null == n || n(),
-                (0, j.openUserProfileModal)(
+                (0, C.openUserProfileModal)(
                     J(
                         {
-                            customStatusPrompt: ej,
+                            customStatusPrompt: eC,
                             sourceAnalyticsLocations: er
                         },
                         es,
@@ -140,18 +140,18 @@ function $(e) {
                                     displayProfile: ei,
                                     themeType: K.lY.POPOUT
                                 }),
-                                (0, i.jsx)(C.Z, {
+                                (0, i.jsx)(j.Z, {
                                     user: t,
                                     displayProfile: ei,
                                     themeType: K.lY.POPOUT,
-                                    onOpenProfile: en ? void 0 : eC
+                                    onOpenProfile: en ? void 0 : ej
                                 }),
                                 (0, i.jsx)(D.Z, {
                                     location: 'UserProfileAccountPopout',
                                     user: t,
                                     themeType: K.lY.POPOUT,
                                     onCloseProfile: n,
-                                    prompt: ex ? ej : null
+                                    prompt: ex ? eC : null
                                 })
                             ]
                         }),
@@ -167,7 +167,7 @@ function $(e) {
                                     user: t,
                                     className: X.username,
                                     nickname: M.ZP.getName(null, null, t),
-                                    onOpenProfile: en ? void 0 : eC,
+                                    onOpenProfile: en ? void 0 : ej,
                                     pronouns: null == ei ? void 0 : ei.pronouns,
                                     tags: (0, i.jsx)(O.Z, {
                                         displayProfile: ei,
@@ -200,7 +200,7 @@ function $(e) {
                                           user: t,
                                           currentUser: t,
                                           displayProfile: ei,
-                                          onOpenUserProfileModal: eC
+                                          onOpenUserProfileModal: ej
                                       })
                                     : (0, i.jsx)(I.Z, {
                                           user: t,
@@ -243,7 +243,7 @@ function $(e) {
                                                                 status: eo,
                                                                 size: 12
                                                             }),
-                                                        hint: (ep || eo === Y.Skl.DND) && (0, i.jsx)(a.owu, { size: 'xxs' }),
+                                                        hint: (eg || eo === Y.Skl.DND) && (0, i.jsx)(a.owu, { size: 'xxs' }),
                                                         renderSubmenu: s.tq
                                                             ? void 0
                                                             : (e) => {
@@ -352,7 +352,7 @@ function $(e) {
                                                     }),
                                                     !__OVERLAY__ &&
                                                         B.wS &&
-                                                        eg &&
+                                                        ep &&
                                                         (0, i.jsxs)(i.Fragment, {
                                                             children: [
                                                                 (0, i.jsx)(T.Z, { className: X.menuDivider }),

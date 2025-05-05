@@ -1,6 +1,6 @@
 n.d(t, {
-    T: () => g,
-    Z: () => p
+    T: () => p,
+    Z: () => g
 }),
     n(539854);
 var i = n(192379),
@@ -13,7 +13,7 @@ var i = n(192379),
     d = n(944486),
     u = n(981631),
     m = n(647086);
-function p(e) {
+function g(e) {
     let { withVoiceChannels: t = !1, withCurrentVoiceChannel: n = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         i = arguments.length > 2 ? arguments[2] : void 0;
     return h(
@@ -29,12 +29,12 @@ function p(e) {
         i
     );
 }
-function g(e, t, n) {
+function p(e, t, n) {
     let { withVoiceChannels: s = !1, withCurrentVoiceChannel: l = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
         a = arguments.length > 4 ? arguments[4] : void 0,
         u = (0, r.e7)([c.default], () => c.default.getGuildChangeSentinel(e)),
         m = (0, r.e7)([o.Z], () => o.Z.version),
-        { currentVoiceChannelId: p, selectedChannelId: g } = (0, r.cj)([d.Z], () => ({
+        { currentVoiceChannelId: g, selectedChannelId: p } = (0, r.cj)([d.Z], () => ({
             currentVoiceChannelId: d.Z.getVoiceChannelId(),
             selectedChannelId: d.Z.getChannelId()
         }));
@@ -43,8 +43,8 @@ function g(e, t, n) {
             h(
                 t,
                 {
-                    currentVoiceChannelId: p,
-                    selectedChannelId: g
+                    currentVoiceChannelId: g,
+                    selectedChannelId: p
                 },
                 {
                     withVoiceChannels: s,

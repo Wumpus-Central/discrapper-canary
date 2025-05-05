@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => p });
 var i = n(200651);
 n(192379);
 var r = n(120356),
@@ -10,8 +10,8 @@ var r = n(120356),
     d = n(785717),
     u = n(475413),
     m = n(388032),
-    p = n(517895);
-function g(e) {
+    g = n(517895);
+function p(e) {
     let { user: t, isHovering: n } = e,
         { trackUserProfileAction: r } = (0, d.KZ)();
     return o.wS
@@ -55,11 +55,11 @@ function g(e) {
                       })({}, e)),
                       (r = r =
                           {
-                              className: s()(p.hover, { [p.visible]: n }),
-                              innerClassName: p.hover,
+                              className: s()(g.hover, { [g.visible]: n }),
+                              innerClassName: g.hover,
                               look: l.zxk.Looks.BLANK,
                               size: l.zxk.Sizes.NONE,
-                              color: p.hoverColor,
+                              color: g.hoverColor,
                               themeColor: 'none',
                               grow: !1,
                               'aria-label': m.intl.string(m.t.y5MwJy),
