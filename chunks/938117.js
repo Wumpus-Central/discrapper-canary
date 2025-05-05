@@ -17,7 +17,7 @@ var i = n(255367),
     _ = n(869783),
     x = n(388032),
     E = n(635968);
-function j(e) {
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -42,7 +42,7 @@ function j(e) {
     }
     return e;
 }
-function C(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -115,9 +115,9 @@ function O(e) {
                               return (n) =>
                                   (0, i.jsx)(
                                       e,
-                                      C(j({}, n), {
+                                      j(C({}, n), {
                                           onLearnMore: t,
-                                          analyticsSource: C(j({}, w.location), { object: b.qAy.BUTTON_CTA })
+                                          analyticsSource: j(C({}, w.location), { object: b.qAy.BUTTON_CTA })
                                       })
                                   );
                           });

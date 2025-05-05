@@ -77,8 +77,8 @@ function p(e) {
                     }));
         }
     }, [t]);
-    let { loadState: j } = (0, a.qz)(),
-        C = j !== a.jd.LOADED;
+    let { loadState: C } = (0, a.qz)(),
+        j = C !== a.jd.LOADED;
     switch (f) {
         case c.j.HOME:
             return (0, i.jsx)(i.Fragment, {
@@ -89,7 +89,7 @@ function p(e) {
                         {
                             subscription: e,
                             navigateToSwitchPlan: _,
-                            loadingState: C ? o.G.LOADING : null != (t = x[e.id]) ? t : o.G.LOADING
+                            loadingState: j ? o.G.LOADING : null != (t = x[e.id]) ? t : o.G.LOADING
                         },
                         e.id
                     );

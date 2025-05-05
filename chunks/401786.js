@@ -17,8 +17,8 @@ var i = n(255367),
     _ = n(55610),
     x = n(311821),
     E = n(42818),
-    j = n(314884),
-    C = n(509545),
+    C = n(314884),
+    j = n(509545),
     O = n(78839),
     S = n(267642),
     v = n(74538),
@@ -81,7 +81,7 @@ async function D(e, t, n, i) {
         null != i
             ? i
             : (function () {
-                  let e = Object.values(j.Z.boostSlots),
+                  let e = Object.values(C.Z.boostSlots),
                       t = l().sortBy(
                           e.filter((e) => !(0, S.tl)(e)),
                           (e) => [null != e.premiumGuildSubscription, null != e.cooldownEndsAt ? new Date(e.cooldownEndsAt) : null]
@@ -104,7 +104,7 @@ async function D(e, t, n, i) {
 }
 function Z(e) {
     var t, n, s;
-    let { premiumSubscription: l, guildBoostSlotId: c, fractionalPremiumInfo: d, onBack: g, onNext: _, onClose: j } = e,
+    let { premiumSubscription: l, guildBoostSlotId: c, fractionalPremiumInfo: d, onBack: g, onNext: _, onClose: C } = e,
         [O, S] = r.useState(!1),
         [y, R] = r.useState(null),
         [Z, w] = r.useMemo(() => {
@@ -114,18 +114,18 @@ function Z(e) {
                 return [[], !0];
             }
         }, [l]),
-        k = r.useRef(j);
+        k = r.useRef(C);
     r.useEffect(() => {
-        k.current = j;
+        k.current = C;
     }),
         r.useEffect(() => {
             w && k.current();
         }, [w]);
-    let { premiumSubscriptionPlan: L, premiumGuildPlan: B } = (0, a.cj)([C.Z], () => {
-            let e = C.Z.get(l.planId);
+    let { premiumSubscriptionPlan: L, premiumGuildPlan: B } = (0, a.cj)([j.Z], () => {
+            let e = j.Z.get(l.planId);
             return {
                 premiumSubscriptionPlan: e,
-                premiumGuildPlan: null != e ? C.Z.getForSkuAndInterval((0, v.Wz)(N.Si.GUILD), e.interval, e.intervalCount) : null
+                premiumGuildPlan: null != e ? j.Z.getForSkuAndInterval((0, v.Wz)(N.Si.GUILD), e.interval, e.intervalCount) : null
             };
         }),
         { analyticsLocations: M } = (0, m.ZP)(),
@@ -169,7 +169,7 @@ function Z(e) {
         l.isPausedForFractionalPremium && d.fetched && (K = A.intl.format(A.t.eb0xgY, { expirationDate: d.endsAt.toDate() })),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(I.Z, { onClose: j }),
+                (0, i.jsx)(I.Z, { onClose: C }),
                 (0, i.jsxs)(o.hzk, {
                     className: P.body,
                     children: [

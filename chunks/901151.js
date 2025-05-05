@@ -178,7 +178,7 @@ function E(e) {
         ]
     });
 }
-function j() {
+function C() {
     let e = u._j.useSetting();
     return (0, i.jsx)(p.U, {
         setting: f.s6.PRIVACY_AND_SAFETY_ALLOW_GAME_FRIEND_DMS,
@@ -190,7 +190,7 @@ function j() {
         })
     });
 }
-function C() {
+function j() {
     let e = u.JG.useSetting(),
         t = e === s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_UNSET ? s.O_.SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL : e,
         n = [
@@ -232,7 +232,7 @@ function O() {
             ? (0, i.jsx)(l.$jN, {})
             : t.length > 0
               ? (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(E, { applications: t }), (0, i.jsx)(j, {}), (0, i.jsx)('div', { className: x.divider }), (0, i.jsx)(C, {})]
+                    children: [(0, i.jsx)(E, { applications: t }), (0, i.jsx)(C, {}), (0, i.jsx)('div', { className: x.divider }), (0, i.jsx)(j, {})]
                 })
               : (0, i.jsxs)('div', {
                     className: x.emptyContainer,

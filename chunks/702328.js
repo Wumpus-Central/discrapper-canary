@@ -17,8 +17,8 @@ var i = n(255367),
     _ = n(214852),
     x = n(594174),
     E = n(78839),
-    j = n(626135),
-    C = n(526167),
+    C = n(626135),
+    j = n(526167),
     O = n(74538),
     S = n(140465),
     v = n(278605),
@@ -127,14 +127,14 @@ let ed = (e) => {
             e_ = (0, c.wj)(eb),
             ex = x.default.getCurrentUser(),
             eE = (0, O.I5)(ex),
-            ej = (0, v.xP)('PremiumMarketingHome'),
-            eC = (0, T.C)('PremiumMarketingHome'),
-            eO = ((ej && !eE) || (eE && eC)) && B,
+            eC = (0, v.xP)('PremiumMarketingHome'),
+            ej = (0, T.C)('PremiumMarketingHome'),
+            eO = ((eC && !eE) || (eE && ej)) && B,
             [eS, ev] = r.useState(!1),
             [eT, eI] = r.useState(!1),
             [eN, ey] = r.useState(!1),
             [eA, eP] = r.useState(!1),
-            eR = (0, C.rO)(),
+            eR = (0, j.rO)(),
             [eD, eZ] = r.useState(!1),
             ew = (0, a.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()),
             ek = null != ew ? (0, O.Af)(ew) : null,
@@ -361,7 +361,7 @@ let ed = (e) => {
                     (0, i.jsx)(o.$, {
                         innerRef: ep,
                         onChange: (e) => {
-                            e && !eA && (j.default.track($.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eq }), eP(!0));
+                            e && !eA && (C.default.track($.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: eq }), eP(!0));
                         },
                         children: (0, i.jsx)('div', {
                             ref: ep,

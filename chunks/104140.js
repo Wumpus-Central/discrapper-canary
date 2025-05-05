@@ -162,10 +162,10 @@ function v(e) {
         M = (null == f ? void 0 : f.width) != null ? f.width : g,
         k = (null == f ? void 0 : f.height) != null ? f.height : g,
         j = {
-            width: n + 8,
-            height: n + 8,
-            x: -4,
-            y: -4
+            width: d ? n : n + 8,
+            height: d ? n : n + 8,
+            x: d ? 0 : -4,
+            y: d ? 0 : -4
         },
         U = d ? 20 : h,
         G = v ? y(n) : b(n);
@@ -183,7 +183,10 @@ function v(e) {
                         width: j.width,
                         height: j.height,
                         viewBox: ''.concat(j.x, ' ').concat(j.y, ' ').concat(j.width, ' ').concat(j.height),
-                        className: o()(u.svg, { [u.noContain]: _ }),
+                        className: o()(u.svg, {
+                            [u.noContain]: _,
+                            [u.shiftSVG]: !d
+                        }),
                         overflow: 'visible',
                         role: 'none',
                         children: [

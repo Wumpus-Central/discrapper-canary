@@ -108,7 +108,6 @@ class c extends r.Z {
     writeAudioDebugState() {
         return Promise.reject(Error('Audio debug state is not supported.'));
     }
-    setExperimentalAdm(e) {}
     setLoopback(e, t) {}
     getLoopback() {
         return !1;
@@ -151,6 +150,7 @@ class c extends r.Z {
     presentNativeScreenSharePicker(e) {}
     releaseNativeDesktopVideoSourcePickerStream() {}
     setMaybePreprocessMute(e) {}
+    setAudioInputBypassSystemProcessing(e) {}
     constructor(...e) {
         super(...e), o(this, 'Video', s), o(this, 'Camera', l);
     }

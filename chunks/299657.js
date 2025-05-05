@@ -17,8 +17,8 @@ var i = n(255367),
     _ = n(89057),
     x = n(433811),
     E = n(214852),
-    j = n(621853),
-    C = n(484459),
+    C = n(621853),
+    j = n(484459),
     O = n(246946),
     S = n(594174),
     v = n(78839),
@@ -52,7 +52,7 @@ let M = function (e) {
         X = (0, A.n)(),
         Q = null == X ? void 0 : X.countryCode,
         { enabled: J } = (0, D.D)(),
-        $ = (0, a.e7)([j.Z], () => (null != V ? j.Z.getUserProfile(V.id) : null)),
+        $ = (0, a.e7)([C.Z], () => (null != V ? C.Z.getUserProfile(V.id) : null)),
         ee = (0, a.e7)([N.Z], () => N.Z.hasFetched);
     return (r.useEffect(() => {
         ee || d.MH();
@@ -60,7 +60,7 @@ let M = function (e) {
     r.useEffect(() => {
         c.Z.wait(async () => {
             let e = Date.now();
-            await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(Q, null, L.JjL.DISCOVERY), null != G && J && q && (0, C.Z)(G)]), (K.current = Date.now() - e), Y(!1);
+            await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(Q, null, L.JjL.DISCOVERY), null != G && J && q && (0, j.Z)(G)]), (K.current = Date.now() - e), Y(!1);
         });
     }, [Q, G, J, q]),
     r.useEffect(() => {

@@ -13,7 +13,7 @@ var r = n(120356),
 function g(e) {
     let { showRemoveBannerButton: t, errors: n, onBannerChange: r, guildId: g, className: p, disabled: h = !1, showPremiumIcon: f = !0, isTryItOutFlow: b = !1, forcedDivider: _, withHighlight: x = !1 } = e,
         { newestAnalyticsLocation: E } = (0, a.ZP)(),
-        j = x ? l.gtL : l.zxk;
+        C = x ? l.gtL : l.zxk;
     return (0, i.jsx)(c.Z, {
         className: p,
         title: u.intl.string(u.t.Vgdusr),
@@ -24,7 +24,7 @@ function g(e) {
         children: (0, i.jsxs)('div', {
             className: m.buttonsContainer,
             children: [
-                (0, i.jsx)(j, {
+                (0, i.jsx)(C, {
                     className: s()({ [m.buttonHighlighted]: x }),
                     size: l.zxk.Sizes.SMALL,
                     onClick: () =>

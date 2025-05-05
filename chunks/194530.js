@@ -13,7 +13,7 @@ var i = n(255367),
 function p(e) {
     var t, n, p, h;
     let { transitionState: f, onSuccess: b, onClose: _, requirementsUpdated: x, noSkip: E = !1 } = e,
-        [j, C] = r.useState(''),
+        [C, j] = r.useState(''),
         [O, S] = r.useState(''),
         [v, T] = r.useState(''),
         [I, N] = r.useState(null),
@@ -26,7 +26,7 @@ function p(e) {
         let t = !1;
         if (('' === O ? (N(m.intl.string(m.t['/7/oPT'])), (t = !0)) : N(null), O !== v ? (A(m.intl.string(m.t.IEKYZ2)), (t = !0)) : A(null), t)) return;
         let n = await (0, a.Mn)({
-            password: j,
+            password: C,
             newPassword: O
         });
         if (null == n ? void 0 : n.ok) b();
@@ -79,8 +79,8 @@ function p(e) {
                                     error: null == P || null == (t = P.password) ? void 0 : t[0],
                                     children: (0, i.jsx)(l.oil, {
                                         type: 'password',
-                                        value: j,
-                                        onChange: C,
+                                        value: C,
+                                        onChange: j,
                                         inputRef: D
                                     })
                                 }),

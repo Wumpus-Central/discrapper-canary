@@ -92,6 +92,8 @@ class v extends o.Z {
                 return (0, d.eJ)(h.eR.VOICE_AUTOMATIC_SUBSYSTEM);
             case h.AN.AUDIO_SUBSYSTEM_DEFERRED_SWITCH:
                 return (0, d.eJ)(h.eR.VOICE_SUBSYSTEM_DEFERRED_SWITCH);
+            case h.AN.AUDIO_BYPASS_SYSTEM_INPUT_PROCESSING:
+                return (0, d.eJ)(h.eR.VOICE_BYPASS_SYSTEM_AUDIO_INPUT_PROCESSING);
             case h.AN.DEBUG_LOGGING:
                 return (0, d.eJ)(h.eR.DEBUG_LOGGING);
             case h.AN.SOUNDSHARE:
@@ -147,8 +149,6 @@ class v extends o.Z {
                 return (0, d.eJ)(h.eR.GO_LIVE_HARDWARE);
             case h.AN.SCREEN_CAPTURE_KIT:
                 return (0, d.eJ)(h.eR.SCREEN_CAPTURE_KIT);
-            case h.AN.CAPTURE_TIMEOUT_EXPERIMENTS:
-                return (0, d.eJ)(h.eR.CAPTURE_TIMEOUT_EXPERIMENTS);
             case h.AN.NATIVE_SCREENSHARE_PICKER:
                 return (0, d.eJ)(h.eR.NATIVE_SCREENSHARE_PICKER);
             case h.AN.MLS_PAIRWISE_FINGERPRINTS:
@@ -205,6 +205,9 @@ class v extends o.Z {
     }
     enable() {
         return Promise.resolve();
+    }
+    setAudioInputBypassSystemProcessing(e) {
+        (0, d.zS)().setTransportOptions({ bypassSystemProcessing: e });
     }
     setInputVolume(e) {
         (0, d.zS)().setInputVolume(y(e));
@@ -402,14 +405,6 @@ class v extends o.Z {
     }
     setDebugLogging(e) {
         this.supports(h.AN.DEBUG_LOGGING) && (0, d.zS)().setDebugLogging(e);
-    }
-    setExperimentalAdm(e) {
-        let { setExperimentalAdm: t, getAudioSubsystem: n } = (0, d.zS)();
-        null == t || t(e),
-            null == n ||
-                n((e) => {
-                    this.audioSubsystem = e;
-                });
     }
     setLoopback(e, t) {
         null != (0, d.zS)().setLoopback &&

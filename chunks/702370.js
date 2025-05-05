@@ -18,8 +18,8 @@ var r = n(255367),
     x = n(100527),
     g = n(906732),
     C = n(570908),
-    _ = n(786761),
-    j = n(3148),
+    j = n(786761),
+    _ = n(3148),
     w = n(739566),
     I = n(753206),
     k = n(333867),
@@ -30,9 +30,9 @@ var r = n(255367),
     T = n(484459),
     y = n(822857),
     L = n(82856),
-    Z = n(960919),
-    A = n(275388),
-    R = n(25990),
+    R = n(960919),
+    Z = n(275388),
+    A = n(25990),
     B = n(594174),
     D = n(626135),
     M = n(63063),
@@ -72,8 +72,8 @@ var r = n(255367),
     ex = n(58201),
     eg = n(794324),
     eC = n(361110),
-    e_ = n(956472),
-    ej = n(832149),
+    ej = n(956472),
+    e_ = n(832149),
     ew = n(215023),
     eI = n(981631),
     ek = n(474936),
@@ -184,7 +184,7 @@ let ey = {
             )
             .otherwise(() => null);
     },
-    eZ = (e) => {
+    eR = (e) => {
         let { product: t, user: n } = e,
             [a, l] = i.useState(0);
         i.useEffect(() => {
@@ -231,10 +231,10 @@ let ey = {
             })
         });
     },
-    eA = (e) => {
+    eZ = (e) => {
         let { product: t, user: n } = e;
         return (0, V.x6)(t)
-            ? (0, r.jsx)(eZ, {
+            ? (0, r.jsx)(eR, {
                   product: t,
                   user: n
               })
@@ -250,7 +250,7 @@ let ey = {
                   })
                 : null;
     },
-    eR = (e) => {
+    eA = (e) => {
         let { skuId: t } = e;
         return t === m.a.PREMIUM_TIER_2_3_DAY
             ? (0, r.jsx)(h.Text, {
@@ -262,19 +262,19 @@ let ey = {
     },
     eB = (e) => {
         let t,
-            { product: n, user: a, category: s, shouldCheckoutWithOrbs: c, onClose: m, returnRef: b, previewingVariantIndexProps: x, selectedVariantIndex: C, tab: _ } = e,
-            { analyticsLocations: j } = (0, g.ZP)(),
+            { product: n, user: a, category: s, shouldCheckoutWithOrbs: c, onClose: m, returnRef: b, previewingVariantIndexProps: x, selectedVariantIndex: C, tab: j } = e,
+            { analyticsLocations: _ } = (0, g.ZP)(),
             w = U.ZP.canUseCollectibles(a),
             { previewingVariantIndex: I } = x,
             E = (0, eP.N)(n, I),
             S = (0, ex.W)(n, C);
         o()(null != S, 'Selected product should not be null');
         let N = (0, J.L)(n),
-            { isPurchased: T, isPartiallyOwnedBundle: R } = (0, J.L)(S),
+            { isPurchased: T, isPartiallyOwnedBundle: A } = (0, J.L)(S),
             { isDisabled: B, disabledReason: D } = (0, Q.G)(S.skuId),
             M = (0, V.ne)({
                 product: S,
-                isPartiallyOwnedBundle: R,
+                isPartiallyOwnedBundle: A,
                 isPurchased: T
             }),
             G = (0, p.e7)([F.Z], () => F.Z.purchases),
@@ -296,28 +296,28 @@ let ey = {
             {
                 checkoutEligiblePrices: ey,
                 isOrbExclusive: eL,
-                hasSufficientOrbs: eZ
-            } = (0, e_.Ip)({
+                hasSufficientOrbs: eR
+            } = (0, ej.Ip)({
                 product: S,
                 isPremiumUser: w,
-                tab: _
+                tab: j
             }),
             eB = i.useCallback(
                 () =>
                     (0, k.Z)({
                         skuId: S.skuId,
-                        analyticsLocations: j,
+                        analyticsLocations: _,
                         variantsReturnStyle: eb,
                         onClose: (e) => (e ? m() : (0, eO.dG)())
                     }),
-                [j, m, S.skuId, eb]
+                [_, m, S.skuId, eb]
             );
         i.useEffect(() => {
             if (null != ed) return (0, v.cV)(ed), () => (0, v.cV)(void 0);
         }, [ed]);
         let eD = (e, t) => {
                 let n = () => {
-                        (0, A.q)({
+                        (0, Z.q)({
                             skuId: S.skuId,
                             onCheckoutSuccess: (e) => {
                                 var t;
@@ -327,9 +327,9 @@ let ey = {
                                     location: 'collectible_checkout_with_orb'
                                 }),
                                     m({ keepBalancePillOverlayOpen: !0 }),
-                                    (0, ej.Z)({
+                                    (0, e_.Z)({
                                         product: S,
-                                        analyticsLocations: j,
+                                        analyticsLocations: _,
                                         onCloseCallback: () => {
                                             (0, L.vp)();
                                         },
@@ -337,11 +337,11 @@ let ey = {
                                         purchaseType: ew.o8.ORB
                                     });
                             },
-                            analyticsLocations: j
+                            analyticsLocations: _
                         });
                     },
                     i = B ? eE.intl.string(eE.t.cTdr39) : eE.intl.string(eE.t.zqh7ZG),
-                    a = !eZ || B;
+                    a = !eR || B;
                 return (0, r.jsx)(h.ua7, {
                     position: 'top',
                     text: i,
@@ -357,7 +357,7 @@ let ey = {
                                 color: t ? h.zxk.Colors.BRAND : h.zxk.Colors.PRIMARY,
                                 children: eE.intl.format(eE.t.kAgx5O, {
                                     orbPrice: e.amount,
-                                    orbIconHook: () => (0, r.jsx)(Z.Z, { shouldUseThemeColor: a })
+                                    orbIconHook: () => (0, r.jsx)(R.Z, { shouldUseThemeColor: a })
                                 })
                             })
                         )
@@ -399,7 +399,7 @@ let ey = {
                         display: 'modal'
                     })
                 }),
-                (0, r.jsx)(eA, {
+                (0, r.jsx)(eZ, {
                     product: null != E ? E : S,
                     user: a
                 }),
@@ -422,11 +422,11 @@ let ey = {
                                     variant: 'text-sm/normal',
                                     children: eU
                                 }),
-                                (0, r.jsx)(eR, { skuId: S.skuId }),
+                                (0, r.jsx)(eA, { skuId: S.skuId }),
                                 N.isPurchased || N.isPartiallyOwnedBundle
                                     ? (0, r.jsx)(ee.U, {
                                           className: eS.priceTag,
-                                          isPartiallyPurchased: R
+                                          isPartiallyPurchased: A
                                       })
                                     : er
                                       ? (0, r.jsx)(h.Text, {
@@ -440,7 +440,7 @@ let ey = {
                                               product: S,
                                               isPremiumUser: w,
                                               discount: em,
-                                              hasSufficientOrbs: eZ,
+                                              hasSufficientOrbs: eR,
                                               isProductDisabled: B
                                           })
                                         : (0, r.jsx)(es.Z, {
@@ -452,11 +452,13 @@ let ey = {
                                           })
                             ]
                         }),
-                        (0, r.jsx)(eh.P, {
-                            variantGroupProduct: n,
-                            previewingVariantIndexProps: x,
-                            className: eS.variantsSwitch,
-                            purchases: G
+                        (0, r.jsx)(h.Rny, {
+                            children: (0, r.jsx)(eh.P, {
+                                variantGroupProduct: n,
+                                previewingVariantIndexProps: x,
+                                className: eS.variantsSwitch,
+                                purchases: G
+                            })
                         }),
                         null !== D &&
                             (0, r.jsx)(h.Text, {
@@ -487,9 +489,9 @@ let ey = {
                                                     onClick: async () => {
                                                         await (0, H.fK)(S.skuId),
                                                             m(),
-                                                            (0, ej.Z)({
+                                                            (0, e_.Z)({
                                                                 product: S,
-                                                                analyticsLocations: j,
+                                                                analyticsLocations: _,
                                                                 purchaseType: ew.o8.PREMIUM_PURCHASE
                                                             });
                                                     },
@@ -514,7 +516,7 @@ let ey = {
                                                   category: s,
                                                   shouldCheckoutWithOrbs: c,
                                                   returnRef: b,
-                                                  analyticsLocations: j
+                                                  analyticsLocations: _
                                               });
                                           }
                                       }))
@@ -597,7 +599,7 @@ let ey = {
     eU = (e) => {
         let { product: t, user: n } = e,
             i = U.ZP.canUsePremiumProfileCustomization(n),
-            a = (0, p.cj)([R.Z], () => R.Z.getAllPending()),
+            a = (0, p.cj)([A.Z], () => A.Z.getAllPending()),
             { pendingAvatar: l } = a,
             s = (function (e, t) {
                 if (null == e) return {};
@@ -658,11 +660,11 @@ let ey = {
     },
     ez = (e) => {
         let { author: t } = e;
-        return (0, _.e5)(
+        return (0, j.e5)(
             eT(
                 eN(
                     {},
-                    (0, j.ZP)({
+                    (0, _.ZP)({
                         author: t,
                         channelId: '1337',
                         content: eE.intl.string(eE.t.d5YwKy)
@@ -717,10 +719,10 @@ let ey = {
             b = (0, p.e7)([B.default], () => B.default.getCurrentUser()),
             P = (0, eC.f)(a),
             { previewingVariantIndex: C } = P,
-            _ = (0, p.e7)([F.Z], () => F.Z.purchases),
-            j = (0, G.o)(a, _),
+            j = (0, p.e7)([F.Z], () => F.Z.purchases),
+            _ = (0, G.o)(a, j),
             w = (0, eP.N)(a, C),
-            I = (0, ex.W)(a, j);
+            I = (0, ex.W)(a, _);
         o()(null != I, 'Selected product should not be null');
         let { analyticsLocations: k } = (0, g.ZP)([...u, x.Z.COLLECTIBLES_SHOP_DETAILS_MODAL]);
         (0, er.u9)(I.skuId);
@@ -740,10 +742,10 @@ let ey = {
             }),
                 I.items.forEach(H.oK);
         }, [c, k, I.skuId, I.items, N]);
-        let y = (0, A.r)(),
-            Z = t === h.Dvm.EXITING;
+        let y = (0, Z.r)(),
+            R = t === h.Dvm.EXITING;
         if (null == b) return null;
-        let R = (0, ew.ZS)(l.skuId),
+        let A = (0, ew.ZS)(l.skuId),
             M = function () {
                 let { keepBalancePillOverlayOpen: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 n(), e || (0, L.vp)();
@@ -765,7 +767,7 @@ let ey = {
                             category: l,
                             onClose: M,
                             previewingVariantIndexProps: P,
-                            selectedVariantIndex: j,
+                            selectedVariantIndex: _,
                             shouldCheckoutWithOrbs: f,
                             tab: v
                         }),
@@ -776,11 +778,11 @@ let ey = {
                                     asset: E,
                                     size: (0, ec.ML)(540),
                                     className: eS.categoryBanner,
-                                    categoryBannerOverride: R
+                                    categoryBannerOverride: A
                                 }),
                                 (0, ep.o0)(a.skuId)
                                     ? a.skuId === ew.Vt.ORB_PROFILE_BADGE
-                                        ? y || Z
+                                        ? y || R
                                             ? null
                                             : (0, r.jsx)(ed.M, { user: b })
                                         : a.skuId === m.a.PREMIUM_TIER_2_3_DAY
@@ -800,7 +802,7 @@ let ey = {
                                             className: eS.titleImageContainer,
                                             children: (0, r.jsx)('img', {
                                                 className: eS.titleImage,
-                                                style: null == R ? void 0 : R.pdpLogoStyle,
+                                                style: null == A ? void 0 : A.pdpLogoStyle,
                                                 src: S,
                                                 alt: l.name
                                             })

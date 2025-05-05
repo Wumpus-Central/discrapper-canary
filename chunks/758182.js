@@ -18,8 +18,8 @@ var a = n(149765),
     _ = n(632093),
     x = n(347994),
     E = n(591526),
-    j = n(261875),
-    C = n(710845),
+    C = n(261875),
+    j = n(710845),
     O = n(38618),
     S = n(218543),
     v = n(314897),
@@ -30,7 +30,7 @@ var a = n(149765),
     A = n(38217),
     P = n(864631),
     R = n(981631);
-let D = new C.Z('CacheStore'),
+let D = new j.Z('CacheStore'),
     Z = !1,
     w = !1,
     k = 'initializing',
@@ -82,10 +82,10 @@ async function F(e, t, n) {
         p = S.Z.fetchGuildCache.measureAsync(() => z(e, n)),
         h = S.Z.fetchGuildCache.measureAsync(() => W(e, n)),
         f = null != e ? l.Z.timeAsync('\uD83D\uDCBE', 'cache: private_channels', () => E.Z.getAsync(e, null)) : Promise.resolve([]),
-        j = null == e ? Promise.resolve({}) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_settings', () => x.Z.getAll(e)),
-        C = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: read_states', () => b.Z.getAll(e)),
+        C = null == e ? Promise.resolve({}) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_settings', () => x.Z.getAll(e)),
+        j = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: read_states', () => b.Z.getAll(e)),
         v = null == e ? Promise.resolve([]) : l.Z.timeAsync('\uD83D\uDCBE', 'cache: user_guild_settings', () => _.Z.getAll(e)),
-        [[N, y], A, R, Z, w, k, L] = await Promise.all([g, p, h, f, j, C, v]),
+        [[N, y], A, R, Z, w, k, L] = await Promise.all([g, p, h, f, C, j, v]),
         B = performance.now() - m;
     if ((D.verbose('cache loaded in '.concat(B, 'ms (channel_history ').concat(N, 'ms)')), null == y)) return (0, P.Z)('database:history_cache_null'), D.verbose('finished without dispatching CACHE_LOADED'), [!1, null, 0];
     {
@@ -367,7 +367,7 @@ class q extends (i = o.ZP.Store) {
         }
         try {
             let t = v.default.getId(),
-                i = j.Z.carefullyOpenDatabase(t),
+                i = C.Z.carefullyOpenDatabase(t),
                 [r, s, l] = await S.Z.loadMiniCache.measureAsync(() => F(i, t, e));
             r ? (n(), await Y(i, t, s, l)) : (n(), await (K(() => d.Z.dispatch({ type: 'CACHE_LOADED_LAZY_NO_CACHE' })), Promise.resolve()));
         } catch (e) {

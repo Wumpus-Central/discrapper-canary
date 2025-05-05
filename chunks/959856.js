@@ -217,7 +217,7 @@ class N extends l.Z {
     writeAudioDebugState() {
         return Promise.reject(Error('Audio debug state is not supported.'));
     }
-    setExperimentalAdm(e) {}
+    setAudioInputBypassSystemProcessing(e) {}
     setLoopback(e, t) {
         e && null == this.loopback ? (this.enable(), (this.loopback = new y.Z(this.getAudioContext(), this.sourceId, this.sinkId)), this.loopback.setNoiseCancellation(t.noiseCancellation)) : e || null == this.loopback || (this.loopback.stop(), (this.loopback = null));
     }

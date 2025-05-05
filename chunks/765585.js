@@ -11,7 +11,7 @@ var i = n(255367),
     m = n(388032),
     g = n(418952);
 let p = r.forwardRef(function (e, t) {
-    let { body: n, header: s, artClassName: p, headerClassName: h, contentClassName: f, tryItText: b, dismissText: _, onTryFeature: x, onClose: E, className: j, inlineArt: C = !1, isPremiumFeature: O = !1, shouldUseHorizontalButtons: S = !1, showGIFTag: v = !1, dismissibleContent: T, position: I = 'top', align: N = 'center', art: y, isPremiumEarlyAccess: A = !1, maxWidth: P = 280, hideDismissButton: R = !1, pointerClassName: D, dismissIconClassName: Z, dismissIcon: w, onDismissIconClick: k, tryItButtonColor: L } = e,
+    let { body: n, header: s, artClassName: p, headerClassName: h, contentClassName: f, tryItText: b, dismissText: _, onTryFeature: x, onClose: E, className: C, inlineArt: j = !1, isPremiumFeature: O = !1, shouldUseHorizontalButtons: S = !1, showGIFTag: v = !1, dismissibleContent: T, position: I = 'top', align: N = 'center', art: y, isPremiumEarlyAccess: A = !1, maxWidth: P = 280, hideDismissButton: R = !1, pointerClassName: D, dismissIconClassName: Z, dismissIcon: w, onDismissIconClick: k, tryItButtonColor: L } = e,
         B = S ? a.zxk.Sizes.LARGE : a.zxk.Sizes.MAX,
         [M, U] = r.useState(!1),
         { ref: V, width: G } = (0, o.ZP)();
@@ -28,11 +28,11 @@ let p = r.forwardRef(function (e, t) {
             (0, c.kk)(T);
         }, [T]),
         (0, i.jsx)('div', {
-            className: j,
+            className: C,
             ref: t,
             children: (0, i.jsxs)('div', {
                 className: l()(g.content, f, {
-                    [g.contentNoArt]: null == p || C,
+                    [g.contentNoArt]: null == p || j,
                     [g.contentPremium]: O || A
                 }),
                 children: [
@@ -43,7 +43,7 @@ let p = r.forwardRef(function (e, t) {
                             children: w
                         }),
                     (0, i.jsxs)('div', {
-                        className: l()(p, C ? g.artInline : g.artAbsolute),
+                        className: l()(p, j ? g.artInline : g.artAbsolute),
                         children: [v && (0, i.jsx)(d.Z, { className: g.gifTag }), y]
                     }),
                     (0, i.jsxs)('div', {

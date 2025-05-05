@@ -1,6 +1,7 @@
 e.exports = {
     wrapper: 'wrapper_cc5dd2',
     svg: 'svg_cc5dd2',
+    shiftSVG: 'shiftSVG_cc5dd2',
     noContain: 'noContain_cc5dd2',
     lowerBadge: 'lowerBadge_cc5dd2',
     scaleIn: 'scaleIn_cc5dd2',

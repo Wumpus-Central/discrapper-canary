@@ -7,7 +7,7 @@ var i = n(255367),
     o = n(686546),
     c = n(168301);
 let d = r.forwardRef(function (e, t) {
-    let { tooltipText: n, children: r, onContextMenu: s, onClick: d, disabled: u, icon: m, iconForeground: g, innerClassName: p, className: h, redGlow: f, tooltipClassName: b, onMouseEnter: _, onMouseLeave: x, 'aria-label': E, 'aria-checked': j, role: C, tooltipColor: O, tooltipForceOpen: S, tooltipContentClassName: v, plated: T } = e,
+    let { tooltipText: n, children: r, onContextMenu: s, onClick: d, disabled: u, icon: m, iconForeground: g, innerClassName: p, className: h, redGlow: f, tooltipClassName: b, onMouseEnter: _, onMouseLeave: x, 'aria-label': E, 'aria-checked': C, role: j, tooltipColor: O, tooltipForceOpen: S, tooltipContentClassName: v, plated: T } = e,
         I =
             'function' == typeof m
                 ? (0, i.jsx)(m, {
@@ -100,8 +100,8 @@ let d = r.forwardRef(function (e, t) {
                             null == E || E(), null == x || x();
                         },
                         onContextMenu: s,
-                        role: C,
-                        'aria-checked': j,
+                        role: j,
+                        'aria-checked': C,
                         focusProps: {
                             offset: {
                                 left: -1,

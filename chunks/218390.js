@@ -21,8 +21,8 @@ var i = n(255367),
     _ = n(497321),
     x = n(634894),
     E = n(410030),
-    j = n(607070),
-    C = n(100527),
+    C = n(607070),
+    j = n(100527),
     O = n(906732),
     S = n(211242),
     v = n(975298),
@@ -255,7 +255,7 @@ function el() {
 }
 function ea(e) {
     let { className: t, config: n } = e,
-        r = (0, c.e7)([j.Z], () => j.Z.useReducedMotion) ? n.getStaticImageUrl() : n.getAnimatedImageUrl();
+        r = (0, c.e7)([C.Z], () => C.Z.useReducedMotion) ? n.getStaticImageUrl() : n.getAnimatedImageUrl();
     return (0, i.jsxs)('div', {
         className: l()(J.giftCardPromotion, t),
         children: [
@@ -356,7 +356,7 @@ function eo() {
 }
 let ec = function () {
     let e = (0, S.Q)(),
-        { analyticsLocations: t } = (0, O.ZP)(C.Z.PREMIUM_SETTINGS),
+        { analyticsLocations: t } = (0, O.ZP)(j.Z.PREMIUM_SETTINGS),
         n = (0, c.e7)([R.ZP], () => R.ZP.getPremiumTypeSubscription()),
         s = (0, c.e7)([R.ZP], () => R.ZP.hasFetchedSubscriptions()),
         l = (0, T.V)(),
@@ -365,7 +365,7 @@ let ec = function () {
         h = (0, V.n)(),
         b = null == h ? void 0 : h.countryCode,
         E = (0, c.e7)([A.Z], () => A.Z.enabled),
-        j = r.useRef(null),
+        C = r.useRef(null),
         y = 'PremiumManagementSettings';
     (0, x.j)({
         location: y + ' auto on',
@@ -415,12 +415,12 @@ let ec = function () {
                     ]
                 }),
                 (0, i.jsx)(d.$, {
-                    innerRef: j,
+                    innerRef: C,
                     onChange: (e) => {
                         e && !D && (Z.default.track(X.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }), w(!0));
                     },
                     children: (0, i.jsx)('div', {
-                        ref: j,
+                        ref: C,
                         className: J.bottomOfPageVisibilitySensor
                     })
                 })

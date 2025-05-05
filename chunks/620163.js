@@ -18,8 +18,8 @@ var r = n(990547),
     _ = n(163379),
     x = n(498646),
     E = n(489968),
-    j = n(703288),
-    C = n(574755),
+    C = n(703288),
+    j = n(574755),
     O = n(377171),
     S = n(540059),
     v = n(621628),
@@ -72,8 +72,8 @@ var r = n(990547),
     e_ = n(956699),
     ex = n(54942),
     eE = n(293389),
-    ej = n(88624),
-    eC = n(387747),
+    eC = n(88624),
+    ej = n(387747),
     eO = n(389650),
     eS = n(649157),
     ev = n(593648),
@@ -115,7 +115,7 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
     },
     e1 = eZ.Z,
     e3 = (e) => {
-        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: T, impressionSource: P, numOfPendingFamilyRequests: D, isOverlaySupported: F, isClipsBetaTagShowing: e3 = !1, shouldMergeGameSettings: e8, isKeywordFilteringEnabled: e2, isStaff: e6, isInappropriateConversationWarningEnabled: e5, isInapproprateConversationsDefaultOn: e4, paymentsBlocked: e7, isEligibleForQuests: e9, showGiftNitro: te, isStricterMessageRequestsEnabled: tt, hasLibraryApplication: tn, hasTOTPEnabled: ti, developerMode: tr, isAdultUser: ts, hasSecureFramesVerifiedUserIds: tl, hypeSquadRemoved: ta, hasIgnoredUsers: to, hasBlockedUsers: tc, useRefreshedVoiceAndVideo: td, isEligibleForSensitiveContentDefaults: tu } = e;
+        let { unseenGiftCount: t, showPrepaidPaymentPastDueWarning: T, impressionSource: P, numOfPendingFamilyRequests: D, isOverlaySupported: F, isClipsBetaTagShowing: e3 = !1, shouldMergeGameSettings: e8, isKeywordFilteringEnabled: e6, isStaff: e2, isInappropriateConversationWarningEnabled: e5, isInapproprateConversationsDefaultOn: e4, paymentsBlocked: e7, isEligibleForQuests: e9, showGiftNitro: te, isStricterMessageRequestsEnabled: tt, hasLibraryApplication: tn, hasTOTPEnabled: ti, developerMode: tr, isAdultUser: ts, hasSecureFramesVerifiedUserIds: tl, hypeSquadRemoved: ta, hasIgnoredUsers: to, hasBlockedUsers: tc, useRefreshedVoiceAndVideo: td, isEligibleForSensitiveContentDefaults: tu } = e;
         return Object.freeze({
             [eF.s6.SEARCH_NO_RESULTS]: {
                 section: g.ID.CUSTOM,
@@ -454,7 +454,7 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: ez.oAB.CONTENT_AND_SOCIAL,
                 searchableTitles: [eK.intl.string(eK.t['1UaUy8']), eK.intl.string(eK.t['xIk/iI'])],
                 parent: eF.s6.PRIVACY_AND_SAFETY_CONTENT_CATEGORY,
-                predicate: () => e2
+                predicate: () => e6
             },
             [eF.s6.PRIVACY_SAFETY_ALERTS_V2]: {
                 section: ez.oAB.CONTENT_AND_SOCIAL,
@@ -533,8 +533,8 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: [eK.intl.string(eK.t.z2jK6e)],
                 label: eK.intl.string(eK.t.z2jK6e),
                 ariaLabel: eK.intl.string(eK.t.z2jK6e),
-                icon: e3 ? (0, i.jsx)(j.Z, {}) : void 0,
-                element: C.Z,
+                icon: e3 ? (0, i.jsx)(C.Z, {}) : void 0,
+                element: j.Z,
                 predicate: () => !e8,
                 url: ez.Z5c.SETTINGS('clips')
             },
@@ -597,7 +597,7 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: ez.oAB.INVENTORY,
                 searchableTitles: [eK.intl.string(eK.t['jcSP+v'])],
                 label: eK.intl.string(eK.t['jcSP+v']),
-                element: eC.Z,
+                element: ej.Z,
                 ariaLabel: eK.intl.string(eK.t['jcSP+v']),
                 badgeCount: t
             },
@@ -1002,6 +1002,12 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 parent: eF.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
                 predicate: () => Y.Z.isAutomaticGainControlSupported()
             },
+            [eF.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING_BYPASS_SYSTEM_INPUT_PROCESSING]: {
+                section: ez.oAB.VOICE,
+                searchableTitles: [eK.intl.string(eK.t.DFPXIC)],
+                parent: eF.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
+                predicate: () => Y.Z.showBypassSystemInputProcessing()
+            },
             [eF.s6.VOICE_AND_VIDEO_ADVANCED_QOS]: {
                 section: ez.oAB.VOICE,
                 searchableTitles: [eK.intl.string(eK.t.uancuL)],
@@ -1018,7 +1024,7 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: ez.oAB.VOICE,
                 searchableTitles: [eK.intl.string(eK.t.wVBHr6)],
                 parent: td ? eF.s6.VOICE_AND_VIDEO_VOICE_ADVANCED : eF.s6.VOICE_AND_VIDEO_ADVANCED,
-                predicate: () => Y.Z.supports(eY.AN.LEGACY_AUDIO_SUBSYSTEM) || Y.Z.supports(eY.AN.EXPERIMENTAL_AUDIO_SUBSYSTEM)
+                predicate: () => Y.Z.shouldOfferManualSubsystemSelection()
             },
             [eF.s6.VOICE_AND_VIDEO_ADVANCED_SCREENSHARE]: {
                 section: ez.oAB.VOICE,
@@ -1071,7 +1077,7 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: ez.oAB.VOICE,
                 searchableTitles: [eK.intl.string(eK.t.U4FgFB)],
                 parent: eF.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING,
-                predicate: () => ('canary' === $.ZP.releaseChannel || 'development' === $.ZP.releaseChannel) && e6 && Y.Z.supports(eY.AN.CONNECTION_REPLAY)
+                predicate: () => ('canary' === $.ZP.releaseChannel || 'development' === $.ZP.releaseChannel) && e2 && Y.Z.supports(eY.AN.CONNECTION_REPLAY)
             },
             [eF.s6.VOICE_AND_VIDEO_ADVANCED_DEBUGGING_LOGGING]: {
                 section: ez.oAB.VOICE,
@@ -1535,7 +1541,7 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: ez.oAB.HYPESQUAD_ONLINE,
                 searchableTitles: [eK.intl.string(eK.t['k0R+4e'])],
                 label: eK.intl.string(eK.t['k0R+4e']),
-                element: ej.Z,
+                element: eC.Z,
                 predicate: () => !ta
             },
             [eF.s6.TOWNHALL]: {
@@ -1603,7 +1609,7 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: ez.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ['Always deliver ads'],
                 parent: eF.s6.DEVELOPER_OPTIONS_FLAGS,
-                predicate: () => e6 && z.Z.isDeveloper
+                predicate: () => e2 && z.Z.isDeveloper
             },
             [eF.s6.DEVELOPER_OPTIONS_SOURCE_MAPS]: {
                 section: ez.oAB.DEVELOPER_OPTIONS,
@@ -1621,7 +1627,7 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: ez.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ['Idle Status Indicator'],
                 parent: eF.s6.DEVELOPER_OPTIONS_FLAGS,
-                predicate: () => e6 && z.Z.isDeveloper
+                predicate: () => e2 && z.Z.isDeveloper
             },
             [eF.s6.DEVELOPER_OPTIONS_ACCESSIBILITY_AUDITING]: {
                 section: ez.oAB.DEVELOPER_OPTIONS,
@@ -1633,31 +1639,31 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: ez.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ['CSS Debugging'],
                 parent: eF.s6.DEVELOPER_OPTIONS_FLAGS,
-                predicate: () => e6 && z.Z.isDeveloper
+                predicate: () => e2 && z.Z.isDeveloper
             },
             [eF.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING]: {
                 section: ez.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ['Layout Debugging'],
                 parent: eF.s6.DEVELOPER_OPTIONS_FLAGS,
-                predicate: () => e6 && z.Z.isDeveloper
+                predicate: () => e2 && z.Z.isDeveloper
             },
             [eF.s6.DEVELOPER_OPTIONS_LAYOUT_DEBUGGING_OPTIONS]: {
                 section: ez.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ['Layout Debugging'],
                 parent: eF.s6.DEVELOPER_OPTIONS_FLAGS,
-                predicate: () => e6 && z.Z.isDeveloper && W.default.layoutDebuggingEnabled
+                predicate: () => e2 && z.Z.isDeveloper && W.default.layoutDebuggingEnabled
             },
             [eF.s6.DEVELOPER_OPTIONS_PREVIEW_UNPUBLISHED_COLLECTIONS]: {
                 section: ez.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ['Preview Unpublished Collections'],
                 parent: eF.s6.DEVELOPER_OPTIONS_FLAGS,
-                predicate: () => e6 && z.Z.isDeveloper
+                predicate: () => e2 && z.Z.isDeveloper
             },
             [eF.s6.DEVELOPER_OPTIONS_DISABLE_APP_COLLECTIONS_CACHE]: {
                 section: ez.oAB.DEVELOPER_OPTIONS,
                 searchableTitles: ['Disable App Collections Cache'],
                 parent: eF.s6.DEVELOPER_OPTIONS_FLAGS,
-                predicate: () => e6 && z.Z.isDeveloper
+                predicate: () => e2 && z.Z.isDeveloper
             },
             [eF.s6.DEVELOPER_OPTIONS_OVERRIDE_CLIENT_SIDE]: {
                 section: ez.oAB.DEVELOPER_OPTIONS,
@@ -1822,7 +1828,7 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: ['Intl Testing', 'i18n'],
                 label: 'Intl Testing',
                 element: A.Z,
-                predicate: () => e6 || z.Z.isDeveloper
+                predicate: () => e2 || z.Z.isDeveloper
             },
             [eF.s6.PROFILE_EFFECTS_PREVIEW_TOOL]: {
                 section: ez.oAB.PROFILE_EFFECTS_PREVIEW_TOOL,
@@ -1850,7 +1856,7 @@ let eJ = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 searchableTitles: ['Minor Reward Capping Config'],
                 label: 'Minor Reward Capping Config',
                 element: V.Z,
-                predicate: () => e6
+                predicate: () => e2
             },
             [eF.s6.WEB_SETTING_TREE_TOOL]: {
                 section: ez.oAB.WEB_SETTING_TREE_TOOL,

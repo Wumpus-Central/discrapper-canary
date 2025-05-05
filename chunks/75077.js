@@ -1,10 +1,10 @@
 n.d(t, {
     Dp: () => p,
     Gw: () => f,
-    Op: () => j,
+    Op: () => C,
     gx: () => _,
     iG: () => b,
-    mN: () => C,
+    mN: () => j,
     oo: () => h,
     sP: () => E
 }),
@@ -123,7 +123,7 @@ let _ = (e, t, n) => ((0, s.wj)(e) ? t : n),
         }
         return r || (c = c.filter((e) => !e.hideOnNarrowScreen)), c;
     },
-    j = (e) => {
+    C = (e) => {
         let t = (0, r.e7)([o.ZP], () => o.ZP.getPremiumTypeSubscription()),
             n = null != t ? c.ZP.getPremiumPlanItem(t) : null,
             i = (null != n ? c.ZP.getSkuIdForPlan(n.planId) : null) === u.Si.TIER_2;
@@ -142,7 +142,7 @@ let _ = (e, t, n) => ((0, s.wj)(e) ? t : n),
                   subtitle: g.intl.string(g.t['5TFEXl'])
               };
     },
-    C = () => {
+    j = () => {
         let e = (0, r.e7)([a.default], () => a.default.getCurrentUser());
         return (0, c.I5)(e);
     },

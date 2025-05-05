@@ -41,7 +41,7 @@ function E(e) {
     }
     return e;
 }
-function j(e, t) {
+function C(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,7 +59,7 @@ function j(e, t) {
         e
     );
 }
-let C = Object.keys(d.zxk.Colors).filter((e) => 'CUSTOM' !== e),
+let j = Object.keys(d.zxk.Colors).filter((e) => 'CUSTOM' !== e),
     O = Object.keys(d.zxk.Looks).filter((e) => 'BLANK' !== e),
     S = Object.keys(d.zxk.Sizes).filter((e) => 'NONE' !== e);
 function v() {
@@ -311,7 +311,7 @@ function D() {
 }
 function Z() {
     let [e, t] = r.useState(!1),
-        n = C.flatMap((e) => [
+        n = j.flatMap((e) => [
             ...O.map((t) =>
                 (0, i.jsxs)(
                     d.zxk,
@@ -620,22 +620,22 @@ function L() {
                     (0, i.jsx)(d.ua7, {
                         text: "Here's top aligned tooltip text!",
                         position: 'top',
-                        children: (e) => (0, i.jsx)(d.zxk, j(E({}, e), { children: 'Tooltip on the top' }))
+                        children: (e) => (0, i.jsx)(d.zxk, C(E({}, e), { children: 'Tooltip on the top' }))
                     }),
                     (0, i.jsx)(d.ua7, {
                         text: "Here's right aligned tooltip text!",
                         position: 'left',
-                        children: (e) => (0, i.jsx)(d.zxk, j(E({}, e), { children: 'Tooltip on the left' }))
+                        children: (e) => (0, i.jsx)(d.zxk, C(E({}, e), { children: 'Tooltip on the left' }))
                     }),
                     (0, i.jsx)(d.ua7, {
                         text: "Here's bottom aligned tooltip text!",
                         position: 'bottom',
-                        children: (e) => (0, i.jsx)(d.zxk, j(E({}, e), { children: 'Tooltip on the bottom' }))
+                        children: (e) => (0, i.jsx)(d.zxk, C(E({}, e), { children: 'Tooltip on the bottom' }))
                     }),
                     (0, i.jsx)(d.ua7, {
                         text: "Here's right aligned tooltip text!",
                         position: 'right',
-                        children: (e) => (0, i.jsx)(d.zxk, j(E({}, e), { children: 'Tooltip on the right' }))
+                        children: (e) => (0, i.jsx)(d.zxk, C(E({}, e), { children: 'Tooltip on the right' }))
                     })
                 ]
             }),

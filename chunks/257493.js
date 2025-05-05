@@ -38,7 +38,7 @@ let m = (0, r.createContext)({
                 };
             }, [f, h]),
             { redeemVirtualCurrency: _, isSubmitting: x, error: E } = (0, u.f)(),
-            j = (0, r.useCallback)(
+            C = (0, r.useCallback)(
                 (e) => {
                     _(t, (n) => {
                         g({
@@ -56,7 +56,7 @@ let m = (0, r.createContext)({
                 loadId: n,
                 analyticsLocations: null != s ? s : [],
                 orbProductContext: b,
-                onRedeemVirtualCurrency: j,
+                onRedeemVirtualCurrency: C,
                 isRedeeming: x,
                 orbRedemptionError: E
             },

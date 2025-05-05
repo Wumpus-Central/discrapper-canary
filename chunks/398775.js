@@ -1,6 +1,6 @@
 n.d(t, {
     Sz: () => O,
-    of: () => C
+    of: () => j
 }),
     n(539854),
     n(388685),
@@ -23,7 +23,7 @@ var i = n(255367),
     _ = n(981631),
     x = n(388032),
     E = n(714421);
-async function j(e) {
+async function C(e) {
     let { premiumSubscription: t, pauseDuration: n, onClose: i, setHasError: r, setIsCancelling: s, analyticsLocations: l, analyticsLocation: a } = e;
     try {
         s(!0),
@@ -44,7 +44,7 @@ async function j(e) {
         r(!0), s(!1);
     }
 }
-function C(e) {
+function j(e) {
     let { premiumType: t, onClose: n, pauseDuration: s, setPauseDuration: l, footer: o, premiumSubscription: d } = e,
         m = r.useCallback(
             (e) => {
@@ -125,7 +125,7 @@ function O(e) {
     let { premiumSubscription: t, premiumType: n, onClose: s, pauseDuration: a, analyticsLocation: d } = e,
         [u, h] = r.useState(!1),
         { analyticsLocations: f } = (0, g.ZP)(),
-        [C, O] = r.useState(!1),
+        [j, O] = r.useState(!1),
         S = (0, m.ZP)(),
         v = null,
         T = null,
@@ -189,9 +189,9 @@ function O(e) {
                         children: [
                             (0, i.jsx)(c.zxk, {
                                 color: c.zxk.Colors.RED,
-                                disabled: C || null == a,
+                                disabled: j || null == a,
                                 onClick: async () => {
-                                    await j({
+                                    await C({
                                         premiumSubscription: t,
                                         pauseDuration: a,
                                         setIsCancelling: O,

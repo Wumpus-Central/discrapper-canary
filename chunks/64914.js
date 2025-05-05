@@ -1,4 +1,4 @@
-n.d(t, { Z: () => j }), n(388685), n(49124);
+n.d(t, { Z: () => C }), n(388685), n(49124);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -41,12 +41,12 @@ function E(e) {
     }
     return e;
 }
-function j() {
+function C() {
     let [e] = r.useState(() => g.ZP.getEnableHardwareAcceleration()),
         t = h.bm.useSetting(),
         n = h.Sb.useSetting(),
-        j = (0, s.e7)([m.Z], () => m.Z.testModeApplicationId),
-        C = (0, s.e7)([p.ZP], () => p.ZP.showPlayAgain),
+        C = (0, s.e7)([m.Z], () => m.Z.testModeApplicationId),
+        j = (0, s.e7)([p.ZP], () => p.ZP.showPlayAgain),
         O = r.useCallback((e) => {
             h.bm.updateSetting(!e);
         }, []),
@@ -139,7 +139,7 @@ function j() {
             (0, i.jsx)(u.F, {
                 setting: b.s6.SETTINGS_ADVANCED_APPLICATION_TEST_MODE,
                 children: (0, i.jsx)(l.j7V, {
-                    value: null != j,
+                    value: null != C,
                     note: x.intl.string(x.t['52hMnJ']),
                     onChange: S,
                     children: x.intl.string(x.t.erOqlp)
@@ -148,7 +148,7 @@ function j() {
             (0, i.jsx)(u.F, {
                 setting: b.s6.SETTINGS_ADVANCED_SHOW_PLAY_AGAIN,
                 children: (0, i.jsx)(l.j7V, {
-                    value: C,
+                    value: j,
                     note: x.intl.string(x.t['B/qU4O']),
                     onChange: v,
                     children: x.intl.string(x.t.qDZryM)

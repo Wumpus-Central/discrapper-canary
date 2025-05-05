@@ -17,8 +17,8 @@ var i = n(255367),
     _ = n(388032),
     x = n(601060),
     E = n(839526),
-    j = n(4046),
-    C = n(423741);
+    C = n(4046),
+    j = n(423741);
 let O = r.forwardRef((e, t) => {
     var n, s;
     let { className: O, isFooterVisible: S, isDarkMode: v, isReducedMotion: T, subscriptionTier: I } = e,
@@ -58,14 +58,14 @@ let O = r.forwardRef((e, t) => {
                         children: (0, i.jsx)(d.Z, {
                             playsInline: !0,
                             preload: 'auto',
-                            poster: j.Z,
+                            poster: C.Z,
                             className: x.footerArt,
                             onEnded: () => {
                                 k(!0);
                             },
                             ref: Z,
                             children: (0, i.jsx)('source', {
-                                src: D ? E.Z : C.Z,
+                                src: D ? E.Z : j.Z,
                                 type: D ? b.m.MP4 : b.m.WEBM
                             })
                         })

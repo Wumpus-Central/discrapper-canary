@@ -1,6 +1,6 @@
 n.d(t, {
-    F: () => j,
-    I: () => C
+    F: () => C,
+    I: () => j
 }),
     n(953529),
     n(388685);
@@ -70,8 +70,8 @@ function E(e) {
         { showTempStatusOptions: o, hasDefaultClickOption: c, hasButtonStyling: d } = a.Y.useExperiment({ location: 'UserProfileAccountPopout' }),
         h = o && t !== p.Skl.ONLINE,
         [x, E] = r.useState(void 0),
-        j = void 0 !== x && t === n,
-        C = (0, i.jsx)(i.Fragment, {
+        C = void 0 !== x && t === n,
+        j = (0, i.jsx)(i.Fragment, {
             children: b.map((e) => {
                 let { duration: r, label: s } = e;
                 return (0, i.jsx)(
@@ -143,7 +143,7 @@ function E(e) {
                             className: f.description,
                             children: s
                         }),
-                    h && d && j ? O : void 0
+                    h && d && C ? O : void 0
                 ]
             });
         },
@@ -156,10 +156,10 @@ function E(e) {
                 });
         },
         dontCloseOnAction: !0,
-        children: h && !d ? C : void 0
+        children: h && !d ? j : void 0
     });
 }
-function j(e) {
+function C(e) {
     if (null == e || '0' === e) return;
     let t = new Date(Number(e)),
         n = x(t, new Date()),
@@ -173,7 +173,7 @@ function j(e) {
               timeString: h.intl.data.formatTime(t, { format: 'short' })
           });
 }
-function C(e) {
+function j(e) {
     let { hasNewStrings: t } = a.Y.useExperiment({ location: 'UserProfileAccountPopout' }),
         n = d.Cr.useSetting(),
         r = (0, o.p)(),
@@ -181,7 +181,7 @@ function C(e) {
         m = d.fv.useSetting(),
         g = e === p.Skl.DND,
         _ = (i) => {
-            let r = j(n);
+            let r = C(n);
             if (e === i && null != r) return r;
             switch (i) {
                 case p.Skl.DND:
@@ -209,7 +209,7 @@ function C(e) {
                 );
             })
         }),
-        C = E({
+        j = E({
             status: p.Skl.ONLINE,
             currentStatus: e
         }),
@@ -230,7 +230,7 @@ function C(e) {
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            C,
+            j,
             (0, i.jsx)(l.Clw, {}, 'menu-separator-statuses'),
             O,
             S,
