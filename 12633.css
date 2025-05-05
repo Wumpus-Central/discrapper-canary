@@ -24066,30 +24066,6 @@ input[type=checkbox]:focus-visible+.label__0d242 {
     margin-top: -16px
 }
 
-.soundShowAllButton__6eb78 {
-    cursor: pointer
-}
-
-.visual-refresh .soundShowAllButton__6eb78 {
-    background: var(--background-mod-subtle)
-}
-
-.visual-refresh .soundShowAllButton__6eb78:hover {
-    background: var(--background-mod-normal)
-}
-
-.visual-refresh .soundShowAllButton__6eb78.focused__6eb78 {
-    background: var(--background-mod-strong)
-}
-
-.soundShowAllButton__6eb78 svg {
-    margin: 0 -3px 0 3px
-}
-
-.disabled__6eb78 {
-    pointer-events: none
-}
-
 .soundAddButton_da9eb2 {
     color: var(--header-primary);
     cursor: pointer
