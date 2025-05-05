@@ -1,5 +1,5 @@
 e.exports = {
-    buttonWide: 'buttonWide__95fb7',
+    button: 'button__95fb7',
     innerButton: 'innerButton__95fb7',
     nitroIconSubHeader: 'nitroIconSubHeader__95fb7',
     termsApplyAnchor: 'termsApplyAnchor__95fb7',

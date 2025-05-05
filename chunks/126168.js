@@ -3,8 +3,8 @@ function r(e, t) {
     let n = [],
         r = e[0];
     for (let i = 1; i < e.length; i++) {
-        let o = e[i];
-        n.push(t(r, o)), (r = o);
+        let a = e[i];
+        n.push(t(r, a)), (r = a);
     }
     return n;
 }

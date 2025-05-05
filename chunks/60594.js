@@ -1,11 +1,11 @@
 n.d(t, { default: () => em }), n(388685), n(539854), n(35282);
-var r = n(200651),
-    l = n(192379),
+var r = n(255367),
+    l = n(73800),
     i = n(120356),
     s = n.n(i),
     a = n(512722),
     o = n.n(a),
-    c = n(272573),
+    c = n(481752),
     d = n(209739),
     u = n.n(d),
     f = n(252258),
@@ -174,8 +174,8 @@ function ef(e) {
         [e2, e5] = l.useState(ej),
         [e3, e4] = l.useState(null != (a = P.I0.getSetting()) && a),
         [e8, e7] = l.useState(null != ef ? ef : null),
-        e9 = null != (d = null == eb ? void 0 : eb.id) ? d : eF,
-        [e6, te] = l.useState(eA ? '' : void 0),
+        e6 = null != (d = null == eb ? void 0 : eb.id) ? d : eF,
+        [e9, te] = l.useState(eA ? '' : void 0),
         tt = (0, w.Q3)('GoLiveModal');
     async function tn() {
         var e, t;
@@ -209,7 +209,7 @@ function ef(e) {
                 audioSourceId: eJ,
                 sound: e2,
                 previewDisabled: e3,
-                nativePickerStyleUsed: e6,
+                nativePickerStyleUsed: e9,
                 goLiveModalDurationMs: Date.now() - ev.current
             })
         ),
@@ -256,14 +256,14 @@ function ef(e) {
         ),
         ti = l.useCallback(
             (e) => {
-                (0, Y.t)(), (0, Y.T)(null != e ? e : e6);
+                (0, Y.t)(), (0, Y.T)(null != e ? e : e9);
             },
-            [e6]
+            [e9]
         );
     function ts(e) {
         if ((e.preventDefault(), 1 === eB)) return ti();
         if (2 === eB) return eU(3);
-        if (null != e6) return eU(1);
+        if (null != e9) return eU(1);
         let t = (0, $.Z)(eS, eV, N.ZP.getRunningGames());
         if (W.ZP.supportsFeature(er.eRX.ELEVATED_HOOK) && (null == t ? void 0 : t.elevated)) {
             var l;
@@ -350,7 +350,7 @@ function ef(e) {
                     return null;
             }
         })(eB, F, ee, ez),
-        th = 1 !== eB && (3 !== eB || (null == eV && null == eS && null == eI) || null == e9),
+        th = 1 !== eB && (3 !== eB || (null == eV && null == eS && null == eI) || null == e6),
         tx = l.useCallback(() => {
             null != tm && eU(tm);
         }, [tm]),
@@ -416,13 +416,13 @@ function ef(e) {
                         children: (0, r.jsx)(Q.Hu, {
                             onSourceSelect: tr,
                             onCancel: tx,
-                            pickerType: e6
+                            pickerType: e9
                         })
                     })
                 })
             ]
         }),
-        tg = 1 === eB || (eA && 3 === eB) ? es.intl.string(es.t.FiBjwc) : ek && (3 !== eB || null != e6) ? es.intl.string(es.t.PDTjLC) : es.intl.string(es.t['UE/rPz']),
+        tg = 1 === eB || (eA && 3 === eB) ? es.intl.string(es.t.FiBjwc) : ek && (3 !== eB || null != e9) ? es.intl.string(es.t.PDTjLC) : es.intl.string(es.t['UE/rPz']),
         t_ = tt
             ? (0, r.jsxs)(x.mzw, {
                   className: ea.modalFooter,

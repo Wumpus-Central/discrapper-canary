@@ -7,14 +7,14 @@ n.d(t, {
     n(953529);
 var r = n(570140),
     i = n(353926),
-    o = n(987338);
-let a = !1;
+    a = n(987338);
+let o = !1;
 function s(e, t, n) {
-    if (a) {
+    if (o) {
         var s, l;
-        let a = null == n ? void 0 : n.location,
-            c = (null == n ? void 0 : n.exposureType) === o.a0.AUTO_FALLBACK,
-            u = i.Z.hasExperimentTrackedExposure(e, t, a, c);
+        let o = null == n ? void 0 : n.location,
+            c = (null == n ? void 0 : n.exposureType) === a.a0.AUTO_FALLBACK,
+            u = i.Z.hasExperimentTrackedExposure(e, t, o, c);
         r.Z.dispatch({
             type: 'TRACK_TRIGGER',
             experimentId: e,
@@ -22,7 +22,7 @@ function s(e, t, n) {
             previouslyTracked: u,
             exposureType: null != (s = null == n ? void 0 : n.exposureType) ? s : 'unknown',
             excluded: null != (l = null == n ? void 0 : n.excluded) && l,
-            location: null != a ? a : 'unknown'
+            location: null != o ? o : 'unknown'
         });
     }
     i.Z.trackExposure({
@@ -36,28 +36,28 @@ function s(e, t, n) {
     });
 }
 function l(e) {
-    let { id: t, title: n, description: r, buckets: a, commonTriggerPoint: s } = e;
+    let { id: t, title: n, description: r, buckets: o, commonTriggerPoint: s } = e;
     return (
         (0, i.V)({
             experimentId: t,
-            experimentType: o.xY.USER,
+            experimentType: a.xY.USER,
             title: n,
             description: r,
-            buckets: a,
+            buckets: o,
             commonTriggerPoint: s
         }),
         { id: t }
     );
 }
 function c(e) {
-    let { id: t, title: n, description: r, buckets: a, commonTriggerPoint: s } = e;
+    let { id: t, title: n, description: r, buckets: o, commonTriggerPoint: s } = e;
     return (
         (0, i.V)({
             experimentId: t,
-            experimentType: o.xY.GUILD,
+            experimentType: a.xY.GUILD,
             title: n,
             description: r,
-            buckets: a,
+            buckets: o,
             commonTriggerPoint: s
         }),
         { id: t }

@@ -1,5 +1,5 @@
-n.d(t, { Z: () => o });
-var r = n(192379);
+n.d(t, { Z: () => a });
+var r = n(73800);
 let i = (e) => {
         e.effects.forEach((e) => {
             let { src: t } = e,
@@ -12,7 +12,7 @@ let i = (e) => {
                 document.body.appendChild(n);
         });
     },
-    o = (e) => {
+    a = (e) => {
         r.useEffect(() => {
             if ('loading' === document.readyState) {
                 let t = () => {

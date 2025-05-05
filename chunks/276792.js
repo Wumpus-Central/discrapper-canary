@@ -1,6 +1,6 @@
 n.d(t, { N: () => E });
-var r = n(200651);
-n(192379);
+var r = n(255367);
+n(73800);
 var i = n(704215),
     l = n(740111),
     a = n(481060),
@@ -130,20 +130,18 @@ function E(e) {
                 type: 'image',
                 src: N ? I.heroArtImageLinkLightTheme : I.heroArtImageLinkDarkTheme
             });
-    let w = N ? d.VE.PREMIUM_TIER_2_NEW_GRADIENT_FILL : d.VE.PREMIUM_TIER_2_WHITE_FILL,
-        L =
-            '' !== I.modalTopPill
-                ? () =>
-                      (0, r.jsx)(d.Cy, {
-                          text: I.modalTopPill,
-                          className: g.modalTopPill,
-                          colorOptions: w
-                      })
-                : void 0;
+    let w =
+        '' !== I.modalTopPill
+            ? () =>
+                  (0, r.jsx)(d.mn, {
+                      text: I.modalTopPill,
+                      className: g.modalTopPill
+                  })
+            : void 0;
     return {
         renderModalProps: v,
         header: I.header,
-        modalTopExtra: L,
+        modalTopExtra: w,
         subHeader: I.subheader,
         subHeaderExtra: Z,
         body: I.body,
@@ -158,7 +156,7 @@ function E(e) {
         button: () => {
             let e = Date.now();
             return (0, r.jsxs)(a.gtL, {
-                className: g.buttonWide,
+                className: g.button,
                 innerClassName: g.innerButton,
                 wrapperClassName: g.tier2Gradient,
                 size: a.zxk.Sizes.SMALL,

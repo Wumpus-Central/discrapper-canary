@@ -1,7 +1,7 @@
 var r = n(492476),
     i = n(381538),
-    o = n(26018);
-function a(e) {
+    a = n(26018);
+function o(e) {
     switch (e.arrayFormat) {
         case 'index':
             return function (t, n, r) {
@@ -77,8 +77,8 @@ function c(e) {
             ? (e.split('&').forEach(function (e) {
                   var t = e.replace(/\+/g, ' ').split('='),
                       i = t.shift(),
-                      a = t.length > 0 ? t.join('=') : void 0;
-                  (a = void 0 === a ? null : o(a)), n(o(i), a, r);
+                      o = t.length > 0 ? t.join('=') : void 0;
+                  (o = void 0 === o ? null : a(o)), n(a(i), o, r);
               }),
               Object.keys(r)
                   .sort()
@@ -89,7 +89,7 @@ function c(e) {
             : r;
     }),
     (t.stringify = function (e, t) {
-        var n = a(
+        var n = o(
             (t = i(
                 {
                     encode: !0,
@@ -107,12 +107,12 @@ function c(e) {
                       if (void 0 === i) return '';
                       if (null === i) return l(r, t);
                       if (Array.isArray(i)) {
-                          var o = [];
+                          var a = [];
                           return (
                               i.slice().forEach(function (e) {
-                                  void 0 !== e && o.push(n(r, e, o.length));
+                                  void 0 !== e && a.push(n(r, e, a.length));
                               }),
-                              o.join('&')
+                              a.join('&')
                           );
                       }
                       return l(r, t) + '=' + l(i, t);

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(979590),
     i = n.n(r),
-    o = n(866442),
-    a = n(81825);
+    a = n(866442),
+    o = n(81825);
 function s(e, t, n) {
     return (
         t in e
@@ -61,8 +61,8 @@ function d(e, t) {
         r,
         i = f(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -71,30 +71,30 @@ function f(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let _ = (e) =>
     null == e
         ? e
         : {
-              backgroundColors: e.background_colors.map((e) => i()((0, o.Rf)(e))),
-              buttonColors: e.button_colors.map((e) => i()((0, o.Rf)(e))),
-              confettiColors: e.confetti_colors.map((e) => i()((0, o.Rf)(e)))
+              backgroundColors: e.background_colors.map((e) => i()((0, a.Rf)(e))),
+              buttonColors: e.button_colors.map((e) => i()((0, a.Rf)(e))),
+              confettiColors: e.confetti_colors.map((e) => i()((0, a.Rf)(e)))
           };
-class p extends a.Z {
+class p extends o.Z {
     static fromServer(e) {
-        var { store_listing_id: t, sku_id: n, unpublished_at: r, banner_asset: i, styles: o } = e,
-            a = d(e, ['store_listing_id', 'sku_id', 'unpublished_at', 'banner_asset', 'styles']);
+        var { store_listing_id: t, sku_id: n, unpublished_at: r, banner_asset: i, styles: a } = e,
+            o = d(e, ['store_listing_id', 'sku_id', 'unpublished_at', 'banner_asset', 'styles']);
         let s = null != r ? new Date(r) : null;
         return new p(
-            u(l({}, a), {
+            u(l({}, o), {
                 storeListingId: t,
                 skuId: n,
                 unpublishedAt: s,
                 bannerAsset: i,
-                styles: _(o)
+                styles: _(a)
             })
         );
     }

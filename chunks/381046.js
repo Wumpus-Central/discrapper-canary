@@ -1,7 +1,7 @@
 var r = n(260674),
     i = n(288660),
-    o = n(72689),
-    a = Object.prototype.hasOwnProperty,
+    a = n(72689),
+    o = Object.prototype.hasOwnProperty,
     s = {
         brackets: function (e) {
             return e + '[]';
@@ -20,7 +20,7 @@ var r = n(260674),
         c.apply(e, l(t) ? t : [t]);
     },
     d = Date.prototype.toISOString,
-    f = o.default,
+    f = a.default,
     _ = {
         addQueryPrefix: !1,
         allowDots: !1,
@@ -36,7 +36,7 @@ var r = n(260674),
         encodeValuesOnly: !1,
         filter: void 0,
         format: f,
-        formatter: o.formatters[f],
+        formatter: a.formatters[f],
         indices: !1,
         serializeDate: function (e) {
             return d.call(e);
@@ -48,7 +48,7 @@ var r = n(260674),
         return 'string' == typeof e || 'number' == typeof e || 'boolean' == typeof e || 'symbol' == typeof e || 'bigint' == typeof e;
     },
     h = {},
-    m = function e(t, n, o, a, s, c, d, f, m, g, E, b, y, O, v, I, S, T) {
+    m = function e(t, n, a, o, s, c, d, f, m, g, E, b, y, O, v, I, S, T) {
         for (var A, N = t, C = T, R = 0, P = !1; void 0 !== (C = C.get(h)) && !P; ) {
             var w = C.get(t);
             if (((R += 1), void 0 !== w))
@@ -61,7 +61,7 @@ var r = n(260674),
                 ? (N = g(n, N))
                 : N instanceof Date
                   ? (N = y(N))
-                  : 'comma' === o &&
+                  : 'comma' === a &&
                     l(N) &&
                     (N = i.maybeMap(N, function (e) {
                         return e instanceof Date ? y(e) : e;
@@ -74,24 +74,24 @@ var r = n(260674),
         if (p(N) || i.isBuffer(N)) return m ? [v(I ? n : m(n, _.encoder, S, 'key', O)) + '=' + v(m(N, _.encoder, S, 'value', O))] : [v(n) + '=' + v(String(N))];
         var D = [];
         if (void 0 === N) return D;
-        if ('comma' === o && l(N)) I && m && (N = i.maybeMap(N, m)), (A = [{ value: N.length > 0 ? N.join(',') || null : void 0 }]);
+        if ('comma' === a && l(N)) I && m && (N = i.maybeMap(N, m)), (A = [{ value: N.length > 0 ? N.join(',') || null : void 0 }]);
         else if (l(g)) A = g;
         else {
             var L = Object.keys(N);
             A = E ? L.sort(E) : L;
         }
         var x = f ? String(n).replace(/\./g, '%2E') : String(n),
-            M = a && l(N) && 1 === N.length ? x + '[]' : x;
+            M = o && l(N) && 1 === N.length ? x + '[]' : x;
         if (s && l(N) && 0 === N.length) return M + '[]';
         for (var k = 0; k < A.length; ++k) {
             var j = A[k],
                 U = 'object' == typeof j && j && void 0 !== j.value ? j.value : N[j];
             if (!d || null !== U) {
                 var G = b && f ? String(j).replace(/\./g, '%2E') : String(j),
-                    B = l(N) ? ('function' == typeof o ? o(M, G) : M) : M + (b ? '.' + G : '[' + G + ']');
+                    B = l(N) ? ('function' == typeof a ? a(M, G) : M) : M + (b ? '.' + G : '[' + G + ']');
                 T.set(t, R);
                 var V = r();
-                V.set(h, T), u(D, e(U, B, o, a, s, c, d, f, 'comma' === o && I && l(N) ? null : m, g, E, b, y, O, v, I, S, V));
+                V.set(h, T), u(D, e(U, B, a, o, s, c, d, f, 'comma' === a && I && l(N) ? null : m, g, E, b, y, O, v, I, S, V));
             }
         }
         return D;
@@ -104,12 +104,12 @@ var r = n(260674),
         var t,
             n = e.charset || _.charset;
         if (void 0 !== e.charset && 'utf-8' !== e.charset && 'iso-8859-1' !== e.charset) throw TypeError('The charset option must be either utf-8, iso-8859-1, or undefined');
-        var r = o.default;
+        var r = a.default;
         if (void 0 !== e.format) {
-            if (!a.call(o.formatters, e.format)) throw TypeError('Unknown format option provided.');
+            if (!o.call(a.formatters, e.format)) throw TypeError('Unknown format option provided.');
             r = e.format;
         }
-        var i = o.formatters[r],
+        var i = a.formatters[r],
             c = _.filter;
         if ((('function' == typeof e.filter || l(e.filter)) && (c = e.filter), (t = e.arrayFormat in s ? e.arrayFormat : 'indices' in e ? (e.indices ? 'indices' : 'repeat') : _.arrayFormat), 'commaRoundTrip' in e && 'boolean' != typeof e.commaRoundTrip)) throw TypeError('`commaRoundTrip` must be a boolean, or absent');
         var u = void 0 === e.allowDots ? !0 === e.encodeDotInKeys || _.allowDots : !!e.allowDots;
@@ -138,20 +138,20 @@ var r = n(260674),
 e.exports = function (e, t) {
     var n,
         i,
-        o = e,
-        a = g(t);
-    'function' == typeof a.filter ? (o = (i = a.filter)('', o)) : l(a.filter) && (n = i = a.filter);
+        a = e,
+        o = g(t);
+    'function' == typeof o.filter ? (a = (i = o.filter)('', a)) : l(o.filter) && (n = i = o.filter);
     var c = [];
-    if ('object' != typeof o || null === o) return '';
-    var d = s[a.arrayFormat],
-        f = 'comma' === d && a.commaRoundTrip;
-    n || (n = Object.keys(o)), a.sort && n.sort(a.sort);
+    if ('object' != typeof a || null === a) return '';
+    var d = s[o.arrayFormat],
+        f = 'comma' === d && o.commaRoundTrip;
+    n || (n = Object.keys(a)), o.sort && n.sort(o.sort);
     for (var _ = r(), p = 0; p < n.length; ++p) {
         var h = n[p],
-            E = o[h];
-        (a.skipNulls && null === E) || u(c, m(E, h, d, f, a.allowEmptyArrays, a.strictNullHandling, a.skipNulls, a.encodeDotInKeys, a.encode ? a.encoder : null, a.filter, a.sort, a.allowDots, a.serializeDate, a.format, a.formatter, a.encodeValuesOnly, a.charset, _));
+            E = a[h];
+        (o.skipNulls && null === E) || u(c, m(E, h, d, f, o.allowEmptyArrays, o.strictNullHandling, o.skipNulls, o.encodeDotInKeys, o.encode ? o.encoder : null, o.filter, o.sort, o.allowDots, o.serializeDate, o.format, o.formatter, o.encodeValuesOnly, o.charset, _));
     }
-    var b = c.join(a.delimiter),
-        y = !0 === a.addQueryPrefix ? '?' : '';
-    return a.charsetSentinel && ('iso-8859-1' === a.charset ? (y += 'utf8=%26%2310003%3B&') : (y += 'utf8=%E2%9C%93&')), b.length > 0 ? y + b : '';
+    var b = c.join(o.delimiter),
+        y = !0 === o.addQueryPrefix ? '?' : '';
+    return o.charsetSentinel && ('iso-8859-1' === o.charset ? (y += 'utf8=%26%2310003%3B&') : (y += 'utf8=%E2%9C%93&')), b.length > 0 ? y + b : '';
 };

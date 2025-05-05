@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(388685);
 var r = n(147913),
     i = n(70956),
-    o = n(272008),
-    a = n(569984),
+    a = n(272008),
+    o = n(569984),
     s = n(497505),
     l = n(573196),
     c = n(977156),
@@ -27,7 +27,7 @@ let f = i.Z.Millis.DAY,
     m = 12 * i.Z.Millis.HOUR;
 class g extends r.Z {
     _fetch() {
-        (0, c.cB)({ location: u.dr.QUESTS_MANAGER }) && !a.Z.isFetchingCurrentQuests && ((0, o.xw)(), (0, o.w)(s.Ok.DESKTOP_ACCOUNT_PANEL_AREA));
+        (0, c.cB)({ location: u.dr.QUESTS_MANAGER }) && !o.Z.isFetchingCurrentQuests && ((0, a.xw)(), (0, a.w)(s.Ok.DESKTOP_ACCOUNT_PANEL_AREA));
     }
     constructor(...e) {
         super(...e),
@@ -48,13 +48,13 @@ class g extends r.Z {
                     }, _)),
                     (this.initialFetchTimerId = window.setTimeout(
                         () => {
-                            (e || 0 === a.Z.lastFetchedCurrentQuests) && this._fetch();
+                            (e || 0 === o.Z.lastFetchedCurrentQuests) && this._fetch();
                         },
                         Math.floor(Math.random() * p)
                     ));
             }),
             d(this, 'handleRunningGamesChange', () => {
-                this.instantiatedAt + m > Date.now() || a.Z.lastFetchedCurrentQuests + m > Date.now() || this._fetch();
+                this.instantiatedAt + m > Date.now() || o.Z.lastFetchedCurrentQuests + m > Date.now() || this._fetch();
             }),
             d(this, 'handleUserSettingsProtoUpdate', (e) => {
                 let { partial: t, settings: n, wasSaved: r } = e;

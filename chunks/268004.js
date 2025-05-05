@@ -1,9 +1,9 @@
 n.d(t, { M: () => u });
 var r = n(942766),
     i = n(861254),
-    o = n(163612),
-    a = n(337945),
+    a = n(163612),
+    o = n(337945),
     s = n(91641),
     l = n(895536),
     c = n(987338);
-let u = new s.E([l.NR, l.ZI, l.Ob, l.uc, l.m1, o.Z, i.kX, r.O, a.O], c.$P.VOICE_CALL, { location: 'voice call initiated' });
+let u = new s.E([l.NR, l.ZI, l.Ob, l.uc, l.m1, a.Z, i.kX, r.O, o.O], c.$P.VOICE_CALL, { location: 'voice call initiated' });

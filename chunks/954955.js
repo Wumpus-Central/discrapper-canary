@@ -1,7 +1,7 @@
 var r = n(661233),
     i = n(586769),
-    o = n(675769),
-    a = 'Expected a function',
+    a = n(675769),
+    o = 'Expected a function',
     s = Math.max,
     l = Math.min;
 e.exports = function (e, t, n) {
@@ -15,7 +15,7 @@ e.exports = function (e, t, n) {
         m = !1,
         g = !1,
         E = !0;
-    if ('function' != typeof e) throw TypeError(a);
+    if ('function' != typeof e) throw TypeError(o);
     function b(t) {
         var n = c,
             r = u;
@@ -56,8 +56,8 @@ e.exports = function (e, t, n) {
         return void 0 === _ && (_ = setTimeout(I, t)), f;
     }
     return (
-        (t = o(t) || 0),
-        r(n) && ((m = !!n.leading), (d = (g = 'maxWait' in n) ? s(o(n.maxWait) || 0, t) : d), (E = 'trailing' in n ? !!n.trailing : E)),
+        (t = a(t) || 0),
+        r(n) && ((m = !!n.leading), (d = (g = 'maxWait' in n) ? s(a(n.maxWait) || 0, t) : d), (E = 'trailing' in n ? !!n.trailing : E)),
         (A.cancel = function () {
             void 0 !== _ && clearTimeout(_), (h = 0), (c = p = u = _ = void 0);
         }),

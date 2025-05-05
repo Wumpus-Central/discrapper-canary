@@ -1,8 +1,8 @@
 n.r(t), n.d(t, { default: () => b });
 var r = n(310644),
     i = n(465735),
-    o = n(528734),
-    a = n(570289),
+    a = n(528734),
+    o = n(570289),
     s = n(128961),
     l = n(424421),
     c = n(198050),
@@ -44,7 +44,7 @@ function b(e, t, n) {
     if (!(B >= 0 && B <= 6)) throw RangeError('weekStartsOn must be between 0 and 6 inclusively');
     if (!U.localize) throw RangeError('locale must contain localize property');
     if (!U.formatLong) throw RangeError('locale must contain formatLong property');
-    var V = (0, o.default)(e);
+    var V = (0, a.default)(e);
     if (!(0, r.default)(V)) throw RangeError('Invalid time value');
     var F = (0, l.Z)(V),
         Z = (0, i.Z)(V, F),
@@ -66,8 +66,8 @@ function b(e, t, n) {
             if ("''" === r) return "'";
             var i = r[0];
             if ("'" === i) return y(r);
-            var o = a.Z[i];
-            if (o) return !(null != n && n.useAdditionalWeekYearTokens) && (0, c.Do)(r) && (0, c.qp)(r, t, String(e)), !(null != n && n.useAdditionalDayOfYearTokens) && (0, c.Iu)(r) && (0, c.qp)(r, t, String(e)), o(Z, r, U.localize, H);
+            var a = o.Z[i];
+            if (a) return !(null != n && n.useAdditionalWeekYearTokens) && (0, c.Do)(r) && (0, c.qp)(r, t, String(e)), !(null != n && n.useAdditionalDayOfYearTokens) && (0, c.Iu)(r) && (0, c.qp)(r, t, String(e)), a(Z, r, U.localize, H);
             if (i.match(E)) throw RangeError('Format string contains an unescaped latin alphabet character `' + i + '`');
             return r;
         })

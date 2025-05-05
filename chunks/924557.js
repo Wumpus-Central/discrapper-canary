@@ -8,8 +8,8 @@ n.d(t, {
 });
 var r = n(818083),
     i = n(441167),
-    o = n(131951),
-    a = n(74538),
+    a = n(131951),
+    o = n(74538),
     s = n(435064),
     l = n(779618),
     c = n(474936);
@@ -83,7 +83,7 @@ let u = (0, r.B)({
         ]
     });
 function f() {
-    if (!(0, l.Z)(o.Z)) return !1;
+    if (!(0, l.Z)(a.Z)) return !1;
     let { enableClips: e } = d.getCurrentConfig({ location: 'areClipsEnabled' }, { autoTrackExposure: !1 }),
         { enableClips: t } = u.getCurrentConfig({ location: 'areClipsEnabled' }, { autoTrackExposure: !1 }),
         n = s.Z.isDecoupledGameClippingEnabled(),
@@ -91,25 +91,25 @@ function f() {
     return e || t || n || r;
 }
 function _() {
-    let e = (0, l.Z)(o.Z),
+    let e = (0, l.Z)(a.Z),
         { enableClips: t } = d.useExperiment({ location: 'useEnableClips' }, { autoTrackExposure: !1 }),
         { enableClips: n } = u.useExperiment({ location: 'useEnableClips' }, { autoTrackExposure: !1 }),
         r = s.Z.isDecoupledGameClippingEnabled(),
-        { enableViewerClipping: a } = i.Z.useExperiment({ location: 'useEnableClips' }, { autoTrackExposure: !1 });
-    return (n || t || r || a) && e;
+        { enableViewerClipping: o } = i.Z.useExperiment({ location: 'useEnableClips' }, { autoTrackExposure: !1 });
+    return (n || t || r || o) && e;
 }
 let p = (e) => {
         let { autoTrackExposure: t } = e,
-            n = (0, l.Z)(o.Z),
+            n = (0, l.Z)(a.Z),
             { enablePremiumEarlyAccessGoLiveRoadblock: r } = d.useExperiment({ location: 'useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock' }, { autoTrackExposure: t && n });
         return !!n && r;
     },
     h = (e) => {
         let { autoTrackExposure: t } = e,
-            n = (0, l.Z)(o.Z),
+            n = (0, l.Z)(a.Z),
             { enablePremiumEarlyAccessAnnouncementCoachmark: r } = d.useExperiment({ location: 'useShouldSeeClipsPremiumEarlyAccessGoLiveRoadblock' }, { autoTrackExposure: t && n });
         return !!n && r;
     };
 function m(e) {
-    return a.ZP.isPremiumAtLeast(e.premiumType, c.p9.TIER_2);
+    return o.ZP.isPremiumAtLeast(e.premiumType, c.p9.TIER_2);
 }

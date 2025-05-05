@@ -1,7 +1,7 @@
 n.d(t, {
     EO: () => G,
     LY: () => k,
-    Nj: () => o.Z,
+    Nj: () => a.Z,
     a5: () => x,
     c4: () => L,
     g7: () => w,
@@ -19,8 +19,8 @@ n.d(t, {
     n(388685);
 var r = n(149765),
     i = n(911969),
-    o = n(90463),
-    a = n(968358),
+    a = n(90463),
+    o = n(968358),
     s = n(874748),
     l = n(590415),
     c = n(131704),
@@ -67,13 +67,13 @@ function T(e, t, n) {
 }
 function A(e, t, n) {
     let r = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        o = [];
+        a = [];
     return (
-        (n.length > 0 || r) && o.push(S(e, t, i.BN.ROLE)),
+        (n.length > 0 || r) && a.push(S(e, t, i.BN.ROLE)),
         n.forEach((e) => {
-            o.push(T(e, t, i.BN.ROLE));
+            a.push(T(e, t, i.BN.ROLE));
         }),
-        o
+        a
     );
 }
 function N(e, t) {
@@ -94,15 +94,15 @@ function R(e) {
 }
 function P(e, t, n) {
     var r, i;
-    let o = e.getGuildId(),
-        s = n.getGuild(o),
+    let a = e.getGuildId(),
+        s = n.getGuild(a),
         l = null != (r = null == s ? void 0 : s.maxVideoChannelUsers) ? r : -1,
         c = null != (i = null == s ? void 0 : s.maxStageVideoChannelUsers) ? i : -1,
         u = p.ZP.countVoiceStatesForChannel(e.id),
         d = p.ZP.getVoiceStatesForChannel(e),
         _ = f.Z.can(g.Plq.MOVE_MEMBERS, e) && f.Z.can(g.Plq.CONNECT, e),
         h = !1;
-    h = e.type === v ? null != o && (t.hasVideo(e.id) || (0, a.a)(d)) && c > 0 && u >= c : null != o && t.hasVideo(e.id) && l > 0 && u >= l + +!!_;
+    h = e.type === v ? null != a && (t.hasVideo(e.id) || (0, o.a)(d)) && c > 0 && u >= c : null != a && t.hasVideo(e.id) && l > 0 && u >= l + +!!_;
     let m = e.userLimit > 0 && u >= e.userLimit;
     return h || (m && !_);
 }
@@ -111,7 +111,7 @@ function w(e, t) {
 }
 function D(e) {
     let { channels: t, selectedChannelId: n, selectedVoiceChannelId: r, voiceStates: i } = e,
-        o = [];
+        a = [];
     return (
         t.forEach((e) => {
             if (e.id === r || e.id === n) return;
@@ -119,11 +119,11 @@ function D(e) {
             null != t &&
                 (e.isGuildStageVoice()
                     ? t.forEach((e) => {
-                          (0, l.gf)(e.voiceState) === l.xO.ON_STAGE && o.push(e);
+                          (0, l.gf)(e.voiceState) === l.xO.ON_STAGE && a.push(e);
                       })
-                    : t.forEach((e) => o.push(e)));
+                    : t.forEach((e) => a.push(e)));
         }),
-        o
+        a
     );
 }
 function L(e) {
@@ -200,9 +200,9 @@ function U(e, t, n, r) {
 }
 function G(e, t, n, r) {
     let i,
-        o = e.getGuildId(),
-        a = (0, s.BC)(o, t);
-    return null != t && a ? U(o, t.id, e.id, m.default.castChannelIdAsMessageId(e.id)) : null != r ? r : j(o, e.id, n);
+        a = e.getGuildId(),
+        o = (0, s.BC)(a, t);
+    return null != t && o ? U(a, t.id, e.id, m.default.castChannelIdAsMessageId(e.id)) : null != r ? r : j(a, e.id, n);
 }
 function B(e) {
     if (null == e) return null;

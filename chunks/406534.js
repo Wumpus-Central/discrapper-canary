@@ -1,6 +1,6 @@
 n.d(t, { Z: () => er }), n(539854), n(388685), n(290780);
-var r = n(200651),
-    i = n(192379),
+var r = n(255367),
+    i = n(73800),
     l = n(442837),
     o = n(481060),
     a = n(904245),
@@ -97,7 +97,7 @@ let en = i.memo(function (e) {
                     progress: null != t.progress ? t.progress : 0,
                     size: t.currentSize,
                     onCancelUpload: () => {
-                        s.Z.cancel(t);
+                        s.Z.cancel(n.id, t);
                     }
                 })
             }

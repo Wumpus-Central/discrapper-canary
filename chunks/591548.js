@@ -6,7 +6,7 @@ n.d(t, {
     n(539854);
 var r = n(392711),
     i = n.n(r);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +19,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,7 +30,7 @@ function a(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -69,11 +69,11 @@ function c(e) {
                     r.add(i.subscriptionPlanId), (i.quantity += e.quantity);
                     return;
                 }
-            n.push(a({}, e));
+            n.push(o({}, e));
         }),
         n.map((e) => {
-            let t = a({}, e);
-            return r.has(e.subscriptionPlanId) && ((t.amount = t.amount * t.quantity), (t.discounts = t.discounts.map((e) => l(a({}, e), { amount: e.amount * t.quantity })))), t;
+            let t = o({}, e);
+            return r.has(e.subscriptionPlanId) && ((t.amount = t.amount * t.quantity), (t.discounts = t.discounts.map((e) => l(o({}, e), { amount: e.amount * t.quantity })))), t;
         })
     );
 }

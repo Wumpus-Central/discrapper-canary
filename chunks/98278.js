@@ -4,12 +4,12 @@ n.d(t, {
 });
 var r = n(37234),
     i = n(230711),
-    o = n(703656),
-    a = n(981631);
+    a = n(703656),
+    o = n(981631);
 let s = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        i.Z.open(a.oAB.PREMIUM, null, { openWithoutBackstack: e });
+        i.Z.open(o.oAB.PREMIUM, null, { openWithoutBackstack: e });
     },
     l = (e) => {
-        null == e || e(), (0, r.xf)(), (0, o.uL)(a.Z5c.APPLICATION_STORE);
+        null == e || e(), (0, r.xf)(), (0, a.uL)(o.Z5c.APPLICATION_STORE);
     };

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r,
     i = n(392711),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(570140),
     l = n(314897);
 function c(e, t, n) {
@@ -26,7 +26,7 @@ function f(e) {
             d[e.sessionId] = e;
         });
 }
-class _ extends (r = a.ZP.Store) {
+class _ extends (r = o.ZP.Store) {
     initialize() {
         this.waitFor(l.default);
     }
@@ -39,19 +39,19 @@ class _ extends (r = a.ZP.Store) {
     }
     getRemoteActivities() {
         let e = l.default.getSessionId(),
-            t = o().find(d, (t) => t.active && t.sessionId !== e);
+            t = a().find(d, (t) => t.active && t.sessionId !== e);
         return null != t ? t.activities : u;
     }
     getHiddenActivities() {
         let e = l.default.getSessionId(),
-            t = o().find(d, (t) => t.active && t.sessionId !== e);
+            t = a().find(d, (t) => t.active && t.sessionId !== e);
         return null != t ? t.hiddenActivities : u;
     }
     getSessionById(e) {
         return d[e];
     }
     getActiveSession() {
-        return o().find(d, (e) => {
+        return a().find(d, (e) => {
             let { active: t } = e;
             return t;
         });

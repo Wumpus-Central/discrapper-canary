@@ -1,6 +1,6 @@
 n.d(t, { Z: () => a }), n(388685);
-var r = n(200651),
-    s = n(192379),
+var r = n(255367),
+    s = n(73800),
     o = n(115092);
 function a(e) {
     let { sources: t, interval: n, isPaused: a, onLoopEnd: i, className: c, imageRef: l } = e,

@@ -1,4 +1,4 @@
-let r, i, o, a, s, l;
+let r, i, a, o, s, l;
 n.d(t, { Z: () => et }), n(997841), n(388685);
 var c,
     u = n(392711),
@@ -74,15 +74,15 @@ let N = v.QZA.CLOSED,
     D = null,
     L = ['name', 'type', 'topic_', 'bitrate_', 'userLimit_', 'nsfw_', 'flags_', 'rateLimitPerUser_', 'defaultThreadRateLimitPerUser', 'defaultAutoArchiveDuration', 'template', 'defaultReactionEmoji', 'rtcRegion', 'videoQualityMode', 'threadMetadata', 'banner', 'availableTags', 'defaultSortOrder', 'defaultForumLayout', 'defaultTagSetting', 'iconEmoji', 'themeColor'];
 function x(e) {
-    if (null == o || o.id !== e) return !1;
-    if (o === a) {
+    if (null == a || a.id !== e) return !1;
+    if (a === o) {
         let t = O.Z.getChannel(e);
         if (null == t) return !1;
-        (a = o = t), (s = O.Z.getChannel(a.parent_id));
+        (o = a = t), (s = O.Z.getChannel(o.parent_id));
     } else {
         let t = O.Z.getChannel(e);
         if (null == t) return !1;
-        (o = t), null != a && ((a = a.set('permissionOverwrites', o.permissionOverwrites)), (s = O.Z.getChannel(a.parent_id)));
+        (a = t), null != o && ((o = o.set('permissionOverwrites', a.permissionOverwrites)), (s = O.Z.getChannel(o.parent_id)));
     }
     return !0;
 }
@@ -93,12 +93,12 @@ function k(e) {
     let t = O.Z.getChannel(e.channelId);
     if (null == t) return U();
     (N = v.QZA.OPEN),
-        (a = o = t),
+        (o = a = t),
         (D = 'location' in e && null != e.location ? e.location : null),
         (i = 'subsection' in e ? e.subsection : null),
-        null != a && (a = a.set('nsfw', a.isNSFW())),
-        (s = O.Z.getChannel(a.parent_id)),
-        (l = a.getGuildId()),
+        null != o && (o = o.set('nsfw', o.isNSFW())),
+        (s = O.Z.getChannel(o.parent_id)),
+        (l = o.getGuildId()),
         (C = {}),
         j({
             type: 'CHANNEL_SETTINGS_SET_SECTION',
@@ -109,12 +109,12 @@ function k(e) {
 function j(e) {
     (r = e.section),
         (i = e.subsection),
-        null != a &&
+        null != o &&
             r === v.CoT.INSTANT_INVITES &&
             ((P = !0),
             h.tn
                 .get({
-                    url: v.ANM.INSTANT_INVITES(a.id),
+                    url: v.ANM.INSTANT_INVITES(o.id),
                     oldFormErrors: !0,
                     rejectWithError: !0
                 })
@@ -130,13 +130,13 @@ function j(e) {
                 ));
 }
 function U() {
-    (w = !1), (N = v.QZA.CLOSED), (r = null), (a = o = null), (s = null), (R = {});
+    (w = !1), (N = v.QZA.CLOSED), (r = null), (o = a = null), (s = null), (R = {});
 }
 function G() {
     (N = v.QZA.SUBMITTING), (C = {});
 }
 function B() {
-    (o = a), (N = v.QZA.OPEN);
+    (a = o), (N = v.QZA.OPEN);
 }
 function V(e) {
     var t;
@@ -147,15 +147,15 @@ function V(e) {
         }, {}));
 }
 let F = d().debounce(() => {
-    if (null == a || null == o) return !1;
-    let e = a.toJS(),
-        t = o.toJS();
-    L.every((n) => e[n] === t[n]) && a !== o && ((a = o), ee.emitChange());
+    if (null == o || null == a) return !1;
+    let e = o.toJS(),
+        t = a.toJS();
+    L.every((n) => e[n] === t[n]) && o !== a && ((o = a), ee.emitChange());
 }, 500);
 function Z(e) {
-    let { name: t, channelType: n, topic: r, bitrate: i, userLimit: o, nsfw: s, flags: l, rateLimitPerUser: c, defaultThreadRateLimitPerUser: u, autoArchiveDuration: d, locked: f, invitable: _, defaultAutoArchiveDuration: p, template: h, defaultReactionEmoji: m, rtcRegion: g, videoQualityMode: E, availableTags: b, defaultSortOrder: y, defaultForumLayout: O, defaultTagSetting: v, iconEmoji: I, themeColor: T } = e;
-    if (null == a) return !1;
-    null != t && (a = a.set('name', t)), null != r && (a = a.set('topic', r)), null != i && (a = a.set('bitrate', i)), null != o && (a = a.set('userLimit', o)), null != s && (a = a.set('nsfw', s)), null != l && (a = a.set('flags', l)), null != c && (a = a.set('rateLimitPerUser', c)), null != u && (a = a.set('defaultThreadRateLimitPerUser', u)), null != d && (a = a.set('threadMetadata', A(S({}, a.threadMetadata), { autoArchiveDuration: d }))), null != f && (a = a.set('threadMetadata', A(S({}, a.threadMetadata), { locked: f }))), null != _ && (a = a.set('threadMetadata', A(S({}, a.threadMetadata), { invitable: _ }))), null != p && (a = a.set('defaultAutoArchiveDuration', p)), null != h && (a = a.set('template', h)), null != n && (a = a.set('type', n)), void 0 !== g && (a = a.set('rtcRegion', g)), null != E && (a = a.set('videoQualityMode', E)), void 0 !== m && (a = a.set('defaultReactionEmoji', m)), null != b && (a = a.set('availableTags', b)), null != y && (a = a.set('defaultSortOrder', y)), null != v && (a = a.set('defaultTagSetting', v)), null != O && (a = a.set('defaultForumLayout', O)), void 0 !== I && (a = a.set('iconEmoji', I)), null != T && (a = a.set('themeColor', T)), F();
+    let { name: t, channelType: n, topic: r, bitrate: i, userLimit: a, nsfw: s, flags: l, rateLimitPerUser: c, defaultThreadRateLimitPerUser: u, autoArchiveDuration: d, locked: f, invitable: _, defaultAutoArchiveDuration: p, template: h, defaultReactionEmoji: m, rtcRegion: g, videoQualityMode: E, availableTags: b, defaultSortOrder: y, defaultForumLayout: O, defaultTagSetting: v, iconEmoji: I, themeColor: T } = e;
+    if (null == o) return !1;
+    null != t && (o = o.set('name', t)), null != r && (o = o.set('topic', r)), null != i && (o = o.set('bitrate', i)), null != a && (o = o.set('userLimit', a)), null != s && (o = o.set('nsfw', s)), null != l && (o = o.set('flags', l)), null != c && (o = o.set('rateLimitPerUser', c)), null != u && (o = o.set('defaultThreadRateLimitPerUser', u)), null != d && (o = o.set('threadMetadata', A(S({}, o.threadMetadata), { autoArchiveDuration: d }))), null != f && (o = o.set('threadMetadata', A(S({}, o.threadMetadata), { locked: f }))), null != _ && (o = o.set('threadMetadata', A(S({}, o.threadMetadata), { invitable: _ }))), null != p && (o = o.set('defaultAutoArchiveDuration', p)), null != h && (o = o.set('template', h)), null != n && (o = o.set('type', n)), void 0 !== g && (o = o.set('rtcRegion', g)), null != E && (o = o.set('videoQualityMode', E)), void 0 !== m && (o = o.set('defaultReactionEmoji', m)), null != b && (o = o.set('availableTags', b)), null != y && (o = o.set('defaultSortOrder', y)), null != v && (o = o.set('defaultTagSetting', v)), null != O && (o = o.set('defaultForumLayout', O)), void 0 !== I && (o = o.set('iconEmoji', I)), null != T && (o = o.set('themeColor', T)), F();
 }
 function H(e) {
     return new b.Z({
@@ -185,11 +185,11 @@ function K(e) {
     R = A(S({}, R), { [e.invite.code]: H(e.invite) });
 }
 function z(e) {
-    return !!x(e) && null != a && (null != l && null == a.permissionOverwrites[l] && (l = a.getGuildId()), !0);
+    return !!x(e) && null != o && (null != l && null == o.permissionOverwrites[l] && (l = o.getGuildId()), !0);
 }
 function q(e) {
     let { channels: t } = e;
-    if (null == a) return !1;
+    if (null == o) return !1;
     let n = !1;
     for (let e of t) n = z(e.id) || n;
     return n;
@@ -202,7 +202,7 @@ function X(e) {
     let {
         channel: { id: t }
     } = e;
-    if (null == a || a.id !== t) return !1;
+    if (null == o || o.id !== t) return !1;
     N = v.QZA.CLOSED;
 }
 function J(e) {
@@ -214,7 +214,7 @@ class $ extends (c = p.ZP.Store) {
         this.waitFor(O.Z);
     }
     hasChanges() {
-        return a !== o;
+        return o !== a;
     }
     isOpen() {
         return w;
@@ -232,7 +232,7 @@ class $ extends (c = p.ZP.Store) {
         return this.hasChanges();
     }
     getChannel() {
-        return a;
+        return o;
     }
     getFormState() {
         return N;
@@ -244,7 +244,7 @@ class $ extends (c = p.ZP.Store) {
         return {
             submitting: N === v.QZA.SUBMITTING,
             errors: C,
-            channel: a,
+            channel: o,
             section: r,
             subsection: i,
             invites: R,

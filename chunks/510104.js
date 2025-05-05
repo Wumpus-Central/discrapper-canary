@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r = n(685516),
     i = n(285363),
-    o = n(175922),
-    a = n(406434),
+    a = n(175922),
+    o = n(406434),
     s = n(6138),
     l = n(740078),
     c = n(882159),
@@ -30,8 +30,8 @@ function f(e, t) {
         C = e.rects.popper,
         R = e.elements[I ? N : O],
         P = (0, r.Z)((0, c.kK)(R) ? R : R.contextElement || (0, i.Z)(e.elements.popper), g, b, h),
-        w = (0, o.Z)(e.elements.reference),
-        D = (0, a.Z)({
+        w = (0, a.Z)(e.elements.reference),
+        D = (0, o.Z)({
             reference: w,
             element: C,
             strategy: 'absolute',

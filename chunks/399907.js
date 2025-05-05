@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ }), n(388685);
 var r = n(956067),
     i = n(668757),
-    o = n(147913),
-    a = n(185996),
+    a = n(147913),
+    o = n(185996),
     s = n(70956),
     l = n(640795),
     c = n(139674);
@@ -20,9 +20,9 @@ function u(e, t, n) {
     );
 }
 let d = 4 * s.Z.Millis.HOUR;
-class f extends o.Z {
+class f extends a.Z {
     _initialize() {
-        if ((0, a.U)()) {
+        if ((0, o.U)()) {
             let e = 'https:'.concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT, '/bad-hash-delta');
             (0, i.pf)(e);
             return;

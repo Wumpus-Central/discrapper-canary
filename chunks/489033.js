@@ -1,7 +1,7 @@
 n.d(t, { Z: () => l }), n(388685), n(704826), n(35282), n(539854), n(804061);
 var r = n(710845),
     i = n(287328);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,13 +14,13 @@ function o(e, t, n) {
         e
     );
 }
-let a = new r.Z('GuildEmojis');
+let o = new r.Z('GuildEmojis');
 class s {
     async getAsync(e) {
         let t = performance.now(),
             n = await i.Z.emojis(e).getMapEntries(),
             r = performance.now();
-        return a.log('asynchronously loaded in '.concat(r - t, 'ms (guilds: ').concat(n.length, ')')), n;
+        return o.log('asynchronously loaded in '.concat(r - t, 'ms (guilds: ').concat(n.length, ')')), n;
     }
     handleConnectionOpen(e, t) {
         for (let n of e.guilds) this.handleOneGuildCreate(n, t);
@@ -42,7 +42,7 @@ class s {
             Promise.all(
                 e.emojis.map((e) => {
                     if ('unavailable' === e.dataMode) return Promise.resolve();
-                    'full' === e.dataMode ? (a.verbose('Replacing '.concat(e.entities.length, ' emojis for ').concat(e.guildId)), this.replace(e.guildId, e.entities, t)) : (e.updatedEntities.length > 0 || e.deletedEntityIds.length > 0) && (a.verbose('Updating '.concat(e.updatedEntities.length, ' and deleting ').concat(e.deletedEntityIds.length, ' emojis for ').concat(e.guildId)), this.update(e.guildId, e.updatedEntities, e.deletedEntityIds, t));
+                    'full' === e.dataMode ? (o.verbose('Replacing '.concat(e.entities.length, ' emojis for ').concat(e.guildId)), this.replace(e.guildId, e.entities, t)) : (e.updatedEntities.length > 0 || e.deletedEntityIds.length > 0) && (o.verbose('Updating '.concat(e.updatedEntities.length, ' and deleting ').concat(e.deletedEntityIds.length, ' emojis for ').concat(e.guildId)), this.update(e.guildId, e.updatedEntities, e.deletedEntityIds, t));
                 })
             )
         );
@@ -58,11 +58,11 @@ class s {
         i.Z.emojisTransaction(t).delete(e);
     }
     update(e, t, n, r) {
-        let o = i.Z.emojisTransaction(r);
-        for (let r of (o.putAll(e, t), n)) o.delete(e, r);
+        let a = i.Z.emojisTransaction(r);
+        for (let r of (a.putAll(e, t), n)) a.delete(e, r);
     }
     constructor() {
-        o(this, 'actions', {
+        a(this, 'actions', {
             BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
             CONNECTION_OPEN: (e, t) => this.handleConnectionOpen(e, t),
             GUILD_CREATE: (e, t) => this.handleGuildCreate(e, t),

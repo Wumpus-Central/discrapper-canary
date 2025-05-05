@@ -1,8 +1,8 @@
 n.d(t, { Z: () => M }), n(388685), n(825670);
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(276444),
+    a = n(570140),
+    o = n(276444),
     s = n(937579),
     l = n(249689),
     c = n(579075),
@@ -111,7 +111,7 @@ function L() {
     var e;
     let t = null == (e = u.default.getCurrentUser()) ? void 0 : e.id;
     if (null == t) return !1;
-    let n = a.Z.getAllRelevantReferralTrialOffers().filter((e) => e.user_id === t);
+    let n = o.Z.getAllRelevantReferralTrialOffers().filter((e) => e.user_id === t);
     if (n.length > 0) {
         let e = n[0];
         return (v.userTrialOffers[e.trial_id] = e), !0;
@@ -120,7 +120,7 @@ function L() {
 }
 class x extends (r = i.ZP.PersistedStore) {
     initialize(e) {
-        (v = null != e ? e : O), this.waitFor(u.default), this.syncWith([u.default], P), this.syncWith([_.ZP], w), this.syncWith([a.Z], L);
+        (v = null != e ? e : O), this.waitFor(u.default), this.syncWith([u.default], P), this.syncWith([_.ZP], w), this.syncWith([o.Z], L);
     }
     getUserTrialOffer(e) {
         if (null !== e) return v.userTrialOffers[e];
@@ -140,8 +140,8 @@ class x extends (r = i.ZP.PersistedStore) {
         let { enabled: t, ttl: n } = c.d.getCurrentConfig({ location: 'UserOfferStore.shouldFetchOffer' }),
             r = t ? n : b,
             i = v.userOffersLastFetchedAtDate,
-            o = null != (e = v.isFetching) && e;
-        return null == i ? !o : !o && Date.now() - r > i;
+            a = null != (e = v.isFetching) && e;
+        return null == i ? !a : !a && Date.now() - r > i;
     }
     shouldFetchReferralOffer(e) {
         var t;
@@ -149,8 +149,8 @@ class x extends (r = i.ZP.PersistedStore) {
             r = null != (t = v.isFetching) && t;
         if (null == n) return !r;
         let i = Date.now() - y > n,
-            o = (null != e ? e : 0) > n;
-        return !r && (i || o);
+            a = (null != e ? e : 0) > n;
+        return !r && (i || a);
     }
     getAlmostExpiringTrialOffers(e) {
         let t = Object.values(p.nG).map((e) => e.id),
@@ -208,7 +208,7 @@ h(x, 'displayName', 'UserOfferStore'),
             if (null != e) return (null == e ? void 0 : e.isFetching) == null ? E(m({}, e), { isFetching: !1 }) : e;
         }
     ]);
-let M = new x(o.Z, {
+let M = new x(a.Z, {
     BILLING_USER_OFFER_FETCH_START: I,
     BILLING_USER_TRIAL_OFFER_FETCH_SUCCESS: S,
     BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS: N,

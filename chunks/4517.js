@@ -1,9 +1,9 @@
 n.d(t, { Z: () => er }), n(388685);
-var r = n(200651),
-    i = n(192379),
-    o = n(120356),
-    a = n.n(o),
-    s = n(272573),
+var r = n(255367),
+    i = n(73800),
+    a = n(120356),
+    o = n.n(a),
+    s = n(481752),
     l = n(442837),
     c = n(846519),
     u = n(481060),
@@ -91,8 +91,8 @@ function V(e, t) {
         r,
         i = F(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -101,8 +101,8 @@ function F(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let Z = 1.25,
@@ -115,7 +115,7 @@ let Z = 1.25,
 function Q(e) {
     let { children: t, className: n } = e;
     return (0, r.jsx)('div', {
-        className: a()(k.referenceContainer, n),
+        className: o()(k.referenceContainer, n),
         children: (0, r.jsx)('div', {
             className: k.outer,
             children: (0, r.jsx)('span', {
@@ -128,7 +128,7 @@ function Q(e) {
 let X = 200,
     J = 3000;
 function $(e) {
-    let { onCloseProfile: t, prompt: o } = e,
+    let { onCloseProfile: t, prompt: a } = e,
         { analyticsLocations: s } = (0, h.ZP)(),
         { trackUserProfileAction: l } = (0, A.KZ)(),
         [c, f] = i.useState(!1),
@@ -163,7 +163,7 @@ function $(e) {
                             B(U({}, n), {
                                 sourceAnalyticsLocations: s,
                                 location: 'UserProfileCustomStatusBubble',
-                                prompt: o,
+                                prompt: a,
                                 label: e
                             })
                         );
@@ -175,7 +175,7 @@ function $(e) {
         I = () => {
             E.current || (p(!0), f(!1));
         },
-        S = null != o ? o.label() : M.intl.string(M.t.evw0o6),
+        S = null != a ? a.label() : M.intl.string(M.t.evw0o6),
         N = (0, r.jsxs)('div', {
             className: k.content,
             children: [
@@ -186,7 +186,7 @@ function $(e) {
                 }),
                 (0, r.jsx)(u.Text, {
                     variant: 'text-sm/normal',
-                    className: a()(k.addStatusPrompt, null != o && k.italicPrompt),
+                    className: o()(k.addStatusPrompt, null != a && k.italicPrompt),
                     children: S
                 })
             ]
@@ -198,7 +198,7 @@ function $(e) {
                 ringClassName: k.ring,
                 children: (0, r.jsxs)('div', {
                     ref: g,
-                    className: a()(k.container, k.editable),
+                    className: o()(k.container, k.editable),
                     onMouseEnter: () => {
                         (E.current = !0), O(!0);
                     },
@@ -228,7 +228,7 @@ function $(e) {
                                     }),
                                     (0, r.jsx)(u.Text, {
                                         variant: 'text-sm/normal',
-                                        className: a()(k.addStatusPrompt, null != o && k.italicPrompt),
+                                        className: o()(k.addStatusPrompt, null != a && k.italicPrompt),
                                         children: S
                                     })
                                 ]
@@ -240,7 +240,7 @@ function $(e) {
                                 children: [
                                     (0, r.jsx)('div', { className: k.labelToolbarHoverGap }),
                                     (0, r.jsx)('div', {
-                                        className: a()(k.labelToolbar, {
+                                        className: o()(k.labelToolbar, {
                                             [k.labelToolbarVisible]: c && !_,
                                             [k.labelToolbarFadingOut]: _
                                         }),
@@ -258,7 +258,7 @@ function $(e) {
     });
 }
 let ee = i.forwardRef(function (e, t) {
-    var n, o;
+    var n, a;
     let { emoji: d, text: p, animate: h, className: E, renderToolbar: b, onShowToolbar: y, placeholderText: v, label: I, hasEntered: S = !0 } = e,
         T = (0, C.yi)(),
         { trackUserProfileAction: N } = (0, A.KZ)(),
@@ -278,9 +278,9 @@ let ee = i.forwardRef(function (e, t) {
         [ee, et] = i.useState(!0),
         [en, er] = i.useState(!X && S),
         ei = S && J,
-        eo = (0, l.e7)([f.Z], () => f.Z.useReducedMotion),
-        [ea] = i.useState(() => new c.V7());
-    i.useEffect(() => () => ea.stop(), [ea]),
+        ea = (0, l.e7)([f.Z], () => f.Z.useReducedMotion),
+        [eo] = i.useState(() => new c.V7());
+    i.useEffect(() => () => eo.stop(), [eo]),
         i.useEffect(() => {
             null == T || T.onInteractionPopoutTargetRefChange(U);
         }, [T]);
@@ -308,17 +308,17 @@ let ee = i.forwardRef(function (e, t) {
                 (e
                     ? el({
                           maxHeight: ''.concat(Math.min(F.current, j), 'px'),
-                          delay: eo ? 0 : z,
+                          delay: ea ? 0 : z,
                           config: {
                               clamp: !0,
-                              duration: eo ? 0 : W
+                              duration: ea ? 0 : W
                           }
                       })
                     : el({
                           maxHeight: ''.concat(Math.min(V.current, x), 'px'),
                           delay: 0
                       }),
-                eo ? et(!e) : ea.start(e ? z : K, () => et(!e)));
+                ea ? et(!e) : eo.start(e ? z : K, () => et(!e)));
         },
         eu =
             null != I && P
@@ -352,7 +352,7 @@ let ee = i.forwardRef(function (e, t) {
                       variant: 'text-sm/normal',
                       color: 'text-muted',
                       'aria-label': ''.concat(M.intl.string(M.t.EVV6ub), ': ').concat(v),
-                      className: a()(k.statusText, R && k.italicPrompt),
+                      className: o()(k.statusText, R && k.italicPrompt),
                       children: null != v ? v : ''
                   }),
         ep = null == ef || '' === p ? e_ : ef,
@@ -363,7 +363,7 @@ let ee = i.forwardRef(function (e, t) {
         }),
         em = (0, r.jsxs)('div', {
             ref: B,
-            className: a()(k.content, k.unclamped),
+            className: o()(k.content, k.unclamped),
             children: [eu, ed, ep]
         }),
         eg = (0, r.jsx)('div', {
@@ -373,7 +373,7 @@ let ee = i.forwardRef(function (e, t) {
                 className: k.inner,
                 children: (0, r.jsxs)(s.animated.div, {
                     style: es,
-                    className: a()(k.content, { [k.unclamped]: !ee }),
+                    className: o()(k.content, { [k.unclamped]: !ee }),
                     children: [eu, ed, ep]
                 })
             })
@@ -392,7 +392,7 @@ let ee = i.forwardRef(function (e, t) {
                           ref: U,
                           role: 'tooltip',
                           tabIndex: 0,
-                          className: a()(k.container, E),
+                          className: o()(k.container, E),
                           'aria-label': M.intl.formatToPlainString(M.t.UpF5QU, {
                               emoji: null != (n = null == d ? void 0 : d.name) ? n : '',
                               status: p
@@ -419,9 +419,9 @@ let ee = i.forwardRef(function (e, t) {
                           ref: U,
                           role: 'tooltip',
                           tabIndex: 0,
-                          className: a()(k.container, E),
+                          className: o()(k.container, E),
                           'aria-label': M.intl.formatToPlainString(M.t.UpF5QU, {
-                              emoji: null != (o = null == d ? void 0 : d.name) ? o : '',
+                              emoji: null != (a = null == d ? void 0 : d.name) ? a : '',
                               status: p
                           }),
                           onFocus: () => {
@@ -444,7 +444,7 @@ let ee = i.forwardRef(function (e, t) {
           });
 });
 function et(e) {
-    var { emoji: t, text: n, label: o, onCloseProfile: a } = e,
+    var { emoji: t, text: n, label: a, onCloseProfile: o } = e,
         s = V(e, ['emoji', 'text', 'label', 'onCloseProfile']);
     let [l, c] = i.useState(!1);
     return (0, r.jsx)(
@@ -452,20 +452,20 @@ function et(e) {
         B(U({}, s), {
             emoji: t,
             text: n,
-            label: o,
+            label: a,
             className: k.editable,
             onShowToolbar: c,
             renderToolbar: (e) =>
                 (0, r.jsx)(D.Z, {
                     isVisible: l,
                     isExpandable: e,
-                    onCloseProfile: a
+                    onCloseProfile: o
                 })
         })
     );
 }
 function en(e) {
-    var { emoji: t, text: n, label: o, user: a, guildId: s, channelId: l, themeType: c } = e,
+    var { emoji: t, text: n, label: a, user: o, guildId: s, channelId: l, themeType: c } = e,
         u = V(e, ['emoji', 'text', 'label', 'user', 'guildId', 'channelId', 'themeType']);
     let { trackUserProfileAction: d } = (0, A.KZ)(),
         { interactionType: f, interactionSource: _, resetInteraction: p } = (0, C.Xo)(),
@@ -491,10 +491,10 @@ function en(e) {
         j = () => {
             let e = x(t),
                 r = null == n ? e : M(e, n);
-            return null != o && S ? ''.concat((0, b.Z)(o), ':\n> ').concat(r) : r;
+            return null != a && S ? ''.concat((0, b.Z)(a), ':\n> ').concat(r) : r;
         };
     return (0, r.jsx)(R.Z, {
-        user: a,
+        user: o,
         guildId: s,
         channelId: l,
         themeType: c,
@@ -506,21 +506,21 @@ function en(e) {
             (0, r.jsx)(w.Z, {
                 targetElementRef: y,
                 sourceType: L.n_.STATUS,
-                user: a,
+                user: o,
                 children: (0, r.jsx)(
                     ee,
                     B(U({}, u), {
                         ref: y,
                         emoji: t,
                         text: n,
-                        label: o,
+                        label: a,
                         themeType: c,
                         className: E ? k.hoisted : void 0,
                         onShowToolbar: D,
                         renderToolbar: (e) =>
                             (0, r.jsx)(P.ZP, {
                                 targetRef: y,
-                                user: a,
+                                user: o,
                                 sourceType: L.n_.STATUS,
                                 isVisible: T && !E,
                                 isExpandable: e,
@@ -534,14 +534,14 @@ function en(e) {
 function er(e) {
     var t,
         n,
-        { location: i, user: o, onCloseProfile: a, previewText: s, previewEmoji: c, previewLabel: u, placeholderText: d, prompt: f, disableEdit: _ = !1 } = e,
+        { location: i, user: a, onCloseProfile: o, previewText: s, previewEmoji: c, previewLabel: u, placeholderText: d, prompt: f, disableEdit: _ = !1 } = e,
         m = V(e, ['location', 'user', 'onCloseProfile', 'previewText', 'previewEmoji', 'previewLabel', 'placeholderText', 'prompt', 'disableEdit']);
-    let g = (0, y.Z)(o.id),
+    let g = (0, y.Z)(a.id),
         { analyticsLocations: b } = (0, h.ZP)(p.Z.USER_PROFILE_CUSTOM_STATUS_BUBBLE),
-        O = (0, l.e7)([S.default], () => S.default.getId() === o.id),
+        O = (0, l.e7)([S.default], () => S.default.getId() === a.id),
         v = O && !_,
         I = (0, N.T)({ location: i }),
-        T = !O && !o.bot && I;
+        T = !O && !a.bot && I;
     if (null != s || null != c) {
         let e = null != c ? c : null,
             t = null != s && '' !== s ? s : null,
@@ -574,7 +574,7 @@ function er(e) {
                       $,
                       U(
                           {
-                              onCloseProfile: a,
+                              onCloseProfile: o,
                               prompt: f
                           },
                           m
@@ -588,7 +588,7 @@ function er(e) {
                         en,
                         U(
                             {
-                                user: o,
+                                user: a,
                                 emoji: A,
                                 text: R,
                                 label: P
@@ -607,7 +607,7 @@ function er(e) {
                                   emoji: A,
                                   text: R,
                                   label: P,
-                                  onCloseProfile: a
+                                  onCloseProfile: o
                               },
                               m
                           )

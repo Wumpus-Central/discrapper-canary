@@ -1,9 +1,9 @@
 var r,
     i = n(166691),
-    o = n(195653)(),
-    a = n(706165),
+    a = n(195653)(),
+    o = n(706165),
     s = n(566817);
-if (o) {
+if (a) {
     var l = i('RegExp.prototype.exec'),
         c = {},
         u = function () {
@@ -17,7 +17,7 @@ if (o) {
         (r = function (e) {
             if (!e || 'object' != typeof e) return !1;
             var t = s(e, 'lastIndex');
-            if (!(t && a(t, 'value'))) return !1;
+            if (!(t && o(t, 'value'))) return !1;
             try {
                 l(e, d);
             } catch (e) {

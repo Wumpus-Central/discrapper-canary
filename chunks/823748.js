@@ -1,13 +1,13 @@
 n.d(t, { Z: () => ta }), n(388685), n(539854);
-var r = n(200651),
-    i = n(192379),
+var r = n(255367),
+    i = n(73800),
     l = n(120356),
     o = n.n(l),
     a = n(512722),
     s = n.n(a),
     c = n(392711),
     u = n.n(c),
-    d = n(512969),
+    d = n(114858),
     p = n(252258),
     h = n(442837),
     f = n(704215),
@@ -109,10 +109,10 @@ var r = n(200651),
     e2 = n(176505),
     e3 = n(981631),
     e7 = n(918559),
-    e4 = n(354459),
-    e6 = n(921944),
-    e8 = n(440493),
-    e5 = n(157925),
+    e8 = n(354459),
+    e5 = n(921944),
+    e4 = n(440493),
+    e6 = n(157925),
     e9 = n(388032),
     te = n(100658);
 function tt(e, t, n) {
@@ -358,7 +358,7 @@ class tl extends i.PureComponent {
                             return (n) => (0, r.jsx)(e, tr(tn({}, n), { guildId: t }));
                         },
                         {
-                            onCloseCallback: () => W.Z.viewPrompt(e8.r.REAL_NAME_PROMPT, t),
+                            onCloseCallback: () => W.Z.viewPrompt(e4.r.REAL_NAME_PROMPT, t),
                             modalKey: 'Guild Hub Real Name Modal'
                         }
                     ),
@@ -539,7 +539,7 @@ class tl extends i.PureComponent {
             }),
             tt(this, 'renderStreamQualityLiveIndicatorToolbarItem', () => {
                 let { selectedParticipant: e, premiumIndicatorEnabled: t } = this.props;
-                return (null == e ? void 0 : e.type) !== e4.fO.STREAM
+                return (null == e ? void 0 : e.type) !== e8.fO.STREAM
                     ? null
                     : (0, r.jsx)(
                           z.Z,
@@ -804,7 +804,7 @@ let to = (0, O.Z)(tl),
             i.useEffect(() => {
                 var e, t, n;
                 let r = (0, eb.s1)();
-                if ((null == r || null == (e = r.location) ? void 0 : e.state) === e5.Df) {
+                if ((null == r || null == (e = r.location) ? void 0 : e.state) === e6.Df) {
                     let { channelId: e } = null != (n = (0, ef.Qj)(null == r || null == (t = r.location) ? void 0 : t.pathname)) ? n : {};
                     null != e && o(e);
                 }
@@ -828,7 +828,7 @@ let to = (0, O.Z)(tl),
         i.useEffect(() => {
             let e = ep && !ed,
                 t = ep && ed && (null == c ? void 0 : c.id) !== eg;
-            (e || t) && (0, G.EW)(f.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: e6.L.AUTO });
+            (e || t) && (0, G.EW)(f.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: e5.L.AUTO });
         }, [null == c ? void 0 : c.id, eg, ed, ep]);
         let e_ = (0, m.f9)(),
             ey = (0, U.Q3)('Channel');

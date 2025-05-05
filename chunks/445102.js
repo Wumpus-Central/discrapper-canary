@@ -1,66 +1,36 @@
-n.d(t, { Z: () => a });
-var i = n(131951),
-    o = n(626135);
-function a(e, t) {
-    let { rating: n, reasonCode: a, reasonDescription: l, feedback: s, analyticsData: c } = t,
-        r = i.Z.getSettings(),
-        u = i.Z.getInputDeviceId(),
-        d = i.Z.getInputDevices()[u],
-        _ = i.Z.getOutputDeviceId(),
-        m = i.Z.getOutputDevices()[_],
-        b = i.Z.getVideoDeviceId(),
-        p = i.Z.getVideoDevices()[b],
-        x = i.Z.getNoiseCancellation(),
-        h = i.Z.getMediaEngine().getAudioSubsystem(),
-        v = i.Z.getMediaEngine().getAudioLayer();
-    o.default.track(
-        e,
-        (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    i = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
-                    (i = i.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
-                    )),
-                    i.forEach(function (t) {
-                        var i;
-                        (i = n[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: i,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0
-                                  })
-                                : (e[t] = i);
-                    });
-            }
-            return e;
-        })(
-            {
-                rating: null != n ? n : 'no response',
-                reason_code: a,
-                reason_description: l,
-                feedback: s,
-                audio_input_mode: r.mode,
-                automatic_audio_input_sensitivity_enabled: r.modeOptions.autoThreshold,
-                audio_input_sensitivity: r.modeOptions.threshold,
-                echo_cancellation_enabled: r.echoCancellation,
-                noise_suppression_enabled: r.noiseSuppression,
-                automatic_gain_control_enabled: r.automaticGainControl,
-                voice_output_volume: r.outputVolume,
-                noise_cancellation_enabled: x,
-                input_device_name: null == d ? void 0 : d.name,
-                output_device_name: null == m ? void 0 : m.name,
-                video_device_name: null == p ? void 0 : p.name,
-                audio_subsystem: h,
-                audio_layer: v,
-                automatic_audio_subsystem: r.automaticAudioSubsystem
-            },
-            c
-        )
+function n(e) {
+    return 'IntlMessagesProxy' === e[Symbol.toStringTag];
+}
+function r(e, t) {
+    let r = n(e),
+        i = n(t),
+        a = e;
+    return r && i ? (e.$$loader.fallbackWith(t.$$loader), (a = e)) : r || i ? (r && !i ? (a = Object.assign(e.$$baseObject, t)) : i && !r && (a = Object.assign(t.$$baseObject, e))) : (a = Object.assign(Object.assign({}, t), e)), a;
+}
+function i(e) {
+    function t(t) {
+        return (n) => e.get(t, n);
+    }
+    let n = {},
+        r = new Proxy(n, {
+            ownKeys: (e) => Reflect.ownKeys(e),
+            getOwnPropertyDescriptor: (e, n) => (e[n] || (e[n] = t(n)), Reflect.getOwnPropertyDescriptor(e, n)),
+            get: (e, n) => ('$$typeof' === n ? 'object' : n === Symbol.toStringTag ? 'IntlMessagesProxy' : (e[n] || (e[n] = t(n)), e[n]))
+        });
+    return (
+        Object.defineProperty(r, '$$baseObject', {
+            value: n,
+            enumerable: !1,
+            configurable: !1,
+            writable: !1
+        }),
+        Object.defineProperty(r, '$$loader', {
+            value: e,
+            enumerable: !1,
+            configurable: !1,
+            writable: !1
+        }),
+        r
     );
 }
+Object.defineProperty(t, '__esModule', { value: !0 }), (t.chainMessagesObjects = r), (t.makeMessagesProxy = i);

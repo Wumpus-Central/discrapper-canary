@@ -1,8 +1,8 @@
 n.d(t, { i: () => u });
-var r = n(200651),
+var r = n(255367),
     i = n(481060),
-    o = n(535455);
-function a(e, t, n) {
+    a = n(535455);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -61,6 +61,6 @@ let u = async function () {
             let { EmojiStudioModal: t } = await n.e('78331').then(n.bind(n, 311770));
             return (n) => (0, r.jsx)(t, c(s({}, n), { userImage: e }));
         },
-        { modalKey: o.Hj }
+        { modalKey: a.Hj }
     );
 };

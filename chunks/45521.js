@@ -2,11 +2,11 @@ n.d(t, {
     Q: () => l,
     f: () => s
 });
-var r = n(290486),
+var r = n(381814),
     i = n(731965);
-let o = Object.freeze({ showPremiumUpsell: !1 }),
-    a = (0, r.U)((e) => o),
+let a = Object.freeze({ showPremiumUpsell: !1 }),
+    o = (0, r.U)((e) => a),
     s = (e) => {
-        (0, i.j)(() => a.setState({ showPremiumUpsell: e }));
+        (0, i.j)(() => o.setState({ showPremiumUpsell: e }));
     },
-    l = a;
+    l = o;

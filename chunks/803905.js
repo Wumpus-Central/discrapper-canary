@@ -32,8 +32,8 @@ n.d(t, {
     n(49124);
 var r = n(848246),
     i = n(710845),
-    o = n(380684),
-    a = n(533293),
+    a = n(380684),
+    o = n(533293),
     s = n(526998),
     l = n(575691),
     c = n(474936);
@@ -57,7 +57,7 @@ function f(e, t) {
     }
     return !1;
 }
-class _ extends a.Z {
+class _ extends o.Z {
     constructor(e, t) {
         super(e, (e) => f(this, e), t);
     }
@@ -85,7 +85,7 @@ let p = new _(r.q.ANIMATED_EMOJIS),
     x = new _('installPremiumApplications'),
     M = new _('redeemPremiumPerks'),
     k = new _(r.q.VIDEO_FILTER_ASSETS);
-new a.Z(r.q.INCREASED_FILE_UPLOAD_SIZE, o.h);
+new o.Z(r.q.INCREASED_FILE_UPLOAD_SIZE, a.h);
 let j = new _(r.q.INCREASED_GUILD_LIMIT),
     U = new _(r.q.INCREASED_MESSAGE_LENGTH),
     G = new _('increasedVideoUploadQuality'),

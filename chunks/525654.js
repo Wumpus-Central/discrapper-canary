@@ -5,9 +5,9 @@
                 object: !0
             },
             i = (r[typeof window] && window) || this,
-            o = r[typeof t] && t,
-            a = r.object && e && !e.nodeType && e,
-            s = o && a && 'object' == typeof n.g && n.g;
+            a = r[typeof t] && t,
+            o = r.object && e && !e.nodeType && e,
+            s = a && o && 'object' == typeof n.g && n.g;
         s && (s.global === s || s.window === s || s.self === s) && (i = s);
         var l = 9007199254740991,
             c = /\bOpera/,
@@ -92,24 +92,24 @@
             var t,
                 n,
                 r = i,
-                o = e && 'object' == typeof e && 'String' != E(e);
-            o && ((r = e), (e = null));
-            var a = r.navigator || {},
-                s = a.userAgent || '';
+                a = e && 'object' == typeof e && 'String' != E(e);
+            a && ((r = e), (e = null));
+            var o = r.navigator || {},
+                s = o.userAgent || '';
             e || (e = s);
-            var l = o ? !!a.likeChrome : /\bChrome\b/.test(e) && !/internal|\n/i.test(f.toString()),
+            var l = a ? !!o.likeChrome : /\bChrome\b/.test(e) && !/internal|\n/i.test(f.toString()),
                 u = 'Object',
-                d = o ? u : 'ScriptBridgingProxyObject',
-                _ = o ? u : 'Environment',
-                h = o && r.java ? 'JavaPackage' : E(r.java),
-                S = o ? u : 'RuntimeObject',
+                d = a ? u : 'ScriptBridgingProxyObject',
+                _ = a ? u : 'Environment',
+                h = a && r.java ? 'JavaPackage' : E(r.java),
+                S = a ? u : 'RuntimeObject',
                 T = /\bJava/.test(h) && r.java,
                 A = T && E(r.environment) == _,
                 N = T ? 'a' : 'α',
                 C = T ? 'b' : 'β',
                 R = r.document || {},
                 P = r.operamini || r.opera,
-                w = c.test((w = o && P ? P['[[Class]]'] : E(P))) ? w : (P = null),
+                w = c.test((w = a && P ? P['[[Class]]'] : E(P))) ? w : (P = null),
                 D = e,
                 L = [],
                 x = null,
@@ -420,7 +420,7 @@
                 else E((t = r.runtime)) == d ? ((U = 'Adobe AIR'), (V = t.flash.system.Capabilities.os)) : E((t = r.phantom)) == S ? ((U = 'PhantomJS'), (k = (t = t.version || null) && t.major + '.' + t.minor + '.' + t.patch)) : 'number' == typeof R.documentMode && (t = /\bTrident\/(\d+)/i.exec(e)) ? ((k = [k, R.documentMode]), (t = +t[1] + 4) != k[1] && (L.push('IE ' + k[1] + ' mode'), j && (j[1] = ''), (k[1] = t)), (k = 'IE' == U ? String(k[1].toFixed(1)) : k[0])) : 'number' == typeof R.documentMode && /^(?:Chrome|Firefox)\b/.test(U) && (L.push('masking as ' + U + ' ' + k), (U = 'IE'), (k = '11.0'), (j = ['Trident']), (V = 'Windows'));
                 V = V && m(V);
             }
-            if ((k && (t = /(?:[ab]|dp|pre|[ab]\d+pre)(?:\d+\+?)?$/i.exec(k) || /(?:alpha|beta)(?: ?\d)?/i.exec(e + ';' + (M && a.appMinorVersion)) || (/\bMinefield\b/i.test(e) && 'a')) && ((x = /b/i.test(t) ? 'beta' : 'alpha'), (k = k.replace(RegExp(t + '\\+?$'), '') + ('beta' == x ? C : N) + (/\d+\+?/.exec(t) || ''))), 'Fennec' == U || ('Firefox' == U && /\b(?:Android|Firefox OS)\b/.test(V)))) U = 'Firefox Mobile';
+            if ((k && (t = /(?:[ab]|dp|pre|[ab]\d+pre)(?:\d+\+?)?$/i.exec(k) || /(?:alpha|beta)(?: ?\d)?/i.exec(e + ';' + (M && o.appMinorVersion)) || (/\bMinefield\b/i.test(e) && 'a')) && ((x = /b/i.test(t) ? 'beta' : 'alpha'), (k = k.replace(RegExp(t + '\\+?$'), '') + ('beta' == x ? C : N) + (/\d+\+?/.exec(t) || ''))), 'Fennec' == U || ('Firefox' == U && /\b(?:Android|Firefox OS)\b/.test(V)))) U = 'Firefox Mobile';
             else if ('Maxthon' == U && k) k = k.replace(/\.[\d.]+/, '.x');
             else if (/\bXbox\b/i.test(G)) 'Xbox 360' == G && (V = null), 'Xbox 360' == G && /\bIEMobile\b/.test(e) && L.unshift('mobile mode');
             else if ((/^(?:Chrome|IE|Opera)$/.test(U) || (U && !G && !/Browser|Mobi/.test(U))) && ('Windows CE' == V || /Mobi/i.test(e))) U += ' Mobile';
@@ -449,7 +449,7 @@
                             return this.family + (e && !n ? ' ' + e : '') + (64 == this.architecture ? ' 64-bit' : '');
                         }
                     })),
-                (t = /\b(?:AMD|IA|Win|WOW|x86_|x)64\b/i.exec(D)) && !/\bi686\b/i.test(D) ? (V && ((V.architecture = 64), (V.family = V.family.replace(RegExp(' *' + t), ''))), U && (/\bWOW64\b/i.test(e) || (M && /\w(?:86|32)$/.test(a.cpuClass || a.platform) && !/\bWin64; x64\b/i.test(e))) && L.unshift('32-bit')) : V && /^OS X/.test(V.family) && 'Chrome' == U && parseFloat(k) >= 39 && (V.architecture = 64),
+                (t = /\b(?:AMD|IA|Win|WOW|x86_|x)64\b/i.exec(D)) && !/\bi686\b/i.test(D) ? (V && ((V.architecture = 64), (V.family = V.family.replace(RegExp(' *' + t), ''))), U && (/\bWOW64\b/i.test(e) || (M && /\w(?:86|32)$/.test(o.cpuClass || o.platform) && !/\bWin64; x64\b/i.test(e))) && L.unshift('32-bit')) : V && /^OS X/.test(V.family) && 'Chrome' == U && parseFloat(k) >= 39 && (V.architecture = 64),
                 e || (e = null);
             var q = {};
             return (
@@ -484,9 +484,9 @@
               define(function () {
                   return S;
               }))
-            : o && a
+            : a && o
               ? g(S, function (e, t) {
-                    o[t] = e;
+                    a[t] = e;
                 })
               : (i.platform = S);
     }.call(this);

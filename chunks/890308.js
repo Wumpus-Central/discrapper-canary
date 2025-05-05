@@ -1,9 +1,9 @@
 (e = n.nmd(e)),
     (function (r) {
         var i = t && !t.nodeType && t,
-            o = e && !e.nodeType && e,
-            a = 'object' == typeof n.g && n.g;
-        (a.global === a || a.window === a || a.self === a) && (r = a);
+            a = e && !e.nodeType && e,
+            o = 'object' == typeof n.g && n.g;
+        (o.global === o || o.window === o || o.self === o) && (r = o);
         var s,
             l,
             c = 2147483647,
@@ -39,7 +39,7 @@
             return n.length > 1 && ((r = n[0] + '@'), (e = n[1])), r + A((e = e.replace(y, '.')).split('.'), t).join('.');
         }
         function C(e) {
-            for (var t, n, r = [], i = 0, o = e.length; i < o; ) (t = e.charCodeAt(i++)) >= 55296 && t <= 56319 && i < o ? ((64512 & (n = e.charCodeAt(i++))) == 56320 ? r.push(((1023 & t) << 10) + (1023 & n) + 65536) : (r.push(t), i--)) : r.push(t);
+            for (var t, n, r = [], i = 0, a = e.length; i < a; ) (t = e.charCodeAt(i++)) >= 55296 && t <= 56319 && i < a ? ((64512 & (n = e.charCodeAt(i++))) == 56320 ? r.push(((1023 & t) << 10) + (1023 & n) + 65536) : (r.push(t), i--)) : r.push(t);
             return r;
         }
         function R(e) {
@@ -64,8 +64,8 @@
                 n,
                 r,
                 i,
-                o,
                 a,
+                o,
                 s,
                 l,
                 _,
@@ -77,8 +77,8 @@
                 v = h;
             for ((n = e.lastIndexOf(g)) < 0 && (n = 0), r = 0; r < n; ++r) e.charCodeAt(r) >= 128 && T('not-basic'), E.push(e.charCodeAt(r));
             for (i = n > 0 ? n + 1 : 0; i < b; ) {
-                for (o = y, a = 1, s = u; i >= b && T('invalid-input'), ((l = P(e.charCodeAt(i++))) >= u || l > I((c - y) / a)) && T('overflow'), (y += l * a), !(l < (_ = s <= v ? d : s >= v + f ? f : s - v)); s += u) a > I(c / (p = u - _)) && T('overflow'), (a *= p);
-                (v = D(y - o, (t = E.length + 1), 0 == o)), I(y / t) > c - O && T('overflow'), (O += I(y / t)), (y %= t), E.splice(y++, 0, O);
+                for (a = y, o = 1, s = u; i >= b && T('invalid-input'), ((l = P(e.charCodeAt(i++))) >= u || l > I((c - y) / o)) && T('overflow'), (y += l * o), !(l < (_ = s <= v ? d : s >= v + f ? f : s - v)); s += u) o > I(c / (p = u - _)) && T('overflow'), (o *= p);
+                (v = D(y - a, (t = E.length + 1), 0 == a)), I(y / t) > c - O && T('overflow'), (O += I(y / t)), (y %= t), E.splice(y++, 0, O);
             }
             return R(E);
         }
@@ -87,8 +87,8 @@
                 n,
                 r,
                 i,
-                o,
                 a,
+                o,
                 s,
                 l,
                 _,
@@ -99,13 +99,13 @@
                 O,
                 v,
                 A = [];
-            for (a = 0, b = (e = C(e)).length, t = m, n = 0, o = h; a < b; ++a) (E = e[a]) < 128 && A.push(S(E));
+            for (o = 0, b = (e = C(e)).length, t = m, n = 0, a = h; o < b; ++o) (E = e[o]) < 128 && A.push(S(E));
             for (r = i = A.length, i && A.push(g); r < b; ) {
-                for (s = c, a = 0; a < b; ++a) (E = e[a]) >= t && E < s && (s = E);
-                for (s - t > I((c - n) / (y = r + 1)) && T('overflow'), n += (s - t) * y, t = s, a = 0; a < b; ++a)
-                    if (((E = e[a]) < t && ++n > c && T('overflow'), E == t)) {
-                        for (l = n, _ = u; !(l < (p = _ <= o ? d : _ >= o + f ? f : _ - o)); _ += u) (v = l - p), (O = u - p), A.push(S(w(p + (v % O), 0))), (l = I(v / O));
-                        A.push(S(w(l, 0))), (o = D(n, y, r == i)), (n = 0), ++r;
+                for (s = c, o = 0; o < b; ++o) (E = e[o]) >= t && E < s && (s = E);
+                for (s - t > I((c - n) / (y = r + 1)) && T('overflow'), n += (s - t) * y, t = s, o = 0; o < b; ++o)
+                    if (((E = e[o]) < t && ++n > c && T('overflow'), E == t)) {
+                        for (l = n, _ = u; !(l < (p = _ <= a ? d : _ >= a + f ? f : _ - a)); _ += u) (v = l - p), (O = u - p), A.push(S(w(p + (v % O), 0))), (l = I(v / O));
+                        A.push(S(w(l, 0))), (a = D(n, y, r == i)), (n = 0), ++r;
                     }
                 ++n, ++t;
             }
@@ -138,8 +138,8 @@
             define('punycode', function () {
                 return s;
             });
-        else if (i && o)
-            if (e.exports == i) o.exports = s;
+        else if (i && a)
+            if (e.exports == i) a.exports = s;
             else for (l in s) s.hasOwnProperty(l) && (i[l] = s[l]);
         else r.punycode = s;
     })(this);

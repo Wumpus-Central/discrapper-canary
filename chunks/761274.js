@@ -1,5 +1,5 @@
 n.d(t, {
-    Eu: () => o,
+    Eu: () => a,
     NZ: () => r,
     PQ: () => i
 });
@@ -9,6 +9,6 @@ var r = (function (e) {
     i = (function (e) {
         return (e.DISMISSED = 'dismissed'), (e.DENIED = 'denied'), (e.ACCEPTED = 'accepted'), (e.NO_DEVICES = 'no_devices'), (e.ERROR = 'error'), (e.NONE = 'none'), e;
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return (e.AUDIO = 'audio'), (e.CAMERA = 'camera'), (e.STORAGE = 'storage'), (e.NOTIFICATIONS = 'notifications'), (e.PHOTOS = 'photos'), (e.CONTACTS = 'contacts'), (e.INPUT_MONITORING = 'input_monitoring'), (e.SCREEN_RECORDING = 'screen_recording'), e;
     })({});

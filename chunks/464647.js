@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I });
-var r = n(200651),
-    i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+var r = n(255367),
+    i = n(73800),
+    a = n(120356),
+    o = n.n(a),
     s = n(97028),
     l = n(481060),
     c = n(686546),
@@ -66,15 +66,15 @@ let E = 10,
     b = 2;
 function y(e) {
     let { game: t, activityLevel: n, hideTooltip: i } = e,
-        o = t.getIconURL(24),
-        a = (0, f.B)(),
+        a = t.getIconURL(24),
+        o = (0, f.B)(),
         p = (0, d.Z)({
             location: 'GuildProfile',
             source: u.m1.GuildProfile,
             trackEntryPointImpression: !0,
             applicationId: t.id
         });
-    if (null == o) return null;
+    if (null == a) return null;
     let m = !i,
         y = (null == n ? void 0 : n.level) === s.m.HIGH,
         O = (0, r.jsx)(l.Text, {
@@ -95,7 +95,7 @@ function y(e) {
                         children: [
                             (0, r.jsx)('img', {
                                 className: _.gameIconImage,
-                                src: o,
+                                src: a,
                                 alt: t.name
                             }),
                             y &&
@@ -118,7 +118,7 @@ function y(e) {
                     })
                 )
         });
-    return a
+    return o
         ? (0, r.jsx)(l.P3F, {
               onClick: p,
               className: _.gameIconWrapper,
@@ -171,17 +171,17 @@ function v(e) {
     });
 }
 function I(e) {
-    let { gamesToDisplay: t, lastGameToDisplay: n, remainingGames: o, activity: s } = e,
+    let { gamesToDisplay: t, lastGameToDisplay: n, remainingGames: a, activity: s } = e,
         c = i.useMemo(() => {
             if (null == n) return null;
             let e = n.getIconURL(24);
             if (null == e) return null;
-            if (0 === o.length)
+            if (0 === a.length)
                 return (0, r.jsx)(y, {
                     game: n,
                     activityLevel: s[n.id]
                 });
-            let t = o;
+            let t = a;
             return (0, r.jsx)(l.ua7, {
                 'aria-label': '',
                 position: 'bottom',
@@ -193,10 +193,10 @@ function I(e) {
                     (0, r.jsxs)(
                         'div',
                         g(h({}, i), {
-                            className: a()(_.gameIcon, _.extraGameItem),
+                            className: o()(_.gameIcon, _.extraGameItem),
                             children: [
                                 (0, r.jsx)('img', {
-                                    className: a()(_.gameIconImage, _.extraGameIconImage),
+                                    className: o()(_.gameIconImage, _.extraGameIconImage),
                                     src: e,
                                     alt: n.name
                                 }),
@@ -213,7 +213,7 @@ function I(e) {
                         })
                     )
             });
-        }, [n, o, s]);
+        }, [n, a, s]);
     return null == t || 0 === t.length
         ? null
         : 1 === t.length

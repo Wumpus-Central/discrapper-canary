@@ -1,12 +1,12 @@
 var r = n(286233),
     i = n(716834),
-    o = n(638934),
-    a = n(166691),
+    a = n(638934),
+    o = n(166691),
     s = n(792949),
     l = n(352346),
-    c = o.apply(l()),
+    c = a.apply(l()),
     u = n(340535),
-    d = a('Array.prototype.slice'),
+    d = o('Array.prototype.slice'),
     f = function (e, t) {
         return i(e), c(e, d(arguments, 1));
     };

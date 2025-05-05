@@ -1,8 +1,8 @@
 n.d(t, { Z: () => S }), n(781311);
-var r = n(200651),
-    i = n(192379),
-    o = n(120356),
-    a = n.n(o),
+var r = n(255367),
+    i = n(73800),
+    a = n(120356),
+    o = n.n(a),
     s = n(793030),
     l = n(442837),
     c = n(833664),
@@ -21,9 +21,9 @@ var r = n(200651),
     v = n(981631),
     I = n(843280);
 function S(e) {
-    let { user: t, activities: n, applicationStream: o, voiceChannel: S, textClassName: T, iconClassName: A, textSize: N = 'xs', animate: C = !0, hasQuest: R = !1, hideEmoji: P = !1, hideTooltip: w = !1 } = e;
+    let { user: t, activities: n, applicationStream: a, voiceChannel: S, textClassName: T, iconClassName: A, textSize: N = 'xs', animate: C = !0, hasQuest: R = !1, hideEmoji: P = !1, hideTooltip: w = !1 } = e;
     (0, u.Z)(null == t ? void 0 : t.id);
-    let D = (null == o ? void 0 : o.discoverable) !== !1 ? o : null,
+    let D = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
         L = (0, d.Z)({ location: 'ActivityStatus' }),
         x = i.useMemo(() => {
             var e, t;
@@ -108,7 +108,7 @@ function S(e) {
             });
         };
     return (0, r.jsxs)('div', {
-        className: a()(I.container, {
+        className: o()(I.container, {
             [I.textXs]: 'xs' === N,
             [I.textSm]: 'sm' === N
         }),
@@ -116,7 +116,7 @@ function S(e) {
             j(),
             (0, r.jsx)(s.xv, {
                 variant: 'text-'.concat(N, '/normal'),
-                className: a()(I.text, I.dot, T),
+                className: o()(I.text, I.dot, T),
                 children: O.l
             }),
             U(),

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(388685);
 var r = n(179360),
     i = n(147913),
-    o = n(430824),
-    a = n(496675),
+    a = n(430824),
+    o = n(496675),
     s = n(914010),
     l = n(713081),
     c = n(905128),
@@ -25,7 +25,7 @@ class _ extends i.Z {
     handleSelectedGuildChange() {
         let e = s.Z.getGuildId();
         if (null == e) return;
-        let t = o.Z.getGuild(e);
+        let t = a.Z.getGuild(e);
         null != t &&
             (u.ZP.trackExposure({
                 guildId: t.id,
@@ -39,7 +39,7 @@ class _ extends i.Z {
     }
     handleAppliedBoostUpdate(e) {
         let { guildId: t } = e;
-        !0 === (0, d.D)(a.Z, o.Z.getGuild(t)) && this.refreshGuildPowerups(t);
+        !0 === (0, d.D)(o.Z, a.Z.getGuild(t)) && this.refreshGuildPowerups(t);
     }
     refreshGuildPowerups(e) {
         (0, u.gV)(e, 'GuildPowerupsManager') && ((0, l.Fm)(e), (0, r.C0)(e));

@@ -1,7 +1,7 @@
-n.d(t, { q: () => o });
+n.d(t, { q: () => a });
 var r = n(481060),
     i = n(228168);
-let o = {
+let a = {
     [i.lY.POPOUT]: {
         avatarSize: r.EFr.SIZE_80,
         avatarOffsetX: 10,

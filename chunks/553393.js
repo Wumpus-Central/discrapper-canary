@@ -1,8 +1,8 @@
 n.d(t, { Z: () => F }), n(388685);
-var r = n(200651),
-    i = n(192379),
-    o = n(272573),
-    a = n(91192),
+var r = n(255367),
+    i = n(73800),
+    a = n(481752),
+    o = n(91192),
     s = n(442837),
     l = n(780384),
     c = n(481060),
@@ -86,19 +86,19 @@ function V(e) {
         ee = (0, s.e7)([p.Z], () => p.Z.useReducedMotion),
         { ref: et, height: en } = (0, f.ZP)(),
         [er, ei] = i.useState(ee),
-        eo = (0, _.Aq)(),
-        ea = (0, a.eg)();
+        ea = (0, _.Aq)(),
+        eo = (0, o.eg)();
     i.useEffect(() => {
-        let e = ea.current;
+        let e = eo.current;
         return (
             null == e || e.addEventListener('scroll', F),
             () => {
                 null == e || e.removeEventListener('scroll', F);
             }
         );
-    }, [F, ea]),
+    }, [F, eo]),
         i.useEffect(() => {
-            let e = ea.current,
+            let e = eo.current,
                 t = A.current;
             if (null == e || null == t) return;
             let n = new MutationObserver(() => Z());
@@ -111,7 +111,7 @@ function V(e) {
                     n.disconnect();
                 }
             );
-        }, [A, ea, Z]);
+        }, [A, eo, Z]);
     let es = (0, c.q_F)({
             from: { height: 0 },
             height: null != en ? en : 0,
@@ -132,7 +132,7 @@ function V(e) {
             }
         }),
         ec = () => {
-            eo.dispatch(w.CkL.POPOUT_CLOSE);
+            ea.dispatch(w.CkL.POPOUT_CLOSE);
         },
         eu = 'top' === V ? ''.concat(j, ' ').concat(j, ' 0 0') : '0 0 '.concat(j, ' ').concat(j);
     if (null == O || z || (q && !B(M, W))) return null;
@@ -224,7 +224,7 @@ function V(e) {
                           handleClickCta: ef,
                           tileAssetType: 'game'
                       };
-    return (0, r.jsx)(o.animated.div, {
+    return (0, r.jsx)(a.animated.div, {
         ref: (e) => {
             H.current = e;
         },
@@ -284,7 +284,7 @@ function V(e) {
                                     el(
                                         (e, t) =>
                                             t &&
-                                            (0, r.jsx)(o.animated.div, {
+                                            (0, r.jsx)(a.animated.div, {
                                                 style: e,
                                                 className: x.imgUnderlay
                                             })

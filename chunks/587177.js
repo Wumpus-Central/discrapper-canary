@@ -1,4 +1,4 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(311850);
 function i(e, t, n) {
     return (
@@ -13,14 +13,14 @@ function i(e, t, n) {
         e
     );
 }
-class o {
+class a {
     static fromServer(e) {
-        let { prices: t, type: n, premium_type: i, name: a, sku_id: s, summary: l } = e;
-        return new o({
+        let { prices: t, type: n, premium_type: i, name: o, sku_id: s, summary: l } = e;
+        return new a({
             prices: (0, r.l)(t),
             type: n,
             premiumType: i,
-            name: a,
+            name: o,
             skuId: s,
             summary: l
         });

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => R }), n(388685);
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(786761),
+    a = n(570140),
+    o = n(786761),
     s = n(797316),
     l = n(594174),
     c = n(709054);
@@ -81,7 +81,7 @@ function E(e) {
     b(e.message.channel_id, e.message);
 }
 function b(e, t) {
-    let n = null == t ? null : (0, a.e5)(t);
+    let n = null == t ? null : (0, o.e5)(t);
     p[e] = {
         loaded: !0,
         firstMessage: n
@@ -91,7 +91,7 @@ function y(e) {
     if (e.message.id !== e.message.channel_id) return !1;
     let t = p[c.default.castMessageIdAsChannelId(e.message.id)];
     if (null == t || null == t.firstMessage) return !1;
-    p[c.default.castMessageIdAsChannelId(e.message.id)] = _(d({}, t), { firstMessage: (0, a.wi)(t.firstMessage, e.message) });
+    p[c.default.castMessageIdAsChannelId(e.message.id)] = _(d({}, t), { firstMessage: (0, o.wi)(t.firstMessage, e.message) });
 }
 function O(e) {
     if (e.id !== c.default.castChannelIdAsMessageId(e.channelId)) return !1;
@@ -108,21 +108,21 @@ function v(e) {
     };
 }
 function I(e) {
-    let { type: t, channelId: n, messageId: r, userId: i, emoji: o, optimistic: a, reactionType: s } = e,
+    let { type: t, channelId: n, messageId: r, userId: i, emoji: a, optimistic: o, reactionType: s } = e,
         c = p[n];
     if (null == c || null == c.firstMessage || r !== c.firstMessage.id) return !1;
     let u = l.default.getCurrentUser(),
         f = null != u && u.id === i;
-    if (a && !f) return !1;
-    (p[n] = d({}, c)), 'MESSAGE_REACTION_ADD' === t ? (p[n].firstMessage = c.firstMessage.addReaction(o, f, e.colors, s)) : (p[n].firstMessage = c.firstMessage.removeReaction(o, f, s));
+    if (o && !f) return !1;
+    (p[n] = d({}, c)), 'MESSAGE_REACTION_ADD' === t ? (p[n].firstMessage = c.firstMessage.addReaction(a, f, e.colors, s)) : (p[n].firstMessage = c.firstMessage.removeReaction(a, f, s));
 }
 function S(e) {
     let { channelId: t, messageId: n, reactions: r } = e,
         i = p[t];
     if (null == i || null == i.firstMessage || n !== i.firstMessage.id) return !1;
-    let o = l.default.getCurrentUser(),
-        a = i.firstMessage.addReactionBatch(r, null == o ? void 0 : o.id);
-    p[t] = _(d({}, i), { firstMessage: a });
+    let a = l.default.getCurrentUser(),
+        o = i.firstMessage.addReactionBatch(r, null == a ? void 0 : a.id);
+    p[t] = _(d({}, i), { firstMessage: o });
 }
 function T(e) {
     let { channelId: t, messageId: n } = e,
@@ -143,7 +143,7 @@ function N(e) {
         r.id === c.default.castChannelIdAsMessageId(t) &&
         (p[t] = {
             loaded: !0,
-            firstMessage: (0, a.e5)(r)
+            firstMessage: (0, o.e5)(r)
         });
 }
 class C extends (r = i.ZP.Store) {
@@ -166,7 +166,7 @@ class C extends (r = i.ZP.Store) {
     }
 }
 u(C, 'displayName', 'ForumPostMessagesStore');
-let R = new C(o.Z, {
+let R = new C(a.Z, {
     CONNECTION_OPEN: h,
     MESSAGE_CREATE: E,
     MESSAGE_UPDATE: y,

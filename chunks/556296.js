@@ -8,8 +8,8 @@ n.d(t, {
     n(704826),
     n(35282);
 var i,
-    o = n(348327),
-    a = n.n(o),
+    a = n(348327),
+    o = n.n(a),
     s = n(392711),
     l = n.n(s),
     c = n(442837),
@@ -178,7 +178,7 @@ function J(e) {
     if (0 === t.length || null == t || n === v.kg4.UNASSIGNED || !r) return;
     if (null == G[n]) return void P.error('[kb store] KeybindStore: Looking for callback action '.concat(n, " but it doesn't exist in this version. Skipping"));
     let i = e.id,
-        o = G[n].keyEvents;
+        a = G[n].keyEvents;
     e.action === v.kg4.TOGGLE_MUTE && z(),
         e.action === v.kg4.TOGGLE_OVERLAY_INPUT_LOCK && W(),
         Q(
@@ -192,7 +192,7 @@ function J(e) {
                     keydown: !1,
                     keyup: !1
                 },
-                o
+                a
             )
         ),
         d.Z.validateKeybind((0, y.BB)(t));
@@ -245,7 +245,7 @@ function ei(e) {
     let { enable: t } = e;
     (U = t), t ? (d.Z.enable(), l().forEach(k, J), K(), Y()) : (d.Z.disable(), l().forEach(k, (e) => X(e.id)), z(), W());
 }
-function eo(e) {
+function ea(e) {
     let { keybinds: t } = e;
     (G = t),
         (M = {}),
@@ -262,7 +262,7 @@ function eo(e) {
         (U = !0),
         null == r && (r = p.Z.subscribe({ location: 'KeybindsStore' }, q));
 }
-function ea(e, t) {
+function eo(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     return (
         null == l().find(k, (t) => t.action === e && (!n || t.managed === n)) &&
@@ -325,17 +325,17 @@ let el = [
         );
     },
     function () {
-        return !!O.default.getAnyGlobalEnabledOverlay() && ea(v.kg4.TOGGLE_OVERLAY_INPUT_LOCK, D());
+        return !!O.default.getAnyGlobalEnabledOverlay() && eo(v.kg4.TOGGLE_OVERLAY_INPUT_LOCK, D());
     },
     function () {
-        return !!O.default.getAnyGlobalEnabledOverlay() && ea(v.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, ']`');
+        return !!O.default.getAnyGlobalEnabledOverlay() && eo(v.kg4.OVERLAY_ACTIVATE_REGION_TEXT_WIDGET, ']`');
     },
     function () {
         let e = es(v.kg4.SOUNDBOARD_HOLD);
-        return ea(v.kg4.SOUNDBOARD_HOLD, S.D_, !1) || e;
+        return eo(v.kg4.SOUNDBOARD_HOLD, S.D_, !1) || e;
     },
     function () {
-        return ea(v.kg4.SAVE_CLIP, I.D_);
+        return eo(v.kg4.SAVE_CLIP, I.D_);
     }
 ];
 function ec() {
@@ -405,7 +405,7 @@ A(ed, 'displayName', 'KeybindsStore'),
                     if ((0, g.isLinux)() && t.action === v.kg4.SOUNDBOARD_HOLD) {
                         let n = t.shortcut.map((e) => e[1]),
                             r = (0, y.Kd)('`').map((e) => e[1]);
-                        if (a()(n, r)) return e;
+                        if (o()(n, r)) return e;
                     }
                     return R(N({}, e), { [n]: t });
                 },
@@ -442,6 +442,6 @@ let ef = new ed(u.Z, {
         KEYBINDS_DELETE_KEYBIND: en,
         KEYBINDS_SET_KEYBIND: er,
         KEYBINDS_ENABLE_ALL_KEYBINDS: ei,
-        KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS: eo
+        KEYBINDS_REGISTER_GLOBAL_KEYBIND_ACTIONS: ea
     }),
     e_ = ef;

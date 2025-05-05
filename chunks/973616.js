@@ -9,8 +9,8 @@ n.d(t, {
     n(388685);
 var r = n(480189),
     i = n(81825),
-    o = n(768581),
-    a = n(584597),
+    a = n(768581),
+    o = n(584597),
     s = n(598077),
     l = n(701488);
 function c(e, t, n) {
@@ -90,7 +90,7 @@ class h extends i.Z {
     }
     getIconURL(e, t) {
         return null != this.icon
-            ? o.ZP.getGameAssetURL({
+            ? a.ZP.getGameAssetURL({
                   id: this.id,
                   hash: this.icon,
                   size: e,
@@ -100,7 +100,7 @@ class h extends i.Z {
     }
     getIconSource(e, t) {
         return null != this.icon
-            ? o.ZP.getGameAssetSource({
+            ? a.ZP.getGameAssetSource({
                   id: this.id,
                   hash: this.icon,
                   size: e,
@@ -110,7 +110,7 @@ class h extends i.Z {
     }
     getSplashURL(e, t) {
         return null != this.splash
-            ? o.ZP.getGameAssetURL({
+            ? a.ZP.getGameAssetURL({
                   id: this.id,
                   hash: this.splash,
                   size: e,
@@ -121,7 +121,7 @@ class h extends i.Z {
     }
     getCoverImageURL(e) {
         return null != this.coverImage
-            ? o.ZP.getApplicationIconURL({
+            ? a.ZP.getApplicationIconURL({
                   id: this.id,
                   icon: this.coverImage,
                   size: e
@@ -150,8 +150,8 @@ class m extends h {
                 storeListingSkuId: e.store_listing_sku_id,
                 guildId: e.guild_id,
                 guild: e.guild,
-                publishers: null != e.publishers ? e.publishers.map(a.Z.createFromServer) : [],
-                developers: null != e.developers ? e.developers.map(a.Z.createFromServer) : [],
+                publishers: null != e.publishers ? e.publishers.map(o.Z.createFromServer) : [],
+                developers: null != e.developers ? e.developers.map(o.Z.createFromServer) : [],
                 eulaId: e.eula_id,
                 slug: e.slug,
                 flags: null != (n = e.flags) ? n : 0,
@@ -176,14 +176,14 @@ class m extends h {
         );
     }
     mergeFromApplicationUpdate(e) {
-        var t, n, r, i, o, a, s, l, c, d, f, _, p, h, g, E, b, y, O, v, I, S, T, A, N, C, R, P, w, D, L, x, M, k, j, U, G, B, V, F, Z, H;
+        var t, n, r, i, a, o, s, l, c, d, f, _, p, h, g, E, b, y, O, v, I, S, T, A, N, C, R, P, w, D, L, x, M, k, j, U, G, B, V, F, Z, H;
         return new m({
             id: null != (t = e.id) ? t : this.id,
             name: null != (n = e.name) ? n : this.name,
             icon: null != (r = e.icon) ? r : this.icon,
             splash: null != (i = e.splash) ? i : this.splash,
-            overlay: null != (o = e.overlay) ? o : this.overlay,
-            overlayWarn: null != (a = e.overlayWarn) ? a : this.overlayWarn,
+            overlay: null != (a = e.overlay) ? a : this.overlay,
+            overlayWarn: null != (o = e.overlayWarn) ? o : this.overlayWarn,
             overlayCompatibilityHook: null != (s = e.overlayCompatibilityHook) ? s : this.overlayCompatibilityHook,
             overlayMethods: null != (l = e.overlayMethods) ? l : this.overlayMethods,
             hook: null != (c = e.hook) ? c : this.hook,
@@ -242,7 +242,7 @@ class m extends h {
         return null != e && (e & t) === t;
     }
     constructor(e) {
-        var t, n, i, o, a, s, l, u, d, f, _, h, m, g, E, b, y;
-        super(e), c(this, 'overlay', void 0), c(this, 'overlayWarn', void 0), c(this, 'overlayCompatibilityHook', void 0), c(this, 'overlayMethods', void 0), c(this, 'hook', void 0), c(this, 'aliases', void 0), c(this, 'publishers', void 0), c(this, 'developers', void 0), c(this, 'storeListingSkuId', void 0), c(this, 'guildId', void 0), c(this, 'guild', void 0), c(this, 'executables', void 0), c(this, 'hashes', void 0), c(this, 'eulaId', void 0), c(this, 'slug', void 0), c(this, 'flags', void 0), c(this, 'maxParticipants', void 0), c(this, 'tags', void 0), c(this, 'embeddedActivityConfig', void 0), c(this, 'team', void 0), c(this, 'integrationTypesConfig', void 0), c(this, 'storefront_available', void 0), c(this, 'termsOfServiceUrl', void 0), c(this, 'privacyPolicyUrl', void 0), c(this, 'isDiscoverable', void 0), c(this, 'customInstallUrl', void 0), c(this, 'installParams', void 0), c(this, 'directoryEntry', void 0), c(this, 'categories', void 0), (this.overlay = null != (t = e.overlay) && t), (this.overlayWarn = null != (n = e.overlayWarn) && n), (this.overlayCompatibilityHook = null != (i = e.overlayCompatibilityHook) && i), (this.overlayMethods = null != (o = e.overlayMethods) ? o : r.e.DEFAULT), (this.hook = null == (a = e.hook) || a), (this.aliases = null != (s = e.aliases) ? s : []), (this.publishers = null != (l = e.publishers) ? l : []), (this.developers = null != (u = e.developers) ? u : []), (this.storeListingSkuId = e.storeListingSkuId), (this.guildId = e.guildId), (this.guild = e.guild), (this.executables = (null != (d = e.executables) ? d : []).map(p)), (this.hashes = null != (f = e.hashes) ? f : []), (this.eulaId = e.eulaId), (this.slug = e.slug), (this.flags = null != (_ = e.flags) ? _ : 0), (this.tags = null != (h = e.tags) ? h : []), (this.maxParticipants = e.maxParticipants), (this.embeddedActivityConfig = null != (m = e.embedded_activity_config) ? m : e.embeddedActivityConfig), (this.team = e.team), (this.integrationTypesConfig = e.integrationTypesConfig), (this.storefront_available = e.storefront_available), (this.termsOfServiceUrl = e.termsOfServiceUrl), (this.privacyPolicyUrl = e.privacyPolicyUrl), (this.isDiscoverable = null != (g = e.is_discoverable) ? g : e.isDiscoverable), (this.customInstallUrl = null != (E = e.custom_install_url) ? E : e.customInstallUrl), (this.installParams = null != (b = e.install_params) ? b : e.installParams), (this.directoryEntry = null != (y = e.directory_entry) ? y : e.directoryEntry), (this.categories = e.categories);
+        var t, n, i, a, o, s, l, u, d, f, _, h, m, g, E, b, y;
+        super(e), c(this, 'overlay', void 0), c(this, 'overlayWarn', void 0), c(this, 'overlayCompatibilityHook', void 0), c(this, 'overlayMethods', void 0), c(this, 'hook', void 0), c(this, 'aliases', void 0), c(this, 'publishers', void 0), c(this, 'developers', void 0), c(this, 'storeListingSkuId', void 0), c(this, 'guildId', void 0), c(this, 'guild', void 0), c(this, 'executables', void 0), c(this, 'hashes', void 0), c(this, 'eulaId', void 0), c(this, 'slug', void 0), c(this, 'flags', void 0), c(this, 'maxParticipants', void 0), c(this, 'tags', void 0), c(this, 'embeddedActivityConfig', void 0), c(this, 'team', void 0), c(this, 'integrationTypesConfig', void 0), c(this, 'storefront_available', void 0), c(this, 'termsOfServiceUrl', void 0), c(this, 'privacyPolicyUrl', void 0), c(this, 'isDiscoverable', void 0), c(this, 'customInstallUrl', void 0), c(this, 'installParams', void 0), c(this, 'directoryEntry', void 0), c(this, 'categories', void 0), (this.overlay = null != (t = e.overlay) && t), (this.overlayWarn = null != (n = e.overlayWarn) && n), (this.overlayCompatibilityHook = null != (i = e.overlayCompatibilityHook) && i), (this.overlayMethods = null != (a = e.overlayMethods) ? a : r.e.DEFAULT), (this.hook = null == (o = e.hook) || o), (this.aliases = null != (s = e.aliases) ? s : []), (this.publishers = null != (l = e.publishers) ? l : []), (this.developers = null != (u = e.developers) ? u : []), (this.storeListingSkuId = e.storeListingSkuId), (this.guildId = e.guildId), (this.guild = e.guild), (this.executables = (null != (d = e.executables) ? d : []).map(p)), (this.hashes = null != (f = e.hashes) ? f : []), (this.eulaId = e.eulaId), (this.slug = e.slug), (this.flags = null != (_ = e.flags) ? _ : 0), (this.tags = null != (h = e.tags) ? h : []), (this.maxParticipants = e.maxParticipants), (this.embeddedActivityConfig = null != (m = e.embedded_activity_config) ? m : e.embeddedActivityConfig), (this.team = e.team), (this.integrationTypesConfig = e.integrationTypesConfig), (this.storefront_available = e.storefront_available), (this.termsOfServiceUrl = e.termsOfServiceUrl), (this.privacyPolicyUrl = e.privacyPolicyUrl), (this.isDiscoverable = null != (g = e.is_discoverable) ? g : e.isDiscoverable), (this.customInstallUrl = null != (E = e.custom_install_url) ? E : e.customInstallUrl), (this.installParams = null != (b = e.install_params) ? b : e.installParams), (this.directoryEntry = null != (y = e.directory_entry) ? y : e.directoryEntry), (this.categories = e.categories);
     }
 }
