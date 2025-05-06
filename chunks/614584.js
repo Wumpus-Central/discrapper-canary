@@ -139,7 +139,7 @@ let E = i.memo(function (e) {
             [w]
         ),
         B = (0, C.wq)(null == w ? void 0 : w.author.id, I.id),
-        G = (0, C.$3)(n, w, D, U),
+        G = (0, C.$3)(n, w),
         F = (0, C.Wl)(w, I, S, N),
         H = (0, C.rY)(Z, N),
         V = i.useCallback(() => {

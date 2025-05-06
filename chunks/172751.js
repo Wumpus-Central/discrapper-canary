@@ -67,6 +67,7 @@ let E = i.memo(function (e) {
             className: a()(h.chipletContainerInner, b && h.chipletContainerInline, null != u && h.clickable, o),
             children: (0, r.jsxs)(l.Text, {
                 variant: p,
+                lineClamp: 1,
                 color: m,
                 tag: 'span',
                 className: a()(h.text, s),

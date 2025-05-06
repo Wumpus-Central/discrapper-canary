@@ -4,9 +4,9 @@ var r = n(255367),
     i = n(779613);
 n(442837);
 var o = n(686777),
-    a = n(113434);
+    l = n(113434);
 n(569984);
-var l = n(497505),
+var a = n(497505),
     c = n(602667),
     u = n(87894),
     d = n(372113),
@@ -19,7 +19,7 @@ function h(e) {
         [j, b] = s.useState(!1),
         C = s.useCallback(() => b(!0), []),
         v = s.useCallback(() => b(!1), []),
-        y = (0, a.tP)(t),
+        y = (0, l.tP)(t),
         { containerRef: T, size: O, height: E } = (0, p.h)(),
         N = (0, o.q)({ location: x.dr.QUESTS_CARD }),
         {
@@ -41,12 +41,12 @@ function h(e) {
         questOrQuests: t,
         questContent: n,
         questContentPosition: f,
-        trackGuildAndChannelMetadata: n === l.jn.QUESTS_EMBED,
+        trackGuildAndChannelMetadata: n === a.jn.QUESTS_EMBED,
         children: (e) =>
             (0, r.jsx)(i.animated.div, {
                 style: {
                     maxHeight:
-                        n === l.jn.QUESTS_EMBED
+                        n === a.jn.QUESTS_EMBED
                             ? void 0
                             : q.to({
                                   range: [0, 1],

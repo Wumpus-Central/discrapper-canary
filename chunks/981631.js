@@ -1518,6 +1518,7 @@ var N =
     (r.QUEST_SURVEY_SUBMITTED = 'quest_survey_submitted'),
     (r.QUEST_BAR_MODE_CHANGED = 'quest_bar_mode_changed'),
     (r.QUEST_EMBED_FALLBACK_VIEWED = 'quest_embed_fallback_viewed'),
+    (r.QUEST_THIRD_PARTY_LINK_CLICKED = 'quest_third_party_link_clicked'),
     (r.QUEST_VIDEO_APP_FOCUSED = 'quest_video_app_focused'),
     (r.QUEST_VIDEO_APP_UNFOCUSED = 'quest_video_app_unfocused'),
     (r.QUEST_VIDEO_BUFFERING_ENDED = 'quest_video_buffering_ended'),

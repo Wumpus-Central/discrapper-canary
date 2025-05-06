@@ -14,6 +14,7 @@ e.exports = {
     taskDetails: 'taskDetails__2055a',
     taskInstructions: 'taskInstructions__2055a',
     ctaButtonContainer: 'ctaButtonContainer__2055a',
+    questEnrollmentBlockedButton: 'questEnrollmentBlockedButton__2055a',
     ctaButtonWrapper: 'ctaButtonWrapper__2055a',
     ctaButtonInner: 'ctaButtonInner__2055a',
     learnMoreLink: 'learnMoreLink__2055a',

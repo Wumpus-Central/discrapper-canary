@@ -6,6 +6,7 @@ e.exports = {
     oversizedImg: 'oversizedImg__955a3',
     bannerGradient: 'bannerGradient__955a3',
     tabs: 'tabs__955a3',
+    orbsTermsButton: 'orbsTermsButton__955a3',
     orbsGradient: 'orbsGradient__955a3',
     bannerContainer: 'bannerContainer__955a3',
     orbsContainer: 'orbsContainer__955a3'

@@ -142,10 +142,33 @@ let z = function () {
                       (0, r.jsxs)(_.Z, {
                           title: z,
                           description: W,
-                          button: (0, r.jsx)(b.u, {
-                              text: U.intl.string(U.t.hvVgAQ),
-                              onClick: B
-                          }),
+                          button: V
+                              ? (0, r.jsxs)(r.Fragment, {
+                                    children: [
+                                        (0, r.jsx)(c.zxk, {
+                                            color: c.Ttl.WHITE,
+                                            onClick: () =>
+                                                (0, h.mK)({
+                                                    openInLayer: !1,
+                                                    tab: M.AW.ORBS,
+                                                    analyticsLocations: [],
+                                                    analyticsSource: d.Z.INTRO_TO_ORBS_QUEST_BANNER
+                                                }),
+                                            children: U.intl.string(U.t['1Wm129'])
+                                        }),
+                                        (0, r.jsx)(c.zxk, {
+                                            look: c.iLD.LINK,
+                                            color: c.Ttl.CUSTOM,
+                                            className: G.orbsTermsButton,
+                                            onClick: B,
+                                            children: U.intl.string(U.t['7kTAgI'])
+                                        })
+                                    ]
+                                })
+                              : (0, r.jsx)(b.u, {
+                                    text: U.intl.string(U.t.hvVgAQ),
+                                    onClick: B
+                                }),
                           className: a()(G.bannerContainer, { [G.orbsContainer]: V }),
                           children: [(0, r.jsx)('div', { className: a()(G.bannerGradient, { [G.orbsGradient]: V }) }), (0, r.jsx)(F, {})]
                       }),

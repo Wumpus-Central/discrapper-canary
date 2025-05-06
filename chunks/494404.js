@@ -14,11 +14,11 @@ var r = n(255367),
     c = n(91192),
     u = n(442837),
     d = n(481060),
-    p = n(668781),
-    m = n(904245),
-    f = n(724757),
-    h = n(576855),
-    g = n(540059),
+    p = n(904245),
+    m = n(724757),
+    f = n(576855),
+    h = n(540059),
+    g = n(804063),
     _ = n(294218),
     b = n(703656),
     y = n(210887),
@@ -142,12 +142,12 @@ let k = u.ZP.connectStores([v.Z], (e) => {
     return { canManageMessages: null != t && v.Z.can(I.Plq.MANAGE_MESSAGES, t) };
 })(R);
 function L(e) {
-    let { analyticsName: t, items: n, hasMore: l, loading: o, loadMore: p, renderHeader: m, renderEmptyState: _, renderItem: b, getProTip: x, scrollerClassName: E, className: v, listName: w } = e,
+    let { analyticsName: t, items: n, hasMore: l, loading: o, loadMore: p, renderHeader: g, renderEmptyState: _, renderItem: b, getProTip: x, scrollerClassName: E, className: v, listName: w } = e,
         Z = i.useRef(null),
-        R = (0, f.Z)(w, Z),
+        R = (0, m.Z)(w, Z),
         k = (0, u.e7)([O.ZP], () => O.ZP.hasNotice()),
         L = (0, u.e7)([j.Z], () => j.Z.windowSize()),
-        D = (0, g.Q3)('ItemsPopout');
+        D = (0, h.Q3)('ItemsPopout');
     i.useEffect(() => {
         C.default.track(I.rMx.OPEN_POPOUT, { type: t });
     }, [t]),
@@ -226,7 +226,7 @@ function L(e) {
             F && null != G
                 ? (0, r.jsx)('div', {
                       className: T.footer,
-                      children: (0, r.jsx)(h.Z, {
+                      children: (0, r.jsx)(f.Z, {
                           style: {
                               width: '100%',
                               paddingTop: 10,
@@ -246,7 +246,7 @@ function L(e) {
         onDoubleClick: A,
         'aria-label': e['aria-label'],
         children: (0, r.jsxs)(d.y5t, {
-            component: m(),
+            component: g(),
             children: [
                 (0, r.jsxs)(d.Den, {
                     className: a()(T.messagesPopout, E),
@@ -324,34 +324,22 @@ function L(e) {
     });
 }
 function D(e) {
-    let { analyticsName: t, onFetch: n, channel: l, messages: a, hasMore: o, loading: s, loadMore: c, onJump: d, canCloseAllMessages: f = !1, renderHeader: h, renderEmptyState: g, renderMessage: y, getProTip: v, scrollerClassName: O, className: j, onCloseMessage: C, listName: S } = e,
-        P = (0, u.e7)([E.Z], () => {
+    let { analyticsName: t, onFetch: n, channel: l, messages: a, hasMore: o, loading: s, loadMore: c, onJump: d, canCloseAllMessages: m = !1, renderHeader: f, renderEmptyState: h, renderMessage: y, getProTip: v, scrollerClassName: O, className: j, onCloseMessage: C, listName: S } = e,
+        N = (0, u.e7)([E.Z], () => {
             let e = null != l ? E.Z.getMessages(l.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
         });
-    function A(e, n) {
-        let { id: r, blocked: i, ignored: l, author: a, channel_id: o } = e;
-        if (i)
-            p.Z.show({
-                title: N.intl.string(N.t['j7eA/v']),
-                body: N.intl.formatToPlainString(N.t.dTNNgo, { name: a.username }),
-                confirmText: N.intl.string(N.t.BddRzc)
-            });
-        else if (l)
-            p.Z.show({
-                title: N.intl.string(N.t.XyWoKS),
-                body: N.intl.formatToPlainString(N.t['8t8doK'], { name: a.username }),
-                confirmText: N.intl.string(N.t.BddRzc)
-            });
-        else if (!P) {
-            let e = x.Z.getChannel(o);
-            null != e && (m.Z.trackJump(o, r, t), (0, b.uL)(I.Z5c.CHANNEL(e.getGuildId(), o, r))), null == d || d(n);
+    function P(e, n) {
+        if ((0, g.Z)(e) && !N) {
+            let { id: r, channel_id: i } = e,
+                l = x.Z.getChannel(i);
+            null != l && (p.Z.trackJump(i, r, t), (0, b.uL)(I.Z5c.CHANNEL(l.getGuildId(), i, r))), null == d || d(n);
         }
     }
     i.useEffect(() => {
         n(l);
     }, [l, n]);
-    let w = i.useMemo(
+    let A = i.useMemo(
         () =>
             null == a
                 ? void 0
@@ -364,18 +352,18 @@ function D(e) {
     return (0, r.jsx)(L, {
         className: j,
         scrollerClassName: O,
-        items: w,
+        items: A,
         loading: s,
         analyticsName: t,
-        renderEmptyState: g,
-        renderHeader: h,
+        renderEmptyState: h,
+        renderHeader: f,
         hasMore: o,
         loadMore: c,
         getProTip: v,
         renderItem: function (e) {
             let { message: t, channel: n } = e;
             if (null == t) return [];
-            if (null != y) return y(t, (e) => A(t, e));
+            if (null != y) return y(t, (e) => P(t, e));
             let i = [];
             return null == n
                 ? []
@@ -393,9 +381,9 @@ function D(e) {
                                   (0, r.jsx)(k, {
                                       channel: l,
                                       message: t,
-                                      jumping: P,
-                                      canCloseAllMessages: f,
-                                      jumpTo: A,
+                                      jumping: N,
+                                      canCloseAllMessages: m,
+                                      jumpTo: P,
                                       onCloseMessage: C
                                   })
                               ]

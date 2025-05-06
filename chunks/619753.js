@@ -5,17 +5,17 @@ var r = n(255367),
     o = n.n(l),
     a = n(837969),
     s = n(481060),
-    c = n(668781),
-    u = n(904245),
-    d = n(603263),
-    p = n(963374),
-    h = n(607070),
-    f = n(933557),
-    m = n(471445),
-    g = n(95398),
-    b = n(905405),
-    _ = n(255269),
-    y = n(937889),
+    c = n(904245),
+    u = n(603263),
+    d = n(963374),
+    p = n(607070),
+    h = n(933557),
+    f = n(471445),
+    m = n(95398),
+    g = n(905405),
+    b = n(255269),
+    _ = n(937889),
+    y = n(804063),
     C = n(703656),
     x = n(359110),
     v = n(695346),
@@ -77,43 +77,31 @@ function L(e, t) {
 }
 function D(e) {
     var t;
-    let { search: n, searchId: l, renderEmbeds: o, scrollTo: f, searchResults: m, blockCount: g, ignoreCount: b, onChangePage: _, onClick: y } = e,
+    let { search: n, searchId: l, renderEmbeds: o, scrollTo: h, searchResults: f, blockCount: m, ignoreCount: g, onChangePage: b, onClick: _ } = e,
         { offset: x, totalResults: v, isSearching: j, showBlockedResults: E } = n,
         I = i.useCallback(
             (e) => {
                 if (j) return;
                 let t = e - 1;
-                null == _ || _(t), d.oO(l, t);
+                null == b || b(t), u.oO(l, t);
             },
-            [l, j, _]
+            [l, j, b]
         ),
         Z = i.useCallback(
             (e, t) => {
-                if ((null == y || y(e, t), e.blocked))
-                    c.Z.show({
-                        title: R.intl.string(R.t['j7eA/v']),
-                        body: R.intl.formatToPlainString(R.t.dTNNgo, { name: e.author.username }),
-                        confirmText: R.intl.string(R.t.BddRzc)
-                    });
-                else if (e.ignored)
-                    c.Z.show({
-                        title: R.intl.string(R.t.XyWoKS),
-                        body: R.intl.formatToPlainString(R.t['8t8doK'], { name: e.author.username }),
-                        confirmText: R.intl.string(R.t.BddRzc)
-                    });
-                else {
+                if ((null == _ || _(e, t), (0, y.Z)(e))) {
                     let t = O.Z.getChannel(e.channel_id),
                         n = null != t ? t.getGuildId() : null;
-                    u.Z.trackJump(e.channel_id, e.id, 'Search Results', { search_id: S.Z.getAnalyticsId(l) }), (0, C.uL)(w.Z5c.CHANNEL(n, e.channel_id, e.id));
+                    c.Z.trackJump(e.channel_id, e.id, 'Search Results', { search_id: S.Z.getAnalyticsId(l) }), (0, C.uL)(w.Z5c.CHANNEL(n, e.channel_id, e.id));
                 }
             },
-            [y, l]
+            [_, l]
         ),
         N = i.useMemo(() => {
             let e;
-            if (null == m) return [];
+            if (null == f) return [];
             let t = 0;
-            return m.reduce((n, r) => {
+            return f.reduce((n, r) => {
                 let i = r.find((e) => e.isSearchHit);
                 if (!E && null != i && (P.Z.isBlockedForMessage(i) || P.Z.isIgnoredForMessage(i))) return n;
                 let l = O.Z.getChannel(r[0].channel_id);
@@ -131,22 +119,22 @@ function D(e) {
                     n
                 );
             }, []);
-        }, [m, E]),
+        }, [f, E]),
         A = i.useRef([]),
         D = N.reduce((e, t) => e + 1 + t.results.length, 0),
         U = i.useCallback(
             (e, t) => {
-                if (!h.Z.keyboardModeEnabled) return;
+                if (!p.Z.keyboardModeEnabled) return;
                 let n = A.current,
                     r = null != t ? n[t] : void 0;
                 if (null == r || null == r.hitRef.current) return;
                 let i = r.hitRef.current.getClientRects()[0];
-                f(i.top - 0.5 * i.height, !1, () => {
+                h(i.top - 0.5 * i.height, !1, () => {
                     var t;
                     null == (t = document.getElementById(e)) || t.focus();
                 });
             },
-            [f]
+            [h]
         ),
         G = i.useCallback((e) => {
             let t = A.current[e];
@@ -161,7 +149,7 @@ function D(e) {
         }),
         H = S.Z.getQuery(l),
         V = S.Z.getSearchType(l) === w.aib.FAVORITES,
-        z = (0, p.nC)(null != (t = null == H ? void 0 : H.content) ? t : ''),
+        z = (0, d.nC)(null != (t = null == H ? void 0 : H.content) ? t : ''),
         W = N.map((e) => {
             let { channel: t, results: n, startIndex: i } = e;
             return (0, r.jsx)(
@@ -173,7 +161,7 @@ function D(e) {
                     startIndex: i,
                     resultRefs: A,
                     totalResults: v,
-                    scrollTo: f,
+                    scrollTo: h,
                     searchId: l,
                     renderEmbeds: o,
                     offset: x,
@@ -189,7 +177,7 @@ function D(e) {
     i.useLayoutEffect(() => {
         var e;
         null == (e = Y.current) || e.focus();
-    }, [m]);
+    }, [f]);
     let q = (0, s.mFp)();
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -200,16 +188,16 @@ function D(e) {
                     children: W
                 })
             ),
-            g > 0 || b > 0
+            m > 0 || g > 0
                 ? (0, r.jsxs)(s.P3F, {
                       tag: 'div',
                       className: k.resultsBlocked,
-                      onClick: () => d.QY(l, !E),
+                      onClick: () => u.QY(l, !E),
                       children: [
                           (0, r.jsx)('div', { className: k.resultsBlockedImage }),
                           (0, r.jsx)('div', {
                               className: k.__invalid_resultsBlockedText,
-                              children: E ? (g > 0 && b > 0 ? R.intl.formatToPlainString(R.t['OvJs9/'], { count: g + b }) : g > 0 ? R.intl.formatToPlainString(R.t['n/1QFR'], { count: g }) : R.intl.formatToPlainString(R.t.ypezTE, { count: b })) : g > 0 && b > 0 ? R.intl.formatToPlainString(R.t.EJHRcX, { count: g + b }) : g > 0 ? R.intl.formatToPlainString(R.t.HTE8JC, { count: g }) : R.intl.formatToPlainString(R.t.e7f8r6, { count: b })
+                              children: E ? (m > 0 && g > 0 ? R.intl.formatToPlainString(R.t['OvJs9/'], { count: m + g }) : m > 0 ? R.intl.formatToPlainString(R.t['n/1QFR'], { count: m }) : R.intl.formatToPlainString(R.t.ypezTE, { count: g })) : m > 0 && g > 0 ? R.intl.formatToPlainString(R.t.EJHRcX, { count: m + g }) : m > 0 ? R.intl.formatToPlainString(R.t.HTE8JC, { count: m }) : R.intl.formatToPlainString(R.t.e7f8r6, { count: g })
                           })
                       ]
                   })
@@ -228,7 +216,7 @@ function D(e) {
 function U(e) {
     let { parentChannel: t, onSelectChannel: n } = e;
     if ((null == t ? void 0 : t.name) == null) return null;
-    let i = null != t ? (0, m.KS)(t) : null;
+    let i = null != t ? (0, f.KS)(t) : null;
     if (null == i) return null;
     let l = (0, r.jsxs)(r.Fragment, {
         children: [
@@ -260,21 +248,21 @@ function U(e) {
 }
 function B(e) {
     var t, n, l;
-    let { channel: o, results: a, highlighter: c, startIndex: u, resultRefs: d, totalResults: p, scrollTo: h, searchId: C, renderEmbeds: j, offset: S, jumpToMessage: T, listNavigator: R, favoriteSearch: D } = e,
+    let { channel: o, results: a, highlighter: c, startIndex: u, resultRefs: d, totalResults: p, scrollTo: y, searchId: C, renderEmbeds: j, offset: S, jumpToMessage: T, listNavigator: R, favoriteSearch: D } = e,
         B = v.cC.useSetting(),
-        G = (0, b.p)(),
+        G = (0, g.p)(),
         F = i.useCallback((e) => {
             if (e === Z.Z.getChannelId()) return;
             let t = O.Z.getChannel(e);
             null != t && I.Z.can(w.Plq.VIEW_CHANNEL, t) && (0, x.Kh)(t.id);
         }, []),
-        H = null != o ? (0, f.F6)(o, N.default, P.Z, !1) : '???',
+        H = null != o ? (0, h.F6)(o, N.default, P.Z, !1) : '???',
         V = D && null != o.guild_id ? (null == (t = E.Z.getGuild(o.guild_id)) ? void 0 : t.name) : null,
         z = (null == o ? void 0 : o.parent_id) != null ? O.Z.getChannel(o.parent_id) : null,
         W = null != (n = null == z ? void 0 : z.name) ? n : null,
-        Y = null != (l = (0, m.KS)(o)) ? l : s.VL1,
+        Y = null != (l = (0, f.KS)(o)) ? l : s.VL1,
         q = I.Z.can(w.Plq.MANAGE_MESSAGES, o),
-        { content: K } = (0, y.ZP)(
+        { content: K } = (0, _.ZP)(
             {
                 content: H,
                 embeds: []
@@ -291,8 +279,8 @@ function B(e) {
         null != e && null != e.offsetWidth && null != e.scrollWidth && J(e.offsetWidth < e.scrollWidth);
     }, []);
     let $ = [H, W, V].filter((e) => null != e).join(', ');
-    return (0, r.jsx)(g.aQ.Provider, {
-        value: (0, _.Z)(B, q),
+    return (0, r.jsx)(m.aQ.Provider, {
+        value: (0, b.Z)(B, q),
         children: (0, r.jsxs)('ul', {
             role: 'group',
             className: k.searchResultGroup,
@@ -337,7 +325,7 @@ function B(e) {
                                 d.current[n] = e;
                             },
                             totalResults: p,
-                            scrollTo: h,
+                            scrollTo: y,
                             searchId: C,
                             renderEmbeds: j,
                             searchOffset: S,
