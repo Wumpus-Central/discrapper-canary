@@ -882,7 +882,7 @@ function eP(e) {
         er = (0, E.cD)(s),
         [el, ea] = i.useState(er),
         [, es] = (0, _.AB)(null != (l = s.getGuildId()) ? l : void 0),
-        ec = (0, N.wL)(s),
+        ec = (0, N.HL)(s),
         ef = ee && (er || (el && es)) && !ec,
         ex = s.isMediaChannel();
     i.useEffect(() => {

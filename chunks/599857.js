@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => p,
-    _: () => u
+    Z: () => h,
+    _: () => d
 }),
     n(388685);
 var r = n(255367),
@@ -8,48 +8,53 @@ var r = n(255367),
     l = n(15155),
     a = n(780384),
     o = n(481060),
-    s = n(756148),
-    c = n(981631);
-function u(e) {
+    s = n(626135),
+    c = n(756148),
+    u = n(981631);
+function d(e) {
     let { sitekey: t, action: n, onVerify: l } = e,
-        [a, c] = i.useState(!1),
-        u = i.useCallback(
+        [a, d] = i.useState(!1),
+        p = i.useCallback((e) => {
+            s.default.track(u.rMx.RECAPTCHA_MODAL_EVENT, { recaptcha_event_name: e });
+        }, []),
+        h = i.useCallback(
             (e) => {
-                l(e);
+                p('handle-verify'), l(e);
             },
-            [l]
+            [l, p]
         ),
-        d = i.useCallback(() => {
+        f = i.useCallback(() => {
             var e, r, i;
             null == (i = window) ||
                 null == (r = i.grecaptcha) ||
                 null == (e = r.enterprise) ||
                 e.ready(async () => {
                     var e;
-                    u(await (null == (e = window) ? void 0 : e.grecaptcha).enterprise.execute(t, null != n ? { action: n } : void 0)), c(!1);
+                    p('recaptcha-ready'), h(await (null == (e = window) ? void 0 : e.grecaptcha).enterprise.execute(t, null != n ? { action: n } : void 0)), d(!1);
                 });
-        }, [t, n, u]),
-        p = i.useCallback(() => {
-            c(!0), s.I.loadRecaptchaScript(t, d);
-        }, [t, d]);
+        }, [t, n, h, p]),
+        g = i.useCallback(() => {
+            p('recaptcha-loading'), d(!0), c.I.loadRecaptchaScript(t, f, p);
+        }, [t, f, p]);
     return (
         i.useEffect(() => {
-            a || p();
-        }, [a, p]),
+            a || g();
+        }, [a, g]),
         i.useEffect(
             () => () => {
-                document.querySelectorAll('script[src*="recaptcha/enterprise.js"],.grecaptcha-badge').forEach((e) => {
-                    var t;
-                    return null == (t = e.parentNode) ? void 0 : t.removeChild(e);
-                }),
+                p('recaptcha-unloading'),
+                    document.querySelectorAll('script[src*="recaptcha/enterprise.js"],.grecaptcha-badge').forEach((e) => {
+                        var t;
+                        return null == (t = e.parentNode) ? void 0 : t.removeChild(e);
+                    }),
                     null != window.grecaptcha && delete window.grecaptcha;
             },
-            []
+            [p]
         ),
         (0, r.jsx)(o.$jN, {})
     );
 }
-let d = (e) => {
+let p = (e) => {
     var t,
         n,
         { theme: i } = e,
@@ -99,7 +104,7 @@ let d = (e) => {
                     });
             }
             return e;
-        })({ sitekey: c.OL7 }, o)),
+        })({ sitekey: u.OL7 }, o)),
         (n = n = { theme: s }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -116,13 +121,13 @@ let d = (e) => {
         t)
     );
 };
-(d.Themes = {
+(p.Themes = {
     LIGHT: 'light',
     DARK: 'dark'
 }),
-    (d.Sizes = {
+    (p.Sizes = {
         COMPACT: 'compact',
         NORMAL: 'normal',
         INVISIBLE: 'invisible'
     });
-let p = d;
+let h = p;

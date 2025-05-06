@@ -426,8 +426,10 @@ let W = (e) => {
         }),
         null == o)
             ? null
-            : !n && (0, C.gT)(i)
-              ? (0, r.jsx)(_.q, {})
+            : (0, C.iZ)(i)
+              ? n
+                  ? null
+                  : (0, r.jsx)(_.q, {})
               : I && m
                 ? Z
                     ? t

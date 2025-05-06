@@ -389,6 +389,9 @@ class eg extends ep {
         var e;
         return null != (e = this.defaultTagSetting) ? e : l.z.MATCH_SOME;
     }
+    isModeratorReportChannel() {
+        return this.hasFlag(E.zZ.IS_MODERATOR_REPORT_CHANNEL);
+    }
     get accessPermissions() {
         return ef(this.type);
     }

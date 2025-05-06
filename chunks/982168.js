@@ -1,6 +1,8 @@
 n.d(t, {
+    P0: () => h,
     _5: () => f,
-    gT: () => _,
+    gT: () => p,
+    iZ: () => _,
     sP: () => d
 });
 var r = n(149765),
@@ -41,11 +43,11 @@ let f = function (e) {
     );
 };
 function _(e) {
-    var t;
-    if (null == e) return !1;
-    let n = null == (t = a.Z.getGuild(e.guild_id)) ? void 0 : t.getModeratorReportChannelId();
-    if (e.id === n) return !0;
-    if ((null == e ? void 0 : e.parent_id) == null) return !1;
-    let r = o.Z.getChannel(null == e ? void 0 : e.parent_id);
-    return null != r && r.id === n;
+    return null != e && e.isModeratorReportChannel() && e.isForumChannel();
+}
+function p(e) {
+    return null != e && e.isModeratorReportChannel() && e.isForumPost();
+}
+function h(e) {
+    return null != e && (_(e) || p(e));
 }

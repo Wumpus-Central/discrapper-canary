@@ -1,6 +1,6 @@
 t.d(n, {
     d: () => Z,
-    p: () => E
+    p: () => O
 }),
     t(49124);
 var r = t(255367),
@@ -26,7 +26,7 @@ var r = t(255367),
     x = t(900849),
     I = t(981631),
     k = t(388032);
-async function O(e, n, t) {
+async function E(e, n, t) {
     if (null == n) return;
     if (
         (a.Z.trackDiscordLinkClicked({
@@ -54,19 +54,19 @@ async function O(e, n, t) {
     if (null != r && null == t && (0, p.bw)(r.type) && (0, d.YO)(r)) return void c.default.selectVoiceChannel(r.id);
     (0, s.Z)(I.Z5c.CHANNEL(e, n, t));
 }
-function E(e) {
+function O(e) {
     let { type: n, value: t } = e;
     switch (n) {
         case 'channel':
             return (0, r.jsx)(Z, { channelId: t });
         case 'user':
-            return (0, r.jsx)(S, { id: t });
+            return (0, r.jsx)(T, { id: t });
         case 'role':
-            return (0, r.jsx)(A, { id: t });
+            return (0, r.jsx)(S, { id: t });
         case 'everyone':
-            return (0, r.jsx)(T, { roleName: '@everyone' });
+            return (0, r.jsx)(A, { roleName: '@everyone' });
         case 'here':
-            return (0, r.jsx)(T, { roleName: '@here' });
+            return (0, r.jsx)(A, { roleName: '@here' });
         default:
             return JSON.stringify(t);
     }
@@ -110,16 +110,16 @@ function Z(e) {
                       iconType: 'locked',
                       children: k.intl.string(k.t['/YzI6+'])
                   }),
-        E = null;
+        O = null;
     return (
         null != a &&
-            (E = (0, r.jsxs)(r.Fragment, {
+            (O = (0, r.jsxs)(r.Fragment, {
                 children: [(0, r.jsx)(b.Z, {}), (0, r.jsx)(f.Z, { iconType: m ? 'post' : 'message' })]
             })),
         (0, r.jsxs)(g.Z, {
             role: 'link',
             onClick: (e) => {
-                null == e || e.stopPropagation(), O(c, n, a), (0, i.pTH)();
+                null == e || e.stopPropagation(), E(c, n, a), (0, i.pTH)();
             },
             onContextMenu: (e) => {
                 let l = v.Z.getChannel(n);
@@ -179,7 +179,7 @@ function Z(e) {
                 });
             },
             className: 'channelMention',
-            children: [I, E]
+            children: [I, O]
         })
     );
 }
@@ -191,7 +191,7 @@ function P(e) {
         children: [null == i ? void 0 : i.name, null != i ? (0, r.jsx)(b.Z, {}) : null, t]
     });
 }
-function S(e) {
+function T(e) {
     let { id: n } = e,
         t = (0, y.d)();
     return (0, r.jsx)(m.Z, {
@@ -203,7 +203,7 @@ function S(e) {
         content: null
     });
 }
-function A(e) {
+function S(e) {
     let { id: n } = e,
         t = (0, y.d)(),
         i = null == t ? void 0 : t.guildId,
@@ -222,7 +222,7 @@ function A(e) {
         children: '@'.concat(u)
     });
 }
-function T(e) {
+function A(e) {
     let { roleName: n } = e,
         t = (0, y.d)();
     return (0, r.jsx)(h.Z, {

@@ -1,6 +1,6 @@
 t.a(e, async function (e, r) {
     try {
-        t.r(n), t.d(n, { default: () => m });
+        t.r(n), t.d(n, { default: () => y });
         var l = t(255367);
         t(73800);
         var i = t(946884),
@@ -14,9 +14,10 @@ t.a(e, async function (e, r) {
             _ = t(249597),
             g = t(312539),
             b = t(325980),
-            h = e([i]);
-        i = (h.then ? (await h)() : h)[0];
-        let y = {
+            h = t(472433),
+            m = e([i]);
+        i = (m.then ? (await m)() : m)[0];
+        let p = {
             text: u.xv,
             paragraph: u.nv,
             empty: u.HY,
@@ -33,13 +34,14 @@ t.a(e, async function (e, r) {
             strikethrough: d.nY,
             mention: g.p,
             heading: s.X,
-            small: s.x
+            small: s.x,
+            spoiler: h.o
         };
-        function m(e) {
+        function y(e) {
             let { content: n } = e;
             return (0, l.jsx)(i.ZP, {
                 content: n,
-                renderers: y
+                renderers: p
             });
         }
         r();

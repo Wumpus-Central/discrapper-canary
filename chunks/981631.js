@@ -1801,6 +1801,7 @@ var N =
     (r.REPORT_APPLICATION_CLICKED = 'report_application_clicked'),
     (r.CAPTCHA_SERVED = 'captcha_served'),
     (r.CAPTCHA_EVENT = 'captcha_event'),
+    (r.RECAPTCHA_MODAL_EVENT = 'recaptcha_modal_event'),
     (r.CHANNEL_PERMISSIONS_PAGE_VIEWED = 'channel_permissions_page_viewed'),
     (r.DOMAIN_MIGRATED = 'domain_migrated'),
     (r.MESSAGE_EDIT_UP_ARROW = 'message_edit_up_arrow'),

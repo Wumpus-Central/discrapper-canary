@@ -1,15 +1,15 @@
-n.d(t, { w: () => r });
+n.d(t, { w: () => a });
 var i = n(255367);
 n(73800);
-var l = n(481060);
-function r(e, t) {
-    return (0, l.ZDy)(async () => {
-        let { default: l } = await Promise.all([n.e('42743'), n.e('30557')]).then(n.bind(n, 207540));
+var r = n(481060);
+function a(e, t) {
+    return (0, r.ZDy)(async () => {
+        let { default: r } = await Promise.all([n.e('42743'), n.e('30557')]).then(n.bind(n, 207540));
         return (n) => {
-            var r, a;
+            var a, l;
             return (0, i.jsx)(
-                l,
-                ((r = (function (e) {
+                r,
+                ((a = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             i = Object.keys(n);
@@ -34,7 +34,7 @@ function r(e, t) {
                     }
                     return e;
                 })({}, n)),
-                (a = a =
+                (l = l =
                     {
                         onConfirm: () => {
                             n.onClose(), t();
@@ -42,7 +42,7 @@ function r(e, t) {
                         channel: e
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
+                    ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(l))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -50,10 +50,10 @@ function r(e, t) {
                               n.push.apply(n, i);
                           }
                           return n;
-                      })(Object(a)).forEach(function (e) {
-                          Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
+                      })(Object(l)).forEach(function (e) {
+                          Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(l, e));
                       }),
-                r)
+                a)
             );
         };
     });

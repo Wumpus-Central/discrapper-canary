@@ -5,23 +5,28 @@ var r = n(544891),
     a = n(881052),
     s = n(981631),
     l = n(388032);
-async function c(e) {
+function c(e) {
     let { userId: t, applicationId: n, onSuccess: i, type: c } = e;
-    try {
-        await r.tn.put({
+    return r.tn
+        .put({
             url: s.ANM.USER_GAME_RELATIONSHIP(t, n),
             body: { type: c },
             oldFormErrors: !0,
             rejectWithError: !1
-        }),
+        })
+        .then(() => {
             i();
-    } catch (t) {
-        let e = new a.Hx(t);
-        o.Z.show({
-            title: l.intl.string(l.t['328j/P']),
-            body: e.getAnyErrorMessage()
+        })
+        .catch((e) => {
+            let t = new a.Hx(e);
+            return (
+                o.Z.show({
+                    title: l.intl.string(l.t['328j/P']),
+                    body: t.getAnyErrorMessage()
+                }),
+                Promise.reject(e)
+            );
         });
-    }
 }
 async function u(e) {
     let { userId: t, applicationId: n, onSuccess: i } = e;
@@ -51,9 +56,9 @@ let d = {
             }
         });
     },
-    acceptGameFriendRequest: async function (e) {
+    acceptGameFriendRequest: function (e) {
         let { userId: t, applicationId: n } = e;
-        await c({
+        return c({
             userId: t,
             applicationId: n,
             type: s.OGo.FRIEND,

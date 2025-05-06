@@ -100,7 +100,7 @@ function el(e, t) {
 let ea = p.Ie.CREATE_FORUM_POST;
 function es(e) {
     let { parentChannel: t, isSearchLoading: n, onChange: l, canCreatePost: s, inputRef: o } = e,
-        d = !(0, N.wL)(t) && s,
+        d = !(0, N.HL)(t) && s,
         {
             textAreaState: u,
             formOpen: m,
@@ -823,7 +823,7 @@ let ef = i.memo(function (e) {
 });
 function ex(e) {
     let { parentChannel: t, canCreatePost: n, disabled: i, disableIfInvalid: l = !1 } = e,
-        a = (0, N.wL)(t),
+        a = (0, N.HL)(t),
         {
             submitting: s,
             textAreaState: o,
