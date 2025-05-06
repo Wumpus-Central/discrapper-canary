@@ -1,6 +1,6 @@
 n.d(t, {
     V9: () => x,
-    ek: () => _
+    ek: () => b
 }),
     n(388685);
 var i = n(255367),
@@ -14,83 +14,82 @@ var i = n(255367),
     u = n(317257),
     m = n(120786),
     g = n(970815),
-    p = n(82856),
-    h = n(981631),
-    f = n(388032),
-    b = n(313008);
-let _ = {
-        START: b.alignLeft,
-        END: b.alignRight
+    p = n(981631),
+    h = n(388032),
+    f = n(313008);
+let b = {
+        START: f.alignLeft,
+        END: f.alignRight
+    },
+    _ = (e) => {
+        if (null != e) return g.th[e];
     },
     x = (e) => {
-        let { showNotificationBadge: t, ctaText: n, ctaOnClick: s, analyticsPage: x, isCoachmarkEnabled: E = !0, linkText: C = f.intl.string(f.t.XRdyj4), cardAlignment: j = _.START, className: O } = e,
-            { balance: S } = (0, d.A)(),
-            [v, T] = r.useState(u.b.DEFAULT),
-            [I, N] = r.useState(!1),
-            [y, A] = r.useState(!1),
-            P = r.useRef(null),
-            { shouldOpen: R } = (0, p.lJ)({ backgroundElementRef: P }),
+        let { showNotificationBadge: t, ctaText: n, ctaOnClick: s, anchorPillType: x, analyticsPage: E, isCoachmarkEnabled: C = !0, linkText: j = h.intl.string(h.t.XRdyj4), cardAlignment: O = b.START, className: S } = e,
+            { balance: v } = (0, d.A)(),
+            [T, I] = r.useState(u.b.DEFAULT),
+            [N, y] = r.useState(!1),
+            [A, P] = r.useState(!1),
+            R = r.useRef(null),
             { shouldOpen: D } = (0, c.Mm)({
-                backgroundElementRef: P,
-                isCoachmarkEnabled: E,
-                onCloseCallback: h.dG4,
-                onClickPill: h.dG4
-            }),
-            Z = D || R;
+                backgroundElementRef: R,
+                isCoachmarkEnabled: C,
+                onCloseCallback: p.dG4,
+                onClickPill: p.dG4
+            });
         r.useEffect(() => {
-            if (!E) return;
-            let e = (0, c.wH)();
-            (0, p.Pe)() || e || Z ? (A(!0), N(!1)) : A(!1);
-        }, [E, Z]);
-        let w = r.useCallback(() => {
-                let e = !I;
+            C && ((0, c.wH)() || D ? (P(!0), y(!1)) : P(!1));
+        }, [C, D]);
+        let Z = r.useCallback(() => {
+                let e = !N;
                 e &&
-                    null != x &&
+                    null != E &&
                     (0, o.Y)({
-                        pageType: x,
-                        sectionType: h.jXE.ORBS_BALANCE_MENU,
-                        ctaObject: h.qAy.OPEN_ORB_BALANCE_MENU_FROM_PILL
+                        pageType: E,
+                        sectionType: p.jXE.ORBS_BALANCE_MENU,
+                        ctaObject: p.qAy.OPEN_ORB_BALANCE_MENU_FROM_PILL
                     }),
-                    T(e ? u.b.SELECTED : u.b.DEFAULT),
-                    N(e);
-            }, [I, x]),
-            k = r.useCallback(() => {
-                I && w();
-            }, [I, w]),
-            L = (0, a.Z)(null, k);
+                    I(e ? u.b.SELECTED : u.b.DEFAULT),
+                    y(e);
+            }, [N, E]),
+            w = r.useCallback(() => {
+                N && Z();
+            }, [N, Z]),
+            k = (0, a.Z)(null, w);
         return (0, i.jsxs)('div', {
-            className: l()(b.container, O, {
-                [b.hidden]: y,
-                [b.visible]: !y
+            className: l()(f.container, S, {
+                [f.hidden]: A,
+                [f.visible]: !A
             }),
             children: [
                 (0, i.jsx)(g.A4, {
-                    ref: P,
-                    balance: S,
-                    balanceWidgetMode: Z ? u.b.DEFAULT : v,
+                    id: _(x),
+                    ref: R,
+                    balance: v,
+                    balanceWidgetMode: D ? u.b.DEFAULT : T,
                     onMouseDown: (e) => {
                         e.stopPropagation();
                     },
-                    onClick: w,
+                    onClick: Z,
                     showNotificationBadge: t
                 }),
-                I &&
+                N &&
                     (0, i.jsx)('div', {
-                        className: l()(b.cardContainer, j, {
-                            [b.hidden]: y,
-                            [b.visible]: !y
+                        className: l()(f.cardContainer, O, {
+                            [f.hidden]: A,
+                            [f.visible]: !A
                         }),
-                        ref: L,
+                        ref: k,
                         children: (0, i.jsx)(m.L, {
-                            analyticsPage: x,
+                            analyticsPage: E,
                             ctaText: n,
                             ctaOnClick: () => {
-                                w(), s();
+                                Z(), s();
                             },
-                            linkText: C
+                            linkText: j
                         })
                     })
             ]
         });
     };
-x.CardAlignment = _;
+x.CardAlignment = b;

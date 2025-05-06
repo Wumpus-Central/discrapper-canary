@@ -80,7 +80,7 @@ let m = {
             { analyticsLocations: j } = (0, o.ZP)(),
             y = l.useRef(null),
             S = (0, i.Z)(y),
-            k = (0, d.hv)('CollectiblesShopGiftButton');
+            P = (0, d.hv)('CollectiblesShopGiftButton');
         return (0, u.x6)(t)
             ? null
             : (0, r.jsx)(a.ua7, {
@@ -135,7 +135,7 @@ let m = {
                                               giftingOrigin: p.Wt.SHOP_PAGE,
                                               analyticsLocations: j,
                                               returnRef: _,
-                                              variantsReturnStyle: k,
+                                              variantsReturnStyle: P,
                                               onClose:
                                                   null != C
                                                       ? (e) => {

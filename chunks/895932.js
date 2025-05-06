@@ -64,7 +64,7 @@ function m(e) {
                         })
                     ]
                 }),
-                t.isMediaChannel()
+                t.isMediaChannel() || t.isModeratorReportChannel()
                     ? null
                     : (0, r.jsxs)(s.kSQ, {
                           label: d.intl.string(d.t.mFMDSk),

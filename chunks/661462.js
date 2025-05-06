@@ -37,7 +37,7 @@ function p(e) {
     var n, t, a;
     let { user: l, currentUser: s, displayProfile: d, guildId: p, channelId: m, items: b, initialSection: _, initialSubsection: y, onClose: h } = e,
         { trackUserProfileAction: j } = (0, i.KZ)(),
-        [{ section: x, subsection: g, text: I }, O] = r.useState(
+        [{ section: x, subsection: g, text: I }, v] = r.useState(
             ((t = (function (e) {
                 for (var n = 1; n < arguments.length; n++) {
                     var t = null != arguments[n] ? arguments[n] : {},
@@ -99,7 +99,7 @@ function p(e) {
                         action: 'PRESS_SECTION',
                         section: e
                     }),
-                        O((n) => {
+                        v((n) => {
                             var t;
                             return null != (t = b.find((n) => n.section === e)) ? t : n;
                         });

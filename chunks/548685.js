@@ -23,9 +23,9 @@ var l = n(120356),
 let j = (e) => {
     let { isLoading: t, sortedSkuIds: n, handleTransition: l, numVisibleItems: j, tab: y } = e,
         S = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
-        k = d.ZP.canUseCollectibles(S),
-        P = (0, f.s)('useShopHomeSorting') && y === C.AW.HOME,
-        { sortType: E, setSortType: w, sortedItems: B, sortOptions: T, shuffleProducts: I, showRecommendationOption: L } = (0, g.N)(n, k),
+        P = d.ZP.canUseCollectibles(S),
+        E = (0, f.s)('useShopHomeSorting') && y === C.AW.HOME,
+        { sortType: k, setSortType: w, sortedItems: B, sortOptions: T, shuffleProducts: I, showRecommendationOption: L } = (0, g.N)(n, P),
         N = (0, _.St)(B);
     return null == S
         ? null
@@ -103,7 +103,7 @@ let j = (e) => {
                           (0, r.jsxs)('div', {
                               className: x.headerRight,
                               children: [
-                                  P &&
+                                  E &&
                                       (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)(o.Text, {
@@ -115,13 +115,13 @@ let j = (e) => {
                                                   options: T,
                                                   select: (e) => w(e),
                                                   className: x.sortSelect,
-                                                  isSelected: (e) => e === E,
+                                                  isSelected: (e) => e === k,
                                                   serialize: (e) => e
                                               })
                                           ]
                                       }),
                                   y === C.AW.HOME &&
-                                      (P
+                                      (E
                                           ? (0, r.jsx)(o.zxk, {
                                                 color: o.Ttl.PRIMARY,
                                                 look: o.iLD.FILLED,

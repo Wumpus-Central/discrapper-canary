@@ -22,9 +22,9 @@ var r = n(255367),
     j = n(619899),
     y = n(302800),
     S = n(215023),
-    k = n(474936),
-    P = n(484920);
-function E(e) {
+    P = n(474936),
+    E = n(484920);
+function k(e) {
     let { products: t, handleShopCardMount: n, header: l, category: a, isPremiumUser: i, isGiftEasterEggEnabled: c } = e,
         u = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
         d = (0, j.St)(t);
@@ -34,14 +34,14 @@ function E(e) {
               children: [
                   null != l
                       ? (0, r.jsx)(s.Text, {
-                            className: P.itemTypeTitle,
+                            className: E.itemTypeTitle,
                             color: 'header-secondary',
                             variant: 'text-sm/bold',
                             children: l
                         })
                       : (0, r.jsx)(s.LZC, { size: 24 }),
                   (0, r.jsx)('div', {
-                      className: P.cardsContainer,
+                      className: E.cardsContainer,
                       children: d.map((e, t) =>
                           (0, r.jsx)(
                               p.k0,
@@ -100,7 +100,7 @@ function w(e) {
             [c, n]
         );
     return (0, r.jsx)(
-        E,
+        k,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -147,17 +147,17 @@ function B(e) {
             f ? 0.13 : 0.15
         );
     return (0, r.jsxs)('div', {
-        className: P.categoryWrapper,
+        className: E.categoryWrapper,
         ref: O,
         children: [
             p &&
                 (0, r.jsx)(s.P3F, {
-                    className: i()(P.hiddenWumpus, { [P.hiddenWumpusEnabled]: o }),
+                    className: i()(E.hiddenWumpus, { [E.hiddenWumpusEnabled]: o }),
                     onClick: () => b(!0),
                     style: { left: ''.concat(g.current, '%') },
                     children: (0, r.jsx)(d.Z, {
                         idleAnimationState: u.SR.IDLE,
-                        giftStyle: k.Cj.BOX
+                        giftStyle: P.Cj.BOX
                     })
                 }),
             (0, r.jsx)(C.Z, {
@@ -212,7 +212,7 @@ function T(e) {
     n)
         ? (0, r.jsx)(v.Z, {})
         : (0, r.jsx)('div', {
-              className: P.categories,
+              className: E.categories,
               children: a
                   .filter((e) => null == e.unpublishedAt || e.unpublishedAt > new Date())
                   .filter((e) => {

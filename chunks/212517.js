@@ -18,7 +18,7 @@ function l(e, t, n) {
 function c(e) {
     let t = i.cP.getSetting(),
         n = i.Ou.getSetting();
-    return t ? (e |= s.xjy.PARTY_PRIVACY_FRIENDS) : (e &= ~s.xjy.PARTY_PRIVACY_VOICE_CHANNEL), n ? (e |= s.xjy.PARTY_PRIVACY_VOICE_CHANNEL) : (e &= ~s.xjy.PARTY_PRIVACY_VOICE_CHANNEL), e;
+    return t ? (e |= s.xjy.PARTY_PRIVACY_FRIENDS) : (e &= ~s.xjy.PARTY_PRIVACY_FRIENDS), n ? (e |= s.xjy.PARTY_PRIVACY_VOICE_CHANNEL) : (e &= ~s.xjy.PARTY_PRIVACY_VOICE_CHANNEL), e;
 }
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],

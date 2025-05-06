@@ -36,9 +36,9 @@ let j = (e) => {
             });
         }, [u]);
         let {
-                isFetchingShopHome: k,
-                fetchShopHomeError: P,
-                shopBlocks: E,
+                isFetchingShopHome: P,
+                fetchShopHomeError: E,
+                shopBlocks: k,
                 refreshShopHome: w
             } = (0, d.E)(
                 u,
@@ -59,9 +59,9 @@ let j = (e) => {
             }, [w]);
         if (
             (l.useEffect(() => {
-                null != P ||
-                    k ||
-                    0 === E.length ||
+                null != E ||
+                    P ||
+                    0 === k.length ||
                     (0, b.n)({
                         sessionId: S,
                         checkpoint: b.a.SHOP_RENDERED,
@@ -70,30 +70,30 @@ let j = (e) => {
                         unpublishedCategoriesShown: j,
                         cacheDisabled: O
                     });
-            }, [P, k, E.length, j, O, S, u, v]),
-            null != P)
+            }, [E, P, k.length, j, O, S, u, v]),
+            null != E)
         )
             return (0, r.jsx)(p.Z, {
                 onRetry: B,
                 errorOrigin: p.i.SHOP_PAGE,
-                errorMessage: P.message
+                errorMessage: E.message
             });
-        if (k || 0 === E.length)
+        if (P || 0 === k.length)
             return (0, r.jsxs)('div', {
                 className: x.loadingContainer,
                 children: [
                     (0, r.jsx)(m.Z, {
-                        isLoading: k,
+                        isLoading: P,
                         handleTransition: n,
                         tab: u
                     }),
                     (0, r.jsx)(g.Z, {
-                        isLoading: k,
+                        isLoading: P,
                         handleTransition: n,
                         categories: []
                     }),
                     (0, r.jsx)(h.Z, {
-                        isLoading: k,
+                        isLoading: P,
                         handleTransition: n,
                         numVisibleItems: a,
                         tab: u
@@ -108,7 +108,7 @@ let j = (e) => {
                     l = (0, r.jsx)(
                         m.Z,
                         {
-                            isLoading: k,
+                            isLoading: P,
                             handleTransition: n,
                             heroBlock: e,
                             tab: u
@@ -120,7 +120,7 @@ let j = (e) => {
                     l = (0, r.jsx)(
                         g.Z,
                         {
-                            isLoading: k,
+                            isLoading: P,
                             handleTransition: n,
                             featuredBlockRecord: e
                         },
@@ -132,7 +132,7 @@ let j = (e) => {
                     l = (0, r.jsx)(
                         h.Z,
                         {
-                            isLoading: k || s,
+                            isLoading: P || s,
                             handleTransition: n,
                             numVisibleItems: a,
                             sortedSkuIds: c,
@@ -175,7 +175,7 @@ let j = (e) => {
                 t
             );
         };
-        return (0, r.jsx)(r.Fragment, { children: E.map((e, t) => T(e, t)) });
+        return (0, r.jsx)(r.Fragment, { children: k.map((e, t) => T(e, t)) });
     },
     y = (e) => {
         let { isFullScreen: t, handleTransition: n, numVisibleItems: l, tab: a, isFetchingCategories: o } = e,

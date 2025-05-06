@@ -4,7 +4,7 @@ n(73800);
 var i = n(481060),
     l = n(215023);
 let o = (e) => {
-    let { product: t, analyticsLocations: o, overrideTitle: s, overrideDescription: a, shouldShowPromotionalExperience: c, onCloseCallback: u, itemConsumed: d, purchaseType: h = l.o8.FIAT } = e;
+    let { product: t, analyticsLocations: o, overrideTitle: s, overrideDescription: a, shouldShowPromotionalExperience: c, shouldCheckoutWithOrbs: u, onCloseCallback: d, itemConsumed: h, purchaseType: p = l.o8.FIAT } = e;
     (0, i.ZDy)(
         async () => {
             let { default: e } = await Promise.resolve().then(n.bind(n, 331042));
@@ -42,13 +42,14 @@ let o = (e) => {
                             overrideTitle: s,
                             overrideDescription: a,
                             shouldShowPromotionalExperience: c,
-                            itemConsumed: d,
-                            purchaseType: h
+                            shouldCheckoutWithOrbs: u,
+                            itemConsumed: h,
+                            purchaseType: p
                         },
                         n
                     )
                 );
         },
-        { onCloseCallback: u }
+        { onCloseCallback: d }
     );
 };

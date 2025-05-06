@@ -1,10 +1,8 @@
 n.d(t, {
-    S6: () => c,
     ZO: () => s,
     df: () => l,
-    hF: () => d,
-    j2: () => f,
-    vp: () => u
+    hF: () => c,
+    j2: () => u
 });
 var r = n(544891),
     i = n(570140),
@@ -72,17 +70,7 @@ async function l(e) {
             null == c || c(e);
     }
 }
-function c() {
-    return i.Z.dispatch({ type: 'VIRTUAL_CURRENCY_BALANCE_PILL_OVERLAY_OPEN' });
-}
-function u() {
-    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return i.Z.dispatch({
-        type: 'VIRTUAL_CURRENCY_BALANCE_PILL_OVERLAY_CLOSE',
-        hideImmediately: e
-    });
-}
-function d(e) {
+function c(e) {
     let { earnedOrbsQuantity: t, dedupeKey: n } = e;
     return i.Z.dispatch({
         type: 'VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK_OPEN',
@@ -90,6 +78,6 @@ function d(e) {
         dedupeKey: n
     });
 }
-function f() {
+function u() {
     return i.Z.dispatch({ type: 'VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK_CLOSE' });
 }

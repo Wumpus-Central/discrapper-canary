@@ -264,19 +264,28 @@ let N = {
                         regular_price: null != (t = l.orbPriceAmount) ? t : void 0,
                         currency: j.pKx.DISCORD_ORB
                     };
-            }, [l]);
-        return (0, i.jsx)(g.PaymentModal, {
-            applicationId: (0, b.N)(t),
-            transitionState: s.transitionState,
-            analyticsDataOverride: o,
-            onClose: (e) => {
-                e || (a(j.rMx.PAYMENT_FLOW_CANCELED), (0, x.vp)()), s.onClose();
-            },
-            hideShadow: !0,
-            skuId: t,
-            renderHeader: D,
-            initialPlanId: null,
-            analyticsLocations: n
+            }, [l]),
+            c = (0, r.useCallback)(
+                async (e) => {
+                    e || a(j.rMx.PAYMENT_FLOW_CANCELED), await s.onClose();
+                },
+                [s, a]
+            );
+        return (0, i.jsxs)(i.Fragment, {
+            children: [
+                (0, i.jsx)(x.o, { onClose: async () => await c(!1) }),
+                (0, i.jsx)(g.PaymentModal, {
+                    applicationId: (0, b.N)(t),
+                    transitionState: s.transitionState,
+                    analyticsDataOverride: o,
+                    onClose: c,
+                    hideShadow: !0,
+                    skuId: t,
+                    renderHeader: D,
+                    initialPlanId: null,
+                    analyticsLocations: n
+                })
+            ]
         });
     },
     w = (e) => {

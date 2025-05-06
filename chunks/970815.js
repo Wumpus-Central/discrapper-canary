@@ -1,6 +1,7 @@
 n.d(t, {
-    A4: () => g,
-    b6: () => l.b
+    A4: () => E,
+    b6: () => l.b,
+    th: () => m
 }),
     n(388685);
 var r = n(255367),
@@ -48,68 +49,72 @@ let p = () =>
             alt: ''
         }),
     h = 'balance-widget-pill',
-    m = (e, t) => (e === l.b.SELECTED ? d.selected : t ? d.highlighted : d.default),
-    g = (0, i.forwardRef)(function (e, t) {
-        let { balance: n, balanceWidgetMode: o = l.b.DEFAULT, showNotificationBadge: f, onClick: g, onMouseDown: E, className: b } = e,
-            [y, O] = (0, i.useState)(!1),
-            v = (0, i.useMemo)(() => m(o, y), [o, y]),
-            [I, S] = (0, i.useState)(!1),
-            [T, A] = (0, i.useState)(!1),
-            [N, C] = (0, i.useState)(0.9 * u.D2),
-            P = null === n;
+    m = {
+        SHOP: 'collectibles-shop-'.concat(h),
+        SHOP_FULLSCREEN: 'collectibles-'.concat(h)
+    },
+    g = (e, t) => (e === l.b.SELECTED ? d.selected : t ? d.highlighted : d.default),
+    E = (0, i.forwardRef)(function (e, t) {
+        let { id: n, balance: o, balanceWidgetMode: f = l.b.DEFAULT, showNotificationBadge: m, onClick: E, onMouseDown: b, className: y } = e,
+            [O, v] = (0, i.useState)(!1),
+            I = (0, i.useMemo)(() => g(f, O), [f, O]),
+            [S, T] = (0, i.useState)(!1),
+            [A, N] = (0, i.useState)(!1),
+            [C, P] = (0, i.useState)(0.9 * u.D2),
+            R = null === o;
         (0, i.useEffect)(() => {
-            P &&
-                !I &&
-                (S(!0),
+            R &&
+                !S &&
+                (T(!0),
                 setTimeout(() => {
-                    A(!0);
+                    N(!0);
                 }, 500));
-        }, [P, S, I]),
+        }, [R, T, S]),
             (0, i.useEffect)(() => {
-                T && !P && S(!1);
-            }, [P, T]);
-        let R = P || I,
-            w = I ? null : n,
-            [D, L] = (0, i.useState)(null),
-            x = (0, i.useRef)(null),
-            k = (0, i.useCallback)(() => {
-                (x.current = null), L(null);
+                A && !R && T(!1);
+            }, [R, A]);
+        let w = R || S,
+            D = S ? null : o,
+            [L, x] = (0, i.useState)(null),
+            k = (0, i.useRef)(null),
+            M = (0, i.useCallback)(() => {
+                (k.current = null), x(null);
             }, []),
-            M = (0, i.useCallback)(
+            j = (0, i.useCallback)(
                 (e) => {
-                    let t = D === x.current;
-                    e > 0 && ('earn' !== D || !t) ? L('earn') : e < 0 && ('spend' !== D || !t) && L('spend');
+                    let t = L === k.current;
+                    e > 0 && ('earn' !== L || !t) ? x('earn') : e < 0 && ('spend' !== L || !t) && x('spend');
                 },
-                [L, D]
+                [x, L]
             ),
-            j = {
-                currentAnimationType: D,
-                animationTypeRef: x,
-                onSetAnimationDurationMS: C
+            U = {
+                currentAnimationType: L,
+                animationTypeRef: k,
+                onSetAnimationDurationMS: P
             };
         return (0, r.jsx)(s.P3F, {
-            onClick: R ? void 0 : g,
+            onClick: w ? void 0 : E,
             className: d.clickable,
             children: (0, r.jsxs)('span', {
-                onMouseDown: E,
-                onMouseEnter: () => O(!0),
-                onMouseLeave: () => O(!1),
-                id: h,
+                onMouseDown: b,
+                onMouseEnter: () => v(!0),
+                onMouseLeave: () => v(!1),
+                id: null != n ? n : h,
                 ref: t,
-                className: a()(d.container, v, b, { [d.containerLoading]: R }),
+                className: a()(d.container, I, y, { [d.containerLoading]: w }),
                 children: [
                     (0, r.jsx)('div', {
-                        className: a()(d.orbsLottieContainer, R ? d.orbIconloading : void 0),
-                        children: (0, r.jsx)(u.ZP, _({}, j))
+                        className: a()(d.orbsLottieContainer, w ? d.orbIconloading : void 0),
+                        children: (0, r.jsx)(u.ZP, _({}, U))
                     }),
                     (0, r.jsx)(c.Z, {
-                        value: w,
-                        onValueChange: M,
-                        onValueReached: k,
-                        targetTotalCounterTime: N,
-                        className: R ? d.counterLoading : void 0
+                        value: D,
+                        onValueChange: j,
+                        onValueReached: M,
+                        targetTotalCounterTime: C,
+                        className: w ? d.counterLoading : void 0
                     }),
-                    f && (0, r.jsx)(p, {})
+                    m && (0, r.jsx)(p, {})
                 ]
             })
         });

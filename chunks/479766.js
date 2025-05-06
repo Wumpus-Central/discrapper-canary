@@ -16,12 +16,6 @@ function a(e, t, n) {
     );
 }
 class s extends (r = i.ZP.Store) {
-    get balanceWidgetPillIsOverlaid() {
-        return this._balanceWidgetPillIsOverlaid;
-    }
-    get hidePillOverlayImmediately() {
-        return this._hidePillOverlayImmediately;
-    }
     get earnedOrbsCoachmark() {
         return {
             shouldOpen: this._earnedOrbsCoachmarkOpen,
@@ -83,17 +77,13 @@ class s extends (r = i.ZP.Store) {
         let { error: t } = e;
         (this._entitlements = null), (this._redeemVirtualCurrencyError = t), (this._redeemingSkuId = null), (this._isRedeemingVirtualCurrency = !1);
     }
-    toggleBalanceWidgetPillOverlay(e) {
-        let { type: t, hideImmediately: n } = e;
-        'VIRTUAL_CURRENCY_BALANCE_PILL_OVERLAY_OPEN' === t ? ((this._balanceWidgetPillIsOverlaid = !0), (this._hidePillOverlayImmediately = !1)) : ((this._balanceWidgetPillIsOverlaid = !1), n && (this._hidePillOverlayImmediately = !0));
-    }
     handleOnboardingModalOpen(e) {
         let {} = e;
         this._onboardingModalOpenedPrior = !0;
     }
     handleOnboardingModalReset(e) {
         let {} = e;
-        (this._balanceWidgetPillIsOverlaid = !1), (this._onboardingModalOpenedPrior = !1), (this._earnedOrbsCoachmarkOpen = !1), (this._earnedOrbsCoachmarkDedupeKeys = []), (this._earnedOrbsCoachmarkQuantity = 0);
+        (this._onboardingModalOpenedPrior = !1), (this._earnedOrbsCoachmarkOpen = !1), (this._earnedOrbsCoachmarkDedupeKeys = []), (this._earnedOrbsCoachmarkQuantity = 0);
     }
     handleEarnedOrbsCoachmarkOpen(e) {
         let { earnedOrbsQuantity: t, dedupeKey: n } = e;
@@ -115,9 +105,7 @@ class s extends (r = i.ZP.Store) {
             VIRTUAL_CURRENCY_ONBOARDING_MODAL_OPEN: (e) => this.handleOnboardingModalOpen(e),
             VIRTUAL_CURRENCY_ONBOARDING_MODAL_RESET: (e) => this.handleOnboardingModalReset(e),
             VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK_OPEN: (e) => this.handleEarnedOrbsCoachmarkOpen(e),
-            VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK_CLOSE: (e) => this.handleEarnedOrbsCoachmarkClose(e),
-            VIRTUAL_CURRENCY_BALANCE_PILL_OVERLAY_OPEN: (e) => this.toggleBalanceWidgetPillOverlay(e),
-            VIRTUAL_CURRENCY_BALANCE_PILL_OVERLAY_CLOSE: (e) => this.toggleBalanceWidgetPillOverlay(e)
+            VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK_CLOSE: (e) => this.handleEarnedOrbsCoachmarkClose(e)
         }),
             a(this, '_entitlements', null),
             a(this, '_redeemingSkuId', null),
@@ -126,8 +114,6 @@ class s extends (r = i.ZP.Store) {
             a(this, '_balance', null),
             a(this, '_fetchBalanceError', null),
             a(this, '_isFetchingBalance', !1),
-            a(this, '_balanceWidgetPillIsOverlaid', !1),
-            a(this, '_hidePillOverlayImmediately', !1),
             a(this, '_onboardingModalOpenedPrior', !1),
             a(this, '_earnedOrbsCoachmarkOpen', !1),
             a(this, '_earnedOrbsCoachmarkDedupeKeys', []),

@@ -48,7 +48,7 @@ let h = (e, t) => {
                 ? S(v(l))
                 : _ === i.m.POPULAR && S(v(h));
     }, [_, t, v, O, l, h, S]);
-    let k = r.useCallback(() => {
+    let P = r.useCallback(() => {
         y(a().shuffle(j)), C(null);
     }, [j]);
     return {
@@ -79,7 +79,7 @@ let h = (e, t) => {
                 e
             );
         }, [m]),
-        shuffleProducts: k,
+        shuffleProducts: P,
         showRecommendationOption: m
     };
 };

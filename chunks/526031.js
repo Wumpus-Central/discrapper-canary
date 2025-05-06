@@ -1,35 +1,33 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => h });
 var i = n(255367),
-    r = n(704215),
-    s = n(481060),
-    l = n(100527),
-    a = n(906732),
-    o = n(765585),
-    c = n(429467),
-    d = n(921944),
-    u = n(388032),
-    m = n(385255);
-function g(e) {
+    r = n(197723),
+    s = n(704215),
+    l = n(481060),
+    a = n(100527),
+    o = n(906732),
+    c = n(765585),
+    d = n(429467),
+    u = n(921944),
+    m = n(388032),
+    g = n(385255);
+function p(e) {
     let { markAsDismissed: t } = e,
-        { analyticsLocations: g } = (0, a.ZP)(l.Z.CUSTOM_STATUS_TAGS_COACHMARK);
-    return (0, i.jsx)(o.Z, {
+        { analyticsLocations: p } = (0, o.ZP)(a.Z.CUSTOM_STATUS_TAGS_COACHMARK);
+    return (0, i.jsx)(c.Z, {
         inlineArt: !0,
-        dismissibleContent: r.z.CUSTOM_STATUS_PROMPTS_COACHMARK,
-        tryItText: (0, i.jsx)(s.Text, {
-            variant: 'text-xs/normal',
-            className: m.tryItText,
-            children: u.intl.string(u.t.RzWDqa)
-        }),
-        dismissText: (0, i.jsx)(s.Text, {
-            variant: 'text-xs/normal',
+        hideDismissButton: !0,
+        dismissibleContent: s.z.CUSTOM_STATUS_PROMPTS_COACHMARK,
+        tryItText: (0, i.jsx)(l.Text, {
+            variant: 'text-xs/semibold',
             color: 'always-white',
-            children: u.intl.string(u.t.TulDPj)
+            children: m.intl.string(m.t.RzWDqa)
         }),
+        tryItButtonColor: l.Ttl.BRAND,
         onTryFeature: () => {
-            t(d.L.TAKE_ACTION),
-                (0, s.ZDy)(async () => {
+            t(u.L.TAKE_ACTION),
+                (0, l.ZDy)(async () => {
                     let { default: e } = await n.e('31649').then(n.bind(n, 475613)),
-                        t = (0, c.Z)();
+                        t = (0, d.Z)();
                     return (n) => {
                         var r, s;
                         return (0, i.jsx)(
@@ -63,7 +61,7 @@ function g(e) {
                                 {
                                     showLabelSelectorNewTooltip: !0,
                                     location: 'CustomStatusTagsCoachmark',
-                                    sourceAnalyticsLocations: g,
+                                    sourceAnalyticsLocations: p,
                                     prompt: t
                                 }),
                             Object.getOwnPropertyDescriptors
@@ -83,33 +81,38 @@ function g(e) {
                     };
                 });
         },
-        header: (0, i.jsx)(s.X6q, {
+        header: (0, i.jsx)(l.X6q, {
             variant: 'heading-sm/bold',
-            color: 'always-white',
-            className: m.header,
-            children: u.intl.string(u.t.jrzHRk)
+            color: 'text-primary',
+            className: g.header,
+            children: m.intl.string(m.t.jrzHRk)
         }),
-        body: (0, i.jsx)(s.Text, {
+        body: (0, i.jsx)(l.Text, {
             variant: 'text-xs/normal',
-            color: 'always-white',
-            className: m.body,
-            children: u.intl.string(u.t.hA60Ul)
+            color: 'text-secondary',
+            className: g.body,
+            children: m.intl.string(m.t.hA60Ul)
         }),
         position: 'top',
         align: 'center',
-        artClassName: m.art,
-        className: m.container
+        artClassName: g.art,
+        className: g.container,
+        contentClassName: g.content,
+        pointerClassName: g.pointer,
+        dismissIcon: (0, i.jsx)(r.D, {}),
+        dismissIconClassName: g.dismissIcon,
+        onDismissIconClick: () => t(u.L.USER_DISMISS)
     });
 }
-function p(e) {
+function h(e) {
     let { children: t, markAsDismissed: n } = e;
-    return (0, i.jsx)(s.yRy, {
-        onRequestClose: () => n(d.L.INDIRECT_ACTION),
+    return (0, i.jsx)(l.yRy, {
+        onRequestClose: () => n(u.L.INDIRECT_ACTION),
         position: 'top',
         align: 'center',
         shouldShow: !0,
-        animation: s.yRy.Animation.TRANSLATE,
-        renderPopout: () => (0, i.jsx)(g, { markAsDismissed: n }),
+        animation: l.yRy.Animation.TRANSLATE,
+        renderPopout: () => (0, i.jsx)(p, { markAsDismissed: n }),
         children: t
     });
 }
