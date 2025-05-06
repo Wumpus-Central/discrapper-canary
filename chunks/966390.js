@@ -181,7 +181,7 @@ async function B(e) {
                     H.reject(
                         new c.Hx(
                             {
-                                status: t,
+                                status: 400,
                                 body: null != n ? n : {}
                             },
                             t
