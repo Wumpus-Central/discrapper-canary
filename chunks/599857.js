@@ -13,7 +13,7 @@ var r = n(255367),
     u = n(981631);
 function d(e) {
     let { sitekey: t, action: n, onVerify: l } = e,
-        [a, d] = i.useState(!1),
+        [a, d] = i.useState('uninitialized'),
         p = i.useCallback((e) => {
             s.default.track(u.rMx.RECAPTCHA_MODAL_EVENT, { recaptcha_event_name: e });
         }, []),
@@ -30,16 +30,16 @@ function d(e) {
                 null == (e = r.enterprise) ||
                 e.ready(async () => {
                     var e;
-                    p('recaptcha-ready'), h(await (null == (e = window) ? void 0 : e.grecaptcha).enterprise.execute(t, null != n ? { action: n } : void 0)), d(!1);
+                    p('recaptcha-ready'), h(await (null == (e = window) ? void 0 : e.grecaptcha).enterprise.execute(t, null != n ? { action: n } : void 0)), d('loaded');
                 });
         }, [t, n, h, p]),
         g = i.useCallback(() => {
-            p('recaptcha-loading'), d(!0), c.I.loadRecaptchaScript(t, f, p);
+            d('running'), p('recaptcha-loading'), c.I.loadRecaptchaScript(t, f, p);
         }, [t, f, p]);
     return (
         i.useEffect(() => {
-            a || g();
-        }, [a, g]),
+            'uninitialized' === a && g();
+        }, [g, a]),
         i.useEffect(
             () => () => {
                 p('recaptcha-unloading'),
