@@ -1,4 +1,4 @@
-a.d(t, { AnnouncementModal: () => g });
+a.d(t, { AnnouncementModal: () => C });
 var r = a(255367);
 a(73800);
 var s = a(481060),
@@ -6,13 +6,14 @@ var s = a(481060),
     n = a(607070),
     o = a(313201),
     d = a(70097),
-    i = a(388032),
-    l = a(418822),
-    u = a(6210),
-    b = a(313460),
-    p = a(686936),
-    f = a(326238);
-function h(e) {
+    i = a(688465),
+    l = a(388032),
+    u = a(418822),
+    b = a(6210),
+    p = a(313460),
+    f = a(686936),
+    h = a(326238);
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var a = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(a);
@@ -37,21 +38,21 @@ function h(e) {
     }
     return e;
 }
-let m = a(450390),
-    x = (e) => {
+let x = a(450390),
+    _ = (e) => {
         var t, a;
         return (0, r.jsx)(
             s.zxk,
-            ((t = h({}, e)),
+            ((t = m({}, e)),
             (a = a =
                 {
-                    'aria-label': i.intl.string(i.t.cpT0Cg),
+                    'aria-label': l.intl.string(l.t.cpT0Cg),
                     look: s.zxk.Looks.BLANK,
                     size: s.zxk.Sizes.NONE,
                     children: (0, r.jsx)('img', {
-                        src: m,
+                        src: x,
                         alt: 'Test',
-                        className: l.closeButtonIcon
+                        className: u.closeButtonIcon
                     })
                 }),
             Object.getOwnPropertyDescriptors
@@ -87,26 +88,26 @@ let m = a(450390),
                   })
               });
     },
-    _ = (e) => {
+    g = (e) => {
         let { header: t, subHeader: a, staticAsset: c, animatedAsset: n } = e;
         return (0, r.jsxs)('div', {
-            className: l.featureCard,
+            className: u.featureCard,
             children: [
                 (0, r.jsx)(j, {
                     staticAssetURL: c,
                     animatedAssetURL: n,
-                    className: l.orbAsset
+                    className: u.orbAsset
                 }),
                 (0, r.jsxs)('div', {
-                    className: l.featureCardTextGroup,
+                    className: u.featureCardTextGroup,
                     children: [
                         (0, r.jsx)(s.X6q, {
                             variant: 'heading-md/extrabold',
-                            className: l.featureCardTextHeader,
+                            className: u.featureCardTextHeader,
                             children: t
                         }),
                         (0, r.jsx)('div', {
-                            className: l.featureCardTextSubHeader,
+                            className: u.featureCardTextSubHeader,
                             children: a
                         })
                     ]
@@ -114,59 +115,65 @@ let m = a(450390),
             ]
         });
     },
-    g = (e) => {
+    C = (e) => {
         let { onClose: t, ctaOnClick: a, transitionState: c } = e,
             n = (0, o.Dt)(),
             d = [
                 {
-                    header: i.intl.string(i.t['2Nvn8/']),
-                    subHeader: i.intl.string(i.t.F1lGFx),
-                    staticAsset: p.Z
+                    header: l.intl.string(l.t['2Nvn8/']),
+                    subHeader: l.intl.string(l.t.F1lGFx),
+                    staticAsset: f.Z
                 },
                 {
-                    header: i.intl.string(i.t['1IEs7+']),
-                    subHeader: i.intl.string(i.t.mej05u),
-                    staticAsset: f.Z
+                    header: l.intl.string(l.t['1IEs7+']),
+                    subHeader: l.intl.string(l.t.mej05u),
+                    staticAsset: h.Z
                 }
             ];
         return (0, r.jsxs)(s.Y0X, {
-            className: l.root,
+            className: u.root,
             transitionState: c,
             'aria-labelledby': n,
             hideShadow: !0,
             children: [
-                (0, r.jsx)(x, {
-                    className: l.closeButton,
+                (0, r.jsx)(_, {
+                    className: u.closeButton,
                     onClick: t
                 }),
                 (0, r.jsx)(j, {
-                    staticAssetURL: u.Z,
-                    animatedAssetURL: b.Z,
-                    className: l.heroAsset
+                    staticAssetURL: b.Z,
+                    animatedAssetURL: p.Z,
+                    className: u.heroAsset
                 }),
                 (0, r.jsxs)(s.hzk, {
-                    className: l.content,
+                    className: u.content,
                     children: [
-                        (0, r.jsx)(s.X6q, {
-                            variant: 'display-md',
-                            className: l.header,
-                            children: i.intl.string(i.t.XKlAys)
+                        (0, r.jsxs)('div', {
+                            className: u.headerContainer,
+                            children: [
+                                (0, r.jsx)(s.X6q, {
+                                    variant: 'display-md',
+                                    className: u.header,
+                                    children: l.intl.string(l.t.XKlAys)
+                                }),
+                                (0, r.jsx)(i.Z, { className: u.betaBadge })
+                            ]
                         }),
                         (0, r.jsx)(s.X6q, {
                             variant: 'heading-lg/semibold',
-                            className: l.subHeader,
-                            children: i.intl.string(i.t.icWQKi)
+                            className: u.subHeader,
+                            children: l.intl.string(l.t.icWQKi)
                         }),
                         d.length > 0 &&
                             (0, r.jsx)('div', {
-                                className: l.featureCardGroup,
-                                children: d.map((e, t) => (0, r.jsx)(_, h({}, e), ''.concat(e.header, '_').concat(t)))
+                                className: u.featureCardGroup,
+                                children: d.map((e, t) => (0, r.jsx)(g, m({}, e), ''.concat(e.header, '_').concat(t)))
                             }),
                         (0, r.jsx)(s.gtL, {
                             onClick: a,
-                            color: l.buttonColor,
-                            className: l.button,
-                            children: i.intl.string(i.t.ynollp)
+                            color: u.buttonColor,
+                            className: u.button,
+                            children: l.intl.string(l.t.ynollp)
                         })
                     ]
                 })

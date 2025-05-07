@@ -1,16 +1,16 @@
 n.d(t, { Z: () => _ });
 var r = n(255367),
     l = n(73800),
-    a = n(481060),
-    i = n(727637),
+    i = n(481060),
+    a = n(727637),
     o = n(906732),
     s = n(333867),
     c = n(677232),
     u = n(884697),
     d = n(228624),
-    b = n(67409),
-    p = n(474936),
-    f = n(231338),
+    f = n(67409),
+    b = n(474936),
+    p = n(231338),
     g = n(388032),
     h = n(846165);
 let m = {
@@ -76,20 +76,20 @@ let m = {
         ]
     },
     _ = (e) => {
-        let { product: t, selectedVariantIndex: n, returnRef: _, onSuccess: C, tooltipDelay: v, isGiftEasterEggEnabled: O, color: x = a.Ttl.BRAND } = e,
-            { analyticsLocations: j } = (0, o.ZP)(),
-            y = l.useRef(null),
-            S = (0, i.Z)(y),
-            P = (0, d.hv)('CollectiblesShopGiftButton');
+        let { product: t, selectedVariantIndex: n, returnRef: _, onSuccess: C, tooltipDelay: v, isGiftEasterEggEnabled: O, color: x = i.Ttl.BRAND } = e,
+            { analyticsLocations: S } = (0, o.ZP)(),
+            j = l.useRef(null),
+            y = (0, a.Z)(j),
+            E = (0, d.hv)('CollectiblesShopGiftButton');
         return (0, u.x6)(t)
             ? null
-            : (0, r.jsx)(a.ua7, {
+            : (0, r.jsx)(i.ua7, {
                   text: g.intl.string(g.t['JCFN//']),
                   delay: v,
                   children: (e) => {
-                      var l, i;
+                      var l, a;
                       return (0, r.jsx)(
-                          a.zxk,
+                          i.zxk,
                           ((l = (function (e) {
                               for (var t = 1; t < arguments.length; t++) {
                                   var n = null != arguments[t] ? arguments[t] : {},
@@ -115,27 +115,27 @@ let m = {
                               }
                               return e;
                           })({}, e)),
-                          (i = i =
+                          (a = a =
                               {
-                                  buttonRef: y,
+                                  buttonRef: j,
                                   className: h.giftButton,
                                   color: x,
-                                  look: a.zxk.Looks.FILLED,
-                                  size: a.PhG.ICON,
+                                  look: i.zxk.Looks.FILLED,
+                                  size: i.PhG.ICON,
                                   innerClassName: h.giftButtonInner,
                                   'aria-label': g.intl.string(g.t.PEjaCw),
                                   onClick: (e) => {
                                       e.stopPropagation(),
                                           (0, s.Z)({
-                                              skuId: (0, b.S)({
+                                              skuId: (0, f.S)({
                                                   product: t,
                                                   selectedVariantIndex: n
                                               }),
                                               isGift: !0,
-                                              giftingOrigin: p.Wt.SHOP_PAGE,
-                                              analyticsLocations: j,
+                                              giftingOrigin: b.Wt.SHOP_PAGE,
+                                              analyticsLocations: S,
                                               returnRef: _,
-                                              variantsReturnStyle: P,
+                                              variantsReturnStyle: E,
                                               onClose:
                                                   null != C
                                                       ? (e) => {
@@ -146,18 +146,18 @@ let m = {
                                   },
                                   children: O
                                       ? (0, r.jsx)(c.Z, {
-                                            hovered: S,
+                                            hovered: y,
                                             isContentDismissed: !0,
-                                            themeOverride: f.BR.DARK,
+                                            themeOverride: p.BR.DARK,
                                             boxColors: m
                                         })
-                                      : (0, r.jsx)(a.OgN, {
+                                      : (0, r.jsx)(i.OgN, {
                                             size: 'md',
                                             color: 'currentColor'
                                         })
                               }),
                           Object.getOwnPropertyDescriptors
-                              ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
+                              ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
                               : (function (e, t) {
                                     var n = Object.keys(e);
                                     if (Object.getOwnPropertySymbols) {
@@ -165,8 +165,8 @@ let m = {
                                         n.push.apply(n, r);
                                     }
                                     return n;
-                                })(Object(i)).forEach(function (e) {
-                                    Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
+                                })(Object(a)).forEach(function (e) {
+                                    Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                                 }),
                           l)
                       );

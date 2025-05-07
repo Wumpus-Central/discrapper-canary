@@ -32,8 +32,8 @@ var r = n(255367),
     B = n(205511),
     k = n(710235),
     q = n(694802),
-    D = n(95985),
-    I = n(50476),
+    I = n(95985),
+    D = n(50476),
     M = n(46140),
     L = n(743294),
     Z = n(388032),
@@ -152,7 +152,7 @@ function H(e) {
         location: M.dr.QUESTS_BAR
     });
 }
-function F(e) {
+function z(e) {
     let { quest: t, taskDetails: n } = e,
         s = o.useMemo(() => O.r.build(t.config), [t.config]);
     return (0, r.jsxs)('ul', {
@@ -177,7 +177,7 @@ function F(e) {
         ]
     });
 }
-function z(e) {
+function F(e) {
     return (0, r.jsx)(u.Text, {
         className: W.description,
         variant: 'text-xs/normal',
@@ -222,11 +222,11 @@ function X(e) {
                                     children: Z.intl.format(Z.t.EQa7oq, { questName: t.config.messages.questName })
                                 }),
                                 O
-                                    ? (0, r.jsx)(F, {
+                                    ? (0, r.jsx)(z, {
                                           quest: t,
                                           taskDetails: n
                                       })
-                                    : (0, r.jsx)(z, {
+                                    : (0, r.jsx)(F, {
                                           quest: t,
                                           taskDetails: n
                                       })
@@ -335,8 +335,8 @@ function K(e) {
         O = (0, g.z)(n),
         [w, S, P] = (0, g.me)(n, s),
         H = o.useRef(null),
-        F = (0, g.B6)(n.config.expiresAt),
-        z = (0, g._s)({ quest: n }),
+        z = (0, g.B6)(n.config.expiresAt),
+        F = (0, g._s)({ quest: n }),
         X = (0, b.q8)(n),
         K = (0, g.Jf)(n),
         Y = o.useCallback(() => {
@@ -366,7 +366,7 @@ function K(e) {
                             (0, r.jsx)(u.Text, {
                                 variant: 'text-xxs/medium',
                                 className: a()(W.flex, W.headerText),
-                                children: Z.intl.format(Z.t['pX+fmp'], { expirationDate: F })
+                                children: Z.intl.format(Z.t['pX+fmp'], { expirationDate: z })
                             }),
                             (0, r.jsx)(E.r, {
                                 onOpen: x,
@@ -400,7 +400,7 @@ function K(e) {
                         quest: n,
                         isExpanded: p
                     }),
-                    (0, r.jsx)(D.Z, {
+                    (0, r.jsx)(I.Z, {
                         contentLocation: 'expanded',
                         quest: n,
                         progressBarRef: H,
@@ -414,7 +414,7 @@ function K(e) {
                             !(0, b.Gd)(n) &&
                             (0, l.EQ)(w)
                                 .with(h.LI.SELECT, () =>
-                                    (0, r.jsx)(I.Z, {
+                                    (0, r.jsx)(D.Z, {
                                         onConsole: () => P(M.cd.CONSOLE),
                                         onDesktop: () => P(M.cd.DESKTOP)
                                     })
@@ -451,7 +451,7 @@ function K(e) {
                                 quest: n,
                                 useReducedMotion: m,
                                 isExpanded: p,
-                                awaitingConsoleConnections: z,
+                                awaitingConsoleConnections: F,
                                 hasMadeProgress: C,
                                 isProgressing: O,
                                 activeScreen: w,

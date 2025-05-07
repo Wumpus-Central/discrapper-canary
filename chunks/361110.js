@@ -1,7 +1,7 @@
-n.d(t, { f: () => a }), n(388685);
+n.d(t, { f: () => i }), n(388685);
 var r = n(73800),
     l = n(979554);
-let a = (e) => {
+let i = (e) => {
     let [t, n] = (0, r.useState)(null);
     return {
         previewingVariantIndex: t,

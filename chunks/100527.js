@@ -440,6 +440,7 @@ var r = (function (e) {
         (e.APP_LAUNCHER = 'app launcher'),
         (e.APP_LAUNCHER_IN_VOICE_BANNER = 'app launcher in voice banner'),
         (e.APP_LAUNCHER_FRIENDS_TAB_JOIN_BUTTON = 'app launcher friends who play tab join friend'),
+        (e.REPORT_TO_MOD_CHANNEL_CONTEXT_MENU = 'report to mod channel context menu'),
         e
     );
 })(r || {});

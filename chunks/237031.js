@@ -1,18 +1,18 @@
 n.d(t, {
-    T: () => i,
+    T: () => a,
     v: () => o
 });
 var r = n(255367);
 n(73800);
 var l = n(481060);
-let a = 'collectibles shop product details modal',
-    i = (e) => {
-        let { product: t, category: i, shouldCheckoutWithOrbs: o, analyticsSource: s, analyticsLocations: c, returnRef: u, tab: d } = e;
+let i = 'collectibles shop product details modal',
+    a = (e) => {
+        let { product: t, category: a, shouldCheckoutWithOrbs: o, analyticsSource: s, analyticsLocations: c, returnRef: u, tab: d } = e;
         (0, l.ZDy)(
             async () => {
                 let { default: e } = await n.e('2026').then(n.bind(n, 702370));
                 return (n) => {
-                    var l, a;
+                    var l, i;
                     return (0, r.jsx)(
                         e,
                         ((l = (function (e) {
@@ -40,10 +40,10 @@ let a = 'collectibles shop product details modal',
                             }
                             return e;
                         })({}, n)),
-                        (a = a =
+                        (i = i =
                             {
                                 product: t,
-                                category: i,
+                                category: a,
                                 shouldCheckoutWithOrbs: o,
                                 analyticsSource: s,
                                 analyticsLocations: c,
@@ -51,7 +51,7 @@ let a = 'collectibles shop product details modal',
                                 tab: d
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
+                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(i))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -59,16 +59,16 @@ let a = 'collectibles shop product details modal',
                                       n.push.apply(n, r);
                                   }
                                   return n;
-                              })(Object(a)).forEach(function (e) {
-                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
+                              })(Object(i)).forEach(function (e) {
+                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
                               }),
                         l)
                     );
                 };
             },
-            { modalKey: a }
+            { modalKey: i }
         );
     },
     o = () => {
-        (0, l.Mr3)(a);
+        (0, l.Mr3)(i);
     };

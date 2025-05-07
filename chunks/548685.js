@@ -1,56 +1,72 @@
-n.d(t, { Z: () => j }), n(388685);
-var r = n(255367);
-n(73800);
-var l = n(120356),
-    a = n.n(l),
-    i = n(442837),
-    o = n(481060),
-    s = n(782568),
-    c = n(594174),
-    u = n(63063),
-    d = n(74538),
-    b = n(381585),
-    p = n(597688),
-    f = n(315066),
-    g = n(243126),
-    h = n(38900),
-    m = n(709999),
-    _ = n(619899),
-    C = n(215023),
-    v = n(981631),
-    O = n(388032),
-    x = n(806734);
-let j = (e) => {
-    let { isLoading: t, sortedSkuIds: n, handleTransition: l, numVisibleItems: j, tab: y } = e,
-        S = (0, i.e7)([c.default], () => c.default.getCurrentUser()),
-        P = d.ZP.canUseCollectibles(S),
-        E = (0, f.s)('useShopHomeSorting') && y === C.AW.HOME,
-        { sortType: k, setSortType: w, sortedItems: B, sortOptions: T, shuffleProducts: I, showRecommendationOption: L } = (0, g.N)(n, P),
-        N = (0, _.St)(B);
-    return null == S
+n.d(t, { Z: () => P }), n(388685);
+var r = n(255367),
+    l = n(73800),
+    i = n(120356),
+    a = n.n(i),
+    o = n(442837),
+    s = n(481060),
+    c = n(782568),
+    u = n(607070),
+    d = n(594174),
+    f = n(451478),
+    b = n(63063),
+    p = n(74538),
+    g = n(381585),
+    h = n(597688),
+    m = n(315066),
+    _ = n(243126),
+    C = n(38900),
+    v = n(709999),
+    O = n(328626),
+    x = n(619899),
+    S = n(215023),
+    j = n(981631),
+    y = n(388032),
+    E = n(806734);
+let P = (e) => {
+    let { isLoading: t, sortedSkuIds: n, handleTransition: i, numVisibleItems: P, tab: k } = e,
+        T = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
+        w = p.ZP.canUseCollectibles(T),
+        I = (0, m.s)('useShopHomeSorting') && k === S.AW.HOME,
+        { sortType: B, setSortType: L, sortedItems: N, sortOptions: R, shuffleProducts: A, showRecommendationOption: Z } = (0, _.N)(n, w),
+        F = (0, x.St)(N),
+        D = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+        H = (0, o.e7)([f.Z], () => f.Z.isFocused()),
+        M = !D && H,
+        { animationPhase: W, startAnimation: V } = (0, O.y)(),
+        U = l.useCallback(
+            (e) => {
+                V({
+                    isShuffling: !1,
+                    onOutroComplete: () => L(e)
+                });
+            },
+            [V, L]
+        );
+    return null == T
         ? null
         : (0, r.jsxs)('div', {
-              className: a()(x.popularPicksSection, x.centeredSection),
+              className: a()(E.popularPicksSection, E.centeredSection),
               children: [
                   (0, r.jsxs)('div', {
-                      className: x.blockHeader,
+                      className: E.blockHeader,
                       children: [
                           (0, r.jsxs)('div', {
-                              className: x.headerLeft,
+                              className: E.headerLeft,
                               children: [
-                                  (0, r.jsx)(o.X6q, {
+                                  (0, r.jsx)(s.X6q, {
                                       variant: 'heading-lg/semibold',
-                                      children: y === C.AW.ORBS ? O.intl.string(O.t.dFgeub) : O.intl.string(O.t.NSv5KS)
+                                      children: k === S.AW.ORBS ? y.intl.string(y.t.dFgeub) : y.intl.string(y.t.NSv5KS)
                                   }),
-                                  L &&
-                                      (0, r.jsx)(o.ua7, {
-                                          text: O.intl.format(O.t.cl8gS0, { helpdeskArticle: u.Z.getArticleURL(v.BhN.DATA_USED_FOR_RECOMMENDED) }),
+                                  Z &&
+                                      (0, r.jsx)(s.ua7, {
+                                          text: y.intl.format(y.t.cl8gS0, { helpdeskArticle: b.Z.getArticleURL(j.BhN.DATA_USED_FOR_RECOMMENDED) }),
                                           position: 'top',
-                                          'aria-label': O.intl.formatToPlainString(O.t.cl8gS0, { helpdeskArticle: u.Z.getArticleURL(v.BhN.DATA_USED_FOR_RECOMMENDED) }),
+                                          'aria-label': y.intl.formatToPlainString(y.t.cl8gS0, { helpdeskArticle: b.Z.getArticleURL(j.BhN.DATA_USED_FOR_RECOMMENDED) }),
                                           children: (e) => {
                                               var t, n;
                                               return (0, r.jsx)(
-                                                  o.P3F,
+                                                  s.P3F,
                                                   ((t = (function (e) {
                                                       for (var t = 1; t < arguments.length; t++) {
                                                           var n = null != arguments[t] ? arguments[t] : {},
@@ -78,9 +94,9 @@ let j = (e) => {
                                                   })({}, e)),
                                                   (n = n =
                                                       {
-                                                          onClick: () => (0, s.Z)(u.Z.getArticleURL(v.BhN.DATA_USED_FOR_RECOMMENDED)),
-                                                          className: x.informationIcon,
-                                                          children: (0, r.jsx)(o.d3s, { size: 'sm' })
+                                                          onClick: () => (0, c.Z)(b.Z.getArticleURL(j.BhN.DATA_USED_FOR_RECOMMENDED)),
+                                                          className: E.informationIcon,
+                                                          children: (0, r.jsx)(s.d3s, { size: 'sm' })
                                                       }),
                                                   Object.getOwnPropertyDescriptors
                                                       ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -101,74 +117,76 @@ let j = (e) => {
                               ]
                           }),
                           (0, r.jsxs)('div', {
-                              className: x.headerRight,
+                              className: E.headerRight,
                               children: [
-                                  E &&
+                                  I &&
                                       (0, r.jsxs)(r.Fragment, {
                                           children: [
-                                              (0, r.jsx)(o.Text, {
+                                              (0, r.jsx)(s.Text, {
                                                   variant: 'text-xs/bold',
-                                                  className: x.sortByText,
-                                                  children: O.intl.string(O.t.uaX709)
+                                                  className: E.sortByText,
+                                                  children: y.intl.string(y.t.uaX709)
                                               }),
-                                              (0, r.jsx)(o.PhF, {
-                                                  options: T,
-                                                  select: (e) => w(e),
-                                                  className: x.sortSelect,
-                                                  isSelected: (e) => e === k,
+                                              (0, r.jsx)(s.PhF, {
+                                                  options: R,
+                                                  select: U,
+                                                  className: E.sortSelect,
+                                                  isSelected: (e) => e === B,
                                                   serialize: (e) => e
                                               })
                                           ]
                                       }),
-                                  y === C.AW.HOME &&
-                                      (E
-                                          ? (0, r.jsx)(o.zxk, {
-                                                color: o.Ttl.PRIMARY,
-                                                look: o.iLD.FILLED,
-                                                onClick: () => I(),
-                                                children: O.intl.string(O.t.X3tnc3)
+                                  k === S.AW.HOME &&
+                                      (I
+                                          ? (0, r.jsx)(s.zxk, {
+                                                color: s.Ttl.PRIMARY,
+                                                look: s.iLD.FILLED,
+                                                onClick: () =>
+                                                    V({
+                                                        isShuffling: !0,
+                                                        onOutroComplete: A
+                                                    }),
+                                                children: y.intl.string(y.t.X3tnc3)
                                             })
-                                          : (0, r.jsx)(o.zxk, {
-                                                color: o.Ttl.PRIMARY,
-                                                look: o.iLD.FILLED,
-                                                onClick: () => l('shop all top'),
-                                                children: O.intl.string(O.t.xFcotb)
+                                          : (0, r.jsx)(s.zxk, {
+                                                color: s.Ttl.PRIMARY,
+                                                look: s.iLD.FILLED,
+                                                onClick: () => i('shop all top'),
+                                                children: y.intl.string(y.t.xFcotb)
                                             }))
                               ]
                           })
                       ]
                   }),
                   (0, r.jsx)('div', {
-                      className: x.feed,
+                      className: E.feed,
                       children: t
-                          ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(h.K, {}, t + 1)) })
-                          : (0, r.jsx)(r.Fragment, {
-                                children: N.slice(0, j).map((e, t) => {
-                                    let n = p.Z.getCategoryForProduct(e.skuId);
-                                    return null == e || null == n
-                                        ? null
-                                        : (0, r.jsx)(
-                                              b.k0,
-                                              {
-                                                  newValue: {
-                                                      tilePosition: t,
-                                                      pageSection: 'popular picks',
-                                                      categoryPosition: 2
-                                                  },
-                                                  children: (0, r.jsx)(
-                                                      m.Z,
-                                                      {
-                                                          product: e,
-                                                          category: n,
-                                                          user: S,
-                                                          tab: y
-                                                      },
-                                                      e.skuId
-                                                  )
-                                              },
-                                              null == e ? void 0 : e.skuId
-                                          );
-                                })
+                          ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(C.K, {}, t + 1)) })
+                          : F.slice(0, P).map((e, t) => {
+                                let n,
+                                    l = h.Z.getCategoryForProduct(e.skuId);
+                                if (null == e || null == l) return null;
+                                if (M)
+                                    if (W === O.g.SHUFFLE_OUT) return (0, r.jsx)('div', { className: E.shuffleOutro }, ''.concat(e.skuId, '-').concat(t));
+                                    else W === O.g.SORT_OUT ? (n = E.sortChangedOutro) : W === O.g.SHUFFLE_IN ? (n = E.shuffleIntro) : W === O.g.SORT_IN && (n = E.sortChangedIntro);
+                                return (0, r.jsx)(
+                                    g.k0,
+                                    {
+                                        newValue: {
+                                            tilePosition: t,
+                                            pageSection: 'popular picks',
+                                            categoryPosition: 2
+                                        },
+                                        children: (0, r.jsx)(v.Z, {
+                                            product: e,
+                                            category: l,
+                                            user: T,
+                                            tab: k,
+                                            className: n
+                                        })
+                                    },
+                                    null == e ? void 0 : e.skuId
+                                );
                             })
                   })
               ]

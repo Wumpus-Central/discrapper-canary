@@ -60,12 +60,12 @@ function O(e) {
         B = (0, u.O5)(),
         k = (0, p._s)({ quest: w }),
         q = (0, p.z)(w),
-        D = (0, p.B6)(w.config.expiresAt, {
+        I = (0, p.B6)(w.config.expiresAt, {
             month: 'numeric',
             day: 'numeric'
         }),
         {
-            isClaiming: I,
+            isClaiming: D,
             isEnrolling: M,
             isQuestEnrollmentBlocked: L
         } = (0, i.cj)([m.Z], () => ({
@@ -79,8 +79,8 @@ function O(e) {
         Q = (0, g.iQ)(w),
         U = !(0, g.zi)(w),
         H = (0, p._Q)(w),
-        F = (0, g.Xv)(w.config),
-        z = (0, g.q8)(w),
+        z = (0, g.Xv)(w.config),
+        F = (0, g.q8)(w),
         X = (0, g.Vl)(w),
         K = (0, p.Rf)(w),
         [Y, G, J] = (0, p.me)(w, K),
@@ -97,11 +97,11 @@ function O(e) {
             progressState: H,
             quest: w,
             location: S,
-            isCollectibleQuest: F,
+            isCollectibleQuest: z,
             questContentPosition: E,
             questContentRowIndex: T,
             inGiftInventory: !0,
-            isVideoQuest: z,
+            isVideoQuest: F,
             inGameQuest: X
         }),
         { startingConsoleQuest: es, startConsoleQuest: ea } = (0, p.GI)({
@@ -125,13 +125,13 @@ function O(e) {
     return (Q && V
         ? (el = (0, r.jsx)(l.zxk, {
               color: l.Ttl.BRAND,
-              submitting: I,
+              submitting: D,
               onClick: null != eo ? eo : void 0,
               className: _.button,
               children: er
           }))
         : W
-          ? (el = z
+          ? (el = F
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(l.zxk, {
@@ -170,7 +170,7 @@ function O(e) {
             ? U && V
                 ? (el = (0, r.jsx)(l.zxk, {
                       color: l.Ttl.BRAND,
-                      submitting: I,
+                      submitting: D,
                       onClick: null != eo ? eo : void 0,
                       className: _.button,
                       children: er
@@ -211,7 +211,7 @@ function O(e) {
                                         children: [R.render(), v.intl.string(v.t.nPThNT)]
                                     })
                                 })
-                          : z || (X && w.config.features.includes(j.S7.START_QUEST_CTA))
+                          : F || (X && w.config.features.includes(j.S7.START_QUEST_CTA))
                             ? (0, r.jsx)(l.zxk, {
                                   color: l.Ttl.BRAND,
                                   onClick: null != eo ? eo : void 0,
@@ -254,7 +254,7 @@ function O(e) {
                   color: l.Ttl.PRIMARY,
                   disabled: !0,
                   className: _.button,
-                  children: v.intl.format(v.t['14o6QU'], { expiryDate: D })
+                  children: v.intl.format(v.t['14o6QU'], { expiryDate: I })
               })),
     null == el)
         ? null
