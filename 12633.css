@@ -44803,7 +44803,7 @@ div.mobilePushContainer__3d3b0 {
     animation: inherit;
     filter: blur(4px);
     opacity: .7;
-    z-index: 0
+    z-index: -1
 }
 
 .full-motion .animateGradient_e5de78 {
