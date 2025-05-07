@@ -28,7 +28,7 @@ var i = n(255367),
     S = n(980591),
     v = n(468363),
     T = n(326255),
-    I = n(747017),
+    I = n(771173),
     N = n(963056),
     y = n(570928),
     A = n(100527),
@@ -338,12 +338,14 @@ class tr extends r.PureComponent {
                 hoverText: l,
                 forceHover: e,
                 children: (0, i.jsx)(I.Z, {
+                    location: 'Account',
                     user: r,
                     activities: t,
                     applicationStream: n,
                     voiceChannel: a ? o : void 0,
                     textClassName: e2.activityStatusText,
-                    hideTooltip: !0
+                    hideTooltip: !0,
+                    disableTextScroll: !0
                 })
             });
         let u =

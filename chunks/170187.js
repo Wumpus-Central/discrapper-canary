@@ -80,8 +80,8 @@ function h(e, t) {
     return i;
 }
 function m(e) {
-    var { children: t, className: n, variant: i = 'text-xs/medium', hideTooltip: u = !1 } = e,
-        f = p(e, ['children', 'className', 'variant', 'hideTooltip']);
+    var { children: t, className: n, variant: i = 'text-xs/medium', hideTooltip: u = !1, canTruncate: f = !0 } = e,
+        h = p(e, ['children', 'className', 'variant', 'hideTooltip', 'canTruncate']);
     return (0, r.jsx)(
         a.xv,
         _(
@@ -89,16 +89,18 @@ function m(e) {
                 {
                     variant: i,
                     color: 'none',
-                    className: o()(c.text, n)
+                    className: o()(f ? c.truncated : c.untruncated, n)
                 },
-                f
+                h
             ),
             {
-                children: (0, r.jsx)(s.Z, {
-                    delay: l.X,
-                    shouldShow: !u,
-                    children: t
-                })
+                children: f
+                    ? (0, r.jsx)(s.Z, {
+                          delay: l.X,
+                          shouldShow: !u,
+                          children: t
+                      })
+                    : t
             }
         )
     );

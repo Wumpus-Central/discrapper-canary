@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(468363),
     u = n(326255),
     d = n(956221),
-    p = n(747017),
+    p = n(771173),
     m = n(43267),
     f = n(933557),
     h = n(471445),
@@ -228,10 +228,12 @@ function Z(e) {
         voiceChannel: f
     })
         ? (0, r.jsx)(p.Z, {
+              location: 'RecentsChannelHeader',
               user: n,
               activities: l,
               applicationStream: a,
               voiceChannel: f,
+              disableTextScroll: !0,
               hideTooltip: !0
           })
         : null;

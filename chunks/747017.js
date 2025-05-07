@@ -21,7 +21,7 @@ var r = n(255367),
     v = n(981631),
     I = n(843280);
 function S(e) {
-    let { user: t, activities: n, applicationStream: o, voiceChannel: S, textClassName: T, iconClassName: A, textSize: N = 'xs', animate: C = !0, hasQuest: P = !1, hideEmoji: R = !1, hideTooltip: w = !1 } = e;
+    let { user: t, activities: n, applicationStream: o, voiceChannel: S, textClassName: T, iconClassName: A, textSize: N = 'xs', animateEmoji: C = !0, hasQuest: P = !1, hideEmoji: R = !1, hideTooltip: w = !1 } = e;
     (0, u.Z)(null == t ? void 0 : t.id);
     let D = (null == o ? void 0 : o.discoverable) !== !1 ? o : null,
         { enabledWithActivityStatus: L } = (0, d.Z)({ location: 'ActivityStatus' }),
@@ -116,7 +116,7 @@ function S(e) {
             j(),
             (0, r.jsx)(s.xv, {
                 variant: 'text-'.concat(N, '/normal'),
-                className: a()(I.text, I.dot, T),
+                className: a()(I.truncated, I.dot, T),
                 children: O.l
             }),
             U(),

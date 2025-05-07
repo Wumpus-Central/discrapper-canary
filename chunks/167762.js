@@ -24,7 +24,7 @@ var i,
     m = n(420660),
     y = n(326255),
     h = n(956221),
-    S = n(747017),
+    S = n(771173),
     v = n(297781),
     I = n(82295),
     b = n(554300),
@@ -40,8 +40,8 @@ var i,
     k = n(199902),
     U = n(158776),
     G = n(699516),
-    D = n(885110),
-    x = n(594174),
+    x = n(885110),
+    D = n(594174),
     F = n(979651),
     L = n(823379),
     M = n(151459),
@@ -122,7 +122,7 @@ let J = c.EFr.SIZE_32,
     B = [v.OV, v.wO, v.f, v.v1, v.pQ];
 var H = (((i = {}).USER_CONTEXT_MENU = 'user_context_menu'), (i.OPEN_DIRECT_MESSAGE = 'open_direct_message'), (i.SEND_FRIEND_REQUEST = 'send_friend_request'), (i.SEND_ACTIVITY_INVITE = 'send_activity_invite'), (i.ASK_TO_JOIN = 'ask_to_join'), (i.DECLINE_FRIEND_REQUEST = 'decline_friend_request'), (i.ACCEPT_FRIEND_REQUEST = 'accept_friend_request'), (i.CANCEL_FRIEND_REQUEST = 'cancel_friend_request'), (i.OPEN_FRIEND_MODAL = 'open_friend_modal'), (i.OPEN_SETTINGS_MODAL = 'open_settings_modal'), (i.SEARCH_FRIENDS = 'search_friends'), i);
 let X = l.memo((e) => {
-    let { user: t, activities: i = [], gameProfileEntry: s, index: E, closeParentPopout: I, isSuggestion: j, relationshipType: T, appContext: Z, nickname: w, onAction: G, onFriendVisible: x } = e,
+    let { user: t, activities: i = [], gameProfileEntry: s, index: E, closeParentPopout: I, isSuggestion: j, relationshipType: T, appContext: Z, nickname: w, onAction: G, onFriendVisible: D } = e,
         {
             avatarDecorationSrc: F,
             avatarSrc: L,
@@ -138,7 +138,7 @@ let X = l.memo((e) => {
         [X, $] = l.useState({}),
         ee = t.id,
         et = i.filter((e) => e.type === q.IIU.PLAYING && (0, N.Z)(e, q.xjy.JOIN)),
-        en = (0, o.Wu)([D.Z], () => D.Z.getActivities().filter((e) => e.type === q.IIU.PLAYING && (0, N.Z)(e, q.xjy.JOIN))),
+        en = (0, o.Wu)([x.Z], () => x.Z.getActivities().filter((e) => e.type === q.IIU.PLAYING && (0, N.Z)(e, q.xjy.JOIN))),
         { voiceChannel: ei } = (0, h.Z)({ userId: t.id }),
         er = (0, P.K)({
             location: 'friends-popout',
@@ -168,9 +168,9 @@ let X = l.memo((e) => {
         ec = en.length > 0,
         eu = l.useCallback(
             (e) => {
-                null == x || x(ee, e, ec);
+                null == D || D(ee, e, ec);
             },
-            [x, ee, ec]
+            [D, ee, ec]
         ),
         ed = (0, g.O)(eu),
         ef = l.useCallback(() => {
@@ -209,15 +209,17 @@ let X = l.memo((e) => {
                 user: t
             });
             return (0, r.jsx)(S.Z, {
+                location: 'FriendsPopout',
                 user: t,
                 activities: i,
                 applicationStream: es,
                 voiceChannel: ei,
-                animate: !1,
+                animateEmoji: !1,
+                animateText: K,
                 hideEmoji: e,
                 hasQuest: !1
             });
-        }, [t, i, el, es, ei, s]),
+        }, [t, i, el, es, ei, s, K]),
         eO = l.useCallback(
             (e) => {
                 null == G || G('user_context_menu', t.id),
@@ -456,12 +458,12 @@ let et = l.memo(function (e) {
         h = l.useRef(null),
         S = (0, E.Z)('friends-popout', h),
         v = (function () {
-            let e = (0, o.Wu)([G.Z, x.default, U.Z], () => {
+            let e = (0, o.Wu)([G.Z, D.default, U.Z], () => {
                     let e = G.Z.getRelationships(),
                         t = [];
                     for (let [n, i] of Object.entries(e)) {
                         if (i !== q.OGo.PENDING_INCOMING && i !== q.OGo.PENDING_OUTGOING) continue;
-                        let e = x.default.getUser(n);
+                        let e = D.default.getUser(n);
                         if (null != e) {
                             let r = G.Z.getSince(n),
                                 l = null != r ? new Date(r).getTime() : 0;
@@ -477,14 +479,14 @@ let et = l.memo(function (e) {
                     return t.sort((e, t) => t.timestamp - e.timestamp), t;
                 }),
                 t = (0, o.Wu)(
-                    [w.Z, x.default, U.Z, G.Z, F.Z],
+                    [w.Z, D.default, U.Z, G.Z, F.Z],
                     () => {
                         let e = w.Z.getUserAffinitiesMap(),
                             t = [];
                         for (let [n, i] of e.entries()) {
                             let e = G.Z.getRelationshipType(n);
                             if (G.Z.isFriend(n) || i.affinity <= 20 || e === q.OGo.PENDING_INCOMING || e === q.OGo.PENDING_OUTGOING) continue;
-                            let r = x.default.getUser(n);
+                            let r = D.default.getUser(n);
                             if (null != r) {
                                 let e = U.Z.getActivities(n),
                                     l = F.Z.getVoiceStateForUser(n),
@@ -506,11 +508,11 @@ let et = l.memo(function (e) {
                     []
                 ),
                 n = (function () {
-                    let e = (0, o.e7)([D.Z], () => D.Z.getPrimaryActivity()),
+                    let e = (0, o.e7)([x.Z], () => x.Z.getPrimaryActivity()),
                         t = null == e ? void 0 : e.application_id,
                         n = (0, j.Ns)(t);
                     return (0, o.cj)(
-                        [G.Z, x.default, U.Z, F.Z],
+                        [G.Z, D.default, U.Z, F.Z],
                         () => {
                             let i = (null == e ? void 0 : e.name) != null && null != t,
                                 r = {
@@ -527,7 +529,7 @@ let et = l.memo(function (e) {
                                 n.forEach((e) => {
                                     let t = e.author_id;
                                     if (!G.Z.isFriend(t)) return;
-                                    let n = x.default.getUser(t);
+                                    let n = D.default.getUser(t);
                                     null != n &&
                                         l.set(t, {
                                             user: n,
@@ -537,7 +539,7 @@ let et = l.memo(function (e) {
                                         });
                                 }),
                             G.Z.getFriendIDs())) {
-                                let n = x.default.getUser(e);
+                                let n = D.default.getUser(e);
                                 if (null == n) continue;
                                 let s = U.Z.getStatus(e),
                                     a = U.Z.getActivities(e),
@@ -569,7 +571,7 @@ let et = l.memo(function (e) {
                         [n, e, t]
                     );
                 })(),
-                i = (0, o.e7)([D.Z], () => D.Z.getPrimaryActivity());
+                i = (0, o.e7)([x.Z], () => x.Z.getPrimaryActivity());
             return l.useMemo(() => {
                 var r;
                 return {

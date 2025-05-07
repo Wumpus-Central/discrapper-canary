@@ -22,7 +22,7 @@ var i = n(255367),
     b = n(468363),
     _ = n(326255),
     x = n(956221),
-    E = n(747017),
+    E = n(771173),
     C = n(385499),
     j = n(570908),
     O = n(702321),
@@ -349,11 +349,13 @@ function ec(e) {
                           voiceChannel: y
                       })
                     ? (0, i.jsx)(E.Z, {
+                          location: 'PrivateChannel',
                           user: u,
                           activities: b,
                           voiceChannel: y,
                           applicationStream: x,
-                          animate: Y,
+                          animateEmoji: Y,
+                          animateText: Y,
                           textClassName: J.activityStatusText,
                           iconClassName: ej ? J.mutedIcon : void 0
                       })

@@ -4,7 +4,7 @@ var i = n(255367),
     s = n(120356),
     l = n.n(s),
     a = n(481060),
-    o = n(747017),
+    o = n(771173),
     c = n(963056),
     d = n(570928),
     u = n(100527),
@@ -133,11 +133,13 @@ function x(e) {
                       hoverText: P,
                       forceHover: t || N,
                       children: (0, i.jsx)(o.Z, {
+                          location: 'CustomStatusRTCEntrypoint',
                           user: l,
                           activities: s,
                           applicationStream: f,
                           voiceChannel: x,
-                          hideTooltip: !0
+                          hideTooltip: !0,
+                          disableTextScroll: !0
                       })
                   })
                 : P

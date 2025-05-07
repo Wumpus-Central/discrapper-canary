@@ -13,10 +13,10 @@ var i = n(255367),
     p = n(104494),
     h = n(639119),
     f = n(105759),
-    b = n(346497),
-    _ = n(422034),
-    x = n(710220),
-    E = n(318747),
+    b = n(736519),
+    _ = n(346497),
+    x = n(422034),
+    E = n(710220),
     C = n(635921),
     j = n(474936),
     O = n(388032),
@@ -43,7 +43,7 @@ let v = (e) => {
             Z = (0, p.Wp)(D, j.Si.TIER_2) ? j.Si.TIER_2 : void 0,
             w = (0, h.N)(),
             k = (0, m.Nx)(),
-            L = (0, b.Vi)(),
+            L = (0, _.Vi)(),
             B = (0, a.e7)([u.Z], () => u.Z.affinities),
             M = (0, f.Z)(),
             U = y === j.EZ.ApplicationStoreHome && null != M,
@@ -69,14 +69,14 @@ let v = (e) => {
                             children: O.intl.string(O.t.YCZldH)
                         }),
                         U
-                            ? (0, i.jsx)(x.Z, {
+                            ? (0, i.jsx)(E.Z, {
                                   referrer: M,
                                   isMarketingPageV2Enabled: !0
                               })
                             : V &&
                               (0, i.jsx)('div', {
                                   className: S.affinityDescriptionV2,
-                                  children: (0, i.jsx)(_.Z, {
+                                  children: (0, i.jsx)(x.Z, {
                                       textColor: 'text-normal',
                                       smallerText: !s,
                                       isMarketingPageV2Enabled: !0
@@ -85,7 +85,7 @@ let v = (e) => {
                         L || R
                             ? (0, i.jsx)('div', {
                                   className: l()(S.buttonContainer, S.marketingPageV2CTAContainer, { [S.marketingPageV2CTAMargin]: !(V || U) }),
-                                  children: (0, i.jsx)(E.Z, {
+                                  children: (0, i.jsx)(b.Z, {
                                       className: l()(S.button, I),
                                       forceWhite: !0
                                   })
