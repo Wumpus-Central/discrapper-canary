@@ -2,9 +2,9 @@ n.d(t, {
     FZ: () => A,
     Hl: () => M,
     NJ: () => R,
-    R8: () => L,
+    R8: () => D,
     Sq: () => N,
-    Wg: () => D,
+    Wg: () => L,
     Zn: () => I,
     c2: () => w,
     eE: () => k,
@@ -36,8 +36,8 @@ var r = n(399834),
     _ = n.n(g),
     b = n(803068),
     y = n.n(b),
-    x = n(561099),
-    E = n.n(x),
+    E = n(561099),
+    x = n.n(E),
     v = n(655000),
     O = n.n(v);
 function j(e, t, n, i) {
@@ -76,7 +76,7 @@ function C(e, t, n, i) {
 function S(e, t) {
     switch (e) {
         case 'delete':
-            return E()(t);
+            return x()(t);
         case 'delete-word':
             return m()(t);
         case 'backspace':
@@ -167,11 +167,11 @@ function R(e) {
 function k(e) {
     return Z(0, e);
 }
-function L(e) {
+function D(e) {
     let t = e.getSelection();
     return (t = (t = t.set('focusOffset', 0)).set('isBackward', !0)), r.EditorState.forceSelection(e, t);
 }
-function D(e) {
+function L(e) {
     let t = N(e),
         n = e.getSelection();
     return (n = (n = n.set('focusOffset', t.length)).set('isBackward', !1)), r.EditorState.forceSelection(e, n);

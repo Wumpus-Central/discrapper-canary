@@ -1,7 +1,7 @@
 n.d(t, {
     ZP: () => E,
     c2: () => x,
-    cK: () => g
+    cK: () => p
 });
 var r,
     i,
@@ -10,7 +10,7 @@ var r,
     o = n(73800),
     a = n(120356),
     c = n.n(a),
-    u = n(205406),
+    u = n(39026),
     d = n(634715);
 function h(e, t, n) {
     return (
@@ -25,7 +25,7 @@ function h(e, t, n) {
         e
     );
 }
-function p(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,12 +41,12 @@ function p(e) {
     }
     return e;
 }
-var g = (((r = {}).SIZE_40 = 'SIZE_40'), (r.SIZE_60 = 'SIZE_60'), r);
-let f = Object.freeze({
+var p = (((r = {}).SIZE_40 = 'SIZE_40'), (r.SIZE_60 = 'SIZE_60'), r);
+let m = Object.freeze({
         SIZE_40: 'size-40',
         SIZE_60: 'size-60'
     }),
-    m = n(515695);
+    f = n(515695);
 class _ extends (i = o.PureComponent) {
     render() {
         let e = this.props,
@@ -79,7 +79,7 @@ class _ extends (i = o.PureComponent) {
             className: c()(d.qrCodeContainer, t),
             children: (0, s.jsx)(
                 u.default,
-                p(
+                g(
                     {
                         value: n,
                         level: 'M'
@@ -98,16 +98,16 @@ h(_, 'defaultProps', {
 class x extends (l = o.PureComponent) {
     render() {
         let { overlaySize: e } = this.props,
-            t = f[null != e ? e : 'SIZE_40'];
+            t = m[null != e ? e : 'SIZE_40'];
         return (0, s.jsxs)('div', {
             className: d.qrCodeOverlayContainer,
             children: [
-                (0, s.jsx)(_, p({}, this.props)),
+                (0, s.jsx)(_, g({}, this.props)),
                 (0, s.jsx)('div', {
                     className: d.qrCodeOverlay,
                     children: (0, s.jsx)('img', {
                         className: d[t],
-                        src: m,
+                        src: f,
                         alt: ''
                     })
                 })

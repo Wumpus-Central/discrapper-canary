@@ -11,8 +11,8 @@ var i = t(793030),
     d = t(317169),
     p = t(639660),
     m = t(767218),
-    x = t(981631),
-    _ = t(680278),
+    _ = t(981631),
+    x = t(680278),
     f = t(388032),
     v = t(658585);
 function g(e) {
@@ -28,12 +28,12 @@ function g(e) {
                     children: [
                         (0, r.jsx)(i.xv, {
                             variant: 'eyebrow',
-                            children: f.intl.string(_.default.hjvcLC)
+                            children: f.intl.string(x.default.hjvcLC)
                         }),
                         (0, r.jsx)(i.xv, {
                             className: v.learnMore,
                             variant: 'text-xs/semibold',
-                            children: f.intl.format(_.default.fXE30d, { helpDeskArticle: u.Z.getArticleURL(x.BhN.GUILD_BOOSTING_FAQ) })
+                            children: f.intl.format(x.default.fXE30d, { helpDeskArticle: u.Z.getArticleURL(_.BhN.GUILD_BOOSTING_FAQ) })
                         })
                     ]
                 }),
@@ -58,8 +58,8 @@ function g(e) {
                     className: v.boostButton,
                     guild: t,
                     analyticsLocation: {
-                        page: x.ZY5.GUILD_POWERUPS_OVERVIEW,
-                        section: x.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR
+                        page: _.ZY5.GUILD_POWERUPS_OVERVIEW,
+                        section: _.jXE.GUILD_POWERUPS_OVERVIEW_SIDEBAR
                     },
                     color: s.Ttl.CUSTOM,
                     size: s.PhG.LARGE,

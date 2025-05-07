@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(895924),
     b = n(311819),
     y = n(758199),
-    x = n(943762),
-    E = n(914498),
+    E = n(943762),
+    x = n(914498),
     v = n(208444),
     O = n(429551),
     j = n(973616),
@@ -32,8 +32,8 @@ var r = n(255367),
     Z = n(506071),
     R = n(226378),
     k = n(981631),
-    L = n(701488),
-    D = n(388032),
+    D = n(701488),
+    L = n(388032),
     M = n(484608);
 let U = i.memo((e) => {
     let { start: t } = e,
@@ -101,7 +101,7 @@ let F = i.memo(function (e) {
         J = null == Q ? void 0 : Q.details,
         $ = i.useMemo(() => {
             let e = new j.ZP(A);
-            return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = L.wT), e;
+            return null == e.embeddedActivityConfig && (e.embeddedActivityConfig = D.wT), e;
         }, [A]),
         ee = (0, f.s5)({
             userId: z,
@@ -144,7 +144,7 @@ let F = i.memo(function (e) {
                           isContextlessActivity: (null == W ? void 0 : W.location.kind) === l.E.CONTEXTLESS
                       });
         },
-        ea = en.disabled ? D.intl.string(D.t.JBnc7O) : D.intl.string(D.t.cX9uLS),
+        ea = en.disabled ? L.intl.string(L.t.JBnc7O) : L.intl.string(L.t.cX9uLS),
         eo = (0, v.z)($, () => {
             T.default.track(k.rMx.ACTIVITY_INSTANCE_EMBED_CLICKED, {
                 application_id: A.id,
@@ -162,12 +162,12 @@ let F = i.memo(function (e) {
     let ec = N.default.getCurrentUser(),
         eu = q.length,
         ed = null != (u = null == Q || null == (n = Q.timestamps) ? void 0 : n.start) ? u : null == Q ? void 0 : Q.created_at,
-        ep = et ? ea : null != J ? J : D.intl.string(D.t.oQn0h4),
-        em = (0, x.r)(Q),
+        ep = et ? ea : null != J ? J : L.intl.string(L.t.oQn0h4),
+        em = (0, E.r)(Q),
         ef = [
             {
-                label: et ? D.intl.string(D.t.cnBQPD) : D.intl.string(D.t.VJlc0d),
-                trackingArea: E.j_.PLAY,
+                label: et ? L.intl.string(L.t.cnBQPD) : L.intl.string(L.t.VJlc0d),
+                trackingArea: x.j_.PLAY,
                 onClick: el,
                 disabledReason: O,
                 submitting: ei
@@ -204,7 +204,7 @@ let F = i.memo(function (e) {
                                 })
                         }),
                     eu > 0 &&
-                        (0, r.jsx)(x.K, {
+                        (0, r.jsx)(E.K, {
                             activityUsers: q,
                             guildId: F,
                             activityText: em.text
@@ -214,7 +214,7 @@ let F = i.memo(function (e) {
             actions: ef,
             trackingConfig: {
                 id: A.id,
-                linkType: E.Un.ACTIVITY_INSTANCE
+                linkType: x.Un.ACTIVITY_INSTANCE
             }
         })
     );

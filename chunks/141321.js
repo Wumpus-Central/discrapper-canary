@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(388032),
     b = n(264634);
 function y(e) {
-    let { onOpen: t, onClose: n, className: y, 'data-jump-section': x } = e,
-        E = i.useRef(null),
+    let { onOpen: t, onClose: n, className: y, 'data-jump-section': E } = e,
+        x = i.useRef(null),
         v = (0, l.e7)([m.default], () => m.default.getCurrentUser()),
         O = (0, o.Q3)('RecentsButton'),
         j = i.useRef(null),
@@ -44,7 +44,7 @@ function y(e) {
                         }),
                     (0, r.jsx)(d.U, {
                         location: 'inbox-button',
-                        targetElementRef: E,
+                        targetElementRef: x,
                         children: (0, r.jsx)(
                             u.JO,
                             ((l = (function (e) {
@@ -74,7 +74,7 @@ function y(e) {
                             })({}, n)),
                             (o = o =
                                 {
-                                    ref: E,
+                                    ref: x,
                                     className: y,
                                     onClick: e,
                                     icon: a.xx7,
@@ -83,7 +83,7 @@ function y(e) {
                                     tooltip: t ? null : _.intl.string(_.t.GSmTKC),
                                     selected: t,
                                     showBadge: C || I || i,
-                                    'data-jump-section': x
+                                    'data-jump-section': E
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))

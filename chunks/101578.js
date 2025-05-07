@@ -23,7 +23,7 @@ let y = (e) => {
     let { channel: n, message: d, hideParty: p } = e,
         { analyticsLocations: g } = (0, c.ZP)(s.Z.INVITE_EMBED),
         y = (0, i.e7)([m.default], () => m.default.getId()),
-        x = (0, i.e7)(
+        E = (0, i.e7)(
             [f.Z],
             () => {
                 if (null == d.application) return f.Z.findActivity(d.author.id, (e) => e.type === h.IIU.LISTENING);
@@ -35,11 +35,11 @@ let y = (e) => {
             },
             [d, n, y]
         ),
-        E = (0, a.l)(),
+        x = (0, a.l)(),
         v = b(d),
         { data: O } = (0, u.IX)(null == (t = d.application) ? void 0 : t.id),
         j = null != O ? O : v;
-    return null != j && E
+    return null != j && x
         ? (0, r.jsx)(o.c, {
               app: j,
               channel: n,
@@ -49,7 +49,7 @@ let y = (e) => {
           })
         : (0, r.jsx)(l.Z, {
               className: _.container,
-              activity: x,
+              activity: E,
               activityActionType: null != d.activity ? d.activity.type : null,
               partyId: null != d.activity ? d.activity.party_id : null,
               userId: d.author.id,

@@ -35,7 +35,7 @@ function y(e) {
                     .value(),
             [t.oldestReadMessageId, n.guild_id, n.id]
         ),
-        x = i.useCallback((e, t) => {
+        E = i.useCallback((e, t) => {
             (0, m.ok)(e, t, _.on.INBOX);
         }, []);
     return (
@@ -59,7 +59,7 @@ function y(e) {
                         children: (0, r.jsx)(u.ZP, {
                             className: b.forumPost,
                             threadId: e.id,
-                            goToThread: x
+                            goToThread: E
                         })
                     },
                     e.id

@@ -9,39 +9,39 @@ var r = n(255367),
     u = n(481060),
     d = n(570140),
     h = n(893776),
-    p = n(314897),
-    g = n(626135),
-    f = n(70956),
-    m = n(970648),
+    g = n(314897),
+    p = n(626135),
+    m = n(70956),
+    f = n(970648),
     _ = n(981631),
     x = n(388032),
     E = n(493148);
 let b = 'mweb_handoff_nonce',
     v = 'mweb_handoff_nonce_expiration',
-    j = +f.Z.Millis.MINUTE,
+    O = +m.Z.Millis.MINUTE,
     I = new Set(['nonce_missing', 'nonce_expired', 'handoff_exchange']),
-    O = new Set(['deep_link_failed']),
+    j = new Set(['deep_link_failed']),
     S = () => {
         c.K.remove(b), c.K.remove(v);
     },
     N = () => {
-        let e = (0, o.e7)([p.default], () => p.default.getFingerprint()),
+        let e = (0, o.e7)([g.default], () => g.default.getFingerprint()),
             { fingerprint: t, handoff_token: n } = (0, l.parse)(window.location.search),
-            f = Array.isArray(t) ? (t.length > 1 ? t[0] : null) : t,
-            N = null != f ? f : null !== e ? e : void 0;
+            m = Array.isArray(t) ? (t.length > 1 ? t[0] : null) : t,
+            N = null != m ? m : null !== e ? e : void 0;
         i.useEffect(() => {
-            null !== f &&
-                e !== f &&
+            null !== m &&
+                e !== m &&
                 d.Z.dispatch({
                     type: 'FINGERPRINT',
-                    fingerprint: f
+                    fingerprint: m
                 });
-        }, [f, e]);
+        }, [m, e]);
         let [y, C] = i.useState(null),
             P = i.useCallback(
                 (e) => {
                     C(e),
-                        g.default.track(
+                        p.default.track(
                             _.rMx.MOBILE_WEB_HANDOFF_FAILURE,
                             {
                                 reason: e,
@@ -52,33 +52,33 @@ let b = 'mweb_handoff_nonce',
                 },
                 [C, N]
             ),
-            A = c.K.get(b);
+            T = c.K.get(b);
         if (
             ('null' === n && null === y && P('deep_link_failed'),
-            null != n && 'null' !== n && null == A && null === y && P('nonce_missing'),
+            null != n && 'null' !== n && null == T && null === y && P('nonce_missing'),
             i.useEffect(() => {
-                if (null != A) {
+                if (null != T) {
                     let e = c.K.get(v);
                     (null == e || Date.now() >= e) && (P('nonce_expired'), S());
                 }
-            }, [A, P]),
+            }, [T, P]),
             i.useEffect(() => {
                 null != n &&
                     'null' !== n &&
-                    null != A &&
+                    null != T &&
                     null == y &&
                     a.tn
                         .post({
                             url: _.ANM.HANDOFF_EXCHANGE,
                             body: {
-                                key: A,
+                                key: T,
                                 handoff_token: n
                             },
                             rejectWithError: !0
                         })
                         .then((e) => h.Z.loginToken(e.body.token, !1))
                         .then(() => {
-                            g.default.track(_.rMx.LOGIN_SUCCESSFUL, {
+                            p.default.track(_.rMx.LOGIN_SUCCESSFUL, {
                                 source: _.uRl.MOBILE_WEB_HANDOFF,
                                 is_new_user: !1,
                                 fingerprint: (0, s.K)(N)
@@ -93,27 +93,27 @@ let b = 'mweb_handoff_nonce',
                         .finally(() => {
                             S();
                         });
-            }, [n, A, y, N, P]),
+            }, [n, T, y, N, P]),
             null == N)
         )
             return null;
-        let Z =
+        let A =
             null == y
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [x.intl.string(x.t.uJ1Jsb), (0, r.jsx)('br', {}), x.intl.string(x.t.GHVWAg)]
                   })
-                : O.has(y)
+                : j.has(y)
                   ? x.intl.string(x.t.EPt55u)
                   : I.has(y)
                     ? x.intl.string(x.t.g87kTk)
                     : void 0;
-        return null != y && O.has(y)
+        return null != y && j.has(y)
             ? (0, r.jsx)('div', {
                   className: E.errorContainer,
                   children: (0, r.jsx)(u.Text, {
                       color: 'interactive-normal',
                       variant: 'text-sm/semibold',
-                      children: Z
+                      children: A
                   })
               })
             : (0, r.jsxs)('div', {
@@ -121,13 +121,13 @@ let b = 'mweb_handoff_nonce',
                   children: [
                       (0, r.jsx)(u.Text, {
                           variant: 'text-sm/semibold',
-                          children: Z
+                          children: A
                       }),
                       (0, r.jsx)(u.zxk, {
                           color: u.zxk.Colors.BRAND_INVERTED,
                           onClick: () => {
-                              let e = m.Z.generateNonce();
-                              c.K.set(b, e), c.K.set(v, Date.now() + j);
+                              let e = f.Z.generateNonce();
+                              c.K.set(b, e), c.K.set(v, Date.now() + O);
                               let t = new URL(_.x0X),
                                   n = new URLSearchParams(window.location.search);
                               n.delete('fingerprint'), n.delete('handoff_token');
@@ -136,7 +136,7 @@ let b = 'mweb_handoff_nonce',
                                   r.set('key', e),
                                   r.set('fingerprint', N),
                                   (t.search = r.toString()),
-                                  g.default.track(
+                                  p.default.track(
                                       _.rMx.DEEP_LINK_CLICKED,
                                       {
                                           fingerprint: (0, s.K)(N),

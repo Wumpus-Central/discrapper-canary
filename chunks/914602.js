@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r,
     i = n(255367),
     l = n(73800),
@@ -93,4 +93,4 @@ b(y, 'defaultProps', {
     isHorizontal: !1,
     isEmbed: !1
 });
-let x = y;
+let E = y;

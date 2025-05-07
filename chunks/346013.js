@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(336197),
     b = n(406432),
     y = n(348238),
-    x = n(38267),
-    E = n(884902),
+    E = n(38267),
+    x = n(884902),
     v = n(670188),
     O = n(695346),
     j = n(271383),
@@ -32,7 +32,7 @@ var r = n(255367),
     Z = n(388032),
     R = n(70249),
     k = n(527455);
-function L(e) {
+function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,7 +57,7 @@ function L(e) {
     }
     return e;
 }
-function D(e, t) {
+function L(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -79,7 +79,7 @@ function M(e) {
     var t, n, l;
     let { embedUrl: M, message: U, channel: F } = e,
         B = (0, P.J)(M, U),
-        { setPopout: G } = (0, x.Z)(U.id, w.d$),
+        { setPopout: G } = (0, E.Z)(U.id, w.d$),
         H = (0, y.qo)(U, F, G, !0),
         V = O.QK.useSetting(),
         z = (0, N.n)(),
@@ -100,7 +100,7 @@ function M(e) {
             var e;
             return [null != (e = null == J ? void 0 : J.colorString) ? e : 'inherit', null == J ? void 0 : J.colorStrings, null == J ? void 0 : J.colorRoleId];
         }, [J]),
-        er = (0, E.X)(null == J ? void 0 : J.guildId, et),
+        er = (0, x.X)(null == J ? void 0 : J.guildId, et),
         { reducedMotion: ei } = i.useContext(u.Sfi),
         [el, ea] = i.useState(!1),
         eo = i.useCallback(() => {
@@ -218,7 +218,7 @@ function M(e) {
                                             onMouseLeave: ep,
                                             children: (0, r.jsx)(
                                                 u.qEK,
-                                                D(L({}, e), {
+                                                L(D({}, e), {
                                                     size: u.EFr.SIZE_40,
                                                     src: ed,
                                                     'aria-label': Z.intl.string(Z.t.KXz3XF),
@@ -278,7 +278,7 @@ function M(e) {
                                                                   children: (e) =>
                                                                       (0, r.jsx)(
                                                                           u.rz2,
-                                                                          D(L({}, e), {
+                                                                          L(D({}, e), {
                                                                               name: B.authorName,
                                                                               color: ee,
                                                                               roleColors: er,

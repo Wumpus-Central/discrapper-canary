@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(695346),
     b = n(592125),
     y = n(731290),
-    x = n(944486),
-    E = n(455199),
+    E = n(944486),
+    x = n(455199),
     v = n(655354),
     O = n(999671),
     j = n(324081),
@@ -33,15 +33,15 @@ let P = {
     }
 };
 function A(e, t, n) {
-    let r = t ? E.Z.guildFilter : null,
-        i = t ? E.Z.roleFilter : null,
-        l = t ? E.Z.everyoneFilter : null,
+    let r = t ? x.Z.guildFilter : null,
+        i = t ? x.Z.roleFilter : null,
+        l = t ? x.Z.everyoneFilter : null,
         a = null;
     null != e && null != r && (a = r === I.NgX.ALL_SERVERS ? null : e.getGuildId()), u.Z.fetchRecentMentions(n, I.DJj, a, i, l);
 }
 function w(e) {
     let { setTab: t, onJump: n, badgeState: l, closePopout: c } = e,
-        h = (0, o.e7)([b.Z, x.Z], () => b.Z.getChannel(x.Z.getChannelId())),
+        h = (0, o.e7)([b.Z, E.Z], () => b.Z.getChannel(E.Z.getChannelId())),
         {
             messages: _,
             hasMore: y,
@@ -49,22 +49,22 @@ function w(e) {
             guildFilter: j,
             roleFilter: C,
             everyoneFilter: P
-        } = (0, o.cj)([E.Z], () => ({
-            messages: E.Z.getMentions(),
-            hasMore: E.Z.hasMore,
-            loading: E.Z.loading,
-            guildFilter: E.Z.guildFilter,
-            roleFilter: E.Z.roleFilter,
-            everyoneFilter: E.Z.everyoneFilter
+        } = (0, o.cj)([x.Z], () => ({
+            messages: x.Z.getMentions(),
+            hasMore: x.Z.hasMore,
+            loading: x.Z.loading,
+            guildFilter: x.Z.guildFilter,
+            roleFilter: x.Z.roleFilter,
+            everyoneFilter: x.Z.everyoneFilter
         })),
         w = (0, g.Us)({ location: 'RecentMentions' }),
         R = (0, m.Z)(j),
-        L = (0, m.Z)(C),
-        D = (0, m.Z)(P);
+        D = (0, m.Z)(C),
+        L = (0, m.Z)(P);
     i.useEffect(() => {
-        if (!E.Z.hasLoadedEver) return void A(h, !0);
-        ((null != R && j !== R) || (null != L && C !== L) || (null != D && P !== D)) && A(h, !0);
-    }, [R, j, L, C, D, P, h, !0]),
+        if (!x.Z.hasLoadedEver) return void A(h, !0);
+        ((null != R && j !== R) || (null != D && C !== D) || (null != L && P !== L)) && A(h, !0);
+    }, [R, j, D, C, L, P, h, !0]),
         (0, p.ZP)(() => {
             (null == _ ? void 0 : _.some(f.k5)) && (u.Z.clearMentions(), A(h, !0));
         }),

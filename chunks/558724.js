@@ -71,8 +71,8 @@ let b = {
         lastSeen: null
     },
     y = b,
-    x = {},
-    E = null,
+    E = {},
+    x = null,
     v = 86400000;
 var O = (((i = O || {}).IS_OWNER = 'is_owner'), (i.IS_ADMIN = 'is_admin'), (i.IS_COMMUNITY = 'is_community'), (i.GUILD_SIZE = 'guild_size'), (i.IS_HUB = 'is_hub'), (i.IS_VIEWING = 'is_viewing'), (i.GUILD_PERMISSIONS = 'guild_permissions'), (i.GUILD_SIZE_ALL = 'guild_size_all'), i);
 let j = new Set(Object.values(O));
@@ -113,7 +113,7 @@ function C(e) {
                     u = (null == s ? void 0 : s.id) === o.ownerId,
                     h = d.Z.can(f.Plq.ADMINISTRATOR, o);
                 if ((t.includes('is_owner') && !u) || (t.includes('is_admin') && !h)) continue;
-                null == (x = null != x ? x : {})[e.key] && (x[e.key] = e);
+                null == (E = null != E ? E : {})[e.key] && (E[e.key] = e);
                 let g = p.Z.getGuildId(),
                     _ = null != g && g === o.id;
                 if ((!t.includes('is_viewing') || _) && !i) return !0;
@@ -126,18 +126,18 @@ function S(e) {
     let { survey: t } = e;
     if (((y.lastFetched = Date.now()), null == y.hiddenSurveys && (y.hiddenSurveys = {}), null != t && null == y.hiddenSurveys[t.key])) {
         if (!C(t)) return;
-        E = t;
+        x = t;
     }
 }
 function I() {
-    if (null != E && (C(E) || ((E = null), 0))) return !1;
-    let e = Object.values((x = null != x ? x : {}))[0];
+    if (null != x && (C(x) || ((x = null), 0))) return !1;
+    let e = Object.values((E = null != E ? E : {}))[0];
     null != e && C(e)
         ? S({
               type: 'SURVEY_FETCHED',
               survey: e
           })
-        : null != E && (E = null);
+        : null != x && (x = null);
 }
 class N extends (r = a.ZP.PersistedStore) {
     initialize(e) {
@@ -147,7 +147,7 @@ class N extends (r = a.ZP.PersistedStore) {
         return y;
     }
     getCurrentSurvey() {
-        return E;
+        return x;
     }
     getSurveyOverride() {
         return y.surveyOverride;
@@ -180,7 +180,7 @@ let T = new N(o.Z, {
     SURVEY_FETCHED: S,
     SURVEY_HIDE: function (e) {
         let { key: t } = e;
-        (y.hiddenSurveys[t] = !0), (E = null), (x = null != x ? x : {}), delete x[t];
+        (y.hiddenSurveys[t] = !0), (x = null), (E = null != E ? E : {}), delete E[t];
     },
     SURVEY_OVERRIDE: function (e) {
         let { id: t } = e;

@@ -1,6 +1,6 @@
 n.d(t, {
     F4: () => i,
-    vc: () => s
+    vc: () => l
 });
 let r = (0, n(818083).B)({
         kind: 'user',
@@ -46,4 +46,4 @@ let r = (0, n(818083).B)({
         ]
     }),
     i = () => r.useExperiment({ location: '83ca1a_3' }, { autoTrackExposure: !1 }),
-    s = () => r.getCurrentConfig({ location: '83ca1a_4' }, { autoTrackExposure: !1 }).suggestions;
+    l = () => r.getCurrentConfig({ location: '83ca1a_4' }, { autoTrackExposure: !1 }).suggestions;

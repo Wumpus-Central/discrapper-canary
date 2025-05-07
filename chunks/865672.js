@@ -85,7 +85,7 @@ function p(e, t, n) {
 function h(e) {
     return i.useMemo(() => {
         let t;
-        if ('string' != typeof e) return e;
+        if (null == e) return e;
         let n = new RegExp(d),
             i = [],
             o = 0;

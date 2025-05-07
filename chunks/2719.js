@@ -195,7 +195,7 @@ function W(e) {
                                         return (t) => (0, i.jsx)(e, F({ source: U.Kq.USER_SETTINGS_EDIT }, t));
                                     }
                                     {
-                                        let { default: e } = await Promise.all([n.e('75492'), n.e('84956'), n.e('42758')]).then(n.bind(n, 2702));
+                                        let { default: e } = await Promise.all([n.e('75492'), n.e('42758')]).then(n.bind(n, 2702));
                                         return (t) => (0, i.jsx)(e, F({}, t));
                                     }
                                 }),

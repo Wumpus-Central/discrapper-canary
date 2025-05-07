@@ -34,11 +34,11 @@ function d(t, e = {}) {
             let e = (0, I.qp)(t);
             return (0, s.D)((0, _.nZ)(), e), o.X && n.kg.log('[Tracing] Started span is an idle span'), e;
         })(t);
-    function v() {
+    function C() {
         a && (clearTimeout(a), (a = void 0));
     }
-    function C(t) {
-        v(),
+    function v(t) {
+        C(),
             (a = setTimeout(() => {
                 !A && 0 === f.size && N && ((p = 'idleTimeout'), m.end(t));
             }, L));
@@ -94,23 +94,23 @@ function d(t, e = {}) {
         T.push(
             g.on('spanStart', (t) => {
                 var e;
-                A || t === m || (0, E.XU)(t).timestamp || ((0, E.Dp)(m).includes(t) && ((e = t.spanContext().spanId), v(), f.set(e, !0), S((0, r.ph)() + O / 1000)));
+                A || t === m || (0, E.XU)(t).timestamp || ((0, E.Dp)(m).includes(t) && ((e = t.spanContext().spanId), C(), f.set(e, !0), S((0, r.ph)() + O / 1000)));
             })
         ),
         T.push(
             g.on('spanEnd', (t) => {
                 if (!A) {
                     var e;
-                    (e = t.spanContext().spanId), f.has(e) && f.delete(e), 0 === f.size && C((0, r.ph)() + L / 1000);
+                    (e = t.spanContext().spanId), f.has(e) && f.delete(e), 0 === f.size && v((0, r.ph)() + L / 1000);
                 }
             })
         ),
         T.push(
             g.on('idleSpanEnableAutoFinish', (t) => {
-                t === m && ((N = !0), C(), f.size && S());
+                t === m && ((N = !0), v(), f.size && S());
             })
         ),
-        e.disableAutoFinish || C(),
+        e.disableAutoFinish || v(),
         setTimeout(() => {
             A ||
                 (m.setStatus({

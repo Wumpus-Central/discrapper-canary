@@ -26,8 +26,8 @@ var r = n(255367),
     _ = n(524444),
     b = n(981631),
     y = n(388032),
-    x = n(324846);
-function E(e) {
+    E = n(324846);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -74,7 +74,7 @@ function O(e) {
     var t;
     let n = e.item.originalItem;
     return (0, _.Yi)(
-        v(E({}, e), {
+        v(x({}, e), {
             alt: n.description,
             src: (0, m.q)({
                 proxyURL: n.proxy_url,
@@ -106,7 +106,7 @@ function j(e) {
             return (0, f.yE)(null != (e = n.flags) ? e : 0, b.J0y.IS_CLIP)
                 ? (0, r.jsxs)(o.DY, {
                       text: y.intl.string(y.t['/fgfWl']),
-                      className: x.clipPill,
+                      className: E.clipPill,
                       children: [
                           (0, r.jsx)(s.AlX, {
                               size: 'xs',
@@ -126,7 +126,7 @@ function j(e) {
         ? null
         : (c.searchParams.append('format', 'webp'),
           (0, _.lV)(
-              v(E({}, e), {
+              v(x({}, e), {
                   alt: n.description,
                   poster: c.toString(),
                   fileSize: n.size,
@@ -151,7 +151,7 @@ function j(e) {
 function C(e) {
     let t = e.item.originalItem;
     return (0, _.hX)(
-        v(E({}, e), {
+        v(x({}, e), {
             fileSize: t.size,
             fileName: (0, g.Z)(t),
             src: t.url
@@ -184,7 +184,7 @@ function S(e) {
             [t]
         );
     return (0, _.wj)(
-        v(E({}, e), {
+        v(x({}, e), {
             fileSize: r.size,
             fileName: (0, g.Z)(r),
             src: r.url,
@@ -200,7 +200,7 @@ function S(e) {
 function I(e) {
     let t = e.item.originalItem;
     return (0, _.xi)(
-        v(E({}, e), {
+        v(x({}, e), {
             url: t.url,
             fileName: (0, g.Z)(t),
             fileSize: t.size,
@@ -211,7 +211,7 @@ function I(e) {
 function N(e) {
     let t = e.item.originalItem;
     return (0, _.ur)(
-        v(E({}, e), {
+        v(x({}, e), {
             url: t.url,
             fileName: (0, g.Z)(t),
             fileSize: t.size

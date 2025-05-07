@@ -29,10 +29,10 @@ function L(t) {
     return S('fid', t, y, n);
 }
 function h(t) {
-    return S('ttfb', t, v, o);
+    return S('ttfb', t, C, o);
 }
 function O(t) {
-    return S('inp', t, C, i);
+    return S('inp', t, v, i);
 }
 function D(t, e) {
     return (
@@ -91,12 +91,12 @@ function m() {
         { reportAllChanges: !0 }
     );
 }
-function v() {
+function C() {
     return (0, f.m)((t) => {
         g('ttfb', { metric: t }), (o = t);
     });
 }
-function C() {
+function v() {
     return (0, I.Y)((t) => {
         g('inp', { metric: t }), (i = t);
     });

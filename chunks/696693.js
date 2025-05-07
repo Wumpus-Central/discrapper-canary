@@ -13,5 +13,7 @@ e.exports = {
     hidden: 'hidden_cf1d1c',
     title: 'title_cf1d1c',
     subtext: 'subtext_cf1d1c',
-    ctaBtn: 'ctaBtn_cf1d1c'
+    ctaBtn: 'ctaBtn_cf1d1c',
+    orbsBalance: 'orbsBalance_cf1d1c',
+    orbsBalanceIcon: 'orbsBalanceIcon_cf1d1c'
 };

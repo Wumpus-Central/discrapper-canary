@@ -1,6 +1,6 @@
 n.d(t, {
     $e: () => w,
-    $w: () => D,
+    $w: () => L,
     Og: () => U,
     ZY: () => M,
     sc: () => k,
@@ -25,8 +25,8 @@ var r = n(255367),
     _ = n(203143),
     b = n(79390),
     y = n(839963),
-    x = n(294608),
-    E = n(65145),
+    E = n(294608),
+    x = n(65145),
     v = n(981631),
     O = n(388032),
     j = n(56228);
@@ -132,7 +132,7 @@ function T(e) {
 }
 function P(e) {
     let { className: t, onClick: n, isSelected: i, isFirstAnswer: l, children: o } = e,
-        { pollAnswerRef: c } = (0, E.dv)();
+        { pollAnswerRef: c } = (0, x.dv)();
     return (0, r.jsx)(s.P3F, {
         role: 'checkbox',
         className: a()(t, j.enabled),
@@ -144,7 +144,7 @@ function P(e) {
 }
 function A(e) {
     let { className: t, children: n, onClick: i, isSelected: l, hasSelectedAnyAnswer: o, isFirstAnswer: c } = e,
-        { pollAnswerRef: u } = (0, E.dv)();
+        { pollAnswerRef: u } = (0, x.dv)();
     return (0, r.jsx)(s.P3F, {
         role: 'radio',
         className: a()(t, j.enabled),
@@ -204,8 +204,8 @@ function w(e) {
 }
 function Z(e) {
     let { className: t, answer: n, children: l, hasSelectedAnyAnswer: o, isFirstAnswer: s, elementType: c } = e,
-        { channelId: u, messageId: d } = (0, x.pE)(),
-        p = (0, x.$B)(n.style),
+        { channelId: u, messageId: d } = (0, E.pE)(),
+        p = (0, E.$B)(n.style),
         m = !0 === n.isSelected,
         f = i.useCallback(() => {
             _.Z.handlePollAnswerTapped({
@@ -267,7 +267,7 @@ function k(e) {
         animated: n.animated
     });
 }
-function L(e, t) {
+function D(e, t) {
     return null != e
         ? (0, r.jsx)('div', {
               className: e,
@@ -275,16 +275,16 @@ function L(e, t) {
           })
         : t;
 }
-function D(e) {
+function L(e) {
     let { media: t, containerClassName: n, attachmentClassName: i, emojiClassName: l, fallback: a } = e,
-        { message: o } = (0, x.GF)();
+        { message: o } = (0, E.GF)();
     if (null != t.attachmentIds && t.attachmentIds.length > 0) {
         let e = o.attachments.find((e) => {
             var n;
             return e.id === (null == (n = t.attachmentIds) ? void 0 : n[0]);
         });
         if (null != e)
-            return L(
+            return D(
                 n,
                 (0, r.jsx)(R, {
                     className: i,
@@ -293,7 +293,7 @@ function D(e) {
             );
     }
     return null != t.emoji
-        ? L(
+        ? D(
               n,
               (0, r.jsx)(k, {
                   className: l,

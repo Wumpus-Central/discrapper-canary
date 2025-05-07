@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(906467),
     b = n(430824),
     y = n(496675),
-    x = n(699516),
-    E = n(594174),
+    E = n(699516),
+    x = n(594174),
     v = n(100604),
     O = n(694784),
     j = n(39154),
@@ -45,7 +45,7 @@ function N() {
 function T(e) {
     let { message: t, snapshot: n, index: d } = e,
         p = i.useMemo(() => new v.r(t, n, d), [t, n, d]),
-        m = (0, a.e7)([g.Z, E.default, x.Z, y.Z, b.Z, u.Z], () => p.getForwardInfo(g.Z, E.default, x.Z, y.Z, b.Z, u.Z).footerInfo, [p], o.Z),
+        m = (0, a.e7)([g.Z, x.default, E.Z, y.Z, b.Z, u.Z], () => p.getForwardInfo(g.Z, x.default, E.Z, y.Z, b.Z, u.Z).footerInfo, [p], o.Z),
         f = i.useCallback(() => {
             (0, O.Z)(t);
         }, [t]);
@@ -83,7 +83,7 @@ function P(e) {
         u = h.NA.useSetting(),
         b = (0, a.e7)([_.Z], () => _.Z.isDeveloper),
         y = (0, d.A)((null != (t = s.editedTimestamp) ? t : s.timestamp).valueOf()),
-        { content: x, hasSpoilerEmbeds: E } = (0, m.Z)(s, {
+        { content: E, hasSpoilerEmbeds: x } = (0, m.Z)(s, {
             hideSimpleEmbedContent: c && u,
             isInteracting: !1,
             formatInline: !1,
@@ -109,7 +109,7 @@ function P(e) {
                               (0, r.jsx)(N, {}),
                               (0, r.jsx)(p.ZP, {
                                   message: s,
-                                  content: x
+                                  content: E
                               }),
                               (0, f.Z)({
                                   channelMessageProps: {
@@ -117,7 +117,7 @@ function P(e) {
                                       channel: v,
                                       compact: O
                                   },
-                                  hasSpoilerEmbeds: E,
+                                  hasSpoilerEmbeds: x,
                                   isInteracting: !1,
                                   isMessageSnapshot: !0,
                                   renderThreadAccessory: !1

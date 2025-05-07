@@ -15,11 +15,11 @@ var i = n(255367),
     f = n(869783),
     b = n(888723);
 let _ = (e) => {
-    let { name: t, title: n, description: s, descriptionCta: _, previewImage: x, videoUrl: E, shouldLoadVideo: C, index: j, size: O, isReducedMotion: S, onClick: v } = e,
-        T = (0, g.rO)(),
-        I = r.useRef(null),
-        N = r.useRef(0),
-        y = (function (e) {
+    let { name: t, title: n, description: s, descriptionCta: _, previewImage: x, videoUrl: E, shouldLoadVideo: C, index: j, size: O, customVideoStyle: S, isReducedMotion: v, onClick: T } = e,
+        I = (0, g.rO)(),
+        N = r.useRef(null),
+        y = r.useRef(0),
+        A = (function (e) {
             let t;
             switch (e) {
                 case p.NA.EMOJIS:
@@ -48,19 +48,19 @@ let _ = (e) => {
             }
             return t;
         })(t),
-        A = (0, d.ZP)(),
-        P = (0, o.wj)(A),
-        R = P ? c.Ttl.WHITE : c.Ttl.BRAND,
-        D = (0, a.debounce)(() => {
+        P = (0, d.ZP)(),
+        R = (0, o.wj)(P),
+        D = R ? c.Ttl.WHITE : c.Ttl.BRAND,
+        Z = (0, a.debounce)(() => {
             m.default.track(h.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, a.snakeCase)(t) });
         }, 800),
-        Z = () => {
-            null == I.current || S || ((I.current.currentTime = N.current), I.current.play());
-        },
         w = () => {
-            null == I.current || S || ((N.current = I.current.currentTime), I.current.pause());
+            null == N.current || v || ((N.current.currentTime = y.current), N.current.play());
         },
-        k = () =>
+        k = () => {
+            null == N.current || v || ((y.current = N.current.currentTime), N.current.pause());
+        },
+        L = () =>
             (0, i.jsxs)('div', {
                 className: l()({
                     [b.largeTextBox]: O === p.y$.LARGE,
@@ -69,7 +69,7 @@ let _ = (e) => {
                 }),
                 children: [
                     (0, i.jsx)(c.X6q, {
-                        variant: 'heading-xxl/extrabold',
+                        variant: O === p.y$.SMALL ? 'heading-xl/extrabold' : 'heading-xxl/extrabold',
                         color: 'header-primary',
                         className: l()({
                             [b.largeBoxHeader]: O === p.y$.LARGE,
@@ -81,25 +81,23 @@ let _ = (e) => {
                     (0, i.jsx)(c.Text, {
                         variant: 'text-md/medium',
                         color: 'text-muted',
-                        className: b.bentoBoxDescription,
                         children: s
                     }),
                     null != _ &&
-                        null != v &&
+                        null != T &&
                         (0, i.jsx)(c.zxk, {
                             look: c.iLD.OUTLINED,
-                            color: R,
-                            className: l()(b.bentoBoxButton, P ? b.bentoBoxButtonWhite : b.bentoBoxButtonBrand, { [b.bentoBoxButtonPadding]: O !== p.y$.LARGE }),
+                            color: D,
+                            className: l()(b.bentoBoxButton, R ? b.bentoBoxButtonWhite : b.bentoBoxButtonBrand),
                             onClick: () => {
-                                D(), v();
+                                Z(), T();
                             },
                             children: _
                         })
                 ]
             }),
-        L = (e) => {
-            let { isLeft: t } = e;
-            return (0, i.jsx)('div', {
+        B = () =>
+            (0, i.jsx)('div', {
                 className: l()({
                     [b.largeBoxArtContainer]: O === p.y$.LARGE,
                     [b.mediumBoxArtContainer]: O === p.y$.MEDIUM,
@@ -115,37 +113,36 @@ let _ = (e) => {
                         loop: !0,
                         className: l()({
                             [b.largeBoxVideo]: O === p.y$.LARGE,
-                            [b.largeBoxVideoLeft]: t && O === p.y$.LARGE,
                             [b.mediumBoxVideo]: O === p.y$.MEDIUM,
-                            [b.smallBoxVideo]: O === p.y$.SMALL
+                            [b.smallBoxVideo]: O === p.y$.SMALL,
+                            [S]: null != S
                         }),
-                        ref: I,
+                        ref: N,
                         children: (0, i.jsx)('source', {
                             src: E,
-                            type: T ? f.m.MP4 : f.m.WEBM
+                            type: I ? f.m.MP4 : f.m.WEBM
                         })
                     },
                     E
                 )
             });
-        },
-        B = j % 2 != 0;
     return (0, i.jsx)('div', {
-        className: l()(y, {
+        className: l()(A, {
             [b.largeBoxContainer]: O === p.y$.LARGE,
             [b.mediumBoxContainer]: O === p.y$.MEDIUM,
             [b.smallBoxContainer]: O === p.y$.SMALL
         }),
-        onMouseEnter: Z,
-        onFocus: Z,
-        onBlur: w,
-        onMouseLeave: w,
-        children: B
-            ? (0, i.jsxs)(i.Fragment, {
-                  children: [(0, i.jsx)(k, {}), (0, i.jsx)(L, { isLeft: B })]
-              })
-            : (0, i.jsxs)(i.Fragment, {
-                  children: [(0, i.jsx)(L, { isLeft: B }), (0, i.jsx)(k, {})]
-              })
+        onMouseEnter: w,
+        onFocus: w,
+        onBlur: k,
+        onMouseLeave: k,
+        children:
+            j % 2 != 0
+                ? (0, i.jsxs)(i.Fragment, {
+                      children: [(0, i.jsx)(L, {}), (0, i.jsx)(B, {})]
+                  })
+                : (0, i.jsxs)(i.Fragment, {
+                      children: [(0, i.jsx)(B, {}), (0, i.jsx)(L, {})]
+                  })
     });
 };

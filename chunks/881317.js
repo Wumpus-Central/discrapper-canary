@@ -9,10 +9,10 @@ var r = n(255367),
     u = n(388905),
     d = n(353926),
     h = n(82554),
-    p = n(726521),
-    g = n(185625),
-    f = n(314897),
-    m = n(63063),
+    g = n(726521),
+    p = n(185625),
+    m = n(314897),
+    f = n(63063),
     _ = n(981631),
     x = n(388032),
     E = n(793613),
@@ -42,7 +42,7 @@ function v(e) {
     }
     return e;
 }
-function j(e, t) {
+function O(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -66,7 +66,7 @@ let I = {
         [h.BM.USER]: x.t.F4jrRU,
         [h.BM.GUILD]: x.t.gH3aMj
     },
-    O = (e) => {
+    j = (e) => {
         let { title: t, menuType: i } = e,
             s = () => {
                 (0, o.ZDy)(async () => {
@@ -74,7 +74,7 @@ let I = {
                     return (t) =>
                         (0, r.jsx)(
                             e,
-                            j(v({}, t), {
+                            O(v({}, t), {
                                 onSuccess: a,
                                 headerText: x.intl.string(x.t.ZLRYGR),
                                 confirmButtonText: x.intl.string(x.t.PDTjLC),
@@ -86,12 +86,12 @@ let I = {
             },
             a = (e) => {
                 let t = async () => {
-                        await (0, g.yL)(i, e);
+                        await (0, p.yL)(i, e);
                     },
-                    s = async (t) => await (0, g.RV)(i, e, t),
+                    s = async (t) => await (0, p.RV)(i, e, t),
                     a = (e) => {
                         let t = null == e ? void 0 : e.token;
-                        i === h.BM.MESSAGE ? (0, p.eE)(t) : i === h.BM.USER ? (0, p.JM)(t) : i === h.BM.GUILD && (0, p.FO)(t);
+                        i === h.BM.MESSAGE ? (0, g.eE)(t) : i === h.BM.USER ? (0, g.JM)(t) : i === h.BM.GUILD && (0, g.FO)(t);
                     };
                 t(),
                     (0, o.ZDy)(async () => {
@@ -99,7 +99,7 @@ let I = {
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                j(v({}, n), {
+                                O(v({}, n), {
                                     onFormSubmit: s,
                                     onResend: t,
                                     onSuccess: a,
@@ -129,10 +129,10 @@ let I = {
     S = () => {
         let [e, t] = i.useState(!0),
             [n, l] = i.useState([]),
-            h = (0, s.e7)([f.default], () => f.default.isAuthenticated()),
-            p = (0, s.e7)([d.Z], () => d.Z.hasLoadedExperiments),
+            h = (0, s.e7)([m.default], () => m.default.isAuthenticated()),
+            g = (0, s.e7)([d.Z], () => d.Z.hasLoadedExperiments),
             v = () => {
-                (0, g.Jj)()
+                (0, p.Jj)()
                     .then((e) => {
                         let {
                             body: { capabilities: n }
@@ -155,10 +155,10 @@ let I = {
             }, [h]),
             i.useEffect(() => {
                 (async () => {
-                    p || (await a.Z.getLocationMetadata(), a.Z.getExperiments());
+                    g || (await a.Z.getLocationMetadata(), a.Z.getExperiments());
                 })();
-            }, [p]),
-            e || !p
+            }, [g]),
+            e || !g
                 ? (0, r.jsx)(u.ZP, { children: (0, r.jsx)(o.$jN, {}) })
                 : null != n &&
                   n.length > 0 &&
@@ -170,7 +170,7 @@ let I = {
                           }),
                           (0, r.jsx)(u.DK, {
                               className: b.marginBottom8,
-                              children: x.intl.format(x.t['532l+v'], { supportURL: m.Z.getArticleURL(_.BhN.COPYRIGHT_AND_IP_POLICY) })
+                              children: x.intl.format(x.t['532l+v'], { supportURL: f.Z.getArticleURL(_.BhN.COPYRIGHT_AND_IP_POLICY) })
                           }),
                           (0, r.jsx)('div', {
                               className: E.container,
@@ -178,7 +178,7 @@ let I = {
                                   null == I[e]
                                       ? null
                                       : (0, r.jsx)(
-                                            O,
+                                            j,
                                             {
                                                 title: x.intl.string(I[e]),
                                                 menuType: e

@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(626135),
     b = n(709054),
     y = n(591759),
-    x = n(833592),
-    E = n(497089),
+    E = n(833592),
+    x = n(497089),
     v = n(178480),
     O = n(418316),
     j = n(382865),
@@ -68,7 +68,7 @@ function k(e) {
         })
     });
 }
-function L(e) {
+function D(e) {
     let { item: t } = e,
         n = Z,
         i = P.intl.string(P.t.SJTHJS);
@@ -92,7 +92,7 @@ function L(e) {
         })
     );
 }
-function D(e) {
+function L(e) {
     let { applicationId: t } = e,
         n = (0, l.e7)([c.Z], () => c.Z.getApplication(t));
     return null == n ? (0, r.jsx)('div', {}) : (0, r.jsx)(p.Z, { application: n }, n.id);
@@ -103,7 +103,7 @@ let M = i.memo(function (e) {
             { analyticsLocations: c } = (0, s.ZP)(),
             p = (0, C.I)(l, o),
             f = i.useCallback(async () => {
-                if ((p || (0, x.wt)(l), null != l.item_enum && l.item_enum === E.AM.FIND_FRIENDS))
+                if ((p || (0, E.wt)(l), null != l.item_enum && l.item_enum === x.AM.FIND_FRIENDS))
                     return void (0, a.ZDy)(async () => {
                         let { default: e } = await n.e('6074').then(n.bind(n, 443189));
                         return (t) =>
@@ -154,7 +154,7 @@ let M = i.memo(function (e) {
                         } else await (0, u.Z)(r);
                     }
                     _.default.track(T.rMx.NOTIFICATION_CENTER_ACTION, {
-                        action_type: E.ud.CLICKED,
+                        action_type: x.ud.CLICKED,
                         notification_center_id: l.id,
                         item_type: l.type,
                         acked: p
@@ -162,9 +162,9 @@ let M = i.memo(function (e) {
                 }
             }, [l, p, c]),
             h = null;
-        l.type === E.O7.INCOMING_FRIEND_REQUESTS && null != l.other_user
+        l.type === x.O7.INCOMING_FRIEND_REQUESTS && null != l.other_user
             ? (h = (0, r.jsx)(I.Z, { userId: l.other_user.id }))
-            : l.type === E.O7.INCOMING_GAME_FRIEND_REQUESTS &&
+            : l.type === x.O7.INCOMING_GAME_FRIEND_REQUESTS &&
               null != l.other_user &&
               (h = (0, r.jsx)(I.Z, {
                   userId: l.other_user.id,
@@ -173,7 +173,7 @@ let M = i.memo(function (e) {
         let g = null != l.local_id,
             j = (0, O.Z)({
                 item: l,
-                renderApplication: (e) => (0, r.jsx)(D, { applicationId: e })
+                renderApplication: (e) => (0, r.jsx)(L, { applicationId: e })
             });
         return (0, r.jsxs)('div', {
             className: A.row,
@@ -189,7 +189,7 @@ let M = i.memo(function (e) {
                         (0, r.jsxs)('div', {
                             className: A.body,
                             children: [
-                                'lifecycle_item' === l.type && null != l.item_enum && (0, r.jsx)(L, { item: l }),
+                                'lifecycle_item' === l.type && null != l.item_enum && (0, r.jsx)(D, { item: l }),
                                 (0, r.jsx)(a.Text, {
                                     variant: 'text-md/normal',
                                     color: p ? 'text-muted' : 'text-normal',

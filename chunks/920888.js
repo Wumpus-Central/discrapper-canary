@@ -60,11 +60,11 @@ function y(e, t) {
         e
     );
 }
-let x = (e, t) => (null == e && null == t) || e === t,
-    E = (e, t) => e.findIndex((e) => x(e.emoji.id, null == t ? void 0 : t.id) && x(e.emoji.name, null == t ? void 0 : t.name)),
+let E = (e, t) => (null == e && null == t) || e === t,
+    x = (e, t) => e.findIndex((e) => E(e.emoji.id, null == t ? void 0 : t.id) && E(e.emoji.name, null == t ? void 0 : t.name)),
     v = (e, t) => {
         if (null == t) return e;
-        let n = E(e, t);
+        let n = x(e, t);
         return n < 0 ? e : [e[n], ...e.slice(0, n), ...e.slice(n + 1)];
     };
 class O extends i.PureComponent {
@@ -80,15 +80,15 @@ class O extends i.PureComponent {
               : null;
     }
     render() {
-        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: i, isGuest: l, isPendingMember: _, isForumToolbar: b, channel: y, className: x, forceAddReactions: E, reactionClassName: v, useChatFontScaling: O, forceHideReactionCreates: j, remainingReactions: C, combinedReactions: S, visibleReactionsCount: I } = this.props,
+        let { message: e, disableReactionCreates: t, disableReactionUpdates: n, isLurking: i, isGuest: l, isPendingMember: _, isForumToolbar: b, channel: y, className: E, forceAddReactions: x, reactionClassName: v, useChatFontScaling: O, forceHideReactionCreates: j, remainingReactions: C, combinedReactions: S, visibleReactionsCount: I } = this.props,
             { disableTransitionAppear: N } = this.state,
             T = O ? g : h,
             P = I > 0;
-        if (!P && !E) return null;
-        let A = E || P;
+        if (!P && !x) return null;
+        let A = x || P;
         return (0, r.jsxs)(o.W, {
             component: 'div',
-            className: a()(T.reactions, x),
+            className: a()(T.reactions, E),
             transitionAppear: !N,
             role: 'group',
             transitionLeave: !1,

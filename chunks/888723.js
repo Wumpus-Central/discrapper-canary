@@ -15,11 +15,11 @@ e.exports = {
     largeBoxVideo: 'largeBoxVideo_abac7b',
     mediumBoxVideo: 'mediumBoxVideo_abac7b',
     smallBoxVideo: 'smallBoxVideo_abac7b',
+    elevateProfileVideo: 'elevateProfileVideo_abac7b',
+    shareNitroVideo: 'shareNitroVideo_abac7b',
     largeTextBox: 'largeTextBox_abac7b',
     largeBoxHeader: 'largeBoxHeader_abac7b',
-    bentoBoxDescription: 'bentoBoxDescription_abac7b',
     bentoBoxButton: 'bentoBoxButton_abac7b',
-    bentoBoxButtonPadding: 'bentoBoxButtonPadding_abac7b',
     bentoHeader: 'bentoHeader_abac7b',
     mediumBoxArtContainer: 'mediumBoxArtContainer_abac7b',
     smallBoxArtContainer: 'smallBoxArtContainer_abac7b',
@@ -29,7 +29,6 @@ e.exports = {
     smallTextBox: 'smallTextBox_abac7b',
     mediumBoxHeader: 'mediumBoxHeader_abac7b',
     smallBoxHeader: 'smallBoxHeader_abac7b',
-    largeBoxVideoLeft: 'largeBoxVideoLeft_abac7b',
     bentoBoxButtonWhite: 'bentoBoxButtonWhite_abac7b',
     bentoBoxButtonBrand: 'bentoBoxButtonBrand_abac7b'
 };

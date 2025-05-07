@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(885714),
     b = n(314897),
     y = n(430824),
-    x = n(701190),
-    E = n(411198),
+    E = n(701190),
+    x = n(411198),
     v = n(610699),
     O = n(313876),
     j = n(778333),
@@ -32,18 +32,18 @@ var r = n(255367),
     Z = n(723359);
 function R(e) {
     let { code: t, message: n, getAcceptInviteContext: R } = e,
-        { invite: k, inviteError: L } = (0, l.cj)(
-            [x.Z],
+        { invite: k, inviteError: D } = (0, l.cj)(
+            [E.Z],
             () => ({
-                invite: x.Z.getInvite(t),
-                inviteError: x.Z.getInviteError(t)
+                invite: E.Z.getInvite(t),
+                inviteError: E.Z.getInviteError(t)
             }),
             [t]
         ),
-        D = null == k;
+        L = null == k;
     i.useEffect(() => {
-        D && a.ZP.resolveInvite(t);
-    }, [t, D]);
+        L && a.ZP.resolveInvite(t);
+    }, [t, L]);
     let M =
             null != k
                 ? k
@@ -68,7 +68,7 @@ function R(e) {
         },
         z = () => {
             if (null == B && (null == k ? void 0 : k.guild) != null) {
-                let e = E.Qs(k.guild);
+                let e = x.Qs(k.guild);
                 if ((0, c.bN)() && (0, c.Yt)(e)) return void (0, s.mN)(Z.L0.NSFW_SERVER_INVITE_EMBED);
             }
             (0, g.yU)()
@@ -107,7 +107,7 @@ function R(e) {
         case w.r2o.ERROR:
             W = (0, r.jsx)(O.Z, {
                 author: n.author,
-                inviteError: L
+                inviteError: D
             });
             break;
         default:

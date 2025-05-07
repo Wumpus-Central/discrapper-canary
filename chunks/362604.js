@@ -17,14 +17,14 @@ var r = n(255367),
     b = n(711643);
 function y(e) {
     let { message: t, channel: l, compact: y } = e,
-        x = (0, o.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
-        [E, v] = i.useState(null);
+        E = (0, o.Wu)([d.Z], () => Array.from(d.Z.getAllGuildStickers().values()).flat()).slice(0, 20),
+        [x, v] = i.useState(null);
     return (i.useEffect(() => {
         let e = setInterval(() => {
-            x.length > 0 && v(x[Math.floor(Math.random() * x.length)]);
+            E.length > 0 && v(E[Math.floor(Math.random() * E.length)]);
         }, 500);
         return () => clearInterval(e);
-    }, [x]),
+    }, [E]),
     null == l.guild_id)
         ? null
         : (0, r.jsxs)('div', {
@@ -82,10 +82,10 @@ function y(e) {
                                           (0, h.O)(t.id, l);
                                   },
                                   children:
-                                      null != E
+                                      null != x
                                           ? (0, r.jsx)(p.Z, {
                                                 size: 32,
-                                                sticker: E
+                                                sticker: x
                                             })
                                           : (0, r.jsx)(s.EO4, {
                                                 size: 'md',

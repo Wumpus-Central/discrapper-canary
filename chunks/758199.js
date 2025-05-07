@@ -26,8 +26,8 @@ var r,
     _ = n(217702),
     b = n(388032),
     y = n(383195);
-function x() {
-    return (x =
+function E() {
+    return (E =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -37,7 +37,7 @@ function x() {
             return e;
         }).apply(this, arguments);
 }
-function E(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -76,13 +76,13 @@ function O(e) {
     };
     let { primaryColor: Z, secondaryColor: R } = (0, p.Z)(null != N ? N : C),
         k = 'linear-gradient(45deg, '.concat(Z, ', ').concat(R, ')'),
-        L = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
-        D = l.useRef(!1),
+        D = (0, s.e7)([d.Z], () => d.Z.useReducedMotion),
+        L = l.useRef(!1),
         M = (0, u.O)(
             (e) => {
-                if (!1 === D.current && e) {
+                if (!1 === L.current && e) {
                     var t;
-                    null == w || null == (t = w.onView) || t.call(w), (0, g.GF)(w.id, w.linkType, w.referrerId, w.activityCustomId), (D.current = !0);
+                    null == w || null == (t = w.onView) || t.call(w), (0, g.GF)(w.id, w.linkType, w.referrerId, w.activityCustomId), (L.current = !0);
                 }
             },
             void 0
@@ -116,7 +116,7 @@ function O(e) {
                   })
                 : null,
         B = null != C,
-        G = null != S && !1 === L,
+        G = null != S && !1 === D,
         H = B || G,
         V = 0 === I ? y.bannerAspectRatioBot : y.bannerAspectRatioActivity,
         z = l.useRef(null),
@@ -217,19 +217,19 @@ function O(e) {
                                           {
                                               text: l,
                                               children: (e) => {
-                                                  var t = x(
+                                                  var t = E(
                                                       {},
                                                       (function (e) {
                                                           if (null == e) throw TypeError('Cannot destructure ' + e);
                                                           return e;
                                                       })(e)
                                                   );
-                                                  return (0, i.jsx)(c.zxk, E({}, d, t));
+                                                  return (0, i.jsx)(c.zxk, x({}, d, t));
                                               }
                                           },
                                           n
                                       )
-                                    : (0, i.jsx)(c.zxk, E({}, d), n);
+                                    : (0, i.jsx)(c.zxk, x({}, d), n);
                             })
                         })
                 ]

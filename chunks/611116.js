@@ -34,7 +34,7 @@ function m(e) {
     return e;
 }
 function g(e) {
-    let { className: t, boxes: n, title: r, shouldLoadVideo: s, isReducedMotion: o, includeSideGradient: d = !1 } = e;
+    let { className: t, boxes: n, title: r, shouldLoadVideo: s, isReducedMotion: o, includeSideGradient: d = !1, startLeftAligned: g = !1 } = e;
     return (0, i.jsxs)('div', {
         className: l()(u.boxBackdrop, t),
         children: [
@@ -53,7 +53,7 @@ function g(e) {
                             {
                                 shouldLoadVideo: s,
                                 isReducedMotion: o,
-                                index: t
+                                index: t + +!!g
                             },
                             e
                         ),
@@ -85,7 +85,8 @@ let p = r.memo(function (e) {
                     {
                         boxes: Object.values(n),
                         title: d.intl.string(d.t.EnzW2N),
-                        includeSideGradient: !0
+                        includeSideGradient: !0,
+                        startLeftAligned: !0
                     },
                     e
                 )

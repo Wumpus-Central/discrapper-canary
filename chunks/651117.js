@@ -35,6 +35,7 @@ e.exports = {
     bottomOfPageVisibilitySensor: 'bottomOfPageVisibilitySensor_c880e8',
     scroller: 'scroller_c880e8',
     containerBackground: 'containerBackground_c880e8',
+    responsiveContainer: 'responsiveContainer_c880e8',
     heroHeadingV2Container: 'heroHeadingV2Container_c880e8',
     heroHeadingV2Art: 'heroHeadingV2Art_c880e8',
     heroHeadingV2ArtContainer: 'heroHeadingV2ArtContainer_c880e8',

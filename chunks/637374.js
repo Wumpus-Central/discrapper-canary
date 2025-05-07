@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(600164),
     b = n(479446),
     y = n(930114),
-    x = n(981632),
-    E = n(108989),
+    E = n(981632),
+    x = n(108989),
     v = n(703656),
     O = n(314897),
     j = n(82142),
@@ -32,8 +32,8 @@ var r = n(255367),
     Z = n(296848),
     R = n(51144),
     k = n(626799),
-    L = n(981631),
-    D = n(474936),
+    D = n(981631),
+    L = n(474936),
     M = n(388032),
     U = n(955964);
 function F(e, t, n) {
@@ -104,7 +104,7 @@ class V extends i.PureComponent {
         return e >= p.aL;
     }
     handleViewInventory() {
-        d.Z.open(L.oAB.INVENTORY);
+        d.Z.open(D.oAB.INVENTORY);
     }
     render() {
         return (0, r.jsx)(p.$G, {
@@ -140,7 +140,7 @@ class z extends i.Component {
         let {
             analyticsContext: { location: e }
         } = this.props;
-        return G(B({}, e), { section: L.jXE.GIFT_CODE_EMBED });
+        return G(B({}, e), { section: D.jXE.GIFT_CODE_EMBED });
     }
     renderActions(e) {
         let { libraryApplication: t } = this.props;
@@ -196,7 +196,7 @@ class z extends i.Component {
     }
     isCustomGiftMessage() {
         let { type: e } = this.props;
-        return e === L.uaV.CUSTOM_GIFT;
+        return e === D.uaV.CUSTOM_GIFT;
     }
     renderTitle(e) {
         let { currentUser: t, isSelfGift: n, sku: r } = this.props;
@@ -248,14 +248,14 @@ class z extends i.Component {
         if (e.isSubscription) {
             if (null == l) return M.intl.string(M.t.ZTNur6);
             if (null != i) {
-                let e = l.interval === D.rV.MONTH ? M.t['/RDIEB'] : M.t['3CX6Eh'];
+                let e = l.interval === L.rV.MONTH ? M.t['/RDIEB'] : M.t['3CX6Eh'];
                 return M.intl.format(e, {
                     username: R.ZP.getUserTag(i),
                     skuName: o,
                     intervalCount: l.intervalCount
                 });
             }
-            let e = l.interval === D.rV.MONTH ? M.t['2O4lo6'] : M.t['+Xjmsb'];
+            let e = l.interval === L.rV.MONTH ? M.t['2O4lo6'] : M.t['+Xjmsb'];
             return M.intl.format(e, {
                 skuName: o,
                 intervalCount: l.intervalCount
@@ -277,7 +277,7 @@ class z extends i.Component {
             : (0, r.jsx)(k.$, {
                   skuId: e.skuId,
                   onEmbedClick: this.handleEmbedClick,
-                  analyticsSection: L.jXE.GIFT_CODE_EMBED,
+                  analyticsSection: D.jXE.GIFT_CODE_EMBED,
                   renderCustomActions: () => this.renderActions(e),
                   renderCustomTitle: () => this.renderTitle(e),
                   renderCustomTagline: () => this.renderBody(e),
@@ -291,7 +291,7 @@ class z extends i.Component {
             return (0, r.jsx)(k.$, {
                 skuId: e.skuId,
                 onEmbedClick: this.handleClaimPromotion,
-                analyticsSection: L.jXE.GIFT_CODE_EMBED,
+                analyticsSection: D.jXE.GIFT_CODE_EMBED,
                 renderCustomActions: () => this.renderPromotionActions(),
                 renderCustomTitle: () => M.intl.string(M.t.X4p5uL),
                 renderCustomTagline: () => M.intl.string(M.t.VIuwDw),
@@ -315,20 +315,20 @@ class z extends i.Component {
         super(...e),
             F(this, 'handleViewLibrary', (e) => {
                 let { libraryApplication: t } = this.props;
-                e.preventDefault(), null != t && t.isHidden() ? (0, v.uL)(L.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, v.uL)(L.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } });
+                e.preventDefault(), null != t && t.isHidden() ? (0, v.uL)(D.Z5c.APPLICATION_LIBRARY_SETTINGS) : (0, v.uL)(D.Z5c.APPLICATION_LIBRARY, { state: { applicationId: null != t ? t.id : void 0 } });
             }),
             F(this, 'handleVerificationClick', (e) => {
-                e.stopPropagation(), e.preventDefault(), d.Z.open(L.oAB.ACCOUNT);
+                e.stopPropagation(), e.preventDefault(), d.Z.open(D.oAB.ACCOUNT);
             }),
             F(this, 'handleAccept', (e) => {
                 let { channelId: t, code: n, content: r, type: i, giftInfo: l } = this.props;
                 e.preventDefault(),
                     e.stopPropagation(),
-                    P.default.track(L.rMx.OPEN_MODAL, {
+                    P.default.track(D.rMx.OPEN_MODAL, {
                         type: 'gift_accept',
-                        location: G(B({}, this.analyticsLocation), { object: L.qAy.BUTTON_CTA })
+                        location: G(B({}, this.analyticsLocation), { object: D.qAy.BUTTON_CTA })
                     });
-                let a = i !== L.uaV.CUSTOM_GIFT ? void 0 : r;
+                let a = i !== D.uaV.CUSTOM_GIFT ? void 0 : r;
                 (0, y.V)({
                     processedCode: n,
                     channelContext: t,
@@ -338,18 +338,18 @@ class z extends i.Component {
             }),
             F(this, 'handleEmbedClick', (e) => {
                 let { giftCode: t } = this.props;
-                null != t && t.isSubscription && (e.preventDefault(), d.Z.open(L.oAB.PREMIUM));
+                null != t && t.isSubscription && (e.preventDefault(), d.Z.open(D.oAB.PREMIUM));
             }),
             F(this, 'handleClaimPromotion', (e) => {
                 var t;
                 e.stopPropagation(), e.preventDefault();
                 let n = null == (t = this.props.giftCode) ? void 0 : t.code;
-                null != n && window.open(L.Z5c.BILLING_PROMOTION_REDEMPTION(n));
+                null != n && window.open(D.Z5c.BILLING_PROMOTION_REDEMPTION(n));
             }),
             F(this, 'renderCustomGiftBox', (e) => {
                 let { useReducedMotion: t, width: n } = this.props;
                 if (null == e || null == e.giftStyle) return null;
-                let i = D.jy.includes(e.giftStyle),
+                let i = L.jy.includes(e.giftStyle),
                     l = a()(U.customGiftEmbedWrapper, {
                         [U.legacySeasonalGiftEmbedWrapper]: i,
                         [U.giftEmbedWrapperHorizontal]: n >= p.aL
@@ -364,14 +364,14 @@ class z extends i.Component {
                     className: l,
                     children: [
                         !t &&
-                            D.eZ.includes(e.giftStyle) &&
-                            (0, r.jsx)(E.Z, {
+                            L.eZ.includes(e.giftStyle) &&
+                            (0, r.jsx)(x.Z, {
                                 className: U.snow,
                                 wind: 5
                             }),
                         i && (0, r.jsx)(T.Z, { className: U.headerIcon }),
                         null != e.giftStyle &&
-                            (0, r.jsx)(x.Z, {
+                            (0, r.jsx)(E.Z, {
                                 defaultAnimationState: e.redeemed ? b.SR.LOOP : b.SR.IDLE,
                                 giftStyle: e.giftStyle,
                                 className: o

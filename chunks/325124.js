@@ -43,8 +43,8 @@ let L = {
                 idleTimeout: P,
                 finalTimeout: y,
                 childSpanTimeout: m,
-                markBackgroundSpan: v,
-                traceFetch: C,
+                markBackgroundSpan: C,
+                traceFetch: v,
                 traceXHR: S,
                 shouldCreateSpanForRequest: U,
                 enableHTTPTimings: b,
@@ -151,7 +151,7 @@ let L = {
                                         }
                                     }));
                             })),
-                    v && (0, N.j)(),
+                    C && (0, N.j)(),
                     f &&
                         ((a = P),
                         (r = y),
@@ -192,7 +192,7 @@ let L = {
                             )),
                     e && (0, n.D)(),
                     (0, T.L7)(t, {
-                        traceFetch: C,
+                        traceFetch: v,
                         traceXHR: S,
                         tracePropagationTargets: t.getOptions().tracePropagationTargets,
                         shouldCreateSpanForRequest: U,

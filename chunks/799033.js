@@ -40,7 +40,7 @@ function D(t, e) {
             ...e
         },
         m = 'function' == typeof f ? f : (t) => !0,
-        v = (t) =>
+        C = (t) =>
             (function (t, e) {
                 let a = T.m9.location && T.m9.location.href;
                 if (a) {
@@ -58,7 +58,7 @@ function D(t, e) {
                     return e ? (0, A.U0)(t, e) : a;
                 }
             })(t, P),
-        C = {};
+        v = {};
     a &&
         (t.addEventProcessor(
             (t) => (
@@ -80,7 +80,7 @@ function D(t, e) {
             }
         }),
         (0, R.Uf)((t) => {
-            let e = (0, _.m)(t, m, v, C);
+            let e = (0, _.m)(t, m, C, v);
             if ((t.response && t.fetchData.__span && L.set(t.response, t.fetchData.__span), e)) {
                 let a = y(t.fetchData.url),
                     r = a ? (0, d.en)(a).host : void 0;
@@ -150,7 +150,7 @@ function D(t, e) {
                             })(_, O, (0, i.z)() && L ? h : void 0),
                         h
                     );
-                })(t, m, v, C);
+                })(t, m, C, v);
                 D && e && g(e);
             });
 }

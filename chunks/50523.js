@@ -1,4 +1,4 @@
-n.d(t, { b: () => E }), n(539854), n(953529);
+n.d(t, { b: () => x }), n(539854), n(953529);
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -17,84 +17,84 @@ var i = n(442837),
     _ = n(317381),
     b = n(574952),
     y = n(374065),
-    x = n(388032);
-function E(e) {
+    E = n(388032);
+function x(e) {
     var t, n;
-    let { application: E, customId: v, customLink: O, embedUrl: j, referrerId: C } = e,
-        S = null == E || null == (t = E.bot) ? void 0 : t.id,
+    let { application: x, customId: v, customLink: O, embedUrl: j, referrerId: C } = e,
+        S = null == x || null == (t = x.bot) ? void 0 : t.id,
         I = (0, c.ms)({
             context: { type: 'contextless' },
-            applicationId: E.id,
-            botUserId: null == E || null == (n = E.bot) ? void 0 : n.id
+            applicationId: x.id,
+            botUserId: null == x || null == (n = x.bot) ? void 0 : n.id
         }),
-        N = null != E && (0, s.ye)(E),
+        N = null != x && (0, s.ye)(x),
         T = null != S && N && I,
         { analyticsLocations: P } = (0, a.ZP)(l.Z.ACTIVITY_CUSTOM_LINK),
         A = (0, i.e7)([f.Z], () => f.Z.getChannelId()),
         w = (0, y.KF)(A),
         Z = (0, i.e7)([_.ZP], () => {
             if (null == A) return;
-            let e = _.ZP.getEmbeddedActivitiesForChannel(A).filter((e) => e.applicationId === E.id);
+            let e = _.ZP.getEmbeddedActivitiesForChannel(A).filter((e) => e.applicationId === x.id);
             return e.length > 0 ? e[0].compositeInstanceId : void 0;
         }),
         R = (0, i.e7)([_.ZP], () => _.ZP.getCurrentEmbeddedActivity()),
         k = (0, b.Z)(),
-        L = w === y.jy.CAN_LAUNCH,
-        D = null != v ? v : O.customId,
+        D = w === y.jy.CAN_LAUNCH,
+        L = null != v ? v : O.customId,
         M = [];
-    L &&
+    D &&
         M.push({
-            label: null == Z ? x.intl.string(x.t.cnBQPD) : x.intl.string(x.t.VJlc0d),
+            label: null == Z ? E.intl.string(E.t.cnBQPD) : E.intl.string(E.t.VJlc0d),
             trackingArea: p.j_.PLAY,
             onClick() {
                 (0, g.G6)({
                     channelId: null != A ? A : void 0,
-                    applicationId: E.id,
+                    applicationId: x.id,
                     isStart: null == Z,
                     instanceId: Z,
                     embeddedActivitiesManager: k,
-                    customId: D,
+                    customId: L,
                     referrerId: C,
                     analyticsLocations: P
                 });
             },
-            disabledReason: null != Z && (null == R ? void 0 : R.compositeInstanceId) === Z ? x.intl.string(x.t.wJNK8P) : void 0
+            disabledReason: null != Z && (null == R ? void 0 : R.compositeInstanceId) === Z ? E.intl.string(E.t.wJNK8P) : void 0
         }),
         T &&
-            !L &&
+            !D &&
             M.push({
-                label: x.intl.string(x.t.JeK1Wl),
+                label: E.intl.string(E.t.JeK1Wl),
                 trackingArea: p.j_.PLAY,
                 onClick() {
                     (0, o.W)({
-                        appId: E.id,
+                        appId: x.id,
                         botId: S,
                         analyticsLocations: P,
-                        customId: D,
+                        customId: L,
                         referrerId: C
                     });
                 }
             });
-    let U = (0, m.z)(E);
+    let U = (0, m.z)(x);
     return (
         null != M && null != U && M.push(U),
         (0, r.jsx)(d.W, {
             actions: M,
             embedUrl: j,
-            header: E.name,
+            header: x.name,
             iconSrc: h.ZP.getApplicationIconURL({
-                id: E.id,
-                icon: E.icon,
-                bot: E.bot
+                id: x.id,
+                icon: x.icon,
+                bot: x.bot
             }),
             info: (0, r.jsx)('div', { children: O.description }),
             staticBannerSrc: O.getAssetURL(),
             title: O.title,
             trackingConfig: {
-                id: E.id,
+                id: x.id,
                 linkType: u.U.CUSTOM_ACTIVITY_LINK,
                 referrerId: C,
-                activityCustomId: D
+                activityCustomId: L
             }
         })
     );

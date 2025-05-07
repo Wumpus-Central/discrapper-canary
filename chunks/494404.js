@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => D,
+    ZP: () => L,
     h4: () => w,
     nH: () => Z
 }),
@@ -22,8 +22,8 @@ var r = n(255367),
     _ = n(294218),
     b = n(703656),
     y = n(210887),
-    x = n(592125),
-    E = n(375954),
+    E = n(592125),
+    x = n(375954),
     v = n(496675),
     O = n(933429),
     j = n(451478),
@@ -141,13 +141,13 @@ let k = u.ZP.connectStores([v.Z], (e) => {
     let { channel: t } = e;
     return { canManageMessages: null != t && v.Z.can(I.Plq.MANAGE_MESSAGES, t) };
 })(R);
-function L(e) {
-    let { analyticsName: t, items: n, hasMore: l, loading: o, loadMore: p, renderHeader: g, renderEmptyState: _, renderItem: b, getProTip: x, scrollerClassName: E, className: v, listName: w } = e,
+function D(e) {
+    let { analyticsName: t, items: n, hasMore: l, loading: o, loadMore: p, renderHeader: g, renderEmptyState: _, renderItem: b, getProTip: E, scrollerClassName: x, className: v, listName: w } = e,
         Z = i.useRef(null),
         R = (0, m.Z)(w, Z),
         k = (0, u.e7)([O.ZP], () => O.ZP.hasNotice()),
-        L = (0, u.e7)([j.Z], () => j.Z.windowSize()),
-        D = (0, h.Q3)('ItemsPopout');
+        D = (0, u.e7)([j.Z], () => j.Z.windowSize()),
+        L = (0, h.Q3)('ItemsPopout');
     i.useEffect(() => {
         C.default.track(I.rMx.OPEN_POPOUT, { type: t });
     }, [t]),
@@ -221,7 +221,7 @@ function L(e) {
                     className: T.scrollingFooterWrap,
                     children: _(y.Z.theme)
                 }));
-    let G = null == x ? void 0 : x(),
+    let G = null == E ? void 0 : E(),
         H =
             F && null != G
                 ? (0, r.jsx)('div', {
@@ -236,8 +236,8 @@ function L(e) {
                       })
                   })
                 : null,
-        V = { maxHeight: L.height - 43 - 25 };
-    k && (V.maxHeight -= 40), D && (V.maxHeight -= 48);
+        V = { maxHeight: D.height - 43 - 25 };
+    k && (V.maxHeight -= 40), L && (V.maxHeight -= 48);
     let z = null != p && l;
     return (0, r.jsx)('div', {
         className: a()(v, T.messagesPopoutWrap),
@@ -249,7 +249,7 @@ function L(e) {
             component: g(),
             children: [
                 (0, r.jsxs)(d.Den, {
-                    className: a()(T.messagesPopout, E),
+                    className: a()(T.messagesPopout, x),
                     onScroll: z ? M : void 0,
                     ref: Z,
                     children: [
@@ -323,16 +323,16 @@ function L(e) {
         })
     });
 }
-function D(e) {
+function L(e) {
     let { analyticsName: t, onFetch: n, channel: l, messages: a, hasMore: o, loading: s, loadMore: c, onJump: d, canCloseAllMessages: m = !1, renderHeader: f, renderEmptyState: h, renderMessage: y, getProTip: v, scrollerClassName: O, className: j, onCloseMessage: C, listName: S } = e,
-        N = (0, u.e7)([E.Z], () => {
-            let e = null != l ? E.Z.getMessages(l.id) : null;
+        N = (0, u.e7)([x.Z], () => {
+            let e = null != l ? x.Z.getMessages(l.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
         });
     function P(e, n) {
         if ((0, g.Z)(e) && !N) {
             let { id: r, channel_id: i } = e,
-                l = x.Z.getChannel(i);
+                l = E.Z.getChannel(i);
             null != l && (p.Z.trackJump(i, r, t), (0, b.uL)(I.Z5c.CHANNEL(l.getGuildId(), i, r))), null == d || d(n);
         }
     }
@@ -349,7 +349,7 @@ function D(e) {
                   })),
         [a, l]
     );
-    return (0, r.jsx)(L, {
+    return (0, r.jsx)(D, {
         className: j,
         scrollerClassName: O,
         items: A,

@@ -15,8 +15,8 @@ let p = (e) => {
             [_, b] = r.useState(!1),
             {
                 initialized: y,
-                loading: x,
-                items: E,
+                loading: E,
+                items: x,
                 hasMore: v,
                 cursor: O,
                 errored: j
@@ -39,9 +39,9 @@ let p = (e) => {
         let I = (0, a.Z)();
         r.useEffect(
             () => () => {
-                p ? !I() && (j || E.length > 100) && (0, s.jF)() : n && E.length > 100 && (0, s.jF)();
+                p ? !I() && (j || x.length > 100) && (0, s.jF)() : n && x.length > 100 && (0, s.jF)();
             },
-            [n, E, p, I, j]
+            [n, x, p, I, j]
         ),
             r.useEffect(() => {
                 let e = h && t;
@@ -80,8 +80,8 @@ let p = (e) => {
         );
         return {
             initialized: y,
-            loading: x,
-            items: E,
+            loading: E,
+            items: x,
             hasMore: v,
             loadMore: N,
             loadingMore: _,

@@ -7,8 +7,8 @@ n.d(t, {
     jn: () => f,
     m$: () => m,
     oO: () => h,
-    qt: () => x,
-    u$: () => E,
+    qt: () => E,
+    u$: () => x,
     yC: () => u
 });
 var r = n(570140),
@@ -145,7 +145,7 @@ function y(e, t) {
             editorState: t
         });
 }
-function x(e) {
+function E(e) {
     r.Z.wait(() =>
         r.Z.dispatch({
             type: 'SEARCH_EDITOR_STATE_CLEAR',
@@ -153,7 +153,7 @@ function x(e) {
         })
     );
 }
-function E(e, t, n) {
+function x(e, t, n) {
     null != e &&
         r.Z.dispatch({
             type: 'SEARCH_AUTOCOMPLETE_QUERY_UPDATE',

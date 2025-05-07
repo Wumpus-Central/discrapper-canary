@@ -2,7 +2,7 @@ n.d(t, {
     $3: () => V,
     Go: () => B,
     JC: () => w,
-    NU: () => L,
+    NU: () => D,
     Nk: () => A,
     R9: () => R,
     RN: () => U,
@@ -10,7 +10,7 @@ n.d(t, {
     XO: () => T,
     Xn: () => z,
     bb: () => H,
-    qo: () => D,
+    qo: () => L,
     rY: () => k,
     sR: () => F,
     tn: () => G,
@@ -35,8 +35,8 @@ var r = n(255367),
     _ = n(594174),
     b = n(585483),
     y = n(5967),
-    x = n(630388),
-    E = n(358085),
+    E = n(630388),
+    x = n(358085),
     v = n(51144),
     O = n(91047),
     j = n(50284),
@@ -94,18 +94,18 @@ function R(e, t) {
 function k(e, t) {
     return Z(I('referencedAvatarProfile', e, t));
 }
-function L(e, t) {
+function D(e, t) {
     return Z(I('interactionAvatarProfile', e, t));
 }
-function D(e, t, a, o) {
+function L(e, t, a, o) {
     let { id: c } = t,
         { id: u, flags: d } = e,
-        p = (0, x.yE)(d, S.iLy.EPHEMERAL),
+        p = (0, E.yE)(d, S.iLy.EPHEMERAL),
         m = (0, s.bp)();
     return i.useCallback(
         (e, t) => {
             if (p) return;
-            if (!E.isPlatformEmbedded) {
+            if (!x.isPlatformEmbedded) {
                 let t = e.target;
                 if (('A' === t.tagName && '' !== t.textContent) || null == window.getSelection) return;
                 let n = window.getSelection();
@@ -261,21 +261,21 @@ function G(e) {
                 },
                 [t, n]
             )),
-        [y, x] = i.useState(a);
+        [y, E] = i.useState(a);
     g.current = y || g.current;
-    let E = i.useCallback(
+    let x = i.useCallback(
             (e) => {
-                s && (0, m.T6)(), y || (b.S.dispatchKeyed(S.LPv.ANIMATE_CHAT_AVATAR, h, !0), _(e), x(!0));
+                s && (0, m.T6)(), y || (b.S.dispatchKeyed(S.LPv.ANIMATE_CHAT_AVATAR, h, !0), _(e), E(!0));
             },
             [y, h, s, _]
         ),
         v = i.useCallback(() => {
-            b.S.dispatchKeyed(S.LPv.ANIMATE_CHAT_AVATAR, h, !1), x(!1);
+            b.S.dispatchKeyed(S.LPv.ANIMATE_CHAT_AVATAR, h, !1), E(!1);
         }, [h]);
     return {
         hasHovered: g.current,
         isHovered: y,
-        handleMouseEnter: E,
+        handleMouseEnter: x,
         handleMouseLeave: v
     };
 }

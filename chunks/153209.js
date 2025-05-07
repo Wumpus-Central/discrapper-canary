@@ -16,14 +16,14 @@ var r = n(255367),
     _ = n(626135),
     b = n(709054),
     y = n(791914),
-    x = n(981631),
-    E = n(388032),
+    E = n(981631),
+    x = n(388032),
     v = n(929968),
     O = n(413813);
 function j(e) {
     let { onClick: t } = e;
     return (0, r.jsx)(c.M0o, {
-        tooltip: E.intl.string(E.t['8k+6QU']),
+        tooltip: x.intl.string(x.t['8k+6QU']),
         color: c.YX$.TERTIARY,
         icon: (0, r.jsx)(c.W6s, {
             size: 'xs',
@@ -35,11 +35,11 @@ function j(e) {
 }
 function C(e) {
     let { setTab: t, badgeState: n, closePopout: l } = e,
-        { initialized: c, items: E, loading: O, loadMore: C } = (0, m.y6)(),
+        { initialized: c, items: x, loading: O, loadMore: C } = (0, m.y6)(),
         S = (0, o.e7)([u.Z], () => u.Z.localItems),
         I = (0, h.Us)({ location: 'ForYou' }),
-        N = i.useMemo(() => [...[...E, ...S].sort((e, t) => -1 * b.default.compare(e.id, t.id))], [E, S]),
-        T = E.length > 0 ? E[0] : null,
+        N = i.useMemo(() => [...[...x, ...S].sort((e, t) => -1 * b.default.compare(e.id, t.id))], [x, S]),
+        T = x.length > 0 ? x[0] : null,
         P = g.d$.useSetting(),
         A = i.useMemo(() => {
             if (null != T && 0 >= b.default.compare(T.id, P)) return !1;
@@ -60,7 +60,7 @@ function C(e) {
                 children: A
                     ? (0, r.jsx)(j, {
                           onClick: () => {
-                              null != T && (g.d$.updateSetting(T.id), _.default.track(x.rMx.NOTIFICATION_CENTER_ACTION, { action_type: d.ud.MARK_ALL_READ }));
+                              null != T && (g.d$.updateSetting(T.id), _.default.track(E.rMx.NOTIFICATION_CENTER_ACTION, { action_type: d.ud.MARK_ALL_READ }));
                           }
                       })
                     : null

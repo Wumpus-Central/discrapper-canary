@@ -16,8 +16,8 @@ var r = n(255367),
     _ = n(994339),
     b = n(503438),
     y = n(981631),
-    x = n(616922),
-    E = n(388032),
+    E = n(616922),
+    x = n(388032),
     v = n(638128);
 function O(e, t, n) {
     return (
@@ -161,20 +161,20 @@ class I extends i.PureComponent {
     }
     getHelpdeskArticleURL() {
         let { partyId: e } = this.props;
-        return null != e && (0, x.Ps)(e) ? y.BhN.SPOTIFY_CONNECTION : y.BhN.RICH_PRESENCE_INTRODUCTION;
+        return null != e && (0, E.Ps)(e) ? y.BhN.SPOTIFY_CONNECTION : y.BhN.RICH_PRESENCE_INTRODUCTION;
     }
     renderHeaderText() {
         let { activityActionType: e, name: t } = this.props;
         switch (e) {
             case y.mFx.LISTEN:
-                return E.intl.formatToPlainString(E.t['/8czHx'], { name: t });
+                return x.intl.formatToPlainString(x.t['/8czHx'], { name: t });
             case y.mFx.WATCH:
-                return E.intl.formatToPlainString(E.t.BBJXVl, { name: t });
+                return x.intl.formatToPlainString(x.t.BBJXVl, { name: t });
             case y.mFx.JOIN:
-                return E.intl.string(E.t['hC/Ze3']);
+                return x.intl.string(x.t['hC/Ze3']);
             case y.mFx.JOIN_REQUEST:
             default:
-                return E.intl.string(E.t.Ckxb6u);
+                return x.intl.string(x.t.Ckxb6u);
         }
     }
     renderPartyStatus() {
@@ -183,13 +183,13 @@ class I extends i.PureComponent {
         if (this.isDeadInvite())
             switch (e) {
                 case y.mFx.LISTEN:
-                    return E.intl.string(E.t['84qx9v']);
+                    return x.intl.string(x.t['84qx9v']);
                 case y.mFx.WATCH:
-                    return E.intl.string(E.t.B9kbnZ);
+                    return x.intl.string(x.t.B9kbnZ);
                 case y.mFx.JOIN:
                 case y.mFx.JOIN_REQUEST:
                 default:
-                    return E.intl.string(E.t['2Gbof3']);
+                    return x.intl.string(x.t['2Gbof3']);
             }
         return !l || i || this.isEmbeddedActivityApplication() || e !== y.mFx.JOIN
             ? this.isActionType(y.mFx.LISTEN) || this.isActionType(y.mFx.WATCH)
@@ -211,7 +211,7 @@ class I extends i.PureComponent {
                               'div',
                               {
                                   className: v.state,
-                                  children: E.intl.format(E.t.uU9le3, {
+                                  children: x.intl.format(x.t.uU9le3, {
                                       artists: s.state,
                                       artistsHook: (e, t) =>
                                           null != s.state
@@ -232,24 +232,24 @@ class I extends i.PureComponent {
                           )
                       ]
                     : this.isActionType(y.mFx.LISTEN)
-                      ? E.intl.string(E.t.gXYoq6)
-                      : E.intl.string(E.t.eyKDl5)
+                      ? x.intl.string(x.t.gXYoq6)
+                      : x.intl.string(x.t.eyKDl5)
                 : this.isActionType(y.mFx.JOIN_REQUEST)
                   ? this.isPartyFull()
-                      ? E.intl.string(E.t.jfrMtr)
+                      ? x.intl.string(x.t.jfrMtr)
                       : this.hasPartySize() && 0 !== d
-                        ? E.intl.formatToPlainString(E.t.XWapnZ, { number: d - u })
+                        ? x.intl.formatToPlainString(x.t.XWapnZ, { number: d - u })
                         : null
                   : this.isInParty()
-                    ? E.intl.string(E.t.KC26NT)
+                    ? x.intl.string(x.t.KC26NT)
                     : t || n || i || this.isEmbeddedActivityApplication()
                       ? this.isPartyFull()
-                          ? E.intl.string(E.t.jfrMtr)
+                          ? x.intl.string(x.t.jfrMtr)
                           : this.hasPartySize() && 0 !== d
-                            ? E.intl.formatToPlainString(E.t.XWapnZ, { number: d - u })
+                            ? x.intl.formatToPlainString(x.t.XWapnZ, { number: d - u })
                             : null
-                      : E.intl.formatToPlainString(E.t.SqJBnJ, { name: a })
-            : E.intl.string(E.t.c3EWuL);
+                      : x.intl.formatToPlainString(x.t.SqJBnJ, { name: a })
+            : x.intl.string(x.t.c3EWuL);
     }
     renderActionButton() {
         let { isInBrowser: e, isPreview: t, isGameLaunchable: n, isSender: i, partyId: l, activity: a, message: s, renderSpotifyJoinButton: c, renderCustomButton: u } = this.props,
@@ -260,7 +260,7 @@ class I extends i.PureComponent {
             p = null != u ? u(d) : null;
         return null != p
             ? p
-            : !this.isDeadInvite() && this.isActionType(y.mFx.LISTEN) && null != l && null != s && null != a && (0, x.Ps)(l)
+            : !this.isDeadInvite() && this.isActionType(y.mFx.LISTEN) && null != l && null != s && null != a && (0, E.Ps)(l)
               ? c(
                     C(j({}, d), {
                         activity: a,
@@ -276,31 +276,31 @@ class I extends i.PureComponent {
                             t || !e || this.isDeadInvite() || this.isEmbeddedActivityApplication()
                                 ? this.canJoin()
                                     ? {
-                                          children: E.intl.string(E.t.VJlc0d),
+                                          children: x.intl.string(x.t.VJlc0d),
                                           onClick: this.handleJoin
                                       }
                                     : this.canSync()
                                       ? {
-                                            children: E.intl.string(E.t.VJlc0d),
+                                            children: x.intl.string(x.t.VJlc0d),
                                             onClick: this.handleSync
                                         }
                                       : this.canSendInvite()
                                         ? {
-                                              children: E.intl.string(E.t['hC/Ze3']),
+                                              children: x.intl.string(x.t['hC/Ze3']),
                                               onClick: this.handleInvite,
                                               disabled: i
                                           }
                                         : this.isInParty()
                                           ? {
-                                                children: E.intl.string(E.t.KC26NT),
+                                                children: x.intl.string(x.t.KC26NT),
                                                 disabled: !0
                                             }
                                           : {
-                                                children: this.isActionType(y.mFx.JOIN_REQUEST) ? E.intl.string(E.t['hC/Ze3']) : E.intl.string(E.t.VJlc0d),
+                                                children: this.isActionType(y.mFx.JOIN_REQUEST) ? x.intl.string(x.t['hC/Ze3']) : x.intl.string(x.t.VJlc0d),
                                                 disabled: !0
                                             }
                                 : {
-                                      children: E.intl.string(E.t.gUZonZ),
+                                      children: x.intl.string(x.t.gUZonZ),
                                       onClick: this.handleDownloadApp
                                   }
                         ),

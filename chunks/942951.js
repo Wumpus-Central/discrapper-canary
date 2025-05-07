@@ -56,7 +56,7 @@ function p(e) {
                         (a = a =
                             {
                                 onContextMenu: v,
-                                name: r,
+                                name: (0, o.qgQ)(r),
                                 color: null == e ? void 0 : e.colorString,
                                 roleName: null == e ? void 0 : e.colorRoleName,
                                 roleColors: u ? l : null,

@@ -16,15 +16,15 @@ var r = n(255367),
     _ = n(43542),
     b = n(910200),
     y = n(358595),
-    x = n(981631),
-    E = n(388032),
+    E = n(981631),
+    x = n(388032),
     v = n(583136);
 function O(e) {
     let { invite: t, isMemberOfGuild: n, message: l, onTransitionToInviteChannel: c, onAcceptInstantInvite: d } = e,
         p = i.useRef(null),
         [f, g] = i.useState(!0),
         [O, C] = i.useState(!1),
-        S = t.state === x.r2o.ACCEPTING,
+        S = t.state === E.r2o.ACCEPTING,
         I = (0, o.e7)([u.Z], () => u.Z.useReducedMotion);
     i.useLayoutEffect(() => {
         var e, t;
@@ -80,7 +80,7 @@ function O(e) {
                             children: (0, r.jsx)(s.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'interactive-normal',
-                                children: E.intl.string(E.t.xdCLeH)
+                                children: x.intl.string(x.t.xdCLeH)
                             })
                         })
                       : null,

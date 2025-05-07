@@ -220,7 +220,8 @@ let ed = (e) => {
             eJ = (0, i.jsxs)('div', {
                 className: l()(en.container, {
                     [en.settingsContainer]: !s,
-                    [en.containerBackground]: eO && e_
+                    [en.containerBackground]: eO && e_,
+                    [en.responsiveContainer]: eO
                 }),
                 'data-cy': 'tier-0-marketing-page',
                 children: [

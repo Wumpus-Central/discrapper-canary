@@ -16,8 +16,8 @@ var r,
     _ = n(29270),
     b = n(709586),
     y = n(267642),
-    x = n(739566),
-    E = n(834129),
+    E = n(739566),
+    x = n(834129),
     v = n(981631),
     O = n(388032),
     j = n(573510);
@@ -151,8 +151,8 @@ let T = ['TOP_LEFT', 'TOP_RIGHT'],
     Z = 'falling-leaf',
     R = ['#61D5B2'],
     k = n(303893),
-    L = n(313226),
-    D = [k, L];
+    D = n(313226),
+    L = [k, D];
 function M() {
     return n
         .e('77843')
@@ -184,8 +184,8 @@ function U(e) {
         ),
         { createMultipleConfettiAt: g, confettiCanvas: _ } = l.useContext(f.h),
         [b, y] = l.useState(null),
-        x = (0, s.uR)(_, b),
-        E = (function (e, t) {
+        E = (0, s.uR)(_, b),
+        x = (function (e, t) {
             if (null == e) return 'enter';
             switch (e) {
                 case 'enter':
@@ -248,7 +248,7 @@ function U(e) {
         l.useEffect(() => {
             if (v && 'leaf_fall' === d) {
                 let e = w[h].leafRotationDirection;
-                x.createConfetti(
+                E.createConfetti(
                     {
                         id: ''.concat(Z, '-').concat((0, c.Z)()),
                         position: {
@@ -295,15 +295,15 @@ function U(e) {
                             }
                         }
                     },
-                    { sprite: 'TOP_LEFT' === h ? k : L }
+                    { sprite: 'TOP_LEFT' === h ? k : D }
                 );
             }
-        }, [v, x, h, d]),
+        }, [v, E, h, d]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(s.Ji, {
                     ref: y,
-                    sprites: D,
+                    sprites: L,
                     colors: R,
                     spriteWidth: 45,
                     spriteHeight: 45
@@ -319,7 +319,7 @@ function U(e) {
                     children: (0, i.jsx)(p.kci, {
                         animationRef: A,
                         className: o()(j.easterEggAnimation, { [j.easterEggAnimationHideLeaf]: O }),
-                        nextScene: E,
+                        nextScene: x,
                         sceneSegments: I,
                         onScenePlay: C,
                         onSceneComplete: S,
@@ -350,7 +350,7 @@ function F(e) {
         [S, I] = l.useState(!1),
         N = l.useRef(null),
         { reducedMotion: T } = l.useContext(p.Sfi),
-        P = (0, x.ZH)(n),
+        P = (0, E.ZH)(n),
         A = P.nick,
         w = o(P);
     t =
@@ -391,16 +391,16 @@ function F(e) {
         k = l.useCallback(() => {
             I(!1);
         }, []),
-        L = l.useCallback(() => {
+        D = l.useCallback(() => {
             (0, g.AI)({ settingsVisible: !0 }), m.Z.open(v.oAB.POGGERMODE), I(!1);
         }, []),
-        D = l.useCallback(
+        L = l.useCallback(
             (e, t) => {
-                (null == t ? void 0 : t.id.startsWith(Z)) && L();
+                (null == t ? void 0 : t.id.startsWith(Z)) && D();
             },
-            [L]
+            [D]
         );
-    l.useEffect(() => C(D));
+    l.useEffect(() => C(L));
     let M = (0, i.jsx)(p.P3F, {
         className: j.iconWrapper,
         innerRef: N,
@@ -410,7 +410,7 @@ function F(e) {
             onMouseEnter: R
         })
     });
-    return (0, i.jsxs)(E.Z, {
+    return (0, i.jsxs)(x.Z, {
         iconNode: M,
         timestamp: n.timestamp,
         compact: r,
@@ -426,7 +426,7 @@ function F(e) {
                           className: j.cannonWrapper,
                           children: (0, i.jsx)(U, {
                               onAnimationComplete: k,
-                              onClick: L
+                              onClick: D
                           })
                       })
                   })
