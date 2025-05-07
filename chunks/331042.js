@@ -373,7 +373,7 @@ let eu = 880,
             { firstAvatarDecoration: I, firstProfileEffect: S } = (0, B.Rj)(n),
             C = (0, k.x6)(n) ? null != I && null != S : null != I || null != S || n.type === u.Z.NAMEPLATE;
         i.useEffect(() => {
-            ee.Vt.ORB_PROFILE_BADGE === n.skuId && (0, A.Ls)([(0, K.X2)()], em);
+            ee.Vt.ORB_PROFILE_BADGE === n.skuId && (0, A.Ls)([(0, K.X)()], em);
         }, [n.skuId]);
         let P = i.useMemo(
                 () =>

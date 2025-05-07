@@ -69,7 +69,7 @@ let d = (e) => {
                 {
                     pendingAvatar: v,
                     user: d,
-                    pendingBadges: [(0, c.X2)()],
+                    pendingBadges: [(0, c.X)()],
                     canUsePremiumCustomization: m,
                     disabledInputs: !0,
                     hideExampleButton: !0

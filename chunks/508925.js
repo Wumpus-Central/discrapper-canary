@@ -6,7 +6,7 @@ var r = n(255367),
     s = n(157570);
 let l = (e) => {
     let { product: t, animationState: n, className: i } = e,
-        l = a.KO[t.skuId];
+        l = a.K[t.skuId];
     return null != l
         ? (0, r.jsx)('div', {
               className: o()(s.externalProductWrapper, i),

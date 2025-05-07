@@ -1,9 +1,9 @@
-t.d(n, { Z: () => o });
-var r = t(255367);
-t(73800);
-var i = t(481060),
-    l = t(816398);
-let o = () =>
+n.d(e, { Z: () => a });
+var r = n(255367);
+n(73800);
+var i = n(481060),
+    l = n(816398);
+let a = () =>
     (0, r.jsx)('div', {
         className: l.loadingWrapper,
         children: (0, r.jsx)(i.bbz, {
