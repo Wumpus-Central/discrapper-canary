@@ -21,8 +21,8 @@ var i,
     p = n(812206),
     S = n(802098),
     T = n(933557),
-    h = n(456269),
-    C = n(890022),
+    C = n(456269),
+    h = n(890022),
     I = n(15274),
     Z = n(754688),
     m = n(336197),
@@ -45,8 +45,8 @@ var i,
     H = n(292959),
     W = n(496675),
     z = n(699516),
-    q = n(944486),
-    x = n(885110),
+    x = n(944486),
+    q = n(885110),
     Y = n(246946),
     X = n(594174),
     B = n(979651),
@@ -99,7 +99,7 @@ let el = 'message1',
 async function eE(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = new Set(),
-        i = (0, C.W7)(e);
+        i = (0, h.W7)(e);
     t &&
         (i.forEach((e) => {
             let { activities: t, user: i } = e;
@@ -127,14 +127,11 @@ async function eE(e) {
                                 ((i = n),
                                 (l = t),
                                 (0, E.PR)(l).then((e) => {
-                                    var t, n;
+                                    var t;
                                     K.Z.showNotification(
                                         i.getIconURL(64),
-                                        null != (t = e.globalName) ? t : e.username,
-                                        en.intl.formatToPlainString(en.t.o4Aipq, {
-                                            username: null != (n = e.globalName) ? n : e.username,
-                                            gameName: i.name
-                                        }),
+                                        en.intl.formatToPlainString(en.t.SRy0Cg, { username: null != (t = e.globalName) ? t : e.username }),
+                                        i.name,
                                         { notif_type: 'game_notif' },
                                         {
                                             onClick: () => {
@@ -154,7 +151,7 @@ function e_(e) {
     return e.filter((e) => e.type === ee.IIU.PLAYING && null != e.application_id).map((e) => e.application_id);
 }
 function eN() {
-    return !!(H.Z.getDesktopType() === ee.qrD.NEVER || x.Z.getStatus() === ee.Skl.DND || w.QZ.getSetting());
+    return !!(H.Z.getDesktopType() === ee.qrD.NEVER || q.Z.getStatus() === ee.Skl.DND || w.QZ.getSetting());
 }
 function ep(e) {
     return null != B.Z.getVoiceStateForChannel(e);
@@ -197,7 +194,7 @@ ei(eS, 'displayName', 'NotificationStore'),
                   },
                   WINDOW_FOCUS: function (e) {
                       if ((eu = e.focused)) {
-                          let e = q.Z.getChannelId();
+                          let e = x.Z.getChannelId();
                           null != e && eg.clearChannel(e);
                       }
                   },
@@ -213,9 +210,9 @@ ei(eS, 'displayName', 'NotificationStore'),
                           p = H.Z.getNotifyMessagesInSelectedChannel() && (0, P.N_)(s, o);
                       if ((!N && !p) || (s.type === ee.uaV.CHANGELOG && (null == s.changelog_id || S.Z.latestChangelogId() !== s.changelog_id))) return !1;
                       let T = !H.Z.isSoundDisabled(el),
-                          h = j.ZP.canUseCustomNotificationSounds(_),
-                          C = U.Y.getCurrentConfig({ location: 'NotificationStore' }).enabled,
-                          I = h && C && T ? (null != (a = (0, D.bb)(null != (l = g.guild_id) ? l : ee.aIL, o)) ? a : (0, D.iD)(g.guild_id)) : void 0;
+                          C = j.ZP.canUseCustomNotificationSounds(_),
+                          h = U.Y.getCurrentConfig({ location: 'NotificationStore' }).enabled,
+                          I = C && h && T ? (null != (a = (0, D.bb)(null != (l = g.guild_id) ? l : ee.aIL, o)) ? a : (0, D.iD)(g.guild_id)) : void 0;
                       if ((p && (T && K.Z.playNotificationSound('message3', 0.4, I), !eu)) || !N) return !1;
                       let Z = n(808506).default,
                           m = n(624864).Z,
@@ -434,7 +431,7 @@ ei(eS, 'displayName', 'NotificationStore'),
                       if (eN()) return !1;
                       let l = M.Z.getChannel(n.parent_id);
                       if (null == l || !ee.TPd.GUILD_THREADS_ONLY.has(l.type) || !i || !(0, P.FI)(n, l, !eu)) return !1;
-                      let { author: a, user: r } = (0, h.MC)(n);
+                      let { author: a, user: r } = (0, C.MC)(n);
                       if (null == r) return !1;
                       let o = V.Z.getGuild(l.guild_id);
                       if (null == o) return !1;
@@ -479,7 +476,7 @@ ei(eS, 'displayName', 'NotificationStore'),
                                         channelId: null,
                                         guildId: null
                                     };
-                          if (null == (t = n.channelId) || null == n.guildId || (q.Z.getCurrentlySelectedChannelId() === t && eu)) return !1;
+                          if (null == (t = n.channelId) || null == n.guildId || (x.Z.getCurrentlySelectedChannelId() === t && eu)) return !1;
                       }
                       K.Z.showNotification(
                           n,
@@ -529,7 +526,7 @@ ei(eS, 'displayName', 'NotificationStore'),
                   },
                   CONNECTION_OPEN: function (e) {
                       let { countryCode: t, guilds: n, presences: i } = e;
-                      (es = t), ed.clear(), n.forEach((e) => e.stage_instances.forEach((e) => ed.add(e.id))), (0, C.uw)('handleConnectionOpen') && eE(i, !1);
+                      (es = t), ed.clear(), n.forEach((e) => e.stage_instances.forEach((e) => ed.add(e.id))), (0, h.uw)('handleConnectionOpen') && eE(i, !1);
                   },
                   MESSAGE_REMINDER_DUE: function (e) {
                       let { savedMessage: t } = e;
@@ -554,7 +551,7 @@ ei(eS, 'displayName', 'NotificationStore'),
                   },
                   PRESENCE_UPDATES: function (e) {
                       let { updates: t } = e;
-                      (0, C.uw)('handlePresenceUpdates') && eE(t);
+                      (0, h.uw)('handlePresenceUpdates') && eE(t);
                   }
               }
     );

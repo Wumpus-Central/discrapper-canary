@@ -25,8 +25,8 @@ var i = n(252258),
     p = n(131704),
     S = n(433355),
     T = n(592125),
-    h = n(430824),
-    C = n(19780),
+    C = n(430824),
+    h = n(19780),
     I = n(699516),
     Z = n(944486),
     m = n(914010),
@@ -96,7 +96,7 @@ function M(e, t) {
         );
     }
     {
-        let t = !p.tx.has(u.type) || C.Z.getChannelId() === u.id;
+        let t = !p.tx.has(u.type) || h.Z.getChannelId() === u.id;
         if (v.ZP.allowAllMessages(u) && t) return !0;
         let n = v.ZP.isSuppressEveryoneEnabled(u.getGuildId()),
             i = v.ZP.isSuppressRolesEnabled(u.getGuildId());
@@ -166,7 +166,7 @@ function z(e, t, n) {
         case L.d4z.PUBLIC_THREAD:
         case L.d4z.PRIVATE_THREAD:
             let s = T.Z.getChannel(e.parent_id);
-            t.type === L.uaV.THREAD_STARTER_MESSAGE && null != s ? (u = H(u, s, T.Z.getChannel(s.parent_id))) : (0, g.Z)(t) ? null != h.Z.getGuild(e.getGuildId()) && (u = H(u, e, s)) : (u = H(u, e, s));
+            t.type === L.uaV.THREAD_STARTER_MESSAGE && null != s ? (u = H(u, s, T.Z.getChannel(s.parent_id))) : (0, g.Z)(t) ? null != C.Z.getGuild(e.getGuildId()) && (u = H(u, e, s)) : (u = H(u, e, s));
             break;
         case L.d4z.GROUP_DM:
             (e.isManaged() && n.bot && u === (0, a.F6)(e, y.default, I.Z)) || (u = ''.concat(u, ' (').concat((0, a.F6)(e, y.default, I.Z, !0), ')'));

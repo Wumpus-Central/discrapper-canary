@@ -162,7 +162,8 @@ let T = (e) => {
             } catch (t) {
                 let e = new c.Hx(t);
                 throw (
-                    (s.Z.dispatch({
+                    ((0, b.G)(e),
+                    s.Z.dispatch({
                         type: 'COLLECTIBLES_PURCHASES_FETCH_FAILURE',
                         error: e
                     }),
