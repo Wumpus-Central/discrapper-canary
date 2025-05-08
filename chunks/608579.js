@@ -169,6 +169,7 @@ function k(e) {
                 isGift: j,
                 activeSubscription: null,
                 purchaseType: P.GZ.ONE_TIME,
+                excludeSubscriptionPlansBySKU: !0,
                 children: (0, r.jsx)(E.c1, {
                     children: (0, r.jsx)(h.KB, {
                         isGift: j,

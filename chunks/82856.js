@@ -108,7 +108,8 @@ function h(e) {
                             void 0 !== t && t(e), await f();
                         },
                         balance: u,
-                        balanceWidgetMode: s.b6.DEFAULT
+                        balanceWidgetMode: s.b6.DEFAULT,
+                        isInModalOverlay: !0
                     })
                 }
             )

@@ -55,64 +55,67 @@ let p = () =>
     },
     g = (e, t) => (e === l.b.SELECTED ? d.selected : t ? d.highlighted : d.default),
     E = (0, i.forwardRef)(function (e, t) {
-        let { id: n, balance: o, balanceWidgetMode: f = l.b.DEFAULT, showNotificationBadge: m, onClick: E, onMouseDown: b, className: y } = e,
-            [O, v] = (0, i.useState)(!1),
-            I = (0, i.useMemo)(() => g(f, O), [f, O]),
-            [S, T] = (0, i.useState)(!1),
-            [A, N] = (0, i.useState)(!1),
-            [C, P] = (0, i.useState)(0.9 * u.D2),
-            R = null === o;
+        let { id: n, balance: o, balanceWidgetMode: f = l.b.DEFAULT, showNotificationBadge: m, onClick: E, onMouseDown: b, isInModalOverlay: y, className: O } = e,
+            [v, I] = (0, i.useState)(!1),
+            S = (0, i.useMemo)(() => g(f, v), [f, v]),
+            [T, A] = (0, i.useState)(!1),
+            [N, C] = (0, i.useState)(!1),
+            [P, R] = (0, i.useState)(0.9 * u.D2),
+            w = null === o;
         (0, i.useEffect)(() => {
-            R &&
-                !S &&
-                (T(!0),
+            w &&
+                !T &&
+                (A(!0),
                 setTimeout(() => {
-                    N(!0);
+                    C(!0);
                 }, 500));
-        }, [R, T, S]),
+        }, [w, A, T]),
             (0, i.useEffect)(() => {
-                A && !R && T(!1);
-            }, [R, A]);
-        let w = R || S,
-            D = S ? null : o,
-            [L, x] = (0, i.useState)(null),
-            k = (0, i.useRef)(null),
-            M = (0, i.useCallback)(() => {
-                (k.current = null), x(null);
+                N && !w && A(!1);
+            }, [w, N]);
+        let D = w || T,
+            L = T ? null : o,
+            [x, k] = (0, i.useState)(null),
+            M = (0, i.useRef)(null),
+            j = (0, i.useCallback)(() => {
+                (M.current = null), k(null);
             }, []),
-            j = (0, i.useCallback)(
+            U = (0, i.useCallback)(
                 (e) => {
-                    let t = L === k.current;
-                    e > 0 && ('earn' !== L || !t) ? x('earn') : e < 0 && ('spend' !== L || !t) && x('spend');
+                    let t = x === M.current;
+                    e > 0 && ('earn' !== x || !t) ? k('earn') : e < 0 && ('spend' !== x || !t) && k('spend');
                 },
-                [x, L]
+                [k, x]
             ),
-            U = {
-                currentAnimationType: L,
-                animationTypeRef: k,
-                onSetAnimationDurationMS: P
+            G = {
+                currentAnimationType: x,
+                animationTypeRef: M,
+                onSetAnimationDurationMS: R
             };
         return (0, r.jsx)(s.P3F, {
-            onClick: w ? void 0 : E,
+            onClick: D ? void 0 : E,
             className: d.clickable,
+            id: null != n ? n : h,
             children: (0, r.jsxs)('span', {
                 onMouseDown: b,
-                onMouseEnter: () => v(!0),
-                onMouseLeave: () => v(!1),
-                id: null != n ? n : h,
+                onMouseEnter: () => I(!0),
+                onMouseLeave: () => I(!1),
                 ref: t,
-                className: a()(d.container, I, y, { [d.containerLoading]: w }),
+                className: a()(d.container, S, O, {
+                    [d.containerLoading]: D,
+                    [d.inModalOverlay]: y
+                }),
                 children: [
                     (0, r.jsx)('div', {
-                        className: a()(d.orbsLottieContainer, w ? d.orbIconloading : void 0),
-                        children: (0, r.jsx)(u.ZP, _({}, U))
+                        className: a()(d.orbsLottieContainer, D ? d.orbIconloading : void 0),
+                        children: (0, r.jsx)(u.ZP, _({}, G))
                     }),
                     (0, r.jsx)(c.Z, {
-                        value: D,
-                        onValueChange: j,
-                        onValueReached: M,
-                        targetTotalCounterTime: C,
-                        className: w ? d.counterLoading : void 0
+                        value: L,
+                        onValueChange: U,
+                        onValueReached: j,
+                        targetTotalCounterTime: P,
+                        className: D ? d.counterLoading : void 0
                     }),
                     m && (0, r.jsx)(p, {})
                 ]

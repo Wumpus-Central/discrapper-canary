@@ -58,13 +58,26 @@ function d(e, t) {
 }
 function f(e) {
     var t, n;
-    let { activeSubscription: l, skuIDs: u, paymentSourceId: f, isGift: _ } = e;
+    let { activeSubscription: l, skuIDs: u, paymentSourceId: f, isGift: _, excludeSubscriptionPlansBySKU: p } = e;
     u = u.filter((e) => e !== a.Si.NONE);
-    let p = (0, r.e7)([i.Z], () => {
+    let h = (0, r.e7)([i.Z], () => {
             let e = i.Z.getPlanIdsForSkus(u).filter((e) => !_ || a.dJ.has(e));
             return e.length > 0 ? i.Z.get(e[0]) : null;
         }),
-        h = null == p ? [] : (0, o.DE)(p.id, f, _),
-        m = null != (n = null != (t = h.find((e) => e === (null == l ? void 0 : l.currency))) ? t : h[0]) ? n : s.pK.USD;
-    return d(c({}, (0, o.gr)(m, null == p ? void 0 : p.id, f, _, u)), { currencies: h });
+        m = null == h ? [] : (0, o.DE)(h.id, f, _),
+        g = null != (n = null != (t = m.find((e) => e === (null == l ? void 0 : l.currency))) ? t : m[0]) ? n : s.pK.USD;
+    return d(
+        c(
+            {},
+            (0, o.gr)({
+                initialCurrency: g,
+                subscriptionPlanId: null == h ? void 0 : h.id,
+                paymentSourceId: f,
+                isGift: _,
+                skuIDs: u,
+                excludeSubscriptionPlansBySKU: p
+            })
+        ),
+        { currencies: m }
+    );
 }

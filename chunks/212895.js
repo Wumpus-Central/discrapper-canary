@@ -71,55 +71,56 @@ function E(e, t, n) {
     let r = c.Z.get(e);
     return o()(null != r, 'plan is undefined'), g(r, n, !1).includes(t);
 }
-function b(e, t, n, i, o) {
-    let [a, s] = r.useReducer(
+function b(e) {
+    let { initialCurrency: t, subscriptionPlanId: n, paymentSourceId: i, isGift: o, skuIDs: a, excludeSubscriptionPlansBySKU: s } = e,
+        [u, d] = r.useReducer(
             (e, t) => p({}, e, t),
-            null != n
+            null != i
                 ? {
-                      paymentSourceId: n,
-                      currency: e,
+                      paymentSourceId: i,
+                      currency: t,
                       loaded: !1
                   }
                 : {
-                      currency: e,
+                      currency: t,
                       loaded: !1
                   }
         ),
-        u = (0, l.V)(o),
-        d = JSON.stringify(o),
-        f = r.useRef(o);
+        f = (0, l.V)(a),
+        _ = JSON.stringify(a),
+        E = r.useRef(a);
     r.useEffect(() => {
-        f.current = o;
+        E.current = a;
     }),
         r.useEffect(() => {
             (async () => {
-                let { current: e } = f;
+                let { current: e } = E;
                 try {
-                    await m(n, e);
+                    e.length > 0 && !s && (await m(i, e));
                 } catch (e) {
                     if (e.code !== h) throw e;
                 }
-                let r = [];
-                null != t && null != c.Z.get(t) && (r = g(t, n, i)),
-                    r.length > 0
-                        ? s({
-                              paymentSourceId: n,
-                              currency: r[0],
+                let t = [];
+                null != n && null != c.Z.get(n) && (t = g(n, i, o)),
+                    t.length > 0
+                        ? d({
+                              paymentSourceId: i,
+                              currency: t[0],
                               loaded: !0
                           })
-                        : s({
-                              paymentSourceId: n,
+                        : d({
+                              paymentSourceId: i,
                               loaded: !1
                           });
             })();
-        }, [n, d, t, i, u]);
-    let _ = a.paymentSourceId !== n || null == t || !u || !0 !== a.loaded;
+        }, [i, _, n, o, f, s]);
+    let b = u.paymentSourceId !== i || null == n || !f || !0 !== u.loaded;
     return {
-        hasFetchedSubscriptionPlans: u,
-        priceOptions: a,
+        hasFetchedSubscriptionPlans: f,
+        priceOptions: u,
         setCurrency: (e) => {
-            s({ currency: e });
+            d({ currency: e });
         },
-        currencyLoading: _
+        currencyLoading: b
     };
 }

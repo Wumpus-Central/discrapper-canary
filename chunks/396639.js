@@ -298,6 +298,7 @@ let N = {
             stepConfigs: R,
             purchaseType: j.GZQ.ONE_TIME,
             skuIDs: [t],
+            excludeSubscriptionPlansBySKU: !0,
             children: (0, i.jsx)(C.d, {
                 skuId: t,
                 loadId: n,

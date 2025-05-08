@@ -28,12 +28,14 @@ class h extends i.Z {
         let e = s.Z.getGuildId();
         if (null == e || e === _._ || e === f.I_8) return;
         let t = o.Z.getGuild(e);
-        null != t &&
-            (u.ZP.trackExposure({
-                guildId: t.id,
-                location: 'GuildPowerupsManager'
-            }),
-            (0, u.gV)(t.id, 'GuildPowerupsManager') && (c.Z.shouldFetchCatalogForGuild(e) && (0, l.Sn)(e), c.Z.shouldFetchPowerupsForGuild(e) && (0, l.Fm)(e)));
+        if (null == t) return;
+        u.ZP.trackExposure({
+            guildId: t.id,
+            location: 'GuildPowerupsManager'
+        });
+        let n = (0, u.gV)(t.id, 'GuildPowerupsManager'),
+            r = (0, d.D)(a.Z, t);
+        n && (r && c.Z.shouldFetchCatalogForGuild(e) && (0, l.Sn)(e), c.Z.shouldFetchPowerupsForGuild(e) && (0, l.Fm)(e));
     }
     handleEntitlementUpdate(e) {
         let { guildId: t } = e;

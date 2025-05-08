@@ -57,13 +57,13 @@ let b = {
             }, [N, Z]),
             k = (0, a.Z)(null, w);
         return (0, i.jsxs)('div', {
+            id: _(x),
             className: l()(f.container, S, {
                 [f.hidden]: A,
                 [f.visible]: !A
             }),
             children: [
                 (0, i.jsx)(g.A4, {
-                    id: _(x),
                     ref: R,
                     balance: v,
                     balanceWidgetMode: D ? u.b.DEFAULT : T,

@@ -10,5 +10,6 @@ e.exports = {
     default: 'default_a3e8db',
     highlighted: 'highlighted_a3e8db',
     selected: 'selected_a3e8db',
+    inModalOverlay: 'inModalOverlay_a3e8db',
     notificationBadge: 'notificationBadge_a3e8db'
 };
