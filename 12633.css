@@ -35373,6 +35373,11 @@ html:not(.visual-refresh).theme-dark .container_a3e8db.selected_a3e8db {
     color: var(--text-muted)
 }
 
+.ambient_cd30d9.badgeImage_cd30d9 {
+    min-height: 80px;
+    min-width: 80px
+}
+
 .tooltipWordmark_d4ff11 {
     color: var(--text-muted);
     margin-bottom: 4px
