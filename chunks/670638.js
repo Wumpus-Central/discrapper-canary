@@ -81,7 +81,7 @@ function N(e) {
                 impressionId: q
             });
         }, [q, e.quest, e.questContent]),
-        M = s.useCallback(() => {
+        A = s.useCallback(() => {
             (0, j.f2)(e.quest.id, {
                 content: e.questContent,
                 position: e.questContentPosition,
@@ -90,8 +90,8 @@ function N(e) {
             }),
                 (0, o.showToast)((0, o.createToast)(T.intl.string(T.t['+5kSoa']), o.ToastType.SUCCESS));
         }, [q, e.quest.id, e.questContent, e.questContentPosition]),
-        A = (e) => (0, o.showToast)((0, o.createToast)(new a.Z(e, e.status).message, o.ToastType.FAILURE)),
-        k = () => (0, x.is)(e.quest.id).catch(A),
+        M = (e) => (0, o.showToast)((0, o.createToast)(new a.Z(e, e.status).message, o.ToastType.FAILURE)),
+        k = () => (0, x.is)(e.quest.id).catch(M),
         Z = s.useMemo(
             () =>
                 (0, r.jsx)(o.S89, {
@@ -126,7 +126,7 @@ function N(e) {
                             (0, r.jsx)(o.sNh, {
                                 id: 'share-link',
                                 label: T.intl.string(T.t.RDE0SU),
-                                action: M,
+                                action: A,
                                 icon: o.TIy
                             }),
                         !1
@@ -232,7 +232,7 @@ function N(e) {
                                         (0, r.jsx)(o.sNh, {
                                             id: 'start',
                                             label: 'Start heartbeat (cheatmode)',
-                                            action: () => (0, x.CS)(e.quest.id, !0).catch(A)
+                                            action: () => (0, x.CS)(e.quest.id, !0).catch(M)
                                         }),
                                         (0, r.jsx)(o.sNh, {
                                             id: 'stop',

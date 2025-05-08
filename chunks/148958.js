@@ -1,17 +1,17 @@
-n.d(t, { h: () => u }), n(388685), n(539854), n(642613);
+n.d(t, { h: () => d }), n(388685), n(539854), n(642613);
 var r = n(73800),
     i = n(442837),
-    l = n(581364),
+    a = n(581364),
     o = n(675478),
-    s = n(709054),
-    a = n(822245),
+    l = n(709054),
+    s = n(822245),
     c = n(526761);
-function u(e, t) {
+function d(e, t) {
     r.useEffect(() => {
         o.DZ.loadIfUncached(c.yP.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
-    let n = (0, i.e7)([a.Z], () => a.Z.getApplicationFrecencyWithoutLoadingLatest()),
-        u = r.useMemo(
+    let n = (0, i.e7)([s.Z], () => s.Z.getApplicationFrecencyWithoutLoadingLatest()),
+        d = r.useMemo(
             () =>
                 null == t || 0 === t.length
                     ? e
@@ -61,41 +61,41 @@ function u(e, t) {
                       }),
             [e, t]
         ),
-        d = r.useMemo(() => (null == t ? void 0 : t.filter((t) => !e.some((e) => e.id === t.application.id))), [e, t]),
-        h = r.useMemo(() => {
+        u = r.useMemo(() => (null == t ? void 0 : t.filter((t) => !e.some((e) => e.id === t.application.id))), [e, t]),
+        _ = r.useMemo(() => {
             var e;
-            null == d ||
-                d.forEach((e) => {
-                    let t = s.default.extractTimestamp(e.id);
+            null == u ||
+                u.forEach((e) => {
+                    let t = l.default.extractTimestamp(e.id);
                     null == n.getEntry(e.application.id) && n.track(e.application.id, t);
                 }),
                 n.compute();
-            let t = null != (e = null == d ? void 0 : d.map((e) => (0, l.X0)(e.application, !0))) ? e : [],
-                r = [...u];
+            let t = null != (e = null == u ? void 0 : u.map((e) => (0, a.X0)(e.application, !0))) ? e : [],
+                r = [...d];
             return (
                 r.push(...t),
                 r.sort((e, t) => {
                     var r, i;
-                    let l = (null != (r = n.getScore(t.id)) ? r : 0) - (null != (i = n.getScore(e.id)) ? i : 0);
-                    return 0 !== l ? l : e.name.localeCompare(t.name);
+                    let a = (null != (r = n.getScore(t.id)) ? r : 0) - (null != (i = n.getScore(e.id)) ? i : 0);
+                    return 0 !== a ? a : e.name.localeCompare(t.name);
                 }),
                 r
             );
-        }, [u, n, d]);
+        }, [d, n, u]);
     return r.useMemo(() => {
         var e, r;
-        let i, l;
+        let i, a;
         null == t ||
             t.forEach((e) => {
-                let t = s.default.extractTimestamp(e.id);
-                (null == l || t > l) && ((i = e), (l = t));
+                let t = l.default.extractTimestamp(e.id);
+                (null == a || t > a) && ((i = e), (a = t));
             }),
-            u.forEach((e) => {
+            d.forEach((e) => {
                 var t, r;
                 let o = Math.max(...(null != (r = null == (t = n.getEntry(e.id)) ? void 0 : t.recentUses) ? r : []));
-                (null == l || o > l) && ((i = e), (l = o));
+                (null == a || o > a) && ((i = e), (a = o));
             });
         let o = null != (r = null == i || null == (e = i.application) ? void 0 : e.id) ? r : '';
-        return [...h.filter((e) => e.id === o), ...h.filter((e) => e.id !== o)];
-    }, [h, u, n, t]);
+        return [..._.filter((e) => e.id === o), ..._.filter((e) => e.id !== o)];
+    }, [_, d, n, t]);
 }

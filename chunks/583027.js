@@ -1,34 +1,34 @@
 n.d(t, {
-    Mo: () => a,
-    SC: () => u,
+    Mo: () => u,
+    SC: () => a,
     _U: () => c
 }),
     n(388685);
 var r = n(381814),
     l = n(734641),
-    i = n(731965);
-let o = (0, r.U)((0, l.XR)(() => ({ commandAnalyticsContext: new Map() })));
-function a(e) {
+    o = n(731965);
+let i = (0, r.U)((0, l.XR)(() => ({ commandAnalyticsContext: new Map() })));
+function u(e) {
     let { command: t, location: n, sectionName: r } = e,
-        { commandAnalyticsContext: l } = o.getState(),
-        a = l.get(t);
-    if (null == a || a.location !== n || a.sectionName !== r) {
+        { commandAnalyticsContext: l } = i.getState(),
+        u = l.get(t);
+    if (null == u || u.location !== n || u.sectionName !== r) {
         let e = new Map(l);
         e.set(t, {
             location: n,
             sectionName: r
         }),
-            (0, i.j)(() => o.setState({ commandAnalyticsContext: e }));
+            (0, o.j)(() => i.setState({ commandAnalyticsContext: e }));
     }
 }
 function c(e) {
-    let { commandAnalyticsContext: t } = o.getState();
+    let { commandAnalyticsContext: t } = i.getState();
     return t.get(e);
 }
-function u(e) {
-    let { commandAnalyticsContext: t } = o.getState();
+function a(e) {
+    let { commandAnalyticsContext: t } = i.getState();
     if (t.has(e)) {
         let n = new Map(t);
-        n.delete(e), (0, i.j)(() => o.setState({ commandAnalyticsContext: n }));
+        n.delete(e), (0, o.j)(() => i.setState({ commandAnalyticsContext: n }));
     }
 }

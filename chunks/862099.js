@@ -1,7 +1,7 @@
 n.d(t, {
-    Co: () => X,
+    Co: () => Q,
     ZP: () => J,
-    bZ: () => Q,
+    bZ: () => X,
     gt: () => B
 }),
     n(388685);
@@ -138,7 +138,7 @@ function H(e) {
                       className: V.stageIcon
                   })
                 : null,
-        children: (0, i.jsx)(X, {
+        children: (0, i.jsx)(Q, {
             channel: n,
             speakers: r,
             voiceType: 1
@@ -360,15 +360,15 @@ function q(e) {
             className: V.stageIcon
         }),
         topic: t.topic,
-        children: (0, i.jsx)(X, {
+        children: (0, i.jsx)(Q, {
             channel: n,
             speakers: r,
             voiceType: 2
         })
     });
 }
-var Q = (((r = {})[(r.VOICE = 1)] = 'VOICE'), (r[(r.STAGE = 2)] = 'STAGE'), (r[(r.STUDY_ROOM = 3)] = 'STUDY_ROOM'), r);
-function X(e) {
+var X = (((r = {})[(r.VOICE = 1)] = 'VOICE'), (r[(r.STAGE = 2)] = 'STAGE'), (r[(r.STUDY_ROOM = 3)] = 'STUDY_ROOM'), r);
+function Q(e) {
     let { channel: t, speakers: n, voiceType: r } = e,
         a = t.getGuildId(),
         d = l.useMemo(() => n.slice(0, 3), [n]),

@@ -7,7 +7,6 @@ let o = (0, r.B)({
     label: 'App DMs Experiment',
     defaultConfig: {
         enabled: !1,
-        quickLaunchEnabled: !1,
         activityPopoutWindowInAppDMEnabled: !1
     },
     commonTriggerPoint: i.$P.CONNECTION_OPEN,
@@ -17,16 +16,14 @@ let o = (0, r.B)({
             label: 'Enable special UI for DMs with Apps',
             config: {
                 enabled: !0,
-                quickLaunchEnabled: !1,
                 activityPopoutWindowInAppDMEnabled: !1
             }
         },
         {
             id: 2,
-            label: 'Enable special UI for DMs with Apps including quick launch',
+            label: '(Treatment deprecated): Enable special UI for DMs with Apps including quick launch',
             config: {
                 enabled: !0,
-                quickLaunchEnabled: !0,
                 activityPopoutWindowInAppDMEnabled: !1
             }
         },
@@ -35,7 +32,6 @@ let o = (0, r.B)({
             label: 'Enable App DMs UI including quick launch and activity popout window in app DM',
             config: {
                 enabled: !0,
-                quickLaunchEnabled: !0,
                 activityPopoutWindowInAppDMEnabled: !0
             }
         }

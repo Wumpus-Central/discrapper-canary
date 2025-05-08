@@ -55,7 +55,7 @@ function D(e) {
     }
     return e;
 }
-function M(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -73,7 +73,7 @@ function M(e, t) {
         e
     );
 }
-let A = (e, t, n) => ((0, S.uq)(e) && !n && 'lg' === t ? 'text-lg/medium' : 'lg' === t ? 'text-md/medium' : 'sm' === t ? 'text-sm/medium' : 'text-xs/medium');
+let M = (e, t, n) => ((0, S.uq)(e) && !n && 'lg' === t ? 'text-lg/medium' : 'lg' === t ? 'text-md/medium' : 'sm' === t ? 'text-sm/medium' : 'text-xs/medium');
 function k(e) {
     let { containerSize: t, onClick: n, children: s, tabIndex: i } = e;
     return 'xs' === t
@@ -123,7 +123,7 @@ function Z(e) {
                 var t;
                 return (0, r.jsx)(
                     C,
-                    M(D({}, e), {
+                    A(D({}, e), {
                         wrapperClassName: I.ctaButtonWrapper,
                         color: a.Ttl.BRAND,
                         disabled: null == b.onClick,
@@ -202,7 +202,7 @@ let B = (e) => {
                         children: (e) =>
                             (0, r.jsxs)(
                                 'div',
-                                M(D({ className: I.rewardTileWrapper }, e), {
+                                A(D({ className: I.rewardTileWrapper }, e), {
                                     children: [
                                         E &&
                                             (0, r.jsx)('div', {
@@ -224,7 +224,7 @@ let B = (e) => {
                         className: o()(I.gridText, I.taskDetails),
                         children: [
                             (0, r.jsx)(a.Text, {
-                                variant: A(n, i, W),
+                                variant: M(n, i, W),
                                 className: I.taskInstructions,
                                 children: E ? _.intl.formatToPlainString(_.t['ge+AJi'], { questName: t.config.messages.questName }) : K
                             }),

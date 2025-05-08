@@ -13,7 +13,7 @@ function d(e) {
         [g, b] = i.useState(''),
         [_, y] = i.useState(!1),
         C = (0, l.e7)([s.ZP], () => s.ZP.callHeaderHeight),
-        x = i.createRef(),
+        x = i.useRef(null),
         v = i.useRef(0);
     i.useEffect(() => {
         let e = t.current;
