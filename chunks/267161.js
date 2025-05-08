@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
         default: () => F,
-        useAppSidebarState: () => B
+        useAppSidebarState: () => V
     });
 var r = n(255367),
     i = n(73800),
@@ -65,7 +65,7 @@ function G(e) {
     }
     return e;
 }
-function V(e, t) {
+function B(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -83,7 +83,7 @@ function V(e, t) {
         e
     );
 }
-let B = (0, a.U)(() => ({ isOpen: !0 }));
+let V = (0, a.U)(() => ({ isOpen: !0 }));
 function H() {
     let e,
         t = (0, l.TH)(),
@@ -164,7 +164,7 @@ let F = i.memo(function () {
         Z.ZP.setMinimumSize(D.J, D.N);
     }, []);
     let e = (0, g.TH)('AppTitleBar'),
-        t = !B((e) => e.isOpen) && e,
+        t = !V((e) => e.isOpen) && e,
         { hasBugReporterAccess: n } = h.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     i.useLayoutEffect(() => {
         Z.ZP.setMinimumSize(D.J, D.N);
@@ -185,10 +185,10 @@ let F = i.memo(function () {
                                       children: [
                                           (0, r.jsx)(
                                               c.P3F,
-                                              V(G({}, e), {
+                                              B(G({}, e), {
                                                   className: U.button,
                                                   onClick: () => {
-                                                      B.setState({ isOpen: !B.getState().isOpen });
+                                                      V.setState({ isOpen: !V.getState().isOpen });
                                                   },
                                                   children: (0, r.jsx)(z, {})
                                               })
@@ -213,7 +213,7 @@ let F = i.memo(function () {
                                           canShowReminder: !0,
                                           className: U.button
                                       }),
-                                      (0, r.jsx)(v.Z, V(G({}, t ? {} : e), { className: U.button })),
+                                      (0, r.jsx)(v.Z, B(G({}, t ? {} : e), { className: U.button })),
                                       n ? (0, r.jsx)(O.Z, { className: U.button }) : (0, r.jsx)(E.Z, { className: U.button }),
                                       (0, r.jsx)(y.Z, { className: U.button })
                                   ]

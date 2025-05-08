@@ -116,7 +116,7 @@ function w(e) {
                     questId: E.id
                 }));
         }, [E, O]),
-        V = i.useCallback(() => {
+        B = i.useCallback(() => {
             O({
                 questId: E.id,
                 questContent: f.jn.ACTIVITY_PANEL,
@@ -127,7 +127,7 @@ function w(e) {
                     questId: E.id
                 });
         }, [E.id, O]),
-        B = (0, C.hf)({
+        V = (0, C.hf)({
             quest: E,
             location: f.jn.ACTIVITY_PANEL
         }),
@@ -242,7 +242,7 @@ function w(e) {
                                           color: s.zxk.Colors.PRIMARY,
                                           fullWidth: !0,
                                           size: s.zxk.Sizes.SMALL,
-                                          onClick: V,
+                                          onClick: B,
                                           children: j.intl.string(j.t.LLLLPD)
                                       }),
                                       (0, r.jsx)(s.zxk, {
@@ -271,7 +271,7 @@ function w(e) {
                                   className: A.cta,
                                   color: s.zxk.Colors.BRAND,
                                   fullWidth: !0,
-                                  onClick: B,
+                                  onClick: V,
                                   size: s.zxk.Sizes.SMALL,
                                   children: j.intl.string(j.t.cfY4PD)
                               })

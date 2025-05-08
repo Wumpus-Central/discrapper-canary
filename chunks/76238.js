@@ -17,9 +17,11 @@ function o(e, t, n) {
     );
 }
 class s {
+    checkRpcVersion(e) {
+        if (null == e || e > a.X6Q || e < 1) throw new l.Z({ closeCode: a.$VG.INVALID_VERSION }, 'Invalid Version: '.concat(e));
+    }
     constructor(e, t, n) {
-        if (
-            (o(this, 'transport', void 0),
+        o(this, 'transport', void 0),
             o(this, 'version', void 0),
             o(this, 'encoding', void 0),
             o(this, 'id', void 0),
@@ -40,8 +42,6 @@ class s {
                 name: null,
                 icon: null
             }),
-            null == t || t > a.X6Q || t < 1)
-        )
-            throw new l.Z({ closeCode: a.$VG.INVALID_VERSION }, 'Invalid Version: '.concat(t));
+            this.checkRpcVersion(t);
     }
 }

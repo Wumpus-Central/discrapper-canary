@@ -107,7 +107,7 @@ function y(e) {
         r
     );
 }
-function h() {
+function S() {
     let e,
         t = !1;
     return (
@@ -130,9 +130,9 @@ function h() {
         t
     );
 }
-class S extends (i = r.ZP.Store) {
+class h extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(a.Z), this.syncWith([a.Z], h);
+        this.waitFor(a.Z), this.syncWith([a.Z], S);
     }
     get games() {
         return O;
@@ -150,8 +150,8 @@ class S extends (i = r.ZP.Store) {
         return E[e];
     }
 }
-d(S, 'displayName', 'NowPlayingStore');
-let v = new S(l.Z, {
+d(h, 'displayName', 'NowPlayingStore');
+let v = new h(l.Z, {
     CONNECTION_OPEN: function () {
         (O = {}), (E = {});
     },

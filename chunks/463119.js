@@ -163,7 +163,7 @@ let k = (e) => {
         });
     },
     G = (e) => (0, r.jsx)(U, R(L({}, e), { children: (0, r.jsx)(k, {}) })),
-    V = i.memo(function (e) {
+    B = i.memo(function (e) {
         var t;
         let { displayOptions: n, assetId: i, reducedMotion: l = !1 } = e,
             a = null != i ? (0, g.Z)(i, s.EFr.SIZE_80, !l) : void 0,
@@ -201,7 +201,7 @@ let k = (e) => {
             ]
         });
     }),
-    B = (e) => {
+    V = (e) => {
         let t, n;
         var l,
             c,
@@ -232,9 +232,9 @@ let k = (e) => {
             G = i.useCallback((e) => {
                 j(!1), null == e || e();
             }, []),
-            B = v.title();
+            V = v.title();
         return (0, r.jsx)(s.ua7, {
-            text: (0, r.jsx)(V, {
+            text: (0, r.jsx)(B, {
                 displayOptions: v,
                 assetId: v.assetIds[N],
                 reducedMotion: S
@@ -244,7 +244,7 @@ let k = (e) => {
             delay: 100,
             allowOverflow: !0,
             hideOnClick: !1,
-            'aria-label': 'string' == typeof B ? B : x.intl.string(x.t.rSXaxc),
+            'aria-label': 'string' == typeof V ? V : x.intl.string(x.t.rSXaxc),
             children: (e) =>
                 (0, r.jsxs)(
                     U,
@@ -374,7 +374,7 @@ let k = (e) => {
                 case P.k2.TOOLTIP:
                     return (0, r.jsx)(H, R(L({}, p), { displayOptions: s }));
                 case P.k2.COACHTIP:
-                    return (0, r.jsx)(B, R(L({}, p), { displayOptions: s }));
+                    return (0, r.jsx)(V, R(L({}, p), { displayOptions: s }));
                 case P.k2.BADGE:
                     return (0, r.jsx)(G, L({}, p));
             }

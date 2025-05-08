@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(258609),
     U = n(446226),
     G = n(935261),
-    V = n(74299),
-    B = n(803647),
+    B = n(74299),
+    V = n(803647),
     H = n(142497),
     F = n(810788),
     z = n(160404),
@@ -118,7 +118,7 @@ function eG(e) {
     }
     return e;
 }
-function eV(e, t) {
+function eB(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -136,7 +136,7 @@ function eV(e, t) {
         e
     );
 }
-function eB(e, t) {
+function eV(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -269,7 +269,7 @@ function eY(e) {
         i.useEffect(() => () => j(), [m.enabled, j]),
         (0, r.jsx)(
             eh.Z,
-            eV(
+            eB(
                 eG(
                     {
                         onChange: N,
@@ -284,7 +284,7 @@ function eY(e) {
                     enabled: !l && m.enabled,
                     children: (e) => {
                         var { unavailable: t, isActive: n, label: i, iconComponent: l, iconColor: u } = e,
-                            p = eB(e, ['unavailable', 'isActive', 'label', 'iconComponent', 'iconColor']);
+                            p = eV(e, ['unavailable', 'isActive', 'label', 'iconComponent', 'iconColor']);
                         let g = (0, r.jsx)(P, {
                             size: c ? 'md' : 'sm',
                             className: a()(ek.buttonIcon, { [ek.withText]: !T }),
@@ -305,14 +305,14 @@ function eY(e) {
                             animation: f.yRy.Animation.FADE,
                             children: (e, l) => {
                                 var { onClick: s } = e,
-                                    u = eB(e, ['onClick']),
+                                    u = eV(e, ['onClick']),
                                     { isShown: h } = l;
                                 return (0, r.jsx)(f.ua7, {
                                     text: i,
                                     children: (e) =>
                                         (0, r.jsx)(
                                             f.zxk,
-                                            eV(eG({ buttonRef: o }, p, e, u), {
+                                            eB(eG({ buttonRef: o }, p, e, u), {
                                                 onClick: (t) => {
                                                     var n;
                                                     p.onClick(t), null == (n = e.onClick) || n.call(e), h && s(t);
@@ -375,9 +375,9 @@ function eK(e) {
               children: (e) =>
                   (0, r.jsxs)(
                       f.zxk,
-                      eV(
+                      eB(
                           eG(
-                              eV(eG({}, e), {
+                              eB(eG({}, e), {
                                   fullWidth: !0,
                                   size: i ? f.zxk.Sizes.MEDIUM : f.zxk.Sizes.SMALL
                               }),
@@ -448,7 +448,7 @@ function eq(e) {
         }, [E, n.id]),
         C = b.find((e) => e.ownerId === (null == m ? void 0 : m.id)),
         S = (0, es.E)(n, m, b);
-    t = null == C ? (l ? v : eu.Z) : () => (0, B.Z)(C);
+    t = null == C ? (l ? v : eu.Z) : () => (0, V.Z)(C);
     let N = null != C || S.length > 0,
         T = _ ? eD.intl.string(eD.t.fjBNo6) : eD.intl.string(eD.t.uQn9Bw),
         P = O || o || y,
@@ -478,15 +478,15 @@ function eq(e) {
         animation: f.yRy.Animation.FADE,
         children: (e) => {
             var { onClick: n, onMouseEnter: i } = e,
-                l = eB(e, ['onClick', 'onMouseEnter']);
+                l = eV(e, ['onClick', 'onMouseEnter']);
             return (0, r.jsx)(f.ua7, {
                 text: T,
                 children: (e) =>
                     (0, r.jsx)(
                         f.zxk,
-                        eV(
+                        eB(
                             eG(
-                                eV(eG({}, e), {
+                                eB(eG({}, e), {
                                     buttonRef: c,
                                     size: h ? f.zxk.Sizes.MEDIUM : f.zxk.Sizes.SMALL,
                                     onClick: (r) => {
@@ -706,7 +706,7 @@ class eX extends i.PureComponent {
                             value: i,
                             children: (0, r.jsx)(
                                 e,
-                                eV(eG({}, n), {
+                                eB(eG({}, n), {
                                     channel: t,
                                     onInteraction: (0, L.u)('RTCConnectionMenu', j.Z.RTC_PANEL)
                                 })
@@ -751,7 +751,7 @@ function eQ(e) {
         i.useEffect(() => () => o(), [l, o]),
         (0, r.jsx)(
             ej.Z,
-            eV(eG({}, t), {
+            eB(eG({}, t), {
                 onClick: (e) => {
                     (0, w.v)(a, w.d.KRISP, !l), t.onClick(e);
                 },
@@ -791,7 +791,7 @@ let eJ = (0, E.Z)(function (e) {
                   }
         ),
         { channelId: c } = s,
-        d = eB(s, ['channelId']),
+        d = eV(s, ['channelId']),
         p = (0, u.e7)([em.Z], () => em.Z.getChannel(c), [c]),
         h = null == p ? void 0 : p.getGuildId(),
         g = (0, u.e7)([eb.Z], () => eb.Z.getGuild(h), [h]),
@@ -799,7 +799,7 @@ let eJ = (0, E.Z)(function (e) {
             noiseCancellationSupported: eE.Z.isNoiseCancellationSupported(),
             noiseCancellationActive: eE.Z.getNoiseCancellation(),
             noiseCancellationError: eE.Z.isNoiseCancellationError(),
-            canGoLive: (0, V.Z)(eE.Z)
+            canGoLive: (0, B.Z)(eE.Z)
         })),
         b = (0, u.e7)([eE.Z, F.Z], () => F.Z.hasHotspot(eR.v.VOICE_PANEL_INTRODUCTION) && (0, eP.EO)(o) && !eE.Z.isInteractionRequired() && !(null == p ? void 0 : p.isGuildStageVoice())),
         _ = (0, u.e7)([eC.Z], () => null != c && eC.Z.hasVideo(c), [c]),
@@ -850,7 +850,7 @@ let eJ = (0, E.Z)(function (e) {
                     : null,
                 (0, r.jsx)(
                     eX,
-                    eV(eG({}, e, m, d), {
+                    eB(eG({}, e, m, d), {
                         enableActivities: R,
                         remoteVoiceState: l,
                         guild: g,

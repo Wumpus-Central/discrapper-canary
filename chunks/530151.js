@@ -75,7 +75,7 @@ let M = (e) => {
             }
         });
     };
-function V(e, t) {
+function B(e, t) {
     switch (t) {
         case L.f07.POST_INSTALL_SCRIPTS:
         case L.f07.PLANNING:
@@ -86,7 +86,7 @@ function V(e, t) {
             return (0, A.BU)(e, { useKibibytes: !0 });
     }
 }
-let B = {
+let V = {
     [L.vxO.INSTALLING]: {
         [C.J6.NONE]: (e, t, n, r) =>
             R.intl.formatToPlainString(R.t.JfJt9f, {
@@ -176,7 +176,7 @@ let B = {
     }
 };
 function H(e, t, n, r, i) {
-    let l = B[t],
+    let l = V[t],
         a = null != l ? Object.keys(l) : [],
         { unit: o, time: s } = (0, C.CI)(null != e ? e / 60 : null, a);
     if (null != l && null != o) {
@@ -187,8 +187,8 @@ function H(e, t, n, r, i) {
 }
 function F(e) {
     let { type: t, stage: n, percent: r, progress: i, total: l, secondsRemaining: a } = e,
-        o = V(l, n),
-        s = V(i, n);
+        o = B(l, n),
+        s = B(i, n);
     switch (n) {
         case L.f07.QUEUED:
             if (0 === i) return R.intl.string(R.t.RpfBqa);
@@ -292,8 +292,8 @@ class z extends i.PureComponent {
         if (null != n) {
             let { progress: r, total: i, stage: l } = n;
             if (null != r && null != i) {
-                let n = V(i, l),
-                    a = V(r, l),
+                let n = B(i, l),
+                    a = B(r, l),
                     o = Math.floor((t = Z.xI(r, i)));
                 e =
                     l === L.f07.PAUSING

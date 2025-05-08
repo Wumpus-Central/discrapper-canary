@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(637853),
     U = n(326145),
     G = n(269675),
-    V = n(242601),
-    B = n(416568),
+    B = n(242601),
+    V = n(416568),
     H = n(613609),
     F = n(160404),
     z = n(225675),
@@ -254,7 +254,7 @@ let eN = (0, u.Un)({
             ? (0, r.jsx)(R.Z, {})
             : null != e
               ? (0, r.jsx)(
-                    V.Z,
+                    B.Z,
                     {
                         selectedChannelId: n,
                         guildId: e
@@ -279,8 +279,8 @@ let eN = (0, u.Un)({
             : null;
     },
     eG = () => (0, r.jsx)(em.Z, {}),
-    eV = () => (0, r.jsx)(eb.Z, {}),
-    eB = function () {
+    eB = () => (0, r.jsx)(eb.Z, {}),
+    eV = function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return function (t) {
             let { tab: n } = (0, o.parse)(t.location.search);
@@ -439,7 +439,7 @@ function eX(e) {
                     O &&
                         s &&
                         !c &&
-                        (0, r.jsx)(B.Z, {
+                        (0, r.jsx)(V.Z, {
                             className: ev.guilds,
                             themeOverride: n
                         }),
@@ -529,7 +529,7 @@ function eQ() {
             f &&
                 !u &&
                 !E &&
-                (0, r.jsx)(B.Z, {
+                (0, r.jsx)(V.Z, {
                     className: ev.guilds,
                     themeOverride: n
                 }),
@@ -583,28 +583,28 @@ function eQ() {
                                                         }),
                                                         (0, r.jsx)(S.Z, {
                                                             path: e_.Z5c.APPLICATION_STORE,
-                                                            render: eV,
+                                                            render: eB,
                                                             impressionName: c.ImpressionNames.APPLICATION_STORE,
                                                             disableTrack: !0
                                                         }),
                                                         (0, r.jsx)(S.Z, {
                                                             path: e_.Z5c.COLLECTIBLES_SHOP_FULLSCREEN,
-                                                            render: eB(!0),
+                                                            render: eV(!0),
                                                             disableTrack: !0
                                                         }),
                                                         (0, r.jsx)(S.Z, {
                                                             path: e_.Z5c.COLLECTIBLES_SHOP_WITH_TAB(':tab'),
-                                                            render: eB(!1),
+                                                            render: eV(!1),
                                                             disableTrack: !0
                                                         }),
                                                         (0, r.jsx)(S.Z, {
                                                             path: e_.Z5c.COLLECTIBLES_SHOP,
-                                                            render: eB(!1),
+                                                            render: eV(!1),
                                                             disableTrack: !0
                                                         }),
                                                         (0, r.jsx)(S.Z, {
                                                             path: e_.Z5c.COLLECTIBLES_SHOP_PRODUCT_DETAIL(':skuId'),
-                                                            render: eB(!1),
+                                                            render: eV(!1),
                                                             disableTrack: !0
                                                         }),
                                                         (0, r.jsx)(S.Z, {

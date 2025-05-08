@@ -97,8 +97,8 @@ function Z(e) {
         k = L || R || D,
         [M, U] = i.useState(!1),
         G = t.getGuildId(),
-        V = (0, I.sR)({ isSoundboardButtonDisabled: k }),
-        [B, H] = (0, b.cv)(V),
+        B = (0, I.sR)({ isSoundboardButtonDisabled: k }),
+        [V, H] = (0, b.cv)(B),
         { analyticsLocations: F, parentAnalyticsLocation: z } = (0, h.ZP)(p.Z.SOUNDBOARD_BUTTON);
     function W(e) {
         null != G &&
@@ -139,7 +139,7 @@ function Z(e) {
                         channel: t,
                         onClose: n,
                         gridNotice:
-                            B === s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
+                            V === s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
                             (0, r.jsx)(v.o, {
                                 onClose: n,
                                 markAsDismissed: H
@@ -165,7 +165,7 @@ function Z(e) {
                                         disabled: k,
                                         onClick: () => {
                                             var t;
-                                            null != B && B !== s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && H(N.L.UNKNOWN), null == e || null == (t = e.onClick) || t.call(e), U(!M), K(), (0, f.v)(z, f.d.SOUNDBOARD);
+                                            null != V && V !== s.z.CUSTOM_CALL_SOUNDS_PICKER_UPSELL && H(N.L.UNKNOWN), null == e || null == (t = e.onClick) || t.call(e), U(!M), K(), (0, f.v)(z, f.d.SOUNDBOARD);
                                         },
                                         onMouseEnter: (t) => {
                                             var n, r;

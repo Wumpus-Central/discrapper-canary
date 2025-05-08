@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(215023),
     U = n(388032),
     G = n(87671),
-    V = n(13299),
-    B = n(843385);
+    B = n(13299),
+    V = n(843385);
 function H() {
     return (0, s.e7)(
         [j.Z],
@@ -67,12 +67,12 @@ function F() {
               className: a()(G.bannerAsset, G.orbsBannerAsset),
               controls: !1,
               children: (0, r.jsx)('source', {
-                  src: B.Z,
+                  src: V.Z,
                   type: 'video/webm'
               })
           })
         : (0, r.jsx)('img', {
-              src: V.ZP,
+              src: B.ZP,
               className: a()(G.bannerAsset, G.oversizedImg),
               alt: ''
           });
@@ -101,14 +101,14 @@ let z = function () {
             });
         }, [e]);
     let { enabled: Z } = (0, S.W)({ location: D.dr.QUEST_HOME_DESKTOP }),
-        V = H(),
-        B = i.useCallback(() => {
-            if (V) return void window.open(T.Z.getArticleURL(k.BhN.VIRTUAL_CURRENCY_LEARN_MORE));
+        B = H(),
+        V = i.useCallback(() => {
+            if (B) return void window.open(T.Z.getArticleURL(k.BhN.VIRTUAL_CURRENCY_LEARN_MORE));
             window.open(T.Z.getArticleURL(k.BhN.QUESTS_LEARN_MORE));
-        }, [V]);
+        }, [B]);
     (0, f.Tt)({ location: U.intl.string(U.t.JALI2N) });
-    let z = V ? U.intl.format(U.t.BCBIlp, {}) : U.intl.format(U.t.lmMBf3, {}),
-        W = V ? U.intl.format(U.t.U9FY0N, {}) : U.intl.string(U.t.oWCrBg);
+    let z = B ? U.intl.format(U.t.BCBIlp, {}) : U.intl.format(U.t.lmMBf3, {}),
+        W = B ? U.intl.format(U.t.U9FY0N, {}) : U.intl.string(U.t.oWCrBg);
     return (0, r.jsx)('div', {
         className: G.container,
         children: Z
@@ -142,7 +142,7 @@ let z = function () {
                       (0, r.jsxs)(_.Z, {
                           title: z,
                           description: W,
-                          button: V
+                          button: B
                               ? (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         (0, r.jsx)(c.zxk, {
@@ -160,17 +160,17 @@ let z = function () {
                                             look: c.iLD.LINK,
                                             color: c.Ttl.CUSTOM,
                                             className: G.orbsTermsButton,
-                                            onClick: B,
+                                            onClick: V,
                                             children: U.intl.string(U.t['7kTAgI'])
                                         })
                                     ]
                                 })
                               : (0, r.jsx)(b.u, {
                                     text: U.intl.string(U.t.hvVgAQ),
-                                    onClick: B
+                                    onClick: V
                                 }),
-                          className: a()(G.bannerContainer, { [G.orbsContainer]: V }),
-                          children: [(0, r.jsx)('div', { className: a()(G.bannerGradient, { [G.orbsGradient]: V }) }), (0, r.jsx)(F, {})]
+                          className: a()(G.bannerContainer, { [G.orbsContainer]: B }),
+                          children: [(0, r.jsx)('div', { className: a()(G.bannerGradient, { [G.orbsGradient]: B }) }), (0, r.jsx)(F, {})]
                       }),
                       (0, r.jsx)(E.Z, { children: e === P.e5.CLAIMED ? (0, r.jsx)(g, { onSelectTab: t }) : (0, r.jsx)(w.Z, {}) })
                   ]
@@ -189,10 +189,10 @@ let z = function () {
                                   description: W,
                                   button: (0, r.jsx)(b.u, {
                                       text: U.intl.string(U.t.hvVgAQ),
-                                      onClick: B
+                                      onClick: V
                                   }),
-                                  className: a()(G.bannerContainer, { [G.orbsContainer]: V }),
-                                  children: [(0, r.jsx)('div', { className: a()(G.bannerGradient, { [G.orbsGradient]: V }) }), (0, r.jsx)(F, {})]
+                                  className: a()(G.bannerContainer, { [G.orbsContainer]: B }),
+                                  children: [(0, r.jsx)('div', { className: a()(G.bannerGradient, { [G.orbsGradient]: B }) }), (0, r.jsx)(F, {})]
                               }),
                               (0, r.jsxs)(E.Z, {
                                   children: [

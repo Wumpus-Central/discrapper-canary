@@ -37,8 +37,8 @@ var r,
     M = n(594174),
     U = n(395361),
     G = n(639351),
-    V = n(81063),
-    B = n(823379),
+    B = n(81063),
+    V = n(823379),
     H = n(51144),
     F = n(599706),
     z = n(981631),
@@ -572,7 +572,7 @@ let ei = (e) => {
             p = t.application_id;
         l.useEffect(() => {
             null != p &&
-                (0, V.hR)(p, ['embedded_background']).then((e) => {
+                (0, B.hR)(p, ['embedded_background']).then((e) => {
                     let [t] = e;
                     return d(t);
                 });
@@ -580,7 +580,7 @@ let ei = (e) => {
         let f = (0, s.Wu)([M.default, D.default], () =>
                 Array.from(a)
                     .map((e) => (D.default.getId() === e ? null : M.default.getUser(e)))
-                    .filter(B.lm)
+                    .filter(V.lm)
             ),
             m = (0, h.O)(),
             { analyticsLocations: _ } = (0, v.ZP)();
@@ -588,7 +588,7 @@ let ei = (e) => {
         let E = C.Z.getApplication(p);
         if (null == E) return null;
         let O = null != t.created_at && t.created_at > 0 ? { start: t.created_at } : void 0,
-            y = (0, V.xF)(E.id, c, 300);
+            y = (0, B.xF)(E.id, c, 300);
         return (0, i.jsxs)($, {
             children: [
                 (0, i.jsxs)('div', {

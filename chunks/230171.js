@@ -59,7 +59,7 @@ function R(e) {
             botUserId: null == b ? void 0 : b.id
         }),
         V = null != E && x && H,
-        z = B && x && H,
+        z = B && x,
         W = (0, A.z)(t),
         K = i.useMemo(() => {
             let e = [];
