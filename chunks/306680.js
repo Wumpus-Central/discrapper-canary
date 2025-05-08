@@ -218,17 +218,18 @@ function ek(e) {
 }
 class eM {
     static forEach(e) {
-        for (let n of Object.keys(eM._readStates)) {
-            var t;
-            let r = null != (t = eM._readStates[parseInt(n)]) ? t : {};
-            for (let t of Object.keys(r)) if (!1 === e(r[t])) break;
-        }
+        for (let t of eM._readStates.values()) for (let n of t.values()) if (!1 === e(n)) break;
     }
     static get(e) {
-        var t;
-        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ei.W.CHANNEL,
-            r = null == (t = eM._readStates[n]) ? void 0 : t[e];
-        return null == r && ((r = new eM(e, n)), null == eM._readStates[n] && (eM._readStates[n] = {}), (eM._readStates[n][e] = r)), r;
+        var t, n;
+        let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ei.W.CHANNEL,
+            i = null == (t = eM._readStates.get(r)) ? void 0 : t.get(e);
+        if (null == i) {
+            i = new eM(e, r);
+            let t = null != (n = eM._readStates.get(r)) ? n : new Map();
+            t.set(e, i), eM._readStates.has(r) || eM._readStates.set(r, t);
+        }
+        return i;
     }
     static getGuildSentinels(e) {
         return null == this._guildReadStateSentinels[e] && (this._guildReadStateSentinels[e] = { unreadsSentinel: 0 }), this._guildReadStateSentinels[e];
@@ -239,7 +240,7 @@ class eM {
     static getIfExists(e) {
         var t;
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ei.W.CHANNEL;
-        return null == (t = eM._readStates[n]) ? void 0 : t[e];
+        return null == (t = eM._readStates.get(n)) ? void 0 : t.get(e);
     }
     static getMentionChannelIds() {
         let e = [];
@@ -250,20 +251,21 @@ class eM {
         return e;
     }
     static getValue(e) {
-        var t;
-        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ei.W.CHANNEL,
-            r = arguments.length > 2 ? arguments[2] : void 0,
-            i = arguments.length > 3 ? arguments[3] : void 0,
-            o = null == (t = eM._readStates[n]) ? void 0 : t[e];
-        return null == o ? i : r(o);
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ei.W.CHANNEL,
+            n = arguments.length > 2 ? arguments[2] : void 0,
+            r = arguments.length > 3 ? arguments[3] : void 0,
+            i = this.getIfExists(e, t);
+        return null == i ? r : n(i);
     }
     static clear(e) {
-        var t;
-        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ei.W.CHANNEL;
-        return (null == (t = eM._readStates[n]) ? void 0 : t[e]) != null && (delete eM._readStates[n][e], eM._mentionChannels.delete(e), !0);
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ei.W.CHANNEL,
+            n = eM._readStates.get(t);
+        if (null == n) return !1;
+        let r = n.delete(e);
+        return r && eM._mentionChannels.delete(e), r;
     }
     static clearAll() {
-        (eM._readStates = {}), eM._mentionChannels.clear();
+        eM._readStates.clear(), eM._mentionChannels.clear();
     }
     serialize(e) {
         let { channelId: t, type: n, _guildId: r, _isThread: i, _isActiveThread: o, _isJoinedThread: a, _persisted: s, loadedMessages: l, _lastMessageId: c, _lastMessageTimestamp: u, _ackMessageId: d, _ackMessageTimestamp: f, ackPinTimestamp: _, isManualAck: p, lastPinTimestamp: h, _oldestUnreadMessageId: m, oldestUnreadMessageIdStale: g, estimated: E, _mentionCount: b, flags: y, lastViewed: O } = this;
@@ -646,7 +648,7 @@ class eM {
                     oldFormErrors: !0,
                     rejectWithError: !0
                 }),
-            null == (e = eM._readStates[this.type]) || delete e[this.channelId],
+            null == (e = eM._readStates.get(this.type)) || e.delete(this.channelId),
             eM._mentionChannels.delete(this.channelId);
     }
     shouldDeleteReadState(e) {
@@ -852,7 +854,7 @@ function e$(e) {
 function e0() {
     null != eE && clearTimeout(eE);
 }
-ea(eM, '_guildReadStateSentinels', {}), ea(eM, '_readStates', {}), ea(eM, '_mentionChannels', new Set());
+ea(eM, '_guildReadStateSentinels', {}), ea(eM, '_readStates', new Map()), ea(eM, '_mentionChannels', new Set());
 let e1 = (0, o.throttle)((e) => {
     e.delete();
 }, 100);
@@ -1275,9 +1277,11 @@ function tF(e) {
     (eh = !0),
         eA(),
         t.forEach((e) => {
-            var t;
-            let n = null != (t = e.type) ? t : ei.W.CHANNEL;
-            (e.type = n), null == eM._readStates[n] && (eM._readStates[n] = {}), (eM._readStates[n][e.channelId] = (0, d.gh)(e, eM));
+            var t, n;
+            let r = null != (t = e.type) ? t : ei.W.CHANNEL;
+            e.type = r;
+            let i = null != (n = eM._readStates.get(r)) ? n : new Map();
+            i.set(e.channelId, (0, d.gh)(e, eM)), eM._readStates.has(r) || eM._readStates.set(r, i);
         });
 }
 function tV(e) {
@@ -1365,15 +1369,14 @@ class tJ extends (i = l.ZP.Store) {
     }
     getReadStatesByChannel() {
         var e;
-        return null != (e = eM._readStates[ei.W.CHANNEL]) ? e : {};
+        return null != (e = eM._readStates.get(ei.W.CHANNEL)) ? e : new Map();
     }
     getForDebugging(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ei.W.CHANNEL;
         return eM.getIfExists(e, t);
     }
     getNotifCenterReadState(e) {
-        var t;
-        return null == (t = eM._readStates[ei.W.NOTIFICATION_CENTER]) ? void 0 : t[e];
+        return eM.getIfExists(e, ei.W.NOTIFICATION_CENTER);
     }
     hasUnread(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ei.W.CHANNEL;
