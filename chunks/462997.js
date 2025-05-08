@@ -19,9 +19,9 @@ let o = {
         themePadding: 0
     },
     [i.lY.MODAL_V2]: {
-        avatarSize: r.EFr.SIZE_80,
-        avatarOffsetX: 26,
-        avatarOffsetY: 4,
+        avatarSize: r.EFr.SIZE_120,
+        avatarOffsetX: 24,
+        avatarOffsetY: 0,
         bannerWidth: 400,
         bannerHeight: 140,
         themePadding: 0

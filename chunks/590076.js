@@ -4,21 +4,21 @@ var r = n(255367),
     i = n(512722),
     a = n.n(i),
     o = n(399606),
-    s = n(618158),
-    u = n(594174),
+    u = n(618158),
+    s = n(594174),
     c = n(822183),
     d = n(364125),
     f = n(90753),
-    m = n(613050);
-function p(e) {
+    p = n(613050);
+function m(e) {
     let { focused: t, channelId: n, streamerId: i, stream: c } = e,
-        p = l.useRef(null),
-        E = (0, o.e7)([u.default], () => u.default.getCurrentUser());
-    a()(null != E, 'user cannot be null'), (0, f.Z)(p, E, i, n);
+        m = l.useRef(null),
+        E = (0, o.e7)([s.default], () => s.default.getCurrentUser());
+    a()(null != E, 'user cannot be null'), (0, f.Z)(m, E, i, n);
     let {
         handleClick: g,
-        handleMouseDown: v,
-        handleMouseEnter: h,
+        handleMouseDown: h,
+        handleMouseEnter: v,
         handleMouseMove: S,
         handleMouseUp: b
     } = (0, d.Z)({
@@ -27,17 +27,17 @@ function p(e) {
         streamerId: i,
         stream: c,
         focused: t,
-        canvas: p.current
+        canvas: m.current
     });
-    return (0, r.jsx)(s.Z, {
+    return (0, r.jsx)(u.Z, {
         children: (0, r.jsx)('canvas', {
-            ref: p,
+            ref: m,
             onClick: g,
-            onMouseDown: v,
-            onMouseEnter: h,
+            onMouseDown: h,
+            onMouseEnter: v,
             onMouseMove: S,
             onMouseUp: b,
-            className: m.sharedCanvas
+            className: p.sharedCanvas
         })
     });
 }
@@ -52,7 +52,7 @@ function E(e) {
     return !t || e.hasScreenMessage
         ? null
         : (0, r.jsx)(
-              p,
+              m,
               (function (e) {
                   for (var t = 1; t < arguments.length; t++) {
                       var n = null != arguments[t] ? arguments[t] : {},

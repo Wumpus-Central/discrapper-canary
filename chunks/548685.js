@@ -1,15 +1,15 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     l = n(73800),
-    i = n(120356),
-    a = n.n(i),
+    a = n(120356),
+    i = n.n(a),
     o = n(442837),
     s = n(481060),
     c = n(782568),
     u = n(607070),
     d = n(594174),
-    f = n(451478),
-    b = n(63063),
+    b = n(451478),
+    f = n(63063),
     p = n(74538),
     g = n(381585),
     h = n(597688),
@@ -22,17 +22,17 @@ var r = n(255367),
     S = n(215023),
     j = n(981631),
     y = n(388032),
-    E = n(806734);
-let P = (e) => {
-    let { isLoading: t, sortedSkuIds: n, handleTransition: i, numVisibleItems: P, tab: k } = e,
+    P = n(806734);
+let E = (e) => {
+    let { isLoading: t, sortedSkuIds: n, handleTransition: a, numVisibleItems: E, tab: k } = e,
         T = (0, o.e7)([d.default], () => d.default.getCurrentUser()),
         w = p.ZP.canUseCollectibles(T),
         I = (0, m.s)('useShopHomeSorting') && k === S.AW.HOME,
         { sortType: B, setSortType: L, sortedItems: N, sortOptions: R, shuffleProducts: A, showRecommendationOption: Z } = (0, _.N)(n, w),
         F = (0, x.St)(N),
-        D = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
-        H = (0, o.e7)([f.Z], () => f.Z.isFocused()),
-        M = !D && H,
+        H = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+        D = (0, o.e7)([b.Z], () => b.Z.isFocused()),
+        M = !H && D,
         { animationPhase: W, startAnimation: V } = (0, O.y)(),
         U = l.useCallback(
             (e) => {
@@ -46,13 +46,13 @@ let P = (e) => {
     return null == T
         ? null
         : (0, r.jsxs)('div', {
-              className: a()(E.popularPicksSection, E.centeredSection),
+              className: i()(P.popularPicksSection, P.centeredSection),
               children: [
                   (0, r.jsxs)('div', {
-                      className: E.blockHeader,
+                      className: P.blockHeader,
                       children: [
                           (0, r.jsxs)('div', {
-                              className: E.headerLeft,
+                              className: P.headerLeft,
                               children: [
                                   (0, r.jsx)(s.X6q, {
                                       variant: 'heading-lg/semibold',
@@ -60,9 +60,9 @@ let P = (e) => {
                                   }),
                                   Z &&
                                       (0, r.jsx)(s.ua7, {
-                                          text: y.intl.format(y.t.cl8gS0, { helpdeskArticle: b.Z.getArticleURL(j.BhN.DATA_USED_FOR_RECOMMENDED) }),
+                                          text: y.intl.string(y.t['3taPdn']),
                                           position: 'top',
-                                          'aria-label': y.intl.formatToPlainString(y.t.cl8gS0, { helpdeskArticle: b.Z.getArticleURL(j.BhN.DATA_USED_FOR_RECOMMENDED) }),
+                                          'aria-label': y.intl.string(y.t['3taPdn']),
                                           children: (e) => {
                                               var t, n;
                                               return (0, r.jsx)(
@@ -94,8 +94,8 @@ let P = (e) => {
                                                   })({}, e)),
                                                   (n = n =
                                                       {
-                                                          onClick: () => (0, c.Z)(b.Z.getArticleURL(j.BhN.DATA_USED_FOR_RECOMMENDED)),
-                                                          className: E.informationIcon,
+                                                          onClick: () => (0, c.Z)(f.Z.getArticleURL(j.BhN.DATA_USED_FOR_RECOMMENDED)),
+                                                          className: P.informationIcon,
                                                           children: (0, r.jsx)(s.d3s, { size: 'sm' })
                                                       }),
                                                   Object.getOwnPropertyDescriptors
@@ -117,20 +117,20 @@ let P = (e) => {
                               ]
                           }),
                           (0, r.jsxs)('div', {
-                              className: E.headerRight,
+                              className: P.headerRight,
                               children: [
                                   I &&
                                       (0, r.jsxs)(r.Fragment, {
                                           children: [
                                               (0, r.jsx)(s.Text, {
                                                   variant: 'text-xs/bold',
-                                                  className: E.sortByText,
+                                                  className: P.sortByText,
                                                   children: y.intl.string(y.t.uaX709)
                                               }),
                                               (0, r.jsx)(s.PhF, {
                                                   options: R,
                                                   select: U,
-                                                  className: E.sortSelect,
+                                                  className: P.sortSelect,
                                                   isSelected: (e) => e === B,
                                                   serialize: (e) => e
                                               })
@@ -146,12 +146,13 @@ let P = (e) => {
                                                         isShuffling: !0,
                                                         onOutroComplete: A
                                                     }),
+                                                disabled: W !== O.g.MOUNTED && W !== O.g.FINISHED,
                                                 children: y.intl.string(y.t.X3tnc3)
                                             })
                                           : (0, r.jsx)(s.zxk, {
                                                 color: s.Ttl.PRIMARY,
                                                 look: s.iLD.FILLED,
-                                                onClick: () => i('shop all top'),
+                                                onClick: () => a('shop all top'),
                                                 children: y.intl.string(y.t.xFcotb)
                                             }))
                               ]
@@ -159,16 +160,16 @@ let P = (e) => {
                       ]
                   }),
                   (0, r.jsx)('div', {
-                      className: E.feed,
+                      className: P.feed,
                       children: t
                           ? (0, r.jsx)(r.Fragment, { children: [...Array(12)].map((e, t) => (0, r.jsx)(C.K, {}, t + 1)) })
-                          : F.slice(0, P).map((e, t) => {
+                          : F.slice(0, E).map((e, t) => {
                                 let n,
                                     l = h.Z.getCategoryForProduct(e.skuId);
                                 if (null == e || null == l) return null;
                                 if (M)
-                                    if (W === O.g.SHUFFLE_OUT) return (0, r.jsx)('div', { className: E.shuffleOutro }, ''.concat(e.skuId, '-').concat(t));
-                                    else W === O.g.SORT_OUT ? (n = E.sortChangedOutro) : W === O.g.SHUFFLE_IN ? (n = E.shuffleIntro) : W === O.g.SORT_IN && (n = E.sortChangedIntro);
+                                    if (W === O.g.SHUFFLE_OUT) return (0, r.jsx)('div', { className: P.shuffleOutro }, ''.concat(e.skuId, '-').concat(t));
+                                    else W === O.g.SORT_OUT ? (n = P.sortChangedOutro) : W === O.g.SHUFFLE_IN ? (n = P.shuffleIntro) : W === O.g.SORT_IN && (n = P.sortChangedIntro);
                                 return (0, r.jsx)(
                                     g.k0,
                                     {

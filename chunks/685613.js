@@ -1,6 +1,6 @@
 n.d(t, {
-    US: () => f,
-    ZP: () => j,
+    US: () => j,
+    ZP: () => f,
     fF: () => h
 });
 var r,
@@ -8,8 +8,8 @@ var r,
     i = n(255367);
 n(73800);
 var o = n(120356),
-    l = n.n(o),
-    a = n(692547),
+    a = n.n(o),
+    l = n(692547),
     c = n(780384),
     u = n(481060),
     d = n(113434),
@@ -18,16 +18,16 @@ var o = n(120356),
     x = n(981631),
     g = n(582835),
     h = (((r = {})[(r.SMALL = 24)] = 'SMALL'), (r[(r.MEDIUM = 32)] = 'MEDIUM'), r),
-    f = (((s = {})[(s.SMALL = 2)] = 'SMALL'), (s[(s.MEDIUM = 8)] = 'MEDIUM'), s);
-let j = function (e) {
-    let { className: t, logotypeClassName: n, gameTileSize: r = 24, quest: s, separatorSpacing: o = 2, theme: h = x.BRd.DARK, withCosponsor: f = !0, withGameTile: j = !0 } = e,
+    j = (((s = {})[(s.SMALL = 2)] = 'SMALL'), (s[(s.MEDIUM = 8)] = 'MEDIUM'), s);
+let f = function (e) {
+    let { className: t, logotypeClassName: n, gameTileSize: r = 24, quest: s, separatorSpacing: o = 2, theme: h = x.BRd.DARK, withCosponsor: j = !0, withGameTile: f = !0 } = e,
         b = (0, c.wj)(h) ? x.BRd.DARK : x.BRd.LIGHT,
         C = (0, d.Gd)(s.id, b),
-        v = f && null != s.config.cosponsorMetadata && null != C;
+        v = j && null != s.config.cosponsorMetadata && null != C;
     return (0, i.jsxs)('div', {
-        className: l()(g.partnerBranding, t),
+        className: a()(g.partnerBranding, t),
         children: [
-            j &&
+            f &&
                 (0, i.jsx)(p.Fl, {
                     id: 'QuestPartnerBranding_gameTile',
                     children: (e) =>
@@ -55,7 +55,7 @@ let j = function (e) {
                 children: (e) =>
                     (0, i.jsx)('img', {
                         ref: e,
-                        className: l()(g.partnerBrandingLogotype, n, { [g.partnerBrandingLogotypeWithCosponsor]: v }),
+                        className: a()(g.partnerBrandingLogotype, n, { [g.partnerBrandingLogotypeWithCosponsor]: v }),
                         alt: s.config.messages.gameTitle,
                         src: (0, m.fh)(s, m.eC.LOGO_TYPE, b).url
                     })
@@ -68,7 +68,7 @@ let j = function (e) {
                             style: { margin: '0 '.concat(o, 'px') },
                             children: (0, i.jsx)(u.P$X, {
                                 className: g.cosponsorBrandSeparator,
-                                color: a.Z.colors.WHITE
+                                color: l.Z.colors.WHITE
                             })
                         }),
                         (0, i.jsx)(p.Fl, {
@@ -77,7 +77,7 @@ let j = function (e) {
                                 var t, r;
                                 return (0, i.jsx)('img', {
                                     ref: e,
-                                    className: l()(g.partnerBrandingLogotype, g.partnerBrandingLogotypeWithCosponsor, n),
+                                    className: a()(g.partnerBrandingLogotype, g.partnerBrandingLogotypeWithCosponsor, n),
                                     alt: null != (r = null == (t = s.config.cosponsorMetadata) ? void 0 : t.name) ? r : '',
                                     src: C.url
                                 });

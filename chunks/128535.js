@@ -4,8 +4,8 @@ n(73800);
 var s = n(120356),
     i = n.n(s),
     o = n(959078),
-    l = n(442837),
-    a = n(481060),
+    a = n(442837),
+    l = n(481060),
     c = n(607070),
     u = n(553795),
     d = n(358085),
@@ -14,21 +14,21 @@ var s = n(120356),
     x = n(111382),
     g = n(113434),
     h = n(918701),
-    f = n(667105),
-    j = n(388032),
+    j = n(667105),
+    f = n(388032),
     b = n(166246);
 let C = (e) => (0 === e.length ? b.warning : b.danger),
-    v = (e, t) => (0 === e.length ? j.intl.formatToPlainString(j.t.gX0Qc3, { gameTitle: t }) : j.intl.formatToPlainString(j.t['28Ql29'], { gameTitle: t })),
+    v = (e, t) => (0 === e.length ? f.intl.formatToPlainString(f.t.gX0Qc3, { gameTitle: t }) : f.intl.formatToPlainString(f.t['28Ql29'], { gameTitle: t })),
     y = (e) => {
-        let { quest: t, location: n, errors: s, gameTitle: i, consoleHelpArticle: l, expiredCredentialsInteractable: c, impressionId: p } = e;
+        let { quest: t, location: n, errors: s, gameTitle: i, consoleHelpArticle: a, expiredCredentialsInteractable: c, impressionId: p } = e;
         if (0 === s.length)
-            return (0, r.jsx)(a.Text, {
+            return (0, r.jsx)(l.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-muted',
-                children: j.intl.format(j.t.GXqvCw, { gameTitle: i })
+                children: f.intl.format(f.t.GXqvCw, { gameTitle: i })
             });
         let x = [];
-        (0, h.Nj)({ quest: t }) && x.push((0, d.isWeb)() ? j.intl.string(j.t['0UTkPz']) : j.intl.string(j.t.XGRUho));
+        (0, h.Nj)({ quest: t }) && x.push((0, d.isWeb)() ? f.intl.string(f.t['0UTkPz']) : f.intl.string(f.t.XGRUho));
         let g = [
             ...x,
             ...s.map((e) => {
@@ -36,7 +36,7 @@ let C = (e) => (0 === e.length ? b.warning : b.danger),
                 let r = u.Z.getAccount(e.connected_account_id, e.connected_account_type),
                     s = (0, h.C9)(e),
                     i = (0, h._j)(e);
-                return j.intl.format(s, {
+                return f.intl.format(s, {
                     account_name: null == r ? void 0 : r.name,
                     onClick: () => {
                         (0, h.fY)(
@@ -53,9 +53,9 @@ let C = (e) => (0 === e.length ? b.warning : b.danger),
                     }
                 });
             }),
-            l
+            a
         ];
-        return (0, r.jsx)(a.Text, {
+        return (0, r.jsx)(l.Text, {
             variant: 'text-sm/medium',
             color: 'text-muted',
             children: g.reduce((e, t) => [...e, t, ' '], [])
@@ -63,19 +63,19 @@ let C = (e) => (0 === e.length ? b.warning : b.danger),
     },
     T = function (e) {
         let t = e.quest.config.messages.gameTitle,
-            n = (0, l.e7)([c.Z], () => c.Z.useReducedMotion),
-            s = (0, f.k3)(e.quest.id, e.location),
+            n = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
+            s = (0, j.k3)(e.quest.id, e.location),
             o = (0, x.n)(),
             u = (0, m.O5)(),
             d = (0, p.aM)(),
-            h = (0, f.g2)({
+            h = (0, j.g2)({
                 useReducedMotion: n,
                 className: b.refreshIcon
             }),
             {
                 errorHints: T,
                 startingConsoleQuest: O,
-                startConsoleQuest: E
+                startConsoleQuest: N
             } = (0, g.GI)({
                 questId: e.quest.id,
                 beforeRequest: () => {
@@ -97,14 +97,14 @@ let C = (e) => (0 === e.length ? b.warning : b.danger),
                         (0, r.jsxs)('div', {
                             className: b.header,
                             children: [
-                                (0, r.jsx)(a.P4T, {
+                                (0, r.jsx)(l.P4T, {
                                     className: i()(b.headerIcon, C(T)),
                                     size: 'custom',
                                     color: 'currentColor',
                                     width: 16,
                                     height: 16
                                 }),
-                                (0, r.jsx)(a.Text, {
+                                (0, r.jsx)(l.Text, {
                                     variant: 'text-sm/semibold',
                                     children: v(T, t)
                                 })
@@ -123,13 +123,13 @@ let C = (e) => (0 === e.length ? b.warning : b.danger),
                 }),
                 (0, r.jsx)('div', {
                     className: b.cta,
-                    children: (0, r.jsx)(a.zxk, {
-                        color: a.Ttl.PRIMARY,
-                        onClick: E,
+                    children: (0, r.jsx)(l.zxk, {
+                        color: l.Ttl.PRIMARY,
+                        onClick: N,
                         disabled: O,
                         children: (0, r.jsxs)('div', {
                             className: b.ctaInner,
-                            children: [h.render(), j.intl.string(j.t.nPThNT)]
+                            children: [h.render(), f.intl.string(f.t.nPThNT)]
                         })
                     })
                 })

@@ -5,7 +5,7 @@ var r = n(933557),
 function a(e) {
     let { channel: t, isReadonly: n = !1, isCreatingThread: a = !1 } = e,
         o = (0, r.ZP)(t, !0),
-        s = (0, r.ZP)(t, !1);
+        u = (0, r.ZP)(t, !1);
     return null == t || null == o
         ? {
               placeholder: i.intl.string(i.t.MKDeyM),
@@ -24,20 +24,20 @@ function a(e) {
             : t.isForumPost()
               ? {
                     placeholder: i.intl.formatToPlainString(i.t.Y6qWLS, { channel: o }),
-                    accessibilityLabel: i.intl.formatToPlainString(i.t.KffKoa, { channel: s })
+                    accessibilityLabel: i.intl.formatToPlainString(i.t.KffKoa, { channel: u })
                 }
               : l.TPd.THREADS.has(t.type)
                 ? {
                       placeholder: i.intl.formatToPlainString(i.t['8lzR/f'], { channel: o }),
-                      accessibilityLabel: i.intl.formatToPlainString(i.t.UZIMWV, { channel: s })
+                      accessibilityLabel: i.intl.formatToPlainString(i.t.UZIMWV, { channel: u })
                   }
                 : t.type === l.d4z.DM
                   ? {
                         placeholder: i.intl.formatToPlainString(i.t['4c+CAw'], { channel: o }),
-                        accessibilityLabel: i.intl.formatToPlainString(i.t.fqOxbW, { channel: s })
+                        accessibilityLabel: i.intl.formatToPlainString(i.t.fqOxbW, { channel: u })
                     }
                   : {
                         placeholder: i.intl.formatToPlainString(i.t['8lzR/f'], { channel: o }),
-                        accessibilityLabel: i.intl.formatToPlainString(i.t.ih7ZSE, { channel: s })
+                        accessibilityLabel: i.intl.formatToPlainString(i.t.ih7ZSE, { channel: u })
                     };
 }

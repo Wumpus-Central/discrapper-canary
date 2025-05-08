@@ -87,7 +87,7 @@ function P(e) {
             isMobileOnline: _.Z.isMobileOnline(t.id)
         })),
         F = void 0 !== w ? w : G,
-        V = S === y.lY.MODAL ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
+        V = [y.lY.MODAL, y.lY.MODAL_V2].includes(S) ? l.EFr.SIZE_120 : l.EFr.SIZE_80,
         Z = a()(I.avatar, R),
         {
             avatarDecorationSrc: H,

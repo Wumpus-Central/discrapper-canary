@@ -286,13 +286,7 @@ function R(e) {
             n_participants: d
         });
     });
-    let C = (0, p.Z)({
-            guildId: n.id,
-            context: {
-                channel: t,
-                type: 'channel'
-            }
-        }).slice(0, 3),
+    let C = (0, p.Z)({ guildId: n.id }).slice(0, 3),
         { analyticsLocations: P } = (0, g.ZP)(m.Z.VC_TILE_ACTIVITY_SUGGESTION),
         Z = i.useMemo(
             () => ({

@@ -1,24 +1,24 @@
-n.d(t, { Z: () => v }), n(539854);
+n.d(t, { Z: () => h }), n(539854);
 var r = n(73800),
     l = n(846519),
     i = n(692547),
     a = n(481060),
     o = n(220082),
-    s = n(979651),
-    u = n(125268),
+    u = n(979651),
+    s = n(125268),
     c = n(673125),
     d = n(984063),
     f = n(88315),
-    m = n(262433),
-    p = n(400321),
+    p = n(262433),
+    m = n(400321),
     E = n(813900);
 let g = 1000 / 60;
-function v(e, t, n, v) {
-    let h = (0, a.dQu)(i.Z.unsafe_rawColors.BRAND_500).hex(),
+function h(e, t, n, h) {
+    let v = (0, a.dQu)(i.Z.unsafe_rawColors.BRAND_500).hex(),
         S = (0, a.dQu)(i.Z.unsafe_rawColors.BLACK_500).hex(),
         b = (0, a.dQu)(i.Z.unsafe_rawColors.WHITE_500).hex(),
-        y = r.useRef({}),
-        O = r.useRef(new l.Xp()),
+        O = r.useRef({}),
+        y = r.useRef(new l.Xp()),
         Z = r.useCallback(
             (t) => {
                 let n = c.Z.getDrawables(t);
@@ -30,15 +30,15 @@ function v(e, t, n, v) {
                         if (null == f) return;
                         let E = f.getContext('2d');
                         if (null == E) return;
-                        let { width: g, height: v } = f.getBoundingClientRect(),
-                            h = [];
+                        let { width: g, height: h } = f.getBoundingClientRect(),
+                            v = [];
                         n.forEach((e) => {
-                            if (null == s.Z.getVoiceStateForChannel(a, e.userId)) return void h.push(e);
+                            if (null == u.Z.getVoiceStateForChannel(a, e.userId)) return void v.push(e);
                             !(function (e) {
-                                let { drawable: t, context: n, canvasWidth: r, canvasHeight: l, fallbackColor: i, outlineColorDark: a, outlineColorLight: o, linesDrawnAt: s, streamerId: u, deadDrawables: c } = e;
+                                let { drawable: t, context: n, canvasWidth: r, canvasHeight: l, fallbackColor: i, outlineColorDark: a, outlineColorLight: o, linesDrawnAt: u, streamerId: s, deadDrawables: c } = e;
                                 switch (t.type) {
                                     case d.W.LINE:
-                                        return (0, p.Z)({
+                                        return (0, m.Z)({
                                             line: t,
                                             context: n,
                                             canvasWidth: r,
@@ -46,11 +46,11 @@ function v(e, t, n, v) {
                                             fallbackColor: i,
                                             outlineColorDark: a,
                                             outlineColorLight: o,
-                                            linesDrawnAt: s,
+                                            linesDrawnAt: u,
                                             deadDrawables: c
                                         });
                                     case d.W.EMOJI_HOSE:
-                                        return (0, m.Z)({
+                                        return (0, p.Z)({
                                             emojiHose: t,
                                             context: n,
                                             canvasWidth: r,
@@ -58,7 +58,7 @@ function v(e, t, n, v) {
                                             fallbackColor: i,
                                             outlineColorDark: a,
                                             outlineColorLight: o,
-                                            streamerId: u,
+                                            streamerId: s,
                                             deadDrawables: c
                                         });
                                 }
@@ -66,28 +66,28 @@ function v(e, t, n, v) {
                                 drawable: e,
                                 context: E,
                                 canvasWidth: g,
-                                canvasHeight: v,
+                                canvasHeight: h,
                                 fallbackColor: r,
                                 outlineColorDark: o,
                                 outlineColorLight: c,
                                 linesDrawnAt: l,
-                                deadDrawables: h,
+                                deadDrawables: v,
                                 streamerId: i
                             });
                         }),
-                            h.length > 0 && (0, u.fW)(h, i);
+                            v.length > 0 && (0, s.fW)(v, i);
                     })({
                         canvasRef: e,
                         drawables: n,
-                        fallbackColor: h,
-                        linesDrawnAt: y,
+                        fallbackColor: v,
+                        linesDrawnAt: O,
                         streamerId: t,
                         outlineColorDark: S,
                         outlineColorLight: b,
-                        channelId: v
+                        channelId: h
                     });
             },
-            [e, v, h, S, b]
+            [e, h, v, S, b]
         );
     r.useEffect(() => {
         let t = new ResizeObserver(() => {
@@ -100,12 +100,12 @@ function v(e, t, n, v) {
     }, [e, Z, n]);
     let j = r.useCallback(() => {
         let t = c.Z.getDrawables(n),
-            r = m.U.getState().particles,
+            r = p.U.getState().particles,
             l = t.length > 0 || Object.keys(r).length > 0;
-        l && null == O.current._ref && (null == O.current._ref ? (Z(n), O.current.start(g, () => Z(n))) : l || null == O.current._ref || (O.current.stop(), (0, f.UN)(e)));
+        l && null == y.current._ref && (null == y.current._ref ? (Z(n), y.current.start(g, () => Z(n))) : l || null == y.current._ref || (y.current.stop(), (0, f.UN)(e)));
     }, [e, Z, n]);
     r.useEffect(() => {
-        let e = O.current;
+        let e = y.current;
         return (
             c.Z.addChangeListener(j),
             j(),

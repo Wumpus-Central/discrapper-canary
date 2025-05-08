@@ -1,10 +1,11 @@
 var r = n(990547),
-    i = n(570140),
-    o = n(844889),
-    a = n(314897),
-    s = n(981631);
+    i = n(570833),
+    o = n(570140),
+    a = n(844889),
+    s = n(314897),
+    l = n(981631);
 (0, r.analyticsTrackingStoreMaker)({
-    dispatcher: i.Z,
+    dispatcher: o.Z,
     actionHandler: {
         CONNECTION_OPEN: (e) => r.AnalyticsActionHandlers.handleConnectionOpen(e),
         OVERLAY_INITIALIZE: (e) => r.AnalyticsActionHandlers.handleConnectionOpen(e),
@@ -13,8 +14,9 @@ var r = n(990547),
         FINGERPRINT: () => r.AnalyticsActionHandlers.handleFingerprint(),
         TRACK: (e) => r.AnalyticsActionHandlers.handleTrack(e)
     },
-    TRACKING_URL: s.ANM.TRACK,
-    waitFor: [a.default],
-    getFingerprint: a.default.getFingerprint,
-    getSessionId: () => (0, o.Gg)().then((e) => ({ sessionId: null == e ? void 0 : e.uuid }))
+    TRACKING_URL: l.ANM.TRACK,
+    waitFor: [s.default],
+    getFingerprint: s.default.getFingerprint,
+    getSessionId: () => (0, a.Gg)().then((e) => ({ sessionId: null == e ? void 0 : e.uuid })),
+    scheduleWhenIdle: i.f
 });

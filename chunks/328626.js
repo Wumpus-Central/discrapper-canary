@@ -1,12 +1,12 @@
 n.d(t, {
-    g: () => i,
-    y: () => a
+    g: () => a,
+    y: () => i
 }),
     n(388685);
 var r,
     l = n(73800),
-    i = (((r = {}).MOUNTED = 'mounted'), (r.SORT_OUT = 'sort-out'), (r.SORT_IN = 'sort-in'), (r.SHUFFLE_OUT = 'shuffle-out'), (r.SHUFFLE_IN = 'shuffle-in'), (r.FINISHED = 'finished'), r);
-let a = () => {
+    a = (((r = {}).MOUNTED = 'mounted'), (r.SORT_OUT = 'sort-out'), (r.SORT_IN = 'sort-in'), (r.SHUFFLE_OUT = 'shuffle-out'), (r.SHUFFLE_IN = 'shuffle-in'), (r.FINISHED = 'finished'), r);
+let i = () => {
     let [e, t] = l.useState('mounted');
     return {
         animationPhase: e,

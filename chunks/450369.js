@@ -167,7 +167,7 @@ let U = 16 / 9,
         let { user: v } = i,
             O = (0, s.e7)([b.Z], () => b.Z.getParticipant(l.id, i.id), [l.id, i.id]),
             I = (0, s.e7)([T.ZP], () => T.ZP.isModerator(v.id, l.id), [l.id, v.id]);
-        if (null == O || O.type === k.fO.ACTIVITY || O.type === k.fO.PRESENCE_EMBEDDED_ACTIVITY) return null;
+        if (null == O || O.type === k.fO.ACTIVITY) return null;
         let S = (e) => {
                 (0, g.h)({
                     type: a.ImpressionTypes.MENU,

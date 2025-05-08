@@ -262,8 +262,9 @@ function Y(e) {
         });
 }
 function W(e) {
-    let { channelId: t, messageRecord: n, reason: r } = e;
+    let { channelId: t, messageRecord: n, reason: r, noSendFailed: i } = e;
     null != n &&
+        !0 !== i &&
         s.Z.dispatch({
             type: 'MESSAGE_SEND_FAILED',
             channelId: t,

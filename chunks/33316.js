@@ -1,14 +1,14 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => u });
 var r = n(255367),
     l = n(73800),
     i = n(70097),
     a = n(576645),
     o = n(190362);
-function s(e) {
+function u(e) {
     let { baseTileRef: t, cleanup: n } = e,
-        s = (0, a.bK)(),
-        u = (0, l.useRef)(s);
-    return null == t || 0 === t.offsetHeight || u.current
+        u = (0, a.bK)(),
+        s = (0, l.useRef)(u);
+    return null == t || 0 === t.offsetHeight || s.current
         ? null
         : (0, r.jsx)('div', {
               style: {

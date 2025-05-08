@@ -10,12 +10,12 @@ let i = (e) => e,
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
             l = arguments.length > 3 ? arguments[3] : void 0,
             a = o(i, t, n, l),
-            s = r.useRef(e);
+            u = r.useRef(e);
         return (
             r.useEffect(() => {
-                s.current = a(e);
+                u.current = a(e);
             }, [e, a]),
-            0 === t ? e : s.current
+            0 === t ? e : u.current
         );
     },
     o = function (e, t) {

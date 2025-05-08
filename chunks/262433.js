@@ -1,6 +1,6 @@
 n.d(t, {
     U: () => E,
-    Z: () => v
+    Z: () => h
 }),
     n(539854);
 var r = n(392711),
@@ -8,14 +8,14 @@ var r = n(392711),
     i = n(772848),
     a = n(381814),
     o = n(731965),
-    s = n(125268),
-    u = n(673125),
+    u = n(125268),
+    s = n(673125),
     c = n(984063),
     d = n(88315),
     f = n(199766),
-    m = n(813900);
-let p = {
-        X_OFFSET: 2 * m.qh,
+    p = n(813900);
+let m = {
+        X_OFFSET: 2 * p.qh,
         Y_OFFSET: 25,
         X_SPEED: 0.5,
         Y_SPEED_MIN: -1,
@@ -23,8 +23,8 @@ let p = {
         OPACITY: 1,
         OPACITY_SPEED_MIN: 0.01,
         OPACITY_SPEED_MAX: 0.05,
-        SIZE_MIN: m.qh / 2,
-        SIZE_MAX: m.qh
+        SIZE_MIN: p.qh / 2,
+        SIZE_MAX: p.qh
     },
     E = (0, a.U)(() => ({
         particles: {},
@@ -34,14 +34,14 @@ function g(e, t) {
     var n;
     l()(null != (n = E.getState().particles[e.id]) ? n : {}).forEach(t);
 }
-function v(e) {
+function h(e) {
     var t, n, r;
-    let { emojiHose: a, context: v, canvasWidth: h, canvasHeight: S, fallbackColor: b, outlineColorDark: y, outlineColorLight: O, streamerId: Z, deadDrawables: j } = e;
-    v.save();
-    let I = u.Z.getEmojiImage(null != (n = null != (t = a.emojiId) ? t : a.emojiName) ? n : ''),
-        _ = (0, d.np)(a.x, h),
-        P = (0, d.np)(a.y, S),
-        { outlineColor: w } = (0, d.bg)(a.userId, y, O, b);
+    let { emojiHose: a, context: h, canvasWidth: v, canvasHeight: S, fallbackColor: b, outlineColorDark: O, outlineColorLight: y, streamerId: Z, deadDrawables: j } = e;
+    h.save();
+    let _ = s.Z.getEmojiImage(null != (n = null != (t = a.emojiId) ? t : a.emojiName) ? n : ''),
+        I = (0, d.np)(a.x, v),
+        w = (0, d.np)(a.y, S),
+        { outlineColor: P } = (0, d.bg)(a.userId, O, y, b);
     g(a, (e) => {
         (e.x += e.xSpeed * window.devicePixelRatio),
             (e.y += e.ySpeed * window.devicePixelRatio),
@@ -54,34 +54,34 @@ function v(e) {
         (function (e, t, n) {
             var r;
             let a = null != (r = E.getState().lastSpawned[e.id]) ? r : 0,
-                s = Date.now();
-            !(a + 100 > s) &&
+                u = Date.now();
+            !(a + 100 > u) &&
                 e.state !== c.f.STOP &&
-                (0.8 >= Math.random() || a + 300 < s) &&
+                (0.8 >= Math.random() || a + 300 < u) &&
                 (0, o.j)(() => {
                     E.setState((r) => {
                         var a;
                         let o = null != (a = r.particles[e.id]) ? a : {},
-                            s = l().random(1, 2);
-                        for (let e = 0; e < s; e++) {
+                            u = l().random(1, 2);
+                        for (let e = 0; e < u; e++) {
                             let e = {
                                 id: (0, i.Z)(),
-                                x: t + l().random(-p.X_OFFSET, p.X_OFFSET),
-                                y: n + l().random(-p.Y_OFFSET, p.Y_OFFSET),
-                                xSpeed: l().random(-p.X_SPEED, p.X_SPEED),
-                                ySpeed: l().random(p.Y_SPEED_MIN, p.Y_SPEED_MAX),
-                                opacity: p.OPACITY,
-                                opacitySpeed: l().random(p.OPACITY_SPEED_MIN, p.OPACITY_SPEED_MAX),
-                                size: l().random(p.SIZE_MIN, p.SIZE_MAX)
+                                x: t + l().random(-m.X_OFFSET, m.X_OFFSET),
+                                y: n + l().random(-m.Y_OFFSET, m.Y_OFFSET),
+                                xSpeed: l().random(-m.X_SPEED, m.X_SPEED),
+                                ySpeed: l().random(m.Y_SPEED_MIN, m.Y_SPEED_MAX),
+                                opacity: m.OPACITY,
+                                opacitySpeed: l().random(m.OPACITY_SPEED_MIN, m.OPACITY_SPEED_MAX),
+                                size: l().random(m.SIZE_MIN, m.SIZE_MAX)
                             };
                             o[e.id] = e;
                         }
                         return (r.particles[e.id] = o), (r.lastSpawned[e.id] = Date.now()), r;
                     });
                 });
-        })(a, _, P),
-        (0, f.I)(v, _, P, w, m.q2),
-        (0, f.T)(v, _, P, a.userId),
+        })(a, I, w),
+        (0, f.I)(h, I, w, P, p.q2),
+        (0, f.T)(h, I, w, a.userId),
         g(a, (e) =>
             (function (e, t, n) {
                 if (null == t) return;
@@ -89,9 +89,9 @@ function v(e) {
                     l = n.x - (r / 2) * window.devicePixelRatio,
                     i = n.y - 1.2 * r * window.devicePixelRatio;
                 (e.globalAlpha = n.opacity), e.drawImage(t, r / 2 + l, r / 2 + i, r, r);
-            })(v, I, e)
+            })(h, _, e)
         ),
-        a.lastUpdatedAt + m.FO < Date.now() && (0, s.ZZ)(Z, a),
+        a.lastUpdatedAt + p.FO < Date.now() && (0, u.ZZ)(Z, a),
         a.state !== c.f.STOP || Object.keys(null != (r = E.getState().particles[a.id]) ? r : {}).length > 0 || j.push(a),
-        v.restore();
+        h.restore();
 }

@@ -11,7 +11,6 @@ function a(e) {
     if (null != e) return 'starting_guild_id' in e ? e.starting_guild_id : void 0;
 }
 n.d(t, {
-    Bt: () => c,
     dK: () => l,
     hu: () => a,
     jS: () => i,
@@ -36,7 +35,4 @@ function l(e) {
               guildId: '0' === t[1] ? void 0 : t[1],
               channelId: '0' === t[2] ? void 0 : t[2]
           };
-}
-function c(e) {
-    return l(e).channelId;
 }

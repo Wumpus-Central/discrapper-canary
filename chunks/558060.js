@@ -2,16 +2,16 @@ n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var l = n(120356),
-    i = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    i = n(481060),
     o = n(884697),
     s = n(409116),
     c = n(200615),
     u = n(981631),
     d = n(388032),
-    f = n(561197);
-function b() {
-    return (b =
+    b = n(561197);
+function f() {
+    return (f =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -70,7 +70,7 @@ function h(e) {
     if (null == C) return null;
     if (C.amount <= 0)
         return (0, r.jsx)('div', {
-            className: i()(f.priceTagsContainer, h),
+            className: a()(b.priceTagsContainer, h),
             children: (0, r.jsx)(s.F, { price: C })
         });
     let v = (0, o.ql)(t, u.tuJ.PREMIUM_TIER_2),
@@ -79,16 +79,16 @@ function h(e) {
         S = _ && n,
         j = _ && !n;
     return (0, r.jsxs)('div', {
-        className: i()(f.priceTagsContainer, h),
+        className: a()(b.priceTagsContainer, h),
         children: [
             !S &&
                 (0, r.jsx)(s.F, {
                     price: x,
                     discount: n ? o.f_ : l,
-                    className: i()(f.price, {
-                        [f.striked]: n,
-                        [f.dimmed]: n,
-                        [f.fullPrice]: O
+                    className: a()(b.price, {
+                        [b.striked]: n,
+                        [b.dimmed]: n,
+                        [b.fullPrice]: O
                     })
                 }),
             null != v &&
@@ -98,7 +98,7 @@ function h(e) {
                     discount: n ? l : o.f_,
                     renderPrice: m
                         ? (e) =>
-                              (0, r.jsx)(a.Text, {
+                              (0, r.jsx)(i.Text, {
                                   variant: 'text-xs/medium',
                                   children: d.intl.format(d.t.Sv8iiY, {
                                       price: e,
@@ -108,16 +108,16 @@ function h(e) {
                         : O
                           ? (e) => d.intl.formatToPlainString(d.t.W3gIWF, { price: e })
                           : void 0,
-                    className: i()(f.price, {
-                        [f.dimmed]: !n,
-                        [f.fullPrice]: O
+                    className: a()(b.price, {
+                        [b.dimmed]: !n,
+                        [b.fullPrice]: O
                     }),
                     variant: n ? void 0 : 'text-xs/semibold',
-                    icon: (0, r.jsx)(a.ua7, {
+                    icon: (0, r.jsx)(i.ua7, {
                         text: d.intl.string(d.t.MPFyJy),
                         'aria-label': d.intl.string(d.t.X3Ekj4),
                         children: (e) => {
-                            var t = b(
+                            var t = f(
                                 {},
                                 (function (e) {
                                     if (null == e) throw TypeError('Cannot destructure ' + e);
@@ -125,7 +125,7 @@ function h(e) {
                                 })(e)
                             );
                             return (0, r.jsx)(
-                                a.SrA,
+                                i.SrA,
                                 g(
                                     p(
                                         {
@@ -134,7 +134,7 @@ function h(e) {
                                         },
                                         t
                                     ),
-                                    { className: i()(f.premiumIcon, { [f.fullPrice]: O }) }
+                                    { className: a()(b.premiumIcon, { [b.fullPrice]: O }) }
                                 )
                             );
                         }

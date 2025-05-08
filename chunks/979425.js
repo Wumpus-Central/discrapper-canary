@@ -5,36 +5,36 @@ var l = n(120356),
     i = n.n(l),
     a = n(481060),
     o = n(871118),
-    s = n(388032),
-    u = n(519417);
+    u = n(388032),
+    s = n(519417);
 function c(e) {
     let { stream: t, isSmall: n, selected: l, isSelfStream: c } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(o.Z, {
-                className: i()(u.absoluteFill, u.streamPreviewOpacity),
+                className: i()(s.absoluteFill, s.streamPreviewOpacity),
                 stream: t,
                 noText: !0
             }),
             !l &&
                 (0, r.jsxs)('div', {
-                    className: i()(u.content, u.streamUnavailable, { [u.small]: n }),
+                    className: i()(s.content, s.streamUnavailable, { [s.small]: n }),
                     children: [
                         (0, r.jsx)(a.Text, {
-                            className: u.streamUnavailableText,
+                            className: s.streamUnavailableText,
                             color: 'always-white',
                             variant: n ? 'text-sm/semibold' : 'text-md/semibold',
-                            children: c ? s.intl.string(s.t.UeEwj4) : s.intl.string(s.t['1i3tSU'])
+                            children: c ? u.intl.string(u.t.UeEwj4) : u.intl.string(u.t['1i3tSU'])
                         }),
                         (0, r.jsx)(a.DY3, {
-                            text: c ? s.intl.string(s.t['ro/HNz']) : s.intl.string(s.t.UPf6ZG),
-                            className: u.darkCircle,
+                            text: c ? u.intl.string(u.t['ro/HNz']) : u.intl.string(u.t.UPf6ZG),
+                            className: s.darkCircle,
                             children: (0, r.jsx)('div', {
                                 children: (0, r.jsx)(a.o8v, {
                                     size: 'md',
                                     color: 'currentColor',
-                                    className: u.stopStreamIcon,
-                                    colorClass: u.stopStreamForeground
+                                    className: s.stopStreamIcon,
+                                    colorClass: s.stopStreamForeground
                                 })
                             })
                         })

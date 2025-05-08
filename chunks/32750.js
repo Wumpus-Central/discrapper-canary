@@ -1,4 +1,4 @@
-e.d(n, { Z: () => d });
+e.d(t, { Z: () => d });
 var i = e(255367);
 e(73800);
 var r = e(481060),
@@ -6,21 +6,21 @@ var r = e(481060),
     a = e(346479),
     o = e(665906),
     s = e(388032);
-function d(t) {
-    var n;
-    let e = (0, l.HL)(t),
-        d = (0, o.C7)(t),
-        c = (0, o.tc)(t);
-    if ((t.isArchivedThread() ? c : d) && !e)
-        return (null == (n = t.threadMetadata) ? void 0 : n.archived)
+function d(n) {
+    var t;
+    let e = (0, l.HL)(n),
+        d = (0, o.C7)(n),
+        u = (0, o.tc)(n);
+    if ((n.isArchivedThread() ? u : d) && !e)
+        return (null == (t = n.threadMetadata) ? void 0 : t.archived)
             ? (0, i.jsx)(r.sNh, {
                   id: 'unarchive-thread',
-                  label: t.isForumPost() ? s.intl.string(s.t.cnRubW) : s.intl.string(s.t.S9E4Gx),
-                  action: () => a.Z.unarchiveThread(t, !1)
+                  label: n.isForumPost() ? s.intl.string(s.t.cnRubW) : s.intl.string(s.t.S9E4Gx),
+                  action: () => a.Z.unarchiveThread(n, !1)
               })
             : (0, i.jsx)(r.sNh, {
                   id: 'archive-thread',
-                  label: t.isForumPost() ? s.intl.string(s.t.BTs4KS) : s.intl.string(s.t.wiIevb),
-                  action: () => a.Z.archiveThread(t, !1)
+                  label: n.isForumPost() ? s.intl.string(s.t.BTs4KS) : s.intl.string(s.t.wiIevb),
+                  action: () => a.Z.archiveThread(n, !1)
               });
 }

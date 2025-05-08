@@ -9,9 +9,12 @@ var r = n(654861),
     u = n(70956),
     d = n(709054);
 function f(e, t, n) {
-    let r = i()(e),
-        o = null != t ? i()(t) : null,
-        a = null != n ? i()(n) : null;
+    let r, o, a;
+    try {
+        (r = i()(e)), (o = null != t ? i()(t) : null), (a = null != n ? i()(n) : null);
+    } catch (e) {
+        return !1;
+    }
     return !((null != o && r.lesser(o)) || (null != a && r.greater(a)));
 }
 function _(e) {

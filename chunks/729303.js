@@ -4,38 +4,38 @@ var r,
     i,
     a = n(442837),
     o = n(570140);
-let s = new Map();
-class u extends (r = a.ZP.Store) {
+let u = new Map();
+class s extends (r = a.ZP.Store) {
     getUsers() {
-        return s;
+        return u;
     }
     isKeyVerified(e, t) {
-        let n = s.get(e);
+        let n = u.get(e);
         if (null == t || null == n || n.length !== t.length) return !1;
         for (let e = 0; e < t.length; e++) if (t[e] !== n[e]) return !1;
         return !0;
     }
 }
 (i = 'TransientKeyStore'),
-    (l = 'displayName') in u
-        ? Object.defineProperty(u, l, {
+    (l = 'displayName') in s
+        ? Object.defineProperty(s, l, {
               value: i,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (u[l] = i);
-let c = new u(o.Z, {
+        : (s[l] = i);
+let c = new s(o.Z, {
     CONNECTION_OPEN: function () {
-        s.clear();
+        u.clear();
     },
     SECURE_FRAMES_TRANSIENT_KEY_CREATE: function (e) {
         let { userId: t, key: n } = e,
             r = new Uint8Array(n);
-        s.set(t, r);
+        u.set(t, r);
     },
     SECURE_FRAMES_TRANSIENT_KEY_DELETE: function (e) {
         let { userId: t } = e;
-        return s.delete(t);
+        return u.delete(t);
     }
 });

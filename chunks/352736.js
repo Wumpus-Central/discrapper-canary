@@ -13,15 +13,15 @@ var r = n(25209),
     m = n(594174),
     p = n(5192),
     g = n(709054),
-    b = n(981631),
-    v = n(388032);
+    v = n(981631),
+    b = n(388032);
 let h = {
         '234395307759108106': 'https://groovy.bot/commands',
         '365975655608745985': 'https://www.pokecord.com/getting-started',
         512412940897484800: 'http://jameslantz.net/smilebot'
     },
-    I = () => [v.t['0cuj7u'], v.t['MuW+CA'], v.t.osqpHR, v.t['5ToSh4'], v.t.JEB8pq, v.t.pkOV5e, v.t.kRb1Jy, v.t.EmKLY2, v.t.rPtBnZ, v.t['5B/ekZ'], v.t.ESNC3d, v.t['Iw6d8/'], v.t.WecSZ2],
-    y = () => [v.t.Jm6e09, v.t.MGRnRU, v.t.EXOEGh, v.t['5uCTFB'], v.t.rl45Qk, v.t.Bh9zpa, v.t.RdEy1N, v.t.qcdp09, v.t.F7w2Rk, v.t.gSyOgI, v.t.uYgqv7, v.t['b/1SBQ'], v.t.LhebZG];
+    I = () => [b.t['0cuj7u'], b.t['MuW+CA'], b.t.osqpHR, b.t['5ToSh4'], b.t.JEB8pq, b.t.pkOV5e, b.t.kRb1Jy, b.t.EmKLY2, b.t.rPtBnZ, b.t['5B/ekZ'], b.t.ESNC3d, b.t['Iw6d8/'], b.t.WecSZ2],
+    y = () => [b.t.Jm6e09, b.t.MGRnRU, b.t.EXOEGh, b.t['5uCTFB'], b.t.rl45Qk, b.t.Bh9zpa, b.t.RdEy1N, b.t.qcdp09, b.t.F7w2Rk, b.t.gSyOgI, b.t.uYgqv7, b.t['b/1SBQ'], b.t.LhebZG];
 function S(e) {
     let t = y(),
         n = g.default.extractTimestamp(e) % t.length;
@@ -29,9 +29,9 @@ function S(e) {
 }
 function E(e) {
     return (0, r.Rp)(
-        v.intl.formatToParts(v.t['ihxM9/'], {
+        b.intl.formatToParts(b.t['ihxM9/'], {
             username: e,
-            usernameOnClick: b.dG4
+            usernameOnClick: v.dG4
         })
     );
 }
@@ -46,95 +46,95 @@ let C = {
             y = e.channel_id,
             C = p.ZP.getName(null, y, e.author);
         switch (e.type) {
-            case b.uaV.RECIPIENT_ADD:
+            case v.uaV.RECIPIENT_ADD:
                 if (null == I) return;
                 return (0, r.Rp)(
-                    v.intl.formatToParts(v.t['7/Xl0d'], {
+                    b.intl.formatToParts(b.t['7/Xl0d'], {
                         username: C,
-                        usernameOnClick: b.dG4,
+                        usernameOnClick: v.dG4,
                         otherUsername: p.ZP.getName(null, y, I),
-                        otherUsernameOnClick: b.dG4
+                        otherUsernameOnClick: v.dG4
                     })
                 );
-            case b.uaV.RECIPIENT_REMOVE:
+            case v.uaV.RECIPIENT_REMOVE:
                 if (null == I) return;
                 let P = e.author;
                 if (null == P || P.id === I.id)
                     return (0, r.Rp)(
-                        v.intl.formatToParts(v.t['Qn5+LS'], {
+                        b.intl.formatToParts(b.t['Qn5+LS'], {
                             username: C,
-                            usernameOnClick: b.dG4
+                            usernameOnClick: v.dG4
                         })
                     );
                 return (0, r.Rp)(
-                    v.intl.formatToParts(v.t.QtZ0RE, {
+                    b.intl.formatToParts(b.t.QtZ0RE, {
                         username: C,
-                        usernameOnClick: b.dG4,
+                        usernameOnClick: v.dG4,
                         otherUsername: p.ZP.getName(null, y, I),
-                        otherUsernameOnClick: b.dG4
+                        otherUsernameOnClick: v.dG4
                     })
                 );
-            case b.uaV.CALL:
+            case v.uaV.CALL:
                 let { call: O } = e;
                 if (null != O && -1 === O.participants.indexOf(_.default.getId()))
                     return (0, r.Rp)(
-                        v.intl.formatToParts(v.t.DbgSAw, {
+                        b.intl.formatToParts(b.t.DbgSAw, {
                             username: C,
-                            usernameOnClick: b.dG4
+                            usernameOnClick: v.dG4
                         })
                     );
                 return;
-            case b.uaV.CHANNEL_NAME_CHANGE:
+            case v.uaV.CHANNEL_NAME_CHANGE:
                 return (0, r.Rp)(
-                    v.intl.formatToParts(t.isForumPost() ? v.t['qa0e/v'] : v.t.XCPMEB, {
+                    b.intl.formatToParts(t.isForumPost() ? b.t['qa0e/v'] : b.t.XCPMEB, {
                         username: C,
-                        usernameOnClick: b.dG4,
+                        usernameOnClick: v.dG4,
                         channelName: e.content
                     })
                 );
-            case b.uaV.CHANNEL_ICON_CHANGE:
+            case v.uaV.CHANNEL_ICON_CHANGE:
                 return (0, r.Rp)(
-                    v.intl.formatToParts(v.t.wypJZ2, {
+                    b.intl.formatToParts(b.t.wypJZ2, {
                         username: C,
-                        usernameOnClick: b.dG4
+                        usernameOnClick: v.dG4
                     })
                 );
-            case b.uaV.CHANNEL_PINNED_MESSAGE:
+            case v.uaV.CHANNEL_PINNED_MESSAGE:
                 return (0, r.Rp)(
-                    v.intl.formatToParts(v.t['/M60j4'], {
+                    b.intl.formatToParts(b.t['/M60j4'], {
                         username: C,
-                        usernameOnClick: b.dG4
+                        usernameOnClick: v.dG4
                     })
                 );
-            case b.uaV.USER_JOIN:
+            case v.uaV.USER_JOIN:
                 return (0, r.Rp)(
-                    v.intl.formatToParts(S(e.id), {
+                    b.intl.formatToParts(S(e.id), {
                         username: C,
-                        usernameOnClick: b.dG4
+                        usernameOnClick: v.dG4
                     })
                 );
-            case b.uaV.GUILD_BOOST:
+            case v.uaV.GUILD_BOOST:
                 return E(C);
-            case b.uaV.GUILD_BOOST_TIER_1:
-            case b.uaV.GUILD_BOOST_TIER_2:
-            case b.uaV.GUILD_BOOST_TIER_3:
+            case v.uaV.GUILD_BOOST_TIER_1:
+            case v.uaV.GUILD_BOOST_TIER_2:
+            case v.uaV.GUILD_BOOST_TIER_3:
                 let A = d.Z.getChannel(y);
                 return null == A || null == f.Z.getGuild(A.getGuildId())
                     ? E(C)
                     : (0, r.Rp)(
-                          v.intl.formatToParts(v.t['ihxM9/'], {
+                          b.intl.formatToParts(b.t['ihxM9/'], {
                               username: C,
-                              usernameOnClick: b.dG4
+                              usernameOnClick: v.dG4
                           })
                       );
-            case b.uaV.GUILD_INVITE_REMINDER:
-                return v.intl.string(v.t.gxyKvr);
-            case b.uaV.THREAD_STARTER_MESSAGE:
-                return v.intl.formatToPlainString(v.t['B8H+Cg'], {
+            case v.uaV.GUILD_INVITE_REMINDER:
+                return b.intl.string(b.t.gxyKvr);
+            case v.uaV.THREAD_STARTER_MESSAGE:
+                return b.intl.formatToPlainString(b.t['B8H+Cg'], {
                     username: C,
                     threadName: t.name
                 });
-            case b.uaV.ROLE_SUBSCRIPTION_PURCHASE:
+            case v.uaV.ROLE_SUBSCRIPTION_PURCHASE:
                 if (e instanceof u.ZP) return null;
                 return (0, r.Rp)(
                     (0, i.vp)({
@@ -143,7 +143,7 @@ let C = {
                         roleSubscriptionData: e.role_subscription_data
                     })
                 );
-            case b.uaV.PURCHASE_NOTIFICATION:
+            case v.uaV.PURCHASE_NOTIFICATION:
                 if (e instanceof u.ZP || (null == (g = e.purchase_notification) || null == (n = g.guild_product_purchase) ? void 0 : n.product_name) == null) return null;
                 return (0, r.Rp)(
                     (0, a.i)({
@@ -151,7 +151,7 @@ let C = {
                         productName: e.purchase_notification.guild_product_purchase.product_name
                     })
                 );
-            case b.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION:
+            case v.uaV.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION:
                 if (e instanceof u.ZP) return null;
                 let N = (0, l.ZH)((0, o.e5)(e));
                 return (0, r.Rp)(
@@ -160,7 +160,7 @@ let C = {
                         username: N.nick
                     })
                 );
-            case b.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED:
+            case v.uaV.PRIVATE_CHANNEL_INTEGRATION_ADDED:
                 if (e instanceof u.ZP) return null;
                 return (0, r.Rp)(
                     (0, s.B2)({
@@ -168,7 +168,7 @@ let C = {
                         username: (0, l.ZH)((0, o.e5)(e)).nick
                     })
                 );
-            case b.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED:
+            case v.uaV.PRIVATE_CHANNEL_INTEGRATION_REMOVED:
                 if (e instanceof u.ZP) return null;
                 return (0, r.Rp)(
                     (0, s.hj)({
@@ -176,22 +176,22 @@ let C = {
                         username: (0, l.ZH)((0, o.e5)(e)).nick
                     })
                 );
-            case b.uaV.AUTO_MODERATION_ACTION:
+            case v.uaV.AUTO_MODERATION_ACTION:
                 if (
                     null == (h = e.embeds)
                         ? void 0
                         : h.some((e) => {
                               let { type: t } = e;
-                              return t === b.hBH.AUTO_MODERATION_NOTIFICATION;
+                              return t === v.hBH.AUTO_MODERATION_NOTIFICATION;
                           })
                 ) {
                     let e = d.Z.getChannel(y);
                     if (null == e) return null;
                     let t = f.Z.getGuild(e.getGuildId());
-                    return null == t ? null : (0, r.Rp)(v.intl.formatToParts(v.t['a+lJKi'], { guildName: t.name }));
+                    return null == t ? null : (0, r.Rp)(b.intl.formatToParts(b.t['a+lJKi'], { guildName: t.name }));
                 }
                 return e.content;
-            case b.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED:
+            case v.uaV.GUILD_INCIDENT_ALERT_MODE_ENABLED:
                 var w = e.content;
                 let T = d.Z.getChannel(y);
                 if (null == T) return null;
@@ -199,26 +199,26 @@ let C = {
                 return null == L
                     ? null
                     : (0, r.Rp)(
-                          v.intl.formatToParts(v.t.iOuWPj, {
+                          b.intl.formatToParts(b.t.iOuWPj, {
                               username: C,
                               guildName: L.name,
                               time:
                                   '' !== w
-                                      ? new Date(w).toLocaleString(v.intl.currentLocale, {
+                                      ? new Date(w).toLocaleString(b.intl.currentLocale, {
                                             hour: 'numeric',
                                             minute: '2-digit'
                                         })
                                       : ''
                           })
                       );
-            case b.uaV.GUILD_INCIDENT_ALERT_MODE_DISABLED:
+            case v.uaV.GUILD_INCIDENT_ALERT_MODE_DISABLED:
                 let x = d.Z.getChannel(y);
                 if (null == x) return null;
                 let j = f.Z.getGuild(x.getGuildId());
                 return null == j
                     ? null
                     : (0, r.Rp)(
-                          v.intl.formatToParts(v.t.axmbpq, {
+                          b.intl.formatToParts(b.t.axmbpq, {
                               username: C,
                               guildName: j.name
                           })
@@ -234,6 +234,6 @@ let C = {
     },
     getSystemMessageUserJoinMobile: S,
     getSystemMessageBotJoin: function (e) {
-        return null == h[e] ? null : v.intl.format(v.t.xw1Ij4, { learnOnClick: { onClick: () => window.open(h[e]) } });
+        return null == h[e] ? null : b.intl.format(b.t.xw1Ij4, { learnOnClick: { onClick: () => window.open(h[e]) } });
     }
 };

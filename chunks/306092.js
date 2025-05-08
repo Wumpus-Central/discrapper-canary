@@ -1,18 +1,18 @@
 n.d(t, { e: () => u });
 var r = n(255367),
     l = n(481060),
-    i = n(409116),
-    a = n(755007),
+    a = n(409116),
+    i = n(755007),
     o = n(231338),
     s = n(858022);
 function c(e) {
     let { price: t, isPremiumUser: n, discount: c, hasSufficientOrbs: u } = e;
     return t.currency === o.pK.DISCORD_ORB
-        ? (0, r.jsx)(a.Z, {
+        ? (0, r.jsx)(i.Z, {
               orbAmount: t.amount,
               className: u ? void 0 : s.disabled
           })
-        : (0, r.jsx)(i.F, {
+        : (0, r.jsx)(a.F, {
               price: t,
               discount: c,
               icon: n
@@ -25,7 +25,7 @@ function c(e) {
           });
 }
 function u(e) {
-    let { displayPrices: t, isPremiumUser: n, discount: l, hasSufficientOrbs: i } = e;
+    let { displayPrices: t, isPremiumUser: n, discount: l, hasSufficientOrbs: a } = e;
     return (0, r.jsx)('div', {
         className: s.priceLine,
         children: t.map((e, t) =>
@@ -35,7 +35,7 @@ function u(e) {
                     price: e,
                     isPremiumUser: n,
                     discount: l,
-                    hasSufficientOrbs: i
+                    hasSufficientOrbs: a
                 },
                 t
             )

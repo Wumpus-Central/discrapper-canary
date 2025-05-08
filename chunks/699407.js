@@ -81,24 +81,25 @@ let p = 1500,
     v = () => Promise.resolve({ sessionId: void 0 }),
     I = (e) => {
         var t;
-        let { dispatcher: n, actionHandler: o, getFingerprint: c, getSessionId: f = v, TRACKING_URL: I, drainTimeoutOverride: S, waitFor: T } = e;
-        function A(e) {
+        let { dispatcher: n, actionHandler: o, getFingerprint: c, getSessionId: f = v, TRACKING_URL: I, drainTimeoutOverride: S, waitFor: T, scheduleWhenIdle: A = g } = e;
+        function N(e) {
+            var t;
             if (null != i) return i;
-            let t = e.fingerprint || c();
-            return null != t ? (0, a.s)(t) : null;
+            let n = null != (t = e.fingerprint) ? t : c();
+            return null != n ? (0, a.s)(n) : null;
         }
-        function N() {
+        function C() {
             return 0 !== y.length && (null != i ? null != r : null != c());
         }
-        function C(e) {
+        function P(e) {
             let { shouldFlushOnNextTick: t = !1 } = e;
-            null == O && N() && (O = t ? setTimeout(P, 0) : g(P, { timeout: m }));
+            null == O && C() && (O = t ? setTimeout(R, 0) : A(R, { timeout: m }));
         }
-        function P() {
-            if (((O = null), !N())) return;
+        function R() {
+            if (((O = null), !C())) return;
             let e = y.slice();
             (y = []),
-                R(e).then(
+                w(e).then(
                     () => {
                         e.forEach((e) => {
                             var t;
@@ -112,7 +113,7 @@ let p = 1500,
                     }
                 );
         }
-        function R(e) {
+        function w(e) {
             let t = Date.now(),
                 n = e.map((e) => _(d({}, e), { properties: _(d({}, e.properties), { client_send_timestamp: t }) }));
             return l.tn.post({
@@ -128,13 +129,13 @@ let p = 1500,
         (m = null != S ? S : p),
             (b.handleConnectionOpen = function (e) {
                 let { analyticsToken: t, user: n } = e;
-                return null != t && (r = t), null != n.id && (i = n.id), C({ shouldFlushOnNextTick: !1 }), !1;
+                return null != t && (r = t), null != n.id && (i = n.id), P({ shouldFlushOnNextTick: !1 }), !1;
             }),
             (b.handleConnectionClosed = function () {
-                return P(), (r = null), (i = null), !1;
+                return R(), (r = null), (i = null), !1;
             }),
             (b.handleFingerprint = function () {
-                return P(), !1;
+                return R(), !1;
             }),
             (b.handleTrack = function (e) {
                 let { event: t, properties: n, flush: r, fingerprint: i, resolve: o } = e;
@@ -153,19 +154,19 @@ let p = 1500,
                                 ),
                                 resolve: o
                             },
-                            l = A(s);
-                        null != l && (s.properties.client_uuid = E.generate(l)), y.push(s), y.length > h && (y = y.slice(-h)), r ? C({ shouldFlushOnNextTick: !0 }) : C({ shouldFlushOnNextTick: !1 });
+                            l = N(s);
+                        null != l && (s.properties.client_uuid = E.generate(l)), y.push(s), y.length > h && (y = y.slice(-h)), r ? P({ shouldFlushOnNextTick: !0 }) : P({ shouldFlushOnNextTick: !1 });
                     }),
                     !1
                 );
             });
-        class w extends (t = s.ZP.Store) {
+        class D extends (t = s.ZP.Store) {
             initialize() {
                 null != T && this.waitFor(...T);
             }
             constructor(...e) {
-                super(...e), u(this, 'submitEventsImmediately', R);
+                super(...e), u(this, 'submitEventsImmediately', w);
             }
         }
-        return u(w, 'displayName', 'AnalyticsTrackingStore'), new w(n, o);
+        return u(D, 'displayName', 'AnalyticsTrackingStore'), new D(n, o);
     };
