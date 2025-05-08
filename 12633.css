@@ -38076,6 +38076,12 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     display: inline
 }
 
+.labelRow_ab8609+.statusEmoji_ab8609:not(:has(+.statusText_ab8609)) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
 .addStatusPrompt_ab8609 {
     color: var(--text-muted);
     display: inline;
