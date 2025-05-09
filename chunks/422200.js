@@ -1,84 +1,84 @@
-n.d(t, { default: () => C });
+n.d(e, { default: () => P });
 var i = n(255367);
 n(73800);
 var r = n(481060),
-    a = n(239091),
-    l = n(108843),
+    l = n(239091),
+    a = n(108843),
     o = n(100527),
-    d = n(299206),
-    u = n(895563),
-    s = n(32750),
-    c = n(109764),
+    c = n(299206),
+    s = n(895563),
+    u = n(32750),
+    d = n(109764),
     f = n(323597),
     h = n(461535),
-    v = n(438536),
-    b = n(251746),
-    p = n(193987),
-    g = n(933793),
-    Z = n(13736),
-    O = n(732393),
-    _ = n(214906),
-    m = n(612856),
-    y = n(137591),
-    E = n(388032);
-let C = (0, l.Z)(
-    function (e) {
-        let { channel: t, onSelect: n } = e,
-            l = (0, c.Z)(t),
-            o = (0, h.Z)(t),
-            C = (0, _.Z)(t),
-            j = (0, s.Z)(t),
-            A = (0, p.Z)(t),
-            P = (0, f.Z)(t),
-            N = (0, d.Z)({
-                id: t.id,
-                label: E.intl.string(E.t.DQ797u)
+    b = n(438536),
+    g = n(251746),
+    O = n(193987),
+    Z = n(933793),
+    p = n(13736),
+    m = n(732393),
+    j = n(214906),
+    v = n(612856),
+    _ = n(137591),
+    y = n(388032);
+let P = (0, a.Z)(
+    function (t) {
+        let { channel: e, onSelect: n } = t,
+            a = (0, d.Z)(e),
+            o = (0, h.Z)(e),
+            P = (0, j.Z)(e),
+            E = (0, u.Z)(e),
+            C = (0, O.Z)(e),
+            S = (0, f.Z)(e),
+            x = (0, c.Z)({
+                id: e.id,
+                label: y.intl.string(y.t.DQ797u)
             }),
-            U = (0, v.Z)(t, 'Context Menu'),
-            R = (0, g.Z)(t),
-            S = (0, m.Z)(t),
-            T = (0, Z.Z)(t),
-            k = (0, O.Z)(t.id),
-            x = (0, b.Z)(t),
-            D = (0, y.Z)(t),
-            I = (0, u.l)(t),
-            F = (0, u.P)(t);
+            k = (0, b.Z)(e, 'Context Menu'),
+            w = (0, Z.Z)(e),
+            D = (0, v.Z)(e),
+            U = (0, p.Z)(e),
+            M = (0, m.Z)(e.id),
+            N = (0, g.Z)(e),
+            A = (0, _.Z)(e),
+            R = (0, s.l)(e),
+            T = (0, s.P)(e);
         return (0, i.jsxs)(r.v2r, {
             navId: 'thread-context',
-            onClose: a.Zy,
-            'aria-label': E.intl.string(E.t['1NBjqa']),
+            onClose: l.Zy,
+            'aria-label': y.intl.string(y.t['1NBjqa']),
             onSelect: n,
             children: [
                 (0, i.jsxs)(
                     r.kSQ,
                     {
-                        children: [o, I]
+                        children: [o, R]
                     },
                     'mark-as-read-or-favorite'
                 ),
                 (0, i.jsxs)(
                     r.kSQ,
                     {
-                        children: [U, x, j, A, T, k, l]
+                        children: [k, N, E, C, U, M, a]
                     },
                     'thread-actions'
                 ),
                 (0, i.jsxs)(
                     r.kSQ,
                     {
-                        children: [C, S]
+                        children: [P, D]
                     },
                     'notifications'
                 ),
-                (0, i.jsx)(r.kSQ, { children: F }),
+                (0, i.jsx)(r.kSQ, { children: T }),
                 (0, i.jsxs)(
                     r.kSQ,
                     {
-                        children: [D, R, P]
+                        children: [A, w, S]
                     },
                     'admin-actions'
                 ),
-                (0, i.jsx)(r.kSQ, { children: N }, 'developer-actions')
+                (0, i.jsx)(r.kSQ, { children: x }, 'developer-actions')
             ]
         });
     },

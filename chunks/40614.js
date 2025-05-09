@@ -1,4 +1,4 @@
-n.d(t, { V: () => O });
+n.d(t, { V: () => v });
 var r = n(255367),
     i = n(512722),
     l = n.n(i),
@@ -68,7 +68,7 @@ function y(e) {
         })
     });
 }
-function O(e) {
+function v(e) {
     let { onClick: t } = e,
         { rtcPopoutEnabled: n } = (0, p.SN)('not sharing link'),
         { rtcPopoutEnabled: i } = (0, p.m_)('not sharing link'),

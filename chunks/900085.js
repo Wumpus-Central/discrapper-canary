@@ -16,8 +16,8 @@ var r,
     b = n(576855),
     _ = n(313201),
     y = n(991346),
-    O = n(592125),
-    v = n(888369),
+    v = n(592125),
+    O = n(888369),
     C = n(430824),
     S = n(306680),
     j = n(944486),
@@ -113,13 +113,13 @@ class V extends (r = l.Component) {
     }
 }
 k(V, 'defaultProps', { unread: !1 });
-let H = c.ZP.connectStores([S.ZP, O.Z], (e) => {
+let H = c.ZP.connectStores([S.ZP, v.Z], (e) => {
         let { channel: t } = e;
         return {
             unread: S.ZP.hasUnread(t.id),
             mentions: S.ZP.getMentionCount(t.id),
             isMentionLowImportance: S.ZP.getIsMentionLowImportance(t.id),
-            category: O.Z.getChannel(t.parent_id)
+            category: v.Z.getChannel(t.parent_id)
         };
     })(V),
     F = c.ZP.connectStores([E.ZP], (e) => {
@@ -127,17 +127,17 @@ let H = c.ZP.connectStores([S.ZP, O.Z], (e) => {
         if (null == t.guild_id) throw Error('ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...');
         return { voiceStates: E.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(V),
-    z = c.ZP.connectStores([v.default], (e) => {
+    z = c.ZP.connectStores([O.default], (e) => {
         let { guild: t } = e;
-        return { unread: v.default.hasUnread(t.id) };
+        return { unread: O.default.hasUnread(t.id) };
     })(Z.ic),
     W = c.ZP.connectStores([S.ZP], (e) => {
         let { channel: t } = e;
         return { mentions: S.ZP.getMentionCount(t.id) };
     })(Z.PZ),
-    Y = c.ZP.connectStores([O.Z, S.ZP], (e) => {
+    Y = c.ZP.connectStores([v.Z, S.ZP], (e) => {
         let { user: t } = e,
-            n = O.Z.getDMFromUserId(t.id);
+            n = v.Z.getDMFromUserId(t.id);
         return { mentions: null != n ? S.ZP.getMentionCount(n) : 0 };
     })(Z.n5);
 function K(e, t, n) {

@@ -1,4 +1,4 @@
-n.d(t, { R: () => l });
+n.d(i, { R: () => l });
 var e = n(818083),
     o = n(846573);
 let a = (0, e.B)({
@@ -14,11 +14,11 @@ let a = (0, e.B)({
         }
     ]
 });
-function l(i) {
-    let { location: t } = i,
-        { isInHoldout: n } = o.X.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
+function l(t) {
+    let { location: i } = t,
+        { isInHoldout: n } = o.X.getCurrentConfig({ location: i }, { autoTrackExposure: !0 });
     return a.getCurrentConfig(
-        { location: t },
+        { location: i },
         {
             disable: n,
             autoTrackExposure: !0

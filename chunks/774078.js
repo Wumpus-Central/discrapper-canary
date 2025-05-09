@@ -10,7 +10,8 @@ function s(e) {
         l = (0, o.TD)(Date.now(), e),
         c = (0, i.Z)(),
         u = (0, r.useCallback)(() => {
-            (0 === l.days && 0 === l.hours && 0 === l.minutes && 0 === l.seconds) || s || (c(), null == n || n());
-        }, [l, s, c, n]);
+            let t = (0, o.TD)(Date.now(), e);
+            (0 === t.days && 0 === t.hours && 0 === t.minutes && 0 === t.seconds) || s || (c(), null == n || n());
+        }, [e, s, c, n]);
     return (0, a.Z)(u, s ? null : t), l;
 }

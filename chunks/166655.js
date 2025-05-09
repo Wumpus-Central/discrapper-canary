@@ -13,7 +13,7 @@ function i(t) {
         case l.w.THINK:
             return a.intl.string(a.t['xod36+']);
         case l.w.LOVE:
-            return a.intl.string(a.t.ZStIVl);
+            return a.intl.string(a.t.xaCthI);
         default:
             (0, r.vE)(t);
     }

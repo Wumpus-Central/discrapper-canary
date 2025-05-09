@@ -19,8 +19,8 @@ var r = n(255367),
     b = n(803647),
     _ = n(131704),
     y = n(944486),
-    O = n(626135),
-    v = n(870569),
+    v = n(626135),
+    O = n(870569),
     C = n(981631),
     S = n(388032),
     j = n(390648);
@@ -42,7 +42,7 @@ let x = i.memo(function (e) {
         V = i.useCallback(() => {
             o()(null != D, 'Received null activity'),
                 (0, p.v)(G, p.d.INVITE),
-                O.default.track(C.rMx.OPEN_MODAL, {
+                v.default.track(C.rMx.OPEN_MODAL, {
                     type: 'Send Join Invite',
                     application_id: D.application_id,
                     location: k.location
@@ -144,7 +144,7 @@ let x = i.memo(function (e) {
                         : ((t = !0), (l = null), (u = s.hGI), (x = null != Z && (0, _.vd)(Z.type) ? S.intl.string(S.t.uQn9Bw) : null != w ? S.intl.string(S.t.fBXEoK) : S.intl.string(S.t.n3feND))),
                   (0, r.jsx)('div', {
                       className: j.panelButtonContainer,
-                      children: (0, r.jsx)(v.Z, {
+                      children: (0, r.jsx)(O.Z, {
                           tooltipText: x,
                           disabled: t,
                           onClick: l,
@@ -154,7 +154,7 @@ let x = i.memo(function (e) {
                 : null,
         Y =
             B && null == R
-                ? (0, r.jsx)(v.Z, {
+                ? (0, r.jsx)(O.Z, {
                       tooltipText: S.intl.string(S.t['hC/Ze3']),
                       onClick: V,
                       icon: s.ejJ
@@ -163,7 +163,7 @@ let x = i.memo(function (e) {
         K =
             null == R
                 ? null
-                : (0, r.jsx)(v.Z, {
+                : (0, r.jsx)(O.Z, {
                       tooltipText: S.intl.string(S.t['R/FK4O']),
                       onClick: H(R.applicationId, R.location),
                       icon: s.PBZ

@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(730749),
     _ = n(607070),
     y = n(636449),
-    O = n(214629),
-    v = n(566620),
+    v = n(214629),
+    O = n(566620),
     C = n(317381),
     S = n(736409),
     j = n(367907),
@@ -212,7 +212,7 @@ class e_ extends i.PureComponent {
                       children: n.name
                   })
               });
-        let O = (0, r.jsxs)(r.Fragment, {
+        let v = (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(R.Z, {
                     className: ep.gameIcon,
@@ -259,13 +259,13 @@ class e_ extends i.PureComponent {
                               onClick: () => {
                                   p.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' }), c && u(ed.L.TAKE_ACTION), (0, j.yw)(ec.rMx.ACTIVITY_PANEL_GAME_CARD_ACTIVITY_POPOUT_REFOCUS_CLICKED);
                               },
-                              children: O
+                              children: v
                           })
                       )
               })
             : (0, r.jsx)('div', {
                   className: ep.gameWrapper,
-                  children: O
+                  children: v
               });
     }
     render() {
@@ -287,7 +287,7 @@ class e_ extends i.PureComponent {
                 let { channel: t, embeddedActivity: n } = this.props;
                 a()(null != n, 'Activity cannot be null during navigation click');
                 let r = n.location.kind === c.E.CONTEXTLESS;
-                if (!(0, y.R)() && r) return void (0, v.tg)(eu.Ez.PANEL);
+                if (!(0, y.R)() && r) return void (0, O.tg)(eu.Ez.PANEL);
                 a()(null != t, 'Channel cannot be null during navigation click'),
                     g.Z.channelListScrollTo(null != (e = t.guild_id) ? e : ec.ME, t.id),
                     !(0, y.R)() &&
@@ -299,7 +299,7 @@ class e_ extends i.PureComponent {
                                     instanceId: n.compositeInstanceId
                                 })
                             ),
-                        (0, F.Qm)(t.type) && (0, v.tg)(eu.Ez.PANEL));
+                        (0, F.Qm)(t.type) && (0, O.tg)(eu.Ez.PANEL));
             });
     }
 }
@@ -334,11 +334,11 @@ let ey = (0, b.Z)(function (e) {
         [f, g] = (0, u.Wu)([z.Z], () => [z.Z.getCurrentUserActiveStream(), z.Z.getStreamerActiveStreamMetadata()]),
         m = (0, u.e7)([_.Z], () => _.Z.useReducedMotion),
         b = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
-        v = (0, u.e7)([q.Z, X.Z, K.ZP], () => (null != a ? D.JL(a, q.Z, X.Z, !1) : null != n && D.h_(K.ZP.getChannels(n), q.Z, X.Z).length > 0)),
+        O = (0, u.e7)([q.Z, X.Z, K.ZP], () => (null != a ? D.JL(a, q.Z, X.Z, !1) : null != n && D.h_(K.ZP.getChannels(n), q.Z, X.Z).length > 0)),
         [S] = (0, E.Z)([null != (t = null != g && null != g.id ? g.id : null != s && null != s.id ? s.id : null != b ? b.applicationId : void 0) ? t : '']),
         j = (0, u.e7)([w.Z], () => w.Z.getFakeGameData()),
         x = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
-        I = (0, O.Z0)() && null != x && (0, y.R)(),
+        I = (0, v.Z0)() && null != x && (0, y.R)(),
         N = (0, u.e7)([Q.Z], () => (0, L.Z)(Q.Z) && (0, ei.isWindows)()),
         R = (0, u.e7)([J.Z], () => (null != o ? J.Z.findActivity(o, (e) => e.type === ec.IIU.PLAYING) : null)),
         k = null != f && f.ownerId === o && f.state !== ec.jm8.ENDED,
@@ -369,7 +369,7 @@ let ey = (0, b.Z)(function (e) {
             useReducedMotion: m,
             isStreaming: k,
             channel: h,
-            canStream: v,
+            canStream: O,
             stream: f,
             streamMetadata: g,
             channelName: M,

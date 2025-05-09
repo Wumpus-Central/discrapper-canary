@@ -520,7 +520,8 @@ class eO extends d.Z {
                         audio_layer: x.Z.getMediaEngine().getAudioLayer(),
                         automatic_audio_subsystem: i.automaticAudioSubsystem,
                         participant_type: this.getVoiceParticipantType(),
-                        audio_capture_sample_rate_mismatch_percent: a
+                        audio_capture_sample_rate_mismatch_percent: a,
+                        krisp_sdk_version: x.Z.getState().krispVersion
                     }
                 );
             (async () => {

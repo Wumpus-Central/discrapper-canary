@@ -56,7 +56,7 @@ let f = [
         },
         {
             value: 'CURRENT_OBSESSION',
-            label: () => a.intl.string(a.t.ZStIVl)
+            label: () => a.intl.string(a.t.xaCthI)
         },
         {
             value: 'SHOWER_THOUGHT',

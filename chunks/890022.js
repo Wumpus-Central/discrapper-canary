@@ -1,7 +1,7 @@
-n.d(t, {
-    W7: () => s,
+n.d(i, {
+    W7: () => r,
     _x: () => c,
-    uw: () => r
+    uw: () => s
 });
 var e = n(818083),
     o = n(752048),
@@ -24,27 +24,27 @@ let l = (0, e.B)({
         }
     ]
 });
-function s(i) {
+function r(t) {
     switch (l.getCurrentConfig({ location: 'filterPresences' }).fromUserType) {
         case 2:
             return [];
         case 0:
-            return i.filter((i) => {
-                let { user: t } = i;
-                return a.Z.isFriend(t.id);
+            return t.filter((t) => {
+                let { user: i } = t;
+                return a.Z.isFriend(i.id);
             });
         case 1:
-            return i.filter((i) => {
-                let { user: t } = i;
-                return a.Z.isFriend(t.id) || o.Z.isHighlyAffinedVCUser(t.id);
+            return t.filter((t) => {
+                let { user: i } = t;
+                return a.Z.isFriend(i.id) || o.Z.isHighlyAffinedVCUser(i.id);
             });
         default:
-            return i;
+            return t;
     }
 }
-function r(i) {
-    return 2 !== l.getCurrentConfig({ location: i }).fromUserType;
+function s(t) {
+    return 2 !== l.getCurrentConfig({ location: t }).fromUserType;
 }
-function c(i) {
-    return 2 !== l.useExperiment({ location: i }).fromUserType;
+function c(t) {
+    return 2 !== l.useExperiment({ location: t }).fromUserType;
 }

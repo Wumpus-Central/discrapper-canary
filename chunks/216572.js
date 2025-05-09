@@ -1,5 +1,5 @@
 n.d(t, {
-    HL: () => o,
+    HL: () => u,
     Q_: () => a
 });
 var i = n(442837),
@@ -12,6 +12,6 @@ function a(e) {
         return null != t && t.getModeratorReportingEnabled() && null != t.getModeratorReportChannelId();
     });
 }
-function o(e) {
+function u(e) {
     return (0, l.P0)(e);
 }

@@ -16,8 +16,8 @@ var r,
     b = n(199902),
     _ = n(19780),
     y = n(306680),
-    O = n(944486),
-    v = n(594174),
+    v = n(944486),
+    O = n(594174),
     C = n(451478),
     S = n(276952),
     j = n(682662),
@@ -145,7 +145,7 @@ class D extends (r = l.PureComponent) {
     }
     getChannelIcon() {
         let { channel: e } = this.props,
-            t = e.type === P.d4z.DM ? v.default.getUser(e.getRecipientId()) : null;
+            t = e.type === P.d4z.DM ? O.default.getUser(e.getRecipientId()) : null;
         return null != t ? t.getAvatarURL(void 0, 48, !1) : (0, h.x)(e);
     }
     render() {
@@ -227,7 +227,7 @@ class D extends (r = l.PureComponent) {
             }),
             N(this, 'handleContextMenu', (e) => {
                 let { channel: t } = this.props,
-                    r = t.type === P.d4z.DM ? v.default.getUser(t.getRecipientId()) : null;
+                    r = t.type === P.d4z.DM ? O.default.getUser(t.getRecipientId()) : null;
                 null != r
                     ? (0, u.jW)(e, async () => {
                           let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('53912'), n.e('56826'), n.e('45903')]).then(n.bind(n, 131404));
@@ -267,8 +267,8 @@ let L = l.forwardRef(function (e, t) {
         o = (0, a.e7)([_.Z], () => _.Z.getChannelId(), []),
         u = (0, a.e7)([d.Z], () => (null != o ? d.Z.getMode(o) : P.WtW.VOICE), [o]),
         h = (0, a.e7)([b.Z], () => b.Z.getAllApplicationStreamsForChannel(n).length > 0),
-        m = (0, a.e7)([O.Z], () => O.Z.getChannelId(), []),
-        v = (0, a.e7)([y.ZP], () => y.ZP.getMentionCount(n), [n]),
+        m = (0, a.e7)([v.Z], () => v.Z.getChannelId(), []),
+        O = (0, a.e7)([y.ZP], () => y.ZP.getMentionCount(n), [n]),
         { isFacepileEnabled: C } = g.Z.useExperiment({ location: 'unread_direct_message' }, { autoTrackExposure: !1 }),
         S = o === n,
         j = !1,
@@ -281,9 +281,9 @@ let L = l.forwardRef(function (e, t) {
         T(Z({}, e), {
             ref: t,
             channelName: r,
-            unread: v > 0,
+            unread: O > 0,
             selected: m === n,
-            badge: v,
+            badge: O,
             audio: j,
             video: E,
             stream: h,

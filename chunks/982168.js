@@ -1,53 +1,28 @@
 n.d(t, {
-    P0: () => h,
-    _5: () => f,
-    gT: () => p,
-    iZ: () => _,
-    sP: () => d
-});
-var r = n(149765),
-    i = n(241559),
-    o = n(592125),
-    a = n(430824),
-    s = n(594174),
-    l = n(700785),
-    c = n(970257),
-    u = n(806246);
-function d(e) {
-    if (!(0, c.Fi)(e.author)) return !1;
-    let t = o.Z.getChannel(e.channel_id);
+    P0: () => o,
+    iZ: () => u,
+    sP: () => a
+}),
+    n(149765),
+    n(241559);
+var i = n(592125),
+    r = n(430824);
+n(594174), n(700785);
+var l = n(970257);
+function a(e) {
+    if (!(0, l.Fi)(e.author)) return !1;
+    let t = i.Z.getChannel(e.channel_id);
     if (null == t) return !1;
-    let n = a.Z.getGuild(t.guild_id);
+    let n = r.Z.getGuild(t.guild_id);
     if (null == n) return !1;
-    let r = n.getModeratorReportingEnabled(),
-        i = n.getModeratorReportChannelId();
-    return r && null != i;
+    let a = n.getModeratorReportingEnabled(),
+        u = n.getModeratorReportChannelId();
+    return a && null != u;
 }
-let f = function (e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.Z, s.default],
-        n = (0, i.cD)(e, t);
-    if (null == n) return !1;
-    let { user: o, guild: c } = n;
-    return (
-        null != c &&
-        !!c.getModeratorReportingEnabled() &&
-        null != c.getModeratorReportChannelId() &&
-        r.Db(
-            l.uB({
-                user: o,
-                context: c,
-                checkElevated: !1
-            }),
-            u.I
-        )
-    );
-};
-function _(e) {
+function u(e) {
     return null != e && e.isModeratorReportChannel() && e.isForumChannel();
 }
-function p(e) {
-    return null != e && e.isModeratorReportChannel() && e.isForumPost();
+function o(e) {
+    return null != e && (u(e) || (null != e && e.isModeratorReportChannel() && e.isForumPost()));
 }
-function h(e) {
-    return null != e && (_(e) || p(e));
-}
+n(806246);

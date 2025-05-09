@@ -65,15 +65,15 @@ function _(e) {
 function y(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: l, jumpToVoiceChannels: u, jumpToChannel: d } = e,
         { bottomBar: p, topBar: y } = (0, a.cj)([f.Z], () => f.Z.getUnreadStateForGuildId(n.id)),
-        O = (0, a.e7)([h.Z], () => h.Z.isFocused()),
-        { mode: v, mentionCount: C, targetChannelId: S } = 'bottom' === t ? p : y,
-        j = v === f.x.HIDDEN,
+        v = (0, a.e7)([h.Z], () => h.Z.isFocused()),
+        { mode: O, mentionCount: C, targetChannelId: S } = 'bottom' === t ? p : y,
+        j = O === f.x.HIDDEN,
         E = (0, c.q_F)(
             {
                 to: { transform: j ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
                 config: b
             },
-            O ? 'respect-motion-settings' : 'animate-never'
+            v ? 'respect-motion-settings' : 'animate-never'
         ),
         x = i.useCallback(
             (e) => {
@@ -91,9 +91,9 @@ function y(e) {
             style: E,
             'aria-hidden': j,
             children:
-                v === f.x.HIDDEN
+                O === f.x.HIDDEN
                     ? (0, r.jsx)('div', { className: o()(m.bar, m.emptyBar) })
-                    : v === f.x.UNREAD
+                    : O === f.x.UNREAD
                       ? (0, r.jsxs)(c.P3F, {
                             className: m.bar,
                             onClick: x,
@@ -121,7 +121,7 @@ function y(e) {
                                 })
                             ]
                         })
-                      : v === f.x.MENTIONS
+                      : O === f.x.MENTIONS
                         ? (0, r.jsx)(c.P3F, {
                               className: o()(m.bar, m.mentionsBar),
                               onClick: x,
@@ -132,7 +132,7 @@ function y(e) {
                                   children: g.intl.format(g.t.EQcLys, { count: C })
                               })
                           })
-                        : v === f.x.VOICE_CHANNELS
+                        : O === f.x.VOICE_CHANNELS
                           ? (0, r.jsx)(_, {
                                 jumpToVoiceChannels: u,
                                 guildChannels: n,

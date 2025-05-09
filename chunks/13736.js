@@ -1,15 +1,15 @@
-e.d(t, { Z: () => s });
+e.d(t, { Z: () => u });
 var i = e(255367);
 e(73800);
 var r = e(481060),
     l = e(787014),
     a = e(665906),
     o = e(388032);
-function s(n) {
+function u(n) {
     let t = (0, a.C7)(n),
         e = (0, a.$R)(n),
-        s = (0, a.Gu)(n);
-    return !t || !e || s || __OVERLAY__
+        u = (0, a.Gu)(n);
+    return !t || !e || u || __OVERLAY__
         ? null
         : (0, i.jsx)(r.sNh, {
               id: 'edit-thread',

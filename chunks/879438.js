@@ -12,9 +12,10 @@ let s = (0, r.U)((e, t) => ({
     registerAssetLoad: () => {
         var n;
         let r = null != (n = t().logger) ? n : (0, l.T)({ location: a.dr.QUEST_HOME_DESKTOP });
-        if (r.info === o.dG || t().elapsed > 60000) return;
-        let s = performance.now() - t().startTime,
-            c = { elapsed: s };
+        if (r.info === o.dG || t().elapsed >= 60000) return;
+        let s = performance.now() - t().startTime;
+        s > 60000 && (s = 60000);
+        let c = { elapsed: s };
         s - t().lastOutputLogTime > 1000 && (r.info('QuestHome asset loading duration so far: '.concat(s, 'ms')), (c.lastOutputLogTime = s)), null == t().logger && (c.logger = r), (0, i.j)(() => e(c));
     }
 }));

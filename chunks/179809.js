@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(727258),
     _ = n(276952),
     y = n(199540),
-    O = n(40153),
-    v = n(252686),
+    v = n(40153),
+    O = n(252686),
     C = n(682662),
     S = n(662146),
     j = n(981631),
@@ -101,7 +101,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                             }),
                             'data-dnd-name': er,
                             children: $
-                                ? (0, r.jsx)(v.Z, { isFolder: !0 })
+                                ? (0, r.jsx)(O.Z, { isFolder: !0 })
                                 : (0, r.jsx)(y.Z, {
                                       folderNode: t,
                                       expanded: a,
@@ -123,7 +123,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                         })
                     }),
                     A
-                        ? (0, r.jsx)(O.ZP, {
+                        ? (0, r.jsx)(v.ZP, {
                               name: er,
                               targetNode: t,
                               onDragOverChanged: et
@@ -165,7 +165,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                     );
                 }),
                 A && a
-                    ? (0, r.jsx)(O.Zu, {
+                    ? (0, r.jsx)(v.Zu, {
                           name: er,
                           targetNode: t
                       })

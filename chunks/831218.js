@@ -16,8 +16,8 @@ var r,
     b = n(702321),
     _ = n(46148),
     y = n(82295),
-    O = n(313201),
-    v = n(540059),
+    v = n(313201),
+    O = n(540059),
     C = n(860144),
     S = n(214852),
     j = n(518311),
@@ -466,7 +466,7 @@ class G extends (r = l.Component) {
 L(G, 'defaultProps', { padding: 8 });
 let B = (e) => {
     var t;
-    let n = (0, v.Q3)('ConnectedPrivateChannelsList'),
+    let n = (0, O.Q3)('ConnectedPrivateChannelsList'),
         { density: r } = (0, h.TCT)(),
         { version: o, theme: s, children: d, showDMHeader: p } = e,
         g = l.Children.count(d),
@@ -528,7 +528,7 @@ let B = (e) => {
                 }),
             [N]
         ),
-        L = (0, O.Dt)(),
+        L = (0, v.Dt)(),
         U = (0, c.ZP)({
             id: 'private-channels-'.concat(L),
             isEnabled: y.keyboardModeEnabled,

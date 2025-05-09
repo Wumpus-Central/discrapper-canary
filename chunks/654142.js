@@ -76,7 +76,7 @@ let _ = i.memo(function (e) {
             }
             return i;
         })(e, ['folderNode']);
-    let { id: y, name: O, color: v, children: C } = t,
+    let { id: y, name: v, color: O, children: C } = t,
         S = C.map((e) => e.id),
         j = (0, a.Z)((e) => e.guildId),
         E = (0, l.e7)([c.Z], () => c.Z.isFolderExpanded(y)),
@@ -115,14 +115,14 @@ let _ = i.memo(function (e) {
                             e,
                             b(m({}, t), {
                                 folderId: y,
-                                folderName: O,
-                                folderColor: v,
+                                folderName: v,
+                                folderColor: O,
                                 unread: N || I > 0
                             })
                         );
                 });
             },
-            [y, O, v, N, I]
+            [y, v, O, N, I]
         );
     return (0, r.jsx)(
         p.Z,
