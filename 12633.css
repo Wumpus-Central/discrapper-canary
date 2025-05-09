@@ -44784,14 +44784,13 @@ div.mobilePushContainer__3d3b0 {
     -webkit-background-clip: text;
     background-clip: text;
     background-size: 100px auto;
-    -webkit-text-fill-color: transparent;
-    z-index: 1
+    -webkit-text-fill-color: transparent
 }
 
 .usernameGlow_e5de78 {
     filter: blur(4px);
     opacity: 0;
-    z-index: 0
+    z-index: -1
 }
 
 .usernameGlow_e5de78,
@@ -44809,7 +44808,7 @@ div.mobilePushContainer__3d3b0 {
 
 .convenienceGlowGradient_e5de78 {
     position: relative;
-    z-index: 1
+    z-index: 0
 }
 
 .theme-light .username_e5de78 {
@@ -44932,12 +44931,12 @@ div.mobilePushContainer__3d3b0 {
 }
 
 .nameContainer__703b9 {
-    position: relative
+    position: relative;
+    z-index: 0
 }
 
 .name__703b9 {
-    position: relative;
-    z-index: 2
+    position: relative
 }
 
 .name__703b9,
