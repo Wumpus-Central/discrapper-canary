@@ -40,8 +40,8 @@ var i = n(255367),
     w = n(379839),
     k = n(359135),
     L = n(516817),
-    B = n(273388),
-    M = n(878857),
+    M = n(273388),
+    B = n(878857),
     U = n(518950),
     V = n(199902),
     G = n(158776),
@@ -243,7 +243,7 @@ function ec(e) {
         }),
         ep = t.isMultiUserDM(),
         eh = t.isSystemDM(),
-        ef = (0, M.Q)(),
+        ef = (0, B.Q)(),
         eb = !ep && !eh && t.type === X.d4z.DM,
         e_ = eb && (null == u ? void 0 : u.primaryGuild) != null,
         ex = (0, m.e7)([W.ZP], () => W.ZP.isChannelMuted(t.getGuildId(), t.id)),
@@ -257,7 +257,7 @@ function ec(e) {
         ev = (0, m.e7)([F.ZP], () => F.ZP.getMentionCount(t.id) > 0),
         eT = (0, T.ZP)(t),
         eI = (0, m.e7)([A.Z], () => A.Z.isFavorite(t.id)),
-        eN = (0, B.L)('PrivateChannel'),
+        eN = (0, M.L)('PrivateChannel'),
         ey = null != V && (a || Y),
         eA = () => {
             K(!0);
@@ -287,7 +287,7 @@ function ec(e) {
                 null == (t = ec.current) || t.click();
             }
         },
-        eB = (e) => {
+        eM = (e) => {
             t.isMultiUserDM()
                 ? (0, h.jW)(
                       e,
@@ -317,7 +317,7 @@ function ec(e) {
                           );
                   });
         },
-        eM = (e) => {
+        eB = (e) => {
             e.preventDefault(), e.stopPropagation();
             let r = Q.intl.formatToPlainString(Q.t.hJ5Ap6, { name: eT }),
                 s = Q.intl.format(Q.t.SSIVOj, { name: eT });
@@ -441,7 +441,7 @@ function ec(e) {
                 onMouseDown: ew,
                 onFocus: eR,
                 onBlur: eD,
-                onContextMenu: eB,
+                onContextMenu: eM,
                 'aria-setsize': z,
                 'aria-posinset': G,
                 children: [
@@ -505,7 +505,7 @@ function ec(e) {
                             eO ? (0, i.jsx)(ea, {}) : null,
                             (0, i.jsx)(er, {
                                 'aria-label': ep ? Q.intl.string(Q.t['26C4oq']) : Q.intl.string(Q.t.jsvgc3),
-                                onClick: ep ? eM : eZ,
+                                onClick: ep ? eB : eZ,
                                 onMouseDown: ek,
                                 nameplate: V
                             })

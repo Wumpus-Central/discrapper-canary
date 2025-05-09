@@ -66,7 +66,7 @@ function d(e) {
 let p = i.forwardRef(function (e, t) {
     let { renderPopout: n, children: p, align: h = 'left', isPopoutBlocked: f, onPopoutOpen: m, onPopoutClose: g, onRequestClose: b } = e,
         [_, y] = i.useState(!1),
-        { isHovered: C, setIsHovered: x, onMouseEnter: v, onMouseLeave: j, cancelTimers: O } = (0, a.Z)(200, 300);
+        { isHovered: x, setIsHovered: C, onMouseEnter: v, onMouseLeave: j, cancelTimers: O } = (0, a.Z)(200, 300);
     function E(e) {
         'focus' === e.type || _ || v();
     }
@@ -74,18 +74,18 @@ let p = i.forwardRef(function (e, t) {
         _ || j();
     }
     function P(e) {
-        O(), y(!_), _ ? null == g || g() : null == m || m(), (!C || _) && e();
+        O(), y(!_), _ ? null == g || g() : null == m || m(), (!x || _) && e();
     }
     i.useImperativeHandle(
         t,
         () => ({
             hidePopout() {
-                x(!1), y(!1);
+                C(!1), y(!1);
             }
         }),
-        [x, y]
+        [C, y]
     );
-    let S = (C && !f) || _;
+    let S = (x && !f) || _;
     return (0, r.jsx)(o.yRy, {
         animation: o.yRy.Animation.FADE,
         shouldShow: S,
@@ -95,7 +95,7 @@ let p = i.forwardRef(function (e, t) {
         spacing: 16,
         onRequestClose: () => {
             if ((null == b ? void 0 : b()) === l.F) return l.F;
-            x(!1), y(!1), null == g || g();
+            C(!1), y(!1), null == g || g();
         },
         renderPopout: (e) =>
             (0, r.jsx)(

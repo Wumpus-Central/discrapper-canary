@@ -1,4 +1,4 @@
-n.d(t, { Z: () => z }), n(388685);
+n.d(t, { Z: () => M }), n(388685);
 var r = n(255367),
     o = n(73800),
     i = n(120356),
@@ -31,26 +31,26 @@ var r = n(255367),
     k = n(145597),
     E = n(214629),
     A = n(317381),
-    U = n(884338),
-    D = n(473179),
+    D = n(884338),
+    U = n(473179),
     B = n(932174),
     R = n(981631),
     L = n(388032),
     Y = n(951927);
-let M = U.u.SIZE_24;
-function z(e) {
+let z = D.u.SIZE_24;
+function M(e) {
     let { applicationId: t, channelId: n } = e,
         i = (0, c.e7)([p.Z], () => p.Z.getApplication(t)),
-        z = (0, c.e7)([A.ZP], () => A.ZP.getSelfEmbeddedActivities().get(t)),
+        M = (0, c.e7)([A.ZP], () => A.ZP.getSelfEmbeddedActivities().get(t)),
         W = (0, c.e7)([I.Z], () => I.Z.getChannel(n)),
         K = O.Sb.useSetting(),
         V = (0, c.Wu)(
             [Z.ZP],
             () => {
                 var e;
-                return null == W || null == z ? [] : Array.from(null != (e = z.userIds) ? e : []).map((e) => Z.ZP.getMember(W.guild_id, e));
+                return null == W || null == M ? [] : Array.from(null != (e = M.userIds) ? e : []).map((e) => Z.ZP.getMember(W.guild_id, e));
             },
-            [z, W]
+            [M, W]
         ),
         J = o.useMemo(() => {
             let e = new Map();
@@ -75,7 +75,7 @@ function z(e) {
                         children: (0, r.jsx)(
                             'img',
                             {
-                                src: e.getAvatarURL(null == t ? void 0 : t.guild_id, M),
+                                src: e.getAvatarURL(null == t ? void 0 : t.guild_id, z),
                                 alt: i,
                                 className: Y.avatar
                             },
@@ -87,7 +87,7 @@ function z(e) {
             },
             [J]
         ),
-        F = null == z ? void 0 : z.userIds,
+        F = null == M ? void 0 : M.userIds,
         G = (0, c.Wu)(
             [C.default],
             () =>
@@ -151,7 +151,7 @@ function z(e) {
             );
         })(),
         ei = o.useRef(null);
-    if (null == i || null == z) return null;
+    if (null == i || null == M) return null;
     let el = (0, r.jsx)(d.Z, {
         application: i,
         size: 24,
@@ -160,7 +160,7 @@ function z(e) {
     return (
         K &&
             (el = (0, r.jsx)(u.DY3, {
-                text: z.compositeInstanceId,
+                text: M.compositeInstanceId,
                 position: 'bottom',
                 children: el
             })),
@@ -188,10 +188,10 @@ function z(e) {
                                         children: '.'
                                     })
                                 }),
-                                (0, r.jsx)(U.Z, {
+                                (0, r.jsx)(D.Z, {
                                     renderIcon: !1,
                                     users: G,
-                                    size: M,
+                                    size: z,
                                     max: 6,
                                     renderUser: (e) => X(e, W)
                                 })
@@ -209,11 +209,12 @@ function z(e) {
                                             applicationId: t,
                                             channel: W,
                                             shouldPrioritizeGroupPlusIcon: !0,
-                                            isContextlessActivity: z.location.kind === a.E.CONTEXTLESS,
+                                            isContextlessActivity: M.location.kind === a.E.CONTEXTLESS,
                                             iconClassName: Y.inviteButtonIcon,
-                                            look: u.zxk.Looks.FILLED,
                                             size: u.zxk.Sizes.TINY,
-                                            buttonText: L.intl.string(L.t['6F9ivr'])
+                                            look: u.zxk.Looks.FILLED,
+                                            buttonText: L.intl.string(L.t['6F9ivr']),
+                                            color: u.zxk.Colors.BRAND
                                         }),
                                         $
                                             ? (0, r.jsx)(y.Z, {
@@ -242,7 +243,7 @@ function z(e) {
                                                     renderPopout: (e) => {
                                                         let { closePopout: t } = e;
                                                         return (0, r.jsx)(j.Z, {
-                                                            children: (0, r.jsx)(D.Z, {
+                                                            children: (0, r.jsx)(U.Z, {
                                                                 application: i,
                                                                 channelId: n,
                                                                 onClose: t

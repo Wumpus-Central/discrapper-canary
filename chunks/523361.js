@@ -1,13 +1,13 @@
 n.d(t, {
-    HG: () => l,
+    HG: () => a,
     Md: () => o,
-    Q8: () => i
+    Q8: () => l
 });
 var r = n(373228),
-    a = n(388032);
-let i = () => [a.intl.string(a.t.b6wEe3), a.intl.string(a.t.i8o9hY)],
-    o = () => [a.intl.string(a.t.vqnToa), a.intl.string(a.t['9yh+dH'])],
-    l = [
+    i = n(388032);
+let l = () => [i.intl.string(i.t.b6wEe3), i.intl.string(i.t.i8o9hY)],
+    o = () => [i.intl.string(i.t.vqnToa), i.intl.string(i.t['9yh+dH'])],
+    a = [
         {
             id: '781323471249604648',
             format_type: r.u3.APNG,

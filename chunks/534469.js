@@ -20,8 +20,8 @@ var r = n(255367),
     b = n(111810),
     _ = n(235894),
     y = n(367814),
-    C = n(807092),
-    x = n(869765),
+    x = n(807092),
+    C = n(869765),
     v = n(703656),
     j = n(695346),
     O = n(592125),
@@ -146,14 +146,14 @@ function ei(e) {
                 return e;
             })((0, c.JA)(null != (t = e.id) ? t : ''))
         ),
-        h = (0, u.e7)([x.Z], () => x.Z.getMessageByReference(l)),
+        h = (0, u.e7)([C.Z], () => C.Z.getMessageByReference(l)),
         { popouts: f, setPopout: m } = (0, D.Z)(i.id, K.d$),
         g = (0, A.ZP)(i),
         b = (0, k.iG)(i),
         _ = (0, k.Gx)(i),
-        C = (0, y.Z)(g),
+        x = (0, y.Z)(g),
         v = (0, Z.k)(i);
-    return i.type === X.uaV.THREAD_STARTER_MESSAGE && null != h && h.state === x.Y.LOADED
+    return i.type === X.uaV.THREAD_STARTER_MESSAGE && null != h && h.state === C.Y.LOADED
         ? (0, r.jsx)(
               el,
               et(ee({}, e), {
@@ -185,7 +185,7 @@ function ei(e) {
                   'aria-labelledby': b,
                   'aria-describedby': _,
                   hasThread: !1,
-                  authorHasGradientRole: C,
+                  authorHasGradientRole: x,
                   guildId: v
               })
           );
@@ -199,7 +199,7 @@ function el(e) {
             channel: { guild_id: g },
             compact: b = !1,
             className: _,
-            groupId: C,
+            groupId: x,
             viewingChannelId: O
         } = e,
         E = a.type === X.uaV.REPLY ? a.messageReference : void 0,
@@ -210,14 +210,14 @@ function el(e) {
         { popouts: F, selected: H, setPopout: W } = (0, D.Z)(a.id, K.d$),
         $ = j.RS.useSetting(),
         er = j.NA.useSetting(),
-        ei = (0, u.e7)([x.Z], () => x.Z.getMessageByReference(E)),
+        ei = (0, u.e7)([C.Z], () => C.Z.getMessageByReference(E)),
         el = (0, m.A)((null != (n = a.editedTimestamp) ? n : a.timestamp).valueOf()),
         {
             handleMouseEnter: eo,
             handleMouseLeave: ea,
             isHovered: es
         } = (0, M.tn)({
-            groupId: C,
+            groupId: x,
             message: a,
             defaultValue: H,
             popouts: F
@@ -237,15 +237,15 @@ function el(e) {
         }),
         ef = (0, L.Z)(s, h, ec),
         em = (0, A.ZP)(a),
-        eg = (0, k.iG)(a, C),
+        eg = (0, k.iG)(a, x),
         eb = (0, k.Gx)(a),
         e_ = (0, z.Z)(e, ep, !1),
         ey = i.useCallback(() => (0, v.XU)(g, h, s), [g, h, s]),
-        eC = (0, f.p9)({
+        ex = (0, f.p9)({
             guildId: g,
             roleId: em.iconRoleId
         }),
-        ex = (0, y.Z)(em);
+        eC = (0, y.Z)(em);
     return (0, r.jsxs)('div', {
         className: J.quotedChatMessage,
         children: [
@@ -266,7 +266,7 @@ function el(e) {
                         [J.mentioned]: a.mentioned,
                         [J.ephemeral]: (0, S.Pv)(a),
                         [J.systemMessage]: (0, T.Z)(a),
-                        [J.groupStart]: a.id === C || a.type === X.uaV.REPLY,
+                        [J.groupStart]: a.id === x || a.type === X.uaV.REPLY,
                         [J.selected]: eu
                     }),
                     zalgo: !0,
@@ -292,7 +292,7 @@ function el(e) {
                         replyReference: E,
                         author: em,
                         repliedMessage: ei,
-                        roleIcon: eC
+                        roleIcon: ex
                     }),
                     childrenAccessories: (0, G.Z)({
                         channelMessageProps: e,
@@ -311,7 +311,7 @@ function el(e) {
                     'aria-describedby': eb,
                     hasThread: !1,
                     guildId: g,
-                    authorHasGradientRole: ex
+                    authorHasGradientRole: eC
                 })
             )
         ]
@@ -340,12 +340,12 @@ let eo = i.memo(function (e) {
         ep = (0, b.p7)('ChatMessage'),
         eh = j.RS.useSetting(),
         ef = j.NA.useSetting(),
-        em = (0, u.e7)([x.Z], () => x.Z.getMessageByReference(es)),
+        em = (0, u.e7)([C.Z], () => C.Z.getMessageByReference(es)),
         { popouts: eg, selected: eb, setPopout: e_ } = (0, D.Z)(v.id, K.d$),
         ey = (0, M.qo)(v, N, e_),
-        eC = (0, M.Go)(v, N),
+        ex = (0, M.Go)(v, N),
         {
-            handleMouseEnter: ex,
+            handleMouseEnter: eC,
             handleMouseLeave: ev,
             hasHovered: ej,
             isHovered: eO
@@ -358,9 +358,9 @@ let eo = i.memo(function (e) {
         { isFocused: eE, hasFocused: eI, handleFocus: eP, handleBlur: eS } = (0, M.bb)(eu),
         eZ = i.useCallback(
             (e) => {
-                eP(e), ex(e);
+                eP(e), eC(e);
             },
-            [eP, ex]
+            [eP, eC]
         ),
         eN = i.useCallback(
             (e) => {
@@ -388,7 +388,7 @@ let eo = i.memo(function (e) {
         }),
         eG = (0, L.Z)(Z, $, eA),
         eF = (0, A.ZP)(v),
-        eH = (0, u.e7)([C.Z], () => C.Z.getPendingReply($)),
+        eH = (0, u.e7)([x.Z], () => x.Z.getPendingReply($)),
         eV = (function (e) {
             let t = i.useRef(e);
             return (
@@ -441,7 +441,7 @@ let eo = i.memo(function (e) {
                             onBlur: eN,
                             onContextMenu: ey,
                             onKeyDown: eG,
-                            onClick: eC,
+                            onClick: ex,
                             compact: er,
                             contentOnly: ea,
                             className: o()(ei, {
@@ -504,7 +504,7 @@ let eo = i.memo(function (e) {
                                     : void 0,
                             childrenSystemMessage: (0, q.Z)(e),
                             childrenMessageContent: l,
-                            onMouseMove: ex,
+                            onMouseMove: eC,
                             onMouseLeave: ev,
                             hasThread: !ea && v.hasFlag(X.iLy.HAS_THREAD) && null != ek,
                             isSystemMessage: (0, T.Z)(v),

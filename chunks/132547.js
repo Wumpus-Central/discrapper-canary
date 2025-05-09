@@ -9,7 +9,7 @@ var i = n(255367),
     d = n(214852),
     u = n(626135),
     m = n(314684),
-    g = n(794484),
+    g = n(560223),
     p = n(347475),
     h = n(342414),
     f = n(391110),
@@ -45,7 +45,7 @@ let O = () => {
                                     location: f.MQ.HOME
                                 }),
                                 (0, i.jsx)(g.Z, {
-                                    variant: f.R0.WHATS_NEW,
+                                    variant: f.gM.WHATS_NEW,
                                     className: C.whatsNew,
                                     noBackground: !0,
                                     leftAlignHeaders: !0,

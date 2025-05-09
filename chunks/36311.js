@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => C });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -16,14 +16,14 @@ var r = n(255367),
     b = n(723359),
     _ = n(388032),
     y = n(857651);
-function C(e) {
+function x(e) {
     let { guild: t, channelId: n } = e,
         l = (0, a.e7)([f.default], () => {
             var e;
             return (null == (e = f.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) === !1;
         }),
         o = (0, p.Kt)(),
-        { verifyAgreementButtonText: C, verifyGateDescription: x } = (0, p.a1)(b.L0.NSFW_CHANNEL),
+        { verifyAgreementButtonText: x, verifyGateDescription: C } = (0, p.a1)(b.L0.NSFW_CHANNEL),
         v = i.useCallback(() => {
             null != t && c.Z.nsfwReturnToSafety(t.id);
         }, [t]),
@@ -41,8 +41,8 @@ function C(e) {
               onAgree: O,
               onDisagree: v,
               title: _.intl.string(_.t.ZmwvDQ),
-              description: x,
-              agreement: C,
+              description: C,
+              agreement: x,
               agreementButtonColor: s.zxk.Colors.BRAND,
               disagreement: _.intl.string(_.t['/g10LC']),
               imageClassName: y.ageGatedImage
@@ -72,7 +72,7 @@ function C(e) {
                 disagreement: _.intl.string(_.t['/g10LC'])
             });
 }
-let x = function (e) {
+let C = function (e) {
     let { guild: t, channelId: n, className: l } = e,
         a = i.useRef(null);
     return (
@@ -85,7 +85,7 @@ let x = function (e) {
             className: y.scroller,
             children: (0, r.jsx)('div', {
                 className: o()(l, y.wrapper),
-                children: (0, r.jsx)(C, {
+                children: (0, r.jsx)(x, {
                     guild: t,
                     channelId: n
                 })

@@ -1,36 +1,25 @@
-n.d(t, { Z: () => m });
-var i = n(255367);
-n(73800);
-var r = n(399606),
-    s = n(607070),
-    l = n(70097),
-    a = n(970731),
-    o = n(19199),
-    c = n(921944),
-    d = n(388032),
-    u = n(580949);
-let m = (e) => {
-    let { markAsDismissed: t } = e,
-        n = (0, r.e7)([s.Z], () => s.Z.useReducedMotion);
-    return (0, o.D)()
-        ? (0, i.jsx)(a.ZP, {
-              asset: (0, i.jsx)(l.Z, {
-                  className: u.video,
-                  src: 'https://cdn.discordapp.com/attachments/1067194967979733053/1067195117439557712/Safety_BLOCK_Coachmark.mp4',
-                  loop: !0,
-                  autoPlay: !n,
-                  width: '100%'
-              }),
-              header: d.intl.string(d.t['61GrDA']),
-              content: d.intl.string(d.t['1zzTSk']),
-              buttonCTA: d.intl.string(d.t['NX+WJC']),
-              className: u.__invalid_coachmark,
-              onClick: (e) => {
-                  e.stopPropagation(), t(c.L.UNKNOWN);
-              },
-              markAsDismissed: t,
-              caretPosition: a.DF.BOTTOM_CENTER,
-              headerClassName: u.header
-          })
-        : null;
-};
+n.d(t, {
+    HY: () => s,
+    Pf: () => o,
+    RZ: () => i,
+    m$: () => a
+}),
+    n(388685),
+    n(642613);
+let r = new Set();
+function i() {
+    return r.size > 0;
+}
+function o() {
+    let e = [...r].sort();
+    return e.length > 0 ? e.join(',') : null;
+}
+function a(e) {
+    l(() => r.add(e));
+}
+function s(e) {
+    l(() => r.delete(e));
+}
+function l(e) {
+    i(), e(), i();
+}

@@ -116,7 +116,7 @@ let L = (e) => {
             ]
         });
     },
-    B = (e) => {
+    M = (e) => {
         let { subscription: t } = e,
             { analyticsLocations: n } = (0, h.ZP)(),
             [r] = (0, C.ED)({
@@ -134,7 +134,7 @@ let L = (e) => {
               })
             : (0, i.jsx)(c.$jN, {});
     },
-    M = (e) => {
+    B = (e) => {
         let { isTrial: t, isCancelled: n, isResubscribing: r, shouldHideRoleSubscriptionEntryPoints: s, onCancelSubscriptionClick: l, onResubscribeClick: a, onChangePlanClick: o } = e;
         return n && (t || s)
             ? null
@@ -312,10 +312,10 @@ let L = (e) => {
                               !z &&
                                   !F &&
                                   (0, i.jsxs)(i.Fragment, {
-                                      children: [(0, i.jsx)(c.vwX, { children: D.intl.string(D.t.wmMFvL) }), (0, i.jsx)(B, { subscription: t })]
+                                      children: [(0, i.jsx)(c.vwX, { children: D.intl.string(D.t.wmMFvL) }), (0, i.jsx)(M, { subscription: t })]
                                   }),
                               !J &&
-                                  (0, i.jsx)(M, {
+                                  (0, i.jsx)(B, {
                                       isTrial: Q,
                                       isCancelled: z,
                                       isResubscribing: j,

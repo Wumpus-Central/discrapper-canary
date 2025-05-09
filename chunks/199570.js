@@ -17,5 +17,10 @@ e.exports = {
     footerButtons: 'footerButtons__49094',
     flex: 'flex__49094',
     avatar: 'avatar__49094',
-    buttonSection: 'buttonSection__49094'
+    buttonSection: 'buttonSection__49094',
+    contextlessHeader: 'contextlessHeader__49094',
+    contextlessHeaderLeft: 'contextlessHeaderLeft__49094',
+    contextlessInviteButtonIcon: 'contextlessInviteButtonIcon__49094',
+    contextlessLeaveActivityButton: 'contextlessLeaveActivityButton__49094',
+    contextlessLeaveActivityButtonIcon: 'contextlessLeaveActivityButtonIcon__49094'
 };

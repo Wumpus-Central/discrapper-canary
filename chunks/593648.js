@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(912101),
     k = n(358085),
     L = n(709054),
-    B = n(695346),
-    M = n(675478),
+    M = n(695346),
+    B = n(675478),
     U = n(33656),
     V = n(726985),
     G = n(981631),
@@ -328,12 +328,12 @@ function J() {
                                                     note: H.intl.string(H.t['z8Td4+']),
                                                     value: !e[t].disableRaidAlertNag,
                                                     onChange: () => {
-                                                        (0, M.PS)(
+                                                        (0, B.PS)(
                                                             t,
                                                             (e) => {
                                                                 e.disableRaidAlertNag = !e.disableRaidAlertNag;
                                                             },
-                                                            M.fy.INFREQUENT_USER_ACTION
+                                                            B.fy.INFREQUENT_USER_ACTION
                                                         );
                                                     },
                                                     hideBorder: !0,
@@ -350,12 +350,12 @@ function J() {
                                                     note: H.intl.string(H.t.PyxXs7),
                                                     value: !e[t].disableRaidAlertPush,
                                                     onChange: () => {
-                                                        (0, M.PS)(
+                                                        (0, B.PS)(
                                                             t,
                                                             (e) => {
                                                                 e.disableRaidAlertPush = !e.disableRaidAlertPush;
                                                             },
-                                                            M.fy.INFREQUENT_USER_ACTION
+                                                            B.fy.INFREQUENT_USER_ACTION
                                                         );
                                                     },
                                                     hideBorder: !0,
@@ -443,7 +443,7 @@ class $ extends r.PureComponent {
                         children: [
                             (0, i.jsx)(u.q4e, {
                                 value: t,
-                                onChange: B.CM.updateSetting,
+                                onChange: M.CM.updateSetting,
                                 options: g
                             }),
                             (0, i.jsx)(u.R94, {
@@ -658,7 +658,7 @@ function es() {
         ttsType: D.Z.getTTSType(),
         notifyMessagesInSelectedChannel: D.Z.getNotifyMessagesInSelectedChannel()
     }));
-    return (0, i.jsx)(er, q(K({}, e), { afkTimeout: B.CM.useSetting() }));
+    return (0, i.jsx)(er, q(K({}, e), { afkTimeout: M.CM.useSetting() }));
 }
 function el() {
     let e = (0, x._x)('notification_settings'),
@@ -695,7 +695,7 @@ function el() {
                     (0, i.jsx)(u.FXm, {
                         options: r,
                         onChange: (e) => {
-                            B.YT.updateSetting(e.value);
+                            M.YT.updateSetting(e.value);
                         },
                         value: t
                     })
@@ -706,7 +706,7 @@ function el() {
     });
 }
 function ea() {
-    let e = B.fz.useSetting(),
+    let e = M.fz.useSetting(),
         t = [
             {
                 name: H.intl.string(H.t['9x/Rtb']),

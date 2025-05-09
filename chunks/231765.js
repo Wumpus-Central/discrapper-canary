@@ -295,7 +295,7 @@ function L(e) {
         ]
     });
 }
-function B(e) {
+function M(e) {
     let {
             settings: { enabled: t, screenshakeEnabled: n, shakeIntensity: r, screenshakeEnabledLocations: s },
             updateSettings: a
@@ -345,7 +345,7 @@ function B(e) {
         ]
     });
 }
-function M(e) {
+function B(e) {
     let { updateSettings: t } = e;
     return (0, i.jsx)(o.hjN, {
         tag: o.RB0.H1,
@@ -482,7 +482,7 @@ function G(e) {
                     settings: s,
                     updateSettings: h
                 }),
-                (0, i.jsx)(B, {
+                (0, i.jsx)(M, {
                     settings: s,
                     updateSettings: h
                 }),
@@ -490,7 +490,7 @@ function G(e) {
                     settings: s,
                     updateSettings: h
                 }),
-                (0, i.jsx)(M, { updateSettings: h })
+                (0, i.jsx)(B, { updateSettings: h })
             ]
         })
     );

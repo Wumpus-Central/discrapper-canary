@@ -67,10 +67,10 @@ function b(e) {
             }
         );
     }, []);
-    let C = (e) => {
+    let x = (e) => {
             e.shiftKey ? a.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: !n }, u.UE.muted(!n)) : y((e) => !e);
         },
-        x = f.intl.string(f.t.h850Sk);
+        C = f.intl.string(f.t.h850Sk);
     return (0, r.jsx)(o.yRy, {
         shouldShow: _,
         animation: o.yRy.Animation.NONE,
@@ -93,10 +93,10 @@ function b(e) {
             return (0, r.jsx)(
                 d.ZP.Icon,
                 g(m({}, e), {
-                    onClick: C,
-                    tooltip: i ? null : x,
+                    onClick: x,
+                    tooltip: i ? null : C,
                     icon: n || b !== h.bL.ALL_MESSAGES ? o.owu : o.Dkj,
-                    'aria-label': x,
+                    'aria-label': C,
                     selected: i
                 })
             );

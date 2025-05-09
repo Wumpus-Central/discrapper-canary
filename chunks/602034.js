@@ -1,143 +1,91 @@
 n.d(t, {
-    Z: () => y,
-    r: () => C
+    Z: () => _,
+    r: () => y
 });
-var r = n(255367),
-    i = n(73800),
-    l = n(760907),
-    o = n(481060),
-    a = n(570140),
-    s = n(668781),
-    c = n(966390),
-    u = n(680287),
-    d = n(470623),
-    p = n(957730),
-    h = n(48854),
-    f = n(703558),
-    m = n(403182),
-    g = n(928477),
-    b = n(981631),
-    _ = n(388032);
-function y(e) {
-    let { parentChannel: t, parentMessageId: n, threadSettings: r, privateThreadMode: l, location: o, onThreadCreated: a, useDefaultThreadName: s } = e,
-        u = i.useCallback((e, t, n, r) => {
-            c.Z.uploadFiles({
+var r = n(73800),
+    i = n(760907),
+    l = n(570140),
+    o = n(668781),
+    a = n(966390),
+    s = n(680287),
+    c = n(577347),
+    u = n(470623),
+    d = n(957730),
+    p = n(48854),
+    h = n(703558),
+    f = n(403182),
+    m = n(928477),
+    g = n(981631),
+    b = n(388032);
+function _(e) {
+    let { parentChannel: t, parentMessageId: n, threadSettings: i, privateThreadMode: l, location: o, onThreadCreated: s, useDefaultThreadName: c } = e,
+        u = r.useCallback((e, t, n, r) => {
+            a.Z.uploadFiles({
                 channelId: e.id,
                 uploads: t,
-                draftType: f.d.FirstThreadMessage,
+                draftType: h.d.FirstThreadMessage,
                 options: { stickerIds: r },
-                parsedMessage: p.ZP.parse(e, n)
+                parsedMessage: d.ZP.parse(e, n)
             });
         }, []);
-    return (0, g.JA)({
+    return (0, m.JA)({
         parentChannel: t,
         parentMessageId: n,
-        threadSettings: r,
+        threadSettings: i,
         privateThreadMode: l,
         location: o,
-        onThreadCreated: a,
-        useDefaultThreadName: s,
+        onThreadCreated: s,
+        useDefaultThreadName: c,
         uploadHandler: u
     });
 }
-function C(e) {
+function y(e) {
     let { parentChannel: t } = e,
-        { name: i, appliedTags: c } = (0, d.xH)((e) => {
+        { name: n, appliedTags: r } = (0, u.xH)((e) => {
             let { name: t, appliedTags: n } = e;
             return {
                 name: t,
                 appliedTags: n
             };
-        }, l.X);
-    return (0, g.Wj)({
+        }, i.X);
+    return (0, m.Wj)({
         parentChannel: t,
-        name: i,
-        appliedTags: c,
-        upload: function (e, i, l) {
-            return new Promise((c, d) => {
-                let p = new u.Z(e);
-                p.on('error', (e, i, l) => {
-                    if (i === b.evJ.EXPLICIT_CONTENT) {
-                        let e = (0, h.r)();
-                        null != l &&
-                            null != l.attachments &&
-                            l.attachments.length > 0 &&
-                            (a.Z.dispatch({
+        name: n,
+        appliedTags: r,
+        upload: function (e, n, r) {
+            return new Promise((i, a) => {
+                let u = new s.Z(e);
+                u.on('error', (e, n, r) => {
+                    if (n === g.evJ.EXPLICIT_CONTENT) {
+                        let e = (0, p.r)();
+                        null != r &&
+                            null != r.attachments &&
+                            r.attachments.length > 0 &&
+                            (l.Z.dispatch({
                                 type: 'MESSAGE_EXPLICIT_CONTENT_FP_CREATE',
                                 messageId: e,
                                 channelId: t.id,
-                                attachments: l.attachments
+                                attachments: r.attachments
                             }),
-                            (0, o.ZDy)(async () => {
-                                let { default: i } = await n.e('57539').then(n.bind(n, 924188));
-                                return (n) => {
-                                    var l, o;
-                                    return (0, r.jsx)(
-                                        i,
-                                        ((l = (function (e) {
-                                            for (var t = 1; t < arguments.length; t++) {
-                                                var n = null != arguments[t] ? arguments[t] : {},
-                                                    r = Object.keys(n);
-                                                'function' == typeof Object.getOwnPropertySymbols &&
-                                                    (r = r.concat(
-                                                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                        })
-                                                    )),
-                                                    r.forEach(function (t) {
-                                                        var r;
-                                                        (r = n[t]),
-                                                            t in e
-                                                                ? Object.defineProperty(e, t, {
-                                                                      value: r,
-                                                                      enumerable: !0,
-                                                                      configurable: !0,
-                                                                      writable: !0
-                                                                  })
-                                                                : (e[t] = r);
-                                                    });
-                                            }
-                                            return e;
-                                        })({}, n)),
-                                        (o = o =
-                                            {
-                                                channelId: t.id,
-                                                messageId: e
-                                            }),
-                                        Object.getOwnPropertyDescriptors
-                                            ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
-                                            : (function (e, t) {
-                                                  var n = Object.keys(e);
-                                                  if (Object.getOwnPropertySymbols) {
-                                                      var r = Object.getOwnPropertySymbols(e);
-                                                      n.push.apply(n, r);
-                                                  }
-                                                  return n;
-                                              })(Object(o)).forEach(function (e) {
-                                                  Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
-                                              }),
-                                        l)
-                                    );
-                                };
-                            }));
-                    } else if (i === b.evJ.ENTITY_TOO_LARGE) {
-                        let e = (0, m.dg)(t.getGuildId());
-                        s.Z.show({
-                            title: _.intl.string(_.t['/tGlcn']),
-                            body: _.intl.formatToPlainString(_.t.fxEKdX, { maxSize: (0, m.Ng)(e) })
+                            (0, c.Z)(t.id, e));
+                    } else if (n === g.evJ.ENTITY_TOO_LARGE) {
+                        let e = (0, f.dg)(t.getGuildId());
+                        o.Z.show({
+                            title: b.intl.string(b.t['/tGlcn']),
+                            body: b.intl.formatToPlainString(b.t.fxEKdX, { maxSize: (0, f.Ng)(e) })
                         });
                     } else
-                        i === b.evJ.TOO_MANY_ATTACHMENTS &&
-                            s.Z.show({
-                                title: _.intl.string(_.t.wOr6hI),
-                                body: _.intl.formatToPlainString(_.t['qqyp/f'], { limit: b.dN1 })
+                        n === g.evJ.TOO_MANY_ATTACHMENTS &&
+                            o.Z.show({
+                                title: b.intl.string(b.t.wOr6hI),
+                                body: b.intl.formatToPlainString(b.t['qqyp/f'], { limit: g.dN1 })
                             });
-                    d({ body: l });
+                    a({ body: r });
                 }),
-                    p.on('complete', (e, t) => {
-                        c({ body: t });
+                    u.on('complete', (e, t) => {
+                        i({ body: t });
                     }),
-                    p.uploadFiles(l, i, { addFilesTo: 'message.attachments' });
+                    u.uploadFiles(r, n, { addFilesTo: 'message.attachments' });
             });
         }
     });

@@ -28,12 +28,12 @@ function y(e, t, n) {
         e
     );
 }
-let C = {
+let x = {
         STEPS: 23,
         FRAME_DURATION: 17,
         FRAME_SIZE: 26
     },
-    x = {
+    C = {
         SCALE_MIN: 0.7,
         SCALE_MAX: 1,
         DURATION_IN: 300,
@@ -56,8 +56,8 @@ class v extends i.PureComponent {
             a.Z.parallel([
                 a.Z.timing(t, {
                     toValue: 1,
-                    duration: x.DURATION_IN,
-                    easing: x.EASING_IN
+                    duration: C.DURATION_IN,
+                    easing: C.EASING_IN
                 }),
                 a.Z.timing(n, {
                     toValue: 1,
@@ -69,18 +69,18 @@ class v extends i.PureComponent {
         let { scaleAnimation: t, spriteAnimation: n, spriteOpacity: r, widthAnimation: i } = this;
         r.setValue(1), n.setValue(0);
         let l = [];
-        for (let e = 0; e < C.STEPS; e++)
+        for (let e = 0; e < x.STEPS; e++)
             l.push(
                 a.Z.timing(n, {
-                    toValue: -C.FRAME_SIZE * e,
-                    duration: C.FRAME_DURATION
+                    toValue: -x.FRAME_SIZE * e,
+                    duration: x.FRAME_DURATION
                 })
             );
         a.Z.sequence([
             a.Z.timing(t, {
                 toValue: 0,
-                duration: x.DURATION_OUT,
-                easing: x.EASING_OUT
+                duration: C.DURATION_OUT,
+                easing: C.EASING_OUT
             }),
             a.Z.sequence(l),
             a.Z.timing(i, {
@@ -96,7 +96,7 @@ class v extends i.PureComponent {
                 {
                     scale: e.interpolate({
                         inputRange: [0, 1],
-                        outputRange: [x.SCALE_MIN, x.SCALE_MAX]
+                        outputRange: [C.SCALE_MIN, C.SCALE_MAX]
                     })
                 }
             ],
@@ -152,8 +152,8 @@ function j(e) {
     let { participants: n, onContextMenu: i, className: l, onClick: a, width: u, guildId: b } = e,
         _ = (0, p.ZP)(),
         y = ((t = n.length), ((0, d.pxk)(d.EFr.SIZE_80) + 16) * t > u ? d.EFr.SIZE_40 : d.EFr.SIZE_80),
-        C = (0, s.e7)([h.Z], () => h.Z.isFocused()),
-        x = n.map((e) => {
+        x = (0, s.e7)([h.Z], () => h.Z.isFocused()),
+        C = n.map((e) => {
             var t, n;
             if (e.type !== m.fO.USER) return null;
             let { user: l, voiceState: o, speaking: s, ringing: c } = e;
@@ -167,7 +167,7 @@ function j(e) {
                         f.Z,
                         {
                             userId: l.id,
-                            src: l.getAvatarURL(b, (0, d.pxk)(y), s && C),
+                            src: l.getAvatarURL(b, (0, d.pxk)(y), s && x),
                             size: y,
                             muted: null != (t = null == o ? void 0 : o.isVoiceMuted()) && t,
                             deafen: null != (n = null == o ? void 0 : o.isVoiceDeafened()) && n,
@@ -185,6 +185,6 @@ function j(e) {
     return (0, r.jsx)(c.W, {
         component: 'div',
         className: o()(g.root, l),
-        children: x
+        children: C
     });
 }

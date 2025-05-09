@@ -1,7 +1,7 @@
 n.d(t, {
-    GC: () => v,
-    RR: () => O,
-    Wb: () => y
+    GC: () => I,
+    RR: () => v,
+    Wb: () => O
 });
 var r = n(570140),
     i = n(579806),
@@ -14,8 +14,9 @@ var r = n(570140),
     d = n(548570),
     f = n(616810),
     _ = n(755278),
-    p = n(58);
-function h(e, t, n) {
+    p = n(866483),
+    h = n(58);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +29,7 @@ function h(e, t, n) {
         e
     );
 }
-function m(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,12 +40,12 @@ function m(e) {
                 })
             )),
             r.forEach(function (t) {
-                h(e, t, n[t]);
+                m(e, t, n[t]);
             });
     }
     return e;
 }
-function g(e, t) {
+function E(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -56,50 +57,51 @@ function g(e, t) {
     }
     return n;
 }
-function E(e, t) {
+function b(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : g(Object(t)).forEach(function (n) {
+            : E(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let b = new a.Z('ConnectionStore'),
-    y = new d.Z(),
-    O = new f.Z(y),
-    v = new _.Z(y);
-(y.handleIdentify = () => {
+let y = new a.Z('ConnectionStore'),
+    O = new d.Z(),
+    v = new f.Z(O),
+    I = new _.Z(O);
+(O.handleIdentify = () => {
     let e = s.default.getToken();
-    if ((b.verbose('handleIdentify called', { hasToken: null != e }), null == e)) return null;
+    if ((y.verbose('handleIdentify called', { hasToken: null != e }), null == e)) return null;
     let t = o.Z.getState(),
-        n = p.Z.getLatestTaskRunOn(),
+        n = h.Z.getLatestTaskRunOn(),
         r = null != n ? (Date.now() - n) / 1000 : null,
         i = {
             token: e,
-            properties: E(m({}, l.default.getSuperProperties()), {
+            properties: b(g({}, l.default.getSuperProperties()), {
                 client_app_state: t,
                 is_fast_connect: !1,
-                latest_headless_tasks: p.Z.getHeadlessTasks(),
-                latest_headless_task_run_seconds_before: r
+                latest_headless_tasks: h.Z.getHeadlessTasks(),
+                latest_headless_task_run_seconds_before: r,
+                gateway_connect_reasons: p.Pf()
             }),
-            presence: O.getInitialState()
+            presence: v.getInitialState()
         };
-    return p.Z.clear(), i;
+    return h.Z.clear(), i;
 }),
     (0, u.isDesktop)() &&
         i.Z.remotePowerMonitor.on('resume', () => {
-            y.expeditedHeartbeat(5000, 'power monitor resumed');
+            O.expeditedHeartbeat(5000, 'power monitor resumed');
         }),
     c.Z.addOfflineCallback(() => {
-        p.Z.recordStartHeadlessTask('GatewaySocket.offline'), y.networkStateChange(15000, 'network detected offline.', !1);
+        h.Z.recordStartHeadlessTask('GatewaySocket.offline'), O.networkStateChange(15000, 'network detected offline.', !1);
     }),
     c.Z.addOnlineCallback(() => {
-        p.Z.recordStartHeadlessTask('GatewaySocket.online'), y.networkStateChange(5000, 'network detected online.');
+        h.Z.recordStartHeadlessTask('GatewaySocket.online'), O.networkStateChange(5000, 'network detected online.');
     }),
-    y.on('disconnect', (e) => {
+    O.on('disconnect', (e) => {
         let { code: t, reason: n } = e;
         r.Z.dispatch({
             type: 'CONNECTION_CLOSED',
@@ -107,7 +109,7 @@ let b = new a.Z('ConnectionStore'),
             reason: n
         });
     }),
-    y.on('close', (e) => {
+    O.on('close', (e) => {
         let { code: t, reason: n } = e;
         r.Z.dispatch({
             type: 'CONNECTION_INTERRUPTED',

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => B }), n(388685);
+n.d(t, { Z: () => M }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -367,7 +367,7 @@ let L = (0, x.oH)(function () {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
         return new Set(t.map((e) => e.exePath));
     }),
-    B = function (e) {
+    M = function (e) {
         let { className: t, showHeader: n = !0 } = e,
             s = (0, a.Wu)([g.ZP], () => g.ZP.getGamesSeen(!0)),
             { runningGame: o, overrideExePaths: d } = (0, a.cj)([g.ZP], () => ({

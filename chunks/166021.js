@@ -5,7 +5,7 @@ var i = n(255367),
     l = n.n(s),
     a = n(683305),
     o = n(481060),
-    c = n(320319),
+    c = n(51636),
     d = n(687588);
 let u = (e) => {
     let { cards: t, className: n, cardType: s } = e,

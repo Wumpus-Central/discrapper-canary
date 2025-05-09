@@ -1184,6 +1184,7 @@ var N =
     (r.LIBDISCORE_LOADED = 'libdiscore_loaded'),
     (r.REGISTER_INPUT_FOCUS = 'register_input_focus'),
     (r.REGISTER_INPUT_BLUR = 'register_input_blur'),
+    (r.SESSION_START = 'session_start'),
     (r.EXTERNAL_FINGERPRINT_DROPPED = 'external_fingerprint_dropped'),
     (r.EXTERNAL_DYNAMIC_LINK_RECEIVED = 'external_dynamic_link_received'),
     (r.DEEP_LINK_CLICKED = 'deep_link_clicked'),

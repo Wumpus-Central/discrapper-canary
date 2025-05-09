@@ -14,7 +14,7 @@ var i = n(255367),
     h = n(695349),
     f = n(103433),
     b = n(166021),
-    _ = n(32173),
+    _ = n(22189),
     x = n(391110),
     E = n(75077),
     C = n(981631),
@@ -72,15 +72,15 @@ let v = (e) => {
                                 }),
                                 (0, i.jsx)(b.Z, {
                                     className: O.cardCarousel,
-                                    cards: (0, E.sP)({
+                                    cards: (0, E.ZM)({
                                         perksCards: A,
-                                        variant: x.R0.CARD_CAROUSEL_FIRST_ROW,
+                                        variant: x.gM.CARD_CAROUSEL_FIRST_ROW,
                                         isPremiumSubscriber: w,
                                         isFullScreen: I,
                                         fractionalState: k,
                                         isInReverseTrial: L
                                     }),
-                                    cardType: x.R0.CARD_CAROUSEL_FIRST_ROW
+                                    cardType: x.gM.CARD_CAROUSEL_FIRST_ROW
                                 }),
                                 (0, i.jsx)(c.X6q, {
                                     variant: 'heading-xxl/extrabold',
@@ -90,15 +90,15 @@ let v = (e) => {
                                 }),
                                 (0, i.jsx)(b.Z, {
                                     className: O.cardCarousel,
-                                    cards: (0, E.sP)({
+                                    cards: (0, E.ZM)({
                                         perksCards: A,
-                                        variant: x.R0.CARD_CAROUSEL_SECOND_ROW,
+                                        variant: x.gM.CARD_CAROUSEL_SECOND_ROW,
                                         isPremiumSubscriber: w,
                                         isFullScreen: I,
                                         fractionalState: k,
                                         isInReverseTrial: L
                                     }),
-                                    cardType: x.R0.CARD_CAROUSEL_SECOND_ROW
+                                    cardType: x.gM.CARD_CAROUSEL_SECOND_ROW
                                 }),
                                 (0, i.jsx)(c.X6q, {
                                     variant: 'heading-xxl/extrabold',
@@ -108,15 +108,15 @@ let v = (e) => {
                                 }),
                                 (0, i.jsx)(b.Z, {
                                     className: O.cardCarousel,
-                                    cards: (0, E.sP)({
+                                    cards: (0, E.ZM)({
                                         perksCards: A,
-                                        variant: x.R0.CARD_CAROUSEL_THIRD_ROW,
+                                        variant: x.gM.CARD_CAROUSEL_THIRD_ROW,
                                         isPremiumSubscriber: w,
                                         isFullScreen: I,
                                         fractionalState: k,
                                         isInReverseTrial: L
                                     }),
-                                    cardType: x.R0.CARD_CAROUSEL_THIRD_ROW
+                                    cardType: x.gM.CARD_CAROUSEL_THIRD_ROW
                                 })
                             ]
                         }),

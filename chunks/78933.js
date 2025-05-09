@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(695346),
     k = n(158776),
     L = n(246946),
-    B = n(572004),
-    M = n(5192),
+    M = n(572004),
+    B = n(5192),
     U = n(74538),
     V = n(7093),
     G = n(474376),
@@ -166,7 +166,7 @@ function $(e) {
                                 (0, i.jsx)(P.Z, {
                                     user: t,
                                     className: X.username,
-                                    nickname: M.ZP.getName(null, null, t),
+                                    nickname: B.ZP.getName(null, null, t),
                                     onOpenProfile: en ? void 0 : ej,
                                     pronouns: null == ei ? void 0 : ei.pronouns,
                                     tags: (0, i.jsx)(O.Z, {
@@ -351,7 +351,7 @@ function $(e) {
                                                         }
                                                     }),
                                                     !__OVERLAY__ &&
-                                                        B.wS &&
+                                                        M.wS &&
                                                         ep &&
                                                         (0, i.jsxs)(i.Fragment, {
                                                             children: [
@@ -362,7 +362,7 @@ function $(e) {
                                                                     icon: a.VuL,
                                                                     label: q.intl.string(q.t['/AXYnJ']),
                                                                     onClick: () => {
-                                                                        (0, B.JG)(t.id), n();
+                                                                        (0, M.JG)(t.id), n();
                                                                     }
                                                                 })
                                                             ]

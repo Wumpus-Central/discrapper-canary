@@ -1,10 +1,10 @@
 n.d(t, {
     $_: () => Z,
     Er: () => A,
-    FM: () => B,
+    FM: () => M,
     IB: () => w,
     IY: () => k,
-    Kb: () => M,
+    Kb: () => B,
     bq: () => P,
     rM: () => D
 }),
@@ -235,17 +235,17 @@ function L() {
         !1 === n && !0 === r && !1 === s.current && !0 === t && (o.yD(e), (s.current = !0));
     }, [n, r, e, t]);
 }
-function B() {
+function M() {
     var e;
     let t = (0, C.oY)({ location: 'Home' });
-    L(v.CL), L(I.XAJ, t), M(T.qY);
+    L(v.CL), L(I.XAJ, t), B(T.qY);
     let n = A(),
         r = null != (e = null == n ? void 0 : n.showCard) && e;
     i.useEffect(() => {
         r && j.Z.forceRefreshIfOutdated();
     }, [r]);
 }
-function M(e) {
+function B(e) {
     var t;
     let n = (0, C.oY)({ location: 'Home' }),
         r = (0, m.hv)('useCollectiblePurchaseForTenureReward'),

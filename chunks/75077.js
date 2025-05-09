@@ -1,12 +1,12 @@
 n.d(t, {
     Dp: () => g,
     Gw: () => h,
-    Op: () => E,
+    ZM: () => x,
     gx: () => b,
     iG: () => f,
     mN: () => C,
     oo: () => p,
-    sP: () => x
+    re: () => E
 }),
     n(539854);
 var i = n(442837),
@@ -83,10 +83,10 @@ let b = (e, t, n) => ((0, r.wj)(e) ? t : n),
         let { perksCards: t, variant: n, isFullScreen: i, showTenureCard: r, isPremiumSubscriber: s, fractionalState: l, isInReverseTrial: a } = e,
             o = [];
         switch (n) {
-            case c.R0.PERKS_DISCOVERABILITY:
+            case c.gM.PERKS_DISCOVERABILITY:
                 o = !1 === s ? [t.profiles, t.moreEmojiPower, t.largeUploads, t.hdVideo, t.clientThemes, t.customAppIcons] : l === d.a$.FP_ONLY ? [t.profiles, t.clientThemes, t.hdVideo] : [t.profiles, t.clientThemes, t.serverBoosts];
                 break;
-            case c.R0.WHATS_NEW:
+            case c.gM.WHATS_NEW:
                 o = _({
                     cards: o,
                     perksCards: t,
@@ -94,13 +94,13 @@ let b = (e, t, n) => ((0, r.wj)(e) ? t : n),
                     showTenureCard: r
                 });
                 break;
-            case c.R0.CARD_CAROUSEL_FIRST_ROW:
+            case c.gM.CARD_CAROUSEL_FIRST_ROW:
                 o = !1 === s ? [t.serverBoosts, t.superReactions, t.earlyAccessSeeAllVariant, t.specialShopPerks] : [t.customAppIcons, t.moreEmojiPower, t.customSoundsEverywhere, t.specialStickerAccess];
                 break;
-            case c.R0.CARD_CAROUSEL_SECOND_ROW:
+            case c.gM.CARD_CAROUSEL_SECOND_ROW:
                 o = !1 === s ? [t.customSoundsEverywhere, t.specialStickerAccess] : l === d.a$.FP_ONLY ? (a ? [t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions] : [t.greyServerBoosts, t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions]) : [t.earlyAccessSeeAllVariant, t.specialMemberPricingSeeAllVariant, t.largeUploads, t.hdVideo, t.superReactions];
                 break;
-            case c.R0.CARD_CAROUSEL_THIRD_ROW:
+            case c.gM.CARD_CAROUSEL_THIRD_ROW:
                 o = l === d.a$.FP_ONLY ? (a ? [t.entranceSoundsSeeAllVariation] : [t.entranceSoundsSeeAllVariation, t.greyBadge]) : [t.entranceSoundsSeeAllVariation, t.badge];
         }
         return i || (o = o.filter((e) => !e.hideOnNarrowScreen)), o;

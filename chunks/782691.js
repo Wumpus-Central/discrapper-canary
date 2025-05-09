@@ -76,8 +76,8 @@ let j = {
             [R, D] = r.useState([]),
             [Z, w] = r.useState(j),
             k = r.useRef([]),
-            [L, B] = r.useState(t.name),
-            M = L.toLowerCase().replace(/\s+/g, '_'),
+            [L, M] = r.useState(t.name),
+            B = L.toLowerCase().replace(/\s+/g, '_'),
             U = r.useMemo(
                 () => ({
                     type: a.Z.PROFILE_EFFECT,
@@ -217,7 +217,7 @@ let j = {
                                                   value: L,
                                                   className: b.input,
                                                   onChange: (e) => {
-                                                      B(e.target.value);
+                                                      M(e.target.value);
                                                   }
                                               })
                                           ]
@@ -357,7 +357,7 @@ let j = {
                                                       (0, i.jsx)(d.Z, {
                                                           fileContents: () => (0, h.yR)(R),
                                                           contentType: 'text/plain',
-                                                          fileName: ''.concat(M, '_timing_config.txt'),
+                                                          fileName: ''.concat(B, '_timing_config.txt'),
                                                           children: (0, i.jsx)(c.zxk, {
                                                               size: c.PhG.SMALL,
                                                               color: c.Ttl.BRAND,
@@ -376,7 +376,7 @@ let j = {
                                                                   })
                                                               ),
                                                           contentType: 'text/plain',
-                                                          fileName: ''.concat(M, '_config.txt'),
+                                                          fileName: ''.concat(B, '_config.txt'),
                                                           children: (0, i.jsx)(c.zxk, {
                                                               size: c.PhG.SMALL,
                                                               color: c.Ttl.BRAND,

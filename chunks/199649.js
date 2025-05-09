@@ -17,14 +17,14 @@ var i = n(442837),
 function b(e) {
     var t, b;
     let { channel: _, children: y } = e,
-        C = (0, i.e7)([u.Z], () => u.Z.isBlocked(_.getRecipientId()));
+        x = (0, i.e7)([u.Z], () => u.Z.isBlocked(_.getRecipientId()));
     (0, a.Z)(_.id);
-    let x = (0, s.Z)(_.id),
+    let C = (0, s.Z)(_.id),
         v = _.isSystemDM(),
-        j = C && !v && !_.isMultiUserDM(),
+        j = x && !v && !_.isMultiUserDM(),
         O = {};
     if (v) {
-        let e = x
+        let e = C
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       g.intl.string(g.t['+KSnWV']),
@@ -39,7 +39,7 @@ function b(e) {
             (O.subtitle = g.intl.string(g.t['n/Vzk5'])),
             (O.buttonText = e),
             (O.onButtonClick = () => {
-                if (x) {
+                if (C) {
                     open(m.D2),
                         d.default.track(f.rMx.CHANGE_LOG_CTA_CLICKED, {
                             cta_type: 'chat_blocker',

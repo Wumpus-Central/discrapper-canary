@@ -4,7 +4,7 @@ n.d(t, {
     mV: () => g,
     mh: () => b,
     qc: () => m,
-    wi: () => C
+    wi: () => x
 }),
     n(997841),
     n(388685);
@@ -51,7 +51,7 @@ function y(e) {
         return o()(new Date(t)).format('MM/DD/YYYY');
     }, [e]);
 }
-function C(e, t) {
+function x(e, t) {
     let n = (0, a.e7)([c.ZP], () => c.ZP.getMember(t, e), [t, e]),
         r = null == n ? void 0 : n.joinedAt;
     return i.useMemo(() => (null == r ? '' : o()(new Date(r)).format('MMM DD, YYYY')), [r]);
