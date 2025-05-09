@@ -1,4 +1,8 @@
-n.d(t, { O: () => u }), n(388685);
+n.d(t, {
+    O: () => u,
+    S: () => s
+}),
+    n(388685);
 var r = n(73800),
     i = n(237617),
     o = n(266338);
@@ -7,24 +11,25 @@ function s(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         s = (0, r.useRef)(null),
         l = (0, i.Z)(null != t ? t : a),
-        c = (0, r.useRef)(null);
+        c = (0, r.useRef)(null),
+        u = (0, r.useRef)(e);
     return (
-        (0, r.useLayoutEffect)(() => {
-            if (!n) return;
-            null == c.current && (c.current = (0, o.c)(l.current));
-            let t = s.current,
-                r = c.current;
-            null != t && null != r && (0, o.YP)(r, t, e);
-        }, [n, e, l]),
+        (0, r.useEffect)(() => {
+            u.current = e;
+        }, [e]),
         (0, r.useEffect)(() => {
             if (!n) return;
+            null == c.current && (c.current = (0, o.c)(l.current));
             let e = s.current,
                 t = c.current;
             if (null != e && null != t)
-                return () => {
-                    (0, o.UC)(t, e);
-                };
-        }, [n, t]),
+                return (
+                    (0, o.YP)(t, e, u.current),
+                    () => {
+                        (0, o.UC)(t, e);
+                    }
+                );
+        }, [n, l]),
         s
     );
 }

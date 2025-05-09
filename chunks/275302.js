@@ -9,6 +9,7 @@ e.exports = {
     messageContainer: 'messageContainer__981c8',
     roleStyleContainer: 'roleStyleContainer__981c8',
     roleStyleMessageContainer: 'roleStyleMessageContainer__981c8',
+    gradientGlowFadeInAnimation: 'gradientGlowFadeInAnimation__981c8',
     roleStylePreviewContainer: 'roleStylePreviewContainer__981c8',
     selected: 'selected__981c8',
     roleStyleLabel: 'roleStyleLabel__981c8',

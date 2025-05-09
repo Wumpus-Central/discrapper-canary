@@ -86,7 +86,7 @@ let T = (e) => {
             src: null == t.src ? t.src : (0, u.o)(t.src, 40),
             size: 40
         }),
-        N = S
+        M = S
             ? () => {
                   (0, g.uL)(v.Z5c.CHANNEL(n.id, O.oC.ROLE_SUBSCRIPTIONS));
               }
@@ -137,7 +137,7 @@ let T = (e) => {
                         className: x.ctaButton,
                         innerClassName: x.ctaButtonContent,
                         fullWidth: !0,
-                        onClick: N,
+                        onClick: M,
                         autoFocus: !0,
                         children: [
                             (0, r.jsx)(h.Z, {

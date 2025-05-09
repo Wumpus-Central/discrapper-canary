@@ -1,8 +1,7 @@
 r.d(t, {
-    Z: () => E,
-    a: () => C
-}),
-    r(388685);
+    Z: () => Z,
+    a: () => A
+});
 var n,
     l = r(255367),
     o = r(73800),
@@ -10,24 +9,25 @@ var n,
     a = r.n(i),
     c = r(873546),
     s = r(442837),
-    u = r(865672),
-    m = r(481060),
-    p = r(607070),
-    d = r(100527),
-    f = r(906732),
-    b = r(385499),
-    y = r(372900),
-    O = r(172751),
-    g = r(477747),
-    j = r(477734),
-    v = r(670188),
-    h = r(768581),
-    x = r(585483),
-    P = r(463396),
-    S = r(935910),
-    N = r(981631),
-    T = r(848697);
-function w(e) {
+    u = r(573385),
+    m = r(865672),
+    p = r(481060),
+    d = r(607070),
+    f = r(100527),
+    b = r(906732),
+    y = r(385499),
+    O = r(372900),
+    g = r(172751),
+    j = r(477747),
+    v = r(477734),
+    h = r(670188),
+    x = r(768581),
+    P = r(585483),
+    S = r(463396),
+    N = r(935910),
+    T = r(981631),
+    w = r(848697);
+function C(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -70,87 +70,89 @@ function R(e, t) {
         e
     );
 }
-var C = (((n = {})[(n.SYSTEM_TAG = 0)] = 'SYSTEM_TAG'), (n[(n.BADGES = 1)] = 'BADGES'), n);
-function A(e) {
+var A = (((n = {})[(n.SYSTEM_TAG = 0)] = 'SYSTEM_TAG'), (n[(n.BADGES = 1)] = 'BADGES'), n);
+function E(e) {
     let { compact: t } = e;
-    return (0, l.jsx)(b.Z, {
-        className: t ? T.botTagCompact : T.botTagCozy,
-        type: b.Z.Types.REMIX,
+    return (0, l.jsx)(y.Z, {
+        className: t ? w.botTagCompact : w.botTagCozy,
+        type: y.Z.Types.REMIX,
         useRemSizes: !0
     });
 }
-function E(e) {
+function Z(e) {
     var t;
-    let { author: r, message: n, channel: i, userOverride: b, compact: C = !1, withMentionPrefix: E = !1, showPopout: Z = !1, className: I, onClick: k, onContextMenu: M, onPopoutRequestClose: _, renderPopout: D, renderRemixTag: L = !1, decorations: F, previewGuildId: G, subscribeToGroupId: B } = e,
-        z = o.useRef(null),
-        [U, H] = o.useState(!1),
-        V = o.useContext(y.Z),
-        J = null != (t = null == i ? void 0 : i.guild_id) ? t : V,
-        { analyticsLocations: X } = (0, f.ZP)(d.Z.USERNAME),
-        Y = E ? '@' : '',
-        { nick: W, colorString: $, colorStrings: q, colorRoleName: K } = r,
-        Q = (0, s.e7)([p.Z], () => p.Z.roleStyle),
-        ee = 'username' === Q,
-        et = (0, j.X$)(),
-        er = (0, g.Z)(null != G ? G : J, 'BaseUsername'),
-        en = (0, S.Z)(n),
-        el = er && null != q && null != q.primaryColor && null != q.secondaryColor,
-        eo = ee && el;
+    let { author: r, message: n, channel: i, userOverride: y, compact: A = !1, withMentionPrefix: Z = !1, showPopout: I = !1, className: k, onClick: M, onContextMenu: _, onPopoutRequestClose: D, renderPopout: L, renderRemixTag: F = !1, decorations: G, previewGuildId: B, subscribeToGroupId: z } = e,
+        U = o.useRef(null),
+        H = o.useContext(O.Z),
+        V = null != (t = null == i ? void 0 : i.guild_id) ? t : H,
+        { analyticsLocations: J } = (0, b.ZP)(f.Z.USERNAME),
+        X = Z ? '@' : '',
+        { nick: Y, colorString: W, colorStrings: $, colorRoleName: q } = r,
+        K = (0, s.e7)([d.Z], () => d.Z.roleStyle),
+        Q = 'username' === K,
+        ee = (0, v.X$)(),
+        et = (0, j.Z)(null != B ? B : V, 'BaseUsername'),
+        er = (0, N.Z)(n),
+        en = o.useContext(u.d),
+        el = et && null != $ && null != $.primaryColor && null != $.secondaryColor,
+        eo = Q && el;
     o.useEffect(() => {
-        if (null != B && eo) return x.S.subscribeKeyed(N.LPv.ANIMATE_CHAT_AVATAR, ''.concat(B, ':').concat(n.author.id), H), () => void x.S.unsubscribeKeyed(N.LPv.ANIMATE_CHAT_AVATAR, ''.concat(B, ':').concat(n.author.id), H);
-    }, [n.author.id, B, eo]);
-    let { gradientStyle: ei, gradientClassname: ea } = (0, m.Icv)({
-            primaryColor: null == q ? void 0 : q.primaryColor,
-            secondaryColor: null == q ? void 0 : q.secondaryColor,
-            tertiaryColor: null == q ? void 0 : q.tertiaryColor,
+        if (null == z || !eo || null == en) return;
+        let { setAnimate: e } = en;
+        return P.S.subscribeKeyed(T.LPv.ANIMATE_CHAT_AVATAR, ''.concat(z, ':').concat(n.author.id), e), () => void P.S.unsubscribeKeyed(T.LPv.ANIMATE_CHAT_AVATAR, ''.concat(z, ':').concat(n.author.id), e);
+    }, [n.author.id, z, eo, en]);
+    let { gradientStyle: ei, gradientClassname: ea } = (0, p.Icv)({
+            primaryColor: null == $ ? void 0 : $.primaryColor,
+            secondaryColor: null == $ ? void 0 : $.secondaryColor,
+            tertiaryColor: null == $ ? void 0 : $.tertiaryColor,
             roleStyle: 'username',
             includeConvenienceGlow: !0,
-            animateGradient: null != B && U
+            animateGradient: null == en ? void 0 : en.animate
         }),
-        ec = (0, u.EJ)(Y + W),
+        ec = (0, m.EJ)(X + Y),
         es = {
-            className: a()([T.username, eo && ea]),
+            className: a()([w.username, eo && ea]),
             style: (() => {
-                if (ee) return eo && null != q ? R(w({}, ei), { textDecorationColor: null == q ? void 0 : q.primaryColor }) : null != $ ? { color: $ } : void 0;
+                if (Q) return eo && null != $ ? R(C({}, ei), { textDecorationColor: null == $ ? void 0 : $.primaryColor }) : null != W ? { color: W } : void 0;
             })(),
-            onClick: k,
-            onContextMenu: M,
+            onClick: M,
+            onContextMenu: _,
             children: ec,
-            'data-text': Y + W
+            'data-text': X + Y
         },
         eu = o.useMemo(
             () =>
-                C
-                    ? (0, l.jsx)(O.ZP, {
+                A
+                    ? (0, l.jsx)(g.ZP, {
                           primaryGuild: r.primaryGuild,
                           userId: n.author.id,
-                          contextGuildId: J,
-                          className: T.clanTagChiplet
+                          contextGuildId: V,
+                          className: w.clanTagChiplet
                       })
                     : null,
-            [C, r.primaryGuild, J, n.author.id]
+            [A, r.primaryGuild, V, n.author.id]
         ),
-        em = null != b ? b : n.author,
+        em = null != y ? y : n.author,
         ep =
-            null != D && null != Z
-                ? (0, l.jsx)(v.Z, {
-                      targetElementRef: z,
+            null != L && null != I
+                ? (0, l.jsx)(h.Z, {
+                      targetElementRef: U,
                       user: em,
-                      renderPopout: D,
-                      shouldShow: Z,
-                      shouldPreload: en,
+                      renderPopout: L,
+                      shouldShow: I,
+                      shouldPreload: er,
                       position: c.tq ? 'window_center' : 'right',
                       avatarUrl:
-                          null != r.guildMemberAvatar && null != J
-                              ? (0, h.JM)({
-                                    guildId: J,
+                          null != r.guildMemberAvatar && null != V
+                              ? (0, x.JM)({
+                                    guildId: V,
                                     userId: em.id,
                                     avatar: r.guildMemberAvatar,
                                     size: 80
                                 })
                               : void 0,
-                      onRequestClose: _,
-                      clickTrap: Z,
+                      onRequestClose: D,
+                      clickTrap: I,
                       children: (e) => {
                           var { onClick: t } = e,
                               r = (function (e, t) {
@@ -175,17 +177,17 @@ function E(e) {
                           return (0, l.jsxs)(l.Fragment, {
                               children: [
                                   (0, l.jsx)(
-                                      m.P3F,
+                                      p.P3F,
                                       R(
-                                          w(
+                                          C(
                                               {
                                                   tag: 'span',
-                                                  innerRef: z
+                                                  innerRef: U
                                               },
                                               r,
                                               es
                                           ),
-                                          { className: a()(es.className, T.clickable, I) }
+                                          { className: a()(es.className, w.clickable, k) }
                                       )
                                   ),
                                   eu
@@ -194,37 +196,37 @@ function E(e) {
                       }
                   })
                 : (0, l.jsxs)(l.Fragment, {
-                      children: [(0, l.jsx)(m.P3F, R(w({}, es), { className: a()(es.className, I) })), eu]
+                      children: [(0, l.jsx)(p.P3F, R(C({}, es), { className: a()(es.className, k) })), eu]
                   }),
-        ed = null != F ? F[0] : null,
-        ef = null != F ? F[1] : null;
-    return (0, l.jsxs)(f.Gt, {
-        value: X,
+        ed = null != G ? G[0] : null,
+        ef = null != G ? G[1] : null;
+    return (0, l.jsxs)(b.Gt, {
+        value: J,
         children: [
-            null != ed && C
+            null != ed && A
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [' ', ed, ' ']
                   })
                 : null,
-            'dot' === Q
-                ? (0, l.jsx)(m.FhE, {
-                      color: $,
-                      colors: el ? q : null,
-                      name: K,
-                      className: T.roleDot
+            'dot' === K
+                ? (0, l.jsx)(p.FhE, {
+                      color: W,
+                      colors: el ? $ : null,
+                      name: q,
+                      className: w.roleDot
                   })
                 : null,
             ep,
-            !C &&
-                (0, l.jsx)(O.ZP, {
+            !A &&
+                (0, l.jsx)(g.ZP, {
                     primaryGuild: r.primaryGuild,
                     userId: n.author.id,
-                    contextGuildId: J,
-                    className: T.clanTagChiplet
+                    contextGuildId: V,
+                    className: w.clanTagChiplet
                 }),
             null != ef ? ef : null,
-            null == ed || C ? null : ed,
-            null != n && (0, P.f)(n) && et && L ? (0, l.jsx)(A, {}) : null
+            null == ed || A ? null : ed,
+            null != n && (0, S.f)(n) && ee && F ? (0, l.jsx)(E, {}) : null
         ]
     });
 }

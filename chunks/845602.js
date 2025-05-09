@@ -6,8 +6,8 @@ r.d(t, {
 var n = r(255367),
     o = r(73800),
     a = r(120356),
-    l = r.n(a),
-    i = r(866442),
+    i = r.n(a),
+    l = r(866442),
     s = r(481060),
     c = r(957537),
     u = r(839008),
@@ -30,11 +30,12 @@ function C() {
             secondary_color: g.tl[t].end
         }),
         { gradientStyle: u, gradientClassname: p } = (0, s.Icv)({
-            primaryColor: (0, i.Rf)(r.primary_color),
-            secondaryColor: (0, i.Rf)(r.secondary_color),
+            primaryColor: (0, l.Rf)(r.primary_color),
+            secondaryColor: (0, l.Rf)(r.secondary_color),
             tertiaryColor: void 0,
             roleStyle: 'username',
-            includeConvenienceGlow: !0
+            includeConvenienceGlow: !0,
+            animateGradient: !0
         });
     return (0, n.jsxs)('div', {
         className: y.container,
@@ -45,7 +46,7 @@ function C() {
                     avatar: c.Z,
                     username: 'Cherry',
                     usernameStyle: u,
-                    usernameClassName: l()(p, h.animateGradient),
+                    usernameClassName: i()(p, h.animateGradient),
                     message: O.intl.string(j.default.eTHkQU)
                 })
             }),

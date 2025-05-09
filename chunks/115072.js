@@ -31,7 +31,7 @@ function S(e) {
         T = r.useRef(null),
         [W, N] = r.useState(''),
         [A, R] = r.useState(''),
-        [I, L] = r.useState(),
+        [L, I] = r.useState(),
         [Z, z] = r.useState(''),
         [J, M] = r.useState([]),
         [V, q] = r.useState(),
@@ -68,9 +68,9 @@ function S(e) {
                 rejectWithError: !0
             })
             .then((e) => {
-                if (null != e.body && '11790232c5ff6865a8076d0a686a063095e845a8' !== e.body.hash) {
+                if (null != e.body && 'ae8eac62e0022487840a526225c9dc40b6012ffa' !== e.body.hash) {
                     {
-                        let e = new Date('1746812094671'),
+                        let e = new Date('1746816366500'),
                             t = new Date();
                         (0, g.TD)(t, e).hours > 6 && eh(!0);
                     }
@@ -94,7 +94,7 @@ function S(e) {
         };
     async function eg() {
         var e, t;
-        if ((ed(!1), '' === W || null == I)) return void eo(!0);
+        if ((ed(!1), '' === W || '' === A || null == L)) return void eo(!0);
         let r = null == V || null == (e = V.features) ? void 0 : e.find((e) => (0, y.pD)(e) === B);
         ec(!0), eo(!1);
         let l = (0, b.D)(
@@ -107,7 +107,7 @@ function S(e) {
                 {
                     name: W,
                     description: A,
-                    priority: I,
+                    priority: L,
                     feature: r,
                     url: Z,
                     buildOverride: null != (t = null == ep ? void 0 : ep.id) ? t : null
@@ -264,6 +264,7 @@ function S(e) {
                                     })
                                 }),
                                 (0, i.jsxs)(s.xJW, {
+                                    error: ea && '' === A ? O.intl.string(O.t.EkokLy) : null,
                                     title: O.intl.string(O.t['1SplHx']),
                                     children: [
                                         (0, i.jsx)(s.Kx8, {
@@ -278,7 +279,7 @@ function S(e) {
                                     ]
                                 }),
                                 (0, i.jsx)(s.xJW, {
-                                    error: ea && void 0 === I ? O.intl.string(O.t.EkokLy) : null,
+                                    error: ea && void 0 === L ? O.intl.string(O.t.EkokLy) : null,
                                     title: O.intl.string(O.t.xMXLdX),
                                     children: (0, i.jsx)(s.q4e, {
                                         renderOptionLabel: (e) =>
@@ -316,13 +317,13 @@ function S(e) {
                                                     ]
                                                 });
                                             })(e),
-                                        onChange: L,
+                                        onChange: I,
                                         options: (0, y.Tj)().map((e) => ({
                                             priority: e,
                                             value: e.value,
                                             label: e.title
                                         })),
-                                        value: I,
+                                        value: L,
                                         maxVisibleItems: 3,
                                         closeOnSelect: !0
                                     })

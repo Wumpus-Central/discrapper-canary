@@ -2,8 +2,8 @@ r.d(t, { default: () => p }), r(388685), r(953529);
 var n = r(255367),
     o = r(73800),
     a = r(481060),
-    l = r(870246),
-    i = r(262212),
+    i = r(870246),
+    l = r(262212),
     s = r(795338),
     c = r(845602),
     u = r(535396),
@@ -43,7 +43,7 @@ function p(e) {
             }
         }, [f, p]);
     return (
-        (0, l.$)(p, f, l.w.DETAIL),
+        (0, i.$)(p, f, i.w.DETAIL),
         (0, n.jsxs)(
             a.Y0X,
             ((t = (function (e) {
@@ -110,7 +110,7 @@ function p(e) {
                                                         variant: 'text-sm/semibold',
                                                         children: g
                                                     }),
-                                                (0, n.jsx)(i.ZP, {
+                                                (0, n.jsx)(l.ZP, {
                                                     className: d.footer,
                                                     guildId: p,
                                                     powerup: f,
