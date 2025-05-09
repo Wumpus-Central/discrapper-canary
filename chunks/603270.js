@@ -22,8 +22,8 @@ var r = n(255367),
     g = n(592125),
     _ = n(509545),
     b = n(238),
-    y = n(55563),
-    E = n(551428),
+    E = n(55563),
+    y = n(551428),
     x = n(626135),
     v = n(572004),
     O = n(601911),
@@ -34,12 +34,12 @@ var r = n(255367),
     N = n(979007),
     T = n(388032),
     P = n(197866);
-let A = (0, o.Kb)([y.Z, E.Z, _.Z], {
+let A = (0, o.Kb)([E.Z, y.Z, _.Z], {
         queryId: (e) => I.McO.SKU(e),
         get: (e) => {
             if (null == e) return;
-            let t = y.Z.get(e),
-                n = E.Z.getForSKU(e);
+            let t = E.Z.get(e),
+                n = y.Z.getForSKU(e);
             if (null == t || null == n) return;
             let r = _.Z.getForSKU(e);
             return {
@@ -53,10 +53,10 @@ let A = (0, o.Kb)([y.Z, E.Z, _.Z], {
         },
         useStateHook: o.cj
     }),
-    w = (0, o.Kb)([y.Z], {
+    w = (0, o.Kb)([E.Z], {
         queryId: (e, t) => I.McO.__DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU(t),
         get: (e) => {
-            if (null != e) return y.Z.getParentSKU(e);
+            if (null != e) return E.Z.getParentSKU(e);
         },
         load: async (e, t, n) => {
             a()(null != t && null != n, 'appId is null'), await (0, u.oJ)(n);
@@ -66,7 +66,7 @@ let A = (0, o.Kb)([y.Z, E.Z, _.Z], {
 function Z(e) {
     let { appId: t, message: l } = e,
         a = (0, C.R)(t),
-        [u, d, f, h, _, y, E] = (0, o.Wu)(
+        [u, d, f, h, _, E, y] = (0, o.Wu)(
             [p.Z, b.Z, g.Z],
             () => {
                 var e;
@@ -105,7 +105,7 @@ function Z(e) {
                     transitionState: n.transitionState,
                     onClose: n.onClose,
                     appId: t,
-                    guildId: y
+                    guildId: E
                 });
         });
     };
@@ -117,7 +117,7 @@ function Z(e) {
         onLinkCopy: () => {
             (0, j.X)(t, j.B.STORE_EMBED);
         },
-        iconSrc: E,
+        iconSrc: y,
         onIconClick: () => {
             w(),
                 x.default.track(I.rMx.STOREFRONT_STORE_MESSAGE_EMBED_CLICKED, {
@@ -160,8 +160,8 @@ function R(e) {
                 subscriptionPlan: a
             };
         })(c, a),
-        { data: y } = (0, d.IX)(null == m ? void 0 : m.applicationId),
-        E = (0, o.e7)(
+        { data: E } = (0, d.IX)(null == m ? void 0 : m.applicationId),
+        y = (0, o.e7)(
             [g.Z],
             () => {
                 var e;
@@ -169,13 +169,13 @@ function R(e) {
             },
             [u]
         ),
-        v = i.useMemo(() => (null != y ? (0, O.y)(y, 45) : void 0), [y]),
-        Z = (0, C.R)(null != (l = null == y ? void 0 : y.id) ? l : ''),
+        v = i.useMemo(() => (null != E ? (0, O.y)(E, 45) : void 0), [E]),
+        Z = (0, C.R)(null != (l = null == E ? void 0 : E.id) ? l : ''),
         { openModal: R, subscriptionPurchaseButtonState: D } = (0, h.Z)({
             skuId: c,
-            initialSubscribeForGuild: E
+            initialSubscribeForGuild: y
         });
-    if (!Z || null == y || null == m) return null;
+    if (!Z || null == E || null == m) return null;
     let L = m.type === I.epS.SUBSCRIPTION,
         M = !!L && (0, f.KW)(m.flags),
         U = () => {
@@ -185,8 +185,8 @@ function R(e) {
                     (0, r.jsx)(e, {
                         transitionState: t.transitionState,
                         onClose: t.onClose,
-                        appId: y.id,
-                        guildId: E
+                        appId: E.id,
+                        guildId: y
                     });
             });
         },
@@ -201,9 +201,9 @@ function R(e) {
                     return null != e && null != p
                         ? (0, r.jsx)(e, {
                               transitionState: n.transitionState,
-                              appId: y.id,
+                              appId: E.id,
                               skuId: m.id,
-                              guildId: E,
+                              guildId: y,
                               subscriptionType: M ? 'user' : 'guild',
                               onClose: n.onClose,
                               onHeaderTitleClick: i
@@ -211,7 +211,7 @@ function R(e) {
                         : null != t
                           ? (0, r.jsx)(t, {
                                 transitionState: n.transitionState,
-                                appId: y.id,
+                                appId: E.id,
                                 skuId: c,
                                 onClose: n.onClose,
                                 onHeaderTitleClick: i
@@ -250,24 +250,24 @@ function R(e) {
     '' === B && (B = void 0);
     let G = () => {
         x.default.track(I.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
-            application_id: y.id,
+            application_id: E.id,
             sku_id: m.id,
             area: 'purchase_button'
         });
     };
     return (0, r.jsx)(k, {
-        appName: y.name,
+        appName: E.name,
         title: m.name,
         description: B,
-        link: ''.concat(location.protocol, '//').concat(location.host).concat(I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(y.id, N.GlobalDiscoveryAppsSections.STORE)),
+        link: ''.concat(location.protocol, '//').concat(location.host).concat(I.Z5c.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(E.id, N.GlobalDiscoveryAppsSections.STORE)),
         onLinkCopy: () => {
-            (0, j.X)(y.id, j.B.SKU_EMBED, c);
+            (0, j.X)(E.id, j.B.SKU_EMBED, c);
         },
         iconSrc: v,
         onIconClick: () => {
             U(),
                 x.default.track(I.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
-                    application_id: y.id,
+                    application_id: E.id,
                     sku_id: m.id,
                     area: 'app_icon'
                 });
@@ -280,7 +280,7 @@ function R(e) {
                     onClick: () => {
                         F(),
                             x.default.track(I.rMx.STOREFRONT_SKU_MESSAGE_EMBED_CLICKED, {
-                                application_id: y.id,
+                                application_id: E.id,
                                 sku_id: m.id,
                                 area: 'view_details'
                             });
@@ -292,7 +292,7 @@ function R(e) {
                     ? null != _
                         ? (0, r.jsx)(S.pV, {
                               onClick: R,
-                              appId: y.id,
+                              appId: E.id,
                               subscriptionType: M ? 'user' : 'guild',
                               skuId: m.id,
                               icon: (0, r.jsx)(s.EOn, {
@@ -308,7 +308,7 @@ function R(e) {
                               children: T.intl.string(T.t.uuzaAA)
                           })
                     : (0, r.jsx)(S.YG, {
-                          appId: y.id,
+                          appId: E.id,
                           sku: m,
                           icon: (0, r.jsx)(s.EOn, {
                               size: 'xs',

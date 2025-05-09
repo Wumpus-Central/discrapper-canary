@@ -1,4 +1,4 @@
-n.d(t, { w: () => y });
+n.d(t, { w: () => E });
 var r = n(255367),
     i = n(73800),
     l = n(657707),
@@ -15,7 +15,7 @@ var r = n(255367),
     g = n(491350),
     _ = n(492764),
     b = n(235810);
-function y() {
+function E() {
     return (0, p.Z)()
         ? (0, r.jsx)('div', {
               className: g.emptyContainer,
@@ -65,11 +65,11 @@ function y() {
                           })
                       ]
                   }),
-                  (0, r.jsx)(E, {})
+                  (0, r.jsx)(y, {})
               ]
           });
 }
-function E() {
+function y() {
     let e = (0, d.Px)(f.p9.TIER_2),
         t = i.useCallback(
             () =>

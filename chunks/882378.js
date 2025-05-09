@@ -24,7 +24,7 @@ let y = i.memo(function (e) {
         j = (0, l.e7)([f.Z], () => f.Z.hasLayers()),
         O = i.useCallback(() => (x ? b.intl.string(b.t['16QyDg']) : null != C ? b.intl.string(b.t.kCN9i4) : null), [x, C]),
         E = i.useMemo(() => (x || null != C) && !v && !j, [x, C, v, j]),
-        [I, P] = i.useState(O());
+        [I, S] = i.useState(O());
     i.useEffect(() => {
         null != C &&
             null != y &&
@@ -59,9 +59,9 @@ let y = i.memo(function (e) {
         }),
         i.useEffect(() => {
             let e = O();
-            null != e && P(e);
+            null != e && S(e);
         }, [x, C, O]);
-    let S = i.useCallback(() => {
+    let P = i.useCallback(() => {
         null != C && (0, c.T)(t.id, [C.id]),
             null != y &&
                 ((0, a.ZDy)(
@@ -102,7 +102,7 @@ let y = i.memo(function (e) {
               children: () =>
                   (0, r.jsx)(m.ZP.Icon, {
                       icon: a.b7C,
-                      onClick: S,
+                      onClick: P,
                       tooltip: b.intl.string(b.t.rpc2qq),
                       tooltipDisabled: null != C
                   })

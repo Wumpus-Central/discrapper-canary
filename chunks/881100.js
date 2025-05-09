@@ -133,7 +133,7 @@ let B = (e, t, n) => ((0, r.wj)(e) ? t : n),
                 imageSource: B(n, v, k),
                 imageClassName: t.stickersImage
             },
-            stickersPerkDiscoverability: {
+            stickersPremiumPerk: {
                 title: g.intl.string(g.t.tzdIwM),
                 description: g.intl.string(g.t.FXlU29),
                 imageSource: B(n, v, k),

@@ -18,7 +18,7 @@ function g(e) {
         g = (0, a.e7)([p.Z], () => p.Z.getGuildProduct(n)),
         _ = (0, a.e7)([c.Z], () => c.Z.getGuild(t), [t]),
         b = (0, a.e7)([s.Z], () => s.Z.useReducedMotion),
-        y = (0, u.n)();
+        E = (0, u.n)();
     return (l()(null != _, 'guild cannot be null'), l()(null != g, 'guildProductListing cannot be null'), (0, d.SO)(_))
         ? (0, r.jsx)(o.ua7, {
               text: h.intl.string(h.t.sAJr9f),
@@ -86,7 +86,7 @@ function g(e) {
                 })
           : (0, r.jsx)(o.gtL, {
                 shineSize: o.gtL.ShineSizes.SMALL,
-                pauseAnimation: b || !y,
+                pauseAnimation: b || !E,
                 onClick: () =>
                     (0, m.z)({
                         guildProductListing: g,

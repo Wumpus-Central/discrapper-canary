@@ -15,17 +15,17 @@ var r = n(255367),
     g = n(838440),
     _ = n(981631),
     b = n(18485);
-function y(e) {
+function E(e) {
     let { assets: t, currentUser: n, message: r } = e,
         i = (h.default.extractTimestamp(n.id) + h.default.extractTimestamp(r.id)) % t.length;
     return t[i];
 }
-function E(e) {
+function y(e) {
     let { currentUser: t, channel: n, message: l, buttonLabels: u, stickers: d, event: p, eventProperties: m } = e,
         [h, _] = i.useState(!1),
-        E = i.useMemo(
+        y = i.useMemo(
             () =>
-                y({
+                E({
                     assets: d,
                     currentUser: t,
                     message: l
@@ -34,7 +34,7 @@ function E(e) {
         ),
         x = i.useMemo(
             () =>
-                y({
+                E({
                     assets: u,
                     currentUser: t,
                     message: l
@@ -63,7 +63,7 @@ function E(e) {
                 })({
                     channel: n,
                     message: l,
-                    sticker: E
+                    sticker: y
                 }),
                 (function (e) {
                     var t, n;
@@ -112,11 +112,11 @@ function E(e) {
                             t)
                         );
                 })({
-                    sticker: E,
+                    sticker: y,
                     event: p,
                     eventProperties: m
                 }));
-        }, [n, l, E, p, m]);
+        }, [n, l, y, p, m]);
     return (0, r.jsxs)(a.zxk, {
         className: b.CTAMessageButtonOuter,
         innerClassName: b.CTAMessageButton,
@@ -128,7 +128,7 @@ function E(e) {
             (0, r.jsx)(c.Z, {
                 className: b.CTAMessageSticker,
                 isInteracting: h,
-                sticker: E,
+                sticker: y,
                 size: 28
             }),
             x
@@ -158,7 +158,7 @@ function x(e) {
     return null != c && f
         ? (0, r.jsx)('div', {
               className: b.CTAMessage,
-              children: (0, r.jsx)(E, {
+              children: (0, r.jsx)(y, {
                   currentUser: c,
                   channel: t,
                   message: n,

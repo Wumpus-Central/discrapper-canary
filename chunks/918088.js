@@ -22,8 +22,8 @@ var r = n(278074),
     g = n(358085),
     _ = n(798628),
     b = n(79390),
-    y = n(839963),
-    E = n(897325),
+    E = n(839963),
+    y = n(897325),
     x = n(57101),
     v = n(562293),
     O = n(981631),
@@ -98,7 +98,7 @@ function T(e, t) {
     let m = e.state === O.yb.SENT,
         f = m ? (null != a ? a : (0, v.H)(o.expiry)) : '',
         h = null == f && m,
-        { selectedAnswerIds: g, submitting: b, editing: y, showResults: E } = null != (i = null != t ? t : (0, _.fU)(e.getChannelId(), e.id)) ? i : C,
+        { selectedAnswerIds: g, submitting: b, editing: E, showResults: y } = null != (i = null != t ? t : (0, _.fU)(e.getChannelId(), e.id)) ? i : C,
         x = e.reactions,
         j = !0;
     if (!N(e)) {
@@ -107,9 +107,9 @@ function T(e, t) {
     }
     let S = g.size > 0,
         I = x.some((e) => !0 === e.me_vote),
-        T = !y && I,
-        P = T || h || E,
-        A = m && j && (!I || y || P),
+        T = !E && I,
+        P = T || h || y,
+        A = m && j && (!I || E || P),
         w = null == (r = u.Z.getChannel(e.getChannelId())) || null == (n = r.getGuildId) ? void 0 : n.call(r),
         Z = null != w ? d.ZP.getSelfMember(w) : null,
         R = (0, s.EY)(Z),
@@ -125,7 +125,7 @@ function T(e, t) {
         hasSelectedAnswer: S,
         hasVoted: T,
         hasVoteRecorded: I,
-        isEditingVote: y,
+        isEditingVote: E,
         isExpired: h,
         isInteractive: j,
         isSent: m,
@@ -133,7 +133,7 @@ function T(e, t) {
         selectedAnswerIds: g,
         submitting: b,
         tapShouldOpenVotersModal: P,
-        showResults: E
+        showResults: y
     };
 }
 function P(e, t) {
@@ -145,7 +145,7 @@ function P(e, t) {
     if (null == v) return;
     let O = l.Z.useReducedMotion,
         C = null == (s = u.Z.getChannel(e.getChannelId())) || null == (n = s.getGuildId) ? void 0 : n.call(s),
-        N = (0, E.E)(v, C),
+        N = (0, y.E)(v, C),
         P = _.answers,
         A = _.layout_type,
         w = T(e, t, { formattedExpirationLabel: p });
@@ -319,10 +319,10 @@ function P(e, t) {
             canTapAnswers: Z,
             canSelectMultipleAnswers: en
         })
-            .with({ tapShouldOpenVotersModal: !0 }, () => y.Y7.LIST)
-            .with({ canTapAnswers: !1 }, () => y.Y7.LIST)
-            .with({ canSelectMultipleAnswers: !1 }, () => y.Y7.RADIO_BUTTONS)
-            .with({ canSelectMultipleAnswers: !0 }, () => y.Y7.CHECKBOXES)
+            .with({ tapShouldOpenVotersModal: !0 }, () => E.Y7.LIST)
+            .with({ canTapAnswers: !1 }, () => E.Y7.LIST)
+            .with({ canSelectMultipleAnswers: !1 }, () => E.Y7.RADIO_BUTTONS)
+            .with({ canSelectMultipleAnswers: !0 }, () => E.Y7.CHECKBOXES)
             .exhaustive(),
         answerTapAccessibilityLabel: W ? $ : void 0,
         layoutType: A,

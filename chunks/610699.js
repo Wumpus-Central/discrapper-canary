@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(943762),
     _ = n(914498),
     b = n(880251),
-    y = n(208444),
-    E = n(835473),
+    E = n(208444),
+    y = n(835473),
     x = n(471445),
     v = n(111028),
     O = n(601964),
@@ -126,7 +126,7 @@ function L(e) {
         { invite: a, message: o, getAcceptInviteContext: u } = e,
         { approximate_member_count: h, approximate_presence_count: g, target_type: _, target_application: b } = a;
     s()(_ === w.Iq.EMBEDDED_APPLICATION && null != b, 'invalid application invite');
-    let y = i.useCallback(() => {
+    let E = i.useCallback(() => {
             var e;
             N.default.track(A.rMx.EMBEDDED_APPLICATION_INVITE_EMBED_VIEWED, {
                 application_id: b.id,
@@ -134,7 +134,7 @@ function L(e) {
             });
         }, [null == (t = a.inviter) ? void 0 : t.id, b.id]),
         x = (0, c.e7)([C.Z], () => (null != a.guild ? C.Z.getGuild(a.guild.id) : null), [a]),
-        v = (0, E.Z)([b.id])[0],
+        v = (0, y.Z)([b.id])[0],
         T = (0, c.e7)([p.ZP], () => {
             var e;
             return (null == a ? void 0 : a.channel) != null && (null == (e = p.ZP.getSelfEmbeddedActivityForChannel(a.channel.id)) ? void 0 : e.applicationId) === b.id;
@@ -201,13 +201,13 @@ function L(e) {
                   isDisabled: V,
                   tooltip: l,
                   handleAcceptInvite: B,
-                  onView: y
+                  onView: E
               })
           });
 }
 function M(e) {
     var t, n;
-    let { app: l, invite: a, activityUsers: o, isMember: s, channel: c, guild: u, members: d, membersOnline: p, isActivityActive: m, submitting: f, isDisabled: E, tooltip: x, handleAcceptInvite: v, onView: O } = e,
+    let { app: l, invite: a, activityUsers: o, isMember: s, channel: c, guild: u, members: d, membersOnline: p, isActivityActive: m, submitting: f, isDisabled: y, tooltip: x, handleAcceptInvite: v, onView: O } = e,
         j = new URL(a.code, 'https://discord.gg').toString(),
         { bot: C, icon: S } = l,
         I = T.ZP.getApplicationIconURL({
@@ -215,7 +215,7 @@ function M(e) {
             icon: S,
             bot: C
         }),
-        N = (0, y.z)(l),
+        N = (0, E.z)(l),
         P = (0, b.E)(l),
         A = o.length,
         w = i.useMemo(() => {
@@ -224,12 +224,12 @@ function M(e) {
                     label: s ? (m ? Z.intl.string(Z.t.VJlc0d) : Z.intl.string(Z.t.RscU7O)) : Z.intl.string(Z.t['2BP08P']),
                     trackingArea: s ? _.j_.PLAY : _.j_.JOIN_SERVER,
                     submitting: f,
-                    disabledReason: E && null != x ? x : void 0,
+                    disabledReason: y && null != x ? x : void 0,
                     onClick: v
                 }
             ];
             return null != N && e.push(N), e;
-        }, [v, m, E, s, f, x, N]);
+        }, [v, m, y, s, f, x, N]);
     return (0, r.jsx)(
         h.W,
         ((t = (function (e) {

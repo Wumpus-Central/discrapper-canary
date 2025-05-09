@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(562129),
     E = n(404295),
     I = n(540059),
-    P = n(605236),
-    S = n(291407),
+    S = n(605236),
+    P = n(291407),
     Z = n(685006),
     N = n(281863),
     T = n(61356),
@@ -37,7 +37,7 @@ let L = i.forwardRef(function (e, t) {
         var n, l;
         let { type: v, animateRef: j } = e,
             E = (0, s.e7)([x.Z], () => x.Z.shouldShowPopup() && x.Z.activeViewType() === v),
-            { badgeTreatment: S } = h.Y.useExperiment({ location: 'ChannelAppLauncherButton' }, { autoTrackExposure: !0 }),
+            { badgeTreatment: P } = h.Y.useExperiment({ location: 'ChannelAppLauncherButton' }, { autoTrackExposure: !0 }),
             { Component: Z, events: T, play: L } = (0, O.Z)('ChannelAppLauncherButton'),
             { Component: D, play: U } = (0, u.B)(),
             B = (0, I.Q3)('ChannelAppLauncherButton');
@@ -52,19 +52,19 @@ let L = i.forwardRef(function (e, t) {
         );
         let G = (0, m.a)({
                 surface: p.eR.TEXT_LAUNCHER,
-                skipFetchingShelf: S === h.O.NONE
+                skipFetchingShelf: P === h.O.NONE
             }),
             F = i.useCallback(() => {
                 (0, b.yw)(A.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED, {
                     source: C._b.TEXT,
-                    badge_type: G ? S.valueOf() : null
+                    badge_type: G ? P.valueOf() : null
                 }),
-                    E ? y.yT(C.ti.DISMISSED) : ((0, P.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: R.L.TAKE_ACTION }), y.__(C._b.TEXT, v), f.ux()),
+                    E ? y.yT(C.ti.DISMISSED) : ((0, S.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: R.L.TAKE_ACTION }), y.__(C._b.TEXT, v), f.ux()),
                     L();
-            }, [E, v, L, G, S]);
+            }, [E, v, L, G, P]);
         i.useEffect(() => {
             let e = setTimeout(() => {
-                S !== h.O.NONE &&
+                P !== h.O.NONE &&
                     G &&
                     (U(),
                     (0, _.h)({
@@ -72,19 +72,19 @@ let L = i.forwardRef(function (e, t) {
                         name: a.ImpressionNames.APP_LAUNCHER_BADGE,
                         properties: {
                             source: C._b.TEXT,
-                            badge_type: S.valueOf()
+                            badge_type: P.valueOf()
                         }
                     }));
             }, 1000);
             return () => clearTimeout(e);
-        }, [U, S, G]);
+        }, [U, P, G]);
         let H = i.useMemo(() => {
             let e = (0, r.jsx)(Z, {
                 size: B ? 'refresh_sm' : void 0,
                 color: 'currentColor'
             });
             if (!G) return e;
-            switch (S) {
+            switch (P) {
                 case h.O.WORDLE_LOGO_ANIMATION:
                     return (0, r.jsx)(N.Z, {});
                 case h.O.GLOWING_ANIMATION:
@@ -93,11 +93,11 @@ let L = i.forwardRef(function (e, t) {
                 default:
                     return e;
             }
-        }, [Z, S, B, G]);
+        }, [Z, P, B, G]);
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 G &&
-                    S === h.O.GLOWING_ANIMATION &&
+                    P === h.O.GLOWING_ANIMATION &&
                     (0, r.jsx)('div', {
                         className: M.appLauncherGlow,
                         children: (0, r.jsx)(D, {
@@ -108,7 +108,7 @@ let L = i.forwardRef(function (e, t) {
                         })
                     }),
                 (0, r.jsxs)('div', {
-                    className: o()(M.buttonContainer, w.t4, { [M.appLauncherCircleMask]: S === h.O.GLOWING_ANIMATION }),
+                    className: o()(M.buttonContainer, w.t4, { [M.appLauncherCircleMask]: P === h.O.GLOWING_ANIMATION }),
                     ref: t,
                     children: [
                         (0, r.jsx)(
@@ -175,7 +175,7 @@ let L = i.forwardRef(function (e, t) {
                             n)
                         ),
                         G &&
-                            S === h.O.SIMPLE_BADGE &&
+                            P === h.O.SIMPLE_BADGE &&
                             (0, r.jsx)(g.r, {
                                 top: -1,
                                 right: -1,
@@ -203,7 +203,7 @@ let L = i.forwardRef(function (e, t) {
             ? (0, r.jsxs)('div', {
                   className: M.channelAppLauncher,
                   children: [
-                      (0, r.jsx)(S.Z, {
+                      (0, r.jsx)(P.Z, {
                           channel: t,
                           animationContainerClassName: M.entrypointAnimation,
                           glowClassName: M.animationGlow,

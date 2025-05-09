@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(709054),
     _ = n(962086),
     b = n(160404),
-    y = n(225675),
-    E = n(981631),
+    E = n(225675),
+    y = n(981631),
     x = n(388032),
     v = n(318135);
 function O(e) {
@@ -35,7 +35,7 @@ function j(e) {
             impersonateType: b.Z.getImpersonateType(t),
             viewingRoles: b.Z.getViewingRoles(t)
         })),
-        S = j === y.z.SERVER_SHOP,
+        S = j === E.z.SERVER_SHOP,
         I = (0, u.e7)([p.ZP], () => (null != n ? p.ZP.getTrueMember(t, n.id) : null)),
         [N, T] = (0, d.A7R)(null == C ? [] : g.default.keys(C)),
         P = i.useRef(l);
@@ -84,7 +84,7 @@ function j(e) {
             forceRoles: Z,
             context: l
         }),
-        c.$e(E.Plq.MANAGE_GUILD, E.Plq.MANAGE_ROLES)
+        c.$e(y.Plq.MANAGE_GUILD, y.Plq.MANAGE_ROLES)
     ) || l.isOwner(n.id))
         ? (0, r.jsx)('div', {
               className: v.container,

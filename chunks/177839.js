@@ -84,7 +84,7 @@ let E = (e) => (e ? _.intl.string(_.t.QX14gI) : _.intl.string(_.t.RGadQU)),
             g = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
             { analyticsLocations: _ } = (0, u.ZP)(),
             O = (0, p._f)(),
-            S = [m.emoji, m.streaming, m.upload, m.customAppIcons, m.soundboard, O ? m.remix : m.videoBackground, m.superReactions, m.stickersPerkDiscoverability, m.badgeAlt];
+            S = [m.emoji, m.streaming, m.upload, m.customAppIcons, m.soundboard, O ? m.remix : m.videoBackground, m.superReactions, m.stickersPremiumPerk, m.badgeAlt];
         return (0, i.jsxs)('div', {
             className: l()(x.perksContainer, t, {
                 [x.partiallyHidden]: n && !s,

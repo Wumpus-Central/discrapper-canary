@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(594174),
     _ = n(78839),
     b = n(55935),
-    y = n(63063),
-    E = n(74538),
+    E = n(63063),
+    y = n(74538),
     x = n(276444),
     v = n(93237),
     O = n(786397),
@@ -73,7 +73,7 @@ class P extends i.Component {
     }
     renderBody(e, t, n) {
         let { trialOffer: r } = this.props;
-        return e && !n && void 0 === r.redeemed_at ? S.intl.format(S.t.LwCwT0, { helpdeskArticle: y.Z.getArticleURL(C.BhN.REFERRAL_PROGRAM) }) : t ? null : S.intl.string(S.t.lQLlOT);
+        return e && !n && void 0 === r.redeemed_at ? S.intl.format(S.t.LwCwT0, { helpdeskArticle: E.Z.getArticleURL(C.BhN.REFERRAL_PROGRAM) }) : t ? null : S.intl.string(S.t.lQLlOT);
     }
     renderActions(e, t, n) {
         var i, l;
@@ -84,7 +84,7 @@ class P extends i.Component {
                 },
                 color: d.zxk.Colors.BRAND
             },
-            u = o.id !== a.user_id || (0, E.I5)(o) || !o.verified || (0, O.B)(a),
+            u = o.id !== a.user_id || (0, y.I5)(o) || !o.verified || (0, O.B)(a),
             p = this.renderExpirationDate(e, t, n);
         return (
             (c.disabled = u),
@@ -196,7 +196,7 @@ function A(e) {
             [n, t]
         ),
         a = g.default.getCurrentUser(),
-        o = (0, u.e7)([g.default], () => null != i && (0, E.I5)(void 0 !== a && i.user_id === a.id ? a : g.default.getUser(i.user_id))),
+        o = (0, u.e7)([g.default], () => null != i && (0, y.I5)(void 0 !== a && i.user_id === a.id ? a : g.default.getUser(i.user_id))),
         s = (0, u.e7)([_.ZP], () => {
             var e;
             return o ? (null == (e = _.ZP.getPremiumTypeSubscription()) ? void 0 : e.trialEndsAt) : null;

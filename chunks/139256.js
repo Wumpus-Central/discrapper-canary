@@ -24,8 +24,8 @@ var r = n(255367),
     g = n(506071),
     _ = n(203143),
     b = n(79390),
-    y = n(839963),
-    E = n(294608),
+    E = n(839963),
+    y = n(294608),
     x = n(65145),
     v = n(981631),
     O = n(388032),
@@ -161,18 +161,18 @@ function w(e) {
             canTapAnswers: l,
             answersInteraction: n
         })
-            .with({ answersInteraction: y.Y7.RADIO_BUTTONS }, () => ({
+            .with({ answersInteraction: E.Y7.RADIO_BUTTONS }, () => ({
                 ContainerComponent: T,
                 answerElementType: 1
             }))
-            .with({ answersInteraction: y.Y7.CHECKBOXES }, () => ({
+            .with({ answersInteraction: E.Y7.CHECKBOXES }, () => ({
                 ContainerComponent: N,
                 answerElementType: 2
             }))
             .with(
                 {
                     canTapAnswers: !0,
-                    answersInteraction: y.Y7.LIST
+                    answersInteraction: E.Y7.LIST
                 },
                 () => ({
                     ContainerComponent: I,
@@ -204,8 +204,8 @@ function w(e) {
 }
 function Z(e) {
     let { className: t, answer: n, children: l, hasSelectedAnyAnswer: o, isFirstAnswer: s, elementType: c } = e,
-        { channelId: u, messageId: d } = (0, E.pE)(),
-        p = (0, E.$B)(n.style),
+        { channelId: u, messageId: d } = (0, y.pE)(),
+        p = (0, y.$B)(n.style),
         m = !0 === n.isSelected,
         f = i.useCallback(() => {
             _.Z.handlePollAnswerTapped({
@@ -277,7 +277,7 @@ function D(e, t) {
 }
 function L(e) {
     let { media: t, containerClassName: n, attachmentClassName: i, emojiClassName: l, fallback: a } = e,
-        { message: o } = (0, E.GF)();
+        { message: o } = (0, y.GF)();
     if (null != t.attachmentIds && t.attachmentIds.length > 0) {
         let e = o.attachments.find((e) => {
             var n;

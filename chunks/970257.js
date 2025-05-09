@@ -1,7 +1,7 @@
 n.d(t, {
     Fi: () => o,
-    a4: () => c,
-    vc: () => s
+    a4: () => d,
+    vc: () => c
 });
 var i = n(592125),
     r = n(650774),
@@ -14,13 +14,13 @@ function o(e) {
         n = a.default.getCurrentUser();
     return null != n && n.id !== t && !0 !== e.system;
 }
-function c(e) {
+function d(e) {
     return null != e && o(e.author);
 }
-function s(e) {
+function c(e) {
     return (
         null != e &&
-        c(e) &&
+        d(e) &&
         (function (e) {
             let t = i.Z.getChannel(e);
             if (null == t) return !1;

@@ -62,7 +62,7 @@ function b(e) {
         })
     });
 }
-function y(e) {
+function E(e) {
     let { buttonLabel: t, secondaryLabel: n, handleClick: i, isInteractive: l, className: o } = e;
     return (0, r.jsxs)('div', {
         className: a()(h.detailsText, o),
@@ -91,7 +91,7 @@ function y(e) {
         ]
     });
 }
-function E(e) {
+function y(e) {
     let { action: t, channelId: n, messageId: l, isInteractive: o, className: s } = e,
         { actionButtonRef: d, manageFocusOnAction: p } = (0, m.dv)(),
         f = i.useCallback(async () => {
@@ -131,7 +131,7 @@ function E(e) {
                   className: s,
                   children: t.label
               })
-            : (0, r.jsx)(y, {
+            : (0, r.jsx)(E, {
                   buttonLabel: t.label,
                   secondaryLabel: t.secondaryLabel,
                   handleClick: f,
@@ -182,20 +182,20 @@ function x(e) {
                       (0, r.jsxs)('div', {
                           className: h.bottomBar,
                           children: [
-                              (0, r.jsx)(E, {
+                              (0, r.jsx)(y, {
                                   channelId: t.getChannelId(),
                                   messageId: t.id,
                                   action: n.secondaryAction,
                                   className: h.secondaryAction,
                                   isInteractive: n.isInteractive
                               }),
-                              (0, r.jsx)(E, {
+                              (0, r.jsx)(y, {
                                   channelId: t.getChannelId(),
                                   messageId: t.id,
                                   action: n.tertiaryAction,
                                   className: h.tertiaryAction
                               }),
-                              (0, r.jsx)(E, {
+                              (0, r.jsx)(y, {
                                   channelId: t.getChannelId(),
                                   messageId: t.id,
                                   action: n.primaryAction

@@ -250,7 +250,7 @@ let R = {
                     })
             : (0, i.jsx)(D, P(A({}, q.upcomingDropUntimed), { forceShadow: x }));
     });
-D.displayName = 'PerkDiscoverabilityCard';
+D.displayName = 'PremiumPerkCard';
 let Z = r.forwardRef((e, t) => {
     var n;
     let { title: r, titleClassName: s = '', subtitle: a = '', description: o = '', descriptionCta: c = '', isPremiumGetCta: d, onCtaClick: m, onMouseEnter: g, className: p, perkComponent: h, cardVariant: f, cardType: b, onClick: _, backgroundImage: E, pillText: C, perkImage: v, imageOverlayText: T } = e,

@@ -70,8 +70,8 @@ let b = {
         lastFetched: null,
         lastSeen: null
     },
-    y = b,
-    E = {},
+    E = b,
+    y = {},
     x = null,
     v = 86400000;
 var O = (((i = O || {}).IS_OWNER = 'is_owner'), (i.IS_ADMIN = 'is_admin'), (i.IS_COMMUNITY = 'is_community'), (i.GUILD_SIZE = 'guild_size'), (i.IS_HUB = 'is_hub'), (i.IS_VIEWING = 'is_viewing'), (i.GUILD_PERMISSIONS = 'guild_permissions'), (i.GUILD_SIZE_ALL = 'guild_size_all'), i);
@@ -113,7 +113,7 @@ function C(e) {
                     u = (null == s ? void 0 : s.id) === o.ownerId,
                     h = d.Z.can(f.Plq.ADMINISTRATOR, o);
                 if ((t.includes('is_owner') && !u) || (t.includes('is_admin') && !h)) continue;
-                null == (E = null != E ? E : {})[e.key] && (E[e.key] = e);
+                null == (y = null != y ? y : {})[e.key] && (y[e.key] = e);
                 let g = p.Z.getGuildId(),
                     _ = null != g && g === o.id;
                 if ((!t.includes('is_viewing') || _) && !i) return !0;
@@ -124,14 +124,14 @@ function C(e) {
 }
 function S(e) {
     let { survey: t } = e;
-    if (((y.lastFetched = Date.now()), null == y.hiddenSurveys && (y.hiddenSurveys = {}), null != t && null == y.hiddenSurveys[t.key])) {
+    if (((E.lastFetched = Date.now()), null == E.hiddenSurveys && (E.hiddenSurveys = {}), null != t && null == E.hiddenSurveys[t.key])) {
         if (!C(t)) return;
         x = t;
     }
 }
 function I() {
     if (null != x && (C(x) || ((x = null), 0))) return !1;
-    let e = Object.values((E = null != E ? E : {}))[0];
+    let e = Object.values((y = null != y ? y : {}))[0];
     null != e && C(e)
         ? S({
               type: 'SURVEY_FETCHED',
@@ -141,19 +141,19 @@ function I() {
 }
 class N extends (r = a.ZP.PersistedStore) {
     initialize(e) {
-        (y = null != e ? e : b), this.syncWith([p.Z], I);
+        (E = null != e ? e : b), this.syncWith([p.Z], I);
     }
     getState() {
-        return y;
+        return E;
     }
     getCurrentSurvey() {
         return x;
     }
     getSurveyOverride() {
-        return y.surveyOverride;
+        return E.surveyOverride;
     }
     getLastSeenTimestamp() {
-        return y.lastSeen;
+        return E.lastSeen;
     }
 }
 h(N, 'displayName', 'SurveyStore'),
@@ -175,23 +175,23 @@ h(N, 'displayName', 'SurveyStore'),
 let T = new N(o.Z, {
     CONNECTION_OPEN: function () {
         var e;
-        (null != y.lastFetched && Date.now() - (null != (e = y.lastFetched) ? e : 0) < v && null == y.surveyOverride) || (0, s.wk)(y.surveyOverride, !0);
+        (null != E.lastFetched && Date.now() - (null != (e = E.lastFetched) ? e : 0) < v && null == E.surveyOverride) || (0, s.wk)(E.surveyOverride, !0);
     },
     SURVEY_FETCHED: S,
     SURVEY_HIDE: function (e) {
         let { key: t } = e;
-        (y.hiddenSurveys[t] = !0), (x = null), (E = null != E ? E : {}), delete E[t];
+        (E.hiddenSurveys[t] = !0), (x = null), (y = null != y ? y : {}), delete y[t];
     },
     SURVEY_OVERRIDE: function (e) {
         let { id: t } = e;
-        (y.surveyOverride = t), null != t && delete y.hiddenSurveys[t], (0, s.wk)(y.surveyOverride, !0);
+        (E.surveyOverride = t), null != t && delete E.hiddenSurveys[t], (0, s.wk)(E.surveyOverride, !0);
     },
     PUSH_NOTIFICATION_CLICK: function () {},
     DISPLAYED_INVITE_SHOW: function () {},
     LOGOUT: function () {
-        y.hiddenSurveys = {};
+        E.hiddenSurveys = {};
     },
     SURVEY_SEEN: function () {
-        y.lastSeen = Date.now();
+        E.lastSeen = Date.now();
     }
 });

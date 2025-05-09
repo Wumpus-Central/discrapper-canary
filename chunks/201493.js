@@ -25,8 +25,8 @@ let O = (e) => {
     let { channel: O, guild: E } = e,
         {
             currentCategoryId: I,
-            directoryEntries: P,
-            categoryCounts: S,
+            directoryEntries: S,
+            categoryCounts: P,
             allEntriesCount: Z,
             isLoading: N
         } = (0, l.cj)([m.Z], () => {
@@ -51,7 +51,7 @@ let O = (e) => {
         },
         [O.id]
     );
-    let T = i.useMemo(() => (null != P ? (0, y.v)(Object.values(P), I) : null), [P, I]),
+    let T = i.useMemo(() => (null != S ? (0, y.v)(Object.values(S), I) : null), [S, I]),
         {
             mostRecentQuery: A,
             searchFetching: w,
@@ -198,7 +198,7 @@ let O = (e) => {
                       h.Su(O.id, e);
                   },
                   directoryEntries: T,
-                  categoryCounts: S,
+                  categoryCounts: P,
                   allEntriesCount: Z,
                   isLoading: N
               });

@@ -52,7 +52,7 @@ function I(e) {
     }
     return e;
 }
-function P(e, t) {
+function S(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -70,7 +70,7 @@ function P(e, t) {
         e
     );
 }
-function S(e, t) {
+function P(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -123,15 +123,15 @@ function N(e) {
                           hideOnClick: !0,
                           children: (e) => {
                               var { onClick: i } = e,
-                                  l = S(e, ['onClick']);
+                                  l = P(e, ['onClick']);
                               return (0, r.jsx)(
                                   p.zx,
-                                  P(I({}, l), {
+                                  S(I({}, l), {
                                       onClick: () => {
                                           null == i || i(),
                                               (0, s.ZDy)(async () => {
                                                   let { default: e } = await n.e('34191').then(n.bind(n, 303647));
-                                                  return (n) => (0, r.jsx)(e, P(I({}, n), { entry: t }));
+                                                  return (n) => (0, r.jsx)(e, S(I({}, n), { entry: t }));
                                               });
                                       },
                                       'aria-label': j.intl.string(j.t.XnuOvL),
@@ -153,16 +153,16 @@ function N(e) {
                     hideEditButton: !0,
                     children: (e) => {
                         var { onClick: t } = e,
-                            n = S(e, ['onClick']);
+                            n = P(e, ['onClick']);
                         return (0, r.jsx)(s.ua7, {
                             text: j.intl.string(j.t.UKOtz8),
                             hideOnClick: !0,
                             children: (e) => {
                                 var { onClick: i } = e,
-                                    l = S(e, ['onClick']);
+                                    l = P(e, ['onClick']);
                                 return (0, r.jsx)(
                                     p.zx,
-                                    P(I({}, n, l), {
+                                    S(I({}, n, l), {
                                         ref: c,
                                         onClick: (e) => {
                                             null == i || i(), t(e);
@@ -201,7 +201,7 @@ let T = (e) => {
             splash: l.splash,
             size: 300 * (0, m.x_)()
         }),
-        S =
+        P =
             null !=
             (t = y.ZP.getGuildIconURL({
                 id: l.guildId,
@@ -218,7 +218,7 @@ let T = (e) => {
             onContextMenu: (e) => {
                 (0, c.jW)(e, async () => {
                     let { default: e } = await Promise.resolve().then(n.bind(n, 643560));
-                    return (t) => (0, r.jsx)(e, P(I({}, t), { entry: l }));
+                    return (t) => (0, r.jsx)(e, S(I({}, t), { entry: l }));
                 });
             },
             children: [
@@ -245,7 +245,7 @@ let T = (e) => {
                                     className: O.iconMask,
                                     children: (0, r.jsx)(h.Z, {
                                         className: O.icon,
-                                        iconSrc: S,
+                                        iconSrc: P,
                                         guild: new b.ZP(l),
                                         size: h.Z.Sizes.MEDIUM,
                                         active: !0

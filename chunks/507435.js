@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(809026),
     _ = n(139256),
     b = n(489887),
-    y = n(388032),
-    E = n(271629);
+    E = n(388032),
+    y = n(271629);
 function x() {
     return (0, r.jsx)('svg', {
         width: '24',
@@ -46,7 +46,7 @@ function v(e) {
     }
     return null != t
         ? (0, r.jsx)('div', {
-              className: E.imageContainer,
+              className: y.imageContainer,
               children: t
           })
         : null;
@@ -80,7 +80,7 @@ function O(e) {
                 variant: 'text-sm/semibold',
                 color: 'text-normal',
                 scaleFontToUserSetting: !0,
-                children: y.intl.string(y.t['a+lSZ2'])
+                children: E.intl.string(E.t['a+lSZ2'])
             });
             break;
         case 'VICTOR':
@@ -88,18 +88,18 @@ function O(e) {
             t = (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)('div', {
-                        className: E.victorAnswer,
+                        className: y.victorAnswer,
                         children: [
                             (0, r.jsx)(s.Text, {
                                 variant: 'text-sm/semibold',
                                 color: 'text-normal',
-                                className: E.victorAnswerText,
+                                className: y.victorAnswerText,
                                 scaleFontToUserSetting: !0,
                                 children: a
                             }),
                             (0, r.jsx)(_.ZY, {
                                 size: 16,
-                                className: E.victorIcon,
+                                className: y.victorIcon,
                                 isVictor: !0,
                                 isExpired: !0
                             })
@@ -109,7 +109,7 @@ function O(e) {
                         variant: 'text-xs/medium',
                         color: l,
                         scaleFontToUserSetting: !0,
-                        children: [y.intl.string(y.t.ufIDIy), ' \u2022 ', o, '%']
+                        children: [E.intl.string(E.t.ufIDIy), ' \u2022 ', o, '%']
                     })
                 ]
             });
@@ -122,7 +122,7 @@ function O(e) {
                         variant: 'text-sm/semibold',
                         color: 'text-normal',
                         scaleFontToUserSetting: !0,
-                        children: y.intl.string(y.t.kPN9sr)
+                        children: E.intl.string(E.t.kPN9sr)
                     }),
                     (0, r.jsxs)(s.Text, {
                         variant: 'text-xs/medium',
@@ -134,7 +134,7 @@ function O(e) {
             });
     }
     return (0, r.jsx)('div', {
-        className: E.description,
+        className: y.description,
         children: t
     });
 }
@@ -161,7 +161,7 @@ function j(e) {
         ),
         c = null != n.victorEmoji || 'NO_VOTES' === o.type;
     return (0, r.jsxs)('div', {
-        className: a()(E.container, { [E.containerWithImage]: c }, t),
+        className: a()(y.container, { [y.containerWithImage]: c }, t),
         children: [
             (0, r.jsx)(v, {
                 hasNoVotes: 'NO_VOTES' === o.type,
@@ -197,7 +197,7 @@ function j(e) {
             ),
             null != l &&
                 (0, r.jsx)(s.zxk, {
-                    className: E.button,
+                    className: y.button,
                     size: s.zxk.Sizes.TINY,
                     onClick: l,
                     color: s.zxk.Colors.PRIMARY,
@@ -205,7 +205,7 @@ function j(e) {
                         variant: 'text-sm/medium',
                         color: 'none',
                         scaleFontToUserSetting: !0,
-                        children: y.intl.string(y.t.Jw7VbW)
+                        children: E.intl.string(E.t.Jw7VbW)
                     })
                 })
         ]
@@ -242,7 +242,7 @@ function C(e) {
                       iconNode: (0, r.jsx)(s.QDj, { size: 'xs' }),
                       timestamp: n.timestamp,
                       compact: a,
-                      children: y.intl.format(y.t['VJcK4+'], {
+                      children: E.intl.format(E.t['VJcK4+'], {
                           username: x.nick,
                           usernameHook: v(x),
                           title: _,
@@ -250,7 +250,7 @@ function C(e) {
                       })
                   }),
                   (0, r.jsx)(j, {
-                      className: E.embed,
+                      className: y.embed,
                       data: p,
                       onClickPollLink: u ? void 0 : C
                   })
