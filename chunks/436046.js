@@ -20,7 +20,7 @@ function x(e) {
         [N, E] = o.useState(null),
         [C, j] = o.useState(!1),
         T = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
-        I = o.createRef();
+        I = o.useRef(null);
     async function g(e) {
         e.preventDefault(), r()(null != a, 'Cannot submit null birthday.'), j(!0);
         try {

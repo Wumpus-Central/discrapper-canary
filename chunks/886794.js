@@ -39,7 +39,7 @@ function S(e) {
             messageId: A,
             roleId: C
         }),
-        G = r.createRef(),
+        G = r.useRef(null),
         Y = (0, s.Z)(G);
     return (0, l.jsx)(a.Gt, {
         value: k,

@@ -94,10 +94,10 @@ let b = new a.Z('ConnectionStore'),
             y.expeditedHeartbeat(5000, 'power monitor resumed');
         }),
     c.Z.addOfflineCallback(() => {
-        y.networkStateChange(15000, 'network detected offline.', !1);
+        p.Z.recordStartHeadlessTask('GatewaySocket.offline'), y.networkStateChange(15000, 'network detected offline.', !1);
     }),
     c.Z.addOnlineCallback(() => {
-        y.networkStateChange(5000, 'network detected online.');
+        p.Z.recordStartHeadlessTask('GatewaySocket.online'), y.networkStateChange(5000, 'network detected online.');
     }),
     y.on('disconnect', (e) => {
         let { code: t, reason: n } = e;

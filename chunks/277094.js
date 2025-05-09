@@ -6,14 +6,14 @@ var c = t(481060),
     r = t(705556),
     a = t(30556),
     d = t(821706),
-    s = t(562831),
-    l = t(981631),
+    l = t(562831),
+    s = t(981631),
     u = t(887910);
 function f(e) {
     let { user: n, currentUser: t, guildId: f, relationshipType: _, friendToken: p, onClose: b } = e,
         { newestAnalyticsLocation: m } = (0, i.ZP)(),
-        { gameFriends: I, hasOutgoingPendingGameFriends: y, hasIncomingPendingGameFriends: h } = (0, s.H)({ userId: n.id });
-    if (_ === l.OGo.BLOCKED) return null;
+        { gameFriends: I, hasOutgoingPendingGameFriends: y, hasIncomingPendingGameFriends: h } = (0, l.H)({ userId: n.id });
+    if (_ === s.OGo.BLOCKED) return null;
     if (n.id === t.id)
         return (0, o.jsx)('div', {
             className: u.container,
@@ -23,7 +23,7 @@ function f(e) {
                 onClose: b
             })
         });
-    if (_ === l.OGo.FRIEND || n.bot)
+    if (_ === s.OGo.FRIEND || n.bot)
         return (0, o.jsx)('div', {
             className: u.container,
             children: (0, o.jsx)(a.Z, {
@@ -33,7 +33,7 @@ function f(e) {
                 autoFocus: !0
             })
         });
-    if (_ === l.OGo.PENDING_OUTGOING || _ === l.OGo.PENDING_INCOMING)
+    if (_ === s.OGo.PENDING_OUTGOING || _ === s.OGo.PENDING_INCOMING)
         return (0, o.jsxs)('div', {
             className: u.container,
             children: [
@@ -53,7 +53,7 @@ function f(e) {
             ]
         });
     let x = I.length > 0 || y || h;
-    return _ === l.OGo.NONE && x
+    return _ === s.OGo.NONE && x
         ? (0, o.jsxs)('div', {
               className: u.container,
               children: [

@@ -88,8 +88,8 @@ function N(e, t) {
 }
 function T(e) {
     let { placeholder: t = m.intl.string(m.t['Rn/sLi']) } = e,
-        n = i.createRef(),
-        l = i.createRef(),
+        n = i.useRef(null),
+        l = i.useRef(null),
         [o, d] = i.useReducer(N, I),
         { canSend: E, hint: O, success: T, error: P } = o,
         j = (0, p.Q3)('AddFriendInput');

@@ -65,7 +65,7 @@ function j(e) {
             emojiName: w
         }),
         E = (0, s.e7)([h.ZP], () => (null != n ? h.ZP.getDefaultChannel(n) : null)),
-        k = a.createRef(),
+        k = a.useRef(null),
         Z = (0, d.Z)(k),
         M = () => {
             O(void 0), S(void 0);

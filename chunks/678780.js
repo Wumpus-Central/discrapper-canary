@@ -1,4 +1,4 @@
-t.r(n), t.d(n, { default: () => l }), t(388685);
+t.r(n), t.d(n, { default: () => s }), t(388685);
 var o = t(255367);
 t(73800);
 var c = t(788111),
@@ -6,7 +6,7 @@ var c = t(788111),
     r = t(886794),
     a = t(4599),
     d = t(910364);
-function s(e) {
+function l(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             o = Object.keys(t);
@@ -31,7 +31,7 @@ function s(e) {
     }
     return e;
 }
-function l(e) {
+function s(e) {
     var { hideRestrictedProfile: n = !1 } = e,
         t = (function (e, n) {
             if (null == e) return {};
@@ -52,7 +52,7 @@ function l(e) {
             }
             return c;
         })(e, ['hideRestrictedProfile']);
-    let { user: l } = t,
-        [u, f] = (0, c.Z)(l.id);
-    return u && !n ? (0, o.jsx)(a.Z, s({ onHide: f }, t)) : l.isNonUserBot() ? (0, o.jsx)(r.Z, s({}, t)) : l.bot ? (0, o.jsx)(i.Z, s({}, t)) : (0, o.jsx)(d.Z, s({}, t));
+    let { user: s } = t,
+        [u, f] = (0, c.Z)(s.id);
+    return u && !n ? (0, o.jsx)(a.Z, l({ onHide: f }, t)) : s.isNonUserBot() ? (0, o.jsx)(r.Z, l({}, t)) : s.bot ? (0, o.jsx)(i.Z, l({}, t)) : (0, o.jsx)(d.Z, l({}, t));
 }

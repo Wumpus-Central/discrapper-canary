@@ -1,10 +1,10 @@
 n.d(t, { default: () => T }), n(388685);
 var i = n(255367),
-    r = n(73800),
-    l = n(512722),
-    a = n.n(l),
-    s = n(913527),
-    o = n.n(s),
+    l = n(73800),
+    r = n(512722),
+    s = n.n(r),
+    a = n(913527),
+    o = n.n(a),
     c = n(990547),
     d = n(442837),
     u = n(481060),
@@ -27,31 +27,31 @@ var i = n(255367),
     j = n(388032),
     S = n(951408);
 function T(e) {
-    let { transitionState: t, source: l } = e,
-        s = (0, d.e7)([N.default], () => N.default.getCurrentUser()),
+    let { transitionState: t, source: r } = e,
+        a = (0, d.e7)([N.default], () => N.default.getCurrentUser()),
         T = (0, d.e7)([b.Z, E.Z], () => E.Z.getChannel(b.Z.getChannelId())),
-        [p, v] = r.useState(null),
-        [M, I] = r.useState(null),
-        [G, w] = r.useState(!1),
-        [F, Y] = r.useState(0),
-        Z = r.createRef(),
-        D = r.createRef(),
+        [p, v] = l.useState(null),
+        [M, I] = l.useState(null),
+        [G, w] = l.useState(!1),
+        [F, Y] = l.useState(0),
+        Z = l.useRef(null),
+        D = l.useRef(null),
         B = (0, x.Dt)(),
-        P = (0, y.Kt)() && l !== L.L0.FAMILY_CENTER,
-        { verifyAgreementButtonText: U, verifyGateDescription: V } = (0, y.a1)(l),
-        q = l === L.L0.NSFW_SERVER || l === L.L0.NSFW_SERVER_INVITE || l === L.L0.NSFW_SERVER_INVITE_EMBED,
+        P = (0, y.Kt)() && r !== L.L0.FAMILY_CENTER,
+        { verifyAgreementButtonText: U, verifyGateDescription: V } = (0, y.a1)(r),
+        q = r === L.L0.NSFW_SERVER || r === L.L0.NSFW_SERVER_INVITE || r === L.L0.NSFW_SERVER_INVITE_EMBED,
         W = null != p ? o()().diff(p, 'years') : null;
     function K() {
-        if (l === L.L0.NSFW_SERVER_INVITE_EMBED) return void (0, R.qV)(l);
+        if (r === L.L0.NSFW_SERVER_INVITE_EMBED) return void (0, R.qV)(r);
         let e = null == T ? void 0 : T.getGuildId();
-        f.Z.nsfwReturnToSafety(e), (0, R.qV)(l);
+        f.Z.nsfwReturnToSafety(e), (0, R.qV)(r);
     }
     async function O() {
-        a()(null != p, 'Cannot submit null birthday.');
+        s()(null != p, 'Cannot submit null birthday.');
         try {
-            return I(null), w(!0), await (0, A.Av)(p, l);
+            return I(null), w(!0), await (0, A.Av)(p, r);
         } catch (t) {
-            if (null != t.body && null != t.body.date_of_birth) (0, R.C8)(l, t.body.date_of_birth);
+            if (null != t.body && null != t.body.date_of_birth) (0, R.C8)(r, t.body.date_of_birth);
             else {
                 var e;
                 (null == t || null == (e = t.body) ? void 0 : e.username) != null ? I(j.intl.string(j.t['TGg/2t'])) : I(null == t ? void 0 : t.body.message), w(!1);
@@ -59,7 +59,7 @@ function T(e) {
         }
     }
     async function X() {
-        if ((a()(null != W, "Cannot submit if we haven't been able to calculate age."), W < 18)) return void Y(1);
+        if ((s()(null != W, "Cannot submit if we haven't been able to calculate age."), W < 18)) return void Y(1);
         await O();
     }
     async function Q(e) {
@@ -68,26 +68,26 @@ function T(e) {
     async function J() {
         null == (await O()) && Y(0);
     }
-    r.useEffect(() => {
-        null != s && null != s.nsfwAllowed && (0, R.qq)(l);
+    l.useEffect(() => {
+        null != a && null != a.nsfwAllowed && (0, R.qq)(r);
     }),
-        r.useEffect(() => {
+        l.useEffect(() => {
             g.default.track(z.rMx.AGE_GATE_ACTION, {
-                source: l,
+                source: r,
                 action: L.Al.AGE_GATE_OPEN
             });
-        }, [l]);
-    let H = r.useCallback(
+        }, [r]);
+    let H = l.useCallback(
             (e) => {
                 v(e);
             },
             [v]
         ),
-        $ = r.useCallback(() => {
+        $ = l.useCallback(() => {
             var e;
             null == (e = D.current) || e.focus();
         }, [D]),
-        ee = r.useCallback(() => {
+        ee = l.useCallback(() => {
             h.Z.showAgeVerificationGetStartedModal(m.cU.NSFW_AGE_GATE);
         }, []);
     return P
@@ -139,9 +139,9 @@ function T(e) {
           })
         : 0 === F
           ? (function () {
-                let e = l === L.L0.FAMILY_CENTER ? j.intl.string(j.t.M7mt7u) : j.intl.string(j.t.F8otRk),
-                    r = (() => {
-                        switch (l) {
+                let e = r === L.L0.FAMILY_CENTER ? j.intl.string(j.t.M7mt7u) : j.intl.string(j.t.F8otRk),
+                    l = (() => {
+                        switch (r) {
                             case L.L0.FAMILY_CENTER:
                                 return j.intl.string(j.t.mhUrKS);
                             case L.L0.DEEP_LINK_PROMPT:
@@ -174,7 +174,7 @@ function T(e) {
                                         (0, i.jsx)(u.Text, {
                                             color: 'header-secondary',
                                             variant: 'text-sm/normal',
-                                            children: r
+                                            children: l
                                         })
                                     ]
                                 }),

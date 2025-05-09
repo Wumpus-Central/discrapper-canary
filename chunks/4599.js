@@ -70,7 +70,7 @@ function P(e) {
             }
         ],
         U = (0, h.ZP)(n.id, C ? w : void 0),
-        k = r.createRef();
+        k = r.useRef(null);
     return (0, l.jsx)(a.Gt, {
         value: M,
         children: (0, l.jsx)(f.Mt, {

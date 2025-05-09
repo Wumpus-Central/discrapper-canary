@@ -40,8 +40,8 @@ let U = ''.concat(m.Z.getArticleURL(k.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_so
 function V() {
     let { inputMode: e } = (0, s.cj)([d.Z], () => ({ inputMode: d.Z.getMode() })),
         t = (0, s.e7)([u.Z], () => u.Z.getSubsection()),
-        n = r.createRef(),
-        m = r.createRef();
+        n = r.useRef(null),
+        m = r.useRef(null);
     r.useEffect(() => {
         var e, i;
         t === Z.GA && (null == n || null == (e = n.current) || e.scrollIntoView(), o.Z.clearSubsection()), t === Z.gP && (null == m || null == (i = m.current) || i.scrollIntoView(), o.Z.clearSubsection());

@@ -25,7 +25,7 @@ function _(e) {
 }
 function x() {
     let e = (0, a.e7)([d.Z], () => d.Z.getSubsection()),
-        t = r.createRef(),
+        t = r.useRef(null),
         { categories: n, initialized: s } = (0, a.cj)([m.Z], () => m.Z.getEmailSettings());
     r.useEffect(() => {
         if (null == s) (0, u.Y7)();

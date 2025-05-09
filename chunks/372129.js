@@ -91,7 +91,7 @@ let g = (e) => {
     },
     p = (e) => {
         let { onChange: t, multiple: o = !0, disabled: c, className: d, tabIndex: g = -1, 'aria-label': p, filters: f, setLoading: h } = e,
-            x = i.createRef(),
+            x = i.useRef(null),
             b = i.useRef(null),
             [j, _] = i.useState(!1);
         i.useEffect(() => {

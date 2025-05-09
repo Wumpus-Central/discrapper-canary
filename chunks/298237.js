@@ -20,9 +20,9 @@ function S(e) {
         [S, A] = l.useState(null),
         [E, N] = l.useState(null),
         [O, v] = l.useState(!1),
-        w = l.createRef(),
+        w = l.useRef(null),
         T = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
-        h = l.createRef();
+        h = l.useRef(null);
     l.useEffect(() => {
         c.Z.flowStep(b.MK.ANY, b.FF.AGE_GATE), s.default.track(_.rMx.OPEN_MODAL, { type: 'Claim Age Gate' });
     }, []),

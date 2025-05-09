@@ -5,8 +5,8 @@ var o = t(442837),
     r = t(885110),
     a = t(585305),
     d = t(369566),
-    s = t(806729),
-    l = t(29899),
+    l = t(806729),
+    s = t(29899),
     u = t(708108),
     f = t(146078),
     _ = t(228168),
@@ -16,7 +16,7 @@ function m(e) {
     let { user: n, currentUser: t, guildId: m, initialSubsection: I } = e,
         { voiceActivityStatusEnabled: y } = (0, c.U)({ location: 'useUserProfileModalTabBarItems' }),
         { live: h, recent: x, stream: g, outbox: j } = (0, d.Z)(n.id),
-        { voiceChannel: O, voiceActivity: v } = (0, l.Z)({
+        { voiceChannel: O, voiceActivity: v } = (0, s.Z)({
             userId: n.id,
             guildId: m
         }),
@@ -27,7 +27,7 @@ function m(e) {
         }),
         N = null != g || h.length > 0,
         P = x.length > 0,
-        { mutualFriendsCount: T, mutualGuilds: C } = (0, s.Z)(n),
+        { mutualFriendsCount: T, mutualGuilds: C } = (0, l.Z)(n),
         w = null == C ? void 0 : C.length,
         S = (0, a.Z)(n),
         E = [

@@ -5,8 +5,8 @@ var o = t(255367),
     r = t(442837),
     a = t(481060),
     d = t(727637),
-    s = t(616780),
-    l = t(100527),
+    l = t(616780),
+    s = t(100527),
     u = t(906732),
     f = t(368326),
     _ = t(429467),
@@ -77,7 +77,7 @@ function G(e, n) {
 }
 function B(e) {
     let { user: n, currentUser: t, guildId: B, channelId: D, messageId: L, roleId: U, sessionId: V, friendToken: F, initialSection: Y, initialSubsection: W, transitionState: q, customStatusPrompt: H, openedAt: J, onClose: z, showGuildProfile: Q = !0, sourceAnalyticsLocations: $ = [] } = e,
-        { analyticsLocations: K } = (0, u.ZP)([...$, l.Z.USER_PROFILE_MODAL]),
+        { analyticsLocations: K } = (0, u.ZP)([...$, s.Z.USER_PROFILE_MODAL]),
         X = (0, I.ZB)({
             layout: 'MODAL',
             userId: n.id,
@@ -100,9 +100,9 @@ function B(e) {
         er = (0, f.p)({ location: 'UserProfileModal' }),
         ea = c.useMemo(() => (null != H ? H : (0, _.Z)()), [H]),
         ed = c.useMemo(() => (null != B ? { [B]: [n.id] } : {}), [B, n.id]);
-    (0, s.$)(ed);
-    let es = c.createRef(),
-        el = (0, d.Z)(es);
+    (0, l.$)(ed);
+    let el = c.useRef(null),
+        es = (0, d.Z)(el);
     return (0, o.jsx)(u.Gt, {
         value: K,
         children: (0, o.jsx)(I.Mt, {
@@ -123,7 +123,7 @@ function B(e) {
                             user: n,
                             displayProfile: et,
                             themeType: E.lY.MODAL,
-                            ref: es,
+                            ref: el,
                             children: [
                                 (0, o.jsxs)(Z.Z, {
                                     children: [
@@ -268,7 +268,7 @@ function B(e) {
                         (null == et ? void 0 : et.profileEffectId) != null &&
                             (0, o.jsx)(p.Z, {
                                 profileEffectId: null == et ? void 0 : et.profileEffectId,
-                                isHovering: el
+                                isHovering: es
                             })
                     ]
                 })
