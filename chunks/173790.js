@@ -4,115 +4,101 @@ var i = n(255367),
     l = n(442837),
     o = n(218061),
     a = n(481060),
-    s = n(115130),
     c = n(361213),
-    u = n(778569),
-    d = n(213459),
-    p = n(835473),
-    m = n(573188),
-    f = n(541099),
-    h = n(827498),
-    b = n(783097),
-    _ = n(753972),
-    y = n(387658),
-    v = n(536650),
-    x = n(675993),
-    C = n(689079),
-    g = n(388032),
-    j = n(189102),
-    P = n(413097);
+    s = n(778569),
+    u = n(213459),
+    d = n(835473),
+    p = n(541099),
+    m = n(827498),
+    f = n(783097),
+    h = n(753972),
+    b = n(387658),
+    _ = n(536650),
+    C = n(675993),
+    v = n(689079),
+    x = n(388032),
+    y = n(189102),
+    g = n(413097);
 function N(e) {
     var t;
-    let { context: n, application: c, sectionName: u, showFriendsTab: N } = e,
-        E = 'channel' === n.type ? n.channel : void 0,
-        A = (0, l.e7)([f.Z], () => f.Z.entrypoint()),
-        I = null != (t = (0, p.q)(c.id === C.bi.BUILT_IN ? null : c.id)) ? t : c,
-        S = (0, l.e7)([s.Z], () => s.Z.inDevModeForApplication(I.id)),
-        T = (0, b.ye)(I) ? O : x.Z,
-        { enabled: w } = m.X.useExperiment({ location: 'AppLauncherApplicationViewScreen' }),
-        L = r.useRef(null),
-        [R, Z] = r.useState(!1),
-        { iconURL: k, name: M } = r.useMemo(
+    let { context: n, application: c, sectionName: s } = e,
+        N = 'channel' === n.type ? n.channel : void 0,
+        P = (0, l.e7)([p.Z], () => p.Z.entrypoint()),
+        E = null != (t = (0, d.q)(c.id === v.bi.BUILT_IN ? null : c.id)) ? t : c,
+        A = (0, f.ye)(E) ? j : C.Z,
+        I = r.useRef(null),
+        [O, S] = r.useState(!1),
+        { iconURL: T, name: L } = r.useMemo(
             () =>
-                (0, b.sl)(I, {
-                    fakeAppIconURL: P,
+                (0, f.sl)(E, {
+                    fakeAppIconURL: g,
                     size: 84
                 }),
-            [I]
+            [E]
         ),
-        D = (0, d.PL)(!0, !0),
-        B = (0, d.LD)(null == E ? void 0 : E.guild_id, !0),
-        U = r.useMemo(() => (0, d.If)(n, I.id), [D, B, n, I.id]),
-        H = !U.isGuildInstalled && !U.isUserInstalled;
+        R = (0, u.PL)(!0, !0),
+        w = (0, u.LD)(null == N ? void 0 : N.guild_id, !0),
+        Z = r.useMemo(() => (0, u.If)(n, E.id), [R, w, n, E.id]),
+        k = !Z.isGuildInstalled && !Z.isUserInstalled;
     return (
         r.useEffect(() => {
-            H && d.ZP.queryInstallOnDemandApp(I.id, null == E ? void 0 : E.id);
-        }, [I.id, null == E ? void 0 : E.id, H]),
+            k && u.ZP.queryInstallOnDemandApp(E.id, null == N ? void 0 : N.id);
+        }, [E.id, null == N ? void 0 : N.id, k]),
         (0, i.jsxs)(a.u2D, {
-            className: j.container,
+            className: y.container,
             fade: !0,
-            ref: L,
+            ref: I,
             role: 'region',
-            'aria-label': g.intl.formatToPlainString(g.t['4OP4Ul'], { applicationName: M }),
+            'aria-label': x.intl.formatToPlainString(x.t['4OP4Ul'], { applicationName: L }),
             children: [
-                (0, i.jsx)(v.Z, {
-                    application: I,
+                (0, i.jsx)(_.Z, {
+                    application: E,
                     context: n,
-                    name: M,
-                    iconURL: k,
-                    scrollerRef: L,
-                    sectionName: u
+                    name: L,
+                    iconURL: T,
+                    scrollerRef: I,
+                    sectionName: s
                 }),
-                null != k &&
-                    (0, i.jsx)(_.Z, {
-                        src: k,
-                        className: j.appIcon
+                null != T &&
+                    (0, i.jsx)(h.Z, {
+                        src: T,
+                        className: y.appIcon
                     }),
-                (0, i.jsx)(o.Z, { size: w ? 52 : 54 }),
-                (0, i.jsx)(T, {
+                (0, i.jsx)(o.Z, { size: 54 }),
+                (0, i.jsx)(A, {
                     context: n,
-                    application: I,
-                    sectionName: u,
-                    hasCommands: R,
-                    showFriendsTab: N
+                    application: E,
+                    sectionName: s,
+                    hasCommands: O
                 }),
-                A === h._b.TEXT
-                    ? (0, i.jsx)(y.Z, {
+                P === m._b.TEXT
+                    ? (0, i.jsx)(b.Z, {
                           context: n,
-                          application: I,
-                          sectionName: u,
-                          installOnDemand: H,
-                          setHasCommands: Z
-                      })
-                    : null,
-                w
-                    ? (0, i.jsx)(x.u, {
-                          context: n,
-                          application: I,
-                          hasCommands: R,
-                          isDeveloperOfThisApp: S
+                          application: E,
+                          sectionName: s,
+                          installOnDemand: k,
+                          setHasCommands: S
                       })
                     : null
             ]
         })
     );
 }
-function O(e) {
-    let { context: t, application: n, sectionName: r, hasCommands: l, showFriendsTab: o } = e,
-        a = (0, u.Z)({
+function j(e) {
+    let { context: t, application: n, sectionName: r, hasCommands: l } = e,
+        o = (0, s.Z)({
             applicationId: n.id,
             size: 2048,
             names: ['embedded_cover']
         }),
-        s = (0, b.yJ)(n),
-        d = null != s && null != s.activity_preview_video_asset_id ? (0, c.Z)(n.id, s.activity_preview_video_asset_id) : null;
-    return (0, i.jsx)(x.Z, {
+        a = (0, f.yJ)(n),
+        u = null != a && null != a.activity_preview_video_asset_id ? (0, c.Z)(n.id, a.activity_preview_video_asset_id) : null;
+    return (0, i.jsx)(C.Z, {
         context: t,
         application: n,
-        imageCoverUrl: a.url,
-        videoUrl: d,
+        imageCoverUrl: o.url,
+        videoUrl: u,
         sectionName: r,
-        hasCommands: l,
-        showFriendsTab: o
+        hasCommands: l
     });
 }

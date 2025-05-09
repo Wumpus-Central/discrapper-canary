@@ -4,8 +4,8 @@ var i = n(255367),
     l = n(481060),
     o = n(542094),
     a = n(895924),
-    s = n(626135),
-    c = n(499254),
+    c = n(626135),
+    s = n(499254),
     u = n(541099),
     d = n(827498),
     p = n(160973),
@@ -14,51 +14,51 @@ var i = n(255367),
     h = n(176412),
     b = n(981631),
     _ = n(388032),
-    y = n(854408);
+    C = n(854408);
 function v(e) {
-    let { context: t, application: n, sectionName: v, primaryEntryPointCommand: x, buttonSize: C = l.PhG.MEDIUM } = e,
+    let { context: t, application: n, sectionName: v, primaryEntryPointCommand: x, buttonSize: y = l.PhG.MEDIUM } = e,
         g = r.useId(),
-        j = r.useCallback(() => {
-            c.yT(d.ti.ACTIVITY);
+        N = r.useCallback(() => {
+            s.yT(d.ti.ACTIVITY);
         }, []),
-        P = r.useCallback(() => {
-            u.Z.shouldShowModal() && j();
-        }, [j]),
-        { submitting: N, wasSubmitting: O } = (0, f.Z)({
+        j = r.useCallback(() => {
+            u.Z.shouldShowModal() && N();
+        }, [N]),
+        { submitting: P, wasSubmitting: E } = (0, f.Z)({
             applicationId: n.id,
             context: t,
             launchingComponentId: g,
-            onSubmissionComplete: j
+            onSubmissionComplete: N
         }),
-        [E, A] = r.useState(!1),
-        I = (0, o.Qv)({
+        [A, I] = r.useState(!1),
+        O = (0, o.Qv)({
             applicationId: n.id,
             context: t
         }),
         S = r.useMemo(() => (0, m.XZ)(x.displayName), [x.displayName]),
         {
             onActivityItemSelected: T,
-            buttonColor: w,
-            buttonText: L
+            buttonColor: L,
+            buttonText: R
         } = (0, h.P7)({
             context: t,
             application: n,
             location: a.Vh.APP_LAUNCHER_APPLICATION_VIEW,
             sectionName: v,
             commandName: S,
-            autoDismissOnClick: I === o.JS.LEAVE,
+            autoDismissOnClick: O === o.JS.LEAVE,
             launchingComponentId: g,
-            submitting: null != O ? O : N,
-            onConfirmActivityLaunchChecksAlertOpen: P
+            submitting: null != E ? E : P,
+            onConfirmActivityLaunchChecksAlertOpen: j
         }),
-        { disabled: R, reason: Z } = (0, p.Z)({
+        { disabled: w, reason: Z } = (0, p.Z)({
             context: t,
             application: n,
-            activityAction: I
+            activityAction: O
         });
     return (0, i.jsx)(l.ua7, {
         shouldShow: null != Z,
-        tooltipContentClassName: y.tooltipContent,
+        tooltipContentClassName: C.tooltipContent,
         text: Z,
         children: (e) => {
             var t,
@@ -113,24 +113,24 @@ function v(e) {
                 (r = r =
                     {
                         type: 'submit',
-                        size: C,
-                        color: w,
-                        disabled: R,
-                        submitting: E,
+                        size: y,
+                        color: L,
+                        disabled: w,
+                        submitting: A,
                         onClick: () => {
-                            A(!0),
+                            I(!0),
                                 T(),
                                 null == o || o(),
-                                s.default.track(b.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
+                                c.default.track(b.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                                     application_id: n.id,
                                     button_action: d._y.USE_APP_COMMAND
                                 });
                         },
                         'aria-label': _.intl.formatToPlainString(_.t['XjP/R0'], {
-                            buttonText: L,
+                            buttonText: R,
                             applicationName: n.name
                         }),
-                        children: L
+                        children: R
                     }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))

@@ -15,8 +15,8 @@ var r = n(73800),
     d = n(914010),
     E = n(715903),
     _ = n(981631),
-    O = n(372897),
-    I = n(526761),
+    I = n(372897),
+    O = n(526761),
     T = n(388032);
 function N(e) {
     return (0, i.e7)(
@@ -45,12 +45,12 @@ function S(e) {
                 o = s.ZP.getMember(r, l),
                 u = (0, E.Ow)(null == o ? void 0 : o.flags);
             if (0 === u.size) return t;
-            if (u.has(O.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME))
+            if (u.has(I.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME))
                 if (null == e) {
                     var _;
                     t.nick = [T.intl.formatToPlainString(T.t.WBUh3N, { guildName: null != (_ = i.name) ? _ : '' })];
                 } else t.nick = [T.intl.string(T.t.EPZCrK)];
-            return u.has(O.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [T.intl.string(T.t.dZh1v7)]), t;
+            return u.has(I.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [T.intl.string(T.t.dZh1v7)]), t;
         },
         [e]
     );
@@ -58,20 +58,20 @@ function S(e) {
 function p(e) {
     let { guildId: t, scrollPosition: n, analyticsLocation: a, analyticsLocations: s, openWithoutBackstack: d } = e,
         E = (0, i.e7)([c.Z], () => c.Z.getGuild(t), [t]),
-        O = (0, i.e7)([u.Z], () => null != E && u.Z.can(_.Plq.CHANGE_NICKNAME, E), [E]);
+        I = (0, i.e7)([u.Z], () => null != E && u.Z.can(_.Plq.CHANGE_NICKNAME, E), [E]);
     return [
         r.useCallback(() => {
             if (null == E) return;
             let e = _.oAB.PROFILE_CUSTOMIZATION,
-                t = I.NB.GUILD;
-            O ? (0, o.Fq)(E) : (t = I.NB.USER_PROFILE),
+                t = O.NB.GUILD;
+            I ? (0, o.Fq)(E) : (t = O.NB.USER_PROFILE),
                 l.Z.open(e, t, {
                     scrollPosition: n,
                     analyticsLocation: a,
                     analyticsLocations: s,
                     openWithoutBackstack: d
                 });
-        }, [O, n, a, s, d, E]),
-        O
+        }, [I, n, a, s, d, E]),
+        I
     ];
 }

@@ -35,7 +35,6 @@ e.exports = {
     headerLeft: 'headerLeft__08415',
     headerRight: 'headerRight__08415',
     sortSelect: 'sortSelect__08415',
-    sortByText: 'sortByText__08415',
     title: 'title__08415',
     informationIcon: 'informationIcon__08415',
     subHeaderText: 'subHeaderText__08415',

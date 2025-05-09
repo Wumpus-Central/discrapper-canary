@@ -5,19 +5,19 @@ var i = n(73800),
     o = n(496158);
 function a(e) {
     let { context: t, commands: n, limit: a = n.length } = e,
-        s = (0, o.D)(t),
-        c = (0, r.R)(s),
+        c = (0, o.D)(t),
+        s = (0, r.R)(c),
         u = i.useMemo(() => n.reduce((e, t) => ((e[t.id] = t), e), {}), [n]);
     return i.useMemo(
         () =>
-            c
+            s
                 .map((e) => u[e])
                 .filter((e) => null != e)
                 .sort((e, t) => {
-                    let n = l.ZP.getScoreWithoutLoadingLatest(s, e);
-                    return l.ZP.getScoreWithoutLoadingLatest(s, t) - n;
+                    let n = l.ZP.getScoreWithoutLoadingLatest(c, e);
+                    return l.ZP.getScoreWithoutLoadingLatest(c, t) - n;
                 })
                 .slice(0, a),
-        [c, u, s, a]
+        [s, u, c, a]
     );
 }

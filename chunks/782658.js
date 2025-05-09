@@ -101,7 +101,8 @@ function R(e) {
         case w.r2o.BANNED:
             W = (0, r.jsx)(N.Z, {
                 banned: M.state === w.r2o.BANNED,
-                author: n.author
+                author: n.author,
+                channelId: n.channel_id
             });
             break;
         case w.r2o.ERROR:

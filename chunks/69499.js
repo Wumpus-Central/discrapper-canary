@@ -1,5 +1,5 @@
 n.d(t, {
-    E: () => O,
+    E: () => I,
     Z: () => T
 }),
     n(388685),
@@ -27,13 +27,13 @@ function _(e, t, n) {
         e
     );
 }
-let O = {
+let I = {
     DropdownSizes: s.Z.DropdownSizes,
     Sizes: s.Z.Sizes,
     Colors: s.Z.Colors,
     Looks: s.Z.Looks
 };
-class I extends i.PureComponent {
+class O extends i.PureComponent {
     render() {
         var e, t;
         let n = this.props,
@@ -139,4 +139,4 @@ let T = l.ZP.connectStores([u.Z, c.Z], (e) => {
         skus: (null != (t = u.Z.getForApplication(n)) ? t : []).sort((e, t) => (null != r && e.id === r.id ? -1 : null != r && t.id === r.id ? 1 : e.name >= t.name ? -1 : 1)),
         primarySKU: r
     };
-})(I);
+})(O);

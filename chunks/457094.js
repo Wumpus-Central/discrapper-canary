@@ -46,8 +46,8 @@ var r = n(255367),
     Y = n(531551),
     K = n(38618),
     q = n(972830),
-    X = n(684572),
-    Q = n(584233),
+    Q = n(684572),
+    X = n(584233),
     J = n(15274),
     $ = n(434404),
     ee = n(543842),
@@ -100,8 +100,8 @@ var r = n(255367),
     eY = n(914010),
     eK = n(695103),
     eq = n(241890),
-    eX = n(897607),
-    eQ = n(417363),
+    eQ = n(897607),
+    eX = n(417363),
     eJ = n(900974),
     e$ = n(358085),
     e0 = n(998502),
@@ -195,7 +195,7 @@ let e9 = (0, m.l)((e) => {
         class extends i.Component {
             componentDidMount() {
                 let { match: e } = this.props;
-                null != e && null != e.params.inviteCode && (0, Q.x)({ code: e.params.inviteCode });
+                null != e && null != e.params.inviteCode && (0, X.x)({ code: e.params.inviteCode });
             }
             render() {
                 let { isConnected: e, defaultRoute: t, token: n, defaultRouteFallback: i } = this.props;
@@ -209,7 +209,7 @@ let e9 = (0, m.l)((e) => {
         }
     ),
     tt = (0, m.l)((0, P.e)(A.Z, null, { passProps: !1 })),
-    tn = (0, P.e)(X.default, null, { passProps: !1 }),
+    tn = (0, P.e)(Q.default, null, { passProps: !1 }),
     tr = [e3.Z5c.GUILD_BOOSTING_MARKETING(eO.Hw.guildId()), ...Array.from(e8.Vg).map((e) => e3.Z5c.CHANNEL(eO.Hw.guildId(), e))];
 function ti(e) {
     let { guildId: t, channelId: n = null, messageId: r = null, threadId: i = null } = e.params;
@@ -258,7 +258,7 @@ let tl = [
             let { match: t } = e,
                 { gameId: n, action: i } = t.params;
             return (
-                eQ.Z.whenInitialized(() => {
+                eX.Z.whenInitialized(() => {
                     ez.Z.whenInitialized(() => {
                         switch (i) {
                             case 'launch': {
@@ -453,7 +453,7 @@ class ts extends i.PureComponent {
             eh.Z.initialize(),
             I.Z.initialize(),
             en.Z.init(),
-            eX.Z.init(),
+            eQ.Z.init(),
             eJ.Z.init(),
             y.Z.initialize(),
             eZ.Z.init(),

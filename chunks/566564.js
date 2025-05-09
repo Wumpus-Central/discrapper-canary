@@ -1,8 +1,8 @@
 n.d(t, { Z: () => j });
 var r = n(255367),
     l = n(73800),
-    a = n(120356),
-    i = n.n(a),
+    i = n(120356),
+    a = n.n(i),
     o = n(685816),
     s = n(481060),
     c = n(381585),
@@ -21,7 +21,7 @@ var r = n(255367),
     x = n(806734);
 let S = (e) => {
         var t;
-        let { handleTransition: n, numVisibleItems: a, isFetchingCategories: s, tab: u, isFullScreen: v } = e,
+        let { handleTransition: n, numVisibleItems: i, isFetchingCategories: s, tab: u, isFullScreen: v } = e,
             { noCache: O, includeUnpublished: S } = (0, p.Z)(),
             j = (0, c.sp)(),
             y = null != (t = null == j ? void 0 : j.sessionId) ? t : '';
@@ -95,7 +95,7 @@ let S = (e) => {
                     (0, r.jsx)(h.Z, {
                         isLoading: P,
                         handleTransition: n,
-                        numVisibleItems: a,
+                        numVisibleItems: i,
                         tab: u
                     })
                 ]
@@ -134,7 +134,7 @@ let S = (e) => {
                         {
                             isLoading: P || s,
                             handleTransition: n,
-                            numVisibleItems: a,
+                            numVisibleItems: i,
                             sortedSkuIds: c,
                             tab: u
                         },
@@ -169,7 +169,7 @@ let S = (e) => {
             return (0, r.jsx)(
                 'div',
                 {
-                    className: i()(x.blockContainer, { [x.topBlockContainer]: 0 === t }),
+                    className: a()(x.blockContainer, { [x.topBlockContainer]: 0 === t }),
                     children: l
                 },
                 t
@@ -178,21 +178,21 @@ let S = (e) => {
         return (0, r.jsx)(r.Fragment, { children: k.map((e, t) => I(e, t)) });
     },
     j = (e) => {
-        let { isFullScreen: t, handleTransition: n, numVisibleItems: l, tab: a, isFetchingCategories: o } = e,
+        let { isFullScreen: t, handleTransition: n, numVisibleItems: l, tab: i, isFetchingCategories: o } = e,
             c = (0, u.R)('CollectiblesFeedShop');
         return (0, r.jsx)('div', {
-            className: i()(x.shop, { [x.shopFullscreen]: t }),
+            className: a()(x.shop, { [x.shopFullscreen]: t }),
             children: (0, r.jsxs)('div', {
-                className: i()(x.content, x.mainContent),
+                className: a()(x.content, x.mainContent),
                 children: [
                     (0, r.jsx)(S, {
                         handleTransition: n,
                         numVisibleItems: l,
                         isFetchingCategories: o,
-                        tab: a,
+                        tab: i,
                         isFullScreen: t
                     }),
-                    a !== v.AW.CATALOG &&
+                    i !== v.AW.CATALOG &&
                         l >= c &&
                         (0, r.jsxs)('div', {
                             className: x.endOfFeed,

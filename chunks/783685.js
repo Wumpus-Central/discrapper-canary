@@ -4,21 +4,21 @@ var i = n(255367),
     l = n(481060),
     o = n(626135),
     a = n(827498),
-    s = n(915346),
-    c = n(981631),
+    c = n(915346),
+    s = n(981631),
     u = n(388032);
 function d(e) {
     let { botUserId: t, applicationId: n, buttonSize: d, analyticsLocations: p } = e,
         [m, f] = r.useState(!1),
         h = r.useRef(null),
         b = r.useCallback(async () => {
-            o.default.track(c.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
+            o.default.track(s.rMx.APP_DETAIL_PAGE_ENTRY_POINT_COMMAND_BUTTON_CLICKED, {
                 application_id: n,
                 button_action: a._y.OPEN_APP_DM
             }),
                 f(!0);
             try {
-                await (0, s.W)({
+                await (0, c.W)({
                     appId: n,
                     botId: t,
                     analyticsLocations: p

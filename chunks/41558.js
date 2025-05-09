@@ -4,12 +4,12 @@ var i,
     l = n(73800),
     o = n(481060),
     a = n(388032),
-    s = n(780775),
-    c = (((i = c || {})[(i.VIEW_MORE = 0)] = 'VIEW_MORE'), (i[(i.VIEW_LESS = 1)] = 'VIEW_LESS'), i);
+    c = n(780775),
+    s = (((i = s || {})[(i.VIEW_MORE = 0)] = 'VIEW_MORE'), (i[(i.VIEW_LESS = 1)] = 'VIEW_LESS'), i);
 function u(e) {
     let { title: t, buttonType: n, onClickViewButton: i } = e;
     return (0, r.jsxs)('div', {
-        className: s.header,
+        className: c.header,
         children: [
             (0, r.jsx)(o.Text, {
                 variant: 'text-md/medium',
@@ -19,7 +19,7 @@ function u(e) {
             null != n &&
                 null != i &&
                 (0, r.jsx)(o.P3F, {
-                    className: s.viewMore,
+                    className: c.viewMore,
                     onClick: i,
                     'aria-label': a.intl.formatToPlainString(a.t['bj/2kZ'], { title: t }),
                     children: (0, r.jsx)(o.Text, {
@@ -31,14 +31,14 @@ function u(e) {
         ]
     });
 }
-(u.buttonTypes = c),
+(u.buttonTypes = s),
     (u.Loading = function () {
         let e = l.useMemo(() => ({ width: ''.concat(10 + 20 * Math.random(), '%') }), []);
         return (0, r.jsx)('div', {
-            className: s.loadingHeader,
+            className: c.loadingHeader,
             style: e,
             children: (0, r.jsx)(o.Text, {
-                className: s.hidden,
+                className: c.hidden,
                 variant: 'text-md/medium',
                 color: 'header-primary',
                 children: '_'

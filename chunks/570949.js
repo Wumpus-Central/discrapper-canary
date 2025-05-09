@@ -8,8 +8,8 @@ var i = n(255367),
     l = n(239091),
     o = n(299206),
     a = n(276022),
-    s = n(695346),
-    c = n(914010),
+    c = n(695346),
+    s = n(914010),
     u = n(499254),
     d = n(827498),
     p = n(314734),
@@ -17,7 +17,7 @@ var i = n(255367),
 function f(e) {
     var t;
     let { application: n } = e,
-        i = null != (t = c.Z.getGuildId()) ? t : void 0;
+        i = null != (t = s.Z.getGuildId()) ? t : void 0;
     return (0, a.Z)({
         application: n,
         guildId: i,
@@ -28,8 +28,8 @@ function f(e) {
 }
 function h(e) {
     let { application: t, onSelect: n } = e,
-        a = s.Sb.useSetting(),
-        c = (0, o.Z)({
+        a = c.Sb.useSetting(),
+        s = (0, o.Z)({
             id: t.id,
             label: m.intl.string(m.t['+NP/b2'])
         }),
@@ -39,6 +39,6 @@ function h(e) {
         onClose: l.Zy,
         'aria-label': m.intl.string(m.t.WkcHT0),
         onSelect: n,
-        children: [null != u && (0, i.jsxs)(r.kSQ, { children: [...u] }, 'manage-app-actions'), a && (0, i.jsx)(r.kSQ, { children: c }, 'developer-actions')]
+        children: [null != u && (0, i.jsxs)(r.kSQ, { children: [...u] }, 'manage-app-actions'), a && (0, i.jsx)(r.kSQ, { children: s }, 'developer-actions')]
     });
 }

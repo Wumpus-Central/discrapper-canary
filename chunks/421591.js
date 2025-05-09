@@ -1,31 +1,30 @@
-n.d(t, { Z: () => x }), n(388685), n(482853);
+n.d(t, { Z: () => v }), n(388685), n(482853);
 var i = n(255367),
     r = n(73800),
     l = n(481060),
     o = n(100527),
     a = n(367907),
-    s = n(906732),
-    c = n(541099),
+    c = n(906732),
+    s = n(541099),
     u = n(695676),
-    d = n(176412),
-    p = n(173790),
-    m = n(692656),
-    f = n(684256),
-    h = n(314734),
-    b = n(981631),
-    _ = n(899429);
-let y = {
-        width: h.Gy,
-        height: (0, d.DK)()
+    d = n(173790),
+    p = n(692656),
+    m = n(684256),
+    f = n(314734),
+    h = n(981631),
+    b = n(899429);
+let _ = {
+        width: f.Gy,
+        height: f.lv
     },
-    v = { height: (0, d.DK)() },
-    x = r.memo(
+    C = { height: f.lv },
+    v = r.memo(
         r.forwardRef(function (e, t) {
             let { context: n, entrypoint: l, initHistory: u } = e,
-                { analyticsLocations: d } = (0, s.ZP)(o.Z.APP_LAUNCHER);
+                { analyticsLocations: d } = (0, c.ZP)(o.Z.APP_LAUNCHER);
             return (
                 r.useEffect(() => {
-                    (0, a.yw)(b.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
+                    (0, a.yw)(h.rMx.APPLICATION_COMMAND_TOP_OF_FUNNEL, {
                         source: l,
                         location: 'app_launcher'
                     });
@@ -33,24 +32,24 @@ let y = {
                 r.useEffect(() => {
                     let e = Date.now();
                     return () => {
-                        (0, a.yw)(b.rMx.APP_LAUNCHER_CLOSED, {
-                            reason: c.Z.closeReason(),
+                        (0, a.yw)(h.rMx.APP_LAUNCHER_CLOSED, {
+                            reason: s.Z.closeReason(),
                             time_spent: Date.now() - e,
                             source: l
                         });
                     };
                 }, [l]),
                 (0, i.jsx)('div', {
-                    className: _.drawerSizingWrapper,
+                    className: b.drawerSizingWrapper,
                     ref: t,
-                    style: y,
+                    style: _,
                     children: (0, i.jsx)('div', {
-                        className: _.contentWrapper,
-                        children: (0, i.jsx)(s.Gt, {
+                        className: b.contentWrapper,
+                        children: (0, i.jsx)(c.Gt, {
                             value: d,
-                            children: (0, i.jsx)(C, {
+                            children: (0, i.jsx)(x, {
                                 initHistory: u,
-                                children: (0, i.jsx)(g, {
+                                children: (0, i.jsx)(y, {
                                     context: n,
                                     entrypoint: l
                                 })
@@ -61,11 +60,11 @@ let y = {
             );
         })
     );
-function C(e) {
+function x(e) {
     let { initHistory: t, children: n } = e,
         [l, o] = r.useState(null != t ? t : [{ type: u.gc.HOME }]),
-        [a, s] = r.useState({}),
-        c = l[l.length - 1],
+        [a, c] = r.useState({}),
+        s = l[l.length - 1],
         [d, p] = r.useState(!1),
         m = r.useCallback((e) => {
             o((t) => [...t, e]);
@@ -73,7 +72,7 @@ function C(e) {
         f = r.useCallback(() => {
             let e = null;
             o((t) => (t.length <= 1 ? t : ((e = t[t.length - 1]), t.slice(0, -1)))),
-                s((t) => {
+                c((t) => {
                     var n, i;
                     return null == e
                         ? t
@@ -129,7 +128,7 @@ function C(e) {
         value: {
             history: l,
             discard: a,
-            currentView: c,
+            currentView: s,
             pushHistory: m,
             goBack: f,
             getMostRecentHistoryItemByType: h,
@@ -139,10 +138,10 @@ function C(e) {
         children: n
     });
 }
-function g(e) {
+function y(e) {
     let { context: t, entrypoint: n } = e,
         [o, a] = r.useState(''),
-        { setScroller: s, isCloseToBottom: c } = (function (e) {
+        { setScroller: c, isCloseToBottom: s } = (function (e) {
             let [t, n] = r.useState(null),
                 [i, l] = r.useState(!1),
                 o = r.useRef(0);
@@ -160,7 +159,7 @@ function g(e) {
                             }
                         );
                     function e() {
-                        null != t && ((o.current = t.scrollTop), l(t.scrollHeight - (t.scrollTop + t.clientHeight) < 0.5 * (0, d.cr)()));
+                        null != t && ((o.current = t.scrollTop), l(t.scrollHeight - (t.scrollTop + t.clientHeight) < 0.5 * f.K7));
                     }
                 }, [t]),
                 {
@@ -169,29 +168,29 @@ function g(e) {
                 }
             );
         })(o),
-        { currentView: b, getMostRecentHistoryItemByType: y, setSlideReady: x } = (0, u.hH)();
+        { currentView: h, getMostRecentHistoryItemByType: _, setSlideReady: v } = (0, u.hH)();
     r.useEffect(() => {
-        x(!1);
-    }, [null == b ? void 0 : b.type, x]);
-    let C = r.useCallback(() => {
-        x(!0);
-    }, [x]);
-    if (null == b) return null;
-    let g = y(u.gc.LIST),
-        j = y(u.gc.APPLICATION);
+        v(!1);
+    }, [null == h ? void 0 : h.type, v]);
+    let x = r.useCallback(() => {
+        v(!0);
+    }, [v]);
+    if (null == h) return null;
+    let y = _(u.gc.LIST),
+        g = _(u.gc.APPLICATION);
     return (0, i.jsxs)(l.MyZ, {
-        activeSlide: b.type,
-        width: h.Gy,
-        onSlideReady: C,
+        activeSlide: h.type,
+        width: f.Gy,
+        onSlideReady: x,
         children: [
             (0, i.jsx)(l.Mi4, {
                 id: u.gc.HOME,
                 children: (0, i.jsx)('div', {
-                    className: _.slideContent,
-                    style: v,
-                    children: (0, i.jsx)(m.Z, {
-                        isScrollCloseToBottom: c,
-                        setScroller: s,
+                    className: b.slideContent,
+                    style: C,
+                    children: (0, i.jsx)(p.Z, {
+                        isScrollCloseToBottom: s,
+                        setScroller: c,
                         context: t,
                         entrypoint: n,
                         searchQuery: o,
@@ -202,33 +201,32 @@ function g(e) {
             (0, i.jsx)(l.Mi4, {
                 id: u.gc.LIST,
                 children: (0, i.jsx)('div', {
-                    className: _.slideContent,
-                    style: v,
+                    className: b.slideContent,
+                    style: C,
                     children:
-                        null != g &&
-                        (0, i.jsx)(f.Z, {
+                        null != y &&
+                        (0, i.jsx)(m.Z, {
                             context: t,
                             entrypoint: n,
-                            title: g.title,
-                            look: g.look,
-                            items: g.items,
-                            sectionName: g.sectionName,
-                            sectionOverallPosition: g.sectionOverallPosition
+                            title: y.title,
+                            look: y.look,
+                            items: y.items,
+                            sectionName: y.sectionName,
+                            sectionOverallPosition: y.sectionOverallPosition
                         })
                 })
             }),
             (0, i.jsx)(l.Mi4, {
                 id: u.gc.APPLICATION,
                 children: (0, i.jsx)('div', {
-                    className: _.slideContent,
-                    style: v,
+                    className: b.slideContent,
+                    style: C,
                     children:
-                        null != j &&
-                        (0, i.jsx)(p.Z, {
+                        null != g &&
+                        (0, i.jsx)(d.Z, {
                             context: t,
-                            application: j.application,
-                            sectionName: j.sectionName,
-                            showFriendsTab: !!j.showFriendsTab
+                            application: g.application,
+                            sectionName: g.sectionName
                         })
                 })
             })

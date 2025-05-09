@@ -1,8 +1,8 @@
 n.d(t, { q: () => g });
 var r = n(255367),
     l = n(73800),
-    a = n(120356),
-    i = n.n(a),
+    i = n(120356),
+    a = n.n(i),
     o = n(180650),
     s = n(622535),
     c = n(481060),
@@ -12,7 +12,7 @@ var r = n(255367),
     f = n(388032),
     p = n(806734);
 let g = (e) => {
-    var t, n, a;
+    var t, n, i;
     let g,
         { category: h, subblock: m, badgeText: _, handleTransition: C } = e;
     null != m && (g = null == (t = u.Z.getCategoryByStoreListingId(null == m ? void 0 : m.categoryStoreListingId)) ? void 0 : t.skuId);
@@ -41,8 +41,8 @@ let g = (e) => {
                 null != y &&
                     (0, r.jsx)(c.X6q, {
                         lineClamp: 4,
-                        className: i()(p.featuredBlockBodyText, { [p.featuredBlockNameplate]: j }),
-                        style: { color: null != (a = null == m ? void 0 : m.bannerTextColor) ? a : 'white' },
+                        className: a()(p.featuredBlockBodyText, { [p.featuredBlockNameplate]: j }),
+                        style: { color: null != (i = null == m ? void 0 : m.bannerTextColor) ? i : 'white' },
                         variant: 'heading-lg/semibold',
                         children: y
                     }),

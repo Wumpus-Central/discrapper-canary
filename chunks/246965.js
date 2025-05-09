@@ -11,8 +11,8 @@ var i = n(990547),
     d = n(639119),
     E = n(474936),
     _ = n(981631),
-    O = n(388032),
-    I = n(131715);
+    I = n(388032),
+    O = n(131715);
 let T = function (e) {
     var t;
     let { dismissCurrentNotice: n, subscriptionTier: T } = e,
@@ -57,14 +57,14 @@ let T = function (e) {
                   (0, r.jsx)(l.SrA, {
                       size: 'md',
                       color: 'currentColor',
-                      className: I.premiumIcon
+                      className: O.premiumIcon
                   }),
                   (function (e, t) {
                       switch (e) {
                           case E.Si.TIER_0:
-                              return t.days > 0 ? O.intl.formatToPlainString(O.t.sP5OqK, { days: t.days }) : t.hours > 0 ? O.intl.formatToPlainString(O.t['7Lhfu7'], { hours: t.hours }) : O.intl.formatToPlainString(O.t.coDiS0, { minutes: Math.max(t.minutes, 1) });
+                              return t.days > 0 ? I.intl.formatToPlainString(I.t.sP5OqK, { days: t.days }) : t.hours > 0 ? I.intl.formatToPlainString(I.t['7Lhfu7'], { hours: t.hours }) : I.intl.formatToPlainString(I.t.coDiS0, { minutes: Math.max(t.minutes, 1) });
                           case E.Si.TIER_2:
-                              return t.days > 0 ? O.intl.formatToPlainString(O.t['4prs5e'], { days: t.days }) : t.hours > 0 ? O.intl.formatToPlainString(O.t.OD5nIS, { hours: t.hours }) : O.intl.formatToPlainString(O.t.rvyXjI, { minutes: Math.max(t.minutes, 1) });
+                              return t.days > 0 ? I.intl.formatToPlainString(I.t['4prs5e'], { days: t.days }) : t.hours > 0 ? I.intl.formatToPlainString(I.t.OD5nIS, { hours: t.hours }) : I.intl.formatToPlainString(I.t.rvyXjI, { minutes: Math.max(t.minutes, 1) });
                           default:
                               throw Error('Unsupported subscription tier: '.concat(e));
                       }
@@ -85,9 +85,9 @@ let T = function (e) {
                       children: (function (e) {
                           switch (e) {
                               case E.Si.TIER_0:
-                                  return O.intl.string(O.t.mCG029);
+                                  return I.intl.string(I.t.mCG029);
                               case E.Si.TIER_2:
-                                  return O.intl.string(O.t['7590PT']);
+                                  return I.intl.string(I.t['7590PT']);
                               default:
                                   throw Error('Unsupported subscription tier: '.concat(e));
                           }

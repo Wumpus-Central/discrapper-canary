@@ -11,16 +11,16 @@ var i = n(442837),
     d = n(231757),
     E = n(674525),
     _ = n(963249),
-    O = n(346585),
-    I = n(303172),
+    I = n(346585),
+    O = n(303172),
     T = n(463230),
     N = n(246965),
     S = n(703656),
     p = n(706454),
     R = n(914010),
     A = n(594174),
-    f = n(933429),
-    P = n(395361),
+    P = n(933429),
+    f = n(395361),
     C = n(626135),
     D = n(243778),
     g = n(921944),
@@ -31,10 +31,10 @@ var i = n(442837),
     U = n(131715);
 let M = (e) => {
     let { dismissibleContent: t, noticeType: M } = e,
-        Z = (0, i.e7)([f.ZP], () => f.ZP.getNotice()),
-        L = (0, i.e7)([p.default], () => p.default.locale),
-        v = (0, i.e7)([A.default], () => A.default.getCurrentUser()),
-        k = (0, i.e7)([R.Z], () => R.Z.getGuildId());
+        L = (0, i.e7)([P.ZP], () => P.ZP.getNotice()),
+        Z = (0, i.e7)([p.default], () => p.default.locale),
+        k = (0, i.e7)([A.default], () => A.default.getCurrentUser()),
+        v = (0, i.e7)([R.Z], () => R.Z.getGuildId());
     return (0, r.jsx)(D.ZP, {
         contentTypes: [t],
         groupName: g.R.NOTICE_BAR,
@@ -102,7 +102,7 @@ let M = (e) => {
                                 onClick: () => i(g.L.UNKNOWN),
                                 noticeType: M
                             }),
-                            (0, r.jsx)(P.Z, { className: U.platformIcon }),
+                            (0, r.jsx)(f.Z, { className: U.platformIcon }),
                             b.intl.string(b.t['5NUVHB']),
                             (0, r.jsx)(o.NoS, {
                                 onClick: () =>
@@ -211,7 +211,7 @@ let M = (e) => {
                     });
                 case l.z.NAGBAR_NOTICE_LOCALIZED_PRICING:
                     return (0, r.jsx)(T.Z, {
-                        notice: Z,
+                        notice: L,
                         noticeType: M,
                         dismissCurrentNotice: () => i(g.L.UNKNOWN)
                     });
@@ -262,7 +262,7 @@ let M = (e) => {
                             }),
                             b.intl.format(b.t.pdYZys, {}),
                             (0, r.jsx)(o.NoS, {
-                                onClick: () => (0, I.Z)(m.Kq.NOTICE),
+                                onClick: () => (0, O.Z)(m.Kq.NOTICE),
                                 noticeType: M,
                                 children: b.intl.string(b.t.LhlgY2)
                             })
@@ -276,9 +276,9 @@ let M = (e) => {
                                 onClick: () => i(g.L.UNKNOWN),
                                 noticeType: M
                             }),
-                            b.intl.format(b.t.zT1hgo, { date: (0, O.IE)(L) }),
+                            b.intl.format(b.t.zT1hgo, { date: (0, I.IE)(Z) }),
                             (0, r.jsx)(o.NoS, {
-                                onClick: () => (0, I.Z)(m.Kq.NOTICE),
+                                onClick: () => (0, O.Z)(m.Kq.NOTICE),
                                 noticeType: M,
                                 children: b.intl.string(b.t.LhlgY2)
                             })
@@ -318,7 +318,7 @@ let M = (e) => {
                             b.intl.string(b.t['Aa+l7e']),
                             (0, r.jsx)(o.NoS, {
                                 onClick: () => {
-                                    window.open('https://discord.sjc1.qualtrics.com/jfe/form/SV_5uP0NWTpoXsYSUu?user_id='.concat(null == v ? void 0 : v.id, '&guild_id=').concat(k), '_blank'), i(g.L.TAKE_ACTION);
+                                    window.open('https://discord.sjc1.qualtrics.com/jfe/form/SV_5uP0NWTpoXsYSUu?user_id='.concat(null == k ? void 0 : k.id, '&guild_id=').concat(v), '_blank'), i(g.L.TAKE_ACTION);
                                 },
                                 noticeType: y.kVF.REPORT_TO_MOD_SURVEY,
                                 children: b.intl.string(b.t['iT+wQ0'])

@@ -4,16 +4,16 @@ var i = n(73800),
     l = n.n(r),
     o = n(911969),
     a = n(254711),
-    s = n(213459),
-    c = n(10718),
+    c = n(213459),
+    s = n(10718),
     u = n(148958),
     d = n(689079);
 function p(e) {
     var t;
     let { context: n } = e,
         r = 'channel' === n.type ? n.channel : void 0,
-        p = (0, s.LD)(null == r ? void 0 : r.guild_id, !0),
-        { commandsByActiveSection: m, loading: f } = c.wi({
+        p = (0, c.LD)(null == r ? void 0 : r.guild_id, !0),
+        { commandsByActiveSection: m, loading: f } = s.wi({
             context: n,
             filters: {
                 commandTypes: [o.yU.CHAT, o.yU.PRIMARY_ENTRY_POINT]

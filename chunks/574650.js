@@ -1,4 +1,4 @@
-n.d(t, { Z: () => f }), n(539854), n(388685);
+n.d(t, { Z: () => P }), n(539854), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -11,8 +11,8 @@ var i = n(120356),
     d = n(693546),
     E = n(305325),
     _ = n(246364),
-    O = n(983736),
-    I = n(937111),
+    I = n(983736),
+    O = n(937111),
     T = n(981631),
     N = n(176505),
     S = n(388032),
@@ -43,15 +43,15 @@ function A(e) {
     }
     return e;
 }
-let f = () => {
+let P = () => {
     var e, t;
     let i = (0, a.e7)([u.Z], () => u.Z.getGuildId(), []),
-        f = (0, a.e7)([c.Z], () => c.Z.getGuild(i), [i]),
-        P = (0, a.e7)([I.Z], () => (null != i ? I.Z.getRequest(i) : null), [i]),
+        P = (0, a.e7)([c.Z], () => c.Z.getGuild(i), [i]),
+        f = (0, a.e7)([O.Z], () => (null != i ? O.Z.getRequest(i) : null), [i]),
         C = (0, o.TH)(),
-        D = (null == (e = (0, o.LX)(C.pathname, T.Z5c.CHANNEL(null == f ? void 0 : f.id, N.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
-    if (null == f || !(0, O.Dc)(f) || D) return null;
-    let g = null != (t = null == P ? void 0 : P.applicationStatus) ? t : _.wB.STARTED,
+        D = (null == (e = (0, o.LX)(C.pathname, T.Z5c.CHANNEL(null == P ? void 0 : P.id, N.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
+    if (null == P || !(0, I.Dc)(P) || D) return null;
+    let g = null != (t = null == f ? void 0 : f.applicationStatus) ? t : _.wB.STARTED,
         y = null,
         m = null,
         h = null,
@@ -70,7 +70,7 @@ let f = () => {
                                     header: S.intl.string(S.t.aIz1oa),
                                     confirmText: S.intl.string(S.t['cY+Ooa']),
                                     cancelText: S.intl.string(S.t['ETE/oK']),
-                                    onConfirm: () => d.Z.removeGuildJoinRequest(f.id),
+                                    onConfirm: () => d.Z.removeGuildJoinRequest(P.id),
                                     confirmButtonColor: s.zxk.Colors.BRAND
                                 },
                                 e
@@ -105,7 +105,7 @@ let f = () => {
                 (h = () => {
                     (0, s.ZDy)(async () => {
                         let { default: e } = await n.e('3378').then(n.bind(n, 76075));
-                        return (t) => (0, r.jsx)(e, A({ guildId: f.id }, t));
+                        return (t) => (0, r.jsx)(e, A({ guildId: P.id }, t));
                     });
                 }),
                 b.push(p.error);
@@ -114,7 +114,7 @@ let f = () => {
             (y = S.intl.string(S.t.G5YKXF)),
                 (m = S.intl.string(S.t['r8/DT0'])),
                 (h = () => {
-                    (0, E.hk)(f.id);
+                    (0, E.hk)(P.id);
                 });
     }
     return (0, r.jsxs)('div', {

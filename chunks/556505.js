@@ -1,15 +1,15 @@
-n.d(t, { Z: () => c }), n(388685);
+n.d(t, { Z: () => s }), n(388685);
 var i = n(255367),
     r = n(73800),
     l = n(481060),
     o = n(911969),
     a = n(388032),
-    s = n(261773);
-function c(e) {
+    c = n(261773);
+function s(e) {
     let { labelType: t, collapsed: n = !1 } = e,
-        c = t === o.ww.NEW ? a.intl.string(a.t.y2b7CA) : a.intl.string(a.t['/qdhkp']),
-        u = t === o.ww.NEW ? s.activityNewBadge : s.activityUpdatedBadge,
-        [d, p] = r.useState(n ? '' : c);
+        s = t === o.ww.NEW ? a.intl.string(a.t.y2b7CA) : a.intl.string(a.t['/qdhkp']),
+        u = t === o.ww.NEW ? c.activityNewBadge : c.activityUpdatedBadge,
+        [d, p] = r.useState(n ? '' : s);
     return (r.useEffect(() => {
         n ? p('') : t === o.ww.NEW ? p(a.intl.string(a.t.y2b7CA)) : t === o.ww.UPDATED && p(a.intl.string(a.t['/qdhkp']));
     }, [n, t]),

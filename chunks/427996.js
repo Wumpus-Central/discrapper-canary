@@ -5,8 +5,8 @@ var r = n(120356),
     l = n.n(r),
     o = n(399606),
     a = n(481060),
-    s = n(337682),
-    c = n(115130),
+    c = n(337682),
+    s = n(115130),
     u = n(388032),
     d = n(642804);
 function p(e) {
@@ -16,11 +16,11 @@ function p(e) {
             useActivityUrlOverride: p,
             filter: m
         } = (0, o.cj)(
-            [c.Z],
+            [s.Z],
             () => ({
-                activityUrlOverride: c.Z.getActivityUrlOverride(),
-                useActivityUrlOverride: c.Z.getUseActivityUrlOverride(),
-                filter: c.Z.getFilter()
+                activityUrlOverride: s.Z.getActivityUrlOverride(),
+                useActivityUrlOverride: s.Z.getUseActivityUrlOverride(),
+                filter: s.Z.getFilter()
             }),
             []
         );
@@ -30,7 +30,7 @@ function p(e) {
             (0, i.jsx)(a.XZJ, {
                 type: a.XZJ.Types.INVERTED,
                 value: p,
-                onClick: s.Y$,
+                onClick: c.Y$,
                 children: (0, i.jsx)(a.Text, {
                     variant: 'text-md/semibold',
                     children: u.intl.string(u.t['3TSGuL'])
@@ -42,7 +42,7 @@ function p(e) {
                       children: (0, i.jsx)(a.oil, {
                           disabled: !p,
                           value: null != r ? r : void 0,
-                          onChange: s.jS,
+                          onChange: c.jS,
                           placeholder: 'https://localhost:3000'
                       })
                   })
@@ -53,9 +53,9 @@ function p(e) {
                       children: (0, i.jsx)(a.E1j, {
                           className: d.searchBar,
                           query: m,
-                          onChange: s.a8,
+                          onChange: c.a8,
                           onClear: function () {
-                              s.a8('');
+                              c.a8('');
                           }
                       })
                   })

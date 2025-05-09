@@ -37,8 +37,8 @@ function _(e) {
     let t = (0, s._I)(e.username).replace(u.RN, '').replace(u.iF, '.').toLowerCase();
     return ''.concat(t).concat(e.discriminator).substring(0, 32);
 }
-let O = ['@', '#', ':'],
-    I = ['```', 'discord', 'hypesquad', 'system message', 'system mesage', 'sustem message', 'sustem mesage', 'clyde'],
+let I = ['@', '#', ':'],
+    O = ['```', 'discord', 'hypesquad', 'system message', 'system mesage', 'sustem message', 'sustem mesage', 'clyde'],
     T = ['discordtag', 'everyone', 'here', 'discord nitro', 'discord', 'snowsgiving'];
 function N(e) {
     var t;
@@ -51,9 +51,9 @@ function N(e) {
             .join('')).length < 2
     )
         return !0;
-    for (let e of O) if (n.includes(e)) return !0;
+    for (let e of I) if (n.includes(e)) return !0;
     for (let e of T) if (n === e.toLowerCase()) return !0;
-    for (let e of I) if (n.includes(e.toLowerCase())) return !0;
+    for (let e of O) if (n.includes(e.toLowerCase())) return !0;
     return !1;
 }
 function S(e) {

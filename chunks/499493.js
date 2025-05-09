@@ -1,145 +1,145 @@
-n.d(t, { Z: () => v });
-var i = n(255367),
-    r = n(73800),
-    l = n(120356),
-    o = n.n(l),
-    a = n(442837),
-    s = n(481060),
-    c = n(592125),
-    u = n(944486),
-    d = n(594174),
-    p = n(5192),
-    m = n(178762),
-    f = n(91140),
-    h = n(297781),
-    b = n(388032),
-    _ = n(152790),
-    y = n(263930);
-let v = (e) => {
-    let { entry: t, onClose: n, onReaction: l, onRequestOpen: v, disableActivityProfileLinks: x, customCTA: C, popoutClassname: g, popoutPosition: j = 'right' } = e,
-        P = r.useRef(null),
-        N = (0, a.e7)([u.Z, c.Z], () => c.Z.getChannel(u.Z.getChannelId())),
-        O = (0, a.e7)([d.default], () => d.default.getUser(t.author_id)),
-        { nick: E, avatar: A } = r.useMemo(() => {
-            let e = null == O ? void 0 : O.getAvatarURL(null == N ? void 0 : N.guild_id, 48, !1);
+r.d(t, { Z: () => x });
+var n = r(255367),
+    i = r(73800),
+    a = r(120356),
+    l = r.n(a),
+    s = r(442837),
+    o = r(481060),
+    c = r(592125),
+    u = r(944486),
+    d = r(594174),
+    m = r(5192),
+    g = r(178762),
+    f = r(91140),
+    p = r(297781),
+    O = r(388032),
+    E = r(152790),
+    h = r(263930);
+let x = (e) => {
+    let { entry: t, onClose: r, onReaction: a, onRequestOpen: x, disableActivityProfileLinks: v, customCTA: j, popoutClassname: b, popoutPosition: I = 'right' } = e,
+        y = i.useRef(null),
+        _ = (0, s.e7)([u.Z, c.Z], () => c.Z.getChannel(u.Z.getChannelId())),
+        P = (0, s.e7)([d.default], () => d.default.getUser(t.author_id)),
+        { nick: S, avatar: N } = i.useMemo(() => {
+            let e = null == P ? void 0 : P.getAvatarURL(null == _ ? void 0 : _.guild_id, 48, !1);
             return {
-                nick: p.ZP.getName(null == N ? void 0 : N.guild_id, null == N ? void 0 : N.id, O),
+                nick: m.ZP.getName(null == _ ? void 0 : _.guild_id, null == _ ? void 0 : _.id, P),
                 avatar: e
             };
-        }, [O, N]);
-    return null == O
+        }, [P, _]);
+    return null == P
         ? null
-        : (0, i.jsx)(s.yRy, {
-              targetElementRef: P,
-              position: j,
+        : (0, n.jsx)(o.yRy, {
+              targetElementRef: y,
+              position: I,
               renderPopout: (e) => {
-                  let { closePopout: r, updatePosition: o } = e;
-                  return (0, i.jsx)('div', {
-                      className: g,
-                      children: (0, i.jsx)(m.J, {
+                  let { closePopout: i, updatePosition: l } = e;
+                  return (0, n.jsx)('div', {
+                      className: b,
+                      children: (0, n.jsx)(g.J, {
                           entry: t,
-                          closePopout: r,
-                          updatePopoutPosition: o,
+                          closePopout: i,
+                          updatePopoutPosition: l,
                           onReaction: () => {
-                              null == l || l(), n(), r();
+                              null == a || a(), r(), i();
                           },
-                          onUserPopoutClosed: () => r(),
+                          onUserPopoutClosed: () => i(),
                           disableGameProfileLinks: !0,
-                          disableActivityProfileLinks: x
+                          disableActivityProfileLinks: v
                       })
                   });
               },
               positionKey: "'content-entry-".concat(t.id),
               onRequestOpen: () => {
-                  null == v || v();
+                  null == x || x();
               },
               children: (e) => {
-                  var n, r;
-                  return (0, i.jsx)(
-                      s.P3F,
-                      ((n = (function (e) {
+                  var r, i;
+                  return (0, n.jsx)(
+                      o.P3F,
+                      ((r = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
-                              var n = null != arguments[t] ? arguments[t] : {},
-                                  i = Object.keys(n);
+                              var r = null != arguments[t] ? arguments[t] : {},
+                                  n = Object.keys(r);
                               'function' == typeof Object.getOwnPropertySymbols &&
-                                  (i = i.concat(
-                                      Object.getOwnPropertySymbols(n).filter(function (e) {
-                                          return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                  (n = n.concat(
+                                      Object.getOwnPropertySymbols(r).filter(function (e) {
+                                          return Object.getOwnPropertyDescriptor(r, e).enumerable;
                                       })
                                   )),
-                                  i.forEach(function (t) {
-                                      var i;
-                                      (i = n[t]),
+                                  n.forEach(function (t) {
+                                      var n;
+                                      (n = r[t]),
                                           t in e
                                               ? Object.defineProperty(e, t, {
-                                                    value: i,
+                                                    value: n,
                                                     enumerable: !0,
                                                     configurable: !0,
                                                     writable: !0
                                                 })
-                                              : (e[t] = i);
+                                              : (e[t] = n);
                                   });
                           }
                           return e;
-                      })({ innerRef: P }, e)),
-                      (r = r =
+                      })({ innerRef: y }, e)),
+                      (i = i =
                           {
-                              className: _.profileEntryCard,
-                              children: (0, i.jsx)(s.tEY, {
+                              className: E.profileEntryCard,
+                              children: (0, n.jsx)(o.tEY, {
                                   offset: {
                                       top: 4,
                                       bottom: 4,
                                       left: 4,
                                       right: 4
                                   },
-                                  children: (0, i.jsxs)(i.Fragment, {
+                                  children: (0, n.jsxs)(n.Fragment, {
                                       children: [
-                                          (0, i.jsx)('img', {
-                                              className: _.avatar,
-                                              src: A,
-                                              alt: b.intl.formatToPlainString(b.t.IzVXxc, { userName: E })
+                                          (0, n.jsx)('img', {
+                                              className: E.avatar,
+                                              src: N,
+                                              alt: O.intl.formatToPlainString(O.t.IzVXxc, { userName: S })
                                           }),
-                                          (0, i.jsx)('div', {
-                                              className: _.playerInfo,
-                                              children: (0, i.jsxs)('div', {
-                                                  className: o()(y.column, y.gapXs),
+                                          (0, n.jsx)('div', {
+                                              className: E.playerInfo,
+                                              children: (0, n.jsxs)('div', {
+                                                  className: l()(h.column, h.gapXs),
                                                   children: [
-                                                      (0, i.jsx)(s.Text, {
+                                                      (0, n.jsx)(o.Text, {
                                                           variant: 'text-md/medium',
                                                           color: 'text-primary',
                                                           lineClamp: 1,
-                                                          children: E
+                                                          children: S
                                                       }),
-                                                      (0, i.jsx)(h.Gk, {
-                                                          location: h.Gt.APP_LAUNCHER,
-                                                          children: f.W.map((e, n) => (0, i.jsx)(e, { entry: t }, n))
+                                                      (0, n.jsx)(p.Gk, {
+                                                          location: p.Gt.APP_LAUNCHER,
+                                                          children: f.W.map((e, r) => (0, n.jsx)(e, { entry: t }, r))
                                                       })
                                                   ]
                                               })
                                           }),
-                                          null != C
-                                              ? C
-                                              : (0, i.jsx)('div', {
-                                                    className: _.reactions,
-                                                    children: (0, i.jsx)(s.n$P, { size: 'sm' })
+                                          null != j
+                                              ? j
+                                              : (0, n.jsx)('div', {
+                                                    className: E.reactions,
+                                                    children: (0, n.jsx)(o.n$P, { size: 'sm' })
                                                 })
                                       ]
                                   })
                               })
                           }),
                       Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(r))
+                          ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(i))
                           : (function (e, t) {
-                                var n = Object.keys(e);
+                                var r = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
-                                    var i = Object.getOwnPropertySymbols(e);
-                                    n.push.apply(n, i);
+                                    var n = Object.getOwnPropertySymbols(e);
+                                    r.push.apply(r, n);
                                 }
-                                return n;
-                            })(Object(r)).forEach(function (e) {
-                                Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(r, e));
+                                return r;
+                            })(Object(i)).forEach(function (e) {
+                                Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(i, e));
                             }),
-                      n)
+                      r)
                   );
               }
           });

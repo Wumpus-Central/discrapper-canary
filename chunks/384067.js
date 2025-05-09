@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h }), n(388685);
 var r = n(255367),
     l = n(73800),
-    a = n(120356),
-    i = n.n(a),
+    i = n(120356),
+    a = n.n(i),
     o = n(622535),
     s = n(481060),
     c = n(63063),
@@ -13,7 +13,7 @@ var r = n(255367),
     p = n(388032),
     g = n(806734);
 let h = (e) => {
-    var t, n, a;
+    var t, n, i;
     let { wideBannerBlock: h, handleTransition: m, tab: _ } = e,
         C = null == (t = u.Z.getCategoryByStoreListingId(h.categoryStoreListingId)) ? void 0 : t.skuId,
         v = l.useRef(null),
@@ -43,15 +43,15 @@ let h = (e) => {
         threshold: 0,
         children: (0, r.jsxs)('div', {
             ref: v,
-            className: i()(g.row, g.between, g.bannerBlockContainer, g.centeredSection, { [g.extraRounded]: E }),
+            className: a()(g.row, g.between, g.bannerBlockContainer, g.centeredSection, { [g.extraRounded]: E }),
             children: [
                 (0, r.jsx)('div', {
-                    className: i()(g.wideBannerBackgroundImg, { [g.extraRounded]: E }),
+                    className: a()(g.wideBannerBackgroundImg, { [g.extraRounded]: E }),
                     children: (0, r.jsx)('img', {
                         ref: O,
                         src: P,
                         alt: h.title,
-                        className: i()(g.wideBannerArt, { [g.wideBannerArtOrbs]: E }),
+                        className: a()(g.wideBannerArt, { [g.wideBannerArtOrbs]: E }),
                         style: { height: null != x ? ''.concat(x, 'px') : 'auto' }
                     })
                 }),
@@ -68,7 +68,7 @@ let h = (e) => {
                                 children: h.title
                             }),
                             (0, r.jsx)(s.Text, {
-                                style: { color: null != (a = h.bannerTextColor) ? a : 'var(--text-muted)' },
+                                style: { color: null != (i = h.bannerTextColor) ? i : 'var(--text-muted)' },
                                 lineClamp: 2,
                                 variant: E ? 'text-md/medium' : 'text-sm/medium',
                                 children: E ? p.intl.format(p.t.SFFP7O, { helpdeskArticle: c.Z.getArticleURL(f.BhN.VIRTUAL_CURRENCY_LEARN_MORE) }) : h.body
