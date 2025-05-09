@@ -2201,7 +2201,7 @@
   "yY60+/": "Try clearing $[]({{buildOverrideHook}}) to see if that resolves your issue.",
   "f7kbVl": "Client Build Number",
   "wy1M/v": "Client Version",
-  "1SplHx": "Detailed description (optional)",
+  "1SplHx": "Detailed description",
   "rrI4Tk": "Device",
   "EYiswc": "Issue name required",
   "j6kTIS": "Priority required",
