@@ -53,7 +53,7 @@ function w(e) {
     }
     return e;
 }
-function A(e, t) {
+function I(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -71,9 +71,9 @@ function A(e, t) {
         e
     );
 }
-function I(e) {
+function A(e) {
     var t, n, o;
-    let { transitionState: v, onClose: C, quest: D, autoplay: I, videoSessionId: L, impressionRef: R, parentModalOpenStartClockTime: M } = e,
+    let { transitionState: v, onClose: C, quest: D, autoplay: A, videoSessionId: L, impressionRef: R, parentModalOpenStartClockTime: M } = e,
         V = (0, b.il)(D),
         B = (0, f.tP)(D),
         F = (0, a.e7)([d.Z], () => d.Z.getState().theme),
@@ -159,7 +159,7 @@ function I(e) {
                                         children: (e) =>
                                             (0, r.jsx)(
                                                 c.P3F,
-                                                A(w({ className: k.progressCont }, e), {
+                                                I(w({ className: k.progressCont }, e), {
                                                     children: (0, r.jsx)(S.Z, {
                                                         quest: D,
                                                         size: 48,
@@ -184,8 +184,9 @@ function I(e) {
                             videoSessionId: L,
                             parentTransitionState: v,
                             onOptimisticProgressUpdate: Q,
-                            autoplay: I,
-                            performanceClockStartTime: M
+                            autoplay: A,
+                            performanceClockStartTime: M,
+                            onClose: C
                         }),
                         (0, r.jsxs)('div', {
                             className: k.contentFooter,
@@ -260,8 +261,8 @@ function L(e) {
               trackGuildAndChannelMetadata: !0,
               children: (e) =>
                   (0, r.jsx)(
-                      I,
-                      A(w({}, i), {
+                      A,
+                      I(w({}, i), {
                           parentModalOpenStartClockTime: o,
                           impressionRef: e,
                           quest: c,
