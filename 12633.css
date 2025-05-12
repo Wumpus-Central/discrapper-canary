@@ -44825,6 +44825,7 @@ div.mobilePushContainer__3d3b0 {
     -webkit-text-fill-color: transparent;
     filter: blur(4px);
     opacity: 0;
+    text-indent: 0;
     transition: opacity .1s ease-in-out;
     z-index: -1
 }
