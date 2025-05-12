@@ -233,6 +233,12 @@ class N extends l.Z {
     startAecDump() {}
     stopAecDump() {}
     setAecDump(e) {}
+    startRecordingRawSamples(e) {
+        throw Error('startRecordingRawSamples is not supported on browsers.');
+    }
+    stopRecordingRawSamples() {
+        throw Error('stopRecordingRawSamples is not supported on browsers.');
+    }
     createReplayConnection(e, t) {
         throw Error('Connection replay is not supported.');
     }

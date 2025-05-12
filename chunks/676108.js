@@ -64,21 +64,22 @@ function m(e) {
     var t;
     let { editorRef: n, options: f, channel: p } = e,
         m = null == (t = n.current) ? void 0 : t.getSlateEditor(),
-        g = i.useCallback(
+        g = i.useRef(null),
+        E = i.useCallback(
             (e, t) => {
                 let r = n.current;
                 null != e && null != r && r.insertEmoji(e, t, !1), t && (0, l._Q)();
             },
             [n]
         ),
-        E = (e) => {
+        b = (e) => {
             let { closePopout: t } = e;
             return (0, r.jsx)(s.Z, {
                 persistSearch: !0,
                 channel: p,
                 closePopout: t,
                 onSelectEmoji: (e, n) => {
-                    g(e, n), n && t();
+                    E(e, n), n && t();
                 },
                 pickerIntention: u.Hz.COMMUNITY_CONTENT
             });
@@ -99,7 +100,8 @@ function m(e) {
                       })
                   }),
                   (0, r.jsx)(o.yRy, {
-                      renderPopout: E,
+                      targetElementRef: g,
+                      renderPopout: b,
                       position: 'bottom',
                       animation: o.yRy.Animation.NONE,
                       align: 'left',
@@ -108,6 +110,7 @@ function m(e) {
                           return (0, r.jsx)(
                               a.Z,
                               h(_({}, e), {
+                                  ref: g,
                                   active: n,
                                   className: d.emojiButton,
                                   tabIndex: 0

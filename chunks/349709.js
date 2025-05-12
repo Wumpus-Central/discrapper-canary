@@ -77,7 +77,7 @@ function j(e) {
         T = (e) => {
             e.stopPropagation(), M();
         },
-        _ = a.useMemo(() => {
+        R = a.useMemo(() => {
             let e = null != j && '' !== j,
                 t = null != w && '' !== w,
                 n = null != P && '' !== P,
@@ -95,6 +95,7 @@ function j(e) {
         className: r()(t, b.section),
         error: i,
         children: (0, l.jsx)(o.yRy, {
+            targetElementRef: k,
             animation: o.yRy.Animation.NONE,
             position: 'top',
             renderPopout: (e) => {
@@ -121,7 +122,7 @@ function j(e) {
                                 active: n,
                                 tabIndex: 0,
                                 renderButtonContents:
-                                    !_.isDeletedCustomEmoji && (_.hasEmojiId || _.hasEmojiName)
+                                    !R.isDeletedCustomEmoji && (R.hasEmojiId || R.hasEmojiName)
                                         ? () =>
                                               (0, l.jsx)(u.Z, {
                                                   emojiName: w,
@@ -132,11 +133,11 @@ function j(e) {
                             (0, l.jsx)(o.oil, {
                                 inputClassName: b.emojiText,
                                 placeholder: y.intl.string(y.t.QTK0TE),
-                                value: !_.isDeletedCustomEmoji && _.hasEmojiDisplayName ? ':'.concat(P, ':') : '',
+                                value: !R.isDeletedCustomEmoji && R.hasEmojiDisplayName ? ':'.concat(P, ':') : '',
                                 readOnly: !0
                             }),
-                            !_.isDeletedCustomEmoji &&
-                                _.hasEmojiDisplayName &&
+                            !R.isDeletedCustomEmoji &&
+                                R.hasEmojiDisplayName &&
                                 Z &&
                                 (0, l.jsx)(
                                     c.Z,

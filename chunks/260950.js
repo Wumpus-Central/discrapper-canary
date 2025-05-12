@@ -68,7 +68,7 @@ function C() {
         [n, l] = r.useState('511651880837840896'),
         [m, v] = r.useState([]),
         [C, O] = r.useState(!1),
-        E = r.useCallback(async () => {
+        N = r.useCallback(async () => {
             try {
                 O(!0), await (0, d.jg)(), await (0, u.In)(t.id), v(await _());
             } finally {
@@ -76,23 +76,23 @@ function C() {
             }
         }, [t]);
     r.useEffect(() => {
-        E();
-    }, [E]);
-    let N = r.useMemo(() => m.filter((e) => e.status !== f.O0b.ACTIVE).sort((e, t) => (e.id > t.id ? -1 : 1)), [m]),
-        T = async () => {
+        N();
+    }, [N]);
+    let E = r.useMemo(() => m.filter((e) => e.status !== f.O0b.ACTIVE).sort((e, t) => (e.id > t.id ? -1 : 1)), [m]),
+        S = async () => {
             await o.tn.post({
                 url: '/debug/subscription',
                 body: { plan_id: n },
                 rejectWithError: !1
             }),
-                await E();
+                await N();
         },
-        S = async () => {
+        T = async () => {
             await o.tn.del({
                 url: '/debug/subscription',
                 rejectWithError: !1
             }),
-                await E();
+                await N();
         };
     return (0, a.jsx)(c.zJl, {
         className: j.panel,
@@ -111,7 +111,7 @@ function C() {
                             disabled: C,
                             look: c.zxk.Looks.BLANK,
                             size: c.zxk.Sizes.ICON,
-                            onClick: E,
+                            onClick: N,
                             children: (0, a.jsx)('span', {
                                 title: 'Refresh',
                                 children: (0, a.jsx)(c.DuK, {
@@ -137,7 +137,7 @@ function C() {
                                 }),
                                 (0, a.jsx)(c.zxk, {
                                     size: c.zxk.Sizes.SMALL,
-                                    onClick: T,
+                                    onClick: S,
                                     children: 'Create Subscription'
                                 })
                             ]
@@ -146,7 +146,7 @@ function C() {
                 null != e &&
                     (0, a.jsx)(b.Z, {
                         subscription: e,
-                        onUpdated: E
+                        onUpdated: N
                     }),
                 (0, a.jsx)(c.X6q, {
                     variant: 'heading-lg/semibold',
@@ -157,11 +157,11 @@ function C() {
                     className: i()([g.section, g.buttons]),
                     children: (0, a.jsx)(c.zxk, {
                         size: c.zxk.Sizes.SMALL,
-                        onClick: S,
+                        onClick: T,
                         children: 'End All Subscriptions'
                     })
                 }),
-                N.length > 0 &&
+                E.length > 0 &&
                     (0, a.jsxs)(a.Fragment, {
                         children: [
                             (0, a.jsx)(c.X6q, {
@@ -169,12 +169,12 @@ function C() {
                                 className: j.header,
                                 children: 'Previous Subscriptions'
                             }),
-                            N.map((e) =>
+                            E.map((e) =>
                                 (0, a.jsx)(
                                     b.Z,
                                     {
                                         subscription: e,
-                                        onUpdated: E
+                                        onUpdated: N
                                     },
                                     e.id
                                 )

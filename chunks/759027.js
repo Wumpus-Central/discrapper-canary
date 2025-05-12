@@ -75,8 +75,8 @@ function y(e) {
     var t, n, l;
     let { subscription: p, onUpdated: y } = e,
         [C, O] = r.useState(!1),
-        [E, N] = r.useState(!1),
-        [T, S] = r.useState(null),
+        [N, E] = r.useState(!1),
+        [S, T] = r.useState(null),
         P = (e) => ((null == e && (e = p.status), e in j) ? j[e] : 'Unknown status '.concat(e)),
         w = (e) => {
             let t = new Date(e);
@@ -129,13 +129,13 @@ function y(e) {
                     rejectWithError: !1
                 });
             } catch (e) {
-                S(e.body.message);
+                T(e.body.message);
             }
             y();
         },
         R = (null == (t = b.GP[p.planIdFromItems]) ? void 0 : t.premiumType) === b.p9.TIER_0,
         Z = null == (n = p.metadata) ? void 0 : n.ended_at,
-        L = null != Z ? new Date(Z).toISOString().substring(0, 10) : '';
+        A = null != Z ? new Date(Z).toISOString().substring(0, 10) : '';
     return (0, a.jsxs)('div', {
         className: i()(f.card, R ? f.gradientWrapperTier0 : f.gradientWrapperTier2),
         children: [
@@ -232,7 +232,7 @@ function y(e) {
                 children: [
                     (0, a.jsxs)(o.P3F, {
                         onClick: () => {
-                            N(!E);
+                            E(!N);
                         },
                         className: v.collapsablePaneHeader,
                         children: [
@@ -242,10 +242,10 @@ function y(e) {
                                     children: 'Modifications'
                                 })
                             }),
-                            (0, a.jsx)(c.Z, { direction: E ? c.Z.Directions.UP : c.Z.Directions.DOWN })
+                            (0, a.jsx)(c.Z, { direction: N ? c.Z.Directions.UP : c.Z.Directions.DOWN })
                         ]
                     }),
-                    E &&
+                    N &&
                         (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsx)(o.hjN, {
@@ -270,11 +270,11 @@ function y(e) {
                                             onClick: (e) => I(),
                                             children: 'Renew Subscription'
                                         }),
-                                        null !== T &&
+                                        null !== S &&
                                             (0, a.jsx)(o.kzN, {
                                                 className: v.error,
-                                                onDismiss: () => S(null),
-                                                children: T
+                                                onDismiss: () => T(null),
+                                                children: S
                                             })
                                     ]
                                 }),
@@ -298,7 +298,7 @@ function y(e) {
                                     className: v.formSection,
                                     children: (0, a.jsx)('input', {
                                         type: 'date',
-                                        value: L,
+                                        value: A,
                                         onChange: (e) => k({ endedAt: e.target.value })
                                     })
                                 })

@@ -9,8 +9,8 @@ var t = l(255367),
     u = l(933557),
     d = l(471445),
     m = l(600164),
-    j = l(313201),
-    f = l(318766),
+    f = l(313201),
+    j = l(318766),
     h = l(907040),
     x = l(273039),
     p = l(339085),
@@ -29,10 +29,11 @@ var t = l(255367),
 let T = (e) => {
     var n, l;
     let { guildId: T, welcomeChannel: Z, transitionState: w, onSave: z, onClose: I } = e,
-        D = (0, j.Dt)(),
-        [L, B] = i.useState(null != Z ? Z.channel_id : null),
+        D = i.useRef(null),
+        L = (0, f.Dt)(),
+        [B, R] = i.useState(null != Z ? Z.channel_id : null),
         [A, H] = i.useState(null != Z ? Z.description : ''),
-        [R, M] = i.useState(
+        [M, K] = i.useState(
             null != Z
                 ? {
                       id: Z.emoji_id,
@@ -40,33 +41,33 @@ let T = (e) => {
                   }
                 : null
         ),
-        [K, W] = i.useState(!1),
-        Y = (0, o.e7)([p.ZP], () => ((null == R ? void 0 : R.id) != null ? p.ZP.getUsableCustomEmojiById(R.id) : null)),
-        q = (0, o.e7)([g.ZP], () => g.ZP.getChannels(T)[g.sH], [T]),
-        G = (0, o.e7)([N.Z], () => N.Z.get(T)),
-        V = null != (l = null == G || null == (n = G.welcome_channels) ? void 0 : n.map((e) => e.channel_id)) ? l : [],
-        [X, $] = i.useState(!1);
+        [W, Y] = i.useState(!1),
+        q = (0, o.e7)([p.ZP], () => ((null == M ? void 0 : M.id) != null ? p.ZP.getUsableCustomEmojiById(M.id) : null)),
+        G = (0, o.e7)([g.ZP], () => g.ZP.getChannels(T)[g.sH], [T]),
+        V = (0, o.e7)([N.Z], () => N.Z.get(T)),
+        X = null != (l = null == V || null == (n = V.welcome_channels) ? void 0 : n.map((e) => e.channel_id)) ? l : [],
+        [$, U] = i.useState(!1);
     i.useEffect(() => {
-        r.K.get(O.S) || setTimeout(() => $(!0), 300);
+        r.K.get(O.S) || setTimeout(() => U(!0), 300);
     }, []);
-    let U = [];
-    q.forEach((e) => {
+    let F = [];
+    G.forEach((e) => {
         let { channel: n } = e;
         v.Uu(y.Plq.VIEW_CHANNEL, n) &&
-            ((null == Z ? void 0 : Z.channel_id) === n.id || !V.includes(n.id)) &&
-            U.push({
+            ((null == Z ? void 0 : Z.channel_id) === n.id || !X.includes(n.id)) &&
+            F.push({
                 value: n.id,
                 label: (0, u.F6)(n, _.default, C.Z)
             });
     });
-    let F = () => {
-            $(!1), I();
+    let J = () => {
+            U(!1), I();
         },
-        J = i.useCallback((e) => H(e), []),
-        Q = (e) => {
+        Q = i.useCallback((e) => H(e), []),
+        ee = (e) => {
             var n, l, t;
-            if (null == e) return void M(null);
-            M(
+            if (null == e) return void K(null);
+            K(
                 null != e.id
                     ? {
                           id: null != (n = e.id) ? n : null,
@@ -78,35 +79,35 @@ let T = (e) => {
                       }
             );
         },
-        ee = i.useCallback(() => {
-            r.K.set(O.S, !0), $(!1);
+        en = i.useCallback(() => {
+            r.K.set(O.S, !0), U(!1);
         }, []);
     return (0, t.jsx)(c.Z, {
         page: y.ZY5.CHANNEL_WELCOME_CREATE_MODAL,
         children: (0, t.jsxs)(a.Y0X, {
             transitionState: w,
-            'aria-labelledby': D,
+            'aria-labelledby': L,
             children: [
                 (0, t.jsxs)('div', {
                     className: P.modalContents,
                     children: [
                         (0, t.jsx)(a.olH, {
-                            onClick: F,
+                            onClick: J,
                             className: P.closeButton
                         }),
                         (0, t.jsx)(a.X6q, {
                             variant: 'heading-md/semibold',
                             className: P.headerText,
-                            id: D,
+                            id: L,
                             children: S.intl.string(S.t.cTghws)
                         }),
                         (0, t.jsxs)(a.hjN, {
                             className: P.__invalid_formGroup,
                             children: [
                                 (0, t.jsx)(a.VcW, {
-                                    options: U,
-                                    onChange: (e) => B(e),
-                                    value: L,
+                                    options: F,
+                                    onChange: (e) => R(e),
+                                    value: B,
                                     renderOptionPrefix: (e) => {
                                         var n;
                                         if (null === e) return null;
@@ -141,7 +142,7 @@ let T = (e) => {
                                 value: A,
                                 inputClassName: P.input,
                                 placeholder: S.intl.string(S.t.h5EOur),
-                                onChange: J
+                                onChange: Q
                             })
                         }),
                         (0, t.jsx)(a.$i$, {}),
@@ -165,9 +166,10 @@ let T = (e) => {
                                         ]
                                     }),
                                     (0, t.jsx)(x.Z, {
-                                        hasSetEmoji: null != R,
-                                        onClick: Q,
+                                        hasSetEmoji: null != M,
+                                        onClick: ee,
                                         children: (0, t.jsx)(a.yRy, {
+                                            targetElementRef: D,
                                             renderPopout: (e) => {
                                                 let { closePopout: n } = e,
                                                     l = g.ZP.getDefaultChannel(T);
@@ -175,10 +177,10 @@ let T = (e) => {
                                                     guildId: T,
                                                     closePopout: n,
                                                     onSelectEmoji: (e, l) => {
-                                                        Q(e), l && (n(), null == e && F());
+                                                        ee(e), l && (n(), null == e && J());
                                                     },
                                                     pickerIntention: E.Hz.COMMUNITY_CONTENT,
-                                                    onNavigateAway: F,
+                                                    onNavigateAway: J,
                                                     channel: l
                                                 });
                                             },
@@ -192,10 +194,10 @@ let T = (e) => {
                                                     color: a.FGA.BRAND,
                                                     tooltipClassName: P.tooltip,
                                                     position: 'left',
-                                                    text: X ? S.intl.string(S.t.YL3nfH) : null,
-                                                    forceOpen: X,
+                                                    text: $ ? S.intl.string(S.t.YL3nfH) : null,
+                                                    forceOpen: $,
                                                     children: (0, t.jsx)(
-                                                        f.Z,
+                                                        j.Z,
                                                         ((l = (function (e) {
                                                             for (var n = 1; n < arguments.length; n++) {
                                                                 var l = null != arguments[n] ? arguments[n] : {},
@@ -223,21 +225,22 @@ let T = (e) => {
                                                         })({}, e)),
                                                         (i = i =
                                                             {
+                                                                ref: D,
                                                                 onClick: (n) => {
                                                                     var l;
-                                                                    ee(), null == (l = e.onClick) || l.call(e, n);
+                                                                    en(), null == (l = e.onClick) || l.call(e, n);
                                                                 },
                                                                 active: o,
                                                                 className: P.emojiButton,
                                                                 tabIndex: 0,
                                                                 renderButtonContents:
-                                                                    null != R && (null != R.id || null != R.name)
+                                                                    null != M && (null != M.id || null != M.name)
                                                                         ? () =>
                                                                               (0, t.jsx)(s.Z, {
                                                                                   className: P.emoji,
-                                                                                  emojiId: R.id,
-                                                                                  emojiName: R.name,
-                                                                                  animated: !!(null == Y ? void 0 : Y.animated)
+                                                                                  emojiId: M.id,
+                                                                                  emojiName: M.name,
+                                                                                  animated: !!(null == q ? void 0 : q.animated)
                                                                               })
                                                                         : null
                                                             }),
@@ -273,7 +276,7 @@ let T = (e) => {
                             align: m.Z.Align.CENTER,
                             children: [
                                 (0, t.jsx)(a.zxk, {
-                                    onClick: F,
+                                    onClick: J,
                                     size: a.zxk.Sizes.SMALL,
                                     look: a.zxk.Looks.LINK,
                                     color: a.zxk.Colors.PRIMARY,
@@ -281,17 +284,17 @@ let T = (e) => {
                                 }),
                                 (0, t.jsx)(a.zxk, {
                                     onClick: () => {
-                                        null != L &&
+                                        null != B &&
                                             A.length > 0 &&
                                             z({
-                                                channel_id: L,
+                                                channel_id: B,
                                                 description: A,
-                                                emoji_id: null == R ? void 0 : R.id,
-                                                emoji_name: null == R ? void 0 : R.name
+                                                emoji_id: null == M ? void 0 : M.id,
+                                                emoji_name: null == M ? void 0 : M.name
                                             }),
-                                            F();
+                                            J();
                                     },
-                                    disabled: null == L || 0 === A.length,
+                                    disabled: null == B || 0 === A.length,
                                     children: S.intl.string(S.t.R3BPHx)
                                 })
                             ]
@@ -299,7 +302,7 @@ let T = (e) => {
                         null != Z &&
                             (0, t.jsx)(a.zxk, {
                                 onClick: () => {
-                                    W(!0);
+                                    Y(!0);
                                 },
                                 size: a.zxk.Sizes.MIN,
                                 look: a.zxk.Looks.LINK,
@@ -308,13 +311,13 @@ let T = (e) => {
                             })
                     ]
                 }),
-                K &&
+                W &&
                     (0, t.jsx)(k.Z, {
                         onConfirm: () => {
-                            z(), F();
+                            z(), J();
                         },
-                        onCancel: () => W(!1),
-                        channelId: L
+                        onCancel: () => Y(!1),
+                        channelId: B
                     })
             ]
         })

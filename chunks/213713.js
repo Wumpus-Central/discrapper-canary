@@ -21,10 +21,10 @@ var a = n(255367),
     y = n(823379),
     C = n(550532),
     O = n(71585),
-    E = n(146282),
-    N = n(780106),
-    T = n(650613),
-    S = n(789086),
+    N = n(146282),
+    E = n(780106),
+    S = n(650613),
+    T = n(789086),
     P = n(206583),
     w = n(403542),
     k = n(616257);
@@ -65,7 +65,7 @@ let I = [
 function R(e) {
     var t, n;
     let { type: r } = e,
-        l = (0, u.e7)([E.Z], () => E.Z.getFilters()),
+        l = (0, u.e7)([N.Z], () => N.Z.getFilters()),
         i = null != (n = null == l || null == (t = l.types) ? void 0 : t.has(r)) && n;
     return (0, a.jsx)(x.XZJ, {
         value: i,
@@ -84,8 +84,8 @@ function R(e) {
 }
 function Z() {
     var e, t;
-    let n = (0, u.e7)([E.Z], () => E.Z.getFeed(P.YN.GLOBAL_FEED)),
-        l = (0, u.e7)([E.Z], () => E.Z.getDebugImpressionCappingDisabled()),
+    let n = (0, u.e7)([N.Z], () => N.Z.getFeed(P.YN.GLOBAL_FEED)),
+        l = (0, u.e7)([N.Z], () => N.Z.getDebugImpressionCappingDisabled()),
         i = (0, u.e7)([O.Z], () => O.Z.getDebugFastImpressionCappingEnabled()),
         s = (function (e) {
             let t = o().groupBy(e, (e) => e.content_type);
@@ -98,12 +98,12 @@ function Z() {
                 };
             });
         })(null == n || null == (e = n.entries) ? void 0 : e.map((e) => e.content)),
-        c = (0, u.e7)([E.Z], () => {
+        c = (0, u.e7)([N.Z], () => {
             var e;
-            return (null == (e = E.Z.getFeedState(P.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
+            return (null == (e = N.Z.getFeedState(P.YN.GLOBAL_FEED)) ? void 0 : e.loading) === !0;
         }),
         [R, Z] = r.useState(''),
-        A = (0, u.e7)(
+        L = (0, u.e7)(
             [_.Z, p.Z],
             () => {
                 var e, t, n;
@@ -112,7 +112,7 @@ function Z() {
             [R]
         ),
         D = (0, g.Z)({
-            applicationId: A,
+            applicationId: L,
             location: 'DevToolsContentInventory',
             source: j.m1.DevTools
         }),
@@ -126,7 +126,7 @@ function Z() {
                 return t;
             }),
         z = (0, b.Z)(M).filter(y.lm),
-        U = (0, u.e7)([C.Z], () => C.Z.getFakeGameToShow());
+        B = (0, u.e7)([C.Z], () => C.Z.getFakeGameToShow());
     return (0, a.jsx)('div', {
         className: k.panel,
         children: (0, a.jsxs)(x.zJl, {
@@ -141,7 +141,7 @@ function Z() {
                                 data: s
                             }),
                         (0, a.jsx)(x.LZC, { size: 8 }),
-                        (0, a.jsx)(S.Z, {}),
+                        (0, a.jsx)(T.Z, {}),
                         (0, a.jsx)(x.zxk, {
                             fullWidth: !0,
                             onClick: function () {
@@ -193,7 +193,7 @@ function Z() {
                     ]
                 }),
                 !1,
-                (0, a.jsx)(T.Z, {}),
+                (0, a.jsx)(S.Z, {}),
                 (0, a.jsxs)(x.hjN, {
                     children: [
                         (0, a.jsx)(x.vwX, { children: 'Game Profile' }),
@@ -203,10 +203,10 @@ function Z() {
                             onKeyDown: (e) => {
                                 'Enter' === e.key && (R === e.currentTarget.value ? null == D || D(e) : Z(e.currentTarget.value));
                             },
-                            error: R.length > 0 && null == D ? 'No game profile for '.concat(null != A ? A : R + ' - try by id', '.') : void 0,
+                            error: R.length > 0 && null == D ? 'No game profile for '.concat(null != L ? L : R + ' - try by id', '.') : void 0,
                             style: null != D ? { border: '1px solid green' } : {}
                         }),
-                        (0, a.jsx)('ul', { children: z.map((e) => (0, a.jsx)('li', { children: (0, a.jsx)(L, { application: e }) }, 'follow-game-'.concat(e.id))) })
+                        (0, a.jsx)('ul', { children: z.map((e) => (0, a.jsx)('li', { children: (0, a.jsx)(A, { application: e }) }, 'follow-game-'.concat(e.id))) })
                     ]
                 }),
                 (0, a.jsxs)(x.hjN, {
@@ -217,11 +217,11 @@ function Z() {
                             children: 'Force show game:'
                         }),
                         (0, a.jsx)(x.PhF, {
-                            options: N.h.map((e) => ({
+                            options: E.h.map((e) => ({
                                 label: e,
                                 value: e
                             })),
-                            isSelected: (e) => e === U,
+                            isSelected: (e) => e === B,
                             select: function (e) {
                                 h.Z.dispatch({
                                     type: 'CONTENT_INVENTORY_FORCE_SHOW_GAME_SHARING',
@@ -237,7 +237,7 @@ function Z() {
         })
     });
 }
-let L = (e) => {
+let A = (e) => {
     let { application: t } = e,
         n = (0, g.Z)({
             applicationId: t.id,

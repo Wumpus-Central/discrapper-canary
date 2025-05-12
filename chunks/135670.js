@@ -119,6 +119,8 @@ class c extends r.Z {
     startAecDump() {}
     stopAecDump() {}
     setAecDump(e) {}
+    startRecordingRawSamples(e) {}
+    stopRecordingRawSamples() {}
     createReplayConnection(e, t) {
         throw Error('Connection replay is not supported.');
     }

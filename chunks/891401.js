@@ -75,25 +75,25 @@ function _() {
             },
             [s]
         ),
-        E = r.useCallback(
+        N = r.useCallback(
             (e) => {
                 y(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
             [null == l ? void 0 : l.wallpaperId]
         ),
-        N = r.useCallback(
+        E = r.useCallback(
             (e) => {
                 O(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
             [null == l ? void 0 : l.wallpaperId]
         ),
-        T = r.useCallback(
+        S = r.useCallback(
             (e) => {
                 C(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
             [null == l ? void 0 : l.wallpaperId]
         ),
-        S = r.useCallback(() => y(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        T = r.useCallback(() => y(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         P = r.useCallback(() => O(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         w = r.useCallback(() => C(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
         k = r.useCallback(
@@ -185,7 +185,7 @@ function _() {
                                     {
                                         type: 'color',
                                         value: g.primary_color,
-                                        onChange: E
+                                        onChange: N
                                     },
                                     'primaryColor-'.concat(g.primary_color)
                                 ),
@@ -196,7 +196,7 @@ function _() {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
-                                    onClick: S,
+                                    onClick: T,
                                     className: f.removeButton
                                 })
                             ]
@@ -226,7 +226,7 @@ function _() {
                                     {
                                         type: 'color',
                                         value: g.secondary_color,
-                                        onChange: N
+                                        onChange: E
                                     },
                                     'secondaryColor-'.concat(g.secondary_color)
                                 ),
@@ -296,7 +296,7 @@ function _() {
                                     {
                                         type: 'color',
                                         value: g.link_color,
-                                        onChange: T
+                                        onChange: S
                                     },
                                     'linkColor-'.concat(g.link_color)
                                 ),

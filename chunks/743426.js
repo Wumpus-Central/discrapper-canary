@@ -464,6 +464,14 @@ class v extends a.Z {
         var t, n;
         null == (t = (n = (0, d.zS)()).setAecDump) || t.call(n, e);
     }
+    startRecordingRawSamples(e) {
+        var t, n;
+        null == (t = (n = (0, d.zS)()).startRecordingRawSamples) || t.call(n, e);
+    }
+    stopRecordingRawSamples() {
+        var e, t;
+        null == (e = (t = (0, d.zS)()).stopRecordingRawSamples) || e.call(t);
+    }
     rankRtcRegions(e) {
         return new Promise((t, n) => {
             let { rankRtcRegions: r } = (0, d.zS)();

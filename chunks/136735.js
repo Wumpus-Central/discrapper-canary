@@ -19,8 +19,8 @@ var n = l(255367),
     b = l(424218),
     y = l(63063),
     N = l(956664),
-    I = l(268350),
-    E = l(373228),
+    E = l(268350),
+    I = l(373228),
     O = l(378233),
     w = l(419922),
     S = l(611480),
@@ -29,14 +29,14 @@ var n = l(255367),
     D = l(154377),
     P = l(434227),
     Z = l(600126);
-let T = new Set(['application/json', 'image/png', 'image/apng', 'image/gif', 'image/jpeg', 'image/jpg']),
-    z = [
+let R = new Set(['application/json', 'image/png', 'image/apng', 'image/gif', 'image/jpeg', 'image/jpg']),
+    T = [
         {
             name: 'Sticker file',
             extensions: ['json', 'png', 'apng', 'gif', 'jpeg', 'jpg']
         }
     ];
-function R(e, t) {
+function z(e, t) {
     h.default.track(k.rMx.STICKER_UPLOAD_COMPLETED, {
         successful: e,
         error: null != t ? t : ''
@@ -131,7 +131,7 @@ function L(e) {
             var t;
             if (null == e) return;
             let l = null == (t = e.type) ? void 0 : t.split(';')[0];
-            if (!T.has(l))
+            if (!R.has(l))
                 return void eo({
                     message: C.intl.string(C.t.B2hGAA),
                     isBlocking: !0
@@ -158,7 +158,7 @@ function L(e) {
                 return;
             }
             let i = (0, O.Zv)(n.type);
-            if (i === E.u3.LOTTIE) {
+            if (i === I.u3.LOTTIE) {
                 if (!ec)
                     return void eo({
                         message: C.intl.format(C.t.RNNjy8, { articleURL: y.Z.getArticleURL(k.BhN.STICKERS_UPLOAD) }),
@@ -194,7 +194,7 @@ function L(e) {
             let r = null != (l = null != (t = null != $ ? $ : et) ? t : null == F ? void 0 : F.tags) ? l : '';
             try {
                 if ((ea(!0), ed))
-                    await (0, I.Jf)(M, null != (n = null == F ? void 0 : F.id) ? n : '', {
+                    await (0, E.Jf)(M, null != (n = null == F ? void 0 : F.id) ? n : '', {
                         name: X,
                         tags: r,
                         description: en
@@ -207,12 +207,12 @@ function L(e) {
                         (null == G ? void 0 : G.file) != null && e.append('file', G.file),
                         (a = null != (s = null == (i = G.file) ? void 0 : i.type) ? s : ''),
                         h.default.track(k.rMx.STICKER_UPLOAD_STARTED, { filetype: a }),
-                        await (0, I.lY)({
+                        await (0, E.lY)({
                             guildId: M,
                             body: e,
                             platform: 'web'
                         }),
-                        R(!0),
+                        z(!0),
                         (0, d.showToast)((0, d.createToast)(C.intl.string(C.t.QR85gY), d.ToastType.SUCCESS));
                 }
                 K();
@@ -221,7 +221,7 @@ function L(e) {
                     message: e.body.message,
                     isBlocking: !1
                 }),
-                    R(!1, e.body.message);
+                    z(!1, e.body.message);
             } finally {
                 ea(!1);
             }
@@ -288,7 +288,7 @@ function L(e) {
                                               })
                                             : (0, n.jsx)(p.Z, {
                                                   buttonText: C.intl.string(C.t.xEnDUV),
-                                                  filters: z,
+                                                  filters: T,
                                                   filename: null != (L = null == G ? void 0 : G.filename) ? L : '',
                                                   placeholder: C.intl.string(C.t.rUYLJy),
                                                   onFileSelect: ep

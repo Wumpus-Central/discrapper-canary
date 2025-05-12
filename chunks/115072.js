@@ -1,4 +1,4 @@
-n.d(t, { default: () => S }), n(953529), n(642613), n(388685), n(784620), n(973216);
+n.d(t, { default: () => w }), n(953529), n(642613), n(388685), n(784620), n(973216);
 var i = n(255367),
     r = n(73800),
     l = n(772848),
@@ -19,13 +19,13 @@ var i = n(255367),
     y = n(223356),
     b = n(225452),
     O = n(388032),
-    _ = n(606174);
-let w = ['Android', 'iOS', 'Windows Mobile', 'Windows', 'Linux', 'Mac OS X'].map((e) => ({
+    S = n(606174);
+let _ = ['Android', 'iOS', 'Windows Mobile', 'Windows', 'Linux', 'Mac OS X'].map((e) => ({
     label: e,
     value: e
 }));
-function S(e) {
-    var t, S, P, C;
+function w(e) {
+    var t, w, P, C;
     let { transitionState: E, onClose: k } = e,
         D = r.useRef(null),
         T = r.useRef(null),
@@ -34,7 +34,7 @@ function S(e) {
         [L, I] = r.useState(),
         [Z, z] = r.useState(''),
         [J, M] = r.useState([]),
-        [V, q] = r.useState(),
+        [q, V] = r.useState(),
         [B, G] = r.useState(),
         [H, X] = r.useState(!1),
         [U, Y] = r.useState(''),
@@ -58,7 +58,7 @@ function S(e) {
         [ea, eo] = r.useState(!1),
         [es, ec] = r.useState(!1),
         [eu, ed] = r.useState(!1),
-        [em, eh] = r.useState(!1);
+        [em, eh] = r.useState(null);
     r.useEffect(() => {
         let e = Math.random().toString(16).slice(2);
         o.tn
@@ -68,13 +68,11 @@ function S(e) {
                 rejectWithError: !0
             })
             .then((e) => {
-                if (null != e.body && '9e94a3daeded88227acd85393c2f5effda07fa3c' !== e.body.hash) {
-                    {
-                        let e = new Date('1747087861583'),
-                            t = new Date();
-                        (0, g.TD)(t, e).hours > 6 && eh(!0);
-                    }
-                    eh(!0);
+                if (null != e.body && 'bbb6a8f3772297b24ca3073d68851c5fcfeb47bb' !== e.body.hash) {
+                    let e = new Date('1747093428243'),
+                        t = new Date(),
+                        n = (0, g.TD)(t, e);
+                    n.hours > 6 && eh(n.hours);
                 }
             });
     }, []);
@@ -95,7 +93,7 @@ function S(e) {
     async function eg() {
         var e, t;
         if ((ed(!1), '' === W || '' === A || null == L)) return void eo(!0);
-        let r = null == V || null == (e = V.features) ? void 0 : e.find((e) => (0, y.pD)(e) === B);
+        let r = null == q || null == (e = q.features) ? void 0 : e.find((e) => (0, y.pD)(e) === B);
         ec(!0), eo(!1);
         let l = (0, b.D)(
                 J.map((e) => {
@@ -181,7 +179,7 @@ function S(e) {
     }
     r.useEffect(() => {
         async function e() {
-            q(await (0, y.WG)());
+            V(await (0, y.WG)());
         }
         ef && e();
     }, [ef]),
@@ -239,11 +237,11 @@ function S(e) {
                                 title: O.intl.string(O.t['ZP/hEx'])
                             }),
                         null == ep &&
-                            em &&
+                            null != em &&
                             (0, i.jsx)(s.ToO, {
                                 type: s.ToO.Types.DANGER,
-                                body: O.intl.string(O.t.x18RUl),
-                                title: O.intl.string(O.t.cTVCIC)
+                                title: O.intl.formatToPlainString(O.t['ql2Q/f'], { hours: em }),
+                                body: O.intl.string(O.t.x18RUl)
                             }),
                         (0, i.jsxs)(s.Kqy, {
                             gap: 24,
@@ -286,14 +284,14 @@ function S(e) {
                                             (function (e) {
                                                 let t = e.priority;
                                                 return (0, i.jsxs)('div', {
-                                                    className: _.formPriorityImageContainer,
+                                                    className: S.formPriorityImageContainer,
                                                     children: [
                                                         (0, i.jsxs)('div', {
-                                                            className: _.formPriorityTitleContainer,
+                                                            className: S.formPriorityTitleContainer,
                                                             children: [
                                                                 (0, i.jsx)('img', {
                                                                     alt: '',
-                                                                    className: _.formPriorityImage,
+                                                                    className: S.formPriorityImage,
                                                                     src: (0, v.gT)({
                                                                         id: t.emoji,
                                                                         animated: !0,
@@ -303,7 +301,7 @@ function S(e) {
                                                                 (0, i.jsx)(s.Text, {
                                                                     color: 'header-primary',
                                                                     variant: 'text-sm/semibold',
-                                                                    className: _.formPriorityTitle,
+                                                                    className: S.formPriorityTitle,
                                                                     children: t.title
                                                                 })
                                                             ]
@@ -311,7 +309,7 @@ function S(e) {
                                                         (0, i.jsx)(s.Text, {
                                                             color: 'header-secondary',
                                                             variant: 'text-xs/normal',
-                                                            className: _.formPriorityDescription,
+                                                            className: S.formPriorityDescription,
                                                             children: t.description
                                                         })
                                                     ]
@@ -336,11 +334,11 @@ function S(e) {
                                             options:
                                                 null !=
                                                 (C =
-                                                    null == V ||
-                                                    null == (P = V.features) ||
-                                                    null == (S = P.filter((e) => '' !== (0, y.pD)(e))) ||
+                                                    null == q ||
+                                                    null == (P = q.features) ||
+                                                    null == (w = P.filter((e) => '' !== (0, y.pD)(e))) ||
                                                     null ==
-                                                        (t = S.map((e) => {
+                                                        (t = w.map((e) => {
                                                             var t;
                                                             return {
                                                                 label: null != (t = e.name) ? t : '',
@@ -351,7 +349,7 @@ function S(e) {
                                                         : t.sort((e, t) => e.label.localeCompare(t.label)))
                                                     ? C
                                                     : [],
-                                            isDisabled: null == V,
+                                            isDisabled: null == q,
                                             onChange: (e) => G(e)
                                         })
                                     }),
@@ -387,7 +385,7 @@ function S(e) {
                                                   title: O.intl.string(O.t.kcHxi4),
                                                   children: (0, i.jsx)(s.q4e, {
                                                       value: K,
-                                                      options: w,
+                                                      options: _,
                                                       onChange: (e) => F(e)
                                                   })
                                               }),
@@ -457,14 +455,14 @@ function S(e) {
                                               (0, i.jsx)(s.vwX, { children: 'Preview' }),
                                               (0, i.jsx)('div', {
                                                   ref: T,
-                                                  className: _.attachments,
+                                                  className: S.attachments,
                                                   children:
                                                       J.length > 0 &&
                                                       J.map((e) =>
                                                           (0, i.jsxs)(
                                                               'div',
                                                               {
-                                                                  className: _.attachment,
+                                                                  className: S.attachment,
                                                                   children: [
                                                                       (0, i.jsxs)('div', {
                                                                           children: [
@@ -473,7 +471,7 @@ function S(e) {
                                                                                   upload: e
                                                                               }),
                                                                               (0, i.jsx)('div', {
-                                                                                  className: _.removeAttachment,
+                                                                                  className: S.removeAttachment,
                                                                                   children: (0, i.jsx)(p.ZP, {
                                                                                       children: (0, i.jsx)(m.Z, {
                                                                                           tooltip: O.intl.string(O.t.vN7REx),
