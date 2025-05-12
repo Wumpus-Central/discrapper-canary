@@ -45024,6 +45024,14 @@ div.mobilePushContainer__3d3b0 {
     line-height: 1
 }
 
+.disabled__9e06a {
+    cursor: not-allowed
+}
+
+.disabledContainer__9e06a {
+    opacity: .3
+}
+
 .select__3f413 {
     align-items: center;
     border: 1px solid transparent;
