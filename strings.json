@@ -2219,6 +2219,7 @@
   "ayhqiI": "Override Platform Information",
   "cTVCIC": "Your client is out of date",
   "x18RUl": "Your issue might already be fixed. Please refresh your client to get the latest update and confirm before submitting a report.",
+  "ql2Q/f": "Your client is !!{hours}!! hours out of date",
   "xMXLdX": "Priority",
   "DOP8yc": "**3 day SLA on resolution.** These are issues that limit the functionality of the app for many (even if not the majority of) users or are a business risk for Discord.",
   "VwIij4": "Critical (P0)",
