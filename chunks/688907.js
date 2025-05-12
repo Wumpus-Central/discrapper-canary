@@ -1,15 +1,15 @@
-n.d(i, {
+e.d(i, {
     BH: () => r,
     MH: () => s
 });
-var e = n(442837),
-    o = n(524437),
-    a = n(761781),
-    l = n(695346);
+var n = e(442837),
+    o = e(524437),
+    a = e(761781),
+    l = e(695346);
 function r() {
     return c(
         l.YT.useSetting(),
-        (0, e.e7)([a.Z], () => a.Z.currentUserApplicationIds.size > 0)
+        (0, n.e7)([a.Z], () => a.Z.currentUserApplicationIds.size > 0)
     );
 }
 function s() {

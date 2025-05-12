@@ -1,163 +1,158 @@
-n.d(t, { default: () => T });
-var a = n(255367);
-n(73800);
-var i = n(120356),
-    r = n.n(i),
-    l = n(793030),
-    s = n(481060),
-    d = n(100527),
-    u = n(906732),
-    o = n(313201),
-    c = n(703656),
-    g = n(594174),
-    E = n(111361),
-    m = n(409100),
-    x = n(176237),
-    _ = n(553896),
-    v = n(848572),
-    f = n(787528),
-    p = n(474936),
-    b = n(981631),
-    N = n(388032),
-    h = n(840052);
-let T = (e) => {
-    var t, n;
-    let { transitionState: i, onClose: T, displayProfile: I } = e,
-        { analyticsLocations: C } = (0, u.ZP)(d.Z.TIERED_TENURE_BADGES_MODAL),
-        M = (0, o.Dt)(),
-        U = Object.values(p.vK),
-        R = (0, v.SI)(null == I ? void 0 : I.userId),
-        O = (0, v.Rw)(),
-        S = g.default.getCurrentUser(),
-        j = null != (n = (0, v.a1)(null != (t = null == I ? void 0 : I.userId) ? t : null == S ? void 0 : S.id)) ? n : new Date(),
-        P = (0, E.yd)(null == S ? void 0 : S.premiumType, p.p9.TIER_2),
-        k = U.map((e) => {
-            let { id: t, nameUnformatted: n, tenureReqNumMonths: i } = e,
-                s = N.intl.string(n),
-                d = (0, f.J)(t),
-                u = (0, _.q)(t, i),
-                o = null == I,
-                c = o && (null == O ? void 0 : O.id) === t,
-                g = !o && (null == R ? void 0 : R.id) === t,
-                E = c && (null == O ? void 0 : O.status) === v.Vq.EARNED,
-                m = c && (null == O ? void 0 : O.status) === v.Vq.UPCOMING,
-                x = g || E;
-            return (0, a.jsxs)(
+t.d(a, { default: () => M });
+var n = t(255367);
+t(73800);
+var s = t(120356),
+    d = t.n(s),
+    i = t(793030),
+    r = t(481060),
+    l = t(100527),
+    c = t(906732),
+    o = t(313201),
+    u = t(703656),
+    m = t(594174),
+    _ = t(111361),
+    g = t(409100),
+    x = t(553896),
+    E = t(848572),
+    N = t(787528),
+    b = t(474936),
+    T = t(981631),
+    v = t(388032),
+    h = t(840052);
+let M = (e) => {
+    var a, t;
+    let { transitionState: s, onClose: M, displayProfile: U } = e,
+        { analyticsLocations: R } = (0, c.ZP)(l.Z.TIERED_TENURE_BADGES_MODAL),
+        I = (0, o.Dt)(),
+        j = Object.values(b.vK),
+        S = (0, E.SI)(null == U ? void 0 : U.userId),
+        P = (0, E.Rw)(),
+        B = m.default.getCurrentUser(),
+        f = null != (t = (0, E.a1)(null != (a = null == U ? void 0 : U.userId) ? a : null == B ? void 0 : B.id)) ? t : new Date(),
+        p = (0, _.yd)(null == B ? void 0 : B.premiumType, b.p9.TIER_2),
+        O = j.map((e) => {
+            let { id: a, nameUnformatted: t, tenureReqNumMonths: s } = e,
+                r = v.intl.string(t),
+                l = (0, N.J)(a),
+                c = (0, x.q)(a, s),
+                o = null == U,
+                u = o && (null == P ? void 0 : P.id) === a,
+                m = !o && (null == S ? void 0 : S.id) === a,
+                _ = u && (null == P ? void 0 : P.status) === E.Vq.EARNED,
+                g = u && (null == P ? void 0 : P.status) === E.Vq.UPCOMING,
+                b = m || _;
+            return (0, n.jsxs)(
                 'div',
                 {
-                    className: r()(h.badge, { [h.earnedBadge]: x || m }),
+                    className: d()(h.badge, { [h.earnedBadge]: b || g }),
                     children: [
-                        (0, a.jsx)('img', {
-                            src: d,
-                            alt: s,
+                        (0, n.jsx)('img', {
+                            src: l,
+                            alt: r,
                             className: h.badgeImage
                         }),
-                        (0, a.jsxs)('div', {
+                        (0, n.jsxs)('div', {
                             className: h.badgeText,
                             children: [
-                                (0, a.jsx)(l.xv, {
+                                (0, n.jsx)(i.xv, {
                                     variant: 'text-md/semibold',
                                     className: h.badgeName,
-                                    children: s
+                                    children: r
                                 }),
-                                (0, a.jsx)(l.xv, {
+                                (0, n.jsx)(i.xv, {
                                     variant: 'text-xs/normal',
-                                    children: u
+                                    children: c
                                 }),
-                                x &&
-                                    (0, a.jsx)(l.xv, {
+                                b &&
+                                    (0, n.jsx)(i.xv, {
                                         variant: 'text-xs/normal',
                                         color: 'text-muted',
                                         className: h.earnedBadgeSubSince,
-                                        children: N.intl.formatToPlainString(N.t.Hu4jfn, { date: j })
+                                        children: v.intl.formatToPlainString(v.t.Hu4jfn, { date: f })
                                     }),
-                                m &&
-                                    (0, a.jsx)(l.xv, {
+                                g &&
+                                    (0, n.jsx)(i.xv, {
                                         variant: 'text-xs/normal',
                                         color: 'text-muted',
                                         className: h.earnedBadgeSubSince,
-                                        children: N.intl.formatToPlainString(N.t.PPL1Ii, { days: null == O ? void 0 : O.daysLeft })
+                                        children: v.intl.formatToPlainString(v.t.PPL1Ii, { days: null == P ? void 0 : P.daysLeft })
                                     })
                             ]
                         })
                     ]
                 },
-                t
+                a
             );
         }),
-        A = () => {
-            (0, c.uL)(b.Z5c.APPLICATION_STORE, {
-                source: d.Z.TIERED_TENURE_BADGES_MODAL,
-                sourceLocationStack: C
+        H = () => {
+            (0, u.uL)(T.Z5c.APPLICATION_STORE, {
+                source: l.Z.TIERED_TENURE_BADGES_MODAL,
+                sourceLocationStack: R
             }),
-                null == T || T();
-        },
-        { enabled: Z } = (0, x.w)({ location: 'evolving_tenure_badge_modal_web' });
-    return (0, a.jsxs)(s.Y0X, {
-        transitionState: i,
-        'aria-labelledby': M,
-        className: r()(h.container, 'theme-dark'),
+                null == M || M();
+        };
+    return (0, n.jsxs)(r.Y0X, {
+        transitionState: s,
+        'aria-labelledby': I,
+        className: d()(h.container, 'theme-dark'),
         children: [
-            (0, a.jsx)(s.olH, {
-                onClick: T,
+            (0, n.jsx)(r.olH, {
+                onClick: M,
                 className: h.closeButton
             }),
-            (0, a.jsxs)(s.hzk, {
+            (0, n.jsx)(r.hzk, {
                 className: h.content,
-                children: [
-                    P
-                        ? (0, a.jsxs)(a.Fragment, {
-                              children: [
-                                  (0, a.jsx)(l.xv, {
-                                      variant: 'display-md',
-                                      className: h.header,
-                                      children: N.intl.string(N.t.Og62j4)
-                                  }),
-                                  (0, a.jsx)(l.xv, {
-                                      variant: 'text-md/medium',
-                                      className: h.subHeader,
-                                      children: N.intl.string(N.t['IdAP9/'])
-                                  }),
-                                  (0, a.jsx)('div', {
-                                      className: h.badgeList,
-                                      children: k
-                                  }),
-                                  null != I &&
-                                      I.userId !== (null == S ? void 0 : S.id) &&
-                                      (0, a.jsx)(s.gtL, {
-                                          className: h.learnMoreButton,
-                                          onClick: A,
-                                          children: N.intl.string(N.t.hvVgAQ)
-                                      })
-                              ]
-                          })
-                        : (0, a.jsxs)(a.Fragment, {
-                              children: [
-                                  (0, a.jsx)(l.xv, {
-                                      variant: 'display-md',
-                                      className: h.header,
-                                      children: N.intl.string(N.t.RtGeFR)
-                                  }),
-                                  (0, a.jsx)(l.xv, {
-                                      variant: 'text-md/medium',
-                                      className: h.subHeader,
-                                      children: N.intl.format(N.t.ffatnZ, { onClick: A })
-                                  }),
-                                  (0, a.jsx)('div', {
-                                      className: h.badgeList,
-                                      children: k
-                                  }),
-                                  (0, a.jsx)(m.Z, {
-                                      className: h.subscribeButton,
-                                      premiumModalAnalyticsLocation: { page: b.ZY5.TIERED_TENURE_BADGES_MODAL },
-                                      textOptions: { subscribeText: N.intl.string(N.t.JST6jo) },
-                                      subscriptionTier: p.Si.TIER_2,
-                                      showGradient: !0
+                children: p
+                    ? (0, n.jsxs)(n.Fragment, {
+                          children: [
+                              (0, n.jsx)(i.xv, {
+                                  variant: 'display-md',
+                                  className: h.header,
+                                  children: v.intl.string(v.t.Og62j4)
+                              }),
+                              (0, n.jsx)(i.xv, {
+                                  variant: 'text-md/medium',
+                                  className: h.subHeader,
+                                  children: v.intl.string(v.t['IdAP9/'])
+                              }),
+                              (0, n.jsx)('div', {
+                                  className: h.badgeList,
+                                  children: O
+                              }),
+                              null != U &&
+                                  U.userId !== (null == B ? void 0 : B.id) &&
+                                  (0, n.jsx)(r.gtL, {
+                                      className: h.learnMoreButton,
+                                      onClick: H,
+                                      children: v.intl.string(v.t.hvVgAQ)
                                   })
-                              ]
-                          }),
-                    Z && (0, a.jsx)(() => ((0, x.x)({ location: 'evolving_tenure_badge_modal_web' }), (0, a.jsx)(a.Fragment, {})), {})
-                ]
+                          ]
+                      })
+                    : (0, n.jsxs)(n.Fragment, {
+                          children: [
+                              (0, n.jsx)(i.xv, {
+                                  variant: 'display-md',
+                                  className: h.header,
+                                  children: v.intl.string(v.t.RtGeFR)
+                              }),
+                              (0, n.jsx)(i.xv, {
+                                  variant: 'text-md/medium',
+                                  className: h.subHeader,
+                                  children: v.intl.format(v.t.ffatnZ, { onClick: H })
+                              }),
+                              (0, n.jsx)('div', {
+                                  className: h.badgeList,
+                                  children: O
+                              }),
+                              (0, n.jsx)(g.Z, {
+                                  className: h.subscribeButton,
+                                  premiumModalAnalyticsLocation: { page: T.ZY5.TIERED_TENURE_BADGES_MODAL },
+                                  textOptions: { subscribeText: v.intl.string(v.t.JST6jo) },
+                                  subscriptionTier: b.Si.TIER_2,
+                                  showGradient: !0
+                              })
+                          ]
+                      })
             })
         ]
     });

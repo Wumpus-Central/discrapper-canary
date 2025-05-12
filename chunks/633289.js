@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685), n(467055);
+n(388685), n(467055);
 var r,
     i,
     l,
@@ -118,5 +118,5 @@ class m extends (r = s.ZP.Store) {
               configurable: !0,
               writable: !0
           })
-        : (m[i] = l);
-let b = new m();
+        : (m[i] = l),
+    new m();

@@ -192,7 +192,7 @@ let j = i.forwardRef((e, t) => {
     let { guild: o, onClose: a } = e,
         s = (0, O.Ek)(o.id, 'GuildPowerupsMarketingPowerupCards');
     i.useEffect(() => {
-        s && ((0, b.Sn)(o.id), (0, b.Fm)(o.id));
+        s && (y.Z.shouldFetchCatalogForGuild(o.id) && (0, b.Sn)(o.id), y.Z.shouldFetchPowerupsForGuild(o.id) && (0, b.Fm)(o.id));
     }, [s, o.id]);
     let d = (0, c.e7)([y.Z], () => y.Z.getStateForGuild(o.id)),
         f = null != (n = null == d ? void 0 : d.powerupCatalog[A.Us.PERK]) ? n : [];

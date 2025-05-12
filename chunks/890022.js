@@ -1,12 +1,12 @@
-n.d(i, {
+e.d(i, {
     W7: () => r,
     _x: () => c,
     uw: () => s
 });
-var e = n(818083),
-    o = n(752048),
-    a = n(699516);
-let l = (0, e.B)({
+var n = e(818083),
+    o = e(752048),
+    a = e(699516);
+let l = (0, n.B)({
     kind: 'user',
     id: '2025-04_game_activity_notification',
     label: 'Game Activity Notifications',
