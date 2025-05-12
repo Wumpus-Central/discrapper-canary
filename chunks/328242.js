@@ -4,18 +4,18 @@ n(73800);
 var l = n(120356),
     i = n.n(l),
     s = n(268146),
-    a = n(481060),
-    o = n(63063),
+    o = n(481060),
+    a = n(63063),
     c = n(668519),
     d = n(855403),
     u = n(615161),
     f = n(843874),
     m = n(388032),
     h = n(814799);
-function x(e) {
+function p(e) {
     let { source: t } = e;
     return t.id.startsWith(s.vA.SCREEN)
-        ? (0, r.jsx)(a.pzj, { size: 'xs' })
+        ? (0, r.jsx)(o.pzj, { size: 'xs' })
         : t.id.startsWith(s.vA.WINDOW)
           ? null != t.icon && '' !== t.icon
               ? (0, r.jsx)('img', {
@@ -23,13 +23,13 @@ function x(e) {
                     className: h.sourceIcon,
                     alt: ''
                 })
-              : (0, r.jsx)(a.GON, { size: 'xs' })
-          : (0, r.jsx)(a.Odl, { size: 'xs' });
+              : (0, r.jsx)(o.GON, { size: 'xs' })
+          : (0, r.jsx)(o.Odl, { size: 'xs' });
 }
-function p(e) {
+function x(e) {
     let { source: t, selected: n, twoClickVariant: l, onClick: s } = e,
-        { url: o, name: c } = t;
-    return (0, r.jsxs)(a.P3F, {
+        { url: a, name: c } = t;
+    return (0, r.jsxs)(o.P3F, {
         onClick: () => s(t),
         className: i()(h.source, { [h.selectedSource]: n }),
         children: [
@@ -39,7 +39,7 @@ function p(e) {
                     className: h.sourcePreview,
                     children: [
                         (0, r.jsx)('img', {
-                            src: o,
+                            src: a,
                             className: h.sourcePreviewImage,
                             alt: ''
                         }),
@@ -48,7 +48,7 @@ function p(e) {
                                 className: h.sourceOverlay,
                                 children: (0, r.jsx)('div', {
                                     className: h.sourceOverlayCTA,
-                                    children: (0, r.jsx)(a.Text, {
+                                    children: (0, r.jsx)(o.Text, {
                                         variant: 'text-sm/medium',
                                         color: 'button-filled-white-text',
                                         children: m.intl.string(m.t.z7WGho)
@@ -61,8 +61,8 @@ function p(e) {
             (0, r.jsxs)('div', {
                 className: h.sourceNameContainer,
                 children: [
-                    (0, r.jsx)(x, { source: t }),
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(p, { source: t }),
+                    (0, r.jsx)(o.Text, {
                         variant: 'text-sm/medium',
                         className: h.sourceName,
                         children: c
@@ -79,20 +79,20 @@ function g(e) {
             autoTrackExposure: !1,
             location: 'sourcegrid'
         }),
-        [{ windowSources: i, deviceSources: o, screenSources: f, sourceType: m, fetchingSources: x, selectedSource: g }] = (0, u.E_)();
-    return x
+        [{ windowSources: i, deviceSources: a, screenSources: f, sourceType: m, fetchingSources: p, selectedSource: g }] = (0, u.E_)();
+    return p
         ? (0, r.jsx)('div', {
               className: h.loading,
-              children: (0, r.jsx)(a.$jN, {})
+              children: (0, r.jsx)(o.$jN, {})
           })
-        : ((t = m === s.vA.WINDOW ? i : m === s.vA.SCREEN ? f : o),
+        : ((t = m === s.vA.WINDOW ? i : m === s.vA.SCREEN ? f : a),
           m === s.vA.CAMERA && 0 === t.length
               ? (0, r.jsx)(_, {})
               : (0, r.jsx)('div', {
                     className: h.root,
                     children: t.map((e) =>
                         (0, r.jsx)(
-                            p,
+                            x,
                             {
                                 onClick: n,
                                 source: e,
@@ -108,26 +108,26 @@ function _() {
     return (0, r.jsxs)('div', {
         className: h.emptyState,
         children: [
-            (0, r.jsx)(a.Odl, {
+            (0, r.jsx)(o.Odl, {
                 size: 'md',
-                color: a.TVs.colors.ICON_MUTED,
+                color: o.TVs.colors.ICON_MUTED,
                 className: h.emptyIcon
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: 'text-lg/medium',
                 color: 'header-primary',
                 className: h.emptyHeader,
                 children: m.intl.string(f.default['/z3YaW'])
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: 'text-sm/medium',
                 color: 'text-secondary',
                 className: h.emptyBody,
                 children: m.intl.string(f.default.agwSGB)
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(o.Text, {
                 variant: 'text-sm/semibold',
-                children: m.intl.format(f.default.xpVzr6, { helpdeskURL: o.Z.getArticleURL(360040816151) })
+                children: m.intl.format(f.default.xpVzr6, { helpdeskURL: a.Z.getArticleURL(360040816151) })
             })
         ]
     });

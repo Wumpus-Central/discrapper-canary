@@ -1,11 +1,11 @@
 n.d(t, {
     HL: () => o,
-    Q_: () => l
+    Q_: () => a
 });
 var i = n(442837),
     r = n(430824),
-    a = n(982168);
-function l(e) {
+    l = n(982168);
+function a(e) {
     return (0, i.e7)([r.Z], () => {
         if (null == e) return !1;
         let t = r.Z.getGuild(e);
@@ -13,5 +13,5 @@ function l(e) {
     });
 }
 function o(e) {
-    return (0, a.P0)(e);
+    return (0, l.P0)(e);
 }

@@ -1,21 +1,26 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(255367);
 n(73800);
 var l = n(481060),
     i = n(812652),
     s = n(388032),
-    a = n(79309);
-function o(e) {
-    let { align: t = 'left' } = e;
+    o = n(79309);
+function a(e) {
+    let { align: t = 'left', useSimplifiedMenu: n = !1 } = e;
     return (0, r.jsx)(l.yRy, {
         position: 'top',
         align: t,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(i.Z, {
-                onClose: t,
-                onSelect: t
-            });
+            return n
+                ? (0, r.jsx)(i.l9, {
+                      onClose: t,
+                      onSelect: t
+                  })
+                : (0, r.jsx)(i.ZP, {
+                      onClose: t,
+                      onSelect: t
+                  });
         },
         children: (e) => {
             var t, n;
@@ -50,14 +55,14 @@ function o(e) {
                         size: l.zxk.Sizes.ICON,
                         'aria-label': s.intl.string(s.t['+1H47u']),
                         color: l.zxk.Colors.PRIMARY,
-                        className: a.streamOptionsButton
+                        className: o.streamOptionsButton
                     },
                     e
                 )),
                 (n = n =
                     {
                         children: (0, r.jsx)(l.ewm, {
-                            className: a.settingsIcon,
+                            className: o.settingsIcon,
                             size: 'refresh_sm',
                             color: 'currentColor'
                         })

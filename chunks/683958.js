@@ -123,7 +123,7 @@ function w(e) {
                 { commandTypes: _ },
                 {
                     applicationId: n,
-                    allowFetch: !1,
+                    allowFetch: !0,
                     allowApplicationState: !0
                 }
             )),

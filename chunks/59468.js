@@ -3,8 +3,8 @@ var r = n(788900),
     l = n(268146),
     i = n(141038),
     s = n(131951),
-    a = n(830461),
-    o = n(388032);
+    o = n(830461),
+    a = n(388032);
 let c = ['GQgGHISKZ5aYqYeYhX9isDUHGw', 'bAgKFITWhoVvmHVRuokCdjVQaA', 'XAgGDIJ/ipadd3iCiYUcWpCZBA', 'HRkGDIT5aXRneomGdlvUawB7qA', 'I9gNDISmlqqPmHiKd3isTp/5lg', 'XxgGBIIwT2ZGpneUeZev6fWLXQ', 'KzsKNIZDeYmfd3ihe1bXfr8Jxg', 'J9cRDIJ6iHd/d4h4eIUJf5LyRw', 'DggKFIQwtndKe3hVfXnAWQmddQ', 'WggKDILeh3ePZpd6l4jln1b5SQ', '4PgJJIJVl3eAaod2iJeHj7tE8Q'];
 async function d(e) {
     let { width: t, height: n, types: d = [l.vA.CAMERA, l.vA.SCREEN, l.vA.WINDOW] } = e,
@@ -13,16 +13,16 @@ async function d(e) {
             width: t,
             height: n
         }),
-        m = (0, a._)(),
+        m = (0, o._)(),
         h = await m,
-        x = await f,
-        p = x
+        p = await f,
+        x = p
             .filter((e) => e.id.startsWith(l.vA.SCREEN))
             .map((e) => {
                 var t, n;
                 let r = e.name;
                 return (
-                    'Entire screen' === r ? (r = o.intl.string(o.t.R4wpLC)) : /^Screen \d+$/.test(r) && (r = o.intl.formatToPlainString(o.t['y/R7n5'], { index: parseInt(r.split(' ')[1]) })),
+                    'Entire screen' === r ? (r = a.intl.string(a.t.R4wpLC)) : /^Screen \d+$/.test(r) && (r = a.intl.formatToPlainString(a.t['y/R7n5'], { index: parseInt(r.split(' ')[1]) })),
                     (t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -76,7 +76,7 @@ async function d(e) {
                 Object.values(n)
             );
         })(
-            x.filter((e) => e.id.startsWith(l.vA.WINDOW)),
+            p.filter((e) => e.id.startsWith(l.vA.WINDOW)),
             h
         ),
         _ = [];
@@ -91,16 +91,16 @@ async function d(e) {
                     let [n, l] = e,
                         i = c[t % c.length],
                         s = Uint8Array.from(atob(i), (e) => e.charCodeAt(0)),
-                        a = (0, r.xS)(s);
+                        o = (0, r.xS)(s);
                     return {
                         id: 'camera:' + l.id,
                         name: l.name,
-                        url: a
+                        url: o
                     };
                 })),
         {
             windowSources: g,
-            screenSources: p,
+            screenSources: x,
             cameraSources: _
         }
     );

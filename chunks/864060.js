@@ -2,7 +2,7 @@ n.d(e, {
     FI: () => F,
     LL: () => k,
     N_: () => V,
-    Xi: () => z,
+    Xi: () => Y,
     eF: () => w
 }),
     n(997841),
@@ -154,7 +154,7 @@ function W(t, e, n, i) {
             return i;
     }
 }
-function z(t, e, n) {
+function Y(t, e, n) {
     let i,
         l = D.ZP.getName(t.getGuildId(), t.id, n),
         u = l;

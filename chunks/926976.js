@@ -96,7 +96,8 @@ let w = [
                     } = e,
                     c = p.default.getUser(l),
                     x = o()(r);
-                return (0, a.jsxs)(a.Fragment, {
+                return (0, a.jsxs)('div', {
+                    'data-mtctest-ignore': 'true',
                     children: [
                         (0, a.jsxs)(m.ZP, {
                             className: i()(N.headerBar, E.subPanelHeaderBar),

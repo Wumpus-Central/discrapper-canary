@@ -43,10 +43,12 @@ class h extends i.Z {
     }
     handleAppliedBoostUpdate(e) {
         let { guildId: t } = e;
-        !0 === (0, d.D)(a.Z, o.Z.getGuild(t)) && this.refreshGuildPowerups(t);
+        this.refreshGuildPowerups(t);
     }
     refreshGuildPowerups(e) {
-        (0, u.gV)(e, 'GuildPowerupsManager') && ((0, l.Fm)(e), (0, r.C0)(e));
+        let t = (0, u.gV)(e, 'GuildPowerupsManager'),
+            n = (0, d.D)(a.Z, o.Z.getGuild(e));
+        t && !0 === n && ((0, l.Fm)(e), (0, r.C0)(e));
     }
     constructor(...e) {
         super(...e),

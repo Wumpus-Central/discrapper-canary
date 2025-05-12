@@ -23,6 +23,7 @@ let g = (e) => {
               alt: ''
           })
         : (0, r.jsxs)(u.Z, {
+              tabIndex: -1,
               className: t,
               autoPlay: !0,
               loop: !0,

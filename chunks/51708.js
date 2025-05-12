@@ -1,51 +1,53 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
-var l = n(442837),
-    i = n(481060),
-    s = n(100527),
-    a = n(906732),
+var l = n(481060),
+    i = n(100527),
+    s = n(906732),
     o = n(436774),
-    c = n(451478),
-    d = n(156582),
-    u = n(388032),
-    f = n(393095);
-function m(e) {
+    a = n(197115),
+    c = n(156582),
+    d = n(474936),
+    u = n(843874),
+    f = n(388032),
+    m = n(393095);
+function h(e) {
     let { onClose: t } = e,
-        { analyticsLocations: n } = (0, a.ZP)(s.Z.GO_LIVE_MODAL_V2),
-        m = (0, l.e7)([c.Z], () => c.Z.isFocused());
+        { analyticsLocations: n } = (0, s.ZP)(i.Z.GO_LIVE_MODAL_V2);
     return (0, r.jsxs)('div', {
-        className: f.root,
+        className: m.root,
         children: [
-            (0, r.jsxs)(i.Text, {
-                className: f.infoText,
-                variant: 'text-sm/medium',
-                color: 'text-normal',
-                children: [(0, r.jsx)(i.SrA, { color: o.JX.PREMIUM_TIER_2 }), u.intl.string(u.t.ZVevCg)]
-            }),
-            (0, r.jsxs)(i.gtL, {
-                onClick: () =>
-                    (0, d.E)({
-                        analyticsLocation: n[0],
-                        onClose: t
-                    }),
-                color: i.zxk.Colors.GREEN,
-                size: i.zxk.Sizes.SMALL,
-                className: f.ctaButton,
-                innerClassName: f.premiumSubscribeButton,
-                wrapperClassName: f.tier2Gradient,
-                pauseAnimation: !m,
+            (0, r.jsxs)(l.Text, {
+                className: m.infoText,
+                variant: 'text-xs/normal',
+                color: 'always-white',
                 children: [
-                    (0, r.jsx)(i.SrA, {
-                        size: 'md',
-                        color: 'currentColor',
-                        className: f.premiumIcon
+                    (0, r.jsx)(l.mBM, {
+                        size: 'xxs',
+                        color: 'currentColor'
                     }),
-                    (0, r.jsx)('span', {
-                        className: f.buttonText,
-                        children: 'Get Nitro'
+                    f.intl.format(f.t.sLJ3ER, {
+                        onNitroClick: function () {
+                            (0, c.E)({
+                                analyticsLocation: n[0],
+                                onClose: t
+                            });
+                        }
                     })
                 ]
+            }),
+            (0, r.jsx)(a.Z, {
+                className: m.ctaButton,
+                iconClassName: m.premiumIcon,
+                size: l.zxk.Sizes.TINY,
+                color: l.zxk.Colors.BRAND_INVERTED,
+                subscriptionTier: d.Si.TIER_2,
+                buttonShineClassName: m.premiumShine,
+                iconColor: o.JX.PREMIUM_TIER_2,
+                textOptions: {
+                    subscribeText: f.intl.string(u.default['+f+cqq']),
+                    textClassName: m.ctaButtonText
+                }
             })
         ]
     });

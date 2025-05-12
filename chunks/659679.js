@@ -1,4 +1,4 @@
-t.d(n, { Z: () => _ });
+t.d(n, { Z: () => x });
 var r = t(255367);
 t(73800);
 var i = t(793030),
@@ -11,12 +11,12 @@ var i = t(793030),
     d = t(680278),
     p = t(388032),
     m = t(326319);
-function _(e) {
+function x(e) {
     let { boost: n } = e,
         t = new Date(c.default.extractTimestamp(n.id)),
         {
-            username: _,
-            roleColor: x,
+            username: x,
+            roleColor: _,
             roleColorStrings: f
         } = (0, o.cj)(
             [l.ZP],
@@ -51,8 +51,8 @@ function _(e) {
                 (0, r.jsx)(s.PUh, {
                     className: m.boostMessageUser,
                     variant: 'text-md/semibold',
-                    name: _,
-                    color: null != x ? x : void 0,
+                    name: x,
+                    color: null != _ ? _ : void 0,
                     roleColors: v
                 }),
                 (0, r.jsx)(i.xv, {

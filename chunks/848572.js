@@ -84,8 +84,18 @@ let b = () => {
             return null == t ? void 0 : t.premiumSince;
         }),
     O = () => {
-        let e = (0, o.e7)([l.default], () => l.default.getCurrentUser());
-        return y(null == e ? void 0 : e.id);
+        let e = (0, o.e7)([l.default], () => l.default.getCurrentUser()),
+            t = (0, u.M5)(e, _.p9.TIER_2),
+            n = (0, o.e7)(
+                [c.ZP],
+                () => {
+                    let e = c.ZP.getPremiumSubscription();
+                    return null != e && t ? e.premiumSince : null;
+                },
+                [t]
+            ),
+            r = y(null == e ? void 0 : e.id);
+        return null != n ? n : r;
     },
     v = () => {
         let e = Object.values(_.vK),

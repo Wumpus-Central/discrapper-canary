@@ -8,7 +8,7 @@ function s(e) {
             results: [],
             query: ''
         }),
-        a = (0, l.Z)(() => {
+        o = (0, l.Z)(() => {
             let e = new i.ZP((e, t) => {
                 s({
                     results: e,
@@ -18,10 +18,10 @@ function s(e) {
             return e.setLimit(20), e.search(''), e;
         });
     return (
-        r.useEffect(() => () => a.destroy(), [a]),
+        r.useEffect(() => () => o.destroy(), [o]),
         r.useEffect(() => {
-            null != t && t !== a.options && a.setOptions(t);
-        }, [a, t]),
+            null != t && t !== o.options && o.setOptions(t);
+        }, [o, t]),
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -52,9 +52,9 @@ function s(e) {
                     (e) => {
                         var t;
                         let { query: n, resultTypes: r } = e;
-                        (null != a.resultTypes && ((t = a.resultTypes), r.length === t.size && r.every((e) => t.has(e)))) || (a.setResultTypes(r), a.setLimit(1 === r.length ? 50 : 20)), a.search('' === n.trim() ? '' : n);
+                        (null != o.resultTypes && ((t = o.resultTypes), r.length === t.size && r.every((e) => t.has(e)))) || (o.setResultTypes(r), o.setLimit(1 === r.length ? 50 : 20)), o.search('' === n.trim() ? '' : n);
                     },
-                    [a]
+                    [o]
                 )
             },
             n

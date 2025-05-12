@@ -3,8 +3,8 @@ var r,
     l,
     i = n(255367),
     s = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     c = n(600164),
     d = n(243676);
 function u(e, t, n) {
@@ -48,7 +48,7 @@ class m extends (l = s.PureComponent) {
     render() {
         let { className: e } = this.props;
         return (0, i.jsx)(c.Z, {
-            className: o()(e, d.grid),
+            className: a()(e, d.grid),
             wrap: c.Z.Wrap.WRAP,
             children: this.renderChildren()
         });
