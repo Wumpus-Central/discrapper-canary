@@ -1,10 +1,10 @@
-var r = t(54958);
-e.exports = t.v(n, e.id, '5711d53755bfaab3', {
+var r = t(818296);
+e.exports = t.v(n, e.id, '363d05d900f52158', {
     './discord_markdown_bg.js': {
         __wbindgen_error_new: r.hd,
+        __wbindgen_object_drop_ref: r.ug,
         __wbindgen_is_null: r.zr,
         __wbindgen_is_undefined: r.XP,
-        __wbindgen_object_drop_ref: r.ug,
         __wbindgen_string_get: r.qt,
         __wbindgen_is_string: r.eY,
         __wbindgen_is_object: r.Wl,
