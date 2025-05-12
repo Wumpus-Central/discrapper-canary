@@ -1,8 +1,8 @@
 t.d(n, { Z: () => _ });
 var o = t(255367),
     r = t(73800),
-    c = t(481060),
-    i = t(81897),
+    i = t(481060),
+    c = t(81897),
     a = t(906732),
     l = t(566898),
     s = t(785717),
@@ -10,23 +10,23 @@ var o = t(255367),
     u = t(857302),
     f = t(892001),
     p = t(252417),
-    m = t(388032),
+    m = t(264481),
     b = t(274151);
 function _(e) {
     let { user: n, guildId: t, channelId: _, onClose: y } = e,
         { analyticsLocations: h } = (0, a.ZP)(),
-        { context: j, trackUserProfileAction: x } = (0, s.KZ)(),
-        { mutualFriends: g, mutualFriendsCount: I } = (0, d.Z)(n),
-        v = (0, i.Z)();
+        { context: g, trackUserProfileAction: x } = (0, s.KZ)(),
+        { mutualFriends: j, mutualFriendsCount: I } = (0, d.Z)(n),
+        O = (0, c.Z)();
     return (
         r.useEffect(() => {
-            (0, u.Z)(n.id, v);
-        }, [n.id, v]),
-        (0, o.jsx)(c.Ttm, {
+            (0, u.Z)(n.id, O);
+        }, [n.id, O]),
+        (0, o.jsx)(i.Ttm, {
             className: b.scroller,
             fade: !0,
             children:
-                null == g
+                null == j
                     ? Array.from({ length: null != I ? I : 10 }).map((e, n) =>
                           (0, o.jsxs)(
                               'div',
@@ -46,25 +46,15 @@ function _(e) {
                               n
                           )
                       )
-                    : 0 === g.length
-                      ? (0, o.jsxs)('div', {
-                            className: b.empty,
-                            children: [
-                                (0, o.jsx)('div', { className: b.emptyImage }),
-                                (0, o.jsx)(c.Text, {
-                                    variant: 'text-sm/normal',
-                                    color: 'header-primary',
-                                    children: m.intl.string(m.t['ru+2j4'])
-                                })
-                            ]
-                        })
-                      : g.map((e) => {
-                            let { key: n, user: r, status: c } = e;
+                    : 0 === j.length
+                      ? (0, o.jsx)(m.s_, {})
+                      : j.map((e) => {
+                            let { key: n, user: r, status: i } = e;
                             return (0, o.jsx)(
                                 p.Z,
                                 {
                                     user: r,
-                                    status: c,
+                                    status: i,
                                     guildId: t,
                                     channelId: _,
                                     onSelect: () => {
@@ -96,7 +86,7 @@ function _(e) {
                                                             });
                                                     }
                                                     return e;
-                                                })({}, j)),
+                                                })({}, g)),
                                                 (n = n =
                                                     {
                                                         userId: r.id,

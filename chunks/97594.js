@@ -17,8 +17,8 @@ var a = n(255367),
     b = n(388032),
     O = n(269045);
 function h(e) {
-    var { onClose: t, items: n, startingIndex: o, shouldRedactExplicitContent: h, shouldHideMediaOptions: S = !1, transitionState: E } = e,
-        C = (function (e, t) {
+    var { onClose: t, items: n, startingIndex: o, shouldRedactExplicitContent: h, shouldHideMediaOptions: S = !1, transitionState: C } = e,
+        E = (function (e, t) {
             if (null == e) return {};
             var n,
                 a,
@@ -52,7 +52,7 @@ function h(e) {
     }, [t]),
         r.useEffect(() => {
             var e, t;
-            E === l.Dvm.ENTERED && (u.Z.disable(), u.Z.enableTemp(s.P)), E === l.Dvm.HIDDEN && (u.Z.disable(), u.Z.enableTemp(s.v));
+            C === l.Dvm.ENTERED && (u.Z.disable(), u.Z.enableTemp(s.P)), C === l.Dvm.HIDDEN && (u.Z.disable(), u.Z.enableTemp(s.v));
             let n = () => {
                     u.Z.disable(), u.Z.enableTemp(s.P);
                 },
@@ -67,7 +67,7 @@ function h(e) {
                     null == r || r.removeEventListener('focus', n), null == r || r.removeEventListener('blur', a), u.Z.disableTemp();
                 }
             );
-        }, [E]);
+        }, [C]);
     let I = r.useCallback((e) => {
             T(e), (0, m.yg)(m.uG.SELECTED_ITEM_CHANGE);
         }, []),
@@ -75,9 +75,9 @@ function h(e) {
             () => ({
                 zoomed: j,
                 setZoomed: P,
-                entering: E === l.Dvm.ENTERING || null == E
+                entering: C === l.Dvm.ENTERING || null == C
             }),
-            [j, E]
+            [j, C]
         ),
         A = n[v];
     return (0, a.jsx)(l.f6W, {
@@ -114,9 +114,9 @@ function h(e) {
                     {
                         hideShadow: !0,
                         className: i()(O.carouselModal, e),
-                        transitionState: E
+                        transitionState: C
                     },
-                    C
+                    E
                 )),
                 (o = o =
                     {

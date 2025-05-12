@@ -22,10 +22,13 @@ function f(e) {
 }
 function g(e) {
     let t = (0, r.e7)([o.Z, l.Z, a.Z], () => {
-        var t, n;
+        var t, n, i;
         if (null == e) return !0;
-        let i = null == (t = a.Z.getChannel(e.channel_id)) ? void 0 : t.guild_id;
-        return !!(null != i && (null == (n = o.Z.getGuild(i)) ? void 0 : n.hasFeature(c.oNc.FORWARDING_DISABLED))) || (null != i && l.Z.isChannelOrThreadParentGated(i, e.channel_id));
+        let r = null == (t = a.Z.getChannel(e.channel_id)) ? void 0 : t.guild_id;
+        if (null != r && (null == (n = o.Z.getGuild(r)) ? void 0 : n.hasFeature(c.oNc.FORWARDING_DISABLED))) return !0;
+        let s = null != r && l.Z.isChannelOrThreadParentGated(r, e.channel_id),
+            u = null != e && (null == (i = a.Z.getChannel(e.channel_id)) ? void 0 : i.isModeratorReportChannel());
+        return s || u;
     });
     return i.useMemo(() => !t && null != e && d(e), [t, e]);
 }

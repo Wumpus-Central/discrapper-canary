@@ -26,8 +26,8 @@ var r = n(374470),
     S = n(749339),
     P = n(601184),
     _ = n(6148),
-    N = n(519110),
-    Z = n(759875),
+    Z = n(519110),
+    N = n(759875),
     I = n(168405),
     x = n(536639),
     T = n(720904),
@@ -90,7 +90,7 @@ function K(e) {
         er = (0, E.Z)(t, n),
         el = (0, _.Z)(t, n),
         ea = (0, x.Z)(t, n),
-        eo = (0, N.Z)({
+        eo = (0, Z.Z)({
             type: s,
             id: c,
             name: z
@@ -116,9 +116,9 @@ function K(e) {
             shiftId: ''.concat(t.channel_id, '-').concat(t.id)
         }),
         eP = (0, w.Z)(t, n),
-        e_ = (0, Z.Z)(t, n),
-        eN = (0, G.Z)(t, n),
-        eZ = (0, h.Z)(a, n.getGuildId()),
+        e_ = (0, N.Z)(t, n),
+        eZ = (0, G.Z)(t, n),
+        eN = (0, h.Z)(a, n.getGuildId()),
         eI = (0, O.Z)(t),
         ex = (0, S.Z)(t),
         eT = (0, F.Z)(t),
@@ -144,7 +144,7 @@ function K(e) {
                 children: ['' === a ? ei : null, er, eu, eM]
             }),
             (0, i.jsxs)(l.kSQ, {
-                children: [el, eP, e_, eN]
+                children: [el, eP, e_, eZ]
             }),
             (0, i.jsxs)(l.kSQ, {
                 children: [ex, ea, eI, eA, es, ec, ed, ef, ey, ew, eD]
@@ -153,7 +153,7 @@ function K(e) {
                 children: [em, eg, ep, q && eb, q && eO, eh]
             }),
             (0, i.jsxs)(l.kSQ, {
-                children: [eo, eZ, ev, ej, eT]
+                children: [eo, eN, ev, ej, eT]
             }),
             (0, i.jsx)(l.kSQ, { children: eE }),
             (0, i.jsx)(l.kSQ, { children: eS })

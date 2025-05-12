@@ -63,7 +63,7 @@ function j(e, t) {
     let { perGuildMaxCount: n } = c.I6[v],
         { isLoading: j, saveRule: S, errorMessage: P } = (0, d.w)(),
         { createNewEditingRule: _ } = (0, d.V)(),
-        [N, Z] = r.useState(!1),
+        [Z, N] = r.useState(!1),
         [I, x] = (0, s.I2)(t),
         { rulesByTriggerType: T, updateRule: M } = (0, s.pH)(t),
         A = r.useMemo(() => {
@@ -166,7 +166,7 @@ function j(e, t) {
             id: 'guild-automod-add-selection',
             label: h.intl.formatToPlainString(h.t.Kkjv1t, { keywordCount: R }),
             onFocus: () => {
-                N || (Z(!0), x());
+                Z || (N(!0), x());
             },
             children: k
         })

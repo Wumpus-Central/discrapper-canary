@@ -2,8 +2,8 @@ t.d(n, { Z: () => p });
 var o = t(255367);
 t(73800);
 var r = t(481060),
-    c = t(906732),
-    i = t(705556),
+    i = t(906732),
+    c = t(705556),
     a = t(30556),
     l = t(664794),
     s = t(522182),
@@ -12,15 +12,15 @@ var r = t(481060),
     f = t(981631);
 function p(e) {
     let { user: n, currentUser: t, guildId: p, relationshipType: m, friendToken: b, onClose: _ } = e,
-        { newestAnalyticsLocation: y } = (0, c.ZP)(),
-        { gameFriends: h, hasOutgoingPendingGameFriends: j, hasIncomingPendingGameFriends: x } = (0, u.H)({ userId: n.id }),
-        g = h.length > 0 || j || x;
+        { newestAnalyticsLocation: y } = (0, i.ZP)(),
+        { gameFriends: h, hasOutgoingPendingGameFriends: g, hasIncomingPendingGameFriends: x } = (0, u.H)({ userId: n.id }),
+        j = h.length > 0 || g || x;
     return m === f.OGo.BLOCKED
         ? null
         : n.id === t.id
           ? (0, o.jsxs)(o.Fragment, {
                 children: [
-                    (0, o.jsx)(i.Z, {
+                    (0, o.jsx)(c.Z, {
                         user: n,
                         guildId: p,
                         onClose: _
@@ -77,7 +77,7 @@ function p(e) {
                         })
                     ]
                 })
-              : m === f.OGo.NONE && g
+              : m === f.OGo.NONE && j
                 ? (0, o.jsxs)(o.Fragment, {
                       children: [
                           (0, o.jsx)(a.Z, {
@@ -94,7 +94,7 @@ function p(e) {
                               gameFriends: h,
                               shouldShowTooltip: !0,
                               hasIncomingPendingGameFriends: x,
-                              hasOutgoingPendingGameFriends: j
+                              hasOutgoingPendingGameFriends: g
                           }),
                           (0, o.jsx)(l.Z, {
                               type: 'icon',

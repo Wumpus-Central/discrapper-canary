@@ -22,39 +22,39 @@ function E(e) {
         S = null == (t = e.interactionMetadata) ? void 0 : t.authorizing_integration_owners[l.Y.USER_INSTALL],
         P = null == (n = e.interactionMetadata) ? void 0 : n.authorizing_integration_owners[l.Y.GUILD_INSTALL],
         _ = null == (E = e.interactionMetadata) ? void 0 : E.user.id,
-        N = (0, a.e7)([h.default], () => h.default.getUser(S)),
-        Z = (0, a.e7)([b.Z], () => b.Z.getGuild(P)),
+        Z = (0, a.e7)([h.default], () => h.default.getUser(S)),
+        N = (0, a.e7)([b.Z], () => b.Z.getGuild(P)),
         I = p.Z.getChannel(e.channel_id),
         x = null == I ? void 0 : I.getGuildId(),
         T = (0, a.e7)([h.default], () => h.default.getUser(_));
     if (
         (r.useEffect(() => {
-            null == N && null != S && (0, s.PR)(S);
-        }, [N, S]),
+            null == Z && null != S && (0, s.PR)(S);
+        }, [Z, S]),
         !(0, d.a)(e))
     )
         return null;
     null == T && (T = new m.Z(null == (v = e.interactionMetadata) ? void 0 : v.user));
     let M = null;
     return (
-        null != Z
+        null != N
             ? (M = (0, i.jsx)(o.sNh, {
                   className: y.interactionInfoMenuItem,
                   disabled: !0,
                   iconLeft: () =>
                       (0, i.jsx)(f.Z, {
-                          guild: Z,
+                          guild: N,
                           size: f.Z.Sizes.MINI
                       }),
                   id: 'integration-owner',
-                  label: Z.name,
+                  label: N.name,
                   subtext: O.intl.formatToPlainString(O.t.ShLXXF, { application: e.author.username })
               }))
-            : null != N &&
+            : null != Z &&
               (M = (0, i.jsx)(o.sNh, {
                   action: () =>
                       (0, g.openUserProfileModal)({
-                          userId: N.id,
+                          userId: Z.id,
                           guildId: x,
                           channelId: e.channel_id,
                           sourceAnalyticsLocations: j
@@ -62,11 +62,11 @@ function E(e) {
                   className: y.interactionInfoMenuItem,
                   iconLeft: () =>
                       (0, i.jsx)(c.Z, {
-                          user: N,
+                          user: Z,
                           size: o.EFr.SIZE_20
                       }),
                   id: 'integration-owner',
-                  label: N.username,
+                  label: Z.username,
                   subtext: O.intl.formatToPlainString(O.t.ShLXXF, { application: e.author.username })
               })),
         (0, i.jsxs)(o.sNh, {

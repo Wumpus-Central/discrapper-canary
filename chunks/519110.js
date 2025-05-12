@@ -65,10 +65,10 @@ function j(e) {
 function S(e) {
     let { type: t, id: n, name: S, isInExpressionPicker: P = !1 } = e,
         { location: _ } = (0, s.O)(),
-        N = r.useMemo(() => v(E({}, _), { section: P ? O.jXE.EXPRESSION_PICKER : O.jXE.CONTEXT_MENU }), [_, P]),
-        Z = (0, p.Go)(),
+        Z = r.useMemo(() => v(E({}, _), { section: P ? O.jXE.EXPRESSION_PICKER : O.jXE.CONTEXT_MENU }), [_, P]),
+        N = (0, p.Go)(),
         I = (0, l.e7)([b.Z], () => (t === f.S.STICKER && null != n ? b.Z.getStickerById(n) : null)),
-        x = null != I && Z.includes(I.id),
+        x = null != I && N.includes(I.id),
         T = (0, l.e7)([u.ZP], () => {
             if (t === f.S.EMOJI) {
                 if (null != n) return u.ZP.getDisambiguatedEmojiContext().getById(n);
@@ -93,7 +93,7 @@ function S(e) {
                     action: () => {
                         (0, m.cQ)({
                             sticker: I,
-                            location: v(E({}, N), { object: O.qAy.STICKER })
+                            location: v(E({}, Z), { object: O.qAy.STICKER })
                         }),
                             (0, g.SA)(null == I ? void 0 : I.id);
                     },
@@ -111,7 +111,7 @@ function S(e) {
                     action: () => {
                         (0, c.J1)({
                             emoji: T,
-                            location: v(E({}, N), { object: O.qAy.EMOJI })
+                            location: v(E({}, Z), { object: O.qAy.EMOJI })
                         }),
                             (0, o.$K)(T);
                     },

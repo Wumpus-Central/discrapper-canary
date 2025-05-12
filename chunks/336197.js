@@ -1,13 +1,14 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(727429),
-    i = n(703656),
-    o = n(769654),
-    a = n(592125),
-    s = n(754688),
-    l = n(849027),
-    c = n(927723),
-    u = n(981631);
-function d(e, t, n) {
+    i = n(982168),
+    o = n(703656),
+    a = n(769654),
+    s = n(592125),
+    l = n(754688),
+    c = n(849027),
+    u = n(927723),
+    d = n(981631);
+function f(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +21,7 @@ function d(e, t, n) {
         e
     );
 }
-function f(e) {
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,12 +32,12 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                d(e, t, n[t]);
+                f(e, t, n[t]);
             });
     }
     return e;
 }
-function _(e, t) {
+function p(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,29 +49,28 @@ function _(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function h(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : _(Object(t)).forEach(function (n) {
+            : p(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function h(e) {
+function m(e) {
     if (null == e.channelId) return e;
-    let t = a.Z.getChannel(e.channelId);
+    let t = s.Z.getChannel(e.channelId);
     if (null == t) return e;
     let n = (0, r.e)(t);
-    return p(f({}, e), { guildId: null != n ? n : u.ME });
+    return h(_({}, e), { guildId: null != n ? n : d.ME });
 }
-async function m(e, t) {
-    let n = (0, s.Qj)(e);
-    if (null != n && !(await (0, l.Z)(n))) return void (0, c.k)({ kind: 'channel' });
-    if (null == n) return void (0, i.uL)(e, t);
-    let r = h(n);
-    if (null == r.channelId) return void (0, o.X)(r.guildId);
-    null != r.threadId ? (0, i.uL)(u.Z5c.CHANNEL_THREAD_VIEW(r.guildId, r.channelId, r.threadId, r.messageId), t) : (0, i.uL)(u.Z5c.CHANNEL(r.guildId, r.channelId, r.messageId), t);
+async function g(e, t) {
+    let n = (0, l.Qj)(e);
+    if (null != n && !(await (0, c.Z)(n))) return void (0, u.k)({ kind: 'channel' });
+    if (null == n) return void (0, o.uL)(e, t);
+    let r = m(n);
+    return null == r.channelId ? void (0, a.X)(r.guildId) : (0, i.WF)(r.channelId) && (0, i.WF)(r.threadId) ? void (null != r.threadId ? (0, o.uL)(d.Z5c.CHANNEL_THREAD_VIEW(r.guildId, r.channelId, r.threadId, r.messageId), t) : (0, o.uL)(d.Z5c.CHANNEL(r.guildId, r.channelId, r.messageId), t)) : void (0, u.V)();
 }

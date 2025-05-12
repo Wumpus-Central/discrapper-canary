@@ -1,8 +1,8 @@
 n.d(t, {
-    NK: () => T,
-    R6: () => I,
-    ok: () => v,
-    vN: () => S
+    NK: () => N,
+    R6: () => T,
+    ok: () => S,
+    vN: () => A
 });
 var r = n(512722),
     i = n.n(r),
@@ -13,50 +13,53 @@ var r = n(512722),
     c = n(40851),
     u = n(367907),
     d = n(727429),
-    f = n(703656),
-    _ = n(359110),
-    p = n(695346),
-    h = n(703558),
-    m = n(944486),
-    g = n(979651),
-    E = n(585483),
-    b = n(124368),
-    y = n(981631),
-    O = n(176505);
-function v(e, t, n) {
-    c.UI.dispatch(y.CkL.POPOUT_CLOSE);
-    let r = !a().isEmpty(g.Z.getVoiceStatesForChannel(e.id));
-    if (t || !p.vF.getSetting() || __OVERLAY__ || r) {
+    f = n(927723),
+    _ = n(982168),
+    p = n(703656),
+    h = n(359110),
+    m = n(695346),
+    g = n(703558),
+    E = n(944486),
+    b = n(979651),
+    y = n(585483),
+    O = n(124368),
+    v = n(981631),
+    I = n(176505);
+function S(e, t, n) {
+    if (!(0, _.WF)(e.id)) return void (0, f.V)();
+    c.UI.dispatch(v.CkL.POPOUT_CLOSE);
+    let r = !a().isEmpty(b.Z.getVoiceStatesForChannel(e.id));
+    if (t || !m.vF.getSetting() || __OVERLAY__ || r) {
         s.Z.dispatch({
             type: 'SIDEBAR_CLOSE',
             baseChannelId: e.parent_id
         }),
-            null != n ? (0, _.ad)(e, { source: n }) : (0, _.Kh)(e.id);
+            null != n ? (0, h.ad)(e, { source: n }) : (0, h.Kh)(e.id);
         return;
     }
     i()(null != e.parent_id, 'all threads must have parents');
-    let o = m.Z.getChannelId();
-    e.parent_id === o || (0, O.ME)(o) || (0, _.Kh)(e.parent_id),
-        (0, f.uL)(y.Z5c.CHANNEL_THREAD_VIEW((0, d.e)(e), (0, O.ME)(o) ? O.oC.GUILD_HOME : e.parent_id, e.id), e.isForumPost() ? { source: b.on.FORUM } : void 0),
+    let o = E.Z.getChannelId();
+    e.parent_id === o || (0, I.ME)(o) || (0, h.Kh)(e.parent_id),
+        (0, p.uL)(v.Z5c.CHANNEL_THREAD_VIEW((0, d.e)(e), (0, I.ME)(o) ? I.oC.GUILD_HOME : e.parent_id, e.id), e.isForumPost() ? { source: O.on.FORUM } : void 0),
         setTimeout(() => {
-            E.S.dispatch(y.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
+            y.S.dispatch(v.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: e.id });
         }, 0);
 }
-function I(e, t, n) {
+function T(e, t, n) {
     if (
         (i()(!e.isForumLikeChannel(), 'cannot open thread creation sidebar in forums'),
         i()(!__OVERLAY__, 'Cannot create threads in the overlay.'),
-        (0, u.yw)(y.rMx.THREAD_CREATION_STARTED, {
+        (0, u.yw)(v.rMx.THREAD_CREATION_STARTED, {
             location: n,
             channel_id: e.id,
             guild_id: e.guild_id
         }),
-        c.UI.dispatch(y.CkL.POPOUT_CLOSE),
-        m.Z.getChannelId() !== e.id && (0, _.Kh)(e.id),
-        '' === h.Z.getDraft(e.id, h.d.FirstThreadMessage))
+        c.UI.dispatch(v.CkL.POPOUT_CLOSE),
+        E.Z.getChannelId() !== e.id && (0, h.Kh)(e.id),
+        '' === g.Z.getDraft(e.id, g.d.FirstThreadMessage))
     ) {
-        let t = h.Z.getDraft(e.id, h.d.ChannelMessage);
-        l.Z.saveDraft(e.id, '', h.d.ChannelMessage), l.Z.saveDraft(e.id, t, h.d.FirstThreadMessage);
+        let t = g.Z.getDraft(e.id, g.d.ChannelMessage);
+        l.Z.saveDraft(e.id, '', g.d.ChannelMessage), l.Z.saveDraft(e.id, t, g.d.FirstThreadMessage);
     }
     setTimeout(() => {
         s.Z.dispatch({
@@ -67,14 +70,14 @@ function I(e, t, n) {
         });
     }, 0);
 }
-function S(e, t) {
-    (0, f.uL)(y.Z5c.CHANNEL(e, (0, O.ME)(t) ? O.oC.GUILD_HOME : t)),
+function A(e, t) {
+    (0, p.uL)(v.Z5c.CHANNEL(e, (0, I.ME)(t) ? I.oC.GUILD_HOME : t)),
         s.Z.dispatch({
             type: 'SIDEBAR_CLOSE',
             baseChannelId: t
         });
 }
-function T(e) {
+function N(e) {
     s.Z.dispatch({
         type: 'SIDEBAR_CLOSE',
         baseChannelId: e
@@ -82,11 +85,11 @@ function T(e) {
         s.Z.dispatch({
             type: 'DRAFT_CLEAR',
             channelId: e,
-            draftType: h.d.FirstThreadMessage
+            draftType: g.d.FirstThreadMessage
         }),
         s.Z.dispatch({
             type: 'DRAFT_CLEAR',
             channelId: e,
-            draftType: h.d.ThreadSettings
+            draftType: g.d.ThreadSettings
         });
 }

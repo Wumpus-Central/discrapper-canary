@@ -2,13 +2,13 @@ t.d(n, { Z: () => p });
 var o = t(255367);
 t(73800);
 var r = t(481060),
-    c = t(37234),
-    i = t(566898),
+    i = t(37234),
+    c = t(566898),
     a = t(769654),
     l = t(785717),
     s = t(806729),
     d = t(821179),
-    u = t(388032),
+    u = t(264481),
     f = t(274151);
 function p(e) {
     let { user: n, onClose: t } = e,
@@ -25,11 +25,11 @@ function p(e) {
                           {
                               className: f.loadingItem,
                               children: [
-                                  (0, o.jsx)(i.ZT, {
+                                  (0, o.jsx)(c.ZT, {
                                       width: 40,
                                       opacity: 0.08
                                   }),
-                                  (0, o.jsx)(i.ZT, {
+                                  (0, o.jsx)(c.ZT, {
                                       width: 135,
                                       opacity: 0.08
                                   })
@@ -42,30 +42,20 @@ function p(e) {
                   ? null == m
                       ? void 0
                       : m.map((e) => {
-                            let { guild: r, nick: i } = e;
+                            let { guild: r, nick: c } = e;
                             return (0, o.jsx)(
                                 d.Z,
                                 {
                                     user: n,
                                     guild: r,
-                                    nick: i,
+                                    nick: c,
                                     onSelect: () => {
-                                        p({ action: 'PRESS_MUTUAL_GUILD' }), (0, a.X)(r.id), t(), (0, c.xf)();
+                                        p({ action: 'PRESS_MUTUAL_GUILD' }), (0, a.X)(r.id), t(), (0, i.xf)();
                                     }
                                 },
                                 r.id
                             );
                         })
-                  : (0, o.jsxs)('div', {
-                        className: f.empty,
-                        children: [
-                            (0, o.jsx)('div', { className: f.emptyImage }),
-                            (0, o.jsx)(r.Text, {
-                                variant: 'text-sm/normal',
-                                color: 'header-primary',
-                                children: u.intl.string(u.t.x5y3DA)
-                            })
-                        ]
-                    })
+                  : (0, o.jsx)(u.b0, {})
     });
 }

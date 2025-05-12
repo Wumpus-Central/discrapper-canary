@@ -18,8 +18,8 @@ var a = n(255367),
     O = n(358085),
     h = n(998502),
     S = n(254109),
-    E = n(212459),
-    C = n(369171),
+    C = n(212459),
+    E = n(369171),
     v = n(312097),
     T = n(388032),
     j = n(505348);
@@ -141,7 +141,7 @@ let D = r.forwardRef(function (e, t) {
     });
 });
 function A() {
-    let { zoomed: e, setZoomed: t } = (0, E.Y)();
+    let { zoomed: e, setZoomed: t } = (0, C.Y)();
     return (0, a.jsx)(D, {
         onClick: () => {
             (0, S.yg)(e ? S.uG.ZOOM_OUT_BUTTON_PRESSED : S.uG.ZOOM_IN_BUTTON_PRESSED), t(!e);
@@ -381,8 +381,8 @@ let B = r.memo(function (e) {
         }, [o]);
     return (
         ('IMAGE' === t.type || !n) &&
-        (0, a.jsx)(C.ZP, {
-            mode: C.lx.FOCUS_SENSITIVE,
+        (0, a.jsx)(E.ZP, {
+            mode: E.lx.FOCUS_SENSITIVE,
             children: (e) =>
                 (0, a.jsxs)('div', {
                     ref: l,
