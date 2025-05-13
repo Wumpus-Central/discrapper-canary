@@ -130,7 +130,7 @@ function E(e) {
                 type: 'image',
                 src: N ? I.heroArtImageLinkLightTheme : I.heroArtImageLinkDarkTheme
             });
-    let w =
+    let L =
         '' !== I.modalTopPill
             ? () =>
                   (0, r.jsx)(d.mn, {
@@ -141,7 +141,7 @@ function E(e) {
     return {
         renderModalProps: v,
         header: I.header,
-        modalTopExtra: w,
+        modalTopExtra: L,
         subHeader: I.subheader,
         subHeaderExtra: Z,
         body: I.body,

@@ -70,10 +70,10 @@ function Z(e, t) {
     );
 }
 let x = [];
-function w() {
+function L() {
     c.Z.setSection(T.pJs.ADD_FRIEND);
 }
-function L() {
+function w() {
     (0, s.ZDy)(async () => {
         let { default: e } = await n.e('36312').then(n.bind(n, 153932));
         return (t) => (0, r.jsx)(e, A({}, t));
@@ -81,7 +81,7 @@ function L() {
 }
 function R(e) {
     let { section: t, showSpamCta: n } = e,
-        l = i.useMemo(() => (n ? L : t !== T.pJs.PENDING ? w : void 0), [n, t]);
+        l = i.useMemo(() => (n ? w : t !== T.pJs.PENDING ? L : void 0), [n, t]);
     return (0, r.jsx)('div', {
         className: j.emptyStateContainer,
         children: (0, r.jsx)(
@@ -98,7 +98,7 @@ let D = function (e) {
     let { titleId: t } = e,
         { analyticsLocations: n } = (0, h.ZP)(p.Z.FRIENDS_LIST),
         { rows: l, section: c } = (0, o.cj)([b.ZP], () => b.ZP.getState()),
-        w = (0, o.e7)([_.Z], () => _.Z.isFocused()),
+        L = (0, o.e7)([_.Z], () => _.Z.isFocused()),
         { relationshipCount: D, hasBlockedOrIgnored: k } = (0, o.cj)([m.Z], () => ({
             relationshipCount: m.Z.getRelationshipCount(),
             hasBlockedOrIgnored: m.Z.getBlockedOrIgnoredIDs().length > 0
@@ -132,24 +132,24 @@ let D = function (e) {
                     })(e, ['key']);
                 switch (c) {
                     case T.pJs.PENDING:
-                        return (0, r.jsx)(y.Z, Z(A({}, n), { isFocused: w }), t);
+                        return (0, r.jsx)(y.Z, Z(A({}, n), { isFocused: L }), t);
                     case T.pJs.SUGGESTIONS:
-                        return (0, r.jsx)(S.Z, Z(A({}, n), { isFocused: w }), t);
+                        return (0, r.jsx)(S.Z, Z(A({}, n), { isFocused: L }), t);
                     case T.pJs.ONLINE:
                     case T.pJs.ALL:
                     default:
-                        return (0, r.jsx)(E.Z, Z(A({}, n), { isFocused: w }), t);
+                        return (0, r.jsx)(E.Z, Z(A({}, n), { isFocused: L }), t);
                 }
             },
-            [w, c]
+            [L, c]
         ),
-        B = i.useCallback(
+        V = i.useCallback(
             (e) => {
                 U(Z(A({}, M), { [c]: e }));
             },
             [M, c]
         ),
-        V = i.useCallback(() => {
+        B = i.useCallback(() => {
             U(Z(A({}, M), { [c]: '' }));
         }, [M, c]),
         H = i.useMemo(() => c === T.pJs.PENDING && (l.filter(T.pJs.SPAM).length > 0 || l.filter(T.pJs.PENDING_IGNORED).length > 0), [l, c]),
@@ -263,8 +263,8 @@ let D = function (e) {
                 (0, r.jsx)(s.E1j, {
                     className: a()(j.searchBar, $ ? j.searchEmptyState : null),
                     query: M[c],
-                    onChange: B,
-                    onClear: V,
+                    onChange: V,
+                    onClear: B,
                     size: s.E1j.Sizes.MEDIUM
                 }),
                 (0, r.jsx)(I.Z, {
@@ -280,7 +280,7 @@ let D = function (e) {
                                   look: s.zxk.Looks.LINK,
                                   color: j.viewSpamButtonColor,
                                   className: j.viewSpamButton,
-                                  onClick: L,
+                                  onClick: w,
                                   size: s.PhG.TINY,
                                   children: (0, r.jsx)(s.Text, {
                                       variant: 'text-xs/medium',

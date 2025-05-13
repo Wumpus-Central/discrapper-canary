@@ -33,8 +33,8 @@ var r = n(255367),
     A = n(497334),
     Z = n(119850),
     x = n(938736),
-    w = n(227140),
-    L = n(474936),
+    L = n(227140),
+    w = n(474936),
     R = n(981631),
     D = n(921944),
     k = n(388032),
@@ -56,8 +56,8 @@ let U = (e) => {
     },
     G = (e) => {
         let t, n, E, G;
-        var B,
-            V,
+        var V,
+            B,
             { selected: H, route: F, locationState: z } = e,
             W = (function (e, t) {
                 if (null == e) return {};
@@ -91,11 +91,11 @@ let U = (e) => {
             er = (0, Z.V)(),
             ei = (0, x.Kn)('NitroTabButton'),
             { fractionalState: el, startsAt: ea, endsAt: eo } = (0, d.Z)({ forceFetch: !0 }),
-            [es, ec] = (0, h.bf)(el !== L.a$.NONE ? o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
+            [es, ec] = (0, h.bf)(el !== w.a$.NONE ? o.z.FRACTIONAL_NITRO_DURATION_LEFT_PILL : null, {
                 showAfterTimestamp: ea.valueOf(),
                 cooldownDurationMs: 0
             }),
-            eu = (null == X ? void 0 : X.trial_id) === L.a7,
+            eu = (null == X ? void 0 : X.trial_id) === w.a7,
             [ed, ep] = (0, h.US)($ ? [o.z.Q2_2025_MARKETING_MOMENT_NITRO_TAB_BADGE_V2] : [], void 0, !0);
         if (
             (i.useEffect(() => {
@@ -104,7 +104,7 @@ let U = (e) => {
             !U({ selected: H }))
         )
             return null;
-        el === L.a$.NONE ||
+        el === w.a$.NONE ||
             $ ||
             ((G = 7),
             (E = (0, r.jsx)(y.Z, {
@@ -119,13 +119,13 @@ let U = (e) => {
                 : $
                   ? ((E = (0, r.jsx)(A.S, { expiresAt: eo })), (G = 4))
                   : null != en
-                    ? ((E = (0, r.jsx)(w.Z, {
+                    ? ((E = (0, r.jsx)(L.Z, {
                           copy: en,
                           showStars: !1
                       })),
                       (G = 1))
                     : null != er
-                      ? ((E = (0, r.jsx)(w.Z, {
+                      ? ((E = (0, r.jsx)(L.Z, {
                             copy: er,
                             showStars: !1
                         })),
@@ -152,7 +152,7 @@ let U = (e) => {
                             (G = 4));
         let eh = (0, r.jsx)(
             c.Qj,
-            ((B = (function (e) {
+            ((V = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
@@ -195,14 +195,14 @@ let U = (e) => {
                 W,
                 Q
             )),
-            (V = V =
+            (B = B =
                 {
                     className: t,
                     avatarWithTextClassName: n,
                     children: E
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(B, Object.getOwnPropertyDescriptors(V))
+                ? Object.defineProperties(V, Object.getOwnPropertyDescriptors(B))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
@@ -210,10 +210,10 @@ let U = (e) => {
                           n.push.apply(n, r);
                       }
                       return n;
-                  })(Object(V)).forEach(function (e) {
-                      Object.defineProperty(B, e, Object.getOwnPropertyDescriptor(V, e));
+                  })(Object(B)).forEach(function (e) {
+                      Object.defineProperty(V, e, Object.getOwnPropertyDescriptor(B, e));
                   }),
-            B)
+            V)
         );
         return ei ? (0, r.jsx)(j.C, { children: eh }) : eh;
     };

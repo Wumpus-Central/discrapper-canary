@@ -29,16 +29,16 @@ var r = n(255367),
     A = n(795448),
     Z = n(441623),
     x = n(457396),
-    w = n(108989),
-    L = n(51596),
+    L = n(108989),
+    w = n(51596),
     R = n(905423),
     D = n(155409),
     k = n(210887),
     M = n(695346),
     U = n(283595),
     G = n(923834),
-    B = n(55563),
-    V = n(774343),
+    V = n(55563),
+    B = n(774343),
     H = n(626135),
     F = n(814225),
     z = n(515753),
@@ -161,7 +161,7 @@ let er = (e) => {
                 ),
                 h &&
                     !u &&
-                    (0, r.jsx)(w.Z, {
+                    (0, r.jsx)(L.Z, {
                         className: $.confetti,
                         wind: 0,
                         sprites: q.CA,
@@ -291,7 +291,7 @@ let er = (e) => {
                     }
                 });
     },
-    ec = () => (0, L.$Z)('DM_SEARCH');
+    ec = () => (0, w.$Z)('DM_SEARCH');
 function eu(e) {
     switch (e) {
         case K.Z5c.APPLICATION_LIBRARY:
@@ -402,15 +402,15 @@ function ep() {
     return (0, r.jsx)('div', { className: $.sectionDivider });
 }
 function eh() {
-    let e = (0, d.e7)([V.Z], () => V.Z.getHomeLink()),
+    let e = (0, d.e7)([B.Z], () => B.Z.getHomeLink()),
         t = (0, d.e7)(
-            [B.Z],
+            [V.Z],
             () => {
                 if (e === K.Z5c.APPLICATION_STORE) return !0;
                 let t = (0, F.ZK)(e);
                 if (null != t) {
                     var n, r;
-                    return null != (r = null == (n = B.Z.get(t)) ? void 0 : n.premium) && r;
+                    return null != (r = null == (n = V.Z.get(t)) ? void 0 : n.premium) && r;
                 }
                 return !1;
             },

@@ -29,16 +29,16 @@ var r = n(255367),
     A = n(267161),
     Z = n(652515),
     x = n(544978),
-    w = n(540059),
-    L = n(724383),
+    L = n(540059),
+    w = n(724383),
     R = n(135864),
     D = n(372900),
     k = n(6039),
     M = n(637853),
     U = n(326145),
     G = n(269675),
-    B = n(242601),
-    V = n(416568),
+    V = n(242601),
+    B = n(416568),
     H = n(613609),
     F = n(160404),
     z = n(225675),
@@ -141,13 +141,13 @@ let ej = (0, u.Un)({
         name: 'GuildHomePage',
         renderLoader: eA
     }),
-    ew = (0, u.Un)({
+    eL = (0, u.Un)({
         createPromise: () => Promise.all([n.e('6850'), n.e('9924')]).then(n.bind(n, 545918)),
         webpackId: 545918,
         name: 'MemberSafetyPage',
         renderLoader: eA
     }),
-    eL = (0, u.Un)({
+    ew = (0, u.Un)({
         createPromise: () => Promise.all([n.e('44156'), n.e('58227'), n.e('58121')]).then(n.bind(n, 603072)),
         webpackId: 603072,
         name: 'ChannelsAndRolesPage',
@@ -210,19 +210,19 @@ let ej = (0, u.Un)({
                 case eI.oC.GUILD_HOME:
                     return (0, r.jsx)(ex, { guildId: l });
                 case eI.oC.CHANNEL_BROWSER:
-                    return (0, r.jsx)(eL, {
+                    return (0, r.jsx)(ew, {
                         guildId: l,
                         selectedSection: eC.l7.BROWSE
                     });
                 case eI.oC.GUILD_ONBOARDING:
                     return (0, r.jsx)(eR, { guildId: l });
                 case eI.oC.CUSTOMIZE_COMMUNITY:
-                    return (0, r.jsx)(eL, {
+                    return (0, r.jsx)(ew, {
                         guildId: l,
                         selectedSection: eC.l7.CUSTOMIZE
                     });
                 case eI.oC.MEMBER_SAFETY:
-                    return (0, r.jsx)(ew, { guildId: l });
+                    return (0, r.jsx)(eL, { guildId: l });
                 case eI.oC.GUILD_BOOSTS:
                     return (0, r.jsx)(eD, {
                         guildId: l,
@@ -258,7 +258,7 @@ let ej = (0, u.Un)({
             ? (0, r.jsx)(R.Z, {})
             : null != e
               ? (0, r.jsx)(
-                    B.Z,
+                    V.Z,
                     {
                         selectedChannelId: n,
                         guildId: e
@@ -268,12 +268,12 @@ let ej = (0, u.Un)({
               : (0, r.jsx)(eb.Z, {});
     }),
     eU = (e) => (0, r.jsx)(ek, eT({}, e)),
-    eG = () => (0, r.jsx)(L.Z, {}),
-    eB = (e) => {
+    eG = () => (0, r.jsx)(w.Z, {}),
+    eV = (e) => {
         let { match: t } = e;
         return null != t.params.guildId ? (0, r.jsx)(k.Z, { guildId: t.params.guildId }) : null;
     },
-    eV = (e) => {
+    eB = (e) => {
         let { match: t } = e;
         return null != t.params.guildId
             ? (0, r.jsx)(H.Z, {
@@ -360,8 +360,8 @@ function e$(e) {
     let u = 'app view user trigger debugging';
     b.R6.useExperiment({ location: u }, { autoTrackExposure: !1 }), b.R6.trackExposure({ location: u });
     let p = (0, h.e7)([N.Z], () => N.Z.isFullscreenInContext()),
-        m = (0, w.TH)('ChannelSidebar'),
-        O = (0, w.Q3)('ChannelSidebar'),
+        m = (0, L.TH)('ChannelSidebar'),
+        O = (0, L.Q3)('ChannelSidebar'),
         y = (0, A.useAppSidebarState)((e) => !e.isOpen) && m;
     i.useLayoutEffect(() => {
         if (m) {
@@ -443,7 +443,7 @@ function e$(e) {
                     O &&
                         s &&
                         !c &&
-                        (0, r.jsx)(V.Z, {
+                        (0, r.jsx)(B.Z, {
                             className: eN.guilds,
                             themeOverride: n
                         }),
@@ -512,8 +512,8 @@ function e0() {
         m = (null == g || null == (e = g.params) ? void 0 : e.channelId) === eI.oC.GUILD_ONBOARDING,
         b = l || a || o || u || m,
         _ = i.useCallback(() => K.Z.openSidebar(), []),
-        E = (0, w.Q3)('AppView'),
-        O = (0, w.TH)('AppView'),
+        E = (0, L.Q3)('AppView'),
+        O = (0, L.TH)('AppView'),
         C = E ? 'div' : i.Fragment,
         T = (0, A.useAppSidebarState)((e) => !e.isOpen),
         j = (0, h.e7)([N.Z], () => N.Z.isFullscreenInContext()),
@@ -533,7 +533,7 @@ function e0() {
             f &&
                 !u &&
                 !E &&
-                (0, r.jsx)(V.Z, {
+                (0, r.jsx)(B.Z, {
                     className: eN.guilds,
                     themeOverride: n
                 }),
@@ -667,13 +667,13 @@ function e0() {
                                                         }),
                                                         (0, r.jsx)(S.Z, {
                                                             path: ey.Z5c.GUILD_MEMBER_VERIFICATION(en.Hw.guildId()),
-                                                            render: eB,
+                                                            render: eV,
                                                             impressionName: c.ImpressionNames.GUILD_MEMBER_VERIFICATION,
                                                             disableTrack: !0
                                                         }),
                                                         (0, r.jsx)(S.Z, {
                                                             path: ey.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(en.Hw.guildId(), ':inviteCode?'),
-                                                            render: eV,
+                                                            render: eB,
                                                             impressionName: c.ImpressionNames.HUB_EMAIL_SIGNUP,
                                                             impressionProperties: (e) => {
                                                                 let { computedMatch: t } = e;

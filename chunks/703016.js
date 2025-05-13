@@ -29,12 +29,12 @@ var r = n(913527),
 let A = [],
     Z = null,
     x = null,
-    w = null,
-    L = /\|\|([\s\S]+?)\|\|/g;
+    L = null,
+    w = /\|\|([\s\S]+?)\|\|/g;
 function R(e, t, n, r) {
     let l = b.Z.getGuild(n),
         a = e
-            .replace(L, j.intl.string(j.t['F+x38P']))
+            .replace(w, j.intl.string(j.t['F+x38P']))
             .replace(/<@!?(\d+)>/g, (e, t) => {
                 var r;
                 let i = v.default.getUser(t);
@@ -70,11 +70,11 @@ function R(e, t, n, r) {
 function D() {
     if (!o.Zh) return !1;
     let e = d.default.locale;
-    if (null == w) {
+    if (null == L) {
         var t;
-        w = null == (t = window.speechSynthesis) ? void 0 : t.getVoices();
+        L = null == (t = window.speechSynthesis) ? void 0 : t.getVoices();
     }
-    let n = w.filter((t) => t.lang === e || t.lang.slice(0, e.length) === e);
+    let n = L.filter((t) => t.lang === e || t.lang.slice(0, e.length) === e);
     x = n.length > 0 ? n[0] : null;
 }
 async function k(e, t, n, r, i) {
@@ -93,7 +93,7 @@ function U(e) {
 function G() {
     return null !== Z && Z.removeEventListener('end', S.NB), o.M9(), (Z = null), !0;
 }
-function B(e) {
+function V(e) {
     var t, n, r;
     let { message: i, channel: l } = e,
         a = i.type === P.uaV.REPLY ? u.Z.getMessageByReference(i.messageReference) : null,
@@ -103,7 +103,7 @@ function B(e) {
         d = null != (r = m.ZP.getNick(c, i.author.id)) ? r : C.ZP.getName(i.author);
     return M(R(i.content, d, c, s), !0, l.id, i.id), !0;
 }
-function V(e) {
+function B(e) {
     var t, n, r, i, l, a;
     let { channelId: o, message: s, optimistic: c } = e;
     if (c || _.Z.isSelfDeaf()) return !1;
@@ -137,6 +137,6 @@ function F() {
 }
 let z = {
     init() {
-        l.Z.subscribe('SPEAK_TEXT', U), l.Z.subscribe('SPEAK_MESSAGE', B), l.Z.subscribe('STOP_SPEAKING', G), l.Z.subscribe('MESSAGE_CREATE', V), l.Z.subscribe('MESSAGE_DELETE', H), l.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', F), l.Z.subscribe('USER_SETTINGS_PROTO_UPDATE', D), (0, a.Ql)(D);
+        l.Z.subscribe('SPEAK_TEXT', U), l.Z.subscribe('SPEAK_MESSAGE', V), l.Z.subscribe('STOP_SPEAKING', G), l.Z.subscribe('MESSAGE_CREATE', B), l.Z.subscribe('MESSAGE_DELETE', H), l.Z.subscribe('AUDIO_TOGGLE_SELF_DEAF', F), l.Z.subscribe('USER_SETTINGS_PROTO_UPDATE', D), (0, a.Ql)(D);
     }
 };

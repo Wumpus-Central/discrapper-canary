@@ -245,7 +245,7 @@ function Q(e) {
                             return (0, i.createElement)(
                                 R.Z,
                                 K(q({}, e), {
-                                    buttonRef: M,
+                                    ref: M,
                                     isActive: n,
                                     count: en,
                                     key: 'call-members',
@@ -317,7 +317,7 @@ function Q(e) {
                             let { isShown: n } = t;
                             return (0, i.createElement)(
                                 T.Z,
-                                K(q({ buttonRef: L }, e), {
+                                K(q({ ref: L }, e), {
                                     key: 'more-options',
                                     isActive: n,
                                     className: Y.lastButton

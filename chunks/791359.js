@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -129,8 +129,8 @@ let Z = 15 * E.Z.Millis.MINUTE,
               })
             : null;
     }),
-    w = a().throttle(() => f.W(!1), 300000);
-function L() {
+    L = a().throttle(() => f.W(!1), 300000);
+function w() {
     let {
             nowPlayingCards: e,
             loaded: t,
@@ -147,7 +147,7 @@ function L() {
         o = (0, c.e7)([p.Z], () => p.Z.quests);
     i.useEffect(() => (d.Z.wait(() => O.L()), () => d.Z.wait(() => O.v())), [null == a ? void 0 : a.id]),
         i.useEffect(() => {
-            n && !l && w();
+            n && !l && L();
         }, [n, l]);
     let s = i.useMemo(() => {
             let t = new Map(),

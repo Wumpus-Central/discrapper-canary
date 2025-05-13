@@ -7,8 +7,8 @@ t.d(n, {
     t(388685);
 var o = t(255367),
     r = t(73800),
-    i = t(392711),
-    c = t(481060),
+    c = t(392711),
+    i = t(481060),
     a = t(493683),
     l = t(230711),
     s = t(410030),
@@ -20,8 +20,8 @@ var o = t(255367),
     b = t(771627);
 let _ = [() => m.intl.string(m.t.madJdH), () => m.intl.string(m.t.NYmfoK), () => m.intl.string(m.t.R2PaCg), () => m.intl.string(m.t.laSR8v), () => m.intl.string(m.t.DnsJEx)],
     y = [() => m.intl.string(m.t.nFSbeH), () => m.intl.string(m.t.gTcxOz), () => m.intl.string(m.t['8T0wYm']), () => m.intl.string(m.t.BIHl1t), () => m.intl.string(m.t.jhBm09)],
-    h = [() => m.intl.string(m.t.AyMGXF), () => m.intl.string(m.t.aAFW7e), (e) => m.intl.formatToPlainString(m.t.h2g0cH, { name: e }), () => m.intl.string(m.t['rrYh5+']), () => m.intl.string(m.t['HX3K+P']), () => m.intl.string(m.t['/yW3aW']), () => m.intl.string(m.t['PmL/v7']), () => m.intl.string(m.t.IALa3t), () => m.intl.string(m.t.HRcTFB), () => m.intl.string(m.t.NuCqPj), () => m.intl.string(m.t['M1tw+/']), () => m.intl.string(m.t.UBm1y8), () => m.intl.string(m.t.Cu95PT), () => m.intl.string(m.t['R/wFur']), () => m.intl.string(m.t.HQPAVV), () => m.intl.string(m.t.YolGh4)],
-    g = [p.ABu.EPIC_GAMES, p.ABu.RIOT_GAMES, p.ABu.XBOX, p.ABu.SPOTIFY, p.ABu.PLAYSTATION, p.ABu.LEAGUE_OF_LEGENDS, p.ABu.STEAM, p.ABu.CRUNCHYROLL, p.ABu.YOUTUBE, p.ABu.REDDIT, p.ABu.BATTLENET, p.ABu.GITHUB, p.ABu.TIKTOK, p.ABu.TWITTER_LEGACY, p.ABu.TWITCH];
+    g = [() => m.intl.string(m.t.AyMGXF), () => m.intl.string(m.t.aAFW7e), (e) => m.intl.formatToPlainString(m.t.h2g0cH, { name: e }), () => m.intl.string(m.t['rrYh5+']), () => m.intl.string(m.t['HX3K+P']), () => m.intl.string(m.t['/yW3aW']), () => m.intl.string(m.t['PmL/v7']), () => m.intl.string(m.t.IALa3t), () => m.intl.string(m.t.HRcTFB), () => m.intl.string(m.t.NuCqPj), () => m.intl.string(m.t['M1tw+/']), () => m.intl.string(m.t.UBm1y8), () => m.intl.string(m.t.Cu95PT), () => m.intl.string(m.t['R/wFur']), () => m.intl.string(m.t.HQPAVV), () => m.intl.string(m.t.YolGh4)],
+    h = [p.ABu.EPIC_GAMES, p.ABu.RIOT_GAMES, p.ABu.XBOX, p.ABu.SPOTIFY, p.ABu.PLAYSTATION, p.ABu.LEAGUE_OF_LEGENDS, p.ABu.STEAM, p.ABu.CRUNCHYROLL, p.ABu.YOUTUBE, p.ABu.REDDIT, p.ABu.BATTLENET, p.ABu.GITHUB, p.ABu.TIKTOK, p.ABu.TWITTER_LEGACY, p.ABu.TWITCH];
 function x(e) {
     let { heading: n, bodyText: t, children: r } = e;
     return (0, o.jsxs)('div', {
@@ -30,12 +30,12 @@ function x(e) {
             (0, o.jsxs)('div', {
                 className: b.textContainer,
                 children: [
-                    (0, o.jsx)(c.X6q, {
+                    (0, o.jsx)(i.X6q, {
                         variant: 'heading-md/medium',
                         color: 'header-primary',
                         children: n
                     }),
-                    (0, o.jsx)(c.Text, {
+                    (0, o.jsx)(i.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
                         children: t
@@ -50,7 +50,7 @@ function j() {
     let e = m.intl.string(m.t.RnD2yc),
         [n] = r.useState(() => {
             var e;
-            return (null != (e = (0, i.sample)(_)) ? e : _[0])();
+            return (null != (e = (0, c.sample)(_)) ? e : _[0])();
         });
     return (0, o.jsx)(x, {
         heading: e,
@@ -61,7 +61,7 @@ function I() {
     let e = m.intl.string(m.t.bFgqYG),
         [n] = r.useState(() => {
             var e;
-            return (null != (e = (0, i.sample)(y)) ? e : y[0])();
+            return (null != (e = (0, c.sample)(y)) ? e : y[0])();
         });
     return (0, o.jsx)(x, {
         heading: e,
@@ -74,7 +74,7 @@ function O(e) {
         d = m.intl.formatToPlainString(m.t.sjSitL, { name: s }),
         [p] = r.useState(() => {
             var e;
-            return (null != (e = (0, i.sample)(h)) ? e : h[0])(s);
+            return (null != (e = (0, c.sample)(g)) ? e : g[0])(s);
         }),
         _ = r.useCallback(() => {
             a.Z.openPrivateChannel({ recipientIds: n.id });
@@ -92,13 +92,13 @@ function O(e) {
             className: b.buttonRow,
             children: [
                 (0, o.jsx)(f.tG, {
-                    icon: c.kBi,
+                    icon: i.kBi,
                     text: m.intl.string(m.t['g33r/P']),
                     onClick: _,
                     themeColor: 'secondary'
                 }),
                 (0, o.jsx)(f.tG, {
-                    icon: c.qWc,
+                    icon: i.qWc,
                     text: m.intl.string(m.t.JJogjo),
                     onClick: y,
                     themeColor: 'secondary'
@@ -111,14 +111,14 @@ function v() {
     let e = (0, s.ZP)();
     return (0, o.jsx)('div', {
         className: b.connectionPlatforms,
-        children: g.map((n, t) => {
+        children: h.map((n, t) => {
             let r = d.Z.get(n);
             if (null == r) return null;
-            let i = (0, c.wjy)(e) ? r.icon.darkPNG : r.icon.lightPNG;
+            let c = (0, i.wjy)(e) ? r.icon.darkPNG : r.icon.lightPNG;
             return (0, o.jsx)(
                 'img',
                 {
-                    src: i,
+                    src: c,
                     alt: r.name,
                     className: b.connectionIcon
                 },
@@ -132,7 +132,7 @@ function C(e) {
         t = r.useCallback(() => {
             null == n || n(), l.Z.open(p.oAB.CONNECTIONS);
         }, [n]),
-        i = r.useCallback(() => {
+        c = r.useCallback(() => {
             null == n || n(), l.Z.open(p.oAB.CONTENT_AND_SOCIAL, 'CONNECTED_GAMES');
         }, [n]);
     return (0, o.jsxs)(x, {
@@ -150,7 +150,7 @@ function C(e) {
                     }),
                     (0, o.jsx)(f.tG, {
                         text: m.intl.string(m.t.GTCx0t),
-                        onClick: i,
+                        onClick: c,
                         themeColor: 'secondary'
                     })
                 ]

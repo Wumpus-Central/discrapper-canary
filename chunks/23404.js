@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L }), n(388685);
+n.d(t, { Z: () => w }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -86,13 +86,13 @@ function x(e) {
         ]
     });
 }
-function w(e) {
+function L(e) {
     var t, n, l, c;
     let { nodeRef: _, quest: E } = e,
         O = (0, u.O5)(),
         P = (0, o.e7)([h.Z], () => h.Z.isEnrolling(E.id), [E]),
-        w = (0, o.e7)([h.Z], () => null != h.Z.questEnrollmentBlockedUntil, []),
-        [L, R] = i.useState(!1),
+        L = (0, o.e7)([h.Z], () => null != h.Z.questEnrollmentBlockedUntil, []),
+        [w, R] = i.useState(!1),
         D = i.useCallback(() => R(!0), []),
         k = i.useCallback(() => R(!1), []),
         M = i.useCallback((e) => {
@@ -116,7 +116,7 @@ function w(e) {
                     questId: E.id
                 }));
         }, [E, O]),
-        B = i.useCallback(() => {
+        V = i.useCallback(() => {
             O({
                 questId: E.id,
                 questContent: f.jn.ACTIVITY_PANEL,
@@ -127,7 +127,7 @@ function w(e) {
                     questId: E.id
                 });
         }, [E.id, O]),
-        V = (0, C.hf)({
+        B = (0, C.hf)({
             quest: E,
             location: f.jn.ACTIVITY_PANEL
         }),
@@ -144,7 +144,7 @@ function w(e) {
             questContent: f.jn.ACTIVITY_PANEL
         }),
         Q = (0, m.j)({ location: T.dr.QUESTS_BAR_MOBILE });
-    return Y || H || W || w
+    return Y || H || W || L
         ? null
         : (0, r.jsxs)('div', {
               ref: (e) => {
@@ -224,7 +224,7 @@ function w(e) {
                   F &&
                       !z &&
                       (0, r.jsx)(S.Z, {
-                          autoplay: L,
+                          autoplay: w,
                           className: A.rewardTileWithInstructions,
                           quest: E,
                           questContent: f.jn.ACTIVITY_PANEL,
@@ -242,7 +242,7 @@ function w(e) {
                                           color: s.zxk.Colors.PRIMARY,
                                           fullWidth: !0,
                                           size: s.zxk.Sizes.SMALL,
-                                          onClick: B,
+                                          onClick: V,
                                           children: j.intl.string(j.t.LLLLPD)
                                       }),
                                       (0, r.jsx)(s.zxk, {
@@ -271,7 +271,7 @@ function w(e) {
                                   className: A.cta,
                                   color: s.zxk.Colors.BRAND,
                                   fullWidth: !0,
-                                  onClick: V,
+                                  onClick: B,
                                   size: s.zxk.Sizes.SMALL,
                                   children: j.intl.string(j.t.cfY4PD)
                               })
@@ -280,10 +280,10 @@ function w(e) {
               ]
           });
 }
-let L = function (e) {
+let w = function (e) {
     return (0, r.jsx)(O.A, {
         questOrQuests: e.quest,
         questContent: f.jn.ACTIVITY_PANEL,
-        children: (t) => (0, r.jsx)(w, Z({ nodeRef: t }, e))
+        children: (t) => (0, r.jsx)(L, Z({ nodeRef: t }, e))
     });
 };

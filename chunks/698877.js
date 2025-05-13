@@ -63,7 +63,7 @@ function u(e) {
                 return e;
             })(
                 {
-                    buttonRef: _,
+                    ref: _,
                     label: t,
                     disabled: !u,
                     iconComponent: O,

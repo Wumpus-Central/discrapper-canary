@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => B }), n(539854), n(388685);
+n.d(t, { ZP: () => V }), n(539854), n(388685);
 var r,
     i = n(392711),
     l = n.n(i),
@@ -250,24 +250,24 @@ class j {
 let A = !0,
     Z = !1,
     x = O.pJs.ONLINE,
-    w = new j(),
-    L = !0,
+    L = new j(),
+    w = !0,
     R = !1;
 function D() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     A && (e || (x !== O.pJs.ONLINE && x !== O.pJs.ADD_FRIEND)) && !Z && ((A = !1), (Z = !0), s.Z.fetchRelationships());
 }
 function k() {
-    if (((A = !0), L ? (Z = !1) : D(), (w = w.reset()), R)) return;
-    let e = w.getRelationshipCounts();
+    if (((A = !0), w ? (Z = !1) : D(), (L = L.reset()), R)) return;
+    let e = L.getRelationshipCounts();
     x = 0 === e[O.OGo.FRIEND] ? (0 !== e[O.OGo.PENDING_INCOMING] ? O.pJs.PENDING : O.pJs.ADD_FRIEND) : O.pJs.ONLINE;
 }
 function M() {
-    w = L ? new j() : w.reset();
+    L = w ? new j() : L.reset();
 }
 function U(e) {
     return function () {
-        return !L && !!w.update(e) && ((w = w.clone()), !0);
+        return !w && !!L.update(e) && ((L = L.clone()), !0);
     };
 }
 class G extends (r = a.ZP.Store) {
@@ -278,12 +278,12 @@ class G extends (r = a.ZP.Store) {
         return {
             fetching: Z,
             section: x,
-            rows: w
+            rows: L
         };
     }
 }
 I(G, 'displayName', 'FriendsStore');
-let B = new G(o.Z, {
+let V = new G(o.Z, {
     CONNECTION_OPEN: function () {
         k();
     },
@@ -292,7 +292,7 @@ let B = new G(o.Z, {
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        return (L = null != t), M(), !L;
+        return (w = null != t), M(), !w;
     },
     LOAD_RELATIONSHIPS_SUCCESS: function () {
         Z = !1;

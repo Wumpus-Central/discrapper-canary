@@ -47,13 +47,13 @@ function j(e) {
         { guildIds: s, loading: h, searchResultsQuery: v, loadMore: j, searchCategoryId: A } = (0, b.f)({ loadId: t }),
         Z = 0 === s.length && !h,
         x = i.useContext(d.AnalyticsContext),
-        [w, L] = i.useState((0, m.PM)()),
+        [L, w] = i.useState((0, m.PM)()),
         [R, D] = i.useState(!0),
         k = i.useRef(R),
         [M, U] = i.useState(3),
         G = i.useRef(M),
-        B = i.useRef(null),
-        V = i.useCallback(
+        V = i.useRef(null),
+        B = i.useCallback(
             (e) => {
                 if (null != e && !Z && !h) 336 * (s.length / M) <= e.height && j();
             },
@@ -67,24 +67,24 @@ function j(e) {
                 n < 1024 && k.current ? ((k.current = !1), D(!1)) : n > 1024 && !k.current && ((k.current = !0), D(!0));
                 let r = 1;
                 for (n -= 450 * !!R, n -= 280; n > 0; ) (n -= 264), (r += 1);
-                r !== G.current && ((G.current = r), U(r)), V(t);
+                r !== G.current && ((G.current = r), U(r)), B(t);
             },
-            [R, V]
+            [R, B]
         ),
-        F = (0, u.y)(H, [R, V]);
+        F = (0, u.y)(H, [R, B]);
     i.useEffect(() => {
-        L((0, m.PM)());
+        w((0, m.PM)());
     }, [v]),
         i.useEffect(() => {
             P({
                 loadId: t,
-                searchId: w,
+                searchId: L,
                 query: v,
                 guildResults: s.map(f.Z.getGuild).filter(p.lm),
                 analyticsContext: x,
                 categoryId: A
             });
-        }, [x, s, t, A, w, v]);
+        }, [x, s, t, A, L, v]);
     let z = i.useCallback((e) => n(e, A), [n, A]),
         W = i.useMemo(() => (h ? [s.length, 0] : [s.length]), [s.length, h]),
         Y = i.useCallback(
@@ -157,7 +157,7 @@ function j(e) {
             async (e, t, n, r) => {
                 var i, a;
                 await l(e, t, n, r);
-                let o = null == (a = B.current) || null == (i = a.getScrollerState()) ? void 0 : i.scrollTop;
+                let o = null == (a = V.current) || null == (i = a.getScrollerState()) ? void 0 : i.scrollTop;
                 null != o && g.Z.setState({ scrollPosition: o });
             },
             [l]
@@ -184,7 +184,7 @@ function j(e) {
             [s, X, z, A]
         );
     i.useEffect(() => {
-        let e = B.current;
+        let e = V.current;
         return () => {
             var t;
             let n = null == e || null == (t = e.getScrollerState()) ? void 0 : t.scrollTop;
@@ -196,7 +196,7 @@ function j(e) {
             null != e &&
                 setTimeout(() => {
                     var t;
-                    null == (t = B.current) ||
+                    null == (t = V.current) ||
                         t.scrollTo({
                             to: e,
                             animate: !1,
@@ -211,7 +211,7 @@ function j(e) {
                 (0, o.debounce)(
                     () => {
                         var e;
-                        let t = null == (e = B.current) ? void 0 : e.getScrollerState();
+                        let t = null == (e = V.current) ? void 0 : e.getScrollerState();
                         if (null == t) return;
                         let n = t.scrollTop + t.offsetHeight;
                         t.scrollHeight - n < 240 && j();
@@ -226,7 +226,7 @@ function j(e) {
         className: C.container,
         ref: F,
         children: (0, r.jsx)(c.GMG, {
-            ref: B,
+            ref: V,
             className: C.masonryList,
             sections: W,
             columns: M,

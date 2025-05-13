@@ -6,7 +6,7 @@ var r = n(846519),
     o = n(70956),
     s = n(960048),
     c = n(930446),
-    u = n(92764),
+    u = n(127438),
     d = n(981631);
 function p(e, t, n) {
     return (
@@ -60,7 +60,7 @@ class h extends l.Z {
                 let n = (0, c.Gy)();
                 a.default.track(d.rMx.CLIENT_AD_HEARTBEAT, {
                     client_ad_session_id: n.uuid,
-                    client_heartbeat_initialization_timestamp: n.initialized,
+                    client_heartbeat_initialization_timestamp: n.createdAtTimestamp,
                     client_heartbeat_version: 2
                 });
             }),
@@ -71,7 +71,7 @@ class h extends l.Z {
                 let n = (0, c.S9)();
                 a.default.track(d.rMx.CLIENT_AD_HEARTBEAT_TERMINATION, {
                     client_ad_session_id: null == n ? void 0 : n.uuid,
-                    client_heartbeat_initialization_timestamp: null == n ? void 0 : n.initialized,
+                    client_heartbeat_initialization_timestamp: null == n ? void 0 : n.createdAtTimestamp,
                     client_heartbeat_version: 2,
                     reason: e
                 }),

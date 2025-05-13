@@ -10,41 +10,41 @@ var n = r(255367),
     d = r(496675),
     h = r(914010),
     g = r(176354),
-    m = r(746622),
-    f = r(273391),
-    b = r(535455),
+    m = r(598117),
+    f = r(746622),
+    b = r(273391),
     p = r(981631),
     O = r(388032),
     y = r(807179);
 let j = new s.Z('EmojiStudioModal'),
     w = (e) => {
-        let { userImage: t, back: r } = e,
-            { guilds: l, currentGuildId: s } = _(),
-            [c, u] = i.useState(s),
-            [d, h] = i.useState(null),
-            [p, O] = i.useState(''),
-            [w, x] = i.useState(null),
-            [E, v] = i.useState(!1),
-            N = async () => {
-                if ((h(null), null == c)) return void h(b.ze.MISSING_GUILD);
-                if (null == t || (null == t ? void 0 : t.file) == null || null == w) return void h(b.ze.MISSING_IMAGE_DATA);
+        let { userImage: t, guildId: r, back: l } = e,
+            { guilds: s, currentGuildId: c } = _(),
+            [u, d] = i.useState(null != r ? r : c),
+            [h, p] = i.useState(null),
+            [O, w] = i.useState(''),
+            [x, E] = i.useState(null),
+            [v, N] = i.useState(!1),
+            C = async () => {
+                if ((p(null), null == u)) return void p(m.ze.MISSING_GUILD);
+                if (null == t || (null == t ? void 0 : t.file) == null || null == x) return void p(m.ze.MISSING_IMAGE_DATA);
                 try {
                     await (0, o.rS)({
-                        image: w,
-                        guildId: c,
-                        name: p
+                        image: x,
+                        guildId: u,
+                        name: O
                     });
                 } catch (e) {
-                    h((0, m.z)(e)), j.error('Failed to upload emoji.', e);
+                    p((0, f.z)(e)), j.error('Failed to upload emoji.', e);
                     return;
                 }
-                (0, a.Mr3)(b.Hj);
+                (0, a.Mr3)(m.Hj);
             },
-            C = i.useRef(0),
-            S = i.useCallback((e) => {
+            S = i.useRef(0),
+            A = i.useCallback((e) => {
                 let { imageData: t, imageDataTimestamp: r = 0, error: n, loading: i } = e,
                     l = null;
-                null != t && g.ZP.isDataTooBig(t) && (l = b.ze.TOO_BIG), h(null != n ? n : l), v(i), r < C.current || (null != t && (x(t), (C.current = r)));
+                null != t && g.ZP.isDataTooBig(t) && (l = m.ze.TOO_BIG), p(null != n ? n : l), N(i), r < S.current || (null != t && (E(t), (S.current = r)));
             }, []);
         return (0, n.jsxs)('main', {
             children: [
@@ -55,15 +55,15 @@ let j = new s.Z('EmojiStudioModal'),
                 }),
                 (0, n.jsx)('div', {
                     className: y.editor,
-                    children: (0, n.jsx)(f.v, {
+                    children: (0, n.jsx)(b.v, {
                         file: t.file,
                         imageUri: t.data,
-                        onUpdate: S
+                        onUpdate: A
                     })
                 }),
                 (0, n.jsxs)('footer', {
                     children: [
-                        null != d && (0, n.jsx)(m.H, { error: d }),
+                        null != h && (0, n.jsx)(f.H, { error: h }),
                         (0, n.jsxs)('div', {
                             className: y.grid,
                             children: [
@@ -71,18 +71,18 @@ let j = new s.Z('EmojiStudioModal'),
                                     className: y.preview,
                                     children: [
                                         (0, n.jsx)('img', {
-                                            src: null != w ? w : '',
+                                            src: null != x ? x : '',
                                             alt: 'Edited',
-                                            className: E ? y.loading : ''
+                                            className: v ? y.loading : ''
                                         }),
                                         (0, n.jsxs)('div', {
                                             children: [
                                                 (0, n.jsx)(a.oil, {
                                                     placeholder: ':emoji:',
                                                     onChange: (e) => {
-                                                        O(e.length < 2 ? e : g.ZP.sanitizeEmojiName(e));
+                                                        w(e.length < 2 ? e : g.ZP.sanitizeEmojiName(e));
                                                     },
-                                                    value: p
+                                                    value: O
                                                 }),
                                                 (0, n.jsx)(a.Text, {
                                                     variant: 'text-xs/normal',
@@ -95,33 +95,33 @@ let j = new s.Z('EmojiStudioModal'),
                                     ]
                                 }),
                                 (0, n.jsx)(a.q4e, {
-                                    options: l.map((e) => ({
+                                    options: s.map((e) => ({
                                         label: e.name,
                                         value: e.id
                                     })),
-                                    value: c,
-                                    onChange: (e) => u(e),
+                                    value: u,
+                                    onChange: (e) => d(e),
                                     className: y.select
                                 }),
                                 (0, n.jsx)(a.zxk, {
                                     className: y.submit,
-                                    onClick: N,
+                                    onClick: C,
                                     fullWidth: !0,
-                                    disabled: null == t || null == c || p.length < 2,
+                                    disabled: null == t || null == u || O.length < 2,
                                     children: 'Upload'
                                 })
                             ]
                         })
                     ]
                 }),
-                (0, n.jsx)(I, { back: r })
+                (0, n.jsx)(I, { back: l })
             ]
         });
     },
     x = (e) => {
-        let { transitionState: t, userImage: r } = e,
-            [l, o] = i.useState(r),
-            s = i.useCallback(() => o(null), [o]);
+        let { transitionState: t, userImage: r, guildId: l } = e,
+            [o, s] = i.useState(r),
+            c = i.useCallback(() => s(null), [s]);
         return (0, n.jsx)(a.Y0X, {
             transitionState: t,
             size: a.CgR.MEDIUM,
@@ -129,14 +129,15 @@ let j = new s.Z('EmojiStudioModal'),
                 scrollbarType: 'none',
                 className: y.modalContent,
                 children: [
-                    null == l
-                        ? (0, n.jsx)(E, { setUserImage: o })
+                    null == o
+                        ? (0, n.jsx)(E, { setUserImage: s })
                         : (0, n.jsx)(w, {
-                              userImage: l,
-                              back: s
+                              userImage: o,
+                              guildId: l,
+                              back: c
                           }),
                     (0, n.jsx)(a.olH, {
-                        onClick: () => (0, a.Mr3)(b.Hj),
+                        onClick: () => (0, a.Mr3)(m.Hj),
                         className: y.closeButton
                     })
                 ]

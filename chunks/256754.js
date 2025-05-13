@@ -1,7 +1,7 @@
 n.d(t, { i: () => u });
 var r = n(255367),
     i = n(481060),
-    o = n(535455);
+    o = n(598117);
 function a(e, t, n) {
     return (
         t in e
@@ -55,11 +55,18 @@ function c(e, t) {
     );
 }
 let u = async function () {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+    let { userImage: e = null, guildId: t = null } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     await (0, i.ZDy)(
         async () => {
-            let { EmojiStudioModal: t } = await n.e('78331').then(n.bind(n, 311770));
-            return (n) => (0, r.jsx)(t, c(s({}, n), { userImage: e }));
+            let { EmojiStudioModal: i } = await n.e('78331').then(n.bind(n, 311770));
+            return (n) =>
+                (0, r.jsx)(
+                    i,
+                    c(s({}, n), {
+                        userImage: e,
+                        guildId: t
+                    })
+                );
         },
         { modalKey: o.Hj }
     );

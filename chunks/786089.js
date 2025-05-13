@@ -27,14 +27,14 @@ var r = n(255367),
 let P = (0, i.memo)(function (e) {
     var t, n, l, P, j, A;
     let { quest: Z } = e,
-        [x, w] = (0, i.useState)(!1),
-        [L, R] = (0, i.useState)(24),
+        [x, L] = (0, i.useState)(!1),
+        [w, R] = (0, i.useState)(24),
         [D, k] = (0, i.useState)(!1),
         M = (0, i.useRef)(null),
         U = (0, i.useRef)(null),
         G = (0, i.useRef)(null),
-        B = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
-        { ref: V, height: H = 0 } = (0, p.ZP)(),
+        V = (0, c.e7)([m.default], () => m.default.getCurrentUser()),
+        { ref: B, height: H = 0 } = (0, p.ZP)(),
         F = (0, h.ZP)(),
         z = (0, E.B6)(null == (t = Z.userStatus) ? void 0 : t.claimedAt, {
             month: 'numeric',
@@ -81,7 +81,7 @@ let P = (0, i.memo)(function (e) {
             return i;
         })(er, ['content_position', 'row_index']),
         eo = () => {
-            w(!0),
+            L(!0),
                 b.default.track(
                     S.rMx.QUEST_HOVER,
                     (function (e) {
@@ -111,7 +111,7 @@ let P = (0, i.memo)(function (e) {
                     })({ quest_id: Z.id }, ea)
                 );
         },
-        es = () => w(!1),
+        es = () => L(!1),
         ec = (e) => {
             k(!0),
                 b.default.track(S.rMx.QUEST_ASSET_LOADING_FAILURE, {
@@ -132,16 +132,16 @@ let P = (0, i.memo)(function (e) {
                   onMouseLeave: es,
                   className: a()(T.container, { [T.hovered]: x }),
                   children: [
-                      null != B &&
+                      null != V &&
                           q &&
                           null != J &&
                           (0, r.jsx)('div', {
                               ref: G,
                               className: T.decoWrapper,
-                              style: { top: L },
+                              style: { top: w },
                               children: (0, r.jsx)(f.Z, {
                                   avatarDecorationOverride: J,
-                                  user: B,
+                                  user: V,
                                   guildId: null
                               })
                           }),
@@ -182,7 +182,7 @@ let P = (0, i.memo)(function (e) {
                           })
                       }),
                       (0, r.jsxs)('div', {
-                          ref: V,
+                          ref: B,
                           className: T.details,
                           children: [
                               (0, r.jsx)(d.X6q, {

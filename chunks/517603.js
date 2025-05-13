@@ -2,6 +2,7 @@ e.exports = {
     root: 'root__9c3be',
     toast: 'toast__9c3be',
     backdrop: 'backdrop__9c3be',
+    backgroundImage: 'backgroundImage__9c3be',
     profile: 'profile__9c3be',
     profileHeader: 'profileHeader__9c3be',
     profileBody: 'profileBody__9c3be',

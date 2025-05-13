@@ -1,12 +1,10 @@
 n.d(t, {
-    Hg: () => o,
-    iP: () => r,
-    qK: () => i
+    EI: () => i,
+    XM: () => r,
+    qK: () => o
 });
-let r = 30;
-function i(e) {
-    return 60 * r * 1000 + e.lastUsed - Date.now() <= 0;
-}
+let r = 30 * n(70956).Z.Millis.MINUTE,
+    i = 1;
 function o(e) {
-    return null != e ? Number(e) : 0;
+    return r + e.lastUsedTimestamp - Date.now() <= 0;
 }

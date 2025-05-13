@@ -1,23 +1,23 @@
 t.d(n, { Z: () => p }), t(388685);
 var o = t(255367),
     r = t(73800),
-    i = t(481060),
-    c = t(785717),
+    c = t(481060),
+    i = t(785717),
     a = t(128156),
     l = t(311044),
     s = t(408986),
     d = t(228168),
     u = t(662776);
 function f(e) {
-    let { user: n, currentUser: t, section: r, subsection: i, displayProfile: c, guildId: u, channelId: f, onClose: p } = e;
+    let { user: n, currentUser: t, section: r, subsection: c, displayProfile: i, guildId: u, channelId: f, onClose: p } = e;
     return r === d.oh.ACTIVITY
         ? (0, o.jsx)(a.Z, {
               user: n,
               currentUser: t,
-              displayProfile: c,
+              displayProfile: i,
               guildId: u,
               channelId: f,
-              subsection: i,
+              subsection: c,
               onClose: p
           })
         : r === d.oh.MUTUAL_FRIENDS
@@ -36,8 +36,8 @@ function f(e) {
 }
 function p(e) {
     var n, t, a;
-    let { user: l, currentUser: s, displayProfile: d, guildId: p, channelId: m, items: b, initialSection: _, initialSubsection: y, onClose: h } = e,
-        { trackUserProfileAction: g } = (0, c.KZ)(),
+    let { user: l, currentUser: s, displayProfile: d, guildId: p, channelId: m, items: b, initialSection: _, initialSubsection: y, onClose: g } = e,
+        { trackUserProfileAction: h } = (0, i.KZ)(),
         [{ section: x, subsection: j, text: I }, O] = r.useState(
             ((t = (function (e) {
                 for (var n = 1; n < arguments.length; n++) {
@@ -91,12 +91,12 @@ function p(e) {
     return (0, o.jsxs)('div', {
         className: u.container,
         children: [
-            (0, o.jsx)(i.njP, {
+            (0, o.jsx)(c.njP, {
                 type: 'top',
                 className: u.tabBar,
                 selectedItem: x,
                 onItemSelect: (e) => {
-                    g({
+                    h({
                         action: 'PRESS_SECTION',
                         section: e
                     }),
@@ -107,12 +107,12 @@ function p(e) {
                 },
                 children: b.map((e) =>
                     (0, o.jsx)(
-                        i.njP.Item,
+                        c.njP.Item,
                         {
                             className: u.tabBarItem,
                             id: e.section,
                             'aria-label': e.text,
-                            children: (0, o.jsx)(i.Text, {
+                            children: (0, o.jsx)(c.Text, {
                                 variant: 'heading-md/normal',
                                 tag: 'span',
                                 children: e.text
@@ -122,7 +122,7 @@ function p(e) {
                     )
                 )
             }),
-            (0, o.jsx)(i.njP.Panel, {
+            (0, o.jsx)(c.njP.Panel, {
                 id: x,
                 'aria-label': I,
                 className: u.tabBarPanel,
@@ -134,7 +134,7 @@ function p(e) {
                     channelId: m,
                     section: x,
                     subsection: j,
-                    onClose: h
+                    onClose: g
                 })
             })
         ]

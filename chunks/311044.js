@@ -1,8 +1,8 @@
 t.d(n, { Z: () => _ });
 var o = t(255367),
     r = t(73800),
-    i = t(481060),
-    c = t(81897),
+    c = t(481060),
+    i = t(81897),
     a = t(906732),
     l = t(566898),
     s = t(785717),
@@ -14,15 +14,15 @@ var o = t(255367),
     b = t(274151);
 function _(e) {
     let { user: n, guildId: t, channelId: _, onClose: y } = e,
-        { analyticsLocations: h } = (0, a.ZP)(),
-        { context: g, trackUserProfileAction: x } = (0, s.KZ)(),
+        { analyticsLocations: g } = (0, a.ZP)(),
+        { context: h, trackUserProfileAction: x } = (0, s.KZ)(),
         { mutualFriends: j, mutualFriendsCount: I } = (0, d.Z)(n),
-        O = (0, c.Z)();
+        O = (0, i.Z)();
     return (
         r.useEffect(() => {
             (0, u.Z)(n.id, O);
         }, [n.id, O]),
-        (0, o.jsx)(i.Ttm, {
+        (0, o.jsx)(c.Ttm, {
             className: b.scroller,
             fade: !0,
             children:
@@ -49,12 +49,12 @@ function _(e) {
                     : 0 === j.length
                       ? (0, o.jsx)(m.s_, {})
                       : j.map((e) => {
-                            let { key: n, user: r, status: i } = e;
+                            let { key: n, user: r, status: c } = e;
                             return (0, o.jsx)(
                                 p.Z,
                                 {
                                     user: r,
-                                    status: i,
+                                    status: c,
                                     guildId: t,
                                     channelId: _,
                                     onSelect: () => {
@@ -86,11 +86,11 @@ function _(e) {
                                                             });
                                                     }
                                                     return e;
-                                                })({}, g)),
+                                                })({}, h)),
                                                 (n = n =
                                                     {
                                                         userId: r.id,
-                                                        sourceAnalyticsLocations: h
+                                                        sourceAnalyticsLocations: g
                                                     }),
                                                 Object.getOwnPropertyDescriptors
                                                     ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))

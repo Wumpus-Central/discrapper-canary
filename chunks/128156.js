@@ -2,8 +2,8 @@ t.d(n, { Z: () => v });
 var o = t(255367);
 t(73800);
 var r = t(442837),
-    i = t(481060),
-    c = t(468363),
+    c = t(481060),
+    i = t(468363),
     a = t(353647),
     l = t(158776),
     s = t(885110),
@@ -15,15 +15,15 @@ var r = t(442837),
     b = t(744802),
     _ = t(493043),
     y = t(864141),
-    h = t(264481),
-    g = t(693408),
+    g = t(264481),
+    h = t(693408),
     x = t(228168),
     j = t(981631),
     I = t(388032),
     O = t(514656);
 function v(e) {
     let { user: n, currentUser: t, displayProfile: v, guildId: C, channelId: P, subsection: A, onClose: T } = e,
-        { voiceActivityStatusEnabled: N } = (0, c.U)({ location: 'UserProfileModalV2Activity' }),
+        { voiceActivityStatusEnabled: N } = (0, i.U)({ location: 'UserProfileModalV2Activity' }),
         Z = (0, u.b)({ location: 'UserProfileModalV2Activity' }),
         { live: w, recent: S, stream: E } = (0, f.Z)(n.id),
         { voiceChannel: B, voiceActivity: U } = (0, p.Z)({
@@ -34,7 +34,7 @@ function v(e) {
         L = n.id === t.id,
         M = (0, r.e7)([s.Z, l.Z], () => {
             let e = L ? s.Z.getStatus() : l.Z.getStatus(n.id);
-            return e === i.Skl.OFFLINE || e === i.Skl.INVISIBLE;
+            return e === c.Skl.OFFLINE || e === c.Skl.INVISIBLE;
         }),
         D = w.length > 0 || null != E,
         G = N && null == E && null == U && null != B,
@@ -42,12 +42,12 @@ function v(e) {
         V = S.length > 0;
     return R || V || !k
         ? R || V || k
-            ? (0, o.jsxs)(i.Ttm, {
+            ? (0, o.jsxs)(c.Ttm, {
                   className: O.scroller,
                   fade: !0,
                   children: [
                       R
-                          ? (0, o.jsxs)(g.Z, {
+                          ? (0, o.jsxs)(h.Z, {
                                 heading: I.intl.string(I.t.J6STd3),
                                 children: [
                                     !Z &&
@@ -92,13 +92,13 @@ function v(e) {
                             })
                           : null,
                       V
-                          ? (0, o.jsx)(g.Z, {
+                          ? (0, o.jsx)(h.Z, {
                                 heading: I.intl.string(I.t.jzgEoK),
                                 subheading: L
                                     ? I.intl.format(I.t['4bk9Ag'], {
                                           learnMoreHook: (e, n) =>
                                               (0, o.jsx)(
-                                                  i.eee,
+                                                  c.eee,
                                                   {
                                                       href: d.Z.getArticleURL(j.BhN.ACTIVITY_STATUS_SETTINGS),
                                                       children: e
@@ -127,14 +127,14 @@ function v(e) {
                   ]
               })
             : L
-              ? (0, o.jsx)(h.Uf, { onClose: T })
-              : (0, o.jsx)(h.P9, {
+              ? (0, o.jsx)(g.Uf, { onClose: T })
+              : (0, o.jsx)(g.P9, {
                     user: n,
                     guildId: C,
                     channelId: P
                 })
         : (0, o.jsx)('div', {
               className: O.spinner,
-              children: (0, o.jsx)(i.$jN, {})
+              children: (0, o.jsx)(c.$jN, {})
           });
 }

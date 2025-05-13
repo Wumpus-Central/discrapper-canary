@@ -2,8 +2,8 @@ t.d(n, { Z: () => s });
 var o = t(255367);
 t(73800);
 var r = t(481060),
-    i = t(906732),
-    c = t(335131),
+    c = t(906732),
+    i = t(335131),
     a = t(475413),
     l = t(388032);
 function s(e) {
@@ -17,17 +17,17 @@ function s(e) {
                     var t,
                         o,
                         r = {},
-                        i = Object.keys(e);
-                    for (o = 0; o < i.length; o++) (t = i[o]), n.indexOf(t) >= 0 || (r[t] = e[t]);
+                        c = Object.keys(e);
+                    for (o = 0; o < c.length; o++) (t = c[o]), n.indexOf(t) >= 0 || (r[t] = e[t]);
                     return r;
                 })(e, n);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (o = 0; o < i.length; o++) (t = i[o]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]);
+                var c = Object.getOwnPropertySymbols(e);
+                for (o = 0; o < c.length; o++) (t = c[o]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]);
             }
             return r;
         })(e, ['onClose']);
-    let { analyticsLocations: s, newestAnalyticsLocation: d } = (0, i.ZP)();
+    let { analyticsLocations: s, newestAnalyticsLocation: d } = (0, c.ZP)();
     return (0, o.jsx)(
         a.ef,
         (function (e) {
@@ -61,7 +61,7 @@ function s(e) {
                 tooltipText: l.intl.string(l.t.b2d0Nz),
                 themeColor: 'secondary',
                 onClick: () => {
-                    (0, c.mK)({
+                    (0, i.mK)({
                         analyticsLocations: s,
                         openInLayer: !1,
                         analyticsSource: d

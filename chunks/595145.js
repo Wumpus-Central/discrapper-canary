@@ -1,8 +1,8 @@
 t.d(n, { Z: () => K }), t(388685);
 var o = t(255367),
     r = t(73800),
-    i = t(683305),
-    c = t(442837),
+    c = t(683305),
+    i = t(442837),
     a = t(481060),
     l = t(666520),
     s = t(727637),
@@ -14,8 +14,8 @@ var o = t(255367),
     b = t(680295),
     _ = t(189156),
     y = t(706454),
-    h = t(430824),
-    g = t(699516),
+    g = t(430824),
+    h = t(699516),
     x = t(246946),
     j = t(5192),
     I = t(785717),
@@ -44,8 +44,8 @@ var o = t(255367),
     Y = t(388032),
     W = t(517603);
 function K(e) {
-    let { user: n, currentUser: t, guildId: K, channelId: X, messageId: q, roleId: z, sessionId: J, friendToken: Q, initialSection: $, initialSubsection: ee, transitionState: en, customStatusPrompt: et, openedAt: eo, onClose: er, sourceAnalyticsLocations: ei = [] } = e,
-        { analyticsLocations: ec } = (0, f.ZP)([...ei, u.Z.USER_PROFILE_MODAL_V2]),
+    let { user: n, currentUser: t, guildId: K, channelId: X, messageId: q, roleId: z, sessionId: J, friendToken: Q, initialSection: $, initialSubsection: ee, transitionState: en, customStatusPrompt: et, openedAt: eo, onClose: er, sourceAnalyticsLocations: ec = [] } = e,
+        { analyticsLocations: ei } = (0, f.ZP)([...ec, u.Z.USER_PROFILE_MODAL_V2]),
         ea = (0, I.ZB)({
             layout: 'MODAL_V2',
             userId: n.id,
@@ -63,23 +63,30 @@ function K(e) {
             opacity: +(null != ed.interactionType),
             config: { duration: 150 }
         }),
-        ef = (0, c.e7)([h.Z], () => (null != K ? h.Z.getGuild(K) : null)),
+        ef = (0, i.e7)([g.Z], () => (null != K ? g.Z.getGuild(K) : null)),
         ep = r.useMemo(() => (null != K ? { [K]: [n.id] } : {}), [K, n.id]);
     (0, d.$)(ep);
     let em = (0, v.ZP)(n.id, K),
-        eb = (0, c.e7)([g.Z], () => g.Z.getRelationshipType(n.id)),
-        e_ = (0, c.e7)([x.Z], () => x.Z.hidePersonalInformation),
-        ey = (0, p.p)({ location: 'UserProfileModalV2' }),
+        eb = (0, i.e7)([h.Z], () => h.Z.getRelationshipType(n.id)),
+        e_ = (0, i.e7)([x.Z], () => x.Z.hidePersonalInformation),
+        ey =
+            null == em
+                ? void 0
+                : em.getBannerURL({
+                      canAnimate: !1,
+                      size: 1024
+                  }),
+        eg = (0, p.p)({ location: 'UserProfileModalV2' }),
         eh = r.useMemo(() => (null != et ? et : (0, m.Z)()), [et]),
-        eg = (0, F.Z)({
+        ex = (0, F.Z)({
             user: n,
             currentUser: t
         }),
-        ex = (0, c.e7)([y.default], () => y.default.locale),
-        ej = (0, P.Z)(n.id),
-        eI = (0, C.Z)(n.id);
+        ej = (0, i.e7)([y.default], () => y.default.locale),
+        eI = (0, P.Z)(n.id),
+        eO = (0, C.Z)(n.id);
     return (0, o.jsx)(f.Gt, {
-        value: ec,
+        value: ei,
         children: (0, o.jsx)(I.Mt, {
             value: ea,
             openedAt: eo,
@@ -99,11 +106,16 @@ function K(e) {
                         displayProfile: em,
                         themeType: H.lY.MODAL_V2,
                         children: [
+                            null != ey &&
+                                (0, o.jsx)('div', {
+                                    className: W.backgroundImage,
+                                    style: { backgroundImage: 'url('.concat(ey, ')') }
+                                }),
                             (0, o.jsxs)('div', {
                                 className: W.profile,
                                 children: [
                                     null != ed.interactionType &&
-                                        (0, o.jsx)(i.animated.div, {
+                                        (0, o.jsx)(c.animated.div, {
                                             style: eu,
                                             className: W.backdrop
                                         }),
@@ -135,7 +147,7 @@ function K(e) {
                                                 channelId: X,
                                                 themeType: H.lY.MODAL_V2,
                                                 hasEntered: en === a.Dvm.ENTERED,
-                                                prompt: ey && n.id === t.id ? eh : null,
+                                                prompt: eg && n.id === t.id ? eh : null,
                                                 onCloseProfile: er
                                             })
                                         ]
@@ -203,28 +215,28 @@ function K(e) {
                                                             headingColor: 'none',
                                                             scrollIntoView: ee === H.Tb.ROLES
                                                         }),
-                                                    ej.length > 0 &&
+                                                    eI.length > 0 &&
                                                         (0, o.jsx)(R.Z, {
                                                             heading: Y.intl.string(Y.t['3fe7U1']),
                                                             scrollIntoView: ee === H.Tb.CONNECTIONS,
                                                             children: (0, o.jsx)(S.ZP, {
-                                                                connectedAccounts: ej,
+                                                                connectedAccounts: eI,
                                                                 className: W.profileConnections,
                                                                 userId: n.id,
-                                                                locale: ex
+                                                                locale: ej
                                                             })
                                                         }),
-                                                    eI.length > 0 &&
+                                                    eO.length > 0 &&
                                                         (0, o.jsx)(R.Z, {
                                                             heading: Y.intl.string(Y.t.PHjkRE),
-                                                            children: eI.map((e) =>
+                                                            children: eO.map((e) =>
                                                                 (0, o.jsx)(
                                                                     S.tH,
                                                                     {
                                                                         className: W.profileAppConnections,
                                                                         applicationRoleConnection: e,
                                                                         selectedGuildId: K,
-                                                                        locale: ex,
+                                                                        locale: ej,
                                                                         onApplicationClicked: () => {
                                                                             (0, O.pQ)({ action: 'PRESS_APP_CONNECTION' }), er();
                                                                         }
@@ -287,7 +299,7 @@ function K(e) {
                                 displayProfile: em,
                                 guildId: K,
                                 channelId: X,
-                                items: eg,
+                                items: ex,
                                 initialSection: $,
                                 initialSubsection: ee,
                                 onClose: er

@@ -94,7 +94,7 @@ function T(e) {
     var t, l;
     let b = i.useRef(null),
         { parentAnalyticsLocation: T } = (0, p.ZP)(),
-        { channel: P, user: j, nick: A, mute: Z, deaf: x, serverMute: w, serverDeaf: L } = e,
+        { channel: P, user: j, nick: A, mute: Z, deaf: x, serverMute: L, serverDeaf: w } = e,
         R = (0, o.e7)([_.Z], () => _.Z.isLocalMute(j.id)),
         D = (0, u.Z)({
             userId: j.id,
@@ -105,8 +105,8 @@ function T(e) {
         U = null != A ? A : E.ZP.getName(j),
         {
             icon: G,
-            colorize: B,
-            getStatus: V
+            colorize: V,
+            getStatus: B
         } = null !=
         (l = (function (e) {
             let { serverDeaf: t, deaf: n, serverMute: r, mute: i, localMute: l } = e;
@@ -116,19 +116,19 @@ function T(e) {
             if (l) return N.localMute;
             if (i) return N.mute;
         })({
-            serverDeaf: L,
+            serverDeaf: w,
             deaf: x,
-            serverMute: w,
+            serverMute: L,
             mute: Z,
             localMute: R
         }))
             ? l
             : {},
         H =
-            null != V
+            null != B
                 ? y.intl.formatToPlainString(y.t['1+MVBA'], {
                       userName: U,
-                      status: V()
+                      status: B()
                   })
                 : U;
     function F(e) {
@@ -190,7 +190,7 @@ function T(e) {
                                     children:
                                         null != G
                                             ? (0, r.jsx)(G, {
-                                                  className: a()(I.avatarIconOverlay, { [I.avatarIconRed]: B }),
+                                                  className: a()(I.avatarIconOverlay, { [I.avatarIconRed]: V }),
                                                   color: 'currentColor',
                                                   size: 'xs'
                                               })

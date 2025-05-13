@@ -103,7 +103,7 @@ function x(e) {
                     return e;
                 })(
                     {
-                        buttonRef: y,
+                        ref: y,
                         onClick: v,
                         label: I,
                         'aria-label': S.join(', '),
