@@ -20524,6 +20524,8 @@
   "FAJmJS": "$[!!{actorName}!!]({{actorHook}}) kicked $[!!{targetName}!!]({{targetHook}})",
   "90r/sb": "$[!!{actorName}!!]({{actorHook}}) timed out $[!!{targetName}!!]({{targetHook}})",
   "zp+z/P": "Mod Queue Channel Actions",
+  "6quCi4": "Reopen",
+  "0eUUeH": "This flag has been resolved",
   "1D+vq6": "Flag to Mods",
   "iBypeX": "Sent to mods successfully",
   "pLTJZG": "AI",
