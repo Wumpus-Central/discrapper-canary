@@ -37,28 +37,29 @@ function p(e, t, n) {
         g = e.attachments.length > 0,
         m = e.stickerItems.length > 0,
         f = e.codedLinks.length > 0,
-        b = e.hasFlag(a.iLy.HAS_THREAD),
-        h = p || g || m || f || b || e.type === a.uaV.THREAD_CREATED,
-        _ = p && e.content === e.embeds[0].url && e.embeds[0].type === a.hBH.GIFV,
-        y = e.type !== a.uaV.DEFAULT || (!_ && '' !== e.content),
-        v = (0, o.Z)(e),
-        O = !v && (null == n ? void 0 : n.hasTimestamp) !== !1,
-        j = s(e, t),
-        x = l(e),
-        C = v ? '' : ''.concat(u ? x : j, ' ').concat(r.Z0);
-    if (y) {
+        b = e.components.length > 0,
+        h = e.hasFlag(a.iLy.HAS_THREAD),
+        _ = p || g || m || f || h || b || e.type === a.uaV.THREAD_CREATED,
+        y = p && e.content === e.embeds[0].url && e.embeds[0].type === a.hBH.GIFV,
+        v = e.type !== a.uaV.DEFAULT || (!y && '' !== e.content),
+        O = (0, o.Z)(e),
+        j = !O && (null == n ? void 0 : n.hasTimestamp) !== !1,
+        x = s(e, t),
+        C = l(e),
+        P = O ? '' : ''.concat(u ? C : x, ' ').concat(r.Z0);
+    if (v) {
         let t = i(e);
-        C += ' '.concat(t);
+        P += ' '.concat(t);
     }
-    if (h) {
+    if (_) {
         let t = d(e);
-        C += ' '.concat(t);
+        P += ' '.concat(t);
     }
-    if (O) {
+    if (j) {
         let t = c(e);
-        C += ' '.concat(r.fy, ' ').concat(t);
+        P += ' '.concat(r.fy, ' ').concat(t);
     }
-    return C.trim();
+    return P.trim();
 }
 function g(e) {
     if (0 === e.reactions.length) return;

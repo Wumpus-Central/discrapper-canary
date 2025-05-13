@@ -760,6 +760,7 @@ let ek = Object.freeze({
         return (0, r.jsx)(J.ZP, {
             message: t,
             content: (0, X.ZP)(t).content,
+            compact: null != i && i,
             children: (0, r.jsx)(o, {
                 message: t,
                 channel: n,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r,
     i = n(392711),
-    o = n(442837),
-    a = n(570140),
+    a = n(442837),
+    o = n(570140),
     s = n(524484);
 function l(e, t, n) {
     return (
@@ -66,7 +66,7 @@ function _(e) {
 function p() {
     u = !0;
 }
-class h extends (r = o.ZP.DeviceSettingsStore) {
+class h extends (r = a.ZP.DeviceSettingsStore) {
     initialize(e) {
         f = c({}, f, e);
     }
@@ -102,7 +102,7 @@ class h extends (r = o.ZP.DeviceSettingsStore) {
     }
 }
 l(h, 'displayName', 'PoggermodeSettingsStore'), l(h, 'persistKey', 'PoggermodeSettingsStore');
-let m = new h(a.Z, {
+let m = new h(o.Z, {
     POGGERMODE_SETTINGS_UPDATE: _,
     POGGERMODE_TEMPORARILY_DISABLED: p
 });

@@ -18,20 +18,20 @@ var l,
     g = n(724757),
     m = n(212819),
     p = n(933557),
-    b = n(266076),
-    E = n(810123),
+    E = n(266076),
+    b = n(810123),
     y = n(448486),
     I = n(987509),
     S = n(592125),
-    A = n(430824),
-    O = n(158776),
+    O = n(430824),
+    A = n(158776),
     v = n(306680),
-    x = n(699516),
-    C = n(594174),
+    C = n(699516),
+    x = n(594174),
     P = n(626135),
     L = n(55935),
-    N = n(823379),
-    T = n(51144),
+    T = n(823379),
+    N = n(51144),
     j = n(784384),
     Z = n(981631),
     w = n(490897),
@@ -102,8 +102,8 @@ function M(e, t) {
 var G = (((l = {}).TOGGLE = 'toggle'), (l.SEND = 'send'), l);
 function U(e) {
     let { message: t, destination: n, rowMode: l, icon: a, label: o, subLabel: c, selected: d, disabled: h, onPressDestination: g, 'aria-setsize': m, 'aria-posinset': p } = e,
-        b = (0, u.JA)(n.id),
-        [E, y] = i.useState(!1),
+        E = (0, u.JA)(n.id),
+        [b, y] = i.useState(!1),
         I = i.useRef(!1),
         S = i.useCallback(() => {
             if ('send' === l) {
@@ -112,7 +112,7 @@ function U(e) {
             }
             null == g || g(n);
         }, [l, g, n]),
-        A = i.useCallback(() => {
+        O = i.useCallback(() => {
             P.default.track(Z.rMx.FORWARD_ONE_TAP_VIEW, {
                 channel_id: t.channel_id,
                 message_id: t.id
@@ -124,7 +124,7 @@ function U(e) {
                         closeAfterSend: !0
                     });
         }, [t.channel_id, t.id, g, n]),
-        O = i.useCallback(() => {
+        A = i.useCallback(() => {
             y(!1),
                 (I.current = !1),
                 P.default.track(Z.rMx.FORWARD_ONE_TAP_UNDO, {
@@ -148,12 +148,12 @@ function U(e) {
                 k(
                     {
                         className: s()(R.destinationRow, { [R.disabled]: h }),
-                        onClick: h || E ? void 0 : S,
+                        onClick: h || b ? void 0 : S,
                         'aria-selected': d,
                         'aria-setsize': m,
                         'aria-posinset': p
                     },
-                    b
+                    E
                 ),
                 {
                     children: [
@@ -198,12 +198,12 @@ function U(e) {
                             (0, r.jsxs)('div', {
                                 className: R.actions,
                                 children: [
-                                    E
+                                    b
                                         ? (0, r.jsx)(f.zxk, {
                                               size: f.zxk.Sizes.SMALL,
                                               color: f.zxk.Colors.PRIMARY,
                                               look: f.zxk.Looks.LINK,
-                                              onClick: A,
+                                              onClick: O,
                                               children: D.intl.string(D.t['HO/oXl'])
                                           })
                                         : (0, r.jsx)('div', {
@@ -216,12 +216,12 @@ function U(e) {
                                               ),
                                               children: D.intl.string(D.t.TXNS7e)
                                           }),
-                                    E &&
+                                    b &&
                                         (0, r.jsx)(f.zxk, {
                                             size: f.zxk.Sizes.SMALL,
                                             color: f.zxk.Colors.BRAND,
                                             look: f.zxk.Looks.OUTLINED,
-                                            onClick: O,
+                                            onClick: A,
                                             children: D.intl.string(D.t.KyUKhY)
                                         })
                                 ]
@@ -232,13 +232,13 @@ function U(e) {
         )
     );
 }
-function W(e) {
+function H(e) {
     var { user: t, subLabel: n } = e,
         l = M(e, ['user', 'subLabel']);
-    let i = T.ZP.useName(t),
-        a = T.ZP.useUserTag(t, { decoration: 'never' }),
-        s = (0, d.e7)([x.Z], () => x.Z.getNickname(t.id)),
-        o = (0, d.e7)([O.Z], () => O.Z.getStatus(t.id));
+    let i = N.ZP.useName(t),
+        a = N.ZP.useUserTag(t, { decoration: 'never' }),
+        s = (0, d.e7)([C.Z], () => C.Z.getNickname(t.id)),
+        o = (0, d.e7)([A.Z], () => A.Z.getStatus(t.id));
     return (0, r.jsx)(
         U,
         F(k({}, l), {
@@ -253,7 +253,7 @@ function W(e) {
         })
     );
 }
-function H(e) {
+function W(e) {
     var { channel: t, subLabel: n } = e,
         l = M(e, ['channel', 'subLabel']);
     let i = (0, p.ZP)(t),
@@ -261,7 +261,7 @@ function H(e) {
     return (0, r.jsx)(
         U,
         F(k({}, l), {
-            icon: (0, r.jsx)(b.Z, {
+            icon: (0, r.jsx)(E.Z, {
                 'aria-hidden': !0,
                 size: f.EFr.SIZE_32,
                 channel: t,
@@ -275,11 +275,11 @@ function H(e) {
 function Q(e) {
     var { channel: t, subLabel: n } = e,
         l = M(e, ['channel', 'subLabel']);
-    let i = (0, d.e7)([A.Z], () => A.Z.getGuild(null == t ? void 0 : t.guild_id)),
+    let i = (0, d.e7)([O.Z], () => O.Z.getGuild(null == t ? void 0 : t.guild_id)),
         a = (0, p.ZP)(t),
-        s = (0, d.e7)([S.Z, C.default, x.Z], () => {
+        s = (0, d.e7)([S.Z, x.default, C.Z], () => {
             let e = S.Z.getChannel(t.parent_id);
-            return null == e ? null : (0, p.F6)(e, C.default, x.Z, !1);
+            return null == e ? null : (0, p.F6)(e, x.default, C.Z, !1);
         }),
         o = (0, d.e7)([v.ZP], () => v.ZP.lastMessageTimestamp(t.id, w.W.CHANNEL)),
         u = null == i ? void 0 : i.name;
@@ -321,8 +321,8 @@ function Q(e) {
     return (0, r.jsx)(
         U,
         F(k({}, l), {
-            icon: (0, r.jsx)(E.Z, {
-                size: E.E.SMALL_32,
+            icon: (0, r.jsx)(b.Z, {
+                size: b.E.SMALL_32,
                 guild: i,
                 channel: t
             }),
@@ -340,7 +340,7 @@ function z(e) {
             var e;
             return null != (e = null == s ? void 0 : s.map(I.hC)) ? e : [];
         }, [s]),
-        b = i.useCallback(
+        E = i.useCallback(
             (e) => {
                 let { section: i, row: s } = e;
                 if (i > 0) return;
@@ -359,7 +359,7 @@ function z(e) {
                     h = (0, I.hC)(f),
                     _ = (0, j.HY)(l, a, d),
                     g = p.includes(h),
-                    b = {
+                    E = {
                         key: h,
                         message: l,
                         destination: f,
@@ -371,12 +371,12 @@ function z(e) {
                         'aria-posinset': s + 1,
                         'aria-setsize': t.length
                     };
-                return u === m.h8.USER ? (0, r.jsx)(W, k({ user: d }, b)) : u === m.h8.GROUP_DM ? (0, r.jsx)(H, k({ channel: d }, b)) : u === m.h8.TEXT_CHANNEL || u === m.h8.VOICE_CHANNEL ? (0, r.jsx)(Q, k({ channel: d }, b)) : void (0, N.vE)(u);
+                return u === m.h8.USER ? (0, r.jsx)(H, k({ user: d }, E)) : u === m.h8.GROUP_DM ? (0, r.jsx)(W, k({ channel: d }, E)) : u === m.h8.TEXT_CHANNEL || u === m.h8.VOICE_CHANNEL ? (0, r.jsx)(Q, k({ channel: d }, E)) : void (0, T.vE)(u);
             },
             [c, o, l, a, t, n, p]
         ),
-        E = i.useRef(null),
-        y = (0, g.Z)('forward-modal', E);
+        b = i.useRef(null),
+        y = (0, g.Z)('forward-modal', b);
     return (0, r.jsx)(u.bG, {
         navigator: y,
         children: (0, r.jsx)(u.SJ, {
@@ -390,7 +390,7 @@ function z(e) {
                             {
                                 scrollerRef: (e) => {
                                     var n;
-                                    (E.current = e), (t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null);
+                                    (b.current = e), (t.current = null != (n = null == e ? void 0 : e.getScrollerNode()) ? n : null);
                                 }
                             },
                             n,
@@ -399,7 +399,7 @@ function z(e) {
                         {
                             sections: h,
                             sectionHeight: 0,
-                            renderRow: b,
+                            renderRow: E,
                             rowHeight: _
                         }
                     )

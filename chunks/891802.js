@@ -1,7 +1,7 @@
 n.d(t, { X: () => c });
 var o = n(818083),
     i = n(984134);
-function a(e) {
+function r(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             o = Object.keys(n);
@@ -26,7 +26,7 @@ function a(e) {
     }
     return e;
 }
-function r(e, t) {
+function a(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ let l = {
             {
                 id: 1,
                 label: 'Show form-style survey without neutral',
-                config: r(a({}, l), {
+                config: a(r({}, l), {
                     showFormStyleSurvey: !0,
                     hideNeutralOption: !0
                 })
@@ -66,12 +66,12 @@ let l = {
             {
                 id: 2,
                 label: 'Show survey without neutral',
-                config: r(a({}, l), { hideNeutralOption: !0 })
+                config: a(r({}, l), { hideNeutralOption: !0 })
             },
             {
                 id: 3,
                 label: 'Show survey without neutral, and with vibes honeypot',
-                config: r(a({}, l), {
+                config: a(r({}, l), {
                     hideNeutralOption: !0,
                     showVibesHoneypot: !0
                 })

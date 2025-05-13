@@ -2,7 +2,7 @@ n.d(t, {
     Cl: () => f,
     GN: () => _,
     L9: () => s,
-    UK: () => a,
+    UK: () => o,
     av: () => d,
     cu: () => c,
     hL: () => u,
@@ -10,36 +10,36 @@ n.d(t, {
 });
 var r = n(63063),
     i = n(981631),
-    o = n(388032),
-    a = (function (e) {
+    a = n(388032),
+    o = (function (e) {
         return (e[(e.DURATION_60_SEC = 60)] = 'DURATION_60_SEC'), (e[(e.DURATION_5_MIN = 300)] = 'DURATION_5_MIN'), (e[(e.DURATION_10_MIN = 600)] = 'DURATION_10_MIN'), (e[(e.DURATION_1_HOUR = 3600)] = 'DURATION_1_HOUR'), (e[(e.DURATION_1_DAY = 86400)] = 'DURATION_1_DAY'), (e[(e.DURATION_1_WEEK = 604800)] = 'DURATION_1_WEEK'), e;
     })({});
 function s(e) {
     switch (e) {
         case 60:
-            return o.intl.formatToPlainString(o.t['4zv/jo'], { secs: 60 });
+            return a.intl.formatToPlainString(a.t['4zv/jo'], { secs: 60 });
         case 300:
-            return o.intl.formatToPlainString(o.t.opVZ9v, { mins: 5 });
+            return a.intl.formatToPlainString(a.t.opVZ9v, { mins: 5 });
         case 600:
-            return o.intl.formatToPlainString(o.t.opVZ9v, { mins: 10 });
+            return a.intl.formatToPlainString(a.t.opVZ9v, { mins: 10 });
         case 3600:
-            return o.intl.formatToPlainString(o.t.xCjYxM, { hours: 1 });
+            return a.intl.formatToPlainString(a.t.xCjYxM, { hours: 1 });
         case 86400:
-            return o.intl.formatToPlainString(o.t.k2UNz8, { days: 1 });
+            return a.intl.formatToPlainString(a.t.k2UNz8, { days: 1 });
         case 604800:
-            return o.intl.formatToPlainString(o.t.EmoBDw, { weeks: 1 });
+            return a.intl.formatToPlainString(a.t.EmoBDw, { weeks: 1 });
         default:
             return;
     }
 }
 let l = () =>
-        Object.keys(a)
+        Object.keys(o)
             .filter((e) => isNaN(Number(e)))
             .map((e) => {
                 var t;
                 return {
-                    label: null != (t = s(a[e])) ? t : '',
-                    value: a[e]
+                    label: null != (t = s(o[e])) ? t : '',
+                    value: o[e]
                 };
             }),
     c = r.Z.getArticleURL(i.BhN.DISABLE_GUILD_COMMUNICATION),

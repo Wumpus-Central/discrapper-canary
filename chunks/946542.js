@@ -1,7 +1,7 @@
 n.d(t, { Z: () => b }), n(953529), n(388685);
 var r = n(255367),
-    i = n(73800),
-    a = n(481060),
+    a = n(73800),
+    i = n(481060),
     l = n(434650),
     s = n(768581),
     o = n(255333),
@@ -13,15 +13,15 @@ var r = n(255367),
     h = n(388032),
     g = n(886141);
 function _(e) {
-    let { applicationId: t, similarApplications: n, onSelectApplication: a, similarLoadId: s } = e,
+    let { applicationId: t, similarApplications: n, onSelectApplication: i, similarLoadId: s } = e,
         o = (function (e) {
             let { applicationId: t, similarAppIds: n } = e,
-                [r, a] = i.useState(),
+                [r, i] = a.useState(),
                 s = (0, l.O)((e) => {
-                    e && a(t);
+                    e && i(t);
                 });
             return (
-                i.useEffect(() => {
+                a.useEffect(() => {
                     r === t &&
                         (0, c.zZ)(m.rMx.APP_DIRECTORY_RECOMMENDATIONS_VIEWED, {
                             application_id: t,
@@ -32,7 +32,7 @@ function _(e) {
             );
         })({
             applicationId: t,
-            similarAppIds: i.useMemo(() => n.map((e) => e.id), [n])
+            similarAppIds: a.useMemo(() => n.map((e) => e.id), [n])
         });
     return (0, r.jsx)('div', {
         className: g.contentContainer,
@@ -43,7 +43,7 @@ function _(e) {
                 {
                     applicationId: t,
                     similarApplication: e,
-                    onSelectApplication: a,
+                    onSelectApplication: i,
                     similarLoadId: s,
                     position: n
                 },
@@ -57,7 +57,7 @@ function f(e) {
     let { applicationId: o, similarApplication: u, onSelectApplication: h, position: _, similarLoadId: f } = e,
         b = (0, p.Z)({ application: u }),
         x = null == (t = u.categories) ? void 0 : t[0],
-        v = i.useMemo(
+        v = a.useMemo(
             () =>
                 s.ZP.getApplicationIconURL({
                     id: u.id,
@@ -66,7 +66,7 @@ function f(e) {
                 }),
             [u]
         ),
-        C = i.useCallback(() => {
+        C = a.useCallback(() => {
             (0, c.zZ)(m.rMx.APP_DIRECTORY_RECOMMENDATION_CLICKED, {
                 current_page: 'product',
                 application_id: o,
@@ -77,7 +77,7 @@ function f(e) {
             }),
                 h(u.id);
         }, [h, u.id, o, b.length, f, _]);
-    return (0, r.jsxs)(a.P3F, {
+    return (0, r.jsxs)(i.P3F, {
         onClick: C,
         className: g.appContainer,
         children: [
@@ -100,7 +100,7 @@ function f(e) {
                                     minWidth: 0,
                                     overflow: 'hidden'
                                 },
-                                children: (0, r.jsx)(a.X6q, {
+                                children: (0, r.jsx)(i.X6q, {
                                     variant: 'heading-md/semibold',
                                     color: 'header-primary',
                                     className: g.appName,
@@ -108,7 +108,7 @@ function f(e) {
                                 })
                             }),
                             null != x
-                                ? (0, r.jsx)(a.Text, {
+                                ? (0, r.jsx)(i.Text, {
                                       className: g.appCategory,
                                       variant: 'text-xs/medium',
                                       color: 'text-muted',
@@ -119,7 +119,7 @@ function f(e) {
                     })
                 ]
             }),
-            (0, r.jsx)(a.Text, {
+            (0, r.jsx)(i.Text, {
                 className: g.appDescription,
                 variant: 'text-sm/medium',
                 color: 'header-secondary',
@@ -138,14 +138,14 @@ function f(e) {
     });
 }
 let b = function (e) {
-    let { applicationId: t, fetchState: n, similarApplications: i, onSelectApplication: l, similarLoadId: s } = e;
-    return n !== o.M.FETCHING && (null == i || 0 === i.length)
+    let { applicationId: t, fetchState: n, similarApplications: a, onSelectApplication: l, similarLoadId: s } = e;
+    return n !== o.M.FETCHING && (null == a || 0 === a.length)
         ? null
         : (0, r.jsxs)('div', {
               className: g.sectionContainer,
               children: [
                   (0, r.jsx)('div', { className: g.divider }),
-                  (0, r.jsx)(a.X6q, {
+                  (0, r.jsx)(i.X6q, {
                       variant: 'heading-sm/semibold',
                       color: 'header-primary',
                       className: g.sectionHeader,
@@ -154,10 +154,10 @@ let b = function (e) {
                   (0, r.jsx)(u.Z, {
                       loading: n === o.M.FETCHING,
                       children:
-                          null != i
+                          null != a
                               ? (0, r.jsx)(_, {
                                     applicationId: t,
-                                    similarApplications: i,
+                                    similarApplications: a,
                                     onSelectApplication: l,
                                     similarLoadId: s
                                 })

@@ -2,8 +2,8 @@ n.d(t, { default: () => m });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(693789),
+    a = n.n(i),
+    o = n(693789),
     s = n(1561),
     l = n(512983),
     c = n(466377),
@@ -19,7 +19,7 @@ let m = (e) => {
         i,
         { body: m, cancelText: g, className: E, confirmColor: b, confirmText: y = p.intl.string(p.t.BddRzc), secondaryConfirmText: O, onCancel: v, onClose: I, onConfirm: S, onConfirmSecondary: T, title: A, transitionState: N, titleClassName: C } = e,
         P = (0, _.Q3)('ConfirmModal'),
-        R = P ? a.zx.Sizes.MEDIUM : a.zx.Sizes.LARGE,
+        R = P ? o.zx.Sizes.MEDIUM : o.zx.Sizes.LARGE,
         w = () => {
             null == I || I(), null == v || v();
         },
@@ -32,21 +32,21 @@ let m = (e) => {
     return (
         null != g &&
             '' !== g &&
-            (t = (0, r.jsx)(a.zx, {
+            (t = (0, r.jsx)(o.zx, {
                 type: 'button',
                 size: R,
-                color: a.zx.Colors.PRIMARY,
+                color: o.zx.Colors.PRIMARY,
                 onClick: w,
                 className: h.secondaryButton,
                 children: g
             })),
         null != y &&
             '' !== y &&
-            (n = (0, r.jsx)(a.zx, {
+            (n = (0, r.jsx)(o.zx, {
                 type: 'submit',
                 color: b,
                 size: R,
-                className: o()(h.primaryButton, null != t ? h.gutter : null),
+                className: a()(h.primaryButton, null != t ? h.gutter : null),
                 autoFocus: !0,
                 children: y
             })),
@@ -64,7 +64,7 @@ let m = (e) => {
         (0, r.jsx)(c.Y0, {
             transitionState: N,
             size: c.Cg.DYNAMIC,
-            className: o()(E, h.container),
+            className: a()(E, h.container),
             'aria-label': A,
             children: (0, r.jsxs)('form', {
                 onSubmit: D,
@@ -75,12 +75,12 @@ let m = (e) => {
                             null != A && P
                                 ? (0, r.jsx)(d.X6q, {
                                       variant: 'heading-lg/semibold',
-                                      className: o()(h.title, C),
+                                      className: a()(h.title, C),
                                       children: A
                                   })
                                 : (0, r.jsx)(l.v, {
                                       tag: 'h2',
-                                      className: o()(h.title, C),
+                                      className: a()(h.title, C),
                                       children: A
                                   })
                     }),

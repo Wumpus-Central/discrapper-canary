@@ -1,12 +1,12 @@
 n.d(t, { Q: () => c }), n(388685);
 var r = n(544891),
     i = n(570140),
-    o = n(430824),
-    a = n(356264),
+    a = n(430824),
+    o = n(356264),
     s = n(981631);
 let l = new Set();
 async function c(e) {
-    if (null == o.Z.getGuild(e) && null == a.Z.getGuildOrStatus(e) && !l.has(e)) {
+    if (null == a.Z.getGuild(e) && null == o.Z.getGuildOrStatus(e) && !l.has(e)) {
         i.Z.dispatch({
             type: 'BASIC_GUILD_FETCH',
             guildId: e

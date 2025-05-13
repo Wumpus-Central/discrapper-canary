@@ -1,4 +1,4 @@
-r.d(t, { Z: () => O }), r(388685);
+r.d(t, { Z: () => b }), r(388685);
 var n = r(255367);
 r(73800);
 var l = r(120356),
@@ -8,10 +8,9 @@ var l = r(120356),
     c = r(970184),
     s = r(197653),
     u = r(987106),
-    d = r(861529),
-    p = r(568248),
-    f = r(46171);
-function b(e) {
+    d = r(568248),
+    p = r(46171);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -36,39 +35,39 @@ function b(e) {
     }
     return e;
 }
-function O(e) {
-    let { components: t, accessory: r } = e,
-        { message: l } = (0, c.CJ)(),
+function b(e) {
+    let { components: t, accessory: r, renderComponents: l } = e,
+        { message: b } = (0, c.CJ)(),
         [O, m] = (0, s.e4)(),
         y = (0, s.$Y)(m),
         j = r.type === o.re.BUTTON;
     return (0, n.jsxs)('div', {
-        className: f.section,
+        className: p.section,
         ref: O,
         children: [
             (0, n.jsxs)('div', {
-                className: f.children,
+                className: p.children,
                 children: [
                     (0, n.jsx)('div', {
-                        className: i()(f.textChildren, { [f.centerAlign]: j }),
-                        children: t.map((e) => (0, n.jsx)(d.Z, b({}, e), e.id))
+                        className: i()(p.textChildren, { [p.verticallyCenterAlign]: j }),
+                        children: l(t)
                     }),
                     (0, n.jsx)('div', {
-                        className: i()(f.accessory, { [f.restrictWidth]: y }),
+                        className: i()(p.accessory, { [p.restrictWidth]: y }),
                         children: (function (e) {
                             switch (e.type) {
                                 case o.re.BUTTON:
-                                    return (0, n.jsx)(u.Z, b({}, e));
+                                    return (0, n.jsx)(u.Z, f({}, e));
                                 case o.re.THUMBNAIL:
-                                    return (0, n.jsx)(p.Z, b({}, e));
+                                    return (0, n.jsx)(d.Z, f({}, e));
                             }
                         })(r)
                     })
                 ]
             }),
-            null != l
+            null != b
                 ? (0, n.jsx)(a.ZP, {
-                      message: l,
+                      message: b,
                       component: e
                   })
                 : null

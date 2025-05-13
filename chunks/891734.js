@@ -1,8 +1,8 @@
 n.d(t, { Z: () => s });
 var r = n(632471),
     i = n(740078),
-    o = n(510104),
-    a = n(126387);
+    a = n(510104),
+    o = n(126387);
 function s(e, t) {
     void 0 === t && (t = {});
     var n = t,
@@ -27,12 +27,12 @@ function s(e, t) {
     0 === m.length && (m = h);
     var g = m.reduce(function (t, n) {
         return (
-            (t[n] = (0, o.Z)(e, {
+            (t[n] = (0, a.Z)(e, {
                 placement: n,
                 boundary: l,
                 rootBoundary: c,
                 padding: u
-            })[(0, a.Z)(n)]),
+            })[(0, o.Z)(n)]),
             t
         );
     }, {});

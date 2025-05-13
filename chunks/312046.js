@@ -1,11 +1,11 @@
 n.d(t, {
-    Q: () => a,
+    Q: () => o,
     s: () => s
 });
 var r = n(418793),
     i = n(460597),
-    o = n(608591);
-let a = (e) => ({
+    a = n(608591);
+let o = (e) => ({
     id: e.id,
     configVersion: 2,
     startsAt: e.starts_at,
@@ -36,7 +36,7 @@ let a = (e) => ({
     taskConfig: (0, i.f)(e.task_config),
     taskConfigV2: (0, i._)(e.task_config_v2),
     rewardsConfig: (0, r.v)(e.rewards_config),
-    videoMetadata: (0, o.FG)(e.video_metadata),
+    videoMetadata: (0, a.FG)(e.video_metadata),
     cosponsorMetadata: s(e.cosponsor_metadata)
 });
 function s(e) {

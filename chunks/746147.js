@@ -1,28 +1,28 @@
-n.d(t, { default: () => b });
+n.d(t, { default: () => _ });
 var r = n(255367),
-    l = n(73800),
-    a = n(481060),
-    o = n(211266),
+    o = n(73800),
+    l = n(481060),
+    a = n(211266),
     i = n(332664),
     s = n(626135),
     c = n(867003),
     u = n(987562),
-    d = n(981631),
-    _ = n(388032);
-function b(e) {
-    let { onClose: t, transitionState: b } = e,
-        m = (0, o.Z)(u.Me),
-        f = l.useMemo(() => m.map((e) => e.value), [m]);
-    l.useEffect(() => {
-        s.default.track(d.rMx.OPEN_MODAL, { type: 'Ignore User Feedback' });
+    b = n(981631),
+    d = n(388032);
+function _(e) {
+    let { onClose: t, transitionState: _ } = e,
+        f = (0, a.Z)(u.Me),
+        m = o.useMemo(() => f.map((e) => e.value), [f]);
+    o.useEffect(() => {
+        s.default.track(b.rMx.OPEN_MODAL, { type: 'Ignore User Feedback' });
     }, []);
-    let g = l.useCallback((e) => {
+    let p = o.useCallback((e) => {
         var t;
-        let { rating: l, problem: o, feedback: i } = e,
-            s = null == l;
-        (0, c.wT)(l, i, null != (t = null == o ? void 0 : o.value) ? t : null, s),
+        let { rating: o, problem: a, feedback: i } = e,
+            s = null == o;
+        (0, c.wT)(o, i, null != (t = null == a ? void 0 : a.value) ? t : null, s),
             s ||
-                (0, a.ZDy)(async () => {
+                (0, l.ZDy)(async () => {
                     let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                     return (t) =>
                         (0, r.jsx)(
@@ -51,23 +51,23 @@ function b(e) {
                                         });
                                 }
                                 return e;
-                            })({ body: _.intl.string(_.t['d9+vQ0']) }, t)
+                            })({ body: d.intl.string(d.t['d9+vQ0']) }, t)
                         );
                 });
     }, []);
     return (0, r.jsx)(i.Z, {
         modalType: 'ignore_user',
-        header: _.intl.string(_.t.Ib6biY),
-        body: _.intl.string(_.t['uW0/nZ']),
-        problemTitle: _.intl.string(_.t.avs5Vl),
-        problems: m,
-        freeformNeededProblems: f,
-        onSubmit: g,
+        header: d.intl.string(d.t.Ib6biY),
+        body: d.intl.string(d.t['uW0/nZ']),
+        problemTitle: d.intl.string(d.t.avs5Vl),
+        problems: f,
+        freeformNeededProblems: m,
+        onSubmit: p,
         onClose: t,
-        transitionState: b,
+        transitionState: _,
         otherKey: u.XL.SOMETHING_ELSE,
         hideHelpDeskLink: !0,
-        hideDontShowCheckbox: !0,
-        freeformDescription: (e) => (null == e ? null : e.value === u.XL.SOMETHING_ELSE ? _.intl.string(_.t.h95hcn) : _.intl.string(_.t.wRGel5))
+        hideDontShowAgainCheckbox: !0,
+        freeformDescription: (e) => (null == e ? null : e.value === u.XL.SOMETHING_ELSE ? d.intl.string(d.t.h95hcn) : d.intl.string(d.t.wRGel5))
     });
 }

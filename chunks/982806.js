@@ -2,7 +2,7 @@ n.d(t, { Z: () => c });
 var r = n(255367);
 n(73800);
 var i = n(481060);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,7 +26,7 @@ function a(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -56,17 +56,17 @@ function l(e, t) {
 }
 let c = {
     show(e) {
-        let { url: t, trustUrl: o, onConfirm: s, onCancel: c, isProtocol: u, contextKey: d } = e;
+        let { url: t, trustUrl: a, onConfirm: s, onCancel: c, isProtocol: u, contextKey: d } = e;
         (0, i.ZDy)(
             async () => {
                 let { default: e } = await n.e('85668').then(n.bind(n, 720553));
                 return (n) =>
                     (0, r.jsx)(
                         e,
-                        l(a({}, n), {
+                        l(o({}, n), {
                             url: t,
                             isProtocol: u,
-                            trustUrl: o,
+                            trustUrl: a,
                             onConfirm: s,
                             onCancel: c
                         })

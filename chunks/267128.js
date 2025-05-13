@@ -116,7 +116,8 @@ function D(e, t, s, l, a, r) {
         u = (0, n.jsx)(f.ZP, {
             message: x,
             content: t,
-            className: a
+            className: a,
+            compact: !0
         });
     return (
         E

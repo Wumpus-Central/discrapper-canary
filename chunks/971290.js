@@ -8,10 +8,10 @@ e.exports = function (e) {
             contains: ['self', e.C_NUMBER_MODE, n]
         },
         i = e.COMMENT(/--/, /$/),
-        o = e.COMMENT(/\(\*/, /\*\)/, {
+        a = e.COMMENT(/\(\*/, /\*\)/, {
             contains: ['self', i]
         }),
-        a = [i, o, e.HASH_COMMENT_MODE],
+        o = [i, a, e.HASH_COMMENT_MODE],
         s = [/apart from/, /aside from/, /instead of/, /out of/, /greater than/, /isn't|(doesn't|does not) (equal|come before|come after|contain)/, /(greater|less) than( or equal)?/, /(starts?|ends|begins?) with/, /contained by/, /comes (before|after)/, /a (ref|reference)/, /POSIX (file|path)/, /(date|time) string/, /quoted form/],
         l = [/clipboard info/, /the clipboard/, /info for/, /list (disks|folder)/, /mount volume/, /path to/, /(close|open for) access/, /(get|set) eof/, /current date/, /do shell script/, /get volume settings/, /random number/, /set volume/, /system attribute/, /system info/, /time to GMT/, /(load|run|store) script/, /scripting components/, /ASCII (character|number)/, /localized string/, /choose (application|color|file|file name|folder|from list|remote application|URL)/, /display (alert|dialog)/];
     return {
@@ -46,7 +46,7 @@ e.exports = function (e) {
                 illegal: /[${=;\n]/,
                 contains: [e.UNDERSCORE_TITLE_MODE, r]
             },
-            ...a
+            ...o
         ],
         illegal: /\/\/|->|=>|\[\[/
     };

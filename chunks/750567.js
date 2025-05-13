@@ -6,6 +6,7 @@ e.exports = {
     title: 'title_e9ef78',
     uppercase: 'uppercase_e9ef78',
     description: 'description_e9ef78',
+    betaTag: 'betaTag_e9ef78',
     gradient: 'gradient_e9ef78',
     clientThemes: 'clientThemes_e9ef78',
     gradientBackground: 'gradientBackground_e9ef78'

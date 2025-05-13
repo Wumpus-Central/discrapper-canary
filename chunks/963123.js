@@ -428,7 +428,7 @@ function $(e) {
                 }
                 (0, y.FE)(el, {
                     content: e,
-                    ctaContent: S.jZ.VISIT_SITE
+                    ctaContent: S.jZ.OPEN_GAME_LINK
                 });
             },
             [el, tE, eu]

@@ -1,33 +1,32 @@
-n.d(t, { default: () => h });
+n.d(t, { default: () => _ });
 var o = n(255367);
 n(73800);
 var i = n(990547),
-    a = n(481060),
-    r = n(891802),
-    l = n(332664),
-    s = n(142497),
+    r = n(481060),
+    a = n(957115),
+    l = n(891802),
+    s = n(332664),
     c = n(774378),
     u = n(882542),
     d = n(981631),
     b = n(531578),
-    m = n(190378),
     p = n(388032);
-let _ = [c.b.OTHER];
-function h(e) {
-    let { onClose: t, transitionState: h, analyticsData: f } = e,
-        { showFormStyleSurvey: v, hideNeutralOption: g, showVibesHoneypot: O } = (0, r.X)({ location: 'VoiceCallFeedback' }),
-        x = v ? p.intl.string(p.t.xv0BJi) : p.intl.string(p.t.Ss6tlZ),
-        y = v ? void 0 : p.intl.string(p.t.tLi4cX),
-        j = g ? [b.aZ.BAD, b.aZ.GOOD] : void 0,
-        w = v
+let m = [c.b.OTHER];
+function _(e) {
+    let { onClose: t, transitionState: _, analyticsData: f } = e,
+        { showFormStyleSurvey: h, hideNeutralOption: O, showVibesHoneypot: g } = (0, l.X)({ location: 'VoiceCallFeedback' }),
+        v = h ? p.intl.string(p.t.xv0BJi) : p.intl.string(p.t.Ss6tlZ),
+        y = h ? void 0 : p.intl.string(p.t.tLi4cX),
+        x = O ? [b.aZ.BAD, b.aZ.GOOD] : void 0,
+        j = h
             ? {
                   [b.aZ.BAD]: p.intl.string(p.t['0jP8iY']),
                   [b.aZ.GOOD]: p.intl.string(p.t.B81oy8)
               }
             : void 0;
-    return (0, o.jsx)(l.Z, {
+    return (0, o.jsx)(s.Z, {
         modalType: 'voice',
-        header: x,
+        header: v,
         body: y,
         impression: {
             impressionName: i.ImpressionNames.VOICE_FEEDBACK_MODAL,
@@ -36,28 +35,32 @@ function h(e) {
                 media_session_id: f.media_session_id
             }
         },
-        ratingOptions: j,
-        ratingTextLabels: w,
+        ratingOptions: x,
+        ratingTextLabels: j,
         problemTitle: p.intl.string(p.t.FJmoxM),
         problems: (0, c.Z)({
             isMobile: !1,
-            showVibesHoneypot: O
+            showVibesHoneypot: g
         }),
-        freeformNeededProblems: _,
+        freeformNeededProblems: m,
         onSubmit: function (e) {
             var t, i;
-            let { rating: r, problem: l, dontShowAgain: c, feedback: b } = e;
-            c && (0, s.Kw)(m.v.VOICE_CALL_FEEDBACK),
-                null != r &&
+            let { rating: l, problem: s, dontShowAgain: c, feedback: m } = e;
+            c &&
+                (0, a.U)({
+                    feedbackType: b.nw.VOICE,
+                    location: 'VoiceCallFeedbackModal'
+                }),
+                null != l &&
                     ((0, u.Z)(d.rMx.CALL_REPORT_PROBLEM, {
-                        rating: r,
-                        reasonCode: null != (t = null == l ? void 0 : l.code) ? t : null,
-                        reasonDescription: null != (i = null == l ? void 0 : l.value) ? i : null,
-                        feedback: b,
+                        rating: l,
+                        reasonCode: null != (t = null == s ? void 0 : s.code) ? t : null,
+                        reasonDescription: null != (i = null == s ? void 0 : s.value) ? i : null,
+                        feedback: m,
                         analyticsData: f
                     }),
-                    null != l &&
-                        (0, a.ZDy)(async () => {
+                    null != s &&
+                        (0, r.ZDy)(async () => {
                             let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                             return (t) =>
                                 (0, o.jsx)(
@@ -91,7 +94,7 @@ function h(e) {
                         }));
         },
         onClose: t,
-        transitionState: h,
+        transitionState: _,
         otherKey: c.b.OTHER
     });
 }

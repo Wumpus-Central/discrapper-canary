@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
 var r = n(259443),
     i = n(579806),
-    o = n(77450),
-    a = n(998502);
+    a = n(77450),
+    o = n(998502);
 function s(e, t, n) {
     return (
         t in e
@@ -17,7 +17,7 @@ function s(e, t, n) {
     );
 }
 let l = new r.Yd('ProcessUtilsElectron');
-class c extends o.h {
+class c extends a.h {
     setupReportingTimer() {
         var e, t;
         let n = null === i.Z || void 0 === i.Z || null == (e = i.Z.processUtils) ? void 0 : e.setMemoryInformation;
@@ -28,10 +28,10 @@ class c extends o.h {
         (null == (t = performance.memory) ? void 0 : t.usedJSHeapSize) == null && l.error('usedJSHeapSize is not available.'),
             setInterval(() => {
                 var e, t, i;
-                let o = null != (t = null == (e = performance.memory) ? void 0 : e.usedJSHeapSize) ? t : 0;
+                let a = null != (t = null == (e = performance.memory) ? void 0 : e.usedJSHeapSize) ? t : 0;
                 n({
                     memoryUsageKB: null != (i = this.lastMemoryUsageKB) ? i : 0,
-                    usedJSHeapSizeKB: r(o)
+                    usedJSHeapSizeKB: r(a)
                 });
             }, 10000);
     }
@@ -53,7 +53,7 @@ class c extends o.h {
     }
     static getCurrentMemoryUsageKBCore() {
         try {
-            let e = a.ZP.getDiscordMemoryUsage();
+            let e = o.ZP.getDiscordMemoryUsage();
             if (null == e) return 0;
             let t = Object.values(e).reduce((e, t) => e + t, 0);
             return Math.ceil(t / 1024);
@@ -62,11 +62,11 @@ class c extends o.h {
         }
     }
     getMemoryUsageDetails() {
-        return a.ZP.getDiscordMemoryUsage();
+        return o.ZP.getDiscordMemoryUsage();
     }
     getMemoryUsageElectronRenderer() {
         try {
-            return a.ZP.getDiscordMemoryUsageElectronRenderer();
+            return o.ZP.getDiscordMemoryUsageElectronRenderer();
         } catch (e) {
             return null;
         }
@@ -77,7 +77,7 @@ class c extends o.h {
     }
     getMemoryUsageElectronProcessTypeDetails() {
         try {
-            return a.ZP.getDiscordMemoryUsageElectronProcessTypeDetails();
+            return o.ZP.getDiscordMemoryUsageElectronProcessTypeDetails();
         } catch (e) {
             return null;
         }

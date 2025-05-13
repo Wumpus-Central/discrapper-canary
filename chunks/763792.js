@@ -1,6 +1,6 @@
 n.d(t, {
     G: () => i,
-    W: () => o
+    W: () => a
 });
 var r = n(535396);
 let i = [
@@ -53,7 +53,7 @@ let i = [
             }
         }
     ],
-    o = [
+    a = [
         {
             type: r.Us.PERK,
             skuId: '4',

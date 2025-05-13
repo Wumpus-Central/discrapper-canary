@@ -1,6 +1,6 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(620662),
     i = n(981631);
-function o(e) {
+function a(e) {
     return (0, r.Z)(e, i.xjy.EMBEDDED);
 }

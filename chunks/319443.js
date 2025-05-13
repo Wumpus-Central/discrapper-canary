@@ -1,8 +1,8 @@
 n.r(t), n.d(t, { default: () => U }), n(388685), n(781311);
 var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    l = n.n(a),
+    a = n(73800),
+    i = n(120356),
+    l = n.n(i),
     s = n(392711),
     o = n(442837),
     c = n(481060),
@@ -37,10 +37,10 @@ var r = n(255367),
     M = n(388032),
     G = n(691133);
 function z(e) {
-    let { applicationId: t, hideDetailHeaderButtons: n, onClickBack: a } = e,
+    let { applicationId: t, hideDetailHeaderButtons: n, onClickBack: i } = e,
         s = (0, o.e7)([y.Z], () => y.Z.getApplication(t)),
-        [d, u] = i.useState(n),
-        p = i.useCallback(() => {
+        [d, u] = a.useState(n),
+        p = a.useCallback(() => {
             u(n);
         }, [n]);
     return (0, r.jsxs)('div', {
@@ -50,7 +50,7 @@ function z(e) {
                 className: G.detailHeaderSection,
                 children: (0, r.jsx)(m.Cm, {
                     icon: c.j9r,
-                    onClick: a
+                    onClick: i
                 })
             }),
             (0, r.jsx)(c.X6q, {
@@ -79,10 +79,10 @@ function z(e) {
     });
 }
 function B() {
-    let e = i.useCallback(() => {
+    let e = a.useCallback(() => {
             (0, P.qF)();
         }, []),
-        t = i.useCallback(() => {
+        t = a.useCallback(() => {
             (0, P.rf)();
         }, []);
     return (0, r.jsxs)(c.qXd, {
@@ -122,27 +122,27 @@ function B() {
 let U = function () {
     var e;
     let t = (0, o.e7)([b.default], () => !b.default.isAuthenticated()),
-        { onScroll: n, scrollPosition: a, resetScrollPosition: y } = (0, u.M)(),
+        { onScroll: n, scrollPosition: i, resetScrollPosition: y } = (0, u.M)(),
         R = (0, N.Xh)(),
         U = (0, P.nu)(),
         F = (null == R ? void 0 : R.type) === N.m_.CATEGORY ? R.categoryId : void 0,
         { applicationId: V, section: H } = (null == R ? void 0 : R.type) === N.m_.APPLICATION ? R : {},
         { query: Y, categoryId: W } = (null == R ? void 0 : R.type) === N.m_.SEARCH ? R : {},
         X = (0, o.e7)([I.Z], () => I.Z.getCategories()),
-        K = i.useMemo(() => [(0, O.KQ)(), ...X], [X]),
-        q = i.useMemo(() => K.find((e) => e.id === Number(W)), [K, W]),
+        K = a.useMemo(() => [(0, O.KQ)(), ...X], [X]),
+        q = a.useMemo(() => K.find((e) => e.id === Number(W)), [K, W]),
         { tabs: Q, selectedTab: J, onSelectTab: $ } = (0, E.i)(null == F ? void 0 : F.toString()),
-        [ee, et] = i.useState(!0),
+        [ee, et] = a.useState(!0),
         en = N.z8.useField('trackedOpenedFromExternalEntrypoint'),
         er = N.z8.useField('sessionId'),
-        ei = (0, o.e7)([x.default], () => x.default.getCurrentUser());
-    i.useEffect(() => {
+        ea = (0, o.e7)([x.default], () => x.default.getCurrentUser());
+    a.useEffect(() => {
         if (!en && null == er) {
             let e = (0, _.PM)();
             v.default.track(D.rMx.APP_DIRECTORY_OPENED, {
                 source: N.xF.EXTERNAL,
                 session_id: e,
-                user_id: null == ei ? void 0 : ei.id
+                user_id: null == ea ? void 0 : ea.id
             }),
                 N.z8.setState({
                     trackedOpenedFromExternalEntrypoint: !0,
@@ -151,15 +151,15 @@ let U = function () {
                     guildId: null
                 });
         }
-    }, [er, en, null == ei ? void 0 : ei.id]),
-        i.useEffect(() => {
+    }, [er, en, null == ea ? void 0 : ea.id]),
+        a.useEffect(() => {
             C.CP();
         }, []),
-        i.useEffect(() => {
+        a.useEffect(() => {
             U && C.g5();
         }, [U]),
-        i.useEffect(() => N.aQ.setState({ lastItem: R }), [R]);
-    let { enabled: ea } = d.c.useExperiment({ location: 'GlobalDiscoveryAppsRoot' }, { autoTrackExposure: !0 }),
+        a.useEffect(() => N.aQ.setState({ lastItem: R }), [R]);
+    let { enabled: ei } = d.c.useExperiment({ location: 'GlobalDiscoveryAppsRoot' }, { autoTrackExposure: !0 }),
         el = null != V,
         es = (null == R ? void 0 : R.type) === N.m_.SEARCH,
         { searchQuery: eo, onSearchTextChange: ec, onClearSearch: ed, onSearchSubmit: eu } = (0, S.M)({ initialQuery: null != Y ? Y : '' }),
@@ -174,26 +174,26 @@ let U = function () {
             searchBarState: ep,
             setSearchBarState: (e) => j.Z.setState({ searchBarState: e })
         }),
-        e_ = i.useCallback(
+        e_ = a.useCallback(
             (e) => {
                 $(e), es && ed(), y();
             },
             [es, ed, $, y]
         ),
-        ef = i.useCallback((e) => (0, T.ph)({ applicationId: e }), []),
+        ef = a.useCallback((e) => (0, T.ph)({ applicationId: e }), []),
         eb = el || es,
-        ex = i.useCallback(() => {
+        ex = a.useCallback(() => {
             null != (0, N.Uc)() ? (0, f.op)() : (0, T.Yp)();
         }, []),
         ev = (0, s.debounce)((e) => {
-            let { scrollTop: t, offsetHeight: n, scrollHeight: r, location: i } = e;
+            let { scrollTop: t, offsetHeight: n, scrollHeight: r, location: a } = e;
             t > 0 &&
                 (0, P.zZ)(D.rMx.APP_DIRECTORY_PAGE_SCROLLED, {
                     scroll_visible_percentile: (t + n) / r,
-                    current_page: i
+                    current_page: a
                 });
         }, 200),
-        eC = i.useCallback(
+        eC = a.useCallback(
             (e, t) => {
                 n(e),
                     ev({
@@ -205,7 +205,7 @@ let U = function () {
             },
             [ev, n]
         ),
-        ej = ea ? c.iWm : c.jje;
+        ej = ei ? c.iWm : c.jje;
     return (0, r.jsxs)('div', {
         className: l()(G.outerContainer, { [G.loggedOutContainer]: t }),
         children: [
@@ -216,7 +216,7 @@ let U = function () {
                     (0, r.jsxs)(m.ZP, {
                         variant: eb ? m._6.RELATIVE : m._6.OVERLAY,
                         children: [
-                            !eb && (0, r.jsx)(m.z6, { scrollPosition: a }),
+                            !eb && (0, r.jsx)(m.z6, { scrollPosition: i }),
                             el
                                 ? (0, r.jsx)(z, {
                                       applicationId: V,

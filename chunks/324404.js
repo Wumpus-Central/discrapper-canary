@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a }), n(388685);
+n.d(t, { Z: () => o }), n(388685);
 var r = n(374470);
 function i(e, t, n) {
     return (
@@ -13,12 +13,12 @@ function i(e, t, n) {
         e
     );
 }
-let o = {
+let a = {
     root: null,
     rootMargin: '0px',
     threshold: 0.5
 };
-class a {
+class o {
     isVisible(e) {
         return null == this._observer || this._visibleComponents.has(e);
     }
@@ -35,7 +35,7 @@ class a {
         let n = this._components.get(e);
         null != n && (this._nodes.delete(n), this._components.delete(e), this._visibleComponents.delete(e), t.unobserve(n));
     }
-    constructor(e = o) {
+    constructor(e = a) {
         i(this, '_observer', void 0),
             i(this, '_options', void 0),
             i(this, '_nodes', new WeakMap()),

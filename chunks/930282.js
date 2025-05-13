@@ -11,7 +11,7 @@ var r = n(255367),
     s = n.n(l),
     c = n(902704),
     u = n(453687),
-    d = n(318713),
+    d = n(328966),
     p = n(981631),
     g = n(388032),
     m = n(848697),
@@ -27,45 +27,33 @@ function h(e, t) {
 }
 let _ = o.memo(function (e) {
     var t;
-    let { className: n, message: a, children: l, content: c, onUpdate: h, contentRef: _ } = e,
-        y = a.isEdited(),
-        v = a.state === p.yb.SEND_FAILED,
-        O = a.state === p.yb.SENDING,
-        j = a.isCommandType(),
-        x = null == (t = a.editedTimestamp) ? void 0 : t.toString(),
-        C = o.useRef(!1);
+    let { className: n, message: a, children: l, content: c, onUpdate: g, contentRef: h, compact: _ } = e,
+        y = a.state === p.yb.SEND_FAILED,
+        v = a.state === p.yb.SENDING,
+        O = a.isCommandType(),
+        j = null == (t = a.editedTimestamp) ? void 0 : t.toString(),
+        x = o.useRef(!1);
     return (
         o.useLayoutEffect(() => {
-            C.current ? null != h && h() : (C.current = !0);
-        }, [h, a.content, c, x, l]),
+            x.current ? null != g && g() : (x.current = !0);
+        }, [g, a.content, c, j, l]),
         (0, r.jsxs)('div', {
             id: (0, u.ut)(a),
-            ref: _,
+            ref: h,
             className: i()(n, f.markup, {
                 [m.messageContent]: !0,
-                [m.isSending]: O && !j,
+                [m.isSending]: v && !O,
                 [m.markupRtl]: 'rtl' === s()(a.content),
-                [m.isFailed]: v,
+                [m.isFailed]: y,
                 [m.isUnsupported]: a.isUnsupported
             }),
             children: [
                 null != l ? l : b(a, c),
-                y &&
-                    null != a.editedTimestamp &&
-                    (0, r.jsxs)(r.Fragment, {
-                        children: [
-                            ' ',
-                            (0, r.jsx)(d.Z, {
-                                timestamp: a.editedTimestamp,
-                                isEdited: !0,
-                                isInline: !1,
-                                children: (0, r.jsxs)('span', {
-                                    className: m.edited,
-                                    children: ['(', g.intl.string(g.t.C8sXIC), ')']
-                                })
-                            })
-                        ]
-                    })
+                (0, r.jsx)(d.Z, {
+                    message: a,
+                    compact: _,
+                    location: d.H.WITH_CONTENT
+                })
             ]
         })
     );

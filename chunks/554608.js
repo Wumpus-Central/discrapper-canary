@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r,
     i = n(442837),
-    o = n(570140);
-function a(e, t, n) {
+    a = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -36,8 +36,8 @@ class f extends (r = i.ZP.Store) {
         return l;
     }
 }
-a(f, 'displayName', 'DomainMigrationStore');
-let _ = new f(o.Z, {
+o(f, 'displayName', 'DomainMigrationStore');
+let _ = new f(a.Z, {
     DOMAIN_MIGRATION_START: c,
     DOMAIN_MIGRATION_FAILURE: u,
     DOMAIN_MIGRATION_SKIP: d

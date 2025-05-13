@@ -1,8 +1,8 @@
 n.d(t, { S: () => O });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(1561),
     l = n(761224),
     c = n(670596),
@@ -66,7 +66,7 @@ function y(e, t) {
     );
 }
 function O(e) {
-    let { color: t = 'default', label: n, checked: o, subtext: g, disabled: b, isFocused: O, menuItemProps: v, action: I, className: S, focusedClassName: T } = e,
+    let { color: t = 'default', label: n, checked: a, subtext: g, disabled: b, isFocused: O, menuItemProps: v, action: I, className: S, focusedClassName: T } = e,
         { onInteraction: A } = i.useContext(c.p),
         N = i.useRef(null),
         C = (0, f.Q3)('MenuCheckboxItem');
@@ -85,7 +85,7 @@ function O(e) {
             E(
                 {
                     innerRef: N,
-                    className: a()(m.item, m.checkboxContainer, m.labelContainer, h._[t], S, {
+                    className: o()(m.item, m.checkboxContainer, m.labelContainer, h._[t], S, {
                         [m.disabled]: b,
                         [m.focused]: O,
                         [null != T ? T : '']: O
@@ -95,7 +95,7 @@ function O(e) {
                 v
             ),
             {
-                'aria-checked': o,
+                'aria-checked': a,
                 'aria-disabled': b,
                 children: [
                     (0, r.jsxs)('div', {
@@ -115,10 +115,10 @@ function O(e) {
                             ? (0, r.jsx)(d.FZ5, {
                                   shape: d.XZJ.Shapes.BOX,
                                   size: 20,
-                                  value: o,
+                                  value: a,
                                   disabled: b
                               })
-                            : o
+                            : a
                               ? (0, r.jsx)(p.Z, {
                                     className: m.icon,
                                     background: m.checkbox,

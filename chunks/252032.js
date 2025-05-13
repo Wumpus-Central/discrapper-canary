@@ -170,7 +170,7 @@ function O(e) {
     );
 }
 function E(e, t, n) {
-    let { message: i, channel: l } = e;
+    let { message: i, channel: l, compact: o } = e;
     return n
         ? (0, r.jsx)(j, {
               channel: l,
@@ -178,6 +178,7 @@ function E(e, t, n) {
           })
         : (0, r.jsx)(_.ZP, {
               message: i,
-              content: t
+              content: t,
+              compact: null != o && o
           });
 }

@@ -1,4 +1,4 @@
-n.d(t, { default: () => P }), n(388685), n(953529);
+n.d(t, { default: () => S }), n(388685), n(953529);
 var a = n(255367),
     i = n(73800),
     l = n(442837),
@@ -21,36 +21,36 @@ var a = n(255367),
     v = n(404616),
     T = n(470623),
     O = n(981631),
-    j = n(231338),
-    I = n(388032),
-    M = n(994436);
-function P(e) {
+    I = n(231338),
+    j = n(388032),
+    E = n(994436);
+function S(e) {
     var t;
-    let { threadId: n, attachments: P, sendMessage: E, transitionState: S, onClose: A } = e,
+    let { threadId: n, attachments: S, sendMessage: M, transitionState: P, onClose: A } = e,
         w = (0, d.Dt)(),
         D = (0, l.e7)([p.Z], () => p.Z.getChannel(n), [n]),
         k = (0, l.e7)([_.Z], () => _.Z.getGuild(null == D ? void 0 : D.getGuildId()), [D]),
-        z = (0, l.e7)([p.Z], () => p.Z.getChannel(null == D ? void 0 : D.parent_id), [D]),
-        L = null == (t = P[0]) ? void 0 : t.item,
-        [R, N] = i.useState(null);
+        N = (0, l.e7)([p.Z], () => p.Z.getChannel(null == D ? void 0 : D.parent_id), [D]),
+        z = null == (t = S[0]) ? void 0 : t.item,
+        [R, L] = i.useState(null);
     i.useEffect(() => {
-        null != L && (0, m.Fq)(L.file, (e, t) => N(e), j.dG);
-    }, [L]);
+        null != z && (0, m.Fq)(z.file, (e, t) => L(e), I.dG);
+    }, [z]);
     let Z =
-            null != L && null != R
+            null != z && null != R
                 ? {
                       src: R,
                       width: v.TJ,
                       height: v.Lp,
-                      spoiler: P[0].spoiler,
-                      alt: P[0].description
+                      spoiler: S[0].spoiler,
+                      alt: S[0].description
                   }
                 : null,
         [U, B] = i.useState(!1),
-        G = i.useCallback(() => {
-            (0, x.xI)({ added: !1 }), E(), A();
-        }, [E, A]),
         F = i.useCallback(() => {
+            (0, x.xI)({ added: !1 }), M(), A();
+        }, [M, A]),
+        G = i.useCallback(() => {
             null != D &&
                 null != k &&
                 ((0, x.xI)({ added: !0 }),
@@ -75,41 +75,41 @@ function P(e) {
                     r.uploadFiles(n, { attachments: [...m] }, { addFilesTo: 'attachments' });
                 })({
                     thread: D,
-                    attachments: P,
+                    attachments: S,
                     setIsUploading: B,
                     guild: k,
                     onClose: A
                 }));
-        }, [D, P, B, k, A]);
-    return null == z
+        }, [D, S, B, k, A]);
+    return null == N
         ? null
         : (0, a.jsxs)(r.Y0X, {
-              transitionState: S,
+              transitionState: P,
               size: r.CgR.SMALL,
-              className: M.modalRoot,
+              className: E.modalRoot,
               'aria-labelledby': w,
               children: [
                   (0, a.jsxs)(r.hzk, {
-                      className: M.modal,
+                      className: E.modal,
                       children: [
                           (0, a.jsx)(r.X6q, {
                               variant: 'heading-md/semibold',
-                              className: M.header,
+                              className: E.header,
                               id: w,
-                              children: I.intl.string(I.t.hMWWMT)
+                              children: j.intl.string(j.t.hMWWMT)
                           }),
                           (0, a.jsx)(r.Text, {
                               variant: 'text-md/normal',
-                              className: M.__invalid_body,
-                              children: I.intl.string(I.t.zMsUsr)
+                              className: E.__invalid_body,
+                              children: j.intl.string(j.t.zMsUsr)
                           }),
                           (0, a.jsx)('div', {
-                              className: M.forumPost,
+                              className: E.forumPost,
                               children: (0, a.jsx)(T.oL, {
-                                  channel: z,
+                                  channel: N,
                                   children: (0, a.jsx)(v.ZP, {
                                       threadId: n,
-                                      goToThread: j.dG,
+                                      goToThread: I.dG,
                                       overrideMedia: Z
                                   })
                               })
@@ -117,29 +117,29 @@ function P(e) {
                       ]
                   }),
                   (0, a.jsxs)(r.mzw, {
-                      className: M.modalFooter,
+                      className: E.modalFooter,
                       children: [
                           (0, a.jsx)(r.zxk, {
                               look: r.zxk.Looks.BLANK,
-                              className: M.cancelButton,
+                              className: E.cancelButton,
                               disabled: U,
                               onClick: A,
-                              children: I.intl.string(I.t['ETE/oK'])
+                              children: j.intl.string(j.t['ETE/oK'])
                           }),
                           (0, a.jsx)(r.zxk, {
                               color: r.zxk.Colors.PRIMARY,
-                              className: M.dontAddButton,
+                              className: E.dontAddButton,
                               disabled: U,
-                              onClick: G,
-                              children: I.intl.string(I.t['8rKVHB'])
+                              onClick: F,
+                              children: j.intl.string(j.t['8rKVHB'])
                           }),
                           (0, a.jsx)(r.zxk, {
                               color: r.zxk.Colors.BRAND,
-                              className: M.__invalid_button,
+                              className: E.__invalid_button,
                               submitting: U,
-                              onClick: F,
+                              onClick: G,
                               autoFocus: !0,
-                              children: I.intl.string(I.t.d611xM)
+                              children: j.intl.string(j.t.d611xM)
                           })
                       ]
                   })

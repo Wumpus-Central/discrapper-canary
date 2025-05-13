@@ -1,7 +1,7 @@
 n.d(t, { Z: () => g });
 var r = n(255367),
-    i = n(73800),
-    a = n(793030),
+    a = n(73800),
+    i = n(793030),
     l = n(442837),
     s = n(445986),
     o = n(9807),
@@ -22,7 +22,7 @@ function g(e) {
                     'aria-hidden': !0,
                     alt: ''
                 }),
-                (0, r.jsx)(a.X6, {
+                (0, r.jsx)(i.X6, {
                     variant: 'heading-xl/semibold',
                     children: p.intl.string(p.t.UvDfMz)
                 })
@@ -35,13 +35,13 @@ function g(e) {
             name: t.name
         });
     });
-    let f = i.useCallback(
+    let f = a.useCallback(
         (e, t) => {
             if (e.type === u.s9s.IMG) {
                 let t = n.filter((e) => e.type === u.s9s.IMG),
                     r = t.findIndex((t) => t === e);
                 if (r < 0) return;
-                let i = t.map((e) => ({
+                let a = t.map((e) => ({
                     url: (0, s.Q)(e.src),
                     original: e.src,
                     width: e.width,
@@ -49,7 +49,7 @@ function g(e) {
                     type: 'IMAGE'
                 }));
                 (0, c.K)({
-                    items: i,
+                    items: a,
                     startingIndex: r,
                     shouldHideMediaOptions: !0,
                     location: 'GlobalDiscoveryAppsDetailCarousel'

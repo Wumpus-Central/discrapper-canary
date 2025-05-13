@@ -2,8 +2,8 @@ function r(e, t, n) {
     let r = 0,
         i = e.length;
     for (; r < i; ) {
-        let o = (r + i) >>> 1;
-        0 > n(e[o], t) ? (r = o + 1) : (i = o);
+        let a = (r + i) >>> 1;
+        0 > n(e[a], t) ? (r = a + 1) : (i = a);
     }
     return r;
 }

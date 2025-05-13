@@ -13,8 +13,8 @@ function i(e, t, n) {
         e
     );
 }
-let o = 256;
-function a(e, t) {
+let a = 256;
+function o(e, t) {
     return r.ZP.ensureModule('discord_spellcheck').then(() => {
         let { cld: n } = r.ZP.requireModule('discord_spellcheck');
         return new Promise((r, i) => {
@@ -46,8 +46,8 @@ class s {
             ((this._processing = !0),
             requestIdleCallback((t) => {
                 if (t.timeRemaining() <= this._minimumTimeRemaining) return void this._processEnd();
-                e.length > o && (e = e.slice(0, o)),
-                    a(e, this._languageHint).then(
+                e.length > a && (e = e.slice(0, a)),
+                    o(e, this._languageHint).then(
                         (e) => {
                             (this.language = e), this._processEnd(t.didTimeout);
                         },

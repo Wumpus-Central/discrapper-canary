@@ -108,7 +108,7 @@ let L = i.forwardRef(function (e, t) {
                         })
                     }),
                 (0, r.jsxs)('div', {
-                    className: o()(M.buttonContainer, w.t4, { [M.appLauncherCircleMask]: P === h.O.GLOWING_ANIMATION }),
+                    className: o()(M.buttonContainer, w.t4, { [M.appLauncherCircleMask]: G && P === h.O.GLOWING_ANIMATION }),
                     ref: t,
                     children: [
                         (0, r.jsx)(

@@ -13,18 +13,18 @@ function i(e, t, n) {
         e
     );
 }
-function o(e) {
+function a(e) {
     return {
         channelId: e,
         sessionId: (0, r.Z)()
     };
 }
-class a {
+class o {
     getForumChannelSessionId(e) {
-        return null == this.session && (this.session = o(e)), this.session.channelId !== e && (this.session = o(e)), this.session.sessionId;
+        return null == this.session && (this.session = a(e)), this.session.channelId !== e && (this.session = a(e)), this.session.sessionId;
     }
     constructor() {
         i(this, 'session', void 0);
     }
 }
-let s = new a();
+let s = new o();

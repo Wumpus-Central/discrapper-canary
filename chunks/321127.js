@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(112360);
+    a = n.n(i),
+    o = n(112360);
 function s(e, t, n) {
     return (
         t in e
@@ -59,7 +59,7 @@ function u(e, t) {
 function d(e) {
     let { attributes: t, children: n, leaf: i, text: s } = e;
     if (i.commandName) {
-        let e = o()(a.commandName, { [a.emptyText]: '' === s.text });
+        let e = a()(o.commandName, { [o.emptyText]: '' === s.text });
         return (0, r.jsx)(
             'span',
             u(l({}, t), {

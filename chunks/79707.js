@@ -1,27 +1,27 @@
 n.d(t, { Z: () => l });
 var r = n(255367);
 n(73800);
-var i = n(481060),
-    a = n(388032);
+var a = n(481060),
+    i = n(388032);
 function l(e) {
     let { tabs: t, selectedTab: n, onTabSelect: l, onClose: s } = e;
-    return (0, r.jsx)(i.v2r, {
+    return (0, r.jsx)(a.v2r, {
         navId: 'global-discovery-tabs-overflow-menu',
-        'aria-label': a.intl.string(a.t.riPnr6),
+        'aria-label': i.intl.string(i.t.riPnr6),
         hideScroller: !0,
         onClose: s,
         onSelect: s,
         children: (0, r.jsx)(
-            i.kSQ,
+            a.kSQ,
             {
                 children: t.map((e) => {
-                    let { id: t, label: a } = e;
+                    let { id: t, label: i } = e;
                     return (0, r.jsx)(
-                        i.sNh,
+                        a.sNh,
                         {
                             id: t,
-                            label: a,
-                            icon: t === n ? i.owK : void 0,
+                            label: i,
+                            icon: t === n ? a.owK : void 0,
                             action: () => l(t)
                         },
                         t

@@ -1,16 +1,16 @@
 n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
-var i = n(120356),
-    a = n.n(i),
+var a = n(120356),
+    i = n.n(a),
     l = n(481060),
     s = n(388032),
     o = n(166596),
     c = n(516450);
 function d(e) {
-    let { heading: t = s.intl.string(s.t.NGw8v7), body: n = s.intl.string(s.t['1XZRY2']), className: i } = e;
+    let { heading: t = s.intl.string(s.t.NGw8v7), body: n = s.intl.string(s.t['1XZRY2']), className: a } = e;
     return (0, r.jsxs)('div', {
-        className: a()(o.container, i),
+        className: i()(o.container, a),
         children: [
             (0, r.jsx)('div', {
                 className: o.imageContainer,

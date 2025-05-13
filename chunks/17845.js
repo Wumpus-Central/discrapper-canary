@@ -1,46 +1,65 @@
-n.d(t, { Z: () => p }), n(953529);
+n.d(t, { Z: () => m }), n(953529);
 var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    l = n.n(a),
+    a = n(73800),
+    i = n(120356),
+    l = n.n(i),
     s = n(780384),
     o = n(481060),
     c = n(410030),
-    d = n(750567);
-function u(e) {
-    let { title: t } = e;
-    return (0, r.jsx)(o.X6q, {
-        className: l()(d.title, d.uppercase),
+    d = n(688465),
+    u = n(750567);
+function p(e) {
+    let { title: t, betaTag: n } = e;
+    return (0, r.jsxs)(o.X6q, {
+        className: l()(u.title, u.uppercase),
         variant: 'display-lg',
         color: 'header-primary',
-        children: t
+        children: [t, n && (0, r.jsx)(d.Z, { className: u.betaTag })]
     });
 }
-function p(e) {
-    let { title: t, description: n, button: a, className: p, children: m } = e,
-        h = (0, c.ZP)(),
-        g = (0, s.wj)(h),
-        _ = i.useMemo(() => (Array.isArray(t) ? t.map((e, t) => (0, r.jsx)(u, { title: e }, t)) : (0, r.jsx)(u, { title: t })), [t]);
+function m(e) {
+    let { title: t, description: n, button: i, className: d, children: m, betaTag: h = !1 } = e,
+        g = (0, c.ZP)(),
+        _ = (0, s.wj)(g),
+        f = a.useMemo(
+            () =>
+                Array.isArray(t)
+                    ? t.map((e, t) =>
+                          (0, r.jsx)(
+                              p,
+                              {
+                                  title: e,
+                                  betaTag: h
+                              },
+                              t
+                          )
+                      )
+                    : (0, r.jsx)(p, {
+                          title: t,
+                          betaTag: h
+                      }),
+            [t, h]
+        );
     return (0, r.jsxs)('div', {
-        className: l()(d.container, p),
+        className: l()(u.container, d),
         children: [
             (0, r.jsx)('div', {
-                className: d.content,
+                className: u.content,
                 children: (0, r.jsxs)('div', {
-                    className: d.textContainer,
+                    className: u.textContainer,
                     children: [
-                        _,
+                        f,
                         null != n &&
                             (0, r.jsx)(o.Text, {
-                                className: d.description,
+                                className: u.description,
                                 variant: 'text-md/medium',
-                                color: g ? 'text-muted' : 'header-primary',
+                                color: _ ? 'text-muted' : 'header-primary',
                                 children: n
                             }),
-                        null != a &&
+                        null != i &&
                             (0, r.jsx)('div', {
-                                className: d.buttonContainer,
-                                children: a
+                                className: u.buttonContainer,
+                                children: i
                             })
                     ]
                 })

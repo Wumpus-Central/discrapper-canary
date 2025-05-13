@@ -1,6 +1,6 @@
-n.d(t, { Z: () => i });
+n.d(t, { Z: () => a });
 var r = n(683305);
-class i {
+class a {
     handleScroll(e) {
         this.top.set(e.currentTarget.scrollTop);
     }

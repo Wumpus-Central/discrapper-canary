@@ -1,15 +1,15 @@
 n.d(t, { ZP: () => u });
 var r = n(442837),
     i = n(496675),
-    o = n(700785),
-    a = n(231338);
-let s = [a.Pl.SET_VOICE_CHANNEL_STATUS, a.Pl.CONNECT, a.Pl.VIEW_CHANNEL],
-    l = [a.Pl.SET_VOICE_CHANNEL_STATUS];
+    a = n(700785),
+    o = n(231338);
+let s = [o.Pl.SET_VOICE_CHANNEL_STATUS, o.Pl.CONNECT, o.Pl.VIEW_CHANNEL],
+    l = [o.Pl.SET_VOICE_CHANNEL_STATUS];
 function c(e, t, n, r) {
     return (n ? l : s).every((n) =>
         null == r
             ? t.can(n, e)
-            : o.BT({
+            : a.BT({
                   permission: n,
                   user: r,
                   context: e

@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    o = n(570140),
-    a = n(317770),
+    a = n(570140),
+    o = n(317770),
     s = n(594174),
     l = n(726525),
     c = n(981631);
@@ -45,8 +45,8 @@ function f(e, t) {
         r,
         i = _(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -55,8 +55,8 @@ function _(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let p = null;
@@ -64,7 +64,7 @@ function h(e, t) {
     return 'USER_PROFILE_MODAL_KEY:'.concat(e, ':').concat(null == t ? '' : t);
 }
 async function m(e) {
-    var { userId: t, section: o, subsection: a, guildId: u, channelId: _, friendToken: m, showGuildProfile: g = !0, appContext: E, customStatusPrompt: b } = e,
+    var { userId: t, section: a, subsection: o, guildId: u, channelId: _, friendToken: m, showGuildProfile: g = !0, appContext: E, customStatusPrompt: b } = e,
         y = f(e, ['userId', 'section', 'subsection', 'guildId', 'channelId', 'friendToken', 'showGuildProfile', 'appContext', 'customStatusPrompt']);
     let O = s.default.getUser(t);
     if (null == O) return;
@@ -82,8 +82,8 @@ async function m(e) {
                                 currentUser: v,
                                 guildId: u,
                                 friendToken: m,
-                                initialSection: o,
-                                initialSubsection: a,
+                                initialSection: a,
+                                initialSubsection: o,
                                 channelId: _,
                                 showGuildProfile: g,
                                 customStatusPrompt: b
@@ -102,12 +102,12 @@ async function m(e) {
 function g() {
     null != p && (0, i.Mr3)(p), (p = null);
 }
-class E extends a.Z {
+class E extends o.Z {
     _initialize() {
-        o.Z.subscribe('USER_PROFILE_MODAL_OPEN', m), o.Z.subscribe('USER_PROFILE_MODAL_CLOSE', g);
+        a.Z.subscribe('USER_PROFILE_MODAL_OPEN', m), a.Z.subscribe('USER_PROFILE_MODAL_CLOSE', g);
     }
     _terminate() {
-        o.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', m), o.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', g);
+        a.Z.unsubscribe('USER_PROFILE_MODAL_OPEN', m), a.Z.unsubscribe('USER_PROFILE_MODAL_CLOSE', g);
     }
 }
 let b = new E();

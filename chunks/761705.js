@@ -1,7 +1,7 @@
 n.d(t, { Z: () => y }), n(388685), n(539854);
 var r,
-    i = n(255367),
-    a = n(73800),
+    a = n(255367),
+    i = n(73800),
     l = n(120356),
     s = n.n(l),
     o = n(299608),
@@ -48,7 +48,7 @@ let C = {
     friction: 10,
     tension: 100
 };
-class j extends a.Component {
+class j extends i.Component {
     componentWillEnter(e) {
         let { directionHistory: t } = this.props,
             { translate: n, opacity: r } = this.state;
@@ -93,7 +93,7 @@ class j extends a.Component {
     render() {
         let { item: e } = this.props,
             { className: t } = this.props;
-        return (0, i.jsx)(d.Z.img, {
+        return (0, a.jsx)(d.Z.img, {
             src: e.src,
             alt: '',
             className: s()(b.slide, t),
@@ -108,7 +108,7 @@ class j extends a.Component {
             });
     }
 }
-class y extends (r = a.Component) {
+class y extends (r = i.Component) {
     componentDidMount() {
         this.preloadNextImages(), m.Z.disable(), m.Z.enableTemp(p.P), _.S.subscribe(f.CkL.MODAL_CAROUSEL_NEXT, this.gotoNextThrottled), _.S.subscribe(f.CkL.MODAL_CAROUSEL_PREV, this.gotoPrevThrottled);
     }
@@ -119,9 +119,9 @@ class y extends (r = a.Component) {
         var e, t;
         let { currentIndex: n } = this.state,
             { items: r } = this.props,
-            i = (((n + 1) % (e = r.length)) + e) % e,
-            a = (((n - 1) % (t = r.length)) + t) % t;
-        this.preloadImage(r[i]), this.preloadImage(r[a]);
+            a = (((n + 1) % (e = r.length)) + e) % e,
+            i = (((n - 1) % (t = r.length)) + t) % t;
+        this.preloadImage(r[a]), this.preloadImage(r[i]);
     }
     preloadImage(e) {
         (0, h.po)(e.src);
@@ -132,12 +132,12 @@ class y extends (r = a.Component) {
     }
     navigateTo(e) {
         var t, n, r;
-        let { directionHistory: i, currentIndex: a } = this.state;
-        i.push(e - a),
+        let { directionHistory: a, currentIndex: i } = this.state;
+        a.push(e - i),
             (e = ((e % (r = this.props.items.length)) + r) % r),
             this.setState({
                 currentIndex: e,
-                directionHistory: i
+                directionHistory: a
             }),
             null == (t = (n = this.props).onIndexChange) || t.call(n, e);
     }
@@ -145,32 +145,32 @@ class y extends (r = a.Component) {
         var e;
         let { className: t } = this.props,
             { currentIndex: n, directionHistory: r } = this.state,
-            { modalCarouselItemClassName: a } = this.props,
+            { modalCarouselItemClassName: i } = this.props,
             l = this.props.items[n],
             o = this.props.items;
-        return (0, i.jsxs)(u.W, {
+        return (0, a.jsxs)(u.W, {
             component: 'div',
             className: s()(b.wrapper, t),
             children: [
                 o.length > 1
-                    ? (0, i.jsx)(g.am, {
+                    ? (0, a.jsx)(g.am, {
                           className: b.navPrev,
                           onClick: this.gotoPrev
                       })
                     : null,
                 null != (e = l.component)
                     ? e
-                    : (0, i.jsx)(
+                    : (0, a.jsx)(
                           j,
                           {
                               item: l,
                               directionHistory: r,
-                              className: a
+                              className: i
                           },
                           l.src
                       ),
                 o.length > 1
-                    ? (0, i.jsx)(g.Pz, {
+                    ? (0, a.jsx)(g.Pz, {
                           className: b.navNext,
                           onClick: this.gotoNext
                       })

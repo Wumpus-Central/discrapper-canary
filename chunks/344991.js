@@ -75,12 +75,12 @@ function g(e) {
             executeStateUpdate: M,
             visualState: U,
             isDisabled: H,
-            error: G
+            error: F
         } = (0, d.Ee)(n, {
             type: v,
             selectedOptions: Array.from(I.values())
         }),
-        F = U === p.gH.LOADING;
+        G = U === p.gH.LOADING;
     i.useEffect(() => {
         if ((null == A ? void 0 : A.type) === s.re.USER_SELECT || (null == A ? void 0 : A.type) === s.re.ROLE_SELECT || (null == A ? void 0 : A.type) === s.re.MENTIONABLE_SELECT || (null == A ? void 0 : A.type) === s.re.CHANNEL_SELECT) {
             let e = new Map(A.selectedOptions.map((e) => [e.value, e]));
@@ -98,7 +98,7 @@ function g(e) {
     }, [w, E, k, I, z]);
     let B = 0 === I.size || w,
         W = {
-            isProcessing: F,
+            isProcessing: G,
             isDisabled: S || U === p.gH.DISABLED || H,
             wrapperClassName: b.select,
             options: (e) =>
@@ -167,10 +167,10 @@ function g(e) {
                               R
                           )
             }),
-            null != G
+            null != F
                 ? (0, l.jsx)(
                       u.st,
-                      ((t = m({}, (0, u.c4)(G))),
+                      ((t = m({}, (0, u.c4)(F))),
                       (r = r = { className: O.error }),
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))

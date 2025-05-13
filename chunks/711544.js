@@ -1,7 +1,7 @@
 n.d(t, { Z: () => s });
 var r = n(740078),
     i = n(510104);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         void 0 === n &&
             (n = {
@@ -16,7 +16,7 @@ function o(e, t, n) {
         }
     );
 }
-function a(e) {
+function o(e) {
     return [r.we, r.F2, r.I, r.t$].some(function (t) {
         return e[t] >= 0;
     });
@@ -34,10 +34,10 @@ let s = {
             l = t.modifiersData.preventOverflow,
             c = (0, i.Z)(t, { elementContext: 'reference' }),
             u = (0, i.Z)(t, { altBoundary: !0 }),
-            d = o(c, r),
-            f = o(u, s, l),
-            _ = a(d),
-            p = a(f);
+            d = a(c, r),
+            f = a(u, s, l),
+            _ = o(d),
+            p = o(f);
         (t.modifiersData[n] = {
             referenceClippingOffsets: d,
             popperEscapeOffsets: f,

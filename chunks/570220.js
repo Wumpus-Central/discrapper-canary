@@ -5,7 +5,7 @@ n.d(t, {
     n(415506);
 var r = n(73800),
     i = n(836560);
-class o extends i.EventEmitter {
+class a extends i.EventEmitter {
     on() {
         return this;
     }
@@ -22,6 +22,6 @@ class o extends i.EventEmitter {
         return !1;
     }
 }
-let a = r.createContext(new o()),
-    { Provider: s, Consumer: l } = a,
-    c = a;
+let o = r.createContext(new a()),
+    { Provider: s, Consumer: l } = o,
+    c = o;

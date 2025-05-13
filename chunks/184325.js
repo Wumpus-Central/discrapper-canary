@@ -2,8 +2,8 @@ n.d(t, { Z: () => j }), n(953529);
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
+    a = n.n(i),
+    o = n(481060),
     s = n(315263),
     l = n(100527),
     c = n(906732),
@@ -82,7 +82,7 @@ function j(e) {
         H = (0, A.Of)(null != (t = null == F ? void 0 : F.id) ? t : null),
         Y = (0, T.Z)(H).some((e) => e.id === m.l.ORB_PROFILE_BADGE);
     return (0, r.jsx)('div', {
-        className: o()(L.container, i),
+        className: a()(L.container, i),
         'aria-label': D.intl.string(D.t.VWV0y8),
         role: 'group',
         children: n.map((e, t) => {
@@ -165,13 +165,13 @@ function j(e) {
                 }),
                 A = null != c && Z.enabled;
             return (0, r.jsx)(
-                a.DY3,
+                o.DY3,
                 {
                     text: S,
                     'aria-label': e.description,
                     forceOpen: null != j && j(e.id),
                     delay: N.vB,
-                    children: (0, r.jsx)(a.eee, {
+                    children: (0, r.jsx)(o.eee, {
                         onClick: y,
                         onMouseEnter: v,
                         href: e.link,
@@ -180,7 +180,7 @@ function j(e) {
                             alt: ' ',
                             'aria-hidden': !0,
                             src: null != (n = e.iconSrc) ? n : (0, N.Ej)(e.icon),
-                            className: o()(L.badge, d)
+                            className: a()(L.badge, d)
                         })
                     })
                 },

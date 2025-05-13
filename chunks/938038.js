@@ -1,7 +1,7 @@
 n.d(t, { c: () => s });
 var r = n(433517),
     i = n(593472);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,7 +25,7 @@ function a(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -56,7 +56,7 @@ class s {
         let n = s.load(),
             r = n.games[e];
         if (null == r) {
-            (n.games[e] = a(
+            (n.games[e] = o(
                 {
                     screen: i.Jx.UNKNOWN,
                     date: Date.now()
@@ -100,7 +100,7 @@ class s {
         return !!window.__GAME_DISPLAY_MODE_DEBUG__;
     }
     constructor(e) {
-        o(this, 'games', void 0), (this.games = e);
+        a(this, 'games', void 0), (this.games = e);
     }
 }
-o(s, '_loaded', null), o(s, 'storageKey', 'GameDisplayModeStorage'), setTimeout(() => s.clearOldGameSettings(), 60000);
+a(s, '_loaded', null), a(s, 'storageKey', 'GameDisplayModeStorage'), setTimeout(() => s.clearOldGameSettings(), 60000);

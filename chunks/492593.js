@@ -74,13 +74,13 @@ let g = function (e) {
             },
             hasThread: P,
             isSystemMessage: T,
-            hasReply: w,
-            authorHasGradientRole: S = !1,
+            hasReply: S,
+            authorHasGradientRole: w = !1,
             guildId: I,
-            onMouseEnter: k,
-            onMouseLeave: M
+            onMouseEnter: N,
+            onMouseLeave: k
         } = e,
-        N = (function (e, t) {
+        E = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -100,25 +100,25 @@ let g = function (e) {
             return o;
         })(e, ['className', 'compact', 'contentOnly', 'zalgo', 'preview', 'disableInteraction', 'childrenRepliedMessage', 'childrenExecutedCommand', 'childrenHeader', 'childrenSystemMessage', 'childrenButtons', 'childrenMessageContent', 'childrenAccessories', 'messageRef', 'focusProps', 'hasThread', 'isSystemMessage', 'hasReply', 'authorHasGradientRole', 'guildId', 'onMouseEnter', 'onMouseLeave']);
     let R = (0, c.Z)(I, 'BaseMessage'),
-        [E, Z] = o.useState(!1),
+        [M, Z] = o.useState(!1),
         A = o.useCallback(
             (e) => {
-                Z(!0), null == k || k(e);
+                Z(!0), null == N || N(e);
             },
-            [k]
+            [N]
         ),
         D = o.useCallback(
             (e) => {
-                Z(!1), null == M || M(e);
+                Z(!1), null == k || k(e);
             },
-            [M]
+            [k]
         ),
         L = (0, r.jsx)(
             s.tEY,
             p(d({}, C), {
                 children: (0, r.jsx)(l.d.Provider, {
                     value: {
-                        animate: E,
+                        animate: M,
                         setAnimate: Z
                     },
                     children: (0, r.jsxs)(
@@ -127,7 +127,7 @@ let g = function (e) {
                             d(
                                 {
                                     className: i()(t, {
-                                        [u.gradient]: !!R && S,
+                                        [u.gradient]: !!R && w,
                                         [u.wrapper]: !0,
                                         [u.contentOnly]: a,
                                         [u.compact]: n,
@@ -136,11 +136,11 @@ let g = function (e) {
                                         [u.zalgo]: g,
                                         [u.hasThread]: P,
                                         [u.isSystemMessage]: T,
-                                        [u.hasReply]: w
+                                        [u.hasReply]: S
                                     }),
                                     ref: x
                                 },
-                                N
+                                E
                             ),
                             {
                                 role: 'article',

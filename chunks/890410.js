@@ -70,7 +70,8 @@ function m(e) {
                     childrenMessageContent: (0, r.jsx)(c.ZP, {
                         className: l()(d.__invalid_messageContent, { [d.compact]: g }),
                         message: i,
-                        content: f
+                        content: f,
+                        compact: null != g && g
                     }),
                     childrenHeader: (0, r.jsx)(
                         u.ZP,

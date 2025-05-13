@@ -1,7 +1,7 @@
-n.d(t, { f: () => a });
+n.d(t, { f: () => o });
 var r = n(818083),
     i = n(984134);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: 'user',
     id: '2025-03_audio_bitrate_adaptation',
     label: 'Audio Bitrate Adaptation',
@@ -14,10 +14,10 @@ let o = (0, r.B)({
         }
     ]
 });
-function a(e) {
+function o(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         { isInHoldout: n } = i.h.getCurrentConfig({ location: e }, { autoTrackExposure: t });
-    return o.getCurrentConfig(
+    return a.getCurrentConfig(
         { location: e },
         {
             disable: n,

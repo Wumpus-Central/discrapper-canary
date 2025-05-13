@@ -1,7 +1,7 @@
 n.d(t, { Z: () => g }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282);
 var r = n(255367),
-    i = n(73800),
-    a = n(442837),
+    a = n(73800),
+    i = n(442837),
     l = n(481060),
     s = n(703656),
     o = n(314897),
@@ -15,8 +15,8 @@ function g(e) {
     let { application: t, className: n } = e,
         { onGoToSupportServer: g } = (function (e) {
             let t = (0, d.nu)(),
-                n = (0, a.e7)([o.default], () => o.default.getSessionId()),
-                r = i.useCallback(async () => {
+                n = (0, i.e7)([o.default], () => o.default.getSessionId()),
+                r = a.useCallback(async () => {
                     try {
                         var t;
                         let n = null == e || null == (t = e.guild) ? void 0 : t.id;
@@ -31,16 +31,16 @@ function g(e) {
                     } catch (e) {}
                 }, [e]);
             return (
-                i.useEffect(() => {
-                    let i = new URL(location.href);
-                    if (null != e && t && null != n && 'true' === i.searchParams.get(h)) {
-                        i.searchParams.delete(h);
-                        let e = i.pathname + i.search;
+                a.useEffect(() => {
+                    let a = new URL(location.href);
+                    if (null != e && t && null != n && 'true' === a.searchParams.get(h)) {
+                        a.searchParams.delete(h);
+                        let e = a.pathname + a.search;
                         (0, s.dL)(e), r();
                     }
                 }, [t, r, n, e]),
                 {
-                    onGoToSupportServer: i.useCallback(() => {
+                    onGoToSupportServer: a.useCallback(() => {
                         var n;
                         null != (null == e || null == (n = e.guild) ? void 0 : n.id) && (t ? r() : (0, d.rf)({ [h]: 'true' }));
                     }, [e, r, t])

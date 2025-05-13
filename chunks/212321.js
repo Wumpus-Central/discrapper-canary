@@ -1,10 +1,10 @@
 n.d(t, {
-    R: () => a,
+    R: () => o,
     j: () => s
 });
 var r = n(818083),
     i = n(812740);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: 'user',
     id: '2025-04_user_profile_mutual_friends_count_performance',
     label: 'User Profile Mutual Friends Count Performance Experiment',
@@ -17,13 +17,13 @@ let o = (0, r.B)({
         }
     ]
 });
-function a(e) {
+function o(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         r = (0, i.A)({
             location: t,
             autoTrackExposure: n
         });
-    return o.getCurrentConfig(
+    return a.getCurrentConfig(
         { location: t },
         {
             autoTrackExposure: n,
@@ -37,7 +37,7 @@ function s(e) {
             location: t,
             autoTrackExposure: n
         });
-    return o.useExperiment(
+    return a.useExperiment(
         { location: t },
         {
             autoTrackExposure: n,

@@ -1,95 +1,98 @@
-n.d(t, { VoiceFilterFeedbackModal: () => x });
-var i = n(255367);
+n.d(t, { VoiceFilterFeedbackModal: () => p });
+var o = n(255367);
 n(73800);
-var o = n(990547),
-    a = n(332664),
-    l = n(142497),
-    s = n(882542),
-    c = n(981631),
-    r = n(531578),
-    u = n(190378),
-    d = n(388032);
-let _ = [r.aZ.BAD, r.aZ.GOOD],
-    m = {
-        [r.aZ.BAD]: d.intl.string(d.t.zGnUBQ),
-        [r.aZ.GOOD]: d.intl.string(d.t.SqprKS)
+var i = n(990547),
+    a = n(957115),
+    l = n(332664),
+    r = n(882542),
+    s = n(981631),
+    c = n(531578),
+    u = n(388032);
+let d = [c.aZ.BAD, c.aZ.GOOD],
+    _ = {
+        [c.aZ.BAD]: u.intl.string(u.t.zGnUBQ),
+        [c.aZ.GOOD]: u.intl.string(u.t.SqprKS)
     },
-    b = ['other'],
-    p = [
+    m = ['other'],
+    b = [
         {
-            label: d.intl.string(d.t.DVEGuL),
+            label: u.intl.string(u.t.DVEGuL),
             code: 1001,
             value: 'nobody_could_hear_me'
         },
         {
-            label: d.intl.string(d.t.Q3e5wM),
+            label: u.intl.string(u.t.Q3e5wM),
             code: 1002,
             value: 'audio_not_understood'
         },
         {
-            label: d.intl.string(d.t['D98z+/']),
+            label: u.intl.string(u.t['D98z+/']),
             code: 1003,
             value: 'audio_cut'
         },
         {
-            label: d.intl.string(d.t.lWtGvb),
+            label: u.intl.string(u.t.lWtGvb),
             code: 1004,
             value: 'audio_robotic'
         },
         {
-            label: d.intl.string(d.t.FARCFB),
+            label: u.intl.string(u.t.FARCFB),
             code: 1005,
             value: 'audio_delay'
         },
         {
-            label: d.intl.string(d.t['4nEvAQ']),
+            label: u.intl.string(u.t['4nEvAQ']),
             code: 1006,
             value: 'bad_volume'
         },
         {
-            label: d.intl.string(d.t.xVRTjI),
+            label: u.intl.string(u.t.xVRTjI),
             code: 1007,
             value: 'audio_echo'
         },
         {
-            label: d.intl.string(d.t.qvP5v7),
+            label: u.intl.string(u.t.qvP5v7),
             code: 1008,
             value: 'audio_unchanged'
         },
         {
-            label: d.intl.string(d.t.fpevoa),
+            label: u.intl.string(u.t.fpevoa),
             code: 1099,
             value: 'other'
         }
     ];
-function x(e) {
-    let { onClose: t, transitionState: n, analyticsData: r } = e;
-    return (0, i.jsx)(a.Z, {
+function p(e) {
+    let { onClose: t, transitionState: n, analyticsData: p } = e;
+    return (0, o.jsx)(l.Z, {
         modalType: 'voice_filter',
-        header: d.intl.string(d.t.zZAORE),
+        header: u.intl.string(u.t.zZAORE),
         impression: {
-            impressionName: o.ImpressionNames.VOICE_FILTER_FEEDBACK_MODAL,
+            impressionName: i.ImpressionNames.VOICE_FILTER_FEEDBACK_MODAL,
             impressionProperties: {
-                rtc_connection_id: r.rtc_connection_id,
-                media_session_id: r.media_session_id
+                rtc_connection_id: p.rtc_connection_id,
+                media_session_id: p.media_session_id
             }
         },
-        ratingOptions: _,
-        ratingTextLabels: m,
-        problemTitle: d.intl.string(d.t.FJmoxM),
-        problems: p,
-        freeformNeededProblems: b,
+        ratingOptions: d,
+        ratingTextLabels: _,
+        problemTitle: u.intl.string(u.t.FJmoxM),
+        problems: b,
+        freeformNeededProblems: m,
         onSubmit: function (e) {
             var t, n;
-            let { rating: i, problem: o, dontShowAgain: a, feedback: d } = e;
-            a && (0, l.Kw)(u.v.VOICE_FILTER_FEEDBACK),
-                null != i &&
-                    (0, s.Z)(c.rMx.VOICE_FILTER_FEEDBACK, {
-                        rating: i,
-                        reasonCode: null != (t = null == o ? void 0 : o.code) ? t : null,
-                        reasonDescription: null != (n = null == o ? void 0 : o.value) ? n : null,
-                        feedback: d,
-                        analyticsData: r
+            let { rating: o, problem: i, dontShowAgain: l, feedback: u } = e;
+            l &&
+                (0, a.U)({
+                    feedbackType: c.nw.VOICE_FILTER,
+                    location: 'VoiceFilterFeedbackModal'
+                }),
+                null != o &&
+                    (0, r.Z)(s.rMx.VOICE_FILTER_FEEDBACK, {
+                        rating: o,
+                        reasonCode: null != (t = null == i ? void 0 : i.code) ? t : null,
+                        reasonDescription: null != (n = null == i ? void 0 : i.value) ? n : null,
+                        feedback: u,
+                        analyticsData: p
                     });
         },
         onClose: t,

@@ -1,4 +1,4 @@
-n.d(t, { I: () => o });
+n.d(t, { I: () => a });
 var r = n(264181);
 function i(e, t, n) {
     return (
@@ -13,9 +13,9 @@ function i(e, t, n) {
         e
     );
 }
-class o {
+class a {
     static fromServer(e) {
-        return new o(e);
+        return new a(e);
     }
     constructor(e) {
         i(this, 'title', void 0), i(this, 'body', void 0), i(this, 'asset', void 0), i(this, 'popoutAsset', void 0), i(this, 'version', void 0), i(this, 'revertTextColor', void 0), (this.type = r.Z.BANNER), (this.title = e.title), (this.body = e.body), (this.asset = e.asset), (this.popoutAsset = e.popout_asset), (this.version = e.version), (this.revertTextColor = e.revert_text_color);

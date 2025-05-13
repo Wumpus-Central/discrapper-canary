@@ -1,22 +1,22 @@
-n.d(t, { default: () => x });
+n.d(t, { default: () => f });
 var i = n(255367),
     l = n(73800),
     a = n(481060),
+    r = n(957115),
     o = n(332664),
-    c = n(142497),
-    s = n(626135),
-    r = n(672655),
-    d = n(768015),
-    u = n(701488),
+    c = n(626135),
+    s = n(672655),
+    u = n(768015),
+    d = n(701488),
     m = n(981631),
-    _ = n(190378),
-    p = n(388032);
-let b = [u.K8.OTHER, u.K8.ADS, u.K8.NOT_FUN];
-function x(e) {
+    _ = n(531578),
+    b = n(388032);
+let p = [d.K8.OTHER, d.K8.ADS, d.K8.NOT_FUN];
+function f(e) {
     var t;
-    let { channel: x, embeddedActivityLocation: f, activityApplication: h, onClose: v, transitionState: g, analyticsData: j } = e;
+    let { channel: f, embeddedActivityLocation: x, activityApplication: h, onClose: O, transitionState: v, analyticsData: g } = e;
     l.useEffect(() => {
-        s.default.track(m.rMx.OPEN_MODAL, {
+        c.default.track(m.rMx.OPEN_MODAL, {
             type: 'Activity Feedback Modal',
             application_id: h.id,
             application_name: h.name,
@@ -24,37 +24,34 @@ function x(e) {
             source: 'Activity End'
         });
     }, [h]);
-    let O = (null == (t = h.embeddedActivityConfig) ? void 0 : t.displays_advertisements) === !0;
+    let j = (null == (t = h.embeddedActivityConfig) ? void 0 : t.displays_advertisements) === !0;
     return (0, i.jsx)(o.Z, {
         modalType: 'activity',
-        header: p.intl.formatToPlainString(p.t.QXYwoK, { applicationName: h.name }),
-        body: p.intl.string(p.t['9hk2KC']),
-        problemTitle: p.intl.string(p.t.g1q5fn),
-        problems: (0, r.Z)(!0, O),
-        freeformNeededProblems: b,
+        header: b.intl.formatToPlainString(b.t.QXYwoK, { applicationName: h.name }),
+        body: b.intl.string(b.t['9hk2KC']),
+        problemTitle: b.intl.string(b.t.g1q5fn),
+        problems: (0, s.Z)(!0, j),
+        freeformNeededProblems: p,
         onSubmit: function (e) {
             var t;
-            let { rating: l, problem: o, dontShowAgain: r, feedback: u } = e;
-            r &&
-                (function (e) {
-                    let { applicationId: t, rating: n } = e;
-                    s.default.track(m.rMx.ACTIVITY_REPORT_DONT_SHOW, {
-                        application_id: t,
-                        rating: n
-                    }),
-                        (0, c.Kw)(_.v.POST_ACTIVITY_FEEDBACK);
-                })({
-                    rating: l,
-                    applicationId: h.id
+            let { rating: l, problem: o, dontShowAgain: s, feedback: d } = e;
+            s &&
+                (c.default.track(m.rMx.ACTIVITY_REPORT_DONT_SHOW, {
+                    application_id: h.id,
+                    rating: l
                 }),
+                (0, r.U)({
+                    feedbackType: _.nw.ACTIVITY,
+                    location: 'ActivityFeedback'
+                })),
                 null != l &&
-                    ((0, d.Z)({
+                    ((0, u.Z)({
                         problem: null != (t = null == o ? void 0 : o.value) ? t : null,
-                        channel: x,
-                        embeddedActivityLocation: f,
-                        feedback: u,
+                        channel: f,
+                        embeddedActivityLocation: x,
+                        feedback: d,
                         activityApplication: h,
-                        analyticsData: j,
+                        analyticsData: g,
                         location: 'Activity End',
                         rating: l
                     }),
@@ -88,12 +85,12 @@ function x(e) {
                                                 });
                                         }
                                         return e;
-                                    })({ body: p.intl.string(p.t['zuHR+/']) }, t)
+                                    })({ body: b.intl.string(b.t['zuHR+/']) }, t)
                                 );
                         }));
         },
-        onClose: v,
-        transitionState: g,
-        otherKey: u.K8.OTHER
+        onClose: O,
+        transitionState: v,
+        otherKey: d.K8.OTHER
     });
 }

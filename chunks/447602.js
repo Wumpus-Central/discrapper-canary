@@ -1,8 +1,8 @@
 n.d(t, { n: () => g });
 var r = n(717029),
     i = n(846042);
-function o(e) {
-    return (o =
+function a(e) {
+    return (a =
         'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
@@ -11,7 +11,7 @@ function o(e) {
                   return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
               })(e);
 }
-function a(e, t) {
+function o(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
 function s(e, t) {
@@ -50,7 +50,7 @@ function d(e) {
     };
 }
 function f(e, t) {
-    return t && ('object' === o(t) || 'function' == typeof t) ? t : _(e);
+    return t && ('object' === a(t) || 'function' == typeof t) ? t : _(e);
 }
 function _(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
@@ -90,8 +90,8 @@ var g = (function (e) {
     var t = d(n);
     function n() {
         var e;
-        a(this, n);
-        for (var r = arguments.length, i = Array(r), o = 0; o < r; o++) i[o] = arguments[o];
+        o(this, n);
+        for (var r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
         return m(_((e = t.call.apply(t, [this].concat(i)))), 'priority', 30), m(_(e), 'incompatibleTokens', ['t', 'T']), e;
     }
     return (

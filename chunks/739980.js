@@ -1,22 +1,24 @@
-n.d(t, { z: () => c });
+n.d(t, { z: () => d });
 var r = n(255367),
     l = n(73800),
     i = n(954654),
     a = n(937889),
     s = n(930282),
     o = n(524444),
-    u = n(136831);
-function c(e) {
+    u = n(695346),
+    c = n(136831);
+function d(e) {
     let { previewMessage: t } = e,
-        { content: n } = (0, a.ZP)(t, {
+        n = u.jU.useSetting(),
+        { content: d } = (0, a.ZP)(t, {
             allowHeading: !0,
             allowLinks: !0
         }),
-        c = t.attachments.map((e, t) => {
+        f = t.attachments.map((e, t) => {
             let n = (0, o.Yi)({
                 src: e.url,
-                containerClassName: u.previewImage,
-                imageContainerClassName: u.previewImage,
+                containerClassName: c.previewImage,
+                imageContainerClassName: c.previewImage,
                 height: void 0 !== e.height ? e.height : 225,
                 width: void 0 !== e.width ? e.width : 225,
                 maxHeight: 225,
@@ -26,17 +28,18 @@ function c(e) {
             return (0, r.jsx)(l.Fragment, { children: n }, t);
         });
     return (0, r.jsxs)('div', {
-        className: u.previewContainer,
+        className: c.previewContainer,
         children: [
-            (0, r.jsx)('div', { className: u.quote }),
+            (0, r.jsx)('div', { className: c.quote }),
             (0, r.jsxs)('div', {
-                className: u.content,
+                className: c.content,
                 children: [
                     (0, r.jsx)(s.ZP, {
                         message: t,
-                        content: n
+                        content: d,
+                        compact: n
                     }),
-                    c,
+                    f,
                     t.components.length > 0
                         ? (0, r.jsx)(i.ZP, {
                               message: t,

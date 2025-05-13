@@ -1,8 +1,8 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(73800),
     i = n(887490);
-function o(e, t, n) {
-    let o = r.useCallback(
+function a(e, t, n) {
+    let a = r.useCallback(
             (e) => {
                 if (t) return !0;
                 if (!0 === e.defaultPrevented) return !1;
@@ -11,15 +11,15 @@ function o(e, t, n) {
             },
             [t, n]
         ),
-        a = r.useCallback(
+        o = r.useCallback(
             (t) => {
                 let { event: n } = t;
-                o(n) || (n.preventDefault(), n.stopPropagation(), null != n.clipboardData && (e.insertData(n.clipboardData), i.bN.focus(e)));
+                a(n) || (n.preventDefault(), n.stopPropagation(), null != n.clipboardData && (e.insertData(n.clipboardData), i.bN.focus(e)));
             },
-            [e, o]
+            [e, a]
         );
     return {
-        handlePaste: o,
-        handleGlobalPaste: a
+        handlePaste: a,
+        handleGlobalPaste: o
     };
 }

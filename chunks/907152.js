@@ -1,9 +1,9 @@
 n.d(t, { C4: () => y }), n(539854), n(953529), n(804061), n(704826), n(35282), n(512722);
 var r = n(913527),
     i = n.n(r),
-    o = n(705512);
+    a = n(705512);
 n(812206);
-var a = n(55000);
+var o = n(55000);
 n(220082);
 var s = n(693824),
     l = n(690725);
@@ -73,17 +73,17 @@ let g = (e, t) => m({ AvatarImage1: e[0] }, null != e[1] && { AvatarImage2: e[1]
                 text: p.intl.formatToPlainString(p.t['Klie/P'], { days: t })
             });
         }
-        (0, d.ig)(e) === o.o.GLOBAL &&
+        (0, d.ig)(e) === a.o.GLOBAL &&
             n.push({
                 iconPath: _.Op,
                 text: p.intl.string(p.t.kAlUs7)
             });
-        let a = (0, d.dw)(e);
+        let o = (0, d.dw)(e);
         if (
-            (null != a &&
+            (null != o &&
                 n.push({
                     iconPath: _.Z,
-                    text: (0, d.GE)(a)
+                    text: (0, d.GE)(o)
                 }),
             (0, d.V5)(e))
         ) {
@@ -109,7 +109,7 @@ let g = (e, t) => m({ AvatarImage1: e[0] }, null != e[1] && { AvatarImage2: e[1]
         return n;
     },
     b = (e, t) => {
-        let { timestamp: n, colors: r, description: i, entry: o, numAvatars: l } = t,
+        let { timestamp: n, colors: r, description: i, entry: a, numAvatars: l } = t,
             c = r.map((e, t) => ({
                 color: e,
                 stop: t
@@ -153,7 +153,7 @@ let g = (e, t) => m({ AvatarImage1: e[0] }, null != e[1] && { AvatarImage2: e[1]
                 8
             ) === s.vP.Failure &&
                 e.drawPath(
-                    a.Cv,
+                    o.Cv,
                     {
                         x: _.sB,
                         y: _.sB
@@ -188,7 +188,7 @@ let g = (e, t) => m({ AvatarImage1: e[0] }, null != e[1] && { AvatarImage2: e[1]
                 },
                 !0
             );
-        let d = E(o, n);
+        let d = E(a, n);
         (0, f.J)({
             canvas: e,
             badges: d,
@@ -197,15 +197,15 @@ let g = (e, t) => m({ AvatarImage1: e[0] }, null != e[1] && { AvatarImage2: e[1]
         });
     },
     y = async (e) => {
-        let { applicationImageSrc: t, entry: n, avatarSrcs: r, description: i, timestamp: o, colors: a, channelId: c } = e,
+        let { applicationImageSrc: t, entry: n, avatarSrcs: r, description: i, timestamp: a, colors: o, channelId: c } = e,
             u = n.extra.activity_name,
             d = g(r, t);
         return await (0, l.f)({
             assetsToLoad: d,
             drawImage: (e) =>
                 b(e, {
-                    timestamp: o,
-                    colors: a,
+                    timestamp: a,
+                    colors: o,
                     description: i,
                     entry: n,
                     numAvatars: r.length

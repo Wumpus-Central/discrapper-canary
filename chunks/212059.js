@@ -64,8 +64,8 @@ var r = {
 };
 let i = function (e, t, n) {
     var i,
-        o = r[e];
-    if (((i = 'string' == typeof o ? o : 1 === t ? o.one : o.other.replace('{{count}}', t.toString())), null != n && n.addSuffix))
+        a = r[e];
+    if (((i = 'string' == typeof a ? a : 1 === t ? a.one : a.other.replace('{{count}}', t.toString())), null != n && n.addSuffix))
         if (n.comparison && n.comparison > 0) return 'in ' + i;
         else return i + ' ago';
     return i;

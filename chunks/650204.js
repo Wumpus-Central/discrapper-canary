@@ -1,8 +1,8 @@
 n(65234), n(111804), n(490233), n(97749), n(388685), n(358797);
 var r,
     i,
-    o,
     a,
+    o,
     s,
     l,
     c,
@@ -60,8 +60,8 @@ if (null != D.Z) {
             });
         }),
         S.ZP.appLoaded();
-    let e = null == (i = (o = D.Z.remoteApp).getVersion) ? void 0 : i.call(o),
-        t = null == (a = (s = D.Z.remoteApp).getBuildNumber) ? void 0 : a.call(s),
+    let e = null == (i = (a = D.Z.remoteApp).getVersion) ? void 0 : i.call(a),
+        t = null == (o = (s = D.Z.remoteApp).getBuildNumber) ? void 0 : o.call(s),
         n = {};
     null != D.Z.remoteApp.getModuleVersions && (n = D.Z.remoteApp.getModuleVersions()),
         O.Z.setExtra({

@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    o = n(481060),
-    a = n(194359),
+    a = n(481060),
+    o = n(194359),
     s = n(699516),
     l = n(594174),
     c = n(981631),
@@ -82,7 +82,7 @@ function m(e) {
         );
     return v || S
         ? null
-        : (0, r.jsx)(o.sNh, {
+        : (0, r.jsx)(a.sNh, {
               id: 'ignore',
               color: 'default',
               label: I
@@ -93,10 +93,10 @@ function m(e) {
                     }),
               action: I
                   ? () => {
-                        null == E || E(), a.Z.unignoreUser(O, null != b ? b : 'use-ignore-user-item-web', null != p ? p : void 0);
+                        null == E || E(), o.Z.unignoreUser(O, null != b ? b : 'use-ignore-user-item-web', null != p ? p : void 0);
                     }
                   : () => {
-                        (0, o.ZDy)(
+                        (0, a.ZDy)(
                             async () => {
                                 let { default: e } = await Promise.all([n.e('97652'), n.e('25784')]).then(n.bind(n, 240515));
                                 return (n) =>
@@ -112,7 +112,7 @@ function m(e) {
                                         })
                                     );
                             },
-                            { contextKey: (0, o.VnL)(y) }
+                            { contextKey: (0, a.VnL)(y) }
                         );
                     }
           });

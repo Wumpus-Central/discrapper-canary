@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A }), n(388685);
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(271383),
+    a = n(570140),
+    o = n(271383),
     s = n(430824),
     l = n(594174),
     c = n(981631);
@@ -41,9 +41,9 @@ function g(e, t) {
     null != t && (f[e] = t);
 }
 function E(e) {
-    let { guildId: t, lurker: n, source: r, directoryChannelId: i, loadId: o } = e;
+    let { guildId: t, lurker: n, source: r, directoryChannelId: i, loadId: a } = e;
     if (n) {
-        switch ((m(t), g(t, o), r)) {
+        switch ((m(t), g(t, a), r)) {
             case c.vtS.MOBILE_GUILD_DISCOVERY:
                 _ = { type: c.vtS.MOBILE_GUILD_DISCOVERY };
                 break;
@@ -67,9 +67,9 @@ function b(e) {
 function y(e) {
     var t;
     let { guildId: n, joinedAt: r, user: i } = e,
-        o = i.id === (null == (t = l.default.getCurrentUser()) ? void 0 : t.id),
-        a = null == r;
-    return !!o && !a && !!d.includes(n) && (h(n), (_ = null), !0);
+        a = i.id === (null == (t = l.default.getCurrentUser()) ? void 0 : t.id),
+        o = null == r;
+    return !!a && !o && !!d.includes(n) && (h(n), (_ = null), !0);
 }
 function O(e) {
     let { guild: t } = e;
@@ -99,7 +99,7 @@ class T extends (r = i.ZP.Store) {
     }
     isLurking(e) {
         var t;
-        let n = a.ZP.isCurrentUserGuest(e),
+        let n = o.ZP.isCurrentUserGuest(e),
             r = null == (t = s.Z.getGuild(e)) ? void 0 : t.isLurker();
         return !!(!n && r);
     }
@@ -111,7 +111,7 @@ class T extends (r = i.ZP.Store) {
     }
 }
 u(T, 'displayName', 'LurkingStore');
-let A = new T(o.Z, {
+let A = new T(a.Z, {
     CONNECTION_OPEN: S,
     GUILD_JOIN: E,
     GUILD_STOP_LURKING: v,

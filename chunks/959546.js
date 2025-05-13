@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l });
 var r = n(81825),
     i = n(74538),
-    o = n(659181),
-    a = n(981631);
+    a = n(659181),
+    o = n(981631);
 function s(e, t, n) {
     return (
         t in e
@@ -37,17 +37,17 @@ class l extends r.Z {
             giftStyle: e.gift_style,
             guildId: e.guild_id,
             deleted: e.deleted,
-            sku: null != e.sku ? o.Z.createFromServer(e.sku) : null,
+            sku: null != e.sku ? a.Z.createFromServer(e.sku) : null,
             sourceType: null != (r = e.source_type) ? r : null
         });
     }
     get isGiftable() {
-        return this.type === a.qc2.USER_GIFT && null == this.gifterId;
+        return this.type === o.qc2.USER_GIFT && null == this.gifterId;
     }
     isValid(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
         if (this.isGiftable || this.deleted) return !1;
-        if (this.type === a.qc2.PREMIUM_SUBSCRIPTION) {
+        if (this.type === o.qc2.PREMIUM_SUBSCRIPTION) {
             let n = t.get(this.skuId);
             if ((null != n && !n.premium) || !i.ZP.canInstallPremiumApplications(e)) return !1;
         }

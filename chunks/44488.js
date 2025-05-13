@@ -5,8 +5,8 @@ n.d(t, {
 }),
     n(388685);
 var r,
-    i = n(255367),
-    a = n(73800),
+    a = n(255367),
+    i = n(73800),
     l = n(120356),
     s = n.n(l),
     o = n(481060),
@@ -29,7 +29,7 @@ let p = {
     CENTER: d.alignCenter,
     LEFT: d.alignLeft
 };
-class m extends (r = a.PureComponent) {
+class m extends (r = i.PureComponent) {
     componentDidUpdate(e) {
         let { selectedIndex: t } = this.props;
         e.selectedIndex !== t && this.handleSelectedIndexChange(t);
@@ -37,12 +37,12 @@ class m extends (r = a.PureComponent) {
     render() {
         let { renderItem: e, items: t, vertical: n, paginationContainerClass: r, align: l } = this.props,
             c = n ? d.verticalPaginationItemContainer : d.horizontalPaginationItemContainer;
-        return (0, i.jsx)(o.yWw, {
+        return (0, a.jsx)(o.yWw, {
             orientation: n ? 'vertical' : 'horizontal',
             className: s()(c, r, l),
             ref: this.handleSetScrollerRef,
             children: t.map((t, n) =>
-                a.cloneElement(e(t, n), {
+                i.cloneElement(e(t, n), {
                     onClick: () => this.handlePageClick(n),
                     key: n,
                     ref: (e) => {
@@ -86,15 +86,15 @@ u(m, 'Align', p),
         },
         align: p.CENTER
     });
-class h extends a.PureComponent {
+class h extends i.PureComponent {
     render() {
         let { className: e } = this.props;
-        return (0, i.jsx)(o.zxk, {
+        return (0, a.jsx)(o.zxk, {
             look: o.zxk.Looks.BLANK,
             size: o.zxk.Sizes.NONE,
             className: s()(d.prevButtonContainer, e),
             onClick: this.handlePrevClick,
-            children: (0, i.jsx)(c.Z, {
+            children: (0, a.jsx)(c.Z, {
                 className: d.arrow,
                 direction: c.Z.Directions.LEFT
             })
@@ -109,15 +109,15 @@ class h extends a.PureComponent {
             });
     }
 }
-class g extends a.PureComponent {
+class g extends i.PureComponent {
     render() {
         let { className: e } = this.props;
-        return (0, i.jsx)(o.zxk, {
+        return (0, a.jsx)(o.zxk, {
             look: o.zxk.Looks.BLANK,
             size: o.zxk.Sizes.NONE,
             className: s()(d.nextButtonContainer, e),
             onClick: this.handleNextClick,
-            children: (0, i.jsx)(c.Z, {
+            children: (0, a.jsx)(c.Z, {
                 className: d.arrow,
                 direction: c.Z.Directions.RIGHT
             })

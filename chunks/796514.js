@@ -19,7 +19,7 @@ e.exports = function (e) {
                 ]
             }
         },
-        o = [
+        a = [
             i,
             {
                 begin: '\\n\\n',
@@ -50,7 +50,7 @@ e.exports = function (e) {
                 starts: {
                     end: /\b\B/,
                     illegal: /\S/,
-                    contains: o
+                    contains: a
                 }
             },
             {
@@ -76,7 +76,7 @@ e.exports = function (e) {
                 starts: {
                     end: /\b\B/,
                     illegal: /\S/,
-                    contains: o
+                    contains: a
                 }
             },
             e.inherit(i, { relevance: 0 })

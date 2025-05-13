@@ -1,20 +1,21 @@
 n.d(t, {
-    R: () => b,
-    Z: () => N
+    R: () => y,
+    Z: () => C
 }),
     n(539854),
     n(388685);
 var r = n(392711),
-    i = n.n(r),
-    o = n(433517),
+    i = n(433517),
     a = n(147913),
-    s = n(536442),
-    l = n(810788),
+    o = n(536442),
+    s = n(810788),
+    l = n(695346),
     c = n(19780),
     u = n(115470),
-    d = n(681926),
-    f = n(531578);
-function _(e, t, n) {
+    d = n(250454),
+    f = n(681926),
+    _ = n(531578);
+function p(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -27,7 +28,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -38,12 +39,12 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e, t) {
+function m(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -55,125 +56,152 @@ function h(e, t) {
     }
     return n;
 }
-function m(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : h(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let g = 200,
-    E = {
+let E = 200,
+    b = {
         chance: 0.2,
         cooldown: 86400000
     },
-    b = {
-        [f.nw.VOICE]: m(p({}, E), {
-            group: f.FB.AV,
-            hotspot: s.v6.VOICE_CALL_FEEDBACK,
+    y = {
+        [_.nw.VOICE]: g(h({}, b), {
+            group: _.FB.AV,
+            hotspot: o.v6.VOICE_CALL_FEEDBACK,
             storageKey: 'lastVoiceFeedback',
-            eligibilityChecks: [T]
+            feedbackType: _.nw.VOICE,
+            eligibilityChecks: [A]
         }),
-        [f.nw.STREAM]: m(p({}, E), {
-            group: f.FB.AV,
-            hotspot: s.v6.REPORT_PROBLEM_POST_STREAM,
-            storageKey: 'lastStreamFeedback'
+        [_.nw.STREAM]: g(h({}, b), {
+            group: _.FB.AV,
+            hotspot: o.v6.REPORT_PROBLEM_POST_STREAM,
+            storageKey: 'lastStreamFeedback',
+            feedbackType: _.nw.STREAM
         }),
-        [f.nw.VIDEO_BACKGROUND]: m(p({}, E), {
-            group: f.FB.AV,
-            hotspot: s.v6.VIDEO_BACKGROUND_FEEDBACK,
-            storageKey: 'lastVideoBackgroundFeedback'
+        [_.nw.VIDEO_BACKGROUND]: g(h({}, b), {
+            group: _.FB.AV,
+            hotspot: o.v6.VIDEO_BACKGROUND_FEEDBACK,
+            storageKey: 'lastVideoBackgroundFeedback',
+            feedbackType: _.nw.VIDEO_BACKGROUND
         }),
-        [f.nw.ACTIVITY]: {
+        [_.nw.ACTIVITY]: {
             cooldown: 0,
             chance: 0.5,
-            group: f.FB.AV,
-            hotspot: s.v6.POST_ACTIVITY_FEEDBACK,
-            storageKey: 'lastActivityFeedback'
+            group: _.FB.AV,
+            hotspot: o.v6.POST_ACTIVITY_FEEDBACK,
+            storageKey: 'lastActivityFeedback',
+            feedbackType: _.nw.ACTIVITY
         },
-        [f.nw.IN_APP_REPORTS]: {
+        [_.nw.IN_APP_REPORTS]: {
             cooldown: 172800000,
             chance: 0.5,
-            group: f.FB.SOCIAL,
-            hotspot: s.v6.IN_APP_REPORTS_FEEDBACK,
-            storageKey: 'inAppReportsFeedback'
+            group: _.FB.SOCIAL,
+            hotspot: o.v6.IN_APP_REPORTS_FEEDBACK,
+            storageKey: 'inAppReportsFeedback',
+            feedbackType: _.nw.IN_APP_REPORTS
         },
-        [f.nw.USER_DM_MUTE]: {
+        [_.nw.USER_DM_MUTE]: {
             cooldown: 604800000,
             chance: 1,
-            group: f.FB.SOCIAL,
-            hotspot: s.v6.USER_DM_MUTE_FEEDBACK,
-            storageKey: 'userDmMute'
+            group: _.FB.SOCIAL,
+            hotspot: o.v6.USER_DM_MUTE_FEEDBACK,
+            storageKey: 'userDmMute',
+            feedbackType: _.nw.USER_DM_MUTE
         },
-        [f.nw.BLOCK_USER]: {
+        [_.nw.BLOCK_USER]: {
             cooldown: 0,
             chance: 1,
-            group: f.FB.SOCIAL,
-            hotspot: s.v6.BLOCK_USER_FEEDBACK,
-            storageKey: 'blockUser'
+            group: _.FB.SOCIAL,
+            hotspot: o.v6.BLOCK_USER_FEEDBACK,
+            storageKey: 'blockUser',
+            feedbackType: _.nw.BLOCK_USER
         },
-        [f.nw.VOICE_FILTER]: m(p({}, E), {
-            group: f.FB.AV,
-            hotspot: s.v6.VOICE_FILTER_FEEDBACK,
+        [_.nw.VOICE_FILTER]: g(h({}, b), {
+            group: _.FB.AV,
+            hotspot: o.v6.VOICE_FILTER_FEEDBACK,
             storageKey: 'lastVoiceFilterFeedback',
-            eligibilityChecks: [T]
+            feedbackType: _.nw.VOICE_FILTER,
+            eligibilityChecks: [A]
         })
     };
-function y(e) {
+function O(e) {
     var t, n;
     if (__OVERLAY__) return !1;
-    let r = null != (t = u.Z.getFeedbackConfig(e)) ? t : b[e],
-        i = [v, O],
-        { doGroupEligibilityCheck: o } = (0, d.T)({ location: 'FeedbackManager' });
-    o ? i.push(S) : i.push((e) => I(e, e));
-    let a = null != (n = r.eligibilityChecks) ? n : [];
-    return i.every((e) => e(r)) && a.every((e) => e(r));
-}
-function O(e) {
-    return l.Z.hasHotspot(e.hotspot);
+    let r = null != (t = u.Z.getFeedbackConfig(e)) ? t : y[e],
+        i = [I, v],
+        { doGroupEligibilityCheck: a } = (0, f.T)({ location: 'FeedbackManager' });
+    a ? i.push(T) : i.push((e) => S(e, e));
+    let o = null != (n = r.eligibilityChecks) ? n : [];
+    return i.every((e) => e(r)) && o.every((e) => e(r));
 }
 function v(e) {
+    let { persistToBackend: t } = (0, d.O)({ location: 'FeedbackManager/'.concat(e.feedbackType) });
+    if (!t) return s.Z.hasHotspot(e.hotspot);
+    {
+        var n;
+        let t = null == (n = l.A2.getSetting()[e.feedbackType]) ? void 0 : n.optOutExpiryTime,
+            r = null != t && !Number.isNaN(t) && Date.now() < t,
+            i = !s.Z.hasHotspot(e.hotspot);
+        return i && !r && l.A2.updateSetting((t) => g(h({}, t), { [e.feedbackType]: g(h({}, t[e.feedbackType]), { optOutExpiryTime: _.uf }) })), !r && !i;
+    }
+}
+function I(e) {
     return Math.random() < e.chance;
 }
-function I(e, t) {
-    if (null != e.storageKey && null != t.storageKey) {
-        let n = o.K.get(t.storageKey);
-        if (null != n) return Date.now() - n >= e.cooldown;
+function S(e, t) {
+    let { persistToBackend: n } = (0, d.O)({ location: 'FeedbackManager/'.concat(e.feedbackType) });
+    if (n) {
+        var a, o, s;
+        let n,
+            c = null == (a = l.A2.getSetting()[t.feedbackType]) ? void 0 : a.lastImpressionTime;
+        return (null == c || Number.isNaN(c)) && null != t.storageKey && (null == (n = null != (o = i.K.get(t.storageKey)) ? o : void 0) || Number.isNaN(n) || l.A2.updateSetting((e) => g(h({}, e), { [t.feedbackType]: g(h({}, e[t.feedbackType]), { lastImpressionTime: n }) }))), (null != (s = (0, r.max)([c, n])) ? s : 0) + e.cooldown < Date.now();
     }
-    return !0;
-}
-function S(e) {
-    for (let t of Object.values(b).filter((t) => {
-        let { group: n } = t;
-        return n === e.group;
-    }))
-        if (!I(e, t)) return !1;
+    if (null != t.storageKey) {
+        let n = i.K.get(t.storageKey);
+        if (null != n) return n + e.cooldown < Date.now();
+    }
     return !0;
 }
 function T(e) {
-    return !c.Z.getWasEverRtcConnected() || c.Z.getWasEverMultiParticipant();
+    for (let t of Object.values(y).filter((t) => {
+        let { group: n } = t;
+        return n === e.group;
+    }))
+        if (!S(e, t)) return !1;
+    return !0;
 }
 function A(e) {
-    let t = b[e];
-    null != t.storageKey && o.K.set(t.storageKey, Date.now());
+    return !c.Z.getWasEverRtcConnected() || c.Z.getWasEverMultiParticipant();
 }
-class N extends a.Z {
+function N(e) {
+    let { persistToBackend: t } = (0, d.O)({ location: 'FeedbackManager/'.concat(e) });
+    if (t) l.A2.updateSetting((t) => g(h({}, t), { [e]: g(h({}, t[e]), { lastImpressionTime: Date.now() }) }));
+    else {
+        let { storageKey: t } = y[e];
+        null != t && i.K.set(t, Date.now());
+    }
+}
+class C extends a.Z {
     possiblyShowFeedbackModal(e, t) {
-        y(e) && (null == this.feedbackTypeToShow || !(f.b5[this.feedbackTypeToShow] < f.b5[e])) && ((this.feedbackTypeToShow = e), this.showFeedbackModalDebounced(t));
+        O(e) && (null == this.feedbackTypeToShow || !(_.b5[this.feedbackTypeToShow] < _.b5[e])) && ((this.feedbackTypeToShow = e), this.showFeedbackModalDebounced(t));
     }
     constructor(...e) {
         super(...e),
-            _(this, 'feedbackTypeToShow', null),
-            _(
+            p(this, 'feedbackTypeToShow', null),
+            p(
                 this,
                 'showFeedbackModalDebounced',
-                i().debounce((e) => {
-                    null != this.feedbackTypeToShow && (A(this.feedbackTypeToShow), (this.feedbackTypeToShow = null), e());
-                }, g)
+                (0, r.debounce)((e) => {
+                    null != this.feedbackTypeToShow && (N(this.feedbackTypeToShow), (this.feedbackTypeToShow = null), e());
+                }, E)
             );
     }
 }

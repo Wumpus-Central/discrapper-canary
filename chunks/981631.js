@@ -2229,6 +2229,7 @@ var N =
     (r.FEEDBACK_FORM_VIEWED = 'feedback_form_viewed'),
     (r.FEEDBACK_FORM_SUBMITTED = 'feedback_form_submitted'),
     (r.HOTSPOT_HIDDEN = 'hotspot_hidden'),
+    (r.USER_SETTINGS_IN_APP_FEEDBACK_OPTED_OUT = 'user_settings_in_app_feedback_opted_out'),
     (r.APP_ICON_UPDATED = 'app_icon_updated'),
     (r.APP_ICON_PREVIEW_VIEWED = 'app_icon_preview_viewed'),
     (r.CHANNEL_LIST_END_REACHED = 'channel_list_end_reached'),

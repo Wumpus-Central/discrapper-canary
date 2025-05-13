@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r,
     i = n(442837),
-    o = n(570140);
-function a(e, t, n) {
+    a = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -83,8 +83,8 @@ class m extends (r = i.ZP.PersistedStore) {
         return u.userTenureRewardStatusByRewardId[e];
     }
 }
-a(m, 'displayName', 'TenureRewardStore'), a(m, 'persistKey', 'TenureRewardStore');
-let g = new m(o.Z, {
+o(m, 'displayName', 'TenureRewardStore'), o(m, 'persistKey', 'TenureRewardStore');
+let g = new m(a.Z, {
     USER_TENURE_REWARD_SYNC_START: d,
     USER_TENURE_REWARD_SYNC_SUCCESS: f,
     USER_TENURE_REWARD_STATUS_RESET: _,

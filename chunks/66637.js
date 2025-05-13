@@ -1,20 +1,20 @@
 n.d(t, { Z: () => c });
 var r = n(255367),
-    i = n(73800),
-    a = n(120356),
-    l = n.n(a),
+    a = n(73800),
+    i = n(120356),
+    l = n.n(i),
     s = n(481060),
     o = n(66418);
-let c = i.memo(
-    i.forwardRef(function (e, t) {
-        let { onClick: n, onContextMenu: i, className: a, disabled: c, children: d, 'aria-label': u } = e;
+let c = a.memo(
+    a.forwardRef(function (e, t) {
+        let { onClick: n, onContextMenu: a, className: i, disabled: c, children: d, 'aria-label': u } = e;
         return (0, r.jsx)(s.kL8, {
             ref: t,
-            className: l()(o.card, a, {
+            className: l()(o.card, i, {
                 [o.clickable]: null != n,
                 [o.disabled]: c
             }),
-            onContextMenu: i,
+            onContextMenu: a,
             onClick: c ? void 0 : n,
             'aria-label': u,
             children: d

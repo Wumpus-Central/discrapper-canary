@@ -1,8 +1,8 @@
-n.d(t, { U: () => a });
+n.d(t, { U: () => o });
 var r = n(570140),
     i = n(709054),
-    o = n(981631);
-function a(e, t, n) {
+    a = n(981631);
+function o(e, t, n) {
     r.Z.dispatch({
         type: 'MESSAGE_CREATE',
         channelId: e,
@@ -20,8 +20,8 @@ function s(e) {
     let { channelId: t, requesterUser: n, requestToSpeakTimestamp: r } = e;
     return {
         id: i.default.fromTimestamp(Date.parse(r)),
-        type: o.uaV.STAGE_RAISE_HAND,
-        flags: o.iLy.EPHEMERAL,
+        type: a.uaV.STAGE_RAISE_HAND,
+        flags: a.iLy.EPHEMERAL,
         content: '',
         channel_id: t,
         author: n,
@@ -33,7 +33,7 @@ function s(e) {
         mention_roles: [],
         mention_everyone: !1,
         timestamp: r,
-        state: o.yb.SENT,
+        state: a.yb.SENT,
         tts: !1
     };
 }

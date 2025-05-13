@@ -1,7 +1,7 @@
 n.d(t, { Z: () => T }), n(65234), n(111804), n(490233), n(97749), n(388685), n(35282);
 var r = n(255367),
-    i = n(73800),
-    a = n(114858),
+    a = n(73800),
+    i = n(114858),
     l = n(209173),
     s = n(288385),
     o = n(442837),
@@ -30,27 +30,27 @@ function T(e) {
     var t;
     let { onSelectApplication: n, onScroll: T } = e,
         A = (0, o.e7)([m.default], () => m.default.isAuthenticated()),
-        L = i.useRef(null),
-        R = (0, a.TH)(),
-        Z = i.useRef(null),
+        L = a.useRef(null),
+        R = (0, i.TH)(),
+        Z = a.useRef(null),
         {
             query: k,
             page: w,
             categoryId: D
-        } = i.useMemo(() => {
+        } = a.useMemo(() => {
             var e, t;
             let n = new URLSearchParams(R.search),
                 r = n.get('page'),
-                i = null != r ? Number(r) : 1;
+                a = null != r ? Number(r) : 1;
             return {
                 query: null != (e = n.get('q')) ? e : '',
-                page: i,
+                page: a,
                 categoryId: null != (t = Number(n.get('category_id'))) ? t : S.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID
             };
         }, [R.search]),
         M = (0, o.e7)([f.Z], () => f.Z.getCategories()),
-        G = i.useMemo(() => (null == M ? void 0 : M.find((e) => e.id === D)), [M, D]),
-        z = i.useCallback(
+        G = a.useMemo(() => (null == M ? void 0 : M.find((e) => e.id === D)), [M, D]),
+        z = a.useCallback(
             (e) => {
                 (0, v.zZ)(E.rMx.APP_DIRECTORY_SEARCHED, {
                     search_term: k,
@@ -63,7 +63,7 @@ function T(e) {
             },
             [k, w, null == G ? void 0 : G.name, null == G ? void 0 : G.id]
         );
-    i.useEffect(() => {
+    a.useEffect(() => {
         var e;
         null == (e = L.current) || e.scrollTo({ to: 0 }),
             k !== Z.current &&
@@ -133,8 +133,8 @@ function T(e) {
                 : {};
         }),
         V = (0, d.Z)(U),
-        H = i.useMemo(() => (B === _.M.FETCHING ? V : U), [B, V, U]),
-        Y = i.useCallback(
+        H = a.useMemo(() => (B === _.M.FETCHING ? V : U), [B, V, U]),
+        Y = a.useCallback(
             (e) => {
                 (0, I.pR)({
                     query: k,
@@ -144,7 +144,7 @@ function T(e) {
             },
             [D, k]
         ),
-        W = i.useCallback(
+        W = a.useCallback(
             (e) => {
                 (0, v.zZ)(E.rMx.APP_DIRECTORY_CATEGORY_CLICKED, {
                     category: e.name,
@@ -158,7 +158,7 @@ function T(e) {
             },
             [k]
         ),
-        X = i.useCallback(
+        X = a.useCallback(
             (e, t) => {
                 (0, v.zZ)(E.rMx.APP_DIRECTORY_SEARCH_RESULT_CLICKED, {
                     current_page: y.m_.SEARCH,
