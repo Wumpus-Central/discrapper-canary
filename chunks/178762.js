@@ -199,30 +199,31 @@ let Y = (e) => {
         var t,
             { index: o } = e,
             p = B(e, ['index']);
-        let [m, g] = i.useState('default'),
-            E = (0, s.JA)(''.concat(o)),
-            O = null == (t = b.default.getCurrentUser()) ? void 0 : t.isStaff(),
-            { isRich: v, appName: I } = (0, L.n)(p.entry),
-            S = i.useMemo(
+        let m = i.useRef(null),
+            [g, E] = i.useState('default'),
+            O = (0, s.JA)(''.concat(o)),
+            v = null == (t = b.default.getCurrentUser()) ? void 0 : t.isStaff(),
+            { isRich: I, appName: S } = (0, L.n)(p.entry),
+            T = i.useMemo(
                 () => ({
                     entry: p.entry,
                     channelId: p.channel.id,
                     guildId: p.channel.guild_id,
                     requestId: p.requestId,
-                    richPresenceName: v ? I : void 0
+                    richPresenceName: I ? S : void 0
                 }),
-                [I, p.channel.guild_id, p.channel.id, p.entry, p.requestId, v]
+                [S, p.channel.guild_id, p.channel.id, p.entry, p.requestId, I]
             ),
-            T = i.useRef(!1),
-            [A, N] = i.useState(!1),
-            [C, P] = i.useState(!1),
-            R = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled);
+            A = i.useRef(!1),
+            [N, C] = i.useState(!1),
+            [P, R] = i.useState(!1),
+            w = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled);
         i.useEffect(() => {
-            A && R && P(!0);
-        }, [A, R]);
-        let w = i.useCallback(
+            N && w && R(!0);
+        }, [N, w]);
+        let D = i.useCallback(
                 (e) => {
-                    O &&
+                    v &&
                         (0, f.jW)(e, async () => {
                             let { default: e } = await n.e('153').then(n.bind(n, 330150));
                             return () =>
@@ -232,19 +233,19 @@ let Y = (e) => {
                                 });
                         });
                 },
-                [p, O]
+                [p, v]
             ),
-            D = i.useCallback(() => {
-                g(String(Date.now()));
+            M = i.useCallback(() => {
+                E(String(Date.now()));
             }, []),
-            M = i.useCallback(
+            U = i.useCallback(
                 function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                    (0, y.L)(e, j({}, S, t));
+                    (0, y.L)(e, j({}, T, t));
                 },
-                [S]
+                [T]
             ),
-            U = i.useMemo(
+            F = i.useMemo(
                 () =>
                     a().throttle(
                         (e) => {
@@ -258,33 +259,34 @@ let Y = (e) => {
                     ),
                 []
             ),
-            F = () => {
-                (T.current = !1),
+            V = () => {
+                (A.current = !1),
                     setTimeout(() => {
-                        T.current || (N(!1), P(R));
+                        A.current || (C(!1), R(w));
                     }, 100);
             };
         return (0, r.jsx)('div', {
             onMouseEnter: () => {
                 p.entry.content_type !== l.s.LEADERBOARD || (0, h.un)(u.z.LEADERBOARD_NUX_COACHMARK) || (0, h.EW)(u.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: k.L.SECONDARY }),
-                    (T.current = !0),
+                    (A.current = !0),
                     setTimeout(() => {
-                        T.current && N(!0), U(S);
+                        A.current && C(!0), F(T);
                     }, 100);
             },
-            onMouseLeave: F,
+            onMouseLeave: V,
             children: (0, r.jsx)(d.yRy, {
+                targetElementRef: m,
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, r.jsx)(z.Provider, {
-                        value: F,
+                        value: V,
                         children: (0, r.jsx)(
                             W,
                             j(
                                 {
                                     closePopout: t,
-                                    updatePopoutPosition: D,
-                                    trackRankingItemInteraction: M
+                                    updatePopoutPosition: M,
+                                    trackRankingItemInteraction: U
                                 },
                                 p
                             )
@@ -292,18 +294,19 @@ let Y = (e) => {
                     });
                 },
                 position: 'left',
-                shouldShow: A,
-                positionKey: m,
-                onRequestOpen: () => U(S),
+                shouldShow: N,
+                positionKey: g,
+                onRequestOpen: () => F(T),
                 onRequestClose: () => {
-                    C && F();
+                    P && V();
                 },
                 spacing: 8,
                 children: (e, t) => {
                     let { isShown: n } = t;
                     return (0, r.jsx)(
                         d.P3F,
-                        G(j({}, e, E), {
+                        G(j({}, e, O), {
+                            innerRef: m,
                             focusProps: {
                                 offset: {
                                     top: 4,
@@ -313,14 +316,14 @@ let Y = (e) => {
                                 }
                             },
                             onClick: () => {
-                                A || N(!0);
+                                N || C(!0);
                             },
-                            onContextMenu: w,
+                            onContextMenu: D,
                             children: (0, r.jsx)(
                                 Y,
                                 G(j({}, p), {
                                     selected: n,
-                                    hovered: T.current
+                                    hovered: A.current
                                 })
                             )
                         })

@@ -92,7 +92,7 @@ function S(e) {
                     null != i &&
                         (0, r.jsx)(s.xv, {
                             variant: 'text-'.concat(N, '/medium'),
-                            className: T,
+                            className: a()(T, I.customStatusLabel),
                             color: 'none',
                             children: ''.concat(i, ': ')
                         }),

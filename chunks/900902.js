@@ -11,8 +11,8 @@ var r = n(255367),
 let p = i.memo(function (e) {
         let { message: t, channel: n, compact: l = !1, groupId: o, isGroupStart: s, usernameProfile: p, avatarProfile: h, setPopout: f, author: m, repliedMessage: g, roleIcon: b } = e,
             _ = (0, u.wq)(t.author.id, n.id),
-            y = (0, u.XO)(t, n, p, f),
-            x = (0, u.R9)(h, f),
+            x = (0, u.XO)(t, n, p, f),
+            y = (0, u.R9)(h, f),
             C = i.useCallback(() => {
                 f({
                     usernameProfile: !1,
@@ -32,8 +32,8 @@ let p = i.memo(function (e) {
             renderPopout: c.Z,
             showAvatarPopout: h,
             showUsernamePopout: p,
-            onClickAvatar: x,
-            onClickUsername: y,
+            onClickAvatar: y,
+            onClickUsername: x,
             onContextMenu: _,
             onPopoutRequestClose: C,
             roleIcon: b
@@ -45,14 +45,14 @@ function f(e) {
         { message: d, compact: f, channel: m, groupId: g } = t,
         { usernameProfile: b, avatarProfile: _ } = i;
     if ((0, l.Z)(d)) return null;
-    let y = d.id === g;
-    return y || f || null != a
+    let x = d.id === g;
+    return x || f || null != a
         ? (0, r.jsx)(p, {
               message: d,
               channel: m,
               compact: f,
               subscribeToGroupId: g,
-              isGroupStart: y,
+              isGroupStart: x,
               groupId: g,
               setPopout: n,
               usernameProfile: b,

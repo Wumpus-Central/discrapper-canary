@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(305325),
     b = n(246364),
     _ = n(983736),
-    y = n(937111),
-    x = n(270801),
+    x = n(937111),
+    y = n(270801),
     C = n(652730),
     v = n(41776),
     j = n(657352),
@@ -93,11 +93,11 @@ class H extends i.PureComponent {
         r || e.shouldShowLurkerModeSuccessPopout || !t || null == n || this.setState({ shouldShowLurkerModeSuccessPopout: !0 });
     }
     render() {
-        let { isFollowable: e, isLurking: t, notClaimed: l, notPhoneVerified: o, notEmailVerified: a, newMember: c, memberDeadline: u, newAccount: d, accountDeadline: p, theme: h, children: f, canSendMessages: m, channelFollowingUsersSeen: g, showLurkerModeUpsellPopout: _, showMemberVerificationModal: y, useReducedMotion: x, isStaff: C, guildJoinRequest: v } = this.props,
+        let { isFollowable: e, isLurking: t, notClaimed: l, notPhoneVerified: o, notEmailVerified: a, newMember: c, memberDeadline: u, newAccount: d, accountDeadline: p, theme: h, children: f, canSendMessages: m, channelFollowingUsersSeen: g, showLurkerModeUpsellPopout: _, showMemberVerificationModal: x, useReducedMotion: y, isStaff: C, guildJoinRequest: v } = this.props,
             { shouldShowLurkerModeUpsellPopout: j, shouldShowLurkerModeSuccessPopout: O } = this.state,
             E = {
                 theme: h,
-                useReducedMotion: x
+                useReducedMotion: y
             };
         if (e && !m) {
             if (((E.message = D.intl.string(D.t.Hl0Mqq)), null != g && g >= 1000)) {
@@ -105,8 +105,8 @@ class H extends i.PureComponent {
                 E.subtitle = D.intl.formatToPlainString(D.t.C5bgrK, { count: e.toLocaleString() });
             }
             (E.buttonText = D.intl.string(D.t['3aOv+v'])), (E.onButtonClick = this.handleFollowAnnouncement), (E.imageSrc = n(485195)), t && ((E.onSecondaryButtonClick = this.handleJoinServer), (E.secondaryButtonText = D.intl.string(D.t['RLch7+'])));
-        } else if (l) (E.message = D.intl.string(D.t['Eg3/c3'])), (E.buttonText = D.intl.string(D.t.fiNVio)), (E.onButtonClick = y ? this.handleShowMemberVerification : this.handleClaimAccount), (E.imageSrc = n(102811));
-        else if (y)
+        } else if (l) (E.message = D.intl.string(D.t['Eg3/c3'])), (E.buttonText = D.intl.string(D.t.fiNVio)), (E.onButtonClick = x ? this.handleShowMemberVerification : this.handleClaimAccount), (E.imageSrc = n(102811));
+        else if (x)
             switch (null == v ? void 0 : v.applicationStatus) {
                 case b.wB.SUBMITTED:
                     (E.message = D.intl.string(D.t['5iLvS0'])), (E.subtitle = D.intl.string(D.t.FdsK4u)), (E.buttonText = D.intl.string(D.t.mqtdmZ)), (E.onButtonClick = this.handleCancelApplication), (E.imageSrc = n(281958));
@@ -302,7 +302,7 @@ class H extends i.PureComponent {
                 return (0, r.jsx)(s.u_l, {
                     renderModal: (t) =>
                         (0, r.jsx)(
-                            x.Z,
+                            y.Z,
                             F(G({}, t), {
                                 onAccept: i,
                                 guildName: e.name
@@ -328,11 +328,11 @@ function V(e) {
             var e, t;
             return null != f && null != (t = null == (e = Z.ZP.getMember(o, f.id)) ? void 0 : e.isPending) && t;
         }),
-        x = !!(0, _.Dc)(s),
-        j = (g || c.notClaimed) && x,
+        y = !!(0, _.Dc)(s),
+        j = (g || c.notClaimed) && y,
         O = (0, a.e7)([C.Z], () => C.Z.shouldShowPopout(o)),
         E = (0, a.e7)([A.Z], () => A.Z.can(M.Plq.SEND_MESSAGES, i)),
-        I = (0, a.e7)([y.Z], () => y.Z.getRequest(o)),
+        I = (0, a.e7)([x.Z], () => x.Z.getRequest(o)),
         k = F(G({}, c), {
             guild: s,
             isLurking: h,
@@ -342,7 +342,7 @@ function V(e) {
             theme: S.Z.theme,
             canSendMessages: E,
             channelFollowingUsersSeen: null != d ? d.usersSeenEver : null,
-            hasVerificationGate: x,
+            hasVerificationGate: y,
             showMemberVerificationModal: j,
             guildJoinRequestStatus: null != (n = null == I ? void 0 : I.applicationStatus) ? n : b.wB.STARTED,
             guildJoinRequest: I,

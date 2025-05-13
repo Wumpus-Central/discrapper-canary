@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v });
+n.d(t, { Z: () => O });
 var r = n(252258),
     i = n(812206),
     o = n(592125),
@@ -6,85 +6,75 @@ var r = n(252258),
     s = n(594174),
     l = n(595519),
     c = n(636449),
-    u = n(774226),
-    d = n(566620),
-    f = n(317381),
-    _ = n(672181),
-    p = n(882347),
-    h = n(16609),
-    m = n(224189),
-    g = n(574952),
-    E = n(917107),
-    b = n(89425),
-    y = n(197386),
-    O = n(701488);
-function v(e) {
-    return (0, c.C)((0, c.R)(), () => I(e));
+    u = n(566620),
+    d = n(317381),
+    f = n(672181),
+    _ = n(882347),
+    p = n(16609),
+    h = n(224189),
+    m = n(574952),
+    g = n(917107),
+    E = n(89425),
+    b = n(197386),
+    y = n(701488);
+function O(e) {
+    return (0, c.C)((0, c.R)(), () => v(e));
 }
-async function I(e) {
+async function v(e) {
     let t,
-        { applicationId: n, activityChannelId: c, locationObject: v, analyticsLocations: I, componentId: S, sectionName: T, source: A, partyId: N, joinUserId: C, joinSessionId: P, secret: R, inviterUserId: w, instanceId: D, isContextlessActivity: L, customId: x, referrerId: k } = e,
-        M = (0, g.Z)(),
-        j = o.Z.getChannel(c),
-        U = null == j ? void 0 : j.getGuildId(),
-        G = null == U || '' === U,
-        B = s.default.getCurrentUser();
-    if (null == B) return !1;
-    if (!(0, u.sq)() && (null == j || (G && !j.isPrivate()) || null == c)) return Promise.resolve(!1);
-    let F = f.ZP.getCurrentEmbeddedActivity();
-    (null == F ? void 0 : F.applicationId) != null && (t = i.Z.getApplication(null == F ? void 0 : F.applicationId));
-    let V = (null == F ? void 0 : F.location.kind) === r.E.CONTEXTLESS;
-    if ((V || a.Z.getVoiceChannelId() === c) && null != F && F.applicationId === n && (V || (0, h.pY)(F.location) === a.Z.getVoiceChannelId())) return (0, y.Z)(U, F.location), Promise.resolve(!0);
-    let Z = await (0, m.Z)(n, c),
-        H = (0, u.Kb)(Z);
+        { applicationId: n, activityChannelId: c, locationObject: O, analyticsLocations: v, componentId: I, sectionName: S, source: T, inviterUserId: A, customId: N, referrerId: C } = e,
+        P = (0, m.Z)(),
+        R = o.Z.getChannel(c),
+        w = null == R ? void 0 : R.getGuildId(),
+        D = null == w || '' === w,
+        L = s.default.getCurrentUser();
+    if (null == L) return !1;
+    if (null == R || (D && !R.isPrivate()) || null == c) return Promise.resolve(!1);
+    let x = d.ZP.getCurrentEmbeddedActivity();
+    (null == x ? void 0 : x.applicationId) != null && (t = i.Z.getApplication(null == x ? void 0 : x.applicationId));
+    let k = (null == x ? void 0 : x.location.kind) === r.E.CONTEXTLESS;
+    if ((k || a.Z.getVoiceChannelId() === c) && null != x && x.applicationId === n && (k || (0, p.pY)(x.location) === a.Z.getVoiceChannelId())) return (0, b.Z)(w, x.location), Promise.resolve(!0);
+    let M = await (0, h.Z)(n, c);
     if (
-        (L && (H ? (j = void 0) : (L = !1)),
-        !(await (0, p.p)({
+        !(await (0, _.p)({
             applicationId: n,
-            application: Z,
-            channel: j,
+            application: M,
+            channel: R,
             currentEmbeddedApplication: t,
-            embeddedActivitiesManager: M,
-            user: B,
-            isContextless: L
-        })))
+            embeddedActivitiesManager: P,
+            user: L
+        }))
     )
         return !1;
-    if (null != j) {
-        let e = (0, E.Z)(j.id),
-            n = O.wP.includes(j.type);
+    if (null != R) {
+        let e = (0, g.Z)(R.id),
+            n = y.wP.includes(R.type);
         if (e) {
             if (
-                !(await (0, b.Z)({
-                    channelId: j.id,
+                !(await (0, E.Z)({
+                    channelId: R.id,
                     bypassChangeModal: null != t
                 }))
             )
                 return !1;
-        } else if (!(0, l.WS)(j) || !n) return !1;
-    } else if (null == j && !H) return !1;
+        } else if (!(0, l.WS)(R) || !n) return !1;
+    } else if (null == R) return !1;
     return (
-        null != c && (0, _.Z)(c),
-        null != F && (0, d.cG)(F.location),
-        await (0, d.G6)({
+        null != c && (0, f.Z)(c),
+        null != x && (0, u.cG)(x.location),
+        await (0, u.G6)({
             channelId: c,
             applicationId: n,
             isStart: !1,
-            embeddedActivitiesManager: M,
-            analyticsLocations: I,
-            locationObject: v,
-            componentId: S,
-            sectionName: T,
-            source: A,
-            partyId: N,
-            joinUserId: C,
-            joinSessionId: P,
-            secret: R,
-            inviterUserId: w,
-            isContextlessActivity: L,
-            customId: x,
-            instanceId: D,
-            referrerId: k
+            embeddedActivitiesManager: P,
+            analyticsLocations: v,
+            locationObject: O,
+            componentId: I,
+            sectionName: S,
+            source: T,
+            inviterUserId: A,
+            customId: N,
+            referrerId: C
         })
     );
 }

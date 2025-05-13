@@ -15,8 +15,8 @@ var r = n(255367),
     f = n(763520),
     p = n(194082),
     m = n(710845),
-    E = n(965048),
-    g = n(590293),
+    g = n(965048),
+    E = n(590293),
     h = n(863908),
     v = n(871118),
     S = n(517525),
@@ -49,9 +49,9 @@ function Y(e) {
         c = (0, o.e7)([j.Z], () => j.Z.getActiveStreamForUser(t.user.id, t.stream.guildId)),
         d = (0, L.K)(u),
         [f, m] = l.useState(!1),
-        E = (0, o.e7)([I.Z], () => I.Z.getChannel(null == c ? void 0 : c.channelId));
+        g = (0, o.e7)([I.Z], () => I.Z.getChannel(null == c ? void 0 : c.channelId));
     return (
-        (0, O.J)(E, () => {
+        (0, O.J)(g, () => {
             let e = setTimeout(() => {
                     m(!0);
                 }, 5000),
@@ -83,7 +83,7 @@ function z(e) {
     let { participant: t, selected: n, onVideoResize: i, fit: p, inPopout: m, inOverlayPopout: S = !1, width: O, focused: M, wrapperClassName: L, paused: Y = !1 } = e,
         z = w.Z.getVideoComponent(),
         G = (0, o.e7)([_.default], () => _.default.getId()),
-        K = (0, g.Z)(),
+        K = (0, E.Z)(),
         { stream: B, user: q, streamId: J } = t,
         X = (0, o.e7)([I.Z], () => I.Z.getChannel(B.channelId)),
         Q = (0, o.e7)([j.Z], () => j.Z.getActiveStreamForUser(q.id, B.guildId), [q.id, B.guildId]),
@@ -96,7 +96,7 @@ function z(e) {
     (0, d.ZP)(() => {
         !$ && (null == X ? void 0 : X.isGuildStageVoice()) && !et && ((0, c.rn)(B), s.Z.updateStageStreamSize(B.channelId, !1));
     });
-    let ei = (0, E.Z)(F.Yn.STREAM, t.user.id);
+    let ei = (0, g.Z)(F.Yn.STREAM, t.user.id);
     if (
         (l.useEffect(() => {
             H.info(

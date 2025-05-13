@@ -51,8 +51,6 @@ let f = Object.freeze({
                 .concat(e, '/activities/')
                 .concat(null != a ? a : 0, '/metadata'),
         USER_ACTIVITY_JOIN: (t, e, a) => '/users/'.concat(t, '/sessions/').concat(e, '/activities/').concat(a, '/', 1),
-        JOIN_CONTEXTLESS_EMBEDDED_ACTIVITY_VIA_PRESENCE: (t, e, a) => '/users/'.concat(t, '/sessions/').concat(e, '/embedded-activities/').concat(a, '/', 1),
-        JOIN_CONTEXTLESS_EMBEDDED_ACTIVITY_VIA_INSTANCE: (t, e) => '/activity-instances/'.concat(t, '/embedded-activities/').concat(e, '/join'),
         USER_ACTIVITY_STATISTICS: '/users/@me/activities/statistics/applications',
         USER_ACTIVITY_SUBSCRIBE: '/users/@me/activities/subscribe',
         APPLICATION_ACTIVITY_STATISTICS: (t) => '/activities/statistics/applications/'.concat(t),
@@ -557,6 +555,7 @@ let f = Object.freeze({
         SEND_UNAUTHENTICATED_REPORT_PINCODE: (t) => '/reporting/unauthenticated/'.concat(t, '/code'),
         VERIFY_UNAUTHENTICATED_REPORT: (t) => '/reporting/unauthenticated/'.concat(t, '/verify'),
         SUBMIT_MODERATOR_MESSAGE_REPORT: (t, e) => '/channels/'.concat(t, '/').concat(e, '/mod-report'),
+        REPORT_TO_MOD_REOPEN: (t) => '/mod-report/'.concat(t, '/reopen'),
         DSA_EXPERIMENT_UNAUTHENTICATED: '/reporting/unauthenticated/experiment',
         DSA_CAPABILITIES: '/reporting/unauthenticated/capabilities',
         SUBMIT_REPORT_SECOND_LOOK: '/reporting/review',

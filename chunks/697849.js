@@ -12,12 +12,12 @@ var i = t(255367),
     g = t(592125),
     p = t(626135),
     m = t(981888),
-    I = t(897285),
-    f = t(924301),
+    f = t(897285),
+    I = t(924301),
     v = t(951539),
     h = t(592126),
-    C = t(315416),
-    E = t(711373),
+    E = t(315416),
+    C = t(711373),
     b = t(274311),
     x = t(854698),
     T = t(405613),
@@ -58,12 +58,12 @@ function P(e) {
 }
 function z(e) {
     let { guildEvent: n, guild: t, channel: l, onActionTaken: a, isHub: d, isMember: o, recurrenceId: s } = e,
-        c = (0, f.xt)(n),
-        u = (0, r.e7)([f.ZP], () => f.ZP.isInterestedInEventRecurrence(n.id, s), [s, n]),
+        c = (0, I.xt)(n),
+        u = (0, r.e7)([I.ZP], () => I.ZP.isInterestedInEventRecurrence(n.id, s), [s, n]),
         g = (0, v.ZP)(n),
         p = (0, r.e7)([_.Z], () => _.Z.isLurking(t.id), [t.id]),
         m = (0, b.T)(null == l ? void 0 : l.id, n.id),
-        I = (0, O.Z)({
+        f = (0, O.Z)({
             guild: t,
             channel: l,
             guildScheduledEvent: n,
@@ -86,7 +86,7 @@ function z(e) {
                       isChannelPublic: m,
                       canInvite: g
                   },
-                  I
+                  f
               )
           )
         : (0, i.jsx)(
@@ -100,7 +100,7 @@ function z(e) {
                       canInvite: g,
                       entityType: h
                   },
-                  I
+                  f
               )
           );
 }
@@ -109,7 +109,7 @@ let k = (e) => {
         y = (0, c.Q3)('GuildScheduledEventModal'),
         { analyticsLocations: j } = (0, o.ZP)(d.Z.GUILD_EVENT_MODAL),
         [O, P] = l.useState(v),
-        k = (0, r.e7)([f.ZP], () => f.ZP.getGuildScheduledEvent(n), [n]),
+        k = (0, r.e7)([I.ZP], () => I.ZP.getGuildScheduledEvent(n), [n]),
         A = null == k ? void 0 : k.id,
         R = null == k ? void 0 : k.guild_id,
         { guild: B, isMember: w } = (0, h.Z)(R, A),
@@ -118,9 +118,9 @@ let k = (e) => {
         X = (0, r.e7)([g.Z], () => g.Z.getChannel(M), [M]),
         V = (0, s.Dt)(),
         [F, Y] = l.useState(U.fL.EVENT_INFO),
-        W = (0, E.Z)(A, O),
-        q = (0, C.Z)(R, A, O),
-        [K, { loading: J, error: Q }] = (0, m.Z)(() => I.Z.getGuildEventUsers(null == k ? void 0 : k.id, O, R));
+        W = (0, C.Z)(A, O),
+        q = (0, E.Z)(R, A, O),
+        [K, { loading: J, error: Q }] = (0, m.Z)(() => f.Z.getGuildEventUsers(null == k ? void 0 : k.id, O, R));
     l.useEffect(() => {
         null == k
             ? b()

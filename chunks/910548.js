@@ -15,8 +15,8 @@ var r,
     g = n(64078),
     _ = n(29270),
     b = n(709586),
-    y = n(267642),
-    E = n(739566),
+    E = n(267642),
+    y = n(739566),
     x = n(834129),
     v = n(981631),
     O = n(388032),
@@ -183,8 +183,8 @@ function U(e) {
                   })()
         ),
         { createMultipleConfettiAt: g, confettiCanvas: _ } = l.useContext(f.h),
-        [b, y] = l.useState(null),
-        E = (0, s.uR)(_, b),
+        [b, E] = l.useState(null),
+        y = (0, s.uR)(_, b),
         x = (function (e, t) {
             if (null == e) return 'enter';
             switch (e) {
@@ -248,7 +248,7 @@ function U(e) {
         l.useEffect(() => {
             if (v && 'leaf_fall' === d) {
                 let e = w[h].leafRotationDirection;
-                E.createConfetti(
+                y.createConfetti(
                     {
                         id: ''.concat(Z, '-').concat((0, c.Z)()),
                         position: {
@@ -298,11 +298,11 @@ function U(e) {
                     { sprite: 'TOP_LEFT' === h ? k : D }
                 );
             }
-        }, [v, E, h, d]),
+        }, [v, y, h, d]),
         (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(s.Ji, {
-                    ref: y,
+                    ref: E,
                     sprites: L,
                     colors: R,
                     spriteWidth: 45,
@@ -350,7 +350,7 @@ function F(e) {
         [S, I] = l.useState(!1),
         N = l.useRef(null),
         { reducedMotion: T } = l.useContext(p.Sfi),
-        P = (0, E.ZH)(n),
+        P = (0, y.ZH)(n),
         A = P.nick,
         w = o(P);
     t =
@@ -371,13 +371,13 @@ function F(e) {
                     usernameHook: w,
                     numSubscriptions: u,
                     guildName: a.name,
-                    newTierName: (0, y.nW)(c)
+                    newTierName: (0, E.nW)(c)
                 })
               : O.intl.format(O.t.cUfTTE, {
                     username: A,
                     usernameHook: w,
                     guildName: a.name,
-                    newTierName: (0, y.nW)(c)
+                    newTierName: (0, E.nW)(c)
                 });
     let R = l.useCallback(() => {
             if (!T.enabled)

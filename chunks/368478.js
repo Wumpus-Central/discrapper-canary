@@ -1,5 +1,5 @@
 n.d(t, {
-    J: () => y,
+    J: () => x,
     Z: () => _
 }),
     n(388685),
@@ -22,11 +22,11 @@ var r = n(73800),
 function _(e) {
     let { context: t, primaryEntryPointCommand: n, application: a, showAppLauncherPopup: c = !1 } = e,
         [h, _] = r.useState(!1),
-        y = (0, l.e7)([o.ZP], () => o.ZP.getCurrentEmbeddedActivity()),
-        x = c ? b.t.cpT0Cg : b.t['0hKkS0'],
+        x = (0, l.e7)([o.ZP], () => o.ZP.getCurrentEmbeddedActivity()),
+        y = c ? b.t.cpT0Cg : b.t['0hKkS0'],
         C = r.useMemo(() => (null != n ? (0, p.XZ)(n.displayName) : b.intl.string(b.t['3xjX0d'])), [n]),
         v = void 0 !== a.flags && (0, m.yE)(a.flags, g.udG.EMBEDDED),
-        j = null != y && y.applicationId === a.id && (y.location.kind === i.E.CONTEXTLESS || (0, s.pY)(y.location) === t.channel.id),
+        j = null != x && x.applicationId === a.id && (x.location.kind === i.E.CONTEXTLESS || (0, s.pY)(x.location) === t.channel.id),
         { analyticsLocations: O } = (0, d.ZP)(u.Z.APP_DMS_ENTRY_POINT_COMMAND_BUTTON),
         E = null != t.channel.recipients ? t.channel.recipients[0] : void 0;
     return {
@@ -42,16 +42,16 @@ function _(e) {
                     : null != C
                       ? C
                       : b.intl.string(b.t.zKX8Nj)
-                : b.intl.string(x),
+                : b.intl.string(y),
         hasActiveMatchingEmbeddedActivity: j,
         isEmbeddedApp: v,
-        currentEmbeddedActivity: y,
+        currentEmbeddedActivity: x,
         channelRecipientUserId: E,
         setIsExecutingLaunchInteraction: _,
         analyticsLocations: O
     };
 }
-function y(e) {
+function x(e) {
     let { context: t, application: n, isEmbeddedApp: i, hasActiveMatchingEmbeddedActivity: l, currentEmbeddedActivity: o, onOpenButtonPress: s, channelRecipientUserId: u, setIsExecutingLaunchInteraction: d, analyticsLocations: p } = e,
         m = (0, f.ms)({
             context: t,

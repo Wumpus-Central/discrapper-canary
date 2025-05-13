@@ -37,8 +37,7 @@ function c(e, t, n, c, u) {
                 sessionId: p,
                 applicationId: null != (a = c.altId) ? a : c.id,
                 channelId: e.id,
-                messageId: t.id,
-                activity: u
+                messageId: t.id
             }),
                 r.Z.updateNotificationStatus(l),
                 y('join');

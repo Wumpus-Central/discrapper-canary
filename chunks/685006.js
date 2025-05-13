@@ -18,8 +18,8 @@ var r = n(255367),
     g = n(827498),
     b = n(213459),
     _ = n(541716),
-    y = n(540059),
-    x = n(61356),
+    x = n(540059),
+    y = n(61356),
     C = n(981631),
     v = n(314734),
     j = n(522271);
@@ -34,8 +34,8 @@ function S(e) {
     let { context: t, entryPointCommandButtonRef: n, type: l } = e,
         { isInitialLoading: o, application: a, primaryEntryPointCommand: s } = (0, h.Z)({ context: t }),
         c = null == a ? void 0 : a.id,
-        f = (0, x.Z)({ type: l }),
-        { sectionCommands: y } = (0, b.If)(t, null != c ? c : ''),
+        f = (0, y.Z)({ type: l }),
+        { sectionCommands: x } = (0, b.If)(t, null != c ? c : ''),
         v = i.useCallback(() => {
             f
                 ? m.yT(g.ti.DISMISSED)
@@ -46,7 +46,7 @@ function S(e) {
                       source: g._b.TEXT
                   }));
         }, [c, f]),
-        j = null != y && y.filter((e) => e.type === u.yU.CHAT || e.type === u.yU.PRIMARY_ENTRY_POINT).length > 0,
+        j = null != x && x.filter((e) => e.type === u.yU.CHAT || e.type === u.yU.PRIMARY_ENTRY_POINT).length > 0,
         O = !o && null != a && !0 === j;
     return (i.useEffect(
         () => (
@@ -70,7 +70,7 @@ function S(e) {
 }
 function P(e) {
     let { context: t, application: n, primaryEntryPointCommand: i, onOpenButtonPress: l, entryPointCommandButtonRef: a, type: s } = e,
-        u = (0, x.Z)({ type: s }),
+        u = (0, y.Z)({ type: s }),
         {
             isExecutingLaunchInteraction: d,
             buttonText: p,
@@ -98,7 +98,7 @@ function P(e) {
             analyticsLocations: C
         }),
         E = h ? c.zxk.Colors.RED : c.zxk.Colors.BRAND,
-        I = (0, y.Q3)('LoadedEntryPointCommandButton');
+        I = (0, x.Q3)('LoadedEntryPointCommandButton');
     return (0, r.jsx)(c.zxk, {
         className: o()(j.entryPointAppCommandButton, v.Id),
         size: I ? c.zxk.Sizes.SMALL : c.zxk.Sizes.LARGE,

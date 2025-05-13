@@ -1,13 +1,13 @@
-n.d(t, { Z: () => m });
-var r = n(255367);
-n(73800);
-var i = n(120356),
-    o = n.n(i),
-    a = n(481060),
-    s = n(129861),
-    l = n(670188),
-    c = n(22700);
-function u(e, t, n) {
+n.d(t, { Z: () => g });
+var r = n(255367),
+    i = n(73800),
+    o = n(120356),
+    a = n.n(o),
+    s = n(481060),
+    l = n(129861),
+    c = n(670188),
+    u = n(22700);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -20,7 +20,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -31,12 +31,12 @@ function d(e) {
                 })
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -48,29 +48,29 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function p(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = h(e, t);
+        i = m(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function h(e, t) {
+function m(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -79,42 +79,45 @@ function h(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-function m(e) {
-    let { user: t, guildId: n, channelId: i, nick: u, className: f, textClassName: h, disablePopout: m, ignoreModalClicks: g, onClick: E, onContextMenu: b, onPopoutRequestOpen: y, onPopoutRequestClose: O } = e;
-    return (0, r.jsx)(l.Z, {
+function g(e) {
+    let { user: t, guildId: n, channelId: o, nick: d, className: _, textClassName: m, disablePopout: g, ignoreModalClicks: E, onClick: b, onContextMenu: y, onPopoutRequestOpen: O, onPopoutRequestClose: v } = e,
+        I = i.useRef(null);
+    return (0, r.jsx)(c.Z, {
+        targetElementRef: I,
         user: t,
         guildId: n,
-        channelId: i,
+        channelId: o,
         position: 'left',
-        shouldShow: !m && void 0,
-        onRequestOpen: y,
-        onRequestClose: O,
-        ignoreModalClicks: g,
+        shouldShow: !g && void 0,
+        onRequestOpen: O,
+        onRequestClose: v,
+        ignoreModalClicks: E,
         children: (e) => {
             var { onClick: i } = e,
-                l = p(e, ['onClick']);
+                o = h(e, ['onClick']);
             return (0, r.jsxs)(
-                a.P3F,
-                _(d({}, l), {
-                    className: o()(c.userListItem, f, { [c.popoutDisabled]: m }),
-                    onContextMenu: b,
+                s.P3F,
+                p(f({}, o), {
+                    innerRef: I,
+                    className: a()(u.userListItem, _, { [u.popoutDisabled]: g }),
+                    onContextMenu: y,
                     onClick: (e) => {
-                        i(e), null == E || E(e);
+                        i(e), null == b || b(e);
                     },
                     children: [
-                        (0, r.jsx)(a.qEK, {
-                            src: t.getAvatarURL(n, (0, a.pxk)(a.EFr.SIZE_24)),
-                            className: c.avatar,
+                        (0, r.jsx)(s.qEK, {
+                            src: t.getAvatarURL(n, (0, s.pxk)(s.EFr.SIZE_24)),
+                            className: u.avatar,
                             'aria-label': t.username,
-                            size: a.EFr.SIZE_24
+                            size: s.EFr.SIZE_24
                         }),
-                        (0, r.jsx)(a.Text, {
-                            className: o()(c.userListItemTag, h),
+                        (0, r.jsx)(s.Text, {
+                            className: a()(u.userListItemTag, m),
                             variant: 'text-sm/normal',
-                            children: (0, r.jsx)(s.Z, {
+                            children: (0, r.jsx)(l.Z, {
                                 user: t,
-                                nick: u,
-                                usernameClass: c.username,
+                                nick: d,
+                                usernameClass: u.username,
                                 hideDiscriminator: !0
                             })
                         })

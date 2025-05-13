@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(906732),
     b = n(895924),
     _ = n(540059),
-    y = n(605236),
-    x = n(340541),
+    x = n(605236),
+    y = n(340541),
     C = n(448239),
     v = n(626135),
     j = n(607187),
@@ -183,9 +183,9 @@ function w(e) {
     }, []);
     let { analyticsLocations: u } = (0, g.ZP)(m.Z.VC_TILE_ACTIVITY_INVITE),
         p = (0, _.Q3)('SingleUserTile'),
-        { entrypoints: h } = (0, x._k)({ location: 'single_user_tile' }),
+        { entrypoints: h } = (0, y._k)({ location: 'single_user_tile' }),
         { enabled: b } = d.c.useExperiment({ location: 'SingleUserTile' }, { autoTrackExposure: !0 });
-    function y() {
+    function x() {
         (0, c.ZDy)(
             async () => {
                 let { default: e } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
@@ -247,7 +247,7 @@ function w(e) {
                                     color: c.zxk.Colors.PRIMARY,
                                     className: o()({ [I.button]: !p }),
                                     innerClassName: I.buttonContents,
-                                    onClick: y,
+                                    onClick: x,
                                     children: [
                                         (0, r.jsx)(A, {
                                             size: 'xs',
@@ -286,7 +286,7 @@ function R(e) {
             n_participants: d
         });
     });
-    let x = (0, p.Z)({ guildId: n.id }).slice(0, 3),
+    let y = (0, p.Z)({ guildId: n.id }).slice(0, 3),
         { analyticsLocations: S } = (0, g.ZP)(m.Z.VC_TILE_ACTIVITY_SUGGESTION),
         Z = i.useMemo(
             () => ({
@@ -316,7 +316,7 @@ function R(e) {
                     : null,
                 (0, r.jsx)('div', {
                     className: o()(I.activitiesContainer, { [I.activitiesContainerSmol]: s <= 300 }),
-                    children: x.map((e) =>
+                    children: y.map((e) =>
                         (0, r.jsx)(
                             h.Y,
                             {
@@ -338,7 +338,7 @@ function R(e) {
                             close_type: 'permanent',
                             n_participants: d
                         }),
-                            (0, y.EW)(a.z.VC_TILE_ACTIVITIES_ENTRY_POINT);
+                            (0, x.EW)(a.z.VC_TILE_ACTIVITIES_ENTRY_POINT);
                     },
                     children: [
                         (0, r.jsx)(C.Z, {}),

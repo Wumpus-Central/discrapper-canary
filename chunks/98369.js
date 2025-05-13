@@ -11,8 +11,8 @@ var r,
     f = n(959457),
     p = n(630759),
     m = n(729303),
-    E = n(651941),
-    g = n(981631);
+    g = n(651941),
+    E = n(981631);
 let h = new Map(),
     v = new Map(),
     S = !1,
@@ -45,7 +45,7 @@ function Z(e) {
             let t = d.Z.getSecureFramesRosterMapEntry(e);
             if (null == t) return !1;
             let n = new Uint8Array(t),
-                r = E.Z.isKeyVerified(e, n) || m.Z.isKeyVerified(e, n),
+                r = g.Z.isKeyVerified(e, n) || m.Z.isKeyVerified(e, n),
                 l = (0, p.UB)(e, [d.Z, f.Z]),
                 i = r && !l,
                 a = i !== h.get(e);
@@ -60,7 +60,7 @@ function j() {
 }
 class _ extends (r = a.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, E.Z, d.Z, f.Z);
+        this.waitFor(m.Z, g.Z, d.Z, f.Z);
     }
     isCallVerified() {
         return S;
@@ -90,7 +90,7 @@ let I = new _(u.Z, {
     },
     RTC_CONNECTION_STATE: function (e) {
         let { streamKey: t, state: n, context: r } = e;
-        if (n !== g.hes.DISCONNECTED) return !1;
+        if (n !== E.hes.DISCONNECTED) return !1;
         switch (r) {
             case o.Yn.STREAM:
                 if (null == t) return !1;

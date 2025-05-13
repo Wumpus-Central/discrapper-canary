@@ -14,8 +14,8 @@ var r = n(255367),
     f = n(414910),
     p = n(502053),
     m = n(965048),
-    E = n(266910),
-    g = n(352978),
+    g = n(266910),
+    E = n(352978),
     h = n(928518),
     v = n(518950),
     S = n(470956),
@@ -137,7 +137,7 @@ function D(e) {
                   selected: S
               })
             : (0, r.jsx)(
-                  g.Z,
+                  E.Z,
                   {
                       onResize: T,
                       wrapperClassName: R.videoWrapper,
@@ -154,7 +154,7 @@ function D(e) {
               )
         : (0, r.jsx)('div', {
               className: a()(R.content, { [R.blockedAvatar]: D || M }),
-              children: (0, r.jsx)(E.Z, {
+              children: (0, r.jsx)(g.Z, {
                   'aria-label': Q,
                   src: et,
                   avatarDecoration: en,

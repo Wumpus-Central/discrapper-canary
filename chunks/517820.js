@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(385499),
     _ = n(528011),
     b = n(533244),
-    y = n(825829),
-    E = n(226192),
+    E = n(825829),
+    y = n(226192),
     x = n(36459),
     v = n(434404),
     O = n(518950),
@@ -80,9 +80,9 @@ function M() {
 }
 function U(e) {
     let { message: t, compact: n } = e,
-        { notificationType: i } = (0, y.FL)(t);
+        { notificationType: i } = (0, E.FL)(t);
     switch (i) {
-        case y.nj:
+        case E.nj:
         case u.p.RAID:
             return (0, r.jsx)(H, {
                 message: t,
@@ -155,7 +155,7 @@ function B(e) {
 function G(e) {
     var t;
     let { message: n, compact: l } = e,
-        a = I.default.getUser((0, y.Sw)(n)),
+        a = I.default.getUser((0, E.Sw)(n)),
         o = null == (t = C.Z.getBasicChannel(n.channel_id)) ? void 0 : t.guild_id,
         c = null != o && null != a ? S.ZP.getMember(o, a.id) : null,
         {
@@ -166,7 +166,8 @@ function G(e) {
             user: a,
             guildId: o,
             size: 12
-        });
+        }),
+        h = i.useRef(null);
     return (0, r.jsx)(z, {
         compact: l,
         header: (0, r.jsxs)(i.Fragment, {
@@ -198,6 +199,7 @@ function G(e) {
                                     children: R.intl.string(R.t.qlFrXV)
                                 }),
                                 (0, r.jsx)(j.Z, {
+                                    targetElementRef: h,
                                     user: a,
                                     guildId: o,
                                     channelId: n.channel_id,
@@ -205,26 +207,35 @@ function G(e) {
                                     children: (e) =>
                                         (0, r.jsxs)(
                                             f.P3F,
-                                            L(D({ className: k.alertsEnabledSubHeaderAvatarUsername }, e), {
-                                                children: [
-                                                    (0, r.jsx)(
-                                                        'div',
-                                                        L(D({}, p), {
-                                                            children: (0, r.jsx)(f.qEK, {
-                                                                src: u,
-                                                                avatarDecoration: d,
-                                                                size: f.EFr.SIZE_16,
-                                                                'aria-label': 'TODO'
+                                            L(
+                                                D(
+                                                    {
+                                                        innerRef: h,
+                                                        className: k.alertsEnabledSubHeaderAvatarUsername
+                                                    },
+                                                    e
+                                                ),
+                                                {
+                                                    children: [
+                                                        (0, r.jsx)(
+                                                            'div',
+                                                            L(D({}, p), {
+                                                                children: (0, r.jsx)(f.qEK, {
+                                                                    src: u,
+                                                                    avatarDecoration: d,
+                                                                    size: f.EFr.SIZE_16,
+                                                                    'aria-label': 'TODO'
+                                                                })
                                                             })
+                                                        ),
+                                                        (0, r.jsxs)(f.Text, {
+                                                            variant: 'text-xs/medium',
+                                                            style: { color: null != c.colorString ? c.colorString : m.Z.colors.TEXT_NORMAL.css },
+                                                            children: [' ', '@', a.username]
                                                         })
-                                                    ),
-                                                    (0, r.jsxs)(f.Text, {
-                                                        variant: 'text-xs/medium',
-                                                        style: { color: null != c.colorString ? c.colorString : m.Z.colors.TEXT_NORMAL.css },
-                                                        children: [' ', '@', a.username]
-                                                    })
-                                                ]
-                                            })
+                                                    ]
+                                                }
+                                            )
                                         )
                                 })
                             ]
@@ -248,14 +259,14 @@ function G(e) {
 function H(e) {
     var t;
     let { message: n, compact: l } = e,
-        { joinAttempts: a, raidDatetime: o, dmsSent: u, raidType: h, resolvedReason: g } = (0, y.FL)(n),
+        { joinAttempts: a, raidDatetime: o, dmsSent: u, raidType: h, resolvedReason: g } = (0, E.FL)(n),
         x = (0, p.e7)([C.Z], () => C.Z.getChannel(n.channel_id), [n.channel_id]),
         v = null != (t = null == x ? void 0 : x.guild_id) ? t : null,
         { shouldShowIncidentActions: O } = (0, _.mI)(v),
         j = (0, T.sR)(n.author.id, n.channel_id),
         S = i.useCallback(() => {
             let e = null == x ? void 0 : x.guild_id;
-            null != e && (0, E.kW)(n.id, e);
+            null != e && (0, y.kW)(n.id, e);
         }, [n.id, x]),
         I = h === d.$.DM_RAID,
         N = I ? f.P4T : f.b6m;
@@ -350,7 +361,7 @@ function H(e) {
                               children: (0, r.jsx)(f.Text, {
                                   variant: 'text-xs/medium',
                                   color: 'text-link',
-                                  children: (0, y.ge)(g)
+                                  children: (0, E.ge)(g)
                               })
                           })
                       })
@@ -363,7 +374,7 @@ function V(e) {
     var t;
     let { message: n, compact: l } = e,
         a = null == (t = C.Z.getBasicChannel(n.channel_id)) ? void 0 : t.guild_id,
-        { raidDatetime: o, decisionId: c, suspiciousMentionActivityUntil: u } = (0, y.FL)(n);
+        { raidDatetime: o, decisionId: c, suspiciousMentionActivityUntil: u } = (0, E.FL)(n);
     return (0, r.jsx)(z, {
         compact: l,
         header: (0, r.jsxs)(i.Fragment, {
@@ -479,7 +490,7 @@ function W(e) {
             avatarSrc: o,
             eventHandlers: { onMouseEnter: s, onMouseLeave: c }
         } = (0, P.m)(!0),
-        { notificationType: d } = (0, y.FL)(i),
+        { notificationType: d } = (0, E.FL)(i),
         p = null == d || d === u.p.RAID;
     return (0, r.jsx)('div', {
         onMouseEnter: s,

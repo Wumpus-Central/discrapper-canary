@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(95398),
     b = n(580747),
     _ = n(135938),
-    y = n(160404),
-    x = n(765104),
+    x = n(160404),
+    y = n(765104),
     C = n(695346),
     v = n(314897),
     j = n(323873),
@@ -102,7 +102,7 @@ function H(e, t) {
 let V = i.memo(
         function (e) {
             var t;
-            let { className: n, messageGroupSpacing: l, scrollerClassName: d, channel: f, messages: m, unreadCount: g, showNewMessagesBar: b, messageDisplayCompact: _, channelStream: x, uploads: C, hasUnreads: v, editingMessageId: j, fontSize: O, keyboardModeEnabled: E, filterAfterTimestamp: S, showingQuarantineBanner: P, hideSummaries: Z = !1, jumpBarClassName: T } = e,
+            let { className: n, messageGroupSpacing: l, scrollerClassName: d, channel: f, messages: m, unreadCount: g, showNewMessagesBar: b, messageDisplayCompact: _, channelStream: y, uploads: C, hasUnreads: v, editingMessageId: j, fontSize: O, keyboardModeEnabled: E, filterAfterTimestamp: S, showingQuarantineBanner: P, hideSummaries: Z = !1, jumpBarClassName: T } = e,
                 [A, R] = i.useState(!1),
                 V = i.useMemo(
                     () =>
@@ -142,7 +142,7 @@ let V = i.memo(
                     keyboardModeEnabled: E,
                     hasMoreAfter: m.hasMoreAfter
                 }),
-                Y = (0, s.e7)([y.Z], () => (I.Z.can(D.Plq.READ_MESSAGE_HISTORY, f) ? null : y.Z.getViewingRolesTimestamp(f.getGuildId()))),
+                Y = (0, s.e7)([x.Z], () => (I.Z.can(D.Plq.READ_MESSAGE_HISTORY, f) ? null : x.Z.getViewingRolesTimestamp(f.getGuildId()))),
                 {
                     channelStreamMarkup: q,
                     newMessagesBar: K,
@@ -155,7 +155,7 @@ let V = i.memo(
                     unreadCount: g,
                     showNewMessagesBar: b,
                     messageDisplayCompact: _,
-                    channelStream: x,
+                    channelStream: y,
                     uploads: C,
                     loadMore: z.loadMore,
                     scrollManager: z,
@@ -283,7 +283,7 @@ let V = i.memo(
         let {
                 canManageMessages: u,
                 permissionVersion: p,
-                canChat: y
+                canChat: x
             } = (function (e) {
                 let t = e.getGuildId(),
                     n = (0, s.e7)([O.Z], () => null == t || O.Z.canChatInGuild(t), [t]),
@@ -351,14 +351,14 @@ let V = i.memo(
                     c = (0, d.ts)(e),
                     u = (0, b.Z)('use_topic_dividers_in_chat'),
                     p = (0, s.Wu)(
-                        [x.Z],
+                        [y.Z],
                         () => {
                             var t;
-                            return c && u && null != (t = x.Z.summaries(e.id)) ? t : [];
+                            return c && u && null != (t = y.Z.summaries(e.id)) ? t : [];
                         },
                         [c, e.id, u]
                     ),
-                    h = (0, s.e7)([x.Z], () => (c ? x.Z.selectedSummary(e.id) : null), [c, e.id]),
+                    h = (0, s.e7)([y.Z], () => (c ? y.Z.selectedSummary(e.id) : null), [c, e.id]),
                     g = (function (e) {
                         let t = i.useMemo(() => {
                             let t = new Set();
@@ -372,7 +372,7 @@ let V = i.memo(
                         return (0, m.Z)(t);
                     })(r);
                 (0, f.Z)(r, e);
-                let y = i.useMemo(
+                let x = i.useMemo(
                     () =>
                         (0, A.Z)({
                             channel: e,
@@ -386,7 +386,7 @@ let V = i.memo(
                 );
                 return {
                     messages: r,
-                    channelStream: y,
+                    channelStream: x,
                     oldestUnreadMessageId: l,
                     editingMessageId: (0, s.e7)([j.Z], () => {
                         var t;
@@ -410,7 +410,7 @@ let V = i.memo(
                         uploads: (0, s.e7)([P.Z], () => P.Z.getFiles(t.id), [t]),
                         unreadCount: (0, s.e7)([S.ZP], () => S.ZP.getUnreadCount(t.id), [t]),
                         hasUnreads: null != z,
-                        canChat: y,
+                        canChat: x,
                         editingMessageId: W,
                         fontSize: w,
                         keyboardModeEnabled: L,

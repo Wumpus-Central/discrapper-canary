@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(695346),
     k = n(461877),
     L = n(726985),
-    M = n(981631),
-    B = n(815660),
+    B = n(981631),
+    M = n(815660),
     U = n(801461),
     V = n(388032),
     G = n(556780);
@@ -425,7 +425,7 @@ function X(e) {
                                               p.Z,
                                               H(F({}, e), {
                                                   title: V.intl.string(V.t['3CTiKi']),
-                                                  children: s.hasFlag(M.xW$.MFA_SMS) ? V.intl.string(V.t.jrhJys) : void 0,
+                                                  children: s.hasFlag(B.xW$.MFA_SMS) ? V.intl.string(V.t.jrhJys) : void 0,
                                                   actionText: V.intl.string(V.t.N86XcH),
                                                   handleSubmit: (e) => C.Z.removePhone(e, C.L.USER_SETTINGS_UPDATE)
                                               })
@@ -446,7 +446,7 @@ function X(e) {
                                         let { default: e } = await Promise.resolve().then(n.bind(n, 607018));
                                         return (t) => (0, i.jsx)(e, F({ reason: C.L.USER_SETTINGS_UPDATE }, t));
                                     },
-                                    { modalKey: B.M }
+                                    { modalKey: M.M }
                                 );
                             },
                             children: c ? V.intl.string(V.t.bt75u7) : V.intl.string(V.t.OYkgVl)
@@ -462,9 +462,12 @@ function Q(e) {
         n = (0, x.Z)({
             id: t.id,
             label: V.intl.string(V.t['/AXYnJ'])
-        });
-    return w.Sb.useSetting() && R.wS
+        }),
+        s = w.Sb.useSetting(),
+        l = r.useRef(null);
+    return s && R.wS
         ? (0, i.jsx)(u.yRy, {
+              targetElementRef: l,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
                   return (0, i.jsx)(u.v2r, {
@@ -479,6 +482,7 @@ function Q(e) {
                   (0, i.jsx)(
                       u.P3F,
                       H(F({}, e), {
+                          innerRef: l,
                           className: G.overflowMenuButton,
                           'aria-label': V.intl.string(V.t.DEoVWV),
                           children: (0, i.jsx)(u.xhG, {
@@ -492,7 +496,7 @@ function Q(e) {
         : null;
 }
 function J() {
-    m.Z.setSection(M.oAB.PROFILE_CUSTOMIZATION);
+    m.Z.setSection(B.oAB.PROFILE_CUSTOMIZATION);
 }
 function $(e) {
     let { className: t } = e,

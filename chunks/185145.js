@@ -35,7 +35,7 @@ function g(e) {
                     }),
                     bannerHeader: f.intl.string(f.t['9UoK6e']),
                     bannerSubtext: f.intl.format(f.t['4ZwD5O'], { link: h.cu }),
-                    containerStyles: m.bannerContainer,
+                    textStyles: m.bannerContainer,
                     headerStyles: m.bannerHeader,
                     children: (0, r.jsx)(l.Text, {
                         variant: 'text-sm/semibold',

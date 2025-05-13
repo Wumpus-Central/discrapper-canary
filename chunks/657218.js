@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(541716),
     b = n(752305),
     _ = n(893718),
-    y = n(303628),
-    x = n(313201),
+    x = n(303628),
+    y = n(313201),
     C = n(540059),
     v = n(967128),
     j = n(665149),
@@ -155,7 +155,7 @@ function q(e) {
                 updateThreadSettings: l
             };
         })(t, n),
-        { textAreaState: _, setTextAreaState: y } = (function (e, t) {
+        { textAreaState: _, setTextAreaState: x } = (function (e, t) {
             let [n, r] = i.useState((0, b.H2)());
             return (
                 i.useEffect(() => {
@@ -178,7 +178,7 @@ function q(e) {
                 }
             );
         })(t, m),
-        x = (0, L.vH)(t),
+        y = (0, L.vH)(t),
         {
             nameError: j,
             messageError: O,
@@ -267,11 +267,11 @@ function q(e) {
             parentChannel: t,
             parentMessageId: n,
             threadSettings: f,
-            privateThreadMode: x,
+            privateThreadMode: y,
             textAreaState: _,
             location: l
         }),
-        N = (0, L.oD)(f, x) ? s.qtY : s.or_,
+        N = (0, L.oD)(f, y) ? s.qtY : s.or_,
         T = (0, C.R6)('CreateThreadSidebar');
     return (0, r.jsx)('div', {
         className: H.chat,
@@ -311,7 +311,7 @@ function q(e) {
                                                   startedFromMessage: null != n,
                                                   threadSettings: f,
                                                   updateThreadSettings: g,
-                                                  privateThreadMode: x
+                                                  privateThreadMode: y
                                               })
                                             : null
                                     ]
@@ -329,7 +329,7 @@ function q(e) {
                             (0, r.jsx)(Q, {
                                 parentChannel: t,
                                 textAreaState: _,
-                                setTextAreaState: y,
+                                setTextAreaState: x,
                                 submit: S,
                                 error: O,
                                 isRefreshChatInputEnabled: T
@@ -395,7 +395,7 @@ function X(e) {
         p = (0, M.Op)(a, { content: d }),
         h = (0, L.Od)(n, i),
         f = null != i,
-        m = (0, x.Dt)();
+        m = (0, y.Dt)();
     return (0, r.jsx)(s.hjN, {
         tag: 'label',
         htmlFor: m,
@@ -423,7 +423,7 @@ function Q(e) {
         [f, m] = i.useState(!0),
         g = i.useCallback(() => m(!0), []),
         b = i.useCallback(() => m(!1), []),
-        x = i.useCallback(
+        y = i.useCallback(
             (e, n, r) => {
                 c.Z.saveDraft(t.id, n, Z.d.FirstThreadMessage),
                     l(
@@ -457,7 +457,7 @@ function Q(e) {
         j = (0, M.Op)(p, { content: n.textValue });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(y.Z, {
+            (0, r.jsx)(x.Z, {
                 channelId: t.id,
                 type: W,
                 canAttachFiles: v
@@ -477,7 +477,7 @@ function Q(e) {
                 innerClassName: o()(H.channelTextAreaInner, { [H.channelTextAreaInnerError]: null != j }),
                 onFocus: g,
                 onBlur: b,
-                onChange: x,
+                onChange: y,
                 onSubmit: C,
                 promptToUpload: k.d
             })

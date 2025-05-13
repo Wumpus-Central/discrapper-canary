@@ -1,7 +1,7 @@
 n.d(t, {
     ZP: () => j,
     cy: () => C,
-    iu: () => x
+    iu: () => y
 }),
     n(388685);
 var r,
@@ -47,7 +47,7 @@ function _(e) {
     }
     return e;
 }
-function y(e, t) {
+function x(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -65,7 +65,7 @@ function y(e, t) {
         e
     );
 }
-var x = (((i = {}).CENTER = 'center'), (i.LEFT = 'left'), i),
+var y = (((i = {}).CENTER = 'center'), (i.LEFT = 'left'), i),
     C = (((l = {}).TOP = 'top'), (l.MIDDLE = 'middle'), l);
 class v extends a.PureComponent {
     componentDidMount() {
@@ -139,8 +139,8 @@ class v extends a.PureComponent {
 class j extends (r = a.PureComponent) {
     render() {
         let e = this.props,
-            { renderMedia: t, textAlign: n, onComplete: r, onSkipAll: i, isLongText: l, title: a, body: s, children: c, spacing: u, forceTheme: p } = e,
-            h = (function (e, t) {
+            { renderMedia: t, textAlign: n, onComplete: r, onSkipAll: i, isLongText: l, title: a, body: s, children: c, spacing: u, forceTheme: p, innerRef: h } = e,
+            f = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -158,12 +158,12 @@ class j extends (r = a.PureComponent) {
                     for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                 }
                 return i;
-            })(e, ['renderMedia', 'textAlign', 'onComplete', 'onSkipAll', 'isLongText', 'title', 'body', 'children', 'spacing', 'forceTheme']),
-            f = 'top' === h.position || 'bottom' === h.position ? 'center' : 'top';
+            })(e, ['renderMedia', 'textAlign', 'onComplete', 'onSkipAll', 'isLongText', 'title', 'body', 'children', 'spacing', 'forceTheme', 'innerRef']),
+            m = 'top' === f.position || 'bottom' === f.position ? 'center' : 'top';
         return (0, o.jsx)(
             d.yRy,
-            y(_({}, h), {
-                align: f,
+            x(_({ targetElementRef: h }, f), {
+                align: m,
                 spacing: null != u ? u : 0,
                 renderPopout: this.renderPopoutContent,
                 nudgeAlignIntoViewport: !0,
@@ -189,7 +189,7 @@ class j extends (r = a.PureComponent) {
                     children: (e) =>
                         (0, o.jsx)(
                             v,
-                            y(_({}, this.props), {
+                            x(_({}, this.props), {
                                 className: c()(
                                     {
                                         [g.bottom]: 'bottom' === n,
@@ -214,4 +214,4 @@ class j extends (r = a.PureComponent) {
             });
     }
 }
-b(j, 'TextAlignments', x), b(j, 'defaultProps', { textAlign: 'left' });
+b(j, 'TextAlignments', y), b(j, 'defaultProps', { textAlign: 'left' });

@@ -95,7 +95,7 @@ function H(e) {
     v.default.track(j.rMx.GATEWAY_CONNECT_SKIPPED, {
         actually_skipped: null != t ? t : r,
         client_app_state: m.Z.getState(),
-        connect_reason: null != i ? ''.concat(n, ' + ').concat(i) : n,
+        connect_reason: i.length > 0 ? ''.concat(n, ' + ').concat(i) : n,
         skip_context: r ? 'paused' : 'request_state'
     });
 }

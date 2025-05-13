@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(970731),
     b = n(594174),
     _ = n(176354),
-    y = n(823379),
-    x = n(74538),
+    x = n(823379),
+    y = n(74538),
     C = n(401062),
     v = n(696900),
     j = n(456631),
@@ -37,13 +37,13 @@ let M = T.Hz.CHAT,
         section: Z.jXE.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER,
         openPopoutType: 'voice_channel_effect_emoji_picker'
     },
-    D = [m.ZP.getByName('thumbsup'), m.ZP.getByName('eyes'), m.ZP.getByName('laughing'), m.ZP.getByName('watermelon'), m.ZP.getByName('fork_and_knife'), m.ZP.getByName('yum')].filter(y.lm);
+    D = [m.ZP.getByName('thumbsup'), m.ZP.getByName('eyes'), m.ZP.getByName('laughing'), m.ZP.getByName('watermelon'), m.ZP.getByName('fork_and_knife'), m.ZP.getByName('yum')].filter(x.lm);
 function U(e) {
     var t;
-    let { channel: n, closePopout: m, onFocus: y } = e,
+    let { channel: n, closePopout: m, onFocus: x } = e,
         T = (0, o.e7)([d.Z], () => d.Z.useReducedMotion),
         U = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
-        B = x.ZP.canUseFancyVoiceChannelReactions(U),
+        B = y.ZP.canUseFancyVoiceChannelReactions(U),
         G = (0, o.e7)([v.Z], () => v.Z.getState().animationType),
         F = i.useRef(!1),
         H = (0, f.wC)(n.guild_id),
@@ -111,7 +111,7 @@ function U(e) {
                 shouldShow: l,
                 renderPopout: () =>
                     (0, r.jsx)('div', {
-                        onMouseEnter: y,
+                        onMouseEnter: x,
                         children: (0, r.jsx)(g.ZP, {
                             className: k.reducedMotionTooltip,
                             header: R.intl.string(R.t['6gGHnZ']),
@@ -132,7 +132,7 @@ function U(e) {
                         closePopout: m,
                         onSelectEmoji: Y,
                         onSelectDisabledEmoji: q,
-                        onFocus: y,
+                        onFocus: x,
                         onExpandedToggle: K,
                         analyticsOverride: L,
                         emojiSearchProps: {

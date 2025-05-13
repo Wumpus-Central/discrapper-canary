@@ -35,9 +35,10 @@ function h(e) {
 }
 function p(e) {
     let { user: t, channelId: n, guildId: p, messageId: m, stopPropagation: f = !1, ariaLabel: g } = e,
-        { analyticsLocations: b } = (0, s.ZP)(a.Z.USERNAME),
-        j = (0, l.$V)(p, 'useUsernameHook'),
-        v = r.useCallback(
+        b = r.useRef(null),
+        { analyticsLocations: j } = (0, s.ZP)(a.Z.USERNAME),
+        v = (0, l.$V)(p, 'useUsernameHook'),
+        O = r.useCallback(
             (e) => {
                 let i = u.Z.getChannel(n);
                 null != i && null != t && (0, d.Pv)(e, t, i);
@@ -47,7 +48,7 @@ function p(e) {
     return r.useCallback(
         (e) => (r, a) => {
             let l = null == e ? void 0 : e.colorStrings,
-                u = j && null != l && null != l.primaryColor && null != l.secondaryColor,
+                u = v && null != l && null != l.primaryColor && null != l.secondaryColor,
                 d = (t) => {
                     var n, a;
                     return (0, i.jsx)(
@@ -55,7 +56,8 @@ function p(e) {
                         ((n = h({}, null != t ? t : {})),
                         (a = a =
                             {
-                                onContextMenu: v,
+                                ref: b,
+                                onContextMenu: O,
                                 name: (0, o.qgQ)(r),
                                 color: null == e ? void 0 : e.colorString,
                                 roleName: null == e ? void 0 : e.colorRoleName,
@@ -77,16 +79,17 @@ function p(e) {
                         n)
                     );
                 },
-                O = (e) => (t) => {
+                y = (e) => (t) => {
                     f && null != t && t.stopPropagation(), e(t);
                 };
             return (0, i.jsx)(
                 s.Gt,
                 {
-                    value: b,
+                    value: j,
                     children:
                         null != t
                             ? (0, i.jsx)(c.Z, {
+                                  targetElementRef: b,
                                   user: t,
                                   guildId: p,
                                   channelId: n,
@@ -114,7 +117,7 @@ function p(e) {
                                               }
                                               return r;
                                           })(e, ['onClick']);
-                                      return d(h({ onClick: O(t) }, n));
+                                      return d(h({ onClick: y(t) }, n));
                                   }
                               })
                             : d(void 0)
@@ -122,6 +125,6 @@ function p(e) {
                 a
             );
         },
-        [b, t, n, p, m, v, f, g, j]
+        [j, t, n, p, m, O, f, g, v]
     );
 }

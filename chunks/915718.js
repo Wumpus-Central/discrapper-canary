@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(590293),
     b = n(970731),
     _ = n(560688),
-    y = n(173507),
-    x = n(523746),
+    x = n(173507),
+    y = n(523746),
     C = n(819640),
     v = n(131951),
     j = n(699516),
@@ -139,7 +139,7 @@ class k extends i.PureComponent {
                 let { channel: n, notFriend: r, appContext: i } = this.props,
                     l = r ? n.getRecipientId() : null,
                     o = () => s.Z.call(n.id, t, !r && !n.isManaged() && !(null == e ? void 0 : e.shiftKey), l);
-                t ? (0, y.Z)(o, i) : o();
+                t ? (0, x.Z)(o, i) : o();
             }),
             R(this, 'handleJoinCall', (e) => {
                 c.default.selectVoiceChannel(this.props.channel.id, e);
@@ -155,7 +155,7 @@ class k extends i.PureComponent {
             }),
             R(this, 'handleJoinVideoCall', () => {
                 let { appContext: e } = this.props;
-                (0, y.Z)(() => this.handleJoinCall(!0), e);
+                (0, x.Z)(() => this.handleJoinCall(!0), e);
             }),
             R(this, 'handleBrowserNotSupported', () => {
                 (0, _.Z)();
@@ -169,12 +169,12 @@ function M(e) {
         s = (0, l.e7)([h.Z], () => h.Z.getMode(n.id)),
         c = (0, l.e7)([E.Z], () => E.Z.isInChannel(n.id)),
         f = (0, l.e7)([d.Z], () => d.Z.useReducedMotion),
-        { callActive: m, callUnavailable: b } = (0, l.cj)([x.Z], () => ({
-            callActive: x.Z.isCallActive(n.id),
-            callUnavailable: x.Z.isCallUnavailable(n.id)
+        { callActive: m, callUnavailable: b } = (0, l.cj)([y.Z], () => ({
+            callActive: y.Z.isCallActive(n.id),
+            callUnavailable: y.Z.isCallUnavailable(n.id)
         })),
         _ = n.getRecipientId(),
-        { notFriend: y, isBlocked: v } = (0, l.cj)([j.Z], () => ({
+        { notFriend: x, isBlocked: v } = (0, l.cj)([j.Z], () => ({
             notFriend: n.type === Z.d4z.DM && null != _ && !j.Z.isFriend(_),
             isBlocked: n.type === Z.d4z.DM && null != _ && j.Z.isBlocked(_)
         })),
@@ -200,7 +200,7 @@ function M(e) {
               callActive: m,
               isProvisional: null != (t = null == I ? void 0 : I.isProvisional) && t,
               callUnavailable: b,
-              notFriend: y,
+              notFriend: x,
               isBlocked: v,
               appContext: S,
               canShowTooltip: A,

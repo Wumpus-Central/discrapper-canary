@@ -73,7 +73,7 @@ let k = () => {
                 children: y.intl.string(y.t['o/oRJC'])
             })
         }),
-    M = (e) => {
+    B = (e) => {
         let t,
             { premiumType: n } = e,
             r = (0, u.ZP)();
@@ -85,7 +85,7 @@ let k = () => {
             alt: s
         });
     },
-    B = (e) => {
+    M = (e) => {
         let { label: t, column1: n, column2: r } = e;
         return (0, i.jsxs)('tr', {
             className: l()(A.headerRow, A.rowBottomBorder, A.topBorderRadius),
@@ -178,8 +178,8 @@ let k = () => {
                 variant: 'heading-lg/extrabold',
                 children: y.intl.string(y.t.ED4UVF)
             }),
-            column1: (0, i.jsx)(M, { premiumType: N.p9.TIER_0 }),
-            column2: (0, i.jsx)(M, { premiumType: N.p9.TIER_2 })
+            column1: (0, i.jsx)(B, { premiumType: N.p9.TIER_0 }),
+            column2: (0, i.jsx)(B, { premiumType: N.p9.TIER_2 })
         };
         P
             ? el.push({
@@ -282,7 +282,7 @@ let k = () => {
                             (0, i.jsxs)('table', {
                                 className: A.table,
                                 children: [
-                                    (0, i.jsx)('thead', { children: (0, i.jsx)(B, w({}, eo)) }),
+                                    (0, i.jsx)('thead', { children: (0, i.jsx)(M, w({}, eo)) }),
                                     (0, i.jsx)('tbody', {
                                         children: el.map((e, t) => {
                                             var n, i;

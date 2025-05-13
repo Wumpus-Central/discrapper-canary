@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(704826), n(35282), n(388685);
+n.d(t, { Z: () => x }), n(704826), n(35282), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -122,4 +122,4 @@ class _ extends i.PureComponent {
             });
     }
 }
-let y = a.ZP.connectStores([d.Z], () => ({ regions: d.Z.getRegions(null) }))(_);
+let x = a.ZP.connectStores([d.Z], () => ({ regions: d.Z.getRegions(null) }))(_);

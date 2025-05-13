@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(823188),
     k = n(611116),
     L = n(135785),
-    M = n(498765),
-    B = n(635921),
+    B = n(498765),
+    M = n(635921),
     U = n(177839),
     V = n(349803),
     G = n(179984),
@@ -66,7 +66,7 @@ let ed = (e) => {
     },
     eu = (e) => {
         let { isFullscreen: t, inOfferExperience: n } = e;
-        return t || n ? (0, i.jsx)(M.Z, { lifted: !t && n }) : null;
+        return t || n ? (0, i.jsx)(B.Z, { lifted: !t && n }) : null;
     },
     em = (e) => {
         let { isFullscreen: t, inOfferExperience: n, setIsAllPerksVisible: r, hasRenderedOnce: s, isMarketingPageV2Enabled: a, isReducedMotion: o } = e;
@@ -114,7 +114,7 @@ let ed = (e) => {
         var t, n;
         let { isFullscreen: s, entrypoint: k } = e;
         (0, _.z)(b.X);
-        let M = k === J.EZ.ApplicationStoreHome,
+        let B = k === J.EZ.ApplicationStoreHome,
             U = r.useRef(null),
             W = r.useRef(null),
             Y = r.useRef(null),
@@ -129,7 +129,7 @@ let ed = (e) => {
             eE = (0, O.I5)(ex),
             eC = (0, v.xP)('PremiumMarketingHome'),
             ej = (0, T.C)('PremiumMarketingHome'),
-            eO = ((eC && !eE) || (eE && ej)) && M,
+            eO = ((eC && !eE) || (eE && ej)) && B,
             [eS, ev] = r.useState(!1),
             [eT, eI] = r.useState(!1),
             [eN, ey] = r.useState(!1),
@@ -139,9 +139,9 @@ let ed = (e) => {
             ew = (0, a.e7)([E.ZP], () => E.ZP.getPremiumTypeSubscription()),
             ek = null != ew ? (0, O.Af)(ew) : null,
             eL = null != ek ? O.ZP.getSkuIdForPlan(ek.planId) : null,
-            eM = null !== eL && eL !== J.Si.TIER_2 ? J.Si.TIER_2 : null,
-            eB = (0, N.n)(),
-            eU = null != eB,
+            eB = null !== eL && eL !== J.Si.TIER_2 ? J.Si.TIER_2 : null,
+            eM = (0, N.n)(),
+            eU = null != eM,
             [eV, eG] = r.useState(!1),
             eF = (0, y.N)(),
             eH = null == eF || null == (t = eF.subscription_trial) ? void 0 : t.sku_id,
@@ -245,7 +245,7 @@ let ed = (e) => {
                         }),
                     !s && eU
                         ? (0, i.jsx)(R.Z, {
-                              localizedPricingPromo: eB,
+                              localizedPricingPromo: eM,
                               smallGap: !0
                           })
                         : (0, i.jsxs)('div', {
@@ -259,14 +259,14 @@ let ed = (e) => {
                                       children: eO
                                           ? (0, i.jsx)(z.Z, {
                                                 ref: Q,
-                                                subscriptionTier: eM,
+                                                subscriptionTier: eB,
                                                 isFullscreen: s || ez,
                                                 entrypoint: k,
                                                 isDarkMode: e_
                                             })
-                                          : (0, i.jsx)(B.ZP, {
+                                          : (0, i.jsx)(M.ZP, {
                                                 ref: eg,
-                                                subscriptionTier: eM,
+                                                subscriptionTier: eB,
                                                 isFullscreen: s || ez,
                                                 isMarketingPageV2Enabled: eO,
                                                 className: l()({
@@ -302,7 +302,7 @@ let ed = (e) => {
                           }),
                     (0, i.jsxs)('div', {
                         className: en.promoBannerContainer,
-                        children: [(0, i.jsx)(A.Z, { isFullScreen: s }), s && eU && (0, i.jsx)(P.Z, { localizedPricingPromo: eB })]
+                        children: [(0, i.jsx)(A.Z, { isFullScreen: s }), s && eU && (0, i.jsx)(P.Z, { localizedPricingPromo: eM })]
                     }),
                     !eO && eQ,
                     k === J.EZ.UserSettings &&
@@ -356,7 +356,7 @@ let ed = (e) => {
                     (0, i.jsx)(V.Z, {
                         isVisible: !eS && !eN && !eT && eD,
                         isFullscreen: s,
-                        subscriptionTier: eM,
+                        subscriptionTier: eB,
                         isMarketingPageV2: eO
                     }),
                     (0, i.jsx)(o.$, {
@@ -388,7 +388,7 @@ let ed = (e) => {
                                 isFooterVisible: eT,
                                 isDarkMode: e_,
                                 isReducedMotion: ef,
-                                subscriptionTier: eM
+                                subscriptionTier: eB
                             })
                         })
                 ]

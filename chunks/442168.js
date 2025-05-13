@@ -11,7 +11,7 @@ var r = n(255367),
     f = n(569545),
     p = n(314910),
     m = n(83773);
-function E(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,7 +36,7 @@ function E(e) {
     }
     return e;
 }
-let g = { visibility: 'hidden' },
+let E = { visibility: 'hidden' },
     h = {
         precision: 0.0001,
         duration: 300
@@ -67,7 +67,7 @@ function b(e) {
             var e;
             let t = null == (e = O.current) ? void 0 : e.getBoundingClientRect();
             return null == t || n
-                ? g
+                ? E
                 : {
                       width: t.width,
                       height: t.height,
@@ -77,7 +77,7 @@ function b(e) {
         },
         P = (e) => {
             let t = null == y ? void 0 : y.getBoundingClientRect();
-            if (((I.current = t), e.timestamp !== j || null == t || n)) return g;
+            if (((I.current = t), e.timestamp !== j || null == t || n)) return E;
             let { top: r, left: l } = t;
             return {
                 top: r + 36,
@@ -105,7 +105,7 @@ function b(e) {
                 ref: R,
                 keys: (e) => e.timestamp,
                 from: (e) =>
-                    E(
+                    g(
                         {
                             position: 'fixed',
                             visibility: 'hidden',
@@ -114,7 +114,7 @@ function b(e) {
                         b.enabled ? P(e) : w()
                     ),
                 enter: (e) => [
-                    E(
+                    g(
                         {
                             opacity: 1,
                             visibility: 'visible'
@@ -122,10 +122,10 @@ function b(e) {
                         P(e)
                     )
                 ],
-                leave: E(
+                leave: g(
                     { opacity: 0 },
                     !b.enabled &&
-                        E(
+                        g(
                             {
                                 height: 0,
                                 width: 0

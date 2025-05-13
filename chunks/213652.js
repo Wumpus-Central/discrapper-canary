@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => x });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -15,12 +15,12 @@ var r = n(255367),
     g = n(354459),
     b = n(388032),
     _ = n(940221);
-function y(e) {
+function x(e) {
     let { channel: t } = e,
         { parentAnalyticsLocation: n } = (0, a.ZP)(),
-        y = (0, l.e7)([f.Z], () => f.Z.getSelectedParticipant(t.id)),
-        x = (null == y ? void 0 : y.type) === g.fO.STREAM,
-        C = (0, l.e7)([p.Z], () => (x ? p.Z.getActiveStreamForStreamKey(y.id) : null)),
+        x = (0, l.e7)([f.Z], () => f.Z.getSelectedParticipant(t.id)),
+        y = (null == x ? void 0 : x.type) === g.fO.STREAM,
+        C = (0, l.e7)([p.Z], () => (y ? p.Z.getActiveStreamForStreamKey(x.id) : null)),
         { ignoreSenderPreference: v } = u.Z.useExperiment({ location: 'ActionBarClipsButton' }, { autoTrackExposure: !1 }),
         { viewerClippingAllowed: j, isAtMaxSavingClipOperations: O } = (0, l.cj)([s.Z], () => ({
             viewerClippingAllowed: null != C && (s.Z.isViewerClippingAllowedForUser(C.ownerId) || v),
@@ -28,7 +28,7 @@ function y(e) {
         })),
         E = s.Z.getSettings().clipsEnabled,
         I = (null == C ? void 0 : C.ownerId) === h.default.getId(),
-        S = !E || !(I || j) || O || null == y,
+        S = !E || !(I || j) || O || null == x,
         P = i.useCallback((e) => {
             var t, n;
             return (0, r.jsx)(
@@ -77,7 +77,7 @@ function y(e) {
     return (0, r.jsx)(d.Z, {
         className: _.actionBarButton,
         onClick: () => {
-            S || ((0, m.v)(n, m.d.CLIP), I ? (0, c.C1)() : (0, c.C1)(y.id));
+            S || ((0, m.v)(n, m.d.CLIP), I ? (0, c.C1)() : (0, c.C1)(x.id));
         },
         disabled: S,
         iconComponent: P,

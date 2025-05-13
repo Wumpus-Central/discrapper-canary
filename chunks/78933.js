@@ -34,8 +34,8 @@ var i = n(255367),
     w = n(537428),
     k = n(695346),
     L = n(158776),
-    M = n(246946),
-    B = n(572004),
+    B = n(246946),
+    M = n(572004),
     U = n(5192),
     V = n(74538),
     G = n(7093),
@@ -93,7 +93,7 @@ function ee(e) {
         ed = k.Cr.useSetting(),
         eu = (0, W.F)(ed),
         { expiringStatusProfileFeedback: em } = p.Y.useExperiment({ location: 'UserProfileAccountPopout' }, { autoTrackExposure: !1 }),
-        eg = (0, l.e7)([M.Z], () => M.Z.hidePersonalInformation),
+        eg = (0, l.e7)([B.Z], () => B.Z.hidePersonalInformation),
         ep = (0, h.p)(),
         eh = k.Sb.useSetting(),
         ef = (0, W.I)(ec),
@@ -353,7 +353,7 @@ function ee(e) {
                                                             }
                                                         }),
                                                         !__OVERLAY__ &&
-                                                            B.wS &&
+                                                            M.wS &&
                                                             eh &&
                                                             (0, i.jsxs)(i.Fragment, {
                                                                 children: [
@@ -364,7 +364,7 @@ function ee(e) {
                                                                         icon: a.VuL,
                                                                         label: X.intl.string(X.t['/AXYnJ']),
                                                                         onClick: () => {
-                                                                            (0, B.JG)(t.id), n();
+                                                                            (0, M.JG)(t.id), n();
                                                                         }
                                                                     })
                                                                 ]

@@ -20,8 +20,8 @@ var r,
     g = n(112724),
     _ = n(812206),
     b = n(283595),
-    y = n(558314),
-    E = n(55563),
+    E = n(558314),
+    y = n(55563),
     x = n(551428),
     v = n(73346),
     O = n(981631),
@@ -204,15 +204,15 @@ class I extends (r = l.Component) {
     }
 }
 S(I, 'defaultProps', { renderFallback: O.dG4 });
-let N = [E.Z, y.Z, b.Z, x.Z];
+let N = [y.Z, E.Z, b.Z, x.Z];
 function T(e) {
     let { skuId: t } = e,
-        n = E.Z.get(t),
+        n = y.Z.get(t),
         r = null != n ? _.Z.getApplication(n.applicationId) : null;
     return {
         sku: n,
         application: r,
-        fetchFailed: E.Z.didFetchingSkuFail(t),
+        fetchFailed: y.Z.didFetchingSkuFail(t),
         inLibrary: null != n && b.Z.hasApplication(n.applicationId, n.applicationId, !0),
         storeListing: null != n ? x.Z.getForSKU(n.id) : null,
         libraryApplication: null != n ? b.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null

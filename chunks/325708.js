@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => x,
+    Z: () => y,
     y: () => _
 }),
     n(388685);
@@ -19,7 +19,7 @@ var r,
     g = n(36645),
     b = n(354494),
     _ = (((r = {})[(r.PostSidebar = 0)] = 'PostSidebar'), (r[(r.ThreadSidebar = 1)] = 'ThreadSidebar'), (r[(r.CallChatSidebar = 2)] = 'CallChatSidebar'), (r[(r.MessageRequestSidebar = 3)] = 'MessageRequestSidebar'), (r[(r.HomeSidebar = 4)] = 'HomeSidebar'), (r[(r.ParticipantsSidebar = 5)] = 'ParticipantsSidebar'), r);
-function y(e) {
+function x(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: r, maxWidth: l, minWidth: o } = e,
         a = (0, h.Z)({
             minDimension: o,
@@ -35,10 +35,10 @@ function y(e) {
         className: b.resizeHandle
     });
 }
-function x(e) {
+function y(e) {
     let { sidebarType: t, maxWidth: n, onWidthChange: r, children: o, floatingLayer: h } = e,
         _ = l.useRef(null),
-        x = (function (e) {
+        y = (function (e) {
             switch (e) {
                 case 0:
                     return 'postSidebarWidth';
@@ -54,12 +54,12 @@ function x(e) {
                     return 'callParticipantsSidebarWidth';
             }
         })(t),
-        [C, v] = l.useState(m.ZP[x]),
+        [C, v] = l.useState(m.ZP[y]),
         j = l.useCallback(
             (e) => {
-                p.ZP.updatedUnsyncedSettings({ [x]: e });
+                p.ZP.updatedUnsyncedSettings({ [y]: e });
             },
-            [x]
+            [y]
         ),
         O = 5 === t ? g.at : g.Co,
         E = (0, g.WL)({
@@ -89,7 +89,7 @@ function x(e) {
                             style: { width: P }
                         }),
                         !E &&
-                            (0, i.jsx)(y, {
+                            (0, i.jsx)(x, {
                                 minWidth: O,
                                 maxWidth: n,
                                 resizableNode: _,

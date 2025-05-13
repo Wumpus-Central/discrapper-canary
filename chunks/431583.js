@@ -15,21 +15,21 @@ var r = n(255367),
     g = n(314897),
     _ = n(594174),
     b = n(626135),
-    y = n(361207),
-    E = n(981631),
+    E = n(361207),
+    y = n(981631),
     x = n(388032),
     v = n(246404);
 let O = [
         {
             getOs: () => x.intl.string(x.t.NK5ySE),
             icon: v.apple,
-            url: () => (0, y.w4)('osx', !1),
+            url: () => (0, E.w4)('osx', !1),
             platformKey: 0
         },
         {
             getOs: () => x.intl.string(x.t.OvKGEx),
             icon: v.windows,
-            url: () => (0, y.w4)('win', !1),
+            url: () => (0, E.w4)('win', !1),
             platformKey: 1
         },
         {
@@ -37,11 +37,11 @@ let O = [
             icon: v.linux,
             url: [
                 {
-                    url: () => (0, y.w4)('linux', !1, 'deb'),
+                    url: () => (0, E.w4)('linux', !1, 'deb'),
                     getText: () => x.intl.string(x.t.Sodsur)
                 },
                 {
-                    url: () => (0, y.w4)('linux', !1, 'tar.gz'),
+                    url: () => (0, E.w4)('linux', !1, 'tar.gz'),
                     getText: () => x.intl.string(x.t.G3U6IS)
                 }
             ],
@@ -52,13 +52,13 @@ let O = [
         {
             getOs: () => x.intl.string(x.t.wCVyNT),
             icon: v.ios,
-            url: () => E.fzT.IOS,
+            url: () => y.fzT.IOS,
             platformKey: 3
         },
         {
             getOs: () => x.intl.string(x.t.wuQpJC),
             icon: v.android,
-            url: () => E.fzT.ANDROID,
+            url: () => y.fzT.ANDROID,
             platformKey: 4
         }
     ],
@@ -131,7 +131,7 @@ let O = [
 function I(e) {
     let { source: t, onClose: n, transitionState: l } = e,
         o = (0, d.e7)([_.default], () => _.default.getCurrentUser()),
-        y = (0, d.e7)([g.default], () => g.default.getFingerprint()),
+        E = (0, d.e7)([g.default], () => g.default.getFingerprint()),
         C = null == o || o.isClaimed(),
         [I, N] = i.useState(
             (function () {
@@ -158,8 +158,8 @@ function I(e) {
             })()
         );
     function T(e) {
-        (null != u.getToken() || null != y) &&
-            b.default.track(E.rMx.DOWNLOAD_APP, {
+        (null != u.getToken() || null != E) &&
+            b.default.track(y.rMx.DOWNLOAD_APP, {
                 platform: e,
                 ptb: !1,
                 released: !0,
@@ -173,7 +173,7 @@ function I(e) {
         N(e);
     }
     i.useEffect(() => {
-        b.default.track(E.rMx.OPEN_MODAL, {
+        b.default.track(y.rMx.OPEN_MODAL, {
             type: 'Download App',
             source: { location: t }
         });
@@ -181,7 +181,7 @@ function I(e) {
     let A = (0, f.Dt)(),
         w = (0, h.Q3)('DownloadAppsModal');
     return (0, r.jsx)(p.f6W, {
-        theme: E.BRd.LIGHT,
+        theme: y.BRd.LIGHT,
         children: (e) =>
             (0, r.jsxs)(p.Y0X, {
                 className: a()(v.downloadApps, w ? void 0 : e),

@@ -1,6 +1,6 @@
 n.d(t, {
     NA: () => L,
-    ZP: () => M,
+    ZP: () => B,
     y$: () => k
 });
 var i,
@@ -62,7 +62,7 @@ function w(e) {
 }
 var k = (((i = {}).SMALL = 'small'), (i.MEDIUM = 'medium'), (i.LARGE = 'large'), i),
     L = (((r = {}).NEW_APP_STYLES = 'newAppStyles'), (r.REFERRAL_PROGRAM = 'referralProgram'), (r.SERVER_PROFILES = 'serverProfiles'), (r.SHOW_YOUR_STYLE = 'showYourStyle'), (r.YOUR_SPACE = 'yourSpace'), (r.EMOJIS = 'emojis'), (r.NO_LIMITS = 'noLimits'), (r.PERMADECOS = 'permadecos'), r);
-let M = () => {
+let B = () => {
     let { analyticsLocations: e } = (0, a.ZP)(l.Z.PREMIUM_MARKETING_BENTO_BOX),
         t = (0, o.Z)({
             scrollPosition: g.Y_.TRY_IT_OUT,

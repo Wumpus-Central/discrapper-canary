@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(316027),
     b = n(502762),
     _ = n(848780),
-    y = n(907179),
-    x = n(228168),
+    x = n(907179),
+    y = n(228168),
     C = n(388032),
     v = n(443773),
     j = n(268293);
@@ -68,7 +68,7 @@ function E(e) {
                 ref: T,
                 user: t,
                 displayProfile: I,
-                themeType: x.lY.SIDEBAR,
+                themeType: y.lY.SIDEBAR,
                 themeOverride: S,
                 children: (0, r.jsx)(l.u2, {
                     children: (0, r.jsxs)('div', {
@@ -100,7 +100,7 @@ function E(e) {
                                     (0, r.jsxs)(a.Kqy, {
                                         align: 'center',
                                         children: [
-                                            (0, r.jsx)(y.Z, {
+                                            (0, r.jsx)(x.Z, {
                                                 isBlocked: P,
                                                 onClick: () => {
                                                     E(),

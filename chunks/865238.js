@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(199902),
     b = n(131951),
     _ = n(594174),
-    y = n(63063),
-    x = n(5192),
+    x = n(63063),
+    y = n(5192),
     C = n(823961),
     v = n(981631),
     j = n(37113),
@@ -83,7 +83,7 @@ function Z(e) {
             size: d.EFr.SIZE_48,
             animateOnHover: !0
         }),
-        G = x.ZP.getName(t.guild_id, t.id, l),
+        G = y.ZP.getName(t.guild_id, t.id, l),
         F = A && !R,
         H = t.hdStreamingUntil;
     if (null == H || null == l || null == T) return null;
@@ -92,14 +92,14 @@ function Z(e) {
             ? O.intl.format(O.t['6LrV9f'], {
                   username: G,
                   num: V,
-                  helpCenterLink: y.Z.getArticleURL(v.BhN.HD_STREAMING_POTION)
+                  helpCenterLink: x.Z.getArticleURL(v.BhN.HD_STREAMING_POTION)
               })
             : l.id === T.id
               ? O.intl.string(O.t.IjKvNT)
               : !0 === A
                 ? O.intl.format(O.t.JkWoqK, {
                       username: G,
-                      helpCenterLink: y.Z.getArticleURL(v.BhN.HD_STREAMING_POTION)
+                      helpCenterLink: x.Z.getArticleURL(v.BhN.HD_STREAMING_POTION)
                   })
                 : O.intl.formatToPlainString(O.t.vNbVXF, { username: G }),
         W = R ? O.intl.string(O.t.o7NIjY) : F ? O.intl.string(O.t.r6xhBw) : O.intl.string(O.t.yKw8Dg);

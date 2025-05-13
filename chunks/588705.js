@@ -73,8 +73,8 @@ let j = () =>
             i,
             a,
             { invite: c, disableUser: j = !1, error: N, flatActivityCount: y = !1, isRegister: C = !1 } = e,
-            P = (0, d.WR)({ location: 'invite' }),
-            { currentUser: T } = (0, l.cj)([_.default], () => ({ currentUser: _.default.getCurrentUser() }));
+            { currentUser: P } = (0, l.cj)([_.default], () => ({ currentUser: _.default.getCurrentUser() })),
+            T = (0, d.WR)({ location: 'invite' }) && null != P;
         if (null == c) return null;
         let A = null != c.guild ? new m.ZP(c.guild) : null,
             Z = null != c.channel ? (0, p.jD)(c.channel) : null,
@@ -186,7 +186,7 @@ let j = () =>
                           total: c.approximate_member_count,
                           flat: y
                       }),
-                P ? (0, r.jsx)(h.R, {}) : (0, r.jsx)(o.jQ, { user: T })
+                T ? (0, r.jsx)(h.R, {}) : (0, r.jsx)(o.jQ, { user: P })
             ]
         });
     };

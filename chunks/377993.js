@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(823415),
     b = n(670188),
     _ = n(158776),
-    y = n(699516),
-    x = n(111583),
+    x = n(699516),
+    y = n(111583),
     C = n(594174),
     v = n(626135),
     j = n(585483),
@@ -56,12 +56,13 @@ let A = [],
     w = I.ZP.getEnableHardwareAcceleration();
 function R(e) {
     let { user: t, channel: a, status: u, activities: d } = e,
-        p = (0, o.e7)([x.Z], () => null != x.Z.getTypingUsers(a.id)[t.id]),
+        p = (0, o.e7)([y.Z], () => null != y.Z.getTypingUsers(a.id)[t.id]),
         f = (0, o.e7)([C.default], () => C.default.getCurrentUser()),
         v = (0, o.e7)([_.Z], () => _.Z.isMobileOnline(t.id)),
-        O = (0, o.e7)([y.Z], () => y.Z.getNickname(t.id)),
+        O = (0, o.e7)([x.Z], () => x.Z.getNickname(t.id)),
         I = (0, h.Z)(t.id),
-        N = (e) => {
+        N = i.useRef(null),
+        A = (e) => {
             (0, s.jW)(e, async () => {
                 let { default: e } = await Promise.all([n.e('79695'), n.e('98783'), n.e('14126')]).then(n.bind(n, 354589));
                 return (n) => {
@@ -91,7 +92,7 @@ function R(e) {
                 };
             });
         },
-        A = () => {
+        R = () => {
             let e = '@'.concat(E.ZP.getUserTag(t, { decoration: 'never' })),
                 n = '<@'.concat(t.id, '>');
             j.S.dispatch(P.CkL.TEXTAREA_FOCUS, { channelId: a.id }),
@@ -101,21 +102,22 @@ function R(e) {
                 }),
                 c.Z.startTyping(a.id);
         },
-        R = (0, m.K)({
+        k = (0, m.K)({
             location: 'PrivateChannelRecipients',
             user: t
         }),
-        [k, M] = i.useState(!1),
-        L = (0, g.ic)({ location: 'PrivateChannelRecipients' });
+        [M, L] = i.useState(!1),
+        D = (0, g.ic)({ location: 'PrivateChannelRecipients' });
     return (0, r.jsx)(b.Z, {
+        targetElementRef: N,
         user: t,
         channelId: a.id,
-        shouldShowOnHover: L,
+        shouldShowOnHover: D,
         position: l.tq ? 'window_center' : 'left',
         spacing: 16,
-        onShiftClick: A,
-        shouldShow: k,
-        onRequestClose: () => M(!1),
+        onShiftClick: R,
+        shouldShow: M,
+        onRequestClose: () => L(!1),
         children: (e) => {
             var { onClick: n, onMouseDown: i } = e,
                 l = (function (e, t) {
@@ -141,6 +143,7 @@ function R(e) {
                 S.Z,
                 T(
                     {
+                        ref: N,
                         user: t,
                         currentUser: f,
                         isOwner: t.id === a.ownerId,
@@ -151,17 +154,17 @@ function R(e) {
                         activities: d,
                         applicationStream: I,
                         channel: a,
-                        onContextMenu: N,
-                        selected: k,
+                        onContextMenu: A,
+                        selected: M,
                         isMobile: v,
                         nick: O,
-                        nameplate: R,
-                        hideTooltip: L,
+                        nameplate: k,
+                        hideTooltip: D,
                         onClick: (e) => {
-                            e.shiftKey ? null == A || A() : M((e) => !e);
+                            e.shiftKey ? null == R || R() : L((e) => !e);
                         },
                         onMouseDown: (e) => {
-                            k ? e.stopPropagation() : null == i || i(e);
+                            M ? e.stopPropagation() : null == i || i(e);
                         }
                     },
                     l
@@ -186,13 +189,13 @@ function M(e) {
         l = null == n ? void 0 : n.isStaff(),
         { analyticsLocations: s } = (0, d.ZP)(u.Z.MEMBER_LIST),
         { listItems: c } = (0, o.e7)(
-            [y.Z, C.default, _.Z],
+            [x.Z, C.default, _.Z],
             () => {
                 let e = (0, O.T)(t.recipients, C.default),
                     n = {};
                 for (let t of e) {
                     var r, i, l;
-                    y.Z.isFriend(t.id) || t.id === (null == (r = C.default.getCurrentUser()) ? void 0 : r.id)
+                    x.Z.isFriend(t.id) || t.id === (null == (r = C.default.getCurrentUser()) ? void 0 : r.id)
                         ? (n[t.id] = {
                               status: null != (i = _.Z.getStatus(t.id)) ? i : P.Skl.OFFLINE,
                               activities: null != (l = _.Z.getActivities(t.id)) ? l : A

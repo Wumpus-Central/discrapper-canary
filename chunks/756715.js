@@ -82,11 +82,11 @@ function E(e, t) {
     return i;
 }
 function b(e) {
-    var { href: t, onClick: n, className: o, children: _, rel: h, target: E, useDefaultUnderlineStyles: b = !0, title: y, style: O, focusProps: v } = e,
-        I = g(e, ['href', 'onClick', 'className', 'children', 'rel', 'target', 'useDefaultUnderlineStyles', 'title', 'style', 'focusProps']);
+    var { href: t, onClick: n, className: o, children: _, rel: h, target: E, useDefaultUnderlineStyles: b = !0, title: y, style: O, focusProps: v, ref: I } = e,
+        S = g(e, ['href', 'onClick', 'className', 'children', 'rel', 'target', 'useDefaultUnderlineStyles', 'title', 'style', 'focusProps', 'ref']);
     null != t && null == n && (n = u.X.getDefaultLinkInterceptor(t));
-    let S = i.useContext(s.g),
-        T = {
+    let T = i.useContext(s.g),
+        A = {
             className: a()(f.anchor, { [f.anchorUnderlineOnHover]: b }, o),
             href: t,
             onClick: n,
@@ -95,14 +95,26 @@ function b(e) {
             title: null != y ? y : void 0,
             style: null != O ? O : void 0
         };
-    return (null == t || (0, d.B)(t) || ((T.rel = 'noreferrer noopener'), (T.target = '_blank')), S && delete T.href, null != n)
+    return (null == t || (0, d.B)(t) || ((A.rel = 'noreferrer noopener'), (A.target = '_blank')), T && delete A.href, null != n)
         ? (0, r.jsx)(
               l.P,
-              m(p({ tag: 'a' }, I, T), {
+              m(p({ tag: 'a' }, S, A), {
                   onClick: n,
                   focusProps: v,
+                  innerRef: I,
                   children: _
               })
           )
-        : (0, r.jsx)(c.t, m(p({}, v), { children: (0, r.jsx)('a', m(p({}, I, T), { children: _ })) }));
+        : (0, r.jsx)(
+              c.t,
+              m(p({}, v), {
+                  children: (0, r.jsx)(
+                      'a',
+                      m(p({}, S, A), {
+                          ref: I,
+                          children: _
+                      })
+                  )
+              })
+          );
 }

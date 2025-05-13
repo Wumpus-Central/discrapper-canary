@@ -11,28 +11,8 @@ function a(e) {
     if (null != e) return 'starting_guild_id' in e ? e.starting_guild_id : void 0;
 }
 n.d(t, {
-    dK: () => l,
     hu: () => a,
     jS: () => i,
     pY: () => r,
     wq: () => o
-}),
-    n(35282);
-let s = /^i-[^-]+-cl-[^-]+-(\d+)-(\d+)$/;
-function l(e) {
-    if ('string' != typeof e)
-        return {
-            guildId: void 0,
-            channelId: void 0
-        };
-    let t = e.match(s);
-    return null == t
-        ? {
-              guildId: void 0,
-              channelId: void 0
-          }
-        : {
-              guildId: '0' === t[1] ? void 0 : t[1],
-              channelId: '0' === t[2] ? void 0 : t[2]
-          };
-}
+});

@@ -23,7 +23,7 @@ function d() {
     let [e, t] = i.useState(null),
         [n, r] = i.useState(null),
         [o, a] = i.useState(null),
-        [c, u] = i.useState(null),
+        [c, u] = i.useState(i.createRef()),
         d = i.useCallback((e) => {
             t(e.interactionType), r(e.interactionSource), a(e.interactionSourceId);
         }, []),

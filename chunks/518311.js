@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => e_,
-    l: () => ey
+    l: () => ex
 }),
     n(642613),
     n(415506),
@@ -24,8 +24,8 @@ var r,
     g = n(26151),
     b = n(493683),
     _ = n(529103),
-    y = n(447543),
-    x = n(708690),
+    x = n(447543),
+    y = n(708690),
     C = n(194359),
     v = n(425493),
     j = n(461745),
@@ -249,7 +249,7 @@ class em extends (r = l.PureComponent) {
     }
     componentDidMount() {
         let { channel: e } = this.props;
-        m.Z.wait(() => x.Z.open(null == e ? void 0 : e.id));
+        m.Z.wait(() => y.Z.open(null == e ? void 0 : e.id));
         let t = (0, I.v_)(e);
         Y.default.track(
             en.rMx.OPEN_POPOUT,
@@ -263,7 +263,7 @@ class em extends (r = l.PureComponent) {
             K.S.subscribe(en.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown);
     }
     componentWillUnmount() {
-        K.S.unsubscribe(en.CkL.SCROLL_PAGE_UP, this.scrollPageUp), K.S.unsubscribe(en.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), m.Z.wait(() => x.Z.close());
+        K.S.unsubscribe(en.CkL.SCROLL_PAGE_UP, this.scrollPageUp), K.S.unsubscribe(en.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), m.Z.wait(() => y.Z.close());
     }
     isNotFriends() {
         let { channel: e } = this.props;
@@ -276,7 +276,7 @@ class em extends (r = l.PureComponent) {
         let { channel: e } = this.props;
         if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return;
         let { inviteMaxAgeSeconds: t } = $.Z.getCurrentConfig({ location: '5326c5_1' }, { autoTrackExposure: !1 });
-        y.ZP.createInvite(e.id, { max_age: t }, en.t4x.GROUP_DM);
+        x.ZP.createInvite(e.id, { max_age: t }, en.t4x.GROUP_DM);
     }
     isPartyFull() {
         let { channel: e } = this.props;
@@ -626,14 +626,14 @@ class em extends (r = l.PureComponent) {
                 null == e || e.focus();
             }),
             eo(this, 'focusResult', (e) => {
-                x.Z.select(e);
+                y.Z.select(e);
             }),
             eo(this, 'handleSelect', (e, t) => {
                 let { results: n, channel: r } = this.props;
-                null == t ? x.Z.clear(null == r ? void 0 : r.id) : null != n && this.handleClick(n[t].user.id);
+                null == t ? y.Z.clear(null == r ? void 0 : r.id) : null != n && this.handleClick(n[t].user.id);
             }),
             eo(this, 'handleSelectionChange', (e, t) => {
-                x.Z.select(t);
+                y.Z.select(t);
                 let n = this.scrollerRef.current;
                 null != n &&
                     n.scrollToIndex({
@@ -645,7 +645,7 @@ class em extends (r = l.PureComponent) {
             eo(this, 'handleQueryChange', (e) => {
                 let { channel: t } = this.props,
                     n = (0, I.v_)(t);
-                x.Z.search(e, null == t ? void 0 : t.id),
+                y.Z.search(e, null == t ? void 0 : t.id),
                     null != this._existingTimeout && clearTimeout(this._existingTimeout),
                     (this._existingTimeout = setTimeout(() => {
                         Y.default.track(
@@ -661,11 +661,11 @@ class em extends (r = l.PureComponent) {
             }),
             eo(this, 'handleRemoveUser', (e) => {
                 let t = Array.from(this.props.selectedUsers);
-                x.Z.removeUser(t[e]), this.forceFocus();
+                y.Z.removeUser(t[e]), this.forceFocus();
             }),
             eo(this, 'handleClick', (e) => {
                 let { selectedUsers: t, query: n, channel: r } = this.props;
-                t.has(e) ? x.Z.removeUser(e) : (x.Z.addUser(e), n.length > 0 && x.Z.clear(null == r ? void 0 : r.id)), this.forceFocus();
+                t.has(e) ? y.Z.removeUser(e) : (y.Z.addUser(e), n.length > 0 && y.Z.clear(null == r ? void 0 : r.id)), this.forceFocus();
             }),
             eo(this, 'handleAddFriendNavigation', () => {
                 (0, k.uL)(en.Z5c.FRIENDS), _.Z.setSection(en.pJs.ADD_FRIEND), this.props.onClose();
@@ -744,7 +744,7 @@ class em extends (r = l.PureComponent) {
                 let { channel: e, selectedUsers: t, onClose: n } = this.props,
                     r = Array.from(t);
                 if (null != e) {
-                    let t = ex(Array.from(new Set([...e.recipients, ...r])));
+                    let t = ey(Array.from(new Set([...e.recipients, ...r])));
                     t.size > 0
                         ? (0, f.h7j)(
                               (n) =>
@@ -760,7 +760,7 @@ class em extends (r = l.PureComponent) {
                           )
                         : this.pushToExistingDM(e, r);
                 } else {
-                    let e = ex(r);
+                    let e = ey(r);
                     r.length > 1 && e.size > 0
                         ? (0, f.h7j)(
                               (t) =>
@@ -851,21 +851,21 @@ function e_(e) {
     let { channel: r, iconClassName: o, className: a, icon: s, tooltip: c, tooltipPosition: u = 'bottom', popoutPosition: d = 'bottom', popoutAlign: p = 'right', subscribeToGlobalHotkey: m = !1 } = e,
         g = l.useRef(null),
         [b, _] = l.useState(null != r && r.isGroupDM() && 0 === r.recipients.length),
-        y = l.useCallback(() => _((e) => !e), []);
+        x = l.useCallback(() => _((e) => !e), []);
     l.useEffect(
         () => (
-            m && K.S.subscribe(en.CkL.TOGGLE_DM_CREATE, y),
+            m && K.S.subscribe(en.CkL.TOGGLE_DM_CREATE, x),
             () => {
-                K.S.unsubscribe(en.CkL.TOGGLE_DM_CREATE, y);
+                K.S.unsubscribe(en.CkL.TOGGLE_DM_CREATE, x);
             }
         ),
-        [m, y]
+        [m, x]
     );
-    let x = (0, h.e7)([W.default], () => W.default.getUser(null == r ? void 0 : r.getRecipientId()));
+    let y = (0, h.e7)([W.default], () => W.default.getUser(null == r ? void 0 : r.getRecipientId()));
     return (l.useEffect(() => {
         (0, M._)();
     }, []),
-    (null != (t = null == x ? void 0 : x.bot) && t) || (null != (n = null == x ? void 0 : x.isProvisional) && n))
+    (null != (t = null == y ? void 0 : y.bot) && t) || (null != (n = null == y ? void 0 : y.isProvisional) && n))
         ? null
         : (0, i.jsx)(f.yRy, {
               targetElementRef: g,
@@ -891,7 +891,7 @@ function e_(e) {
                       ee.ZP.Icon,
                       es(ea({}, e), {
                           ref: g,
-                          onClick: y,
+                          onClick: x,
                           icon: null != s ? s : null == r ? f.kL_ : f.ejJ,
                           className: a,
                           iconClassName: o,
@@ -901,7 +901,7 @@ function e_(e) {
                   )
           });
 }
-function ey(e) {
+function ex(e) {
     let { channel: t, className: n, popoutPosition: r = 'bottom', popoutAlign: o = 'right' } = e,
         a = l.useRef(null),
         [s, c] = l.useState(!1),
@@ -944,7 +944,7 @@ function ey(e) {
         })
     );
 }
-function ex(e) {
+function ey(e) {
     let t = eC(e);
     return new Set(
         c()(U.Z.getMutablePrivateChannels())

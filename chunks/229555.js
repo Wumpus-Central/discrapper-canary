@@ -1,65 +1,45 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => p });
 var i = n(255367);
 n(73800);
 var r = n(120356),
     s = n.n(r),
     l = n(793030),
-    a = n(553896),
-    o = n(848572),
-    c = n(787528),
-    d = n(474936),
+    a = n(302221),
+    o = n(553896),
+    c = n(848572),
+    d = n(787528),
     u = n(388032),
     m = n(536564);
 let g = (e, t) =>
-        (null == e ? void 0 : e.status) === o.Vq.EARNED
+        (null == e ? void 0 : e.status) === c.Vq.EARNED
             ? u.intl.format(u.t.Hu4jfn, { date: null != t ? t : new Date() })
-            : (null == e ? void 0 : e.status) === o.Vq.UPCOMING
+            : (null == e ? void 0 : e.status) === c.Vq.UPCOMING
               ? u.intl.format(u.t.E85flp, {
                     date: null != t ? t : new Date(),
                     days: e.daysLeft
                 })
               : null,
-    p = (e) => {
-        switch (e) {
-            case d.VU.PREMIUM_TENURE_1_MONTH:
-                return m.badgeBronzeGlow;
-            case d.VU.PREMIUM_TENURE_3_MONTH:
-                return m.badgeSilverGlow;
-            case d.VU.PREMIUM_TENURE_6_MONTH:
-                return m.badgeGoldGlow;
-            case d.VU.PREMIUM_TENURE_12_MONTH:
-                return m.badgePlatinumGlow;
-            case d.VU.PREMIUM_TENURE_24_MONTH:
-                return m.badgeDiamondGlow;
-            case d.VU.PREMIUM_TENURE_36_MONTH:
-                return m.badgeEmeraldGlow;
-            case d.VU.PREMIUM_TENURE_60_MONTH:
-                return m.badgeRubyGlow;
-            case d.VU.PREMIUM_TENURE_72_MONTH:
-                return m.badgeOpalGlow;
-            default:
-                return;
-        }
-    },
-    h = () => {
+    p = () => {
         var e;
-        let t = (0, o.Rw)(),
-            n = null != (e = (0, o.GG)()) ? e : new Date(),
-            r = (0, c.u)();
+        let t = (0, c.Rw)(),
+            n = null != (e = (0, c.GG)()) ? e : new Date(),
+            r = (0, d.u)();
         if (null == t || null == r) return null;
-        let { id: d, nameUnformatted: h, tenureReqNumMonths: f, hasWideArt: b } = t,
+        let { id: p, nameUnformatted: h, tenureReqNumMonths: f, hasWideArt: b } = t,
             _ = u.intl.string(h),
-            x = (0, a.q)(d, f);
+            x = (0, o.q)(p, f),
+            E = { '--custom-badge-glow-color': (0, a.rj)(t.glowColor, 0.5) };
         return (0, i.jsxs)('div', {
-            className: s()(m.container, p(d)),
+            className: m.container,
+            style: E,
             children: [
                 (0, i.jsx)('div', {}),
                 ' ',
                 (0, i.jsx)('img', {
                     src: r,
                     alt: _,
-                    className: s()(m.badgeImage, m.badgeImageV2, {
-                        [m.upcomingBadge]: t.status === o.Vq.UPCOMING,
+                    className: s()(m.badgeImage, {
+                        [m.upcomingBadge]: t.status === c.Vq.UPCOMING,
                         [m.wide]: b
                     })
                 }),

@@ -1,5 +1,5 @@
 n.d(t, {
-    U: () => E,
+    U: () => g,
     Z: () => h
 }),
     n(539854);
@@ -26,13 +26,13 @@ let m = {
         SIZE_MIN: p.qh / 2,
         SIZE_MAX: p.qh
     },
-    E = (0, a.U)(() => ({
+    g = (0, a.U)(() => ({
         particles: {},
         lastSpawned: {}
     }));
-function g(e, t) {
+function E(e, t) {
     var n;
-    l()(null != (n = E.getState().particles[e.id]) ? n : {}).forEach(t);
+    l()(null != (n = g.getState().particles[e.id]) ? n : {}).forEach(t);
 }
 function h(e) {
     var t, n, r;
@@ -42,24 +42,24 @@ function h(e) {
         I = (0, d.np)(a.x, v),
         w = (0, d.np)(a.y, S),
         { outlineColor: P } = (0, d.bg)(a.userId, O, y, b);
-    g(a, (e) => {
+    E(a, (e) => {
         (e.x += e.xSpeed * window.devicePixelRatio),
             (e.y += e.ySpeed * window.devicePixelRatio),
             (e.opacity -= e.opacitySpeed),
             e.opacity <= 0 &&
                 (0, o.j)(() => {
-                    E.setState((t) => (delete t.particles[a.id][e.id], 0 === Object.keys(t.particles[a.id]).length && delete t.particles[a.id], t));
+                    g.setState((t) => (delete t.particles[a.id][e.id], 0 === Object.keys(t.particles[a.id]).length && delete t.particles[a.id], t));
                 });
     }),
         (function (e, t, n) {
             var r;
-            let a = null != (r = E.getState().lastSpawned[e.id]) ? r : 0,
+            let a = null != (r = g.getState().lastSpawned[e.id]) ? r : 0,
                 u = Date.now();
             !(a + 100 > u) &&
                 e.state !== c.f.STOP &&
                 (0.8 >= Math.random() || a + 300 < u) &&
                 (0, o.j)(() => {
-                    E.setState((r) => {
+                    g.setState((r) => {
                         var a;
                         let o = null != (a = r.particles[e.id]) ? a : {},
                             u = l().random(1, 2);
@@ -82,7 +82,7 @@ function h(e) {
         })(a, I, w),
         (0, f.I)(h, I, w, P, p.q2),
         (0, f.T)(h, I, w, a.userId),
-        g(a, (e) =>
+        E(a, (e) =>
             (function (e, t, n) {
                 if (null == t) return;
                 let r = n.size * window.devicePixelRatio,
@@ -92,6 +92,6 @@ function h(e) {
             })(h, _, e)
         ),
         a.lastUpdatedAt + p.FO < Date.now() && (0, u.ZZ)(Z, a),
-        a.state !== c.f.STOP || Object.keys(null != (r = E.getState().particles[a.id]) ? r : {}).length > 0 || j.push(a),
+        a.state !== c.f.STOP || Object.keys(null != (r = g.getState().particles[a.id]) ? r : {}).length > 0 || j.push(a),
         h.restore();
 }

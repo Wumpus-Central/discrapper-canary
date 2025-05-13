@@ -35,36 +35,36 @@ var r = n(255367),
 function D(e) {
     let { guild: t, isStudyRoomNotice: n = !1 } = e,
         l = (0, _.y)(t.id),
-        D = (0, E.k5)(t.id),
-        k = (0, o.e7)([N.Z], () => N.Z.getStageInstanceByChannel(null == l ? void 0 : l.id), [l]),
-        { isStageNoticeHidden: M, isEventNoticeHidden: U } = (0, o.cj)(
+        d = (0, E.k5)(t.id),
+        P = (0, o.e7)([N.Z], () => N.Z.getStageInstanceByChannel(null == l ? void 0 : l.id), [l]),
+        { isStageNoticeHidden: D, isEventNoticeHidden: M } = (0, o.cj)(
             [m.Z],
             () => ({
-                isStageNoticeHidden: m.Z.isLiveChannelNoticeHidden({ stageId: null == k ? void 0 : k.id }),
-                isEventNoticeHidden: m.Z.isLiveChannelNoticeHidden({ eventId: null == D ? void 0 : D.id })
+                isStageNoticeHidden: m.Z.isLiveChannelNoticeHidden({ stageId: null == P ? void 0 : P.id }),
+                isEventNoticeHidden: m.Z.isLiveChannelNoticeHidden({ eventId: null == d ? void 0 : d.id })
             }),
-            [k, D]
+            [P, d]
         ),
-        G = null == l ? void 0 : l.id,
-        B = (0, o.Wu)([C.Z], () => [...new Set(C.Z.getMutableParticipants(G, S.pV.SPEAKER).map((e) => e.user))], [G]),
-        V = (0, o.e7)([C.Z], () => (null != G ? C.Z.getParticipantCount(G, S.pV.AUDIENCE) : 0), [G]),
-        H = (0, o.e7)([j.Z], () => j.Z.can(x.Plq.CONNECT, l)),
-        F = (0, T.Z)(null == l ? void 0 : l.id),
-        z = null == D ? void 0 : D.creator_id,
-        W = (0, o.e7)([A.default], () => A.default.getUser(z), [z]);
+        U = null == l ? void 0 : l.id,
+        G = (0, o.Wu)([C.Z], () => [...new Set(C.Z.getMutableParticipants(U, S.pV.SPEAKER).map((e) => e.user))], [U]),
+        B = (0, o.e7)([C.Z], () => (null != U ? C.Z.getParticipantCount(U, S.pV.AUDIENCE) : 0), [U]),
+        V = (0, o.e7)([j.Z], () => j.Z.can(x.Plq.CONNECT, l)),
+        H = (0, T.Z)(null == l ? void 0 : l.id),
+        F = null == d ? void 0 : d.creator_id,
+        z = (0, o.e7)([A.default], () => A.default.getUser(F), [F]);
     i.useEffect(() => {
-        null != z && (0, u.PR)(z);
-    }, [z]);
+        null != F && (0, u.PR)(F);
+    }, [F]);
     let {
-        noticeType: Y,
-        title: K,
-        location: q,
-        locationIcon: Q,
-        canListenIn: X,
-        buttonText: J,
-        users: $,
-        overflowUsers: ee,
-        onClose: et
+        noticeType: W,
+        title: Y,
+        location: K,
+        locationIcon: q,
+        canListenIn: Q,
+        buttonText: X,
+        users: J,
+        overflowUsers: $,
+        onClose: ee
     } = i.useMemo(
         () =>
             (function (e) {
@@ -262,28 +262,28 @@ function D(e) {
                 }
                 return { noticeType: null };
             })({
-                guildEvent: D,
-                stageInstance: k,
+                guildEvent: d,
+                stageInstance: P,
                 activeChannel: l,
-                canConnect: H,
-                myRole: F,
-                eventCreator: W,
-                speakers: B,
-                listenerCount: V,
-                isEventNoticeHidden: U,
-                isStageNoticeHidden: M,
+                canConnect: V,
+                myRole: H,
+                eventCreator: z,
+                speakers: G,
+                listenerCount: B,
+                isEventNoticeHidden: M,
+                isStageNoticeHidden: D,
                 isStudyRoomNotice: n
             }),
-        [D, k, l, H, F, W, B, V, U, M, n]
+        [d, P, l, V, H, z, G, B, M, D, n]
     );
-    return null == Y
+    return null == W
         ? null
         : (0, r.jsxs)('div', {
               className: R.container,
               children: [
-                  null != et
+                  null != ee
                       ? (0, r.jsx)(c.P3F, {
-                            onClick: et,
+                            onClick: ee,
                             className: R.close,
                             'aria-label': L.intl.string(L.t.WAI6xs),
                             children: (0, r.jsx)(c.Dio, {
@@ -308,110 +308,120 @@ function D(e) {
                           })
                       ]
                   }),
-                  ($.length > 0 || null != ee) &&
+                  (J.length > 0 || null != $) &&
                       (0, r.jsxs)('div', {
                           className: R.participants,
                           children: [
-                              $.map((e) =>
+                              J.map((e) =>
                                   (0, r.jsx)(
-                                      P.Z,
+                                      k,
                                       {
                                           user: e,
-                                          guildId: t.id,
-                                          newAnalyticsLocations: [d.Z.AVATAR],
-                                          clickTrap: !0,
-                                          children: (n) => {
-                                              var i, l;
-                                              return (0, r.jsx)(
-                                                  c.qEK,
-                                                  ((i = (function (e) {
-                                                      for (var t = 1; t < arguments.length; t++) {
-                                                          var n = null != arguments[t] ? arguments[t] : {},
-                                                              r = Object.keys(n);
-                                                          'function' == typeof Object.getOwnPropertySymbols &&
-                                                              (r = r.concat(
-                                                                  Object.getOwnPropertySymbols(n).filter(function (e) {
-                                                                      return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                                                                  })
-                                                              )),
-                                                              r.forEach(function (t) {
-                                                                  var r;
-                                                                  (r = n[t]),
-                                                                      t in e
-                                                                          ? Object.defineProperty(e, t, {
-                                                                                value: r,
-                                                                                enumerable: !0,
-                                                                                configurable: !0,
-                                                                                writable: !0
-                                                                            })
-                                                                          : (e[t] = r);
-                                                              });
-                                                      }
-                                                      return e;
-                                                  })({}, n)),
-                                                  (l = l =
-                                                      {
-                                                          src: e.getAvatarURL(t.id, 24),
-                                                          'aria-label': e.username,
-                                                          size: c.EFr.SIZE_24,
-                                                          className: R.avatar
-                                                      }),
-                                                  Object.getOwnPropertyDescriptors
-                                                      ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
-                                                      : (function (e, t) {
-                                                            var n = Object.keys(e);
-                                                            if (Object.getOwnPropertySymbols) {
-                                                                var r = Object.getOwnPropertySymbols(e);
-                                                                n.push.apply(n, r);
-                                                            }
-                                                            return n;
-                                                        })(Object(l)).forEach(function (e) {
-                                                            Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
-                                                        }),
-                                                  i)
-                                              );
-                                          }
+                                          guildId: t.id
                                       },
                                       e.id
                                   )
                               ),
-                              ee
+                              $
                           ]
                       }),
                   (0, r.jsx)(c.Text, {
                       variant: 'text-md/medium',
                       color: 'header-primary',
                       className: a()(R.title, R.live),
-                      children: K
+                      children: Y
                   }),
                   (0, r.jsxs)('div', {
                       className: R.locationContainer,
                       children: [
-                          Q,
+                          q,
                           (0, r.jsx)(c.Text, {
                               variant: 'text-xs/normal',
                               color: 'text-muted',
                               className: R.location,
-                              children: q
+                              children: K
                           })
                       ]
                   }),
-                  X || 1 === Y
+                  Q || 1 === W
                       ? (0, r.jsx)(c.zxk, {
                             size: c.zxk.Sizes.SMALL,
                             color: c.zxk.Colors.GREEN,
                             onClick: () => {
-                                if (X) null != l && null != l.getGuildId() && ((0, v.Cq)(l), (0, I.XU)(l.getGuildId(), l.id));
+                                if (Q) null != l && null != l.getGuildId() && ((0, v.Cq)(l), (0, I.XU)(l.getGuildId(), l.id));
                                 else {
-                                    if (null == D) return;
-                                    (0, h.bO)({ eventId: D.id });
+                                    if (null == d) return;
+                                    (0, h.bO)({ eventId: d.id });
                                 }
                             },
                             className: R.button,
                             fullWidth: !0,
-                            children: J
+                            children: X
                         })
                       : null
               ]
           });
+}
+function k(e) {
+    let { user: t, guildId: n } = e,
+        l = i.useRef(null);
+    return (0, r.jsx)(P.Z, {
+        targetElementRef: l,
+        user: t,
+        guildId: n,
+        newAnalyticsLocations: [d.Z.AVATAR],
+        clickTrap: !0,
+        children: (e) => {
+            var i, a;
+            return (0, r.jsx)(
+                c.qEK,
+                ((i = (function (e) {
+                    for (var t = 1; t < arguments.length; t++) {
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
+                        'function' == typeof Object.getOwnPropertySymbols &&
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                                })
+                            )),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
+                                    t in e
+                                        ? Object.defineProperty(e, t, {
+                                              value: r,
+                                              enumerable: !0,
+                                              configurable: !0,
+                                              writable: !0
+                                          })
+                                        : (e[t] = r);
+                            });
+                    }
+                    return e;
+                })({}, e)),
+                (a = a =
+                    {
+                        ref: l,
+                        src: t.getAvatarURL(n, 24),
+                        'aria-label': t.username,
+                        size: c.EFr.SIZE_24,
+                        className: R.avatar
+                    }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
+                          }
+                          return n;
+                      })(Object(a)).forEach(function (e) {
+                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
+                      }),
+                i)
+            );
+        }
+    });
 }

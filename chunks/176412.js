@@ -26,8 +26,8 @@ var i,
     Z = n(541099),
     h = n(827498),
     _ = n(346683),
-    A = n(981631),
-    w = n(388032);
+    w = n(981631),
+    A = n(388032);
 let I =
         ((i = (function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -103,7 +103,7 @@ function T(e) {
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: t } = e;
                 a && P.yT(h.ti.ACTIVITY),
-                    (0, v.yw)(A.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
+                    (0, v.yw)(w.rMx.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: i,
                         application_id: t,
                         section_name: r,
@@ -119,9 +119,9 @@ function T(e) {
             onConfirmActivityLaunchChecksAlertOpen: m
         }),
         M = d.Ttl.BRAND,
-        L = null != o ? o : w.intl.string(w.t.zKX8Nj);
+        L = null != o ? o : A.intl.string(A.t.zKX8Nj);
     return (
-        j === s.JS.JOIN ? ((M = d.Ttl.GREEN), (L = w.intl.string(w.t.d9PsMj))) : j !== s.JS.LEAVE || E || ((M = d.Ttl.RED), (L = w.intl.string(w.t['Hi1/aW']))),
+        j === s.JS.JOIN ? ((M = d.Ttl.GREEN), (L = A.intl.string(A.t.d9PsMj))) : j !== s.JS.LEAVE || E || ((M = d.Ttl.RED), (L = A.intl.string(A.t['Hi1/aW']))),
         {
             onActivityItemSelected: D,
             activityAction: j,
@@ -136,7 +136,7 @@ function D(e, t) {
             () =>
                 (0, o.debounce)(
                     (e, t) => {
-                        (0, v.yw)(A.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
+                        (0, v.yw)(w.rMx.APP_LAUNCHER_EMPTY_STATE_ENCOUNTERED, {
                             type: e,
                             source: t
                         });
@@ -154,5 +154,5 @@ function D(e, t) {
     }, [e, t, n, i]);
 }
 function M(e) {
-    g.S.dispatchToLastSubscribed(A.CkL.OPEN_APP_LAUNCHER, { applicationId: e });
+    g.S.dispatchToLastSubscribed(w.CkL.OPEN_APP_LAUNCHER, { applicationId: e });
 }

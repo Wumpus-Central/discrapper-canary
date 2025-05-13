@@ -97,7 +97,7 @@ class E extends i.PureComponent {
         return (0, r.jsx)(
             u.Z,
             {
-                targetElementRef: this.ref,
+                targetElementRef: this.activityDiscordTagRef,
                 user: e,
                 newAnalyticsLocations: [s.Z.USERNAME],
                 clickTrap: !0,
@@ -107,7 +107,7 @@ class E extends i.PureComponent {
                         'span',
                         ((n = b(
                             {
-                                ref: this.ref,
+                                ref: this.activityDiscordTagRef,
                                 className: g.username
                             },
                             t
@@ -159,7 +159,8 @@ class E extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            m(this, 'ref', i.createRef()),
+            m(this, 'activityDiscordTagRef', i.createRef()),
+            m(this, 'playerAvatarRef', i.createRef()),
             m(this, 'renderUserTooltip', (e, t, n) =>
                 (0, r.jsxs)('div', {
                     className: g.tooltip,
@@ -182,6 +183,7 @@ class E extends i.PureComponent {
                     : (0, r.jsx)(
                           u.Z,
                           {
+                              targetElementRef: this.playerAvatarRef,
                               user: e,
                               newAnalyticsLocations: [s.Z.AVATAR],
                               clickTrap: !0,
@@ -194,6 +196,7 @@ class E extends i.PureComponent {
                                               o.qEK,
                                               b(
                                                   {
+                                                      ref: this.playerAvatarRef,
                                                       className: a()(g.playerAvatar, { [g.avatarMasked]: !i }),
                                                       src: e.getAvatarURL(void 0, 32),
                                                       'aria-label': e.username,

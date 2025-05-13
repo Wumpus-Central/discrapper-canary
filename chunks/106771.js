@@ -66,7 +66,9 @@ function h(e) {
         });
     return (0, i.jsx)(l.P3F, {
         className: m.clickable,
-        innerRef: (e) => (j.current = e),
+        innerRef: (e) => {
+            j.current = e;
+        },
         onClick: b,
         onContextMenu: v,
         children: (0, i.jsxs)(l.Rny, {

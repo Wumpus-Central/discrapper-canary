@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(221241),
     b = n(82965),
     _ = n(643720),
-    y = n(127379),
-    x = n(981631),
+    x = n(127379),
+    y = n(981631),
     C = n(393740);
 let v = (e) => {
     let { channel: t, className: n, whichPopoutIsOpen: l, setWhichPopoutIsOpen: v } = e,
@@ -41,11 +41,11 @@ let v = (e) => {
         }, [I, P]),
         G = i.useCallback(
             (e, t) => {
-                S(), Z(!P), l === y.D.EMOJI ? null == v || v(void 0) : null == v || v(y.D.EMOJI), (!j || P) && (null == t || t(e));
+                S(), Z(!P), l === x.D.EMOJI ? null == v || v(void 0) : null == v || v(x.D.EMOJI), (!j || P) && (null == t || t(e));
             },
             [S, P, j, v, l]
         ),
-        F = (j || P) && (l === y.D.EMOJI || null == l);
+        F = (j || P) && (l === x.D.EMOJI || null == l);
     return (0, r.jsx)(s.yRy, {
         shouldShow: F,
         animation: k ? s.yRy.Animation.FADE : s.yRy.Animation.TRANSLATE,
@@ -76,7 +76,7 @@ let v = (e) => {
                 remainingCooldownSeconds: A,
                 className: o()(!k && C.controlButton, n),
                 onKeyDown: (e) => {
-                    e.keyCode === x.yXg.ENTER && e.keyCode === x.yXg.SPACE && G(e, i);
+                    e.keyCode === y.yXg.ENTER && e.keyCode === y.yXg.SPACE && G(e, i);
                 },
                 onClick: (e) => {
                     (0, d.v)(D, d.d.EMOJI), G(e, t);

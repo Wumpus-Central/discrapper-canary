@@ -432,33 +432,34 @@ let j = i.forwardRef((e, t) => {
     );
 });
 function U(e) {
-    let { src: t, status: n, size: i, statusColor: o, isMobile: s = !1, isTyping: l = !1, typingIndicatorRef: f, avatarContentRef: _, isSpeaking: g = !1, statusTooltip: E = !1, statusTooltipDelay: y, statusBackdropColor: v, 'aria-hidden': S = !1, 'aria-label': T, imageClassName: A } = e,
-        N = n !== m.Skl.UNKNOWN ? n : null,
-        C = (0, h.UC)(i),
-        P = null != N ? Math.ceil((C.status * h.D6 - C.status) / 2) : 0,
-        R = C.size + P,
-        L = (0, u.vj)(N, o);
+    let { src: t, status: n, size: i, statusColor: o, isMobile: s = !1, isTyping: l = !1, typingIndicatorRef: f, avatarContentRef: _, isSpeaking: g = !1, statusTooltip: E = !1, statusTooltipDelay: y, statusBackdropColor: v, 'aria-hidden': S = !1, 'aria-label': T, imageClassName: A, ref: N } = e,
+        C = n !== m.Skl.UNKNOWN ? n : null,
+        P = (0, h.UC)(i),
+        R = null != C ? Math.ceil((P.status * h.D6 - P.status) / 2) : 0,
+        L = P.size + R,
+        k = (0, u.vj)(C, o);
     return (0, r.jsx)(
         M,
         I(O({}, e), {
             ariaLabel: T,
             ariaHidden: S,
-            status: N,
-            specs: C,
-            typingOffset: P,
+            status: C,
+            specs: P,
+            typingOffset: R,
             children: (0, r.jsxs)('svg', {
-                width: R,
-                height: R,
-                viewBox: '0 0 '.concat(R, ' ').concat(R),
+                ref: N,
+                width: L,
+                height: L,
+                viewBox: '0 0 '.concat(L, ' ').concat(L),
                 className: a()(b.mask, b.svg),
                 'aria-hidden': !0,
                 children: [
                     (0, r.jsx)('foreignObject', {
                         x: 0,
                         y: 0,
-                        width: C.size,
-                        height: C.size,
-                        mask: 'url(#'.concat(w(N, i, s, l), ')'),
+                        width: P.size,
+                        height: P.size,
+                        mask: 'url(#'.concat(w(C, i, s, l), ')'),
                         children: (0, r.jsx)(j, {
                             ref: _,
                             src: t,
@@ -466,31 +467,31 @@ function U(e) {
                             className: A
                         })
                     }),
-                    null != N && null != v ? x(v, s, C, N) : null,
-                    null != N
+                    null != C && null != v ? x(v, s, P, C) : null,
+                    null != C
                         ? (0, r.jsx)(d.u, {
-                              text: E ? (0, p.u5)(N) : null,
+                              text: E ? (0, p.u5)(C) : null,
                               'aria-label': !1,
                               position: 'top',
-                              spacing: 5 + 1.5 * C.stroke,
+                              spacing: 5 + 1.5 * P.stroke,
                               delay: y,
                               children: (e) =>
                                   (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(
                                               'rect',
-                                              I(O({}, e, D(C, N, s, l)), {
-                                                  fill: L,
-                                                  mask: 'url(#'.concat((0, u.rs)(N, s, l), ')'),
+                                              I(O({}, e, D(P, C, s, l)), {
+                                                  fill: k,
+                                                  mask: 'url(#'.concat((0, u.rs)(C, s, l), ')'),
                                                   className: b.pointerEvents
                                               })
                                           ),
                                           l
                                               ? (0, r.jsx)(c.b, {
                                                     ref: f,
-                                                    dotRadius: C.status / 4,
-                                                    x: C.size - 1.375 * C.status - C.offset,
-                                                    y: C.size - C.status / 1.333 - C.offset
+                                                    dotRadius: P.status / 4,
+                                                    x: P.size - 1.375 * P.status - P.offset,
+                                                    y: P.size - P.status / 1.333 - P.offset
                                                 })
                                               : null
                                       ]

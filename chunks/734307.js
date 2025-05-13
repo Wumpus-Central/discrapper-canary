@@ -54,11 +54,11 @@ function L(e) {
     let { channelId: t } = e;
     return R.nonPositionalChannelIdUpdate(t);
 }
-function M(e) {
+function B(e) {
     let { channel: t } = e;
     return R.nonPositionalChannelIdUpdate(t.id);
 }
-function B(e) {
+function M(e) {
     let { id: t } = e;
     return R.nonPositionalChannelIdUpdate(t);
 }
@@ -256,15 +256,15 @@ let W = new z(c.Z, {
     RECOMPUTE_READ_STATES: D,
     RESORT_THREADS: L,
     SET_RECENTLY_ACTIVE_COLLAPSED: D,
-    THREAD_CREATE: M,
+    THREAD_CREATE: B,
     THREAD_DELETE: function (e) {
         let { channel: t } = e;
         return R.nonPositionalChannelUpdate(t);
     },
     THREAD_LIST_SYNC: k,
-    THREAD_MEMBER_UPDATE: B,
-    THREAD_MEMBERS_UPDATE: B,
-    THREAD_UPDATE: M,
+    THREAD_MEMBER_UPDATE: M,
+    THREAD_MEMBERS_UPDATE: M,
+    THREAD_UPDATE: B,
     TRY_ACK: L,
     UPDATE_CHANNEL_DIMENSIONS: L,
     UPDATE_CHANNEL_LIST_SUBTITLES: function (e) {

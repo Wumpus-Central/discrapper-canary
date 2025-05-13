@@ -158,7 +158,8 @@ function N(e) {
                 e
             );
         })(),
-        P = (0, o.Yzy)(T, {
+        P = i.useRef(null),
+        j = (0, o.Yzy)(T, {
             keys: (e) => {
                 var t, n, r;
                 return null != e
@@ -192,10 +193,11 @@ function N(e) {
         children: [
             (0, r.jsx)('div', {
                 className: v.container,
-                children: P((e, t) =>
+                children: j((e, t) =>
                     null == t
                         ? null
                         : (0, r.jsx)(h.Z, {
+                              targetElementRef: P,
                               position: 'bottom',
                               align: 'left',
                               userId: t.user.id,
@@ -206,6 +208,7 @@ function N(e) {
                                       S(
                                           C(
                                               {
+                                                  ref: P,
                                                   className: v.activityWrapper,
                                                   style: e
                                               },
@@ -239,10 +242,11 @@ function N(e) {
             (0, r.jsx)(E.Or, {
                 popoutPosition: 'bottom',
                 popoutAlign: 'left',
-                children: (e, i, l) =>
+                children: (e, i, l, a) =>
                     (0, r.jsx)(
                         p.JO,
                         S(C({}, l), {
+                            ref: a,
                             className: t,
                             onClick: e,
                             icon: o.iFz,

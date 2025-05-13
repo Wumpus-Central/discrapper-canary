@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => y });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -16,8 +16,8 @@ var i = n(120356),
     g = n(488131),
     _ = n(981631),
     b = n(388032),
-    y = n(955344);
-function E(e) {
+    E = n(955344);
+function y(e) {
     let { message: t, compact: n } = e,
         i = (0, a.e7)([u.Z], () => u.Z.getChannel(d.default.castMessageIdAsChannelId(t.id)));
     return null == i
@@ -45,7 +45,7 @@ function x(e) {
                           children: [
                               (0, r.jsx)('span', { children: b.intl.string(b.t.ZTo4HR) }),
                               (0, r.jsx)('span', {
-                                  className: y.timestamp,
+                                  className: E.timestamp,
                                   children: (0, f.Ye)(l)
                               })
                           ]
@@ -57,19 +57,19 @@ function x(e) {
                                   channel: e
                               }),
                               (0, r.jsx)('span', {
-                                  className: y.timestamp,
+                                  className: E.timestamp,
                                   children: (0, f.Ye)(l)
                               })
                           ]
                       });
         })(t),
-        E = null != u && u > 0;
+        y = null != u && u > 0;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)('div', {
-                className: l()(y.spine, {
-                    [y.cozy]: !i,
-                    [y.systemMessageSpine]: c
+                className: l()(E.spine, {
+                    [E.cozy]: !i,
+                    [E.systemMessageSpine]: c
                 })
             }),
             (0, r.jsx)(o.P3F, {
@@ -117,20 +117,20 @@ function x(e) {
                     });
                 },
                 'aria-roledescription': b.intl.string(b.t['8ipxiY']),
-                className: l()(y.container, { [y.systemMessageContainer]: c }),
+                className: l()(E.container, { [E.systemMessageContainer]: c }),
                 children: (0, r.jsxs)(o.nuw, {
                     children: [
                         (0, r.jsxs)('div', {
-                            className: y.topLine,
+                            className: E.topLine,
                             children: [
                                 (0, r.jsx)(o.nn4, { children: b.intl.string(b.t['7Xm5QE']) }),
                                 (0, r.jsx)('span', {
-                                    className: y.name,
+                                    className: E.name,
                                     children: t.name
                                 }),
                                 (0, r.jsx)('span', {
-                                    className: y.cta,
-                                    'aria-hidden': !E,
+                                    className: E.cta,
+                                    'aria-hidden': !y,
                                     children: (0, p.WE)(u, t.id)
                                 })
                             ]
@@ -140,7 +140,7 @@ function x(e) {
                             'aria-hidden': !0,
                             lineClamp: 1,
                             color: 'header-secondary',
-                            className: y.bottomLine,
+                            className: E.bottomLine,
                             children: d
                         })
                     ]

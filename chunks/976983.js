@@ -112,7 +112,9 @@ function j(e) {
                 }),
             onMouseEnter: () => Z(!0),
             onMouseLeave: () => Z(!1),
-            innerRef: (e) => P(R(e)),
+            innerRef: (e) => {
+                P(R(e));
+            },
             children: [
                 (0, r.jsx)('div', {
                     className: h.dragContainer,

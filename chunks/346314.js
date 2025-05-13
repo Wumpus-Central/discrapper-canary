@@ -177,12 +177,12 @@ function O(e) {
     });
 }
 function v(e) {
-    let { name: t, color: n, roleName: i, dotAlignment: o, className: a, roleColors: s, animateRoleGradient: u } = e,
-        f = b(e, ['name', 'color', 'roleName', 'dotAlignment', 'className', 'roleColors', 'animateRoleGradient']),
-        _ = (0, l.e7)([d.Z], () => d.Z.roleStyle),
-        p = 'username' === _,
-        h = (0, r.jsx)(O, {
-            roleStyle: _,
+    let { name: t, color: n, roleName: i, dotAlignment: o, className: a, roleColors: s, animateRoleGradient: u, ref: f } = e,
+        _ = b(e, ['name', 'color', 'roleName', 'dotAlignment', 'className', 'roleColors', 'animateRoleGradient', 'ref']),
+        p = (0, l.e7)([d.Z], () => d.Z.roleStyle),
+        h = 'username' === p,
+        g = (0, r.jsx)(O, {
+            roleStyle: p,
             name: t,
             color: n,
             roleName: i,
@@ -191,12 +191,13 @@ function v(e) {
             roleColors: s,
             animateRoleGradient: u
         }),
-        g = p ? { color: n } : void 0;
+        y = h ? { color: n } : void 0;
     return (0, r.jsx)(
         c.Anchor,
-        E(m({}, f), {
-            children: h,
-            style: g
+        E(m({}, _), {
+            children: g,
+            style: y,
+            ref: f
         })
     );
 }

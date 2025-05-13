@@ -58,8 +58,10 @@ function d(e, t) {
 }
 function f(e) {
     let { user: t, text: n, channel: l, textClassName: u, onPopoutClosed: f } = e,
-        _ = (0, i.useMemo)(() => [t], [t]);
+        _ = i.useMemo(() => [t], [t]),
+        p = i.useRef(null);
     return (0, r.jsx)(s.Z, {
+        targetElementRef: p,
         participants: _,
         channel: l,
         onPopoutClosed: f,
@@ -69,6 +71,7 @@ function f(e) {
                 d(c({}, e), {
                     tag: 'span',
                     children: (0, r.jsx)(o.xv, {
+                        ref: p,
                         className: u,
                         variant: 'text-sm/semibold',
                         color: 'text-primary',

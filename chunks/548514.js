@@ -31,8 +31,10 @@ var r = n(255367),
 let L = 'start_application_install',
     R = 'launch_activity';
 function Z(e) {
-    let { renderDropdown: t, size: n } = e;
+    let { renderDropdown: t, size: n } = e,
+        a = i.useRef(null);
     return (0, r.jsx)(c.yRy, {
+        targetElementRef: a,
         renderPopout: (e) => {
             let { closePopout: n } = e;
             return t(n);
@@ -70,6 +72,7 @@ function Z(e) {
                     return e;
                 })(
                     {
+                        buttonRef: a,
                         look: c.zxk.Looks.FILLED,
                         size: c.zxk.Sizes.ICON,
                         color: c.zxk.Colors.PRIMARY,

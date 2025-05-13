@@ -1,6 +1,6 @@
 n.d(t, {
     RB: () => O,
-    VH: () => E,
+    VH: () => y,
     Vi: () => j,
     Vu: () => C,
     q7: () => v
@@ -21,14 +21,14 @@ var r = n(692547),
     g = n(178561),
     _ = n(39863),
     b = n(130312);
-let y = {
+let E = {
         CHECKED: s,
         FRIENDS: u,
         SHARE_SCREEN: _,
         NEW_MESSAGE: h,
         GAME_RELATIONSHIP: p
     },
-    E = {
+    y = {
         MISSED_MESSAGES: f,
         FRIEND_REQUEST_REMINDER: d,
         SCHEDULED_GUILD_EVENT: c,
@@ -74,36 +74,36 @@ let y = {
         switch (e) {
             case i.DY.GO_LIVE_PUSH:
                 return {
-                    icon: y.SHARE_SCREEN,
+                    icon: E.SHARE_SCREEN,
                     color: r.Z.colors.BACKGROUND_ACCENT
                 };
             case i.DY.FRIEND_REQUEST_ACCEPTED:
             case i.DY.GAME_FRIEND_REQUEST_ACCEPTED:
                 return {
-                    icon: y.CHECKED,
+                    icon: E.CHECKED,
                     color: r.Z.colors.STATUS_POSITIVE_BACKGROUND
                 };
             case i.DY.FRIEND_REQUEST_PENDING:
             case i.DY.FRIEND_SUGGESTION_CREATED:
                 return {
-                    icon: y.FRIENDS,
+                    icon: E.FRIENDS,
                     color: r.Z.colors.BACKGROUND_ACCENT
                 };
             case i.DY.DM_FRIEND_NUDGE:
                 return {
-                    icon: y.NEW_MESSAGE,
+                    icon: E.NEW_MESSAGE,
                     color: r.Z.colors.BACKGROUND_ACCENT
                 };
             case i.O7.INCOMING_FRIEND_REQUESTS:
             case i.O7.INCOMING_FRIEND_REQUESTS_ACCEPTED:
                 return {
-                    icon: y.FRIENDS,
+                    icon: E.FRIENDS,
                     color: r.Z.colors.BACKGROUND_ACCENT
                 };
             case i.O7.INCOMING_GAME_FRIEND_REQUESTS:
             case i.O7.INCOMING_GAME_FRIEND_REQUESTS_ACCEPTED:
                 return {
-                    icon: y.GAME_RELATIONSHIP,
+                    icon: E.GAME_RELATIONSHIP,
                     color: r.Z.colors.BACKGROUND_ACCENT
                 };
             default:

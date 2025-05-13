@@ -19,8 +19,8 @@ var r = n(255367),
     g = n(906732),
     b = n(358221),
     _ = n(414910),
-    y = n(909820),
-    x = n(493010),
+    x = n(909820),
+    y = n(493010),
     C = n(71127),
     v = n(185935),
     j = n(522651),
@@ -77,16 +77,16 @@ function es(e) {
         h = R.default.getId(),
         f = !(0, s.e7)([b.Z], () => b.Z.isFullscreenInContext(n)) && (!U.isPlatformEmbedded || (U.isPlatformEmbedded && B.ZP.supportsFeature(ee.eRX.POPOUT_WINDOWS))),
         m = null != c && c.type !== et.fO.ACTIVITY && c.user.id !== h,
-        y = i.useMemo(() => {
+        x = i.useMemo(() => {
             var e;
             return null != (e = null == o ? void 0 : o.window) ? e : window;
         }, [o]),
-        x = (0, J.Z)({
+        y = (0, J.Z)({
             channel: t,
             appContext: n,
             popoutOpen: l,
             popoutWindow: o,
-            currentWindow: y
+            currentWindow: x
         }),
         C = n === ee.IlC.POPOUT && U.isPlatformEmbedded && B.ZP.supportsFeature(ee.eRX.POPOUT_WINDOWS);
     return (0, r.jsxs)(r.Fragment, {
@@ -95,7 +95,7 @@ function es(e) {
                 ? (0, r.jsx)(w.Z, {
                       context: (0, _.Z)(c.type),
                       userId: c.user.id,
-                      currentWindow: y,
+                      currentWindow: x,
                       sliderClassName: er.volumeSlider,
                       location: u
                   })
@@ -119,7 +119,7 @@ function es(e) {
                       }
                   })
                 : null,
-            x
+            y
         ]
     });
 }
@@ -145,7 +145,7 @@ function ec(e) {
 function eu(e) {
     let t,
         { channel: n, toggleRequestToSpeakSidebar: l, showRequestToSpeakSidebar: c, popoutWindow: d, popoutWindowAlwaysOnTop: p, popoutOpen: h, chatOpen: _ } = e,
-        { analyticsLocations: x } = (0, g.ZP)(m.Z.VOICE_CONTROL_TRAY),
+        { analyticsLocations: y } = (0, g.ZP)(m.Z.VOICE_CONTROL_TRAY),
         C = (0, f.bp)(),
         v = (0, s.e7)([D.Z], () => D.Z.getVoiceChannelId() === n.id, [n.id]),
         j = (0, s.e7)([L.Z], () => L.Z.can(ee.Plq.CONNECT, n)),
@@ -191,13 +191,13 @@ function eu(e) {
                 P
                     ? null
                     : (0, r.jsx)(g.Gt, {
-                          value: x,
+                          value: y,
                           children: (0, r.jsx)(ec, { channel: n })
                       }),
             renderBottomCenter: () =>
                 v
                     ? (0, r.jsx)(g.Gt, {
-                          value: x,
+                          value: y,
                           children: (0, r.jsx)(X.Z, {
                               channel: n,
                               isOnStartStageScreen: R
@@ -207,7 +207,7 @@ function eu(e) {
             renderBottomRight: () =>
                 v
                     ? (0, r.jsx)(g.Gt, {
-                          value: x,
+                          value: y,
                           children: (0, r.jsx)(es, {
                               channel: n,
                               appContext: C,
@@ -228,7 +228,7 @@ function eu(e) {
             renderChatToasts: () =>
                 !M || _ || S
                     ? null
-                    : (0, r.jsx)(y.ZP, {
+                    : (0, r.jsx)(x.ZP, {
                           children: (0, r.jsx)(Z.Z, {
                               className: o()(er.chatToasts, { [er.rtsSidebarOpen]: c }),
                               channelId: n.id
@@ -308,7 +308,7 @@ function ed(e) {
         k = !O || (O && S === ee.IlC.POPOUT);
     return (0, r.jsx)(g.Gt, {
         value: E,
-        children: (0, r.jsxs)(y.B2, {
+        children: (0, r.jsxs)(x.B2, {
             children: [
                 (0, r.jsxs)('div', {
                     className: er.container,
@@ -345,7 +345,7 @@ function ed(e) {
                             children: [
                                 P &&
                                     k &&
-                                    (0, r.jsx)(x.Z, {
+                                    (0, r.jsx)(y.Z, {
                                         channel: t,
                                         guild: N,
                                         maxWidth: R
@@ -361,7 +361,7 @@ function ed(e) {
                         })
                     ]
                 }),
-                (0, r.jsx)(y.H_, {})
+                (0, r.jsx)(x.H_, {})
             ]
         })
     });

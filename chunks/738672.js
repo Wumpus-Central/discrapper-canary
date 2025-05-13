@@ -11,8 +11,8 @@ function d(e) {
     let { buttonRef: t, dismissed: n, onDismiss: d, renderComponent: p, nudgeAlignIntoViewport: h = !1, skipForceHide: f = !1 } = e,
         m = i.useContext(c.h9),
         [g, b] = i.useState(''),
-        [_, y] = i.useState(!1),
-        x = (0, l.e7)([s.ZP], () => s.ZP.callHeaderHeight),
+        [_, x] = i.useState(!1),
+        y = (0, l.e7)([s.ZP], () => s.ZP.callHeaderHeight),
         C = i.useRef(null),
         v = i.useRef(0);
     i.useEffect(() => {
@@ -22,9 +22,9 @@ function d(e) {
         i.useEffect(() => {
             if (!f) {
                 var e, t;
-                b(String(v.current)), y(void 0 !== x && x < (null != (t = null == (e = C.current) ? void 0 : e.clientHeight) ? t : 300) + 24), (v.current += 1);
+                b(String(v.current)), x(void 0 !== y && y < (null != (t = null == (e = C.current) ? void 0 : e.clientHeight) ? t : 300) + 24), (v.current += 1);
             }
-        }, [x, C, f]);
+        }, [y, C, f]);
     let { preventIdle: j, allowIdle: O } = (0, u.Y)('popup');
     return (null == t ? void 0 : t.current) == null
         ? null

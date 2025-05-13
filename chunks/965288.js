@@ -18,8 +18,8 @@ var r = n(255367),
     g = n(906732),
     b = n(213609),
     _ = n(795318),
-    y = n(670188),
-    x = n(314897),
+    x = n(670188),
+    y = n(314897),
     C = n(271383),
     v = n(709586),
     j = n(5192),
@@ -143,7 +143,7 @@ let Z = i.memo(function (e) {
         let { participant: t, channel: l } = e,
             { user: a, blocked: d } = t,
             v = l.getGuildId(),
-            j = x.default.getId(),
+            j = y.default.getId(),
             { newestAnalyticsLocation: O } = (0, g.ZP)(m.Z.AUDIENCE_TILE),
             Z = (0, f.bp)(),
             T = (0, u.e7)(
@@ -153,9 +153,10 @@ let Z = i.memo(function (e) {
                     return null != v && (null == (e = C.ZP.getMember(v, a.id)) ? void 0 : e.premiumSince) != null;
                 },
                 [v, a.id]
-            );
+            ),
+            A = i.useRef(null);
         s()(null != v, 'Channel cannot be guildless');
-        let A = i.useCallback(
+        let w = i.useCallback(
             (e) => {
                 (0, b.h)({
                     type: c.ImpressionTypes.MENU,
@@ -192,7 +193,8 @@ let Z = i.memo(function (e) {
             },
             [a, j, Z, v, l, O]
         );
-        return (0, r.jsx)(y.Z, {
+        return (0, r.jsx)(x.Z, {
+            targetElementRef: A,
             user: a,
             guildId: l.guild_id,
             channelId: l.id,
@@ -203,11 +205,12 @@ let Z = i.memo(function (e) {
                     P(
                         S(
                             {
+                                innerRef: A,
                                 className: o()(I.tileContainer, {
                                     [I.singleIcon]: T || d,
                                     [I.doubleIcon]: T && d
                                 }),
-                                onContextMenu: A
+                                onContextMenu: w
                             },
                             e
                         ),

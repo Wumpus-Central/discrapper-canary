@@ -96,7 +96,7 @@ let _ = (e) => {
                         })
                 ]
             }),
-        M = () =>
+        B = () =>
             (0, i.jsx)('div', {
                 className: l()({
                     [b.largeBoxArtContainer]: O === p.y$.LARGE,
@@ -139,10 +139,10 @@ let _ = (e) => {
         children:
             j % 2 != 0
                 ? (0, i.jsxs)(i.Fragment, {
-                      children: [(0, i.jsx)(L, {}), (0, i.jsx)(M, {})]
+                      children: [(0, i.jsx)(L, {}), (0, i.jsx)(B, {})]
                   })
                 : (0, i.jsxs)(i.Fragment, {
-                      children: [(0, i.jsx)(M, {}), (0, i.jsx)(L, {})]
+                      children: [(0, i.jsx)(B, {}), (0, i.jsx)(L, {})]
                   })
     });
 };

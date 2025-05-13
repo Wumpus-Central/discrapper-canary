@@ -11,8 +11,8 @@ var r = n(255367),
     f = n(481060),
     p = n(2052),
     m = n(906732),
-    E = n(194082),
-    g = n(484459),
+    g = n(194082),
+    E = n(484459),
     h = n(594174),
     v = n(626135),
     S = n(74538),
@@ -87,7 +87,7 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
     M = (e) => {
         let t,
             i,
-            { participant: o, isUpsellEnabled: u, shape: d, size: g, didTrackUpsellViewed: P, setDidTrackUpsellViewed: A, className: x, premiumIndicator: R } = e,
+            { participant: o, isUpsellEnabled: u, shape: d, size: E, didTrackUpsellViewed: P, setDidTrackUpsellViewed: A, className: x, premiumIndicator: R } = e,
             N = (0, b.Wc)(o),
             { analyticsLocations: C } = (0, m.ZP)(),
             T = null != (0, O.Z)(o);
@@ -137,7 +137,7 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                     f.P3F,
                     w(I({}, e), {
                         onClick: U,
-                        className: a()(_.qualityIndicator, g, E.eE[d], T ? _.qualityIndicatorLowQuality : _.qualityIndicatorFullQuality, { [_.clickable]: k && D }),
+                        className: a()(_.qualityIndicator, E, g.eE[d], T ? _.qualityIndicatorLowQuality : _.qualityIndicatorFullQuality, { [_.clickable]: k && D }),
                         children: [
                             D
                                 ? (0, r.jsx)(f.SrA, {
@@ -169,7 +169,7 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
             { reducedMotion: h } = l.useContext(f.Sfi),
             v = n && null != m;
         l.useEffect(() => {
-            (0, g.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), { dispatchWait: !0 });
+            (0, E.Z)(t.stream.ownerId, t.user.getAvatarURL(t.stream.guildId, 80), { dispatchWait: !0 });
         }, [t]);
         let S = (0, f.Yzy)(
                 v,
@@ -216,8 +216,8 @@ let P = (0, u.Mg)(d.Z.LIVE_INDICATOR_BORDER_RADIUS),
                         (0, r.jsx)(o.animated.div, {
                             style: O,
                             className: _.liveIndicator,
-                            children: (0, r.jsx)(E.ZP, {
-                                look: E.jZ.RED,
+                            children: (0, r.jsx)(g.ZP, {
+                                look: g.jZ.RED,
                                 size: u,
                                 shape: v ? f.Dv2.ROUND_RIGHT : f.Dv2.ROUND
                             })

@@ -13,12 +13,12 @@ var l = t(442837),
     g = t(984933),
     p = t(430824),
     m = t(496675),
-    I = t(626135),
-    f = t(572004),
+    f = t(626135),
+    I = t(572004),
     v = t(482241),
     h = t(951539),
-    C = t(894017),
-    E = t(274311),
+    E = t(894017),
+    C = t(274311),
     b = t(854698),
     x = t(118998),
     T = t(139712),
@@ -74,11 +74,11 @@ function D(e) {
         { canManageGuildEvent: R } = (0, c.XJ)(null != D ? D : n),
         B = R(O),
         w = (0, h.ZP)(O),
-        H = (0, E.T)(null == D ? void 0 : D.id, O.id),
+        H = (0, C.T)(null == D ? void 0 : D.id, O.id),
         { withinStartWindow: M } = (0, b.ub)(P),
         X = (0, l.e7)([m.Z], () => null == D || !D.isGuildVocal() || m.Z.can(L.Plq.CONNECT, D), [D]),
         V = (0, s.J)(A),
-        F = (0, C.Z)(Z, z);
+        F = (0, E.Z)(Z, z);
     function Y(e) {
         e.stopPropagation(), (0, T.Z)(z, Z, A);
     }
@@ -168,8 +168,8 @@ function D(e) {
                         guildId: A,
                         guildEventId: z
                     });
-                    (0, f.JG)(e),
-                        I.default.track(L.rMx.GUILD_SCHEDULED_EVENT_LINK_COPIED, {
+                    (0, I.JG)(e),
+                        f.default.track(L.rMx.GUILD_SCHEDULED_EVENT_LINK_COPIED, {
                             guild_id: A,
                             guild_scheduled_event_id: z
                         });

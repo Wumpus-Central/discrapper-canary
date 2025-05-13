@@ -92,19 +92,17 @@ function k(e) {
 function M(e) {
     let t = O.Z.getChannel(e.channelId);
     if (null == t) return U();
-    (N = v.QZA.OPEN),
-        (a = o = t),
-        (D = 'location' in e && null != e.location ? e.location : null),
-        (i = 'subsection' in e ? e.subsection : null),
-        null != a && (a = a.set('nsfw', a.isNSFW())),
-        (s = O.Z.getChannel(a.parent_id)),
-        (l = a.getGuildId()),
+    (N = v.QZA.OPEN), (a = o = t), (D = 'location' in e && null != e.location ? e.location : null), (i = 'subsection' in e ? e.subsection : null), null != a && (a = a.set('nsfw', a.isNSFW())), (s = O.Z.getChannel(a.parent_id)), (l = a.getGuildId());
+    let n = a.isModeratorReportChannel() ? v.CoT.PERMISSIONS : v.CoT.OVERVIEW;
+    return (
         (C = {}),
         j({
             type: 'CHANNEL_SETTINGS_SET_SECTION',
-            section: null != r ? r : v.CoT.OVERVIEW,
+            section: null != r ? r : n,
             subsection: i
-        });
+        }),
+        !0
+    );
 }
 function j(e) {
     (r = e.section),

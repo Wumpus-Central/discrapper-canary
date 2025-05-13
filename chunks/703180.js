@@ -1,16 +1,16 @@
 n.d(t, {
-    MemberListContentSettingsMenu: () => d,
-    Z: () => p
+    MemberListContentSettingsMenu: () => p,
+    Z: () => h
 });
-var r = n(255367);
-n(73800);
-var i = n(442837),
-    l = n(481060),
-    o = n(485267),
-    a = n(71585),
-    s = n(981631),
-    c = n(388032);
-function u(e) {
+var r = n(255367),
+    i = n(73800),
+    l = n(442837),
+    o = n(481060),
+    a = n(485267),
+    s = n(71585),
+    c = n(981631),
+    u = n(388032);
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,68 +35,71 @@ function u(e) {
     }
     return e;
 }
-let d = (e) => {
+let p = (e) => {
         let { closePopout: t } = e,
-            d = (0, i.e7)([a.Z], () => a.Z.hidden);
-        return (0, r.jsx)(l.v2r, {
+            i = (0, l.e7)([s.Z], () => s.Z.hidden);
+        return (0, r.jsx)(o.v2r, {
             onSelect: () => {},
             navId: 'member-list-settings-menu',
-            onClose: null != t ? t : s.dG4,
-            'aria-label': c.intl.string(c.t.w2jvOT),
-            children: (0, r.jsxs)(l.kSQ, {
+            onClose: null != t ? t : c.dG4,
+            'aria-label': u.intl.string(u.t.w2jvOT),
+            children: (0, r.jsxs)(o.kSQ, {
                 children: [
-                    (0, r.jsx)(l.sNh, {
+                    (0, r.jsx)(o.sNh, {
                         id: 'about',
-                        label: c.intl.string(c.t.pWLGnJ),
-                        icon: l.d3s,
+                        label: u.intl.string(u.t.pWLGnJ),
+                        icon: o.d3s,
                         action: () => {
-                            (0, l.ZDy)(async () => {
+                            (0, o.ZDy)(async () => {
                                 let { default: e } = await n.e('71517').then(n.bind(n, 549505));
-                                return (t) => (0, r.jsx)(e, u({}, t));
+                                return (t) => (0, r.jsx)(e, d({}, t));
                             }),
                                 null == t || t();
                         }
                     }),
-                    (0, r.jsx)(l.S89, {
+                    (0, r.jsx)(o.S89, {
                         id: 'hide',
-                        label: c.intl.string(c.t.AhNYub),
-                        checked: d,
+                        label: u.intl.string(u.t.AhNYub),
+                        checked: i,
                         action: () => {
-                            (0, o.lY)(), null == t || t();
+                            (0, a.lY)(), null == t || t();
                         }
                     })
                 ]
             })
         });
     },
-    p = () =>
-        (0, r.jsx)(l.yRy, {
-            animation: l.yRy.Animation.NONE,
+    h = () => {
+        let e = i.useRef(null);
+        return (0, r.jsx)(o.yRy, {
+            targetElementRef: e,
+            animation: o.yRy.Animation.NONE,
             position: 'bottom',
             align: 'right',
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, r.jsx)(d, { closePopout: t });
+                return (0, r.jsx)(p, { closePopout: t });
             },
-            children: (e) => {
-                var t, n;
+            children: (t) => {
+                var n, i;
                 return (0, r.jsx)(
-                    l.P3F,
-                    ((t = u({}, e)),
-                    (n = n =
+                    o.P3F,
+                    ((n = d({}, t)),
+                    (i = i =
                         {
-                            onClick: (t) => {
-                                t.stopPropagation(), e.onClick(t);
+                            innerRef: e,
+                            onClick: (e) => {
+                                e.stopPropagation(), t.onClick(e);
                             },
                             style: {
                                 width: '12px',
                                 height: '12px',
                                 display: 'flex'
                             },
-                            children: (0, r.jsx)(l.ewm, { size: 'xxs' })
+                            children: (0, r.jsx)(o.ewm, { size: 'xxs' })
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
+                        ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -104,10 +107,11 @@ let d = (e) => {
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(n)).forEach(function (e) {
-                              Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
+                          })(Object(i)).forEach(function (e) {
+                              Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                           }),
-                    t)
+                    n)
                 );
             }
         });
+    };

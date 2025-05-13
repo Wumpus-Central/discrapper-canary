@@ -13,8 +13,8 @@ function d(e) {
         d,
         { channel: p, messages: h, oldestUnreadMessageId: f, treatSpam: m, summaries: g, selectedSummary: b } = e,
         _ = [],
-        y = !1,
-        x = null != f ? o.default.extractTimestamp(f) : null,
+        x = !1,
+        y = null != f ? o.default.extractTimestamp(f) : null,
         C = null;
     return (
         h.forEach((e) => {
@@ -50,7 +50,7 @@ function d(e) {
             let S = _[_.length - 1],
                 P = null,
                 Z = (0, s.DQ)(e);
-            y = y || Z;
+            x = x || Z;
             let N = (function (e, t, n) {
                 if (r.V.NON_COLLAPSIBLE.has(t.type));
                 else if (t.blocked) return u.ys_.MESSAGE_GROUP_BLOCKED;
@@ -70,7 +70,7 @@ function d(e) {
                           _.push(O))
                         : (E = (O = v).content[O.content.length - 1]),
                     [O, E])),
-            f === e.id && null != x)
+            f === e.id && null != y)
                 ? (null != S && S.type === u.ys_.DIVIDER
                       ? (S.unreadId = e.id)
                       : null !== P
@@ -86,15 +86,15 @@ function d(e) {
                               type: u.ys_.DIVIDER,
                               unreadId: e.id
                           }),
-                  (x = null))
-                : null != x &&
-                  o.default.extractTimestamp(e.id) > x &&
+                  (y = null))
+                : null != y &&
+                  o.default.extractTimestamp(e.id) > y &&
                   (e.isFirstMessageInForumPost(p) ||
                       _.push({
                           type: u.ys_.DIVIDER,
                           unreadId: e.id
                       }),
-                  (x = null));
+                  (y = null));
             let T = (0, c.f)(e, p);
             null != T &&
                 _.push({
@@ -133,7 +133,7 @@ function d(e) {
                         isSummaryDivider: !0
                     });
         }),
-        y && (0, s.P1)(p) && i.Z.trackExposure({ location: '416cc9_1' }),
+        x && (0, s.P1)(p) && i.Z.trackExposure({ location: '416cc9_1' }),
         _
     );
 }

@@ -95,7 +95,6 @@ async function g(e) {
                   onExecutedCallback: m,
                   referrerId: g,
                   customId: E,
-                  instanceId: void 0,
                   inviterUserId: b,
                   onConfirmActivityLaunchChecksAlertOpen: y
               }));

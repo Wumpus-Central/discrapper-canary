@@ -55,8 +55,8 @@ function p(e, t) {
     );
 }
 let g = !1,
-    O = {},
-    E = {};
+    E = {},
+    O = {};
 function N(e) {
     let t = !1;
     return (
@@ -67,10 +67,10 @@ function N(e) {
     );
 }
 function m(e) {
-    let t = E[e];
+    let t = O[e];
     if (null == t) return !1;
     let n = t.gameId;
-    return null != O[n] && ((O = f({}, O)), delete O[n][e], 0 === Object.values(O[n]).length && delete O[n]), (E = f({}, E)), delete E[e], !0;
+    return null != E[n] && ((E = f({}, E)), delete E[n][e], 0 === Object.values(E[n]).length && delete E[n]), (O = f({}, O)), delete O[e], !0;
 }
 function y(e) {
     let { user: t, activities: n } = e;
@@ -84,7 +84,7 @@ function y(e) {
                 var n, i;
                 let r = (0, s.Z)(e);
                 if (null == r) return m(t.id);
-                let l = E[t.id];
+                let l = O[t.id];
                 null != l && l.gameId !== r && m(t.id);
                 let a = null != (i = null == (n = e.timestamps) ? void 0 : n.start) ? i : Date.now(),
                     o = {
@@ -93,8 +93,8 @@ function y(e) {
                         startedPlaying: a
                     };
                 return (
-                    (O = p(f({}, O), { [r]: p(f({}, O[r]), { [o.userId]: o }) })),
-                    (E = p(f({}, E), {
+                    (E = p(f({}, E), { [r]: p(f({}, E[r]), { [o.userId]: o }) })),
+                    (O = p(f({}, O), {
                         [o.userId]: {
                             gameId: r,
                             startedPlaying: o.startedPlaying
@@ -113,8 +113,8 @@ function S() {
     return (
         a.Z.needsRefresh() ||
             g ||
-            ((O = {}),
-            (E = {}),
+            ((E = {}),
+            (O = {}),
             (e = !1),
             o.Z.getUserIds().forEach((t) => {
                 let n = c.default.getUser(t);
@@ -135,25 +135,25 @@ class h extends (i = r.ZP.Store) {
         this.waitFor(a.Z), this.syncWith([a.Z], S);
     }
     get games() {
-        return O;
-    }
-    get usersPlaying() {
         return E;
     }
+    get usersPlaying() {
+        return O;
+    }
     get gameIds() {
-        return Object.keys(O);
+        return Object.keys(E);
     }
     getNowPlaying(e) {
-        return O[e];
+        return E[e];
     }
     getUserGame(e) {
-        return E[e];
+        return O[e];
     }
 }
 d(h, 'displayName', 'NowPlayingStore');
 let v = new h(l.Z, {
     CONNECTION_OPEN: function () {
-        (O = {}), (E = {});
+        (E = {}), (O = {});
     },
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { guilds: t, presences: n } = e,
@@ -167,7 +167,7 @@ let v = new h(l.Z, {
         );
     },
     LOGOUT: function () {
-        (O = {}), (E = {});
+        (E = {}), (O = {});
     },
     PRESENCE_UPDATES: function (e) {
         let { updates: t } = e;

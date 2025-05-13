@@ -1,8 +1,8 @@
 n.d(t, {
     JS: () => h,
-    Qv: () => w,
+    Qv: () => A,
     ZP: () => _,
-    fD: () => A,
+    fD: () => w,
     w1: () => I
 }),
     n(997841),
@@ -44,7 +44,7 @@ function _(e) {
             let { embeddedActivity: t } = e;
             return f.id === t.applicationId;
         }),
-        _ = w({
+        _ = A({
             context: n,
             applicationId: f.id
         }),
@@ -58,7 +58,7 @@ function _(e) {
             commandOrigin: p,
             source: s
         }),
-        S = A(f, t.activity);
+        S = w(f, t.activity);
     return {
         imageBackground: P,
         videoUrl: Z,
@@ -69,14 +69,14 @@ function _(e) {
         staffReleasePhase: S
     };
 }
-function A(e, t) {
+function w(e, t) {
     var n;
     let i = null != (n = e.flags) ? n : 0;
     if (!((0, c.yE)(i, Z.udG.EMBEDDED_RELEASED) || (0, c.yE)(i, Z.udG.EMBEDDED_FIRST_PARTY))) return;
     let r = t.client_platform_config[(0, b.Z)((0, u.getOS)())].release_phase;
     return P.eB.includes(r) ? r.replace('_', ' ').replace(/(^\w|\s\w)/g, (e) => e.toUpperCase()) : void 0;
 }
-function w(e) {
+function A(e) {
     let { context: t, applicationId: n, fetchesApplication: i = !0 } = e,
         r = 0,
         l = 'channel' === t.type ? t.channel : void 0,
@@ -94,12 +94,12 @@ function w(e) {
 function I(e) {
     let { applicationId: t, botUserIdForAppDM: n, context: i, locationObject: l, embeddedActivitiesManager: c, onActivityItemSelectedProp: u, launchingComponentId: v, commandOrigin: y, sectionName: b, source: E, fetchesApplication: m = !0, customId: g, referrerId: P, onConfirmActivityLaunchChecksAlertOpen: Z } = e,
         h = (0, a.q)(t, m),
-        _ = w({
+        _ = A({
             context: i,
             applicationId: t,
             fetchesApplication: m
         }),
-        { analyticsLocations: A } = (0, o.ZP)(),
+        { analyticsLocations: w } = (0, o.ZP)(),
         I = (0, O.Z)(),
         j = (0, d.GK)(null != h ? h : void 0);
     switch (_) {
@@ -119,7 +119,7 @@ function I(e) {
                     targetApplicationId: t,
                     locationObject: l,
                     channelId: e,
-                    analyticsLocations: A,
+                    analyticsLocations: w,
                     componentId: v,
                     commandOrigin: y,
                     sectionName: b,
@@ -136,14 +136,12 @@ function I(e) {
                         applicationId: t,
                         activityChannelId: 'channel' === i.type ? i.channel.id : void 0,
                         locationObject: l,
-                        analyticsLocations: A,
+                        analyticsLocations: w,
                         componentId: v,
                         sectionName: b,
                         source: E,
                         customId: g,
-                        referrerId: P,
-                        instanceId: void 0,
-                        isContextlessActivity: !1
+                        referrerId: P
                     }).then((e) => e && (null == u ? void 0 : u({ applicationId: t }))));
             };
         case 2:

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => E });
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -16,8 +16,8 @@ var i = n(442837),
     g = n(934415),
     _ = n(900849),
     b = n(981631);
-function y(e) {
-    let { channel: t, onClick: n, beforeTransition: y, className: E, openChatWithoutConnecting: x } = e,
+function E(e) {
+    let { channel: t, onClick: n, beforeTransition: E, className: y, openChatWithoutConnecting: x } = e,
         v = (0, i.e7)([h.default, f.Z], () => (null == t ? '' : (0, s.F6)(t, h.default, f.Z)), [t]);
     return (0, r.jsx)(l.ua7, {
         text: v,
@@ -26,12 +26,12 @@ function y(e) {
             let { onMouseEnter: i, onMouseLeave: s } = e;
             return (0, r.jsx)(c.Z, {
                 role: 'link',
-                className: E,
+                className: y,
                 onClick: (e) => {
                     e.stopPropagation(),
                         null != n
                             ? n()
-                            : (null != y && y(),
+                            : (null != E && E(),
                               (0, l.pTH)(),
                               (function (e, t) {
                                   let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];

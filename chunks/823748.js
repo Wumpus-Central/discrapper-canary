@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(481060),
     b = n(475179),
     _ = n(239091),
-    y = n(377993),
-    x = n(697309),
+    x = n(377993),
+    y = n(697309),
     C = n(457868),
     v = n(561472),
     j = n(36311),
@@ -69,8 +69,8 @@ var r = n(255367),
     eg = n(134483),
     eb = n(703656),
     e_ = n(359110),
-    ey = n(854709),
-    ex = n(14091),
+    ex = n(854709),
+    ey = n(14091),
     eC = n(6025),
     ev = n(897473),
     ej = n(922482),
@@ -317,7 +317,7 @@ class tl extends i.PureComponent {
         else if (o === e3.ULH.MEMBERS)
             switch (t.type) {
                 case e3.d4z.GROUP_DM:
-                    return (0, r.jsx)(y.Z, { channel: t }, 'private-channel-recipients-'.concat(t.id));
+                    return (0, r.jsx)(x.Z, { channel: t }, 'private-channel-recipients-'.concat(t.id));
                 case e3.d4z.GUILD_DIRECTORY:
                 case e3.d4z.GUILD_FORUM:
                 case e3.d4z.GUILD_MEDIA:
@@ -341,7 +341,7 @@ class tl extends i.PureComponent {
                             'channel-members-'.concat(t.id)
                         );
             }
-        else if (o === e3.ULH.SEARCH && null != e) return (0, r.jsx)(ex.Z, { searchId: e });
+        else if (o === e3.ULH.SEARCH && null != e) return (0, r.jsx)(ey.Z, { searchId: e });
         return null;
     }
     openChannelModal() {
@@ -419,7 +419,7 @@ class tl extends i.PureComponent {
         let u = (null == t ? void 0 : t.type) != null && e3.TPd.GUILD_THREADS_ONLY.has(t.type) ? 528 : 450,
             d = s - e3.PrS - u;
         return (
-            c && (d += x.qO),
+            c && (d += y.qO),
             (0, r.jsx)(eQ.Z, {
                 sidebarType: (null == t ? void 0 : t.type) != null && e3.TPd.GUILD_THREADS_ONLY.has(t.type) ? eQ.y.PostSidebar : eQ.y.ThreadSidebar,
                 maxWidth: d,
@@ -683,8 +683,8 @@ class tl extends i.PureComponent {
                                         guildId: l,
                                         channelId: e.id,
                                         channelType: e.type,
-                                        hideSearch: e.isDirectory() || (p && !(0, ey.X)()),
-                                        showDivider: p && !(0, ey.X)(),
+                                        hideSearch: e.isDirectory() || (p && !(0, ex.X)()),
+                                        showDivider: p && !(0, ex.X)(),
                                         toolbar: this.renderHeaderToolbar(),
                                         mobileToolbar: this.renderMobileToolbar(),
                                         className: o()(te.title, s),
@@ -738,8 +738,8 @@ let to = (0, O.Z)(tl),
             p = (0, h.e7)([eL.Z], () => eL.Z.getChannel(s), [s]),
             g = null == c ? void 0 : c.parent_id,
             _ = (0, h.e7)([eL.Z], () => eL.Z.getChannel(g), [g]),
-            y = (0, h.e7)([eG.Z], () => eG.Z.getGuild(null == c ? void 0 : c.guild_id), [c]),
-            { needSubscriptionToAccess: x } = (0, X.Z)(null != (t = null == c ? void 0 : c.id) ? t : void 0),
+            x = (0, h.e7)([eG.Z], () => eG.Z.getGuild(null == c ? void 0 : c.guild_id), [c]),
+            { needSubscriptionToAccess: y } = (0, X.Z)(null != (t = null == c ? void 0 : c.id) ? t : void 0),
             C = (0, h.e7)(
                 [w.Z],
                 () => {
@@ -783,8 +783,8 @@ let to = (0, O.Z)(tl),
             Y = (0, h.e7)([w.Z, S.ZP], () => (null != S.ZP.getConnectedActivityLocation() && S.ZP.getActivityPanelMode() === e7.Ez.PANEL ? (S.ZP.getFocusedLayout() === e7.MI.NO_CHAT ? e3.AEg.NO_CHAT : e3.AEg.NORMAL) : null != a ? w.Z.getLayout(a) : e3.AEg.NORMAL), [a]),
             q = (0, h.e7)([w.Z], () => (null != c ? w.Z.getSelectedParticipant(c.id) : null)),
             K = (0, h.e7)([eY.default], () => eY.default.getCurrentUser()),
-            Q = (0, eh.Z)(null == y ? void 0 : y.id),
-            J = (0, ek.Z)(H, null == y ? void 0 : y.id),
+            Q = (0, eh.Z)(null == x ? void 0 : x.id),
+            J = (0, ek.Z)(H, null == x ? void 0 : x.id),
             { section: $, channelSidebarState: ee } = (0, h.cj)(
                 [eM.ZP],
                 () => ({
@@ -793,7 +793,7 @@ let to = (0, O.Z)(tl),
                 }),
                 [a, c]
             ),
-            et = null == y ? void 0 : y.id,
+            et = null == x ? void 0 : x.id,
             en = (0, h.e7)([eM.ZP], () => eM.ZP.getGuildSidebarState(et), [et]),
             er = (0, h.e7)([eW.Z], () => eW.Z.getGuildId()) === e3.I_8,
             ei = (0, eK.ZP)(c),
@@ -831,7 +831,7 @@ let to = (0, O.Z)(tl),
             (e || t) && (0, G.EW)(f.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: e5.L.AUTO });
         }, [null == c ? void 0 : c.id, eg, ed, ep]);
         let e_ = (0, m.f9)(),
-            ey = (0, U.Q3)('Channel');
+            ex = (0, U.Q3)('Channel');
         return (0, r.jsx)(
             to,
             tr(
@@ -845,22 +845,22 @@ let to = (0, O.Z)(tl),
                         parentChannel: _,
                         voiceChannel: p,
                         layout: Y,
-                        needSubscriptionToAccess: x,
+                        needSubscriptionToAccess: y,
                         isLurking: z,
                         hasModalOpen: e_,
                         section: $,
                         channelSidebarState: ee,
                         guildSidebarState: en,
-                        guild: y,
+                        guild: x,
                         searchId: (0, h.e7)([eV.Z], () => eV.Z.getCurrentSearchId()),
-                        showCall: !x && F,
+                        showCall: !y && F,
                         showActivityPanel: L,
                         nsfwAgree: (0, h.e7)([eB.Z], () => eB.Z.didAgree(null == c ? void 0 : c.guild_id)),
                         isMobile: (0, h.e7)([eF.Z], () => (null == c ? void 0 : c.type) === e3.d4z.DM && eF.Z.isMobileOnline(c.getRecipientId()), [c]),
                         isUnavailable: (0, h.e7)([eU.Z], () => (null == c ? void 0 : c.guild_id) != null && eU.Z.isUnavailable(c.guild_id), [c]),
                         showRealNameModal: Q,
                         showWelcomeModal: !W && J,
-                        showFollowButton: ((null == c ? void 0 : c.type) === e3.d4z.GUILD_ANNOUNCEMENT && (null == y ? void 0 : y.hasFeature(e3.oNc.NEWS))) || !1
+                        showFollowButton: ((null == c ? void 0 : c.type) === e3.d4z.GUILD_ANNOUNCEMENT && (null == x ? void 0 : x.hasFeature(e3.oNc.NEWS))) || !1
                     },
                     (0, h.cj)([eq.Z], () => ({ hasVideo: null != c && eq.Z.hasVideo(c.id) }), [c])
                 ),
@@ -873,7 +873,7 @@ let to = (0, O.Z)(tl),
                     headerGuildBreadcrumbPosition: er ? 'left' : 'right',
                     premiumIndicatorEnabled: !1,
                     hasTextActivityInPanelMode: L,
-                    isRefreshEnabled: ey,
+                    isRefreshEnabled: ex,
                     embeddedActivity: k
                 }
             )

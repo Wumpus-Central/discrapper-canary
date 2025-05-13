@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(576645),
     b = n(921944),
     _ = n(388032),
-    y = n(32709);
-function x(e) {
+    x = n(32709);
+function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -46,7 +46,7 @@ function C(e) {
         l = (0, a.e7)([f.default], () => f.default.getUser(t.hdStreamingBuyerId), [t.hdStreamingBuyerId]),
         [o, d] = (0, i.useState)(!1),
         [h, _] = (0, i.useState)(!1),
-        y = (0, g.bK)(),
+        x = (0, g.bK)(),
         [C, j] = (0, i.useState)(!1);
     (0, u.ZP)(() => {
         t.isHDStreamSplashed && j(!0);
@@ -64,7 +64,7 @@ function C(e) {
                         return (n) =>
                             (0, r.jsx)(
                                 t,
-                                x(
+                                y(
                                     {
                                         markAsDismissed: u,
                                         channel: e
@@ -79,7 +79,7 @@ function C(e) {
         d(!1);
     };
     (0, g.J)(t, () => {
-        if (y) {
+        if (x) {
             _(!0), O();
             return;
         }
@@ -140,11 +140,11 @@ function v(e) {
         animateOnHover: !0
     });
     return (0, r.jsxs)('div', {
-        className: y.trigger,
+        className: x.trigger,
         children: [
             (0, r.jsx)(d.Z, {
                 ref: l,
-                className: y.video,
+                className: x.video,
                 autoPlay: !0,
                 onEnded: t,
                 children: (0, r.jsx)('source', {
@@ -154,11 +154,11 @@ function v(e) {
             }),
             (0, r.jsxs)('div', {
                 ref: a,
-                className: o()(y.content, { [y.masked]: s }),
+                className: o()(x.content, { [x.masked]: s }),
                 children: [
                     (0, r.jsx)(
                         c.qEK,
-                        x(
+                        y(
                             {
                                 src: m,
                                 'aria-label': n.username,
@@ -168,7 +168,7 @@ function v(e) {
                         )
                     ),
                     (0, r.jsxs)('div', {
-                        className: y.text,
+                        className: x.text,
                         children: [
                             !p &&
                                 (0, r.jsx)(c.Text, {
@@ -176,7 +176,7 @@ function v(e) {
                                     children: _.intl.string(_.t['i/nliI'])
                                 }),
                             (0, r.jsx)(c.Text, {
-                                className: y.premium,
+                                className: x.premium,
                                 variant: 'text-sm/normal',
                                 children: _.intl.string(_.t['Fh/mk5'])
                             })

@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(82965),
     b = n(871499),
     _ = n(786915),
-    y = n(402113),
-    x = n(592125),
+    x = n(402113),
+    y = n(592125),
     C = n(271383),
     v = n(944486),
     j = n(594174),
@@ -48,7 +48,7 @@ function F(e) {
         W = (0, T.Z)(),
         Y = (0, s.Wu)([S.ZP], () => S.ZP.getEmbeddedActivitiesForLocation(H), [H]),
         q = (0, N.pY)(H),
-        K = (0, s.e7)([x.Z], () => x.Z.getChannel(q)),
+        K = (0, s.e7)([y.Z], () => y.Z.getChannel(q)),
         X = (0, P.gb)(Y),
         Q = (0, P.uF)(X),
         J = i.useCallback(() => {
@@ -179,7 +179,7 @@ function F(e) {
         (e_ = Array.from(ep.embeddedActivity.userIds)
             .map((e) => j.default.getUser(e))
             .filter((e) => null != e && void 0 !== e));
-    let ey = (e) => {
+    let ex = (e) => {
         var t;
         if (null == e || void 0 === e) return null;
         let n = eg.get(e.id),
@@ -238,7 +238,7 @@ function F(e) {
                                                       size: B,
                                                       max: 6,
                                                       className: U.userAvatars,
-                                                      renderUser: ey
+                                                      renderUser: ex
                                                   }),
                                                   (0, r.jsx)(_.Z, {
                                                       appContext: L.IlC.APP,
@@ -253,7 +253,7 @@ function F(e) {
                                                   })
                                               ]
                                           }),
-                                          (0, r.jsx)(y.Z, {
+                                          (0, r.jsx)(x.Z, {
                                               applicationId: W.id,
                                               location: H,
                                               centerButton: !0,
@@ -290,7 +290,7 @@ function F(e) {
                                               size: B,
                                               max: 6,
                                               className: U.userAvatars,
-                                              renderUser: ey
+                                              renderUser: ex
                                           }),
                                           (0, r.jsxs)('div', {
                                               className: U.footerButtons,
@@ -317,7 +317,7 @@ function F(e) {
                                                       : null,
                                                   (0, r.jsx)('div', {
                                                       className: U.leaveButtonContainer,
-                                                      children: (0, r.jsx)(y.Z, {
+                                                      children: (0, r.jsx)(x.Z, {
                                                           applicationId: W.id,
                                                           location: H,
                                                           centerButton: !0,

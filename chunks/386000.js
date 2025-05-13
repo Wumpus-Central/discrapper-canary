@@ -14,7 +14,7 @@ var r = n(255367),
     m = n(871499),
     g = n(981631);
 function b(e) {
-    var { selfMute: t, serverMute: n, suppress: b, centerButton: _ = !1, awaitingRemote: y, onMouseEnter: x, onMouseLeave: C, onClick: v } = e,
+    var { selfMute: t, serverMute: n, suppress: b, centerButton: _ = !1, awaitingRemote: x, onMouseEnter: y, onMouseLeave: C, onClick: v } = e,
         j = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -39,7 +39,7 @@ function b(e) {
         { squareButtonsEnabled: I, coloredIconsEnabled: S } = (0, h.Z)({ location: 'MuteButton' }),
         P = t || n || b,
         Z = _ ? m.d : m.Z,
-        N = (0, u.Z)(t, n, b, y, E === p.BK.GroupedButtonsRedMic || I),
+        N = (0, u.Z)(t, n, b, x, E === p.BK.GroupedButtonsRedMic || I),
         T = (0, l.O)(P ? 'unmute' : 'mute'),
         A = (0, o.P)(P ? 'unmute' : 'mute'),
         { activeVoice: w } = (0, f.o)(),
@@ -85,7 +85,7 @@ function b(e) {
                 color: U,
                 label: N,
                 onMouseEnter: (e) => {
-                    null == x || x(e), M.onMouseEnter();
+                    null == y || y(e), M.onMouseEnter();
                 },
                 onMouseLeave: (e) => {
                     null == C || C(e), M.onMouseLeave();

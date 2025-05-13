@@ -12,8 +12,8 @@ var i = n(255367),
     g = n(418952);
 let p = r.forwardRef(function (e, t) {
     let { body: n, header: s, artClassName: p, headerClassName: h, contentClassName: f, tryItText: b, dismissText: _, onTryFeature: x, onClose: E, className: C, inlineArt: j = !1, isPremiumFeature: O = !1, shouldUseHorizontalButtons: S = !1, showGIFTag: v = !1, dismissibleContent: T, position: I = 'top', align: N = 'center', art: y, isPremiumEarlyAccess: A = !1, maxWidth: P = 280, hideDismissButton: R = !1, pointerClassName: D, dismissIconClassName: Z, dismissIcon: w, onDismissIconClick: k, tryItButtonColor: L } = e,
-        M = S ? a.zxk.Sizes.LARGE : a.zxk.Sizes.MAX,
-        [B, U] = r.useState(!1),
+        B = S ? a.zxk.Sizes.LARGE : a.zxk.Sizes.MAX,
+        [M, U] = r.useState(!1),
         { ref: V, width: G } = (0, o.ZP)();
     function F(e) {
         (0, c.EW)(T, { dismissAction: e });
@@ -22,8 +22,8 @@ let p = r.forwardRef(function (e, t) {
         r.useEffect(() => {
             var e, t;
             let n = (null != (t = null == (e = V.current) ? void 0 : e.scrollWidth) ? t : 0) + 64;
-            !B && n > P && U(!0);
-        }, [B, G, V, P]),
+            !M && n > P && U(!0);
+        }, [M, G, V, P]),
         r.useEffect(() => {
             (0, c.kk)(T);
         }, [T]),
@@ -95,14 +95,14 @@ let p = r.forwardRef(function (e, t) {
                     }),
                     (0, i.jsx)('div', {
                         ref: V,
-                        className: B || !S ? g.buttonContainerVertical : g.buttonContainerHorizontal,
+                        className: M || !S ? g.buttonContainerVertical : g.buttonContainerHorizontal,
                         children:
                             null != x
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)(a.zxk, {
                                               className: g.button,
-                                              size: M,
+                                              size: B,
                                               onClick: (e) => {
                                                   null == E || E(e), x(e), F(u.L.PRIMARY);
                                               },
@@ -112,7 +112,7 @@ let p = r.forwardRef(function (e, t) {
                                           !R &&
                                               (0, i.jsx)(a.zxk, {
                                                   className: g.button,
-                                                  size: M,
+                                                  size: B,
                                                   onClick: (e) => {
                                                       null == E || E(e), F(u.L.DISMISS);
                                                   },

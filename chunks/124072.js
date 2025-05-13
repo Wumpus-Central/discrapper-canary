@@ -80,60 +80,61 @@ function m(e, t) {
     return i;
 }
 let g = (e) => {
-    var { children: t, className: n, color: o, roleColors: d, iconType: _, onMouseEnter: m, onMouseLeave: g } = e,
-        E = h(e, ['children', 'className', 'color', 'roleColors', 'iconType', 'onMouseEnter', 'onMouseLeave']);
-    let [b, y] = i.useState(!1),
-        { gradientStyle: O, gradientClassname: v } = (0, l.Icv)({
-            primaryColor: null == d ? void 0 : d.primaryColor,
-            secondaryColor: null == d ? void 0 : d.secondaryColor,
-            tertiaryColor: null == d ? void 0 : d.tertiaryColor,
+    var { ref: t, children: n, className: o, color: d, roleColors: _, iconType: m, onMouseEnter: g, onMouseLeave: E } = e,
+        b = h(e, ['ref', 'children', 'className', 'color', 'roleColors', 'iconType', 'onMouseEnter', 'onMouseLeave']);
+    let [y, O] = i.useState(!1),
+        { gradientStyle: v, gradientClassname: I } = (0, l.Icv)({
+            primaryColor: null == _ ? void 0 : _.primaryColor,
+            secondaryColor: null == _ ? void 0 : _.secondaryColor,
+            tertiaryColor: null == _ ? void 0 : _.tertiaryColor,
             roleStyle: 'username',
-            animateGradient: b
+            animateGradient: y
         }),
-        I = i.useCallback(
-            (e) => {
-                y(!0), null == m || m(e);
-            },
-            [y, m]
-        ),
         S = i.useCallback(
             (e) => {
-                y(!1), null == g || g(e);
+                O(!0), null == g || g(e);
             },
-            [y, g]
+            [O, g]
         ),
-        T = {};
+        T = i.useCallback(
+            (e) => {
+                O(!1), null == E || E(e);
+            },
+            [O, E]
+        ),
+        A = {};
     return (
-        null != o &&
-            (T = {
-                color: (0, s.Rf)(o),
-                backgroundColor: b ? (0, s.br)(o, 0.3) : (0, s.br)(o, 0.1)
+        null != d &&
+            (A = {
+                color: (0, s.Rf)(d),
+                backgroundColor: y ? (0, s.br)(d, 0.3) : (0, s.br)(d, 0.1)
             }),
         (0, r.jsx)(
             l.P3F,
-            p(f({}, E), {
+            p(f({}, b), {
+                innerRef: t,
                 tag: 'span',
-                className: a()(n, {
+                className: a()(o, {
                     [u.wrapper]: !0,
-                    interactive: E.onClick
+                    interactive: b.onClick
                 }),
-                onMouseEnter: I,
-                onMouseLeave: S,
-                style: T,
-                tabIndex: null != E.onClick ? 0 : -1,
+                onMouseEnter: S,
+                onMouseLeave: T,
+                style: A,
+                tabIndex: null != b.onClick ? 0 : -1,
                 children:
-                    null != _
+                    null != m
                         ? (0, r.jsx)(c.Z, {
-                              iconType: _,
-                              children: t
+                              iconType: m,
+                              children: n
                           })
-                        : null != d
+                        : null != _
                           ? (0, r.jsx)('span', {
-                                style: f({}, O),
-                                className: v,
-                                children: t
+                                style: f({}, v),
+                                className: I,
+                                children: n
                             })
-                          : t
+                          : n
             })
         )
     );

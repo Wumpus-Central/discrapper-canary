@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => y });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -56,14 +56,15 @@ function _(e, t) {
         e
     );
 }
-function y(e) {
+function x(e) {
     let { channel: t, speaker: l, className: f } = e,
+        x = i.useRef(null),
         { newestAnalyticsLocation: y } = (0, d.ZP)(),
-        x = (0, u.bp)(),
-        { reducedMotion: C } = i.useContext(a.Sfi),
-        v = (0, c.Z)({ userId: l.id }),
-        j = null != l.member ? (0, m.CA)(l.member) : null,
-        O = (e) => {
+        C = (0, u.bp)(),
+        { reducedMotion: v } = i.useContext(a.Sfi),
+        j = (0, c.Z)({ userId: l.id }),
+        O = null != l.member ? (0, m.CA)(l.member) : null,
+        E = (e) => {
             (0, s.jW)(
                 e,
                 async () => {
@@ -82,39 +83,42 @@ function y(e) {
                             })
                         );
                 },
-                { context: x }
+                { context: C }
             );
         };
     return (0, r.jsx)(h.Z, {
+        targetElementRef: x,
         user: l.user,
         guildId: t.guild_id,
         channelId: t.id,
         clickTrap: !0,
         children: (e) =>
             (0, r.jsx)(a.ua7, {
+                targetElementRef: x,
                 text: l.userNick,
                 position: 'bottom',
                 children: (n) =>
                     (0, r.jsx)(
                         a.P3F,
                         _(b({}, n, e), {
+                            innerRef: x,
                             onClick: (t) => {
                                 t.stopPropagation(), e.onClick(t);
                             },
-                            onContextMenu: O,
+                            onContextMenu: E,
                             children: (0, r.jsx)(a.qEK, {
-                                src: null != j ? j : l.user.getAvatarURL(t.guild_id, 24),
+                                src: null != O ? O : l.user.getAvatarURL(t.guild_id, 24),
                                 size: a.EFr.SIZE_24,
                                 className: o()(g.avatar, f),
                                 'aria-label': l.userNick,
-                                isSpeaking: v && !C.enabled
+                                isSpeaking: j && !v.enabled
                             })
                         })
                     )
             })
     });
 }
-function x(e) {
+function y(e) {
     let { speakers: t, channel: n } = e;
     return (0, r.jsx)(f.Z, {
         className: g.summary,
@@ -123,7 +127,7 @@ function x(e) {
         max: 10,
         renderUser: (e, t, i) =>
             (0, r.jsx)(
-                y,
+                x,
                 {
                     channel: n,
                     speaker: e,

@@ -17,14 +17,14 @@ var i = n(442837),
     b = n(679848);
 function _(e) {
     let { channelId: t, showProfile: n = !1, showTrailingDivider: _ = !1 } = e,
-        y = d.default.cast(t),
+        x = d.default.cast(t),
         {
-            joinRequest: x,
+            joinRequest: y,
             isModmin: C,
             guildId: v,
             maxMembers: j
         } = (0, i.cj)([p.Z, c.Z, u.Z], () => {
-            let e = p.Z.getRequest(y),
+            let e = p.Z.getRequest(x),
                 t = c.Z.getGuild(null == e ? void 0 : e.guildId);
             return {
                 joinRequest: e,
@@ -35,8 +35,8 @@ function _(e) {
         }),
         O = (0, i.e7)([s.Z], () => (null != v ? s.Z.getMemberCount(v) : 0)),
         E = null != j && (null != O ? O : 0) >= j,
-        { approveRequest: I, rejectRequest: S, submitting: P } = (0, f.s)(null == x ? void 0 : x.guildId, null == x ? void 0 : x.userId, null == x ? void 0 : x.joinRequestId);
-    return null != x && x.applicationStatus === h.wB.SUBMITTED && C
+        { approveRequest: I, rejectRequest: S, submitting: P } = (0, f.s)(null == y ? void 0 : y.guildId, null == y ? void 0 : y.userId, null == y ? void 0 : y.joinRequestId);
+    return null != y && y.applicationStatus === h.wB.SUBMITTED && C
         ? (0, r.jsxs)('div', {
               className: b.buttons,
               children: [
@@ -101,7 +101,7 @@ function _(e) {
                       color: l.zxk.Colors.RED,
                       onClick: S,
                       size: l.PhG.SMALL,
-                      disabled: P || x.applicationStatus !== h.wB.SUBMITTED,
+                      disabled: P || y.applicationStatus !== h.wB.SUBMITTED,
                       children: g.intl.string(g.t.hDtbs7)
                   }),
                   n &&
@@ -109,8 +109,8 @@ function _(e) {
                           color: l.zxk.Colors.TRANSPARENT,
                           onClick: () => {
                               (0, a.openUserProfileModal)({
-                                  userId: x.userId,
-                                  guildId: x.guildId
+                                  userId: y.userId,
+                                  guildId: y.guildId
                               });
                           },
                           size: l.PhG.SMALL,

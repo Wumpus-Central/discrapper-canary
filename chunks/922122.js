@@ -46,8 +46,10 @@ function _(e) {
             isHovered: b
         }),
         j = i.useCallback(() => x(!0), []),
-        y = i.useCallback(() => x(!1), []);
+        y = i.useCallback(() => x(!1), []),
+        I = i.useRef(null);
     return (0, r.jsx)(c.yRy, {
+        targetElementRef: I,
         renderPopout: (e) => {
             let { closePopout: i } = e;
             return (0, r.jsx)(m.Z, {
@@ -95,6 +97,9 @@ function _(e) {
                         look: 'brand',
                         selectedItem: _ && f ? 'more' : void 0,
                         className: l()(g.tab, { [g.selected]: !_ && f }),
+                        clickableRef: (e) => {
+                            null != e && null != e.ref && (I.current = e.ref);
+                        },
                         'aria-label': h.intl.string(h.t.UKOtz8),
                         children: (0, r.jsxs)('div', {
                             className: g.more,

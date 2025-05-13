@@ -38,17 +38,17 @@ function p(e) {
     return e;
 }
 let m = {},
-    E = {},
     g = {},
+    E = {},
     h = !0,
     v = null;
 function S(e) {
-    if (null == E[e]) {
+    if (null == g[e]) {
         let t = o.default.getUser(e);
         if (null == t) return;
         let n = t.getAvatarURL(null, d.Ks),
             r = new Image();
-        (r.src = n), (E[e] = r);
+        (r.src = n), (g[e] = r);
     }
 }
 class b extends (r = l.ZP.Store) {
@@ -59,10 +59,10 @@ class b extends (r = l.ZP.Store) {
         return null != m[e] ? m[e] : [];
     }
     getAvatarImage(e) {
-        return E[e];
+        return g[e];
     }
     getEmojiImage(e) {
-        return g[e];
+        return E[e];
     }
     getDrawMode() {
         return v;
@@ -98,7 +98,7 @@ let O = new b(i.Z, {
     SHARED_CANVAS_UPDATE_EMOJI_HOSE: function (e) {
         var t, n, r, l, i;
         let { emojiHose: o, streamerId: c, userId: f } = e,
-            E =
+            g =
                 ((l = p({}, o)),
                 (i = i = { type: s.W.EMOJI_HOSE }),
                 Object.getOwnPropertyDescriptors
@@ -114,16 +114,16 @@ let O = new b(i.Z, {
                           Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(i, e));
                       }),
                 l);
-        if (null == m[c]) m[c] = [E];
+        if (null == m[c]) m[c] = [g];
         else {
             let e = m[c].findIndex((e) => e.id === o.id);
-            e >= 0 ? (m[c][e] = p({}, m[c][e], E)) : m[c].push(E);
+            e >= 0 ? (m[c][e] = p({}, m[c][e], g)) : m[c].push(g);
         }
         let h = null != (n = null != (t = o.emojiId) ? t : o.emojiName) ? n : '';
-        if (null == g[h]) {
+        if (null == E[h]) {
             let e = null != o.emojiName ? a.ZP.convertNameToSurrogate(o.emojiName) : null;
-            (g[h] = new Image()),
-                (g[h].src = (0, u.qc)(
+            (E[h] = new Image()),
+                (E[h].src = (0, u.qc)(
                     {
                         id: o.emojiId,
                         name: null != (r = null != e ? e : o.emojiName) ? r : '',

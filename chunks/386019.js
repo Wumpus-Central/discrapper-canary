@@ -22,8 +22,9 @@ function _(e) {
             analyticsLocations: I
         }),
         T = (0, u.yi)(),
-        A = null != (t = null == T ? void 0 : T.interactionPopoutTargetRef) ? t : void 0,
-        N = (0, d.Z)({
+        A = i.useRef(null),
+        N = null != (t = null == T ? void 0 : T.interactionPopoutTargetRef) ? t : A,
+        C = (0, d.Z)({
             entry: h,
             activity: p,
             user: _,
@@ -33,10 +34,10 @@ function _(e) {
             isMenuOpen: O,
             appContext: b
         });
-    return 0 === N.length || _.bot
+    return 0 === C.length || _.bot
         ? null
         : (0, r.jsx)(o.yRy, {
-              targetElementRef: null != y ? y : A,
+              targetElementRef: null != y ? y : N,
               align: 'top',
               position: 'right',
               disablePointerEvents: !1,
@@ -54,7 +55,7 @@ function _(e) {
                           },
                           'aria-label': f.intl.string(f.t.PlAQz8),
                           onSelect: g,
-                          children: (0, r.jsx)(o.kSQ, { children: N })
+                          children: (0, r.jsx)(o.kSQ, { children: C })
                       })
                   });
               },

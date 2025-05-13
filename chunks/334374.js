@@ -10,8 +10,8 @@ function u(e) {
         [s, c] = l.useState(),
         [d, f] = l.useState(),
         [p, m] = l.useState(),
-        E = n.id.split(':').at(-1),
-        g = t === E,
+        g = n.id.split(':').at(-1),
+        E = t === g,
         h = l.useCallback((e, t, n) => {
             var r, l, i;
             let o = n ? a.ZP.getOutboundStats(t) : a.ZP.getInboundStats(e, t);
@@ -19,11 +19,11 @@ function u(e) {
         }, []);
     return (
         l.useEffect(() => {
-            let e = () => h(E, u, g);
+            let e = () => h(g, u, E);
             e();
             let t = setInterval(e, 1000);
             return () => clearInterval(t);
-        }, [g, E, u, h]),
+        }, [E, g, u, h]),
         (0, r.jsxs)('div', {
             className: o.streamInfoContainer,
             children: [
@@ -36,7 +36,7 @@ function u(e) {
                     className: o.infoRow,
                     children: [(0, r.jsx)('span', { children: 'Resolution: ' }), (0, r.jsx)('strong', { children: d })]
                 }),
-                g &&
+                E &&
                     (0, r.jsxs)('div', {
                         className: o.infoRow,
                         children: [(0, r.jsx)('span', { children: 'Bitrate Estimate: ' }), (0, r.jsx)('strong', { children: p })]

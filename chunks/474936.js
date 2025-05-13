@@ -665,49 +665,57 @@ let e4 = ['premium_tenure_1_month_v2', 'premium_tenure_3_month_v2', 'premium_ten
             id: 'premium_tenure_1_month_v2',
             nameUnformatted: a.t.LR1C0d,
             tenureReqNumMonths: 1,
-            hasWideArt: !1
+            hasWideArt: !1,
+            glowColor: '#b54913'
         },
         premium_tenure_3_month_v2: {
             id: 'premium_tenure_3_month_v2',
             nameUnformatted: a.t['rI1/3N'],
             tenureReqNumMonths: 3,
-            hasWideArt: !1
+            hasWideArt: !1,
+            glowColor: '#9e9e9e'
         },
         premium_tenure_6_month_v2: {
             id: 'premium_tenure_6_month_v2',
             nameUnformatted: a.t.VkhVKS,
             tenureReqNumMonths: 6,
-            hasWideArt: !1
+            hasWideArt: !1,
+            glowColor: '#ffa813'
         },
         premium_tenure_12_month_v2: {
             id: 'premium_tenure_12_month_v2',
             nameUnformatted: a.t.gzUfNT,
             tenureReqNumMonths: 12,
-            hasWideArt: !1
+            hasWideArt: !1,
+            glowColor: '#5eacc2'
         },
         premium_tenure_24_month_v2: {
             id: 'premium_tenure_24_month_v2',
             nameUnformatted: a.t.fuwTPj,
             tenureReqNumMonths: 24,
-            hasWideArt: !1
+            hasWideArt: !1,
+            glowColor: '#6d5cf2'
         },
         premium_tenure_36_month_v2: {
             id: 'premium_tenure_36_month_v2',
             nameUnformatted: a.t.qNhNk5,
             tenureReqNumMonths: 36,
-            hasWideArt: !1
+            hasWideArt: !1,
+            glowColor: '#32c102'
         },
         premium_tenure_60_month_v2: {
             id: 'premium_tenure_60_month_v2',
             nameUnformatted: a.t['wvX+eH'],
             tenureReqNumMonths: 60,
-            hasWideArt: !0
+            hasWideArt: !0,
+            glowColor: '#f29cc3'
         },
         premium_tenure_72_month_v2: {
             id: 'premium_tenure_72_month_v2',
             nameUnformatted: a.t['/menIy'],
             tenureReqNumMonths: 72,
-            hasWideArt: !0
+            hasWideArt: !0,
+            glowColor: '#078292'
         }
     };
 var e6 = (function (e) {

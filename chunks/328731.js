@@ -1,17 +1,18 @@
-r.d(t, { Z: () => y });
+r.d(t, { Z: () => j });
 var n = r(255367),
-    l = r(120356),
-    i = r.n(l),
-    o = r(481060),
-    a = r(318374),
-    c = r(5192),
-    s = r(192918),
-    u = r(256139),
-    d = r(91907),
-    p = r(866040),
-    f = r(388032),
-    b = r(103395);
-function O(e) {
+    l = r(73800),
+    i = r(120356),
+    o = r.n(i),
+    a = r(481060),
+    c = r(318374),
+    s = r(5192),
+    u = r(192918),
+    d = r(256139),
+    p = r(91907),
+    f = r(866040),
+    b = r(388032),
+    O = r(103395);
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -36,7 +37,7 @@ function O(e) {
     }
     return e;
 }
-function m(e, t) {
+function y(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,81 +55,95 @@ function m(e, t) {
         e
     );
 }
-function y(e) {
-    let { entry: t, channel: r, className: l } = e,
-        { displayParticipants: y, participant1: j, participant2: g, numOtherParticipants: h, orderedParticipants: v } = (0, s.Z)(t),
-        P = [j, g];
+function j(e) {
+    let { entry: t, channel: r, className: i } = e,
+        j = l.useRef(null),
+        g = l.useRef(null),
+        { displayParticipants: h, participant1: v, participant2: P, numOtherParticipants: x, orderedParticipants: S } = (0, u.Z)(t),
+        w = [v, P];
     return (0, n.jsxs)('div', {
-        className: i()(b.container, l),
+        className: o()(O.container, i),
         children: [
-            y.length > 0
+            h.length > 0
                 ? (0, n.jsxs)(n.Fragment, {
                       children: [
-                          (0, n.jsx)(p.Z, {
-                              participants: v,
+                          (0, n.jsx)(f.Z, {
+                              targetElementRef: j,
+                              participants: S,
                               channel: r,
                               children: (e) =>
                                   (0, n.jsx)(
-                                      o.P3F,
-                                      m(O({ className: b.clickable }, e), {
-                                          children: (0, n.jsx)(a.Z, {
-                                              maxUsers: 3,
-                                              users: y,
-                                              size: o.EFr.SIZE_20,
-                                              hideOverflowCount: !0,
-                                              disableUsernameTooltip: !0
-                                          })
-                                      })
+                                      a.P3F,
+                                      y(
+                                          m(
+                                              {
+                                                  innerRef: j,
+                                                  className: O.clickable
+                                              },
+                                              e
+                                          ),
+                                          {
+                                              children: (0, n.jsx)(c.Z, {
+                                                  maxUsers: 3,
+                                                  users: h,
+                                                  size: a.EFr.SIZE_20,
+                                                  hideOverflowCount: !0,
+                                                  disableUsernameTooltip: !0
+                                              })
+                                          }
+                                      )
                                   )
                           }),
-                          (0, n.jsx)(o.LZC, {
+                          (0, n.jsx)(a.LZC, {
                               size: 6,
                               horizontal: !0
                           })
                       ]
                   })
                 : null,
-            (0, n.jsx)(o.X6q, {
+            (0, n.jsx)(a.X6q, {
                 variant: 'text-sm/semibold',
                 color: 'text-secondary',
-                className: i()(b.truncatedText, b.usersHeader),
+                className: o()(O.truncatedText, O.usersHeader),
                 scaleFontToUserSetting: !0,
-                children: f.intl.format(f.t.rH95Gh, {
-                    user0: c.ZP.getName(r.guild_id, r.id, P[0]),
-                    user1: c.ZP.getName(r.guild_id, r.id, P[1]),
-                    countOthers: h,
+                children: b.intl.format(b.t.rH95Gh, {
+                    user0: s.ZP.getName(r.guild_id, r.id, w[0]),
+                    user1: s.ZP.getName(r.guild_id, r.id, w[1]),
+                    countOthers: x,
                     name0Hook: (e, t) =>
                         (0, n.jsx)(
-                            d.Z,
+                            p.Z,
                             {
                                 text: e,
-                                user: P[0],
+                                user: w[0],
                                 channel: r
                             },
                             t
                         ),
                     name1Hook: (e, t) =>
                         (0, n.jsx)(
-                            d.Z,
+                            p.Z,
                             {
                                 text: e,
-                                user: P[1],
+                                user: w[1],
                                 channel: r
                             },
                             t
                         ),
                     countOthersHook: (e, t) =>
                         (0, n.jsx)(
-                            p.Z,
+                            f.Z,
                             {
-                                participants: v,
+                                targetElementRef: g,
+                                participants: S,
                                 channel: r,
                                 children: (t) =>
                                     (0, n.jsx)(
-                                        u.Z,
-                                        m(O({}, t), {
+                                        d.Z,
+                                        y(m({}, t), {
                                             tag: 'span',
-                                            children: (0, n.jsx)(o.Text, {
+                                            children: (0, n.jsx)(a.Text, {
+                                                ref: g,
                                                 variant: 'text-sm/semibold',
                                                 color: 'text-primary',
                                                 lineClamp: 1,

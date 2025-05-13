@@ -15,8 +15,8 @@ function f(e) {
         f = (0, l.e7)([a.ZP], () => a.ZP.getGuildSidebarState(n), [n]),
         { messagesCount: m, linksCount: g, mediaCount: b } = (0, c.P2)(t, n),
         _ = new Intl.NumberFormat(p.intl.currentLocale).format(m),
-        y = new Intl.NumberFormat(p.intl.currentLocale).format(g),
-        x = new Intl.NumberFormat(p.intl.currentLocale).format(b),
+        x = new Intl.NumberFormat(p.intl.currentLocale).format(g),
+        y = new Intl.NumberFormat(p.intl.currentLocale).format(b),
         C = i.useCallback(
             async (e) => {
                 if (null == f) return;
@@ -78,7 +78,7 @@ function f(e) {
                             : (0, r.jsx)(o.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'interactive-normal',
-                                  children: y
+                                  children: x
                               }),
                     onNavigate: g > 0 ? () => C(c.mw.LINKS) : void 0
                 }),
@@ -102,7 +102,7 @@ function f(e) {
                             : (0, r.jsx)(o.Text, {
                                   variant: 'text-sm/semibold',
                                   color: 'interactive-normal',
-                                  children: x
+                                  children: y
                               }),
                     onNavigate: b > 0 ? () => C(c.mw.MEDIA) : void 0
                 })

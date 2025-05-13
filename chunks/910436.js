@@ -114,7 +114,6 @@ function O(e) {
                             m.Z.EmbeddedActivitySection,
                             {
                                 activity: A,
-                                activityUser: w,
                                 participants: e,
                                 channel: t,
                                 guildId: t.guild_id

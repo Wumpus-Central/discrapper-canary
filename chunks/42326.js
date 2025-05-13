@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     l = n(73800),
     i = n(120356),
@@ -11,10 +11,10 @@ var r = n(255367),
     f = n(618158),
     p = n(981631),
     m = n(388032),
-    E = n(975985);
-function g(e) {
+    g = n(975985);
+function E(e) {
     let { errorMessage: t, className: n, avError: i } = e,
-        g = '',
+        E = '',
         { text: h, node: v } = (function (e) {
             var t;
             if (null == e)
@@ -38,7 +38,7 @@ function g(e) {
                     : i
             };
         })(i);
-    null != t && null != h ? (g = ''.concat(t, ' ').concat(h)) : null != t && (g = t);
+    null != t && null != h ? (E = ''.concat(t, ' ').concat(h)) : null != t && (E = t);
     let [S] = l.useState(new o.V7()),
         [b, O] = l.useState(!1);
     function y() {
@@ -62,7 +62,7 @@ function g(e) {
                         (0, r.jsx)(u.Text, {
                             variant: 'text-sm/semibold',
                             color: 'text-muted',
-                            className: E.errorCodeMessage,
+                            className: g.errorCodeMessage,
                             children: v
                         })
                 ]
@@ -70,7 +70,7 @@ function g(e) {
         }),
         position: 'bottom',
         color: u.FGA.GREY,
-        'aria-label': g,
+        'aria-label': E,
         children: (e) => {
             var t, l;
             return (0, r.jsx)(
@@ -104,7 +104,7 @@ function g(e) {
                     {
                         onMouseEnter: Z,
                         onMouseLeave: y,
-                        className: a()(n, E.root),
+                        className: a()(n, g.root),
                         children: (0, r.jsx)(f.Z, {
                             children: (0, r.jsx)(u.P4T, {
                                 onMouseEnter: Z,
@@ -113,8 +113,8 @@ function g(e) {
                                 width: 20,
                                 height: 20,
                                 color: 'currentColor',
-                                'aria-label': g,
-                                className: E.warningIcon
+                                'aria-label': E,
+                                className: g.warningIcon
                             })
                         })
                     }),

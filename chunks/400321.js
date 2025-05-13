@@ -7,12 +7,12 @@ function a(e) {
     null == d.current[t.id] && (d.current[t.id] = Date.now()), (n.lineCap = 'round'), (n.lineJoin = 'round');
     let p = t.points.map((e) => (0, r.RR)(e, a, o)),
         m = d.current[t.id],
-        E = (e) => m + e.deltaTime,
-        g = (e) => E(e) + 1500 >= Date.now(),
-        h = (e) => E(e) <= Date.now() && g(e),
+        g = (e) => m + e.deltaTime,
+        E = (e) => g(e) + 1500 >= Date.now(),
+        h = (e) => g(e) <= Date.now() && E(e),
         v = p.find(h);
     if (null == v) {
-        g(t.points[t.points.length - 1]) || f.push(t);
+        E(t.points[t.points.length - 1]) || f.push(t);
         return;
     }
     let S = (e, t) => {

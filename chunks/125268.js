@@ -1,12 +1,12 @@
 n.d(t, {
     AX: () => s,
     BR: () => d,
-    Bo: () => g,
+    Bo: () => E,
     Df: () => f,
     LT: () => h,
     ZZ: () => p,
     cV: () => c,
-    fW: () => E,
+    fW: () => g,
     gr: () => m,
     oW: () => u
 });
@@ -75,14 +75,14 @@ function m(e, t, n) {
         streamerId: n
     });
 }
-function E(e, t) {
+function g(e, t) {
     i.Z.dispatch({
         type: 'SHARED_CANVAS_CLEAR_DRAWABLES',
         drawables: e,
         streamerId: t
     });
 }
-function g(e) {
+function E(e) {
     i.Z.dispatch({
         type: 'SHARED_CANVAS_SET_DRAW_MODE',
         drawMode: e

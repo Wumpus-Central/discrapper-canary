@@ -94,21 +94,21 @@ let g = {
 var E = (function (e) {
     return (e.TEXT = 'text'), (e.ICON = 'icon'), (e.BANNER = 'banner'), (e.HOVER = 'hover'), e;
 })({});
-let b = i.forwardRef(function (e, t) {
-    var { action: n, color: i = s.zx.Colors.PRIMARY, themeColor: o = 'primary', className: l, innerClassName: d, onClick: _ } = e,
-        p = h(e, ['action', 'color', 'themeColor', 'className', 'innerClassName', 'onClick']);
+let b = (e) => {
+    var { action: t, color: n = s.zx.Colors.PRIMARY, themeColor: i = 'primary', className: o, innerClassName: l, onClick: d, ref: _ } = e,
+        p = h(e, ['action', 'color', 'themeColor', 'className', 'innerClassName', 'onClick', 'ref']);
     let { trackUserProfileAction: m } = (0, c.KZ)(),
         E = (e) => {
-            null != n && m({ action: n }), null == _ || _(e);
+            null != t && m({ action: t }), null == d || d(e);
         };
     return (0, r.jsx)(
         s.zx,
         f(
             {
-                buttonRef: t,
-                className: a()(u.button, l),
-                innerClassName: a()(u.buttonInner, d),
-                color: a()(i, g[o]),
+                buttonRef: _,
+                className: a()(u.button, o),
+                innerClassName: a()(u.buttonInner, l),
+                color: a()(n, g[i]),
                 look: s.zx.Looks.FILLED,
                 size: s.zx.Sizes.SMALL,
                 onClick: E
@@ -116,13 +116,14 @@ let b = i.forwardRef(function (e, t) {
             p
         )
     );
-});
+};
 function y(e) {
-    var { text: t, icon: n } = e,
-        i = h(e, ['text', 'icon']);
+    var { text: t, icon: n, ref: i } = e,
+        o = h(e, ['text', 'icon', 'ref']);
     return (0, r.jsxs)(
         b,
-        p(f({ 'aria-label': t }, i), {
+        p(f({ 'aria-label': t }, o), {
+            ref: i,
             children: [
                 null != n &&
                     (0, r.jsx)(n, {

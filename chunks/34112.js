@@ -219,7 +219,9 @@ function M(e) {
         }),
         onClick: X,
         onContextMenu: Y,
-        innerRef: (e) => z(V(e)),
+        innerRef: (e) => {
+            z(V(e));
+        },
         'data-dnd-name': u.name,
         'aria-label': P.intl.formatToPlainString(P.t.Vu0AcX, {
             name: u.name,

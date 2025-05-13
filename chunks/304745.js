@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(119315),
     b = n(403404),
     _ = n(906732),
-    y = n(522651),
-    x = n(243778),
+    x = n(522651),
+    y = n(243778),
     C = n(579185),
     v = n(301076),
     j = n(221241),
@@ -49,7 +49,7 @@ function N(e) {
         q = (0, c.bp)() === I.IlC.POPOUT,
         { analyticsLocations: K, parentAnalyticsLocation: X } = (0, _.ZP)(),
         Q = i.useCallback(() => {
-            (0, y.v)(X, y.d.ACTIVITY),
+            (0, x.v)(X, x.d.ACTIVITY),
                 (0, b.Z)({
                     channel: t,
                     openInPopout: q,
@@ -60,7 +60,7 @@ function N(e) {
     k || J.push(o.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, f.Z)(t.id) && !k && J.push(o.z.ACTIVITY_GDM_ROCKET_SPARKLE), k || J.push(o.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP);
     let $ = i.useRef(!1),
         ee = i.useRef(null);
-    return (0, r.jsx)(x.ZP, {
+    return (0, r.jsx)(y.ZP, {
         contentTypes: J,
         children: (e) => {
             let { visibleContent: i, markAsDismissed: l } = e,

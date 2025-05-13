@@ -128,7 +128,6 @@ function B(e) {
                                 channelId: g,
                                 applicationId: r,
                                 isStart: null == E,
-                                instanceId: null != E ? E : void 0,
                                 embeddedActivitiesManager: p,
                                 customId: t,
                                 referrerId: _,

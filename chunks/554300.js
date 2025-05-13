@@ -80,17 +80,17 @@ function g(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let E = i.forwardRef(function (e, t) {
-    var n,
-        { avatar: o, name: f, nameplate: p, children: g, subText: E, decorators: b, onClick: y, hovered: O, selected: v, muted: I, to: S, avatarClassName: T, selectedClassName: A, innerClassName: N, wrapContent: C, highlighted: P, focusProps: R } = e,
-        w = m(e, ['avatar', 'name', 'nameplate', 'children', 'subText', 'decorators', 'onClick', 'hovered', 'selected', 'muted', 'to', 'avatarClassName', 'selectedClassName', 'innerClassName', 'wrapContent', 'highlighted', 'focusProps']);
+let E = function (e) {
+    var t,
+        { ref: n, avatar: o, name: f, nameplate: p, children: g, subText: E, decorators: b, onClick: y, hovered: O, selected: v, muted: I, to: S, avatarClassName: T, selectedClassName: A, innerClassName: N, wrapContent: C, highlighted: P, focusProps: R } = e,
+        w = m(e, ['ref', 'avatar', 'name', 'nameplate', 'children', 'subText', 'decorators', 'onClick', 'hovered', 'selected', 'muted', 'to', 'avatarClassName', 'selectedClassName', 'innerClassName', 'wrapContent', 'highlighted', 'focusProps']);
     (w.className = a()(w.className, d.container, {
         [d.selected]: v,
         [d.highlighted]: P,
         [null != A ? A : '']: v,
         [d.clickable]: !v && (null != S || null != y)
     })),
-        (w['aria-selected'] = null != (n = w['aria-selected']) ? n : v);
+        (w['aria-selected'] = null != (t = w['aria-selected']) ? t : v);
     let D = i.useRef(null),
         L = (0, r.jsxs)('div', {
             className: a()(d.childContainer, { [d.nameplated]: null != p }),
@@ -160,7 +160,7 @@ let E = i.forwardRef(function (e, t) {
                           ),
                           {
                               role: 'listitem',
-                              ref: t,
+                              ref: n,
                               children: L
                           }
                       )
@@ -180,7 +180,7 @@ let E = i.forwardRef(function (e, t) {
                     ),
                     {
                         role: 'listitem',
-                        innerRef: t,
+                        innerRef: n,
                         children: L
                     }
                 )
@@ -192,10 +192,10 @@ let E = i.forwardRef(function (e, t) {
                         'div',
                         h(_({}, w), {
                             role: 'listitem',
-                            ref: t,
+                            ref: n,
                             children: L
                         })
                     )
                 })
             );
-});
+};

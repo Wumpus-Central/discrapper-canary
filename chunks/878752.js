@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(983131),
     b = n(82965),
     _ = n(131951),
-    y = n(213652),
-    x = n(320427),
+    x = n(213652),
+    y = n(320427),
     C = n(145010),
     v = n(933686),
     j = n(361057),
@@ -58,7 +58,7 @@ function S(e) {
                             themeable: P
                         }),
                     V && (0, r.jsx)(v.Z, { channel: t }),
-                    z && (0, r.jsx)(y.Z, { channel: t }),
+                    z && (0, r.jsx)(x.Z, { channel: t }),
                     B &&
                         (0, r.jsx)(p.t, {
                             potionRef: A,
@@ -71,7 +71,7 @@ function S(e) {
                             channel: t,
                             glow: B
                         }),
-                    W && (0, r.jsx)(x.Z, {}),
+                    W && (0, r.jsx)(y.Z, {}),
                     W && (0, r.jsx)(C.Z, { channel: t }),
                     W && (0, r.jsx)(E.Z, {})
                 ]

@@ -1,6 +1,6 @@
 n.d(t, {
-    W: () => y,
-    Z: () => x
+    W: () => x,
+    Z: () => y
 });
 var r = n(255367);
 n(73800);
@@ -60,7 +60,7 @@ function _(e, t) {
         e
     );
 }
-function y(e) {
+function x(e) {
     let { guild: t, channel: i, streamUserId: l, applicationId: o, appContext: a, exitFullScreen: s, analyticsLocation: u, guildScheduledEvent: d } = e;
     null == s || s(),
         (0, c.ZDy)(
@@ -86,9 +86,9 @@ function y(e) {
             }
         );
 }
-function x(e) {
+function y(e) {
     var t,
-        { stream: n, applicationId: i, channel: o, exitFullScreen: x, appContext: C, analyticsLocation: v, className: j } = e,
+        { stream: n, applicationId: i, channel: o, exitFullScreen: y, appContext: C, analyticsLocation: v, className: j } = e,
         O = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -128,13 +128,13 @@ function x(e) {
                                 onClick: () => {
                                     a()(null != S, 'guild cannot be null'),
                                         a()(null != o, 'channel cannot be null'),
-                                        y({
+                                        x({
                                             guild: S,
                                             channel: o,
                                             streamUserId: null == n ? void 0 : n.ownerId,
                                             applicationId: i,
                                             appContext: C,
-                                            exitFullScreen: x,
+                                            exitFullScreen: y,
                                             analyticsLocation: v,
                                             guildScheduledEvent: P
                                         });
@@ -151,7 +151,7 @@ function x(e) {
                     stream: n,
                     appContext: C,
                     className: l()(j, g.iconButton),
-                    exitFullScreen: x,
+                    exitFullScreen: y,
                     analyticsLocation: v,
                     guildScheduledEvent: P
                 })
