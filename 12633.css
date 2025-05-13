@@ -13272,6 +13272,10 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     flex-shrink: 0
 }
 
+.customStatusLabel_c9d15c {
+    white-space: nowrap
+}
+
 .container_b0fbc2 {
     max-width: 100%;
     overflow: hidden
