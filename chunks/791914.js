@@ -15,8 +15,8 @@ var i = n(399606),
     h = n(388032),
     g = n(413813);
 function _(e) {
-    let { tab: t, setTab: n, children: _, badgeState: b, closePopout: E } = e,
-        { enabled: y, inInbox: x } = d.Z.useExperiment({ location: 'RecentsPopout' }),
+    let { tab: t, setTab: n, children: _, badgeState: b, closePopout: y } = e,
+        { enabled: E, inInbox: x } = d.Z.useExperiment({ location: 'RecentsPopout' }),
         v = (0, m.Us)({ location: 'RecentsHeader' }),
         { enabled: O } = u.Z.useExperiment({ location: 'RecentsHeader' }),
         j = (0, i.e7)([c.Z], () => c.Z.getUnseenInviteCount()),
@@ -40,7 +40,7 @@ function _(e) {
                     }),
                     (0, r.jsxs)('div', {
                         className: g.controls,
-                        children: [_, (0, r.jsx)(f.Z, { closePopout: E })]
+                        children: [_, (0, r.jsx)(f.Z, { closePopout: y })]
                     })
                 ]
             }),
@@ -94,7 +94,7 @@ function _(e) {
                                   ]
                               })
                             : null,
-                        y && x
+                        E && x
                             ? (0, r.jsx)(a.njP.Item, {
                                   'aria-label': h.intl.string(h.t['2pAkDA']),
                                   id: l.X.BOOKMARKS,

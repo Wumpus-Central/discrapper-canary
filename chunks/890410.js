@@ -37,8 +37,8 @@ function p(e) {
 function m(e) {
     var t,
         n,
-        { message: i, channel: m, content: f, className: h, compact: g, popoutProps: _, hideTimestamp: b = !1, withFooter: E = !1 } = e,
-        y = (function (e, t) {
+        { message: i, channel: m, content: f, className: h, compact: g, popoutProps: _, hideTimestamp: b = !1, withFooter: y = !1 } = e,
+        E = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -60,10 +60,10 @@ function m(e) {
     let x = (0, o.ZP)(i),
         v = (0, a.Z)(x);
     return (0, r.jsx)('div', {
-        className: l()({ [d.withFooter]: E }, d.embedCard, { [d.compact]: g }, h),
+        className: l()({ [d.withFooter]: y }, d.embedCard, { [d.compact]: g }, h),
         children: (0, r.jsx)(
             s.Z,
-            ((t = p({}, y)),
+            ((t = p({}, E)),
             (n = n =
                 {
                     className: l()(d.messageContainer, { [d.compact]: g }),

@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(151480),
     _ = n(680783),
     b = n(66420),
-    E = n(981631),
-    y = n(474936),
+    y = n(981631),
+    E = n(474936),
     x = n(388032),
     v = n(510064);
 function O(e) {
@@ -43,7 +43,7 @@ function O(e) {
         F = M === N.id,
         B = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
         G = (null == B ? void 0 : B.id) === N.author.id,
-        H = (0, c.m)(y.p9.TIER_2),
+        H = (0, c.m)(E.p9.TIER_2),
         V = h.t(T);
     return (i.useEffect(() => {
         null == D && f.Z.shouldFetchWallpapers && g.k9();
@@ -65,10 +65,10 @@ function O(e) {
                         !F ||
                         (S = x.intl.format(x.t.JwUhHh, {
                             onClickNitro: () => {
-                                (0, u.uL)(E.Z5c.NITRO_HOME);
+                                (0, u.uL)(y.Z5c.NITRO_HOME);
                             }
                         }))
-                  : (S = x.intl.format(x.t.dBxFsL, { learnMoreLink: p.Z.getArticleURL(E.BhN.DM_WALLPAPERS) }))
+                  : (S = x.intl.format(x.t.dBxFsL, { learnMoreLink: p.Z.getArticleURL(y.BhN.DM_WALLPAPERS) }))
               : (S = x.intl.string(x.t['6JSOu7'])),
           (null == U ? void 0 : U.isViewable) &&
               F &&

@@ -15,18 +15,18 @@ var r,
     g = n(246946),
     _ = n(594174),
     b = n(981631);
-let E = {},
-    y = {};
+let y = {},
+    E = {};
 function x(e) {
     let { searchId: t, query: n, mode: r, tokens: i, cursorScope: l, autocompletes: a } = e,
-        o = y[t];
+        o = E[t];
     return (
         null == o &&
             ((o = {
                 results: [],
                 context: c.Z.getSearchContext(v.bind(null, t))
             }),
-            (y[t] = o)),
+            (E[t] = o)),
         {
             query: null != n ? n : '',
             mode:
@@ -45,8 +45,8 @@ function x(e) {
 }
 function v(e, t) {
     let { results: n } = t,
-        r = y[e],
-        i = E[e];
+        r = E[e],
+        i = y[e];
     if (null == r || null == i) return;
     let { type: l, filter: a } = i.mode;
     if (l === b.Sap.EMPTY || (l === b.Sap.FILTER && a !== b.dCx.FILTER_FROM && a !== b.dCx.FILTER_MENTIONS)) return;
@@ -73,7 +73,7 @@ function v(e, t) {
     let { query: s, mode: c, tokens: u, cursorScope: d } = i,
         { autocompletes: p } = i;
     (p = C(e, c)),
-        (E[e] = x({
+        (y[e] = x({
             searchId: e,
             query: s,
             mode: c,
@@ -92,7 +92,7 @@ function O(e, t, n) {
         d = null != (i = null == t || null == (r = t.getFullMatch()) ? void 0 : r.trim()) ? i : '',
         p = e === b.dCx.FILTER_FROM || e === b.dCx.FILTER_MENTIONS;
     if (c === b.aib.GUILD && p) {
-        let e = y[n];
+        let e = E[n];
         null == e
             ? (a = null)
             : ((null == t || 0 === d.length) &&
@@ -207,10 +207,10 @@ function S() {
     (0, p.WU)();
 }
 function I(e) {
-    let t = E[e];
+    let t = y[e];
     if (null == t) return;
     let { query: n, mode: r, tokens: i, cursorScope: l, autocompletes: a } = t;
-    E[e] = x({
+    y[e] = x({
         searchId: e,
         query: n,
         mode: r,
@@ -221,9 +221,9 @@ function I(e) {
 }
 function N() {
     let e = h.Z.getCurrentSearchId();
-    if (null == e || null == E[e]) return;
-    let { query: t, mode: n, tokens: r, cursorScope: i } = E[e];
-    E[e] = x({
+    if (null == e || null == y[e]) return;
+    let { query: t, mode: n, tokens: r, cursorScope: i } = y[e];
+    y[e] = x({
         searchId: e,
         query: t,
         mode: n,
@@ -238,7 +238,7 @@ class T extends (r = a.ZP.Store) {
     }
     getState(e) {
         var t;
-        return null != (t = E[e]) ? t : x({ searchId: e });
+        return null != (t = y[e]) ? t : x({ searchId: e });
     }
 }
 (l = 'SearchAutocompleteStore'),
@@ -257,8 +257,8 @@ let P = new T(o.Z, {
                 { searchId: r, tokens: i, cursorScope: l } = e,
                 a = (0, p.cl)(i),
                 o = (0, p.qc)(l, i),
-                s = null != (t = E[r]) ? t : {},
-                c = y[r],
+                s = null != (t = y[r]) ? t : {},
+                c = E[r],
                 u = !0;
             if (a === s.query && (null == s.mode || s.mode.filter === o.filter)) (n = s.autocompletes), (u = !1);
             else if (o.type === b.Sap.EMPTY || (o.type === b.Sap.FILTER && o.filter !== b.dCx.FILTER_FROM && o.filter !== b.dCx.FILTER_MENTIONS)) null != c && (c.context.clearQuery(), (c.results = [])), (n = C(r, o));
@@ -267,7 +267,7 @@ let P = new T(o.Z, {
                 null != e && e.getFullMatch().trim().length > 0 ? (d.Z.requestMembers(r, e.getFullMatch().trim(), 10), c.context.setQuery(e.getFullMatch().trim(), { guild: r }), (n = s.autocompletes), (u = !1)) : (c.context.clearQuery(), (n = C(r, o)));
             }
             return (
-                (E[r] = x({
+                (y[r] = x({
                     searchId: r,
                     query: a,
                     mode: o,
@@ -280,8 +280,8 @@ let P = new T(o.Z, {
         },
         SEARCH_EDITOR_STATE_CLEAR: function (e) {
             let { searchId: t } = e,
-                n = y[t];
-            null != n && (n.context.destroy(), (n.results = []), delete y[t]), delete E[t];
+                n = E[t];
+            null != n && (n.context.destroy(), (n.results = []), delete E[t]), delete y[t];
         },
         CHANNEL_CREATE: S,
         CHANNEL_DELETE: S,
@@ -289,10 +289,10 @@ let P = new T(o.Z, {
         SEARCH_SCREEN_OPEN: N,
         SEARCH_CLEAR_HISTORY: function (e) {
             let { searchId: t } = e;
-            null != t ? I(t) : Object.keys(E).forEach(I);
+            null != t ? I(t) : Object.keys(y).forEach(I);
         },
         LOGOUT: function () {
-            Object.keys(E).forEach(I);
+            Object.keys(y).forEach(I);
         }
     }),
     A = P;

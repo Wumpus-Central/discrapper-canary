@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685), n(997841);
+n.d(t, { Z: () => E }), n(388685), n(997841);
 var r,
     i,
     l,
@@ -15,7 +15,7 @@ var r,
 let g = 'ChannelFollowingBumpChannels',
     _ = new Set(),
     b = new Set();
-class E extends (r = a.ZP.Store) {
+class y extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(c.default), (_ = new Set(o.K.get(g)));
     }
@@ -24,15 +24,15 @@ class E extends (r = a.ZP.Store) {
     }
 }
 (l = 'ChannelFollowingPublishBumpStore'),
-    (i = 'displayName') in E
-        ? Object.defineProperty(E, i, {
+    (i = 'displayName') in y
+        ? Object.defineProperty(y, i, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (E[i] = l);
-let y = new E(s.Z, {
+        : (y[i] = l);
+let E = new y(s.Z, {
     MESSAGE_CREATE: function (e) {
         var t;
         let { channelId: n, message: r, optimistic: i } = e;

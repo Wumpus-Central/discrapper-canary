@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(880251),
     _ = n(208444),
     b = n(371991),
-    E = n(561308),
-    y = n(810568),
+    y = n(561308),
+    E = n(810568),
     x = n(567409),
     v = n(168524),
     O = n(592745),
@@ -131,20 +131,20 @@ function ea(e, t) {
 function eo(e) {
     var t, n, l, a, s;
     let { application: c, currentUserPresenceActivity: u, hideParty: d, message: p, onView: h, partyStatusElement: g, presenceActivity: _ } = e,
-        E = el(u, _),
-        y = (0, C.Lz)(_, p.author, 'Invite Embed'),
+        y = el(u, _),
+        E = (0, C.Lz)(_, p.author, 'Invite Embed'),
         x = !(0, K.Z)(_, p, c.id),
         v = i.useMemo(() => {
             let e = [];
-            if (!E) {
+            if (!y) {
                 var t;
                 e.push({
-                    label: null != (t = y.label) ? t : J.intl.string(J.t.VJlc0d),
+                    label: null != (t = E.label) ? t : J.intl.string(J.t.VJlc0d),
                     trackingArea: f.j_.PLAY,
                     onClick: () => {
-                        y.onClick();
+                        E.onClick();
                     },
-                    disabledReason: y.disabled ? y.tooltip : void 0
+                    disabledReason: E.disabled ? E.tooltip : void 0
                 });
             }
             return (
@@ -158,7 +158,7 @@ function eo(e) {
                     }),
                 e
             );
-        }, [E, _, y]),
+        }, [y, _, E]),
         O = ea(c.name, null == (t = p.activity) ? void 0 : t.type);
     if (x) {
         let e = (0, r.jsx)(o.Text, {
@@ -238,7 +238,7 @@ function es(e, t) {
         openGameProfileModal: (0, v.Z)({
             location: 'Rich Presence Activity Invite Embed',
             applicationId: e,
-            source: y.m1.Embed,
+            source: E.m1.Embed,
             trackEntryPointImpression: !0,
             sourceUserId: t
         }),
@@ -284,7 +284,7 @@ function ec(e, t, n, r, i) {
           });
 }
 function eu(e) {
-    var t, n, h, y;
+    var t, n, h, E;
     let { analyticsLocations: v, application: O, channel: j, currentUserId: C, currentUserPresenceActivity: S, hideParty: I, message: N, onView: T, partyStatusElement: P, presenceActivity: w } = e,
         Z = (0, d.ye)(O),
         { bot: R } = O,
@@ -389,7 +389,7 @@ function eu(e) {
                           : void 0,
             [v, ef, e_, eh, j.id, j.guild_id, C, eg, N.author.id, N.id, w]
         ),
-        eE = i.useMemo(
+        ey = i.useMemo(
             () =>
                 Z && V
                     ? {
@@ -427,11 +427,11 @@ function eu(e) {
                         : void 0,
             [v, V, O.id, j.id, X, Z, ed, em, null == eo ? void 0 : eo.id]
         ),
-        ey = (0, _.z)(O),
+        eE = (0, _.z)(O),
         ex = i.useMemo(
             () =>
-                null != ey
-                    ? ey
+                null != eE
+                    ? eE
                     : null != eu
                       ? {
                             label: J.intl.string(J.t['HO/oXl']),
@@ -449,12 +449,12 @@ function eu(e) {
                               }
                           }
                         : void 0,
-            [ey, eu, ep]
+            [eE, eu, ep]
         ),
         ev = i.useMemo(() => {
             let e = [];
-            return Q || null == eb ? Q && null != eE && e.push(eE) : e.push(eb), null != ex && e.push(ex), e;
-        }, [eE, Q, eb, ex]),
+            return Q || null == eb ? Q && null != ey && e.push(ey) : e.push(eb), null != ex && e.push(ex), e;
+        }, [ey, Q, eb, ex]),
         eO = ea(O.name, null == (t = N.activity) ? void 0 : t.type),
         ej = Z
             ? (0, p.H)({
@@ -462,7 +462,7 @@ function eu(e) {
                   referrerId: C
               })
             : void 0;
-    (0, x.Ns)(O.id).some((e) => (0, E.ig)(e) === l.o.GLOBAL);
+    (0, x.Ns)(O.id).some((e) => (0, y.ig)(e) === l.o.GLOBAL);
     let eC = (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(o.YqE, {
@@ -509,7 +509,7 @@ function eu(e) {
             }
         });
     }
-    let eS = null != (y = null == w || null == (n = w.timestamps) ? void 0 : n.start) ? y : null == w ? void 0 : w.created_at,
+    let eS = null != (E = null == w || null == (n = w.timestamps) ? void 0 : n.start) ? E : null == w ? void 0 : w.created_at,
         eI =
             null != eS
                 ? (0, r.jsxs)(r.Fragment, {
@@ -585,8 +585,8 @@ function ed(e) {
             },
             [f]
         ),
-        { partySize: b, maxPartySize: E } = en(f),
-        y = i.useMemo(
+        { partySize: b, maxPartySize: y } = en(f),
+        E = i.useMemo(
             () =>
                 _.map((e) => {
                     let t = D.default.getUser(e);
@@ -596,9 +596,9 @@ function ed(e) {
         ),
         x = (0, Q.Ps)(null == f || null == (t = f.party) ? void 0 : t.id) || p.id === S.r9.id,
         v = (0, r.jsx)(ee, {
-            partyMembers: y,
+            partyMembers: E,
             partySize: b,
-            maxPartySize: E,
+            maxPartySize: y,
             guildId: s.guild_id,
             activityActionType: null == (n = c.activity) ? void 0 : n.type
         });

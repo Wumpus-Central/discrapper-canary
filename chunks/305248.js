@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685), n(642613);
+n.d(t, { Z: () => y }), n(388685), n(642613);
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(709054),
     _ = n(124368),
     b = n(572198);
-function E(e) {
+function y(e) {
     let { channel: t, channelRecord: n, deleteChannel: l } = e,
-        E = (0, o.Wu)(
+        y = (0, o.Wu)(
             [p.Z, f.Z],
             () =>
                 a()(p.Z.getThreadsForParent(n.guild_id, n.id))
@@ -35,7 +35,7 @@ function E(e) {
                     .value(),
             [t.oldestReadMessageId, n.guild_id, n.id]
         ),
-        y = i.useCallback((e, t) => {
+        E = i.useCallback((e, t) => {
             (0, m.ok)(e, t, _.on.INBOX);
         }, []);
     return (
@@ -44,14 +44,14 @@ function E(e) {
                 !t.isFullyLoaded ||
                 t.hasError ||
                 t.collapsed ||
-                0 !== E.length ||
+                0 !== y.length ||
                 s.Z.wait(() => {
                     (0, c.In)(t.channelId, !0), l(t.channelId);
                 });
         }),
         (0, r.jsx)('div', {
             className: b.container,
-            children: E.map((e) =>
+            children: y.map((e) =>
                 (0, r.jsx)(
                     d.oL,
                     {
@@ -59,7 +59,7 @@ function E(e) {
                         children: (0, r.jsx)(u.ZP, {
                             className: b.forumPost,
                             threadId: e.id,
-                            goToThread: y
+                            goToThread: E
                         })
                     },
                     e.id

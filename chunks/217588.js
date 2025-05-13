@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(183023),
     _ = n(524444),
     b = n(98278),
-    E = n(197115),
-    y = n(430824),
+    y = n(197115),
+    E = n(430824),
     x = n(594174),
     v = n(626135),
     O = n(74538),
@@ -207,7 +207,7 @@ let F = (e) => {
             [S, N] = i.useState(!1),
             D = x.default.getCurrentUser(),
             L = O.ZP.canUseCustomStickersEverywhere(D),
-            F = (0, o.e7)([y.Z], () => y.Z.getGuild(n.guild_id)),
+            F = (0, o.e7)([E.Z], () => E.Z.getGuild(n.guild_id)),
             B = null != F,
             [G, H] = i.useState(!1),
             [V, z] = i.useState(null),
@@ -278,7 +278,7 @@ let F = (e) => {
                                       sticker: n
                                   }),
                                   J &&
-                                      (0, r.jsx)(E.Z, {
+                                      (0, r.jsx)(y.Z, {
                                           className: Z.ctaButton,
                                           subscriptionTier: P.Si.TIER_2,
                                           size: s.zxk.Sizes.SMALL,

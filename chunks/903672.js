@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(216789),
     _ = n(695346),
     b = n(592125),
-    E = n(731290),
-    y = n(944486),
+    y = n(731290),
+    E = n(944486),
     x = n(455199),
     v = n(655354),
     O = n(999671),
@@ -41,10 +41,10 @@ function A(e, t, n) {
 }
 function w(e) {
     let { setTab: t, onJump: n, badgeState: l, closePopout: c } = e,
-        h = (0, o.e7)([b.Z, y.Z], () => b.Z.getChannel(y.Z.getChannelId())),
+        h = (0, o.e7)([b.Z, E.Z], () => b.Z.getChannel(E.Z.getChannelId())),
         {
             messages: _,
-            hasMore: E,
+            hasMore: y,
             loading: v,
             guildFilter: j,
             roleFilter: C,
@@ -96,7 +96,7 @@ function w(e) {
         channel: h,
         messages: _,
         loading: v,
-        hasMore: E,
+        hasMore: y,
         analyticsName: 'Recent Mentions',
         loadMore: function () {
             A(h, !0, null != _ && _.length > 0 ? _[_.length - 1].id : null);
@@ -127,7 +127,7 @@ function R(e) {
     if (null == t) return null;
     let l = b.Z.getChannel(t.channel_id);
     if (null == l) return null;
-    let a = E.Z.didAgree(l.getGuildId()),
+    let a = y.Z.didAgree(l.getGuildId()),
         o = !!l.isNSFW() && !a;
     return (0, r.jsxs)('div', {
         className: T.container,

@@ -16,7 +16,7 @@ var r = n(255367),
     _ = n(280306);
 function b(e) {
     let { code: t, message: n, embedUrl: b } = e,
-        [E, y, x] = (0, a.Wu)([f.Z], () => [f.Z.getApplication(t), f.Z.isInvalidApplication(t), f.Z.getApplicationFetchState(t)], [t]),
+        [y, E, x] = (0, a.Wu)([f.Z], () => [f.Z.getApplication(t), f.Z.isInvalidApplication(t), f.Z.getApplicationFetchState(t)], [t]),
         v = (0, a.e7)([d.Z], () => {
             var e;
             return null != (e = d.Z.getGuildId()) ? e : void 0;
@@ -43,15 +43,15 @@ function b(e) {
     }, [O, x, I]),
     i.useEffect(() => {
         O &&
-            y &&
+            E &&
             p.default.track(h.rMx.APP_DIRECTORY_PROFILE_INVALID_EMBED_VIEWED, {
                 device_platform: l.tq ? 'mobile_web' : 'desktop_web',
                 sender_user_id: n.author.id,
                 guild_id: v,
                 channel_id: n.channel_id
             });
-    }, [O, v, y, n.author.id, n.channel_id]),
-    y)
+    }, [O, v, E, n.author.id, n.channel_id]),
+    E)
         ? (0, r.jsxs)(c.Z, {
               containerRef: S,
               children: [
@@ -71,13 +71,13 @@ function b(e) {
                   })
               ]
           })
-        : null == E || x === f.M.FETCHING
+        : null == y || x === f.M.FETCHING
           ? (0, r.jsxs)(c.Z, {
                 containerRef: S,
                 children: [(0, r.jsx)(c.Z.Header, { text: g.intl.string(g.t.m9hXGR) }), (0, r.jsx)(c.Z.Body, { resolving: !0 })]
             })
           : (0, r.jsx)(s.O, {
-                app: u.ZP.createFromServer(E),
+                app: u.ZP.createFromServer(y),
                 embedUrl: b,
                 linkType: s.U.APP_DISCOVERY,
                 onView: I

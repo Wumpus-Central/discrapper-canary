@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(906732),
     _ = n(895924),
     b = n(311819),
-    E = n(758199),
-    y = n(943762),
+    y = n(758199),
+    E = n(943762),
     x = n(914498),
     v = n(208444),
     O = n(429551),
@@ -163,7 +163,7 @@ let F = i.memo(function (e) {
         eu = q.length,
         ed = null != (u = null == Q || null == (n = Q.timestamps) ? void 0 : n.start) ? u : null == Q ? void 0 : Q.created_at,
         ep = et ? ea : null != J ? J : L.intl.string(L.t.oQn0h4),
-        em = (0, y.r)(Q),
+        em = (0, E.r)(Q),
         ef = [
             {
                 label: et ? L.intl.string(L.t.cnBQPD) : L.intl.string(L.t.VJlc0d),
@@ -175,7 +175,7 @@ let F = i.memo(function (e) {
         ];
     return (
         null != eo && ef.push(eo),
-        (0, r.jsx)(E.W, {
+        (0, r.jsx)(y.W, {
             header: A.name,
             title: ep,
             iconSrc: es,
@@ -204,7 +204,7 @@ let F = i.memo(function (e) {
                                 })
                         }),
                     eu > 0 &&
-                        (0, r.jsx)(y.K, {
+                        (0, r.jsx)(E.K, {
                             activityUsers: q,
                             guildId: F,
                             activityText: em.text

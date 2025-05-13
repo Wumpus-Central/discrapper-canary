@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(695346),
     _ = n(314897),
     b = n(496675),
-    E = n(594174),
-    y = n(55935),
+    y = n(594174),
+    E = n(55935),
     x = n(655354),
     v = n(809780),
     O = n(981631),
@@ -120,7 +120,7 @@ function N(e) {
         N = (0, m.P1)(l),
         T = !1,
         P = 0 === i.messages.length || a()(i.messages[0].timestamp).isSame(a()(), 'day'),
-        A = null != (n = null == (t = E.default.getUser(_.default.getId())) ? void 0 : t.hasFlag(O.xW$.SPAMMER)) && n,
+        A = null != (n = null == (t = y.default.getUser(_.default.getId())) ? void 0 : t.hasFlag(O.xW$.SPAMMER)) && n,
         w = [];
     if (!i.collapsed) {
         let e = null,
@@ -129,7 +129,7 @@ function N(e) {
         n.forEach((n) => {
             if (!(0, d.Z)(n, S)) {
                 if (!P && (null == e || !e.isSame(n.timestamp, 'day'))) {
-                    let t = (0, y.vc)(n.timestamp, 'LL');
+                    let t = (0, E.vc)(n.timestamp, 'LL');
                     w.push(
                         (0, r.jsx)(
                             f.Z,

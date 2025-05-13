@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(277707),
     _ = n(358595),
     b = n(981631),
-    E = n(388032),
-    y = n(273254);
+    y = n(388032),
+    E = n(273254);
 function x(e) {
     var t, x, v;
     let O,
@@ -67,7 +67,7 @@ function x(e) {
     });
     return (
         (j = (0, r.jsxs)('span', {
-            className: y.infoTitle,
+            className: E.infoTitle,
             children: [
                 (0, r.jsx)(u.Z, {
                     guildId: N.id,
@@ -77,7 +77,7 @@ function x(e) {
                     children: () => (0, r.jsx)(p.Z.GuildName, { guild: N })
                 }),
                 (0, r.jsx)('span', {
-                    className: y.infoBadge,
+                    className: E.infoBadge,
                     children: (0, r.jsx)(d.Z, {
                         guild: N,
                         isBannerVisible: !1,
@@ -88,22 +88,22 @@ function x(e) {
         })),
         G &&
             (C = (0, r.jsx)(a.DY3, {
-                className: y.tooltipContainer,
-                text: E.intl.string(E.t['/FeTKy']),
+                className: E.tooltipContainer,
+                text: y.intl.string(y.t['/FeTKy']),
                 children: (0, r.jsx)(a.d3s, {
                     size: 'md',
                     color: 'currentColor',
-                    className: y.infoIcon
+                    className: E.infoIcon
                 })
             })),
         F
             ? ((j = (0, r.jsx)(p.Z.Channel, { channel: L })),
               (O = (0, r.jsxs)('span', {
-                  className: y.infoTitle,
+                  className: E.infoTitle,
                   children: [
-                      E.intl.format(E.t['2wimj4'], { guildName: N.name }),
+                      y.intl.format(y.t['2wimj4'], { guildName: N.name }),
                       (0, r.jsx)('span', {
-                          className: y.infoBadge,
+                          className: E.infoBadge,
                           children: (0, r.jsx)(d.Z, {
                               guild: N,
                               isBannerVisible: !1
@@ -131,7 +131,7 @@ function x(e) {
                 (0, r.jsxs)(p.Z.Body, {
                     children: [
                         (0, r.jsxs)('div', {
-                            className: y.headerLine,
+                            className: E.headerLine,
                             children: [
                                 (0, r.jsx)(p.Z.Icon, { guild: N }),
                                 (0, r.jsx)(p.Z.Info, {
@@ -145,18 +145,18 @@ function x(e) {
                             onClick: q,
                             submitting: D,
                             color: p.Z.Button.Colors.GREEN,
-                            children: F ? (B ? E.intl.string(E.t['7vb2cX']) : E.intl.string(E.t.gpqgam)) : M ? E.intl.string(E.t.cEnaW1) : E.intl.string(E.t.XpeFYm)
+                            children: F ? (B ? y.intl.string(y.t['7vb2cX']) : y.intl.string(y.t.gpqgam)) : M ? y.intl.string(y.t.cEnaW1) : y.intl.string(y.t.XpeFYm)
                         })
                     ]
                 }),
                 N.hasFeature(b.oNc.HUB) &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)('div', { className: y.separator }),
+                            (0, r.jsx)('div', { className: E.separator }),
                             (0, r.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: E.intl.format(E.t['/o1IfH'], {
+                                children: y.intl.format(y.t['/o1IfH'], {
                                     onClick: () =>
                                         (0, a.ZDy)(async () => {
                                             let { default: e } = await Promise.all([n.e('95468'), n.e('46343')]).then(n.bind(n, 650233));
