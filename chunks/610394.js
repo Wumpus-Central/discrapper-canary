@@ -505,7 +505,7 @@ class eZ extends (r = i.ZP.Store) {
         return k.has(e);
     }
     getWidgetByType(e) {
-        let t = p.Z.getLayout(T.$);
+        let t = p.Z.getLayout(T.$S);
         if (null != t) {
             let r = t.widgets.find((t) => {
                 let n = p.Z.getWidget(t);
@@ -532,7 +532,7 @@ class eZ extends (r = i.ZP.Store) {
         return F;
     }
     isFocused(e) {
-        return null != F && e !== g.UNSET_PID && !!k.has(e) && F === e;
+        return null != F && e !== g.UNSET_PID && (!!k.has(e) || e === g.DEV_PID) && F === e;
     }
     getFocusedRunningGame() {
         var e;

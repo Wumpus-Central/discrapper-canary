@@ -24,13 +24,14 @@ function s(e, t, n) {
     });
 }
 function l(e) {
-    let { widgetId: t, anchor: n, size: i, opacity: o } = e;
+    let { widgetId: t, anchor: n, size: i, minSize: o, opacity: a } = e;
     r.Z.dispatch({
         type: 'LAYOUT_UPDATE_WIDGET',
         widgetId: t,
         anchor: n,
         size: i,
-        opacity: o
+        minSize: o,
+        opacity: a
     });
 }
 function c(e) {

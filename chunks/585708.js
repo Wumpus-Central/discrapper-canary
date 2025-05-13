@@ -10,8 +10,8 @@ var r = n(13245),
     u = n(974180),
     d = n(358085),
     p = n(998502),
-    f = n(145597),
-    h = n(610394),
+    h = n(145597),
+    f = n(610394),
     m = n(516542),
     g = n(618373),
     y = n(620954),
@@ -20,8 +20,8 @@ var r = n(13245),
     b = n(388032);
 function E(e, t, n, E) {
     var _;
-    let { icon: I, title: x, body: j } = (0, a.Xi)(e, t, n),
-        { trackView: S, trackClick: C } = (0, y.R)(O.n0.TextChat, {
+    let { icon: x, title: S, body: I } = (0, a.Xi)(e, t, n),
+        { trackView: j, trackClick: C } = (0, y.R)(O.n0.TextChat, {
             notif_type: O.n0.TextChat,
             notif_user_id: null == (_ = t.author) ? void 0 : _.id,
             message_id: t.id,
@@ -31,8 +31,8 @@ function E(e, t, n, E) {
             channel_type: e.type
         });
     return {
-        icon: I,
-        title: x,
+        icon: x,
+        title: S,
         body:
             t.content.length > 0
                 ? (0, l.ZP)(t, {
@@ -40,7 +40,7 @@ function E(e, t, n, E) {
                       formatInline: !0,
                       hideSimpleEmbedContent: !1
                   }).content
-                : j,
+                : I,
         hint: (e, t) => (e && !t ? null : (0, g.Q)((0, y.P)(), b.t.ykjOAA, b.intl.string(b.t.jZkzVF))),
         maxBodyLines: 2,
         renderFooter: (n, r, o) =>
@@ -53,11 +53,11 @@ function E(e, t, n, E) {
                   })
                 : null,
         onNotificationShow: () => {
-            E && (0, c.GN)(u.Ay, u.yk), S();
+            E && (0, c.GN)(u.Ay, u.yk), j();
         },
         onNotificationClick: () => {
-            let n = (0, f.getPID)();
-            (0, o.In)(e.id, !0, !0, t.id, { section: v.jXE.OVERLAY }), h.ZP.isInputLocked(n) ? (C('unlock'), r.Z.setInputLocked(!1, n)) : (C('jump'), (0, s.uL)(v.Z5c.CHANNEL(e.guild_id, e.id, t.id)), d.isPlatformEmbedded && p.ZP.focus());
+            let n = (0, h.getPID)();
+            (0, o.In)(e.id, !0, !0, t.id, { section: v.jXE.OVERLAY }), f.ZP.isInputLocked(n) ? (C('unlock'), r.Z.setInputLocked(!1, n)) : (C('jump'), (0, s.uL)(v.Z5c.CHANNEL(e.guild_id, e.id, t.id)), d.isPlatformEmbedded && p.ZP.focus());
         },
         onDismissClick: () => {
             C('dismiss');

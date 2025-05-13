@@ -30,7 +30,7 @@ async function f() {
                 withTitleBar: !1,
                 windowKey: t
             })),
-            (0, o.te)(u.$, l.Z.getDefaultLayout(u.$, u.H), u.H);
+            (0, o.te)(u.$S, l.Z.getDefaultLayout(u.$S, u.HN), u.HN);
     } else throw Error('OverlayV3Utils: No overlay rendering mode found');
     await s.bA(d.$J, p, t);
 }

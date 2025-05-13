@@ -316,7 +316,7 @@ function D(e) {
     });
 }
 function M(e) {
-    let t = Z(Object.values((0, o.Wu)([j.Z], () => j.Z.getWidgetsForLayout(S.$))), e);
+    let t = Z(Object.values((0, o.Wu)([j.Z], () => j.Z.getWidgetsForLayout(S.$S))), e);
     return [
         t,
         () => {
@@ -324,7 +324,7 @@ function M(e) {
             else {
                 let t = R[e];
                 if (null == t) return;
-                let n = t(S.$);
+                let n = t(S.$S);
                 (0, d.A4)(n);
             }
         }

@@ -21,9 +21,9 @@ var i,
     x = n(925329),
     E = n(569545),
     S = n(914923),
-    C = n(165393),
-    Z = n(989941),
-    j = n(552282),
+    j = n(165393),
+    C = n(989941),
+    Z = n(552282),
     I = n(345243),
     P = n(565799),
     N = n(501655),
@@ -111,9 +111,9 @@ function es(e) {
             userId: i.id,
             context: f
         }),
-        C = (0, a.e7)([V.Z], () => V.Z.isPrioritySpeaker(i.id, f)),
-        Z = (0, a.e7)([D.Z], () => null != D.Z.getStreamForUser(i.id, g)),
-        j = s.useMemo(() => null != x && x.ownerId !== i.id && E.includes(i.id), [x, i.id, E]);
+        j = (0, a.e7)([V.Z], () => V.Z.isPrioritySpeaker(i.id, f)),
+        C = (0, a.e7)([D.Z], () => null != D.Z.getStreamForUser(i.id, g)),
+        Z = s.useMemo(() => null != x && x.ownerId !== i.id && E.includes(i.id), [x, i.id, E]);
     if (d === Q.OYC.ONLY_WHILE_SPEAKING && n && !S) return null;
     let I = i.id === O,
         { mute: P, selfMute: N, suppress: w, deaf: T, selfDeaf: R } = y,
@@ -133,12 +133,12 @@ function es(e) {
                 nick: o,
                 speaking: !1,
                 flipped: t,
-                isStreaming: Z,
+                isStreaming: C,
                 iconClassName: l()(et.voiceIcon, { [et.locked]: n }),
-                isWatching: j,
+                isWatching: Z,
                 isOverlay: !0,
                 size: u,
-                priority: C,
+                priority: j,
                 mute: P || z || b,
                 localMute: b,
                 serverMute: P || w,
@@ -272,7 +272,7 @@ class eo extends (i = s.PureComponent) {
                                       className: et.gameIcon,
                                       game: o
                                   })
-                                : (0, r.jsx)(C.Z, { title: h }),
+                                : (0, r.jsx)(j.Z, { title: h }),
                             (0, r.jsxs)(_.Z, {
                                 direction: _.Z.Direction.VERTICAL,
                                 justify: _.Z.Justify.BETWEEN,
@@ -439,18 +439,18 @@ function el(e) {
         l = (0, a.e7)([D.Z], () => D.Z.getStreamerActiveStreamMetadata()),
         c = (0, a.e7)([b.ZP, W.Z, L.Z], () => {
             var e;
-            let t = (0, Z.Z)(b.ZP, W.Z);
+            let t = (0, C.Z)(b.ZP, W.Z);
             return null != t ? (null == (e = L.Z.getGameByGameData(t)) ? void 0 : e.id) : null;
         }),
         d = (0, y.q)(c),
         u = (0, a.cj)([b.ZP, W.Z, D.Z, B.default], () => {
-            let e = (0, Z.Z)(b.ZP, W.Z),
+            let e = (0, C.Z)(b.ZP, W.Z),
                 t = D.Z.getCurrentUserActiveStream();
             return {
                 displayUserMode: B.default.getDisplayUserMode(),
                 displayNameMode: B.default.getDisplayNameMode(),
                 avatarSizeMode: B.default.getAvatarSizeMode(),
-                streamApplication: (null == l ? void 0 : l.pid) === (0, H.getPID)() ? (0, j.Z)(e) : null,
+                streamApplication: (null == l ? void 0 : l.pid) === (0, H.getPID)() ? (0, Z.Z)(e) : null,
                 stream: t
             };
         });

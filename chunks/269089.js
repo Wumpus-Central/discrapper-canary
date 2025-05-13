@@ -80,7 +80,7 @@ class m extends a.Z {
         });
     }
     handleOpenActivityPopout() {
-        (0, l.te)(d.$, s.Z.getDefaultLayout(d.$, d.H), d.H),
+        (0, l.te)(d.$S, s.Z.getDefaultLayout(d.$S, d.HN), d.HN),
             c.bA(u.KJ3.ACTIVITY_POPOUT, (e) => (0, r.jsx)(g, { windowKey: e }), {
                 defaultWidth: 854,
                 defaultHeight: 480

@@ -28,7 +28,7 @@ var r = n(255367),
     T = n(981631),
     N = n(388032),
     k = n(844136);
-function w(e) {
+function I(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -53,7 +53,7 @@ function w(e) {
     }
     return e;
 }
-function I(e, t) {
+function w(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -159,7 +159,7 @@ function A(e) {
                                         children: (e) =>
                                             (0, r.jsx)(
                                                 c.P3F,
-                                                I(w({ className: k.progressCont }, e), {
+                                                w(I({ className: k.progressCont }, e), {
                                                     children: (0, r.jsx)(S.Z, {
                                                         quest: D,
                                                         size: 48,
@@ -262,7 +262,7 @@ function L(e) {
               children: (e) =>
                   (0, r.jsx)(
                       A,
-                      I(w({}, i), {
+                      w(I({}, i), {
                           parentModalOpenStartClockTime: o,
                           impressionRef: e,
                           quest: c,

@@ -15,11 +15,13 @@ function o(e, t) {
     return o
         ? {
               width: n,
-              height: i
+              height: i,
+              fixed: o
           }
         : {
               width: 'auto' === n ? n : Math.floor(r(n) * t.width),
-              height: 'auto' === i ? i : Math.floor(r(i) * t.height)
+              height: 'auto' === i ? i : Math.floor(r(i) * t.height),
+              fixed: o
           };
 }
 function a(e, t) {
@@ -32,11 +34,18 @@ function a(e, t) {
     };
 }
 function s(e, t) {
-    let { width: n, height: r } = e;
-    return {
-        width: 'auto' === n ? n : n / t.width,
-        height: 'auto' === r ? r : r / t.height
-    };
+    let { width: n, height: r, fixed: i } = e;
+    return i
+        ? {
+              width: n,
+              height: r,
+              fixed: i
+          }
+        : {
+              width: 'auto' === n ? n : n / t.width,
+              height: 'auto' === r ? r : r / t.height,
+              fixed: i
+          };
 }
 function l(e, t, n, r, i) {
     let { top: o, bottom: a, left: s, right: l } = e;

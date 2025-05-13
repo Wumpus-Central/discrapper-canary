@@ -1,6 +1,8 @@
 n.d(t, {
-    Z: () => _,
-    z: () => v
+    IV: () => _,
+    ZP: () => S,
+    bt: () => v,
+    fd: () => b
 }),
     n(388685);
 var i = n(255367),
@@ -13,8 +15,8 @@ var i = n(255367),
     u = n(569545),
     d = n(237997),
     p = n(444295),
-    f = n(752802),
-    h = n(340101),
+    h = n(752802),
+    f = n(340101),
     m = n(981631),
     g = n(678270);
 function y(e) {
@@ -60,13 +62,14 @@ function O(e, t) {
         e
     );
 }
-let v = 8,
-    b = (e) => {
+let v = 256,
+    b = 144,
+    E = (e) => {
         let { participant: t, width: n, locked: r, widgetId: o, pinned: l } = e;
         return (0, i.jsx)('div', {
             className: g.tileContainer,
             children: (0, i.jsx)(
-                f.Z,
+                h.Z,
                 {
                     participant: t,
                     width: n,
@@ -77,40 +80,56 @@ let v = 8,
                 t.user.id
             )
         });
-    },
-    E = {
+    };
+function _(e, t, n) {
+    if (e === f.C5.VERTICAL) {
+        let e = Math.max(t, v),
+            n = Math.max((9 / 16) * e, b);
+        return {
+            tileWidth: e,
+            tileHeight: n
+        };
+    }
+    let i = Math.max(n, b);
+    return {
+        tileWidth: Math.max((16 / 9) * i, v),
+        tileHeight: i
+    };
+}
+let x = {
         mass: 1,
         tension: 250,
         friction: 18,
         clamp: !0
     },
-    _ = r.memo(function (e) {
-        let { widgetId: t, tileWidth: n, layout: o, locked: f, activeStreams: _, streamParticipants: I, participantsVersion: x, pinned: j } = e,
-            S = (9 / 16) * n,
-            C = I.map((e) => ({
+    S = r.memo(function (e) {
+        let { widgetId: t, tileWidth: n, tileHeight: o, layout: h, locked: v, activeStreams: b, streamParticipants: _, participantsVersion: S, pinned: I, padding: j, sizeOffset: C } = e,
+            N = _.map((e) => ({
                 participant: e,
                 key: e.user.id,
                 width: n,
-                locked: f,
+                height: o,
+                locked: v,
                 widgetId: t,
-                height: S,
-                pinned: j
+                pinned: I
             })),
-            N = (0, c.Z)(n),
-            Z = o === h.C5.VERTICAL,
-            w = 0,
-            P = 0,
-            T = (0, s.Yzy)(
-                Z
-                    ? C.map((e, t) =>
+            w = (0, c.Z)(n),
+            Z = (0, c.Z)(v),
+            P = h === f.C5.VERTICAL,
+            T = v || Z !== v || w !== n,
+            k = 0,
+            D = 0,
+            A = (0, s.Yzy)(
+                P
+                    ? N.map((e, t) =>
                           O(y({}, e), {
-                              y: (w += e.height + (t > 0 ? v : 0)) - e.height,
+                              y: (k += e.height + (t > 0 ? j : 0)) - e.height,
                               x: 0
                           })
                       )
-                    : C.map((e, t) =>
+                    : N.map((e, t) =>
                           O(y({}, e), {
-                              x: (P += e.width + (t > 0 ? v : 0)) - e.width,
+                              x: (D += e.width + (t > 0 ? j : 0)) - e.width,
                               y: 0
                           })
                       ),
@@ -143,39 +162,39 @@ let v = 8,
                             height: r
                         };
                     },
-                    config: E,
-                    trail: 100 * (n === N)
+                    config: x,
+                    trail: 100 * !T
                 },
-                n !== N ? 'animate-never' : 'respect-motion-settings'
+                T ? 'animate-never' : 'respect-motion-settings'
             ),
-            k = (0, p.ee)(() => new Set(I.map((e) => e.user.id)), [I, x]),
-            D = (0, p.ee)(() => new Set(I.filter((e) => _.has((0, u.V9)(e.stream))).map((e) => e.user.id)), [I, _, x]);
+            L = (0, p.ee)(() => new Set(_.map((e) => e.user.id)), [_, S]),
+            R = (0, p.ee)(() => new Set(_.filter((e) => b.has((0, u.V9)(e.stream))).map((e) => e.user.id)), [_, b, S]);
         return (
             r.useEffect(() => {
-                0 !== k.size &&
+                0 !== L.size &&
                     (0, p.zi)(m.Odu.GO_LIVE, {
                         locked: d.default.isInstanceLocked(),
-                        shownUserIds: Array.from(k),
-                        liveUserIds: Array.from(D),
+                        shownUserIds: Array.from(L),
+                        liveUserIds: Array.from(R),
                         contentInventoryIds: []
                     });
-            }, [k, D]),
+            }, [L, R]),
             (0, i.jsx)('div', {
                 className: l()({
                     [g.gridContainer]: !0,
-                    [g.vertical]: Z,
-                    [g.horizontal]: !Z
+                    [g.vertical]: P,
+                    [g.horizontal]: !P
                 }),
-                style: Z ? { height: w } : { width: P },
-                children: T((e, t, r, o) =>
+                style: P ? { height: k } : { width: D },
+                children: A((e, t, r, l) =>
                     (0, i.jsx)(a.animated.div, {
                         className: g.gridItem,
                         style: Object.assign({}, e, {
                             width: n,
-                            height: S,
-                            zIndex: C.length - o
+                            height: o,
+                            zIndex: N.length - l
                         }),
-                        children: b(t)
+                        children: E(t)
                     })
                 )
             })

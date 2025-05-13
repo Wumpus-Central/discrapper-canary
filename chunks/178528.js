@@ -21,9 +21,9 @@ var i = n(255367),
     x = n(496675),
     E = n(878884),
     S = n(19780),
-    C = n(944486),
-    Z = n(9156),
-    j = n(938475),
+    j = n(944486),
+    C = n(9156),
+    Z = n(938475),
     I = n(518084),
     P = n(669083),
     N = n(711553),
@@ -237,18 +237,18 @@ function M(e) {
         r = (0, o.e7)([b.Z], () => b.Z.getGuild(n)),
         s = (0, o.e7)([_.ZP], () => _.ZP.getChannels(n)),
         l = (0, o.e7)([v.Z], () => v.Z.getCategories(n)),
-        { mutedChannels: d, collapseMuted: u } = (0, o.cj)([Z.ZP], () => ({
-            mutedChannels: Z.ZP.getMutedChannels(n),
-            collapseMuted: Z.ZP.isGuildCollapsed(n)
+        { mutedChannels: d, collapseMuted: u } = (0, o.cj)([C.ZP], () => ({
+            mutedChannels: C.ZP.getMutedChannels(n),
+            collapseMuted: C.ZP.isGuildCollapsed(n)
         })),
-        h = (0, o.e7)([j.ZP], () => j.ZP.getVoiceStates(n)),
+        h = (0, o.e7)([Z.ZP], () => Z.ZP.getVoiceStates(n)),
         p = (0, o.e7)([m.Z], () => m.Z.getCollapsed()),
         { scrollTo: I } = (0, o.e7)([y.Z], () => y.Z.getGuildDimensions(n)),
         P = (0, f.Z)((e) => {
             let { channelId: t } = e;
             return t;
         }),
-        N = (0, o.e7)([C.Z], () => C.Z.getVoiceChannelId()),
+        N = (0, o.e7)([j.Z], () => j.Z.getVoiceChannelId()),
         T = (0, o.e7)([x.Z], () => x.Z.getGuildVersion(n)),
         k = (0, o.e7)([g.Z], () => g.Z.version),
         D = (0, o.e7)([O.default], () => O.default.getGuildChangeSentinel(n)),

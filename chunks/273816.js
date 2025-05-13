@@ -9,8 +9,8 @@ var i = n(255367),
     u = n(178821),
     d = n(38618),
     p = n(522474),
-    f = n(333031),
-    h = n(610394),
+    h = n(333031),
+    f = n(610394),
     m = n(501787),
     g = n(565655);
 function y(e) {
@@ -59,15 +59,15 @@ function O(e, t) {
 function v(e) {
     let { locked: t, pinned: n, anchorLeft: o } = e,
         v = (0, a.e7)([d.Z], () => d.Z.getSocket()),
-        b = (0, a.e7)([h.ZP], () => h.ZP.isGPUBoosted());
+        b = (0, a.e7)([f.ZP], () => f.ZP.isGPUBoosted());
     (0, u.nU)();
     let E = (0, a.e7)([p.Z], () => p.Z.getWindow(m.$J)),
-        [_, I] = (0, u.m8)(v),
-        { currentFPS: x, averageFrameTime: j, timeSinceLastDrop: S, onResetFrameData: C, droppedFramesRef: N, renderedFrameCount: Z, bufferFramecountRef: w, frameCheckerEffect: P } = (0, u.d6)(!0, _, !0),
+        [_, x] = (0, u.m8)(v),
+        { currentFPS: S, averageFrameTime: I, timeSinceLastDrop: j, onResetFrameData: C, droppedFramesRef: N, renderedFrameCount: w, bufferFramecountRef: Z, frameCheckerEffect: P } = (0, u.d6)(!0, _, !0),
         [T, k, D] = (0, u.ZF)(v),
         [A, L] = (0, u.Y5)(T, P, E),
-        R = performance.now() - I.current < u.MC,
-        M = k(j, w.current);
+        R = performance.now() - x.current < u.MC,
+        M = k(I, Z.current);
     (0, c.ZP)(
         () => (
             A(),
@@ -76,10 +76,10 @@ function v(e) {
             }
         )
     );
-    let V = r.useCallback(() => {
+    let z = r.useCallback(() => {
             C(), D(), A();
         }, [C, D, A]),
-        [U, z] = r.useState(!0),
+        [U, V] = r.useState(!0),
         [W, G] = r.useState(!0),
         [F, B] = r.useState(!0),
         [H, Y] = r.useState(!0),
@@ -99,7 +99,7 @@ function v(e) {
                                       children: (0, i.jsx)(s.XZJ, {
                                           size: 16,
                                           value: U,
-                                          onChange: (e, t) => z(t)
+                                          onChange: (e, t) => V(t)
                                       })
                                   }),
                               (0, i.jsxs)(s.Text, {
@@ -112,8 +112,8 @@ function v(e) {
                                       (0, i.jsx)(s.Text, {
                                           tag: 'span',
                                           variant: 'code',
-                                          color: x < 30 ? 'text-danger' : x < 45 ? 'text-warning' : 'text-primary',
-                                          children: x.toFixed(2)
+                                          color: S < 30 ? 'text-danger' : S < 45 ? 'text-warning' : 'text-primary',
+                                          children: S.toFixed(2)
                                       })
                                   ]
                               })
@@ -142,8 +142,8 @@ function v(e) {
                                       (0, i.jsxs)(s.Text, {
                                           tag: 'span',
                                           variant: 'code',
-                                          color: j > 1.1 * u.tO ? 'text-warning' : 'text-primary',
-                                          children: [j.toFixed(2), 'ms']
+                                          color: I > 1.1 * u.tO ? 'text-warning' : 'text-primary',
+                                          children: [I.toFixed(2), 'ms']
                                       })
                                   ]
                               })
@@ -172,7 +172,7 @@ function v(e) {
                                       (0, i.jsx)(s.Text, {
                                           tag: 'span',
                                           variant: 'code',
-                                          color: S < 2 ? 'text-danger' : S < 5 ? 'text-warning' : 'text-primary',
+                                          color: j < 2 ? 'text-danger' : j < 5 ? 'text-warning' : 'text-primary',
                                           children: N.current
                                       }),
                                       (0, i.jsxs)(s.Text, {
@@ -180,7 +180,7 @@ function v(e) {
                                           variant: 'code',
                                           color: 'text-secondary',
                                           className: g.secondaryInfoText,
-                                          children: ['(', ((N.current / Z.current) * 100).toFixed(3), '%)']
+                                          children: ['(', ((N.current / w.current) * 100).toFixed(3), '%)']
                                       })
                                   ]
                               })
@@ -210,7 +210,7 @@ function v(e) {
                                           tag: 'span',
                                           variant: 'code',
                                           color: 'text-primary',
-                                          children: Z.current.toFixed(0)
+                                          children: w.current.toFixed(0)
                                       })
                                   ]
                               })
@@ -283,9 +283,9 @@ function v(e) {
                   !t &&
                       (0, i.jsx)('div', {
                           className: g.bottomPanelButton,
-                          children: (0, i.jsx)(f.Z, {
+                          children: (0, i.jsx)(h.Z, {
                               children: (0, i.jsx)(s.zxk, {
-                                  onClick: V,
+                                  onClick: z,
                                   children: 'Reset Frame Data'
                               })
                           })

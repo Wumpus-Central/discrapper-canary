@@ -21,9 +21,9 @@ var i,
     x = n(86071),
     E = n(486016),
     S = n(358446),
-    C = n(371651),
-    Z = n(624864),
-    j = n(695346),
+    j = n(371651),
+    C = n(624864),
+    Z = n(695346),
     I = n(163612),
     P = n(314897),
     N = n(592125),
@@ -152,7 +152,7 @@ function el(e) {
                 location: 'OverlayStartRinging'
             }).enabled) ||
         D.Z.getStatus() === F.Skl.DND ||
-        j.QZ.getSetting()
+        Z.QZ.getSetting()
     )
         return !1;
     let s = et.find((e) => 1 === e.type && e.channelId === t && e.messageType === F.uaV.CALL);
@@ -166,7 +166,7 @@ function el(e) {
 }
 class ea extends (i = l.ZP.Store) {
     initialize() {
-        this.waitFor(N.Z, R.default, Z.Z);
+        this.waitFor(N.Z, R.default, C.Z);
     }
     getNotifications() {
         return et;
@@ -181,7 +181,7 @@ let ec = new ea(a.Z, {
     OVERLAY_MOUNTED: function (e) {
         var t;
         let { nudges: n } = e;
-        if (C.default.hasChangedRenderMode(null != (t = M.default.getFocusedPID()) ? t : (0, B.getPID)())) return;
+        if (j.default.hasChangedRenderMode(null != (t = M.default.getFocusedPID()) ? t : (0, B.getPID)())) return;
         let i = (function (e) {
             switch (e.type) {
                 case H.nc.OOP_WELCOME:
@@ -239,7 +239,7 @@ let ec = new ea(a.Z, {
             })(l, o, a);
             if (!1 !== e) return e;
         }
-        if (((!z.default.isInstanceLocked() || z.default.isPinned(F.Odu.TEXT)) && r === k.Z.getChannelId()) || Z.Z.isNotificationDisabled(E.OverlayNotificationDisabledSetting.TEXT_CHAT) || A.Z.disableNotifications || !(0, b.eF)(o, r)) return !1;
+        if (((!z.default.isInstanceLocked() || z.default.isPinned(F.Odu.TEXT)) && r === k.Z.getChannelId()) || C.Z.isNotificationDisabled(E.OverlayNotificationDisabledSetting.TEXT_CHAT) || A.Z.disableNotifications || !(0, b.eF)(o, r)) return !1;
         let c = !w.Z.isSoundDisabled(L.Ay);
         eo((0, y.Z)(l, o, a, c), {
             type: 1,
@@ -304,7 +304,7 @@ let ec = new ea(a.Z, {
     OVERLAY_CONTENT_INVENTORY_READY: function (e) {
         var t;
         let { contentInventoryEntries: n } = e;
-        if (0 === n.length || Z.Z.isNotificationDisabled(E.OverlayNotificationDisabledSetting.GAME_ACTIVITY) || C.default.hasChangedRenderMode(null != (t = M.default.getFocusedPID()) ? t : (0, B.getPID)())) return;
+        if (0 === n.length || C.Z.isNotificationDisabled(E.OverlayNotificationDisabledSetting.GAME_ACTIVITY) || j.default.hasChangedRenderMode(null != (t = M.default.getFocusedPID()) ? t : (0, B.getPID)())) return;
         let i = G.Z.getGame();
         if (null == i) return;
         let { enabled: r, dateLookbackMs: s } = x.Z.getCurrentConfig({ location: 'OverlayNotificationsStore' });

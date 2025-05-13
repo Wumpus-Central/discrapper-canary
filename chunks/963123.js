@@ -28,8 +28,8 @@ var r = n(255367),
     T = n(117242),
     N = n(720293),
     k = n(566078),
-    w = n(602667),
-    I = n(881773),
+    I = n(602667),
+    w = n(881773),
     A = n(350312),
     L = n(355243),
     R = n(106743),
@@ -66,7 +66,7 @@ function W(e) {
         o = l.useMemo(() => (0, N.z)(N.i.VIDEO_PLAYER_THUMBNAIL, t), [t]);
     return null == o
         ? null
-        : (0, r.jsx)(w.A, {
+        : (0, r.jsx)(I.A, {
               questOrQuests: t,
               questContent: j.jn.VIDEO_MODAL_END_CARD,
               children: (e) =>
@@ -125,7 +125,7 @@ function X(e) {
     });
 }
 function $(e) {
-    var t, n, o, m, b, w, B, $, J, ee, et, en, er;
+    var t, n, o, m, b, I, B, $, J, ee, et, en, er;
     let { quest: el, videoSessionId: eo, onOptimisticProgressUpdate: ei, autoplay: ea, parentTransitionState: es, performanceClockStartTime: ec, onClose: eu } = e,
         ed = (0, _.km)((e) => e.transcriptEnabled),
         em = (0, _.km)((e) => e.setTranscriptEnabled),
@@ -140,8 +140,8 @@ function $(e) {
         ex = (0, y.il)(el),
         [eD, eP] = l.useState(ex.percentComplete),
         [eT, eN] = l.useState(!1),
-        [ek, ew] = l.useState(!0),
-        [eI, eA] = l.useState(!1),
+        [ek, eI] = l.useState(!0),
+        [ew, eA] = l.useState(!1),
         [eL, eR] = l.useState([]),
         [eM, eV] = l.useState(E.Z.getEffectiveConnectionSpeed()),
         [eB, eF] = l.useState(0),
@@ -287,12 +287,12 @@ function $(e) {
     }, [es, eb, eE, eO, eh, eC, e6, tP, tT, to]);
     let tN = () => e_(!0),
         tk = () => e_(!1),
-        tw = ey || eC === M.rq.PAUSED || eC === M.rq.ENDED,
-        tI = l.useCallback(() => {
+        tI = ey || eC === M.rq.PAUSED || eC === M.rq.ENDED,
+        tw = l.useCallback(() => {
             var e;
             to.info('[QV] | handleFullScreenExit');
             let t = (0, h.fn)(null == (e = e1.current) ? void 0 : e.parentNode, e1.current);
-            null == t || (0, h.rB)(t) || (t.removeEventListener(h.NO, tI), eg(!1), tj(!1));
+            null == t || (0, h.rB)(t) || (t.removeEventListener(h.NO, tw), eg(!1), tj(!1));
         }, [eg, to, tj]),
         tA = () => {
             if (null == e1.current) return;
@@ -308,9 +308,9 @@ function $(e) {
         let e = e1.current;
         return () => {
             let t = (0, h.fn)(null == e ? void 0 : e.parentNode, e);
-            null != t && t.removeEventListener(h.NO, tI);
+            null != t && t.removeEventListener(h.NO, tw);
         };
-    }, [tI]);
+    }, [tw]);
     let tR = l.useCallback(
             (e) => {
                 null != e1.current && (to.info('[QV] | seekTimeline | timeSec: '.concat(e)), tD(), eN(!0), tt(!1), (e1.current.currentTime = e), eX(el.id, e, e1.current.duration));
@@ -370,7 +370,7 @@ function $(e) {
             [eM, ty, e1, tc, to]
         ),
         tU = (e) => {
-            to.info('[QV] | handleCanPlay: playerState: '.concat(eC)), null != e1.current && eC === M.rq.PLAYING && (to.info('[QV] | handleCanPlay: did NOT early return'), ek && (to.info('[QV] | handleCanPlay: loadingFirstChunk: '.concat(ek)), ew(!1)), eI && (to.info('[QV] | handleCanPlay: waitingForChunk: '.concat(eI)), th(eM, null != eK.current ? Date.now() - eK.current : null), eA(!1)), to.info('[QV] | handleCanPlay: updating player state to playing'), tP(M.rq.PLAYING));
+            to.info('[QV] | handleCanPlay: playerState: '.concat(eC)), null != e1.current && eC === M.rq.PLAYING && (to.info('[QV] | handleCanPlay: did NOT early return'), ek && (to.info('[QV] | handleCanPlay: loadingFirstChunk: '.concat(ek)), eI(!1)), ew && (to.info('[QV] | handleCanPlay: waitingForChunk: '.concat(ew)), th(eM, null != eK.current ? Date.now() - eK.current : null), eA(!1)), to.info('[QV] | handleCanPlay: updating player state to playing'), tP(M.rq.PLAYING));
         };
     l.useEffect(() => {
         if (!eT) return;
@@ -409,14 +409,14 @@ function $(e) {
         l.useEffect(
             () => (
                 tY({
-                    controlBarAnimSpring: tw || eq ? 1 : 0,
+                    controlBarAnimSpring: tI || eq ? 1 : 0,
                     immediate: e0
                 }),
                 () => {
                     tq.stop();
                 }
             ),
-            [tw, tY, e0, eq, tq]
+            [tI, tY, e0, eq, tq]
         );
     let tH = eC === M.rq.ENDED,
         tK = l.useCallback(
@@ -428,14 +428,14 @@ function $(e) {
                 }
                 (0, y.FE)(el, {
                     content: e,
-                    ctaContent: S.jZ.LEARN_MORE
+                    ctaContent: S.jZ.VISIT_SITE
                 });
             },
             [el, tE, eu]
         ),
         tW = l.useMemo(() => (0, N.z)(N.i.VIDEO_PLAYER_THUMBNAIL, el), [el]),
         tX = l.useMemo(() => (0, N.z)(N.i.VIDEO_PLAYER_CAPTION, el), [el]),
-        t$ = e6 || eW.maxTimestampSec >= (null != (w = null == (o = e1.current) ? void 0 : o.currentTime) ? w : 0) + 1;
+        t$ = e6 || eW.maxTimestampSec >= (null != (I = null == (o = e1.current) ? void 0 : o.currentTime) ? I : 0) + 1;
     return (0, r.jsx)(p.P3F, {
         className: G.videoCont,
         'data-fullscreen': ev,
@@ -493,7 +493,7 @@ function $(e) {
                         null != e1.current && (tT(e1.current.duration + 1), to.info('[QV] | handleEnded: sending progress update: '.concat(e1.current.duration + 1)), eX(el.id, e1.current.duration, e1.current.duration)), tP(M.rq.ENDED), eA(!1);
                     },
                     onLoadedData: (e) => {
-                        to.info('[QV] | handleLoadedData: loadingFirstChunk: '.concat(ek)), ek && (tp(eM, null != eH.current ? Date.now() - eH.current : null), ew(!1), null != td.current && (td.current.config.minAutoBitrate = 800000));
+                        to.info('[QV] | handleLoadedData: loadingFirstChunk: '.concat(ek)), ek && (tp(eM, null != eH.current ? Date.now() - eH.current : null), eI(!1), null != td.current && (td.current.config.minAutoBitrate = 800000));
                     },
                     onLoadedMetadata: (e) => {
                         null != e1.current && (to.info('[QV] | handleLoadedMetadata | videoAssetId: '.concat(tc)), e5(!0), tc !== N.i.VIDEO_PLAYER_VIDEO_HLS && tR(ts), e$ ? (e1.current.volume = 0) : (e1.current.volume = eJ));
@@ -556,7 +556,7 @@ function $(e) {
                             })
                     ]
                 }),
-                (ek || eI) &&
+                (ek || ew) &&
                     eC === M.rq.PLAYING &&
                     (0, r.jsx)(p.$jN, {
                         type: p.$jN.Type.WANDERING_CUBES,
@@ -670,10 +670,10 @@ function $(e) {
                             percent: eD,
                             animate: !0 !== e8.current && !eT,
                             interactionEnabled: e6 && eQ,
-                            backgroundColor: tw ? void 0 : 'rgba(0, 0, 0, 0.0)',
-                            preloadedBuffers: tw ? eL : void 0,
+                            backgroundColor: tI ? void 0 : 'rgba(0, 0, 0, 0.0)',
+                            preloadedBuffers: tI ? eL : void 0,
                             duration: null != (B = null == (m = e1.current) ? void 0 : m.duration) ? B : 1,
-                            maxSeekableTime: tw && eQ ? tl : void 0,
+                            maxSeekableTime: tI && eQ ? tl : void 0,
                             onClick: (e) => {
                                 tR(e), eC === M.rq.ENDED && tP(M.rq.PLAYING);
                             },
@@ -715,12 +715,12 @@ function $(e) {
                                     (e) => (e < 0.3 ? 'none' : 'auto')
                                 )
                             },
-                            children: (0, r.jsx)(I.Z, {
+                            children: (0, r.jsx)(w.Z, {
                                 videoRef: e1,
                                 quest: el,
                                 playerState: eC,
                                 animSpring: tq,
-                                visible: tw,
+                                visible: tI,
                                 seekForwardEnabled: t$,
                                 hideCaptionBtn: null == tX,
                                 handlePlaybackBtnClick: tM,
@@ -735,7 +735,7 @@ function $(e) {
                                     let t = !ev;
                                     to.info('[QV] | handleFullScreenButtonClick | shouldBeEnabled: '.concat(t));
                                     let n = (0, h.fn)(null == (e = e1.current) ? void 0 : e.parentNode, e1.current);
-                                    t && null != n ? ((0, h.Dj)(n), n.addEventListener(h.NO, tI), tj(!0)) : t || null == n || (n.removeEventListener(h.NO, tI), tj(!1), (0, h.Pr)(n)), eg(t);
+                                    t && null != n ? ((0, h.Dj)(n), n.addEventListener(h.NO, tw), tj(!0)) : t || null == n || (n.removeEventListener(h.NO, tw), tj(!1), (0, h.Pr)(n)), eg(t);
                                 },
                                 handleSeekBackBtnClick: tA,
                                 handleSeekForwardBtnClick: tL,

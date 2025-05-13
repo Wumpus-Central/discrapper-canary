@@ -19,16 +19,16 @@ let b = (e) => {
         [N, P] = l.useState(void 0),
         [S, T] = l.useState(void 0),
         [k, E] = l.useState([]),
-        [w, D] = l.useState(void 0),
-        [R, A] = l.useState(void 0),
-        M = (e) => {
+        [w, R] = l.useState(void 0),
+        [D, M] = l.useState(void 0),
+        A = (e) => {
             var n, r, l;
             let { destination: a } = e,
                 [, s] = a,
                 u = j[s];
             if (void 0 === u) return void c.Z.increment({ name: i.V.IN_APP_REPORT_NAVIGATE_TO_NONEXISTENT_NODE });
             if (u.elements.some((e) => 'skip' === e.type) && (null == (n = u.button) ? void 0 : n.type) === 'next')
-                return M(
+                return A(
                     ((r = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -88,7 +88,7 @@ let b = (e) => {
             var r;
             let l = g ? await (0, u.ZD)(n, t, [...k, e]) : await (0, u.fw)(n, t, [...k, e], h),
                 i = null == l || null == (r = l.body) ? void 0 : r.report_id;
-            null != i && D(i), A(j[e.nodeRef].report_type), null == _ || _(i);
+            null != i && R(i), M(j[e.nodeRef].report_type), null == _ || _(i);
         },
         B = () => {
             var e, n;
@@ -145,10 +145,10 @@ let b = (e) => {
                             children: (0, r.jsx)(m.Z, {
                                 node: e,
                                 reportType: t,
-                                reportSubType: R,
+                                reportSubType: D,
                                 history: k,
                                 onModalClose: b.onClose,
-                                onSelectChild: M,
+                                onSelectChild: A,
                                 onNavigateBack: B,
                                 multiSelect: N,
                                 textInput: S,

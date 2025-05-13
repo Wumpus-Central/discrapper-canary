@@ -1,4 +1,9 @@
-n.d(t, { Z: () => S }), n(388685), n(642613);
+n.d(t, {
+    Z: () => R,
+    w: () => A
+}),
+    n(388685),
+    n(642613);
 var i = n(255367),
     r = n(73800),
     o = n(442837),
@@ -9,67 +14,207 @@ var i = n(255367),
     u = n(493773),
     d = n(358221),
     p = n(569545),
+    h = n(522474),
     f = n(199902),
-    h = n(314897),
-    m = n(592125),
-    g = n(355863),
-    y = n(944486),
-    O = n(804570),
-    v = n(350663),
-    b = n(610394),
-    E = n(340101),
-    _ = n(388032),
-    I = n(832985);
-let x = [];
-function j(e, t, n, i) {
-    let r = (i - 1) * v.z;
-    return e === E.C5.HORIZONTAL ? Math.min(Math.max((t - r) / i, 256), Math.max((16 * n) / 9, 256)) : Math.min(Math.max(t, 256), Math.max((((n - r) / i) * 16) / 9, 256));
+    m = n(314897),
+    g = n(592125),
+    y = n(355863),
+    O = n(944486),
+    v = n(353038),
+    b = n(804570),
+    E = n(350663),
+    _ = n(610394),
+    x = n(461393),
+    S = n(340101),
+    I = n(501787),
+    j = n(388032),
+    C = n(832985);
+function N(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            i = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (i = i.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            i.forEach(function (t) {
+                var i;
+                (i = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: i,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = i);
+            });
+    }
+    return e;
 }
-function S(e) {
-    let { id: t, size: n, locked: S, padding: C, borderWidth: N, opacity: Z, horizontal: w, pinned: P, anchorTop: T, anchorLeft: k, showEmpty: D = !0 } = e,
-        A = 2 * C + 2 * N,
-        { width: L, height: R } = {
-            width: 'number' == typeof n.width ? n.width : 256,
-            height: 'number' == typeof n.height ? n.height : 144
+function w(e, t) {
+    if (null == e) return {};
+    var n,
+        i,
+        r = (function (e, t) {
+            if (null == e) return {};
+            var n,
+                i,
+                r = {},
+                o = Object.keys(e);
+            for (i = 0; i < o.length; i++) (n = o[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+            return r;
+        })(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (i = 0; i < o.length; i++) (n = o[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
+    }
+    return r;
+}
+let Z = [],
+    P = (e, t) => ({
+        fixed: !0,
+        width: e,
+        height: t
+    }),
+    T = P(E.bt, E.fd);
+function k(e, t, n, i, r) {
+    let { padding: o, sizeOffset: l } = r,
+        a = Math.max(1, i),
+        s = (a - 1) * o,
+        c = t * a + s,
+        u = n * a + s;
+    return e === S.C5.HORIZONTAL ? (u = n) : (c = t), P(c + l, u + l);
+}
+function D(e, t, n) {
+    return k(e, E.bt, E.fd, t, n);
+}
+let A = (e) => {
+    let { operation: t, computedSize: n, originSize: i, borderWidth: r, padding: o, containerSpecs: l } = e,
+        a = 2 * r + 2 * o,
+        s = Math.max(1, i.width - a) / Math.max(1, i.height - a),
+        c = (() => {
+            switch (t) {
+                case v.B.RESIZE_NORTH:
+                case v.B.RESIZE_SOUTH:
+                    return {
+                        height: n.height,
+                        width: Math.round((n.height - a) * s + a)
+                    };
+                default:
+                    return {
+                        width: n.width,
+                        height: Math.round((n.width - a) / s + a)
+                    };
+            }
+        })();
+    return (0, x.S)(c, s, a, {
+        maxWidth: 0.75 * l.maxX,
+        maxHeight: 0.75 * l.maxY
+    });
+};
+function L(e) {
+    var { widgetId: t, size: n, borderWidth: i, padding: r, minSize: o, containerSpecs: l } = e,
+        s = w(e, ['widgetId', 'size', 'borderWidth', 'padding', 'minSize', 'containerSpecs']);
+    let { width: c, height: u } = A(
+            N(
+                {
+                    operation: v.B.RESIZE_NORTH,
+                    computedSize: {
+                        width: n.width,
+                        height: n.height
+                    },
+                    originSize: {
+                        width: n.width,
+                        height: n.height
+                    },
+                    borderWidth: i,
+                    padding: r,
+                    containerSpecs: l
+                },
+                s
+            )
+        ),
+        { width: d, height: p } = A(
+            N(
+                {
+                    operation: v.B.RESIZE_NORTH,
+                    computedSize: {
+                        width: o.width,
+                        height: o.height
+                    },
+                    originSize: {
+                        width: o.width,
+                        height: o.height
+                    },
+                    borderWidth: i,
+                    padding: r,
+                    containerSpecs: l
+                },
+                s
+            )
+        );
+    (0, a.nv)({
+        widgetId: t,
+        size: {
+            fixed: n.fixed,
+            width: c,
+            height: u
         },
-        M = (0, o.e7)([y.Z], () => y.Z.getVoiceChannelId()),
-        { width: V, height: U, ref: z } = (0, c.ZP)(),
-        W = (0, o.e7)(
-            [g.Z],
+        minSize: {
+            width: d,
+            height: p
+        }
+    });
+}
+function R(e) {
+    var t, n, a, v, x, P;
+    let { id: A, widget: R, size: M, locked: z, padding: U, borderWidth: V, opacity: W, horizontal: G, pinned: F, anchorTop: B, anchorLeft: H, showEmpty: Y = !0 } = e,
+        Q = 2 * U + 2 * V,
+        { width: K, height: X } = {
+            width: 'number' == typeof M.width ? M.width : E.bt,
+            height: 'number' == typeof M.height ? M.height : E.fd
+        },
+        J = (0, o.e7)([O.Z], () => O.Z.getVoiceChannelId()),
+        { width: q = K - Q, height: $ = X - Q, ref: ee } = (0, c.ZP)(),
+        et = (0, o.e7)(
+            [y.Z],
             () => {
                 var e;
-                let n = g.Z.getWidget(t);
-                return !!(0, E.ZL)(n) && (null == (e = n.meta.showAllStreams) || e);
+                let t = y.Z.getWidget(A);
+                return !!(0, S.ZL)(t) && !z && (null == (e = t.meta.showAllStreams) || e);
             },
-            [t]
+            [A, z]
         ),
-        G = !w,
-        F = (0, o.e7)([m.Z], () => m.Z.getChannel(M)),
-        B = (0, o.e7)([h.default], () => h.default.getId()),
-        H = (T && G) || (k && w),
-        Y = (!T && G) || (!k && w),
+        en = !G,
+        ei = (0, o.e7)([g.Z], () => g.Z.getChannel(J)),
+        er = (0, o.e7)([m.default], () => m.default.getId()),
         {
-            participantsVersion: Q,
-            activeStreams: K,
-            streamParticipants: X
-        } = (0, o.cj)(
+            streamParticipants: eo,
+            activeStreams: el,
+            participantsVersion: ea
+        } = ((x = (B && en) || (H && G)),
+        (P = (!B && en) || (!H && G)),
+        (0, o.cj)(
             [f.Z, d.Z],
             () => {
-                if (null == M)
+                if (null == J)
                     return {
-                        streamParticipants: x,
+                        streamParticipants: Z,
                         participantsVersion: -1,
                         activeStreams: new Set()
                     };
-                let e = new Set(f.Z.getAllActiveStreamsForChannel(M).map((e) => (0, p.V9)(e))),
+                let e = new Set(f.Z.getAllActiveStreamsForChannel(J).map((e) => (0, p.V9)(e))),
                     t = (t) => e.has((0, p.V9)(t.stream)),
-                    n = d.Z.getStreamParticipants(M).filter((e) => e.user.id !== B && (!!W || t(e)));
+                    n = d.Z.getStreamParticipants(J).filter((e) => e.user.id !== er && (!!et || t(e)));
                 return (
                     n.sort((e, n) => {
-                        if (H) {
+                        if (x) {
                             if (t(e) && !t(n)) return -1;
                             if (!t(e) && t(n)) return 1;
-                        } else if (Y) {
+                        } else if (P) {
                             if (t(e) && !t(n)) return 1;
                             if (!t(e) && t(n)) return -1;
                         }
@@ -78,168 +223,194 @@ function S(e) {
                     {
                         streamParticipants: n,
                         activeStreams: e,
-                        participantsVersion: d.Z.getParticipantsVersion(M)
+                        participantsVersion: d.Z.getParticipantsVersion(J)
                     }
                 );
             },
-            [M, B, W, H, Y]
-        ),
-        J = X.length,
-        q = null == F || (0 === K.size && S) || (0 === J && !S),
-        $ = w ? E.C5.HORIZONTAL : E.C5.VERTICAL,
-        { tileWidth: ee, layout: et } = (function (e, t, n, i, o) {
-            let l = (function (e, t, n, i) {
-                    let r = j(E.C5.HORIZONTAL, e, t, n),
-                        o = j(E.C5.VERTICAL, e, t, n);
-                    switch (i) {
-                        case E.C5.VERTICAL:
-                            return o;
-                        case E.C5.HORIZONTAL:
-                            return r;
-                    }
-                    let l = ((9 * o) / 16 + v.z) * n - v.z;
-                    return e > (16 * t) / 9 ? r : l <= t ? o : (9 * r) / 16 <= t ? r : o;
-                })(n, i, t, o),
-                a = j(E.C5.VERTICAL, n, i, t),
-                s = null != o ? o : l === a ? E.C5.VERTICAL : E.C5.HORIZONTAL,
-                [c, u] = r.useState(l);
+            [J, er, et, x, P]
+        )),
+        es = eo.length,
+        ec = null == ei || (0 === el.size && z) || (0 === es && !z),
+        eu = G ? S.C5.HORIZONTAL : S.C5.VERTICAL,
+        ed = {
+            containerWidth: q,
+            containerHeight: $
+        },
+        { tileWidth: ep, tileHeight: eh } = (function (e, t, n) {
+            let { tileWidth: i, tileHeight: o } = (0, E.IV)(n, t.containerWidth, t.containerHeight),
+                [l, a] = r.useState(i),
+                [s, c] = r.useState(o);
             return (
                 r.useEffect(() => {
-                    e || u(l);
-                }, [e, l]),
+                    e || (a(i), c(o));
+                }, [e, i, o]),
                 {
-                    layout: s,
-                    tileWidth: c
+                    tileWidth: e ? l : i,
+                    tileHeight: e ? s : o
                 }
             );
-        })(!1, X.length, null != V ? V : L - A, null != U ? U : R - A, $),
-        en = {
-            id: t,
-            width: L,
-            height: R,
-            sizeOffset: A,
-            layout: et,
-            padding: C,
-            participants: X.length
+        })(z, ed, eu),
+        ef = (0, o.e7)([h.Z], () => h.Z.getWindowState(I.$J)),
+        em = {
+            id: A,
+            widget: R,
+            layout: eu,
+            participants: eo.length,
+            containerSize: ed,
+            tileSize: {
+                tileWidth: ep,
+                tileHeight: eh
+            },
+            sizeOffset: Q,
+            padding: U,
+            borderWidth: V,
+            containerSpecs: {
+                maxX: null != (t = null == ef ? void 0 : ef.width) ? t : K - Q,
+                maxY: null != (n = null == ef ? void 0 : ef.height) ? n : X - Q,
+                minX: 0,
+                minY: 0
+            },
+            orientedPosition: {
+                top: 0,
+                left: 0,
+                bottom: null != (a = null == ef ? void 0 : ef.height) ? a : X,
+                right: null != (v = null == ef ? void 0 : ef.width) ? v : K
+            }
         };
-    return (!(function (e) {
-        let { id: t, streamParticipants: n, layout: i, widgetLayoutSpecs: o } = e,
-            l = r.useRef(o);
-        r.useEffect(() => {
-            l.current = o;
-        });
-        let s = n.length;
-        r.useEffect(() => {
-            let { id: e, width: t, height: n, sizeOffset: i, layout: r, padding: o } = l.current;
-            if (0 === s) {
-                (256 !== t || 144 !== n) &&
-                    (0, a.nv)({
-                        widgetId: e,
-                        size: {
-                            fixed: !0,
-                            width: 256,
-                            height: 144
-                        }
-                    });
-                return;
-            }
-            if (r === E.C5.HORIZONTAL) {
-                let t = (16 / 9) * (n - i);
-                (0, a.nv)({
-                    widgetId: e,
-                    size: {
-                        fixed: !0,
-                        height: n,
-                        width: t * s + o * (s - 1) + i
-                    }
-                });
-            } else {
-                let n = (9 / 16) * (t - i);
-                (0, a.nv)({
-                    widgetId: e,
-                    size: {
-                        fixed: !0,
-                        width: t,
-                        height: n * s + o * (s - 1) + i
-                    }
-                });
-            }
-        }, [s]),
-            r.useEffect(() => {
-                if (l.current.participants <= 1) return;
-                let { id: e, width: t, height: n, sizeOffset: r, padding: o, participants: s } = l.current;
-                if (i === E.C5.HORIZONTAL) {
-                    let n = t - r;
-                    (0, a.nv)({
-                        widgetId: e,
-                        size: {
-                            fixed: !0,
-                            width: n * s + o * (s - 1) + r,
-                            height: (9 / 16) * n + r
-                        }
-                    });
-                } else {
-                    let t = n - r;
-                    (0, a.nv)({
-                        widgetId: e,
-                        size: {
-                            fixed: !0,
-                            width: (16 / 9) * t + r,
-                            height: t * s + o * (s - 1) + r
-                        }
-                    });
-                }
-            }, [i]),
-            r.useEffect(
-                () => () => {
-                    (0, a.nv)({
-                        widgetId: t,
-                        size: {
-                            fixed: !0,
-                            width: 256,
-                            height: 144
-                        }
-                    });
-                },
-                [t]
-            );
-    })({
-        id: t,
-        streamParticipants: X,
-        layout: et,
-        widgetLayoutSpecs: en
-    }),
-    r.useEffect(() => {
-        s.Z.setGpuBoostRequested(b.zS.OVERLAY_VIDEO_STREAM_RENDERING, !q);
-    }, [q]),
+    return (r.useEffect(() => {
+        s.Z.setGpuBoostRequested(_.zS.OVERLAY_VIDEO_STREAM_RENDERING, !ec);
+    }, [ec]),
     (0, u.ZP)(() => () => {
-        s.Z.setGpuBoostRequested(b.zS.OVERLAY_VIDEO_STREAM_RENDERING, !1);
+        s.Z.setGpuBoostRequested(_.zS.OVERLAY_VIDEO_STREAM_RENDERING, !1);
     }),
-    (q || !P) && S)
+    (function (e) {
+        let { streamParticipants: t, layout: n, widgetLayoutSpecs: i } = e,
+            o = r.useRef(i);
+        r.useEffect(() => {
+            o.current = i;
+        });
+        let l = t.length;
+        r.useLayoutEffect(() => {
+            let e = o.current,
+                { id: t, containerSize: n, tileSize: i, sizeOffset: r, layout: a, padding: s, widget: c } = e,
+                u = w(e, ['id', 'containerSize', 'tileSize', 'sizeOffset', 'layout', 'padding', 'widget']);
+            if (null == c) return;
+            if (0 === l)
+                return void L(
+                    N(
+                        {
+                            widgetId: t,
+                            size: T,
+                            minSize: D(a, 1, {
+                                padding: s,
+                                sizeOffset: r
+                            }),
+                            padding: s,
+                            widget: c
+                        },
+                        u
+                    )
+                );
+            let { tileWidth: d, tileHeight: p } = i;
+            L(
+                N(
+                    {
+                        widgetId: t,
+                        size: k(a, d, p, l, {
+                            padding: s,
+                            sizeOffset: r
+                        }),
+                        minSize: D(a, l, {
+                            padding: s,
+                            sizeOffset: r
+                        }),
+                        padding: s,
+                        widget: c
+                    },
+                    u
+                )
+            );
+        }, [l]),
+            r.useLayoutEffect(() => {
+                if (o.current.participants <= 1) return;
+                let e = o.current,
+                    { id: t, sizeOffset: i, containerSize: r, padding: l, participants: a, widget: s } = e,
+                    c = w(e, ['id', 'sizeOffset', 'containerSize', 'padding', 'participants', 'widget']);
+                null != s &&
+                    L(
+                        N(
+                            {
+                                widgetId: t,
+                                size: D(n, a, {
+                                    padding: l,
+                                    sizeOffset: i
+                                }),
+                                minSize: D(n, a, {
+                                    padding: l,
+                                    sizeOffset: i
+                                }),
+                                padding: l,
+                                widget: s
+                            },
+                            c
+                        )
+                    );
+            }, [n]),
+            (0, u.zq)(() => {
+                let e = o.current,
+                    { id: t, sizeOffset: i, widget: r, padding: l } = e,
+                    a = w(e, ['id', 'sizeOffset', 'widget', 'padding']);
+                null != r &&
+                    L(
+                        N(
+                            {
+                                widgetId: t,
+                                size: T,
+                                minSize: D(n, 0, {
+                                    padding: l,
+                                    sizeOffset: i
+                                }),
+                                padding: l,
+                                widget: r
+                            },
+                            a
+                        )
+                    );
+            });
+    })({
+        id: A,
+        streamParticipants: eo,
+        layout: eu,
+        widgetLayoutSpecs: em
+    }),
+    (ec || !F) && z)
         ? null
-        : q && !S
-          ? D
-              ? S
+        : ec && !z
+          ? Y
+              ? z
                   ? null
-                  : (0, i.jsx)(O.E, {
-                        emptyText: _.intl.string(_.t['T6+rX1']),
+                  : (0, i.jsx)(b.E, {
+                        emptyText: j.intl.string(j.t['T6+rX1']),
                         icon: l.hGI,
                         absolute: !0
                     })
               : null
           : (0, i.jsx)('div', {
-                className: I.goLiveGridContainer,
-                style: { opacity: Z },
-                ref: z,
-                children: (0, i.jsx)(v.Z, {
-                    widgetId: t,
-                    tileWidth: ee,
-                    locked: S,
-                    layout: et,
-                    activeStreams: K,
-                    streamParticipants: X,
-                    participantsVersion: Q,
-                    pinned: P
+                className: C.goLiveGridContainer,
+                style: { opacity: W },
+                ref: ee,
+                children: (0, i.jsx)(E.ZP, {
+                    widgetId: A,
+                    tileWidth: ep,
+                    tileHeight: eh,
+                    locked: z,
+                    layout: eu,
+                    activeStreams: el,
+                    streamParticipants: eo,
+                    participantsVersion: ea,
+                    pinned: F,
+                    padding: U,
+                    sizeOffset: Q
                 })
             });
 }

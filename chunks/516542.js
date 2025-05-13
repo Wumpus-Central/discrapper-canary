@@ -9,25 +9,25 @@ var i = n(255367),
     u = n(541716),
     d = n(752305),
     p = n(893718),
-    f = n(957730),
-    h = n(849522),
+    h = n(957730),
+    f = n(849522),
     m = n(145597),
     g = n(981631),
     y = n(842304);
 function O(e) {
     let { id: t, replyToMessageId: n, channel: O, onSend: v } = e,
-        b = (0, h.Z)(),
+        b = (0, f.Z)(),
         { placeholder: E, accessibilityLabel: _ } = (0, c.Z)({ channel: O }),
-        [I, x] = r.useState(() => (0, d.H2)()),
-        { textValue: j, richValue: S } = I,
+        [x, S] = r.useState(() => (0, d.H2)()),
+        { textValue: I, richValue: j } = x,
         [C, N] = r.useState(!1),
-        Z = r.useCallback(() => N(!0), []),
-        w = r.useCallback(() => N(!1), []);
+        w = r.useCallback(() => N(!0), []),
+        Z = r.useCallback(() => N(!1), []);
     (0, s.ZP)(() => {
         (0, a.In)(O.id, !0, !0, n, { section: g.jXE.OVERLAY });
     });
     let P = r.useCallback((e, t, n) => {
-            x({
+            S({
                 textValue: t,
                 richValue: n
             });
@@ -40,13 +40,13 @@ function O(e) {
         ),
         k = r.useCallback(
             () => (
-                j.length > b || (o.Z.sendMessage(O.id, f.ZP.parse(O, j), !1), l.Z.setInputLocked(!0, (0, m.getPID)()), l.Z.updateNotificationStatus(t, g._1z.DISMISSED), null == v || v(j)),
+                I.length > b || (o.Z.sendMessage(O.id, h.ZP.parse(O, I), !1), l.Z.setInputLocked(!0, (0, m.getPID)()), l.Z.updateNotificationStatus(t, g._1z.DISMISSED), null == v || v(I)),
                 Promise.resolve({
                     shouldClear: !1,
                     shouldRefocus: !0
                 })
             ),
-            [j, b, O, t, v]
+            [I, b, O, t, v]
         );
     return (0, i.jsx)('div', {
         className: y.container,
@@ -56,12 +56,12 @@ function O(e) {
             placeholder: E,
             accessibilityLabel: _,
             channel: O,
-            textValue: j,
-            richValue: S,
+            textValue: I,
+            richValue: j,
             type: u.Ie.OVERLAY_INLINE_REPLY,
             allowNewLines: !1,
-            onBlur: w,
-            onFocus: Z,
+            onBlur: Z,
+            onFocus: w,
             focused: C,
             onSubmit: k,
             onKeyDown: T,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => Z }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -98,10 +98,10 @@ class E extends r.PureComponent {
     render() {
         let { widget: e, widgetConfig: t, layoutSize: n, locked: r, isPreviewingInGame: s, isActiveRegion: o } = this.props;
         if (null == e || null == t) return null;
-        let { id: l, pinned: a, zIndex: d, size: u, anchor: h } = e,
-            f = (0, p.w_)(u, n),
-            g = (0, p.KR)(h, n),
-            { minSize: m, resizeX: v, resizeY: _, dragAnywhere: O } = t,
+        let { id: l, pinned: a, zIndex: d, size: u, anchor: h, minSize: f } = e,
+            g = (0, p.w_)(u, n),
+            m = (0, p.KR)(h, n),
+            { resizeX: v, resizeY: _, dragAnywhere: O } = t,
             b = (0, y.eM)({
                 locked: r,
                 isPreviewingInGame: s,
@@ -113,15 +113,15 @@ class E extends r.PureComponent {
                 maxX: n.width,
                 maxY: n.height
             },
-            E = this.renderWidget(e, g, f);
+            E = this.renderWidget(e, m, g);
         return null == E
             ? null
             : (0, i.jsx)(c.Z, {
                   id: l,
-                  size: f,
-                  anchor: g,
+                  size: g,
+                  anchor: m,
                   container: x,
-                  minSize: m,
+                  minSize: f,
                   hidden: !b,
                   resizeX: v,
                   resizeY: _,
@@ -197,7 +197,7 @@ let S = s.ZP.connectStores([d.Z, u.default], (e) => {
         isActiveRegion: null != n && n.type === O.Odu.TEXT && i.has(O.O0n.TEXT_WIDGET)
     };
 })(E);
-function C(e, t) {
+function j(e, t) {
     return (0, i.jsx)(
         S,
         {
@@ -207,11 +207,11 @@ function C(e, t) {
         e
     );
 }
-let Z = s.ZP.connectStores([d.Z, h.Z], () => {
+let C = s.ZP.connectStores([d.Z, h.Z], () => {
     var e;
     return {
         layout: null != (e = d.Z.getLayout(f.OVERLAY_LAYOUT_ID)) ? e : void 0,
         layoutSize: h.Z.windowSize(),
-        renderWidget: C
+        renderWidget: j
     };
 })(a.Z);

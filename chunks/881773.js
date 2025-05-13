@@ -161,7 +161,7 @@ let D = l.forwardRef(function (e, t) {
 });
 function P(e) {
     var t, n;
-    let { videoRef: o, playerState: O, animSpring: y, visible: P, seekForwardEnabled: T, hideCaptionBtn: N, handlePlaybackBtnClick: k, handleTranscriptBtnClick: w, handleCaptionBtnClick: I, handleFullScreenBtnClick: A, handleSeekBackBtnClick: L, handleSeekForwardBtnClick: R, handleControlBarPendingInteraction: M, onVolumeChange: V } = e,
+    let { videoRef: o, playerState: O, animSpring: y, visible: P, seekForwardEnabled: T, hideCaptionBtn: N, handlePlaybackBtnClick: k, handleTranscriptBtnClick: I, handleCaptionBtnClick: w, handleFullScreenBtnClick: A, handleSeekBackBtnClick: L, handleSeekForwardBtnClick: R, handleControlBarPendingInteraction: M, onVolumeChange: V } = e,
         B = (0, p.Q3)('ListSectionItem'),
         F = (0, f.km)((e) => e.volume),
         Z = (0, f.km)((e) => e.setVolume),
@@ -215,7 +215,7 @@ function P(e) {
                         R();
                         break;
                     case E.Y1.CAPTION:
-                        I();
+                        w();
                         break;
                     case E.Y1.FULLSCREEN:
                         A();
@@ -224,7 +224,7 @@ function P(e) {
                         eo();
                 }
             },
-            [I, A, k, L, R, eo, H]
+            [w, A, k, L, R, eo, H]
         );
     l.useEffect(() => {
         null != er.current && er.current.focus();
@@ -394,7 +394,7 @@ function P(e) {
                         iconComponent: d.hH0,
                         animationTime: y,
                         visible: P,
-                        onClick: w,
+                        onClick: I,
                         active: Y && O !== E.rq.ENDED,
                         disabled: O === E.rq.ENDED,
                         ariaLabel: h.intl.string(h.t.KCzjTk),
@@ -406,7 +406,7 @@ function P(e) {
                             animationTime: y,
                             visible: P,
                             active: Q,
-                            onClick: I,
+                            onClick: w,
                             ariaLabel: h.intl.string(h.t.bDSZOz),
                             tooltipLabel: h.intl.string(h.t.bDSZOz),
                             shortcut: E.Y1.CAPTION

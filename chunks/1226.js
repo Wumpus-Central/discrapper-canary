@@ -1,8 +1,8 @@
 n.d(t, {
     BO: () => u,
     cq: () => p,
-    gI: () => f,
-    xN: () => h,
+    gI: () => h,
+    xN: () => f,
     yA: () => d
 });
 var i = n(348327),
@@ -75,7 +75,7 @@ function p(e, t) {
         });
     }, !0);
 }
-function f(e, t) {
+function h(e, t) {
     let n = (0, l.V9)(e);
     c.setState((e) => {
         var i;
@@ -89,7 +89,7 @@ function f(e, t) {
         });
     });
 }
-function h(e) {
+function f(e) {
     var t;
     let n = (0, l.V9)(e);
     return null == (t = c.useState((e) => e.streams, r())[n]) ? void 0 : t.fitOverride;

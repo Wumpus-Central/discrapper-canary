@@ -9,8 +9,8 @@ var i = n(255367),
     u = n(481060),
     d = n(667142),
     p = n(333031),
-    f = n(86654);
-let h = {
+    h = n(86654);
+let f = {
     mass: 1,
     tension: 600,
     friction: 60,
@@ -23,20 +23,20 @@ function m(e) {
         [y, O] = r.useState(0),
         v = r.useRef(0),
         [b, E] = r.useState(0),
-        { timeToLiveMs: _, reappearTimeMs: I } = d.ZP.useState(
+        { timeToLiveMs: _, reappearTimeMs: x } = d.ZP.useState(
             (e) => ({
                 timeToLiveMs: e.timeToLiveMs,
                 reappearTimeMs: e.reappearTimeMs
             }),
             s()
         ),
-        x = {
+        S = {
             timeToLiveMs: _,
-            reappearTimeMs: I
+            reappearTimeMs: x
         },
-        j = r.useRef(x);
+        I = r.useRef(S);
     r.useEffect(() => {
-        j.current = x;
+        I.current = S;
     }),
         r.useEffect(
             () => (
@@ -46,8 +46,8 @@ function m(e) {
                         O((t) => {
                             if (0 === t) return e;
                             let n = e - t,
-                                i = j.current.timeToLiveMs,
-                                r = i + j.current.reappearTimeMs;
+                                i = I.current.timeToLiveMs,
+                                r = i + I.current.reappearTimeMs;
                             return n > i ? t + r : t;
                         });
                 }, 100)),
@@ -57,7 +57,7 @@ function m(e) {
             ),
             []
         );
-    let S = () => {
+    let j = () => {
             a(Date.now()), E((e) => e + 1);
         },
         C = o > 0 && m - o < 1000,
@@ -65,14 +65,14 @@ function m(e) {
             from: { opacity: 0 },
             enter: { opacity: 1 },
             leave: { opacity: 0 },
-            config: h
+            config: f
         }),
-        [Z, w] = r.useState(!1);
+        [w, Z] = r.useState(!1);
     if (
         (r.useEffect(() => {
-            b > 10 && w(!0);
+            b > 10 && Z(!0);
         }, [b]),
-        Z)
+        w)
     )
         throw Error('ClickZoneDebugWidget crashed, too many clicks');
     return t && !n
@@ -83,12 +83,12 @@ function m(e) {
                       t &&
                       (0, i.jsx)(c.animated.div, {
                           style: e,
-                          className: f.clickZoneDebugContainer,
+                          className: h.clickZoneDebugContainer,
                           children: (0, i.jsx)(p.Z, {
-                              className: l()(f.clickZone, C && f.clickBackground),
+                              className: l()(h.clickZone, C && h.clickBackground),
                               children: (0, i.jsx)(u.P3F, {
-                                  onClick: S,
-                                  className: f.clickable,
+                                  onClick: j,
+                                  className: h.clickable,
                                   children: (0, i.jsxs)(u.Text, {
                                       variant: 'text-md/semibold',
                                       color: 'always-white',

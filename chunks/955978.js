@@ -9,8 +9,8 @@ var i = n(255367),
     u = n(944486),
     d = n(594174),
     p = n(5192),
-    f = n(620954),
-    h = n(987650),
+    h = n(620954),
+    f = n(987650),
     m = n(388032),
     g = n(484762);
 function y(e, t, n) {
@@ -21,9 +21,9 @@ function y(e, t, n) {
         b = c.Z.getChannel(v),
         E = l.Z.getApplication(t),
         _ = a.ZP.getRunningGames().find((e) => e.id === t),
-        I = null != (y = null == _ ? void 0 : _.name) ? y : null == E ? void 0 : E.name,
-        x = (0, p.oY)(null == b ? void 0 : b.guild_id, null == b ? void 0 : b.id, O),
-        j = (0, i.jsxs)('div', {
+        x = null != (y = null == _ ? void 0 : _.name) ? y : null == E ? void 0 : E.name,
+        S = (0, p.oY)(null == b ? void 0 : b.guild_id, null == b ? void 0 : b.id, O),
+        I = (0, i.jsxs)('div', {
             className: g.nowPlayingNotification,
             children: [
                 (0, i.jsx)('div', {
@@ -41,8 +41,8 @@ function y(e, t, n) {
                         color: 'interactive-normal',
                         className: g.bodyText,
                         children: m.intl.format(m.t['q7/rgo'], {
-                            username: null != x ? x : O.username,
-                            gameName: I,
+                            username: null != S ? S : O.username,
+                            gameName: x,
                             gameIcon: () =>
                                 null != E || null != _
                                     ? (0, i.jsx)(s.Z, {
@@ -57,21 +57,21 @@ function y(e, t, n) {
                 })
             ]
         }),
-        { trackView: S, trackClick: C } = (0, f.R)(h.n0.NowPlayingNotification, {
-            notif_type: h.n0.NowPlayingNotification,
+        { trackView: j, trackClick: C } = (0, h.R)(f.n0.NowPlayingNotification, {
+            notif_type: f.n0.NowPlayingNotification,
             notif_user_id: O.id,
             activity_type: n.type,
-            activity_name: null != I ? I : n.name
+            activity_name: null != x ? x : n.name
         });
     return {
-        body: j,
+        body: I,
         className: g.nowPlayingNotificationContainer,
         wrapperClassName: g.nowPlayingNotificationWrapper,
         animationWrapperClassName: g.nowPlayingNotificationAnimationWrapper,
         maxBodyLines: 1,
         disableClickableRegions: !0,
         onNotificationShow: () => {
-            S();
+            j();
         },
         onDismissClick: () => {
             C('dismiss');

@@ -9,10 +9,11 @@ var r = n(255367),
 let d = (e) => {
     var t, n;
     let {
-            node: { header: d, subheader: u, button: m }
+            node: { header: d, subheader: u, button: m },
+            isModeratorReport: p
         } = e,
-        p = (null == m ? void 0 : m.type) === 'submit',
-        x = l.useRef(
+        x = (null == m ? void 0 : m.type) === 'submit',
+        b = l.useRef(
             a.Z.reactParserFor(
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -69,10 +70,11 @@ let d = (e) => {
                 ? (0, r.jsx)(i.Text, {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
-                      children: x.current(u)
+                      children: b.current(u)
                   })
                 : null,
-            p &&
+            x &&
+                !p &&
                 (0, r.jsx)(i.Text, {
                     variant: 'text-sm/normal',
                     children: s.intl.format(s.t.Q0tSKS, {})

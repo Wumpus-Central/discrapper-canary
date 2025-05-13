@@ -83,7 +83,7 @@ function y(e, t) {
 }
 function S(e) {
     let { withTitleBar: t, windowKey: n } = e;
-    return y(n, h.$)
+    return y(n, h.$S)
         ? (0, r.jsx)(u.Z, {
               withTitleBar: t,
               windowKey: n,

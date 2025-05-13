@@ -21,9 +21,9 @@ var i = n(255367),
     x = n(199649),
     E = n(1397),
     S = n(541716),
-    C = n(752305),
-    Z = n(974251),
-    j = n(893718),
+    j = n(752305),
+    C = n(974251),
+    Z = n(893718),
     I = n(249458),
     P = n(552062),
     N = n(957730),
@@ -143,7 +143,7 @@ class eo extends r.Component {
                 },
                 children: () =>
                     (0, i.jsx)(
-                        j.Z,
+                        Z.Z,
                         ei(en({}, r), {
                             renderAttachButton: this.renderAttachButton,
                             channel: t,
@@ -186,7 +186,7 @@ class eo extends r.Component {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : t.props,
                     { textValue: n } = t.state,
                     i = A.Z.getDraft(e.channel.id, A.d.ChannelMessage);
-                n !== i && '' === i && t.setState((0, C.eK)(i));
+                n !== i && '' === i && t.setState((0, j.eK)(i));
             }),
             et(this, 'handleTextareaKeyDown', (e) => {
                 if (e.which === Q.yXg.ARROW_UP && !e.shiftKey && !e.altKey && !e.ctrlKey && !e.metaKey && 0 === this.state.textValue.length) {
@@ -234,7 +234,7 @@ class eo extends r.Component {
                                         shouldRefocus: !1
                                     };
                           let l = p.Z.getSendMessageOptionsForReply(i);
-                          return (p.Z.sendMessage(n.id, N.ZP.parse(n, t), !0, l), this.setState((0, C.H2)()), (0, T.A6)(n.id), r)
+                          return (p.Z.sendMessage(n.id, N.ZP.parse(n, t), !0, l), this.setState((0, j.H2)()), (0, T.A6)(n.id), r)
                               ? (f.Z.deactivateAllRegions(),
                                 {
                                     shouldClear: !1,
@@ -253,18 +253,18 @@ class eo extends r.Component {
                 this.setState({ focused: !1 });
             }),
             et(this, 'renderAttachButton', (e, t) =>
-                (0, i.jsx)(Z.Z, {
+                (0, i.jsx)(C.Z, {
                     className: t,
                     channel: this.props.channel,
                     draftType: A.d.ChannelMessage,
                     editorTextContent: this.state.textValue,
-                    setValue: (e) => this.handleTextareaChange(null, e, (0, C.JM)(e)),
+                    setValue: (e) => this.handleTextareaChange(null, e, (0, j.JM)(e)),
                     canOnlyUseTextCommands: e
                 })
             ),
             A.Z.addChangeListener(this.draftDidChange);
         let n = A.Z.getDraft(e.channel.id, A.d.ChannelMessage);
-        (this.state = ei(en({}, (0, C.eK)(n)), {
+        (this.state = ei(en({}, (0, j.eK)(n)), {
             focused: !1,
             contentWarningProps: null
         })),
