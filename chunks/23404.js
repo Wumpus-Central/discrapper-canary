@@ -95,16 +95,17 @@ function L(e) {
         [w, R] = i.useState(!1),
         D = i.useCallback(() => R(!0), []),
         k = i.useCallback(() => R(!1), []),
-        M = i.useCallback((e) => {
+        M = (0, b.up)(T.dr.ACTIVITY_PANEL),
+        U = i.useCallback((e) => {
             e.stopPropagation();
         }, []),
-        U = i.useCallback(() => {
+        G = i.useCallback(() => {
             (0, d.AH)(E.id, {
                 questContent: f.jn.ACTIVITY_PANEL,
                 questContentCTA: u.jZ.ACCEPT_QUEST
             });
         }, [E]),
-        G = i.useCallback(() => {
+        V = i.useCallback(() => {
             null != E &&
                 (O({
                     questId: E.id,
@@ -116,7 +117,7 @@ function L(e) {
                     questId: E.id
                 }));
         }, [E, O]),
-        V = i.useCallback(() => {
+        B = i.useCallback(() => {
             O({
                 questId: E.id,
                 questContent: f.jn.ACTIVITY_PANEL,
@@ -127,32 +128,32 @@ function L(e) {
                     questId: E.id
                 });
         }, [E.id, O]),
-        B = (0, C.hf)({
+        H = (0, C.hf)({
             quest: E,
             location: f.jn.ACTIVITY_PANEL
         }),
-        H = (0, p.tP)(E),
-        F = (null == (t = E.userStatus) ? void 0 : t.enrolledAt) != null,
-        z = (null == (n = E.userStatus) ? void 0 : n.completedAt) != null,
-        W = (null == (l = E.userStatus) ? void 0 : l.claimedAt) != null,
-        Y = (null == E ? void 0 : E.userStatus) != null && (0, g.zE)(E.userStatus, f.jn.ACTIVITY_PANEL),
-        K = (0, p.Rf)(E),
-        q = (0, b.DD)({
+        F = (0, p.tP)(E),
+        z = (null == (t = E.userStatus) ? void 0 : t.enrolledAt) != null,
+        W = (null == (n = E.userStatus) ? void 0 : n.completedAt) != null,
+        Y = (null == (l = E.userStatus) ? void 0 : l.claimedAt) != null,
+        K = (null == E ? void 0 : E.userStatus) != null && (0, g.zE)(E.userStatus, f.jn.ACTIVITY_PANEL),
+        q = (0, p.Rf)(E),
+        Q = (0, b.DD)({
             quest: E,
-            taskDetails: K,
+            taskDetails: q,
             location: T.dr.ACTIVITY_PANEL,
             questContent: f.jn.ACTIVITY_PANEL
         }),
-        Q = (0, m.j)({ location: T.dr.QUESTS_BAR_MOBILE });
-    return Y || H || W || L
+        X = (0, m.j)({ location: T.dr.QUESTS_BAR_MOBILE });
+    return K || F || Y || L
         ? null
         : (0, r.jsxs)('div', {
               ref: (e) => {
                   _.current = e;
               },
-              className: a()(A.wrapper, { [A.wrapperQuestAccepted]: F }),
-              onClick: M,
-              onKeyPress: M,
+              className: a()(A.wrapper, { [A.wrapperQuestAccepted]: z }),
+              onClick: U,
+              onKeyPress: U,
               onFocus: D,
               onMouseEnter: D,
               onBlur: k,
@@ -161,7 +162,7 @@ function L(e) {
                   (0, r.jsxs)('div', {
                       className: A.utils,
                       children: [
-                          F ? (0, r.jsx)(x, { quest: E }) : (0, r.jsx)(I.Z, {}),
+                          z ? (0, r.jsx)(x, { quest: E }) : (0, r.jsx)(I.Z, {}),
                           (0, r.jsx)(v.r, {
                               quest: E,
                               questContent: f.jn.ACTIVITY_PANEL,
@@ -199,7 +200,7 @@ function L(e) {
                           })
                       ]
                   }),
-                  !F &&
+                  !z &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
                               (0, r.jsx)(x, { quest: E }),
@@ -209,9 +210,9 @@ function L(e) {
                                       (0, r.jsx)(s.Text, {
                                           variant: 'text-sm/normal',
                                           color: 'text-normal',
-                                          children: q
+                                          children: Q
                                       }),
-                                      Q &&
+                                      X &&
                                           (0, r.jsx)(y.Z, {
                                               quest: E,
                                               textColor: 'text-muted',
@@ -221,20 +222,20 @@ function L(e) {
                               })
                           ]
                       }),
-                  F &&
-                      !z &&
+                  z &&
+                      !W &&
                       (0, r.jsx)(S.Z, {
                           autoplay: w,
                           className: A.rewardTileWithInstructions,
                           quest: E,
                           questContent: f.jn.ACTIVITY_PANEL,
                           location: T.dr.ACTIVITY_PANEL,
-                          taskDetails: K
+                          taskDetails: q
                       }),
                   (0, r.jsxs)('div', {
                       className: A.ctas,
                       children: [
-                          !F &&
+                          !z &&
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
                                       (0, r.jsx)(s.zxk, {
@@ -242,38 +243,38 @@ function L(e) {
                                           color: s.zxk.Colors.PRIMARY,
                                           fullWidth: !0,
                                           size: s.zxk.Sizes.SMALL,
-                                          onClick: V,
+                                          onClick: B,
                                           children: j.intl.string(j.t.LLLLPD)
                                       }),
                                       (0, r.jsx)(s.zxk, {
                                           className: A.cta,
                                           color: s.zxk.Colors.BRAND,
                                           fullWidth: !0,
-                                          onClick: U,
+                                          onClick: G,
                                           size: s.zxk.Sizes.SMALL,
                                           submitting: P,
                                           children: j.intl.string(j.t.l7E81t)
                                       })
                                   ]
                               }),
-                          F &&
-                              !z &&
+                          z &&
+                              !W &&
                               (0, r.jsx)(s.zxk, {
                                   className: A.cta,
                                   color: s.zxk.Colors.BRAND,
                                   fullWidth: !0,
-                                  onClick: G,
+                                  onClick: V,
                                   size: s.zxk.Sizes.SMALL,
                                   children: j.intl.string(j.t.VN1Ajo)
                               }),
-                          z &&
+                          W &&
                               (0, r.jsx)(s.zxk, {
                                   className: A.cta,
                                   color: s.zxk.Colors.BRAND,
                                   fullWidth: !0,
-                                  onClick: B,
+                                  onClick: H,
                                   size: s.zxk.Sizes.SMALL,
-                                  children: j.intl.string(j.t.cfY4PD)
+                                  children: M
                               })
                       ]
                   })

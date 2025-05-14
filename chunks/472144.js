@@ -15,11 +15,11 @@ let f = o.forwardRef((e, t) => {
         m = s / 2 - f / 2,
         h = 2 * Math.PI * m,
         y = h - o * h,
-        O = {
+        S = {
             strokeDasharray: ''.concat(h, ' ').concat(h),
             strokeDashoffset: y
         },
-        S = {
+        O = {
             strokeDasharray: ''.concat(h, ' ').concat(h),
             strokeDashoffset: -o * h
         },
@@ -98,7 +98,7 @@ let f = o.forwardRef((e, t) => {
                         cx: k,
                         cy: k,
                         stroke: 'url(#linear)',
-                        style: S
+                        style: O
                     }),
                     (0, r.jsx)('circle', {
                         className: d.progress,
@@ -108,7 +108,7 @@ let f = o.forwardRef((e, t) => {
                         cx: k,
                         cy: k,
                         stroke: b.foreground,
-                        style: O
+                        style: S
                     })
                 ]
             })

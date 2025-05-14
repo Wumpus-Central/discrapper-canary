@@ -1,7 +1,7 @@
 n.d(t, { Z: () => u });
-var l = n(255367),
+var r = n(255367),
     i = n(73800),
-    r = n(481060),
+    l = n(481060),
     o = n(596454),
     s = n(318766),
     a = n(907040),
@@ -11,10 +11,10 @@ function u(e) {
     let { className: t, emojiClassName: n, emoji: u, setEmoji: m, channel: h } = e,
         j = i.useRef(null),
         x = (e) => (t, n) => {
-            var l, i;
+            var r, i;
             null != t &&
                 (null == t.id
-                    ? m({ name: null != (l = t.optionallyDiverseSequence) ? l : '' })
+                    ? m({ name: null != (r = t.optionallyDiverseSequence) ? r : '' })
                     : m({
                           id: t.id,
                           name: null != (i = t.originalName) ? i : t.name,
@@ -22,29 +22,29 @@ function u(e) {
                       }),
                 n && e());
         },
-        p =
+        v =
             null == u || null == u.name
                 ? null
                 : () => {
                       var e;
-                      return (0, l.jsx)(o.Z, {
+                      return (0, r.jsx)(o.Z, {
                           className: n,
                           animated: null != (e = u.animated) && e,
                           emojiId: u.id,
                           emojiName: u.name
                       });
                   };
-    return (0, l.jsx)(c.Z, {
+    return (0, r.jsx)(c.Z, {
         hasSetEmoji: null != u && null != u.name,
         onClick: () => {
             m(null);
         },
-        children: (0, l.jsx)(r.yRy, {
+        children: (0, r.jsx)(l.yRy, {
             targetElementRef: j,
             position: 'bottom',
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, l.jsx)(a.Z, {
+                return (0, r.jsx)(a.Z, {
                     closePopout: t,
                     onSelectEmoji: x(t),
                     pickerIntention: d.Hz.COMMUNITY_CONTENT,
@@ -52,54 +52,54 @@ function u(e) {
                 });
             },
             children: (e, n) => {
-                var i, r;
+                var i, l;
                 let { isShown: o } = n;
-                return (0, l.jsx)(
+                return (0, r.jsx)(
                     s.Z,
                     ((i = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
-                                l = Object.keys(n);
+                                r = Object.keys(n);
                             'function' == typeof Object.getOwnPropertySymbols &&
-                                (l = l.concat(
+                                (r = r.concat(
                                     Object.getOwnPropertySymbols(n).filter(function (e) {
                                         return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                     })
                                 )),
-                                l.forEach(function (t) {
-                                    var l;
-                                    (l = n[t]),
+                                r.forEach(function (t) {
+                                    var r;
+                                    (r = n[t]),
                                         t in e
                                             ? Object.defineProperty(e, t, {
-                                                  value: l,
+                                                  value: r,
                                                   enumerable: !0,
                                                   configurable: !0,
                                                   writable: !0
                                               })
-                                            : (e[t] = l);
+                                            : (e[t] = r);
                                 });
                         }
                         return e;
                     })({}, e)),
-                    (r = r =
+                    (l = l =
                         {
                             ref: j,
                             tabIndex: 0,
                             active: o,
                             className: t,
-                            renderButtonContents: p
+                            renderButtonContents: v
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(r))
+                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
-                                  var l = Object.getOwnPropertySymbols(e);
-                                  n.push.apply(n, l);
+                                  var r = Object.getOwnPropertySymbols(e);
+                                  n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(r)).forEach(function (e) {
-                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(r, e));
+                          })(Object(l)).forEach(function (e) {
+                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
                           }),
                     i)
                 );

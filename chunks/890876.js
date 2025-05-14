@@ -18,8 +18,8 @@ function l(e) {
                   })
           })
         : (0, r.jsx)('footer', {
-              inert: '',
               className: s.footer,
+              inert: !0,
               children: (0, r.jsx)(o.Z, { user: t })
           });
 }

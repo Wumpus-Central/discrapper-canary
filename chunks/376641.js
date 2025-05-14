@@ -1,12 +1,12 @@
 n.d(t, {
-    P: () => o,
-    v: () => i
+    P: () => i,
+    v: () => l
 });
-var a = n(817718),
-    r = n(981631);
-let o = {
-        [r.EkH.MODAL_CAROUSEL_NEXT]: a.XM,
-        [r.EkH.MODAL_CAROUSEL_PREV]: a.py,
-        [r.EkH.CLOSE_MODAL]: a.U3
+var r = n(817718),
+    a = n(981631);
+let i = {
+        [a.EkH.MODAL_CAROUSEL_NEXT]: r.XM,
+        [a.EkH.MODAL_CAROUSEL_PREV]: r.py,
+        [a.EkH.CLOSE_MODAL]: r.U3
     },
-    i = { [r.EkH.CLOSE_MODAL]: a.U3 };
+    l = { [a.EkH.CLOSE_MODAL]: r.U3 };

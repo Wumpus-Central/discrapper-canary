@@ -90,7 +90,7 @@ class N {
         return this.questContentPosition;
     }
     constructor({ questOrQuests: e, questContent: t, adDecisionData: n, triggeredByStatusChange: r, trackGuildAndChannelMetadata: i, questContentPosition: s, questContentRowIndex: l, minViewTimeSeconds: c = I, isQuestEnrollmentBlocked: f }) {
-        var _ = this;
+        var y = this;
         E(this, 'id', void 0),
             E(this, 'quests', void 0),
             E(this, 'questContent', void 0),
@@ -128,7 +128,8 @@ class N {
                             {
                                 min_view_time_seconds: this.minViewTimeSeconds,
                                 min_viewport_percentage: this.minViewportPercentage,
-                                triggered_by_status_change: this.triggeredByStatusChange
+                                triggered_by_status_change: this.triggeredByStatusChange,
+                                google_advertising_id: _.Z.googleAdvertisingId
                             },
                             this.commonProperties(e)
                         ),
@@ -139,15 +140,15 @@ class N {
             }),
             E(this, 'beat', function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                _.quests.forEach((t) => {
-                    if (null != _.lastBeatTime) {
-                        let n = Math.round(Date.now() - _.lastBeatTime);
+                y.quests.forEach((t) => {
+                    if (null != y.lastBeatTime) {
+                        let n = Math.round(Date.now() - y.lastBeatTime);
                         (0, m.T)().info(
                             ''
                                 .concat(t.config.messages.questName, ' Quest impression ')
                                 .concat(e ? 'terminal ' : '', 'heartbeat: ')
                                 .concat(n, 'ms since last heartbeat'),
-                            { impressionId: _.id }
+                            { impressionId: y.id }
                         ),
                             (0, d.dA)({
                                 questId: t.id,
@@ -156,15 +157,15 @@ class N {
                                     {
                                         is_termination_beat: e,
                                         viewed_time_ms: n,
-                                        triggered_by_status_change: _.triggeredByStatusChange
+                                        triggered_by_status_change: y.triggeredByStatusChange
                                     },
-                                    _.commonProperties(t)
+                                    y.commonProperties(t)
                                 ),
-                                trackGuildAndChannelMetadata: _.trackGuildAndChannelMetadata
+                                trackGuildAndChannelMetadata: y.trackGuildAndChannelMetadata
                             });
                     }
                 }),
-                    (_.lastBeatTime = Date.now());
+                    (y.lastBeatTime = Date.now());
             }),
             E(this, 'commonProperties', (e) =>
                 b(
@@ -214,7 +215,7 @@ class N {
             }),
             E(this, 'stop', function () {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-                e && _.beat(!0), (_.lastBeatTime = void 0), clearInterval(_.heartbeatTimeoutId), clearTimeout(_.minViewTimeReachedTimeoutId), (_.isRunning = !1);
+                e && y.beat(!0), (y.lastBeatTime = void 0), clearInterval(y.heartbeatTimeoutId), clearTimeout(y.minViewTimeReachedTimeoutId), (y.isRunning = !1);
             }),
             (this.id = (0, o.Z)()),
             (this.adDecisionData = n),

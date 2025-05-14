@@ -32,8 +32,8 @@ function p(e) {
                 });
         };
     return (0, r.jsxs)('div', {
-        inert: '',
         className: _.body,
+        inert: !0,
         children: [
             (0, r.jsx)(a.Z, {
                 user: n,

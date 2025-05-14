@@ -77,7 +77,7 @@ function G(e, t) {
         e
     );
 }
-let U = P.isPlatformEmbedded || ('Safari' !== o().name && 'Firefox' !== o().name);
+let U = P.isPlatformEmbedded || 'Safari' !== o().name;
 function B() {
     let e = (0, c.e7)([R.Z], () => R.Z.getProps().guild),
         { analyticsLocations: t } = (0, h.ZP)(f.Z.GUILD_SETTINGS_SOUNDBOARD);

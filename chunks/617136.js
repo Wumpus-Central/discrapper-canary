@@ -126,7 +126,8 @@ function P(e) {
         event: m.rMx.QUEST_CONTENT_CLICKED,
         properties: y(E({}, l, A(n, i, o)), {
             cta_name: r,
-            impression_id: a
+            impression_id: a,
+            google_advertising_id: u.Z.googleAdvertisingId
         }),
         trackGuildAndChannelMetadata: s,
         shouldExtendSession: (0, f.VB)(n)
@@ -165,7 +166,10 @@ function D() {
             e({
                 questId: n,
                 event: m.rMx.QUEST_CONTENT_CLICKED,
-                properties: y(E({}, (0, f.qe)(r), A(r, o, a)), { cta_name: i }),
+                properties: y(E({}, (0, f.qe)(r), A(r, o, a)), {
+                    cta_name: i,
+                    google_advertising_id: u.Z.googleAdvertisingId
+                }),
                 trackGuildAndChannelMetadata: s,
                 shouldExtendSession: (0, f.VB)(r)
             });

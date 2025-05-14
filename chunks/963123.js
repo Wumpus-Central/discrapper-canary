@@ -169,7 +169,7 @@ function $(e) {
         e8 = l.useRef(!0),
         e6 = (null == (t = el.userStatus) ? void 0 : t.completedAt) != null,
         e4 = (0, _.km)((e) => e.transcript),
-        [e7, e3] = l.useState(null),
+        [e3, e7] = l.useState(null),
         [e9, e5] = l.useState(!1),
         [te, tt] = l.useState(!1),
         [tn, tr] = l.useState(null),
@@ -258,7 +258,7 @@ function $(e) {
                 if ((to.info('[QV] | updatePlayerState | playerState: '.concat(e)), ej(e), null != e1.current))
                     switch (e) {
                         case M.rq.PLAYING:
-                            e1.current.paused && tv(e7), e3(null), e1.current.play();
+                            e1.current.paused && tv(e3), e7(null), e1.current.play();
                             break;
                         case M.rq.PAUSED:
                             e1.current.paused || tD(), e1.current.pause(), (ez.current = !1);
@@ -267,11 +267,11 @@ function $(e) {
                             tD(), em(!1);
                     }
             },
-            [tv, e7, tD, em, to]
+            [tv, e3, tD, em, to]
         );
     l.useEffect(() => {
-        tg(e7);
-    }, [e7, tg]),
+        tg(e3);
+    }, [e3, tg]),
         l.useEffect(() => {
             eE && tb(eb, eC);
         }, [eb, eE, eC, tb]);
@@ -283,7 +283,7 @@ function $(e) {
         [e6, el, to, tf]
     );
     l.useEffect(() => {
-        (es !== p.Dvm.HIDDEN && es !== p.Dvm.EXITING && es !== p.Dvm.EXITED && (null == es || !eh || eO || e6) && (!eE || eb || e6)) || null == e1.current || eC !== M.rq.PLAYING || (to.info('[QV] | Pausing video | playerState: '.concat(eC, ', parentTransitionState: ').concat(es, ', visible: ').concat(eO, ', focused: ').concat(eb, ', isQuestCompleted: ').concat(e6)), tP(M.rq.PAUSED), e6 || e3(j.yE.LOST_FOCUS));
+        (es !== p.Dvm.HIDDEN && es !== p.Dvm.EXITING && es !== p.Dvm.EXITED && (null == es || !eh || eO || e6) && (!eE || eb || e6)) || null == e1.current || eC !== M.rq.PLAYING || (to.info('[QV] | Pausing video | playerState: '.concat(eC, ', parentTransitionState: ').concat(es, ', visible: ').concat(eO, ', focused: ').concat(eb, ', isQuestCompleted: ').concat(e6)), tP(M.rq.PAUSED), e6 || e7(j.yE.LOST_FOCUS));
     }, [es, eb, eE, eO, eh, eC, e6, tP, tT, to]);
     let tN = () => e_(!0),
         tk = () => e_(!1),
@@ -324,7 +324,7 @@ function $(e) {
                         tR(0), tP(M.rq.PLAYING);
                         break;
                     case M.rq.PLAYING:
-                        tP(M.rq.PAUSED), e3(j.yE.PAUSE_BUTTON);
+                        tP(M.rq.PAUSED), e7(j.yE.PAUSE_BUTTON);
                         break;
                     default:
                         tP(M.rq.PLAYING);
@@ -562,7 +562,7 @@ function $(e) {
                         type: p.$jN.Type.WANDERING_CUBES,
                         className: G.loadingSpinner
                     }),
-                eC === M.rq.PAUSED && e7 === j.yE.LOST_FOCUS && (0, r.jsx)(K, {}),
+                eC === M.rq.PAUSED && e3 === j.yE.LOST_FOCUS && (0, r.jsx)(K, {}),
                 ed &&
                     eC !== M.rq.ENDED &&
                     (0, r.jsxs)(r.Fragment, {
