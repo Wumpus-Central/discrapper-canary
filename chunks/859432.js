@@ -329,7 +329,7 @@ let Q = r.memo(function (e) {
                                                 icon: s.oFk,
                                                 action: () =>
                                                     (0, s.ZDy)(async () => {
-                                                        let { default: e } = await Promise.all([n.e('45094'), n.e('45822')]).then(n.bind(n, 218613));
+                                                        let { default: e } = await Promise.all([n.e('45094'), n.e('63228')]).then(n.bind(n, 218613));
                                                         return (n) =>
                                                             (0, i.jsx)(
                                                                 e,
@@ -346,7 +346,7 @@ let Q = r.memo(function (e) {
                                                 icon: s.f1I,
                                                 action: () =>
                                                     (0, s.ZDy)(async () => {
-                                                        let { default: e } = await Promise.all([n.e('45094'), n.e('45822')]).then(n.bind(n, 218613));
+                                                        let { default: e } = await Promise.all([n.e('45094'), n.e('63228')]).then(n.bind(n, 218613));
                                                         return (n) =>
                                                             (0, i.jsx)(
                                                                 e,

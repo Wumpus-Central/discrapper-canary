@@ -638,17 +638,17 @@ class eB extends (r = c.ZP.PersistedStore) {
     }
     searchWithoutFetchingLatest(e) {
         let t,
-            { channel: n, query: r, count: i = 0, intention: a, includeExternalGuilds: o = !0, matchComparator: s } = e;
+            { channel: n, query: r, count: i = 0, intention: a, includeExternalGuilds: o = !0, matchComparator: s, showOnlyUnicode: l } = e;
         ec();
-        let l = r.toLowerCase().replaceAll(/[ _]/g, ''),
-            c = w.Z.escape(l);
+        let c = r.toLowerCase().replaceAll(/[ _]/g, ''),
+            u = w.Z.escape(c);
         if (null == s) {
-            let e = RegExp(''.concat(c), 'i');
+            let e = RegExp(''.concat(u), 'i');
             t = (t) => e.test(t.replaceAll('_', ''));
         } else t = s;
-        let u = null != n ? n.getGuildId() : null,
-            d = ef
-                .get(u)
+        let d = null != n ? n.getGuildId() : null,
+            f = ef
+                .get(d)
                 .nameMatchesChain(t)
                 .reduce(
                     (e, t) => {
@@ -658,7 +658,7 @@ class eB extends (r = c.ZP.PersistedStore) {
                             intention: a,
                             forceIncludeExternalGuilds: o
                         });
-                        return r === G.Z5.PREMIUM_LOCKED ? e.locked.push(t) : null == r && e.unlocked.push(t), e;
+                        return r !== G.Z5.PREMIUM_LOCKED || l ? null != r || (l && t.type !== L.B.UNICODE) || e.unlocked.push(t) : e.locked.push(t), e;
                     },
                     {
                         unlocked: [],
@@ -666,8 +666,8 @@ class eB extends (r = c.ZP.PersistedStore) {
                     }
                 );
         return {
-            unlocked: this.getSearchResultsOrder(d.unlocked, r, i, a),
-            locked: this.getSearchResultsOrder(d.locked, r, 0, a)
+            unlocked: this.getSearchResultsOrder(f.unlocked, r, i, a),
+            locked: this.getSearchResultsOrder(f.locked, r, 0, a)
         };
     }
     getUsableCustomEmojiById(e) {

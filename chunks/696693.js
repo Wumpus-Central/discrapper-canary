@@ -1,6 +1,7 @@
 e.exports = {
     modal: 'modal_cf1d1c',
     closeBtn: 'closeBtn_cf1d1c',
+    orbsTermsButton: 'orbsTermsButton_cf1d1c',
     spinnerContainer: 'spinnerContainer_cf1d1c',
     errorContainer: 'errorContainer_cf1d1c',
     errorImage: 'errorImage_cf1d1c',

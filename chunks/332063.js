@@ -1,6 +1,6 @@
 n.d(t, { Z: () => p }), n(388685);
-var s,
-    i = n(255367),
+var i,
+    s = n(255367),
     l = n(73800),
     r = n(442837),
     a = n(481060),
@@ -20,21 +20,21 @@ function h(e, t, n) {
         e
     );
 }
-class u extends (s = l.Component) {
+class u extends (i = l.Component) {
     componentDidMount() {
         let { applicationId: e, branches: t, onHasBranchesChange: n } = this.props;
         (0, o.Z)(e), null == n || n(t.length > 0);
     }
     componentDidUpdate(e) {
         let { onHasBranchesChange: t, branches: n } = this.props,
-            s = n.length > 0;
-        null != t && s !== e.branches.length > 0 && t(s);
+            i = n.length > 0;
+        null != t && i !== e.branches.length > 0 && t(i);
     }
     render() {
-        let { branches: e, selectedBranchId: t, applicationId: n, includeMaster: s, hide: l, className: r } = this.props;
+        let { branches: e, selectedBranchId: t, applicationId: n, includeMaster: i, hide: l, className: r } = this.props;
         if (0 === e.length || l) return null;
-        let o = s ? e : e.filter((e) => e.id !== n);
-        return (0, i.jsx)(a.q4e, {
+        let o = i ? e : e.filter((e) => e.id !== n);
+        return (0, s.jsx)(a.q4e, {
             options: o.map((e) => ({
                 label: e.getName(n),
                 value: e.id

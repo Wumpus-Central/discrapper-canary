@@ -1,4 +1,7 @@
-n.d(t, { r: () => l });
+n.d(t, {
+    r2: () => l,
+    sc: () => a
+});
 var r = n(818083),
     i = n(987338);
 let l = (0, r.B)({
@@ -15,3 +18,10 @@ let l = (0, r.B)({
         }
     ]
 });
+function a(e) {
+    let { guildId: t, location: n } = e;
+    return l.useExperiment({
+        guildId: t,
+        location: n
+    }).enabled;
+}

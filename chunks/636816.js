@@ -1,6 +1,6 @@
 n.d(t, { Z: () => u }), n(539854);
-var s = n(255367),
-    i = n(73800),
+var i = n(255367),
+    s = n(73800),
     l = n(580685),
     r = n(481060),
     a = n(314852),
@@ -13,7 +13,7 @@ function u(e) {
         { guildProfile: p, fetchGuildProfile: m, fetchStatus: g } = (0, o.u)(t),
         C = g !== a.a.FETCHED,
         N = null != p && l.Y.VISIBLE.has(p.visibility);
-    i.useEffect(() => {
+    s.useEffect(() => {
         m();
     }, [t, m]);
     let x = [];
@@ -23,9 +23,9 @@ function u(e) {
     }
     return 0 === x.length
         ? null
-        : (0, s.jsx)(s.Fragment, {
+        : (0, i.jsx)(i.Fragment, {
               children: x.map((e, t) =>
-                  (0, s.jsx)(
+                  (0, i.jsx)(
                       r.R94,
                       {
                           className: u,

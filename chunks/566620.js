@@ -553,7 +553,7 @@ async function ec(e) {
                     event: r.NetworkActionNames.EMBEDDED_ACTIVITIES_FETCH_SHELF,
                     properties: { guild_id: s }
                 },
-                retries: 3,
+                retries: 0,
                 oldFormErrors: !0,
                 rejectWithError: !0
             }),
