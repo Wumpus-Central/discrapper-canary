@@ -1,4 +1,4 @@
-t.exports = !a(621523)(function () {
+t.exports = !r(621523)(function () {
     return (
         7 !==
         Object.defineProperty({}, 1, {

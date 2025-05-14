@@ -15,7 +15,7 @@ var r = n(255367),
     g = n(981631),
     _ = n(474936),
     b = n(282940);
-function E(e) {
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -40,7 +40,7 @@ function E(e) {
     }
     return e;
 }
-function y(e, t) {
+function E(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -58,7 +58,7 @@ function y(e, t) {
         e
     );
 }
-let x = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
+let y = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
     v = (e) => {
         null != e &&
             s.ZP.trackWithMetadata(g.rMx.EXPRESSION_TOOLTIP_VIEWED, {
@@ -99,7 +99,7 @@ let x = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                 renderPopout: (e) =>
                     (0, r.jsx)(
                         h.Z,
-                        y(E({}, e), {
+                        E(x({}, e), {
                             renderableSticker: t,
                             channel: n,
                             refreshPositionKey: () => _(String(Date.now()))
@@ -110,7 +110,7 @@ let x = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                     let { onClick: n } = e;
                     return (0, r.jsx)(
                         a.ua7,
-                        y(E({}, u.b_), {
+                        E(x({}, u.b_), {
                             shouldShow: d,
                             text: (0, u.Y)(C),
                             'aria-label': !1,
@@ -120,7 +120,7 @@ let x = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                             children: (e) =>
                                 (0, r.jsx)(
                                     a.P3F,
-                                    y(E({}, e), {
+                                    E(x({}, e), {
                                         innerRef: s,
                                         className: b.clickableSticker,
                                         onClick: (e) => {
@@ -129,7 +129,7 @@ let x = (0, d.Mg)(l.Z.STICKERS_CONSTANTS_STICKER_DIMENSION),
                                         tag: 'span',
                                         children: (0, r.jsx)(f.Z, {
                                             isInteracting: l,
-                                            size: x,
+                                            size: y,
                                             sticker: null != O ? O : t
                                         })
                                     })

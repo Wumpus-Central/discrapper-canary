@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(906467);
+    o = n(570140),
+    a = n(906467);
 function s(e, t, n) {
     return (
         t in e
@@ -48,11 +48,11 @@ let c = 360,
         sortedScreenKeys: []
     };
 function d(e) {
-    o.Z.isDeveloper && (u = l({}, u, e.settings));
+    a.Z.isDeveloper && (u = l({}, u, e.settings));
 }
 class f extends (r = i.ZP.DeviceSettingsStore) {
     initialize(e) {
-        (u = null != e ? e : u), (a.Z.actionLogger.persist = o.Z.isDeveloper);
+        (u = null != e ? e : u), (o.Z.actionLogger.persist = a.Z.isDeveloper);
     }
     getUserAgnosticState() {
         return u;
@@ -65,10 +65,10 @@ class f extends (r = i.ZP.DeviceSettingsStore) {
         return null != (e = u.lastOpenTabId) ? e : null;
     }
     get displayTools() {
-        return o.Z.isDeveloper && u.displayTools;
+        return a.Z.isDeveloper && u.displayTools;
     }
     get showDevWidget() {
-        return o.Z.isDeveloper && u.showDevWidget;
+        return a.Z.isDeveloper && u.showDevWidget;
     }
     get devWidgetPosition() {
         return u.devWidgetPosition;
@@ -78,4 +78,4 @@ class f extends (r = i.ZP.DeviceSettingsStore) {
     }
 }
 s(f, 'displayName', 'DevToolsSettingsStore'), s(f, 'persistKey', 'DevToolsSettingsStore');
-let _ = new f(a.Z, { DEV_TOOLS_SETTINGS_UPDATE: d });
+let _ = new f(o.Z, { DEV_TOOLS_SETTINGS_UPDATE: d });

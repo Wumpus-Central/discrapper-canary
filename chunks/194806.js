@@ -1,8 +1,8 @@
 n.d(t, { v: () => d }), n(415506), n(539854), n(388685);
 var r = n(956067),
     i = n(930145),
-    a = n(350167),
-    o = n(503461);
+    o = n(350167),
+    a = n(503461);
 function s(e, t, n) {
     return (
         t in e
@@ -67,12 +67,12 @@ class d {
     }
     close() {
         var e;
-        (this.lastState = o.hi.Closed), null == (e = this.raw) || e.close(), (this.raw = null), a.r.removeCompletionCallback(this.databaseStateCallback);
+        (this.lastState = a.hi.Closed), null == (e = this.raw) || e.close(), (this.raw = null), o.r.removeCompletionCallback(this.databaseStateCallback);
     }
     disable(e) {
         return null == this.raw
             ? Promise.resolve()
-            : ((this.lastState = o.hi.Disabled),
+            : ((this.lastState = a.hi.Disabled),
               this.execute({
                   type: 'db.disable',
                   handle: 0,
@@ -83,7 +83,7 @@ class d {
         if (null == this.raw) throw Error('database is no longer open (database: '.concat(this));
         let n = 'key' in e ? e.key[0] : e.table,
             i = () =>
-                a.r.executeAsync(null != t ? t : e.type, (t) => {
+                o.r.executeAsync(null != t ? t : e.type, (t) => {
                     this.raw.execute(t, u(l({}, e), { handle: 0 }));
                 });
         return null === t ? i() : r.Z.timeAsync('\uD83D\uDCBE', ''.concat(null != t ? t : e.type, ' ').concat(null != n ? n : ''), i);
@@ -114,10 +114,10 @@ class d {
         });
     }
     instantaneousState() {
-        return null == this.raw ? o.hi.Closed : (this.lastState = this.executeSync({ type: 'db.state' }));
+        return null == this.raw ? a.hi.Closed : (this.lastState = this.executeSync({ type: 'db.state' }));
     }
     async instantaneousStateAsync() {
-        return null == this.raw ? o.hi.Closed : (this.lastState = await this.execute({ type: 'db.state' }));
+        return null == this.raw ? a.hi.Closed : (this.lastState = await this.execute({ type: 'db.state' }));
     }
     state() {
         return this.lastState;
@@ -144,9 +144,9 @@ class d {
             s(this, 'databaseStateCallback', void 0),
             (this.raw = e),
             (this.name = e.name),
-            (this.lastState = o.hi.Open),
+            (this.lastState = a.hi.Open),
             (this.handle = e.handle),
-            (this.databaseStateCallback = a.r.addDatabaseStateCallback((e, t) => {
+            (this.databaseStateCallback = o.r.addDatabaseStateCallback((e, t) => {
                 this.handle === e && (this.lastState = t);
             }));
     }

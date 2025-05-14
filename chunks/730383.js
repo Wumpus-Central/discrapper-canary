@@ -1,10 +1,10 @@
-var r = n(77826),
-    i = n(554148),
-    a = RangeError;
-e.exports = function (e) {
-    if (void 0 === e) return 0;
-    var t = r(e),
-        n = i(t);
-    if (t !== n) throw new a('Wrong length or index');
-    return n;
+var e = r(77826),
+    o = r(554148),
+    i = RangeError;
+t.exports = function (t) {
+    if (void 0 === t) return 0;
+    var n = e(t),
+        r = o(n);
+    if (n !== r) throw new i('Wrong length or index');
+    return r;
 };

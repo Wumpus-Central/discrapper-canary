@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(216789),
     _ = n(695346),
     b = n(592125),
-    E = n(731290),
-    y = n(944486),
-    x = n(455199),
+    x = n(731290),
+    E = n(944486),
+    y = n(455199),
     v = n(655354),
     O = n(999671),
     j = n(324081),
@@ -33,36 +33,36 @@ let P = {
     }
 };
 function A(e, t, n) {
-    let r = t ? x.Z.guildFilter : null,
-        i = t ? x.Z.roleFilter : null,
-        l = t ? x.Z.everyoneFilter : null,
+    let r = t ? y.Z.guildFilter : null,
+        i = t ? y.Z.roleFilter : null,
+        l = t ? y.Z.everyoneFilter : null,
         a = null;
     null != e && null != r && (a = r === I.NgX.ALL_SERVERS ? null : e.getGuildId()), u.Z.fetchRecentMentions(n, I.DJj, a, i, l);
 }
 function w(e) {
     let { setTab: t, onJump: n, badgeState: l, closePopout: c } = e,
-        h = (0, o.e7)([b.Z, y.Z], () => b.Z.getChannel(y.Z.getChannelId())),
+        h = (0, o.e7)([b.Z, E.Z], () => b.Z.getChannel(E.Z.getChannelId())),
         {
             messages: _,
-            hasMore: E,
+            hasMore: x,
             loading: v,
             guildFilter: j,
             roleFilter: C,
             everyoneFilter: P
-        } = (0, o.cj)([x.Z], () => ({
-            messages: x.Z.getMentions(),
-            hasMore: x.Z.hasMore,
-            loading: x.Z.loading,
-            guildFilter: x.Z.guildFilter,
-            roleFilter: x.Z.roleFilter,
-            everyoneFilter: x.Z.everyoneFilter
+        } = (0, o.cj)([y.Z], () => ({
+            messages: y.Z.getMentions(),
+            hasMore: y.Z.hasMore,
+            loading: y.Z.loading,
+            guildFilter: y.Z.guildFilter,
+            roleFilter: y.Z.roleFilter,
+            everyoneFilter: y.Z.everyoneFilter
         })),
         w = (0, g.Us)({ location: 'RecentMentions' }),
         R = (0, m.Z)(j),
         D = (0, m.Z)(C),
         L = (0, m.Z)(P);
     i.useEffect(() => {
-        if (!x.Z.hasLoadedEver) return void A(h, !0);
+        if (!y.Z.hasLoadedEver) return void A(h, !0);
         ((null != R && j !== R) || (null != D && C !== D) || (null != L && P !== L)) && A(h, !0);
     }, [R, j, D, C, L, P, h, !0]),
         (0, p.ZP)(() => {
@@ -96,7 +96,7 @@ function w(e) {
         channel: h,
         messages: _,
         loading: v,
-        hasMore: E,
+        hasMore: x,
         analyticsName: 'Recent Mentions',
         loadMore: function () {
             A(h, !0, null != _ && _.length > 0 ? _[_.length - 1].id : null);
@@ -127,7 +127,7 @@ function R(e) {
     if (null == t) return null;
     let l = b.Z.getChannel(t.channel_id);
     if (null == l) return null;
-    let a = E.Z.didAgree(l.getGuildId()),
+    let a = x.Z.didAgree(l.getGuildId()),
         o = !!l.isNSFW() && !a;
     return (0, r.jsxs)('div', {
         className: T.container,

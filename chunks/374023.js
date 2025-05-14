@@ -1,4 +1,4 @@
-n.d(t, { s: () => a });
+n.d(t, { s: () => o });
 var r = n(579806);
 function i(e, t, n) {
     return (
@@ -13,17 +13,17 @@ function i(e, t, n) {
         e
     );
 }
-class a {
+class o {
     static get() {
-        if (null == a.cached) {
+        if (null == o.cached) {
             var e, t;
             let n = null === r.Z || void 0 === r.Z || null == (t = r.Z.processUtils) || null == (e = t.getMainArgvSync) ? void 0 : e.call(t);
-            null != n && n.length > 1 && n.shift(), (a.cached = null != n ? n : []);
+            null != n && n.length > 1 && n.shift(), (o.cached = null != n ? n : []);
         }
-        return a.cached;
+        return o.cached;
     }
     static contains(e) {
-        return a.get().includes(e);
+        return o.get().includes(e);
     }
     static isEnvVariableTrue(e) {
         var t, n;
@@ -36,13 +36,13 @@ class a {
         return !1;
     }
     static isDisallowPopupsSet() {
-        return a.contains('--disallow-popups') || a.isEnvVariableTrue('DISCORD_DISALLOW_POPUPS');
+        return o.contains('--disallow-popups') || o.isEnvVariableTrue('DISCORD_DISALLOW_POPUPS');
     }
     static isDiscordTestSet() {
-        return a.isEnvVariableTrue('DISCORD_TEST');
+        return o.isEnvVariableTrue('DISCORD_TEST');
     }
     static isDiscordGatewayPlaintextSet() {
         return !1;
     }
 }
-i(a, 'cached', void 0);
+i(o, 'cached', void 0);

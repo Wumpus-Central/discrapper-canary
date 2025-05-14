@@ -15,20 +15,20 @@ var r = n(255367),
     g = n(175646);
 function _(e) {
     let { setTab: t, badgeState: l, closePopout: _ } = e,
-        E = (0, o.Wu)([u.Z], () => u.Z.getInvites()),
-        y = (0, o.e7)([u.Z], () => u.Z.getInviteStatuses()),
-        [x, v] = i.useMemo(
+        x = (0, o.Wu)([u.Z], () => u.Z.getInvites()),
+        E = (0, o.e7)([u.Z], () => u.Z.getInviteStatuses()),
+        [y, v] = i.useMemo(
             () =>
-                a().partition(E, (e) => {
+                a().partition(x, (e) => {
                     var t;
-                    return (null == (t = y[e.invite_id]) ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
+                    return (null == (t = E[e.invite_id]) ? void 0 : t.joinable) !== !1 && (Date.now() - new Date(e.created_at).getTime()) / 1000 < e.ttl;
                 }),
-            [E, y]
+            [x, E]
         );
     return (i.useEffect(() => {
         (0, d.sJ)();
     }),
-    0 === E.length)
+    0 === x.length)
         ? (0, r.jsxs)('div', {
               className: g.container,
               children: [
@@ -122,12 +122,12 @@ function _(e) {
                       children: (0, r.jsxs)('div', {
                           className: g.invitesContainer,
                           children: [
-                              x.length > 0 &&
+                              y.length > 0 &&
                                   (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsx)(b, { title: h.intl.string(h.t.yflAJS) }),
                                           (0, r.jsx)(r.Fragment, {
-                                              children: x.map((e) =>
+                                              children: y.map((e) =>
                                                   (0, r.jsx)(
                                                       f.Z,
                                                       {

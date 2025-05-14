@@ -16,10 +16,10 @@ var r = n(255367),
     _ = n(388032);
 function b(e) {
     let { canShowReminder: t = !1, className: b } = e,
-        E = (0, m.Z)(u.Z),
-        { showClipsHeaderEntrypoint: y } = d.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
+        x = (0, m.Z)(u.Z),
+        { showClipsHeaderEntrypoint: E } = d.NV.useExperiment({ location: 'ClipsButton' }, { autoTrackExposure: !1 }),
         {
-            hasClips: x,
+            hasClips: y,
             hasNewClips: v,
             lastClipsSession: O,
             remindersEnabled: j,
@@ -73,7 +73,7 @@ function b(e) {
             { modalKey: g.Qr }
         );
     }
-    return (i.useEffect(() => (C ? P() : A(), () => A()), [C, P, A]), y && E && x)
+    return (i.useEffect(() => (C ? P() : A(), () => A()), [C, P, A]), E && x && y)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   null != I &&

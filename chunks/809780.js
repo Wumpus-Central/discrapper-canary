@@ -22,9 +22,9 @@ var r,
     g = n(181945),
     _ = n(220444),
     b = n(601070),
-    E = n(344185),
-    y = n(569471),
-    x = n(723170),
+    x = n(344185),
+    E = n(569471),
+    y = n(723170),
     v = n(675478),
     O = n(581883),
     j = n(131704),
@@ -118,7 +118,7 @@ class z extends a.EventEmitter {
                 hasLoadedAnything: !0
             });
         if ('forum' === e.type) {
-            let t = E.Z.hasLoaded(e.guildId);
+            let t = x.Z.hasLoaded(e.guildId);
             return B(F({}, e), {
                 isFullyLoaded: t,
                 hasLoadedAnything: !0
@@ -289,7 +289,7 @@ class z extends a.EventEmitter {
                 e.length !== this.state.channels.length && this.setState({ channels: e });
             }),
             (this.handleJoinedThreadsStoreChange = () => {
-                let e = this.state.channels.filter((e) => !y.Z.isMuted(e.channelId));
+                let e = this.state.channels.filter((e) => !E.Z.isMuted(e.channelId));
                 e.length !== this.state.channels.length && this.setState({ channels: e });
             }),
             (this.handleActiveThreadsStoreChange = () => {
@@ -297,7 +297,7 @@ class z extends a.EventEmitter {
                     if ('forum' !== e.type) return e;
                     {
                         if (!e.hasLoadedAnything) return e;
-                        let t = E.Z.hasLoaded(e.guildId);
+                        let t = x.Z.hasLoaded(e.guildId);
                         return B(F({}, e), {
                             isFullyLoaded: t,
                             hasLoadedAnything: !0
@@ -414,7 +414,7 @@ function Y(e, t, n, r) {
                 if (Date.now() - e > X) return 6;
             }
             if (r.isThread()) {
-                let e = (0, x.J)(r);
+                let e = (0, y.J)(r);
                 return e === M.iN.ALL_MESSAGES ? 4 : e === M.iN.NO_MESSAGES ? 7 : 5;
             }
             {
@@ -469,8 +469,8 @@ function Q(e) {
         }, [null == o ? void 0 : o.channels, null == o ? void 0 : o.loadState]),
         l.useEffect(() => (T.Z.addChangeListener(t.reloadMessages), () => T.Z.removeChangeListener(t.reloadMessages)), [t.reloadMessages]),
         l.useEffect(() => (Z.ZP.addChangeListener(t.handleUserGuildSettingsStoreChange), () => Z.ZP.removeChangeListener(t.handleUserGuildSettingsStoreChange)), [t]),
-        l.useEffect(() => (y.Z.addChangeListener(t.handleJoinedThreadsStoreChange), () => y.Z.removeChangeListener(t.handleJoinedThreadsStoreChange)), [t]),
-        l.useEffect(() => (E.Z.addChangeListener(t.handleActiveThreadsStoreChange), () => E.Z.removeChangeListener(t.handleActiveThreadsStoreChange)), [t]),
+        l.useEffect(() => (E.Z.addChangeListener(t.handleJoinedThreadsStoreChange), () => E.Z.removeChangeListener(t.handleJoinedThreadsStoreChange)), [t]),
+        l.useEffect(() => (x.Z.addChangeListener(t.handleActiveThreadsStoreChange), () => x.Z.removeChangeListener(t.handleActiveThreadsStoreChange)), [t]),
         [o, t]
     );
 }

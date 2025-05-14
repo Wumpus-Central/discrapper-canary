@@ -1,8 +1,8 @@
 n.d(t, { Z: () => C }), n(781311), n(539854);
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(392711),
     l = n(793030),
     c = n(442837),
@@ -52,9 +52,9 @@ function N(e) {
     return e;
 }
 function C(e) {
-    let { user: t, activities: n, applicationStream: a, voiceChannel: A, textClassName: C, iconClassName: P, textSize: R = 'xs', animateEmoji: w = !0, animateText: D = !1, disableTextScroll: L = !1, hasQuest: x = !1, hideEmoji: k = !1, hideTooltip: M = !1 } = e;
+    let { user: t, activities: n, applicationStream: o, voiceChannel: A, textClassName: C, iconClassName: P, textSize: R = 'xs', animateEmoji: w = !0, animateText: D = !1, disableTextScroll: L = !1, hasQuest: x = !1, hideEmoji: k = !1, hideTooltip: M = !1 } = e;
     (0, d.Z)(null == t ? void 0 : t.id);
-    let j = (null == a ? void 0 : a.discoverable) !== !1 ? a : null,
+    let j = (null == o ? void 0 : o.discoverable) !== !1 ? o : null,
         { enabledWithActivityStatus: U } = (0, f.Z)({ location: 'ActivityStatus' }),
         G = i.useMemo(() => {
             var e, t;
@@ -96,7 +96,7 @@ function C(e) {
         z = () =>
             (0, r.jsx)(l.xv, {
                 variant: 'text-'.concat(R, '/normal'),
-                className: o()(T.dot, C),
+                className: a()(T.dot, C),
                 children: I.l
             }),
         q = () => {
@@ -170,7 +170,7 @@ function C(e) {
                     null != i &&
                         (0, r.jsx)(l.xv, {
                             variant: 'text-'.concat(R, '/medium'),
-                            className: o()(C, T.customStatusLabel),
+                            className: a()(C, T.customStatusLabel),
                             color: 'none',
                             children: ''.concat(i, ': ')
                         }),
@@ -195,7 +195,7 @@ function C(e) {
         },
         J = () =>
             (0, r.jsxs)('div', {
-                className: o()(T.container, {
+                className: a()(T.container, {
                     [T.textXs]: 'xs' === R,
                     [T.textSm]: 'sm' === R
                 }),

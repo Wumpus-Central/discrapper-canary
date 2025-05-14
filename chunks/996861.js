@@ -8,9 +8,9 @@ n.d(t, {
     dF: () => C,
     eM: () => R,
     fB: () => _,
-    gK: () => D,
+    gK: () => w,
     mG: () => M,
-    qe: () => w,
+    qe: () => D,
     rY: () => x,
     ts: () => L,
     zW: () => S
@@ -83,10 +83,10 @@ function A(e, t, n) {
     }),
         h.S.dispatchToLastSubscribed(j.CkL.TEXTAREA_FOCUS);
 }
-function D(e, t) {
+function w(e, t) {
     (0, d.R6)(e, t, 'Message');
 }
-function w(e, t) {
+function D(e, t) {
     let n = g.Z.getChannel(O.default.castMessageIdAsChannelId(t.id));
     null != n && (0, d.ok)(n);
 }

@@ -1,26 +1,26 @@
 n.d(e, { Z: () => u });
-var r = n(255367);
+var l = n(255367);
 n(73800);
-var l = n(481060),
-    c = n(906732),
-    i = n(278754),
+var i = n(481060),
+    r = n(906732),
+    c = n(278754),
     s = n(626135),
-    o = n(981631),
-    a = n(388032);
+    a = n(981631),
+    o = n(388032);
 function u() {
-    let t = (0, i.pR)(),
-        { analyticsLocations: e } = (0, c.ZP)();
-    return (0, r.jsx)(l.S89, {
+    let t = (0, c.pR)(),
+        { analyticsLocations: e } = (0, r.ZP)();
+    return (0, l.jsx)(i.S89, {
         id: 'sticker-suggestions',
-        label: a.intl.string(a.t.rIzKh4),
+        label: o.intl.string(o.t.rIzKh4),
         checked: t,
         action: () => {
-            s.default.track(o.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
+            s.default.track(a.rMx.STICKER_SUGGESTIONS_ENABLED_TOGGLED, {
                 enabled: !t,
-                location: { object: o.qAy.CONTEXT_MENU },
+                location: { object: a.qAy.CONTEXT_MENU },
                 location_stack: e
             }),
-                (0, i.AW)(!t);
+                (0, c.AW)(!t);
         }
     });
 }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h }), n(190126), n(368063), n(65234), n(111804), n(490233), n(97749), n(388685), n(539854);
 var r = n(147913),
     i = n(339085),
-    a = n(592125),
-    o = n(768581),
+    o = n(592125),
+    a = n(768581),
     s = n(176354),
     l = n(176505),
     c = n(149203);
@@ -35,11 +35,11 @@ function _(e) {
     let t = [],
         n = e.defaultReactionEmoji;
     if ((null == n ? void 0 : n.emojiId) != null) {
-        var r, a;
+        var r, o;
         t.push(
-            o.ZP.getEmojiURL({
+            a.ZP.getEmojiURL({
                 id: n.emojiId,
-                animated: null != (a = null == (r = i.ZP.getUsableCustomEmojiById(n.emojiId)) ? void 0 : r.animated) && a,
+                animated: null != (o = null == (r = i.ZP.getUsableCustomEmojiById(n.emojiId)) ? void 0 : r.animated) && o,
                 size: c.kV.reaction
             })
         );
@@ -48,7 +48,7 @@ function _(e) {
         e.availableTags.forEach((e) => {
             null != e.emojiId
                 ? t.push(
-                      o.ZP.getEmojiURL({
+                      a.ZP.getEmojiURL({
                           id: e.emojiId,
                           animated: !1,
                           size: c.kV.reaction
@@ -63,7 +63,7 @@ class p extends r.Z {
     handleChannelPreload(e) {
         let { channelId: t } = e;
         if ((0, l.AB)(t)) return;
-        let n = a.Z.getChannel(t);
+        let n = o.Z.getChannel(t);
         null != n &&
             n.isForumLikeChannel() &&
             _(n).forEach((e) => {

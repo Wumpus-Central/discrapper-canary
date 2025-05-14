@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r,
     i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -49,5 +49,5 @@ class d extends (r = i.ZP.PersistedStore) {
         return c;
     }
 }
-o(d, 'displayName', 'ActivityShelfStore'), o(d, 'persistKey', 'ActivityShelfStore');
-let f = new d(a.Z, { LOGOUT: u });
+a(d, 'displayName', 'ActivityShelfStore'), a(d, 'persistKey', 'ActivityShelfStore');
+let f = new d(o.Z, { LOGOUT: u });

@@ -51,17 +51,17 @@ function g(e) {
         { author: d, mentions: f, type: g } = n,
         _ = (0, o.ZP)(n),
         b = n.getChannelId(),
-        E = (0, l.e7)([u.default], () => u.default.getUser(f[0]), [f]),
-        y = (0, o.JZ)(d, i),
-        x = (0, s.l)({
+        x = (0, l.e7)([u.default], () => u.default.getUser(f[0]), [f]),
+        E = (0, o.JZ)(d, i),
+        y = (0, s.l)({
             user: d,
             channelId: b,
             guildId: i.guild_id,
             messageId: n.id
-        })(y),
-        v = (0, o.Sw)(E, i),
+        })(E),
+        v = (0, o.Sw)(x, i),
         O = (0, s.l)({
-            user: E,
+            user: x,
             channelId: b,
             guildId: i.guild_id,
             messageId: n.id
@@ -70,7 +70,7 @@ function g(e) {
     if (null == j) return null;
     let C = p.intl.format(j(), {
         actorName: _.nick,
-        actorHook: x,
+        actorHook: y,
         targetName: null == v ? void 0 : v.nick,
         targetHook: O
     });
@@ -96,7 +96,7 @@ function _(e) {
         })(g),
         b = null != (t = f[u]) ? t : null;
     if (null == b) return null;
-    let E = p.intl.format(b(), {
+    let x = p.intl.format(b(), {
         actorName: d.nick,
         actorHook: _
     });
@@ -104,7 +104,7 @@ function _(e) {
         iconNode: (0, r.jsx)(h, { type: u }),
         timestamp: n.timestamp,
         compact: l,
-        children: E
+        children: x
     });
 }
 function b(e) {

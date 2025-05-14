@@ -1,15 +1,15 @@
-var r = a(46015),
-    n = a(77025),
-    _ = a(146063),
-    o = a(858949).indexOf,
-    i = a(485073),
-    c = r([].push);
-t.exports = function (t, e) {
-    var a,
-        r = _(t),
-        s = 0,
-        E = [];
-    for (a in r) !n(i, a) && n(r, a) && c(E, a);
-    for (; e.length > s; ) n(r, (a = e[s++])) && (~o(E, a) || c(E, a));
-    return E;
+var e = r(46015),
+    o = r(77025),
+    i = r(146063),
+    u = r(858949).indexOf,
+    c = r(485073),
+    a = e([].push);
+t.exports = function (t, n) {
+    var r,
+        e = i(t),
+        f = 0,
+        s = [];
+    for (r in e) !o(c, r) && o(e, r) && a(s, r);
+    for (; n.length > f; ) o(e, (r = n[f++])) && (~u(s, r) || a(s, r));
+    return s;
 };

@@ -1,5 +1,5 @@
-var t = Math.round;
-e.exports = function (e) {
-    var n = t(e);
-    return n < 0 ? 0 : n > 255 ? 255 : 255 & n;
+var n = Math.round;
+t.exports = function (t) {
+    var r = n(t);
+    return r < 0 ? 0 : r > 255 ? 255 : 255 & r;
 };

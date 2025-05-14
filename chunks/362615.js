@@ -1,8 +1,8 @@
 n.d(t, { c: () => h }), n(539854);
 var r = n(358221),
     i = n(569545),
-    a = n(199902),
-    o = n(314897),
+    o = n(199902),
+    a = n(314897),
     s = n(959457),
     l = n(557457),
     c = n(458725),
@@ -41,11 +41,11 @@ function p(e) {
 let h = {
     getActiveErrors: () =>
         (0, d.LN)()
-            ? a.Z.getAllActiveStreams().reduce((e, t) => {
+            ? o.Z.getAllActiveStreams().reduce((e, t) => {
                   var n;
-                  let a = null == (n = s.Z.getRTCConnection((0, i.V9)(t))) ? void 0 : n.getMediaEngineConnectionId();
-                  if (null == a || t.ownerId === o.default.getId() || t.state === f.jm8.PAUSED) return e;
-                  let _ = (0, d.hj)(a, t.ownerId);
+                  let o = null == (n = s.Z.getRTCConnection((0, i.V9)(t))) ? void 0 : n.getMediaEngineConnectionId();
+                  if (null == o || t.ownerId === a.default.getId() || t.state === f.jm8.PAUSED) return e;
+                  let _ = (0, d.hj)(o, t.ownerId);
                   if (null == _) return e;
                   let h = r.Z.getParticipant(t.channelId, (0, i.V9)(t));
                   if (null == h) return e;

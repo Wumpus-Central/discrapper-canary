@@ -1,4 +1,4 @@
-n.d(t, { Z: () => c }), n(388685);
+n.d(t, { Z: () => c }), n(388685), n(467055);
 var i,
     r = n(442837),
     l = n(570140);
@@ -18,7 +18,13 @@ function a(e, t, n) {
 let o = { reportedMessages: {} };
 class s extends (i = r.ZP.PersistedStore) {
     initialize(e) {
-        null != e && (o.reportedMessages = e.reportedMessages);
+        null != e &&
+            (o.reportedMessages = Object.fromEntries(
+                Object.entries(e.reportedMessages).map((e) => {
+                    let [t, n] = e;
+                    return [t, new Set(n)];
+                })
+            ));
     }
     getState() {
         return o;

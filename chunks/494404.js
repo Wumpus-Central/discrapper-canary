@@ -21,9 +21,9 @@ var r = n(255367),
     g = n(804063),
     _ = n(294218),
     b = n(703656),
-    E = n(210887),
-    y = n(592125),
-    x = n(375954),
+    x = n(210887),
+    E = n(592125),
+    y = n(375954),
     v = n(496675),
     O = n(933429),
     j = n(451478),
@@ -142,7 +142,7 @@ let k = u.ZP.connectStores([v.Z], (e) => {
     return { canManageMessages: null != t && v.Z.can(I.Plq.MANAGE_MESSAGES, t) };
 })(R);
 function D(e) {
-    let { analyticsName: t, items: n, hasMore: l, loading: o, loadMore: p, renderHeader: g, renderEmptyState: _, renderItem: b, getProTip: y, scrollerClassName: x, className: v, listName: w } = e,
+    let { analyticsName: t, items: n, hasMore: l, loading: o, loadMore: p, renderHeader: g, renderEmptyState: _, renderItem: b, getProTip: E, scrollerClassName: y, className: v, listName: w } = e,
         Z = i.useRef(null),
         R = (0, m.Z)(w, Z),
         k = (0, u.e7)([O.ZP], () => O.ZP.hasNotice()),
@@ -187,7 +187,7 @@ function D(e) {
               )
           ])
         : 0 === n.length
-          ? U.push((0, r.jsx)(i.Fragment, { children: _(E.Z.theme) }, 'empty-state'))
+          ? U.push((0, r.jsx)(i.Fragment, { children: _(x.Z.theme) }, 'empty-state'))
           : ((F = !1),
             (U = []),
             s().each(n, (e) => {
@@ -219,9 +219,9 @@ function D(e) {
                 })
               : (0, r.jsx)('div', {
                     className: T.scrollingFooterWrap,
-                    children: _(E.Z.theme)
+                    children: _(x.Z.theme)
                 }));
-    let G = null == y ? void 0 : y(),
+    let G = null == E ? void 0 : E(),
         H =
             F && null != G
                 ? (0, r.jsx)('div', {
@@ -249,7 +249,7 @@ function D(e) {
             component: g(),
             children: [
                 (0, r.jsxs)(d.Den, {
-                    className: a()(T.messagesPopout, x),
+                    className: a()(T.messagesPopout, y),
                     onScroll: z ? M : void 0,
                     ref: Z,
                     children: [
@@ -324,15 +324,15 @@ function D(e) {
     });
 }
 function L(e) {
-    let { analyticsName: t, onFetch: n, channel: l, messages: a, hasMore: o, loading: s, loadMore: c, onJump: d, canCloseAllMessages: m = !1, renderHeader: f, renderEmptyState: h, renderMessage: E, getProTip: v, scrollerClassName: O, className: j, onCloseMessage: C, listName: S } = e,
-        N = (0, u.e7)([x.Z], () => {
-            let e = null != l ? x.Z.getMessages(l.id) : null;
+    let { analyticsName: t, onFetch: n, channel: l, messages: a, hasMore: o, loading: s, loadMore: c, onJump: d, canCloseAllMessages: m = !1, renderHeader: f, renderEmptyState: h, renderMessage: x, getProTip: v, scrollerClassName: O, className: j, onCloseMessage: C, listName: S } = e,
+        N = (0, u.e7)([y.Z], () => {
+            let e = null != l ? y.Z.getMessages(l.id) : null;
             return null != e && null != e.jumpTargetId && e.loadingMore && null == e.get(e.jumpTargetId);
         });
     function P(e, n) {
         if ((0, g.Z)(e) && !N) {
             let { id: r, channel_id: i } = e,
-                l = y.Z.getChannel(i);
+                l = E.Z.getChannel(i);
             null != l && (p.Z.trackJump(i, r, t), (0, b.uL)(I.Z5c.CHANNEL(l.getGuildId(), i, r))), null == d || d(n);
         }
     }
@@ -363,7 +363,7 @@ function L(e) {
         renderItem: function (e) {
             let { message: t, channel: n } = e;
             if (null == t) return [];
-            if (null != E) return E(t, (e) => P(t, e));
+            if (null != x) return x(t, (e) => P(t, e));
             let i = [];
             return null == n
                 ? []

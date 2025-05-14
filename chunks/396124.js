@@ -1,7 +1,7 @@
-n.d(t, { N: () => o }), n(804061), n(704826), n(35282);
+n.d(t, { N: () => a }), n(804061), n(704826), n(35282);
 var r = n(503461),
     i = n(190313);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,12 +14,12 @@ function a(e, t, n) {
         e
     );
 }
-class o {
+class a {
     get prefix() {
         return this.table.prefix;
     }
     withoutLogging() {
-        return new o(this.originalPrefix, this.table.tableId, this.table.database, !1);
+        return new a(this.originalPrefix, this.table.tableId, this.table.database, !1);
     }
     get(e, t) {
         return this.table.get([e, t]);
@@ -82,7 +82,7 @@ class o {
         };
     }
     constructor(e, t, n, r = !0) {
-        a(this, 'originalPrefix', void 0), a(this, 'table', void 0), (this.originalPrefix = e), (this.table = new i.i([e], t, n, r));
+        o(this, 'originalPrefix', void 0), o(this, 'table', void 0), (this.originalPrefix = e), (this.table = new i.i([e], t, n, r));
     }
 }
 class s {
@@ -95,12 +95,12 @@ class s {
     }
     putWithGeneration(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.Sn.Replace;
-        return this.transaction.put(o.cell(e, t, n), i);
+        return this.transaction.put(a.cell(e, t, n), i);
     }
     putAll(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : r.Sn.Replace;
         return this.transaction.putAll(
-            t.map((t) => o.cell(e, t, null)),
+            t.map((t) => a.cell(e, t, null)),
             n
         );
     }
@@ -121,6 +121,6 @@ class s {
         return this.transaction.deleteGeneration([], e, t);
     }
     constructor(e) {
-        a(this, 'transaction', void 0), (this.transaction = e);
+        o(this, 'transaction', void 0), (this.transaction = e);
     }
 }

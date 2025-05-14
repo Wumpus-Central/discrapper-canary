@@ -4,14 +4,14 @@ n.d(t, {
 });
 var r = n(493683),
     i = n(529103),
-    a = n(292556),
-    o = n(100527),
+    o = n(292556),
+    a = n(100527),
     s = n(703656),
     l = n(768581),
     c = n(981631),
     u = n(388032);
 function d(e, t, n) {
-    a.default.showNotification(
+    o.default.showNotification(
         l.ZP.getUserAvatarURL(e),
         e.username,
         t,
@@ -31,7 +31,7 @@ function f(e) {
             let { openUserProfileModal: t } = n(892001);
             t({
                 userId: e.id,
-                sourceAnalyticsLocations: [o.Z.FRIEND_REQUEST_NOTIFICATION]
+                sourceAnalyticsLocations: [a.Z.FRIEND_REQUEST_NOTIFICATION]
             });
         }
         (0, s.uL)(c.Z5c.FRIENDS), i.Z.setSection(c.pJs.PENDING);

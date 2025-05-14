@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r = n(544891),
     i = n(570140),
-    a = n(19780),
-    o = n(823379),
+    o = n(19780),
+    a = n(823379),
     s = n(41776),
     l = n(981631);
 async function c(e) {
@@ -40,6 +40,6 @@ async function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
         t = s.Z.lurkingGuildIds();
     if (0 === t.length || !(null == e || !t.includes(e))) return;
-    let n = [e, a.Z.getGuildId()].filter(o.lm);
+    let n = [e, o.Z.getGuildId()].filter(a.lm);
     await c(n);
 }

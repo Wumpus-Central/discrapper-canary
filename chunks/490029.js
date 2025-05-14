@@ -8,8 +8,8 @@ n.d(t, {
     n(415506);
 var r = n(536285),
     i = n(996106),
-    a = n(812967),
-    o = n(960048),
+    o = n(812967),
+    a = n(960048),
     s = n(511405),
     l = n(981631),
     c = n(186901);
@@ -25,7 +25,7 @@ function f(e, t) {
 }
 function _(e, t) {
     if (__OVERLAY__) throw new i.Z({ errorCode: l.lTL.UNKNOWN_ERROR }, 'called from wrong app context');
-    a.Z.setCommandHandler(l.Etm.OVERLAY, {
+    o.Z.setCommandHandler(l.Etm.OVERLAY, {
         scope: c.cE,
         handler(n) {
             let { args: r } = n;
@@ -33,7 +33,7 @@ function _(e, t) {
             e((0, s.H)(r));
         }
     }),
-        a.Z.setEventHandler(l.zMe.OVERLAY, {
+        o.Z.setEventHandler(l.zMe.OVERLAY, {
             scope: c.cE,
             handler(e) {
                 let { args: n } = e;
@@ -45,7 +45,7 @@ function p(e) {
     if (__OVERLAY__) r.default.request(l.Etm.OVERLAY, (0, s.G)(e));
     else
         try {
-            a.Z.dispatchToSubscriptions(l.zMe.OVERLAY, {}, (0, s.G)(e));
+            o.Z.dispatchToSubscriptions(l.zMe.OVERLAY, {}, (0, s.G)(e));
         } catch (i) {
             let t = e.type,
                 n = [];
@@ -53,7 +53,7 @@ function p(e) {
             let r = Error('Error dispatching overlay RPC: '.concat(i.message));
             throw (
                 (i.stack && (r.stack = i.stack),
-                o.Z.captureException(r, {
+                a.Z.captureException(r, {
                     extra: {
                         eventType: t,
                         payloadTypes: n

@@ -1,4 +1,4 @@
-let r, i, a, o, s, l, c, u, d, f, _, p, h, m, g, E, b;
+let r, i, o, a, s, l, c, u, d, f, _, p, h, m, g, E, b;
 n.d(t, { Z: () => ec });
 var y,
     O = n(979554),
@@ -52,7 +52,7 @@ function k(e) {
 }
 function M(e) {
     let { avatarDecoration: t } = e;
-    a = t;
+    o = t;
 }
 function j(e) {
     let { nameplate: t } = e;
@@ -60,7 +60,7 @@ function j(e) {
 }
 function U(e) {
     let { profileEffectId: t } = e;
-    o = t;
+    a = t;
 }
 function G(e) {
     let { item: t } = e;
@@ -121,24 +121,24 @@ function $() {
     N = {};
 }
 function ee() {
-    et(), en(), ea(), eo(), (N = {});
+    et(), en(), eo(), ea(), (N = {});
 }
 function et() {
-    (r = void 0), (i = void 0), (a = void 0), (o = void 0), (s = void 0);
+    (r = void 0), (i = void 0), (o = void 0), (a = void 0), (s = void 0);
 }
 function en() {
-    (l = void 0), (c = void 0), (u = void 0), (d = void 0), (f = void 0), (o = void 0);
+    (l = void 0), (c = void 0), (u = void 0), (d = void 0), (f = void 0), (a = void 0);
 }
 function er() {
     (m = void 0), (g = void 0), (E = void 0), (b = void 0), (h = void 0);
 }
 function ei() {
-    a = void 0;
-}
-function ea() {
-    _ = void 0;
+    o = void 0;
 }
 function eo() {
+    _ = void 0;
+}
+function ea() {
     p = void 0;
 }
 function es() {
@@ -152,7 +152,7 @@ class el extends (y = v.ZP.Store) {
         return N;
     }
     showNotice() {
-        return void 0 !== r || void 0 !== l || void 0 !== c || void 0 !== u || void 0 !== d || void 0 !== f || void 0 !== a || void 0 !== o || void 0 !== i || void 0 !== s || void 0 !== _ || void 0 !== p;
+        return void 0 !== r || void 0 !== l || void 0 !== c || void 0 !== u || void 0 !== d || void 0 !== f || void 0 !== o || void 0 !== a || void 0 !== i || void 0 !== s || void 0 !== _ || void 0 !== p;
     }
     getIsSubmitDisabled() {
         return void 0 !== c && c.length > S.tPV;
@@ -179,13 +179,13 @@ class el extends (y = v.ZP.Store) {
         return f;
     }
     getPendingAvatarDecoration() {
-        return a;
+        return o;
     }
     getPendingNameplate() {
         return s;
     }
     getPendingProfileEffectId() {
-        return o;
+        return a;
     }
     getAllPending() {
         return {
@@ -195,8 +195,8 @@ class el extends (y = v.ZP.Store) {
             pendingPronouns: u,
             pendingAccentColor: d,
             pendingThemeColors: f,
-            pendingAvatarDecoration: a,
-            pendingProfileEffectId: o,
+            pendingAvatarDecoration: o,
+            pendingProfileEffectId: a,
             pendingGlobalName: i,
             pendingNameplate: s,
             pendingLegacyUsernameDisabled: _,
@@ -263,7 +263,7 @@ let ec = new el(I.Z, {
     USER_SETTINGS_RESET_ALL_PENDING: ee,
     USER_SETTINGS_RESET_ALL_TRY_IT_OUT: er,
     USER_SETTINGS_RESET_PENDING_AVATAR_DECORATION: ei,
-    USER_SETTINGS_ACCOUNT_RESET_PENDING_LEGACY_USERNAME_DISABLED: ea,
-    USER_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES: eo,
+    USER_SETTINGS_ACCOUNT_RESET_PENDING_LEGACY_USERNAME_DISABLED: eo,
+    USER_SETTINGS_RESET_PENDING_PRIMARY_GUILD_CHANGES: ea,
     LOGOUT: J
 });

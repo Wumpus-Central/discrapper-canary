@@ -1,7 +1,7 @@
-var r = n(707104),
-    i = TypeError;
-e.exports = function (e) {
-    var t = r(e, 'number');
-    if ('number' == typeof t) throw new i("Can't convert number to bigint");
-    return BigInt(t);
+var e = r(707104),
+    o = TypeError;
+t.exports = function (t) {
+    var n = e(t, 'number');
+    if ('number' == typeof n) throw new o("Can't convert number to bigint");
+    return BigInt(n);
 };

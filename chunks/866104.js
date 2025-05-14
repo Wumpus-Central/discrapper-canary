@@ -21,9 +21,9 @@ var r = n(255367),
     g = n(594174),
     _ = n(671533),
     b = n(51144),
-    E = n(506071),
-    y = n(696014),
-    x = n(847033),
+    x = n(506071),
+    E = n(696014),
+    y = n(847033),
     v = n(544978),
     O = n(893182),
     j = n(388032),
@@ -53,7 +53,7 @@ function S(e) {
 function I(e) {
     let { coverImageAsset: t, isPreview: n = !1 } = e,
         i = f.QK.useSetting(),
-        l = (0, E.n)() && i,
+        l = (0, x.n)() && i,
         [a, o] = (0, m.Z)(t, l),
         s = l
             ? (0, r.jsx)(d.Z, {
@@ -100,11 +100,11 @@ function N(e) {
             },
             [m]
         ),
-        { isTruncated: E, ExpandableTextContainer: N } = (0, y.s)(),
+        { isTruncated: x, ExpandableTextContainer: N } = (0, E.s)(),
         T = (null != (n = null == d || null == (t = d.description) ? void 0 : t.trim().length) ? n : 0) > 0,
         [P, A] = i.useState(1),
         w = (0, c.Z)('(max-width: 1439px)'),
-        { selectedTab: Z, isPhantomPreview: R } = (0, x.m)(),
+        { selectedTab: Z, isPhantomPreview: R } = (0, y.m)(),
         k = Z === v.y.GUILD_PRODUCTS_PREVIEW ? j.intl.string(j.t['LvXy/P']) : j.intl.string(j.t.XyqKh4),
         D = T
             ? (0, r.jsxs)(r.Fragment, {
@@ -117,7 +117,7 @@ function N(e) {
                               children: null == d ? void 0 : d.description
                           })
                       }),
-                      E &&
+                      x &&
                           (0, r.jsxs)(r.Fragment, {
                               children: [(0, r.jsx)(s.LZC, { size: 4 }), (0, r.jsx)(S, { onClick: () => (0, O.Z)({ guildId: m }) })]
                           })

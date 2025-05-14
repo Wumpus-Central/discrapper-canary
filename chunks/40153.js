@@ -1,6 +1,6 @@
 n.d(t, {
     OG: () => S,
-    ZP: () => O,
+    ZP: () => v,
     Zu: () => C
 }),
     n(388685);
@@ -67,7 +67,7 @@ function y(e) {
         className: m.target
     });
 }
-function v(e) {
+function O(e) {
     let { name: t, targetNode: n, onDragOverChanged: l } = e,
         [{ canDrop: s, isOver: a }, u] = (0, c.L)(() => _([h.eD.GUILD], n, !0, !0));
     i.useEffect(() => {
@@ -92,7 +92,7 @@ function v(e) {
         })
     });
 }
-let O = i.memo(function (e) {
+let v = i.memo(function (e) {
     let { name: t, targetNode: n, noCombine: i = !1, below: l = !1, onDragOverChanged: o } = e,
         s = !i && null == n.parentId;
     return (0, r.jsxs)('div', {
@@ -105,7 +105,7 @@ let O = i.memo(function (e) {
                 below: l
             }),
             s
-                ? (0, r.jsx)(v, {
+                ? (0, r.jsx)(O, {
                       name: t,
                       targetNode: n,
                       onDragOverChanged: o

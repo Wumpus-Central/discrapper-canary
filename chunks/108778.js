@@ -1,13 +1,12 @@
-var r = n(218784),
-    i = n(897502),
-    a = Math.abs,
-    o = 2.220446049250313e-16;
-e.exports = function (e, t, n, s) {
-    var l = +e,
-        c = a(l),
-        u = r(l);
-    if (c < s) return u * i(c / s / t) * s * t;
-    var d = (1 + t / o) * c,
-        f = d - (d - c);
-    return f > n || f != f ? (1 / 0) * u : u * f;
+var e = r(218784),
+    o = r(897502),
+    i = Math.abs;
+t.exports = function (t, n, r, u) {
+    var c = +t,
+        a = i(c),
+        f = e(c);
+    if (a < u) return f * o(a / u / n) * u * n;
+    var s = (1 + n / 2.220446049250313e-16) * a,
+        l = s - (s - a);
+    return l > r || l != l ? (1 / 0) * f : f * l;
 };

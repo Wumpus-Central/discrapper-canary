@@ -1,7 +1,7 @@
-var r = a(553136),
-    n = a(344894).concat('length', 'prototype');
-e.f =
+var e = r(553136),
+    o = r(344894).concat('length', 'prototype');
+n.f =
     Object.getOwnPropertyNames ||
     function (t) {
-        return r(t, n);
+        return e(t, o);
     };

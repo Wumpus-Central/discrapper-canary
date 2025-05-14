@@ -4,8 +4,8 @@ function n(e) {
 function r(e, t) {
     let r = n(e),
         i = n(t),
-        a = e;
-    return r && i ? (e.$$loader.fallbackWith(t.$$loader), (a = e)) : r || i ? (r && !i ? (a = Object.assign(e.$$baseObject, t)) : i && !r && (a = Object.assign(t.$$baseObject, e))) : (a = Object.assign(Object.assign({}, t), e)), a;
+        o = e;
+    return r && i ? (e.$$loader.fallbackWith(t.$$loader), (o = e)) : r || i ? (r && !i ? (o = Object.assign(e.$$baseObject, t)) : i && !r && (o = Object.assign(t.$$baseObject, e))) : (o = Object.assign(Object.assign({}, t), e)), o;
 }
 function i(e) {
     function t(t) {

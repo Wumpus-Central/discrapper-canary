@@ -33,8 +33,8 @@ var r = n(374470),
     T = n(720904),
     M = n(88791),
     A = n(385302),
-    D = n(873699),
-    w = n(134323),
+    w = n(873699),
+    D = n(134323),
     C = n(429260),
     R = n(1626),
     L = n(279329),
@@ -101,7 +101,7 @@ function K(e) {
         ed = (0, v.Z)(t, n),
         ef = (0, j.Z)(t, n),
         eg = (0, A.Z)(t, n),
-        em = (0, D.Z)(t, n),
+        em = (0, w.Z)(t, n),
         ep = (0, P.Z)(t, n),
         eb = (0, C.ZP)(t),
         eh = (0, C.wY)(t),
@@ -115,7 +115,7 @@ function K(e) {
             label: H.intl.string(H.t.zBoHlZ),
             shiftId: ''.concat(t.channel_id, '-').concat(t.id)
         }),
-        eP = (0, w.Z)(t, n),
+        eP = (0, D.Z)(t, n),
         e_ = (0, N.Z)(t, n),
         eZ = (0, G.Z)(t, n),
         eN = (0, h.Z)(a, n.getGuildId()),
@@ -130,8 +130,8 @@ function K(e) {
             guildId: void 0,
             onHeightUpdate: V
         }),
-        eD = (0, k.Z)(t),
-        ew = (0, p.Z)(t);
+        ew = (0, k.Z)(t),
+        eD = (0, p.Z)(t);
     return (0, i.jsxs)(l.v2r, {
         navId: Y,
         onClose: Q,
@@ -147,7 +147,7 @@ function K(e) {
                 children: [el, eP, e_, eZ]
             }),
             (0, i.jsxs)(l.kSQ, {
-                children: [ex, ea, eI, eA, es, ec, ed, ef, ey, ew, eD]
+                children: [ex, ea, eI, eA, es, ec, ed, ef, ey, eD, ew]
             }),
             (0, i.jsxs)(l.kSQ, {
                 children: [em, eg, ep, q && eb, q && eO, eh]

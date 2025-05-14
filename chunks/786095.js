@@ -70,8 +70,8 @@ function j(e, t) {
             var e;
             return null != (e = T[v]) ? e : [];
         }, [T]),
-        D = 0 === A.length,
-        w = n > A.length && !D;
+        w = 0 === A.length,
+        D = n > A.length && !w;
     if (!r.useMemo(() => (0, u.ze)(t), [t]) || null == e || 0 === e.length || null == t) return null;
     let C = e.split(' '),
         R = C.length;
@@ -112,7 +112,7 @@ function j(e, t) {
         I ||
             (k = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    D &&
+                    w &&
                         (0, i.jsx)(l.sNh, {
                             id: 'add-first-rule',
                             label: h.intl.string(h.t.f72Zqa),
@@ -148,7 +148,7 @@ function j(e, t) {
                             e.id
                         );
                     }),
-                    w &&
+                    D &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
                                 (0, i.jsx)(l.Clw, {}),

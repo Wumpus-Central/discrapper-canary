@@ -1,9 +1,9 @@
 n.d(t, { Z: () => M }), n(539854), n(388685), n(997841);
 var r,
     i = n(348327),
-    a = n.n(i),
-    o = n(392711),
-    s = n.n(o),
+    o = n.n(i),
+    a = n(392711),
+    s = n.n(a),
     l = n(442837),
     c = n(570140),
     u = n(317381),
@@ -85,29 +85,29 @@ function C() {
         let [, n] = t;
         null != n.application_id && (i.add(n.name), e.push(n));
     });
-    let o = _.ZP.getVisibleGame(),
-        l = null != o && null != o.name && i.has(o.name),
-        c = null != o && o.isLauncher,
+    let a = _.ZP.getVisibleGame(),
+        l = null != a && null != a.name && i.has(a.name),
+        c = null != a && a.isLauncher,
         u = null != E.Z.getCurrentUserActiveStream(),
         d = l || (c && !u);
-    if (null != o && null != o.name && !d) {
+    if (null != a && null != a.name && !d) {
         var g, v;
         e.push({
             type: O.IIU.PLAYING,
-            name: o.name,
-            application_id: null != (v = o.id) ? v : null == (g = y.Z.getGameByName(o.name)) ? void 0 : g.id,
-            timestamps: { start: o.start }
+            name: a.name,
+            application_id: null != (v = a.id) ? v : null == (g = y.Z.getGameByName(a.name)) ? void 0 : g.id,
+            timestamps: { start: a.start }
         });
     }
     let S = h.Z.getActivity();
-    null != S && e.push(I({ type: O.IIU.LISTENING }, S)), a()(A, e) || (A = e);
+    null != S && e.push(I({ type: O.IIU.LISTENING }, S)), o()(A, e) || (A = e);
 }
 function P() {
     (N = {}), C();
 }
 function R(e) {
     let { socketId: t, pid: n, activity: r } = e;
-    if (a()(N[t], [n, r])) return !1;
+    if (o()(N[t], [n, r])) return !1;
     null != r ? (N[t] = [n, r]) : delete N[t], C();
 }
 function w(e) {
@@ -121,11 +121,11 @@ function D(e) {
 function L() {
     let e = {},
         t = !1;
-    for (let [r, [i, a]] of Object.entries(N)) {
+    for (let [r, [i, o]] of Object.entries(N)) {
         var n;
-        let o = null != (n = a.flags) ? n : 0,
-            s = (0, d.Ix)(o);
-        s !== o ? ((e[r] = [i, T(I({}, a), { flags: s })]), (t = !0)) : (e[r] = [i, a]);
+        let a = null != (n = o.flags) ? n : 0,
+            s = (0, d.Ix)(a);
+        s !== a ? ((e[r] = [i, T(I({}, o), { flags: s })]), (t = !0)) : (e[r] = [i, o]);
     }
     return t ? ((N = e), 'APPLICATION_ACTIVITIES_CHANGED') : 'NO_CHANGES';
 }

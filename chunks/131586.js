@@ -7,8 +7,8 @@ e.exports = function (e) {
             built_in: t,
             literal: r
         },
-        a = e.inherit(e.TITLE_MODE, { begin: '[a-zA-Z](\\.?\\w)*' }),
-        o = {
+        o = e.inherit(e.TITLE_MODE, { begin: '[a-zA-Z](\\.?\\w)*' }),
+        a = {
             className: 'number',
             variants: [{ begin: "\\b(0b[01']+)" }, { begin: "(-?)\\b([\\d']+(\\.[\\d']*)?|\\.[\\d']+)(u|U|l|L|ul|UL|f|F|b|B)" }, { begin: "(-?)(\\b0[xX][a-fA-F0-9']+|(\\b[\\d']+(\\.[\\d']*)?|\\.[\\d']+)([eE][-+]?[\\d']+)?)" }],
             relevance: 0
@@ -49,14 +49,14 @@ e.exports = function (e) {
             illegal: /\n/,
             contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, { begin: '""' }, d]
         });
-    (u.contains = [_, f, l, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, o, e.C_BLOCK_COMMENT_MODE]), (d.contains = [p, f, c, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, o, e.inherit(e.C_BLOCK_COMMENT_MODE, { illegal: /\n/ })]);
+    (u.contains = [_, f, l, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, a, e.C_BLOCK_COMMENT_MODE]), (d.contains = [p, f, c, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, a, e.inherit(e.C_BLOCK_COMMENT_MODE, { illegal: /\n/ })]);
     let h = {
             variants: [s, _, f, l, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE]
         },
         m = {
             begin: '<',
             end: '>',
-            contains: [{ beginKeywords: 'in out' }, a]
+            contains: [{ beginKeywords: 'in out' }, o]
         },
         g = e.IDENT_RE + '(<' + e.IDENT_RE + '(\\s*,\\s*' + e.IDENT_RE + ')*>)?(\\[\\])?',
         E = {
@@ -97,27 +97,27 @@ e.exports = function (e) {
                 keywords: { keyword: 'if else elif endif define undef warning error line region endregion pragma checksum' }
             },
             h,
-            o,
+            a,
             {
                 beginKeywords: 'class interface',
                 relevance: 0,
                 end: /[{;=]/,
                 illegal: /[^\s:,]/,
-                contains: [{ beginKeywords: 'where class' }, a, m, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
+                contains: [{ beginKeywords: 'where class' }, o, m, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
             },
             {
                 beginKeywords: 'namespace',
                 relevance: 0,
                 end: /[{;=]/,
                 illegal: /[^\s:]/,
-                contains: [a, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
+                contains: [o, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
             },
             {
                 beginKeywords: 'record',
                 relevance: 0,
                 end: /[{;=]/,
                 illegal: /[^\s:]/,
-                contains: [a, m, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
+                contains: [o, m, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE]
             },
             {
                 className: 'meta',
@@ -164,7 +164,7 @@ e.exports = function (e) {
                         excludeEnd: !0,
                         keywords: i,
                         relevance: 0,
-                        contains: [h, o, e.C_BLOCK_COMMENT_MODE]
+                        contains: [h, a, e.C_BLOCK_COMMENT_MODE]
                     },
                     e.C_LINE_COMMENT_MODE,
                     e.C_BLOCK_COMMENT_MODE

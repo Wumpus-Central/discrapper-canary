@@ -15,9 +15,9 @@ var r,
     g = n(917621),
     _ = n(431583),
     b = n(592745),
-    E = n(952164),
-    y = n(768419),
-    x = n(456432),
+    x = n(952164),
+    E = n(768419),
+    y = n(456432),
     v = n(789407),
     O = n(598077),
     j = n(757266),
@@ -81,13 +81,13 @@ class G extends (r = l.PureComponent) {
               });
     }
     handleOpenSpotifyTrack(e) {
-        (0, E.aG)(e);
+        (0, x.aG)(e);
     }
     handleOpenSpotifyArtist(e, t, n) {
-        (0, E.d$)(e, t, n);
+        (0, x.d$)(e, t, n);
     }
     handleOpenSpotifyAlbum(e, t) {
-        (0, E.Z5)(e, t);
+        (0, x.Z5)(e, t);
     }
     shouldRenderCustomButton() {
         let { isLaunchable: e, application: t } = this.props;
@@ -159,7 +159,7 @@ class G extends (r = l.PureComponent) {
             U(this, 'renderSpotifyJoinButton', (e) => {
                 let { channelId: t, guildId: n } = this.props;
                 return (0, i.jsx)(
-                    x.Z,
+                    y.Z,
                     F(
                         {
                             guildId: null != n ? n : void 0,
@@ -198,7 +198,7 @@ class G extends (r = l.PureComponent) {
             }),
             U(this, 'renderEmbed', () => {
                 let e,
-                    { activity: t, partyId: n, myPartyId: r, application: l, partyMembers: a, isPreview: o, isLaunching: s, isSender: c, activityActionType: u, className: d, channelId: p, message: m, hideParty: f, isSyncable: h, isLaunchable: _, guildId: b, analyticsLocations: E } = this.props;
+                    { activity: t, partyId: n, myPartyId: r, application: l, partyMembers: a, isPreview: o, isLaunching: s, isSender: c, activityActionType: u, className: d, channelId: p, message: m, hideParty: f, isSyncable: h, isLaunchable: _, guildId: b, analyticsLocations: x } = this.props;
                 if (null != l) e = l.name;
                 else if (null != n) {
                     let [t] = n.split(':');
@@ -223,7 +223,7 @@ class G extends (r = l.PureComponent) {
                     channelId: p,
                     guildId: null != b ? b : void 0,
                     message: m,
-                    analyticsLocations: E,
+                    analyticsLocations: x,
                     hideParty: f,
                     onJoin: this.handleJoin,
                     onInvite: this.handleInvite,
@@ -239,7 +239,7 @@ class G extends (r = l.PureComponent) {
     }
 }
 U(G, 'defaultProps', { isPreview: !1 });
-let H = a.ZP.connectStores([y.Z, C.Z, N.Z, T.Z, j.Z, A.Z, I.Z, b.Z, w.Z, P.default, S.ZP], (e) => {
+let H = a.ZP.connectStores([E.Z, C.Z, N.Z, T.Z, j.Z, A.Z, I.Z, b.Z, w.Z, P.default, S.ZP], (e) => {
     var t;
     let { activity: n, analyticsLocations: r, application: i, partyId: l, userId: a, guildId: o } = e,
         { id: s } = null != i ? i : {},
@@ -261,8 +261,8 @@ let H = a.ZP.connectStores([y.Z, C.Z, N.Z, T.Z, j.Z, A.Z, I.Z, b.Z, w.Z, P.defau
                 }
             );
         }),
-        m = null != n && y.Z.canPlay(n),
-        f = y.Z.getSyncingWith(),
+        m = null != n && E.Z.canPlay(n),
+        f = E.Z.getSyncingWith(),
         h = null != f && null != a && f.userId === a;
     return {
         analyticsLocations: r,

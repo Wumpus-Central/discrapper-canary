@@ -17,13 +17,13 @@ e.exports = function (e) {
             begin: /\[/,
             end: /\]/
         },
-        a = {
+        o = {
             className: 'comment',
             begin: /%/,
             end: /$/,
             contains: [e.PHRASAL_WORDS_MODE]
         },
-        o = {
+        a = {
             className: 'string',
             begin: /`/,
             end: /`/,
@@ -37,7 +37,7 @@ e.exports = function (e) {
             className: 'string',
             begin: /0'\\s/
         },
-        c = [t, n, r, { begin: /:-/ }, i, a, e.C_BLOCK_COMMENT_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, o, s, l, e.C_NUMBER_MODE];
+        c = [t, n, r, { begin: /:-/ }, i, o, e.C_BLOCK_COMMENT_MODE, e.QUOTE_STRING_MODE, e.APOS_STRING_MODE, a, s, l, e.C_NUMBER_MODE];
     return (
         (r.contains = c),
         (i.contains = c),

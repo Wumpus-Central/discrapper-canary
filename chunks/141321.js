@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => x });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(490897),
     _ = n(388032),
     b = n(264634);
-function E(e) {
-    let { onOpen: t, onClose: n, className: E, 'data-jump-section': y } = e,
-        x = i.useRef(null),
+function x(e) {
+    let { onOpen: t, onClose: n, className: x, 'data-jump-section': E } = e,
+        y = i.useRef(null),
         v = (0, l.e7)([m.default], () => m.default.getCurrentUser()),
         O = (0, o.Q3)('RecentsButton'),
         j = i.useRef(null),
@@ -44,7 +44,7 @@ function E(e) {
                         }),
                     (0, r.jsx)(d.U, {
                         location: 'inbox-button',
-                        targetElementRef: x,
+                        targetElementRef: y,
                         children: (0, r.jsx)(
                             u.JO,
                             ((l = (function (e) {
@@ -74,8 +74,8 @@ function E(e) {
                             })({}, n)),
                             (o = o =
                                 {
-                                    ref: x,
-                                    className: E,
+                                    ref: y,
+                                    className: x,
                                     onClick: e,
                                     icon: a.xx7,
                                     iconSize: O ? N : void 0,
@@ -83,7 +83,7 @@ function E(e) {
                                     tooltip: t ? null : _.intl.string(_.t.GSmTKC),
                                     selected: t,
                                     showBadge: C || I || i,
-                                    'data-jump-section': y
+                                    'data-jump-section': E
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))

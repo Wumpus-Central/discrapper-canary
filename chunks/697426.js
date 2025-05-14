@@ -27,7 +27,7 @@ function i(e) {
     }
     return e;
 }
-function a(e, t) {
+function o(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -39,12 +39,12 @@ function a(e, t) {
     }
     return n;
 }
-function o(e, t) {
+function a(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : a(Object(t)).forEach(function (n) {
+            : o(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
@@ -56,8 +56,8 @@ function s(e, t) {
         r,
         i = l(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -66,8 +66,8 @@ function l(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 n.d(t, {
@@ -94,23 +94,23 @@ var c = (function (e) {
         return (e.DEFAULT = 'default'), (e.CUSTOM = 'custom'), e;
     })({});
 function _(e, t) {
-    var { sound_id: n, emoji_id: r, emoji_name: a, user_id: l, available: c } = e;
-    return o(i({}, s(e, ['sound_id', 'emoji_id', 'emoji_name', 'user_id', 'available'])), {
+    var { sound_id: n, emoji_id: r, emoji_name: o, user_id: l, available: c } = e;
+    return a(i({}, s(e, ['sound_id', 'emoji_id', 'emoji_name', 'user_id', 'available'])), {
         soundId: n,
         guildId: t,
         emojiId: r,
-        emojiName: a,
+        emojiName: o,
         userId: l,
         available: null == c || c
     });
 }
 function p(e) {
-    var { soundId: t, guildId: n, emojiId: r, emojiName: a, userId: l } = e;
-    return o(i({}, s(e, ['soundId', 'guildId', 'emojiId', 'emojiName', 'userId'])), {
+    var { soundId: t, guildId: n, emojiId: r, emojiName: o, userId: l } = e;
+    return a(i({}, s(e, ['soundId', 'guildId', 'emojiId', 'emojiName', 'userId'])), {
         sound_id: t,
         guild_id: n,
         emoji_id: r,
-        emoji_name: a,
+        emoji_name: o,
         user_id: l
     });
 }

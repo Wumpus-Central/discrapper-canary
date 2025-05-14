@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(539854);
+n.d(t, { Z: () => E }), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(512722),
@@ -15,11 +15,11 @@ var r = n(255367),
     g = n(358595),
     _ = n(981631),
     b = n(388032),
-    E = n(273254);
-function y(e) {
+    x = n(273254);
+function E(e) {
     let t,
-        { invite: n, message: l, currentUserId: y, onTransitionToInviteChannel: x, onAcceptInstantInvite: v } = e,
-        O = y === l.author.id,
+        { invite: n, message: l, currentUserId: E, onTransitionToInviteChannel: y, onAcceptInstantInvite: v } = e,
+        O = E === l.author.id,
         j = n.state === _.r2o.ACCEPTING,
         C = (0, o.e7)([m.Z], () => (null != n.channel ? m.Z.getChannel(n.channel.id) : null), [n]);
     a()(null == C || C.isPrivate(), 'must be a private channel');
@@ -27,7 +27,7 @@ function y(e) {
         I = null != C,
         N = i.useCallback(() => {
             let e = 'noop';
-            I ? (x(), (e = 'transition')) : (v(), (e = 'accept')),
+            I ? (y(), (e = 'transition')) : (v(), (e = 'accept')),
                 (0, s.r$)(
                     {
                         invite: n,
@@ -37,7 +37,7 @@ function y(e) {
                     },
                     S
                 );
-        }, [n, l, S, I, x, v]);
+        }, [n, l, S, I, y, v]);
     if (null == C) {
         if (null == n.channel) return (0, r.jsx)(g.Z, {});
         (C = (0, p.jD)(n.channel)), (t = null != n.channel && null != n.channel.recipients ? n.channel.recipients : []);
@@ -70,7 +70,7 @@ function y(e) {
                 (0, r.jsxs)(d.Z.Body, {
                     children: [
                         (0, r.jsxs)('div', {
-                            className: E.headerLine,
+                            className: x.headerLine,
                             children: [
                                 (0, r.jsx)(d.Z.Icon, {
                                     channel: C,

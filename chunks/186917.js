@@ -1,10 +1,10 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(493773),
     i = n(580747),
-    a = n(607789);
-let o = (e, t) => {
+    o = n(607789);
+let a = (e, t) => {
     let n = (0, i.Z)('profile_effect_debug_controls'),
-        { id: o, preset: s, increment: l, decrement: c } = (0, a.Z)(e);
+        { id: a, preset: s, increment: l, decrement: c } = (0, o.Z)(e);
     return (
         (0, r.ZP)(() => {
             if (!n) return;
@@ -19,7 +19,7 @@ let o = (e, t) => {
             );
         }),
         {
-            id: null != o ? o : null,
+            id: null != a ? a : null,
             preset: s
         }
     );

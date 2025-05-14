@@ -12,7 +12,7 @@ var r = n(255367),
     p = n(329922);
 let f = i.forwardRef(function (e, t) {
     var n, l;
-    let { id: f, onClick: g, onContextMenu: m, icon: b, selected: _, tooltip: y, upperBadge: v, lowerBadge: O, lowerBadgeSize: C, showPill: S = !0, className: j, 'aria-label': E, children: x, onMouseEnter: P, onMouseLeave: I, onMouseDown: w } = e,
+    let { id: f, onClick: g, onContextMenu: m, icon: b, selected: _, tooltip: y, upperBadge: O, lowerBadge: v, lowerBadgeSize: C, showPill: S = !0, className: j, 'aria-label': E, children: x, onMouseEnter: P, onMouseLeave: I, onMouseDown: w } = e,
         N = (0, c.Q3)('ButtonListItem'),
         Z = (0, s.Ie)(f),
         [T, A] = i.useState(!1);
@@ -32,8 +32,8 @@ let f = i.forwardRef(function (e, t) {
                 selected: _,
                 children: (0, r.jsx)(a.aRk, {
                     selected: !!N || _ || T,
-                    upperBadge: v,
-                    lowerBadge: O,
+                    upperBadge: O,
+                    lowerBadge: v,
                     lowerBadgeSize: C,
                     children: (0, r.jsx)(
                         a.P3F,

@@ -1,4 +1,3 @@
-var t = 4503599627370496;
-e.exports = function (e) {
-    return e + t - t;
+t.exports = function (t) {
+    return t + 4503599627370496 - 4503599627370496;
 };

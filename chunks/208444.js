@@ -1,4 +1,4 @@
-n.d(t, { z: () => E });
+n.d(t, { z: () => x });
 var r = n(73800),
     i = n(442837),
     l = n(783097),
@@ -15,12 +15,12 @@ var r = n(73800),
     g = n(981631),
     _ = n(49898),
     b = n(388032);
-function E(e, t) {
-    let { isDiscoverable: n, customInstallUrl: E, installParams: y, integrationTypesConfig: x } = e,
+function x(e, t) {
+    let { isDiscoverable: n, customInstallUrl: x, installParams: E, integrationTypesConfig: y } = e,
         v = (0, f.Eb)({
-            customInstallUrl: E,
-            installParams: y,
-            integrationTypesConfig: x
+            customInstallUrl: x,
+            installParams: E,
+            integrationTypesConfig: y
         }),
         O = (0, i.e7)([p.Z], () => {
             var e;
@@ -59,15 +59,15 @@ function E(e, t) {
                             null == t || t(h.j_.ADD_APP),
                                 (0, m.L)({
                                     applicationId: e.id,
-                                    customInstallUrl: E,
-                                    installParams: y,
-                                    integrationTypesConfig: x,
+                                    customInstallUrl: x,
+                                    installParams: E,
+                                    integrationTypesConfig: y,
                                     guildId: O,
                                     source: 'app_message_embed'
                                 });
                         }
                     }
                   : void 0,
-        [e.id, C, S, E, y, x, v, t, O]
+        [e.id, C, S, x, E, y, v, t, O]
     );
 }

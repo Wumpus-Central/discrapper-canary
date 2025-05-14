@@ -17,11 +17,11 @@ n.d(t, {
     zU: () => m
 });
 var r = n(686942),
-    i = function (e, t, n, r, i, a) {
-        return void 0 === r && (r = 0), void 0 === i && (i = 0), void 0 === a && (a = 0), new Date(Date.UTC(e, t - 1, n, r, i, a));
+    i = function (e, t, n, r, i, o) {
+        return void 0 === r && (r = 0), void 0 === i && (i = 0), void 0 === o && (o = 0), new Date(Date.UTC(e, t - 1, n, r, i, o));
     },
-    a = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
-    o = 86400000,
+    o = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
+    a = 86400000,
     s = 9999,
     l = i(1970, 1, 1),
     c = [6, 0, 1, 2, 3, 4, 5],
@@ -38,17 +38,17 @@ var r = n(686942),
         return 60 * e.getTimezoneOffset() * 1000;
     },
     p = function (e, t) {
-        return Math.round((e.getTime() - _(e) - (t.getTime() - _(t))) / o);
+        return Math.round((e.getTime() - _(e) - (t.getTime() - _(t))) / a);
     },
     h = function (e) {
         return p(e, l);
     },
     m = function (e) {
-        return new Date(l.getTime() + e * o);
+        return new Date(l.getTime() + e * a);
     },
     g = function (e) {
         var t = e.getUTCMonth();
-        return 1 === t && u(e.getUTCFullYear()) ? 29 : a[t];
+        return 1 === t && u(e.getUTCFullYear()) ? 29 : o[t];
     },
     E = function (e) {
         return c[e.getUTCDay()];

@@ -37,8 +37,8 @@ function p(e) {
 function m(e) {
     var t,
         n,
-        { message: i, channel: m, content: f, className: h, compact: g, popoutProps: _, hideTimestamp: b = !1, withFooter: E = !1 } = e,
-        y = (function (e, t) {
+        { message: i, channel: m, content: f, className: h, compact: g, popoutProps: _, hideTimestamp: b = !1, withFooter: x = !1 } = e,
+        E = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -57,13 +57,13 @@ function m(e) {
             }
             return i;
         })(e, ['message', 'channel', 'content', 'className', 'compact', 'popoutProps', 'hideTimestamp', 'withFooter']);
-    let x = (0, o.ZP)(i),
-        v = (0, a.Z)(x);
+    let y = (0, o.ZP)(i),
+        v = (0, a.Z)(y);
     return (0, r.jsx)('div', {
-        className: l()({ [d.withFooter]: E }, d.embedCard, { [d.compact]: g }, h),
+        className: l()({ [d.withFooter]: x }, d.embedCard, { [d.compact]: g }, h),
         children: (0, r.jsx)(
             s.Z,
-            ((t = p({}, y)),
+            ((t = p({}, E)),
             (n = n =
                 {
                     className: l()(d.messageContainer, { [d.compact]: g }),
@@ -79,7 +79,7 @@ function m(e) {
                             {
                                 message: i,
                                 channel: m,
-                                author: x,
+                                author: y,
                                 guildId: null == m ? void 0 : m.guild_id,
                                 compact: g,
                                 hideTimestamp: b,

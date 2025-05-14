@@ -1,14 +1,14 @@
-var r = a(621523),
-    n = a(880181),
-    _ = /#|\.prototype\./,
-    o = function (t, e) {
-        var a = c[i(t)];
-        return a === E || (a !== s && (n(e) ? r(e) : !!e));
+var e = r(621523),
+    o = r(880181),
+    i = /#|\.prototype\./,
+    u = function (t, n) {
+        var r = a[c(t)];
+        return r === s || (r !== f && (o(n) ? e(n) : !!n));
     },
-    i = (o.normalize = function (t) {
-        return String(t).replace(_, '.').toLowerCase();
+    c = (u.normalize = function (t) {
+        return String(t).replace(i, '.').toLowerCase();
     }),
-    c = (o.data = {}),
-    s = (o.NATIVE = 'N'),
-    E = (o.POLYFILL = 'P');
-t.exports = o;
+    a = (u.data = {}),
+    f = (u.NATIVE = 'N'),
+    s = (u.POLYFILL = 'P');
+t.exports = u;

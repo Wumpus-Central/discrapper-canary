@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(592125),
     _ = n(699516),
     b = n(709054),
-    E = n(594173),
-    y = n(786761),
-    x = n(750030),
+    x = n(594173),
+    E = n(786761),
+    y = n(750030),
     v = n(493892),
     O = n(901461),
     j = n(739566),
@@ -101,7 +101,7 @@ let G = i.memo(function e(t) {
             previewLinkTarget: !0
         }),
         ea = (0, j.ZP)(s),
-        eo = (0, x.k)(s),
+        eo = (0, y.k)(s),
         es = (0, m.Z)(ea),
         ec = (0, o.e7)([g.Z], () => s.hasFlag(D.iLy.HAS_THREAD) && g.Z.getChannel(b.default.castMessageIdAsChannelId(s.id))),
         eu = s.type === D.uaV.THREAD_STARTER_MESSAGE && X.state === f.Y.LOADED && null != q,
@@ -112,7 +112,7 @@ let G = i.memo(function e(t) {
             enabled: ed
         }),
         em = (0, c.V)(l.id, s.author.id),
-        ef = (0, E.ro)(s.id, s.channel_id),
+        ef = (0, x.ro)(s.id, s.channel_id),
         eh = (0, p.Z)(s);
     return eu
         ? (0, r.jsx)(
@@ -133,7 +133,7 @@ let G = i.memo(function e(t) {
           : (0, r.jsx)(S.Z, {
                 compact: k,
                 className: a()(M, {
-                    [U.ephemeral]: (0, y.Pv)(s),
+                    [U.ephemeral]: (0, E.Pv)(s),
                     [U.disableInteraction]: z,
                     [U.groupStart]: t.isGroupStart
                 }),

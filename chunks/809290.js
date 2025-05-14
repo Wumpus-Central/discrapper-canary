@@ -1,7 +1,7 @@
-var r = a(127849),
-    n = a(434431),
-    _ = r.document,
-    o = n(_) && n(_.createElement);
+var e = r(127849),
+    o = r(434431),
+    i = e.document,
+    u = o(i) && o(i.createElement);
 t.exports = function (t) {
-    return o ? _.createElement(t) : {};
+    return u ? i.createElement(t) : {};
 };

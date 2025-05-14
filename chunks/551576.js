@@ -4,9 +4,9 @@ IntlMessageFormat.__addLocaleData({
         var n = String(e).split('.'),
             r = !n[1],
             i = Number(n[0]) == e,
-            a = i && n[0].slice(-1),
-            o = i && n[0].slice(-2);
-        return t ? (1 == a && 11 != o ? 'one' : 2 == a && 12 != o ? 'two' : 3 == a && 13 != o ? 'few' : 'other') : 1 == e && r ? 'one' : 'other';
+            o = i && n[0].slice(-1),
+            a = i && n[0].slice(-2);
+        return t ? (1 == o && 11 != a ? 'one' : 2 == o && 12 != a ? 'two' : 3 == o && 13 != a ? 'few' : 'other') : 1 == e && r ? 'one' : 'other';
     }
 }),
     IntlMessageFormat.__addLocaleData({

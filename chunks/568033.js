@@ -1,1 +1,1 @@
-t.exports = a(46015)({}.isPrototypeOf);
+t.exports = r(46015)({}.isPrototypeOf);

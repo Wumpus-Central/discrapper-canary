@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(45251),
     _ = n(156012),
     b = n(74365),
-    E = n(618857),
-    y = n(695346),
-    x = n(23750),
+    x = n(618857),
+    E = n(695346),
+    y = n(23750),
     v = n(592125),
     O = n(594174),
     j = n(823379),
@@ -199,7 +199,7 @@ function R(e) {
 }
 let k = i.memo(function (e) {
     let { scheduledMessage: t, channel: n, isPendingDeletion: l } = e,
-        o = new x.ZP({
+        o = new y.ZP({
             id: t.scheduledMessageId,
             content: t.scheduledMessage.content,
             author: O.default.getUser(t.userId),
@@ -245,10 +245,10 @@ let k = i.memo(function (e) {
         d = i.useCallback(() => {
             (0, g.gD)(t.scheduledMessageId)
                 .then(() => {
-                    (0, E.C$)();
+                    (0, x.C$)();
                 })
                 .catch((e) => {
-                    (0, E.wW)(e.message);
+                    (0, x.wW)(e.message);
                 });
         }, [t.scheduledMessageId]);
     return (0, r.jsx)(
@@ -277,7 +277,7 @@ let k = i.memo(function (e) {
                                           message: o,
                                           channel: n,
                                           className: P.message,
-                                          compact: y.jU.getSetting(),
+                                          compact: E.jU.getSetting(),
                                           animateAvatar: !1,
                                           focusProps: A
                                       },

@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(979651),
     _ = n(823379),
     y = n(355363),
-    v = n(449932),
-    O = n(561788),
+    O = n(449932),
+    v = n(561788),
     C = n(876548),
     S = n(543432),
     j = n(981631),
@@ -27,7 +27,7 @@ var r = n(255367),
 function I(e) {
     var t, l;
     let { channel: o, guild: p, onAction: f, voiceStates: g, isChannelSelected: b, shouldShowSettingNudge: y } = e,
-        O = i.useMemo(() => {
+        v = i.useMemo(() => {
             var e;
             return null == g || g.length > 50
                 ? {}
@@ -42,7 +42,7 @@ function I(e) {
                               : []
                   };
         }, [o, g]);
-    (0, c.$)(O);
+    (0, c.$)(v);
     let C = (0, u.ZP)(o),
         S = Array.from((0, u.uF)(C).values()),
         P = null != (t = null == g ? void 0 : g.filter(_.lm)) ? t : [],
@@ -87,7 +87,7 @@ function I(e) {
                   S.map((e, t) => {
                       var n;
                       return (0, r.jsx)(
-                          v.Z,
+                          O.Z,
                           {
                               embeddedApp: e,
                               presenceActivity: null != (n = e.presenceActivity) ? n : void 0,
@@ -100,7 +100,7 @@ function I(e) {
                   N.map((e, t) => {
                       let { members: n, activity: i } = e;
                       return (0, r.jsx)(
-                          v.Z,
+                          O.Z,
                           {
                               presenceActivity: i,
                               channel: o,
@@ -194,7 +194,7 @@ function w(e) {
         : (0, r.jsxs)('div', {
               className: o()(x.popoutHeaderContainer, P.popoutHeaderContainer),
               children: [
-                  (0, r.jsx)(O.Z, { channel: t }),
+                  (0, r.jsx)(v.Z, { channel: t }),
                   c
                       ? (0, r.jsx)(C.Z, {
                             userCount: i,

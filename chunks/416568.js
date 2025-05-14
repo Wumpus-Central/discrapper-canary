@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(925549),
     _ = n(493773),
     y = n(209613),
-    v = n(100527),
-    O = n(906732),
+    O = n(100527),
+    v = n(906732),
     C = n(358221),
     S = n(540059),
     j = n(706590),
@@ -336,7 +336,7 @@ function ed(e) {
         ),
         [eg]
     );
-    let { analyticsLocations: em } = (0, O.ZP)(v.Z.GUILDS_LIST),
+    let { analyticsLocations: em } = (0, v.ZP)(O.Z.GUILDS_LIST),
         { pathname: eb } = (0, c.TH)(),
         e_ = eb.startsWith(ee.Z5c.GUILD_DISCOVERY) || eb.startsWith(ee.Z5c.GLOBAL_DISCOVERY);
     (0, _.Ng)(() => {
@@ -369,7 +369,7 @@ function ed(e) {
         });
     }, [eg]);
     (0, M.Z)(eg.scrollToGuild);
-    let ev = i.useCallback(
+    let eO = i.useCallback(
             function e(t, n, i) {
                 switch (t.type) {
                     case k.eD.FOLDER:
@@ -409,17 +409,17 @@ function ed(e) {
             },
             [T, A, j, eg.setNodeRef]
         ),
-        { enabled: eO } = (0, I.W)({ location: 'GuildsBar' });
+        { enabled: ev } = (0, I.W)({ location: 'GuildsBar' });
     (0, N.i)();
     let eC = i.useRef(null),
         eS = (0, w.qp)({
-            isVirtualCurrencyEnabled: eO,
+            isVirtualCurrencyEnabled: ev,
             discoveryButtonRef: eC,
             scrollToBottom: eg.scrollToBottom
         }),
         { shouldShow: ej, questId: eE, onDiscoveryButtonClick: ex } = eS,
         eP = eo(eS, ['shouldShow', 'questId', 'onDiscoveryButtonClick']),
-        eI = eO && ej,
+        eI = ev && ej,
         ew = (0, r.jsx)(z.Z, {
             ref: eC,
             questId: eI ? eE : void 0,
@@ -450,7 +450,7 @@ function ed(e) {
             barClassName: en.unreadMentionsBar
         }),
         { pinnedSectionEnabled: eT } = (0, U.U)('GuildsBar');
-    return (0, r.jsx)(O.Gt, {
+    return (0, r.jsx)(v.Gt, {
         value: em,
         children: (0, r.jsx)(m.f6W, {
             theme: s,
@@ -498,7 +498,7 @@ function ed(e) {
                                                                       guildDiscoveryButton: eN,
                                                                       disableAppDownload: t,
                                                                       isOverlay: n,
-                                                                      renderTreeNode: ev,
+                                                                      renderTreeNode: eO,
                                                                       lurkingGuildIds: b
                                                                   })
                                                               ]
@@ -527,7 +527,7 @@ function ed(e) {
                                                       guildDiscoveryButton: eN,
                                                       disableAppDownload: t,
                                                       isOverlay: n,
-                                                      renderTreeNode: ev,
+                                                      renderTreeNode: eO,
                                                       lurkingGuildIds: b
                                                   })
                                               ]

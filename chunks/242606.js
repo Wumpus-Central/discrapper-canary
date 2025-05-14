@@ -1,8 +1,8 @@
-var r = n(127849),
-    i = n(507604),
-    a = Object.getOwnPropertyDescriptor;
-e.exports = function (e) {
-    if (!i) return r[e];
-    var t = a(r, e);
-    return t && t.value;
+var e = r(127849),
+    o = r(507604),
+    i = Object.getOwnPropertyDescriptor;
+t.exports = function (t) {
+    if (!o) return e[t];
+    var n = i(e, t);
+    return n && n.value;
 };

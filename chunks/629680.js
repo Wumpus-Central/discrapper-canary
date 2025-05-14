@@ -1,58 +1,57 @@
-var r = n(127849),
-    i = n(35760),
-    a = n(621523),
-    o = n(896471),
-    s = n(992914),
-    l = n(840475),
-    c = n(358932),
-    u = n(635464),
-    d = n(287353),
-    f = n(920542),
-    _ = l.aTypedArray,
-    p = l.exportTypedArrayMethod,
-    h = r.Uint16Array,
-    m = h && i(h.prototype.sort),
-    g =
-        !!m &&
+var e = r(127849),
+    o = r(35760),
+    i = r(621523),
+    u = r(896471),
+    c = r(992914),
+    a = r(840475),
+    f = r(358932),
+    s = r(635464),
+    l = r(287353),
+    p = r(920542),
+    d = a.aTypedArray,
+    _ = a.exportTypedArrayMethod,
+    h = e.Uint16Array,
+    y = h && o(h.prototype.sort),
+    b =
+        !!y &&
         !(
-            a(function () {
-                m(new h(2), null);
+            i(function () {
+                y(new h(2), null);
             }) &&
-            a(function () {
-                m(new h(2), {});
+            i(function () {
+                y(new h(2), {});
             })
         ),
-    E =
-        !!m &&
-        !a(function () {
-            if (d) return d < 74;
-            if (c) return c < 67;
-            if (u) return !0;
-            if (f) return f < 602;
-            var e,
-                t,
-                n = new h(516),
-                r = Array(516);
-            for (e = 0; e < 516; e++) (t = e % 4), (n[e] = 515 - e), (r[e] = e - 2 * t + 3);
+    g =
+        !!y &&
+        !i(function () {
+            if (l) return l < 74;
+            if (f) return f < 67;
+            if (s) return !0;
+            if (p) return p < 602;
+            var t,
+                n,
+                r = new h(516),
+                e = Array(516);
+            for (t = 0; t < 516; t++) (n = t % 4), (r[t] = 515 - t), (e[t] = t - 2 * n + 3);
             for (
-                m(n, function (e, t) {
-                    return ((e / 4) | 0) - ((t / 4) | 0);
+                y(r, function (t, n) {
+                    return ((t / 4) | 0) - ((n / 4) | 0);
                 }),
-                    e = 0;
-                e < 516;
-                e++
+                    t = 0;
+                t < 516;
+                t++
             )
-                if (n[e] !== r[e]) return !0;
-        }),
-    b = function (e) {
-        return function (t, n) {
-            return void 0 !== e ? +e(t, n) || 0 : n != n ? -1 : t != t ? 1 : 0 === t && 0 === n ? (1 / t > 0 && 1 / n < 0 ? 1 : -1) : t > n;
-        };
-    };
-p(
+                if (r[t] !== e[t]) return !0;
+        });
+_(
     'sort',
-    function (e) {
-        return (void 0 !== e && o(e), E) ? m(this, e) : s(_(this), b(e));
+    function (t) {
+        return (void 0 !== t && u(t), g)
+            ? y(this, t)
+            : c(d(this), function (n, r) {
+                  return void 0 !== t ? +t(n, r) || 0 : r != r ? -1 : n != n ? 1 : 0 === n && 0 === r ? (1 / n > 0 && 1 / r < 0 ? 1 : -1) : n > r;
+              });
     },
-    !E || g
+    !g || b
 );

@@ -1,7 +1,7 @@
-var r = a(46015),
-    n = 0,
-    _ = Math.random(),
-    o = r((1).toString);
+var e = r(46015),
+    o = 0,
+    i = Math.random(),
+    u = e((1).toString);
 t.exports = function (t) {
-    return 'Symbol(' + (void 0 === t ? '' : t) + ')_' + o(++n + _, 36);
+    return 'Symbol(' + (void 0 === t ? '' : t) + ')_' + u(++o + i, 36);
 };

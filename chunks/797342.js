@@ -1,16 +1,16 @@
 n.d(t, { n: () => s });
 var r = n(442837),
     i = n(594174),
-    a = n(26033),
-    o = n(593294);
+    o = n(26033),
+    a = n(593294);
 function s(e) {
     var t, n, s, l, c;
     let u = (0, r.e7)([i.default], () => i.default.getUser(e.author_id)),
-        { activity: d, embeddedActivity: f } = (0, o.Z)(e);
+        { activity: d, embeddedActivity: f } = (0, a.Z)(e);
     if (null == d)
         return {
             isRich: !1,
-            appName: (0, a.dX)(e) ? e.extra.game_name : void 0,
+            appName: (0, o.dX)(e) ? e.extra.game_name : void 0,
             user: u,
             activity: void 0,
             embeddedActivity: void 0,

@@ -5,26 +5,26 @@ function i(e, t) {
     for (var n = t, r = n + 1, i = e.length; r < i; n += 1, r += 1) e[n] = e[r];
     e.pop();
 }
-n.d(t, { Z: () => a });
-let a = function (e, t) {
+n.d(t, { Z: () => o });
+let o = function (e, t) {
     void 0 === t && (t = '');
     var n,
-        a = (e && e.split('/')) || [],
-        o = (t && t.split('/')) || [],
+        o = (e && e.split('/')) || [],
+        a = (t && t.split('/')) || [],
         s = e && r(e),
         l = t && r(t),
         c = s || l;
-    if ((e && r(e) ? (o = a) : a.length && (o.pop(), (o = o.concat(a))), !o.length)) return '/';
-    if (o.length) {
-        var u = o[o.length - 1];
+    if ((e && r(e) ? (a = o) : o.length && (a.pop(), (a = a.concat(o))), !a.length)) return '/';
+    if (a.length) {
+        var u = a[a.length - 1];
         n = '.' === u || '..' === u || '' === u;
     } else n = !1;
-    for (var d = 0, f = o.length; f >= 0; f--) {
-        var _ = o[f];
-        '.' === _ ? i(o, f) : '..' === _ ? (i(o, f), d++) : d && (i(o, f), d--);
+    for (var d = 0, f = a.length; f >= 0; f--) {
+        var _ = a[f];
+        '.' === _ ? i(a, f) : '..' === _ ? (i(a, f), d++) : d && (i(a, f), d--);
     }
-    if (!c) for (; d--; ) o.unshift('..');
-    !c || '' === o[0] || (o[0] && r(o[0])) || o.unshift('');
-    var p = o.join('/');
+    if (!c) for (; d--; ) a.unshift('..');
+    !c || '' === a[0] || (a[0] && r(a[0])) || a.unshift('');
+    var p = a.join('/');
     return n && '/' !== p.substr(-1) && (p += '/'), p;
 };

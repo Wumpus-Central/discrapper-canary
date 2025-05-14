@@ -58,7 +58,7 @@ function f(e, t) {
     return i;
 }
 let h = i.forwardRef(function (e, t) {
-    var { label: n, ariaLabel: i, tooltipText: l, tooltipColor: h, icon: g, iconProps: _, onClick: b, onTooltipShow: E, onTooltipHide: y, disabled: x, dangerous: v, separator: O, sparkle: j, showNewBadge: C, buttonClassName: S, children: I } = e,
+    var { label: n, ariaLabel: i, tooltipText: l, tooltipColor: h, icon: g, iconProps: _, onClick: b, onTooltipShow: x, onTooltipHide: E, disabled: y, dangerous: v, separator: O, sparkle: j, showNewBadge: C, buttonClassName: S, children: I } = e,
         N = f(e, ['label', 'ariaLabel', 'tooltipText', 'tooltipColor', 'icon', 'iconProps', 'onClick', 'onTooltipShow', 'onTooltipHide', 'disabled', 'dangerous', 'separator', 'sparkle', 'showNewBadge', 'buttonClassName', 'children']);
     let { canShowReactionsOnMessageHover: T } = u.ZP.useExperiment({ location: 'HoverBarButton' }, { autoTrackExposure: !0 });
     return (
@@ -67,13 +67,13 @@ let h = i.forwardRef(function (e, t) {
             text: null != l ? l : n,
             color: null != h ? h : o.FGA.PRIMARY,
             'aria-label': n,
-            onTooltipShow: E,
-            onTooltipHide: y,
+            onTooltipShow: x,
+            onTooltipHide: E,
             hideOnClick: !0,
             tooltipClassName: p.tooltip,
             children: (e) => {
                 var l, u;
-                let { onMouseEnter: f, onMouseLeave: h, onClick: E } = e;
+                let { onMouseEnter: f, onMouseLeave: h, onClick: x } = e;
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsxs)(
@@ -85,10 +85,10 @@ let h = i.forwardRef(function (e, t) {
                                     onMouseEnter: f,
                                     onMouseLeave: h,
                                     onClick: (e) => {
-                                        null == E || E(), b(e);
+                                        null == x || x(), b(e);
                                     },
                                     'aria-label': null != i ? i : n,
-                                    disabled: x,
+                                    disabled: y,
                                     dangerous: v
                                 },
                                 N

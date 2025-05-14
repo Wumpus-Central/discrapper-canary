@@ -16,9 +16,9 @@ var i = n(120356),
     g = n(430824),
     _ = n(594174),
     b = n(938475),
-    E = n(5192),
-    y = n(981631),
-    x = n(388032),
+    x = n(5192),
+    E = n(981631),
+    y = n(388032),
     v = n(653072);
 function O(e) {
     var t, n, i, O, j, C, S, I, N, T;
@@ -50,7 +50,7 @@ function O(e) {
         M = null == (S = A.recipients) ? void 0 : S.find((e) => e !== P.author.id),
         U = (0, a.e7)([_.default], () => (null != M ? _.default.getUser(M) : null)),
         F = (0, d.ZP)(P),
-        B = (0, E._T)(A.getGuildId(), A.id, U),
+        B = (0, x._T)(A.getGuildId(), A.id, U),
         G = (0, a.Wu)([b.ZP], () => (null != k ? b.ZP.getVoiceStatesForChannel(k) : []), [k]),
         H = G.some((e) => e.user.id === (null == D ? void 0 : D.id)),
         V =
@@ -65,11 +65,11 @@ function O(e) {
                 : I.rawValue,
         z = null != V ? V.split(',') : [],
         W = (0, a.Wu)([_.default], () => z.map((e) => _.default.getUser(e)).filter(Boolean)),
-        K = L && null != U ? x.intl.formatToPlainString(x.t['er/cHx'], { username: B }) : x.intl.formatToPlainString(x.t.noNjkZ, { username: F.nick }),
+        K = L && null != U ? y.intl.formatToPlainString(y.t['er/cHx'], { username: B }) : y.intl.formatToPlainString(y.t.noNjkZ, { username: F.nick }),
         Y = null != R && null != k,
         X = null;
-    (X = Y ? (L || H ? x.intl.format(x.t.CaLQqK, { channelHook: (e, t) => (0, r.jsx)(p.Z, { channel: null != k ? k : void 0 }, t) }) : x.intl.format(x.t.VugXpK, { channelHook: (e, t) => (0, r.jsx)(p.Z, { channel: null != k ? k : void 0 }, t) })) : x.intl.string(x.t['tHT/Vl'])), 0 === G.length && (X = L ? x.intl.string(x.t.IE2uZW) : x.intl.string(x.t.QVhmGx));
-    let q = L ? x.intl.string(x.t['00XIbm']) : x.intl.string(x.t['7CrE9/']);
+    (X = Y ? (L || H ? y.intl.format(y.t.CaLQqK, { channelHook: (e, t) => (0, r.jsx)(p.Z, { channel: null != k ? k : void 0 }, t) }) : y.intl.format(y.t.VugXpK, { channelHook: (e, t) => (0, r.jsx)(p.Z, { channel: null != k ? k : void 0 }, t) })) : y.intl.string(y.t['tHT/Vl'])), 0 === G.length && (X = L ? y.intl.string(y.t.IE2uZW) : y.intl.string(y.t.QVhmGx));
+    let q = L ? y.intl.string(y.t['00XIbm']) : y.intl.string(y.t['7CrE9/']);
     return (0, r.jsxs)('div', {
         children: [
             (0, r.jsxs)('div', {
@@ -120,7 +120,7 @@ function O(e) {
                     (0, r.jsxs)(o.zxk, {
                         color: o.zxk.Colors.BRAND,
                         onClick: () => {
-                            null != Z && null != w && ((0, f.uL)(y.Z5c.CHANNEL(w, Z)), c.default.selectVoiceChannel(Z));
+                            null != Z && null != w && ((0, f.uL)(E.Z5c.CHANNEL(w, Z)), c.default.selectVoiceChannel(Z));
                         },
                         className: v.button,
                         innerClassName: v.buttonInner,
@@ -130,7 +130,7 @@ function O(e) {
                                 size: 'md',
                                 color: 'currentColor'
                             }),
-                            x.intl.string(x.t.zIeJq6)
+                            y.intl.string(y.t.zIeJq6)
                         ]
                     }),
                     (0, r.jsx)(o.zxk, {

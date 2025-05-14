@@ -20,9 +20,9 @@ var r,
     g = n(112724),
     _ = n(812206),
     b = n(283595),
-    E = n(558314),
-    y = n(55563),
-    x = n(551428),
+    x = n(558314),
+    E = n(55563),
+    y = n(551428),
     v = n(73346),
     O = n(981631),
     j = n(388032),
@@ -204,17 +204,17 @@ class I extends (r = l.Component) {
     }
 }
 S(I, 'defaultProps', { renderFallback: O.dG4 });
-let N = [y.Z, E.Z, b.Z, x.Z];
+let N = [E.Z, x.Z, b.Z, y.Z];
 function T(e) {
     let { skuId: t } = e,
-        n = y.Z.get(t),
+        n = E.Z.get(t),
         r = null != n ? _.Z.getApplication(n.applicationId) : null;
     return {
         sku: n,
         application: r,
-        fetchFailed: y.Z.didFetchingSkuFail(t),
+        fetchFailed: E.Z.didFetchingSkuFail(t),
         inLibrary: null != n && b.Z.hasApplication(n.applicationId, n.applicationId, !0),
-        storeListing: null != n ? x.Z.getForSKU(n.id) : null,
+        storeListing: null != n ? y.Z.getForSKU(n.id) : null,
         libraryApplication: null != n ? b.Z.getLibraryApplication(n.applicationId, n.applicationId, !0) : null
     };
 }

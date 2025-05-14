@@ -18,7 +18,7 @@ function _(e) {
     let { guild: t, selected: n } = e,
         _ = (0, l.e7)([f.Z], () => f.Z.can(m.Plq.KICK_MEMBERS, t)),
         y = (0, l.e7)([u.Z], () => u.Z.getSubmittedGuildJoinRequestTotal(t.id)),
-        v = _ && null != y ? y : 0;
+        O = _ && null != y ? y : 0;
     i.useEffect(() => {
         _ &&
             t.hasFeature(m.oNc.MEMBER_VERIFICATION_GATE_ENABLED) &&
@@ -29,7 +29,7 @@ function _(e) {
                 limit: h.p
             });
     }, [_, t]);
-    let O = i.useCallback(() => {
+    let v = i.useCallback(() => {
             (0, g._X)(t.id);
         }, [t.id]),
         C = (0, a.XL)(t.id, o.z.MEMBERS_LAUNCH_UPSELL);
@@ -45,8 +45,8 @@ function _(e) {
                 }),
             text: b.intl.string(b.t.oclz3d),
             selected: n,
-            onClick: O,
-            trailing: v > 0 ? (0, r.jsx)(s.mAB, { count: v }) : null
+            onClick: v,
+            trailing: O > 0 ? (0, r.jsx)(s.mAB, { count: O }) : null
         })
     });
 }

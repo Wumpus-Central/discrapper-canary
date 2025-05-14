@@ -16,8 +16,8 @@ var r = n(255367),
     b = n(340541),
     _ = n(22082),
     y = n(665906),
-    v = n(592125),
-    O = n(430824),
+    O = n(592125),
+    v = n(430824),
     C = n(496675),
     S = n(306680),
     j = n(9156),
@@ -94,10 +94,10 @@ class k extends P.ZP {
               });
     }
     render() {
-        let { channel: e, guild: t, selected: n, muted: i, unread: l, hasActiveThreads: s, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: p, canReorderChannel: m, isSubscriptionGated: _, isFavoriteSuggestion: y, subtitle: v, forceTopLevelThread: O, embeddedApps: C, resolvedUnreadSetting: S, withGuildIcon: j, enableActivities: E } = this.props,
+        let { channel: e, guild: t, selected: n, muted: i, unread: l, hasActiveThreads: s, hasMoreActiveThreads: c, mentionCount: u, connectChannelDropTarget: d, connectChannelDragSource: h, connectDragPreview: p, canReorderChannel: m, isSubscriptionGated: _, isFavoriteSuggestion: y, subtitle: O, forceTopLevelThread: v, embeddedApps: C, resolvedUnreadSetting: S, withGuildIcon: j, enableActivities: E } = this.props,
             x = (0, b.jW)({ location: 'text_channel' }).entrypoints,
             P = E && null != C && C.length > 0,
-            I = (0, g.D)(v),
+            I = (0, g.D)(O),
             N = (0, r.jsx)('li', {
                 className: o()(this.getClassName(), {
                     [A.disabled]: this.isDisabled(),
@@ -130,7 +130,7 @@ class k extends P.ZP {
                             onContextMenu: this.handleContextMenu,
                             connectDragPreview: m ? p : null,
                             isFavoriteSuggestion: y,
-                            channelTypeOverride: O ? Z.d4z.GUILD_TEXT : void 0,
+                            channelTypeOverride: v ? Z.d4z.GUILD_TEXT : void 0,
                             resolvedUnreadSetting: S,
                             withGuildIcon: j,
                             'aria-label': (0, f.ZP)({
@@ -244,7 +244,7 @@ class k extends P.ZP {
                         let { default: e } = await n.e('86715').then(n.bind(n, 466676));
                         return (n) => (0, r.jsx)(e, L(D({}, n), { channel: t }));
                     });
-                let i = O.Z.getGuild(t.getGuildId());
+                let i = v.Z.getGuild(t.getGuildId());
                 null != i &&
                     (0, u.jW)(e, async () => {
                         let { default: e } = await Promise.all([n.e('79695'), n.e('18320'), n.e('44011')]).then(n.bind(n, 373651));
@@ -270,15 +270,15 @@ function U(e) {
             isLowImportanceMention: S.ZP.getIsMentionLowImportance(t.id)
         })),
         f = (0, s.e7)([j.ZP], () => j.ZP.resolveUnreadSetting(t)),
-        g = (0, s.cj)([v.Z, C.Z], () => {
-            let e = v.Z.getChannel(t.parent_id);
+        g = (0, s.cj)([O.Z, C.Z], () => {
+            let e = O.Z.getChannel(t.parent_id);
             return {
                 canManageChannel: C.Z.can(Z.Plq.MANAGE_CHANNELS, t),
                 canReorderChannel: !0 !== i && (n.id === T._ || (null != e ? C.Z.can(Z.Plq.MANAGE_CHANNELS, e) : C.Z.can(Z.Plq.MANAGE_CHANNELS, n)))
             };
         }),
         b = (0, s.e7)([_.Z], () => _.Z.shouldIndicateNewChannel(n.id, t.id)),
-        { needSubscriptionToAccess: O, isSubscriptionGated: x } = (0, m.Z)(t.id),
+        { needSubscriptionToAccess: v, isSubscriptionGated: x } = (0, m.Z)(t.id),
         P = (0, s.e7)([j.ZP], () => j.ZP.isFavorite(n.id, t.id)),
         w = (0, s.e7)(
             [E.default],
@@ -294,7 +294,7 @@ function U(e) {
             isChannelCollapsed: !1,
             isChannelSelected: a,
             isSubscriptionGated: x,
-            needSubscriptionToAccess: O,
+            needSubscriptionToAccess: v,
             isNewChannel: b,
             muted: o,
             enableActivities: N,
@@ -307,7 +307,7 @@ function U(e) {
             hasActiveThreads: c,
             hasMoreActiveThreads: u,
             isSubscriptionGated: x,
-            needSubscriptionToAccess: O,
+            needSubscriptionToAccess: v,
             isNewChannel: b && e.canBeNewChannel,
             isFavoriteSuggestion: l && !P,
             canShowThreadPreviewForUser: w,

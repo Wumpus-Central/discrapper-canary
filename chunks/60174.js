@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(931651),
     _ = n(594174),
     b = n(630388),
-    E = n(74538),
-    y = n(566006),
-    x = n(981631),
+    x = n(74538),
+    E = n(566006),
+    y = n(981631),
     v = n(185923),
     O = n(474936),
     j = n(388032),
@@ -56,11 +56,11 @@ class T extends i.Component {
     render() {
         let { type: e, message: t, className: n, children: i, useChatFontScaling: l, tabIndex: o = 0 } = this.props,
             { isReactionPickerActive: s } = this.state,
-            c = t.state === x.yb.SENDING,
-            m = e === y.O.BURST;
-        if (c || (0, b.yE)(t.flags, x.iLy.EPHEMERAL)) return null;
+            c = t.state === y.yb.SENDING,
+            m = e === E.O.BURST;
+        if (c || (0, b.yE)(t.flags, y.iLy.EPHEMERAL)) return null;
         let f = _.default.getCurrentUser(),
-            h = (0, E.I5)(f),
+            h = (0, x.I5)(f),
             g = m ? j.intl.string(j.t.Kfcszs) : j.intl.string(j.t.lfIHs7);
         !h && m && (g = (0, r.jsx)(p.X, { tooltipText: j.intl.string(j.t.Kfcszs) }));
         let O = l ? S : C,
@@ -132,14 +132,14 @@ class T extends i.Component {
                 let { type: t, channel: n } = this.props;
                 e.stopPropagation();
                 let r = _.default.getCurrentUser();
-                t !== y.O.BURST ||
-                    (0, E.I5)(r) ||
+                t !== E.O.BURST ||
+                    (0, x.I5)(r) ||
                     (0, m.m)({
                         analytics: {
                             type: O.cd.BURST_REACTION_UPSELL,
-                            page: null != n.getGuildId() ? x.ZY5.GUILD_CHANNEL : x.ZY5.DM_CHANNEL,
+                            page: null != n.getGuildId() ? y.ZY5.GUILD_CHANNEL : y.ZY5.DM_CHANNEL,
                             section: (0, h.s4)(n),
-                            object: x.qAy.INLINE_REACTION_PICKER_UPSELL
+                            object: y.qAy.INLINE_REACTION_PICKER_UPSELL
                         }
                     }),
                     this.handleReactionPickerToggle();
@@ -149,11 +149,11 @@ class T extends i.Component {
                     { type: n, channel: i, message: l } = this.props,
                     a = N(
                         { openPopoutType: 'message_reaction_emoji_picker' },
-                        n === y.O.BURST && {
+                        n === E.O.BURST && {
                             openPopoutType: 'message_super_reaction_emoji_picker',
-                            page: null != i.getGuildId() ? x.ZY5.GUILD_CHANNEL : x.ZY5.DM_CHANNEL,
+                            page: null != i.getGuildId() ? y.ZY5.GUILD_CHANNEL : y.ZY5.DM_CHANNEL,
                             section: (0, h.s4)(i),
-                            object: x.qAy.REACTION_RAIL
+                            object: y.qAy.REACTION_RAIL
                         }
                     ),
                     o = (0, r.jsx)(g.$, {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685), n(539854);
+n.d(t, { Z: () => O }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -124,13 +124,13 @@ function y(e) {
         })
     );
 }
-function v(e) {
+function O(e) {
     let { onActivate: t } = e,
-        [n, v] = i.useState(!1),
-        O = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
+        [n, O] = i.useState(!1),
+        v = (0, l.e7)([d.Z], () => d.Z.getGuildId()),
         C = (0, l.e7)([u.Z], () => u.Z.hasFetchedRequestToJoinGuilds),
         S = (0, f.Z)(),
-        j = (0, s.Z)(O),
+        j = (0, s.Z)(v),
         E = i.useMemo(() => {
             let e = (0, p.qQ)({
                 folderId: h.S.PENDING_JOIN_REQUESTS_FOLDER,
@@ -144,10 +144,10 @@ function v(e) {
     i.useEffect(() => {
         n && !C && a.Z.fetchRequestToJoinGuilds();
     }, [n, C]);
-    let x = null != O && S.includes(O);
+    let x = null != v && S.includes(v);
     return (i.useEffect(() => {
-        !n && x && j !== O && v(!0);
-    }, [n, x, j, O]),
+        !n && x && j !== v && O(!0);
+    }, [n, x, j, v]),
     0 === S.length)
         ? null
         : (0, r.jsx)(y, {
@@ -159,7 +159,7 @@ function v(e) {
                   draggable: !1,
                   sorting: !1,
                   onExpandCollapse: () => {
-                      v(!n), c.ZP.clearCoachmark();
+                      O(!n), c.ZP.clearCoachmark();
                   },
                   folderButtonSize: 'icon',
                   folderButtonContent: (0, r.jsx)('div', {

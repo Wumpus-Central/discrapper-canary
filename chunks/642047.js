@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a }), n(388685);
+n.d(t, { Z: () => o }), n(388685);
 var r = n(251625);
 function i(e, t, n) {
     return (
@@ -13,7 +13,7 @@ function i(e, t, n) {
         e
     );
 }
-class a {
+class o {
     keys() {
         return this.cachedKeys(this.version);
     }

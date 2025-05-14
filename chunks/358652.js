@@ -1,4 +1,4 @@
-n.d(t, { Z: () => v }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r,
     i,
     l,
@@ -41,7 +41,7 @@ class y extends (r = o.ZP.Store) {
               writable: !0
           })
         : (y[i] = l);
-let v = new y(s.Z, {
+let O = new y(s.Z, {
     CONNECTION_OPEN: b,
     OVERLAY_INITIALIZE: b,
     MESSAGE_CREATE: _,

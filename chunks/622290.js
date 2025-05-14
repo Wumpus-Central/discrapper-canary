@@ -3,7 +3,7 @@ e.exports = function (e) {
         n = /(?:(?:[a-zA-Z]|\.[._a-zA-Z])[._a-zA-Z0-9]*)|\.(?!\d)/,
         r = t.either(/0[xX][0-9a-fA-F]+\.[0-9a-fA-F]*[pP][+-]?\d+i?/, /0[xX][0-9a-fA-F]+(?:[pP][+-]?\d+)?[Li]?/, /(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?[Li]?/),
         i = /[=!<>:]=|\|\||&&|:::?|<-|<<-|->>|->|\|>|[-+*\/?!$&|:<=>@^~]|\*\*/,
-        a = t.either(/[()]/, /[{}]/, /\[\[/, /[[\]]/, /\\/, /,/);
+        o = t.either(/[()]/, /[{}]/, /\[\[/, /[[\]]/, /\\/, /,/);
     return {
         name: 'R',
         keywords: {
@@ -108,7 +108,7 @@ e.exports = function (e) {
                             1: 'punctuation',
                             2: 'number'
                         },
-                        match: [a, r]
+                        match: [o, r]
                     },
                     {
                         scope: { 2: 'number' },
@@ -128,7 +128,7 @@ e.exports = function (e) {
             {
                 scope: 'punctuation',
                 relevance: 0,
-                match: a
+                match: o
             },
             {
                 begin: '`',

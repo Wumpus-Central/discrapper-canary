@@ -1,17 +1,17 @@
 n.d(t, {
-    CZ: () => o,
+    CZ: () => a,
     LB: () => l,
     O5: () => s,
-    YC: () => a
+    YC: () => o
 }),
     n(388685),
     n(539854);
 var r = n(433517),
     i = n(388032),
-    a = (function (e) {
+    o = (function (e) {
         return (e.CLASSIC = 'classic'), (e.RETRO = 'retro'), (e.BUBBLE = 'bop'), (e.DUCKY = 'ducky'), (e.LOFI = 'lofi'), (e.ASMR = 'asmr'), (e.DISCODO = 'discodo'), (e.HALLOWEEN = 'halloween'), (e.WINTER_HOLIDAY = 'winter_holiday'), e;
     })({});
-let o = 'custom_notification_sounds_asmr',
+let a = 'custom_notification_sounds_asmr',
     s = 'custom_notification_sounds_discodo';
 function l() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
@@ -61,7 +61,7 @@ function c(e) {
                 description: '๑(\u25D5‿\u25D5)๑',
                 requirePremium: !0
             }),
-        r.K.get(o, !1) &&
+        r.K.get(a, !1) &&
             t.push({
                 value: 'asmr',
                 label: i.intl.string(i.t['3SJZKC']),

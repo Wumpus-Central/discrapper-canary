@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E });
+n.d(t, { Z: () => x });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -15,11 +15,11 @@ var r = n(255367),
     g = n(981631),
     _ = n(388032),
     b = n(273254);
-function E(e) {
+function x(e) {
     var t;
-    let { invite: n, message: E, getAcceptInviteContext: y } = e,
-        x = (0, l.e7)([p.default], () => p.default.getId()),
-        v = (null == (t = n.inviter) ? void 0 : t.id) === x,
+    let { invite: n, message: x, getAcceptInviteContext: E } = e,
+        y = (0, l.e7)([p.default], () => p.default.getId()),
+        v = (null == (t = n.inviter) ? void 0 : t.id) === y,
         O = n.state === g.r2o.ACCEPTING,
         { analyticsLocations: j } = (0, c.ZP)(s.Z.INVITE_EMBED),
         C = (0, l.e7)([f.Z], () => {
@@ -33,28 +33,28 @@ function E(e) {
                     {
                         invite: n,
                         action: e,
-                        inviter_id: E.author.id,
-                        invite_message_id: E.id
+                        inviter_id: x.author.id,
+                        invite_message_id: x.id
                     },
                     j
                 );
-        }, [n, E, j]),
+        }, [n, x, j]),
         I = i.useCallback(() => {
             (0, o.r$)(
                 {
                     invite: n,
                     action: 'accept',
-                    inviter_id: E.author.id,
-                    invite_message_id: E.id
+                    inviter_id: x.author.id,
+                    invite_message_id: x.id
                 },
                 j
             );
-            let e = y('Invite Button Embed');
+            let e = E('Invite Button Embed');
             o.ZP.acceptInviteAndTransitionToInviteChannel({
                 inviteKey: n.code,
                 context: e
             });
-        }, [n, E, j, y]);
+        }, [n, x, j, E]);
     if (null == n.inviter) return null;
     let N = C ? S : I,
         T = _.intl.string(_.t.ib7Ng4),

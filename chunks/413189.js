@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(151480),
     _ = n(680783),
     b = n(66420),
-    E = n(981631),
-    y = n(474936),
-    x = n(388032),
+    x = n(981631),
+    E = n(474936),
+    y = n(388032),
     v = n(510064);
 function O(e) {
     var t, n, O, j;
@@ -43,7 +43,7 @@ function O(e) {
         F = M === N.id,
         B = (0, l.e7)([d.default], () => d.default.getCurrentUser()),
         G = (null == B ? void 0 : B.id) === N.author.id,
-        H = (0, c.m)(y.p9.TIER_2),
+        H = (0, c.m)(E.p9.TIER_2),
         V = h.t(T);
     return (i.useEffect(() => {
         null == D && f.Z.shouldFetchWallpapers && g.k9();
@@ -51,25 +51,25 @@ function O(e) {
     null == A)
         ? null
         : ((C = G
-              ? x.intl.format(x.t.z847Tk, { wallpaper_name: null != (n = null == D ? void 0 : D.label) ? n : x.intl.string(x.t['UQMV/P']) })
-              : x.intl.format(x.t['+lKndX'], {
+              ? y.intl.format(y.t.z847Tk, { wallpaper_name: null != (n = null == D ? void 0 : D.label) ? n : y.intl.string(y.t['UQMV/P']) })
+              : y.intl.format(y.t['+lKndX'], {
                     username: null == R ? void 0 : R.nick,
-                    wallpaper_name: null != (O = null == D ? void 0 : D.label) ? O : x.intl.string(x.t['UQMV/P'])
+                    wallpaper_name: null != (O = null == D ? void 0 : D.label) ? O : y.intl.string(y.t['UQMV/P'])
                 })),
           w
               ? k || Z
                   ? V && F
-                      ? (S = x.intl.formatToPlainString(x.t.PzTpVV, { wallpaperName: null != (j = null == D ? void 0 : D.label) ? j : x.intl.string(x.t['UQMV/P']) }))
+                      ? (S = y.intl.formatToPlainString(y.t.PzTpVV, { wallpaperName: null != (j = null == D ? void 0 : D.label) ? j : y.intl.string(y.t['UQMV/P']) }))
                       : G ||
                         H ||
                         !F ||
-                        (S = x.intl.format(x.t.JwUhHh, {
+                        (S = y.intl.format(y.t.JwUhHh, {
                             onClickNitro: () => {
-                                (0, u.uL)(E.Z5c.NITRO_HOME);
+                                (0, u.uL)(x.Z5c.NITRO_HOME);
                             }
                         }))
-                  : (S = x.intl.format(x.t.dBxFsL, { learnMoreLink: p.Z.getArticleURL(E.BhN.DM_WALLPAPERS) }))
-              : (S = x.intl.string(x.t['6JSOu7'])),
+                  : (S = y.intl.format(y.t.dBxFsL, { learnMoreLink: p.Z.getArticleURL(x.BhN.DM_WALLPAPERS) }))
+              : (S = y.intl.string(y.t['6JSOu7'])),
           (null == U ? void 0 : U.isViewable) &&
               F &&
               !G &&
@@ -79,12 +79,12 @@ function O(e) {
                       g.X(T, A, {
                           shouldClear: !V,
                           onError: () => {
-                              (0, a.showToast)((0, a.createToast)(x.intl.string(x.t.F8FvU1), a.ToastType.FAILURE));
+                              (0, a.showToast)((0, a.createToast)(y.intl.string(y.t.F8FvU1), a.ToastType.FAILURE));
                           }
                       });
                   },
                   submitting: L,
-                  children: x.intl.string(V ? x.t.o6850d : x.t['/ubFp6'])
+                  children: y.intl.string(V ? y.t.o6850d : y.t['/ubFp6'])
               })),
           (0, r.jsx)(b.Z, {
               channel: T,

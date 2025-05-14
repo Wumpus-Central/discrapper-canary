@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(661824),
     _ = n(430824),
     b = n(626135),
-    E = n(76535),
-    y = n(866104),
-    x = n(886176),
+    x = n(76535),
+    E = n(866104),
+    y = n(886176),
     v = n(981631),
     O = n(388032),
     j = n(24665);
@@ -25,7 +25,7 @@ function C(e) {
     var t;
     let { guildId: n } = e,
         l = (0, c.e7)([_.Z], () => _.Z.getGuild(n)),
-        { loading: C, subscriptionsSettings: S } = (0, E.H)(n),
+        { loading: C, subscriptionsSettings: S } = (0, x.H)(n),
         { listingsLoaded: I } = (0, f.eD)(n),
         N = (0, f.ue)(n, { publishedOnly: !0 }),
         T = i.useCallback(async () => {
@@ -77,12 +77,12 @@ function C(e) {
           : (0, r.jsxs)('div', {
                 className: j.guildShopEmbed,
                 children: [
-                    (0, r.jsx)(y.Z, { coverImageAsset: null != (t = S.cover_image_asset) ? t : null }),
+                    (0, r.jsx)(E.Z, { coverImageAsset: null != (t = S.cover_image_asset) ? t : null }),
                     (0, r.jsx)(u.LZC, { size: 16 }),
                     (0, r.jsxs)('div', {
                         className: j.serverShopLabel,
                         children: [
-                            (0, r.jsx)(x.Z, {
+                            (0, r.jsx)(y.Z, {
                                 height: '16px',
                                 width: '16px',
                                 color: s.Z.INTERACTIVE_NORMAL
@@ -141,7 +141,7 @@ function C(e) {
                                 children: (0, r.jsxs)('div', {
                                     className: j.guildShopEmbedCtaContent,
                                     children: [
-                                        (0, r.jsx)(x.Z, {
+                                        (0, r.jsx)(y.Z, {
                                             height: '18px',
                                             width: '18px'
                                         }),

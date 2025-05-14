@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(695346),
     _ = n(314897),
     b = n(496675),
-    E = n(594174),
-    y = n(55935),
-    x = n(655354),
+    x = n(594174),
+    E = n(55935),
+    y = n(655354),
     v = n(809780),
     O = n(981631),
     j = n(388032),
@@ -77,7 +77,7 @@ function I(e) {
             (l = l =
                 {
                     children: [
-                        (0, r.jsx)(x.Z, {
+                        (0, r.jsx)(y.Z, {
                             className: C.jumpButton,
                             onJump: (e) => m(e, s.id)
                         }),
@@ -115,12 +115,12 @@ function N(e) {
     var t, n;
     let { channel: i, channelRecord: l, gotoChannel: o } = e,
         { enabled: h } = u.Z.useExperiment({ location: '20e3b0_1' }, { autoTrackExposure: !1 }),
-        x = g.jU.useSetting(),
+        y = g.jU.useSetting(),
         S = (0, s.e7)([b.Z], () => b.Z.can(O.Plq.CREATE_INSTANT_INVITE, l)),
         N = (0, m.P1)(l),
         T = !1,
         P = 0 === i.messages.length || a()(i.messages[0].timestamp).isSame(a()(), 'day'),
-        A = null != (n = null == (t = E.default.getUser(_.default.getId())) ? void 0 : t.hasFlag(O.xW$.SPAMMER)) && n,
+        A = null != (n = null == (t = x.default.getUser(_.default.getId())) ? void 0 : t.hasFlag(O.xW$.SPAMMER)) && n,
         w = [];
     if (!i.collapsed) {
         let e = null,
@@ -129,7 +129,7 @@ function N(e) {
         n.forEach((n) => {
             if (!(0, d.Z)(n, S)) {
                 if (!P && (null == e || !e.isSame(n.timestamp, 'day'))) {
-                    let t = (0, y.vc)(n.timestamp, 'LL');
+                    let t = (0, E.vc)(n.timestamp, 'LL');
                     w.push(
                         (0, r.jsx)(
                             f.Z,
@@ -151,7 +151,7 @@ function N(e) {
                             {
                                 channel: l,
                                 message: n,
-                                compact: x,
+                                compact: y,
                                 isGroupStart: i,
                                 treatSpam: !A && h && (0, m.DQ)(n) && N,
                                 gotoChannel: o

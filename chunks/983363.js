@@ -1,8 +1,8 @@
 var r = n(98405),
     i = n(127849),
-    a = n(390827).set,
-    o = n(781638),
-    s = i.setImmediate ? o(a, !1) : a;
+    o = n(390827).set,
+    a = n(781638),
+    s = i.setImmediate ? a(o, !1) : o;
 r(
     {
         global: !0,

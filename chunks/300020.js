@@ -1,7 +1,7 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(616922),
     i = n(388032);
-function a(e, t) {
+function o(e, t) {
     switch (t) {
         case r.kG.USER_ACTIVITY_PLAY:
             return e.hasSpotifyAccount ? i.intl.formatToPlainString(i.t.LEgD7u, { platform: r.ai }) : i.intl.formatToPlainString(i.t.XWSHTU, { platform: r.ai });

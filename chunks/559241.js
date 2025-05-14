@@ -1,4 +1,4 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(592125);
 function i(e, t, n) {
     return (
@@ -13,7 +13,7 @@ function i(e, t, n) {
         e
     );
 }
-class a {
+class o {
     constructor() {
         i(this, 'filterTagIds', void 0),
             i(this, 'sortOrder', void 0),
@@ -46,4 +46,4 @@ class a {
             });
     }
 }
-let o = new a();
+let a = new o();

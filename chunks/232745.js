@@ -4,7 +4,7 @@ e.exports = function (e) {
         r = ['abs', 'abbr_class', 'abbr_method', 'batch', 'capitalize', 'column', 'convert_encoding', 'country_name', 'currency_name', 'currency_symbol', 'data_uri', 'date', 'date_modify', 'default', 'escape', 'file_excerpt', 'file_link', 'file_relative', 'filter', 'first', 'format', 'format_args', 'format_args_as_text', 'format_currency', 'format_date', 'format_datetime', 'format_file', 'format_file_from_text', 'format_number', 'format_time', 'html_to_markdown', 'humanize', 'inky_to_html', 'inline_css', 'join', 'json_encode', 'keys', 'language_name', 'last', 'length', 'locale_name', 'lower', 'map', 'markdown', 'markdown_to_html', 'merge', 'nl2br', 'number_format', 'raw', 'reduce', 'replace', 'reverse', 'round', 'slice', 'slug', 'sort', 'spaceless', 'split', 'striptags', 'timezone_name', 'title', 'trans', 'transchoice', 'trim', 'u|0', 'upper', 'url_encode', 'yaml_dump', 'yaml_encode'],
         i = ['apply', 'autoescape', 'block', 'cache', 'deprecated', 'do', 'embed', 'extends', 'filter', 'flush', 'for', 'form_theme', 'from', 'if', 'import', 'include', 'macro', 'sandbox', 'set', 'stopwatch', 'trans', 'trans_default_domain', 'transchoice', 'use', 'verbatim', 'with'];
     i = i.concat(i.map((e) => `end${e}`));
-    let a = {
+    let o = {
             scope: 'string',
             variants: [
                 {
@@ -17,7 +17,7 @@ e.exports = function (e) {
                 }
             ]
         },
-        o = {
+        a = {
             scope: 'number',
             match: /\d+/
         },
@@ -26,7 +26,7 @@ e.exports = function (e) {
             end: /\)/,
             excludeBegin: !0,
             excludeEnd: !0,
-            contains: [a, o]
+            contains: [o, a]
         },
         l = {
             beginKeywords: n.join(' '),
@@ -55,7 +55,7 @@ e.exports = function (e) {
             begin: [/\{%/, /\s*/, t.either(...e)],
             end: /%\}/,
             keywords: 'in',
-            contains: [c, l, a, o]
+            contains: [c, l, o, a]
         }),
         d = /[a-z_]+/,
         f = u(i, { relevance: 2 }),
@@ -73,7 +73,7 @@ e.exports = function (e) {
                 className: 'template-variable',
                 begin: /\{\{/,
                 end: /\}\}/,
-                contains: ['self', c, l, a, o]
+                contains: ['self', c, l, o, a]
             }
         ]
     };
