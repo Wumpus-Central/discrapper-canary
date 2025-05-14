@@ -3,8 +3,8 @@ r.d(t, {
     z: () => d
 });
 var n = r(255367),
-    i = r(598117),
-    l = r(981631),
+    l = r(598117),
+    i = r(981631),
     a = r(185923),
     o = r(388032),
     s = r(632261);
@@ -17,27 +17,27 @@ let c = (e) => {
     },
     u = (e) => {
         switch (e) {
-            case l.evJ.TOO_MANY_EMOJI:
+            case i.evJ.TOO_MANY_EMOJI:
                 return o.intl.string(o.t['jP/Rqq']);
-            case l.evJ.TOO_MANY_ANIMATED_EMOJI:
+            case i.evJ.TOO_MANY_ANIMATED_EMOJI:
                 return o.intl.string(o.t['6v5dPz']);
-            case i.ze.TOO_BIG:
-            case l.evJ.INVALID_FILE_ASSET_SIZE:
-            case l.evJ.INVALID_FORM_BODY:
+            case l.ze.TOO_BIG:
+            case i.evJ.INVALID_FILE_ASSET_SIZE:
+            case i.evJ.INVALID_FORM_BODY:
                 return o.intl.formatToPlainString(o.t.kIO9j4, { maxSize: a.xG });
-            case l.evJ.INVALID_FILE_ASSET_SIZE_RESIZE_GIF:
+            case i.evJ.INVALID_FILE_ASSET_SIZE_RESIZE_GIF:
                 return o.intl.string(o.t.sp16MT);
-            case i.ze.MISSING_IMAGE_DATA:
+            case l.ze.MISSING_IMAGE_DATA:
                 return o.intl.string(o.t['41/Kbm']);
-            case i.ze.MISSING_GUILD:
+            case l.ze.MISSING_GUILD:
                 return o.intl.string(o.t['8RCtpK']);
-            case i.ze.GIF_CROPPING:
+            case l.ze.GIF_CROPPING:
                 return o.intl.string(o.t.X6rtiI);
-            case i.ze.IMAGE_LOAD:
+            case l.ze.IMAGE_LOAD:
                 return o.intl.string(o.t['+ITMYW']);
             case 429:
                 return o.intl.string(o.t['4rjikp']);
-            case i.ze.UNKNOWN:
+            case l.ze.UNKNOWN:
             default:
                 return o.intl.string(o.t.iufib2);
         }
@@ -56,5 +56,5 @@ let c = (e) => {
                     if (!Number.isNaN(e)) return e;
                 }
             } catch (e) {}
-        return i.ze.UNKNOWN;
+        return l.ze.UNKNOWN;
     };

@@ -317,7 +317,8 @@ function ep(e) {
     Y.set(n, {
         isFetching: !0,
         lastFetchTimestampMs: null == r ? void 0 : r.lastFetchTimestampMs
-    });
+    }),
+        (D.lastCheckedForBadgeableActivities = new Date(Date.now()).toISOString());
 }
 function eh(e) {
     let { guildId: t } = e,
@@ -354,8 +355,7 @@ function em(e) {
                 r.omit_badge_from_surfaces.includes(e) || D.surfacesToShowNewActivityIndicator.add(e);
             }),
             (D.seenUpdatedActivities[t] = r.label_until));
-    }),
-        (D.lastCheckedForBadgeableActivities = new Date(n).toISOString());
+    });
 }
 function eg(e) {
     let { guildId: t, activities: n } = e,

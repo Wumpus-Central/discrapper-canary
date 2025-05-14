@@ -87,27 +87,28 @@ function C(e) {
         }, [n]),
         F = (null == t ? void 0 : t.bot) === !0;
     if ((0, c.e7)([h.Z], () => h.Z.isBlockedOrIgnored(null == t ? void 0 : t.id))) return null;
-    let V = (null == G ? void 0 : G.state) != null,
-        Z = null != j,
-        H = !Z && null != A,
-        Y = B.length + (Z || H ? 1 : 0),
-        W = Y > 1,
-        K = M || !L,
-        z = () =>
+    let V = U && null != G ? (0, _.Z)(G) : null,
+        Z = (null == G ? void 0 : G.state) != null || null != V,
+        H = null != j,
+        Y = !H && null != A,
+        W = B.length + (H || Y ? 1 : 0),
+        K = W > 1,
+        z = M || !L,
+        q = () =>
             (0, r.jsx)(l.xv, {
                 variant: 'text-'.concat(R, '/normal'),
                 className: a()(T.dot, C),
                 children: I.l
             }),
-        q = () => {
+        Q = () => {
             let e = [],
                 t = {
                     textVariant: 'text-'.concat(R, '/medium'),
                     textClassName: C,
                     iconClassName: P,
-                    hideTooltip: K,
+                    hideTooltip: z,
                     hideIcon: F,
-                    hideText: V,
+                    hideText: Z,
                     canTruncate: !1
                 };
             return (
@@ -127,15 +128,15 @@ function C(e) {
                 B.forEach((n) => {
                     e.push((0, r.jsx)(y.Z, N({ activity: n }, t)));
                 }),
-                H && e.push((0, r.jsx)(v.Z, N({ channel: A }, t))),
+                Y && e.push((0, r.jsx)(v.Z, N({ channel: A }, t))),
                 e
             );
         },
-        Q = () => {
-            let e = q();
+        X = () => {
+            let e = Q();
             return 0 === e.length
                 ? null
-                : W && V && !F
+                : K && Z && !F
                   ? (0, r.jsxs)(r.Fragment, {
                         children: [
                             e[0],
@@ -143,68 +144,67 @@ function C(e) {
                                 variant: 'text-'.concat(R, '/medium'),
                                 className: C,
                                 color: 'text-positive',
-                                children: ['(+', Y - 1, ')']
+                                children: ['(+', W - 1, ')']
                             })
                         ]
                     })
-                  : W && !F
+                  : K && !F
                     ? e.map((e, t) =>
                           (0, r.jsxs)(
                               i.Fragment,
                               {
-                                  children: [0 !== t && z(), e]
+                                  children: [0 !== t && q(), e]
                               },
                               t
                           )
                       )
                     : e[0];
         },
-        X = () => {
+        J = () => {
             if (null == G) return null;
             let e = G.emoji,
                 t = G.state,
-                n = U ? (0, _.Z)(G) : null,
-                i = null != n ? (0, p.Z)(n) : null;
+                n = null != V ? (0, p.Z)(V) : null;
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    null != i &&
+                    null != n &&
                         (0, r.jsx)(l.xv, {
                             variant: 'text-'.concat(R, '/medium'),
                             className: a()(C, T.customStatusLabel),
                             color: 'none',
-                            children: ''.concat(i, ': ')
+                            children: ''.concat(n, ': ')
                         }),
                     null != e &&
                         !k &&
                         (0, r.jsx)(m.Z, {
                             emoji: e,
                             animate: w,
-                            hideTooltip: K,
+                            hideTooltip: z,
                             className: P
                         }),
                     null != t &&
                         (0, r.jsx)(E.Z, {
                             variant: 'text-'.concat(R, '/medium'),
                             className: C,
-                            hideTooltip: K,
+                            hideTooltip: z,
                             canTruncate: !1,
                             children: t
                         })
                 ]
             });
         },
-        J = () =>
+        $ = () =>
             (0, r.jsxs)('div', {
                 className: a()(T.container, {
                     [T.textXs]: 'xs' === R,
                     [T.textSm]: 'sm' === R
                 }),
-                children: [Q(), null != G && Y > 0 && z(), X(), x && (0, r.jsx)(g.Z, {})]
+                children: [X(), null != G && W > 0 && q(), J(), x && (0, r.jsx)(g.Z, {})]
             });
     return L
-        ? J()
+        ? $()
         : (0, r.jsx)(O.Z, {
               shouldAnimate: D,
-              children: J()
+              children: $()
           });
 }

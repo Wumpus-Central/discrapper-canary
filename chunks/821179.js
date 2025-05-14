@@ -4,21 +4,22 @@ r(73800);
 var i = r(780384),
     l = r(481060),
     a = r(239091),
-    o = r(410030),
-    s = r(44315),
-    c = r(565138),
-    u = r(5192),
-    d = r(228168),
+    s = r(410030),
+    o = r(44315),
+    c = r(111028),
+    u = r(565138),
+    d = r(5192),
+    m = r(228168),
     b = r(981631),
-    m = r(69647);
-let p = (0, l.pxk)(l.EFr.SIZE_16);
+    p = r(69647);
+let j = (0, l.pxk)(l.EFr.SIZE_16);
 function f(e) {
-    let { user: t, guild: f, nick: j, onSelect: v } = e,
-        x = (0, o.ZP)(),
+    let { user: t, guild: f, nick: x, onSelect: v } = e,
+        y = (0, s.ZP)(),
         O = t.hasAvatarForGuild(f.id);
     return (0, n.jsxs)(l.P3F, {
         focusProps: { offset: { right: 8 } },
-        className: m.row,
+        className: p.row,
         onClick: v,
         onContextMenu: (e) => {
             (0, a.jW)(e, async () => {
@@ -71,42 +72,51 @@ function f(e) {
             });
         },
         children: [
-            (0, n.jsx)(c.Z, {
+            (0, n.jsx)(u.Z, {
                 tabIndex: -1,
                 guild: f,
                 showBadge: !0,
-                className: null != f.icon ? m.icon : m.noIcon,
-                badgeStrokeColor: (0, s.Lq)((0, i.wj)(x) ? b.Ilk.PRIMARY_600 : b.Ilk.WHITE_500),
+                className: null != f.icon ? p.icon : p.noIcon,
+                badgeStrokeColor: (0, o.Lq)((0, i.wj)(y) ? b.Ilk.PRIMARY_600 : b.Ilk.WHITE_500),
                 badgeTooltipColor: l.FGA.PRIMARY,
-                badgeTooltipDelay: d.vB,
-                size: c.Z.Sizes.MEDIUM,
+                badgeTooltipDelay: m.vB,
+                size: u.Z.Sizes.MEDIUM,
                 active: !0
             }),
             (0, n.jsxs)('div', {
-                className: m.details,
+                className: p.details,
                 children: [
                     (0, n.jsx)('div', {
-                        className: m.name,
+                        className: p.name,
                         children: f.toString()
                     }),
                     O &&
                         (0, n.jsxs)('div', {
-                            className: m.nick,
+                            className: p.nick,
                             children: [
                                 (0, n.jsx)(l.qEK, {
-                                    src: t.getAvatarURL(f.id, p),
+                                    src: t.getAvatarURL(f.id, j),
                                     size: l.EFr.SIZE_16,
-                                    className: m.avatar,
+                                    className: p.avatar,
                                     'aria-hidden': !0
                                 }),
-                                null != j ? j : u.ZP.getName(f.id, void 0, t)
+                                (0, n.jsx)(l.Text, {
+                                    variant: 'text-xs/medium',
+                                    children: (0, n.jsx)(c.Z, {
+                                        delay: m.vB,
+                                        children: null != x ? x : d.ZP.getName(f.id, void 0, t)
+                                    })
+                                })
                             ]
                         }),
                     !O &&
-                        null != j &&
-                        (0, n.jsx)('div', {
-                            className: m.nick,
-                            children: j
+                        null != x &&
+                        (0, n.jsx)(l.Text, {
+                            variant: 'text-xs/medium',
+                            children: (0, n.jsx)(c.Z, {
+                                delay: m.vB,
+                                children: x
+                            })
                         })
                 ]
             })

@@ -1,30 +1,30 @@
-r.d(t, { Z: () => y });
+r.d(t, { Z: () => O });
 var n = r(255367),
     i = r(73800),
     l = r(442837),
     a = r(481060),
-    o = r(239091),
-    s = r(129861),
+    s = r(239091),
+    o = r(129861),
     c = r(138182),
     u = r(956221),
     d = r(747017),
-    b = r(140701),
-    m = r(545957),
+    m = r(140701),
+    b = r(545957),
     p = r(158776),
-    f = r(652853),
-    j = r(981631),
-    v = r(968823);
-let x = a.EFr.SIZE_40,
-    O = (0, a.pxk)(x);
-function y(e) {
-    let { user: t, status: y, guildId: h, channelId: g, onSelect: P } = e,
-        { theme: w } = (0, f.z)(),
-        N = i.useMemo(() => t.isNonUserBot() || (0, b.W)(t, g), [t, g]),
-        { activities: Z, isMobileOnline: S } = (0, l.cj)([p.Z], () => ({
+    j = r(652853),
+    f = r(981631),
+    x = r(968823);
+let v = a.EFr.SIZE_40,
+    y = (0, a.pxk)(v);
+function O(e) {
+    let { user: t, status: O, guildId: h, channelId: g, onSelect: P } = e,
+        { theme: w } = (0, j.z)(),
+        Z = i.useMemo(() => t.isNonUserBot() || (0, m.W)(t, g), [t, g]),
+        { activities: N, isMobileOnline: S } = (0, l.cj)([p.Z], () => ({
             activities: p.Z.getActivities(t.id),
             isMobileOnline: p.Z.isMobileOnline(t.id)
         })),
-        k = (0, m.Z)(t.id),
+        k = (0, b.Z)(t.id),
         { voiceActivityStatusEnabled: C } = (0, c.a)({ location: 'UserProfileMutualFriendRow' }),
         { voiceChannel: E } = (0, u.Z)({
             userId: C ? t.id : void 0,
@@ -32,10 +32,10 @@ function y(e) {
         });
     return (0, n.jsxs)(a.P3F, {
         focusProps: { offset: { right: 8 } },
-        className: v.row,
+        className: x.row,
         onClick: P,
         onContextMenu: (e) => {
-            (0, o.jW)(e, async () => {
+            (0, s.jW)(e, async () => {
                 let { default: e } = await Promise.all([r.e('79695'), r.e('69220'), r.e('70686')]).then(r.bind(r, 881351));
                 return (r) => {
                     var i, l;
@@ -86,25 +86,25 @@ function y(e) {
         },
         children: [
             (0, n.jsx)(a.qEK, {
-                src: t.getAvatarURL(h, O),
+                src: t.getAvatarURL(h, y),
                 'aria-label': t.username,
-                size: x,
-                status: N ? j.Skl.UNKNOWN : y,
-                statusBackdropColor: N ? void 0 : (0, a.QFD)(w),
+                size: v,
+                status: Z ? f.Skl.UNKNOWN : O,
+                statusBackdropColor: Z ? void 0 : (0, a.QFD)(w),
                 isMobile: S,
-                className: v.avatar
+                className: x.avatar
             }),
             (0, n.jsxs)('div', {
-                className: v.details,
+                className: x.details,
                 children: [
-                    (0, n.jsx)(s.Z, {
+                    (0, n.jsx)(o.Z, {
                         user: t,
-                        className: v.tag,
-                        discriminatorClass: v.discriminator
+                        className: x.tag,
+                        discriminatorClass: x.discriminator
                     }),
                     (0, n.jsx)(d.Z, {
                         user: t,
-                        activities: Z,
+                        activities: N,
                         applicationStream: k,
                         voiceChannel: E
                     })

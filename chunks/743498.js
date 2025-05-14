@@ -1,6 +1,7 @@
 n.d(t, {
     J_: () => i,
     _j: () => o,
+    jG: () => s,
     v6: () => a
 });
 var r = n(570140);
@@ -20,4 +21,7 @@ function a(e) {
         newVoiceFilterId: e,
         analyticsContext: t
     });
+}
+function s() {
+    r.Z.dispatch({ type: 'VOICE_FILTER_PREFETCH' });
 }

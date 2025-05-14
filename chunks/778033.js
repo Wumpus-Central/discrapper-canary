@@ -1,5 +1,13 @@
-function r(e) {
-    return null == e
+n.d(t, {
+    W: () => r,
+    w: () => i
+});
+let r = {
+    USER_SELECTION: 'user_selection',
+    AUTO_PREFETCH: 'auto_prefetch'
+};
+function i(e) {
+    return null == e || e.reason !== r.USER_SELECTION
         ? null
         : {
               voice_filter_grid_rows: e.gridRows,
@@ -8,4 +16,3 @@ function r(e) {
               voice_filter_interacted_column: e.interactedColumn
           };
 }
-n.d(t, { w: () => r });

@@ -1,4 +1,7 @@
-n.d(t, { x: () => V });
+n.d(t, {
+    i: () => Z,
+    x: () => V
+});
 var r = n(771356),
     i = n(640490),
     o = n(578895),
@@ -160,4 +163,7 @@ let V = {
         previewSoundURLs: [s.Z, l.Z, c.Z]
     }
 };
+function Z(e) {
+    return ''.concat(e, '.onnx');
+}
 (V.rachel = V.skye), (V.alex = V.quinn), (V.elliot = V.axel), (V.sebastian = V.sebastien), (V.justin = V.justus), (V.taylor = V.harper), (V.monique = V.solara);

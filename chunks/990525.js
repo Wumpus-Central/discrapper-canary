@@ -48,11 +48,11 @@ let y = (e) => {
         I = !t.available && !t.temporarilyAvailable,
         O = t.temporarilyAvailable && !n && !C,
         E = !C && t.id === j,
-        [N, P] = i.useState(!1);
+        [P, N] = i.useState(!1);
     i.useEffect(() => {
-        let e = E ? setTimeout(() => P(E), 200) : void 0;
+        let e = E ? setTimeout(() => N(E), 200) : void 0;
         return () => {
-            clearTimeout(e), P(!1);
+            clearTimeout(e), N(!1);
         };
     }, [E]);
     let S = null == x ? void 0 : x.previewSoundURLs,
@@ -128,7 +128,7 @@ let y = (e) => {
                                         })
                                     })
                                 }),
-                            N &&
+                            P &&
                                 (0, r.jsx)('div', {
                                     className: v.spinnerWrapper,
                                     children: (0, r.jsx)(s.$jN, {

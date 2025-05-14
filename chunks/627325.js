@@ -1,4 +1,4 @@
-n.d(t, { w: () => C });
+n.d(t, { w: () => I });
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -12,31 +12,32 @@ var r = n(255367),
     m = n(218867),
     f = n(594174),
     p = n(111361),
-    g = n(709706),
-    h = n(358820),
-    v = n(990525),
-    b = n(388032),
-    y = n(92609);
-let j = [51],
-    x = [b.t.OpqAoq];
-function C(e) {
+    g = n(778033),
+    h = n(709706),
+    v = n(358820),
+    b = n(990525),
+    y = n(388032),
+    j = n(92609);
+let x = [51],
+    C = [y.t.OpqAoq];
+function I(e) {
     let { columns: t, handleScroll: n, voiceListRef: i, showSectionHeaders: a = !1, query: l } = e,
-        s = O(),
+        s = E(),
         c = (0, d.e7)([f.default], () => (0, p.I5)(f.default.getCurrentUser())),
-        C = N(l, c),
-        E = Math.ceil(C.length / t),
+        I = N(l, c),
+        P = Math.ceil(I.length / t),
         {
-            isNativeModuleLoaded: P,
-            isNativeModuleLoading: S,
-            catalogLastFetchTime: w
-        } = (0, d.cj)([g.Z], () => ({
-            isNativeModuleLoaded: g.Z.isNativeModuleLoaded(),
-            isNativeModuleLoading: g.Z.isNativeModuleLoading(),
-            catalogLastFetchTime: g.Z.getCatalogLastFetchTime()
+            isNativeModuleLoaded: S,
+            isNativeModuleLoading: w,
+            catalogLastFetchTime: T
+        } = (0, d.cj)([h.Z], () => ({
+            isNativeModuleLoaded: h.Z.isNativeModuleLoaded(),
+            isNativeModuleLoading: h.Z.isNativeModuleLoading(),
+            catalogLastFetchTime: h.Z.getCatalogLastFetchTime()
         }));
-    return l && 0 === C.length
+    return l && 0 === I.length
         ? (0, r.jsxs)('div', {
-              className: y.iconMessage,
+              className: j.iconMessage,
               children: [
                   (0, r.jsx)(_._Ve, {
                       width: 40,
@@ -47,13 +48,13 @@ function C(e) {
                   (0, r.jsx)(_.X6q, {
                       variant: 'heading-sm/medium',
                       color: 'header-muted',
-                      children: b.intl.string(b.t.ZzukHh)
+                      children: y.intl.string(y.t.ZzukHh)
                   })
               ]
           })
         : s
           ? (0, r.jsxs)('div', {
-                className: y.iconMessage,
+                className: j.iconMessage,
                 children: [
                     (0, r.jsx)(_.aNP, {
                         width: 40,
@@ -64,18 +65,18 @@ function C(e) {
                     (0, r.jsx)(_.X6q, {
                         variant: 'heading-md/normal',
                         color: 'header-muted',
-                        children: b.intl.string(b.t.DpZNJy)
+                        children: y.intl.string(y.t.DpZNJy)
                     }),
                     (0, r.jsx)(_.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-muted',
-                        children: b.intl.format(b.t['5afO9f'], { onClick: P ? h.wV : h.r5 })
+                        children: y.intl.format(y.t['5afO9f'], { onClick: S ? v.wV : v.r5 })
                     })
                 ]
             })
-          : S || null == w
+          : w || null == T
             ? (0, r.jsx)('div', {
-                  className: y.loading,
+                  className: j.loading,
                   children: (0, r.jsx)(_.$jN, {
                       type: _.$jN.Type.CHASING_DOTS,
                       animated: !0
@@ -83,21 +84,22 @@ function C(e) {
               })
             : (0, r.jsx)(m.Z, {
                   fade: !0,
-                  className: o()(y.container, { [y.hasHeaders]: a }),
+                  className: o()(j.container, { [j.hasHeaders]: a }),
                   renderRow: (e) => {
                       let n = e * t,
-                          i = C.slice(n, n + t);
+                          i = I.slice(n, n + t);
                       return (0, r.jsx)(
-                          I,
+                          O,
                           {
                               children: i.map((n, i) =>
                                   (0, r.jsx)(
-                                      v.J,
+                                      b.J,
                                       {
                                           voiceFilter: n,
                                           hasNitro: c,
                                           analyticsContext: {
-                                              gridRows: E,
+                                              reason: g.W.USER_SELECTION,
+                                              gridRows: P,
                                               gridColumns: t,
                                               interactedRow: e,
                                               interactedColumn: i
@@ -117,51 +119,51 @@ function C(e) {
                                 (0, r.jsx)(_.Text, {
                                     variant: 'text-sm/medium',
                                     color: 'header-muted',
-                                    className: y.header,
-                                    children: b.intl.string(x[e])
+                                    className: j.header,
+                                    children: y.intl.string(C[e])
                                 }),
-                  sectionHeaderHeight: !1 === a ? void 0 : (e) => j[e],
-                  rowCount: E,
+                  sectionHeaderHeight: !1 === a ? void 0 : (e) => x[e],
+                  rowCount: P,
                   rowHeight: 130,
                   onScroll: n,
                   ref: i,
                   sectionFooterHeight: 40 * !c
               });
 }
-function I(e) {
+function O(e) {
     let { children: t } = e,
         n = i.useRef(null);
     return (0, r.jsx)('div', {
         ref: n,
-        className: y.row,
+        className: j.row,
         children: (0, r.jsx)(_.JcV, {
             containerRef: n,
             children: t
         })
     });
 }
-let O = () =>
-        (0, d.e7)([g.Z], () => {
+let E = () =>
+        (0, d.e7)([h.Z], () => {
             var e;
-            return !Object.keys(null != (e = g.Z.getVoiceFilterModels()) ? e : {}).length && (g.Z.getCatalogFetchFailed() || g.Z.hasNativeModuleFailed());
+            return !Object.keys(null != (e = h.Z.getVoiceFilterModels()) ? e : {}).length && (h.Z.getCatalogFetchFailed() || h.Z.hasNativeModuleFailed());
         }),
-    E = (e, t) => {
+    P = (e, t) => {
         let n = (0, c._I)(t.toLowerCase());
         return '' === n
             ? e
             : e.filter((e) => {
                   let { name: t } = e,
-                      r = (0, c._I)(b.intl.string(t)).toLowerCase();
+                      r = (0, c._I)(y.intl.string(t)).toLowerCase();
                   return s()(n, r);
               });
     },
     N = (e, t) =>
         (0, d.Wu)(
-            [g.Z],
+            [h.Z],
             () => {
-                let n = g.Z.getVoiceFilters(),
-                    r = g.Z.getSortedVoiceFilters();
-                return E(t ? Object.values(n) : r, e);
+                let n = h.Z.getVoiceFilters(),
+                    r = h.Z.getSortedVoiceFilters();
+                return P(t ? Object.values(n) : r, e);
             },
             [e, t]
         );

@@ -150,6 +150,12 @@ class S extends (r = s.ZP.Store) {
     getModelState(e) {
         return g.modelState[e];
     }
+    getOngoingDownloads() {
+        return Object.values(g.modelState).filter((e) => {
+            let { status: t } = e;
+            return t === c.L.DOWNLOADING;
+        });
+    }
     isModelDownloaded(e) {
         var t;
         return (null == (t = g.modelState[e]) ? void 0 : t.status) === c.L.DOWNLOADED;

@@ -1,16 +1,16 @@
-r.d(t, { Z: () => j });
+r.d(t, { Z: () => f });
 var n = r(255367);
 r(73800);
 var i = r(399606),
     l = r(481060),
     a = r(275759),
-    o = r(565138),
-    s = r(706454),
+    s = r(565138),
+    o = r(706454),
     c = r(271383),
     u = r(430824),
     d = r(709054),
-    b = r(388032),
-    m = r(209643);
+    m = r(388032),
+    b = r(209643);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -36,7 +36,7 @@ function p(e) {
     }
     return e;
 }
-function f(e, t) {
+function j(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -54,32 +54,32 @@ function f(e, t) {
         e
     );
 }
-function j(e) {
-    let { userId: t, guildId: r, textClassName: j, tooltipDelay: v } = e,
-        x = (0, i.e7)([s.default], () => s.default.locale),
-        O = (0, i.e7)([u.Z], () => (null != r ? u.Z.getGuild(r) : null)),
-        y = (0, i.e7)([c.ZP], () => (null != r ? c.ZP.getMember(r, t) : null)),
-        h = (0, a.FI)(d.default.extractTimestamp(t), x),
-        g = (0, a.FI)(null == y ? void 0 : y.joinedAt, x);
-    return null == O || null == y
+function f(e) {
+    let { userId: t, guildId: r, textClassName: f, tooltipDelay: x } = e,
+        v = (0, i.e7)([o.default], () => o.default.locale),
+        y = (0, i.e7)([u.Z], () => (null != r ? u.Z.getGuild(r) : null)),
+        O = (0, i.e7)([c.ZP], () => (null != r ? c.ZP.getMember(r, t) : null)),
+        h = (0, a.FI)(d.default.extractTimestamp(t), v),
+        g = (0, a.FI)(null == O ? void 0 : O.joinedAt, v);
+    return null == y || null == O
         ? (0, n.jsx)(l.Text, {
               variant: 'text-sm/normal',
-              className: j,
+              className: f,
               children: h
           })
         : (0, n.jsxs)('div', {
-              className: m.memberSinceWrapper,
+              className: b.memberSinceWrapper,
               children: [
                   (0, n.jsxs)('div', {
-                      className: m.memberSince,
+                      className: b.memberSince,
                       children: [
                           (0, n.jsx)(l.ua7, {
-                              text: b.intl.string(b.t.uvGmCw),
-                              delay: v,
+                              text: m.intl.string(m.t.uvGmCw),
+                              delay: x,
                               children: (e) =>
                                   (0, n.jsx)(
                                       l.gw7,
-                                      f(
+                                      j(
                                           p(
                                               {
                                                   size: 'custom',
@@ -89,36 +89,36 @@ function j(e) {
                                               },
                                               e
                                           ),
-                                          { className: m.discordIcon }
+                                          { className: b.discordIcon }
                                       )
                                   )
                           }),
                           (0, n.jsx)(l.Text, {
                               variant: 'text-sm/normal',
-                              className: j,
+                              className: f,
                               children: h
                           })
                       ]
                   }),
-                  (0, n.jsx)('div', { className: m.divider }),
+                  (0, n.jsx)('div', { className: b.divider }),
                   (0, n.jsxs)('div', {
-                      className: m.memberSince,
+                      className: b.memberSince,
                       children: [
                           (0, n.jsx)(l.ua7, {
-                              text: O.name,
-                              delay: v,
+                              text: y.name,
+                              delay: x,
                               children: (e) =>
                                   (0, n.jsx)(
-                                      o.Z,
-                                      f(p({}, e), {
-                                          guild: O,
-                                          size: o.Z.Sizes.SMOL
+                                      s.Z,
+                                      j(p({}, e), {
+                                          guild: y,
+                                          size: s.Z.Sizes.SMOL
                                       })
                                   )
                           }),
                           (0, n.jsx)(l.Text, {
                               variant: 'text-sm/normal',
-                              className: j,
+                              className: f,
                               children: g
                           })
                       ]
