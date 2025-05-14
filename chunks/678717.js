@@ -35,8 +35,8 @@ var _ = n(392750),
     A = n(246992),
     L = n(496025),
     D = n(442954),
-    M = n(633001),
-    z = n(702904),
+    z = n(633001),
+    M = n(702904),
     B = n(178821),
     U = n(891401),
     F = n(958328),
@@ -134,7 +134,7 @@ function er(e) {
                         id: 'overlay',
                         name: 'Overlay v3',
                         group: $.v0.GAMES,
-                        render: () => (0, a.jsx)(M.Z, {})
+                        render: () => (0, a.jsx)(z.Z, {})
                     }),
                     e.push({
                         id: 'slayer_sdk',
@@ -232,7 +232,7 @@ function er(e) {
                         id: 'payments',
                         name: 'Payments',
                         group: $.v0.BILLING,
-                        render: () => (0, a.jsx)(z.Z, {})
+                        render: () => (0, a.jsx)(M.Z, {})
                     }),
                     e.push({
                         id: 'subscriptions',

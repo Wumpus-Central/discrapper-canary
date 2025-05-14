@@ -127,28 +127,30 @@ function B(e) {
 function G(e) {
     let { onOpen: t, onClose: n, children: l, popoutPosition: a, popoutAlign: o } = e,
         [s, c] = i.useState(!1),
-        u = i.useCallback(() => {
+        u = i.useRef(null),
+        d = i.useCallback(() => {
             c(!1), s && (null == n || n());
         }, [n, s]),
-        d = i.useCallback(() => {
+        p = i.useCallback(() => {
             c(!s), s ? null == n || n() : null == t || t();
         }, [n, t, s]);
-    i.useEffect(() => (j.S.subscribe(R.CkL.TOGGLE_FOR_LATER, d), () => void j.S.unsubscribe(R.CkL.TOGGLE_FOR_LATER, d)), [d]);
-    let p = (0, m.e7)([N.Z], () => N.Z.hasOverdueReminder(), []);
+    i.useEffect(() => (j.S.subscribe(R.CkL.TOGGLE_FOR_LATER, p), () => void j.S.unsubscribe(R.CkL.TOGGLE_FOR_LATER, p)), [p]);
+    let h = (0, m.e7)([N.Z], () => N.Z.hasOverdueReminder(), []);
     return (0, r.jsx)(f.yRy, {
+        targetElementRef: u,
         animation: f.yRy.Animation.NONE,
         position: a,
         align: o,
         autoInvert: !1,
         shouldShow: s,
-        onRequestClose: u,
+        onRequestClose: d,
         renderPopout: function () {
-            return (0, r.jsx)(F, { closePopout: u });
+            return (0, r.jsx)(F, { closePopout: d });
         },
         ignoreModalClicks: !0,
         children: (e, t) => {
             let { isShown: n } = t;
-            return l(d, n, e, p);
+            return l(p, n, e, h, u);
         }
     });
 }

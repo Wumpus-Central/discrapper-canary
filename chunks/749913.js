@@ -907,15 +907,16 @@ function eb(e) {
         }),
         { containerRef: f, containerWidth: x } = (0, Q.Z)(),
         p = i.useRef(null),
-        [b, j] = i.useState(!0),
-        v = (0, G.Vm)(t),
-        [C, _] = i.useState(0);
+        b = i.useRef(null),
+        [j, v] = i.useState(!0),
+        C = (0, G.Vm)(t),
+        [_, y] = i.useState(0);
     return (i.useLayoutEffect(() => {
         var e;
         let t = p.current,
             n = null == t || null == (e = t.children) ? void 0 : e[0],
             r = null == t || null == n || n.clientHeight > t.clientHeight;
-        if ((r !== b && j(r), r && null != f.current && null != n && null != n.children)) {
+        if ((r !== j && v(r), r && null != f.current && null != n && null != n.children)) {
             let { left: e, top: t } = f.current.getBoundingClientRect(),
                 r = 0;
             for (let i of n.children) {
@@ -923,10 +924,10 @@ function eb(e) {
                 if (l - t > a) break;
                 n - e > r && (r = n - e);
             }
-            _(r);
+            y(r);
         }
-    }, [v, b, f, x]),
-    0 === v.length)
+    }, [C, j, f, x]),
+    0 === C.length)
         ? null
         : (0, r.jsxs)('div', {
               className: er.tagsContainer,
@@ -975,7 +976,7 @@ function eb(e) {
                                               i
                                           ),
                                           {
-                                              children: v.map((e) =>
+                                              children: C.map((e) =>
                                                   (0, r.jsx)(
                                                       J.Z,
                                                       {
@@ -996,8 +997,9 @@ function eb(e) {
                           })
                       })
                   }),
-                  b &&
+                  j &&
                       (0, r.jsx)(g.yRy, {
+                          targetElementRef: b,
                           onRequestOpen: () => s(!0),
                           onRequestClose: () => s(!1),
                           renderPopout: (e) => {
@@ -1016,10 +1018,11 @@ function eb(e) {
                               (0, r.jsxs)(
                                   g.zxk,
                                   el(ei({}, e), {
+                                      buttonRef: b,
                                       size: g.zxk.Sizes.TINY,
                                       className: er.tagsButton,
                                       innerClassName: er.tagsButtonInner,
-                                      style: { left: C },
+                                      style: { left: _ },
                                       look: g.zxk.Looks.LINK,
                                       'aria-label': en.intl.string(en.t.N5vP9P),
                                       children: [

@@ -56,10 +56,11 @@ function g(e, t) {
 }
 function b(e) {
     let { channel: t } = e,
-        [n, b] = (0, l.Wu)([s.ZP], () => [s.ZP.isChannelMuted(t.getGuildId(), t.id), s.ZP.resolvedMessageNotifications(t)], [t]),
-        [_, x] = i.useState(!1);
+        n = i.useRef(null),
+        [b, _] = (0, l.Wu)([s.ZP], () => [s.ZP.isChannelMuted(t.getGuildId(), t.id), s.ZP.resolvedMessageNotifications(t)], [t]),
+        [x, y] = i.useState(!1);
     i.useEffect(() => {
-        let e = () => x(!0);
+        let e = () => y(!0);
         return (
             c.S.subscribe(h.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
             () => {
@@ -67,17 +68,18 @@ function b(e) {
             }
         );
     }, []);
-    let y = (e) => {
-            e.shiftKey ? a.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: !n }, u.UE.muted(!n)) : x((e) => !e);
+    let C = (e) => {
+            e.shiftKey ? a.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: !b }, u.UE.muted(!b)) : y((e) => !e);
         },
-        C = f.intl.string(f.t.h850Sk);
+        v = f.intl.string(f.t.h850Sk);
     return (0, r.jsx)(o.yRy, {
-        shouldShow: _,
+        targetElementRef: n,
+        shouldShow: x,
         animation: o.yRy.Animation.NONE,
         position: 'bottom',
         align: 'right',
         autoInvert: !1,
-        onRequestClose: () => x(!1),
+        onRequestClose: () => y(!1),
         renderPopout: (e) =>
             (0, r.jsx)(
                 p.Z,
@@ -93,10 +95,11 @@ function b(e) {
             return (0, r.jsx)(
                 d.ZP.Icon,
                 g(m({}, e), {
-                    onClick: y,
-                    tooltip: i ? null : C,
-                    icon: n || b !== h.bL.ALL_MESSAGES ? o.owu : o.Dkj,
-                    'aria-label': C,
+                    ref: n,
+                    onClick: C,
+                    tooltip: i ? null : v,
+                    icon: b || _ !== h.bL.ALL_MESSAGES ? o.owu : o.Dkj,
+                    'aria-label': v,
                     selected: i
                 })
             );

@@ -93,33 +93,33 @@ class H extends i.PureComponent {
         r || e.shouldShowLurkerModeSuccessPopout || !t || null == n || this.setState({ shouldShowLurkerModeSuccessPopout: !0 });
     }
     render() {
-        let { isFollowable: e, isLurking: t, notClaimed: l, notPhoneVerified: o, notEmailVerified: a, newMember: c, memberDeadline: u, newAccount: d, accountDeadline: p, theme: h, children: f, canSendMessages: m, channelFollowingUsersSeen: g, showLurkerModeUpsellPopout: _, showMemberVerificationModal: x, useReducedMotion: y, isStaff: C, guildJoinRequest: v } = this.props,
-            { shouldShowLurkerModeUpsellPopout: j, shouldShowLurkerModeSuccessPopout: O } = this.state,
-            E = {
-                theme: h,
-                useReducedMotion: y
+        let { isFollowable: e, isLurking: t, notClaimed: i, notPhoneVerified: l, notEmailVerified: o, newMember: a, memberDeadline: c, newAccount: u, accountDeadline: d, theme: p, children: h, canSendMessages: f, channelFollowingUsersSeen: m, showLurkerModeUpsellPopout: g, showMemberVerificationModal: _, useReducedMotion: x, isStaff: y, guildJoinRequest: C } = this.props,
+            { shouldShowLurkerModeUpsellPopout: v, shouldShowLurkerModeSuccessPopout: j } = this.state,
+            O = {
+                theme: p,
+                useReducedMotion: x
             };
-        if (e && !m) {
-            if (((E.message = D.intl.string(D.t.Hl0Mqq)), null != g && g >= 1000)) {
-                let e = 1000 * Math.floor(g / 1000);
-                E.subtitle = D.intl.formatToPlainString(D.t.C5bgrK, { count: e.toLocaleString() });
+        if (e && !f) {
+            if (((O.message = D.intl.string(D.t.Hl0Mqq)), null != m && m >= 1000)) {
+                let e = 1000 * Math.floor(m / 1000);
+                O.subtitle = D.intl.formatToPlainString(D.t.C5bgrK, { count: e.toLocaleString() });
             }
-            (E.buttonText = D.intl.string(D.t['3aOv+v'])), (E.onButtonClick = this.handleFollowAnnouncement), (E.imageSrc = n(485195)), t && ((E.onSecondaryButtonClick = this.handleJoinServer), (E.secondaryButtonText = D.intl.string(D.t['RLch7+'])));
-        } else if (l) (E.message = D.intl.string(D.t['Eg3/c3'])), (E.buttonText = D.intl.string(D.t.fiNVio)), (E.onButtonClick = x ? this.handleShowMemberVerification : this.handleClaimAccount), (E.imageSrc = n(102811));
-        else if (x)
-            switch (null == v ? void 0 : v.applicationStatus) {
+            (O.buttonText = D.intl.string(D.t['3aOv+v'])), (O.onButtonClick = this.handleFollowAnnouncement), (O.imageSrc = n(485195)), t && ((O.onSecondaryButtonClick = this.handleJoinServer), (O.secondaryButtonText = D.intl.string(D.t['RLch7+'])));
+        } else if (i) (O.message = D.intl.string(D.t['Eg3/c3'])), (O.buttonText = D.intl.string(D.t.fiNVio)), (O.onButtonClick = _ ? this.handleShowMemberVerification : this.handleClaimAccount), (O.imageSrc = n(102811));
+        else if (_)
+            switch (null == C ? void 0 : C.applicationStatus) {
                 case b.wB.SUBMITTED:
-                    (E.message = D.intl.string(D.t['5iLvS0'])), (E.subtitle = D.intl.string(D.t.FdsK4u)), (E.buttonText = D.intl.string(D.t.mqtdmZ)), (E.onButtonClick = this.handleCancelApplication), (E.imageSrc = n(281958));
+                    (O.message = D.intl.string(D.t['5iLvS0'])), (O.subtitle = D.intl.string(D.t.FdsK4u)), (O.buttonText = D.intl.string(D.t.mqtdmZ)), (O.onButtonClick = this.handleCancelApplication), (O.imageSrc = n(281958));
                     break;
                 case b.wB.REJECTED:
-                    (E.message = D.intl.string(D.t.lk30cX)), (E.buttonText = D.intl.string(D.t['8RrsHh'])), (E.onButtonClick = this.handleViewApplicationRejection), (E.imageSrc = n(809844));
+                    (O.message = D.intl.string(D.t.lk30cX)), (O.buttonText = D.intl.string(D.t['8RrsHh'])), (O.onButtonClick = this.handleViewApplicationRejection), (O.imageSrc = n(809844));
                     break;
                 default:
-                    (E.message = D.intl.string(D.t.rEBKvr)),
-                        (E.buttonText = D.intl.string(D.t['r8/DT0'])),
-                        (E.buttonColor = s.Ttl.BRAND),
-                        (E.onButtonClick = this.handleShowMemberVerification),
-                        (E.animationSrc = () =>
+                    (O.message = D.intl.string(D.t.rEBKvr)),
+                        (O.buttonText = D.intl.string(D.t['r8/DT0'])),
+                        (O.buttonColor = s.Ttl.BRAND),
+                        (O.onButtonClick = this.handleShowMemberVerification),
+                        (O.animationSrc = () =>
                             n
                                 .e('43841')
                                 .then(n.t.bind(n, 737848, 19))
@@ -128,25 +128,27 @@ class H extends i.PureComponent {
                                     return t;
                                 }));
             }
-        else o && !C ? ((E.message = D.intl.string(D.t['2dThMD'])), (E.buttonText = D.intl.string(D.t['50gfOj'])), (E.onButtonClick = this.handleVerifyPhone), (E.imageSrc = n(98063))) : a ? ((E.message = D.intl.string(D.t.FkGPS0)), (E.buttonText = D.intl.string(D.t.lm1UKi)), (E.onButtonClick = this.handleResendVerification), (E.imageSrc = n(102811))) : c ? ((E.message = D.intl.formatToPlainString(D.t.IH7RMD, { min: M.YeM.MEMBER_AGE })), (E.countdown = u)) : d && ((E.message = D.intl.formatToPlainString(D.t['2JA2GB'], { min: M.YeM.ACCOUNT_AGE })), (E.countdown = p));
+        else l && !y ? ((O.message = D.intl.string(D.t['2dThMD'])), (O.buttonText = D.intl.string(D.t['50gfOj'])), (O.onButtonClick = this.handleVerifyPhone), (O.imageSrc = n(98063))) : o ? ((O.message = D.intl.string(D.t.FkGPS0)), (O.buttonText = D.intl.string(D.t.lm1UKi)), (O.onButtonClick = this.handleResendVerification), (O.imageSrc = n(102811))) : a ? ((O.message = D.intl.formatToPlainString(D.t.IH7RMD, { min: M.YeM.MEMBER_AGE })), (O.countdown = c)) : u && ((O.message = D.intl.formatToPlainString(D.t['2JA2GB'], { min: M.YeM.ACCOUNT_AGE })), (O.countdown = d));
         return (0, r.jsx)(s.yRy, {
+            targetElementRef: this.textAreaContainerRef,
             position: 'top',
             align: 'left',
-            shouldShow: O,
+            shouldShow: j,
             onRequestClose: () => this.setState({ shouldShowLurkerModeSuccessPopout: !1 }),
             renderPopout: this.renderSuccessPopout,
             children: (e) =>
                 (0, r.jsx)(
                     k.Z,
-                    F(G({}, E), {
-                        children: (0, r.jsxs)(i.Fragment, {
+                    F(G({}, O), {
+                        children: (0, r.jsxs)('div', {
+                            ref: this.textAreaContainerRef,
                             children: [
                                 this.renderMemberVerificationSuccessModal(),
-                                _
+                                g
                                     ? (0, r.jsx)(s.yRy, {
                                           targetElementRef: this.upsellTargetRef,
                                           renderPopout: this.renderLurkerModeUpsellPopout,
-                                          shouldShow: j,
+                                          shouldShow: v,
                                           position: 'top',
                                           children: (e) =>
                                               (0, r.jsx)(
@@ -154,11 +156,11 @@ class H extends i.PureComponent {
                                                   F(G({ innerRef: this.upsellTargetRef }, e), {
                                                       className: U.clickableChannelTextArea,
                                                       onClick: this.handleTextAreaClick,
-                                                      children: f
+                                                      children: h
                                                   })
                                               )
                                       })
-                                    : f
+                                    : h
                             ]
                         })
                     })
@@ -172,6 +174,7 @@ class H extends i.PureComponent {
                 shouldShowLurkerModeUpsellPopout: !1,
                 shouldShowLurkerModeSuccessPopout: !1
             }),
+            B(this, 'textAreaContainerRef', i.createRef()),
             B(this, 'upsellTargetRef', i.createRef()),
             B(this, 'renderSuccessPopout', (e) => {
                 let { closePopout: t } = e,

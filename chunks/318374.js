@@ -89,8 +89,9 @@ function y() {
 function O(e) {
     let { users: t, maxUsers: o, guildId: s, channelId: h, className: g, size: O = c.EFr.SIZE_24, overflowCountVariant: v, overflowCountColor: I = 'interactive-normal', overflowCountClassName: S, hideOverflowCount: T = !1, disableUsernameTooltip: A = !1, disableUserPopout: N = !1, onClick: C, onFocus: P, onUserClick: R, onUserPopoutRequestClose: w } = e,
         [D, L] = i.useState(!1),
-        x = b(O);
-    function k() {
+        x = b(O),
+        k = i.useRef(null);
+    function M() {
         return (0, r.jsx)(c.VqE, {
             className: p.popoutWrapper,
             children: (0, r.jsx)(c.Ttm, {
@@ -132,7 +133,7 @@ function O(e) {
             })
         });
     }
-    function M() {
+    function j() {
         let e = t.length - o,
             n = e + 1,
             i = e > 0 && !T,
@@ -176,12 +177,14 @@ function O(e) {
             d[d.length - 1] = (0, r.jsx)(
                 c.yRy,
                 {
-                    renderPopout: k,
+                    targetElementRef: k,
+                    renderPopout: M,
                     shouldShow: D,
                     position: 'bottom',
                     onRequestClose: () => L(!1),
                     children: () =>
                         (0, r.jsx)(c.zxk, {
+                            buttonRef: k,
                             className: a()(p.overflow, x, S),
                             onFocus: P,
                             onClick: (e) => {
@@ -205,6 +208,6 @@ function O(e) {
         ? null
         : (0, r.jsx)('div', {
               className: a()(g, p.avatars),
-              children: M()
+              children: j()
           });
 }

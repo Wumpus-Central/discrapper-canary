@@ -80,7 +80,7 @@ let g = function (e) {
             onMouseEnter: N,
             onMouseLeave: k
         } = e,
-        E = (function (e, t) {
+        R = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -99,7 +99,7 @@ let g = function (e) {
             }
             return o;
         })(e, ['className', 'compact', 'contentOnly', 'zalgo', 'preview', 'disableInteraction', 'childrenRepliedMessage', 'childrenExecutedCommand', 'childrenHeader', 'childrenSystemMessage', 'childrenButtons', 'childrenMessageContent', 'childrenAccessories', 'messageRef', 'focusProps', 'hasThread', 'isSystemMessage', 'hasReply', 'authorHasGradientRole', 'guildId', 'onMouseEnter', 'onMouseLeave']);
-    let R = (0, c.Z)(I, 'BaseMessage'),
+    let E = (0, c.Z)(I, 'BaseMessage'),
         [M, Z] = o.useState(!1),
         A = o.useCallback(
             (e) => {
@@ -127,7 +127,7 @@ let g = function (e) {
                             d(
                                 {
                                     className: i()(t, {
-                                        [u.gradient]: !!R && w,
+                                        [u.gradient]: !!E && w,
                                         [u.wrapper]: !0,
                                         [u.contentOnly]: a,
                                         [u.compact]: n,
@@ -140,7 +140,7 @@ let g = function (e) {
                                     }),
                                     ref: x
                                 },
-                                E
+                                R
                             ),
                             {
                                 role: 'article',

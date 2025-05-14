@@ -323,30 +323,33 @@ let k = (e) => {
         );
     },
     z = (e) => {
-        let { shouldShowCoachmark: t, dismissCoachmark: n } = (0, S.Z)(),
-            l = i.useRef(0);
+        let t = i.useRef(null),
+            { shouldShowCoachmark: n, dismissCoachmark: l } = (0, S.Z)(),
+            a = i.useRef(0);
         i.useLayoutEffect(() => {
-            l.current += 1;
+            a.current += 1;
         }, []);
-        let a = i.useCallback(() => {
+        let o = i.useCallback(() => {
             var t;
-            n(Z.L.PRIMARY), null == (t = e.onClick) || t.call(e);
-        }, [n, e]);
+            l(Z.L.PRIMARY), null == (t = e.onClick) || t.call(e);
+        }, [l, e]);
         return (0, r.jsx)(s.yRy, {
+            targetElementRef: t,
             renderPopout: () => (0, r.jsx)(C.Z, {}),
             position: 'right',
             align: 'top',
-            shouldShow: t,
+            shouldShow: n,
             spacing: 12,
-            positionKey: String(l.current),
+            positionKey: String(a.current),
             animation: s.yRy.Animation.TRANSLATE,
             closeOnScroll: !0,
-            onRequestClose: () => n(Z.L.USER_DISMISS),
-            children: (t) =>
+            onRequestClose: () => l(Z.L.USER_DISMISS),
+            children: (n) =>
                 (0, r.jsx)(
                     U,
                     R(w({}, e), {
-                        onClick: a,
+                        onClick: o,
+                        listItemRef: t,
                         children: (0, r.jsx)(k, {})
                     })
                 )

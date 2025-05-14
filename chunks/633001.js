@@ -1,4 +1,4 @@
-n.d(t, { Z: () => z }), n(388685), n(539854), n(583741);
+n.d(t, { Z: () => M }), n(388685), n(539854), n(583741);
 var a = n(255367),
     r = n(73800),
     l = n(120356),
@@ -315,7 +315,7 @@ function D(e) {
         ]
     });
 }
-function M(e) {
+function z(e) {
     let t = Z(Object.values((0, o.Wu)([j.Z], () => j.Z.getWidgetsForLayout(S.$S))), e);
     return [
         t,
@@ -330,19 +330,19 @@ function M(e) {
         }
     ];
 }
-function z() {
+function M() {
     var e, t;
-    let [n, l] = M(E.Odu.CLICK_ZONE_DEBUG),
-        [s, d] = M(E.Odu.PERFORMANCE_DEBUG),
+    let [n, l] = z(E.Odu.CLICK_ZONE_DEBUG),
+        [s, d] = z(E.Odu.PERFORMANCE_DEBUG),
         j = (0, o.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.ClickZones)),
         g = (0, o.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.WidgetAreas)),
         y = (0, o.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.DisabledGPUBoost)),
         S = (0, o.e7)([f.ZP], () => f.ZP.hasRenderDebugMode(h.G.ForceGPUBoost)),
         T = (0, o.e7)([p.default], () => p.default.getForcedRenderMode()),
         [R, Z] = r.useState({}),
-        [A, z] = r.useState(T),
+        [A, M] = r.useState(T),
         B = (e) => {
-            z(e), u.Z.forceRenderMode(e);
+            M(e), u.Z.forceRenderMode(e);
         },
         U = [
             {

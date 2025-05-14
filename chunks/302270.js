@@ -105,7 +105,8 @@ function X(e) {
         { hasParticipantsPanel: F } = (0, m.Z)({ location: 'StageChannelCallHeader' }),
         H = F && A,
         z = (0, C.Q3)('StageChannelCallHeader'),
-        { simplifiedSettingsEnabled: W } = (0, I.Z)({ location: 'StageChannelCallHeader' });
+        { simplifiedSettingsEnabled: W } = (0, I.Z)({ location: 'StageChannelCallHeader' }),
+        X = i.useRef(null);
     return (0, r.jsxs)(h.Gt, {
         value: v,
         children: [
@@ -114,6 +115,7 @@ function X(e) {
                 (0, r.jsx)(
                     c.yRy,
                     {
+                        targetElementRef: X,
                         position: 'bottom',
                         animation: c.yRy.Animation.NONE,
                         align: 'right',
@@ -134,6 +136,7 @@ function X(e) {
                             return (0, i.createElement)(
                                 N.Z,
                                 K(q({}, e), {
+                                    ref: X,
                                     key: 'more-options',
                                     isActive: n,
                                     className: Y.button,

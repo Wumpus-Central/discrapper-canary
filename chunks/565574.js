@@ -1,23 +1,25 @@
-n.d(t, { Z: () => a });
-var r = n(255367);
-n(73800);
-var l = n(481060),
-    i = n(812652),
-    s = n(388032),
-    o = n(79309);
-function a(e) {
-    let { align: t = 'left', useSimplifiedMenu: n = !1 } = e;
-    return (0, r.jsx)(l.yRy, {
+n.d(t, { Z: () => c });
+var r = n(255367),
+    l = n(73800),
+    i = n(481060),
+    s = n(812652),
+    o = n(388032),
+    a = n(79309);
+function c(e) {
+    let { align: t = 'left', useSimplifiedMenu: n = !1 } = e,
+        c = l.useRef(null);
+    return (0, r.jsx)(i.yRy, {
+        targetElementRef: c,
         position: 'top',
         align: t,
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return n
-                ? (0, r.jsx)(i.l9, {
+                ? (0, r.jsx)(s.l9, {
                       onClose: t,
                       onSelect: t
                   })
-                : (0, r.jsx)(i.ZP, {
+                : (0, r.jsx)(s.ZP, {
                       onClose: t,
                       onSelect: t
                   });
@@ -25,7 +27,7 @@ function a(e) {
         children: (e) => {
             var t, n;
             return (0, r.jsx)(
-                l.zxk,
+                i.zxk,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -52,17 +54,18 @@ function a(e) {
                     return e;
                 })(
                     {
-                        size: l.zxk.Sizes.ICON,
-                        'aria-label': s.intl.string(s.t['+1H47u']),
-                        color: l.zxk.Colors.PRIMARY,
-                        className: o.streamOptionsButton
+                        size: i.zxk.Sizes.ICON,
+                        'aria-label': o.intl.string(o.t['+1H47u']),
+                        color: i.zxk.Colors.PRIMARY,
+                        className: a.streamOptionsButton,
+                        buttonRef: c
                     },
                     e
                 )),
                 (n = n =
                     {
-                        children: (0, r.jsx)(l.ewm, {
-                            className: o.settingsIcon,
+                        children: (0, r.jsx)(i.ewm, {
+                            className: a.settingsIcon,
                             size: 'refresh_sm',
                             color: 'currentColor'
                         })

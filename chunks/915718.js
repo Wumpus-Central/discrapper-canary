@@ -78,6 +78,7 @@ class k extends i.PureComponent {
             g = !1;
         h ? ((g = !0), (e = A.intl.string(A.t.izMR7u)), (t = a.ua7.Colors.RED)) : s ? ((e = f ? A.intl.string(A.t.LW2Gho) : A.intl.string(A.t.rF7lNz)), (t = a.ua7.Colors.RED), (g = !0)) : c ? ((e = A.intl.string(A.t.PHzjvb)), (t = a.ua7.Colors.RED), (g = !0)) : (e = l ? (f ? A.intl.string(A.t.S0W8Z2) : A.intl.string(A.t.fdEeb2)) : f ? A.intl.string(A.t.S0W8Z2) : A.intl.string(A.t.focH1t));
         let _ = (0, r.jsx)(P.ZP.Icon, {
+            ref: this.iconRef,
             icon: a.Csw,
             onClick: this.handleVoiceClick,
             disabled: g,
@@ -90,6 +91,7 @@ class k extends i.PureComponent {
                 let { visibleContent: t, markAsDismissed: l } = e;
                 return t === o.z.ACTIVITY_GDM_CALL_TOOLTIP
                     ? (0, r.jsx)(a.yRy, {
+                          targetElementRef: this.iconRef,
                           position: 'bottom',
                           align: 'center',
                           animation: a.yRy.Animation.TRANSLATE,
@@ -135,6 +137,7 @@ class k extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
+            R(this, 'iconRef', i.createRef()),
             R(this, 'handleStartCall', (e, t) => {
                 let { channel: n, notFriend: r, appContext: i } = this.props,
                     l = r ? n.getRecipientId() : null,

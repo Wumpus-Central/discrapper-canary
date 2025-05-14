@@ -1,30 +1,32 @@
-n.d(t, { Z: () => c });
-var r = n(255367);
-n(73800);
-var l = n(120356),
-    i = n.n(l),
-    s = n(481060),
-    o = n(812652),
-    a = n(459933);
-function c(e) {
-    let { mainCTADisabled: t, mainCTAOnClick: n, align: l, ctaText: c, hideOptionsButton: d } = e;
+n.d(t, { Z: () => d });
+var r = n(255367),
+    l = n(73800),
+    i = n(120356),
+    s = n.n(i),
+    o = n(481060),
+    a = n(812652),
+    c = n(459933);
+function d(e) {
+    let { mainCTADisabled: t, mainCTAOnClick: n, align: i, ctaText: d, hideOptionsButton: u } = e,
+        f = l.useRef(null);
     return (0, r.jsxs)('div', {
-        className: a.root,
+        className: c.root,
         children: [
-            (0, r.jsx)(s.zxk, {
-                size: s.zxk.Sizes.LARGE,
-                className: i()(a.streamButton, { [a.withOptions]: !d }),
+            (0, r.jsx)(o.zxk, {
+                size: o.zxk.Sizes.LARGE,
+                className: s()(c.streamButton, { [c.withOptions]: !u }),
                 disabled: t,
                 onClick: n,
-                children: c
+                children: d
             }),
-            !d &&
-                (0, r.jsx)(s.yRy, {
+            !u &&
+                (0, r.jsx)(o.yRy, {
+                    targetElementRef: f,
                     position: 'top',
-                    align: l,
+                    align: i,
                     renderPopout: (e) => {
                         let { closePopout: t } = e;
-                        return (0, r.jsx)(o.ZP, {
+                        return (0, r.jsx)(a.ZP, {
                             onClose: t,
                             onSelect: t
                         });
@@ -32,7 +34,7 @@ function c(e) {
                     children: (e) => {
                         var t, n;
                         return (0, r.jsx)(
-                            s.zxk,
+                            o.zxk,
                             ((t = (function (e) {
                                 for (var t = 1; t < arguments.length; t++) {
                                     var n = null != arguments[t] ? arguments[t] : {},
@@ -59,12 +61,13 @@ function c(e) {
                                 return e;
                             })(
                                 {
-                                    size: s.zxk.Sizes.LARGE,
-                                    className: a.optionsButton
+                                    size: o.zxk.Sizes.LARGE,
+                                    className: c.optionsButton,
+                                    buttonRef: f
                                 },
                                 e
                             )),
-                            (n = n = { children: (0, r.jsx)(s.Huf, { color: 'currentColor' }) }),
+                            (n = n = { children: (0, r.jsx)(o.Huf, { color: 'currentColor' }) }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                                 : (function (e, t) {

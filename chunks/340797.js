@@ -1,23 +1,25 @@
-n.d(t, { Z: () => c });
-var r = n(255367);
-n(73800);
-var o = n(481060),
-    a = n(946273),
-    i = n(441110),
-    l = n(388032),
-    s = n(374701);
-function c(e) {
-    let { guild: t, message: n } = e;
-    return (0, a.vV)(t.id, n.author.id)
-        ? (0, r.jsx)(o.yRy, {
-              animation: o.yRy.Animation.TRANSLATE,
+n.d(t, { Z: () => u });
+var r = n(255367),
+    o = n(73800),
+    a = n(481060),
+    i = n(946273),
+    l = n(441110),
+    s = n(388032),
+    c = n(374701);
+function u(e) {
+    let { guild: t, message: n } = e,
+        u = o.useRef(null);
+    return (0, i.vV)(t.id, n.author.id)
+        ? (0, r.jsx)(a.yRy, {
+              targetElementRef: u,
+              animation: a.yRy.Animation.TRANSLATE,
               align: 'center',
               autoInvert: !0,
               nudgeAlignIntoViewport: !0,
               position: 'right',
               renderPopout: (e) => {
                   let { closePopout: o } = e;
-                  return (0, r.jsx)(i.Z, {
+                  return (0, r.jsx)(l.Z, {
                       guild: t,
                       message: n,
                       onClose: o
@@ -25,11 +27,12 @@ function c(e) {
               },
               children: (e) => {
                   let { onClick: t } = e;
-                  return (0, r.jsx)(o.P3F, {
+                  return (0, r.jsx)(a.P3F, {
                       onClick: t,
                       tag: 'span',
-                      children: (0, r.jsx)(o.ua7, {
-                          text: l.intl.string(l.t['v/OYd3']),
+                      innerRef: u,
+                      children: (0, r.jsx)(a.ua7, {
+                          text: s.intl.string(s.t['v/OYd3']),
                           children: (e) => {
                               var t, n;
                               return (0, r.jsx)(
@@ -58,10 +61,10 @@ function c(e) {
                                               });
                                       }
                                       return e;
-                                  })({ className: s.newMemberBadge }, e)),
+                                  })({ className: c.newMemberBadge }, e)),
                                   (n = n =
                                       {
-                                          children: (0, r.jsx)(o.hg2, {
+                                          children: (0, r.jsx)(a.hg2, {
                                               size: 'custom',
                                               color: 'currentColor',
                                               width: 20,

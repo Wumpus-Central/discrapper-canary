@@ -10,12 +10,13 @@ var o = i(255367),
     m = i(815461);
 let u = (e) => {
     var t, i, u;
-    let { channel: j, onClose: x, transitionState: b } = e,
+    let { channel: j, onClose: b, transitionState: x } = e,
         [h, p] = n.useState(null != (u = j.defaultReactionEmoji) ? u : null),
         [v, f] = n.useState(!1),
-        [N, g] = n.useState(!1),
-        y = (null == (t = j.defaultReactionEmoji) ? void 0 : t.emojiId) !== (null == h ? void 0 : h.emojiId) || (null == (i = j.defaultReactionEmoji) ? void 0 : i.emojiName) !== (null == h ? void 0 : h.emojiName),
-        k = (e) => {
+        [g, N] = n.useState(!1),
+        y = n.useRef(null),
+        k = (null == (t = j.defaultReactionEmoji) ? void 0 : t.emojiId) !== (null == h ? void 0 : h.emojiId) || (null == (i = j.defaultReactionEmoji) ? void 0 : i.emojiName) !== (null == h ? void 0 : h.emojiName),
+        O = (e) => {
             p(
                 null == e
                     ? null
@@ -30,20 +31,20 @@ let u = (e) => {
                         }
             );
         },
-        O = async () => {
-            if (y) {
-                f(!0), g(!1);
+        w = async () => {
+            if (k) {
+                f(!0), N(!1);
                 try {
-                    await (0, r.wk)(j.id, { defaultReactionEmoji: h }), x();
+                    await (0, r.wk)(j.id, { defaultReactionEmoji: h }), b();
                 } catch (e) {
-                    g(!0);
+                    N(!0);
                 } finally {
                     f(!1);
                 }
             }
         };
     return (0, o.jsxs)(l.Y0X, {
-        transitionState: b,
+        transitionState: x,
         'aria-label': d.intl.string(d.t.XlDE3t),
         children: [
             (0, o.jsx)(l.xBx, {
@@ -66,13 +67,14 @@ let u = (e) => {
                         className: m.buttonRow,
                         children: [
                             (0, o.jsx)(l.yRy, {
+                                targetElementRef: y,
                                 renderPopout: (e) => {
                                     let { closePopout: t } = e;
                                     return (0, o.jsx)(a.Z, {
                                         guildId: null == j ? void 0 : j.guild_id,
                                         closePopout: t,
                                         onSelectEmoji: (e, i) => {
-                                            k(e), i && t();
+                                            O(e), i && t();
                                         },
                                         pickerIntention: c.Hz.COMMUNITY_CONTENT,
                                         channel: j
@@ -112,6 +114,7 @@ let u = (e) => {
                                         })({}, e)),
                                         (i = i =
                                             {
+                                                buttonRef: y,
                                                 size: l.zxk.Sizes.SMALL,
                                                 onClick: (t) => {
                                                     var i;
@@ -138,7 +141,7 @@ let u = (e) => {
                             null != j.defaultReactionEmoji
                                 ? (0, o.jsx)(l.zxk, {
                                       className: m.removeButton,
-                                      onClick: () => k(null),
+                                      onClick: () => O(null),
                                       size: l.zxk.Sizes.MIN,
                                       look: l.zxk.Looks.LINK,
                                       color: l.zxk.Colors.RED,
@@ -147,7 +150,7 @@ let u = (e) => {
                                 : null
                         ]
                     }),
-                    N
+                    g
                         ? (0, o.jsx)('div', {
                               className: m.__invalid_row,
                               children: (0, o.jsx)(l.Text, {
@@ -167,8 +170,8 @@ let u = (e) => {
                         color: l.zxk.Colors.BRAND,
                         size: l.zxk.Sizes.SMALL,
                         className: m.button,
-                        onClick: O,
-                        disabled: !y,
+                        onClick: w,
+                        disabled: !k,
                         submitting: v,
                         autoFocus: !0,
                         children: d.intl.string(d.t.R3BPHx)
@@ -177,7 +180,7 @@ let u = (e) => {
                         color: l.zxk.Colors.PRIMARY,
                         size: l.zxk.Sizes.SMALL,
                         className: m.button,
-                        onClick: x,
+                        onClick: b,
                         children: d.intl.string(d.t['ETE/oK'])
                     })
                 ]

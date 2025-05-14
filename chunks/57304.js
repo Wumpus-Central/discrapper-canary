@@ -70,23 +70,25 @@ let x = function (e) {
         [y, C] = i.useState(!1),
         v = (0, l.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]),
         j = (0, s.Aq)(),
-        O = i.useCallback(() => {
+        O = i.useRef(null),
+        E = i.useCallback(() => {
             x || C((e) => !e);
         }, [x]);
-    function E(e) {
+    function I(e) {
         (null == e ? void 0 : e.shiftKey) || j.dispatch(m.CkL.POPOUT_CLOSE);
     }
     return (
         i.useEffect(
             () => (
-                h.S.subscribe(m.CkL.TOGGLE_CHANNEL_PINS, O),
+                h.S.subscribe(m.CkL.TOGGLE_CHANNEL_PINS, E),
                 () => {
-                    h.S.unsubscribe(m.CkL.TOGGLE_CHANNEL_PINS, O);
+                    h.S.unsubscribe(m.CkL.TOGGLE_CHANNEL_PINS, E);
                 }
             ),
-            [O]
+            [E]
         ),
         (0, r.jsx)(o.yRy, {
+            targetElementRef: O,
             shouldShow: y,
             animation: o.yRy.Animation.NONE,
             position: 'bottom',
@@ -98,7 +100,7 @@ let x = function (e) {
                 return (0, r.jsx)(
                     a.Z,
                     _(b({}, e), {
-                        onJump: E,
+                        onJump: I,
                         channel: t
                     })
                 );
@@ -109,7 +111,8 @@ let x = function (e) {
                 return (0, r.jsx)(
                     f.JO,
                     _(b({}, e), {
-                        onClick: O,
+                        ref: O,
+                        onClick: E,
                         tooltip: i ? null : g.intl.string(g.t['mp1N//']),
                         icon: o.qQX,
                         iconSize: n ? 20 : void 0,

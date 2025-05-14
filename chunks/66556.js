@@ -13,7 +13,8 @@ var r = n(255367),
 function f(e) {
     let { channel: t } = e,
         [n, f] = i.useState(!1),
-        m = (0, l.e7)(
+        m = i.useRef(null),
+        g = (0, l.e7)(
             [s.Z, c.default],
             () => {
                 let e = c.default.getCurrentUser();
@@ -21,25 +22,26 @@ function f(e) {
             },
             [t]
         ),
-        g = i.useCallback(() => {
+        b = i.useCallback(() => {
             f(!1);
         }, []),
-        b = i.useCallback(() => {
+        _ = i.useCallback(() => {
             n || (0, u.U4)('Popout'), f(!n);
         }, [n]);
     return (0, r.jsx)(o.yRy, {
+        targetElementRef: m,
         animation: o.yRy.Animation.NONE,
         position: 'bottom',
         align: 'right',
         autoInvert: !1,
         shouldShow: n,
-        onRequestClose: g,
+        onRequestClose: b,
         renderPopout: function () {
             return (0, r.jsx)(o.VqE, {
                 children: (0, r.jsx)(d.Z, {
                     className: h.browser,
                     channel: t,
-                    onClose: g
+                    onClose: b
                 })
             });
         },
@@ -76,12 +78,13 @@ function f(e) {
                 })({}, e)),
                 (i = i =
                     {
+                        ref: m,
                         className: h.icon,
-                        onClick: b,
+                        onClick: _,
                         icon: o.or_,
                         'aria-label': p.intl.string(p.t.B2panJ),
                         tooltip: l ? null : p.intl.string(p.t.B2panJ),
-                        disabled: m,
+                        disabled: g,
                         selected: l
                     }),
                 Object.getOwnPropertyDescriptors

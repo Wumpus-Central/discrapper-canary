@@ -25,24 +25,22 @@ function g(e) {
             (0, r.jsxs)('div', {
                 className: i()(h.sectionContainer, { [h.reducedGap]: g }),
                 children: [
-                    (0, r.jsxs)('div', {
+                    (0, r.jsx)('div', {
                         className: h.infoSection,
-                        children: [
-                            (0, r.jsx)(l.X6, {
+                        children: (0, r.jsx)(s.Z, {
+                            application: a,
+                            mutualGuilds: _,
+                            mutualGuildShownMax: 3,
+                            className: h.guildCountContainer,
+                            guildIconSize: s.x.SMALL,
+                            guildsClassName: h.guildsIconContainer,
+                            compact: !0,
+                            children: (0, r.jsx)(l.X6, {
                                 variant: 'heading-sm/semibold',
                                 color: 'header-primary',
                                 children: m.intl.string(m.t['3NxHCw'])
-                            }),
-                            (0, r.jsx)(s.Z, {
-                                application: a,
-                                mutualGuilds: _,
-                                mutualGuildShownMax: 3,
-                                className: h.guildCountContainer,
-                                guildIconSize: s.x.SMALL,
-                                guildsClassName: h.guildsIconContainer,
-                                compact: !0
                             })
-                        ]
+                        })
                     }),
                     (0, r.jsx)(c.Z, {
                         application: a,

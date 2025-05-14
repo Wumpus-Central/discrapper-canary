@@ -66,12 +66,14 @@ function I(e, t) {
 }
 function S(e) {
     let { channel: t } = e,
-        [n, l] = i.useState(!1);
-    function o() {
+        [n, l] = i.useState(!1),
+        o = i.useRef(null);
+    function a() {
         l((e) => !e);
     }
-    let a = O.intl.string(O.t.UKOtz8);
+    let c = O.intl.string(O.t.UKOtz8);
     return (0, r.jsx)(s.yRy, {
+        targetElementRef: o,
         shouldShow: n,
         animation: s.yRy.Animation.NONE,
         position: 'bottom',
@@ -86,10 +88,11 @@ function S(e) {
             return (0, r.jsx)(
                 y.ZP.Icon,
                 I(E({}, e), {
-                    onClick: o,
-                    tooltip: n ? null : a,
+                    ref: o,
+                    onClick: a,
+                    tooltip: n ? null : c,
                     icon: s.xhG,
-                    'aria-label': a,
+                    'aria-label': c,
                     selected: n
                 })
             );

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => tr }), n(388685), n(35282), n(781311), n(997841);
+n.d(t, { Z: () => ti }), n(388685), n(35282), n(781311), n(997841);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -155,36 +155,41 @@ function e5(e, t) {
         e
     );
 }
-function e4(e) {
-    e.preventDefault();
-}
-let e6 = /^\+(?!\w+):?(?!:)(\w+)?:?$/;
-function e9(e) {
-    var { isSidebar: t } = e,
-        n = (function (e, t) {
+function e4(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                i = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        r,
-                        i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-            }
+                i = {},
+                l = Object.keys(e);
+            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
             return i;
-        })(e, ['isSidebar']);
+        })(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var l = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function e6(e) {
+    e.preventDefault();
+}
+let e9 = /^\+(?!\w+):?(?!:)(\w+)?:?$/;
+function te(e) {
+    var { isSidebar: t } = e,
+        n = e4(e, ['isSidebar']);
     return t ? (0, r.jsx)('section', e5(e8({}, n), { role: 'complementary' })) : (0, r.jsx)('main', e8({}, n));
 }
-let te = i.forwardRef((e, t) => (0, r.jsx)(tt, e5(e8({}, e), { refInstance: t })));
-te.displayName = 'ChannelTextAreaForm';
-class tt extends i.PureComponent {
+let tt = (e) => {
+    let { ref: t } = e,
+        n = e4(e, ['ref']);
+    return (0, r.jsx)(tn, e5(e8({}, n), { refInstance: t }));
+};
+tt.displayName = 'ChannelTextAreaForm';
+class tn extends i.PureComponent {
     componentDidMount() {
         eZ.Z.addChangeListener(this.draftDidChange);
     }
@@ -269,6 +274,7 @@ class tt extends i.PureComponent {
                 pendingScheduledMessage: _
             });
         return (0, r.jsx)(p.yRy, {
+            targetElementRef: this.props.refInstance,
             position: 'top',
             onRequestClose: () => {
                 var e;
@@ -356,7 +362,7 @@ class tt extends i.PureComponent {
                 } = this.props;
                 h.Z.changeDraft(i, t, eZ.d.ChannelMessage);
                 let l = '' !== t && n !== this.state.richValue,
-                    o = l && !e6.test(t) && !t.startsWith('/') && (!this.isFirstChange || t !== this.state.textValue);
+                    o = l && !e9.test(t) && !t.startsWith('/') && (!this.isFirstChange || t !== this.state.textValue);
                 (this.isFirstChange = !1),
                     o && this.state.textValue.length < t.length && this.handleIncrementCombo(),
                     o ? m.Z.startTyping(i) : '' === t && m.Z.stopTyping(i),
@@ -572,7 +578,7 @@ class tt extends i.PureComponent {
             );
     }
 }
-class tn extends i.PureComponent {
+class tr extends i.PureComponent {
     static getDerivedStateFromProps(e, t) {
         let { channel: n } = e,
             { currentChannelId: r } = t;
@@ -611,7 +617,7 @@ class tn extends i.PureComponent {
                         tutorialId: 'writing-messages',
                         position: 'left',
                         offsetX: 75,
-                        children: (0, r.jsx)(te, {
+                        children: (0, r.jsx)(tt, {
                             ref: this.channelTextAreaFormRef,
                             focused: k,
                             highlighted: M,
@@ -675,7 +681,7 @@ class tn extends i.PureComponent {
                                     event: e0.CkL.OPEN_APP_LAUNCHER,
                                     handler: this.handleOpenAppLauncher
                                 }),
-                                (0, r.jsxs)(e9, {
+                                (0, r.jsxs)(te, {
                                     isSidebar: L,
                                     className: o()(e2.chatContent, {
                                         [e2.hasWallpaper]: null == w ? void 0 : w.isViewable,
@@ -722,7 +728,7 @@ class tn extends i.PureComponent {
                                                       ? t
                                                       : (0, r.jsxs)('form', {
                                                             ref: this.inputFormRef,
-                                                            onSubmit: e4,
+                                                            onSubmit: e6,
                                                             className: o()(e2.form, { [e2.formWithLoadedChatInput]: !G }),
                                                             children: [
                                                                 C && (0, r.jsx)(ef.Z, { channelId: i.id }),
@@ -863,7 +869,7 @@ class tn extends i.PureComponent {
             });
     }
 }
-let tr = i.memo(function (e) {
+let ti = i.memo(function (e) {
     let { channel: t, guild: n, chatInputType: l, filterAfterTimestamp: o } = e,
         { placeholder: a, accessibilityLabel: s } = (0, ez.Z)({ channel: t }),
         c = (0, eg.S)(eM.default.getCurrentUser(), t),
@@ -914,7 +920,7 @@ let tr = i.memo(function (e) {
         H = (0, d.e7)([eR.Z], () => eR.Z.getVoiceChannelId()),
         V = (0, d.e7)([eP.Z], () => eP.Z.getChannel(H)),
         z = (0, d.e7)([eM.default], () => (t.type !== e0.d4z.DM ? null : eM.default.getUser(t.getRecipientId())));
-    return (0, r.jsx)(tn, {
+    return (0, r.jsx)(tr, {
         channel: t,
         isEditing: null != (0, d.e7)([eN.Z], () => eN.Z.getEditingMessageId(t.id)),
         hasModalOpen: (0, p.s9z)(p.JQI),

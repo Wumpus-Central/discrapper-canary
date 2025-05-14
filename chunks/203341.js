@@ -71,17 +71,19 @@ function E(e) {
         P = (0, a.s9z)(a.JQI),
         Z = (0, m.Z)().filter((e) => e.twoWayLink),
         [N, T] = i.useState(!1),
-        A = y.WtW.VOICE !== I && [y.AEg.NO_CHAT, y.AEg.FULL_SCREEN].includes(S) ? 'top' : 'bottom',
-        w = [];
+        A = i.useRef(null),
+        w = y.WtW.VOICE !== I && [y.AEg.NO_CHAT, y.AEg.FULL_SCREEN].includes(S) ? 'top' : 'bottom',
+        R = [];
     return (
-        Z.length > 0 && w.push(o.z.DONUT_DESKTOP_NUX),
+        Z.length > 0 && R.push(o.z.DONUT_DESKTOP_NUX),
         (0, r.jsx)(c.ZP, {
-            contentTypes: w,
+            contentTypes: R,
             children: (e) => {
                 let { visibleContent: i, markAsDismissed: l } = e,
                     s = i === o.z.DONUT_DESKTOP_NUX;
                 return (0, r.jsx)(a.yRy, {
-                    position: A,
+                    targetElementRef: A,
+                    position: w,
                     spacing: s ? 16 : void 0,
                     positionKey: ''.concat(I, ':').concat(S),
                     onRequestClose: () => T(!1),
@@ -91,7 +93,7 @@ function E(e) {
                         return (0, r.jsx)(u.Z, {
                             children: s
                                 ? (0, r.jsx)(g.Z, {
-                                      popoutPosition: A,
+                                      popoutPosition: w,
                                       onDismiss: () => l(C.L.UNKNOWN),
                                       onAccept: () => {
                                           l(C.L.UNKNOWN), T(!0);
@@ -137,6 +139,7 @@ function E(e) {
                             })({}, e, n)),
                             (i = i =
                                 {
+                                    ref: A,
                                     onClick: () => T(!0),
                                     label: null != O ? (O === x.YE.XBOX ? v.intl.string(v.t.T0uYKy) : v.intl.string(v.t.FWAzS0)) : v.intl.string(v.t['mbi/fH']),
                                     iconComponent: (0, b.Z)(O)

@@ -57,8 +57,10 @@ function d(e) {
 }
 function u() {
     let e = (0, l.s)(),
-        t = (0, s.eJ)(e.sortOption);
+        t = (0, s.eJ)(e.sortOption),
+        r = i.useRef(null);
     return (0, n.jsx)(o.yRy, {
+        targetElementRef: r,
         renderPopout: (t) => {
             let { closePopout: r } = t;
             return (0, n.jsx)(d, {
@@ -68,12 +70,12 @@ function u() {
         },
         position: 'bottom',
         align: 'left',
-        children: (e, r) => {
-            var i, l;
-            let { isShown: s } = r;
+        children: (e, i) => {
+            var l, s;
+            let { isShown: d } = i;
             return (0, n.jsxs)(
                 o.zxk,
-                ((i = (function (e) {
+                ((l = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var r = null != arguments[t] ? arguments[t] : {},
                             n = Object.keys(r);
@@ -98,8 +100,9 @@ function u() {
                     }
                     return e;
                 })({}, e)),
-                (l = l =
+                (s = s =
                     {
+                        buttonRef: r,
                         size: o.zxk.Sizes.MIN,
                         color: o.zxk.Colors.CUSTOM,
                         className: a.sortDropdown,
@@ -119,7 +122,7 @@ function u() {
                                 color: 'header-primary',
                                 children: t
                             }),
-                            s
+                            d
                                 ? (0, n.jsx)(o.u04, {
                                       size: 'custom',
                                       color: 'currentColor',
@@ -133,7 +136,7 @@ function u() {
                         ]
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
+                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(s))
                     : (function (e, t) {
                           var r = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -141,10 +144,10 @@ function u() {
                               r.push.apply(r, n);
                           }
                           return r;
-                      })(Object(l)).forEach(function (e) {
-                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(l, e));
+                      })(Object(s)).forEach(function (e) {
+                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(s, e));
                       }),
-                i)
+                l)
             );
         }
     });

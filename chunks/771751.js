@@ -116,10 +116,10 @@ function T(e) {
     let A = null != P,
         L = null != P && new Date(P).getTime() < Date.now(),
         D = (null == I ? void 0 : I.sku_id) === j.Si.TIER_0,
-        M = async () => {
-            N(!0), A ? await z({ expiresAt: null }) : await (0, d.a)(u), p(), N(!1);
+        z = async () => {
+            N(!0), A ? await M({ expiresAt: null }) : await (0, d.a)(u), p(), N(!1);
         },
-        z = async (e) => {
+        M = async (e) => {
             let { expiresAt: t } = e;
             N(!0);
             try {
@@ -152,30 +152,18 @@ function T(e) {
     }, [b, g]);
     let B = 'Active';
     return (
-        A && (B = 'Acknowledged'),
+        A && (B = 'Acked'),
         L && (B = 'Expired'),
         (0, a.jsxs)('div', {
             className: i()(_.card, D ? _.gradientWrapperTier0 : _.gradientWrapperTier2),
             children: [
-                (0, a.jsxs)('div', {
+                (0, a.jsx)('div', {
                     className: i()(_.row, _.nameRow),
-                    children: [
-                        (0, a.jsx)(c.X6q, {
-                            variant: 'heading-lg/semibold',
-                            color: 'always-white',
-                            children: Z
-                        }),
-                        (0, a.jsx)(c.P3F, {
-                            onClick: async () => {
-                                N(!0), await O(T, 'trial'), p(), N(!1);
-                            },
-                            children: (0, a.jsx)(c.XHJ, {
-                                size: 'md',
-                                color: 'currentColor',
-                                className: i()(_.icon, _.trashIcon)
-                            })
-                        })
-                    ]
+                    children: (0, a.jsx)(c.X6q, {
+                        variant: 'heading-lg/semibold',
+                        color: 'always-white',
+                        children: Z
+                    })
                 }),
                 (0, a.jsxs)(c.P3F, {
                     className: i()(_.row, _.idRow),
@@ -192,7 +180,7 @@ function T(e) {
                             ? (0, a.jsx)(c.dz2, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: i()(_.icon, _.noMargin)
+                                  className: _.icon
                               })
                             : (0, a.jsx)(c.TIy, {
                                   size: 'xs',
@@ -216,7 +204,7 @@ function T(e) {
                             ? (0, a.jsx)(c.dz2, {
                                   size: 'md',
                                   color: 'currentColor',
-                                  className: i()(_.icon, _.noMargin)
+                                  className: _.icon
                               })
                             : (0, a.jsx)(c.TIy, {
                                   size: 'xs',
@@ -252,7 +240,7 @@ function T(e) {
                         (0, a.jsx)('input', {
                             type: 'date',
                             value: null != P ? P.substring(0, 10) : '',
-                            onChange: (e) => z({ expiresAt: e.target.value })
+                            onChange: (e) => M({ expiresAt: e.target.value })
                         })
                     ]
                 }),
@@ -260,20 +248,20 @@ function T(e) {
                     className: _.badgeContainer,
                     children: [
                         (0, a.jsx)(c.P3F, {
-                            onClick: M,
+                            onClick: z,
                             className: i()(_.badge, _.clickable, {
                                 [_.acked]: A,
                                 [_.expired]: L
                             }),
                             children: (0, a.jsx)(c.Text, {
                                 variant: 'eyebrow',
-                                color: 'Acknowledged' === B ? void 0 : 'always-white',
+                                color: 'Acked' === B ? void 0 : 'always-white',
                                 children: B
                             })
                         }),
                         null != w &&
                             (0, a.jsx)('div', {
-                                className: i()(_.badge, _.__invalid_badgeBottom, _.redeemed),
+                                className: i()(_.badge, _.redeemed),
                                 children: (0, a.jsx)(c.Text, {
                                     variant: 'eyebrow',
                                     color: 'always-white',
@@ -281,6 +269,16 @@ function T(e) {
                                 })
                             })
                     ]
+                }),
+                (0, a.jsx)(c.P3F, {
+                    onClick: async () => {
+                        N(!0), await O(T, 'trial'), p(), N(!1);
+                    },
+                    children: (0, a.jsx)(c.XHJ, {
+                        size: 'md',
+                        color: 'currentColor',
+                        className: i()(_.icon, _.trashIcon)
+                    })
                 }),
                 (0, a.jsx)('div', {
                     className: i()(_.loadingContainer, { [_.isLoading]: C || E }),
@@ -358,7 +356,7 @@ function P(e) {
     let Z = 'Active';
     return (
         k && (Z = 'Expired'),
-        w && (Z = 'Acknowledged'),
+        w && (Z = 'Acked'),
         (0, a.jsxs)('div', {
             className: i()(_.card, _.discount),
             children: [
@@ -464,13 +462,13 @@ function P(e) {
                             }),
                             children: (0, a.jsx)(c.Text, {
                                 variant: 'eyebrow',
-                                color: 'Acknowledged' === Z ? void 0 : 'always-white',
+                                color: 'Acked' === Z ? void 0 : 'always-white',
                                 children: Z
                             })
                         }),
                         null != E &&
                             (0, a.jsx)('div', {
-                                className: i()(_.badge, _.__invalid_badgeBottom, _.redeemed),
+                                className: i()(_.badge, _.redeemed),
                                 children: (0, a.jsx)(c.Text, {
                                     variant: 'eyebrow',
                                     color: 'always-white',
@@ -497,14 +495,14 @@ function w() {
         [I, R] = r.useState(!0),
         [Z, A] = r.useState(10080),
         [L, D] = r.useState([]),
-        { entitlements: M, deleteFractionalPremium: z, refreshEntitlementList: B } = (0, f.m)();
+        { entitlements: z, deleteFractionalPremium: M, refreshEntitlementList: B } = (0, f.m)();
     r.useEffect(() => {
         B();
     }, [B]);
     let U = (e) => e.filter((e) => e.sourceType === v.kNB.REVERSE_TRIAL && null != e.endsAt && e.endsAt > new Date());
     r.useEffect(() => {
-        D(U(M));
-    }, [M]),
+        D(U(z));
+    }, [z]),
         r.useEffect(() => {
             (0 === e.length || 0 === n.length || I) &&
                 y().then((e) => {
@@ -730,7 +728,7 @@ function w() {
                                         {
                                             entitlement: e,
                                             active: !0,
-                                            onDelete: () => z(e.id)
+                                            onDelete: () => M(e.id)
                                         },
                                         e.id
                                     )

@@ -71,13 +71,13 @@ let v = {
     };
 function j(e) {
     var t, n, r;
-    let { application: l, mutualGuilds: c, mutualGuildShownMax: h = 4, className: j, textVariant: y = 'text-sm/normal', compact: I, guildIconSize: O = x.LARGE, guildsClassName: P } = e,
-        S = (0, o.e7)([p.default], () => p.default.locale),
-        E = new Intl.ListFormat(S),
-        N = null != (n = null == (t = l.directory_entry) ? void 0 : t.guild_count) ? n : 0,
-        T = null != (r = null == c ? void 0 : c.length) ? r : 0,
-        A = Math.max(0, N - T),
-        { shownMutualGuilds: L, hiddenMutualGuilds: R } = i.useMemo(() => {
+    let { application: l, mutualGuilds: c, mutualGuildShownMax: h = 4, className: j, textVariant: y = 'text-sm/normal', compact: I, guildIconSize: O = x.LARGE, guildsClassName: P, children: S } = e,
+        E = (0, o.e7)([p.default], () => p.default.locale),
+        N = new Intl.ListFormat(E),
+        T = null != (n = null == (t = l.directory_entry) ? void 0 : t.guild_count) ? n : 0,
+        A = null != (r = null == c ? void 0 : c.length) ? r : 0,
+        L = Math.max(0, T - A),
+        { shownMutualGuilds: R, hiddenMutualGuilds: Z } = i.useMemo(() => {
             let e = [],
                 t = [];
             return (
@@ -92,8 +92,8 @@ function j(e) {
                 }
             );
         }, [c, h]),
-        Z = R.length,
-        k = (function (e, t, n, r, a) {
+        k = Z.length,
+        w = (function (e, t, n, r, a) {
             if (0 === t && 0 === e) return null;
             if (t > 0 && 0 === n) return g.intl.formatToPlainString(g.t.pnzE1t, { mutualGuildCount: t });
             let i = t > 0 ? g.t.YR8PSE : g.t.GQjq6e,
@@ -106,84 +106,89 @@ function j(e) {
                 mutualGuildCount: t,
                 nonMutualGuildCount: l.format(n)
             });
-        })(N, T, A, S, I);
-    return 0 === L.length && null == k
+        })(T, A, L, E, I);
+    return 0 === R.length && null == w
         ? null
-        : (0, a.jsxs)('div', {
-              className: s()(j, _.wrapper),
+        : (0, a.jsxs)(a.Fragment, {
               children: [
-                  (0, a.jsx)('div', {
-                      className: s()(_.icons, P),
-                      children:
-                          L.length > 0
-                              ? (0, a.jsxs)(a.Fragment, {
-                                    children: [
-                                        L.map((e, t) => {
-                                            let n = t === L.length - 1 && 0 === Z,
-                                                r = m.ZP.getGuildIconURL({
-                                                    id: e.id,
-                                                    icon: e.icon,
-                                                    size: O,
-                                                    canAnimate: !1
+                  S,
+                  (0, a.jsxs)('div', {
+                      className: s()(j, _.wrapper),
+                      children: [
+                          (0, a.jsx)('div', {
+                              className: s()(_.icons, P),
+                              children:
+                                  R.length > 0
+                                      ? (0, a.jsxs)(a.Fragment, {
+                                            children: [
+                                                R.map((e, t) => {
+                                                    let n = t === R.length - 1 && 0 === k,
+                                                        r = m.ZP.getGuildIconURL({
+                                                            id: e.id,
+                                                            icon: e.icon,
+                                                            size: O,
+                                                            canAnimate: !1
+                                                        }),
+                                                        l = (0, a.jsx)(d.ua7, {
+                                                            text: e.name,
+                                                            position: 'top',
+                                                            children: (e) =>
+                                                                (0, a.jsx)(
+                                                                    'img',
+                                                                    b(f({}, e), {
+                                                                        className: s()(_.icon, C[O]),
+                                                                        src: r,
+                                                                        alt: ''
+                                                                    })
+                                                                )
+                                                        });
+                                                    return n
+                                                        ? (0, a.jsx)(i.Fragment, { children: l }, e.id)
+                                                        : (0, a.jsx)(
+                                                              u.ZP,
+                                                              {
+                                                                  className: _.iconMask,
+                                                                  height: O,
+                                                                  width: O,
+                                                                  mask: u.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
+                                                                  children: l
+                                                              },
+                                                              e.id
+                                                          );
                                                 }),
-                                                l = (0, a.jsx)(d.ua7, {
-                                                    text: e.name,
-                                                    position: 'top',
-                                                    children: (e) =>
-                                                        (0, a.jsx)(
-                                                            'img',
-                                                            b(f({}, e), {
-                                                                className: s()(_.icon, C[O]),
-                                                                src: r,
-                                                                alt: ''
-                                                            })
-                                                        )
-                                                });
-                                            return n
-                                                ? (0, a.jsx)(i.Fragment, { children: l }, e.id)
-                                                : (0, a.jsx)(
-                                                      u.ZP,
-                                                      {
-                                                          className: _.iconMask,
-                                                          height: O,
-                                                          width: O,
-                                                          mask: u.ZP.Masks.VOICE_USER_SUMMARY_ITEM,
-                                                          children: l
-                                                      },
-                                                      e.id
-                                                  );
-                                        }),
-                                        Z > 0
-                                            ? (0, a.jsx)(d.ua7, {
-                                                  text: g.intl.formatToPlainString(g.t.m6oRrK, { appNames: E.format(R.map((e) => e.name)) }),
-                                                  position: 'top',
-                                                  children: (e) =>
-                                                      (0, a.jsxs)(
-                                                          'div',
-                                                          b(f({}, e), {
-                                                              className: s()(_.moreGuilds, v[O]),
-                                                              children: ['+', Z]
-                                                          })
-                                                      )
-                                              })
-                                            : null
-                                    ]
+                                                k > 0
+                                                    ? (0, a.jsx)(d.ua7, {
+                                                          text: g.intl.formatToPlainString(g.t.m6oRrK, { appNames: N.format(Z.map((e) => e.name)) }),
+                                                          position: 'top',
+                                                          children: (e) =>
+                                                              (0, a.jsxs)(
+                                                                  'div',
+                                                                  b(f({}, e), {
+                                                                      className: s()(_.moreGuilds, v[O]),
+                                                                      children: ['+', k]
+                                                                  })
+                                                              )
+                                                      })
+                                                    : null
+                                            ]
+                                        })
+                                      : (0, a.jsx)(d.QTo, {
+                                            size: 'custom',
+                                            color: 'currentColor',
+                                            width: O,
+                                            height: O,
+                                            className: _.defaultIcon
+                                        })
+                          }),
+                          null != w
+                              ? (0, a.jsx)(d.Text, {
+                                    variant: y,
+                                    color: 'header-secondary',
+                                    children: w
                                 })
-                              : (0, a.jsx)(d.QTo, {
-                                    size: 'custom',
-                                    color: 'currentColor',
-                                    width: O,
-                                    height: O,
-                                    className: _.defaultIcon
-                                })
-                  }),
-                  null != k
-                      ? (0, a.jsx)(d.Text, {
-                            variant: y,
-                            color: 'header-secondary',
-                            children: k
-                        })
-                      : null
+                              : null
+                      ]
+                  })
               ]
           });
 }

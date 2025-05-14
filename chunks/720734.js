@@ -168,20 +168,21 @@ let te = eJ.ZP.getEnableHardwareAcceleration() ? f.Xo$ : f.qEK,
     tn = 3 * eK.Z.Millis.SECOND,
     ti = 30 * eK.Z.Millis.DAY;
 function tr(e) {
-    let { speaking: t, streaming: n, currentUser: s, status: a, handleClick: o, handleMouseLeave: c, renderNameTag: d, nameplate: u, 'data-jump-section': m } = e,
-        g = r.useRef(null),
-        p = (0, X.Q3)('RTC Avatar'),
-        { coloredIconsEnabled: h } = (0, eS.Z)({ location: 'RTC Avatar' }),
-        b = (0, R.Z)(null == s ? void 0 : s.avatarDecoration),
-        _ = (0, ez.NZ)({
-            avatarDecoration: b,
+    let { ref: t, speaking: n, streaming: s, currentUser: a, status: o, handleClick: c, handleMouseLeave: d, renderNameTag: u, nameplate: m, 'data-jump-section': g } = e,
+        p = r.useRef(null),
+        h = null != t ? t : p,
+        b = (0, X.Q3)('RTC Avatar'),
+        { coloredIconsEnabled: _ } = (0, eS.Z)({ location: 'RTC Avatar' }),
+        x = (0, R.Z)(null == a ? void 0 : a.avatarDecoration),
+        C = (0, ez.NZ)({
+            avatarDecoration: x,
             size: (0, D.y9)(f.EFr.SIZE_32)
         }),
-        x = (0, f.dQu)(f.TVs.modules.guildbar.AVATAR_SIZE),
+        j = (0, f.dQu)(f.TVs.modules.guildbar.AVATAR_SIZE),
         {
-            updateOpenPopoutRef: C,
-            highlightBadge: j,
-            setHighlightBadge: O
+            updateOpenPopoutRef: O,
+            highlightBadge: v,
+            setHighlightBadge: T
         } = (function () {
             let e = r.useRef(null),
                 t = r.useCallback((t) => {
@@ -213,17 +214,17 @@ function tr(e) {
                 }
             );
         })(),
-        v = (0, ea.A)(u);
-    return null == s
+        I = (0, ea.A)(m);
+    return null == a
         ? null
         : (0, i.jsx)(E.Z, {
               object: e3.qAy.AVATAR,
               children: (0, i.jsx)(ej.Z, {
-                  user: s,
-                  targetElementRef: g,
+                  user: a,
+                  targetElementRef: h,
                   clickTrap: !0,
                   preload: () =>
-                      (0, eE.Z)(s.id, s.getAvatarURL(void 0, ej.I), {
+                      (0, eE.Z)(a.id, a.getAvatarURL(void 0, ej.I), {
                           type: 'account_popout',
                           withMutualGuilds: !1,
                           withMutualFriends: !1
@@ -231,8 +232,8 @@ function tr(e) {
                   renderPopout: (e, t) => {
                       let { closePopout: n, setPopoutRef: r } = e;
                       return (0, i.jsx)(es.Z, {
-                          currentUser: s,
-                          highlightBadge: j,
+                          currentUser: a,
+                          highlightBadge: v,
                           openedAt: t,
                           onClose: () => {
                               null == n || n();
@@ -246,41 +247,41 @@ function tr(e) {
                   spacing: 14,
                   fixed: !0,
                   onRequestClose: () => {
-                      c(), O(void 0);
+                      d(), T(void 0);
                   },
                   children: (e) => (
-                      C(e),
+                      O(e),
                       (0, i.jsxs)(
                           f.P3F,
                           e9(
                               e7(
                                   {
-                                      innerRef: g,
-                                      style: v
+                                      innerRef: h,
+                                      style: I
                                   },
                                   e
                               ),
                               {
                                   onClick: (t) => {
                                       var n;
-                                      null == (n = e.onClick) || n.call(e, t), null == o || o(t);
+                                      null == (n = e.onClick) || n.call(e, t), null == c || c(t);
                                   },
                                   'aria-label': e2.intl.string(e2.t['3Uj+2t']),
-                                  'data-jump-section': p ? m : void 0,
-                                  className: l()(e5.avatarWrapper, !p && h && e5.experiment, { [e5.plated]: null != u }),
+                                  'data-jump-section': b ? g : void 0,
+                                  className: l()(e5.avatarWrapper, !b && _ && e5.experiment, { [e5.plated]: null != m }),
                                   children: [
                                       (0, i.jsx)(te, {
-                                          size: p ? f.EFr['SIZE_'.concat(x)] : f.EFr.SIZE_32,
-                                          src: s.getAvatarURL(void 0, p ? x - 4 : 32, !1),
-                                          avatarDecoration: _,
-                                          'aria-label': s.username,
-                                          status: n ? e3.Skl.STREAMING : a,
-                                          isSpeaking: t,
+                                          size: b ? f.EFr['SIZE_'.concat(j)] : f.EFr.SIZE_32,
+                                          src: a.getAvatarURL(void 0, b ? j - 4 : 32, !1),
+                                          avatarDecoration: C,
+                                          'aria-label': a.username,
+                                          status: s ? e3.Skl.STREAMING : o,
+                                          isSpeaking: n,
                                           className: e5.avatar
                                       }),
                                       (0, i.jsx)('div', {
                                           className: l()(e5.nameTag, { [e5.canCopy]: eW.wS }),
-                                          children: d()
+                                          children: u()
                                       })
                                   ]
                               }
@@ -382,6 +383,7 @@ class ts extends r.PureComponent {
         return (0, i.jsx)(
             tr,
             e9(e7({}, this.props), {
+                ref: this.avatarWithPopoutRef,
                 handleClick: n,
                 handleMouseLeave: this.handleMouseLeave,
                 renderNameTag: this.renderNameTag,
@@ -408,6 +410,7 @@ class ts extends r.PureComponent {
                     case c.z.PREMIUM_SUBSCRIPTION_APRIL_MARKETING_DECO_TOOLTIP:
                         return (0, i.jsx)(H.Z, {
                             markAsDismissed: r,
+                            targetElementRef: this.avatarWithPopoutRef,
                             children: () => this.renderAvatarWithPopout({ focusSectionProps: e })
                         });
                     case c.z.EXPIRING_STATUS_COACHMARK:
@@ -424,6 +427,7 @@ class ts extends r.PureComponent {
                     case c.z.CUSTOM_STATUS_PROMPTS_COACHMARK:
                         return (0, i.jsx)(q.Z, {
                             markAsDismissed: r,
+                            targetElementRef: this.avatarWithPopoutRef,
                             children: () => this.renderAvatarWithPopout({ focusSectionProps: e })
                         });
                     default:
@@ -493,6 +497,7 @@ class ts extends r.PureComponent {
                 hoveringOnMute: !1
             }),
             e4(this, 'containerRef', r.createRef()),
+            e4(this, 'avatarWithPopoutRef', r.createRef()),
             e4(this, 'handleToggleSelfMute', () => {
                 let { serverMute: e, suppress: t, selfMute: n } = this.props;
                 (0, U.Z)(e, t, e3.jXE.ACCOUNT_PANEL), (0, V.v)(A.Z.ACCOUNT, V.d.MIC, n);

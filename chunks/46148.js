@@ -49,7 +49,8 @@ let C = (e, t) => {
             L = T === o.z.CHAT_WALLPAPERS_DM_LIST_COACHMARK,
             k = (0, i.useRef)(null),
             M = (0, i.useRef)(null),
-            [U, G] = (0, i.useState)(g.U.TOP);
+            U = (0, i.useRef)(null),
+            [G, B] = (0, i.useState)(g.U.TOP);
         if (
             ((0, i.useLayoutEffect)(() => {
                 if (null === k.current) return;
@@ -57,42 +58,43 @@ let C = (e, t) => {
                     var e, t, n;
                     let r = null == (e = k.current) ? void 0 : e.getBoundingClientRect();
                     if (null == r) return;
-                    let i = null != (n = null == (t = M.current) ? void 0 : t.getBoundingClientRect().height) ? n : 0;
-                    window.innerHeight - r.bottom < i ? G(g.U.BOTTOM) : G(g.U.TOP);
+                    let i = null != (n = null == (t = U.current) ? void 0 : t.getBoundingClientRect().height) ? n : 0;
+                    window.innerHeight - r.bottom < i ? B(g.U.BOTTOM) : B(g.U.TOP);
                 };
                 return e(), window.addEventListener('resize', e), () => window.removeEventListener('resize', e);
             }, [L]),
             !L)
         )
             return t;
-        let B = () => {
+        let V = () => {
                 A(b.L.USER_DISMISS);
             },
-            V = C(R, null != D ? D : null),
-            H = S(V),
-            F = j(V);
+            H = C(R, null != D ? D : null),
+            F = S(H),
+            z = j(H);
         return (0, r.jsx)('div', {
             ref: k,
             children: (0, r.jsx)(s.yRy, {
-                align: U,
+                targetElementRef: M,
+                align: G,
                 position: 'right',
                 shouldShow: L,
-                onRequestClose: B,
+                onRequestClose: V,
                 renderPopout: () =>
                     (0, r.jsx)(g.Z, {
-                        ref: M,
-                        onClose: B,
+                        ref: U,
+                        onClose: V,
                         buttonText: y.intl.string(y.t['+IrDzM']),
-                        header: H,
+                        header: F,
                         art: (0, r.jsx)('img', {
                             src: v.Z,
                             alt: '',
                             className: O.chatWallpaperDMListCoachmarkArt
                         }),
-                        body: F,
-                        align: U
+                        body: z,
+                        align: G
                     }),
-                children: () => t
+                children: () => (0, i.cloneElement)(t, { ref: M })
             })
         });
     };
