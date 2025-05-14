@@ -21,7 +21,7 @@ let O = (e) => {
         [v, C] = (0, i.useState)(!1),
         S = (function (e) {
             let { isForceShowSharingPopout: t } = e,
-                { isEnabled: n, showActivitySharingIndicatorWhenSharing: r } = (0, g.Do)('SharingPrivacyPopout'),
+                { isEnabled: n, showActivitySharingIndicatorWhenSharing: r } = (0, g.D)('SharingPrivacyPopout'),
                 i = (0, u.Ws)({ location: y.dr.CONFLICT_CHECKS }),
                 o = d.G6.useSetting(),
                 s = (0, l.e7)([h.Z], () => h.Z.getLayers().includes(b.S9g.USER_SETTINGS)),

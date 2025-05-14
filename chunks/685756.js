@@ -270,7 +270,7 @@ class D extends a.Z {
             op: e,
             d: t
         });
-        (l.default.isLoggingGatewayEvents || 'canary' === window.GLOBAL_ENV.RELEASE_CHANNEL) && this.logger.info('<~ '.concat(r));
+        l.default.isLoggingGatewayEvents && this.logger.info('<~ '.concat(r));
         try {
             n.send(r);
         } catch (e) {}

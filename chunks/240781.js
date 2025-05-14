@@ -71,7 +71,7 @@ let I = [
                     variant: 'text-xxs/normal',
                     color: 'text-muted',
                     children: [
-                        o ? O.intl.format(O.t.LFVi6O, { dateAcquired: d }) : O.intl.format(O.t.gW9R4O, { date: d }),
+                        o ? O.intl.format(O.t['req+eX'], { dateAcquired: d }) : O.intl.format(O.t.gW9R4O, { date: d }),
                         null != t.expiresAt &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [

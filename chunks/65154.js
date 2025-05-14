@@ -141,7 +141,7 @@ var H = (function (e) {
         return (e.OPUS = 'opus'), (e.VP8 = 'VP8'), (e.VP9 = 'VP9'), (e.H264 = 'H264'), (e.RTX = 'rtx'), (e.TEST = 'TEST'), e;
     })({}),
     z = (function (e) {
-        return (e[(e.NONE = 0)] = 'NONE'), (e[(e.VOICE = 1)] = 'VOICE'), (e[(e.SOUNDSHARE = 2)] = 'SOUNDSHARE'), (e[(e.PRIORITY = 4)] = 'PRIORITY'), e;
+        return (e[(e.NONE = 0)] = 'NONE'), (e[(e.VOICE = 1)] = 'VOICE'), (e[(e.SOUNDSHARE = 2)] = 'SOUNDSHARE'), (e[(e.PRIORITY = 4)] = 'PRIORITY'), (e[(e.HIDDEN = 8)] = 'HIDDEN'), e;
     })({}),
     q = (function (e) {
         return (e.AUDIO = 'audio'), (e.VIDEO = 'video'), (e.SCREEN = 'screen'), (e.TEST = 'test'), e;

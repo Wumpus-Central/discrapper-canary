@@ -221,7 +221,7 @@ function C(e) {
                 return p.intl.string(p.t['f/J8v7']);
             case 3:
                 let c = d.r.build(t.config).defaultInGameTask;
-                if (null != c) return c.description;
+                if (null != c) return c.messages.taskDescription;
         }
     let u = (0, a.I5)(s, _.p9.TIER_2),
         f = (0, l.Kr)(t.config);

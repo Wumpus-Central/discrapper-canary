@@ -1,5 +1,5 @@
 n.d(t, { r: () => u }), n(415506), n(388685);
-var r = n(742635),
+var r = n(754700),
     i = n(319245),
     o = n(918701);
 function a(e, t, n) {
@@ -84,7 +84,12 @@ class u {
         return (0, o.q8)({ config: this.quest }) ? i.W.VIDEO : i.W.GAMEPLAY;
     }
     get defaultInGameTask() {
-        return this.quest.taskConfig.type !== r.L.THIRD_PARTY || 0 === Object.keys(this.quest.taskConfig.tasks).length ? null : Object.values(this.quest.taskConfig.tasks)[0];
+        var e;
+        if (null == this.quest.taskConfigV2) return null;
+        let t = this.quest.taskConfigV2.tasks,
+            n = t[r.X.ACHIEVEMENT_IN_ACTIVITY],
+            i = t[r.X.ACHIEVEMENT_IN_GAME];
+        return null != (e = null != n ? n : i) ? e : null;
     }
     constructor(e) {
         a(this, 'quest', void 0), (this.quest = e);

@@ -70,22 +70,20 @@ function y(e) {
 }
 function O(e) {
     let { onClick: t } = e,
-        { rtcPopoutEnabled: n } = (0, p.SN)('not sharing link'),
-        { rtcPopoutEnabled: i } = (0, p.m_)('not sharing link'),
-        { isEnabled: l, showActivitySharingIndicatorWhenSharing: a } = (0, p.Do)('not sharing link'),
-        c = d.G6.useSetting(),
-        u = (0, o.e7)([h.Z], () => h.Z.getStatus());
-    return n || i || l
-        ? !c || ((i || l) && u === s.Skl.INVISIBLE)
-            ? (0, r.jsx)(y, {
+        { isEnabled: n, showActivitySharingIndicatorWhenSharing: i } = (0, p.D)('not sharing link'),
+        l = d.G6.useSetting(),
+        a = (0, o.e7)([h.Z], () => h.Z.getStatus());
+    return n
+        ? l && a !== s.Skl.INVISIBLE
+            ? i
+                ? (0, r.jsx)(y, {
+                      onClick: t,
+                      children: (0, r.jsx)(_, {})
+                  })
+                : null
+            : (0, r.jsx)(y, {
                   onClick: t,
                   children: (0, r.jsx)(b, {})
               })
-            : a
-              ? (0, r.jsx)(y, {
-                    onClick: t,
-                    children: (0, r.jsx)(_, {})
-                })
-              : null
         : null;
 }

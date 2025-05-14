@@ -427,24 +427,24 @@ function eu(e) {
         eE = (0, _.z)(O),
         ey = i.useMemo(
             () =>
-                null != eE
-                    ? eE
-                    : null != eu
+                null != eu
+                    ? {
+                          label: J.intl.string(J.t['HO/oXl']),
+                          trackingArea: f.j_.VIEW,
+                          onClick: (e) => {
+                              eu(e);
+                          }
+                      }
+                    : null != ep
                       ? {
                             label: J.intl.string(J.t['HO/oXl']),
                             trackingArea: f.j_.VIEW,
                             onClick: (e) => {
-                                eu(e);
+                                ep(e);
                             }
                         }
-                      : null != ep
-                        ? {
-                              label: J.intl.string(J.t['HO/oXl']),
-                              trackingArea: f.j_.VIEW,
-                              onClick: (e) => {
-                                  ep(e);
-                              }
-                          }
+                      : null != eE
+                        ? eE
                         : void 0,
             [eE, eu, ep]
         ),

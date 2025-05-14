@@ -15,8 +15,8 @@ var r = n(255367),
     m = n(357355),
     g = n(104494),
     E = n(639119),
-    b = n(165583),
-    y = n(197115),
+    b = n(767714),
+    y = n(165583),
     O = n(302945),
     v = n(631771),
     I = n(474936),
@@ -107,7 +107,7 @@ function R(e) {
                         intervalCount: null == eh || null == (n = eh.subscription_trial) ? void 0 : n.interval_count
                     });
                 } else null != em && (e = T.intl.formatToPlainString(T.t.bkQ4bG, { percent: em.discount.amount }));
-            return (0, r.jsx)(y.Z, {
+            return (0, r.jsx)(b.Z, {
                 className: ea,
                 showGradient: ei || eo,
                 premiumModalAnalyticsLocation: L,
@@ -156,7 +156,7 @@ function R(e) {
                     children: et
                         ? (0, r.jsx)(l.$jN, {})
                         : eg
-                          ? (0, r.jsx)(b.ZP, {
+                          ? (0, r.jsx)(y.ZP, {
                                 onClose: H,
                                 type: R,
                                 subscriptionTier: null != (o = null == eh || null == (n = eh.subscription_trial) ? void 0 : n.sku_id) ? o : I.Si.TIER_2,
