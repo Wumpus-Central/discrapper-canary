@@ -7743,6 +7743,7 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
 
 .blockquoteContainer__75297 .blockquoteDivider__75297 {
     border-radius: 4px;
+    min-width: 4px;
     width: 4px
 }
 
