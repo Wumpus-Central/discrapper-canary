@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(570140);
 class i {
     static setPermission(e, t) {
@@ -9,4 +9,4 @@ class i {
         });
     }
 }
-let a = i;
+let o = i;

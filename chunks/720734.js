@@ -113,8 +113,8 @@ var i = n(255367),
     e1 = n(345243),
     e3 = n(115530),
     e8 = n(981631),
-    e6 = n(215023),
-    e2 = n(46140),
+    e2 = n(215023),
+    e6 = n(46140),
     e5 = n(388032),
     e4 = n(239692);
 function e7(e, t, n) {
@@ -746,7 +746,7 @@ function to() {
         U = (0, eh.D)(),
         V = (0, C.u)(),
         G = eX.ZP.canUsePremiumGuildMemberProfile(t),
-        F = (null == t || null == (e = t.avatarDecoration) ? void 0 : e.skuId) === e6.rL,
+        F = (null == t || null == (e = t.avatarDecoration) ? void 0 : e.skuId) === e2.rL,
         { voiceActivityStatusEnabled: H } = (0, v.U)({ location: 'Account' }),
         { simplifiedSettingsEnabled: Y } = (0, ev.Z)({ location: 'Account' }),
         K = (0, ei.m)(),
@@ -788,7 +788,7 @@ function to() {
             location: 'Account',
             user: t
         }),
-        ec = (0, ep.Ws)({ location: e2.dr.CONFLICT_CHECKS }),
+        ec = (0, ep.Ws)({ location: e6.dr.CONFLICT_CHECKS }),
         { isEligibleForCustomStatusLabels: eg } = (0, z.Z)({ location: 'AccountConnected' }),
         ef = {
             avatar: [],

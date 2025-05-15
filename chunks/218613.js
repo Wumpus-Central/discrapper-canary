@@ -343,7 +343,7 @@ class eo extends s.PureComponent {
                               color: 'currentColor'
                           }),
                     autoFocus: !0,
-                    focusProps: { offset: { right: -30 } }
+                    focusProps: { offset: { right: l ? -30 : 0 } }
                 });
             };
         return (0, i.jsx)(A.FG, {

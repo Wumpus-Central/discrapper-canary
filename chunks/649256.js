@@ -6,23 +6,23 @@ n.d(t, {
     n(388685);
 var r = n(666572),
     i = n(544891),
-    a = n(570140);
+    o = n(570140);
 n(703047);
-var o = n(981631);
+var a = n(981631);
 async function s(e, t) {
     if (null == e || null == t) return null;
     let n = (0, r._)(t);
     if (null == n) return null;
     if (n.type === r.e.MANAGED) {
         let { body: t } = await i.tn.get({
-            url: o.ANM.APPLICATION_MANAGED_ACTIVITY_LINK(e, n.decodedLinkId),
+            url: a.ANM.APPLICATION_MANAGED_ACTIVITY_LINK(e, n.decodedLinkId),
             rejectWithError: !1
         });
         return t;
     }
     if (n.type === r.e.QUICK) {
         let { body: t } = await i.tn.get({
-            url: o.ANM.APPLICATION_QUICK_ACTIVITY_LINK(e, n.decodedLinkId),
+            url: a.ANM.APPLICATION_QUICK_ACTIVITY_LINK(e, n.decodedLinkId),
             rejectWithError: !1
         });
         return t;
@@ -47,7 +47,7 @@ async function u(e, t) {
     if (null == e || null == t) return Promise.reject('appId or linkId null');
     let n = await s(e, t);
     if (null == n) return Promise.reject('fetchCustomActivityLink body is null');
-    a.Z.dispatch({
+    o.Z.dispatch({
         type: 'CUSTOM_ACTIVITY_LINK_FETCH_SUCCESS',
         applicationId: e,
         link: n

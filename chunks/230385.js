@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v }), n(388685);
 var r = n(704215),
     i = n(147913),
-    a = n(710845),
-    o = n(605236),
+    o = n(710845),
+    a = n(605236),
     s = n(131951),
     l = n(626135),
     c = n(998502),
@@ -64,7 +64,7 @@ function b(e, t) {
         e
     );
 }
-let y = new a.Z('VoiceFilterManager');
+let y = new o.Z('VoiceFilterManager');
 class O extends i.Z {
     loadNativeModule() {
         (0, f.r5)();
@@ -108,21 +108,21 @@ class O extends i.Z {
     }
     handleVoiceFilterFileReady(e) {
         let { modelId: t, voiceFilterId: n, fetchedFromNetwork: r, analyticsContext: i } = e,
-            a = s.Z.getMostRecentlyRequestedVoiceFilter(),
-            o = s.Z.getActiveVoiceFilter(),
-            c = a !== o;
+            o = s.Z.getMostRecentlyRequestedVoiceFilter(),
+            a = s.Z.getActiveVoiceFilter(),
+            c = o !== a;
         if (r) {
             var u;
             l.default.track(p.rMx.VOICE_FILTER_DOWNLOAD_ATTEMPTED, {
-                active_voice_filter_id: null != o ? o : null,
+                active_voice_filter_id: null != a ? a : null,
                 success: !0,
                 voice_filter_id: n,
                 model_id: t,
                 reason: null != (u = null == i ? void 0 : i.reason) ? u : null
             });
         }
-        if (c && null != a) {
-            let e = d.Z.getVoiceFilter(a);
+        if (c && null != o) {
+            let e = d.Z.getVoiceFilter(o);
             if (null == e) return void y.error('the VF in mostRecentlyRequestedVoiceFilter is missing. Has the store been cleared?');
             let n = e.modelIds,
                 r = Object.values(null != n ? n : {})
@@ -130,19 +130,19 @@ class O extends i.Z {
                     .filter((e) => e !== t);
             if (r.length > 0)
                 return void y.info('waiting for more dependencies', {
-                    mostRecentlyRequestedVoiceFilter: a,
+                    mostRecentlyRequestedVoiceFilter: o,
                     missingDependencies: r
                 });
-            (0, f.rk)(a, i);
+            (0, f.rk)(o, i);
         }
     }
     handleVoiceFilterDownloadFailed(e) {
         var t, n;
-        let { modelId: r, voiceFilterId: i, error: a } = e,
-            o = 'USER_CANCELED_DOWNLOAD',
-            c = null != a && o in a,
-            u = (null != (t = null == a ? void 0 : a.message) ? t : String(a)).substring(0, 200);
-        c && (u = o),
+        let { modelId: r, voiceFilterId: i, error: o } = e,
+            a = 'USER_CANCELED_DOWNLOAD',
+            c = null != o && a in o,
+            u = (null != (t = null == o ? void 0 : o.message) ? t : String(o)).substring(0, 200);
+        c && (u = a),
             l.default.track(p.rMx.VOICE_FILTER_DOWNLOAD_ATTEMPTED, {
                 canceled: c,
                 active_voice_filter_id: null != (n = s.Z.getActiveVoiceFilter()) ? n : null,
@@ -154,24 +154,24 @@ class O extends i.Z {
     }
     handleVoiceFilterApplied(e) {
         let { voiceFilterId: t, analyticsContext: n, activationDurationMs: i } = e,
-            a = s.Z.getPreviousVoiceFilter();
-        if (null !== a && null === t) {
+            o = s.Z.getPreviousVoiceFilter();
+        if (null !== o && null === t) {
             let e = s.Z.getPreviousVoiceFilterAppliedAt(),
                 t = null === e ? null : Date.now() - e;
             l.default.track(p.rMx.VOICE_FILTER_DISABLED, {
-                active_voice_filter_id: a,
+                active_voice_filter_id: o,
                 duration_voice_filter_applied: t
             });
         }
         null !== t &&
-            ((0, o.EW)(r.z.VOICE_FILTER_IN_CALL_COACHMARK, { dismissAction: h.L.INDIRECT_ACTION }),
+            ((0, a.EW)(r.z.VOICE_FILTER_IN_CALL_COACHMARK, { dismissAction: h.L.INDIRECT_ACTION }),
             l.default.track(
                 p.rMx.VOICE_FILTER_ENABLED,
                 b(
                     g(
                         {
                             active_voice_filter_id: t,
-                            previous_filter_id: a
+                            previous_filter_id: o
                         },
                         (0, u.w)(n)
                     ),

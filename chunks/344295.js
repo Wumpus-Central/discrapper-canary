@@ -25,8 +25,8 @@ var r = n(255367),
     N = n(701190),
     y = n(626135),
     C = n(630388),
-    P = n(63063),
-    T = n(782605),
+    T = n(63063),
+    P = n(782605),
     A = n(954824),
     Z = n(588705),
     R = n(781428),
@@ -156,7 +156,7 @@ class K extends i.PureComponent {
                 (0, r.jsx)(m.DK, { children: e ? U.intl.string(U.t['5AkWAQ']) : U.intl.string(U.t['+qUJAg']) }),
                 this.renderButton(U.intl.string(U.t.fIv16O)),
                 (0, r.jsx)(m.zx, {
-                    onClick: () => window.open(P.Z.getArticleURL(w.BhN.INVALID_INVITES), '_blank'),
+                    onClick: () => window.open(T.Z.getArticleURL(w.BhN.INVALID_INVITES), '_blank'),
                     look: m.zx.Looks.LINK,
                     color: m.zx.Colors.LINK,
                     className: G.marginTop8,
@@ -306,7 +306,7 @@ class K extends i.PureComponent {
                     }
                 }).catch((e) => {
                     if (e instanceof h.yZ || e instanceof h.Hx) {
-                        let t = (0, T.O)(e.code);
+                        let t = (0, P.O)(e.code);
                         this.setState({
                             error: {
                                 code: e.code,

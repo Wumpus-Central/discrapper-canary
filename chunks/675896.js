@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r = n(524437),
     i = n(210887),
-    a = n(695346),
-    o = n(581883),
+    o = n(695346),
+    a = n(581883),
     s = n(626135),
     l = n(607070),
     c = n(94752);
@@ -17,7 +17,7 @@ function m(e, t) {
 }
 let g = {
     init() {
-        l.Z.addChangeListener(this.handleAccessibilityStoreChanged), i.Z.addChangeListener(this.handleAccessibilityStoreChanged), o.Z.addChangeListener(this.handleUiDensityChanged), d.addListener(this.handlePrefersColorSchemeDarkChanged), this.handlePrefersColorSchemeDarkChanged(d), f.addListener(this.handlePrefersColorSchemeLightChanged), this.handlePrefersColorSchemeLightChanged(f), p.addListener(this.handlePrefersMoreContrastChanged), this.handlePrefersMoreContrastChanged(p), h.addListener(this.handlePrefersForcedColorsChanged), this.handlePrefersForcedColorsChanged(h), _.addListener(this.handleInvertColorsChanged), this.handleInvertColorsChanged(_), s.default.setSystemAccessibilityFeatures(this.getActiveFeatures);
+        l.Z.addChangeListener(this.handleAccessibilityStoreChanged), i.Z.addChangeListener(this.handleAccessibilityStoreChanged), a.Z.addChangeListener(this.handleUiDensityChanged), d.addListener(this.handlePrefersColorSchemeDarkChanged), this.handlePrefersColorSchemeDarkChanged(d), f.addListener(this.handlePrefersColorSchemeLightChanged), this.handlePrefersColorSchemeLightChanged(f), p.addListener(this.handlePrefersMoreContrastChanged), this.handlePrefersMoreContrastChanged(p), h.addListener(this.handlePrefersForcedColorsChanged), this.handlePrefersForcedColorsChanged(h), _.addListener(this.handleInvertColorsChanged), this.handleInvertColorsChanged(_), s.default.setSystemAccessibilityFeatures(this.getActiveFeatures);
     },
     getActiveFeatures: () => u,
     handlePrefersColorSchemeDarkChanged(e) {
@@ -36,7 +36,7 @@ let g = {
         m(c.E.INVERT_COLORS, e.matches);
     },
     handleUiDensityChanged() {
-        let e = a.YC.getSetting();
+        let e = o.YC.getSetting();
         m(c.E.UI_DENSITY_COMPACT, e === r.Pi.COMPACT), m(c.E.UI_DENSITY_SPACIOUS, e === r.Pi.COZY);
     },
     handleAccessibilityStoreChanged() {

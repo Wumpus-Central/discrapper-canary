@@ -1,13 +1,13 @@
 n.d(t, {
-    NR: () => a,
+    NR: () => o,
     Ob: () => l,
-    ZI: () => o,
+    ZI: () => a,
     m1: () => c,
     uc: () => s
 });
 var r = n(987170),
     i = n(987338);
-let a = (0, r.Z)({
+let o = (0, r.Z)({
         kind: 'user',
         id: '2024-07_ctp_open_user_settings_vanilla',
         label: 'CTP open user settings - A/A test - Vanilla',
@@ -21,7 +21,7 @@ let a = (0, r.Z)({
             }
         ]
     }),
-    o = (0, r.Z)({
+    a = (0, r.Z)({
         kind: 'user',
         id: '2024-07_ctp_open_user_settings_filters',
         label: 'CTP open user settings - A/A test - Filters',

@@ -25,8 +25,8 @@ var r = n(255367),
     N = n(981631),
     y = n(260539),
     C = n(701476),
-    P = n(630724),
-    T = n(436620),
+    T = n(630724),
+    P = n(436620),
     A = n(388032),
     Z = n(183170),
     R = n(20493);
@@ -46,13 +46,13 @@ function L(e, t, n) {
 c.ZP.initialize();
 class w extends i.PureComponent {
     componentDidMount() {
-        (0, x.e)('guildTemplate'), T.KO || O.Z.launch('discord://' + N.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
+        (0, x.e)('guildTemplate'), P.KO || O.Z.launch('discord://' + N.Z5c.GUILD_TEMPLATE(this.props.code), () => void 0);
     }
     componentDidUpdate(e) {
         this.props.code !== e.code && p.Z.resolveGuildTemplate(this.props.code);
     }
     renderButton(e, t) {
-        return T.KO
+        return P.KO
             ? (0, r.jsx)(u.zx, {
                   className: R.marginTop40,
                   onClick: t,
@@ -116,7 +116,7 @@ class w extends i.PureComponent {
             case y.Rj.RESOLVING:
                 return this.renderSpinner(A.intl.string(A.t['Z+hCVV']));
             case y.Rj.RESOLVED:
-                if (n || !T.KO) return this.renderAuthenticatedOrDownload();
+                if (n || !P.KO) return this.renderAuthenticatedOrDownload();
                 if (this.props.login)
                     return (0, r.jsx)(I.Z, {
                         guildTemplate: e,
@@ -128,7 +128,7 @@ class w extends i.PureComponent {
                     transitionTo: i,
                     location: l,
                     onRegister: () => {
-                        (0, _.c)(C.M5.ORGANIC_REGISTERED_GUILD_TEMPLATE), E.Z.flowStart(P.MK.ORGANIC_GUILD_TEMPLATES, P.EW.NUF_STARTED);
+                        (0, _.c)(C.M5.ORGANIC_REGISTERED_GUILD_TEMPLATE), E.Z.flowStart(T.MK.ORGANIC_GUILD_TEMPLATES, T.EW.NUF_STARTED);
                     }
                 });
             case y.Rj.EXPIRED:
@@ -175,7 +175,7 @@ function D(e) {
 function k(e) {
     let { guildTemplate: t } = e,
         { form: n, handleSubmit: i } = (0, g.Z)(t, !1);
-    E.Z.flowStep(P.MK.ORGANIC_GUILD_TEMPLATES, P.X2.GUILD_CREATE);
+    E.Z.flowStep(T.MK.ORGANIC_GUILD_TEMPLATES, T.X2.GUILD_CREATE);
     let l = (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(u.Dx, {

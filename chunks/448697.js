@@ -1,35 +1,41 @@
-n.d(t, { R: () => _ });
+n.d(t, { R: () => m });
 var r = n(255367),
-    i = n(392711),
-    a = n(950035),
-    o = n(442837),
-    l = n(481060),
-    s = n(709706),
-    c = n(358820),
-    d = n(388032),
-    u = n(690410);
-function _() {
+    i = n(73800),
+    a = n(392711),
+    o = n(950035),
+    l = n(442837),
+    s = n(481060),
+    c = n(709706),
+    d = n(358820),
+    u = n(388032),
+    _ = n(690410);
+function m() {
     let { hasActiveDownloads: e, progress: t } = (function () {
-            let e = (0, o.Wu)([s.Z], () => s.Z.getOngoingDownloads()),
-                t = e.some((e) => {
+            let e = (0, l.e7)([c.Z], () => c.Z.getOngoingDownloads()),
+                t = i.useRef({});
+            i.useEffect(() => {
+                0 === Object.entries(e).length && (t.current = {}), Object.assign(t.current, e);
+            }, [e]);
+            let n = Object.values(t.current),
+                r = n.some((e) => {
                     let { downloadedBytes: t } = e;
                     return (null != t ? t : 0) > 0;
                 }),
-                n = (0, i.sumBy)(e, (e) => {
+                o = (0, a.sumBy)(n, (e) => {
                     var t;
                     return null != (t = null == e ? void 0 : e.downloadedBytes) ? t : 0;
                 }),
-                r = (0, i.sumBy)(e, (e) => {
+                s = (0, a.sumBy)(n, (e) => {
                     var t;
                     return null != (t = null == e ? void 0 : e.totalBytes) ? t : 0;
                 });
             return {
-                hasActiveDownloads: t,
-                progress: 0 === r ? 0 : Math.floor((n / r) * 100)
+                hasActiveDownloads: r,
+                progress: 0 === s ? 0 : Math.floor((o / s) * 100)
             };
         })(),
-        n = (0, l.dQu)(l.TVs.colors.WHITE);
-    return (0, l.Yzy)(
+        n = (0, s.dQu)(s.TVs.colors.WHITE);
+    return (0, s.Yzy)(
         e,
         {
             from: {
@@ -48,37 +54,37 @@ function _() {
         'respect-motion-settings'
     )((e, i) =>
         i
-            ? (0, r.jsx)(a.animated.div, {
+            ? (0, r.jsx)(o.animated.div, {
                   style: e,
-                  className: u.floaterWrapper,
+                  className: _.floaterWrapper,
                   children: (0, r.jsxs)('div', {
-                      className: u.visibleFloater,
+                      className: _.visibleFloater,
                       children: [
                           (0, r.jsxs)('div', {
-                              className: u.progressText,
+                              className: _.progressText,
                               children: [
-                                  (0, r.jsx)(l.Text, {
+                                  (0, r.jsx)(s.Text, {
                                       variant: 'text-sm/semibold',
                                       color: 'always-white',
-                                      children: d.intl.format(d.t['r+uZYW'], { progress: t })
+                                      children: u.intl.format(u.t['r+uZYW'], { progress: t })
                                   }),
-                                  (0, r.jsx)(l.zxk, {
-                                      look: l.zxk.Looks.LINK,
-                                      size: l.zxk.Sizes.MIN,
-                                      onClick: c.ge,
-                                      children: (0, r.jsx)(l.Text, {
+                                  (0, r.jsx)(s.zxk, {
+                                      look: s.zxk.Looks.LINK,
+                                      size: s.zxk.Sizes.MIN,
+                                      onClick: d.ge,
+                                      children: (0, r.jsx)(s.Text, {
                                           variant: 'text-sm/normal',
                                           color: 'always-white',
-                                          children: d.intl.string(d.t['ETE/oK'])
+                                          children: u.intl.string(u.t['ETE/oK'])
                                       })
                                   })
                               ]
                           }),
-                          (0, r.jsx)(l.Exd, {
+                          (0, r.jsx)(s.Exd, {
                               percent: t,
                               foregroundColor: n.hex(),
                               backgroundColor: 'rgba(255,255,255,0.10)',
-                              size: l.Exd.Sizes.LARGE
+                              size: s.Exd.Sizes.LARGE
                           })
                       ]
                   })

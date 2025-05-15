@@ -88,8 +88,8 @@ function x(e) {
         : null;
 }
 function j(e) {
-    let { color: t, id: r, role: s, guild: d, children: j, isDragging: b, selectedItem: v, onItemSelect: y, itemType: C, locked: N, lockTooltip: S, showContextMenu: O, theme: Z, roleStyle: w, 'aria-label': T } = e,
-        E = (0, h.X)(d.id, null == s ? void 0 : s.colorStrings),
+    let { color: t, id: r, role: s, guild: d, children: j, isDragging: b, selectedItem: v, onItemSelect: y, itemType: C, locked: N, lockTooltip: S, showContextMenu: E, theme: O, roleStyle: w, 'aria-label': Z } = e,
+        T = (0, h.X)(d.id, null == s ? void 0 : s.colorStrings),
         R = l.useCallback(
             (e) => {
                 (0, c.jW)(e, async () => {
@@ -114,26 +114,26 @@ function j(e) {
               selectedItem: v,
               onItemSelect: y,
               itemType: C,
-              'aria-label': null != S ? ''.concat(T, ', ').concat(S) : T,
+              'aria-label': null != S ? ''.concat(Z, ', ').concat(S) : Z,
               children: (0, i.jsxs)('div', {
                   className: m.roleContent,
                   children: [
                       'dot' === w
                           ? (0, i.jsx)(o.FhE, {
                                 color: null != t ? t : void 0,
-                                colors: E,
+                                colors: T,
                                 className: m.roleDot,
                                 background: !1,
                                 tooltip: !1
                             })
                           : (0, i.jsx)(o.xko, {
                                 color: null != t ? t : void 0,
-                                colors: E,
+                                colors: T,
                                 className: m.roleCircle
                             }),
                       (function () {
                           if (!N) return null;
-                          let e = (0, a.wj)(Z) ? n(27377) : n(514811);
+                          let e = (0, a.wj)(O) ? n(27377) : n(514811);
                           return (0, i.jsx)(o.ua7, {
                               text: S,
                               color: o.ua7.Colors.RED,
@@ -155,7 +155,7 @@ function j(e) {
                           onContextMenu: R,
                           children: j
                       }),
-                      O && null != s
+                      E && null != s
                           ? (0, i.jsx)(x, {
                                 guild: d,
                                 role: s

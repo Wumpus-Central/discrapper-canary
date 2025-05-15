@@ -1,7 +1,7 @@
 var r = n(556585),
     i = n(46015),
-    a = n(382698),
-    o = n(338045),
+    o = n(382698),
+    a = n(338045),
     s = URLSearchParams,
     l = s.prototype,
     c = i(l.append),
@@ -27,8 +27,8 @@ _.delete('a', 1),
                         value: e
                     });
                 }),
-                    o(n, 1);
-                for (var s = a(e), l = a(r), _ = 0, p = 0, h = !1, m = i.length; _ < m; ) (t = i[_++]), h || t.key === s ? ((h = !0), u(this, t.key)) : p++;
+                    a(n, 1);
+                for (var s = o(e), l = o(r), _ = 0, p = 0, h = !1, m = i.length; _ < m; ) (t = i[_++]), h || t.key === s ? ((h = !0), u(this, t.key)) : p++;
                 for (; p < m; ) ((t = i[p++]).key !== s || t.value !== l) && c(this, t.key, t.value);
             },
             {

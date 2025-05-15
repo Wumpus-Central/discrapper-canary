@@ -70,8 +70,8 @@
                     if (0 === e) return e + "'ıncı";
                     var r = e % 10,
                         i = (e % 100) - r,
-                        a = e >= 100 ? 100 : null;
-                    return e + (t[r] || t[i] || t[a]);
+                        o = e >= 100 ? 100 : null;
+                    return e + (t[r] || t[i] || t[o]);
             }
         },
         week: {

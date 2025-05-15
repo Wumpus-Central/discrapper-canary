@@ -25,8 +25,8 @@ var r = n(255367),
     N = n(314897),
     y = n(82142),
     C = n(701190),
-    P = n(626135),
-    T = n(81063),
+    T = n(626135),
+    P = n(81063),
     A = n(449934),
     Z = n(768581),
     R = n(625054),
@@ -132,7 +132,7 @@ class eS extends i.PureComponent {
         else if ((null == r ? void 0 : r.state) === $.r2o.RESOLVED) {
             let { guild: e, target_application: t } = r;
             null != t
-                ? null != s && (a = (0, T.xF)(t.id, s, 1024))
+                ? null != s && (a = (0, P.xF)(t.id, s, 1024))
                 : null != e &&
                   'string' == typeof e.splash &&
                   (a = Z.ZP.getGuildSplashURL({
@@ -149,7 +149,7 @@ class eS extends i.PureComponent {
         let { inviteKey: e, hasLoadedExperiments: t, isAuthenticated: n } = this.props;
         null != e &&
             (!t && n && u.Z.getExperiments(!0),
-            P.default.track(
+            T.default.track(
                 $.rMx.INVITE_OPENED,
                 {
                     invite_code: (0, I.jX)(e),
@@ -174,7 +174,7 @@ class eS extends i.PureComponent {
         if ((null == e ? void 0 : e.state) === $.r2o.RESOLVED) {
             let { target_application: t } = e;
             null != t &&
-                (0, T.hR)(t.id, ['embedded_splash']).then((e) => {
+                (0, P.hR)(t.id, ['embedded_splash']).then((e) => {
                     let [t] = e;
                     return this.setState({ backgroundId: t });
                 });
@@ -189,7 +189,7 @@ class eS extends i.PureComponent {
     resolveGuildTemplate() {
         let { guildTemplateCode: e } = this.props;
         null != e &&
-            (P.default.track(
+            (T.default.track(
                 $.rMx.GUILD_TEMPLATE_OPENED,
                 {
                     guild_template_code: e,

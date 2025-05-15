@@ -11,7 +11,7 @@ function r(e, t, n) {
         e
     );
 }
-n.d(t, { Z: () => a }), n(539854);
+n.d(t, { Z: () => o }), n(539854);
 class i {
     enqueue(e) {
         this.queue.push(e);
@@ -26,4 +26,4 @@ class i {
         r(this, 'queue', []);
     }
 }
-let a = new i();
+let o = new i();

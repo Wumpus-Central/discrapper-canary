@@ -1,8 +1,8 @@
 n.d(t, { Z: () => c }), n(467055), n(388685);
 var r = n(710845),
     i = n(430824),
-    a = n(287328);
-function o(e, t, n) {
+    o = n(287328);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +19,7 @@ let s = new r.Z('GuildVersions');
 class l {
     async getCommittedVersions() {
         try {
-            let e = a.Z.guildVersions();
+            let e = o.Z.guildVersions();
             if (null == e) return {};
             let t = (await e.getMany()).map((e) => [e.id, e.version]);
             return Object.fromEntries(null != t ? t : []);
@@ -87,8 +87,8 @@ class l {
         if (null != t) {
             var n, r;
             let i = Math.max(null != (n = this.committed.get(e)) ? n : 0, null != (r = this.pending.get(e)) ? r : 0),
-                a = this.computeLatestVersion(i, t);
-            a > i && this.pending.set(e, a);
+                o = this.computeLatestVersion(i, t);
+            o > i && this.pending.set(e, o);
         }
     }
     computeLatestVersion(e, t) {
@@ -101,7 +101,7 @@ class l {
     }
     commit(e) {
         if (this.pending.size > 0) {
-            let t = a.Z.guildVersionsTransaction(e);
+            let t = o.Z.guildVersionsTransaction(e);
             for (let [e, n] of this.pending)
                 null != n
                     ? (t.put({
@@ -114,9 +114,9 @@ class l {
         }
     }
     constructor() {
-        o(this, 'pending', new Map()),
-            o(this, 'committed', new Map()),
-            o(this, 'actions', {
+        a(this, 'pending', new Map()),
+            a(this, 'committed', new Map()),
+            a(this, 'actions', {
                 BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
                 CHANNEL_CREATE: (e, t) => this.handleChannelCreate(e, t),
                 CHANNEL_DELETE: (e, t) => this.handleChannelDelete(e, t),

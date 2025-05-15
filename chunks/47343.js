@@ -20,7 +20,7 @@ let x = () => {
         l = c.G6.useSetting(),
         { nickname: x, dmsAllowed: E, showActivity: b, mutedServer: v, setNickname: O, setDmsAllowed: I, setShowActivity: j, setMutedServer: S, guildId: N, inviteCode: y } = (0, p.XW)(),
         C = null == (e = a.Z.getProps().invite) ? void 0 : e.is_nickname_changeable,
-        P = (0, g.m4)({ location: 'InviteSettingsControls' });
+        T = (0, g.m4)({ location: 'InviteSettingsControls' });
     return (0, r.jsxs)('div', {
         className: s()(_.editProfileContainer, { [_.opened]: t }),
         children: [
@@ -95,7 +95,7 @@ let x = () => {
                             value: b,
                             onChange: j
                         }),
-                    P &&
+                    T &&
                         (0, r.jsx)(u.Z, {
                             title: f.intl.string(f.t['0nZCqK']),
                             value: v,

@@ -25,8 +25,8 @@ var r = n(255367),
     N = n(423527),
     y = n(981631),
     C = n(388032),
-    P = n(20493);
-function T(e, t, n) {
+    T = n(20493);
+function P(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -87,15 +87,15 @@ class A extends i.PureComponent {
             children: [
                 (0, r.jsx)(g.Ee, {
                     src: n(167969),
-                    className: P.marginBottom8
+                    className: T.marginBottom8
                 }),
                 (0, r.jsx)(g.Dx, {
-                    className: s()(P.marginTop8, P.marginBottom8),
+                    className: s()(T.marginTop8, T.marginBottom8),
                     children: C.intl.string(C.t.KPowgo)
                 }),
                 (0, r.jsx)(g.DK, { children: C.intl.string(C.t.j8734e) }),
                 (0, r.jsx)(g.zx, {
-                    className: s()(P.marginTop40, P.marginBottom8),
+                    className: s()(T.marginTop40, T.marginBottom8),
                     onClick: () => t(e),
                     children: C.intl.string(C.t.fIv16O)
                 }),
@@ -112,12 +112,12 @@ class A extends i.PureComponent {
         return (0, r.jsxs)(g.ZP, {
             children: [
                 (0, r.jsx)(g.Dx, {
-                    className: P.marginBottom8,
+                    className: T.marginBottom8,
                     children: C.intl.string(C.t.csrAMD)
                 }),
                 (0, r.jsx)(g.DK, { children: C.intl.string(C.t['m1+IBg']) }),
                 (0, r.jsx)(g.zx, {
-                    className: P.marginTop40,
+                    className: T.marginTop40,
                     onClick: () => this.setState({ continueOnWeb: !0 }),
                     children: C.intl.string(C.t['qsI+EB'])
                 })
@@ -130,16 +130,16 @@ class A extends i.PureComponent {
             children: [
                 (0, r.jsx)(g.Ee, {
                     src: n(892235),
-                    className: P.marginBottom8
+                    className: T.marginBottom8
                 }),
                 (0, r.jsx)(g.Dx, { children: C.intl.format(C.t.ivLUf3, { username: e.username }) }),
                 (0, r.jsx)(g.DK, {
-                    className: P.marginTop20,
+                    className: T.marginTop20,
                     children: C.intl.string(C.t['8Su18/'])
                 }),
                 (0, r.jsx)(g.zx, {
                     disabled: t,
-                    className: P.marginTop40,
+                    className: T.marginTop40,
                     onClick: this.handleResendVerification,
                     children: t ? C.intl.string(C.t.CMa9Rk) : C.intl.string(C.t.lm1UKi)
                 }),
@@ -147,7 +147,7 @@ class A extends i.PureComponent {
                     look: g.zx.Looks.LINK,
                     color: g.zx.Colors.LINK,
                     onClick: this.refreshUser,
-                    className: P.marginTop8,
+                    className: T.marginTop8,
                     children: C.intl.string(C.t.Po9eBQ)
                 })
             ]
@@ -160,17 +160,17 @@ class A extends i.PureComponent {
                 (0, r.jsx)(j.Z, { giftCode: e }),
                 (0, r.jsx)(g.zx, {
                     disabled: null != n,
-                    className: P.marginTop40,
+                    className: T.marginTop40,
                     onClick: this.handleAccept,
                     children: C.intl.string(C.t.n6I6k5)
                 }),
                 null != n
                     ? (0, r.jsx)(g.DK, {
-                          className: P.marginTop20,
+                          className: T.marginTop20,
                           children: n
                       })
                     : (0, r.jsx)(g.i_, {
-                          className: P.marginTop20,
+                          className: T.marginTop20,
                           children: C.intl.format(C.t.NYM08v, {
                               userTag: I.ZP.getUserTag(t),
                               onLogoutClick: this.handleLogout
@@ -209,14 +209,14 @@ class A extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            T(this, 'state', {
+            P(this, 'state', {
                 error: null,
                 continueOnWeb: !1,
                 currentUser: null,
                 sentVerification: !1,
                 fetchingUser: !1
             }),
-            T(this, 'refreshUser', () => {
+            P(this, 'refreshUser', () => {
                 this.setState({ fetchingUser: !0 }),
                     h
                         .k({ withAnalyticsToken: !0 })
@@ -228,14 +228,14 @@ class A extends i.PureComponent {
                         )
                         .catch(() => this.setState({ fetchingUser: !1 }));
             }),
-            T(this, 'handleLogout', () => {
+            P(this, 'handleLogout', () => {
                 let e = this.props.match.params.giftCode;
                 c.Z.logout('gift_code', y.Z5c.GIFT_CODE_LOGIN(e));
             }),
-            T(this, 'handleResendVerification', () => {
+            P(this, 'handleResendVerification', () => {
                 c.Z.verifyResend(), this.setState({ sentVerification: !0 });
             }),
-            T(this, 'handleAccept', async () => {
+            P(this, 'handleAccept', async () => {
                 let { transitionTo: e, giftCode: t } = this.props;
                 if (null == t) throw Error('Trying to accept gift before resolve');
                 let n = this.getCode();
@@ -245,7 +245,7 @@ class A extends i.PureComponent {
                     this.setState({ error: e });
                 }
             }),
-            T(this, 'resolveGiftCode', () => {
+            P(this, 'resolveGiftCode', () => {
                 let { transitionTo: e } = this.props,
                     t = this.getCode();
                 u.Z.resolveGiftCode(t, !0, !0).then((n) => {

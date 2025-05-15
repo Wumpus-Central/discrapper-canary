@@ -15,5 +15,15 @@ e.exports = {
     mainPageScroller: 'mainPageScroller_ca1a02',
     open: 'open_ca1a02',
     openCloseReduceMotion: 'openCloseReduceMotion_ca1a02',
-    cardCarousel: 'cardCarousel_ca1a02'
+    cardCarousel: 'cardCarousel_ca1a02',
+    giftingVariant2Container: 'giftingVariant2Container_ca1a02',
+    giftingVariant2CardHeader: 'giftingVariant2CardHeader_ca1a02',
+    giftingVariant2CardContainer: 'giftingVariant2CardContainer_ca1a02',
+    giftingVariant2Card: 'giftingVariant2Card_ca1a02',
+    giftingVariant2CardContent: 'giftingVariant2CardContent_ca1a02',
+    giftingVariant2CardContentButton: 'giftingVariant2CardContentButton_ca1a02',
+    giftingVariant2CardImageContainer: 'giftingVariant2CardImageContainer_ca1a02',
+    giftingVariant2CardImage: 'giftingVariant2CardImage_ca1a02',
+    giftingVariant2CardContentPremiumSubscribeButton: 'giftingVariant2CardContentPremiumSubscribeButton_ca1a02',
+    giftingVariant2CardContentPremiumSubscribeButtonText: 'giftingVariant2CardContentPremiumSubscribeButtonText_ca1a02'
 };

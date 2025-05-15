@@ -1,8 +1,8 @@
 n.d(t, { g: () => d }), n(415506);
 var r = n(626135),
     i = n(823967),
-    a = n(281058),
-    o = n(761274),
+    o = n(281058),
+    a = n(761274),
     s = n(981631),
     l = n(388032);
 function c(e, t, n) {
@@ -38,9 +38,9 @@ class d {
     async requestAuthorization(e, t, n) {
         if ('function' != typeof t) throw Error('requestAuthorization: Was provided with not a function for '.concat(e, '.'));
         r.default.track(s.rMx.PERMISSIONS_REQUESTED, { type: e });
-        let a = await t(),
-            l = a === o.NZ.AUTHORIZED || a === o.NZ.LIMITED,
-            c = l ? o.PQ.ACCEPTED : o.PQ.DENIED;
+        let o = await t(),
+            l = o === a.NZ.AUTHORIZED || o === a.NZ.LIMITED,
+            c = l ? a.PQ.ACCEPTED : a.PQ.DENIED;
         return i.Z.setPermission(e, c), !l && n.showAuthorizationError && this.showAlert(e), l;
     }
     requestPermission(e, t) {
@@ -53,11 +53,11 @@ class d {
     }
     showAlert(e) {
         let t = {
-            [o.Eu.CAMERA]: ''.concat(l.intl.string(l.t['68G7fH']), '. ').concat(l.intl.string(l.t['5Jvu1d'])),
-            [o.Eu.AUDIO]: ''.concat(l.intl.string(l.t.xisTfX), '. ').concat(l.intl.string(l.t['5Jvu1d'])),
-            [o.Eu.PHOTOS]: ''.concat(l.intl.string(l.t.jQHU4O), '. ').concat(l.intl.string(l.t['5Jvu1d'])),
-            [o.Eu.INPUT_MONITORING]: ''.concat(l.intl.string(l.t.UIBqsb), '. ').concat(l.intl.string(l.t['5Jvu1d'])),
-            [o.Eu.CONTACTS]: ''.concat(l.intl.string(l.t.kTtf7u), '. ').concat(l.intl.string(l.t['5Jvu1d']))
+            [a.Eu.CAMERA]: ''.concat(l.intl.string(l.t['68G7fH']), '. ').concat(l.intl.string(l.t['5Jvu1d'])),
+            [a.Eu.AUDIO]: ''.concat(l.intl.string(l.t.xisTfX), '. ').concat(l.intl.string(l.t['5Jvu1d'])),
+            [a.Eu.PHOTOS]: ''.concat(l.intl.string(l.t.jQHU4O), '. ').concat(l.intl.string(l.t['5Jvu1d'])),
+            [a.Eu.INPUT_MONITORING]: ''.concat(l.intl.string(l.t.UIBqsb), '. ').concat(l.intl.string(l.t['5Jvu1d'])),
+            [a.Eu.CONTACTS]: ''.concat(l.intl.string(l.t.kTtf7u), '. ').concat(l.intl.string(l.t['5Jvu1d']))
         }[e];
         null != t &&
             this.openAlertModal({
@@ -73,6 +73,6 @@ class d {
         return null == e ? t : u({}, t, e);
     }
     constructor() {
-        c(this, 'storage', new a.Z());
+        c(this, 'storage', new o.Z());
     }
 }

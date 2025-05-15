@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l }), n(35282), n(388685), n(415506);
 var r = n(836560),
     i = n(259443),
-    a = n(436620);
-function o(e, t, n) {
+    o = n(436620);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -90,7 +90,7 @@ class l extends r.EventEmitter {
     makeOfferAnswerOptions() {
         return {
             offerToReceiveAudio: !0,
-            offerToReceiveVideo: a.U8,
+            offerToReceiveVideo: o.U8,
             iceRestart: !1
         };
     }
@@ -114,31 +114,31 @@ class l extends r.EventEmitter {
     }
     constructor(e) {
         super(),
-            o(this, 'bitrate', void 0),
-            o(this, 'pc', void 0),
-            o(this, 'stream', null),
-            o(this, 'senders', []),
-            o(this, 'negotiating', !1),
-            o(this, '_negotiationNeeded', !1),
-            o(this, 'handlePeerConnectionStateChange', () => {
+            a(this, 'bitrate', void 0),
+            a(this, 'pc', void 0),
+            a(this, 'stream', null),
+            a(this, 'senders', []),
+            a(this, 'negotiating', !1),
+            a(this, '_negotiationNeeded', !1),
+            a(this, 'handlePeerConnectionStateChange', () => {
                 let e = this.peerConnectionState;
                 s.info('peerConnectionState =>', e), 'connecting' === e ? ('connected' === this.iceConnectionState ? this.emit(e) : this.emit(this.iceConnectionState)) : this.emit(e);
             }),
-            o(this, 'handleIceConnectionStateChange', () => {
+            a(this, 'handleIceConnectionStateChange', () => {
                 let e = this.iceConnectionState;
                 s.info('iceConnectionState =>', e), 'completed' === e && (e = 'connected'), this.emit(e);
             }),
-            o(this, 'handleSignalingStateChange', () => {
+            a(this, 'handleSignalingStateChange', () => {
                 s.info('signalingState => '.concat(this.signalingState, ', negotiation needed: ').concat(this._negotiationNeeded.toString())), 'stable' === this.signalingState && ((this.negotiating = !1), this._negotiationNeeded && this.negotiationNeeded());
             }),
-            o(this, 'handleIceGatheringStateChange', () => {
+            a(this, 'handleIceGatheringStateChange', () => {
                 s.info('iceGatheringState =>', this.iceGatheringState);
             }),
-            o(this, 'handleTrack', (e) => {
+            a(this, 'handleTrack', (e) => {
                 this.emitTrack(e.streams[0].id, e.track);
             }),
             (this.bitrate = e);
         let t = (this.pc = new RTCPeerConnection({ sdpSemantics: 'plan-b' }));
-        a.X6 ? ((t.onconnectionstatechange = this.handlePeerConnectionStateChange), (t.oniceconnectionstatechange = this.handlePeerConnectionStateChange)) : (t.oniceconnectionstatechange = this.handleIceConnectionStateChange), (t.onsignalingstatechange = this.handleSignalingStateChange), (t.onicegatheringstatechange = this.handleIceGatheringStateChange), (t.ontrack = this.handleTrack.bind(this)), s.info('Constructed RTCPeerConnection');
+        o.X6 ? ((t.onconnectionstatechange = this.handlePeerConnectionStateChange), (t.oniceconnectionstatechange = this.handlePeerConnectionStateChange)) : (t.oniceconnectionstatechange = this.handleIceConnectionStateChange), (t.onsignalingstatechange = this.handleSignalingStateChange), (t.onicegatheringstatechange = this.handleIceGatheringStateChange), (t.ontrack = this.handleTrack.bind(this)), s.info('Constructed RTCPeerConnection');
     }
 }

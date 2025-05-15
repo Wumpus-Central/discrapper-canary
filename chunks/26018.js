@@ -11,15 +11,15 @@ function i(e, t) {
         r = e.slice(t);
     return Array.prototype.concat.call([], i(n), i(r));
 }
-function a(e) {
+function o(e) {
     try {
         return decodeURIComponent(e);
-    } catch (a) {
+    } catch (o) {
         for (var t = e.match(n) || [], r = 1; r < t.length; r++) t = (e = i(t, r).join('')).match(n) || [];
         return e;
     }
 }
-function o(e) {
+function a(e) {
     for (
         var t = {
                 '%FE%FF': '\uFFFD\uFFFD',
@@ -32,14 +32,14 @@ function o(e) {
         try {
             t[n[0]] = decodeURIComponent(n[0]);
         } catch (e) {
-            var i = a(n[0]);
+            var i = o(n[0]);
             i !== n[0] && (t[n[0]] = i);
         }
         n = r.exec(e);
     }
     t['%C2'] = '\uFFFD';
-    for (var o = Object.keys(t), s = 0; s < o.length; s++) {
-        var l = o[s];
+    for (var a = Object.keys(t), s = 0; s < a.length; s++) {
+        var l = a[s];
         e = e.replace(RegExp(l, 'g'), t[l]);
     }
     return e;
@@ -49,6 +49,6 @@ e.exports = function (e) {
     try {
         return (e = e.replace(/\+/g, ' ')), decodeURIComponent(e);
     } catch (t) {
-        return o(e);
+        return a(e);
     }
 };

@@ -1,10 +1,10 @@
 n.d(t, {
-    as: () => a,
+    as: () => o,
     tX: () => s
 });
 let r = 'undefined' != typeof global ? global : self,
     i = r.MutationObserver || r.WebKitMutationObserver;
-function a(e) {
+function o(e) {
     return function () {
         let t = setTimeout(r, 0),
             n = setInterval(r, 50);
@@ -13,7 +13,7 @@ function a(e) {
         }
     };
 }
-function o(e) {
+function a(e) {
     let t = 1,
         n = new i(e),
         r = document.createTextNode('');
@@ -24,4 +24,4 @@ function o(e) {
         }
     );
 }
-let s = 'function' == typeof i ? o : a;
+let s = 'function' == typeof i ? a : o;

@@ -10,12 +10,12 @@ e.exports = function (e) {
             relevance: 0,
             begin: /=/
         },
-        a = {
+        o = {
             className: 'punctuation',
             relevance: 0,
             begin: /,/
         },
-        o = {
+        a = {
             className: 'number',
             variants: [{ begin: /[su]?0[xX][KMLHR]?[a-fA-F0-9]+/ }, { begin: /[-+]?\d+(?:[.]\d+)?(?:[eE][-+]?\d+(?:[.]\d+)?)?/ }],
             relevance: 0
@@ -55,11 +55,11 @@ e.exports = function (e) {
                 ]
             },
             c,
-            a,
+            o,
             i,
             l,
             s,
-            o
+            a
         ]
     };
 };

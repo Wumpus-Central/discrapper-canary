@@ -30,8 +30,8 @@ var r,
     N = n(726745),
     y = n(913583),
     C = n(144114),
-    P = n(541692),
-    T = n(952802),
+    T = n(541692),
+    P = n(952802),
     A = n(703656),
     Z = n(108427),
     R = n(365007),
@@ -308,7 +308,7 @@ class $ extends (r = l.PureComponent) {
                 (0, i.jsxs)(E.gO, {
                     className: q.marginTop20,
                     children: [
-                        (0, i.jsx)(T.Z, {
+                        (0, i.jsx)(P.Z, {
                             className: q.marginBottom20,
                             alpha2: t.alpha2,
                             countryCode: t.code.split(' ')[0],
@@ -426,7 +426,7 @@ class $ extends (r = l.PureComponent) {
                                     children: (0, i.jsxs)(E.gO, {
                                         className: q.marginTop20,
                                         children: [
-                                            (0, i.jsx)(T.Z, {
+                                            (0, i.jsx)(P.Z, {
                                                 alpha2: o.alpha2,
                                                 countryCode: o.code.split(' ')[0],
                                                 className: q.marginBottom20,
@@ -792,7 +792,7 @@ class $ extends (r = l.PureComponent) {
 }
 Y($, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) });
 let ee = function (e) {
-    let t = (0, d.cj)([w.Z, D.Z, L.default, N.Z, P.Z], () => ({
+    let t = (0, d.cj)([w.Z, D.Z, L.default, N.Z, T.Z], () => ({
         authenticated: L.default.isAuthenticated(),
         handoffAvailable: w.Z.isHandoffAvailable(),
         user: w.Z.user,
@@ -800,7 +800,7 @@ let ee = function (e) {
         mfaTicket: L.default.getMFATicket(),
         mfaMethods: L.default.getMFAMethods(),
         defaultRoute: D.Z.defaultRoute,
-        country: P.Z.getCountryCode(),
+        country: T.Z.getCountryCode(),
         hasLoggedInAccounts: N.Z.getHasLoggedInAccounts()
     }));
     return (0, i.jsx)($, J({}, e, t));

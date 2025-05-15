@@ -1,4 +1,4 @@
-n.d(t, { Z: () => U }), n(388685);
+n.d(t, { Z: () => F }), n(388685);
 var i = n(255367);
 n(73800);
 var r = n(120356),
@@ -17,44 +17,46 @@ var r = n(120356),
     b = n(775412),
     _ = n(695349),
     x = n(249689),
-    E = n(520540),
-    C = n(104494),
-    j = n(639119),
-    O = n(533525),
-    S = n(767714),
-    v = n(823188),
-    T = n(184176),
-    I = n(409100),
-    N = n(386733),
-    y = n(474936),
-    A = n(981631),
-    P = n(388032),
-    R = n(734664),
-    D = n(872905),
-    Z = n(578478);
-let w = (e) => {
+    E = n(464670),
+    C = n(520540),
+    j = n(104494),
+    O = n(639119),
+    S = n(533525),
+    v = n(767714),
+    T = n(823188),
+    I = n(184176),
+    N = n(409100),
+    y = n(386733),
+    A = n(474936),
+    P = n(981631),
+    R = n(388032),
+    D = n(734664),
+    Z = n(872905),
+    w = n(578478),
+    k = n(435635);
+let L = (e) => {
         var t, n;
         let { className: r } = e,
-            { headingText: o, headingTop: c } = M(),
+            { headingText: o, headingTop: c } = G(),
             d = g.default.getCurrentUser(),
             m = (0, l.e7)([p.ZP], () => p.ZP.getPremiumTypeSubscription()),
-            h = (0, j.N)(),
-            f = (0, C.Ng)(),
-            b = (0, C.Wp)(f, y.Si.TIER_2) ? y.Si.TIER_2 : void 0,
-            _ = null != m && m.status !== A.O0b.ACCOUNT_HOLD && m.hasAnyPremiumNitro,
+            h = (0, O.N)(),
+            f = (0, j.Ng)(),
+            b = (0, j.Wp)(f, A.Si.TIER_2) ? A.Si.TIER_2 : void 0,
+            _ = null != m && m.status !== P.O0b.ACCOUNT_HOLD && m.hasAnyPremiumNitro,
             E = (0, u.Z)(),
-            O = (0, x.C)('nitro-home', d) && E.isFractionalPremiumActive && !_;
+            C = (0, x.C)('nitro-home', d) && E.isFractionalPremiumActive && !_;
         return (0, i.jsxs)('div', {
-            className: s()(R.container, r),
+            className: s()(D.container, r),
             'data-testid': 'subscriber-nitro-home-hero-header',
             children: [
                 (0, i.jsx)('img', {
-                    src: D,
+                    src: Z,
                     alt: '',
-                    className: R.headerArt
+                    className: D.headerArt
                 }),
                 (0, i.jsxs)('div', {
-                    className: R.content,
+                    className: D.content,
                     children: [
                         c,
                         (0, i.jsx)(a.X6q, {
@@ -63,19 +65,19 @@ let w = (e) => {
                             children: o
                         }),
                         (0, i.jsxs)('div', {
-                            className: R.buttonContainer,
+                            className: D.buttonContainer,
                             children: [
-                                O &&
-                                    (0, i.jsx)(I.Z, {
+                                C &&
+                                    (0, i.jsx)(N.Z, {
                                         color: a.Ttl.BRAND,
-                                        className: s()(R.button, R.subscribeButton),
+                                        className: s()(D.button, D.subscribeButton),
                                         subscriptionTier: null != (n = null == h || null == (t = h.subscription_trial) ? void 0 : t.sku_id) ? n : b
                                     }),
-                                (0, i.jsx)(S.Z, {
-                                    color: O ? a.Ttl.WHITE : a.Ttl.BRAND,
-                                    look: O ? a.zxk.Looks.OUTLINED : a.zxk.Looks.FILLED,
-                                    textOptions: { textOverride: P.intl.string(P.t['3KomGR']) },
-                                    className: R.button,
+                                (0, i.jsx)(v.Z, {
+                                    color: C ? a.Ttl.WHITE : a.Ttl.BRAND,
+                                    look: C ? a.zxk.Looks.OUTLINED : a.zxk.Looks.FILLED,
+                                    textOptions: { textOverride: R.intl.string(R.t['3KomGR']) },
+                                    className: D.button,
                                     isGift: !0
                                 })
                             ]
@@ -85,62 +87,115 @@ let w = (e) => {
             ]
         });
     },
-    k = (e) => {
-        let { location: t } = e,
-            { subscriberHomeVariant: n } = E.g.useExperiment({ location: t }, { autoTrackExposure: !1 }),
-            r = n === E.p.VARIANT_2,
-            { headingText: s, headingTop: l } = M();
+    B = (e) => {
+        let { location: t, giftingExperimentCohort: n } = e,
+            { subscriberHomeVariant: r } = C.g.useExperiment({ location: t }, { autoTrackExposure: !1 }),
+            s = r === C.p.VARIANT_2,
+            { headingText: l, headingTop: o } = G();
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('img', {
-                    src: Z,
+                    src: w,
                     alt: '',
-                    className: R.headerArtV2
+                    className: D.headerArtV2
                 }),
                 (0, i.jsx)('div', {
-                    className: R.containerV2,
+                    className: D.containerV2,
                     'data-testid': 'subscriber-nitro-home-hero-header',
                     children: (0, i.jsxs)('div', {
-                        className: R.contentV2,
+                        className: D.contentV2,
                         children: [
-                            l,
+                            o,
                             (0, i.jsx)(a.X6q, {
                                 variant: 'display-lg',
                                 color: 'always-white',
-                                children: s
+                                children: l
                             }),
-                            r &&
-                                (0, i.jsx)('div', {
-                                    className: R.buttonContainer,
-                                    children: (0, i.jsx)(S.Z, {
-                                        color: a.Ttl.BRAND,
-                                        textOptions: { textOverride: P.intl.string(P.t['3KomGR']) },
-                                        className: R.button,
-                                        isGift: !0
-                                    })
-                                }),
-                            (0, i.jsx)(N.Z, {})
+                            ((e) => {
+                                let { cohort: t } = e;
+                                return t === E.XS.Variant1
+                                    ? (0, i.jsxs)(i.Fragment, {
+                                          children: [s && (0, i.jsx)(M, {}), (0, i.jsx)(y.Z, {})]
+                                      })
+                                    : t === E.XS.Variant2
+                                      ? void 0
+                                      : (0, i.jsxs)(i.Fragment, {
+                                            children: [
+                                                s &&
+                                                    (0, i.jsx)('div', {
+                                                        className: D.buttonContainer,
+                                                        children: (0, i.jsx)(v.Z, {
+                                                            showGradient: !0,
+                                                            color: a.Ttl.BRAND,
+                                                            textOptions: { textOverride: R.intl.string(R.t['3KomGR']) },
+                                                            className: D.button,
+                                                            isGift: !0
+                                                        })
+                                                    }),
+                                                (0, i.jsx)(y.Z, {})
+                                            ]
+                                        });
+                            })({ cohort: n })
                         ]
                     })
                 })
             ]
         });
     },
-    L = () => {
-        let { headingText: e } = M();
+    M = () =>
+        (0, i.jsxs)('div', {
+            className: D.giftingContainerHighVis,
+            children: [
+                (0, i.jsx)('img', {
+                    src: k.Z,
+                    alt: '',
+                    className: D.giftingContainerHighVisIcon
+                }),
+                (0, i.jsxs)('div', {
+                    className: D.giftingContainerHighVisDescription,
+                    children: [
+                        (0, i.jsx)(a.Text, {
+                            variant: 'text-lg/medium',
+                            color: 'always-white',
+                            children: R.intl.string(R.t.GyAbk5)
+                        }),
+                        (0, i.jsx)(a.Text, {
+                            variant: 'text-md/normal',
+                            color: 'always-white',
+                            children: R.intl.string(R.t.DNXdBA)
+                        })
+                    ]
+                }),
+                (0, i.jsx)('div', {
+                    className: D.giftingContainerHighVisButtonContainer,
+                    children: (0, i.jsx)(v.Z, {
+                        color: a.Ttl.WHITE,
+                        textOptions: {
+                            textOverride: R.intl.string(R.t.GyAbk5),
+                            textClassName: D.giftingContainerHighVisButtonText
+                        },
+                        className: D.giftingContainerHighVisButton,
+                        giftIconClassName: D.giftingContainerHighVisButton,
+                        isGift: !0
+                    })
+                })
+            ]
+        }),
+    U = () => {
+        let { headingText: e } = G();
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)('img', {
-                    src: Z,
+                    src: w,
                     alt: '',
-                    className: R.headerArtV2
+                    className: D.headerArtV2
                 }),
                 (0, i.jsxs)('div', {
-                    className: R.reverseContainer,
+                    className: D.reverseContainer,
                     'data-testid': 'subscriber-nitro-home-hero-header',
                     children: [
                         (0, i.jsx)('div', {
-                            className: R.reverseTrialHomeHeader,
+                            className: D.reverseTrialHomeHeader,
                             children: (0, i.jsx)(a.X6q, {
                                 variant: 'display-lg',
                                 color: 'always-white',
@@ -148,54 +203,63 @@ let w = (e) => {
                             })
                         }),
                         (0, i.jsx)('div', {
-                            className: R.buttonContainer,
-                            children: (0, i.jsx)(S.Z, {
+                            className: D.buttonContainer,
+                            children: (0, i.jsx)(v.Z, {
                                 color: a.Ttl.BRAND,
-                                textOptions: { textOverride: P.intl.string(P.t['3KomGR']) },
-                                className: R.button,
+                                textOptions: { textOverride: R.intl.string(R.t['3KomGR']) },
+                                className: D.button,
                                 isGift: !0
                             })
                         }),
-                        (0, i.jsx)(T.Z, {})
+                        (0, i.jsx)(I.Z, {})
                     ]
                 })
             ]
         });
     },
-    [B, M] = (0, h.Z)(),
-    U = (e) => {
+    [V, G] = (0, h.Z)(),
+    F = (e) => {
         let { className: t, location: n } = e,
             { analyticsLocations: r } = (0, c.ZP)(o.Z.PREMIUM_MARKETING_HERO_CTA),
             l = (0, _.W)(),
             g = (0, b._O)(),
-            p = P.intl.string(P.t.qYKftb),
-            h = (0, O.b)(n),
-            x = (0, i.jsx)(w, { className: t }),
-            E = P.intl.string(P.t.ifwQZW),
-            { fractionalState: C, endsAt: j } = (0, u.Z)(),
-            S = (0, d.ZP)(j, d.aj.CREDITS_ENDS_IN);
-        l ? ((E = P.intl.string(P.t.ifwQZW)), (x = (0, i.jsx)(L, {}))) : h && ((p = P.intl.string(P.t.qYKftb)), (E = P.intl.string(P.t.ifwQZW)), (x = (0, i.jsx)(k, { location: n })));
-        let T = null;
-        if (C === y.a$.NONE || l)
-            T = (0, i.jsx)(v.Cy, {
-                className: s()(R.trialPill, { [R.hidden]: !g }),
+            p = R.intl.string(R.t.qYKftb),
+            h = (0, S.b)(n),
+            x = (0, i.jsx)(L, { className: t }),
+            C = R.intl.string(R.t.ifwQZW),
+            { fractionalState: j, endsAt: O } = (0, u.Z)(),
+            v = (0, d.ZP)(O, d.aj.CREDITS_ENDS_IN),
+            I = E.PU.useExperiment({ location: 'HeroHeading' });
+        l
+            ? ((C = R.intl.string(R.t.ifwQZW)), (x = (0, i.jsx)(U, {})))
+            : h &&
+              ((p = R.intl.string(R.t.qYKftb)),
+              (C = R.intl.string(R.t.ifwQZW)),
+              (x = (0, i.jsx)(B, {
+                  location: n,
+                  giftingExperimentCohort: I.cohort
+              })));
+        let N = null;
+        if (j === A.a$.NONE || l)
+            N = (0, i.jsx)(T.Cy, {
+                className: s()(D.trialPill, { [D.hidden]: !g }),
                 text: p,
-                colorOptions: v.VE.PREMIUM_TIER_2_WHITE_FILL
+                colorOptions: T.VE.PREMIUM_TIER_2_WHITE_FILL
             });
         else {
             g = !0;
             let e = (0, i.jsx)('div', {
-                    className: R.pillIcon,
+                    className: D.pillIcon,
                     children: (0, i.jsx)(a.d3s, {
                         size: 'xxs',
                         color: 'var(--premium-tier-2-purple-for-gradients)'
                     })
                 }),
-                t = P.intl.format(P.t['yR+oDA'], { helpCenterLink: f.Z.getArticleURL(A.BhN.FRACTIONAL_PREMIUM_ABOUT) });
-            T = (0, i.jsx)(m.Z, {
+                t = R.intl.format(R.t['yR+oDA'], { helpCenterLink: f.Z.getArticleURL(P.BhN.FRACTIONAL_PREMIUM_ABOUT) });
+            N = (0, i.jsx)(m.Z, {
                 text: t,
                 'aria-label': t.toString(),
-                tooltipClassName: R.tooltip,
+                tooltipClassName: D.tooltip,
                 position: 'right',
                 children: (t) => {
                     var n, r;
@@ -228,13 +292,13 @@ let w = (e) => {
                         })({}, t)),
                         (r = r =
                             {
-                                className: R.pillContainer,
+                                className: D.pillContainer,
                                 children: (0, i.jsx)('div', {
-                                    className: R.flexCentered,
-                                    children: (0, i.jsx)(v.mn, {
-                                        className: s()(R.trialPill, { [R.hidden]: !g }),
-                                        text: S,
-                                        colorOptions: v.VE.PREMIUM_TIER_2_WHITE_FILL,
+                                    className: D.flexCentered,
+                                    children: (0, i.jsx)(T.mn, {
+                                        className: s()(D.trialPill, { [D.hidden]: !g }),
+                                        text: v,
+                                        colorOptions: T.VE.PREMIUM_TIER_2_WHITE_FILL,
                                         icon: e,
                                         gap: !1
                                     })
@@ -259,10 +323,10 @@ let w = (e) => {
         }
         return (0, i.jsx)(c.Gt, {
             value: r,
-            children: (0, i.jsx)(B.Provider, {
+            children: (0, i.jsx)(V.Provider, {
                 value: {
-                    headingText: E,
-                    headingTop: T
+                    headingText: C,
+                    headingTop: N
                 },
                 children: x
             })

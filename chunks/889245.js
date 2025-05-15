@@ -15,14 +15,14 @@ e.exports = function (e) {
                 }
             ]
         },
-        a = {
+        o = {
             match: [/new\s+/, r],
             className: {
                 1: 'keyword',
                 2: 'class.title'
             }
         },
-        o = {
+        a = {
             relevance: 0,
             match: [/\./, r],
             className: { 2: 'property' }
@@ -55,9 +55,9 @@ e.exports = function (e) {
                     7: 'title.class.inherited'
                 }
             },
-            a,
-            i,
             o,
+            i,
+            a,
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             e.APOS_STRING_MODE,

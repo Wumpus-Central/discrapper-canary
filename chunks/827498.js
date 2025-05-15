@@ -1,7 +1,7 @@
 n.d(t, {
-    G0: () => a,
+    G0: () => o,
     L3: () => i,
-    LG: () => o,
+    LG: () => a,
     _b: () => r,
     _y: () => l,
     ti: () => s
@@ -19,11 +19,11 @@ let i = {
         NEW_TO_APPS: 'new_to_apps',
         APPS_IN_THIS_SERVER: 'apps_in_this_server'
     },
-    a = {
+    o = {
         HOME: 'home',
         APP_DETAIL: 'app_detail'
     };
-var o = (function (e) {
+var a = (function (e) {
         return (e.HOME_EMPTY = 'home_empty'), (e.SEARCH_EMPTY = 'search_empty'), (e.HOME_NO_PERMISSIONS = 'home_no_permissions'), (e.COMMAND_NO_PERMISSIONS = 'command_no_permissions'), (e.COMMAND_NOT_FOUND = 'command_not_found'), e;
     })({}),
     s = (function (e) {

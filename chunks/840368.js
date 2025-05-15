@@ -8,5 +8,6 @@ e.exports = {
     content: 'content_d332d2',
     caret: 'caret_d332d2',
     messageNegative: 'messageNegative_d332d2',
-    messagePositive: 'messagePositive_d332d2'
+    messagePositive: 'messagePositive_d332d2',
+    birthdayText: 'birthdayText_d332d2'
 };

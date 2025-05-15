@@ -8,21 +8,21 @@ n.d(t, {
 });
 var r,
     i = n(264344),
-    a = n.n(i);
-let o = parseInt(null != (r = a().version) ? r : '0', 10),
-    s = void 0 !== a().ua && a().ua.indexOf('OculusBrowser') > -1,
+    o = n.n(i);
+let a = parseInt(null != (r = o().version) ? r : '0', 10),
+    s = void 0 !== o().ua && o().ua.indexOf('OculusBrowser') > -1,
     l = (() => {
         if (null == window.WebSocket) return !1;
-        switch (a().name) {
+        switch (o().name) {
             case 'IE':
             case 'Microsoft Edge':
-                return o >= 15;
+                return a >= 15;
             default:
                 return !0;
         }
     })(),
-    c = s || ('Firefox' === a().name && o >= 80) || ('Chrome' === a().name && o >= 37) || ('Opera' === a().name && o >= 66) || ('Node.js' === a().name && o >= 6) || ('Electron' === a().name && o >= 1) || ('Safari' === a().name && o >= 13) || ('Microsoft Edge' === a().name && o >= 37),
-    u = 'Chrome' === a().name || 'Safari' === a().name || ('Firefox' === a().name && o >= 80) || 'Opera' === a().name || 'Microsoft Edge' === a().name,
-    d = s || ('Firefox' === a().name && o >= 73) || ('Safari' === a().name && o >= 13) || ('Chrome' === a().name && o >= 80) || ('Microsoft Edge' === a().name && o >= 80),
-    f = ('Chrome' === a().name && o >= 58) || ('Safari' === a().name && o >= 15) || ('Firefox' === a().name && o >= 108),
-    _ = ('Chrome' === a().name && o >= 72) || ('Safari' === a().name && o >= 11) || ('Opera' === a().name && o >= 60) || ('Microsoft Edge' === a().name && o >= 79);
+    c = s || ('Firefox' === o().name && a >= 80) || ('Chrome' === o().name && a >= 37) || ('Opera' === o().name && a >= 66) || ('Node.js' === o().name && a >= 6) || ('Electron' === o().name && a >= 1) || ('Safari' === o().name && a >= 13) || ('Microsoft Edge' === o().name && a >= 37),
+    u = 'Chrome' === o().name || 'Safari' === o().name || ('Firefox' === o().name && a >= 80) || 'Opera' === o().name || 'Microsoft Edge' === o().name,
+    d = s || ('Firefox' === o().name && a >= 73) || ('Safari' === o().name && a >= 13) || ('Chrome' === o().name && a >= 80) || ('Microsoft Edge' === o().name && a >= 80),
+    f = ('Chrome' === o().name && a >= 58) || ('Safari' === o().name && a >= 15) || ('Firefox' === o().name && a >= 108),
+    _ = ('Chrome' === o().name && a >= 72) || ('Safari' === o().name && a >= 11) || ('Opera' === o().name && a >= 60) || ('Microsoft Edge' === o().name && a >= 79);

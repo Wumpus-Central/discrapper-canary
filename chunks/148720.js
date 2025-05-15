@@ -1,8 +1,8 @@
 n.d(t, { k: () => E });
 var r = n(668781),
     i = n(728345),
-    a = n(835873),
-    o = n(973616),
+    o = n(835873),
+    a = n(973616),
     s = n(592125),
     l = n(430824),
     c = n(496675),
@@ -20,7 +20,7 @@ function g(e) {
             null == n || n();
             break;
         case h.Fw.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
-            (0, a.w)();
+            (0, o.w)();
             break;
         case h.Fw.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
             r.Z.show({
@@ -55,12 +55,12 @@ function g(e) {
     }
 }
 async function E(e) {
-    let { channelId: t, applicationId: n, launchId: r, inputApplication: a, analyticsLocations: m, launchingComponentId: E, sectionName: b, inviterUserId: y } = e,
+    let { channelId: t, applicationId: n, launchId: r, inputApplication: o, analyticsLocations: m, launchingComponentId: E, sectionName: b, inviterUserId: y } = e,
         O = f.ZP.getEmbeddedActivitiesForChannel(t).find((e) => e.applicationId === n && (null == r || e.launchId === r)),
-        v = a;
+        v = o;
     if (null == v) {
         let e = await i.ZP.fetchApplication(n);
-        v = o.ZP.createFromServer(e);
+        v = a.ZP.createFromServer(e);
     }
     if (null == O || null == v) return;
     let I = u.default.getCurrentUser(),

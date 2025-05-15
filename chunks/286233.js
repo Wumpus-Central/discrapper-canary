@@ -1,10 +1,10 @@
 var r = n(538315),
     i = 'function' == typeof Symbol && 'symbol' == typeof Symbol('foo'),
-    a = Object.prototype.toString,
-    o = Array.prototype.concat,
+    o = Object.prototype.toString,
+    a = Array.prototype.concat,
     s = n(834889),
     l = function (e) {
-        return 'function' == typeof e && '[object Function]' === a.call(e);
+        return 'function' == typeof e && '[object Function]' === o.call(e);
     },
     c = n(134533)(),
     u = function (e, t, n, r) {
@@ -17,8 +17,8 @@ var r = n(538315),
     },
     d = function (e, t) {
         var n = arguments.length > 2 ? arguments[2] : {},
-            a = r(t);
-        i && (a = o.call(a, Object.getOwnPropertySymbols(t)));
-        for (var s = 0; s < a.length; s += 1) u(e, a[s], t[a[s]], n[a[s]]);
+            o = r(t);
+        i && (o = a.call(o, Object.getOwnPropertySymbols(t)));
+        for (var s = 0; s < o.length; s += 1) u(e, o[s], t[o[s]], n[o[s]]);
     };
 (d.supportsDescriptors = !!c), (e.exports = d);

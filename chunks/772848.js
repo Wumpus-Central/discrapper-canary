@@ -1,14 +1,14 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(258099),
     i = n(883830),
-    a = n(14309);
-let o = function (e, t, n) {
+    o = n(14309);
+let a = function (e, t, n) {
     if (r.Z.randomUUID && !t && !e) return r.Z.randomUUID();
-    let o = (e = e || {}).random || (e.rng || i.Z)();
-    if (((o[6] = (15 & o[6]) | 64), (o[8] = (63 & o[8]) | 128), t)) {
+    let a = (e = e || {}).random || (e.rng || i.Z)();
+    if (((a[6] = (15 & a[6]) | 64), (a[8] = (63 & a[8]) | 128), t)) {
         n = n || 0;
-        for (let e = 0; e < 16; ++e) t[n + e] = o[e];
+        for (let e = 0; e < 16; ++e) t[n + e] = a[e];
         return t;
     }
-    return (0, a.S)(o);
+    return (0, o.S)(a);
 };

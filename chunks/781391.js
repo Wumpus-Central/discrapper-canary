@@ -1,7 +1,7 @@
 n.d(t, {
-    Ag: () => o,
+    Ag: () => a,
     Q_: () => i,
-    hi: () => a
+    hi: () => o
 });
 var r = n(570140);
 function i(e) {
@@ -10,13 +10,13 @@ function i(e) {
         systemTheme: e
     });
 }
-function a(e) {
+function o(e) {
     r.Z.dispatch({
         type: 'UNSYNCED_USER_SETTINGS_UPDATE',
         settings: { useSystemTheme: e }
     });
 }
-function o(e) {
+function a(e) {
     r.Z.dispatch({
         type: 'UPDATE_THEME_PREFERENCES',
         preferences: e

@@ -1,8 +1,8 @@
 n.d(t, { K: () => c }), n(539854);
 var r = n(392711),
     i = n.n(r),
-    a = n(379649),
-    o = n(126168),
+    o = n(379649),
+    a = n(126168),
     s = n(981631);
 function l(e, t, n) {
     return (
@@ -26,11 +26,11 @@ class c {
             ((this.current = e),
             this.history.push({
                 state: e,
-                startTime: (0, a.zO)()
+                startTime: (0, o.zO)()
             }));
     }
     getVoiceConnectionSuccessStats() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, a.zO)(),
+        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, o.zO)(),
             t = this.getStateDurations(e),
             n = (e) => i().sumBy(t, (t) => (t.state === e ? t.durationMs : 0));
         return {
@@ -46,7 +46,7 @@ class c {
     }
     getStateDurations(e) {
         if (0 === this.history.length) return [];
-        let t = (0, o.Z)(this.history, (e, t) => ({
+        let t = (0, a.Z)(this.history, (e, t) => ({
                 state: e.state,
                 durationMs: t.startTime - e.startTime
             })),

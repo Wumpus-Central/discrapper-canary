@@ -68,14 +68,14 @@ function g() {
     );
 }
 let O = l.forwardRef(function (e, t) {
-    let { value: r, wrapperClassName: a, onChange: i, onPopulated: f, error: m, autoFocus: O, required: E, onFocus: x, onBlur: _, name: k } = e,
+    let { value: r, wrapperClassName: a, onChange: i, onPopulated: f, error: m, autoFocus: O, required: E, onFocus: x, onBlur: _, name: k, labelTag: A } = e,
         {
-            day: A,
-            setDay: j,
-            month: T,
-            setMonth: C,
-            year: M,
-            setYear: w
+            day: j,
+            setDay: T,
+            month: C,
+            setMonth: M,
+            year: w,
+            setYear: R
         } = (function (e) {
             let t = null,
                 r = null,
@@ -93,13 +93,13 @@ let O = l.forwardRef(function (e, t) {
                 setYear: u
             };
         })(r),
-        R = l.useMemo(() => (null != A && null != T && null != M ? c()(''.concat(A, '/').concat(T, '/').concat(M), 'DD/MM/YYYY') : null), [A, T, M]);
+        S = l.useMemo(() => (null != j && null != C && null != w ? c()(''.concat(j, '/').concat(C, '/').concat(w), 'DD/MM/YYYY') : null), [j, C, w]);
     l.useEffect(() => {
-        i((null == R ? void 0 : R.isValid()) ? R : null);
-    }, [R, i]);
-    let S = m;
-    null == R || R.isValid() || (S = p.intl.string(p.t.udnqh4));
-    let N = (function () {
+        i((null == S ? void 0 : S.isValid()) ? S : null);
+    }, [S, i]);
+    let N = m;
+    null == S || S.isValid() || (N = p.intl.string(p.t.udnqh4));
+    let P = (function () {
             let e = new Date().getFullYear(),
                 t = l.useRef(
                     Array.from(Array(150).keys()).map((t) => ({
@@ -117,58 +117,58 @@ let O = l.forwardRef(function (e, t) {
                 t.current
             );
         })(),
-        [P, G] = l.useState(O ? 0 : -1),
-        D = l.useRef(null),
+        [G, D] = l.useState(O ? 0 : -1),
         F = l.useRef(null),
         Z = l.useRef(null),
-        I = l.useMemo(g, []),
-        U = l.useCallback(() => {
+        I = l.useRef(null),
+        U = l.useMemo(g, []),
+        Y = l.useCallback(() => {
             var e, t, r, n;
-            switch (null == (e = I[P]) ? void 0 : e.type) {
+            switch (null == (e = U[G]) ? void 0 : e.type) {
                 case 'day':
-                    null == (t = D.current) || t.focus();
+                    null == (t = F.current) || t.focus();
                     break;
                 case 'month':
-                    null == (r = F.current) || r.focus();
+                    null == (r = Z.current) || r.focus();
                     break;
                 case 'year':
-                    null == (n = Z.current) || n.focus();
+                    null == (n = I.current) || n.focus();
             }
-        }, [P, D, F, Z, I]);
+        }, [G, F, Z, I, U]);
     (0, u.ZP)(() => {
-        let e = setTimeout(U, 500);
+        let e = setTimeout(Y, 500);
         return () => {
             clearTimeout(e);
         };
     });
-    let Y = {
+    let V = {
             onPopulated: f,
-            sortedInputs: I
+            sortedInputs: U
         },
-        V = l.useRef(Y);
+        B = l.useRef(V);
     l.useEffect(() => {
-        V.current = Y;
+        B.current = V;
     }),
         l.useEffect(() => {
-            let { onPopulated: e, sortedInputs: t } = V.current;
-            if (P >= t.length) {
+            let { onPopulated: e, sortedInputs: t } = B.current;
+            if (G >= t.length) {
                 null == e || e();
                 return;
             }
-            U();
-        }, [P, U]);
-    let B = [];
+            Y();
+        }, [G, Y]);
+    let W = [];
     for (let e = 0; e < 3; e++) {
-        let { type: t } = I[e];
+        let { type: t } = U[e];
         switch (t) {
             case 'day':
-                B.push({
+                W.push({
                     key: 'day',
                     input: (0, n.jsx)(y, {
                         options: v,
-                        selectOption: j,
+                        selectOption: T,
                         children: (0, n.jsx)(d.Z, {
-                            ref: D,
+                            ref: F,
                             className: h.__invalid_inputDay,
                             'aria-label': p.intl.string(p.t.Voklra),
                             menuPlacement: d.Z.MenuPlacements.TOP,
@@ -177,10 +177,10 @@ let O = l.forwardRef(function (e, t) {
                                 children: p.intl.string(p.t.Voklra)
                             }),
                             options: v,
-                            value: A,
+                            value: j,
                             onChange: (t) => {
                                 let { value: r } = t;
-                                j(r), G(e + 1);
+                                T(r), D(e + 1);
                             },
                             maxMenuHeight: 215,
                             onFocus: () => (null == x ? void 0 : x(''.concat(k, '_').concat(t))),
@@ -190,13 +190,13 @@ let O = l.forwardRef(function (e, t) {
                 });
                 break;
             case 'month':
-                B.push({
+                W.push({
                     key: 'month',
                     input: (0, n.jsx)(y, {
                         options: b,
-                        selectOption: C,
+                        selectOption: M,
                         children: (0, n.jsx)(d.Z, {
-                            ref: F,
+                            ref: Z,
                             className: h.__invalid_inputMonth,
                             'aria-label': p.intl.string(p.t.UDlN8f),
                             menuPlacement: d.Z.MenuPlacements.TOP,
@@ -205,10 +205,10 @@ let O = l.forwardRef(function (e, t) {
                                 children: p.intl.string(p.t.UDlN8f)
                             }),
                             options: b,
-                            value: T,
+                            value: C,
                             onChange: (t) => {
                                 let { value: r } = t;
-                                C(r), G(e + 1);
+                                M(r), D(e + 1);
                             },
                             maxMenuHeight: 215,
                             onFocus: () => (null == x ? void 0 : x(''.concat(k, '_').concat(t))),
@@ -218,13 +218,13 @@ let O = l.forwardRef(function (e, t) {
                 });
                 break;
             case 'year':
-                B.push({
+                W.push({
                     key: 'year',
                     input: (0, n.jsx)(y, {
-                        options: N,
-                        selectOption: w,
+                        options: P,
+                        selectOption: R,
                         children: (0, n.jsx)(d.Z, {
-                            ref: Z,
+                            ref: I,
                             className: h.__invalid_inputYear,
                             'aria-label': p.intl.string(p.t.ZWr5WF),
                             menuPlacement: d.Z.MenuPlacements.TOP,
@@ -232,11 +232,11 @@ let O = l.forwardRef(function (e, t) {
                                 'aria-hidden': !0,
                                 children: p.intl.string(p.t.ZWr5WF)
                             }),
-                            options: N,
-                            value: M,
+                            options: P,
+                            value: w,
                             onChange: (t) => {
                                 let { value: r } = t;
-                                w(r), G(e + 1);
+                                R(r), D(e + 1);
                             },
                             maxMenuHeight: 215,
                             onFocus: () => (null == x ? void 0 : x(''.concat(k, '_').concat(t))),
@@ -250,14 +250,14 @@ let O = l.forwardRef(function (e, t) {
         className: o()(h.container, a),
         children: [
             (0, n.jsx)(s.vwX, {
-                tag: 'legend',
+                tag: null != A ? A : 'legend',
                 required: E,
-                error: S,
+                error: N,
                 children: p.intl.string(p.t.xNpFJy)
             }),
             (0, n.jsx)('div', {
                 className: h.inputs,
-                children: B.map((e, t) => {
+                children: W.map((e, t) => {
                     let { key: r, input: l } = e;
                     return (0, n.jsx)(
                         'div',

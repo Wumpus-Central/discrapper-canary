@@ -1,29 +1,29 @@
 n.d(t, { Z: () => f }), n(388685);
 var r = n(392711),
     i = n.n(r),
-    a = n(626135),
-    o = n(524484),
+    o = n(626135),
+    a = n(524484),
     s = n(981631);
 let l = 5000;
 function c(e) {
     switch (e) {
-        case o.oZ.CHAT_INPUT:
+        case a.oZ.CHAT_INPUT:
             return 'chat_input';
-        case o.oZ.MENTION:
+        case a.oZ.MENTION:
             return 'mention';
-        case o.oZ.VOICE_USER:
+        case a.oZ.VOICE_USER:
             return 'voice_user';
     }
 }
 function u(e) {
     switch (e) {
-        case o.Hn.CHAT_INPUT:
+        case a.Hn.CHAT_INPUT:
             return 'chat_input';
-        case o.Hn.MEMBER_USER:
+        case a.Hn.MEMBER_USER:
             return 'member_user';
-        case o.Hn.REACTION:
+        case a.Hn.REACTION:
             return 'reaction';
-        case o.Hn.CALL_TILE:
+        case a.Hn.CALL_TILE:
             return 'call_tile';
     }
 }
@@ -39,13 +39,13 @@ function d(e, t) {
         });
 }
 let f = i().throttle((e) => {
-    let { enabled: t, combosEnabled: n, combosRequiredCount: r, screenshakeEnabled: i, shakeIntensity: o, screenshakeEnabledLocations: l, confettiEnabled: f, confettiSize: _, confettiCount: p, confettiEnabledLocations: h } = e;
-    a.default.track(s.rMx.POGGERMODE_SETTINGS_UPDATED, {
+    let { enabled: t, combosEnabled: n, combosRequiredCount: r, screenshakeEnabled: i, shakeIntensity: a, screenshakeEnabledLocations: l, confettiEnabled: f, confettiSize: _, confettiCount: p, confettiEnabledLocations: h } = e;
+    o.default.track(s.rMx.POGGERMODE_SETTINGS_UPDATED, {
         enabled: t,
         combos_enabled: n,
         combos_required_count: r,
         screenshake_enabled: i,
-        shake_intensity: o,
+        shake_intensity: a,
         screenshake_enabled_locations: d(l, c),
         confetti_enabled: f,
         confetti_size: _,

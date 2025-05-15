@@ -1,8 +1,8 @@
 n.d(t, { Z: () => y }), n(388685);
 var r,
     i = n(442837),
-    a = n(433517),
-    o = n(570140),
+    o = n(433517),
+    a = n(570140),
     s = n(581883);
 function l(e, t, n) {
     return (
@@ -36,12 +36,12 @@ function c(e) {
 let u = {},
     d = {};
 function f() {
-    var e, t, n, r, i, a;
-    let o = s.Z.settings;
+    var e, t, n, r, i, o;
+    let a = s.Z.settings;
     return {
-        gifAutoPlay: null == (t = o.textAndImages) || null == (e = t.gifAutoPlay) ? void 0 : e.value,
-        animateEmoji: null == (r = o.textAndImages) || null == (n = r.animateEmoji) ? void 0 : n.value,
-        animateStickers: null == (a = o.textAndImages) || null == (i = a.animateStickers) ? void 0 : i.value
+        gifAutoPlay: null == (t = a.textAndImages) || null == (e = t.gifAutoPlay) ? void 0 : e.value,
+        animateEmoji: null == (r = a.textAndImages) || null == (n = r.animateEmoji) ? void 0 : n.value,
+        animateStickers: null == (o = a.textAndImages) || null == (i = o.animateStickers) ? void 0 : i.value
     };
 }
 function _() {
@@ -90,11 +90,11 @@ l(b, 'displayName', 'UserSettingsOverridesStore'),
     l(b, 'migrations', [
         () => {
             var e;
-            let t = null != (e = a.K.get('UserSettingsStoreOverrides')) ? e : {};
-            return a.K.remove('UserSettingsStoreOverrides'), t;
+            let t = null != (e = o.K.get('UserSettingsStoreOverrides')) ? e : {};
+            return o.K.remove('UserSettingsStoreOverrides'), t;
         }
     ]);
-let y = new b(o.Z, {
+let y = new b(a.Z, {
     USER_SETTINGS_PROTO_UPDATE: E,
     USER_SETTINGS_OVERRIDE_APPLY: m,
     USER_SETTINGS_OVERRIDE_CLEAR: g,

@@ -1,7 +1,7 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(399606),
     i = n(594174);
-function a(e) {
+function o(e) {
     let { context: t } = e,
         n = 'channel' === t.type ? t.channel : void 0;
     return (0, r.e7)([i.default], () => {

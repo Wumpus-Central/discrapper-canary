@@ -1,4 +1,7 @@
-n.d(t, { Z: () => P });
+n.d(t, {
+    Z: () => R,
+    c: () => P
+});
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -145,30 +148,38 @@ let N = (e) => {
         });
     },
     P = (e) => {
+        let { analyticsLocations: t } = e;
+        g.default.track(j.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
+            (0, o.ZDy)(async () => {
+                let { default: e } = await n.e('47435').then(n.bind(n, 204387));
+                return (n) => (0, i.jsx)(e, I(T({}, n), { sourceAnalyticsLocations: t }));
+            });
+    },
+    R = (e) => {
         let { isInSettings: t = !1 } = e,
-            s = (0, a.e7)([f.Z], () => f.Z.getRecipientStatus()),
-            { referralSentUsers: u } = (0, _.G)(),
-            N = r.useMemo(() => u.map((e) => new m.Z(e)), [u]),
-            { subscriberHomeVariant: y } = b.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
-            P = y === b.p.VARIANT_2,
-            R = {
+            n = (0, a.e7)([f.Z], () => f.Z.getRecipientStatus()),
+            { referralSentUsers: s } = (0, _.G)(),
+            u = r.useMemo(() => s.map((e) => new m.Z(e)), [s]),
+            { subscriberHomeVariant: g } = b.g.useExperiment({ location: 'ReferralProgramProgressBar' }, { autoTrackExposure: !1 }),
+            T = g === b.p.VARIANT_2,
+            I = {
                 redeemed: 0,
                 converted: 0,
-                sent: s.size
+                sent: n.size
             };
-        s.forEach((e) => {
-            e === h.Fe.REDEEMED && R.redeemed++, e === h.Fe.CONVERTED && (R.redeemed++, R.converted++);
+        n.forEach((e) => {
+            e === h.Fe.REDEEMED && I.redeemed++, e === h.Fe.CONVERTED && (I.redeemed++, I.converted++);
         });
-        let D = R.sent === _.Q,
-            Z = p.Z.getArticleURL(j.BhN.REFERRAL_PROGRAM),
-            { analyticsLocations: w } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
-            k = r.useRef(null),
-            L = (R.sent / _.Q) * 100,
-            B = (0, i.jsxs)('div', {
+        let N = I.sent === _.Q,
+            y = p.Z.getArticleURL(j.BhN.REFERRAL_PROGRAM),
+            { analyticsLocations: R } = (0, d.ZP)(c.Z.PREMIUM_MARKETING_REFERALL_PROGRAM_PROGRESS_BAR),
+            D = r.useRef(null),
+            Z = (I.sent / _.Q) * 100,
+            w = (0, i.jsxs)('div', {
                 className: S.referralInfoContent,
                 children: [
                     (0, i.jsx)(E.ZP, {
-                        percentage: L,
+                        percentage: Z,
                         progressCircleVariation: E.Qo.NITRO_LOGO,
                         iconClassName: l()({
                             [S.referralProgressBarIcon]: !t,
@@ -181,21 +192,21 @@ let N = (e) => {
                             (0, i.jsx)(o.X6q, {
                                 variant: t ? 'heading-xl/extrabold' : 'heading-xxl/extrabold',
                                 className: S.expandedProgressBarHeader,
-                                children: (0, C.$s)({ hasSentAll: D })
+                                children: (0, C.$s)({ hasSentAll: N })
                             }),
-                            (0, i.jsx)(A, { userRecords: N }),
+                            (0, i.jsx)(A, { userRecords: u }),
                             (0, i.jsx)(o.Text, {
                                 variant: t ? 'text-sm/normal' : 'text-lg/medium',
                                 children: (0, C.Hg)({
-                                    helpdeskArticle: Z,
-                                    referralsStatuses: R
+                                    helpdeskArticle: y,
+                                    referralsStatuses: I
                                 })
                             }),
                             (0, i.jsxs)('div', {
                                 className: l()(S.expandedProgressBarButtonContainer, { [S.expandedProgressBarButtonContainerLayout]: !t }),
                                 children: [
                                     !t &&
-                                        !P &&
+                                        !T &&
                                         (0, i.jsx)(x.Z, {
                                             color: o.Ttl.CUSTOM,
                                             textOptions: { textOverride: O.intl.string(O.t.Ve9Ge3) },
@@ -206,13 +217,7 @@ let N = (e) => {
                                     (0, i.jsx)(o.gtL, {
                                         className: S.expandedProgressBarSelectFriendsCTA,
                                         color: o.Ttl.CUSTOM,
-                                        onClick: () => {
-                                            g.default.track(j.rMx.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: w }),
-                                                (0, o.ZDy)(async () => {
-                                                    let { default: e } = await n.e('47435').then(n.bind(n, 204387));
-                                                    return (t) => (0, i.jsx)(e, I(T({}, t), { sourceAnalyticsLocations: w }));
-                                                });
-                                        },
+                                        onClick: () => P({ analyticsLocations: R }),
                                         onlyShineOnHover: !0,
                                         children: (0, i.jsxs)('div', {
                                             className: S.expandedProgressBarSelectFriendsCTAInner,
@@ -222,7 +227,7 @@ let N = (e) => {
                                                     alt: '',
                                                     className: S.expandedProgressBarSelectFriendsIcon
                                                 }),
-                                                D ? O.intl.string(O.t.SY9tyM) : O.intl.string(O.t.Lm2nFR)
+                                                N ? O.intl.string(O.t.SY9tyM) : O.intl.string(O.t.Lm2nFR)
                                             ]
                                         })
                                     })
@@ -232,26 +237,26 @@ let N = (e) => {
                     })
                 ]
             }),
-            M = R.redeemed === _.Q;
+            k = I.redeemed === _.Q;
         return (0, i.jsx)(d.Gt, {
-            value: w,
+            value: R,
             children: (0, i.jsx)('div', {
                 className: l()({
-                    [S.containerWithGlowWithoutBanner]: M,
-                    [S.containerWithoutGlow]: !M,
+                    [S.containerWithGlowWithoutBanner]: k,
+                    [S.containerWithoutGlow]: !k,
                     [S.containerWithMargins]: !t,
-                    [S.containerWithGlowOnSettingsPage]: M && t
+                    [S.containerWithGlowOnSettingsPage]: k && t
                 }),
                 children: (0, i.jsx)('div', {
-                    ref: k,
+                    ref: D,
                     className: l()({
                         [S.expandedProgressBarContainer]: !t,
                         [S.expandedProgressBarContainerSettingsPage]: t,
-                        [S.expandedProgressBarContainerVariant1]: !P && !t,
-                        [S.expandedProgressBarContainerVariant2]: P && !t,
-                        [S.allReferralsSentBorder]: M
+                        [S.expandedProgressBarContainerVariant1]: !T && !t,
+                        [S.expandedProgressBarContainerVariant2]: T && !t,
+                        [S.allReferralsSentBorder]: k
                     }),
-                    children: B
+                    children: w
                 })
             })
         });

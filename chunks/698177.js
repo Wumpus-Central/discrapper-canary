@@ -23,14 +23,14 @@ let x = () => {
         [S, N] = i.useState(null),
         y = (0, o.e7)([d.Z], () => d.Z.getCountryCode()),
         C = y.code.split(' ')[0],
-        P = async () => {
+        T = async () => {
             try {
                 await c.Z.resendCode(e);
             } catch (e) {
                 N(e.body.message);
             }
         },
-        T = async () => {
+        P = async () => {
             b(!0);
             try {
                 let { token: t } = await c.Z.verifyPhone(C + e, l);
@@ -91,12 +91,12 @@ let x = () => {
                           (0, r.jsx)(g.zx, {
                               size: g.zx.Sizes.SMALL,
                               look: g.zx.Looks.LINK,
-                              onClick: P,
+                              onClick: T,
                               children: m.intl.string(m.t['5b60go'])
                           }),
                           (0, r.jsx)(g.zx, {
                               className: _.marginTop20,
-                              onClick: T,
+                              onClick: P,
                               submitting: E,
                               children: m.intl.string(m.t.i4jeWV)
                           })

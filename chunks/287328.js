@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(388685);
 var r = n(442837),
     i = n(348326),
-    a = n(570140),
-    o = n(314897),
+    o = n(570140),
+    a = n(314897),
     s = n(261875);
 function l(e, t, n) {
     return (
@@ -20,11 +20,11 @@ function l(e, t, n) {
 i.Ds.KvCache, i.Ds.KvCache;
 class c extends r.ZP.Store {
     initialize() {
-        this.waitFor(o.default);
+        this.waitFor(a.default);
     }
     constructor(...e) {
         super(...e),
-            l(this, 'database', (e) => s.Z.database(null != e ? e : o.default.getId())),
+            l(this, 'database', (e) => s.Z.database(null != e ? e : a.default.getId())),
             l(
                 this,
                 'channels',
@@ -137,8 +137,8 @@ class c extends r.ZP.Store {
 }
 function u(e) {
     return function (t) {
-        let n = null != t ? t : s.Z.database(o.default.getId());
+        let n = null != t ? t : s.Z.database(a.default.getId());
         return null == n ? null : e(n);
     };
 }
-let d = new c(a.Z, {});
+let d = new c(o.Z, {});
