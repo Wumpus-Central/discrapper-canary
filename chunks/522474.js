@@ -99,7 +99,7 @@ let S = new d.Z('PopoutWindowStore'),
     x = !1;
 function k(e, t) {
     let n = t.document,
-        r = n.body;
+        r = n.head;
     for (let e of (a()(null != r, 'Body for popout window is null!'), document.querySelectorAll('style'))) {
         let t = n.importNode(e, !0);
         r.appendChild(t);
