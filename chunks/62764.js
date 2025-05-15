@@ -1,9 +1,9 @@
-n.d(t, { Z: () => k }), n(388685);
+n.d(t, { Z: () => M }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(481060),
     c = n(904245),
     u = n(593472),
@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(443877),
     b = n(60174),
     _ = n(216337),
-    x = n(920888),
-    y = n(287151),
-    C = n(569471),
+    C = n(920888),
+    x = n(287151),
+    y = n(569471),
     v = n(346479),
     j = n(592125),
     O = n(934415),
@@ -72,19 +72,19 @@ function R(e, t) {
         e
     );
 }
-function k(e) {
-    let { postId: t, isFirstMessage: n, isLastItem: l = !1, parentChannelId: k } = e,
-        { ref: M, width: L } = (0, d.ZP)(),
+function M(e) {
+    let { postId: t, isFirstMessage: n, isLastItem: l = !1, parentChannelId: M } = e,
+        { ref: k, width: L } = (0, d.ZP)(),
         [D, U] = i.useState(3),
         [B, G] = i.useState(!n),
         [F, H] = (0, p.Z)(!1, 2000),
-        V = (0, a.e7)([j.Z], () => j.Z.getChannel(t), [t]),
+        V = (0, o.e7)([j.Z], () => j.Z.getChannel(t), [t]),
         { firstMessage: z } = (0, S.cl)(V),
-        W = (0, a.e7)([C.Z], () => C.Z.hasJoined(t)),
+        W = (0, o.e7)([y.Z], () => y.Z.hasJoined(t)),
         { disableReactionUpdates: Y, disableReactionCreates: q, isLurking: K, isGuest: X, isPendingMember: Q } = (0, g.Z)(V),
-        J = (0, a.e7)([j.Z], () => j.Z.getChannel(k)),
+        J = (0, o.e7)([j.Z], () => j.Z.getChannel(M)),
         $ = (0, I.Bs)(J),
-        ee = (0, a.e7)([h.Z], () => h.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
+        ee = (0, o.e7)([h.Z], () => h.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
         et = i.useCallback(
             (e) => {
                 let t = e[0];
@@ -97,7 +97,7 @@ function k(e) {
             [n]
         );
     i.useLayoutEffect(() => {
-        let e = M.current;
+        let e = k.current;
         if (null == e || !n) return;
         let t = new IntersectionObserver(et, { threshold: 1 });
         return (
@@ -119,14 +119,14 @@ function k(e) {
         el = () => {
             W ? v.Z.leaveThread(V, 'Forum Toolbar') : v.Z.joinThread(V, 'Forum Toolbar');
         },
-        eo = () => {
+        ea = () => {
             (0, P.B)({
                 postId: V.id,
                 location: { section: Z.jXE.CHANNEL_HEADER }
             }),
                 (0, E.JG)((0, O.EO)(V, J), () => H(!0));
         },
-        ea = () => {
+        eo = () => {
             c.Z.jumpToMessage({
                 channelId: V.id,
                 messageId: V.id,
@@ -138,18 +138,18 @@ function k(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: o()(T.container, { [T.header]: B }),
-                ref: M,
+                className: a()(T.container, { [T.header]: B }),
+                ref: k,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: o()(T.reactButtons, { [T.loading]: en }),
+                        className: a()(T.reactButtons, { [T.loading]: en }),
                         children: [
                             !ei &&
                                 !q &&
                                 null != $ &&
                                 (0, r.jsx)('div', {
                                     className: A.reactions,
-                                    children: (0, r.jsx)(y.le, {
+                                    children: (0, r.jsx)(x.le, {
                                         message: z,
                                         readOnly: !1,
                                         useChatFontScaling: !1,
@@ -166,7 +166,7 @@ function k(e) {
                                         emojiSize: 'reaction'
                                     })
                                 }),
-                            (0, r.jsx)(x.Z, {
+                            (0, r.jsx)(C.Z, {
                                 message: z,
                                 channel: V,
                                 disableReactionCreates: !0,
@@ -186,7 +186,7 @@ function k(e) {
                                     message: z,
                                     channel: V,
                                     useChatFontScaling: !1,
-                                    className: o()(T.addReactButton, { [T.hasNoReactions]: !ei }),
+                                    className: a()(T.addReactButton, { [T.hasNoReactions]: !ei }),
                                     isForumToolbar: !0,
                                     children: !ei && N.intl.string(N.t.xpOyTE)
                                 })
@@ -205,7 +205,7 @@ function k(e) {
                                             size: s.zxk.Sizes.SMALL,
                                             onClick: el,
                                             className: T.button,
-                                            innerClassName: o()(T.buttonInner, { [T.active]: W }),
+                                            innerClassName: a()(T.buttonInner, { [T.active]: W }),
                                             children: [
                                                 (0, r.jsx)(es, {
                                                     size: 'xs',
@@ -224,7 +224,7 @@ function k(e) {
                                         R(w({}, e), {
                                             look: s.zxk.Looks.BLANK,
                                             size: s.zxk.Sizes.SMALL,
-                                            onClick: eo,
+                                            onClick: ea,
                                             className: T.button,
                                             innerClassName: T.buttonInner,
                                             children: [
@@ -255,7 +255,7 @@ function k(e) {
                                             R(w({}, e), {
                                                 look: s.zxk.Looks.BLANK,
                                                 size: s.zxk.Sizes.SMALL,
-                                                onClick: ea,
+                                                onClick: eo,
                                                 className: T.button,
                                                 innerClassName: T.buttonInner,
                                                 children: (0, r.jsx)(s.Za2, {

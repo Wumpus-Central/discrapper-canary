@@ -6,8 +6,8 @@ var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(626135),
-    o = n(687683),
-    a = n(981631);
+    a = n(687683),
+    o = n(981631);
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -35,8 +35,8 @@ function s(e) {
 }
 function c(e) {
     let { channelId: t, onConfirm: c, onCancel: u } = e;
-    l.default.track(a.rMx.OPEN_MODAL, {
-        type: o.t9,
+    l.default.track(o.rMx.OPEN_MODAL, {
+        type: a.t9,
         channel_id: t
     }),
         (0, i.ZDy)(async () => {

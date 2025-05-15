@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(979554),
     l = n(442837),
     c = n(481060),
@@ -68,7 +68,7 @@ function v(e, t) {
     );
 }
 let I = (e) => {
-    let { skuId: t, isSelected: n, price: o, onSelect: b, shouldDisplayHeader: O = !1, className: I } = e,
+    let { skuId: t, isSelected: n, price: a, onSelect: b, shouldDisplayHeader: O = !1, className: I } = e,
         { product: S } = (0, p.T)(t),
         { giftRecipient: T, giftRecipientError: A } = (0, u.wD)(),
         N = (0, l.e7)([_.default], () => _.default.getCurrentUser()),
@@ -133,7 +133,7 @@ let I = (e) => {
             (0, r.jsxs)(c.P3F, {
                 tag: 'div',
                 onClick: L,
-                className: a()(E.previewContainer, {
+                className: o()(E.previewContainer, {
                     [E.previewContainerSelected]: n && null == A,
                     [E.previewContainerError]: n && null != A
                 }),
@@ -161,7 +161,7 @@ let I = (e) => {
                             }),
                             (0, r.jsx)(c.Text, {
                                 variant: 'text-md/semibold',
-                                children: o
+                                children: a
                             })
                         ]
                     }),

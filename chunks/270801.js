@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(313201),
-    o = n(388032),
-    a = n(802867);
+    a = n(388032),
+    o = n(802867);
 let s = () =>
         n
             .e('49812')
@@ -48,38 +48,38 @@ let s = () =>
                     size: i.CgR.SMALL,
                     transitionState: e.transitionState,
                     'aria-labelledby': c,
-                    className: a.modal,
+                    className: o.modal,
                     children: [
                         (0, r.jsx)('div', {
-                            className: a.animationContainer,
+                            className: o.animationContainer,
                             children: (0, r.jsx)(i.Fmz, {
                                 importData: s,
-                                className: a.animationMiddle
+                                className: o.animationMiddle
                             })
                         }),
                         (0, r.jsx)(i.hzk, {
                             children: (0, r.jsxs)('div', {
-                                className: a.container,
+                                className: o.container,
                                 children: [
                                     (0, r.jsx)(i.X6q, {
                                         variant: 'heading-lg/semibold',
-                                        className: a.header,
+                                        className: o.header,
                                         id: c,
-                                        children: o.intl.format(o.t.z9qozM, { guildName: e.guildName })
+                                        children: a.intl.format(a.t.z9qozM, { guildName: e.guildName })
                                     }),
                                     (0, r.jsx)(i.Text, {
                                         variant: 'text-sm/medium',
                                         color: 'header-secondary',
-                                        children: o.intl.string(o.t.nwpqyc)
+                                        children: a.intl.string(a.t.nwpqyc)
                                     }),
                                     (0, r.jsx)(i.zxk, {
-                                        className: a.button,
+                                        className: o.button,
                                         onClick: () => {
                                             e.onAccept(), e.onClose();
                                         },
                                         fullWidth: !0,
                                         size: i.PhG.LARGE,
-                                        children: o.intl.string(o.t.NuzmOD)
+                                        children: a.intl.string(a.t.NuzmOD)
                                     })
                                 ]
                             })

@@ -1,6 +1,6 @@
 n.d(t, {
-    Gd: () => o,
-    ME: () => a,
+    Gd: () => a,
+    ME: () => o,
     Ym: () => s,
     _g: () => i,
     hu: () => l
@@ -14,14 +14,14 @@ function i(e, t, n) {
         emoji: e
     });
 }
-function o(e, t) {
+function a(e, t) {
     r.Z.dispatch({
         type: 'HIGH_FIVE_REMOVE',
         channelId: t,
         userId: e
     });
 }
-function a(e) {
+function o(e) {
     r.Z.dispatch({
         type: 'HIGH_FIVE_SET_ENABLED',
         enabled: e

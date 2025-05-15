@@ -1,4 +1,4 @@
-n.d(t, { Oo: () => l });
+n.d(t, { Oo: () => a });
 var r = n(818083);
 let i = (0, r.B)({
     kind: 'user',
@@ -13,7 +13,7 @@ let i = (0, r.B)({
         }
     ]
 });
-function l() {
+function a() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         { enabled: t } = i.useExperiment({ location: 'GuildProfileEmbedExperiment' }, { autoTrackExposure: e });
     return t;

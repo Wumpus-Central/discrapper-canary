@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(399606),
     l = n(481060),
-    o = n(125268),
-    a = n(673125),
+    a = n(125268),
+    o = n(673125),
     s = n(984063),
     c = n(390322),
     u = n(871499),
@@ -13,16 +13,16 @@ var i = n(399606),
     h = n(388032);
 function f(e) {
     let { channel: t } = e,
-        n = (0, i.e7)([a.Z], () => a.Z.getDrawMode()),
+        n = (0, i.e7)([o.Z], () => o.Z.getDrawMode()),
         f = (null == n ? void 0 : n.type) === s.W.EMOJI_HOSE,
         m = (e, t) => {
             null != e
-                ? (0, o.Bo)({
+                ? (0, a.Bo)({
                       type: s.W.EMOJI_HOSE,
                       emojiName: e.name,
                       emojiId: e.id
                   })
-                : f && (0, o.Bo)(null),
+                : f && (0, a.Bo)(null),
                 null == t || t();
         };
     return (0, r.jsx)(p.Z, {

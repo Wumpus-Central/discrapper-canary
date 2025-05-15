@@ -2,9 +2,9 @@ n.d(t, { Z: () => Z }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(913527),
-    s = n.n(a),
+    a = n.n(l),
+    o = n(913527),
+    s = n.n(o),
     c = n(950035),
     u = n(442837),
     d = n(481060),
@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(199902),
     b = n(131951),
     _ = n(594174),
-    x = n(63063),
-    y = n(5192),
-    C = n(823961),
+    C = n(63063),
+    x = n(5192),
+    y = n(823961),
     v = n(981631),
     j = n(37113),
     O = n(388032),
@@ -50,19 +50,19 @@ function S(e) {
 }
 let P = (e) => 1 - Math.pow(1 - e, 3);
 function Z(e) {
-    let { channel: t, buyer: l, onClose: a, dismissibleContent: Z } = e,
+    let { channel: t, buyer: l, onClose: o, dismissibleContent: Z } = e,
         N = (0, u.Wu)([g.Z], () => g.Z.getAllActiveStreams()),
         T = (0, u.e7)([_.default], () => _.default.getCurrentUser()),
         A = null != N.find((e) => e.ownerId === (null == T ? void 0 : T.id)),
-        w = (0, u.e7)([C.Z], () => C.Z.getPreviousGoLiveSettings()),
+        w = (0, u.e7)([y.Z], () => y.Z.getPreviousGoLiveSettings()),
         R = A && null != w && w.resolution !== j.LY.RESOLUTION_1440 && w.frameRate !== j.ws.FPS_60,
-        [k, M] = (0, i.useState)(!1);
+        [M, k] = (0, i.useState)(!1);
     (0, i.useEffect)(() => {
-        M(!0);
+        k(!0);
     }, []);
     let L = (0, i.useContext)(m.h9),
         D = (0, d.q_F)({
-            from: k
+            from: M
                 ? {
                       opacity: 0,
                       transform: 'translateX(-50%) translateY(30px) scale(0.9)'
@@ -75,7 +75,7 @@ function Z(e) {
             config: {
                 duration: 250,
                 easing: P,
-                immediate: !k
+                immediate: !M
             }
         }),
         { avatarSrc: U, eventHandlers: B } = (0, f.Z)({
@@ -83,7 +83,7 @@ function Z(e) {
             size: d.EFr.SIZE_48,
             animateOnHover: !0
         }),
-        G = y.ZP.getName(t.guild_id, t.id, l),
+        G = x.ZP.getName(t.guild_id, t.id, l),
         F = A && !R,
         H = t.hdStreamingUntil;
     if (null == H || null == l || null == T) return null;
@@ -92,14 +92,14 @@ function Z(e) {
             ? O.intl.format(O.t['6LrV9f'], {
                   username: G,
                   num: V,
-                  helpCenterLink: x.Z.getArticleURL(v.BhN.HD_STREAMING_POTION)
+                  helpCenterLink: C.Z.getArticleURL(v.BhN.HD_STREAMING_POTION)
               })
             : l.id === T.id
               ? O.intl.string(O.t.IjKvNT)
               : !0 === A
                 ? O.intl.format(O.t.JkWoqK, {
                       username: G,
-                      helpCenterLink: x.Z.getArticleURL(v.BhN.HD_STREAMING_POTION)
+                      helpCenterLink: C.Z.getArticleURL(v.BhN.HD_STREAMING_POTION)
                   })
                 : O.intl.formatToPlainString(O.t.vNbVXF, { username: G }),
         W = R ? O.intl.string(O.t.o7NIjY) : F ? O.intl.string(O.t.r6xhBw) : O.intl.string(O.t.yKw8Dg);
@@ -139,26 +139,26 @@ function Z(e) {
                           (0, r.jsx)(d.zxk, {
                               onClick: () => {
                                   if (R) {
-                                      let e = C.Z.getPreviousGoLiveSettings(),
+                                      let e = y.Z.getPreviousGoLiveSettings(),
                                           t = b.Z.getGoLiveSource();
-                                      if (null == e) return void a();
+                                      if (null == e) return void o();
                                       let n = (0, h.s_)(e.resolution, e.frameRate, t);
-                                      return p.Z.setGoLiveSource(n), void a();
+                                      return p.Z.setGoLiveSource(n), void o();
                                   }
-                                  if (F) return void a();
+                                  if (F) return void o();
                                   (0, d.ZDy)(async () => {
                                       let { default: e } = await Promise.all([n.e('46746'), n.e('52657')]).then(n.bind(n, 60594));
                                       return (t) => (0, r.jsx)(e, S({ analyticsLocation: 'HDStreamingPotionBanner' }, t));
                                   }),
-                                      a();
+                                      o();
                               },
-                              className: o()({ [E.actionButton]: !0 !== A }),
+                              className: a()({ [E.actionButton]: !0 !== A }),
                               children: W
                           }),
                           !F &&
                               (0, r.jsx)(d.P3F, {
                                   className: E.x,
-                                  onClick: a,
+                                  onClick: o,
                                   children: (0, r.jsx)(d.Dio, { name: 'close' })
                               })
                       ]

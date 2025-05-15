@@ -1,8 +1,8 @@
 n.d(t, {
     $H: () => r,
-    Ip: () => o,
+    Ip: () => a,
     Ui: () => i
 });
 let r = 5,
     i = 'switch-accounts-modal',
-    o = 'multiaccount_cta_tooltip_seen';
+    a = 'multiaccount_cta_tooltip_seen';

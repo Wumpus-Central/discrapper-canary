@@ -49,8 +49,8 @@ function c(e, t) {
     );
 }
 function u(e) {
-    var { padded: t = !0, inset: n = !1, active: i = !1, className: u, children: d, onClick: p } = e,
-        h = (function (e, t) {
+    var { padded: t = !0, inset: n = !1, active: i = !1, className: u, children: d, onClick: p, ref: h } = e,
+        f = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -68,13 +68,14 @@ function u(e) {
                 for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ['padded', 'inset', 'active', 'className', 'children', 'onClick']);
+        })(e, ['padded', 'inset', 'active', 'className', 'children', 'onClick', 'ref']);
     return null != p
         ? (0, r.jsx)(
               a.P3F,
               c(
                   s(
                       {
+                          innerRef: h,
                           onClick: p,
                           tabIndex: null != p ? 0 : -1,
                           className: l()(u, {
@@ -85,7 +86,7 @@ function u(e) {
                               [o.interactive]: null != p
                           })
                       },
-                      h
+                      f
                   ),
                   { children: d }
               )
@@ -95,6 +96,7 @@ function u(e) {
               c(
                   s(
                       {
+                          ref: h,
                           className: l()(u, {
                               [o.outer]: !n,
                               [o.inset]: n,
@@ -102,7 +104,7 @@ function u(e) {
                               [o.active]: i
                           })
                       },
-                      h
+                      f
                   ),
                   { children: d }
               )

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(549879),
     l = n(300284),
     c = n(314897),
@@ -42,8 +42,8 @@ function m(e) {
 }
 function g(e) {
     let { user: t, guildId: n, fullWidth: h, appContext: g, onClose: E } = e,
-        b = (0, o.e7)([c.default], () => c.default.getId() === t.id),
-        y = (0, o.e7)([u.Z], () => (null != n ? u.Z.getGuild(n) : null)),
+        b = (0, a.e7)([c.default], () => c.default.getId() === t.id),
+        y = (0, a.e7)([u.Z], () => (null != n ? u.Z.getGuild(n) : null)),
         O = (0, l.Z)({ guild: y }),
         v = (0, l.Z)({}),
         { trackUserProfileAction: I } = (0, d.KZ)(),
@@ -53,18 +53,18 @@ function g(e) {
             ? (0, r.jsx)(f.tG, {
                   action: 'EDIT_PROFILE',
                   text: _.intl.string(_.t.s5vZlZ),
-                  icon: a.vdY,
+                  icon: o.vdY,
                   autoFocus: !0,
                   fullWidth: h,
                   onClick: () => {
                       null == E || E(), v(), (0, s.i)(g);
                   }
               })
-            : (0, r.jsx)(a.yRy, {
+            : (0, r.jsx)(o.yRy, {
                   targetElementRef: S,
                   renderPopout: (e) => {
                       let { closePopout: t } = e;
-                      return (0, r.jsxs)(a.v2r, {
+                      return (0, r.jsxs)(o.v2r, {
                           className: p.popoutMenu,
                           onSelect: void 0,
                           navId: 'edit-profile-popout',
@@ -73,7 +73,7 @@ function g(e) {
                           },
                           'aria-label': _.intl.string(_.t.AXIHpa),
                           children: [
-                              (0, r.jsx)(a.sNh, {
+                              (0, r.jsx)(o.sNh, {
                                   id: 'edit-server-profile',
                                   label: _.intl.string(_.t['PKQB/P']),
                                   subtext: _.intl.string(_.t.VYHWKC),
@@ -81,7 +81,7 @@ function g(e) {
                                       I({ action: 'EDIT_GUILD_PROFILE' }), O(), (0, s.i)(g);
                                   }
                               }),
-                              (0, r.jsx)(a.sNh, {
+                              (0, r.jsx)(o.sNh, {
                                   id: 'edit-main-profile',
                                   label: _.intl.string(_.t.HmFaFB),
                                   subtext: _.intl.string(_.t['+EERMj']),
@@ -99,7 +99,7 @@ function g(e) {
                               {
                                   ref: S,
                                   text: _.intl.string(_.t.s5vZlZ),
-                                  icon: a.vdY,
+                                  icon: o.vdY,
                                   autoFocus: !0,
                                   fullWidth: h
                               },

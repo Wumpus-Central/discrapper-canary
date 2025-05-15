@@ -2,8 +2,8 @@ n.d(t, { Z: () => I }), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(990547),
-    o = n(731965),
-    a = n(442837),
+    a = n(731965),
+    o = n(442837),
     s = n(704215),
     c = n(40851),
     u = n(317381),
@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(800329),
     b = n(470956),
     _ = n(430824),
-    x = n(496675),
-    y = n(434488),
-    C = n(27457),
+    C = n(496675),
+    x = n(434488),
+    y = n(27457),
     v = n(251564),
     j = n(695492),
     O = n(981631),
@@ -25,33 +25,33 @@ var r = n(255367),
 function I(e) {
     let { participants: t, onClick: n, onDoubleClick: I, onContextMenu: S, channel: P, className: Z, inCall: N, totalNumberOfParticipants: T } = e,
         A = (0, c.bp)() === O.IlC.POPOUT,
-        w = (0, a.e7)([_.Z], () => _.Z.getGuild(P.guild_id), [P.guild_id]),
+        w = (0, o.e7)([_.Z], () => _.Z.getGuild(P.guild_id), [P.guild_id]),
         { dismissedActivityEntryPointTileChannel: R } = (0, v.d)(),
-        k = (0, a.e7)([h.Z], () => h.Z.getUserParticipantCount(P.id), [P]),
-        M = (0, b.bt)(P.id, t),
+        M = (0, o.e7)([h.Z], () => h.Z.getUserParticipantCount(P.id), [P]),
+        k = (0, b.bt)(P.id, t),
         L = i.useCallback(() => {
-            (0, o.j)(() => {
+            (0, a.j)(() => {
                 v.d.setState({ dismissedActivityEntryPointTileChannel: P.id });
             });
         }, [P.id]);
     i.useEffect(() => {
         null != R &&
             P.id !== R &&
-            (0, o.j)(() => {
+            (0, a.j)(() => {
                 v.d.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [P.id, R]);
-    let D = (0, a.e7)([x.Z], () => P.isPrivate() || (0, m.b)(x.Z, w, P), [w, P]),
+    let D = (0, o.e7)([C.Z], () => P.isPrivate() || (0, m.b)(C.Z, w, P), [w, P]),
         U = (null == w ? void 0 : w.afkChannelId) === P.id,
         B = P.userLimit <= 0 || P.userLimit > 1,
-        G = (0, a.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(P.id).length <= 0),
+        G = (0, o.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(P.id).length <= 0),
         F = (0, f.wE)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
         H = (0, d.KF)(P.id) !== d.jy.CAN_LAUNCH,
         V = null != R && R === P.id,
-        z = M.map(
+        z = k.map(
             (e) => (t) =>
                 (0, r.jsx)(
-                    C.ZP,
+                    y.ZP,
                     {
                         participant: e,
                         channel: P,
@@ -82,19 +82,19 @@ function I(e) {
     ),
         null != w &&
             !U &&
-            (!(k >= 2) || !G || H || F || V
+            (!(M >= 2) || !G || H || F || V
                 ? B &&
-                  1 === k &&
+                  1 === M &&
                   D &&
                   (G && !H
                       ? z.push((e) =>
-                            (0, r.jsx)(y.h, {
+                            (0, r.jsx)(x.h, {
                                 channel: P,
                                 guild: w,
                                 width: e,
                                 inPopout: A,
                                 handleClose: L,
-                                userParticipantCount: k
+                                userParticipantCount: M
                             })
                         )
                       : z.push((e) =>
@@ -106,21 +106,21 @@ function I(e) {
                             })
                         ))
                 : z.push((e) =>
-                      (0, r.jsx)(y.h, {
+                      (0, r.jsx)(x.h, {
                           channel: P,
                           guild: w,
                           width: e,
                           inPopout: A,
                           handleClose: L,
-                          userParticipantCount: k
+                          userParticipantCount: M
                       })
                   ));
     let W = i.useCallback(
         (e) => {
             var t, n;
-            return null != (n = null == (t = M[e]) ? void 0 : t.id) ? n : 'empty-tile';
+            return null != (n = null == (t = k[e]) ? void 0 : t.id) ? n : 'empty-tile';
         },
-        [M]
+        [k]
     );
     return (0, r.jsx)(g.Z, {
         className: Z,

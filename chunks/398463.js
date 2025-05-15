@@ -12,18 +12,18 @@ function r(e, t, n) {
     );
 }
 n.d(t, {
-    HO: () => a,
+    HO: () => o,
     Hb: () => l,
     II: () => s,
     Lj: () => d,
     Ls: () => u,
     Lu: () => i,
     OT: () => c,
-    TC: () => o
+    TC: () => a
 });
 let i = (1000 / 60) * 3,
-    o = (1000 / 60) * 3,
-    a = 1000 / 60 / 8,
+    a = (1000 / 60) * 3,
+    o = 1000 / 60 / 8,
     s = (1000 / 60) * 12,
     l = 1000,
     c = 2,
@@ -41,12 +41,12 @@ class d {
     }
     generateDeadlineMetrics() {
         return {
-            isDeadlineNotIdeal: this._browserDeadlineMs < a,
+            isDeadlineNotIdeal: this._browserDeadlineMs < o,
             deadlineMs: this._deadlineMs.toFixed(2),
             timeSinceStartMs: (performance.now() - this._startMs).toFixed(2)
         };
     }
     constructor(e, t = !1) {
-        r(this, '_browserDeadlineMs', void 0), r(this, '_deadlineMs', void 0), r(this, '_startMs', void 0), r(this, '_firedDueToMaxTimeout', void 0), (this._deadlineMs = Math.max(a, e)), (this._browserDeadlineMs = e), (this._firedDueToMaxTimeout = t), (this._startMs = performance.now());
+        r(this, '_browserDeadlineMs', void 0), r(this, '_deadlineMs', void 0), r(this, '_startMs', void 0), r(this, '_firedDueToMaxTimeout', void 0), (this._deadlineMs = Math.max(o, e)), (this._browserDeadlineMs = e), (this._firedDueToMaxTimeout = t), (this._startMs = performance.now());
     }
 }

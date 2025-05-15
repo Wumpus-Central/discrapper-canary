@@ -2,8 +2,8 @@ n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(481060),
     c = n(749210),
     u = n(110924),
@@ -15,22 +15,22 @@ var r = n(255367),
     g = n(687158),
     b = n(184301),
     _ = n(502762),
-    x = n(271383),
-    y = n(594174),
-    C = n(189357),
+    C = n(271383),
+    x = n(594174),
+    y = n(189357),
     v = n(718617),
     j = n(327250),
     O = n(50767);
 function E(e) {
     let { userId: t, guildId: n, onClose: l, className: E, infoPanelClassName: I, style: S } = e,
-        P = (0, C.m)(n),
-        Z = (0, a.e7)([y.default], () => y.default.getUser(t), [t]),
-        N = (0, a.e7)([x.ZP], () => x.ZP.getMember(n, t), [n, t]),
+        P = (0, y.m)(n),
+        Z = (0, o.e7)([x.default], () => x.default.getUser(t), [t]),
+        N = (0, o.e7)([C.ZP], () => C.ZP.getMember(n, t), [n, t]),
         [T, A] = i.useState(null == Z || null == N),
         w = (0, u.Z)(N),
         R = i.useRef(null),
-        { analyticsLocations: k } = (0, f.ZP)(h.Z.GUILD_MEMBER_MOD_VIEW),
-        M = (0, g.ZP)(t, n),
+        { analyticsLocations: M } = (0, f.ZP)(h.Z.GUILD_MEMBER_MOD_VIEW),
+        k = (0, g.ZP)(t, n),
         L = (0, d.ZP)();
     return (i.useEffect(() => {
         P || l();
@@ -67,7 +67,7 @@ function E(e) {
     P)
         ? T || null == Z || null == N
             ? (0, r.jsx)('div', {
-                  className: o()(O.sidebarContainer, O.loadingContainer, E),
+                  className: a()(O.sidebarContainer, O.loadingContainer, E),
                   style: S,
                   children: (0, r.jsx)(s.$jN, {
                       animated: !0,
@@ -75,13 +75,13 @@ function E(e) {
                   })
               })
             : (0, r.jsx)(f.Gt, {
-                  value: k,
+                  value: M,
                   children: (0, r.jsx)('div', {
-                      className: o()(O.sidebarContainer, E),
+                      className: a()(O.sidebarContainer, E),
                       style: S,
                       children: (0, r.jsx)(_.Z, {
                           user: Z,
-                          displayProfile: M,
+                          displayProfile: k,
                           themeType: null,
                           themeOverride: L,
                           forceShowPremium: !0,

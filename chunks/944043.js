@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(793030),
+    a = n.n(i),
+    o = n(793030),
     s = n(442837),
     l = n(481060),
     c = n(194359),
@@ -25,10 +25,10 @@ function h(e) {
         }));
     return h || (m && !i)
         ? (0, r.jsxs)(d.Z.Overlay, {
-              className: o()(p.container, n),
+              className: a()(p.container, n),
               children: [
                   h &&
-                      (0, r.jsx)(a.xv, {
+                      (0, r.jsx)(o.xv, {
                           variant: 'text-sm/semibold',
                           color: 'header-secondary',
                           children: _.intl.string(_.t['oC/fU1'])
@@ -36,19 +36,19 @@ function h(e) {
                   m &&
                       (0, r.jsxs)(r.Fragment, {
                           children: [
-                              (0, r.jsx)(a.xv, {
+                              (0, r.jsx)(o.xv, {
                                   variant: 'text-sm/semibold',
                                   color: 'header-secondary',
                                   children: _.intl.string(_.t.HXz5Ag)
                               }),
                               (0, r.jsxs)(r.Fragment, {
                                   children: [
-                                      (0, r.jsx)(a.xv, {
+                                      (0, r.jsx)(o.xv, {
                                           variant: 'text-sm/semibold',
                                           color: 'header-secondary',
                                           children: '\u2022'
                                       }),
-                                      (0, r.jsx)(a.xv, {
+                                      (0, r.jsx)(o.xv, {
                                           variant: 'text-sm/semibold',
                                           color: 'header-secondary',
                                           children: _.intl.format(_.t.PrtAq6, {

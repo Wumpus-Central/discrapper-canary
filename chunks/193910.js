@@ -2,8 +2,8 @@ n.d(t, { Z: () => A }), n(413496), n(433524), n(35282), n(539854), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(831209),
-    o = n(442837),
-    a = n(704215),
+    a = n(442837),
+    o = n(704215),
     s = n(481060),
     c = n(278323),
     u = n(566620),
@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(618857),
     b = n(488131),
     _ = n(375954),
-    x = n(626135),
-    y = n(585483),
-    C = n(403182),
+    C = n(626135),
+    x = n(585483),
+    y = n(403182),
     v = n(127654),
     j = n(752305),
     O = n(951211),
@@ -28,14 +28,14 @@ var r = n(255367),
     Z = n(725776);
 let N = RegExp('(.*)```(\\w+)\\n(.*)```(.*)', 's');
 function T() {
-    let e = (0, o.e7)([_.Z], () => _.Z.hasCurrentUserSentMessageSinceAppStart()),
+    let e = (0, a.e7)([_.Z], () => _.Z.hasCurrentUserSentMessageSinceAppStart()),
         t = [];
-    e && t.push(a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
+    e && t.push(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE);
     let [n] = (0, f.cv)(t);
     return (
         i.useEffect(
             () => () => {
-                n === a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, h.EW)(a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: I.L.TAKE_ACTION });
+                n === o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE && (0, h.EW)(o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE, { dismissAction: I.L.TAKE_ACTION });
             },
             [n]
         ),
@@ -43,7 +43,7 @@ function T() {
             contentTypes: t,
             children: (e) => {
                 let { visibleContent: t } = e;
-                return t === a.z.ACTIVITIES_CHAT_MENU_NEW_BADGE
+                return t === o.z.ACTIVITIES_CHAT_MENU_NEW_BADGE
                     ? (0, r.jsx)(s.IGR, {
                           text: P.intl.string(P.t.y2b7CA),
                           color: l.Z.BUTTON_DANGER_BACKGROUND
@@ -54,20 +54,20 @@ function T() {
     );
 }
 function A(e) {
-    let { channel: t, options: o, onFileUpload: f, onClose: m, onSelect: _, draftType: A, editorTextContent: w, setValue: R, openClips: k } = e,
-        { analyticsLocations: M } = (0, p.ZP)(),
+    let { channel: t, options: a, onFileUpload: f, onClose: m, onSelect: _, draftType: A, editorTextContent: w, setValue: R, openClips: M } = e,
+        { analyticsLocations: k } = (0, p.ZP)(),
         L = (0, g.Dt)({ channel: t });
     function D() {
         (0, b.R6)(t, void 0, 'Plus Button');
     }
     function U() {
-        x.default.track(E.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), R('/', (0, j.JM)('/'));
+        C.default.track(E.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), R('/', (0, j.JM)('/'));
     }
     function B() {
-        k();
+        M();
     }
     function G() {
-        (0, h.EW)(a.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: I.L.TAKE_ACTION }),
+        (0, h.EW)(o.z.POLLS_CHAT_INPUT_COACHMARK, { dismissAction: I.L.TAKE_ACTION }),
             (0, s.ZDy)(
                 async () => {
                     let { default: e } = await n.e('68784').then(n.bind(n, 611611));
@@ -121,7 +121,7 @@ function A(e) {
             );
     }
     function F() {
-        x.default.track(E.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+        C.default.track(E.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
             guild_id: t.guild_id
@@ -129,7 +129,7 @@ function A(e) {
             (0, d.Z)({
                 channel: t,
                 openInPopout: !1,
-                analyticsLocations: M
+                analyticsLocations: k
             }),
             (0, u.w1)({ guildId: t.guild_id });
     }
@@ -138,11 +138,11 @@ function A(e) {
             n = 'txt',
             r = '',
             i = w.match(N);
-        null != i && ((r = i[1]), (n = i[2]), (e = i[3]), (r += i[4])), (0, v.d)([(0, C.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n), 'text/plain')], t, A), y.S.dispatchToLastSubscribed(E.CkL.CLEAR_TEXT), '' !== r && y.S.dispatchToLastSubscribed(E.CkL.INSERT_TEXT, { plainText: r });
+        null != i && ((r = i[1]), (n = i[2]), (e = i[3]), (r += i[4])), (0, v.d)([(0, y.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n), 'text/plain')], t, A), x.S.dispatchToLastSubscribed(E.CkL.CLEAR_TEXT), '' !== r && x.S.dispatchToLastSubscribed(E.CkL.INSERT_TEXT, { plainText: r });
     }
     return (
         i.useEffect(() => {
-            x.default.track(E.rMx.OPEN_POPOUT, {
+            C.default.track(E.rMx.OPEN_POPOUT, {
                 type: 'Send Attachment',
                 channel_id: t.id,
                 guild_id: t.guild_id
@@ -154,7 +154,7 @@ function A(e) {
             onClose: m,
             'aria-label': P.intl.string(P.t.Xm41aW),
             className: Z.menu,
-            children: o.map(function (e) {
+            children: a.map(function (e) {
                 var n;
                 let i = (0, r.jsxs)('div', {
                     className: Z.optionLabel,
@@ -232,7 +232,7 @@ function A(e) {
                                             channelId: t.id,
                                             type: E.mFx.JOIN,
                                             activity: n,
-                                            location: M[M.length - 1]
+                                            location: k[k.length - 1]
                                         })
                                     );
                                 }
@@ -253,7 +253,7 @@ function A(e) {
                                             channelId: t.id,
                                             type: E.mFx.LISTEN,
                                             activity: n,
-                                            location: M[M.length - 1]
+                                            location: k[k.length - 1]
                                         })
                                     );
                                 }
@@ -274,7 +274,7 @@ function A(e) {
                                             channelId: t.id,
                                             type: E.mFx.WATCH,
                                             activity: n,
-                                            location: M[M.length - 1]
+                                            location: k[k.length - 1]
                                         })
                                     );
                                 }

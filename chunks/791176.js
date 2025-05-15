@@ -1,9 +1,9 @@
-n.d(t, { Z: () => y }), n(539854);
+n.d(t, { Z: () => x }), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(399606),
+    a = n.n(l),
+    o = n(399606),
     s = n(481060),
     c = n(285173),
     u = n(422559),
@@ -15,13 +15,13 @@ var r = n(255367),
     g = n(981631),
     b = n(388032),
     _ = n(514983);
-function x(e) {
+function C(e) {
     var t, n;
     let { permission: i, roleIds: l, guild: p, specMap: h } = e,
         m = g.Plq[i],
-        x = null != (n = null == (t = h[m.toString()]) ? void 0 : t.title) ? n : (0, u.wt)(m),
-        y = f._o.has(m),
-        C = (0, a.e7)([d.Z], () => d.Z.getRoles(p.id));
+        C = null != (n = null == (t = h[m.toString()]) ? void 0 : t.title) ? n : (0, u.wt)(m),
+        x = f._o.has(m),
+        y = (0, o.e7)([d.Z], () => d.Z.getRoles(p.id));
     return (0, r.jsx)(s.ua7, {
         'aria-label': b.intl.string(b.t['0g8Xd3']),
         tooltipClassName: _.roleTooltipContainer,
@@ -31,7 +31,7 @@ function x(e) {
             children: [
                 (0, r.jsx)(s.Text, {
                     variant: 'text-sm/normal',
-                    children: y ? b.intl.string(b.t['GEuu/P']) : b.intl.string(b.t.wgGiCg)
+                    children: x ? b.intl.string(b.t['GEuu/P']) : b.intl.string(b.t.wgGiCg)
                 }),
                 l.map((e) =>
                     (0, r.jsx)(
@@ -39,7 +39,7 @@ function x(e) {
                         {
                             className: _.roleTooltipItem,
                             children: (0, r.jsx)(c.Z, {
-                                role: C[e],
+                                role: y[e],
                                 guildId: p.id
                             })
                         },
@@ -51,11 +51,11 @@ function x(e) {
         children: (e) => {
             let { onMouseEnter: t, onMouseLeave: n } = e;
             return (0, r.jsxs)(s.P3F, {
-                className: o()(_.permissionChiplet, { [_.elevatedPermission]: y }),
+                className: a()(_.permissionChiplet, { [_.elevatedPermission]: x }),
                 onMouseEnter: t,
                 onMouseLeave: n,
                 children: [
-                    y &&
+                    x &&
                         (0, r.jsx)(s.tQf, {
                             size: 'custom',
                             width: 16,
@@ -65,27 +65,27 @@ function x(e) {
                     (0, r.jsx)(s.Text, {
                         variant: 'text-xs/medium',
                         color: 'interactive-normal',
-                        children: x
+                        children: C
                     })
                 ]
             });
         }
     });
 }
-let y = i.memo(function (e) {
+let x = i.memo(function (e) {
     let { member: t, onNavigate: n } = e,
-        l = (0, a.e7)([d.Z], () => d.Z.getGuild(t.guildId), [t.guildId]),
+        l = (0, o.e7)([d.Z], () => d.Z.getGuild(t.guildId), [t.guildId]),
         c = (0, f.B2)(t.userId, t.guildId, f.Qn),
         u = (0, f.B2)(t.userId, t.guildId, f.pd),
-        y = Object.keys(c).length,
-        C = Object.keys(u).length,
+        x = Object.keys(c).length,
+        y = Object.keys(u).length,
         v = i.useMemo(() => (null != l ? p.Z.getGuildPermissionSpecMap(l) : null), [l]),
         j = i.useMemo(() => (null != l ? p.Z.generateGuildPermissionSpec(l) : null), [l]),
         O = i.useMemo(() => {
             if (null == l || null == v) return null;
-            if (0 === y)
+            if (0 === x)
                 return (0, r.jsx)('div', {
-                    className: o()(_.permissionChiplet, _.noModPerms),
+                    className: a()(_.permissionChiplet, _.noModPerms),
                     children: (0, r.jsx)(s.Text, {
                         variant: 'text-sm/normal',
                         color: 'text-positive',
@@ -100,14 +100,14 @@ let y = i.memo(function (e) {
                             let n = t.flag,
                                 i = f.pd.find((e) => g.Plq[e] === n);
                             if (null == i) return;
-                            let o = c[i];
-                            null != o &&
+                            let a = c[i];
+                            null != a &&
                                 e.push(
                                     (0, r.jsx)(
-                                        x,
+                                        C,
                                         {
                                             permission: i,
-                                            roleIds: o,
+                                            roleIds: a,
                                             guild: l,
                                             specMap: v
                                         },
@@ -118,7 +118,7 @@ let y = i.memo(function (e) {
                     }),
                 e
             );
-        }, [l, y, c, j, v]);
+        }, [l, x, c, j, v]);
     return null == l
         ? null
         : (0, r.jsx)(s.xJW, {
@@ -137,7 +137,7 @@ let y = i.memo(function (e) {
                               (0, r.jsx)(s.Text, {
                                   variant: 'eyebrow',
                                   color: 'interactive-normal',
-                                  children: b.intl.format(b.t['0x6aTk'], { count: C })
+                                  children: b.intl.format(b.t['0x6aTk'], { count: y })
                               }),
                               (0, r.jsx)(s.Fbu, {
                                   size: 'custom',

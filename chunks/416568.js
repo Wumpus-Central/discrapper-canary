@@ -41,8 +41,8 @@ var r = n(255367),
     V = n(187835),
     H = n(118122),
     F = n(193154),
-    z = n(602147),
-    W = n(222059),
+    W = n(602147),
+    z = n(222059),
     Y = n(751277),
     K = n(65721),
     q = n(843343),
@@ -235,7 +235,7 @@ function ec(e) {
         a = (0, h.Wu)([A.Z, T.ZP], () => L.default.keys(A.Z.getGuilds()).filter((e) => T.ZP.isCurrentUserGuest(e))),
         u = i.concat(a);
     return (0, r.jsxs)(r.Fragment, {
-        children: [(0, r.jsx)(W.u, {}), l ? (0, r.jsx)(E.Z, {}) : null, (0, r.jsx)(Y.Z, { isOnHubVerificationRoute: s }), !t && (0, r.jsx)(B.Z, {}), u.map((e) => (0, r.jsx)($.Z, { guildId: e }, e)), (0, r.jsx)(J.Z, { onActivate: n })]
+        children: [(0, r.jsx)(z.u, {}), l ? (0, r.jsx)(E.Z, {}) : null, (0, r.jsx)(Y.Z, { isOnHubVerificationRoute: s }), !t && (0, r.jsx)(B.Z, {}), u.map((e) => (0, r.jsx)($.Z, { guildId: e }, e)), (0, r.jsx)(J.Z, { onActivate: n })]
     });
 }
 function eu(e) {
@@ -294,9 +294,9 @@ function ed(e) {
         [V] = i.useState(() => new f.V7()),
         H = i.useRef(null),
         F = i.useRef(null),
-        W = (0, u.OP)(),
-        { ref: Y } = W,
-        q = eo(W, ['ref']),
+        z = (0, u.OP)(),
+        { ref: Y } = z,
+        q = eo(z, ['ref']),
         J = (0, m.mFp)(),
         [$, er] = i.useState(!1),
         [ed, eh] = i.useState(!1),
@@ -420,7 +420,7 @@ function ed(e) {
         { shouldShow: ej, questId: eE, onDiscoveryButtonClick: ex } = eS,
         eP = eo(eS, ['shouldShow', 'questId', 'onDiscoveryButtonClick']),
         eI = ev && ej,
-        ew = (0, r.jsx)(z.Z, {
+        ew = (0, r.jsx)(W.Z, {
             ref: eC,
             questId: eI ? eE : void 0,
             selected: e_,

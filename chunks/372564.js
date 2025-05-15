@@ -1,9 +1,9 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(374470),
+    a = n.n(l),
+    o = n(374470),
     s = n(481060),
     c = n(239091),
     u = n(454585),
@@ -53,7 +53,7 @@ class _ extends i.Component {
                   children: [
                       (0, r.jsx)(d.Z.Divider, {}),
                       (0, r.jsxs)('div', {
-                          className: o()(f.topic, f.expandable),
+                          className: a()(f.topic, f.expandable),
                           onMouseDown: this.onMouseDown,
                           onMouseMove: this.onMouseMove,
                           onMouseUp: this.onMouseUp,
@@ -78,10 +78,10 @@ class _ extends i.Component {
             m(this, '_mouseUp', !1),
             m(this, 'handleOpenTopic', (e) => {
                 let t = e.target;
-                if ((0, a.k)(t)) {
+                if ((0, o.k)(t)) {
                     if (b(t)) return;
                     let e = t.parentNode;
-                    if ((0, a.k)(e) && b(e)) return;
+                    if ((0, o.k)(e) && b(e)) return;
                 }
                 (0, s.ZDy)(async () => {
                     let { default: e } = await n.e('65631').then(n.bind(n, 10722));
@@ -102,18 +102,18 @@ class _ extends i.Component {
                 (0, c.jW)(e, async () => {
                     let { default: e } = await n.e('24783').then(n.bind(n, 439635));
                     return (n) => {
-                        var l, o;
+                        var l, a;
                         return (0, r.jsx)(
                             e,
                             ((l = g({}, n)),
-                            (o = o =
+                            (a = a =
                                 {
                                     channel: t,
                                     guild: i,
                                     includeTopic: !0
                                 }),
                             Object.getOwnPropertyDescriptors
-                                ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))
+                                ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
                                 : (function (e, t) {
                                       var n = Object.keys(e);
                                       if (Object.getOwnPropertySymbols) {
@@ -121,8 +121,8 @@ class _ extends i.Component {
                                           n.push.apply(n, r);
                                       }
                                       return n;
-                                  })(Object(o)).forEach(function (e) {
-                                      Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(o, e));
+                                  })(Object(a)).forEach(function (e) {
+                                      Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                                   }),
                             l)
                         );
@@ -138,4 +138,4 @@ class _ extends i.Component {
             });
     }
 }
-let x = _;
+let C = _;

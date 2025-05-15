@@ -2,8 +2,8 @@ n.d(t, { Z: () => v });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(112724),
+    a = n.n(l),
+    o = n(112724),
     s = n(413458),
     c = n(351248),
     u = n(600164),
@@ -15,17 +15,17 @@ var r = n(255367),
     g = n(430371),
     b = n(236564),
     _ = n(45430),
-    x = n(981631),
-    y = n(354459),
-    C = n(363987);
-let v = (0, a.Z)((e) => {
-    let { participants: t, filteredParticipants: n, selectedParticipant: l, participantsVersion: a, layout: v, onSelectParticipant: j, onContextMenuParticipant: O, onFullscreenParticipant: E, channel: I, hasConnectPermission: S, className: P, inCall: Z, showParticipants: N = !0, width: T, height: A, idle: w, mode: R, popoutWindow: k, awaitingRemoteSessionInfo: M, callContainerDimensions: L } = e;
+    C = n(981631),
+    x = n(354459),
+    y = n(363987);
+let v = (0, o.Z)((e) => {
+    let { participants: t, filteredParticipants: n, selectedParticipant: l, participantsVersion: o, layout: v, onSelectParticipant: j, onContextMenuParticipant: O, onFullscreenParticipant: E, channel: I, hasConnectPermission: S, className: P, inCall: Z, showParticipants: N = !0, width: T, height: A, idle: w, mode: R, popoutWindow: M, awaitingRemoteSessionInfo: k, callContainerDimensions: L } = e;
     i.useEffect(() => {
-        p.S.dispatch(x.CkL.REMEASURE_TARGET);
+        p.S.dispatch(C.CkL.REMEASURE_TARGET);
     }, [T, A, L.width, L.height]);
     let D = (0, d.Q3)('ChannelCallContent'),
-        U = i.useMemo(() => n.filter((e) => e.type !== y.fO.ACTIVITY || !e.participants.some((e) => (0, s.J)(e))), [n, a]);
-    return (null == M ? void 0 : M.channelId) === I.id
+        U = i.useMemo(() => n.filter((e) => e.type !== x.fO.ACTIVITY || !e.participants.some((e) => (0, s.J)(e))), [n, o]);
+    return (null == k ? void 0 : k.channelId) === I.id
         ? (0, r.jsx)(f.Z, { height: A })
         : (null == I ? void 0 : I.isGuildVocal()) && !Z
           ? (0, r.jsx)(h.Z, {
@@ -33,11 +33,11 @@ let v = (0, a.Z)((e) => {
                 participants: t,
                 hasConnectPermission: S
             })
-          : R === x.WtW.VOICE
+          : R === C.WtW.VOICE
             ? (0, r.jsx)(c.Z, {
                   guildId: I.guild_id,
                   width: T,
-                  className: C.voiceCallWrapper,
+                  className: y.voiceCallWrapper,
                   participants: t,
                   onContextMenu: O
               })
@@ -46,17 +46,17 @@ let v = (0, a.Z)((e) => {
                   ? D
                       ? (0, r.jsx)(_.Z, { channelId: I.id })
                       : (0, r.jsx)(b.Z, {
-                            className: o()(C.videoGrid, C.hiddenParticipants),
+                            className: a()(y.videoGrid, y.hiddenParticipants),
                             channelId: I.id,
                             width: T
                         })
                   : (0, r.jsx)(u.Z, {
-                        className: C.videoGridWrapper,
+                        className: y.videoGridWrapper,
                         justify: u.Z.Justify.CENTER,
                         align: u.Z.Align.CENTER,
                         children: (0, r.jsx)(m.Z, {
                             channel: I,
-                            className: C.videoGrid,
+                            className: y.videoGrid,
                             participants: U,
                             totalNumberOfParticipants: t.length,
                             onClick: j,
@@ -72,7 +72,7 @@ let v = (0, a.Z)((e) => {
                     selectedParticipant: l,
                     filteredParticipants: U,
                     participants: t,
-                    popoutWindow: k,
+                    popoutWindow: M,
                     className: P,
                     idle: w,
                     height: A,

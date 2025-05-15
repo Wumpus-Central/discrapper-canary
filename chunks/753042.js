@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ });
 var r = n(255367),
     i = n(73800),
     l = n(399606),
-    o = n(481060),
-    a = n(388905),
+    a = n(481060),
+    o = n(388905),
     s = n(527379),
     c = n(376923),
     u = n(16829),
@@ -18,119 +18,119 @@ function _(e) {
     let { member: t } = e,
         n = (0, l.e7)([d.Z], () => d.Z.getGuild(t.guildId), [t.guildId]),
         _ = (0, c.mh)(t.userId, t.guildId),
-        x = (0, c.mV)(t.userId, t.guildId),
-        y = (0, c.LD)(t.userId),
-        C = (0, c.wi)(t.userId, t.guildId);
+        C = (0, c.mV)(t.userId, t.guildId),
+        x = (0, c.LD)(t.userId),
+        y = (0, c.wi)(t.userId, t.guildId);
     return (i.useEffect(() => {
         (0, s.zO)(t.guildId);
     }, [t.guildId]),
     null == n)
         ? null
-        : (0, r.jsx)(o.xJW, {
+        : (0, r.jsx)(a.xJW, {
               title: g.intl.string(g.t['ldCE/v']),
               titleClassName: b.infoTitle,
               children: (0, r.jsxs)(f.WM, {
                   children: [
                       (0, r.jsx)(f._2, {
-                          icon: (0, r.jsx)(o.lZ8, {
+                          icon: (0, r.jsx)(a.lZ8, {
                               size: 'custom',
                               width: f.Mn,
                               height: f.Mn
                           }),
-                          name: (0, r.jsx)(o.Text, {
+                          name: (0, r.jsx)(a.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
                               children: g.intl.string(g.t.nzGai4)
                           }),
                           description: _
-                              ? (0, r.jsx)(o.sV5, {
+                              ? (0, r.jsx)(a.sV5, {
                                     size: 'custom',
                                     width: f.Mn,
                                     height: f.Mn,
-                                    color: o.TVs.colors.INFO_POSITIVE_FOREGROUND
+                                    color: a.TVs.colors.INFO_POSITIVE_FOREGROUND
                                 })
-                              : (0, r.jsx)(o.CTb, {
+                              : (0, r.jsx)(a.CTb, {
                                     size: 'custom',
                                     width: f.Mn,
                                     height: f.Mn,
-                                    color: o.TVs.colors.INFO_DANGER_FOREGROUND
+                                    color: a.TVs.colors.INFO_DANGER_FOREGROUND
                                 })
                       }),
-                      x !== c.qc.NO_GATE &&
+                      C !== c.qc.NO_GATE &&
                           (0, r.jsx)(f._2, {
-                              icon: (0, r.jsx)(o.snC, {
+                              icon: (0, r.jsx)(a.snC, {
                                   size: 'custom',
                                   width: f.Mn,
                                   height: f.Mn
                               }),
-                              name: (0, r.jsx)(o.Text, {
+                              name: (0, r.jsx)(a.Text, {
                                   variant: 'text-sm/medium',
                                   color: 'text-normal',
                                   children: g.intl.string(g.t['93hqlp'])
                               }),
                               description:
-                                  x === c.qc.AGREED
-                                      ? (0, r.jsx)(o.sV5, {
+                                  C === c.qc.AGREED
+                                      ? (0, r.jsx)(a.sV5, {
                                             size: 'custom',
                                             width: f.Mn,
                                             height: f.Mn,
-                                            color: o.TVs.colors.INFO_POSITIVE_FOREGROUND
+                                            color: a.TVs.colors.INFO_POSITIVE_FOREGROUND
                                         })
-                                      : (0, r.jsx)(o.CTb, {
+                                      : (0, r.jsx)(a.CTb, {
                                             size: 'custom',
                                             width: f.Mn,
                                             height: f.Mn,
-                                            color: o.TVs.colors.INFO_DANGER_FOREGROUND
+                                            color: a.TVs.colors.INFO_DANGER_FOREGROUND
                                         })
                           }),
                       (0, r.jsx)(f._2, {
-                          icon: (0, r.jsx)(o.gw7, {
+                          icon: (0, r.jsx)(a.gw7, {
                               size: 'custom',
                               color: 'currentColor',
                               width: f.Mn,
                               height: f.Mn
                           }),
-                          name: (0, r.jsx)(o.Text, {
+                          name: (0, r.jsx)(a.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
                               children: g.intl.string(g.t.SaDIpK)
                           }),
-                          description: (0, r.jsx)(o.Text, {
+                          description: (0, r.jsx)(a.Text, {
+                              variant: 'text-sm/medium',
+                              color: 'text-normal',
+                              children: x
+                          })
+                      }),
+                      (0, r.jsx)(f._2, {
+                          icon: (0, r.jsx)(o.Vj, {
+                              guild: n,
+                              size: o.Vj.Sizes.SMOL,
+                              animate: !1,
+                              className: b.guildIcon
+                          }),
+                          name: (0, r.jsx)(a.Text, {
+                              variant: 'text-sm/medium',
+                              color: 'text-normal',
+                              children: g.intl.string(g.t['NQJ+WF'])
+                          }),
+                          description: (0, r.jsx)(a.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
                               children: y
                           })
                       }),
                       (0, r.jsx)(f._2, {
-                          icon: (0, r.jsx)(a.Vj, {
-                              guild: n,
-                              size: a.Vj.Sizes.SMOL,
-                              animate: !1,
-                              className: b.guildIcon
-                          }),
-                          name: (0, r.jsx)(o.Text, {
-                              variant: 'text-sm/medium',
-                              color: 'text-normal',
-                              children: g.intl.string(g.t['NQJ+WF'])
-                          }),
-                          description: (0, r.jsx)(o.Text, {
-                              variant: 'text-sm/medium',
-                              color: 'text-normal',
-                              children: C
-                          })
-                      }),
-                      (0, r.jsx)(f._2, {
-                          icon: (0, r.jsx)(o.ejJ, {
+                          icon: (0, r.jsx)(a.ejJ, {
                               size: 'custom',
                               width: f.Mn,
                               height: f.Mn
                           }),
-                          name: (0, r.jsx)(o.Text, {
+                          name: (0, r.jsx)(a.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
                               children: g.intl.string(g.t['eJOq+f'])
                           }),
-                          description: (0, r.jsx)(o.Text, {
+                          description: (0, r.jsx)(a.Text, {
                               variant: 'text-sm/medium',
                               color: 'text-normal',
                               children: (0, r.jsx)(u.ZP, {

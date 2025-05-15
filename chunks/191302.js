@@ -1,9 +1,9 @@
-n.d(t, { Z: () => C }), n(388685), n(539854);
+n.d(t, { Z: () => y }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(399606),
+    a = n.n(l),
+    o = n(399606),
     s = n(704215),
     c = n(481060),
     u = n(493773),
@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(576645),
     b = n(921944),
     _ = n(388032),
-    x = n(32709);
-function y(e) {
+    C = n(32709);
+function x(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -41,30 +41,30 @@ function y(e) {
     }
     return e;
 }
-function C(e) {
+function y(e) {
     let { channel: t } = e,
-        l = (0, a.e7)([f.default], () => f.default.getUser(t.hdStreamingBuyerId), [t.hdStreamingBuyerId]),
-        [o, d] = (0, i.useState)(!1),
+        l = (0, o.e7)([f.default], () => f.default.getUser(t.hdStreamingBuyerId), [t.hdStreamingBuyerId]),
+        [a, d] = (0, i.useState)(!1),
         [h, _] = (0, i.useState)(!1),
-        x = (0, g.bK)(),
-        [C, j] = (0, i.useState)(!1);
+        C = (0, g.bK)(),
+        [y, j] = (0, i.useState)(!1);
     (0, u.ZP)(() => {
         t.isHDStreamSplashed && j(!0);
     }),
         (0, g.Uu)(t),
         (function (e) {
-            let t = (0, a.e7)([f.default], () => f.default.getCurrentUser()),
+            let t = (0, o.e7)([f.default], () => f.default.getCurrentUser()),
                 l = [];
             e.hdStreamingBuyerId !== (null == t ? void 0 : t.id) || e.isHDStreamSplashed || l.push(s.z.HD_STREAMING_POTION_MODAL_UPSELL);
-            let [o, u] = (0, p.US)(l);
+            let [a, u] = (0, p.US)(l);
             (0, i.useEffect)(() => {
-                o === s.z.HD_STREAMING_POTION_MODAL_UPSELL &&
+                a === s.z.HD_STREAMING_POTION_MODAL_UPSELL &&
                     (0, c.ZDy)(async () => {
                         let { default: t } = await n.e('88452').then(n.bind(n, 552394));
                         return (n) =>
                             (0, r.jsx)(
                                 t,
-                                y(
+                                x(
                                     {
                                         markAsDismissed: u,
                                         channel: e
@@ -73,13 +73,13 @@ function C(e) {
                                 )
                             );
                     });
-            }, [o, u, e]);
+            }, [a, u, e]);
         })(t);
     let O = () => {
         d(!1);
     };
     (0, g.J)(t, () => {
-        if (x) {
+        if (C) {
             _(!0), O();
             return;
         }
@@ -89,13 +89,13 @@ function C(e) {
         }, 25000);
         return () => clearTimeout(e);
     });
-    let E = C ? [s.z.HD_STREAMING_POTION_BANNER] : [],
+    let E = y ? [s.z.HD_STREAMING_POTION_BANNER] : [],
         [I, S] = (0, p.US)(E);
     return null == l
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  o &&
+                  a &&
                       (0, r.jsx)(v, {
                           buyer: l,
                           onEnd: O
@@ -106,7 +106,7 @@ function C(e) {
                           buyer: l,
                           streaming: !0,
                           onClose: () => {
-                              _(!1), C && S(b.L.DISMISS);
+                              _(!1), y && S(b.L.DISMISS);
                           }
                       })
               ]
@@ -115,7 +115,7 @@ function C(e) {
 function v(e) {
     let { onEnd: t, buyer: n } = e,
         l = (0, i.useRef)(null),
-        a = (0, i.useRef)(null),
+        o = (0, i.useRef)(null),
         [s, u] = (0, i.useState)(!1);
     (0, i.useEffect)(() => {
         let e = l.current;
@@ -132,7 +132,7 @@ function v(e) {
     });
     let [p, f] = (0, i.useState)(!1);
     (0, i.useEffect)(() => {
-        null != a.current && f(a.current.offsetWidth > 245);
+        null != o.current && f(o.current.offsetWidth > 245);
     }, []);
     let { avatarSrc: m, eventHandlers: g } = (0, h.Z)({
         user: n,
@@ -140,11 +140,11 @@ function v(e) {
         animateOnHover: !0
     });
     return (0, r.jsxs)('div', {
-        className: x.trigger,
+        className: C.trigger,
         children: [
             (0, r.jsx)(d.Z, {
                 ref: l,
-                className: x.video,
+                className: C.video,
                 autoPlay: !0,
                 onEnded: t,
                 children: (0, r.jsx)('source', {
@@ -153,12 +153,12 @@ function v(e) {
                 })
             }),
             (0, r.jsxs)('div', {
-                ref: a,
-                className: o()(x.content, { [x.masked]: s }),
+                ref: o,
+                className: a()(C.content, { [C.masked]: s }),
                 children: [
                     (0, r.jsx)(
                         c.qEK,
-                        y(
+                        x(
                             {
                                 src: m,
                                 'aria-label': n.username,
@@ -168,7 +168,7 @@ function v(e) {
                         )
                     ),
                     (0, r.jsxs)('div', {
-                        className: x.text,
+                        className: C.text,
                         children: [
                             !p &&
                                 (0, r.jsx)(c.Text, {
@@ -176,7 +176,7 @@ function v(e) {
                                     children: _.intl.string(_.t['i/nliI'])
                                 }),
                             (0, r.jsx)(c.Text, {
-                                className: x.premium,
+                                className: C.premium,
                                 variant: 'text-sm/normal',
                                 children: _.intl.string(_.t['Fh/mk5'])
                             })

@@ -1,5 +1,5 @@
 n.d(t, {
-    CN: () => o,
+    CN: () => a,
     Gp: () => r,
     He: () => f,
     O: () => u,
@@ -7,15 +7,15 @@ n.d(t, {
     cE: () => i,
     ff: () => d,
     jE: () => c,
-    lH: () => a,
+    lH: () => o,
     wE: () => s
 });
 var r = (function (e) {
     return (e.ANY = '$any'), (e.ALL = '$all'), e;
 })({});
 let i = 'RPC_PRIVATE_SCOPE',
-    o = 'RPC_PRIVATE_LIMITED_SCOPE',
-    a = 'RPC_LOCAL_SCOPE',
+    a = 'RPC_PRIVATE_LIMITED_SCOPE',
+    o = 'RPC_LOCAL_SCOPE',
     s = 'RPC_AUTHENTICATED_SCOPE',
     l = 'RPC_EMBEDDED_APP_SCOPE';
 var c = (function (e) {

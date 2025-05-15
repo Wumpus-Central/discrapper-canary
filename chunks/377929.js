@@ -2,8 +2,8 @@ n.d(t, { Z: () => S }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(392711),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(481060),
     c = n(32750),
     u = n(109764),
@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(13736),
     b = n(732393),
     _ = n(137591),
-    x = n(299206),
-    y = n(665149),
-    C = n(695346),
+    C = n(299206),
+    x = n(665149),
+    y = n(695346),
     v = n(979651),
     j = n(488131),
     O = n(388032);
@@ -67,13 +67,13 @@ function I(e, t) {
 function S(e) {
     let { channel: t } = e,
         [n, l] = i.useState(!1),
-        o = i.useRef(null);
-    function a() {
+        a = i.useRef(null);
+    function o() {
         l((e) => !e);
     }
     let c = O.intl.string(O.t.UKOtz8);
     return (0, r.jsx)(s.yRy, {
-        targetElementRef: o,
+        targetElementRef: a,
         shouldShow: n,
         animation: s.yRy.Animation.NONE,
         position: 'bottom',
@@ -86,10 +86,10 @@ function S(e) {
         children: (e, t) => {
             let { isShown: n } = t;
             return (0, r.jsx)(
-                y.ZP.Icon,
+                x.ZP.Icon,
                 I(E({}, e), {
-                    ref: o,
-                    onClick: a,
+                    ref: a,
+                    onClick: o,
                     tooltip: n ? null : c,
                     icon: s.xhG,
                     'aria-label': c,
@@ -102,10 +102,10 @@ function S(e) {
 function P(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
         l = (0, c.Z)(t),
-        y = (0, f.Z)(t),
+        x = (0, f.Z)(t),
         E = (0, b.Z)(t.id),
         I = (0, g.Z)(t),
-        S = (0, x.Z)({
+        S = (0, C.Z)({
             id: t.id,
             label: O.intl.string(O.t.DQ797u)
         }),
@@ -115,8 +115,8 @@ function P(e) {
         T = (0, m.Z)(t),
         A = (0, h.Z)(t),
         w = (0, _.Z)(t),
-        R = C.vF.useSetting(),
-        k = (0, a.e7)([v.Z], () => !o().isEmpty(v.Z.getVoiceStatesForChannel(t.id)));
+        R = y.vF.useSetting(),
+        M = (0, o.e7)([v.Z], () => !a().isEmpty(v.Z.getVoiceStatesForChannel(t.id)));
     return (0, r.jsxs)(s.v2r, {
         navId: 'thread-context',
         onClose: n,
@@ -131,7 +131,7 @@ function P(e) {
                     I,
                     T,
                     E,
-                    R && !k
+                    R && !M
                         ? (0, r.jsx)(s.sNh, {
                               id: 'open',
                               label: O.intl.string(O.t.bX7EaG),
@@ -143,7 +143,7 @@ function P(e) {
                 ]
             }),
             (0, r.jsxs)(s.kSQ, {
-                children: [w, l, y, Z]
+                children: [w, l, x, Z]
             }),
             (0, r.jsxs)(s.kSQ, {
                 children: [P, S]

@@ -30,7 +30,6 @@ function o(e) {
         },
         awaitingRemote: !1,
         isEligibleForPomelo: !1,
-        simplifiedCallSettingsEnabled: !1,
         nameplate: t,
         voiceChannel: null,
         voiceActivityStatusEnabled: !1,

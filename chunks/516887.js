@@ -2,8 +2,8 @@ n.d(t, { Z: () => d });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    o = n(481060),
     s = n(826298),
     c = n(540059),
     u = n(881046);
@@ -14,7 +14,7 @@ let d = i.memo(function (e) {
         p = null != l ? (0, s.ky)(l) : null,
         h =
             null != p
-                ? (0, r.jsx)(a.ua7, {
+                ? (0, r.jsx)(o.ua7, {
                       text: null != (t = null == l ? void 0 : l.name) ? t : '',
                       position: 'top',
                       children: (e) => {
@@ -73,7 +73,7 @@ let d = i.memo(function (e) {
     return d
         ? h
         : (0, r.jsx)('div', {
-              className: o()(n, u.wrapper),
+              className: a()(n, u.wrapper),
               children: (0, r.jsx)('div', {
                   className: u.icon,
                   children: h

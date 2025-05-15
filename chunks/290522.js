@@ -31,9 +31,9 @@
         return e > 9 ? r(e % 10) : e;
     }
     function i(e, t) {
-        return 2 === t ? o(e) : e;
+        return 2 === t ? a(e) : e;
     }
-    function o(e) {
+    function a(e) {
         var t = {
             m: 'v',
             b: 'v',

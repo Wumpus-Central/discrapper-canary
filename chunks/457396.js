@@ -56,8 +56,8 @@ let U = (e) => {
     },
     G = (e) => {
         let t, n, E, G;
-        var V,
-            B,
+        var B,
+            V,
             { selected: H, route: F, locationState: z } = e,
             W = (function (e, t) {
                 if (null == e) return {};
@@ -152,7 +152,7 @@ let U = (e) => {
                             (G = 4));
         let eh = (0, r.jsx)(
             c.Qj,
-            ((V = (function (e) {
+            ((B = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
                         r = Object.keys(n);
@@ -195,14 +195,14 @@ let U = (e) => {
                 W,
                 Q
             )),
-            (B = B =
+            (V = V =
                 {
                     className: t,
                     avatarWithTextClassName: n,
                     children: E
                 }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(V, Object.getOwnPropertyDescriptors(B))
+                ? Object.defineProperties(B, Object.getOwnPropertyDescriptors(V))
                 : (function (e, t) {
                       var n = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
@@ -210,10 +210,10 @@ let U = (e) => {
                           n.push.apply(n, r);
                       }
                       return n;
-                  })(Object(B)).forEach(function (e) {
-                      Object.defineProperty(V, e, Object.getOwnPropertyDescriptor(B, e));
+                  })(Object(V)).forEach(function (e) {
+                      Object.defineProperty(B, e, Object.getOwnPropertyDescriptor(V, e));
                   }),
-            V)
+            B)
         );
         return ei ? (0, r.jsx)(j.C, { children: eh }) : eh;
     };

@@ -1,13 +1,11 @@
-n.d(t, { Z: () => s });
+n.d(t, { Z: () => a });
 var r = n(255367);
 n(73800);
 var i = n(562129),
-    l = n(861254),
-    o = n(221241),
-    a = n(871499);
-function s(e) {
-    var { isActivityActive: t, onMouseEnter: n, onMouseLeave: s, onClick: c } = e,
-        u = (function (e, t) {
+    l = n(871499);
+function a(e) {
+    var { isActivityActive: t, onMouseEnter: n, onMouseLeave: a, onClick: o } = e,
+        s = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -26,11 +24,9 @@ function s(e) {
             }
             return i;
         })(e, ['isActivityActive', 'onMouseEnter', 'onMouseLeave', 'onClick']);
-    let { mode: d } = (0, l.ZP)({ location: 'VideoButton' }),
-        { squareButtonsEnabled: p } = (0, o.Z)({ location: 'VideoButton' }),
-        { Component: h, events: f, play: m } = (0, i.Z)('ActivityButton');
+    let { Component: c, events: u, play: d } = (0, i.Z)('ActivityButton');
     return (0, r.jsx)(
-        a.d,
+        l.d,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -57,20 +53,21 @@ function s(e) {
             return e;
         })(
             {
+                isTrayButton: !0,
                 isActive: t,
-                color: (p || d === l.BK.GroupedButtonsRedMic) && t ? 'green' : void 0,
-                iconComponent: h,
+                color: t ? 'green' : void 0,
+                iconComponent: c,
                 onMouseEnter: (e) => {
-                    null == n || n(e), f.onMouseEnter();
+                    null == n || n(e), u.onMouseEnter();
                 },
                 onMouseLeave: (e) => {
-                    null == s || s(e), f.onMouseLeave();
+                    null == a || a(e), u.onMouseLeave();
                 },
                 onClick: (e) => {
-                    null == c || c(e), m();
+                    null == o || o(e), d();
                 }
             },
-            u
+            s
         )
     );
 }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => c }), n(388685);
 var r = n(392711),
     i = n.n(r),
-    o = n(46973),
-    a = n(909766);
+    a = n(46973),
+    o = n(909766);
 function s(e, t, n) {
     return (
         t in e
@@ -19,10 +19,10 @@ function s(e, t, n) {
 let l = 1000;
 class c {
     start() {
-        this.connection.on(o.Sh.Stats, this.sampleStats);
+        this.connection.on(a.Sh.Stats, this.sampleStats);
     }
     stop() {
-        this.connection.off(o.Sh.Stats, this.sampleStats);
+        this.connection.off(a.Sh.Stats, this.sampleStats);
     }
     getPttQueueLatencyStats() {
         let e = this.pttQueueLatencyHistogram.getReport([50, 95]);
@@ -51,6 +51,6 @@ class c {
                         }
                     });
             }),
-            (this.pttQueueLatencyHistogram = new a.b());
+            (this.pttQueueLatencyHistogram = new o.b());
     }
 }

@@ -2,9 +2,9 @@ let r;
 n.d(t, { Z: () => F }), n(388685), n(781311), n(539854), n(642613);
 var i,
     l,
-    o,
-    a = n(392711),
-    s = n.n(a),
+    a,
+    o = n(392711),
+    s = n.n(o),
     c = n(442837),
     u = n(570140),
     d = n(279779),
@@ -15,9 +15,9 @@ var i,
     g = n(51144),
     b = n(592125),
     _ = n(480294),
-    x = n(580005),
-    y = n(699516),
-    C = n(594174),
+    C = n(580005),
+    x = n(699516),
+    y = n(594174),
     v = n(981631);
 let j = !1,
     O = '',
@@ -41,11 +41,11 @@ function A() {
         return (
             null != r && r.clearQuery(),
             (t = e),
-            (n = y.Z.getFriendIDs()),
+            (n = x.Z.getFriendIDs()),
             (null == t ? void 0 : t.isPrivate()) && (n = n.filter((e) => !t.recipients.includes(e))),
             (I = n
                 .reduce((e, t) => {
-                    let n = C.default.getUser(t);
+                    let n = y.default.getUser(t);
                     return (
                         null == n ||
                             n.isProvisional ||
@@ -71,21 +71,21 @@ function A() {
                 },
                 n,
                 (function () {
-                    let e = x.Z.getFrequentlyWithoutFetchingLatest().filter((e) => e instanceof f.mn && e.isDM()),
+                    let e = C.Z.getFrequentlyWithoutFetchingLatest().filter((e) => e instanceof f.mn && e.isDM()),
                         t = Math.max(
                             ...e.map((e) => {
                                 let { id: t } = e;
-                                return x.Z.getScoreWithoutFetchingLatest(t);
+                                return C.Z.getScoreWithoutFetchingLatest(t);
                             })
                         ),
                         n = {};
                     return (
                         e.forEach((e) => {
-                            let r = x.Z.getScoreWithoutFetchingLatest(e.id),
+                            let r = C.Z.getScoreWithoutFetchingLatest(e.id),
                                 i = e.getRecipientId(),
-                                l = 0.2 * !!y.Z.isFriend(i),
-                                o = 0.1 * (null != b.Z.getDMFromUserId(i));
-                            n[i] = 1 + r / t + l + o;
+                                l = 0.2 * !!x.Z.isFriend(i),
+                                a = 0.1 * (null != b.Z.getDMFromUserId(i));
+                            n[i] = 1 + r / t + l + a;
                         }),
                         n
                     );
@@ -97,23 +97,23 @@ function A() {
 function w() {
     if (!j) return !1;
     let e = S;
-    return (S = s().some(y.Z.getRelationships(), (e) => e === v.OGo.FRIEND)) !== e;
+    return (S = s().some(x.Z.getRelationships(), (e) => e === v.OGo.FRIEND)) !== e;
 }
 function R(e, t) {
     if (_.Z.hasConsented(v.pjP.PERSONALIZATION)) {
         var n, r, i, l;
-        let o = null != (i = null == (n = h.Z.getUserAffinity(e.user.id)) ? void 0 : n.communicationProbability) ? i : 0,
-            a = null != (l = null == (r = h.Z.getUserAffinity(t.user.id)) ? void 0 : r.communicationProbability) ? l : 0;
-        if (o !== a) return a - o;
+        let a = null != (i = null == (n = h.Z.getUserAffinity(e.user.id)) ? void 0 : n.communicationProbability) ? i : 0,
+            o = null != (l = null == (r = h.Z.getUserAffinity(t.user.id)) ? void 0 : r.communicationProbability) ? l : 0;
+        if (a !== o) return o - a;
     }
     return (0, m._I)(g.ZP.getName(e.user).toLocaleLowerCase()).localeCompare((0, m._I)(g.ZP.getName(t.user).toLocaleLowerCase()));
 }
-function k(e) {
+function M(e) {
     let { results: t } = e;
     if (!j || '' === O) return;
     let n = [];
     for (let { id: e, comparator: r } of t) {
-        let t = C.default.getUser(e);
+        let t = y.default.getUser(e);
         null != t &&
             n.push({
                 user: t,
@@ -122,12 +122,12 @@ function k(e) {
     }
     (I = n), G.emitChange();
 }
-function M() {
-    return null != r && (r.destroy(), (r = null)), d.Z.getSearchContext(k, 1000);
+function k() {
+    return null != r && (r.destroy(), (r = null)), d.Z.getSearchContext(M, 1000);
 }
 function L(e) {
     if (e.key !== v.vTt) return !1;
-    (j = !0), w(), (r = M()), (Z = null), T('');
+    (j = !0), w(), (r = k()), (Z = null), T('');
 }
 function D(e) {
     if (e.key !== v.vTt) return !1;
@@ -138,7 +138,7 @@ function U() {
 }
 class B extends (i = c.ZP.Store) {
     initialize() {
-        this.waitFor(C.default, b.Z, y.Z, p.Z, _.Z), this.syncWith([C.default, b.Z], A), this.syncWith([y.Z], w);
+        this.waitFor(y.default, b.Z, x.Z, p.Z, _.Z), this.syncWith([y.default, b.Z], A), this.syncWith([x.Z], w);
     }
     getResults() {
         return I;
@@ -162,15 +162,15 @@ class B extends (i = c.ZP.Store) {
         };
     }
 }
-(o = 'PrivateChannelRecipientsInviteStore'),
+(a = 'PrivateChannelRecipientsInviteStore'),
     (l = 'displayName') in B
         ? Object.defineProperty(B, l, {
-              value: o,
+              value: a,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (B[l] = o);
+        : (B[l] = a);
 let G = new B(u.Z, {
         CONNECTION_OPEN: function () {
             N();
@@ -184,7 +184,7 @@ let G = new B(u.Z, {
         MODAL_PUSH: L,
         SHOW_ACTION_SHEET: L,
         PRIVATE_CHANNEL_RECIPIENTS_INVITE_OPEN: function (e) {
-            (j = !0), w(), (r = M()), (Z = e.channelId), T('');
+            (j = !0), w(), (r = k()), (Z = e.channelId), T('');
         },
         MODAL_POP: D,
         HIDE_ACTION_SHEET: D,

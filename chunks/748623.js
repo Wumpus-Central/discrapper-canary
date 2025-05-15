@@ -14,10 +14,10 @@ function f(e) {
     var t;
     let { windowKey: n } = e,
         f = (0, u.Z)(),
-        { currentDocument: m, rootNode: v } = (0, d.Z)(),
-        b = (0, o.e7)([i.Z], () => (0, c.rB)(v, m), [v, m]);
+        { currentDocument: m, rootNode: b } = (0, d.Z)(),
+        v = (0, o.e7)([i.Z], () => (0, c.rB)(b, m), [b, m]);
     return (0, r.jsx)(l.Z, {
-        withTitleBar: a.isPlatformEmbedded && !b,
+        withTitleBar: a.isPlatformEmbedded && !v,
         windowKey: n,
         title: null != (t = null == f ? void 0 : f.name) ? t : p.intl.string(p.t.IC5Anp),
         children: (0, r.jsx)(s.Z, {})

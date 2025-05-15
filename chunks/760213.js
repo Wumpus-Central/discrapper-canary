@@ -1,5 +1,5 @@
 r.d(t, {
-    W: () => y,
+    W: () => E,
     Z: () => S
 }),
     r(457542);
@@ -24,8 +24,8 @@ var n,
     N = r(981631),
     O = r(388032),
     b = r(576052),
-    y = (((n = {})[(n.LOGIN_REQUIRED = 0)] = 'LOGIN_REQUIRED'), (n[(n.SWITCHED = 1)] = 'SWITCHED'), (n[(n.REMOVED = 2)] = 'REMOVED'), n);
-function E(e) {
+    E = (((n = {})[(n.LOGIN_REQUIRED = 0)] = 'LOGIN_REQUIRED'), (n[(n.SWITCHED = 1)] = 'SWITCHED'), (n[(n.REMOVED = 2)] = 'REMOVED'), n);
+function y(e) {
     let { actionText: t, user: r, onAction: n } = e,
         {
             currentUser: i,
@@ -36,13 +36,13 @@ function E(e) {
             hidePrivateData: m.Z.hidePersonalInformation,
             isAuthenticated: p.default.isAuthenticated()
         })),
-        y = new h.Z(r),
-        E = C && (null == i ? void 0 : i.id) === y.id,
+        E = new h.Z(r),
+        y = C && (null == i ? void 0 : i.id) === E.id,
         S = r.tokenStatus === v.q.INVALID,
-        P = l || y.isPomelo() ? null : '#'.concat(y.discriminator),
+        P = l || E.isPomelo() ? null : '#'.concat(E.discriminator),
         T = null;
     return (
-        E
+        y
             ? (T = (0, s.jsx)(c.Text, {
                   variant: 'text-sm/semibold',
                   className: b.hintText,
@@ -62,12 +62,12 @@ function E(e) {
                 className: b.userDetails,
                 children: [
                     (0, s.jsx)(c.qEK, {
-                        src: y.getAvatarURL(void 0, 40),
+                        src: E.getAvatarURL(void 0, 40),
                         size: c.EFr.SIZE_40,
                         'aria-label': r.username
                     }),
                     (0, s.jsxs)('div', {
-                        className: a()(b.usernameSection, { [b.hasActionMaxWidth]: !E }),
+                        className: a()(b.usernameSection, { [b.hasActionMaxWidth]: !y }),
                         children: [
                             (0, s.jsxs)('div', {
                                 className: b.username,
@@ -76,7 +76,7 @@ function E(e) {
                                         variant: 'text-md/semibold',
                                         color: 'header-primary',
                                         className: b.textOverflow,
-                                        children: g.ZP.getUserTag(y, {
+                                        children: g.ZP.getUserTag(E, {
                                             mode: 'username',
                                             identifiable: l ? 'never' : 'always'
                                         })
@@ -94,7 +94,7 @@ function E(e) {
                     (0, s.jsxs)('div', {
                         className: b.userActions,
                         children: [
-                            !E &&
+                            !y &&
                                 (0, s.jsx)(c.zxk, {
                                     onClick: function () {
                                         if (S) return void n(0, r.id);
@@ -158,7 +158,7 @@ function S(e) {
                       {
                           children: [
                               (0, s.jsx)(
-                                  E,
+                                  y,
                                   {
                                       user: e,
                                       actionText: t,

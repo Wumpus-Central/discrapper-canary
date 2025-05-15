@@ -2,8 +2,8 @@ n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    o = n(481060),
-    a = n(87051),
+    a = n(481060),
+    o = n(87051),
     s = n(9156),
     c = n(585483),
     u = n(621600),
@@ -58,9 +58,9 @@ function b(e) {
     let { channel: t } = e,
         n = i.useRef(null),
         [b, _] = (0, l.Wu)([s.ZP], () => [s.ZP.isChannelMuted(t.getGuildId(), t.id), s.ZP.resolvedMessageNotifications(t)], [t]),
-        [x, y] = i.useState(!1);
+        [C, x] = i.useState(!1);
     i.useEffect(() => {
-        let e = () => y(!0);
+        let e = () => x(!0);
         return (
             c.S.subscribe(h.CkL.OPEN_THREAD_NOTIFICATION_SETTINGS, e),
             () => {
@@ -68,18 +68,18 @@ function b(e) {
             }
         );
     }, []);
-    let C = (e) => {
-            e.shiftKey ? a.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: !b }, u.UE.muted(!b)) : y((e) => !e);
+    let y = (e) => {
+            e.shiftKey ? o.Z.updateChannelOverrideSettings(t.guild_id, t.id, { muted: !b }, u.UE.muted(!b)) : x((e) => !e);
         },
         v = f.intl.string(f.t.h850Sk);
-    return (0, r.jsx)(o.yRy, {
+    return (0, r.jsx)(a.yRy, {
         targetElementRef: n,
-        shouldShow: x,
-        animation: o.yRy.Animation.NONE,
+        shouldShow: C,
+        animation: a.yRy.Animation.NONE,
         position: 'bottom',
         align: 'right',
         autoInvert: !1,
-        onRequestClose: () => y(!1),
+        onRequestClose: () => x(!1),
         renderPopout: (e) =>
             (0, r.jsx)(
                 p.Z,
@@ -96,9 +96,9 @@ function b(e) {
                 d.ZP.Icon,
                 g(m({}, e), {
                     ref: n,
-                    onClick: C,
+                    onClick: y,
                     tooltip: i ? null : v,
-                    icon: b || _ !== h.bL.ALL_MESSAGES ? o.owu : o.Dkj,
+                    icon: b || _ !== h.bL.ALL_MESSAGES ? a.owu : a.Dkj,
                     'aria-label': v,
                     selected: i
                 })

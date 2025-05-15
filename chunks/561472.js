@@ -1,9 +1,9 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => y }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    o = n(998698),
-    a = n(933557),
+    a = n(998698),
+    o = n(933557),
     s = n(703558),
     c = n(731290),
     u = n(607744),
@@ -15,40 +15,40 @@ var r = n(255367),
     g = n(127654),
     b = n(205822),
     _ = n(731994),
-    x = n(981631),
-    y = n(388032);
-let C = function (e) {
-    let { className: t, style: n, channel: C, draftType: v } = e,
+    C = n(981631),
+    x = n(388032);
+let y = function (e) {
+    let { className: t, style: n, channel: y, draftType: v } = e,
         [j, O] = i.useState(!0),
         E = (0, l.e7)([d.Z], () => d.Z.hasLayers()),
-        I = (0, l.e7)([p.Z], () => null != C && p.Z.can(x.Plq.ATTACH_FILES, C), [C]),
-        S = null != (0, l.e7)([o.Z], () => o.Z.getActiveCommand(C.id)),
-        P = C.getGuildId(),
+        I = (0, l.e7)([p.Z], () => null != y && p.Z.can(C.Plq.ATTACH_FILES, y), [y]),
+        S = null != (0, l.e7)([a.Z], () => a.Z.getActiveCommand(y.id)),
+        P = y.getGuildId(),
         Z = v === s.d.FirstThreadMessage,
         N = (0, l.e7)([f.default], () => {
             var e;
             return !0 == !(null == (e = f.default.getCurrentUser()) ? void 0 : e.nsfwAllowed);
         }),
         T = (0, l.e7)([c.Z], () => c.Z.didAgree(P)) && !N,
-        A = i.useMemo(() => !E && ((C.isPrivate() && !C.isManaged()) || (null != P && (!C.isNSFW() || T) && I && u.Z.canChatInGuild(P))), [I, T, C, P, E]),
-        w = Z ? (x.TPd.GUILD_THREADS_ONLY.has(C.type) ? y.intl.string(y.t.RBBLhI) : y.intl.string(y.t.gUx4en)) : j ? y.intl.format(y.t.dYP2FR, { destination: (0, a.F6)(C, f.default, h.Z, !0) }) : y.intl.string(y.t.h76ulJ);
+        A = i.useMemo(() => !E && ((y.isPrivate() && !y.isManaged()) || (null != P && (!y.isNSFW() || T) && I && u.Z.canChatInGuild(P))), [I, T, y, P, E]),
+        w = Z ? (C.TPd.GUILD_THREADS_ONLY.has(y.type) ? x.intl.string(x.t.RBBLhI) : x.intl.string(x.t.gUx4en)) : j ? x.intl.format(x.t.dYP2FR, { destination: (0, o.F6)(y, f.default, h.Z, !0) }) : x.intl.string(x.t.h76ulJ);
     return S || !A
         ? null
         : (0, r.jsx)(b.Z, {
               className: t,
               style: n,
               title: w,
-              description: Z ? y.intl.string(y.t.lpgkzs) : y.intl.string(y.t.usQh4O),
+              description: Z ? x.intl.string(x.t.lpgkzs) : x.intl.string(x.t.usQh4O),
               icons: _.J6,
               onDrop: (e) => {
                   if (S) return !1;
                   A &&
-                      null != C &&
-                      ((0, g.d)(e, C, v, {
+                      null != y &&
+                      ((0, g.d)(e, y, v, {
                           requireConfirm: j,
                           showLargeMessageDialog: !1
                       }),
-                      m.S.dispatchToLastSubscribed(x.CkL.TEXTAREA_FOCUS));
+                      m.S.dispatchToLastSubscribed(C.CkL.TEXTAREA_FOCUS));
               },
               onDragClear: () => O(!0),
               onDragOver: (e) => {

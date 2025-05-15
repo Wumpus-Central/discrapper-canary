@@ -2,8 +2,8 @@ n.d(t, { Z: () => p }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(925975),
-    o = n(957730),
-    a = n(981631),
+    a = n(957730),
+    o = n(981631),
     s = n(388032),
     c = n(224079);
 function u(e, t, n) {
@@ -24,11 +24,11 @@ function d(e) {
 }
 class p extends i.PureComponent {
     render() {
-        let { className: e, textValue: t, richValue: n, message: i, channel: l, onCancel: o, children: a, isRefreshEnabled: u } = this.props,
+        let { className: e, textValue: t, richValue: n, message: i, channel: l, onCancel: a, children: o, isRefreshEnabled: u } = this.props,
             p = (0, r.jsx)('div', {
                 className: c.operations,
                 children: s.intl.format(s.t.wDsPXl, {
-                    onCancel: () => o(l.id),
+                    onCancel: () => a(l.id),
                     onSave: this.onClickSave
                 })
             });
@@ -37,7 +37,7 @@ class p extends i.PureComponent {
             ref: this.node,
             onContextMenu: d,
             children: [
-                a({
+                o({
                     textValue: t,
                     richValue: n,
                     message: i,
@@ -59,7 +59,7 @@ class p extends i.PureComponent {
                 this.onSubmit(e);
             }),
             u(this, 'onSubmit', (e) => {
-                let { message: t, channel: n, onConfirmDelete: r, onCancel: i, saveMessage: a, validateEdit: s } = this.props;
+                let { message: t, channel: n, onConfirmDelete: r, onCancel: i, saveMessage: o, validateEdit: s } = this.props;
                 return 0 === e.length
                     ? (r(n, t),
                       i(n.id),
@@ -82,9 +82,9 @@ class p extends i.PureComponent {
                               isEdit: !0
                           });
                           (null == s ? void 0 : s.content) != null && (e = s.content);
-                          let c = o.ZP.parse(this.props.channel, e);
+                          let c = a.ZP.parse(this.props.channel, e);
                           return (
-                              c.content !== this.props.message.content && a(this.props.channel.id, this.props.message.id, c),
+                              c.content !== this.props.message.content && o(this.props.channel.id, this.props.message.id, c),
                               i(n.id),
                               Promise.resolve({
                                   shouldClear: !0,
@@ -98,7 +98,7 @@ class p extends i.PureComponent {
                 i(r.id, t, n);
             }),
             u(this, 'onKeyDown', (e) => {
-                if (e.keyCode === a.yXg.ESCAPE && !e.shiftKey) {
+                if (e.keyCode === o.yXg.ESCAPE && !e.shiftKey) {
                     let { channel: t, onCancel: n } = this.props;
                     e.preventDefault(), e.stopPropagation(), n(t.id);
                 }

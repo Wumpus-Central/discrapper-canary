@@ -184,6 +184,7 @@ class R extends i.Component {
         super(...e),
             S(this, 'tierRefs', {}),
             S(this, 'defaultTierRef', i.createRef()),
+            S(this, 'subscribersPopoutTargetRef', i.createRef()),
             S(this, 'state', {
                 tierPositions: null,
                 animatedTier: N.Eu4.NONE
@@ -267,10 +268,18 @@ class R extends i.Component {
                 (0, r.jsx)(
                     d.yRy,
                     {
+                        targetElementRef: this.subscribersPopoutTargetRef,
                         renderPopout: this.renderSubscribersPopout,
                         position: 'bottom',
                         autoInvert: !1,
-                        children: (t) => (0, r.jsx)('div', P(T({ className: E.moreSubscribers }, t), { children: e }))
+                        children: (t) =>
+                            (0, r.jsx)(
+                                'div',
+                                P(T({ className: E.moreSubscribers }, t), {
+                                    ref: this.subscribersPopoutTargetRef,
+                                    children: e
+                                })
+                            )
                     },
                     n
                 )

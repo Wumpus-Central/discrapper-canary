@@ -8,8 +8,8 @@ n.d(t, {
     n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(392711),
-    a = n.n(o),
+    a = n(392711),
+    o = n.n(a),
     s = n(91192),
     l = n(876215),
     c = n(442837),
@@ -97,8 +97,8 @@ function B(e, t) {
         r,
         i = F(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -107,8 +107,8 @@ function F(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let V = 72,
@@ -197,57 +197,57 @@ let Y = (e) => {
     z = i.createContext(void 0),
     q = (e) => {
         var t,
-            { index: o } = e,
-            p = B(e, ['index']);
-        let m = i.useRef(null),
-            [g, E] = i.useState('default'),
-            O = (0, s.JA)(''.concat(o)),
-            v = null == (t = b.default.getCurrentUser()) ? void 0 : t.isStaff(),
-            { isRich: I, appName: S } = (0, L.n)(p.entry),
-            T = i.useMemo(
+            { index: a, ref: p } = e,
+            m = B(e, ['index', 'ref']);
+        let g = i.useRef(null),
+            [E, O] = i.useState('default'),
+            v = (0, s.JA)(''.concat(a)),
+            I = null == (t = b.default.getCurrentUser()) ? void 0 : t.isStaff(),
+            { isRich: S, appName: T } = (0, L.n)(m.entry),
+            A = i.useMemo(
                 () => ({
-                    entry: p.entry,
-                    channelId: p.channel.id,
-                    guildId: p.channel.guild_id,
-                    requestId: p.requestId,
-                    richPresenceName: I ? S : void 0
+                    entry: m.entry,
+                    channelId: m.channel.id,
+                    guildId: m.channel.guild_id,
+                    requestId: m.requestId,
+                    richPresenceName: S ? T : void 0
                 }),
-                [S, p.channel.guild_id, p.channel.id, p.entry, p.requestId, I]
+                [T, m.channel.guild_id, m.channel.id, m.entry, m.requestId, S]
             ),
-            A = i.useRef(!1),
-            [N, C] = i.useState(!1),
-            [P, R] = i.useState(!1),
-            w = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled);
+            N = i.useRef(!1),
+            [C, P] = i.useState(!1),
+            [R, w] = i.useState(!1),
+            D = (0, c.e7)([_.Z], () => _.Z.keyboardModeEnabled);
         i.useEffect(() => {
-            N && w && R(!0);
-        }, [N, w]);
-        let D = i.useCallback(
+            C && D && w(!0);
+        }, [C, D]);
+        let M = i.useCallback(
                 (e) => {
-                    v &&
+                    I &&
                         (0, f.jW)(e, async () => {
                             let { default: e } = await n.e('153').then(n.bind(n, 330150));
                             return () =>
                                 (0, r.jsx)(e, {
-                                    entry: p.entry,
-                                    requestId: p.requestId
+                                    entry: m.entry,
+                                    requestId: m.requestId
                                 });
                         });
                 },
-                [p, v]
+                [m, I]
             ),
-            M = i.useCallback(() => {
-                E(String(Date.now()));
+            U = i.useCallback(() => {
+                O(String(Date.now()));
             }, []),
-            U = i.useCallback(
+            F = i.useCallback(
                 function (e) {
                     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                    (0, y.L)(e, j({}, T, t));
+                    (0, y.L)(e, j({}, A, t));
                 },
-                [T]
+                [A]
             ),
-            F = i.useMemo(
+            V = i.useMemo(
                 () =>
-                    a().throttle(
+                    o().throttle(
                         (e) => {
                             (0, y.L)(x.xP.CARD_POPOUT_OPEN, e);
                         },
@@ -259,54 +259,55 @@ let Y = (e) => {
                     ),
                 []
             ),
-            V = () => {
-                (A.current = !1),
+            H = () => {
+                (N.current = !1),
                     setTimeout(() => {
-                        A.current || (C(!1), R(w));
+                        N.current || (P(!1), w(D));
                     }, 100);
             };
         return (0, r.jsx)('div', {
+            ref: p,
             onMouseEnter: () => {
-                p.entry.content_type !== l.s.LEADERBOARD || (0, h.un)(u.z.LEADERBOARD_NUX_COACHMARK) || (0, h.EW)(u.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: k.L.SECONDARY }),
-                    (A.current = !0),
+                m.entry.content_type !== l.s.LEADERBOARD || (0, h.un)(u.z.LEADERBOARD_NUX_COACHMARK) || (0, h.EW)(u.z.LEADERBOARD_NUX_COACHMARK, { dismissAction: k.L.SECONDARY }),
+                    (N.current = !0),
                     setTimeout(() => {
-                        A.current && C(!0), F(T);
+                        N.current && P(!0), V(A);
                     }, 100);
             },
-            onMouseLeave: V,
+            onMouseLeave: H,
             children: (0, r.jsx)(d.yRy, {
-                targetElementRef: m,
+                targetElementRef: g,
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
                     return (0, r.jsx)(z.Provider, {
-                        value: V,
+                        value: H,
                         children: (0, r.jsx)(
                             W,
                             j(
                                 {
                                     closePopout: t,
-                                    updatePopoutPosition: M,
-                                    trackRankingItemInteraction: U
+                                    updatePopoutPosition: U,
+                                    trackRankingItemInteraction: F
                                 },
-                                p
+                                m
                             )
                         )
                     });
                 },
                 position: 'left',
-                shouldShow: N,
-                positionKey: g,
-                onRequestOpen: () => F(T),
+                shouldShow: C,
+                positionKey: E,
+                onRequestOpen: () => V(A),
                 onRequestClose: () => {
-                    P && V();
+                    R && H();
                 },
                 spacing: 8,
                 children: (e, t) => {
                     let { isShown: n } = t;
                     return (0, r.jsx)(
                         d.P3F,
-                        G(j({}, e, O), {
-                            innerRef: m,
+                        G(j({}, e, v), {
+                            innerRef: g,
                             focusProps: {
                                 offset: {
                                     top: 4,
@@ -316,14 +317,14 @@ let Y = (e) => {
                                 }
                             },
                             onClick: () => {
-                                N || C(!0);
+                                C || P(!0);
                             },
-                            onContextMenu: D,
+                            onContextMenu: M,
                             children: (0, r.jsx)(
                                 Y,
-                                G(j({}, p), {
+                                G(j({}, m), {
                                     selected: n,
-                                    hovered: A.current
+                                    hovered: N.current
                                 })
                             )
                         })

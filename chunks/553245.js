@@ -1,7 +1,7 @@
-n.d(t, { b: () => a }), n(388685);
+n.d(t, { b: () => o }), n(388685);
 var r = n(689320),
     i = n(143806);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function o(e, t, n) {
         e
     );
 }
-class a {
+class o {
     get totalLength() {
         return this.primary.length + this.extended.length;
     }
@@ -72,6 +72,6 @@ class a {
         return r.t(this.extended.values(), this.primary.values());
     }
     constructor(e, t) {
-        o(this, 'primary', void 0), o(this, 'extended', void 0), (this.primary = new i.S(e)), (this.extended = new i.S(t));
+        a(this, 'primary', void 0), a(this, 'extended', void 0), (this.primary = new i.S(e)), (this.extended = new i.S(t));
     }
 }

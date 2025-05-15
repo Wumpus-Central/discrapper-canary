@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    o = n(990547),
-    a = n(442837),
+    a = n(990547),
+    o = n(442837),
     s = n(844477),
     c = n(481060),
     u = n(26151),
@@ -16,30 +16,30 @@ var i = n(120356),
     g = n(359110),
     b = n(430824),
     _ = n(933557),
-    x = n(354459),
-    y = n(388032),
-    C = n(249671);
+    C = n(354459),
+    x = n(388032),
+    y = n(249671);
 function v(e) {
     let { recipientUser: t, voiceChannel: n } = e,
         i = (0, _.ZP)(n),
         s = (0, h.s)(t, 'RingToVoiceBanner', n.id),
-        { userIsInCall: u, isUserRinging: m } = (0, a.cj)([p.Z], () => {
+        { userIsInCall: u, isUserRinging: m } = (0, o.cj)([p.Z], () => {
             let e = null;
             return (
                 s && null != n.id && (e = p.Z.getParticipant(n.id, t.id)),
                 {
                     userIsInCall: null != e,
-                    isUserRinging: null != e && e.type === x.fO.USER && e.ringing
+                    isUserRinging: null != e && e.type === C.fO.USER && e.ringing
                 }
             );
         }),
-        g = (0, a.e7)([b.Z], () => b.Z.getGuild(n.guild_id)),
+        g = (0, o.e7)([b.Z], () => b.Z.getGuild(n.guild_id)),
         v = null != g ? g.getIconURL(32, !0) : null,
         O = !s || (u && !m);
     return ((0, d.Z)(
         {
-            type: o.ImpressionTypes.PAGE,
-            name: o.ImpressionNames.RING_TO_GUILD_VC_BANNER_SHOWN,
+            type: a.ImpressionTypes.PAGE,
+            name: a.ImpressionNames.RING_TO_GUILD_VC_BANNER_SHOWN,
             properties: {
                 voice_channel_id: null == n ? void 0 : n.id,
                 voice_guild_id: null == n ? void 0 : n.guild_id
@@ -51,36 +51,36 @@ function v(e) {
     O)
         ? null
         : (0, r.jsxs)('div', {
-              className: l()(C.themed, C.chatHeaderBar),
+              className: l()(y.themed, y.chatHeaderBar),
               children: [
                   (0, r.jsxs)('div', {
-                      className: C.chatHeaderBarInfo,
+                      className: y.chatHeaderBarInfo,
                       children: [
                           (0, r.jsx)(f.ZP, {
-                              className: C.mask,
+                              className: y.mask,
                               mask: f.QS.SQUIRCLE,
                               width: 24,
                               height: 24,
                               children:
                                   null == v
                                       ? (0, r.jsx)('div', {
-                                            className: l()(C.guildIcon, C.guildIconWithoutImage),
+                                            className: l()(y.guildIcon, y.guildIconWithoutImage),
                                             children: (0, r.jsx)('div', {
-                                                className: C.guildAcronym,
+                                                className: y.guildAcronym,
                                                 children: null == g ? void 0 : g.acronym
                                             })
                                         })
                                       : (0, r.jsx)('img', {
                                             alt: null == g ? void 0 : g.toString(),
                                             src: v,
-                                            className: C.guildIcon
+                                            className: y.guildIcon
                                         })
                           }),
                           (0, r.jsx)(c.Text, {
-                              className: C.chatHeaderBarText,
+                              className: y.chatHeaderBarText,
                               variant: 'text-md/medium',
                               color: 'header-secondary',
-                              children: y.intl.format(y.t.f2tNxM, {
+                              children: x.intl.format(x.t.f2tNxM, {
                                   username: null == t ? void 0 : t.globalName,
                                   channelName: (0, r.jsx)(
                                       c.Text,
@@ -105,38 +105,38 @@ function v(e) {
 }
 function j(e) {
     let { channelId: t, recipientUserId: n, isUserRinging: i } = e,
-        o = (0, m.Q3)('RingUserButton'),
-        a = i ? y.intl.string(y.t.ygslb2) : y.intl.string(y.t['3Hv9qa']),
+        a = (0, m.Q3)('RingUserButton'),
+        o = i ? x.intl.string(x.t.ygslb2) : x.intl.string(x.t['3Hv9qa']),
         d = i
             ? () => u.Z.stopRinging(t, [n])
             : () => {
                   u.Z.ring(t, [n]), (0, g.Kh)(t);
               };
-    return o
+    return a
         ? (0, r.jsx)(s.z, {
               variant: i ? 'destructive-secondary' : 'secondary',
               size: 'xs',
-              text: a,
+              text: o,
               iconPosition: 'start',
               icon: c.gj8,
               onClick: d
           })
         : (0, r.jsxs)(c.zxk, {
               size: c.zxk.Sizes.SMALL,
-              className: C.chatHeaderBarButton,
-              innerClassName: C.chatHeaderBarButtonInner,
+              className: y.chatHeaderBarButton,
+              innerClassName: y.chatHeaderBarButtonInner,
               color: 'custom',
               onClick: d,
               children: [
                   (0, r.jsx)(c.gj8, {
                       size: 'xs',
                       color: 'currentColor',
-                      className: l()(i ? C.voiceIconRinging : C.voiceIcon)
+                      className: l()(i ? y.voiceIconRinging : y.voiceIcon)
                   }),
                   (0, r.jsx)(c.Text, {
                       variant: 'text-sm/semibold',
                       color: i ? 'text-danger' : 'text-primary',
-                      children: a
+                      children: o
                   })
               ]
           });

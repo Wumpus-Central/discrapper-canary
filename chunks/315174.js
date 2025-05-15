@@ -203,13 +203,14 @@ function Z(e) {
 }
 function T(e) {
     let { bannerVisible: t, guild: l, onClick: o, onContextMenu: s, children: a } = e,
-        d = (0, c.e7)([g.Z], () => g.Z.theme),
-        h = i.useCallback(async () => {
+        d = i.useRef(null),
+        h = (0, c.e7)([g.Z], () => g.Z.theme),
+        p = i.useCallback(async () => {
             let { default: e } = await Promise.all([n.e('87154'), n.e('42018')]).then(n.bind(n, 859432));
             return (t) => {
                 let { closePopout: n } = t;
                 return (0, r.jsx)(u.f6W, {
-                    theme: d,
+                    theme: h,
                     children: (t) =>
                         (0, r.jsx)('div', {
                             className: t,
@@ -220,10 +221,10 @@ function T(e) {
                         })
                 });
             };
-        }, [l, d]),
-        p = (0, c.e7)([b.Z], () => (0, f.b)(b.Z, l)),
-        m = i.useCallback(() => {
-            p
+        }, [l, h]),
+        m = (0, c.e7)([b.Z], () => (0, f.b)(b.Z, l)),
+        _ = i.useCallback(() => {
+            m
                 ? (0, u.ZDy)(async () => {
                       let { default: e } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
                       return (t) =>
@@ -239,11 +240,12 @@ function T(e) {
                       let { default: e } = await n.e('88358').then(n.bind(n, 598402));
                       return (t) => (0, r.jsx)(e, j({}, t));
                   });
-        }, [p, l]);
+        }, [m, l]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(u.KeG, {
-                renderPopout: h,
+                targetElementRef: d,
+                renderPopout: p,
                 position: 'bottom',
                 align: 'left',
                 animation: u.yRy.Animation.SCALE,
@@ -255,6 +257,7 @@ function T(e) {
                         E(
                             j(
                                 {
+                                    innerRef: d,
                                     className: S.guildDropdown,
                                     'aria-label': C.intl.formatToPlainString(C.t.xMXpl5, { guildName: null != (n = null == l ? void 0 : l.toString()) ? n : '' }),
                                     onContextMenu: s
@@ -298,7 +301,7 @@ function T(e) {
                             E(j({ className: S.inviteButton }, e), {
                                 onClick: () => {
                                     var t;
-                                    null == (t = e.onClick) || t.call(e), m();
+                                    null == (t = e.onClick) || t.call(e), _();
                                 },
                                 children: (0, r.jsx)(u.ejJ, {
                                     size: 'refresh_sm',
@@ -311,104 +314,105 @@ function T(e) {
     });
 }
 let A = i.memo(function (e) {
-    let { bannerVisible: t, controller: n, className: l, onClick: s, onContextMenu: c, onMouseDown: f, disableBannerAnimation: g, 'aria-expanded': b, 'aria-controls': y, guild: v, guildBanner: C, animationOverlayHeight: I, children: w, headerClassName: N, communityInfoVisible: A, hasSubheader: D } = e,
-        L = v.hasFeature(O.oNc.ANIMATED_BANNER),
-        k = (0, h.Z)(v),
-        M = !k && v.hasCommunityInfoSubheader(),
-        U = !k && A,
-        G = (0, _.xR)(C) && L && !g,
-        [B, V] = i.useState(!1),
-        H = i.useRef(!1),
-        F = i.useRef(null),
-        z = i.useRef(void 0),
-        W = m.QK.getSetting();
+    let { ref: t, bannerVisible: n, controller: l, className: s, onClick: c, onContextMenu: f, onMouseDown: g, disableBannerAnimation: b, 'aria-expanded': y, 'aria-controls': v, guild: C, guildBanner: I, animationOverlayHeight: w, children: N, headerClassName: A, communityInfoVisible: D, hasSubheader: L } = e,
+        k = C.hasFeature(O.oNc.ANIMATED_BANNER),
+        M = (0, h.Z)(C),
+        U = !M && C.hasCommunityInfoSubheader(),
+        G = !M && D,
+        B = (0, _.xR)(I) && k && !b,
+        [V, H] = i.useState(!1),
+        F = i.useRef(!1),
+        W = i.useRef(null),
+        z = null != t ? t : W,
+        Y = i.useRef(void 0),
+        K = m.QK.getSetting();
     i.useEffect(() => {
-        if (G && t && !H.current && W)
+        if (B && n && !F.current && K)
             return (
-                V(!0),
-                (z.current = setTimeout(() => {
-                    V(!1);
+                H(!0),
+                (Y.current = setTimeout(() => {
+                    H(!1);
                 }, 5000)),
                 () => {
-                    clearTimeout(z.current);
+                    clearTimeout(Y.current);
                 }
             );
-    }, [G, t, W]),
+    }, [B, n, K]),
         i.useEffect(() => {
-            H.current = t;
-        }, [t]);
-    let Y = () => {
+            F.current = n;
+        }, [n]);
+    let q = () => {
             let { renderBanner: t, guildBanner: n } = e;
             return null != n && !t;
         },
-        K = (0, d.Q3)('GuildHeader'),
-        { entrypoints: q } = (0, p._k)({ location: 'guild_header' }),
-        Q = {
-            bannerVisible: t,
-            guild: v,
-            onClick: s,
-            onContextMenu: c,
-            ariaControls: y,
-            ariaExpanded: b,
-            guildHeaderRef: F
+        Q = (0, d.Q3)('GuildHeader'),
+        { entrypoints: X } = (0, p._k)({ location: 'guild_header' }),
+        J = {
+            bannerVisible: n,
+            guild: C,
+            onClick: c,
+            onContextMenu: f,
+            ariaControls: v,
+            ariaExpanded: y,
+            guildHeaderRef: z
         };
     return (0, r.jsx)(u.f6W, {
-        theme: t ? O.BRd.DARK : void 0,
+        theme: n ? O.BRd.DARK : void 0,
         children: (e) =>
             (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsxs)('div', {
-                        ref: F,
-                        className: o()(l, {
+                        ref: z,
+                        className: o()(s, {
                             [S.container]: !0,
-                            [S.clickable]: !q && null != s,
-                            [S.selected]: !q && null != s && b,
-                            [S.hasBanner]: Y(),
-                            [S.bannerVisible]: t,
-                            [e]: !K && t,
-                            [S.communityInfoVisible]: U || (D && M),
-                            [S.invitesRefresh]: q
+                            [S.clickable]: !X && null != c,
+                            [S.selected]: !X && null != c && y,
+                            [S.hasBanner]: q(),
+                            [S.bannerVisible]: n,
+                            [e]: !Q && n,
+                            [S.communityInfoVisible]: G || (L && U),
+                            [S.invitesRefresh]: X
                         }),
-                        onMouseDown: f,
-                        onClick: q ? void 0 : s,
-                        onContextMenu: c,
+                        onMouseDown: g,
+                        onClick: X ? void 0 : c,
+                        onContextMenu: f,
                         children: [
                             (0, r.jsxs)('header', {
-                                className: o()(S.header, N, { [S.themedHeaderMobile]: a.tq }),
+                                className: o()(S.header, A, { [S.themedHeaderMobile]: a.tq }),
                                 children: [
                                     (0, r.jsx)('div', {
                                         className: o()(S.headerContent, S.primaryInfo),
-                                        children: q ? (0, r.jsx)(T, E(j({}, Q), { children: w })) : (0, r.jsx)(Z, E(j({}, Q), { children: w }))
+                                        children: X ? (0, r.jsx)(T, E(j({}, J), { children: N })) : (0, r.jsx)(Z, E(j({}, J), { children: N }))
                                     }),
-                                    M &&
+                                    U &&
                                         (0, r.jsx)(P, {
-                                            guild: v,
-                                            controller: n,
-                                            hasBanner: null != C,
-                                            hasSubheader: null != D && D
+                                            guild: C,
+                                            controller: l,
+                                            hasBanner: null != I,
+                                            hasSubheader: null != L && L
                                         })
                                 ]
                             }),
-                            null != C
+                            null != I
                                 ? (0, r.jsx)(x, {
-                                      guild: v,
-                                      controller: n,
-                                      guildBanner: C,
-                                      animate: B,
-                                      isRefreshEnabled: K
+                                      guild: C,
+                                      controller: l,
+                                      guildBanner: I,
+                                      animate: V,
+                                      isRefreshEnabled: Q
                                   })
                                 : null,
-                            (0, r.jsx)(R, { controller: n })
+                            (0, r.jsx)(R, { controller: l })
                         ]
                     }),
-                    G && Y()
+                    B && q()
                         ? (0, r.jsx)('div', {
                               className: S.animatedBannerHoverLayer,
                               onMouseEnter: () => {
-                                  V(!0), clearTimeout(z.current);
+                                  H(!0), clearTimeout(Y.current);
                               },
-                              onMouseLeave: () => V(!1),
-                              style: { height: I }
+                              onMouseLeave: () => H(!1),
+                              style: { height: w }
                           })
                         : null
                 ]

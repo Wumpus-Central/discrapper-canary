@@ -88,7 +88,7 @@ function k(e, t) {
 }
 let M = i.memo(function (e) {
     var t, n, l, f, M;
-    let { guildNode: U, setRef: G, onDragStart: B, onDragEnd: V, route: H, guild: F, animatable: z, selected: W = !1, unread: Y = !1, mediaState: K, unavailable: q = !1, badge: Q = 0, isMentionLowImportance: X, contextMenu: J = k, draggable: $ = !1, sorting: ee = !1, preloadOnClick: et = !0, guildJoinRequestStatus: en, height: er, 'aria-setsize': ei, 'aria-posinset': el } = e,
+    let { guildNode: U, setRef: G, onDragStart: B, onDragEnd: V, route: H, guild: F, animatable: W, selected: z = !1, unread: Y = !1, mediaState: K, unavailable: q = !1, badge: Q = 0, isMentionLowImportance: X, contextMenu: J = k, draggable: $ = !1, sorting: ee = !1, preloadOnClick: et = !0, guildJoinRequestStatus: en, height: er, 'aria-setsize': ei, 'aria-posinset': el } = e,
         { id: eo, parentId: es } = U,
         ea = (0, b.Q3)('GuildItem'),
         ec = null != (t = e.upperBadge) ? t : q ? (0, N.Ny)() : null != K ? (0, N.Or)(K) : void 0,
@@ -163,7 +163,7 @@ let M = i.memo(function (e) {
                 ? (0, r.jsx)(E.Z, {
                       guild: F,
                       show: eO,
-                      active: W,
+                      active: z,
                       onAnimationStart: function () {
                           ey(eO);
                       },
@@ -191,15 +191,15 @@ let M = i.memo(function (e) {
                                   onMouseDown: ej,
                                   onContextMenu: ex,
                                   onKeyDown: eP,
-                                  icon: F.getIconURL(2 * eN, eb && z, ea),
-                                  selected: W || eb
+                                  icon: F.getIconURL(2 * eN, eb && W, ea),
+                                  selected: z || eb
                               },
                               ef
                           ),
                           {
                               'aria-setsize': ei,
                               'aria-posinset': el,
-                              'aria-selected': W
+                              'aria-selected': z
                           }
                       )
                   ),
@@ -217,10 +217,10 @@ let M = i.memo(function (e) {
                   className: o()(A.blobContainer, {
                       [A.sorting]: ee,
                       [A.wobble]: eO,
-                      [A.selected]: eO || W
+                      [A.selected]: eO || z
                   }),
                   children: (0, r.jsx)(h.aRk, {
-                      selected: !!ea || eO || W || eb,
+                      selected: !!ea || eO || z || eb,
                       upperBadge: ec,
                       lowerBadge: eu,
                       lowerBadgeSize: ed,
@@ -232,7 +232,7 @@ let M = i.memo(function (e) {
         children: [
             (0, r.jsx)(j.Z, {
                 hovered: !eh && eb,
-                selected: !eh && W,
+                selected: !eh && z,
                 unread: !eh && Y,
                 className: A.pill
             }),

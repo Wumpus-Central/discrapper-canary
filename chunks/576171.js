@@ -2,19 +2,19 @@ n.d(t, { Z: () => p });
 var r = n(73800),
     i = n(442837),
     l = n(445384),
-    o = n(420438),
-    a = n(271383),
+    a = n(420438),
+    o = n(271383),
     s = n(430824),
     c = n(594174),
     u = n(981631),
     d = n(440493);
 function p(e) {
-    let t = (0, i.e7)([s.Z, o.Z, c.default, a.ZP], () => {
+    let t = (0, i.e7)([s.Z, a.Z, c.default, o.ZP], () => {
         let t = s.Z.getGuild(e);
-        if ((null == t ? void 0 : t.hasFeature(u.oNc.HUB)) !== !0 || !0 === o.Z.hasViewedPrompt(d.r.REAL_NAME_PROMPT, t.id)) return null;
+        if ((null == t ? void 0 : t.hasFeature(u.oNc.HUB)) !== !0 || !0 === a.Z.hasViewedPrompt(d.r.REAL_NAME_PROMPT, t.id)) return null;
         let n = c.default.getCurrentUser();
         if (null == n) return null;
-        let r = a.ZP.getMember(t.id, null == n ? void 0 : n.id);
+        let r = o.ZP.getMember(t.id, null == n ? void 0 : n.id);
         return (null == r ? void 0 : r.nick) == null;
     });
     return (

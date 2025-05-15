@@ -1,9 +1,9 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => y });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    o = n(239091),
-    a = n(561472),
+    a = n(239091),
+    o = n(561472),
     s = n(933557),
     c = n(287746),
     u = n(541716),
@@ -15,40 +15,40 @@ var r = n(255367),
     g = n(703558),
     b = n(430824),
     _ = n(228392),
-    x = n(388032),
-    y = n(43200);
-function C(e) {
+    C = n(388032),
+    x = n(43200);
+function y(e) {
     let { channelId: t } = e,
-        C = (0, l.e7)([m.Z], () => m.Z.getChannel(t)),
-        v = (0, l.e7)([m.Z], () => m.Z.getChannel(null == C ? void 0 : C.parent_id)),
-        j = (0, l.e7)([b.Z], () => b.Z.getGuild(null == C ? void 0 : C.getGuildId())),
-        O = (0, s.ZP)(C),
+        y = (0, l.e7)([m.Z], () => m.Z.getChannel(t)),
+        v = (0, l.e7)([m.Z], () => m.Z.getChannel(null == y ? void 0 : y.parent_id)),
+        j = (0, l.e7)([b.Z], () => b.Z.getGuild(null == y ? void 0 : y.getGuildId())),
+        O = (0, s.ZP)(y),
         E = i.useRef(!1);
     if (
         (i.useEffect(() => {
-            null == C || E.current || ((E.current = !0), (0, _.lN)(C));
-        }, [C]),
-        null == C || null == j)
+            null == y || E.current || ((E.current = !0), (0, _.lN)(y));
+        }, [y]),
+        null == y || null == j)
     )
         return null;
-    let I = (0, r.jsx)(f.Z, { channel: C });
+    let I = (0, r.jsx)(f.Z, { channel: y });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(a.Z, {
-                channel: C,
+            (0, r.jsx)(o.Z, {
+                channel: y,
                 draftType: g.d.ChannelMessage
             }),
             (0, r.jsx)(d.ZP, {
                 toolbar: I,
-                'aria-label': x.intl.string(x.t.Pwe8tL),
+                'aria-label': C.intl.string(C.t.Pwe8tL),
                 children: (0, p.ud)({
-                    channel: C,
+                    channel: y,
                     parentChannel: v,
                     channelName: O,
                     guild: j,
                     inSidebar: !0,
                     handleContextMenu: function (e) {
-                        (0, o.jW)(e, async () => {
+                        (0, a.jW)(e, async () => {
                             let { default: e } = await n.e('40157').then(n.bind(n, 422200));
                             return (t) => {
                                 var n, i;
@@ -79,7 +79,7 @@ function C(e) {
                                         }
                                         return e;
                                     })({}, t)),
-                                    (i = i = { channel: C }),
+                                    (i = i = { channel: y }),
                                     Object.getOwnPropertyDescriptors
                                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                                         : (function (e, t) {
@@ -98,16 +98,16 @@ function C(e) {
                         });
                     },
                     handleClick: function () {
-                        null != C && (0, h.XU)(C.guild_id, C.id);
+                        null != y && (0, h.XU)(y.guild_id, y.id);
                     }
                 })
             }),
             (0, r.jsx)('div', {
-                className: y.chat,
+                className: x.chat,
                 children: (0, r.jsx)(
                     c.Z,
                     {
-                        channel: C,
+                        channel: y,
                         guild: j,
                         chatInputType: u.Ie.SIDEBAR
                     },

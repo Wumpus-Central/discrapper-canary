@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(46140),
     U = n(981631),
     G = n(215023),
-    V = n(388032),
-    B = n(87671),
+    B = n(388032),
+    V = n(87671),
     H = n(13299),
     F = n(843385);
 function z() {
@@ -67,7 +67,7 @@ function W(e) {
               loop: !0,
               muted: !0,
               playsInline: !0,
-              className: a()(B.bannerAsset, B.orbsBannerAsset),
+              className: a()(V.bannerAsset, V.orbsBannerAsset),
               onProgress: t,
               'data-mtctest-ignore': 'true',
               controls: !1,
@@ -78,7 +78,7 @@ function W(e) {
           })
         : (0, r.jsx)('img', {
               src: H.ZP,
-              className: a()(B.bannerAsset, B.oversizedImg),
+              className: a()(V.bannerAsset, V.oversizedImg),
               alt: '',
               onLoad: t
           });
@@ -113,13 +113,13 @@ let Y = function () {
             if (F) return void window.open(T.Z.getArticleURL(U.BhN.VIRTUAL_CURRENCY_LEARN_MORE));
             window.open(T.Z.getArticleURL(U.BhN.QUESTS_LEARN_MORE));
         }, [F]);
-    (0, f.Tt)({ location: V.intl.string(V.t.JALI2N) });
-    let K = F ? V.intl.format(V.t.BCBIlp, {}) : V.intl.format(V.t.lmMBf3, {}),
-        q = F ? V.intl.format(V.t.U9FY0N, {}) : V.intl.string(V.t.oWCrBg);
+    (0, f.Tt)({ location: B.intl.string(B.t.JALI2N) });
+    let K = F ? B.intl.format(B.t.BCBIlp, {}) : B.intl.format(B.t.lmMBf3, {}),
+        q = F ? B.intl.format(B.t.U9FY0N, {}) : B.intl.string(B.t.oWCrBg);
     return (0, r.jsx)(D.k.Provider, {
         value: { onAssetLoadComplete: j },
         children: (0, r.jsx)('div', {
-            className: B.container,
+            className: V.container,
             children: H
                 ? (0, r.jsxs)(v.Z, {
                       onScroll: l,
@@ -132,7 +132,7 @@ let Y = function () {
                               children: (0, r.jsx)(N.V9, {
                                   analyticsPage: U.ZY5.GLOBAL_DISCOVERY_QUESTS,
                                   cardAlignment: N.ek.END,
-                                  ctaText: V.intl.string(V.t['J+vlIS']),
+                                  ctaText: B.intl.string(B.t['J+vlIS']),
                                   ctaOnClick: () => {
                                       (0, C.Y)({
                                           pageType: U.ZY5.GLOBAL_DISCOVERY_QUESTS,
@@ -164,23 +164,23 @@ let Y = function () {
                                                         analyticsLocations: [],
                                                         analyticsSource: d.Z.INTRO_TO_ORBS_QUEST_BANNER
                                                     }),
-                                                children: V.intl.string(V.t['1Wm129'])
+                                                children: B.intl.string(B.t['1Wm129'])
                                             }),
                                             (0, r.jsx)(c.zxk, {
                                                 look: c.iLD.LINK,
                                                 color: c.Ttl.CUSTOM,
-                                                className: B.orbsTermsButton,
+                                                className: V.orbsTermsButton,
                                                 onClick: Y,
-                                                children: V.intl.string(V.t['7kTAgI'])
+                                                children: B.intl.string(B.t['7kTAgI'])
                                             })
                                         ]
                                     })
                                   : (0, r.jsx)(b.u, {
-                                        text: V.intl.string(V.t.hvVgAQ),
+                                        text: B.intl.string(B.t.hvVgAQ),
                                         onClick: Y
                                     }),
-                              className: a()(B.bannerContainer, { [B.orbsContainer]: F }),
-                              children: [(0, r.jsx)('div', { className: a()(B.bannerGradient, { [B.orbsGradient]: F }) }), (0, r.jsx)(W, { onLoadComplete: j })]
+                              className: a()(V.bannerContainer, { [V.orbsContainer]: F }),
+                              children: [(0, r.jsx)('div', { className: a()(V.bannerGradient, { [V.orbsGradient]: F }) }), (0, r.jsx)(W, { onLoadComplete: j })]
                           }),
                           (0, r.jsx)(E.Z, { children: e === P.e5.CLAIMED ? (0, r.jsx)(g, { onSelectTab: t }) : (0, r.jsx)(L.Z, {}) })
                       ]
@@ -189,7 +189,7 @@ let Y = function () {
                       children: [
                           (0, r.jsxs)(y.ZP, {
                               variant: y._6.OVERLAY,
-                              children: [(0, r.jsx)('div', { className: B.dragRegion }), (0, r.jsx)(y.z6, { scrollPosition: s }), (0, r.jsx)(y.aV, { icon: c.qDn })]
+                              children: [(0, r.jsx)('div', { className: V.dragRegion }), (0, r.jsx)(y.z6, { scrollPosition: s }), (0, r.jsx)(y.aV, { icon: c.qDn })]
                           }),
                           (0, r.jsxs)(v.Z, {
                               onScroll: l,
@@ -198,16 +198,16 @@ let Y = function () {
                                       title: K,
                                       description: q,
                                       button: (0, r.jsx)(b.u, {
-                                          text: V.intl.string(V.t.hvVgAQ),
+                                          text: B.intl.string(B.t.hvVgAQ),
                                           onClick: Y
                                       }),
-                                      className: a()(B.bannerContainer, { [B.orbsContainer]: F }),
-                                      children: [(0, r.jsx)('div', { className: a()(B.bannerGradient, { [B.orbsGradient]: F }) }), (0, r.jsx)(W, { onLoadComplete: j })]
+                                      className: a()(V.bannerContainer, { [V.orbsContainer]: F }),
+                                      children: [(0, r.jsx)('div', { className: a()(V.bannerGradient, { [V.orbsGradient]: F }) }), (0, r.jsx)(W, { onLoadComplete: j })]
                                   }),
                                   (0, r.jsxs)(E.Z, {
                                       children: [
                                           (0, r.jsx)('div', {
-                                              className: B.tabs,
+                                              className: V.tabs,
                                               children: (0, r.jsx)(O.Z, {
                                                   tabs: n,
                                                   selectedTab: e,

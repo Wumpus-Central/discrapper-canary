@@ -110,6 +110,7 @@ class D extends i.PureComponent {
         return null == e
             ? null
             : (0, r.jsx)(d.yRy, {
+                  targetElementRef: this._containerRef,
                   renderPopout: this.renderPopout,
                   position: 'bottom',
                   animation: d.yRy.Animation.NONE,
@@ -120,6 +121,7 @@ class D extends i.PureComponent {
                       let { isShown: u } = s;
                       return (0, r.jsx)('div', {
                           className: i,
+                          ref: this._containerRef,
                           children: (0, r.jsx)('div', {
                               className: a()(w.search, {
                                   [w.open]: o || l,
@@ -157,6 +159,7 @@ class D extends i.PureComponent {
                 selectedIndex: void 0
             }),
             Z(this, '_editorRef', void 0),
+            Z(this, '_containerRef', i.createRef()),
             Z(this, '_searchBarRef', i.createRef()),
             Z(this, '_searchPopoutRef', i.createRef()),
             Z(this, 'handleSetSearchQuery', (e) => {

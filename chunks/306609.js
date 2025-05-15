@@ -1,4 +1,4 @@
-n.d(t, { l: () => U }), n(388685);
+n.d(t, { l: () => z }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -14,29 +14,28 @@ var r = n(255367),
     p = n(795318),
     g = n(53691),
     h = n(457165),
-    v = n(221241),
-    b = n(594174),
-    y = n(626135),
-    j = n(111361),
-    x = n(74538),
-    C = n(743498),
-    I = n(967021),
-    O = n(709706),
-    E = n(378441),
-    P = n(799143),
-    N = n(358820),
-    S = n(448697),
-    w = n(946196),
-    T = n(365831),
-    L = n(639539),
-    k = n(627325),
-    Z = n(981631),
-    D = n(354459),
-    A = n(474936),
-    F = n(722565),
-    M = n(388032),
-    R = n(130802);
-function B(e) {
+    v = n(594174),
+    b = n(626135),
+    y = n(111361),
+    j = n(74538),
+    x = n(743498),
+    C = n(967021),
+    I = n(709706),
+    O = n(378441),
+    E = n(799143),
+    P = n(358820),
+    N = n(448697),
+    S = n(946196),
+    w = n(365831),
+    T = n(639539),
+    L = n(627325),
+    k = n(981631),
+    Z = n(354459),
+    D = n(474936),
+    A = n(722565),
+    F = n(388032),
+    M = n(130802);
+function R(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -61,7 +60,7 @@ function B(e) {
     }
     return e;
 }
-function z(e, t) {
+function B(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -79,31 +78,40 @@ function z(e, t) {
         e
     );
 }
-function U(e) {
+function z(e) {
     let { onSettingsButtonClick: t, wide: n, showOutputDevices: a = !1 } = e,
-        [U, W] = i.useState(''),
-        { analyticsLocations: V, newestAnalyticsLocation: H } = (0, m.ZP)(_.Z.VOICE_FILTER_POPOUT),
-        G = i.useRef(null),
-        Y = (0, u.Z)({
+        [z, U] = i.useState(''),
+        { analyticsLocations: W, newestAnalyticsLocation: V } = (0, m.ZP)(_.Z.VOICE_FILTER_POPOUT),
+        H = i.useRef(null),
+        G = (0, u.Z)({
             minDimension: 400,
             maxDimension: 600,
-            resizableDomNodeRef: G,
+            resizableDomNodeRef: H,
             onElementResize: (e, t) => {},
             onElementResizeEnd: (e) => {},
             orientation: u.y.VERTICAL_TOP
         });
-    (0, M.useSyncMessages)(F.messagesLoader);
-    let q = (0, s.e7)([b.default], () => (0, j.I5)(b.default.getCurrentUser())),
-        X = (0, s.e7)([O.Z], () => O.Z.getCatalogUpdateTime()),
-        [K, J] = i.useState(!1),
-        [Q, $] = i.useState(!1),
-        { activeVoice: ee } = (0, E.o)(),
-        et = (0, I.vi)({
-            location: V[0],
+    (0, F.useSyncMessages)(A.messagesLoader);
+    let Y = (0, s.e7)([v.default], () => (0, y.I5)(v.default.getCurrentUser())),
+        q = (0, s.e7)([I.Z], () => I.Z.getCatalogUpdateTime()),
+        [X, K] = i.useState(!1),
+        [J, Q] = i.useState(!1),
+        { activeVoice: $ } = (0, O.o)(),
+        ee = (0, C.vi)({
+            location: W[0],
             autoTrackExposure: !0
         }),
+        et = (0, c.q_F)({
+            transform: X ? 'translateY(-8px) scale('.concat(0.96, ')') : 'translateY(0px) scale(1)',
+            config: {
+                duration: 150,
+                mass: 1,
+                stiffness: 711.1,
+                damping: 40
+            }
+        }),
         en = (0, c.q_F)({
-            transform: K ? 'translateY(-8px) scale('.concat(0.96, ')') : 'translateY(0px) scale(1)',
+            y: 50 * !X,
             config: {
                 duration: 150,
                 mass: 1,
@@ -112,18 +120,9 @@ function U(e) {
             }
         }),
         er = (0, c.q_F)({
-            y: 50 * !K,
-            config: {
-                duration: 150,
-                mass: 1,
-                stiffness: 711.1,
-                damping: 40
-            }
-        }),
-        ei = (0, c.q_F)({
             to: {
-                bottom: '' !== U ? 'translateY(75px)' : 'translateY(50px)',
-                opacity: +('' === U)
+                bottom: '' !== z ? 'translateY(75px)' : 'translateY(50px)',
+                opacity: +('' === z)
             },
             config: {
                 tension: 280,
@@ -131,91 +130,90 @@ function U(e) {
                 duration: 200
             }
         }),
-        ea = i.useRef(null);
+        ei = i.useRef(null);
     (0, d.ZP)(() => {
-        (0, N.r5)(), et && (0, C.jG)(), y.default.track(Z.rMx.VOICE_FILTER_PICKER_OPENED, { active_voice_filter_id: null != ee ? ee : null });
+        (0, P.r5)(), ee && (0, x.jG)(), b.default.track(k.rMx.VOICE_FILTER_PICKER_OPENED, { active_voice_filter_id: null != $ ? $ : null });
     });
-    let { simplifiedSettingsEnabled: eo } = (0, v.Z)({ location: 'VoiceFiltersPopout' }),
-        el = i.useCallback(() => W(''), [W]);
+    let ea = i.useCallback(() => U(''), [U]);
     return (0, r.jsx)(m.Gt, {
-        value: V,
+        value: W,
         children: (0, r.jsxs)('div', {
-            ref: G,
-            className: o()(R.voiceFiltersPopout, { [R.wide]: n }),
+            ref: H,
+            className: o()(M.voiceFiltersPopout, { [M.wide]: n }),
             style: { height: 500 },
             children: [
                 (0, r.jsx)('div', {
-                    className: R.resizeHandle,
-                    onMouseDown: Y,
-                    children: (0, r.jsx)('div', { className: R.resizePill })
+                    className: M.resizeHandle,
+                    onMouseDown: G,
+                    children: (0, r.jsx)('div', { className: M.resizePill })
                 }),
                 (0, r.jsx)(c.E1j, {
                     size: c.E1j.Sizes.MEDIUM,
-                    placeholder: M.intl.string(M.t.hHCZJS),
-                    className: R.voiceFiltersHeader,
+                    placeholder: F.intl.string(F.t.hHCZJS),
+                    className: M.voiceFiltersHeader,
                     autoFocus: !0,
-                    onChange: W,
-                    query: U,
-                    onClear: el
+                    onChange: U,
+                    query: z,
+                    onClear: ea
                 }),
-                (0, r.jsx)(k.w, {
-                    query: U,
+                (0, r.jsx)(L.w, {
+                    query: z,
                     columns: n ? 5 : 4,
                     handleScroll: (e) => {
-                        let t = ea.current;
-                        if (null == t || (J(e > 0), Q)) return;
+                        let t = ei.current;
+                        if (null == t || (K(e > 0), J)) return;
                         let { height: n, totalHeight: r } = t.getListDimensions();
-                        e < r - n || ($(!0), y.default.track(Z.rMx.VOICE_FILTER_PICKER_SCROLLED));
+                        e < r - n || (Q(!0), b.default.track(k.rMx.VOICE_FILTER_PICKER_SCROLLED));
                     },
-                    voiceListRef: ea
+                    voiceListRef: ei
                 }),
-                !q &&
+                !Y &&
                     (0, r.jsxs)(l.animated.div, {
-                        style: z(B({}, ei), { display: ei.opacity.to((e) => (0 === e ? 'none' : 'block')) }),
-                        className: R.upsellCountdownContainer,
+                        style: B(R({}, er), { display: er.opacity.to((e) => (0 === e ? 'none' : 'block')) }),
+                        className: M.upsellCountdownContainer,
                         children: [
-                            null != X &&
+                            null != q &&
                                 (0, r.jsx)(l.animated.div, {
-                                    style: en,
-                                    children: (0, r.jsx)(L.J, {
-                                        catalogUpdateTime: X,
-                                        isScrolled: K
+                                    style: et,
+                                    children: (0, r.jsx)(T.J, {
+                                        catalogUpdateTime: q,
+                                        isScrolled: X
                                     })
                                 }),
                             (0, r.jsx)('div', {
-                                className: R.upsellContainer,
+                                className: M.upsellContainer,
                                 children: (0, r.jsx)(l.animated.div, {
                                     style: {
-                                        y: er.y,
-                                        opacity: er.y.to((e) => +(50 !== e))
+                                        y: en.y,
+                                        opacity: en.y.to((e) => +(50 !== e))
                                     },
                                     children: (0, r.jsx)(g.p, {
                                         showUpsell: !0,
-                                        text: M.intl.format(M.t['XMDm8/'], {
-                                            nitroTierName: (0, x.Px)(A.p9.TIER_2),
+                                        text: F.intl.format(F.t['XMDm8/'], {
+                                            nitroTierName: (0, j.Px)(D.p9.TIER_2),
                                             onClick: () => (0, h.i)()
                                         }),
-                                        button: M.intl.string(M.t.cRCCJy),
-                                        buttonAnalyticsObject: { section: Z.jXE.VOICE_FILTERS_FLOATING_UPSELL },
+                                        button: F.intl.string(F.t.cRCCJy),
+                                        buttonAnalyticsObject: { section: k.jXE.VOICE_FILTERS_FLOATING_UPSELL },
                                         showShadow: !1,
                                         position: 'inline',
-                                        className: R.upsell,
+                                        className: M.upsell,
                                         buttonSize: 'sm',
                                         useLockIcon: !0,
-                                        buttonStyles: R.subscribeButton
+                                        buttonStyles: M.subscribeButton
                                     })
                                 })
                             })
                         ]
                     }),
-                (0, r.jsx)(w.l, {}),
-                (0, r.jsx)(T.y, {}),
-                (0, r.jsx)(S.R, {}),
+                (0, r.jsx)(S.l, {}),
+                (0, r.jsx)(w.y, {}),
+                (0, r.jsx)(N.R, {}),
                 (0, r.jsxs)('div', {
-                    className: o()(R.voiceFiltersFooter, { [R.hasActiveVoice]: null != ee }),
+                    className: o()(M.voiceFiltersFooter, { [M.hasActiveVoice]: null != $ }),
                     children: [
-                        (0, r.jsx)(P.Y, {}),
-                        a && (0, r.jsx)(P.a, {}),
+                        (0, r.jsx)(E.Y, {}),
+                        a && (0, r.jsx)(E.a, {}),
                         (0, r.jsx)(c.yRy, {
                             position: 'top',
                             align: 'right',
@@ -227,21 +225,21 @@ function U(e) {
                                     renderOutputDevices: a,
                                     renderOutputVolume: a,
                                     onClose: t,
-                                    onInteraction: (0, p.u)('AudioDeviceMenu', H, { entrypoint: D.A5.THREE_DOT }),
-                                    simplified: eo
+                                    onInteraction: (0, p.u)('AudioDeviceMenu', V, { entrypoint: Z.A5.THREE_DOT }),
+                                    minimal: !0
                                 }),
                             children: (e) =>
                                 (0, r.jsx)(
                                     c.zxk,
-                                    z(B({}, e), {
+                                    B(R({}, e), {
                                         size: c.zxk.Sizes.MIN,
                                         look: c.zxk.Looks.BLANK,
                                         grow: !1,
-                                        className: R.voiceFiltersFooterButton,
-                                        innerClassName: R.voiceFiltersFooterButtonInner,
+                                        className: M.voiceFiltersFooterButton,
+                                        innerClassName: M.voiceFiltersFooterButtonInner,
                                         onClick: (t) => {
                                             var n;
-                                            y.default.track(Z.rMx.VOICE_FILTER_VOICE_SETTINGS_CLICKED, { active_voice_filter_id: null != ee ? ee : null }), null == (n = e.onClick) || n.call(e, t);
+                                            b.default.track(k.rMx.VOICE_FILTER_VOICE_SETTINGS_CLICKED, { active_voice_filter_id: null != $ ? $ : null }), null == (n = e.onClick) || n.call(e, t);
                                         },
                                         children: (0, r.jsx)(c.Huf, {
                                             size: 'custom',

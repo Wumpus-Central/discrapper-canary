@@ -1,9 +1,9 @@
-n.d(t, { Z: () => M }), n(388685), n(539854);
+n.d(t, { Z: () => k }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(873546),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(239091),
     c = n(144144),
     u = n(100527),
@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(823415),
     b = n(670188),
     _ = n(158776),
-    x = n(699516),
-    y = n(111583),
-    C = n(594174),
+    C = n(699516),
+    x = n(111583),
+    y = n(594174),
     v = n(626135),
     j = n(585483),
     O = n(233870),
@@ -55,11 +55,11 @@ function T(e) {
 let A = [],
     w = I.ZP.getEnableHardwareAcceleration();
 function R(e) {
-    let { user: t, channel: a, status: u, activities: d } = e,
-        p = (0, o.e7)([y.Z], () => null != y.Z.getTypingUsers(a.id)[t.id]),
-        f = (0, o.e7)([C.default], () => C.default.getCurrentUser()),
-        v = (0, o.e7)([_.Z], () => _.Z.isMobileOnline(t.id)),
-        O = (0, o.e7)([x.Z], () => x.Z.getNickname(t.id)),
+    let { user: t, channel: o, status: u, activities: d } = e,
+        p = (0, a.e7)([x.Z], () => null != x.Z.getTypingUsers(o.id)[t.id]),
+        f = (0, a.e7)([y.default], () => y.default.getCurrentUser()),
+        v = (0, a.e7)([_.Z], () => _.Z.isMobileOnline(t.id)),
+        O = (0, a.e7)([C.Z], () => C.Z.getNickname(t.id)),
         I = (0, h.Z)(t.id),
         N = i.useRef(null),
         A = (e) => {
@@ -73,7 +73,7 @@ function R(e) {
                         (l = l =
                             {
                                 user: t,
-                                channel: a
+                                channel: o
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(l))
@@ -95,28 +95,28 @@ function R(e) {
         R = () => {
             let e = '@'.concat(E.ZP.getUserTag(t, { decoration: 'never' })),
                 n = '<@'.concat(t.id, '>');
-            j.S.dispatch(P.CkL.TEXTAREA_FOCUS, { channelId: a.id }),
+            j.S.dispatch(P.CkL.TEXTAREA_FOCUS, { channelId: o.id }),
                 j.S.dispatchToLastSubscribed(P.CkL.INSERT_TEXT, {
                     plainText: e,
                     rawText: n
                 }),
-                c.Z.startTyping(a.id);
+                c.Z.startTyping(o.id);
         },
-        k = (0, m.K)({
+        M = (0, m.K)({
             location: 'PrivateChannelRecipients',
             user: t
         }),
-        [M, L] = i.useState(!1),
+        [k, L] = i.useState(!1),
         D = (0, g.ic)({ location: 'PrivateChannelRecipients' });
     return (0, r.jsx)(b.Z, {
         targetElementRef: N,
         user: t,
-        channelId: a.id,
+        channelId: o.id,
         shouldShowOnHover: D,
         position: l.tq ? 'window_center' : 'left',
         spacing: 16,
         onShiftClick: R,
-        shouldShow: M,
+        shouldShow: k,
         onRequestClose: () => L(!1),
         children: (e) => {
             var { onClick: n, onMouseDown: i } = e,
@@ -146,25 +146,25 @@ function R(e) {
                         ref: N,
                         user: t,
                         currentUser: f,
-                        isOwner: t.id === a.ownerId,
+                        isOwner: t.id === o.ownerId,
                         ownerTooltipText: Z.intl.string(Z.t['MRXZ+/']),
                         shouldAnimateStatus: w,
                         isTyping: p,
                         status: u,
                         activities: d,
                         applicationStream: I,
-                        channel: a,
+                        channel: o,
                         onContextMenu: A,
-                        selected: M,
+                        selected: k,
                         isMobile: v,
                         nick: O,
-                        nameplate: k,
+                        nameplate: M,
                         hideTooltip: D,
                         onClick: (e) => {
                             e.shiftKey ? null == R || R() : L((e) => !e);
                         },
                         onMouseDown: (e) => {
-                            M ? e.stopPropagation() : null == i || i(e);
+                            k ? e.stopPropagation() : null == i || i(e);
                         }
                     },
                     l
@@ -174,7 +174,7 @@ function R(e) {
         }
     });
 }
-function k(e, t) {
+function M(e, t) {
     if (e.listItems.length !== t.listItems.length) return !1;
     for (let n = 0; n < e.listItems.length; n++) {
         let r = e.listItems[n],
@@ -183,19 +183,19 @@ function k(e, t) {
     }
     return !0;
 }
-function M(e) {
+function k(e) {
     let { channel: t } = e,
-        n = C.default.getCurrentUser(),
+        n = y.default.getCurrentUser(),
         l = null == n ? void 0 : n.isStaff(),
         { analyticsLocations: s } = (0, d.ZP)(u.Z.MEMBER_LIST),
-        { listItems: c } = (0, o.e7)(
-            [x.Z, C.default, _.Z],
+        { listItems: c } = (0, a.e7)(
+            [C.Z, y.default, _.Z],
             () => {
-                let e = (0, O.T)(t.recipients, C.default),
+                let e = (0, O.T)(t.recipients, y.default),
                     n = {};
                 for (let t of e) {
                     var r, i, l;
-                    x.Z.isFriend(t.id) || t.id === (null == (r = C.default.getCurrentUser()) ? void 0 : r.id)
+                    C.Z.isFriend(t.id) || t.id === (null == (r = y.default.getCurrentUser()) ? void 0 : r.id)
                         ? (n[t.id] = {
                               status: null != (i = _.Z.getStatus(t.id)) ? i : P.Skl.OFFLINE,
                               activities: null != (l = _.Z.getActivities(t.id)) ? l : A
@@ -205,19 +205,19 @@ function M(e) {
                               activities: A
                           });
                 }
-                let o = [];
+                let a = [];
                 for (let t of e) {
                     let e = {
                         user: t,
                         status: n[t.id].status,
                         activities: n[t.id].activities
                     };
-                    o.push(e);
+                    a.push(e);
                 }
-                return { listItems: o };
+                return { listItems: a };
             },
             [t],
-            k
+            M
         );
     i.useEffect(() => {
         v.default.track(P.rMx.MEMBER_LIST_VIEWED, {
@@ -233,7 +233,7 @@ function M(e) {
             className: N.container,
             children: (0, r.jsx)('aside', {
                 className: N.membersWrap,
-                children: (0, r.jsxs)(a.Ttm, {
+                children: (0, r.jsxs)(o.Ttm, {
                     className: N.members,
                     fade: !0,
                     children: [

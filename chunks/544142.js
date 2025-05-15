@@ -2,8 +2,8 @@ n.d(t, { Z: () => I });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(481060),
     c = n(239091),
     u = n(100527),
@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(594174),
     b = n(51144),
     _ = n(967128),
-    x = n(981631),
-    y = n(388032),
-    C = n(128337);
+    C = n(981631),
+    x = n(388032),
+    y = n(128337);
 function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -64,10 +64,10 @@ function j(e, t) {
 function O(e) {
     var t, l;
     let { userId: p, channel: _ } = e,
-        x = i.useRef(null),
-        { analyticsLocations: y } = (0, d.ZP)(u.Z.USERNAME),
-        O = (0, a.e7)([g.default], () => g.default.getUser(p)),
-        E = (0, a.e7)([m.ZP], () => (null != p ? m.ZP.getMember(_.guild_id, p) : null)),
+        C = i.useRef(null),
+        { analyticsLocations: x } = (0, d.ZP)(u.Z.USERNAME),
+        O = (0, o.e7)([g.default], () => g.default.getUser(p)),
+        E = (0, o.e7)([m.ZP], () => (null != p ? m.ZP.getMember(_.guild_id, p) : null)),
         I = (0, h.X)(_.guild_id, null == E ? void 0 : E.colorStrings);
     function S(e) {
         if (null == O) return null;
@@ -88,13 +88,13 @@ function O(e) {
         Z = null == E ? void 0 : E.colorString;
     return null == O
         ? (0, r.jsx)('span', {
-              className: o()(C.threadCreatorName, C.unknownCreatorName),
+              className: a()(y.threadCreatorName, y.unknownCreatorName),
               children: P
           })
         : (0, r.jsx)(d.Gt, {
-              value: y,
+              value: x,
               children: (0, r.jsx)(f.Z, {
-                  targetElementRef: x,
+                  targetElementRef: C,
                   user: O,
                   guildId: _.guild_id,
                   channelId: _.id,
@@ -104,9 +104,9 @@ function O(e) {
                       (0, r.jsx)(
                           s.P3F,
                           j(v({}, e), {
-                              innerRef: x,
+                              innerRef: C,
                               tag: 'span',
-                              className: C.threadCreatorName,
+                              className: y.threadCreatorName,
                               onContextMenu: S,
                               children: (0, r.jsx)(s.PUh, {
                                   name: P,
@@ -129,8 +129,8 @@ function E(e) {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
                       children: (0, r.jsx)('div', {
-                          className: C.subtitle,
-                          children: y.intl.format(y.t.imPXd3, {
+                          className: y.subtitle,
+                          children: x.intl.format(x.t.imPXd3, {
                               usernameHook: (e, n) =>
                                   (0, r.jsx)(
                                       O,
@@ -143,11 +143,11 @@ function E(e) {
                           })
                       })
                   }),
-                  t.type === x.d4z.PRIVATE_THREAD
+                  t.type === C.d4z.PRIVATE_THREAD
                       ? (0, r.jsx)(s.Text, {
                             variant: 'text-md/normal',
                             color: 'header-secondary',
-                            children: y.intl.string(y.t['1awbZG'])
+                            children: x.intl.string(x.t['1awbZG'])
                         })
                       : null
               ]
@@ -161,8 +161,8 @@ function I(e) {
         channelId: n.id,
         children: [
             (0, r.jsx)('div', {
-                className: C.iconWrapper,
-                children: (0, r.jsx)(i, { className: C.icon })
+                className: y.iconWrapper,
+                children: (0, r.jsx)(i, { className: y.icon })
             }),
             (0, r.jsx)(_.Ot, { children: n.name }),
             (0, r.jsx)(E, { channel: n })

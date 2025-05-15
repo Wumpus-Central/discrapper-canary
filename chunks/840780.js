@@ -41,8 +41,8 @@ var r = n(255367),
     V = n(759198),
     H = n(970731),
     F = n(131704),
-    z = n(199902),
-    W = n(314897),
+    W = n(199902),
+    z = n(314897),
     Y = n(592125),
     K = n(984933),
     q = n(430824),
@@ -231,6 +231,7 @@ class e_ extends i.PureComponent {
         });
         return m
             ? (0, r.jsx)(h.yRy, {
+                  targetElementRef: this.activityPopoutTargetRef,
                   position: 'top',
                   align: 'center',
                   spacing: 16,
@@ -255,6 +256,7 @@ class e_ extends i.PureComponent {
                       (0, r.jsx)(
                           h.P3F,
                           em(eg({}, e), {
+                              innerRef: this.activityPopoutTargetRef,
                               className: o()(ep.gameWrapper, ep.clickableGameWrapper, { [ep.clickableGameWrapperForceHover]: c }),
                               onClick: () => {
                                   p.Z.dispatch({ type: 'ACTIVITY_POPOUT_WINDOW_OPEN' }), c && u(ed.L.TAKE_ACTION), (0, j.yw)(ec.rMx.ACTIVITY_PANEL_GAME_CARD_ACTIVITY_POPOUT_REFOCUS_CLICKED);
@@ -282,6 +284,7 @@ class e_ extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
+            ef(this, 'activityPopoutTargetRef', i.createRef()),
             ef(this, 'handleApplicationOrChannelLinkClick', () => {
                 var e;
                 let { channel: t, embeddedActivity: n } = this.props;
@@ -325,13 +328,13 @@ let ey = (0, b.Z)(function (e) {
             }
             return i;
         })(e, ['guildId']);
-    let o = (0, u.e7)([W.default], () => W.default.getId()),
+    let o = (0, u.e7)([z.default], () => z.default.getId()),
         s = (0, u.e7)([A.ZP, en.Z], () => (0, U.Z)(A.ZP, en.Z)),
         a = (0, u.e7)([ee.Z, Y.Z], () => Y.Z.getChannel(ee.Z.getVoiceChannelId())),
         c = (0, u.e7)([C.ZP], () => C.ZP.getConnectedActivityChannelId()),
         h = (0, u.e7)([Y.Z], () => Y.Z.getChannel(c)),
         p = (0, u.e7)([q.Z], () => q.Z.getGuild(null == h ? void 0 : h.guild_id)),
-        [f, g] = (0, u.Wu)([z.Z], () => [z.Z.getCurrentUserActiveStream(), z.Z.getStreamerActiveStreamMetadata()]),
+        [f, g] = (0, u.Wu)([W.Z], () => [W.Z.getCurrentUserActiveStream(), W.Z.getStreamerActiveStreamMetadata()]),
         m = (0, u.e7)([_.Z], () => _.Z.useReducedMotion),
         b = (0, u.e7)([C.ZP], () => C.ZP.getCurrentEmbeddedActivity()),
         v = (0, u.e7)([q.Z, X.Z, K.ZP], () => (null != a ? D.JL(a, q.Z, X.Z, !1) : null != n && D.h_(K.ZP.getChannels(n), q.Z, X.Z).length > 0)),

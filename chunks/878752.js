@@ -1,9 +1,9 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => v }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(704215),
-    o = n(100527),
-    a = n(906732),
+    a = n(100527),
+    o = n(906732),
     s = n(779618),
     c = n(243778),
     u = n(446226),
@@ -11,72 +11,56 @@ var r = n(255367),
     p = n(301164),
     h = n(576645),
     f = n(822183),
-    m = n(641015),
-    g = n(983131),
-    b = n(82965),
-    _ = n(131951),
-    x = n(213652),
-    y = n(320427),
-    C = n(145010),
-    v = n(933686),
-    j = n(361057),
-    O = n(997614),
-    E = n(159909),
-    I = n(531675);
-function S(e) {
-    let { channel: t, hasActiveStream: n, showRightDivider: S, themeable: P = !1 } = e,
-        { analyticsLocations: Z } = (0, a.ZP)(o.Z.VOICE_CONTROL_TRAY),
-        N = (0, b.Z)({ location: 'VoiceEffectsActionBar' }),
-        T = (0, h.Ou)(t),
-        A = i.useRef(null),
-        w = (0, u.Z)(),
-        { isSharedCanvasEnabled: R } = f.Z.useExperiment({
+    m = n(131951),
+    g = n(213652),
+    b = n(320427),
+    _ = n(145010),
+    C = n(361057),
+    x = n(159909),
+    y = n(531675);
+function v(e) {
+    let { channel: t, hasActiveStream: n, showRightDivider: v } = e,
+        { analyticsLocations: j } = (0, o.ZP)(a.Z.VOICE_CONTROL_TRAY),
+        O = (0, h.Ou)(t),
+        E = i.useRef(null),
+        I = (0, u.Z)(),
+        { isSharedCanvasEnabled: S } = f.Z.useExperiment({
             guildId: null == t ? void 0 : t.guild_id,
             location: 'b7309a_1'
         }),
-        { enableViewerClipping: k } = d.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
-        M = (0, s.Z)(_.Z),
-        L = (0, h.Zm)(t, 'VoiceEffectsActionBar') ? [l.z.CONSUMABLE_HD_POTION_UPSELL] : [],
-        [D, U] = (0, c.US)(L, void 0, !0),
-        B = D === l.z.CONSUMABLE_HD_POTION_UPSELL,
-        G = (0, g.Z)(t);
-    if (null == t || null != w) return null;
-    let F = (0, m.Z)(t),
-        H = !N && F,
-        V = !N && G,
-        z = k && M,
-        W = R && n;
-    return (0, r.jsxs)(a.Gt, {
-        value: Z,
+        { enableViewerClipping: P } = d.Z.useExperiment({ location: 'VoiceEffectsActionBar' }, { autoTrackExposure: !1 }),
+        Z = (0, s.Z)(m.Z),
+        N = (0, h.Zm)(t, 'VoiceEffectsActionBar') ? [l.z.CONSUMABLE_HD_POTION_UPSELL] : [],
+        [T, A] = (0, c.US)(N, void 0, !0),
+        w = T === l.z.CONSUMABLE_HD_POTION_UPSELL;
+    if (null == t || null != I) return null;
+    let R = P && Z,
+        M = S && n;
+    return (0, r.jsxs)(o.Gt, {
+        value: j,
         children: [
             (0, r.jsxs)('div', {
-                className: I.voiceEffectsActionBar,
+                className: y.voiceEffectsActionBar,
                 children: [
-                    H &&
-                        (0, r.jsx)(O.Z, {
-                            channel: t,
-                            themeable: P
-                        }),
-                    V && (0, r.jsx)(v.Z, { channel: t }),
-                    z && (0, r.jsx)(x.Z, { channel: t }),
-                    B &&
+                    R && (0, r.jsx)(g.Z, { channel: t }),
+                    w &&
                         (0, r.jsx)(p.t, {
-                            potionRef: A,
+                            potionRef: E,
                             channel: t,
-                            markAsDismissed: U
+                            markAsDismissed: A
                         }),
-                    T &&
-                        (0, r.jsx)(j.Z, {
-                            ref: A,
+                    O &&
+                        (0, r.jsx)(C.Z, {
+                            ref: E,
                             channel: t,
-                            glow: B
+                            glow: w
                         }),
-                    W && (0, r.jsx)(y.Z, {}),
-                    W && (0, r.jsx)(C.Z, { channel: t }),
-                    W && (0, r.jsx)(E.Z, {})
+                    M && (0, r.jsx)(b.Z, {}),
+                    M && (0, r.jsx)(_.Z, { channel: t }),
+                    M && (0, r.jsx)(x.Z, {})
                 ]
             }),
-            S && (H || V || z || B || T || W) && (0, r.jsx)('div', { className: I.divider })
+            v && (R || w || O || M) && (0, r.jsx)('div', { className: y.divider })
         ]
     });
 }

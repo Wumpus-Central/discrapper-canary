@@ -8,33 +8,33 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    o = n(481060),
-    a = n(44946);
+    a = n(481060),
+    o = n(44946);
 let s = 16;
 function c(e) {
     let { description: t, name: n, icon: i, onNavigate: c, className: u, missingNavIcon: d } = e;
-    return (0, r.jsxs)(o.P3F, {
+    return (0, r.jsxs)(a.P3F, {
         onClick: c,
-        className: l()(a.modInfoItem, null != c && a.modInfoAction, u),
+        className: l()(o.modInfoItem, null != c && o.modInfoAction, u),
         children: [
             null != i &&
                 (0, r.jsx)('div', {
-                    className: a.modInfoItemIcon,
+                    className: o.modInfoItemIcon,
                     children: i
                 }),
             null != n &&
                 (0, r.jsx)('div', {
-                    className: a.modInfoItemName,
+                    className: o.modInfoItemName,
                     children: n
                 }),
             (0, r.jsx)('div', {
-                className: a.modInfoItemDescription,
+                className: o.modInfoItemDescription,
                 children: t
             }),
             null != c &&
                 (0, r.jsx)('div', {
-                    className: a.modInfoItemActionIcon,
-                    children: (0, r.jsx)(o.LJT, {
+                    className: o.modInfoItemActionIcon,
+                    children: (0, r.jsx)(a.LJT, {
                         size: 'custom',
                         width: s,
                         height: s
@@ -43,7 +43,7 @@ function c(e) {
             null == c &&
                 null != d &&
                 (0, r.jsx)('div', {
-                    className: a.modInfoItemActionIcon,
+                    className: o.modInfoItemActionIcon,
                     children: d
                 })
         ]
@@ -52,7 +52,7 @@ function c(e) {
 function u(e) {
     let { children: t } = e;
     return (0, r.jsx)('div', {
-        className: a.modInfoItemContainer,
+        className: o.modInfoItemContainer,
         children: t
     });
 }

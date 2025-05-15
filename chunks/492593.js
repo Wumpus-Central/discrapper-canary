@@ -77,10 +77,10 @@ let g = function (e) {
             hasReply: S,
             authorHasGradientRole: w = !1,
             guildId: I,
-            onMouseEnter: N,
-            onMouseLeave: k
+            onMouseEnter: R,
+            onMouseLeave: N
         } = e,
-        R = (function (e, t) {
+        k = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -103,15 +103,15 @@ let g = function (e) {
         [M, Z] = o.useState(!1),
         A = o.useCallback(
             (e) => {
-                Z(!0), null == N || N(e);
+                Z(!0), null == R || R(e);
             },
-            [N]
+            [R]
         ),
         D = o.useCallback(
             (e) => {
-                Z(!1), null == k || k(e);
+                Z(!1), null == N || N(e);
             },
-            [k]
+            [N]
         ),
         L = (0, r.jsx)(l.d.Provider, {
             value: {
@@ -140,7 +140,7 @@ let g = function (e) {
                                     }),
                                     ref: x
                                 },
-                                R
+                                k
                             ),
                             {
                                 role: 'article',

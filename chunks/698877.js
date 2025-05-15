@@ -1,15 +1,13 @@
-n.d(t, { O: () => u });
+n.d(t, { O: () => s });
 var r = n(255367),
     i = n(73800),
     l = n(864094),
-    o = n(861254),
-    a = n(221241),
-    s = n(871499),
-    c = n(388032);
-function u(e) {
+    a = n(871499),
+    o = n(388032);
+function s(e) {
     let t, n;
-    var { hasPermission: u, streamActive: d, isSelfStream: p, centerButton: h, onMouseEnter: f, onMouseLeave: m, premiumGlow: g, renderNUXHighlight: b, buttonRef: _ } = e,
-        x = (function (e, t) {
+    var { hasPermission: s, streamActive: c, isSelfStream: u, centerButton: d, onMouseEnter: p, onMouseLeave: h, renderNUXHighlight: f, buttonRef: m } = e,
+        g = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -27,16 +25,14 @@ function u(e) {
                 for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ['hasPermission', 'streamActive', 'isSelfStream', 'centerButton', 'onMouseEnter', 'onMouseLeave', 'premiumGlow', 'renderNUXHighlight', 'buttonRef']);
-    let { mode: y } = (0, o.ZP)({ location: 'StreamButton' }),
-        { squareButtonsEnabled: C, coloredIconsEnabled: v } = (0, a.Z)({ location: 'StreamButton' }),
-        j = h ? s.d : s.Z;
-    t = d ? (p ? c.intl.string(c.t.S5anIS) : c.intl.string(c.t.q3O3Jy)) : u ? c.intl.string(c.t.fjBNo6) : c.intl.string(c.t.uQn9Bw);
-    let { Component: O, events: E, play: I } = (0, l.P)(d ? 'disable' : 'enable');
+        })(e, ['hasPermission', 'streamActive', 'isSelfStream', 'centerButton', 'onMouseEnter', 'onMouseLeave', 'renderNUXHighlight', 'buttonRef']);
+    let b = d ? a.d : a.Z;
+    t = c ? (u ? o.intl.string(o.t.S5anIS) : o.intl.string(o.t.q3O3Jy)) : s ? o.intl.string(o.t.fjBNo6) : o.intl.string(o.t.uQn9Bw);
+    let { Component: _, events: C, play: x } = (0, l.P)(c ? 'disable' : 'enable');
     return (
-        i.useEffect(() => () => I(), [d, I]),
+        i.useEffect(() => () => x(), [c, x]),
         (0, r.jsx)(
-            j,
+            b,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -63,22 +59,21 @@ function u(e) {
                 return e;
             })(
                 {
-                    ref: _,
+                    ref: m,
+                    isTrayButton: !0,
                     label: t,
-                    disabled: !u,
-                    iconComponent: O,
-                    isActive: d,
-                    color: (b ? (n = 'premiumGradient') : (C || y === o.BK.GroupedButtonsRedMic) && d && (n = 'green'), n),
-                    caretColor: v ? void 0 : 'primaryDark',
+                    disabled: !s,
+                    iconComponent: _,
+                    isActive: c,
+                    color: (f ? (n = 'premiumGradient') : c && (n = 'green'), n),
                     onMouseEnter: (e) => {
-                        null == f || f(e), E.onMouseEnter();
+                        null == p || p(e), C.onMouseEnter();
                     },
                     onMouseLeave: (e) => {
-                        null == m || m(e), E.onMouseLeave();
-                    },
-                    premiumGlow: g
+                        null == h || h(e), C.onMouseLeave();
+                    }
                 },
-                x
+                g
             )
         )
     );

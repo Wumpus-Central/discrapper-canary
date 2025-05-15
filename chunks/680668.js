@@ -37,10 +37,11 @@ function y(e) {
         { analyticsLocations: z } = (0, c.ZP)(s.Z.INVITE_EMBED),
         [W, K] = i.useState(!1),
         Y = i.useCallback(() => K(!1), []),
-        X = i.useCallback(() => {
+        X = i.useRef(null),
+        q = i.useCallback(() => {
             K(!0), (0, o.CB)(V, 'show profile', z);
         }, [V, z]),
-        q = i.useCallback(() => {
+        Q = i.useCallback(() => {
             let e = 'noop';
             M ? (S(), (e = 'transition')) : (I(), (e = 'accept')),
                 (0, o.r$)(
@@ -57,7 +58,7 @@ function y(e) {
         if (null == T.guild) return (0, r.jsx)(_.Z, {});
         (N = h.Qs(T.guild)).premiumTier = null != (v = T.guild.premium_tier) ? v : b.Eu4.NONE;
     }
-    let Q = (0, g.e)({
+    let J = (0, g.e)({
         isVoiceChannel: F,
         isOwnInvite: w,
         isGuest: G,
@@ -74,7 +75,12 @@ function y(e) {
                     name: N.name,
                     shouldShow: W,
                     onRequestClose: Y,
-                    children: () => (0, r.jsx)(p.Z.GuildName, { guild: N })
+                    targetElementRef: X,
+                    children: () =>
+                        (0, r.jsx)(p.Z.GuildName, {
+                            guild: N,
+                            ref: X
+                        })
                 }),
                 (0, r.jsx)('span', {
                     className: E.infoBadge,
@@ -125,7 +131,7 @@ function y(e) {
             children: [
                 (0, r.jsx)(p.Z.GuildSplash, { guild: N }),
                 (0, r.jsx)(p.Z.Header, {
-                    text: Q,
+                    text: J,
                     extra: C
                 }),
                 (0, r.jsxs)(p.Z.Body, {
@@ -136,13 +142,13 @@ function y(e) {
                                 (0, r.jsx)(p.Z.Icon, { guild: N }),
                                 (0, r.jsx)(p.Z.Info, {
                                     title: j,
-                                    onClick: X,
+                                    onClick: q,
                                     children: O
                                 })
                             ]
                         }),
                         (0, r.jsx)(p.Z.Button, {
-                            onClick: q,
+                            onClick: Q,
                             submitting: D,
                             color: p.Z.Button.Colors.GREEN,
                             children: F ? (B ? x.intl.string(x.t['7vb2cX']) : x.intl.string(x.t.gpqgam)) : M ? x.intl.string(x.t.cEnaW1) : x.intl.string(x.t.XpeFYm)

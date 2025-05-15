@@ -1,9 +1,16 @@
-n.d(t, { a: () => a });
-var r = n(442837),
-    i = n(566620),
-    l = n(317381);
+n.d(t, { a: () => s });
+var r = n(73800),
+    i = n(442837),
+    l = n(566620),
+    a = n(317381);
 let o = (e) => null == e || new Date(e).getTime() < Date.now() - 43200000,
-    a = (e) => {
-        let { surface: t, skipFetchingShelf: n = !0 } = e;
-        return (0, r.e7)([l.ZP], () => (o(l.ZP.getState().lastCheckedForBadgeableActivities) && !n && (0, i.w1)({ guildId: null }), l.ZP.getState().surfacesToShowNewActivityIndicator.has(t)));
+    s = (e) => {
+        let { surface: t, skipFetchingShelf: n = !0 } = e,
+            s = (0, i.e7)([a.ZP], () => a.ZP.getState());
+        return (
+            (0, r.useEffect)(() => {
+                o(s.lastCheckedForBadgeableActivities) && !n && (0, l.w1)({ guildId: null });
+            }, [s.lastCheckedForBadgeableActivities, n]),
+            s.surfacesToShowNewActivityIndicator.has(t)
+        );
     };

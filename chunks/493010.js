@@ -1,9 +1,9 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => y });
 var r = n(255367),
     i = n(73800),
     l = n(704215),
-    o = n(481060),
-    a = n(475179),
+    a = n(481060),
+    o = n(475179),
     s = n(561472),
     c = n(287746),
     u = n(325708),
@@ -15,24 +15,24 @@ var r = n(255367),
     g = n(909820),
     b = n(981631),
     _ = n(921944),
-    x = n(388032),
-    y = n(591837);
-let C = function (e) {
-    let { channel: t, guild: n, maxWidth: C } = e;
+    C = n(388032),
+    x = n(591837);
+let y = function (e) {
+    let { channel: t, guild: n, maxWidth: y } = e;
     i.useEffect(() => {
         (0, p.EW)(l.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: _.L.AUTO });
     }, []);
     let v = i.useCallback(() => {
-            a.Z.updateChatOpen(t.id, !1), m.S.safeDispatch(b.CkL.FOCUS_CHAT_BUTTON);
+            o.Z.updateChatOpen(t.id, !1), m.S.safeDispatch(b.CkL.FOCUS_CHAT_BUTTON);
         }, [t.id]),
         j = (0, r.jsx)(h.ZP.Icon, {
-            icon: o.Dio,
-            tooltip: x.intl.string(x.t.cpT0Cg),
+            icon: a.Dio,
+            tooltip: C.intl.string(C.t.cpT0Cg),
             onClick: v
         });
     return (0, r.jsxs)(u.Z, {
         sidebarType: u.y.CallChatSidebar,
-        maxWidth: C,
+        maxWidth: y,
         floatingLayer: g.ZP,
         children: [
             (0, r.jsx)(s.Z, {
@@ -41,18 +41,18 @@ let C = function (e) {
             }),
             (0, r.jsxs)(h.ZP, {
                 toolbar: j,
-                'aria-label': x.intl.string(x.t.BIYAqa),
+                'aria-label': C.intl.string(C.t.BIYAqa),
                 children: [
                     (0, r.jsx)(h.ZP.Icon, {
-                        icon: o.kBi,
+                        icon: a.kBi,
                         disabled: !0,
-                        'aria-label': x.intl.string(x.t.Kx5kCA)
+                        'aria-label': C.intl.string(C.t.Kx5kCA)
                     }),
                     (0, r.jsx)(h.ZP.Title, { children: t.name })
                 ]
             }),
             (0, r.jsx)('div', {
-                className: y.chat,
+                className: x.chat,
                 children: (0, r.jsx)(
                     c.Z,
                     {

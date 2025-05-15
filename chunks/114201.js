@@ -1,25 +1,25 @@
-n.d(t, { Z: () => C });
-var r = n(255367);
-n(73800);
-var i = n(99815),
+n.d(t, { Z: () => P });
+var r = n(255367),
+    i = n(73800),
+    a = n(99815),
     o = n(442837),
-    a = n(481060),
-    s = n(239091),
-    l = n(314897),
-    c = n(553795),
-    u = n(430824),
-    d = n(496675),
-    f = n(626135),
-    _ = n(70956),
-    p = n(425128),
-    h = n(979192),
-    m = n(873128),
-    g = n(703733),
-    E = n(463031),
-    b = n(981631),
-    y = n(388032),
-    O = n(333329);
-function v(e, t, n) {
+    s = n(481060),
+    l = n(239091),
+    c = n(314897),
+    u = n(553795),
+    d = n(430824),
+    f = n(496675),
+    _ = n(626135),
+    p = n(70956),
+    h = n(425128),
+    m = n(979192),
+    g = n(873128),
+    E = n(703733),
+    b = n(463031),
+    y = n(981631),
+    O = n(388032),
+    v = n(333329);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +32,7 @@ function v(e, t, n) {
         e
     );
 }
-function I(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,12 +43,12 @@ function I(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                I(e, t, n[t]);
             });
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -60,152 +60,154 @@ function S(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function A(e) {
-    if (e > _.Z.Seconds.DAYS_30) {
-        let t = Math.round(e / _.Z.Seconds.DAYS_30);
-        return y.intl.formatToPlainString(y.t['HF7p4+'], { count: t });
+function N(e) {
+    if (e > p.Z.Seconds.DAYS_30) {
+        let t = Math.round(e / p.Z.Seconds.DAYS_30);
+        return O.intl.formatToPlainString(O.t['HF7p4+'], { count: t });
     }
-    if (e > 2 * _.Z.Seconds.DAY) {
-        let t = Math.round(e / _.Z.Seconds.DAY);
-        return y.intl.formatToPlainString(y.t.HkESOj, { count: t });
+    if (e > 2 * p.Z.Seconds.DAY) {
+        let t = Math.round(e / p.Z.Seconds.DAY);
+        return O.intl.formatToPlainString(O.t.HkESOj, { count: t });
     }
-    if (e > _.Z.Seconds.DAY) return y.intl.string(y.t.gvgh9P);
-    if (e > _.Z.Seconds.HOUR) {
-        let t = Math.round(e / _.Z.Seconds.HOUR);
-        return y.intl.formatToPlainString(y.t.mW55WV, { count: t });
+    if (e > p.Z.Seconds.DAY) return O.intl.string(O.t.gvgh9P);
+    if (e > p.Z.Seconds.HOUR) {
+        let t = Math.round(e / p.Z.Seconds.HOUR);
+        return O.intl.formatToPlainString(O.t.mW55WV, { count: t });
     }
     {
-        if (!(e > _.Z.Seconds.MINUTE)) return y.intl.string(y.t.tT0mdn);
-        let t = Math.round(e / _.Z.Seconds.MINUTE);
-        return y.intl.formatToPlainString(y.t['1mNjX1'], { count: t });
+        if (!(e > p.Z.Seconds.MINUTE)) return O.intl.string(O.t.tT0mdn);
+        let t = Math.round(e / p.Z.Seconds.MINUTE);
+        return O.intl.formatToPlainString(O.t['1mNjX1'], { count: t });
     }
 }
-function N(e, t) {
+function C(e, t) {
     if (null == e)
         return {
             disabled: !1,
             subtext: void 0
         };
-    let n = (Date.now() - e.getTime()) / _.Z.Millis.SECOND;
+    let n = (Date.now() - e.getTime()) / p.Z.Millis.SECOND;
     if (n < 0)
         return {
             disabled: !1,
             subtext: void 0
         };
-    let r = null != t ? e.getTime() > t.getTime() && n < _.Z.Seconds.HOUR : n < _.Z.Seconds.HOUR,
-        i = r ? y.intl.string(y.t['3gPhoa']) : A(n);
+    let r = null != t ? e.getTime() > t.getTime() && n < p.Z.Seconds.HOUR : n < p.Z.Seconds.HOUR,
+        i = r ? O.intl.string(O.t['3gPhoa']) : N(n);
     return {
         disabled: r,
         subtext: i
     };
 }
-function C(e) {
-    let { guildId: t, leaderboardId: _ } = e,
-        v = (0, o.e7)([l.default], () => l.default.getId()),
-        S = (0, o.e7)([c.Z], () => c.Z.getAccount(null, b.ABu.RIOT_GAMES)),
-        A = (0, o.e7)([c.Z], () => c.Z.getAccount(null, b.ABu.LEAGUE_OF_LEGENDS)),
-        C = (0, m.Z)({
+function P(e) {
+    let { guildId: t, leaderboardId: p } = e,
+        I = (0, o.e7)([c.default], () => c.default.getId()),
+        T = (0, o.e7)([u.Z], () => u.Z.getAccount(null, y.ABu.RIOT_GAMES)),
+        N = (0, o.e7)([u.Z], () => u.Z.getAccount(null, y.ABu.LEAGUE_OF_LEGENDS)),
+        P = (0, g.Z)({
             guildId: t,
-            leaderboardId: _
+            leaderboardId: p
         }),
-        { leaderboardsDisabled: P } = (0, h.O)(t, _),
-        R =
-            null != A && null != S
+        { leaderboardsDisabled: R } = (0, m.O)(t, p),
+        w =
+            null != N && null != T
                 ? () => {
-                      f.default.track(b.rMx.LEADERBOARD_USER_DATA_REFRESH_REQUESTED, {
-                          leaderboard_id: _,
+                      _.default.track(y.rMx.LEADERBOARD_USER_DATA_REFRESH_REQUESTED, {
+                          leaderboard_id: p,
                           guild_id: t
                       }),
-                          (0, p._7)({
-                              riotConnectionId: S.id,
-                              lolConnectionId: A.id
+                          (0, h._7)({
+                              riotConnectionId: T.id,
+                              lolConnectionId: N.id
                           });
                   }
-                : b.dG4,
-        w = null == S || P ? y.intl.string(y.t['0yRXHx']) : y.intl.string(y.t['KWpU6+']),
-        { lastUpdateRequested: D, statisticLastUpdatedDate: L } = (0, g.Z)({
-            userId: v,
+                : y.dG4,
+        D = null == T || R ? O.intl.string(O.t['0yRXHx']) : O.intl.string(O.t['KWpU6+']),
+        { lastUpdateRequested: L, statisticLastUpdatedDate: x } = (0, E.Z)({
+            userId: I,
             guildId: t,
-            leaderboardId: _,
-            statisticId: i.E.LOL_TOTAL_KILLS
+            leaderboardId: p,
+            statisticId: a.E.LOL_TOTAL_KILLS
         }),
-        { disabled: x, subtext: k } = N(D, L),
-        M = (0, o.e7)(
-            [d.Z, u.Z],
+        { disabled: k, subtext: M } = C(L, x),
+        j = (0, o.e7)(
+            [f.Z, d.Z],
             () => {
-                let e = u.Z.getGuild(t);
-                return d.Z.can(b.Plq.ADMINISTRATOR, e);
+                let e = d.Z.getGuild(t);
+                return f.Z.can(y.Plq.ADMINISTRATOR, e);
             },
             [t]
-        );
-    return null == C
+        ),
+        U = i.useRef(null);
+    return null == P
         ? null
-        : (0, r.jsx)(a.yRy, {
+        : (0, r.jsx)(s.yRy, {
+              targetElementRef: U,
               align: 'top',
               position: 'right',
               disablePointerEvents: !1,
               renderPopout: (e) => {
                   let { closePopout: i } = e;
-                  return (0, r.jsx)(a.v2r, {
+                  return (0, r.jsx)(s.v2r, {
                       navId: 'leaderboard-popout-context-menu',
                       onClose: () => {
-                          (0, s.Zy)(), i();
+                          (0, l.Zy)(), i();
                       },
-                      'aria-label': y.intl.string(y.t.BjCuf3),
+                      'aria-label': O.intl.string(O.t.BjCuf3),
                       onSelect: void 0,
-                      children: (0, r.jsxs)(a.kSQ, {
+                      children: (0, r.jsxs)(s.kSQ, {
                           children: [
-                              C.leaderboard_id === E.z &&
-                                  null != S &&
-                                  (0, r.jsx)(a.sNh, {
+                              P.leaderboard_id === b.z &&
+                                  null != T &&
+                                  (0, r.jsx)(s.sNh, {
                                       id: 'refresh-my-data',
-                                      label: y.intl.string(y.t.iopWUV),
-                                      action: R,
-                                      disabled: x,
-                                      subtext: k
+                                      label: O.intl.string(O.t.iopWUV),
+                                      action: w,
+                                      disabled: k,
+                                      subtext: M
                                   }),
-                              (0, r.jsx)(a.sNh, {
+                              (0, r.jsx)(s.sNh, {
                                   id: 'leaderboard-modal',
-                                  label: w,
+                                  label: D,
                                   action: () => {
-                                      (0, a.ZDy)(async () => {
+                                      (0, s.ZDy)(async () => {
                                           let { default: e } = await n.e('73217').then(n.bind(n, 139964));
                                           return (n) =>
                                               (0, r.jsx)(
                                                   e,
-                                                  T(I({}, n), {
+                                                  A(S({}, n), {
                                                       guildId: t,
-                                                      leaderboard: C
+                                                      leaderboard: P
                                                   })
                                               );
                                       }),
                                           null == i || i();
                                   }
                               }),
-                              M
-                                  ? (0, r.jsx)(a.sNh, {
+                              j
+                                  ? (0, r.jsx)(s.sNh, {
                                         id: 'leaderboard-settings-modal',
-                                        label: y.intl.string(y.t['QV4/6u']),
+                                        label: O.intl.string(O.t['QV4/6u']),
                                         action: () => {
-                                            (0, a.ZDy)(async () => {
+                                            (0, s.ZDy)(async () => {
                                                 let { default: e } = await n.e('25526').then(n.bind(n, 262918));
                                                 return (n) =>
                                                     (0, r.jsx)(
                                                         e,
-                                                        T(I({}, n), {
+                                                        A(S({}, n), {
                                                             guildId: t,
-                                                            leaderboardId: _
+                                                            leaderboardId: p
                                                         })
                                                     );
                                             }),
@@ -218,13 +220,15 @@ function C(e) {
                   });
               },
               children: (e) =>
-                  (0, r.jsx)(a.ua7, {
-                      text: y.intl.string(y.t.UKOtz8),
+                  (0, r.jsx)(s.ua7, {
+                      text: O.intl.string(O.t.UKOtz8),
+                      targetElementRef: U,
                       children: (t) =>
                           (0, r.jsx)(
-                              a.P3F,
-                              T(I(T(I({}, t), { className: O.menuIcon }), e), {
-                                  children: (0, r.jsx)(a.xhG, {
+                              s.P3F,
+                              A(S(A(S({}, t), { className: v.menuIcon }), e), {
+                                  innerRef: U,
+                                  children: (0, r.jsx)(s.xhG, {
                                       color: 'currentColor',
                                       size: 'custom',
                                       width: 16,

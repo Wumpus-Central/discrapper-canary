@@ -2,9 +2,9 @@ n.d(t, { Z: () => Z });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(913527),
-    s = n.n(a),
+    a = n.n(l),
+    o = n(913527),
+    s = n.n(o),
     c = n(399606),
     u = n(481060),
     d = n(480137),
@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(909746),
     b = n(501801),
     _ = n(884902),
-    x = n(271383),
-    y = n(430824),
-    C = n(5192),
+    C = n(271383),
+    x = n(430824),
+    y = n(5192),
     v = n(776767),
     j = n(981631),
     O = n(388032),
@@ -26,14 +26,14 @@ var r = n(255367),
     S = n(12740);
 function P(e) {
     var t;
-    let { log: n, member: l, guild: a } = e,
+    let { log: n, member: l, guild: o } = e,
         { analyticsLocations: d } = (0, p.ZP)(),
         m = g.nm(n),
-        y = g.QM(n),
+        x = g.QM(n),
         v = null == (t = g.V$(j.zUn.REASON, n)) ? void 0 : t.newValue,
         S = g.J5(n),
         P = (0, h.LJ)(n.id),
-        Z = (0, c.e7)([x.ZP], () => (null != n.userId ? x.ZP.getMember(l.guildId, n.userId) : null), [l.guildId, n.userId]),
+        Z = (0, c.e7)([C.ZP], () => (null != n.userId ? C.ZP.getMember(l.guildId, n.userId) : null), [l.guildId, n.userId]),
         N = (0, _.X)(null == Z ? void 0 : Z.guildId, null == Z ? void 0 : Z.colorStrings),
         T = i.useCallback(
             (e) => (t) => {
@@ -49,20 +49,20 @@ function P(e) {
                           text: O.intl.string(O.t.mvsi9v),
                           children: (e) => {
                               var t;
-                              let { onMouseEnter: i, onMouseLeave: o } = e;
+                              let { onMouseEnter: i, onMouseLeave: a } = e;
                               return (0, r.jsx)(u.P3F, {
                                   tag: 'span',
                                   className: E.username,
                                   onClick: T(Z),
                                   onMouseEnter: i,
-                                  onMouseLeave: o,
+                                  onMouseLeave: a,
                                   children: (0, r.jsxs)(u.Text, {
                                       variant: 'text-sm/medium',
                                       tag: 'span',
                                       children: [
                                           '@',
                                           (0, r.jsx)(u.PUh, {
-                                              name: C.ZP.getName(l.guildId, null, n.user),
+                                              name: y.ZP.getName(l.guildId, null, n.user),
                                               color: null != (t = null == Z ? void 0 : Z.colorString) ? t : void 0,
                                               roleColors: N
                                           })
@@ -74,7 +74,7 @@ function P(e) {
             [T, n.user, l.guildId, Z, N]
         )();
     return (0, r.jsxs)('div', {
-        className: o()(I.modInfoItem, E.auditLogItem),
+        className: a()(I.modInfoItem, E.auditLogItem),
         children: [
             (0, r.jsxs)('div', {
                 className: E.auditLogItemTitleContainer,
@@ -88,11 +88,11 @@ function P(e) {
                                     color: 'header-primary',
                                     children: m
                                 }),
-                            null != y &&
+                            null != x &&
                                 (0, r.jsxs)(u.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
-                                    children: ['(', 'string' == typeof y ? y : s()(y).fromNow(), ')']
+                                    children: ['(', 'string' == typeof x ? x : s()(x).fromNow(), ')']
                                 })
                         ]
                     }),
@@ -151,7 +151,7 @@ function P(e) {
                             tag: 'span',
                             children: (0, r.jsx)(b.tP, {
                                 log: n,
-                                guild: a,
+                                guild: o,
                                 onContentClick: () => {},
                                 className: E.auditLogExpandedChangeDetails
                             })
@@ -163,7 +163,7 @@ function P(e) {
 }
 function Z(e) {
     let { member: t } = e,
-        n = (0, c.e7)([y.Z], () => y.Z.getGuild(t.guildId), [t.guildId]),
+        n = (0, c.e7)([x.Z], () => x.Z.getGuild(t.guildId), [t.guildId]),
         l = (0, c.e7)(
             [m.Z],
             () => {

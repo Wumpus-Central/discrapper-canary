@@ -17,7 +17,7 @@ var r = n(268146),
     b = n(37113),
     v = n(761274);
 async function m(e, t) {
-    var n, m, x, N, C, E, j, I, P, S;
+    var n, m, x, N, E, C, j, I, P, S;
     let T = f.default.getCurrentUser(),
         Z = h.Z.getVoiceChannelId(),
         _ = u.Z.getChannel(Z),
@@ -30,8 +30,8 @@ async function m(e, t) {
     let { preset: D, resolution: k, fps: M, soundshareEnabled: U } = s.Z.getState(),
         L = null != (x = null == t ? void 0 : t.preset) ? x : D,
         [B, G] = null != (N = (0, y.Z)(L, T, A)) ? N : [],
-        V = null != (C = null != B ? B : null == t ? void 0 : t.resolution) ? C : k,
-        W = null != (E = null != G ? G : null == t ? void 0 : t.fps) ? E : M,
+        V = null != (E = null != B ? B : null == t ? void 0 : t.resolution) ? E : k,
+        W = null != (C = null != G ? G : null == t ? void 0 : t.fps) ? C : M,
         F = null != (j = null == t ? void 0 : t.previewDisabled) ? j : a.I0.getSetting(),
         K = null != (I = null == t ? void 0 : t.soundshareEnabled) ? I : U;
     return (

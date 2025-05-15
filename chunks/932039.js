@@ -129,13 +129,13 @@ function O(e) {
         Z = o.useCallback(() => {
             S(!0), y();
         }, [y]),
-        L = o.useCallback(
+        R = o.useCallback(
             (e) => {
                 _(e);
             },
             [_]
         ),
-        R = o.useCallback(
+        L = o.useCallback(
             (e) => {
                 H(e);
             },
@@ -190,7 +190,7 @@ function O(e) {
                                           h(f({}, e), {
                                               calendarClassName: p.calendar,
                                               value: u && null != r ? c()(r) : void 0,
-                                              onSelect: L,
+                                              onSelect: R,
                                               maxDate: c()().local(),
                                               minDate: g
                                           })
@@ -210,7 +210,7 @@ function O(e) {
                                           h(f({}, e), {
                                               calendarClassName: p.calendar,
                                               value: u && null != i ? c()(i) : void 0,
-                                              onSelect: R,
+                                              onSelect: L,
                                               maxDate: c()().local(),
                                               minDate: u && null != r ? c()(r) : g
                                           })

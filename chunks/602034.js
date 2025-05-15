@@ -1,12 +1,12 @@
 n.d(t, {
     Z: () => _,
-    r: () => x
+    r: () => C
 });
 var r = n(73800),
     i = n(760907),
     l = n(570140),
-    o = n(668781),
-    a = n(966390),
+    a = n(668781),
+    o = n(966390),
     s = n(680287),
     c = n(577347),
     u = n(470623),
@@ -18,9 +18,9 @@ var r = n(73800),
     g = n(981631),
     b = n(388032);
 function _(e) {
-    let { parentChannel: t, parentMessageId: n, threadSettings: i, privateThreadMode: l, location: o, onThreadCreated: s, useDefaultThreadName: c } = e,
+    let { parentChannel: t, parentMessageId: n, threadSettings: i, privateThreadMode: l, location: a, onThreadCreated: s, useDefaultThreadName: c } = e,
         u = r.useCallback((e, t, n, r) => {
-            a.Z.uploadFiles({
+            o.Z.uploadFiles({
                 channelId: e.id,
                 uploads: t,
                 draftType: h.d.FirstThreadMessage,
@@ -33,13 +33,13 @@ function _(e) {
         parentMessageId: n,
         threadSettings: i,
         privateThreadMode: l,
-        location: o,
+        location: a,
         onThreadCreated: s,
         useDefaultThreadName: c,
         uploadHandler: u
     });
 }
-function x(e) {
+function C(e) {
     let { parentChannel: t } = e,
         { name: n, appliedTags: r } = (0, u.xH)((e) => {
             let { name: t, appliedTags: n } = e;
@@ -53,7 +53,7 @@ function x(e) {
         name: n,
         appliedTags: r,
         upload: function (e, n, r) {
-            return new Promise((i, a) => {
+            return new Promise((i, o) => {
                 let u = new s.Z(e);
                 u.on('error', (e, n, r) => {
                     if (n === g.evJ.EXPLICIT_CONTENT) {
@@ -70,17 +70,17 @@ function x(e) {
                             (0, c.Z)(t.id, e));
                     } else if (n === g.evJ.ENTITY_TOO_LARGE) {
                         let e = (0, f.dg)(t.getGuildId());
-                        o.Z.show({
+                        a.Z.show({
                             title: b.intl.string(b.t['/tGlcn']),
                             body: b.intl.formatToPlainString(b.t.fxEKdX, { maxSize: (0, f.Ng)(e) })
                         });
                     } else
                         n === g.evJ.TOO_MANY_ATTACHMENTS &&
-                            o.Z.show({
+                            a.Z.show({
                                 title: b.intl.string(b.t.wOr6hI),
                                 body: b.intl.formatToPlainString(b.t['qqyp/f'], { limit: g.dN1 })
                             });
-                    a({ body: r });
+                    o({ body: r });
                 }),
                     u.on('complete', (e, t) => {
                         i({ body: t });

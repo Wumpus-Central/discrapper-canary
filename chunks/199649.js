@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(442837),
     l = n(481060),
-    o = n(194359),
-    a = n(631937),
+    a = n(194359),
+    o = n(631937),
     s = n(702321),
     c = n(377171),
     u = n(699516),
@@ -16,15 +16,15 @@ var i = n(442837),
     g = n(388032);
 function b(e) {
     var t, b;
-    let { channel: _, children: x } = e,
-        y = (0, i.e7)([u.Z], () => u.Z.isBlocked(_.getRecipientId()));
-    (0, a.Z)(_.id);
-    let C = (0, s.Z)(_.id),
+    let { channel: _, children: C } = e,
+        x = (0, i.e7)([u.Z], () => u.Z.isBlocked(_.getRecipientId()));
+    (0, o.Z)(_.id);
+    let y = (0, s.Z)(_.id),
         v = _.isSystemDM(),
-        j = y && !v && !_.isMultiUserDM(),
+        j = x && !v && !_.isMultiUserDM(),
         O = {};
     if (v) {
-        let e = C
+        let e = y
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
                       g.intl.string(g.t['+KSnWV']),
@@ -39,7 +39,7 @@ function b(e) {
             (O.subtitle = g.intl.string(g.t['n/Vzk5'])),
             (O.buttonText = e),
             (O.onButtonClick = () => {
-                if (C) {
+                if (y) {
                     open(m.D2),
                         d.default.track(f.rMx.CHANGE_LOG_CTA_CLICKED, {
                             cta_type: 'chat_blocker',
@@ -55,7 +55,7 @@ function b(e) {
             ((O.message = g.intl.string(g.t['9T6N5+'])),
             (O.buttonText = g.intl.string(g.t.XyHpKC)),
             (O.onButtonClick = () => {
-                o.Z.unblockUser(_.getRecipientId());
+                a.Z.unblockUser(_.getRecipientId());
             }));
     return (0, r.jsx)(
         h.Z,
@@ -84,7 +84,7 @@ function b(e) {
             }
             return e;
         })({}, O)),
-        (b = b = { children: x }),
+        (b = b = { children: C }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(b))
             : (function (e, t) {

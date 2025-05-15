@@ -1,8 +1,8 @@
 n(535213)();
 var r = n(208653),
     i = n(149195),
-    o = n(247498),
-    a = n(105532),
+    a = n(247498),
+    o = n(105532),
     s = n(745872),
     l = n(638934),
     c = l(s('%Promise.all%')),
@@ -12,7 +12,7 @@ e.exports = function (e) {
     if ('Object' !== i(t)) throw TypeError('`this` value must be an object');
     return c(
         t,
-        a(o(e), function (e) {
+        o(a(e), function (e) {
             var n = function (e) {
                     return {
                         status: 'fulfilled',
@@ -25,9 +25,9 @@ e.exports = function (e) {
                         reason: e
                     };
                 },
-                o = r(t, e);
+                a = r(t, e);
             try {
-                return o.then(n, i);
+                return a.then(n, i);
             } catch (e) {
                 return u(t, e);
             }

@@ -1,21 +1,21 @@
 n.d(t, {
     C: () => s,
-    H: () => o
+    H: () => a
 }),
     n(642613);
 var r = n(73800),
     i = n(392711);
-let o = (e) =>
+let a = (e) =>
         e.sort((e, t) => {
             var n, r;
             return (null != (n = e.zIndex) ? n : 0) - (null != (r = t.zIndex) ? r : 0);
         }),
-    a = (e, t) => Math.floor(Math.random() * (t - e + 1) + e),
+    o = (e, t) => Math.floor(Math.random() * (t - e + 1) + e),
     s = (e) =>
         r.useMemo(() => {
             if (null == e) return e;
             let t = (0, i.cloneDeep)(e),
-                n = a(
+                n = o(
                     0,
                     t.effects.reduce((e, t) => {
                         var n;

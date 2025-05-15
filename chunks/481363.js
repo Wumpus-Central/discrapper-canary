@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(630388),
     l = n(901461),
-    o = n(773176),
-    a = n(981631),
+    a = n(773176),
+    o = n(981631),
     s = n(30804);
 function c(e) {
     let {
@@ -13,17 +13,17 @@ function c(e) {
             isFocused: d,
             buttonProps: { message: p, channel: h, groupId: f, compact: m = !1 }
         } = e,
-        g = p.state === a.yb.SENDING,
+        g = p.state === o.yb.SENDING,
         b = p.id === f,
-        _ = (0, i.yE)(p.flags, a.iLy.EPHEMERAL),
-        x = p.state === a.yb.SEND_FAILED;
-    return g || (_ && !x)
+        _ = (0, i.yE)(p.flags, o.iLy.EPHEMERAL),
+        C = p.state === o.yb.SEND_FAILED;
+    return g || (_ && !C)
         ? null
-        : (0, r.jsx)(o.Z, {
+        : (0, r.jsx)(a.Z, {
               className: s.buttons,
               innerClassName: s.buttonsInner,
               isHeader: !m && b && !(0, l.Z)(p),
-              isReply: !m && p.type === a.uaV.REPLY && null != p.messageReference,
+              isReply: !m && p.type === o.uaV.REPLY && null != p.messageReference,
               channel: h,
               message: p,
               setPopout: t,

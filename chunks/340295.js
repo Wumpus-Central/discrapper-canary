@@ -2,8 +2,8 @@ n.d(t, { Z: () => _ });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    o = n(481060),
     s = n(287734),
     c = n(540059),
     u = n(305325),
@@ -17,17 +17,17 @@ var r = n(255367),
 let _ = function (e) {
     let { participants: t, channel: n, hasConnectPermission: l } = e,
         _ = t.filter(m.Io),
-        x = (0, d.J)(n.guild_id),
-        y = i.useCallback(() => {
-            x ? (0, u.hk)(n.guild_id, () => s.default.selectVoiceChannel(n.id)) : s.default.selectVoiceChannel(n.id);
-        }, [n.id, n.guild_id, x]),
-        C = (0, c.Q3)('ChannelCallEmpty'),
-        v = (0, a._q$)('ChannelCallEmpty'),
+        C = (0, d.J)(n.guild_id),
+        x = i.useCallback(() => {
+            C ? (0, u.hk)(n.guild_id, () => s.default.selectVoiceChannel(n.id)) : s.default.selectVoiceChannel(n.id);
+        }, [n.id, n.guild_id, C]),
+        y = (0, c.Q3)('ChannelCallEmpty'),
+        v = (0, o._q$)('ChannelCallEmpty'),
         j = 4 === _.length ? 2 : 3;
     return (0, r.jsxs)('div', {
-        className: o()(b.container, { [b.withRive]: v }),
+        className: a()(b.container, { [b.withRive]: v }),
         children: [
-            C && (0, r.jsx)(f.Z, {}),
+            y && (0, r.jsx)(f.Z, {}),
             (0, r.jsx)('div', {
                 className: b.tiles,
                 style: { maxWidth: 168 * j },
@@ -47,14 +47,14 @@ let _ = function (e) {
                     )
                 )
             }),
-            (0, r.jsx)(a.X6q, {
+            (0, r.jsx)(o.X6q, {
                 className: b.channelName,
                 variant: 'heading-xxl/semibold',
                 children: n.name
             }),
             (0, r.jsx)('div', {
                 className: b.participantsRow,
-                children: (0, r.jsx)(a.Text, {
+                children: (0, r.jsx)(o.Text, {
                     color: 'header-secondary',
                     variant: 'text-sm/normal',
                     children:
@@ -76,12 +76,12 @@ let _ = function (e) {
                                   : void 0
                 })
             }),
-            (0, r.jsx)(a.zxk, {
+            (0, r.jsx)(o.zxk, {
                 disabled: !l,
-                className: o()(b.joinButton, { [b.roundButton]: !C }),
-                color: l ? (C ? a.zxk.Colors.WHITE : a.zxk.Colors.GREEN) : a.zxk.Colors.PRIMARY,
-                onClick: y,
-                size: a.zxk.Sizes.MEDIUM,
+                className: a()(b.joinButton, { [b.roundButton]: !y }),
+                color: l ? (y ? o.zxk.Colors.WHITE : o.zxk.Colors.GREEN) : o.zxk.Colors.PRIMARY,
+                onClick: x,
+                size: o.zxk.Sizes.MEDIUM,
                 children: l ? g.intl.string(g.t['96ANUF']) : g.intl.string(g.t.TVBCKS)
             })
         ]

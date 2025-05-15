@@ -2,8 +2,8 @@ n.d(t, { Z: () => S });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(692547),
     c = n(481060),
     u = n(884338),
@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(357156),
     b = n(546247),
     _ = n(496675),
-    x = n(146085),
-    y = n(979339),
-    C = n(643632),
+    C = n(146085),
+    x = n(979339),
+    y = n(643632),
     v = n(939863),
     j = n(388032),
     O = n(941188);
@@ -26,7 +26,7 @@ function E(e) {
         i = (0, d.Q3)('StartStageChannelCallView'),
         l = i ? c.S6n : c.ewx;
     return (0, r.jsx)(p.Z, {
-        iconContainerClassName: o()({ [O.continueIconContainer]: !i }),
+        iconContainerClassName: a()({ [O.continueIconContainer]: !i }),
         icon: (0, r.jsx)(l, {
             size: 'custom',
             color: 'currentColor',
@@ -43,7 +43,7 @@ function E(e) {
 }
 function I(e) {
     let { channel: t } = e,
-        { participants: n, usersInSummary: i } = (0, y.Z)(t.id);
+        { participants: n, usersInSummary: i } = (0, x.Z)(t.id);
     return (0, r.jsxs)('div', {
         className: O.audienceSummary,
         children: [
@@ -77,16 +77,16 @@ function I(e) {
 }
 function S(e) {
     let { channel: t, onContinueClick: n } = e,
-        l = (0, a.e7)([_.Z], () => _.Z.can(x.yP, t), [t]),
+        l = (0, o.e7)([_.Z], () => _.Z.can(C.yP, t), [t]),
         s = (0, d.Q3)('StartStageChannelCallView'),
         u = t.guild_id,
         { canCreateGuildEvent: p } = (0, g.XJ)(t),
-        S = (0, C.Z)(t.id),
-        { usersInSummary: P } = (0, y.Z)(t.id),
+        S = (0, y.Z)(t.id),
+        { usersInSummary: P } = (0, x.Z)(t.id),
         Z = (0, c._q$)('StartStageChannelCallView'),
         N = i.useRef(null);
     return (0, r.jsxs)('div', {
-        className: o()(O.container, { [O.withRive]: Z }),
+        className: a()(O.container, { [O.withRive]: Z }),
         ref: N,
         children: [
             s && (0, r.jsx)(b.Z, { eventTargetRef: N }),
@@ -139,7 +139,7 @@ function S(e) {
                     (l || P.length > 0) && !s && (0, r.jsx)('hr', { className: O.separator }),
                     l
                         ? (0, r.jsx)(E, {
-                              className: o()({ [O.eventPrompt]: s }),
+                              className: a()({ [O.eventPrompt]: s }),
                               onClick: n
                           })
                         : null,

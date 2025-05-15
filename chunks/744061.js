@@ -2,8 +2,8 @@ n.d(t, { Z: () => m }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(692547),
-    o = n(780384),
-    a = n(481060),
+    a = n(780384),
+    o = n(481060),
     s = n(367907),
     c = n(210887),
     u = n(626135),
@@ -12,7 +12,7 @@ var r = n(255367),
     h = n(41281),
     f = n(73433);
 function m(e) {
-    let { onClose: t, onConfirm: m, onCancel: g, channel: b, analyticsType: _, popoutText: x, animation: y } = e;
+    let { onClose: t, onConfirm: m, onCancel: g, channel: b, analyticsType: _, popoutText: C, animation: x } = e;
     i.useEffect(() => {
         u.default.track(
             d.rMx.OPEN_POPOUT,
@@ -43,7 +43,7 @@ function m(e) {
             })({ type: _ }, (0, s.v_)(b))
         );
     }, [_, b]);
-    let C = i.useCallback(() => {
+    let y = i.useCallback(() => {
             null == m || m(), t();
         }, [m, t]),
         v = i.useCallback(() => {
@@ -56,9 +56,9 @@ function m(e) {
                 t = c.Z.theme,
                 r = !1;
             return (
-                null != y &&
+                null != x &&
                     (async () => {
-                        let [{ default: i }, l] = await Promise.all([Promise.resolve().then(n.t.bind(n, 500923, 23)), (0, o.wj)(t) ? y.dark() : y.light()]);
+                        let [{ default: i }, l] = await Promise.all([Promise.resolve().then(n.t.bind(n, 500923, 23)), (0, a.wj)(t) ? x.dark() : x.light()]);
                         r ||
                             null == j.current ||
                             (e = i.loadAnimation({
@@ -73,17 +73,17 @@ function m(e) {
                     (r = !0), null != e && (e.destroy(), (e = void 0));
                 }
             );
-        }, [y]),
-        (0, r.jsx)(a.VqE, {
+        }, [x]),
+        (0, r.jsx)(o.VqE, {
             'aria-labelledby': 'content-warning-popout-label',
             children: (0, r.jsxs)('form', {
                 className: h.contentWarningPopout,
-                onSubmit: C,
+                onSubmit: y,
                 children: [
                     (0, r.jsxs)('div', {
                         className: h.body,
                         children: [
-                            null != y &&
+                            null != x &&
                                 (0, r.jsx)('div', {
                                     className: h.animation,
                                     ref: j
@@ -95,11 +95,11 @@ function m(e) {
                                         className: h.header,
                                         children: p.intl.string(p.t.mY3Y39)
                                     }),
-                                    (0, r.jsx)(a.Text, {
+                                    (0, r.jsx)(o.Text, {
                                         id: 'content-warning-popout-label',
                                         className: f.markup,
                                         variant: 'text-sm/normal',
-                                        children: x.body
+                                        children: C.body
                                     }),
                                     (0, r.jsxs)('div', {
                                         className: h.buttonWrapper,
@@ -107,13 +107,13 @@ function m(e) {
                                             (0, r.jsxs)('div', {
                                                 className: h.buttonContainer,
                                                 children: [
-                                                    (0, r.jsx)(a.zxk, {
+                                                    (0, r.jsx)(o.zxk, {
                                                         className: h.button,
-                                                        color: a.zxk.Colors.PRIMARY,
+                                                        color: o.zxk.Colors.PRIMARY,
                                                         onClick: v,
                                                         children: p.intl.string(p.t.fsBWmZ)
                                                     }),
-                                                    (0, r.jsx)(a.Text, {
+                                                    (0, r.jsx)(o.Text, {
                                                         variant: 'text-xs/normal',
                                                         className: h.buttonHint,
                                                         children: p.intl.format(p.t['0LzVPT'], {})
@@ -123,14 +123,14 @@ function m(e) {
                                             (0, r.jsxs)('div', {
                                                 className: h.buttonContainer,
                                                 children: [
-                                                    (0, r.jsx)(a.zxk, {
+                                                    (0, r.jsx)(o.zxk, {
                                                         className: h.button,
-                                                        onClick: C,
+                                                        onClick: y,
                                                         type: 'submit',
                                                         autoFocus: !0,
                                                         children: p.intl.string(p.t.KJnHq6)
                                                     }),
-                                                    (0, r.jsx)(a.Text, {
+                                                    (0, r.jsx)(o.Text, {
                                                         variant: 'text-xs/normal',
                                                         className: h.buttonHint,
                                                         children: p.intl.format(p.t.khjqdH, {})
@@ -143,18 +143,18 @@ function m(e) {
                             })
                         ]
                     }),
-                    null != x.footer && '' !== x.footer
+                    null != C.footer && '' !== C.footer
                         ? (0, r.jsxs)('div', {
                               className: h.footer,
                               children: [
-                                  (0, r.jsx)(a.d3s, {
+                                  (0, r.jsx)(o.d3s, {
                                       size: 'xs',
                                       color: l.Z.unsafe_rawColors.PRIMARY_400.css,
                                       className: h.icon
                                   }),
-                                  (0, r.jsx)(a.Text, {
+                                  (0, r.jsx)(o.Text, {
                                       variant: 'text-sm/normal',
-                                      children: x.footer
+                                      children: C.footer
                                   })
                               ]
                           })

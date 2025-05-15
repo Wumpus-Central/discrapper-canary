@@ -22,8 +22,8 @@ var l = n(442837),
     v = n(258609),
     y = n(111672),
     I = n(441167),
-    x = n(700994),
-    w = n(76021),
+    w = n(700994),
+    x = n(76021),
     C = n(199902),
     P = n(314897),
     E = n(592125),
@@ -41,7 +41,7 @@ function _(e) {
     });
 }
 function D(e) {
-    let { stream: t, analyticsContext: n, appContext: C, exitFullscreen: D, onSelect: R, onInteraction: F, simplified: G = !1 } = e,
+    let { stream: t, analyticsContext: n, appContext: C, exitFullscreen: D, onSelect: R, onInteraction: F, minimal: G = !1 } = e,
         J = (0, l.cj)([M.default], () => {
             var e;
             return (null == t ? void 0 : t.ownerId) === (null == (e = M.default.getCurrentUser()) ? void 0 : e.id);
@@ -66,7 +66,7 @@ function D(e) {
         L = _(t),
         Y = (function (e) {
             let t = _(e),
-                n = (0, x.Z)(e.ownerId, T.Yn.STREAM);
+                n = (0, w.Z)(e.ownerId, T.Yn.STREAM);
             return t ? n : null;
         })(t),
         z = (function (e, t) {
@@ -196,12 +196,12 @@ function D(e) {
             userId: t.ownerId,
             channelId: t.channelId,
             guildId: t.guildId,
-            simplified: G
+            minimal: G
         }),
         et = (0, m.b)({
             stream: t,
-            handleGoLive: () => (0, w.Z)(t.guildId, t.channelId, 'StreamContextMenu'),
-            simplified: G,
+            handleGoLive: () => (0, x.Z)(t.guildId, t.channelId, 'StreamContextMenu'),
+            minimal: G,
             appContext: C
         }),
         { analyticsLocations: en } = (0, f.ZP)(d.Z.STREAM_CONTEXT_MENU);
@@ -243,7 +243,7 @@ function D(e) {
                   navId: 'stream-context',
                   onClose: a.Zy,
                   'aria-label': U.intl.string(U.t.Gl3Q39),
-                  variant: G ? 'fixed' : 'flexible',
+                  variant: 'flexible',
                   onSelect: R,
                   onInteraction: F,
                   children: [

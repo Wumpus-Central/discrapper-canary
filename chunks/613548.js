@@ -1,10 +1,10 @@
-n.d(t, { Z: () => Q }), n(539854);
+n.d(t, { Z: () => D }), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(392711),
-    s = n.n(a),
+    a = n.n(l),
+    o = n(392711),
+    s = n.n(o),
     c = n(442837),
     u = n(481060),
     d = n(475179),
@@ -14,37 +14,24 @@ var r = n(255367),
     m = n(320007),
     g = n(236091),
     b = n(540059),
-    _ = n(569545),
-    x = n(517525),
-    y = n(665149),
-    C = n(141321),
-    v = n(2818),
-    j = n(954551),
-    O = n(221241),
-    E = n(44136),
-    I = n(651183),
-    S = n(853476),
-    P = n(618158),
-    Z = n(390322),
-    N = n(616286),
-    T = n(961048),
-    A = n(179424),
-    w = n(786915),
-    R = n(975146),
-    k = n(991617),
-    M = n(597998),
-    L = n(606304),
-    D = n(358221),
-    U = n(887012),
-    B = n(444253),
-    G = n(355827),
-    F = n(185935),
-    H = n(795318),
-    V = n(354459),
-    z = n(981631),
-    W = n(388032),
-    Y = n(232989);
-function q(e) {
+    _ = n(517525),
+    C = n(2818),
+    x = n(954551),
+    y = n(44136),
+    v = n(651183),
+    j = n(853476),
+    O = n(390322),
+    E = n(616286),
+    I = n(975146),
+    S = n(597998),
+    P = n(606304),
+    Z = n(358221),
+    N = n(355827),
+    T = n(185935),
+    A = n(354459),
+    w = n(388032),
+    R = n(232989);
+function M(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -69,7 +56,7 @@ function q(e) {
     }
     return e;
 }
-function K(e, t) {
+function k(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -87,14 +74,14 @@ function K(e, t) {
         e
     );
 }
-function X(e) {
+function L(e) {
     let { channelId: t, guildId: n } = e,
-        i = (0, c.Wu)([L.Z, D.Z], () => {
+        i = (0, c.Wu)([P.Z, Z.Z], () => {
             let e = Date.now();
-            return s()(L.Z.getSpeakers())
-                .map((e) => D.Z.getParticipant(t, e))
-                .filter((e) => null != e && e.type === V.fO.USER && e.speaking && !(0, E.ZP)(e))
-                .sortBy((t) => -L.Z.getSpeakingDuration(t.user.id, e))
+            return s()(P.Z.getSpeakers())
+                .map((e) => Z.Z.getParticipant(t, e))
+                .filter((e) => null != e && e.type === A.fO.USER && e.speaking && !(0, y.ZP)(e))
+                .sortBy((t) => -P.Z.getSpeakingDuration(t.user.id, e))
                 .slice(0, 3)
                 .value();
         });
@@ -107,12 +94,12 @@ function X(e) {
                       {
                           position: 'bottom',
                           color: u.ua7.Colors.GREY,
-                          text: W.intl.formatToPlainString(W.t.JjdizM, { username: e.user.username }),
+                          text: w.intl.formatToPlainString(w.t.JjdizM, { username: e.user.username }),
                           children: (l) =>
                               (0, r.jsx)(
-                                  M.ZP,
-                                  K(q({}, l), {
-                                      className: o()(Y.speaker, { [Y.last]: t === i.length - 1 }),
+                                  S.ZP,
+                                  k(M({}, l), {
+                                      className: a()(R.speaker, { [R.last]: t === i.length - 1 }),
                                       user: e.user,
                                       speaking: !0,
                                       collapsed: !0,
@@ -125,131 +112,108 @@ function X(e) {
               )
           });
 }
-function Q(e) {
-    let { inPopout: t, channel: n, appContext: l, inCall: a, isChatOpen: s, exitFullScreen: E } = e,
-        M = i.useRef(null),
-        L = i.useRef(null),
-        { analyticsLocations: W, newestAnalyticsLocation: Q } = (0, h.ZP)(p.Z.VOICE_CHANNEL_HEADER),
-        { simplifiedSettingsEnabled: J } = (0, O.Z)({ location: 'ChannelCallHeaderToolbar' }),
-        $ = n.id,
+function D(e) {
+    let { inPopout: t, channel: n, isChatOpen: l } = e,
+        o = i.useRef(null),
+        { analyticsLocations: s } = (0, h.ZP)(p.Z.VOICE_CHANNEL_HEADER),
+        y = n.id,
         {
-            voiceParticipantsHidden: ee,
-            selectedParticipant: et,
-            userParticipantCount: en,
-            participantsListOpen: er
+            voiceParticipantsHidden: S,
+            selectedParticipant: P,
+            userParticipantCount: w,
+            participantsListOpen: D
         } = (0, c.cj)(
-            [D.Z],
+            [Z.Z],
             () => ({
-                selectedParticipant: D.Z.getSelectedParticipant($),
-                voiceParticipantsHidden: D.Z.getVoiceParticipantsHidden($),
-                userParticipantCount: D.Z.getUserParticipantCount($),
-                participantsListOpen: D.Z.getParticipantsListOpen($)
+                selectedParticipant: Z.Z.getSelectedParticipant(y),
+                voiceParticipantsHidden: Z.Z.getVoiceParticipantsHidden(y),
+                userParticipantCount: Z.Z.getUserParticipantCount(y),
+                participantsListOpen: Z.Z.getParticipantsListOpen(y)
             }),
-            [$]
+            [y]
         ),
-        ei = (0, U.Z)(n),
-        el = n.isGuildVoice() && !s,
-        { hasParticipantsPanel: eo } = (0, F.Z)({ location: 'ChannelCallHeaderToolbar' }),
-        ea = !er && eo && (n.isGuildVoice() || n.isGroupDM()),
-        { enabled: es, inInbox: ec } = v.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
-        eu = (0, b.Q3)('ChannelCallHeaderToolbar'),
-        { preventIdle: ed, allowIdle: ep } = (0, P.Y)('popup'),
-        eh = [];
-    if (ei && !eo && !J) {
-        let e = (null == et ? void 0 : et.type) === V.fO.STREAM ? (0, _.my)(et.id) : void 0,
-            t = (null == et ? void 0 : et.type) === V.fO.ACTIVITY ? et.applicationId : void 0;
-        eh.push(
-            (0, r.jsx)(
-                w.Z,
-                {
-                    className: Y.button,
-                    channel: n,
-                    applicationId: t,
-                    stream: e,
-                    exitFullScreen: E,
-                    analyticsLocation: n.type === z.d4z.GUILD_VOICE ? z.ZY5.GUILD_CHANNEL : z.ZY5.DM_CHANNEL,
-                    shouldPrioritizeGroupPlusIcon: !0
-                },
-                'invite-button'
-            )
-        );
-    }
+        U = n.isGuildVoice() && !l,
+        { hasParticipantsPanel: B } = (0, T.Z)({ location: 'ChannelCallHeaderToolbar' }),
+        G = !D && B && (n.isGuildVoice() || n.isGroupDM()),
+        { enabled: F, inInbox: H } = C.Z.useExperiment({ location: 'ChannelCallHeaderToolbar' }),
+        V = (0, b.Q3)('ChannelCallHeaderToolbar'),
+        z = [];
     return (
-        ee &&
-            eh.push(
+        S &&
+            z.push(
                 (0, r.jsx)(
-                    X,
+                    L,
                     {
-                        channelId: $,
+                        channelId: y,
                         guildId: n.guild_id
                     },
                     'current-speaker'
                 )
             ),
-        eh.push(
+        z.push(
             (0, r.jsx)(
                 g.Z,
                 {
-                    className: Y.button,
-                    channelId: $
+                    className: R.button,
+                    channelId: y
                 },
                 'clips-enabled-indicator'
             )
         ),
-        (null == et ? void 0 : et.type) === V.fO.STREAM &&
-            (eh.push(
+        (null == P ? void 0 : P.type) === A.fO.STREAM &&
+            (z.push(
                 (0, r.jsx)(
-                    I.Z,
+                    v.Z,
                     {
-                        className: Y.button,
-                        participant: et
+                        className: R.button,
+                        participant: P
                     },
                     'warning'
                 )
             ),
-            eh.push(
+            z.push(
                 (0, r.jsx)(
-                    x.Z,
+                    _.Z,
                     {
                         size: f.ZP.Sizes.LARGE,
-                        className: Y.button,
-                        participant: et,
+                        className: R.button,
+                        participant: P,
                         showQuality: !0,
                         premiumIndicator: !1
                     },
                     'live-indicator'
                 )
             )),
-        (null == et ? void 0 : et.type) === V.fO.USER &&
-            eh.push(
+        (null == P ? void 0 : P.type) === A.fO.USER &&
+            z.push(
                 (0, r.jsx)(
-                    S.Z,
+                    j.Z,
                     {
-                        className: Y.button,
-                        userId: et.id
+                        className: R.button,
+                        userId: P.id
                     },
                     'video-warning'
                 )
             ),
-        ee &&
-            !eo &&
-            eh.push(
+        S &&
+            !B &&
+            z.push(
                 (0, r.jsx)(
                     u.yRy,
                     {
-                        targetElementRef: M,
+                        targetElementRef: o,
                         position: 'bottom',
-                        renderPopout: () => (0, r.jsx)(Z.Z, { children: (0, r.jsx)(G.Z, { channel: n }) }),
+                        renderPopout: () => (0, r.jsx)(O.Z, { children: (0, r.jsx)(N.Z, { channel: n }) }),
                         children: (e, t) => {
                             let { isShown: n } = t;
                             return (0, i.createElement)(
-                                R.Z,
-                                K(q({}, e), {
-                                    ref: M,
+                                I.Z,
+                                k(M({}, e), {
+                                    ref: o,
                                     isActive: n,
-                                    count: en,
+                                    count: w,
                                     key: 'call-members',
-                                    className: Y.button
+                                    className: R.button
                                 })
                             );
                         }
@@ -257,104 +221,34 @@ function Q(e) {
                     'call-members-popout'
                 )
             ),
-        a &&
-            !J &&
-            eh.push(
-                null != et
-                    ? (0, r.jsx)(
-                          A.Z,
-                          {
-                              className: Y.button,
-                              channelId: $
-                          },
-                          'deselect-participant'
-                      )
-                    : (0, r.jsx)(
-                          k.Z,
-                          {
-                              className: Y.button,
-                              channelId: $,
-                              isHorizontal: !0
-                          },
-                          'select-participant'
-                      )
-            ),
-        !eu &&
-            (t || eh.push((0, r.jsx)(m.Z, { className: Y.button }, 'clips')),
-            J ||
-                eh.push(
-                    (0, r.jsx)(
-                        C.Z,
-                        {
-                            onOpen: ed,
-                            onClose: ep,
-                            className: Y.button
-                        },
-                        'recents'
-                    )
-                )),
-        es && !ec && eh.push((0, r.jsx)(j.Z, { className: Y.button }, 'for-later')),
-        J ||
-            eh.push(
+        V || t || z.push((0, r.jsx)(m.Z, { className: R.button }, 'clips')),
+        F && !H && z.push((0, r.jsx)(x.Z, { className: R.button }, 'for-later')),
+        G &&
+            z.push(
                 (0, r.jsx)(
-                    u.yRy,
+                    I.Z,
                     {
-                        targetElementRef: L,
-                        position: 'bottom',
-                        renderPopout: (e) => {
-                            let { closePopout: t } = e;
-                            return (0, r.jsx)(Z.Z, {
-                                children: (0, r.jsx)(B.Z, {
-                                    channelId: $,
-                                    onClose: t,
-                                    appContext: l,
-                                    exitFullScreen: E,
-                                    onInteraction: (0, H.u)('ChannelCallOverflowMenu', Q, { entrypoint: V.A5.THREE_DOT })
-                                })
-                            });
-                        },
-                        children: (e, t) => {
-                            let { isShown: n } = t;
-                            return (0, i.createElement)(
-                                T.Z,
-                                K(q({ ref: L }, e), {
-                                    key: 'more-options',
-                                    isActive: n,
-                                    className: Y.lastButton
-                                })
-                            );
-                        }
-                    },
-                    'more-options-popout'
-                )
-            ),
-        (ea || el) && !J && eh.push((0, r.jsx)(y.ZP.Divider, { className: Y.divider }, 'divider')),
-        ea &&
-            eh.push(
-                (0, r.jsx)(
-                    R.Z,
-                    {
-                        className: o()(Y.button, { [Y.lastButton]: s }),
-                        onClick: () => d.Z.toggleParticipantsList(n.id, !er)
+                        className: a()(R.button, { [R.lastButton]: l }),
+                        onClick: () => d.Z.toggleParticipantsList(n.id, !D)
                     },
                     'participants-list-button'
                 )
             ),
-        el &&
-            eh.push(
+        U &&
+            z.push(
                 (0, r.jsx)(
-                    N.T,
+                    E.T,
                     {
                         channelId: n.id,
-                        className: o()(Y.button, { [Y.lastButton]: er }),
-                        disabled: s
+                        className: a()(R.button, { [R.lastButton]: D }),
+                        disabled: l
                     },
                     'chat-spacer'
                 )
             ),
         (0, r.jsx)(h.Gt, {
-            value: W,
-            children: eh
+            value: s,
+            children: z
         })
     );
 }

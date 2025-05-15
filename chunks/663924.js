@@ -2,8 +2,8 @@ n.d(t, { Z: () => I });
 var r = n(255367),
     i = n(73800),
     l = n(374470),
-    o = n(952265),
-    a = n(481060),
+    a = n(952265),
+    o = n(481060),
     s = n(40851),
     c = n(896449),
     u = n(540059),
@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(421591),
     b = n(496977),
     _ = n(314734),
-    x = n(981631),
-    y = n(149203),
-    C = n(388032),
+    C = n(981631),
+    x = n(149203),
+    y = n(388032),
     v = n(760420);
 let j = { height: _.lv };
 function O() {
@@ -26,26 +26,26 @@ function O() {
 function E(e) {
     let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: u } = e,
         d = i.useRef(null),
-        { renderWindow: f, windowDispatch: C } = i.useContext(s.ZP),
+        { renderWindow: f, windowDispatch: y } = i.useContext(s.ZP),
         v = null != u,
-        j = (0, o.Jw)(null != u ? u : ''),
+        j = (0, a.Jw)(null != u ? u : ''),
         E = i.useCallback(
             (e) => {
                 var t;
-                if ((!v && (0, o.$s)()) || (v && !(j && n))) return;
+                if ((!v && (0, a.$s)()) || (v && !(j && n))) return;
                 let { target: r } = e;
                 if ((0, l.k)(r) && null != r.closest('.' + _.Jh)) return;
                 for (; (0, l.k)(r); ) {
                     if (r === d.current) return;
                     if (r.classList.contains(_.t4) || r.classList.contains(_.Id)) return void e.preventDefault();
                     if (r.classList.contains(_.NN)) return;
-                    let t = [y.cZ, c.N];
+                    let t = [x.cZ, c.N];
                     if (r.classList.contains(_.I4) || t.includes(r.id)) return;
                     r = r.parentNode;
                 }
                 O();
                 let i = null == (t = (0, h.uB)(e)) ? void 0 : t.activeElement;
-                (null == i || 'BODY' === i.tagName) && p.S.dispatchToLastSubscribed(x.CkL.TEXTAREA_FOCUS);
+                (null == i || 'BODY' === i.tagName) && p.S.dispatchToLastSubscribed(C.CkL.TEXTAREA_FOCUS);
             },
             [n, j, v]
         );
@@ -53,16 +53,16 @@ function E(e) {
         () => (
             f.addEventListener('mousedown', E),
             f.addEventListener('contextmenu', E),
-            C.subscribe(x.CkL.POPOUT_CLOSE, O),
+            y.subscribe(C.CkL.POPOUT_CLOSE, O),
             () => {
-                f.removeEventListener('mousedown', E), f.removeEventListener('contextmenu', E), C.unsubscribe(x.CkL.POPOUT_CLOSE, O);
+                f.removeEventListener('mousedown', E), f.removeEventListener('contextmenu', E), y.unsubscribe(C.CkL.POPOUT_CLOSE, O);
             }
         ),
-        [E, f, C]
+        [E, f, y]
     ),
-        (0, a.Tbt)(d),
+        (0, o.Tbt)(d),
         i.useEffect(() => {
-            ((!v && (0, o.$s)()) || (v && !j)) && O();
+            ((!v && (0, a.$s)()) || (v && !j)) && O();
         }, [j, v]);
     let I = (0, b.Z)();
     return (0, r.jsx)(g.Z, {
@@ -113,7 +113,7 @@ let I = i.memo(function (e) {
                     className: v.positionContainer,
                     role: 'dialog',
                     style: j,
-                    'aria-label': C.intl.string(C.t['3CNGLC']),
+                    'aria-label': y.intl.string(y.t['3CNGLC']),
                     children:
                         t &&
                         (0, r.jsx)(

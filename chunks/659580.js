@@ -23,7 +23,7 @@ var l = n(990547),
     P = n(388032),
     I = n(292538);
 function E(e) {
-    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: E = !1, renderInputProfiles: Z = !1, renderInputModes: x = !1, renderInputVolume: C = !1, renderOutputVolume: T = !1, renderDeafen: A = !1, simplified: N = !1, onSelect: w, appContext: _, onInteraction: D } = e,
+    let { onClose: t, renderOutputDevices: n = !1, renderInputDevices: E = !1, renderInputProfiles: Z = !1, renderInputModes: x = !1, renderInputVolume: C = !1, renderOutputVolume: T = !1, renderDeafen: A = !1, minimal: N = !1, onSelect: w, appContext: _, onInteraction: D } = e,
         { analyticsLocations: L } = (0, u.ZP)();
     (0, d.Z)({
         type: l.ImpressionTypes.MENU,
@@ -35,13 +35,13 @@ function E(e) {
         U = (0, y.Z)(L, N),
         R = (0, i.e7)([b.Z], () => b.Z.getActiveInputProfile()),
         V = (0, m.Z)(L),
-        F = (0, p.Z)(L),
-        Y = (0, f.Z)(L),
+        Y = (0, p.Z)(L),
+        F = (0, f.Z)(L),
         B = (0, g.Z)(L),
         G = o.Yn.DEFAULT,
-        z = b.Z.isSelfDeaf(G),
-        W = (0, i.e7)([b.Z], () => b.Z.getMode()),
-        H = W === S.pM4.VOICE_ACTIVITY ? S.pM4.PUSH_TO_TALK : S.pM4.VOICE_ACTIVITY;
+        W = b.Z.isSelfDeaf(G),
+        z = (0, i.e7)([b.Z], () => b.Z.getMode()),
+        H = z === S.pM4.VOICE_ACTIVITY ? S.pM4.PUSH_TO_TALK : S.pM4.VOICE_ACTIVITY;
     return (0, r.jsx)(c.Z, {
         object: S.qAy.CONTEXT_MENU,
         children: (0, r.jsxs)(a.v2r, {
@@ -58,12 +58,12 @@ function E(e) {
                 !N && x && R !== j._.STUDIO
                     ? (0, r.jsx)(a.kSQ, {
                           label: P.intl.string(P.t['pS+K2N']),
-                          children: F
+                          children: Y
                       })
                     : null,
                 (0, r.jsxs)(a.kSQ, {
                     children: [
-                        C ? Y : null,
+                        C ? F : null,
                         T ? B : null,
                         N ? (0, r.jsx)(a.Clw, {}) : null,
                         N && A
@@ -77,14 +77,14 @@ function E(e) {
                                               context: G,
                                               location: 'AudioDeviceMenu'
                                           }),
-                                      checked: z
+                                      checked: W
                                   },
                                   'self-deafen'
                               )
                             : null,
                         N && E && O.isPlatformEmbedded
                             ? (0, r.jsx)(a.S89, {
-                                  checked: W === S.pM4.PUSH_TO_TALK,
+                                  checked: z === S.pM4.PUSH_TO_TALK,
                                   id: 'input-mode',
                                   label: P.intl.string(P.t.Q8gkVF),
                                   action: () => s.Z.setMode(H, void 0, void 0, { analyticsLocations: L }),

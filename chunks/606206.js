@@ -31,10 +31,10 @@ let v = [s.h8.TEXT_CHANNEL, s.h8.GROUP_DM, s.h8.USER],
     m = null,
     x = null,
     N = [],
-    C = [];
-function E(e) {
+    E = [];
+function C(e) {
     (N = [...N, e]),
-        (C = C.map((e) => {
+        (E = E.map((e) => {
             var t, n;
             return (
                 (t = (function (e) {
@@ -90,7 +90,7 @@ class P extends (l = i.ZP.Store) {
         return null != (e = null == r ? void 0 : r.query) ? e : '';
     }
     getResults() {
-        return C;
+        return E;
     }
 }
 b(P, 'displayName', 'ActivityInviteModalStore');
@@ -102,7 +102,7 @@ let S = new P(o.Z, {
                 null == r &&
                     (r = new s.ZP(
                         (e, t) => {
-                            (C = (
+                            (E = (
                                 '' === t.trim()
                                     ? (function () {
                                           let e = [];
@@ -189,14 +189,14 @@ let S = new P(o.Z, {
                       type: O.mFx.JOIN,
                       activity: m,
                       location: 'Channel Text Area - Invite to Join Modal'
-                  }).then(() => E(t))
+                  }).then(() => C(t))
                 : null != n &&
                   a.Z.sendActivityInviteUser({
                       userId: n,
                       type: O.mFx.JOIN,
                       activity: m,
                       location: 'Channel Text Area - Invite to Join Modal'
-                  }).then(() => E(n));
+                  }).then(() => C(n));
         },
         ACTIVITY_INVITE_MODAL_CLOSE: j,
         OVERLAY_SET_INPUT_LOCKED: function (e) {

@@ -1,21 +1,19 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => m });
 var r = n(255367),
     i = n(73800),
     l = n(652844),
-    o = n(747906),
-    a = n(481060),
+    a = n(747906),
+    o = n(481060),
     s = n(40851),
     c = n(906732),
     u = n(628581),
     d = n(522651),
-    p = n(861254),
-    h = n(221241),
-    f = n(378441),
-    m = n(871499),
-    g = n(981631);
-function b(e) {
-    var { selfMute: t, serverMute: n, suppress: b, centerButton: _ = !1, awaitingRemote: x, onMouseEnter: y, onMouseLeave: C, onClick: v } = e,
-        j = (function (e, t) {
+    p = n(378441),
+    h = n(871499),
+    f = n(981631);
+function m(e) {
+    var { selfMute: t, serverMute: n, suppress: m, centerButton: g = !1, awaitingRemote: b, onMouseEnter: _, onMouseLeave: C, onClick: x } = e,
+        y = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -34,67 +32,65 @@ function b(e) {
             }
             return i;
         })(e, ['selfMute', 'serverMute', 'suppress', 'centerButton', 'awaitingRemote', 'onMouseEnter', 'onMouseLeave', 'onClick']);
-    let { parentAnalyticsLocation: O } = (0, c.ZP)(),
-        { mode: E } = (0, p.ZP)({ location: 'MicButton' }),
-        { squareButtonsEnabled: I, coloredIconsEnabled: S } = (0, h.Z)({ location: 'MuteButton' }),
-        P = t || n || b,
-        Z = _ ? m.d : m.Z,
-        N = (0, u.Z)(t, n, b, x, E === p.BK.GroupedButtonsRedMic || I),
-        T = (0, l.O)(P ? 'unmute' : 'mute'),
-        A = (0, o.P)(P ? 'unmute' : 'mute'),
-        { activeVoice: w } = (0, f.o)(),
-        R = null != w,
-        k = R ? A : T,
-        { events: M, play: L } = k;
-    i.useEffect(() => () => L(), [L, P]);
-    let D = k.Component;
-    (0, s.bp)() === g.IlC.POPOUT && (D = R ? (P ? a.TYr : a.x8H) : P ? a.nRN : a.S6n);
-    let U = (I || E === p.BK.GroupedButtonsRedMic) && P ? 'red' : void 0,
-        B = E !== p.BK.GroupedButtonsRedMic && !I;
-    return (0, r.jsx)(
-        Z,
-        (function (e) {
-            for (var t = 1; t < arguments.length; t++) {
-                var n = null != arguments[t] ? arguments[t] : {},
-                    r = Object.keys(n);
-                'function' == typeof Object.getOwnPropertySymbols &&
-                    (r = r.concat(
-                        Object.getOwnPropertySymbols(n).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
-                        })
-                    )),
-                    r.forEach(function (t) {
-                        var r;
-                        (r = n[t]),
-                            t in e
-                                ? Object.defineProperty(e, t, {
-                                      value: r,
-                                      enumerable: !0,
-                                      configurable: !0,
-                                      writable: !0
-                                  })
-                                : (e[t] = r);
-                    });
-            }
-            return e;
-        })(
-            {
-                isActive: !!B && !P,
-                iconComponent: D,
-                caretColor: S && P ? 'red' : 'primaryDark',
-                color: U,
-                label: N,
-                onMouseEnter: (e) => {
-                    null == y || y(e), M.onMouseEnter();
-                },
-                onMouseLeave: (e) => {
-                    null == C || C(e), M.onMouseLeave();
-                },
-                onClick: (e) => {
-                    null == v || v(e), (0, d.v)(O, d.d.MIC, t);
+    let { parentAnalyticsLocation: v } = (0, c.ZP)(),
+        j = t || n || m,
+        O = g ? h.d : h.Z,
+        E = (0, u.Z)(t, n, m, b),
+        I = (0, l.O)(j ? 'unmute' : 'mute'),
+        S = (0, a.P)(j ? 'unmute' : 'mute'),
+        { activeVoice: P } = (0, p.o)(),
+        Z = null != P,
+        N = Z ? S : I,
+        { events: T, play: A } = N;
+    i.useEffect(() => () => A(), [A, j]);
+    let w = N.Component;
+    return (
+        (0, s.bp)() === f.IlC.POPOUT && (w = Z ? (j ? o.TYr : o.x8H) : j ? o.nRN : o.S6n),
+        (0, r.jsx)(
+            O,
+            (function (e) {
+                for (var t = 1; t < arguments.length; t++) {
+                    var n = null != arguments[t] ? arguments[t] : {},
+                        r = Object.keys(n);
+                    'function' == typeof Object.getOwnPropertySymbols &&
+                        (r = r.concat(
+                            Object.getOwnPropertySymbols(n).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            })
+                        )),
+                        r.forEach(function (t) {
+                            var r;
+                            (r = n[t]),
+                                t in e
+                                    ? Object.defineProperty(e, t, {
+                                          value: r,
+                                          enumerable: !0,
+                                          configurable: !0,
+                                          writable: !0
+                                      })
+                                    : (e[t] = r);
+                        });
                 }
-            },
-            j
+                return e;
+            })(
+                {
+                    iconComponent: w,
+                    isTrayButton: !0,
+                    caretColor: j ? 'red' : 'primaryDark',
+                    color: j ? 'red' : void 0,
+                    label: E,
+                    onMouseEnter: (e) => {
+                        null == _ || _(e), T.onMouseEnter();
+                    },
+                    onMouseLeave: (e) => {
+                        null == C || C(e), T.onMouseLeave();
+                    },
+                    onClick: (e) => {
+                        null == x || x(e), (0, d.v)(v, d.d.MIC, t);
+                    }
+                },
+                y
+            )
         )
     );
 }

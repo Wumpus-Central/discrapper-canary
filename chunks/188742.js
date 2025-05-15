@@ -1,4 +1,4 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 let r = new (n(113638).Z)(i);
 function i(e) {
     {
@@ -6,7 +6,7 @@ function i(e) {
         return void 0 !== t ? t().then((e) => e.default) : Promise.resolve({});
     }
 }
-let o = {
+let a = {
     setEmojiLocale: function (e) {
         r.setParams(e);
     },

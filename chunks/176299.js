@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(637853),
     U = n(326145),
     G = n(269675),
-    V = n(242601),
-    B = n(416568),
+    B = n(242601),
+    V = n(416568),
     H = n(613609),
     F = n(160404),
     z = n(225675),
@@ -258,7 +258,7 @@ let ej = (0, u.Un)({
             ? (0, r.jsx)(R.Z, {})
             : null != e
               ? (0, r.jsx)(
-                    V.Z,
+                    B.Z,
                     {
                         selectedChannelId: n,
                         guildId: e
@@ -269,11 +269,11 @@ let ej = (0, u.Un)({
     }),
     eU = (e) => (0, r.jsx)(ek, eT({}, e)),
     eG = () => (0, r.jsx)(w.Z, {}),
-    eV = (e) => {
+    eB = (e) => {
         let { match: t } = e;
         return null != t.params.guildId ? (0, r.jsx)(k.Z, { guildId: t.params.guildId }) : null;
     },
-    eB = (e) => {
+    eV = (e) => {
         let { match: t } = e;
         return null != t.params.guildId
             ? (0, r.jsx)(H.Z, {
@@ -443,7 +443,7 @@ function e$(e) {
                     O &&
                         s &&
                         !c &&
-                        (0, r.jsx)(B.Z, {
+                        (0, r.jsx)(V.Z, {
                             className: eN.guilds,
                             themeOverride: n
                         }),
@@ -533,7 +533,7 @@ function e0() {
             f &&
                 !u &&
                 !E &&
-                (0, r.jsx)(B.Z, {
+                (0, r.jsx)(V.Z, {
                     className: eN.guilds,
                     themeOverride: n
                 }),
@@ -667,13 +667,13 @@ function e0() {
                                                         }),
                                                         (0, r.jsx)(S.Z, {
                                                             path: ey.Z5c.GUILD_MEMBER_VERIFICATION(en.Hw.guildId()),
-                                                            render: eV,
+                                                            render: eB,
                                                             impressionName: c.ImpressionNames.GUILD_MEMBER_VERIFICATION,
                                                             disableTrack: !0
                                                         }),
                                                         (0, r.jsx)(S.Z, {
                                                             path: ey.Z5c.GUILD_MEMBER_VERIFICATION_FOR_HUB(en.Hw.guildId(), ':inviteCode?'),
-                                                            render: eB,
+                                                            render: eV,
                                                             impressionName: c.ImpressionNames.HUB_EMAIL_SIGNUP,
                                                             impressionProperties: (e) => {
                                                                 let { computedMatch: t } = e;

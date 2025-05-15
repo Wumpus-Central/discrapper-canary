@@ -1,10 +1,10 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => x });
 var r = n(255367);
 n(73800);
 var i = n(442837),
     l = n(481060),
-    o = n(607070),
-    a = n(100527),
+    a = n(607070),
+    o = n(100527),
     s = n(43267),
     c = n(933557),
     u = n(641360),
@@ -16,15 +16,15 @@ var i = n(442837),
     g = n(967128),
     b = n(388032),
     _ = n(906667);
-function x(e) {
+function C(e) {
     let { channel: t } = e;
-    return (0, u.I3)(a.Z.EMPTY_GROUP_DM, t.id)
+    return (0, u.I3)(o.Z.EMPTY_GROUP_DM, t.id)
         ? (0, r.jsxs)('div', {
               className: _.buttonContainer,
               children: [
                   (0, r.jsx)(l.zxk, {
                       size: l.PhG.MEDIUM,
-                      onClick: () => (0, h.B)(t.id, a.Z.EMPTY_GROUP_DM),
+                      onClick: () => (0, h.B)(t.id, o.Z.EMPTY_GROUP_DM),
                       className: _.button,
                       children: b.intl.string(b.t['5Q9+/P'])
                   }),
@@ -36,13 +36,13 @@ function x(e) {
           })
         : null;
 }
-function y(e) {
+function x(e) {
     var t, n, u;
     let { channel: h, children: f, user: b } = e,
-        _ = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
-        y = null != (t = (0, c.ZP)(h)) ? t : '',
+        _ = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
+        x = null != (t = (0, c.ZP)(h)) ? t : '',
         {
-            avatarDecorationSrc: C,
+            avatarDecorationSrc: y,
             eventHandlers: v,
             isAnimating: j
         } = (0, m.Z)({
@@ -86,25 +86,25 @@ function y(e) {
                             ? (0, r.jsx)(p.v, {
                                   channel: h,
                                   editable: !0,
-                                  location: a.Z.EMPTY_GROUP_DM,
+                                  location: o.Z.EMPTY_GROUP_DM,
                                   children: (0, r.jsx)(d.Z, {
                                       channel: h,
                                       size: l.EFr.SIZE_80,
                                       experimentLocation: 'empty_messages',
                                       animated: e,
-                                      'aria-label': y
+                                      'aria-label': x
                                   })
                               })
                             : (0, r.jsx)(l.qEK, {
-                                  'aria-label': y,
+                                  'aria-label': x,
                                   size: l.EFr.SIZE_80,
                                   src: (0, s.x)(h, 80, e),
-                                  avatarDecoration: C
+                                  avatarDecoration: y
                               });
                     })(),
-                    (0, r.jsx)(g.Ot, { children: y }),
+                    (0, r.jsx)(g.Ot, { children: x }),
                     (0, r.jsx)(g.jz, { children: f }),
-                    h.isMultiUserDM() && (0, r.jsx)(x, { channel: h })
+                    h.isMultiUserDM() && (0, r.jsx)(C, { channel: h })
                 ]
             }),
         Object.getOwnPropertyDescriptors

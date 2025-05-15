@@ -2,7 +2,7 @@ n.d(t, {
     M9: () => _,
     Pb: () => b,
     XX: () => m,
-    ZP: () => x,
+    ZP: () => C,
     ZT: () => p,
     iv: () => g,
     pk: () => f
@@ -11,8 +11,8 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    o = n(392711),
-    a = n.n(o),
+    a = n(392711),
+    o = n.n(a),
     s = n(481060),
     c = n(881448);
 function u(e) {
@@ -30,14 +30,14 @@ function p(e) {
         className: l()(i, { [c.blob]: !0 }),
         style: {
             width: u(t),
-            opacity: null != n ? n : a().random(0.02, 0.08)
+            opacity: null != n ? n : o().random(0.02, 0.08)
         }
     });
 }
 function h(e) {
     let t,
-        { groupStart: n = !1, compact: i = !1, attachmentSpecs: o, usernameWidth: u, usernameOpacity: h, className: f, style: m } = e,
-        g = i ? 50 : a().random(40, 50);
+        { groupStart: n = !1, compact: i = !1, attachmentSpecs: a, usernameWidth: u, usernameOpacity: h, className: f, style: m } = e,
+        g = i ? 50 : o().random(40, 50);
     return (
         !i && n
             ? (t = (0, r.jsxs)(r.Fragment, {
@@ -88,9 +88,9 @@ function h(e) {
                         t,
                         (0, r.jsx)('div', {
                             className: c.content,
-                            children: Array(a().random(3, 8))
+                            children: Array(o().random(3, 8))
                                 .fill(null)
-                                .map(() => a().random(30, 80))
+                                .map(() => o().random(30, 80))
                                 .map((e, t) =>
                                     (0, r.jsx)(
                                         p,
@@ -104,7 +104,7 @@ function h(e) {
                         })
                     ]
                 }),
-                null != o &&
+                null != a &&
                     (0, r.jsx)('div', {
                         className: c.attachmentContainer,
                         children: (0, r.jsx)('div', {
@@ -133,7 +133,7 @@ function h(e) {
                                         });
                                 }
                                 return e;
-                            })({ opacity: 0.03 }, o)
+                            })({ opacity: 0.03 }, a)
                         })
                     })
             ]
@@ -145,11 +145,11 @@ let f = 44,
     g = 26,
     b = 26,
     _ = 6;
-function x(e) {
-    let { messages: t, groupSpacing: n = 0, compact: i = !1, attachmentSpecs: l, className: o } = e,
-        s = null != l ? (l.last ? t - 1 : a().random(0, t - 1)) : -1,
-        c = a().random(80, 120),
-        d = a().random(0.1, 0.2);
+function C(e) {
+    let { messages: t, groupSpacing: n = 0, compact: i = !1, attachmentSpecs: l, className: a } = e,
+        s = null != l ? (l.last ? t - 1 : o().random(0, t - 1)) : -1,
+        c = o().random(80, 120),
+        d = o().random(0.1, 0.2);
     return (0, r.jsx)(r.Fragment, {
         children: Array(t)
             .fill(null)
@@ -158,7 +158,7 @@ function x(e) {
                     h,
                     {
                         compact: i,
-                        className: o,
+                        className: a,
                         usernameWidth: c,
                         usernameOpacity: d,
                         groupStart: 0 === t,

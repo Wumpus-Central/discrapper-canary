@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(906732),
-    o = n(408534),
-    a = n(522651),
+    a = n(408534),
+    o = n(522651),
     s = n(795318),
     c = n(390322),
     u = n(871499),
@@ -17,7 +17,7 @@ let h = (e) => {
         renderPopout: (e) => {
             let { closePopout: i } = e;
             return (0, r.jsx)(c.Z, {
-                children: (0, r.jsx)(o.Z, {
+                children: (0, r.jsx)(a.Z, {
                     onClose: i,
                     channel: t,
                     remoteMode: n,
@@ -33,8 +33,9 @@ let h = (e) => {
             let { onClick: n } = e,
                 { isShown: l } = t;
             return (0, r.jsx)(u.d, {
+                isTrayButton: !0,
                 onClick: (e) => {
-                    (0, a.v)(h, a.d.MORE), n(e);
+                    (0, o.v)(h, o.d.MORE), n(e);
                 },
                 label: p.intl.string(p.t.PdRCRk),
                 iconComponent: i.xhG,

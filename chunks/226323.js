@@ -105,8 +105,8 @@ function T(e) {
         U = null != A ? A : E.ZP.getName(j),
         {
             icon: G,
-            colorize: V,
-            getStatus: B
+            colorize: B,
+            getStatus: V
         } = null !=
         (l = (function (e) {
             let { serverDeaf: t, deaf: n, serverMute: r, mute: i, localMute: l } = e;
@@ -125,10 +125,10 @@ function T(e) {
             ? l
             : {},
         H =
-            null != B
+            null != V
                 ? y.intl.formatToPlainString(y.t['1+MVBA'], {
                       userName: U,
-                      status: B()
+                      status: V()
                   })
                 : U;
     function F(e) {
@@ -190,7 +190,7 @@ function T(e) {
                                     children:
                                         null != G
                                             ? (0, r.jsx)(G, {
-                                                  className: a()(I.avatarIconOverlay, { [I.avatarIconRed]: V }),
+                                                  className: a()(I.avatarIconOverlay, { [I.avatarIconRed]: B }),
                                                   color: 'currentColor',
                                                   size: 'xs'
                                               })

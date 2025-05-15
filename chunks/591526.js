@@ -1,19 +1,19 @@
-n.d(t, { Z: () => a }), n(388685);
+n.d(t, { Z: () => o }), n(388685);
 var r = n(710845),
     i = n(287328);
-let o = new r.Z('ChannelReader');
-class a {
+let a = new r.Z('ChannelReader');
+class o {
     static getSync(e, t) {
         let n = performance.now(),
             r = i.Z.channels(e).getManySyncUnsafe(t),
-            a = performance.now() - n;
-        return o.log('synchronously loaded in '.concat(a, 'ms (guild: ').concat(t, ', channels: ').concat(r.length, ')')), [r, a];
+            o = performance.now() - n;
+        return a.log('synchronously loaded in '.concat(o, 'ms (guild: ').concat(t, ', channels: ').concat(r.length, ')')), [r, o];
     }
     static async getAsync(e, t) {
         let n = performance.now(),
             r = await i.Z.channels(e).getMany(t),
-            a = performance.now() - n;
-        return o.verbose('loaded in '.concat(a, 'ms (guild: ').concat(t, ', channels: ').concat(r.length, ')')), r;
+            o = performance.now() - n;
+        return a.verbose('loaded in '.concat(o, 'ms (guild: ').concat(t, ', channels: ').concat(r.length, ')')), r;
     }
     static async getGuildIds() {
         try {
@@ -23,7 +23,7 @@ class a {
             let n = (null != (e = await t.getGuildIds()) ? e : []).filter((e) => null !== e && 'string' == typeof e);
             return new Set(n);
         } catch (e) {
-            return o.warn("couldn't get guild ids", e), new Set();
+            return a.warn("couldn't get guild ids", e), new Set();
         }
     }
 }

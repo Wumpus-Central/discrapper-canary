@@ -1,7 +1,7 @@
 n.d(t, { Z: () => c });
 var r = n(492423),
     i = n(774073);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,7 +25,7 @@ function a(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -56,15 +56,15 @@ function l(e, t) {
 function c(e) {
     let { onOpened: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { applicationId: n } = e,
-        o = (0, i.ZP)(e);
-    return o.shouldOpenGameProfile && null != n
+        a = (0, i.ZP)(e);
+    return a.shouldOpenGameProfile && null != n
         ? (i) => {
               i.stopPropagation(),
                   i.preventDefault(),
                   r.Z.openGameProfileModal(
-                      l(a({}, e), {
+                      l(o({}, e), {
                           applicationId: n,
-                          gameProfileModalChecks: o
+                          gameProfileModalChecks: a
                       })
                   ),
                   null == t || t();

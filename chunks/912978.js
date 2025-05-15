@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(539854), n(415506), n(388685);
 var r = n(836560),
     i = n(264344),
-    o = n.n(i),
-    a = n(649318);
+    a = n.n(i),
+    o = n(649318);
 function s(e, t, n) {
     return (
         t in e
@@ -86,7 +86,7 @@ class d extends r.EventEmitter {
         return this._sdp;
     }
     set sdp(e) {
-        if (!(0, a.$6)(e)) throw Error('Incorrect SDP received from rtc-worker: '.concat(e));
+        if (!(0, o.$6)(e)) throw Error('Incorrect SDP received from rtc-worker: '.concat(e));
         (this._sdp = e), this.createAnswer(), (this.connected = !0), this._negotiationNeeded && this.negotiationNeeded();
     }
     negotiationNeeded() {
@@ -105,13 +105,13 @@ class d extends r.EventEmitter {
     getSSRCs(e) {
         let t = this.streams.map((e, t) => {
             let { cname: n, ssrc: r, type: i } = e,
-                o = this.activeAudioSSRCs[n],
+                a = this.activeAudioSSRCs[n],
                 s = this.activeVideoSSRCs[n],
                 l = ''.concat(i, '_inbound_').concat(t);
-            return [r, n, i, o === r || s === r ? this.direction : a.Ns.INACTIVE, l];
+            return [r, n, i, a === r || s === r ? this.direction : o.Ns.INACTIVE, l];
         });
-        if ('Firefox' !== o().name) return this.connected ? t : [];
-        let n = this.outboundStreams.map((e, t) => [0, 'outbound', e.type, (0, a.Mg)(e.direction), ''.concat(e.type, '_outbound_').concat(t)]);
+        if ('Firefox' !== a().name) return this.connected ? t : [];
+        let n = this.outboundStreams.map((e, t) => [0, 'outbound', e.type, (0, o.Mg)(e.direction), ''.concat(e.type, '_outbound_').concat(t)]);
         if ('answer' !== e) return n.concat(t);
         {
             let e = n.length - t.length;
@@ -120,8 +120,8 @@ class d extends r.EventEmitter {
                 .concat(t)
                 .slice(0, n.length)
                 .map((e, t) => {
-                    let [n, r, i, o, s] = e;
-                    return [n, r, i, (0, a.Mg)(this.outboundStreams[t].direction), this.outboundStreams[t].mid];
+                    let [n, r, i, a, s] = e;
+                    return [n, r, i, (0, o.Mg)(this.outboundStreams[t].direction), this.outboundStreams[t].mid];
                 });
         }
     }
@@ -130,19 +130,19 @@ class d extends r.EventEmitter {
             n = this.audioPayloadType,
             r = this.videoCodec,
             i = this.videoPayloadType,
-            o = this.rtxPayloadType,
+            a = this.rtxPayloadType,
             s = this.sdp;
-        if (null == t || null == n || null == r || null == i || null == o || null == s || null == this.direction)
+        if (null == t || null == n || null == r || null == i || null == a || null == s || null == this.direction)
             throw Error(
                 'Invalid payload: audioCodec: '
                     .concat(t, ', audioPayloadType: ')
                     .concat(null == n ? 'null' : n, ', videoCodec: ')
                     .concat(r, ', videoCodecPayloadType: ')
                     .concat(null == i ? 'null' : i, ', rtxPayloadType: ')
-                    .concat(null == o ? 'null' : o, ', sdp: ')
+                    .concat(null == a ? 'null' : a, ', sdp: ')
                     .concat(s)
             );
-        let l = (0, a.MP)({
+        let l = (0, o.MP)({
             type: e,
             baseSDP: s,
             direction: this.direction,
@@ -152,7 +152,7 @@ class d extends r.EventEmitter {
             videoCodec: r,
             videoPayloadType: i,
             videoBitRate: 2500,
-            rtxPayloadType: o,
+            rtxPayloadType: a,
             ssrcs: this.getSSRCs(e),
             extensions: this.extensions
         });

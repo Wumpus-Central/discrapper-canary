@@ -1,21 +1,21 @@
-n.d(t, { B: () => a });
+n.d(t, { B: () => o });
 var r = n(255367),
     i = n(73800),
     l = n(709014);
-let o = {
+let a = {
         all: {
             name: 'all',
             start: 0,
             duration: 240
         }
     },
-    a = () => {
+    o = () => {
         let e = i.useRef(null),
             t = i.useCallback(() => {
                 null != e.current && e.current.play('all');
             }, []),
-            a = i.useCallback((t) => {
-                var i, a;
+            o = i.useCallback((t) => {
+                var i, o;
                 return (0, r.jsx)(
                     l.L,
                     ((i = (function (e) {
@@ -43,14 +43,14 @@ let o = {
                         }
                         return e;
                     })({}, t)),
-                    (a = a =
+                    (o = o =
                         {
                             src: () => n.e('43613').then(n.t.bind(n, 927459, 19)),
                             ref: e,
-                            markers: o
+                            markers: a
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
+                        ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(o))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -58,8 +58,8 @@ let o = {
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(a)).forEach(function (e) {
-                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
+                          })(Object(o)).forEach(function (e) {
+                              Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(o, e));
                           }),
                     i)
                 );
@@ -75,6 +75,6 @@ let o = {
                 var t, n;
                 return null != (n = null == (t = e.current) ? void 0 : t.getCurrentFrame()) ? n : null;
             }, []),
-            Component: a
+            Component: o
         };
     };

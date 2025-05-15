@@ -13,23 +13,23 @@ var r = n(255367),
     _ = n(180899),
     m = n(157925),
     b = n(388032),
-    x = n(879656);
-function f(e) {
+    f = n(879656);
+function x(e) {
     let { guild: t, channel: n, stageInstance: i, headerId: l, onClose: o, loading: c, error: s, onSave: u, defaultOptions: g, isSlideReady: _ } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: x.content,
+                className: f.content,
                 children: [
                     (0, r.jsx)(d.Z, {
                         children: (0, r.jsx)('div', {
-                            className: x.stageIconBackground,
+                            className: f.stageIconBackground,
                             children: (0, r.jsx)(a.ewx, {
                                 size: 'custom',
                                 color: 'currentColor',
                                 width: 32,
                                 height: 32,
-                                className: x.stageIcon
+                                className: f.stageIcon
                             })
                         })
                     }),
@@ -37,13 +37,13 @@ function f(e) {
                         id: l,
                         variant: 'heading-xl/semibold',
                         color: 'header-primary',
-                        className: x.headerTitle,
+                        className: f.headerTitle,
                         children: null == i ? b.intl.string(b.t.DDF0cH) : b.intl.string(b.t.YPdQOj)
                     }),
                     (0, r.jsx)(a.Text, {
                         variant: 'text-sm/normal',
                         color: 'header-secondary',
-                        className: x.headerSubtitle,
+                        className: f.headerSubtitle,
                         children: null == i ? b.intl.string(b.t.bqQIwc) : b.intl.string(b.t['I+9bLy'])
                     })
                 ]
@@ -151,8 +151,8 @@ function p(e) {
                               (0, r.jsx)(a.Mi4, {
                                   id: m.lv.STAGE_CHANNEL_SETTINGS,
                                   children: (0, r.jsx)('div', {
-                                      className: x.slideContainer,
-                                      children: (0, r.jsx)(f, {
+                                      className: f.slideContainer,
+                                      children: (0, r.jsx)(x, {
                                           guild: j,
                                           channel: d,
                                           stageInstance: N,
@@ -169,7 +169,7 @@ function p(e) {
                               (0, r.jsx)(a.Mi4, {
                                   id: m.lv.PUBLIC_STAGE_PREVIEW,
                                   children: (0, r.jsx)('div', {
-                                      className: x.slideContainer,
+                                      className: f.slideContainer,
                                       children: (0, r.jsx)(u.Z, {
                                           headerId: v,
                                           guild: j,

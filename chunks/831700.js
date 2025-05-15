@@ -41,8 +41,8 @@ var r = n(255367),
     V = n(63063),
     H = n(98597),
     F = n(648501),
-    z = n(473403),
-    W = n(830993),
+    W = n(473403),
+    z = n(830993),
     Y = n(653577),
     K = n(207055),
     q = n(981631),
@@ -225,7 +225,7 @@ class en extends H.ZP {
                                         return (0, r.jsx)(I.Z, {
                                             channel: e,
                                             children: (0, r.jsxs)(
-                                                z.ZP,
+                                                W.ZP,
                                                 et(
                                                     ee(
                                                         {
@@ -372,7 +372,7 @@ class en extends H.ZP {
                     { shouldShowActivities: s, shouldShowGuildVerificationPopout: a } = this.state;
                 if (s && !n && !i && !a) {
                     let n = T.SE.getSetting().includes(o.id);
-                    return (0, r.jsx)(W.Z, {
+                    return (0, r.jsx)(z.Z, {
                         onAction: this.closePopout,
                         guild: o,
                         channel: e,

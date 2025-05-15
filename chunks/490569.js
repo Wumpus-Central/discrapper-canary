@@ -1,16 +1,16 @@
 n.d(t, {
-    S: () => a,
+    S: () => o,
     h: () => s
 });
 var r = n(668757),
     i = n(818083),
-    o = n(987338);
-let a = (0, i.B)({
+    a = n(987338);
+let o = (0, i.B)({
     kind: 'user',
     id: '2025-04_libdiscore_critical_flow',
     label: 'Require libdiscore to use the app',
     defaultConfig: { enabled: !1 },
-    commonTriggerPoint: o.$P.CONNECTION_OPEN,
+    commonTriggerPoint: a.$P.CONNECTION_OPEN,
     treatments: [
         {
             id: 0,
@@ -25,5 +25,5 @@ let a = (0, i.B)({
     ]
 });
 function s() {
-    return a.useExperiment({ location: 'default' }).enabled && (0, r.oC)() && !__OVERLAY__;
+    return o.useExperiment({ location: 'default' }).enabled && (0, r.oC)() && !__OVERLAY__;
 }

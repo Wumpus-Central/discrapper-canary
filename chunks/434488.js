@@ -2,8 +2,8 @@ n.d(t, { h: () => T });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(704215),
+    a = n.n(l),
+    o = n(704215),
     s = n(692547),
     c = n(481060),
     u = n(493773),
@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(906732),
     b = n(895924),
     _ = n(540059),
-    x = n(605236),
-    y = n(340541),
-    C = n(448239),
+    C = n(605236),
+    x = n(340541),
+    y = n(448239),
     v = n(626135),
     j = n(607187),
     O = n(981631),
@@ -69,24 +69,24 @@ function N(e, t) {
     );
 }
 function T(e) {
-    let { channel: t, guild: n, width: i, inPopout: l, handleClose: o, userParticipantCount: a } = e;
+    let { channel: t, guild: n, width: i, inPopout: l, handleClose: a, userParticipantCount: o } = e;
     return i < 250
         ? (0, r.jsx)(A, {
               channel: t,
               guild: n,
               width: i,
               inPopout: l,
-              handleClose: o,
-              userParticipantCount: a
+              handleClose: a,
+              userParticipantCount: o
           })
-        : a > 1
+        : o > 1
           ? (0, r.jsx)(R, {
                 channel: t,
                 guild: n,
                 width: i,
                 inPopout: l,
-                handleClose: o,
-                userParticipantCount: a
+                handleClose: a,
+                userParticipantCount: o
             })
           : (0, r.jsx)(w, {
                 channel: t,
@@ -98,8 +98,8 @@ function T(e) {
 function A(e) {
     let { channel: t, inPopout: n, handleClose: i } = e,
         { analyticsLocations: l } = (0, g.ZP)(m.Z.VC_TILE_ACTIVITY_SHELF_BUTTON),
-        { enabled: a } = d.c.useExperiment({ location: 'ActivityShelfButtonTile' }, { autoTrackExposure: !0 }),
-        u = a ? c.iWm : c.gQj,
+        { enabled: o } = d.c.useExperiment({ location: 'ActivityShelfButtonTile' }, { autoTrackExposure: !0 }),
+        u = o ? c.iWm : c.gQj,
         p = () => {
             (0, f.Z)({
                 channel: t,
@@ -160,7 +160,7 @@ function A(e) {
                     children: (e) =>
                         (0, r.jsx)(c.P3F, {
                             onClick: i,
-                            className: o()(e, I.shelfButtonCloseButton),
+                            className: a()(e, I.shelfButtonCloseButton),
                             children: (0, r.jsx)(c.k$p, {
                                 size: 'md',
                                 color: 'currentColor',
@@ -174,7 +174,7 @@ function A(e) {
     });
 }
 function w(e) {
-    let { channel: t, guild: l, inPopout: a, width: s } = e;
+    let { channel: t, guild: l, inPopout: o, width: s } = e;
     i.useEffect(() => {
         v.default.track(O.rMx.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: 'activity invite',
@@ -183,9 +183,9 @@ function w(e) {
     }, []);
     let { analyticsLocations: u } = (0, g.ZP)(m.Z.VC_TILE_ACTIVITY_INVITE),
         p = (0, _.Q3)('SingleUserTile'),
-        { entrypoints: h } = (0, y._k)({ location: 'single_user_tile' }),
+        { entrypoints: h } = (0, x._k)({ location: 'single_user_tile' }),
         { enabled: b } = d.c.useExperiment({ location: 'SingleUserTile' }, { autoTrackExposure: !0 });
-    function x() {
+    function C() {
         (0, c.ZDy)(
             async () => {
                 let { default: e } = await Promise.all([n.e('7654'), n.e('17439')]).then(n.bind(n, 560114));
@@ -199,13 +199,13 @@ function w(e) {
                         })
                     );
             },
-            { contextKey: a ? c.u1M : c.z1l }
+            { contextKey: o ? c.u1M : c.z1l }
         );
     }
-    function C() {
+    function y() {
         (0, f.Z)({
             channel: t,
-            openInPopout: a,
+            openInPopout: o,
             analyticsLocations: u
         });
     }
@@ -218,7 +218,7 @@ function w(e) {
             theme: O.BRd.MIDNIGHT,
             children: (e) =>
                 (0, r.jsxs)(j.Z, {
-                    className: o()(I.root, I.singleUserRoot, e),
+                    className: a()(I.root, I.singleUserRoot, e),
                     children: [
                         s > 400 && !p
                             ? (0, r.jsx)('img', {
@@ -245,9 +245,9 @@ function w(e) {
                                 (0, r.jsxs)(c.zxk, {
                                     size: c.zxk.Sizes.LARGE,
                                     color: c.zxk.Colors.PRIMARY,
-                                    className: o()({ [I.button]: !p }),
+                                    className: a()({ [I.button]: !p }),
                                     innerClassName: I.buttonContents,
-                                    onClick: x,
+                                    onClick: C,
                                     children: [
                                         (0, r.jsx)(A, {
                                             size: 'xs',
@@ -259,9 +259,9 @@ function w(e) {
                                 (0, r.jsxs)(c.zxk, {
                                     size: c.zxk.Sizes.LARGE,
                                     color: c.zxk.Colors.PRIMARY,
-                                    className: o()({ [I.button]: !p }),
+                                    className: a()({ [I.button]: !p }),
                                     innerClassName: I.buttonContents,
-                                    onClick: C,
+                                    onClick: y,
                                     children: [
                                         (0, r.jsx)(T, {
                                             size: 'xs',
@@ -286,7 +286,7 @@ function R(e) {
             n_participants: d
         });
     });
-    let y = (0, p.Z)({ guildId: n.id }).slice(0, 3),
+    let x = (0, p.Z)({ guildId: n.id }).slice(0, 3),
         { analyticsLocations: S } = (0, g.ZP)(m.Z.VC_TILE_ACTIVITY_SUGGESTION),
         Z = i.useMemo(
             () => ({
@@ -315,8 +315,8 @@ function R(e) {
                       })
                     : null,
                 (0, r.jsx)('div', {
-                    className: o()(I.activitiesContainer, { [I.activitiesContainerSmol]: s <= 300 }),
-                    children: y.map((e) =>
+                    className: a()(I.activitiesContainer, { [I.activitiesContainerSmol]: s <= 300 }),
+                    children: x.map((e) =>
                         (0, r.jsx)(
                             h.Y,
                             {
@@ -338,10 +338,10 @@ function R(e) {
                             close_type: 'permanent',
                             n_participants: d
                         }),
-                            (0, x.EW)(a.z.VC_TILE_ACTIVITIES_ENTRY_POINT);
+                            (0, C.EW)(o.z.VC_TILE_ACTIVITIES_ENTRY_POINT);
                     },
                     children: [
-                        (0, r.jsx)(C.Z, {}),
+                        (0, r.jsx)(y.Z, {}),
                         (0, r.jsx)(c.Text, {
                             variant: 'text-sm/medium',
                             children: E.intl.string(E.t['5E9SBw'])

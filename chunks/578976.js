@@ -1,15 +1,15 @@
 n.d(t, {
     nW: () => s,
-    s_: () => a
+    s_: () => o
 });
 var r = n(311570),
     i = n(46973);
 n(357352);
-var o = n(37113);
-let a = (e, t, n) => {
+var a = n(37113);
+let o = (e, t, n) => {
         let r = {
             qualityOptions: {
-                preset: o.tI.PRESET_CUSTOM,
+                preset: a.tI.PRESET_CUSTOM,
                 resolution: e,
                 frameRate: t
             },

@@ -63,7 +63,7 @@ let x = i.memo(function (e) {
         F = i.useCallback(() => {
             (0, b.Z)(P);
         }, [P]),
-        z = i.useCallback(() => {
+        W = i.useCallback(() => {
             let e = null != Z && (0, _.vd)(Z.type) ? Z : null,
                 t = null != e ? e.getGuildId() : w;
             if (M && null != A && null != y.Z.getVoiceChannelId()) {
@@ -125,7 +125,7 @@ let x = i.memo(function (e) {
                 };
             });
         }, [Z, w, A, U, M]),
-        W =
+        z =
             (null != A || null == R || (0, c.R)()) && (N || I)
                 ? (N
                       ? ((t = !1),
@@ -137,7 +137,7 @@ let x = i.memo(function (e) {
                       : T
                         ? ((t = !1),
                           (l = () => {
-                              z(), (0, p.v)(G, p.d.STREAM, !0);
+                              W(), (0, p.v)(G, p.d.STREAM, !0);
                           }),
                           (u = s.hGI),
                           (x = null != A ? S.intl.formatToPlainString(S.t.AB5gT0, { game: A.name }) : S.intl.string(S.t.FeUKeH)))
@@ -169,10 +169,10 @@ let x = i.memo(function (e) {
                       icon: s.PBZ
                   }),
         q = null == P ? null : (0, r.jsx)(f.Z, {});
-    return null == W && null == Y && null == K
+    return null == z && null == Y && null == K
         ? null
         : (0, r.jsxs)('div', {
               className: j.actions,
-              children: [W, Y, null != K ? K : q]
+              children: [z, Y, null != K ? K : q]
           });
 });

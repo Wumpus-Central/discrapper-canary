@@ -1,118 +1,121 @@
 n.d(t, {
-    Z: () => m,
-    k: () => _
+    Z: () => b,
+    k: () => m
 }),
     n(953529);
 var r,
-    i = n(255367);
-n(73800);
-var l = n(120356),
-    a = n.n(l),
-    o = n(481060),
-    c = n(565138),
-    s = n(372769),
-    d = n(857395),
-    u = n(131154),
-    h = n(38981),
-    g = n(7394),
-    _ = (((r = {})[(r.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (r[(r.TRENDING = 1)] = 'TRENDING'), (r[(r.PERSONALIZED = 2)] = 'PERSONALIZED'), (r[(r.USER_GUILDS = 3)] = 'USER_GUILDS'), (r[(r.FRIENDS_GUILDS = 4)] = 'FRIENDS_GUILDS'), (r[(r.INTRO_CARD = 5)] = 'INTRO_CARD'), (r[(r.FEATURED = 6)] = 'FEATURED'), r);
-function m(e) {
-    let { guild: t, stageInstance: n, showGuildPopout: r, setShowGuildPopout: l, handleGuildNameClick: _, source: m, speakers: b, speakerCount: x, audienceCount: f, channelName: p } = e,
-        v = t.id;
+    i = n(255367),
+    l = n(73800),
+    a = n(120356),
+    o = n.n(a),
+    c = n(481060),
+    s = n(565138),
+    d = n(372769),
+    u = n(857395),
+    h = n(131154),
+    g = n(38981),
+    _ = n(7394),
+    m = (((r = {})[(r.UNSPECIFIED = 0)] = 'UNSPECIFIED'), (r[(r.TRENDING = 1)] = 'TRENDING'), (r[(r.PERSONALIZED = 2)] = 'PERSONALIZED'), (r[(r.USER_GUILDS = 3)] = 'USER_GUILDS'), (r[(r.FRIENDS_GUILDS = 4)] = 'FRIENDS_GUILDS'), (r[(r.INTRO_CARD = 5)] = 'INTRO_CARD'), (r[(r.FEATURED = 6)] = 'FEATURED'), r);
+function b(e) {
+    let { guild: t, stageInstance: n, showGuildPopout: r, setShowGuildPopout: a, handleGuildNameClick: m, source: b, speakers: f, speakerCount: x, audienceCount: p, channelName: v } = e,
+        j = l.useRef(null),
+        N = t.id;
     return (0, i.jsx)('div', {
-        className: g.contentContainer,
+        className: _.contentContainer,
         children: (0, i.jsxs)('div', {
-            className: g.headerContainer,
+            className: _.headerContainer,
             children: [
                 (0, i.jsxs)('div', {
-                    className: g.guildInfoContainer,
+                    className: _.guildInfoContainer,
                     children: [
-                        (0, i.jsx)(d.Z, {
-                            guildId: v,
+                        (0, i.jsx)(u.Z, {
+                            guildId: N,
                             shouldShow: r,
-                            onRequestClose: () => l(!1),
+                            onRequestClose: () => a(!1),
+                            targetElementRef: j,
                             children: () =>
-                                (0, i.jsxs)(o.P3F, {
-                                    className: g.flexContainerRow,
-                                    onClick: _,
+                                (0, i.jsxs)(c.P3F, {
+                                    className: _.flexContainerRow,
+                                    onClick: m,
+                                    innerRef: j,
                                     children: [
-                                        (0, i.jsx)(c.Z, {
+                                        (0, i.jsx)(s.Z, {
                                             guild: t,
-                                            size: c.Z.Sizes.MINI,
-                                            className: g.guildIcon
+                                            size: s.Z.Sizes.MINI,
+                                            className: _.guildIcon
                                         }),
                                         (0, i.jsxs)('div', {
-                                            className: g.flexContainerRow,
+                                            className: _.flexContainerRow,
                                             children: [
-                                                (0, i.jsx)(o.Text, {
+                                                (0, i.jsx)(c.Text, {
                                                     color: 'header-secondary',
                                                     variant: 'text-sm/normal',
-                                                    className: a()(g.guildName, { [g.disabled]: null == _ }),
+                                                    className: o()(_.guildName, { [_.disabled]: null == m }),
                                                     children: t.name
                                                 }),
-                                                (0, i.jsx)(s.Z, { guild: t })
+                                                (0, i.jsx)(d.Z, { guild: t })
                                             ]
                                         })
                                     ]
                                 })
                         }),
                         (0, i.jsxs)('div', {
-                            className: g.rightJustifiedContent,
+                            className: _.rightJustifiedContent,
                             children: [
-                                6 === m &&
+                                6 === b &&
                                     (0, i.jsx)('div', {
-                                        className: g.featuredTag,
-                                        children: (0, i.jsx)(o.Text, {
+                                        className: _.featuredTag,
+                                        children: (0, i.jsx)(c.Text, {
                                             variant: 'text-sm/normal',
-                                            className: g.featuredTagText,
+                                            className: _.featuredTagText,
                                             children: 'Featured'
                                         })
                                     }),
-                                (0, i.jsx)(h.Z, {
-                                    count: f,
-                                    className: g.__invalid_audienceCount
+                                (0, i.jsx)(g.Z, {
+                                    count: p,
+                                    className: _.__invalid_audienceCount
                                 })
                             ]
                         })
                     ]
                 }),
-                (0, i.jsx)(o.Text, {
+                (0, i.jsx)(c.Text, {
                     color: 'header-primary',
                     variant: 'text-lg/semibold',
-                    className: g.topicText,
+                    className: _.topicText,
                     children: n.topic
                 }),
-                (0, i.jsx)(o.Text, {
+                (0, i.jsx)(c.Text, {
                     color: 'header-secondary',
-                    className: g.description,
+                    className: _.description,
                     variant: 'text-sm/normal',
                     children: n.description
                 }),
-                (0, i.jsx)(u.Z, {
+                (0, i.jsx)(h.Z, {
                     guild: t,
-                    speakers: b,
+                    speakers: f,
                     speakerCount: x,
-                    className: g.speakers
+                    className: _.speakers
                 }),
-                null != p &&
+                null != v &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)('hr', { className: g.divider }),
+                            (0, i.jsx)('hr', { className: _.divider }),
                             (0, i.jsxs)('div', {
-                                className: g.footer,
+                                className: _.footer,
                                 children: [
-                                    (0, i.jsx)(o.ewx, {
+                                    (0, i.jsx)(c.ewx, {
                                         size: 'custom',
                                         color: 'currentColor',
                                         width: 20,
                                         height: 20,
-                                        className: g.icon
+                                        className: _.icon
                                     }),
-                                    (0, i.jsx)(o.Text, {
+                                    (0, i.jsx)(c.Text, {
                                         color: 'header-secondary',
-                                        className: g.__invalid_label,
+                                        className: _.__invalid_label,
                                         variant: 'text-sm/normal',
-                                        children: p
+                                        children: v
                                     })
                                 ]
                             })

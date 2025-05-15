@@ -26,6 +26,7 @@ function x(e) {
         I = (0, l.e7)([s.Z], () => S && s.Z.getUnseenInviteCount() > 0),
         N = (0, a.dQu)(a.TVs.modules.chat.INPUT_ICON_SIZE);
     return (0, r.jsx)(f.k, {
+        targetElementRef: j,
         onOpen: t,
         onClose: n,
         badgeState: { badgeForYou: C },

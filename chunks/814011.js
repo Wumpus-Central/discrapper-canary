@@ -1,14 +1,14 @@
 n.d(t, { Z: () => l }), n(388685);
 var r = n(327432),
     i = n(772096),
-    o = n(925994),
-    a = n(436660),
+    a = n(925994),
+    o = n(436660),
     s = n(887490);
 function l(e) {
     return (
         (e.setFragmentData = (t) => {
             if (null != e.selection) {
-                let n = (0, o.sk)(s.bN.richValue(e), {
+                let n = (0, a.sk)(s.bN.richValue(e), {
                     mode: 'plain',
                     range: e.selection,
                     preventEmojiSurrogates: !0
@@ -25,19 +25,19 @@ function l(e) {
             if (0 === n.length) return !1;
             if (null != e.selection && s.M8.isExpanded(e.selection)) {
                 let t = r.ML.string(e, e.selection),
-                    o = (0, i.yw)(n),
+                    a = (0, i.yw)(n),
                     l = (0, i.yw)(t);
-                if (null != o && null == l) {
+                if (null != a && null == l) {
                     let [t, n] = s.M8.edges(e.selection);
                     return (
                         s.bN.withoutNormalizing(e, () => {
-                            a.Q.select(e, t), e.insertText('['), a.Q.select(e, n), 0 === s.C0.compare(t.path, n.path) && a.Q.move(e, { distance: 1 }), e.insertText(']('.concat(o.target, ')'));
+                            o.Q.select(e, t), e.insertText('['), o.Q.select(e, n), 0 === s.C0.compare(t.path, n.path) && o.Q.move(e, { distance: 1 }), e.insertText(']('.concat(a.target, ')'));
                         }),
                         !0
                     );
                 }
-                if (null != o && null != l) return a.Q.delete(e, { at: e.selection }), e.insertText(o.target), !0;
-                a.Q.delete(e, { at: e.selection });
+                if (null != a && null != l) return o.Q.delete(e, { at: e.selection }), e.insertText(a.target), !0;
+                o.Q.delete(e, { at: e.selection });
             }
             return e.insertText(n), !0;
         }),

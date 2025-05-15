@@ -10,7 +10,7 @@ var n = r(255367),
     d = r(553846),
     h = r(953100);
 function p(e) {
-    let { alpha2: t, countryCode: r, forceMode: i, label: p, error: m, className: f, required: x, value: g, setRef: j, placeholder: v, autoFocus: C, maxLength: N, spellCheck: O, autoComplete: b, autoCapitalize: y, autoCorrect: E, onChange: S, inputClassName: P } = e,
+    let { alpha2: t, countryCode: r, forceMode: i, label: p, error: m, className: f, required: x, value: g, setRef: j, placeholder: v, autoFocus: C, maxLength: N, spellCheck: O, autoComplete: b, autoCapitalize: E, autoCorrect: y, onChange: S, inputClassName: P } = e,
         T = (0, o.Dt)(),
         [k, w] = s.useState(!1),
         A = (0, c.o9)(i, g);
@@ -46,8 +46,8 @@ function p(e) {
                         S(e, t);
                     },
                     autoComplete: b,
-                    autoCapitalize: y,
-                    autoCorrect: E,
+                    autoCapitalize: E,
+                    autoCorrect: y,
                     autoFocus: C,
                     maxLength: N,
                     spellCheck: O,

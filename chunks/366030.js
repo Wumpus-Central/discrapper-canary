@@ -26,9 +26,9 @@ var r = n(255367),
     S = n(134433),
     w = n(753194),
     I = n(458034),
-    N = n(856651),
-    k = n(981631),
-    R = n(228168),
+    R = n(856651),
+    N = n(981631),
+    k = n(228168),
     E = n(388032),
     M = n(933466);
 function Z(e) {
@@ -61,13 +61,13 @@ function A(e) {
         { connectionType: n, connectionMetadataField: o, operator: a, value: i, description: l } = e;
     if (null != l)
         switch (a) {
-            case N.iO.LESS_THAN:
+            case R.iO.LESS_THAN:
                 t = E.intl.format(E.t['2p7dAw'], {
                     description: l,
                     count: Math.max(0, Number(i) - 1)
                 });
                 break;
-            case N.iO.GREATER_THAN:
+            case R.iO.GREATER_THAN:
                 t = E.intl.format(E.t['2p7dAw'], {
                     description: l,
                     count: Math.max(0, Number(i) + 1)
@@ -190,7 +190,7 @@ function L(e) {
         { onGetRolesClicked: n, onOpenProfile: a, eligibilityStates: i, userId: l, roleId: s, channelId: u, guildId: d } = e;
     o.useEffect(() => {
         x.default.track(
-            k.rMx.PASSPORT_ROLE_POPOUT_VIEWED,
+            N.rMx.PASSPORT_ROLE_POPOUT_VIEWED,
             Z(
                 {
                     other_user_id: l,
@@ -285,7 +285,7 @@ function B(e) {
                                   guildId: a.id,
                                   channelId: l.id,
                                   roleId: u.id,
-                                  subsection: R.Tb.CONNECTIONS,
+                                  subsection: k.Tb.CONNECTIONS,
                                   sourceAnalyticsLocations: s
                               }),
                                   o();

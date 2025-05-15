@@ -6,28 +6,28 @@ n.d(t, {
     n(388685);
 var r = n(73800),
     i = n(691324),
-    o = n(442837),
-    a = n(780384),
+    a = n(442837),
+    o = n(780384),
     s = n(514361),
     l = n(629935);
 let c = 'data-client-themes',
     u = 'custom-theme-background',
     d = () => {
-        let e = (0, o.e7)([s.Z], () => s.Z.gradientPreset);
+        let e = (0, a.e7)([s.Z], () => s.Z.gradientPreset);
         return (0, r.useMemo)(() => {
             if (null == e) return null;
             let t = s.Z.getLinearGradient();
             if (null == t) return null;
             let n = i.b[e.colors[0].token].hex,
                 r = i.b[e.colors[e.colors.length - 1].token].hex,
-                o = (0, l.W4)({
+                a = (0, l.W4)({
                     enabled: !0,
                     primaryColor: n,
                     secondaryColor: r,
-                    isDarkTheme: (0, a.wj)(e.theme)
+                    isDarkTheme: (0, o.wj)(e.theme)
                 }),
                 c = '\n      '.concat(
-                    Object.entries(o)
+                    Object.entries(a)
                         .map((e) => {
                             let [t, n] = e;
                             return ''.concat(t, ': ').concat(n, ';');

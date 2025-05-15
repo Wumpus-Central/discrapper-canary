@@ -73,8 +73,8 @@ function D() {
         B = (0, a.e7)([C.Z], () => C.Z.getChannelId(N.I_8)),
         V = (0, a.e7)([v.Z], () => v.Z.getChannel(B)),
         H = (0, y.Z)((e) => e.guildId) === N.I_8,
-        { badge: F, unread: z } = (0, P.Z)(G),
-        W = (function (e) {
+        { badge: F, unread: W } = (0, P.Z)(G),
+        z = (function (e) {
             let t = (0, a.e7)([C.Z], () => C.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
                 r = (0, a.e7)([O.Z], () => {
@@ -119,7 +119,7 @@ function D() {
             (0, r.jsx)(g.Z, {
                 selected: H,
                 hovered: k,
-                unread: z && !U,
+                unread: W && !U,
                 className: T.pill
             }),
             (0, r.jsx)(w.Z, {
@@ -127,7 +127,7 @@ function D() {
                 children: (0, r.jsx)(I.S, {
                     children: (0, r.jsx)(c.aRk, {
                         selected: K || H || k,
-                        upperBadge: W,
+                        upperBadge: z,
                         lowerBadge: Y,
                         children: (0, r.jsx)(
                             c.LYs,

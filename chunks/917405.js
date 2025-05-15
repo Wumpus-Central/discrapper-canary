@@ -63,6 +63,7 @@ class m extends l.PureComponent {
         return null == t
             ? e({})
             : (0, r.jsx)(a.yRy, {
+                  targetElementRef: this.statusButtonRef,
                   renderPopout: this.renderPopout(t),
                   position: 'top',
                   children: e
@@ -74,6 +75,7 @@ class m extends l.PureComponent {
         return this.renderPopoutTarget((e) => {
             let { onClick: t } = e;
             return (0, r.jsx)(a.zxk, {
+                buttonRef: this.statusButtonRef,
                 look: a.zxk.Looks.BLANK,
                 size: a.zxk.Sizes.NONE,
                 onClick: (e) => {
@@ -129,6 +131,7 @@ class m extends l.PureComponent {
     }
     constructor(...e) {
         super(...e),
+            g(this, 'statusButtonRef', l.createRef()),
             g(this, 'renderPopout', (e) => (t) => {
                 var n, l;
                 return (0, r.jsx)(

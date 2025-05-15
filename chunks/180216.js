@@ -2,8 +2,8 @@ n.d(t, { Z: () => b }), n(388685), n(953529);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    o = n(481060),
-    a = n(592125),
+    a = n(481060),
+    o = n(592125),
     s = n(430824),
     c = n(584825),
     u = n(406074),
@@ -20,10 +20,10 @@ function b(e) {
             channelId: n
         }),
         _ = (0, c.GG)(t),
-        x = (0, c.YB)(t),
-        y = (0, l.e7)([s.Z], () => s.Z.getGuild(t), [t]),
-        C = null == y ? void 0 : y.name,
-        v = (0, l.e7)([a.Z], () => a.Z.getChannel(n)),
+        C = (0, c.YB)(t),
+        x = (0, l.e7)([s.Z], () => s.Z.getGuild(t), [t]),
+        y = null == x ? void 0 : x.name,
+        v = (0, l.e7)([o.Z], () => o.Z.getChannel(n)),
         j = i.useMemo(() => {
             let e = {};
             for (let t of _) for (let n of t.subscription_listings_ids) e[n] = t.id;
@@ -34,27 +34,27 @@ function b(e) {
         location: f.Sbl.ROLE_SUBSCRIPTION_GATED_CHANNEL,
         relevantSubscriptionListingIds: b.map((e) => e.id)
     }),
-    null == y)
+    null == x)
         ? (0, r.jsx)('div', {
               className: g.__invalid_spinnerContainer,
-              children: (0, r.jsx)(o.$jN, { className: g.__invalid_spinner })
+              children: (0, r.jsx)(a.$jN, { className: g.__invalid_spinner })
           })
-        : (0, r.jsxs)(o.w0Z, {
+        : (0, r.jsxs)(a.w0Z, {
               className: g.pageContainer,
               children: [
-                  (0, r.jsx)(o.X6q, {
+                  (0, r.jsx)(a.X6q, {
                       variant: 'heading-xl/semibold',
                       className: g.joinCtaTitle,
                       children: m.intl.format(m.t.xHMpys, {
-                          serverName: C,
+                          serverName: y,
                           channelName: null == v ? void 0 : v.name
                       })
                   }),
-                  (0, r.jsx)(o.Text, {
+                  (0, r.jsx)(a.Text, {
                       className: g.joinCtaSubtitle,
                       variant: 'text-md/normal',
                       color: 'header-secondary',
-                      children: null == x ? void 0 : x.description
+                      children: null == C ? void 0 : C.description
                   }),
                   (0, r.jsx)(p.Z, {
                       guildId: t,

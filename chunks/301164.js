@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    o = n(481060),
-    a = n(738672),
+    a = n(481060),
+    o = n(738672),
     s = n(447564),
     c = n(921944),
     u = n(388032),
@@ -50,7 +50,7 @@ let h = (e) => {
     });
 };
 function f(e) {
-    let { channel: t, onClick: n, hidden: i, onDismiss: a } = e;
+    let { channel: t, onClick: n, hidden: i, onDismiss: o } = e;
     return (0, r.jsxs)('div', {
         className: l()(d.popoutContainer, { [d.hidden]: i }),
         children: [
@@ -59,15 +59,15 @@ function f(e) {
                 src: 'https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png',
                 alt: 'HD Streaming Nitro Perk'
             }),
-            (0, r.jsx)(o.zxk, {
+            (0, r.jsx)(a.zxk, {
                 className: d.closeButton,
                 'aria-label': u.intl.string(u.t.cpT0Cg),
-                look: o.zxk.Looks.BLANK,
-                size: o.zxk.Sizes.NONE,
+                look: a.zxk.Looks.BLANK,
+                size: a.zxk.Sizes.NONE,
                 onClick: () => {
-                    a();
+                    o();
                 },
-                children: (0, r.jsx)(o.Dio, {
+                children: (0, r.jsx)(a.Dio, {
                     size: 'xs',
                     className: d.closeIcon,
                     color: 'white'
@@ -76,14 +76,14 @@ function f(e) {
             (0, r.jsxs)('div', {
                 className: d.infoContainerParent,
                 children: [
-                    (0, r.jsx)(o.X6q, {
+                    (0, r.jsx)(a.X6q, {
                         className: d.heading,
                         variant: 'heading-md/extrabold',
                         children: u.intl.string(u.t.kQqTnp)
                     }),
                     (0, r.jsx)('div', {
                         className: d.infoContainer,
-                        children: (0, r.jsx)(o.Text, {
+                        children: (0, r.jsx)(a.Text, {
                             className: d.infoText,
                             variant: 'text-sm/medium',
                             children: u.intl.string(u.t.cxf5yM)
@@ -91,11 +91,11 @@ function f(e) {
                     }),
                     (0, r.jsx)('div', {
                         className: d.buttonContainer,
-                        children: (0, r.jsx)(o.zxk, {
+                        children: (0, r.jsx)(a.zxk, {
                             onClick: () => {
                                 (0, s.k)(t, 'HDStreamingPotionUpsellPopout'), n();
                             },
-                            color: o.Ttl.WHITE,
+                            color: a.Ttl.WHITE,
                             className: d.button,
                             children: u.intl.string(u.t.GBe9lJ)
                         })
@@ -109,7 +109,7 @@ function m(e) {
     var t,
         n,
         { channel: i, onClick: l } = e,
-        o = (function (e, t) {
+        a = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -129,8 +129,8 @@ function m(e) {
             return i;
         })(e, ['channel', 'onClick']);
     return (0, r.jsx)(
-        a.h,
-        ((t = p({}, o)),
+        o.h,
+        ((t = p({}, a)),
         (n = n =
             {
                 skipForceHide: !0,

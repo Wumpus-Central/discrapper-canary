@@ -1,33 +1,33 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => u });
 var r = n(255367);
 n(73800);
-var i = n(481060),
-    l = n(906732),
-    o = n(522651),
+var o = n(481060),
+    i = n(906732),
+    l = n(522651),
     a = n(871499),
-    s = n(388032);
-function c(e) {
+    c = n(388032);
+function u(e) {
     var { onClick: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                i = (function (e, t) {
+                o = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        i = {},
-                        l = Object.keys(e);
-                    for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
+                        o = {},
+                        i = Object.keys(e);
+                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                    return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var l = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
-            return i;
+            return o;
         })(e, ['onClick']);
-    let { parentAnalyticsLocation: c } = (0, l.ZP)();
+    let { parentAnalyticsLocation: u } = (0, i.ZP)();
     return (0, r.jsx)(
         a.Z,
         (function (e) {
@@ -56,11 +56,11 @@ function c(e) {
             return e;
         })(
             {
-                label: s.intl.string(s.t.UKOtz8),
-                iconComponent: i.xhG,
+                label: c.intl.string(c.t.UKOtz8),
+                iconComponent: o.xhG,
                 tooltipPosition: 'bottom',
                 onClick: (e) => {
-                    (0, o.v)(c, o.d.MORE), t(e);
+                    (0, l.v)(u, l.d.MORE), t(e);
                 }
             },
             n

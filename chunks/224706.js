@@ -1,8 +1,8 @@
 n.d(t, { Z: () => k }), n(388685), n(35282), n(415506);
 var r = n(664751),
     i = n(990547),
-    o = n(243814),
-    a = n(544891),
+    a = n(243814),
+    o = n(544891),
     s = n(283693),
     l = n(570140),
     c = n(638880),
@@ -28,12 +28,12 @@ var r = n(664751),
 let P = 3,
     R = 20;
 function w(e) {
-    let { applicationId: t, secret: n, channelId: r, intent: i = N.Ws.PLAY, embedded: o = !1, source: a, locationObject: s, analyticsLocations: c } = e;
+    let { applicationId: t, secret: n, channelId: r, intent: i = N.Ws.PLAY, embedded: a = !1, source: o, locationObject: s, analyticsLocations: c } = e;
     x({
         applicationId: t,
         channelId: r,
-        embedded: o,
-        source: a,
+        embedded: a,
+        source: o,
         locationObject: s,
         analyticsLocations: c
     })
@@ -44,7 +44,7 @@ function w(e) {
                 applicationId: t,
                 secret: n,
                 intent: i,
-                embedded: o
+                embedded: a
             });
         })
         .catch(() =>
@@ -63,13 +63,13 @@ function D(e, t) {
           };
 }
 function L(e) {
-    return a.tn
+    return o.tn
         .post({
             url: A.ANM.OAUTH2_AUTHORIZE,
             query: {
                 client_id: e,
                 response_type: 'token',
-                scope: [o.x.IDENTIFY].join(' ')
+                scope: [a.x.IDENTIFY].join(' ')
             },
             retries: 3,
             body: { authorize: !0 },
@@ -94,13 +94,13 @@ function L(e) {
         );
 }
 async function x(e) {
-    let { applicationId: t, branchId: n, channelId: r, embedded: i = !1, source: o, locationObject: a = {}, analyticsLocations: s = [] } = e;
+    let { applicationId: t, branchId: n, channelId: r, embedded: i = !1, source: a, locationObject: o = {}, analyticsLocations: s = [] } = e;
     if (i)
         return (await (0, c.Z)({
             applicationId: t,
             activityChannelId: null != r ? r : void 0,
-            source: o,
-            locationObject: a,
+            source: a,
+            locationObject: o,
             analyticsLocations: s
         }))
             ? 0
@@ -172,8 +172,8 @@ let k = {
                 let r = e.getFlags(),
                     i = b.yE(r, A.eHb.OVERLAY_DISABLED);
                 t && i !== t && (r = b.x9(r, A.eHb.OVERLAY_DISABLED));
-                let o = b.yE(r, A.eHb.OVERLAY_V3_DISABLED);
-                null != n && n !== o && (r = b.x9(r, A.eHb.OVERLAY_V3_DISABLED)), S.h(e.id, e.branchId, r);
+                let a = b.yE(r, A.eHb.OVERLAY_V3_DISABLED);
+                null != n && n !== a && (r = b.x9(r, A.eHb.OVERLAY_V3_DISABLED)), S.h(e.id, e.branchId, r);
                 return;
             }
         }
@@ -226,7 +226,7 @@ let k = {
         });
         let r = async (e) => {
             try {
-                let t = await a.tn.get({
+                let t = await o.tn.get({
                     url: A.ANM.APPLICATIONS_GAMES_SUPPLEMENTAL,
                     query: { application_ids: e },
                     rejectWithError: !0
@@ -292,17 +292,17 @@ let k = {
         });
     },
     reportUnverifiedGame(e) {
-        let { name: t, iconHash: n, publisher: r, distributor: i, sku: o, executableName: s } = e,
+        let { name: t, iconHash: n, publisher: r, distributor: i, sku: a, executableName: s } = e,
             c = (0, d.F)(s);
         null != c &&
-            a.tn
+            o.tn
                 .post({
                     url: A.ANM.UNVERIFIED_APPLICATIONS,
                     body: {
                         name: t,
                         os: (0, O.getPlatformName)(),
                         icon: n,
-                        distributor_application: D(i, o),
+                        distributor_application: D(i, a),
                         executable: c,
                         publisher: r,
                         report_version: P
@@ -324,7 +324,7 @@ let k = {
                 });
     },
     uploadIcon(e, t, n) {
-        a.tn.post({
+        o.tn.post({
             url: A.ANM.UNVERIFIED_APPLICATIONS_ICONS,
             body: {
                 application_name: e,
@@ -344,7 +344,7 @@ let k = {
     },
     launch: x,
     async join(e) {
-        let { userId: t, sessionId: n, applicationId: r, channelId: i, messageId: o, intent: a = N.Ws.PLAY, embedded: s = !1, source: c, locationObject: u, analyticsLocations: d } = e;
+        let { userId: t, sessionId: n, applicationId: r, channelId: i, messageId: a, intent: o = N.Ws.PLAY, embedded: s = !1, source: c, locationObject: u, analyticsLocations: d } = e;
         if (__OVERLAY__)
             return (
                 l.Z.dispatch({
@@ -353,7 +353,7 @@ let k = {
                     sessionId: n,
                     applicationId: r,
                     channelId: i,
-                    messageId: o
+                    messageId: a
                 }),
                 Promise.resolve(!0)
             );
@@ -362,13 +362,13 @@ let k = {
             applicationId: r
         });
         try {
-            let e = await I.Z.getJoinSecret(t, n, r, i, o);
+            let e = await I.Z.getJoinSecret(t, n, r, i, a);
             return (
                 w({
                     applicationId: r,
                     secret: e,
                     channelId: i,
-                    intent: a,
+                    intent: o,
                     embedded: s,
                     source: c,
                     locationObject: u,

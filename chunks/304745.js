@@ -1,107 +1,99 @@
-n.d(t, { M: () => N }), n(539854);
+n.d(t, { M: () => I }), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    o = n(704215),
-    a = n(481060),
+    a = n(704215),
+    o = n(481060),
     s = n(911969),
     c = n(40851),
     u = n(317381),
-    d = n(683921),
-    p = n(588580),
-    h = n(374065),
-    f = n(451576),
-    m = n(526846),
-    g = n(119315),
-    b = n(403404),
-    _ = n(906732),
-    x = n(522651),
-    y = n(243778),
-    C = n(579185),
-    v = n(301076),
-    j = n(221241),
-    O = n(82965),
-    E = n(127379),
-    I = n(981631),
-    S = n(921944),
-    P = n(388032),
-    Z = n(393740);
-function N(e) {
-    let { channel: t, idle: n, whichPopoutIsOpen: N, setWhichPopoutIsOpen: T } = e,
-        A = (0, l.e7)([u.ZP], () => u.ZP.isLaunchingActivity()),
-        w = (0, h.KF)(t.id),
-        R = (0, h.g5)(w),
-        k = w !== h.jy.CAN_LAUNCH || A,
-        { isHovered: M, setIsHovered: L, onMouseEnter: D, onMouseLeave: U } = (0, C.Z)(200, 300),
-        B = (0, O.Z)({ location: 'CenterControlTrayActivityButton' }),
-        { coloredIconsEnabled: G } = (0, j.Z)({ location: 'VideoButton' }),
-        F = (0, p.a)({ surface: s.eR.VOICE_LAUNCHER }),
-        H = (0, l.e7)([u.ZP], () => null != u.ZP.getSelfEmbeddedActivityForLocation(u.ZP.getConnectedActivityLocation())),
-        V = (0, d.Z)({ channelId: t.id }),
-        z = (G && H) || (!G && (V || (!B && M))),
-        W = !k,
-        Y = i.useCallback(
+    d = n(588580),
+    p = n(374065),
+    h = n(451576),
+    f = n(526846),
+    m = n(119315),
+    g = n(403404),
+    b = n(906732),
+    _ = n(522651),
+    C = n(243778),
+    x = n(579185),
+    y = n(301076),
+    v = n(127379),
+    j = n(981631),
+    O = n(921944),
+    E = n(388032);
+function I(e) {
+    let { channel: t, idle: n, whichPopoutIsOpen: I, setWhichPopoutIsOpen: S } = e,
+        P = (0, l.e7)([u.ZP], () => u.ZP.isLaunchingActivity()),
+        Z = (0, p.KF)(t.id),
+        N = (0, p.g5)(Z),
+        T = Z !== p.jy.CAN_LAUNCH || P,
+        { isHovered: A, setIsHovered: w, onMouseEnter: R, onMouseLeave: M } = (0, x.Z)(200, 300),
+        k = (0, d.a)({ surface: s.eR.VOICE_LAUNCHER }),
+        L = (0, l.e7)([u.ZP], () => null != u.ZP.getSelfEmbeddedActivityForLocation(u.ZP.getConnectedActivityLocation())),
+        D = !T,
+        U = i.useCallback(
             (e) => {
-                'focus' !== e.type && D();
+                'focus' !== e.type && R();
             },
-            [D]
+            [R]
         ),
-        q = (0, c.bp)() === I.IlC.POPOUT,
-        { analyticsLocations: K, parentAnalyticsLocation: X } = (0, _.ZP)(),
-        Q = i.useCallback(() => {
-            (0, x.v)(X, x.d.ACTIVITY),
-                (0, b.Z)({
+        B = (0, c.bp)() === j.IlC.POPOUT,
+        { analyticsLocations: G, parentAnalyticsLocation: F } = (0, b.ZP)(),
+        H = i.useCallback(() => {
+            (0, _.v)(F, _.d.ACTIVITY),
+                (0, g.Z)({
                     channel: t,
-                    openInPopout: q,
-                    analyticsLocations: K
+                    openInPopout: B,
+                    analyticsLocations: G
                 });
-        }, [K, t, q, X]),
-        J = [];
-    k || J.push(o.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, f.Z)(t.id) && !k && J.push(o.z.ACTIVITY_GDM_ROCKET_SPARKLE), k || J.push(o.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP);
-    let $ = i.useRef(!1),
-        ee = i.useRef(null);
-    return (0, r.jsx)(y.ZP, {
-        contentTypes: J,
+        }, [G, t, B, F]),
+        V = [];
+    T || V.push(a.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, h.Z)(t.id) && !T && V.push(a.z.ACTIVITY_GDM_ROCKET_SPARKLE), T || V.push(a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP);
+    let z = i.useRef(!1),
+        W = i.useRef(null);
+    return (0, r.jsx)(C.ZP, {
+        contentTypes: V,
         children: (e) => {
             let { visibleContent: i, markAsDismissed: l } = e,
-                s = i === o.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !n && !M;
+                s = i === a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !n && !A;
             return (
-                !0 === $.current && !1 === s && l(S.L.AUTO_DISMISS),
-                $.current !== s && ($.current = s),
-                (0, r.jsx)(a.yRy, {
-                    targetElementRef: ee,
+                z.current && !s && l(O.L.AUTO_DISMISS),
+                z.current !== s && (z.current = s),
+                (0, r.jsx)(o.yRy, {
+                    targetElementRef: W,
                     fixed: !0,
-                    shouldShow: M && (N === E.D.ACTIVITY || null == N),
-                    animation: B ? a.yRy.Animation.FADE : a.yRy.Animation.TRANSLATE,
-                    animationPosition: B ? 'top' : 'bottom',
+                    shouldShow: A && (I === v.D.ACTIVITY || null == I),
+                    animation: o.yRy.Animation.FADE,
+                    animationPosition: 'top',
                     position: 'top',
                     align: 'center',
                     spacing: 16,
                     onRequestClose: () => {
-                        L(!1), null == T || T(void 0);
+                        w(!1), null == S || S(void 0);
                     },
                     renderPopout: (e) => {
                         let { closePopout: n, setPopoutRef: i } = e;
-                        return W
-                            ? (0, r.jsx)(m.m, {
+                        return D
+                            ? (0, r.jsx)(f.m, {
                                   ref: (e) => {
                                       null == i || i(e);
                                   },
                                   channel: t,
                                   closePopout: n,
-                                  onMouseEnter: D,
-                                  onMouseLeave: U,
-                                  isHovered: M,
-                                  onClick: () => l(S.L.UNKNOWN)
+                                  onMouseEnter: R,
+                                  onMouseLeave: M,
+                                  isHovered: A,
+                                  onClick: () => l(O.L.UNKNOWN)
                               })
                             : (0, r.jsx)(r.Fragment, {});
                     },
                     children: () =>
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsx)(a.ua7, {
-                                    text: P.intl.string(P.t.P8vmUl),
-                                    color: a.FGA.BRAND,
+                                (0, r.jsx)(o.ua7, {
+                                    text: E.intl.string(E.t.P8vmUl),
+                                    color: o.FGA.BRAND,
                                     forceOpen: !0,
                                     shouldShow: s,
                                     children: (e) => {
@@ -132,20 +124,19 @@ function N(e) {
                                                         });
                                                 }
                                                 return e;
-                                            })({ ref: ee }, e)),
+                                            })({ ref: W }, e)),
                                             (n = n =
                                                 {
-                                                    children: (0, r.jsx)(v.Z, {
-                                                        disabled: k,
-                                                        'aria-label': R,
-                                                        label: W ? void 0 : R,
-                                                        isActivityActive: z,
-                                                        className: B ? '' : Z.controlButton,
+                                                    children: (0, r.jsx)(y.Z, {
+                                                        disabled: T,
+                                                        'aria-label': N,
+                                                        label: D ? void 0 : N,
+                                                        isActivityActive: L,
                                                         onClick: () => {
-                                                            Q(), (i === o.z.ACTIVITIES_MINI_SHELF_SPARKLES || i === o.z.ACTIVITY_GDM_ROCKET_SPARKLE || i === o.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || i === o.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || i === o.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && l(S.L.TAKE_ACTION);
+                                                            H(), (i === a.z.ACTIVITIES_MINI_SHELF_SPARKLES || i === a.z.ACTIVITY_GDM_ROCKET_SPARKLE || i === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_1_SPARKLES || i === a.z.ACTIVITIES_WATCH_TOGETHER_APRIL_2023_WEEK_2_SPARKLES || i === a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP) && l(O.L.TAKE_ACTION);
                                                         },
-                                                        onMouseEnter: Y,
-                                                        onMouseLeave: U
+                                                        onMouseEnter: U,
+                                                        onMouseLeave: M
                                                     })
                                                 }),
                                             Object.getOwnPropertyDescriptors
@@ -164,19 +155,12 @@ function N(e) {
                                         );
                                     }
                                 }),
-                                F
-                                    ? B
-                                        ? (0, r.jsx)(g.r, {
-                                              top: 2,
-                                              right: 2,
-                                              size: 6
-                                          })
-                                        : (0, r.jsx)(g.r, {
-                                              top: 4,
-                                              right: 10,
-                                              size: 12,
-                                              maskColor: g.T.BLACK
-                                          })
+                                k
+                                    ? (0, r.jsx)(m.r, {
+                                          top: 2,
+                                          right: 2,
+                                          size: 6
+                                      })
                                     : null
                             ]
                         })

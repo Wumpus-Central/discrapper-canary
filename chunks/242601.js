@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(258871),
     U = n(340541),
     G = n(972264),
-    V = n(50101),
-    B = n(639777),
+    B = n(50101),
+    V = n(639777),
     H = n(11352),
     F = n(304445),
     z = n(344185),
@@ -199,6 +199,7 @@ class eN extends i.PureComponent {
                 ? this.renderGuildHeaderDropdownButton(e)
                 : l
                   ? (0, r.jsx)(f.yRy, {
+                        targetElementRef: this.guildHeaderDropdownButtonRef,
                         renderPopout: () =>
                             (0, r.jsx)('div', {
                                 onClick: (e) => e.stopPropagation(),
@@ -243,6 +244,7 @@ class eN extends i.PureComponent {
               : (0, r.jsx)(y.Gt, {
                     value: o,
                     children: (0, r.jsx)(f.KeG, {
+                        targetElementRef: this.guildHeaderRef,
                         renderPopout: this.renderMenuPopout,
                         position: 'bottom',
                         align: 'center',
@@ -260,6 +262,7 @@ class eN extends i.PureComponent {
                                 eI(
                                     ey(
                                         {
+                                            ref: this.guildHeaderRef,
                                             guild: t,
                                             controller: c,
                                             renderBanner: u,
@@ -357,6 +360,8 @@ class eN extends i.PureComponent {
     constructor(...e) {
         super(...e),
             eO(this, 'historyUnlisten', () => {}),
+            eO(this, 'guildHeaderRef', i.createRef()),
+            eO(this, 'guildHeaderDropdownButtonRef', i.createRef()),
             eO(this, 'showTimeout', new h.V7()),
             eO(this, 'state', {
                 controller: new c.Controller({
@@ -444,7 +449,8 @@ class eN extends i.PureComponent {
                     ? (0, r.jsx)(eu.wD, { open: e })
                     : (0, r.jsx)(b.Z, {
                           open: e,
-                          className: a()(eE.dropdownButton, { [eE.dropdownButtonBannerVisible]: this.state.bannerVisible })
+                          className: a()(eE.dropdownButton, { [eE.dropdownButtonBannerVisible]: this.state.bannerVisible }),
+                          ref: this.guildHeaderDropdownButtonRef
                       })
             ),
             eO(this, 'setAnimatedValueForBanner', (e) => {
@@ -521,12 +527,12 @@ function eT(e) {
     (0, x.Z)(o);
     let eU = (0, P.wE)(p.z.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
         eG = (0, G.Z)(n),
-        eV = (0, L.Z)(n),
-        eB = (0, d.e7)([el.Z], () => el.Z.getChannelId()),
+        eB = (0, L.Z)(n),
+        eV = (0, d.e7)([el.Z], () => el.Z.getChannelId()),
         eH = (0, d.e7)([ei.Z], () => ei.Z.desyncedVoiceStatesCount),
         eF = H.Y.useExperiment({ location: 'GuildSidebar' }, { autoTrackExposure: !0 }).enabled,
-        ez = (0, V.Ek)(n, 'ConnectedGuildSidebar'),
-        eW = (0, B.Z)(n),
+        ez = (0, B.Ek)(n, 'ConnectedGuildSidebar'),
+        eW = (0, V.Z)(n),
         eY = (0, N.Q3)('GuildSidebar');
     return (0, r.jsx)(eN, {
         guildId: n,
@@ -537,7 +543,7 @@ function eT(e) {
         selectedChannel: ex,
         selectedVoiceChannelId: g,
         voiceStates: c,
-        rtcConnectedChannelId: eB,
+        rtcConnectedChannelId: eV,
         rtcDesyncedVoiceStatesCount: eH,
         isUnavailable: j,
         theme: M,
@@ -556,7 +562,7 @@ function eT(e) {
         showActiveThreadsNotice: C && null != ey && ey >= 200 && eR,
         showGuildSoundboardPermissionUpsell: ev,
         showMediaChannelUpsell: eG,
-        showTierTemplatesUpsell: eV,
+        showTierTemplatesUpsell: eB,
         isHeaderPopoutOpen: eL,
         enableStudyGroup: U,
         isGuildHeaderDismissibleTooltipShown: ep,

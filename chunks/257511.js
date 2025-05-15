@@ -1,11 +1,11 @@
-n.d(t, { Z: () => o }), n(388685);
+n.d(t, { Z: () => a }), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(479099),
     l = n(33976);
-function o(e) {
+function a(e) {
     let { appliedTags: t, setAppliedTags: n } = e,
-        o =
+        a =
             null != n
                 ? (e) => {
                       t.has(e) && (t.delete(e), n(new Set(t)));
@@ -18,8 +18,8 @@ function o(e) {
                 i.Z,
                 {
                     tag: e,
-                    onRemove: o,
-                    size: null == o ? i.Z.Sizes.SMALL : i.Z.Sizes.MEDIUM
+                    onRemove: a,
+                    size: null == a ? i.Z.Sizes.SMALL : i.Z.Sizes.MEDIUM
                 },
                 e.id
             )

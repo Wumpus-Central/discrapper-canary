@@ -47,8 +47,8 @@ var r,
     V = n(285573),
     H = n(995993),
     F = n(910595),
-    z = n(120818),
-    W = n(61642),
+    W = n(120818),
+    z = n(61642),
     Y = n(848442),
     K = n(53425),
     q = n(424785),
@@ -570,7 +570,7 @@ class ep extends (r = l.PureComponent) {
                             );
                         case en.z.GUILD_ROLE_SUBSCRIPTIONS:
                             return (0, i.jsx)(
-                                W.Z,
+                                z.Z,
                                 {
                                     guild: r,
                                     selected: s === el.oC.ROLE_SUBSCRIPTIONS
@@ -587,7 +587,7 @@ class ep extends (r = l.PureComponent) {
                                 en.z.GUILD_SHOP
                             );
                         case en.z.GUILD_NEW_MEMBER_ACTIONS_PROGRESS_BAR:
-                            return (0, i.jsx)(z.T, { guild: r });
+                            return (0, i.jsx)(W.T, { guild: r });
                         case en.z.CHANNELS_AND_ROLES:
                             return (0, i.jsx)(
                                 H.m,

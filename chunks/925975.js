@@ -2,8 +2,8 @@ n.d(t, { g: () => b }), n(781311), n(388685), n(35282), n(704826), n(804061);
 var r = n(159635),
     i = n.n(r),
     l = n(969812),
-    o = n(904245),
-    a = n(367907),
+    a = n(904245),
+    o = n(367907),
     s = n(339085),
     c = n(222677),
     u = n(995774),
@@ -42,18 +42,18 @@ let f = /\\([*?+/])/g,
                 if (r) return;
                 let l = p.Z.getLastEditableMessage(i.id);
                 if (null == l || null == l.id) return { content: '' };
-                let [, a, s] = Array.from(null != (n = e.match(this.match.regex)) ? n : []);
-                a = a.replace(f, (e, t) => t);
+                let [, o, s] = Array.from(null != (n = e.match(this.match.regex)) ? n : []);
+                o = o.replace(f, (e, t) => t);
                 let c = !1;
                 (s = s.replace(f, (e, t) => t)).endsWith('/g') && ((s = s.slice(0, -2)), (c = !0));
-                let u = c ? l.content.replaceAll(a, s) : l.content.replace(a, s);
-                return (null == u || '' === u) && 0 === l.attachments.length ? o.Z.deleteMessage(i.id, l.id) : e !== l.content && o.Z.editMessage(i.id, l.id, { content: u }), { content: '' };
+                let u = c ? l.content.replaceAll(o, s) : l.content.replace(o, s);
+                return (null == u || '' === u) && 0 === l.attachments.length ? a.Z.deleteMessage(i.id, l.id) : e !== l.content && a.Z.editMessage(i.id, l.id, { content: u }), { content: '' };
             }
         },
         spoiler: { action: (e) => ({ content: (0, h.XmY)(e).trim() }) }
     };
 function g(e, t, n, r) {
-    return a.ZP.trackWithMetadata(h.rMx.SLASH_COMMAND_USED, { command: e }), t.action(n, r);
+    return o.ZP.trackWithMetadata(h.rMx.SLASH_COMMAND_USED, { command: e }), t.action(n, r);
 }
 function b(e, t) {
     for (let r in m) {

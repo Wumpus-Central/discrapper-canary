@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O });
 var r = n(255367),
     i = n(73800),
-    o = n(477690),
-    a = n(481060),
+    a = n(477690),
+    o = n(481060),
     s = n(880949),
     l = n(806966),
     c = n(65029),
@@ -14,8 +14,8 @@ var r = n(255367),
     h = n(419922),
     m = n(388032),
     g = n(271536);
-let E = (0, d.Mg)(o.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
-    b = (0, d.Mg)(o.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
+let E = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_PRIMARY_DIMENSIONS),
+    b = (0, d.Mg)(a.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BAR_GRAPHIC_SECONDARY_DIMENSIONS),
     y = (e) => {
         let t = null,
             n = null;
@@ -40,32 +40,32 @@ let E = (0, d.Mg)(o.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BA
     O = i.memo(function (e) {
         let { stickersGrid: t } = e,
             n = l.ZN.useStore((e) => e.inspectedExpressionPosition),
-            o = i.useMemo(() => {
+            a = i.useMemo(() => {
                 var e;
                 let { rowIndex: r, columnIndex: i } = n,
-                    o = null == (e = t[r]) ? void 0 : e[i];
-                return (null == o ? void 0 : o.type) === _.al.CREATE_STICKER
+                    a = null == (e = t[r]) ? void 0 : e[i];
+                return (null == a ? void 0 : a.type) === _.al.CREATE_STICKER
                     ? {
-                          guild_id: o.guild_id,
-                          name: o.name
+                          guild_id: a.guild_id,
+                          name: a.name
                       }
-                    : (null == o ? void 0 : o.type) !== _.al.STICKER
+                    : (null == a ? void 0 : a.type) !== _.al.STICKER
                       ? null
-                      : o.sticker;
+                      : a.sticker;
             }, [t, n]);
-        if (null == o) return null;
-        let { graphic: s, title: u } = y(o),
+        if (null == a) return null;
+        let { graphic: s, title: u } = y(a),
             d =
-                (0, p.jl)(o) || (0, p.J8)(o)
+                (0, p.jl)(a) || (0, p.J8)(a)
                     ? (0, r.jsx)(h.Z, {
                           isInteracting: !0,
                           size: E,
-                          sticker: o,
+                          sticker: a,
                           disableAnimation: !0
                       })
                     : (0, r.jsx)('div', {
                           className: g.iconWrapper,
-                          children: (0, r.jsx)(a.qJs, {
+                          children: (0, r.jsx)(o.qJs, {
                               size: 'md',
                               color: 'currentColor',
                               className: g.icon
@@ -74,7 +74,7 @@ let E = (0, d.Mg)(o.Z.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_BA
         return (0, r.jsx)(c.Z, {
             graphicPrimary: d,
             graphicSecondary: s,
-            titlePrimary: o.name,
-            titleSecondary: (0, p.jl)(o) || (0, p.J8)(o) ? u : null
+            titlePrimary: a.name,
+            titleSecondary: (0, p.jl)(a) || (0, p.J8)(a) ? u : null
         });
     });

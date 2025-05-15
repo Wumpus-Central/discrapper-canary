@@ -3,15 +3,15 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    o = n(481060),
-    a = n(540059),
+    a = n(481060),
+    o = n(540059),
     s = n(388032),
     c = n(661475);
 function u(e) {
     let { className: t, iconContainerClassName: n, icon: i, color: u, title: d, description: p, userCount: h, onClick: f, highlight: m } = e,
-        g = (0, a.Q3)('GuildEventPrompt'),
-        b = (0, o._q$)('GuildEventPrompt');
-    return (0, r.jsxs)(o.P3F, {
+        g = (0, o.Q3)('GuildEventPrompt'),
+        b = (0, a._q$)('GuildEventPrompt');
+    return (0, r.jsxs)(a.P3F, {
         className: l()(c.container, t, null != m && { [c.pulse]: m }),
         onClick: f,
         children: [
@@ -23,12 +23,12 @@ function u(e) {
             (0, r.jsxs)('div', {
                 className: c.textContainer,
                 children: [
-                    (0, r.jsx)(o.X6q, {
+                    (0, r.jsx)(a.X6q, {
                         variant: 'heading-md/semibold',
                         color: b ? 'text-primary' : 'header-secondary',
                         children: d
                     }),
-                    (0, r.jsx)(o.Text, {
+                    (0, r.jsx)(a.Text, {
                         variant: 'text-xs/normal',
                         color: b ? 'text-primary' : 'header-secondary',
                         className: c.inline,
@@ -37,13 +37,13 @@ function u(e) {
                     null != h && h > 0
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
-                                  (0, r.jsx)(o.Text, {
+                                  (0, r.jsx)(a.Text, {
                                       variant: 'text-xs/normal',
                                       color: b ? 'text-primary' : 'header-secondary',
                                       className: c.dot,
                                       children: '\u2022'
                                   }),
-                                  (0, r.jsx)(o.Text, {
+                                  (0, r.jsx)(a.Text, {
                                       variant: 'text-xs/normal',
                                       color: b ? 'text-primary' : 'header-secondary',
                                       className: c.inline,
@@ -54,7 +54,7 @@ function u(e) {
                         : null
                 ]
             }),
-            (0, r.jsx)(o.Fbu, {
+            (0, r.jsx)(a.Fbu, {
                 size: 'xs',
                 color: 'currentColor',
                 className: c.caret

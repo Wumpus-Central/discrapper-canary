@@ -1,9 +1,9 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => C });
 var r = n(255367),
     i = n(73800),
     l = n(392711),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(481060),
     c = n(557135),
     u = n(590293),
@@ -15,22 +15,22 @@ var r = n(255367),
     g = n(665149),
     b = n(981631),
     _ = n(388032);
-let x = i.memo(function (e) {
+let C = i.memo(function (e) {
     let { channel: t } = e,
         n = (0, u.Z)(),
-        l = (0, a.e7)([f.Z], () => f.Z.isInChannel(t.id)),
-        x = (0, a.e7)([f.Z], () => !o().isEmpty(f.Z.getVoiceStatesForChannel(t.id))),
-        y = (0, a.e7)([h.Z], () => h.Z.can(b.Plq.CONNECT, t)),
-        { needSubscriptionToAccess: C } = (0, d.Z)(t.id),
+        l = (0, o.e7)([f.Z], () => f.Z.isInChannel(t.id)),
+        C = (0, o.e7)([f.Z], () => !a().isEmpty(f.Z.getVoiceStatesForChannel(t.id))),
+        x = (0, o.e7)([h.Z], () => h.Z.can(b.Plq.CONNECT, t)),
+        { needSubscriptionToAccess: y } = (0, d.Z)(t.id),
         v = (0, p.$R)(t),
         j = i.useCallback(() => {
             c.Z.handleVoiceConnect({
                 channel: t,
                 connected: l,
-                needSubscriptionToAccess: C,
+                needSubscriptionToAccess: y,
                 locked: !1
             });
-        }, [t, l, C]);
+        }, [t, l, y]);
     return (i.useEffect(
         () => (
             m.S.subscribe(b.CkL.CALL_START, j),
@@ -49,13 +49,13 @@ let x = i.memo(function (e) {
     ).enabled &&
         !n &&
         !l &&
-        y &&
+        x &&
         v &&
         t.isVocalThread())
         ? (0, r.jsx)(g.ZP.Icon, {
               icon: s.Csw,
               onClick: j,
-              tooltip: x ? _.intl.string(_.t.fdEeb2) : _.intl.string(_.t.focH1t)
+              tooltip: C ? _.intl.string(_.t.fdEeb2) : _.intl.string(_.t.focH1t)
           })
         : null;
 });

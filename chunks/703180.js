@@ -5,8 +5,8 @@ n.d(t, {
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    o = n(481060),
-    a = n(485267),
+    a = n(481060),
+    o = n(485267),
     s = n(71585),
     c = n(981631),
     u = n(388032);
@@ -38,31 +38,31 @@ function d(e) {
 let p = (e) => {
         let { closePopout: t } = e,
             i = (0, l.e7)([s.Z], () => s.Z.hidden);
-        return (0, r.jsx)(o.v2r, {
+        return (0, r.jsx)(a.v2r, {
             onSelect: () => {},
             navId: 'member-list-settings-menu',
             onClose: null != t ? t : c.dG4,
             'aria-label': u.intl.string(u.t.w2jvOT),
-            children: (0, r.jsxs)(o.kSQ, {
+            children: (0, r.jsxs)(a.kSQ, {
                 children: [
-                    (0, r.jsx)(o.sNh, {
+                    (0, r.jsx)(a.sNh, {
                         id: 'about',
                         label: u.intl.string(u.t.pWLGnJ),
-                        icon: o.d3s,
+                        icon: a.d3s,
                         action: () => {
-                            (0, o.ZDy)(async () => {
+                            (0, a.ZDy)(async () => {
                                 let { default: e } = await n.e('71517').then(n.bind(n, 549505));
                                 return (t) => (0, r.jsx)(e, d({}, t));
                             }),
                                 null == t || t();
                         }
                     }),
-                    (0, r.jsx)(o.S89, {
+                    (0, r.jsx)(a.S89, {
                         id: 'hide',
                         label: u.intl.string(u.t.AhNYub),
                         checked: i,
                         action: () => {
-                            (0, a.lY)(), null == t || t();
+                            (0, o.lY)(), null == t || t();
                         }
                     })
                 ]
@@ -71,9 +71,9 @@ let p = (e) => {
     },
     h = () => {
         let e = i.useRef(null);
-        return (0, r.jsx)(o.yRy, {
+        return (0, r.jsx)(a.yRy, {
             targetElementRef: e,
-            animation: o.yRy.Animation.NONE,
+            animation: a.yRy.Animation.NONE,
             position: 'bottom',
             align: 'right',
             renderPopout: (e) => {
@@ -83,7 +83,7 @@ let p = (e) => {
             children: (t) => {
                 var n, i;
                 return (0, r.jsx)(
-                    o.P3F,
+                    a.P3F,
                     ((n = d({}, t)),
                     (i = i =
                         {
@@ -96,7 +96,7 @@ let p = (e) => {
                                 height: '12px',
                                 display: 'flex'
                             },
-                            children: (0, r.jsx)(o.ewm, { size: 'xxs' })
+                            children: (0, r.jsx)(a.ewm, { size: 'xxs' })
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))

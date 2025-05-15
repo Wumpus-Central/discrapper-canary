@@ -6,8 +6,8 @@ n.d(t, {
 });
 var r = n(751767),
     i = n(960048),
-    o = n(231338);
-function a(e, t, n) {
+    a = n(231338);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -65,7 +65,7 @@ function u(e, t) {
 }
 async function d(e) {
     let t = null;
-    if (null != e && e.paymentGateway === o.gg.BRAINTREE) {
+    if (null != e && e.paymentGateway === a.gg.BRAINTREE) {
         let e = await (0, r.A)();
         null != e && (t = { braintree_device_data: e });
     }

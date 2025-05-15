@@ -64,27 +64,28 @@ function b(e) {
 }
 function j(e) {
     let { value: t, onChange: n, disabled: l = !1 } = e,
-        [c, u] = i.useState(t);
-    function d() {
-        n(c);
+        c = i.useRef(null),
+        [u, d] = i.useState(t);
+    function x() {
+        n(u);
     }
-    function x(e) {
-        n(e), u(e);
+    function j(e) {
+        n(e), d(e);
     }
-    let j = t === m.p6O,
-        _ = j ? c : t,
-        v = (0, r.jsx)(o.dz2, {
+    let _ = t === m.p6O,
+        v = _ ? u : t,
+        O = (0, r.jsx)(o.dz2, {
             size: 'custom',
             width: 32,
             height: 24,
             color: b(t)
         }),
-        O = (0, o.arW)({
+        C = (0, o.arW)({
             orientation: 'horizontal',
             isDisabled: l
         }),
-        { ref: C } = O,
-        y = (function (e, t) {
+        { ref: y } = C,
+        N = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -102,13 +103,13 @@ function j(e) {
                 for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(O, ['ref']),
-        N = (0, o.xUy)({
-            isSelected: j,
+        })(C, ['ref']),
+        I = (0, o.xUy)({
+            isSelected: _,
             label: g.intl.formatToPlainString(g.t.ZC69mJ, { colorHex: (0, a.Rf)(m.p6O) })
         }),
-        I = (0, o.xUy)({
-            isSelected: !j,
+        E = (0, o.xUy)({
+            isSelected: !_,
             label: g.intl.formatToPlainString(g.t['3kiLZW'], { colorHex: (0, a.Rf)(t) })
         });
     return (0, r.jsxs)(
@@ -118,9 +119,9 @@ function j(e) {
                 {
                     className: p.buttonsContainer,
                     'aria-label': g.intl.string(g.t.FJjrIy),
-                    ref: C
+                    ref: y
                 },
-                y
+                N
             ),
             {
                 children: [
@@ -138,14 +139,14 @@ function j(e) {
                                               },
                                         'aria-disabled': l
                                     },
-                                    N
+                                    I
                                 ),
                                 {
                                     children: [
                                         (0, r.jsx)('div', {
                                             className: p.swatch,
                                             style: { backgroundColor: (0, a.Rf)(m.p6O) },
-                                            children: j ? v : null
+                                            children: _ ? O : null
                                         }),
                                         (0, r.jsx)(o.Text, {
                                             className: p.swatchDescription,
@@ -167,17 +168,17 @@ function j(e) {
                                 h(
                                     f(
                                         {
-                                            onClick: l ? void 0 : d,
+                                            onClick: l ? void 0 : x,
                                             'aria-disabled': l
                                         },
-                                        I
+                                        E
                                     ),
                                     {
                                         children: [
                                             (0, r.jsx)('div', {
-                                                className: s()(p.customSwatch, { [p.defaultSwatch]: _ === m.p6O }),
-                                                style: { '--custom-color': (0, a.Rf)(_) },
-                                                children: j ? null : v
+                                                className: s()(p.customSwatch, { [p.defaultSwatch]: v === m.p6O }),
+                                                style: { '--custom-color': (0, a.Rf)(v) },
+                                                children: _ ? null : O
                                             }),
                                             (0, r.jsx)(o.Text, {
                                                 className: p.swatchDescription,
@@ -192,19 +193,21 @@ function j(e) {
                             ),
                             !l &&
                                 (0, r.jsx)(o.yRy, {
-                                    onRequestOpen: d,
+                                    targetElementRef: c,
+                                    onRequestOpen: x,
                                     renderPopout: (e) =>
                                         (0, r.jsx)(
                                             o.Z$W,
                                             h(f({}, e), {
                                                 value: t,
-                                                onChange: x
+                                                onChange: j
                                             })
                                         ),
                                     children: (e) =>
                                         (0, r.jsx)(
                                             o.P3F,
                                             h(f({}, e), {
+                                                innerRef: c,
                                                 className: p.dropperIconButton,
                                                 'aria-label': g.intl.string(g.t.Qp04hI),
                                                 children: (0, r.jsx)(o.ilE, {
@@ -212,7 +215,7 @@ function j(e) {
                                                     className: p.dropperIcon,
                                                     width: 14,
                                                     height: 14,
-                                                    color: b(_)
+                                                    color: b(v)
                                                 })
                                             })
                                         )

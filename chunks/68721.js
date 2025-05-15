@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p }), n(415506);
 var r = n(836560),
     i = n(259443),
-    o = n(740197),
-    a = n(106617),
+    a = n(740197),
+    o = n(106617),
     s = n(290488),
     l = n(830795),
     c = n(65154),
@@ -21,7 +21,7 @@ function d(e, t, n) {
     );
 }
 let f = new i.Yd('Output'),
-    _ = new a.Z();
+    _ = new o.Z();
 class p extends r.EventEmitter {
     destroy() {
         var e, t, n;
@@ -77,7 +77,7 @@ class p extends r.EventEmitter {
     }
     async enable() {
         null != this.cleanup && (this.cleanup(), (this.cleanup = void 0)), null != this.stream && (_.release(this.stream), (this.stream = void 0));
-        let e = await (0, o.Hg)(),
+        let e = await (0, a.Hg)(),
             t = {
                 echoCancellation: this.echoCancellation,
                 noiseSuppression: this.noiseSuppression,

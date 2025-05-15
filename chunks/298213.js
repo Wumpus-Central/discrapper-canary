@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r = n(570140),
     i = n(194359),
-    o = n(855796),
-    a = n(497060),
+    a = n(855796),
+    o = n(497060),
     s = n(699516),
     l = n(885149),
     c = n(981631);
@@ -59,22 +59,22 @@ function _(e, t) {
     );
 }
 function p(e) {
-    let { userId: t, applicationId: n, location: r, friendToken: a, confirmStrangerRequest: s = !1 } = e;
+    let { userId: t, applicationId: n, location: r, friendToken: o, confirmStrangerRequest: s = !1 } = e;
     return null != n
-        ? o.Z.acceptGameFriendRequest({
+        ? a.Z.acceptGameFriendRequest({
               userId: t,
               applicationId: n
           })
         : i.Z.acceptFriendRequest({
               userId: t,
-              friendToken: a,
+              friendToken: o,
               confirmStrangerRequest: s,
               context: { location: r }
           });
 }
 function h(e) {
-    let { userId: t, applicationId: n, location: r, friendToken: i, onConfirm: o, onCancel: c } = e,
-        u = (0, a.pB)('useFriendRequestActions'),
+    let { userId: t, applicationId: n, location: r, friendToken: i, onConfirm: a, onCancel: c } = e,
+        u = (0, o.pB)('useFriendRequestActions'),
         d = s.Z.isStranger(t);
     return null == n && u && !1 !== d
         ? d && u
@@ -87,7 +87,7 @@ function h(e) {
                           friendToken: i,
                           confirmStrangerRequest: !0
                       }),
-                          null == o || o();
+                          null == a || a();
                   },
                   onCancel: () => {
                       null == c || c();
@@ -106,11 +106,11 @@ function h(e) {
                             applicationId: n,
                             location: r,
                             friendToken: i,
-                            onConfirm: o,
+                            onConfirm: a,
                             onCancel: c
                         }) ||
-                            null == o ||
-                            o();
+                            null == a ||
+                            a();
                     })
                     .catch((e) => {
                         m(e, {
@@ -118,7 +118,7 @@ function h(e) {
                             applicationId: n,
                             location: r,
                             friendToken: i,
-                            onConfirm: o,
+                            onConfirm: a,
                             onCancel: c
                         });
                     })
@@ -130,7 +130,7 @@ function h(e) {
               friendToken: i,
               confirmStrangerRequest: !0
           }).then(() => {
-              null == o || o();
+              null == a || a();
           });
 }
 function m(e, t) {
@@ -164,7 +164,7 @@ let g = {
     removeFriend: function (e) {
         let { userId: t, applicationId: n, location: r } = e;
         null != n
-            ? o.Z.removeGameFriend({
+            ? a.Z.removeGameFriend({
                   userId: t,
                   applicationId: n
               })
@@ -173,7 +173,7 @@ let g = {
     cancelFriendRequest: function (e) {
         let { userId: t, applicationId: n, location: r } = e;
         return null != n
-            ? o.Z.cancelGameFriendRequest({
+            ? a.Z.cancelGameFriendRequest({
                   userId: t,
                   applicationId: n
               })

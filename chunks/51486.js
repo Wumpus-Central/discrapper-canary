@@ -2,8 +2,8 @@ n.d(t, { Z: () => f }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(399606),
-    o = n(704215),
-    a = n(952265),
+    a = n(704215),
+    o = n(952265),
     s = n(481060),
     c = n(243778),
     u = n(38618),
@@ -15,7 +15,7 @@ function h(e) {
 let f = i.memo(function () {
     let e = ((0, l.e7)([u.Z], () => u.Z.isConnected()), []),
         [t, f] = (0, c.US)(e, p.R.GUILD_TAKEOVER_MODAL),
-        m = (0, a.f9)(),
+        m = (0, o.f9)(),
         g = i.useRef(null);
     return (
         i.useEffect(() => {
@@ -31,9 +31,9 @@ let f = i.memo(function () {
                             onCloseCallback: (e) => i(null != e ? e : p.L.UNKNOWN),
                             modalKey: h(t)
                         },
-                        a = d.Z.getGuildId();
-                    t === o.z.SERVER_SHOP_UPSELL &&
-                        null != a &&
+                        o = d.Z.getGuildId();
+                    t === a.z.SERVER_SHOP_UPSELL &&
+                        null != o &&
                         (0, s.ZDy)(async () => {
                             let { default: e } = await n.e('7302').then(n.bind(n, 756779));
                             return (t) => {
@@ -67,7 +67,7 @@ let f = i.memo(function () {
                                     })({}, t)),
                                     (l = l =
                                         {
-                                            guildId: a,
+                                            guildId: o,
                                             markAsDismissed: i
                                         }),
                                     Object.getOwnPropertyDescriptors
@@ -94,7 +94,7 @@ let f = i.memo(function () {
         }, [t, m, f]),
         i.useEffect(
             () => () => {
-                null != t && (0, a.Mr)(h(t));
+                null != t && (0, o.Mr)(h(t));
             },
             [t]
         ),

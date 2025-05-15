@@ -1,24 +1,26 @@
-n.d(t, { Z: () => u }), n(35282);
-var r = n(255367);
-n(73800);
-var i = n(481060),
-    l = n(857395),
-    a = n(739566),
-    o = n(834129),
-    s = n(388032);
-function c(e) {
-    let { children: t, messageReference: n, guildName: a } = e;
-    if (null == n) return (0, r.jsx)(i.eee, { children: t });
-    let { guild_id: o } = n;
-    return null == o
-        ? (0, r.jsx)(i.eee, { children: t })
-        : (0, r.jsx)(l.Z, {
-              guildId: o,
-              name: a,
+n.d(t, { Z: () => d }), n(35282);
+var r = n(255367),
+    i = n(73800),
+    l = n(481060),
+    a = n(857395),
+    o = n(739566),
+    s = n(834129),
+    c = n(388032);
+function u(e) {
+    let { children: t, messageReference: n, guildName: o } = e,
+        s = i.useRef(null);
+    if (null == n) return (0, r.jsx)(l.eee, { children: t });
+    let { guild_id: c } = n;
+    return null == c
+        ? (0, r.jsx)(l.eee, { children: t })
+        : (0, r.jsx)(a.Z, {
+              guildId: c,
+              name: o,
+              targetElementRef: s,
               children: (e) => {
-                  var n, l;
+                  var n, i;
                   let { 'aria-controls': a, 'aria-expanded': o } = e,
-                      s = (function (e, t) {
+                      c = (function (e, t) {
                           if (null == e) return {};
                           var n,
                               r,
@@ -38,7 +40,7 @@ function c(e) {
                           return i;
                       })(e, ['aria-controls', 'aria-expanded']);
                   return (0, r.jsx)(
-                      i.eee,
+                      l.eee,
                       ((n = (function (e) {
                           for (var t = 1; t < arguments.length; t++) {
                               var n = null != arguments[t] ? arguments[t] : {},
@@ -63,10 +65,14 @@ function c(e) {
                                   });
                           }
                           return e;
-                      })({}, s)),
-                      (l = l = { children: t }),
+                      })({}, c)),
+                      (i = i =
+                          {
+                              ref: s,
+                              children: t
+                          }),
                       Object.getOwnPropertyDescriptors
-                          ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
+                          ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
                           : (function (e, t) {
                                 var n = Object.keys(e);
                                 if (Object.getOwnPropertySymbols) {
@@ -74,27 +80,27 @@ function c(e) {
                                     n.push.apply(n, r);
                                 }
                                 return n;
-                            })(Object(l)).forEach(function (e) {
-                                Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
+                            })(Object(i)).forEach(function (e) {
+                                Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
                             }),
                       n)
                   );
               }
           });
 }
-function u(e) {
+function d(e) {
     let { usernameHook: t, message: i, compact: l } = e,
-        { content: u, timestamp: d, messageReference: p } = i,
-        m = (0, a.ZP)(i),
+        { content: a, timestamp: d, messageReference: p } = i,
+        m = (0, o.ZP)(i),
         f = t(m),
-        h = (null != u ? u : '').split(' ').slice(0, -1).join(' '),
-        g = s.intl.format(s.t['47CZc3'], {
+        h = (null != a ? a : '').split(' ').slice(0, -1).join(' '),
+        g = c.intl.format(c.t['47CZc3'], {
             username: m.nick,
             usernameHook: f,
-            webhookName: u,
+            webhookName: a,
             webhookNameHook: (e, t) =>
                 (0, r.jsx)(
-                    c,
+                    u,
                     {
                         messageReference: p,
                         guildName: h,
@@ -103,7 +109,7 @@ function u(e) {
                     t
                 )
         });
-    return (0, r.jsx)(o.Z, {
+    return (0, r.jsx)(s.Z, {
         icon: n(570111),
         timestamp: d,
         compact: l,

@@ -2,8 +2,8 @@ n.d(t, { Z: () => j }), n(388685), n(642613);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(399606),
+    a = n.n(l),
+    o = n(399606),
     s = n(481060),
     c = n(393238),
     u = n(430824),
@@ -15,25 +15,25 @@ var r = n(255367),
     g = n(388032),
     b = n(400816),
     _ = n(104402),
-    x = n(584354),
-    y = n(725060);
-let C = (e) => {
+    C = n(584354),
+    x = n(725060);
+let y = (e) => {
     let { searchQuery: t, setSearchQuery: n, handleClearSearch: i, handleSearchKeyPress: l } = e,
-        { ref: a, width: u } = (0, c.ZP)(),
+        { ref: o, width: u } = (0, c.ZP)(),
         d = null != u && u <= 800;
     return (0, r.jsxs)('div', {
-        ref: a,
+        ref: o,
         className: _.header,
         children: [
             (0, r.jsx)('img', {
                 alt: '',
                 className: _.headerImage,
-                src: d ? y : x
+                src: d ? x : C
             }),
             (0, r.jsx)('div', {
                 className: _.headerContentWrapper,
                 children: (0, r.jsxs)('div', {
-                    className: o()(_.headerContent, { [_.headerContentSmall]: d }),
+                    className: a()(_.headerContent, { [_.headerContentSmall]: d }),
                     children: [
                         (0, r.jsx)(s.X6q, {
                             variant: 'heading-xl/semibold',
@@ -66,7 +66,7 @@ let C = (e) => {
 };
 function v(e) {
     let { guild: t, directoryEntries: n, handleCreateOrAddGuild: i, isLoading: l } = e,
-        c = (0, a.e7)([d.Z], () => d.Z.can(m.Plq.ADMINISTRATOR, t)),
+        c = (0, o.e7)([d.Z], () => d.Z.can(m.Plq.ADMINISTRATOR, t)),
         u = [];
     null != n &&
         n.forEach((e) => {
@@ -91,7 +91,7 @@ function v(e) {
                         null != f
                             ? (0, r.jsx)('img', {
                                   alt: '',
-                                  className: o()(_.headerImage, _.headerImageSimple),
+                                  className: a()(_.headerImage, _.headerImageSimple),
                                   src: f
                               })
                             : null,
@@ -99,7 +99,7 @@ function v(e) {
                         (0, r.jsx)('div', {
                             className: _.headerContentWrapper,
                             children: (0, r.jsx)('div', {
-                                className: o()(_.headerContent, _.headerContentSmall),
+                                className: a()(_.headerContent, _.headerContentSmall),
                                 children: (0, r.jsx)(s.X6q, {
                                     variant: 'heading-xl/semibold',
                                     color: 'always-white',
@@ -120,8 +120,8 @@ function v(e) {
     });
 }
 let j = (e) => {
-    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: l, searchQuery: o, setSearchQuery: c, handleClearSearch: d, handleSearchKeyPress: p, currentCategoryId: x, handleSelectCategory: y, categoryCounts: j, allEntriesCount: O, isLoading: E } = e,
-        I = (0, a.e7)([u.Z], () => u.Z.getGuild(t.getGuildId()));
+    let { channel: t, directoryEntries: n, handleCreateOrAddGuild: l, searchQuery: a, setSearchQuery: c, handleClearSearch: d, handleSearchKeyPress: p, currentCategoryId: C, handleSelectCategory: x, categoryCounts: j, allEntriesCount: O, isLoading: E } = e,
+        I = (0, o.e7)([u.Z], () => u.Z.getGuild(t.getGuildId()));
     return null != I && I.hasFeature(m.oNc.SHARD)
         ? (0, r.jsx)(v, {
               guild: I,
@@ -134,8 +134,8 @@ let j = (e) => {
               children: (0, r.jsxs)(s.yWw, {
                   className: b.scroller,
                   children: [
-                      (0, r.jsx)(C, {
-                          searchQuery: o,
+                      (0, r.jsx)(y, {
+                          searchQuery: a,
                           setSearchQuery: c,
                           handleClearSearch: d,
                           handleSearchKeyPress: p
@@ -146,9 +146,9 @@ let j = (e) => {
                               className: _.tabBar,
                               type: 'top',
                               look: 'brand',
-                              selectedItem: x,
+                              selectedItem: C,
                               onItemSelect: (e) => {
-                                  y(e);
+                                  x(e);
                               },
                               children: [
                                   (0, r.jsx)(

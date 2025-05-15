@@ -44,8 +44,10 @@ function w(e, t) {
               }));
 }
 function R(e) {
-    let { renderPopout: t, renderGuildHeaderDropdownButton: n } = e;
+    let { renderPopout: t, renderGuildHeaderDropdownButton: n } = e,
+        l = i.useRef(null);
     return (0, r.jsx)(o.yRy, {
+        targetElementRef: l,
         renderPopout: () =>
             (0, r.jsx)('div', {
                 onClick: (e) => e.stopPropagation(),
@@ -55,7 +57,11 @@ function R(e) {
         align: 'center',
         animation: o.yRy.Animation.TRANSLATE,
         shouldShow: !0,
-        children: () => n()
+        children: () =>
+            (0, r.jsx)('div', {
+                ref: l,
+                children: n()
+            })
     });
 }
 let D = i.memo(function (e) {

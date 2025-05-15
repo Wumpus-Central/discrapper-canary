@@ -2,12 +2,12 @@ n.d(t, { Z: () => c }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(226690),
-    o = n(119315),
-    a = n(506262);
+    a = n(119315),
+    o = n(506262);
 let s = !1,
     c = () => {
         let [e, t] = i.useState(!1),
-            c = e ? a.activityIndicatorAnimation : s ? a.indicatorDotAfterAnimation : a.indicatorDotDuringAnimation;
+            c = e ? o.activityIndicatorAnimation : s ? o.indicatorDotAfterAnimation : o.indicatorDotDuringAnimation;
         return (
             i.useEffect(() => {
                 let e = setTimeout(() => {
@@ -18,10 +18,10 @@ let s = !1,
                 };
             }, [e]),
             (0, r.jsxs)('div', {
-                className: a.channelAppLauncherWordlePromo,
+                className: o.channelAppLauncherWordlePromo,
                 children: [
                     (0, r.jsx)(l.F, {
-                        className: a.animationContainer,
+                        className: o.animationContainer,
                         delay: s ? void 0 : 1000,
                         onComplete: () => {
                             (s = !0), t(!0);
@@ -31,13 +31,13 @@ let s = !1,
                         autoplay: !s,
                         loop: !1
                     }),
-                    (0, r.jsx)(o.r, {
+                    (0, r.jsx)(a.r, {
                         additionalStyles: c,
                         top: -1,
                         right: -1,
                         size: 7,
                         showBlurpleTreatment: !0,
-                        maskColor: o.T.PRIMARY
+                        maskColor: a.T.PRIMARY
                     })
                 ]
             })

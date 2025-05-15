@@ -192,9 +192,9 @@ let R = i.memo(function (e) {
             },
             [t.id]
         ),
-        z = null == L ? 0 : L.length,
-        W = (0, s.JA)(t.id),
-        { role: Y } = W,
+        W = null == L ? 0 : L.length,
+        z = (0, s.JA)(t.id),
+        { role: Y } = z,
         K = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -213,7 +213,7 @@ let R = i.memo(function (e) {
                 for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(W, ['role']),
+        })(z, ['role']),
         q = i.useRef(null),
         Q =
             U > 0
@@ -275,9 +275,9 @@ let R = i.memo(function (e) {
                                         (0, r.jsxs)('div', {
                                             className: I.children,
                                             children: [
-                                                z > 0 && t.userLimit > 0
+                                                W > 0 && t.userLimit > 0
                                                     ? (0, r.jsx)(v.Z, {
-                                                          userCount: z,
+                                                          userCount: W,
                                                           video: k,
                                                           channel: t
                                                       })

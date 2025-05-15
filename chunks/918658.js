@@ -1,173 +1,177 @@
 n.d(t, {
-    Z: () => U,
-    d: () => M
+    Z: () => M,
+    d: () => L
 });
-var r = n(255367);
-n(73800);
-var i = n(120356),
-    l = n.n(i),
-    o = n(442837),
-    a = n(692547),
-    s = n(481060),
-    c = n(549817),
-    u = n(819553),
-    d = n(17181),
-    E = n(303737),
-    _ = n(434404),
-    I = n(703656),
-    O = n(944486),
-    T = n(914010),
-    N = n(671533),
-    S = n(259580),
-    p = n(358085),
-    R = n(962086),
-    A = n(160404),
-    P = n(889695),
-    f = n(981631),
-    C = n(176505),
-    D = n(302463),
-    g = n(293810),
-    y = n(388032),
-    m = n(800515);
-function h(e) {
-    let { className: t, onClick: n, children: i } = e;
-    return (0, r.jsx)(s.zxk, {
-        className: l()(m.button, t),
-        innerClassName: m.buttonInner,
-        look: s.zxk.Looks.OUTLINED,
-        color: s.zxk.Colors.WHITE,
-        size: s.zxk.Sizes.NONE,
+var r = n(255367),
+    i = n(73800),
+    l = n(120356),
+    o = n.n(l),
+    a = n(442837),
+    s = n(692547),
+    c = n(481060),
+    u = n(549817),
+    d = n(819553),
+    E = n(17181),
+    _ = n(303737),
+    I = n(434404),
+    O = n(703656),
+    T = n(944486),
+    N = n(914010),
+    S = n(671533),
+    p = n(259580),
+    R = n(358085),
+    A = n(962086),
+    P = n(160404),
+    f = n(889695),
+    C = n(981631),
+    D = n(176505),
+    g = n(302463),
+    y = n(293810),
+    m = n(388032),
+    h = n(800515);
+function b(e) {
+    let { className: t, onClick: n, children: i, buttonRef: l } = e;
+    return (0, r.jsx)(c.zxk, {
+        buttonRef: l,
+        className: o()(h.button, t),
+        innerClassName: h.buttonInner,
+        look: c.zxk.Looks.OUTLINED,
+        color: c.zxk.Colors.WHITE,
+        size: c.zxk.Sizes.NONE,
         onClick: n,
         children: i
     });
 }
-function b(e) {
+function U(e) {
     let { onClick: t } = e;
-    return (0, r.jsx)(h, {
+    return (0, r.jsx)(b, {
         onClick: t,
-        children: y.intl.string(y.t.R9GHyc)
+        children: m.intl.string(m.t.R9GHyc)
     });
 }
-function U() {
-    let e = (0, o.e7)([T.Z], () => T.Z.getGuildId()),
-        t = (0, o.e7)([O.Z], () => O.Z.getChannelId(e)),
+function M() {
+    let e = i.useRef(null),
+        t = (0, a.e7)([N.Z], () => N.Z.getGuildId()),
+        n = (0, a.e7)([T.Z], () => T.Z.getChannelId(t)),
         {
-            viewingRoles: n,
-            backNavigationSection: i,
-            isFullServerPreview: l,
-            isServerShopPreview: p
-        } = (0, o.cj)([A.Z], () => ({
-            viewingRoles: null != e ? A.Z.getViewingRoles(e) : null,
-            backNavigationSection: A.Z.getBackNavigationSection(e),
-            isFullServerPreview: null != e && A.Z.isFullServerPreview(e),
-            isServerShopPreview: null != e && A.Z.isViewingServerShop(e)
+            viewingRoles: l,
+            backNavigationSection: o,
+            isFullServerPreview: R,
+            isServerShopPreview: M
+        } = (0, a.cj)([P.Z], () => ({
+            viewingRoles: null != t ? P.Z.getViewingRoles(t) : null,
+            backNavigationSection: P.Z.getBackNavigationSection(t),
+            isFullServerPreview: null != t && P.Z.isFullServerPreview(t),
+            isServerShopPreview: null != t && P.Z.isViewingServerShop(t)
         }));
-    if (null == n || null == e) return null;
-    let U = (function (e) {
+    if (null == l || null == t) return null;
+    let L = (function (e) {
             switch (e) {
-                case f.pNK.INTEGRATIONS:
-                    return y.intl.string(y.t.k7LGdn);
-                case f.pNK.ROLE_SUBSCRIPTIONS:
-                    return y.intl.string(y.t.bRqiqa);
-                case f.pNK.ONBOARDING:
-                    return y.intl.string(y.t.qZpU3d);
+                case C.pNK.INTEGRATIONS:
+                    return m.intl.string(m.t.k7LGdn);
+                case C.pNK.ROLE_SUBSCRIPTIONS:
+                    return m.intl.string(m.t.bRqiqa);
+                case C.pNK.ONBOARDING:
+                    return m.intl.string(m.t.qZpU3d);
                 default:
-                    return y.intl.string(y.t.MTIXho);
+                    return m.intl.string(m.t.MTIXho);
             }
-        })(i),
-        M = i === f.pNK.ROLE_SUBSCRIPTIONS ? y.intl.string(y.t.hZUCzc) : y.intl.string(y.t['/djIh4']),
-        L = t === C.oC.GUILD_ONBOARDING,
-        Z = (t) => {
-            let { backToSettings: n } = t;
-            null != e && (A.Z.isFullServerPreview(e) && (0, I.uL)(f.Z5c.CHANNEL(e)), u.ZP.shouldShowOnboarding(e) && (c.Z.finishOnboarding(e), (0, d.EI)(e)), (0, R.mL)(e), n && _.Z.open(e, i), i === f.pNK.ROLE_SUBSCRIPTIONS && (0, E.GN)(e));
+        })(o),
+        Z = o === C.pNK.ROLE_SUBSCRIPTIONS ? m.intl.string(m.t.hZUCzc) : m.intl.string(m.t['/djIh4']),
+        k = n === D.oC.GUILD_ONBOARDING,
+        v = (e) => {
+            let { backToSettings: n } = e;
+            null != t && (P.Z.isFullServerPreview(t) && (0, O.uL)(C.Z5c.CHANNEL(t)), d.ZP.shouldShowOnboarding(t) && (u.Z.finishOnboarding(t), (0, E.EI)(t)), (0, A.mL)(t), n && I.Z.open(t, o), o === C.pNK.ROLE_SUBSCRIPTIONS && (0, _.GN)(t));
         };
-    return (0, r.jsxs)(s.qXd, {
-        color: s.DM8.BRAND,
-        className: m.notice,
+    return (0, r.jsxs)(c.qXd, {
+        color: c.DM8.BRAND,
+        className: h.notice,
         children: [
-            (0, r.jsxs)(h, {
-                onClick: () => Z({ backToSettings: !0 }),
-                className: m.backButton,
+            (0, r.jsxs)(b, {
+                onClick: () => v({ backToSettings: !0 }),
+                className: h.backButton,
                 children: [
-                    (0, r.jsx)(N.Z, {
+                    (0, r.jsx)(S.Z, {
                         width: 16,
                         height: 16,
-                        direction: N.Z.Directions.LEFT,
-                        className: m.backArrow
+                        direction: S.Z.Directions.LEFT,
+                        className: h.backArrow
                     }),
-                    U
+                    L
                 ]
             }),
-            L && l
+            k && R
                 ? (0, r.jsx)('div', {
-                      className: m.noticeContents,
+                      className: h.noticeContents,
                       children: (0, r.jsx)('div', {
-                          className: m.noticeText,
-                          children: y.intl.string(y.t.PxbiAQ)
+                          className: h.noticeText,
+                          children: m.intl.string(m.t.PxbiAQ)
                       })
                   })
                 : (0, r.jsxs)('div', {
-                      className: m.noticeContents,
+                      className: h.noticeContents,
                       children: [
                           (0, r.jsx)('div', {
-                              className: m.noticeText,
-                              children: l ? y.intl.formatToPlainString(y.t['0PHahI'], { numRoles: Object.keys(n).length }) : y.intl.formatToPlainString(y.t.vMlK8v, { numRoles: Object.keys(n).length })
+                              className: h.noticeText,
+                              children: R ? m.intl.formatToPlainString(m.t['0PHahI'], { numRoles: Object.keys(l).length }) : m.intl.formatToPlainString(m.t.vMlK8v, { numRoles: Object.keys(l).length })
                           }),
-                          (0, r.jsx)(s.yRy, {
+                          (0, r.jsx)(c.yRy, {
+                              targetElementRef: e,
                               position: 'bottom',
-                              renderPopout: () => (0, r.jsx)(P.Z, { guildId: e }),
-                              children: (e) => {
-                                  let { onClick: t } = e;
-                                  return (0, r.jsxs)(h, {
-                                      onClick: t,
+                              renderPopout: () => (0, r.jsx)(f.Z, { guildId: t }),
+                              children: (t) => {
+                                  let { onClick: n } = t;
+                                  return (0, r.jsxs)(b, {
+                                      onClick: n,
+                                      buttonRef: e,
                                       children: [
-                                          M,
-                                          (0, r.jsx)(S.Z, {
+                                          Z,
+                                          (0, r.jsx)(p.Z, {
                                               width: 16,
                                               height: 16,
-                                              direction: S.Z.Directions.DOWN,
-                                              className: m.selectCaret
+                                              direction: p.Z.Directions.DOWN,
+                                              className: h.selectCaret
                                           })
                                       ]
                                   });
                               }
                           }),
-                          l &&
-                              (0, r.jsx)(s.DY3, {
-                                  className: m.previewWarning,
-                                  text: y.intl.string(y.t.mW4DUF),
-                                  children: (0, r.jsx)(s.P4T, {
+                          R &&
+                              (0, r.jsx)(c.DY3, {
+                                  className: h.previewWarning,
+                                  text: m.intl.string(m.t.mW4DUF),
+                                  children: (0, r.jsx)(c.P4T, {
                                       size: 'xs',
-                                      color: a.Z.unsafe_rawColors.YELLOW_300.css
+                                      color: s.Z.unsafe_rawColors.YELLOW_300.css
                                   })
                               }),
-                          p &&
-                              (0, r.jsx)(s.DY3, {
-                                  className: m.previewWarning,
-                                  text: y.intl.formatToPlainString(y.t.eummvb, {
-                                      maxTiers: g.fF,
-                                      maxProducts: D.dD
+                          M &&
+                              (0, r.jsx)(c.DY3, {
+                                  className: h.previewWarning,
+                                  text: m.intl.formatToPlainString(m.t.eummvb, {
+                                      maxTiers: y.fF,
+                                      maxProducts: g.dD
                                   }),
-                                  children: (0, r.jsx)(s.P4T, {
+                                  children: (0, r.jsx)(c.P4T, {
                                       size: 'xs',
-                                      color: a.Z.unsafe_rawColors.YELLOW_300.css
+                                      color: s.Z.unsafe_rawColors.YELLOW_300.css
                                   })
                               })
                       ]
                   }),
-            l || i === f.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(b, { onClick: () => Z({ backToSettings: !1 }) })
+            R || o === C.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(U, { onClick: () => v({ backToSettings: !1 }) })
         ]
     });
 }
-function M(e) {
+function L(e) {
     let { guildId: t } = e;
-    return (0, o.e7)([A.Z], () => A.Z.isViewingRoles(t))
+    return (0, a.e7)([P.Z], () => P.Z.isViewingRoles(t))
         ? (0, r.jsx)('div', {
-              className: l()(m.settingsWrapper, {
-                  [m.windows]: (0, p.isWindows)(),
-                  [m.osx]: (0, p.isMac)()
+              className: o()(h.settingsWrapper, {
+                  [h.windows]: (0, R.isWindows)(),
+                  [h.osx]: (0, R.isMac)()
               }),
-              children: (0, r.jsx)(U, {})
+              children: (0, r.jsx)(M, {})
           })
         : null;
 }

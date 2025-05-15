@@ -1,9 +1,9 @@
-n.d(t, { Z: () => x }), n(388685);
+n.d(t, { Z: () => C }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    o = n(481060),
-    a = n(23536),
+    a = n(481060),
+    o = n(23536),
     s = n(40851),
     c = n(540059),
     u = n(731290),
@@ -56,10 +56,10 @@ function _(e, t) {
         e
     );
 }
-let x = function (e) {
+let C = function (e) {
     let { channel: t } = e,
         n = (0, c.Q3)('ChannelPinsButton'),
-        x = (0, l.e7)(
+        C = (0, l.e7)(
             [u.Z, p.default],
             () => {
                 let e = p.default.getCurrentUser();
@@ -67,13 +67,13 @@ let x = function (e) {
             },
             [t]
         ),
-        [y, C] = i.useState(!1),
+        [x, y] = i.useState(!1),
         v = (0, l.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]),
         j = (0, s.Aq)(),
         O = i.useRef(null),
         E = i.useCallback(() => {
-            x || C((e) => !e);
-        }, [x]);
+            C || y((e) => !e);
+        }, [C]);
     function I(e) {
         (null == e ? void 0 : e.shiftKey) || j.dispatch(m.CkL.POPOUT_CLOSE);
     }
@@ -87,18 +87,18 @@ let x = function (e) {
             ),
             [E]
         ),
-        (0, r.jsx)(o.yRy, {
+        (0, r.jsx)(a.yRy, {
             targetElementRef: O,
-            shouldShow: y,
-            animation: o.yRy.Animation.NONE,
+            shouldShow: x,
+            animation: a.yRy.Animation.NONE,
             position: 'bottom',
             align: 'right',
             autoInvert: !1,
             ignoreModalClicks: !0,
-            onRequestClose: () => C(!1),
+            onRequestClose: () => y(!1),
             renderPopout: function (e) {
                 return (0, r.jsx)(
-                    a.Z,
+                    o.Z,
                     _(b({}, e), {
                         onJump: I,
                         channel: t
@@ -114,10 +114,10 @@ let x = function (e) {
                         ref: O,
                         onClick: E,
                         tooltip: i ? null : g.intl.string(g.t['mp1N//']),
-                        icon: o.qQX,
+                        icon: a.qQX,
                         iconSize: n ? 20 : void 0,
                         'aria-label': g.intl.string(g.t['mp1N//']),
-                        disabled: x,
+                        disabled: C,
                         showBadge: v,
                         selected: i
                     })

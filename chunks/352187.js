@@ -1,9 +1,9 @@
-n.r(t), n.d(t, { default: () => o });
+n.r(t), n.d(t, { default: () => a });
 var r = n(528734),
     i = n(951516);
-function o(e, t) {
+function a(e, t) {
     (0, i.Z)(2, arguments);
     var n = (0, r.default)(e),
-        o = (0, r.default)(t);
-    return 12 * (n.getFullYear() - o.getFullYear()) + (n.getMonth() - o.getMonth());
+        a = (0, r.default)(t);
+    return 12 * (n.getFullYear() - a.getFullYear()) + (n.getMonth() - a.getMonth());
 }

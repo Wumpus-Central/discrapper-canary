@@ -2,8 +2,8 @@ n.d(t, { Z: () => N }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(481060),
-    o = n(32750),
-    a = n(323597),
+    a = n(32750),
+    o = n(323597),
     s = n(438536),
     c = n(193987),
     u = n(933793),
@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(299206),
     b = n(727429),
     _ = n(665149),
-    x = n(359110),
-    y = n(585483),
-    C = n(407908),
+    C = n(359110),
+    x = n(585483),
+    y = n(407908),
     v = n(739830),
     j = n(488131),
     O = n(981631),
@@ -67,20 +67,20 @@ function S(e, t) {
 }
 function P(e) {
     let { channel: t } = e,
-        [n, o] = i.useState(!1),
-        a = i.useRef(null);
+        [n, a] = i.useState(!1),
+        o = i.useRef(null);
     function s() {
-        o((e) => !e);
+        a((e) => !e);
     }
     let c = E.intl.string(E.t.UKOtz8);
     return (0, r.jsx)(l.yRy, {
-        targetElementRef: a,
+        targetElementRef: o,
         shouldShow: n,
         animation: l.yRy.Animation.NONE,
         position: 'bottom',
         align: 'right',
         autoInvert: !1,
-        onRequestClose: () => o(!1),
+        onRequestClose: () => a(!1),
         renderPopout: function (e) {
             return (0, r.jsx)(Z, S(I({}, e), { channel: t }));
         },
@@ -89,7 +89,7 @@ function P(e) {
             return (0, r.jsx)(
                 _.ZP.Icon,
                 S(I({}, e), {
-                    ref: a,
+                    ref: o,
                     onClick: s,
                     tooltip: n ? null : c,
                     icon: l.xhG,
@@ -104,20 +104,20 @@ function Z(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
         b = (0, s.Z)(t, 'Sidebar Overflow'),
         _ = (0, u.Z)(t),
-        C = (0, h.Z)(t),
+        y = (0, h.Z)(t),
         v = (0, f.Z)(t),
-        j = (0, o.Z)(t),
+        j = (0, a.Z)(t),
         I = (0, c.Z)(t),
         S = (0, p.Z)(t.id),
         P = (0, d.Z)(t),
-        Z = (0, a.Z)(t),
+        Z = (0, o.Z)(t),
         N = (0, g.Z)({
             id: t.id,
             label: E.intl.string(E.t.DQ797u)
         }),
         T = (0, m.Z)(t);
     function A() {
-        (0, x.Kh)(t.id);
+        (0, C.Kh)(t.id);
     }
     return (0, r.jsxs)(l.v2r, {
         navId: 'thread-context',
@@ -136,7 +136,7 @@ function Z(e) {
                 ]
             }),
             (0, r.jsxs)(l.kSQ, {
-                children: [C, v]
+                children: [y, v]
             }),
             (0, r.jsxs)(l.kSQ, {
                 children: [P, _, S]
@@ -150,7 +150,7 @@ function Z(e) {
                         action: function () {
                             A(),
                                 setTimeout(() => {
-                                    y.S.dispatch(O.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
+                                    x.S.dispatch(O.CkL.FOCUS_SEARCH, { prefillCurrentChannel: !1 });
                                 }, 2000);
                         }
                     }),
@@ -159,7 +159,7 @@ function Z(e) {
                         label: E.intl.string(E.t['2BSH7u']),
                         icon: l.rgF,
                         action: function () {
-                            A(), y.S.dispatch(O.CkL.TOGGLE_CHANNEL_PINS);
+                            A(), x.S.dispatch(O.CkL.TOGGLE_CHANNEL_PINS);
                         }
                     })
                 ]
@@ -176,7 +176,7 @@ function N(e) {
     return (0, r.jsxs)(r.Fragment, {
         children: [
             t.isForumPost() ? null : (0, r.jsx)(v.Z, { channel: t }),
-            (0, r.jsx)(C.Z, { channel: t }),
+            (0, r.jsx)(y.Z, { channel: t }),
             (0, r.jsx)(P, { channel: t }),
             (0, r.jsx)(_.ZP.Icon, {
                 icon: l.Dio,

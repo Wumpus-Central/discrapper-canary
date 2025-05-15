@@ -37,8 +37,8 @@ var r = n(255367),
     M = n(385956),
     U = n(610697),
     G = n(26373),
-    V = n(486622),
-    B = n(488634),
+    B = n(486622),
+    V = n(488634),
     H = n(899740),
     F = n(177033),
     z = n(355350),
@@ -61,9 +61,9 @@ function en() {
         u = i.useCallback(() => {
             (0, d.showToast)((0, d.createToast)($.intl.string($.t.EDYbS0), d.ToastType.FAILURE));
         }, []),
-        { rejectAll: p } = (0, V.m)({ onError: u }),
+        { rejectAll: p } = (0, B.m)({ onError: u }),
         h = (0, _.Z)('message-requests-list'),
-        { channelId: f } = (0, B._)(),
+        { channelId: f } = (0, V._)(),
         m = i.useCallback(() => {
             p(n.map((e) => e.channel.id));
         }, [n, p]),
@@ -249,6 +249,7 @@ let ei = function (e) {
                     let { visibleContent: a, markAsDismissed: o } = i;
                     return a === u.z.MESSAGE_REQUEST_SETTINGS_COACH_MARK
                         ? (0, r.jsx)(d.yRy, {
+                              targetElementRef: e.targetElementRef,
                               renderPopout: () =>
                                   t
                                       ? (0, r.jsx)(ei, { markAsDismissed: o })
@@ -297,13 +298,14 @@ let eo = (0, f.Z)(function (e) {
         g = null == f ? void 0 : f.channelId,
         b = null != f,
         _ = (0, M.T)(g),
-        E = (0, k.J)(g);
+        E = (0, k.J)(g),
+        O = i.useRef(null);
     i.useEffect(() => {
         null != g && !_ && E && b && ((0, T.Kh)(g), P.Z.closeChannelSidebar(L.uZ));
     }, [g, E, b, _]);
-    let [O, y] = i.useState(q.pS.REQUESTS),
-        v = (e) => {
-            y(e);
+    let [y, v] = i.useState(q.pS.REQUESTS),
+        C = (e) => {
+            v(e);
         };
     return (
         (0, I.Tt)({ location: $.intl.string($.t.e7GWjY) }),
@@ -326,13 +328,19 @@ let eo = (0, f.Z)(function (e) {
                                             icon: d._XJ,
                                             'aria-hidden': !0
                                         }),
-                                        (0, r.jsx)(el, { children: (0, r.jsx)(S.Z.Title, { children: $.intl.string($.t.e7GWjY) }) }),
+                                        (0, r.jsx)(el, {
+                                            targetElementRef: O,
+                                            children: (0, r.jsx)(S.Z.Title, {
+                                                ref: O,
+                                                children: $.intl.string($.t.e7GWjY)
+                                            })
+                                        }),
                                         (0, r.jsx)(S.Z.Divider, {}),
                                         (0, r.jsxs)(d.njP, {
                                             'aria-label': $.intl.string($.t.e7GWjY),
-                                            selectedItem: O,
+                                            selectedItem: y,
                                             type: 'top-pill',
-                                            onItemSelect: v,
+                                            onItemSelect: C,
                                             children: [
                                                 (0, r.jsx)(d.njP.Item, {
                                                     id: q.pS.REQUESTS,
@@ -351,7 +359,7 @@ let eo = (0, f.Z)(function (e) {
                         }),
                         (0, r.jsx)('div', {
                             className: et.content,
-                            children: (0, r.jsx)(ea, { section: O })
+                            children: (0, r.jsx)(ea, { section: y })
                         })
                     ]
                 }),

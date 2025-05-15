@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u });
 var r = n(73800),
     i = n(442837),
-    o = n(131951),
-    a = n(65154),
+    a = n(131951),
+    o = n(65154),
     s = n(388032);
 function l(e, t, n) {
     return (
@@ -34,10 +34,10 @@ function c(e) {
     return e;
 }
 function u() {
-    let e = (0, i.e7)([o.Z], () => o.Z.getVideoDevices());
+    let e = (0, i.e7)([a.Z], () => a.Z.getVideoDevices());
     return r.useMemo(() => {
         let t = c({}, e),
-            n = t[a.w5];
-        return null == n || (t[a.w5] = c({}, n, n.disabled && { name: s.intl.string(s.t.WKWARU) })), t;
+            n = t[o.w5];
+        return null == n || (t[o.w5] = c({}, n, n.disabled && { name: s.intl.string(s.t.WKWARU) })), t;
     }, [e]);
 }

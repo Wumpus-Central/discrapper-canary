@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(442837),
     l = n(481060),
-    o = n(665149),
-    a = n(892001),
+    a = n(665149),
+    o = n(892001),
     s = n(650774),
     c = n(430824),
     u = n(496675),
@@ -17,14 +17,14 @@ var i = n(442837),
     b = n(679848);
 function _(e) {
     let { channelId: t, showProfile: n = !1, showTrailingDivider: _ = !1 } = e,
-        x = d.default.cast(t),
+        C = d.default.cast(t),
         {
-            joinRequest: y,
-            isModmin: C,
+            joinRequest: x,
+            isModmin: y,
             guildId: v,
             maxMembers: j
         } = (0, i.cj)([p.Z, c.Z, u.Z], () => {
-            let e = p.Z.getRequest(x),
+            let e = p.Z.getRequest(C),
                 t = c.Z.getGuild(null == e ? void 0 : e.guildId);
             return {
                 joinRequest: e,
@@ -35,8 +35,8 @@ function _(e) {
         }),
         O = (0, i.e7)([s.Z], () => (null != v ? s.Z.getMemberCount(v) : 0)),
         E = null != j && (null != O ? O : 0) >= j,
-        { approveRequest: I, rejectRequest: S, submitting: P } = (0, f.s)(null == y ? void 0 : y.guildId, null == y ? void 0 : y.userId, null == y ? void 0 : y.joinRequestId);
-    return null != y && y.applicationStatus === h.wB.SUBMITTED && C
+        { approveRequest: I, rejectRequest: S, submitting: P } = (0, f.s)(null == x ? void 0 : x.guildId, null == x ? void 0 : x.userId, null == x ? void 0 : x.joinRequestId);
+    return null != x && x.applicationStatus === h.wB.SUBMITTED && y
         ? (0, r.jsxs)('div', {
               className: b.buttons,
               children: [
@@ -101,22 +101,22 @@ function _(e) {
                       color: l.zxk.Colors.RED,
                       onClick: S,
                       size: l.PhG.SMALL,
-                      disabled: P || y.applicationStatus !== h.wB.SUBMITTED,
+                      disabled: P || x.applicationStatus !== h.wB.SUBMITTED,
                       children: g.intl.string(g.t.hDtbs7)
                   }),
                   n &&
                       (0, r.jsx)(l.zxk, {
                           color: l.zxk.Colors.TRANSPARENT,
                           onClick: () => {
-                              (0, a.openUserProfileModal)({
-                                  userId: y.userId,
-                                  guildId: y.guildId
+                              (0, o.openUserProfileModal)({
+                                  userId: x.userId,
+                                  guildId: x.guildId
                               });
                           },
                           size: l.PhG.SMALL,
                           children: g.intl.string(g.t.iXAna2)
                       }),
-                  _ && (0, r.jsx)(o.ZP.Divider, {})
+                  _ && (0, r.jsx)(a.ZP.Divider, {})
               ]
           })
         : null;

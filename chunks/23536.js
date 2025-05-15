@@ -2,8 +2,8 @@ n.d(t, { Z: () => b });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    o = n(780384),
-    a = n(481060),
+    a = n(780384),
+    o = n(481060),
     s = n(332148),
     c = n(493773),
     u = n(198620),
@@ -15,7 +15,7 @@ var r = n(255367),
 let g = [];
 function b(e) {
     let { channel: t, onJump: b } = e,
-        { messages: _, loading: x } = (0, l.cj)([d.Z], () => {
+        { messages: _, loading: C } = (0, l.cj)([d.Z], () => {
             let e = d.Z.getPinnedMessages(t.id),
                 n = null != e ? e.messages : g;
             return {
@@ -23,15 +23,15 @@ function b(e) {
                 loading: null == n || (null != e && e.loading)
             };
         }),
-        y = (0, l.e7)([p.ZP], () => p.ZP.hasUnreadPins(t.id));
+        x = (0, l.e7)([p.ZP], () => p.ZP.hasUnreadPins(t.id));
     return (
         (0, c.ZP)(() => {
             _.some(u.k5) && s.Z.fetchPins(t.id, !0);
         }),
         i.useEffect(() => {
-            y && s.Z.ackPins(t.id);
-        }, [y, t.id]),
-        (0, r.jsx)(a.VqE, {
+            x && s.Z.ackPins(t.id);
+        }, [x, t.id]),
+        (0, r.jsx)(o.VqE, {
             'aria-label': m.intl.string(m.t['mp1N//']),
             children: (0, r.jsx)(h.ZP, {
                 onFetch: function () {
@@ -39,7 +39,7 @@ function b(e) {
                 },
                 channel: t,
                 messages: _,
-                loading: x,
+                loading: C,
                 analyticsName: 'Channel Pins',
                 onCloseMessage: function (e, n) {
                     null != e && (n.shiftKey ? s.Z.unpinMessage(t, e.id) : f.Z.confirmUnpin(t, e));
@@ -50,13 +50,13 @@ function b(e) {
                 },
                 renderHeader: () =>
                     (0, r.jsx)(h.h4, {
-                        icon: a.qQX,
+                        icon: o.qQX,
                         title: m.intl.string(m.t['mp1N//'])
                     }),
                 renderEmptyState: function (e) {
                     let i = m.intl.string(m.t.fmyaWF);
                     t.isPrivate() && (i = m.intl.string(m.t.rhqcbG));
-                    let l = (0, o.ap)(e) ? n(306059) : n(281485);
+                    let l = (0, a.ap)(e) ? n(306059) : n(281485);
                     return (0, r.jsx)(
                         h.nH,
                         {

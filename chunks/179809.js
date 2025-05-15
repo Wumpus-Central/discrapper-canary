@@ -28,7 +28,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
     w = (0, a.animated)(h.Kqy),
     N = i.memo(function (e) {
         let { folderNode: t, setNodeRef: n, selected: l, expanded: a, mediaState: d, mentionCount: m = 0, isMentionLowImportance: N, unread: Z = !1, defaultFolderName: T, draggable: A = !1, sorting: R = !1, onDragStart: D, onDragEnd: L, onExpandCollapse: k, onContextMenu: M, renderChildNode: U, folderButtonSize: G, folderButtonContent: B, 'aria-setsize': V, 'aria-posinset': H } = e,
-            { id: F, name: z, children: W } = t,
+            { id: F, name: W, children: z } = t,
             [Y, K] = i.useState(!1),
             [q, Q] = i.useState(!1),
             X = Y || q,
@@ -59,7 +59,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                 },
                 [k, a]
             ),
-            er = null != z && '' !== z ? z : null != T && '' !== T ? T : E.intl.string(E.t.xV9hVl),
+            er = null != W && '' !== W ? W : null != T && '' !== T ? T : E.intl.string(E.t.xV9hVl),
             ei = (0, c.Ie)(''.concat(F)),
             el = 'folder-items-'.concat(F),
             eo = (function (e) {
@@ -67,7 +67,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                     n = (0, h.dQu)(h.TVs.modules.guildbar.AVATAR_SIZE),
                     r = (0, h.dQu)(h.TVs.space.SPACE_XS);
                 return e * (n + r) - r + (r - (t - n) / 2) + (0, h.dQu)(h.TVs.space.SPACE_4);
-            })(W.length),
+            })(z.length),
             es = (0, h.Yzy)(!$ && a, {
                 from: { height: 0 },
                 enter: { height: 1 },
@@ -158,7 +158,7 @@ let I = (0, m.Mg)(d.Z.FOLDER_ITEM_ANIMATION_DURATION),
                                 className: x.folderGuildsList,
                                 style: { height: e.height.to((e) => e * eo) },
                                 'aria-label': t.name,
-                                children: W.map((t, n) => U(t, n, W.length, e.height))
+                                children: z.map((t, n) => U(t, n, z.length, e.height))
                             },
                             l
                         )

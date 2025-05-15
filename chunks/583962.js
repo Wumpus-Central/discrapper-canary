@@ -151,12 +151,12 @@ let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                         perkIntro: I.intl.string(I.t.ZhvSn5)
                     });
             },
-            z = I.intl.formatToPlainString(I.t['2oNfMT'], { levelName: (0, v.e9)(L) }),
-            W = I.intl.format(I.t.dhKnYm, {
+            W = I.intl.formatToPlainString(I.t['2oNfMT'], { levelName: (0, v.e9)(L) }),
+            z = I.intl.format(I.t.dhKnYm, {
                 numBoosts: C,
                 numTotal: P.oCV[L]
             });
-        D && ((z = (0, v.e9)(L)), (W = I.intl.format(I.t.B2byER, { numBoosts: C }))), l && (z = z.toLocaleLowerCase());
+        D && ((W = (0, v.e9)(L)), (z = I.intl.format(I.t.B2byER, { numBoosts: C }))), l && (W = W.toLocaleLowerCase());
         let Y = (0, a.JA)('boosts-'.concat(t.id));
         return (0, r.jsx)('li', {
             children: (0, r.jsx)(d.ua7, {
@@ -194,7 +194,7 @@ let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                                 color: l ? 'none' : 'interactive-active',
                                                 variant: l ? 'text-sm/medium' : 'text-xs/bold',
                                                 lineClamp: 1,
-                                                children: z
+                                                children: W
                                             })
                                         }),
                                         (0, r.jsxs)('div', {
@@ -205,7 +205,7 @@ let A = (0, C.Mg)(u.Z.GUILD_BOOSTING_SIDEBAR_DISPLAY_CONDITIONAL_BOTTOM_MARGIN),
                                                     variant: l ? 'text-sm/medium' : 'text-xs/normal',
                                                     className: N.progressText,
                                                     lineClamp: 1,
-                                                    children: W
+                                                    children: z
                                                 }),
                                                 (0, r.jsx)(O.Z, {
                                                     className: N.count,

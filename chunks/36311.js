@@ -1,9 +1,9 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => y });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(481060),
     c = n(749210),
     u = n(168107),
@@ -15,15 +15,15 @@ var r = n(255367),
     g = n(981631),
     b = n(723359),
     _ = n(388032),
-    x = n(857651);
-function y(e) {
+    C = n(857651);
+function x(e) {
     let { guild: t, channelId: n } = e,
-        l = (0, a.e7)([f.default], () => {
+        l = (0, o.e7)([f.default], () => {
             var e;
             return (null == (e = f.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) === !1;
         }),
-        o = (0, p.Kt)(),
-        { verifyAgreementButtonText: y, verifyGateDescription: C } = (0, p.a1)(b.L0.NSFW_CHANNEL),
+        a = (0, p.Kt)(),
+        { verifyAgreementButtonText: x, verifyGateDescription: y } = (0, p.a1)(b.L0.NSFW_CHANNEL),
         v = i.useCallback(() => {
             null != t && c.Z.nsfwReturnToSafety(t.id);
         }, [t]),
@@ -33,7 +33,7 @@ function y(e) {
         O = i.useCallback(() => {
             u.Z.showAgeVerificationGetStartedModal(d.cU.NSFW_GUILD);
         }, []);
-    return o
+    return a
         ? (0, r.jsx)(h.Z, {
               guildId: null == t ? void 0 : t.id,
               channelId: n,
@@ -41,11 +41,11 @@ function y(e) {
               onAgree: O,
               onDisagree: v,
               title: _.intl.string(_.t.ZmwvDQ),
-              description: C,
-              agreement: y,
+              description: y,
+              agreement: x,
               agreementButtonColor: s.zxk.Colors.BRAND,
               disagreement: _.intl.string(_.t['/g10LC']),
-              imageClassName: x.ageGatedImage
+              imageClassName: C.ageGatedImage
           })
         : l
           ? (0, r.jsx)(h.Z, {
@@ -58,7 +58,7 @@ function y(e) {
                 description: _.intl.format(_.t['2kHZen'], { helpURL: m.Z.getArticleURL(g.BhN.NSFW_AGE_GATING) }),
                 agreement: null,
                 disagreement: _.intl.string(_.t['/g10LC']),
-                imageClassName: x.ageGatedImage
+                imageClassName: C.ageGatedImage
             })
           : (0, r.jsx)(h.Z, {
                 guildId: null == t ? void 0 : t.id,
@@ -72,20 +72,20 @@ function y(e) {
                 disagreement: _.intl.string(_.t['/g10LC'])
             });
 }
-let C = function (e) {
+let y = function (e) {
     let { guild: t, channelId: n, className: l } = e,
-        a = i.useRef(null);
+        o = i.useRef(null);
     return (
         i.useEffect(() => {
-            let { current: e } = a;
+            let { current: e } = o;
             null == e || e.scrollToBottom();
         }, []),
         (0, r.jsx)(s.Den, {
-            ref: a,
-            className: x.scroller,
+            ref: o,
+            className: C.scroller,
             children: (0, r.jsx)('div', {
-                className: o()(l, x.wrapper),
-                children: (0, r.jsx)(y, {
+                className: a()(l, C.wrapper),
+                children: (0, r.jsx)(x, {
                     guild: t,
                     channelId: n
                 })

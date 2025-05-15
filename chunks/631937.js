@@ -2,8 +2,8 @@ n.d(t, { Z: () => h });
 var r = n(73800),
     i = n(442837),
     l = n(661111),
-    o = n(706454),
-    a = n(306680),
+    a = n(706454),
+    o = n(306680),
     s = n(626135),
     c = n(802098),
     u = n(193701),
@@ -11,11 +11,11 @@ var r = n(73800),
     p = n(981631);
 function h(e) {
     let t = (0, u.Z)(e),
-        n = (0, i.e7)([o.default], () => o.default.locale),
+        n = (0, i.e7)([a.default], () => a.default.locale),
         h = (0, i.e7)([c.Z], () => c.Z.getChangelog(null != t ? t : '', n), [t, n]),
         f = (0, d.Z)(e),
         m = r.useRef(f ? Date.now() : null),
-        g = (0, i.e7)([a.ZP], () => a.ZP.getUnreadCount(e), [e]),
+        g = (0, i.e7)([o.ZP], () => o.ZP.getUnreadCount(e), [e]),
         b = r.useRef(g);
     r.useEffect(() => {
         b.current = g;

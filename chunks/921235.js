@@ -2,8 +2,8 @@ n.d(t, { Z: () => j }), n(388685), n(583741);
 var r = n(255367),
     i = n(73800),
     l = n(392711),
-    o = n.n(l),
-    a = n(442837),
+    a = n.n(l),
+    o = n(442837),
     s = n(481060),
     c = n(904245),
     u = n(268350),
@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(626135),
     b = n(51144),
     _ = n(901461),
-    x = n(981631),
-    y = n(388032),
-    C = n(900170);
+    C = n(981631),
+    x = n(388032),
+    y = n(900170);
 let v = '749054660769218631';
 function j(e) {
     var t;
@@ -26,35 +26,35 @@ function j(e) {
     i.useEffect(() => {
         (0, u.FQ)('847199849233514549', !0);
     }, []);
-    let O = (0, a.e7)(
+    let O = (0, o.e7)(
             [f.Z, h.default],
             () =>
-                !!o()(f.Z.getMessages(n.id).toArray())
+                !!a()(f.Z.getMessages(n.id).toArray())
                     .reverse()
-                    .find((e) => e.author.id !== h.default.getId() && e.state === x.yb.SENT && !(0, _.Z)(e))
+                    .find((e) => e.author.id !== h.default.getId() && e.state === C.yb.SENT && !(0, _.Z)(e))
         ),
-        E = (0, a.e7)([m.default], () => m.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-        I = null != (t = b.ZP.useName(E)) ? t : y.intl.string(y.t.y1Wu2d),
-        S = (0, a.e7)([d.Z], () => d.Z.getStickerById(v)),
+        E = (0, o.e7)([m.default], () => m.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
+        I = null != (t = b.ZP.useName(E)) ? t : x.intl.string(x.t.y1Wu2d),
+        S = (0, o.e7)([d.Z], () => d.Z.getStickerById(v)),
         P = i.useCallback(async () => {
             if (null == l || '' === l)
                 try {
                     await c.Z.sendGreetMessage(n.id, v),
-                        g.default.track(x.rMx.DM_EMPTY_ACTION, {
+                        g.default.track(C.rMx.DM_EMPTY_ACTION, {
                             channel_id: n.id,
                             channel_type: n.type,
                             source: 'Wave',
                             type: 'Send wave'
                         });
                 } catch (e) {
-                    e.ok || 429 !== e.status || j(y.intl.string(y.t['Whhv4+']));
+                    e.ok || 429 !== e.status || j(x.intl.string(x.t['Whhv4+']));
                 }
         }, [n.id, n.type, l]),
-        Z = y.intl.formatToPlainString(y.t.m0zYbW, { username: I }),
+        Z = x.intl.formatToPlainString(x.t.m0zYbW, { username: I }),
         N =
             null != l && '' !== l
                 ? (0, r.jsx)(s.Text, {
-                      className: C.error,
+                      className: y.error,
                       color: 'text-danger',
                       variant: 'text-sm/normal',
                       children: l
@@ -62,11 +62,11 @@ function j(e) {
                 : null;
     return O
         ? (0, r.jsxs)('div', {
-              className: C.containerCompact,
+              className: y.containerCompact,
               children: [
                   (0, r.jsxs)(s.P3F, {
-                      className: null != l && '' !== l ? C.compactButtonDisabled : C.compactButton,
-                      'aria-label': y.intl.string(y.t.pJObYG),
+                      className: null != l && '' !== l ? y.compactButtonDisabled : y.compactButton,
+                      'aria-label': x.intl.string(x.t.pJObYG),
                       onClick: P,
                       children: [
                           (0, r.jsx)(p.Z, {
@@ -74,7 +74,7 @@ function j(e) {
                               size: 24
                           }),
                           (0, r.jsx)(s.Text, {
-                              className: C.text,
+                              className: y.text,
                               variant: 'text-md/medium',
                               children: Z
                           })
@@ -84,14 +84,14 @@ function j(e) {
               ]
           })
         : (0, r.jsxs)('div', {
-              className: C.containerExpanded,
+              className: y.containerExpanded,
               children: [
                   (0, r.jsx)(p.Z, {
                       sticker: S,
                       size: 160
                   }),
                   (0, r.jsx)(s.zxk, {
-                      className: C.button,
+                      className: y.button,
                       onClick: P,
                       disabled: !!l,
                       children: Z

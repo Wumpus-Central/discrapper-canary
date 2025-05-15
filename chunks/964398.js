@@ -108,7 +108,7 @@ let g = (e, t) => {
         };
     },
     y = l.memo(function (e) {
-        let { wheelWidth: t, wheelHeight: n, itemWidth: y, itemHeight: O, showDeadZoneIndicator: b, activeItem: v, onItemSelect: m, onItemAction: x, interactive: N = !0, onClose: C, children: E } = e,
+        let { wheelWidth: t, wheelHeight: n, itemWidth: y, itemHeight: O, showDeadZoneIndicator: b, activeItem: v, onItemSelect: m, onItemAction: x, interactive: N = !0, onClose: E, children: C } = e,
             j = l.useRef(null),
             I = l.useRef([]),
             P = l.useRef(!1),
@@ -119,7 +119,7 @@ let g = (e, t) => {
                 y: 0
             }),
             A = Math.abs(_.x) + Math.abs(_.y) > 0,
-            R = l.useMemo(() => o().chunk(E, f), [E]),
+            R = l.useMemo(() => o().chunk(C, f), [C]),
             D = l.useCallback(
                 (e, t) => {
                     null == I.current[T] ? (I.current[T] = []) : (I.current[T][t] = e);
@@ -205,7 +205,7 @@ let g = (e, t) => {
                 () =>
                     R[T].map((e, l) => {
                         let i = h[l];
-                        if (null == i) throw Error('Too many items supplied '.concat(E.length, ' expected max of ').concat(h.length));
+                        if (null == i) throw Error('Too many items supplied '.concat(C.length, ' expected max of ').concat(h.length));
                         let o = p(i.x, t, y),
                             a = p(i.y, n, O);
                         return (0, r.jsx)(
@@ -224,7 +224,7 @@ let g = (e, t) => {
                             l
                         );
                     }),
-                [R, T, t, y, n, O, E.length, D]
+                [R, T, t, y, n, O, C.length, D]
             );
         return (0, r.jsx)(a.P3F, {
             className: c.chatWheelMouseInput,
@@ -322,7 +322,7 @@ let g = (e, t) => {
                             b &&
                                 (0, r.jsx)(a.P3F, {
                                     className: c.chatWheelDeadZoneIcon,
-                                    onClick: C,
+                                    onClick: E,
                                     children: (0, r.jsx)(d, { className: c.chatWheelDeadZoneIcon })
                                 }),
                             N && R.length > 1

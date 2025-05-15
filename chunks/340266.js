@@ -2,8 +2,8 @@ n.d(t, { Z: () => y });
 var r = n(255367);
 n(73800);
 var i = n(392711),
-    o = n(481060),
-    a = n(111028),
+    a = n(481060),
+    o = n(111028),
     s = n(5192),
     l = n(652853),
     c = n(228168),
@@ -136,70 +136,70 @@ let h = 4,
     b = [
         [
             {
-                top: 15,
-                left: 15,
-                width: 28,
-                height: 28
+                top: 23,
+                left: 23,
+                width: 52,
+                height: 52
             }
         ],
         [
             {
-                top: 7,
-                left: 7,
-                width: 20,
-                height: 20
+                top: 13,
+                left: 13,
+                width: 32,
+                height: 32
             },
             {
-                top: 25,
-                left: 25,
-                width: 26,
-                height: 26
+                top: 41,
+                left: 41,
+                width: 44,
+                height: 44
             }
         ],
         [
             {
-                top: 5,
+                top: 9,
+                left: 14,
+                width: 31,
+                height: 31
+            },
+            {
+                top: 27,
+                left: 53,
+                width: 34,
+                height: 34
+            },
+            {
+                top: 52,
+                left: 11,
+                width: 36,
+                height: 36
+            }
+        ],
+        [
+            {
+                top: 10,
                 left: 10,
-                width: 18,
-                height: 18
+                width: 36,
+                height: 36
             },
             {
-                top: 15,
-                left: 31,
-                width: 22,
-                height: 22
+                top: 10,
+                left: 57,
+                width: 31,
+                height: 31
             },
             {
-                top: 29,
-                left: 5,
-                width: 24,
-                height: 24
-            }
-        ],
-        [
-            {
-                top: 5,
-                left: 5,
-                width: 22,
-                height: 22
+                top: 57,
+                left: 10,
+                width: 31,
+                height: 31
             },
             {
-                top: 7,
-                left: 33,
-                width: 18,
-                height: 18
-            },
-            {
-                top: 33,
-                left: 7,
-                width: 18,
-                height: 18
-            },
-            {
-                top: 31,
-                left: 31,
-                width: 22,
-                height: 22
+                top: 52,
+                left: 52,
+                width: 36,
+                height: 36
             }
         ]
     ];
@@ -225,20 +225,20 @@ function y(e) {
                               y && i === v
                                   ? (0, r.jsx)('div', {
                                         className: u.overflowCount,
-                                        children: (0, r.jsx)(o.Text, {
+                                        children: (0, r.jsx)(a.Text, {
                                             variant: 'text-xxs/semibold',
                                             lineClamp: 1,
-                                            children: (0, r.jsx)(a.Z, { children: O > 99 ? '>99' : '+'.concat(O) })
+                                            children: (0, r.jsx)(o.Z, { children: O > 99 ? '>99' : '+'.concat(O) })
                                         })
                                     })
-                                  : (0, r.jsx)(o.ua7, {
+                                  : (0, r.jsx)(a.ua7, {
                                         text: s.ZP.getName(n.guild_id, n.id, l),
                                         children: (e) =>
                                             (0, r.jsx)(
                                                 'img',
                                                 p(f({}, e), {
                                                     className: u.avatar,
-                                                    src: l.getAvatarURL(n.guild_id, (0, o.pxk)(o.EFr.SIZE_80)),
+                                                    src: l.getAvatarURL(n.guild_id, (0, a.pxk)(a.EFr.SIZE_80)),
                                                     alt: ''
                                                 })
                                             )

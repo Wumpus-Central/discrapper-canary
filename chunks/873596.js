@@ -94,7 +94,7 @@ function N(e) {
         })
     );
 }
-function C(e) {
+function E(e) {
     let { channelId: t, isOverlay: n, lobbyId: l, closePopout: i } = e,
         o = (0, f.J)({ channelId: t }) ? O.intl.string(O.t['3BogKS']) : O.intl.string(O.t.ETIVvr);
     return n
@@ -108,14 +108,14 @@ function C(e) {
               connectionTypeText: o
           });
 }
-function E(e) {
+function C(e) {
     let t = (0, i.e7)([u.Z], () => u.Z.hasVideo(e.channelId)),
         [n, s] = l.useState(y.tu.RTC_DEBUG_PANEL),
         c = (0, a.Dt)(),
         f = l.useMemo(() => {
             switch (n) {
                 case y.tu.RTC_DEBUG_PANEL:
-                    return (0, r.jsx)(C, v({}, e));
+                    return (0, r.jsx)(E, v({}, e));
                 case y.tu.RTC_SECURE_FRAMES:
                     return (0, r.jsx)(g.Z, { channelId: e.channelId });
             }
@@ -172,12 +172,12 @@ function E(e) {
 }
 function j(e) {
     return (0, f.J)({ channelId: e.channelId })
-        ? (0, r.jsx)(E, v({}, e))
+        ? (0, r.jsx)(C, v({}, e))
         : (0, r.jsx)('div', {
               className: b.debugPanelStandalone,
               children: (0, r.jsx)('section', {
                   className: b.debugPanelSection,
-                  children: (0, r.jsx)(C, v({}, e))
+                  children: (0, r.jsx)(E, v({}, e))
               })
           });
 }

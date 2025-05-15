@@ -2,8 +2,8 @@ n.d(t, { Z: () => b }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(704215),
-    o = n(481060),
-    a = n(436952),
+    a = n(481060),
+    o = n(436952),
     s = n(839606),
     c = n(54480),
     u = n(605236),
@@ -16,12 +16,12 @@ var r = n(255367),
 let b = function (e) {
     let { channel: t } = e,
         { activePickerChannelId: n, openPickerForChannel: b, closePicker: _ } = (0, s.B)(),
-        { canAccessPicker: x, entryPoint: y } = (0, c.m)({
+        { canAccessPicker: C, entryPoint: x } = (0, c.m)({
             location: 'channel_header_toolbar',
             selectedChannelId: t.id
         }),
-        C = (0, u.wE)(l.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
-        v = x && y === a.FN.TOOLBAR && C,
+        y = (0, u.wE)(l.z.CHAT_WALLPAPERS_PICKER_COACHMARK),
+        v = C && x === o.FN.TOOLBAR && y,
         [j, O] = (0, d.US)(v ? [l.z.CHAT_WALLPAPERS_TOOLBAR_ENTRYPOINT_BADGE] : []),
         E = j === l.z.CHAT_WALLPAPERS_TOOLBAR_ENTRYPOINT_BADGE,
         I = i.useCallback(() => {
@@ -31,7 +31,7 @@ let b = function (e) {
         ? (0, r.jsx)(h.JO, {
               onClick: I,
               tooltip: g.intl.string(g.t.GixvUl),
-              icon: o.XBm,
+              icon: a.XBm,
               iconSize: 20,
               'aria-label': g.intl.string(g.t.GixvUl),
               showBadge: E,

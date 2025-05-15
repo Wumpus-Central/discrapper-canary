@@ -2,7 +2,7 @@ n.d(t, { Z: () => d });
 var r = n(255367);
 n(73800);
 var i = n(325767);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -15,7 +15,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -26,7 +26,7 @@ function a(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -60,8 +60,8 @@ function c(e, t) {
         r,
         i = u(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -70,20 +70,20 @@ function u(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function d(e) {
-    var { width: t = 10, height: n = 10, color: o = 'currentColor' } = e,
+    var { width: t = 10, height: n = 10, color: a = 'currentColor' } = e,
         s = c(e, ['width', 'height', 'color']);
     return (0, r.jsxs)(
         'svg',
-        l(a({}, (0, i.Z)(s)), {
+        l(o({}, (0, i.Z)(s)), {
             width: t,
             height: n,
             viewBox: '0 0 17 22',
-            fill: o,
+            fill: a,
             xmlns: 'http://www.w3.org/2000/svg',
             children: [
                 (0, r.jsxs)('g', {

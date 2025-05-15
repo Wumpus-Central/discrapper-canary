@@ -1,6 +1,6 @@
 n.d(t, {
-    G: () => y,
-    d: () => C
+    G: () => x,
+    d: () => y
 }),
     n(539854),
     n(388685),
@@ -8,8 +8,8 @@ n.d(t, {
 var r = n(475179),
     i = n(166459),
     l = n(966390),
-    o = n(531643),
-    a = n(476326),
+    a = n(531643),
+    o = n(476326),
     s = n(367907),
     c = n(358221),
     u = n(117530),
@@ -21,51 +21,51 @@ var r = n(475179),
     g = n(981631),
     b = n(959517),
     _ = n(474936),
-    x = n(388032);
-function y(e, t) {
+    C = n(388032);
+function x(e, t) {
     let n = d.default.getCurrentUser(),
         r = e.getGuildId(),
         i = h.dg(r),
         l = [],
-        a = 0,
+        o = 0,
         c = 0,
         u = 0,
         p = [];
-    for (let e of t) (u += 1), (a += e.size), l.push(e.size), e.size > c && (c = e.size), null != e.type ? p.push(e.type) : p.push('unknown');
+    for (let e of t) (u += 1), (o += e.size), l.push(e.size), e.size > c && (c = e.size), null != e.type ? p.push(e.type) : p.push('unknown');
     if (c > i) {
         (0, s.yw)(g.rMx.FILE_SIZE_LIMIT_EXCEEDED, {
             channel_id: e.id,
             guild_id: r,
             user_individual_file_size_limit: i,
             pre_compression_file_sizes: l,
-            pre_compression_aggregate_file_size: a,
+            pre_compression_aggregate_file_size: o,
             num_attachments: u,
             error_type: b.xi.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
             attachment_mimetypes: p
         }),
-            (0, o.openUploadError)({
-                title: x.intl.string(x.t['/tGlcn']),
+            (0, a.openUploadError)({
+                title: C.intl.string(C.t['/tGlcn']),
                 help: (0, m.BK)(n, r),
                 showPremiumUpsell: !(0, f.M5)(n, _.p9.TIER_2),
                 fileSize: c
             });
         return;
     }
-    (0, o.openUploadError)({
-        title: x.intl.string(x.t['/tGlcn']),
-        help: x.intl.formatToPlainString(x.t.tUOJdH, { maxSize: h.Ng(h.OC()) })
+    (0, a.openUploadError)({
+        title: C.intl.string(C.t['/tGlcn']),
+        help: C.intl.formatToPlainString(C.t.tUOJdH, { maxSize: h.Ng(h.OC()) })
     });
 }
-function C(e, t, n) {
+function y(e, t, n) {
     let { filesMetadata: s, requireConfirm: d = !0, showLargeMessageDialog: h = !1, isThumbnail: f = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (e.length < 1) return;
     if (null != s && s.length !== e.length) throw Error('Unexpected mismatch between files and file metadata');
     let b = t.getGuildId();
-    if ((0, m.Bf)(e, b)) return void y(t, e);
+    if ((0, m.Bf)(e, b)) return void x(t, e);
     if (u.Z.getUploadCount(t.id, n) + e.length > g.dN1) {
-        (0, o.openUploadError)({
-            title: x.intl.string(x.t.wOr6hI),
-            help: x.intl.formatToPlainString(x.t['qqyp/f'], { limit: g.dN1 })
+        (0, a.openUploadError)({
+            title: C.intl.string(C.t.wOr6hI),
+            help: C.intl.formatToPlainString(C.t['qqyp/f'], { limit: g.dN1 })
         }),
             p.default.track(g.rMx.UPLOAD_FILE_LIMIT_ERROR, {
                 existing_count: u.Z.getUploadCount(t.id, n),
@@ -102,7 +102,7 @@ function C(e, t, n) {
             })(
                 {
                     file: e,
-                    platform: a.ow.WEB,
+                    platform: o.ow.WEB,
                     isThumbnail: f
                 },
                 null == s ? void 0 : s[t]

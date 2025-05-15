@@ -2,8 +2,8 @@ n.d(t, { Z: () => D });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(990547),
+    a = n.n(l),
+    o = n(990547),
     s = n(442837),
     c = n(704215),
     u = n(124293),
@@ -15,9 +15,9 @@ var r = n(255367),
     g = n(119315),
     b = n(367907),
     _ = n(213609),
-    x = n(499254),
-    y = n(541099),
-    C = n(827498),
+    C = n(499254),
+    x = n(541099),
+    y = n(827498),
     v = n(663924),
     j = n(533379),
     O = n(562129),
@@ -31,12 +31,12 @@ var r = n(255367),
     A = n(981631),
     w = n(314734),
     R = n(921944),
-    k = n(388032),
-    M = n(560163);
+    M = n(388032),
+    k = n(560163);
 let L = i.forwardRef(function (e, t) {
         var n, l;
         let { type: v, animateRef: j } = e,
-            E = (0, s.e7)([y.Z], () => y.Z.shouldShowPopup() && y.Z.activeViewType() === v),
+            E = (0, s.e7)([x.Z], () => x.Z.shouldShowPopup() && x.Z.activeViewType() === v),
             { badgeTreatment: P } = h.Y.useExperiment({ location: 'ChannelAppLauncherButton' }, { autoTrackExposure: !0 }),
             { Component: Z, events: T, play: L } = (0, O.Z)('ChannelAppLauncherButton'),
             { Component: D, play: U } = (0, u.B)(),
@@ -56,10 +56,10 @@ let L = i.forwardRef(function (e, t) {
             }),
             F = i.useCallback(() => {
                 (0, b.yw)(A.rMx.APP_LAUNCHER_ENTRYPOINT_BUTTON_CLICKED, {
-                    source: C._b.TEXT,
+                    source: y._b.TEXT,
                     badge_type: G ? P.valueOf() : null
                 }),
-                    E ? x.yT(C.ti.DISMISSED) : ((0, S.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: R.L.TAKE_ACTION }), x.__(C._b.TEXT, v), f.ux()),
+                    E ? C.yT(y.ti.DISMISSED) : ((0, S.EW)(c.z.DESKTOP_APP_LAUNCHER_ONBOARDING, { dismissAction: R.L.TAKE_ACTION }), C.__(y._b.TEXT, v), f.ux()),
                     L();
             }, [E, v, L, G, P]);
         i.useEffect(() => {
@@ -68,10 +68,10 @@ let L = i.forwardRef(function (e, t) {
                     G &&
                     (U(),
                     (0, _.h)({
-                        type: a.ImpressionTypes.VIEW,
-                        name: a.ImpressionNames.APP_LAUNCHER_BADGE,
+                        type: o.ImpressionTypes.VIEW,
+                        name: o.ImpressionNames.APP_LAUNCHER_BADGE,
                         properties: {
-                            source: C._b.TEXT,
+                            source: y._b.TEXT,
                             badge_type: P.valueOf()
                         }
                     }));
@@ -99,7 +99,7 @@ let L = i.forwardRef(function (e, t) {
                 G &&
                     P === h.O.GLOWING_ANIMATION &&
                     (0, r.jsx)('div', {
-                        className: M.appLauncherGlow,
+                        className: k.appLauncherGlow,
                         children: (0, r.jsx)(D, {
                             size: 'custom',
                             width: 48,
@@ -108,7 +108,7 @@ let L = i.forwardRef(function (e, t) {
                         })
                     }),
                 (0, r.jsxs)('div', {
-                    className: o()(M.buttonContainer, w.t4, { [M.appLauncherCircleMask]: G && P === h.O.GLOWING_ANIMATION }),
+                    className: a()(k.buttonContainer, w.t4, { [k.appLauncherCircleMask]: G && P === h.O.GLOWING_ANIMATION }),
                     ref: t,
                     children: [
                         (0, r.jsx)(
@@ -142,9 +142,9 @@ let L = i.forwardRef(function (e, t) {
                                     look: d.zxk.Looks.BLANK,
                                     size: d.zxk.Sizes.NONE,
                                     tabIndex: 0,
-                                    className: o()(M.button, { [M.buttonActive]: E }),
+                                    className: a()(k.button, { [k.buttonActive]: E }),
                                     onClick: F,
-                                    'aria-label': k.intl.string(k.t.erHFxM),
+                                    'aria-label': M.intl.string(M.t.erHFxM),
                                     'aria-expanded': E,
                                     'aria-haspopup': 'dialog',
                                     focusProps: {
@@ -155,7 +155,7 @@ let L = i.forwardRef(function (e, t) {
                                             right: -4
                                         }
                                     },
-                                    innerClassName: M.buttonContents
+                                    innerClassName: k.buttonContents
                                 },
                                 T
                             )),
@@ -189,34 +189,34 @@ let L = i.forwardRef(function (e, t) {
         });
     }),
     D = i.memo(function (e) {
-        let { channel: t, type: n, animateRef: l, entryPointCommandButtonRef: o } = e,
-            a = i.useRef(null),
+        let { channel: t, type: n, animateRef: l, entryPointCommandButtonRef: a } = e,
+            o = i.useRef(null),
             c = (0, j.R)({
                 channel: t,
                 chatInputType: n
             }),
             u = (0, T.Z)({ type: n }),
             d = (0, E.h9)(t.id),
-            p = (0, s.e7)([y.Z], () => y.Z.appDMChannelsWithFailedLoads().has(t.id)),
+            p = (0, s.e7)([x.Z], () => x.Z.appDMChannelsWithFailedLoads().has(t.id)),
             { visible: h } = (0, Z.xL)();
         return c
             ? (0, r.jsxs)('div', {
-                  className: M.channelAppLauncher,
+                  className: k.channelAppLauncher,
                   children: [
                       (0, r.jsx)(P.Z, {
                           channel: t,
-                          animationContainerClassName: M.entrypointAnimation,
-                          glowClassName: M.animationGlow,
-                          trinketsClassName: M.animationTrinkets,
+                          animationContainerClassName: k.entrypointAnimation,
+                          glowClassName: k.animationGlow,
+                          trinketsClassName: k.animationTrinkets,
                           children: (0, r.jsx)(L, {
                               type: n,
-                              ref: a,
+                              ref: o,
                               animateRef: l
                           })
                       }),
                       u
                           ? (0, r.jsx)(v.Z, {
-                                positionTargetRef: d && !p && h ? o : a,
+                                positionTargetRef: d && !p && h ? a : o,
                                 channel: t
                             })
                           : null

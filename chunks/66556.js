@@ -2,8 +2,8 @@ n.d(t, { Z: () => f }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    o = n(481060),
-    a = n(665149),
+    a = n(481060),
+    o = n(665149),
     s = n(731290),
     c = n(594174),
     u = n(91159),
@@ -28,16 +28,16 @@ function f(e) {
         _ = i.useCallback(() => {
             n || (0, u.U4)('Popout'), f(!n);
         }, [n]);
-    return (0, r.jsx)(o.yRy, {
+    return (0, r.jsx)(a.yRy, {
         targetElementRef: m,
-        animation: o.yRy.Animation.NONE,
+        animation: a.yRy.Animation.NONE,
         position: 'bottom',
         align: 'right',
         autoInvert: !1,
         shouldShow: n,
         onRequestClose: b,
         renderPopout: function () {
-            return (0, r.jsx)(o.VqE, {
+            return (0, r.jsx)(a.VqE, {
                 children: (0, r.jsx)(d.Z, {
                     className: h.browser,
                     channel: t,
@@ -50,7 +50,7 @@ function f(e) {
             var n, i;
             let { isShown: l } = t;
             return (0, r.jsx)(
-                a.JO,
+                o.JO,
                 ((n = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -81,7 +81,7 @@ function f(e) {
                         ref: m,
                         className: h.icon,
                         onClick: _,
-                        icon: o.or_,
+                        icon: a.or_,
                         'aria-label': p.intl.string(p.t.B2panJ),
                         tooltip: l ? null : p.intl.string(p.t.B2panJ),
                         disabled: g,

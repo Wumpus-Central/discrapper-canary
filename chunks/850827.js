@@ -51,18 +51,18 @@ let k = (e) => {
         );
     },
     M = (0, u.Z)((e) => {
-        let { activity: t, embeddedActivity: n, user: l, applicationStream: o, className: u, guildId: p, channelId: g, source: M, color: U = c.zxk.Colors.WHITE, look: R = c.zxk.Looks.OUTLINED, type: V, onAction: F } = e,
-            Y = (0, s.e7)([b.default], () => {
+        let { activity: t, embeddedActivity: n, user: l, applicationStream: o, className: u, guildId: p, channelId: g, source: M, color: U = c.zxk.Colors.WHITE, look: R = c.zxk.Looks.OUTLINED, type: V, onAction: Y } = e,
+            F = (0, s.e7)([b.default], () => {
                 let e = b.default.getCurrentUser();
                 return a()(null != e, 'UserActivityActions: currentUser cannot be undefined'), e;
             }),
             B = V === S.Y.STREAM_PREVIEW || null != o,
             G = (0, y.Z)(t),
-            z = G || B ? f.Z.Direction.HORIZONTAL : f.Z.Direction.VERTICAL;
+            W = G || B ? f.Z.Direction.HORIZONTAL : f.Z.Direction.VERTICAL;
         if ((null == t ? void 0 : t.application_id) === w.bO) {
-            var W, H;
+            var z, H;
             return (
-                (W = (function (e) {
+                (z = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
                             r = Object.keys(n);
@@ -93,7 +93,7 @@ let k = (e) => {
                         metadata: { button_urls: [w.U8] }
                     }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(W, Object.getOwnPropertyDescriptors(H))
+                    ? Object.defineProperties(z, Object.getOwnPropertyDescriptors(H))
                     : (function (e, t) {
                           var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
@@ -102,23 +102,23 @@ let k = (e) => {
                           }
                           return n;
                       })(Object(H)).forEach(function (e) {
-                          Object.defineProperty(W, e, Object.getOwnPropertyDescriptor(H, e));
+                          Object.defineProperty(z, e, Object.getOwnPropertyDescriptor(H, e));
                       }),
-                (t = W),
+                (t = z),
                 (0, r.jsx)(k, {
                     user: l,
                     color: U,
                     look: R,
                     activity: t,
-                    onAction: F
+                    onAction: Y
                 })
             );
         }
-        let J = z === f.Z.Direction.VERTICAL;
+        let J = W === f.Z.Direction.VERTICAL;
         return (0, r.jsx)(f.Z, {
             grow: 0,
             align: f.Z.Align.STRETCH,
-            direction: z,
+            direction: W,
             wrap: J ? f.Z.Wrap.WRAP : f.Z.Wrap.NO_WRAP,
             className: i()(u, L.buttonsWrapper, J ? L.vertical : L.horizontal),
             children: (() => {
@@ -129,7 +129,7 @@ let k = (e) => {
                             platform: d.Z.get(N.ABu.XBOX),
                             look: R,
                             color: U,
-                            onAction: F,
+                            onAction: Y,
                             Icon: h.Z
                         },
                         'ConnectPlatformActivityButton'
@@ -141,7 +141,7 @@ let k = (e) => {
                             look: R,
                             color: U,
                             platform: d.Z.get(N.ABu.PLAYSTATION),
-                            onAction: F,
+                            onAction: Y,
                             Icon: O.Z
                         },
                         'ConnectPlatformActivityButton'
@@ -157,7 +157,7 @@ let k = (e) => {
                                 source: M,
                                 look: R,
                                 color: U,
-                                onAction: F
+                                onAction: Y
                             },
                             'spotify-activity-sync-button'
                         ),
@@ -169,7 +169,7 @@ let k = (e) => {
                                 source: M,
                                 look: R,
                                 color: U,
-                                onAction: F
+                                onAction: Y
                             },
                             'spotify-activity-play-button'
                         );
@@ -188,7 +188,7 @@ let k = (e) => {
                                   channelId: e.channelId,
                                   color: U,
                                   look: R,
-                                  onAction: F
+                                  onAction: Y
                               },
                               e.channelId
                           );
@@ -197,11 +197,11 @@ let k = (e) => {
                     ? (0, r.jsx)(
                           A.Z,
                           {
-                              isCurrentUser: Y.id === l.id,
+                              isCurrentUser: F.id === l.id,
                               color: U,
                               look: R,
                               applicationStream: o,
-                              onAction: F
+                              onAction: Y
                           },
                           'watch-button'
                       )
@@ -213,7 +213,7 @@ let k = (e) => {
                                       activity: t,
                                       color: U,
                                       look: R,
-                                      onAction: F
+                                      onAction: Y
                                   },
                                   'watch-button'
                               ),
@@ -225,7 +225,7 @@ let k = (e) => {
                                       user: l,
                                       color: U,
                                       look: R,
-                                      onAction: F
+                                      onAction: Y
                                   },
                                   'join-activity-button'
                               ),
@@ -236,7 +236,7 @@ let k = (e) => {
                                       user: l,
                                       color: U,
                                       look: R,
-                                      onAction: F
+                                      onAction: Y
                                   },
                                   'notify-button'
                               ),
@@ -247,7 +247,7 @@ let k = (e) => {
                                       color: U,
                                       look: R,
                                       activity: t,
-                                      onAction: F
+                                      onAction: Y
                                   },
                                   'custom-activity-button'
                               )

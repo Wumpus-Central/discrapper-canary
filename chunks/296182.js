@@ -7,8 +7,8 @@ n.d(t, {
 });
 var r = n(829883),
     i = n(378233),
-    o = n(591759),
-    a = n(998502);
+    a = n(591759),
+    o = n(998502);
 let s = 'png',
     l = 'https://media.discordapp.net',
     c = 'cdn.discordapp.com';
@@ -16,14 +16,14 @@ function u(e) {
     return !((0, i.B0)(e) || (0, r.zt)(e));
 }
 function d(e) {
-    return a.ZP.canSaveImage(e) && o.Z.isDiscordAssetUrl(e) && u(e);
+    return o.ZP.canSaveImage(e) && a.Z.isDiscordAssetUrl(e) && u(e);
 }
 function f(e) {
-    return a.ZP.canCopyImage(e) && o.Z.isDiscordAssetUrl(e) && u(e);
+    return o.ZP.canCopyImage(e) && a.Z.isDiscordAssetUrl(e) && u(e);
 }
 function _(e, t) {
-    let n = o.Z.toURLSafe(e);
+    let n = a.Z.toURLSafe(e);
     if (null == n || n.host === c) return e;
-    let r = (0, a.mD)(e);
+    let r = (0, o.mD)(e);
     return n.origin === l && ((n.host = c), n.searchParams.delete('size')), n.searchParams.delete('width'), n.searchParams.delete('height'), n.searchParams.delete('quality'), n.searchParams.delete('format'), null == r && null != t && n.searchParams.append('format', t), n.toString();
 }

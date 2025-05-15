@@ -2,8 +2,8 @@ n.d(t, { Z: () => f });
 var r,
     i,
     l,
-    o = n(392711),
-    a = n.n(o),
+    a = n(392711),
+    o = n.n(a),
     s = n(442837),
     c = n(570140),
     u = n(430824);
@@ -24,7 +24,7 @@ class h extends (l = s.ZP.Store) {
                   return t;
               }))
                 ? e
-                : a().sample(n)
+                : o().sample(n)
             : null;
     }
     getOptimalRegionId() {
@@ -35,7 +35,7 @@ class h extends (l = s.ZP.Store) {
     getRandomRegion() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
             t = this.getRegions(e);
-        return null != t ? a().sample(t) : null;
+        return null != t ? o().sample(t) : null;
     }
     getRandomRegionId() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
@@ -57,7 +57,7 @@ class h extends (l = s.ZP.Store) {
         : (h[r] = i);
 let f = new h(c.Z, {
     LOAD_REGIONS: function (e) {
-        let t = a().sortBy(e.regions, (e) => e.name);
+        let t = o().sortBy(e.regions, (e) => e.name);
         null != e.guildId ? (p[e.guildId] = t) : (d = t);
     },
     GUILD_DELETE: function (e) {

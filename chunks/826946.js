@@ -6,12 +6,14 @@ var r = n(255367),
     o = n(104102);
 let s = function (e) {
     let { className: t, guildId: n } = e,
-        s = i.useCallback((e, t) => {
+        s = i.useRef(null),
+        c = i.useCallback((e, t) => {
             e.stopPropagation(), t.onClick(e);
         }, []);
     return (0, r.jsx)(a.Z, {
         guildId: n,
         position: 'left',
+        targetElementRef: s,
         children: (e) => {
             var n, i;
             return (0, r.jsx)(
@@ -43,8 +45,9 @@ let s = function (e) {
                 })({}, e)),
                 (i = i =
                     {
+                        innerRef: s,
                         className: t,
-                        onClick: (t) => s(t, e),
+                        onClick: (t) => c(t, e),
                         children: (0, r.jsx)('div', {
                             className: o.icon,
                             children: (0, r.jsx)(l.bJT, {

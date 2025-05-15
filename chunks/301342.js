@@ -144,7 +144,7 @@ let I = i.memo(function (e) {
             })(U, ['role', 'tabIndex']),
             H = i.useRef(null),
             F = i.useRef(null),
-            z = (0, r.jsxs)('li', {
+            W = (0, r.jsxs)('li', {
                 className: t,
                 'data-dnd-name': l.name,
                 children: [
@@ -251,7 +251,7 @@ let I = i.memo(function (e) {
                     Z
                 ]
             });
-        return null != O && null != h ? O(h(z)) : z;
+        return null != O && null != h ? O(h(W)) : W;
     }),
     w = (0, h.B)(I),
     N = i.memo(function (e) {

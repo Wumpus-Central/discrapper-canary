@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var r = n(73800),
     i = n(592125),
     l = n(944486),
-    o = n(585483),
-    a = n(16609),
+    a = n(585483),
+    o = n(16609),
     s = n(917107),
     c = n(89425),
     u = n(197386),
@@ -14,19 +14,19 @@ function p(e) {
         async function e(e) {
             var n;
             let { location: r } = e,
-                o = null != (n = (0, a.pY)(r)) ? n : (0, a.wq)(r);
-            if (null == o || !(0, s.Z)(o)) return;
-            l.Z.getVoiceChannelId() !== o && (await (0, c.Z)({ channelId: o }));
-            let d = i.Z.getChannel(o),
+                a = null != (n = (0, o.pY)(r)) ? n : (0, o.wq)(r);
+            if (null == a || !(0, s.Z)(a)) return;
+            l.Z.getVoiceChannelId() !== a && (await (0, c.Z)({ channelId: a }));
+            let d = i.Z.getChannel(a),
                 p = null == d ? void 0 : d.guild_id;
             setTimeout(() => {
                 (0, u.Z)(p, r), null == t || t();
             }, 0);
         }
         return (
-            o.S.subscribe(d.CkL.OPEN_EMBEDDED_ACTIVITY, e),
+            a.S.subscribe(d.CkL.OPEN_EMBEDDED_ACTIVITY, e),
             () => {
-                o.S.unsubscribe(d.CkL.OPEN_EMBEDDED_ACTIVITY, e);
+                a.S.unsubscribe(d.CkL.OPEN_EMBEDDED_ACTIVITY, e);
             }
         );
     }, [t]);

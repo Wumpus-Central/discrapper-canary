@@ -127,11 +127,11 @@ let H = c.ZP.connectStores([S.ZP, O.Z], (e) => {
         if (null == t.guild_id) throw Error('ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...');
         return { voiceStates: E.ZP.getVoiceStates(t.guild_id)[t.id] };
     })(V),
-    z = c.ZP.connectStores([v.default], (e) => {
+    W = c.ZP.connectStores([v.default], (e) => {
         let { guild: t } = e;
         return { unread: v.default.hasUnread(t.id) };
     })(Z.ic),
-    W = c.ZP.connectStores([S.ZP], (e) => {
+    z = c.ZP.connectStores([S.ZP], (e) => {
         let { channel: t } = e;
         return { mentions: S.ZP.getMentionCount(t.id) };
     })(Z.PZ),
@@ -486,7 +486,7 @@ class q extends l.PureComponent {
                         );
                     case f.h8.GUILD:
                         return (0, i.jsx)(
-                            z,
+                            W,
                             {
                                 id: this.getRowId(t),
                                 focused: r >= 0 && t === r,
@@ -517,7 +517,7 @@ class q extends l.PureComponent {
                         );
                     case f.h8.GROUP_DM:
                         return (0, i.jsx)(
-                            W,
+                            z,
                             {
                                 id: this.getRowId(t),
                                 focused: r >= 0 && t === r,

@@ -10,7 +10,7 @@ var i = n(255367),
     c = n(314897),
     g = n(388032);
 function f(e) {
-    let { userId: t, channelId: n, guildId: f, simplified: b = !1 } = e,
+    let { userId: t, channelId: n, guildId: f, minimal: b = !1 } = e,
         Z = (0, d.J)({ channelId: n }),
         m = (0, r.e7)([c.default], () => c.default.getId() === t),
         v = (0, o.bp)(),

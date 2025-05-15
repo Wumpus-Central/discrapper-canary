@@ -126,8 +126,8 @@ function Z(e) {
         o = l.useRef(null),
         a = l.useRef(null),
         Z = l.useRef(null),
-        L = l.useRef(null),
         R = l.useRef(null),
+        L = l.useRef(null),
         P = (0, c.e7)([p.Z], () => p.Z.getSearchStateByGuildId(t), [t], s()),
         I = (0, c.e7)([C.Z, d.Z], () => C.Z.can(O.Plq.MANAGE_GUILD, d.Z.getGuild(t)), [t]),
         { selectedUserIds: M, addUsers: V, clearSelection: E } = (0, f.Z)(t),
@@ -289,7 +289,7 @@ function Z(e) {
                           className: H.smallCol
                       }),
                 (0, r.jsx)(u.yRy, {
-                    targetElementRef: L,
+                    targetElementRef: R,
                     animation: u.yRy.Animation.FADE,
                     position: 'bottom',
                     spacing: 4,
@@ -308,7 +308,7 @@ function Z(e) {
                             D,
                             w(
                                 {
-                                    ref: L,
+                                    ref: R,
                                     label: y.intl.string(y.t['2SZsWV']),
                                     onFilter: t,
                                     isFiltered: k,
@@ -327,7 +327,7 @@ function Z(e) {
                     color: u.ua7.Colors.BRAND,
                     children: (e) =>
                         (0, r.jsx)(u.yRy, {
-                            targetElementRef: R,
+                            targetElementRef: L,
                             animation: u.yRy.Animation.FADE,
                             position: 'bottom',
                             spacing: 4,
@@ -342,7 +342,7 @@ function Z(e) {
                             closeOnScroll: !0,
                             children: (t) =>
                                 (0, r.jsx)(D, {
-                                    ref: R,
+                                    ref: L,
                                     label: y.intl.string(y.t['7V375+']),
                                     'aria-label': y.intl.string(y.t['2cRO3d']),
                                     onFilter: (n) => {

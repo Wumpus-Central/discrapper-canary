@@ -3,14 +3,14 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    o = n(481060),
-    a = n(998502),
+    a = n(481060),
+    o = n(998502),
     s = n(939630);
-let c = a.ZP.getEnableHardwareAcceleration()
+let c = o.ZP.getEnableHardwareAcceleration()
     ? function (e) {
           let { eventTargetRef: t } = e;
-          return (0, o._q$)('PulseGradient')
-              ? (0, r.jsx)(o.zLd, {
+          return (0, a._q$)('PulseGradient')
+              ? (0, r.jsx)(a.zLd, {
                     className: s.pulseGradient,
                     eventTargetRef: t
                 })

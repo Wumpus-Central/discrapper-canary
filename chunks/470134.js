@@ -2,19 +2,19 @@ n.d(t, { Z: () => p }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(481060),
+    a = n.n(l),
+    o = n(481060),
     s = n(923726),
     c = n(388032),
     u = n(542503);
 function d(e) {
     let { text: t, hasScrolled: n } = e;
     return (0, r.jsxs)('div', {
-        className: o()(u.container, { [u.containerHide]: n }),
+        className: a()(u.container, { [u.containerHide]: n }),
         children: [
             (0, r.jsx)('div', {
                 className: u.notice,
-                children: (0, r.jsx)(a.Text, {
+                children: (0, r.jsx)(o.Text, {
                     className: u.__invalid_label,
                     variant: 'text-md/medium',
                     color: 'header-primary',
@@ -27,8 +27,8 @@ function d(e) {
 }
 function p(e) {
     let [t, n] = i.useState(),
-        [l, o] = i.useState(),
-        [a, u] = i.useState(!1),
+        [l, a] = i.useState(),
+        [o, u] = i.useState(!1),
         [p, h] = i.useState(!1),
         { enabled: f } = (0, s.s1)(e);
     return (
@@ -38,18 +38,18 @@ function p(e) {
         {
             horizontalScrollNotice: i.useMemo(
                 () =>
-                    a
+                    o
                         ? (0, r.jsx)(d, {
                               text: c.intl.string(c.t.RfAAHx),
                               hasScrolled: p
                           })
                         : null,
-                [a, p]
+                [o, p]
             ),
             handleScroll: () => h(!0),
             handleSetScrollerRef: (e) => {
                 var t;
-                return o(null == e || null == (t = e.getScrollerState()) ? void 0 : t.scrollWidth);
+                return a(null == e || null == (t = e.getScrollerState()) ? void 0 : t.scrollWidth);
             },
             handleSetContainerRef: (e) => n(null == e ? void 0 : e.clientWidth)
         }

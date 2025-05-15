@@ -54,7 +54,7 @@ function x(e, t, n) {
             userId: e.id,
             channelId: t,
             guildId: n,
-            simplified: !0
+            minimal: !0
         }),
         l = (0, b.Z)({
             id: e.id,

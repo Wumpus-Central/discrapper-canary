@@ -3,8 +3,8 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    o = n(442837),
-    a = n(481060),
+    a = n(442837),
+    o = n(481060),
     s = n(99690),
     c = n(40851),
     u = n(657305),
@@ -16,9 +16,9 @@ var i = n(120356),
     g = n(554747),
     b = n(854698),
     _ = n(897669),
-    x = n(665149),
-    y = n(984370),
-    C = n(910611),
+    C = n(665149),
+    x = n(984370),
+    y = n(910611),
     v = n(454585),
     j = n(134483),
     O = n(210975),
@@ -32,8 +32,8 @@ var i = n(120356),
     A = n(339340),
     w = n(354459),
     R = n(981631),
-    k = n(231338),
-    M = n(388032),
+    M = n(231338),
+    k = n(388032),
     L = n(610633),
     D = n(73433);
 function U(e) {
@@ -82,7 +82,7 @@ function B(e, t) {
 function G(e) {
     let { focusedParticipant: t, channel: n } = e,
         i = (0, c.bp)(),
-        l = (0, o.e7)([S.Z], () => S.Z.getLayout(n.id, i));
+        l = (0, a.e7)([S.Z], () => S.Z.getLayout(n.id, i));
     return (0, r.jsx)(I.Z, {
         children: (0, r.jsx)(T.Z, {
             className: L.participants,
@@ -96,22 +96,22 @@ function G(e) {
 }
 function F(e) {
     let { user: t, channel: n, stream: i, color: l } = e,
-        o = (0, E.Z)(n, t, i);
+        a = (0, E.Z)(n, t, i);
     return null == t || null == i
         ? null
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(s.Z, {
                       className: L.avatar,
-                      size: a.EFr.SIZE_24,
+                      size: o.EFr.SIZE_24,
                       user: t,
                       animate: !1
                   }),
-                  (0, r.jsx)(a.Text, {
+                  (0, r.jsx)(o.Text, {
                       className: L.playingText,
                       variant: 'text-md/medium',
                       color: l,
-                      children: o
+                      children: a
                   })
               ]
           });
@@ -119,7 +119,7 @@ function F(e) {
 function H(e) {
     let t,
         { focusedApplication: n, focusedParticipant: i, channel: l } = e,
-        o = (0, Z.Z)(l, !0),
+        a = (0, Z.Z)(l, !0),
         s = (0, g.qY)(l.id),
         c = null != s ? (0, b.DK)(s) : null,
         d = null != s;
@@ -127,18 +127,18 @@ function H(e) {
         null != n &&
             (t = (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(x.ZP.Divider, { className: L.divider }),
+                    (0, r.jsx)(C.ZP.Divider, { className: L.divider }),
                     (0, r.jsx)(m.Z, {
                         game: n,
                         className: L.activityIcon
                     }),
-                    (0, r.jsx)(a.Text, {
+                    (0, r.jsx)(o.Text, {
                         className: L.playingText,
                         variant: 'text-md/normal',
                         color: 'none',
                         children: (0, u.Z)(n.name)
                     }),
-                    o &&
+                    a &&
                         (0, r.jsx)(G, {
                             channel: l,
                             focusedParticipant: i
@@ -150,14 +150,14 @@ function H(e) {
             n = i.stream;
         t = (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(x.ZP.Divider, { className: L.divider }),
+                (0, r.jsx)(C.ZP.Divider, { className: L.divider }),
                 (0, r.jsx)(F, {
                     user: e,
                     channel: l,
                     stream: n,
-                    color: o ? 'header-primary' : 'none'
+                    color: a ? 'header-primary' : 'none'
                 }),
-                o &&
+                a &&
                     (0, r.jsx)(G, {
                         channel: l,
                         focusedParticipant: i
@@ -177,7 +177,7 @@ function H(e) {
 }
 function V(e) {
     let { channel: t, guild: i, appContext: s, inCall: c, isChatOpen: u, exitFullScreen: m } = e,
-        { focusedParticipant: g } = (0, o.cj)(
+        { focusedParticipant: g } = (0, a.cj)(
             [S.Z],
             () => ({
                 focusedParticipant: S.Z.getSelectedParticipant(t.id),
@@ -188,31 +188,31 @@ function V(e) {
         b = (0, h.ZP)(t),
         _ = (0, f.KS)(t),
         [E] = (0, d.Z)((null == g ? void 0 : g.type) === w.fO.ACTIVITY ? [g.applicationId] : []),
-        I = M.intl.string(M.t.BVZqJi);
-    t.isDM() ? (I = M.intl.string(M.t.jN2DfX)) : t.isGroupDM() && (I = M.intl.string(M.t['e5y+go']));
-    let Z = (0, o.e7)([p.Z], () => p.Z.getChannelStatus(t)),
+        I = k.intl.string(k.t.BVZqJi);
+    t.isDM() ? (I = k.intl.string(k.t.jN2DfX)) : t.isGroupDM() && (I = k.intl.string(k.t['e5y+go']));
+    let Z = (0, a.e7)([p.Z], () => p.Z.getChannelStatus(t)),
         T = t.isGuildVoice() && c && null != Z && Z.length > 0,
         G = (0, P.ZP)(t),
         F = T
-            ? (0, r.jsx)(a.ua7, {
-                  text: M.intl.string(M.t.Mgpxi4),
+            ? (0, r.jsx)(o.ua7, {
+                  text: k.intl.string(k.t.Mgpxi4),
                   delay: 500,
                   position: 'bottom',
                   shouldShow: G,
                   children: (e) =>
                       (0, r.jsxs)(
-                          a.P3F,
+                          o.P3F,
                           B(U({}, e), {
                               className: l()(L.channelStatusClickable, { [L.hoverable]: G }),
                               onClick: G ? V : void 0,
                               children: [
-                                  (0, r.jsx)(a.Text, {
+                                  (0, r.jsx)(o.Text, {
                                       variant: 'text-xs/normal',
                                       className: l()(L.channelStatus, D.markup, { [L.hoverable]: G }),
                                       children: v.Z.parseVoiceChannelStatus(Z, !0, { channelId: t.id })
                                   }),
                                   G &&
-                                      (0, r.jsx)(a.vdY, {
+                                      (0, r.jsx)(o.vdY, {
                                           size: 'custom',
                                           color: 'currentColor',
                                           className: l()(L.pencilIcon, L.hoverable),
@@ -225,7 +225,7 @@ function V(e) {
               })
             : null;
     function V() {
-        (0, a.ZDy)(
+        (0, o.ZDy)(
             async () => {
                 let { default: e } = await Promise.resolve().then(n.bind(n, 339340));
                 return (n) => (0, r.jsx)(e, U({ channel: t }, n));
@@ -237,11 +237,11 @@ function V(e) {
     return (0, r.jsxs)('div', {
         className: L.subtitleContainer,
         children: [
-            (0, r.jsx)(a.f6W, {
-                theme: k.BR.DARK,
+            (0, r.jsx)(o.f6W, {
+                theme: M.BR.DARK,
                 children: (e) =>
-                    (0, r.jsxs)(x.ZP, {
-                        onDoubleClick: y.O,
+                    (0, r.jsxs)(C.ZP, {
+                        onDoubleClick: x.O,
                         transparent: !0,
                         className: e,
                         childrenBottom: F,
@@ -255,26 +255,26 @@ function V(e) {
                         }),
                         children: [
                             null != _
-                                ? (0, r.jsx)(x.ZP.Icon, {
+                                ? (0, r.jsx)(C.ZP.Icon, {
                                       icon: _,
                                       disabled: !0,
                                       'aria-label': I
                                   })
                                 : null,
-                            (0, r.jsx)(x.ZP.Title, {
+                            (0, r.jsx)(C.ZP.Title, {
                                 children: (0, r.jsxs)(r.Fragment, {
                                     children: [
                                         b,
                                         z &&
-                                            (0, r.jsx)(a.ua7, {
-                                                text: M.intl.string(M.t.QyZ4TU),
+                                            (0, r.jsx)(o.ua7, {
+                                                text: k.intl.string(k.t.QyZ4TU),
                                                 children: (e) =>
                                                     (0, r.jsx)(
-                                                        a.tQf,
+                                                        o.tQf,
                                                         B(U({}, e), {
                                                             size: 'xs',
-                                                            'aria-label': M.intl.string(M.t.VHXh8f),
-                                                            color: a.TVs.colors.INTERACTIVE_NORMAL,
+                                                            'aria-label': k.intl.string(k.t.VHXh8f),
+                                                            color: o.TVs.colors.INTERACTIVE_NORMAL,
                                                             className: L.secureFramesIcon
                                                         })
                                                     )
@@ -282,7 +282,7 @@ function V(e) {
                                     ]
                                 })
                             }),
-                            (0, r.jsx)(C.TS, {
+                            (0, r.jsx)(y.TS, {
                                 channel: t,
                                 guild: i
                             }),

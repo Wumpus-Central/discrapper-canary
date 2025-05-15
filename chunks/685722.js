@@ -1,11 +1,11 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(255367),
     i = n(120356),
     l = n.n(i),
-    o = n(462508);
-function a() {
+    a = n(462508);
+function o() {
     return (0, r.jsxs)('div', {
-        className: o.container,
-        children: [(0, r.jsx)('div', { className: l()(o.placeholderItem, o.chatTextAreaPlaceholder) }), (0, r.jsx)('div', { className: l()(o.placeholderItem, o.appLauncherPlaceholder) }), (0, r.jsx)('div', { className: l()(o.placeholderItem, o.entryPointAppCommandPlaceholder) })]
+        className: a.container,
+        children: [(0, r.jsx)('div', { className: l()(a.placeholderItem, a.chatTextAreaPlaceholder) }), (0, r.jsx)('div', { className: l()(a.placeholderItem, a.appLauncherPlaceholder) }), (0, r.jsx)('div', { className: l()(a.placeholderItem, a.entryPointAppCommandPlaceholder) })]
     });
 }

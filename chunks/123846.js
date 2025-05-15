@@ -142,8 +142,8 @@ function D(e) {
         c = (0, d.e7)([m.Z], () => m.Z.getGuild(t)),
         p = null == c ? void 0 : c.vanityURLCode,
         [D, Z] = l.useState(!1),
-        { selectedSourceInviteCode: L, selectedJoinSourceType: R } = o,
-        P = null != R && R !== g.gq.UNSPECIFIED,
+        { selectedSourceInviteCode: R, selectedJoinSourceType: L } = o,
+        P = null != L && L !== g.gq.UNSPECIFIED,
         I = (0, d.e7)([b.Z], () => b.Z.hideInstantInvites, []);
     I && (a = []);
     let M = l.useCallback(
@@ -161,7 +161,7 @@ function D(e) {
         ),
         V = l.useCallback(
             (e) => {
-                e === R
+                e === L
                     ? (0, j.Dr)(t, {
                           selectedSourceInviteCode: void 0,
                           selectedJoinSourceType: void 0
@@ -172,7 +172,7 @@ function D(e) {
                       }),
                     Z(!1);
             },
-            [t, R]
+            [t, L]
         ),
         E = l.useMemo(() => s()(M, 300), [M]),
         T = l.useCallback(
@@ -230,7 +230,7 @@ function D(e) {
                                               text: (0, g.bE)(e, p, I)
                                           })
                                       ),
-                                  checked: R === e,
+                                  checked: L === e,
                                   disabled: !1,
                                   action: () => V(e),
                                   group: 'join-source-type-options'
@@ -250,7 +250,7 @@ function D(e) {
                                   (0, r.jsx)(
                                       C.ne,
                                       w(H({}, e), {
-                                          query: null != L ? L : '',
+                                          query: null != R ? R : '',
                                           onChange: T,
                                           ref: t,
                                           placeholder: O.intl.string(O.t.YwJnGx)
@@ -265,7 +265,7 @@ function D(e) {
                           {
                               id: 'join-source-type-option-all',
                               label: O.intl.string(O.t.an9Ry8),
-                              checked: null == L && null == R,
+                              checked: null == R && null == L,
                               disabled: !1,
                               action: () => V(null),
                               group: 'join-source-type-options'
@@ -286,7 +286,7 @@ function D(e) {
                                               text: e
                                           })
                                       ),
-                                  checked: L === e,
+                                  checked: R === e,
                                   disabled: !1,
                                   action: () => M(e),
                                   group: 'join-source-type-options'
@@ -319,8 +319,8 @@ function D(e) {
                                                                 S,
                                                                 w(H({}, e), {
                                                                     size: 12,
-                                                                    text: (0, g.bE)(R, p, I),
-                                                                    type: R,
+                                                                    text: (0, g.bE)(L, p, I),
+                                                                    type: L,
                                                                     vanityUrl: p
                                                                 })
                                                             )

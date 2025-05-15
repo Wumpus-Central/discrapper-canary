@@ -2,8 +2,8 @@ n.d(t, { T: () => O }), n(388685), n(539854);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    o = n.n(l),
-    a = n(392711),
+    a = n.n(l),
+    o = n(392711),
     s = n(442837),
     c = n(475179),
     u = n(906732),
@@ -15,11 +15,11 @@ var r = n(255367),
     g = n(459273),
     b = n(880831),
     _ = n(774168),
-    x = n(871499),
-    y = n(981631),
-    C = n(388032);
+    C = n(871499),
+    x = n(981631),
+    y = n(388032);
 function v(e) {
-    let t = (0, s.e7)([m.Z], () => !(0, a.isEmpty)(m.Z.getTypingUsers(e)), [e]),
+    let t = (0, s.e7)([m.Z], () => !(0, o.isEmpty)(m.Z.getTypingUsers(e)), [e]),
         n = (0, s.e7)([f.Z], () => f.Z.getVoiceChannelId() === e, [e]),
         { unreadCount: r, mentionCount: i } = (0, s.cj)(
             [h.ZP],
@@ -38,18 +38,18 @@ function v(e) {
 }
 function j(e) {
     let { className: t, channelId: n } = e,
-        { unreadCount: i, mentionCount: l, isTyping: o, voiceChannelIsSelected: a } = v(n);
+        { unreadCount: i, mentionCount: l, isTyping: a, voiceChannelIsSelected: o } = v(n);
     return (0, r.jsx)(_.Z, {
         className: t,
         unreadCount: i,
         mentionCount: l,
-        isTyping: o,
-        canBadge: a
+        isTyping: a,
+        canBadge: o
     });
 }
 function O(e) {
     let t;
-    var { channelId: n, className: l, showingClassName: a, onClick: h, inPopout: f, showRequestToSpeakSidebar: m, toggleRequestToSpeakSidebar: _ } = e,
+    var { channelId: n, className: l, showingClassName: o, onClick: h, inPopout: f, showRequestToSpeakSidebar: m, toggleRequestToSpeakSidebar: _ } = e,
         O = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -79,15 +79,15 @@ function O(e) {
             mentionCount: T
         } = (function (e) {
             let { unreadCount: t, mentionCount: n, isTyping: r } = v(e),
-                [l, o] = i.useState(!1);
+                [l, a] = i.useState(!1);
             return (
                 i.useEffect(() => {
-                    o(t > 0);
+                    a(t > 0);
                     let e = setTimeout(() => {
-                        o(!1);
+                        a(!1);
                     }, b.z);
                     return () => {
-                        clearTimeout(e), o(!1);
+                        clearTimeout(e), a(!1);
                     };
                 }, [t]),
                 {
@@ -115,35 +115,35 @@ function O(e) {
             null == (e = S.current) || e.focus();
         }, []);
     (0, g.yp)({
-        event: y.CkL.FOCUS_CHAT_BUTTON,
+        event: x.CkL.FOCUS_CHAT_BUTTON,
         handler: I ? null : R
     });
-    let [k, M] = i.useState(!1),
+    let [M, k] = i.useState(!1),
         L = i.useCallback(() => {
-            f && M(!0);
+            f && k(!0);
         }, [f]);
     (0, g.yp)({
-        event: y.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
+        event: x.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
         handler: L
     }),
         i.useEffect(() => {
             let e;
             return (
-                k &&
+                M &&
                     (e = setTimeout(() => {
-                        M(!1);
+                        k(!1);
                     }, 3000)),
                 () => {
                     clearTimeout(e);
                 }
             );
-        }, [k]);
-    let D = [(t = f && I ? C.intl.string(C.t.DPgc5u) : P ? C.intl.string(C.t.nthdxM) : C.intl.string(C.t['5KxXrK']))];
+        }, [M]);
+    let D = [(t = f && I ? y.intl.string(y.t.DPgc5u) : P ? y.intl.string(y.t.nthdxM) : y.intl.string(y.t['5KxXrK']))];
     return (
-        T > 0 && D.push(C.intl.formatToPlainString(C.t['3l1GOz'], { mentionCount: T })),
-        N > 0 && D.push(C.intl.string(C.t.x5zAGR)),
+        T > 0 && D.push(y.intl.formatToPlainString(y.t['3l1GOz'], { mentionCount: T })),
+        N > 0 && D.push(y.intl.string(y.t.x5zAGR)),
         (0, r.jsx)(
-            x.Z,
+            C.Z,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -176,8 +176,8 @@ function O(e) {
                     'aria-label': D.join(', '),
                     iconComponent: w,
                     tooltipPosition: 'bottom',
-                    wrapperClassName: o()(l, null != a && { [a]: Z }),
-                    forceTooltipOpen: k
+                    wrapperClassName: a()(l, null != o && { [o]: Z }),
+                    forceTooltipOpen: M
                 },
                 O
             )

@@ -2,8 +2,8 @@ n.d(t, { Z: () => m });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
-    o = n(481060),
-    a = n(607070),
+    a = n(481060),
+    o = n(607070),
     s = n(665906),
     c = n(314897),
     u = n(496675),
@@ -20,7 +20,7 @@ let f = () =>
             }),
     m = i.memo(function (e) {
         let { channel: t, isLastItem: n } = e,
-            i = (0, l.e7)([a.Z], () => a.Z.useReducedMotion),
+            i = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
             m = (0, l.e7)([u.Z], () => u.Z.can(d.Plq.SEND_MESSAGES_IN_THREADS, t)),
             g = (0, s.Gu)(t),
             b = (0, l.e7)([c.default], () => c.default.getId());
@@ -29,7 +29,7 @@ let f = () =>
                 ? (0, r.jsxs)('div', {
                       className: h.box,
                       children: [
-                          (0, r.jsx)(o.Fmz, {
+                          (0, r.jsx)(a.Fmz, {
                               importData: f,
                               shouldAnimate: !i,
                               className: h.animation
@@ -37,11 +37,11 @@ let f = () =>
                           (0, r.jsxs)('div', {
                               className: h.textContainer,
                               children: [
-                                  (0, r.jsx)(o.X6q, {
+                                  (0, r.jsx)(a.X6q, {
                                       variant: 'heading-md/semibold',
                                       children: p.intl.string(p.t.OmBThI)
                                   }),
-                                  (0, r.jsx)(o.Text, {
+                                  (0, r.jsx)(a.Text, {
                                       variant: 'text-sm/normal',
                                       color: 'header-secondary',
                                       children: p.intl.string(p.t.zcs5kp)
