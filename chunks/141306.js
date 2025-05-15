@@ -25,8 +25,8 @@ class n {
         let r = this._getKey(t),
             i = e.get(r);
         if (i) return i;
-        let o = n(t);
-        return e.set(r, o), o;
+        let a = n(t);
+        return e.set(r, a), a;
     }
     _getKey(...e) {
         return JSON.stringify(e);

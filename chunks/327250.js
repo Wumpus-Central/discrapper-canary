@@ -1,4 +1,4 @@
-n.d(t, { ZP: () => R });
+n.d(t, { ZP: () => M });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -14,19 +14,21 @@ var i = n(120356),
     f = n(910693),
     m = n(172751),
     g = n(314897),
-    b = n(271383),
-    _ = n(430824),
-    x = n(496675),
-    y = n(158776),
-    C = n(885110),
-    v = n(594174),
-    j = n(572004),
-    O = n(5192),
-    E = n(51144),
-    I = n(131085),
-    S = n(388032),
-    P = n(157092);
-function Z(e) {
+    b = n(592125),
+    _ = n(271383),
+    x = n(430824),
+    y = n(496675),
+    C = n(158776),
+    v = n(944486),
+    j = n(885110),
+    O = n(594174),
+    E = n(572004),
+    I = n(5192),
+    S = n(51144),
+    P = n(131085),
+    Z = n(388032),
+    N = n(157092);
+function T(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -51,7 +53,7 @@ function Z(e) {
     }
     return e;
 }
-function N(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -69,18 +71,18 @@ function N(e, t) {
         e
     );
 }
-function T(e) {
+function w(e) {
     let { user: t, guildId: n, onClose: i } = e,
         l = t.id,
-        s = (0, o.e7)([C.Z, y.Z, g.default], () => (l === g.default.getId() ? C.Z.getStatus() : y.Z.getStatus(l, n)), [l, n]);
+        s = (0, o.e7)([j.Z, C.Z, g.default], () => (l === g.default.getId() ? j.Z.getStatus() : C.Z.getStatus(l, n)), [l, n]);
     return (0, r.jsxs)('div', {
-        className: P.topRow,
+        className: N.topRow,
         children: [
             (0, r.jsxs)('div', {
-                className: P.memberNameContainer,
+                className: N.memberNameContainer,
                 children: [
                     (0, r.jsx)('div', {
-                        className: P.memberAvatar,
+                        className: N.memberAvatar,
                         children: (0, r.jsx)(a.qEK, {
                             src: t.getAvatarURL(n, 48),
                             'aria-label': t.username,
@@ -89,15 +91,15 @@ function T(e) {
                         })
                     }),
                     (0, r.jsxs)('div', {
-                        className: P.memberNameAndTagContainer,
+                        className: N.memberNameAndTagContainer,
                         children: [
                             (0, r.jsxs)('div', {
-                                className: P.memberNameTextContainer,
+                                className: N.memberNameTextContainer,
                                 children: [
                                     (0, r.jsx)(a.Text, {
                                         variant: 'text-lg/medium',
                                         children: (0, r.jsx)(a.PUh, {
-                                            name: O.ZP.getName(n, null, t),
+                                            name: I.ZP.getName(n, null, t),
                                             color: a.TVs.colors.HEADER_PRIMARY.css
                                         })
                                     }),
@@ -105,17 +107,17 @@ function T(e) {
                                         primaryGuild: null == t ? void 0 : t.primaryGuild,
                                         userId: null == t ? void 0 : t.id,
                                         contextGuildId: n,
-                                        badgeSize: I.Gg.SIZE_16,
+                                        badgeSize: P.Gg.SIZE_16,
                                         textVariant: 'heading-md/semibold',
-                                        className: P.memberClanTag,
-                                        containerClassName: P.memberClanTagContainer
+                                        className: N.memberClanTag,
+                                        containerClassName: N.memberClanTagContainer
                                     })
                                 ]
                             }),
                             (0, r.jsx)(a.Text, {
                                 variant: 'text-md/medium',
                                 color: 'text-normal',
-                                children: E.ZP.getUserTag(t)
+                                children: S.ZP.getUserTag(t)
                             })
                         ]
                     })
@@ -125,7 +127,7 @@ function T(e) {
                 variant: 'text-md/medium',
                 color: 'text-normal',
                 children: (0, r.jsx)(a.P3F, {
-                    className: P.closeAction,
+                    className: N.closeAction,
                     onClick: i,
                     children: (0, r.jsx)(a.Dio, {
                         size: 'md',
@@ -136,7 +138,7 @@ function T(e) {
         ]
     });
 }
-function A(e) {
+function R(e) {
     var { tag: t = 'div', text: n, disabled: i, children: o, onClick: s } = e,
         c = (function (e, t) {
             if (null == e) return {};
@@ -162,49 +164,58 @@ function A(e) {
         children: (e) =>
             (0, r.jsx)(
                 a.P3F,
-                N(Z({}, c, e), {
+                A(T({}, c, e), {
                     tag: t,
                     'aria-label': n,
-                    className: l()(P.bottomRowAction, { [P.bottomRowActionDisabled]: i }),
+                    className: l()(N.bottomRowAction, { [N.bottomRowActionDisabled]: i }),
                     onClick: i ? void 0 : s,
                     children: (0, r.jsx)('div', {
-                        className: P.innerBottomRowAction,
+                        className: N.innerBottomRowAction,
                         children: o
                     })
                 })
             )
     });
 }
-function w(e) {
+function k(e) {
     let { user: t, member: i, guildId: l } = e,
-        m = (0, o.e7)([_.Z], () => _.Z.getGuild(l)),
+        m = (0, o.e7)([x.Z], () => x.Z.getGuild(l)),
         {
-            canKickUser: b,
-            canBanUser: y,
-            canModerateMembers: C
+            canKickUser: _,
+            canBanUser: C,
+            canModerateMembers: j
         } = (0, o.cj)(
-            [x.Z, v.default, _.Z],
+            [y.Z, O.default, x.Z],
             () => ({
                 canKickUser: (0, h.BK)(t, m),
                 canBanUser: (0, h.mm)(t, m),
-                canModerateMembers: null != m && (0, p.F)(m.id, t.id, [v.default, _.Z, x.Z])
+                canModerateMembers: null != m && (0, p.F)(m.id, t.id, [O.default, x.Z, y.Z])
             }),
             [t, m]
         ),
-        O = (0, u.b)(i),
-        { analyticsLocations: E, newestAnalyticsLocation: I } = (0, c.ZP)(),
-        T = (0, f.sE)(l, {
+        I = (0, u.b)(i),
+        { analyticsLocations: S, newestAnalyticsLocation: P } = (0, c.ZP)(),
+        w = (0, f.sE)(l, {
             targetUserId: t.id,
-            location: I,
-            locations: E
+            location: P,
+            locations: S
         }),
-        w = (0, o.e7)([g.default], () => g.default.getId() === (null == t ? void 0 : t.id));
+        k = (0, o.e7)([g.default], () => g.default.getId() === (null == t ? void 0 : t.id)),
+        M = (0, o.e7)(
+            [v.Z, b.Z],
+            () => {
+                var e;
+                let t = v.Z.getChannelId(l);
+                return null != t && (null == (e = b.Z.getChannel(t)) ? void 0 : e.isModeratorReportChannel()) != null ? t : void 0;
+            },
+            [l]
+        );
     return (0, r.jsxs)('div', {
-        className: P.bottomRow,
+        className: N.bottomRow,
         children: [
-            (0, r.jsx)(A, {
-                disabled: w,
-                text: S.intl.string(S.t['g33r/P']),
+            (0, r.jsx)(R, {
+                disabled: k,
+                text: Z.intl.string(Z.t['g33r/P']),
                 onClick: () => {
                     s.Z.openPrivateChannel({ recipientIds: t.id });
                 },
@@ -215,19 +226,20 @@ function w(e) {
                     height: 24
                 })
             }),
-            (0, r.jsx)(A, {
-                disabled: !b,
-                text: S.intl.string(S.t['3glT6e']),
+            (0, r.jsx)(R, {
+                disabled: !_,
+                text: Z.intl.string(Z.t['3glT6e']),
                 onClick: () => {
                     (0, a.ZDy)(async () => {
                         let { default: e } = await n.e('5454').then(n.bind(n, 854360));
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                N(Z({}, n), {
-                                    location: I,
+                                A(T({}, n), {
+                                    location: P,
                                     guildId: l,
-                                    user: t
+                                    user: t,
+                                    modReportId: M
                                 })
                             );
                     });
@@ -239,19 +251,20 @@ function w(e) {
                     color: a.TVs.colors.TEXT_NORMAL.css
                 })
             }),
-            (0, r.jsx)(A, {
-                disabled: !y,
-                text: S.intl.string(S.t['5MBJ5O']),
+            (0, r.jsx)(R, {
+                disabled: !C,
+                text: Z.intl.string(Z.t['5MBJ5O']),
                 onClick: () => {
                     (0, a.ZDy)(async () => {
                         let { default: e } = await n.e('4114').then(n.bind(n, 98746));
                         return (n) =>
                             (0, r.jsx)(
                                 e,
-                                N(Z({}, n), {
-                                    location: I,
+                                A(T({}, n), {
+                                    location: P,
                                     guildId: l,
-                                    user: t
+                                    user: t,
+                                    modReportId: M
                                 })
                             );
                     });
@@ -263,20 +276,21 @@ function w(e) {
                     color: a.TVs.colors.TEXT_NORMAL.css
                 })
             }),
-            (0, r.jsx)(A, {
-                disabled: !C,
-                text: O ? S.intl.string(S.t.N86XcH) : S.intl.string(S.t.kTlLr6),
+            (0, r.jsx)(R, {
+                disabled: !j,
+                text: I ? Z.intl.string(Z.t.N86XcH) : Z.intl.string(Z.t.kTlLr6),
                 onClick: () => {
-                    O
+                    I
                         ? (0, d.q)({
                               guildId: i.guildId,
                               userId: i.userId,
-                              anaylticsLocations: E
+                              anaylticsLocations: S
                           })
                         : (0, d.z)({
                               guildId: i.guildId,
                               userId: i.userId,
-                              anaylticsLocations: E
+                              anaylticsLocations: S,
+                              modReportId: M
                           });
                 },
                 children: (0, r.jsx)(a.YlB, {
@@ -286,12 +300,12 @@ function w(e) {
                     color: a.TVs.colors.TEXT_NORMAL.css
                 })
             }),
-            (0, r.jsx)(A, {
-                text: S.intl.string(S.t.IHTjzM),
+            (0, r.jsx)(R, {
+                text: Z.intl.string(Z.t.IHTjzM),
                 onClick: () => {
-                    T(f.jQ.COPY_ID), (0, j.JG)(t.id);
+                    w(f.jQ.COPY_ID), (0, E.JG)(t.id);
                 },
-                disabled: !j.wS,
+                disabled: !E.wS,
                 children: (0, r.jsx)(a.VuL, {
                     size: 'custom',
                     width: 24,
@@ -302,21 +316,21 @@ function w(e) {
         ]
     });
 }
-function R(e) {
+function M(e) {
     let { userId: t, guildId: n, onClose: i } = e,
-        l = (0, o.e7)([v.default], () => v.default.getUser(t), [t]),
-        a = (0, o.e7)([b.ZP], () => b.ZP.getMember(n, t), [n, t]);
+        l = (0, o.e7)([O.default], () => O.default.getUser(t), [t]),
+        a = (0, o.e7)([_.ZP], () => _.ZP.getMember(n, t), [n, t]);
     return null == l || null == a
         ? null
         : (0, r.jsxs)('div', {
-              className: P.container,
+              className: N.container,
               children: [
-                  (0, r.jsx)(T, {
+                  (0, r.jsx)(w, {
                       user: l,
                       guildId: n,
                       onClose: i
                   }),
-                  (0, r.jsx)(w, {
+                  (0, r.jsx)(k, {
                       user: l,
                       member: a,
                       guildId: n

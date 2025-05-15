@@ -1,18 +1,18 @@
-n.d(t, { Z: () => a }), n(388685);
+n.d(t, { Z: () => o }), n(388685);
 var r = n(73800),
     i = n(442837),
-    o = n(607070);
-function a(e) {
-    let { key: t, isExpanded: n, durationMs: a = 100, minHeightOverride: s, maxHeightOverride: l, maxAnimationHeight: c } = e,
-        u = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
+    a = n(607070);
+function o(e) {
+    let { key: t, isExpanded: n, durationMs: o = 100, minHeightOverride: s, maxHeightOverride: l, maxAnimationHeight: c } = e,
+        u = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
         [d, f] = r.useState(null),
         _ = r.useCallback(() => {}, []),
         p = u ? _ : f,
         h = r.useRef(null),
         m = r.useRef(null),
         g = r.useRef(t),
-        E = r.useRef(a);
-    E.current = a;
+        E = r.useRef(o);
+    E.current = o;
     let b = r.useRef(s);
     b.current = s;
     let y = r.useRef(l);
@@ -28,15 +28,15 @@ function a(e) {
         r.useLayoutEffect(() => {
             var e, r, i;
             if (null == d) return;
-            let { height: o } = d.getBoundingClientRect();
-            !n && (null == h.current || o < h.current) && (h.current = o), n && (null == m.current || o > m.current) && (m.current = o);
-            let a = null != (e = b.current) ? e : h.current,
+            let { height: a } = d.getBoundingClientRect();
+            !n && (null == h.current || a < h.current) && (h.current = a), n && (null == m.current || a > m.current) && (m.current = a);
+            let o = null != (e = b.current) ? e : h.current,
                 s = null != (r = y.current) ? r : m.current,
                 l = g.current !== t;
-            if (((g.current = t), null == a || null == s || l)) return;
+            if (((g.current = t), null == o || null == s || l)) return;
             let c = Math.min(null != (i = O.current) ? i : s, s),
-                u = n ? a : c,
-                f = n ? c : a;
+                u = n ? o : c,
+                f = n ? c : o;
             if (u === f) return;
             I(!0), (d.style.height = ''.concat(u, 'px')), (d.style.transition = '');
             let _ = null;

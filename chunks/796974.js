@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
 var r,
     i = n(442837),
-    o = n(902704),
-    a = n(570140);
+    a = n(902704),
+    o = n(570140);
 function s(e, t, n) {
     return (
         t in e
@@ -28,9 +28,9 @@ function d(e) {
 }
 function f(e) {
     let { channelId: t, scrollTop: n, scrollHeight: r, offsetHeight: i } = e,
-        a = l[t];
+        o = l[t];
     if (null == n || null == r || null == i) {
-        if (null == a) return !1;
+        if (null == o) return !1;
         delete l[t];
     } else {
         let e = {
@@ -39,7 +39,7 @@ function f(e) {
             scrollHeight: r,
             offsetHeight: i
         };
-        if (null != a && (0, o.Z)(a, e)) return !1;
+        if (null != o && (0, a.Z)(o, e)) return !1;
         l[t] = e;
     }
 }
@@ -85,7 +85,7 @@ class g extends (r = i.ZP.Store) {
     }
 }
 s(g, 'displayName', 'DimensionStore');
-let E = new g(a.Z, {
+let E = new g(o.Z, {
     UPDATE_CHANNEL_DIMENSIONS: f,
     UPDATE_CHANNEL_LIST_DIMENSIONS: m,
     UPDATE_GUILD_LIST_DIMENSIONS: _,

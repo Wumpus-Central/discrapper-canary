@@ -1,7 +1,7 @@
 let r = n(646664),
     i = n(942177),
-    o = n(40231),
-    a = n(434016),
+    a = n(40231),
+    o = n(434016),
     s = n(868667),
     l = n(938626),
     c = n(838558),
@@ -75,12 +75,12 @@ e.exports = {
     intersects: F,
     simplifyRange: n(886067),
     subset: n(948501),
-    SemVer: o,
+    SemVer: a,
     re: r.re,
     src: r.src,
     tokens: r.t,
     SEMVER_SPEC_VERSION: i.SEMVER_SPEC_VERSION,
     RELEASE_TYPES: i.RELEASE_TYPES,
-    compareIdentifiers: a.compareIdentifiers,
-    rcompareIdentifiers: a.rcompareIdentifiers
+    compareIdentifiers: o.compareIdentifiers,
+    rcompareIdentifiers: o.rcompareIdentifiers
 };

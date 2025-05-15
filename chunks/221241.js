@@ -1,10 +1,10 @@
 n.d(t, {
-    L: () => o,
-    Z: () => a
+    L: () => a,
+    Z: () => o
 });
 var r = n(818083),
     i = n(987338);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: 'user',
     id: '2025-02_voice_call_buttons_v2',
     label: 'Voice and Video buttons V2',
@@ -53,6 +53,6 @@ let o = (0, r.B)({
         }
     ]
 });
-function a(e) {
-    return o.useExperiment(e, { autoTrackExposure: !1 });
+function o(e) {
+    return a.useExperiment(e, { autoTrackExposure: !1 });
 }

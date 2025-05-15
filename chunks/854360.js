@@ -11,8 +11,8 @@ var n = r(255367),
 function f(e) {
     var t,
         r,
-        { guildId: f, user: b, location: O } = e,
-        g = (function (e, t) {
+        { guildId: f, user: b, location: O, modReportId: g } = e,
+        d = (function (e, t) {
             if (null == e) return {};
             var r,
                 n,
@@ -30,17 +30,17 @@ function f(e) {
                 for (n = 0; n < c.length; n++) (r = c[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (o[r] = e[r]);
             }
             return o;
-        })(e, ['guildId', 'user', 'location']);
-    let [y, d] = o.useState(''),
-        j = (0, a.sE)(f, {
+        })(e, ['guildId', 'user', 'location', 'modReportId']);
+    let [y, j] = o.useState(''),
+        m = (0, a.sE)(f, {
             location: O,
             targetUserId: b.id
         }),
-        m = o.useCallback(() => {
-            i.Z.kickUser(f, b.id, y), j(a.jQ.KICK);
-        }, [f, b.id, y, j]),
-        h = o.useCallback((e) => {
-            d(e);
+        h = o.useCallback(() => {
+            i.Z.kickUser(f, b.id, y, g), m(a.jQ.KICK);
+        }, [f, b.id, y, m, g]),
+        P = o.useCallback((e) => {
+            j(e);
         }, []);
     return (0, n.jsxs)(
         c.ConfirmModal,
@@ -73,9 +73,9 @@ function f(e) {
                 header: u.intl.formatToPlainString(u.t['1Ie87u'], { user: b.username }),
                 confirmText: u.intl.string(u.t['3glT6e']),
                 cancelText: u.intl.string(u.t['ETE/oK']),
-                onConfirm: m
+                onConfirm: h
             },
-            g
+            d
         )),
         (r = r =
             {
@@ -90,7 +90,7 @@ function f(e) {
                         className: p.spacing,
                         children: (0, n.jsx)(c.Kx8, {
                             maxLength: l.GNZ,
-                            onChange: h,
+                            onChange: P,
                             value: y,
                             rows: 2
                         })

@@ -1,8 +1,8 @@
 n.d(t, {
-    Kq: () => a,
+    Kq: () => o,
     Mo: () => s,
     kj: () => l,
-    xs: () => o,
+    xs: () => a,
     zO: () => i
 });
 var r = n(570140);
@@ -12,13 +12,13 @@ let i = (e) => {
             presetId: e
         });
     },
-    o = () => {
+    a = () => {
         r.Z.dispatch({
             type: 'UPDATE_BACKGROUND_GRADIENT_PRESET',
             presetId: null
         });
     },
-    a = () => {
+    o = () => {
         r.Z.dispatch({ type: 'CLIENT_THEMES_EDITOR_OPEN' });
     },
     s = () => {

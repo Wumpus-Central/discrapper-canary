@@ -1,4 +1,4 @@
-n.d(t, { u: () => o });
+n.d(t, { u: () => a });
 var r = {
         ceil: Math.ceil,
         round: Math.round,
@@ -8,6 +8,6 @@ var r = {
         }
     },
     i = 'trunc';
-function o(e) {
+function a(e) {
     return e ? r[e] : r[i];
 }

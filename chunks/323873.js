@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O });
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(752305),
+    a = n(570140),
+    o = n(752305),
     s = n(957730),
     l = n(695346),
     c = n(375954);
@@ -62,13 +62,13 @@ let p = {},
     h = {};
 function m(e) {
     let { channelId: t, messageId: n, content: r, source: i } = e,
-        o = l.dN.getSetting(),
+        a = l.dN.getSetting(),
         c = s.ZP.unparse(r, t);
     (p[t] = {
         channelId: t,
         messageId: n,
         textValue: c,
-        richValue: (0, a.JM)(o ? c : r)
+        richValue: (0, o.JM)(a ? c : r)
     }),
         (h[t] = i);
 }
@@ -120,7 +120,7 @@ class y extends (r = i.ZP.Store) {
     }
 }
 u(y, 'displayName', 'EditMessageStore');
-let O = new y(o.Z, {
+let O = new y(a.Z, {
     MESSAGE_START_EDIT: m,
     MESSAGE_UPDATE_EDIT: g,
     MESSAGE_END_EDIT: E,

@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(317257),
     c = n(583478),
@@ -55,13 +55,13 @@ let p = () =>
     },
     g = (e, t) => (e === l.b.SELECTED ? d.selected : t ? d.highlighted : d.default),
     E = (0, i.forwardRef)(function (e, t) {
-        let { id: n, balance: o, balanceWidgetMode: f = l.b.DEFAULT, showNotificationBadge: m, onClick: E, onMouseDown: b, isInModalOverlay: y, className: O } = e,
+        let { id: n, balance: a, balanceWidgetMode: f = l.b.DEFAULT, showNotificationBadge: m, onClick: E, onMouseDown: b, isInModalOverlay: y, className: O } = e,
             [v, I] = (0, i.useState)(!1),
             S = (0, i.useMemo)(() => g(f, v), [f, v]),
             [T, A] = (0, i.useState)(!1),
             [N, C] = (0, i.useState)(!1),
             [P, R] = (0, i.useState)(0.9 * u.D2),
-            w = null === o;
+            w = null === a;
         (0, i.useEffect)(() => {
             w &&
                 !T &&
@@ -74,7 +74,7 @@ let p = () =>
                 N && !w && A(!1);
             }, [w, N]);
         let D = w || T,
-            L = T ? null : o,
+            L = T ? null : a,
             [x, k] = (0, i.useState)(null),
             M = (0, i.useRef)(null),
             j = (0, i.useCallback)(() => {
@@ -101,13 +101,13 @@ let p = () =>
                 onMouseEnter: () => I(!0),
                 onMouseLeave: () => I(!1),
                 ref: t,
-                className: a()(d.container, S, O, {
+                className: o()(d.container, S, O, {
                     [d.containerLoading]: D,
                     [d.inModalOverlay]: y
                 }),
                 children: [
                     (0, r.jsx)('div', {
-                        className: a()(d.orbsLottieContainer, D ? d.orbIconloading : void 0),
+                        className: o()(d.orbsLottieContainer, D ? d.orbIconloading : void 0),
                         children: (0, r.jsx)(u.ZP, _({}, G))
                     }),
                     (0, r.jsx)(c.Z, {

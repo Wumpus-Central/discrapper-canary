@@ -5,9 +5,9 @@ n.d(t, {
     n(388685);
 var r,
     i = n(255367),
-    o = n(73800),
-    a = n(392711),
-    s = n.n(a),
+    a = n(73800),
+    o = n(392711),
+    s = n.n(o),
     l = n(748780),
     c = n(692547),
     u = n(194240);
@@ -26,7 +26,7 @@ function d(e, t, n) {
 }
 let f = 12,
     _ = [c.Z.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, c.Z.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, '#929AFA'];
-class p extends o.PureComponent {
+class p extends a.PureComponent {
     render() {
         let {
             props: { height: e },
@@ -44,7 +44,7 @@ class p extends o.PureComponent {
         super(...e), d(this, 'state', { backgroundColor: s().sample(_) });
     }
 }
-class h extends (r = o.Component) {
+class h extends (r = a.Component) {
     componentDidMount() {
         this.animateSlide();
     }
@@ -108,7 +108,7 @@ let m = (e) => {
         children: [, , , ,].fill(null).map((e, t) => (0, i.jsx)('div', { className: u.categoryLoader }, t))
     });
 };
-class g extends o.PureComponent {
+class g extends a.PureComponent {
     render() {
         let { columns: e, renderColumn: t } = this.props;
         return (0, i.jsx)('div', {

@@ -174,7 +174,7 @@ class w extends (r = l.PureComponent) {
                 C(
                     v(
                         {
-                            ref: (e) => (this.containerRef.current = null != e ? e.refs.node : void 0),
+                            ref: (e) => (this.containerRef.current = null != e ? e.componentRef : void 0),
                             'aria-hidden': n === Z,
                             className: o()(y.layer, {
                                 [y.baseLayer]: l,

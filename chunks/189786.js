@@ -1,4 +1,4 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(81825);
 function i(e, t, n) {
     return (
@@ -13,7 +13,7 @@ function i(e, t, n) {
         e
     );
 }
-class o extends r.Z {
+class a extends r.Z {
     isVoiceMuted() {
         return this.selfMute || this.mute || this.suppress || null != this.requestToSpeakTimestamp;
     }

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => c }), n(388685);
 var r = n(147913),
     i = n(2818),
-    o = n(192720);
-function a(e, t, n) {
+    a = n(192720);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,13 +16,13 @@ function a(e, t, n) {
     );
 }
 function s() {
-    i.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).enabled && (0, o.sE)();
+    i.Z.getCurrentConfig({ location: 'saved_messages_manager' }, { autoTrackExposure: !1 }).enabled && (0, a.sE)();
 }
 class l extends r.Z {
     constructor(...e) {
         super(...e),
-            a(this, 'actions', { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() }),
-            a(this, 'handlePostConnectionOpen', () => {
+            o(this, 'actions', { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() }),
+            o(this, 'handlePostConnectionOpen', () => {
                 s();
             });
     }

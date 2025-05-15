@@ -1,4 +1,4 @@
-n.d(t, { default: () => I });
+n.d(t, { default: () => N });
 var r = n(255367),
     l = n(73800),
     i = n(442837),
@@ -23,13 +23,13 @@ var r = n(255367),
     S = n(358386),
     A = n(37258),
     v = n(931617),
-    Z = n(981631),
-    N = n(388032);
-let I = (0, c.Z)(
+    I = n(981631),
+    Z = n(388032);
+let N = (0, c.Z)(
     (0, u.Z)(
         function (e) {
             var t;
-            let { user: n, guildId: u, channelId: c, context: Z, onSelect: I, moderationAlertId: h, analyticsLocation: T, analyticsLocations: D, onCloseContextMenu: C, showTransferOwnershipItem: U } = e,
+            let { user: n, guildId: u, channelId: c, context: I, onSelect: N, moderationAlertId: h, analyticsLocation: T, analyticsLocations: D, onCloseContextMenu: C, showTransferOwnershipItem: U } = e,
                 { analyticsLocations: R } = (0, f.ZP)(d.Z.CONTEXT_MENU),
                 L = (0, s.O)(),
                 w = null != (t = null == D ? void 0 : D[0]) ? t : R[0],
@@ -54,13 +54,13 @@ let I = (0, c.Z)(
                     guildId: u,
                     sourceAnalyticsLocations: D
                 }),
-                F = (0, j.Z)(n.id, Z),
+                F = (0, j.Z)(n.id, I),
                 K = (0, E.Z)({
                     guildId: u,
                     userId: n.id,
                     analyticsLocation: null != T ? T : L.location,
                     analyticsLocations: [w],
-                    context: Z
+                    context: I
                 }),
                 V = (0, p.Z)({
                     user: n,
@@ -80,7 +80,7 @@ let I = (0, c.Z)(
                 X = (0, v.Z)(n.id, u, !1, w),
                 J = (0, O.Z)({
                     id: n.id,
-                    label: N.intl.string(N.t['/AXYnJ']),
+                    label: Z.intl.string(Z.t['/AXYnJ']),
                     onSuccess: G
                 }),
                 z = (0, M.Z)(n, u),
@@ -90,8 +90,8 @@ let I = (0, c.Z)(
                 onClose: () => {
                     (0, o.Zy)(), null == C || C();
                 },
-                'aria-label': N.intl.string(N.t.liqwPD),
-                onSelect: I,
+                'aria-label': Z.intl.string(Z.t.liqwPD),
+                onSelect: N,
                 children: [
                     !$ &&
                         (0, r.jsxs)(r.Fragment, {
@@ -119,7 +119,7 @@ let I = (0, c.Z)(
                 ]
             });
         },
-        { object: Z.qAy.CONTEXT_MENU }
+        { object: I.qAy.CONTEXT_MENU }
     ),
     [d.Z.CONTEXT_MENU, d.Z.GUILD_MODERATION_USER_MENU]
 );

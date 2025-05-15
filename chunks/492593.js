@@ -113,14 +113,14 @@ let g = function (e) {
             },
             [k]
         ),
-        L = (0, r.jsx)(
-            s.tEY,
-            p(d({}, C), {
-                children: (0, r.jsx)(l.d.Provider, {
-                    value: {
-                        animate: M,
-                        setAnimate: Z
-                    },
+        L = (0, r.jsx)(l.d.Provider, {
+            value: {
+                animate: M,
+                setAnimate: Z
+            },
+            children: (0, r.jsx)(
+                s.tEY,
+                p(d({}, C), {
                     children: (0, r.jsxs)(
                         'div',
                         p(
@@ -165,7 +165,7 @@ let g = function (e) {
                         )
                     )
                 })
-            })
-        );
+            )
+        });
     return f ? (0, r.jsx)(s.Rny, { children: L }) : L;
 };

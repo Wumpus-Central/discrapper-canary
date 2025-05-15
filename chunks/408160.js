@@ -1,15 +1,15 @@
 n.r(t),
     n.d(t, {
-        announce: () => o,
-        clearAnnouncer: () => a,
+        announce: () => a,
+        clearAnnouncer: () => o,
         destroyAnnouncer: () => s
     });
 let r = 7000,
     i = null;
-function o(e, t = 'assertive', n = r) {
+function a(e, t = 'assertive', n = r) {
     i || (i = new l()), i.announce(e, t, n);
 }
-function a(e) {
+function o(e) {
     i && i.clear(e);
 }
 function s() {

@@ -1,13 +1,13 @@
 n.d(t, {
-    B: () => a,
-    j: () => o
+    B: () => o,
+    j: () => a
 });
 var r = n(381814),
     i = n(731965),
-    o = (function (e) {
+    a = (function (e) {
         return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.COACHMARK = 1)] = 'COACHMARK'), e;
     })({});
-let a = (0, r.U)((e) => ({
+let o = (0, r.U)((e) => ({
     activePickerChannelId: void 0,
     previewWallpaperId: void 0,
     lastShownChatWallpaperPickerType: void 0,

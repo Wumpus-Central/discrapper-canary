@@ -5,8 +5,8 @@ n.d(t, {
     n(997841);
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(695346),
+    a = n(570140),
+    o = n(695346),
     s = n(630388),
     l = n(981631);
 function c(e, t, n) {
@@ -87,7 +87,7 @@ class I extends (r = i.ZP.PersistedStore) {
         return f;
     }
     getIsEnabled() {
-        return a.Sb.getSetting() && h.length > 0;
+        return o.Sb.getSetting() && h.length > 0;
     }
     getLastUsedObject() {
         return f.lastUsedObject;
@@ -112,7 +112,7 @@ class I extends (r = i.ZP.PersistedStore) {
     }
 }
 c(I, 'displayName', 'DeveloperActivityShelfStore'), c(I, 'persistKey', 'DeveloperActivityShelfStore'), c(I, 'migrations', [(e) => (delete e.isEnabled, u({}, e))]);
-let S = new I(o.Z, {
+let S = new I(a.Z, {
     LOGOUT: m,
     DEVELOPER_ACTIVITY_SHELF_TOGGLE_USE_ACTIVITY_URL_OVERRIDE: g,
     DEVELOPER_ACTIVITY_SHELF_SET_ACTIVITY_URL_OVERRIDE: E,

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => u }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(810097);
-function a(e, t, n) {
+    a = n(810097);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -37,8 +37,8 @@ function l(e, t) {
         r,
         i = c(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -47,12 +47,12 @@ function c(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let u = i.forwardRef(function (e, t) {
-    var { children: n, className: a, onShowToolbar: c } = e,
+    var { children: n, className: o, onShowToolbar: c } = e,
         u = l(e, ['children', 'className', 'onShowToolbar']);
     let d = t,
         [f, _] = i.useState(!1),
@@ -63,7 +63,7 @@ let u = i.forwardRef(function (e, t) {
             _(!1);
         };
     return (0, r.jsxs)('div', {
-        className: a,
+        className: o,
         onMouseEnter: p,
         onMouseLeave: h,
         onFocus: (e) => {
@@ -79,7 +79,7 @@ let u = i.forwardRef(function (e, t) {
         children: [
             n,
             (0, r.jsx)(
-                o.ZP,
+                a.ZP,
                 s(
                     {
                         targetRef: d,

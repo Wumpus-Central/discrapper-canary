@@ -1,7 +1,7 @@
-n.d(t, { X: () => o });
+n.d(t, { X: () => a });
 var r = n(818083),
     i = n(987338);
-let o = (0, r.B)({
+let a = (0, r.B)({
     id: '2025-04_tenure_level_up_moment',
     kind: 'user',
     label: 'Tenure Level Up Moment',

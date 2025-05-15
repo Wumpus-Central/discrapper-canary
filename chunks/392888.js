@@ -6,8 +6,8 @@ n.d(t, {
 var r = n(255367);
 n(73800);
 var i = n(544891),
-    o = n(433517),
-    a = n(481060),
+    a = n(433517),
+    o = n(481060),
     s = n(147913),
     l = n(480294),
     c = n(9156),
@@ -68,30 +68,30 @@ function m(e, t) {
 }
 class g extends s.Z {
     handlePostConnectionOpen() {
-        !o.K.get('turnedOffNewNotifications') && l.Z.hasConsented(f.pjP.PERSONALIZATION) && u.xT.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 }).enabled && (c.ZP.useNewNotifications || (0 > Date.now() && this.checkOldUserExperiment(), this.checkNewUserExperiment()));
+        !a.K.get('turnedOffNewNotifications') && l.Z.hasConsented(f.pjP.PERSONALIZATION) && u.xT.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 }).enabled && (c.ZP.useNewNotifications || (0 > Date.now() && this.checkOldUserExperiment(), this.checkNewUserExperiment()));
     }
     async checkOldUserExperiment() {
         let { logExposure: e, autoOpen: t } = u.fs.getCurrentConfig({ location: 'NotificationMigrationManager' }, { autoTrackExposure: !1 });
         if (!e) return;
         let {
-                body: { guild_noise: o, usage: s }
+                body: { guild_noise: a, usage: s }
             } = await i.tn.get({
                 url: '/users/@me/notification-migration-data2',
                 rejectWithError: !1
             }),
             l = (0, d._Y)(s),
             { default: c } = await n.e('53512').then(n.bind(n, 753521));
-        !(0, a.$sL)() &&
+        !(0, o.$sL)() &&
             (u.fs.trackExposure({ location: 'NotificationMigrationManager' }),
             t &&
-                ((0, d.cG)(o, l)
-                    ? (0, a.h7j)(
+                ((0, d.cG)(a, l)
+                    ? (0, o.h7j)(
                           (e) =>
                               (0, r.jsx)(
                                   c,
                                   m(p({}, e), {
                                       dismissable: !1,
-                                      guildPain: o,
+                                      guildPain: a,
                                       myUsage: l
                                   })
                               ),
@@ -111,13 +111,13 @@ class g extends s.Z {
 }
 async function E(e) {
     let {
-            body: { guild_noise: t, usage: o }
+            body: { guild_noise: t, usage: a }
         } = await i.tn.get({
             url: '/users/@me/notification-migration-data2',
             rejectWithError: !1
         }),
-        s = (0, d._Y)(o);
-    (0, a.ZDy)(async () => {
+        s = (0, d._Y)(a);
+    (0, o.ZDy)(async () => {
         let { default: i } = await n.e('53512').then(n.bind(n, 753521));
         return (n) =>
             (0, r.jsx)(

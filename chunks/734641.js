@@ -1,5 +1,5 @@
 n.d(t, {
-    FL: () => o,
+    FL: () => a,
     XR: () => i,
     tJ: () => s
 });
@@ -8,25 +8,25 @@ let r = new Map(),
         let i = r.subscribe;
         return (
             (r.subscribe = (e, t, n) => {
-                let o = e;
+                let a = e;
                 if (t) {
                     let i = (null == n ? void 0 : n.equalityFn) || Object.is,
-                        a = e(r.getState());
-                    (o = (n) => {
+                        o = e(r.getState());
+                    (a = (n) => {
                         let r = e(n);
-                        if (!i(a, r)) {
-                            let e = a;
-                            t((a = r), e);
+                        if (!i(o, r)) {
+                            let e = o;
+                            t((o = r), e);
                         }
                     }),
-                        (null == n ? void 0 : n.fireImmediately) && t(a, a);
+                        (null == n ? void 0 : n.fireImmediately) && t(o, o);
                 }
-                return i(o);
+                return i(a);
             }),
             e(t, n, r)
         );
     };
-function o(e, t) {
+function a(e, t) {
     let n;
     try {
         n = e();
@@ -37,19 +37,19 @@ function o(e, t) {
         getItem: (e) => {
             var r;
             let i = (e) => (null === e ? null : JSON.parse(e, null == t ? void 0 : t.reviver)),
-                o = null != (r = n.getItem(e)) ? r : null;
-            return o instanceof Promise ? o.then(i) : i(o);
+                a = null != (r = n.getItem(e)) ? r : null;
+            return a instanceof Promise ? a.then(i) : i(a);
         },
         setItem: (e, r) => n.setItem(e, JSON.stringify(r, null == t ? void 0 : t.replacer)),
         removeItem: (e) => n.removeItem(e)
     };
 }
-let a = (e) => (t) => {
+let o = (e) => (t) => {
         try {
             let n = e(t);
             if (n instanceof Promise) return n;
             return {
-                then: (e) => a(e)(n),
+                then: (e) => o(e)(n),
                 catch(e) {
                     return this;
                 }
@@ -59,14 +59,14 @@ let a = (e) => (t) => {
                 then(e) {
                     return this;
                 },
-                catch: (t) => a(t)(e)
+                catch: (t) => o(t)(e)
             };
         }
     },
     s = (e, t) => (n, r, i) => {
         let s,
             l = {
-                storage: o(() => localStorage),
+                storage: a(() => localStorage),
                 partialize: (e) => e,
                 version: 0,
                 merge: (e, t) => ({
@@ -115,7 +115,7 @@ let a = (e) => (t) => {
                     return e(null != (t = r()) ? t : h);
                 });
             let i = (null == (t = l.onRehydrateStorage) ? void 0 : t.call(l, null != (e = r()) ? e : h)) || void 0;
-            return a(f.getItem.bind(f))(l.name)
+            return o(f.getItem.bind(f))(l.name)
                 .then((e) => {
                     if (e)
                         if ('number' != typeof e.version || e.version === l.version) return [!1, e.state];
@@ -127,8 +127,8 @@ let a = (e) => (t) => {
                 })
                 .then((e) => {
                     var t;
-                    let [i, o] = e;
-                    if ((n((s = l.merge(o, null != (t = r()) ? t : h)), !0), i)) return _();
+                    let [i, a] = e;
+                    if ((n((s = l.merge(a, null != (t = r()) ? t : h)), !0), i)) return _();
                 })
                 .then(() => {
                     null == i || i(s, void 0), (s = r()), (c = !0), d.forEach((e) => e(s));

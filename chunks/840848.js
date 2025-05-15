@@ -1,9 +1,9 @@
 n.d(t, { A: () => E });
 var r = n(717029),
     i = n(25487),
-    o = n(846042);
-function a(e) {
-    return (a =
+    a = n(846042);
+function o(e) {
+    return (o =
         'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
@@ -51,7 +51,7 @@ function f(e) {
     };
 }
 function _(e, t) {
-    return t && ('object' === a(t) || 'function' == typeof t) ? t : p(e);
+    return t && ('object' === o(t) || 'function' == typeof t) ? t : p(e);
 }
 function p(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
@@ -92,7 +92,7 @@ var E = (function (e) {
     function n() {
         var e;
         s(this, n);
-        for (var r = arguments.length, i = Array(r), o = 0; o < r; o++) i[o] = arguments[o];
+        for (var r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
         return g(p((e = t.call.apply(t, [this].concat(i)))), 'priority', 60), g(p(e), 'incompatibleTokens', ['t', 'T']), e;
     }
     return (
@@ -102,11 +102,11 @@ var E = (function (e) {
                 value: function (e, t, n) {
                     switch (t) {
                         case 'm':
-                            return (0, o.ie)(i.z.minute, e);
+                            return (0, a.ie)(i.z.minute, e);
                         case 'mo':
                             return n.ordinalNumber(e, { unit: 'minute' });
                         default:
-                            return (0, o.ZL)(t.length, e);
+                            return (0, a.ZL)(t.length, e);
                     }
                 }
             },

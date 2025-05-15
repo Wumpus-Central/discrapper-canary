@@ -2,16 +2,16 @@ n.d(t, {
     Mt: () => d,
     Sh: () => r.S,
     TO: () => l,
-    W$: () => a,
-    Yn: () => o.Yn,
+    W$: () => o,
+    Yn: () => a.Yn,
     aB: () => i.a,
     jj: () => u,
     zZ: () => s
 });
 var r = n(839548),
     i = n(946695),
-    o = n(65154),
-    a = (function (e) {
+    a = n(65154),
+    o = (function (e) {
         return (e.INPUT_DEVICE = 'input_device'), (e.STREAM = 'stream'), e;
     })({}),
     s = (function (e) {
@@ -22,18 +22,18 @@ var r = n(839548),
     })({});
 function c(e) {
     switch (e) {
-        case o.AS.NATIVE:
+        case a.AS.NATIVE:
             return n(743426).Z;
-        case o.AS.WEBRTC:
+        case a.AS.WEBRTC:
             return n(959856).Z;
-        case o.AS.DUMMY:
+        case a.AS.DUMMY:
         default:
             return n(135670).Z;
     }
 }
 function u() {
     var e;
-    return null != (e = [o.AS.NATIVE, o.AS.WEBRTC].find((e) => c(e).supported())) ? e : o.AS.DUMMY;
+    return null != (e = [a.AS.NATIVE, a.AS.WEBRTC].find((e) => c(e).supported())) ? e : a.AS.DUMMY;
 }
 function d(e) {
     return new (c(e))();

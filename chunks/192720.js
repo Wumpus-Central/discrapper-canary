@@ -5,8 +5,8 @@ n.d(t, {
 });
 var r = n(544891),
     i = n(570140),
-    o = n(786761),
-    a = n(768943),
+    a = n(786761),
+    o = n(768943),
     s = n(686478),
     l = n(981631);
 async function c(e) {
@@ -29,14 +29,14 @@ async function u(e) {
         return !0;
 }
 async function d() {
-    if (!a.Z.getIsStale()) return Promise.resolve();
+    if (!o.Z.getIsStale()) return Promise.resolve();
     let e = (
         await r.tn.get({
             url: l.ANM.GET_SAVED_MESSAGES,
             rejectWithError: !1
         })
     ).body.results.map((e) => ({
-        message: null != e.message ? (0, o.e5)(e.message) : null,
+        message: null != e.message ? (0, a.e5)(e.message) : null,
         saveData: (0, s.vL)(e.save_data)
     }));
     i.Z.dispatch({

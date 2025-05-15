@@ -1,7 +1,7 @@
-n.d(t, { O: () => o });
+n.d(t, { O: () => a });
 var r = n(818083),
     i = n(987338);
-let o = (0, r.B)({
+let a = (0, r.B)({
     id: '2025-02_voice_mic_button_state_for_mobile',
     label: 'Voice Mic Button State for Mobile',
     kind: 'user',

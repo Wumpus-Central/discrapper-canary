@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ }), n(388685);
 var r,
     i = n(442837),
-    o = n(570140);
-function a(e, t, n) {
+    a = n(570140);
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -40,15 +40,15 @@ class f extends (r = i.ZP.Store) {
         return null != l[e]
             ? l[e]
             : ((l[e] = !1),
-              o.Z.dispatch({
+              a.Z.dispatch({
                   type: 'CHECK_LAUNCHABLE_GAME',
                   gameId: e
               }),
               !1);
     }
 }
-a(f, 'displayName', 'LaunchableGameStore');
-let _ = new f(o.Z, {
+o(f, 'displayName', 'LaunchableGameStore');
+let _ = new f(a.Z, {
     GAME_LAUNCHABLE_UPDATE: c,
     GAME_CLOUD_SYNC_START: u,
     GAME_LAUNCH_START: u,

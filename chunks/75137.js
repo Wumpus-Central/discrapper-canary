@@ -1,7 +1,7 @@
-n.d(t, { U: () => a });
+n.d(t, { U: () => o });
 var r = n(818083),
     i = n(987338);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: 'user',
     id: '2024-12_quests_nitro_permadecos',
     label: 'Quests Nitro Permadecos',
@@ -14,6 +14,6 @@ let o = (0, r.B)({
         }
     ]
 });
-function a() {
-    return o.getCurrentConfig({ location: 'quest_nitro_permadecos' }, { autoTrackExposure: !1 }).enabled;
+function o() {
+    return a.getCurrentConfig({ location: 'quest_nitro_permadecos' }, { autoTrackExposure: !1 }).enabled;
 }

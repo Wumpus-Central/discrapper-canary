@@ -1,4 +1,4 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(81825);
 function i(e, t, n) {
     return (
@@ -13,7 +13,7 @@ function i(e, t, n) {
         e
     );
 }
-class o extends r.Z {
+class a extends r.Z {
     constructor(e) {
         var t;
         super(), i(this, 'id', void 0), i(this, 'widgets', void 0), i(this, 'version', void 0), (this.version = null != (t = Number(e.version)) ? t : 0), (this.id = e.id || ''), (this.widgets = e.widgets || []);

@@ -6,8 +6,8 @@ var i = t(481060),
     u = t(883385),
     a = t(108843),
     o = t(100527),
-    c = t(299206),
-    d = t(819403),
+    d = t(299206),
+    c = t(819403),
     s = t(286694),
     _ = t(314897),
     E = t(238296),
@@ -21,18 +21,18 @@ let h = (0, a.Z)(
                 h = t.id,
                 T = n.isNonUserBot(),
                 b = n.id === _.default.getId(),
-                v = (0, d.Z)(n),
+                v = (0, c.Z)(n),
                 O = (0, s.Z)(n, u, h),
-                S = (0, E.Y)({
+                I = (0, E.Y)({
                     isOwnSettings: b,
                     userId: n.id,
                     channelId: h,
                     guildId: u,
                     context: g
                 }),
-                [y, I] = (0, E.E)(n, h, u),
+                [S, y] = (0, E.E)(n, h, u),
                 p = (0, f.Z)(n, u, h),
-                M = (0, c.Z)({
+                M = (0, d.Z)({
                     id: n.id,
                     label: A.intl.string(A.t['/AXYnJ'])
                 });
@@ -50,13 +50,13 @@ let h = (0, a.Z)(
                             (0, l.jsxs)(i.kSQ, {
                                 children: [v, O]
                             }),
-                            S,
+                            I,
                             !b &&
                                 (0, l.jsx)(i.kSQ, {
                                     children: (0, l.jsxs)(i.sNh, {
                                         id: 'more-options',
                                         label: A.intl.string(A.t.PdRCRk),
-                                        children: [y, (0, l.jsx)(i.kSQ, { children: p }), I]
+                                        children: [S, (0, l.jsx)(i.kSQ, { children: p }), y]
                                     })
                                 }),
                             b && (0, l.jsx)(i.kSQ, { children: M })

@@ -1,6 +1,6 @@
-let r, i, o;
+let r, i, a;
 n.d(t, { Z: () => A }), n(388685), n(358797);
-var a,
+var o,
     s = n(442837),
     l = n(570140),
     c = n(238514),
@@ -44,28 +44,28 @@ let h = {
     g = new Set(),
     E = !1;
 function b() {
-    o = null;
+    a = null;
 }
 function y() {
     (r = null), (i = null), (g = new Set()), (m.applicationId = null), (m.originURL = null), b();
 }
 function O(e) {
     let { applicationId: t } = e;
-    g.add(t), (o = null);
+    g.add(t), (a = null);
 }
 function v(e) {
     let { applicationId: t, originURL: n } = e;
-    (r = t), (i = n), g.delete(t), (o = null), (m.applicationId = t), (m.originURL = n);
+    (r = t), (i = n), g.delete(t), (a = null), (m.applicationId = t), (m.originURL = n);
 }
 function I(e) {
     let { applicationId: t, error: n } = e;
-    g.delete(t), (o = n);
+    g.delete(t), (a = n);
 }
 function S(e) {
     let { testModeApplicationId: t } = e;
     r = t;
 }
-class T extends (a = s.ZP.PersistedStore) {
+class T extends (o = s.ZP.PersistedStore) {
     initialize(e) {
         (r = (m = p({}, null != e ? e : h)).applicationId),
             (i = m.originURL),
@@ -103,7 +103,7 @@ class T extends (a = s.ZP.PersistedStore) {
         return i;
     }
     get error() {
-        return o;
+        return a;
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {

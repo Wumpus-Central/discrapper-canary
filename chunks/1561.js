@@ -1,8 +1,8 @@
 n.d(t, { P: () => h }), n(388685);
 var r,
     i = n(255367),
-    o = n(73800),
-    a = n(532712),
+    a = n(73800),
+    o = n(532712),
     s = n(84735),
     l = n(981631);
 function c(e, t, n) {
@@ -63,8 +63,8 @@ function _(e, t) {
         r,
         i = p(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -73,23 +73,23 @@ function p(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-class h extends (r = o.Component) {
+class h extends (r = a.Component) {
     renderNonInteractive() {
         let e = this.props,
-            { tag: t, focusProps: n, innerRef: r, onClick: i, role: a, tabIndex: s, ignoreKeyPress: l } = e,
+            { tag: t, focusProps: n, innerRef: r, onClick: i, role: o, tabIndex: s, ignoreKeyPress: l } = e,
             c = _(e, ['tag', 'focusProps', 'innerRef', 'onClick', 'role', 'tabIndex', 'ignoreKeyPress']);
-        return o.createElement(t, u({ ref: this.setRef }, c));
+        return a.createElement(t, u({ ref: this.setRef }, c));
     }
     renderInner() {
         let e = this.props,
-            { tag: t, onClick: n, className: r, children: i, focusProps: a, innerRef: s, ignoreKeyPress: l } = e,
+            { tag: t, onClick: n, className: r, children: i, focusProps: o, innerRef: s, ignoreKeyPress: l } = e,
             c = _(e, ['tag', 'onClick', 'className', 'children', 'focusProps', 'innerRef', 'ignoreKeyPress']);
         return null == n
-            ? o.createElement(
+            ? a.createElement(
                   t,
                   u(
                       {
@@ -100,7 +100,7 @@ class h extends (r = o.Component) {
                   ),
                   i
               )
-            : o.createElement(
+            : a.createElement(
                   t,
                   u(
                       {
@@ -131,7 +131,7 @@ class h extends (r = o.Component) {
             });
     }
 }
-c(h, 'contextType', a.g),
+c(h, 'contextType', o.g),
     c(h, 'defaultProps', {
         tag: 'div',
         role: 'button',

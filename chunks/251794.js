@@ -31,7 +31,7 @@ function l(e) {
     return e;
 }
 function o(e) {
-    let { guildId: t, userId: o, anaylticsLocations: a } = e;
+    let { guildId: t, userId: o, anaylticsLocations: a, modReportId: s } = e;
     (0, i.ZDy)(async () => {
         let { default: e } = await n.e('72920').then(n.bind(n, 109730));
         return (n) =>
@@ -41,7 +41,8 @@ function o(e) {
                     {
                         guildId: t,
                         userId: o,
-                        anaylticsLocations: a
+                        anaylticsLocations: a,
+                        modReportId: s
                     },
                     n
                 )

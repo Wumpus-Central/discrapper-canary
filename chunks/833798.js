@@ -1,8 +1,8 @@
 n.d(t, { s: () => c }), n(467055), n(388685), n(314940);
 var r = n(278074),
     i = n(264181),
-    o = n(178185),
-    a = n(272280),
+    a = n(178185),
+    o = n(272280),
     s = n(806185);
 function l(e, t, n) {
     return (
@@ -28,8 +28,8 @@ class c {
                         t,
                         (0, r.EQ)(n)
                             .with({ type: i.Z.COACHTIP }, (e) => s.Z.fromServer(e))
-                            .with({ type: i.Z.BADGE }, (e) => o.E.fromServer(e))
-                            .with({ type: i.Z.BANNER }, (e) => a.I.fromServer(e))
+                            .with({ type: i.Z.BADGE }, (e) => a.E.fromServer(e))
+                            .with({ type: i.Z.BANNER }, (e) => o.I.fromServer(e))
                             .otherwise(() => void 0)
                     ];
                 })

@@ -1,19 +1,19 @@
 n.d(t, { Z: () => s }), n(388685);
 var r = n(73800),
     i = n(442837),
-    o = n(25251),
-    a = n(731896);
+    a = n(25251),
+    o = n(731896);
 let s = (e) => {
     let [t, n] = r.useState(e),
-        [s, l] = r.useState(o.Z.getProfileEffectById(e));
-    (0, a.V)(e);
-    let c = (0, i.e7)([o.Z], () => o.Z.profileEffects),
+        [s, l] = r.useState(a.Z.getProfileEffectById(e));
+    (0, o.V)(e);
+    let c = (0, i.e7)([a.Z], () => a.Z.profileEffects),
         u = c.reduce((t, n, r) => (n.id === e && (t = r), t), 0),
         [, d] = r.useState(u),
         f = r.useRef(u);
     return (
         r.useEffect(() => {
-            n(e), l(o.Z.getProfileEffectById(e));
+            n(e), l(a.Z.getProfileEffectById(e));
         }, [e, c]),
         {
             increment: () => {

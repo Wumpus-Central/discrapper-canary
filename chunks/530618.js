@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(505266),
-    a = n(675654);
+    a = n(505266),
+    o = n(675654);
 function s(e, t, n) {
     return (
         t in e
@@ -61,7 +61,7 @@ let d = 50,
 function p(e, t) {
     return (
         (t = null != t ? t : 1),
-        u(l({}, a.We), {
+        u(l({}, o.We), {
             position: {
                 type: 'static-random',
                 minValue: {
@@ -94,7 +94,7 @@ function p(e, t) {
 let h = function (e) {
     let { confettiTarget: t, confettiCanvas: n, confettiVelocityMultiplier: s, sprites: l, colors: c } = e,
         [u, h] = i.useState(null),
-        m = (0, o.uR)(n, u),
+        m = (0, a.uR)(n, u),
         [g, E] = i.useState(!1);
     return (
         i.useEffect(() => {
@@ -113,12 +113,12 @@ let h = function (e) {
                 }
             );
         }, [m, t, g, s]),
-        (0, r.jsx)(o.Ji, {
+        (0, r.jsx)(a.Ji, {
             ref: h,
-            sprites: null != l ? l : a.CA,
-            colors: null != c ? c : a.Br,
-            spriteWidth: a.Ko,
-            spriteHeight: a.Ko
+            sprites: null != l ? l : o.CA,
+            colors: null != c ? c : o.Br,
+            spriteWidth: o.Ko,
+            spriteHeight: o.Ko
         })
     );
 };

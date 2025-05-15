@@ -1,5 +1,5 @@
 n.d(t, {
-    B: () => o,
+    B: () => a,
     n: () => i
 }),
     n(539854);
@@ -16,7 +16,7 @@ function i(e) {
     }
     return t;
 }
-function o() {
+function a() {
     let e,
         t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
@@ -24,17 +24,17 @@ function o() {
         return n.hasOwnProperty(e) ? n[e] : t[e];
     }
     let i = {},
-        o = [];
-    for (let e in t) n.hasOwnProperty(e) ? o.length && ((i[e] = o), (o = [])) : o.push(e);
-    let a = {};
+        a = [];
+    for (let e in t) n.hasOwnProperty(e) ? a.length && ((i[e] = a), (a = [])) : a.push(e);
+    let o = {};
     for (let t in n) {
         if (i.hasOwnProperty(t))
             for (e = 0; e < i[t].length; e++) {
                 let n = i[t][e];
-                a[i[t][e]] = r(n);
+                o[i[t][e]] = r(n);
             }
-        a[t] = r(t);
+        o[t] = r(t);
     }
-    for (e = 0; e < o.length; e++) a[o[e]] = r(o[e]);
-    return a;
+    for (e = 0; e < a.length; e++) o[a[e]] = r(a[e]);
+    return o;
 }

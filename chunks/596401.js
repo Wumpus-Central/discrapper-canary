@@ -1,15 +1,15 @@
 n.d(t, {
-    D2: () => o,
+    D2: () => a,
     LU: () => l,
-    Vw: () => a,
+    Vw: () => o,
     Xd: () => r,
     h3: () => s,
     sP: () => i
 });
 let r = 'CHANGELOG_MODAL',
     i = '1232523165893132288',
-    o = 'https://discord.com/category/product';
-var a = (function (e) {
+    a = 'https://discord.com/category/product';
+var o = (function (e) {
         return (e[(e.DESKTOP = 0)] = 'DESKTOP'), (e[(e.MOBILE = 1)] = 'MOBILE'), e;
     })({}),
     s = (function (e) {

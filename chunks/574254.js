@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(585483),
+    a = n(570140),
+    o = n(585483),
     s = n(981631);
 function l(e, t, n) {
     return (
@@ -37,11 +37,11 @@ class _ extends (r = i.ZP.Store) {
         return c;
     }
     close() {
-        return !!this.isOpen() && (a.S.dispatch(s.CkL.CONTEXT_MENU_CLOSE), !0);
+        return !!this.isOpen() && (o.S.dispatch(s.CkL.CONTEXT_MENU_CLOSE), !0);
     }
 }
 l(_, 'displayName', 'ContextMenuStore');
-let p = new _(o.Z, {
+let p = new _(a.Z, {
     CONTEXT_MENU_OPEN: d,
     LAYER_PUSH: f,
     CONTEXT_MENU_CLOSE: f,

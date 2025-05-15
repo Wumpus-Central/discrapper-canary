@@ -1,4 +1,4 @@
-n.d(t, { Z: () => L });
+n.d(t, { Z: () => M }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(793030),
@@ -6,52 +6,53 @@ var r = n(255367),
     o = n(902704),
     s = n(692547),
     c = n(481060),
-    u = n(100604),
-    d = n(694784),
-    p = n(39154),
-    m = n(356264),
-    f = n(628238),
-    h = n(739566),
-    g = n(492593),
-    _ = n(930282),
-    b = n(464891),
-    x = n(507418),
-    E = n(348238),
-    y = n(38267),
-    v = n(25015),
-    O = n(438075),
-    j = n(695346),
-    C = n(592125),
-    S = n(906467),
-    I = n(430824),
-    N = n(496675),
-    T = n(699516),
-    P = n(594174),
-    A = n(22665),
-    w = n(959517),
-    Z = n(995717);
-function R(e) {
-    let { message: t, snapshot: n, index: p } = e,
-        f = i.useMemo(() => new u.r(t, n, p), [t, n, p]),
-        h = (0, a.e7)([C.Z, P.default, T.Z, N.Z, I.Z, m.Z], () => f.getForwardInfo(C.Z, P.default, T.Z, N.Z, I.Z, m.Z).footerInfo, [f], o.Z),
+    u = n(232567),
+    d = n(100604),
+    p = n(694784),
+    m = n(39154),
+    f = n(356264),
+    h = n(628238),
+    g = n(739566),
+    _ = n(492593),
+    b = n(930282),
+    x = n(464891),
+    E = n(507418),
+    y = n(348238),
+    v = n(38267),
+    O = n(25015),
+    j = n(438075),
+    C = n(695346),
+    S = n(592125),
+    I = n(906467),
+    N = n(430824),
+    T = n(496675),
+    P = n(699516),
+    A = n(594174),
+    w = n(22665),
+    Z = n(959517),
+    R = n(995717);
+function k(e) {
+    let { message: t, snapshot: n, index: u } = e,
+        m = i.useMemo(() => new d.r(t, n, u), [t, n, u]),
+        h = (0, a.e7)([S.Z, A.default, P.Z, T.Z, N.Z, f.Z], () => m.getForwardInfo(S.Z, A.default, P.Z, T.Z, N.Z, f.Z).footerInfo, [m], o.Z),
         g = i.useCallback(() => {
-            (0, d.Z)(t);
+            (0, p.Z)(t);
         }, [t]);
     return null == h
         ? null
         : (0, r.jsxs)(c.P3F, {
-              className: Z.footerContainer,
+              className: R.footerContainer,
               onClick: g,
               children: [
                   null != h.originIconUrl
                       ? (0, r.jsx)('img', {
-                            className: Z.originIcon,
+                            className: R.originIcon,
                             src: h.originIconUrl,
                             alt: ''
                         })
                       : null,
                   (0, r.jsx)(l.xv, {
-                      className: Z.footerText,
+                      className: R.footerText,
                       variant: 'text-sm/medium',
                       color: 'none',
                       children: ''.concat(h.originLabel, '  \u2022  ').concat(h.timestampLabel)
@@ -63,9 +64,9 @@ function R(e) {
               ]
           });
 }
-function k(e) {
+function D(e) {
     let { mergedMessageRecord: t, content: n, channel: l, reportingUserId: a, reportedTimestamp: o } = e,
-        s = (0, h.JZ)(t.author, l),
+        s = (0, g.JZ)(t.author, l),
         {
             onClickUsername: c,
             onClickAvatar: u,
@@ -73,12 +74,12 @@ function k(e) {
             showUsernamePopout: p,
             showAvatarPopout: m
         } = (function (e, t) {
-            let { popouts: n, setPopout: r } = (0, y.Z)(e.id, w.d$),
+            let { popouts: n, setPopout: r } = (0, v.Z)(e.id, Z.d$),
                 { usernameProfile: l, avatarProfile: a } = n,
-                o = (0, E.XO)(e, t, l, r);
+                o = (0, y.XO)(e, t, l, r);
             return {
                 onClickUsername: o,
-                onClickAvatar: (0, E.R9)(a, r),
+                onClickAvatar: (0, y.R9)(a, r),
                 onPopoutRequestClose: i.useCallback(
                     () =>
                         r({
@@ -92,8 +93,8 @@ function k(e) {
                 showAvatarPopout: a
             };
         })(t, l);
-    return (0, r.jsx)(g.Z, {
-        childrenExecutedCommand: (0, r.jsx)(A.Z, {
+    return (0, r.jsx)(_.Z, {
+        childrenExecutedCommand: (0, r.jsx)(w.Z, {
             reportingUserId: a,
             guildId: l.guild_id,
             channel: l,
@@ -101,7 +102,7 @@ function k(e) {
             reportedTimestamp: o,
             compact: !1
         }),
-        childrenHeader: (0, r.jsx)(b.ZP, {
+        childrenHeader: (0, r.jsx)(x.ZP, {
             message: t,
             channel: l,
             author: s,
@@ -112,84 +113,98 @@ function k(e) {
             onPopoutRequestClose: d,
             showUsernamePopout: p,
             showAvatarPopout: m,
-            renderPopout: x.Z,
+            renderPopout: E.Z,
             compact: !1,
             displayCompactAvatars: !1
         }),
-        childrenMessageContent: (0, r.jsx)(_.ZP, {
+        childrenMessageContent: (0, r.jsx)(b.ZP, {
             message: t,
             content: n,
             compact: !1
         }),
         disableInteraction: !0,
         compact: !1,
-        className: Z.message
+        className: R.message
     });
 }
-function D(e) {
-    var t, n;
-    let { message: l, snapshot: o, index: s } = e,
-        c = i.useMemo(() => (0, p.Z)(l, o), [l, o]),
-        u = j.RS.useSetting(),
-        d = j.NA.useSetting(),
-        m = (0, a.e7)([S.Z], () => S.Z.isDeveloper),
-        h = (0, f.A)((null != (n = c.editedTimestamp) ? n : c.timestamp).valueOf()),
-        { content: g, hasSpoilerEmbeds: _ } = (0, v.Z)(c, {
-            hideSimpleEmbedContent: u && d,
+function L(e) {
+    var t, n, l;
+    let { message: o, snapshot: s, index: c } = e,
+        [d, p] = i.useState(void 0);
+    i.useEffect(() => {
+        var e;
+        (null == s || null == (e = s.moderatorReport) ? void 0 : e.reported_user_id) != null &&
+            (0, u.PR)(s.moderatorReport.reported_user_id)
+                .then((e) => {
+                    p(e);
+                })
+                .catch(() => {});
+    }, [null == s || null == (t = s.moderatorReport) ? void 0 : t.reported_user_id]);
+    let f = i.useMemo(() => {
+            var e;
+            let t = (0, m.Z)(o, s);
+            return null != d && (null == s || null == (e = s.moderatorReport) ? void 0 : e.reported_user_id) != null ? t.set('author', d) : t;
+        }, [o, s, d]),
+        g = C.RS.useSetting(),
+        _ = C.NA.useSetting(),
+        b = (0, a.e7)([I.Z], () => I.Z.isDeveloper),
+        x = (0, h.A)((null != (l = f.editedTimestamp) ? l : f.timestamp).valueOf()),
+        { content: E, hasSpoilerEmbeds: y } = (0, O.Z)(f, {
+            hideSimpleEmbedContent: g && _,
             isInteracting: !1,
             formatInline: !1,
-            allowList: h,
-            allowHeading: h,
+            allowList: x,
+            allowHeading: x,
             allowLinks: !0,
-            allowDevLinks: m,
+            allowDevLinks: b,
             previewLinkTarget: !0
         }),
-        b = (0, a.e7)([C.Z], () => C.Z.getChannel(l.channel_id));
-    return null == b
+        v = (0, a.e7)([S.Z], () => S.Z.getChannel(o.channel_id));
+    return null == v
         ? null
         : (0, r.jsx)(
               'div',
               {
-                  className: Z.container,
+                  className: R.container,
                   children: (0, r.jsxs)('div', {
-                      className: Z.content,
+                      className: R.content,
                       children: [
-                          (0, r.jsx)(k, {
-                              mergedMessageRecord: c,
-                              content: g,
-                              channel: b,
-                              reportingUserId: null == o || null == (t = o.moderatorReport) ? void 0 : t.reporting_user_id,
-                              reportedTimestamp: l.timestamp
+                          (0, r.jsx)(D, {
+                              mergedMessageRecord: f,
+                              content: E,
+                              channel: v,
+                              reportingUserId: null == s || null == (n = s.moderatorReport) ? void 0 : n.reporting_user_id,
+                              reportedTimestamp: o.timestamp
                           }),
-                          (0, O.Z)({
+                          (0, j.Z)({
                               channelMessageProps: {
-                                  message: c,
-                                  channel: b,
+                                  message: f,
+                                  channel: v,
                                   compact: !1
                               },
-                              hasSpoilerEmbeds: _,
+                              hasSpoilerEmbeds: y,
                               isInteracting: !1,
                               isMessageSnapshot: !0,
                               renderThreadAccessory: !1,
-                              className: Z.nestedAccessories
+                              className: R.nestedAccessories
                           }),
-                          (0, r.jsx)(R, {
-                              message: l,
-                              snapshot: o,
-                              index: s
+                          (0, r.jsx)(k, {
+                              message: o,
+                              snapshot: s,
+                              index: c
                           })
                       ]
                   })
               },
-              s
+              c
           );
 }
-function L(e) {
+function M(e) {
     let { message: t } = e;
     return (0, r.jsx)(r.Fragment, {
         children: t.messageSnapshots.map((e, n) =>
             (0, r.jsx)(
-                D,
+                L,
                 {
                     message: t,
                     snapshot: e,

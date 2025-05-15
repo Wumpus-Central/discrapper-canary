@@ -1,13 +1,13 @@
 n.d(t, { Z: () => u });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(768581),
     l = n(388032),
     c = n(870017);
 function u(e) {
-    let { application: t, src: n, className: o, size: u, botIconFirst: d, fallbackAvatar: f, rendersPlaceholder: _ = !1 } = e,
+    let { application: t, src: n, className: a, size: u, botIconFirst: d, fallbackAvatar: f, rendersPlaceholder: _ = !1 } = e,
         p = i.useMemo(
             () =>
                 null != t
@@ -24,10 +24,10 @@ function u(e) {
         );
     return null == p
         ? _
-            ? (0, r.jsx)('div', { className: a()(c.icon, c.placeholder, o) })
+            ? (0, r.jsx)('div', { className: o()(c.icon, c.placeholder, a) })
             : null
         : (0, r.jsx)('img', {
-              className: a()(c.icon, o),
+              className: o()(c.icon, a),
               alt: l.intl.string(l.t.X4IxWF),
               src: p,
               'aria-hidden': !0,

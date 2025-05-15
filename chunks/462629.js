@@ -7,38 +7,38 @@
         return e > 1 && e < 5 && 1 != ~~(e / 10);
     }
     function i(e, t, n, i) {
-        var o = e + ' ';
+        var a = e + ' ';
         switch (n) {
             case 's':
                 return t || i ? 'pár sekund' : 'pár sekundami';
             case 'ss':
-                if (t || i) return o + (r(e) ? 'sekundy' : 'sekund');
-                return o + 'sekundami';
+                if (t || i) return a + (r(e) ? 'sekundy' : 'sekund');
+                return a + 'sekundami';
             case 'm':
                 return t ? 'minuta' : i ? 'minutu' : 'minutou';
             case 'mm':
-                if (t || i) return o + (r(e) ? 'minuty' : 'minut');
-                return o + 'minutami';
+                if (t || i) return a + (r(e) ? 'minuty' : 'minut');
+                return a + 'minutami';
             case 'h':
                 return t ? 'hodina' : i ? 'hodinu' : 'hodinou';
             case 'hh':
-                if (t || i) return o + (r(e) ? 'hodiny' : 'hodin');
-                return o + 'hodinami';
+                if (t || i) return a + (r(e) ? 'hodiny' : 'hodin');
+                return a + 'hodinami';
             case 'd':
                 return t || i ? 'den' : 'dnem';
             case 'dd':
-                if (t || i) return o + (r(e) ? 'dny' : 'dní');
-                return o + 'dny';
+                if (t || i) return a + (r(e) ? 'dny' : 'dní');
+                return a + 'dny';
             case 'M':
                 return t || i ? 'měsíc' : 'měsícem';
             case 'MM':
-                if (t || i) return o + (r(e) ? 'měsíce' : 'měsíců');
-                return o + 'měsíci';
+                if (t || i) return a + (r(e) ? 'měsíce' : 'měsíců');
+                return a + 'měsíci';
             case 'y':
                 return t || i ? 'rok' : 'rokem';
             case 'yy':
-                if (t || i) return o + (r(e) ? 'roky' : 'let');
-                return o + 'lety';
+                if (t || i) return a + (r(e) ? 'roky' : 'let');
+                return a + 'lety';
         }
     }
     return e.defineLocale('cs', {

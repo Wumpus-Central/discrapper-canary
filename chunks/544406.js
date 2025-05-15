@@ -1,7 +1,7 @@
-n.d(t, { x: () => a });
+n.d(t, { x: () => o });
 var r = n(818083),
     i = n(504876);
-let o = (0, r.B)({
+let a = (0, r.B)({
     kind: 'user',
     id: '2025-03_video_capabilities_detection',
     label: 'Video capabilities detection and reporting',
@@ -19,10 +19,10 @@ let o = (0, r.B)({
         }
     ]
 });
-function a(e) {
+function o(e) {
     let { location: t } = e,
         { isInHoldout: n } = i.Y.getCurrentConfig({ location: t }, { autoTrackExposure: !0 });
-    return o.getCurrentConfig(
+    return a.getCurrentConfig(
         { location: t },
         {
             disable: n,
