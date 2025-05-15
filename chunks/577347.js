@@ -1,7 +1,7 @@
 n.d(t, { Z: () => c });
 var r = n(255367),
     i = n(481060);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,7 +14,7 @@ function a(e, t, n) {
         e
     );
 }
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -25,7 +25,7 @@ function o(e) {
                 })
             )),
             r.forEach(function (t) {
-                a(e, t, n[t]);
+                o(e, t, n[t]);
             });
     }
     return e;
@@ -59,7 +59,7 @@ function c(e, t) {
         return (n) =>
             (0, r.jsx)(
                 i,
-                l(o({}, n), {
+                l(a({}, n), {
                     channelId: e,
                     messageId: t
                 })

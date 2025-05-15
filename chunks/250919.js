@@ -1,4 +1,4 @@
-n.d(t, { F: () => a }), n(415506);
+n.d(t, { F: () => o }), n(415506);
 var r = n(153102);
 function i(e, t, n) {
     return (
@@ -13,7 +13,7 @@ function i(e, t, n) {
         e
     );
 }
-class a {
+class o {
     attach(e) {
         let { stores: t } = this;
         t.forEach((t, n) => {

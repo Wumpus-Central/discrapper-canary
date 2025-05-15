@@ -1,82 +1,85 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => v });
 var i = n(255367);
 n(73800);
-var r = n(442837),
-    s = n(481060),
-    l = n(921801),
-    a = n(131951),
-    o = n(63063),
-    c = n(603963),
-    d = n(738486),
-    u = n(429789),
-    m = n(208113),
-    g = n(625205),
-    p = n(325808),
-    h = n(823087),
-    f = n(232388),
-    b = n(716210),
-    _ = n(459674),
-    x = n(803567),
-    E = n(269876),
-    C = n(976758),
-    j = n(726985),
-    O = n(981631),
-    S = n(65154),
-    v = n(388032);
-let T = ''.concat(o.Z.getArticleURL(O.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
-function I() {
-    let { inputMode: e } = (0, r.cj)([a.Z], () => ({ inputMode: a.Z.getMode() }));
+var r = n(481060),
+    s = n(921801),
+    l = n(63063),
+    a = n(603963),
+    o = n(738486),
+    c = n(429789),
+    d = n(208113),
+    u = n(625205),
+    m = n(325808),
+    g = n(235144),
+    p = n(823087),
+    h = n(232388),
+    f = n(716210),
+    b = n(459674),
+    _ = n(803567),
+    x = n(269876),
+    E = n(976758),
+    C = n(726985),
+    j = n(981631),
+    O = n(388032);
+let S = ''.concat(l.Z.getArticleURL(j.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
+function v() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsxs)(c.Z, {
-                webSetting: j.s6.VOICE_AND_VIDEO_VOICE,
+            (0, i.jsxs)(a.Z, {
+                webSetting: C.s6.VOICE_AND_VIDEO_VOICE,
                 children: [
-                    (0, i.jsxs)(d.Z, {
+                    (0, i.jsxs)(o.Z, {
                         children: [
-                            (0, i.jsx)(l.F, {
-                                setting: j.s6.VOICE_AND_VIDEO_DEVICES,
-                                children: (0, i.jsx)(g.Z, {})
+                            (0, i.jsx)(s.F, {
+                                setting: C.s6.VOICE_AND_VIDEO_DEVICES,
+                                children: (0, i.jsx)(u.Z, {})
                             }),
-                            (0, i.jsx)(l.F, {
-                                setting: j.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
-                                children: (0, i.jsx)(C.Z, {})
+                            (0, i.jsx)(s.F, {
+                                setting: C.s6.VOICE_AND_VIDEO_VOLUME_CONTROLS,
+                                children: (0, i.jsx)(E.Z, {})
                             }),
-                            (0, i.jsxs)(l.F, {
-                                setting: j.s6.VOICE_AND_VIDEO_MIC_TEST,
+                            (0, i.jsxs)(s.F, {
+                                setting: C.s6.VOICE_AND_VIDEO_MIC_TEST,
                                 children: [
-                                    (0, i.jsx)(h.Z, {}),
-                                    (0, i.jsx)(s.R94, {
-                                        type: s.R94.Types.DESCRIPTION,
-                                        children: v.intl.format(v.t['V+B3FB'], { guideURL: T })
+                                    (0, i.jsx)(p.Z, {}),
+                                    (0, i.jsx)(r.R94, {
+                                        type: r.R94.Types.DESCRIPTION,
+                                        children: O.intl.format(O.t['V+B3FB'], { guideURL: S })
                                     })
                                 ]
                             })
                         ]
                     }),
-                    (0, i.jsxs)(d.Z, {
+                    (0, i.jsx)(o.Z, {
+                        children: (0, i.jsx)(s.F, {
+                            setting: C.s6.VOICE_AND_VIDEO_INPUT_PROFILE,
+                            children: (0, i.jsx)(g.Z, {})
+                        })
+                    }),
+                    (0, i.jsxs)(o.Z, {
                         children: [
-                            (0, i.jsx)(l.F, {
-                                setting: j.s6.VOICE_AND_VIDEO_INPUT_MODE,
-                                children: (0, i.jsx)(p.Z, {})
+                            (0, i.jsx)(s.F, {
+                                setting: C.s6.VOICE_AND_VIDEO_INPUT_MODE,
+                                children: (0, i.jsx)(m.Z, {})
                             }),
-                            (0, i.jsx)(l.F, {
-                                setting: j.s6.VOICE_AND_VIDEO_SENSITIVITY,
-                                children: e === S.pM.VOICE_ACTIVITY && (0, i.jsx)(E.Z, {})
+                            (0, i.jsx)(s.F, {
+                                setting: C.s6.VOICE_AND_VIDEO_SENSITIVITY,
+                                children: (0, i.jsx)(x.Z, {})
                             })
                         ]
                     })
                 ]
             }),
-            (0, i.jsx)(c.Z, {
-                webSetting: j.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
-                title: v.intl.string(v.t['6I6GUl']),
-                children: (0, i.jsx)(x.Z, { refreshStyles: !0 })
+            (0, i.jsx)(a.Z, {
+                webSetting: C.s6.VOICE_AND_VIDEO_ADVANCED_PROCESSING,
+                title: O.intl.string(O.t['6I6GUl']),
+                children: (0, i.jsx)(_.Z, { refreshStyles: !0 })
             }),
-            (0, i.jsx)(c.Z, {
-                title: v.intl.string(v.t['8/udY2']),
-                webSetting: j.s6.VOICE_AND_VIDEO_VOICE_ADVANCED,
-                children: (0, i.jsxs)(d.Z, {
-                    children: [(0, i.jsx)(b.Z, { refreshStyles: !0 }), (0, i.jsx)(_.Z, { refreshStyles: !0 }), (0, i.jsx)(u.Z, { refreshStyles: !0 }), (0, i.jsx)(m.Z, { refreshStyles: !0 }), (0, i.jsx)(f.Z, { refreshStyles: !0 })]
+            (0, i.jsx)(a.Z, {
+                title: O.intl.string(O.t['8/udY2']),
+                webSetting: C.s6.VOICE_AND_VIDEO_VOICE_ADVANCED,
+                children: (0, i.jsxs)(o.Z, {
+                    children: [(0, i.jsx)(f.Z, { refreshStyles: !0 }), (0, i.jsx)(b.Z, { refreshStyles: !0 }), (0, i.jsx)(c.Z, { refreshStyles: !0 }), (0, i.jsx)(d.Z, { refreshStyles: !0 }), (0, i.jsx)(h.Z, { refreshStyles: !0 })]
                 })
             })
         ]

@@ -7,10 +7,10 @@ function i(e, t) {
         (r.enumerable = r.enumerable || !1), (r.configurable = !0), 'value' in r && (r.writable = !0), Object.defineProperty(e, r.key, r);
     }
 }
-function a(e, t, n) {
+function o(e, t, n) {
     return t && i(e.prototype, t), n && i(e, n), e;
 }
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,10 +26,10 @@ function o(e, t, n) {
 n.d(t, { p: () => s });
 var s = (function () {
     function e(t) {
-        r(this, e), o(this, 'item', void 0), o(this, 'config', void 0), (this.config = t), (this.item = {}), this.initializeExposedProperties();
+        r(this, e), a(this, 'item', void 0), a(this, 'config', void 0), (this.config = t), (this.item = {}), this.initializeExposedProperties();
     }
     return (
-        a(e, [
+        o(e, [
             {
                 key: 'initializeExposedProperties',
                 value: function () {

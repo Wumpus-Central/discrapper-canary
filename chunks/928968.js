@@ -1,14 +1,14 @@
 n.d(t, {
-    f: () => a,
-    w: () => o
+    f: () => o,
+    w: () => a
 });
 var r = n(515652),
     i = n(926028);
-function a(e, t) {
+function o(e, t) {
     var n = new i.p(r.s[e]);
     return n.loadDataTransfer(t), n;
 }
-function o(e) {
+function a(e) {
     if (!e) return null;
     var t = Array.prototype.slice.call(e.types || []);
     return (

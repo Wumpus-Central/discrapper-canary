@@ -2,10 +2,10 @@ function r(e) {
     let t = Promise.resolve(null),
         n = [],
         r = !1,
-        { onContention: i, onContentionResolved: a, onTimeout: o, timeoutMs: s } = e,
+        { onContention: i, onContentionResolved: o, onTimeout: a, timeoutMs: s } = e,
         l = function (e, l) {
-            n.length > 0 ? (i(l, n), (r = !0)) : r && (a(), (r = !1)), n.push(l);
-            let c = null == s || null == o ? null : setTimeout(() => o(l, n), s);
+            n.length > 0 ? (i(l, n), (r = !0)) : r && (o(), (r = !1)), n.push(l);
+            let c = null == s || null == a ? null : setTimeout(() => a(l, n), s);
             return new Promise((r, i) => {
                 (t = t
                     .then(e)

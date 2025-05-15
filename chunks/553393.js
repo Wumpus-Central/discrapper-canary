@@ -1,8 +1,8 @@
 n.d(t, { Z: () => Z }), n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(683305),
-    o = n(91192),
+    o = n(950035),
+    a = n(91192),
     s = n(442837),
     l = n(780384),
     c = n(481060),
@@ -86,9 +86,9 @@ function V(e) {
         ee = (0, l.wj)($) ? L.BR.DARK : L.BR.LIGHT,
         et = (0, s.e7)([p.Z], () => p.Z.useReducedMotion),
         { ref: en, height: er } = (0, f.ZP)(),
-        [ei, ea] = i.useState(et),
-        eo = (0, _.Aq)(),
-        es = (0, o.eg)(),
+        [ei, eo] = i.useState(et),
+        ea = (0, _.Aq)(),
+        es = (0, a.eg)(),
         el = (0, T.up)(w.dr.MEMBERS_LIST);
     i.useEffect(() => {
         let e = es.current;
@@ -121,7 +121,7 @@ function V(e) {
                 tension: 450,
                 friction: 45
             },
-            onRest: () => ea(!0)
+            onRest: () => eo(!0)
         }),
         eu = (0, c.Yzy)(ei, {
             from: {
@@ -134,7 +134,7 @@ function V(e) {
             }
         }),
         ed = () => {
-            eo.dispatch(D.CkL.POPOUT_CLOSE);
+            ea.dispatch(D.CkL.POPOUT_CLOSE);
         },
         ef = 'top' === V ? ''.concat(U, ' ').concat(U, ' 0 0') : '0 0 '.concat(U, ' ').concat(U);
     if (null == O || q || (Q && !F(M, K))) return null;
@@ -226,7 +226,7 @@ function V(e) {
                           handleClickCta: ep,
                           tileAssetType: 'game'
                       };
-    return (0, r.jsx)(a.animated.div, {
+    return (0, r.jsx)(o.animated.div, {
         ref: (e) => {
             Y.current = e;
         },
@@ -286,7 +286,7 @@ function V(e) {
                                     eu(
                                         (e, t) =>
                                             t &&
-                                            (0, r.jsx)(a.animated.div, {
+                                            (0, r.jsx)(o.animated.div, {
                                                 style: e,
                                                 className: k.imgUnderlay
                                             })

@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
 var r,
     i = n(392711),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(433517),
     l = n(570140),
     c = n(981631);
@@ -64,7 +64,7 @@ function h(e) {
     for (let e in t) {
         var n;
         let r = e,
-            { shouldSync: i, settings: a } = t[r];
+            { shouldSync: i, settings: o } = t[r];
         if (!0 === i) {
             delete p[r];
             continue;
@@ -77,13 +77,13 @@ function h(e) {
                 }),
             (null == (n = p[r]) ? void 0 : n.shouldSync) === !1)
         )
-            for (let e in a) p[r].settings[e] = a[e];
+            for (let e in o) p[r].settings[e] = o[e];
     }
 }
 function m() {
     p = {};
 }
-class g extends (r = o.ZP.PersistedStore) {
+class g extends (r = a.ZP.PersistedStore) {
     initialize(e) {
         p = null != e ? e : {};
     }
@@ -116,12 +116,12 @@ u(g, 'displayName', 'SelectivelySyncedUserSettingsStore'),
                 !1 === n[c.oAB.TEXT] &&
                     (i.text = {
                         shouldSync: !1,
-                        settings: a().pick(r, ['inlineAttachmentMedia', 'inlineEmbedMedia', 'renderEmbeds', 'renderReactions', 'animateEmoji', 'animateStickers', 'gifAutoPlay'])
+                        settings: o().pick(r, ['inlineAttachmentMedia', 'inlineEmbedMedia', 'renderEmbeds', 'renderReactions', 'animateEmoji', 'animateStickers', 'gifAutoPlay'])
                     }),
                 !1 === n[c.oAB.APPEARANCE] &&
                     (i.appearance = {
                         shouldSync: !1,
-                        settings: a().pick(r, ['theme', 'clientThemeSettings', 'developerMode'])
+                        settings: o().pick(r, ['theme', 'clientThemeSettings', 'developerMode'])
                     }),
                 i
             );

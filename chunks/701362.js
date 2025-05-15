@@ -20,14 +20,14 @@ var r = n(255367),
     S = n(102172),
     j = n(687516),
     P = n(718805),
-    E = n(871118),
-    I = n(981631),
+    I = n(871118),
+    E = n(981631),
     Z = n(388032),
     x = n(768780);
 class C extends l.PureComponent {
     componentDidMount() {
         let { user: e, streamApplication: t } = this.props;
-        v.default.track(I.rMx.OPEN_POPOUT, {
+        v.default.track(E.rMx.OPEN_POPOUT, {
             type: 'Stream Preview',
             other_user_id: e.id,
             application_id: null != t ? t.id : null,
@@ -42,7 +42,7 @@ class C extends l.PureComponent {
             onClick: t,
             className: x.previewContainer,
             children: [
-                (0, r.jsx)(E.Z, {
+                (0, r.jsx)(I.Z, {
                     className: x.previewImage,
                     stream: e
                 }),
@@ -83,8 +83,8 @@ class C extends l.PureComponent {
                                             channelId: n.channelId,
                                             analyticsParams: {
                                                 location: {
-                                                    page: I.ZY5.GO_LIVE_MODAL,
-                                                    section: I.jXE.STREAM_VIEWER_POPOUT
+                                                    page: E.ZY5.GO_LIVE_MODAL,
+                                                    section: E.jXE.STREAM_VIEWER_POPOUT
                                                 }
                                             },
                                             onAction: i
@@ -139,8 +139,8 @@ function T(e) {
         p = (0, a.e7)([m.Z], () => m.Z.getStreamForUser(i.id, o.getGuildId())),
         v = (0, a.e7)([m.Z], () => m.Z.getActiveStreamForApplicationStream(p)),
         P = (0, a.e7)([g.default], () => g.default.getId()),
-        E = (0, j.Cf)(p),
-        I = (0, a.e7)([h.Z], () => (0, j.Um)(p, h.Z)),
+        I = (0, j.Cf)(p),
+        E = (0, a.e7)([h.Z], () => (0, j.Um)(p, h.Z)),
         Z = l.useMemo(() => ({ [o.guild_id]: [i.id] }), [o.guild_id, i.id]);
     return (
         (0, u.$)(Z),
@@ -176,11 +176,11 @@ function T(e) {
                     canWatch: c,
                     unavailableReason: d,
                     user: i,
-                    streamApplication: E,
+                    streamApplication: I,
                     stream: p,
                     activeStream: v,
                     currentUserId: P,
-                    activity: I
+                    activity: E
                 }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

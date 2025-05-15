@@ -1,7 +1,7 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(818083),
     i = n(355820);
-let a = (0, r.B)({
+let o = (0, r.B)({
     kind: 'user',
     id: '2025-04_custom_status_labels',
     label: 'Custom Status Labels Experiment',
@@ -28,13 +28,13 @@ let a = (0, r.B)({
         }
     ]
 });
-function o(e) {
+function a(e) {
     let { location: t, autoTrackExposure: n = !0 } = e,
         r = (0, i.P)({
             location: t,
             autoTrackExposure: n
         }),
-        { enabledWithActivityStatus: o, enabledWithoutActivityStatus: s } = a.useExperiment(
+        { enabledWithActivityStatus: a, enabledWithoutActivityStatus: s } = o.useExperiment(
             { location: t },
             {
                 autoTrackExposure: n,
@@ -42,8 +42,8 @@ function o(e) {
             }
         );
     return {
-        isEligibleForCustomStatusLabels: o || s,
-        enabledWithActivityStatus: o,
+        isEligibleForCustomStatusLabels: a || s,
+        enabledWithActivityStatus: a,
         enabledWithoutActivityStatus: s
     };
 }

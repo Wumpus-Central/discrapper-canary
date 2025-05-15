@@ -1,6 +1,6 @@
 n.d(t, {
     Xt: () => i,
-    fw: () => a
+    fw: () => o
 });
 var r = n(570140);
 function i(e) {
@@ -9,6 +9,6 @@ function i(e) {
         stripePaymentMethod: e
     });
 }
-function a() {
+function o() {
     r.Z.wait(() => r.Z.dispatch({ type: 'NEW_PAYMENT_SOURCE_CLEAR_ERROR' }));
 }

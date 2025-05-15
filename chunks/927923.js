@@ -3,10 +3,10 @@ n.d(t, {
     Lc: () => c,
     Lw: () => p,
     Ry: () => f,
-    X3: () => o,
+    X3: () => a,
     YE: () => u,
     al: () => d,
-    bJ: () => a,
+    bJ: () => o,
     e8: () => _,
     tA: () => s
 }),
@@ -17,19 +17,19 @@ n.d(t, {
     n(388685);
 var r = n(243814),
     i = n(981631);
-let a = 'xbox://communitylinking/donut/audio',
-    o = 'https://www.xbox.com/en-US/apps/xbox-app-for-mobile',
+let o = 'xbox://communitylinking/donut/audio',
+    a = 'https://www.xbox.com/en-US/apps/xbox-app-for-mobile',
     s = [r.x.VOICE, r.x.DM_CHANNELS_READ, r.x.GUILDS, r.x.GUILDS_MEMBERS_READ, r.x.IDENTIFY, r.x.CONNECTIONS, r.x.ACTIVITIES_READ],
     l = [r.x.VOICE, r.x.DM_CHANNELS_READ, r.x.GUILDS, r.x.GUILDS_MEMBERS_READ, r.x.IDENTIFY, r.x.CONNECTIONS],
     c = (e) => {
-        let { guildId: t, channelName: n, guildName: r, channelId: i, muted: a, deafened: o, nonce: s } = e,
+        let { guildId: t, channelName: n, guildName: r, channelId: i, muted: o, deafened: a, nonce: s } = e,
             l = {
                 channelid: i,
                 guildid: t,
                 channelname: n,
                 guildname: r,
-                muted: String(a),
-                deafened: String(o)
+                muted: String(o),
+                deafened: String(a)
             };
         return null != s && (l.nonce = s), new URLSearchParams(l);
     };

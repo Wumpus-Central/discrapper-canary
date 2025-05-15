@@ -1,10 +1,10 @@
 n.d(t, {
-    A7: () => o,
-    ru: () => a
+    A7: () => a,
+    ru: () => o
 });
 var r = n(818083),
     i = n(987338);
-let a = (0, r.B)({
+let o = (0, r.B)({
     kind: 'user',
     id: '2025-04_dcf3p_integration_experiment',
     label: 'DCF3P Integration Experiment',
@@ -23,7 +23,7 @@ let a = (0, r.B)({
         }
     ]
 });
-function o(e) {
-    let { enabled: t } = a.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
+function a(e) {
+    let { enabled: t } = o.getCurrentConfig({ location: e }, { autoTrackExposure: !1 });
     return t;
 }

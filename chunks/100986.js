@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f });
 var r = n(594190),
     i = n(592125),
-    a = n(19780),
-    o = n(944486),
+    o = n(19780),
+    a = n(944486),
     s = n(626135),
     l = n(710111),
     c = n(981631),
@@ -12,10 +12,10 @@ function d(e, t) {
 }
 function f(e, t, n, f) {
     var _;
-    let p = i.Z.getChannel(o.Z.getVoiceChannelId()),
+    let p = i.Z.getChannel(a.Z.getVoiceChannelId()),
         h = null == p ? void 0 : p.getGuildId(),
-        m = a.Z.getMediaSessionId(),
-        g = a.Z.getRTCConnectionId(),
+        m = o.Z.getMediaSessionId(),
+        g = o.Z.getRTCConnectionId(),
         E = null == (_ = r.ZP.getCurrentGameForAnalytics()) ? void 0 : _.name,
         b = h !== n.guildId && n.guildId !== l.X8,
         y = d(n, b);

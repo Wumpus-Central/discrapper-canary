@@ -1,8 +1,8 @@
 n.d(t, { E: () => u }), n(415506), n(704826), n(35282), n(980754), n(388685);
 var r = n(230367),
     i = n(320215),
-    a = n(240773),
-    o = n(660284),
+    o = n(240773),
+    a = n(660284),
     s = n(69122),
     l = n(495852);
 class c extends l.C {
@@ -31,7 +31,7 @@ class c extends l.C {
         return new Date(n).toISOString().replace('.000Z', r);
     }
     internalJsonRead(e, t, n) {
-        if ('string' != typeof e) throw Error('Unable to parse Timestamp from JSON ' + (0, o.Z)(e) + '.');
+        if ('string' != typeof e) throw Error('Unable to parse Timestamp from JSON ' + (0, a.Z)(e) + '.');
         let r = e.match(/^([0-9]{4})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})(?:Z|\.([0-9]{3,9})Z|([+-][0-9][0-9]:[0-9][0-9]))$/);
         if (!r) throw Error('Unable to parse Timestamp from JSON. Invalid format.');
         let i = Date.parse(r[1] + '-' + r[2] + '-' + r[3] + 'T' + r[4] + ':' + r[5] + ':' + r[6] + (r[8] ? r[8] : 'Z'));
@@ -45,7 +45,7 @@ class c extends l.C {
             nanos: 0
         };
         return (
-            globalThis.Object.defineProperty(t, a.C, {
+            globalThis.Object.defineProperty(t, o.C, {
                 enumerable: !1,
                 value: this
             }),
@@ -54,25 +54,25 @@ class c extends l.C {
         );
     }
     internalBinaryRead(e, t, n, i) {
-        let a = null != i ? i : this.create(),
-            o = e.pos + t;
-        for (; e.pos < o; ) {
+        let o = null != i ? i : this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    a.seconds = e.int64().toString();
+                    o.seconds = e.int64().toString();
                     break;
                 case 2:
-                    a.nanos = e.int32();
+                    o.nanos = e.int32();
                     break;
                 default:
-                    let o = n.readUnknownField;
-                    if ('throw' === o) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
+                    let a = n.readUnknownField;
+                    if ('throw' === a) throw new globalThis.Error('Unknown field '.concat(t, ' (wire type ').concat(i, ') for ').concat(this.typeName));
                     let s = e.skip(i);
-                    !1 !== o && (!0 === o ? r.z.onRead : o)(this.typeName, a, t, i, s);
+                    !1 !== a && (!0 === a ? r.z.onRead : a)(this.typeName, o, t, i, s);
             }
         }
-        return a;
+        return o;
     }
     internalBinaryWrite(e, t, n) {
         '0' !== e.seconds && t.tag(1, r.TD.Varint).int64(e.seconds), 0 !== e.nanos && t.tag(2, r.TD.Varint).int32(e.nanos);

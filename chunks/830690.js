@@ -1,10 +1,10 @@
 var r = n(166691),
     i = r('Object.prototype.toString'),
-    a = n(738146)(),
-    o = n(190337);
-if (a) {
+    o = n(738146)(),
+    a = n(190337);
+if (o) {
     var s = r('Symbol.prototype.toString'),
-        l = o(/^Symbol\(.*\)$/),
+        l = a(/^Symbol\(.*\)$/),
         c = function (e) {
             return 'symbol' == typeof e.valueOf() && l(s(e));
         };

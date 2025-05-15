@@ -1,4 +1,4 @@
-n.d(t, { Z: () => o }), n(388685);
+n.d(t, { Z: () => a }), n(388685);
 var r = n(287328);
 function i(e, t, n) {
     return (
@@ -13,7 +13,7 @@ function i(e, t, n) {
         e
     );
 }
-class a {
+class o {
     async getAll() {
         let e = r.Z.guildsRequiringDeletedIdsSync();
         return null == e ? new Set() : new Set((await e.getMany()).map((e) => e.id));
@@ -45,4 +45,4 @@ class a {
         });
     }
 }
-let o = new a();
+let a = new o();

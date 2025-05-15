@@ -1,4 +1,4 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(740078);
 function i(e) {
     var t = new Map(),
@@ -24,7 +24,7 @@ function i(e) {
         r
     );
 }
-function a(e) {
+function o(e) {
     var t = i(e);
     return r.xs.reduce(function (e, n) {
         return e.concat(

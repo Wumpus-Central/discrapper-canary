@@ -1,8 +1,8 @@
 n.d(t, { Z: () => l }), n(539854), n(388685);
 var r = n(392711),
     i = n.n(r),
-    a = n(846519);
-function o(e, t, n) {
+    o = n(846519);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,7 +42,7 @@ class s {
         this._pendingRequests.add(e);
     }
     constructor(e, t) {
-        o(this, '_guildId', void 0), o(this, '_pendingRequests', new Set()), o(this, '_sentRequests', new Set()), o(this, '_unacknowledgedRequests', new Set()), o(this, '_guildMemberExists', void 0), (this._guildId = e), (this._guildMemberExists = (n) => t(e, n));
+        a(this, '_guildId', void 0), a(this, '_pendingRequests', new Set()), a(this, '_sentRequests', new Set()), a(this, '_unacknowledgedRequests', new Set()), a(this, '_guildMemberExists', void 0), (this._guildId = e), (this._guildMemberExists = (n) => t(e, n));
     }
 }
 class l {
@@ -66,6 +66,6 @@ class l {
         return null == t && (t = this._guildStates[e] = new s(e, this._guildMemberExists)), t;
     }
     constructor(e, t) {
-        o(this, '_onChange', void 0), o(this, '_guildMemberExists', void 0), o(this, '_guildStates', {}), o(this, '_flush', new a.sW(0, () => this.flushRequests())), (this._guildMemberExists = e), (this._onChange = t);
+        a(this, '_onChange', void 0), a(this, '_guildMemberExists', void 0), a(this, '_guildStates', {}), a(this, '_flush', new o.sW(0, () => this.flushRequests())), (this._guildMemberExists = e), (this._onChange = t);
     }
 }

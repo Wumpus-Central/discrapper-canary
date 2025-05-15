@@ -1,19 +1,19 @@
 n.d(t, {
     Dz: () => s,
-    Eb: () => o,
+    Eb: () => a,
     x$: () => l
 });
 var r = n(373793),
     i = n(213459),
-    a = n(689079);
-function o(e) {
+    o = n(689079);
+function a(e) {
     let { customInstallUrl: t, installParams: n, integrationTypesConfig: r } = e;
     return null != t || null != n || (null != r && Object.values(r).some((e) => (null == e ? void 0 : e.oauth2_install_params) != null || (null == e ? void 0 : e.oauth2InstallParams) != null));
 }
 function s(e) {
     let { customInstallUrl: t, installParams: n, integrationTypesConfig: i } = e;
     return (
-        o({
+        a({
             customInstallUrl: t,
             installParams: n,
             integrationTypesConfig: i
@@ -23,10 +23,10 @@ function s(e) {
     );
 }
 function l(e) {
-    let { applicationId: t, channel: n, commandIntegrationTypes: o } = e;
+    let { applicationId: t, channel: n, commandIntegrationTypes: a } = e;
     return !(
-        (null != o && !o.includes(r.Y.USER_INSTALL)) ||
-        t === a.bi.BUILT_IN ||
+        (null != a && !a.includes(r.Y.USER_INSTALL)) ||
+        t === o.bi.BUILT_IN ||
         i.ZP.hasUserStateApplication(t) ||
         (null != n &&
             i.ZP.hasContextStateApplication({

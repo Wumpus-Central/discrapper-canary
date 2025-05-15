@@ -5,26 +5,26 @@ n.d(t, {
     n(415506);
 var r = n(259443),
     i = n(128813);
-let a = null,
-    o = new r.Yd('libdiscore');
+let o = null,
+    a = new r.Yd('libdiscore');
 function s(e) {
-    o.error(e);
+    a.error(e);
 }
 function l(e) {
-    o.warn(e);
+    a.warn(e);
 }
 function c(e) {
-    o.info(e);
+    a.info(e);
 }
 function u(e) {
-    o.verbose(e);
+    a.verbose(e);
 }
 function d(e) {
-    o.trace(e);
+    a.trace(e);
 }
 function f() {
-    if (null == a)
-        return (a = (async () => {
+    if (null == o)
+        return (o = (async () => {
             await i.mX();
             let e = i.Qw();
             e.installLogCallback(s, l, c, u, d), await e.initLibdiscore();

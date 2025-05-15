@@ -25,17 +25,17 @@ var r,
     S = n(168524),
     j = n(565138),
     P = n(707409),
-    E = n(424678),
-    I = n(750154),
+    I = n(424678),
+    E = n(750154),
     Z = n(81063),
     x = n(768581),
     C = n(630388),
     T = n(153066),
-    N = n(740265),
-    A = n(122810),
+    A = n(740265),
+    N = n(122810),
     w = n(833664),
-    D = n(503438),
-    _ = n(802856),
+    _ = n(503438),
+    D = n(802856),
     L = n(420660),
     k = n(39628),
     M = n(701488),
@@ -93,7 +93,7 @@ function W(e) {
         r = (function (e) {
             let { activity: t } = e,
                 n = null;
-            return (0, D.Z)(t) && (n = U.ABu.SPOTIFY), null != t.platform && [U.M7m.PS4, U.M7m.PS5].includes(t.platform) && (n = U.ABu.PLAYSTATION), n;
+            return (0, _.Z)(t) && (n = U.ABu.SPOTIFY), null != t.platform && [U.M7m.PS4, U.M7m.PS5].includes(t.platform) && (n = U.ABu.PLAYSTATION), n;
         })({ activity: t });
     if (null == r) return null;
     let l = g.Z.get(r);
@@ -138,7 +138,7 @@ class H extends (r = o.PureComponent) {
                 t = R.intl.formatToPlainString(R.t.Ge29Z2, { name: c });
                 break;
             case U.IIU.PLAYING:
-                t = (0, N.Z)(a);
+                t = (0, A.Z)(a);
                 break;
             case U.IIU.COMPETING:
                 t = R.intl.formatToPlainString(R.t.SQCo6O, { name: c });
@@ -177,7 +177,7 @@ class H extends (r = o.PureComponent) {
             { assets: u, application_id: d } = e;
         if (null == u || (null == u.large_image && null == u.small_image)) return null;
         (0, L.Z)(e) && (l = G[c]);
-        let f = (0, D.Z)(e),
+        let f = (0, _.Z)(e),
             m =
                 null != u.large_image
                     ? (0, i.jsx)('img', {
@@ -194,8 +194,8 @@ class H extends (r = o.PureComponent) {
                 onClick: this.handleOpenSpotifyAlbum,
                 children: m
             });
-        else if ((0, I.dS)(e)) {
-            let t = (0, I.rq)(e);
+        else if ((0, E.dS)(e)) {
+            let t = (0, E.rq)(e);
             if (null == t) return null;
             m = (0, i.jsx)(O.ZP, {
                 mask: O.ZP.Masks.SQUIRCLE,
@@ -242,7 +242,7 @@ class H extends (r = o.PureComponent) {
                     })
                 ]
             })),
-        (0, I.dS)(e) ||
+        (0, E.dS)(e) ||
             null == u.small_image ||
             (a = (0, i.jsx)(p.ua7, {
                 text: '' !== u.small_text ? u.small_text : null,
@@ -289,7 +289,7 @@ class H extends (r = o.PureComponent) {
     }
     renderGameImage(e) {
         let { user: t, type: n, application: r, activityGuild: l } = this.props;
-        return null != e.assets || (0, A.Z)(e) || e.type !== U.IIU.PLAYING || 'ActivityFeed' === n || t.bot
+        return null != e.assets || (0, N.Z)(e) || e.type !== U.IIU.PLAYING || 'ActivityFeed' === n || t.bot
             ? null
             : null == r && null != l
               ? (0, i.jsx)('div', { className: s()(V.gameIcon, V.screenshareIcon) })
@@ -314,13 +314,13 @@ class H extends (r = o.PureComponent) {
             : !a &&
               ((c = l),
               (u = l),
-              (0, D.Z)(e) && null != e.sync_id && null != l
+              (0, _.Z)(e) && null != e.sync_id && null != l
                   ? (u = (0, i.jsx)(p.eee, {
                         className: V.bodyLink,
                         onClick: this.handleOpenSpotifyTrack,
                         children: l
                     }))
-                  : (0, I.dS)(e) && (u = e.name)),
+                  : (0, E.dS)(e) && (u = e.name)),
         null == u)
             ? null
             : (0, i.jsx)(p.Text, {
@@ -337,12 +337,12 @@ class H extends (r = o.PureComponent) {
             o = n;
         if (e.type === U.IIU.CUSTOM_STATUS) l = r;
         else if (!(0, w.Z)(e)) {
-            if (((l = r), (o = r), (0, D.Z)(e) && null != r))
+            if (((l = r), (o = r), (0, _.Z)(e) && null != r))
                 l = R.intl.format(R.t.uU9le3, {
                     artists: o,
                     artistsHook: (t, n) =>
                         (0, i.jsx)(
-                            E.Z,
+                            I.Z,
                             {
                                 artists: r,
                                 linkClassName: V.bodyLink,
@@ -352,7 +352,7 @@ class H extends (r = o.PureComponent) {
                             n
                         )
                 });
-            else if ((0, I.dS)(e)) {
+            else if ((0, E.dS)(e)) {
                 var a;
                 l = null == (a = e.assets) ? void 0 : a.small_text;
             }
@@ -368,7 +368,7 @@ class H extends (r = o.PureComponent) {
                 })
               : (0, i.jsx)('div', {
                     title: null != o ? o : void 0,
-                    className: (0, L.Z)(e) || (0, D.Z)(e) ? V.detailsWrap : V.details,
+                    className: (0, L.Z)(e) || (0, _.Z)(e) ? V.detailsWrap : V.details,
                     children: l
                 });
     }
@@ -377,11 +377,11 @@ class H extends (r = o.PureComponent) {
         return n && null != t
             ? null == r
                 ? (0, i.jsx)('div', {
-                      className: (0, L.Z)(e) || (0, D.Z)(e) ? V.detailsWrap : V.details,
+                      className: (0, L.Z)(e) || (0, _.Z)(e) ? V.detailsWrap : V.details,
                       children: R.intl.format(R.t['hq/Qzc'], { guildName: t.name })
                   })
                 : (0, i.jsxs)('div', {
-                      className: s()((0, L.Z)(e) || (0, D.Z)(e) ? V.detailsWrap : V.details, V.guildDetails),
+                      className: s()((0, L.Z)(e) || (0, _.Z)(e) ? V.detailsWrap : V.details, V.guildDetails),
                       children: [
                           (0, i.jsx)(j.Z, {
                               guild: t,
@@ -411,11 +411,11 @@ class H extends (r = o.PureComponent) {
     }
     renderTimePlayed(e) {
         let { activityGuild: t } = this.props;
-        if (!(0, w.Z)(e) || (0, D.Z)(e)) return null;
+        if (!(0, w.Z)(e) || (0, _.Z)(e)) return null;
         let { timestamps: n } = e;
         return null == n
             ? null
-            : (0, A.Z)(e)
+            : (0, N.Z)(e)
               ? (0, i.jsx)(z, { timestamps: n })
               : (0, i.jsx)(P.ZP, {
                     start: n.start,
@@ -425,7 +425,7 @@ class H extends (r = o.PureComponent) {
                 });
     }
     renderTimeBar(e) {
-        if (!(0, D.Z)(e)) return null;
+        if (!(0, _.Z)(e)) return null;
         let { timestamps: t } = e;
         if (null == t) return null;
         let { start: n, end: r } = t;
@@ -447,7 +447,7 @@ class H extends (r = o.PureComponent) {
         return (!(0, w.Z)(e) &&
             ((c = null == s ? void 0 : s.large_text),
             (u = null == s ? void 0 : s.large_text),
-            (0, D.Z)(e) &&
+            (0, _.Z)(e) &&
                 null != c &&
                 (c = R.intl.format(R.t.vOLBEx, {
                     album: u,
@@ -464,13 +464,13 @@ class H extends (r = o.PureComponent) {
                               )
                             : u
                 }))),
-        (null != c && '' !== c && e.type !== U.IIU.CUSTOM_STATUS) || (0, I.dS)(e))
+        (null != c && '' !== c && e.type !== U.IIU.CUSTOM_STATUS) || (0, E.dS)(e))
             ? ((null == a ? void 0 : a.size) == null && [M.Zc].includes(null != (n = e.application_id) ? n : '')
                   ? (l = R.intl.formatToPlainString(R.t['u//9Bw'], {
                         count: '0',
                         max: null != (r = null == t ? void 0 : t.getMaxParticipants()) ? r : 0
                     }))
-                  : (0, I.dS)(e) && (null == a ? void 0 : a.size) != null
+                  : (0, E.dS)(e) && (null == a ? void 0 : a.size) != null
                     ? (l = R.intl.formatToPlainString(R.t['JC/3x8'], {
                           numSpeakers: a.size[0],
                           numListeners: a.size[1] - a.size[0]
@@ -508,7 +508,7 @@ class H extends (r = o.PureComponent) {
         let u = 'ActivityFeed' === t,
             d = 'StreamPreview' === t,
             f = !1;
-        (0, _.Z)(c) ? ((e = this.renderXboxImage()), (f = !0)) : null == (e = this.renderImage(c)) && (f = null != (e = this.renderGameImage(c)));
+        (0, D.Z)(c) ? ((e = this.renderXboxImage()), (f = !0)) : null == (e = this.renderImage(c)) && (f = null != (e = this.renderGameImage(c)));
         let m = this.renderName(c),
             g = this.renderDetails(c),
             O = this.renderState(c, l),

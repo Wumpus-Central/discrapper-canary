@@ -104,11 +104,11 @@ let S = a.Z.Types,
                 return p.Z.getChannel(null == (e = m.Z.getVoiceStateForUser(n.id)) ? void 0 : e.channelId);
             }),
             P = (0, l.e7)([d.Z], () => (i ? d.Z.getAnyStreamForUser(n.id) : null)),
-            E = (0, l.e7)([f.Z, m.Z, p.Z], () => {
+            I = (0, l.e7)([f.Z, m.Z, p.Z], () => {
                 var e, r;
                 return (0, o.Z)(t, b.xjy.EMBEDDED) ? f.Z.getGuild(null == (e = p.Z.getChannel(null == (r = m.Z.getVoiceStateForSession(n.id, null == t ? void 0 : t.session_id)) ? void 0 : r.channelId)) ? void 0 : e.getGuildId()) : null;
             }),
-            I = (0, l.e7)([f.Z], () => (null != P ? f.Z.getGuild(P.guildId) : null)),
+            E = (0, l.e7)([f.Z], () => (null != P ? f.Z.getGuild(P.guildId) : null)),
             Z = (0, l.e7)([c.Z], () => {
                 if (null != t)
                     if (null != t.application_id) return c.Z.getApplication(t.application_id);
@@ -124,7 +124,7 @@ let S = a.Z.Types,
                       user: n,
                       application: Z,
                       hideHeader: g,
-                      activityGuild: null != E ? E : I,
+                      activityGuild: null != I ? I : E,
                       showChannelDetails: O,
                       channel: O ? j : void 0,
                       renderActions: s

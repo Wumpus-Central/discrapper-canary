@@ -1,4 +1,4 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(81825);
 function i(e, t, n) {
     return (
@@ -13,9 +13,9 @@ function i(e, t, n) {
         e
     );
 }
-class a extends r.Z {
+class o extends r.Z {
     static createFromServer(e, t) {
-        return new a({
+        return new o({
             id: e.id,
             subscriptionId: e.subscription_id,
             premiumGuildSubscription:
@@ -40,4 +40,4 @@ class a extends r.Z {
         super(), i(this, 'id', void 0), i(this, 'subscriptionId', void 0), i(this, 'premiumGuildSubscription', void 0), i(this, 'canceled', void 0), i(this, 'cooldownEndsAt', void 0), i(this, 'subscription', void 0), (this.id = e.id), (this.subscriptionId = e.subscriptionId), (this.premiumGuildSubscription = e.premiumGuildSubscription), (this.canceled = e.canceled), (this.cooldownEndsAt = e.cooldownEndsAt), (this.subscription = e.subscription);
     }
 }
-let o = a;
+let a = o;

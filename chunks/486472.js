@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b }), n(388685);
 var r,
     i = n(392711),
-    a = n.n(i),
-    o = n(442837),
+    o = n.n(i),
+    a = n(442837),
     s = n(570140),
     l = n(710845),
     c = n(430824);
@@ -41,7 +41,7 @@ function m(e) {
 function g(e) {
     !0 !== e.guild.unavailable && f.delete(e.guild.id);
 }
-class E extends (r = o.ZP.Store) {
+class E extends (r = a.ZP.Store) {
     initialize() {
         this.waitFor(c.Z);
     }
@@ -49,7 +49,7 @@ class E extends (r = o.ZP.Store) {
         return null != e && f.has(e);
     }
     get totalGuilds() {
-        return a().size(c.Z.getGuilds()) + f.size;
+        return o().size(c.Z.getGuilds()) + f.size;
     }
     get totalUnavailableGuilds() {
         return f.size;

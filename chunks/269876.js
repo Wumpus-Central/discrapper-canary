@@ -21,7 +21,10 @@ let C = (0, g.hQ)();
 function j() {
     let [e, t] = r.useState(-100),
         [n, s] = r.useState(!1),
-        { threshold: j, autoThreshold: O } = (0, a.cj)([p.Z], () => p.Z.getModeOptions()),
+        { threshold: j, autoThreshold: O } = (0, a.cj)([p.Z], () => ({
+            threshold: p.Z.getModeOptions().threshold,
+            autoThreshold: p.Z.getModeOptions().autoThreshold
+        })),
         {
             inputMode: S,
             automaticVADSupported: v,

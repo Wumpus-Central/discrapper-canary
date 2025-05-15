@@ -1,4 +1,4 @@
-n.d(t, { U: () => a });
+n.d(t, { U: () => o });
 var r = n(81825);
 function i(e, t, n) {
     return (
@@ -13,10 +13,10 @@ function i(e, t, n) {
         e
     );
 }
-class a extends r.Z {
+class o extends r.Z {
     static createFromServer(e) {
         var t, n;
-        return new a({
+        return new o({
             planId: e.plan_id,
             countryCode: e.country_code,
             amount: null == (t = e.price) ? void 0 : t.amount,

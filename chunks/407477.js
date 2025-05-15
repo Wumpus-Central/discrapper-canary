@@ -1,7 +1,7 @@
 n.d(t, {
     E2: () => l,
-    Xb: () => o,
-    ZP: () => a,
+    Xb: () => a,
+    ZP: () => o,
     p3: () => s
 });
 var r = n(818083);
@@ -48,8 +48,8 @@ let i = (0, r.B)({
             }
         ]
     }),
-    a = i,
-    o = (0, r.B)({
+    o = i,
+    a = (0, r.B)({
         kind: 'user',
         id: '2024-10_retrigger_reaction_frecency_algorithms',
         label: '(Retrigger) Reaction Frecency Algorithms',

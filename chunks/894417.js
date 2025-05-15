@@ -1,8 +1,8 @@
 n.d(t, {
     Fp: () => r,
-    NM: () => a,
+    NM: () => o,
     VV: () => i
 });
 var r = Math.max,
     i = Math.min,
-    a = Math.round;
+    o = Math.round;

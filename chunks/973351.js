@@ -1,8 +1,8 @@
 var r;
 if (!Object.keys) {
     var i = Object.prototype.hasOwnProperty,
-        a = Object.prototype.toString,
-        o = n(560640),
+        o = Object.prototype.toString,
+        a = n(560640),
         s = Object.prototype.propertyIsEnumerable,
         l = !s.call({ toString: null }, 'toString'),
         c = s.call(function () {}, 'prototype'),
@@ -61,9 +61,9 @@ if (!Object.keys) {
         };
     r = function (e) {
         var t = null !== e && 'object' == typeof e,
-            n = '[object Function]' === a.call(e),
-            r = o(e),
-            s = t && '[object String]' === a.call(e),
+            n = '[object Function]' === o.call(e),
+            r = a(e),
+            s = t && '[object String]' === o.call(e),
             d = [];
         if (!t && !n && !r) throw TypeError('Object.keys called on a non-object');
         var f = c && n;

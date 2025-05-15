@@ -1,6 +1,6 @@
 n.d(t, {
     G: () => s,
-    N: () => a
+    N: () => o
 }),
     n(410992),
     n(227481),
@@ -16,10 +16,10 @@ n.d(t, {
     n(146733);
 var r = n(998502);
 let i = null;
-function a() {
-    return null == i && (i = o()), i;
-}
 function o() {
+    return null == i && (i = a()), i;
+}
+function a() {
     if (null == window.DiscordNative || void 0 === window.Uint8Array || void 0 === window.TextDecoder) return !1;
     try {
         let e = r.ZP.requireModule('discord_zstd');
@@ -31,7 +31,7 @@ function o() {
     }
 }
 function s() {
-    if (!a()) return;
+    if (!o()) return;
     let { createContext: e } = r.ZP.requireModule('discord_zstd');
     return e();
 }

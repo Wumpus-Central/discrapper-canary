@@ -1206,6 +1206,7 @@ var N =
     (r.CLIENT_HEARTBEAT = 'client_heartbeat'),
     (r.CLIENT_AD_HEARTBEAT = 'client_ad_heartbeat'),
     (r.CLIENT_AD_HEARTBEAT_TERMINATION = 'client_ad_heartbeat_termination'),
+    (r.ATT_ELIGIBILITY_CHECKED = 'att_eligibility_checked'),
     (r.HEADLESS_TASK_INVOKED = 'headless_task_invoked'),
     (r.HEADLESS_TASK_COMPLETED = 'headless_task_completed'),
     (r.VERIFY_ACCOUNT_APP_OPENED = 'verify_account_app_opened'),

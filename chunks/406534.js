@@ -205,18 +205,19 @@ function ei(e) {
             if ((0, D.Z)(e.content, l)) return;
             e.type === J.ys_.MESSAGE && null == eZ && (eZ = e);
             let o = e.groupId === (null == eZ ? void 0 : eZ.groupId) ? eZ.content.id : e.groupId,
-                a = e.type === J.ys_.THREAD_STARTER_MESSAGE ? H.Ru : H.ZP;
+                a = eP && e.content.isFirstMessageInForumPost(f),
+                s = e.type === J.ys_.THREAD_STARTER_MESSAGE ? H.Ru : H.ZP;
             return (0, r.jsx)(
-                a,
+                s,
                 {
-                    compact: eo,
+                    compact: eo && !a,
                     channel: f,
                     message: e.content,
                     groupId: o,
                     flashKey: e.flashKey,
                     id: (0, L.p)(f.id, e.content.id),
                     isLastItem: t >= ea.length - 1,
-                    renderContentOnly: eS || (eP && e.content.isFirstMessageInForumPost(f))
+                    renderContentOnly: eS || a
                 },
                 e.content.id
             );

@@ -1,16 +1,16 @@
 n.d(t, { Z: () => _ });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
-    s = n(683305),
+    o = n(120356),
+    a = n.n(o),
+    s = n(950035),
     l = n(481060),
     c = n(596687);
 let u = 25,
     d = 2,
     f = 150;
 function _(e) {
-    let { children: t, shouldAnimate: n, className: a, pauseDuration: _ = d, scrollSpeed: p = u } = e,
+    let { children: t, shouldAnimate: n, className: o, pauseDuration: _ = d, scrollSpeed: p = u } = e,
         h = i.useRef(null),
         m = i.useRef(null),
         g = () => {
@@ -65,7 +65,7 @@ function _(e) {
         );
     return (0, r.jsx)('div', {
         ref: h,
-        className: o()(c.container, a),
+        className: a()(c.container, o),
         children: (0, r.jsx)(s.animated.div, {
             ref: m,
             className: c.marquee,

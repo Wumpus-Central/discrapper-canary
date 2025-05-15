@@ -1,7 +1,7 @@
 let r = n(52878),
     i = n(172959),
-    a = n(393808),
-    o = n(725616),
+    o = n(393808),
+    a = n(725616),
     s = n(690217),
     l = n(689478);
 e.exports = (e, t, n, c) => {
@@ -17,9 +17,9 @@ e.exports = (e, t, n, c) => {
         case '!=':
             return i(e, n, c);
         case '>':
-            return a(e, n, c);
-        case '>=':
             return o(e, n, c);
+        case '>=':
+            return a(e, n, c);
         case '<':
             return s(e, n, c);
         case '<=':

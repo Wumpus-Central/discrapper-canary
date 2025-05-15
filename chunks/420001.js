@@ -1,8 +1,8 @@
 n.d(t, { Z: () => v }), n(35282), n(781311), n(704826);
 var r = n(911969),
     i = n(10718),
-    a = n(367790),
-    o = n(895924),
+    o = n(367790),
+    a = n(895924),
     s = n(826298),
     l = n(588468),
     c = n(695346),
@@ -85,10 +85,10 @@ let v = y(E({}, h.Z), {
     focusMode: p.QZ.MANUAL,
     matches(e, t, n, r, i) {
         if (i.commands === p.L8.DISABLED || i.commands === p.L8.OLD_BUILT_INS || n.length < 2 || !c.Xk.getSetting()) return !1;
-        let a = O(n);
-        return null != a && a.cleanedQuery.length > 0;
+        let o = O(n);
+        return null != o && o.cleanedQuery.length > 0;
     },
-    queryResults(e, t, n, o, l) {
+    queryResults(e, t, n, a, l) {
         if (!c.Xk.getSetting()) return h.K;
         let u = O(n);
         if (null == u) return h.K;
@@ -105,7 +105,7 @@ let v = y(E({}, h.Z), {
                 {
                     limit: p.AQ,
                     placeholderCount: p.YP,
-                    scoreMethod: a.p.COMMAND_OR_APPLICATION,
+                    scoreMethod: o.p.COMMAND_OR_APPLICATION,
                     allowFetch: l
                 }
             );
@@ -133,20 +133,20 @@ let v = y(E({}, h.Z), {
             selectedIndex: n,
             guild: r,
             channel: i,
-            query: a,
-            options: o,
+            query: o,
+            options: a,
             onHover: s,
             onClick: c
         } = e;
         return (0, _.HI)({
-            query: a,
+            query: o,
             selectedIndex: n,
             autocompletes: t,
             onHover: s,
             onClick: c,
             titleWithQuery: m.t.HFRoZW,
             titleWithoutQuery: m.intl.string(m.t['0hKkS0']),
-            Component: o.commands === p.L8.OLD_BUILT_INS ? l.ZP.Command : l.ZP.NewCommand,
+            Component: a.commands === p.L8.OLD_BUILT_INS ? l.ZP.Command : l.ZP.NewCommand,
             getProps: (e) => {
                 let { command: t, section: n } = e;
                 return {
@@ -168,15 +168,15 @@ let v = y(E({}, h.Z), {
         });
     },
     onSelect(e) {
-        let { results: t, index: n, type: r, options: i, channel: a, guild: s } = e,
+        let { results: t, index: n, type: r, options: i, channel: o, guild: s } = e,
             l = h.Z.onSelect({
                 results: t,
                 index: n,
                 type: r,
                 options: i,
-                channel: a,
+                channel: o,
                 guild: s,
-                location: o.Vh.SUGGESTION
+                location: a.Vh.SUGGESTION
             });
         return null == l ? null : y(E({}, l), { type: p.z2.COMMAND_SUGGESTION });
     }

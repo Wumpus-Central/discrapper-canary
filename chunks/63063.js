@@ -4,10 +4,10 @@ n.d(t, {
 });
 var r = n(299379),
     i = n(706454),
-    a = n(358085),
-    o = n(981631);
-let s = 'https://'.concat(o.xr4),
-    l = 'https://'.concat(o.rxP),
+    o = n(358085),
+    a = n(981631);
+let s = 'https://'.concat(a.xr4),
+    l = 'https://'.concat(a.rxP),
     c = 'https://creator-support.discord.com',
     u = 'https://support-apps.discord.com';
 function d(e) {
@@ -21,10 +21,10 @@ let _ = {
     getArticleURL: (e) => d('/hc/'.concat(f(), '/articles/').concat(e)),
     getDevArticleURL: (e) => d('/hc/'.concat(f(), '/articles/').concat(e), l),
     getCreatorSupportArticleURL: (e) => d('/hc/'.concat(f(), '/articles/').concat(e), c),
-    getTwitterURL: () => (0, r.Z)(o.RK.TWITTER),
+    getTwitterURL: () => (0, r.Z)(a.RK.TWITTER),
     getCommunityURL: () => d('/hc/'.concat(f())),
     getSubmitRequestURL(e) {
-        let t = d('/hc/'.concat(f(), '/requests/new?platform=').concat(encodeURIComponent((0, a.getPlatformName)())));
+        let t = d('/hc/'.concat(f(), '/requests/new?platform=').concat(encodeURIComponent((0, o.getPlatformName)())));
         return null != e && (t += '&device_info='.concat(encodeURIComponent(e))), t;
     },
     getSearchURL(e) {
