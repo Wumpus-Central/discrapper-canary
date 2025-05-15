@@ -41367,23 +41367,26 @@ img.thumbnail__0f2e8 {
 }
 
 .avatar_e928f4 {
-    outline: 2px solid var(--bg-surface-overlay)
-}
-
-.avatar_e928f4,
-.overflowCount_e928f4 {
     border-radius: inherit;
     height: 100%;
+    outline: 2px solid var(--bg-surface-overlay);
     width: 100%
+}
+
+.user-profile-modal-v2 .avatar_e928f4 {
+    outline-width: 3px
 }
 
 .overflowCount_e928f4 {
     align-items: center;
     background: var(--bg-surface-overlay);
+    border-radius: inherit;
     display: flex;
+    height: 100%;
     justify-content: center;
     padding: 1px;
-    position: relative
+    position: relative;
+    width: 100%
 }
 
 .form__08bd2 {
