@@ -1,8 +1,8 @@
 n.d(t, { Z: () => O });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(785717),
     l = n(510659),
     c = n(899007),
@@ -69,8 +69,8 @@ function b(e, t) {
         r,
         i = y(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -79,18 +79,18 @@ function y(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function O(e) {
-    var { user: t, themeType: n, animateOnHover: o, onOpenProfile: h } = e,
+    var { user: t, themeType: n, animateOnHover: a, onOpenProfile: h } = e,
         g = b(e, ['user', 'themeType', 'animateOnHover', 'onOpenProfile']);
     let y = i.useRef(null),
         O = _.n_.AVATAR,
         { trackUserProfileAction: v } = (0, s.KZ)(),
         { interactionSource: I } = (0, l.Xo)(),
-        S = a()(p.avatar, { [p.hoisted]: I === _.n_.AVATAR || I === _.n_.STATUS });
+        S = o()(p.avatar, { [p.hoisted]: I === _.n_.AVATAR || I === _.n_.STATUS });
     return (0, r.jsx)(f.Z, {
         targetElementRef: y,
         sourceType: _.n_.AVATAR,
@@ -121,7 +121,7 @@ function O(e) {
                                 m(
                                     {
                                         user: t,
-                                        animateOnHover: o,
+                                        animateOnHover: a,
                                         onOpenProfile: h,
                                         themeType: n,
                                         className: p.withReactReply

@@ -347,7 +347,7 @@ let i = {
         neverLoadBeforeConnectionOpen: !0
     },
     QuestFetchManager: {
-        actions: ['QUESTS_FETCH_CURRENT_QUESTS_BEGIN', 'POST_CONNECTION_OPEN', 'RUNNING_GAMES_CHANGE', 'USER_SETTINGS_PROTO_UPDATE', 'LOGOUT'],
+        actions: ['QUESTS_FETCH_CURRENT_QUESTS_BEGIN', 'POST_CONNECTION_OPEN', 'RUNNING_GAMES_CHANGE', 'USER_SETTINGS_PROTO_UPDATE', 'FETCH_MOBILE_AD_DATA_BEGIN', 'LOGOUT'],
         inlineRequire: () => n(877519).Z
     },
     VoiceChannelGameActivityManager: {

@@ -9,31 +9,31 @@ n.d(t, {
     n(388685);
 var r = n(427786),
     i = n.n(r);
-let o = 5000,
-    a = new (i())(o);
+let a = 5000,
+    o = new (i())(a);
 function s(e) {
     for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), r = 1; r < t; r++) n[r - 1] = arguments[r];
     let i = c(n);
     for (
         'string' == typeof e
-            ? a.push({
+            ? o.push({
                   time: Date.now(),
                   category: e,
                   message: i
               })
-            : a.push({
+            : o.push({
                   time: Date.now(),
                   category: e.name,
                   timing: e.timing,
                   message: i
               });
-        a.length > o;
+        o.length > a;
 
     )
-        a.shift();
+        o.shift();
 }
 function l() {
-    a.clear();
+    o.clear();
 }
 function c(e) {
     let t = '';
@@ -44,7 +44,7 @@ function c(e) {
     return t;
 }
 function u(e) {
-    return a
+    return o
         .toArray()
         .filter((t) => null == e || e.includes(t.category))
         .map((e) => {

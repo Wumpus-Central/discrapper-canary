@@ -1,8 +1,8 @@
 n.d(t, { s: () => y });
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(1561),
     l = n(993365),
     c = n(481060),
@@ -90,15 +90,15 @@ function E(e) {
     return 'pill' === e ? u.pillItemText : void 0;
 }
 function b(e) {
-    let { option: t, selected: n, onClick: o, look: d, className: _, disabled: h = !1, tooltip: b, tooltipAriaLabel: y } = e,
-        O = i.useCallback((e) => o(t, e), [o, t]),
+    let { option: t, selected: n, onClick: a, look: d, className: _, disabled: h = !1, tooltip: b, tooltipAriaLabel: y } = e,
+        O = i.useCallback((e) => a(t, e), [a, t]),
         v = (e) =>
             (0, r.jsx)(
                 s.P,
                 p(
                     f(
                         {
-                            className: a()(m(d), _, {
+                            className: o()(m(d), _, {
                                 [g(d)]: n,
                                 [u.disabled]: h
                             }),
@@ -109,7 +109,7 @@ function b(e) {
                     {
                         onClick: h ? void 0 : O,
                         children: (0, r.jsxs)(l.x, {
-                            className: a()(u.controlText, E(d)),
+                            className: o()(u.controlText, E(d)),
                             variant: 'text-sm/medium',
                             color: 'none',
                             children: [null != t.icon ? (0, r.jsx)(t.icon, { className: u.icon }) : null, t.name]
@@ -127,7 +127,7 @@ function b(e) {
           });
 }
 function y(e) {
-    let { options: t, value: n, onChange: o, look: s = 'tab', className: l, optionClassName: c, disabled: d = !1 } = e,
+    let { options: t, value: n, onChange: a, look: s = 'tab', className: l, optionClassName: c, disabled: d = !1 } = e,
         f = i.useCallback(
             (e) => {
                 var t;
@@ -138,19 +138,19 @@ function y(e) {
                         selected: i,
                         option: e,
                         look: s,
-                        onClick: o,
+                        onClick: a,
                         disabled: d,
-                        className: a()(c, e.className),
+                        className: o()(c, e.className),
                         tooltip: e.tooltip,
                         tooltipAriaLabel: e.tooltipAriaLabel
                     },
                     null != (t = e.key) ? t : String(e.value)
                 );
             },
-            [n, s, o, c, d]
+            [n, s, a, c, d]
         );
     return (0, r.jsx)('div', {
-        className: a()(h(s), l, { [u.disabledContainer]: d }),
+        className: o()(h(s), l, { [u.disabledContainer]: d }),
         children: t.map(f)
     });
 }

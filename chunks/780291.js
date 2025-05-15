@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
 var r = n(255367),
     i = n(73800),
-    o = n(442837),
-    a = n(606992),
+    a = n(442837),
+    o = n(606992),
     s = n(314897),
     l = n(843693),
     c = n(576125),
@@ -44,9 +44,9 @@ function g(e) {
     var t, n;
     let { editorHeight: r, textValue: c, channelId: d } = e,
         _ = i.useRef(c),
-        p = (0, a.Z)({ editorHeight: r }),
+        p = (0, o.Z)({ editorHeight: r }),
         g = (0, u.Z)(),
-        E = (0, o.e7)([l.ZP, s.default], () => l.ZP.isComboing(s.default.getId(), d)),
+        E = (0, a.e7)([l.ZP, s.default], () => l.ZP.isComboing(s.default.getId(), d)),
         b = null != (t = null == p ? void 0 : p.left) ? t : 0,
         y = (null != (n = null == p ? void 0 : p.top) ? n : 0) - h,
         O = 0 === c.length,

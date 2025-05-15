@@ -10,6 +10,7 @@ e.exports = {
     description: 'description__98cbd',
     image: 'image__98cbd',
     inline: 'inline__98cbd',
+    price: 'price__98cbd',
     inlineBoost: 'inlineBoost__98cbd',
     new: 'new__98cbd'
 };

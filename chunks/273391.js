@@ -41,7 +41,7 @@ let m = new o.Z('ImageEditor'),
                 x: 0,
                 y: 0
             }),
-            p = l.useRef(null),
+            b = l.useRef(null),
             [O, y] = l.useState(1),
             [j, x] = l.useState(null),
             [w, _] = l.useState({
@@ -66,8 +66,8 @@ let m = new o.Z('ImageEditor'),
             (0, c.Z)();
         }, []);
         let T = l.useCallback(() => {
-                if (null == p.current || O > 1) return;
-                let { width: e, height: t } = p.current.getBoundingClientRect(),
+                if (null == b.current || O > 1) return;
+                let { width: e, height: t } = b.current.getBoundingClientRect(),
                     r = Math.min(e, t),
                     n = {
                         width: r,
@@ -82,16 +82,16 @@ let m = new o.Z('ImageEditor'),
             }, [O]),
             D = l.useCallback(
                 (e) => {
-                    if (null == p.current) return;
+                    if (null == b.current) return;
                     let { x: t, y: r } = (0, s.U$)(e.x, e.y, E);
                     (f.current = {
                         x: t,
                         y: r
                     }),
-                        (p.current.style.transform = 'translate3d('.concat(t, 'px, ').concat(r, 'px, 0) rotate(').concat(I, 'deg)')),
+                        (b.current.style.transform = 'translate3d('.concat(t, 'px, ').concat(r, 'px, 0) rotate(').concat(I, 'deg)')),
                         M(new Date().getTime());
                 },
-                [p, I, E]
+                [b, I, E]
             ),
             L = l.useCallback(
                 (e) => {
@@ -109,7 +109,7 @@ let m = new o.Z('ImageEditor'),
                 [w, j, D]
             ),
             Z = l.useCallback(() => {
-                if (null == p.current || null == j) return;
+                if (null == b.current || null == j) return;
                 let e = (I + 90) % 360,
                     t = -f.current.x,
                     r = f.current.y,
@@ -129,7 +129,7 @@ let m = new o.Z('ImageEditor'),
             }, [j, I, D, O, w]),
             G = l.useCallback(() => {
                 if (null == j) return {};
-                let { width: e, height: t } = b(j, I);
+                let { width: e, height: t } = p(j, I);
                 return {
                     width: e * O,
                     minWidth: e * O,
@@ -166,9 +166,9 @@ let m = new o.Z('ImageEditor'),
         let U = l.useRef(null),
             H = l.useCallback(async () => {
                 let e;
-                if (null == p.current) return;
+                if (null == b.current) return;
                 let r = Date.now(),
-                    n = p.current,
+                    n = b.current,
                     l = {
                         height: u.eT,
                         width: u.eT
@@ -246,7 +246,7 @@ let m = new o.Z('ImageEditor'),
                                 src: r,
                                 crossOrigin: 'anonymous',
                                 alt: 'avatar',
-                                ref: p,
+                                ref: b,
                                 onMouseDown: z,
                                 draggable: !1
                             }),
@@ -357,7 +357,7 @@ let m = new o.Z('ImageEditor'),
             })
         );
     },
-    b = (e, t) => {
+    p = (e, t) => {
         let { width: r, height: n } = e;
         return t % 180 != 0
             ? {

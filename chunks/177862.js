@@ -1,7 +1,7 @@
 n.d(t, {
-    $l: () => o,
+    $l: () => a,
     C2: () => s,
-    J$: () => a,
+    J$: () => o,
     wR: () => i,
     x2: () => r
 }),
@@ -12,10 +12,10 @@ var r = (function (e) {
     i = (function (e) {
         return (e.JOIN_RAID = 'JOIN_RAID'), (e.MENTION_RAID = 'MENTION_RAID'), e;
     })({}),
-    o = (function (e) {
+    a = (function (e) {
         return (e.LEGITIMATE_ACTIVITY = 'LEGITIMATE_ACTIVITY'), (e.LEGITIMATE_ACCOUNTS = 'LEGITIMATE_ACCOUNTS'), (e.LEGITIMATE_DMS = 'LEGITIMATE_DMS'), (e.DM_SPAM = 'DM_SPAM'), (e.JOIN_RAID = 'JOIN_RAID'), (e.OTHER = 'OTHER'), e;
     })({});
-function a(e) {
+function o(e) {
     return e.includes('LEGITIMATE_ACTIVITY') ? 'LEGITIMATE_ACTIVITY' : e.includes('DM_SPAM') ? 'DM_SPAM' : e.includes('JOIN_RAID') ? 'JOIN_RAID' : 'OTHER';
 }
 var s = (function (e) {

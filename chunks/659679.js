@@ -1,4 +1,4 @@
-t.d(n, { Z: () => x });
+t.d(n, { Z: () => _ });
 var r = t(255367);
 t(73800);
 var i = t(793030),
@@ -7,16 +7,16 @@ var i = t(793030),
     a = t(834129),
     l = t(271383),
     c = t(709054),
-    u = t(884902),
-    d = t(680278),
+    d = t(884902),
+    u = t(680278),
     p = t(388032),
     m = t(326319);
-function x(e) {
+function _(e) {
     let { boost: n } = e,
         t = new Date(c.default.extractTimestamp(n.id)),
         {
-            username: x,
-            roleColor: _,
+            username: _,
+            roleColor: x,
             roleColorStrings: f
         } = (0, o.cj)(
             [l.ZP],
@@ -31,7 +31,7 @@ function x(e) {
             },
             [n]
         ),
-        v = (0, u.X)(n.guildId, f);
+        v = (0, d.X)(n.guildId, f);
     return (0, r.jsx)(a.Z, {
         className: m.systemMessageContainer,
         contentClassName: m.systemMessageContent,
@@ -51,14 +51,14 @@ function x(e) {
                 (0, r.jsx)(s.PUh, {
                     className: m.boostMessageUser,
                     variant: 'text-md/semibold',
-                    name: x,
-                    color: null != _ ? _ : void 0,
+                    name: _,
+                    color: null != x ? x : void 0,
                     roleColors: v
                 }),
                 (0, r.jsx)(i.xv, {
                     variant: 'text-md/medium',
                     lineClamp: 1,
-                    children: p.intl.string(d.default.plwH8f)
+                    children: p.intl.string(u.default.plwH8f)
                 })
             ]
         })

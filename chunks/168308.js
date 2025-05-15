@@ -1,12 +1,12 @@
 n.d(t, {
-    Jw: () => a,
+    Jw: () => o,
     bC: () => l
 });
 var r = n(442837),
     i = n(808506),
-    o = n(358085);
-function a() {
-    return o.isPlatformEmbedded;
+    a = n(358085);
+function o() {
+    return a.isPlatformEmbedded;
 }
 function s(e) {
     return e || !1;

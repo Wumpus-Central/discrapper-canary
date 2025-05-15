@@ -1,10 +1,8 @@
-n.d(t, { Z: () => d }), n(35282);
+n.d(t, { Z: () => c });
 var r = n(255367);
 n(73800);
-var i = n(433517),
-    o = n(481060),
-    a = n(358085);
-function s(e, t, n) {
+var i = n(481060);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -17,7 +15,7 @@ function s(e, t, n) {
         e
     );
 }
-function l(e) {
+function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -28,12 +26,12 @@ function l(e) {
                 })
             )),
             r.forEach(function (t) {
-                s(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
 }
-function c(e, t) {
+function s(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -45,32 +43,22 @@ function c(e, t) {
     }
     return n;
 }
-function u(e, t) {
+function l(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
+            : s(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let d = {
+let c = {
     show(e) {
-        (0, o.ZDy)(async () => {
+        (0, i.ZDy)(async () => {
             let { default: t } = await n.e('2435').then(n.bind(n, 821606));
-            return (n) => (0, r.jsx)(t, u(l({}, n), { url: e }));
+            return (n) => (0, r.jsx)(t, l(o({}, n), { url: e }));
         });
-    },
-    getBlockedDomains() {
-        if ((0, a.isDesktop)()) {
-            let e = i.K.get('BlockedDomainsV2');
-            return Promise.resolve(null == e ? [] : e.split('\n'));
-        }
-        return Promise.resolve([]);
-    },
-    saveBlockedDomains(e) {
-        (0, a.isDesktop)() && i.K.set('BlockedDomainsV2', e.join('\n'));
     }
 };

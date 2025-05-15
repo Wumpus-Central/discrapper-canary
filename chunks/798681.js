@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(47770),
     i = n(846519),
-    o = n(570140),
-    a = n(710845),
+    a = n(570140),
+    o = n(710845),
     s = n(646047),
     l = n(70956),
     c = n(27414);
@@ -42,7 +42,7 @@ class f extends r.Z {
             u(this, 'discordVisible', !0),
             u(this, 'incomingVideoEnabled', !0),
             u(this, 'lastEnabledChange', Date.now()),
-            u(this, 'logger', new a.Z('WindowVisibilityVideoManager')),
+            u(this, 'logger', new o.Z('WindowVisibilityVideoManager')),
             u(this, 'HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS', 30 * l.Z.Millis.SECOND),
             u(this, 'update', () => {
                 this.discordVisible !== (0, c.Z)() &&
@@ -54,8 +54,8 @@ class f extends r.Z {
                               this.setIncomingVideoEnabled(!1);
                           }));
             }),
-            o.Z.subscribe('WINDOW_VISIBILITY_CHANGE', this.update),
-            o.Z.subscribe('APP_STATE_UPDATE', this.update),
+            a.Z.subscribe('WINDOW_VISIBILITY_CHANGE', this.update),
+            a.Z.subscribe('APP_STATE_UPDATE', this.update),
             s.Z.addOnPipModeChangedListener(this.update);
     }
 }

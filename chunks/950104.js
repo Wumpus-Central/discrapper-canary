@@ -8,8 +8,8 @@ n.d(t, {
     n(415506);
 var r = n(688619),
     i = n.n(r);
-let o = 3,
-    a = 100,
+let a = 3,
+    o = 100,
     s = {
         NonText: 3,
         Text: 4.5,
@@ -23,7 +23,7 @@ function c(e) {
     var t, n, r;
     let c = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         u = null != (t = c.contrastRatio) ? t : s.NonText,
-        d = null != (n = c.tolerance) ? n : o,
+        d = null != (n = c.tolerance) ? n : a,
         f = i()(null != (r = c.base) ? r : e),
         _ = i()(e),
         p = f.luminance(),
@@ -31,7 +31,7 @@ function c(e) {
         m = u,
         g = u + d,
         E = i().contrast(f, _),
-        b = a;
+        b = o;
     for (; b-- > 0; ) {
         let e = E < m,
             t = E > g;

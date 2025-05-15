@@ -1,8 +1,8 @@
 n.d(t, { o: () => h });
 var r = n(255367),
     i = n(73800),
-    o = n(493773),
-    a = n(790542),
+    a = n(493773),
+    o = n(790542),
     s = n(970815),
     l = n(622562),
     c = n(981631);
@@ -71,7 +71,7 @@ let p = {
 };
 function h(e) {
     let { onClick: t, onClose: n } = e,
-        { balance: u } = (0, a.A)(),
+        { balance: u } = (0, o.A)(),
         f = async () => {
             await n();
         },
@@ -79,7 +79,7 @@ function h(e) {
             var e;
             return null != (e = document.getElementById(s.th.SHOP_FULLSCREEN)) ? e : document.getElementById(s.th.SHOP);
         }, []);
-    (0, o.ZP)(() => {
+    (0, a.ZP)(() => {
         setTimeout(() => {
             null != h && h.style.setProperty('visibility', 'hidden');
         }, 500);

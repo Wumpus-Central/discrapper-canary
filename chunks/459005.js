@@ -2,7 +2,7 @@ n.d(t, {
     JV: () => s,
     aA: () => l,
     mA: () => _,
-    ug: () => a
+    ug: () => o
 }),
     n(388685);
 var r = n(392711);
@@ -19,7 +19,7 @@ function i(e, t, n) {
         e
     );
 }
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -35,7 +35,7 @@ function o(e) {
     }
     return e;
 }
-var a = (function (e) {
+var o = (function (e) {
         return (e.LONGER_DISPATCH = 'longer_dispatch'), (e.EXCEEDED_MAX_CONSECUTIVE_FLUSHES = 'exceeded_max_consecutive_flushes'), (e.FIRED_DUE_TO_MAX_TIMEOUT = 'fired_due_to_max_timeout'), (e.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED = 'skip_idle_callback_due_to_backgrounded'), e;
     })({}),
     s = (function (e) {
@@ -114,7 +114,7 @@ class _ {
                 let [n, [r]] = t;
                 return (e['avg_'.concat(n)] = ''.concat(r.toFixed(2))), e;
             }, {});
-        return o(
+        return a(
             {},
             Object.entries(this._eventCounts).reduce((e, t) => {
                 let [n, r] = t;

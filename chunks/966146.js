@@ -1,4 +1,4 @@
-n.d(t, { x: () => a }), n(415506), n(388685), n(539854), n(642613);
+n.d(t, { x: () => o }), n(415506), n(388685), n(539854), n(642613);
 var r = n(65154);
 function i(e, t, n) {
     return (
@@ -13,7 +13,7 @@ function i(e, t, n) {
         e
     );
 }
-function o(e) {
+function a(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -29,7 +29,7 @@ function o(e) {
     }
     return e;
 }
-class a {
+class o {
     getMaxSinkValue(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
         if (e < 0) throw Error('getMaxSinkValue: Requested ' + e);
@@ -74,7 +74,7 @@ class a {
             }
         }
         let i = {},
-            o = 0,
+            a = 0,
             s = 100;
         for (let t = 1; t <= 25; ++t) {
             let l = 0,
@@ -84,8 +84,8 @@ class a {
                 if (r.pixelCount * t > e) break;
                 (l = r.width), (c = r.height), (u = r.budgetPortion);
             }
-            if (o !== l) {
-                let e = a.getMutedFramerate(s);
+            if (a !== l) {
+                let e = o.getMutedFramerate(s);
                 (i[s] = {
                     width: l,
                     height: c,
@@ -94,7 +94,7 @@ class a {
                     framerate: r.Gs
                 }),
                     (s -= 10),
-                    (o = l);
+                    (a = l);
             }
         }
         return i;
@@ -110,7 +110,7 @@ class a {
             if (0 === n) continue;
             let r = e[n];
             t.push(
-                o(
+                a(
                     {
                         pixelCount: r.width * r.height,
                         wantValue: n
@@ -125,6 +125,6 @@ class a {
         i(this, 'pixelBudget', void 0), i(this, 'ladder', void 0), i(this, 'orderedLadder', void 0);
         let { width: t, height: n } = e.videoBudget;
         if (t <= 0 || n <= 0) throw Error('Invalid argument');
-        (this.pixelBudget = t * n), (this.ladder = a.calculateLadder(this.pixelBudget)), (this.orderedLadder = a.calculateOrderedLadder(this.ladder));
+        (this.pixelBudget = t * n), (this.ladder = o.calculateLadder(this.pixelBudget)), (this.orderedLadder = o.calculateOrderedLadder(this.ladder));
     }
 }

@@ -1,7 +1,5 @@
 e.exports = {
     modalContent: 'modalContent_db78b7',
-    emptyState: 'emptyState_db78b7',
-    dropZone: 'dropZone_db78b7',
     grid: 'grid_db78b7',
     preview: 'preview_db78b7',
     inputNote: 'inputNote_db78b7',

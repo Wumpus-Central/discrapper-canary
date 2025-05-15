@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ }), n(388685);
 var r = n(433517),
     i = n(570140),
-    o = n(317770),
-    a = n(314897),
+    a = n(317770),
+    o = n(314897),
     s = n(944486),
     l = n(105372),
     c = n(88751),
@@ -20,7 +20,7 @@ function d(e, t, n) {
         e
     );
 }
-class f extends o.Z {
+class f extends a.Z {
     _initialize() {
         i.Z.subscribe('VOICE_STATE_UPDATES', this.handleVoiceStateUpdates);
     }
@@ -32,7 +32,7 @@ class f extends o.Z {
             d(this, 'handleVoiceStateUpdates', (e) => {
                 let { voiceStates: t } = e;
                 t.forEach((e) => {
-                    if (null == e.channelId || e.userId !== a.default.getId() || (this.terminate(), r.K.get(u.$z, !1))) return;
+                    if (null == e.channelId || e.userId !== o.default.getId() || (this.terminate(), r.K.get(u.$z, !1))) return;
                     let t = s.Z.getVoiceChannelId();
                     null != t && e.channelId === t && c.ZP.isAudienceMember(e.userId, t) && (r.K.set(u.$z, !0), l.$(t));
                 });

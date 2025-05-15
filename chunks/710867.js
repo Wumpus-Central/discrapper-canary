@@ -1,15 +1,15 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => o });
 var r = n(255367);
 n(73800);
 var i = n(293335),
-    o = n(422786);
-let a = (e) => {
+    a = n(422786);
+let o = (e) => {
     let { profileEffectConfig: t, onReady: n } = e,
-        { pendingRef: a, setPending: s } = (0, i.Z)(t.effects, n);
+        { pendingRef: o, setPending: s } = (0, i.Z)(t.effects, n);
     return (0, r.jsx)('div', {
-        className: o.profileEffects,
+        className: a.profileEffects,
         children: (0, r.jsx)('div', {
-            className: o.inner,
+            className: a.inner,
             children: t.effects.map((e) =>
                 (0, r.jsx)(
                     'img',
@@ -22,7 +22,7 @@ let a = (e) => {
                             position: 'absolute'
                         },
                         onLoad: () => {
-                            s(a.current - 1), (a.current = a.current - 1);
+                            s(o.current - 1), (o.current = o.current - 1);
                         }
                     },
                     e.src

@@ -28,17 +28,17 @@ function i(e) {
     return e;
 }
 n.d(t, { ZP: () => l });
-let o = Object.freeze({
+let a = Object.freeze({
         overflowY: 'scroll',
         overflowX: 'hidden'
     }),
-    a = Object.freeze({
+    o = Object.freeze({
         overflowX: 'scroll',
         overflowY: 'hidden'
     }),
     s = Object.freeze({ overflow: 'auto' });
 function l(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 'vertical',
-        n = 'vertical' === t ? o : 'horizontal' === t ? a : s;
+        n = 'vertical' === t ? a : 'horizontal' === t ? o : s;
     return null != e ? i({}, n, e) : n;
 }

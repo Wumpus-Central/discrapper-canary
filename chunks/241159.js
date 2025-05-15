@@ -1,8 +1,8 @@
-n.d(t, { k: () => a });
+n.d(t, { k: () => o });
 var r = n(544891),
     i = n(570140),
-    o = n(981631);
-function a(e) {
+    a = n(981631);
+function o(e) {
     return (
         i.Z.dispatch({
             type: 'APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING',
@@ -10,7 +10,7 @@ function a(e) {
         }),
         r.tn
             .get({
-                url: o.ANM.STORE_LAYOUT(e),
+                url: a.ANM.STORE_LAYOUT(e),
                 rejectWithError: !0
             })
             .then(

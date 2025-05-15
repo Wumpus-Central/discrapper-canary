@@ -2,8 +2,8 @@ n.d(t, { Z: () => b }), n(997841), n(190126), n(368063), n(65234), n(111804), n(
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(243814),
+    a = n.n(i),
+    o = n(243814),
     s = n(993365),
     l = n(481060),
     c = n(162685),
@@ -41,7 +41,7 @@ function b(e) {
         }
     let N = c.w.useExperiment({ location: 'oauth2_authorize' });
     return (0, r.jsxs)('div', {
-        className: o()(g.applicationDetails, { [g.noPadding]: N.enabled }),
+        className: a()(g.applicationDetails, { [g.noPadding]: N.enabled }),
         children: [
             null != n
                 ? (0, r.jsx)(y, {
@@ -57,7 +57,7 @@ function b(e) {
                 icon: l.T39,
                 text: m.intl.formatToPlainString(m.t['+1bjc3'], { date: S })
             }),
-            s.includes(a.x.BOT) && null != O
+            s.includes(o.x.BOT) && null != O
                 ? (0, r.jsx)(y, {
                       icon: l.wGt,
                       text: m.intl.formatToPlainString(m.t.UHGHSE, { guildCount: O })

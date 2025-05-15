@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
 var r,
     i = n(442837),
-    o = n(570140),
-    a = n(786761),
+    a = n(570140),
+    o = n(786761),
     s = n(247206);
 function l(e, t, n) {
     return (
@@ -27,7 +27,7 @@ function d(e) {
         ((c = e.messages.reduce(
             (e, t) => (
                 t.forEach((t) => {
-                    e[u(t)] = (0, a.e5)(t);
+                    e[u(t)] = (0, o.e5)(t);
                 }),
                 e
             ),
@@ -43,7 +43,7 @@ function f(e) {
         r = c[n];
     return (
         null != r &&
-        ((c[n] = (0, a.wi)(r, {
+        ((c[n] = (0, o.wi)(r, {
             attachments: t.attachments,
             embeds: t.embeds
         })),
@@ -79,7 +79,7 @@ class g extends (r = i.ZP.Store) {
     }
 }
 l(g, 'displayName', 'SearchMessageStore');
-let E = new g(o.Z, {
+let E = new g(a.Z, {
     SEARCH_FINISH: d,
     MOD_VIEW_SEARCH_FINISH: d,
     MESSAGE_UPDATE: f,

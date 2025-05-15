@@ -5,7 +5,7 @@ n.d(t, {
     n(415506);
 var r = n(503461),
     i = n(218521);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -18,7 +18,7 @@ function o(e, t, n) {
         e
     );
 }
-function a(e, t) {
+function o(e, t) {
     return 0 === t.length
         ? e
         : {
@@ -28,7 +28,7 @@ function a(e, t) {
           };
 }
 function s(e, t) {
-    return 0 === t.length ? e : e.map((e) => a(e, t));
+    return 0 === t.length ? e : e.map((e) => o(e, t));
 }
 class l {
     close() {
@@ -54,12 +54,12 @@ class l {
     }
     getRange(e, t, n) {
         let r = (0, i.m)(this.prefix, e),
-            o = (0, i.m)(this.prefix, t);
+            a = (0, i.m)(this.prefix, t);
         return this.database.execute(
             {
                 type: 'kv.get_range',
                 table: this.tableId,
-                range: [r, o],
+                range: [r, a],
                 ordering: null == n ? void 0 : n.ordering,
                 limit: null == n ? void 0 : n.limit
             },
@@ -116,7 +116,7 @@ class l {
             {
                 type: 'kv.put_one',
                 table: this.tableId,
-                cell: a(e, this.prefix),
+                cell: o(e, this.prefix),
                 overwrite: t === r.Sn.Replace
             },
             this.defaultDebugTag
@@ -203,11 +203,11 @@ class l {
         });
     }
     constructor(e, t, n, r) {
-        o(this, 'prefix', void 0),
-            o(this, 'tableId', void 0),
-            o(this, 'database', void 0),
-            o(this, 'defaultDebugTag', void 0),
-            o(this, 'messages', {
+        a(this, 'prefix', void 0),
+            a(this, 'tableId', void 0),
+            a(this, 'database', void 0),
+            a(this, 'defaultDebugTag', void 0),
+            a(this, 'messages', {
                 getLatest: (e) =>
                     this.database.execute(
                         {
@@ -233,7 +233,7 @@ class c {
         this.transaction.add({
             type: 'kv.put_one',
             table: this.tableId,
-            cell: a(e, this.prefix),
+            cell: o(e, this.prefix),
             overwrite: t === r.Sn.Replace
         });
     }
@@ -279,10 +279,10 @@ class c {
         });
     }
     constructor(e, t, n) {
-        o(this, 'prefix', void 0),
-            o(this, 'tableId', void 0),
-            o(this, 'transaction', void 0),
-            o(this, 'messages', {
+        a(this, 'prefix', void 0),
+            a(this, 'tableId', void 0),
+            a(this, 'transaction', void 0),
+            a(this, 'messages', {
                 trimOrphans: (e) => {
                     if (1 !== this.prefix.length || 1 !== e.length) throw Error('trimOrphans: only one prefix component is supported at this time');
                     this.transaction.add({

@@ -1,4 +1,4 @@
-let r, i, o;
+let r, i, a;
 n.d(t, {
     X: () => v,
     l: () => A
@@ -8,7 +8,7 @@ n.d(t, {
     n(388685),
     n(539854),
     n(17089);
-var a,
+var o,
     s = n(756647),
     l = n(442837),
     c = n(544891),
@@ -70,7 +70,7 @@ let h = 1500,
     g = 1500,
     E = 0,
     b = Number.MAX_SAFE_INTEGER - 1,
-    y = null != (a = window.requestIdleCallback) ? a : (e) => setImmediate(() => e()),
+    y = null != (o = window.requestIdleCallback) ? o : (e) => setImmediate(() => e()),
     O = new u.R(),
     v = {
         handleConnectionOpen: () => {},
@@ -83,15 +83,15 @@ let h = 1500,
     T = () => Promise.resolve({ sessionId: void 0 }),
     A = (e) => {
         var t;
-        let { dispatcher: n, actionHandler: a, getFingerprint: u, getSessionId: _ = T, TRACKING_URL: A, drainTimeoutOverride: N, waitFor: C, scheduleWhenIdle: P = y } = e;
+        let { dispatcher: n, actionHandler: o, getFingerprint: u, getSessionId: _ = T, TRACKING_URL: A, drainTimeoutOverride: N, waitFor: C, scheduleWhenIdle: P = y } = e;
         function R(e) {
             var t;
-            if (null != o) return o;
+            if (null != a) return a;
             let n = null != (t = e.fingerprint) ? t : u();
             return null != n ? (0, s.s)(n) : null;
         }
         function w() {
-            return 0 !== I.length && (null != o ? null != i : null != u());
+            return 0 !== I.length && (null != a ? null != i : null != u());
         }
         function D(e) {
             let { shouldFlushOnNextTick: t = !1 } = e;
@@ -131,23 +131,23 @@ let h = 1500,
         (g = null != N ? N : h),
             (v.handleConnectionOpen = function (e) {
                 let { analyticsToken: t, user: n } = e;
-                return null != t && (i = t), null != n.id && (o = n.id), D({ shouldFlushOnNextTick: !1 }), !1;
+                return null != t && (i = t), null != n.id && (a = n.id), D({ shouldFlushOnNextTick: !1 }), !1;
             }),
             (v.handleConnectionClosed = function () {
-                return L(), (i = null), (o = null), (E = 0), (r = null), !1;
+                return L(), (i = null), (a = null), !1;
             }),
             (v.handleFingerprint = function () {
                 return L(), !1;
             }),
             (v.handleTrack = function (e) {
-                let { event: t, properties: n, flush: i, fingerprint: o, resolve: a } = e;
+                let { event: t, properties: n, flush: i, fingerprint: a, resolve: o } = e;
                 return (
                     _().then((e) => {
                         let { sessionId: s } = e;
                         (s !== r || E >= b) && ((E = 0), (r = s)), (E += 1);
                         let l = {
                                 type: t,
-                                fingerprint: o,
+                                fingerprint: a,
                                 properties: f(
                                     {
                                         client_track_timestamp: Date.now(),
@@ -156,7 +156,7 @@ let h = 1500,
                                     },
                                     n
                                 ),
-                                resolve: a
+                                resolve: o
                             },
                             c = R(l);
                         null != c && (l.properties.client_uuid = O.generate(c)), I.push(l), I.length > m && (I = I.slice(-m)), i ? D({ shouldFlushOnNextTick: !0 }) : D({ shouldFlushOnNextTick: !1 });
@@ -172,5 +172,5 @@ let h = 1500,
                 super(...e), d(this, 'submitEventsImmediately', x);
             }
         }
-        return d(k, 'displayName', 'AnalyticsTrackingStore'), new k(n, a);
+        return d(k, 'displayName', 'AnalyticsTrackingStore'), new k(n, o);
     };

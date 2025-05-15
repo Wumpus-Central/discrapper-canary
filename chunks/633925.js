@@ -1,8 +1,8 @@
-n.r(t), n.d(t, { default: () => a });
+n.r(t), n.d(t, { default: () => o });
 var r = n(528734),
     i = n(951516);
-function o(e) {
-    return (o =
+function a(e) {
+    return (a =
         'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
@@ -11,11 +11,11 @@ function o(e) {
                   return e && 'function' == typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? 'symbol' : typeof e;
               })(e);
 }
-function a(e) {
+function o(e) {
     var t, n;
     if (((0, i.Z)(1, arguments), e && 'function' == typeof e.forEach)) t = e;
     else {
-        if ('object' !== o(e) || null === e) return new Date(NaN);
+        if ('object' !== a(e) || null === e) return new Date(NaN);
         t = Array.prototype.slice.call(e);
     }
     return (

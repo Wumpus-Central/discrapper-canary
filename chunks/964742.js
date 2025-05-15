@@ -1,14 +1,14 @@
 n.d(t, {
-    $T: () => a,
+    $T: () => o,
     Bs: () => l,
     TL: () => r,
-    js: () => o,
+    js: () => a,
     qu: () => i,
     rp: () => s
 });
 var r = 'dnd-core/INIT_COORDS',
     i = 'dnd-core/BEGIN_DRAG',
-    o = 'dnd-core/PUBLISH_DRAG_SOURCE',
-    a = 'dnd-core/HOVER',
+    a = 'dnd-core/PUBLISH_DRAG_SOURCE',
+    o = 'dnd-core/HOVER',
     s = 'dnd-core/DROP',
     l = 'dnd-core/END_DRAG';

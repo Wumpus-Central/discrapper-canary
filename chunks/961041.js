@@ -1,7 +1,7 @@
 var r = n(127849),
     i = n(630489),
-    o = n(880181),
-    a = n(275717),
+    a = n(880181),
+    o = n(275717),
     s = n(845691),
     l = n(751736),
     c = n(284955),
@@ -10,9 +10,9 @@ var r = n(127849),
     f = i && i.prototype,
     _ = l('species'),
     p = !1,
-    h = o(r.PromiseRejectionEvent);
+    h = a(r.PromiseRejectionEvent);
 e.exports = {
-    CONSTRUCTOR: a('Promise', function () {
+    CONSTRUCTOR: o('Promise', function () {
         var e = s(i),
             t = e !== String(i);
         if ((!t && 66 === d) || (u && !(f.catch && f.finally))) return !0;

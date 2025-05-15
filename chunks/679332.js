@@ -1,8 +1,8 @@
 n.d(t, { Z: () => p });
 var r = n(255367),
     i = n(73800),
-    o = n(481060),
-    a = n(100527),
+    a = n(481060),
+    o = n(100527),
     s = n(906732),
     l = n(299206),
     c = n(785717),
@@ -41,7 +41,7 @@ function p(e) {
     let { user: t, viewProfileItem: n } = e,
         f = i.useRef(null),
         { trackUserProfileAction: p } = (0, c.KZ)(),
-        { analyticsLocations: h } = (0, s.ZP)(a.Z.USER_PROFILE_OVERFLOW_MENU),
+        { analyticsLocations: h } = (0, s.ZP)(o.Z.USER_PROFILE_OVERFLOW_MENU),
         m = [
             [n],
             [
@@ -58,16 +58,16 @@ function p(e) {
         ];
     return m.every((e) => e.every((e) => null == e))
         ? null
-        : (0, r.jsx)(o.yRy, {
+        : (0, r.jsx)(a.yRy, {
               targetElementRef: f,
               renderPopout: (e) => {
                   let { closePopout: t } = e;
-                  return (0, r.jsx)(o.v2r, {
+                  return (0, r.jsx)(a.v2r, {
                       navId: 'non-user-bot-profile-overflow-menu',
                       onSelect: void 0,
                       onClose: t,
                       'aria-label': d.intl.string(d.t.AXIHpa),
-                      children: m.map((e, t) => (0, r.jsx)(o.kSQ, { children: e.map((e) => e) }, t))
+                      children: m.map((e, t) => (0, r.jsx)(a.kSQ, { children: e.map((e) => e) }, t))
                   });
               },
               children: (e) =>
@@ -77,7 +77,7 @@ function p(e) {
                           {
                               ref: f,
                               action: 'PRESS_OPTIONS',
-                              icon: o.xhG,
+                              icon: a.xhG,
                               tooltipText: d.intl.string(d.t.UKOtz8)
                           },
                           e

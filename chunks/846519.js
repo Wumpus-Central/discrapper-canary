@@ -14,8 +14,8 @@ function r(e, t, n) {
 n.d(t, {
     GR: () => s,
     V7: () => i,
-    Xp: () => a,
-    sW: () => o
+    Xp: () => o,
+    sW: () => a
 });
 class i {
     start(e, t) {
@@ -36,7 +36,7 @@ class i {
         r(this, '_ref', void 0);
     }
 }
-class o {
+class a {
     set(e) {
         return (this._delay = e), this;
     }
@@ -54,7 +54,7 @@ class o {
         r(this, '_timeout', void 0), r(this, '_delay', void 0), r(this, '_handler', void 0), (this._delay = e), (this._handler = t), (this._timeout = new i());
     }
 }
-class a {
+class o {
     start(e, t) {
         this.stop(), (this._ref = window.setInterval(t, e));
     }

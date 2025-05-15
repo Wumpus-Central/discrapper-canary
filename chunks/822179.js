@@ -1,8 +1,8 @@
 n.d(t, { Z: () => A }), n(539854);
 var r,
     i = n(392711),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(570140),
     l = n(704907),
     c = n(581883),
@@ -97,7 +97,7 @@ function I() {
     let t = null == (e = c.Z.frecencyWithoutFetchingLatest.stickerFrecency) ? void 0 : e.stickers;
     if (null == t) return !1;
     b.overwriteHistory(
-        o().mapValues(t, (e) => m(p({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
+        a().mapValues(t, (e) => m(p({}, e), { recentUses: e.recentUses.map(Number).filter((e) => e > 0) })),
         g.pendingUsages
     );
 }
@@ -109,7 +109,7 @@ function S(e) {
     if (t !== f.yP.FRECENCY_AND_FAVORITES_SETTINGS || !n) return !1;
     g.pendingUsages = [];
 }
-class T extends (r = a.ZP.PersistedStore) {
+class T extends (r = o.ZP.PersistedStore) {
     initialize(e) {
         this.waitFor(d.Z), null != e && (g = e), this.syncWith([d.Z], v), this.syncWith([c.Z], I);
     }

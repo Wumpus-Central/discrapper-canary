@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d }), n(388685);
 var r = n(442837),
     i = n(570140),
-    o = n(147913),
-    a = n(883429),
+    a = n(147913),
+    o = n(883429),
     s = n(314897),
     l = n(592125);
 function c(e, t, n) {
@@ -18,7 +18,7 @@ function c(e, t, n) {
         e
     );
 }
-class u extends o.Z {
+class u extends a.Z {
     handleChannelDelete(e) {
         let { channel: t } = e;
         if (null != t.guild_id) {
@@ -35,11 +35,11 @@ class u extends o.Z {
     }
     handleMessageCreate(e) {
         var t, n, r;
-        let { channelId: i, message: o } = e,
+        let { channelId: i, message: a } = e,
             c = l.Z.getChannel(i);
-        if ((null == (t = o.author) ? void 0 : t.id) !== s.default.getId() || !(null == c ? void 0 : c.isActiveThread())) return;
+        if ((null == (t = a.author) ? void 0 : t.id) !== s.default.getId() || !(null == c ? void 0 : c.isActiveThread())) return;
         let u = new Date(null != (r = null == (n = c.threadMetadata) ? void 0 : n.archiveTimestamp) ? r : 0).getTime();
-        Date.now() - u < 5000 && a.Z.resort(c.parent_id);
+        Date.now() - u < 5000 && o.Z.resort(c.parent_id);
     }
     handleGuildDelete(e) {
         let { guild: t } = e,

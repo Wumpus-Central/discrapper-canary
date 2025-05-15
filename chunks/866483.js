@@ -1,27 +1,27 @@
 n.d(t, {
     HY: () => c,
     Pf: () => s,
-    RZ: () => a,
+    RZ: () => o,
     m$: () => l
 }),
     n(388685),
     n(642613);
 let r = ['coldStart'],
     i = !0,
-    o = new Set();
-function a() {
-    return o.size > 0 || i;
+    a = new Set();
+function o() {
+    return a.size > 0 || i;
 }
 function s() {
-    let e = [...(i ? r : []), ...o].sort();
+    let e = [...(i ? r : []), ...a].sort();
     return e.length > 0 ? e.join(',') : '';
 }
 function l(e) {
-    u(() => o.add(e));
+    u(() => a.add(e));
 }
 function c(e) {
-    u(() => o.delete(e));
+    u(() => a.delete(e));
 }
 function u(e) {
-    a(), (i = !1), e(), a();
+    o(), (i = !1), e(), o();
 }

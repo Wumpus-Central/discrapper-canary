@@ -1,4 +1,4 @@
-Object.defineProperty(t, '__esModule', { value: !0 }), (t.markdownFormatter = void 0), (t.formatToMarkdownString = a);
+Object.defineProperty(t, '__esModule', { value: !0 }), (t.markdownFormatter = void 0), (t.formatToMarkdownString = o);
 let r = n(185707),
     i = {
         $b: (e) => '**' + e.join('') + '**',
@@ -8,7 +8,7 @@ let r = n(185707),
         $link: (e, t, [n]) => '[' + e.join('') + '](' + n + ')',
         $p: (e) => e.join('') + '\n\n'
     };
-class o extends r.StringBuilder {
+class a extends r.StringBuilder {
     constructor() {
         super(...arguments), (this.result = '');
     }
@@ -16,10 +16,10 @@ class o extends r.StringBuilder {
         this.result += i[e](t, '', n);
     }
 }
-function a(e, t, n = o) {
+function o(e, t, n = a) {
     return 'string' == typeof e ? e : this.bindFormatValues(n, e, t)[0];
 }
 t.markdownFormatter = {
-    format: a,
-    builder: o
+    format: o,
+    builder: a
 };

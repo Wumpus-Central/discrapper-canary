@@ -3,13 +3,13 @@ e.exports = function (e) {
         n = ['div', 'mod', 'in', 'and', 'or', 'not', 'xor', 'asserterror', 'begin', 'case', 'do', 'downto', 'else', 'end', 'exit', 'for', 'local', 'if', 'of', 'repeat', 'then', 'to', 'until', 'while', 'with', 'var'],
         r = 'false true',
         i = [e.C_LINE_COMMENT_MODE, e.COMMENT(/\{/, /\}/, { relevance: 0 }), e.COMMENT(/\(\*/, /\*\)/, { relevance: 10 })],
-        o = {
+        a = {
             className: 'string',
             begin: /'/,
             end: /'/,
             contains: [{ begin: /''/ }]
         },
-        a = {
+        o = {
             className: 'string',
             begin: /(#\d+)+/
         },
@@ -35,7 +35,7 @@ e.exports = function (e) {
                     begin: /\(/,
                     end: /\)/,
                     keywords: n,
-                    contains: [o, a, e.NUMBER_MODE]
+                    contains: [a, o, e.NUMBER_MODE]
                 },
                 ...i
             ]
@@ -65,8 +65,8 @@ e.exports = function (e) {
                 scope: 'attribute',
                 relevance: 0
             },
-            o,
             a,
+            o,
             s,
             l,
             e.NUMBER_MODE,

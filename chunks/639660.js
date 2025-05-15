@@ -6,18 +6,18 @@ var r = t(255367),
     a = t(243778),
     l = t(430824),
     c = t(618460),
-    u = t(800869),
-    d = t(309945),
+    d = t(800869),
+    u = t(309945),
     p = t(981631),
     m = t(680278),
-    x = t(388032),
-    _ = t(106180);
+    _ = t(388032),
+    x = t(106180);
 function f() {
     return (0, r.jsx)('div', {
-        className: _.staffContainer,
+        className: x.staffContainer,
         children: (0, r.jsx)(i.xv, {
             variant: 'text-sm/medium',
-            children: x.intl.string(m.default.l9n4QU)
+            children: _.intl.string(m.default.l9n4QU)
         })
     });
 }
@@ -32,20 +32,20 @@ function v(e) {
         b = null != v && v === s.z.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK,
         h =
             j.length > 0
-                ? (0, r.jsx)(d.Z, {
+                ? (0, r.jsx)(u.Z, {
                       guildId: n,
                       powerups: j
                   })
                 : b
-                  ? (0, r.jsx)(u.Z, { markAsDismissed: g })
+                  ? (0, r.jsx)(d.Z, { markAsDismissed: g })
                   : void 0;
     return null != h || t
         ? (0, r.jsxs)('div', {
-              className: _.container,
+              className: x.container,
               children: [
                   (0, r.jsx)(i.xv, {
                       variant: 'eyebrow',
-                      children: x.intl.string(m.default['3FRira'])
+                      children: _.intl.string(m.default['3FRira'])
                   }),
                   t && (0, r.jsx)(f, {}),
                   h

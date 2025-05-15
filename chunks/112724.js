@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(393903),
-    a = n(448986);
+    a = n(393903),
+    o = n(448986);
 function s(e, t, n) {
     return (
         t in e
@@ -71,7 +71,7 @@ function _(e) {
                 width: 0,
                 height: 0
             }),
-            _ = (0, a.Z)((e) => {
+            _ = (0, o.Z)((e) => {
                 if (null != e) {
                     let { width: t, height: n } = e;
                     c({
@@ -80,10 +80,10 @@ function _(e) {
                     });
                 }
             }),
-            p = (0, a.Z)((e) => {
+            p = (0, o.Z)((e) => {
                 _(e.contentRect);
             }),
-            h = (0, o.y)(p);
+            h = (0, a.y)(p);
         return (
             i.useImperativeHandle(n, () => ({
                 triggerResize: () => {

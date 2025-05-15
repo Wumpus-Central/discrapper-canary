@@ -2,8 +2,8 @@ n.d(t, { Z: () => N });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    o = n.n(i),
-    a = n(442837),
+    a = n.n(i),
+    o = n(442837),
     s = n(481060),
     l = n(22267),
     c = n(442933),
@@ -25,7 +25,7 @@ var i = n(120356),
     T = n(388032),
     A = n(997926);
 function N(e) {
-    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: a, pendingBanner: l, pendingAccentColor: m, pendingBio: g, pendingPronouns: T, pendingAvatar: N, pendingAvatarDecoration: P, pendingNickname: R, pendingGlobalName: w, pendingThemeColors: D, pendingProfileEffectId: L, pendingLegacyUsernameDisabled: x, avatarClassName: k, containerClassName: M, isTryItOutFlow: j = !1, disabledInputs: U = !1, hideCustomStatus: G = !1, hideBioSection: B = !1, hideMessageInput: F = !0, hideExampleButton: V = !1, pendingBadges: Z, shouldOpenBadgeTooltip: H, showNameplatePreview: Y = !1 } = e,
+    let { user: t, guild: n, canUsePremiumCustomization: i, onUpsellClick: o, pendingBanner: l, pendingAccentColor: m, pendingBio: g, pendingPronouns: T, pendingAvatar: N, pendingAvatarDecoration: P, pendingNickname: R, pendingGlobalName: w, pendingThemeColors: D, pendingProfileEffectId: L, pendingLegacyUsernameDisabled: x, avatarClassName: k, containerClassName: M, isTryItOutFlow: j = !1, disabledInputs: U = !1, hideCustomStatus: G = !1, hideBioSection: B = !1, hideMessageInput: F = !0, hideExampleButton: V = !1, pendingBadges: Z, shouldOpenBadgeTooltip: H, showNameplatePreview: Y = !1 } = e,
         W = (0, d.ZP)(t.id, null == n ? void 0 : n.id),
         { avatarSrc: K, avatarDecorationSrc: z } = (0, _.Z)({
             user: t,
@@ -54,7 +54,7 @@ function N(e) {
                 displayProfile: W,
                 themeType: S.lY.POPOUT,
                 pendingThemeColors: D,
-                className: o()(A.container, M),
+                className: a()(A.container, M),
                 forceShowPremium: i,
                 children: [
                     (0, r.jsxs)('header', {
@@ -69,7 +69,7 @@ function N(e) {
                                 pendingAccentColor: m,
                                 isTryItOutFlow: j,
                                 disabledInputs: U,
-                                onUpsellClick: () => (null == a ? void 0 : a({ object: I.qAy.EDIT_PROFILE_BANNER }))
+                                onUpsellClick: () => (null == o ? void 0 : o({ object: I.qAy.EDIT_PROFILE_BANNER }))
                             }),
                             (0, r.jsx)(b.Z, {
                                 user: t,
@@ -83,7 +83,7 @@ function N(e) {
                                 className: k,
                                 disabledInputs: U,
                                 isTryItOutFlow: j,
-                                onUpsellClick: () => (null == a ? void 0 : a({ object: I.qAy.AVATAR }))
+                                onUpsellClick: () => (null == o ? void 0 : o({ object: I.qAy.AVATAR }))
                             }),
                             !G &&
                                 (0, r.jsx)(h.Z, {
@@ -122,8 +122,8 @@ function N(e) {
     });
 }
 function C() {
-    let e = (0, a.e7)([g.default], () => g.default.getCurrentUser()),
-        t = (0, a.e7)([m.Z], () => m.Z.getPendingNameplate());
+    let e = (0, o.e7)([g.default], () => g.default.getCurrentUser()),
+        t = (0, o.e7)([m.Z], () => m.Z.getPendingNameplate());
     return null == e
         ? null
         : (0, r.jsxs)('div', {

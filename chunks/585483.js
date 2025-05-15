@@ -1,13 +1,13 @@
 n.d(t, {
     S: () => s,
-    b: () => a
+    b: () => o
 }),
     n(388685),
     n(539854);
 var r = n(836560);
 n(17089);
 var i = n(710845);
-function o(e, t, n) {
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -21,7 +21,7 @@ function o(e, t, n) {
     );
 }
 n(981631);
-class a {
+class o {
     safeDispatch(e) {
         for (var t, n = arguments.length, r = Array(n > 1 ? n - 1 : 0), i = 1; i < n; i++) r[i - 1] = arguments[i];
         if (!this.hasSubscribers(e)) {
@@ -78,7 +78,7 @@ class a {
         return this.unsubscribe(''.concat(e, '_').concat(t), n);
     }
     constructor() {
-        o(this, 'emitter', new r.EventEmitter()), o(this, '_savedDispatches', {}), this.emitter.setMaxListeners(100);
+        a(this, 'emitter', new r.EventEmitter()), a(this, '_savedDispatches', {}), this.emitter.setMaxListeners(100);
     }
 }
-let s = new a();
+let s = new o();

@@ -44,7 +44,7 @@ async function a(e) {
         }),
         m = await t.arrayBuffer(),
         f = new Worker(new URL('/assets/' + r.u('86047'), r.b)),
-        b = new Promise((e, t) => {
+        p = new Promise((e, t) => {
             f.onmessage = (r) => {
                 let { data: n } = r;
                 if (n.type === i.u.CROP_GIF_COMPLETE) {
@@ -76,7 +76,7 @@ async function a(e) {
             imageRotation: 0 | c
         }),
         {
-            result: b,
+            result: p,
             cancelFn: () => f.terminate()
         }
     );

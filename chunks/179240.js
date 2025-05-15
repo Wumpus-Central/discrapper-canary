@@ -1,8 +1,8 @@
 let r;
 n.d(t, { l: () => y });
 var i,
-    o = n(255367),
-    a = n(73800),
+    a = n(255367),
+    o = n(73800),
     s = n(120356),
     l = n.n(s),
     c = n(58654),
@@ -66,8 +66,8 @@ function m(e, t) {
         r,
         i = g(e, t);
     if (Object.getOwnPropertySymbols) {
-        var o = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -76,13 +76,13 @@ function g(e, t) {
     var n,
         r,
         i = {},
-        o = Object.keys(e);
-    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 let E = '\n  visibility:hidden;\n  overflow:hidden;\n  position:absolute;\n  z-index:-1000;\n  top:0;\n  right:0;\n',
     b = ['letter-spacing', 'line-height', 'padding-top', 'padding-bottom', 'font-family', 'font-weight', 'font-size', 'text-transform', 'width', 'padding-left', 'padding-right', 'border-width', 'box-sizing'];
-class y extends (i = a.PureComponent) {
+class y extends (i = o.PureComponent) {
     componentDidMount() {
         var e, t;
         null == (e = (t = this.props).onResize) || e.call(t, void 0), Promise.resolve().then(() => this.calculateSize());
@@ -99,13 +99,13 @@ class y extends (i = a.PureComponent) {
         let t = this._textArea;
         if (null == t) return;
         let { fontWidthEstimate: n, rows: i } = this.props,
-            o = null != (e = this.props.value) ? e : t.value;
-        if (null != n && -1 === o.indexOf('\n') && o.length * n < 0.8 * t.offsetWidth) return void this.setState({ height: void 0 });
+            a = null != (e = this.props.value) ? e : t.value;
+        if (null != n && -1 === a.indexOf('\n') && a.length * n < 0.8 * t.offsetWidth) return void this.setState({ height: void 0 });
         null == r && null != document.body && ((r = document.createElement('textarea')), document.body.appendChild(r));
-        let { paddingSize: a, borderSize: s, boxSizing: l, sizingStyle: c } = this.calculateNodeStyling(t);
-        r.setAttribute('style', c + ';' + E), (r.value = o), null != i ? r.setAttribute('rows', ''.concat(i)) : r.removeAttribute('rows');
+        let { paddingSize: o, borderSize: s, boxSizing: l, sizingStyle: c } = this.calculateNodeStyling(t);
+        r.setAttribute('style', c + ';' + E), (r.value = a), null != i ? r.setAttribute('rows', ''.concat(i)) : r.removeAttribute('rows');
         let u = r.scrollHeight;
-        'border-box' === l ? (u += s) : 'content-box' === l && (u -= a), this.setState({ height: u });
+        'border-box' === l ? (u += s) : 'content-box' === l && (u -= o), this.setState({ height: u });
     }
     calculateNodeStyling(e) {
         let t = window.getComputedStyle(e),
@@ -150,14 +150,14 @@ class y extends (i = a.PureComponent) {
             { style: t, className: n, onResize: r } = e,
             i = m(e, ['style', 'className', 'onResize']);
         delete i.fontWidthEstimate;
-        let a = _({}, this.state, t);
-        return (0, o.jsx)(u.t, {
-            children: (0, o.jsx)(
+        let o = _({}, this.state, t);
+        return (0, a.jsx)(u.t, {
+            children: (0, a.jsx)(
                 'textarea',
                 h(_({}, i), {
                     className: l()(n, d.scrollbarGhostHairline),
                     ref: this.handleSetRef,
-                    style: a,
+                    style: o,
                     onChange: this.handleChange
                 })
             )

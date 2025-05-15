@@ -1,4 +1,4 @@
-n.d(t, { Z: () => o }), n(415506), n(388685), n(17089);
+n.d(t, { Z: () => a }), n(415506), n(388685), n(17089);
 var r = n(570140);
 function i(e, t, n) {
     return (
@@ -13,7 +13,7 @@ function i(e, t, n) {
         e
     );
 }
-class o {
+class a {
     initialize() {
         this.initializedCount++,
             this.initializedCount > 1 ||

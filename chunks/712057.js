@@ -4,15 +4,15 @@ n.d(t, {
 });
 var r = n(564334),
     i = n(302221),
-    o = n(563114);
-let a = '#ffffff',
+    a = n(563114);
+let o = '#ffffff',
     s = '#36393e',
     l = (e) => {
         var t, n;
-        let { colors: o, saturationFactor: l = 1 } = e;
-        if (null == o || o.length < 1) return null;
-        let c = (0, i.YD)(o),
-            u = r.Z.parseString(a);
+        let { colors: a, saturationFactor: l = 1 } = e;
+        if (null == a || a.length < 1) return null;
+        let c = (0, i.YD)(a),
+            u = r.Z.parseString(o);
         if (null == u) return null;
         let d = r.Z.parseString(s);
         if (null == d) return null;
@@ -74,7 +74,7 @@ let a = '#ffffff',
                 colors: t,
                 saturationFactor: n
             });
-        return o.Z.applyPlatformToThemedEmojiColorPalette({
+        return a.Z.applyPlatformToThemedEmojiColorPalette({
             palette: i,
             shouldProcessMobileColors: r
         });
@@ -86,11 +86,11 @@ let a = '#ffffff',
                 colors: e,
                 saturationFactor: t
             }),
-            o = n ? (null == i ? void 0 : i.DARK) : null == i ? void 0 : i.LIGHT;
+            a = n ? (null == i ? void 0 : i.DARK) : null == i ? void 0 : i.LIGHT;
         return {
-            backgroundColor: null == o ? void 0 : o.backgroundColor,
-            accentColor: null == o ? void 0 : o.accentColor,
-            highlightColor: null == o ? void 0 : o.highlightColor,
-            opacity: null != (r = null == o ? void 0 : o.opacity) ? r : 0.15
+            backgroundColor: null == a ? void 0 : a.backgroundColor,
+            accentColor: null == a ? void 0 : a.accentColor,
+            highlightColor: null == a ? void 0 : a.highlightColor,
+            opacity: null != (r = null == a ? void 0 : a.opacity) ? r : 0.15
         };
     };

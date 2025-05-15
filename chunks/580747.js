@@ -1,6 +1,6 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(442837),
     i = n(91311);
-function o(e) {
+function a(e) {
     return (0, r.e7)([i.Z], () => i.Z.get(e), [e]);
 }

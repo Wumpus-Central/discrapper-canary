@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     i = n(73800),
-    o = n(120356),
-    a = n.n(o),
+    a = n(120356),
+    o = n.n(a),
     s = n(481060),
     l = n(68405),
     c = n(985375),
@@ -63,7 +63,7 @@ function g(e, t) {
     );
 }
 let E = i.memo(function (e) {
-    let { width: t, height: n, src: o, url: p, format: m, className: E } = e,
+    let { width: t, height: n, src: a, url: p, format: m, className: E } = e,
         [b, y] = i.useState(!1),
         O = (0, c.hb)((0, l.iy)(p)),
         v = O ? f.intl.string(f.t['5/NS7+']) : f.intl.string(f.t.nIH0v7),
@@ -83,7 +83,7 @@ let E = i.memo(function (e) {
                 ? (0, l.PF)(p)
                 : ((0, l.uL)({
                       url: p,
-                      src: o,
+                      src: a,
                       width: t,
                       height: n,
                       format: m
@@ -96,7 +96,7 @@ let E = i.memo(function (e) {
             (0, r.jsx)(
                 s.P3F,
                 g(h({}, e), {
-                    className: a()(E, _.gifFavoriteButton, {
+                    className: o()(E, _.gifFavoriteButton, {
                         [_.selected]: O,
                         [_.showPulse]: b
                     }),

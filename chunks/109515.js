@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r = n(475637),
     i = n(925300),
-    o = /^(\d+)(th|st|nd|rd)?/i,
-    a = /\d+/i,
+    a = /^(\d+)(th|st|nd|rd)?/i,
+    o = /\d+/i,
     s = {
         narrow: /^(b|a)/i,
         abbreviated: /^(b\.?\s?c\.?|b\.?\s?c\.?\s?e\.?|a\.?\s?d\.?|c\.?\s?e\.?)/i,
@@ -56,8 +56,8 @@ var r = n(475637),
     };
 let g = {
     ordinalNumber: (0, i.Z)({
-        matchPattern: o,
-        parsePattern: a,
+        matchPattern: a,
+        parsePattern: o,
         valueCallback: function (e) {
             return parseInt(e, 10);
         }
