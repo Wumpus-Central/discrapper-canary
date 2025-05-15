@@ -1,2 +1,2 @@
-s.r(n), s.d(n, { default: () => a });
-let a = JSON.parse('{"VCZdnp":"Axel","Xypb39":"Cave","qRFFLC":"Deep Fried","lFIyMz":"Ghost","vIrxZW":"Harper","ZVrsKC":"Justus","fPU01d":"Megaphone","biQVNz":"Quinn","anBE8f":"DR01D","NmbfHx":"Sébastien","tzvUKy":"Skye","ndNi1t":"Solara","KN+v7+":"Space Bunny","sem63N":"Tunetron","kHmvdn":"Cyber Boss"}');
+r.r(n), r.d(n, { default: () => t });
+let t = JSON.parse('{"VCZdnp":"Axel","Xypb39":"Cave","TYbrfH":"Tunetron (2-Part)","OnZ6g4":"Tunetron (Choir)","2XH8tr":"Tunetron (Dev)","qRFFLC":"Deep Fried","lFIyMz":"Ghost","KmHwvL":"Ghost (Dev)","vIrxZW":"Harper","ZVrsKC":"Justus","fPU01d":"Megaphone","biQVNz":"Quinn","anBE8f":"DR01D","XhhSOj":"DR01D (Dev)","Ur/62N":"DR01D (Synthetic)","NmbfHx":"Sébastien","tzvUKy":"Skye","ndNi1t":"Solara","KN+v7+":"Space Bunny","sem63N":"Tunetron","kHmvdn":"Cyber Boss"}');
