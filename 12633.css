@@ -9383,7 +9383,13 @@ html:not(.visual-refresh).theme-dark.checked_f525d3 {
     left: -78px;
     position: absolute;
     right: 0;
-    -webkit-app-region: no-drag
+    -webkit-app-region: no-drag;
+    pointer-events: none
+}
+
+.volumeButtonSlider__2d263>div {
+    overflow: hidden;
+    pointer-events: auto
 }
 
 .volumeButtonSlider__2d263.sliderVisible__2d263 {
