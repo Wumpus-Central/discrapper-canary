@@ -35,7 +35,7 @@ let o = (e, t) => (null != t ? t : e ? 0.5 : 0.2),
         var t,
             n,
             { ellipseOpacity: d, circleColor: u } = e,
-            m = (function (e, t) {
+            g = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     i,
@@ -54,8 +54,8 @@ let o = (e, t) => (null != t ? t : e ? 0.5 : 0.2),
                 }
                 return r;
             })(e, ['ellipseOpacity', 'circleColor']);
-        let g = (0, s.ZP)(),
-            p = (0, r.ap)(g),
+        let m = (0, s.ZP)(),
+            p = (0, r.ap)(m),
             h = o(p, d),
             f = c(p, u);
         return (0, i.jsxs)(
@@ -69,7 +69,7 @@ let o = (e, t) => (null != t ? t : e ? 0.5 : 0.2),
                     fill: 'none',
                     xmlns: 'http://www.w3.org/2000/svg'
                 },
-                (0, l.Z)(a({}, m))
+                (0, l.Z)(a({}, g))
             )),
             (n = n =
                 {

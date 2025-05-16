@@ -12,8 +12,8 @@ var i = n(255367),
     c = n(23547),
     d = n(790542),
     u = n(317257),
-    m = n(120786),
-    g = n(970815),
+    g = n(120786),
+    m = n(970815),
     p = n(981631),
     h = n(388032),
     f = n(313008);
@@ -22,7 +22,7 @@ let b = {
         END: f.alignRight
     },
     _ = (e) => {
-        if (null != e) return g.th[e];
+        if (null != e) return m.th[e];
     },
     x = (e) => {
         let { showNotificationBadge: t, ctaText: n, ctaOnClick: s, anchorPillType: x, analyticsPage: E, isCoachmarkEnabled: C = !0, linkText: j = h.intl.string(h.t.XRdyj4), cardAlignment: O = b.START, className: S } = e,
@@ -63,7 +63,7 @@ let b = {
                 [f.visible]: !A
             }),
             children: [
-                (0, i.jsx)(g.A4, {
+                (0, i.jsx)(m.A4, {
                     ref: R,
                     balance: v,
                     balanceWidgetMode: D ? u.b.DEFAULT : T,
@@ -80,7 +80,7 @@ let b = {
                             [f.visible]: !A
                         }),
                         ref: k,
-                        children: (0, i.jsx)(m.L, {
+                        children: (0, i.jsx)(g.L, {
                             analyticsPage: E,
                             ctaText: n,
                             ctaOnClick: () => {

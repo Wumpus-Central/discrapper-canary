@@ -1,4 +1,4 @@
-var e = r(651144);
-t.exports = function (t, n) {
-    return e[t] || (e[t] = n || {});
+var r = n(651144);
+e.exports = function (e, t) {
+    return r[e] || (r[e] = t || {});
 };

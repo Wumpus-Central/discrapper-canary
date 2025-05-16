@@ -1,3 +1,3 @@
-var r = a(940151),
-    n = 'object' == typeof self && self && self.Object === Object && self;
-t.exports = r || n || Function('return this')();
+var r = n(940151),
+    i = 'object' == typeof self && self && self.Object === Object && self;
+e.exports = r || i || Function('return this')();

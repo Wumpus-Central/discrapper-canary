@@ -1,5 +1,5 @@
-var e = r(64426);
-t.exports = function (t) {
-    var n = +t;
-    return n != n || 0 === n ? 0 : e(n);
+var r = n(64426);
+e.exports = function (e) {
+    var t = +e;
+    return t != t || 0 === t ? 0 : r(t);
 };

@@ -12,7 +12,7 @@ let o = {
     },
     c = (e, t, n) => (null == n ? t : (e * n) / 100),
     d = r.memo(function (e) {
-        let { confettiTarget: t, colors: n, emojiURL: d, numBursts: u, particlesPerBurst: m, offsetXPercentageMax: g, offsetXPercentageMin: p, offsetYPercentageMax: h, offsetYPercentageMin: f, customConfettiCanvas: b, speedValues: _ = o, dragCoefficientValue: x = 1.66, onAnimationEnd: E } = e,
+        let { confettiTarget: t, colors: n, emojiURL: d, numBursts: u, particlesPerBurst: g, offsetXPercentageMax: m, offsetXPercentageMin: p, offsetYPercentageMax: h, offsetYPercentageMin: f, customConfettiCanvas: b, speedValues: _ = o, dragCoefficientValue: x = 1.66, onAnimationEnd: E } = e,
             [C, j] = r.useState(null),
             { confettiCanvas: O } = r.useContext(l.h),
             S = (0, s.uR)(null != b ? b : O, C),
@@ -41,8 +41,8 @@ let o = {
                                     var s, l;
                                     let d = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : o,
                                         u = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 1.66,
-                                        m = c(e.width, 100, n),
-                                        g = c(e.height, 75, r),
+                                        g = c(e.width, 100, n),
+                                        m = c(e.height, 75, r),
                                         p = c(e.width, 350, t),
                                         h = c(e.height, 75, i),
                                         { xMin: f, xMax: b, yMin: _, yMax: x } = d;
@@ -77,8 +77,8 @@ let o = {
                                                 position: {
                                                     type: 'static-random',
                                                     minValue: {
-                                                        x: e.left + m,
-                                                        y: e.top + g
+                                                        x: e.left + g,
+                                                        y: e.top + m
                                                     },
                                                     maxValue: {
                                                         x: e.left + p,
@@ -120,8 +120,8 @@ let o = {
                                               }),
                                         s
                                     );
-                                })(t.getBoundingClientRect(), g, p, h, f, _, x),
-                                null != m ? m : 50
+                                })(t.getBoundingClientRect(), m, p, h, f, _, x),
+                                null != g ? g : 50
                             ),
                                 i === e.length - 1 && null != E && T(!0);
                         }, 60 * i)
@@ -130,7 +130,7 @@ let o = {
                         for (let t of e) clearTimeout(t);
                     }
                 );
-            }, [S, t, u, m, g, p, h, f, _, x, E]),
+            }, [S, t, u, g, m, p, h, f, _, x, E]),
             (0, i.jsx)(s.Ji, {
                 ref: j,
                 sprites: null != I ? I : a.CA,

@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(921801),
     d = n(131951),
     u = n(663389),
-    m = n(63063),
-    g = n(680924),
+    g = n(63063),
+    m = n(680924),
     p = n(58765),
     h = n(429789),
     f = n(726763),
@@ -36,16 +36,16 @@ var i = n(255367),
     L = n(65154),
     B = n(388032),
     M = n(20493);
-let U = ''.concat(m.Z.getArticleURL(k.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
+let U = ''.concat(g.Z.getArticleURL(k.BhN.VOICE_VIDEO_TROUBLESHOOTING), '?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-voice-video&utm_content=--t%3Apm');
 function V() {
     let { inputMode: e } = (0, s.cj)([d.Z], () => ({ inputMode: d.Z.getMode() })),
         t = (0, s.e7)([u.Z], () => u.Z.getSubsection()),
         n = r.useRef(null),
-        m = r.useRef(null);
+        g = r.useRef(null);
     r.useEffect(() => {
         var e, i;
-        t === Z.GA && (null == n || null == (e = n.current) || e.scrollIntoView(), o.Z.clearSubsection()), t === Z.gP && (null == m || null == (i = m.current) || i.scrollIntoView(), o.Z.clearSubsection());
-    }, [n, m, t]);
+        t === Z.GA && (null == n || null == (e = n.current) || e.scrollIntoView(), o.Z.clearSubsection()), t === Z.gP && (null == g || null == (i = g.current) || i.scrollIntoView(), o.Z.clearSubsection());
+    }, [n, g, t]);
     let k = (0, p.Z)();
     return (0, i.jsxs)(l.hjN, {
         tag: l.RB0.H1,
@@ -101,7 +101,7 @@ function V() {
                 children: [
                     (0, i.jsx)('div', {
                         style: { scrollMarginTop: '48px' },
-                        ref: m
+                        ref: g
                     }),
                     (0, i.jsx)(y.Z, {})
                 ]
@@ -141,7 +141,7 @@ function V() {
                                     look: l.zxk.Looks.OUTLINED,
                                     color: l.zxk.Colors.RED,
                                     onClick: () => {
-                                        (0, g.Z)(B.intl.string(B.t['/RXu6+']), B.intl.string(B.t.sQ42iY), a.Z.reset);
+                                        (0, m.Z)(B.intl.string(B.t['/RXu6+']), B.intl.string(B.t.sQ42iY), a.Z.reset);
                                     },
                                     size: l.zxk.Sizes.SMALL,
                                     children: B.intl.string(B.t['/RXu6+'])

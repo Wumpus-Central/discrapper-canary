@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var i = n(255367),
     r = n(905405),
     s = n(63063),
@@ -8,7 +8,7 @@ var i = n(255367),
     c = n(726985),
     d = n(981631),
     u = n(388032);
-function m() {
+function g() {
     let e = (0, r.p)();
     return (0, i.jsx)(a.U, {
         setting: c.s6.PRIVACY_KEYWORD_FILTER_V2,

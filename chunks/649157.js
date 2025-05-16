@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -8,10 +8,10 @@ var i = n(255367),
     c = n(388032),
     d = n(353857),
     u = n(444675);
-function m() {
+function g() {
     let e = (0, s.e7)([o.default], () => o.default.locale),
-        [t, m] = r.useState(e),
-        [g] = r.useState(() =>
+        [t, g] = r.useState(e),
+        [m] = r.useState(() =>
             (0, c.getAvailableLocales)().map((e) => {
                 var t, r;
                 let s;
@@ -89,7 +89,7 @@ function m() {
         ),
         p = r.useCallback((e) => {
             let { value: t } = e;
-            m(t), u.nextTick(() => a.ZP.updateLocale(t));
+            g(t), u.nextTick(() => a.ZP.updateLocale(t));
         }, []);
     return (0, i.jsx)(l.hjN, {
         tag: l.RB0.H1,
@@ -99,7 +99,7 @@ function m() {
                 title: c.intl.string(c.t['mx+sp6']),
                 children: (0, i.jsx)(l.FXm, {
                     onChange: p,
-                    options: g,
+                    options: m,
                     value: t
                 })
             })

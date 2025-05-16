@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(594174),
     d = n(74538),
     u = n(242291),
-    m = n(830253),
-    g = n(792165),
+    g = n(830253),
+    m = n(792165),
     p = n(603074),
     h = n(294206),
     f = n(388032),
@@ -19,12 +19,12 @@ function _(e) {
         [n, l] = r.useState(!1),
         o = (0, s.e7)([c.default], () => c.default.getCurrentUser()),
         u = d.ZP.canUseCustomCallSounds(o),
-        m = r.useRef(null);
+        g = r.useRef(null);
     function _(e) {
         u && (l(!1), null == t || t(e));
     }
     return (0, i.jsx)(a.yRy, {
-        targetElementRef: m,
+        targetElementRef: g,
         shouldShow: n,
         position: 'left',
         onRequestClose: () => l(!1),
@@ -38,7 +38,7 @@ function _(e) {
                     channel: null,
                     onClose: t,
                     onSelect: _,
-                    gridNotice: u ? null : (0, i.jsx)(g.o, {}),
+                    gridNotice: u ? null : (0, i.jsx)(m.o, {}),
                     analyticsSource: 'call sounds edit setting'
                 })
             });
@@ -74,7 +74,7 @@ function _(e) {
                 })({}, e)),
                 (r = r =
                     {
-                        ref: m,
+                        ref: g,
                         onClick: () => {
                             l(!n);
                         },
@@ -104,7 +104,7 @@ function _(e) {
 }
 function x(e) {
     let { sound: t } = e,
-        { previewSound: n } = (0, m.Z)(t, null),
+        { previewSound: n } = (0, g.Z)(t, null),
         r =
             0 === (0, u.pI)()
                 ? f.intl.string(f.t.OASXjo)

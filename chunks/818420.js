@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(158947),
     d = n(318110),
     u = n(150039),
-    m = n(993413),
-    g = n(921944),
+    g = n(993413),
+    m = n(921944),
     p = n(388032),
     h = n(388898);
 function f(e) {
@@ -21,12 +21,12 @@ function f(e) {
         [E, C] = (0, o.US)(x),
         j = E === s.z.NAMEPLATE_USER_SETTINGS_PROFILE_PAGE_NEW_BADGE,
         O = r.useCallback(() => {
-            C(g.L.TAKE_ACTION), (0, d.f)({ analyticsLocations: n });
+            C(m.L.TAKE_ACTION), (0, d.f)({ analyticsLocations: n });
         }, [n, C]),
         S = r.useCallback(() => {
             (0, u.Wh)(null);
         }, []);
-    return (0, i.jsx)(m.Z, {
+    return (0, i.jsx)(g.Z, {
         title: p.intl.string(p.t.x5CoXV),
         titleIcon: j ? (0, i.jsx)(c.Z, { className: h.newBadge }) : void 0,
         errors: _,

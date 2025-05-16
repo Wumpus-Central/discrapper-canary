@@ -11,8 +11,8 @@ var i = n(73800),
     c = n(23547),
     d = n(822857),
     u = n(981631),
-    m = n(46140);
-let g = new s.Z('VirtualCurrency'),
+    g = n(46140);
+let m = new s.Z('VirtualCurrency'),
     p = (e) => {
         let { location: t } = e,
             { enabled: n } = (0, d.W)({ location: t }),
@@ -20,7 +20,7 @@ let g = new s.Z('VirtualCurrency'),
                 [l.Z],
                 () => {
                     if (!n) return null;
-                    let e = l.Z.getQuest(m.V6);
+                    let e = l.Z.getQuest(g.V6);
                     return null == e ? null : (0, a.LM)(e.config);
                 },
                 [n]
@@ -28,12 +28,12 @@ let g = new s.Z('VirtualCurrency'),
             p = (0, i.useCallback)(
                 (e) => {
                     let { forceOpen: t, delayMS: n = 500 } = e;
-                    if (null == s && !t) return void g.warn('Could not open Intro to Orbs Claimed Coachmark. Reward orb quantity not found or quest does not exist with ID '.concat(m.V6));
+                    if (null == s && !t) return void m.warn('Could not open Intro to Orbs Claimed Coachmark. Reward orb quantity not found or quest does not exist with ID '.concat(g.V6));
                     if (!(0, c.wH)()) {
                         let e = () =>
                             (0, o.hF)({
                                 earnedOrbsQuantity: null != s ? s : 200,
-                                dedupeKey: t ? void 0 : m.V6
+                                dedupeKey: t ? void 0 : g.V6
                             });
                         if (void 0 === n || 0 === n) return void e();
                         setTimeout(() => {

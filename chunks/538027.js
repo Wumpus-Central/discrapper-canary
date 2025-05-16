@@ -1,3 +1,3 @@
-t.exports = function (t, e) {
-    return null == t ? void 0 : t[e];
+e.exports = function (e, t) {
+    return null == e ? void 0 : e[t];
 };

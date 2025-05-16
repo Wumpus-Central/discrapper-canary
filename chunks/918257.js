@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var i = n(255367);
 n(73800);
 var r = n(906732),
@@ -9,17 +9,17 @@ var r = n(906732),
     c = n(674343),
     d = n(981631),
     u = n(388032);
-function m(e) {
+function g(e) {
     let { refreshStyles: t = !1 } = e,
         n = (0, l.pI)(),
-        { analyticsLocations: m } = (0, r.ZP)();
+        { analyticsLocations: g } = (0, r.ZP)();
     return (0, i.jsx)(c.Z, {
         title: u.intl.string(u.t.xbMc8v),
         description: u.intl.format(u.t.BPbGq6, { helpCenterArticle: a.Z.getArticleURL(d.BhN.SOUNDBOARD) }),
         label: u.intl.string(u.t.kbFsAA),
         volume: n,
         onVolumeChange: function (e) {
-            (n = (0, o.A)(e)), (0, s.xz)(n, m);
+            (n = (0, o.A)(e)), (0, s.xz)(n, g);
         },
         refreshStyles: t
     });

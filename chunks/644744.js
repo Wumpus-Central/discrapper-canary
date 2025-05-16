@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(490529),
     d = n(981631),
     u = n(388032),
-    m = n(962311);
-function g(e, t, n) {
+    g = n(962311);
+function m(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -23,14 +23,14 @@ function g(e, t, n) {
     );
 }
 let p = {
-        [d.gkr.HOUSE_1]: m.membershipDialogHouse1,
-        [d.gkr.HOUSE_2]: m.membershipDialogHouse2,
-        [d.gkr.HOUSE_3]: m.membershipDialogHouse3
+        [d.gkr.HOUSE_1]: g.membershipDialogHouse1,
+        [d.gkr.HOUSE_2]: g.membershipDialogHouse2,
+        [d.gkr.HOUSE_3]: g.membershipDialogHouse3
     },
     h = {
-        [d.gkr.HOUSE_1]: m.houseLogoHouse1,
-        [d.gkr.HOUSE_2]: m.__invalid_houseLogoHouse2,
-        [d.gkr.HOUSE_3]: m.__invalid_houseLogoHouse3
+        [d.gkr.HOUSE_1]: g.houseLogoHouse1,
+        [d.gkr.HOUSE_2]: g.__invalid_houseLogoHouse2,
+        [d.gkr.HOUSE_3]: g.__invalid_houseLogoHouse3
     },
     f = {
         [d.gkr.HOUSE_1]: n(246300),
@@ -50,9 +50,9 @@ class _ extends r.Component {
         if (null != e) {
             let t = u.intl.formatToPlainString(u.t.yG0XAA, { houseName: (0, c.X8)(e) });
             return (0, i.jsx)('div', {
-                className: l()(m.membershipDialog, p[e]),
+                className: l()(g.membershipDialog, p[e]),
                 children: (0, i.jsxs)('div', {
-                    className: m.membershipDialogContent,
+                    className: g.membershipDialogContent,
                     children: [
                         (0, i.jsxs)(o.Z, {
                             children: [
@@ -61,29 +61,29 @@ class _ extends r.Component {
                                     shrink: 1,
                                     children: [
                                         (0, i.jsx)(a.Text, {
-                                            className: m.membershipDialogHeading,
+                                            className: g.membershipDialogHeading,
                                             variant: 'text-xs/bold',
                                             children: u.intl.string(u.t.KZoEIy)
                                         }),
                                         (0, i.jsx)(a.X6q, {
-                                            className: m.membershipDialogHouseName,
+                                            className: g.membershipDialogHouseName,
                                             variant: 'heading-sm/semibold',
                                             children: t
                                         }),
                                         (0, i.jsx)(a.Text, {
-                                            className: m.membershipDialogHouseDescription,
+                                            className: g.membershipDialogHouseDescription,
                                             variant: 'text-md/normal',
                                             children: b(e)
                                         })
                                     ]
                                 }),
                                 (0, i.jsx)(o.Z.Child, {
-                                    className: m.houseLogoWrapper,
+                                    className: g.houseLogoWrapper,
                                     grow: 0,
                                     shrink: 0,
                                     wrap: !0,
                                     children: (0, i.jsx)('img', {
-                                        className: l()(m.houseLogo, h[e]),
+                                        className: l()(g.houseLogo, h[e]),
                                         src: f[e],
                                         alt: t
                                     })
@@ -91,12 +91,12 @@ class _ extends r.Component {
                             ]
                         }),
                         (0, i.jsxs)(a.Text, {
-                            className: m.membershipDialogSwitchHouses,
+                            className: g.membershipDialogSwitchHouses,
                             variant: 'text-md/normal',
                             children: [
                                 u.intl.string(u.t.zD3mqK),
                                 (0, i.jsx)(a.P3F, {
-                                    className: m.membershipDialogSwitchHousesAction,
+                                    className: g.membershipDialogSwitchHousesAction,
                                     onClick: this.handleJoinHypeSquadClick,
                                     tag: 'span',
                                     children: u.intl.string(u.t.LzBgrq)
@@ -108,10 +108,10 @@ class _ extends r.Component {
             });
         }
         return (0, i.jsxs)('div', {
-            className: m.joinCTAWrapper,
+            className: g.joinCTAWrapper,
             children: [
                 (0, i.jsxs)(o.Z, {
-                    className: m.joinCTA,
+                    className: g.joinCTA,
                     align: o.Z.Align.CENTER,
                     justify: o.Z.Justify.CENTER,
                     direction: o.Z.Direction.HORIZONTAL,
@@ -135,7 +135,7 @@ class _ extends r.Component {
                     ]
                 }),
                 (0, i.jsx)(a.Text, {
-                    className: m.newsletterWarning,
+                    className: g.newsletterWarning,
                     variant: 'text-sm/normal',
                     children: u.intl.string(u.t['3kUvgo'])
                 })
@@ -144,7 +144,7 @@ class _ extends r.Component {
     }
     constructor(...e) {
         super(...e),
-            g(this, 'handleJoinHypeSquadClick', () => {
+            m(this, 'handleJoinHypeSquadClick', () => {
                 (0, a.ZDy)(async () => {
                     let { default: e } = await n.e('83264').then(n.bind(n, 711184));
                     return (t) =>
@@ -161,7 +161,7 @@ class _ extends r.Component {
                                             })
                                         )),
                                         i.forEach(function (t) {
-                                            g(e, t, n[t]);
+                                            m(e, t, n[t]);
                                         });
                                 }
                                 return e;

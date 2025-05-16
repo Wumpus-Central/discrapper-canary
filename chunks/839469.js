@@ -10,13 +10,13 @@ function o() {
         n = i.useRef(new r.Z((0, l.ji)(t))),
         [o, c] = i.useState(!1),
         [d, u] = i.useState(a.QF),
-        m = i.useCallback(async (e) => {
+        g = i.useCallback(async (e) => {
             u(await n.current.search(e.trim())), c(!0);
         }, []);
     return (
         i.useEffect(() => {
-            '' === e || e.length < 2 ? (u(a.QF), c(!1)) : m(e);
-        }, [e, m]),
+            '' === e || e.length < 2 ? (u(a.QF), c(!1)) : g(e);
+        }, [e, g]),
         {
             hasSearchResults: o,
             searchResults: d

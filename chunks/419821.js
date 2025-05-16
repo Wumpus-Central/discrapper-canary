@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(594174),
     d = n(933970),
     u = n(340453),
-    m = n(292352),
-    g = n(332495),
+    g = n(292352),
+    m = n(332495),
     p = n(388032),
     h = n(708734);
 function f(e) {
@@ -77,14 +77,14 @@ function f(e) {
                 className: h.details,
                 children: (0, i.jsx)(u.Z, {
                     otherUser: t,
-                    status: m.ne.ACTIVE
+                    status: g.ne.ACTIVE
                 })
             }),
             (0, i.jsx)('div', {
                 className: h.actions,
                 children: (0, i.jsx)(d.Z, {
                     icon: o.Dio,
-                    tooltip: p.intl.string(g.default.l20ZZm),
+                    tooltip: p.intl.string(m.default.l20ZZm),
                     onClick: f
                 })
             })

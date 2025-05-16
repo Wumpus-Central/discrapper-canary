@@ -1,5 +1,5 @@
-t.exports = function (t) {
-    return function (e) {
-        return null == e ? void 0 : e[t];
+e.exports = function (e) {
+    return function (t) {
+        return null == t ? void 0 : t[e];
     };
 };

@@ -8,7 +8,7 @@ var i = n(255367),
     c = n(630656),
     d = n(10970),
     u = n(388032);
-function m(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -33,7 +33,7 @@ function m(e) {
     }
     return e;
 }
-function g(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -59,7 +59,7 @@ function p(e) {
             h({ route: c.j.HOME });
         },
         _ = (e) => {
-            h(m({ route: c.j.SWITCH_APP_PLANS }, e)), n(u.intl.string(u.t.VFqtkJ), b);
+            h(g({ route: c.j.SWITCH_APP_PLANS }, e)), n(u.intl.string(u.t.VFqtkJ), b);
         },
         [x, E] = r.useState({});
     r.useEffect(() => {
@@ -67,13 +67,13 @@ function p(e) {
             var e;
             let t = null == (e = n.items[0]) ? void 0 : e.planId;
             null != t &&
-                (E((e) => g(m({}, e), { [n.id]: o.G.LOADING })),
+                (E((e) => m(g({}, e), { [n.id]: o.G.LOADING })),
                 (0, l.vY)(t)
                     .then(() => {
-                        E((e) => g(m({}, e), { [n.id]: o.G.DONE }));
+                        E((e) => m(g({}, e), { [n.id]: o.G.DONE }));
                     })
                     .catch(() => {
-                        E((e) => g(m({}, e), { [n.id]: o.G.ERROR }));
+                        E((e) => m(g({}, e), { [n.id]: o.G.ERROR }));
                     }));
         }
     }, [t]);
@@ -116,7 +116,7 @@ function p(e) {
                     }
                     return r;
                 })(p, ['route']);
-            return (0, i.jsx)(d.Z, g(m({}, S), { navigateToHome: b }));
+            return (0, i.jsx)(d.Z, m(g({}, S), { navigateToHome: b }));
         default:
             (0, s.vE)(f);
     }

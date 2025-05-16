@@ -1,5 +1,5 @@
-var e = r(434431),
-    o = r(436207);
-t.exports = function (t, n) {
-    e(n) && 'cause' in n && o(t, 'cause', n.cause);
+var r = n(434431),
+    i = n(436207);
+e.exports = function (e, t) {
+    r(t) && 'cause' in t && i(e, 'cause', t.cause);
 };

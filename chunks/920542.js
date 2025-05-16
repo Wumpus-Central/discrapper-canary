@@ -1,2 +1,2 @@
-var e = r(476078).match(/AppleWebKit\/(\d+)\./);
-t.exports = !!e && +e[1];
+var r = n(476078).match(/AppleWebKit\/(\d+)\./);
+e.exports = !!r && +r[1];

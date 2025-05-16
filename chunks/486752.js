@@ -1,3 +1,3 @@
-t.exports = function (t, e) {
-    return null != t && e in Object(t);
+e.exports = function (e, t) {
+    return null != e && t in Object(e);
 };

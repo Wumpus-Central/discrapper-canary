@@ -1,11 +1,11 @@
-var e = r(840475),
-    o = r(914331),
-    i = r(77826),
-    u = e.aTypedArray;
-(0, e.exportTypedArrayMethod)('at', function (t) {
-    var n = u(this),
-        r = o(n),
-        e = i(t),
-        c = e >= 0 ? e : r + e;
-    return c < 0 || c >= r ? void 0 : n[c];
+var r = n(840475),
+    i = n(914331),
+    a = n(77826),
+    o = r.aTypedArray;
+(0, r.exportTypedArrayMethod)('at', function (e) {
+    var t = o(this),
+        n = i(t),
+        r = a(e),
+        s = r >= 0 ? r : n + r;
+    return s < 0 || s >= n ? void 0 : t[s];
 });

@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(355467),
     d = n(179360),
     u = n(100527),
-    m = n(906732),
-    g = n(975298),
+    g = n(906732),
+    m = n(975298),
     p = n(600164),
     h = n(374649),
     f = n(431369),
@@ -104,7 +104,7 @@ async function D(e, t, n, i) {
 }
 function Z(e) {
     var t, n, s;
-    let { premiumSubscription: l, guildBoostSlotId: c, fractionalPremiumInfo: d, onBack: g, onNext: _, onClose: C } = e,
+    let { premiumSubscription: l, guildBoostSlotId: c, fractionalPremiumInfo: d, onBack: m, onNext: _, onClose: C } = e,
         [O, S] = r.useState(!1),
         [y, R] = r.useState(null),
         [Z, w] = r.useMemo(() => {
@@ -128,7 +128,7 @@ function Z(e) {
                 premiumGuildPlan: null != e ? j.Z.getForSkuAndInterval((0, v.Wz)(N.Si.GUILD), e.interval, e.intervalCount) : null
             };
         }),
-        { analyticsLocations: M } = (0, m.ZP)(),
+        { analyticsLocations: M } = (0, g.ZP)(),
         [U] = (0, h.ED)({
             subscriptionId: l.id,
             renewal: !0,
@@ -220,7 +220,7 @@ function Z(e) {
                             },
                             children: A.intl.string(A.t['/AS/gI'])
                         }),
-                        (0, i.jsx)(x.Z, { onClick: g })
+                        (0, i.jsx)(x.Z, { onClick: m })
                     ]
                 })
             ]
@@ -265,9 +265,9 @@ function k(e) {
         O.ZP.hasFetchedSubscriptions() || (0, c.jg)();
     }, []);
     let d = (0, a.e7)([O.ZP], () => O.ZP.getPremiumTypeSubscription()),
-        p = (0, g.Z)(),
+        p = (0, m.Z)(),
         [h, f] = r.useState(1),
-        { analyticsLocations: b } = (0, m.ZP)(u.Z.GUILD_BOOST_CANCELLATION_MODAL);
+        { analyticsLocations: b } = (0, g.ZP)(u.Z.GUILD_BOOST_CANCELLATION_MODAL);
     if (null == d) t = (0, i.jsx)(o.hzk, { children: (0, i.jsx)(o.$jN, {}) });
     else
         switch (h) {
@@ -300,7 +300,7 @@ function k(e) {
             default:
                 throw Error('Unexpected step: '.concat(h));
         }
-    return (0, i.jsx)(m.Gt, {
+    return (0, i.jsx)(g.Gt, {
         value: b,
         children: (0, i.jsx)(o.Y0X, {
             transitionState: s,

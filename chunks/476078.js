@@ -1,3 +1,3 @@
-var e = r(127849).navigator,
-    o = e && e.userAgent;
-t.exports = o ? String(o) : '';
+var r = n(127849).navigator,
+    i = r && r.userAgent;
+e.exports = i ? String(i) : '';

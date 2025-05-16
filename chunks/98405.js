@@ -1,25 +1,25 @@
-var e = r(127849),
-    o = r(840991).f,
-    i = r(436207),
-    u = r(556585),
-    c = r(587218),
-    a = r(190289),
-    f = r(275717);
-t.exports = function (t, n) {
-    var r,
-        s,
-        l,
-        p,
+var r = n(127849),
+    i = n(840991).f,
+    a = n(436207),
+    o = n(556585),
+    s = n(587218),
+    l = n(190289),
+    c = n(275717);
+e.exports = function (e, t) {
+    var n,
+        u,
         d,
-        _ = t.target,
-        h = t.global,
-        y = t.stat;
-    if ((r = h ? e : y ? e[_] || c(_, {}) : e[_] && e[_].prototype))
-        for (s in n) {
-            if (((p = n[s]), (l = t.dontCallGetSet ? (d = o(r, s)) && d.value : r[s]), !f(h ? s : _ + (y ? '.' : '#') + s, t.forced) && void 0 !== l)) {
-                if (typeof p == typeof l) continue;
-                a(p, l);
+        f,
+        _,
+        p = e.target,
+        h = e.global,
+        m = e.stat;
+    if ((n = h ? r : m ? r[p] || s(p, {}) : r[p] && r[p].prototype))
+        for (u in t) {
+            if (((f = t[u]), (d = e.dontCallGetSet ? (_ = i(n, u)) && _.value : n[u]), !c(h ? u : p + (m ? '.' : '#') + u, e.forced) && void 0 !== d)) {
+                if (typeof f == typeof d) continue;
+                l(f, d);
             }
-            (t.sham || (l && l.sham)) && i(p, 'sham', !0), u(r, s, p, t);
+            (e.sham || (d && d.sham)) && a(f, 'sham', !0), o(n, u, f, e);
         }
 };

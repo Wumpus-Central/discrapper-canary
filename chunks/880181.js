@@ -1,9 +1,9 @@
-var n = 'object' == typeof document && document.all;
-t.exports =
-    void 0 === n && void 0 !== n
-        ? function (t) {
-              return 'function' == typeof t || t === n;
+var t = 'object' == typeof document && document.all;
+e.exports =
+    void 0 === t && void 0 !== t
+        ? function (e) {
+              return 'function' == typeof e || e === t;
           }
-        : function (t) {
-              return 'function' == typeof t;
+        : function (e) {
+              return 'function' == typeof e;
           };

@@ -1,24 +1,24 @@
-var e = r(880181),
-    o = r(117895),
-    i = r(494465),
-    u = r(587218);
-t.exports = function (t, n, r, c) {
-    c || (c = {});
-    var a = c.enumerable,
-        f = void 0 !== c.name ? c.name : n;
-    if ((e(r) && i(r, f, c), c.global)) a ? (t[n] = r) : u(n, r);
+var r = n(880181),
+    i = n(117895),
+    a = n(494465),
+    o = n(587218);
+e.exports = function (e, t, n, s) {
+    s || (s = {});
+    var l = s.enumerable,
+        c = void 0 !== s.name ? s.name : t;
+    if ((r(n) && a(n, c, s), s.global)) l ? (e[t] = n) : o(t, n);
     else {
         try {
-            c.unsafe ? t[n] && (a = !0) : delete t[n];
-        } catch (t) {}
-        a
-            ? (t[n] = r)
-            : o.f(t, n, {
-                  value: r,
+            s.unsafe ? e[t] && (l = !0) : delete e[t];
+        } catch (e) {}
+        l
+            ? (e[t] = n)
+            : i.f(e, t, {
+                  value: n,
                   enumerable: !1,
-                  configurable: !c.nonConfigurable,
-                  writable: !c.nonWritable
+                  configurable: !s.nonConfigurable,
+                  writable: !s.nonWritable
               });
     }
-    return t;
+    return e;
 };

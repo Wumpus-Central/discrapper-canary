@@ -1,4 +1,5 @@
-Object.freeze({
+n.d(t, { Z: () => r });
+let r = Object.freeze({
     APPLICATION_SUBSCRIPTION_END: 'hsl(197, calc(var(--saturation-factor, 1) * 98.8%), 32.4%)',
     APPLICATION_SUBSCRIPTION_START: 'hsl(235, calc(var(--saturation-factor, 1) * 68.5%), 52.7%)',
     BATTLENET: 'hsl(200, calc(var(--saturation-factor, 1) * 100.0%), 44.9%)',

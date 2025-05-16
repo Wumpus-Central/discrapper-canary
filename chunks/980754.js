@@ -1,9 +1,9 @@
-var e = r(98405),
-    o = r(127849);
-e(
+var r = n(98405),
+    i = n(127849);
+r(
     {
         global: !0,
-        forced: o.globalThis !== o
+        forced: i.globalThis !== i
     },
-    { globalThis: o }
+    { globalThis: i }
 );

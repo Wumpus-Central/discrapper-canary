@@ -1,5 +1,5 @@
-t.exports = function (t) {
-    var e = this.__data__,
-        a = e.delete(t);
-    return (this.size = e.size), a;
+e.exports = function (e) {
+    var t = this.__data__,
+        n = t.delete(e);
+    return (this.size = t.size), n;
 };

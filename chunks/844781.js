@@ -1,9 +1,9 @@
-var r = a(402428),
-    n = a(42848),
-    _ = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
+var r = n(402428),
+    i = n(42848),
+    a = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
     o = /^\w*$/;
-t.exports = function (t, e) {
-    if (r(t)) return !1;
-    var a = typeof t;
-    return !!('number' == a || 'symbol' == a || 'boolean' == a || null == t || n(t)) || o.test(t) || !_.test(t) || (null != e && t in Object(e));
+e.exports = function (e, t) {
+    if (r(e)) return !1;
+    var n = typeof e;
+    return !!('number' == n || 'symbol' == n || 'boolean' == n || null == e || i(e)) || o.test(e) || !a.test(e) || (null != t && e in Object(t));
 };

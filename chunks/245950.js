@@ -8,8 +8,8 @@ var i = n(73800),
     c = n(584825),
     d = n(289393),
     u = n(697227),
-    m = n(981631),
-    g = n(388032);
+    g = n(981631),
+    m = n(388032);
 function p(e) {
     let t = (0, u.W)(e),
         n = (0, l.e7)([d.Z], () => d.Z.getSubscriptionListingForPlan(t)),
@@ -28,13 +28,13 @@ function p(e) {
                       n = s()(t.currentPeriodEnd).format('M/D/YY'),
                       i = null != t.price ? (0, o.T4)(t.price, t.currency) : '',
                       r = s()(t.createdAt).format('M/D/YY'),
-                      l = t.status === m.O0b.CANCELED,
-                      a = t.status === m.O0b.PAST_DUE,
+                      l = t.status === g.O0b.CANCELED,
+                      a = t.status === g.O0b.PAST_DUE,
                       c = t.hasActiveTrial;
                   return {
                       memberSince: r,
                       nextRenewalDate: n,
-                      nextRenewalLabel: l ? g.intl.string(g.t.UAfot7) : g.intl.string(g.t.CVjLcH),
+                      nextRenewalLabel: l ? m.intl.string(m.t.UAfot7) : m.intl.string(m.t.CVjLcH),
                       subscriptionPrice: i,
                       isCancelled: l,
                       isPastDue: a,

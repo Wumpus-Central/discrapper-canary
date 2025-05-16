@@ -1,7 +1,7 @@
-var e = r(614767),
-    o = String,
-    i = TypeError;
-t.exports = function (t) {
-    if (e(t)) return t;
-    throw new i("Can't set " + o(t) + ' as a prototype');
+var r = n(614767),
+    i = String,
+    a = TypeError;
+e.exports = function (e) {
+    if (r(e)) return e;
+    throw new a("Can't set " + i(e) + ' as a prototype');
 };

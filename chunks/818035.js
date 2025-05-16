@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(539854), n(388685), n(642613);
+n.d(t, { Z: () => g }), n(539854), n(388685), n(642613);
 var i,
     r,
     s,
@@ -29,7 +29,7 @@ class u extends (i = l.ZP.Store) {
               writable: !0
           })
         : (u[r] = s);
-let m = new u(a.Z, {
+let g = new u(a.Z, {
     BILLING_PAYMENTS_FETCH_SUCCESS: function (e) {
         let { payments: t } = e;
         for (let e of t) {

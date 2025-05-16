@@ -1,13 +1,13 @@
-var e = r(992174),
-    o = Math.floor,
-    i = function (t, n) {
-        var r = t.length;
-        if (r < 8)
-            for (var u, c, a = 1; a < r; ) {
-                for (c = a, u = t[a]; c && n(t[c - 1], u) > 0; ) t[c] = t[--c];
-                c !== a++ && (t[c] = u);
+var r = n(992174),
+    i = Math.floor,
+    a = function (e, t) {
+        var n = e.length;
+        if (n < 8)
+            for (var o, s, l = 1; l < n; ) {
+                for (s = l, o = e[l]; s && t(e[s - 1], o) > 0; ) e[s] = e[--s];
+                s !== l++ && (e[s] = o);
             }
-        else for (var f = o(r / 2), s = i(e(t, 0, f), n), l = i(e(t, f), n), p = s.length, d = l.length, _ = 0, h = 0; _ < p || h < d; ) t[_ + h] = _ < p && h < d ? (0 >= n(s[_], l[h]) ? s[_++] : l[h++]) : _ < p ? s[_++] : l[h++];
-        return t;
+        else for (var c = i(n / 2), u = a(r(e, 0, c), t), d = a(r(e, c), t), f = u.length, _ = d.length, p = 0, h = 0; p < f || h < _; ) e[p + h] = p < f && h < _ ? (0 >= t(u[p], d[h]) ? u[p++] : d[h++]) : p < f ? u[p++] : d[h++];
+        return e;
     };
-t.exports = i;
+e.exports = a;

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var i = n(255367);
 n(73800);
 var r = n(399606),
@@ -9,11 +9,11 @@ var r = n(399606),
     c = n(981631),
     d = n(65154),
     u = n(388032),
-    m = n(908406);
-function g() {
+    g = n(908406);
+function m() {
     return (0, r.e7)([a.Z], () => a.Z.supports(d.AN.LOOPBACK))
         ? (0, i.jsx)('div', {
-              className: m.micTest,
+              className: g.micTest,
               children: (0, i.jsx)(l.Z, {
                   title: u.intl.string(u.t.gyljWF),
                   description: u.intl.string(u.t['8hhsCQ']),
@@ -23,7 +23,7 @@ function g() {
                       children: [
                           u.intl.string(u.t['MA+OZm']),
                           (0, i.jsx)(s.eee, {
-                              className: m.micTestHelpLink,
+                              className: g.micTestHelpLink,
                               href: o.Z.getArticleURL(c.BhN.NO_INPUT_DETECTED),
                               children: u.intl.string(u.t.RYKKo6)
                           })
@@ -31,7 +31,7 @@ function g() {
                   }),
                   buttonTest: u.intl.string(u.t.c4qHt7),
                   buttonStop: u.intl.string(u.t.I6OnJy),
-                  buttonClassName: m.micTestButton,
+                  buttonClassName: g.micTestButton,
                   buttonColor: s.zxk.Colors.BRAND,
                   location: {
                       page: c.ZY5.USER_SETTINGS,

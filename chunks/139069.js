@@ -1,1 +1,1 @@
-t.exports = a(573401).Uint8Array;
+e.exports = n(573401).Uint8Array;

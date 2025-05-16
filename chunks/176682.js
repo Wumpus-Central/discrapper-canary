@@ -1,7 +1,7 @@
-var e = r(880181),
-    o = r(434431),
-    i = r(769827);
-t.exports = function (t, n, r) {
-    var u, c;
-    return i && e((u = n.constructor)) && u !== r && o((c = u.prototype)) && c !== r.prototype && i(t, c), t;
+var r = n(880181),
+    i = n(434431),
+    a = n(769827);
+e.exports = function (e, t, n) {
+    var o, s;
+    return a && r((o = t.constructor)) && o !== n && i((s = o.prototype)) && s !== n.prototype && a(e, s), e;
 };

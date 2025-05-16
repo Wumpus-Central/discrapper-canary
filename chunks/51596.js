@@ -20,8 +20,8 @@ var i = n(570140),
     c = n(212819),
     d = n(815372),
     u = n(336197),
-    m = n(359110),
-    g = n(769654),
+    g = n(359110),
+    m = n(769654),
     p = n(722589),
     h = n(131704),
     f = n(592125),
@@ -84,20 +84,20 @@ function A(e, t) {
         o = n[(0, c.gJ)(c.a8.DOWN, -1, n)],
         d = C.Z.isEmail(r),
         u = C.Z.isPhoneNumber(r),
-        m = C.Z.isUserTagLike(r),
-        g = null != a && (0, S.AB)(a),
+        g = C.Z.isUserTagLike(r),
+        m = null != a && (0, S.AB)(a),
         p = (e) => (null == e ? null : e.type === c.h8.IN_APP_NAVIGATION ? e.type + '_' + e.record.type : e.type),
         b = {
-            current_channel_id: g ? void 0 : a,
-            current_channel_static_route: g ? a : void 0,
+            current_channel_id: m ? void 0 : a,
+            current_channel_static_route: m ? a : void 0,
             current_guild_id: l,
             query_mode: null != i ? i : 'GENERAL',
             query_length: r.length,
             max_query_length: s,
             is_email_like: d,
             is_phone_like: u,
-            is_username_like: m,
-            query: d || u || m ? null : r,
+            is_username_like: g,
+            query: d || u || g ? null : r,
             top_result_type: p(o),
             top_result_score: null != o ? o.score : null,
             num_results_total: j.Z.getResultTotals(),
@@ -174,11 +174,11 @@ function k(e) {
         x = { page: O.ZY5.QUICK_SWITCHER };
     switch (h) {
         case c.h8.GUILD:
-            (0, g.X)(_.id, { navigationReplace: !0 });
+            (0, m.X)(_.id, { navigationReplace: !0 });
             break;
         case c.h8.TEXT_CHANNEL:
             null != (t = f.Z.getChannel(_.id)) &&
-                (0, m.Kh)(t.id, {
+                (0, g.Kh)(t.id, {
                     state: { analyticsSource: x },
                     navigationReplace: !0
                 });
@@ -186,7 +186,7 @@ function k(e) {
         case c.h8.VOICE_CHANNEL:
             null != (t = f.Z.getChannel(_.id)) &&
                 (n ? s.Z.updateChatOpen(_.id, !0) : a.default.selectVoiceChannel(_.id),
-                (0, m.Kh)(t.id, {
+                (0, g.Kh)(t.id, {
                     state: { analyticsSource: x },
                     navigationReplace: !0
                 }));
@@ -199,7 +199,7 @@ function k(e) {
                 l.Z.channelListScrollTo(O.ME, f.Z.getDMFromUserId(_.id));
             break;
         case c.h8.GROUP_DM:
-            (0, m.Kh)(_.id, { navigationReplace: !0 }), l.Z.channelListScrollTo(O.ME, _.id);
+            (0, g.Kh)(_.id, { navigationReplace: !0 }), l.Z.channelListScrollTo(O.ME, _.id);
             break;
         case c.h8.APPLICATION:
             let E = b.Z.getActiveLibraryApplication(_.id);

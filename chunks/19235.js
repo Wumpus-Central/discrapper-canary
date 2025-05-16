@@ -1,12 +1,12 @@
-var e = Function.prototype.toString;
-t.exports = function (t) {
-    if (null != t) {
+var t = Function.prototype.toString;
+e.exports = function (e) {
+    if (null != e) {
         try {
-            return e.call(t);
-        } catch (t) {}
+            return t.call(e);
+        } catch (e) {}
         try {
-            return t + '';
-        } catch (t) {}
+            return e + '';
+        } catch (e) {}
     }
     return '';
 };

@@ -1,22 +1,26 @@
-r.d(t, { u: () => o });
-var n = r(255367);
-r(73800);
-var l = r(481060),
-    i = r(372129),
-    a = r(162337);
-let o = (e) => {
-        let { setUserImage: t } = e;
+r.d(t, { u: () => d }), r(388685);
+var n = r(255367),
+    a = r(73800),
+    i = r(481060),
+    s = r(327802),
+    l = r(372129),
+    o = r(598117),
+    c = r(746622),
+    u = r(162337);
+let d = (e) => {
+        let { setUserImage: t } = e,
+            [r, l] = a.useState(null);
         return (0, n.jsxs)('div', {
-            className: a.emptyState,
+            className: u.emptyState,
             children: [
                 (0, n.jsxs)('header', {
                     children: [
-                        (0, n.jsx)(l.X6q, {
+                        (0, n.jsx)(i.X6q, {
                             variant: 'heading-lg/medium',
                             color: 'header-primary',
                             children: 'Add Emoji'
                         }),
-                        (0, n.jsx)(l.Text, {
+                        (0, n.jsx)(i.Text, {
                             variant: 'text-sm/normal',
                             color: 'header-muted',
                             children: "Select an image or GIF. You'll be able to edit & preview."
@@ -24,29 +28,34 @@ let o = (e) => {
                     ]
                 }),
                 (0, n.jsxs)('div', {
-                    className: a.dropZone,
+                    className: u.dropZone,
                     children: [
-                        (0, n.jsx)(l.dZu, {
+                        (0, n.jsx)(i.dZu, {
                             size: 'lg',
-                            color: l.TVs.colors.HEADER_MUTED
+                            color: i.TVs.colors.HEADER_MUTED
                         }),
-                        (0, n.jsxs)(l.Text, {
+                        (0, n.jsxs)(i.Text, {
                             variant: 'text-md/medium',
-                            children: ['Drag & drop or ', (0, n.jsx)(s, { setUserImage: t })]
+                            children: ['Drag & drop or ', (0, n.jsx)(h, { setUserImage: t })]
+                        }),
+                        null !== r && (0, n.jsx)(c.H, { error: o.ze.IMAGE_LOAD }),
+                        (0, n.jsx)(s.X, {
+                            onSuccess: t,
+                            onError: l
                         })
                     ]
                 })
             ]
         });
     },
-    s = (e) => {
+    h = (e) => {
         let { setUserImage: t } = e;
-        return (0, n.jsxs)(l.P3F, {
+        return (0, n.jsxs)(i.P3F, {
             focusProps: { within: !0 },
             tag: 'a',
             children: [
                 'Select an image',
-                (0, n.jsx)(i.Z, {
+                (0, n.jsx)(l.ZP, {
                     tabIndex: 0,
                     onChange: (e, r, n) => (
                         t({

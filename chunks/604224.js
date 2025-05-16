@@ -9,8 +9,8 @@ var r = n(442837),
     c = n(526156),
     d = n(406613),
     u = n(314394),
-    m = n(625528),
-    g = n(674116),
+    g = n(625528),
+    m = n(674116),
     p = n(754367),
     h = n(661950),
     f = n(526761),
@@ -21,7 +21,7 @@ function E() {
     let { analyticsLocations: e } = (0, l.ZP)([s.Z.USER_SETTINGS_VOICE_AND_VIDEO]),
         t = (0, r.e7)([a.Z], () => a.Z.getSubsection()),
         { showRefreshedSettings: n } = (0, d.F)({ location: 'UserSettingsVoiceAndVideo' });
-    if (!n) return (0, i.jsx)(g.Z, {});
+    if (!n) return (0, i.jsx)(m.Z, {});
     let E = [
             {
                 title: x.intl.string(x.t.K3lovL),
@@ -30,7 +30,7 @@ function E() {
             },
             {
                 title: x.intl.string(x.t.FlNoSU),
-                component: m.Z,
+                component: g.Z,
                 setting: b.s6.VOICE_AND_VIDEO_VIDEO_TAB,
                 subsection: f.gP
             },

@@ -13,8 +13,8 @@ var i = n(255367),
     c = n(605236),
     d = n(703656),
     u = n(664915),
-    m = n(507808),
-    g = n(432792),
+    g = n(507808),
+    m = n(432792),
     p = n(981631),
     h = n(921944),
     f = n(46140),
@@ -46,7 +46,7 @@ function _(e) {
 }
 let x = (e) =>
         (0, i.jsx)(
-            g.tE,
+            m.tE,
             _(
                 {
                     titleText: b.intl.string(b.t.KnWRQU),
@@ -59,7 +59,7 @@ let x = (e) =>
         ),
     E = [p.Z5c.ME, p.Z5c.COLLECTIBLES_SHOP, p.Z5c.NITRO_HOME],
     C = (e) => {
-        var { onClose: t, onCtaClick: n, targetElementRef: a, isGuildBarScrolling: c, children: m } = e,
+        var { onClose: t, onCtaClick: n, targetElementRef: a, isGuildBarScrolling: c, children: g } = e,
             h = (function (e, t) {
                 if (null == e) return {};
                 var n,
@@ -86,7 +86,7 @@ let x = (e) =>
             v = r.useCallback(
                 (e) => {
                     if (S) {
-                        let t = window.innerHeight - ((0, g.t4)() + C.COACHMARK_VERTICAL_OFFSET);
+                        let t = window.innerHeight - ((0, m.t4)() + C.COACHMARK_VERTICAL_OFFSET);
                         return e.top <= t;
                     }
                     return !0;
@@ -111,7 +111,7 @@ let x = (e) =>
                 },
                 [b]
             );
-        return (0, i.jsx)(g.WS, {
+        return (0, i.jsx)(m.WS, {
             positionControlRef: f,
             targetElementRef: a,
             coachmarkRef: O,
@@ -131,7 +131,7 @@ let x = (e) =>
                 )
             ),
             spacing: 8,
-            children: m
+            children: g
         });
     };
 C.COACHMARK_VERTICAL_OFFSET = 10;
@@ -140,11 +140,11 @@ let j = (e) => {
         s = (0, o.Q3)('VirtualCurrency: DiscoveryOnboardingCoachmark'),
         l = r.useCallback(() => {
             if (s && null !== n.current) {
-                let e = (0, g.t4)();
+                let e = (0, m.t4)();
                 n.current.getBoundingClientRect().bottom > window.innerHeight - e && i();
             }
         }, [s, n, i]),
-        { shouldShow: d, closeCoachmarkIfOpen: u } = (0, g.M)({
+        { shouldShow: d, closeCoachmarkIfOpen: u } = (0, m.M)({
             onboardingCoachmarkType: 'discover',
             onShowCoachmarkHandler: l
         }),
@@ -162,7 +162,7 @@ let j = (e) => {
         _ = r.useCallback(() => u('CTA_CLICK'), [u]),
         x = r.useCallback(() => {
             b('CTA_CLICK'),
-                (0, m.Y)({
+                (0, g.Y)({
                     pageType: p.ZY5.GUILD_LIST,
                     sectionType: p.jXE.ORBS_DISCOVERY_ONBOARDING_COACHMARK,
                     ctaObject: p.qAy.DISCOVERY_BUTTON_TO_ORB_INTRO_QUEST

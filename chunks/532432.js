@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(906732),
     d = n(243778),
     u = n(373230),
-    m = n(654904),
-    g = n(993413),
+    g = n(654904),
+    m = n(993413),
     p = n(921944),
     h = n(486324),
     f = n(485696),
@@ -32,7 +32,7 @@ function E(e) {
         Z = R === a.z.RECENT_AVATARS_SETTINGS_PROFILE_PAGE_NEW_BADGE,
         w = r.useCallback(() => {
             D(p.L.TAKE_ACTION),
-                (0, m.$r)({
+                (0, g.$r)({
                     uploadType: h.pC.AVATAR,
                     analyticsSource: N,
                     filters: v ? x : void 0,
@@ -40,7 +40,7 @@ function E(e) {
                     isTryItOutFlow: v
                 });
         }, [j, N, v, D]);
-    return (0, i.jsx)(g.Z, {
+    return (0, i.jsx)(m.Z, {
         className: O,
         title: E,
         titleIcon: Z

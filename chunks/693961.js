@@ -1,6 +1,6 @@
-var e = r(621523),
-    o = r(530575);
-t.exports = !e(function () {
-    var t = Error('a');
-    return !('stack' in t) || (Object.defineProperty(t, 'stack', o(1, 7)), 7 !== t.stack);
+var r = n(621523),
+    i = n(530575);
+e.exports = !r(function () {
+    var e = Error('a');
+    return !('stack' in e) || (Object.defineProperty(e, 'stack', i(1, 7)), 7 !== e.stack);
 });

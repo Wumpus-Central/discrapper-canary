@@ -1,33 +1,34 @@
-var r = a(990393),
-    n = Object.prototype.hasOwnProperty;
-t.exports = function (t, e, a, _, o, i) {
-    var c = 1 & a,
-        s = r(t),
-        E = s.length;
-    if (E != r(e).length && !c) return !1;
-    for (var l = E; l--; ) {
-        var u = s[l];
-        if (!(c ? u in e : n.call(e, u))) return !1;
+var r = n(990393),
+    i = 1,
+    a = Object.prototype.hasOwnProperty;
+e.exports = function (e, t, n, o, s, l) {
+    var c = n & i,
+        u = r(e),
+        d = u.length;
+    if (d != r(t).length && !c) return !1;
+    for (var f = d; f--; ) {
+        var _ = u[f];
+        if (!(c ? _ in t : a.call(t, _))) return !1;
     }
-    var I = i.get(t),
-        R = i.get(e);
-    if (I && R) return I == e && R == t;
-    var d = !0;
-    i.set(t, e), i.set(e, t);
-    for (var f = c; ++l < E; ) {
-        var A = t[(u = s[l])],
-            p = e[u];
-        if (_) var N = c ? _(p, A, u, e, t, i) : _(A, p, u, t, e, i);
-        if (!(void 0 === N ? A === p || o(A, p, a, _, i) : N)) {
-            d = !1;
+    var p = l.get(e),
+        h = l.get(t);
+    if (p && h) return p == t && h == e;
+    var m = !0;
+    l.set(e, t), l.set(t, e);
+    for (var g = c; ++f < d; ) {
+        var E = e[(_ = u[f])],
+            b = t[_];
+        if (o) var y = c ? o(b, E, _, t, e, l) : o(E, b, _, e, t, l);
+        if (!(void 0 === y ? E === b || s(E, b, n, o, l) : y)) {
+            m = !1;
             break;
         }
-        f || (f = 'constructor' == u);
+        g || (g = 'constructor' == _);
     }
-    if (d && !f) {
-        var T = t.constructor,
-            L = e.constructor;
-        T != L && 'constructor' in t && 'constructor' in e && !('function' == typeof T && T instanceof T && 'function' == typeof L && L instanceof L) && (d = !1);
+    if (m && !g) {
+        var O = e.constructor,
+            v = t.constructor;
+        O != v && 'constructor' in e && 'constructor' in t && !('function' == typeof O && O instanceof O && 'function' == typeof v && v instanceof v) && (m = !1);
     }
-    return i.delete(t), i.delete(e), d;
+    return l.delete(e), l.delete(t), m;
 };

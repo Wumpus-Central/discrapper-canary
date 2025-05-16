@@ -9,7 +9,7 @@ var i = n(255367),
 let d = r.forwardRef(function (e, t) {
     var n,
         r,
-        { currentPageIndex: s, numPages: d, onChangePage: u, children: m, className: g, showPageCount: p = !0 } = e,
+        { currentPageIndex: s, numPages: d, onChangePage: u, children: g, className: m, showPageCount: p = !0 } = e,
         h = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -59,7 +59,7 @@ let d = r.forwardRef(function (e, t) {
             return e;
         })(
             {
-                className: l()(c.__invalid_paginator, g),
+                className: l()(c.__invalid_paginator, m),
                 ref: t
             },
             h
@@ -67,7 +67,7 @@ let d = r.forwardRef(function (e, t) {
         (r = r =
             {
                 children: [
-                    m,
+                    g,
                     (0, i.jsxs)('div', {
                         className: c.pageActions,
                         children: [

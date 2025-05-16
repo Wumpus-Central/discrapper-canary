@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(74538),
     d = n(716161),
     u = n(634041),
-    m = n(647177),
-    g = n(672339),
+    g = n(647177),
+    m = n(672339),
     p = n(898531),
     h = n(636188),
     f = n(678916),
@@ -83,14 +83,14 @@ function O(e) {
     }),
         r.useEffect(() => {
             let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: n } = L.current;
-            e ? (0, g.FU)(n, v, { track: !1 }).catch(() => t(null)) : null != n && t(null);
+            e ? (0, m.FU)(n, v, { track: !1 }).catch(() => t(null)) : null != n && t(null);
         }, [v]);
     let B = (e) => {
         S(e),
-            (0, g.FU)(e, v, { location: w.location })
+            (0, m.FU)(e, v, { location: w.location })
                 .then(() => A(null))
                 .catch(() => {
-                    A(x.intl.string(x.t.ejrSLS)), (0, g.FU)(null, v, { location: w.location });
+                    A(x.intl.string(x.t.ejrSLS)), (0, m.FU)(null, v, { location: w.location });
                 });
     };
     return P
@@ -127,7 +127,7 @@ function O(e) {
                           return new Promise(async (i) => {
                               try {
                                   let i = await (0, d.Ff)(e, f.xV.BACKGROUND);
-                                  B(i), (0, m.g5)(i, t.type === _.m.MP4, n), A(null);
+                                  B(i), (0, g.g5)(i, t.type === _.m.MP4, n), A(null);
                               } catch (e) {
                                   A(e.message);
                               }

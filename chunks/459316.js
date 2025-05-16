@@ -1,6 +1,6 @@
-var e = r(707104),
-    o = r(661970);
-t.exports = function (t) {
-    var n = e(t, 'string');
-    return o(n) ? n : n + '';
+var r = n(707104),
+    i = n(661970);
+e.exports = function (e) {
+    var t = r(e, 'string');
+    return i(t) ? t : t + '';
 };

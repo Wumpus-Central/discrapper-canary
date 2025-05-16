@@ -25,7 +25,7 @@ function u(e) {
         [l, u] = r.useState();
     return (
         null == l &&
-            (l = (0, i.jsx)(m, {
+            (l = (0, i.jsx)(g, {
                 onBack: t,
                 title: c.intl.string(c.t['DB/m9f'])
             })),
@@ -38,7 +38,7 @@ function u(e) {
                         subscriptions: n,
                         updateHeader: (e, t) => {
                             u(
-                                (0, i.jsx)(m, {
+                                (0, i.jsx)(g, {
                                     title: e,
                                     onBack: () => {
                                         t(), u(void 0);
@@ -52,7 +52,7 @@ function u(e) {
         })
     );
 }
-function m(e) {
+function g(e) {
     let { onBack: t, title: n } = e;
     return (0, i.jsxs)('div', {
         className: d.title,

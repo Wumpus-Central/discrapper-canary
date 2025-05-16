@@ -9,8 +9,8 @@ var r = n(512722),
     c = n(295474),
     d = n(74469),
     u = n(396402),
-    m = n(442933),
-    g = n(150039),
+    g = n(442933),
+    m = n(150039),
     p = n(126631),
     h = n(433411),
     f = n(532432),
@@ -101,8 +101,8 @@ function Z() {
         }),
         Q = (0, c.gS)(),
         J = P.ZP.canUsePremiumProfileCustomization(B),
-        $ = (0, g.gd)(U, B.avatar),
-        ee = (0, g.f$)(G, null == M ? void 0 : M.banner),
+        $ = (0, m.gd)(U, B.avatar),
+        ee = (0, m.f$)(G, null == M ? void 0 : M.banner),
         et = 'DefaultCustomizationSections';
     (0, o.j)({
         location: et + ' auto on',
@@ -117,7 +117,7 @@ function Z() {
         er = (null != (n = null == (e = q.global_name) ? void 0 : e.length) ? n : 0) > 0 ? q.global_name : null != (r = null == Q ? void 0 : Q.nick) ? r : [],
         es = (null != (Z = null == (t = q.bio) ? void 0 : t.length) ? Z : 0) > 0 ? q.bio : null != (w = null == Q ? void 0 : Q.bio) ? w : [],
         el = (0, u.w)(),
-        ea = (0, m.H)('DefaultCustomizationSections');
+        ea = (0, g.H)('DefaultCustomizationSections');
     return (0, i.jsxs)('div', {
         className: D.sectionsContainer,
         children: [
@@ -204,7 +204,7 @@ function Z() {
                 {
                     sectionTitle: R.intl.string(R.t.NepzEx),
                     errors: es,
-                    onBioChange: (e) => (0, g.xQ)(e, null == M ? void 0 : M.bio),
+                    onBioChange: (e) => (0, m.xQ)(e, null == M ? void 0 : M.bio),
                     pendingBio: F,
                     currentBio: null != (L = null == M ? void 0 : M.bio) ? L : ''
                 },

@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(963056),
     d = n(570928),
     u = n(100527),
-    m = n(906732),
-    g = n(51144),
+    g = n(906732),
+    m = n(51144),
     p = n(429467),
     h = n(981631),
     f = n(388032),
@@ -40,7 +40,7 @@ function _(e) {
 }
 function x(e) {
     let { hovered: t, activities: s, user: l, applicationStream: f, voiceChannel: x, status: E, userTag: C, customStatusHoverOnlyRTCEntrypointEnabled: j } = e,
-        { analyticsLocations: O } = (0, m.ZP)(u.Z.RTC_PANEL),
+        { analyticsLocations: O } = (0, g.ZP)(u.Z.RTC_PANEL),
         S =
             null == s
                 ? void 0
@@ -104,7 +104,7 @@ function x(e) {
                 };
             });
         }, [O]),
-        T = r.useMemo(() => (null != E && E !== a.Skl.UNKNOWN && null != l && l.isPomelo() ? (0, i.jsx)(c.Z, { text: g.ZP.humanizeStatus(E) }) : C), [E, l, C]),
+        T = r.useMemo(() => (null != E && E !== a.Skl.UNKNOWN && null != l && l.isPomelo() ? (0, i.jsx)(c.Z, { text: m.ZP.humanizeStatus(E) }) : C), [E, l, C]),
         I = void 0 !== S,
         [N, y] = r.useState(!1),
         A = r.useMemo(
@@ -125,7 +125,7 @@ function x(e) {
                   children: T
               })
             : A;
-    return (0, i.jsx)(m.Gt, {
+    return (0, i.jsx)(g.Gt, {
         value: O,
         children:
             null != s && s.length > 0

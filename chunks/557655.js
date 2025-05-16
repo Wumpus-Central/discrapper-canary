@@ -1,18 +1,18 @@
-var n = function () {
+var t = function () {
     (this.head = null), (this.tail = null);
 };
-(n.prototype = {
-    add: function (t) {
-        var n = {
-                item: t,
+(t.prototype = {
+    add: function (e) {
+        var t = {
+                item: e,
                 next: null
             },
-            r = this.tail;
-        r ? (r.next = n) : (this.head = n), (this.tail = n);
+            n = this.tail;
+        n ? (n.next = t) : (this.head = t), (this.tail = t);
     },
     get: function () {
-        var t = this.head;
-        if (t) return null === (this.head = t.next) && (this.tail = null), t.item;
+        var e = this.head;
+        if (e) return null === (this.head = e.next) && (this.tail = null), e.item;
     }
 }),
-    (t.exports = n);
+    (e.exports = t);

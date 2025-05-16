@@ -1,45 +1,45 @@
-var e = r(98405),
-    o = r(507604),
-    i = r(127849),
-    u = r(46015),
-    c = r(77025),
-    a = r(880181),
-    f = r(568033),
-    s = r(382698),
-    l = r(573078),
-    p = r(190289),
-    d = i.Symbol,
-    _ = d && d.prototype;
-if (o && a(d) && (!('description' in _) || void 0 !== d().description)) {
+var r = n(98405),
+    i = n(507604),
+    a = n(127849),
+    o = n(46015),
+    s = n(77025),
+    l = n(880181),
+    c = n(568033),
+    u = n(382698),
+    d = n(573078),
+    f = n(190289),
+    _ = a.Symbol,
+    p = _ && _.prototype;
+if (i && l(_) && (!('description' in p) || void 0 !== _().description)) {
     var h = {},
-        y = function () {
-            var t = arguments.length < 1 || void 0 === arguments[0] ? void 0 : s(arguments[0]),
-                n = f(_, this) ? new d(t) : void 0 === t ? d() : d(t);
-            return '' === t && (h[n] = !0), n;
+        m = function () {
+            var e = arguments.length < 1 || void 0 === arguments[0] ? void 0 : u(arguments[0]),
+                t = c(p, this) ? new _(e) : void 0 === e ? _() : _(e);
+            return '' === e && (h[t] = !0), t;
         };
-    p(y, d), (y.prototype = _), (_.constructor = y);
-    var b = 'Symbol(description detection)' === String(d('description detection')),
-        g = u(_.valueOf),
-        v = u(_.toString),
-        w = /^Symbol\((.*)\)[^)]+$/,
-        m = u(''.replace),
-        x = u(''.slice);
-    l(_, 'description', {
+    f(m, _), (m.prototype = p), (p.constructor = m);
+    var g = 'Symbol(description detection)' === String(_('description detection')),
+        E = o(p.valueOf),
+        b = o(p.toString),
+        y = /^Symbol\((.*)\)[^)]+$/,
+        O = o(''.replace),
+        v = o(''.slice);
+    d(p, 'description', {
         configurable: !0,
         get: function () {
-            var t = g(this);
-            if (c(h, t)) return '';
-            var n = v(t),
-                r = b ? x(n, 7, -1) : m(n, w, '$1');
-            return '' === r ? void 0 : r;
+            var e = E(this);
+            if (s(h, e)) return '';
+            var t = b(e),
+                n = g ? v(t, 7, -1) : O(t, y, '$1');
+            return '' === n ? void 0 : n;
         }
     }),
-        e(
+        r(
             {
                 global: !0,
                 constructor: !0,
                 forced: !0
             },
-            { Symbol: y }
+            { Symbol: m }
         );
 }

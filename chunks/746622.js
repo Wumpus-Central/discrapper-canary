@@ -3,43 +3,43 @@ r.d(t, {
     z: () => d
 });
 var n = r(255367),
-    l = r(598117),
+    a = r(598117),
     i = r(981631),
-    a = r(185923),
-    o = r(388032),
-    s = r(632261);
+    s = r(185923),
+    l = r(388032),
+    o = r(632261);
 let c = (e) => {
         let { error: t } = e;
         return (0, n.jsx)('div', {
-            className: s.errorBanner,
+            className: o.errorBanner,
             children: (0, n.jsx)('p', { children: u(t) })
         });
     },
     u = (e) => {
         switch (e) {
             case i.evJ.TOO_MANY_EMOJI:
-                return o.intl.string(o.t['jP/Rqq']);
+                return l.intl.string(l.t['jP/Rqq']);
             case i.evJ.TOO_MANY_ANIMATED_EMOJI:
-                return o.intl.string(o.t['6v5dPz']);
-            case l.ze.TOO_BIG:
+                return l.intl.string(l.t['6v5dPz']);
+            case a.ze.TOO_BIG:
             case i.evJ.INVALID_FILE_ASSET_SIZE:
             case i.evJ.INVALID_FORM_BODY:
-                return o.intl.formatToPlainString(o.t.kIO9j4, { maxSize: a.xG });
+                return l.intl.formatToPlainString(l.t.kIO9j4, { maxSize: s.xG });
             case i.evJ.INVALID_FILE_ASSET_SIZE_RESIZE_GIF:
-                return o.intl.string(o.t.sp16MT);
-            case l.ze.MISSING_IMAGE_DATA:
-                return o.intl.string(o.t['41/Kbm']);
-            case l.ze.MISSING_GUILD:
-                return o.intl.string(o.t['8RCtpK']);
-            case l.ze.GIF_CROPPING:
-                return o.intl.string(o.t.X6rtiI);
-            case l.ze.IMAGE_LOAD:
-                return o.intl.string(o.t['+ITMYW']);
+                return l.intl.string(l.t.sp16MT);
+            case a.ze.MISSING_IMAGE_DATA:
+                return l.intl.string(l.t['41/Kbm']);
+            case a.ze.MISSING_GUILD:
+                return l.intl.string(l.t['8RCtpK']);
+            case a.ze.GIF_CROPPING:
+                return l.intl.string(l.t.X6rtiI);
+            case a.ze.IMAGE_LOAD:
+                return l.intl.string(l.t['+ITMYW']);
             case 429:
-                return o.intl.string(o.t['4rjikp']);
-            case l.ze.UNKNOWN:
+                return l.intl.string(l.t['4rjikp']);
+            case a.ze.UNKNOWN:
             default:
-                return o.intl.string(o.t.iufib2);
+                return l.intl.string(l.t.iufib2);
         }
     },
     d = (e) => {
@@ -56,5 +56,5 @@ let c = (e) => {
                     if (!Number.isNaN(e)) return e;
                 }
             } catch (e) {}
-        return l.ze.UNKNOWN;
+        return a.ze.UNKNOWN;
     };

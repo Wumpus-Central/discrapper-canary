@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var i = n(255367);
 n(73800);
 var r = n(481060),
@@ -9,7 +9,7 @@ var r = n(481060),
     c = n(388032),
     d = n(641089),
     u = n(309389);
-let m = () => {
+let g = () => {
     let e = { section: o.jXE.REVERSE_TRIAL_BANNER };
     return (0, i.jsxs)('div', {
         className: d.banner,

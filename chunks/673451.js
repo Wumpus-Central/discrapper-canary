@@ -1,7 +1,7 @@
-var e = r(553136),
-    o = r(344894);
-t.exports =
+var r = n(553136),
+    i = n(344894);
+e.exports =
     Object.keys ||
-    function (t) {
-        return e(t, o);
+    function (e) {
+        return r(e, i);
     };

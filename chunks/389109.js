@@ -1,3 +1,3 @@
-t.exports = function (t) {
-    return null != t && 'object' == typeof t;
+e.exports = function (e) {
+    return null != e && 'object' == typeof e;
 };

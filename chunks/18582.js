@@ -9,7 +9,7 @@ var i = n(255367),
 function d(e) {
     var t,
         n,
-        { children: s, onClick: d, className: u, tag: m, target: g, isGrass: p = !1, muted: h = !1, disabled: f = !1 } = e,
+        { children: s, onClick: d, className: u, tag: g, target: m, isGrass: p = !1, muted: h = !1, disabled: f = !1 } = e,
         b = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -68,8 +68,8 @@ function d(e) {
             {
                 onClick: f ? void 0 : E,
                 className: l()(_, u),
-                tag: m,
-                target: g,
+                tag: g,
+                target: m,
                 children: s
             }),
         Object.getOwnPropertyDescriptors

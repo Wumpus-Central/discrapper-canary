@@ -1,77 +1,48 @@
-a.d(e, {
-    Rt: () => _,
-    iY: () => c,
-    l4: () => o,
-    qT: () => i
-});
-var r = a(573736);
-let n = a(899517).n;
-function _(t, e = {}) {
-    if (!t) return '<unknown>';
+n.d(t, { Rt: () => o });
+var r = n(573736);
+let i = n(899517).n,
+    a = 80;
+function o(e, t = {}) {
+    if (!e) return '<unknown>';
     try {
-        let a,
-            _ = t,
+        let n,
+            r = e,
+            i = 5,
             o = [],
-            i = 0,
+            l = 0,
             c = 0,
-            s = Array.isArray(e) ? e : e.keyAttrs,
-            E = (!Array.isArray(e) && e.maxStringLength) || 80;
-        for (
-            ;
-            _ &&
-            i++ < 5 &&
-            ((a = (function (t, e) {
-                let a = [];
-                if (!t || !t.tagName) return '';
-                if (n.HTMLElement && t instanceof HTMLElement && t.dataset) {
-                    if (t.dataset.sentryComponent) return t.dataset.sentryComponent;
-                    if (t.dataset.sentryElement) return t.dataset.sentryElement;
-                }
-                a.push(t.tagName.toLowerCase());
-                let _ = e && e.length ? e.filter((e) => t.getAttribute(e)).map((e) => [e, t.getAttribute(e)]) : null;
-                if (_ && _.length)
-                    _.forEach((t) => {
-                        a.push(`[${t[0]}="${t[1]}"]`);
-                    });
-                else {
-                    t.id && a.push(`#${t.id}`);
-                    let e = t.className;
-                    if (e && (0, r.HD)(e)) for (let t of e.split(/\s+/)) a.push(`.${t}`);
-                }
-                for (let e of ['aria-label', 'type', 'name', 'title', 'alt']) {
-                    let r = t.getAttribute(e);
-                    r && a.push(`[${e}="${r}"]`);
-                }
-                return a.join('');
-            })(_, s)),
-            'html' !== a && (!(i > 1) || !(c + 3 * o.length + a.length >= E)));
-
-        )
-            o.push(a), (c += a.length), (_ = _.parentNode);
-        return o.reverse().join(' > ');
-    } catch (t) {
+            u = ' > ',
+            d = u.length,
+            f = Array.isArray(t) ? t : t.keyAttrs,
+            _ = (!Array.isArray(t) && t.maxStringLength) || a;
+        for (; r && l++ < i && ((n = s(r, f)), 'html' !== n && (!(l > 1) || !(c + o.length * d + n.length >= _))); ) o.push(n), (c += n.length), (r = r.parentNode);
+        return o.reverse().join(u);
+    } catch (e) {
         return '<unknown>';
     }
 }
-function o() {
-    try {
-        return n.document.location.href;
-    } catch (t) {
-        return '';
+function s(e, t) {
+    let n = e,
+        a = [];
+    if (!n || !n.tagName) return '';
+    if (i.HTMLElement && n instanceof HTMLElement && n.dataset) {
+        if (n.dataset.sentryComponent) return n.dataset.sentryComponent;
+        if (n.dataset.sentryElement) return n.dataset.sentryElement;
     }
-}
-function i(t) {
-    return n.document && n.document.querySelector ? n.document.querySelector(t) : null;
-}
-function c(t) {
-    if (!n.HTMLElement) return null;
-    let e = t;
-    for (let t = 0; t < 5 && e; t++) {
-        if (e instanceof HTMLElement) {
-            if (e.dataset.sentryComponent) return e.dataset.sentryComponent;
-            if (e.dataset.sentryElement) return e.dataset.sentryElement;
-        }
-        e = e.parentNode;
+    a.push(n.tagName.toLowerCase());
+    let o = t && t.length ? t.filter((e) => n.getAttribute(e)).map((e) => [e, n.getAttribute(e)]) : null;
+    if (o && o.length)
+        o.forEach((e) => {
+            a.push(`[${e[0]}="${e[1]}"]`);
+        });
+    else {
+        n.id && a.push(`#${n.id}`);
+        let e = n.className;
+        if (e && (0, r.HD)(e)) for (let t of e.split(/\s+/)) a.push(`.${t}`);
     }
-    return null;
+    for (let e of ['aria-label', 'type', 'name', 'title', 'alt']) {
+        let t = n.getAttribute(e);
+        t && a.push(`[${e}="${t}"]`);
+    }
+    return a.join('');
 }

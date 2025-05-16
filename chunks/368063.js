@@ -1,5 +1,5 @@
-var r = a(98405),
-    n = a(580983);
+var r = n(98405),
+    i = n(580983);
 r(
     {
         target: 'URL',
@@ -8,7 +8,7 @@ r(
     },
     {
         toJSON: function () {
-            return n(URL.prototype.toString, this);
+            return i(URL.prototype.toString, this);
         }
     }
 );

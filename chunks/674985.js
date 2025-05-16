@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var i,
     r,
     s,
@@ -21,7 +21,7 @@ class u extends (s = l.ZP.Store) {
               writable: !0
           })
         : (u[i] = r);
-let m = new u(a.Z, {
+let g = new u(a.Z, {
     CONNECTION_OPEN: function () {
         let e = o.default.getCurrentUser();
         null != e && (e.hasFlag(c.xW$.HYPESQUAD_ONLINE_HOUSE_1) ? (d = c.gkr.HOUSE_1) : e.hasFlag(c.xW$.HYPESQUAD_ONLINE_HOUSE_2) ? (d = c.gkr.HOUSE_2) : e.hasFlag(c.xW$.HYPESQUAD_ONLINE_HOUSE_3) && (d = c.gkr.HOUSE_3));

@@ -8,13 +8,13 @@ var i = n(255367),
     c = n(572004),
     d = n(70956),
     u = n(981631),
-    m = n(388032);
-let g = d.Z.Millis.SECOND,
-    p = 2 * g,
+    g = n(388032);
+let m = d.Z.Millis.SECOND,
+    p = 2 * m,
     h = d.Z.Millis.HALF_SECOND,
-    f = [() => m.intl.string(m.t.MSaeTU), () => m.intl.string(m.t.UmrCw8), () => m.intl.string(m.t.gKE0Ji), () => m.intl.string(m.t['4DSKbm']), () => m.intl.string(m.t['+8ENdX']), () => m.intl.string(m.t.GlWHv7), () => m.intl.string(m.t.hIzxU1), () => m.intl.string(m.t['26uMPD']), () => m.intl.string(m.t.uFs7R0), () => m.intl.string(m.t.bLXdcX), () => m.intl.string(m.t.gPg9fX)];
+    f = [() => g.intl.string(g.t.MSaeTU), () => g.intl.string(g.t.UmrCw8), () => g.intl.string(g.t.gKE0Ji), () => g.intl.string(g.t['4DSKbm']), () => g.intl.string(g.t['+8ENdX']), () => g.intl.string(g.t.GlWHv7), () => g.intl.string(g.t.hIzxU1), () => g.intl.string(g.t['26uMPD']), () => g.intl.string(g.t.uFs7R0), () => g.intl.string(g.t.bLXdcX), () => g.intl.string(g.t.gPg9fX)];
 function b(e) {
-    let { text: t, copyValue: n, children: d, onCopy: m, 'aria-label': b, delay: _ = h } = e,
+    let { text: t, copyValue: n, children: d, onCopy: g, 'aria-label': b, delay: _ = h } = e,
         [x, E] = r.useState(0),
         [C, j] = r.useState(!1),
         [O, S] = r.useState(!1),
@@ -34,7 +34,7 @@ function b(e) {
         N = I ? a.FGA.RED : a.FGA.GREEN,
         y = C ? N : a.FGA.PRIMARY,
         A = () => {
-            null == m || m(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), O || E(x + 1), S(!0), j(!0), v.start(g, () => S(!1)), T.start(p, () => E(0));
+            null == g || g(), (0, c.JG)(n), o.default.track(u.rMx.TEXT_COPIED), O || E(x + 1), S(!0), j(!0), v.start(m, () => S(!1)), T.start(p, () => E(0));
         };
     return (0, i.jsx)(a.ua7, {
         text: (() => {

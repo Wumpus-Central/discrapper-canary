@@ -1,6 +1,6 @@
-var e = r(896471),
-    o = r(655152);
-t.exports = function (t, n) {
-    var r = t[n];
-    return o(r) ? void 0 : e(r);
+var r = n(896471),
+    i = n(655152);
+e.exports = function (e, t) {
+    var n = e[t];
+    return i(n) ? void 0 : r(n);
 };

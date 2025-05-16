@@ -12,18 +12,18 @@ var i = n(913527),
     c = n(835473),
     d = n(594190),
     u = n(553795),
-    m = n(77498),
-    g = n(283595),
+    g = n(77498),
+    m = n(283595),
     p = n(823379),
     h = n(981631),
     f = n(701488);
 function b() {
-    let e = (0, s.Wu)([d.ZP, m.Z, g.Z], () =>
+    let e = (0, s.Wu)([d.ZP, g.Z, m.Z], () =>
             d.ZP.getGamesSeen(!1)
-                .filter((e) => !!(0, d.FZ)(e, [d.ZP, m.Z, g.Z]).detectable && null != e.lastLaunched && 30 >= r()().diff(e.lastLaunched, 'days'))
+                .filter((e) => !!(0, d.FZ)(e, [d.ZP, g.Z, m.Z]).detectable && null != e.lastLaunched && 30 >= r()().diff(e.lastLaunched, 'days'))
                 .map((e) => {
                     var t, n;
-                    return null != (n = e.id) ? n : null == (t = m.Z.getGameByGameData(e)) ? void 0 : t.id;
+                    return null != (n = e.id) ? n : null == (t = g.Z.getGameByGameData(e)) ? void 0 : t.id;
                 })
         ),
         t = e.length,

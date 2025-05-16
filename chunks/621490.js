@@ -12,8 +12,8 @@ var i = n(255367),
     c = n(612853),
     d = n(712297),
     u = n(982204),
-    m = n(811334),
-    g = n(152521),
+    g = n(811334),
+    m = n(152521),
     p = n(960919),
     h = n(981631),
     f = n(388032),
@@ -127,14 +127,14 @@ let E = (e) => {
     j = (e) => {
         let { orbPriceAmount: t, skuId: n } = e,
             { skusById: s } = (0, d.Z)({
-                applicationId: (0, g.N)(n),
+                applicationId: (0, m.N)(n),
                 skuIDs: [n],
                 isGift: !1,
                 currentPaymentSourceId: null
             }),
             l = s[n];
         return void 0 === l
-            ? (0, i.jsx)(m.aO, {
+            ? (0, i.jsx)(g.aO, {
                   children: (0, i.jsx)(r.$jN, {
                       type: r.$jN.Type.PULSING_ELLIPSIS,
                       className: b.purchaseDetailsSpinner

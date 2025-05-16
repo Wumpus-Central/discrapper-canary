@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(442837),
     d = n(481060),
     u = n(570140),
-    m = n(496929),
-    g = n(37234),
+    g = n(496929),
+    m = n(37234),
     p = n(230711),
     h = n(410030),
     f = n(454585),
@@ -34,7 +34,7 @@ function Z(e) {
     let t,
         { outboundPromotion: n, code: s, addClaimedOutboundPromotionCode: a, disabled: o } = e,
         [c, u] = r.useState(!1),
-        [m, g] = r.useState(!1),
+        [g, m] = r.useState(!1),
         p = () => u((e) => !e),
         b = (0, h.ZP)(),
         E = (0, x.Pz)(n.id, b),
@@ -62,7 +62,7 @@ function Z(e) {
                   onClickDetails: p
               }));
     let S = j ? R.intl.string(R.t['2cHUtr']) : R.intl.string(R.t.O13yh4),
-        v = r.useCallback(() => g(!1), []),
+        v = r.useCallback(() => m(!1), []),
         { outboundTitle: T, outboundTermsAndConditions: I } = n;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -104,7 +104,7 @@ function Z(e) {
                                     className: D.promotionCardButton,
                                     color: d.zxk.Colors.BRAND,
                                     size: d.zxk.Sizes.SMALL,
-                                    onClick: () => g(!0),
+                                    onClick: () => m(!0),
                                     disabled: o,
                                     children: S
                                 })
@@ -119,7 +119,7 @@ function Z(e) {
                         })
                 ]
             }),
-            m &&
+            g &&
                 (0, i.jsx)(d.u_l, {
                     renderModal: (e) => {
                         var t, r;
@@ -188,7 +188,7 @@ let w = function () {
         [h, f] = r.useState(!1);
     r.useEffect(() => {
         u.Z.wait(() => {
-            (0, m.Qv)().then(() => f(!0));
+            (0, g.Qv)().then(() => f(!0));
         });
     }, []);
     let { promotionsLoaded: _, activeOutboundPromotions: x, claimedEndedOutboundPromotions: C, claimedOutboundPromotionCodeMap: w, addClaimedOutboundPromotionCode: k } = (0, E.lG)(),
@@ -216,7 +216,7 @@ let w = function () {
                               variant: 'heading-md/semibold',
                               children: L ? R.intl.string(R.t.wFsj3N) : void 0
                           }),
-                          m = B
+                          g = B
                               ? (0, i.jsxs)('div', {
                                     className: D.promoHeaderContainer,
                                     children: [
@@ -230,7 +230,7 @@ let w = function () {
                                             className: D.promoDescription,
                                             children: R.intl.format(R.t.G4fwxM, {
                                                 onClick: () => {
-                                                    (0, g.xf)(), (0, S.uL)(A.Z5c.APPLICATION_STORE);
+                                                    (0, m.xf)(), (0, S.uL)(A.Z5c.APPLICATION_STORE);
                                                 }
                                             })
                                         }),
@@ -256,7 +256,7 @@ let w = function () {
                                   children: (0, i.jsxs)(d.hjN, {
                                       className: l()({ [D.marginContainer]: !B }),
                                       children: [
-                                          m,
+                                          g,
                                           C.map((e) => {
                                               let { code: t, promotion: n } = e;
                                               return (0, i.jsx)(

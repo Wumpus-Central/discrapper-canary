@@ -1,4 +1,4 @@
-a.d(e, { Z: () => n });
+n.d(t, { Z: () => i });
 let r = Object.freeze({
         HALF_SECOND: 500,
         SECOND: 1000,
@@ -8,7 +8,7 @@ let r = Object.freeze({
         WEEK: 604800000,
         DAYS_30: 2592000000
     }),
-    n = {
+    i = {
         Millis: r,
         Seconds: Object.freeze({
             SECOND: 1,

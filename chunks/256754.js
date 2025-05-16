@@ -58,7 +58,7 @@ let u = async function () {
     let { userImage: e = null, guildId: t = null } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     await (0, i.ZDy)(
         async () => {
-            let { EmojiStudioModal: i } = await n.e('78331').then(n.bind(n, 311770));
+            let { EmojiStudioModal: i } = await Promise.all([n.e('20087'), n.e('42775')]).then(n.bind(n, 311770));
             return (n) =>
                 (0, r.jsx)(
                     i,

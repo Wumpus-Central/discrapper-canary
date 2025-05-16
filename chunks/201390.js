@@ -1,7 +1,7 @@
-var e = r(77826),
-    o = Math.max,
-    i = Math.min;
-t.exports = function (t, n) {
-    var r = e(t);
-    return r < 0 ? o(r + n, 0) : i(r, n);
+var r = n(77826),
+    i = Math.max,
+    a = Math.min;
+e.exports = function (e, t) {
+    var n = r(e);
+    return n < 0 ? i(n + t, 0) : a(n, t);
 };

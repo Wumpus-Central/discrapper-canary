@@ -1,6 +1,8 @@
-var r,
-    n = a(54640),
-    _ = (r = /[^.]+$/.exec((n && n.keys && n.keys.IE_PROTO) || '')) ? 'Symbol(src)_1.' + r : '';
-t.exports = function (t) {
-    return !!_ && _ in t;
+var r = n(54640),
+    i = (function () {
+        var e = /[^.]+$/.exec((r && r.keys && r.keys.IE_PROTO) || '');
+        return e ? 'Symbol(src)_1.' + e : '';
+    })();
+e.exports = function (e) {
+    return !!i && i in e;
 };

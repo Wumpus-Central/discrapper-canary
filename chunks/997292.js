@@ -8,20 +8,20 @@ var i = n(106351),
     c = n(433355),
     d = n(592125),
     u = n(944486),
-    m = n(914010),
-    g = n(981631);
+    g = n(914010),
+    m = n(981631);
 let p = {
     binds: ['mod+u'],
     comboKeysBindGlobal: !0,
     action() {
-        let e = m.Z.getGuildId(),
+        let e = g.Z.getGuildId(),
             t = u.Z.getChannelId(e),
             n = d.Z.getChannel(t);
         if (null != t && null != n && n.type === i.d.GUILD_VOICE) return r.Z.updateChatOpen(t, !l.Z.getChatOpen(t)), !1;
         if (null != t && null != n && n.type === i.d.DM) {
             let e = c.ZP.getSection(t, null == n ? void 0 : n.isDM()),
                 i = (0, o.Of)(n.getRecipientId()),
-                r = e === g.ULH.PROFILE;
+                r = e === m.ULH.PROFILE;
             return (
                 (0, a.TY)({
                     displayProfile: i,

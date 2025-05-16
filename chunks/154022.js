@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(442837),
     d = n(481060),
     u = n(230711),
-    m = n(419363),
-    g = n(857595),
+    g = n(419363),
+    m = n(857595),
     p = n(607070),
     h = n(627845),
     f = n(600164),
@@ -83,7 +83,7 @@ let G = (0, b.hQ)(),
     F = (0, b.hQ)(),
     H = (0, b.hQ)(),
     z = o().debounce((e) => {
-        (0, g.o2)(e);
+        (0, m.o2)(e);
     }, 250),
     W = o().debounce((e) => {
         (0, S.Ct)(e);
@@ -249,7 +249,7 @@ function q() {
                     hideBorder: !0,
                     className: l()(B.marginTop20, B.marginBottom20),
                     value: t,
-                    onChange: g.f1,
+                    onChange: m.f1,
                     note: k.intl.string(k.t.nlAOER),
                     children: k.intl.string(k.t.bQCodH)
                 })
@@ -265,7 +265,7 @@ function X() {
             note: k.intl.string(k.t['72i5GB']),
             value: e,
             onChange: function () {
-                (0, g.gs)(!e);
+                (0, m.gs)(!e);
             },
             children: k.intl.string(k.t.OLZFBw)
         })
@@ -300,7 +300,7 @@ function Q() {
                             }
                         ],
                         onChange: function (e) {
-                            (0, g.u1)(e.value);
+                            (0, m.u1)(e.value);
                         },
                         value: e
                     })
@@ -329,7 +329,7 @@ function J() {
                     }),
                     className: B.marginTop20,
                     value: e,
-                    onChange: g.Uv,
+                    onChange: m.Uv,
                     children: k.intl.string(k.t['sSY+mJ'])
                 })
             })
@@ -344,7 +344,7 @@ function $() {
     }, [e]);
     let s = r.useRef(null);
     r.useEffect(() => {
-        null != s.current && (clearTimeout(s.current), (s.current = null)), t !== e && (s.current = setTimeout(() => (0, g.qz)(t), 150));
+        null != s.current && (clearTimeout(s.current), (s.current = null)), t !== e && (s.current = setTimeout(() => (0, m.qz)(t), 150));
     }, [t, e]);
     let l = k.intl.format(k.t.GwEVEx, { learnMoreLink: I.Z.getArticleURL(D.BhN.FORCED_COLORS) });
     return (0, i.jsx)(d.xJW, {
@@ -377,19 +377,19 @@ function ee() {
             gifAutoPlayOverrideReason: y.Z.getAppliedOverrideReasonKey('gifAutoPlay'),
             animateEmojiOverrideReason: y.Z.getAppliedOverrideReasonKey('animateEmoji')
         })),
-        m = r.useRef(null);
-    (0, A.Z)(m, P.rP.REDUCED_MOTION);
+        g = r.useRef(null);
+    (0, A.Z)(g, P.rP.REDUCED_MOTION);
     let h = r.useCallback(
             (e, t) => {
-                (0, g.Zt)(t ? 'auto' : a);
+                (0, m.Zt)(t ? 'auto' : a);
             },
             [a]
         ),
         f = r.useCallback((e) => {
-            (0, g.Zt)(e ? 'reduce' : 'no-preference');
+            (0, m.Zt)(e ? 'reduce' : 'no-preference');
         }, []);
     return (0, i.jsxs)(d.xJW, {
-        ref: m,
+        ref: g,
         title: k.intl.string(k.t.e3TR1d),
         className: l()(B.marginTop20, L.reducedMotion),
         children: [
@@ -496,7 +496,7 @@ function en() {
                     children: (0, i.jsx)(d.j7V, {
                         className: B.marginTop20,
                         value: e,
-                        onChange: g.eN,
+                        onChange: m.eN,
                         children: k.intl.string(k.t['3Fztn5'])
                     })
                 }),
@@ -524,7 +524,7 @@ function ei() {
     let e = N.OW.useSetting(),
         t = (0, c.e7)([v.Z], () => v.Z.speechRate),
         [n, s] = r.useState(!1);
-    return m.Zh
+    return g.Zh
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(O.F, {

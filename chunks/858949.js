@@ -1,20 +1,20 @@
-var e = r(146063),
-    o = r(201390),
-    i = r(914331),
-    u = function (t) {
-        return function (n, r, u) {
-            var c,
-                a = e(n),
-                f = i(a);
-            if (0 === f) return !t && -1;
-            var s = o(u, f);
-            if (t && r != r) {
-                for (; f > s; ) if ((c = a[s++]) != c) return !0;
-            } else for (; f > s; s++) if ((t || s in a) && a[s] === r) return t || s || 0;
-            return !t && -1;
+var r = n(146063),
+    i = n(201390),
+    a = n(914331),
+    o = function (e) {
+        return function (t, n, o) {
+            var s,
+                l = r(t),
+                c = a(l);
+            if (0 === c) return !e && -1;
+            var u = i(o, c);
+            if (e && n != n) {
+                for (; c > u; ) if ((s = l[u++]) != s) return !0;
+            } else for (; c > u; u++) if ((e || u in l) && l[u] === n) return e || u || 0;
+            return !e && -1;
         };
     };
-t.exports = {
-    includes: u(!0),
-    indexOf: u(!1)
+e.exports = {
+    includes: o(!0),
+    indexOf: o(!1)
 };

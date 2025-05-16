@@ -1,10 +1,10 @@
-t.exports = function (t) {
-    var e = -1,
-        a = Array(t.size);
+e.exports = function (e) {
+    var t = -1,
+        n = Array(e.size);
     return (
-        t.forEach(function (t, r) {
-            a[++e] = [r, t];
+        e.forEach(function (e, r) {
+            n[++t] = [r, e];
         }),
-        a
+        n
     );
 };

@@ -187,42 +187,43 @@ let I = {
     };
 function T(e) {
     var t,
-        { color: n, caretColor: a, isActive: s = !1, className: m, iconClassName: E, onPopoutClick: O, popoutOpen: T = !1, popoutDisabled: A = !1, isTrayButton: N, applyStyles: C = !1 } = e,
-        P = y(e, ['color', 'caretColor', 'isActive', 'className', 'iconClassName', 'onPopoutClick', 'popoutOpen', 'popoutDisabled', 'isTrayButton', 'applyStyles']);
-    let R = (0, _.Z)(n, s),
-        w = null != a ? a : R,
-        D = (0, c.Z)('(max-width: 456px)'),
-        L = i.useRef(null),
-        x = i.useContext(d.h9);
+        { ref: n, color: a, caretColor: s, isActive: m = !1, className: E, iconClassName: O, onPopoutClick: T, popoutOpen: A = !1, popoutDisabled: N = !1, isTrayButton: C, applyStyles: P = !1 } = e,
+        R = y(e, ['ref', 'color', 'caretColor', 'isActive', 'className', 'iconClassName', 'onPopoutClick', 'popoutOpen', 'popoutDisabled', 'isTrayButton', 'applyStyles']);
+    let w = (0, _.Z)(a, m),
+        D = null != s ? s : w,
+        L = (0, c.Z)('(max-width: 456px)'),
+        x = i.useRef(null),
+        k = i.useContext(d.h9);
     i.useEffect(() => {
-        null != L.current && (x ? L.current.pause() : L.current.play());
-    }, [x]);
-    let k = null != (t = P.onContextMenu) ? t : O,
-        M = null == O && !N,
-        j = null != O && !N,
-        U = N && null != O,
-        G = (0, r.jsx)(
+        null != x.current && (k ? x.current.pause() : x.current.play());
+    }, [k]);
+    let M = null != (t = R.onContextMenu) ? t : T,
+        j = null == T && !C,
+        U = null != T && !C,
+        G = C && null != T,
+        B = (0, r.jsx)(
             v,
-            b(g({}, P), {
+            b(g({}, R), {
                 grow: !1,
-                onContextMenu: k,
-                iconClassName: o()(E, h.centerIcon, M && h.fullRegionIcon),
-                className: o()(D || C ? m : null, s && h.active, h.centerButton, S[R], M && h.fullRegionButton, U && h.attachedButton)
+                onContextMenu: M,
+                iconClassName: o()(O, h.centerIcon, j && h.fullRegionIcon),
+                className: o()(L || P ? E : null, m && h.active, h.centerButton, S[w], j && h.fullRegionButton, G && h.attachedButton)
             })
         );
-    return D
-        ? G
+    return L
+        ? B
         : (0, r.jsxs)('div', {
-              className: o()(h.attachedCaretButtonContainer, T && h.popoutOpen, m, j && [h.fullRegionDropdownButton, I[R]]),
+              ref: n,
+              className: o()(h.attachedCaretButtonContainer, A && h.popoutOpen, E, U && [h.fullRegionDropdownButton, I[w]]),
               children: [
-                  G,
-                  null != O
+                  B,
+                  null != T
                       ? (0, r.jsx)(f.Z, {
                             children: (0, r.jsx)(l.P3F, {
                                 'aria-label': p.intl.string(p.t.PdRCRk),
-                                onClick: A ? void 0 : O,
-                                className: o()(h.contextMenuNub, N && h.attachedCaret, S[w], T && [h.popoutOpen, h.active], A && h.disabled),
-                                children: (0, r.jsx)(u.Z, { className: o()(h.contextMenuCaret, T && h.open, A && h.disabled) })
+                                onClick: N ? void 0 : T,
+                                className: o()(h.contextMenuNub, C && h.attachedCaret, S[D], A && [h.popoutOpen, h.active], N && h.disabled),
+                                children: (0, r.jsx)(u.Z, { className: o()(h.contextMenuCaret, A && h.open, N && h.disabled) })
                             })
                         })
                       : null

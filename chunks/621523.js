@@ -1,7 +1,7 @@
-t.exports = function (t) {
+e.exports = function (e) {
     try {
-        return !!t();
-    } catch (t) {
+        return !!e();
+    } catch (e) {
         return !0;
     }
 };

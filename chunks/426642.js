@@ -1,63 +1,63 @@
-n.d(t, {
-    Z: () => d,
+r.d(e, {
+    Z: () => f,
     d: () => u
 }),
-    n(953529);
-var r,
-    i = n(255367);
-n(73800);
-var l = n(692547),
-    s = n(481060),
-    a = n(752657),
-    o = n(388032),
-    c = n(135340),
-    u = (((r = {})[(r.TOO_BIG = 0)] = 'TOO_BIG'), (r[(r.RATE_LIMIT = 1)] = 'RATE_LIMIT'), (r[(r.TOO_MANY_EMOJI = 2)] = 'TOO_MANY_EMOJI'), (r[(r.TOO_MANY_ANIMATED_EMOJI = 3)] = 'TOO_MANY_ANIMATED_EMOJI'), (r[(r.WRONG_TYPE = 4)] = 'WRONG_TYPE'), (r[(r.RESIZE_GIF = 5)] = 'RESIZE_GIF'), r);
-let d = (e) => {
-    let { error: t } = e,
-        { type: n, filename: r } = t,
+    r(953529);
+var n,
+    i = r(255367);
+r(73800);
+var l = r(692547),
+    o = r(481060),
+    a = r(752657),
+    s = r(388032),
+    c = r(135340),
+    u = (((n = {})[(n.TOO_BIG = 0)] = 'TOO_BIG'), (n[(n.RATE_LIMIT = 1)] = 'RATE_LIMIT'), (n[(n.TOO_MANY_EMOJI = 2)] = 'TOO_MANY_EMOJI'), (n[(n.TOO_MANY_ANIMATED_EMOJI = 3)] = 'TOO_MANY_ANIMATED_EMOJI'), (n[(n.WRONG_TYPE = 4)] = 'WRONG_TYPE'), (n[(n.RESIZE_GIF = 5)] = 'RESIZE_GIF'), n);
+let f = (t) => {
+    let { error: e } = t,
+        { type: r, filename: n } = e,
         {
             icon: u,
-            description: d,
-            color: m,
-            tooltip: g
+            description: f,
+            color: d,
+            tooltip: h
         } = {
             0: {
-                icon: s.gm1,
-                description: o.intl.string(o.t.YbdEFB),
+                icon: o.gm1,
+                description: s.intl.string(s.t.YbdEFB),
                 color: l.Z.unsafe_rawColors.RED_400.css,
-                tooltip: o.intl.string(o.t.PanA4O)
+                tooltip: s.intl.string(s.t.PanA4O)
             },
             4: {
-                icon: s.LB9,
-                description: o.intl.string(o.t['01Papq']),
+                icon: o.LB9,
+                description: s.intl.string(s.t['01Papq']),
                 color: l.Z.unsafe_rawColors.RED_400.css,
-                tooltip: o.intl.string(o.t.PanA4O)
+                tooltip: s.intl.string(s.t.PanA4O)
             },
             5: {
                 icon: a.Z,
-                description: o.intl.string(o.t.sp16MT),
+                description: s.intl.string(s.t.sp16MT),
                 color: l.Z.unsafe_rawColors.RED_400.css,
-                tooltip: o.intl.string(o.t.PanA4O)
+                tooltip: s.intl.string(s.t.PanA4O)
             },
             1: {
-                icon: s.EmW,
-                description: o.intl.string(o.t['4rjikp']),
+                icon: o.EmW,
+                description: s.intl.string(s.t['4rjikp']),
                 color: l.Z.unsafe_rawColors.ORANGE_345.css,
-                tooltip: o.intl.string(o.t.dq9aTk)
+                tooltip: s.intl.string(s.t.dq9aTk)
             },
             2: {
-                icon: s.d3s,
-                description: o.intl.string(o.t['5VmbbG']),
+                icon: o.d3s,
+                description: s.intl.string(s.t['5VmbbG']),
                 color: l.Z.unsafe_rawColors.RED_400.css,
-                tooltip: o.intl.string(o.t.PanA4O)
+                tooltip: s.intl.string(s.t.PanA4O)
             },
             3: {
-                icon: s.d3s,
-                description: o.intl.string(o.t.rjFOZ2),
+                icon: o.d3s,
+                description: s.intl.string(s.t.rjFOZ2),
                 color: l.Z.unsafe_rawColors.RED_400.css,
-                tooltip: o.intl.string(o.t.PanA4O)
+                tooltip: s.intl.string(s.t.PanA4O)
             }
-        }[n];
+        }[r];
     return (0, i.jsxs)('div', {
         className: c.emojiErrorItem,
         children: [
@@ -65,27 +65,27 @@ let d = (e) => {
                 className: c.fileIcon,
                 color: l.Z.unsafe_rawColors.PRIMARY_300.css
             }),
-            (0, i.jsxs)(s.hjN, {
+            (0, i.jsxs)(o.hjN, {
                 className: c.fileInfo,
                 children: [
-                    (0, i.jsx)(s.vwX, {
+                    (0, i.jsx)(o.vwX, {
                         className: c.fileName,
-                        children: r
+                        children: n
                     }),
-                    (0, i.jsx)(s.R94, {
-                        type: s.geA.DESCRIPTION,
-                        children: d
+                    (0, i.jsx)(o.R94, {
+                        type: o.geA.DESCRIPTION,
+                        children: f
                     })
                 ]
             }),
-            (0, i.jsx)(s.DY3, {
+            (0, i.jsx)(o.DY3, {
                 position: 'right',
-                text: g,
-                children: (0, i.jsx)(s.P4T, {
+                text: h,
+                children: (0, i.jsx)(o.P4T, {
                     size: 'custom',
                     width: 20,
                     height: 20,
-                    color: m
+                    color: d
                 })
             })
         ]

@@ -1,5 +1,6 @@
-var r = a(657398),
-    n = a(389109);
-t.exports = function (t) {
-    return 'symbol' == typeof t || (n(t) && '[object Symbol]' == r(t));
+var r = n(657398),
+    i = n(389109),
+    a = '[object Symbol]';
+e.exports = function (e) {
+    return 'symbol' == typeof e || (i(e) && r(e) == a);
 };

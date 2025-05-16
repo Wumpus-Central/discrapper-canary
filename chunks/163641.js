@@ -1,35 +1,35 @@
-var e = r(154028),
-    o = r(77025),
-    i = r(436207),
-    u = r(568033),
-    c = r(769827),
-    a = r(190289),
-    f = r(316096),
-    s = r(176682),
-    l = r(759319),
-    p = r(179351),
-    d = r(903225),
-    _ = r(507604),
-    h = r(511696);
-t.exports = function (t, n, r, y) {
-    var b = 'stackTraceLimit',
-        g = y ? 2 : 1,
-        v = t.split('.'),
-        w = v[v.length - 1],
-        m = e.apply(null, v);
-    if (m) {
-        var x = m.prototype;
-        if ((!h && o(x, 'cause') && delete x.cause, !r)) return m;
-        var A = e('Error'),
-            O = n(function (t, n) {
-                var r = l(y ? n : t, void 0),
-                    e = y ? new m(t) : new m();
-                return void 0 !== r && i(e, 'message', r), d(e, O, e.stack, 2), this && u(x, this) && s(e, this, O), arguments.length > g && p(e, arguments[g]), e;
+var r = n(154028),
+    i = n(77025),
+    a = n(436207),
+    o = n(568033),
+    s = n(769827),
+    l = n(190289),
+    c = n(316096),
+    u = n(176682),
+    d = n(759319),
+    f = n(179351),
+    _ = n(903225),
+    p = n(507604),
+    h = n(511696);
+e.exports = function (e, t, n, m) {
+    var g = 'stackTraceLimit',
+        E = m ? 2 : 1,
+        b = e.split('.'),
+        y = b[b.length - 1],
+        O = r.apply(null, b);
+    if (O) {
+        var v = O.prototype;
+        if ((!h && i(v, 'cause') && delete v.cause, !n)) return O;
+        var I = r('Error'),
+            S = t(function (e, t) {
+                var n = d(m ? t : e, void 0),
+                    r = m ? new O(e) : new O();
+                return void 0 !== n && a(r, 'message', n), _(r, S, r.stack, 2), this && o(v, this) && u(r, this, S), arguments.length > E && f(r, arguments[E]), r;
             });
-        if (((O.prototype = x), 'Error' !== w ? (c ? c(O, A) : a(O, A, { name: !0 })) : _ && b in m && (f(O, m, b), f(O, m, 'prepareStackTrace')), a(O, m), !h))
+        if (((S.prototype = v), 'Error' !== y ? (s ? s(S, I) : l(S, I, { name: !0 })) : p && g in O && (c(S, O, g), c(S, O, 'prepareStackTrace')), l(S, O), !h))
             try {
-                x.name !== w && i(x, 'name', w), (x.constructor = O);
-            } catch (t) {}
-        return O;
+                v.name !== y && a(v, 'name', y), (v.constructor = S);
+            } catch (e) {}
+        return S;
     }
 };

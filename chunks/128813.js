@@ -1,40 +1,63 @@
-r.d(n, { mX: () => u }), r(415506);
-var e = r(252117);
-function o(t) {
-    console.warn('[libdiscore] '.concat(t));
+n.d(t, {
+    Qw: () => u,
+    ZP: () => _,
+    mX: () => o,
+    oC: () => l
+}),
+    n(415506);
+var r = n(252117);
+function i(e) {
+    console.warn('[libdiscore] '.concat(e));
 }
-async function i() {
-    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
-        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500,
-        i = null,
-        u = t;
+async function a() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
+        t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500,
+        a = null,
+        o = e;
     for (;;)
         try {
-            await Promise.resolve().then(r.bind(r, 842321));
+            await Promise.resolve().then(n.bind(n, 842321));
             return;
-        } catch (t) {
-            if (t instanceof ReferenceError || t instanceof WebAssembly.CompileError) {
-                var c;
-                throw ((c = !0), (window._libdiscoreUnsupportedBrowser = c), o('Unsupported browser, skipping libdiscore, error: ['.concat(t.name, '] ').concat(t.message)), t);
-            }
-            if (((i = t), delete r.c[842321], 0 == --u)) throw i;
-            o('Failed to import libdiscore-wasm, retrying... ('.concat(u, ' attempts left), ').concat(i.name, ': ').concat(i.message)), await (0, e.o2)(n);
+        } catch (e) {
+            if (e instanceof ReferenceError || e instanceof WebAssembly.CompileError) throw (s(!0), i('Unsupported browser, skipping libdiscore, error: ['.concat(e.name, '] ').concat(e.message)), e);
+            if (((a = e), delete n.c[842321], 0 == --o)) throw a;
+            i('Failed to import libdiscore-wasm, retrying... ('.concat(o, ' attempts left), ').concat(a.name, ': ').concat(a.message)), await (0, r.o2)(t);
         }
 }
-function u() {
-    var t, n;
-    let o = null != (t = window._libdiscoreInitPromise) ? t : null;
-    if (null != o) return o;
+function o() {
+    let e = d();
+    if (null != e) return e;
     {
-        let t = (async () => {
-            var t;
-            await i(),
-                (t = await (0, e.wE)({
-                    createPromise: () => r.e('18639').then(r.bind(r, 718493)),
-                    webpackId: 718493
-                })),
-                (window._libdiscoreWasm = t);
+        let e = (async () => {
+            await a(),
+                c(
+                    await (0, r.wE)({
+                        createPromise: () => n.e('18639').then(n.bind(n, 718493)),
+                        webpackId: 718493
+                    })
+                );
         })();
-        return (n = t), (window._libdiscoreInitPromise = n), t;
+        return f(e), e;
     }
 }
+function s(e) {
+    window._libdiscoreUnsupportedBrowser = e;
+}
+function l() {
+    return !0 === window._libdiscoreUnsupportedBrowser;
+}
+function c(e) {
+    window._libdiscoreWasm = e;
+}
+function u() {
+    if (void 0 !== window._libdiscoreWasm) return window._libdiscoreWasm;
+    throw Error('libdiscoreWasm is not initialized');
+}
+function d() {
+    var e;
+    return null != (e = window._libdiscoreInitPromise) ? e : null;
+}
+function f(e) {
+    window._libdiscoreInitPromise = e;
+}
+let _ = u;

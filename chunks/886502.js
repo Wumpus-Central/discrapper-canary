@@ -1,37 +1,38 @@
-var r = a(620014),
-    n = a(501979),
-    _ = a(575473),
-    o = a(907287),
-    i = a(65064),
-    c = a(402428),
-    s = a(207757),
-    E = a(556868),
-    l = '[object Arguments]',
-    u = '[object Array]',
-    I = '[object Object]',
-    R = Object.prototype.hasOwnProperty;
-t.exports = function (t, e, a, d, f, A) {
-    var p = c(t),
-        N = c(e),
-        T = p ? u : i(t),
-        L = N ? u : i(e);
-    (T = T == l ? I : T), (L = L == l ? I : L);
-    var h = T == I,
-        O = L == I,
-        D = T == L;
-    if (D && s(t)) {
-        if (!s(e)) return !1;
-        (p = !0), (h = !1);
+var r = n(620014),
+    i = n(501979),
+    a = n(575473),
+    o = n(907287),
+    s = n(65064),
+    l = n(402428),
+    c = n(207757),
+    u = n(556868),
+    d = 1,
+    f = '[object Arguments]',
+    _ = '[object Array]',
+    p = '[object Object]',
+    h = Object.prototype.hasOwnProperty;
+e.exports = function (e, t, n, m, g, E) {
+    var b = l(e),
+        y = l(t),
+        O = b ? _ : s(e),
+        v = y ? _ : s(t);
+    (O = O == f ? p : O), (v = v == f ? p : v);
+    var I = O == p,
+        S = v == p,
+        T = O == v;
+    if (T && c(e)) {
+        if (!c(t)) return !1;
+        (b = !0), (I = !1);
     }
-    if (D && !h) return A || (A = new r()), p || E(t) ? n(t, e, a, d, f, A) : _(t, e, T, a, d, f, A);
-    if (!(1 & a)) {
-        var g = h && R.call(t, '__wrapped__'),
-            P = O && R.call(e, '__wrapped__');
-        if (g || P) {
-            var y = g ? t.value() : t,
-                m = P ? e.value() : e;
-            return A || (A = new r()), f(y, m, a, d, A);
+    if (T && !I) return E || (E = new r()), b || u(e) ? i(e, t, n, m, g, E) : a(e, t, O, n, m, g, E);
+    if (!(n & d)) {
+        var A = I && h.call(e, '__wrapped__'),
+            N = S && h.call(t, '__wrapped__');
+        if (A || N) {
+            var C = A ? e.value() : e,
+                P = N ? t.value() : t;
+            return E || (E = new r()), g(C, P, n, m, E);
         }
     }
-    return !!D && (A || (A = new r()), o(t, e, a, d, f, A));
+    return !!T && (E || (E = new r()), o(e, t, n, m, g, E));
 };

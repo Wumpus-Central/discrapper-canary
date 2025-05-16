@@ -28,20 +28,20 @@ function c(e) {
             }
             return r;
         })(e, ['children', 'lineClamp']);
-    let [m, g] = r.useState(!1),
+    let [g, m] = r.useState(!1),
         [p, h] = r.useState(null),
         f =
             null != p &&
             (0, i.jsx)('button', {
                 className: o.button,
-                onClick: () => g((e) => !e),
+                onClick: () => m((e) => !e),
                 children: (0, i.jsxs)(l.Text, {
                     className: o.seeMore,
                     variant: 'text-sm/medium',
                     color: 'text-brand',
                     children: [
-                        m ? a.intl.string(a.t['JQX/PT']) : a.intl.string(a.t.Fbrd8P),
-                        m
+                        g ? a.intl.string(a.t['JQX/PT']) : a.intl.string(a.t.Fbrd8P),
+                        g
                             ? (0, i.jsx)(l.u04, {
                                   color: s.Z.colors.TEXT_BRAND,
                                   size: 'xs'
@@ -68,7 +68,7 @@ function c(e) {
     }, [x, c, d]);
     let E = 'auto';
     return (
-        null != p && (E = m ? ''.concat(p.expandedHeight, 'px') : ''.concat(p.truncatedHeight, 'px')),
+        null != p && (E = g ? ''.concat(p.expandedHeight, 'px') : ''.concat(p.truncatedHeight, 'px')),
         (0, i.jsxs)('div', {
             children: [
                 (0, i.jsx)(
@@ -101,7 +101,7 @@ function c(e) {
                     (n = n =
                         {
                             className: o.content,
-                            lineClamp: m ? void 0 : d,
+                            lineClamp: g ? void 0 : d,
                             ref: _,
                             style: { height: E },
                             children: c

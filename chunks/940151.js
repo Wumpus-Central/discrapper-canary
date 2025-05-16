@@ -1,1 +1,1 @@
-t.exports = 'object' == typeof a.g && a.g && a.g.Object === Object && a.g;
+e.exports = 'object' == typeof n.g && n.g && n.g.Object === Object && n.g;

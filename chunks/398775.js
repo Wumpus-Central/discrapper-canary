@@ -14,8 +14,8 @@ var i = n(255367),
     c = n(481060),
     d = n(355467),
     u = n(493773),
-    m = n(410030),
-    g = n(906732),
+    g = n(410030),
+    m = n(906732),
     p = n(600164),
     h = n(74538),
     f = n(296848),
@@ -46,14 +46,14 @@ async function C(e) {
 }
 function j(e) {
     let { premiumType: t, onClose: n, pauseDuration: s, setPauseDuration: l, footer: o, premiumSubscription: d } = e,
-        m = r.useCallback(
+        g = r.useCallback(
             (e) => {
                 let { value: t } = e;
                 l(t);
             },
             [l]
         ),
-        g = d.status === _.O0b.PAUSED ? x.intl.string(x.t.Lp9WoK) : x.intl.string(x.t.eSR83d),
+        m = d.status === _.O0b.PAUSED ? x.intl.string(x.t.Lp9WoK) : x.intl.string(x.t.eSR83d),
         h = (function (e) {
             let t = e.status === _.O0b.PAUSED ? x.t.o3upfX : x.t.dBXZEh,
                 { durations: n, currentDaysPaused: i } = (0, f.AT)(e),
@@ -100,7 +100,7 @@ function j(e) {
                             (0, i.jsx)(c.X6q, {
                                 variant: 'heading-sm/medium',
                                 className: E.subtitle,
-                                children: g
+                                children: m
                             })
                         ]
                     })
@@ -109,7 +109,7 @@ function j(e) {
                     className: E.body,
                     children: (0, i.jsx)(c.FXm, {
                         options: h,
-                        onChange: m,
+                        onChange: g,
                         value: s
                     })
                 }),
@@ -124,9 +124,9 @@ function j(e) {
 function O(e) {
     let { premiumSubscription: t, premiumType: n, onClose: s, pauseDuration: a, analyticsLocation: d } = e,
         [u, h] = r.useState(!1),
-        { analyticsLocations: f } = (0, g.ZP)(),
+        { analyticsLocations: f } = (0, m.ZP)(),
         [j, O] = r.useState(!1),
-        S = (0, m.ZP)(),
+        S = (0, g.ZP)(),
         v = null,
         T = null,
         I = [_.O0b.PAST_DUE, _.O0b.PAUSED].includes(t.status) ? t.currentPeriodStart : t.currentPeriodEnd,

@@ -8,20 +8,20 @@ var i = n(255367),
     c = n(164946),
     d = n(350327),
     u = n(330055),
-    m = n(25990),
-    g = n(695346),
+    g = n(25990),
+    m = n(695346),
     p = n(647699),
     h = n(155433),
     f = n(388032);
 function b() {
-    let e = (0, s.e7)([m.Z], () => m.Z.getIsSubmitDisabled()),
-        t = (0, s.e7)([m.Z], () => m.Z.getErrors()),
+    let e = (0, s.e7)([g.Z], () => g.Z.getIsSubmitDisabled()),
+        t = (0, s.e7)([g.Z], () => g.Z.getErrors()),
         [n, b] = r.useState(!1),
         _ = r.useMemo(() => ((null == t ? void 0 : t.message) != null ? (null == t ? void 0 : t.message) : Object.keys(null != t ? t : {}).length > 0 ? f.intl.string(f.t['84MExs']) : null), [t]),
         x = r.useCallback(async () => {
             var e, t, n, i, r;
             b(!0);
-            let s = m.Z.getAllPending(),
+            let s = g.Z.getAllPending(),
                 a = (0, c.ED)(s),
                 f = (0, c.g9)(s),
                 _ = (0, c.jE)(s),
@@ -45,7 +45,7 @@ function b() {
             }
             if (void 0 !== s.pendingLegacyUsernameDisabled)
                 try {
-                    await g.R_.updateSetting(s.pendingLegacyUsernameDisabled), (0, l.iR)();
+                    await m.R_.updateSetting(s.pendingLegacyUsernameDisabled), (0, l.iR)();
                 } catch (e) {
                     (0, p.r)(), (x = !1);
                 }

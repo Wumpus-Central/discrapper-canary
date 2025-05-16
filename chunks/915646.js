@@ -1,8 +1,9 @@
-var r = a(574153);
-t.exports = function (t) {
-    var e = r(t, function (t) {
-            return 500 === a.size && a.clear(), t;
+var r = n(574153),
+    i = 500;
+e.exports = function (e) {
+    var t = r(e, function (e) {
+            return n.size === i && n.clear(), e;
         }),
-        a = e.cache;
-    return e;
+        n = t.cache;
+    return t;
 };

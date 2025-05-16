@@ -1,1 +1,1 @@
-t.exports = r(46015)({}.isPrototypeOf);
+e.exports = n(46015)({}.isPrototypeOf);

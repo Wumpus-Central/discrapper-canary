@@ -9,8 +9,8 @@ var r = n(442837),
     c = n(131951),
     d = n(36703),
     u = n(388032),
-    m = n(245095);
-let g = (0, o.hQ)(),
+    g = n(245095);
+let m = (0, o.hQ)(),
     p = (0, o.hQ)();
 function h() {
     let { analyticsLocations: e } = (0, a.ZP)(),
@@ -19,22 +19,22 @@ function h() {
             outputVolume: c.Z.getOutputVolume()
         }));
     return (0, i.jsxs)('div', {
-        className: m.volumes,
+        className: g.volumes,
         children: [
             (0, i.jsx)('div', {
-                className: m.column,
+                className: g.column,
                 children: (0, i.jsx)(s.xJW, {
                     title: u.intl.string(u.t.OX2Bnp),
-                    titleId: g,
+                    titleId: m,
                     children: (0, i.jsx)(s.iRW, {
                         initialValue: (0, d.P)(t),
                         asValueChanges: (t) => l.Z.setInputVolume((0, d.A)(t), { analyticsLocations: e }),
-                        'aria-labelledby': g
+                        'aria-labelledby': m
                     })
                 })
             }),
             (0, i.jsx)('div', {
-                className: m.column,
+                className: g.column,
                 children: (0, i.jsx)(s.xJW, {
                     title: u.intl.string(u.t.eATD2N),
                     titleId: p,

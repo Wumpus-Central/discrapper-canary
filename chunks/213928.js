@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var i = n(255367),
     r = n(442837),
     s = n(481060),
@@ -8,19 +8,19 @@ var i = n(255367),
     c = n(231338),
     d = n(388032),
     u = n(596993);
-function m() {
+function g() {
     var e;
     let t = (0, r.e7)([a.Z], () => a.Z.getStatus()),
         n = null != (e = (0, o.u5)(t)) ? e : '',
-        m = t === c.Sk.INVISIBLE || t === c.Sk.OFFLINE,
-        g = (0, l.V)({ location: 'UserProfileAccountPopoutMenuItemStatusLabel' });
+        g = t === c.Sk.INVISIBLE || t === c.Sk.OFFLINE,
+        m = (0, l.V)({ location: 'UserProfileAccountPopoutMenuItemStatusLabel' });
     return (0, i.jsxs)('div', {
         className: u.container,
         children: [
             n,
             n.length > 0 &&
-                g &&
                 m &&
+                g &&
                 (0, i.jsx)(s.ua7, {
                     text: d.intl.string(d.t.L99HQk),
                     children: (e) =>

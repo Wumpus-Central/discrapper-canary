@@ -416,7 +416,7 @@ let z = u().throttle(f.OQ, 1000),
                         guild_id: e.id,
                         upload_id: t
                     }),
-                    await (0, I._)(n, Y),
+                    await (0, I._j)(n, Y),
                     x(!0);
             },
             Q = () => {
@@ -484,7 +484,7 @@ let z = u().throttle(f.OQ, 1000),
                                                   children: [
                                                       G.intl.string(G.t.DU0dy8),
                                                       H > 0
-                                                          ? (0, r.jsx)(I.Z, {
+                                                          ? (0, r.jsx)(I.ZP, {
                                                                 disabled: y || 0 === H || !a,
                                                                 tabIndex: 0,
                                                                 onChange: Y,

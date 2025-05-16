@@ -13,8 +13,8 @@ var s = n(399606),
     c = n(100527),
     d = n(906732),
     u = n(975298),
-    m = n(779618),
-    g = n(832149),
+    g = n(779618),
+    m = n(832149),
     p = n(605236),
     h = n(442933),
     f = n(300284),
@@ -67,8 +67,8 @@ var s = n(399606),
     ec = n(570423),
     ed = n(912429),
     eu = n(91394),
-    em = n(209672),
-    eg = n(698173),
+    eg = n(209672),
+    em = n(698173),
     ep = n(926262),
     eh = n(371435),
     ef = n(83663),
@@ -87,7 +87,7 @@ let ex = () => {
         eO = (0, v.bq)({ showAnimations: !0 }),
         eS = null != eO ? eO.initialPercentage : void 0,
         ev = null != eO ? eO.percentage : void 0,
-        eT = (0, m.Z)(x.Z),
+        eT = (0, g.Z)(x.Z),
         eI = (0, h.H)('usePremiumPerksCards'),
         eN = (0, T.a)(),
         ey = (0, v.Kb)(Z.qY),
@@ -362,7 +362,7 @@ let ex = () => {
                       title: U.intl.string(U.t.hpgmOz),
                       subtitle: U.intl.string(U.t.Hxujsr),
                       description: U.intl.string(U.t['Cn/z6+']),
-                      perkImage: eg,
+                      perkImage: em,
                       hideOnNarrowScreen: !0
                   }
                 : {
@@ -371,7 +371,7 @@ let ex = () => {
                       subtitle: U.intl.string(U.t.Hxujsr),
                       description: U.intl.string(U.t.TF7cPT),
                       isPremiumGetCta: !0,
-                      perkImage: eg,
+                      perkImage: em,
                       hideOnNarrowScreen: !0
                   },
             superReactions: {
@@ -379,7 +379,7 @@ let ex = () => {
                 title: U.intl.string(U.t['6S7kOz']),
                 subtitle: U.intl.string(U.t.kN1JRE),
                 description: U.intl.string(U.t.e7FKCg),
-                perkImage: em
+                perkImage: eg
             },
             upcomingDropUntimed: {
                 name: 'upcomingDropUntimed',
@@ -519,7 +519,7 @@ let ex = () => {
             descriptionCta: l,
             onCtaClick: () => {
                 null != ey &&
-                    (0, g.Z)({
+                    (0, m.Z)({
                         product: ey,
                         overrideTitle: U.intl.string(U.t.wRAXra),
                         overrideDescription: U.intl.string(U.t.sQX6HR),

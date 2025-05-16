@@ -9,8 +9,8 @@ var r = n(524437),
     c = n(838436),
     d = n(973005),
     u = n(726985),
-    m = n(981631),
-    g = n(388032),
+    g = n(981631),
+    m = n(388032),
     p = n(889652);
 function h() {
     var e;
@@ -21,8 +21,8 @@ function h() {
         setting: u.s6.PRIVACY_DIRECT_MESSAGE_SPAM_FILTER_V2,
         children: [
             (0, i.jsx)(c.H, {
-                header: g.intl.string(g.t.tiCXaG),
-                description: g.intl.format(g.t.RvjRRE, { appealLink: l.Z.getArticleURL(m.BhN.SAFE_DIRECT_MESSAGING) })
+                header: m.intl.string(m.t.tiCXaG),
+                description: m.intl.format(m.t.RvjRRE, { appealLink: l.Z.getArticleURL(g.BhN.SAFE_DIRECT_MESSAGING) })
             }),
             (0, i.jsx)(s.FXm, {
                 className: p.radioGroup,

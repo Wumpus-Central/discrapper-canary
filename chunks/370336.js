@@ -1,129 +1,62 @@
-a.d(e, {
-    $Q: () => E,
-    HK: () => l,
-    Jr: () => A,
-    Sh: () => I,
-    _j: () => u,
-    hl: () => c,
-    xp: () => s,
-    zf: () => f
+n.d(t, {
+    Sh: () => l,
+    xp: () => s
 });
-var r = a(467510),
-    n = a(176984),
-    _ = a(573736),
-    o = a(622916),
-    i = a(886115);
-function c(t, e, a) {
-    if (!(e in t)) return;
-    let r = t[e],
-        n = a(r);
-    'function' == typeof n && E(n, r), (t[e] = n);
-}
-function s(t, e, a) {
+var r = n(467510),
+    i = n(176984),
+    a = n(573736),
+    o = n(622916);
+function s(e, t, n) {
     try {
-        Object.defineProperty(t, e, {
-            value: a,
+        Object.defineProperty(e, t, {
+            value: n,
             writable: !0,
             configurable: !0
         });
-    } catch (a) {
-        n.X && o.kg.log(`Failed to add non-enumerable property "${e}" to object`, t);
+    } catch (n) {
+        i.X && o.kg.log(`Failed to add non-enumerable property "${t}" to object`, e);
     }
 }
-function E(t, e) {
-    try {
-        let a = e.prototype || {};
-        (t.prototype = e.prototype = a), s(t, '__sentry_original__', e);
-    } catch (t) {}
-}
-function l(t) {
-    return t.__sentry_original__;
-}
-function u(t) {
-    return Object.keys(t)
-        .map((e) => `${encodeURIComponent(e)}=${encodeURIComponent(t[e])}`)
-        .join('&');
-}
-function I(t) {
-    if ((0, _.VZ)(t))
+function l(e) {
+    if ((0, a.VZ)(e))
         return {
-            message: t.message,
-            name: t.name,
-            stack: t.stack,
-            ...d(t)
+            message: e.message,
+            name: e.name,
+            stack: e.stack,
+            ...u(e)
         };
-    if (!(0, _.cO)(t)) return t;
+    if (!(0, a.cO)(e)) return e;
     {
-        let e = {
-            type: t.type,
-            target: R(t.target),
-            currentTarget: R(t.currentTarget),
-            ...d(t)
+        let t = {
+            type: e.type,
+            target: c(e.target),
+            currentTarget: c(e.currentTarget),
+            ...u(e)
         };
-        return 'undefined' != typeof CustomEvent && (0, _.V9)(t, CustomEvent) && (e.detail = t.detail), e;
+        return 'undefined' != typeof CustomEvent && (0, a.V9)(e, CustomEvent) && (t.detail = e.detail), t;
     }
 }
-function R(t) {
+function c(e) {
     try {
-        return (0, _.kK)(t) ? (0, r.Rt)(t) : Object.prototype.toString.call(t);
-    } catch (t) {
+        return (0, a.kK)(e) ? (0, r.Rt)(e) : Object.prototype.toString.call(e);
+    } catch (e) {
         return '<unknown>';
     }
 }
-function d(t) {
-    if ('object' != typeof t || null === t) return {};
+function u(e) {
+    if ('object' != typeof e || null === e) return {};
     {
-        let e = {};
-        for (let a in t) Object.prototype.hasOwnProperty.call(t, a) && (e[a] = t[a]);
-        return e;
+        let t = {};
+        for (let n in e) Object.prototype.hasOwnProperty.call(e, n) && (t[n] = e[n]);
+        return t;
     }
 }
-function f(t, e = 40) {
-    let a = Object.keys(I(t));
-    a.sort();
-    let r = a[0];
-    if (!r) return '[object has no keys]';
-    if (r.length >= e) return (0, i.$G)(r, e);
-    for (let t = a.length; t > 0; t--) {
-        let r = a.slice(0, t).join(', ');
-        if (!(r.length > e)) {
-            if (t === a.length) return r;
-            return (0, i.$G)(r, e);
-        }
+function d(e) {
+    if (!isPlainObject(e)) return !1;
+    try {
+        let t = Object.getPrototypeOf(e).constructor.name;
+        return !t || 'Object' === t;
+    } catch (e) {
+        return !0;
     }
-    return '';
-}
-function A(t) {
-    return (function t(e, a) {
-        if (
-            (function (t) {
-                if (!(0, _.PO)(t)) return !1;
-                try {
-                    let e = Object.getPrototypeOf(t).constructor.name;
-                    return !e || 'Object' === e;
-                } catch (t) {
-                    return !0;
-                }
-            })(e)
-        ) {
-            let r = a.get(e);
-            if (void 0 !== r) return r;
-            let n = {};
-            for (let r of (a.set(e, n), Object.keys(e))) void 0 !== e[r] && (n[r] = t(e[r], a));
-            return n;
-        }
-        if (Array.isArray(e)) {
-            let r = a.get(e);
-            if (void 0 !== r) return r;
-            let n = [];
-            return (
-                a.set(e, n),
-                e.forEach((e) => {
-                    n.push(t(e, a));
-                }),
-                n
-            );
-        }
-        return e;
-    })(t, new Map());
 }

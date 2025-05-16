@@ -38,8 +38,8 @@ function c(e) {
 function d(e) {
     var t,
         n,
-        { options: s, value: d, select: u, selectClassName: m } = e,
-        g = (function (e, t) {
+        { options: s, value: d, select: u, selectClassName: g } = e,
+        m = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -85,13 +85,13 @@ function d(e) {
                     });
             }
             return e;
-        })({}, g)),
+        })({}, m)),
         (n = n =
             {
                 id: p,
                 children: (0, i.jsx)(a.PhF, {
                     'aria-labelledby': p,
-                    className: l()(o.selectControl, m),
+                    className: l()(o.selectControl, g),
                     options: s,
                     isSelected: (e) => e === d,
                     select: u,

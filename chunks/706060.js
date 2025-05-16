@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685), n(642613), n(539854);
+n.d(t, { Z: () => g }), n(388685), n(642613), n(539854);
 var i = n(255367),
     r = n(73800),
     s = n(772848),
@@ -15,10 +15,10 @@ function d(e) {
 }
 function u(e) {
     let { setting: t, children: n, depth: o } = e,
-        [m, g] = r.useState(1 === o),
+        [g, m] = r.useState(1 === o),
         p = r.useCallback(() => {
-            g(!m);
-        }, [m, g]);
+            m(!g);
+        }, [g, m]);
     if (0 === n.length)
         return (0, i.jsx)(
             'div',
@@ -32,7 +32,7 @@ function u(e) {
             },
             (0, s.Z)()
         );
-    let h = m
+    let h = g
         ? (0, i.jsx)('div', {
               className: c.settingNodeChildren,
               children: n
@@ -66,7 +66,7 @@ function u(e) {
                             hasChildren: n.length > 0
                         }),
                         (0, i.jsx)(a.Z, {
-                            direction: m ? a.Z.Directions.DOWN : a.Z.Directions.RIGHT,
+                            direction: g ? a.Z.Directions.DOWN : a.Z.Directions.RIGHT,
                             className: c.headerCaret
                         })
                     ]
@@ -77,7 +77,7 @@ function u(e) {
         (0, s.Z)()
     );
 }
-function m() {
+function g() {
     let e = (0, o.Pt)(),
         t = { children: [] },
         n = Object.keys(e)

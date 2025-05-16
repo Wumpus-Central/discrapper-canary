@@ -9,8 +9,8 @@ var r = n(120356),
     c = n(767714),
     d = n(474936),
     u = n(388032),
-    m = n(638068);
-function g(e) {
+    g = n(638068);
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -62,14 +62,14 @@ let p = (e) => {
         E = p === d.Si.TIER_0 ? u.intl.string(u.t.rk4Uu7) : u.intl.string(u.t.Ve9Ge3);
     return (0, i.jsx)(
         c.Z,
-        g(
+        m(
             {
                 isGift: !0,
                 color: x,
                 look: a.iLD.OUTLINED,
-                textOptions: g({ textOverride: E }, h),
+                textOptions: m({ textOverride: E }, h),
                 giftMessage: r,
-                className: s()(t, m.giftButton, _ ? m.buttonWhite : m.buttonBrand),
+                className: s()(t, g.giftButton, _ ? g.buttonWhite : g.buttonBrand),
                 subscriptionTier: p
             },
             f

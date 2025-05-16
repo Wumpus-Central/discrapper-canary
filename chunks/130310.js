@@ -9,11 +9,11 @@ var r = n(120356),
     c = n(332495),
     d = n(388032),
     u = n(634789),
-    m = n(20493);
-let g = (e) => {
+    g = n(20493);
+let m = (e) => {
         let { header: t, description: n, icon: r, inModal: a } = e;
         return (0, i.jsxs)('div', {
-            className: s()(u.row, m.marginBottom8, { [u.inModal]: a }),
+            className: s()(u.row, g.marginBottom8, { [u.inModal]: a }),
             children: [
                 (0, i.jsx)('div', {
                     className: u.iconContainer,
@@ -42,7 +42,7 @@ let g = (e) => {
             n = (0, a.o)(d.intl.string(c.default.Sm8Gq6), d.intl.string(c.default.YU7aaW)),
             r = (0, a.o)(d.intl.string(c.default['TCzk/f']), d.intl.string(c.default['2OqtJC'])),
             s = (0, a.o)(d.intl.string(c.default.ASf7XF), d.intl.string(c.default['82y87e'])),
-            m = (0, a.o)(d.intl.string(c.default['0QDVFB']), d.intl.string(c.default['1xBHHR']));
+            g = (0, a.o)(d.intl.string(c.default['0QDVFB']), d.intl.string(c.default['1xBHHR']));
         return (0, i.jsxs)('div', {
             children: [
                 (0, i.jsx)(l.Text, {
@@ -51,7 +51,7 @@ let g = (e) => {
                     color: 'header-secondary',
                     children: n
                 }),
-                (0, i.jsx)(g, {
+                (0, i.jsx)(m, {
                     header: d.intl.string(c.default['/zMYZW']),
                     description: d.intl.string(c.default.DxFKkZ),
                     icon: (0, i.jsx)(l.iFz, {
@@ -62,7 +62,7 @@ let g = (e) => {
                     }),
                     inModal: t
                 }),
-                (0, i.jsx)(g, {
+                (0, i.jsx)(m, {
                     header: d.intl.string(c.default['44NEx8']),
                     description: d.intl.string(c.default.WrY56O),
                     icon: (0, i.jsx)(l.dRF, {
@@ -73,7 +73,7 @@ let g = (e) => {
                     }),
                     inModal: t
                 }),
-                (0, i.jsx)(g, {
+                (0, i.jsx)(m, {
                     header: d.intl.string(c.default['Z3G+8v']),
                     description: d.intl.string(c.default.KBgAra),
                     icon: (0, i.jsx)(o.Z, {
@@ -89,9 +89,9 @@ let g = (e) => {
                     color: 'header-secondary',
                     children: r
                 }),
-                (0, i.jsx)(g, {
+                (0, i.jsx)(m, {
                     header: s,
-                    description: m,
+                    description: g,
                     icon: (0, i.jsx)(l.Dio, {
                         size: 'custom',
                         width: 20,
