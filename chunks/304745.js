@@ -23,11 +23,11 @@ var r = n(255367),
     O = n(921944),
     E = n(388032);
 function I(e) {
-    let { channel: t, idle: n, whichPopoutIsOpen: I, setWhichPopoutIsOpen: S } = e,
-        P = (0, l.e7)([u.ZP], () => u.ZP.isLaunchingActivity()),
+    let { channel: t, idle: n, whichPopoutIsOpen: I, setWhichPopoutIsOpen: P } = e,
+        S = (0, l.e7)([u.ZP], () => u.ZP.isLaunchingActivity()),
         Z = (0, p.KF)(t.id),
         N = (0, p.g5)(Z),
-        T = Z !== p.jy.CAN_LAUNCH || P,
+        T = Z !== p.jy.CAN_LAUNCH || S,
         { isHovered: A, setIsHovered: w, onMouseEnter: R, onMouseLeave: M } = (0, x.Z)(200, 300),
         k = (0, d.a)({ surface: s.eR.VOICE_LAUNCHER }),
         L = (0, l.e7)([u.ZP], () => null != u.ZP.getSelfEmbeddedActivityForLocation(u.ZP.getConnectedActivityLocation())),
@@ -70,7 +70,7 @@ function I(e) {
                     align: 'center',
                     spacing: 16,
                     onRequestClose: () => {
-                        w(!1), null == S || S(void 0);
+                        w(!1), null == P || P(void 0);
                     },
                     renderPopout: (e) => {
                         let { closePopout: n, setPopoutRef: i } = e;

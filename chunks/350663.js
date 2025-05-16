@@ -167,18 +167,18 @@ let x = {
                 },
                 T ? 'animate-never' : 'respect-motion-settings'
             ),
-            L = (0, p.ee)(() => new Set(_.map((e) => e.user.id)), [_, S]),
-            R = (0, p.ee)(() => new Set(_.filter((e) => b.has((0, u.V9)(e.stream))).map((e) => e.user.id)), [_, b, S]);
+            R = (0, p.ee)(() => new Set(_.map((e) => e.user.id)), [_, S]),
+            L = (0, p.ee)(() => new Set(_.filter((e) => b.has((0, u.V9)(e.stream))).map((e) => e.user.id)), [_, b, S]);
         return (
             r.useEffect(() => {
-                0 !== L.size &&
+                0 !== R.size &&
                     (0, p.zi)(m.Odu.GO_LIVE, {
                         locked: d.default.isInstanceLocked(),
-                        shownUserIds: Array.from(L),
-                        liveUserIds: Array.from(R),
+                        shownUserIds: Array.from(R),
+                        liveUserIds: Array.from(L),
                         contentInventoryIds: []
                     });
-            }, [L, R]),
+            }, [R, L]),
             (0, i.jsx)('div', {
                 className: l()({
                     [g.gridContainer]: !0,

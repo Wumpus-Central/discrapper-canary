@@ -65,14 +65,14 @@ function v(e) {
         [_, x] = (0, u.m8)(v),
         { currentFPS: S, averageFrameTime: I, timeSinceLastDrop: j, onResetFrameData: C, droppedFramesRef: N, renderedFrameCount: w, bufferFramecountRef: Z, frameCheckerEffect: P } = (0, u.d6)(!0, _, !0),
         [T, k, D] = (0, u.ZF)(v),
-        [A, L] = (0, u.Y5)(T, P, E),
-        R = performance.now() - x.current < u.MC,
+        [A, R] = (0, u.Y5)(T, P, E),
+        L = performance.now() - x.current < u.MC,
         M = k(I, Z.current);
     (0, c.ZP)(
         () => (
             A(),
             () => {
-                L();
+                R();
             }
         )
     );
@@ -256,7 +256,7 @@ function v(e) {
                               })
                           ]
                       }),
-                  R &&
+                  L &&
                       (0, i.jsx)(s.ua7, {
                           position: 'left',
                           text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",

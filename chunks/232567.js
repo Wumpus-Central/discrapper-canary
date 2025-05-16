@@ -89,32 +89,31 @@ function E(e) {
               );
 }
 async function b(e) {
-    let { type: t, friendToken: n, withMutualGuilds: r, withMutualFriendsCount: i, withMutualFriends: a, guildId: o, connectionsRoleId: u, joinRequestId: d, abortSignal: f } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        h = arguments.length > 2 ? arguments[2] : void 0,
-        m = Date.now();
+    let { type: t, withMutualGuilds: n, withMutualFriendsCount: r, withMutualFriends: i, guildId: a, connectionsRoleId: o, joinRequestId: u, abortSignal: d } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        f = arguments.length > 2 ? arguments[2] : void 0,
+        h = Date.now();
     l.Z.dispatch({
         type: 'USER_PROFILE_FETCH_START',
         userId: e,
-        guildId: o,
-        withMutualFriends: a
+        guildId: a,
+        withMutualFriends: i
     });
     try {
         let c = await s.tn.get({
             url: _.ANM.USER_PROFILE(e),
             query: {
                 type: t,
-                friend_token: n,
-                with_mutual_guilds: r,
-                with_mutual_friends: a,
-                with_mutual_friends_count: i && (null == a || !a),
-                guild_id: o,
-                connections_role_id: u,
-                join_request_id: d
+                with_mutual_guilds: n,
+                with_mutual_friends: i,
+                with_mutual_friends_count: r && (null == i || !i),
+                guild_id: a,
+                connections_role_id: o,
+                join_request_id: u
             },
-            signal: f,
+            signal: d,
             rejectWithError: !0
         });
-        null == h || h(c.body, o),
+        null == f || f(c.body, a),
             l.Z.dispatch({
                 type: 'USER_UPDATE',
                 user: c.body.user
@@ -122,13 +121,13 @@ async function b(e) {
             l.Z.dispatch({
                 type: 'USER_PROFILE_FETCH_SUCCESS',
                 userProfile: c.body,
-                fetchStartedAt: m
+                fetchStartedAt: h
             }),
-            null != o &&
+            null != a &&
                 null != c.body.guild_member &&
                 l.Z.dispatch({
                     type: 'GUILD_MEMBER_PROFILE_UPDATE',
-                    guildId: o,
+                    guildId: a,
                     guildMember: c.body.guild_member
                 });
     } catch (t) {
@@ -137,9 +136,9 @@ async function b(e) {
             l.Z.dispatch({
                 type: 'USER_PROFILE_FETCH_FAILURE',
                 apiError: new c.Hx(t),
-                fetchStartedAt: m,
+                fetchStartedAt: h,
                 userId: e,
-                guildId: o
+                guildId: a
             }),
             t)
         );

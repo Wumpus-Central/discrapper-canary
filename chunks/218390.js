@@ -114,7 +114,7 @@ function el() {
         r = (0, E.ZP)(),
         s = (0, c.e7)([R.ZP], () => R.ZP.getPremiumTypeSubscription()),
         a = (0, v.Z)(),
-        o = (0, B.W)(),
+        o = (0, B.W)().isInReverseTrial,
         d = null !== s && null !== s.planIdFromItems;
     if (!d && !a.isFractionalPremiumActive) return null;
     let m = a.isFractionalPremiumActive,

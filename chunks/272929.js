@@ -71,8 +71,8 @@ let h = (0, a.animated)((e) => {
     });
 });
 function f(e) {
-    var { totalCooldownSeconds: t, remainingCooldownSeconds: n, onClick: i, onKeyDown: f, onMouseEnter: m, onMouseLeave: g, isActive: b = !1, isCenterButton: _ = !1 } = e,
-        C = (function (e, t) {
+    var { totalCooldownSeconds: t, remainingCooldownSeconds: n, onClick: i, onKeyDown: f, onMouseEnter: m, onMouseLeave: g, isActive: b = !1, isCenterButton: _ = !1, ref: C } = e,
+        x = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -90,30 +90,31 @@ function f(e) {
                 for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ['totalCooldownSeconds', 'remainingCooldownSeconds', 'onClick', 'onKeyDown', 'onMouseEnter', 'onMouseLeave', 'isActive', 'isCenterButton']);
-    let x = n > 0,
-        y = (0, o.q_F)(
+        })(e, ['totalCooldownSeconds', 'remainingCooldownSeconds', 'onClick', 'onKeyDown', 'onMouseEnter', 'onMouseLeave', 'isActive', 'isCenterButton', 'ref']);
+    let y = n > 0,
+        v = (0, o.q_F)(
             {
                 percentComplete: 0 !== n ? (t - n) / t : 0,
                 config: p(d({}, a.config.molasses), { duration: 1000 })
             },
             'animate-always'
         ),
-        v = x ? c.intl.formatToPlainString(c.t.D8Drx8, { seconds: n }) : void 0,
-        j = _ ? s.d : s.Z;
+        j = y ? c.intl.formatToPlainString(c.t.D8Drx8, { seconds: n }) : void 0,
+        O = _ ? s.d : s.Z;
     return (0, r.jsxs)('div', {
         className: u.container,
+        ref: C,
         children: [
-            x ? (0, r.jsx)(h, { percentComplete: y.percentComplete }) : null,
+            y ? (0, r.jsx)(h, { percentComplete: v.percentComplete }) : null,
             (0, r.jsx)(
-                j,
-                p(d({}, C), {
+                O,
+                p(d({}, x), {
                     isTrayButton: !0,
-                    disabled: x,
-                    label: v,
+                    disabled: y,
+                    label: j,
                     iconComponent: o.EO4,
                     iconClassName: l()(u.iconHover, b && u.active),
-                    className: l()(C.className, u.button),
+                    className: l()(x.className, u.button),
                     onClick: i,
                     onKeyDown: f,
                     onMouseEnter: m,

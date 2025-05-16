@@ -25,7 +25,7 @@ let S = new f.h(
     },
     (e) => {
         let { lastMessageId: t } = e;
-        return -t;
+        return -x.default.extractTimestamp(t);
     }
 );
 function C(e) {

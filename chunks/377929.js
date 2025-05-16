@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685);
+n.d(t, { Z: () => P }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -64,7 +64,7 @@ function I(e, t) {
         e
     );
 }
-function S(e) {
+function P(e) {
     let { channel: t } = e,
         [n, l] = i.useState(!1),
         a = i.useRef(null);
@@ -81,7 +81,7 @@ function S(e) {
         autoInvert: !1,
         onRequestClose: () => l(!1),
         renderPopout: function (e) {
-            return (0, r.jsx)(P, I(E({}, e), { channel: t }));
+            return (0, r.jsx)(S, I(E({}, e), { channel: t }));
         },
         children: (e, t) => {
             let { isShown: n } = t;
@@ -99,17 +99,17 @@ function S(e) {
         }
     });
 }
-function P(e) {
+function S(e) {
     let { channel: t, closePopout: n, onSelect: i } = e,
         l = (0, c.Z)(t),
         x = (0, f.Z)(t),
         E = (0, b.Z)(t.id),
         I = (0, g.Z)(t),
-        S = (0, C.Z)({
+        P = (0, C.Z)({
             id: t.id,
             label: O.intl.string(O.t.DQ797u)
         }),
-        P = (0, u.Z)(t),
+        S = (0, u.Z)(t),
         Z = (0, d.Z)(t),
         N = (0, p.Z)(t, 'Toolbar Overflow'),
         T = (0, m.Z)(t),
@@ -146,7 +146,7 @@ function P(e) {
                 children: [w, l, x, Z]
             }),
             (0, r.jsxs)(s.kSQ, {
-                children: [P, S]
+                children: [S, P]
             })
         ]
     });

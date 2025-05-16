@@ -74,8 +74,9 @@ function C(A) {
     );
 }
 function h(A) {
-    let { shouldShow: g, showSecondaryColor: v, onRequestClose: t, children: f, palette: r, onPrimaryColorChange: h, onSecondaryColorChange: n } = A;
+    let { shouldShow: g, showSecondaryColor: v, onRequestClose: t, children: f, palette: r, onPrimaryColorChange: h, onSecondaryColorChange: n, popoutTargetRef: w } = A;
     return (0, B.jsx)(e.yRy, {
+        targetElementRef: w,
         renderPopout: () =>
             (0, B.jsx)(C, {
                 showSecondaryColor: v,

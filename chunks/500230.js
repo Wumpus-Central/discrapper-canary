@@ -16,8 +16,9 @@ var B = v(255367),
 let M = function (A) {
     let { className: g, guildId: v, badge: e, primaryColor: M, secondaryColor: a } = A,
         [l, E] = t.useState(!1),
-        c = t.useMemo(() => Q.go.every((A) => A.primary !== M || A.secondary !== a), [M, a]);
-    function P(A) {
+        c = t.useRef(null),
+        P = t.useMemo(() => Q.go.every((A) => A.primary !== M || A.secondary !== a), [M, a]);
+    function d(A) {
         let g = {};
         void 0 !== A.primary && (g.badgeColorPrimary = A.primary), void 0 !== A.secondary && (g.badgeColorSecondary = A.secondary), w.Z.updateGuildProfile(v, g);
     }
@@ -36,7 +37,7 @@ let M = function (A) {
                             C.P3F,
                             {
                                 className: f()(i.pickerItem, { [i.pickerItemSelected]: A.primary === M && A.secondary === a }),
-                                onClick: () => P(A),
+                                onClick: () => d(A),
                                 children: (0, B.jsx)(n.v, {
                                     badge: e,
                                     width: 32,
@@ -49,16 +50,17 @@ let M = function (A) {
                         )
                     ),
                     (0, B.jsx)(h.Z, {
+                        popoutTargetRef: c,
                         showSecondaryColor: D.ER[e] >= 2,
                         palette: {
                             primary: M,
                             secondary: a
                         },
                         onPrimaryColorChange: (A) => {
-                            P({ primary: (0, r.Rf)(A) });
+                            d({ primary: (0, r.Rf)(A) });
                         },
                         onSecondaryColorChange: (A) => {
-                            P({ secondary: (0, r.Rf)(A) });
+                            d({ secondary: (0, r.Rf)(A) });
                         },
                         shouldShow: l,
                         onRequestClose: () => E(!1),
@@ -93,10 +95,11 @@ let M = function (A) {
                                 })({}, A)),
                                 (v = v =
                                     {
+                                        innerRef: c,
                                         onClick: () => {
                                             E((A) => !A);
                                         },
-                                        className: f()(i.pickerItem, { [i.pickerItemSelected]: c }),
+                                        className: f()(i.pickerItem, { [i.pickerItemSelected]: P }),
                                         children: (0, B.jsx)(C.ilE, {
                                             size: 'custom',
                                             width: 20,

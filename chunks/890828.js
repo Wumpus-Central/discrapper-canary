@@ -55,7 +55,7 @@ let k = (e) => [
         searchStringGenerator: k,
         throttleMs: 100
     },
-    L = r.memo(function (e) {
+    R = r.memo(function (e) {
         let { channel: t, query: n } = e,
             [o] = (0, a.e7)([C.Z], () => [C.Z.getVoiceStatesForChannel(t.id), C.Z.getVoiceStateVersion()], [t.id], w.Q),
             [l, c] = r.useState([]);
@@ -90,7 +90,7 @@ let k = (e) => [
                   disableUserPopout: !0
               });
     }),
-    R = r.memo(function (e) {
+    L = r.memo(function (e) {
         var t;
         let { channel: n } = e,
             r = n.getGuildId(),
@@ -146,7 +146,7 @@ let k = (e) => [
                   children: [
                       (0, i.jsx)('div', {
                           className: T.channelItemIcon,
-                          children: (0, i.jsx)(R, { channel: m })
+                          children: (0, i.jsx)(L, { channel: m })
                       }),
                       (0, i.jsxs)('div', {
                           className: T.channelItemNameContainer,
@@ -178,7 +178,7 @@ let k = (e) => [
                       }),
                       (0, i.jsx)('div', {
                           className: T.channelItemAvatars,
-                          children: (0, i.jsx)(L, {
+                          children: (0, i.jsx)(R, {
                               channel: m,
                               currentVoiceChannel: o,
                               query: f

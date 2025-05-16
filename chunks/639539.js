@@ -1,4 +1,4 @@
-n.d(t, { J: () => v }), n(388685);
+n.d(t, { J: () => h }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -157,14 +157,14 @@ let f = (e) => {
             ]
         });
     },
-    h = (e) => {
+    v = (e) => {
         let { countdown: t } = e;
         return (0, r.jsxs)('div', {
             className: _.digitsContainer,
             children: [(0, r.jsx)(g, { digits: t.hours }), (0, r.jsx)(p, {}), (0, r.jsx)(g, { digits: t.minutes }), (0, r.jsx)(p, {}), (0, r.jsx)(g, { digits: t.seconds })]
         });
     };
-function v(e) {
+function h(e) {
     let { textVariant: t, className: n, catalogUpdateTime: a, isScrolled: l } = e,
         [s, d] = i.useState(() => m(a));
     return (
@@ -200,7 +200,7 @@ function v(e) {
                 }),
                 (0, r.jsx)('div', {
                     className: _.digitsContainer,
-                    children: (0, r.jsx)(h, { countdown: s })
+                    children: (0, r.jsx)(v, { countdown: s })
                 })
             ]
         })

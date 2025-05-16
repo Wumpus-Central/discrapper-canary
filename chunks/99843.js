@@ -1,4 +1,4 @@
-n.d(t, { Z: () => P }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -244,7 +244,7 @@ let O = (e) => {
                   ]
               });
     },
-    S = (e) => {
+    P = (e) => {
         let { channel: t, children: n } = e,
             l = (0, p.ZP)(t),
             a = i.useCallback(
@@ -299,10 +299,10 @@ let O = (e) => {
             ]
         });
     },
-    P = (e) => {
+    S = (e) => {
         let { channel: t, legacyIconClassName: n } = e,
             { enabled: i, unifiedEditing: l } = (0, h.Ae)('header_bar', t.id);
-        return (0, r.jsx)(i ? I : S, {
+        return (0, r.jsx)(i ? I : P, {
             channel: t,
             inlineEditor: !l,
             children: (0, r.jsx)(m.v, {

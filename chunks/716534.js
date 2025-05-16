@@ -153,7 +153,11 @@ function q(e) {
     i.useEffect(() => {
         null == e5 && e6(null == eF ? void 0 : eF.subscriptionPeriodEnd);
     }, [null == eF ? void 0 : eF.subscriptionPeriodEnd, e5]);
-    let e8 = (0, h.Z)(),
+    let e8 = (0, h.Z)({
+            forceFetch: !1,
+            excludeReverseTrial: !1,
+            excludeReverseTrialFromCountdown: !0
+        }),
         e7 = !e4 && e8.isFractionalPremiumActive && Z.dJ.has(X),
         e9 = i.useMemo(
             () =>

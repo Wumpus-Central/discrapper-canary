@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(433355),
     E = n(819640),
     I = n(375954),
-    S = n(496675),
-    P = n(885110),
+    P = n(496675),
+    S = n(885110),
     Z = n(585483),
     N = n(358085),
     T = n(127654),
@@ -85,7 +85,7 @@ let F = i.memo(function (e) {
         q = (0, p.bp)(),
         K = i.useRef(null),
         X = i.useRef(null),
-        Q = (0, o.e7)([P.Z], () => P.Z.getActivities()),
+        Q = (0, o.e7)([S.Z], () => S.Z.getActivities()),
         J = (0, o.e7)([m.Z], () => m.Z.getSettings().clipsEnabled),
         $ = (0, o.e7)([m.Z], () => m.Z.getLastClipsSession()),
         ee = (0, o.Wu)([m.Z], () => m.Z.getNewClipIds()),
@@ -98,7 +98,7 @@ let F = i.memo(function (e) {
         [eo, es] = i.useState(null),
         ec = (0, f.Go)() && (J || ea),
         eu = H.isPrivate(),
-        ed = (0, o.e7)([S.Z], () => eu || (S.Z.can(M.Plq.ATTACH_FILES, H) && S.Z.can(M.Plq.SEND_MESSAGES, H))),
+        ed = (0, o.e7)([P.Z], () => eu || (P.Z.can(M.Plq.ATTACH_FILES, H) && P.Z.can(M.Plq.SEND_MESSAGES, H))),
         ep = (0, d.Z)($);
     (null == ep ? void 0 : ep.newClipIds.length) !== (null == $ ? void 0 : $.newClipIds.length) && (null != (t = null == $ ? void 0 : $.newClipIds.length) ? t : 0) > 0 && null == eo && er && et && !ei && !en && !el && es('recentClips');
     let eh = (e, t, n) => {
@@ -162,7 +162,7 @@ let F = i.memo(function (e) {
             color: 'currentColor',
             colorClass: U.attachButtonPlus
         }),
-        eS = eO
+        eP = eO
             ? eE
                 ? {
                       left: 12,
@@ -172,7 +172,7 @@ let F = i.memo(function (e) {
                   }
                 : 8
             : void 0,
-        eP = (0, r.jsx)(c.yRy, {
+        eS = (0, r.jsx)(c.yRy, {
             targetElementRef: X,
             shouldShow: null != eo,
             animation: c.yRy.Animation.NONE,
@@ -234,7 +234,7 @@ let F = i.memo(function (e) {
                                           return null == (e = K.current) ? void 0 : e.activateUploadDialogue();
                                       }
                                     : void 0,
-                                focusProps: { offset: eS }
+                                focusProps: { offset: eP }
                             },
                             e
                         ),
@@ -266,7 +266,7 @@ let F = i.memo(function (e) {
                     animationContainerClassName: U.buttonAnimation,
                     glowClassName: U.buttonAnimationGlow,
                     trinketsClassName: U.buttonAnimationTrinkets,
-                    children: eP
+                    children: eS
                 })
             })
         ]

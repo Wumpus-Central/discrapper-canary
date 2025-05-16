@@ -1,46 +1,49 @@
-n.d(t, { Z: () => h });
-var r = n(255367);
-n(73800);
-var i = n(481060),
-    l = n(906732),
-    a = n(408534),
-    o = n(522651),
-    s = n(795318),
-    c = n(390322),
-    u = n(871499),
-    d = n(354459),
-    p = n(388032);
-let h = (e) => {
+n.d(t, { Z: () => f });
+var r = n(255367),
+    i = n(73800),
+    l = n(481060),
+    a = n(906732),
+    o = n(408534),
+    s = n(522651),
+    c = n(795318),
+    u = n(390322),
+    d = n(871499),
+    p = n(354459),
+    h = n(388032);
+let f = (e) => {
     let { channel: t, remoteMode: n = !1 } = e,
-        { parentAnalyticsLocation: h } = (0, l.ZP)();
-    return (0, r.jsx)(i.yRy, {
+        { parentAnalyticsLocation: f } = (0, a.ZP)(),
+        m = i.useRef(null);
+    return (0, r.jsx)(l.yRy, {
+        targetElementRef: m,
         renderPopout: (e) => {
             let { closePopout: i } = e;
-            return (0, r.jsx)(c.Z, {
-                children: (0, r.jsx)(a.Z, {
+            return (0, r.jsx)(u.Z, {
+                children: (0, r.jsx)(o.Z, {
                     onClose: i,
                     channel: t,
                     remoteMode: n,
-                    onInteraction: (0, s.u)('MoreSettingsMenu', h, { entrypoint: d.A5.THREE_DOT })
+                    onInteraction: (0, c.u)('MoreSettingsMenu', f, { entrypoint: p.A5.THREE_DOT })
                 })
             });
         },
         align: 'right',
         position: 'top',
-        animation: i.yRy.Animation.FADE,
+        animation: l.yRy.Animation.FADE,
         spacing: 16,
         children: (e, t) => {
             let { onClick: n } = e,
-                { isShown: l } = t;
-            return (0, r.jsx)(u.d, {
+                { isShown: i } = t;
+            return (0, r.jsx)(d.d, {
+                ref: m,
                 isTrayButton: !0,
                 onClick: (e) => {
-                    (0, o.v)(h, o.d.MORE), n(e);
+                    (0, s.v)(f, s.d.MORE), n(e);
                 },
-                label: p.intl.string(p.t.PdRCRk),
-                iconComponent: i.xhG,
+                label: h.intl.string(h.t.PdRCRk),
+                iconComponent: l.xhG,
                 color: 'primaryDark',
-                isActive: l
+                isActive: i
             });
         }
     });

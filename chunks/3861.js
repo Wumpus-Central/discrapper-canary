@@ -19,7 +19,7 @@ var r = n(255367),
     x = n(354459),
     y = n(363987);
 let v = (0, o.Z)((e) => {
-    let { participants: t, filteredParticipants: n, selectedParticipant: l, participantsVersion: o, layout: v, onSelectParticipant: j, onContextMenuParticipant: O, onFullscreenParticipant: E, channel: I, hasConnectPermission: S, className: P, inCall: Z, showParticipants: N = !0, width: T, height: A, idle: w, mode: R, popoutWindow: M, awaitingRemoteSessionInfo: k, callContainerDimensions: L } = e;
+    let { participants: t, filteredParticipants: n, selectedParticipant: l, participantsVersion: o, layout: v, onSelectParticipant: j, onContextMenuParticipant: O, onFullscreenParticipant: E, channel: I, hasConnectPermission: P, className: S, inCall: Z, showParticipants: N = !0, width: T, height: A, idle: w, mode: R, popoutWindow: M, awaitingRemoteSessionInfo: k, callContainerDimensions: L } = e;
     i.useEffect(() => {
         p.S.dispatch(C.CkL.REMEASURE_TARGET);
     }, [T, A, L.width, L.height]);
@@ -31,7 +31,7 @@ let v = (0, o.Z)((e) => {
           ? (0, r.jsx)(h.Z, {
                 channel: I,
                 participants: t,
-                hasConnectPermission: S
+                hasConnectPermission: P
             })
           : R === C.WtW.VOICE
             ? (0, r.jsx)(c.Z, {
@@ -73,7 +73,7 @@ let v = (0, o.Z)((e) => {
                     filteredParticipants: U,
                     participants: t,
                     popoutWindow: M,
-                    className: P,
+                    className: S,
                     idle: w,
                     height: A,
                     width: T,

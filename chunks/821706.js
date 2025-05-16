@@ -85,28 +85,27 @@ function g(e, t) {
     return i;
 }
 function E(e) {
-    var { type: t, userId: n, friendToken: l, analyticsLocation: c, shouldShowTooltip: u } = e,
-        f = m(e, ['type', 'userId', 'friendToken', 'analyticsLocation', 'shouldShowTooltip']);
-    let p = i.useCallback(() => {
+    var { type: t, userId: n, analyticsLocation: l, shouldShowTooltip: c } = e,
+        u = m(e, ['type', 'userId', 'analyticsLocation', 'shouldShowTooltip']);
+    let f = i.useCallback(() => {
             o.Z.addRelationship({
                 userId: n,
-                friendToken: l,
-                context: { location: c }
+                context: { location: l }
             });
-        }, [c, l, n]),
-        h = t === s.j8.TEXT ? s.tG : s.oY;
+        }, [l, n]),
+        p = t === s.j8.TEXT ? s.tG : s.oY;
     return (0, r.jsx)(
-        h,
+        p,
         _(
             {
                 action: 'SEND_FRIEND_REQUEST',
                 icon: a.oLu,
                 text: d.intl.string(d.t.w5uwoK),
                 tooltipText: d.intl.string(d.t.w5uwoK),
-                shouldShowTooltip: u,
-                onClick: p
+                shouldShowTooltip: c,
+                onClick: f
             },
-            f
+            u
         )
     );
 }

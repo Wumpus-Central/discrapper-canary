@@ -105,7 +105,7 @@ function _(e) {
         I = i.useCallback(() => {
             x(), j(p.NM.USER_BANNER_BLOCK_AND_REPORT_CONFIRM);
         }, [x, j]),
-        S = i.useCallback(() => {
+        P = i.useCallback(() => {
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e('19538').then(n.bind(n, 699783));
                 return (n) => {
@@ -144,7 +144,7 @@ function _(e) {
                       {
                           text: m.intl.string(m.t['7q0bNT']),
                           color: o.zxk.Colors.PRIMARY,
-                          onclick: S
+                          onclick: P
                       }
                   ])
         ]

@@ -10,9 +10,9 @@ var c = t(481060),
     s = t(981631),
     u = t(887910);
 function f(e) {
-    let { user: n, currentUser: t, guildId: f, relationshipType: _, friendToken: p, onClose: b } = e,
-        { newestAnalyticsLocation: m } = (0, i.ZP)(),
-        { gameFriends: I, hasOutgoingPendingGameFriends: y, hasIncomingPendingGameFriends: h } = (0, l.H)({ userId: n.id });
+    let { user: n, currentUser: t, guildId: f, relationshipType: _, onClose: p } = e,
+        { newestAnalyticsLocation: b } = (0, i.ZP)(),
+        { gameFriends: m, hasOutgoingPendingGameFriends: I, hasIncomingPendingGameFriends: y } = (0, l.H)({ userId: n.id });
     if (_ === s.OGo.BLOCKED) return null;
     if (n.id === t.id)
         return (0, o.jsx)('div', {
@@ -20,7 +20,7 @@ function f(e) {
             children: (0, o.jsx)(r.Z, {
                 user: n,
                 guildId: f,
-                onClose: b
+                onClose: p
             })
         });
     if (_ === s.OGo.FRIEND || n.bot)
@@ -29,7 +29,7 @@ function f(e) {
             children: (0, o.jsx)(a.Z, {
                 type: 'text',
                 userId: n.id,
-                onClose: b,
+                onClose: p,
                 autoFocus: !0
             })
         });
@@ -42,34 +42,34 @@ function f(e) {
                     user: n,
                     relationshipType: _,
                     shouldShowTooltip: !0,
-                    analyticsLocation: m
+                    analyticsLocation: b
                 }),
                 (0, o.jsx)(a.Z, {
                     type: 'text',
                     userId: n.id,
-                    onClose: b,
+                    onClose: p,
                     autoFocus: !0
                 })
             ]
         });
-    let x = I.length > 0 || y || h;
-    return _ === s.OGo.NONE && x
+    let h = m.length > 0 || I || y;
+    return _ === s.OGo.NONE && h
         ? (0, o.jsxs)('div', {
               className: u.container,
               children: [
                   (0, o.jsx)(d.k9, {
                       type: 'icon',
                       user: n,
-                      analyticsLocation: m,
-                      gameFriends: I,
+                      analyticsLocation: b,
+                      gameFriends: m,
                       shouldShowTooltip: !0,
-                      hasIncomingPendingGameFriends: h,
-                      hasOutgoingPendingGameFriends: y
+                      hasIncomingPendingGameFriends: y,
+                      hasOutgoingPendingGameFriends: I
                   }),
                   (0, o.jsx)(a.Z, {
                       type: 'text',
                       userId: n.id,
-                      onClose: b,
+                      onClose: p,
                       autoFocus: !0
                   })
               ]
@@ -80,14 +80,13 @@ function f(e) {
                   (0, o.jsx)(a.Z, {
                       type: 'icon',
                       userId: n.id,
-                      onClose: b
+                      onClose: p
                   }),
                   (0, o.jsx)(d.Z7, {
                       type: 'text',
                       userId: n.id,
-                      friendToken: p,
                       color: c.zxk.Colors.BRAND,
-                      analyticsLocation: m,
+                      analyticsLocation: b,
                       autoFocus: !0
                   })
               ]

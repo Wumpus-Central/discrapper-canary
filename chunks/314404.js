@@ -190,7 +190,11 @@ function et(e) {
         ),
         eL = null != Q ? Q : ef;
     l()(null != eL, 'Price option has to be set');
-    let ex = (0, _.Z)(),
+    let ex = (0, _.Z)({
+            forceFetch: !1,
+            excludeReverseTrial: !1,
+            excludeReverseTrialFromCountdown: !0
+        }),
         ek = null != eN && V.nG[eN.trial_id].skus.includes(b),
         eM = null != eP && $.some((e) => (null == eR ? void 0 : eR.includes(e))) && null != eP.discount,
         ej = (0, v.aS)(V.Xh.PREMIUM_MONTH_TIER_2, !1, e_, eL);

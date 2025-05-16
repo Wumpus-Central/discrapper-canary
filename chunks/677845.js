@@ -23,42 +23,42 @@ var r = n(255367),
     O = n(981631),
     E = n(600295);
 function I(e) {
-    let { participants: t, onClick: n, onDoubleClick: I, onContextMenu: S, channel: P, className: Z, inCall: N, totalNumberOfParticipants: T } = e,
+    let { participants: t, onClick: n, onDoubleClick: I, onContextMenu: P, channel: S, className: Z, inCall: N, totalNumberOfParticipants: T } = e,
         A = (0, c.bp)() === O.IlC.POPOUT,
-        w = (0, o.e7)([_.Z], () => _.Z.getGuild(P.guild_id), [P.guild_id]),
+        w = (0, o.e7)([_.Z], () => _.Z.getGuild(S.guild_id), [S.guild_id]),
         { dismissedActivityEntryPointTileChannel: R } = (0, v.d)(),
-        M = (0, o.e7)([h.Z], () => h.Z.getUserParticipantCount(P.id), [P]),
-        k = (0, b.bt)(P.id, t),
+        M = (0, o.e7)([h.Z], () => h.Z.getUserParticipantCount(S.id), [S]),
+        k = (0, b.bt)(S.id, t),
         L = i.useCallback(() => {
             (0, a.j)(() => {
-                v.d.setState({ dismissedActivityEntryPointTileChannel: P.id });
+                v.d.setState({ dismissedActivityEntryPointTileChannel: S.id });
             });
-        }, [P.id]);
+        }, [S.id]);
     i.useEffect(() => {
         null != R &&
-            P.id !== R &&
+            S.id !== R &&
             (0, a.j)(() => {
                 v.d.setState({ dismissedActivityEntryPointTileChannel: null });
             });
-    }, [P.id, R]);
-    let D = (0, o.e7)([C.Z], () => P.isPrivate() || (0, m.b)(C.Z, w, P), [w, P]),
-        U = (null == w ? void 0 : w.afkChannelId) === P.id,
-        B = P.userLimit <= 0 || P.userLimit > 1,
-        G = (0, o.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(P.id).length <= 0),
+    }, [S.id, R]);
+    let D = (0, o.e7)([C.Z], () => S.isPrivate() || (0, m.b)(C.Z, w, S), [w, S]),
+        U = (null == w ? void 0 : w.afkChannelId) === S.id,
+        B = S.userLimit <= 0 || S.userLimit > 1,
+        G = (0, o.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(S.id).length <= 0),
         F = (0, f.wE)(s.z.VC_TILE_ACTIVITIES_ENTRY_POINT),
-        H = (0, d.KF)(P.id) !== d.jy.CAN_LAUNCH,
-        V = null != R && R === P.id,
+        H = (0, d.KF)(S.id) !== d.jy.CAN_LAUNCH,
+        V = null != R && R === S.id,
         z = k.map(
             (e) => (t) =>
                 (0, r.jsx)(
                     y.ZP,
                     {
                         participant: e,
-                        channel: P,
+                        channel: S,
                         className: E.tile,
                         onClick: n,
                         onDoubleClick: I,
-                        onContextMenu: S,
+                        onContextMenu: P,
                         inCall: N,
                         width: t,
                         inPopout: A
@@ -74,7 +74,7 @@ function I(e) {
                 total_participants: T,
                 can_invite: D,
                 is_afk_channel: U,
-                channel_user_limit: P.userLimit
+                channel_user_limit: S.userLimit
             }
         },
         { trackOnInitialLoad: !0 },
@@ -89,7 +89,7 @@ function I(e) {
                   (G && !H
                       ? z.push((e) =>
                             (0, r.jsx)(x.h, {
-                                channel: P,
+                                channel: S,
                                 guild: w,
                                 width: e,
                                 inPopout: A,
@@ -100,14 +100,14 @@ function I(e) {
                       : z.push((e) =>
                             (0, r.jsx)(j.Z, {
                                 width: e,
-                                channel: P,
+                                channel: S,
                                 guild: w,
                                 inPopout: A
                             })
                         ))
                 : z.push((e) =>
                       (0, r.jsx)(x.h, {
-                          channel: P,
+                          channel: S,
                           guild: w,
                           width: e,
                           inPopout: A,

@@ -39,8 +39,8 @@ var i = n(255367),
     k = n(293273),
     D = n(158776),
     A = n(699516),
-    L = n(594174),
-    R = n(801077),
+    R = n(594174),
+    L = n(801077),
     M = n(237997),
     z = n(630388),
     U = n(5192),
@@ -95,7 +95,7 @@ function Q(e, t) {
 }
 function K(e) {
     let { entry: t, currentUserActivity: n, idx: o } = e,
-        a = (0, u.e7)([L.default], () => L.default.getUser(t.author_id)),
+        a = (0, u.e7)([R.default], () => R.default.getUser(t.author_id)),
         [s, c] = r.useState('unsent'),
         [h, g] = r.useState(!1);
     r.useEffect(() => {
@@ -211,7 +211,7 @@ function K(e) {
 function X(e) {
     var t;
     let { entry: n, currentUserActivity: o } = e,
-        l = (0, u.e7)([L.default], () => L.default.getUser(n.author_id)),
+        l = (0, u.e7)([R.default], () => R.default.getUser(n.author_id)),
         a = null != (t = null == o ? void 0 : o.application_id) ? t : n.extra.application_id,
         s = (0, u.e7)([D.Z], () => (null != l ? D.Z.getApplicationActivity(l.id, a) : null), [a, l]),
         [c, h] = r.useState('unsent');
@@ -271,7 +271,7 @@ function X(e) {
 }
 function J(e) {
     let { entry: t, currentUserActivity: n, idx: r } = e,
-        o = (0, u.e7)([L.default], () => L.default.getUser(t.author_id)),
+        o = (0, u.e7)([R.default], () => R.default.getUser(t.author_id)),
         l = (0, u.e7)([P.Z], () => (null != o ? P.Z.getAnyStreamForUser(o.id) : null), [o]),
         { isMobileOnline: a, status: s } = (0, u.cj)(
             [D.Z],
@@ -404,10 +404,10 @@ function ee(e) {
     });
     let d = (0, u.e7)([k.Z], () => (null == t ? null : k.Z.getApplicationActivity(t)), [t]),
         p = (0, u.Wu)(
-            [R.Z, A.Z, N.Z, w.Z],
+            [L.Z, A.Z, N.Z, w.Z],
             () => {
                 if (null == t) return [];
-                let e = R.Z.nowPlayingCards,
+                let e = L.Z.nowPlayingCards,
                     n = {
                         v1: i,
                         v2: o
@@ -531,7 +531,7 @@ function ei(e) {
         r = null == n ? void 0 : n.id,
         o = null == n ? void 0 : n.altId,
         l = (0, S.Ns)(r),
-        a = (0, u.e7)([L.default], () => L.default.getCurrentUser()),
+        a = (0, u.e7)([R.default], () => R.default.getCurrentUser()),
         s = null != o ? o : r,
         c = (0, u.e7)([k.Z], () => (null == s ? null : k.Z.getApplicationActivity(s)), [s]);
     (0, y.ZP)(() => (I.L(), () => I.v()));

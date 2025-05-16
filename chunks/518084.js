@@ -183,34 +183,35 @@ let b = (e) => {
     (b.Body = O),
     (b.Content = x),
     (b.Icon = (e) => {
-        let { icon: t, label: n, onClick: i, isActive: s, tooltipPosition: o = 'top', size: a = 20, isTutorial: c = !1 } = e;
+        let { ref: t, icon: n, label: i, onClick: s, isActive: o, tooltipPosition: a = 'top', size: c = 20, isTutorial: u = !1 } = e;
         return (0, r.jsx)(d.ua7, {
-            text: c
+            text: u
                 ? (0, r.jsx)('div', {
                       className: h.tutorialTip,
-                      children: n
+                      children: i
                   })
-                : n,
-            'aria-label': n,
-            position: o,
-            forceOpen: c,
-            color: c ? d.ua7.Colors.BRAND : d.ua7.Colors.BLACK,
+                : i,
+            'aria-label': i,
+            position: a,
+            forceOpen: u,
+            color: u ? d.ua7.Colors.BRAND : d.ua7.Colors.BLACK,
             children: (e) => {
-                let { onMouseEnter: o, onMouseLeave: c } = e;
+                let { onMouseEnter: a, onMouseLeave: u } = e;
                 return (0, r.jsx)(d.zxk, {
+                    buttonRef: t,
                     look: d.zxk.Looks.BLANK,
                     size: d.zxk.Sizes.NONE,
-                    onClick: i,
-                    onMouseEnter: o,
-                    onMouseLeave: c,
-                    className: l()(h.icon, { [h.toggledIconOn]: s }),
+                    onClick: s,
+                    onMouseEnter: a,
+                    onMouseLeave: u,
+                    className: l()(h.icon, { [h.toggledIconOn]: o }),
                     innerClassName: p.flexCenter,
-                    'aria-label': n,
-                    children: (0, r.jsx)(t, {
+                    'aria-label': i,
+                    children: (0, r.jsx)(n, {
                         color: 'currentColor',
                         size: 'custom',
-                        width: a,
-                        height: a,
+                        width: c,
+                        height: c,
                         role: 'img'
                     })
                 });

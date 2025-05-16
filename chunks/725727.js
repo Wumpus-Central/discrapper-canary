@@ -27,7 +27,7 @@ function g() {
         t = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
         n = (0, c._O)(),
         g = (0, i.e7)([s.Z], () => s.Z.hasAnyUnexpiredOffer()),
-        E = (0, u.W)(),
+        E = (0, u.W)().isInReverseTrial,
         [b, y] = r.useState(!1),
         [O, v] = r.useState([]);
     r.useEffect(() => {
@@ -94,7 +94,7 @@ function E() {
         n = m(
             t,
             (0, i.e7)([s.Z], () => s.Z.hasAnyUnexpiredOffer()),
-            (0, u.W)(),
+            (0, u.W)().isInReverseTrial,
             {}
         );
     return r

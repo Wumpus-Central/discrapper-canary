@@ -46,7 +46,7 @@ function d(e) {
                 O.current = C;
             }, [C]);
             let [E, I] = r.useState(!1),
-                [S] = r.useState(
+                [P] = r.useState(
                     () =>
                         new a.$o((e) => () => {
                             let t = null != j.current && 'string' == typeof e ? j.current(e) : e;
@@ -58,8 +58,8 @@ function d(e) {
                                 });
                         })
                 );
-            r.useEffect(() => () => S.clean(), [S]);
-            let P = r.useCallback(
+            r.useEffect(() => () => P.clean(), [P]);
+            let S = r.useCallback(
                     (e, t) => {
                         O.current && h(e, t);
                     },
@@ -68,7 +68,7 @@ function d(e) {
                 [Z, N] = r.useState(!0);
             r.useEffect(() => {
                 if (Z && !_) return void N(!1);
-                P(x(t, d), d);
+                S(x(t, d), d);
             }, [d]);
             let T = r.useCallback(
                     function () {
@@ -79,9 +79,9 @@ function d(e) {
                                 type: i.G.SET_FOCUSED_INDEX,
                                 index: n
                             }),
-                            e && P(x(t, n), n);
+                            e && S(x(t, n), n);
                     },
-                    [x, d, f, m, t, P]
+                    [x, d, f, m, t, S]
                 ),
                 A = r.useCallback(
                     (e) => {
@@ -125,17 +125,17 @@ function d(e) {
                     E || I(!0);
                 }, [E]),
                 R = r.useCallback(() => {
-                    E || (g ? P(x(t, d), d) : T(!0));
-                }, [x, t, P, g, E, d, T]),
+                    E || (g ? S(x(t, d), d) : T(!0));
+                }, [x, t, S, g, E, d, T]),
                 M = r.useCallback(
                     (e) => {
                         e.currentTarget.contains(e.relatedTarget) ||
                             requestAnimationFrame(() => {
-                                if (null == c(s(x, t, d))) return void P(t);
+                                if (null == c(s(x, t, d))) return void S(t);
                                 I(!1);
                             });
                     },
-                    [x, t, d, P]
+                    [x, t, d, S]
                 ),
                 k = r.useRef(null);
             r.useLayoutEffect(() => {
@@ -169,10 +169,10 @@ function d(e) {
                             'aria-posinset': b ? n + 1 : void 0,
                             id: x(t, n),
                             tabIndex: g && n === d ? 0 : -1,
-                            onFocus: S.get(null != j.current ? x(t, n) : n)
+                            onFocus: P.get(null != j.current ? x(t, n) : n)
                         };
                     },
-                    [x, t, d, g, S, b]
+                    [x, t, d, g, P, b]
                 );
             return r.useMemo(
                 () => ({

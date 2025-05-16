@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(975146),
     E = n(430824),
     I = n(496675),
-    S = n(626135),
-    P = n(431328),
+    P = n(626135),
+    S = n(431328),
     Z = n(501655),
     N = n(200498),
     T = n(146085),
@@ -47,15 +47,15 @@ function U(e) {
             [n.id]
         ),
         y = (0, N.B)(n.id),
-        v = (0, P.Rk)(n.id, Z.pV.REQUESTED_TO_SPEAK_ONLY),
+        v = (0, S.Rk)(n.id, Z.pV.REQUESTED_TO_SPEAK_ONLY),
         { hasParticipantsPanel: E } = (0, f.Z)({ location: 'StageChannelCallHeader' }),
         I = E && x,
-        S = (0, C.Q3)('StageChannelCallHeader');
+        P = (0, C.Q3)('StageChannelCallHeader');
     return (0, r.jsxs)(p.Gt, {
         value: s,
         children: [
             (0, r.jsx)(_.Z, { channelId: n.id }, 'clips-enabled-indicator'),
-            !S && !t && (0, r.jsx)(b.Z, { className: D.button }, 'clips'),
+            !P && !t && (0, r.jsx)(b.Z, { className: D.button }, 'clips'),
             !l && y
                 ? (0, r.jsx)('div', {
                       className: D.button,
@@ -98,8 +98,8 @@ function B(e) {
     let { inPopout: n, channel: l, toggleRequestToSpeakSidebar: d, showRequestToSpeakSidebar: p } = e,
         h = (0, g.ZP)(l),
         f = (0, o.e7)([A.Z], () => A.Z.getStageInstanceByChannel(l.id)),
-        m = (0, P.Io)(l.id),
-        b = (0, P.Rk)(l.id, Z.pV.AUDIENCE),
+        m = (0, S.Io)(l.id),
+        b = (0, S.Rk)(l.id, Z.pV.AUDIENCE),
         _ = (0, o.e7)([E.Z], () => E.Z.getGuild(l.guild_id), [l.guild_id]),
         j = null != (t = null == _ ? void 0 : _.maxStageVideoChannelUsers) ? t : 0,
         O = (null == _ ? void 0 : _.isCommunity()) ? j < M.TU7 : (null == _ ? void 0 : _.premiumTier) !== M.Eu4.TIER_3 && j <= M.eez,
@@ -108,7 +108,7 @@ function B(e) {
         B = (0, C.Q3)('StageChannelCallHeader'),
         F = () => {
             u.Z.updateStageVideoLimitBoostUpsellDismissed(l.id, !0),
-                S.default.track(M.rMx.BOOSTING_UPSELL_CLICKED, {
+                P.default.track(M.rMx.BOOSTING_UPSELL_CLICKED, {
                     guild_id: l.guild_id,
                     type: k.cd.VIDEO_STAGE_LIMIT,
                     is_moderator: w,
@@ -128,7 +128,7 @@ function B(e) {
         i.useEffect(() => {
             let { canModerate: e, audienceCount: t, channel: n, speakerCount: r } = V.current;
             N &&
-                S.default.track(M.rMx.BOOSTING_UPSELL_VIEWED, {
+                P.default.track(M.rMx.BOOSTING_UPSELL_VIEWED, {
                     guild_id: n.guild_id,
                     type: k.cd.VIDEO_STAGE_LIMIT,
                     is_moderator: e,
@@ -234,7 +234,7 @@ function B(e) {
                                                         guildId: l.guild_id,
                                                         location: { section: M.jXE.STAGE_VIDEO_LIMIT }
                                                     }),
-                                                        S.default.track(M.rMx.BOOSTING_UPSELL_CLICKED, {
+                                                        P.default.track(M.rMx.BOOSTING_UPSELL_CLICKED, {
                                                             guild_id: l.guild_id,
                                                             type: k.cd.VIDEO_STAGE_LIMIT,
                                                             is_moderator: w,

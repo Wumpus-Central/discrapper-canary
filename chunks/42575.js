@@ -21,7 +21,6 @@ function g(e) {
                     userId: t.id,
                     context: { location: 'Friends' },
                     type: void 0,
-                    friendToken: void 0,
                     fromFriendSuggestion: !0
                 });
         },

@@ -1,47 +1,49 @@
-n.d(t, { Z: () => f });
-var r = n(255367);
-n(73800);
-var i = n(399606),
-    l = n(481060),
-    a = n(125268),
-    o = n(673125),
-    s = n(984063),
-    c = n(390322),
-    u = n(871499),
-    d = n(12168),
-    p = n(304388),
-    h = n(388032);
-function f(e) {
+n.d(t, { Z: () => m });
+var r = n(255367),
+    i = n(73800),
+    l = n(399606),
+    a = n(481060),
+    o = n(125268),
+    s = n(673125),
+    c = n(984063),
+    u = n(390322),
+    d = n(871499),
+    p = n(12168),
+    h = n(304388),
+    f = n(388032);
+function m(e) {
     let { channel: t } = e,
-        n = (0, i.e7)([o.Z], () => o.Z.getDrawMode()),
-        f = (null == n ? void 0 : n.type) === s.W.EMOJI_HOSE,
-        m = (e, t) => {
+        n = (0, l.e7)([s.Z], () => s.Z.getDrawMode()),
+        m = (null == n ? void 0 : n.type) === c.W.EMOJI_HOSE,
+        g = i.useRef(null),
+        b = (e, t) => {
             null != e
-                ? (0, a.Bo)({
-                      type: s.W.EMOJI_HOSE,
+                ? (0, o.Bo)({
+                      type: c.W.EMOJI_HOSE,
                       emojiName: e.name,
                       emojiId: e.id
                   })
-                : f && (0, a.Bo)(null),
+                : m && (0, o.Bo)(null),
                 null == t || t();
         };
-    return (0, r.jsx)(p.Z, {
+    return (0, r.jsx)(h.Z, {
         renderPopout: (e) => {
             let { closePopout: n, onFocus: i } = e;
-            return (0, r.jsx)(c.Z, {
-                children: (0, r.jsx)(d.Z, {
-                    title: h.intl.string(h.t.XYLOyM),
+            return (0, r.jsx)(u.Z, {
+                children: (0, r.jsx)(p.Z, {
+                    title: f.intl.string(f.t.XYLOyM),
                     channel: t,
                     closePopout: n,
                     onFocus: i,
-                    onSelectEmoji: (e) => m(e, n)
+                    onSelectEmoji: (e) => b(e, n)
                 })
             });
         },
+        popoutTargetRef: g,
         children: (e) => {
             var t, n;
             return (0, r.jsx)(
-                u.Z,
+                d.Z,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -69,10 +71,11 @@ function f(e) {
                 })({}, e)),
                 (n = n =
                     {
-                        iconComponent: l.j9u,
-                        isActive: f || e.isActive,
+                        buttonRef: g,
+                        iconComponent: a.j9u,
+                        isActive: m || e.isActive,
                         onClick: (t) => {
-                            m(null), e.onClick(t);
+                            b(null), e.onClick(t);
                         }
                     }),
                 Object.getOwnPropertyDescriptors

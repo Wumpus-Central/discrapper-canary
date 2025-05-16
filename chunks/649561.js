@@ -21,8 +21,8 @@ var i = n(255367),
     x = n(692546),
     E = n(518084),
     S = n(987650),
-    j = n(981631),
-    C = n(388032),
+    C = n(981631),
+    j = n(388032),
     Z = n(137180);
 function I(e, t, n) {
     return (
@@ -42,7 +42,7 @@ function N() {
     let e = (0, b.getPID)(),
         t = (0, b.getRPCAuthToken)();
     (0, f.lW)({
-        type: j.BmY.DISPATCH,
+        type: C.BmY.DISPATCH,
         pid: e,
         token: t,
         payloads: [
@@ -56,7 +56,7 @@ function N() {
 }
 class w extends r.PureComponent {
     componentDidMount() {
-        (this.notificationTimer = setTimeout(this.hideNotification, P)), p.Z.track(j.rMx.NOTIFICATION_VIEWED, { notif_type: S.n0.OverlayCrashed });
+        (this.notificationTimer = setTimeout(this.hideNotification, P)), p.Z.track(C.rMx.NOTIFICATION_VIEWED, { notif_type: S.n0.OverlayCrashed });
     }
     componentWillUnmount() {
         let { notificationTimer: e } = this;
@@ -72,7 +72,7 @@ class w extends r.PureComponent {
                   contentDomRef: this.contentDomRef,
                   observe: !1,
                   children: (0, i.jsx)(h.f6W, {
-                      theme: j.BRd.DARK,
+                      theme: C.BRd.DARK,
                       children: (r) =>
                           (0, i.jsxs)(h.P3F, {
                               innerRef: this.contentDomRef,
@@ -86,8 +86,8 @@ class w extends r.PureComponent {
                                           height: 40,
                                           className: Z.notificationIcon
                                       }),
-                                      title: C.intl.string(C.t.U38qZm),
-                                      confirmText: C.intl.string(C.t.TzAl1d),
+                                      title: j.intl.string(j.t.U38qZm),
+                                      confirmText: j.intl.string(j.t.TzAl1d),
                                       onNotificationClick: this.handleNotificationClick,
                                       onConfirmClick: this.handleReload,
                                       onDismissClick: this.hideNotification,
@@ -130,7 +130,7 @@ class w extends r.PureComponent {
                 this.setState({ busy: !0 }),
                     N(),
                     p.Z.track(
-                        j.rMx.NOTIFICATION_CLICKED,
+                        C.rMx.NOTIFICATION_CLICKED,
                         {
                             notif_type: S.n0.OverlayCrashed,
                             action_type: 'reload'
@@ -170,7 +170,7 @@ class k extends r.PureComponent {
         let i = (0, b.getPID)(),
             r = (0, b.getRPCAuthToken)();
         (0, f.lW)({
-            type: j.BmY.DISPATCH,
+            type: C.BmY.DISPATCH,
             pid: (0, b.getPID)(),
             token: r,
             payloads: [
@@ -188,7 +188,7 @@ class k extends r.PureComponent {
         }),
             setImmediate(() => window.addEventListener('click', N));
         let s = O.Z.captureCrash(e, { extra: t });
-        p.Z.track(j.rMx.APP_CRASHED, {
+        p.Z.track(C.rMx.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,

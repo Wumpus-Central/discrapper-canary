@@ -10,45 +10,44 @@ var i = n(442837),
     u = n(228168),
     d = n(981631);
 function f(e) {
-    let { user: t, friendToken: n, themeType: f, shouldShowTooltip: _ = !1 } = e,
-        { newestAnalyticsLocation: p } = (0, a.ZP)(),
-        h = (0, i.e7)([o.default], () => o.default.getId() === t.id),
-        m = (0, i.e7)([s.Z], () => s.Z.getRelationshipType(t.id)),
-        { gameFriends: g, hasOutgoingPendingGameFriends: E, hasIncomingPendingGameFriends: b } = (0, c.H)({ userId: t.id }),
-        y = g.length > 0 || E || b;
-    if (null == t || t.bot || h || m === d.OGo.BLOCKED) return null;
-    if (m === d.OGo.NONE && y)
-        return f === u.lY.MODAL
+    let { user: t, themeType: n, shouldShowTooltip: f = !1 } = e,
+        { newestAnalyticsLocation: _ } = (0, a.ZP)(),
+        p = (0, i.e7)([o.default], () => o.default.getId() === t.id),
+        h = (0, i.e7)([s.Z], () => s.Z.getRelationshipType(t.id)),
+        { gameFriends: m, hasOutgoingPendingGameFriends: g, hasIncomingPendingGameFriends: E } = (0, c.H)({ userId: t.id }),
+        b = m.length > 0 || g || E;
+    if (null == t || t.bot || p || h === d.OGo.BLOCKED) return null;
+    if (h === d.OGo.NONE && b)
+        return n === u.lY.MODAL
             ? null
             : (0, r.jsx)(l.k9, {
                   type: 'banner',
                   user: t,
-                  gameFriends: g,
-                  hasOutgoingPendingGameFriends: E,
-                  hasIncomingPendingGameFriends: b,
-                  analyticsLocation: p,
-                  shouldShowTooltip: _
+                  gameFriends: m,
+                  hasOutgoingPendingGameFriends: g,
+                  hasIncomingPendingGameFriends: E,
+                  analyticsLocation: _,
+                  shouldShowTooltip: f
               });
-    switch (m) {
+    switch (h) {
         case d.OGo.FRIEND:
         case d.OGo.PENDING_INCOMING:
         case d.OGo.PENDING_OUTGOING:
-            if (f === u.lY.MODAL && m !== d.OGo.FRIEND) return null;
+            if (n === u.lY.MODAL && h !== d.OGo.FRIEND) return null;
             return (0, r.jsx)(l.g, {
                 type: 'banner',
                 user: t,
-                relationshipType: m,
-                analyticsLocation: p,
-                shouldShowTooltip: _
+                relationshipType: h,
+                analyticsLocation: _,
+                shouldShowTooltip: f
             });
         default:
-            if (f === u.lY.MODAL) return null;
+            if (n === u.lY.MODAL) return null;
             return (0, r.jsx)(l.Z7, {
                 type: 'banner',
                 userId: t.id,
-                shouldShowTooltip: _,
-                friendToken: n,
-                analyticsLocation: p
+                shouldShowTooltip: f,
+                analyticsLocation: _
             });
     }
 }

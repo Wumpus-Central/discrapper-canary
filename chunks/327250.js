@@ -24,8 +24,8 @@ var i = n(120356),
     O = n(594174),
     E = n(572004),
     I = n(5192),
-    S = n(51144),
-    P = n(131085),
+    P = n(51144),
+    S = n(131085),
     Z = n(388032),
     N = n(157092);
 function T(e) {
@@ -107,7 +107,7 @@ function w(e) {
                                         primaryGuild: null == t ? void 0 : t.primaryGuild,
                                         userId: null == t ? void 0 : t.id,
                                         contextGuildId: n,
-                                        badgeSize: P.Gg.SIZE_16,
+                                        badgeSize: S.Gg.SIZE_16,
                                         textVariant: 'heading-md/semibold',
                                         className: N.memberClanTag,
                                         containerClassName: N.memberClanTagContainer
@@ -117,7 +117,7 @@ function w(e) {
                             (0, r.jsx)(o.Text, {
                                 variant: 'text-md/medium',
                                 color: 'text-normal',
-                                children: S.ZP.getUserTag(t)
+                                children: P.ZP.getUserTag(t)
                             })
                         ]
                     })
@@ -194,11 +194,11 @@ function M(e) {
             [t, m]
         ),
         I = (0, u.b)(i),
-        { analyticsLocations: S, newestAnalyticsLocation: P } = (0, c.ZP)(),
+        { analyticsLocations: P, newestAnalyticsLocation: S } = (0, c.ZP)(),
         w = (0, f.sE)(l, {
             targetUserId: t.id,
-            location: P,
-            locations: S
+            location: S,
+            locations: P
         }),
         M = (0, a.e7)([g.default], () => g.default.getId() === (null == t ? void 0 : t.id)),
         k = (0, a.e7)(
@@ -236,7 +236,7 @@ function M(e) {
                             (0, r.jsx)(
                                 e,
                                 A(T({}, n), {
-                                    location: P,
+                                    location: S,
                                     guildId: l,
                                     user: t,
                                     modReportId: k
@@ -261,7 +261,7 @@ function M(e) {
                             (0, r.jsx)(
                                 e,
                                 A(T({}, n), {
-                                    location: P,
+                                    location: S,
                                     guildId: l,
                                     user: t,
                                     modReportId: k
@@ -284,12 +284,12 @@ function M(e) {
                         ? (0, d.q)({
                               guildId: i.guildId,
                               userId: i.userId,
-                              anaylticsLocations: S
+                              anaylticsLocations: P
                           })
                         : (0, d.z)({
                               guildId: i.guildId,
                               userId: i.userId,
-                              anaylticsLocations: S,
+                              anaylticsLocations: P,
                               modReportId: k
                           });
                 },

@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(367907),
     E = n(450936),
     I = n(993766),
-    S = n(499254),
-    P = n(541099),
+    P = n(499254),
+    S = n(541099),
     Z = n(827498),
     N = n(533379),
     T = n(555573),
@@ -77,8 +77,8 @@ var r = n(255367),
     eO = n(155409),
     eE = n(163612),
     eI = n(314897),
-    eS = n(433355),
-    eP = n(592125),
+    eP = n(433355),
+    eS = n(592125),
     eZ = n(703558),
     eN = n(323873),
     eT = n(271383),
@@ -408,7 +408,7 @@ class tn extends i.PureComponent {
                     } else if (e === M.bB.APPLICATION_LAUNCHER || e === M.bB.IMAGE_RECS_MENU || e === M.bB.IMAGE_RECS_SUBMENU) {
                         var h;
                         let { location: t, sectionName: n } = null != (h = (0, eY._U)(l)) ? h : {},
-                            r = e === M.bB.APPLICATION_LAUNCHER ? P.Z.lastShownEntrypoint() : Z._b.TEXT,
+                            r = e === M.bB.APPLICATION_LAUNCHER ? S.Z.lastShownEntrypoint() : Z._b.TEXT,
                             { isAuthorized: i } = await (0, U.L)({
                                 applicationId: l.applicationId,
                                 channel: c,
@@ -601,7 +601,7 @@ class tr extends i.PureComponent {
     render() {
         var e, t;
         let n,
-            { channel: i, guild: l, keyboardModeEnabled: o, hasModalOpen: s, pendingReply: c, chatInputType: d, placeholder: h, accessibilityLabel: f, showQuarantinedUserBanner: m, filterAfterTimestamp: g, communicationDisabledUntil: b, shakeIntensity: x, poggermodeEnabled: y, isSelectedResourceChannel: v, showAutomodUserProfileChatBlocker: j, showAppLauncherButton: O, showAppDMsUI: E, isInitialLoading: I, isRefreshChatInputEnabled: S, isRefreshEnabled: P, pendingScheduledMessage: Z, recipientUser: N, voiceChannel: T, theme: A, chatWallpaperState: w, wallpaperColorMix: R } = this.props,
+            { channel: i, guild: l, keyboardModeEnabled: o, hasModalOpen: s, pendingReply: c, chatInputType: d, placeholder: h, accessibilityLabel: f, showQuarantinedUserBanner: m, filterAfterTimestamp: g, communicationDisabledUntil: b, shakeIntensity: x, poggermodeEnabled: y, isSelectedResourceChannel: v, showAutomodUserProfileChatBlocker: j, showAppLauncherButton: O, showAppDMsUI: E, isInitialLoading: I, isRefreshChatInputEnabled: P, isRefreshEnabled: S, pendingScheduledMessage: Z, recipientUser: N, voiceChannel: T, theme: A, chatWallpaperState: w, wallpaperColorMix: R } = this.props,
             { textAreaFocused: M, textAreaHighlighted: k } = this.state,
             L = d === B.Ie.SIDEBAR;
         n = L && i.type === e0.d4z.GUILD_VOICE ? e1.t.pnnyFR : L && i.type === e0.d4z.GUILD_STAGE_VOICE ? e1.t.YInSkp : u.T.THREADS.has(i.type) ? e1.t['OkzL+f'] : e1.t.UbNmGR;
@@ -640,8 +640,8 @@ class tr extends i.PureComponent {
                             pendingScheduledMessage: Z
                         })
                     }),
-                    P ? null : this.renderAppLauncherButton(),
-                    S ? null : this.renderAppCommandButton()
+                    S ? null : this.renderAppLauncherButton(),
+                    P ? null : this.renderAppCommandButton()
                 ]
             }),
             G = E && I,
@@ -741,7 +741,7 @@ class tr extends i.PureComponent {
                                                                           channel: i,
                                                                           children: F
                                                                       }),
-                                                                S
+                                                                P
                                                                     ? null
                                                                     : (0, r.jsx)(_.Z, {
                                                                           channel: i,
@@ -808,7 +808,7 @@ class tr extends i.PureComponent {
                             n === B.Ie.SIDEBAR && eB.S.dispatch(e0.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: eR.Z.getChannelId() });
                             return;
                         case e0.yXg.ARROW_RIGHT:
-                            n === B.Ie.NORMAL && eB.S.dispatch(e0.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: eS.ZP.getCurrentSidebarChannelId(r.id) });
+                            n === B.Ie.NORMAL && eB.S.dispatch(e0.CkL.FOCUS_CHANNEL_TEXT_AREA, { channelId: eP.ZP.getCurrentSidebarChannelId(r.id) });
                     }
             }),
             e7(this, 'handleOpenExpressionPicker', (e) => {
@@ -817,7 +817,7 @@ class tr extends i.PureComponent {
             }),
             e7(this, 'handleOpenAppLauncher', (e) => {
                 let { applicationId: t } = e;
-                return S.__(Z._b.TEXT, this.props.chatInputType, { applicationId: t });
+                return P.__(Z._b.TEXT, this.props.chatInputType, { applicationId: t });
             }),
             e7(this, 'handleChatInteract', () => {
                 var e;
@@ -890,8 +890,8 @@ let ti = i.memo(function (e) {
         x = (0, D.h9)(t.id),
         v = (0, ey.k)(t.id),
         O = (0, y.ZP)(),
-        S = (0, K.Z)(t.id),
-        Z = (0, q.Z)(null == S ? void 0 : S.wallpaperId),
+        P = (0, K.Z)(t.id),
+        Z = (0, q.Z)(null == P ? void 0 : P.wallpaperId),
         {
             isInitialLoading: T,
             primaryEntryPointCommand: A,
@@ -914,11 +914,11 @@ let ti = i.memo(function (e) {
         commands: L
     });
     let U = i.useRef(null),
-        B = (0, d.e7)([P.Z], () => P.Z.appDMChannelsWithFailedLoads().has(t.id)),
+        B = (0, d.e7)([S.Z], () => S.Z.appDMChannelsWithFailedLoads().has(t.id)),
         G = (0, Q.R6)('ChannelChat'),
         F = (0, Q.Q3)('ChannelChat'),
         H = (0, d.e7)([eR.Z], () => eR.Z.getVoiceChannelId()),
-        V = (0, d.e7)([eP.Z], () => eP.Z.getChannel(H)),
+        V = (0, d.e7)([eS.Z], () => eS.Z.getChannel(H)),
         z = (0, d.e7)([ek.default], () => (t.type !== e0.d4z.DM ? null : ek.default.getUser(t.getRecipientId())));
     return (0, r.jsx)(tr, {
         channel: t,
@@ -949,7 +949,7 @@ let ti = i.memo(function (e) {
         recipientUser: z,
         voiceChannel: V,
         theme: O,
-        chatWallpaperState: S,
+        chatWallpaperState: P,
         wallpaperColorMix: Z
     });
 });

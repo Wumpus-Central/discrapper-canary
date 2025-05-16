@@ -15,7 +15,12 @@ function a(e, t, n) {
     );
 }
 function o(e, t, n, r) {
-    null != t && e.splice(i()(e, t, r), 1), null != n && e.splice(i()(e, n, r), 0, n);
+    if (null != t) {
+        let n = i()(e, t, r);
+        for (; e[n] !== t && n < e.length - 1; ) n += 1;
+        e.splice(n, 1);
+    }
+    null != n && e.splice(i()(e, n, r), 0, n);
 }
 let s = [];
 class l {

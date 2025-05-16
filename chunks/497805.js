@@ -66,12 +66,12 @@ function m(e, t) {
 }
 async function g(e) {
     var t,
-        { userId: a, section: o, subsection: d, guildId: p, channelId: g, friendToken: E, showGuildProfile: b = !0, appContext: y, customStatusPrompt: O } = e,
-        v = _(e, ['userId', 'section', 'subsection', 'guildId', 'channelId', 'friendToken', 'showGuildProfile', 'appContext', 'customStatusPrompt']);
-    let I = l.default.getUser(a);
-    if (null == I) return;
-    let S = l.default.getCurrentUser();
-    null != S &&
+        { userId: a, section: o, subsection: d, guildId: p, channelId: g, showGuildProfile: E = !0, appContext: b, customStatusPrompt: y } = e,
+        O = _(e, ['userId', 'section', 'subsection', 'guildId', 'channelId', 'showGuildProfile', 'appContext', 'customStatusPrompt']);
+    let v = l.default.getUser(a);
+    if (null == v) return;
+    let I = l.default.getCurrentUser();
+    null != I &&
         (h = await (0, i.ZDy)(
             async () => {
                 let { default: e } = (0, c.q)({ location: 'UserProfileModalManager' }) ? await Promise.all([n.e('1268'), n.e('82412'), n.e('62880'), n.e('84471'), n.e('44784')]).then(n.bind(n, 866035)) : await Promise.all([n.e('1268'), n.e('82412'), n.e('62880'), n.e('84471'), n.e('65326')]).then(n.bind(n, 678780));
@@ -80,24 +80,23 @@ async function g(e) {
                         e,
                         f(
                             {
-                                user: I,
-                                currentUser: S,
+                                user: v,
+                                currentUser: I,
                                 guildId: p,
-                                friendToken: E,
                                 initialSection: o,
                                 initialSubsection: d,
                                 channelId: g,
-                                showGuildProfile: b,
-                                customStatusPrompt: O
+                                showGuildProfile: E,
+                                customStatusPrompt: y
                             },
                             t,
-                            v
+                            O
                         )
                     );
             },
             {
-                modalKey: m(a, b ? p : void 0),
-                contextKey: (0, i.VnL)(null != (t = null != y ? y : (0, s.GB)()) ? t : u.IlC.APP)
+                modalKey: m(a, E ? p : void 0),
+                contextKey: (0, i.VnL)(null != (t = null != b ? b : (0, s.GB)()) ? t : u.IlC.APP)
             }
         ));
 }

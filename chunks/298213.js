@@ -59,7 +59,7 @@ function _(e, t) {
     );
 }
 function p(e) {
-    let { userId: t, applicationId: n, location: r, friendToken: o, confirmStrangerRequest: s = !1 } = e;
+    let { userId: t, applicationId: n, location: r, confirmStrangerRequest: o = !1 } = e;
     return null != n
         ? a.Z.acceptGameFriendRequest({
               userId: t,
@@ -67,59 +67,54 @@ function p(e) {
           })
         : i.Z.acceptFriendRequest({
               userId: t,
-              friendToken: o,
-              confirmStrangerRequest: s,
+              confirmStrangerRequest: o,
               context: { location: r }
           });
 }
 function h(e) {
-    let { userId: t, applicationId: n, location: r, friendToken: i, onConfirm: a, onCancel: c } = e,
-        u = (0, o.pB)('useFriendRequestActions'),
-        d = s.Z.isStranger(t);
-    return null == n && u && !1 !== d
-        ? d && u
+    let { userId: t, applicationId: n, location: r, onConfirm: i, onCancel: a } = e,
+        c = (0, o.pB)('useFriendRequestActions'),
+        u = s.Z.isStranger(t);
+    return null == n && c && !1 !== u
+        ? u && c
             ? void (0, l.c)({
                   onConfirm: () => {
                       p({
                           userId: t,
                           applicationId: n,
                           location: r,
-                          friendToken: i,
                           confirmStrangerRequest: !0
                       }),
-                          null == a || a();
+                          null == i || i();
                   },
                   onCancel: () => {
-                      null == c || c();
+                      null == a || a();
                   }
               })
-            : u
+            : c
               ? void p({
                     userId: t,
                     applicationId: n,
-                    location: r,
-                    friendToken: i
+                    location: r
                 })
                     .then((e) => {
                         m(e, {
                             userId: t,
                             applicationId: n,
                             location: r,
-                            friendToken: i,
-                            onConfirm: a,
-                            onCancel: c
+                            onConfirm: i,
+                            onCancel: a
                         }) ||
-                            null == a ||
-                            a();
+                            null == i ||
+                            i();
                     })
                     .catch((e) => {
                         m(e, {
                             userId: t,
                             applicationId: n,
                             location: r,
-                            friendToken: i,
-                            onConfirm: a,
-                            onCancel: c
+                            onConfirm: i,
+                            onCancel: a
                         });
                     })
               : void 0
@@ -127,10 +122,9 @@ function h(e) {
               userId: t,
               applicationId: n,
               location: r,
-              friendToken: i,
               confirmStrangerRequest: !0
           }).then(() => {
-              null == a || a();
+              null == i || i();
           });
 }
 function m(e, t) {

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -33,7 +33,7 @@ function S(e, t, n) {
         e
     );
 }
-class j extends r.Component {
+class C extends r.Component {
     componentDidUpdate() {
         this.props.locked && this.state.showOpacitySlider && this.setState({ showOpacitySlider: !1 });
     }
@@ -150,7 +150,7 @@ class j extends r.Component {
             });
     }
 }
-function C(e) {
+function j(e) {
     var { channel: t } = e,
         n = (function (e, t) {
             if (null == e) return {};
@@ -180,7 +180,7 @@ function C(e) {
         a = (0, u.ZP)(t),
         c = (0, l.e7)([v.Z], () => !!t.isDM() && null != t.getRecipientId() && v.Z.isBlocked(t.getRecipientId()));
     return (0, i.jsx)(
-        j,
+        C,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},

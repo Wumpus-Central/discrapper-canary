@@ -32,8 +32,8 @@ var i,
     k = n(371651),
     D = n(624864),
     A = n(610394),
-    L = n(340101),
-    R = n(388627),
+    R = n(340101),
+    L = n(388627),
     M = n(996050),
     z = n(609626),
     U = n(421824),
@@ -97,10 +97,10 @@ let J = 5 * N.Z.Millis.SECOND,
     ee = 30 * N.Z.Millis.SECOND,
     et = Object.freeze({
         timestamp: 0,
-        priority: L.Tu.NORMAL,
+        priority: R.Tu.NORMAL,
         duration: J,
         expirationExternallyManaged: !1,
-        type: L.kL.GENERIC
+        type: R.kL.GENERIC
     }),
     en = [],
     ei = !1,
@@ -116,7 +116,7 @@ function ec() {
 }
 function eu() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3;
-    en.filter((e) => e.type === L.kL.TEXT && e.status === H._1z.TIMED_OUT)
+    en.filter((e) => e.type === R.kL.TEXT && e.status === H._1z.TIMED_OUT)
         .sort((e, t) => t.timestamp - e.timestamp)
         .forEach((t, n) => {
             (n >= e || t.timestamp < Date.now() - $) && ed(t.id, H._1z.DISMISSED);
@@ -136,7 +136,7 @@ function ed(e) {
     t === H._1z.DISMISSED ? en.splice(n, 1) : (en[n] = X(K({}, i), { status: t })), ec();
 }
 function ep(e) {
-    let t = en.find((t) => t.type === L.kL.INCOMING_CALL && t.channelId === e);
+    let t = en.find((t) => t.type === R.kL.INCOMING_CALL && t.channelId === e);
     return null != t ? t.id : null;
 }
 function eh(e, t) {
@@ -211,7 +211,7 @@ function ef() {
                 let l = _.Z.getVoiceChannelId(),
                     a = null == (i = j.Z.getDiscoverableVoiceStateForUser(e)) ? void 0 : i.channelId;
                 if (null != l && null != a && l === a) return !1;
-                let s = (0, R.pL)();
+                let s = (0, L.pL)();
                 if (null == s || s.id !== r) return !1;
                 if (
                     !(function (e, t) {
@@ -237,8 +237,8 @@ function ef() {
                             lastSentTimestamp: Date.now()
                         }),
                         eh(c, {
-                            type: L.kL.GENERIC,
-                            priority: L.Tu.NORMAL
+                            type: R.kL.GENERIC,
+                            priority: R.Tu.NORMAL
                         })),
                     !0
                 );
@@ -252,7 +252,7 @@ function ef() {
             !(function (e) {
                 let t = b.Z.getActivities(e);
                 if (0 === t.length) return !1;
-                let n = (0, R.pL)();
+                let n = (0, L.pL)();
                 return null != n && null != t.find((e) => e.application_id === n.id);
             })(e) &&
             !o
@@ -283,12 +283,12 @@ function em(e) {
         h.QZ.getSetting()
     )
         return !1;
-    let o = en.find((e) => e.type === L.kL.TEXT && e.channelId === t && e.messageType === H.uaV.CALL);
+    let o = en.find((e) => e.type === R.kL.TEXT && e.channelId === t && e.messageType === H.uaV.CALL);
     null != o && ed(o.id),
         eh((0, V.Z)(r), {
-            priority: L.Tu.HIGH,
+            priority: R.Tu.HIGH,
             expirationExternallyManaged: !0,
-            type: L.kL.INCOMING_CALL,
+            type: R.kL.INCOMING_CALL,
             channelId: r.id
         });
 }
@@ -312,11 +312,11 @@ let ey = new eg(s.Z, {
         eu(0);
         let i = null != (t = A.ZP.getFocusedPID()) ? t : Z.UNSET_PID;
         if (k.default.hasChangedRenderMode(i)) return;
-        let r = (0, B.Z)((0, R.pL)(), n);
+        let r = (0, B.Z)((0, L.pL)(), n);
         null != r &&
             eh(r, {
-                priority: L.Tu.URGENT,
-                type: L.kL.NUDGE,
+                priority: R.Tu.URGENT,
+                type: R.kL.NUDGE,
                 duration: q
             });
     },
@@ -326,10 +326,10 @@ let ey = new eg(s.Z, {
             for (let e of en) e.status === H._1z.FOCUSED && ed(e.id, H._1z.ACTIVE);
             return !0;
         }
-        for (let e of (eu(), en)) e.type === L.kL.NUDGE ? ed(e.id, H._1z.DISMISSED) : e.status !== H._1z.ACTIVE || e.expirationExternallyManaged || (e.timer.stop(), e.timer.start(e.expirationExternallyManaged));
+        for (let e of (eu(), en)) e.type === R.kL.NUDGE ? ed(e.id, H._1z.DISMISSED) : e.status !== H._1z.ACTIVE || e.expirationExternallyManaged || (e.timer.stop(), e.timer.start(e.expirationExternallyManaged));
         if (en.length > 0) {
             var n;
-            return ed(null == (n = en.filter((e) => e.type === L.kL.TEXT).sort((e, t) => t.timestamp - e.timestamp)[0]) ? void 0 : n.id, H._1z.FOCUSED);
+            return ed(null == (n = en.filter((e) => e.type === R.kL.TEXT).sort((e, t) => t.timestamp - e.timestamp)[0]) ? void 0 : n.id, H._1z.FOCUSED);
         }
     },
     MESSAGE_CREATE: function (e) {
@@ -344,7 +344,7 @@ let ey = new eg(s.Z, {
                 var i;
                 let r, l;
                 if ((o()(null != t.activity, 'received null message activity'), n.id === m.default.getId())) return !1;
-                let a = (0, R.pL)(),
+                let a = (0, L.pL)(),
                     s = null != (i = null == a ? void 0 : a.altId) ? i : null == a ? void 0 : a.id;
                 if (null == a || null == s) return !1;
                 switch (t.activity.type) {
@@ -359,7 +359,7 @@ let ey = new eg(s.Z, {
                 return (
                     null != l &&
                     (eh(l, {
-                        priority: L.Tu.URGENT,
+                        priority: R.Tu.URGENT,
                         expirationExternallyManaged: !0,
                         channelId: e.id,
                         duration: ee
@@ -373,7 +373,7 @@ let ey = new eg(s.Z, {
         let u = !O.Z.isSoundDisabled(C.Ay),
             h = null != (r = y.Z.getMessage(l, a.id)) ? r : (0, d.e5)(a);
         eh((0, F.Z)(s, h, c, u), {
-            type: L.kL.TEXT,
+            type: R.kL.TEXT,
             channelId: s.id,
             expirationExternallyManaged: !0,
             messageType: a.type
@@ -386,7 +386,7 @@ let ey = new eg(s.Z, {
             null != t &&
             (function (e) {
                 let t = en.length,
-                    n = (en = en.filter((t) => t.type !== L.kL.TEXT || t.channelId !== e)).length !== t;
+                    n = (en = en.filter((t) => t.type !== R.kL.TEXT || t.channelId !== e)).length !== t;
                 return n && ec(), n;
             })(t)
         );
@@ -413,7 +413,7 @@ let ey = new eg(s.Z, {
     ACTIVITY_USER_ACTION: function (e) {
         let t,
             { actionType: n, user: i, applicationId: r } = e,
-            o = (0, R.pL)();
+            o = (0, L.pL)();
         return (
             null != o &&
             (null == o ? void 0 : o.id) != null &&
@@ -421,8 +421,8 @@ let ey = new eg(s.Z, {
             (n === H.mFx.JOIN && (t = (0, z.Z)(i, o)),
             null != t &&
                 void eh(t, {
-                    priority: L.Tu.URGENT,
-                    type: L.kL.GENERIC
+                    priority: R.Tu.URGENT,
+                    type: R.kL.GENERIC
                 }))
         );
     },

@@ -94,8 +94,8 @@ let S = r.memo(function (e) {
         k = r.useCallback((e) => {
             (0, s.Os)(e);
         }, []),
-        { id: D, pinned: A, zIndex: L, size: R, anchor: M, minSize: z } = t,
-        U = r.useMemo(() => (0, h.w_)(R, P), [R, P]),
+        { id: D, pinned: A, zIndex: R, size: L, anchor: M, minSize: z } = t,
+        U = r.useMemo(() => (0, h.w_)(L, P), [L, P]),
         V = (0, h.KR)(M, P),
         { resizeX: W, resizeY: G, dragAnywhere: F } = null != N ? N : {},
         B = A || !w,
@@ -157,7 +157,7 @@ let S = r.memo(function (e) {
         locked: w,
         resizeX: null != W && W,
         resizeY: null != G && G,
-        style: { zIndex: L },
+        style: { zIndex: R },
         dragAnywhere: null != F && F,
         active: !w,
         onUpdate: T,

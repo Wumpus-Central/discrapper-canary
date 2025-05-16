@@ -3820,6 +3820,25 @@ let { Themes: r } = n(15202).V,
                     opacity: 1
                 }
             },
+            ICON_INVERT: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'NEUTRAL_71',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'NEUTRAL_1',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'NEUTRAL_71',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'NEUTRAL_71',
+                    opacity: 1
+                }
+            },
             ICON_MUTED: {
                 category: 'generic',
                 [r.DARK]: {
@@ -6739,6 +6758,25 @@ let { Themes: r } = n(15202).V,
                 },
                 [r.DARKER]: {
                     raw: 'RED_345',
+                    opacity: 1
+                }
+            },
+            TEXT_INVERT: {
+                category: 'text',
+                [r.DARK]: {
+                    raw: 'NEUTRAL_71',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'NEUTRAL_1',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'NEUTRAL_71',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'NEUTRAL_71',
                     opacity: 1
                 }
             },

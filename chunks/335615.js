@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(611064),
     E = n(677432),
     I = n(178762),
-    S = n(868671),
-    P = n(82295),
+    P = n(868671),
+    S = n(82295),
     Z = n(91218),
     N = n(313201),
     T = n(623624),
@@ -130,8 +130,8 @@ let en = q.ZP.getEnableHardwareAcceleration(),
     ei = i.memo(function (e) {
         let { colorString: t, colorStrings: l, colorRoleName: a, colorRoleId: o, isOwner: s, nick: c, user: u, currentUser: p, activities: h, applicationStream: f, status: g, channel: C, guildId: x, isTyping: y, isMobileOnline: v, premiumSince: j, nameplate: O, shouldShowPopoutOnHover: E } = e,
             I = et(e, ['colorString', 'colorStrings', 'colorRoleName', 'colorRoleId', 'isOwner', 'nick', 'user', 'currentUser', 'activities', 'applicationStream', 'status', 'channel', 'guildId', 'isTyping', 'isMobileOnline', 'premiumSince', 'nameplate', 'shouldShowPopoutOnHover']),
-            S = i.useRef(null),
-            [P, Z] = i.useState(!1),
+            P = i.useRef(null),
+            [S, Z] = i.useState(!1),
             N = null != j ? new Date(j) : null,
             A = i.useCallback(
                 (e) => {
@@ -177,7 +177,7 @@ let en = q.ZP.getEnableHardwareAcceleration(),
                 [x]
             );
         return (0, r.jsx)(L.Z, {
-            targetElementRef: S,
+            targetElementRef: P,
             user: u,
             guildId: x,
             channelId: C.id,
@@ -186,7 +186,7 @@ let en = q.ZP.getEnableHardwareAcceleration(),
             spacing: 16,
             onShiftClick: w,
             shouldShowOnHover: E,
-            shouldShow: P,
+            shouldShow: S,
             onRequestClose: () => {
                 Z(!1);
             },
@@ -197,7 +197,7 @@ let en = q.ZP.getEnableHardwareAcceleration(),
                     _.Z,
                     $(
                         {
-                            ref: S,
+                            ref: P,
                             className: Q.member,
                             onContextMenu: A,
                             shouldAnimateStatus: en,
@@ -217,7 +217,7 @@ let en = q.ZP.getEnableHardwareAcceleration(),
                             guildId: x,
                             isMobile: v,
                             onClickPremiumGuildIcon: R,
-                            selected: P,
+                            selected: S,
                             itemProps: I,
                             nameplate: O,
                             hideTooltip: E,
@@ -225,7 +225,7 @@ let en = q.ZP.getEnableHardwareAcceleration(),
                                 e.shiftKey ? null == w || w() : Z((e) => !e);
                             },
                             onMouseDown: (e) => {
-                                P ? e.stopPropagation() : null == i || i(e);
+                                S ? e.stopPropagation() : null == i || i(e);
                             }
                         },
                         o
@@ -278,7 +278,7 @@ let en = q.ZP.getEnableHardwareAcceleration(),
                   className: Q.membersGroup,
                   children: (0, r.jsx)('div', { className: Q.memberGroupsPlaceholder })
               })
-            : (0, r.jsxs)(P.Z, {
+            : (0, r.jsxs)(S.Z, {
                   className: Q.membersGroup,
                   children: [
                       (0, r.jsx)(f.nn4, {
@@ -492,7 +492,7 @@ class es extends i.Component {
                 }, 50)
             ),
             J(this, 'getContentFeedGroup', () => {
-                let e = this.props.groups[S.T];
+                let e = this.props.groups[P.T];
                 if ((0, O.R)(e)) return e;
             }),
             J(this, 'hasContentFeed', () => null != this.getContentFeedGroup()),
@@ -503,7 +503,7 @@ class es extends i.Component {
                     let { rows: n } = this.props,
                         r = e.index;
                     return function (e, i) {
-                        if (e === S.T) {
+                        if (e === P.T) {
                             let e = n[r + 1 + i];
                             return (0, I.iZ)(e);
                         }
@@ -538,7 +538,7 @@ class es extends i.Component {
                 let t = null == (e = this._list) ? void 0 : e.getItems(),
                     { rowsVisible: n } = this.getDimensions();
                 if (void 0 === n || 0 === n || null == t) return;
-                this.hasContentFeed() && (t = t.filter((e) => e.section !== S.T));
+                this.hasContentFeed() && (t = t.filter((e) => e.section !== P.T));
                 let r = t
                     .map((e) => this.getRowProps(e))
                     .slice(0, n + 1)
@@ -572,7 +572,7 @@ function ec(e) {
             groups: p,
             version: m,
             updateMaxRowSeen: g
-        } = (0, S.H)({
+        } = (0, P.H)({
             memberStoreProps: s,
             channelId: t.id,
             guildId: t.guild_id

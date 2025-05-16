@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => R,
+    Z: () => L,
     w: () => A
 }),
     n(388685),
@@ -115,7 +115,7 @@ let A = (e) => {
         maxHeight: 0.75 * l.maxY
     });
 };
-function L(e) {
+function R(e) {
     var { widgetId: t, size: n, borderWidth: i, padding: r, minSize: o, containerSpecs: l } = e,
         s = w(e, ['widgetId', 'size', 'borderWidth', 'padding', 'minSize', 'containerSpecs']);
     let { width: c, height: u } = A(
@@ -169,9 +169,9 @@ function L(e) {
         }
     });
 }
-function R(e) {
+function L(e) {
     var t, n, a, v, x, P;
-    let { id: A, widget: R, size: M, locked: z, padding: U, borderWidth: V, opacity: W, horizontal: G, pinned: F, anchorTop: B, anchorLeft: H, showEmpty: Y = !0 } = e,
+    let { id: A, widget: L, size: M, locked: z, padding: U, borderWidth: V, opacity: W, horizontal: G, pinned: F, anchorTop: B, anchorLeft: H, showEmpty: Y = !0 } = e,
         Q = 2 * U + 2 * V,
         { width: K, height: X } = {
             width: 'number' == typeof M.width ? M.width : E.bt,
@@ -253,7 +253,7 @@ function R(e) {
         ef = (0, o.e7)([h.Z], () => h.Z.getWindowState(I.$J)),
         em = {
             id: A,
-            widget: R,
+            widget: L,
             layout: eu,
             participants: eo.length,
             containerSize: ed,
@@ -296,7 +296,7 @@ function R(e) {
                 u = w(e, ['id', 'containerSize', 'tileSize', 'sizeOffset', 'layout', 'padding', 'widget']);
             if (null == c) return;
             if (0 === l)
-                return void L(
+                return void R(
                     N(
                         {
                             widgetId: t,
@@ -312,7 +312,7 @@ function R(e) {
                     )
                 );
             let { tileWidth: d, tileHeight: p } = i;
-            L(
+            R(
                 N(
                     {
                         widgetId: t,
@@ -337,7 +337,7 @@ function R(e) {
                     { id: t, sizeOffset: i, containerSize: r, padding: l, participants: a, widget: s } = e,
                     c = w(e, ['id', 'sizeOffset', 'containerSize', 'padding', 'participants', 'widget']);
                 null != s &&
-                    L(
+                    R(
                         N(
                             {
                                 widgetId: t,
@@ -361,7 +361,7 @@ function R(e) {
                     { id: t, sizeOffset: i, widget: r, padding: l } = e,
                     a = w(e, ['id', 'sizeOffset', 'widget', 'padding']);
                 null != r &&
-                    L(
+                    R(
                         N(
                             {
                                 widgetId: t,

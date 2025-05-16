@@ -924,18 +924,18 @@ function eI(e, t) {
         );
     }
 }
-function eS(e, t, n) {
-    let r = o()(e);
+function eS(e, t, n, r) {
+    let i = o()(r ? void 0 : e);
     if (t.length > 0) {
         let e = tL(t);
-        r = r.add(e, 'hours');
+        i = i.add(e, 'hours');
     }
-    if (void 0 !== n) {
+    if (!r && void 0 !== n) {
         let e = o()(),
             t = n.diff(e, 'hours', !0);
-        t > 0 && (r = r.add(t, 'hours'));
+        t > 0 && (i = i.add(t, 'hours'));
     }
-    return r.toDate();
+    return i.toDate();
 }
 function eT(e) {
     let t = tL(e.unactivatedUnits);

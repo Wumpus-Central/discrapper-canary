@@ -24,7 +24,7 @@ let C = (e) => {
         j = i.useRef(null),
         O = i.useRef(null),
         [E, I] = i.useState(!1),
-        S = i.useMemo(() => !n && !x && !y, [x, n, y]);
+        P = i.useMemo(() => !n && !x && !y, [x, n, y]);
     if (
         (i.useEffect(() => {
             n || I(!1), n && x && I(!0);
@@ -63,14 +63,14 @@ let C = (e) => {
         !(0, m.p7)('Message Confetti Peak') || !(0, b.Uw)(t))
     )
         return null;
-    let P = (0, b.Eq)(t);
-    if (null == P) return null;
+    let S = (0, b.Eq)(t);
+    if (null == S) return null;
     if (l)
         return (0, r.jsx)('span', {
             className: _.hidden,
             'aria-hidden': 'true'
         });
-    let Z = P.emoji[0],
+    let Z = S.emoji[0],
         N =
             null == Z.id
                 ? p.ZP.getURL(Z.name)
@@ -88,19 +88,19 @@ let C = (e) => {
             (0, r.jsx)('img', {
                 alt: '',
                 src: N,
-                className: a()([_.emoji, _.left, S && _.shy, x && _.confettiMode]),
+                className: a()([_.emoji, _.left, P && _.shy, x && _.confettiMode]),
                 width: 28
             }),
             (0, r.jsx)('img', {
                 alt: '',
                 src: N,
-                className: a()([_.emoji, _.right, S && _.shy, x && _.confettiMode]),
+                className: a()([_.emoji, _.right, P && _.shy, x && _.confettiMode]),
                 width: 26
             }),
             (0, r.jsx)('img', {
                 alt: '',
                 src: N,
-                className: a()([_.emoji, _.center, S && _.shy, x && _.confettiMode]),
+                className: a()([_.emoji, _.center, P && _.shy, x && _.confettiMode]),
                 width: 32
             })
         ]

@@ -214,7 +214,7 @@ let W = function (e) {
         $ = null == J || null == (t = J.discount) ? void 0 : t.amount,
         ee = (0, v.t7)(),
         et = (0, v.lr)(),
-        en = (0, T.W)(),
+        en = (0, T.W)().isInReverseTrial,
         ei = () => {
             (r.status === Z.O0b.ACTIVE || r.status === Z.O0b.PAST_DUE || r.status === Z.O0b.PAUSED) && el(P.R.PAUSE_SELECT);
         },

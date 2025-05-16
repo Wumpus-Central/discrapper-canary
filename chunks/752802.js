@@ -140,7 +140,7 @@ function A(e) {
         }
     });
 }
-function L(e, t, r) {
+function R(e, t, r) {
     return (o) => {
         (0, C.Ws)(w.Odu.GO_LIVE, {
             type: C.Qu.GO_LIVE,
@@ -163,7 +163,7 @@ function L(e, t, r) {
             });
     };
 }
-function R(e) {
+function L(e) {
     let { hasActiveStream: t, participant: n, onEnablePin: r } = e,
         o = (0, f.bp)(),
         s = n.user,
@@ -268,7 +268,7 @@ function R(e) {
                                                 c.P3F,
                                                 k(T({}, r), {
                                                     className: P.controlAction,
-                                                    onClick: L(n, o, t),
+                                                    onClick: R(n, o, t),
                                                     children: (0, i.jsx)(c.xhG, {
                                                         size: 'sm',
                                                         color: 'currentColor'
@@ -311,7 +311,7 @@ let M = new Set([w.jm8.ENDED, w.jm8.FAILED, w.jm8.PAUSED]),
                                 children: (0, i.jsx)(c.kL8, {
                                     'aria-label': Z.intl.formatToPlainString(Z.t.gHPz3d, { streamerName: t.user.username }),
                                     onClick: () => {},
-                                    onContextMenu: L(t, u),
+                                    onContextMenu: R(t, u),
                                     className: P.streamTile,
                                     style: { transform: 'scale('.concat(m, ')') },
                                     children: (0, i.jsx)(b.Z, {
@@ -336,7 +336,7 @@ let M = new Set([w.jm8.ENDED, w.jm8.FAILED, w.jm8.PAUSED]),
                             }),
                       r
                           ? null
-                          : (0, i.jsx)(R, {
+                          : (0, i.jsx)(L, {
                                 participant: t,
                                 hasActiveStream: h,
                                 onEnablePin: () => {

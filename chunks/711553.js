@@ -1,37 +1,39 @@
-n.d(t, { Z: () => u });
-var i = n(255367);
-n(73800);
-var r = n(120356),
-    s = n.n(r),
-    o = n(481060),
-    l = n(518084),
-    a = n(981631),
-    c = n(388032),
-    d = n(905763);
-let u = function (e) {
+n.d(t, { Z: () => h });
+var i = n(255367),
+    r = n(73800),
+    s = n(120356),
+    o = n.n(s),
+    l = n(481060),
+    a = n(518084),
+    c = n(981631),
+    d = n(388032),
+    u = n(905763);
+let h = function (e) {
     let t,
-        { title: n, header: r, children: u, renderSettings: h, onDragStart: p } = e;
+        { title: n, header: s, children: h, renderSettings: p, onDragStart: f } = e,
+        g = r.useRef(null);
     return (
         (t =
             null != n
-                ? (0, i.jsxs)(l.ZP.Bar, {
-                      className: s()(d.header, d.draggableStartArea),
-                      onMouseDown: p,
+                ? (0, i.jsxs)(a.ZP.Bar, {
+                      className: o()(u.header, u.draggableStartArea),
+                      onMouseDown: f,
                       children: [
-                          (0, i.jsx)(l.ZP.Content, {
-                              className: s()(d.headerTitle, d.draggableStartArea),
+                          (0, i.jsx)(a.ZP.Content, {
+                              className: o()(u.headerTitle, u.draggableStartArea),
                               dynamicSize: !0,
                               children: n
                           }),
-                          (0, i.jsx)(l.ZP.Content, {
-                              children: (0, i.jsx)(o.yRy, {
+                          (0, i.jsx)(a.ZP.Content, {
+                              children: (0, i.jsx)(l.yRy, {
+                                  targetElementRef: g,
                                   position: 'right',
-                                  renderPopout: null != h ? h : a.dG4,
+                                  renderPopout: null != p ? p : c.dG4,
                                   autoInvert: !1,
                                   children: (e) => {
                                       var t, n;
                                       return (0, i.jsx)(
-                                          l.ZP.Icon,
+                                          a.ZP.Icon,
                                           ((t = (function (e) {
                                               for (var t = 1; t < arguments.length; t++) {
                                                   var n = null != arguments[t] ? arguments[t] : {},
@@ -59,8 +61,9 @@ let u = function (e) {
                                           })({}, e)),
                                           (n = n =
                                               {
-                                                  icon: o.ewm,
-                                                  label: c.intl.string(c.t['3D5yo6'])
+                                                  icon: l.ewm,
+                                                  label: d.intl.string(d.t['3D5yo6']),
+                                                  ref: g
                                               }),
                                           Object.getOwnPropertyDescriptors
                                               ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -81,14 +84,14 @@ let u = function (e) {
                           })
                       ]
                   })
-                : r),
+                : s),
         (0, i.jsxs)('div', {
-            className: d.sidebar,
+            className: u.sidebar,
             children: [
                 t,
                 (0, i.jsx)('div', {
-                    className: d.children,
-                    children: u
+                    className: u.children,
+                    children: h
                 })
             ]
         })

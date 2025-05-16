@@ -402,6 +402,7 @@ class tc extends r.PureComponent {
             return (0, i.jsx)(en.ZP, {
                 guildId: null != (l = this.props.selectedGuildId) ? l : null,
                 onDismiss: s,
+                targetElementRef: this.avatarWithPopoutRef,
                 children: () => this.renderAvatarWithPopout({ focusSectionProps: e })
             });
         }

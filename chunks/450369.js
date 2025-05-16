@@ -26,8 +26,8 @@ var r = n(255367),
     O = n(670188),
     E = n(199902),
     I = n(314897),
-    S = n(430824),
-    P = n(496675),
+    P = n(430824),
+    S = n(496675),
     Z = n(979651),
     N = n(88751),
     T = n(252132),
@@ -137,7 +137,7 @@ let D = 16 / 9,
             N = i.useCallback(
                 (e, t) => {
                     if (e.type === R.fO.STREAM && 0 === j.filter((t) => (0, x.V9)(t) === e.id && t.state !== w.jm8.ENDED).length) {
-                        if (!(0, y.p9)(l, Z.Z, S.Z, P.Z, C.Z)[0]) return;
+                        if (!(0, y.p9)(l, Z.Z, P.Z, S.Z, C.Z)[0]) return;
                         (0, p.rn)((0, x.my)(e.id), { forceMultiple: t.shiftKey });
                     }
                     (null == O ? void 0 : O.id) === e.id ? (I ? (u.Z.selectParticipant(l.id, null), u.Z.updateStageStreamSize(l.id, !1)) : u.Z.updateStageStreamSize(l.id, !0)) : (u.Z.updateStageStreamSize(l.id, !1), u.Z.selectParticipant(l.id, e.id));
@@ -188,7 +188,7 @@ let D = 16 / 9,
                     }
                 });
             },
-            S = (e, t, i, a) => {
+            P = (e, t, i, a) => {
                 switch (e.type) {
                     case R.fO.HIDDEN_STREAM:
                     case R.fO.STREAM:
@@ -262,7 +262,7 @@ let D = 16 / 9,
                   user: y,
                   width: c,
                   isModerator: O,
-                  onContextMenu: S,
+                  onContextMenu: P,
                   inPopout: p === w.IlC.POPOUT
               })
             : (0, r.jsx)(U, {
@@ -273,7 +273,7 @@ let D = 16 / 9,
                   user: y,
                   width: c,
                   isModerator: O,
-                  onContextMenu: S,
+                  onContextMenu: P,
                   inPopout: p === w.IlC.POPOUT
               });
     });

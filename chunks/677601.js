@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(110924),
     E = n(40851),
     I = n(636449),
-    S = n(115130),
-    P = n(317381),
+    P = n(115130),
+    S = n(317381),
     Z = n(596040),
     N = n(349619),
     T = n(100527),
@@ -77,8 +77,8 @@ var r = n(255367),
     eO = n(228488),
     eE = n(358221),
     eI = n(414910),
-    eS = n(887012),
-    eP = n(909820),
+    eP = n(887012),
+    eS = n(909820),
     eZ = n(493010),
     eN = n(742603),
     eT = n(71127),
@@ -719,7 +719,7 @@ class eq extends i.PureComponent {
                 let { showChatToasts: e, chatOpen: t, channel: n, inCall: i } = this.props;
                 return !e || t || (this.popoutOpen && !this.inPopout && i)
                     ? null
-                    : (0, r.jsx)(eP.ZP, {
+                    : (0, r.jsx)(eS.ZP, {
                           children: (0, r.jsx)(ee.Z, {
                               className: eF.chatToasts,
                               channelId: n.id
@@ -828,12 +828,12 @@ let eK = function (e) {
         }, []),
         ei = null != (t = null == W ? void 0 : W.id) ? t : null,
         el = (0, Z.Z)(ei, n.id),
-        ea = (0, u.e7)([S.Z], () => S.Z.getFetchState(), []),
+        ea = (0, u.e7)([P.Z], () => P.Z.getFetchState(), []),
         eo = (0, O.Z)(ea);
     i.useEffect(() => {
-        ea === S.O.ERROR && eo !== S.O.ERROR && (0, f.showToast)((0, f.createToast)(eG.intl.string(eG.t.AlJyIy), f.ToastType.FAILURE));
+        ea === P.O.ERROR && eo !== P.O.ERROR && (0, f.showToast)((0, f.createToast)(eG.intl.string(eG.t.AlJyIy), f.ToastType.FAILURE));
     }, [ea, eo]);
-    let es = (0, u.e7)([P.ZP], () => P.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
+    let es = (0, u.e7)([S.ZP], () => S.ZP.getSelfEmbeddedActivityForChannel(n.id), [n]);
     i.useEffect(() => {
         let e = !1,
             t = null;
@@ -847,18 +847,18 @@ let eK = function (e) {
         );
     }, [_, N]);
     let eb = (0, B.S)(),
-        e_ = (0, eS.Z)(n, !0),
+        e_ = (0, eP.Z)(n, !0),
         { hasParticipantsPanel: eC } = (0, ew.Z)({ location: 'ChannelCall' }),
         ex = (0, L.bn)(d.z.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK),
         { analyticsLocations: ey } = (0, w.ZP)(T.Z.CHANNEL_CALL),
-        ev = P.ZP.getEmbeddedActivitiesForChannel(n.id),
+        ev = S.ZP.getEmbeddedActivitiesForChannel(n.id),
         { theme: eO } = (0, f.TCT)(),
         eI = (0, k.Q3)('ChannelCall');
     return (0, r.jsx)(w.Gt, {
         value: ey,
         children: (0, r.jsx)(v.Z, {
             page: eB.ZY5.CHANNEL_CALL,
-            children: (0, r.jsx)(eP.B2, {
+            children: (0, r.jsx)(eS.B2, {
                 children: (0, r.jsxs)(eM._A, {
                     children: [
                         (0, r.jsx)(eq, {
@@ -908,7 +908,7 @@ let eK = function (e) {
                             isRefreshEnabled: eI
                         }),
                         !n.isPrivate() && (0, r.jsx)(eM.YR, {}),
-                        (0, r.jsx)(eP.H_, {})
+                        (0, r.jsx)(eS.H_, {})
                     ]
                 })
             })

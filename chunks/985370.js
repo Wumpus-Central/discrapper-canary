@@ -18,14 +18,14 @@ let g = (e) => {
         [j, O] = i.useState(!1),
         E = (0, l.e7)([p.Z], () => p.Z.effectCooldownEndTime),
         I = i.useMemo(() => (null != E ? (E.getTime() - Date.now()) / 1000 : 0), [E]),
-        { seconds: S } = (0, o.Z)(null != E ? E : new Date()),
-        P = S > 0,
+        { seconds: P } = (0, o.Z)(null != E ? E : new Date()),
+        S = P > 0,
         { parentAnalyticsLocation: Z } = (0, s.ZP)(),
         N = i.useCallback(
             (e) => {
-                'focus' !== e.type && (j || P || x());
+                'focus' !== e.type && (j || S || x());
             },
-            [j, P, x]
+            [j, S, x]
         ),
         T = i.useCallback(() => {
             j || y();
@@ -64,7 +64,7 @@ let g = (e) => {
                 isCenterButton: !0,
                 color: j ? 'primaryDark' : void 0,
                 totalCooldownSeconds: I,
-                remainingCooldownSeconds: S,
+                remainingCooldownSeconds: P,
                 className: n,
                 onKeyDown: (e) => {
                     e.keyCode === m.yXg.ENTER && e.keyCode === m.yXg.SPACE && A(e, i);

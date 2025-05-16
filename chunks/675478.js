@@ -33,11 +33,11 @@ var r = n(512722),
     i = n.n(r),
     a = n(259443),
     o = n(544891),
-    s = n(704215),
-    l = n(377108),
-    c = n(524437),
-    u = n(433517),
-    d = n(570140),
+    s = n(377108),
+    l = n(524437),
+    c = n(433517),
+    u = n(570140),
+    d = n(428967),
     f = n(70956),
     _ = n(915486),
     p = n(262847),
@@ -62,10 +62,10 @@ let y = 5000,
     O = 'UserSettingsProtoLastWriteTimes',
     v = Date.now();
 function I() {}
-d.Z.subscribe('CONNECTION_OPEN', () => {
+u.Z.subscribe('CONNECTION_OPEN', () => {
     v = Date.now();
 }),
-    d.Z.subscribe('CONNECTION_CLOSED', () => {
+    u.Z.subscribe('CONNECTION_CLOSED', () => {
         v = Date.now();
     }),
     'undefined' != typeof document &&
@@ -93,7 +93,7 @@ class S {
         let s = this.ProtoClass.create();
         (s[e] = o),
             __OVERLAY__
-                ? d.Z.dispatch({
+                ? u.Z.dispatch({
                       type: 'USER_SETTINGS_PROTO_ENQUEUE_UPDATE',
                       settings: {
                           type: this.type,
@@ -118,7 +118,7 @@ class S {
             a = { timeout: r.timeout };
         if (!r.loaded) throw Error('Cannot edit user settings proto because we have not yet loaded the stored version from the DB');
         !1 !== t.dispatch &&
-            d.Z.dispatch({
+            u.Z.dispatch({
                 type: 'USER_SETTINGS_PROTO_UPDATE',
                 settings: {
                     type: this.type,
@@ -135,7 +135,7 @@ class S {
         null != t.cleanup && (a.cleanupFuncs = [...r.cleanupFuncs, ...t.cleanup]), null == r.protoToSave ? (a.protoToSave = e) : (a.protoToSave = (0, m.re)(this.ProtoClass, r.protoToSave, e)), this.dispatchChanges(a);
     }
     dispatchChanges(e) {
-        d.Z.dispatch({
+        u.Z.dispatch({
             type: 'USER_SETTINGS_PROTO_UPDATE_EDIT_INFO',
             settings: {
                 changes: e,
@@ -145,15 +145,15 @@ class S {
     }
     saveLastSendTime() {
         var e;
-        let t = null != (e = u.K.get(O)) ? e : {};
-        (t[this.type] = Date.now()), u.K.set(O, t);
+        let t = null != (e = c.K.get(O)) ? e : {};
+        (t[this.type] = Date.now()), c.K.set(O, t);
     }
     loadIfUncached(e, t) {
         (h.Z.hasLoaded(e) && !0 !== t) || this.loadIfNecessary(t);
     }
     async loadIfNecessary(e) {
         if (__OVERLAY__)
-            return void d.Z.dispatch({
+            return void u.Z.dispatch({
                 type: 'USER_SETTINGS_PROTO_LOAD_IF_NECESSARY',
                 settingsType: this.type
             });
@@ -176,7 +176,7 @@ class S {
                 let r = p.Z[this.type],
                     { proto: i, isDirty: a, cleanupFuncs: s } = (0, m.xt)(n, r);
                 return (
-                    await d.Z.dispatch({
+                    await u.Z.dispatch({
                         type: 'USER_SETTINGS_PROTO_UPDATE',
                         settings: {
                             type: this.type,
@@ -260,7 +260,7 @@ class S {
                     n.out_of_date && this.logger.log('Proto was out of date, discarding changes'), this.getEditInfo().editInfo.cleanupFuncs.forEach((e) => e());
                     let r = (0, m.d5)(this.ProtoClass, n.settings);
                     if (null == r) return;
-                    d.Z.dispatch({
+                    u.Z.dispatch({
                         type: 'USER_SETTINGS_PROTO_UPDATE',
                         settings: {
                             proto: r,
@@ -288,8 +288,8 @@ class S {
             (this.logger = new a.Yd(this.ProtoClass.typeName));
     }
 }
-let T = new S(c.o8, g.yP.PRELOADED_USER_SETTINGS),
-    A = new S(l.ji, g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
+let T = new S(l.o8, g.yP.PRELOADED_USER_SETTINGS),
+    A = new S(s.ji, g.yP.FRECENCY_AND_FAVORITES_SETTINGS),
     N = {
         [g.yP.PRELOADED_USER_SETTINGS]: T,
         [g.yP.FRECENCY_AND_FAVORITES_SETTINGS]: A
@@ -389,7 +389,7 @@ function j() {
         'userContent',
         (e) => {
             let t = new Uint8Array();
-            for (let e of Object.keys(s.z)) t = (0, _.GV)(t, s.z[e]);
+            for (let e of d.Ye) t = (0, _.GV)(t, e);
             e.dismissedContents = t;
         },
         g.fy.INFREQUENT_USER_ACTION

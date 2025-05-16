@@ -112,20 +112,19 @@ let S = {
                 });
         },
         addRelationship(e, t) {
-            let { userId: n, context: i, type: a, friendToken: o, fromFriendSuggestion: s, confirmStrangerRequest: l, captchaPayload: c } = e,
-                u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-                f = d.default.getUser(n);
+            let { userId: n, context: i, type: a, fromFriendSuggestion: o, confirmStrangerRequest: s, captchaPayload: l } = e,
+                c = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+                u = d.default.getUser(n);
             return r.tn
                 .put({
                     url: m.ANM.USER_RELATIONSHIP(n),
                     body: y(
                         {
                             type: a,
-                            friend_token: o,
-                            from_friend_suggestion: s,
-                            confirm_stranger_request: l
+                            from_friend_suggestion: o,
+                            confirm_stranger_request: s
                         },
-                        c
+                        l
                     ),
                     context: i,
                     oldFormErrors: !0,
@@ -134,7 +133,7 @@ let S = {
                 .then(() => {
                     null == t || t();
                 })
-                .catch((e) => (I(e, u, _.ZP.getUserTag(f)), Promise.reject(e)));
+                .catch((e) => (I(e, c, _.ZP.getUserTag(u)), Promise.reject(e)));
         },
         acceptFriendRequest(e) {
             function t() {

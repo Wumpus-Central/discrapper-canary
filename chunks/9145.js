@@ -23,8 +23,8 @@ var r = n(255367),
     O = n(51144),
     E = n(566620),
     I = n(317381),
-    S = n(619915),
-    P = n(988980),
+    P = n(619915),
+    S = n(988980),
     Z = n(16609),
     N = n(952561),
     T = n(563218),
@@ -47,8 +47,8 @@ function G(e) {
         z = (0, s.Wu)([I.ZP], () => I.ZP.getEmbeddedActivitiesForLocation(F), [F]),
         W = (0, Z.pY)(F),
         Y = (0, s.e7)([C.Z], () => C.Z.getChannel(W)),
-        q = (0, S.gb)(z),
-        K = (0, S.uF)(q),
+        q = (0, P.gb)(z),
+        K = (0, P.uF)(q),
         X = i.useCallback(() => {
             (0, E.tg)(M.Ez.PIP);
         }, []),
@@ -78,7 +78,7 @@ function G(e) {
     let ea = ei.width / Math.max(ei.height, 1) < M.I0,
         eo = 0,
         es = 0,
-        ec = (0, P.Z)(null == V ? void 0 : V.id);
+        ec = (0, S.Z)(null == V ? void 0 : V.id);
     if (!ec) {
         let e = ei.width,
             t = ei.height;

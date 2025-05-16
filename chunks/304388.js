@@ -64,48 +64,49 @@ function d(e) {
     );
 }
 let p = i.forwardRef(function (e, t) {
-    let { renderPopout: n, children: p, align: h = 'left', isPopoutBlocked: f, onPopoutOpen: m, onPopoutClose: g, onRequestClose: b } = e,
-        [_, C] = i.useState(!1),
-        { isHovered: x, setIsHovered: y, onMouseEnter: v, onMouseLeave: j, cancelTimers: O } = (0, o.Z)(200, 300);
-    function E(e) {
-        'focus' === e.type || _ || v();
+    let { renderPopout: n, popoutTargetRef: p, children: h, align: f = 'left', isPopoutBlocked: m, onPopoutOpen: g, onPopoutClose: b, onRequestClose: _ } = e,
+        [C, x] = i.useState(!1),
+        { isHovered: y, setIsHovered: v, onMouseEnter: j, onMouseLeave: O, cancelTimers: E } = (0, o.Z)(200, 300);
+    function I(e) {
+        'focus' === e.type || C || j();
     }
-    function I() {
-        _ || j();
+    function P() {
+        C || O();
     }
     function S(e) {
-        O(), C(!_), _ ? null == g || g() : null == m || m(), (!x || _) && e();
+        E(), x(!C), C ? null == b || b() : null == g || g(), (!y || C) && e();
     }
     i.useImperativeHandle(
         t,
         () => ({
             hidePopout() {
-                y(!1), C(!1);
+                v(!1), x(!1);
             }
         }),
-        [y, C]
+        [v, x]
     );
-    let P = (x && !f) || _;
+    let Z = (y && !m) || C;
     return (0, r.jsx)(a.yRy, {
+        targetElementRef: p,
         animation: a.yRy.Animation.FADE,
-        shouldShow: P,
+        shouldShow: Z,
         animationPosition: 'top',
         position: 'top',
-        align: h,
+        align: f,
         spacing: 16,
         onRequestClose: () => {
-            if ((null == b ? void 0 : b()) === l.F) return l.F;
-            y(!1), C(!1), null == g || g();
+            if ((null == _ ? void 0 : _()) === l.F) return l.F;
+            v(!1), x(!1), null == b || b();
         },
         renderPopout: (e) =>
             (0, r.jsx)(
                 d,
                 u(
                     {
-                        isHovered: P,
-                        onFocus: () => C(!0),
-                        onMouseEnter: v,
-                        onMouseLeave: I,
+                        isHovered: Z,
+                        onFocus: () => x(!0),
+                        onMouseEnter: j,
+                        onMouseLeave: P,
                         renderPopout: n
                     },
                     e
@@ -114,15 +115,15 @@ let p = i.forwardRef(function (e, t) {
         children: (e) => {
             let { onClick: t, onKeyDown: n } = e;
             return (0, r.jsx)(r.Fragment, {
-                children: p({
+                children: h({
                     onClick: (e) => S(() => t(e)),
                     onKeyDown: (e) => {
                         (e.key === s.vn.ENTER || e.key === s.vn.SPACE) && S(() => n(e));
                     },
                     className: c.actionBarButton,
-                    onMouseEnter: E,
-                    onMouseLeave: I,
-                    isActive: _
+                    onMouseEnter: I,
+                    onMouseLeave: P,
+                    isActive: C
                 })
             });
         }

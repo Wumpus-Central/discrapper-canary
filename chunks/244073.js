@@ -21,8 +21,8 @@ var i = n(255367),
     x = n(594174),
     E = n(979651),
     S = n(362446),
-    j = n(518084),
-    C = n(981631),
+    C = n(518084),
+    j = n(981631),
     Z = n(388032),
     I = n(738901),
     P = n(566177);
@@ -81,9 +81,9 @@ class k extends r.PureComponent {
         let { guild: t } = this.props,
             n = (0, p.F6)(e, x.default, b.Z),
             r = null != t ? ''.concat(n, ' / ').concat(t.name) : n,
-            s = null != t ? t.id : C.ME;
+            s = null != t ? t.id : j.ME;
         return (0, i.jsx)(l.rU, {
-            to: C.Z5c.CHANNEL(s),
+            to: j.Z5c.CHANNEL(s),
             onClick: (t) => {
                 t.stopPropagation(), u.Z.channelListScrollTo(s, e.id);
             },
@@ -97,21 +97,23 @@ class k extends r.PureComponent {
         let { className: e, contentClassName: t, pinned: n, lobbyId: r, channel: s, quality: l, lastPing: a, hasVideo: d, connectionState: u, deaf: h, mute: p } = this.props;
         return null == s
             ? null
-            : (0, i.jsx)(j.ZP.Bar, {
+            : (0, i.jsx)(C.ZP.Bar, {
                   className: o()(e, I.controls, { [I.unpinned]: !n }),
-                  children: (0, i.jsxs)(j.ZP.Content, {
+                  children: (0, i.jsxs)(C.ZP.Content, {
                       className: o()(t, I.content),
                       dynamicSize: !0,
                       children: [
                           (0, i.jsx)('div', {
                               className: P.inner,
                               children: (0, i.jsx)(c.yRy, {
+                                  targetElementRef: this.rtcConnectionStatusRef,
                                   renderPopout: () => this.renderPopout(s.id),
                                   position: 'top',
                                   children: (e) =>
                                       (0, i.jsx)(
                                           c.P3F,
                                           T(w({}, e), {
+                                              innerRef: this.rtcConnectionStatusRef,
                                               children: (0, i.jsx)(v.Z, {
                                                   channelId: s.id,
                                                   quality: l,
@@ -153,6 +155,7 @@ class k extends r.PureComponent {
     }
     constructor(...e) {
         super(...e),
+            N(this, 'rtcConnectionStatusRef', r.createRef()),
             N(this, 'handleToggleSelfMute', () => {
                 let { context: e } = this.props;
                 d.Z.toggleSelfMute({

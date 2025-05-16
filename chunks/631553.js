@@ -1,5 +1,5 @@
 let i;
-n.d(t, { Z: () => eC }), n(539854);
+n.d(t, { Z: () => ej }), n(539854);
 var r = n(255367),
     s = n(73800),
     o = n(120356),
@@ -21,8 +21,8 @@ var r = n(255367),
     x = n(951483),
     E = n(714338),
     S = n(185666),
-    j = n(100527),
-    C = n(906732),
+    C = n(100527),
+    j = n(906732),
     Z = n(146282),
     I = n(600164);
 n(70097);
@@ -32,8 +32,8 @@ var P = n(605236),
     T = n(74299),
     k = n(989941),
     D = n(377400),
-    A = n(329557),
-    R = n(199902),
+    R = n(329557),
+    A = n(199902),
     L = n(314897),
     M = n(592125),
     z = n(430824),
@@ -166,7 +166,7 @@ let eE = (e) => {
             ctrlKey: s
         };
     };
-class ej extends s.Component {
+class eC extends s.Component {
     handleLock() {
         (0, m.$sL)() || F.Z.isOpen() || _.Z.setInputLocked(!0, (0, en.getPID)());
     }
@@ -174,7 +174,7 @@ class ej extends s.Component {
         _.Z.deactivateAllRegions();
     }
     componentDidMount() {
-        _.Z.startSession(), D.Z.initialize(), S.Z.initialize(), A.Z.initialize();
+        _.Z.startSession(), D.Z.initialize(), S.Z.initialize(), R.Z.initialize();
     }
     componentDidUpdate(e) {
         let { initialized: t } = this.props;
@@ -267,7 +267,7 @@ class ej extends s.Component {
         window.addEventListener('keydown', this.onKeyDownGlobal, !0), window.addEventListener('keyup', this.onKeyUpGlobal, !0);
     }
     componentWillUnmount() {
-        window.removeEventListener('resize', this.handleWindowResize), window.removeEventListener('keydown', this.onKeyDownGlobal, !0), window.removeEventListener('keyup', this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener('contextmenu', eb, !1), D.Z.terminate(), S.Z.terminate(), A.Z.terminate();
+        window.removeEventListener('resize', this.handleWindowResize), window.removeEventListener('keydown', this.onKeyDownGlobal, !0), window.removeEventListener('keyup', this.onKeyUpGlobal, !0), this.props.locked && window.removeEventListener('contextmenu', eb, !1), D.Z.terminate(), S.Z.terminate(), R.Z.terminate();
     }
     renderInvalidSizeMessage() {
         return (0, r.jsx)(I.Z, {
@@ -359,7 +359,7 @@ class ej extends s.Component {
         E.Z.setLayout(t ? x.Xq : x.Sr), t && E.Z.enable();
     }
 }
-function eC() {
+function ej() {
     let {
             locked: e,
             initialized: t,
@@ -382,13 +382,13 @@ function eC() {
         h = (0, w.Ns)(null == u ? void 0 : u.id),
         p = (0, f.e7)([Z.Z], () => null != Z.Z.getLastFeedFetchDate(em.YN.GAME_PROFILE_FEED)),
         g = (0, f.e7)([W.Z], () => (0, T.Z)(W.Z)),
-        m = (0, f.e7)([R.Z], () => null != R.Z.getCurrentUserActiveStream()),
-        { analyticsLocations: y } = (0, C.ZP)(j.Z.OVERLAY),
+        m = (0, f.e7)([A.Z], () => null != A.Z.getCurrentUserActiveStream()),
+        { analyticsLocations: y } = (0, j.ZP)(C.Z.OVERLAY),
         { showKeybindIndicators: v, dismissKeybindNotification: _ } = (0, eo.K)(),
         O = (0, er.o4)('ipOverlay').overlayV3UI;
-    return (0, r.jsx)(C.Gt, {
+    return (0, r.jsx)(j.Gt, {
         value: y,
-        children: (0, r.jsx)(ej, {
+        children: (0, r.jsx)(eC, {
             locked: e,
             initialized: t,
             incompatibleApp: n,

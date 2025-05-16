@@ -77,7 +77,7 @@ function y(e) {
         }),
             c.Z.increment({ name: l.V.SAFETY_WARNING_VIEW });
     }, [t, y, v]);
-    let S = () => {
+    let P = () => {
             (0, o.ZDy)(async () => {
                 let { default: e } = await n.e('59385').then(n.bind(n, 480884));
                 return (n) => {
@@ -119,7 +119,7 @@ function y(e) {
                                         buttonText: C.intl.string(C.t['5QYPOz']),
                                         buttonColor: o.zxk.Colors.RED,
                                         onButtonPress: () => {
-                                            l(), P(m.NM.USER_MODAL_BLOCK_CONFIRM, m.NM.USER_MODAL_BLOCK_CANCEL, S);
+                                            l(), S(m.NM.USER_MODAL_BLOCK_CONFIRM, m.NM.USER_MODAL_BLOCK_CANCEL, P);
                                         }
                                     },
                                     'block-button'
@@ -130,7 +130,7 @@ function y(e) {
                 };
             });
         },
-        P = (e, i, l) => {
+        S = (e, i, l) => {
             (0, o.ZDy)(async () => {
                 let { default: a } = await Promise.all([n.e('97652'), n.e('3078')]).then(n.bind(n, 744373));
                 return (n) => {
@@ -207,7 +207,7 @@ function y(e) {
                 text: C.intl.string(C.t['Qk/c4+']),
                 color: o.zxk.Colors.BRAND,
                 onclick: () => {
-                    S(),
+                    P(),
                         (0, m.qc)({
                             channelId: t,
                             warningId: y,
@@ -223,7 +223,7 @@ function y(e) {
                       {
                           text: C.intl.string(C.t.ie0QdH),
                           color: o.zxk.Colors.RED,
-                          onclick: () => P(m.NM.USER_BANNER_BLOCK_CONFIRM, m.NM.USER_BANNER_BLOCK_CANCEL)
+                          onclick: () => S(m.NM.USER_BANNER_BLOCK_CONFIRM, m.NM.USER_BANNER_BLOCK_CANCEL)
                       }
                   ])
         ]

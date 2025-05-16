@@ -68,8 +68,8 @@ function v(e, t) {
     );
 }
 let I = (e) => {
-    let { isFetching: t = !1, entitlements: n, unactivatedFractionalPremiumUnits: r, currentUser: i, premiumSubscription: o, fetchedAllEntitlements: s } = e,
-        c = {
+    let { isFetching: t = !1, entitlements: n, unactivatedFractionalPremiumUnits: r, currentUser: i, premiumSubscription: o, fetchedAllEntitlements: s, excludeReverseTrialFromCountdown: c } = e,
+        u = {
             isFractionalPremiumActive: !1,
             fractionalState: E.a$.NONE,
             startsAt: l()(0),
@@ -78,67 +78,72 @@ let I = (e) => {
             unactivatedUnits: [],
             fetched: s
         };
-    if (t) return v(y({}, c), { fetched: !1 });
-    if (null == i || (0 === n.length && 0 === r.length)) return c;
-    let u = n.filter((e) => null != e.endsAt && null != e.startsAt).sort((e, t) => ((a()(null != e.endsAt && null != t.endsAt, 'endsAt should not be null'), e.endsAt < t.endsAt) ? -1 : +(e.endsAt > t.endsAt)));
-    if ((u.reverse(), u.length > 0 && (u.length !== n.length || null == u[0].startsAt || null == u[0].endsAt))) {
+    if (t) return v(y({}, u), { fetched: !1 });
+    if (null == i || (0 === n.length && 0 === r.length)) return u;
+    let d = n.filter((e) => null != e.endsAt && null != e.startsAt).sort((e, t) => ((a()(null != e.endsAt && null != t.endsAt, 'endsAt should not be null'), e.endsAt < t.endsAt) ? -1 : +(e.endsAt > t.endsAt)));
+    if ((d.reverse(), d.length > 0 && (d.length !== n.length || null == d[0].startsAt || null == d[0].endsAt))) {
         let e = Array.from(n.values()).map((e) => e.id),
             t = 'fractional redemption entitlements should have startsAt/endsAt';
         throw ((0, h.g9)(t, { extra: { entitlementIds: e } }), Error(t));
     }
-    let d = u.length > 0,
-        f = E.a$.NONE;
-    return (
-        d && (f = null != o && o.status === g.O0b.PAUSED ? E.a$.FP_SUB_PAUSED : E.a$.FP_ONLY),
-        {
-            isFractionalPremiumActive: d,
-            fractionalState: f,
-            startsAt: d ? l()(u[0].startsAt) : l()(0),
-            endsAt: d ? l()((0, m.N1)(u[0].endsAt, r)) : l()(0),
-            currentEntitlementId: u.length > 0 ? u[0].id : '',
-            unactivatedUnits: r,
-            fetched: s
-        }
-    );
+    let f = d.length > 0,
+        _ = E.a$.NONE;
+    f && (_ = null != o && o.status === g.O0b.PAUSED ? E.a$.FP_SUB_PAUSED : E.a$.FP_ONLY);
+    let p = c && d[0].sourceType === g.kNB.REVERSE_TRIAL;
+    return {
+        isFractionalPremiumActive: f,
+        fractionalState: _,
+        startsAt: f ? l()(d[0].startsAt) : l()(0),
+        endsAt: f ? l()((0, m.N1)(d[0].endsAt, r, void 0, p)) : l()(0),
+        currentEntitlementId: d.length > 0 ? d[0].id : '',
+        unactivatedUnits: r,
+        fetched: s
+    };
 };
 function S() {
-    let { forceFetch: e, excludeReverseTrial: t } =
-            arguments.length > 0 && void 0 !== arguments[0]
-                ? arguments[0]
-                : {
-                      forceFetch: !1,
-                      excludeReverseTrial: !1
-                  },
-        n = (0, c.e7)([f.default], () => f.default.getCurrentUser()),
-        i = (0, c.Wu)([p.Z], () => p.Z.getFractionalPremium({ excludeReverseTrial: t })),
-        a = (0, c.e7)([p.Z], () => p.Z.fetchedAllEntitlements),
-        s = (0, c.Wu)([p.Z], () => p.Z.getUnactivatedFractionalPremiumUnits()),
-        l = (0, c.e7)([_.ZP], () => _.ZP.getPremiumTypeSubscription()),
-        h = null !== n && !p.Z.fetchingAllEntitlements && (!p.Z.fetchedAllEntitlements || e),
-        [m, E] = r.useState(
+    let {
+            forceFetch: e,
+            excludeReverseTrial: t,
+            excludeReverseTrialFromCountdown: n
+        } = arguments.length > 0 && void 0 !== arguments[0]
+            ? arguments[0]
+            : {
+                  forceFetch: !1,
+                  excludeReverseTrial: !1,
+                  excludeReverseTrialFromCountdown: !1
+              },
+        i = (0, c.e7)([f.default], () => f.default.getCurrentUser()),
+        a = (0, c.Wu)([p.Z], () => p.Z.getFractionalPremium({ excludeReverseTrial: t })),
+        s = (0, c.e7)([p.Z], () => p.Z.fetchedAllEntitlements),
+        l = (0, c.Wu)([p.Z], () => p.Z.getUnactivatedFractionalPremiumUnits()),
+        h = (0, c.e7)([_.ZP], () => _.ZP.getPremiumTypeSubscription()),
+        m = null !== i && !p.Z.fetchingAllEntitlements && (!p.Z.fetchedAllEntitlements || e),
+        [E, b] = r.useState(
             I({
-                isFetching: h || p.Z.fetchingAllEntitlements,
-                entitlements: i,
-                unactivatedFractionalPremiumUnits: s,
-                currentUser: n,
-                premiumSubscription: l,
-                fetchedAllEntitlements: a
+                isFetching: m || p.Z.fetchingAllEntitlements,
+                entitlements: a,
+                unactivatedFractionalPremiumUnits: l,
+                currentUser: i,
+                premiumSubscription: h,
+                fetchedAllEntitlements: s,
+                excludeReverseTrialFromCountdown: n
             })
         );
     return (
         (0, d.ZP)(() => {
-            h && (0, u.p0)({ entitlementType: g.qc2.FRACTIONAL_REDEMPTION });
+            m && (0, u.p0)({ entitlementType: g.qc2.FRACTIONAL_REDEMPTION });
         }),
         r.useEffect(() => {
             let e = I({
-                entitlements: i,
-                unactivatedFractionalPremiumUnits: s,
-                currentUser: n,
-                premiumSubscription: l,
-                fetchedAllEntitlements: a
+                entitlements: a,
+                unactivatedFractionalPremiumUnits: l,
+                currentUser: i,
+                premiumSubscription: h,
+                fetchedAllEntitlements: s,
+                excludeReverseTrialFromCountdown: n
             });
-            E((t) => ((0, o.isEqual)(t, e) ? t : e));
-        }, [n, i, l, s, a]),
-        m
+            b((t) => ((0, o.isEqual)(t, e) ? t : e));
+        }, [i, a, h, l, s, n]),
+        E
     );
 }

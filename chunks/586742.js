@@ -82,7 +82,7 @@ let A = r.memo(function (e) {
             l = null == (t = n.user) ? void 0 : t.id;
         return (0, a.e7)([O.Z], () => null != n.user && null != o && null != r && O.Z.isLocalVideoDisabled(l, o), [l, n.user, o, r]) ? null : (0, i.jsx)(m.ZP, k({}, e));
     }),
-    L = r.memo(function (e) {
+    R = r.memo(function (e) {
         let { context: t = Z.Yn.DEFAULT, participants: o, locked: l, channel: a, width: s, height: u, shouldDisplay: d } = e,
             p = r.useCallback(
                 (e, r) => {
@@ -164,7 +164,7 @@ let A = r.memo(function (e) {
             )
         });
     }),
-    R = r.memo(function (e) {
+    L = r.memo(function (e) {
         let { context: t = Z.Yn.DEFAULT, participants: n, participantsVersion: o, locked: a, widget: c, channel: u, width: d, height: p, showEmpty: h = !0, containerRef: f } = e,
             m = 'boolean' != typeof c.meta.horizontal || c.meta.horizontal,
             g = n.length > 0 && null != t && null != u && (!a || c.pinned);
@@ -196,7 +196,7 @@ let A = r.memo(function (e) {
                       ref: f,
                       className: O,
                       style: y,
-                      children: (0, i.jsx)(L, {
+                      children: (0, i.jsx)(R, {
                           context: t,
                           participants: n,
                           locked: a,
@@ -323,7 +323,7 @@ function z(e) {
             widgetLayoutSpecs: Z
         }),
         (0, i.jsx)(
-            R,
+            L,
             D(k({}, e), {
                 channel: s,
                 participants: C,

@@ -1,11 +1,16 @@
-n.d(t, { z: () => m });
+n.d(t, { z: () => h });
 var r = n(255367),
-    i = n(120356),
-    a = n.n(i),
-    o = n(84735),
-    l = n(993365),
-    s = n(994971);
-function c(e) {
+    i = n(73800),
+    a = n(120356),
+    o = n.n(a),
+    l = n(186325),
+    s = n(84735),
+    c = n(836459),
+    d = n(993365),
+    u = n(511857),
+    _ = n(410030),
+    m = n(994971);
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,7 +35,7 @@ function c(e) {
     }
     return e;
 }
-function d(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -48,21 +53,21 @@ function d(e, t) {
         e
     );
 }
-let u = {
+let g = {
         xs: 'text-sm/semibold',
         sm: 'text-sm/semibold',
         md: 'text-md/semibold',
         lg: 'text-lg/semibold'
     },
-    _ = {
+    v = {
         xs: 'xs',
         sm: 'xs',
         md: 'sm',
         lg: 'md'
     };
-function m(e) {
-    var { role: t = 'button', variant: n = 'primary', size: i = 'md', text: m, icon: f, iconPosition: p = 'end', iconOpticalOffsetMargin: g = 0, focusProps: h } = e,
-        v = (function (e, t) {
+function h(e) {
+    var { role: t = 'button', variant: n = 'primary', size: a = 'md', text: c, icon: h, iconPosition: y = 'start', iconOpticalOffsetMargin: x = 0, focusProps: j } = e,
+        C = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -81,53 +86,121 @@ function m(e) {
             }
             return i;
         })(e, ['role', 'variant', 'size', 'text', 'icon', 'iconPosition', 'iconOpticalOffsetMargin', 'focusProps']);
-    function b() {
-        if (null == f) return;
+    function I() {
+        if (null == h) return;
         let e = (function () {
-            if (0 === g) return {};
-            switch (p) {
+            if (0 === x) return {};
+            switch (y) {
                 case 'start':
-                    return { marginLeft: g };
+                    return { marginLeft: x };
                 case 'end':
-                    return { marginRight: g };
+                    return { marginRight: x };
             }
             return {};
         })();
-        return (0, r.jsx)(f, {
+        return (0, r.jsx)(h, {
             color: 'currentColor',
             style: e,
-            size: _[i]
+            size: v[a]
         });
     }
-    return (0, r.jsx)(
-        o.t,
-        d(c({}, h), {
-            children: (0, r.jsxs)(
-                'button',
-                d(
-                    c(
+    let O = i.useRef(null),
+        E = 'expressive' === n,
+        P = i.useContext(l.S),
+        N = (0, u.a)((0, _.ZP)()),
+        S = (0, r.jsx)(
+            s.t,
+            p(f({}, j), {
+                children: (0, r.jsxs)(
+                    'button',
+                    p(
+                        f(
+                            {
+                                role: t,
+                                className: o()(m.button, m[a], m[n]),
+                                ref: O
+                            },
+                            C
+                        ),
                         {
-                            role: t,
-                            className: a()(s.button, s[i], s[n])
-                        },
-                        v
-                    ),
-                    {
-                        children: [
-                            null != f && 'start' === p && (0, r.jsx)(b, {}),
-                            (0, r.jsx)(l.x, {
-                                tag: 'span',
-                                variant: u[i],
-                                color: 'none',
-                                className: s.text,
-                                lineClamp: 1,
-                                children: m
-                            }),
-                            null != f && 'end' === p && (0, r.jsx)(b, {})
-                        ]
-                    }
+                            children: [
+                                E &&
+                                    (0, r.jsx)(b, {
+                                        hasReducedMotion: P.reducedMotion.enabled,
+                                        buttonRef: O,
+                                        isLightMode: N
+                                    }),
+                                null != h && 'start' === y && (0, r.jsx)(I, {}),
+                                (0, r.jsx)(d.x, {
+                                    tag: 'span',
+                                    variant: g[a],
+                                    color: 'none',
+                                    className: m.text,
+                                    lineClamp: 1,
+                                    children: c
+                                }),
+                                null != h && 'end' === y && (0, r.jsx)(I, {})
+                            ]
+                        }
+                    )
                 )
-            )
+            })
+        );
+    return E
+        ? (0, r.jsx)('div', {
+              className: m.expressiveWrapper,
+              children: S
+          })
+        : S;
+}
+function b(e) {
+    let { hasReducedMotion: t, buttonRef: n, isLightMode: a } = e,
+        l = i.useRef(null);
+    return (
+        i.useEffect(() => {
+            if (t) {
+                let e = n.current,
+                    t = () => {
+                        var e;
+                        null == (e = l.current) || e.play();
+                    },
+                    r = () => {
+                        var e;
+                        null == (e = l.current) || e.pause();
+                    };
+                return (
+                    null == e || e.addEventListener('mouseenter', t, !0),
+                    null == e || e.addEventListener('mouseleave', r, !0),
+                    () => {
+                        null == e || e.removeEventListener('mouseenter', t, !0), null == e || e.removeEventListener('mouseleave', r, !0);
+                    }
+                );
+            }
+        }, [t, n]),
+        (0, r.jsxs)(r.Fragment, {
+            children: [
+                (0, r.jsx)(c.QD, {
+                    className: o()(m.expressiveRive, m.expressiveBackground),
+                    eventTargetRef: n,
+                    fit: 'layout',
+                    artboard: 'BaseGlowRemapped',
+                    ref: l,
+                    withReducedMotion: 'short-loop'
+                }),
+                !t &&
+                    (0, r.jsx)(c.QD, {
+                        className: o()(m.expressiveRive, m.expressiveHover),
+                        fit: 'layout',
+                        artboard: a ? 'HoverLightmode' : 'HoverDarkmode'
+                    }),
+                (0, r.jsx)(c.QD, {
+                    className: o()(m.expressiveRive, m.expressiveFill),
+                    eventTargetRef: n,
+                    fit: 'layout',
+                    artboard: a ? 'ButtonFillLightmode' : 'ButtonFillDarkmode',
+                    withReducedMotion: 'play'
+                })
+            ]
         })
     );
 }
