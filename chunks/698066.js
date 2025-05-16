@@ -1,10 +1,10 @@
-n.d(t, { Z: () => l });
+n.d(t, { Z: () => i });
 var r = n(626135),
-    i = n(981631);
-function l(e) {
-    let { problem: t, stream: n, feedback: l, streamApplication: o, analyticsData: a, location: s, rating: c = null } = e;
+    l = n(981631);
+function i(e) {
+    let { problem: t, stream: n, feedback: i, streamApplication: o, analyticsData: a, location: s, rating: c = null } = e;
     r.default.track(
-        i.rMx.STREAM_REPORT_PROBLEM,
+        l.rMx.STREAM_REPORT_PROBLEM,
         (function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = null != arguments[t] ? arguments[t] : {},
@@ -39,7 +39,7 @@ function l(e) {
                 application_name: null != o ? o.name : null,
                 location: s,
                 rating: c,
-                feedback: l
+                feedback: i
             },
             a
         )

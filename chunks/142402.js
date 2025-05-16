@@ -1,7 +1,7 @@
 n.d(t, { default: () => h });
 var r = n(255367),
-    i = n(73800),
-    l = n(990547),
+    l = n(73800),
+    i = n(990547),
     o = n(481060),
     a = n(957115),
     s = n(891802),
@@ -16,7 +16,7 @@ var r = n(255367),
 let O = [f.kr.OTHER];
 function h(e) {
     let { isStreamer: t, stream: h, streamApplication: g, onClose: y, transitionState: j, analyticsData: x } = e;
-    i.useEffect(() => {
+    l.useEffect(() => {
         b.default.track(m.rMx.OPEN_MODAL, {
             type: 'Stream Problem Report',
             other_user_id: h.ownerId,
@@ -26,57 +26,48 @@ function h(e) {
             source: 'Stream End'
         });
     }, [h.ownerId, g]);
-    let { showFormStyleSurvey: v, hideNeutralOption: S, showVibesHoneypot: k } = (0, s.X)({ location: 'StreamFeedback' }),
-        w = v ? _.intl.string(_.t.OR6KNz) : _.intl.string(_.t['5smP3d']),
-        E = v ? void 0 : _.intl.string(_.t['0uxA2d']),
-        P = v ? void 0 : _.intl.string(_.t.CqjnLC),
-        N = S ? [p.aZ.BAD, p.aZ.GOOD] : void 0,
-        R = v
-            ? {
-                  [p.aZ.BAD]: _.intl.string(_.t.ISINlJ),
-                  [p.aZ.GOOD]: _.intl.string(_.t.IySkjY)
-              }
-            : void 0;
+    let { showVibesHoneypot: v } = (0, s.X)({ location: 'StreamFeedback' }),
+        S = _.intl.string(_.t['5smP3d']),
+        k = _.intl.string(_.t['0uxA2d']),
+        w = _.intl.string(_.t.CqjnLC);
     return (0, r.jsx)(c.Z, {
         modalType: 'stream',
-        header: w,
+        header: S,
         impression: {
-            impressionName: l.ImpressionNames.STREAM_FEEDBACK_MODAL,
+            impressionName: i.ImpressionNames.STREAM_FEEDBACK_MODAL,
             impressionProperties: {
                 media_session_id: x.media_session_id,
                 rtc_connection_id: x.rtc_connection_id,
                 parent_media_session_id: x.parent_media_session_id
             }
         },
-        body: t ? E : P,
-        ratingOptions: N,
-        ratingTextLabels: R,
+        body: t ? k : w,
         problemTitle: _.intl.string(_.t['6Y1t5O']),
         problems: (0, u.Z)({
             isStreamer: t,
             isEndStream: !0,
-            showVibesHoneypot: k
+            showVibesHoneypot: v
         }),
         freeformNeededProblems: O,
         onSubmit: function (e) {
             var t;
-            let { rating: i, problem: l, dontShowAgain: s, feedback: c } = e;
+            let { rating: l, problem: i, dontShowAgain: s, feedback: c } = e;
             s &&
                 (0, a.U)({
                     feedbackType: p.nw.STREAM,
                     location: 'StreamFeedback'
                 }),
-                null != i &&
+                null != l &&
                     ((0, d.Z)({
-                        problem: null != (t = null == l ? void 0 : l.value) ? t : null,
+                        problem: null != (t = null == i ? void 0 : i.value) ? t : null,
                         stream: h,
                         feedback: c,
                         streamApplication: g,
                         analyticsData: x,
                         location: 'Stream End',
-                        rating: i
+                        rating: l
                     }),
-                    null != l &&
+                    null != i &&
                         (0, o.ZDy)(async () => {
                             let { default: e } = await n.e('14466').then(n.bind(n, 729328));
                             return (t) =>

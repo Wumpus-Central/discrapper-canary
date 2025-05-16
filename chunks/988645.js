@@ -14,20 +14,13 @@ var i = n(990547),
 let m = [c.b.OTHER];
 function _(e) {
     let { onClose: t, transitionState: _, analyticsData: f } = e,
-        { showFormStyleSurvey: h, hideNeutralOption: O, showVibesHoneypot: g } = (0, l.X)({ location: 'VoiceCallFeedback' }),
-        v = h ? p.intl.string(p.t.xv0BJi) : p.intl.string(p.t.Ss6tlZ),
-        y = h ? void 0 : p.intl.string(p.t.tLi4cX),
-        x = O ? [b.aZ.BAD, b.aZ.GOOD] : void 0,
-        j = h
-            ? {
-                  [b.aZ.BAD]: p.intl.string(p.t['0jP8iY']),
-                  [b.aZ.GOOD]: p.intl.string(p.t.B81oy8)
-              }
-            : void 0;
+        { showVibesHoneypot: h } = (0, l.X)({ location: 'VoiceCallFeedback' }),
+        O = p.intl.string(p.t.Ss6tlZ),
+        g = p.intl.string(p.t.tLi4cX);
     return (0, o.jsx)(s.Z, {
         modalType: 'voice',
-        header: v,
-        body: y,
+        header: O,
+        body: g,
         impression: {
             impressionName: i.ImpressionNames.VOICE_FEEDBACK_MODAL,
             impressionProperties: {
@@ -35,12 +28,10 @@ function _(e) {
                 media_session_id: f.media_session_id
             }
         },
-        ratingOptions: x,
-        ratingTextLabels: j,
         problemTitle: p.intl.string(p.t.FJmoxM),
         problems: (0, c.Z)({
             isMobile: !1,
-            showVibesHoneypot: g
+            showVibesHoneypot: h
         }),
         freeformNeededProblems: m,
         onSubmit: function (e) {
