@@ -73,7 +73,7 @@ class E extends a.Z {
         return this.videoStreams.length > 1;
     }
     updateCallUserIds(e) {
-        e.delete(l.default.getId()), (this.otherUsers = e), this.update();
+        (this.otherUsers = new Set(e)), this.otherUsers.delete(l.default.getId()), this.update();
     }
     onIncomingVideoEnabled(e) {
         this.incomingVideoEnabled !== e && ((this.incomingVideoEnabled = e), this.update());

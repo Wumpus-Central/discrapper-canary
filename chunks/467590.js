@@ -1,6 +1,7 @@
 n.d(t, {
     $R: () => c,
     AG: () => s,
+    I3: () => u,
     PJ: () => a,
     X6: () => i.X,
     oC: () => r.oC,
@@ -24,4 +25,7 @@ function l(e, t) {
 }
 function c() {
     (0, r.ZP)().crash();
+}
+function u() {
+    return (0, r.ZP)().NoteStore;
 }

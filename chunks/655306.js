@@ -57,7 +57,7 @@ class C extends a.Z {
         return 1 === this.otherUsers.size;
     }
     updateCallUserIds(e) {
-        e.delete(d.default.getId()), (this.otherUsers = e), this.update();
+        (this.otherUsers = new Set(e)), this.otherUsers.delete(d.default.getId()), this.update();
     }
     shouldReceiveFromUser(e) {
         var t, n;

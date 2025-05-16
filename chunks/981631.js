@@ -3170,6 +3170,7 @@ var n_ = (function (e) {
             (e.SECURE_FRAMES_TRANSITION = 'secure_frames_transition'),
             (e.MLS_FAILURES = 'mls_failures'),
             (e.AV_ERROR_REPORTED = 'av_error_reported'),
+            (e.VIDEO_CALL_ENDED = 'video_call_ended'),
             (e.VIDEO_SPINNER_SHOWN_V2 = 'video_spinner_shown_v2'),
             (e.VIDEO_TOGGLED = 'video_toggled'),
             (e.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED = 'ios_invalid_token_workaround_triggered'),

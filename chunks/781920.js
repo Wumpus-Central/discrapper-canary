@@ -1,5 +1,5 @@
-var e = r(128813);
+var r = e(128813);
 __OVERLAY__ ||
-    (0, e.mX)().catch((t) => {
+    (0, r.mX)().catch((t) => {
         console.error('Failed to import libdiscore-wasm', t);
     });

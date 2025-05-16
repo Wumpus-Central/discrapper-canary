@@ -18,16 +18,16 @@ var r = n(255367),
     h = n(526761),
     m = n(388032);
 function g(e) {
-    let { guildId: t, ctaType: n, submitting: o, onGoToGuild: s, onAcceptInvite: u, onStartApplication: f, onComplete: g } = e,
-        [E, b] = i.useState(!1),
-        y = (0, l.Z)({ scrollPosition: h.Y_.GUILD_TAG }),
-        O = i.useCallback(() => {
+    let { guildId: t, ctaType: n, submitting: o, onGoToGuild: s, onAcceptInvite: u, onStartApplication: f, onComplete: g, inIterationExperiment: E } = e,
+        [b, y] = i.useState(!1),
+        O = (0, l.Z)({ scrollPosition: h.Y_.GUILD_TAG }),
+        v = i.useCallback(() => {
             (0, c.uL)(p.Z5c.GUILD_MEMBER_VERIFICATION(t));
         }, [t]),
-        v = i.useCallback(async () => {
+        I = i.useCallback(async () => {
             await (0, d.Ub)(t, { object: p.qAy.GUILD_PROFILE });
         }, [t]),
-        { text: I, onClick: S } = i.useMemo(() => {
+        { text: S, onClick: T } = i.useMemo(() => {
             switch (n) {
                 case _.sE.IS_MEMBER:
                     return {
@@ -37,26 +37,26 @@ function g(e) {
                 case _.sE.ADOPT_TAG:
                     return {
                         text: m.intl.string(m.t.cQDYRk),
-                        onClick: y
+                        onClick: O
                     };
                 case _.sE.HAS_APPLICATION:
                     return {
                         text: m.intl.string(m.t['4yfIDg']),
-                        onClick: O
+                        onClick: v
                     };
                 case _.sE.APPLY_TO_JOIN:
                     return {
-                        text: m.intl.string(m.t['7XdMW1']),
+                        text: E ? m.intl.string(m.t['1Qm829']) : m.intl.string(m.t['7XdMW1']),
                         onClick: f
                     };
                 case _.sE.LURK_DISCOVERABLE:
                     return {
-                        text: m.intl.string(m.t.eb9gDA),
-                        onClick: v
+                        text: E ? m.intl.string(m.t.VJlc0d) : m.intl.string(m.t.eb9gDA),
+                        onClick: I
                     };
                 case _.sE.JOIN_VIA_INVITE:
                     return {
-                        text: m.intl.string(m.t.eb9gDA),
+                        text: E ? m.intl.string(m.t.VJlc0d) : m.intl.string(m.t.eb9gDA),
                         onClick: u
                     };
                 default:
@@ -65,27 +65,28 @@ function g(e) {
                         onClick: null
                     };
             }
-        }, [n, O, v, u, s, f, y]),
-        T = i.useCallback(
+        }, [n, v, I, E, u, s, f, O]),
+        A = i.useCallback(
             async (e) => {
-                e.stopPropagation(), b(!0);
+                e.stopPropagation(), y(!0);
                 try {
-                    await (null == S ? void 0 : S());
+                    await (null == T ? void 0 : T());
                 } catch (e) {
                 } finally {
-                    null == g || g(), b(!1);
+                    null == g || g(), y(!1);
                 }
             },
-            [S, g]
+            [T, g]
         );
-    return null == I
+    return null == S
         ? null
         : (0, r.jsx)(a.zxk, {
+              color: E ? a.zxk.Colors.GREEN : a.zxk.Colors.BRAND,
               size: a.zxk.Sizes.SMALL,
               fullWidth: !0,
-              submitting: E || o,
-              onClick: T,
-              children: I
+              submitting: b || o,
+              onClick: A,
+              children: S
           });
 }
 function E(e) {

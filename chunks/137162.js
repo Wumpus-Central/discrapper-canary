@@ -62,5 +62,5 @@ function p(e) {
                   (0, r.jsx)(u.F, { items: h })
               ]
           })
-        : null;
+        : (0, r.jsx)('div', { className: d.emptyBody });
 }

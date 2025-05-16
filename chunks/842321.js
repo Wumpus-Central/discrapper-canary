@@ -1,11 +1,13 @@
 var r = n(970711);
-e.exports = n.v(t, e.id, '7483eabd26b9570d', {
+e.exports = n.v(t, e.id, '72223483591a3eb9', {
     './libdiscore_wasm_bg.js': {
         __wbg_warn_2159aed0435b2f46: r.fw,
         __wbindgen_is_undefined: r.XP,
         __wbindgen_string_new: r.h4,
         __wbindgen_cb_drop: r.G6,
         __wbindgen_string_get: r.qt,
+        __wbindgen_is_object: r.Wl,
+        __wbg_set_3f1d0b984ed272ed: r.S5,
         __wbg_clearTimeout_5a54f8841c30079a: r.S,
         __wbg_setTimeout_db2dbaeefb6f39c7: r.up,
         __wbg_setTimeout_2e707715f8cc9497: r.zF,
@@ -46,7 +48,6 @@ e.exports = n.v(t, e.id, '7483eabd26b9570d', {
         __wbg_queueMicrotask_97d92b4fcc8a61c5: r.YA,
         __wbg_new_78feb108b6472713: r.a9,
         __wbg_newnoargs_105ed471475aaf50: r.eD,
-        __wbindgen_is_object: r.Wl,
         __wbg_next_25feadfc0913fea9: r.UE,
         __wbg_next_6574e1a8a62d1055: r.aQ,
         __wbg_done_769e5ede4b31c67b: r.kn,
@@ -75,9 +76,9 @@ e.exports = n.v(t, e.id, '7483eabd26b9570d', {
         __wbindgen_debug_string: r.fY,
         __wbindgen_throw: r.Or,
         __wbindgen_memory: r.oH,
-        __wbindgen_closure_wrapper559: r.rY,
-        __wbindgen_closure_wrapper584: r.nI,
-        __wbindgen_closure_wrapper1271: r.Vo,
+        __wbindgen_closure_wrapper632: r.y_,
+        __wbindgen_closure_wrapper657: r.Sk,
+        __wbindgen_closure_wrapper1341: r.QI,
         __wbindgen_init_externref_table: r.xQ
     }
 });

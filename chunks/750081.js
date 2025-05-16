@@ -77,7 +77,7 @@ if (null != D.Z) {
     let d = null == (l = (c = D.Z.remoteApp).getReleaseChannel) ? void 0 : l.call(c);
     ('canary' === d || 'development' === d) && S.ZP.pauseFrameEvictor(), S.ZP.initializeExitHook(), S.ZP.initializeWERHandler();
 }
-if (((0, R.O)(window), (0, k.Mn)(), __OVERLAY__)) K(p.Z.Overlay);
+if (((0, R.O)(window), __OVERLAY__)) K(p.Z.Overlay);
 else if (null != window.require && null == window.DiscordNative) K(p.Z.OutdatedClient);
 else {
     if ((document.addEventListener('scroll', (e) => e.preventDefault()), N.isPlatformEmbedded)) {
@@ -94,5 +94,5 @@ else {
                 (0, P.al)(window);
             });
     }
-    E.Z.initialize(), h.Z.initialize(), m.Z.init(), y.Z.init(), U.Z.init(), g.Z.initialize(), I.Z.initialize(), T.Z.initialize(), b.j(), K(p.Z.App);
+    E.Z.initialize(), h.Z.initialize(), m.Z.init(), y.Z.init(), U.Z.init(), g.Z.initialize(), I.Z.initialize(), T.Z.initialize(), b.j(), (0, k.Mn)(), K(p.Z.App);
 }

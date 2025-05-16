@@ -1,12 +1,12 @@
-n.d(t, { Z: () => b });
+n.d(t, { Z: () => d });
 var r,
     s = n(255367);
 n(73800);
 var i = n(481060),
-    c = n(600164),
-    o = n(390668),
-    a = (((r = a || {}).UPGRADE = 'UPGRADE'), (r.CANCEL = 'CANCEL'), (r.UNVERIFIED = 'UNVERIFIED'), (r.UNCLAIMED = 'UNCLAIMED'), (r.GRANDFATHERED = 'GRANDFATHERED'), r);
-let l = {
+    l = n(600164),
+    a = n(390668),
+    o = (((r = o || {}).UPGRADE = 'UPGRADE'), (r.CANCEL = 'CANCEL'), (r.UNVERIFIED = 'UNVERIFIED'), (r.UNCLAIMED = 'UNCLAIMED'), (r.GRANDFATHERED = 'GRANDFATHERED'), r);
+let c = {
         UPGRADE: 'imageUpgrade',
         CANCEL: 'imageCancel',
         UNVERIFIED: 'imageUnverified',
@@ -17,7 +17,7 @@ let l = {
         var t,
             n,
             { children: r } = e,
-            c = (function (e, t) {
+            l = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -62,7 +62,7 @@ let l = {
                         });
                 }
                 return e;
-            })({}, c)),
+            })({}, l)),
             (n = n = { children: r }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -82,7 +82,7 @@ let l = {
 (u.Header = (e) => {
     let { children: t, onClose: n } = e;
     return (0, s.jsxs)(i.xBx, {
-        justify: c.Z.Justify.BETWEEN,
+        justify: l.Z.Justify.BETWEEN,
         separator: !1,
         children: [
             (0, s.jsx)(i.vwX, {
@@ -91,7 +91,7 @@ let l = {
             }),
             null != n
                 ? (0, s.jsx)(i.olH, {
-                      className: o.__invalid_closeIcon,
+                      className: a.__invalid_closeIcon,
                       onClick: n
                   })
                 : null
@@ -102,9 +102,9 @@ let l = {
         let { children: t, type: n } = e;
         return (0, s.jsxs)(i.hzk, {
             children: [
-                (0, s.jsx)('div', { className: o[l[n]] }),
+                (0, s.jsx)('div', { className: a[c[n]] }),
                 (0, s.jsx)('div', {
-                    className: o.message,
+                    className: a.message,
                     children: t
                 })
             ]
@@ -113,14 +113,14 @@ let l = {
     (u.Footer = (e) => {
         let { primary: t, primaryRenderer: n, secondary: r } = e;
         return (0, s.jsx)(i.mzw, {
-            children: (0, s.jsxs)(c.Z, {
-                justify: c.Z.Justify.END,
+            children: (0, s.jsxs)(l.Z, {
+                justify: l.Z.Justify.END,
                 children: [
                     null != r
                         ? (0, s.jsx)(i.zxk, {
                               onClick: r.onClick,
                               look: i.zxk.Looks.LINK,
-                              innerClassName: o.secondaryButton,
+                              innerClassName: a.secondaryButton,
                               children: r.label
                           })
                         : null,
@@ -135,5 +135,5 @@ let l = {
             })
         });
     }),
-    (u.Types = a);
-let b = u;
+    (u.Types = o);
+let d = u;

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => O }), n(388685);
+n.d(t, { Z: () => j }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -10,112 +10,124 @@ var r = n(255367),
     d = n(100527),
     p = n(906732),
     m = n(406218),
-    f = n(993860),
-    h = n(137162),
-    g = n(15210),
-    _ = n(43542),
-    b = n(910200),
-    x = n(358595),
-    E = n(981631),
-    y = n(388032),
-    v = n(583136);
-function O(e) {
-    let { invite: t, isMemberOfGuild: n, message: l, onTransitionToInviteChannel: c, onAcceptInstantInvite: d } = e,
-        p = i.useRef(null),
-        [f, g] = i.useState(!0),
-        [O, C] = i.useState(!1),
-        S = t.state === E.r2o.ACCEPTING,
-        I = (0, o.e7)([u.Z], () => u.Z.useReducedMotion);
+    f = n(749958),
+    h = n(993860),
+    g = n(137162),
+    _ = n(15210),
+    b = n(43542),
+    x = n(910200),
+    E = n(358595),
+    y = n(981631),
+    v = n(388032),
+    O = n(583136);
+function j(e) {
+    let { invite: t, isMemberOfGuild: n, message: l, onTransitionToInviteChannel: c, onAcceptInstantInvite: d, currentUserId: p } = e,
+        h = i.useRef(null),
+        [_, j] = i.useState(!0),
+        [S, I] = i.useState(!1),
+        N = t.state === y.r2o.ACCEPTING,
+        T = (0, o.e7)([u.Z], () => u.Z.useReducedMotion),
+        { updateButton: P, updateCopy: A } = (0, f.n2)(),
+        w = p === l.author.id,
+        Z = A ? 324 : 292;
     i.useLayoutEffect(() => {
         var e, t;
-        C((null != (t = null == (e = p.current) ? void 0 : e.clientHeight) ? t : 0) > 328);
-    }, [C]);
-    let N = (0, m.PC)(t),
-        T = i.useCallback(() => {
-            O && f && g(!1);
-        }, [f, O]),
-        P = i.useCallback(() => {
-            O && (f || g(!0));
-        }, [f, O]),
-        A = i.useMemo(() => {
+        I((null != (t = null == (e = h.current) ? void 0 : e.clientHeight) ? t : 0) > Z);
+    }, [Z, I]);
+    let R = (0, m.PC)(t),
+        k = i.useCallback(() => {
+            S && _ && j(!1);
+        }, [_, S]),
+        D = i.useCallback(() => {
+            S && (_ || j(!0));
+        }, [_, S]),
+        L = i.useMemo(() => {
             var e;
-            return O && (null == (e = p.current) ? void 0 : e.clientHeight) != null
+            return S && (null == (e = h.current) ? void 0 : e.clientHeight) != null
                 ? {
-                      height: f ? 328 : p.current.clientHeight + 24 + 65,
-                      transition: I ? void 0 : 'height 0.2s ease'
+                      height: _ ? Z : h.current.clientHeight + 36 + 48,
+                      transition: T ? void 0 : 'height 0.2s ease'
                   }
                 : {};
-        }, [f, O, I]);
-    return null == N
-        ? (0, r.jsx)(x.Z, {})
+        }, [_, S, T, Z]);
+    return null == R
+        ? (0, r.jsx)(E.Z, {})
         : (0, r.jsxs)(s.P3F, {
-              className: a()(v.guildInviteContainer, { [v.clickable]: O && f }),
-              onClick: T,
-              style: A,
+              className: a()(O.guildInviteContainer, { [O.clickable]: S && _ }),
+              onClick: k,
+              style: L,
               children: [
                   (0, r.jsxs)('div', {
-                      className: v.cardHeightMeasure,
-                      ref: p,
+                      className: O.cardHeightMeasure,
+                      ref: h,
                       children: [
-                          (0, r.jsx)(b.Z7, {
-                              profile: N,
-                              className: v.banner
+                          A
+                              ? (0, r.jsx)('div', {
+                                    className: O.inviteTitleWrapper,
+                                    children: (0, r.jsx)(s.Text, {
+                                        variant: 'text-xs/semibold',
+                                        color: 'text-secondary',
+                                        className: O.inviteTitle,
+                                        children: w ? v.intl.string(v.t['oU/lsr']) : v.intl.string(v.t.BoQUFR)
+                                    })
+                                })
+                              : null,
+                          (0, r.jsx)(x.Z7, {
+                              profile: R,
+                              className: O.banner
                           }),
-                          (0, r.jsx)(b.N3, { profile: N }),
-                          (0, r.jsx)(_.Z, { profile: N }),
-                          (0, r.jsx)(h.E, {
-                              profile: N,
-                              className: v.mainContent
+                          (0, r.jsx)(x.N3, { profile: R }),
+                          (0, r.jsx)(b.Z, { profile: R }),
+                          (0, r.jsx)(g.E, {
+                              profile: R,
+                              className: O.mainContent
                           })
                       ]
                   }),
-                  O && !f
+                  S && !_
                       ? (0, r.jsx)(s.zxk, {
                             look: s.zxk.Looks.LINK,
                             color: s.zxk.Colors.TRANSPARENT,
                             size: s.zxk.Sizes.NONE,
-                            onClick: P,
-                            className: v.hideDetailsButton,
-                            innerClassName: v.hideDetailsButtonInner,
+                            onClick: D,
+                            innerClassName: O.hideDetailsButtonInner,
                             children: (0, r.jsx)(s.Text, {
                                 variant: 'text-xs/medium',
                                 color: 'interactive-normal',
-                                children: y.intl.string(y.t.xdCLeH)
+                                children: v.intl.string(v.t.xdCLeH)
                             })
                         })
                       : null,
                   (0, r.jsxs)('div', {
-                      className: a()(v.footer, { [v.floatingFooter]: O }),
+                      className: a()(O.footer, { [O.floatingFooter]: S }),
                       children: [
-                          O && f ? (0, r.jsx)('div', { className: v.gradient }) : null,
-                          (0, r.jsxs)('div', {
-                              className: v.footerContent,
-                              children: [
-                                  (0, r.jsx)('div', { className: v.separator }),
-                                  (0, r.jsx)('div', {
-                                      className: v.buttonContainer,
-                                      children: (0, r.jsx)(j, {
-                                          invite: t,
-                                          profile: N,
-                                          isMemberOfGuild: n,
-                                          message: l,
-                                          submitting: S,
-                                          onTransitionToInviteChannel: c,
-                                          onAcceptInstantInvite: d
-                                      })
+                          S && _ ? (0, r.jsx)('div', { className: O.gradient }) : null,
+                          (0, r.jsx)('div', {
+                              className: a()(O.footerContent, { [O.collapsedFooterContent]: S && _ }),
+                              children: (0, r.jsx)('div', {
+                                  className: O.buttonContainer,
+                                  children: (0, r.jsx)(C, {
+                                      invite: t,
+                                      profile: R,
+                                      isMemberOfGuild: n,
+                                      message: l,
+                                      submitting: N,
+                                      onTransitionToInviteChannel: c,
+                                      onAcceptInstantInvite: d,
+                                      inIterationExperiment: P
                                   })
-                              ]
+                              })
                           })
                       ]
                   })
               ]
           });
 }
-function j(e) {
-    let { invite: t, profile: n, isMemberOfGuild: l, message: a, submitting: o, onTransitionToInviteChannel: s, onAcceptInstantInvite: u } = e,
-        { guildId: m, ctaType: h } = (0, f.ZP)(n, f.F3.INVITE),
-        { analyticsLocations: _ } = (0, p.ZP)(d.Z.INVITE_EMBED),
-        b = i.useCallback(() => {
+function C(e) {
+    let { invite: t, profile: n, isMemberOfGuild: l, message: a, submitting: o, onTransitionToInviteChannel: s, onAcceptInstantInvite: u, inIterationExperiment: m } = e,
+        { guildId: f, ctaType: g } = (0, h.ZP)(n, h.F3.INVITE),
+        { analyticsLocations: b } = (0, p.ZP)(d.Z.INVITE_EMBED),
+        x = i.useCallback(() => {
             let e = l ? 'transition' : 'accept';
             (0, c.r$)(
                 {
@@ -124,18 +136,19 @@ function j(e) {
                     inviter_id: a.author.id,
                     invite_message_id: a.id
                 },
-                _
+                b
             );
-        }, [t, a, _, l]);
-    return null == h
+        }, [t, a, b, l]);
+    return null == g
         ? null
-        : (0, r.jsx)(g.o, {
-              guildId: m,
-              ctaType: h,
+        : (0, r.jsx)(_.o, {
+              guildId: f,
+              ctaType: g,
               submitting: o,
               onGoToGuild: s,
               onAcceptInvite: u,
               onStartApplication: u,
-              onComplete: b
+              onComplete: x,
+              inIterationExperiment: m
           });
 }

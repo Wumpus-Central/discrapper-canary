@@ -1,43 +1,43 @@
 n.d(t, {
-    B: () => b,
-    U: () => p
+    B: () => f,
+    U: () => m
 }),
     n(539854);
-var o = n(392711),
-    i = n.n(o),
-    a = n(536442),
-    l = n(695346),
-    r = n(626135),
+var r = n(392711),
+    o = n.n(r),
+    l = n(536442),
+    a = n(695346),
+    i = n(626135),
     s = n(178635),
     c = n(250454),
     u = n(531578),
-    d = n(981631);
-function _(e) {
+    b = n(981631);
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            o = Object.keys(n);
+            r = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (o = o.concat(
+            (r = r.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            o.forEach(function (t) {
-                var o;
-                (o = n[t]),
+            r.forEach(function (t) {
+                var r;
+                (r = n[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: o,
+                              value: r,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = o);
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function m(e, t) {
+function _(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -45,8 +45,8 @@ function m(e, t) {
             : (function (e, t) {
                   var n = Object.keys(e);
                   if (Object.getOwnPropertySymbols) {
-                      var o = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, o);
+                      var r = Object.getOwnPropertySymbols(e);
+                      n.push.apply(n, r);
                   }
                   return n;
               })(Object(t)).forEach(function (n) {
@@ -55,24 +55,24 @@ function m(e, t) {
         e
     );
 }
-let b = (e, t) => {
-    let n = i().shuffle(e),
-        o = n.findIndex((e) => e.value === t);
-    if (o > -1) {
-        let e = n[o];
-        n.splice(o, 1), n.push(e);
+let f = (e, t) => {
+    let n = o().shuffle(e),
+        r = n.findIndex((e) => e.value === t);
+    if (r > -1) {
+        let e = n[r];
+        n.splice(r, 1), n.push(e);
     }
     return n;
 };
-function p(e) {
+function m(e) {
     let { feedbackType: t, location: n } = e,
-        { persistToBackend: o } = (0, c.O)({ location: n }),
-        i = s.R[t].hotspot;
-    o
-        ? (r.default.track(d.rMx.USER_SETTINGS_IN_APP_FEEDBACK_OPTED_OUT, {
+        { persistToBackend: r } = (0, c.O)({ location: n }),
+        o = s.R[t].hotspot;
+    r
+        ? (i.default.track(b.rMx.USER_SETTINGS_IN_APP_FEEDBACK_OPTED_OUT, {
               feedback_type: u.nw[t],
               opted_out_until: u.uf
           }),
-          l.A2.updateSetting((e) => m(_({}, e), { [t]: m(_({}, e[t]), { optOutExpiryTime: u.uf }) })))
-        : (0, a.Kw)(i);
+          a.A2.updateSetting((e) => _(d({}, e), { [t]: _(d({}, e[t]), { optOutExpiryTime: u.uf }) })))
+        : (0, l.Kw)(o);
 }
