@@ -12,20 +12,20 @@ var r = n(255367),
     p = n(388032),
     x = n(954353);
 function g(e) {
-    let { orientation: t = 'horizontal', headingColor: n = 'text-normal', textColor: i = 'text-normal', withRewardName: g = !1, withPremiumHighlight: h = !0, quest: j } = e,
-        f = (0, c.j)({ location: m.dr.QUESTS_BAR_MOBILE }),
-        b = s.useMemo(() => d.r.build(j.config), [j.config]),
+    let { orientation: t = 'horizontal', headingColor: n = 'text-normal', textColor: i = 'text-normal', withRewardName: g = !1, withPremiumHighlight: h = !0, quest: f } = e,
+        j = (0, c.j)({ location: m.dr.QUESTS_BAR_MOBILE }),
+        b = s.useMemo(() => d.r.build(f.config), [f.config]),
         C = b.defaultReward.messages.name,
         v = b.defaultReward.messages.nameWithArticle,
-        y = (0, l.Kr)(j.config),
-        T = (0, u.mK)(j.config);
+        y = (0, l.Kr)(f.config),
+        T = (0, u.mK)(f.config);
     return (0, r.jsxs)('div', {
         children: [
             g &&
                 (0, r.jsx)(a.Text, {
                     color: n,
                     variant: 'text-sm/normal',
-                    children: p.intl.formatToPlainString(p.t['W8/b3d'], { rewardName: f ? C : v })
+                    children: p.intl.formatToPlainString(p.t['W8/b3d'], { rewardName: j ? C : v })
                 }),
             null != y &&
                 (0, r.jsxs)('ul', {

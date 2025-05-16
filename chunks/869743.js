@@ -1,12 +1,13 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var r = n(255367),
-    i = n(481060),
-    a = n(299206),
-    o = n(726521),
-    s = n(389052),
-    l = n(388032),
-    c = n(923492);
-function u(e, t, n) {
+    i = n(73800),
+    a = n(481060),
+    o = n(299206),
+    s = n(726521),
+    l = n(389052),
+    c = n(388032),
+    u = n(923492);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +20,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,12 +31,12 @@ function d(e) {
                 })
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function _(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,39 +48,39 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function p(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : _(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let p = (e) => {
-        let { appRecord: t, closePopout: n, showAppReportingOption: s, selectedGuildId: c, selectedChannelId: u, children: d = null } = e,
-            f = (0, a.Z)({
+let h = (e) => {
+        let { appRecord: t, closePopout: n, showAppReportingOption: i, selectedGuildId: l, selectedChannelId: u, children: d = null } = e,
+            f = (0, o.Z)({
                 id: t.id,
-                label: l.intl.string(l.t['+NP/b2'])
+                label: c.intl.string(c.t['+NP/b2'])
             });
-        return (0, r.jsxs)(i.v2r, {
+        return (0, r.jsxs)(a.v2r, {
             navId: 'authorized-app-action-menu',
             onClose: n,
-            'aria-label': l.intl.string(l.t.tKobzc),
+            'aria-label': c.intl.string(c.t.tKobzc),
             onSelect: void 0,
             children: [
-                s
-                    ? (0, r.jsx)(i.sNh, {
+                i
+                    ? (0, r.jsx)(a.sNh, {
                           id: 'report',
-                          label: l.intl.string(l.t['+78Pfn']),
+                          label: c.intl.string(c.t['+78Pfn']),
                           color: 'danger',
                           action: () =>
-                              (0, o.uu)({
+                              (0, s.uu)({
                                   application: t,
                                   entrypoint: 'authorized_apps_settings',
-                                  contextualGuildId: c,
+                                  contextualGuildId: l,
                                   contextualChannelId: u
                               })
                       })
@@ -89,60 +90,63 @@ let p = (e) => {
             ]
         });
     },
-    h = (e) => {
-        let { appRecord: t, botUser: n, closePopout: i, showAppReportingOption: a, selectedGuildId: o, selectedChannelId: l } = e;
-        return (0, r.jsx)(p, {
+    m = (e) => {
+        let { appRecord: t, botUser: n, closePopout: i, showAppReportingOption: a, selectedGuildId: o, selectedChannelId: s } = e;
+        return (0, r.jsx)(h, {
             appRecord: t,
             closePopout: i,
             showAppReportingOption: a,
             selectedGuildId: o,
-            selectedChannelId: l,
-            children: (0, s.Z)({
+            selectedChannelId: s,
+            children: (0, l.Z)({
                 user: n,
                 location: 'UserSettingsAuthedApps',
                 color: 'danger'
             })
         });
     },
-    m = (e) => {
-        let { appRecord: t, showAppReportingOption: n, selectedGuildId: a, selectedChannelId: o } = e;
-        return (0, r.jsx)(i.yRy, {
+    g = (e) => {
+        let { appRecord: t, showAppReportingOption: n, selectedGuildId: o, selectedChannelId: s } = e,
+            l = i.useRef(null);
+        return (0, r.jsx)(a.yRy, {
+            targetElementRef: l,
             renderPopout: (e) => {
                 let { closePopout: i } = e;
                 return null == t.bot
-                    ? (0, r.jsx)(p, {
+                    ? (0, r.jsx)(h, {
                           appRecord: t,
                           closePopout: i,
                           showAppReportingOption: n,
-                          selectedGuildId: a,
-                          selectedChannelId: o
+                          selectedGuildId: o,
+                          selectedChannelId: s
                       })
-                    : (0, r.jsx)(h, {
+                    : (0, r.jsx)(m, {
                           appRecord: t,
                           botUser: t.bot,
                           closePopout: i,
                           showAppReportingOption: n,
-                          selectedGuildId: a,
-                          selectedChannelId: o
+                          selectedGuildId: o,
+                          selectedChannelId: s
                       });
             },
             align: 'right',
             position: 'bottom',
             children: (e) =>
                 (0, r.jsx)(
-                    i.P3F,
-                    _(
-                        d(
+                    a.P3F,
+                    p(
+                        f(
                             {
-                                className: c.actionMenuButton,
-                                'aria-label': l.intl.string(l.t.UKOtz8)
+                                innerRef: l,
+                                className: u.actionMenuButton,
+                                'aria-label': c.intl.string(c.t.UKOtz8)
                             },
                             e
                         ),
                         {
-                            children: (0, r.jsx)(i.xhG, {
+                            children: (0, r.jsx)(a.xhG, {
                                 size: 'xs',
-                                color: i.TVs.colors.INTERACTIVE_NORMAL
+                                color: a.TVs.colors.INTERACTIVE_NORMAL
                             })
                         }
                     )

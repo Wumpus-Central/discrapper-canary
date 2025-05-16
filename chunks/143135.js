@@ -1,5 +1,5 @@
-n.d(t, { Z: () => l });
-var r = n(855403);
-function l(e, t, n) {
-    return null == t ? e : n.find((e) => (0, r.Z)(t.id, e.windowHandle));
+r.d(t, { Z: () => l });
+var n = r(855403);
+function l(e, t, r) {
+    return null == t ? e : r.find((e) => (0, n.Z)(t.id, e.windowHandle));
 }

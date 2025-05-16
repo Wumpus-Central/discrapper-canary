@@ -14,15 +14,15 @@ var a = n(497505),
     p = n(463910);
 function x(e) {
     let { quest: t, location: n, initiallyExpanded: x, contentPosition: g } = e,
-        [h, j] = s.useState(!1),
-        f = s.useCallback(() => j(!0), []),
-        b = s.useCallback(() => j(!1), []),
+        [h, f] = s.useState(!1),
+        j = s.useCallback(() => f(!0), []),
+        b = s.useCallback(() => f(!1), []),
         C = (0, o.tP)(t),
         { containerRef: v, size: y, height: T } = (0, m.h)(),
         {
             expansionSpring: O,
-            isAnimating: N,
-            isExpanded: E,
+            isAnimating: E,
+            isExpanded: N,
             toggleExpanded: q
         } = (0, m.O)({
             initiallyExpanded:
@@ -50,8 +50,8 @@ function x(e) {
                               })
                 },
                 className: p.questsCard,
-                onFocus: f,
-                onMouseEnter: f,
+                onFocus: j,
+                onMouseEnter: j,
                 onBlur: b,
                 onMouseLeave: b,
                 children: (0, r.jsxs)('div', {
@@ -66,8 +66,8 @@ function x(e) {
                             quest: t,
                             size: y,
                             expansionSpring: O,
-                            isAnimating: N,
-                            isExpanded: E,
+                            isAnimating: E,
+                            isExpanded: N,
                             contentPosition: g,
                             toggleExpanded: q
                         }),
@@ -77,8 +77,8 @@ function x(e) {
                             location: n,
                             size: y,
                             isFocused: h,
-                            isExpanded: E,
-                            isAnimating: N,
+                            isExpanded: N,
+                            isAnimating: E,
                             contentPosition: g
                         })
                     ]

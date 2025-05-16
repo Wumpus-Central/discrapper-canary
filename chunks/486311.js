@@ -80,9 +80,11 @@ let C = {
             (null == S ? void 0 : S.popout) == null && w(null);
         }, [null == S ? void 0 : S.popout]);
         let Z = i.useCallback((e) => {
-            w(e);
-        }, []);
+                w(e);
+            }, []),
+            T = i.useRef(null);
         return (0, r.jsx)(a.yRy, {
+            targetElementRef: T,
             shouldShow: (null == S ? void 0 : S.popout) != null && !(x || P),
             nudgeAlignIntoViewport: !0,
             animationPosition: 'bottom',
@@ -95,6 +97,7 @@ let C = {
                     ((i = v({}, e)),
                     (s = s =
                         {
+                            ref: T,
                             className: O.container,
                             id: 'skill-trees-'.concat(t),
                             renderIcon: (e) =>

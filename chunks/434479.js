@@ -54,8 +54,8 @@ function p(e, t) {
 }
 function f(e) {
     var t,
-        { id: n, className: i, innerClassName: f, renderIcon: g, text: m, selected: b, trailing: _, background: y, showUnread: O = !1 } = e,
-        v = (function (e, t) {
+        { id: n, className: i, innerClassName: f, renderIcon: g, text: m, selected: b, trailing: _, background: y, showUnread: O = !1, ref: v } = e,
+        C = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -73,19 +73,20 @@ function f(e) {
                 for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
             }
             return i;
-        })(e, ['id', 'className', 'innerClassName', 'renderIcon', 'text', 'selected', 'trailing', 'background', 'showUnread']);
-    let C = (0, o.JA)(n),
-        S = null != (t = (0, s.qg)(m)) ? t : '';
+        })(e, ['id', 'className', 'innerClassName', 'renderIcon', 'text', 'selected', 'trailing', 'background', 'showUnread', 'ref']);
+    let S = (0, o.JA)(n),
+        j = null != (t = (0, s.qg)(m)) ? t : '';
     return (0, r.jsx)('li', {
+        ref: v,
         children: (0, r.jsxs)(
             a.kL8,
-            p(h({}, v), {
-                buttonProps: p(h({}, C), {
+            p(h({}, C), {
+                buttonProps: p(h({}, S), {
                     id: n,
                     role: 'button'
                 }),
                 tag: 'div',
-                'aria-label': S,
+                'aria-label': j,
                 focusProps: {
                     offset: {
                         top: 1,
@@ -94,8 +95,8 @@ function f(e) {
                     }
                 },
                 onContextMenu:
-                    null != v.onContextMenu
-                        ? v.onContextMenu
+                    null != C.onContextMenu
+                        ? C.onContextMenu
                         : (e) => {
                               e.stopPropagation();
                           },

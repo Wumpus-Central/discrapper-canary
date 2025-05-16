@@ -188,6 +188,7 @@ function C(e) {
     }, [d, l]);
     let E = !d;
     return (0, r.jsx)(c.yRy, {
+        targetElementRef: g,
         renderPopout: (e) =>
             (0, r.jsx)(c.P3F, {
                 onClick: (e) => e.stopPropagation(),

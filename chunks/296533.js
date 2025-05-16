@@ -96,7 +96,8 @@ function v(e) {
         E = r.useMemo(() => (null != n.cooldownEndsAt ? new Date(n.cooldownEndsAt) : null), [n]),
         C = r.useMemo(() => null != E && E > new Date(), [E]),
         v = (0, p.tl)(n),
-        T = (0, c.Z)();
+        T = (0, c.Z)(),
+        I = r.useRef(null);
     return (0, i.jsxs)('div', {
         className: O.boostContainer,
         children: [
@@ -126,6 +127,7 @@ function v(e) {
                                   })
                     }),
                     (0, i.jsx)(a.yRy, {
+                        targetElementRef: I,
                         renderPopout: function (e) {
                             let { closePopout: t } = e;
                             return (0, i.jsx)(d.Z, {
@@ -170,6 +172,7 @@ function v(e) {
                                 })({}, e)),
                                 (n = n =
                                     {
+                                        innerRef: I,
                                         'aria-label': j.intl.string(j.t.PdRCRk),
                                         className: O.boostSlotMenuIcon,
                                         children: (0, i.jsx)(a.Huf, {

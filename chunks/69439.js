@@ -82,18 +82,19 @@ function O(e) {
         z = (0, g.Xv)(w.config),
         F = (0, g.q8)(w),
         X = (0, g.Vl)(w),
-        K = (0, p.Rf)(w),
-        [Y, G, J] = (0, p.me)(w, K),
-        $ = U && H === p.OH.ACCEPTED,
-        ee = $ && Y === f.LI.SELECT,
-        et = $ && !ee && G.length > 1,
-        en = o.useCallback(
+        K = o.useRef(null),
+        Y = (0, p.Rf)(w),
+        [G, J, $] = (0, p.me)(w, Y),
+        ee = U && H === p.OH.ACCEPTED,
+        et = ee && G === f.LI.SELECT,
+        en = ee && !et && J.length > 1,
+        er = o.useCallback(
             (e) => {
-                J(e), e === j.cd.DESKTOP && P([]);
+                $(e), e === j.cd.DESKTOP && P([]);
             },
-            [J, P]
+            [$, P]
         ),
-        { text: er, onClick: eo } = (0, x.Ks)({
+        { text: eo, onClick: es } = (0, x.Ks)({
             progressState: H,
             quest: w,
             location: S,
@@ -104,7 +105,7 @@ function O(e) {
             isVideoQuest: F,
             inGameQuest: X
         }),
-        { startingConsoleQuest: es, startConsoleQuest: ea } = (0, p.GI)({
+        { startingConsoleQuest: ea, startConsoleQuest: ei } = (0, p.GI)({
             questId: w.id,
             beforeRequest: () => {
                 R.startAnimation(),
@@ -120,18 +121,18 @@ function O(e) {
                 R.stopAnimation(), P(e);
             }
         }),
-        ei = (null == (O = w.userStatus) ? void 0 : O.claimedAt) != null,
-        el = null;
+        el = (null == (O = w.userStatus) ? void 0 : O.claimedAt) != null,
+        ec = null;
     return (Q && V
-        ? (el = (0, r.jsx)(l.zxk, {
+        ? (ec = (0, r.jsx)(l.zxk, {
               color: l.Ttl.BRAND,
               submitting: D,
-              onClick: null != eo ? eo : void 0,
+              onClick: null != es ? es : void 0,
               className: _.button,
-              children: er
+              children: eo
           }))
         : W
-          ? (el = F
+          ? (ec = F
                 ? (0, r.jsxs)(r.Fragment, {
                       children: [
                           (0, r.jsx)(l.zxk, {
@@ -155,35 +156,35 @@ function O(e) {
                           (0, r.jsx)(l.zxk, {
                               color: l.Ttl.BRAND,
                               className: _.button,
-                              onClick: null != eo ? eo : void 0,
-                              children: er
+                              onClick: null != es ? es : void 0,
+                              children: eo
                           })
                       ]
                   })
                 : (0, r.jsx)(l.zxk, {
                       color: l.Ttl.BRAND,
                       className: _.button,
-                      onClick: null != eo ? eo : void 0,
-                      children: er
+                      onClick: null != es ? es : void 0,
+                      children: eo
                   }))
           : U
             ? U && V
-                ? (el = (0, r.jsx)(l.zxk, {
+                ? (ec = (0, r.jsx)(l.zxk, {
                       color: l.Ttl.BRAND,
                       submitting: D,
-                      onClick: null != eo ? eo : void 0,
+                      onClick: null != es ? es : void 0,
                       className: _.button,
-                      children: er
+                      children: eo
                   }))
-                : U && Z && !ei
-                  ? (el = ee
+                : U && Z && !el
+                  ? (ec = et
                         ? (0, r.jsx)(l.PhF, {
                               className: _.platformSelectorPrimary,
                               isSelected: () => !1,
                               options: y,
                               placeholder: v.intl.string(v.t.drVw4e),
                               renderOptionLabel: C,
-                              select: en,
+                              select: er,
                               serialize: (e) => {
                                   switch (e) {
                                       case j.cd.DESKTOP:
@@ -193,18 +194,18 @@ function O(e) {
                                   }
                               }
                           })
-                        : (0, g.$J)(w) && !q && Y !== f.LI.DESKTOP
+                        : (0, g.$J)(w) && !q && G !== f.LI.DESKTOP
                           ? k
                               ? (0, r.jsx)(l.zxk, {
                                     color: l.Ttl.PRIMARY,
                                     className: _.button,
-                                    onClick: null != eo ? eo : void 0,
-                                    children: er
+                                    onClick: null != es ? es : void 0,
+                                    children: eo
                                 })
                               : (0, r.jsx)(l.zxk, {
                                     color: l.Ttl.PRIMARY,
-                                    onClick: ea,
-                                    disabled: es,
+                                    onClick: ei,
+                                    disabled: ea,
                                     className: _.button,
                                     children: (0, r.jsxs)('div', {
                                         className: _.ctaInner,
@@ -214,9 +215,9 @@ function O(e) {
                           : F || (X && w.config.features.includes(j.S7.START_QUEST_CTA))
                             ? (0, r.jsx)(l.zxk, {
                                   color: l.Ttl.BRAND,
-                                  onClick: null != eo ? eo : void 0,
+                                  onClick: null != es ? es : void 0,
                                   className: _.button,
-                                  children: er
+                                  children: eo
                               })
                             : (0, r.jsx)(l.zxk, {
                                   color: l.Ttl.PRIMARY,
@@ -226,7 +227,7 @@ function O(e) {
                               }))
                   : U &&
                     !Z &&
-                    (el = L
+                    (ec = L
                         ? (0, r.jsxs)(r.Fragment, {
                               children: [
                                   (0, r.jsx)(l.zxk, {
@@ -246,25 +247,26 @@ function O(e) {
                         : (0, r.jsx)(l.zxk, {
                               submitting: M,
                               color: l.Ttl.BRAND,
-                              onClick: null != eo ? eo : void 0,
+                              onClick: null != es ? es : void 0,
                               className: _.button,
-                              children: er
+                              children: eo
                           }))
-            : (el = (0, r.jsx)(l.zxk, {
+            : (ec = (0, r.jsx)(l.zxk, {
                   color: l.Ttl.PRIMARY,
                   disabled: !0,
                   className: _.button,
                   children: v.intl.format(v.t['14o6QU'], { expiryDate: I })
               })),
-    null == el)
+    null == ec)
         ? null
         : (0, r.jsxs)('div', {
               className: _.container,
               children: [
-                  el,
-                  et &&
+                  ec,
+                  en &&
                       (0, r.jsx)(b.U, {
-                          onSelect: en,
+                          popoutTargetRef: K,
+                          onSelect: er,
                           quest: w,
                           questContent: f.jn.ACTIVITY_PANEL,
                           children: (e) => {
@@ -297,6 +299,7 @@ function O(e) {
                                       return e;
                                   })(
                                       {
+                                          buttonRef: K,
                                           className: a()(_.button, _.platformSelectorSecondary),
                                           color: l.Ttl.PRIMARY
                                       },
@@ -316,7 +319,7 @@ function O(e) {
                                                           default:
                                                               return null;
                                                       }
-                                                  })(Y),
+                                                  })(G),
                                                   (0, r.jsx)(l.CJ0, {
                                                       className: _.platformSelectorSecondaryChevron,
                                                       color: 'currentColor'

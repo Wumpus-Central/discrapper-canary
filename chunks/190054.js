@@ -1,50 +1,50 @@
-n.d(t, { H: () => d }), n(388685);
+n.d(t, { H: () => u }), n(388685);
 var r = n(255367),
-    l = n(73800),
-    i = n(120356),
-    o = n.n(i),
-    a = n(481060),
+    o = n(73800),
+    c = n(120356),
+    i = n.n(c),
+    l = n(481060),
     s = n(572004),
-    u = n(388032),
-    c = n(798665);
-function d(e) {
-    var { chunks: t, className: n, onCopy: i } = e,
-        d = (function (e, t) {
+    a = n(388032),
+    d = n(798665);
+function u(e) {
+    var { chunks: t, className: n, onCopy: c } = e,
+        u = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
-                l = (function (e, t) {
+                o = (function (e, t) {
                     if (null == e) return {};
                     var n,
                         r,
-                        l = {},
-                        i = Object.keys(e);
-                    for (r = 0; r < i.length; r++) (n = i[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
-                    return l;
+                        o = {},
+                        c = Object.keys(e);
+                    for (r = 0; r < c.length; r++) (n = c[r]), t.indexOf(n) >= 0 || (o[n] = e[n]);
+                    return o;
                 })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var i = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < i.length; r++) (n = i[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                var c = Object.getOwnPropertySymbols(e);
+                for (r = 0; r < c.length; r++) (n = c[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (o[n] = e[n]);
             }
-            return l;
+            return o;
         })(e, ['chunks', 'className', 'onCopy']);
-    let h = l.useMemo(() => (null == t ? void 0 : t.join(' ')), [t]),
-        [f, p] = l.useState(!1),
-        g = l.useCallback(() => {
+    let h = o.useMemo(() => (null == t ? void 0 : t.join(' ')), [t]),
+        [f, p] = o.useState(!1),
+        m = o.useCallback(() => {
             (0, s.JG)(h, () => {
-                p(!0), null == i || i();
+                p(!0), null == c || c();
             });
-        }, [i, h]),
-        y = f ? a.owK : a.TIy;
-    return (0, r.jsx)(a.P3F, {
-        className: o()(c.container, n),
-        onClick: g,
-        children: (0, r.jsx)(a.ua7, {
-            text: f ? u.intl.string(u.t['t5VZ8/']) : u.intl.string(u.t.OpuAlJ),
+        }, [c, h]),
+        b = f ? l.owK : l.TIy;
+    return (0, r.jsx)(l.P3F, {
+        className: i()(d.container, n),
+        onClick: m,
+        children: (0, r.jsx)(l.ua7, {
+            text: f ? a.intl.string(a.t['t5VZ8/']) : a.intl.string(a.t.OpuAlJ),
             children: (e) => {
                 var t, n;
                 return (0, r.jsx)(
-                    y,
+                    b,
                     ((t = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -69,11 +69,11 @@ function d(e) {
                                 });
                         }
                         return e;
-                    })({}, d, e)),
+                    })({}, u, e)),
                     (n = n =
                         {
                             size: 'xxs',
-                            color: f ? a.TVs.colors.TEXT_POSITIVE : a.TVs.colors.INTERACTIVE_NORMAL
+                            color: f ? l.TVs.colors.TEXT_POSITIVE : l.TVs.colors.INTERACTIVE_NORMAL
                         }),
                     Object.getOwnPropertyDescriptors
                         ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

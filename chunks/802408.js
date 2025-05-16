@@ -1,15 +1,15 @@
-n.d(t, { Z: () => g }), n(953529);
-var r = n(255367);
-n(73800);
-var i = n(442837),
-    a = n(780384),
-    o = n(481060),
-    s = n(410030),
-    l = n(607070),
-    c = n(921944),
-    u = n(388032),
-    d = n(671821);
-function f(e, t, n) {
+n.d(t, { Z: () => E }), n(953529);
+var r = n(255367),
+    i = n(73800),
+    a = n(442837),
+    o = n(780384),
+    s = n(481060),
+    l = n(410030),
+    c = n(607070),
+    u = n(921944),
+    d = n(388032),
+    f = n(671821);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +22,7 @@ function f(e, t, n) {
         e
     );
 }
-function _(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,12 +33,12 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -50,87 +50,93 @@ function p(e, t) {
     }
     return n;
 }
-function h(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : p(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function m(e) {
-    let { onComplete: t, onCheckItOutClick: n, config: c } = e,
-        f = (0, i.e7)([l.Z], () => l.Z.useReducedMotion),
-        _ = (0, s.ZP)();
+function g(e) {
+    let { onComplete: t, onCheckItOutClick: n, config: i } = e,
+        u = (0, a.e7)([c.Z], () => c.Z.useReducedMotion),
+        _ = (0, l.ZP)();
     return (0, r.jsxs)('div', {
-        className: d.container,
+        className: f.container,
         children: [
             (0, r.jsx)('img', {
-                alt: u.intl.string(u.t.X4IxWF),
-                src: c.getImageUrl((0, a.wj)(_), f),
-                className: d.coachmark
+                alt: d.intl.string(d.t.X4IxWF),
+                src: i.getImageUrl((0, o.wj)(_), u),
+                className: f.coachmark
             }),
             (0, r.jsxs)('div', {
-                className: d.body,
+                className: f.body,
                 children: [
-                    (0, r.jsx)(o.X6q, {
-                        className: d.text,
+                    (0, r.jsx)(s.X6q, {
+                        className: f.text,
                         variant: 'heading-sm/semibold',
-                        children: c.title()
+                        children: i.title()
                     }),
-                    (0, r.jsx)(o.Text, {
-                        className: d.text,
+                    (0, r.jsx)(s.Text, {
+                        className: f.text,
                         variant: 'text-sm/normal',
-                        children: c.description()
+                        children: i.description()
                     })
                 ]
             }),
-            (0, r.jsx)(o.zxk, {
-                className: d.button,
-                color: o.zxk.Colors.BRAND_INVERTED,
+            (0, r.jsx)(s.zxk, {
+                className: f.button,
+                color: s.zxk.Colors.BRAND_INVERTED,
                 onClick: () => n(),
-                children: c.cta()
+                children: i.cta()
             }),
-            (0, r.jsx)(o.P3F, {
+            (0, r.jsx)(s.P3F, {
                 onClick: t,
-                className: d.closeButton,
-                'aria-label': u.intl.string(u.t.cpT0Cg),
-                children: (0, r.jsx)(o.Dio, {
+                className: f.closeButton,
+                'aria-label': d.intl.string(d.t.cpT0Cg),
+                children: (0, r.jsx)(s.Dio, {
                     size: 'md',
                     color: 'currentColor',
-                    className: d.closeIcon
+                    className: f.closeIcon
                 })
             }),
-            (0, r.jsx)('div', { className: d.pointer })
+            (0, r.jsx)('div', { className: f.pointer })
         ]
     });
 }
-function g(e) {
-    let { onComplete: t, onCheckItOutClick: n, markAsDismissed: i, config: a, children: s } = e;
-    return (0, r.jsx)(o.yRy, {
+function E(e) {
+    let { onComplete: t, onCheckItOutClick: n, markAsDismissed: a, config: o, children: l } = e,
+        c = i.useRef(null);
+    return (0, r.jsx)(s.yRy, {
+        targetElementRef: c,
         spacing: 16,
         shouldShow: !0,
         position: 'top',
         align: 'center',
         renderPopout: (e) =>
             (0, r.jsx)(
-                m,
-                h(_({}, e), {
+                g,
+                m(p({}, e), {
                     onComplete: () => {
-                        t(), i(c.L.USER_DISMISS);
+                        t(), a(u.L.USER_DISMISS);
                     },
                     onCheckItOutClick: () => {
-                        n(), t(), i(c.L.TAKE_ACTION);
+                        n(), t(), a(u.L.TAKE_ACTION);
                     },
-                    config: a
+                    config: o
                 })
             ),
         onRequestClose: () => void 0,
         closeOnScroll: !1,
         ignoreModalClicks: !0,
-        children: () => s
+        children: () =>
+            (0, r.jsx)('div', {
+                ref: c,
+                children: l
+            })
     });
 }
