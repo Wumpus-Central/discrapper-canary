@@ -1,12 +1,12 @@
-n.d(t, { Z: () => u });
-var r = n(255367);
-n(73800);
-var i = n(481060),
-    l = n(871499),
-    a = n(447564),
-    o = n(304388);
-function s() {
-    return (s =
+n.d(t, { Z: () => d });
+var r = n(255367),
+    i = n(73800),
+    l = n(481060),
+    a = n(871499),
+    o = n(447564),
+    s = n(304388);
+function c() {
+    return (c =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -16,20 +16,19 @@ function s() {
             return e;
         }).apply(this, arguments);
 }
-let c = (e) => {
-    let { channel: t, glow: n, ref: c } = e;
-    return (0, r.jsx)(o.Z, {
-        buttonRef: c,
+let u = i.forwardRef((e, t) => {
+    let { channel: n, glow: i } = e;
+    return (0, r.jsx)(s.Z, {
         renderPopout: () => null,
         children: (e) => {
-            var o = s(
+            var s = c(
                 {},
                 (function (e) {
                     if (null == e) throw TypeError('Cannot destructure ' + e);
                     return e;
                 })(e)
             );
-            let { onClick: c, ref: u } = o,
+            let { onClick: u } = s,
                 d = (function (e, t) {
                     if (null == e) return {};
                     var n,
@@ -48,9 +47,9 @@ let c = (e) => {
                         for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
                     }
                     return i;
-                })(o, ['onClick', 'ref']);
+                })(s, ['onClick']);
             return (0, r.jsx)(
-                l.Z,
+                a.Z,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -77,11 +76,11 @@ let c = (e) => {
                     return e;
                 })(
                     {
-                        ref: u,
-                        iconComponent: i.hh5,
-                        iconColor: n ? '#eb90f1' : void 0,
+                        buttonRef: t,
+                        iconComponent: l.hh5,
+                        iconColor: i ? '#eb90f1' : void 0,
                         onClick: (e) => {
-                            (0, a.k)(t, 'ActionBar'), e.stopPropagation(), c(e);
+                            (0, o.k)(n, 'ActionBar'), e.stopPropagation(), u(e);
                         }
                     },
                     d
@@ -89,6 +88,6 @@ let c = (e) => {
             );
         }
     });
-};
-c.displayName = 'ActionBarHDStreamingConsumableButton';
-let u = c;
+});
+u.displayName = 'ActionBarHDStreamingConsumableButton';
+let d = u;

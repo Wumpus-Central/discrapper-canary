@@ -188,7 +188,7 @@ function ea(e) {
                         let { onClick: i } = e,
                             { isShown: a } = t;
                         return (0, r.jsx)(P.C, {
-                            ref: p,
+                            buttonRef: p,
                             join: !0,
                             enabled: d,
                             className: o()(K.actionButton, { [K.fullRegionDropdownButtonOverride]: g }),

@@ -22,8 +22,9 @@ let l = (e) => {
         },
         onLoad: d.current
             ? void 0
-            : () => {
-                  window.requestAnimationFrame(() => {
+            : (e) => {
+                  var t, n, r;
+                  (null != (r = null == (n = e.currentTarget) || null == (t = n.ownerDocument) ? void 0 : t.defaultView) ? r : window).requestAnimationFrame(() => {
                       null != u.current && ((d.current = !0), u.current.classList.remove(s.imageLoading), u.current.classList.add(s.image));
                   });
               }

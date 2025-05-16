@@ -9,7 +9,7 @@ var r = n(255367),
     o = n(704215),
     s = n(481060),
     a = n(377171),
-    c = n(706140),
+    c = n(243778),
     u = n(645041),
     d = n(823379),
     h = n(267642),
@@ -61,7 +61,7 @@ function v(e) {
             }, [l, null == n ? void 0 : n.lastBoostCount, null == n ? void 0 : n.lastSeenWarningNotification, t]);
         })(e, n, t),
         v = (function (e, t) {
-            let [n, r] = (0, c.cv)(null != t ? [o.z.GUILD_POWERUP_PERKS_COACHMARK] : []),
+            let [n, r] = (0, c.US)(null != t ? [o.z.GUILD_POWERUP_PERKS_COACHMARK] : []),
                 { available: l } = (0, b.Z)(e),
                 s = i.useMemo(() => {
                     if (null == t || n === o.z.GUILD_POWERUP_PERKS_COACHMARK) return;
@@ -118,7 +118,7 @@ function v(e) {
                     })(e, t, l);
                     if (null != i) return i;
                 }, [e, t, n, l]),
-                [a, p] = (0, c.Tt)(null != s ? o.z.GUILD_POWERUP_NOTIFICATION : null, { cooldownDurationMs: m.d });
+                [a, p] = (0, c.bf)(null != s ? o.z.GUILD_POWERUP_NOTIFICATION : null, { cooldownDurationMs: m.d });
             return i.useMemo(() => {
                 if (null != t) {
                     if (n === o.z.GUILD_POWERUP_PERKS_COACHMARK)
@@ -157,7 +157,7 @@ function v(e) {
                             (i = i =
                                 {
                                     markAsDismissed: (e) => {
-                                        p(e, !0), s.markAsDismissed(e);
+                                        p(e), s.markAsDismissed(e);
                                     }
                                 }),
                             Object.getOwnPropertyDescriptors
@@ -189,9 +189,12 @@ function C(e) {
     let t = (0, l.e7)([g.Z], () => g.Z.getStateForGuild(e)),
         n = v(e);
     i.useEffect(() => {
-        var t;
-        (0, p.jd)(e), null == n || null == (t = n.popout) || t.markAsDismissed(O.L.AUTO_DISMISS);
-    }, [e, n]),
+        (0, p.jd)(e);
+    }, [e]),
+        i.useEffect(() => {
+            var e;
+            null == n || null == (e = n.popout) || e.markAsDismissed(O.L.AUTO_DISMISS);
+        }, [n]),
         i.useEffect(() => {
             null != t &&
                 h.Oe.forEach((n) => {

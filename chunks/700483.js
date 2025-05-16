@@ -181,7 +181,7 @@ function eu(e) {
                   let { onClick: n } = e,
                       { isShown: i } = t;
                   return (0, r.jsx)(R.Z, {
-                      ref: Z,
+                      buttonRef: Z,
                       label: el.intl.string(el.t.c6qKws),
                       onClick: N,
                       onPopoutClick: n,
@@ -279,7 +279,7 @@ let eh = i.memo(function (e) {
             let { onClick: n } = e,
                 { isShown: i } = t;
             return (0, r.jsx)(k.C, {
-                ref: Y,
+                buttonRef: Y,
                 centerButton: !0,
                 hasPermission: v,
                 enabled: y,
@@ -326,7 +326,7 @@ let eh = i.memo(function (e) {
                                   let { onClick: n } = e,
                                       { isShown: i } = t;
                                   return (0, r.jsx)(M.Z, {
-                                      ref: q,
+                                      buttonRef: q,
                                       centerButton: !0,
                                       onPopoutClick: n,
                                       selfMute: a,

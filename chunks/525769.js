@@ -186,6 +186,7 @@ var r = (function (e) {
             (e.SOUNDBOARD_POPOUT = 'impression_soundboard_popout'),
             (e.STAGE_DISCOVERY = 'impression_stage_discovery'),
             (e.STREAM_FEEDBACK_MODAL = 'impression_stream_feedback_modal'),
+            (e.TIERED_TENURE_BADGE_LEVEL_UP = 'impression_tiered_tenure_badge_level_up'),
             (e.TIERED_TENURE_BADGE_MODAL = 'impression_tiered_tenure_badge_modal'),
             (e.TRIAL_FOR_ALL_COACHTIP = 'impression_trial_for_all_coachtip'),
             (e.TRIAL_NOTICE = 'impression_trial_notice'),

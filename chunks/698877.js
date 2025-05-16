@@ -59,7 +59,7 @@ function s(e) {
                 return e;
             })(
                 {
-                    ref: m,
+                    buttonRef: m,
                     isTrayButton: !0,
                     label: t,
                     disabled: !s,
