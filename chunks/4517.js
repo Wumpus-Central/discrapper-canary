@@ -1,4 +1,4 @@
-n.d(t, { Z: () => er }), n(388685);
+n.d(t, { Z: () => ei }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -111,8 +111,9 @@ let Z = 1.25,
     W = 150,
     K = 150,
     z = 300,
-    q = 14;
-function Q(e) {
+    q = 14,
+    Q = 150;
+function X(e) {
     let { children: t, className: n } = e;
     return (0, r.jsx)('div', {
         className: o()(M.referenceContainer, n),
@@ -125,9 +126,9 @@ function Q(e) {
         })
     });
 }
-let X = 200,
-    J = 3000;
-function $(e) {
+let J = 200,
+    $ = 3000;
+function ee(e) {
     let { onCloseProfile: t, prompt: a } = e,
         { analyticsLocations: s } = (0, h.ZP)(),
         { trackUserProfileAction: l } = (0, A.KZ)(),
@@ -135,18 +136,19 @@ function $(e) {
         [_, p] = i.useState(!1),
         g = i.useRef(null),
         E = i.useRef(!1),
-        { isEligibleForCustomStatusLabels: b } = (0, m.Z)({ location: 'AddCustomStatusBubble' });
+        b = i.useRef(null),
+        { isEligibleForCustomStatusLabels: y } = (0, m.Z)({ location: 'AddCustomStatusBubble' });
     (0, d.ZP)(() => {
-        if (!b) return;
+        if (!y) return;
         let e = setTimeout(() => {
                 E.current || f(!0);
-            }, X),
-            t = setTimeout(I, J);
+            }, J),
+            t = setTimeout(S, $);
         return () => {
             clearTimeout(e), clearTimeout(t);
         };
     });
-    let y = function () {
+    let O = function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
             null != e
                 ? l({ action: 'PRESS_ADD_CUSTOM_STATUS' })
@@ -169,14 +171,17 @@ function $(e) {
                         );
                 });
         },
-        O = (e) => {
+        I = (e) => {
             f(e), e && p(!1);
         },
-        I = () => {
-            E.current || (p(!0), f(!1));
+        S = () => {
+            E.current || (p(!0), f(!1)),
+                (b.current = setTimeout(() => {
+                    p(!1);
+                }, Q));
         },
-        S = null != a ? a.label() : k.intl.string(k.t.evw0o6),
-        N = (0, r.jsxs)('div', {
+        N = null != a ? a.label() : k.intl.string(k.t.evw0o6),
+        C = (0, r.jsxs)('div', {
             className: M.content,
             children: [
                 (0, r.jsx)(u.oFk, {
@@ -187,39 +192,39 @@ function $(e) {
                 (0, r.jsx)(u.Text, {
                     variant: 'text-sm/normal',
                     className: o()(M.addStatusPrompt, null != a && M.italicPrompt),
-                    children: S
+                    children: N
                 })
             ]
         });
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(Q, { children: N }),
+            (0, r.jsx)(X, { children: C }),
             (0, r.jsx)(u.tEY, {
                 ringClassName: M.ring,
                 children: (0, r.jsxs)('div', {
                     ref: g,
                     className: o()(M.container, M.editable),
                     onMouseEnter: () => {
-                        (E.current = !0), O(!0);
+                        (E.current = !0), I(!0);
                     },
                     onMouseLeave: () => {
-                        (E.current = !1), I();
+                        (E.current = !1), S();
                     },
                     onFocus: () => {
-                        (E.current = !0), O(!0);
+                        (E.current = !0), I(!0);
                     },
                     onBlur: (e) => {
                         var t;
-                        (null == (t = g.current) ? void 0 : t.contains(e.relatedTarget)) || ((E.current = !1), I());
+                        (null == (t = g.current) ? void 0 : t.contains(e.relatedTarget)) || ((E.current = !1), S());
                     },
                     children: [
                         (0, r.jsx)(u.P3F, {
                             className: M.outer,
                             'aria-label': k.intl.string(k.t['zrpF/f']),
-                            onClick: () => y(),
+                            onClick: () => O(),
                             focusProps: { ringClassName: M.ring },
                             children: (0, r.jsxs)('span', {
-                                className: M.inner,
+                                className: o()(M.inner, M.clickable),
                                 children: [
                                     (0, r.jsx)(u.oFk, {
                                         size: 'xs',
@@ -229,12 +234,12 @@ function $(e) {
                                     (0, r.jsx)(u.Text, {
                                         variant: 'text-sm/normal',
                                         className: o()(M.addStatusPrompt, null != a && M.italicPrompt),
-                                        children: S
+                                        children: N
                                     })
                                 ]
                             })
                         }),
-                        b &&
+                        y &&
                             (c || _) &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
@@ -245,7 +250,7 @@ function $(e) {
                                             [M.labelToolbarFadingOut]: _
                                         }),
                                         children: (0, r.jsx)(v.Z, {
-                                            onSelect: y,
+                                            onSelect: O,
                                             className: M.customStatusLabelToolbar
                                         })
                                     })
@@ -257,7 +262,7 @@ function $(e) {
         ]
     });
 }
-let ee = i.forwardRef(function (e, t) {
+let et = i.forwardRef(function (e, t) {
     var n, a;
     let { emoji: d, text: p, animate: h, className: m, renderToolbar: E, onShowToolbar: b, placeholderText: y, label: v, hasEntered: I = !0 } = e,
         S = (0, C.yi)(),
@@ -273,7 +278,7 @@ let ee = i.forwardRef(function (e, t) {
         G = i.useRef(w),
         B = i.useRef(D),
         F = null != d && null == p && null == v,
-        [V, X] = i.useState(!1),
+        [V, Q] = i.useState(!1),
         [J, $] = i.useState(!0),
         [ee, et] = i.useState(!F && I),
         en = I && V,
@@ -291,7 +296,7 @@ let ee = i.forwardRef(function (e, t) {
         }
     }));
     i.useLayoutEffect(() => {
-        if ((X(!0), null == j.current || null == U.current || !en)) return;
+        if ((Q(!0), null == j.current || null == U.current || !en)) return;
         let e = j.current.getBoundingClientRect().height,
             t = U.current.getBoundingClientRect().height;
         et(t > e),
@@ -377,7 +382,7 @@ let ee = i.forwardRef(function (e, t) {
                 })
             })
         }),
-        em = (0, r.jsxs)(Q, {
+        em = (0, r.jsxs)(X, {
             className: null != el ? M.withLabel : void 0,
             children: [el, e_, ep]
         });
@@ -442,12 +447,12 @@ let ee = i.forwardRef(function (e, t) {
               ]
           });
 });
-function et(e) {
+function en(e) {
     var { emoji: t, text: n, label: a, onCloseProfile: o } = e,
         s = F(e, ['emoji', 'text', 'label', 'onCloseProfile']);
     let [l, c] = i.useState(!1);
     return (0, r.jsx)(
-        ee,
+        et,
         B(U({}, s), {
             emoji: t,
             text: n,
@@ -463,7 +468,7 @@ function et(e) {
         })
     );
 }
-function en(e) {
+function er(e) {
     var { emoji: t, text: n, label: a, user: o, guildId: s, channelId: l, themeType: c } = e,
         u = F(e, ['emoji', 'text', 'label', 'user', 'guildId', 'channelId', 'themeType']);
     let { trackUserProfileAction: d } = (0, A.KZ)(),
@@ -506,7 +511,7 @@ function en(e) {
                 sourceType: L.n_.STATUS,
                 user: o,
                 children: (0, r.jsx)(
-                    ee,
+                    et,
                     B(U({}, u), {
                         ref: E,
                         emoji: t,
@@ -529,7 +534,7 @@ function en(e) {
             })
     });
 }
-function er(e) {
+function ei(e) {
     var t,
         n,
         { location: i, user: a, onCloseProfile: o, previewText: s, previewEmoji: c, previewLabel: u, placeholderText: d, prompt: f, disableEdit: _ = !1 } = e,
@@ -547,7 +552,7 @@ function er(e) {
         return (0, r.jsx)(h.Gt, {
             value: b,
             children: (0, r.jsx)(
-                ee,
+                et,
                 U(
                     {
                         emoji: e,
@@ -569,7 +574,7 @@ function er(e) {
             ? (0, r.jsx)(h.Gt, {
                   value: b,
                   children: (0, r.jsx)(
-                      $,
+                      ee,
                       U(
                           {
                               onCloseProfile: o,
@@ -583,7 +588,7 @@ function er(e) {
               ? (0, r.jsx)(h.Gt, {
                     value: b,
                     children: (0, r.jsx)(
-                        en,
+                        er,
                         U(
                             {
                                 user: a,
@@ -599,7 +604,7 @@ function er(e) {
                 ? (0, r.jsx)(h.Gt, {
                       value: b,
                       children: (0, r.jsx)(
-                          et,
+                          en,
                           U(
                               {
                                   emoji: A,
@@ -614,7 +619,7 @@ function er(e) {
                 : (0, r.jsx)(h.Gt, {
                       value: b,
                       children: (0, r.jsx)(
-                          ee,
+                          et,
                           U(
                               {
                                   emoji: A,

@@ -34,8 +34,8 @@ function b(e) {
 }
 function C() {
     var e, t, n;
-    let [{ preset: C, fps: y, sourceType: O, resolution: Z }, w] = (0, h.E_)(),
-        I = (0, m.Z)(),
+    let [{ preset: C, fps: y, sourceType: O, resolution: Z }, I] = (0, h.E_)(),
+        w = (0, m.Z)(),
         N = (0, i.e7)([a.default], () => a.default.getCurrentUser()),
         [E, T] = null != (e = (0, g.Z)(_.tI.PRESET_VIDEO)) ? e : [_.LY.RESOLUTION_720, _.ws.FPS_30],
         [P, R] = null != (t = (0, g.Z)(_.tI.PRESET_DOCUMENTS)) ? t : [_.LY.RESOLUTION_SOURCE, _.ws.FPS_15],
@@ -45,7 +45,7 @@ function C() {
         D = C === _.tI.PRESET_DOCUMENTS,
         B = p.Vf.map((e) => {
             let { value: t } = e,
-                n = (0, c.Z)(C, t, _.ws.FPS_30, N, I);
+                n = (0, c.Z)(C, t, _.ws.FPS_30, N, w);
             return {
                 value: t,
                 name: (0, f.M)(t),
@@ -55,7 +55,7 @@ function C() {
             };
         }),
         U = p.YX.map((e) => {
-            let t = (0, c.Z)(C, _.LY.RESOLUTION_720, e, N, I);
+            let t = (0, c.Z)(C, _.LY.RESOLUTION_720, e, N, w);
             return {
                 value: e,
                 name: ''.concat(e, 'fps'),
@@ -73,7 +73,7 @@ function C() {
                     isSelected: (e) => C === e,
                     serialize: (e) => String(e),
                     select: (e) => {
-                        w({
+                        I({
                             type: 'set_preset',
                             preset: e
                         });
@@ -101,13 +101,13 @@ function C() {
                     onChange: (e) =>
                         !D &&
                         (function (e) {
-                            if (!(0, c.Z)(C, e, y, N, I)) return (0, x.E)({ analyticsLocation: o.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
-                            w({
+                            if (!(0, c.Z)(C, e, y, N, w)) return (0, x.E)({ analyticsLocation: o.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
+                            I({
                                 type: 'set_resolution',
                                 resolution: e
                             }),
                                 e !== k &&
-                                    w({
+                                    I({
                                         type: 'set_preset',
                                         preset: _.tI.PRESET_CUSTOM
                                     });
@@ -125,13 +125,13 @@ function C() {
                     onChange: (e) =>
                         !D &&
                         (function (e) {
-                            if (!(0, c.Z)(C, Z, e, N, I)) return (0, x.E)({ analyticsLocation: o.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
-                            w({
+                            if (!(0, c.Z)(C, Z, e, N, w)) return (0, x.E)({ analyticsLocation: o.Z.GO_LIVE_MODAL_SETTINGS_SELECTION });
+                            I({
                                 type: 'set_fps',
                                 fps: e
                             }),
                                 e !== A &&
-                                    w({
+                                    I({
                                         type: 'set_preset',
                                         preset: _.tI.PRESET_CUSTOM
                                     });

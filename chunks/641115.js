@@ -27,8 +27,8 @@ var r = n(255367),
     y = n(37113),
     O = n(981631),
     Z = n(388032),
-    w = n(347226),
-    I = n(480197),
+    I = n(347226),
+    w = n(480197),
     N = n(20493);
 function E(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -82,15 +82,15 @@ function P(e) {
 }
 function R() {
     return (0, r.jsxs)('div', {
-        className: I.toolTipTextContainer,
+        className: w.toolTipTextContainer,
         children: [
             (0, r.jsx)(d.SrA, {
                 size: 'md',
                 color: p.JX.PREMIUM_TIER_2,
-                className: I.premiumIcon
+                className: w.premiumIcon
             }),
             (0, r.jsx)(d.Text, {
-                className: I.upsellText,
+                className: w.upsellText,
                 variant: 'text-sm/medium',
                 children: Z.intl.string(Z.t.sEAnVF)
             })
@@ -105,17 +105,17 @@ function k(e) {
     return (
         o
             ? ((t = (0, r.jsx)(d.DY3, {
-                  tooltipClassName: I.tooltip,
+                  tooltipClassName: w.tooltip,
                   spacing: 6,
                   'aria-label': Z.intl.string(Z.t.sEAnVF),
                   text: (0, r.jsx)(R, {}),
                   children: (0, r.jsx)('div', {
-                      className: I.textContainer,
+                      className: w.textContainer,
                       onMouseEnter: () => m(!0),
                       onMouseLeave: () => m(!1),
                       children: (0, r.jsx)(d.Text, {
                           variant: 'text-xs/bold',
-                          className: s()(I.selectorNitroText, I.enhancedSelectorNitroText),
+                          className: s()(w.selectorNitroText, w.enhancedSelectorNitroText),
                           children: p
                       })
                   })
@@ -126,20 +126,20 @@ function k(e) {
                       onClose: f
                   })))
             : ((t = (0, r.jsx)('div', {
-                  className: I.textContainer,
+                  className: w.textContainer,
                   children: (0, r.jsx)(d.Text, {
                       variant: 'text-xs/normal',
-                      className: s()(I.selectorText, { [I.enhancedSelectorNitroText]: a }),
+                      className: s()(w.selectorText, { [w.enhancedSelectorNitroText]: a }),
                       children: p
                   })
               })),
               (n = () => u(h))),
         {
             content: t,
-            className: s()(I.selectorButton, {
-                [I.selectorButtonSelected]: i,
-                [I.perksDemo]: a,
-                [I.premiumUpsell]: o
+            className: s()(w.selectorButton, {
+                [w.selectorButtonSelected]: i,
+                [w.perksDemo]: a,
+                [w.premiumUpsell]: o
             }),
             onClick: n
         }
@@ -215,8 +215,8 @@ function A(e) {
                           (0, r.jsx)(h.Z, {
                               children: (0, r.jsx)(d.xJW, {
                                   title: Z.intl.string(Z.t.rHyPXl),
-                                  titleClassName: w.formItemTitleSlim,
-                                  className: I.documentModeGroup,
+                                  titleClassName: I.formItemTitleSlim,
+                                  className: w.documentModeGroup,
                                   children: (0, r.jsx)(d.Text, {
                                       variant: 'text-xs/normal',
                                       children: Z.intl.format(Z.t['U+hmam'], { fps: s })
@@ -246,14 +246,14 @@ function A(e) {
                               children: [
                                   (0, r.jsx)(d.xJW, {
                                       title: Z.intl.string(Z.t.rHyPXl),
-                                      className: I.settingsGroup,
-                                      titleClassName: w.formItemTitleSlim,
+                                      className: w.settingsGroup,
+                                      titleClassName: I.formItemTitleSlim,
                                       children: K
                                   }),
                                   (0, r.jsx)(d.xJW, {
                                       title: Z.intl.string(Z.t.SkkeIi),
-                                      className: I.settingsGroup,
-                                      titleClassName: w.formItemTitleSlim,
+                                      className: w.settingsGroup,
+                                      titleClassName: I.formItemTitleSlim,
                                       children: q
                                   })
                               ]
@@ -280,10 +280,10 @@ function A(e) {
         T(E({}, X), {
             children: (0, r.jsx)(d.xJW, {
                 title: Z.intl.string(Z.t.ax4FnZ),
-                titleClassName: w.formItemTitle,
-                className: w.modalContent,
+                titleClassName: I.formItemTitle,
+                className: I.modalContent,
                 children: (0, r.jsxs)('div', {
-                    className: I.qualitySettingsContainer,
+                    className: w.qualitySettingsContainer,
                     children: [
                         (0, r.jsx)(d.q4e, {
                             value: n,

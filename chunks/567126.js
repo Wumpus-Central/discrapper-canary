@@ -30,8 +30,8 @@ var r = n(255367),
     y = n(358085),
     O = n(463727),
     Z = n(855403),
-    w = n(299570),
-    I = n(960861),
+    I = n(299570),
+    w = n(960861),
     N = n(59468),
     E = n(989941),
     T = n(39540),
@@ -80,8 +80,8 @@ function z(e) {
         o = b.Z.supports(D.AN.GO_LIVE_HARDWARE),
         [a, m] = l.useState(null),
         [C, y] = l.useState(null),
-        [w, I] = l.useState(null),
-        E = null != w && w.length > 0,
+        [I, w] = l.useState(null),
+        E = null != I && I.length > 0,
         [T, R] = l.useState(c.vA.WINDOW),
         [A, G] = l.useState(!1),
         z = l.useRef(null),
@@ -118,7 +118,7 @@ function z(e) {
                 height: 99
             }).then((e) => {
                 let { screenSources: t, windowSources: n, cameraSources: r } = e;
-                m(t), y(n), I(r);
+                m(t), y(n), w(r);
             }),
             e.start(1000, async () => {
                 let {
@@ -129,7 +129,7 @@ function z(e) {
                     width: 176,
                     height: 99
                 });
-                m(e), y(t), I(n);
+                m(e), y(t), w(n);
             }),
             () => {
                 e.stop();
@@ -150,7 +150,7 @@ function z(e) {
             case c.vA.SCREEN:
                 return a;
             case c.vA.CAMERA:
-                return w;
+                return I;
         }
     })(T);
     if (null == q)
@@ -454,9 +454,9 @@ function Y(e) {
         { lastPickerAction: s, lastPickerError: o } = (0, T.Z)(t, n);
     return (
         l.useEffect(() => {
-            (0, y.isLinux)() || ((0, y.isMac)() && a().satisfies(null === m.Z || void 0 === m.Z ? void 0 : m.Z.os.release, A.jR)) ? (0, w.T)(i) : (0, w.t)();
+            (0, y.isLinux)() || ((0, y.isMac)() && a().satisfies(null === m.Z || void 0 === m.Z ? void 0 : m.Z.os.release, A.jR)) ? (0, I.T)(i) : (0, I.t)();
         }, [i]),
-        s === I.Uc.Error
+        s === w.Uc.Error
             ? (0, r.jsx)(f.Text, {
                   className: U.errorMessage,
                   variant: 'text-md/normal',

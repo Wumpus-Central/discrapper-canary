@@ -895,8 +895,7 @@ let eS =
                   }
                   case ef.kVF.QUARANTINED:
                       return (0, r.jsxs)(c.qXd, {
-                          color: c.DM8.CUSTOM,
-                          className: ex.quarantineNotice,
+                          color: c.DM8.DANGER,
                           children: [
                               eb.intl.string(eb.t.DVFJYW),
                               (0, r.jsx)(c.u3T, {

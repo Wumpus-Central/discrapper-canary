@@ -3,7 +3,7 @@ n.d(t, {
     Vf: () => C,
     YX: () => y,
     ZP: () => Z,
-    l9: () => w
+    l9: () => I
 }),
     n(388685),
     n(415506);
@@ -75,7 +75,7 @@ function O(e) {
 function Z(e) {
     var t, n, l;
     let { onClose: S, onSelect: Z } = e,
-        [{ notifyFriends: w, hidePreview: I, muteStreamAudio: N, preset: E, resolution: T, fps: P, sourceType: R, audioSourceId: k }, A] = (0, p.E_)(),
+        [{ notifyFriends: I, hidePreview: w, muteStreamAudio: N, preset: E, resolution: T, fps: P, sourceType: R, audioSourceId: k }, A] = (0, p.E_)(),
         M = (0, c.Z)(),
         L = (0, h.Z)(),
         [D, B] = null != (n = (0, g.Z)(_.tI.PRESET_VIDEO)) ? n : [_.LY.RESOLUTION_720, _.ws.FPS_30],
@@ -230,22 +230,22 @@ function Z(e) {
                 children: [
                     (0, r.jsx)(o.S89, {
                         id: 'stream-option-share-preview',
-                        checked: I,
+                        checked: w,
                         label: j.intl.string(v.default.H3Qjqa),
                         action: () =>
                             A({
                                 type: 'set_hide_preview',
-                                hidePreview: !I
+                                hidePreview: !w
                             })
                     }),
                     (0, r.jsx)(o.S89, {
                         id: 'stream-option-notify',
-                        checked: w,
+                        checked: I,
                         label: j.intl.string(v.default.SiHtX1),
                         action: () =>
                             A({
                                 type: 'set_notify_friends',
-                                value: !w
+                                value: !I
                             })
                     })
                 ]
@@ -253,45 +253,72 @@ function Z(e) {
         ]
     });
 }
-function w(e) {
-    let { onClose: t, onSelect: n } = e,
-        [{ notifyFriends: l, hidePreview: i, muteStreamAudio: s }, a] = (0, p.E_)();
+function I(e) {
+    var t;
+    let { onClose: n, onSelect: l } = e,
+        [{ notifyFriends: a, hidePreview: d, muteStreamAudio: u, sourceType: f, audioSourceId: m }, h] = (0, p.E_)(),
+        x = (0, c.Z)();
     return (0, r.jsxs)(o.v2r, {
         'aria-label': j.intl.string(j.t['+1H47u']),
         navId: 'stream-options',
-        onClose: t,
-        onSelect: n,
+        onClose: n,
+        onSelect: l,
         children: [
             (0, r.jsx)(o.S89, {
                 id: 'stream-option-mute',
-                checked: s,
+                checked: u,
                 label: j.intl.string(v.default['b0+Ira']),
                 action: () =>
-                    a({
+                    h({
                         type: 'set_mute_audio',
-                        value: !s
+                        value: !u
                     })
             }),
             (0, r.jsx)(o.S89, {
                 id: 'stream-option-share-preview',
-                checked: i,
+                checked: d,
                 label: j.intl.string(v.default.H3Qjqa),
                 action: () =>
-                    a({
+                    h({
                         type: 'set_hide_preview',
-                        hidePreview: !i
+                        hidePreview: !d
                     })
             }),
             (0, r.jsx)(o.S89, {
                 id: 'stream-option-notify',
-                checked: l,
+                checked: a,
                 label: j.intl.string(v.default.SiHtX1),
                 action: () =>
-                    a({
+                    h({
                         type: 'set_notify_friends',
-                        value: !l
+                        value: !a
                     })
-            })
+            }),
+            f === s.vA.CAMERA &&
+                (0, r.jsx)(o.sNh, {
+                    id: 'device-audio-input',
+                    label: j.intl.string(v.default.YSdHV1),
+                    subtext: null == (t = x[null != m ? m : '']) ? void 0 : t.name,
+                    subtextLineClamp: 1,
+                    children: i().map(x, (e) => {
+                        let { id: t, name: n } = e;
+                        return (0, r.jsx)(
+                            o.k5B,
+                            {
+                                group: 'device-audio-input-group',
+                                id: 'device-audio-input-'.concat(t),
+                                checked: m === t,
+                                label: n,
+                                action: () =>
+                                    h({
+                                        type: 'set_audio_source',
+                                        audioSourceId: t
+                                    })
+                            },
+                            t
+                        );
+                    })
+                })
         ]
     });
 }

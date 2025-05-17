@@ -23,8 +23,8 @@ var r = n(255367),
     y = n(835473),
     O = n(600164),
     Z = n(313201),
-    w = n(540059),
-    I = n(243778),
+    I = n(540059),
+    w = n(243778),
     N = n(594190),
     E = n(751571),
     T = n(970731),
@@ -129,12 +129,12 @@ function ef(e) {
         ey = (0, m.e7)([S.ZP], () => S.ZP.getCurrentEmbeddedActivity()),
         eO = (null == ey ? void 0 : ey.location.kind) === f.E.CONTEXTLESS,
         eZ = (0, y.q)(null == ey ? void 0 : ey.applicationId),
-        [ew, eI] = l.useState(null);
+        [eI, ew] = l.useState(null);
     l.useEffect(() => {
         (0, j.R)() &&
             (async () => {
                 var e;
-                eI(await (null === v.Z || void 0 === v.Z || null == (e = v.Z.window) ? void 0 : e.getMediaSourceId('DISCORD_ACTIVITY_POPOUT')));
+                ew(await (null === v.Z || void 0 === v.Z || null == (e = v.Z.window) ? void 0 : e.getMediaSourceId('DISCORD_ACTIVITY_POPOUT')));
             })();
     }, [eO]);
     let eN = (0, m.e7)([D.default], () => {
@@ -153,7 +153,7 @@ function ef(e) {
     let eM = eA && (0, W.isMac)() && u().satisfies(null === v.Z || void 0 === v.Z ? void 0 : v.Z.os.release, et.jR),
         eL = [];
     ep === p.Dvm.ENTERED && eA && (0, W.isMac)() && eL.push(h.z.GO_LIVE_SYSTEM_PICKER_COACHMARK);
-    let [eD, eB] = (0, I.US)(eL, void 0, !0);
+    let [eD, eB] = (0, w.US)(eL, void 0, !0);
     ex !== en.tI.PRESET_CUSTOM && ((eg = eP), (e_ = eR)), (0, H.Z)(ex, eg, e_, eN, eT) || ((eg = eP), (e_ = eR));
     let eU = (0, Z.Dt)(),
         [eG, eW] = l.useState(((G = ee && !eM), F ? 0 : G ? 2 : 3)),
@@ -173,14 +173,14 @@ function ef(e) {
         [e$, e1] = l.useState(eg),
         [e0, e2] = l.useState(e_),
         [e5, e3] = l.useState(ev),
-        [e4, e8] = l.useState(null != (o = P.I0.getSetting()) && o),
+        [e8, e4] = l.useState(null != (o = P.I0.getSetting()) && o),
         [e7, e6] = l.useState(null != ef ? ef : null),
         e9 = null != (d = null == eb ? void 0 : eb.id) ? d : eH,
         [te, tt] = l.useState(eM ? '' : void 0),
-        tn = (0, w.Q3)('GoLiveModal');
+        tn = (0, I.Q3)('GoLiveModal');
     async function tr() {
         var e, t;
-        a()(null != eC || null != eY || (null != ey && null != ew), 'got nothing to stream');
+        a()(null != eC || null != eY || (null != ey && null != eI), 'got nothing to stream');
         let n = null != (e = null == eb ? void 0 : eb.id) ? e : eH;
         a()(null != n, 'Received null target channel ID');
         let r = k.Z.getChannel(n),
@@ -201,7 +201,7 @@ function ef(e) {
         else {
             let e = (0, $.Z)(eC, eY, N.ZP.getRunningGames()),
                 t = !(0, W.isWindows)() || null == e || (null == eY ? void 0 : eY.id.startsWith('camera:'));
-            (c.pid = t || null == e ? void 0 : e.pid), null == c.pid && (null != eY ? ((c.sourceId = eY.id), (c.sourceName = eY.name)) : null != ew && ((c.sourceId = ew), (c.sourceName = null == eZ ? void 0 : eZ.name)));
+            (c.pid = t || null == e ? void 0 : e.pid), null == c.pid && (null != eY ? ((c.sourceId = eY.id), (c.sourceName = eY.name)) : null != eI && ((c.sourceId = eI), (c.sourceName = null == eZ ? void 0 : eZ.name)));
         }
         (0, g.WH)(
             l,
@@ -209,7 +209,7 @@ function ef(e) {
             ed(ec({}, c), {
                 audioSourceId: eX,
                 sound: e5,
-                previewDisabled: e4,
+                previewDisabled: e8,
                 nativePickerStyleUsed: te,
                 goLiveModalDurationMs: Date.now() - eS.current
             })
@@ -351,7 +351,7 @@ function ef(e) {
                     return null;
             }
         })(eG, F, ee, ez),
-        tp = 1 !== eG && (3 !== eG || (null == eY && null == eC && null == ew) || null == e9),
+        tp = 1 !== eG && (3 !== eG || (null == eY && null == eC && null == eI) || null == e9),
         tx = l.useCallback(() => {
             null != th && eW(th);
         }, [th]),
@@ -390,7 +390,7 @@ function ef(e) {
                             selectedSource: eY,
                             selectedFPS: e0,
                             sound: e5,
-                            previewDisabled: e4,
+                            previewDisabled: e8,
                             sourceChanged: ez,
                             selectSource: ee,
                             onChangeSelectedFPS: (e) => ti(eq, e$, e),
@@ -402,7 +402,7 @@ function ef(e) {
                             onChangeAudioDevice: (e) => eK(e),
                             onChangeGuild: () => eW(0),
                             onChangeSound: (e) => e3(e),
-                            onChangePreviewDisabled: (e) => e8(e),
+                            onChangePreviewDisabled: (e) => e4(e),
                             onClose: eh,
                             selectedGuildId: e7,
                             targetGuildPremiumTier: eT,

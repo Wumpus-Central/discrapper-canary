@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => p });
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -9,11 +9,13 @@ var i = n(120356),
     c = n(875425),
     u = n(388032),
     d = n(701526);
-function f(e) {
+let f = 100;
+function _(e) {
     let { label: t, onClick: n } = e,
         i = (0, s.Z)(t);
     return (0, r.jsx)(o.DY3, {
         text: i,
+        delay: f,
         children: (0, r.jsx)(o.P3F, {
             onClick: n,
             className: d.toolbarItem,
@@ -26,13 +28,13 @@ function f(e) {
         })
     });
 }
-function _(e) {
+function p(e) {
     let { onSelect: t, className: n } = e;
     return (0, r.jsx)('div', {
         className: a()(d.toolbar, n),
         children: c.Ub.map((e) =>
             (0, r.jsx)(
-                f,
+                _,
                 {
                     label: e.value,
                     onClick: () => t(e.value)

@@ -84,7 +84,7 @@ function P(e) {
         })
     );
 }
-let w = [
+let k = [
         {
             id: 'details',
             name: 'Details',
@@ -223,11 +223,11 @@ let w = [
             }
         }
     ],
-    k = {
+    w = {
         events: {
             label: 'Events',
             filter: (e) =>
-                Object.entries(k)
+                Object.entries(w)
                     .filter((e) => {
                         let [t] = e;
                         return 'events' !== t;
@@ -263,19 +263,19 @@ function R() {
     let e = r.useRef(null),
         [t, n] = r.useState(''),
         l = (0, c.e7)([v.Z], () => v.Z.loggedEventsVersion),
-        [s, o] = r.useState(() => Object.keys(k)),
+        [s, o] = r.useState(() => Object.keys(w)),
         [u, m] = r.useState(v.Z.loggedEvents),
         x = r.useCallback((e) => {
             m(e);
         }, []);
     (0, h.BO)(t, v.Z.loggedEvents, x, I, [l]);
     let p = u.filter((e) => {
-            for (let t of s) if (k[t].filter(e)) return !0;
+            for (let t of s) if (w[t].filter(e)) return !0;
             return !1;
         }),
         [b, f] = r.useState(void 0),
         g = p.find((e) => e.key === b),
-        { TabBar: T, renderSelectedTab: P } = (0, C.ZP)({ tabs: w }, []);
+        { TabBar: T, renderSelectedTab: P } = (0, C.ZP)({ tabs: k }, []);
     return (0, a.jsxs)('div', {
         ref: e,
         className: i()(E.panel, N.panel),
@@ -300,7 +300,7 @@ function R() {
                     (0, a.jsx)('div', { className: N.toolbarDivider }),
                     (0, a.jsx)('div', {
                         className: N.filters,
-                        children: Object.entries(k).map((e) => {
+                        children: Object.entries(w).map((e) => {
                             let [t, n] = e;
                             return (0, a.jsx)(
                                 d.P3F,

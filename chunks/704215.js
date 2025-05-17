@@ -402,6 +402,7 @@ var r = (function (e) {
             (e[(e.Q2_2025_MARKETING_MOMENT_FOLLOW_UP_MODAL = 541)] = 'Q2_2025_MARKETING_MOMENT_FOLLOW_UP_MODAL'),
             (e[(e.REPORT_TO_MOD_NEW_TAG = 542)] = 'REPORT_TO_MOD_NEW_TAG'),
             (e[(e.NITRO_TENURE_BADGE_LEVEL_UP = 544)] = 'NITRO_TENURE_BADGE_LEVEL_UP'),
+            (e[(e.ROBLOX_CONNECTION_COACHMARK = 545)] = 'ROBLOX_CONNECTION_COACHMARK'),
             e
         );
     })({}),

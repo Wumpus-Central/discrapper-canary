@@ -14,7 +14,12 @@ function f(e) {
         [m, h] = l.useState(null);
     return (
         l.useEffect(() => {
-            null != n &&
+            var e;
+            if (null != n) {
+                if (null == (e = n.id) ? void 0 : e.startsWith(i.vA.CAMERA)) {
+                    'url' in n && h(n.url);
+                    return;
+                }
                 (0, c.t)({
                     width: 800,
                     height: 451,
@@ -25,6 +30,7 @@ function f(e) {
                         i = null != (t = l.find((e) => ('windowHandle' in n ? (0, a.Z)(e.id, n.windowHandle) : e.id === n.id))) ? t : r.find((e) => n.id === e.id);
                     null != i && h(i.url);
                 });
+            }
         }, [n]),
         (0, r.jsxs)('div', {
             className: u.root,

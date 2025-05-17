@@ -115,7 +115,8 @@ function v(e, t) {
         case 'set_selected_source':
             return p(h({}, e), { selectedSource: t.source });
         case 'set_audio_source':
-            return p(h({}, e), { audioSourceId: t.audioSourceId });
+            var r;
+            return p(h({}, e), { audioSourceId: null != (r = t.audioSourceId) ? r : d.Z.getInputDeviceId() });
         case 'set_selected_channel':
             return p(h({}, e), { selectedChannel: t.channelId });
         default:
@@ -140,7 +141,7 @@ function S(e, t, n) {
         y = null != (r = a.I0.useSetting()) && r,
         O = null != (i = a.eo.useSetting()) && i;
     (0, u.Z)(f.tI.PRESET_CUSTOM, j, S, t, n) || ((j = f.LY.RESOLUTION_720), (S = f.ws.FPS_30));
-    let [Z, w] = l.useReducer(
+    let [Z, I] = l.useReducer(
         v,
         p(h({}, x), {
             muteStreamAudio: !b,
@@ -157,7 +158,7 @@ function S(e, t, n) {
     return (
         l.useEffect(() => {
             o.Z.hasPermission(m.Eu.SCREEN_RECORDING, { showAuthorizationError: !1 }).then((e) =>
-                w({
+                I({
                     type: 'set_has_permission',
                     value: e
                 })
@@ -165,7 +166,7 @@ function S(e, t, n) {
         }, []),
         {
             state: Z,
-            dispatch: w
+            dispatch: I
         }
     );
 }

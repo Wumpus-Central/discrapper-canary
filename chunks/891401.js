@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(49124);
+n.d(t, { Z: () => _ }), n(49124);
 var a = n(255367),
     r = n(73800),
     l = n(120356),
@@ -11,10 +11,11 @@ var a = n(255367),
     m = n(151480),
     x = n(461762),
     h = n(680783),
-    p = n(944486),
-    b = n(388032),
-    f = n(145634);
-function v(e) {
+    p = n(553049),
+    b = n(944486),
+    f = n(388032),
+    v = n(145634);
+function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             a = Object.keys(n);
@@ -39,7 +40,7 @@ function v(e) {
     }
     return e;
 }
-function j(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -57,46 +58,46 @@ function j(e, t) {
         e
     );
 }
-function g() {
-    return (0, a.jsx)('div', {
-        className: f.container,
-        children: (0, a.jsx)(_, {})
+function _() {
+    return (0, a.jsxs)('div', {
+        className: v.container,
+        children: [(0, a.jsx)(y, {}), (0, a.jsx)(p.Z, {})]
     });
 }
-function _() {
+function y() {
     var e, t;
-    let n = (0, c.e7)([p.Z], () => p.Z.getChannelId()),
+    let n = (0, c.e7)([b.Z], () => b.Z.getChannelId()),
         l = (0, h.Z)(n),
         s = null == l ? void 0 : l.wallpaperId,
-        g = (0, x.Z)(s),
+        p = (0, x.Z)(s),
         _ = r.useCallback(
             (e) => {
                 null != s && (0, m.i)(s, { opacity: e });
             },
             [s]
         ),
-        N = r.useCallback(
-            (e) => {
-                y(null == l ? void 0 : l.wallpaperId, e.target.value);
-            },
-            [null == l ? void 0 : l.wallpaperId]
-        ),
-        E = r.useCallback(
-            (e) => {
-                O(null == l ? void 0 : l.wallpaperId, e.target.value);
-            },
-            [null == l ? void 0 : l.wallpaperId]
-        ),
-        S = r.useCallback(
+        y = r.useCallback(
             (e) => {
                 C(null == l ? void 0 : l.wallpaperId, e.target.value);
             },
             [null == l ? void 0 : l.wallpaperId]
         ),
-        T = r.useCallback(() => y(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        P = r.useCallback(() => O(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        w = r.useCallback(() => C(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
-        k = r.useCallback(
+        E = r.useCallback(
+            (e) => {
+                N(null == l ? void 0 : l.wallpaperId, e.target.value);
+            },
+            [null == l ? void 0 : l.wallpaperId]
+        ),
+        S = r.useCallback(
+            (e) => {
+                O(null == l ? void 0 : l.wallpaperId, e.target.value);
+            },
+            [null == l ? void 0 : l.wallpaperId]
+        ),
+        T = r.useCallback(() => C(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        P = r.useCallback(() => N(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        k = r.useCallback(() => O(null == l ? void 0 : l.wallpaperId, void 0), [null == l ? void 0 : l.wallpaperId]),
+        w = r.useCallback(
             (e) => {
                 null != s && (0, m.i)(s, { token_mix_amount: Math.round(e) });
             },
@@ -105,30 +106,30 @@ function _() {
         I = r.useCallback(() => {
             null != s && (0, m.i)(s, null);
         }, [s]),
-        R = null != (e = null == g ? void 0 : g.opacity) ? e : 1,
-        Z = null != (t = null == g ? void 0 : g.token_mix_amount) ? t : 100;
+        R = null != (e = null == p ? void 0 : p.opacity) ? e : 1,
+        Z = null != (t = null == p ? void 0 : p.token_mix_amount) ? t : 100;
     return (0, a.jsxs)('div', {
         children: [
             (0, a.jsx)(o.X6, {
-                className: f.header,
+                className: v.header,
                 variant: 'heading-lg/semibold',
                 children: 'DM Wallpapers'
             }),
-            null == g &&
+            null == p &&
                 (0, a.jsx)('p', {
-                    className: f.explanation,
+                    className: v.explanation,
                     children: 'Open a DM with a wallpaper to customize.'
                 }),
-            null != g &&
+            null != p &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
                         (0, a.jsx)(o.X6, {
-                            className: f.subheader,
+                            className: v.subheader,
                             variant: 'heading-md/semibold',
                             children: 'ChatWallpaperMetadataRecord'
                         }),
                         (0, a.jsx)('pre', {
-                            className: f.code,
+                            className: v.code,
                             children: JSON.stringify(u.Z.getWallpaperById(s), null, 2)
                         }),
                         (0, a.jsx)(d.ua7, {
@@ -136,10 +137,10 @@ function _() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     o.X6,
-                                    j(
-                                        v(
+                                    g(
+                                        j(
                                             {
-                                                className: i()(f.subheader, f.hasTooltip),
+                                                className: i()(v.subheader, v.hasTooltip),
                                                 variant: 'heading-md/semibold'
                                             },
                                             e
@@ -151,7 +152,7 @@ function _() {
                         (0, a.jsx)(
                             d.iRW,
                             {
-                                className: f.slider,
+                                className: v.slider,
                                 initialValue: R,
                                 defaultValue: 1,
                                 minValue: 0,
@@ -165,10 +166,10 @@ function _() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     o.X6,
-                                    j(
-                                        v(
+                                    g(
+                                        j(
                                             {
-                                                className: i()(f.subheader, f.hasTooltip),
+                                                className: i()(v.subheader, v.hasTooltip),
                                                 variant: 'heading-md/semibold'
                                             },
                                             e
@@ -178,26 +179,26 @@ function _() {
                                 )
                         }),
                         (0, a.jsxs)('div', {
-                            className: f.colorInputContainer,
+                            className: v.colorInputContainer,
                             children: [
                                 (0, a.jsx)(
                                     'input',
                                     {
                                         type: 'color',
-                                        value: g.primary_color,
-                                        onChange: N
+                                        value: p.primary_color,
+                                        onChange: y
                                     },
-                                    'primaryColor-'.concat(g.primary_color)
+                                    'primaryColor-'.concat(p.primary_color)
                                 ),
                                 (0, a.jsx)(d.M0o, {
                                     color: 'currentColor',
-                                    tooltip: b.intl.string(b.t.N86XcH),
+                                    tooltip: f.intl.string(f.t.N86XcH),
                                     icon: (0, a.jsx)(d.P$X, {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
                                     onClick: T,
-                                    className: f.removeButton
+                                    className: v.removeButton
                                 })
                             ]
                         }),
@@ -206,10 +207,10 @@ function _() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     o.X6,
-                                    j(
-                                        v(
+                                    g(
+                                        j(
                                             {
-                                                className: i()(f.subheader, f.hasTooltip),
+                                                className: i()(v.subheader, v.hasTooltip),
                                                 variant: 'heading-md/semibold'
                                             },
                                             e
@@ -219,26 +220,26 @@ function _() {
                                 )
                         }),
                         (0, a.jsxs)('div', {
-                            className: f.colorInputContainer,
+                            className: v.colorInputContainer,
                             children: [
                                 (0, a.jsx)(
                                     'input',
                                     {
                                         type: 'color',
-                                        value: g.secondary_color,
+                                        value: p.secondary_color,
                                         onChange: E
                                     },
-                                    'secondaryColor-'.concat(g.secondary_color)
+                                    'secondaryColor-'.concat(p.secondary_color)
                                 ),
                                 (0, a.jsx)(d.M0o, {
                                     color: 'currentColor',
-                                    tooltip: b.intl.string(b.t.N86XcH),
+                                    tooltip: f.intl.string(f.t.N86XcH),
                                     icon: (0, a.jsx)(d.P$X, {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
                                     onClick: P,
-                                    className: f.removeButton
+                                    className: v.removeButton
                                 })
                             ]
                         }),
@@ -247,10 +248,10 @@ function _() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     o.X6,
-                                    j(
-                                        v(
+                                    g(
+                                        j(
                                             {
-                                                className: i()(f.subheader, f.hasTooltip),
+                                                className: i()(v.subheader, v.hasTooltip),
                                                 variant: 'heading-md/semibold'
                                             },
                                             e
@@ -262,12 +263,12 @@ function _() {
                         (0, a.jsx)(
                             d.iRW,
                             {
-                                className: f.slider,
+                                className: v.slider,
                                 initialValue: Z,
                                 defaultValue: 100,
                                 minValue: 0,
                                 maxValue: 100,
-                                onValueChange: k
+                                onValueChange: w
                             },
                             'tokenMixAmount-'.concat(Z)
                         ),
@@ -276,10 +277,10 @@ function _() {
                             children: (e) =>
                                 (0, a.jsx)(
                                     o.X6,
-                                    j(
-                                        v(
+                                    g(
+                                        j(
                                             {
-                                                className: i()(f.subheader, f.hasTooltip),
+                                                className: i()(v.subheader, v.hasTooltip),
                                                 variant: 'heading-md/semibold'
                                             },
                                             e
@@ -289,31 +290,31 @@ function _() {
                                 )
                         }),
                         (0, a.jsxs)('div', {
-                            className: f.colorInputContainer,
+                            className: v.colorInputContainer,
                             children: [
                                 (0, a.jsx)(
                                     'input',
                                     {
                                         type: 'color',
-                                        value: g.link_color,
+                                        value: p.link_color,
                                         onChange: S
                                     },
-                                    'linkColor-'.concat(g.link_color)
+                                    'linkColor-'.concat(p.link_color)
                                 ),
                                 (0, a.jsx)(d.M0o, {
                                     color: 'currentColor',
-                                    tooltip: b.intl.string(b.t.N86XcH),
+                                    tooltip: f.intl.string(f.t.N86XcH),
                                     icon: (0, a.jsx)(d.P$X, {
                                         size: 'xs',
                                         color: 'currentColor'
                                     }),
-                                    onClick: w,
-                                    className: f.removeButton
+                                    onClick: k,
+                                    className: v.removeButton
                                 })
                             ]
                         }),
                         (0, a.jsx)(d.zxk, {
-                            className: f.resetButton,
+                            className: v.resetButton,
                             onClick: I,
                             children: 'Reset'
                         })
@@ -322,12 +323,12 @@ function _() {
         ]
     });
 }
-let y = (0, s.debounce)(function (e, t) {
+let C = (0, s.debounce)(function (e, t) {
         null != e && (0, m.i)(e, { primary_color: t });
     }, 200),
-    C = (0, s.debounce)(function (e, t) {
+    O = (0, s.debounce)(function (e, t) {
         null != e && (0, m.i)(e, { link_color: t });
     }, 200),
-    O = (0, s.debounce)(function (e, t) {
+    N = (0, s.debounce)(function (e, t) {
         null != e && (0, m.i)(e, { secondary_color: t });
     }, 200);

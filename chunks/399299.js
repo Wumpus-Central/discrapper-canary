@@ -23,8 +23,8 @@ var r = n(255367),
     y = n(449224),
     O = n(626135),
     Z = n(823379),
-    w = n(63063),
-    I = n(358085),
+    I = n(63063),
+    w = n(358085),
     N = n(653255),
     E = n(989941),
     T = n(618407),
@@ -42,7 +42,7 @@ var r = n(255367),
     z = n(347226);
 function F(e) {
     let { selectedSource: t, selectSource: n, sourceChanged: l, onChangeSource: i } = e,
-        s = (0, o.e7)([m.ZP, y.Z], () => ((0, I.isWindows)() ? (0, E.Z)(m.ZP, y.Z) : null)),
+        s = (0, o.e7)([m.ZP, y.Z], () => ((0, w.isWindows)() ? (0, E.Z)(m.ZP, y.Z) : null)),
         c = (0, o.e7)([d.Z], () => ((null == s ? void 0 : s.id) != null ? d.Z.getApplication(s.id) : null)),
         u = (0, o.e7)([m.ZP], () => m.ZP.getRunningGames()),
         f = (0, o.Wu)([d.Z], () => u.map((e) => (null != e.id ? d.Z.getApplication(e.id) : null)).filter(Z.lm), [u]),
@@ -206,7 +206,7 @@ function X(e) {
     });
 }
 function K(e) {
-    let { selectedSource: t, selectedFPS: n, selectedChannelId: i, selectedPreset: s, selectedResolution: a, sourceChanged: d, selectedGuildId: f, targetGuildPremiumTier: m, selectSource: h, selectGuild: p, sound: x, previewDisabled: v, onClose: j, onChangeSelectedFPS: y, onChangeSelectedResolution: O, onChangeSelectedPreset: Z, onChangeSelectedChannelId: I, onChangeSource: E, onChangeAudioDevice: A, onChangeGuild: L, onChangeSound: D, onChangePreviewDisabled: z } = e,
+    let { selectedSource: t, selectedFPS: n, selectedChannelId: i, selectedPreset: s, selectedResolution: a, sourceChanged: d, selectedGuildId: f, targetGuildPremiumTier: m, selectSource: h, selectGuild: p, sound: x, previewDisabled: v, onClose: j, onChangeSelectedFPS: y, onChangeSelectedResolution: O, onChangeSelectedPreset: Z, onChangeSelectedChannelId: w, onChangeSource: E, onChangeAudioDevice: A, onChangeGuild: L, onChangeSound: D, onChangePreviewDisabled: z } = e,
         K = (0, o.e7)([b.Z, _.Z], () => _.Z.getChannel(b.Z.getVoiceChannelId())),
         q = (0, o.e7)([N.Z], () => N.Z.GPUDriversOutdated),
         Q = (0, o.e7)([N.Z], () => N.Z.problematicGPUDriver),
@@ -254,11 +254,11 @@ function K(e) {
                 : (0, r.jsx)(R.Z, {
                       guildId: f,
                       selectedChannelId: i,
-                      onChangeSelectedChannelId: I
+                      onChangeSelectedChannelId: w
                   }),
             null != f && en && er ? (0, r.jsx)(Y, { guildId: f }) : null,
             q ? (0, r.jsx)(V, { text: G.intl.string(G.t.q65tS0) }) : null,
-            Q ? (0, r.jsx)(V, { text: G.intl.format(G.t.RrLvub, { helpCenterLink: w.Z.getArticleURL(B.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
+            Q ? (0, r.jsx)(V, { text: G.intl.format(G.t.RrLvub, { helpCenterLink: I.Z.getArticleURL(B.BhN.NVIDIA_DRIVER_ISSUES) }) }) : null,
             el &&
                 (0, r.jsx)(g.Z, {
                     look: g.z.WARNING,

@@ -78,11 +78,11 @@ function y(e) {
         [N, E] = r.useState(!1),
         [S, T] = r.useState(null),
         P = (e) => ((null == e && (e = p.status), e in j) ? j[e] : 'Unknown status '.concat(e)),
-        w = (e) => {
+        k = (e) => {
             let t = new Date(e);
             return u.default.fromTimestamp(t.getTime());
         },
-        k = async (e) => {
+        w = async (e) => {
             let { status: t = p.status, premiumStreakStart: n, endedAt: a } = e,
                 r = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
@@ -108,7 +108,7 @@ function y(e) {
                             });
                     }
                     return e;
-                })({ subscription_status: t }, null != n ? { premium_streak_started_at: w(n) } : null, null != a ? { ended_at: w(a) } : null);
+                })({ subscription_status: t }, null != n ? { premium_streak_started_at: k(n) } : null, null != a ? { ended_at: k(a) } : null);
             await s.tn.patch({
                 url: '/debug/subscriptions/'.concat(p.id),
                 body: r,
@@ -256,7 +256,7 @@ function y(e) {
                                         serialize: (e) => P(e),
                                         isSelected: (e) => e === p.status,
                                         options: _,
-                                        select: (e) => k({ status: e }),
+                                        select: (e) => w({ status: e }),
                                         popoutLayerContext: m.O$
                                     })
                                 }),
@@ -286,7 +286,7 @@ function y(e) {
                                         (0, a.jsx)('input', {
                                             type: 'date',
                                             value: null == (l = p.premiumSince) ? void 0 : l.toISOString().substring(0, 10),
-                                            onChange: (e) => k({ premiumStreakStart: e.target.value }),
+                                            onChange: (e) => w({ premiumStreakStart: e.target.value }),
                                             style: { marginBottom: '8px' }
                                         }),
                                         (0, a.jsx)(x.Z, {})
@@ -299,7 +299,7 @@ function y(e) {
                                     children: (0, a.jsx)('input', {
                                         type: 'date',
                                         value: A,
-                                        onChange: (e) => k({ endedAt: e.target.value })
+                                        onChange: (e) => w({ endedAt: e.target.value })
                                     })
                                 })
                             ]

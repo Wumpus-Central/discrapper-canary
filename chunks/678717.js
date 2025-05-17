@@ -27,8 +27,8 @@ var _ = n(392750),
     S = n(645973),
     T = n(903502),
     P = n(604776),
-    w = n(912072),
-    k = n(272193),
+    k = n(912072),
+    w = n(272193),
     I = n(685560),
     R = n(735959),
     Z = n(572444),
@@ -164,7 +164,7 @@ function er(e) {
                     id: 'overlays',
                     name: 'Dev Overlays',
                     group: $.v0.DEVELOPMENT,
-                    render: () => (0, a.jsx)(w.Z, { devSettingsCategory: g.zU.OVERLAYS })
+                    render: () => (0, a.jsx)(k.Z, { devSettingsCategory: g.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
@@ -176,7 +176,7 @@ function er(e) {
                     id: 'reporting',
                     name: 'Reporting',
                     group: $.v0.EXPERIMENTS,
-                    render: () => (0, a.jsx)(w.Z, { devSettingsCategory: g.zU.REPORTING })
+                    render: () => (0, a.jsx)(k.Z, { devSettingsCategory: g.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
@@ -250,7 +250,7 @@ function er(e) {
                     id: 'gifting_intent',
                     name: 'Gifting Intent',
                     group: $.v0.PREMIUM,
-                    render: () => (0, a.jsx)(k.Z, {})
+                    render: () => (0, a.jsx)(w.Z, {})
                 }),
                 e.push({
                     id: 'voice_filters',

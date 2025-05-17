@@ -13,7 +13,6 @@ e.exports = {
     premiumText: 'premiumText__9671b',
     premiumAction: 'premiumAction__9671b',
     ellipsis: 'ellipsis__9671b',
-    quarantineNotice: 'quarantineNotice__9671b',
     quarantineLearnMoreLink: 'quarantineLearnMoreLink__9671b',
     errorCodeNoticeText: 'errorCodeNoticeText__9671b',
     errorCodeNoticeClickable: 'errorCodeNoticeClickable__9671b'

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y }), n(388685);
+n.d(t, { Z: () => O }), n(388685);
 var r = n(255367),
     i = n(73800),
     a = n(120356),
@@ -216,20 +216,69 @@ function b(e) {
               })
           });
 }
-let y = function (e) {
+function y(e) {
+    let { isFocused: t, handleFocus: n, handleRowBlur: a, theme: c, row: u, hideTier0: d } = e,
+        f = i.useRef(null);
+    return (0, r.jsxs)('tr', {
+        className: _.__invalid_tableRow,
+        children: [
+            (0, r.jsx)('th', {
+                className: o()(_.tableCell, _.tableCellWrapper),
+                scope: 'row',
+                children: (0, r.jsx)(l.P3F, {
+                    className: o()(_.tableRowHeading, _.tableCell, _.tableCellInner),
+                    onFocus: n,
+                    onBlur: a,
+                    onMouseEnter: n,
+                    onMouseLeave: a,
+                    children: (0, r.jsx)(l.yRy, {
+                        targetElementRef: f,
+                        align: 'center',
+                        disablePointerEvents: !0,
+                        nudgeAlignIntoViewport: !0,
+                        position: 'bottom',
+                        renderPopout: () =>
+                            (0, r.jsx)('img', {
+                                className: _.perkPreviewImage,
+                                src: (0, s.wj)(c) ? u.getPerkPreviewDarkTheme() : u.getPerkPreviewLightTheme(),
+                                alt: ''
+                            }),
+                        shouldShow: t,
+                        spacing: 16,
+                        children: () =>
+                            (0, r.jsx)(l.Text, {
+                                variant: 'text-md/normal',
+                                ref: f,
+                                children: u.getPerkHeading()
+                            })
+                    })
+                })
+            }),
+            !d &&
+                (0, r.jsx)(g, {
+                    textVariant: 'text-md/normal',
+                    value: u.getTier0Value()
+                }),
+            (0, r.jsx)(g, { value: u.getTier1Value() }),
+            (0, r.jsx)(g, { value: u.getTier2Value() }),
+            (0, r.jsx)(g, { value: u.getTier3Value() })
+        ]
+    });
+}
+let O = function (e) {
     let t = (0, c.ZP)(),
         [n, a] = i.useState(null),
-        { className: d, guild: p, hideHeading: E, hideTier0: y } = e;
-    function O(e) {
+        { className: o, guild: s, hideHeading: d, hideTier0: p } = e;
+    function g(e) {
         a(e);
     }
-    function v() {
+    function E() {
         a(null);
     }
     return (0, r.jsxs)('div', {
-        className: d,
+        className: o,
         children: [
-            !E &&
+            !d &&
                 (0, r.jsx)(l.X6q, {
                     className: _.heading,
                     variant: 'heading-xxl/extrabold',
@@ -238,7 +287,7 @@ let y = function (e) {
             (0, r.jsxs)('div', {
                 className: _.tableWrapper,
                 children: [
-                    null != p && (0, r.jsx)(b, { currentTier: p.premiumTier }),
+                    null != s && (0, r.jsx)(b, { currentTier: s.premiumTier }),
                     (0, r.jsxs)('table', {
                         className: _.table,
                         cellPadding: 0,
@@ -252,7 +301,7 @@ let y = function (e) {
                                             className: _.tableRowHeading,
                                             children: f.intl.string(f.t.F5MY0t)
                                         }),
-                                        !y &&
+                                        !p &&
                                             (0, r.jsx)(m, {
                                                 tier: u.Eu4.NONE,
                                                 children: f.intl.string(f.t.mx8j2t)
@@ -276,54 +325,19 @@ let y = function (e) {
                                 className: _.__invalid_tableBody,
                                 children: h.map((e, i) => {
                                     let a = n === i;
-                                    function c() {
-                                        O(i);
+                                    function o() {
+                                        g(i);
                                     }
                                     return void 0 === e.predicate
-                                        ? (0, r.jsxs)(
-                                              'tr',
+                                        ? (0, r.jsx)(
+                                              y,
                                               {
-                                                  className: _.__invalid_tableRow,
-                                                  children: [
-                                                      (0, r.jsx)('th', {
-                                                          className: o()(_.tableCell, _.tableCellWrapper),
-                                                          scope: 'row',
-                                                          children: (0, r.jsx)(l.P3F, {
-                                                              className: o()(_.tableRowHeading, _.tableCell, _.tableCellInner),
-                                                              onFocus: c,
-                                                              onBlur: v,
-                                                              onMouseEnter: c,
-                                                              onMouseLeave: v,
-                                                              children: (0, r.jsx)(l.yRy, {
-                                                                  align: 'center',
-                                                                  disablePointerEvents: !0,
-                                                                  nudgeAlignIntoViewport: !0,
-                                                                  position: 'bottom',
-                                                                  renderPopout: () =>
-                                                                      (0, r.jsx)('img', {
-                                                                          className: _.perkPreviewImage,
-                                                                          src: (0, s.wj)(t) ? e.getPerkPreviewDarkTheme() : e.getPerkPreviewLightTheme(),
-                                                                          alt: ''
-                                                                      }),
-                                                                  shouldShow: a,
-                                                                  spacing: 16,
-                                                                  children: () =>
-                                                                      (0, r.jsx)(l.Text, {
-                                                                          variant: 'text-md/normal',
-                                                                          children: e.getPerkHeading()
-                                                                      })
-                                                              })
-                                                          })
-                                                      }),
-                                                      !y &&
-                                                          (0, r.jsx)(g, {
-                                                              textVariant: 'text-md/normal',
-                                                              value: e.getTier0Value()
-                                                          }),
-                                                      (0, r.jsx)(g, { value: e.getTier1Value() }),
-                                                      (0, r.jsx)(g, { value: e.getTier2Value() }),
-                                                      (0, r.jsx)(g, { value: e.getTier3Value() })
-                                                  ]
+                                                  isFocused: a,
+                                                  handleFocus: o,
+                                                  handleRowBlur: E,
+                                                  theme: t,
+                                                  row: e,
+                                                  hideTier0: p
                                               },
                                               i
                                           )
