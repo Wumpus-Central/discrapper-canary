@@ -8,11 +8,11 @@ var i = n(255367),
     c = n(887580),
     d = n(389494),
     u = n(353926),
-    g = n(430824),
-    m = n(572004),
+    m = n(430824),
+    g = n(572004),
     p = n(878209),
     h = n(987338),
-    f = n(516370);
+    f = n(533925);
 function b() {
     let e = (0, a.cj)([u.Z], () => u.Z.getAllExperimentOverrideDescriptors()),
         t = (0, a.cj)([u.Z], () => u.Z.getRegisteredExperiments()),
@@ -54,7 +54,7 @@ function b() {
 }
 function _(e) {
     var t;
-    let { experiment: n, experimentId: s, overrideDescriptor: g, defaultOpen: p } = e,
+    let { experiment: n, experimentId: s, overrideDescriptor: m, defaultOpen: p } = e,
         [b, _] = r.useState(p),
         [x, E] = r.useState(!1),
         C = r.useCallback(() => {
@@ -75,7 +75,7 @@ function _(e) {
         ),
         v = r.useCallback(
             (e) => {
-                (0, m.JG)((0, c.sZ)(s), () => {
+                (0, g.JG)((0, c.sZ)(s), () => {
                     (0, o.showToast)({
                         id: 'experiment-link-copied',
                         message: 'Copied experiment link',
@@ -103,7 +103,7 @@ function _(e) {
                                 children: [
                                     n.title,
                                     ' ',
-                                    m.wS &&
+                                    g.wS &&
                                         (0, i.jsx)(o.P3F, {
                                             onClick: v,
                                             children: (0, i.jsx)(o.xPt, { size: 'xs' })
@@ -138,7 +138,7 @@ function _(e) {
                                       children: (0, i.jsx)(d.y, {
                                           experiment: n,
                                           experimentId: s,
-                                          overrideDescriptor: g
+                                          overrideDescriptor: m
                                       })
                                   }),
                                   'string' == typeof n.description
@@ -188,7 +188,7 @@ function _(e) {
                                         (0, i.jsx)(o.Text, {
                                             variant: 'code',
                                             className: f.pre,
-                                            children: null == g ? 'None' : JSON.stringify(g, void 0, 2)
+                                            children: null == m ? 'None' : JSON.stringify(m, void 0, 2)
                                         }),
                                         (0, i.jsx)(o.vwX, {
                                             tag: 'h5',
@@ -221,10 +221,10 @@ function _(e) {
 }
 function x(e) {
     let { experiment: t, experimentId: n, overrideDescriptor: s } = e,
-        [c, m] = r.useState(null != s),
+        [c, g] = r.useState(null != s),
         [p, b] = r.useState(!1),
         _ = r.useCallback(() => {
-            m((e) => !e);
+            g((e) => !e);
         }, []),
         x = (0, a.e7)([u.Z], () => u.Z.getLoadedGuildExperiment(n)),
         E = (0, a.Wu)([u.Z], () =>
@@ -238,8 +238,8 @@ function x(e) {
                     return ''.concat(new Date(n).toLocaleString(), ' (').concat(t, ')');
                 })
         ),
-        [C, j] = (0, a.Wu)([g.Z, u.Z], () => {
-            let e = l().sortBy(l().values(g.Z.getGuilds()), (e) => e.name.toLowerCase()),
+        [C, j] = (0, a.Wu)([m.Z, u.Z], () => {
+            let e = l().sortBy(l().values(m.Z.getGuilds()), (e) => e.name.toLowerCase()),
                 t = {},
                 i = [];
             for (let s of e) {

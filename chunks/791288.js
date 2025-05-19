@@ -32,7 +32,7 @@ var i = n(255367),
     k = n(701488),
     D = n(987650),
     R = n(388032),
-    A = n(172519);
+    A = n(868724);
 function L(e) {
     let { game: t, trackClick: n, onDismissClick: s } = e,
         o = (0, h.q)(t.id),

@@ -19,8 +19,8 @@ var r = n(120356),
     c = n(930153),
     d = n(275759),
     u = n(856651),
-    g = n(388032),
-    m = n(566825);
+    m = n(388032),
+    g = n(658303);
 function p(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : void 0,
@@ -36,7 +36,7 @@ function p(e) {
                     {
                         className: n,
                         count: s,
-                        label: g.t.SbCNo6
+                        label: m.t.SbCNo6
                     },
                     u.PC.REDDIT_TOTAL_KARMA
                 )
@@ -47,7 +47,7 @@ function p(e) {
                     S,
                     {
                         className: n,
-                        label: g.intl.string(g.t['06rDHR'])
+                        label: m.intl.string(m.t['06rDHR'])
                     },
                     u.PC.REDDIT_GOLD
                 )
@@ -58,7 +58,7 @@ function p(e) {
                     S,
                     {
                         className: n,
-                        label: g.intl.string(g.t.oWM95O)
+                        label: m.intl.string(m.t.oWM95O)
                     },
                     u.PC.REDDIT_MOD
                 )
@@ -80,7 +80,7 @@ function h(e) {
                     {
                         className: r,
                         count: l,
-                        label: g.t.llwqqa
+                        label: m.t.llwqqa
                     },
                     u.PC.TWITTER_STATUSES_COUNT
                 )
@@ -92,7 +92,7 @@ function h(e) {
                     {
                         className: r,
                         count: a,
-                        label: g.t.LMNOUV
+                        label: m.t.LMNOUV
                     },
                     u.PC.TWITTER_FOLLOWERS_COUNT
                 )
@@ -115,7 +115,7 @@ function f(e) {
                     {
                         className: l,
                         count: o,
-                        label: g.t.ppXMu7
+                        label: m.t.ppXMu7
                     },
                     u.PC.STEAM_GAME_COUNT
                 )
@@ -126,9 +126,9 @@ function f(e) {
                     O,
                     {
                         className: l,
-                        label: g.intl.format(g.t['Y88M5+'], { count: c }),
+                        label: m.intl.format(m.t['Y88M5+'], { count: c }),
                         imageSrc: n(738535),
-                        imageAlt: g.intl.string(g.t.HKUEZm)
+                        imageAlt: m.intl.string(m.t.HKUEZm)
                     },
                     u.PC.STEAM_ITEM_COUNT_DOTA2
                 )
@@ -139,9 +139,9 @@ function f(e) {
                     O,
                     {
                         className: l,
-                        label: g.intl.format(g.t['Y88M5+'], { count: d }),
+                        label: m.intl.format(m.t['Y88M5+'], { count: d }),
                         imageSrc: n(80730),
-                        imageAlt: g.intl.string(g.t.C8p1Sk)
+                        imageAlt: m.intl.string(m.t.C8p1Sk)
                     },
                     u.PC.STEAM_ITEM_COUNT_TF2
                 )
@@ -158,8 +158,8 @@ function b(e) {
                 (0, i.jsx)(
                     S,
                     {
-                        className: s()(t, m.paypalVerifiedTag),
-                        label: g.intl.string(g.t.IhXLy8)
+                        className: s()(t, g.paypalVerifiedTag),
+                        label: m.intl.string(m.t.IhXLy8)
                     },
                     u.PC.PAYPAL_VERIFIED
                 )
@@ -181,7 +181,7 @@ function _(e) {
                     {
                         className: n,
                         count: s,
-                        label: g.t.YmL22d,
+                        label: m.t.YmL22d,
                         percent: !0
                     },
                     u.PC.EBAY_POSITIVE_FEEDBACK_PERCENTAGE
@@ -193,7 +193,7 @@ function _(e) {
                     S,
                     {
                         className: n,
-                        label: g.intl.string(g.t.TEEYwc)
+                        label: m.intl.string(m.t.TEEYwc)
                     },
                     u.PC.EBAY_TOP_RATED_SELLER
                 )
@@ -217,7 +217,7 @@ function x(e) {
                     {
                         className: s,
                         count: o,
-                        label: g.t['Mpm/BQ']
+                        label: m.t['Mpm/BQ']
                     },
                     u.PC.TIKTOK_FOLLOWER_COUNT
                 )
@@ -229,7 +229,7 @@ function x(e) {
                     {
                         className: s,
                         count: c,
-                        label: g.t.ftf12t
+                        label: m.t.ftf12t
                     },
                     u.PC.TIKTOK_FOLLOWING_COUNT
                 )
@@ -241,7 +241,7 @@ function x(e) {
                     {
                         className: s,
                         count: d,
-                        label: g.t.Qwhe5u
+                        label: m.t.Qwhe5u
                     },
                     u.PC.TIKTOK_LIKES_COUNT
                 )
@@ -252,7 +252,7 @@ function x(e) {
                     S,
                     {
                         className: s,
-                        label: g.intl.string(g.t.QHHwRU)
+                        label: m.intl.string(m.t.QHHwRU)
                     },
                     u.PC.TIKTOK_VERIFIED
                 )
@@ -331,13 +331,13 @@ function C(e) {
     return (
         (t =
             'string' == typeof r
-                ? g.intl.format(g.t.HLoinJ, {
+                ? m.intl.format(m.t.HLoinJ, {
                       name: r,
                       value: d
                   })
-                : g.intl.format(r, { value: d })),
+                : m.intl.format(r, { value: d })),
         (0, i.jsx)(o.Text, {
-            className: s()(m.connectedAccountVanityMetadata, l),
+            className: s()(g.connectedAccountVanityMetadata, l),
             variant: 'text-xs/normal',
             color: 'interactive-active',
             children: t
@@ -347,10 +347,10 @@ function C(e) {
 function j(e) {
     let { date: t, locale: n, label: r, className: l } = e;
     return (0, i.jsx)(o.Text, {
-        className: s()(m.connectedAccountVanityMetadata, l),
+        className: s()(g.connectedAccountVanityMetadata, l),
         variant: 'text-xs/normal',
         color: 'interactive-active',
-        children: g.intl.format(g.t.HLoinJ, {
+        children: m.intl.format(m.t.HLoinJ, {
             value: (0, d.FI)(t, n),
             name: r
         })
@@ -359,7 +359,7 @@ function j(e) {
 function O(e) {
     let { label: t, imageSrc: n, imageAlt: r, className: l } = e;
     return (0, i.jsxs)('div', {
-        className: s()(m.connectedAccountVanityMetadata, m.connectedAccountVanityMetadataItem, l),
+        className: s()(g.connectedAccountVanityMetadata, g.connectedAccountVanityMetadataItem, l),
         children: [
             (0, i.jsx)(o.ua7, {
                 text: r,
@@ -396,7 +396,7 @@ function O(e) {
                             {
                                 src: n,
                                 alt: r,
-                                className: m.connectedAccountVanityMetadataItemIcon
+                                className: g.connectedAccountVanityMetadataItemIcon
                             }),
                         Object.getOwnPropertyDescriptors
                             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(s))
@@ -427,7 +427,7 @@ function S(e) {
     return (0, i.jsx)(o.Text, {
         variant: 'text-xs/semibold',
         color: 'interactive-active',
-        className: s()(m.connectedAccountVanityMetadata, m.connectedAccountVanityMetadataTag, n),
+        className: s()(g.connectedAccountVanityMetadata, g.connectedAccountVanityMetadataTag, n),
         children: t
     });
 }

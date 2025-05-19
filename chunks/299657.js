@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(570140),
     d = n(355467),
     u = n(179360),
-    g = n(821849),
-    m = n(497321),
+    m = n(821849),
+    g = n(497321),
     p = n(100527),
     h = n(906732),
     f = n(211242),
@@ -34,7 +34,7 @@ var i = n(255367),
     w = n(132547),
     k = n(474936),
     L = n(981631),
-    B = n(126867);
+    B = n(779468);
 let M = function (e) {
     let { entrypoint: t = k.EZ.UserSettings } = e;
     (0, E.z)(x.X);
@@ -60,7 +60,7 @@ let M = function (e) {
     r.useEffect(() => {
         c.Z.wait(async () => {
             let e = Date.now();
-            await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, g.Y2)(Q, null, L.JjL.DISCOVERY), null != G && J && q && (0, j.Z)(G)]), (K.current = Date.now() - e), Y(!1);
+            await Promise.all([d.jg(), (0, u.X8)(), d.tZ(), (0, m.Y2)(Q, null, L.JjL.DISCOVERY), null != G && J && q && (0, j.Z)(G)]), (K.current = Date.now() - e), Y(!1);
         });
     }, [Q, G, J, q]),
     r.useEffect(() => {
@@ -74,7 +74,7 @@ let M = function (e) {
             });
     }, [s, W]),
     (0, a.e7)([O.Z], () => O.Z.enabled))
-        ? (0, i.jsx)(m.Z, {})
+        ? (0, i.jsx)(g.Z, {})
         : n
           ? (0, i.jsx)(_.c8, {})
           : t === k.EZ.ApplicationStoreHome && q

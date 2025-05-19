@@ -9,7 +9,7 @@ var r = n(255367),
     d = n(481060),
     u = n(451478),
     p = n(302221),
-    m = n(464121);
+    m = n(67731);
 let f = [0, 0.5, 1],
     g = {
         'layers[1].shapes[1].g.k.k': [0, 0.522, 0.278, 0.776, 0.5, 0.522, 0.278, 0.776, 1, 0.522, 0.278, 0.776],
@@ -49,16 +49,16 @@ function h(e) {
                 n = f.reduce((e, n) => [...e, n, t.r, t.g, t.b], []);
             return x(i.id, n);
         }, [i]),
-        _ = (null == (t = i.userStatus) ? void 0 : t.enrolledAt) != null,
-        y = !l && g;
+        y = (null == (t = i.userStatus) ? void 0 : t.enrolledAt) != null,
+        _ = !l && g;
     o.useEffect(() => {
         var e, t, n, r;
-        g ? y && (null == (r = h.current) || null == (n = r.animation) || n.play()) : null == (t = h.current) || null == (e = t.animation) || e.goToAndStop(0, !0);
-    }, [y, g]);
-    let C = o.useCallback(() => {
+        g ? _ && (null == (r = h.current) || null == (n = r.animation) || n.play()) : null == (t = h.current) || null == (e = t.animation) || e.goToAndStop(0, !0);
+    }, [_, g]);
+    let O = o.useCallback(() => {
         j(!0);
     }, []);
-    return null == v || _
+    return null == v || y
         ? (0, r.jsx)('div', {
               className: m.backgroundFallback,
               style: { backgroundImage: 'linear-gradient(90deg, '.concat(i.config.colors.primary, ', ').concat(i.config.colors.secondary, ')') }
@@ -69,9 +69,9 @@ function h(e) {
                   d.Fmz,
                   {
                       ref: h,
-                      onComplete: C,
+                      onComplete: O,
                       importData: () => v,
-                      shouldAnimate: !b && y,
+                      shouldAnimate: !b && _,
                       className: a()(m.lottieAnimation, m.lottieAnimationBackground, n),
                       loop: 0,
                       rendererSettings: { preserveAspectRatio: 'none' }

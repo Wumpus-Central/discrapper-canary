@@ -8,12 +8,12 @@ var i = n(255367),
     c = n(125529),
     d = n(879892),
     u = n(124570),
-    g = n(594174),
-    m = n(709586),
+    m = n(594174),
+    g = n(709586),
     p = n(267642),
     h = n(981631),
     f = n(388032),
-    b = n(122039);
+    b = n(778711);
 function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -60,7 +60,7 @@ function x(e, t) {
 let E = function () {
     let e = r.useRef(null),
         { analyticsLocations: t } = (0, a.ZP)(),
-        E = (0, s.e7)([g.default], () => g.default.getCurrentUser()),
+        E = (0, s.e7)([m.default], () => m.default.getCurrentUser()),
         { fractionalState: C } = (0, o.Z)(),
         j = (0, u.y)('guild_boosting_boost_cta', E, C);
     function O(n) {
@@ -93,7 +93,7 @@ let E = function () {
     return (0, i.jsxs)('div', {
         className: b.wrapper,
         children: [
-            (0, i.jsx)(m.Z, {
+            (0, i.jsx)(g.Z, {
                 className: b.boostIcon,
                 width: 16,
                 height: 16

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => em }), n(388685);
+n.d(t, { Z: () => eg }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(120356),
@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(780384),
     d = n(481060),
     u = n(634894),
-    g = n(410030),
-    m = n(607070),
+    m = n(410030),
+    g = n(607070),
     p = n(100527),
     h = n(906732),
     f = n(70097),
@@ -52,7 +52,7 @@ var i = n(255367),
     $ = n(981631),
     ee = n(869783),
     et = n(388032),
-    en = n(651117),
+    en = n(472355),
     ei = n(499317),
     er = n(865215),
     es = n(735035),
@@ -68,7 +68,7 @@ let ed = (e) => {
         let { isFullscreen: t, inOfferExperience: n } = e;
         return t || n ? (0, i.jsx)(B.Z, { lifted: !t && n }) : null;
     },
-    eg = (e) => {
+    em = (e) => {
         let { isFullscreen: t, inOfferExperience: n, setIsAllPerksVisible: r, hasRenderedOnce: s, isMarketingPageV2Enabled: a, isReducedMotion: o } = e;
         return t
             ? (0, i.jsxs)('div', {
@@ -110,7 +110,7 @@ let ed = (e) => {
               })
             : null;
     },
-    em = (e) => {
+    eg = (e) => {
         var t, n;
         let { isFullscreen: s, entrypoint: k } = e;
         (0, _.z)(b.X);
@@ -119,11 +119,11 @@ let ed = (e) => {
             W = r.useRef(null),
             Y = r.useRef(null),
             Q = r.useRef(null),
-            em = r.useRef(null),
+            eg = r.useRef(null),
             ep = r.useRef(null),
             eh = r.useRef(null),
-            ef = (0, a.e7)([m.Z], () => m.Z.useReducedMotion),
-            eb = (0, g.ZP)(),
+            ef = (0, a.e7)([g.Z], () => g.Z.useReducedMotion),
+            eb = (0, m.ZP)(),
             e_ = (0, c.wj)(eb),
             ex = x.default.getCurrentUser(),
             eE = (0, O.I5)(ex),
@@ -252,7 +252,7 @@ let ed = (e) => {
                               className: l()({ [en.heroHeadingV2Container]: eO }),
                               children: [
                                   (0, i.jsx)(o.$, {
-                                      innerRef: eO ? Q : em,
+                                      innerRef: eO ? Q : eg,
                                       onChange: (e) => ev(e),
                                       threshold: 0,
                                       active: !0,
@@ -265,7 +265,7 @@ let ed = (e) => {
                                                 isDarkMode: e_
                                             })
                                           : (0, i.jsx)(M.ZP, {
-                                                ref: em,
+                                                ref: eg,
                                                 subscriptionTier: eB,
                                                 isFullscreen: s || ez,
                                                 isMarketingPageV2Enabled: eO,
@@ -311,7 +311,7 @@ let ed = (e) => {
                             className: en.giftPromoCard,
                             config: eK
                         }),
-                    (0, i.jsx)(eg, {
+                    (0, i.jsx)(em, {
                         isFullscreen: s,
                         inOfferExperience: ez,
                         setIsAllPerksVisible: eG,

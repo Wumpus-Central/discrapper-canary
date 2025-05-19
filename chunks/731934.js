@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(481060),
     d = n(209613),
     u = n(82295),
-    g = n(785681),
-    m = n(485664),
+    m = n(785681),
+    g = n(485664),
     p = n(880257),
     h = n(631885),
     f = n(895328),
@@ -19,11 +19,11 @@ var i = n(255367),
     E = n(250285),
     C = n(292352),
     j = n(134612),
-    O = n(332495),
+    O = n(127941),
     S = n(388032),
-    v = n(589608),
-    T = n(34997),
-    I = n(20493),
+    v = n(580548),
+    T = n(508531),
+    I = n(971005),
     N = n(926895);
 function y(e) {
     let { header: t, description: n, stepNumber: r } = e;
@@ -139,8 +139,8 @@ function R(e) {
     let { sectionType: t, sectionTitle: n, requests: s } = e,
         l = r.useRef(null),
         a = ''.concat(t, '-list'),
-        g = (0, d.Z)(a),
-        m = r.useCallback(
+        m = (0, d.Z)(a),
+        g = r.useCallback(
             (e) => {
                 let { row: n, listIndex: r } = e,
                     l = s[n],
@@ -178,7 +178,7 @@ function R(e) {
     return (0, i.jsx)('div', {
         className: T.section,
         children: (0, i.jsx)(o.bG, {
-            navigator: g,
+            navigator: m,
             children: (0, i.jsx)(o.SJ, {
                 children: (e) => {
                     var { ref: t, role: r } = e,
@@ -238,7 +238,7 @@ function R(e) {
                                 sectionHeight: C.zE,
                                 rowHeight: C.ip,
                                 renderSection: p,
-                                renderRow: m,
+                                renderRow: g,
                                 sections: [s.length],
                                 chunkSize: 30,
                                 fade: !0
@@ -260,7 +260,7 @@ let D = () => {
                 count: t.length,
                 max: n
             },
-            s = (0, g.o)(S.intl.formatToPlainString(O.default['+tnO39'], r), S.intl.formatToPlainString(O.default['pu6/U1'], r));
+            s = (0, m.o)(S.intl.formatToPlainString(O.default['+tnO39'], r), S.intl.formatToPlainString(O.default['pu6/U1'], r));
         return t.length > 0
             ? (0, i.jsx)(R, {
                   sectionType: C.ne.ACTIVE,
@@ -286,7 +286,7 @@ let D = () => {
     Z = () => {
         let e = (0, h.VM)(),
             t = (0, p.Z)() ? C.AG : C.i0,
-            n = (0, g.o)(S.intl.formatToPlainString(O.default['1/PzIi'], { maxConnections: t }), S.intl.formatToPlainString(O.default.RcTgiI, { maxConnections: t }));
+            n = (0, m.o)(S.intl.formatToPlainString(O.default['1/PzIi'], { maxConnections: t }), S.intl.formatToPlainString(O.default.RcTgiI, { maxConnections: t }));
         return e
             ? (0, i.jsx)('div', {
                   className: T.maxConnectionInfo,
@@ -299,8 +299,8 @@ let D = () => {
             : null;
     },
     w = () => {
-        let e = (0, m.o)(),
-            t = (0, m.Q)(),
+        let e = (0, g.o)(),
+            t = (0, g.Q)(),
             n = (0, a.EQ)({
                 helpline: e,
                 throughline: t
@@ -328,7 +328,7 @@ let D = () => {
     },
     k = () => {
         let e = (0, h.mq)(C.ne.PENDING),
-            t = (0, g.o)(S.intl.formatToPlainString(O.default.IkAgkJ, { count: e.length }), S.intl.formatToPlainString(O.default.Q8XnAQ, { count: e.length }));
+            t = (0, m.o)(S.intl.formatToPlainString(O.default.IkAgkJ, { count: e.length }), S.intl.formatToPlainString(O.default.Q8XnAQ, { count: e.length }));
         return 0 === e.length
             ? null
             : (0, i.jsx)(R, {

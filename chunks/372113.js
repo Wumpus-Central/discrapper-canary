@@ -29,7 +29,7 @@ var r = n(255367),
     w = n(46140),
     R = n(981631),
     _ = n(388032),
-    I = n(717735);
+    I = n(809000);
 function D(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -328,7 +328,7 @@ let L = (e) => {
                                   }),
                                   (0, r.jsx)(l.zxk, {
                                       color: l.Ttl.BRAND,
-                                      onClick: () => (0, N.openQuestMinorEnrollmentBlockModal)(i),
+                                      onClick: () => (0, N.openQuestMinorEnrollmentBlockModal)(n, i),
                                       className: I.questEnrollmentBlockedButton,
                                       children: _.intl.string(_.t.vY9GgI)
                                   })

@@ -5,7 +5,7 @@ var l = n(481060),
     i = n(100527),
     s = n(906732),
     o = n(156582),
-    a = n(522965);
+    a = n(353215);
 function c(e) {
     let { onClose: t } = e,
         { analyticsLocations: n } = (0, s.ZP)(i.Z.GO_LIVE_MODAL_V2);

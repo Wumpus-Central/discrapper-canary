@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(481060),
@@ -6,7 +6,7 @@ var i = n(255367),
     a = n(313201),
     o = n(518638),
     c = n(388032),
-    d = n(302291);
+    d = n(955113);
 function u(e) {
     let { onClose: t } = e;
     return (0, i.jsxs)(i.Fragment, {
@@ -40,27 +40,27 @@ function u(e) {
         ]
     });
 }
-let g = function (e) {
-    let { onClose: t, onClaim: n, code: g, outboundPromotion: m, transitionState: p } = e,
+let m = function (e) {
+    let { onClose: t, onClaim: n, code: m, outboundPromotion: g, transitionState: p } = e,
         [h, f] = r.useState(null),
         b = (0, a.Dt)();
     return (
         r.useEffect(() => {
-            null == g &&
-                (0, o.A2)(m.id)
+            null == m &&
+                (0, o.A2)(g.id)
                     .then((e) => n(e))
                     .catch((e) => {
                         var t;
                         return f(null == e || null == (t = e.body) ? void 0 : t.code);
                     });
-        }, [g, m.id, n]),
+        }, [m, g.id, n]),
         (0, i.jsx)(s.Y0X, {
             transitionState: p,
             'aria-labelledby': b,
             children:
                 null != h
                     ? (0, i.jsx)(u, { onClose: t })
-                    : null == g
+                    : null == m
                       ? (0, i.jsx)(s.hzk, { children: (0, i.jsx)(s.$jN, { className: d.loading }) })
                       : (0, i.jsxs)(i.Fragment, {
                             children: [
@@ -80,7 +80,7 @@ let g = function (e) {
                                         (0, i.jsx)(s.Text, {
                                             variant: 'text-md/normal',
                                             className: d.bodyText,
-                                            children: m.outboundRedemptionModalBody
+                                            children: g.outboundRedemptionModalBody
                                         }),
                                         (0, i.jsx)(s.$i$, { className: d.formDivider }),
                                         (0, i.jsxs)(s.hjN, {
@@ -88,7 +88,7 @@ let g = function (e) {
                                             className: d.formSection,
                                             children: [
                                                 (0, i.jsx)(l.Z, {
-                                                    value: g,
+                                                    value: m,
                                                     buttonColor: s.zxk.Colors.BRAND,
                                                     buttonLook: s.zxk.Looks.FILLED,
                                                     delay: 1000
@@ -108,7 +108,7 @@ let g = function (e) {
                                         (0, i.jsx)(s.zxk, {
                                             color: s.zxk.Colors.BRAND,
                                             onClick: () => {
-                                                let e = (0, o.BU)(g, m);
+                                                let e = (0, o.BU)(m, g);
                                                 window.open(e, '_blank');
                                             },
                                             children: c.intl.string(c.t['+zx47e'])

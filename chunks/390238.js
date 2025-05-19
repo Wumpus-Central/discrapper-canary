@@ -20,7 +20,7 @@ var t = a(255367),
     N = a(46140),
     w = a(675654),
     p = a(388032),
-    R = a(502896);
+    R = a(439187);
 function A(e) {
     var n;
     let { transitionState: a, onClose: o, quest: h, location: f, reward: g } = e,

@@ -8,25 +8,25 @@ var i = n(255367),
     c = n(570140),
     d = n(355467),
     u = n(179360),
-    g = n(821849),
-    m = n(15640),
+    m = n(821849),
+    g = n(15640),
     p = n(899667),
     h = n(853872),
     f = n(78839),
     b = n(783739),
     _ = n(981631),
-    x = n(117527);
+    x = n(867809);
 function E() {
     r.useEffect(() => {
         c.Z.wait(() => {
-            d.jg(), d.tZ(), (0, u.X8)(), (0, g.Y2)(null, null, _.JjL.DISCOVERY), (0, u.tH)(!0);
+            d.jg(), d.tZ(), (0, u.X8)(), (0, m.Y2)(null, null, _.JjL.DISCOVERY), (0, u.tH)(!0);
         });
     }, []);
     let { hasFetchedSubscriptions: e, premiumSubscription: t } = (0, a.cj)([f.ZP], () => ({
             hasFetchedSubscriptions: f.ZP.hasFetchedSubscriptions(),
             premiumSubscription: f.ZP.getPremiumTypeSubscription()
         })),
-        n = (0, m.V)(),
+        n = (0, g.V)(),
         s = (0, a.e7)([h.Z], () => h.Z.hasFetchedPaymentSources),
         E = (0, a.e7)([p.Z], () => p.Z.isFetchingCurrentUserAppliedBoosts);
     return e && n && s && !E

@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(481060),
     d = n(634894),
     u = n(410030),
-    g = n(100527),
-    m = n(906732),
+    m = n(100527),
+    g = n(906732),
     p = n(15640),
     h = n(78839),
     f = n(74538),
@@ -19,7 +19,7 @@ var i = n(255367),
     E = n(694338),
     C = n(474936),
     j = n(388032),
-    O = n(835826),
+    O = n(761739),
     S = n(102655),
     v = n(768236),
     T = n(314907),
@@ -109,7 +109,7 @@ let N = () =>
         var t;
         let n,
             { className: s, hidePill: o = !1, selectedPlanColumnClassName: c, selectedPlanTier: u = C.p9.TIER_2 } = e,
-            { analyticsLocations: j } = (0, m.ZP)(g.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
+            { analyticsLocations: j } = (0, g.ZP)(m.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
             S = (0, a.e7)([h.ZP], () => h.ZP.hasFetchedSubscriptions()),
             v = (0, p.V)(),
             T = 'PlanComparisonTable';
@@ -139,7 +139,7 @@ let N = () =>
         }),
             (n = o ? null : null != I ? (0, i.jsx)(y, {}) : (0, i.jsx)(N, {}));
         let U = A === C.Si.TIER_0 || u === C.p9.TIER_0;
-        return (0, i.jsx)(m.Gt, {
+        return (0, i.jsx)(g.Gt, {
             value: j,
             children: (0, i.jsx)('div', {
                 className: l()(O.root, s),

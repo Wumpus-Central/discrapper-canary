@@ -17,7 +17,7 @@ var r = n(255367),
     E = n(78826),
     b = n(341907),
     y = n(388032),
-    O = n(734506);
+    O = n(215849);
 let v = function (e) {
     let t,
         { className: n, quest: a, autoplay: v = !0, learnMoreStyle: I = null } = e,

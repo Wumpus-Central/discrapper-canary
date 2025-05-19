@@ -12,7 +12,7 @@ var l = n(442837),
     f = n(499596),
     m = n(148381),
     h = n(388032),
-    p = n(962670);
+    p = n(435144);
 function x(e) {
     let { selectedChannelId: t, guildId: n, onChangeSelectedChannelId: x } = e,
         g = (0, l.e7)([c.default], () => c.default.getCurrentUser()),

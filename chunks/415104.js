@@ -12,31 +12,31 @@ var r = n(255367),
     m = n(439826),
     f = n(43779),
     g = n(981631),
-    x = n(168989);
+    x = n(877184);
 function h(e) {
     let { quest: t, className: n, questContent: s, contentPosition: c, rowIndex: u, impressionRef: h } = e,
         [b, j] = o.useState(!1),
-        [v, _] = o.useState([]),
-        y = (0, l.qb)(t),
-        C = o.useMemo(() => (0, d.q8)(t), [t]),
-        O = (0, i._F)(),
+        [v, y] = o.useState([]),
+        _ = (0, l.qb)(t),
+        O = o.useMemo(() => (0, d.q8)(t), [t]),
+        C = (0, i._F)(),
         w = o.useCallback(() => {
             j(!0),
-                O({
+                C({
                     questId: t.id,
                     event: g.rMx.QUEST_HOVER,
                     properties: (0, i.mH)(s)
                 }),
-                C && (0, p.loadVideoQuestModal)();
-        }, [O, t.id, s, C]),
+                O && (0, p.loadVideoQuestModal)();
+        }, [C, t.id, s, O]),
         S = o.useCallback(() => {
             j(!1),
-                O({
+                C({
                     questId: t.id,
                     event: g.rMx.QUEST_HOVER_OFF,
                     properties: (0, i.mH)(s)
                 });
-        }, [O, t.id, s]);
+        }, [C, t.id, s]);
     return (0, r.jsxs)('div', {
         id: 'quest-tile-'.concat(t.id),
         ref: (e) => {
@@ -52,7 +52,7 @@ function h(e) {
                 quest: t,
                 isHovering: b,
                 errorHints: v,
-                warningHints: y
+                warningHints: _
             }),
             (0, r.jsx)(f.Z, {
                 quest: t,
@@ -60,7 +60,7 @@ function h(e) {
                 isHovering: b,
                 contentPosition: c,
                 rowIndex: u,
-                onReceiveErrorHints: _
+                onReceiveErrorHints: y
             })
         ]
     });

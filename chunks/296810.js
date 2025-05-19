@@ -7,12 +7,12 @@ var r = n(120356),
     a = n(481060),
     o = n(993413),
     c = n(388032),
-    d = n(775853);
+    d = n(258493);
 function u(e) {
-    let { children: t, className: n, layoutClassName: r, profilePreview: u, previewTitle: g } = e,
-        m = () =>
+    let { children: t, className: n, layoutClassName: r, profilePreview: u, previewTitle: m } = e,
+        g = () =>
             (0, i.jsx)(o.Z, {
-                title: null != g ? g : c.intl.string(c.t.Zb06yM),
+                title: null != m ? m : c.intl.string(c.t.Zb06yM),
                 className: d.preview,
                 children: u
             });
@@ -21,10 +21,10 @@ function u(e) {
         children: (0, i.jsxs)(a.hjN, {
             className: d.profileCustomizationSection,
             children: [
-                l.tq && m(),
+                l.tq && g(),
                 (0, i.jsxs)('div', {
                     className: s()(d.baseLayout, r),
-                    children: [t, !l.tq && m()]
+                    children: [t, !l.tq && g()]
                 })
             ]
         })

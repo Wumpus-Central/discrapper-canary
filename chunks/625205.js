@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(481060),
     d = n(846027),
     u = n(906732),
-    g = n(687058),
-    m = n(253052),
+    m = n(687058),
+    g = n(253052),
     p = n(463395),
     h = n(131951),
     f = n(358085),
@@ -18,8 +18,8 @@ var i = n(255367),
     x = n(962100),
     E = n(65154),
     C = n(388032),
-    j = n(209782),
-    O = n(20493);
+    j = n(888647),
+    O = n(971005);
 let S = f.isWindows() ? ['BTHENUM', 'BTHHFENUM'] : [];
 function v() {
     let e,
@@ -37,8 +37,8 @@ function v() {
             inputDeviceId: h.Z.getInputDeviceId(),
             outputDeviceId: h.Z.getOutputDeviceId()
         })),
-        y = (0, g.Z)(),
-        A = (0, m.Z)(),
+        y = (0, m.Z)(),
+        A = (0, g.Z)(),
         P = r.useMemo(() => {
             let e = l()(y).find((e) => e.id === I),
                 t = l()(A).find((e) => e.id === N),

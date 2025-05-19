@@ -6,7 +6,7 @@ var i = n(255367),
     a = n(78839),
     o = n(851718),
     c = n(388032),
-    d = n(179867);
+    d = n(212083);
 function u(e) {
     let { onGoBack: t } = e,
         n = (0, s.Wu)([a.ZP], () => {
@@ -25,7 +25,7 @@ function u(e) {
         [l, u] = r.useState();
     return (
         null == l &&
-            (l = (0, i.jsx)(g, {
+            (l = (0, i.jsx)(m, {
                 onBack: t,
                 title: c.intl.string(c.t['DB/m9f'])
             })),
@@ -38,7 +38,7 @@ function u(e) {
                         subscriptions: n,
                         updateHeader: (e, t) => {
                             u(
-                                (0, i.jsx)(g, {
+                                (0, i.jsx)(m, {
                                     title: e,
                                     onBack: () => {
                                         t(), u(void 0);
@@ -52,7 +52,7 @@ function u(e) {
         })
     );
 }
-function g(e) {
+function m(e) {
     let { onBack: t, title: n } = e;
     return (0, i.jsxs)('div', {
         className: d.title,

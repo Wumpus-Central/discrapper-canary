@@ -11,7 +11,7 @@ var i = n(780384),
     c = n(703614),
     u = n(182294),
     p = n(388032),
-    _ = n(332546);
+    _ = n(479337);
 let x = () => {
     let e = (0, C.Z)(),
         { avatarSrc: t, eventHandlers: n } = (0, o.Z)({

@@ -1,28 +1,27 @@
 n.d(t, {
-    i0: () => B,
-    yD: () => z
+    i0: () => P,
+    yD: () => T
 });
 var r = n(255367),
     o = n(73800),
     s = n(120356),
-    l = n.n(s),
+    a = n.n(s),
     i = n(481060),
-    c = n(100527),
-    a = n(335131),
-    u = n(617136),
-    d = n(915750),
-    f = n(113434),
-    p = n(497505),
-    x = n(918701),
-    g = n(796111),
-    j = n(373370),
-    b = n(667105),
-    k = n(341907),
-    m = n(46140),
-    h = n(215023),
-    y = n(388032),
-    S = n(895518);
-function O(e) {
+    l = n(100527),
+    c = n(335131),
+    d = n(617136),
+    u = n(915750),
+    p = n(113434),
+    m = n(497505),
+    f = n(918701),
+    g = n(373370),
+    x = n(667105),
+    h = n(341907),
+    b = n(46140),
+    j = n(215023),
+    v = n(388032),
+    y = n(886265);
+function _(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -47,80 +46,80 @@ function O(e) {
     }
     return e;
 }
-function v(e) {
+function O(e) {
     let { quest: t, taskDetails: n } = e;
     return (0, r.jsx)(i.zxk, {
-        className: S.cta,
+        className: y.cta,
         color: i.zxk.Colors.BRAND,
         fullWidth: !0,
         onClick: () => {
-            (0, k.openVideoQuestModal)(t);
+            (0, h.openVideoQuestModal)(t);
         },
         size: i.zxk.Sizes.SMALL,
-        children: (0, x.F9)(n)
+        children: (0, f.F9)(n)
     });
 }
 let C = (e) => {
         let { quest: t } = e,
-            n = (0, d.aM)();
+            n = (0, u.aM)();
         return (0, r.jsx)(i.zxk, {
-            className: S.cta,
+            className: y.cta,
             size: i.zxk.Sizes.SMALL,
             onClick: () =>
-                (0, x.FE)(t, {
-                    content: p.jn.QUEST_BAR_V2,
-                    ctaContent: u.jZ.OPEN_GAME_LINK,
+                (0, f.FE)(t, {
+                    content: m.jn.QUEST_BAR_V2,
+                    ctaContent: d.jZ.OPEN_GAME_LINK,
                     impressionId: n
                 }),
-            children: (0, x.pO)(t) ? y.intl.string(y.t.hvVgAQ) : y.intl.string(y.t.lwQdjI)
+            children: (0, f.pO)(t) ? v.intl.string(v.t.hvVgAQ) : v.intl.string(v.t.lwQdjI)
         });
     },
-    N = (e) => {
+    w = (e) => {
         var t;
         let { quest: n } = e,
-            o = null == (t = (0, d.WD)()) ? void 0 : t.getId();
+            o = null == (t = (0, u.WD)()) ? void 0 : t.getId();
         return (0, r.jsx)(i.zxk, {
             fullWidth: !0,
-            className: S.cta,
+            className: y.cta,
             onClick: () =>
-                (0, x.gI)(
+                (0, f.gI)(
                     { quest: n },
                     {
-                        content: p.jn.QUEST_BAR_V2,
-                        ctaContent: u.jZ.CONNECT_CONSOLE,
+                        content: m.jn.QUEST_BAR_V2,
+                        ctaContent: d.jZ.CONNECT_CONSOLE,
                         impressionId: o
                     }
                 ),
             size: i.zxk.Sizes.SMALL,
-            children: y.intl.string(y.t.csptqa)
+            children: v.intl.string(v.t.csptqa)
         });
     },
-    E = (e) => {
+    S = (e) => {
         let { quest: t } = e,
-            n = (0, x.Vl)(t),
-            o = t.config.features.includes(m.S7.START_QUEST_CTA),
-            s = (0, j.CR)({
+            n = (0, f.Vl)(t),
+            o = t.config.features.includes(b.S7.START_QUEST_CTA),
+            s = (0, g.CR)({
                 quest: t,
-                location: m.dr.QUESTS_BAR
+                location: b.dr.QUESTS_BAR
             }),
-            { launchInGameActivity: l } = (0, f.zB)(t);
+            { launchInGameActivity: a } = (0, p.zB)(t);
         return n && o
             ? (0, r.jsx)(i.zxk, {
-                  className: S.cta,
+                  className: y.cta,
                   color: i.zxk.Colors.BRAND,
                   fullWidth: !0,
-                  onClick: l,
+                  onClick: a,
                   size: i.zxk.Sizes.SMALL,
                   children: s
               })
             : null;
     },
-    B = (e) => {
+    P = (e) => {
         var t,
             n,
             s,
-            { quest: u, useReducedMotion: d, isExpanded: f, className: g, ctaLabel: k, onClick: y } = e,
-            v = (function (e, t) {
+            { quest: d, useReducedMotion: u, isExpanded: p, className: h, ctaLabel: v, onClick: O } = e,
+            C = (function (e, t) {
                 if (null == e) return {};
                 var n,
                     r,
@@ -139,40 +138,40 @@ let C = (e) => {
                 }
                 return o;
             })(e, ['quest', 'useReducedMotion', 'isExpanded', 'className', 'ctaLabel', 'onClick']);
-        let C = (0, b.hf)({
-                quest: u,
-                location: p.jn.QUEST_BAR_V2
+        let w = (0, x.hf)({
+                quest: d,
+                location: m.jn.QUEST_BAR_V2
             }),
-            N = (0, j.up)(m.dr.QUESTS_BAR),
-            E = o.useCallback(
+            S = (0, g.up)(b.dr.QUESTS_BAR),
+            P = o.useCallback(
                 (e) => {
                     var t;
-                    null == y || y(e),
-                        (0, x.xN)(u.config) && (null == (t = u.userStatus) ? void 0 : t.claimedAt) != null
-                            ? (0, a.mK)({
+                    null == O || O(e),
+                        (0, f.xN)(d.config) && (null == (t = d.userStatus) ? void 0 : t.claimedAt) != null
+                            ? (0, c.mK)({
                                   openInLayer: !1,
-                                  tab: h.AW.ORBS,
+                                  tab: j.AW.ORBS,
                                   analyticsLocations: [],
-                                  analyticsSource: c.Z.QUEST_HOME_PAGE
+                                  analyticsSource: l.Z.QUEST_HOME_PAGE
                               })
-                            : C();
+                            : w();
                 },
-                [y, u.config, null == (s = u.userStatus) ? void 0 : s.claimedAt, C]
+                [O, d.config, null == (s = d.userStatus) ? void 0 : s.claimedAt, w]
             );
         return (0, r.jsx)(
             i.gtL,
-            ((t = O(
+            ((t = _(
                 {
                     fullWidth: !0,
                     size: i.zxk.Sizes.SMALL,
-                    onClick: E,
-                    pauseAnimation: d || !f,
-                    className: l()(S.cta, g),
-                    buttonShineClassName: S.shine
+                    onClick: P,
+                    pauseAnimation: u || !p,
+                    className: a()(y.cta, h),
+                    buttonShineClassName: y.shine
                 },
-                v
+                C
             )),
-            (n = n = { children: null != k ? k : N }),
+            (n = n = { children: null != v ? v : S }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                 : (function (e, t) {
@@ -188,45 +187,44 @@ let C = (e) => {
             t)
         );
     },
-    w = (e) => {
+    E = (e) => {
         var t;
-        let { quest: n, useReducedMotion: o, isExpanded: s, awaitingConsoleConnections: l, hasMadeProgress: i, isProgressing: c, activeScreen: a, taskDetails: u } = e,
-            d = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
-            f = (0, g.P)({ location: m.dr.QUESTS_BAR }),
-            j = (0, x.q8)(n),
-            b = (0, x.Vl)(n);
-        if (d)
-            return (0, r.jsx)(B, {
+        let { quest: n, useReducedMotion: o, isExpanded: s, awaitingConsoleConnections: a, hasMadeProgress: i, isProgressing: l, activeScreen: c, taskDetails: d } = e,
+            u = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null,
+            p = (0, f.q8)(n),
+            g = (0, f.Vl)(n);
+        if (u)
+            return (0, r.jsx)(P, {
                 quest: n,
                 useReducedMotion: o,
                 isExpanded: s
             });
-        if (j)
-            return (0, r.jsx)(v, {
+        if (p)
+            return (0, r.jsx)(O, {
                 quest: n,
-                taskDetails: u
+                taskDetails: d
             });
-        if (b) return (0, r.jsx)(E, { quest: n });
-        if (a === p.LI.CONSOLE && l && !f) return (0, r.jsx)(N, { quest: n });
-        if (a !== p.LI.SELECT && !i && !c) return (0, r.jsx)(C, { quest: n });
+        if (g) return (0, r.jsx)(S, { quest: n });
+        if (c === m.LI.CONSOLE && a) return (0, r.jsx)(w, { quest: n });
+        if (c !== m.LI.SELECT && !i && !l) return (0, r.jsx)(C, { quest: n });
         return null;
     };
-function z(e) {
+function T(e) {
     return (0, r.jsxs)('div', {
-        className: S.ctaButtons,
+        className: y.ctaButtons,
         children: [
             e.showBackButton &&
                 (0, r.jsx)(i.zxk, {
-                    className: S.backButton,
-                    innerClassName: S.backButtonInner,
+                    className: y.backButton,
+                    innerClassName: y.backButtonInner,
                     look: 'blank',
                     grow: !1,
                     fullWidth: !1,
                     size: 'none',
                     onClick: e.onBack,
-                    children: (0, r.jsx)(i.V7D, { className: S.backIcon })
+                    children: (0, r.jsx)(i.V7D, { className: y.backIcon })
                 }),
-            (0, r.jsx)(w, O({}, e))
+            (0, r.jsx)(E, _({}, e))
         ]
     });
 }

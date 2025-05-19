@@ -3,7 +3,7 @@ var i = n(255367),
     r = n(120356),
     s = n.n(r),
     l = n(18582),
-    a = n(610902);
+    a = n(297104);
 let o = {
     white: a.borderWhite,
     green: a.borderGreen
@@ -11,7 +11,7 @@ let o = {
 function c(e) {
     var t,
         n,
-        { className: r, color: c, onClick: d, disabled: u, children: g, muted: m = !1 } = e,
+        { className: r, color: c, onClick: d, disabled: u, children: m, muted: g = !1 } = e,
         p = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -60,10 +60,10 @@ function c(e) {
         })({}, p)),
         (n = n =
             {
-                muted: m,
+                muted: g,
                 className: s()(u ? a.buttonDisabled : a.buttonEnabled, o[c], r),
                 onClick: u ? void 0 : d,
-                children: g
+                children: m
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

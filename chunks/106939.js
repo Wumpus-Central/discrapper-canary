@@ -11,8 +11,8 @@ var i = n(255367),
     c = n(399606),
     d = n(704215),
     u = n(481060),
-    g = n(150063),
-    m = n(493773),
+    m = n(150063),
+    g = n(493773),
     p = n(758119),
     h = n(100527),
     f = n(906732),
@@ -39,9 +39,9 @@ var i = n(255367),
     L = n(981631),
     B = n(723359),
     M = n(921944),
-    U = n(332495),
+    U = n(127941),
     V = n(388032),
-    G = n(347362);
+    G = n(628950);
 let F = {
         [k.dG.REQUESTS]: () => (0, i.jsx)(Z.Z, {}),
         [k.dG.ACTIVITY]: () => (0, i.jsx)(D.Z, {}),
@@ -153,12 +153,12 @@ function Y() {
         n = (0, x.wE)(d.z.FAMILY_CENTER_NEW_BADGE),
         s = (0, c.e7)([N.Z], () => N.Z.getIsInitialized()),
         l = (0, A.M)(),
-        { selectedTab: a, handleTabChange: g } = (0, y.Z)(),
+        { selectedTab: a, handleTabChange: m } = (0, y.Z)(),
         h = (0, _.Dt)(),
         f = v.default.getCurrentUser(),
         E = null != e,
         O = s && null != f && !E;
-    (0, m.ZP)(() => {
+    (0, g.ZP)(() => {
         (0, j.e)('family-center'),
             I.ZP.initialPageLoad(),
             n ||
@@ -203,7 +203,7 @@ function Y() {
                   (0, i.jsx)(z, {
                       section: a,
                       handleItemSelect: (e) => {
-                          g(e);
+                          m(e);
                       }
                   }),
                   (0, i.jsx)(u.njP.Panel, {
@@ -228,8 +228,8 @@ function K() {
         z = v.default.getCurrentUser(),
         Y = null != t,
         K = a && null != z && !Y;
-    (0, m.ZP)(() => {
-        g.Y(L.Z5c.FAMILY_CENTER),
+    (0, g.ZP)(() => {
+        m.Y(L.Z5c.FAMILY_CENTER),
             (0, j.e)('family-center'),
             !N.Z.isLoading() && N.Z.canRefetch() && I.ZP.initialPageLoad(),
             s ||

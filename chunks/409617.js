@@ -12,8 +12,8 @@ var i = t(255367),
     u = t(613734),
     h = t(800530),
     _ = t(388032),
-    C = t(473787),
-    N = t(91463);
+    C = t(273732),
+    N = t(75044);
 function p(e) {
     let { className: n, isDsaEligible: t = !1, onClose: l, onNext: p, onBack: g } = e,
         j = (0, u.U0)(),

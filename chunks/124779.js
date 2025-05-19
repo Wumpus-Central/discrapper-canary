@@ -7,7 +7,7 @@ var r = e(481060),
     a = e(471253),
     o = e(939863),
     s = e(388032),
-    d = e(548726);
+    d = e(528853);
 function u(t) {
     let { channel: n, transitionState: e, onClose: u } = t,
         _ = (0, c.Dt)();

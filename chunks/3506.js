@@ -9,8 +9,8 @@ var r = n(512722),
     c = n(481060),
     d = n(660216),
     u = n(13245),
-    g = n(825209),
-    m = n(887278),
+    m = n(825209),
+    g = n(887278),
     p = n(594190),
     h = n(212632),
     f = n(444295),
@@ -27,7 +27,7 @@ n(63063);
 var T = n(13140),
     I = n(981631),
     N = n(388032),
-    y = n(967122);
+    y = n(527224);
 let A = P(null);
 function P(e) {
     var t;
@@ -74,7 +74,7 @@ function D(e) {
         })),
         L = (0, o.e7)([j.ZP], () => j.ZP.getOverlayKeybind()),
         B = (0, _.Z)({ location: 'overlay_user_settings' }),
-        M = (0, m.$1)(),
+        M = (0, g.$1)(),
         U = P(A);
     return (
         a().isEqual(U, A) || (v.default.track(I.rMx.OVERLAY_SETTINGS_UPDATED, U), (A = U)),
@@ -110,7 +110,7 @@ function D(e) {
                                 (0, i.jsx)(c.xJW, {
                                     title: N.intl.string(N.t.VsAZcH),
                                     className: y.enableOverlayItem,
-                                    children: (0, i.jsx)(g.Z, {
+                                    children: (0, i.jsx)(m.Z, {
                                         disabled: !l,
                                         defaultValue: null != L ? L.shortcut : [],
                                         onChange: function (e) {

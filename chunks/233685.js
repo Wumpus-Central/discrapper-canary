@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var i = n(255367);
 n(73800);
 var r = n(442837),
@@ -8,9 +8,9 @@ var r = n(442837),
     o = n(39604),
     c = n(442334),
     d = n(388032),
-    u = n(802454),
-    g = n(948865);
-function m() {
+    u = n(770659),
+    m = n(490411);
+function g() {
     let e = (0, r.e7)([a.Z], () => a.Z.getSettings().storageLocation),
         t = async () => {
             let e = await l.Z.fileManager.showOpenDialog({
@@ -24,7 +24,7 @@ function m() {
             note: d.intl.string(d.t.svjwGh),
             className: u.formItem,
             children: (0, i.jsx)(s.P3F, {
-                className: g.selectControl,
+                className: m.selectControl,
                 'aria-label': d.intl.formatToPlainString(d.t.iMONTk, { storageLocation: e }),
                 onClick: t,
                 children: (0, i.jsx)(s.oil, {

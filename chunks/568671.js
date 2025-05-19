@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var i = n(255367);
 n(73800);
 var r = n(481060),
@@ -6,10 +6,10 @@ var r = n(481060),
     l = n(503899),
     a = n(292352),
     o = n(981631),
-    c = n(332495),
+    c = n(127941),
     d = n(388032),
-    u = n(289581);
-function g() {
+    u = n(962075);
+function m() {
     return (0, i.jsxs)(r.zxk, {
         innerClassName: u.qrCodeButtonContent,
         size: r.zxk.Sizes.LARGE,

@@ -8,12 +8,12 @@ var i = n(255367),
     c = n(607070),
     d = n(530618),
     u = n(74538),
-    g = n(937615),
-    m = n(230916),
+    m = n(937615),
+    g = n(230916),
     p = n(798769),
     h = n(474936),
     f = n(388032),
-    b = n(583532),
+    b = n(110009),
     _ = n(982404),
     x = n(299156);
 function E(e) {
@@ -22,12 +22,12 @@ function E(e) {
         v = (0, l.wj)(S) ? _ : x,
         T = r.useRef(null),
         [I, N] = r.useState(!1),
-        y = (0, m._)(t, h.Xh.PREMIUM_MONTH_TIER_2, O),
+        y = (0, g._)(t, h.Xh.PREMIUM_MONTH_TIER_2, O),
         A = (0, u.aS)(h.Xh.PREMIUM_MONTH_TIER_2, !1, !1, {
             currency: t.currency,
             paymentSourceId: t.paymentSourceId
         }),
-        P = (0, g.T4)(A.amount, A.currency),
+        P = (0, m.T4)(A.amount, A.currency),
         R = (0, s.e7)([c.Z], () => c.Z.useReducedMotion);
     if (
         (r.useEffect(() => {

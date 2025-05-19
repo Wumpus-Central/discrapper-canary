@@ -5,7 +5,7 @@ var i = n(120356),
     l = n.n(i),
     o = n(481060),
     s = n(686546),
-    a = n(187105);
+    a = n(238687);
 function c(e) {
     let { className: t, isFolder: n } = e,
         i = (0, o.dQu)(o.TVs.modules.guildbar.AVATAR_SIZE);

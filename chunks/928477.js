@@ -1,16 +1,17 @@
 n.d(t, {
-    JA: () => j,
-    Jw: () => D,
-    Od: () => M,
-    Wj: () => G,
-    gK: () => U,
-    oD: () => x,
-    vH: () => L
+    JA: () => M,
+    Jw: () => w,
+    Od: () => k,
+    Wj: () => U,
+    gK: () => j,
+    oD: () => L,
+    vH: () => D
 }),
     n(35282),
     n(704826),
     n(539854),
-    n(388685);
+    n(388685),
+    n(415506);
 var r = n(73800),
     i = n(544891),
     a = n(570140),
@@ -23,47 +24,46 @@ var r = n(73800),
     f = n(228392),
     _ = n(58873),
     p = n(957730),
-    h = n(608530),
-    m = n(48854),
-    g = n(467798),
-    E = n(592125),
-    b = n(703558),
-    y = n(375954),
-    O = n(300429),
-    v = n(70956),
-    I = n(630388),
-    S = n(709054),
-    T = n(861990),
-    A = n(968437),
-    N = n(665906),
-    C = n(456077),
-    P = n(124368),
-    R = n(981631),
-    w = n(388032),
-    D = (function (e) {
+    h = n(48854),
+    m = n(467798),
+    g = n(592125),
+    E = n(703558),
+    b = n(375954),
+    y = n(300429),
+    O = n(70956),
+    v = n(630388),
+    I = n(709054),
+    S = n(861990),
+    T = n(968437),
+    A = n(665906),
+    N = n(456077),
+    C = n(124368),
+    P = n(981631),
+    R = n(388032),
+    w = (function (e) {
         return (e[(e.Disabled = 1)] = 'Disabled'), (e[(e.Enabled = 2)] = 'Enabled'), (e[(e.PrivateOnly = 3)] = 'PrivateOnly'), e;
     })({});
-function L(e) {
-    let t = (0, N.NE)(e);
-    return (0, N.Xu)(e) ? (t ? 2 : 3) : 1;
+function D(e) {
+    let t = (0, A.NE)(e);
+    return (0, A.Xu)(e) ? (t ? 2 : 3) : 1;
 }
-function x(e, t) {
+function L(e, t) {
     var n;
     return 3 === t || (null != (n = e.isPrivate) && n);
 }
-function k(e, t) {
+function x(e, t) {
     return e.length > t ? e.substring(0, t) + '...' : e;
 }
-function M(e, t) {
+function k(e, t) {
     var n, r, i, a, o, s, l;
-    let c = null == t ? null : y.Z.getMessage(e.id, t),
+    let c = null == t ? null : b.Z.getMessage(e.id, t),
         u = null != (o = null == c || null == (r = c.embeds) || null == (n = r[0]) ? void 0 : n.rawTitle) ? o : '',
         d = null != (s = null == c || null == (a = c.poll) || null == (i = a.question) ? void 0 : i.text) ? s : '';
-    if ('' !== u) return k(u, 40);
+    if ('' !== u) return x(u, 40);
     {
-        if ('' !== d) return k(d, 80);
+        if ('' !== d) return x(d, 80);
         let t = p.ZP.unparse(null != (l = null == c ? void 0 : c.content) ? l : '', e.id, !0),
-            n = (0, C.Z)(t.split('\n')[0], !0);
+            n = (0, N.Z)(t.split('\n')[0], !0);
         n = n.replace(/^[ #-]+/, '');
         let r = [];
         for (;;) {
@@ -80,45 +80,45 @@ function M(e, t) {
             if (t.length > 40) break;
             i = t;
         }
-        return k(i, 40);
+        return x(i, 40);
     }
 }
-function j(e) {
+function M(e) {
     let { parentChannel: t, parentMessageId: n, threadSettings: a, privateThreadMode: o, location: l, onThreadCreated: u, useDefaultThreadName: d, uploadHandler: f } = e;
     return r.useCallback(
         async (e, r, _) => {
             var p;
             let h = null == n,
-                m = x(a, o),
-                g = null != (p = a.name) ? p : '';
-            if ('' === g && d) {
-                let e = M(t, n);
-                g = '' !== e ? e : w.intl.string(w.t['7Xm5QE']);
+                m = L(a, o),
+                b = null != (p = a.name) ? p : '';
+            if ('' === b && d) {
+                let e = k(t, n);
+                b = '' !== e ? e : R.intl.string(R.t['7Xm5QE']);
             }
-            let y = (0, A.WD)(t),
-                O = E.Z.getChannel(S.default.castMessageIdAsChannelId(n)),
-                v = await F(t, [], void 0, () => {
-                    let e = null != n ? R.ANM.CHANNEL_MESSAGE_THREADS(t.id, n) : R.ANM.CHANNEL_THREADS(t.id);
+            let y = (0, T.WD)(t),
+                O = g.Z.getChannel(I.default.castMessageIdAsChannelId(n)),
+                v = await B(t, [], void 0, () => {
+                    let e = null != n ? P.ANM.CHANNEL_MESSAGE_THREADS(t.id, n) : P.ANM.CHANNEL_THREADS(t.id);
                     return i.tn.post({
                         url: e,
                         body: {
-                            name: g,
-                            type: m ? R.d4z.PRIVATE_THREAD : t.type === R.d4z.GUILD_ANNOUNCEMENT ? R.d4z.ANNOUNCEMENT_THREAD : R.d4z.PUBLIC_THREAD,
+                            name: b,
+                            type: m ? P.d4z.PRIVATE_THREAD : t.type === P.d4z.GUILD_ANNOUNCEMENT ? P.d4z.ANNOUNCEMENT_THREAD : P.d4z.PUBLIC_THREAD,
                             auto_archive_duration: y,
                             location: l
                         },
                         rejectWithError: !1
                     });
                 });
-            v !== O && (s.Z.clearDraft(t.id, b.d.ThreadSettings), s.Z.clearDraft(t.id, b.d.FirstThreadMessage), null == u || u(v), (h || e.length > 0 || (null != r && r.length > 0) || (null != _ && _.length > 0)) && B(v, e, r, _, f)), c.Z.clearAll(t.id, b.d.FirstThreadMessage);
+            v !== O && (s.Z.clearDraft(t.id, E.d.ThreadSettings), s.Z.clearDraft(t.id, E.d.FirstThreadMessage), null == u || u(v), (h || e.length > 0 || (null != r && r.length > 0) || (null != _ && _.length > 0)) && G(v, e, r, _, f)), c.Z.clearAll(t.id, E.d.FirstThreadMessage);
         },
         [t, n, a, u, o, l, d, f]
     );
 }
-function U(e, t, n, r, a) {
-    return F(e, [], void 0, () =>
+function j(e, t, n, r, a) {
+    return B(e, [], void 0, () =>
         i.tn.post({
-            url: R.ANM.CHANNEL_THREADS(e.id),
+            url: P.ANM.CHANNEL_THREADS(e.id),
             body: {
                 name: t,
                 type: n,
@@ -129,32 +129,32 @@ function U(e, t, n, r, a) {
         })
     );
 }
-function G(e) {
+function U(e) {
     let { parentChannel: t, name: n, appliedTags: a, analyticsLocations: o, onThreadCreated: l, upload: u, uploadSimple: d } = e;
     return r.useCallback(
         async (e, r, p) => {
-            let m,
-                E = 0,
-                [y, O] = (0, g.Z)(e);
-            y && ((e = O), (E = (0, I.pj)(E, R.iLy.SUPPRESS_NOTIFICATIONS)));
-            let v = (0, A.WD)(t, null),
-                S = R.ANM.CHANNEL_THREADS(t.id) + '?use_nested_fields=true',
-                N = {
+            let h,
+                g = 0,
+                [b, y] = (0, m.Z)(e);
+            b && ((e = y), (g = (0, v.pj)(g, P.iLy.SUPPRESS_NOTIFICATIONS)));
+            let O = (0, T.WD)(t, null),
+                I = P.ANM.CHANNEL_THREADS(t.id) + '?use_nested_fields=true',
+                A = {
                     name: n,
-                    auto_archive_duration: v,
+                    auto_archive_duration: O,
                     applied_tags: a,
                     message: {
                         content: e,
                         sticker_ids: r,
-                        flags: 0 !== E ? E : void 0
+                        flags: 0 !== g ? g : void 0
                     }
                 };
-            if (null != d && (0, h.L)('useCreateForumPostCommon')) {
+            if (null != d) {
                 let e;
                 if (null != p && p.length > 0)
                     try {
                         let t = await d(p);
-                        (e = t.uploaderFile), (N.message.attachments = t.files.map((e, t) => (0, T.B)(e, t)));
+                        (e = t.uploaderFile), (A.message.attachments = t.files.map((e, t) => (0, S.B)(e, t)));
                     } catch (i) {
                         let { file: e, code: n, reason: r } = i;
                         throw (
@@ -168,57 +168,58 @@ function G(e) {
                             i)
                         );
                     }
-                m = await F(t, o, e, () =>
+                h = await B(t, o, e, () =>
                     i.tn.post({
-                        url: S,
-                        body: N,
+                        url: I,
+                        body: A,
                         rejectWithError: !1
                     })
                 );
-            } else
-                m = await F(t, o, void 0, () =>
+            } else if (null != u)
+                h = await B(t, o, void 0, () =>
                     null != p && p.length > 0
-                        ? u(S, N, p)
+                        ? u(I, A, p)
                         : i.tn.post({
-                              url: S,
-                              body: N,
+                              url: I,
+                              body: A,
                               rejectWithError: !1
                           })
                 );
+            else throw Error('No upload handler provided');
             return (
-                s.Z.clearDraft(t.id, b.d.ThreadSettings),
-                s.Z.clearDraft(t.id, b.d.FirstThreadMessage),
-                c.Z.clearAll(t.id, b.d.FirstThreadMessage),
+                s.Z.clearDraft(t.id, E.d.ThreadSettings),
+                s.Z.clearDraft(t.id, E.d.FirstThreadMessage),
+                c.Z.clearAll(t.id, E.d.FirstThreadMessage),
                 (0, f.Je)({
                     guildId: t.guild_id,
                     channelId: t.id,
-                    postId: m.id
+                    postId: h.id
                 }),
-                null == l || l(m),
-                m
+                null == l || l(h),
+                h
             );
         },
         [t, n, a, l, o, d, u]
     );
 }
-function B(e, t, n, r, i) {
+function G(e, t, n, r, i) {
     if (null != i && null != r && r.length > 0) i(e, r, t, n);
     else if (null != n && n.length > 0) return l.Z.sendStickers(e.id, n, t);
     else return l.Z.sendMessage(e.id, p.ZP.parse(e, t));
 }
-async function F(e, t, n, r) {
+async function B(e, t, n, r) {
     let i,
         s = e.isForumLikeChannel();
     try {
         (i = await r()),
             null == i.body
                 ? o.Z.show({
-                      title: w.intl.string(w.t.j2d6Ki),
-                      body: w.intl.string(w.t.fEptJC)
+                      title: R.intl.string(R.t.j2d6Ki),
+                      body: R.intl.string(R.t.fEptJC)
                   })
                 : (a.Z.dispatch({
                       type: 'SLOWMODE_RESET_COOLDOWN',
-                      slowmodeType: O.S.CreateThread,
+                      slowmodeType: y.S.CreateThread,
                       channelId: e.id
                   }),
                   a.Z.dispatch({
@@ -226,36 +227,36 @@ async function F(e, t, n, r) {
                       channelId: i.body.id
                   }));
     } catch (r) {
-        var c, f, p, h, g, b, y, I, S;
-        if ((null == (c = r.body) ? void 0 : c.code) === R.evJ.TOO_MANY_THREADS)
+        var c, f, p, m, E, b, v, I, S;
+        if ((null == (c = r.body) ? void 0 : c.code) === P.evJ.TOO_MANY_THREADS)
             o.Z.show({
-                title: s ? w.intl.string(w.t.vWNFk5) : w.intl.string(w.t['1KEdvL']),
-                body: s ? w.intl.string(w.t.KGaiEB) : w.intl.string(w.t.P0wT5e)
+                title: s ? R.intl.string(R.t.vWNFk5) : R.intl.string(R.t['1KEdvL']),
+                body: s ? R.intl.string(R.t.KGaiEB) : R.intl.string(R.t.P0wT5e)
             });
-        else if ((null == (f = r.body) ? void 0 : f.code) === R.evJ.TOO_MANY_ANNOUNCEMENT_THREADS)
+        else if ((null == (f = r.body) ? void 0 : f.code) === P.evJ.TOO_MANY_ANNOUNCEMENT_THREADS)
             o.Z.show({
-                title: w.intl.string(w.t['1KEdvL']),
-                body: w.intl.string(w.t.jDMxz8)
+                title: R.intl.string(R.t['1KEdvL']),
+                body: R.intl.string(R.t.jDMxz8)
             });
-        else if ((null == (p = r.body) ? void 0 : p.code) === R.evJ.SLOWMODE_RATE_LIMITED) {
+        else if ((null == (p = r.body) ? void 0 : p.code) === P.evJ.SLOWMODE_RATE_LIMITED) {
             let t = null != (b = r.body.retry_after) ? b : 0;
             t > 0 &&
                 a.Z.dispatch({
                     type: 'SLOWMODE_SET_COOLDOWN',
                     channelId: e.id,
-                    slowmodeType: O.S.CreateThread,
-                    cooldownMs: t * v.Z.Millis.SECOND
+                    slowmodeType: y.S.CreateThread,
+                    cooldownMs: t * O.Z.Millis.SECOND
                 });
         } else if (429 === r.status)
             o.Z.show({
-                title: s ? w.intl.string(w.t.vWNFk5) : w.intl.string(w.t['1KEdvL']),
-                body: w.intl.string(w.t['Whhv4+'])
+                title: s ? R.intl.string(R.t.vWNFk5) : R.intl.string(R.t['1KEdvL']),
+                body: R.intl.string(R.t['Whhv4+'])
             });
-        else if (P.fZ.has(null == (h = r.body) ? void 0 : h.code)) throw r;
-        else if (P.RN.has(null == (g = r.body) ? void 0 : g.code)) {
+        else if (C.fZ.has(null == (m = r.body) ? void 0 : m.code)) throw r;
+        else if (C.RN.has(null == (E = r.body) ? void 0 : E.code)) {
             if (null != n)
-                if ((null == (y = r.body) ? void 0 : y.code) === R.evJ.EXPLICIT_CONTENT) {
-                    let t = (0, m.r)();
+                if ((null == (v = r.body) ? void 0 : v.code) === P.evJ.EXPLICIT_CONTENT) {
+                    let t = (0, h.r)();
                     null != r.body.attachments &&
                         r.body.attachments.length > 0 &&
                         (a.Z.dispatch({
@@ -278,7 +279,7 @@ async function F(e, t, n, r) {
                     u.Z.addConditionalChangeListener(() => {
                         let n = u.Z.getAndDeleteMostRecentUserCreatedThreadId();
                         if (null != n) {
-                            let r = E.Z.getChannel(n);
+                            let r = g.Z.getChannel(n);
                             return (
                                 a.Z.wait(() => {
                                     null == r ? t() : e(r);
@@ -290,14 +291,14 @@ async function F(e, t, n, r) {
             });
         } else
             o.Z.show({
-                title: w.intl.string(w.t.j2d6Ki),
-                body: w.intl.string(w.t.fEptJC)
+                title: R.intl.string(R.t.j2d6Ki),
+                body: R.intl.string(R.t.fEptJC)
             });
     }
     let T = await new Promise((e, t) => {
         null == i.body && t(),
-            E.Z.addConditionalChangeListener(() => {
-                let t = E.Z.getChannel(i.body.id);
+            g.Z.addConditionalChangeListener(() => {
+                let t = g.Z.getChannel(i.body.id);
                 if (null != t)
                     return (
                         a.Z.wait(() => {
@@ -310,7 +311,7 @@ async function F(e, t, n, r) {
     try {
         await l.Z.fetchMessages({
             channelId: T.id,
-            limit: R.AQB
+            limit: P.AQB
         });
     } catch (e) {}
     return T;

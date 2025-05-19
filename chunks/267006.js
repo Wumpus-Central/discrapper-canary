@@ -8,12 +8,12 @@ var i = n(255367),
     c = n(846027),
     d = n(921801),
     u = n(131951),
-    g = n(996073),
-    m = n(494620),
+    m = n(996073),
+    g = n(494620),
     p = n(526761),
     h = n(726985),
     f = n(388032),
-    b = n(20493);
+    b = n(971005);
 function _(e) {
     let { refreshStyles: t = !1 } = e,
         n = (0, a.e7)([u.Z], () => u.Z.getExperimentalEncoders());
@@ -35,7 +35,7 @@ function x(e) {
             hardwareEncoding: u.Z.getHardwareEncoding()
         })),
         x = r.useRef(null);
-    (0, g.Z)(x, p.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION);
+    (0, m.Z)(x, p.KQ.VoiceAndVideoScrollPositions.HARDWARE_ACCELERATION);
     let E = r.useCallback((e) => {
             e
                 ? c.Z.setHardwareEncoding(!0)
@@ -126,8 +126,8 @@ function x(e) {
                                 children: f.intl.string(f.t.Sln58f)
                             }),
                             !s &&
-                                (0, i.jsx)(m.Z, {
-                                    look: m.z.WARNING,
+                                (0, i.jsx)(g.Z, {
+                                    look: g.z.WARNING,
                                     children: f.intl.string(f.t['Uz6L6+'])
                                 })
                         ]

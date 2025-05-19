@@ -16,7 +16,7 @@ var r = t(442837),
     g = t(179828),
     j = t(228168),
     m = t(388032),
-    b = t(349966);
+    b = t(577069);
 function x(e) {
     let { user: n, currentUser: t, displayProfile: x, guildId: Z, subsection: O, onClose: y } = e,
         { trackUserProfileAction: I } = (0, d.KZ)(),

@@ -4,7 +4,7 @@ var r = n(255367),
     i = n(481060),
     s = n(812652),
     o = n(388032),
-    a = n(79309);
+    a = n(12584);
 function c(e) {
     let { align: t = 'left', useSimplifiedMenu: n = !1 } = e,
         c = l.useRef(null);

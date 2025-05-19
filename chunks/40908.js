@@ -6,9 +6,9 @@ let l = [];
 function a(e) {
     let { visible: t, autocompleterResultTypes: n, autocompleterOptions: a, autocompleterBeforeCreateSearchContext: o } = e,
         [c, d] = i.useState(''),
-        [u, g] = i.useState(l),
-        m = i.useCallback((e, t) => {
-            '' === (t = t.trim()).trim() ? g(l) : g(e);
+        [u, m] = i.useState(l),
+        g = i.useCallback((e, t) => {
+            '' === (t = t.trim()).trim() ? m(l) : m(e);
         }, []);
     i.useEffect(
         () =>
@@ -17,7 +17,7 @@ function a(e) {
             }),
         []
     );
-    let [p] = i.useState(() => new s.Z(m, n, void 0, a));
+    let [p] = i.useState(() => new s.Z(g, n, void 0, a));
     return (
         i.useEffect(() => {
             t ? (null == o || o(p), p.createSearchContext()) : (p.clean(), d(''));

@@ -9,9 +9,9 @@ var r = n(120356),
     c = n(726542),
     d = n(122021),
     u = n(231757),
-    g = n(626135),
-    m = n(981631),
-    p = n(286990);
+    m = n(626135),
+    g = n(981631),
+    p = n(786940);
 let h = (e) => {
     let { disabled: t = !1, type: n, className: r, innerClassName: h, onConnect: f } = e,
         b = (0, o.ZP)(),
@@ -40,7 +40,7 @@ let h = (e) => {
                                               platformType: t.type,
                                               location: 'Friends List'
                                           }),
-                                              g.default.track(m.rMx.ACCOUNT_LINK_STEP, {
+                                              m.default.track(g.rMx.ACCOUNT_LINK_STEP, {
                                                   previous_step: 'desktop connections',
                                                   current_step: 'desktop oauth',
                                                   platform_type: t.type

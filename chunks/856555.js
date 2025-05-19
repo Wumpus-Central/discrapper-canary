@@ -1,6 +1,6 @@
 n.d(t, {
-    EQ: () => O,
-    Rg: () => E
+    EQ: () => E,
+    Rg: () => _
 });
 var r = n(255367),
     i = n(73800),
@@ -39,43 +39,20 @@ function g(e) {
     }
     return e;
 }
-function m(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                r,
-                i = {},
-                l = Object.keys(e);
-            for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-            return i;
-        })(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var l = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-let b = (e) => {
-        var { tailLeftOffset: t = 22 } = e,
-            n = m(e, ['tailLeftOffset']);
-        return (0, r.jsx)(
-            d.tE,
+let m = (e) =>
+        (0, r.jsx)(
+            d.M4,
             g(
                 {
                     titleText: h.intl.string(h.t['duN28/']),
                     descriptionText: h.intl.string(h.t['Veu++f']),
                     ctaText: h.intl.string(h.t.F4SoLC),
-                    tailLeftOffset: t,
                     customIconSrcs: { static: f.Z }
                 },
-                n
+                e
             )
-        );
-    },
-    _ = () => {
+        ),
+    b = () => {
         let e = (0, a.Q3)('VirtualCurrency: ShopOnboardingCoachmark'),
             t = i.useCallback(() => {
                 let t = (0, s.Lk)(document.body.style.getPropertyValue('--custom-channel-header-height'), 48),
@@ -84,60 +61,50 @@ let b = (e) => {
             }, [e]);
         return {
             requiredSpacingFromTop: i.useMemo(() => t(), [t]),
-            tailLeftOffset: e ? 16 : 22,
             isVisualRefreshEnabled: e
         };
     },
-    E = (e) => {
-        var t,
-            n,
-            { positionControlRef: l, targetElementRef: a, children: o } = e,
-            s = m(e, ['positionControlRef', 'targetElementRef', 'children']);
-        let { requiredSpacingFromTop: c, tailLeftOffset: u } = _(),
-            p = i.useRef(null),
-            h = i.useCallback(
+    _ = (e) => {
+        var { positionControlRef: t, targetElementRef: n, children: l } = e,
+            a = (function (e, t) {
+                if (null == e) return {};
+                var n,
+                    r,
+                    i = (function (e, t) {
+                        if (null == e) return {};
+                        var n,
+                            r,
+                            i = {},
+                            l = Object.keys(e);
+                        for (r = 0; r < l.length; r++) (n = l[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+                        return i;
+                    })(e, t);
+                if (Object.getOwnPropertySymbols) {
+                    var l = Object.getOwnPropertySymbols(e);
+                    for (r = 0; r < l.length; r++) (n = l[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+                }
+                return i;
+            })(e, ['positionControlRef', 'targetElementRef', 'children']);
+        let { requiredSpacingFromTop: o } = b(),
+            s = i.useCallback(
                 (e) => {
-                    if ((e.bottom + e.top) / 2 <= c) return !1;
+                    if ((e.bottom + e.top) / 2 <= o) return !1;
                     let t = window.innerHeight - (0, d.t4)();
                     return !(e.bottom > t);
                 },
-                [c]
+                [o]
             );
         return (0, r.jsx)(d.WS, {
-            defaultCoachmarkPosition: 'bottom',
-            disableAutoInvert: !0,
-            targetElementRef: a,
-            positionControlRef: l,
-            popoutElement: (0, r.jsx)(
-                b,
-                ((t = g(
-                    {
-                        coachmarkRef: p,
-                        tailLeftOffset: u
-                    },
-                    s
-                )),
-                (n = n = { renderTail: !0 }),
-                Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-                    : (function (e, t) {
-                          var n = Object.keys(e);
-                          if (Object.getOwnPropertySymbols) {
-                              var r = Object.getOwnPropertySymbols(e);
-                              n.push.apply(n, r);
-                          }
-                          return n;
-                      })(Object(n)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
-                      }),
-                t)
-            ),
-            calculateVisibility: h,
-            spacing: 0,
-            children: o
+            defaultCoachmarkAlign: 'bottom',
+            targetElementRef: n,
+            positionControlRef: t,
+            popoutElement: (0, r.jsx)(m, g({}, a)),
+            calculateVisibility: s,
+            spacing: 12,
+            children: l
         });
     },
-    O = (e) => {
+    E = (e) => {
         let { listScrollerRef: t } = e,
             { enabled: n } = (0, u.W)({ location: 'useShopOnboardingCoachmark' }),
             r = i.useRef(null),

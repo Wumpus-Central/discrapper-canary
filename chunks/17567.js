@@ -35,7 +35,7 @@ function u(e) {
     }
     return e;
 }
-function g(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -53,13 +53,13 @@ function g(e, t) {
         e
     );
 }
-let m = new i.Z('Guilds'),
+let g = new i.Z('Guilds'),
     p = new (class {
         async getAsync(e) {
             let t = performance.now(),
                 n = await c.Z.guilds(e).getMany(),
                 i = performance.now();
-            return m.verbose('loaded in '.concat(i - t, 'ms (guilds: ').concat(n.length, ')')), n;
+            return g.verbose('loaded in '.concat(i - t, 'ms (guilds: ').concat(n.length, ')')), n;
         }
         async getOneAsync(e, t) {
             return await c.Z.guilds(e).get(t);
@@ -107,7 +107,7 @@ let m = new i.Z('Guilds'),
             null != n &&
                 this.put(
                     a.rk(n, {
-                        roles: g(u({}, i), { [e.role.id]: e.role }),
+                        roles: m(u({}, i), { [e.role.id]: e.role }),
                         member: s.ZP.getSelfMember(e.guildId)
                     }),
                     t
@@ -119,7 +119,7 @@ let m = new i.Z('Guilds'),
                 let i = u({}, l.Z.getRoles(e.guildId));
                 delete i[e.roleId];
                 let r = s.ZP.getSelfMember(e.guildId);
-                null != r && (r = g(u({}, r), { roles: r.roles.filter((t) => t !== e.roleId) })),
+                null != r && (r = m(u({}, r), { roles: r.roles.filter((t) => t !== e.roleId) })),
                     this.put(
                         a.rk(n, {
                             roles: i,

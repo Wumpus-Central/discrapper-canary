@@ -14,7 +14,7 @@ var i = n(255367),
     p = n(981631),
     b = n(273504),
     h = n(388032),
-    O = n(466745);
+    O = n(503384);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -63,7 +63,7 @@ function j(e, t) {
     let { perGuildMaxCount: n } = c.I6[v],
         { isLoading: j, saveRule: S, errorMessage: P } = (0, d.w)(),
         { createNewEditingRule: _ } = (0, d.V)(),
-        [Z, N] = r.useState(!1),
+        [N, Z] = r.useState(!1),
         [I, x] = (0, s.I2)(t),
         { rulesByTriggerType: T, updateRule: M } = (0, s.pH)(t),
         A = r.useMemo(() => {
@@ -166,7 +166,7 @@ function j(e, t) {
             id: 'guild-automod-add-selection',
             label: h.intl.formatToPlainString(h.t.Kkjv1t, { keywordCount: R }),
             onFocus: () => {
-                Z || (N(!0), x());
+                N || (Z(!0), x());
             },
             children: k
         })

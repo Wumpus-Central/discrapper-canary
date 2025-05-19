@@ -8,11 +8,11 @@ var i = n(255367),
     c = n(481060),
     d = n(58385),
     u = n(889989),
-    g = n(937615),
-    m = n(624138),
+    m = n(937615),
+    g = n(624138),
     p = n(150414),
     h = n(993553),
-    f = n(53524);
+    f = n(32916);
 function b(e) {
     let { cta: t, storeListing: n, className: s } = e,
         { applicationId: b, benefits: _, description: x } = n,
@@ -21,7 +21,7 @@ function b(e) {
         j = r.useMemo(() => {
             if (null == C || 0 === C.length) return null;
             let e = C[0];
-            return (0, g.xg)(e);
+            return (0, m.xg)(e);
         }, [C]);
     return null == j
         ? null
@@ -57,7 +57,7 @@ function b(e) {
                   ]
               }),
               children: [
-                  !(0, m.Ew)(x) &&
+                  !(0, g.Ew)(x) &&
                       (0, i.jsx)('div', {
                           className: f.description,
                           children: (0, i.jsx)(h.Z, {

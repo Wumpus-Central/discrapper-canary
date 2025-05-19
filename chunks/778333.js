@@ -14,7 +14,7 @@ var r = n(255367),
     h = n(51144),
     g = n(981631),
     _ = n(388032),
-    b = n(273254);
+    b = n(285002);
 function x(e) {
     var t;
     let { invite: n, message: x, getAcceptInviteContext: E } = e,

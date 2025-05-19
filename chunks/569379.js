@@ -1,12 +1,12 @@
 n.d(t, {
-    E: () => c,
+    E: () => l,
     G: () => i
 }),
     n(388685);
 var r = n(73800),
     o = n(481060),
     s = n(410030),
-    l = n(113434);
+    a = n(113434);
 function i() {
     let [{ spring: e }, t] = (0, o.q_F)(() => ({ spring: 0 }), 'animate-always');
     return {
@@ -20,15 +20,15 @@ function i() {
         }, [t])
     };
 }
-function c(e, t) {
+function l(e, t) {
     var n;
-    let r = (0, l.z)(e),
+    let r = (0, a.z)(e),
         o = null != (n = (0, s.i6)()) ? n : 0,
         i = 'var(--green-330)',
-        c = ['var(--background-tertiary)', 'var(--interactive-normal)'];
+        l = ['var(--background-tertiary)', 'var(--interactive-normal)'];
     return {
-        backgroundTop: t ? c[o] : ['#828288', '#CBCDD4'][o],
-        backgroundBottom: t ? c[o] : ['#535356', '#8B8C95'][o],
+        backgroundTop: t ? l[o] : ['#828288', '#CBCDD4'][o],
+        backgroundBottom: t ? l[o] : ['#535356', '#8B8C95'][o],
         foreground: i,
         glow: t && r ? i : '#C4C1D66E'
     };

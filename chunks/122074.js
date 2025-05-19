@@ -25,7 +25,7 @@ var i = n(255367),
     j = n(921944),
     _ = n(871465),
     N = n(388032),
-    P = n(394049);
+    P = n(297906);
 function v(e, t) {
     let n = p.Y.useExperiment({ location: 'guild_context_menu' }, { autoTrackExposure: !0 }),
         i = A(e, void 0, s.z.PREMIUM_CUSTOM_NOTIFICATION_SOUNDS_GUILD_BADGE, n.nestedEntry ? 'trailing' : 'top');
@@ -130,7 +130,7 @@ function A(e, t, s, v) {
             e !== y.aIL
                 ? () =>
                       (0, o.ZDy)(async () => {
-                          let { default: t } = await Promise.all([n.e('5863'), n.e('48445')]).then(n.bind(n, 751212));
+                          let { default: t } = await Promise.all([n.e('5863'), n.e('79376')]).then(n.bind(n, 751212));
                           return (n) => {
                               var r, l;
                               return (0, i.jsx)(

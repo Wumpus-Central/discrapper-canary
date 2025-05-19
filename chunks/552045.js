@@ -9,15 +9,15 @@ var r = n(120356),
     c = n(880257),
     d = n(631885),
     u = n(568671),
-    g = n(292352),
-    m = n(332495),
+    m = n(292352),
+    g = n(127941),
     p = n(388032),
-    h = n(864903),
-    f = n(589608),
+    h = n(9301),
+    f = n(580548),
     b = n(633488),
     _ = n(361848);
 let x = () => {
-        let e = (0, d.mq)(g.ne.ACTIVE),
+        let e = (0, d.mq)(m.ne.ACTIVE),
             t = (0, c.Z)(),
             { handleTabChange: n } = (0, o.Z)();
         return (0, d.VM)() || (t && e.length > 0)
@@ -28,7 +28,7 @@ let x = () => {
                       ? (0, i.jsx)(l.zxk, {
                             fullWidth: !1,
                             size: l.PhG.LARGE,
-                            onClick: () => n(g.dG.REQUESTS),
+                            onClick: () => n(m.dG.REQUESTS),
                             children: p.intl.string(p.t.LhlgY2)
                         })
                       : (0, i.jsx)(u.Z, {})
@@ -36,8 +36,8 @@ let x = () => {
     },
     E = () => {
         let e = (0, c.Z)(),
-            t = (0, a.o)(p.intl.string(m.default.T7GyW1), p.intl.string(m.default.goKE2d)),
-            n = (0, a.o)(p.intl.format(m.default.MXjDSk, { articleLink: 'https://support.discord.com/hc/articles/14155060633623' }), p.intl.format(m.default.EMCf6u, { articleLink: 'https://support.discord.com/hc/articles/14155043715735' }));
+            t = (0, a.o)(p.intl.string(g.default.T7GyW1), p.intl.string(g.default.goKE2d)),
+            n = (0, a.o)(p.intl.format(g.default.MXjDSk, { articleLink: 'https://support.discord.com/hc/articles/14155060633623' }), p.intl.format(g.default.EMCf6u, { articleLink: 'https://support.discord.com/hc/articles/14155043715735' }));
         return (0, i.jsxs)('div', {
             className: s()(h.container, f.box),
             children: [
@@ -66,7 +66,7 @@ let x = () => {
                     className: h.headerImage,
                     children: (0, i.jsx)('img', {
                         src: e ? b : _,
-                        alt: p.intl.string(m.default.ffg6xc)
+                        alt: p.intl.string(g.default.ffg6xc)
                     })
                 })
             ]

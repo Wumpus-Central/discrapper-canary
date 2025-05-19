@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => z,
-    b: () => Z
+    b: () => W
 }),
     n(388685),
     n(314940);
@@ -22,10 +22,10 @@ var r = n(255367),
     b = n(415104),
     j = n(78826),
     v = n(37303),
-    _ = n(134483),
-    y = n(683650),
-    C = n(920916),
-    O = n(341907),
+    y = n(134483),
+    _ = n(683650),
+    O = n(920916),
+    C = n(341907),
     w = n(478977),
     S = n(456799),
     P = n(210851),
@@ -34,8 +34,8 @@ var r = n(255367),
     N = n(749912),
     A = n(815183),
     R = n(899457),
-    B = n(409667);
-function k(e, t, n) {
+    k = n(371772);
+function B(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -59,7 +59,7 @@ function q(e) {
                 })
             )),
             r.forEach(function (t) {
-                k(e, t, n[t]);
+                B(e, t, n[t]);
             });
     }
     return e;
@@ -85,7 +85,7 @@ function I(e, t) {
 let D = ['png', 'gif', 'webp'],
     M = [...D, 'jpg', 'jpeg'],
     L = Array.from(new Set([...M, 'gif', 'mp4', 'webm']));
-function Z(e) {
+function W(e) {
     var t, n;
     return {
         code: 'PREVIEW-MODE-CODE',
@@ -96,7 +96,7 @@ function Z(e) {
         claimedAt: null != (n = null == (t = e.userStatus) ? void 0 : t.claimedAt) ? n : ''
     };
 }
-function W() {
+function Z() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { streamProgressSeconds: t = 0, completedAt: n = null, enrolledAt: r = null, claimedAt: o = null } = e;
     return {
@@ -184,7 +184,7 @@ let V = '1193992107035983872',
         targetedContent: []
     };
 function U() {
-    var e, t, s, d, u, k, Z, V, U, H, z, F, X, K;
+    var e, t, s, d, u, B, W, V, U, H, z, F, K, X;
     let [Y, G] = o.useState(Q),
         J = o.useCallback((e) => {
             G(I(q({}, e), { preview: !0 }));
@@ -194,8 +194,8 @@ function U() {
         [er, eo] = o.useState(!1),
         [es, ea] = o.useState(null),
         ei =
-            ((K = Y.config),
-            (0, i.EQ)(K)
+            ((X = Y.config),
+            (0, i.EQ)(X)
                 .with({ configVersion: 2 }, (e) => e.rewardsConfig.rewards)
                 .exhaustive());
     function el(e, t) {
@@ -274,8 +274,8 @@ function U() {
     }
     function ef() {
         (0, g.Xv)(Y.config)
-            ? (0, C.m)(Y, f.jn.GIFT_INVENTORY_FOR_YOU, !0)
-            : (0, O.openQuestsRewardCodeModal)({
+            ? (0, O.m)(Y, f.jn.GIFT_INVENTORY_FOR_YOU, !0)
+            : (0, C.openQuestsRewardCodeModal)({
                   questId: Y.id,
                   location: f.jn.GIFT_INVENTORY_FOR_YOU,
                   preview: !0,
@@ -293,11 +293,11 @@ function U() {
             children: [
                 (0, r.jsx)(p.X6q, {
                     variant: 'heading-lg/bold',
-                    className: B.heading,
+                    className: k.heading,
                     children: 'Quest Preview Tool'
                 }),
                 (0, r.jsx)('div', {
-                    className: B.fields,
+                    className: k.fields,
                     children: (0, r.jsx)(T.Z, {
                         onSelect: function (e) {
                             ea(e),
@@ -320,11 +320,11 @@ function U() {
                 }),
                 (0, r.jsx)(p.X6q, {
                     variant: 'heading-md/semibold',
-                    className: B.subheading,
+                    className: k.subheading,
                     children: 'Task Config'
                 }),
                 (0, r.jsx)('div', {
-                    className: B.fields,
+                    className: k.fields,
                     children: (0, r.jsx)(N.Z, {
                         taskDuration: eg,
                         taskConfig: Y.config.taskConfig,
@@ -335,11 +335,11 @@ function U() {
                 }),
                 (0, r.jsx)(p.X6q, {
                     variant: 'heading-md/semibold',
-                    className: B.subheading,
+                    className: k.subheading,
                     children: 'Messages'
                 }),
                 (0, r.jsxs)('div', {
-                    className: B.fields,
+                    className: k.fields,
                     children: [
                         (0, r.jsx)(E.Z, {
                             title: 'Quest Name',
@@ -386,11 +386,11 @@ function U() {
                 }),
                 (0, r.jsx)(p.X6q, {
                     variant: 'heading-md/semibold',
-                    className: B.subheading,
+                    className: k.subheading,
                     children: 'Assets'
                 }),
                 (0, r.jsxs)('div', {
-                    className: B.fields,
+                    className: k.fields,
                     children: [
                         (0, r.jsx)(P.Z, {
                             title: 'Hero',
@@ -418,7 +418,7 @@ function U() {
                             assetKey: 'questBarHeroVideo',
                             onFileChange: el,
                             filters: L,
-                            initialValue: null != (X = Y.config.assets.questBarHeroVideo) ? X : void 0
+                            initialValue: null != (K = Y.config.assets.questBarHeroVideo) ? K : void 0
                         }),
                         (0, r.jsx)(P.Z, {
                             title: 'Game Tile',
@@ -456,7 +456,7 @@ function U() {
                                         assetKey: 'videoPlayerThumbnail',
                                         onFileChange: ec,
                                         filters: M,
-                                        initialValue: null == (Z = Y.config.videoMetadata) || null == (k = Z.assets) ? void 0 : k.videoPlayerThumbnail
+                                        initialValue: null == (W = Y.config.videoMetadata) || null == (B = W.assets) ? void 0 : B.videoPlayerThumbnail
                                     }),
                                     (0, r.jsx)(P.Z, {
                                         title: 'Quest Bar Preview Video (optional)',
@@ -483,11 +483,11 @@ function U() {
                             children: [
                                 (0, r.jsxs)(p.X6q, {
                                     variant: 'heading-md/semibold',
-                                    className: B.subheading,
+                                    className: k.subheading,
                                     children: ['Reward #', t + 1]
                                 }),
                                 (0, r.jsxs)('div', {
-                                    className: B.fields,
+                                    className: k.fields,
                                     children: [
                                         (0, r.jsx)(E.Z, {
                                             title: 'Name',
@@ -555,14 +555,14 @@ function U() {
                 ),
                 (0, r.jsx)(p.X6q, {
                     variant: 'heading-md/semibold',
-                    className: B.subheading,
+                    className: k.subheading,
                     children: 'Colors & Quest States'
                 }),
                 (0, r.jsxs)('div', {
-                    className: B.fields,
+                    className: k.fields,
                     children: [
                         (0, r.jsxs)('div', {
-                            className: B.fields,
+                            className: k.fields,
                             style: { marginBottom: 0 },
                             children: [
                                 (0, r.jsx)(w.Z, {
@@ -580,7 +580,7 @@ function U() {
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: B.fields,
+                            className: k.fields,
                             children: (0, r.jsx)(A.Z, {})
                         }),
                         (0, r.jsx)(R.Z, {
@@ -590,12 +590,12 @@ function U() {
                                         J(I(q({}, Y), { userStatus: null }));
                                         break;
                                     case R.a.ENROLLED:
-                                        J(I(q({}, Y), { userStatus: W({ enrolledAt: new Date().toISOString() }) }));
+                                        J(I(q({}, Y), { userStatus: Z({ enrolledAt: new Date().toISOString() }) }));
                                         break;
                                     case R.a.COMPLETED_25:
                                         J(
                                             I(q({}, Y), {
-                                                userStatus: W({
+                                                userStatus: Z({
                                                     enrolledAt: new Date().toISOString(),
                                                     streamProgressSeconds: 0.25 * eg
                                                 })
@@ -605,7 +605,7 @@ function U() {
                                     case R.a.COMPLETED_50:
                                         J(
                                             I(q({}, Y), {
-                                                userStatus: W({
+                                                userStatus: Z({
                                                     enrolledAt: new Date().toISOString(),
                                                     streamProgressSeconds: 0.5 * eg
                                                 })
@@ -615,7 +615,7 @@ function U() {
                                     case R.a.COMPLETED_75:
                                         J(
                                             I(q({}, Y), {
-                                                userStatus: W({
+                                                userStatus: Z({
                                                     enrolledAt: new Date().toISOString(),
                                                     streamProgressSeconds: 0.75 * eg
                                                 })
@@ -625,7 +625,7 @@ function U() {
                                     case R.a.COMPLETED_100:
                                         J(
                                             I(q({}, Y), {
-                                                userStatus: W({
+                                                userStatus: Z({
                                                     completedAt: new Date().toISOString(),
                                                     enrolledAt: new Date().toISOString(),
                                                     streamProgressSeconds: eg
@@ -636,7 +636,7 @@ function U() {
                                     case R.a.CLAIMED:
                                         J(
                                             I(q({}, Y), {
-                                                userStatus: W({
+                                                userStatus: Z({
                                                     claimedAt: new Date().toISOString(),
                                                     completedAt: new Date().toISOString(),
                                                     enrolledAt: new Date().toISOString(),
@@ -652,18 +652,18 @@ function U() {
                 }),
                 (0, r.jsx)(p.X6q, {
                     variant: 'heading-lg/bold',
-                    className: B.heading,
+                    className: k.heading,
                     children: 'Component Previews'
                 }),
                 (0, r.jsxs)('div', {
-                    className: B.componentPreviews,
+                    className: k.componentPreviews,
                     children: [
                         (0, r.jsxs)(S.Z, {
                             withBorder: !0,
                             children: [
                                 (0, r.jsx)(p.vwX, { children: 'Quest Bar' }),
                                 (0, r.jsxs)('div', {
-                                    className: B.questBarPreviewWrapper,
+                                    className: k.questBarPreviewWrapper,
                                     children: [
                                         (null == (H = Y.userStatus) ? void 0 : H.claimedAt) != null &&
                                             (0, r.jsx)(p.Text, {
@@ -672,7 +672,7 @@ function U() {
                                                 children: 'The Quest Bar is hidden when the user has claimed the reward.'
                                             }),
                                         (0, r.jsx)('div', {
-                                            className: B.questBarPreview,
+                                            className: k.questBarPreview,
                                             children: (0, r.jsx)(j.p, {
                                                 isPreview: !0,
                                                 source: 'preview',
@@ -694,7 +694,7 @@ function U() {
                                     questId: '0',
                                     children: (0, r.jsx)(b.Z, {
                                         quest: Y,
-                                        className: B.questTile,
+                                        className: k.questTile,
                                         questContent: f.jn.QUEST_HOME_DESKTOP,
                                         contentPosition: 0,
                                         rowIndex: 0
@@ -713,14 +713,14 @@ function U() {
                                         children: 'The Quest Channel Call Header is hidden when the user has claimed the reward.'
                                     }),
                                 (0, r.jsx)('div', {
-                                    className: B.questBarPreviewWrapper,
+                                    className: k.questBarPreviewWrapper,
                                     children: (0, r.jsx)(j.p, {
                                         isPreview: !0,
                                         source: 'preview',
                                         questId: '0',
                                         children: (0, r.jsx)('div', {
-                                            className: B.questChannelCallHeaderPreview,
-                                            children: (0, r.jsx)(_.Z, {
+                                            className: k.questChannelCallHeaderPreview,
+                                            children: (0, r.jsx)(y.Z, {
                                                 channelId: '123',
                                                 previewQuest: Y,
                                                 isParticipatingOverride: et
@@ -731,7 +731,7 @@ function U() {
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: B.toggleSwitch,
+                            className: k.toggleSwitch,
                             children: (0, r.jsx)(p.xJW, {
                                 children: (0, r.jsx)(p.j7V, {
                                     value: et,
@@ -748,7 +748,7 @@ function U() {
                             children: [
                                 (0, r.jsx)(p.vwX, { children: 'Quest Card Embed' }),
                                 er
-                                    ? (0, r.jsx)(y.o, { questId: Y.id })
+                                    ? (0, r.jsx)(_.o, { questId: Y.id })
                                     : (0, r.jsx)(
                                           v.Z,
                                           {
@@ -760,7 +760,7 @@ function U() {
                             ]
                         }),
                         (0, r.jsx)('div', {
-                            className: B.toggleSwitch,
+                            className: k.toggleSwitch,
                             children: (0, r.jsx)(p.xJW, {
                                 children: (0, r.jsx)(p.j7V, {
                                     value: er,
@@ -779,7 +779,7 @@ function U() {
                                     (0, r.jsx)(p.zxk, {
                                         onClick: () => {
                                             (0, p.ZDy)(async () => {
-                                                let { default: e } = await Promise.all([n.e('66816'), n.e('32249'), n.e('63942')]).then(n.bind(n, 536687));
+                                                let { default: e } = await Promise.all([n.e('66816'), n.e('32249'), n.e('80705')]).then(n.bind(n, 536687));
                                                 return (t) => {
                                                     var n;
                                                     return (0, r.jsx)(
@@ -813,9 +813,9 @@ class H extends o.Component {
         let { error: e, renderKey: t } = this.state;
         return null != e
             ? (0, r.jsxs)('div', {
-                  className: B.errorBoundary,
+                  className: k.errorBoundary,
                   children: [
-                      (0, r.jsx)(p.P4T, { className: B.errorBoundaryIcon }),
+                      (0, r.jsx)(p.P4T, { className: k.errorBoundaryIcon }),
                       (0, r.jsx)(p.X6q, {
                           variant: 'heading-lg/semibold',
                           children: 'Something broke in the Quest preview tool :('
@@ -827,9 +827,9 @@ class H extends o.Component {
                       }),
                       null != e.message &&
                           (0, r.jsx)(p.Zbd, {
-                              className: B.errorMessageWrapper,
+                              className: k.errorMessageWrapper,
                               children: (0, r.jsx)('code', {
-                                  className: B.errorMessage,
+                                  className: k.errorMessage,
                                   children: e.message
                               })
                           })
@@ -839,11 +839,11 @@ class H extends o.Component {
     }
     constructor(...e) {
         super(...e),
-            k(this, 'state', {
+            B(this, 'state', {
                 error: null,
                 renderKey: 0
             }),
-            k(this, 'handleResetState', () => {
+            B(this, 'handleResetState', () => {
                 this.setState((e) => ({
                     error: null,
                     renderKey: e.renderKey + 1

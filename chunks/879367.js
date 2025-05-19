@@ -8,7 +8,7 @@ var i = n(255367),
     a = n(81643),
     _ = n(469775),
     c = n(388032),
-    I = n(23525);
+    I = n(709252);
 let N = function (e) {
     let { onClose: t, onComplete: n, onCancel: s, transitionState: N, webviewUrl: L, useV1: S = !1 } = e,
         A = (0, r.GE)(),

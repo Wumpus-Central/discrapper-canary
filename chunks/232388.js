@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var i = n(255367);
 n(73800);
 var r = n(442837),
@@ -8,11 +8,11 @@ var r = n(442837),
     o = n(131951),
     c = n(726985),
     d = n(388032),
-    u = n(20493);
-function g(e) {
+    u = n(971005);
+function m(e) {
     let { refreshStyles: t = !1 } = e,
         n = (0, r.e7)([o.Z], () => o.Z.getQoS()),
-        g = (0, i.jsx)(s.j7V, {
+        m = (0, i.jsx)(s.j7V, {
             value: n,
             onChange: (e) => l.Z.setQoS(e),
             note: d.intl.string(d.t.I1Eoqq),
@@ -22,11 +22,11 @@ function g(e) {
     return (0, i.jsx)(a.F, {
         setting: c.s6.VOICE_AND_VIDEO_ADVANCED_QOS,
         children: t
-            ? g
+            ? m
             : (0, i.jsx)(s.hjN, {
                   className: u.marginBottom20,
                   title: d.intl.string(d.t.uancuL),
-                  children: g
+                  children: m
               })
     });
 }

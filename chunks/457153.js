@@ -6,7 +6,7 @@ var r = n(255367),
     i = n(950035),
     l = n(113434),
     c = n(95985),
-    d = n(667904);
+    d = n(370661);
 let u = o.forwardRef(function (e, t) {
     var n;
     let { className: s, expansionSpring: u, isExpanded: p, isExpansionAnimationComplete: m, quest: f, taskDetails: g } = e,

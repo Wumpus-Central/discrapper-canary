@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(100527),
     d = n(906732),
     u = n(335131),
-    g = n(597688),
-    m = n(1870),
+    m = n(597688),
+    g = n(1870),
     p = n(884697),
     h = n(175756),
     f = n(104494),
@@ -37,7 +37,7 @@ var i = n(255367),
     B = n(474936),
     M = n(526761),
     U = n(388032),
-    V = n(23821);
+    V = n(651408);
 function G(e) {
     var t, n;
     let { user: G, isVisible: F, shouldShow: H } = e,
@@ -104,8 +104,8 @@ function G(e) {
         el = (e) => {
             if (e) {
                 if (((0, a.I5)(q), (0, S.z5)(K), (0, S.ho)(X), null != J)) {
-                    let e = g.Z.getProduct(J.skuId);
-                    null != e && (0, p.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, a.cV)(J)) : null != m.Z.getPurchase(J.skuId) && (0, a.cV)(J);
+                    let e = m.Z.getProduct(J.skuId);
+                    null != e && (0, p.G1)(e) ? (0, u.fK)(e.skuId).then(() => (0, a.cV)(J)) : null != g.Z.getPurchase(J.skuId) && (0, a.cV)(J);
                 }
                 I.default.track(L.rMx.TRY_IT_OUT_PRESET_SELECTED, { preset: ee });
             }

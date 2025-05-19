@@ -2,7 +2,8 @@ n.d(t, {
     ZO: () => s,
     df: () => l,
     hF: () => c,
-    j2: () => u
+    j2: () => u,
+    qD: () => d
 });
 var r = n(544891),
     i = n(570140),
@@ -80,4 +81,10 @@ function c(e) {
 }
 function u() {
     return i.Z.dispatch({ type: 'VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK_CLOSE' });
+}
+function d(e) {
+    return i.Z.dispatch({
+        type: 'VIRTUAL_CURRENCY_SET_BALANCE_PILL_OVERLAY',
+        balancePillOverlay: e
+    });
 }

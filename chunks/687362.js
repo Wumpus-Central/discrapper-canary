@@ -1,6 +1,6 @@
 n.d(t, {
     a: () => u,
-    v: () => g
+    v: () => m
 });
 var i = n(704215),
     r = n(605236),
@@ -23,6 +23,6 @@ function u() {
             dismissibleContentType: e.nitroTenureStatus === c.EB.REDEEMABLE ? i.z.TENURE_REWARD_REDEEMABLE_CONFETTI : void 0
         };
 }
-function g(e) {
+function m(e) {
     return (null == e ? void 0 : e.showNotification) === !0 && (0, o.rM)(e).some((e) => !(0, r.un)(e));
 }

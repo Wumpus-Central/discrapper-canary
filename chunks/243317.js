@@ -3,7 +3,7 @@ var r = n(255367);
 n(73800);
 var o = n(481060),
     l = n(388032),
-    i = n(156189);
+    i = n(245778);
 function s() {
     return (0, r.jsx)(o.ua7, {
         text: l.intl.string(l.t['RO/KYm']),

@@ -6,7 +6,7 @@ var a = e(481060),
     s = e(39604),
     r = e(981631),
     d = e(388032),
-    o = e(931009);
+    o = e(287007);
 function c(t) {
     let { transitionState: i, onClose: e, onBeforeDelete: c, onAfterDelete: h, clip: m } = t;
     return (0, n.jsxs)(a.Y0X, {

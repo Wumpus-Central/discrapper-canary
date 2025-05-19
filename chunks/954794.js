@@ -8,9 +8,9 @@ var i = n(255367),
     c = n(823379),
     d = n(882029),
     u = n(955204),
-    g = n(248998),
-    m = n(388032),
-    p = n(167407);
+    m = n(248998),
+    g = n(388032),
+    p = n(484249);
 function h(e) {
     let { onBackClick: t } = e,
         n = (0, s.e7)([d.Z], () => d.Z.getAllUnlockedAchievements()),
@@ -37,7 +37,7 @@ function h(e) {
                         (0, i.jsx)(a.Text, {
                             variant: 'text-lg/normal',
                             color: 'text-normal',
-                            children: m.intl.string(m.t['13/7kZ'])
+                            children: g.intl.string(g.t['13/7kZ'])
                         })
                     ]
                 })
@@ -51,12 +51,12 @@ function h(e) {
                             (0, i.jsx)(a.X6q, {
                                 variant: 'heading-lg/extrabold',
                                 color: 'header-primary',
-                                children: m.intl.string(m.t['6jI0hY'])
+                                children: g.intl.string(g.t['6jI0hY'])
                             }),
                             (0, i.jsx)(a.Text, {
                                 variant: 'text-md/normal',
                                 color: 'header-secondary',
-                                children: m.intl.string(m.t.GuUItb)
+                                children: g.intl.string(g.t.GuUItb)
                             })
                         ]
                     }),
@@ -79,7 +79,7 @@ function h(e) {
                         children: h.map((e) => {
                             let { achievementId: t, dateUnlocked: n } = e;
                             return (0, i.jsx)(
-                                g.Z,
+                                m.Z,
                                 {
                                     achievementId: t,
                                     dateUnlocked: n
@@ -98,12 +98,12 @@ function h(e) {
                             children: (0, i.jsx)(a.Text, {
                                 variant: 'text-md/bold',
                                 color: 'header-secondary',
-                                children: m.intl.string(m.t.GFyMg4)
+                                children: g.intl.string(g.t.GFyMg4)
                             })
                         }),
                         (0, i.jsx)('div', {
                             className: p.achievementGrid,
-                            children: f.map((e) => (0, i.jsx)(g.Z, { achievementId: e.id }, e.id))
+                            children: f.map((e) => (0, i.jsx)(m.Z, { achievementId: e.id }, e.id))
                         })
                     ]
                 }),

@@ -9,7 +9,7 @@ var n = r(255367),
     u = r(377171),
     d = r(594174),
     p = r(388032),
-    b = r(908998);
+    b = r(245271);
 let f = (e) => {
         let { nameplate: t, isPurchased: r = !1, isSelected: o = !1, onClick: p } = e,
             f = (0, a.e7)([d.default], () => d.default.getCurrentUser()),

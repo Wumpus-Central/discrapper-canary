@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(442837),
     d = n(481060),
     u = n(159351),
-    g = n(366939),
-    m = n(623573),
+    m = n(366939),
+    g = n(623573),
     p = n(190947),
     h = n(275850),
     f = n(906732),
@@ -23,8 +23,8 @@ var i = n(255367),
     S = n(374649),
     v = n(981631),
     T = n(388032),
-    I = n(628654),
-    N = n(893354);
+    I = n(904860),
+    N = n(378426);
 function y(e) {
     let { subscription: t, onPaymentSourceAdded: n, highlightAddPaymentMethodButton: s, dropdownClassName: a, analyticsLocation: y, currentInvoicePreview: P, disabled: R = !1 } = e,
         D = (0, c.e7)([_.Z], () => _.Z.hidePersonalInformation),
@@ -36,7 +36,7 @@ function y(e) {
         [V, G] = r.useState(t.currency),
         F = async (e, n, i) => {
             if (null == t) throw Error('missing subscription and paymentSource');
-            null == e ? await g.fG(t, n, i, L, y) : await g.tq(t, e, n, i, L, y), U(!1), G(n);
+            null == e ? await m.fG(t, n, i, L, y) : await m.tq(t, e, n, i, L, y), U(!1), G(n);
         },
         H = async (e, n, i) => {
             U(!0);
@@ -84,7 +84,7 @@ function y(e) {
                 async () => (e) => {
                     var t, n;
                     return (0, i.jsx)(
-                        m.default,
+                        g.default,
                         ((t = (function (e) {
                             for (var t = 1; t < arguments.length; t++) {
                                 var n = null != arguments[t] ? arguments[t] : {},

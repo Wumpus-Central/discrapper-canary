@@ -2,7 +2,7 @@ t.d(n, { j: () => o });
 var r = t(255367),
     i = t(73800),
     l = t(777207),
-    s = t(210523);
+    s = t(626794);
 function o(e) {
     let { title: n, subtitle: t, iconSrc: o, backgroundSrc: u, animatedBackgroundSrc: a, prefersReducedMotion: c = !0 } = e,
         d = i.useMemo(() => {

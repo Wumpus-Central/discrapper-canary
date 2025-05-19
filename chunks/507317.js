@@ -15,7 +15,7 @@ var r = n(255367),
     h = n(486324),
     x = n(200299),
     b = n(388032),
-    j = n(773100);
+    j = n(583830);
 let _ = function (e) {
     let { guild: t } = e,
         _ = t.hasFeature(p.oNc.BANNER),
@@ -23,7 +23,7 @@ let _ = function (e) {
             (e, i) => {
                 if (null == e || void 0 === i) return void g.Z.saveGuild(t.id, { homeHeader: null });
                 (0, l.ZDy)(async () => {
-                    let { default: l } = await Promise.all([n.e('91689'), n.e('59732'), n.e('77942')]).then(n.bind(n, 712451));
+                    let { default: l } = await Promise.all([n.e('91689'), n.e('59732'), n.e('80354')]).then(n.bind(n, 712451));
                     return (n) =>
                         (0, r.jsx)(
                             l,

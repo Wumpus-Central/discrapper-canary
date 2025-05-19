@@ -1,4 +1,4 @@
-n.d(t, { Z: () => h }), n(35282), n(539854), n(388685);
+n.d(t, { Z: () => h }), n(704826), n(35282), n(539854), n(388685);
 var i = n(255367);
 n(73800);
 var r = n(481060),
@@ -45,11 +45,12 @@ function h(e, t, n, h) {
         E = (e) => {
             s.default.track(g.rMx.CONTEXT_MENU_LINK_COPIED, p({ hostname: y }, (0, f.v)())), d.ZP.copy(e), (0, r.showToast)((0, r.createToast)(m.intl.string(m.t['L/PwZW']), r.ToastType.SUCCESS));
         },
-        v = (n) => {
+        v = (n, i) => {
+            let r = !0 === i ? e.replace('tel:', 'sms:') : e;
             s.default.track(g.rMx.CONTEXT_MENU_LINK_OPENED, p({ hostname: y }, (0, f.v)())),
                 (0, c.q)(
                     {
-                        href: e,
+                        href: r,
                         trusted: (0, c.r)(e, t),
                         shouldConfirm: !0
                     },
@@ -72,7 +73,19 @@ function h(e, t, n, h) {
                 },
                 'copy-native-contact'
             )
-        );
+        ),
+            'tel' === S[1] &&
+                j.push(
+                    (0, i.jsx)(
+                        r.sNh,
+                        {
+                            id: 'native-send-sms',
+                            label: m.intl.string(m.t['+wbjMT']),
+                            action: (e) => v(e, !0)
+                        },
+                        'native-send-sms'
+                    )
+                );
     }
     return [
         (0, i.jsx)(

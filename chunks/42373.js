@@ -8,15 +8,15 @@ var i = n(255367),
     c = n(481060),
     d = n(410030),
     u = n(70097),
-    g = n(626135),
-    m = n(526167),
+    m = n(626135),
+    g = n(526167),
     p = n(572995),
     h = n(981631),
     f = n(869783),
-    b = n(888723);
+    b = n(113929);
 let _ = (e) => {
     let { name: t, title: n, description: s, descriptionCta: _, previewImage: x, videoUrl: E, shouldLoadVideo: C, index: j, size: O, customVideoStyle: S, isReducedMotion: v, onClick: T } = e,
-        I = (0, m.rO)(),
+        I = (0, g.rO)(),
         N = r.useRef(null),
         y = r.useRef(0),
         A = (function (e) {
@@ -52,7 +52,7 @@ let _ = (e) => {
         R = (0, o.wj)(P),
         D = R ? c.Ttl.WHITE : c.Ttl.BRAND,
         Z = (0, a.debounce)(() => {
-            g.default.track(h.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, a.snakeCase)(t) });
+            m.default.track(h.rMx.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, a.snakeCase)(t) });
         }, 800),
         w = () => {
             null == N.current || v || ((N.current.currentTime = y.current), N.current.play());

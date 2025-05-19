@@ -17,7 +17,7 @@ var c = t(442837),
     I = t(643518),
     y = t(228168),
     h = t(981631),
-    x = t(405666);
+    x = t(191902);
 function g(e) {
     var n;
     let { user: t, currentUser: g, guildId: j, channelId: O, displayProfile: v, initialSection: A, initialSubsection: Z, onClose: N } = e,

@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(906732),
     d = n(335131),
     u = n(703656),
-    g = n(511050),
-    m = n(52647),
+    m = n(511050),
+    g = n(52647),
     p = n(822857),
     h = n(317257),
     f = n(120786),
@@ -21,7 +21,7 @@ var i = n(255367),
     j = n(450272),
     O = n(981631),
     S = n(388032),
-    v = n(751318);
+    v = n(278732);
 function T() {
     let { enabled: e } = (0, p.W)({ location: 'revenue_storybook' });
     return (0, i.jsxs)('div', {
@@ -29,9 +29,9 @@ function T() {
     });
 }
 function I() {
-    let { openIntroToOrbsClaimedCoachmark: e } = (0, g.l)({ location: 'VirtualCurrencyComponents' }),
+    let { openIntroToOrbsClaimedCoachmark: e } = (0, m.l)({ location: 'VirtualCurrencyComponents' }),
         [t, n] = r.useState(150),
-        [m, p] = r.useState(150),
+        [g, p] = r.useState(150),
         [x, E] = r.useState(500),
         [C, T] = r.useState(h.b.DEFAULT),
         I = () => {
@@ -145,7 +145,7 @@ function I() {
                     (0, i.jsx)('div', {
                         className: v.interactivePillContainer,
                         children: (0, i.jsx)(_.A4, {
-                            balance: m,
+                            balance: g,
                             balanceWidgetMode: C,
                             onClick: () => I()
                         })
@@ -172,7 +172,7 @@ function I() {
                     (0, i.jsx)('div', {
                         className: v.interactivePillContainer,
                         children: (0, i.jsx)(_.A4, {
-                            balance: m,
+                            balance: g,
                             balanceWidgetMode: C,
                             onClick: () => I()
                         })
@@ -237,7 +237,7 @@ function N() {
     });
 }
 function y() {
-    let { resetOnboardingAnnouncementModal: e } = (0, m.Z)();
+    let { resetOnboardingAnnouncementModal: e } = (0, g.Z)();
     return (0, i.jsxs)(j.$0, {
         children: [
             (0, i.jsx)(l.X6q, {
@@ -341,16 +341,10 @@ function y() {
                     })
                 ]
             }),
-            (0, i.jsxs)(j.E_, {
+            (0, i.jsx)(j.E_, {
                 label: 'Onboarding Coachmark',
                 direction: 'horizontal',
-                children: [
-                    (0, i.jsx)(C.ED, { onClose: O.dG4 }),
-                    (0, i.jsx)(C.ED, {
-                        onClose: O.dG4,
-                        invertCoachmark: !0
-                    })
-                ]
+                children: (0, i.jsx)(C.ED, { onClose: O.dG4 })
             }),
             (0, i.jsx)(j.E_, {
                 label: 'Balance Widget Coachmark',

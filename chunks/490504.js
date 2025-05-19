@@ -2,7 +2,7 @@ n.d(t, { Z: () => o });
 var r = n(255367);
 n(73800);
 var i = n(481060),
-    a = n(903748);
+    a = n(41414);
 let o = function (e) {
     let { message: t } = e;
     return (0, r.jsxs)('div', {

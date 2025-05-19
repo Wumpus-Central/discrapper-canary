@@ -1,7 +1,6 @@
 n.d(t, {
-    A4: () => E,
-    b6: () => l.b,
-    th: () => m
+    A4: () => g,
+    b6: () => l.b
 }),
     n(388685);
 var r = n(255367),
@@ -12,7 +11,7 @@ var r = n(255367),
     l = n(317257),
     c = n(583478),
     u = n(976845),
-    d = n(738134);
+    d = n(812023);
 function f(e, t, n) {
     return (
         t in e
@@ -49,75 +48,72 @@ let p = () =>
             alt: ''
         }),
     h = 'balance-widget-pill',
-    m = {
-        SHOP: 'collectibles-shop-'.concat(h),
-        SHOP_FULLSCREEN: 'collectibles-'.concat(h)
-    },
-    g = (e, t) => (e === l.b.SELECTED ? d.selected : t ? d.highlighted : d.default),
-    E = (0, i.forwardRef)(function (e, t) {
-        let { id: n, balance: a, balanceWidgetMode: f = l.b.DEFAULT, showNotificationBadge: m, onClick: E, onMouseDown: b, isInModalOverlay: y, className: O } = e,
-            [v, I] = (0, i.useState)(!1),
-            S = (0, i.useMemo)(() => g(f, v), [f, v]),
-            [T, A] = (0, i.useState)(!1),
-            [N, C] = (0, i.useState)(!1),
-            [P, R] = (0, i.useState)(0.9 * u.D2),
-            w = null === a;
+    m = (e, t) => (e === l.b.SELECTED ? d.selected : t ? d.highlighted : d.default),
+    g = (0, i.forwardRef)(function (e, t) {
+        let { id: n, balance: a, balanceWidgetMode: f = l.b.DEFAULT, showNotificationBadge: g, onClick: E, onMouseDown: b, disabled: y, isInModalOverlay: O, className: v } = e,
+            [I, S] = (0, i.useState)(!1),
+            T = (0, i.useMemo)(() => m(f, I), [f, I]),
+            [A, N] = (0, i.useState)(!1),
+            [C, P] = (0, i.useState)(!1),
+            [R, w] = (0, i.useState)(0.9 * u.D2),
+            D = null === a;
         (0, i.useEffect)(() => {
-            w &&
-                !T &&
-                (A(!0),
+            D &&
+                !A &&
+                (N(!0),
                 setTimeout(() => {
-                    C(!0);
+                    P(!0);
                 }, 500));
-        }, [w, A, T]),
+        }, [D, N, A]),
             (0, i.useEffect)(() => {
-                N && !w && A(!1);
-            }, [w, N]);
-        let D = w || T,
-            L = T ? null : a,
-            [x, k] = (0, i.useState)(null),
-            M = (0, i.useRef)(null),
-            j = (0, i.useCallback)(() => {
-                (M.current = null), k(null);
+                C && !D && N(!1);
+            }, [D, C]);
+        let L = D || A,
+            x = A ? null : a,
+            [k, M] = (0, i.useState)(null),
+            j = (0, i.useRef)(null),
+            U = (0, i.useCallback)(() => {
+                (j.current = null), M(null);
             }, []),
-            U = (0, i.useCallback)(
+            G = (0, i.useCallback)(
                 (e) => {
-                    let t = x === M.current;
-                    e > 0 && ('earn' !== x || !t) ? k('earn') : e < 0 && ('spend' !== x || !t) && k('spend');
+                    let t = k === j.current;
+                    e > 0 && ('earn' !== k || !t) ? M('earn') : e < 0 && ('spend' !== k || !t) && M('spend');
                 },
-                [k, x]
+                [M, k]
             ),
-            G = {
-                currentAnimationType: x,
-                animationTypeRef: M,
-                onSetAnimationDurationMS: R
+            B = {
+                currentAnimationType: k,
+                animationTypeRef: j,
+                onSetAnimationDurationMS: w
             };
         return (0, r.jsx)(s.P3F, {
-            onClick: D ? void 0 : E,
-            className: d.clickable,
+            onClick: L ? void 0 : E,
+            className: o()(d.clickable, { [d.disabled]: y }),
             id: null != n ? n : h,
             children: (0, r.jsxs)('span', {
                 onMouseDown: b,
-                onMouseEnter: () => I(!0),
-                onMouseLeave: () => I(!1),
+                onMouseEnter: y ? void 0 : () => S(!0),
+                onMouseLeave: y ? void 0 : () => S(!1),
                 ref: t,
-                className: o()(d.container, S, O, {
-                    [d.containerLoading]: D,
-                    [d.inModalOverlay]: y
+                className: o()(d.container, T, v, {
+                    [d.containerLoading]: L,
+                    [d.inModalOverlay]: O,
+                    [d.disabled]: y
                 }),
                 children: [
                     (0, r.jsx)('div', {
-                        className: o()(d.orbsLottieContainer, D ? d.orbIconloading : void 0),
-                        children: (0, r.jsx)(u.ZP, _({}, G))
+                        className: o()(d.orbsLottieContainer, L ? d.orbIconloading : void 0),
+                        children: (0, r.jsx)(u.ZP, _({}, B))
                     }),
                     (0, r.jsx)(c.Z, {
-                        value: L,
-                        onValueChange: U,
-                        onValueReached: j,
-                        targetTotalCounterTime: P,
-                        className: D ? d.counterLoading : void 0
+                        value: x,
+                        onValueChange: G,
+                        onValueReached: U,
+                        targetTotalCounterTime: R,
+                        className: L ? d.counterLoading : void 0
                     }),
-                    m && (0, r.jsx)(p, {})
+                    g && (0, r.jsx)(p, {})
                 ]
             })
         });

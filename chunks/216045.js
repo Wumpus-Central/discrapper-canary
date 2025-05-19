@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(622535),
     d = n(481060),
     u = n(570140),
-    g = n(809206),
-    m = n(497321),
+    m = n(809206),
+    g = n(497321),
     p = n(634894),
     h = n(100527),
     f = n(906732),
@@ -38,7 +38,7 @@ var i = n(255367),
     M = n(981631),
     U = n(921944),
     V = n(388032),
-    G = n(775274);
+    G = n(118778);
 function F() {
     var e, t;
     let n = (0, a.e7)([R.default], () => {
@@ -87,7 +87,7 @@ function F() {
     r.useEffect(() => {
         es && er(U.L.TAKE_ACTION);
     }, [es, er]),
-        r.useEffect(() => () => u.Z.wait(g.W3), []);
+        r.useEffect(() => () => u.Z.wait(m.W3), []);
     let el = 'UserSettingsProfileCustomization';
     (0, p.j)({
         location: el + ' auto on',
@@ -102,7 +102,7 @@ function F() {
         ed = !X,
         eu = r.useRef(null);
     return s
-        ? (0, i.jsx)(m.Z, {})
+        ? (0, i.jsx)(g.Z, {})
         : (0, i.jsxs)(f.Gt, {
               value: Q,
               children: [

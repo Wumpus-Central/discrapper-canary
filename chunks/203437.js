@@ -18,7 +18,7 @@ var l = n(255367),
     v = n(710111),
     x = n(981631),
     j = n(388032),
-    w = n(696200);
+    w = n(212168);
 function N(e) {
     let { availableSlots: t, className: n } = e;
     return (0, l.jsxs)(o.Text, {

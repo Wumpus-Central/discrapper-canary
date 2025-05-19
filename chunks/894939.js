@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(596454),
     d = n(906732),
     u = n(856768),
-    g = n(993413),
-    m = n(921801),
+    m = n(993413),
+    g = n(921801),
     p = n(208049),
     h = n(763296),
     f = n(242291),
@@ -24,8 +24,8 @@ var i = n(255367),
     v = n(981631),
     T = n(710111),
     I = n(388032),
-    N = n(576813),
-    y = n(20493);
+    N = n(225521),
+    y = n(971005);
 function A(e) {
     return (0, a.e7)([h.Z], () => {
         if (null == e) return null;
@@ -37,11 +37,11 @@ function P(e) {
     let { refreshStyles: t = !1 } = e,
         n = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsxs)(m.F, {
+                (0, i.jsxs)(g.F, {
                     setting: S.s6.VOICE_AND_VIDEO_SOUNDBOARD,
                     children: [(0, i.jsx)(j.Z, { refreshStyles: t }), (0, i.jsx)(O.Z, { refreshStyles: t })]
                 }),
-                (0, i.jsxs)(m.F, {
+                (0, i.jsxs)(g.F, {
                     setting: S.s6.VOICE_AND_VIDEO_ENTRANCE_SOUNDS,
                     children: [t ? null : (0, i.jsx)(o.$i$, { className: N.callSoundsDivider }), (0, i.jsx)(R, { refreshStyles: t })]
                 })
@@ -61,10 +61,10 @@ function R(e) {
     let { refreshStyles: t } = e,
         { analyticsLocations: n } = (0, d.ZP)(),
         [s, c] = r.useState(T.hY),
-        m = (0, b.tT)(s),
-        E = A(m),
-        j = (null == m ? void 0 : m.type) === b.zx.GLOBAL,
-        O = (0, a.e7)([h.Z], () => h.Z.hasFetchedAllSounds()) && null != m && null == E;
+        g = (0, b.tT)(s),
+        E = A(g),
+        j = (null == g ? void 0 : g.type) === b.zx.GLOBAL,
+        O = (0, a.e7)([h.Z], () => h.Z.hasFetchedAllSounds()) && null != g && null == E;
     r.useEffect(() => {
         O && (0, f.tt)({ location: n });
     }, [O, n]),
@@ -94,7 +94,7 @@ function R(e) {
                     renderOptionSuffix: S,
                     hideDivider: !0
                 }),
-                (0, i.jsxs)(g.Z, {
+                (0, i.jsxs)(m.Z, {
                     className: l()({ [y.marginTop20]: !t }),
                     title: I.intl.format(I.t.I2TsYG, {
                         nitroWheelHook: () =>

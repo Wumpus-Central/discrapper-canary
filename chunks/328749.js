@@ -4,7 +4,7 @@ n(73800);
 var i = n(481060),
     l = n(834129),
     a = n(388032),
-    o = n(482893);
+    o = n(866007);
 function s(e) {
     let { message: t, compact: n } = e;
     return (0, r.jsx)(l.Z, {

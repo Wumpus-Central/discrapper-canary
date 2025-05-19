@@ -9,21 +9,21 @@ var r = n(442837),
     c = n(906732),
     d = n(94795),
     u = n(327943),
-    g = n(539873),
-    m = n(311476),
+    m = n(539873),
+    g = n(311476),
     p = n(767714),
     h = n(626135),
     f = n(981631),
     b = n(474936),
     _ = n(388032),
-    x = n(614467);
+    x = n(50786);
 let E = () => {
         (0, d.nJ)(), (0, l.xf)();
     },
     C = () => {
         let { analyticsLocations: e } = (0, c.ZP)(o.Z.USER_SETTINGS),
             t = (0, r.e7)([u.Z], () => u.Z.isUpsellPreview),
-            { enabled: n } = m.Z.getCurrentConfig(
+            { enabled: n } = g.Z.getCurrentConfig(
                 { location: 'UserSettingsAppearanceInAppIcon' },
                 {
                     autoTrackExposure: t,
@@ -41,7 +41,7 @@ let E = () => {
             (0, i.jsxs)('div', {
                 className: x.selectionGroup,
                 children: [
-                    (0, i.jsx)(g.Z, {
+                    (0, i.jsx)(m.Z, {
                         disabled: t && !n,
                         renderCTAButtons: () =>
                             (0, i.jsxs)('div', {

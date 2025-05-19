@@ -2,7 +2,7 @@ n.d(e, { Z: () => l });
 var r = n(255367);
 n(73800);
 var a = n(481060),
-    o = n(170086);
+    o = n(670655);
 function l(t) {
     var e;
     let { attachment: n } = t,

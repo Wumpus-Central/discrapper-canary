@@ -8,14 +8,14 @@ var i = n(255367),
     c = n(63063),
     d = n(709054),
     u = n(695346),
-    g = n(749876),
-    m = n(546957),
+    m = n(749876),
+    g = n(546957),
     p = n(838436),
     h = n(51331),
     f = n(726985),
     b = n(981631),
     _ = n(388032),
-    x = n(296281);
+    x = n(468147);
 function E(e) {
     let { applications: t } = e,
         n = r.useMemo(() => t.sort((e, t) => d.default.compare(t.id, e.id)), [t]),
@@ -226,8 +226,8 @@ function j() {
     });
 }
 function O() {
-    let { showLoadingIndicator: e, slayerSdkApplications: t } = (0, g.Z)();
-    return (0, i.jsx)(m.Z, {
+    let { showLoadingIndicator: e, slayerSdkApplications: t } = (0, m.Z)();
+    return (0, i.jsx)(g.Z, {
         children: e
             ? (0, i.jsx)(l.$jN, {})
             : t.length > 0

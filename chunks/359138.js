@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g }), n(388685);
+n.d(t, { Z: () => m }), n(388685);
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -6,16 +6,16 @@ var i = n(255367),
     a = n(747545),
     o = n(131951),
     c = n(388032),
-    d = n(959963);
+    d = n(263983);
 let u = {
     width: 387,
     height: 218
 };
-function g() {
+function m() {
     let e = o.Z.getCameraComponent(),
         t = (0, s.e7)([o.Z], () => o.Z.getVideoDeviceId()),
-        [n, g] = r.useState(!1),
-        m = (0, s.e7)([o.Z], () => o.Z.isVideoAvailable());
+        [n, m] = r.useState(!1),
+        g = (0, s.e7)([o.Z], () => o.Z.isVideoAvailable());
     return n
         ? (0, i.jsx)('div', {
               className: d.cameraWrapper,
@@ -37,7 +37,7 @@ function g() {
               children: [
                   (0, i.jsx)('div', { className: d.previewImage }),
                   (0, i.jsx)(l.ua7, {
-                      text: m ? null : c.intl.string(c.t['8jSzSU']),
+                      text: g ? null : c.intl.string(c.t['8jSzSU']),
                       children: (e) => {
                           var t, n;
                           return (0, i.jsx)(
@@ -69,8 +69,8 @@ function g() {
                               })({}, e)),
                               (n = n =
                                   {
-                                      onClick: () => g(!0),
-                                      disabled: !m,
+                                      onClick: () => m(!0),
+                                      disabled: !g,
                                       children: c.intl.string(c.t.JIf4v7)
                                   }),
                               Object.getOwnPropertyDescriptors

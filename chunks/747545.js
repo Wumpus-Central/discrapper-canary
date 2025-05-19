@@ -15,8 +15,8 @@ var i = n(255367),
     c = n(442837),
     d = n(846519),
     u = n(481060),
-    g = n(846027),
-    m = n(579806),
+    m = n(846027),
+    g = n(579806),
     p = n(906732),
     h = n(920321),
     f = n(921801),
@@ -28,7 +28,7 @@ var i = n(255367),
     j = n(981631),
     O = n(726985),
     S = n(388032),
-    v = n(602985);
+    v = n(932473);
 let T = /\{65E8773D-8F56-11D0-A3B9-00A0C9223196\}/i;
 function I() {
     let [e, t] = r.useState(!1),
@@ -76,7 +76,7 @@ function N(e) {
                       className: v.permissionWarning,
                       color: 'interactive-normal',
                       variant: 'text-sm/normal',
-                      children: S.intl.format(S.t.stagfH, { onEnableClick: () => g.Z.enable(!0) })
+                      children: S.intl.format(S.t.stagfH, { onEnableClick: () => m.Z.enable(!0) })
                   }),
             N
                 ? null
@@ -105,13 +105,13 @@ function N(e) {
                                 options: k,
                                 value: R,
                                 isDisabled: !D,
-                                onChange: (e) => g.Z.setVideoDevice(e),
+                                onChange: (e) => m.Z.setVideoDevice(e),
                                 'aria-label': S.intl.string(S.t['t9eQ/v'])
                             }),
                             !r &&
                                 !!(0, C.isWindows)() &&
                                 !!C.isPlatformEmbedded &&
-                                o().satisfies(m.Z.os.release, '>=10.0.22000') &&
+                                o().satisfies(g.Z.os.release, '>=10.0.22000') &&
                                 (0, i.jsx)(u.R94, {
                                     className: v.cameraDeeplink,
                                     children: S.intl.format(S.t.aJYgRk, {

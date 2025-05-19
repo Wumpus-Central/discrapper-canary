@@ -7,7 +7,7 @@ var i = n(120356),
     s = n(249458),
     l = n(138599),
     c = n(388032),
-    u = n(364812);
+    u = n(864800);
 let d = (e) => {
     let { onPlay: t, externalURL: n, className: i, renderLinkComponent: d, inactive: f, messageId: _, channelId: p } = e;
     return (0, r.jsx)(s.G.Consumer, {

@@ -84,21 +84,21 @@ let u = o.createContext({
                     }
                 );
             }, [c, d, f, g]);
-        let _ = o.useCallback(
+        let y = o.useCallback(
             (e) => {
                 let { height: t } = e;
                 v.current !== t && (m(), (v.current = t));
             },
             [m]
         );
-        (0, i.PM)(b, _);
-        let y = null == (n = h.get(c)) ? void 0 : n.current,
-            C = null;
+        (0, i.PM)(b, y);
+        let _ = null == (n = h.get(c)) ? void 0 : n.current,
+            O = null;
         return (
-            null == y
-                ? (C = null)
+            null == _
+                ? (O = null)
                 : p && null != x
-                  ? (C = (0, r.jsxs)(r.Fragment, {
+                  ? (O = (0, r.jsxs)(r.Fragment, {
                         children: [
                             'collapsed' === d &&
                                 (0, s.createPortal)(
@@ -112,7 +112,7 @@ let u = o.createContext({
                                         },
                                         children: l(j)
                                     }),
-                                    y
+                                    _
                                 ),
                             'expanded' === d &&
                                 (0, s.createPortal)(
@@ -126,15 +126,15 @@ let u = o.createContext({
                                         },
                                         children: l(j)
                                     }),
-                                    y
+                                    _
                                 )
                         ]
                     }))
-                  : 'collapsed' === d && (C = (0, s.createPortal)(l(j), y)),
+                  : 'collapsed' === d && (O = (0, s.createPortal)(l(j), _)),
             (0, r.jsxs)('div', {
-                style: { opacity: +((null == C && 'collapsed' === d) || null == y) },
+                style: { opacity: +((null == O && 'collapsed' === d) || null == _) },
                 ref: t,
-                children: [l(b), C]
+                children: [l(b), O]
             })
         );
     }),

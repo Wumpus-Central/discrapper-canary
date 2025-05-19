@@ -13,7 +13,7 @@ var r = n(255367),
     _ = n(180899),
     m = n(157925),
     b = n(388032),
-    f = n(879656);
+    f = n(309302);
 function x(e) {
     let { guild: t, channel: n, stageInstance: i, headerId: l, onClose: o, loading: c, error: s, onSave: u, defaultOptions: g, isSlideReady: _ } = e;
     return (0, r.jsxs)(r.Fragment, {

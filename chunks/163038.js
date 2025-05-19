@@ -30,7 +30,7 @@ var r = n(255367),
     A = n(594174),
     w = n(22665),
     Z = n(959517),
-    R = n(995717);
+    R = n(452708);
 function k(e) {
     let { message: t, snapshot: n, index: u } = e,
         m = i.useMemo(() => new d.r(t, n, u), [t, n, u]),

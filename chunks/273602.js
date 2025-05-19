@@ -23,7 +23,7 @@ var a = n(255367),
     C = n(981631),
     T = n(231338),
     P = n(388032),
-    I = n(994436);
+    I = n(745981);
 function S(e) {
     var t;
     let { threadId: n, attachments: S, sendMessage: E, transitionState: M, onClose: w } = e,

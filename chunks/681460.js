@@ -4,7 +4,7 @@ n(73800);
 var i = n(120356),
     l = n.n(i),
     s = n(481060),
-    a = n(572590);
+    a = n(496412);
 function o(e) {
     let { pills: t, pillClassName: n } = e;
     return (0, r.jsx)('div', {

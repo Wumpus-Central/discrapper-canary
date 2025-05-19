@@ -9,12 +9,12 @@ var r = n(120356),
     c = n(230711),
     d = n(921801),
     u = n(246946),
-    g = n(358085),
-    m = n(726985),
+    m = n(358085),
+    g = n(726985),
     p = n(981631),
     h = n(388032),
-    f = n(700195),
-    b = n(20493);
+    f = n(703176),
+    b = n(971005);
 function _() {
     let {
             enabled: e,
@@ -60,7 +60,7 @@ function _() {
         title: h.intl.string(h.t.S5GfOT),
         children: [
             (0, i.jsx)(d.F, {
-                setting: m.s6.STREAMER_MODE_INTEGRATIONS,
+                setting: g.s6.STREAMER_MODE_INTEGRATIONS,
                 children: (0, i.jsx)(a.ToO, {
                     className: b.marginBottom40,
                     iconClassName: f.noticeIcon,
@@ -76,7 +76,7 @@ function _() {
                 })
             }),
             (0, i.jsxs)(d.F, {
-                setting: m.s6.STREAMER_MODE_ENABLE,
+                setting: g.s6.STREAMER_MODE_ENABLE,
                 children: [
                     (0, i.jsx)(a.j7V, {
                         value: e,
@@ -89,7 +89,7 @@ function _() {
                         children: h.intl.string(h.t.p9ZAJS)
                     }),
                     (() => {
-                        if (g.isPlatformEmbedded)
+                        if (m.isPlatformEmbedded)
                             return (0, i.jsx)(a.j7V, {
                                 value: t,
                                 onChange: (e) => j('autoToggle', e),
@@ -106,7 +106,7 @@ function _() {
                         children: h.intl.string(h.t['+1H47u'])
                     }),
                     (0, i.jsx)(d.F, {
-                        setting: m.s6.STREAMER_MODE_HIDE_PERSONAL_INFORMATION,
+                        setting: g.s6.STREAMER_MODE_HIDE_PERSONAL_INFORMATION,
                         children: (0, i.jsx)(a.j7V, {
                             value: _,
                             onChange: (e) => j('hidePersonalInformation', e),
@@ -115,7 +115,7 @@ function _() {
                         })
                     }),
                     (0, i.jsx)(d.F, {
-                        setting: m.s6.STREAMER_MODE_HIDE_INVITE_LINKS,
+                        setting: g.s6.STREAMER_MODE_HIDE_INVITE_LINKS,
                         children: (0, i.jsx)(a.j7V, {
                             value: r,
                             onChange: (e) => j('hideInstantInvites', e),
@@ -124,7 +124,7 @@ function _() {
                         })
                     }),
                     (0, i.jsx)(d.F, {
-                        setting: m.s6.STREAMER_MODE_DISABLE_SOUNDS,
+                        setting: g.s6.STREAMER_MODE_DISABLE_SOUNDS,
                         children: (0, i.jsx)(a.j7V, {
                             value: x,
                             onChange: (e) => j('disableSounds', e),
@@ -133,7 +133,7 @@ function _() {
                         })
                     }),
                     (0, i.jsx)(d.F, {
-                        setting: m.s6.STREAMER_MODE_DISABLE_NOTIFICATIONS,
+                        setting: g.s6.STREAMER_MODE_DISABLE_NOTIFICATIONS,
                         children: (0, i.jsx)(a.j7V, {
                             value: E,
                             onChange: (e) => j('disableNotifications', e),
@@ -142,7 +142,7 @@ function _() {
                         })
                     }),
                     (0, i.jsx)(d.F, {
-                        setting: m.s6.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE,
+                        setting: g.s6.STREAMER_MODE_HIDE_DISCORD_WINDOW_FROM_SCREEN_CAPTURE,
                         children: (0, i.jsx)(a.j7V, {
                             value: C,
                             onChange: (e) => j('enableContentProtection', e),

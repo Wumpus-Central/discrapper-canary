@@ -7,7 +7,7 @@ var i = n(255367),
     s = n(120356),
     l = n.n(s),
     a = n(481060),
-    o = n(948865);
+    o = n(490411);
 function c(e) {
     let { title: t, note: n, children: r, className: s, id: c } = e;
     return (0, i.jsxs)('div', {
@@ -38,8 +38,8 @@ function c(e) {
 function d(e) {
     var t,
         n,
-        { options: s, value: d, select: u, selectClassName: g } = e,
-        m = (function (e, t) {
+        { options: s, value: d, select: u, selectClassName: m } = e,
+        g = (function (e, t) {
             if (null == e) return {};
             var n,
                 i,
@@ -85,13 +85,13 @@ function d(e) {
                     });
             }
             return e;
-        })({}, m)),
+        })({}, g)),
         (n = n =
             {
                 id: p,
                 children: (0, i.jsx)(a.PhF, {
                     'aria-labelledby': p,
-                    className: l()(o.selectControl, g),
+                    className: l()(o.selectControl, m),
                     options: s,
                     isSelected: (e) => e === d,
                     select: u,

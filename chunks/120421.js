@@ -48,16 +48,16 @@ function u(e, t, n) {
         isMuted: null != t && t
     };
 }
-let g = u(),
-    m = !1;
+let m = u(),
+    g = !1;
 function p() {
-    m = !1;
+    g = !1;
 }
 function h() {
-    return Object.values(g.pointsByItem).reduce((e, t) => e + t, 0);
+    return Object.values(m.pointsByItem).reduce((e, t) => e + t, 0);
 }
 function f() {
-    return h() - g.pointsSpent;
+    return h() - m.pointsSpent;
 }
 class b extends (i = r.ZP.PersistedStore) {
     initialize(e) {
@@ -77,10 +77,10 @@ class b extends (i = r.ZP.PersistedStore) {
                   })(Object(n)).forEach(function (e) {
                       Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                   }),
-            (g = t));
+            (m = t));
     }
     getState() {
-        return g;
+        return m;
     }
     get currentPoints() {
         return f();
@@ -89,96 +89,96 @@ class b extends (i = r.ZP.PersistedStore) {
         return h();
     }
     get pointsSpent() {
-        return g.pointsSpent;
+        return m.pointsSpent;
     }
     get pointsByItem() {
-        return g.pointsByItem;
+        return m.pointsByItem;
     }
     getContributionsForItem(e) {
         var t;
-        return null != (t = g.itemContributions[e]) ? t : 0;
+        return null != (t = m.itemContributions[e]) ? t : 0;
     }
     get numPurchases() {
-        return Object.values(g.purchasedItems).reduce((e, t) => e + Object.values(t.upgrades).reduce((e, t) => e + t, 1), 0);
+        return Object.values(m.purchasedItems).reduce((e, t) => e + Object.values(t.upgrades).reduce((e, t) => e + t, 1), 0);
     }
     get purchasedItems() {
-        return g.purchasedItems;
+        return m.purchasedItems;
     }
     hasPurchasedItem(e) {
-        return null != g.purchasedItems[e];
+        return null != m.purchasedItems[e];
     }
     getPurchasedItemUpgrades(e) {
-        return g.purchasedItems[e];
+        return m.purchasedItems[e];
     }
     hasPurchasedUpgrade(e, t) {
         return this.getNumPurchasesForItemUpgrade(e, t) > 0;
     }
     getNumPurchasesForItemUpgrade(e, t) {
         var n;
-        let i = g.purchasedItems[e];
+        let i = m.purchasedItems[e];
         return null == i ? 0 : null != (n = i.upgrades[t]) ? n : 0;
     }
     getPurchasedUpgradesForItem(e) {
         var t, n;
-        return null != (n = null == (t = g.purchasedItems[e]) ? void 0 : t.upgrades) ? n : {};
+        return null != (n = null == (t = m.purchasedItems[e]) ? void 0 : t.upgrades) ? n : {};
     }
     hasUnlockedAchievement(e) {
-        return g.unlockedAchievements.has(e);
+        return m.unlockedAchievements.has(e);
     }
     getItemMetadata(e) {
         var t;
-        return null == (t = g.purchasedItems[e]) ? void 0 : t.metadata;
+        return null == (t = m.purchasedItems[e]) ? void 0 : t.metadata;
     }
     getLastAction() {
-        return g.lastAction;
+        return m.lastAction;
     }
     get startTime() {
-        return g.startTime;
+        return m.startTime;
     }
     get endTime() {
-        return g.endTime;
+        return m.endTime;
     }
     get isRedeemingPrize() {
-        return m;
+        return g;
     }
     get volume() {
-        return g.volume;
+        return m.volume;
     }
     get isMuted() {
-        return g.isMuted;
+        return m.isMuted;
     }
 }
 c(b, 'displayName', 'ClickerGameStore'), c(b, 'persistKey', 'ClickerGameStore');
 let _ = new b(s.Z, {
     CLICKER_GAME_ADD_POINTS: function (e) {
         let { numPoints: t, itemId: n } = e;
-        if (-1 !== g.endTime) return;
+        if (-1 !== m.endTime) return;
         let i = f();
-        if ((null == g.pointsByItem[n] && (g.pointsByItem[n] = 0), t < 0)) {
+        if ((null == m.pointsByItem[n] && (m.pointsByItem[n] = 0), t < 0)) {
             let e = Math.max(-i, t);
-            g.pointsByItem[n] += e;
-        } else g.pointsByItem[n] += t;
-        (g.pointsByItem = d({}, g.pointsByItem)), null == g.itemContributions[n] && (g.itemContributions[n] = 0), g.itemContributions[n]++, (g.itemContributions = d({}, g.itemContributions));
+            m.pointsByItem[n] += e;
+        } else m.pointsByItem[n] += t;
+        (m.pointsByItem = d({}, m.pointsByItem)), null == m.itemContributions[n] && (m.itemContributions[n] = 0), m.itemContributions[n]++, (m.itemContributions = d({}, m.itemContributions));
     },
     CLICKER_GAME_PURCHASE_ITEM: function (e) {
         let { id: t } = e,
             n = (0, a.w2)()[t];
         if (
             !(f() < n.cost) &&
-            ((g.pointsSpent += n.cost),
-            (g.purchasedItems[t] = { upgrades: {} }),
-            (g.purchasedItems = d({}, g.purchasedItems)),
-            (g.lastAction = {
+            ((m.pointsSpent += n.cost),
+            (m.purchasedItems[t] = { upgrades: {} }),
+            (m.purchasedItems = d({}, m.purchasedItems)),
+            (m.lastAction = {
                 type: 'purchase-item',
                 id: t
             }),
             t === a.yN.COMPLETE_GAME)
         ) {
             var i;
-            (g.endTime = Date.now()),
+            (m.endTime = Date.now()),
                 l.default.track(o.rMx.CLICKER_GAME_COMPLETED, {
-                    duration: Math.floor((g.endTime - g.startTime) / 1000),
-                    num_clicks: null != (i = g.itemContributions[a.yN.CLICKER_BUTTON]) ? i : 0,
+                    duration: Math.floor((m.endTime - m.startTime) / 1000),
+                    num_clicks: null != (i = m.itemContributions[a.yN.CLICKER_BUTTON]) ? i : 0,
                     total_score: Math.floor(h())
                 });
         }
@@ -187,7 +187,7 @@ let _ = new b(s.Z, {
         var t, n, i;
         let { id: r } = e,
             s = (0, a.r7)()[r],
-            l = null == (t = g.purchasedItems[s.itemId]) ? void 0 : t.upgrades;
+            l = null == (t = m.purchasedItems[s.itemId]) ? void 0 : t.upgrades;
         if (null == l) return;
         let o = null != (i = l[r]) ? i : 0,
             c = h();
@@ -203,45 +203,45 @@ let _ = new b(s.Z, {
             return;
         let u = s.cost({ numAlreadyPurchased: o });
         f() < u ||
-            ((g.pointsSpent += u),
+            ((m.pointsSpent += u),
             (l[r] = null != l[r] ? l[r] + 1 : 1),
-            (g.purchasedItems[s.itemId].upgrades = d({}, l)),
-            (g.purchasedItems = d({}, g.purchasedItems)),
-            (g.lastAction = {
+            (m.purchasedItems[s.itemId].upgrades = d({}, l)),
+            (m.purchasedItems = d({}, m.purchasedItems)),
+            (m.lastAction = {
                 type: 'purchase-item-upgrade',
                 id: r
             }));
     },
     CLICKER_GAME_UNLOCK_ACHIEVEMENT: function (e) {
         let { id: t } = e;
-        g.unlockedAchievements.add(t),
-            (g.lastAction = {
+        m.unlockedAchievements.add(t),
+            (m.lastAction = {
                 type: 'unlock-achievement',
                 id: t
             });
     },
     CLICKER_GAME_UPDATE_ITEM_METADATA: function (e) {
         let { itemId: t, metadata: n } = e,
-            i = g.purchasedItems[t];
+            i = m.purchasedItems[t];
         null != i && (i.metadata = n);
     },
     CLICKER_GAME_RESET: function () {
-        g = u(g.volume, g.isMuted, g.unlockedAchievements);
+        m = u(m.volume, m.isMuted, m.unlockedAchievements);
     },
     CLICKER_GAME_REDEEM_PRIZE_START: function () {
-        m = !0;
+        g = !0;
     },
     CLICKER_GAME_REDEEM_PRIZE_SUCCESS: p,
     CLICKER_GAME_REDEEM_PRIZE_FAIL: p,
     CLICKER_GAME_SET_VOLUME: function (e) {
         let { volume: t } = e;
-        g.volume = t;
+        m.volume = t;
     },
     CLICKER_GAME_SET_MUTED: function (e) {
         let { isMuted: t } = e;
-        g.isMuted = t;
+        m.isMuted = t;
     },
     LOGOUT: function () {
-        g = u();
+        m = u();
     }
 });

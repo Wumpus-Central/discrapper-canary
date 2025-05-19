@@ -10,7 +10,7 @@ var r = n(255367),
     d = n(443603),
     f = n(957825),
     _ = n(388032),
-    p = n(302195);
+    p = n(120232);
 function h(e, t) {
     let { disabled: n, channel: a } = e,
         h = (0, l.Q3)('ChannelMessageConfettiButton'),

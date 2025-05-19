@@ -10,7 +10,7 @@ var i = n(442837),
     u = n(246946),
     d = n(654904),
     f = n(228168),
-    _ = n(200669);
+    _ = n(165957);
 function p(e) {
     var t;
     let { user: n, displayProfile: p, guild: h, pendingAvatar: m, pendingNickname: g, pendingGlobalName: E, pendingBio: b, pendingPronouns: y, pendingLegacyUsernameDisabled: O, pendingBadges: v, isTryItOutFlow: I, hideBioSection: S, shouldOpenBadgeTooltip: T } = e,

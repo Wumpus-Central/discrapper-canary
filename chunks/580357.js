@@ -3,7 +3,7 @@ var r = n(255367);
 n(73800);
 var l = n(481060),
     a = n(388032),
-    o = n(696824);
+    o = n(94589);
 function s() {
     return (0, r.jsxs)(r.Fragment, {
         children: [

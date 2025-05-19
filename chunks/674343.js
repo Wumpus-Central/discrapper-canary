@@ -6,12 +6,12 @@ var r = n(120356),
     l = n(481060),
     a = n(313201),
     o = n(36703),
-    c = n(193452);
+    c = n(975651);
 let d = (0, a.hQ)();
 function u(e) {
-    let { volume: t, title: n, description: r, label: a, onVolumeChange: u, refreshStyles: g = !1 } = e;
+    let { volume: t, title: n, description: r, label: a, onVolumeChange: u, refreshStyles: m = !1 } = e;
     return (0, i.jsxs)('div', {
-        className: s()(c.soundboardRow, { [c.refresh]: g }),
+        className: s()(c.soundboardRow, { [c.refresh]: m }),
         children: [
             (0, i.jsx)('div', {
                 className: c.soundboardColumn,

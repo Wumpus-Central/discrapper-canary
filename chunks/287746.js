@@ -106,8 +106,8 @@ var r = n(255367),
     e$ = n(641861),
     e0 = n(981631),
     e1 = n(388032),
-    e2 = n(100658),
-    e3 = n(672);
+    e2 = n(22249),
+    e3 = n(906557);
 function e7(e, t, n) {
     return (
         t in e
@@ -155,7 +155,7 @@ function e5(e, t) {
         e
     );
 }
-function e4(e, t) {
+function e6(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -174,18 +174,18 @@ function e4(e, t) {
     }
     return i;
 }
-function e6(e) {
+function e4(e) {
     e.preventDefault();
 }
 let e9 = /^\+(?!\w+):?(?!:)(\w+)?:?$/;
 function te(e) {
     var { isSidebar: t } = e,
-        n = e4(e, ['isSidebar']);
+        n = e6(e, ['isSidebar']);
     return t ? (0, r.jsx)('section', e5(e8({}, n), { role: 'complementary' })) : (0, r.jsx)('main', e8({}, n));
 }
 let tt = (e) => {
     let { ref: t } = e,
-        n = e4(e, ['ref']);
+        n = e6(e, ['ref']);
     return (0, r.jsx)(tn, e5(e8({}, n), { refInstance: t }));
 };
 tt.displayName = 'ChannelTextAreaForm';
@@ -728,7 +728,7 @@ class tr extends i.PureComponent {
                                                       ? t
                                                       : (0, r.jsxs)('form', {
                                                             ref: this.inputFormRef,
-                                                            onSubmit: e6,
+                                                            onSubmit: e4,
                                                             className: a()(e2.form, { [e2.formWithLoadedChatInput]: !G }),
                                                             children: [
                                                                 y && (0, r.jsx)(ef.Z, { channelId: i.id }),

@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(18438),
     d = n(778825),
     u = n(851894),
-    g = n(484459),
-    m = n(216045),
+    m = n(484459),
+    g = n(216045),
     p = n(839469),
     h = n(25990),
     f = n(594174),
@@ -20,7 +20,7 @@ var i = n(255367),
     C = n(526761),
     j = n(726985),
     O = n(388032),
-    S = n(545784);
+    S = n(804008);
 function v() {
     o.Z.useExperiment({ location: 'profile_customization_auto' });
     let e = (0, s.e7)([d.Z], () => d.Z.getGuild()),
@@ -44,7 +44,7 @@ function v() {
         }
     }
     r.useEffect(() => {
-        null != T && (0, g.Z)(T.id, T.getAvatarURL(null == v ? void 0 : v.id, 80), { guildId: null == v ? void 0 : v.id });
+        null != T && (0, m.Z)(T.id, T.getAvatarURL(null == v ? void 0 : v.id, 80), { guildId: null == v ? void 0 : v.id });
     }, [null == v ? void 0 : v.id, T]);
     let R = !0,
         D = !0;
@@ -87,7 +87,7 @@ function v() {
                             : null
                     ]
                 }),
-                I === C.NB.GUILD ? (0, i.jsx)(u.Z, { selectedGuild: v }) : (0, i.jsx)(m.Z, {})
+                I === C.NB.GUILD ? (0, i.jsx)(u.Z, { selectedGuild: v }) : (0, i.jsx)(g.Z, {})
             ]
         })
     );

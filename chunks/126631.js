@@ -8,13 +8,13 @@ var i = n(255367),
     c = n(313201),
     d = n(131704),
     u = n(993413),
-    g = n(981631),
-    m = n(388032),
-    p = n(967600);
+    m = n(981631),
+    g = n(388032),
+    p = n(973143);
 let h = (0, c.hQ)(),
     f = (0, d.kt)({
         id: '1',
-        type: g.d4z.DM
+        type: m.d4z.DM
     }),
     b = (0, c.hQ)();
 function _(e) {
@@ -32,7 +32,7 @@ function _(e) {
         (0, i.jsxs)(u.Z, {
             title: t,
             titleId: h,
-            description: m.intl.string(m.t.Bbw6AQ),
+            description: g.intl.string(g.t.Bbw6AQ),
             errors: n,
             disabled: E,
             children: [
@@ -41,7 +41,7 @@ function _(e) {
                     'aria-labelledby': h,
                     className: p.bioTextAreaContainer,
                     innerClassName: p.bioTextArea,
-                    maxCharacterCount: g.tPV,
+                    maxCharacterCount: m.tPV,
                     onChange: function (e, t, n) {
                         t !== C && (j(t), S(n), c(t));
                     },
@@ -68,7 +68,7 @@ function _(e) {
                 }),
                 (0, i.jsx)(s.nn4, {
                     id: b,
-                    children: m.intl.format(m.t['+DFxLS'], { maxLength: g.tPV })
+                    children: g.intl.format(g.t['+DFxLS'], { maxLength: m.tPV })
                 })
             ]
         })

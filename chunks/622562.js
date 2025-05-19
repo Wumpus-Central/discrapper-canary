@@ -1,31 +1,18 @@
 n.d(t, {
-    E9: () => y,
-    fu: () => E
+    E9: () => h,
+    fu: () => p
 }),
     n(388685);
 var r = n(255367),
-    i = n(73800),
+    l = n(73800),
     a = n(120356),
-    o = n.n(a),
-    s = n(392711),
-    l = n(442837),
+    i = n.n(a),
+    o = n(392711),
+    s = n(442837),
     c = n(110924),
     u = n(819640),
-    d = n(513755);
-function f(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function _(e) {
+    f = n(641141);
+function d(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -36,33 +23,22 @@ function _(e) {
                 })
             )),
             r.forEach(function (t) {
-                f(e, t, n[t]);
+                var r;
+                (r = n[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: r,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = r);
             });
     }
     return e;
 }
-function p(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = h(e, t);
-    if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-    }
-    return i;
-}
-function h(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-let m = (e, t) => (void 0 !== t && t > e ? t : e),
-    g = (e) =>
+let b = (e, t) => (void 0 !== t && t > e ? t : e),
+    m = (e) =>
         null === e
             ? null
             : {
@@ -71,11 +47,11 @@ let m = (e, t) => (void 0 !== t && t > e ? t : e),
                   left: e.left,
                   right: e.right
               };
-function E(e) {
-    let { onGetElementDimensionsAndBoundingRect: t, targetElementRef: n, shouldPollPositionOnMount: r, positionControlRef: a, debounceTime: o } = e,
-        { hasLayers: d } = (0, l.cj)([u.Z], () => ({ hasLayers: u.Z.hasLayers() })),
-        f = i.useRef(null),
-        _ = i.useCallback(() => {
+function p(e) {
+    let { onGetElementDimensionsAndBoundingRect: t, targetElementRef: n, shouldPollPositionOnMount: r, positionControlRef: a, debounceTime: i } = e,
+        { hasLayers: f } = (0, s.cj)([u.Z], () => ({ hasLayers: u.Z.hasLayers() })),
+        d = l.useRef(null),
+        b = l.useCallback(() => {
             let e = n.current;
             if (null === e)
                 return {
@@ -85,9 +61,9 @@ function E(e) {
                     hasElementPositionChanged: !1
                 };
             let t = e.getBoundingClientRect(),
-                r = !(0, s.isEqual)(g(t), g(f.current));
+                r = !(0, o.isEqual)(m(t), m(d.current));
             return (
-                (f.current = t),
+                (d.current = t),
                 {
                     height: e.offsetHeight,
                     width: e.offsetWidth,
@@ -96,15 +72,15 @@ function E(e) {
                 }
             );
         }, [n]),
-        p = i.useCallback(() => t(_()), [t, _]),
-        h = i.useMemo(
+        p = l.useCallback(() => t(b()), [t, b]),
+        h = l.useMemo(
             () =>
-                (0, s.debounce)(() => {
+                (0, o.debounce)(() => {
                     p();
-                }, o),
-            [p, o]
+                }, i),
+            [p, i]
         );
-    i.useEffect(
+    l.useEffect(
         () => (
             window.addEventListener('resize', h),
             () => {
@@ -113,79 +89,101 @@ function E(e) {
         ),
         [h]
     );
-    let m = (0, c.Z)(d),
-        E = i.useRef(null),
-        b = i.useRef(0),
-        y = i.useCallback(() => {
-            (null === E.current || b.current >= 5) &&
-                (null != E.current && clearInterval(E.current),
-                (E.current = setInterval(() => {
-                    if (b.current >= 10) {
-                        clearInterval(E.current), (E.current = null), (b.current = 0);
+    let g = (0, c.Z)(f),
+        v = l.useRef(null),
+        O = l.useRef(0),
+        y = l.useCallback(() => {
+            (null === v.current || O.current >= 5) &&
+                (null != v.current && clearInterval(v.current),
+                (v.current = setInterval(() => {
+                    if (O.current >= 10) {
+                        clearInterval(v.current), (v.current = null), (O.current = 0);
                         return;
                     }
-                    p(), b.current++;
+                    p(), O.current++;
                 }, 200)));
         }, [p]);
     return (
-        i.useEffect(() => {
+        l.useEffect(() => {
             r ? y() : p();
         }, [r, y, p]),
-        i.useEffect(() => {
-            m && !d && y();
-        }, [y, d, m]),
-        i.useEffect(() => {
+        l.useEffect(() => {
+            g && !f && y();
+        }, [y, f, g]),
+        l.useEffect(() => {
             void 0 !== a &&
                 (a.current = {
-                    getElementDimensionsAndBoundingRect: _,
+                    getElementDimensionsAndBoundingRect: b,
                     updateElementPosition: p,
                     updateElementPositionWithPolling: y
                 });
-        }, [p, y, _, a]),
-        { getElementDimensionsAndBoundingRect: _ }
+        }, [p, y, b, a]),
+        { getElementDimensionsAndBoundingRect: b }
     );
 }
-function b(e) {
-    let { backgroundElementRef: t, getOffsetsRelativeToElement: n, fallbackAbsoluteOffsets: r, minimumOffsets: a, positionControlRef: o, onGetBoundingRect: l = () => {}, debounceTime: c = 60 } = e,
-        [u, d] = i.useState(null);
-    return (
-        E({
-            onGetElementDimensionsAndBoundingRect: i.useCallback(
-                (e) => {
-                    let { height: t, width: i, elementBoundingRect: o } = e;
-                    if (null == o) return r;
-                    let c = _(
-                        {},
-                        n({
-                            height: t,
-                            width: i
-                        })
-                    );
-                    return void 0 !== c.top && (c.top = m(o.top + c.top, null == a ? void 0 : a.top)), void 0 !== c.left && (c.left = m(o.left + c.left, null == a ? void 0 : a.left)), void 0 !== c.right && (c.right = m(window.innerWidth - o.right + c.right, null == a ? void 0 : a.right)), void 0 !== c.bottom && (c.bottom = m(window.innerHeight - o.bottom + c.bottom, null == a ? void 0 : a.bottom)), l(o), (0, s.isEqual)(c, u) || d(c), c;
-                },
-                [u, n, r, a, l]
-            ),
-            targetElementRef: t,
-            positionControlRef: o,
-            debounceTime: c
-        }),
-        { offsets: u }
-    );
-}
-function y(e) {
-    var { children: t, style: n, className: i, key: a } = e;
-    let { offsets: s } = b(_({}, p(e, ['children', 'style', 'className', 'key']))),
-        l = _({}, s, n);
-    return null === s
+function h(e) {
+    var { children: t, style: n, className: a, key: s } = e;
+    let { offsets: c } = (function (e) {
+            let { backgroundElementRef: t, getOffsetsRelativeToElement: n, fallbackAbsoluteOffsets: r, minimumOffsets: a, positionControlRef: i, onGetBoundingRect: s = () => {}, debounceTime: c = 60 } = e,
+                [u, f] = l.useState(null);
+            return (
+                p({
+                    onGetElementDimensionsAndBoundingRect: l.useCallback(
+                        (e) => {
+                            let { height: t, width: l, elementBoundingRect: i } = e;
+                            if (null == i) return r;
+                            let c = d(
+                                {},
+                                n({
+                                    height: t,
+                                    width: l
+                                })
+                            );
+                            return void 0 !== c.top && (c.top = b(i.top + c.top, null == a ? void 0 : a.top)), void 0 !== c.left && (c.left = b(i.left + c.left, null == a ? void 0 : a.left)), void 0 !== c.right && (c.right = b(window.innerWidth - i.right + c.right, null == a ? void 0 : a.right)), void 0 !== c.bottom && (c.bottom = b(window.innerHeight - i.bottom + c.bottom, null == a ? void 0 : a.bottom)), s(i), (0, o.isEqual)(c, u) || f(c), c;
+                        },
+                        [u, n, r, a, s]
+                    ),
+                    targetElementRef: t,
+                    positionControlRef: i,
+                    debounceTime: c
+                }),
+                { offsets: u }
+            );
+        })(
+            d(
+                {},
+                (function (e, t) {
+                    if (null == e) return {};
+                    var n,
+                        r,
+                        l = (function (e, t) {
+                            if (null == e) return {};
+                            var n,
+                                r,
+                                l = {},
+                                a = Object.keys(e);
+                            for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (l[n] = e[n]);
+                            return l;
+                        })(e, t);
+                    if (Object.getOwnPropertySymbols) {
+                        var a = Object.getOwnPropertySymbols(e);
+                        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (l[n] = e[n]);
+                    }
+                    return l;
+                })(e, ['children', 'style', 'className', 'key'])
+            )
+        ),
+        u = d({}, c, n);
+    return null === c
         ? null
         : (0, r.jsx)(
               'div',
               {
-                  style: l,
-                  className: o()(d.wrapper, i),
+                  style: u,
+                  className: i()(f.wrapper, a),
                   children: t
               },
-              a
+              s
           );
 }
-y.displayName = 'ElementFixedOffsetContentWrapper';
+h.displayName = 'ElementFixedOffsetContentWrapper';

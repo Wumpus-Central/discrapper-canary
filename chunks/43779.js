@@ -17,21 +17,21 @@ var r = n(255367),
     b = n(644646),
     j = n(251360),
     v = n(65443),
-    _ = n(69439),
-    y = n(46140),
-    C = n(642145),
-    O = n(388032),
-    w = n(882067);
+    y = n(69439),
+    _ = n(46140),
+    O = n(642145),
+    C = n(388032),
+    w = n(19020);
 let S = async () => await n.e('67963').then(n.t.bind(n, 145193, 19));
 function P(e) {
     var t, n, s, P, T;
-    let { quest: N, questContent: A, isHovering: R, contentPosition: B, rowIndex: k, onReceiveErrorHints: q } = e,
-        I = (0, g.j)({ location: y.dr.QUESTS_BAR_MOBILE }),
+    let { quest: N, questContent: A, isHovering: R, contentPosition: k, rowIndex: B, onReceiveErrorHints: q } = e,
+        I = (0, g.j)({ location: _.dr.QUESTS_BAR_MOBILE }),
         D = o.useMemo(() => x.r.build(N.config), [N.config]),
         M = D.defaultReward.messages.name,
         L = D.defaultReward.messages.nameWithArticle,
-        Z = I ? M : L,
-        W = (null == (t = N.userStatus) ? void 0 : t.enrolledAt) != null,
+        W = I ? M : L,
+        Z = (null == (t = N.userStatus) ? void 0 : t.enrolledAt) != null,
         { ref: V, scrollHeight: Q } = (0, d.kE)(),
         U = 104 !== Q,
         { onAssetLoadComplete: H } = o.useContext(j.k),
@@ -62,7 +62,7 @@ function P(e) {
                             });
                     }
                     return e;
-                })({}, C.Y)),
+                })({}, O.Y)),
                 (T = T = { clamp: !0 }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(P, Object.getOwnPropertyDescriptors(T))
@@ -79,15 +79,15 @@ function P(e) {
                 P)
         }),
         F = (null == (n = N.userStatus) ? void 0 : n.completedAt) != null,
-        X = (null == (s = N.userStatus) ? void 0 : s.claimedAt) != null,
-        K = (0, f.xN)(N.config),
+        K = (null == (s = N.userStatus) ? void 0 : s.claimedAt) != null,
+        X = (0, f.xN)(N.config),
         Y = (0, f.LM)(N.config),
         { completedRatio: G, completedRatioDisplay: J } = (0, m.I)(N),
         $ = (0, m.Bd)(N),
         ee = o.useMemo(
             () =>
-                X && K
-                    ? O.intl.format(O.t['8Op4c3'], {
+                K && X
+                    ? C.intl.format(C.t['8Op4c3'], {
                           balanceHook: () =>
                               (0, r.jsxs)(E, {
                                   questId: N.id,
@@ -100,13 +100,13 @@ function P(e) {
                                   ]
                               })
                       })
-                    : X
+                    : K
                       ? (0, r.jsx)(E, {
                             questId: N.id,
                             children: M
                         })
-                      : K
-                        ? O.intl.format(O.t.ro1szc, {
+                      : X
+                        ? C.intl.format(C.t.ro1szc, {
                               balanceHook: () =>
                                   (0, r.jsxs)(E, {
                                       questId: N.id,
@@ -119,14 +119,14 @@ function P(e) {
                                       ]
                                   })
                           })
-                        : O.intl.format(O.t['0IUT4e'], {
+                        : C.intl.format(C.t['0IUT4e'], {
                               rewardWithArticleHook: () =>
                                   (0, r.jsx)(E, {
                                       questId: N.id,
-                                      children: Z
+                                      children: W
                                   })
                           }),
-            [M, X, Z, N.id, Y, K]
+            [M, K, W, N.id, Y, X]
         ),
         et = o.useMemo(() => {
             if (null != $)
@@ -150,8 +150,8 @@ function P(e) {
                     (0, r.jsxs)('div', {
                         className: w.assetWrapper,
                         children: [
-                            !X && F && (0, r.jsx)('div', { className: w.completionAnimation }),
-                            W && !X
+                            !K && F && (0, r.jsx)('div', { className: w.completionAnimation }),
+                            Z && !K
                                 ? (0, r.jsxs)('div', {
                                       className: w.progressWrapper,
                                       children: [
@@ -174,7 +174,7 @@ function P(e) {
                                                       quest: N,
                                                       questContent: A,
                                                       className: w.circularQuestRewardTileAsset,
-                                                      location: y.dr.QUEST_HOME_DESKTOP,
+                                                      location: _.dr.QUEST_HOME_DESKTOP,
                                                       autoplay: R,
                                                       onLoadComplete: H
                                                   })
@@ -187,7 +187,7 @@ function P(e) {
                                       autoplay: R,
                                       questContent: A,
                                       className: w.questRewardTileAsset,
-                                      location: y.dr.QUEST_HOME_DESKTOP,
+                                      location: _.dr.QUEST_HOME_DESKTOP,
                                       onLoadComplete: H
                                   })
                         ]
@@ -200,7 +200,7 @@ function P(e) {
                                 variant: 'eyebrow',
                                 color: 'text-brand',
                                 className: w.questName,
-                                children: O.intl.format(O.t.EAYZAg, { questName: N.config.messages.questName })
+                                children: C.intl.format(C.t.EAYZAg, { questName: N.config.messages.questName })
                             }),
                             (0, r.jsx)(c.Text, {
                                 variant: 'text-md/semibold',
@@ -225,11 +225,11 @@ function P(e) {
                         })
                 ]
             }),
-            (0, r.jsx)(_.Z, {
+            (0, r.jsx)(y.Z, {
                 quest: N,
                 location: A,
-                contentPosition: B,
-                rowIndex: k,
+                contentPosition: k,
+                rowIndex: B,
                 onReceiveErrorHints: q
             })
         ]

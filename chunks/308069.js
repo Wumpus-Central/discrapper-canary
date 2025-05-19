@@ -14,10 +14,10 @@ var r = n(255367),
     g = n(341907),
     x = n(303385),
     h = n(388032),
-    b = n(74783);
+    b = n(893465);
 let j = (e) => {
-    let { quest: t, expansionSpring: n, onCtxMenuSelect: s, onCtxMenuOpen: j, onCtxMenuClose: v, useReducedMotion: _, isExpanded: y, isExpansionAnimationComplete: C } = e,
-        O = (0, d.aM)(),
+    let { quest: t, expansionSpring: n, onCtxMenuSelect: s, onCtxMenuOpen: j, onCtxMenuClose: v, useReducedMotion: y, isExpanded: _, isExpansionAnimationComplete: O } = e,
+        C = (0, d.aM)(),
         w = o.useCallback(() => {
             (0, g.openDisclosureModal)(t, {
                 content: u.jn.QUEST_BAR_V2,
@@ -28,10 +28,10 @@ let j = (e) => {
             (0, p.FE)(t, {
                 content: u.jn.QUEST_BAR_V2,
                 ctaContent: c.jZ.OPEN_GAME_LINK,
-                impressionId: O
+                impressionId: C
             });
-        }, [O, t]),
-        P = y && C,
+        }, [C, t]),
+        P = _ && O,
         E = (0, r.jsx)(l.P3F, {
             onClick: S,
             className: a()(b.clickable, { [b.logo]: P }),
@@ -70,7 +70,7 @@ let j = (e) => {
                 expansionSpring: n,
                 isFullyExpanded: P,
                 partnerBranding: E,
-                useReducedMotion: _
+                useReducedMotion: y
             }),
             (0, r.jsxs)(i.animated.div, {
                 className: b.promotedBadgeWrapper,

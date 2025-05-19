@@ -42,7 +42,7 @@ var r = n(255367),
     q = n(981631),
     Y = n(217702),
     Q = n(388032),
-    G = n(844136);
+    G = n(38855);
 let z = new Set([q.IyS.FIVE_G, q.IyS.FOUR_G, q.IyS.UNKNOWN]),
     H = {
         tension: 250,
@@ -168,8 +168,8 @@ function $(e) {
         e2 = (0, l.useRef)(null),
         e8 = l.useRef(!0),
         e6 = (null == (t = el.userStatus) ? void 0 : t.completedAt) != null,
-        e4 = (0, _.km)((e) => e.transcript),
-        [e7, e3] = l.useState(null),
+        e3 = (0, _.km)((e) => e.transcript),
+        [e7, e4] = l.useState(null),
         [e9, e5] = l.useState(!1),
         [te, tt] = l.useState(!1),
         [tn, tr] = l.useState(null),
@@ -258,7 +258,7 @@ function $(e) {
                 if ((to.info('[QV] | updatePlayerState | playerState: '.concat(e)), ej(e), null != e1.current))
                     switch (e) {
                         case M.rq.PLAYING:
-                            e1.current.paused && tv(e7), e3(null), e1.current.play();
+                            e1.current.paused && tv(e7), e4(null), e1.current.play();
                             break;
                         case M.rq.PAUSED:
                             e1.current.paused || tD(), e1.current.pause(), (ez.current = !1);
@@ -283,7 +283,7 @@ function $(e) {
         [e6, el, to, tf]
     );
     l.useEffect(() => {
-        (es !== p.Dvm.HIDDEN && es !== p.Dvm.EXITING && es !== p.Dvm.EXITED && (null == es || !eh || eO || e6) && (!eE || eb || e6)) || null == e1.current || eC !== M.rq.PLAYING || (to.info('[QV] | Pausing video | playerState: '.concat(eC, ', parentTransitionState: ').concat(es, ', visible: ').concat(eO, ', focused: ').concat(eb, ', isQuestCompleted: ').concat(e6)), tP(M.rq.PAUSED), e6 || e3(j.yE.LOST_FOCUS));
+        (es !== p.Dvm.HIDDEN && es !== p.Dvm.EXITING && es !== p.Dvm.EXITED && (null == es || !eh || eO || e6) && (!eE || eb || e6)) || null == e1.current || eC !== M.rq.PLAYING || (to.info('[QV] | Pausing video | playerState: '.concat(eC, ', parentTransitionState: ').concat(es, ', visible: ').concat(eO, ', focused: ').concat(eb, ', isQuestCompleted: ').concat(e6)), tP(M.rq.PAUSED), e6 || e4(j.yE.LOST_FOCUS));
     }, [es, eb, eE, eO, eh, eC, e6, tP, tT, to]);
     let tN = () => e_(!0),
         tk = () => e_(!1),
@@ -324,7 +324,7 @@ function $(e) {
                         tR(0), tP(M.rq.PLAYING);
                         break;
                     case M.rq.PLAYING:
-                        tP(M.rq.PAUSED), e3(j.yE.PAUSE_BUTTON);
+                        tP(M.rq.PAUSED), e4(j.yE.PAUSE_BUTTON);
                         break;
                     default:
                         tP(M.rq.PLAYING);
@@ -725,7 +725,7 @@ function $(e) {
                                 hideCaptionBtn: null == tX,
                                 handlePlaybackBtnClick: tM,
                                 handleTranscriptBtnClick: () => {
-                                    ed || (null != e4 && e4.questId === el.id && e4.fetchStatus !== _.iF.NONE && e4.fetchStatus !== _.iF.FAILURE) || (0, C.lL)(el), em(!ed), tE(j.jn.VIDEO_MODAL, ed ? S.jZ.TRANSCRIPT_DISABLE : S.jZ.TRANSCRIPT_ENABLE);
+                                    ed || (null != e3 && e3.questId === el.id && e3.fetchStatus !== _.iF.NONE && e3.fetchStatus !== _.iF.FAILURE) || (0, C.lL)(el), em(!ed), tE(j.jn.VIDEO_MODAL, ed ? S.jZ.TRANSCRIPT_DISABLE : S.jZ.TRANSCRIPT_ENABLE);
                                 },
                                 handleCaptionBtnClick: () => {
                                     ef(!ep), tE(j.jn.VIDEO_MODAL, ep ? S.jZ.CLOSED_CAPTIONING_DISABLE : S.jZ.CLOSED_CAPTIONING_ENABLE);

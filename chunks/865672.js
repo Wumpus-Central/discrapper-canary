@@ -15,7 +15,7 @@ var r = n(255367),
     s = n(442837),
     l = n(607070),
     c = n(981631),
-    u = n(183375);
+    u = n(618097);
 let d = RegExp('\\p{Emoji_Presentation}', 'gu');
 function f(e) {
     var t, n;

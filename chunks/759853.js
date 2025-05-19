@@ -12,22 +12,22 @@ var r = n(255367),
     m = n(819640),
     f = n(569379),
     g = n(675654),
-    x = n(513940),
+    x = n(894212),
     h = n(197857);
 let b = ['#51BC9D'],
     j = (e) => {
         var t;
-        let { expansionSpring: n, overlayRef: s, quest: j, progressBarRef: v, isExpanded: _ } = e,
-            { completionSpring: y, startCompletionAnimation: C } = (0, f.G)(),
-            O = (null == (t = j.userStatus) ? void 0 : t.completedAt) != null,
+        let { expansionSpring: n, overlayRef: s, quest: j, progressBarRef: v, isExpanded: y } = e,
+            { completionSpring: _, startCompletionAnimation: O } = (0, f.G)(),
+            C = (null == (t = j.userStatus) ? void 0 : t.completedAt) != null,
             w = o.useRef(!1),
             S = (0, d.e7)([p.Z], () => p.Z.useReducedMotion),
             P = o.useRef(null),
             E = (0, d.e7)([m.Z], () => m.Z.hasLayers()),
             T = (0, u.Z)(E),
             [N, A] = o.useState(null),
-            [R, B] = o.useState(null),
-            k = o.useRef(
+            [R, k] = o.useState(null),
+            B = o.useRef(
                 new i.qA({
                     gravity: 0,
                     wind: 0
@@ -128,21 +128,21 @@ let b = ['#51BC9D'],
                     );
                 }
             }, [v, P, q, S]),
-            D = (0, u.Z)(_);
+            D = (0, u.Z)(y);
         return (o.useEffect(() => {
-            O && _ && !D && (C(), I());
-        }, [_, O, C, I, D]),
+            C && y && !D && (O(), I());
+        }, [y, C, O, I, D]),
         o.useEffect(() => {
-            O &&
+            C &&
                 !E &&
                 T &&
                 setTimeout(() => {
-                    C(), I();
+                    O(), I();
                 }, 200);
-        }, [O, T, E, C, I]),
+        }, [C, T, E, O, I]),
         o.useEffect(() => {
-            q.isReady && (!w.current && O && (C(), I()), (w.current = O));
-        }, [O, w, I, C, q]),
+            q.isReady && (!w.current && C && (O(), I()), (w.current = C));
+        }, [C, w, I, O, q]),
         S)
             ? null
             : (0, r.jsxs)('div', {
@@ -152,11 +152,11 @@ let b = ['#51BC9D'],
                   children: [
                       (0, r.jsx)(c.animated.div, {
                           className: x.background,
-                          style: { opacity: y }
+                          style: { opacity: _ }
                       }),
                       (0, r.jsx)(c.animated.div, {
                           className: a()(x.borders, x.bordersTopLeft),
-                          style: { opacity: y }
+                          style: { opacity: _ }
                       }),
                       (0, r.jsxs)(c.animated.div, {
                           className: x.confettiWrapper,
@@ -172,10 +172,10 @@ let b = ['#51BC9D'],
                               (0, r.jsx)(i.O_, {
                                   ref: A,
                                   className: x.confetti,
-                                  environment: k.current
+                                  environment: B.current
                               }),
                               (0, r.jsx)(i.Ji, {
-                                  ref: B,
+                                  ref: k,
                                   sprites: [h],
                                   colors: b,
                                   spriteWidth: g.Ko,
@@ -185,7 +185,7 @@ let b = ['#51BC9D'],
                                   (0, l.createPortal)(
                                       (0, r.jsx)(c.animated.div, {
                                           className: a()(x.borders, x.bordersBottom),
-                                          style: { opacity: y }
+                                          style: { opacity: _ }
                                       }),
                                       s.current
                                   )

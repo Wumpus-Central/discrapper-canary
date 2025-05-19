@@ -9,14 +9,14 @@ var r = n(120356),
     c = n(695346),
     d = n(903002),
     u = n(875781),
-    g = n(981631),
-    m = n(560012),
+    m = n(981631),
+    g = n(991613),
     p = n(388032),
-    h = n(324819),
+    h = n(717593),
     f = n(146036),
     b = n(510176);
 function _(e) {
-    let { headerAssetSrc: t, headerText: n, description: r, assets: o = [], assetCount: c = 0, disabled: u = !1, onClick: g } = e;
+    let { headerAssetSrc: t, headerText: n, description: r, assets: o = [], assetCount: c = 0, disabled: u = !1, onClick: m } = e;
     return (0, i.jsx)('div', {
         className: h.container,
         children: (0, i.jsxs)('div', {
@@ -69,7 +69,7 @@ function _(e) {
                                           size: d.F.MEDIUM
                                       }),
                                       (0, i.jsx)(a.zxk, {
-                                          onClick: g,
+                                          onClick: m,
                                           color: a.zxk.Colors.PRIMARY,
                                           children: 'Manage'
                                       })
@@ -91,19 +91,19 @@ function x() {
             (0, i.jsx)(_, {
                 headerAssetSrc: f,
                 headerText: p.intl.string(p.t.CQkyMj),
-                description: p.intl.string(m.default.ctRS3d),
+                description: p.intl.string(g.default.ctRS3d),
                 assets: t,
                 assetCount: n,
-                onClick: () => o.Z.open(g.oAB.REGISTERED_GAMES),
+                onClick: () => o.Z.open(m.oAB.REGISTERED_GAMES),
                 disabled: e
             }),
             (0, i.jsx)(_, {
                 headerAssetSrc: b,
                 headerText: p.intl.string(p.t['3fe7U1']),
-                description: p.intl.string(m.default.DU5UXF),
+                description: p.intl.string(g.default.DU5UXF),
                 assets: r,
                 assetCount: s,
-                onClick: () => o.Z.open(g.oAB.CONNECTIONS),
+                onClick: () => o.Z.open(m.oAB.CONNECTIONS),
                 disabled: e
             })
         ]

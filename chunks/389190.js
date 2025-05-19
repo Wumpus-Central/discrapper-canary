@@ -10,7 +10,7 @@ var l = t(255367),
     u = t(892001),
     f = t(252417),
     p = t(388032),
-    h = t(301150);
+    h = t(596938);
 function v(e) {
     let { user: n, guildId: t, channelId: v, onClose: g } = e,
         { mutualFriends: j } = (0, c.Z)(n),

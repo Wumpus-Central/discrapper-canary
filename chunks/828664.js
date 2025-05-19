@@ -1,124 +1,132 @@
-n.d(e, { default: () => f });
-var r = n(255367);
-n(73800);
-var c = n(442837),
-    l = n(481060),
-    o = n(774078),
-    a = n(569984),
-    i = n(388032),
-    s = n(842054);
-function u(t) {
-    let { transitionState: e, onClose: n, questEnrollmentBlockedUntil: c } = t,
-        { hours: a, minutes: u, seconds: f } = (0, o.Z)(c),
-        p = String(a).padStart(2, '0'),
-        b = String(u).padStart(2, '0'),
-        d = String(f).padStart(2, '0'),
+r.d(e, { default: () => b });
+var n = r(255367);
+r(73800);
+var c = r(442837),
+    l = r(481060),
+    o = r(774078),
+    i = r(569984),
+    a = r(497505),
+    s = r(602667),
+    u = r(388032),
+    f = r(388866);
+function p(t) {
+    let { transitionState: e, onClose: r, questEnrollmentBlockedUntil: c } = t,
+        { hours: i, minutes: a, seconds: s } = (0, o.Z)(c),
+        p = String(i).padStart(2, '0'),
+        b = String(a).padStart(2, '0'),
+        d = String(s).padStart(2, '0'),
         O = ''.concat(p, ':').concat(b, ':').concat(d);
-    return (0, r.jsxs)(l.Y0X, {
+    return (0, n.jsxs)(l.Y0X, {
         transitionState: e,
         size: l.CgR.DYNAMIC,
-        className: s.modal,
+        className: f.modal,
         children: [
-            (0, r.jsx)('div', {
-                className: s.header,
-                children: (0, r.jsx)(l.olH, {
-                    className: s.closeBtn,
-                    onClick: n
+            (0, n.jsx)('div', {
+                className: f.header,
+                children: (0, n.jsx)(l.olH, {
+                    className: f.closeBtn,
+                    onClick: r
                 })
             }),
-            (0, r.jsx)(l.X6q, {
+            (0, n.jsx)(l.X6q, {
                 variant: 'heading-lg/medium',
-                className: s.title,
-                children: i.intl.string(i.t['g+02d3'])
+                className: f.title,
+                children: u.intl.string(u.t['g+02d3'])
             }),
-            (0, r.jsx)(l.Text, {
+            (0, n.jsx)(l.Text, {
                 variant: 'text-md/normal',
-                className: s.subtext,
-                children: i.intl.string(i.t.XEHDT0)
+                className: f.subtext,
+                children: u.intl.string(u.t.XEHDT0)
             }),
-            (0, r.jsx)(l.Text, {
+            (0, n.jsx)(l.Text, {
                 variant: 'text-md/normal',
-                className: s.subtext,
-                children: i.intl.formatToPlainString(i.t['+5XVHx'], { countdownString: O })
+                className: f.subtext,
+                children: u.intl.formatToPlainString(u.t['+5XVHx'], { countdownString: O })
             }),
-            (0, r.jsx)(l.zxk, {
-                className: s.ctaBtn,
-                onClick: n,
-                children: i.intl.string(i.t.cpT0Cg)
+            (0, n.jsx)(l.zxk, {
+                className: f.ctaBtn,
+                onClick: r,
+                children: u.intl.string(u.t.cpT0Cg)
             })
         ]
     });
 }
-function f(t) {
-    var e,
-        n,
-        { onClose: l } = t,
-        o = (function (t, e) {
+function b(t) {
+    var { onClose: e, quest: r } = t,
+        l = (function (t, e) {
             if (null == t) return {};
-            var n,
-                r,
+            var r,
+                n,
                 c = (function (t, e) {
                     if (null == t) return {};
-                    var n,
-                        r,
+                    var r,
+                        n,
                         c = {},
                         l = Object.keys(t);
-                    for (r = 0; r < l.length; r++) (n = l[r]), e.indexOf(n) >= 0 || (c[n] = t[n]);
+                    for (n = 0; n < l.length; n++) (r = l[n]), e.indexOf(r) >= 0 || (c[r] = t[r]);
                     return c;
                 })(t, e);
             if (Object.getOwnPropertySymbols) {
                 var l = Object.getOwnPropertySymbols(t);
-                for (r = 0; r < l.length; r++) (n = l[r]), !(e.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(t, n) && (c[n] = t[n]);
+                for (n = 0; n < l.length; n++) (r = l[n]), !(e.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(t, r) && (c[r] = t[r]);
             }
             return c;
-        })(t, ['onClose']);
-    let i = (0, c.e7)([a.Z], () => a.Z.questEnrollmentBlockedUntil);
-    return null == i
+        })(t, ['onClose', 'quest']);
+    let o = (0, c.e7)([i.Z], () => i.Z.questEnrollmentBlockedUntil);
+    return null == o || null == r
         ? null
-        : (0, r.jsx)(
-              u,
-              ((e = (function (t) {
-                  for (var e = 1; e < arguments.length; e++) {
-                      var n = null != arguments[e] ? arguments[e] : {},
-                          r = Object.keys(n);
-                      'function' == typeof Object.getOwnPropertySymbols &&
-                          (r = r.concat(
-                              Object.getOwnPropertySymbols(n).filter(function (t) {
-                                  return Object.getOwnPropertyDescriptor(n, t).enumerable;
-                              })
-                          )),
-                          r.forEach(function (e) {
-                              var r;
-                              (r = n[e]),
-                                  e in t
-                                      ? Object.defineProperty(t, e, {
-                                            value: r,
-                                            enumerable: !0,
-                                            configurable: !0,
-                                            writable: !0
-                                        })
-                                      : (t[e] = r);
-                          });
-                  }
-                  return t;
-              })({}, o)),
-              (n = n =
-                  {
-                      onClose: l,
-                      questEnrollmentBlockedUntil: i
-                  }),
-              Object.getOwnPropertyDescriptors
-                  ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-                  : (function (t, e) {
-                        var n = Object.keys(t);
-                        if (Object.getOwnPropertySymbols) {
-                            var r = Object.getOwnPropertySymbols(t);
-                            n.push.apply(n, r);
-                        }
-                        return n;
-                    })(Object(n)).forEach(function (t) {
-                        Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(n, t));
-                    }),
-              e)
-          );
+        : (0, n.jsx)(s.A, {
+              overrideVisibility: !0,
+              questOrQuests: r,
+              questContent: a.jn.QUEST_ENROLLMENT_BLOCKED_MODAL,
+              children: () => {
+                  var t, r;
+                  return (0, n.jsx)(
+                      p,
+                      ((t = (function (t) {
+                          for (var e = 1; e < arguments.length; e++) {
+                              var r = null != arguments[e] ? arguments[e] : {},
+                                  n = Object.keys(r);
+                              'function' == typeof Object.getOwnPropertySymbols &&
+                                  (n = n.concat(
+                                      Object.getOwnPropertySymbols(r).filter(function (t) {
+                                          return Object.getOwnPropertyDescriptor(r, t).enumerable;
+                                      })
+                                  )),
+                                  n.forEach(function (e) {
+                                      var n;
+                                      (n = r[e]),
+                                          e in t
+                                              ? Object.defineProperty(t, e, {
+                                                    value: n,
+                                                    enumerable: !0,
+                                                    configurable: !0,
+                                                    writable: !0
+                                                })
+                                              : (t[e] = n);
+                                  });
+                          }
+                          return t;
+                      })({}, l)),
+                      (r = r =
+                          {
+                              onClose: e,
+                              questEnrollmentBlockedUntil: o
+                          }),
+                      Object.getOwnPropertyDescriptors
+                          ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                          : (function (t, e) {
+                                var r = Object.keys(t);
+                                if (Object.getOwnPropertySymbols) {
+                                    var n = Object.getOwnPropertySymbols(t);
+                                    r.push.apply(r, n);
+                                }
+                                return r;
+                            })(Object(r)).forEach(function (e) {
+                                Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                            }),
+                      t)
+                  );
+              }
+          });
 }

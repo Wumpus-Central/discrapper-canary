@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(481060),
     d = n(634894),
     u = n(410030),
-    g = n(100527),
-    m = n(906732),
+    m = n(100527),
+    g = n(906732),
     p = n(975298),
     h = n(15640),
     f = n(594174),
@@ -26,7 +26,7 @@ var i = n(255367),
     I = n(409100),
     N = n(474936),
     y = n(388032),
-    A = n(554074),
+    A = n(809649),
     P = n(102655),
     R = n(768236),
     D = n(314907),
@@ -143,7 +143,7 @@ let k = () => {
         var t;
         let n,
             { className: s, hideCTAs: P = !1, headingOverride: R, hidePill: D = !1, selectedPlanColumnClassName: Z, selectedPlanTier: V = N.p9.TIER_2 } = e,
-            { analyticsLocations: G } = (0, m.ZP)(g.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
+            { analyticsLocations: G } = (0, g.ZP)(m.Z.PREMIUM_MARKETING_PLAN_COMPARISON),
             F = (0, a.e7)([b.ZP], () => b.ZP.hasFetchedSubscriptions()),
             H = (0, h.V)(),
             z = 'PlanComparisonTable';
@@ -258,7 +258,7 @@ let k = () => {
                     ? (0, i.jsx)(k, {})
                     : (0, i.jsx)(L, {}));
         let ec = Q === N.Si.TIER_0 || J === N.p9.TIER_0 || V === N.p9.TIER_0;
-        return (0, i.jsx)(m.Gt, {
+        return (0, i.jsx)(g.Gt, {
             value: G,
             children: (0, i.jsxs)('div', {
                 className: l()(A.root, s),

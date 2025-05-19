@@ -58,9 +58,9 @@ var r = n(255367),
     ee = n(215023),
     et = n(981631),
     en = n(474936),
-    er = n(694232),
+    er = n(381821),
     ei = n(388032),
-    ea = n(854402);
+    ea = n(130706);
 function eo(e, t, n) {
     return (
         t in e
@@ -577,7 +577,7 @@ let eu = 880,
                         environment: O.current
                     }),
                     (0, r.jsx)(Y.i, { options: S }),
-                    d && (0, r.jsx)(C.o, { onClose: o }),
+                    d && (0, r.jsx)(C.o, {}),
                     (0, r.jsx)(_.Y0X, {
                         hideShadow: !0,
                         transitionState: t,

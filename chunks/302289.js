@@ -6,15 +6,15 @@ var r = n(120356),
     l = n(481060),
     a = n(785681),
     o = n(130310),
-    c = n(332495),
+    c = n(127941),
     d = n(388032),
-    u = n(175875),
-    g = n(589608),
-    m = n(128216);
+    u = n(815625),
+    m = n(580548),
+    g = n(128216);
 let p = () => {
     let e = (0, a.o)(d.intl.string(c.default.i4XFEB), d.intl.string(c.default.eHQZuL));
     return (0, i.jsxs)('div', {
-        className: s()(u.container, g.box, g),
+        className: s()(u.container, m.box, m),
         children: [
             (0, i.jsxs)('div', {
                 children: [
@@ -35,7 +35,7 @@ let p = () => {
             (0, i.jsx)('div', {
                 className: u.artContainer,
                 children: (0, i.jsx)('img', {
-                    src: m,
+                    src: g,
                     alt: d.intl.string(c.default.o4pfFB)
                 })
             })

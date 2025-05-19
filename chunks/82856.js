@@ -1,12 +1,18 @@
-n.d(t, { o: () => h });
+n.d(t, {
+    o: () => b,
+    y: () => y
+});
 var r = n(255367),
     i = n(73800),
-    a = n(493773),
-    o = n(790542),
-    s = n(970815),
-    l = n(622562),
-    c = n(981631);
-function u(e, t, n) {
+    a = n(442837),
+    o = n(481060),
+    s = n(493773),
+    l = n(819640),
+    c = n(751648),
+    u = n(479766),
+    d = n(970815),
+    f = n(981631);
+function _(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -19,7 +25,7 @@ function u(e, t, n) {
         e
     );
 }
-function d(e) {
+function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -30,12 +36,12 @@ function d(e) {
                 })
             )),
             r.forEach(function (t) {
-                u(e, t, n[t]);
+                _(e, t, n[t]);
             });
     }
     return e;
 }
-function f(e, t) {
+function h(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -47,71 +53,86 @@ function f(e, t) {
     }
     return n;
 }
-function _(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
+            : h(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let p = {
-    getOffsetsRelativeToElement: () => ({
-        top: 0,
-        right: 0
-    }),
-    fallbackAbsoluteOffsets: {
-        top: 84,
-        right: 32
-    },
-    minimumOffsets: { right: 12 }
-};
-function h(e) {
-    let { onClick: t, onClose: n } = e,
-        { balance: u } = (0, o.A)(),
-        f = async () => {
-            await n();
-        },
-        h = (0, i.useMemo)(() => {
-            var e;
-            return null != (e = document.getElementById(s.th.SHOP_FULLSCREEN)) ? e : document.getElementById(s.th.SHOP);
-        }, []);
-    (0, a.ZP)(() => {
-        setTimeout(() => {
-            null != h && h.style.setProperty('visibility', 'hidden');
-        }, 500);
-    }),
+function g(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = E(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var a = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function E(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        a = Object.keys(e);
+    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+function b() {
+    let e = (0, a.e7)([u.Z], () => u.Z.balancePillOverlay);
+    return (
+        (0, s.ZP)(() => {
+            setTimeout(() => {
+                e || (0, c.qD)(!0);
+            }, 300);
+        }),
         (0, i.useEffect)(
             () => () => {
-                null != h && h.style.setProperty('visibility', 'visible');
+                !(0, o.$sL)() && e && (0, c.qD)(!1);
             },
-            [h]
-        );
-    let m = (0, i.useRef)(h);
-    if (null != h)
-        return (0, r.jsx)(
-            l.E9,
-            _(
-                d(
-                    {
-                        backgroundElementRef: m,
-                        onGetBoundingRect: c.dG4
-                    },
-                    p
-                ),
-                {
-                    children: (0, r.jsx)(s.A4, {
-                        onClick: async (e) => {
-                            void 0 !== t && t(e), await f();
-                        },
-                        balance: u,
-                        balanceWidgetMode: s.b6.DEFAULT,
-                        isInModalOverlay: !0
-                    })
-                }
-            )
-        );
+            [e]
+        ),
+        null
+    );
+}
+function y(e) {
+    var { pillRef: t, anchorPillType: n } = e,
+        s = g(e, ['pillRef', 'anchorPillType']);
+    let { balancePillOverlay: c } = (0, a.cj)([u.Z], () => ({ balancePillOverlay: u.Z.balancePillOverlay })),
+        _ = (0, r.jsx)(d.A4, p({ ref: t }, s)),
+        h = (0, r.jsx)(
+            d.A4,
+            m(p({}, s), {
+                isInModalOverlay: !0,
+                disabled: !0
+            })
+        ),
+        { isAnyLayerOpen: E, isLastLayerShopFullScreen: b } = (0, a.cj)([l.Z], () => {
+            let e = l.Z.getLayers();
+            return {
+                isLastLayerShopFullScreen: e.length > 0 && e[e.length - 1] === f.S9g.COLLECTIBLES_SHOP,
+                isAnyLayerOpen: l.Z.hasLayers()
+            };
+        }),
+        y = i.useMemo(() => !!c && (!E || (b && 'SHOP_FULLSCREEN' === n)), [c, E, b, n]),
+        O = null != t.current ? t.current.offsetHeight : 36;
+    return (0, r.jsx)(o.yRy, {
+        fixed: !0,
+        autoInvert: !1,
+        renderPopout: () => h,
+        position: 'bottom',
+        align: 'right',
+        shouldShow: y,
+        spacing: -O,
+        animation: o.yRy.Animation.NONE,
+        targetElementRef: t,
+        positionKey: ''.concat(s.balance, '-').concat(c),
+        children: () => _
+    });
 }

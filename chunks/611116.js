@@ -7,8 +7,8 @@ var i = n(255367),
     o = n(572995),
     c = n(42373),
     d = n(388032),
-    u = n(888723);
-function g(e) {
+    u = n(113929);
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -33,8 +33,8 @@ function g(e) {
     }
     return e;
 }
-function m(e) {
-    let { className: t, boxes: n, title: r, shouldLoadVideo: s, isReducedMotion: o, includeSideGradient: d = !1, startLeftAligned: m = !1 } = e;
+function g(e) {
+    let { className: t, boxes: n, title: r, shouldLoadVideo: s, isReducedMotion: o, includeSideGradient: d = !1, startLeftAligned: g = !1 } = e;
     return (0, i.jsxs)('div', {
         className: l()(u.boxBackdrop, t),
         children: [
@@ -49,11 +49,11 @@ function m(e) {
                 children: n.map((e, t) =>
                     (0, i.jsx)(
                         c.Z,
-                        g(
+                        m(
                             {
                                 shouldLoadVideo: s,
                                 isReducedMotion: o,
-                                index: t + +!!m
+                                index: t + +!!g
                             },
                             e
                         ),
@@ -70,8 +70,8 @@ let p = r.memo(function (e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(
-                m,
-                g(
+                g,
+                m(
                     {
                         boxes: Object.values(t),
                         title: d.intl.string(d.t.LRmNAg)
@@ -80,8 +80,8 @@ let p = r.memo(function (e) {
                 )
             ),
             (0, i.jsx)(
-                m,
-                g(
+                g,
+                m(
                     {
                         boxes: Object.values(n),
                         title: d.intl.string(d.t.EnzW2N),

@@ -10,7 +10,7 @@ var r = n(866442),
     d = n(388032);
 function u(e) {
     var t;
-    let { user: n, savedUserColor: u, pendingColor: g, setPendingAccentColor: m } = e,
+    let { user: n, savedUserColor: u, pendingColor: m, setPendingAccentColor: g } = e,
         p = n.getAvatarURL(null, 80),
         h = (0, l.dQu)(s.Z.unsafe_rawColors.PRIMARY_530).hex(),
         f = (0, a.Cf)(p, h, !1),
@@ -18,8 +18,8 @@ function u(e) {
     return (0, i.jsx)(c.Z, {
         title: d.intl.string(d.t['/X3fkZ']),
         children: (0, i.jsx)(o.Z, {
-            onChange: (e) => m(e),
-            color: null != (t = null != g ? g : u) ? t : b,
+            onChange: (e) => g(e),
+            color: null != (t = null != m ? m : u) ? t : b,
             suggestedColors: f,
             showEyeDropper: !0
         })

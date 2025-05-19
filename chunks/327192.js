@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(692547),
     d = n(780384),
     u = n(481060),
-    g = n(570140),
-    m = n(457330),
+    m = n(570140),
+    g = n(457330),
     p = n(497321),
     h = n(23551),
     f = n(468026),
@@ -37,8 +37,8 @@ var i = n(255367),
     B = n(856651),
     M = n(921944),
     U = n(388032),
-    V = n(741138),
-    G = n(20493);
+    V = n(879198),
+    G = n(971005);
 function F(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -86,7 +86,7 @@ let H = (e) => {
             (r = (0, i.jsx)(u.zxk, {
                 size: u.PhG.SMALL,
                 onClick: function () {
-                    m.Z.joinServer(s.id, () => {});
+                    g.Z.joinServer(s.id, () => {});
                 },
                 disabled: l,
                 children: (0, i.jsx)('span', { children: l ? U.intl.string(U.t.RXvQQk) : U.intl.string(U.t.XpeFYm) })
@@ -139,7 +139,7 @@ function z(e) {
     let n,
         s,
         l,
-        { onDisconnect: a, account: o, theme: g, locale: p } = e,
+        { onDisconnect: a, account: o, theme: m, locale: p } = e,
         [h, b] = r.useState(o.friendSync),
         [O, S] = r.useState(o.visibility),
         [T, I] = r.useState(o.metadataVisibility),
@@ -164,7 +164,7 @@ function z(e) {
         r.useEffect(() => {
             if (!1 === o.verified) return;
             let { inProgressVisibility: e, inProgressMetadataVisibility: t } = J.current;
-            null != e && (S(e), m.Z.setVisibility(o.type, o.id, e), R(null)), null != t && (I(t), m.Z.setMetadataVisibility(o.type, o.id, t), G(null));
+            null != e && (S(e), g.Z.setVisibility(o.type, o.id, e), R(null)), null != t && (I(t), g.Z.setMetadataVisibility(o.type, o.id, t), G(null));
         }, [o]);
     function $() {
         let e = _.Z.get(o.type),
@@ -244,7 +244,7 @@ function z(e) {
                             (0, i.jsx)('img', {
                                 alt: r.name,
                                 className: V.connectionIcon,
-                                src: (0, d.wj)(g) ? r.icon.darkSVG : r.icon.lightSVG
+                                src: (0, d.wj)(m) ? r.icon.darkSVG : r.icon.lightSVG
                             }),
                             (0, i.jsxs)('div', {
                                 children: [
@@ -387,7 +387,7 @@ function z(e) {
                                     ? void 0
                                     : () => {
                                           W(!0),
-                                              m.Z.refresh(e.type, e.id).finally(() => {
+                                              g.Z.refresh(e.type, e.id).finally(() => {
                                                   setTimeout(() => {
                                                       Y.push(e.id), K(Y), W(!1);
                                                   }, 2000);
@@ -410,7 +410,7 @@ function z(e) {
                     hideBorder: !0,
                     value: h,
                     onChange: function (e) {
-                        b(e), m.Z.setFriendSync(o.type, o.id, e);
+                        b(e), g.Z.setFriendSync(o.type, o.id, e);
                     },
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
@@ -423,7 +423,7 @@ function z(e) {
                     hideBorder: !0,
                     value: N,
                     onChange: function (e) {
-                        y(e), m.Z.setShowActivity(o.type, o.id, e);
+                        y(e), g.Z.setShowActivity(o.type, o.id, e);
                     },
                     children: (0, i.jsx)(u.Text, {
                         variant: 'text-sm/semibold',
@@ -446,7 +446,7 @@ function z(e) {
                                 });
                             return;
                         }
-                        I(n), m.Z.setMetadataVisibility(o.type, o.id, n);
+                        I(n), g.Z.setMetadataVisibility(o.type, o.id, n);
                     },
                     disabled: 1 !== O || null == o.metadata,
                     children: (0, i.jsx)(u.Text, {
@@ -474,7 +474,7 @@ function z(e) {
                                         });
                                     return;
                                 }
-                                S(n), m.Z.setVisibility(o.type, o.id, n);
+                                S(n), g.Z.setVisibility(o.type, o.id, n);
                             },
                             children: (0, i.jsx)(u.Text, {
                                 variant: 'text-sm/semibold',
@@ -561,7 +561,7 @@ function Y(e) {
 }
 function K() {
     function e() {
-        g.Z.dispatch({
+        m.Z.dispatch({
             type: 'CONNECTIONS_GRID_MODAL_SHOW',
             onComplete: Y
         });
@@ -646,7 +646,7 @@ function q(e) {
                                 onDisconnect: () =>
                                     (function (e) {
                                         let { type: t, id: n } = e;
-                                        m.Z.disconnect(t, n);
+                                        g.Z.disconnect(t, n);
                                     })(e)
                             },
                             t
@@ -666,7 +666,7 @@ let X = () => {
     (0, a.e7)([N.ZP], () => N.ZP.getFlattenedGuildIds());
     let l = (0, a.e7)([R.default], () => R.default.locale);
     return (r.useEffect(() => {
-        m.Z.fetch();
+        g.Z.fetch();
     }, []),
     e)
         ? (0, i.jsx)(p.Z, {})

@@ -27,7 +27,7 @@ var r = n(255367),
     j = n(809780),
     C = n(981631),
     S = n(388032),
-    I = n(128406);
+    I = n(679678);
 function N(e) {
     var t, n, l, o, N, P, A;
     let { setTab: w, onJump: Z, showTutorial: R, setSeenTutorial: k, closePopout: D, badgeState: L } = e,

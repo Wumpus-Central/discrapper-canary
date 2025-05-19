@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -7,11 +7,11 @@ var i = n(255367),
     o = n(667105),
     c = n(211712),
     d = n(388032),
-    u = n(561234);
-function g(e) {
+    u = n(333541);
+function m(e) {
     let { preset: t, onShuffle: n } = e,
-        g = (0, s.e7)([a.Z], () => a.Z.useReducedMotion),
-        m = (0, o.g2)({ useReducedMotion: g }),
+        m = (0, s.e7)([a.Z], () => a.Z.useReducedMotion),
+        g = (0, o.g2)({ useReducedMotion: m }),
         { name: p, header: h } = r.useMemo(() => {
             let e = (0, c.Ib)(t);
             return {
@@ -24,15 +24,15 @@ function g(e) {
         children: [
             (0, i.jsx)(l.P3F, {
                 onClick: () => {
-                    n(), m.startAnimation(!1);
+                    n(), g.startAnimation(!1);
                 },
                 className: u.button,
                 'aria-label': d.intl.string(d.t['44yJxs']),
-                children: m.render()
+                children: g.render()
             }),
             (0, i.jsxs)(l.P3F, {
                 onClick: () => {
-                    n(), m.startAnimation(!1);
+                    n(), g.startAnimation(!1);
                 },
                 'aria-label': ''.concat(p, ': ').concat(d.intl.string(d.t['44yJxs'])),
                 className: u.select,

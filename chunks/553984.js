@@ -9,7 +9,7 @@ var r,
     o = n.n(l),
     s = n(481060),
     a = n(388032),
-    c = n(381231),
+    c = n(766030),
     u = (((r = {}).ANNOUNCEMENTS = 'announcements'), (r.MENTIONS = 'mentions'), r);
 function d(e) {
     let { selectedFilters: t, setFilters: n } = e,

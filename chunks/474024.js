@@ -13,7 +13,7 @@ var r = n(255367),
     p = n(436879),
     f = n(981631),
     h = n(388032),
-    x = n(951767);
+    x = n(447340);
 function b(e) {
     var t;
     let { profile: n, canManageGuild: l } = e,

@@ -18,8 +18,8 @@ var a = r(120356),
     m = r(226961),
     p = r(513547),
     h = r(65154),
-    y = r(442122),
-    g = r(20493);
+    y = r(975923),
+    g = r(971005);
 let f = {
     [h.Z.NO_OVERRIDE]: 'None',
     [h.Z.LOW]: 'Low Quality Stream',

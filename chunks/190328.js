@@ -12,7 +12,7 @@ var r = n(255367),
     p = n(303582),
     m = n(477839),
     g = n(388032),
-    b = n(67190),
+    b = n(768397),
     y = n(225893);
 function h(e) {
     let { name: t, description: n, pointsDescription: s, points: o, cost: f, iconSrc: m, currentPoints: h, onPurchase: x, itemId: v, upgradeId: O } = e,

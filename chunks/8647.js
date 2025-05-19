@@ -9,15 +9,15 @@ var r = n(120356),
     c = n(182567),
     d = n(78839),
     u = n(63063),
-    g = n(74538),
-    m = n(821629),
+    m = n(74538),
+    g = n(821629),
     p = n(346497),
     h = n(409100),
     f = n(725727),
     b = n(474936),
     _ = n(981631),
     x = n(388032),
-    E = n(669792);
+    E = n(672959);
 let C = function (e) {
     let { isFullScreen: t, buttonClassName: r } = e,
         { promotion: C } = (0, f.mq)(),
@@ -45,12 +45,12 @@ let C = function (e) {
                                 (0, i.jsx)(a.X6q, {
                                     variant: 'display-sm',
                                     color: 'always-white',
-                                    children: null == j || null == (0, g.he)(j) ? x.intl.string(x.t.xbzNJC) : x.intl.string(x.t['22WZ9P'])
+                                    children: null == j || null == (0, m.he)(j) ? x.intl.string(x.t.xbzNJC) : x.intl.string(x.t['22WZ9P'])
                                 }),
                                 (0, i.jsx)(a.Text, {
                                     className: E.countdown,
                                     variant: 'text-sm/bold',
-                                    children: (0, i.jsx)(m.Z, { endDate: O })
+                                    children: (0, i.jsx)(g.Z, { endDate: O })
                                 }),
                                 (0, i.jsx)(a.Text, {
                                     variant: 'text-sm/medium',
