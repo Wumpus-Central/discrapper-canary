@@ -252,6 +252,7 @@ function en(e) {
                 (0, r.jsx)('div', {
                     className: Z.mediaMosaicAltTextContainer,
                     children: (0, r.jsx)(d.yRy, {
+                        targetElementRef: b,
                         animation: d.yRy.Animation.FADE,
                         renderPopout: () => (0, r.jsx)(E, { altText: t }),
                         children: (e) =>

@@ -1,43 +1,55 @@
-n.d(t, { Z: () => h });
-var r = n(255367);
-n(73800);
-var i = n(657707),
-    a = n(456100),
-    o = n(841784),
-    s = n(482798),
-    l = n(750154),
-    c = n(802529),
-    u = n(11133),
-    d = n(473919),
-    f = n(170187),
-    _ = n(981631);
-let p = function (e) {
+n.d(t, { Z: () => E });
+var r = n(255367),
+    i = n(73800),
+    a = n(657707),
+    o = n(456100),
+    s = n(841784),
+    l = n(906732),
+    c = n(482798),
+    u = n(750154),
+    d = n(802529),
+    f = n(11133),
+    _ = n(814454),
+    p = n(473919),
+    h = n(170187),
+    m = n(981631);
+let g = function (e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return (0, l.dS)(e) ? i.ewx : (0, o.Z)(e) ? (t ? i.iWm : i.jje) : e.type === _.IIU.PLAYING ? i.iWm : e.type === _.IIU.LISTENING ? i.RZG : e.type === _.IIU.WATCHING || e.type === _.IIU.STREAMING ? i.ARS : e.type === _.IIU.COMPETING ? i.iWm : null;
+    return (0, u.dS)(e) ? a.ewx : (0, s.Z)(e) ? (t ? a.iWm : a.jje) : e.type === m.IIU.PLAYING ? a.iWm : e.type === m.IIU.LISTENING ? a.RZG : e.type === m.IIU.WATCHING || e.type === m.IIU.STREAMING ? a.ARS : e.type === m.IIU.COMPETING ? a.iWm : null;
 };
-function h(e) {
-    let { activity: t, textVariant: n, textClassName: i, iconClassName: o, hideIcon: l = !1, hideText: _ = !1, hideTooltip: h = !1, canTruncate: m = !0 } = e,
-        { enabled: g } = a.c.useExperiment({ location: 'PresenceActivityStatus' }, { autoTrackExposure: !0 }),
-        { descriptiveTextEnabled: E } = (0, c.f)({ location: 'PresenceActivityStatus' }),
-        { enableTopNavButton: b } = (0, s.Cq)({ location: 'PresenceActivityStatus' });
-    if (l && _) return null;
-    let { text: y, tooltip: O } = (0, u.Z)(t, E || b),
-        v = p(t, g);
+function E(e) {
+    let { activity: t, textVariant: n, textClassName: a, iconClassName: s, hideIcon: u = !1, hideText: m = !1, hideTooltip: E = !1, canTruncate: b = !0 } = e,
+        { enabled: y } = o.c.useExperiment({ location: 'PresenceActivityStatus' }, { autoTrackExposure: !0 }),
+        { descriptiveTextEnabled: O } = (0, d.f)({ location: 'PresenceActivityStatus' }),
+        { enableTopNavButton: v } = (0, c.Cq)({ location: 'PresenceActivityStatus' }),
+        { analyticsLocations: I } = (0, l.ZP)(),
+        S = i.useCallback(() => {
+            (0, _.A)({
+                analyticsLocations: I,
+                activityType: t.type,
+                applicationId: t.application_id
+            });
+        }, [I, t.application_id, t.type]);
+    if (u && m) return null;
+    let { text: T, tooltip: A } = (0, f.Z)(t, O || v),
+        N = g(t, y),
+        C = m && !E && null != A;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            !l &&
-                null != v &&
-                (0, r.jsx)(d.Z, {
-                    icon: v,
-                    tooltipText: _ && !h ? O : void 0,
-                    className: o
+            !u &&
+                null != N &&
+                (0, r.jsx)(p.Z, {
+                    icon: N,
+                    tooltipText: C ? A : void 0,
+                    className: s,
+                    onTooltipShow: C ? S : void 0
                 }),
-            !_ &&
-                (0, r.jsx)(f.Z, {
+            !m &&
+                (0, r.jsx)(h.Z, {
                     variant: n,
-                    className: i,
-                    canTruncate: m,
-                    children: y
+                    className: a,
+                    canTruncate: b,
+                    children: T
                 })
         ]
     });

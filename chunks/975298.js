@@ -89,7 +89,7 @@ let I = (e) => {
     let f = d.length > 0,
         _ = E.a$.NONE;
     f && (_ = null != o && o.status === g.O0b.PAUSED ? E.a$.FP_SUB_PAUSED : E.a$.FP_ONLY);
-    let p = c && d[0].sourceType === g.kNB.REVERSE_TRIAL;
+    let p = c && d.length > 0 && d[0].sourceType === g.kNB.REVERSE_TRIAL;
     return {
         isFractionalPremiumActive: f,
         fractionalState: _,

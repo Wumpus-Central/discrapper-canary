@@ -1,36 +1,49 @@
-n.d(t, { Z: () => f });
-var r = n(255367);
-n(73800);
-var i = n(442837),
-    a = n(481060),
-    o = n(201895),
-    s = n(933557),
-    l = n(592125),
-    c = n(473919),
-    u = n(170187),
-    d = n(388032);
-function f(e) {
-    let { stream: t, game: n, textVariant: f, textClassName: _, iconClassName: p, hideIcon: h = !1, hideText: m = !1, hideTooltip: g = !1, canTruncate: E = !0 } = e,
-        b = (0, i.e7)([l.Z], () => l.Z.getChannel(t.channelId)),
-        y = (0, s.ZP)(b);
-    if (h && m) return null;
-    let O = (null == n ? void 0 : n.name) === '' ? null : null == n ? void 0 : n.name,
-        v = null != O ? d.intl.format(d.t['0wJXSk'], { name: O }) : d.intl.string(d.t.eXan7O);
+n.d(t, { Z: () => m });
+var r = n(255367),
+    i = n(73800),
+    a = n(442837),
+    o = n(481060),
+    s = n(906732),
+    l = n(201895),
+    c = n(933557),
+    u = n(592125),
+    d = n(814454),
+    f = n(473919),
+    _ = n(170187),
+    p = n(981631),
+    h = n(388032);
+function m(e) {
+    let { stream: t, game: n, textVariant: m, textClassName: g, iconClassName: E, hideIcon: b = !1, hideText: y = !1, hideTooltip: O = !1, canTruncate: v = !0 } = e,
+        I = (0, a.e7)([u.Z], () => u.Z.getChannel(t.channelId)),
+        S = (0, c.ZP)(I),
+        { analyticsLocations: T } = (0, s.ZP)(),
+        A = i.useCallback(() => {
+            (0, d.A)({
+                analyticsLocations: T,
+                activityType: p.IIU.STREAMING,
+                voiceChannelId: t.channelId
+            });
+        }, [T, t.channelId]);
+    if (b && y) return null;
+    let N = (null == n ? void 0 : n.name) === '' ? null : null == n ? void 0 : n.name,
+        C = null != N ? h.intl.format(h.t['0wJXSk'], { name: N }) : h.intl.string(h.t.eXan7O),
+        P = !O && null != I && null != S;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            !h &&
-                (0, r.jsx)(c.Z, {
-                    icon: a.ARS,
-                    tooltipText: g || null == y ? void 0 : y,
-                    tooltipAriaLabel: g || null == b ? void 0 : (0, o.ZP)({ channel: b }),
-                    className: p
+            !b &&
+                (0, r.jsx)(f.Z, {
+                    icon: o.ARS,
+                    tooltipText: P ? S : void 0,
+                    tooltipAriaLabel: P ? (0, l.ZP)({ channel: I }) : void 0,
+                    className: E,
+                    onTooltipShow: P ? A : void 0
                 }),
-            !m &&
-                (0, r.jsx)(u.Z, {
-                    variant: f,
-                    className: _,
-                    canTruncate: E,
-                    children: v
+            !y &&
+                (0, r.jsx)(_.Z, {
+                    variant: m,
+                    className: g,
+                    canTruncate: v,
+                    children: C
                 })
         ]
     });

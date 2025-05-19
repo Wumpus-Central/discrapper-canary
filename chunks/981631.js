@@ -3337,6 +3337,7 @@ var n_ = (function (e) {
             (e.CUSTOM_STATUS_RANDOMIZER_CLICKED = 'custom_status_randomizer_clicked'),
             (e.CUSTOM_STATUS_LABEL_CLICKED = 'custom_status_label_clicked'),
             (e.CUSTOM_STATUS_TOOLBAR_CLICKED = 'custom_status_toolbar_clicked'),
+            (e.ACTIVITY_STATUS_ICON_TOOLTIP_SHOWN = 'activity_status_icon_tooltip_shown'),
             (e.TEXT_COPIED = 'text_copied'),
             (e.TEXT_SHARED = 'text_shared'),
             (e.NAV_DRAWER_OPENED = 'nav_drawer_opened'),
