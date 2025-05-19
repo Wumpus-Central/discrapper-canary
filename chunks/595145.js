@@ -111,14 +111,14 @@ function K(e) {
                                     className: W.backgroundImage,
                                     style: { backgroundImage: 'url('.concat(e_, ')') }
                                 }),
+                            null != es.interactionType &&
+                                (0, o.jsx)(c.animated.div, {
+                                    style: ed,
+                                    className: W.backdrop
+                                }),
                             (0, o.jsxs)('div', {
                                 className: W.profile,
                                 children: [
-                                    null != es.interactionType &&
-                                        (0, o.jsx)(c.animated.div, {
-                                            style: ed,
-                                            className: W.backdrop
-                                        }),
                                     (0, o.jsxs)('header', {
                                         className: W.profileHeader,
                                         children: [

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ }), n(388685);
+n.d(t, { Z: () => f }), n(388685);
 var r = n(668757),
     i = n(147913),
     a = n(353926),
@@ -16,32 +16,33 @@ function s(e, t, n) {
         e
     );
 }
-let l = null,
-    c = (0, r.Md)();
-function u(e, t) {
+let l = null;
+function c(e, t) {
     if (e.size !== t.size) return !1;
     for (let n of e) if (!t.has(n)) return !1;
     return !0;
 }
-function d() {
-    let e = new Set();
+function u() {
+    if (!(0, r.X6)()) return;
+    let e = new Set(),
+        t = (0, r.Md)();
     if (
         (o.V.forEach((t) => {
             t.getCurrentConfig({ location: 'default' }).enabled && e.add(t.definition.id);
         }),
-        null === l || !u(l, e))
+        null === l || !c(l, e))
     ) {
-        let t = Array.from(e);
-        c.flushToCache(t), (l = e);
+        let n = Array.from(e);
+        t.flushToCache(n), (l = e);
     }
 }
-class f extends i.Z {
+class d extends i.Z {
     _initialize() {
-        d();
+        u();
     }
     _terminate() {}
     constructor(...e) {
-        super(...e), s(this, 'actions', {}), s(this, 'stores', new Map().set(a.Z, d));
+        super(...e), s(this, 'actions', {}), s(this, 'stores', new Map().set(a.Z, u));
     }
 }
-let _ = new f();
+let f = new d();

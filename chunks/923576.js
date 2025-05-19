@@ -61,7 +61,7 @@ function v() {
         C = r.useCallback(
             async (e) => {
                 let t = new Date();
-                null != e && (t.setMonth(t.getMonth() - e), t.setDate(t.getDate() - 7));
+                null != e && (t.setMonth(t.getMonth() - e), t.setDate(t.getDate() - 1));
                 let n = {
                     subscription_status: null != e ? p.O0b.ACTIVE : p.O0b.ENDED,
                     endedAt: void 0,

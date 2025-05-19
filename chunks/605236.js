@@ -39,18 +39,18 @@ function y(e) {
 function O(e) {
     return (0, r.e7)([s.Z], () => y(e));
 }
-function v(e) {
-    var t, n;
+function v(e, t) {
+    var n, r;
     if ((0, m.B)(e))
         return {
             isDismissed: !0,
             lastDismissedVersion: null
         };
-    let r = null == (n = s.Z.settings.userContent) || null == (t = n.recurringDismissibleContentStates[e]) ? void 0 : t.lastDismissedVersion,
-        i = (0, g.t)(e);
+    let i = null == (r = s.Z.settings.userContent) || null == (n = r.recurringDismissibleContentStates[e]) ? void 0 : n.lastDismissedVersion,
+        a = null != t ? t : (0, g.t)(e);
     return {
-        isDismissed: null != r && r >= i,
-        lastDismissedVersion: r
+        isDismissed: null != i && i >= a,
+        lastDismissedVersion: i
     };
 }
 function I(e, t) {

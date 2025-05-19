@@ -24,7 +24,7 @@ let u = (e) => (e.length > 5 ? e.replace(/\.00$/, '') : e),
                     ? (0, r.jsxs)(r.Fragment, {
                           children: [
                               h,
-                              (0, r.jsx)(a.X6q, {
+                              (0, r.jsx)(a.Text, {
                                   variant: g,
                                   color: 'text-positive',
                                   className: c.discount,
