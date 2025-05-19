@@ -34494,24 +34494,37 @@ html:not(.visual-refresh) .root_e5f3a9 {
     stroke: currentColor
 }
 
-.clickable_a3e8db,
-.container_a3e8db {
+.clickable_a3e8db {
     box-sizing: border-box;
     cursor: pointer;
     height: 36px;
     pointer-events: all
 }
 
+.disabled_a3e8db {
+    cursor: none;
+    pointer-events: none
+}
+
 .container_a3e8db {
     align-items: center;
     border: 1px solid var(--border-faint, hsla(240, 4%, 61%, .04));
     border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    cursor: pointer;
     display: inline-flex;
     flex-shrink: 0;
+    height: 36px;
     justify-content: flex-end;
     opacity: 1 !important;
     padding: 8px 12px;
+    pointer-events: all;
     position: relative
+}
+
+.container_a3e8db.disabled_a3e8db {
+    cursor: none;
+    pointer-events: none
 }
 
 .orbsLottieContainer_a3e8db {
@@ -34567,6 +34580,14 @@ html:not(.visual-refresh) .root_e5f3a9 {
     background-color: var(--modal-background)
 }
 
+.visual-refresh .inModalOverlay_a3e8db.container_a3e8db.highlighted_a3e8db {
+    background-color: var(--modal-background)
+}
+
+.visual-refresh .inModalOverlay_a3e8db.container_a3e8db.selected_a3e8db {
+    background-color: var(--modal-background)
+}
+
 html:not(.visual-refresh).theme-light .container_a3e8db.default_a3e8db {
     background-color: var(--primary-100)
 }
@@ -34610,12 +34631,6 @@ html:not(.visual-refresh).theme-dark .container_a3e8db.selected_a3e8db {
 
 .full-motion .balanceCounterText__98f64 {
     transition: all .4s ease-out, opacity .4s ease-in
-}
-
-.wrapper__87c70 {
-    pointer-events: all;
-    position: fixed;
-    z-index: 1000
 }
 
 .banner__9ed41 {
