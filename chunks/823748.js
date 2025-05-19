@@ -572,7 +572,8 @@ class ta extends i.PureComponent {
                                     ec.Z,
                                     {
                                         channel: e,
-                                        tooltip: te.intl.string(te.t.Xjlbvr)
+                                        tooltip: te.intl.string(te.t.Xjlbvr),
+                                        location: 'ChannelHeaderToolbar-DM-AddFriendsButton'
                                     },
                                     'invite'
                                 )
@@ -598,7 +599,8 @@ class ta extends i.PureComponent {
                                     ec.Z,
                                     {
                                         channel: e,
-                                        tooltip: t
+                                        tooltip: t,
+                                        location: 'ChannelHeaderToolbar-GroupDM-AddFriendsButton'
                                     },
                                     'invite'
                                 )

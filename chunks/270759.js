@@ -30,7 +30,10 @@ var r = n(255367),
 function Z() {
     return (0, r.jsx)('div', {
         className: A.inviteToolbar,
-        children: (0, r.jsx)(E.Z, { tooltip: j.intl.string(j.t.HfOgAw) })
+        children: (0, r.jsx)(E.Z, {
+            tooltip: j.intl.string(j.t.HfOgAw),
+            location: 'PeoplePageHeaderToolbar-CreateDMButton'
+        })
     });
 }
 let x = function (e) {
