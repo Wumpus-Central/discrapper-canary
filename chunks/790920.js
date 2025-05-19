@@ -4,11 +4,11 @@ n.d(t, {
 });
 var r = n(873546);
 function i() {
-    return !r.tq && !r.Em;
+    return !r.Em;
 }
-function a(e) {
+function a() {
     return i();
 }
-function o(e) {
+function o() {
     return i();
 }
