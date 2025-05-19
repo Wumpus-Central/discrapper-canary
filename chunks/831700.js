@@ -14,13 +14,13 @@ var r = n(255367),
     g = n(117358),
     m = n(201895),
     b = n(718589),
-    _ = n(933557),
-    y = n(557135),
-    O = n(873696),
-    v = n(446226),
+    y = n(933557),
+    O = n(557135),
+    v = n(873696),
+    _ = n(446226),
     C = n(305325),
-    S = n(281956),
-    j = n(66999),
+    j = n(281956),
+    S = n(66999),
     E = n(554747),
     x = n(378844),
     P = n(340541),
@@ -41,8 +41,8 @@ var r = n(255367),
     V = n(63063),
     H = n(98597),
     F = n(648501),
-    W = n(473403),
-    z = n(830993),
+    z = n(473403),
+    W = n(830993),
     Y = n(653577),
     K = n(207055),
     q = n(981631),
@@ -120,7 +120,7 @@ class en extends H.ZP {
     renderSubtitle() {
         var e;
         let { channel: t, connected: n } = this.props,
-            i = null == (e = (0, O.D)(this.props.subtitle)) ? void 0 : e.subtitle,
+            i = null == (e = (0, v.D)(this.props.subtitle)) ? void 0 : e.subtitle,
             { hovered: l } = this.state;
         return (0, r.jsx)(Y.Z, {
             onClick: this.handleVoiceStatusClick,
@@ -179,7 +179,7 @@ class en extends H.ZP {
               });
     }
     render() {
-        let { channel: e, selected: t, connected: n, unread: i, resolvedUnreadSetting: l, mentionCount: s, locked: a, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: _, canMoveMembers: y, showTutorial: O, hasActiveEvent: v, embeddedApps: C, isSubscriptionGated: S, isFavoriteSuggestion: j, withGuildIcon: E } = this.props,
+        let { channel: e, selected: t, connected: n, unread: i, resolvedUnreadSetting: l, mentionCount: s, locked: a, sorting: u, isUserOver: d, connectChannelDropTarget: h, connectChannelDragSource: p, connectUserDropTarget: f, connectDragPreview: g, canReorderChannel: y, canMoveMembers: O, showTutorial: v, hasActiveEvent: _, embeddedApps: C, isSubscriptionGated: j, isFavoriteSuggestion: S, withGuildIcon: E } = this.props,
             { shouldShowActivities: x, shouldShowGuildVerificationPopout: w } = this.state,
             N = (0, P.jW)({ location: 'voice_channel' }).entrypoints,
             T = this.getVoiceStatesCount(),
@@ -225,16 +225,16 @@ class en extends H.ZP {
                                         return (0, r.jsx)(I.Z, {
                                             channel: e,
                                             children: (0, r.jsxs)(
-                                                W.ZP,
+                                                z.ZP,
                                                 et(
                                                     ee(
                                                         {
                                                             ref: this.channelItemRef,
                                                             className: J.iconVisibility,
-                                                            iconClassName: o()({ [J.iconLive]: v }),
-                                                            hasActiveEvent: v,
+                                                            iconClassName: o()({ [J.iconLive]: _ }),
+                                                            hasActiveEvent: _,
                                                             channel: e,
-                                                            selected: !j && t,
+                                                            selected: !S && t,
                                                             connected: n,
                                                             unread: n ? i : void 0,
                                                             resolvedUnreadSetting: l,
@@ -248,14 +248,14 @@ class en extends H.ZP {
                                                                 this.handleContextMenu(e), null == d || d();
                                                             },
                                                             connectDragPreview: g,
-                                                            isFavoriteSuggestion: j,
+                                                            isFavoriteSuggestion: S,
                                                             'aria-label': (0, m.ZP)({
                                                                 channel: e,
                                                                 unread: i,
                                                                 mentionCount: s,
                                                                 userCount: T,
                                                                 embeddedActivitiesCount: C.length,
-                                                                isSubscriptionGated: S
+                                                                isSubscriptionGated: j
                                                             }),
                                                             'aria-describedby': (0, b.Z)({
                                                                 channel: e,
@@ -267,11 +267,11 @@ class en extends H.ZP {
                                                     ),
                                                     {
                                                         children: [
-                                                            j &&
+                                                            S &&
                                                                 (0, r.jsxs)(r.Fragment, {
                                                                     children: [this.renderAcceptSuggestionButton(), this.renderRemoveSuggestionButton()]
                                                                 }),
-                                                            !j &&
+                                                            !S &&
                                                                 (0, r.jsxs)(r.Fragment, {
                                                                     children: [this.renderOpenChatButton(), this.renderInviteButton(), N ? this.renderOptionsButton({ onContextMenu: this.handleContextMenu }) : this.renderEditButton(), this.renderChannelInfo(), this.renderHDSplashedIcon()]
                                                                 })
@@ -288,9 +288,9 @@ class en extends H.ZP {
                 ]
             });
         return (
-            y && (A = f(A)),
-            _ && (A = h(p(A))),
-            O &&
+            O && (A = f(A)),
+            y && (A = h(p(A))),
+            v &&
                 (A = (0, r.jsx)(Z.Z, {
                     childRef: this.ref,
                     tutorialId: 'voice-conversations',
@@ -317,7 +317,7 @@ class en extends H.ZP {
             $(this, 'handleVoiceConnect', () => {
                 let { locked: e, connected: t, channel: n, unverifiedAccount: r, needSubscriptionToAccess: i } = this.props;
                 r && this.setState({ shouldShowGuildVerificationPopout: !0 }),
-                    y.Z.handleVoiceConnect({
+                    O.Z.handleVoiceConnect({
                         channel: n,
                         connected: t,
                         needSubscriptionToAccess: i,
@@ -361,7 +361,7 @@ class en extends H.ZP {
             $(this, 'handleClick', () => {
                 let { channel: e } = this.props,
                     t = e.getGuildId();
-                null != t && (0, S.n)(t) && (0, C.hk)(t), this.handleVoiceConnect();
+                null != t && (0, j.n)(t) && (0, C.hk)(t), this.handleVoiceConnect();
             }),
             $(this, 'handleVoiceStatusClick', (e) => {
                 let { connected: t, channel: n } = this.props;
@@ -372,7 +372,7 @@ class en extends H.ZP {
                     { shouldShowActivities: s, shouldShowGuildVerificationPopout: a } = this.state;
                 if (s && !n && !i && !a) {
                     let n = T.SE.getSetting().includes(o.id);
-                    return (0, r.jsx)(z.Z, {
+                    return (0, r.jsx)(W.Z, {
                         onAction: this.closePopout,
                         guild: o,
                         channel: e,
@@ -443,19 +443,19 @@ function ei(e) {
         }),
         p = (0, s.e7)([G.Z], () => G.Z.hasVideo(n.id)),
         g = (0, f.ZP)(n),
-        m = (0, _.ZP)(n),
+        m = (0, y.ZP)(n),
         b = (0, E.qY)(n.id),
-        { isSubscriptionGated: y, needSubscriptionToAccess: O } = (0, j.Z)(n.id),
-        C = (0, v.Z)(),
-        S = (0, s.e7)([U.ZP], () => U.ZP.isFavorite(t.id, n.id)),
+        { isSubscriptionGated: O, needSubscriptionToAccess: v } = (0, S.Z)(n.id),
+        C = (0, _.Z)(),
+        j = (0, s.e7)([U.ZP], () => U.ZP.isFavorite(t.id, n.id)),
         x = e.connected || (null == C ? void 0 : C.channelId) === n.id,
         P = (0, F.Z)({
             channel: n,
             isChannelSelected: o,
             isChannelCollapsed: a,
             voiceStates: c,
-            isSubscriptionGated: y,
-            needSubscriptionToAccess: O,
+            isSubscriptionGated: O,
+            needSubscriptionToAccess: v,
             enableConnectedUserLimit: !0,
             enableActivities: !0
         }),
@@ -470,8 +470,8 @@ function ei(e) {
                     embeddedActivityType: q.IIU.PLAYING,
                     video: p,
                     hasActiveEvent: null != b,
-                    isSubscriptionGated: y,
-                    needSubscriptionToAccess: O
+                    isSubscriptionGated: O,
+                    needSubscriptionToAccess: v
                 },
                 u,
                 h,
@@ -479,7 +479,7 @@ function ei(e) {
             ),
             {
                 connected: x,
-                isFavoriteSuggestion: l && !S,
+                isFavoriteSuggestion: l && !j,
                 forceShowButtons: I,
                 channelInfo: P,
                 resolvedUnreadSetting: d

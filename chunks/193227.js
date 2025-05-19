@@ -50,7 +50,7 @@ function k(e) {
                                   children: (0, r.jsx)(
                                       O.Z,
                                       {
-                                          onMount: n(e),
+                                          onMount: n,
                                           isPremiumUser: a,
                                           category: i,
                                           product: e,
@@ -93,9 +93,9 @@ function T(e) {
         s = (0, g.a)()(a),
         c = (0, o.e7)([p.Z], () => p.Z.initialProductSkuId),
         u = l.useCallback(
-            (e) => (t) => {
+            (e, t) => {
                 var r;
-                (e.skuId === c || (null == (r = e.variants) ? void 0 : r.some((e) => e.skuId === c)) === !0) && (n.current = t.current);
+                (t.skuId === c || (null == (r = t.variants) ? void 0 : r.some((e) => e.skuId === c)) === !0) && (n.current = e.current);
             },
             [c, n]
         );

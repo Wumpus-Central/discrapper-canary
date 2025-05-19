@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => y });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -14,8 +14,8 @@ var r = n(255367),
     g = n(981631),
     m = n(490897),
     b = n(915887);
-let _ = (0, c.B)(function (e) {
-    let { guild: t, selectedChannelId: l, position: c, disableManageChannels: _, sorting: y, sortingType: O, sortingPosition: v, connectChannelDragSource: C, connectChannelDropTarget: S, tabIndex: j } = e,
+let y = (0, c.B)(function (e) {
+    let { guild: t, selectedChannelId: l, position: c, disableManageChannels: y, sorting: O, sortingType: v, sortingPosition: _, connectChannelDragSource: C, connectChannelDropTarget: j, tabIndex: S } = e,
         E = (0, s.e7)([u.Z, d.ZP], () => {
             let e = d.ZP.getDirectoryChannelIds(t.id);
             return 0 === e.length ? null : u.Z.getChannel(e[0]);
@@ -78,8 +78,8 @@ let _ = (0, c.B)(function (e) {
             [E]
         );
     if (null == E) return null;
-    let N = (0, p.jo)(c, v),
-        Z = (0, p.CN)(E, y, O),
+    let N = (0, p.jo)(c, _),
+        Z = (0, p.CN)(E, O, v),
         T = (0, r.jsx)('div', {
             className: o()(N, {
                 [b.disabled]: Z,
@@ -97,15 +97,15 @@ let _ = (0, c.B)(function (e) {
                 children: [
                     (0, r.jsx)(p.eP, {
                         channel: E,
-                        tabIndex: j
+                        tabIndex: S
                     }),
                     (0, r.jsx)(p.hR, {
                         channel: E,
-                        disableManageChannels: _,
-                        tabIndex: j
+                        disableManageChannels: y,
+                        tabIndex: S
                     })
                 ]
             })
         });
-    return I && (T = S(C(T))), T;
+    return I && (T = j(C(T))), T;
 });

@@ -1,49 +1,49 @@
 n.d(t, { B: () => u });
 var r = n(255367);
 n(73800);
-var s = n(481060),
-    i = n(313201),
+var i = n(481060),
+    s = n(313201),
     o = n(192635),
-    l = n(388032),
-    a = n(274970);
+    a = n(388032),
+    l = n(274970);
 function c(e) {
     let { transitionState: t, Icon: n, title: c, body: u, onClose: d } = e,
-        f = (0, i.Dt)();
-    return (0, r.jsxs)(s.Y0X, {
-        className: a.container,
+        p = (0, s.Dt)();
+    return (0, r.jsxs)(i.Y0X, {
+        className: l.container,
         transitionState: t,
-        'aria-labelledby': f,
+        'aria-labelledby': p,
         children: [
-            (0, r.jsxs)(s.hzk, {
+            (0, r.jsxs)(i.hzk, {
                 children: [
                     (0, r.jsx)(o.Z, { Icon: n }),
-                    (0, r.jsx)(s.LZC, { size: 24 }),
-                    (0, r.jsx)(s.X6q, {
-                        id: f,
-                        className: a.__invalid_title,
+                    (0, r.jsx)(i.LZC, { size: 24 }),
+                    (0, r.jsx)(i.X6q, {
+                        id: p,
+                        className: l.__invalid_title,
                         variant: 'heading-xl/semibold',
                         children: c
                     }),
-                    (0, r.jsx)(s.LZC, { size: 8 }),
-                    (0, r.jsx)(s.Text, {
-                        className: a.body,
+                    (0, r.jsx)(i.LZC, { size: 8 }),
+                    (0, r.jsx)(i.Text, {
+                        className: l.body,
                         variant: 'text-sm/normal',
                         children: u
                     })
                 ]
             }),
-            (0, r.jsx)(s.LZC, { size: 24 }),
-            (0, r.jsx)(s.zxk, {
-                size: s.zxk.Sizes.MEDIUM,
+            (0, r.jsx)(i.LZC, { size: 24 }),
+            (0, r.jsx)(i.zxk, {
+                size: i.zxk.Sizes.MEDIUM,
                 grow: !1,
                 onClick: d,
-                children: l.intl.string(l.t['NX+WJC'])
+                children: a.intl.string(a.t['NX+WJC'])
             })
         ]
     });
 }
 function u(e) {
-    (0, s.h7j)((t) =>
+    (0, i.h7j)((t) =>
         (0, r.jsx)(
             c,
             (function (e) {

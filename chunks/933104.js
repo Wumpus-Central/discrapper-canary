@@ -1,6 +1,6 @@
 n.d(t, {
-    $h: () => j,
-    jG: () => S,
+    $h: () => S,
+    jG: () => j,
     yI: () => E
 });
 var r = n(255367);
@@ -19,34 +19,34 @@ var i = n(120356),
     g = n(795338),
     m = n(279604),
     b = n(981631),
-    _ = n(921944),
-    y = n(680278),
-    O = n(388032),
-    v = n(423151),
+    y = n(921944),
+    O = n(680278),
+    v = n(388032),
+    _ = n(423151),
     C = n(928381);
-function S(e) {
+function j(e) {
     let { guildId: t, powerup: n, markAsDismissed: i } = e;
     return (0, r.jsx)(x, {
-        asset: (0, r.jsx)(g.g, { className: v.image }),
-        header: O.intl.formatToPlainString(y.default['Zg/m9P'], { perkName: n.title }),
-        content: O.intl.formatToPlainString(y.default['1EGXSE'], { perkName: n.title }),
-        buttonCTA: O.intl.string(O.t.RzWDqa),
+        asset: (0, r.jsx)(g.g, { className: _.image }),
+        header: v.intl.formatToPlainString(O.default['Zg/m9P'], { perkName: n.title }),
+        content: v.intl.formatToPlainString(O.default['1EGXSE'], { perkName: n.title }),
+        buttonCTA: v.intl.string(v.t.RzWDqa),
         onClick: () => (0, f.Z)(t, c.Z.GUILD_POWERUPS_COACHMARK_LEVEL_UP, n.skuId),
         markAsDismissed: i
     });
 }
-function j(e) {
+function S(e) {
     let { guildId: t, markAsDismissed: n } = e,
         i = (0, p.Z)(t);
     return (0, r.jsx)(x, {
         asset: (0, r.jsx)('img', {
             alt: '',
             src: C.Z,
-            className: l()(v.image, v.newPerksImage)
+            className: l()(_.image, _.newPerksImage)
         }),
-        header: O.intl.string(y.default.QpQBPT),
-        content: i ? O.intl.string(y.default['6hn0xM']) : O.intl.string(y.default.RDuvXl),
-        buttonCTA: O.intl.string(O.t.RzWDqa),
+        header: v.intl.string(O.default.QpQBPT),
+        content: i ? v.intl.string(O.default['6hn0xM']) : v.intl.string(O.default.RDuvXl),
+        buttonCTA: v.intl.string(v.t.RzWDqa),
         onClick: () =>
             i
                 ? (0, f.Z)(t, c.Z.GUILD_POWERUPS_COACHMARK_NEW_PERKS)
@@ -72,13 +72,13 @@ function E(e) {
         asset:
             1 === n.length
                 ? (0, r.jsx)(g.m, {
-                      className: v.image,
+                      className: _.image,
                       powerup: n[0]
                   })
-                : (0, r.jsx)(g.g, { className: v.image }),
-        header: O.intl.formatToPlainString(y.default.LmpChI, { guildName: l }),
-        content: n.length > 1 ? O.intl.formatToPlainString(y.default.wcQOqK, { perks: a }) : O.intl.formatToPlainString(y.default.ZF8NT0, { perk: a }),
-        buttonCTA: u ? O.intl.string(y.default.gSxlHR) : O.intl.string(O.t.RzWDqa),
+                : (0, r.jsx)(g.g, { className: _.image }),
+        header: v.intl.formatToPlainString(O.default.LmpChI, { guildName: l }),
+        content: n.length > 1 ? v.intl.formatToPlainString(O.default.wcQOqK, { perks: a }) : v.intl.formatToPlainString(O.default.ZF8NT0, { perk: a }),
+        buttonCTA: u ? v.intl.string(O.default.gSxlHR) : v.intl.string(v.t.RzWDqa),
         onClick: (e) => (u ? o(e) : (0, f.Z)(t, c.Z.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS)),
         markAsDismissed: i
     });
@@ -105,7 +105,7 @@ function x(e) {
             return i;
         })(e, ['asset', 'header', 'content', 'caretPosition', 'markAsDismissed']);
     let h = null != s ? s : d.DF.LEFT_TOP,
-        p = h === d.DF.TOP_CENTER || h === d.DF.LEFT_TOP ? v[h] : '';
+        p = h === d.DF.TOP_CENTER || h === d.DF.LEFT_TOP ? _[h] : '';
     return (0, r.jsx)(
         d.ZP,
         (function (e) {
@@ -135,12 +135,12 @@ function x(e) {
         })(
             {
                 asset: (0, r.jsxs)('div', {
-                    className: v.imageContainer,
+                    className: _.imageContainer,
                     children: [
                         t,
                         (0, r.jsx)(a.olH, {
-                            className: v.close,
-                            onClick: () => (null == c ? void 0 : c(_.L.USER_DISMISS))
+                            className: _.close,
+                            onClick: () => (null == c ? void 0 : c(y.L.USER_DISMISS))
                         })
                     ]
                 }),
@@ -153,9 +153,9 @@ function x(e) {
                     color: 'text-muted',
                     children: i
                 }),
-                className: l()(v.container, p),
-                headerClassName: v.header,
-                contentClassName: v.header,
+                className: l()(_.container, p),
+                headerClassName: _.header,
+                contentClassName: _.header,
                 caretPosition: h,
                 markAsDismissed: c
             },

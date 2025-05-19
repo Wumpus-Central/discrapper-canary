@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m }), n(388685);
 var r = n(255367),
-    l = n(73800),
+    a = n(73800),
     i = n(481060),
-    a = n(367907),
+    l = n(367907),
     o = n(434404),
     s = n(138201),
     c = n(430824),
@@ -10,25 +10,25 @@ var r = n(255367),
     u = n(388032);
 let m = (e) => {
     let { guildId: t, reportId: n } = e,
-        [m, p] = l.useState(!1),
-        x = c.Z.getGuild(t),
-        b = null != x;
-    l.useEffect(() => {
-        p(!b);
-    }, [b]);
-    let _ = l.useCallback(() => {
+        [m, p] = a.useState(!1),
+        _ = c.Z.getGuild(t),
+        g = null != _;
+    a.useEffect(() => {
+        p(!g);
+    }, [g]);
+    let b = a.useCallback(() => {
         p(!0),
-            a.ZP.trackWithMetadata(d.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
+            l.ZP.trackWithMetadata(d.rMx.IAR_LEAVE_GUILD_BUTTON_CLICKED, {
                 guild_id: t,
                 report_id: n
             }),
             o.Z.leaveGuild(t);
     }, [t, n]);
-    return null == x
+    return null == _
         ? null
         : (0, r.jsx)(s.ZP, {
               title: u.intl.string(u.t.cU96io),
-              description: u.intl.formatToPlainString(u.t['26mR6+'], { guildName: null == x ? void 0 : x.name }),
+              description: u.intl.formatToPlainString(u.t['26mR6+'], { guildName: null == _ ? void 0 : _.name }),
               buttonText: m ? u.intl.string(u.t['9Ak99v']) : u.intl.string(u.t.F3qExs),
               buttonDisabled: m,
               buttonColor: i.zxk.Colors.RED,
@@ -63,10 +63,10 @@ let m = (e) => {
                               return e;
                           })(
                               {
-                                  header: u.intl.formatToPlainString(u.t['1GX6Pz'], { name: x.name }),
+                                  header: u.intl.formatToPlainString(u.t['1GX6Pz'], { name: _.name }),
                                   confirmText: u.intl.string(u.t.J2TBi4),
                                   cancelText: u.intl.string(u.t['ETE/oK']),
-                                  onConfirm: _
+                                  onConfirm: b
                               },
                               e
                           )),
@@ -74,7 +74,7 @@ let m = (e) => {
                               {
                                   children: (0, r.jsx)(i.Text, {
                                       variant: 'text-md/normal',
-                                      children: u.intl.format(u.t.ZEXC0t, { name: x.name })
+                                      children: u.intl.format(u.t.ZEXC0t, { name: _.name })
                                   })
                               }),
                           Object.getOwnPropertyDescriptors

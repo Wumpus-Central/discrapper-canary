@@ -2,7 +2,7 @@ n.d(t, { Z: () => d }), n(35282);
 var r = n(255367),
     i = n(73800),
     l = n(114858),
-    s = n(215569);
+    a = n(215569);
 function o(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -28,7 +28,7 @@ function o(e) {
     }
     return e;
 }
-function a(e, t) {
+function s(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -68,29 +68,29 @@ function c(e, t) {
 class u extends i.Component {
     render() {
         let e = this.props,
-            { children: t, location: n, history: u, staticContext: d, match: h } = e,
-            g = c(e, ['children', 'location', 'history', 'staticContext', 'match']),
+            { children: t, location: n, history: u, staticContext: d, match: g } = e,
+            h = c(e, ['children', 'location', 'history', 'staticContext', 'match']),
             p = null,
             m = null;
         return (
             i.Children.forEach(t, (e) => {
                 if (null == p && i.isValidElement(e)) {
                     let t = e.props,
-                        { component: r, render: s } = t,
-                        h = c(t, ['component', 'render']),
-                        g = h.path || h.from;
-                    null != (p = null != g ? (0, l.LX)(n.pathname, a(o({}, h), { path: g })) : null) &&
-                        ((h = a(o({}, h), {
-                            key: g,
+                        { component: r, render: a } = t,
+                        g = c(t, ['component', 'render']),
+                        h = g.path || g.from;
+                    null != (p = null != h ? (0, l.LX)(n.pathname, s(o({}, g), { path: h })) : null) &&
+                        ((g = s(o({}, g), {
+                            key: h,
                             location: n,
                             match: p,
                             history: u,
                             staticContext: d
                         })),
-                        null != r ? (m = i.createElement(r, h)) : null != s && (m = s(h)));
+                        null != r ? (m = i.createElement(r, g)) : null != a && (m = a(g)));
                 }
             }),
-            (0, r.jsx)(s.W, a(o({}, g), { children: m }))
+            (0, r.jsx)(a.W, s(o({}, h), { children: m }))
         );
     }
 }

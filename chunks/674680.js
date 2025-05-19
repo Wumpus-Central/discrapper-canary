@@ -50,39 +50,39 @@ function g(e) {
         m = (0, o.ZP)(),
         b = (0, c.oX)(n);
     if (null == b) return null;
-    let _ = (0, l.UCu)(g),
-        { name: y, rarity: O } = b,
-        { color: v } = (0, c.F7)(O),
+    let y = (0, l.UCu)(g),
+        { name: O, rarity: v } = b,
+        { color: _ } = (0, c.F7)(v),
         C = (0, i.wj)(m) ? p : f,
-        S = (_.size - _.offset - 2 * _.stroke) * 0.8,
-        j = _.size - _.stroke,
+        j = (y.size - y.offset - 2 * y.stroke) * 0.8,
+        S = y.size - y.stroke,
         E = {
-            width: 0.4 * S,
-            height: 0.4 * S
+            width: 0.4 * j,
+            height: 0.4 * j
         },
         x = {
             width: E.width + 1,
             height: E.height + 1,
-            right: _.stroke + 1,
-            bottom: _.stroke + 1,
+            right: y.stroke + 1,
+            bottom: y.stroke + 1,
             padding: 0
         };
     return (0, r.jsxs)('div', {
         className: d.container,
         style: {
-            width: j,
-            height: j,
-            padding: _.stroke
+            width: S,
+            height: S,
+            padding: y.stroke
         },
-        'aria-label': ''.concat(null != (t = y()) ? t : ''),
+        'aria-label': ''.concat(null != (t = O()) ? t : ''),
         children: [
             (0, r.jsx)('div', {
                 className: d.trophyIconContainer,
                 children: (0, r.jsx)(l.rm8, {
                     size: 'custom',
-                    color: u ? v : (0, s.Lq)(C.trophy),
-                    width: S,
-                    height: S
+                    color: u ? _ : (0, s.Lq)(C.trophy),
+                    width: j,
+                    height: j
                 })
             }),
             !u &&
@@ -101,7 +101,7 @@ function g(e) {
                     )
                 }),
             u &&
-                O === c.EP.LEGENDARY &&
+                v === c.EP.LEGENDARY &&
                 (0, r.jsx)('div', {
                     className: d.lockContainer,
                     style: x,

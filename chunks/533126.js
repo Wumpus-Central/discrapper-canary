@@ -17,10 +17,10 @@ n.d(t, {
     wz: () => f
 });
 var l = 'copy',
-    s = 'convert';
+    a = 'convert';
 function o(e, t, n) {
     if (t === l) return n;
-    if (t === s) return e(n);
+    if (t === a) return e(n);
     if (t instanceof Array) return n.map((n) => o(e, t[0], n));
     if (t instanceof Object) {
         let r = {};
@@ -42,7 +42,7 @@ function o(e, t, n) {
         return r;
     }
 }
-function a(e, t) {
+function s(e, t) {
     return {
         required: !0,
         schema: e,
@@ -63,15 +63,15 @@ function u(e) {
 }
 var d = {
         type: c(l),
-        id: c(s),
+        id: c(a),
         transports: u(l)
     },
-    h = {
+    g = {
         appid: u(l),
         appidExclude: u(l),
         credProps: u(l)
     },
-    g = {
+    h = {
         appid: u(l),
         appidExclude: u(l),
         credProps: u(l)
@@ -79,56 +79,56 @@ var d = {
 c({
     rp: c(l),
     user: c({
-        id: c(s),
+        id: c(a),
         name: c(l),
         displayName: c(l)
     }),
-    challenge: c(s),
+    challenge: c(a),
     pubKeyCredParams: c(l),
     timeout: u(l),
     excludeCredentials: u([d]),
     authenticatorSelection: u(l),
     attestation: u(l),
-    extensions: u(h)
+    extensions: u(g)
 }),
     u(l),
     c(l),
     c(l),
-    c(s),
+    c(a),
     u(l),
     c({
-        clientDataJSON: c(s),
-        attestationObject: c(s),
-        transports: a(l, (e) => {
+        clientDataJSON: c(a),
+        attestationObject: c(a),
+        transports: s(l, (e) => {
             var t;
             return (null == (t = e.getTransports) ? void 0 : t.call(e)) || [];
         })
     }),
-    a(g, (e) => e.getClientExtensionResults());
+    s(h, (e) => e.getClientExtensionResults());
 var p = {
         mediation: u(l),
         publicKey: c({
-            challenge: c(s),
+            challenge: c(a),
             timeout: u(l),
             rpId: u(l),
             allowCredentials: u([d]),
             userVerification: u(l),
-            extensions: u(h)
+            extensions: u(g)
         }),
         signal: u(l)
     },
     m = {
         type: c(l),
         id: c(l),
-        rawId: c(s),
+        rawId: c(a),
         authenticatorAttachment: u(l),
         response: c({
-            clientDataJSON: c(s),
-            authenticatorData: c(s),
-            signature: c(s),
-            userHandle: c(s)
+            clientDataJSON: c(a),
+            authenticatorData: c(a),
+            signature: c(a),
+            userHandle: c(a)
         }),
-        clientExtensionResults: a(g, (e) => e.getClientExtensionResults())
+        clientExtensionResults: s(h, (e) => e.getClientExtensionResults())
     };
 function f(e) {
     return o(r, p, e);

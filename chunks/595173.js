@@ -19,9 +19,9 @@ var r = {
     './store.jpg': '926213'
 };
 function o(e) {
-    return n(a(e));
+    return n(l(e));
 }
-function a(e) {
+function l(e) {
     if (!n.o(r, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = 'MODULE_NOT_FOUND'), t);
@@ -31,6 +31,6 @@ function a(e) {
 (o.keys = function () {
     return Object.keys(r);
 }),
-    (o.resolve = a),
+    (o.resolve = l),
     (e.exports = o),
     (o.id = 595173);

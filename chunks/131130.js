@@ -1,22 +1,22 @@
-n.d(t, { q: () => _ }), n(953529);
+n.d(t, { q: () => E }), n(953529);
 var r = n(255367);
 n(73800);
 var i = n(704215),
     l = n(481060),
     o = n(906732),
     a = n(963249),
-    s = n(286961),
-    c = n(644916),
+    c = n(286961),
+    s = n(644916),
     u = n(243778),
     d = n(921944),
-    E = n(131715);
-let _ = (e) => {
+    _ = n(131715);
+let E = (e) => {
     let { dismissibleContent: t, noticeType: n } = e,
-        { analyticsLocations: _ } = (0, o.ZP)(),
-        I = (0, s.Z)();
+        { analyticsLocations: E } = (0, o.ZP)(),
+        I = (0, c.Z)();
     return (0, r.jsx)(u.Xf, {
         contentType: t,
-        latestVersion: (0, c.t)(t),
+        latestVersion: (0, s.t)(t),
         groupName: d.R.NOTICE_BAR,
         bypassAutoDismiss: !0,
         children: (e) => {
@@ -35,7 +35,7 @@ let _ = (e) => {
                             width: 20,
                             height: 20,
                             color: 'currentColor',
-                            className: E.giftIcon
+                            className: _.giftIcon
                         }),
                         null == e ? void 0 : e.description(),
                         (0, r.jsx)(l.NoS, {
@@ -43,7 +43,7 @@ let _ = (e) => {
                                 (0, a.Z)({
                                     isGift: !0,
                                     initialPlanId: null,
-                                    analyticsLocations: _,
+                                    analyticsLocations: E,
                                     analyticsLocation: null == e ? void 0 : e.analyticsLocation,
                                     analyticsObject: { page: null == e ? void 0 : e.analyticsPage }
                                 });

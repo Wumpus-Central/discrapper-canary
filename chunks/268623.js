@@ -1,4 +1,8 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, {
+    Z: () => b,
+    x: () => h
+}),
+    n(388685);
 var i = n(255367),
     r = n(73800),
     l = n(442837),
@@ -15,58 +19,7 @@ var i = n(255367),
 function b(e) {
     let { enabled: t } = s.Z.useExperiment({ location: 'LongPressMessageActionSheet' }),
         n = (0, l.e7)([d.Z], () => d.Z.getSavedMessage(e.channel_id, e.id)),
-        b = (function (e) {
-            let { message: t, savedMessage: n } = e,
-                [l, o] = r.useState(new Date());
-            r.useEffect(() => {
-                let e = setInterval(() => o(new Date()), m.Z.Millis.MINUTE);
-                return () => {
-                    clearInterval(e);
-                };
-            }, []);
-            let s = r.useCallback(
-                    (e) =>
-                        (0, c.z)({
-                            channelId: t.channel_id,
-                            messageId: t.id,
-                            dueAt: e,
-                            displayToast: !0
-                        }),
-                    [t.channel_id, t.id]
-                ),
-                d = (0, g.r)({ createReminder: s }),
-                { dueInText: f } = (0, u.AT)({
-                    dueAt: null == n ? void 0 : n.saveData.dueAt,
-                    now: l,
-                    type: u.hQ.LONG
-                });
-            return (null == n ? void 0 : n.saveData.dueAt) == null
-                ? (0, i.jsx)(a.kSQ, {
-                      label: p.intl.string(p.t.roMu1N),
-                      children: d
-                  })
-                : (0, i.jsxs)(a.kSQ, {
-                      label: f,
-                      children: [
-                          (0, i.jsx)(a.sNh, {
-                              id: 'mark-complete',
-                              label: p.intl.string(p.t.yjGtdH),
-                              icon: a.kmB,
-                              action: () =>
-                                  (0, c.z)({
-                                      channelId: t.channel_id,
-                                      messageId: t.id,
-                                      dueAt: void 0
-                                  })
-                          }),
-                          (0, i.jsx)(a.sNh, {
-                              id: 'edit-reminder',
-                              label: p.intl.string(p.t.vrbqs7),
-                              children: d
-                          })
-                      ]
-                  });
-        })({
+        r = h({
             message: e,
             savedMessage: n
         });
@@ -114,7 +67,7 @@ function b(e) {
                                     })
                             }),
                       (0, i.jsx)(a.Clw, {}),
-                      b
+                      r
                   ]
               })
             : (0, i.jsx)(a.sNh, {
@@ -130,4 +83,56 @@ function b(e) {
                       })
               })
         : null;
+}
+function h(e) {
+    let { message: t, savedMessage: n } = e,
+        [l, o] = r.useState(new Date());
+    r.useEffect(() => {
+        let e = setInterval(() => o(new Date()), m.Z.Millis.MINUTE);
+        return () => {
+            clearInterval(e);
+        };
+    }, []);
+    let s = r.useCallback(
+            (e) =>
+                (0, c.z)({
+                    channelId: t.channel_id,
+                    messageId: t.id,
+                    dueAt: e,
+                    displayToast: !0
+                }),
+            [t.channel_id, t.id]
+        ),
+        d = (0, g.r)({ createReminder: s }),
+        { dueInText: f } = (0, u.AT)({
+            dueAt: null == n ? void 0 : n.saveData.dueAt,
+            now: l,
+            type: u.hQ.LONG
+        });
+    return (null == n ? void 0 : n.saveData.dueAt) == null
+        ? (0, i.jsx)(a.kSQ, {
+              label: p.intl.string(p.t.roMu1N),
+              children: d
+          })
+        : (0, i.jsxs)(a.kSQ, {
+              label: f,
+              children: [
+                  (0, i.jsx)(a.sNh, {
+                      id: 'mark-complete',
+                      label: p.intl.string(p.t.yjGtdH),
+                      icon: a.kmB,
+                      action: () =>
+                          (0, c.z)({
+                              channelId: t.channel_id,
+                              messageId: t.id,
+                              dueAt: void 0
+                          })
+                  }),
+                  (0, i.jsx)(a.sNh, {
+                      id: 'edit-reminder',
+                      label: p.intl.string(p.t.vrbqs7),
+                      children: d
+                  })
+              ]
+          });
 }

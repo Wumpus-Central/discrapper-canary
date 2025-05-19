@@ -1,21 +1,21 @@
 n.d(t, { Z: () => c }), n(388685);
 var r = n(255367);
 n(73800);
-var l = n(392711),
+var a = n(392711),
     i = n(481060),
-    a = n(388032),
+    l = n(388032),
     o = n(776571),
     s = n(646727);
 let c = (e) => {
-    let t = (0, l.flatMap)(e.history, (e) => {
+    let t = (0, a.flatMap)(e.history, (e) => {
         var t;
         let {
                 destination: [n],
                 multiSelect: r
             } = e,
-            l = [null, null],
+            a = [null, null],
             i = Object.values(null != (t = null == r ? void 0 : r.state) ? t : {});
-        return i.length > 0 && (l[0] = i.join(', ')), '' !== n && (l[1] = n), l;
+        return i.length > 0 && (a[0] = i.join(', ')), '' !== n && (a[1] = n), a;
     }).filter((e) => null != e);
     return 0 === t.length
         ? null
@@ -26,7 +26,7 @@ let c = (e) => {
                       className: s.breadcrumbsHeader,
                       color: 'header-secondary',
                       variant: 'heading-sm/semibold',
-                      children: e.isModeratorReport ? a.intl.string(o.default['6mx/DA']) : a.intl.string(a.t['+3V9Tk'])
+                      children: e.isModeratorReport ? l.intl.string(o.default['6mx/DA']) : l.intl.string(l.t['+3V9Tk'])
                   }),
                   t.map((e, t) =>
                       (0, r.jsxs)(

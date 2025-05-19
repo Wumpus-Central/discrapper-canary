@@ -14,28 +14,28 @@ let f = (0, l.uk)('poggermode_applause', o.Z.getSoundpack()),
     g = !1,
     m = !1,
     b = [],
-    _ = null,
-    y = () => {
+    y = null,
+    O = () => {
         g || (f.loop(), (g = !0));
     },
-    O = () => {
+    v = () => {
         f.stop(), (g = !1);
     },
-    v = () => {
+    _ = () => {
         let e = d.Z.isEnabled(),
             t = d.Z.comboSoundsEnabled;
         return !!e && !!t && null != c.Z.getChannelId();
     },
     C = () => {
-        if (0 === b.length || !v() || m) return;
+        if (0 === b.length || !_() || m) return;
         m = !0;
         let [e, t] = b[b.length - 1];
-        (0, l.GN)(e, t), (_ = setTimeout(S, 1000));
+        (0, l.GN)(e, t), (y = setTimeout(j, 1000));
     },
-    S = () => {
+    j = () => {
         b.pop(), (m = !1), C();
     },
-    j = function (e) {
+    S = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
             n = a.Z.isConnected();
         b.push([e, t * (n ? 0.1 : 1)]), C();
@@ -45,7 +45,7 @@ class E extends i.Z {
         h.ZP.addChangeListener(this.startAudio), r.Z.subscribe('RTC_CONNECTION_STATE', this.setVolume), r.Z.subscribe('TYPING_STOP', this.stopAudio), r.Z.subscribe('TYPING_STOP_LOCAL', this.stopAudio), r.Z.subscribe('CHANNEL_SELECT', this.stopAudio), r.Z.subscribe('POGGERMODE_SETTINGS_UPDATE', this.stopAudio);
     }
     _terminate() {
-        h.ZP.removeChangeListener(this.startAudio), r.Z.unsubscribe('RTC_CONNECTION_STATE', this.setVolume), r.Z.unsubscribe('TYPING_STOP', this.stopAudio), r.Z.unsubscribe('TYPING_STOP_LOCAL', this.stopAudio), r.Z.unsubscribe('CHANNEL_SELECT', this.stopAudio), r.Z.unsubscribe('POGGERMODE_SETTINGS_UPDATE', this.stopAudio), clearTimeout(_);
+        h.ZP.removeChangeListener(this.startAudio), r.Z.unsubscribe('RTC_CONNECTION_STATE', this.setVolume), r.Z.unsubscribe('TYPING_STOP', this.stopAudio), r.Z.unsubscribe('TYPING_STOP_LOCAL', this.stopAudio), r.Z.unsubscribe('CHANNEL_SELECT', this.stopAudio), r.Z.unsubscribe('POGGERMODE_SETTINGS_UPDATE', this.stopAudio), clearTimeout(y);
     }
     setVolume(e) {
         let { state: t } = e;
@@ -53,24 +53,24 @@ class E extends i.Z {
     }
     handleTypingStop(e) {
         let { userId: t } = e;
-        s.default.getId() === t && O();
+        s.default.getId() === t && v();
     }
     stopAudio() {
-        O();
+        v();
     }
     startAudio() {
         var e;
-        if (!v()) return;
+        if (!_()) return;
         let t = c.Z.getChannelId();
         if (null == t) return;
         let n = s.default.getId(),
             r = u.Z.isTyping(t, n),
             i = h.ZP.getUserCombo(n, t),
             l = null != (e = null == i ? void 0 : i.multiplier) ? e : 1;
-        r && l >= 7 ? y() : O();
+        r && l >= 7 ? O() : v();
     }
     playAchievementUnlockSound() {
-        v() && j('poggermode_achievement_unlock');
+        _() && S('poggermode_achievement_unlock');
     }
 }
 let x = new E();

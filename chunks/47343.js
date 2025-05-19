@@ -2,14 +2,14 @@ n.d(t, { R: () => x }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    s = n.n(l),
+    a = n.n(l),
     o = n(481060),
-    a = n(590965),
+    s = n(590965),
     c = n(695346),
     u = n(51331),
     d = n(259580),
-    h = n(626135),
-    g = n(44609),
+    g = n(626135),
+    h = n(44609),
     p = n(731971),
     m = n(981631),
     f = n(388032),
@@ -18,19 +18,19 @@ let x = () => {
     var e;
     let [t, n] = i.useState(!1),
         l = c.G6.useSetting(),
-        { nickname: x, dmsAllowed: E, showActivity: b, mutedServer: v, setNickname: O, setDmsAllowed: I, setShowActivity: j, setMutedServer: S, guildId: N, inviteCode: y } = (0, p.XW)(),
-        C = null == (e = a.Z.getProps().invite) ? void 0 : e.is_nickname_changeable,
-        T = (0, g.m4)({ location: 'InviteSettingsControls' });
+        { nickname: x, dmsAllowed: b, showActivity: E, mutedServer: v, setNickname: O, setDmsAllowed: S, setShowActivity: I, setMutedServer: j, guildId: y, inviteCode: N } = (0, p.XW)(),
+        C = null == (e = s.Z.getProps().invite) ? void 0 : e.is_nickname_changeable,
+        T = (0, h.m4)({ location: 'InviteSettingsControls' });
     return (0, r.jsxs)('div', {
-        className: s()(_.editProfileContainer, { [_.opened]: t }),
+        className: a()(_.editProfileContainer, { [_.opened]: t }),
         children: [
             (0, r.jsxs)(o.P3F, {
                 className: _.header,
                 onClick: () => {
                     t ||
-                        h.default.track(m.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
-                            guild_id: N,
-                            invite_code: y
+                        g.default.track(m.rMx.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
+                            guild_id: y,
+                            invite_code: N
                         }),
                         n(!t);
                 },
@@ -55,7 +55,7 @@ let x = () => {
                         ]
                     }),
                     (0, r.jsx)('div', {
-                        className: s()(_.caret, { [_.opened]: t }),
+                        className: a()(_.caret, { [_.opened]: t }),
                         children: (0, r.jsx)(d.Z, {
                             width: 18,
                             height: 18,
@@ -65,7 +65,7 @@ let x = () => {
                 ]
             }),
             (0, r.jsxs)('div', {
-                className: s()(_.customizationSection, { [_.opened]: t }, C ? null : _.condensed),
+                className: a()(_.customizationSection, { [_.opened]: t }, C ? null : _.condensed),
                 children: [
                     C &&
                         (0, r.jsxs)('div', {
@@ -86,20 +86,20 @@ let x = () => {
                         }),
                     (0, r.jsx)(u.Z, {
                         title: f.intl.string(f.t['/2ed39']),
-                        value: E,
-                        onChange: I
+                        value: b,
+                        onChange: S
                     }),
                     l &&
                         (0, r.jsx)(u.Z, {
                             title: f.intl.string(f.t.bN4m1N),
-                            value: b,
-                            onChange: j
+                            value: E,
+                            onChange: I
                         }),
                     T &&
                         (0, r.jsx)(u.Z, {
                             title: f.intl.string(f.t['0nZCqK']),
                             value: v,
-                            onChange: S
+                            onChange: j
                         })
                 ]
             })

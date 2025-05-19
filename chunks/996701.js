@@ -1,19 +1,19 @@
 n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
-var l = n(120356),
-    i = n.n(l),
-    a = n(481060),
+var a = n(120356),
+    i = n.n(a),
+    l = n(481060),
     o = n(782568),
     s = n(388032),
     c = n(88309),
     d = n(735247);
 let u = (e) => {
     let {
-        data: { url: t, link_text: n, link_description: l, is_localized: s }
+        data: { url: t, link_text: n, link_description: a, is_localized: s }
     } = e;
     return s
-        ? (0, r.jsxs)(a.P3F, {
+        ? (0, r.jsxs)(l.P3F, {
               role: 'link',
               className: i()(d.linkButton, c.listElement),
               onClick: () => {
@@ -23,21 +23,21 @@ let u = (e) => {
                   (0, r.jsxs)('div', {
                       className: d.linkTextContainer,
                       children: [
-                          (0, r.jsx)(a.Text, {
+                          (0, r.jsx)(l.Text, {
                               className: d.__invalid_linkText,
                               variant: 'text-md/semibold',
                               children: n
                           }),
-                          null != l &&
-                              '' !== l &&
-                              (0, r.jsx)(a.Text, {
+                          null != a &&
+                              '' !== a &&
+                              (0, r.jsx)(l.Text, {
                                   variant: 'text-md/normal',
                                   color: 'text-muted',
-                                  children: l
+                                  children: a
                               })
                       ]
                   }),
-                  (0, r.jsx)(a.Gr1, {
+                  (0, r.jsx)(l.Gr1, {
                       size: 'sm',
                       color: 'currentColor',
                       className: d.linkIcon
@@ -62,15 +62,15 @@ function m(e) {
             let { data: n } = e;
             return (0, r.jsx)(u, { data: n }, 'external-link+'.concat(t));
         }),
-        l = t.some((e) => {
+        a = t.some((e) => {
             let { data: t } = e;
             return t.is_header_hidden;
         });
     return (0, r.jsxs)('div', {
         className: i()(d.linksContainer, c.listElementWrapper),
         children: [
-            !l &&
-                (0, r.jsx)(a.X6q, {
+            !a &&
+                (0, r.jsx)(l.X6q, {
                     variant: 'heading-sm/semibold',
                     color: 'header-secondary',
                     className: d.header,

@@ -17,7 +17,7 @@ function f(e) {
         g = (0, c.dQu)(h).spring({ opacity: 0.1 }),
         m = (0, c.dQu)(h).spring({ opacity: 0 }),
         b = (0, c.dQu)(h).spring({ opacity: 1 }),
-        [_, y] = (0, c.q_F)(
+        [y, O] = (0, c.q_F)(
             () => ({
                 from: {
                     backgroundColor: f,
@@ -26,7 +26,7 @@ function f(e) {
             }),
             'animate-never'
         ),
-        O = {
+        v = {
             startColor: f,
             handleRest: (e) => {
                 e.finished && (null == l || l());
@@ -36,16 +36,16 @@ function f(e) {
             targetColor: g,
             animationDelay: u
         },
-        v = i.useRef(O);
+        _ = i.useRef(v);
     return (
         i.useEffect(() => {
-            v.current = O;
+            _.current = v;
         }),
         i.useEffect(() => {
-            let { startColor: e, handleRest: t, endColor: n, targetBorderColor: r, targetColor: i, animationDelay: l } = v.current,
+            let { startColor: e, handleRest: t, endColor: n, targetBorderColor: r, targetColor: i, animationDelay: l } = _.current,
                 { useReducedMotion: o } = d.Z,
                 s = 200 * !o;
-            y({
+            O({
                 reset: !0,
                 immediate: !1,
                 to: {
@@ -57,7 +57,7 @@ function f(e) {
                     easing: a.Z.Easing.ease
                 }
             }),
-                y({
+                O({
                     delay: l,
                     immediate: o,
                     to: [
@@ -71,7 +71,7 @@ function f(e) {
                         easing: a.Z.Easing.ease
                     }
                 }),
-                y({
+                O({
                     delay: l + 200 + 200,
                     immediate: o,
                     to: [
@@ -86,9 +86,9 @@ function f(e) {
                     },
                     onRest: t
                 });
-        }, [y]),
+        }, [O]),
         (0, r.jsx)(s.animated.div, {
-            style: _,
+            style: y,
             className: o()(p.settingsItemHighlight, n),
             children: t
         })

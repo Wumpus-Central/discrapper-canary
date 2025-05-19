@@ -1,16 +1,16 @@
-n.d(t, { Z: () => g }), n(35282);
+n.d(t, { Z: () => h }), n(35282);
 var r = n(990547),
     i = n(544891),
     l = n(570140),
-    s = n(881052),
+    a = n(881052),
     o = n(626135),
-    a = n(573261),
+    s = n(573261),
     c = n(109488),
     u = n(794099),
     d = n(981631);
 n(135200);
-var h = n(388032);
-let g = {
+var g = n(388032);
+let h = {
     resetSuggestions: () => l.Z.dispatch({ type: 'POMELO_SUGGESTIONS_RESET' }),
     async fetchSuggestionsRegistration(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1500;
@@ -64,11 +64,11 @@ let g = {
             c = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
             u =
                 !1 === /^[A-Za-z0-9_.]*$/.test(e)
-                    ? h.intl.string(h.t.z7c4bG)
+                    ? g.intl.string(g.t.z7c4bG)
                     : e.includes('..')
-                      ? h.intl.string(h.t['C7G+go'])
+                      ? g.intl.string(g.t['C7G+go'])
                       : e.length < 2 || e.length > 32
-                        ? h.intl.formatToPlainString(h.t.IpijXF, {
+                        ? g.intl.formatToPlainString(g.t.IpijXF, {
                               maxNum: 32,
                               minNum: 2
                           })
@@ -88,7 +88,7 @@ let g = {
                 })
             );
         try {
-            let t = await a.Z.post({
+            let t = await s.Z.post({
                 url: i ? d.ANM.POMELO_ATTEMPT_UNAUTHED : d.ANM.POMELO_ATTEMPT,
                 body: { username: e },
                 trackedActionData: {
@@ -109,8 +109,8 @@ let g = {
                     username: e,
                     taken: t.body.taken
                 });
-        } catch (a) {
-            let r = new s.Hx(a),
+        } catch (s) {
+            let r = new a.Hx(s),
                 i = null != (t = r.getAnyErrorMessage()) ? t : void 0;
             o.default.track(d.rMx.POMELO_ERRORS, {
                 reason: i,
@@ -129,7 +129,7 @@ let g = {
     },
     async createPomelo(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = await a.Z.post({
+            n = await s.Z.post({
                 body: e,
                 url: d.ANM.POMELO_CREATE,
                 trackedActionData: {

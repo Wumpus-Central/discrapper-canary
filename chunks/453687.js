@@ -1,8 +1,8 @@
 n.d(t, {
     Dv: () => c,
-    Gq: () => l,
-    Gx: () => g,
-    XX: () => s,
+    Gq: () => s,
+    Gx: () => m,
+    XX: () => a,
     bX: () => d,
     bY: () => u,
     iG: () => p,
@@ -11,14 +11,14 @@ n.d(t, {
     n(781311);
 var r = n(446108),
     o = n(901461),
-    a = n(981631);
+    l = n(981631);
 function i(e) {
     return 'message-content-'.concat(e.id);
 }
-function l(e) {
+function s(e) {
     return 'message-reply-context-'.concat(e.id);
 }
-function s(e, t) {
+function a(e, t) {
     let n = null != t ? t : e.id;
     return 'message-username-'.concat(n);
 }
@@ -32,36 +32,36 @@ function d(e) {
     return 'message-accessories-'.concat(e.id);
 }
 function p(e, t, n) {
-    let u = e.type === a.uaV.REPLY && null != e.messageReference,
+    let u = e.type === l.uaV.REPLY && null != e.messageReference,
         p = e.embeds.length > 0,
-        g = e.attachments.length > 0,
-        m = e.stickerItems.length > 0,
+        m = e.attachments.length > 0,
+        g = e.stickerItems.length > 0,
         f = e.codedLinks.length > 0,
         b = e.components.length > 0,
-        h = e.hasFlag(a.iLy.HAS_THREAD),
-        _ = p || g || m || f || h || b || e.type === a.uaV.THREAD_CREATED,
-        y = p && e.content === e.embeds[0].url && e.embeds[0].type === a.hBH.GIFV,
-        v = e.type !== a.uaV.DEFAULT || (!y && '' !== e.content),
-        O = (0, o.Z)(e),
-        j = !O && (null == n ? void 0 : n.hasTimestamp) !== !1,
-        x = s(e, t),
-        C = l(e),
-        P = O ? '' : ''.concat(u ? C : x, ' ').concat(r.Z0);
-    if (v) {
-        let t = i(e);
-        P += ' '.concat(t);
-    }
-    if (_) {
-        let t = d(e);
-        P += ' '.concat(t);
-    }
+        h = e.hasFlag(l.iLy.HAS_THREAD),
+        O = p || m || g || f || h || b || e.type === l.uaV.THREAD_CREATED,
+        y = p && e.content === e.embeds[0].url && e.embeds[0].type === l.hBH.GIFV,
+        j = e.type !== l.uaV.DEFAULT || (!y && '' !== e.content),
+        v = (0, o.Z)(e),
+        P = !v && (null == n ? void 0 : n.hasTimestamp) !== !1,
+        x = a(e, t),
+        C = s(e),
+        w = v ? '' : ''.concat(u ? C : x, ' ').concat(r.Z0);
     if (j) {
-        let t = c(e);
-        P += ' '.concat(r.fy, ' ').concat(t);
+        let t = i(e);
+        w += ' '.concat(t);
     }
-    return P.trim();
+    if (O) {
+        let t = d(e);
+        w += ' '.concat(t);
+    }
+    if (P) {
+        let t = c(e);
+        w += ' '.concat(r.fy, ' ').concat(t);
+    }
+    return w.trim();
 }
-function g(e) {
+function m(e) {
     if (0 === e.reactions.length) return;
     let t = u(e);
     return ''.concat(r.Mb, ' ').concat(t);

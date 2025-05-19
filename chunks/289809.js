@@ -1,8 +1,8 @@
 n.d(t, { Z: () => s });
 var r = n(255367),
-    l = n(73800),
+    a = n(73800),
     i = n(481060),
-    a = n(454585),
+    l = n(454585),
     o = n(126694);
 function s(e) {
     let {
@@ -10,7 +10,7 @@ function s(e) {
                 data: { header: t, body: n, is_localized: s }
             }
         } = e,
-        c = l.useRef(a.Z.reactParserFor(a.Z.defaultRules));
+        c = a.useRef(l.Z.reactParserFor(l.Z.defaultRules));
     return s && (null != t || null != n)
         ? (0, r.jsxs)('div', {
               className: o.container,

@@ -1,8 +1,8 @@
 var r = n(970711);
-e.exports = n.v(t, e.id, '72223483591a3eb9', {
+e.exports = n.v(t, e.id, '122d2459cf3c2eef', {
     './libdiscore_wasm_bg.js': {
-        __wbg_warn_2159aed0435b2f46: r.fw,
         __wbindgen_is_undefined: r.XP,
+        __wbg_warn_2159aed0435b2f46: r.fw,
         __wbindgen_string_new: r.h4,
         __wbindgen_cb_drop: r.G6,
         __wbindgen_string_get: r.qt,
@@ -76,9 +76,9 @@ e.exports = n.v(t, e.id, '72223483591a3eb9', {
         __wbindgen_debug_string: r.fY,
         __wbindgen_throw: r.Or,
         __wbindgen_memory: r.oH,
-        __wbindgen_closure_wrapper632: r.y_,
-        __wbindgen_closure_wrapper657: r.Sk,
-        __wbindgen_closure_wrapper1341: r.QI,
+        __wbindgen_closure_wrapper720: r.jc,
+        __wbindgen_closure_wrapper745: r.b0,
+        __wbindgen_closure_wrapper1408: r.Cv,
         __wbindgen_init_externref_table: r.xQ
     }
 });

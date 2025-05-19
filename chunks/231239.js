@@ -1,12 +1,12 @@
-n.d(t, { Z: () => a }), n(35282);
+n.d(t, { Z: () => s }), n(35282);
 var r = n(990547),
     i = n(283693),
     l = n(570140),
-    s = n(573261),
+    a = n(573261),
     o = n(981631);
-let a = {
+let s = {
     signup: (e, t) =>
-        s.Z.post({
+        a.Z.post({
             url: o.ANM.HUB_WAITLIST_SIGNUP,
             body: {
                 email: e,
@@ -25,7 +25,7 @@ let a = {
         }),
     sendVerificationEmail: async (e, t, n) =>
         (
-            await s.Z.post({
+            await a.Z.post({
                 url: o.ANM.HUB_EMAIL_VERIFY_SEND,
                 body: {
                     email: e,
@@ -51,7 +51,7 @@ let a = {
                 let n =
                     null ==
                     (t = (
-                        await s.Z.post({
+                        await a.Z.post({
                             url: o.ANM.HUB_EMAIL_VERIFY,
                             body: { token: e },
                             trackedActionData: { event: r.NetworkActionNames.HUB_EMAIL_VERIFY },
@@ -75,7 +75,7 @@ let a = {
         if (null != e)
             try {
                 var i;
-                let a = await s.Z.post({
+                let s = await a.Z.post({
                         url: o.ANM.HUB_EMAIL_VERIFY_CODE,
                         body: {
                             code: e,
@@ -85,13 +85,13 @@ let a = {
                         trackedActionData: { event: r.NetworkActionNames.HUB_EMAIL_VERIFY },
                         rejectWithError: !1
                     }),
-                    c = null == (i = a.body.guild) ? void 0 : i.id;
+                    c = null == (i = s.body.guild) ? void 0 : i.id;
                 return (
                     l.Z.dispatch({
                         type: 'HUB_VERIFY_EMAIL_SUCCESS',
                         guildId: c
                     }),
-                    a.body
+                    s.body
                 );
             } catch (e) {
                 throw (

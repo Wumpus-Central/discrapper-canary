@@ -14,8 +14,8 @@ var i,
     g = n(594174),
     m = n(998502),
     b = n(981631),
-    _ = n(176505);
-function y(e, t, n) {
+    y = n(176505);
+function O(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -28,7 +28,7 @@ function y(e, t, n) {
         e
     );
 }
-function O(e) {
+function v(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -39,15 +39,15 @@ function O(e) {
                 })
             )),
             r.forEach(function (t) {
-                y(e, t, n[t]);
+                O(e, t, n[t]);
             });
     }
     return e;
 }
-let v = b.IlC.APP,
+let _ = b.IlC.APP,
     C = !1,
-    S = !1,
-    j = [];
+    j = !1,
+    S = [];
 function E() {
     C = !0;
 }
@@ -57,17 +57,17 @@ class x extends (i = l.ZP.Store) {
     }
     isOpen() {
         let e = __OVERLAY__ ? b.IlC.OVERLAY : b.IlC.APP;
-        return !!(C && j.length > 0 && v === e);
+        return !!(C && S.length > 0 && _ === e);
     }
     getProps() {
         return {
-            invite: j.length > 0 ? j[0][0] : null,
+            invite: S.length > 0 ? S[0][0] : null,
             error: null != r && '' !== r ? r : null,
-            submitting: S
+            submitting: j
         };
     }
 }
-y(x, 'displayName', 'InviteModalStore');
+O(x, 'displayName', 'InviteModalStore');
 let P = new x(o.Z, {
     OVERLAY_INITIALIZE: E,
     CONNECTION_OPEN: E,
@@ -86,7 +86,7 @@ let P = new x(o.Z, {
                 if (null == n) return !1;
                 if (null != h.Z.getGuild(n.id) && !(0, s.TY)(t)) {
                     let e = (function (e) {
-                        if ((0, s.W6)(e)) return _.oC.ROLE_SUBSCRIPTIONS;
+                        if ((0, s.W6)(e)) return y.oC.ROLE_SUBSCRIPTIONS;
                         let { channel: t } = e;
                         if (null != t) {
                             let e = d.Z.getChannel(t.id);
@@ -99,13 +99,13 @@ let P = new x(o.Z, {
             }
         }
         if (
-            j.some((e) => {
+            S.some((e) => {
                 let [n] = e;
                 return n.code === t.code;
             })
         )
             return !1;
-        (v = e.context), (S = !1);
+        (_ = e.context), (j = !1);
         let n = (function (e) {
             let { approximate_member_count: t, approximate_presence_count: n, code: r, state: i, target_type: l, target_user: o, target_application: s, stage_instance: a, type: c, channel: d, guild: h, is_nickname_changeable: p } = e,
                 f = {
@@ -120,21 +120,21 @@ let P = new x(o.Z, {
                     type: c,
                     is_nickname_changeable: p
                 };
-            return null != d && (f.channel = O({}, d)), null != h && (f.guild = new u.ZP(h)), null != e.inviter && (f.inviter = O({}, e.inviter)), f;
+            return null != d && (f.channel = v({}, d)), null != h && (f.guild = new u.ZP(h)), null != e.inviter && (f.inviter = v({}, e.inviter)), f;
         })(t);
-        j.push([n, e.resolve]);
+        S.push([n, e.resolve]);
     },
     INVITE_MODAL_CLOSE: function () {
-        if (((r = null), (S = !1), j.length > 0)) {
-            let [, e] = j.shift();
+        if (((r = null), (j = !1), S.length > 0)) {
+            let [, e] = S.shift();
             null != e && e();
         }
     },
     INVITE_ACCEPT: function () {
-        S = !0;
+        j = !0;
     },
     INVITE_MODAL_ERROR: function (e) {
         let { message: t } = e;
-        (r = t), (S = !1);
+        (r = t), (j = !1);
     }
 });

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => y });
+n.d(t, { Z: () => O });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -17,7 +17,7 @@ let b = {
     friction: 30,
     tension: 300
 };
-function _(e) {
+function y(e) {
     var t;
     let { guildChannels: n, jumpToVoiceChannels: l } = e,
         s = n.getCategoryFromSection(n.voiceChannelsSectionNumber),
@@ -62,24 +62,24 @@ function _(e) {
         ]
     });
 }
-function y(e) {
+function O(e) {
     let { position: t, guildChannels: n, guildChannelsVersion: l, jumpToVoiceChannels: u, jumpToChannel: d } = e,
-        { bottomBar: p, topBar: y } = (0, a.cj)([f.Z], () => f.Z.getUnreadStateForGuildId(n.id)),
-        O = (0, a.e7)([h.Z], () => h.Z.isFocused()),
-        { mode: v, mentionCount: C, targetChannelId: S } = 'bottom' === t ? p : y,
-        j = v === f.x.HIDDEN,
+        { bottomBar: p, topBar: O } = (0, a.cj)([f.Z], () => f.Z.getUnreadStateForGuildId(n.id)),
+        v = (0, a.e7)([h.Z], () => h.Z.isFocused()),
+        { mode: _, mentionCount: C, targetChannelId: j } = 'bottom' === t ? p : O,
+        S = _ === f.x.HIDDEN,
         E = (0, c.q_F)(
             {
-                to: { transform: j ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
+                to: { transform: S ? ('bottom' === t ? 'translateY(180%)' : 'translateY(-180%)') : 'translateY(0%)' },
                 config: b
             },
-            O ? 'respect-motion-settings' : 'animate-never'
+            v ? 'respect-motion-settings' : 'animate-never'
         ),
         x = i.useCallback(
             (e) => {
-                e.preventDefault(), e.stopPropagation(), null != S && d(S);
+                e.preventDefault(), e.stopPropagation(), null != j && d(j);
             },
-            [d, S]
+            [d, j]
         );
     return (0, r.jsx)('div', {
         className: o()(m.container, {
@@ -89,11 +89,11 @@ function y(e) {
         children: (0, r.jsx)(s.animated.div, {
             className: m.containerPadding,
             style: E,
-            'aria-hidden': j,
+            'aria-hidden': S,
             children:
-                v === f.x.HIDDEN
+                _ === f.x.HIDDEN
                     ? (0, r.jsx)('div', { className: o()(m.bar, m.emptyBar) })
-                    : v === f.x.UNREAD
+                    : _ === f.x.UNREAD
                       ? (0, r.jsxs)(c.P3F, {
                             className: m.bar,
                             onClick: x,
@@ -121,7 +121,7 @@ function y(e) {
                                 })
                             ]
                         })
-                      : v === f.x.MENTIONS
+                      : _ === f.x.MENTIONS
                         ? (0, r.jsx)(c.P3F, {
                               className: o()(m.bar, m.mentionsBar),
                               onClick: x,
@@ -132,8 +132,8 @@ function y(e) {
                                   children: g.intl.format(g.t.EQcLys, { count: C })
                               })
                           })
-                        : v === f.x.VOICE_CHANNELS
-                          ? (0, r.jsx)(_, {
+                        : _ === f.x.VOICE_CHANNELS
+                          ? (0, r.jsx)(y, {
                                 jumpToVoiceChannels: u,
                                 guildChannels: n,
                                 guildChannelsVersion: l

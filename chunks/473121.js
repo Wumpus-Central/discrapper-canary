@@ -1,8 +1,8 @@
 n.d(t, { Z: () => d });
 var r = n(255367),
-    l = n(73800),
+    a = n(73800),
     i = n(481060),
-    a = n(454585),
+    l = n(454585),
     o = n(273744),
     s = n(388032),
     c = n(21330);
@@ -12,9 +12,9 @@ let d = (e) => {
             node: { header: d, subheader: u, button: m },
             isModeratorReport: p
         } = e,
-        x = (null == m ? void 0 : m.type) === 'submit',
-        b = l.useRef(
-            a.Z.reactParserFor(
+        _ = (null == m ? void 0 : m.type) === 'submit',
+        g = a.useRef(
+            l.Z.reactParserFor(
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -39,7 +39,7 @@ let d = (e) => {
                             });
                     }
                     return e;
-                })({}, a.Z.defaultRules)),
+                })({}, l.Z.defaultRules)),
                 (n = n = { link: o.s }),
                 Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
@@ -70,10 +70,10 @@ let d = (e) => {
                 ? (0, r.jsx)(i.Text, {
                       variant: 'text-md/normal',
                       color: 'header-secondary',
-                      children: b.current(u)
+                      children: g.current(u)
                   })
                 : null,
-            x &&
+            _ &&
                 !p &&
                 (0, r.jsx)(i.Text, {
                     variant: 'text-sm/normal',

@@ -2,14 +2,14 @@ n.d(t, { Z: () => c }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(950035),
-    s = n(849146),
+    a = n(849146),
     o = n(481060);
-let a = () => {
+let s = () => {
     let e = i.useRef(null),
         [t, n] = i.useState(0),
         r = i.useMemo(
             () =>
-                new s.Z((e) => {
+                new a.Z((e) => {
                     let [t] = e;
                     return n(t.contentRect.height);
                 }),
@@ -24,8 +24,8 @@ let a = () => {
     );
 };
 function c(e) {
-    let { show: t, children: n, top: i = 0, bottom: s = 0 } = e,
-        { ref: c, height: u } = a(),
+    let { show: t, children: n, top: i = 0, bottom: a = 0 } = e,
+        { ref: c, height: u } = s(),
         d = (0, o.q_F)({
             from: {
                 height: 0,
@@ -34,7 +34,7 @@ function c(e) {
             },
             to: {
                 height: t ? u : 0,
-                paddingBottom: t ? ''.concat(s, 'px') : '0px',
+                paddingBottom: t ? ''.concat(a, 'px') : '0px',
                 marginTop: t ? ''.concat(i, 'px') : '0px'
             },
             config: {
@@ -42,7 +42,7 @@ function c(e) {
                 friction: 26
             }
         }),
-        h = (0, o.q_F)({
+        g = (0, o.q_F)({
             from: { opacity: 0 },
             to: { opacity: +!!t },
             config: {
@@ -58,7 +58,7 @@ function c(e) {
             marginTop: d.marginTop
         },
         children: (0, r.jsx)(l.animated.div, {
-            style: { opacity: h.opacity },
+            style: { opacity: g.opacity },
             ref: c,
             children: n
         })

@@ -1,4 +1,4 @@
-n.d(t, { j: () => O }), n(388685);
+n.d(t, { j: () => v }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -14,15 +14,15 @@ var r = n(255367),
     g = n(316496),
     m = n(55185),
     b = n(981631),
-    _ = n(921944),
-    y = n(46140);
-let O = (e) => {
-    let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: O } = e,
-        [v, C] = (0, i.useState)(!1),
-        S = (function (e) {
+    y = n(921944),
+    O = n(46140);
+let v = (e) => {
+    let { children: t, isForceShowSharingPopout: n, setIsForceShowSharingPopout: v } = e,
+        [_, C] = (0, i.useState)(!1),
+        j = (function (e) {
             let { isForceShowSharingPopout: t } = e,
                 { isEnabled: n, showActivitySharingIndicatorWhenSharing: r } = (0, g.D)('SharingPrivacyPopout'),
-                i = (0, u.Ws)({ location: y.dr.CONFLICT_CHECKS }),
+                i = (0, u.Ws)({ location: O.dr.CONFLICT_CHECKS }),
                 o = d.G6.useSetting(),
                 s = (0, l.e7)([h.Z], () => h.Z.getLayers().includes(b.S9g.USER_SETTINGS)),
                 a = (0, l.e7)([p.Z], () => p.Z.getStatus());
@@ -34,21 +34,21 @@ let O = (e) => {
             }
             return null;
         })({ isForceShowSharingPopout: n }),
-        j = (0, i.useRef)(null);
+        S = (0, i.useRef)(null);
     return ((0, i.useEffect)(() => {
         n && f.default.track(b.rMx.OPEN_POPOUT, { type: 'SharingPrivacyPopout' });
     }, [n]),
-    null != S || v)
+    null != j || _)
         ? (0, r.jsx)(c.ZP, {
               contentTypes: n ? [] : [o.z.SHARE_ACTIVITY_COACHMARK_V2],
               children: (e) => {
                   let { visibleContent: i } = e;
                   if (i === o.z.SHARE_ACTIVITY_COACHMARK_V2 || n) {
                       let e = () => {
-                          (0, a.EW)(o.z.SHARE_ACTIVITY_COACHMARK_V2, { dismissAction: _.L.USER_DISMISS }), O(!1), C(!1);
+                          (0, a.EW)(o.z.SHARE_ACTIVITY_COACHMARK_V2, { dismissAction: y.L.USER_DISMISS }), v(!1), C(!1);
                       };
                       return (0, r.jsx)(s.yRy, {
-                          targetElementRef: j,
+                          targetElementRef: S,
                           shouldShow: !0,
                           spacing: 10,
                           position: 'top',
@@ -59,12 +59,12 @@ let O = (e) => {
                               return (0, r.jsx)(m.I, {
                                   closePopout: t,
                                   onOpen: () => C(!0),
-                                  popoutState: S
+                                  popoutState: j
                               });
                           },
                           children: () =>
                               (0, r.jsx)(s.P3F, {
-                                  innerRef: j,
+                                  innerRef: S,
                                   onClick: e,
                                   children: t
                               })

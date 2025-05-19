@@ -14,13 +14,13 @@ var r = n(255367),
     g = n(276952),
     m = n(682662),
     b = n(674552),
-    _ = n(593364),
-    y = n(905423),
-    O = n(199902),
-    v = n(592125),
+    y = n(593364),
+    O = n(905423),
+    v = n(199902),
+    _ = n(592125),
     C = n(944486),
-    S = n(979651),
-    j = n(709054),
+    j = n(979651),
+    S = n(709054),
     E = n(853856),
     x = n(593214),
     P = n(919755),
@@ -71,20 +71,20 @@ function D() {
             favoriteServerMuted: E.Z.favoriteServerMuted
         })),
         B = (0, a.e7)([C.Z], () => C.Z.getChannelId(N.I_8)),
-        V = (0, a.e7)([v.Z], () => v.Z.getChannel(B)),
-        H = (0, y.Z)((e) => e.guildId) === N.I_8,
-        { badge: F, unread: W } = (0, P.Z)(G),
-        z = (function (e) {
+        V = (0, a.e7)([_.Z], () => _.Z.getChannel(B)),
+        H = (0, O.Z)((e) => e.guildId) === N.I_8,
+        { badge: F, unread: z } = (0, P.Z)(G),
+        W = (function (e) {
             let t = (0, a.e7)([C.Z], () => C.Z.getVoiceChannelId()),
                 n = null != t && null != e[t],
-                r = (0, a.e7)([O.Z], () => {
+                r = (0, a.e7)([v.Z], () => {
                     if (!n) return !1;
-                    let t = O.Z.getCurrentUserActiveStream();
+                    let t = v.Z.getCurrentUserActiveStream();
                     return null != t && null != e[t.channelId];
                 }),
-                i = (0, a.e7)([O.Z], () => O.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
-                l = (0, a.e7)([S.Z], () => n && null != t && S.Z.hasVideo(t), [n, t]),
-                o = (0, a.Wu)([h.ZP], () => j.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
+                i = (0, a.e7)([v.Z], () => v.Z.getAllApplicationStreams().some((t) => null != e[t.channelId])),
+                l = (0, a.e7)([j.Z], () => n && null != t && j.Z.hasVideo(t), [n, t]),
+                o = (0, a.Wu)([h.ZP], () => S.default.keys(e).reduce((e, t) => (e.push(...h.ZP.getEmbeddedActivitiesForChannel(t)), e), [])),
                 s = (0, a.e7)([h.ZP], () =>
                     Array.from(h.ZP.getSelfEmbeddedActivities().values()).some((t) => {
                         let { location: n } = t,
@@ -109,7 +109,7 @@ function D() {
                 })
             );
         })(G),
-        Y = F > 0 ? (0, _.N)(F) : null,
+        Y = F > 0 ? (0, y.N)(F) : null,
         K = (0, f.Q3)('FavoritesButton'),
         q = i.useCallback(() => {
             L();
@@ -119,7 +119,7 @@ function D() {
             (0, r.jsx)(g.Z, {
                 selected: H,
                 hovered: k,
-                unread: W && !U,
+                unread: z && !U,
                 className: T.pill
             }),
             (0, r.jsx)(w.Z, {
@@ -127,7 +127,7 @@ function D() {
                 children: (0, r.jsx)(I.S, {
                     children: (0, r.jsx)(c.aRk, {
                         selected: K || H || k,
-                        upperBadge: z,
+                        upperBadge: W,
                         lowerBadge: Y,
                         children: (0, r.jsx)(
                             c.LYs,

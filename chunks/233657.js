@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => y });
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -56,9 +56,9 @@ function b(e, t) {
         e
     );
 }
-function _(e) {
-    let { guild: t, selected: _ } = e,
-        { hasUnread: y, mentionCount: O } = (0, i.cj)(
+function y(e) {
+    let { guild: t, selected: y } = e,
+        { hasUnread: O, mentionCount: v } = (0, i.cj)(
             [u.ZP],
             () => ({
                 hasUnread: u.ZP.hasUnread(t.id, p.W.GUILD_EVENT),
@@ -66,7 +66,7 @@ function _(e) {
             }),
             [t.id]
         ),
-        v = (0, i.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
+        _ = (0, i.e7)([d.ZP], () => d.ZP.isMuteScheduledEventsEnabled(t.id));
     async function C() {
         await (0, o.ZDy)(async () => {
             let { default: e } = await Promise.all([n.e('22347'), n.e('56236'), n.e('79010')]).then(n.bind(n, 17671));
@@ -74,8 +74,8 @@ function _(e) {
         }),
             (0, a.EW)(l.z.GUILD_HEADER_EVENT_UPSELL);
     }
-    let S = (0, c.ZP)(t.id),
-        j = S.length > 0 ? f.intl.formatToPlainString(f.t.IBdqSk, { number: S.length }) : f.intl.string(f.t.tlopTE);
+    let j = (0, c.ZP)(t.id),
+        S = j.length > 0 ? f.intl.formatToPlainString(f.t.IBdqSk, { number: j.length }) : f.intl.string(f.t.tlopTE);
     return (0, r.jsx)(h.m, {
         id: 'upcoming-events-'.concat(t.id),
         renderIcon: (e) =>
@@ -84,8 +84,8 @@ function _(e) {
                 color: 'currentColor',
                 className: e
             }),
-        text: j,
-        selected: _,
+        text: S,
+        selected: y,
         onClick: C,
         onContextMenu: (e) => {
             (0, s.jW)(e, async () => {
@@ -93,13 +93,13 @@ function _(e) {
                 return (n) => (0, r.jsx)(e, b(m({}, n), { guildId: t.id }));
             });
         },
-        showUnread: y && !v,
+        showUnread: O && !_,
         trailing:
-            !v && O > 0
+            !_ && v > 0
                 ? (0, r.jsx)(o.mAB, {
                       className: g.numberBadge,
                       disableColor: !0,
-                      count: O
+                      count: v
                   })
                 : null
     });

@@ -14,10 +14,10 @@ var r = n(255367),
     g = n(81063),
     m = n(768581),
     b = n(823379),
-    _ = n(51144),
-    y = n(291798);
-let O = d.u.SIZE_24;
-function v(e) {
+    y = n(51144),
+    O = n(291798);
+let v = d.u.SIZE_24;
+function _(e) {
     var t, n;
     let { activity: l, user: o, embeddedApp: s, onOpenSpotifyAlbum: u } = e,
         d = null == l ? void 0 : l.assets,
@@ -37,14 +37,14 @@ function v(e) {
                     (0, r.jsx)('img', {
                         alt: t,
                         src: e,
-                        className: y.applicationLargeImage
+                        className: O.applicationLargeImage
                     })
             });
         }
     let p = null != (t = d.large_image) ? t : d.small_image,
         f = (0, c.Z)(l),
-        b = f ? y.spotifyLargeImage : y.applicationLargeImage,
-        _ =
+        b = f ? O.spotifyLargeImage : O.applicationLargeImage,
+        y =
             null != p
                 ? (0, r.jsx)('img', {
                       alt: null != (n = d.large_text) ? n : '',
@@ -53,12 +53,12 @@ function v(e) {
                   })
                 : null;
     return f && null != u
-        ? ((_ = (0, r.jsx)(a.P3F, {
-              className: y.clickable,
+        ? ((y = (0, r.jsx)(a.P3F, {
+              className: O.clickable,
               onClick: () => {
                   u(l, o.id);
               },
-              children: _
+              children: y
           })),
           (0, r.jsx)(a.ua7, {
               text: null != d.large_text ? d.large_text : null,
@@ -84,10 +84,10 @@ function v(e) {
                           }
                           return i;
                       })(e, ['onClick']);
-                  return null != _ ? i.cloneElement(_, n) : null;
+                  return null != y ? i.cloneElement(y, n) : null;
               }
           }))
-        : _;
+        : y;
 }
 function C(e) {
     let { activity: t, embeddedApp: n, onOpenSpotifyTrack: i } = e,
@@ -99,7 +99,7 @@ function C(e) {
         if (!(null != t && (0, c.Z)(t)) || null == t.sync_id || null == l || null == i) return null;
         (o = l),
             (s = (0, r.jsx)(a.P3F, {
-                className: y.headerLink,
+                className: O.headerLink,
                 onClick: () => {
                     i(t);
                 },
@@ -108,11 +108,11 @@ function C(e) {
     }
     return (0, r.jsx)(h.Z, {
         title: o,
-        className: y.header,
+        className: O.header,
         children: s
     });
 }
-function S(e) {
+function j(e) {
     let { activity: t, user: n, onOpenSpotifyArtist: i } = e,
         l = null == t ? void 0 : t.details,
         s = null == t ? void 0 : t.state,
@@ -125,7 +125,7 @@ function S(e) {
                 p.Z,
                 {
                     artists: s,
-                    linkClassName: y.bodyLink,
+                    linkClassName: O.bodyLink,
                     canOpen: null != t.sync_id,
                     onOpenSpotifyArtist: (e) => {
                         null == i || i(t, n.id, e);
@@ -137,17 +137,17 @@ function S(e) {
     null == a || '' === a)
         ? null
         : (0, r.jsx)('div', {
-              className: o()(y.ellipsisRow, y.colorHeaderSecondary, y.bodyTextSize),
+              className: o()(O.ellipsisRow, O.colorHeaderSecondary, O.bodyTextSize),
               children: a
           });
 }
-function j(e) {
+function S(e) {
     let { activity: t } = e,
         n = null == t ? void 0 : t.state;
     return null == n || '' === n || (0, c.Z)(t)
         ? null
         : (0, r.jsx)('div', {
-              className: o()(y.ellipsisRow, y.colorHeaderSecondary, y.bodyTextSize, y.__invalid_activity),
+              className: o()(O.ellipsisRow, O.colorHeaderSecondary, O.bodyTextSize, O.__invalid_activity),
               children: n
           });
 }
@@ -160,7 +160,7 @@ function E(e) {
     return (0, r.jsx)(u.Z, {
         start: i,
         end: l,
-        className: y.timeBar,
+        className: O.timeBar,
         themed: !0,
         singleLine: !0
     });
@@ -185,43 +185,43 @@ function x(e) {
         }, [u, P]);
     return P
         ? (0, r.jsxs)('div', {
-              className: y.flexColumn,
+              className: O.flexColumn,
               children: [
                   (0, r.jsxs)('div', {
-                      className: y.flexRow,
+                      className: O.flexRow,
                       children: [
-                          (0, r.jsx)(v, {
+                          (0, r.jsx)(_, {
                               activity: t,
                               user: l,
                               embeddedApp: n,
                               onOpenSpotifyAlbum: g
                           }),
                           (0, r.jsxs)('div', {
-                              className: y.detailsAndAvatarsContainer,
+                              className: O.detailsAndAvatarsContainer,
                               children: [
                                   (0, r.jsx)(C, {
                                       activity: t,
                                       embeddedApp: n,
                                       onOpenSpotifyTrack: h
                                   }),
-                                  (0, r.jsx)(S, {
+                                  (0, r.jsx)(j, {
                                       activity: t,
                                       user: l,
                                       onOpenSpotifyArtist: p
                                   }),
-                                  (0, r.jsx)(j, { activity: t }),
+                                  (0, r.jsx)(S, { activity: t }),
                                   m.length > 0 &&
                                       (0, r.jsx)(d.Z, {
-                                          className: y.usersSummary,
+                                          className: O.usersSummary,
                                           guildId: o.guild_id,
                                           users: x,
-                                          size: O,
+                                          size: v,
                                           max: 7,
                                           renderUser: (e) => {
                                               var t;
                                               if (null == e) return null;
                                               let n = I.get(e.id),
-                                                  i = null != (t = null == n ? void 0 : n.nick) ? t : _.ZP.getName(e);
+                                                  i = null != (t = null == n ? void 0 : n.nick) ? t : y.ZP.getName(e);
                                               return (0, r.jsx)(
                                                   a.DY3,
                                                   {
@@ -230,9 +230,9 @@ function x(e) {
                                                       children: (0, r.jsx)(
                                                           'img',
                                                           {
-                                                              src: e.getAvatarURL(o.guild_id, O),
+                                                              src: e.getAvatarURL(o.guild_id, v),
                                                               alt: i,
-                                                              className: y.avatar
+                                                              className: O.avatar
                                                           },
                                                           e.id
                                                       )

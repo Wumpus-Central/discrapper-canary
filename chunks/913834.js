@@ -1,19 +1,19 @@
 n.d(t, { Z: () => p }), n(388685);
 var r = n(255367),
     o = n(73800),
-    a = n(481060),
+    l = n(481060),
     i = n(100527),
-    l = n(873128),
-    s = n(704041),
+    s = n(873128),
+    a = n(704041),
     c = n(986398),
     u = n(463031),
     d = n(791644);
 function p(e) {
     let { guild: t, message: n } = e,
         p = o.useRef(null),
-        [g, m] = o.useState(!1),
+        [m, g] = o.useState(!1),
         f = o.useRef(!1),
-        b = (0, l.Z)({
+        b = (0, s.Z)({
             guildId: t.id,
             leaderboardId: u.z,
             intervalOffset: 0
@@ -28,24 +28,24 @@ function p(e) {
         ? (0, r.jsx)('div', {
               className: d.badge,
               onMouseEnter: () => {
-                  (f.current = !0), m(!0);
+                  (f.current = !0), g(!0);
               },
               onMouseLeave: () => {
                   (f.current = !1),
                       setTimeout(() => {
-                          f.current || m(!1);
+                          f.current || g(!1);
                       }, 100);
               },
-              children: (0, r.jsx)(a.yRy, {
+              children: (0, r.jsx)(l.yRy, {
                   targetElementRef: p,
-                  animation: a.yRy.Animation.TRANSLATE,
+                  animation: l.yRy.Animation.TRANSLATE,
                   align: 'center',
                   autoInvert: !0,
                   nudgeAlignIntoViewport: !0,
                   position: 'top',
-                  shouldShow: g,
+                  shouldShow: m,
                   renderPopout: () =>
-                      (0, r.jsx)(s.Z, {
+                      (0, r.jsx)(a.Z, {
                           guildId: t.id,
                           previewMode: !0,
                           source: i.Z.MEMBER_LIST,

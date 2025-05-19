@@ -1,52 +1,52 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    s = n.n(l),
+    a = n.n(l),
     o = n(442837),
-    a = n(893776),
+    s = n(893776),
     c = n(493773),
     u = n(129293),
     d = n(388905),
-    h = n(17894),
-    g = n(108427),
+    g = n(17894),
+    h = n(108427),
     p = n(626135),
     m = n(981631),
     f = n(388032),
     _ = n(726401),
     x = n(20493);
-function E(e) {
+function b(e) {
     n.g.location.assign(e);
 }
-function b(e) {
-    let { location: t, transitionTo: l = E } = e,
-        [o, b] = i.useState('submitting'),
+function E(e) {
+    let { location: t, transitionTo: l = b } = e,
+        [o, E] = i.useState('submitting'),
         v = i.useRef(void 0);
     (0, c.ZP)(() => {
-        (0, g.e)('verify_email');
+        (0, h.e)('verify_email');
         let e = (0, u.Z)(t);
-        if (null == e) return void b('failed');
+        if (null == e) return void E('failed');
         (async () => {
             try {
-                let t = await a.Z.verify(e);
-                b('succeeded'), (v.current = t);
+                let t = await s.Z.verify(e);
+                E('succeeded'), (v.current = t);
             } catch (e) {
-                b('failed');
+                E('failed');
             }
         })();
     });
     let O = i.useCallback(() => {
             l(m.Z5c.LOGIN, { source: 'verify_email' });
         }, [l]),
-        I = i.useCallback(() => {
-            p.default.track(m.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: v.current }), (0, h.Z)('verify_email');
+        S = i.useCallback(() => {
+            p.default.track(m.rMx.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: v.current }), (0, g.Z)('verify_email');
         }, []);
     return 'failed' === o
         ? (0, r.jsxs)(d.ZP, {
               children: [
                   (0, r.jsx)(d.Ee, {
                       src: n(375673),
-                      className: s()(_.image, x.marginBottom20)
+                      className: a()(_.image, x.marginBottom20)
                   }),
                   (0, r.jsx)(d.Dx, {
                       className: x.marginBottom8,
@@ -67,14 +67,14 @@ function b(e) {
                 children: [
                     (0, r.jsx)(d.Ee, {
                         src: n(73962),
-                        className: s()(_.image, x.marginBottom20)
+                        className: a()(_.image, x.marginBottom20)
                     }),
                     (0, r.jsx)(d.Dx, {
                         className: x.marginBottom40,
                         children: f.intl.string(f.t.dAfGb2)
                     }),
                     (0, r.jsx)(d.zx, {
-                        onClick: I,
+                        onClick: S,
                         children: f.intl.string(f.t.uJWIj4)
                     })
                 ]
@@ -83,7 +83,7 @@ function b(e) {
                 children: [
                     (0, r.jsx)(d.Ee, {
                         src: n(892235),
-                        className: s()(_.image, x.marginBottom20)
+                        className: a()(_.image, x.marginBottom20)
                     }),
                     (0, r.jsx)(d.Dx, {
                         className: x.marginBottom8,

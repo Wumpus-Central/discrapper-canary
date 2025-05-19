@@ -1,31 +1,35 @@
 n.d(t, {
-    $R: () => c,
-    AG: () => s,
-    I3: () => u,
-    PJ: () => a,
+    $R: () => u,
+    AG: () => l,
+    I3: () => d,
+    Md: () => a,
+    PJ: () => o,
     X6: () => i.X,
     oC: () => r.oC,
-    pf: () => o,
-    rs: () => l
+    pf: () => s,
+    rs: () => c
 });
 var r = n(128813),
     i = n(511495);
-function a(e) {
+function a() {
+    return (0, r.ZP)().ExperimentCacher;
+}
+function o(e) {
     var t;
     return null != (t = (0, r.ZP)().BlockedDomainsStore.isBlockedDomain(e)) ? t : null;
 }
-function o(e) {
+function s(e) {
     (0, r.ZP)().BlockedDomainsStore.startFetchingBlockedDomains(e);
 }
-function s() {
+function l() {
     return 'libdiscore logs are part of the main app logs';
 }
-function l(e, t) {
+function c(e, t) {
     return (0, r.ZP)().rustMultiply(e, t);
 }
-function c() {
+function u() {
     (0, r.ZP)().crash();
 }
-function u() {
+function d() {
     return (0, r.ZP)().NoteStore;
 }

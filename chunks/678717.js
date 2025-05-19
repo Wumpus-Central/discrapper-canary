@@ -15,8 +15,8 @@ var a = n(255367),
     b = n(906467),
     f = n(259580),
     v = n(31336),
-    j = n(19759),
-    g = n(432877);
+    g = n(19759),
+    j = n(432877);
 n(381996);
 var _ = n(392750),
     y = n(926976),
@@ -24,8 +24,8 @@ var _ = n(392750),
     O = n(719672),
     N = n(691867),
     E = n(916790),
-    S = n(645973),
-    T = n(903502),
+    T = n(645973),
+    S = n(903502),
     P = n(604776),
     k = n(912072),
     w = n(272193),
@@ -35,8 +35,8 @@ var _ = n(392750),
     A = n(246992),
     L = n(496025),
     D = n(442954),
-    z = n(633001),
-    M = n(702904),
+    M = n(633001),
+    z = n(702904),
     B = n(178821),
     U = n(891401),
     F = n(958328),
@@ -57,7 +57,7 @@ var _ = n(392750),
 function ea(e) {
     let { resizableNode: t, onResize: n, onResizeEnd: r } = e,
         l = (0, d.Z)({
-            minDimension: j.h,
+            minDimension: g.h,
             resizableDomNodeRef: t,
             onElementResize: n,
             onElementResizeEnd: r,
@@ -116,7 +116,7 @@ function er(e) {
                         id: 'end_to_end_encryption',
                         name: 'E2EE',
                         group: $.v0.DEVELOPMENT,
-                        render: () => (0, a.jsx)(S.Z, {})
+                        render: () => (0, a.jsx)(T.Z, {})
                     }),
                     e.push({
                         id: 'performance',
@@ -128,13 +128,13 @@ function er(e) {
                         id: 'feedback',
                         name: 'Feedback',
                         group: $.v0.USERS,
-                        render: () => (0, a.jsx)(T.Z, {})
+                        render: () => (0, a.jsx)(S.Z, {})
                     }),
                     e.push({
                         id: 'overlay',
                         name: 'Overlay v3',
                         group: $.v0.GAMES,
-                        render: () => (0, a.jsx)(z.Z, {})
+                        render: () => (0, a.jsx)(M.Z, {})
                     }),
                     e.push({
                         id: 'slayer_sdk',
@@ -164,7 +164,7 @@ function er(e) {
                     id: 'overlays',
                     name: 'Dev Overlays',
                     group: $.v0.DEVELOPMENT,
-                    render: () => (0, a.jsx)(k.Z, { devSettingsCategory: g.zU.OVERLAYS })
+                    render: () => (0, a.jsx)(k.Z, { devSettingsCategory: j.zU.OVERLAYS })
                 }),
                 e.push({
                     id: 'messaging',
@@ -176,7 +176,7 @@ function er(e) {
                     id: 'reporting',
                     name: 'Reporting',
                     group: $.v0.EXPERIMENTS,
-                    render: () => (0, a.jsx)(k.Z, { devSettingsCategory: g.zU.REPORTING })
+                    render: () => (0, a.jsx)(k.Z, { devSettingsCategory: j.zU.REPORTING })
                 }),
                 e.push({
                     id: 'permissions',
@@ -232,7 +232,7 @@ function er(e) {
                         id: 'payments',
                         name: 'Payments',
                         group: $.v0.BILLING,
-                        render: () => (0, a.jsx)(M.Z, {})
+                        render: () => (0, a.jsx)(z.Z, {})
                     }),
                     e.push({
                         id: 'subscriptions',
@@ -280,7 +280,7 @@ function er(e) {
         } = (0, $.ZP)(
             {
                 tabs: l,
-                initialSelectedTabId: null != (t = j.Z.lastOpenTabId) ? t : void 0,
+                initialSelectedTabId: null != (t = g.Z.lastOpenTabId) ? t : void 0,
                 onChangeTab: (e) => {
                     (0, v.Qh)({ lastOpenTabId: e });
                 }
@@ -348,7 +348,7 @@ function er(e) {
 }
 function el() {
     let e = r.useRef(null),
-        t = (0, o.e7)([j.Z], () => j.Z.sidebarWidth),
+        t = (0, o.e7)([g.Z], () => g.Z.sidebarWidth),
         [n, l] = r.useState(null),
         i = r.useCallback((e) => (0, v.Qh)({ sidebarWidth: e }), []);
     return (r.useEffect(() => {
@@ -360,7 +360,7 @@ function el() {
               ref: e,
               className: et.container,
               style: {
-                  minWidth: j.h,
+                  minWidth: g.h,
                   width: n
               },
               'data-app-right-panel': !0,
@@ -378,7 +378,7 @@ function el() {
           });
 }
 function ei() {
-    return (0, o.e7)([j.Z], () => j.Z.displayTools)
+    return (0, o.e7)([g.Z], () => g.Z.displayTools)
         ? (0, a.jsx)('div', {
               className: i()(et.container, et.mobileContainerExpanded),
               children: (0, a.jsx)('div', {

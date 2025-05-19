@@ -44,9 +44,9 @@ let P = (0, i.memo)(function (e) {
         Y = Z.config.rewards[W],
         K = (null == Y ? void 0 : Y.type) === s.w.FRACTIONAL_PREMIUM,
         q = (null == Y ? void 0 : Y.type) === s.w.COLLECTIBLE,
-        Q = (null == Y ? void 0 : Y.type) === s.w.VIRTUAL_CURRENCY,
-        X = null == Y || null == (P = Y.collectibleProduct) || null == (l = P.items) ? void 0 : l[0],
-        J = (null == X ? void 0 : X.type) === o.Z.AVATAR_DECORATION ? X : null;
+        X = (null == Y ? void 0 : Y.type) === s.w.VIRTUAL_CURRENCY,
+        Q = null == Y || null == (P = Y.collectibleProduct) || null == (l = P.items) ? void 0 : l[0],
+        J = (null == Q ? void 0 : Q.type) === o.Z.AVATAR_DECORATION ? Q : null;
     (0, p.PM)(M, (e) => {
         let { height: t } = e;
         if (!q || null == t || null == U.current || null == M.current || null == G.current) return;
@@ -147,7 +147,7 @@ let P = (0, i.memo)(function (e) {
                           }),
                       K
                           ? (0, r.jsx)(I.Z, { className: T.image })
-                          : Q
+                          : X
                             ? (0, r.jsx)(v.Z, { className: T.image })
                             : et.isAnimated
                               ? (0, r.jsx)(g.Z, {

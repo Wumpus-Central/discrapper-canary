@@ -1,4 +1,4 @@
-n.d(t, { Z: () => _ });
+n.d(t, { Z: () => y });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -14,38 +14,38 @@ var r = n(255367),
     g = n(388032),
     m = n(32066),
     b = n(73433);
-function _(e) {
-    let { channel: t, connected: n, hovered: l, subtitle: _, onClick: y } = e,
-        O = (0, s.e7)([u.Z], () => u.Z.getChannelStatus(t)),
-        v = null != O && O.length > 0,
+function y(e) {
+    let { channel: t, connected: n, hovered: l, subtitle: y, onClick: O } = e,
+        v = (0, s.e7)([u.Z], () => u.Z.getChannelStatus(t)),
+        _ = null != v && v.length > 0,
         C = (0, c.ZP)(t, !0),
-        S = null != _ && _.length > 0;
+        j = null != y && y.length > 0;
     if (
         (i.useEffect(() => {
-            v &&
+            _ &&
                 p.default.track(f.rMx.VOICE_CHANNEL_TOPIC_VIEWED, {
                     channel_id: t.id,
                     guild_id: t.guild_id
                 });
-        }, [v, t.id, t.guild_id]),
+        }, [_, t.id, t.guild_id]),
         null == t.guild_id)
     )
         return null;
-    let j = o()(m.statusDiv, n && C ? m.hoverable : null);
-    return v
+    let S = o()(m.statusDiv, n && C ? m.hoverable : null);
+    return _
         ? (0, r.jsx)(a.P3F, {
-              className: j,
-              onClick: C ? y : void 0,
+              className: S,
+              onClick: C ? O : void 0,
               children: (0, r.jsx)(a.Text, {
                   variant: 'text-xs/medium',
                   className: o()(m.statusText, b.markup),
-                  children: (0, r.jsx)(d.Z, { children: h.Z.parseVoiceChannelStatus(O, !0, { channelId: t.id }) })
+                  children: (0, r.jsx)(d.Z, { children: h.Z.parseVoiceChannelStatus(v, !0, { channelId: t.id }) })
               })
           })
-        : n && C && (!S || l)
+        : n && C && (!j || l)
           ? (0, r.jsxs)(a.P3F, {
-                className: j,
-                onClick: y,
+                className: S,
+                onClick: O,
                 children: [
                     (0, r.jsx)(a.Text, {
                         variant: 'text-xs/medium',
@@ -59,7 +59,7 @@ function _(e) {
                     })
                 ]
             })
-          : S
-            ? (0, r.jsx)(d.Z, { children: _ })
+          : j
+            ? (0, r.jsx)(d.Z, { children: y })
             : null;
 }

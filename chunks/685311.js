@@ -1,31 +1,31 @@
-n.d(t, { Z: () => g }), n(35282), n(388685);
+n.d(t, { Z: () => h }), n(35282), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    s = n.n(l),
+    a = n.n(l),
     o = n(536285),
-    a = n(857458),
+    s = n(857458),
     c = n(388905),
     u = n(703656),
     d = n(388032),
-    h = n(20493);
-let g = function (e) {
+    g = n(20493);
+let h = function (e) {
     let { match: t, location: n, attemptDeepLink: l } = e,
-        [g, p] = i.useState(0);
+        [h, p] = i.useState(0);
     i.useEffect(() => {
         o.default.once('connected', () => {
             p(1);
         }),
             o.default.once('disconnected', () => {
-                (0, u.uL)((0, a.M)());
+                (0, u.uL)((0, s.M)());
             }),
             o.default.connect();
     }, []),
         i.useEffect(() => {
-            if (0 !== g) return;
-            let e = setTimeout(() => (0, u.uL)((0, a.M)()), 3000);
+            if (0 !== h) return;
+            let e = setTimeout(() => (0, u.uL)((0, s.M)()), 3000);
             return () => clearTimeout(e);
-        }, [g]);
+        }, [h]);
     let m = i.useCallback(
         async (e, t) => {
             try {
@@ -37,25 +37,25 @@ let g = function (e) {
         [l]
     );
     if ((0, u.DB)()) return null;
-    switch (g) {
+    switch (h) {
         case 1:
             return (0, r.jsxs)(c.ZP, {
                 children: [
                     (0, r.jsx)(c.Dx, {
-                        className: h.marginBottom8,
+                        className: g.marginBottom8,
                         children: d.intl.string(d.t.qllnGh)
                     }),
                     (0, r.jsx)(c.DK, { children: d.intl.string(d.t.SXCxyc) }),
                     (0, r.jsx)(c.zx, {
-                        className: h.marginTop40,
+                        className: g.marginTop40,
                         onClick: () => m(t, n),
                         children: d.intl.string(d.t.UQvCf3)
                     }),
                     (0, r.jsx)(c.zx, {
-                        className: s()(h.marginTop8, h.marginCenterHorz),
+                        className: a()(g.marginTop8, g.marginCenterHorz),
                         color: c.zx.Colors.LINK,
                         look: c.zx.Looks.LINK,
-                        onClick: () => (0, u.uL)((0, a.M)()),
+                        onClick: () => (0, u.uL)((0, s.M)()),
                         children: d.intl.string(d.t['2ixEBg'])
                     })
                 ]
@@ -69,7 +69,7 @@ let g = function (e) {
             return (0, r.jsxs)(c.ZP, {
                 children: [
                     (0, r.jsx)(c.Dx, {
-                        className: h.marginBottom8,
+                        className: g.marginBottom8,
                         children: d.intl.string(d.t.csrAMD)
                     }),
                     (0, r.jsx)(c.DK, { children: d.intl.string(d.t.ghBJz8) })

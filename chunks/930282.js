@@ -1,57 +1,57 @@
 n.d(t, {
     HR: () => h,
     L5: () => b,
-    ZP: () => _
+    ZP: () => O
 });
 var r = n(255367),
     o = n(73800),
-    a = n(120356),
-    i = n.n(a),
-    l = n(653603),
-    s = n.n(l),
+    l = n(120356),
+    i = n.n(l),
+    s = n(653603),
+    a = n.n(s),
     c = n(902704),
     u = n(453687),
     d = n(328966),
     p = n(981631),
-    g = n(388032),
-    m = n(848697),
+    m = n(388032),
+    g = n(848697),
     f = n(73433);
 function b(e, t) {
-    return e.type === p.uaV.VOICE_HANGOUT_INVITE ? '' : e.hasFlag(p.iLy.SOURCE_MESSAGE_DELETED) ? g.intl.string(g.t.JOtgS0) : t;
+    return e.type === p.uaV.VOICE_HANGOUT_INVITE ? '' : e.hasFlag(p.iLy.SOURCE_MESSAGE_DELETED) ? m.intl.string(m.t.JOtgS0) : t;
 }
 function h(e, t) {
     var n, r;
     let { message: o } = t,
-        { message: a } = e;
-    return (0, c.Z)(e, t, ['message']) && o.content === a.content && o.state === a.state && (null == (n = o.editedTimestamp) ? void 0 : n.toString()) === (null == (r = a.editedTimestamp) ? void 0 : r.toString());
+        { message: l } = e;
+    return (0, c.Z)(e, t, ['message']) && o.content === l.content && o.state === l.state && (null == (n = o.editedTimestamp) ? void 0 : n.toString()) === (null == (r = l.editedTimestamp) ? void 0 : r.toString());
 }
-let _ = o.memo(function (e) {
+let O = o.memo(function (e) {
     var t;
-    let { className: n, message: a, children: l, content: c, onUpdate: g, contentRef: h, compact: _ } = e,
-        y = a.state === p.yb.SEND_FAILED,
-        v = a.state === p.yb.SENDING,
-        O = a.isCommandType(),
-        j = null == (t = a.editedTimestamp) ? void 0 : t.toString(),
+    let { className: n, message: l, children: s, content: c, onUpdate: m, contentRef: h, compact: O } = e,
+        y = l.state === p.yb.SEND_FAILED,
+        j = l.state === p.yb.SENDING,
+        v = l.isCommandType(),
+        P = null == (t = l.editedTimestamp) ? void 0 : t.toString(),
         x = o.useRef(!1);
     return (
         o.useLayoutEffect(() => {
-            x.current ? null != g && g() : (x.current = !0);
-        }, [g, a.content, c, j, l]),
+            x.current ? null != m && m() : (x.current = !0);
+        }, [m, l.content, c, P, s]),
         (0, r.jsxs)('div', {
-            id: (0, u.ut)(a),
+            id: (0, u.ut)(l),
             ref: h,
             className: i()(n, f.markup, {
-                [m.messageContent]: !0,
-                [m.isSending]: v && !O,
-                [m.markupRtl]: 'rtl' === s()(a.content),
-                [m.isFailed]: y,
-                [m.isUnsupported]: a.isUnsupported
+                [g.messageContent]: !0,
+                [g.isSending]: j && !v,
+                [g.markupRtl]: 'rtl' === a()(l.content),
+                [g.isFailed]: y,
+                [g.isUnsupported]: l.isUnsupported
             }),
             children: [
-                null != l ? l : b(a, c),
+                null != s ? s : b(l, c),
                 (0, r.jsx)(d.Z, {
-                    message: a,
-                    compact: _,
+                    message: l,
+                    compact: O,
                     location: d.H.WITH_CONTENT
                 })
             ]

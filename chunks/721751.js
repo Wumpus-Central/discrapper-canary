@@ -1,23 +1,23 @@
 let r;
-n.d(t, { Z: () => j }), n(388685), n(35282);
+n.d(t, { Z: () => I }), n(388685), n(35282);
 var i = n(255367),
     l = n(73800),
-    s = n(873546),
+    a = n(873546),
     o = n(442837),
-    a = n(481060),
+    s = n(481060),
     c = n(980591),
     u = n(605782),
     d = n(133853),
-    h = n(568154),
-    g = n(353926),
+    g = n(568154),
+    h = n(353926),
     p = n(703656),
     m = n(981631),
     f = n(963865);
 let _ = n(575703),
     x = n(2984),
-    E = [m.Z5c.LOGIN, m.Z5c.LOGIN_HANDOFF, m.Z5c.REGISTER, m.Z5c.INVITE(''), m.Z5c.GIFT_CODE(''), m.Z5c.GUILD_TEMPLATE_LOGIN(''), m.Z5c.GUILD_TEMPLATE(''), m.Z5c.DISABLE_EMAIL_NOTIFICATIONS, m.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, m.Z5c.BILLING_PREMIUM_SUBSCRIBE, m.Z5c.BILLING_PAYMENT_SOURCES_CREATE, m.Z5c.BILLING_PAYMENTS, m.Z5c.BILLING_PREMIUM_SWITCH_PLAN, m.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, m.Z5c.VERIFY, m.Z5c.VERIFY_HUB_EMAIL, m.Z5c.REJECT_IP, m.Z5c.REJECT_MFA, m.Z5c.AUTHORIZE_IP, m.Z5c.AUTHORIZE_PAYMENT, m.Z5c.RESET, m.Z5c.HANDOFF, m.Z5c.REPORT, m.Z5c.REPORT_SECOND_LOOK, m.Z5c.ACCOUNT_REVERT('')];
-function b(e) {
-    return E.some((t) => e.startsWith(t));
+    b = [m.Z5c.LOGIN, m.Z5c.LOGIN_HANDOFF, m.Z5c.REGISTER, m.Z5c.INVITE(''), m.Z5c.GIFT_CODE(''), m.Z5c.GUILD_TEMPLATE_LOGIN(''), m.Z5c.GUILD_TEMPLATE(''), m.Z5c.DISABLE_EMAIL_NOTIFICATIONS, m.Z5c.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS, m.Z5c.BILLING_PREMIUM_SUBSCRIBE, m.Z5c.BILLING_PAYMENT_SOURCES_CREATE, m.Z5c.BILLING_PAYMENTS, m.Z5c.BILLING_PREMIUM_SWITCH_PLAN, m.Z5c.BILLING_GUILD_SUBSCRIPTIONS_PURCHASE, m.Z5c.VERIFY, m.Z5c.VERIFY_HUB_EMAIL, m.Z5c.REJECT_IP, m.Z5c.REJECT_MFA, m.Z5c.AUTHORIZE_IP, m.Z5c.AUTHORIZE_PAYMENT, m.Z5c.RESET, m.Z5c.HANDOFF, m.Z5c.REPORT, m.Z5c.REPORT_SECOND_LOOK, m.Z5c.ACCOUNT_REVERT('')];
+function E(e) {
+    return b.some((t) => e.startsWith(t));
 }
 let v = (e) => ((r = e), e);
 function O(e) {
@@ -26,9 +26,9 @@ function O(e) {
         (function () {
             var e;
             let [t, n] = l.useState(!1),
-                [i, s] = l.useState(!0),
-                a = (0, o.e7)([g.Z], () => g.Z.hasLoadedExperiments);
-            return ((0, c.Z)(() => {}, 300), void 0 !== r) ? r : !i && a ? (t || n(!0), v(((e = 0), 'default'))) : i ? v('default') : 'loading';
+                [i, a] = l.useState(!0),
+                s = (0, o.e7)([h.Z], () => h.Z.hasLoadedExperiments);
+            return ((0, c.Z)(() => {}, 300), void 0 !== r) ? r : !i && s ? (t || n(!0), v(((e = 0), 'default'))) : i ? v('default') : 'loading';
         })()
     ) {
         case 'default':
@@ -52,7 +52,7 @@ function O(e) {
             return null;
     }
 }
-class I extends l.Component {
+class S extends l.Component {
     componentDidMount() {
         window.addEventListener('resize', this.handleResize);
     }
@@ -60,14 +60,14 @@ class I extends l.Component {
         window.removeEventListener('resize', this.handleResize);
     }
     mobileTransitionTo(e, t) {
-        if (b(e)) (0, p.uL)(e, t);
+        if (E(e)) (0, p.uL)(e, t);
         else {
             let n = null != t && null != t.search ? t.search : null;
             window.location = null == n ? e : ''.concat(e, '?').concat(n);
         }
     }
     mobileReplaceWith(e) {
-        b(e) ? (0, p.dL)(e) : (window.location = e);
+        E(e) ? (0, p.dL)(e) : (window.location = e);
     }
     renderDefault() {
         let { splash: e } = this.props,
@@ -82,7 +82,7 @@ class I extends l.Component {
             });
         return (0, i.jsx)('div', {
             className: f.characterBackground,
-            children: (0, i.jsx)(a.y5t, {
+            children: (0, i.jsx)(s.y5t, {
                 forceLevel: 1,
                 children:
                     null != e
@@ -92,7 +92,7 @@ class I extends l.Component {
                                       show: !0,
                                       className: f.logo
                                   }),
-                                  (0, i.jsx)(h.h, {
+                                  (0, i.jsx)(g.h, {
                                       splash: e,
                                       children: t
                                   })
@@ -116,7 +116,7 @@ class I extends l.Component {
     render() {
         let { isMobileWidth: e } = this.state,
             t = navigator.userAgent.includes('GameLauncher');
-        return e || s.tq || s.Em || t ? this.renderMobile() : this.renderDefault();
+        return e || a.tq || a.Em || t ? this.renderMobile() : this.renderDefault();
     }
     constructor(e) {
         var t, n;
@@ -136,4 +136,4 @@ class I extends l.Component {
             (this.state = { isMobileWidth: window.innerWidth <= 485 });
     }
 }
-let j = I;
+let I = S;

@@ -1,8 +1,8 @@
 n.d(t, {
-    UV: () => E,
+    UV: () => _,
     _s: () => u,
     kW: () => d,
-    km: () => c
+    km: () => s
 });
 var r = n(255367);
 n(73800);
@@ -34,7 +34,7 @@ function a(e) {
     }
     return e;
 }
-function s(e, t) {
+function c(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -52,7 +52,7 @@ function s(e, t) {
         e
     );
 }
-function c(e) {
+function s(e) {
     return {
         [l.jj.BLOCK_MESSAGE]: (e, t) =>
             new Promise((e) => {
@@ -62,7 +62,7 @@ function c(e) {
                         var l;
                         return (0, r.jsx)(
                             i,
-                            s(
+                            c(
                                 a(
                                     {
                                         initialCustomMessage: null != (l = t.metadata.customMessage) ? l : '',
@@ -79,14 +79,14 @@ function c(e) {
                 });
             }),
         [l.jj.FLAG_TO_CHANNEL]: (t, o) =>
-            new Promise((c) => {
+            new Promise((s) => {
                 (0, i.ZDy)(async () => {
                     let { default: i } = await n.e('74543').then(n.bind(n, 643611)),
                         u = t.actions.find((e) => e.type === l.jj.FLAG_TO_CHANNEL);
                     return (n) =>
                         (0, r.jsx)(
                             i,
-                            s(
+                            c(
                                 a(
                                     {
                                         action: o,
@@ -94,12 +94,12 @@ function c(e) {
                                         triggerType: t.triggerType,
                                         guildId: e,
                                         onEditChannel: (e) => {
-                                            (o.metadata.channelId = e), t.exemptChannels.add(e), c(o), n.onClose();
+                                            (o.metadata.channelId = e), t.exemptChannels.add(e), s(o), n.onClose();
                                         }
                                     },
                                     n
                                 ),
-                                { onClose: () => (c(null), n.onClose()) }
+                                { onClose: () => (s(null), n.onClose()) }
                             )
                         );
                 });
@@ -108,15 +108,15 @@ function c(e) {
             new Promise((o) => {
                 (0, i.ZDy)(async () => {
                     let { default: i } = await n.e('78273').then(n.bind(n, 41767)),
-                        c = e.actions.find((e) => e.type === l.jj.USER_COMMUNICATION_DISABLED);
+                        s = e.actions.find((e) => e.type === l.jj.USER_COMMUNICATION_DISABLED);
                     return (n) =>
                         (0, r.jsx)(
                             i,
-                            s(
+                            c(
                                 a(
                                     {
                                         action: t,
-                                        isEdit: null != c,
+                                        isEdit: null != s,
                                         triggerType: e.triggerType,
                                         onUpdateDuration: (e) => {
                                             null != e && (t.metadata.durationSeconds = e), o(t), n.onClose();
@@ -137,7 +137,7 @@ function u(e, t, l, o) {
         return (n) =>
             (0, r.jsx)(
                 i,
-                s(a({}, n), {
+                c(a({}, n), {
                     automodDecision: {
                         messageId: e,
                         messageContent: t,
@@ -154,18 +154,18 @@ function d(e, t) {
         return (n) =>
             (0, r.jsx)(
                 i,
-                s(a({}, n), {
+                c(a({}, n), {
                     messageId: e,
                     guildId: t
                 })
             );
     });
 }
-function E(e) {
+function _(e) {
     (0, i.h7j)((t) =>
         (0, r.jsx)(
             i.ConfirmModal,
-            s(
+            c(
                 a(
                     {
                         header: o.intl.string(o.t.wLGrjI),

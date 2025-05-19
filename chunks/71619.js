@@ -1,17 +1,17 @@
 n.d(t, {
-    AB: () => l,
+    AB: () => s,
     ZP: () => u,
     s5: () => d
 });
 var r = n(442837),
     o = n(271383),
-    a = n(594174),
+    l = n(594174),
     i = n(69882);
-function l(e) {
-    let t = (0, r.e7)([a.default], () => a.default.getCurrentUser());
+function s(e) {
+    let t = (0, r.e7)([l.default], () => l.default.getCurrentUser());
     return u(null == t ? void 0 : t.id, e);
 }
-function s(e, t, n) {
+function a(e, t, n) {
     return null != t && null != e ? n.getMember(t, e) : null;
 }
 function c(e) {
@@ -19,8 +19,8 @@ function c(e) {
     return [null != (t = null == e ? void 0 : e.communicationDisabledUntil) ? t : null, (0, i.b)(e)];
 }
 function u(e, t) {
-    return c((0, r.e7)([o.ZP], () => s(e, t, o.ZP), [t, e]));
+    return c((0, r.e7)([o.ZP], () => a(e, t, o.ZP), [t, e]));
 }
 function d(e, t) {
-    return c(s(e, t, o.ZP));
+    return c(a(e, t, o.ZP));
 }

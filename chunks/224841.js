@@ -1,18 +1,18 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => h });
 var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(388905),
-    s = n(703656),
+    a = n(703656),
     o = n(671533),
-    a = n(63063),
+    s = n(63063),
     c = n(981631),
     u = n(388032),
     d = n(963650);
-let h = () => (0, s.uL)(c.Z5c.LOGIN, { source: 'age_gate_underage' }),
-    g = (e) => {
-        let { authBoxClassName: t, underageMessage: s, inUnclaimedFlowExperiment: g } = e;
-        return g
+let g = () => (0, a.uL)(c.Z5c.LOGIN, { source: 'age_gate_underage' }),
+    h = (e) => {
+        let { authBoxClassName: t, underageMessage: a, inUnclaimedFlowExperiment: h } = e;
+        return h
             ? (0, r.jsx)(l.ZP, {
                   children: (0, r.jsxs)('div', {
                       className: d.contentContainer,
@@ -23,12 +23,12 @@ let h = () => (0, s.uL)(c.Z5c.LOGIN, { source: 'age_gate_underage' }),
                           }),
                           (0, r.jsx)(l.DK, {
                               className: d.subtitle,
-                              children: u.intl.format(u.t.KQgoxM, { underageMessage: null != s ? s : u.intl.string(u.t.WqEH4O) })
+                              children: u.intl.format(u.t.KQgoxM, { underageMessage: null != a ? a : u.intl.string(u.t.WqEH4O) })
                           }),
                           (0, r.jsxs)(i.zxk, {
                               className: d.button,
                               innerClassName: d.buttonWithIcon,
-                              onClick: () => window.open(a.Z.getArticleURL(c.BhN.AGE_GATE), '_blank'),
+                              onClick: () => window.open(s.Z.getArticleURL(c.BhN.AGE_GATE), '_blank'),
                               children: [
                                   (0, r.jsx)('div', { children: u.intl.string(u.t.hvVgAQ) }),
                                   (0, r.jsx)(o.Z, {
@@ -57,13 +57,13 @@ let h = () => (0, s.uL)(c.Z5c.LOGIN, { source: 'age_gate_underage' }),
                       (0, r.jsx)(l.DK, {
                           className: d.subtitle,
                           children: u.intl.format(u.t.b0QzXV, {
-                              underageMessage: null != s ? s : u.intl.string(u.t.WqEH4O),
-                              helpURL: a.Z.getArticleURL(c.BhN.AGE_GATE)
+                              underageMessage: null != a ? a : u.intl.string(u.t.WqEH4O),
+                              helpURL: s.Z.getArticleURL(c.BhN.AGE_GATE)
                           })
                       }),
                       (0, r.jsx)(i.zxk, {
                           fullWidth: !0,
-                          onClick: h,
+                          onClick: g,
                           children: u.intl.string(u.t.szzQ6O)
                       })
                   ]

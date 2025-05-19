@@ -1,7 +1,7 @@
 n.r(t),
     n.d(t, {
-        default: () => F,
-        useAppSidebarState: () => V
+        default: () => z,
+        useAppSidebarState: () => H
     });
 var r = n(255367),
     i = n(73800),
@@ -22,25 +22,26 @@ var r = n(255367),
     E = n(300986),
     O = n(314451),
     y = n(35583),
-    I = n(522474),
-    v = n(141321),
-    C = n(210887),
-    S = n(592125),
-    N = n(430824),
-    T = n(944486),
-    P = n(914010),
-    j = n(451478),
-    A = n(768581),
-    Z = n(998502),
-    x = n(228488),
-    L = n(950796),
-    w = n(981631),
-    R = n(918559),
-    D = n(741764),
-    k = n(388032),
-    M = n(332495),
-    U = n(103609);
-function G(e) {
+    I = n(821020),
+    v = n(522474),
+    C = n(141321),
+    S = n(210887),
+    N = n(592125),
+    T = n(430824),
+    P = n(944486),
+    j = n(914010),
+    A = n(451478),
+    Z = n(768581),
+    x = n(998502),
+    L = n(228488),
+    w = n(950796),
+    R = n(981631),
+    D = n(918559),
+    k = n(741764),
+    M = n(388032),
+    U = n(332495),
+    G = n(103609);
+function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -65,7 +66,7 @@ function G(e) {
     }
     return e;
 }
-function B(e, t) {
+function V(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -83,14 +84,14 @@ function B(e, t) {
         e
     );
 }
-let V = (0, a.U)(() => ({ isOpen: !0 }));
-function H() {
+let H = (0, a.U)(() => ({ isOpen: !0 }));
+function F() {
     let e,
         t = (0, l.TH)(),
-        n = (0, s.e7)([T.Z], () => T.Z.getChannelId()),
-        i = (0, s.e7)([P.Z], () => P.Z.getGuildId()),
-        a = (0, s.e7)([S.Z], () => S.Z.getChannel(n), [n]),
-        u = N.Z.getGuild(i),
+        n = (0, s.e7)([P.Z], () => P.Z.getChannelId()),
+        i = (0, s.e7)([j.Z], () => j.Z.getGuildId()),
+        a = (0, s.e7)([N.Z], () => N.Z.getChannel(n), [n]),
+        u = T.Z.getGuild(null != i ? i : null == a ? void 0 : a.guild_id),
         h = (0, m.Z)(),
         {
             application: f,
@@ -101,12 +102,12 @@ function H() {
             return {
                 application: p.Z.getApplication(null == e ? void 0 : e.applicationId),
                 isContextlessActivity: (null == e ? void 0 : e.location.kind) === o.E.CONTEXTLESS,
-                isActivityPanelMode: d.ZP.getActivityPanelMode() === R.Ez.PANEL
+                isActivityPanelMode: d.ZP.getActivityPanelMode() === D.Ez.PANEL
             };
         }),
         E =
             null != f
-                ? A.ZP.getApplicationIconURL({
+                ? Z.ZP.getApplicationIconURL({
                       id: f.id,
                       icon: f.icon,
                       bot: f.bot
@@ -117,8 +118,8 @@ function H() {
         null != f && g && b
             ? ((e = f.name),
               (O = (0, r.jsx)('img', {
-                  className: U.appIcon,
-                  alt: k.intl.string(k.t.X4IxWF),
+                  className: G.appIcon,
+                  alt: M.intl.string(M.t.X4IxWF),
                   src: E,
                   'aria-hidden': !0,
                   draggable: !1
@@ -130,24 +131,24 @@ function H() {
                           guild: u,
                           size: _.Z.Sizes.MINI,
                           active: !0,
-                          className: U.guildIcon
+                          className: G.guildIcon
                       })),
                 (e = u.name))
               : null != a && (a.isDM() || a.isGroupDM())
-                ? ((e = k.intl.string(k.t.YUU0RE)), (O = (0, r.jsx)(c.gw7, { size: 'xs' })))
-                : t.pathname.startsWith(w.Z5c.GLOBAL_DISCOVERY)
-                  ? ((e = k.intl.string(k.t['4nEZLi'])), (O = (0, r.jsx)(c.Jmo, { size: 'xs' })))
-                  : t.pathname.startsWith(w.Z5c.NITRO_HOME)
-                    ? ((e = k.intl.string(k.t.Ipxkoq)), (O = (0, r.jsx)(c.SrA, { size: 'xs' })))
-                    : t.pathname.startsWith(w.Z5c.COLLECTIBLES_SHOP)
-                      ? ((e = k.intl.string(k.t.pWG4zc)), (O = (0, r.jsx)(c.EOn, { size: 'xs' })))
-                      : t.pathname.startsWith(w.Z5c.FRIENDS)
-                        ? ((e = k.intl.string(k.t.TdEu5e)), (O = (0, r.jsx)(c.iFz, { size: 'xs' })))
-                        : t.pathname.startsWith(w.Z5c.FAMILY_CENTER) && ((e = k.intl.string(M.default.RZqaJi)), (O = (0, r.jsx)(c.BFJ, { size: 'xs' }))),
+                ? ((e = M.intl.string(M.t.YUU0RE)), (O = (0, r.jsx)(c.gw7, { size: 'xs' })))
+                : t.pathname.startsWith(R.Z5c.GLOBAL_DISCOVERY)
+                  ? ((e = M.intl.string(M.t['4nEZLi'])), (O = (0, r.jsx)(c.Jmo, { size: 'xs' })))
+                  : t.pathname.startsWith(R.Z5c.NITRO_HOME)
+                    ? ((e = M.intl.string(M.t.Ipxkoq)), (O = (0, r.jsx)(c.SrA, { size: 'xs' })))
+                    : t.pathname.startsWith(R.Z5c.COLLECTIBLES_SHOP)
+                      ? ((e = M.intl.string(M.t.pWG4zc)), (O = (0, r.jsx)(c.EOn, { size: 'xs' })))
+                      : t.pathname.startsWith(R.Z5c.FRIENDS)
+                        ? ((e = M.intl.string(M.t.TdEu5e)), (O = (0, r.jsx)(c.iFz, { size: 'xs' })))
+                        : t.pathname.startsWith(R.Z5c.FAMILY_CENTER) && ((e = M.intl.string(U.default.RZqaJi)), (O = (0, r.jsx)(c.BFJ, { size: 'xs' }))),
         null != e &&
             '' !== e &&
             (0, r.jsxs)('div', {
-                className: U.title,
+                className: G.title,
                 children: [
                     O,
                     (0, r.jsx)(c.Text, {
@@ -159,25 +160,27 @@ function H() {
             })
     );
 }
-let F = i.memo(function () {
+let z = i.memo(function () {
     i.useLayoutEffect(() => {
-        Z.ZP.setMinimumSize(D.J, D.N);
+        x.ZP.setMinimumSize(k.J, k.N);
     }, []);
     let e = (0, g.TH)('AppTitleBar'),
-        t = !V((e) => e.isOpen) && e,
+        t = !H((e) => e.isOpen) && e,
         { hasBugReporterAccess: n } = h.Z.useExperiment({ location: 'HeaderBar' }, { autoTrackExposure: !1 });
     i.useLayoutEffect(() => {
-        Z.ZP.setMinimumSize(D.J, D.N);
+        x.ZP.setMinimumSize(k.J, k.N);
     }, []);
-    let l = (0, s.e7)([C.Z], () => (C.Z.darkSidebar ? w.BRd.DARK : void 0));
-    return (0, s.e7)([j.Z, I.Z], () => (0, x.rB)())
+    let l = (0, s.e7)([S.Z], () => (S.Z.darkSidebar ? R.BRd.DARK : void 0)),
+        a = (0, s.e7)([A.Z, v.Z], () => (0, L.rB)()),
+        { notificationCenterVariant: o } = I.L.useExperiment({ location: 'AppTitleBar' });
+    return a
         ? null
         : (0, r.jsx)(c.Wdt, {
               children: (e) =>
                   (0, r.jsx)(c.f6W, {
                       theme: l,
                       children: (i) =>
-                          (0, r.jsx)(L.T, {
+                          (0, r.jsx)(w.T, {
                               className: i,
                               leading:
                                   t &&
@@ -185,18 +188,18 @@ let F = i.memo(function () {
                                       children: [
                                           (0, r.jsx)(
                                               c.P3F,
-                                              B(G({}, e), {
-                                                  className: U.button,
+                                              V(B({}, e), {
+                                                  className: G.button,
                                                   onClick: () => {
-                                                      V.setState({ isOpen: !V.getState().isOpen });
+                                                      H.setState({ isOpen: !H.getState().isOpen });
                                                   },
-                                                  children: (0, r.jsx)(z, {})
+                                                  children: (0, r.jsx)(W, {})
                                               })
                                           ),
                                           (0, r.jsx)(c.P3F, {
-                                              className: U.button,
+                                              className: G.button,
                                               onClick: () => {
-                                                  u.Z.open(w.oAB.ACCOUNT);
+                                                  u.Z.open(R.oAB.ACCOUNT);
                                               },
                                               children: (0, r.jsx)(c.ewm, {
                                                   size: 'xs',
@@ -205,27 +208,27 @@ let F = i.memo(function () {
                                           })
                                       ]
                                   }),
-                              title: (0, r.jsx)(H, {}),
+                              title: (0, r.jsx)(F, {}),
                               trailing: (0, r.jsxs)(r.Fragment, {
                                   children: [
-                                      (0, r.jsx)(b.Z, { className: U.button }),
+                                      (0, r.jsx)(b.Z, { className: G.button }),
                                       (0, r.jsx)(f.Z, {
                                           canShowReminder: !0,
-                                          className: U.button
+                                          className: G.button
                                       }),
-                                      (0, r.jsx)(v.Z, B(G({}, t ? {} : e), { className: U.button })),
-                                      n ? (0, r.jsx)(O.Z, { className: U.button }) : (0, r.jsx)(E.Z, { className: U.button }),
-                                      (0, r.jsx)(y.Z, { className: U.button })
+                                      null === o && (0, r.jsx)(C.Z, V(B({}, t ? {} : e), { className: G.button })),
+                                      n ? (0, r.jsx)(O.Z, { className: G.button }) : (0, r.jsx)(E.Z, { className: G.button }),
+                                      (0, r.jsx)(y.Z, { className: G.button })
                                   ]
                               })
                           })
                   })
           });
 });
-function z() {
+function W() {
     return (0, r.jsxs)('svg', {
         xmlns: 'http://www.w3.org/2000/svg',
-        className: U.icon,
+        className: G.icon,
         width: '24',
         height: '24',
         viewBox: '0 0 24 24',

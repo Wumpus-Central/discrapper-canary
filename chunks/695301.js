@@ -15,28 +15,28 @@ var r = n(255367),
     m = n(240848);
 let b = i.memo(function (e) {
     var t, n;
-    let { guildNode: b, lowerBadge: _ } = e,
-        y = b.id,
-        O = (0, l.e7)([h.Z], () => h.Z.getGuild(y)),
-        v = (0, s.E)(O),
+    let { guildNode: b, lowerBadge: y } = e,
+        O = b.id,
+        v = (0, l.e7)([h.Z], () => h.Z.getGuild(O)),
+        _ = (0, s.E)(v),
         C = (0, l.e7)([p.Z], () => p.Z.isFocused()),
-        S = (0, l.e7)([u.Z], () => u.Z.isUnavailable(y)),
-        j = (0, c.Z)((e) => e.guildId),
-        E = (0, f.Z)(y),
+        j = (0, l.e7)([u.Z], () => u.Z.isUnavailable(O)),
+        S = (0, c.Z)((e) => e.guildId),
+        E = (0, f.Z)(O),
         {
             badge: x,
             unread: P,
             isMentionLowImportance: I
         } = (0, l.cj)([d.default], () => ({
-            badge: d.default.getMentionCount(y),
-            isMentionLowImportance: d.default.getIsMentionLowImportance(y),
-            unread: d.default.hasUnread(y)
+            badge: d.default.getMentionCount(O),
+            isMentionLowImportance: d.default.getIsMentionLowImportance(O),
+            unread: d.default.hasUnread(O)
         })),
-        w = (0, a.Ij)(O) && 0 === x,
+        w = (0, a.Ij)(v) && 0 === x,
         N = i.useMemo(
             () =>
-                null != _
-                    ? _
+                null != y
+                    ? y
                     : w
                       ? (0, r.jsx)('div', {
                             className: m.pauseBackground,
@@ -49,7 +49,7 @@ let b = i.memo(function (e) {
                             })
                         })
                       : null,
-            [_, w]
+            [y, w]
         );
     return (0, r.jsx)(
         g.Z,
@@ -80,16 +80,16 @@ let b = i.memo(function (e) {
         })({}, e)),
         (n = n =
             {
-                guild: O,
-                unavailable: S,
+                guild: v,
+                unavailable: j,
                 animatable: C,
-                selected: j === y,
+                selected: S === O,
                 badge: x,
                 isMentionLowImportance: I,
                 lowerBadge: N,
                 unread: P,
                 mediaState: E,
-                guildJoinRequestStatus: v
+                guildJoinRequestStatus: _
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

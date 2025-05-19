@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => _,
+    ZP: () => y,
     dt: () => m,
     eo: () => b
 }),
@@ -48,43 +48,43 @@ function b(e, t, n) {
         .concat(r ? '-divider' : '')
         .concat(i ? '-voice-summary' : '');
 }
-let _ = i.memo(function (e) {
-    let { sectionIndex: t, guildChannels: n, guildChannelsVersion: h, voiceStates: p, guildId: m, selectedChannelId: b, selectedVoiceChannelId: _, optInEnabled: y } = e,
-        { hasDivider: O, canHaveVoiceSummary: v } = i.useMemo(() => (0, d.ie)(n, y, t), [n, y, t, h]),
+let y = i.memo(function (e) {
+    let { sectionIndex: t, guildChannels: n, guildChannelsVersion: h, voiceStates: p, guildId: m, selectedChannelId: b, selectedVoiceChannelId: y, optInEnabled: O } = e,
+        { hasDivider: v, canHaveVoiceSummary: _ } = i.useMemo(() => (0, d.ie)(n, O, t), [n, O, t, h]),
         C = i.useMemo(() => (t === u.wZ ? null : n.getCategoryFromSection(t)), [n, t, h]),
-        S = (0, s.DM)(m),
-        j = (0, l.Wu)(
+        j = (0, s.DM)(m),
+        S = (0, l.Wu)(
             [a.ZP],
             () => {
-                if (null == C || !C.isCollapsed || !v) return [];
+                if (null == C || !C.isCollapsed || !_) return [];
                 let e = C.getChannelRecords(),
                     t = [];
                 for (let n of e) {
                     if (!n.isGuildVocal()) continue;
                     let e = a.ZP.isChannelOrParentOptedIn(m, n.id);
-                    (!S || e) && t.push(n);
+                    (!j || e) && t.push(n);
                 }
                 return t;
             },
-            [C, v, m, S]
+            [C, _, m, j]
         ),
         E = i.useMemo(
             () =>
                 (0, c.c4)({
-                    channels: j,
+                    channels: S,
                     selectedChannelId: b,
-                    selectedVoiceChannelId: _,
+                    selectedVoiceChannelId: y,
                     voiceStates: p
                 }),
-            [j, b, _, p]
+            [S, b, y, p]
         );
     if (t === n.voiceChannelsSectionNumber)
         return (0, r.jsx)(g, {
             guildChannels: n,
             guildChannelsVersion: h
         });
-    let x = O ? (0, r.jsx)('div', { className: f.sectionDivider }) : null;
-    return v && 0 !== E.length
+    let x = v ? (0, r.jsx)('div', { className: f.sectionDivider }) : null;
+    return _ && 0 !== E.length
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)('div', {

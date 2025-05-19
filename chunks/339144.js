@@ -17,13 +17,13 @@ var r = n(255367),
     g = n(668519),
     m = n(562224),
     b = n(803647),
-    _ = n(131704),
-    y = n(944486),
-    O = n(626135),
-    v = n(870569),
+    y = n(131704),
+    O = n(944486),
+    v = n(626135),
+    _ = n(870569),
     C = n(981631),
-    S = n(388032),
-    j = n(390648);
+    j = n(388032),
+    S = n(390648);
 function E(e, t, n) {
     return null != e && (null != n ? n.applicationId === e.id : null != t && t.application_id === e.id && t.type === C.IIU.PLAYING && (0, u.Z)(t, C.xjy.JOIN));
 }
@@ -42,7 +42,7 @@ let x = i.memo(function (e) {
         V = i.useCallback(() => {
             o()(null != D, 'Received null activity'),
                 (0, p.v)(G, p.d.INVITE),
-                O.default.track(C.rMx.OPEN_MODAL, {
+                v.default.track(C.rMx.OPEN_MODAL, {
                     type: 'Send Join Invite',
                     application_id: D.application_id,
                     location: k.location
@@ -63,10 +63,10 @@ let x = i.memo(function (e) {
         F = i.useCallback(() => {
             (0, b.Z)(P);
         }, [P]),
-        W = i.useCallback(() => {
-            let e = null != Z && (0, _.vd)(Z.type) ? Z : null,
+        z = i.useCallback(() => {
+            let e = null != Z && (0, y.vd)(Z.type) ? Z : null,
                 t = null != e ? e.getGuildId() : w;
-            if (M && null != A && null != y.Z.getVoiceChannelId()) {
+            if (M && null != A && null != O.Z.getVoiceChannelId()) {
                 (0, g.s)('Activity Panel'), (0, m.Z)(A.pid);
                 return;
             }
@@ -104,7 +104,7 @@ let x = i.memo(function (e) {
                         (l = l =
                             {
                                 sourcePID: null == A ? void 0 : A.pid,
-                                selectSource: !!U && null != y.Z.getVoiceChannelId(),
+                                selectSource: !!U && null != O.Z.getVoiceChannelId(),
                                 guildId: t,
                                 analyticsLocation: C.Sbl.ACTIVITY_PANEL
                             }),
@@ -125,7 +125,7 @@ let x = i.memo(function (e) {
                 };
             });
         }, [Z, w, A, U, M]),
-        z =
+        W =
             (null != A || null == R || (0, c.R)()) && (N || I)
                 ? (N
                       ? ((t = !1),
@@ -133,18 +133,18 @@ let x = i.memo(function (e) {
                             F(), (0, p.v)(G, p.d.STREAM, !1);
                         }),
                         (u = s.g5r),
-                        (x = S.intl.string(S.t.S5anIS)))
+                        (x = j.intl.string(j.t.S5anIS)))
                       : T
                         ? ((t = !1),
                           (l = () => {
-                              W(), (0, p.v)(G, p.d.STREAM, !0);
+                              z(), (0, p.v)(G, p.d.STREAM, !0);
                           }),
                           (u = s.hGI),
-                          (x = null != A ? S.intl.formatToPlainString(S.t.AB5gT0, { game: A.name }) : S.intl.string(S.t.FeUKeH)))
-                        : ((t = !0), (l = null), (u = s.hGI), (x = null != Z && (0, _.vd)(Z.type) ? S.intl.string(S.t.uQn9Bw) : null != w ? S.intl.string(S.t.fBXEoK) : S.intl.string(S.t.n3feND))),
+                          (x = null != A ? j.intl.formatToPlainString(j.t.AB5gT0, { game: A.name }) : j.intl.string(j.t.FeUKeH)))
+                        : ((t = !0), (l = null), (u = s.hGI), (x = null != Z && (0, y.vd)(Z.type) ? j.intl.string(j.t.uQn9Bw) : null != w ? j.intl.string(j.t.fBXEoK) : j.intl.string(j.t.n3feND))),
                   (0, r.jsx)('div', {
-                      className: j.panelButtonContainer,
-                      children: (0, r.jsx)(v.Z, {
+                      className: S.panelButtonContainer,
+                      children: (0, r.jsx)(_.Z, {
                           tooltipText: x,
                           disabled: t,
                           onClick: l,
@@ -154,8 +154,8 @@ let x = i.memo(function (e) {
                 : null,
         Y =
             B && null == R
-                ? (0, r.jsx)(v.Z, {
-                      tooltipText: S.intl.string(S.t['hC/Ze3']),
+                ? (0, r.jsx)(_.Z, {
+                      tooltipText: j.intl.string(j.t['hC/Ze3']),
                       onClick: V,
                       icon: s.ejJ
                   })
@@ -163,16 +163,16 @@ let x = i.memo(function (e) {
         K =
             null == R
                 ? null
-                : (0, r.jsx)(v.Z, {
-                      tooltipText: S.intl.string(S.t['R/FK4O']),
+                : (0, r.jsx)(_.Z, {
+                      tooltipText: j.intl.string(j.t['R/FK4O']),
                       onClick: H(R.applicationId, R.location),
                       icon: s.PBZ
                   }),
         q = null == P ? null : (0, r.jsx)(f.Z, {});
-    return null == z && null == Y && null == K
+    return null == W && null == Y && null == K
         ? null
         : (0, r.jsxs)('div', {
-              className: j.actions,
-              children: [z, Y, null != K ? K : q]
+              className: S.actions,
+              children: [W, Y, null != K ? K : q]
           });
 });

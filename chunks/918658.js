@@ -1,175 +1,175 @@
 n.d(t, {
     Z: () => M,
-    d: () => L
+    d: () => v
 });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
     o = n.n(l),
     a = n(442837),
-    s = n(692547),
-    c = n(481060),
+    c = n(692547),
+    s = n(481060),
     u = n(549817),
     d = n(819553),
-    E = n(17181),
-    _ = n(303737),
+    _ = n(17181),
+    E = n(303737),
     I = n(434404),
     O = n(703656),
     T = n(944486),
-    N = n(914010),
-    S = n(671533),
-    p = n(259580),
-    R = n(358085),
+    p = n(914010),
+    N = n(671533),
+    S = n(259580),
+    f = n(358085),
     A = n(962086),
-    P = n(160404),
-    f = n(889695),
+    R = n(160404),
+    m = n(889695),
     C = n(981631),
-    D = n(176505),
-    g = n(302463),
+    g = n(176505),
+    P = n(302463),
     y = n(293810),
-    m = n(388032),
-    h = n(800515);
-function b(e) {
+    D = n(388032),
+    b = n(800515);
+function h(e) {
     let { className: t, onClick: n, children: i, buttonRef: l } = e;
-    return (0, r.jsx)(c.zxk, {
+    return (0, r.jsx)(s.zxk, {
         buttonRef: l,
-        className: o()(h.button, t),
-        innerClassName: h.buttonInner,
-        look: c.zxk.Looks.OUTLINED,
-        color: c.zxk.Colors.WHITE,
-        size: c.zxk.Sizes.NONE,
+        className: o()(b.button, t),
+        innerClassName: b.buttonInner,
+        look: s.zxk.Looks.OUTLINED,
+        color: s.zxk.Colors.WHITE,
+        size: s.zxk.Sizes.NONE,
         onClick: n,
         children: i
     });
 }
 function U(e) {
     let { onClick: t } = e;
-    return (0, r.jsx)(b, {
+    return (0, r.jsx)(h, {
         onClick: t,
-        children: m.intl.string(m.t.R9GHyc)
+        children: D.intl.string(D.t.R9GHyc)
     });
 }
 function M() {
     let e = i.useRef(null),
-        t = (0, a.e7)([N.Z], () => N.Z.getGuildId()),
+        t = (0, a.e7)([p.Z], () => p.Z.getGuildId()),
         n = (0, a.e7)([T.Z], () => T.Z.getChannelId(t)),
         {
             viewingRoles: l,
             backNavigationSection: o,
-            isFullServerPreview: R,
+            isFullServerPreview: f,
             isServerShopPreview: M
-        } = (0, a.cj)([P.Z], () => ({
-            viewingRoles: null != t ? P.Z.getViewingRoles(t) : null,
-            backNavigationSection: P.Z.getBackNavigationSection(t),
-            isFullServerPreview: null != t && P.Z.isFullServerPreview(t),
-            isServerShopPreview: null != t && P.Z.isViewingServerShop(t)
+        } = (0, a.cj)([R.Z], () => ({
+            viewingRoles: null != t ? R.Z.getViewingRoles(t) : null,
+            backNavigationSection: R.Z.getBackNavigationSection(t),
+            isFullServerPreview: null != t && R.Z.isFullServerPreview(t),
+            isServerShopPreview: null != t && R.Z.isViewingServerShop(t)
         }));
     if (null == l || null == t) return null;
-    let L = (function (e) {
+    let v = (function (e) {
             switch (e) {
                 case C.pNK.INTEGRATIONS:
-                    return m.intl.string(m.t.k7LGdn);
+                    return D.intl.string(D.t.k7LGdn);
                 case C.pNK.ROLE_SUBSCRIPTIONS:
-                    return m.intl.string(m.t.bRqiqa);
+                    return D.intl.string(D.t.bRqiqa);
                 case C.pNK.ONBOARDING:
-                    return m.intl.string(m.t.qZpU3d);
+                    return D.intl.string(D.t.qZpU3d);
                 default:
-                    return m.intl.string(m.t.MTIXho);
+                    return D.intl.string(D.t.MTIXho);
             }
         })(o),
-        Z = o === C.pNK.ROLE_SUBSCRIPTIONS ? m.intl.string(m.t.hZUCzc) : m.intl.string(m.t['/djIh4']),
-        k = n === D.oC.GUILD_ONBOARDING,
-        v = (e) => {
+        k = o === C.pNK.ROLE_SUBSCRIPTIONS ? D.intl.string(D.t.hZUCzc) : D.intl.string(D.t['/djIh4']),
+        L = n === g.oC.GUILD_ONBOARDING,
+        Z = (e) => {
             let { backToSettings: n } = e;
-            null != t && (P.Z.isFullServerPreview(t) && (0, O.uL)(C.Z5c.CHANNEL(t)), d.ZP.shouldShowOnboarding(t) && (u.Z.finishOnboarding(t), (0, E.EI)(t)), (0, A.mL)(t), n && I.Z.open(t, o), o === C.pNK.ROLE_SUBSCRIPTIONS && (0, _.GN)(t));
+            null != t && (R.Z.isFullServerPreview(t) && (0, O.uL)(C.Z5c.CHANNEL(t)), d.ZP.shouldShowOnboarding(t) && (u.Z.finishOnboarding(t), (0, _.EI)(t)), (0, A.mL)(t), n && I.Z.open(t, o), o === C.pNK.ROLE_SUBSCRIPTIONS && (0, E.GN)(t));
         };
-    return (0, r.jsxs)(c.qXd, {
-        color: c.DM8.BRAND,
-        className: h.notice,
+    return (0, r.jsxs)(s.qXd, {
+        color: s.DM8.BRAND,
+        className: b.notice,
         children: [
-            (0, r.jsxs)(b, {
-                onClick: () => v({ backToSettings: !0 }),
-                className: h.backButton,
+            (0, r.jsxs)(h, {
+                onClick: () => Z({ backToSettings: !0 }),
+                className: b.backButton,
                 children: [
-                    (0, r.jsx)(S.Z, {
+                    (0, r.jsx)(N.Z, {
                         width: 16,
                         height: 16,
-                        direction: S.Z.Directions.LEFT,
-                        className: h.backArrow
+                        direction: N.Z.Directions.LEFT,
+                        className: b.backArrow
                     }),
-                    L
+                    v
                 ]
             }),
-            k && R
+            L && f
                 ? (0, r.jsx)('div', {
-                      className: h.noticeContents,
+                      className: b.noticeContents,
                       children: (0, r.jsx)('div', {
-                          className: h.noticeText,
-                          children: m.intl.string(m.t.PxbiAQ)
+                          className: b.noticeText,
+                          children: D.intl.string(D.t.PxbiAQ)
                       })
                   })
                 : (0, r.jsxs)('div', {
-                      className: h.noticeContents,
+                      className: b.noticeContents,
                       children: [
                           (0, r.jsx)('div', {
-                              className: h.noticeText,
-                              children: R ? m.intl.formatToPlainString(m.t['0PHahI'], { numRoles: Object.keys(l).length }) : m.intl.formatToPlainString(m.t.vMlK8v, { numRoles: Object.keys(l).length })
+                              className: b.noticeText,
+                              children: f ? D.intl.formatToPlainString(D.t['0PHahI'], { numRoles: Object.keys(l).length }) : D.intl.formatToPlainString(D.t.vMlK8v, { numRoles: Object.keys(l).length })
                           }),
-                          (0, r.jsx)(c.yRy, {
+                          (0, r.jsx)(s.yRy, {
                               targetElementRef: e,
                               position: 'bottom',
-                              renderPopout: () => (0, r.jsx)(f.Z, { guildId: t }),
+                              renderPopout: () => (0, r.jsx)(m.Z, { guildId: t }),
                               children: (t) => {
                                   let { onClick: n } = t;
-                                  return (0, r.jsxs)(b, {
+                                  return (0, r.jsxs)(h, {
                                       onClick: n,
                                       buttonRef: e,
                                       children: [
-                                          Z,
-                                          (0, r.jsx)(p.Z, {
+                                          k,
+                                          (0, r.jsx)(S.Z, {
                                               width: 16,
                                               height: 16,
-                                              direction: p.Z.Directions.DOWN,
-                                              className: h.selectCaret
+                                              direction: S.Z.Directions.DOWN,
+                                              className: b.selectCaret
                                           })
                                       ]
                                   });
                               }
                           }),
-                          R &&
-                              (0, r.jsx)(c.DY3, {
-                                  className: h.previewWarning,
-                                  text: m.intl.string(m.t.mW4DUF),
-                                  children: (0, r.jsx)(c.P4T, {
+                          f &&
+                              (0, r.jsx)(s.DY3, {
+                                  className: b.previewWarning,
+                                  text: D.intl.string(D.t.mW4DUF),
+                                  children: (0, r.jsx)(s.P4T, {
                                       size: 'xs',
-                                      color: s.Z.unsafe_rawColors.YELLOW_300.css
+                                      color: c.Z.unsafe_rawColors.YELLOW_300.css
                                   })
                               }),
                           M &&
-                              (0, r.jsx)(c.DY3, {
-                                  className: h.previewWarning,
-                                  text: m.intl.formatToPlainString(m.t.eummvb, {
+                              (0, r.jsx)(s.DY3, {
+                                  className: b.previewWarning,
+                                  text: D.intl.formatToPlainString(D.t.eummvb, {
                                       maxTiers: y.fF,
-                                      maxProducts: g.dD
+                                      maxProducts: P.dD
                                   }),
-                                  children: (0, r.jsx)(c.P4T, {
+                                  children: (0, r.jsx)(s.P4T, {
                                       size: 'xs',
-                                      color: s.Z.unsafe_rawColors.YELLOW_300.css
+                                      color: c.Z.unsafe_rawColors.YELLOW_300.css
                                   })
                               })
                       ]
                   }),
-            R || o === C.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(U, { onClick: () => v({ backToSettings: !1 }) })
+            f || o === C.pNK.ROLE_SUBSCRIPTIONS ? null : (0, r.jsx)(U, { onClick: () => Z({ backToSettings: !1 }) })
         ]
     });
 }
-function L(e) {
+function v(e) {
     let { guildId: t } = e;
-    return (0, a.e7)([P.Z], () => P.Z.isViewingRoles(t))
+    return (0, a.e7)([R.Z], () => R.Z.isViewingRoles(t))
         ? (0, r.jsx)('div', {
-              className: o()(h.settingsWrapper, {
-                  [h.windows]: (0, R.isWindows)(),
-                  [h.osx]: (0, R.isMac)()
+              className: o()(b.settingsWrapper, {
+                  [b.windows]: (0, f.isWindows)(),
+                  [b.osx]: (0, f.isMac)()
               }),
               children: (0, r.jsx)(M, {})
           })

@@ -1,4 +1,4 @@
-n.d(t, { V: () => O });
+n.d(t, { V: () => v });
 var r = n(255367),
     i = n(512722),
     l = n.n(i),
@@ -25,7 +25,7 @@ function b() {
         ]
     });
 }
-function _() {
+function y() {
     var e;
     let t = (0, o.e7)([a.Z], () => a.Z.getFakeGameData()),
         n = (0, o.e7)([u.ZP], () => u.ZP.getVisibleGame()),
@@ -55,7 +55,7 @@ function _() {
         })
     );
 }
-function y(e) {
+function O(e) {
     let { onClick: t, children: n } = e;
     return (0, r.jsx)(s.P3F, {
         onClick: t,
@@ -68,7 +68,7 @@ function y(e) {
         })
     });
 }
-function O(e) {
+function v(e) {
     let { onClick: t } = e,
         { isEnabled: n, showActivitySharingIndicatorWhenSharing: i } = (0, p.D)('not sharing link'),
         l = d.G6.useSetting(),
@@ -76,12 +76,12 @@ function O(e) {
     return n
         ? l && a !== s.Skl.INVISIBLE
             ? i
-                ? (0, r.jsx)(y, {
+                ? (0, r.jsx)(O, {
                       onClick: t,
-                      children: (0, r.jsx)(_, {})
+                      children: (0, r.jsx)(y, {})
                   })
                 : null
-            : (0, r.jsx)(y, {
+            : (0, r.jsx)(O, {
                   onClick: t,
                   children: (0, r.jsx)(b, {})
               })

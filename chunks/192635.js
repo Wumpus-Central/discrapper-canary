@@ -1,20 +1,20 @@
 n.d(t, { Z: () => c });
 var r = n(255367);
 n(73800);
-var s = n(120356),
-    i = n.n(s),
+var i = n(120356),
+    s = n.n(i),
     o = n(525059),
-    l = n(742795),
-    a = n(200289);
+    a = n(742795),
+    l = n(200289);
 function c(e) {
     let { Icon: t, className: n } = e;
     return (0, r.jsx)('div', {
-        className: i()(o.container, n),
+        className: s()(o.container, n),
         children: (0, r.jsxs)('div', {
             className: o.innerContainer,
             children: [
                 (0, r.jsx)('img', {
-                    src: a,
+                    src: l,
                     alt: '',
                     className: o.star
                 }),
@@ -26,7 +26,7 @@ function c(e) {
                     })
                 }),
                 (0, r.jsx)('img', {
-                    src: l,
+                    src: a,
                     alt: '',
                     className: o.sparkle
                 })

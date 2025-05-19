@@ -1,64 +1,64 @@
 n.d(t, { Z: () => b });
 var r = n(255367),
     o = n(73800),
-    a = n(905405),
+    l = n(905405),
     i = n(626135),
-    l = n(750030),
-    s = n(937889),
+    s = n(750030),
+    a = n(937889),
     c = n(761910),
     u = n(488968),
     d = n(479398),
     p = n(981631),
-    g = n(388032),
-    m = n(875231);
+    m = n(388032),
+    g = n(875231);
 let f = o.lazy(() => n.e('85831').then(n.bind(n, 120314)));
 function b(e, t) {
-    let { hideSimpleEmbedContent: b, formatInline: h = !1, noStyleAndInteraction: _ = !1, isInteracting: y = !1, allowHeading: v = !1, allowList: O = !1, allowLinks: j = !1, allowDevLinks: x = !1, previewLinkTarget: C = !1, viewingChannelId: P } = t,
-        T = (0, a.p)(),
-        S = (0, d.o)({ location: 'useMessageRenderedContent' });
+    let { hideSimpleEmbedContent: b, formatInline: h = !1, noStyleAndInteraction: O = !1, isInteracting: y = !1, allowHeading: j = !1, allowList: v = !1, allowLinks: P = !1, allowDevLinks: x = !1, previewLinkTarget: C = !1, viewingChannelId: w } = t,
+        S = (0, l.p)(),
+        N = (0, d.o)({ location: 'useMessageRenderedContent' });
     return o.useMemo(() => {
         if (null != e.customRenderedContent) return e.customRenderedContent;
         if (e.isUnsupported)
             return {
-                content: g.intl.string(g.t.sWi5ER),
+                content: m.intl.string(m.t.sWi5ER),
                 hasSpoilerEmbeds: !1
             };
         if ((e.isCommandType() && 0 === e.content.length) || e.hasFlag(p.iLy.LOADING)) return (0, c.Z)(e);
         if (e.type === p.uaV.CHANGELOG) {
             let { renderChangelogMessageMarkup: t } = n(55406);
-            return t(e, m, {
+            return t(e, g, {
                 track: (e, t) => {
                     i.default.track(e, t);
                 }
             });
         }
-        return S.enabled
+        return N.enabled
             ? {
                   content: (0, r.jsx)(o.Suspense, {
                       children: (0, r.jsx)(u.v.Provider, {
                           value: {
                               messageId: e.id,
                               channelId: e.channel_id,
-                              viewingChannelId: P,
-                              guildId: (0, l.k)(e)
+                              viewingChannelId: w,
+                              guildId: (0, s.k)(e)
                           },
                           children: (0, r.jsx)(f, { content: e.content })
                       })
                   }),
                   hasSpoilerEmbeds: !1
               }
-            : (0, s.ZP)(e, {
+            : (0, a.ZP)(e, {
                   hideSimpleEmbedContent: b,
                   formatInline: h,
-                  noStyleAndInteraction: _,
+                  noStyleAndInteraction: O,
                   isInteracting: y,
-                  allowHeading: v,
-                  allowList: O,
-                  allowLinks: j,
+                  allowHeading: j,
+                  allowList: v,
+                  allowLinks: P,
                   allowDevLinks: x,
                   previewLinkTarget: C,
-                  shouldFilterKeywords: T,
-                  viewingChannelId: P
+                  shouldFilterKeywords: S,
+                  viewingChannelId: w
               });
-    }, [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, b, h, _, y, v, O, j, C, T, x, P, S.enabled]);
+    }, [e.content, e.customRenderedContent, e.embeds, e.interaction, e.state, e.type, b, h, O, y, j, v, P, C, S, x, w, N.enabled]);
 }

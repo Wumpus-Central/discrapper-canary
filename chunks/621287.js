@@ -31,19 +31,19 @@ var r = {
     './zh-CN.png': '640909',
     './zh-TW.png': '408999'
 };
-function s(e) {
-    return n(i(e));
-}
 function i(e) {
+    return n(s(e));
+}
+function s(e) {
     if (!n.o(r, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = 'MODULE_NOT_FOUND'), t);
     }
     return r[e];
 }
-(s.keys = function () {
+(i.keys = function () {
     return Object.keys(r);
 }),
-    (s.resolve = i),
-    (e.exports = s),
-    (s.id = 621287);
+    (i.resolve = s),
+    (e.exports = i),
+    (i.id = 621287);

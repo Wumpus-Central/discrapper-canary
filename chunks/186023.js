@@ -1,8 +1,8 @@
-n.d(t, { default: () => b }), n(388685), n(539854);
+n.d(t, { default: () => g }), n(388685), n(539854);
 var r = n(255367),
-    l = n(73800),
+    a = n(73800),
     i = n(286379),
-    a = n(481060),
+    l = n(481060),
     o = n(367907),
     s = n(313201),
     c = n(797614),
@@ -10,25 +10,25 @@ var r = n(255367),
     u = n(185625),
     m = n(255514),
     p = n(981631),
-    x = n(864012);
-let b = (e) => {
-    let { reportType: t, menu: n, modalProps: b, onSubmit: _, onNavigate: f, emailToken: h, isAuthenticated: g = !0 } = e,
+    _ = n(864012);
+let g = (e) => {
+    let { reportType: t, menu: n, modalProps: g, onSubmit: b, onNavigate: x, emailToken: h, isAuthenticated: f = !0 } = e,
         v = (0, s.Dt)(),
-        { nodes: j, root_node_id: y, success_node_id: O, fail_node_id: Z } = n,
-        [I, C] = l.useState(y),
-        [N, P] = l.useState(void 0),
-        [S, T] = l.useState(void 0),
-        [k, E] = l.useState([]),
-        [w, R] = l.useState(void 0),
-        [D, M] = l.useState(void 0),
-        A = (e) => {
-            var n, r, l;
-            let { destination: a } = e,
-                [, s] = a,
+        { nodes: j, root_node_id: C, success_node_id: y, fail_node_id: I } = n,
+        [O, T] = a.useState(C),
+        [Z, N] = a.useState(void 0),
+        [S, P] = a.useState(void 0),
+        [k, E] = a.useState([]),
+        [M, w] = a.useState(void 0),
+        [A, D] = a.useState(void 0),
+        R = (e) => {
+            var n, r, a;
+            let { destination: l } = e,
+                [, s] = l,
                 u = j[s];
             if (void 0 === u) return void c.Z.increment({ name: i.V.IN_APP_REPORT_NAVIGATE_TO_NONEXISTENT_NODE });
             if (u.elements.some((e) => 'skip' === e.type) && (null == (n = u.button) ? void 0 : n.type) === 'next')
-                return A(
+                return R(
                     ((r = (function (e) {
                         for (var t = 1; t < arguments.length; t++) {
                             var n = null != arguments[t] ? arguments[t] : {},
@@ -54,12 +54,12 @@ let b = (e) => {
                         }
                         return e;
                     })({}, e)),
-                    (l = l =
+                    (a = a =
                         {
                             destination: ['', u.button.target]
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(l))
+                        ? Object.defineProperties(r, Object.getOwnPropertyDescriptors(a))
                         : (function (e, t) {
                               var n = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -67,95 +67,95 @@ let b = (e) => {
                                   n.push.apply(n, r);
                               }
                               return n;
-                          })(Object(l)).forEach(function (e) {
-                              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(l, e));
+                          })(Object(a)).forEach(function (e) {
+                              Object.defineProperty(r, e, Object.getOwnPropertyDescriptor(a, e));
                           }),
                     r)
                 );
-            if ((E([...k, e]), null != u.key && (null == f || f(u.key)), P(void 0), T(void 0), t.name === d.b.MESSAGE || t.name === d.b.FIRST_DM)) {
+            if ((E([...k, e]), null != u.key && (null == x || x(u.key)), N(void 0), P(void 0), t.name === d.b.MESSAGE || t.name === d.b.FIRST_DM)) {
                 let e = t.record.id;
                 o.ZP.trackWithMetadata(p.rMx.IAR_NAVIGATE, {
                     message_id: e,
                     content_type: t.name,
                     report_sub_type: u.report_type,
-                    current_node: j[I].id,
+                    current_node: j[O].id,
                     next_node: u.id
                 });
             }
-            C(s);
+            T(s);
         },
-        L = async (e) => {
+        B = async (e) => {
             var r;
-            let l = g ? await (0, u.ZD)(n, t, [...k, e]) : await (0, u.fw)(n, t, [...k, e], h),
-                i = null == l || null == (r = l.body) ? void 0 : r.report_id;
-            null != i && R(i), M(j[e.nodeRef].report_type), null == _ || _(i);
+            let a = f ? await (0, u.ZD)(n, t, [...k, e]) : await (0, u.fw)(n, t, [...k, e], h),
+                i = null == a || null == (r = a.body) ? void 0 : r.report_id;
+            null != i && w(i), D(j[e.nodeRef].report_type), null == b || b(i);
         },
-        B = () => {
+        L = () => {
             var e, n;
             if (k.length < 1) return;
             let r = [...k],
-                l = r.pop(),
-                i = null != (n = null == l ? void 0 : l.nodeRef) ? n : y;
+                a = r.pop(),
+                i = null != (n = null == a ? void 0 : a.nodeRef) ? n : C;
             if (t.name === d.b.MESSAGE || t.name === d.b.FIRST_DM) {
                 let e = t.record.id;
                 o.ZP.trackWithMetadata(p.rMx.IAR_NAVIGATE, {
                     message_id: e,
                     content_type: t.name,
                     report_sub_type: j[i].report_type,
-                    current_node: j[I].id,
+                    current_node: j[O].id,
                     next_node: j[i].id
                 });
             }
-            P(null == l || null == (e = l.multiSelect) ? void 0 : e.state), T(null == l ? void 0 : l.textInput), C(i), E(r), null == f || f('..');
+            N(null == a || null == (e = a.multiSelect) ? void 0 : e.state), P(null == a ? void 0 : a.textInput), T(i), E(r), null == x || x('..');
         },
-        z = l.useMemo(() => {
+        z = a.useMemo(() => {
             let e = [],
                 t = [];
             for (let i in j) {
-                var n, r, l;
-                let a = j[i];
-                if (a.id !== O && a.id !== Z && a.id !== y) {
-                    if (a.key.endsWith('_SUBMIT') || (null == (n = a.button) ? void 0 : n.type) === 'submit') {
-                        t.push(a);
+                var n, r, a;
+                let l = j[i];
+                if (l.id !== y && l.id !== I && l.id !== C) {
+                    if (l.key.endsWith('_SUBMIT') || (null == (n = l.button) ? void 0 : n.type) === 'submit') {
+                        t.push(l);
                         continue;
                     }
-                    if ((e.push(a), (null == (r = a.button) ? void 0 : r.type) === 'next')) {
-                        let t = null == (l = a.button) ? void 0 : l.target,
+                    if ((e.push(l), (null == (r = l.button) ? void 0 : r.type) === 'next')) {
+                        let t = null == (a = l.button) ? void 0 : a.target,
                             n = e.indexOf(j[t]);
                         -1 !== n && (e.splice(n, 1), e.push(j[t]));
                     }
                 }
             }
-            return [j[y], ...e, ...t, j[O], j[Z]];
-        }, [j, y, Z, O]);
-    return (0, r.jsx)(a.Y0X, {
-        transitionState: b.transitionState,
+            return [j[C], ...e, ...t, j[y], j[I]];
+        }, [j, C, I, y]);
+    return (0, r.jsx)(l.Y0X, {
+        transitionState: g.transitionState,
         'aria-labelledby': v,
-        children: (0, r.jsx)(a.MyZ, {
+        children: (0, r.jsx)(l.MyZ, {
             width: 440,
-            activeSlide: I,
+            activeSlide: O,
             centered: !1,
             children: z.map((e) =>
                 (0, r.jsx)(
-                    a.Mi4,
+                    l.Mi4,
                     {
                         id: e.id,
                         children: (0, r.jsx)('div', {
-                            className: x.slideContainer,
+                            className: _.slideContainer,
                             children: (0, r.jsx)(m.Z, {
                                 node: e,
                                 reportType: t,
-                                reportSubType: D,
+                                reportSubType: A,
                                 history: k,
-                                onModalClose: b.onClose,
-                                onSelectChild: A,
-                                onNavigateBack: B,
-                                multiSelect: N,
+                                onModalClose: g.onClose,
+                                onSelectChild: R,
+                                onNavigateBack: L,
+                                multiSelect: Z,
                                 textInput: S,
-                                successNodeId: O,
-                                failNodeId: Z,
-                                onSubmit: L,
-                                reportId: w
+                                successNodeId: y,
+                                failNodeId: I,
+                                onSubmit: B,
+                                reportId: M
                             })
                         })
                     },

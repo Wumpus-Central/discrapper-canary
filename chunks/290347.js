@@ -112,12 +112,12 @@ function T(e) {
         [F, z] = i.useState(0),
         [W, Y] = i.useState(0),
         [K, q] = i.useState(!1),
-        [Q, X] = i.useState(!0),
+        [X, Q] = i.useState(!0),
         J = i.useRef(V),
         $ = i.useRef(F),
         ee = i.useRef(W),
         et = i.useRef(K),
-        en = i.useRef(Q),
+        en = i.useRef(X),
         [er, ei] = i.useState(C),
         el = i.useRef(!1);
     function ea() {
@@ -161,8 +161,8 @@ function T(e) {
             [er]
         ),
         i.useEffect(() => {
-            (J.current = V), ($.current = F), (ee.current = W), (et.current = K), (en.current = Q);
-        }, [V, F, W, K, Q]),
+            (J.current = V), ($.current = F), (ee.current = W), (et.current = K), (en.current = X);
+        }, [V, F, W, K, X]),
         i.useEffect(
             () => () => {
                 if ('video' === l.type || 'embed' === l.type) {
@@ -222,16 +222,16 @@ function T(e) {
                                   src: l.src,
                                   poster: l.poster,
                                   onPlay: (e) => {
-                                      m.default.track(_.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: w }), H(Date.now()), q(!0), X(e.currentTarget.muted);
+                                      m.default.track(_.rMx.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: w }), H(Date.now()), q(!0), Q(e.currentTarget.muted);
                                   },
                                   onEnded: (e) => {
-                                      ea(), X(e.currentTarget.muted), q(!1);
+                                      ea(), Q(e.currentTarget.muted), q(!1);
                                   },
                                   onVolumeChange: (e) => {
-                                      ea(), X(e.currentTarget.muted);
+                                      ea(), Q(e.currentTarget.muted);
                                   },
                                   onPause: (e) => {
-                                      ea(), X(e.currentTarget.muted), q(!1);
+                                      ea(), Q(e.currentTarget.muted), q(!1);
                                   },
                                   disablePictureInPicture: !0,
                                   children:

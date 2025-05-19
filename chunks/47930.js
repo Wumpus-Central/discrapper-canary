@@ -1,37 +1,37 @@
-r.d(t, {
-    b: () => c,
-    x: () => s
+n.d(t, {
+    b: () => s,
+    x: () => c
 });
-var n = r(255367);
-r(73800);
-var l = r(385499),
-    o = r(245315),
-    i = r(368859),
-    a = r(848697);
-function c(e) {
-    let t,
-        { message: r, channel: n, user: a, isRepliedMessage: c } = e;
-    return (null == r ? void 0 : r.isSystemDM()) ? (t = l.Z.Types.SYSTEM_DM) : null != r && (0, i.Z)(r) ? (t = (0, o.cp)(r) ? l.Z.Types.OFFICIAL : l.Z.Types.SERVER) : (null == a ? void 0 : a.bot) ? (t = l.Z.Types.BOT) : null != n && n.isForumPost() && n.ownerId === (null == a ? void 0 : a.id) && !c && (t = l.Z.Types.ORIGINAL_POSTER), t;
-}
+var r = n(255367);
+n(73800);
+var i = n(385499),
+    l = n(245315),
+    a = n(368859),
+    o = n(848697);
 function s(e) {
-    let { message: t, channel: r, user: o, compact: i, isRepliedMessage: s, hideIcon: u = !1, children: m } = e,
-        p = c({
+    let t,
+        { message: n, channel: r, user: o, isRepliedMessage: s } = e;
+    return (null == n ? void 0 : n.isSystemDM()) ? (t = i.Z.Types.SYSTEM_DM) : null != n && (0, a.Z)(n) ? (t = (0, l.cp)(n) ? i.Z.Types.OFFICIAL : i.Z.Types.SERVER) : (null == o ? void 0 : o.bot) ? (t = i.Z.Types.BOT) : null != r && r.isForumPost() && r.ownerId === (null == o ? void 0 : o.id) && !s && (t = i.Z.Types.ORIGINAL_POSTER), t;
+}
+function c(e) {
+    let { message: t, channel: n, user: l, compact: a, isRepliedMessage: c, hideIcon: u = !1, children: d } = e,
+        g = s({
             message: t,
-            channel: r,
-            user: o,
-            compact: i,
-            isRepliedMessage: s,
+            channel: n,
+            user: l,
+            compact: a,
+            isRepliedMessage: c,
             hideIcon: u,
-            children: m
+            children: d
         });
-    return null == p
+    return null == g
         ? null
-        : (0, n.jsx)(l.Z, {
-              className: i ? a.botTagCompact : a.botTagCozy,
-              type: p,
-              verified: null == o ? void 0 : o.isVerifiedBot(),
+        : (0, r.jsx)(i.Z, {
+              className: a ? o.botTagCompact : o.botTagCozy,
+              type: g,
+              verified: null == l ? void 0 : l.isVerifiedBot(),
               hideIcon: u,
               useRemSizes: !0,
-              children: m
+              children: d
           });
 }

@@ -1,47 +1,47 @@
 n.d(t, {
-    E: () => f,
-    Z: () => p
+    E: () => p,
+    Z: () => f
 });
 var r = n(255367);
 n(73800);
-var s = n(120356),
-    i = n.n(s),
+var i = n(120356),
+    s = n.n(i),
     o = n(780384),
-    l = n(481060),
-    a = n(410030),
+    a = n(481060),
+    l = n(410030),
     c = n(696936),
     u = n(903773),
     d = n(734344);
-let f = {
+let p = {
     RIGHT: d.horizontalStatusWarningBlock,
     BOTTOM: d.verticalStatusWarningBlock
 };
-function p(e) {
-    let { className: t, color: n = c.W.YELLOW, buttonPosition: s = f.BOTTOM, notice: p, ctaLabel: g, ctaLoading: b, ctaDisabled: m, ctaClassName: v, onClick: h } = e,
-        O = (0, a.ZP)();
+function f(e) {
+    let { className: t, color: n = c.W.YELLOW, buttonPosition: i = p.BOTTOM, notice: f, ctaLabel: g, ctaLoading: b, ctaDisabled: m, ctaClassName: _, onClick: v } = e,
+        h = (0, l.ZP)();
     return (0, r.jsx)(u.Z, {
-        className: i()(d.statusWarningBlock, { [d.statusWarningBlockWithCta]: null != g }, t),
-        color: (0, o.wj)(O) ? n : c.W.BROWN,
+        className: s()(d.statusWarningBlock, { [d.statusWarningBlockWithCta]: null != g }, t),
+        color: (0, o.wj)(h) ? n : c.W.BROWN,
         children: (0, r.jsxs)('div', {
-            className: s,
+            className: i,
             children: [
-                (0, r.jsx)(l.Text, {
+                (0, r.jsx)(a.Text, {
                     variant: 'text-sm/normal',
                     color: 'interactive-active',
-                    children: p
+                    children: f
                 }),
                 null != g &&
-                    null != h &&
+                    null != v &&
                     (0, r.jsx)('div', {
                         className: d.ctaButtonContainer,
-                        children: (0, r.jsx)(l.zxk, {
-                            className: i()(d.ctaButton, (0, o.wj)(O) ? void 0 : d.ctaBlackButton, v),
-                            color: (0, o.wj)(O) ? l.zxk.Colors.WHITE : l.zxk.Colors.CUSTOM,
-                            size: l.PhG.MEDIUM,
-                            onClick: h,
+                        children: (0, r.jsx)(a.zxk, {
+                            className: s()(d.ctaButton, (0, o.wj)(h) ? void 0 : d.ctaBlackButton, _),
+                            color: (0, o.wj)(h) ? a.zxk.Colors.WHITE : a.zxk.Colors.CUSTOM,
+                            size: a.PhG.MEDIUM,
+                            onClick: v,
                             disabled: m,
                             submitting: b,
-                            children: (0, r.jsx)(l.Text, {
+                            children: (0, r.jsx)(a.Text, {
                                 className: d.ctaButtonText,
                                 variant: 'text-sm/medium',
                                 children: g

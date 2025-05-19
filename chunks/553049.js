@@ -17,9 +17,9 @@ var a = n(255367),
 function v() {
     var e;
     let t = x.M.useExperiment({ location: 'ClientThemeColorPickerTools' }).enabled,
-        { colors: n, chassisMixAmount: v, gradientAngle: j, setColors: g, setChassisMixAmount: _, setGradientAngle: y } = (0, u.I)(),
+        { colors: n, chassisMixAmount: v, gradientAngle: g, setColors: j, setChassisMixAmount: _, setGradientAngle: y } = (0, u.I)(),
         [C, O] = r.useState(null != (e = n[0]) ? e : '#0000FF'),
-        [N, E, S] = (0, i.Wu)([c.Z, d.ZP, m.Z], () => [c.Z.theme, null == m.Z.gradientPreset, d.ZP.useSystemTheme === p.KW.ON]);
+        [N, E, T] = (0, i.Wu)([c.Z, d.ZP, m.Z], () => [c.Z.theme, null == m.Z.gradientPreset, d.ZP.useSystemTheme === p.KW.ON]);
     return t
         ? (0, a.jsxs)('div', {
               children: [
@@ -38,12 +38,12 @@ function v() {
                       children: [
                           (0, a.jsx)(h.bD, {
                               theme: b.BR.LIGHT,
-                              isSelected: E && !S && N === b.BR.LIGHT,
+                              isSelected: E && !T && N === b.BR.LIGHT,
                               onSelect: () => (0, o.ZI)({ theme: b.BR.LIGHT })
                           }),
                           (0, a.jsx)(h.bD, {
                               theme: b.BR.DARK,
-                              isSelected: E && !S && N === b.BR.DARK,
+                              isSelected: E && !T && N === b.BR.DARK,
                               onSelect: () => (0, o.ZI)({ theme: b.BR.DARK })
                           })
                       ]
@@ -59,7 +59,7 @@ function v() {
                       value: C
                   }),
                   (0, a.jsx)(s.zxk, {
-                      onClick: () => g([...n, C]),
+                      onClick: () => j([...n, C]),
                       children: 'Add'
                   }),
                   n.length > 0 &&
@@ -86,7 +86,7 @@ function v() {
                                                       size: s.zxk.Sizes.ICON,
                                                       look: s.zxk.Looks.BLANK,
                                                       onClick: () => {
-                                                          g(n.filter((e, n) => n !== t));
+                                                          j(n.filter((e, n) => n !== t));
                                                       },
                                                       children: (0, a.jsx)(s.k$p, {})
                                                   })
@@ -118,7 +118,7 @@ function v() {
                   }),
                   (0, a.jsx)(s.iRW, {
                       className: f.slider,
-                      initialValue: j,
+                      initialValue: g,
                       defaultValue: 0,
                       minValue: 0,
                       maxValue: 360,

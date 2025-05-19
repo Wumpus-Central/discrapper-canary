@@ -1,10 +1,10 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => S });
 var r = n(381814),
     i = n(734641),
     l = n(731965),
-    s = n(433517),
+    a = n(433517),
     o = n(710845),
-    a = n(626135),
+    s = n(626135),
     c = n(630724),
     u = n(981631);
 function d(e) {
@@ -32,7 +32,7 @@ function d(e) {
     }
     return e;
 }
-function h(e, t) {
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -50,7 +50,7 @@ function h(e, t) {
         e
     );
 }
-function g(e, t) {
+function h(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -89,20 +89,20 @@ let f = 'UserFlowAnalyticsStore_current',
     _ = 'UserFlowAnalyticsStore';
 function x(e) {
     if (e === c.MK.UNKNOWN) return null;
-    let t = s.K.get(''.concat(_, '-').concat(e));
+    let t = a.K.get(''.concat(_, '-').concat(e));
     if (null == t) return null;
     let { version: n } = t,
-        r = g(t, ['version']);
+        r = h(t, ['version']);
     return 1 !== n ? null : r;
 }
 new o.Z('UserFlowAnalytics');
-let E = (0, r.U)()(
+let b = (0, r.U)()(
     (0, i.XR)((e, t) => ({
         flows: {},
         currentFlow: null,
         activeFlow: () => {
             var e;
-            let n = null != (e = t().currentFlow) ? e : s.K.get(f);
+            let n = null != (e = t().currentFlow) ? e : a.K.get(f);
             if (null == n) return null;
             let { [n]: r } = t().flows,
                 i = null != r ? r : x(n);
@@ -110,15 +110,15 @@ let E = (0, r.U)()(
         }
     }))
 );
-function b(e, t) {
-    let n = E.getState().flows,
+function E(e, t) {
+    let n = b.getState().flows,
         { [e]: r } = n,
-        i = g(n, [e].map(p)),
-        s = null != r ? r : x(e);
-    ((null == s ? void 0 : s.currentStep) == null || s.currentStep !== t) &&
+        i = h(n, [e].map(p)),
+        a = null != r ? r : x(e);
+    ((null == a ? void 0 : a.currentStep) == null || a.currentStep !== t) &&
         (0, l.j)(() => {
-            E.setState({
-                flows: h(d({}, i), {
+            b.setState({
+                flows: g(d({}, i), {
                     [e]: {
                         type: e,
                         lastStep: null,
@@ -137,19 +137,19 @@ function v(e, t) {
         r = e;
     if (e === c.MK.ANY) {
         var i;
-        r = null != (i = E.getState().activeFlow()) ? i : c.MK.UNKNOWN;
+        r = null != (i = b.getState().activeFlow()) ? i : c.MK.UNKNOWN;
     }
-    let s = E.getState().flows,
-        { [r]: o } = s,
-        a = g(s, [r].map(p)),
+    let a = b.getState().flows,
+        { [r]: o } = a,
+        s = h(a, [r].map(p)),
         u = null != o ? o : x(r);
     null != u &&
         null != u.currentStep &&
         u.currentStep !== t &&
         (0, l.j)(() => {
-            E.setState({
-                flows: h(d({}, a), {
-                    [r]: h(d({}, u), {
+            b.setState({
+                flows: g(d({}, s), {
+                    [r]: g(d({}, u), {
                         lastStep: u.currentStep,
                         lastTimestamp: u.currentTimestamp,
                         currentStep: t,
@@ -162,9 +162,9 @@ function v(e, t) {
         });
 }
 function O() {
-    return null != E.getState().activeFlow();
+    return null != b.getState().activeFlow();
 }
-E.subscribe(
+b.subscribe(
     (e) => (null != e.currentFlow ? e.flows[e.currentFlow] : void 0),
     (e) => {
         var t;
@@ -173,9 +173,9 @@ E.subscribe(
             (!(function (e) {
                 if (e.type === c.MK.UNKNOWN) return;
                 let t = ''.concat(_, '-').concat(e.type);
-                e.ended ? (s.K.remove(t), s.K.remove(f)) : (s.K.set(''.concat(_, '-').concat(e.type), h(d({}, e), { version: 1 })), s.K.set(f, e.type));
+                e.ended ? (a.K.remove(t), a.K.remove(f)) : (a.K.set(''.concat(_, '-').concat(e.type), g(d({}, e), { version: 1 })), a.K.set(f, e.type));
             })(e),
-            a.default.track(
+            s.default.track(
                 u.rMx.NUO_TRANSITION,
                 {
                     flow_type: e.type,
@@ -187,10 +187,10 @@ E.subscribe(
             ),
             e.ended)
         ) {
-            let t = d({}, E.getState().flows);
+            let t = d({}, b.getState().flows);
             delete t[e.type],
                 (0, l.j)(() => {
-                    E.setState({
+                    b.setState({
                         flows: t,
                         currentFlow: null
                     });
@@ -198,10 +198,10 @@ E.subscribe(
         }
     }
 );
-let I = {
-    flowStart: b,
+let S = {
+    flowStart: E,
     flowStepOrStart: function (e, t) {
-        O() ? v(e, t) : b(e, t);
+        O() ? v(e, t) : E(e, t);
     },
     flowStep: v,
     hasActiveFlow: O

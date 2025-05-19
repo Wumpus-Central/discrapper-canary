@@ -3,22 +3,22 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    s = n(481060),
+    a = n(481060),
     o = n(600164),
-    a = n(388905),
+    s = n(388905),
     c = n(256478),
     u = n(20493);
 function d(e) {
-    let { value: t, onChange: n, subText: i, muted: d, marginTopStyle: h } = e;
+    let { value: t, onChange: n, subText: i, muted: d, marginTopStyle: g } = e;
     return (0, r.jsx)(o.Z, {
-        className: null != h ? h : u.marginTop20,
+        className: null != g ? g : u.marginTop20,
         align: o.Z.Align.CENTER,
-        children: (0, r.jsx)(s.XZJ, {
+        children: (0, r.jsx)(a.XZJ, {
             value: t,
-            type: s.XZJ.Types.INVERTED,
+            type: a.XZJ.Types.INVERTED,
             onChange: (e, t) => n(t),
             className: c.checkbox,
-            children: (0, r.jsx)(a.i_, {
+            children: (0, r.jsx)(s.i_, {
                 className: l()({ [c.subText]: !d }),
                 children: i
             })

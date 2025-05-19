@@ -1,18 +1,18 @@
 n.d(t, { Z: () => c }), n(388685);
 var r = n(255367),
-    l = n(73800),
+    a = n(73800),
     i = n(481060),
-    a = n(843716),
+    l = n(843716),
     o = n(20493);
 let s = (e) => {
         let { element: t, onChange: n, initialOption: s } = e,
-            [c, d] = l.useState('');
-        l.useEffect(() => {
+            [c, d] = a.useState('');
+        a.useEffect(() => {
             d(null != s ? s : '');
         }, [s]);
         let u = t.name,
             { title: m, options: p } = t.data,
-            x = l.useCallback(
+            _ = a.useCallback(
                 (e) => {
                     null != e && (d(e), n(e));
                 },
@@ -32,7 +32,7 @@ let s = (e) => {
                                     m,
                                     t.should_submit_data &&
                                         (0, r.jsx)('span', {
-                                            className: a.required,
+                                            className: l.required,
                                             children: '*'
                                         })
                                 ]
@@ -40,7 +40,7 @@ let s = (e) => {
                         }),
                     (0, r.jsx)(i.q4e, {
                         value: c,
-                        onChange: x,
+                        onChange: _,
                         options: p
                     })
                 ]
@@ -49,18 +49,18 @@ let s = (e) => {
         );
     },
     c = (e) => {
-        let { elements: t, onChange: n, state: l } = e,
+        let { elements: t, onChange: n, state: a } = e,
             i = t.map((e) => {
                 var t, i;
-                let a = e.name;
+                let l = e.name;
                 return (0, r.jsx)(
                     s,
                     {
                         element: e,
-                        initialOption: null != (i = null == l || null == (t = l[a]) ? void 0 : t.value) ? i : void 0,
-                        onChange: (e) => n(a, e)
+                        initialOption: null != (i = null == a || null == (t = a[l]) ? void 0 : t.value) ? i : void 0,
+                        onChange: (e) => n(l, e)
                     },
-                    a
+                    l
                 );
             });
         return (0, r.jsx)('div', { children: i });

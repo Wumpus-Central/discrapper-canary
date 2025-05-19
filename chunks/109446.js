@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685), n(642613), n(583741);
+n.d(t, { Z: () => j }), n(388685), n(642613), n(583741);
 var r = n(255367),
     i = n(73800),
     l = n(392711),
@@ -14,12 +14,12 @@ var r = n(255367),
     g = n(306680),
     m = n(594174),
     b = n(768581),
-    _ = n(709054),
-    y = n(981631),
-    O = n(124368),
-    v = n(388032),
+    y = n(709054),
+    O = n(981631),
+    v = n(124368),
+    _ = n(388032),
     C = n(571658);
-function S(e) {
+function j(e) {
     let { channel: t } = e,
         l = (0, s.Wu)([d.Z, g.ZP, f.Z], () => {
             let e = d.Z.getActiveJoinedRelevantThreadsForParent(t.guild_id, t.id);
@@ -27,11 +27,11 @@ function S(e) {
                 .values()
                 .map((e) => e.channel)
                 .concat(o().values(d.Z.getActiveUnjoinedThreadsForParent(t.guild_id, t.id)))
-                .filter((t) => !(t.id in e) && f.Z.can(y.Plq.VIEW_CHANNEL, t))
+                .filter((t) => !(t.id in e) && f.Z.can(O.Plq.VIEW_CHANNEL, t))
                 .sort((e, t) => {
                     let n = g.ZP.lastMessageId(e.id),
                         r = g.ZP.lastMessageId(t.id);
-                    return _.default.compare(n, r);
+                    return y.default.compare(n, r);
                 })
                 .reverse()
                 .value();
@@ -48,11 +48,11 @@ function S(e) {
                     className: C.title,
                     variant: 'text-xs/bold',
                     color: 'header-secondary',
-                    children: t.isForumLikeChannel() ? v.intl.string(v.t.ioVdOz) : v.intl.string(v.t.VNYs2t)
+                    children: t.isForumLikeChannel() ? _.intl.string(_.t.ioVdOz) : _.intl.string(_.t.VNYs2t)
                 }),
                 l
                     .slice(0, t.isForumLikeChannel() ? l.length : c)
-                    .map((e) => (0, r.jsx)(j, { thread: e }, e.id))
+                    .map((e) => (0, r.jsx)(S, { thread: e }, e.id))
                     .filter((e) => i.isValidElement(e))
                     .slice(0, c),
                 (0, r.jsx)(a.P3F, {
@@ -96,21 +96,21 @@ function S(e) {
                     children: (0, r.jsx)(a.Text, {
                         variant: 'text-sm/normal',
                         color: 'none',
-                        children: v.intl.string(v.t['4qdZ9/'])
+                        children: _.intl.string(_.t['4qdZ9/'])
                     })
                 })
             ]
         })
     );
 }
-function j(e) {
+function S(e) {
     let { thread: t } = e,
         n = (0, s.e7)([m.default], () => m.default.getUser(t.ownerId)),
         i = (0, h.Ok)(t);
     return (0, r.jsxs)(a.P3F, {
         className: C.row,
         onClick: (e) => {
-            (0, p.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, O.on.POPOUT);
+            (0, p.ok)(t, t.isForumPost() ? e.shiftKey : !e.shiftKey, v.on.POPOUT);
         },
         children: [
             null == n

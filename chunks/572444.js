@@ -69,16 +69,16 @@ function v() {
     let e = (0, u.Z)(),
         [t, n] = r.useState(!1),
         [l, b] = r.useState([]),
-        [v, j] = r.useState(null),
-        g = r.useRef(null),
+        [v, g] = r.useState(null),
+        j = r.useRef(null),
         _ = r.useRef(null),
         [y, C] = r.useState(0.000005),
         O = (0, s.e7)([m.Z], () => m.Z.getInputDeviceId()),
         N = (0, s.e7)([m.Z], () => m.Z.getEchoCancellation()),
         {
             noiseCancellation: E,
-            noiseSuppression: S,
-            noiseSuppressionSupported: T,
+            noiseSuppression: T,
+            noiseSuppressionSupported: S,
             noiseCancellationSupported: P
         } = (0, s.cj)([m.Z], () => ({
             noiseCancellation: m.Z.getNoiseCancellation(),
@@ -86,11 +86,11 @@ function v() {
             noiseSuppressionSupported: m.Z.isNoiseSuppressionSupported(),
             noiseCancellationSupported: m.Z.isNoiseCancellationSupported()
         })),
-        k = E ? 'KRISP' : S ? 'STANDARD' : 'NONE',
+        k = E ? 'KRISP' : T ? 'STANDARD' : 'NONE',
         w = (0, d.N)(),
         I = r.useCallback(() => {
             var e;
-            null == (e = g.current) || e.stop(), (g.current = null), j(null);
+            null == (e = j.current) || e.stop(), (j.current = null), g(null);
         }, []);
     function R() {
         m.Z.getMediaEngine().stopRecordingRawSamples();
@@ -98,7 +98,7 @@ function v() {
     function Z(e) {
         if ((t && R(), I(), null == w)) return;
         let n = w.createBufferSource();
-        (n.buffer = e.audioBuffer), (_.current = w.createGain()), (_.current.gain.value = y), n.connect(_.current), _.current.connect(w.destination), (n.loop = !0), n.start(), (g.current = n), j(e);
+        (n.buffer = e.audioBuffer), (_.current = w.createGain()), (_.current.gain.value = y), n.connect(_.current), _.current.connect(w.destination), (n.loop = !0), n.start(), (j.current = n), g(e);
     }
     r.useEffect(() => {
         I();
@@ -110,7 +110,7 @@ function v() {
                 label: 'Krisp',
                 value: 'KRISP'
             }),
-        T &&
+        S &&
             A.push({
                 label: 'Standard',
                 value: 'STANDARD'

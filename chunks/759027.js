@@ -15,7 +15,7 @@ var a = n(255367),
     b = n(474936),
     f = n(173166),
     v = n(909291);
-let j = {
+let g = {
         [h.O0b.UNPAID]: 'Unpaid',
         [h.O0b.ACTIVE]: 'Active',
         [h.O0b.PAST_DUE]: 'Past Due',
@@ -26,7 +26,7 @@ let j = {
         [h.O0b.PAUSED]: 'Paused',
         [h.O0b.PAUSE_PENDING]: 'Pause Pending'
     },
-    g = {
+    j = {
         [p.Id.UNKNOWN]: 'Unknown',
         [p.Id.ADMIN]: 'Admin',
         [p.Id.USER]: 'User',
@@ -76,8 +76,8 @@ function y(e) {
     let { subscription: p, onUpdated: y } = e,
         [C, O] = r.useState(!1),
         [N, E] = r.useState(!1),
-        [S, T] = r.useState(null),
-        P = (e) => ((null == e && (e = p.status), e in j) ? j[e] : 'Unknown status '.concat(e)),
+        [T, S] = r.useState(null),
+        P = (e) => ((null == e && (e = p.status), e in g) ? g[e] : 'Unknown status '.concat(e)),
         k = (e) => {
             let t = new Date(e);
             return u.default.fromTimestamp(t.getTime());
@@ -129,7 +129,7 @@ function y(e) {
                     rejectWithError: !1
                 });
             } catch (e) {
-                T(e.body.message);
+                S(e.body.message);
             }
             y();
         },
@@ -171,7 +171,7 @@ function y(e) {
                             children: [
                                 (0, a.jsxs)(o.Text, {
                                     variant: 'text-md/normal',
-                                    children: ['Pause Reason: ', p.pauseReason in g ? g[p.pauseReason] : 'Unknown pause reason '.concat(p.pauseReason)]
+                                    children: ['Pause Reason: ', p.pauseReason in j ? j[p.pauseReason] : 'Unknown pause reason '.concat(p.pauseReason)]
                                 }),
                                 null != p.pauseEndsAt &&
                                     (0, a.jsxs)(o.Text, {
@@ -270,11 +270,11 @@ function y(e) {
                                             onClick: (e) => I(),
                                             children: 'Renew Subscription'
                                         }),
-                                        null !== S &&
+                                        null !== T &&
                                             (0, a.jsx)(o.kzN, {
                                                 className: v.error,
-                                                onDismiss: () => T(null),
-                                                children: S
+                                                onDismiss: () => S(null),
+                                                children: T
                                             })
                                     ]
                                 }),

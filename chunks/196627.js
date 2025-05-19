@@ -1,15 +1,15 @@
-n.d(t, { Z: () => a });
+n.d(t, { Z: () => l });
 var r = n(255367);
 n(73800);
-var l = n(990761);
+var a = n(990761);
 let i = n(848304),
-    a = (e) => {
+    l = (e) => {
         let { element: t } = e;
         return (null == t ? void 0 : t.type) !== 'success'
             ? null
             : (0, r.jsx)('img', {
                   alt: '',
                   src: i,
-                  className: l.successImg
+                  className: a.successImg
               });
     };

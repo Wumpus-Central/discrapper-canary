@@ -3,14 +3,14 @@ var r = n(255367);
 n(73800);
 var i = n(481060),
     l = n(973616),
-    s = n(131704),
+    a = n(131704),
     o = n(601964),
-    a = n(598077),
+    s = n(598077),
     c = n(230224),
     u = n(258356),
     d = n(981631),
-    h = n(388032),
-    g = n(15282);
+    g = n(388032),
+    h = n(15282);
 function p(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -68,41 +68,41 @@ function _(e) {
     let { invite: t, onAcceptInvite: n, disableUser: _ = !1 } = e;
     if (null == t) return null;
     let x = null != t.guild ? new o.ZP(t.guild) : null,
-        E = null != t.channel ? (0, s.jD)(t.channel) : null,
-        b = null != t.target_application ? new l.ZP(t.target_application) : null,
-        v = _ || null == t.inviter ? null : new a.Z(t.inviter),
+        b = null != t.channel ? (0, a.jD)(t.channel) : null,
+        E = null != t.target_application ? new l.ZP(t.target_application) : null,
+        v = _ || null == t.inviter ? null : new s.Z(t.inviter),
         O = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != x && x.hasFeature(d.oNc.COMMUNITY))) && null != v && (0, c.WT)(t),
-        I = f(t),
-        j = {
+        S = f(t),
+        I = {
             invite: t,
             user: v,
             guild: x,
-            channel: E,
-            application: b
+            channel: b,
+            application: E
         };
     return (0, c.JI)(t)
         ? (0, r.jsx)(u.Z, {
               invite: t,
-              channel: E,
-              isSubmitting: I,
+              channel: b,
+              isSubmitting: S,
               onAcceptInvite: n
           })
         : (0, r.jsxs)('div', {
-              className: g.container,
+              className: h.container,
               children: [
                   (0, r.jsx)(c.GB, {
-                      application: b,
+                      application: E,
                       guild: x,
                       user: O || (0, c.X7)(t) ? v : null
                   }),
-                  (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, m(p({}, j), { showBigUserIcon: O })),
-                  (0, r.jsx)(c.UM, m(p({}, j), { showBigUserIcon: O })),
-                  (0, r.jsx)(c.V6, p({}, j)),
+                  (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, m(p({}, I), { showBigUserIcon: O })),
+                  (0, r.jsx)(c.UM, m(p({}, I), { showBigUserIcon: O })),
+                  (0, r.jsx)(c.V6, p({}, I)),
                   (0, r.jsx)(i.zxk, {
                       onClick: n,
-                      submitting: I,
-                      className: g.acceptButton,
-                      children: h.intl.string(h.t.ohMvm5)
+                      submitting: S,
+                      className: h.acceptButton,
+                      children: g.intl.string(g.t.ohMvm5)
                   })
               ]
           });

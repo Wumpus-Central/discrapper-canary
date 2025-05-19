@@ -435,6 +435,11 @@ let i = {
         actions: ['STREAM_WATCH', 'STREAM_START', 'STREAM_CREATE', 'STREAM_UPDATE', 'STREAM_DELETE', 'STREAM_CLOSE', 'CALL_UPDATE', 'CHANNEL_UPDATES', 'VOICE_CHANNEL_SELECT', 'VOICE_STATE_UPDATES', 'MEDIA_ENGINE_VIDEO_STATE_CHANGED'],
         inlineRequire: () => n(981283).Z,
         neverLoadBeforeConnectionOpen: !0
+    },
+    LibdiscoreExperimentManager: {
+        actions: [],
+        inlineRequire: () => n(497909).Z,
+        hasStoreChangeListeners: !0
     }
 };
 (0, r.j)(i);

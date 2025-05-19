@@ -1416,6 +1416,10 @@ let eh = '@me',
         BILLING_PROMOTION_REDEMPTION_GENERIC: '/billing/promotions',
         BILLING_PROMOTION_DIRECT_FULFILLMENT_REDEMPTION: (e, t) => '/billing/partner-promotions/'.concat(e, '/').concat(t),
         NOTIFICATIONS: '/notifications',
+        NOTIFICATIONS_INBOX: (e, t) => {
+            let n = '/inbox';
+            return null != e && ((n += '/'.concat(e)), null != t && (n += '/'.concat(t))), n;
+        },
         FRIENDS: '/channels/@me',
         ME: '/channels/@me',
         MESSAGE_REQUESTS: '/message-requests',

@@ -54,7 +54,7 @@ function p(e, t) {
 }
 function f(e) {
     var t,
-        { id: n, className: i, innerClassName: f, renderIcon: g, text: m, selected: b, trailing: _, background: y, showUnread: O = !1, ref: v } = e,
+        { id: n, className: i, innerClassName: f, renderIcon: g, text: m, selected: b, trailing: y, background: O, showUnread: v = !1, ref: _ } = e,
         C = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -74,19 +74,19 @@ function f(e) {
             }
             return i;
         })(e, ['id', 'className', 'innerClassName', 'renderIcon', 'text', 'selected', 'trailing', 'background', 'showUnread', 'ref']);
-    let S = (0, o.JA)(n),
-        j = null != (t = (0, s.qg)(m)) ? t : '';
+    let j = (0, o.JA)(n),
+        S = null != (t = (0, s.qg)(m)) ? t : '';
     return (0, r.jsx)('li', {
-        ref: v,
+        ref: _,
         children: (0, r.jsxs)(
             a.kL8,
             p(h({}, C), {
-                buttonProps: p(h({}, S), {
+                buttonProps: p(h({}, j), {
                     id: n,
                     role: 'button'
                 }),
                 tag: 'div',
-                'aria-label': j,
+                'aria-label': S,
                 focusProps: {
                     offset: {
                         top: 1,
@@ -102,8 +102,8 @@ function f(e) {
                           },
                 className: l()(u.containerDefault, d.wrapper, { [d.modeSelected]: b }, i),
                 children: [
-                    y,
-                    O ? (0, r.jsx)('div', { className: l()(d.unread, d.unreadImportant) }) : null,
+                    O,
+                    v ? (0, r.jsx)('div', { className: l()(d.unread, d.unreadImportant) }) : null,
                     (0, r.jsx)('div', {
                         className: l()([d.link, d.basicChannelRowLink, f]),
                         children: (0, r.jsxs)('div', {
@@ -118,7 +118,7 @@ function f(e) {
                                     'aria-hidden': !0,
                                     children: m
                                 }),
-                                _
+                                y
                             ]
                         })
                     })

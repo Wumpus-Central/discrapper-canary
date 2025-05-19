@@ -182,13 +182,13 @@ let D = function (e) {
         }, [F, c]),
         K = i.useMemo(() => F.filter((e) => e.type === T.OGo.PENDING_INCOMING).length, [F]),
         q = c === T.pJs.PENDING && K > 0 && K >= N.yf,
-        Q = i.useCallback(
+        X = i.useCallback(
             (e) => {
                 e.stopPropagation(), u.Z.confirmClearPendingRelationships(K);
             },
             [K]
         ),
-        X = i.useCallback(
+        Q = i.useCallback(
             (e) => {
                 let n = (function (e, t, n) {
                     switch (e) {
@@ -220,7 +220,7 @@ let D = function (e) {
                                           color: s.Ttl.LINK,
                                           className: j.clearButton,
                                           size: s.zxk.Sizes.TINY,
-                                          onClick: Q,
+                                          onClick: X,
                                           'aria-label': P.intl.string(P.t.O8k7Oz),
                                           children: P.intl.string(P.t.O8k7Oz)
                                       })
@@ -240,7 +240,7 @@ let D = function (e) {
                           n
                       );
             },
-            [Y, c, t, q, Q]
+            [Y, c, t, q, X]
         );
     if (
         (i.useEffect(() => {
@@ -270,7 +270,7 @@ let D = function (e) {
                 (0, r.jsx)(I.Z, {
                     rows: Y,
                     renderRow: G,
-                    renderSection: X,
+                    renderSection: Q,
                     sectionFilter: c,
                     isVirtualizedList: D >= N.nG,
                     hasSearchQuery: J,

@@ -1,6 +1,6 @@
 n.d(t, {
     D: () => v,
-    Z: () => g
+    Z: () => j
 }),
     n(388685);
 var a = n(255367),
@@ -38,7 +38,7 @@ let f = {
                 !r &&
                     (0, a.jsxs)(o.Text, {
                         variant: 'text-md/normal',
-                        children: ['SKU: ', null == (t = j.find((e) => e.value === n.skuId)) ? void 0 : t.label]
+                        children: ['SKU: ', null == (t = g.find((e) => e.value === n.skuId)) ? void 0 : t.label]
                     }),
                 null != n.startsAt &&
                     null != n.endsAt &&
@@ -77,7 +77,7 @@ let f = {
             ]
         });
     },
-    j = [
+    g = [
         {
             label: '1 hour',
             value: s.a.PREMIUM_TIER_2_1_HOUR
@@ -91,20 +91,20 @@ let f = {
             value: s.a.PREMIUM_TIER_2_3_DAY
         }
     ];
-function g() {
+function j() {
     let [e, t] = r.useState(!1),
         [n, l] = r.useState(s.a.PREMIUM_TIER_2_1_HOUR),
         [d, f] = r.useState([]),
-        [g, _] = r.useState([]),
-        { refreshEntitlementList: y, grantFractionalPremium: C, deleteFractionalPremium: O, triggerNextEntitlementFulfillment: N, entitlements: E, loading: S } = (0, m.m)();
+        [j, _] = r.useState([]),
+        { refreshEntitlementList: y, grantFractionalPremium: C, deleteFractionalPremium: O, triggerNextEntitlementFulfillment: N, entitlements: E, loading: T } = (0, m.m)();
     r.useEffect(() => {
         y();
     }, [y]);
-    let T = (e) => e.filter((e) => null != e.endsAt && e.endsAt > new Date() && e.type === x.qc2.FRACTIONAL_REDEMPTION),
+    let S = (e) => e.filter((e) => null != e.endsAt && e.endsAt > new Date() && e.type === x.qc2.FRACTIONAL_REDEMPTION),
         P = (e) => e.filter((e) => Object.values(s.a).includes(e.skuId) && null == e.startsAt);
     return (
         r.useEffect(() => {
-            f(T(E)), _(P(E));
+            f(S(E)), _(P(E));
         }, [E]),
         (0, a.jsx)(o.zJl, {
             className: p.panel,
@@ -164,7 +164,7 @@ function g() {
                             (0, a.jsx)(o.PhF, {
                                 serialize: (e) => e,
                                 isSelected: (e) => e === n,
-                                options: j,
+                                options: g,
                                 select: l,
                                 popoutLayerContext: u.O$
                             }),
@@ -191,7 +191,7 @@ function g() {
                                         className: h.buttonGroup,
                                         children: [
                                             (0, a.jsx)(o.zxk, {
-                                                disabled: S,
+                                                disabled: T,
                                                 size: o.zxk.Sizes.TINY,
                                                 color: o.zxk.Colors.PRIMARY,
                                                 look: o.zxk.Looks.OUTLINED,
@@ -199,7 +199,7 @@ function g() {
                                                 children: 'Run fulfillment'
                                             }),
                                             (0, a.jsx)(o.zxk, {
-                                                disabled: S,
+                                                disabled: T,
                                                 size: o.zxk.Sizes.TINY,
                                                 color: o.zxk.Colors.RED,
                                                 look: o.zxk.Looks.OUTLINED,
@@ -207,7 +207,7 @@ function g() {
                                                 children: 'Delete all'
                                             }),
                                             (0, a.jsx)(o.zxk, {
-                                                disabled: S,
+                                                disabled: T,
                                                 look: o.zxk.Looks.BLANK,
                                                 size: o.zxk.Sizes.ICON,
                                                 onClick: y,
@@ -246,7 +246,7 @@ function g() {
                                         })
                                     ]
                                 }),
-                            g.length > 0 &&
+                            j.length > 0 &&
                                 (0, a.jsxs)('div', {
                                     children: [
                                         (0, a.jsx)(o.Text, {
@@ -254,7 +254,7 @@ function g() {
                                             variant: 'text-md/bold',
                                             children: 'Unconsumed Fractional Premium'
                                         }),
-                                        (0, a.jsx)('div', { children: g.map((e) => (0, a.jsx)(v, { entitlement: e }, e.id)) })
+                                        (0, a.jsx)('div', { children: j.map((e) => (0, a.jsx)(v, { entitlement: e }, e.id)) })
                                     ]
                                 })
                         ]

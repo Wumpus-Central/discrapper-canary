@@ -1,4 +1,4 @@
-n.d(t, { Z: () => S }), n(388685), n(35282);
+n.d(t, { Z: () => T }), n(388685), n(35282);
 var a = n(255367),
     r = n(73800),
     l = n(120356),
@@ -15,8 +15,8 @@ var a = n(255367),
     b = n(594174),
     f = n(55589),
     v = n(630388),
-    j = n(98357),
-    g = n(432877),
+    g = n(98357),
+    j = n(432877),
     _ = n(246992),
     y = n(894257),
     C = n(750540),
@@ -35,13 +35,13 @@ function N() {
                 };
             })
         })),
-        j = r.useCallback(() => {
+        g = r.useCallback(() => {
             var e;
             if (null == i || !i.isPrivate()) return;
             let t = (0, v.x9)(null != (e = i.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
             x.Z.updatePrivateChannelRecipientFlags(i.id, t);
         }, [i]),
-        g = null != i && !!i.isPrivate() && (0, v.yE)(null != (e = i.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
+        j = null != i && !!i.isPrivate() && (0, v.yE)(null != (e = i.recipientFlags) ? e : 0, s.V.DISMISSED_IN_GAME_MESSAGE_NUX);
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(c.Text, {
@@ -72,9 +72,9 @@ function N() {
                     }),
                     (0, a.jsx)(c.zxk, {
                         size: c.zxk.Sizes.SMALL,
-                        onClick: j,
+                        onClick: g,
                         disabled: null == n,
-                        children: g ? 'Clear NUX Flag' : 'Set NUX Flag'
+                        children: j ? 'Clear NUX Flag' : 'Set NUX Flag'
                     })
                 ]
             })
@@ -91,14 +91,14 @@ function E() {
         children: 'Open System DM'
     });
 }
-function S() {
-    let e = g.ZP.allByCategory(g.zU.MESSAGING).map((e) => {
+function T() {
+    let e = j.ZP.allByCategory(j.zU.MESSAGING).map((e) => {
         let [t, n, { label: r }] = e;
         return (0, a.jsx)(
             c.j7V,
             {
                 value: n,
-                onChange: (e) => (0, j.Z)(t, e),
+                onChange: (e) => (0, g.Z)(t, e),
                 hideBorder: !0,
                 className: C.switch,
                 children: r

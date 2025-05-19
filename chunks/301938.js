@@ -2,24 +2,24 @@ n.d(t, { Z: () => x }), n(388685), n(415506), n(457542);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
-    s = n.n(l),
+    a = n.n(l),
     o = n(990547),
-    a = n(481060),
+    s = n(481060),
     c = n(479531),
     u = n(388905),
     d = n(585483),
-    h = n(573261),
-    g = n(720196),
+    g = n(573261),
+    h = n(720196),
     p = n(981631),
     m = n(388032),
     f = n(578605),
     _ = n(20493);
 function x(e) {
-    let { setOriginalEmail: t, setSlide: l, ready: x, token: E } = e,
-        [b, v] = i.useState(!1),
-        [O, I] = i.useState(null),
-        [j, S] = i.useState(null),
-        [N, y] = i.useState(''),
+    let { setOriginalEmail: t, setSlide: l, ready: x, token: b } = e,
+        [E, v] = i.useState(!1),
+        [O, S] = i.useState(null),
+        [I, j] = i.useState(null),
+        [y, N] = i.useState(''),
         C = i.useRef(null);
     return (
         i.useEffect(() => {
@@ -31,19 +31,19 @@ function x(e) {
         (0, r.jsxs)('div', {
             children: [
                 (0, r.jsx)(u.Ee, {
-                    src: null == j ? n(26230) : n(935227),
-                    className: s()(_.marginBottom20, _.marginTop8)
+                    src: null == I ? n(26230) : n(935227),
+                    className: a()(_.marginBottom20, _.marginTop8)
                 }),
                 (0, r.jsx)(u.Dx, { children: m.intl.string(m.t['IfBQ5+']) }),
-                null != j && '' !== j
-                    ? (0, r.jsx)(a.Text, {
+                null != I && '' !== I
+                    ? (0, r.jsx)(s.Text, {
                           variant: 'text-sm/normal',
                           color: 'text-danger',
-                          children: j
+                          children: I
                       })
                     : null,
                 (0, r.jsxs)(u.gO, {
-                    className: s()(_.marginBottom20, _.marginTop20),
+                    className: a()(_.marginBottom20, _.marginTop20),
                     children: [
                         (0, r.jsx)(u.II, {
                             name: 'password',
@@ -51,8 +51,8 @@ function x(e) {
                             label: m.intl.string(m.t['8dM4FB']),
                             setRef: C,
                             className: _.marginBottom20,
-                            value: N,
-                            onChange: y,
+                            value: y,
+                            onChange: N,
                             error: O,
                             autoComplete: 'new-password',
                             maxLength: 72,
@@ -61,21 +61,21 @@ function x(e) {
                         (0, r.jsx)(u.zx, {
                             className: _.marginTop8,
                             onClick: () => {
-                                if (!b) {
-                                    if (0 === N.length) {
-                                        I(m.intl.string(m.t.R98xDw)), d.S.dispatch(p.CkL.WAVE_EMPHASIZE);
+                                if (!E) {
+                                    if (0 === y.length) {
+                                        S(m.intl.string(m.t.R98xDw)), d.S.dispatch(p.CkL.WAVE_EMPHASIZE);
                                         return;
                                     }
                                     return (
-                                        null != j && S(null),
-                                        null != O && I(null),
+                                        null != I && j(null),
+                                        null != O && S(null),
                                         t(''),
                                         v(!0),
-                                        h.Z.post({
+                                        g.Z.post({
                                             url: p.ANM.ACCOUNT_REVERT,
                                             body: {
-                                                token: E,
-                                                password: N
+                                                token: b,
+                                                password: y
                                             },
                                             trackedActionData: { event: o.NetworkActionNames.ACCOUNT_REVERT },
                                             rejectWithError: !1
@@ -84,15 +84,15 @@ function x(e) {
                                                 let {
                                                     body: { email: n }
                                                 } = e;
-                                                y(''), t(n), l(g.n.SUCCESS);
+                                                N(''), t(n), l(h.n.SUCCESS);
                                             })
                                             .catch((e) => {
-                                                if (e instanceof Error) S(m.intl.formatToPlainString(m.t.aTVNen, { statusPageURL: p.yXt.STATUS }));
+                                                if (e instanceof Error) j(m.intl.formatToPlainString(m.t.aTVNen, { statusPageURL: p.yXt.STATUS }));
                                                 else {
                                                     let t = new c.Z(e);
                                                     t.hasFieldErrors()
-                                                        ? I(t.getAnyErrorMessage())
-                                                        : S(
+                                                        ? S(t.getAnyErrorMessage())
+                                                        : j(
                                                               (function (e) {
                                                                   switch (e) {
                                                                       case p.evJ.ACCOUNT_REVERT_INVALID_TOKEN:
@@ -115,8 +115,8 @@ function x(e) {
                                     );
                                 }
                             },
-                            submitting: b,
-                            disabled: b,
+                            submitting: E,
+                            disabled: E,
                             children: m.intl.string(m.t.ezv91d)
                         })
                     ]
@@ -126,7 +126,7 @@ function x(e) {
                     children: (0, r.jsx)(u.zx, {
                         color: u.zx.Colors.PRIMARY,
                         onClick: () => {
-                            y(''), l(g.n.START);
+                            N(''), l(h.n.START);
                         },
                         children: m.intl.string(m.t.rzxnQ0)
                     })

@@ -1,92 +1,92 @@
-r.d(t, { Z: () => p });
-var n = r(255367);
-r(73800);
-var l = r(913527),
-    o = r.n(l),
-    i = r(481060),
-    a = r(925329),
-    c = r(388032),
-    s = r(965935);
+n.d(t, { Z: () => p });
+var r = n(255367);
+n(73800);
+var o = n(913527),
+    l = n.n(o),
+    i = n(481060),
+    s = n(925329),
+    a = n(388032),
+    c = n(965935);
 function u(e) {
-    let { application: t, timestamp: r } = e;
-    return (0, n.jsxs)(n.Fragment, {
+    let { application: t, timestamp: n } = e;
+    return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, n.jsx)(a.Z, {
-                size: a.Z.Sizes.LARGE,
+            (0, r.jsx)(s.Z, {
+                size: s.Z.Sizes.LARGE,
                 game: t
             }),
-            (0, n.jsxs)('div', {
-                className: s.textContainer,
+            (0, r.jsxs)('div', {
+                className: c.textContainer,
                 children: [
-                    (0, n.jsx)(i.Text, {
-                        className: s.timestamp,
+                    (0, r.jsx)(i.Text, {
+                        className: c.timestamp,
                         variant: 'text-xs/medium',
                         color: 'text-muted',
-                        children: o()(r).format('LLLL')
+                        children: l()(n).format('LLLL')
                     }),
-                    (0, n.jsx)(i.Text, {
+                    (0, r.jsx)(i.Text, {
                         variant: 'text-md/normal',
                         color: 'interactive-active',
-                        children: c.intl.format(c.t.J3s8JC, { applicationName: t.name })
+                        children: a.intl.format(a.t.J3s8JC, { applicationName: t.name })
                     })
                 ]
             })
         ]
     });
 }
-function m(e) {
-    let { application: t, timestamp: r, children: l } = e;
-    return (0, n.jsx)(i.ua7, {
+function d(e) {
+    let { application: t, timestamp: n, children: o } = e;
+    return (0, r.jsx)(i.ua7, {
         hideOnClick: !0,
         position: 'top',
-        'aria-label': c.intl.string(c.t['5nMcv7']),
-        tooltipClassName: s.gameMessageTooltip,
-        tooltipContentClassName: s.gameMessageTooltipContent,
-        text: (0, n.jsx)(u, {
+        'aria-label': a.intl.string(a.t['5nMcv7']),
+        tooltipClassName: c.gameMessageTooltip,
+        tooltipContentClassName: c.gameMessageTooltipContent,
+        text: (0, r.jsx)(u, {
             application: t,
-            timestamp: r
+            timestamp: n
         }),
         children: (e) => {
-            var t, r;
-            return (0, n.jsx)(
+            var t, n;
+            return (0, r.jsx)(
                 i.P3F,
                 ((t = (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
-                        var r = null != arguments[t] ? arguments[t] : {},
-                            n = Object.keys(r);
+                        var n = null != arguments[t] ? arguments[t] : {},
+                            r = Object.keys(n);
                         'function' == typeof Object.getOwnPropertySymbols &&
-                            (n = n.concat(
-                                Object.getOwnPropertySymbols(r).filter(function (e) {
-                                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
+                            (r = r.concat(
+                                Object.getOwnPropertySymbols(n).filter(function (e) {
+                                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                 })
                             )),
-                            n.forEach(function (t) {
-                                var n;
-                                (n = r[t]),
+                            r.forEach(function (t) {
+                                var r;
+                                (r = n[t]),
                                     t in e
                                         ? Object.defineProperty(e, t, {
-                                              value: n,
+                                              value: r,
                                               enumerable: !0,
                                               configurable: !0,
                                               writable: !0
                                           })
-                                        : (e[t] = n);
+                                        : (e[t] = r);
                             });
                     }
                     return e;
                 })({ tag: 'span' }, e)),
-                (r = r = { children: l }),
+                (n = n = { children: o }),
                 Object.getOwnPropertyDescriptors
-                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
+                    ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
                     : (function (e, t) {
-                          var r = Object.keys(e);
+                          var n = Object.keys(e);
                           if (Object.getOwnPropertySymbols) {
-                              var n = Object.getOwnPropertySymbols(e);
-                              r.push.apply(r, n);
+                              var r = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, r);
                           }
-                          return r;
-                      })(Object(r)).forEach(function (e) {
-                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(r, e));
+                          return n;
+                      })(Object(n)).forEach(function (e) {
+                          Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(n, e));
                       }),
                 t)
             );
@@ -94,20 +94,20 @@ function m(e) {
     });
 }
 function p(e) {
-    let { application: t, timestamp: r, compact: l, children: o } = e;
-    return (0, n.jsxs)(m, {
+    let { application: t, timestamp: n, compact: o, children: l } = e;
+    return (0, r.jsxs)(d, {
         application: t,
-        timestamp: r,
+        timestamp: n,
         children: [
-            l
+            o
                 ? null
-                : (0, n.jsx)(i.iWm, {
-                      className: s.gameIcon,
+                : (0, r.jsx)(i.iWm, {
+                      className: c.gameIcon,
                       size: 'custom',
                       width: 14,
                       height: 14
                   }),
-            o
+            l
         ]
     });
 }

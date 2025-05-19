@@ -2,23 +2,23 @@ n.d(t, { Z: () => d }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(893776),
-    s = n(129293),
+    a = n(129293),
     o = n(388905),
-    a = n(108427),
+    s = n(108427),
     c = n(388032),
     u = n(20493);
 function d(e) {
     let { location: t } = e,
-        [d, h] = i.useState('submitting');
+        [d, g] = i.useState('submitting');
     return (i.useEffect(() => {
-        (0, a.e)('authorize_payment');
-        let e = (0, s.Z)(t);
-        if (null == e) return void h('failed');
+        (0, s.e)('authorize_payment');
+        let e = (0, a.Z)(t);
+        if (null == e) return void g('failed');
         (async () => {
             try {
-                await l.Z.authorizePayment(e), h('succeeded');
+                await l.Z.authorizePayment(e), g('succeeded');
             } catch (e) {
-                h('failed');
+                g('failed');
             }
         })();
     }, [t]),
