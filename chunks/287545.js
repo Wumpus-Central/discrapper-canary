@@ -37,7 +37,7 @@ var i = n(772848),
     x = n(155268),
     k = n(148720),
     M = n(122613),
-    j = n(782769),
+    j = n(790920),
     U = n(16609),
     G = n(761122),
     B = n(983695),
@@ -386,7 +386,7 @@ class er extends c.Z {
                 let u = D.ZP.getSelfEmbeddedActivityForChannel(i);
                 if ((null == u ? void 0 : u.applicationId) === a) return;
                 let d = await f.ZP.fetchApplication(a);
-                if (!(0, j.a)(c)) return void this.showLaunchErrorModal(Z.intl.string(Z.t.UXoQTk));
+                if (!(0, j.a)()) return void this.showLaunchErrorModal(Z.intl.string(Z.t.UXoQTk));
                 if (!(0, B.Z)(null == d || null == (t = d.embedded_activity_config) ? void 0 : t.supported_platforms)) return void this.showLaunchErrorModal(Z.intl.string(Z.t.uGDCc3));
                 let _ = null != (n = null == c ? void 0 : c.getGuildId()) ? n : void 0,
                     { activityConfigs: p, applications: h } = await (0, w.w1)({ guildId: _ });

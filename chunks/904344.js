@@ -1,2 +1,2 @@
 n.d(t, { Z: () => r });
-let r = 'https://cdn.discordapp.com/assets/content/dedc38e7c8166294f60dcc7a30c6a0323427c69d68e3f7611d56e72b32962dbb.png';
+let r = 'https://cdn.discordapp.com/assets/content/6c57399339d685c73bf0dc6578d4a5015bbad15325ee7e715ee111813b3bfbbd.png';

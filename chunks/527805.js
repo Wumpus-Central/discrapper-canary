@@ -10,7 +10,7 @@ var r = n(442837),
     s = n(594174),
     l = n(979651),
     c = n(934415),
-    u = n(782769),
+    u = n(790920),
     d = n(983695),
     f = n(981631),
     _ = (function (e) {
@@ -45,7 +45,7 @@ function p(e) {
 }
 function h(e) {
     let { userId: t, activity: n, channelId: c, application: d } = e,
-        f = (0, u.z)(null != c ? c : void 0),
+        f = (0, u.z)(),
         _ = (0, r.e7)([s.default], () => s.default.getCurrentUser());
     return (0, r.e7)(
         [i.Z, l.Z, o.Z, a.Z],

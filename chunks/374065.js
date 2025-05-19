@@ -10,18 +10,19 @@ var r = n(442837),
     a = n(430824),
     o = n(496675),
     s = n(979651),
-    l = n(774226),
-    c = n(782769),
+    l = n(790920),
+    c = n(701488),
     u = n(981631),
     d = n(388032),
     f = (function (e) {
-        return (e[(e.CAN_LAUNCH = 0)] = 'CAN_LAUNCH'), (e[(e.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION = 1)] = 'NO_USE_EMBEDDED_ACTIVITIES_PERMISSION'), (e[(e.NO_CHANNEL_CONNECT_PERMISSION = 2)] = 'NO_CHANNEL_CONNECT_PERMISSION'), (e[(e.NO_CHANNEL = 3)] = 'NO_CHANNEL'), (e[(e.NO_GUILD = 4)] = 'NO_GUILD'), (e[(e.IS_AFK_CHANNEL = 5)] = 'IS_AFK_CHANNEL'), (e[(e.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS = 6)] = 'ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS'), e;
+        return (e[(e.CAN_LAUNCH = 0)] = 'CAN_LAUNCH'), (e[(e.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION = 1)] = 'NO_USE_EMBEDDED_ACTIVITIES_PERMISSION'), (e[(e.NO_CHANNEL_CONNECT_PERMISSION = 2)] = 'NO_CHANNEL_CONNECT_PERMISSION'), (e[(e.NO_CHANNEL = 3)] = 'NO_CHANNEL'), (e[(e.NO_GUILD = 4)] = 'NO_GUILD'), (e[(e.IS_AFK_CHANNEL = 5)] = 'IS_AFK_CHANNEL'), (e[(e.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS = 6)] = 'ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS'), (e[(e.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL = 7)] = 'ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL'), e;
     })({});
 function _(e) {
     let { channelId: t, ChannelStore: n, GuildStore: r, PermissionStore: i, VoiceStateStore: a } = e,
         o = n.getChannel(t);
-    if (!(0, l.sq)() && null == o) return 3;
-    if (!(0, c.a)(o)) return 6;
+    if (null == o) return 3;
+    if (!c.Gu.includes(o.type)) return 7;
+    if (!(0, l.a)()) return 6;
     if (null != o && !o.isPrivate()) {
         let e = o.getGuildId();
         if (null == e) return 4;

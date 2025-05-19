@@ -1,13 +1,12 @@
 n.d(t, { Z: () => l });
 var r = n(358085),
-    i = n(782769),
+    i = n(790920),
     a = n(527805),
     o = n(620662),
     s = n(981631);
 function l(e) {
     let { user: t, activity: n, application: l, channelId: c, currentUser: u, isEmbedded: d, ChannelStore: f, GuildStore: _, GuildMemberCountStore: p, RelationshipStore: h, SelectedChannelStore: m, VoiceStateStore: g, PermissionStore: E } = e,
-        b = f.getChannel(c),
-        y = (0, i.a)(b);
+        b = (0, i.a)();
     if (null == t) return !1;
     if (d && null != c)
         return (
@@ -17,7 +16,7 @@ function l(e) {
                 channelId: c,
                 currentUser: u,
                 application: l,
-                isActivitiesEnabledForCurrentPlatform: y,
+                isActivitiesEnabledForCurrentPlatform: b,
                 ChannelStore: f,
                 VoiceStateStore: g,
                 PermissionStore: E,

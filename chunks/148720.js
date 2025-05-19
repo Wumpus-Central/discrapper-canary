@@ -10,7 +10,7 @@ var r = n(668781),
     d = n(979651),
     f = n(317381),
     _ = n(638880),
-    p = n(782769),
+    p = n(790920),
     h = n(527805),
     m = n(388032);
 function g(e) {
@@ -63,9 +63,8 @@ async function E(e) {
         v = o.ZP.createFromServer(e);
     }
     if (null == O || null == v) return;
-    let I = u.default.getCurrentUser(),
-        S = s.Z.getChannel(t);
-    async function T() {
+    let I = u.default.getCurrentUser();
+    async function S() {
         null != O &&
             (await (0, _.Z)({
                 applicationId: O.applicationId,
@@ -83,12 +82,12 @@ async function E(e) {
             application: v,
             channelId: t,
             currentUser: I,
-            isActivitiesEnabledForCurrentPlatform: (0, p.a)(S),
+            isActivitiesEnabledForCurrentPlatform: (0, p.a)(),
             ChannelStore: s.Z,
             VoiceStateStore: d.Z,
             PermissionStore: c.Z,
             GuildStore: l.Z
         }),
-        handleCanJoin: T
+        handleCanJoin: S
     });
 }

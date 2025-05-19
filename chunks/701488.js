@@ -1,13 +1,14 @@
 n.d(t, {
-    $y: () => L,
+    $y: () => x,
     Cr: () => y,
     Ev: () => s,
     Fu: () => m,
-    GM: () => D,
+    GM: () => L,
+    Gu: () => w,
     In: () => p,
     JT: () => h,
     K8: () => O,
-    OF: () => w,
+    OF: () => D,
     P9: () => b,
     Pc: () => T,
     S4: () => I,
@@ -86,8 +87,9 @@ let C = {
         displays_advertisements: !1
     },
     R = [i.d4z.GUILD_TEXT, i.d4z.DM, i.d4z.GROUP_DM],
-    w = 'https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety';
-var D = (function (e) {
+    w = [...R, i.d4z.GUILD_VOICE],
+    D = 'https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety';
+var L = (function (e) {
     return (e.NORMAL = 'normal'), (e.FULL_SCREEN = 'full-screen'), e;
 })({});
-let L = 21600000;
+let x = 21600000;

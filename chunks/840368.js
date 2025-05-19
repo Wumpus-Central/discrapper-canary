@@ -9,5 +9,7 @@ e.exports = {
     caret: 'caret_d332d2',
     messageNegative: 'messageNegative_d332d2',
     messagePositive: 'messagePositive_d332d2',
-    birthdayText: 'birthdayText_d332d2'
+    birthdayText: 'birthdayText_d332d2',
+    centeredSubText: 'centeredSubText_d332d2',
+    centeredButtonContainer: 'centeredButtonContainer_d332d2'
 };
