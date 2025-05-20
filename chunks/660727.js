@@ -151,10 +151,11 @@ let k = function (e) {
                               hasTabWrapper: !0,
                               closePopout: () => m(),
                               onSelectEmoji: async (e) => {
-                                  if ((null == e ? void 0 : e.id) != null) (null == e ? void 0 : e.type) === u.B.GUILD && n(await I(e));
-                                  else if ((null == e ? void 0 : e.surrogates) != null) {
-                                      var a, o;
-                                      i(null != (o = null == (a = e.defaultDiversityChild) ? void 0 : a.surrogates) ? o : e.surrogates);
+                                  let { emoji: a } = e;
+                                  if ((null == a ? void 0 : a.id) != null) (null == a ? void 0 : a.type) === u.B.GUILD && n(await I(a));
+                                  else if ((null == a ? void 0 : a.surrogates) != null) {
+                                      var o, t;
+                                      i(null != (t = null == (o = a.defaultDiversityChild) ? void 0 : o.surrogates) ? t : a.surrogates);
                                   }
                                   m();
                               },

@@ -38,12 +38,12 @@ function f(e) {
 function b(e) {
     let { components: t, accessory: r, renderComponents: l } = e,
         { message: b } = (0, c.CJ)(),
-        [O, m] = (0, s.e4)(),
-        y = (0, s.$Y)(m),
+        [m, O] = (0, s.e4)(),
+        y = (0, s.$Y)(O),
         j = r.type === o.re.BUTTON;
     return (0, n.jsxs)('div', {
         className: p.section,
-        ref: O,
+        ref: m,
         children: [
             (0, n.jsxs)('div', {
                 className: p.children,

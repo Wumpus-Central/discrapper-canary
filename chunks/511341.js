@@ -83,8 +83,9 @@ function v(e) {
         headerClassName: P ? y.noBoxShadowMargin : void 0,
         guildId: null != n ? n : void 0,
         closePopout: E.dG,
-        onSelectEmoji: async (e, t) => {
-            await w(e), t && (T(), null == S || S());
+        onSelectEmoji: async (e) => {
+            let { emoji: t, willClose: n } = e;
+            await w(t), n && (T(), null == S || S());
         },
         pickerIntention: m.Hz.PROFILE
     });

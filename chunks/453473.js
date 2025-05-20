@@ -19,8 +19,8 @@ var r = n(255367),
     g = n(494404),
     _ = n(724757),
     b = n(213609),
-    x = n(294218),
-    E = n(373662),
+    E = n(294218),
+    x = n(373662),
     y = n(695346),
     v = n(496675),
     O = n(626135),
@@ -259,7 +259,7 @@ function V(e) {
                       : null,
                   (0, r.jsx)(A.Z, { channel: o }),
                   (0, r.jsx)(
-                      x.Z,
+                      E.Z,
                       {
                           message: t.message,
                           channel: o,
@@ -271,7 +271,7 @@ function V(e) {
                       },
                       t.message.id
                   ),
-                  (0, r.jsx)(E.ZP, {
+                  (0, r.jsx)(x.ZP, {
                       className: D.hoverBar,
                       children: (0, r.jsx)(W, {
                           savedMessage: t,
@@ -295,10 +295,10 @@ function V(e) {
                       color: 'header-secondary',
                       children: null != t.saveData.dueAt ? k.intl.string(k.t['wuQm+v']) : k.intl.string(k.t.o572FR)
                   }),
-                  (0, r.jsx)(E.ZP, {
+                  (0, r.jsx)(x.ZP, {
                       className: D.hoverBar,
                       children: (0, r.jsx)(
-                          E.sF,
+                          x.sF,
                           {
                               label: k.intl.string(k.t.SvXS1d),
                               icon: f.XHJ,
@@ -328,7 +328,7 @@ function W(e) {
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(
-                      E.sF,
+                      x.sF,
                       {
                           label: k.intl.string(k.t.yjGtdH),
                           icon: f.dz2,
@@ -342,7 +342,7 @@ function W(e) {
                       'mark-complete'
                   ),
                   (0, r.jsx)(
-                      E.sF,
+                      x.sF,
                       {
                           label: k.intl.string(k.t.vrbqs7),
                           icon: f.vdY,
@@ -361,9 +361,9 @@ function W(e) {
                       },
                       'edit-reminder'
                   ),
-                  (0, r.jsx)(E.fO, {}),
+                  (0, r.jsx)(x.fO, {}),
                   (0, r.jsx)(
-                      E.sF,
+                      x.sF,
                       {
                           label: k.intl.string(k.t['+TSRGB']),
                           icon: f.d4D,
@@ -372,7 +372,7 @@ function W(e) {
                       'jump-to-message'
                   ),
                   (0, r.jsx)(
-                      E.sF,
+                      x.sF,
                       {
                           label: k.intl.string(k.t.SvXS1d),
                           icon: f.plf,
@@ -385,7 +385,7 @@ function W(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(
-                      E.sF,
+                      x.sF,
                       {
                           label: k.intl.string(k.t.mJ3P0N),
                           icon: f.T39,
@@ -405,7 +405,7 @@ function W(e) {
                       'create-reminder'
                   ),
                   (0, r.jsx)(
-                      E.sF,
+                      x.sF,
                       {
                           label: k.intl.string(k.t['+TSRGB']),
                           icon: f.d4D,
@@ -414,7 +414,7 @@ function W(e) {
                       'jump-to-message'
                   ),
                   (0, r.jsx)(
-                      E.sF,
+                      x.sF,
                       {
                           label: k.intl.string(k.t.SvXS1d),
                           icon: f.plf,

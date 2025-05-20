@@ -63,6 +63,7 @@ function h(e) {
                           disabled: O.disabled,
                           submitting: O.loading,
                           wrapperClassName: p.primaryButton,
+                          themeColor: 'secondary',
                           fullWidth: !0,
                           onClick: I
                       })
@@ -72,6 +73,7 @@ function h(e) {
                       tooltipText: null != (m = v.tooltip) ? m : _.intl.string(_.t.eU3inJ),
                       disabled: v.disabled,
                       submitting: v.loading,
+                      themeColor: 'secondary',
                       fullWidth: !0,
                       onClick: S
                   })

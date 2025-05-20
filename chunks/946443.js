@@ -19,8 +19,8 @@ var r = n(255367),
     g = n(216789),
     _ = n(626135),
     b = n(585483),
-    x = n(358085),
-    E = n(143316),
+    E = n(358085),
+    x = n(143316),
     y = n(240126),
     v = n(791914),
     O = n(147522),
@@ -68,7 +68,7 @@ function N(e) {
         (P = F),
         i.useEffect(() => {
             let e = (e) => {
-                ((0, x.isMac)() || (0, x.isMacWeb)() ? e.metaKey : e.ctrlKey) && !e.shiftKey && !e.altKey && 'z' === e.key && P.undoMarkChannelRead();
+                ((0, E.isMac)() || (0, E.isMacWeb)() ? e.metaKey : e.ctrlKey) && !e.shiftKey && !e.altKey && 'z' === e.key && P.undoMarkChannelRead();
             };
             return (
                 document.addEventListener('keydown', e),
@@ -119,7 +119,7 @@ function N(e) {
                 setTab: w,
                 badgeState: L,
                 closePopout: D,
-                children: (0, r.jsx)(E.Z, {
+                children: (0, r.jsx)(x.Z, {
                     type: 'top-header',
                     onClick: V
                 })

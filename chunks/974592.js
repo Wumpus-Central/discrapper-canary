@@ -25,7 +25,9 @@ let f = [
         eligiblePlanIds: [o.Xh.PREMIUM_YEAR_TIER_2, o.Xh.PREMIUM_MONTH_TIER_2],
         planSelection: {
             heading: () => s.intl.string(s.t['o2XB4+']),
-            gradient: ['rgba(255, 144, 144, 1)', 'rgba(243, 14, 216, 1)'],
+            gradientConfig: {
+                gradient: ['rgba(255, 144, 144, 1)', 'rgba(243, 14, 216, 1)']
+            },
             getImageUrl: () => l.Z,
             getBackgroundImageUrl: () => u.Z
         },
@@ -47,14 +49,17 @@ let f = [
             desktopBannerText: () => s.intl.string(s.t['wxgA+v']),
             mobileBannerText: () => s.intl.string(s.t.d4uO8v),
             getImageUrl: () => '',
-            gradient: () => ['rgba(255, 144, 144, 1)', 'rgba(243, 14, 216, 1)']
+            gradientConfig: () => ({
+                gradient: ['rgba(255, 144, 144, 1)', 'rgba(243, 14, 216, 1)']
+            })
         },
         billingSettingsMarketingBanner: {
             getAnimatedImageUrl: () => d.Z,
             getStaticImageUrl: () => l.Z,
             getBackgroundImageUrl: () => c.Z,
             title: () => s.intl.string(s.t.hFzI4u),
-            body: () => s.intl.string(s.t.rbWKaW)
+            body: () => s.intl.string(s.t.rbWKaW),
+            gradientConfig: { gradient: ['rgba(221, 98, 98, 1), rgba(171, 12, 152, 1)'] }
         },
         giftPurchaseConfirmation: {
             yearGiftText: s.t.p0pZXF,

@@ -1,8 +1,8 @@
 r.d(t, {
     HI: () => f,
     _H: () => b,
-    af: () => O,
-    tx: () => m
+    af: () => m,
+    tx: () => O
 }),
     r(388685);
 var n = r(524846),
@@ -51,7 +51,7 @@ function b(e, t, r) {
         }))
     ];
 }
-function O(e, t, r) {
+function m(e, t, r) {
     let n = i.Z.getChannel(t);
     return null == n
         ? []
@@ -66,7 +66,7 @@ function O(e, t, r) {
               label: e.name
           }));
 }
-function m(e, t) {
+function O(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     if (null == e) return;
     let l = a.Z.getGuild(t);

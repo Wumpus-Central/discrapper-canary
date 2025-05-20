@@ -193,8 +193,9 @@ class v extends i.PureComponent {
     handleTabOrEnterDown(e) {
         (e.which === h.yXg.TAB && this.props.onTab()) || (e.which === h.yXg.ENTER && this.props.onEnter(e)) ? (e.preventDefault(), e.stopPropagation()) : e.which === h.yXg.ESCAPE ? (e.preventDefault(), e.stopPropagation(), this.props.hideAutocomplete()) : e.which === h.yXg.TAB && this.hasOpenCodeBlock() && (e.preventDefault(), e.stopPropagation(), this.insertText('\t', void 0, !1));
     }
-    insertEmoji(e, t) {
-        this.insertText(''.concat(y).concat(e.name).concat(y), void 0, t);
+    insertEmoji(e) {
+        let { emoji: t, addSpace: n = !1 } = e;
+        this.insertText(''.concat(y).concat(t.name).concat(y), void 0, n);
     }
     getFirstText() {
         return this.props.value;

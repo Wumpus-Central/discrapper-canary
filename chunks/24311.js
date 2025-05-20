@@ -16,10 +16,10 @@ function f(e) {
     let { user: n, context: f, label: p, joinCallVideo: O, id: m, onCall: h } = e,
         j = (0, o.Aq)(),
         P = (0, i.e7)([s.default], () => s.default.getId() === n.id),
-        v = (0, i.e7)([d.Z], () => d.Z.isBlocked(n.id)),
-        x = (0, i.e7)([g.Z, c.Z], () => g.Z.getVoiceChannelId() === c.Z.getDMFromUserId(n.id));
-    if (P || f === b.IlC.POPOUT || x || n.bot || n.isProvisional) return null;
-    let y = () => {
+        x = (0, i.e7)([d.Z], () => d.Z.isBlocked(n.id)),
+        v = (0, i.e7)([g.Z, c.Z], () => g.Z.getVoiceChannelId() === c.Z.getDMFromUserId(n.id));
+    if (P || f === b.IlC.POPOUT || v || n.bot || n.isProvisional) return null;
+    let _ = () => {
             null == h || h(),
                 a.Z.openPrivateChannel({
                     recipientIds: n.id,
@@ -29,11 +29,11 @@ function f(e) {
                 j.dispatch(b.CkL.POPOUT_CLOSE),
                 (0, r.pTH)();
         },
-        N = !u.ZP.disableCallUserConfirmationPrompt;
+        y = !u.ZP.disableCallUserConfirmationPrompt;
     return (0, l.jsx)(r.sNh, {
         id: null != m ? m : 'call',
         label: null != p ? p : Z.intl.string(Z.t.JJogjo),
-        action: N
+        action: y
             ? () => {
                   (0, r.ZDy)(async () => {
                       let { default: e } = await t.e('27157').then(t.bind(t, 736454));
@@ -64,11 +64,11 @@ function f(e) {
                                           });
                                   }
                                   return e;
-                              })({ onSubmit: y }, n)
+                              })({ onSubmit: _ }, n)
                           );
                   });
               }
-            : y,
-        disabled: v
+            : _,
+        disabled: x
     });
 }

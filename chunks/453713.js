@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(536895),
     d = n(866442),
     f = n(481060),
-    p = n(209613),
-    b = n(429368),
+    b = n(209613),
+    p = n(429368),
     g = n(724994),
     h = n(388032),
     m = n(820612);
@@ -85,14 +85,14 @@ let O = s()((e) => {
         return t ? f.TVs.unsafe_rawColors.PRIMARY_700.css : f.TVs.unsafe_rawColors.PRIMARY_200.css;
     }),
     x = (e) => {
-        let { variantGroupProduct: t, variant: n, variantIndex: i, totalVariants: o, selectedVariantIndex: s, onEnter: d, onLeave: p, minimal: x } = e,
+        let { variantGroupProduct: t, variant: n, variantIndex: i, totalVariants: o, selectedVariantIndex: s, onEnter: d, onLeave: b, minimal: x } = e,
             { isPurchased: S } = (0, g.L)(n),
             j = (0, c.JA)('shop-variants-group-'.concat(t.storeListingId, '-').concat(i)),
             { onFocus: y } = j,
             E = v(j, ['onFocus']),
             P = l.useCallback(
                 (e) => {
-                    e.preventDefault(), e.stopPropagation(), (0, b.$)(t, i), y();
+                    e.preventDefault(), e.stopPropagation(), (0, p.$)(t, i), y();
                 },
                 [y, t, i]
             );
@@ -111,7 +111,7 @@ let O = s()((e) => {
                         },
                         onMouseLeave: () => {
                             var t;
-                            p(), null == (t = e.onMouseLeave) || t.call(e);
+                            b(), null == (t = e.onMouseLeave) || t.call(e);
                         },
                         onFocus: () => {
                             var t;
@@ -119,7 +119,7 @@ let O = s()((e) => {
                         },
                         onBlur: () => {
                             var t;
-                            p(), null == (t = e.onMouseLeave) || t.call(e);
+                            b(), null == (t = e.onMouseLeave) || t.call(e);
                         },
                         onClick: P,
                         onKeyDown: (e) => {
@@ -148,11 +148,11 @@ let O = s()((e) => {
     },
     S = (e) => {
         var t, n;
-        let { variantGroupProduct: l, className: i, previewingVariantIndexProps: o, setIsHoveringOnSwitch: s, minimal: d, selectedVariantIndex: b, alternativeBackgroundColor: g } = e,
+        let { variantGroupProduct: l, className: i, previewingVariantIndexProps: o, setIsHoveringOnSwitch: s, minimal: d, selectedVariantIndex: p, alternativeBackgroundColor: g } = e,
             O = o.previewingVariantIndex,
-            S = null == (t = l.variants) ? void 0 : t[b],
+            S = null == (t = l.variants) ? void 0 : t[p],
             j = null !== O ? (null == (n = l.variants) ? void 0 : n[O]) : void 0,
-            y = (0, p.Z)('shop-variants-group-'.concat(l.storeListingId), u.hy.HORIZONTAL);
+            y = (0, b.Z)('shop-variants-group-'.concat(l.storeListingId), u.hy.HORIZONTAL);
         if (null == S) return null;
         let E = null != j ? j.variantLabel : null == S ? void 0 : S.variantLabel;
         return (0, r.jsx)(c.bG, {
@@ -185,7 +185,7 @@ let O = s()((e) => {
                                                           variantGroupProduct: l,
                                                           variant: e,
                                                           variantIndex: t,
-                                                          selectedVariantIndex: b,
+                                                          selectedVariantIndex: p,
                                                           totalVariants: null != (i = null == (n = l.variants) ? void 0 : n.length) ? i : 0,
                                                           onEnter: () => o.handleEntering(t),
                                                           onLeave: o.handleLeaving,

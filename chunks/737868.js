@@ -176,8 +176,9 @@ let T = (e) => {
                                                 return (0, l.jsx)(h.Z, {
                                                     guildId: T,
                                                     closePopout: n,
-                                                    onSelectEmoji: (e, t) => {
-                                                        ee(e), t && (n(), null == e && J());
+                                                    onSelectEmoji: (e) => {
+                                                        let { emoji: t, willClose: l } = e;
+                                                        ee(t), l && (n(), null == t && J());
                                                     },
                                                     pickerIntention: E.Hz.COMMUNITY_CONTENT,
                                                     onNavigateAway: J,

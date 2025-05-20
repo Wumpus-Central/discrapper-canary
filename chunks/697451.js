@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(566620),
     _ = n(403404),
     b = n(100527),
-    x = n(906732),
-    E = n(783097),
+    E = n(906732),
+    x = n(783097),
     y = n(581364),
     v = n(592180),
     O = n(726033),
@@ -93,7 +93,7 @@ function M(e) {
 }
 function U(e, t, n, i, l, o) {
     var s, c, u;
-    let { message: d, compact: m, channel: f, isInteractionUserBlocked: h, isInteractionUserIgnored: g, showAvatarPopout: _, showTargetAvatarPopout: b, onClickAvatar: x, onUserContextMenu: E, onClickTargetAvatar: y, onTargetUserContextMenu: v, onPopoutRequestClose: O } = e;
+    let { message: d, compact: m, channel: f, isInteractionUserBlocked: h, isInteractionUserIgnored: g, showAvatarPopout: _, showTargetAvatarPopout: b, onClickAvatar: E, onUserContextMenu: x, onClickTargetAvatar: y, onTargetUserContextMenu: v, onPopoutRequestClose: O } = e;
     if (m && 1 === n) return null;
     if ((m && null == d.activityInstance) || h || g)
         return (0, r.jsx)('div', {
@@ -128,8 +128,8 @@ function U(e, t, n, i, l, o) {
                 user: t,
                 guildId: f.guild_id,
                 guildAvatar: j,
-                onClick: 1 === n ? y : x,
-                onContextMenu: 1 === n ? v : E,
+                onClick: 1 === n ? y : E,
+                onContextMenu: 1 === n ? v : x,
                 ref: o
             }),
         I = 1 === n ? b : _;
@@ -175,7 +175,7 @@ function H(e) {
     var t;
     let n,
         { message: l, channel: o } = e,
-        { analyticsLocations: c } = (0, x.ZP)(b.Z.EXECUTED_COMMAND),
+        { analyticsLocations: c } = (0, E.ZP)(b.Z.EXECUTED_COMMAND),
         f = (0, d.e7)([C.default], () => C.default.getCurrentUser()),
         S = i.useRef(null),
         P = i.useRef(null),
@@ -298,7 +298,7 @@ function H(e) {
                                     children: c
                                 });
                             {
-                                let e = (0, E.XZ)(c);
+                                let e = (0, x.XZ)(c);
                                 return (0, r.jsx)(
                                     p.P3F,
                                     L(D({}, i), {
@@ -376,7 +376,7 @@ function H(e) {
               })
             : R.intl.format(R.t['6FeSyc'], { userHook: J });
     }
-    return (0, r.jsx)(x.Gt, {
+    return (0, r.jsx)(E.Gt, {
         value: c,
         children: (0, r.jsx)('div', {
             className: a()(k.repliedMessage, k.messageSpine, k.executedCommand, X),

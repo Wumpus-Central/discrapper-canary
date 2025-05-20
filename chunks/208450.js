@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(857595),
     _ = n(607070),
     b = n(313201),
-    x = n(592125),
-    E = n(984933),
+    E = n(592125),
+    x = n(984933),
     y = n(768119),
     v = n(944486),
     O = n(585483),
@@ -214,9 +214,9 @@ class D extends i.PureComponent {
                 let { prefillCurrentChannel: t } = e;
                 if (!t) return void this.focusEditor();
                 let n = v.Z.getChannelId(),
-                    r = x.Z.getChannel(n);
-                if (((null == r ? void 0 : r.isThread()) && (r = x.Z.getChannel(null == r ? void 0 : r.parent_id)), null == r || r.isPrivate())) return void this.focusEditor();
-                let i = E.ZP.getTextChannelNameDisambiguations(r.getGuildId())[r.id],
+                    r = E.Z.getChannel(n);
+                if (((null == r ? void 0 : r.isThread()) && (r = E.Z.getChannel(null == r ? void 0 : r.parent_id)), null == r || r.isPrivate())) return void this.focusEditor();
+                let i = x.ZP.getTextChannelNameDisambiguations(r.getGuildId())[r.id],
                     l = null != i ? i.name : r.name;
                 Promise.resolve().then(() => {
                     let { _editorRef: e } = this;

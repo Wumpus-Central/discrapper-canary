@@ -17,12 +17,12 @@ function g(e) {
     let t,
         n,
         g,
-        { author: _, banned: b, channelId: x } = e,
-        E = (0, i.e7)([s.default], () => s.default.getId()),
+        { author: _, banned: b, channelId: E } = e,
+        x = (0, i.e7)([s.default], () => s.default.getId()),
         y = p.ZP.useName(_),
-        v = E === _.id,
+        v = x === _.id,
         O = (0, i.e7)([c.Z, u.Z], () => {
-            let e = c.Z.getChannel(x);
+            let e = c.Z.getChannel(E);
             if (null == e) return !1;
             if (e.isPrivate()) return !0;
             if (e.isThread()) {
@@ -48,7 +48,7 @@ function g(e) {
                                   plainText: t,
                                   rawText: '<@'.concat(e, '>')
                               }),
-                                  null != x && l.Z.startTyping(x);
+                                  null != E && l.Z.startTyping(E);
                           },
                           children: f.intl.string(f.t.P8tvKC)
                       })))

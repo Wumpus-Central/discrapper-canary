@@ -14,13 +14,13 @@ function b(e) {
     var t;
     let { channelTypes: r } = e,
         b = (0, s.CJ)(),
-        O = null == b || null == (t = b.message) ? void 0 : t.getChannelId(),
-        m = a.Z.getChannel(O),
-        y = c.Z.getGuild(null == m ? void 0 : m.getGuildId()),
+        m = null == b || null == (t = b.message) ? void 0 : t.getChannelId(),
+        O = a.Z.getChannel(m),
+        y = c.Z.getGuild(null == O ? void 0 : O.getGuildId()),
         j = l.useMemo(() => (0, u.tx)(e.defaultValues, null == y ? void 0 : y.id, r), [e.defaultValues, y, r]);
     return (0, n.jsx)(d.ZP, {
         selectActionComponent: e,
-        queryOptions: (e) => (0, u.af)(e, O, r),
+        queryOptions: (e) => (0, u.af)(e, m, r),
         renderIcon: (e, t) => {
             let r = a.Z.getChannel(null == e ? void 0 : e.value);
             if (null == r) return null;

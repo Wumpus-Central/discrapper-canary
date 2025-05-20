@@ -24,6 +24,7 @@ function d(e) {
           })
         : (0, r.jsx)(s.tG, {
               text: u.intl.string(u.t.vwl1PD),
+              themeColor: 'secondary',
               fullWidth: !0,
               onClick: _
           });

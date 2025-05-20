@@ -20,8 +20,8 @@ function j(e) {
         { activeSubscription: j, selectedSkuId: _, setSelectedPlanId: L, startedPaymentFlowWithPaymentSourcesRef: m } = (0, u.JL)(),
         { isGift: g } = (0, c.wD)(),
         E = null != j ? (0, d.Af)(j) : null,
-        S = null != E ? (0, d.gq)(E.planId) : null,
-        y = null != E ? (0, d.Rd)(E.planId) : null,
+        y = null != E ? (0, d.gq)(E.planId) : null,
+        S = null != E ? (0, d.Rd)(E.planId) : null,
         I = (0, x.Kp)({
             isTrial: !1,
             isGift: g,
@@ -29,11 +29,11 @@ function j(e) {
             startedPaymentFlowWithPaymentSources: m.current
         });
     return (
-        s()(null != y, 'Expected premium type'),
+        s()(null != S, 'Expected premium type'),
         (0, l.jsx)(C.Z, {
-            premiumType: y,
+            premiumType: S,
             titleText: h.intl.string(h.t['7VcWW1']),
-            subtitleText: h.intl.format(h.t.Qk34Ii, { subscriptionName: S }),
+            subtitleText: h.intl.format(h.t.Qk34Ii, { subscriptionName: y }),
             footer: (0, l.jsxs)('div', {
                 className: f.whatYouLoseButtonContainer,
                 children: [

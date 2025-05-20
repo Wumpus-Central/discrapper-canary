@@ -2,8 +2,8 @@ n.d(t, { Z: () => p });
 var o = n(255367);
 n(73800);
 var r = n(481060),
-    i = n(906732),
-    c = n(705556),
+    c = n(906732),
+    i = n(705556),
     a = n(30556),
     l = n(664794),
     s = n(522182),
@@ -12,15 +12,15 @@ var r = n(481060),
     f = n(981631);
 function p(e) {
     let { user: t, currentUser: n, guildId: p, relationshipType: m, onClose: b } = e,
-        { newestAnalyticsLocation: _ } = (0, i.ZP)(),
-        { gameFriends: g, hasOutgoingPendingGameFriends: h, hasIncomingPendingGameFriends: y } = (0, u.H)({ userId: t.id }),
-        x = g.length > 0 || h || y;
+        { newestAnalyticsLocation: _ } = (0, c.ZP)(),
+        { gameFriends: y, hasOutgoingPendingGameFriends: h, hasIncomingPendingGameFriends: x } = (0, u.H)({ userId: t.id }),
+        g = y.length > 0 || h || x;
     return m === f.OGo.BLOCKED
         ? null
         : t.id === n.id
           ? (0, o.jsxs)(o.Fragment, {
                 children: [
-                    (0, o.jsx)(c.Z, {
+                    (0, o.jsx)(i.Z, {
                         user: t,
                         guildId: p,
                         onClose: b
@@ -77,7 +77,7 @@ function p(e) {
                         })
                     ]
                 })
-              : m === f.OGo.NONE && x
+              : m === f.OGo.NONE && g
                 ? (0, o.jsxs)(o.Fragment, {
                       children: [
                           (0, o.jsx)(a.Z, {
@@ -91,9 +91,9 @@ function p(e) {
                               user: t,
                               analyticsLocation: _,
                               themeColor: 'secondary',
-                              gameFriends: g,
+                              gameFriends: y,
                               shouldShowTooltip: !0,
-                              hasIncomingPendingGameFriends: y,
+                              hasIncomingPendingGameFriends: x,
                               hasOutgoingPendingGameFriends: h
                           }),
                           (0, o.jsx)(l.Z, {

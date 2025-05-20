@@ -124,7 +124,8 @@ function F(e) {
                       image: X,
                       smallImage: J,
                       size: t,
-                      aspectRatio: e
+                      aspectRatio: e,
+                      className: M.image
                   })
                 : (0, r.jsx)(p.E, {
                       image: X,

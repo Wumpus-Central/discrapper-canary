@@ -14,7 +14,7 @@ function c(e) {
             onClick: () => (0, l.o)(o.Hw.ALBUM, s.extra.media.external_parent_id),
             ariaDescription: a.intl.formatToPlainString(a.t.xTsar6, { itemName: s.extra.media.parent_title })
         },
-        O = {
+        m = {
             onClick: () => (0, l.o)(o.Hw.ARTIST, s.extra.artist.external_id),
             ariaDescription: a.intl.formatToPlainString(a.t.xTsar6, { itemName: f })
         };
@@ -49,7 +49,7 @@ function c(e) {
             {
                 title: f,
                 thumbnailUrl: p,
-                titleClickable: O,
+                titleClickable: m,
                 subtitleClickable: b,
                 thumbnailClickable: b,
                 userDescription: a.t.CcVI1d,

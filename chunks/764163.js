@@ -78,20 +78,21 @@ function C(e) {
                     channel: x,
                     closePopout: t,
                     onNavigateAway: t,
-                    onSelectEmoji: (e, n) => {
-                        null != e &&
+                    onSelectEmoji: (e) => {
+                        let { emoji: n, willClose: r } = e;
+                        null != n &&
                             s(
-                                null != e.id
+                                null != n.id
                                     ? {
-                                          id: e.id,
+                                          id: n.id,
                                           name: void 0
                                       }
                                     : {
                                           id: void 0,
-                                          name: e.optionallyDiverseSequence
+                                          name: n.optionallyDiverseSequence
                                       }
                             ),
-                            n && t();
+                            r && t();
                     }
                 });
             },

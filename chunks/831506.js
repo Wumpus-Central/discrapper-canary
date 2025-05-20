@@ -58,7 +58,7 @@ function b(e) {
     for (let { user: e, status: r, activities: i } of t.presences) !1 !== _(t.id, e.id, i, r) && (n = !0);
     return n;
 }
-function x(e, t) {
+function E(e, t) {
     let n = !1;
     return (
         t.forEach((t) => {
@@ -67,7 +67,7 @@ function x(e, t) {
         n
     );
 }
-function E() {
+function x() {
     let e = s.default.getId(),
         t = u.Z.getActivities();
     return _(d.ME, e, t);
@@ -84,7 +84,7 @@ function y(e) {
 }
 class v extends (r = a.ZP.Store) {
     initialize() {
-        this.syncWith([u.Z], E), this.waitFor(u.Z, c.Z);
+        this.syncWith([u.Z], x), this.waitFor(u.Z, c.Z);
     }
     getParty(e) {
         return null != e && null != f[e] ? f[e] : null;
@@ -144,7 +144,7 @@ let O = new v(o.Z, {
     },
     THREAD_MEMBER_LIST_UPDATE: function (e) {
         let { guildId: t, members: n } = e;
-        return x(
+        return E(
             t,
             n.map((e) => e.presence)
         );
@@ -153,7 +153,7 @@ let O = new v(o.Z, {
         let { guildId: t, addedMembers: n } = e;
         return (
             null != n &&
-            x(
+            E(
                 t,
                 n.map((e) => e.presence)
             )

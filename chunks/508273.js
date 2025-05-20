@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(137162),
     _ = n(15210),
     b = n(43542),
-    x = n(910200),
-    E = n(358595),
+    E = n(910200),
+    x = n(358595),
     y = n(981631),
     v = n(388032),
     O = n(583136);
@@ -51,7 +51,7 @@ function j(e) {
                 : {};
         }, [_, S, T, Z]);
     return null == R
-        ? (0, r.jsx)(E.Z, {})
+        ? (0, r.jsx)(x.Z, {})
         : (0, r.jsxs)(s.P3F, {
               className: a()(O.guildInviteContainer, { [O.clickable]: S && _ }),
               onClick: k,
@@ -72,11 +72,11 @@ function j(e) {
                                     })
                                 })
                               : null,
-                          (0, r.jsx)(x.Z7, {
+                          (0, r.jsx)(E.Z7, {
                               profile: R,
                               className: O.banner
                           }),
-                          (0, r.jsx)(x.N3, { profile: R }),
+                          (0, r.jsx)(E.N3, { profile: R }),
                           (0, r.jsx)(b.Z, { profile: R }),
                           (0, r.jsx)(g.E, {
                               profile: R,
@@ -127,7 +127,7 @@ function C(e) {
     let { invite: t, profile: n, isMemberOfGuild: l, message: a, submitting: o, onTransitionToInviteChannel: s, onAcceptInstantInvite: u, inIterationExperiment: m } = e,
         { guildId: f, ctaType: g } = (0, h.ZP)(n, h.F3.INVITE),
         { analyticsLocations: b } = (0, p.ZP)(d.Z.INVITE_EMBED),
-        x = i.useCallback(() => {
+        E = i.useCallback(() => {
             let e = l ? 'transition' : 'accept';
             (0, c.r$)(
                 {
@@ -148,7 +148,7 @@ function C(e) {
               onGoToGuild: s,
               onAcceptInvite: u,
               onStartApplication: u,
-              onComplete: x,
+              onComplete: E,
               inIterationExperiment: m
           });
 }

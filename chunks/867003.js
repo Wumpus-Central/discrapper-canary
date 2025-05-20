@@ -2,7 +2,7 @@ n.d(t, {
     L0: () => g,
     Rr: () => b,
     tp: () => _,
-    wT: () => x
+    wT: () => E
 });
 var r = n(704215),
     i = n(605236),
@@ -45,7 +45,7 @@ let m = 3 * o.Z.Millis.DAY,
             return l.Z.isIgnored(e) && t > a && t < h;
         });
     },
-    x = (e, t, n, r) => {
+    E = (e, t, n, r) => {
         a.default.track(p.rMx.IGNORE_USER_FEEDBACK_SUBMITTED, {
             rating: e,
             feedback: t,

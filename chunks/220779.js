@@ -174,8 +174,15 @@ let T = (e, t) => {
                                     closePopout: () => {
                                         c(!1);
                                     },
-                                    onSelectEmoji: (e, n, r) => {
-                                        null != e && (t(e, n, r), c(!1));
+                                    onSelectEmoji: (e) => {
+                                        let { emoji: n, willClose: r, isBurst: i } = e;
+                                        null != n &&
+                                            (t({
+                                                emoji: n,
+                                                willClose: r,
+                                                isBurst: i
+                                            }),
+                                            c(!1));
                                     }
                                 })
                             })

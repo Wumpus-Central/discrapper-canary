@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => E });
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(490897),
     _ = n(388032),
     b = n(264634);
-function x(e) {
-    let { onOpen: t, onClose: n, className: x, 'data-jump-section': E } = e,
+function E(e) {
+    let { onOpen: t, onClose: n, className: E, 'data-jump-section': x } = e,
         y = i.useRef(null),
         v = (0, l.e7)([m.default], () => m.default.getCurrentUser()),
         O = (0, o.Q3)('RecentsButton'),
@@ -76,7 +76,7 @@ function x(e) {
                             (o = o =
                                 {
                                     ref: y,
-                                    className: x,
+                                    className: E,
                                     onClick: e,
                                     icon: a.xx7,
                                     iconSize: O ? N : void 0,
@@ -84,7 +84,7 @@ function x(e) {
                                     tooltip: t ? null : _.intl.string(_.t.GSmTKC),
                                     selected: t,
                                     showBadge: C || I || i,
-                                    'data-jump-section': E
+                                    'data-jump-section': x
                                 }),
                             Object.getOwnPropertyDescriptors
                                 ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(o))

@@ -654,16 +654,17 @@ function eb(e, t, n) {
     return (0, r.jsx)(w.$, {
         channel: e,
         closePopout: n,
-        onSelectEmoji: (r, i, l) => {
+        onSelectEmoji: (r) => {
+            let { emoji: i, willClose: l, isBurst: a } = r;
             eg({
                 type: 'add',
-                emoji: r,
+                emoji: i,
                 channel: e,
                 message: t,
                 location: T.TW.MESSAGE_REACTION_PICKER,
-                isBurst: l
+                isBurst: a
             }),
-                i && (l ? s()(n, 150)() : n());
+                l && (a ? s()(n, 150)() : n());
         },
         analyticsOverride: l,
         messageId: t.id

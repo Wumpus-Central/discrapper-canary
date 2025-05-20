@@ -1,39 +1,42 @@
 n.d(t, {
-    B1: () => k,
-    DR: () => N,
-    F$: () => w,
-    Ov: () => j,
-    R2: () => M,
-    Sm: () => T,
-    fK: () => x,
-    fi: () => U,
-    jr: () => L,
-    mK: () => A,
-    oK: () => C,
-    oc: () => R,
-    p8: () => G,
-    qg: () => D
-});
+    B1: () => j,
+    DR: () => P,
+    F$: () => L,
+    Ov: () => G,
+    R2: () => U,
+    Sm: () => N,
+    fK: () => M,
+    fi: () => B,
+    jr: () => k,
+    mK: () => C,
+    oK: () => R,
+    oc: () => D,
+    p8: () => F,
+    qg: () => x
+}),
+    n(49124);
 var r = n(561842),
     i = n(664081),
     o = n(311570),
     a = n(544891),
     s = n(570140),
     l = n(37234),
-    c = n(881052);
+    c = n(881052),
+    u = n(432877);
 n(777639);
-var u = n(703656),
-    d = n(1870),
-    f = n(549616),
-    _ = n(833798),
-    p = n(778787),
-    h = n(161226),
-    m = n(251728),
-    g = n(303952),
-    E = n(578976),
-    b = n(439170),
-    y = n(981631);
-function O(e, t, n) {
+var d = n(703656),
+    f = n(748147),
+    _ = n(1870),
+    p = n(549616),
+    h = n(833798),
+    m = n(778787),
+    g = n(161226),
+    E = n(251728),
+    b = n(303952),
+    y = n(578976),
+    O = n(439170),
+    v = n(981631);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -46,7 +49,7 @@ function O(e, t, n) {
         e
     );
 }
-function v(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -57,23 +60,23 @@ function v(e) {
                 })
             )),
             r.forEach(function (t) {
-                O(e, t, n[t]);
+                I(e, t, n[t]);
             });
     }
     return e;
 }
-function I(e, t) {
+function T(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = S(e, t);
+        i = A(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function S(e, t) {
+function A(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -83,96 +86,103 @@ function S(e, t) {
     return i;
 }
 n(597688), n(328347), n(874703), n(52030);
-let T = (e) => {
-        s.Z.dispatch(v({ type: 'COLLECTIBLES_SHOP_OPEN' }, e));
-    },
-    A = (e) => {
-        var { openInLayer: t = !0, tab: n } = e;
-        T(I(e, ['openInLayer', 'tab'])), t ? (0, l.jN)(y.S9g.COLLECTIBLES_SHOP) : (0, u.uL)(n ? y.Z5c.COLLECTIBLES_SHOP_WITH_TAB(n) : y.Z5c.COLLECTIBLES_SHOP);
-    },
-    N = () => {
-        s.Z.dispatch({ type: 'COLLECTIBLES_SHOP_CLOSE' }), (0, l.xf)();
+let N = (e) => {
+        s.Z.dispatch(S({ type: 'COLLECTIBLES_SHOP_OPEN' }, e));
     },
     C = (e) => {
+        var { openInLayer: t = !0, tab: n } = e;
+        N(T(e, ['openInLayer', 'tab'])), t ? (0, l.jN)(v.S9g.COLLECTIBLES_SHOP) : (0, d.uL)(n ? v.Z5c.COLLECTIBLES_SHOP_WITH_TAB(n) : v.Z5c.COLLECTIBLES_SHOP);
+    },
+    P = () => {
+        s.Z.dispatch({ type: 'COLLECTIBLES_SHOP_CLOSE' }), (0, l.xf)();
+    },
+    R = (e) => {
         s.Z.dispatch({
             type: 'COLLECTIBLES_PRODUCT_DETAILS_OPEN',
             item: e
         });
     },
-    P = (e, t) => !!e == !!t,
-    R = (e, t) => P(null == e ? void 0 : e.noCache, null == t ? void 0 : t.noCache) && P(null == e ? void 0 : e.includeUnpublished, null == t ? void 0 : t.includeUnpublished) && P(null == e ? void 0 : e.includeBundles, null == t ? void 0 : t.includeBundles) && P(null == e ? void 0 : e.includePopularPicks, null == t ? void 0 : t.includePopularPicks) && P(null == e ? void 0 : e.includeDynamicBlocks, null == t ? void 0 : t.includeDynamicBlocks) && (null == e ? void 0 : e.countryCode) === (null == t ? void 0 : t.countryCode) && (null == e ? void 0 : e.paymentGateway) === (null == t ? void 0 : t.paymentGateway) && (null == e ? void 0 : e.shopHomeConfig) === (null == t ? void 0 : t.shopHomeConfig) && (null == e ? void 0 : e.skipNumCategories) === (null == t ? void 0 : t.skipNumCategories),
-    w = async (e, t, n) => {
+    w = (e, t) => !!e == !!t,
+    D = (e, t) => w(null == e ? void 0 : e.noCache, null == t ? void 0 : t.noCache) && w(null == e ? void 0 : e.includeUnpublished, null == t ? void 0 : t.includeUnpublished) && w(null == e ? void 0 : e.includeBundles, null == t ? void 0 : t.includeBundles) && w(null == e ? void 0 : e.includePopularPicks, null == t ? void 0 : t.includePopularPicks) && w(null == e ? void 0 : e.includeDynamicBlocks, null == t ? void 0 : t.includeDynamicBlocks) && (null == e ? void 0 : e.countryCode) === (null == t ? void 0 : t.countryCode) && (null == e ? void 0 : e.paymentGateway) === (null == t ? void 0 : t.paymentGateway) && (null == e ? void 0 : e.shopHomeConfig) === (null == t ? void 0 : t.shopHomeConfig) && (null == e ? void 0 : e.skipNumCategories) === (null == t ? void 0 : t.skipNumCategories),
+    L = async (e, t, n) => {
         s.Z.dispatch({
             type: 'COLLECTIBLES_CATEGORIES_FETCH',
             options: null != e ? e : {}
         });
-        let r = (0, E.nW)(e);
+        let r = (0, y.nW)(e),
+            i = u.ZP.get('shop_show_debug_overlay');
         (null == e ? void 0 : e.logPerf) &&
-            (0, g.n)({
+            (0, b.n)({
                 sessionId: null == n ? void 0 : n.sessionId,
-                checkpoint: g.a.CATEGORIES_FETCH_STARTED,
+                checkpoint: b.a.CATEGORIES_FETCH_STARTED,
                 tab: null == n ? void 0 : n.tab,
                 isFullScreen: null == n ? void 0 : n.isFullScreen,
                 unpublishedCategoriesShown: null == e ? void 0 : e.includeUnpublished,
                 cacheDisabled: null == e ? void 0 : e.noCache
-            });
+            }),
+            i && (0, f.v)('fetchCollectiblesCategories started: '.concat(JSON.stringify(r, null, 2)));
         try {
-            let i = await a.tn.get({
-                url: y.ANM.COLLECTIBLES_CATEGORIES,
+            let o = await a.tn.get({
+                url: v.ANM.COLLECTIBLES_CATEGORIES,
                 query: r,
                 rejectWithError: !0
             });
             (null == e ? void 0 : e.logPerf) &&
-                (0, g.n)({
+                (0, b.n)({
                     sessionId: null == n ? void 0 : n.sessionId,
-                    checkpoint: g.a.CATEGORIES_FETCH_COMPLETED,
+                    checkpoint: b.a.CATEGORIES_FETCH_COMPLETED,
                     tab: null == n ? void 0 : n.tab,
                     isFullScreen: null == n ? void 0 : n.isFullScreen,
                     unpublishedCategoriesShown: null == e ? void 0 : e.includeUnpublished,
                     cacheDisabled: null == e ? void 0 : e.noCache
                 }),
+                i && (0, f.v)('fetchCollectiblesCategories completed '.concat(o.body.length, ' categories')),
                 s.Z.dispatch({
                     type: 'COLLECTIBLES_CATEGORIES_FETCH_SUCCESS',
-                    categories: i.body.map(f.Z.fromServer),
+                    categories: o.body.map(p.Z.fromServer),
                     noOp: t
                 });
         } catch (t) {
             let e = new c.Hx(t);
-            (0, b.G)(e),
+            (0, O.G)(e),
                 s.Z.dispatch({
                     type: 'COLLECTIBLES_CATEGORIES_FETCH_FAILURE',
                     error: e
-                });
+                }),
+                i && (0, f.v)('fetchCollectiblesCategories failed: '.concat(e.message));
         }
     },
-    D = async (e) => {
-        if (!d.Z.isFetching) {
-            s.Z.dispatch({ type: 'COLLECTIBLES_PURCHASES_FETCH' });
-            try {
-                let t = {
-                    url: y.ANM.COLLECTIBLES_PURCHASES,
-                    rejectWithError: !0
-                };
-                (null == e ? void 0 : e.variantsReturnStyle) === o.v.VARIANTS_GROUP && (t.query = { variants_return_style: o.v.VARIANTS_GROUP });
-                let n = await a.tn.get(t);
+    x = async (e) => {
+        if (_.Z.isFetching) return;
+        s.Z.dispatch({ type: 'COLLECTIBLES_PURCHASES_FETCH' });
+        let t = u.ZP.get('shop_show_debug_overlay');
+        t && (0, f.v)('fetchCollectiblesPurchases started, options: '.concat(JSON.stringify(e, null, 2)));
+        try {
+            let n = {
+                url: v.ANM.COLLECTIBLES_PURCHASES,
+                rejectWithError: !0
+            };
+            (null == e ? void 0 : e.variantsReturnStyle) === o.v.VARIANTS_GROUP && (n.query = { variants_return_style: o.v.VARIANTS_GROUP }), t && (0, f.v)('fetchCollectiblesPurchases request: '.concat(JSON.stringify(n, null, 2)));
+            let r = await a.tn.get(n);
+            t && (0, f.v)('fetchCollectiblesPurchases completed with '.concat(r.body.length, ' purchases')),
                 s.Z.dispatch({
                     type: 'COLLECTIBLES_PURCHASES_FETCH_SUCCESS',
-                    purchases: n.body.map(h.Z.fromServer)
+                    purchases: r.body.map(g.Z.fromServer)
                 });
-            } catch (t) {
-                let e = new c.Hx(t);
-                throw (
-                    ((0, b.G)(e),
-                    s.Z.dispatch({
-                        type: 'COLLECTIBLES_PURCHASES_FETCH_FAILURE',
-                        error: e
-                    }),
-                    e)
-                );
-            }
+        } catch (n) {
+            let e = new c.Hx(n);
+            throw (
+                ((0, O.G)(e),
+                t && (0, f.v)('fetchCollectiblesPurchases failed: '.concat(e.message)),
+                s.Z.dispatch({
+                    type: 'COLLECTIBLES_PURCHASES_FETCH_FAILURE',
+                    error: e
+                }),
+                e)
+            );
         }
     },
-    L = async (e, t) => {
+    k = async (e, t) => {
         s.Z.dispatch({
             type: 'COLLECTIBLES_PRODUCT_FETCH',
             skuId: e
@@ -181,18 +191,18 @@ let T = (e) => {
             let n = {};
             (null == t ? void 0 : t.countryCode) !== null && (n.country_code = null == t ? void 0 : t.countryCode), (null == t ? void 0 : t.paymentGateway) !== null && (n.payment_gateway = null == t ? void 0 : t.paymentGateway);
             let r = await a.tn.get({
-                url: y.ANM.COLLECTIBLES_PRODUCTS(e),
+                url: v.ANM.COLLECTIBLES_PRODUCTS(e),
                 query: n,
                 rejectWithError: !0
             });
             s.Z.dispatch({
                 type: 'COLLECTIBLES_PRODUCT_FETCH_SUCCESS',
                 skuId: e,
-                product: p.Z.fromServer(r.body)
+                product: m.Z.fromServer(r.body)
             });
         } catch (n) {
             let t = new c.Hx(n);
-            (0, b.G)(t),
+            (0, O.G)(t),
                 s.Z.dispatch({
                     type: 'COLLECTIBLES_PRODUCT_FETCH_FAILURE',
                     skuId: e,
@@ -200,7 +210,7 @@ let T = (e) => {
                 });
         }
     },
-    x = async (e) => {
+    M = async (e) => {
         s.Z.dispatch({
             type: 'COLLECTIBLES_CLAIM',
             skuId: e
@@ -208,14 +218,14 @@ let T = (e) => {
         try {
             var t;
             let n = await a.tn.put({
-                url: y.ANM.COLLECTIBLES_CLAIM,
+                url: v.ANM.COLLECTIBLES_CLAIM,
                 body: { sku_id: e },
                 rejectWithError: !0
             });
             s.Z.dispatch({
                 type: 'COLLECTIBLES_CLAIM_SUCCESS',
                 skuId: e,
-                purchases: null == (t = n.body) ? void 0 : t.map(h.Z.fromServer)
+                purchases: null == (t = n.body) ? void 0 : t.map(g.Z.fromServer)
             });
         } catch (n) {
             let t = new c.Hx(n);
@@ -229,11 +239,11 @@ let T = (e) => {
             );
         }
     },
-    k = async (e, t) => {
+    j = async (e, t) => {
         try {
             return (
                 await a.tn.get({
-                    url: y.ANM.COLLECTIBLES_VALID_GIFT_RECIPIENT,
+                    url: v.ANM.COLLECTIBLES_VALID_GIFT_RECIPIENT,
                     query: {
                         sku_id: t,
                         recipient_id: e
@@ -242,39 +252,39 @@ let T = (e) => {
                 })
             ).body.valid;
         } catch (e) {
-            return (0, b.G)(new c.Hx(e)), !1;
+            return (0, O.G)(new c.Hx(e)), !1;
         }
     },
-    M = async (e) => {
+    U = async (e) => {
         let { release: t = i.P.PROD } = e;
         s.Z.dispatch({ type: 'COLLECTIBLES_MARKETING_FETCH' });
         let n = { platform: r.h.DESKTOP };
         t !== i.P.PROD && (n.release = t);
         try {
             let e = await a.tn.get({
-                url: y.ANM.COLLECTIBLES_MARKETING,
+                url: v.ANM.COLLECTIBLES_MARKETING,
                 query: n,
                 rejectWithError: !0
             });
             s.Z.dispatch({
                 type: 'COLLECTIBLES_MARKETING_FETCH_SUCCESS',
-                marketings: _.s.fromServer(e.body)
+                marketings: h.s.fromServer(e.body)
             });
         } catch (e) {
-            (0, b.G)(new c.Hx(e)), s.Z.dispatch({ type: 'COLLECTIBLES_MARKETING_FETCH_FAILURE' });
+            (0, O.G)(new c.Hx(e)), s.Z.dispatch({ type: 'COLLECTIBLES_MARKETING_FETCH_FAILURE' });
         }
     },
-    j = async (e, t, n) => {
+    G = async (e, t, n) => {
         s.Z.dispatch({
             type: 'COLLECTIBLES_SHOP_HOME_FETCH',
             tab: e,
             options: null != t ? t : {}
         });
-        let r = (0, E.nW)(t, e);
+        let r = (0, y.nW)(t, e);
         (null == t ? void 0 : t.logPerf) &&
-            (0, g.n)({
+            (0, b.n)({
                 sessionId: null == n ? void 0 : n.sessionId,
-                checkpoint: g.a.SHOP_HOME_FETCH_STARTED,
+                checkpoint: b.a.SHOP_HOME_FETCH_STARTED,
                 tab: null == n ? void 0 : n.tab,
                 isFullScreen: null == n ? void 0 : n.isFullScreen,
                 unpublishedCategoriesShown: null == t ? void 0 : t.includeUnpublished,
@@ -282,14 +292,14 @@ let T = (e) => {
             });
         try {
             let i = await a.tn.get({
-                url: y.ANM.COLLECTIBLES_SHOP,
+                url: v.ANM.COLLECTIBLES_SHOP,
                 query: r,
                 rejectWithError: !0
             });
             (null == t ? void 0 : t.logPerf) &&
-                (0, g.n)({
+                (0, b.n)({
                     sessionId: null == n ? void 0 : n.sessionId,
-                    checkpoint: g.a.SHOP_HOME_FETCH_COMPLETED,
+                    checkpoint: b.a.SHOP_HOME_FETCH_COMPLETED,
                     tab: null == n ? void 0 : n.tab,
                     isFullScreen: null == n ? void 0 : n.isFullScreen,
                     unpublishedCategoriesShown: null == t ? void 0 : t.includeUnpublished,
@@ -298,11 +308,11 @@ let T = (e) => {
                 s.Z.dispatch({
                     type: 'COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS',
                     tab: e,
-                    shopHome: m.Y.fromServer(i.body)
+                    shopHome: E.Y.fromServer(i.body)
                 });
         } catch (n) {
             let t = new c.Hx(n);
-            (0, b.G)(t),
+            (0, O.G)(t),
                 s.Z.dispatch({
                     type: 'COLLECTIBLES_SHOP_HOME_FETCH_FAILURE',
                     tab: e,
@@ -310,13 +320,13 @@ let T = (e) => {
                 });
         }
     },
-    U = (e) => {
+    B = (e) => {
         s.Z.dispatch({
             type: 'COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE',
             shopHomeConfigOverride: e
         });
     },
-    G = (e) => {
+    F = (e) => {
         s.Z.dispatch({
             type: 'COLLECTIBLES_SKIP_NUM_CATEGORIES',
             skipNumCategories: e

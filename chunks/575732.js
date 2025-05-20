@@ -1,5 +1,5 @@
 n.d(t, {
-    FV: () => p,
+    FV: () => g,
     Kw: () => c,
     LH: () => m,
     Nv: () => C,
@@ -120,7 +120,7 @@ let c = [
             getText: () => o.intl.string(o.t.Uukj4u)
         }
     ],
-    p = [
+    g = [
         {
             Icon: r.rG2,
             getText: () => o.intl.formatToPlainString(o.t.p8QVLS, { maxUploadPremium: (0, a.v9)(s.p9.TIER_0, { useSpace: !1 }) })

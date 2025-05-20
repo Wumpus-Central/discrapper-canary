@@ -46,7 +46,7 @@ function g(e) {
                     };
                 case _.sE.APPLY_TO_JOIN:
                     return {
-                        text: E ? m.intl.string(m.t['1Qm829']) : m.intl.string(m.t['7XdMW1']),
+                        text: m.intl.string(m.t['7XdMW1']),
                         onClick: f
                     };
                 case _.sE.LURK_DISCOVERABLE:

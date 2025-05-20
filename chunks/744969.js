@@ -11,8 +11,8 @@ var n = r(255367),
     p = r(551428),
     f = r(74538),
     b = r(937615),
-    O = r(147496),
-    m = r(519896),
+    m = r(147496),
+    O = r(519896),
     y = r(981631),
     j = r(388032);
 let g = (0, i.Kb)([d.Z, u.Z, p.Z], {
@@ -69,7 +69,7 @@ function h(e) {
             if ((null == i ? void 0 : i.applicationId) == null || (null == i ? void 0 : i.id) == null || (null == i ? void 0 : i.flags) == null) return null;
             (0, a.h7j)((e) => {
                 let { onClose: t, transitionState: r } = e;
-                return (0, n.jsx)(m.SubscriptionDetailsModal, {
+                return (0, n.jsx)(O.SubscriptionDetailsModal, {
                     appId: i.applicationId,
                     subscriptionType: (0, s.KW)(i.flags) ? 'user' : 'guild',
                     onClose: t,
@@ -83,7 +83,7 @@ function h(e) {
             if (null == i) return null;
             (0, a.h7j)((e) => {
                 let { onClose: t, transitionState: r } = e;
-                return (0, n.jsx)(O.ItemDetailsModal, {
+                return (0, n.jsx)(m.ItemDetailsModal, {
                     appId: i.applicationId,
                     skuId: i.id,
                     onClose: t,

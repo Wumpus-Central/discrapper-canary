@@ -198,8 +198,9 @@ function L(t) {
                                                 let { closePopout: e } = t;
                                                 return (0, l.jsx)(h.Z, {
                                                     closePopout: e,
-                                                    onSelectEmoji: (t, n) => {
-                                                        td(t), n && e();
+                                                    onSelectEmoji: (t) => {
+                                                        let { emoji: n, willClose: l } = t;
+                                                        td(n), l && e();
                                                     },
                                                     pickerIntention: k.Hz.STATUS,
                                                     onNavigateAway: L

@@ -51,7 +51,7 @@ function v(e) {
             if (!P)
                 return (0, r.jsx)(o.Text, {
                     variant: 'text-xs/normal',
-                    color: 'interactive-normal',
+                    color: 'text-secondary',
                     lineClamp: 1,
                     children: (0, r.jsx)(l.Z, { children: N })
                 });
@@ -63,7 +63,7 @@ function v(e) {
                 className: y.clickableText,
                 children: (0, r.jsx)(o.Text, {
                     variant: 'text-xs/normal',
-                    color: 'interactive-normal',
+                    color: 'text-secondary',
                     lineClamp: 1,
                     children: (0, r.jsx)(l.Z, { children: N })
                 })
@@ -79,7 +79,7 @@ function v(e) {
                     R(),
                     (0, r.jsx)(o.Fbu, {
                         size: 'xxs',
-                        color: o.TVs.colors.INTERACTIVE_NORMAL
+                        color: o.TVs.colors.TEXT_SECONDARY
                     }),
                     (0, r.jsxs)('div', {
                         className: y.voiceChannelText,
@@ -87,7 +87,7 @@ function v(e) {
                             (0, r.jsx)(g.Z, {
                                 channel: v,
                                 size: 'xxs',
-                                color: o.TVs.colors.INTERACTIVE_NORMAL,
+                                color: o.TVs.colors.TEXT_SECONDARY,
                                 className: y.voiceIcon
                             }),
                             w()
@@ -99,6 +99,8 @@ function v(e) {
                         channelId: v.id,
                         maxUsers: O,
                         size: o.EFr.SIZE_16,
+                        overflowCountColor: 'text-secondary',
+                        overflowCountClassName: y.voiceChannelOverflowCount,
                         onClick: (e) => {
                             e.stopPropagation(), null == I || I({ action: 'PRESS_VOICE_CHANNEL_AVATARS' });
                         },

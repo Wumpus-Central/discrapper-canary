@@ -25,8 +25,8 @@ var r = n(255367),
     g = n(850908),
     _ = n(524444),
     b = n(981631),
-    x = n(388032),
-    E = n(324846);
+    E = n(388032),
+    x = n(324846);
 function y(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -105,8 +105,8 @@ function j(e) {
             var e;
             return (0, f.yE)(null != (e = n.flags) ? e : 0, b.J0y.IS_CLIP)
                 ? (0, r.jsxs)(o.DY, {
-                      text: x.intl.string(x.t['/fgfWl']),
-                      className: E.clipPill,
+                      text: E.intl.string(E.t['/fgfWl']),
+                      className: x.clipPill,
                       children: [
                           (0, r.jsx)(s.AlX, {
                               size: 'xs',
@@ -115,7 +115,7 @@ function j(e) {
                           (0, r.jsx)(a.x, {
                               variant: 'text-xs/semibold',
                               color: 'always-white',
-                              children: x.intl.string(x.t.oA4afH)
+                              children: E.intl.string(E.t.oA4afH)
                           })
                       ]
                   })

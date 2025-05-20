@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(607070),
     d = n(594174),
     f = n(451478),
-    p = n(626135),
-    b = n(63063),
+    b = n(626135),
+    p = n(63063),
     g = n(74538),
     h = n(381585),
     m = n(597688),
@@ -38,13 +38,14 @@ let k = (e) => {
         { animationPhase: U, startAnimation: G } = (0, x.y)(),
         z = (0, h.sp)(),
         q = null != (t = null == z ? void 0 : z.sessionId) ? t : '',
-        Y = l.useCallback(
+        Y = l.useRef(null),
+        $ = l.useCallback(
             (e) => {
                 G({
                     isShuffling: !1,
                     onOutroComplete: () => R(e)
                 }),
-                    p.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
+                    b.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                         page_session_id: q,
                         sort_type: e
                     });
@@ -102,7 +103,7 @@ let k = (e) => {
                                                   })({}, e)),
                                                   (n = n =
                                                       {
-                                                          onClick: () => (0, c.Z)(b.Z.getArticleURL(y.BhN.DATA_USED_FOR_RECOMMENDED)),
+                                                          onClick: () => (0, c.Z)(p.Z.getArticleURL(y.BhN.DATA_USED_FOR_RECOMMENDED)),
                                                           className: P.informationIcon,
                                                           children: (0, r.jsx)(s.d3s, { size: 'sm' })
                                                       }),
@@ -136,7 +137,7 @@ let k = (e) => {
                                               }),
                                               (0, r.jsx)(s.PhF, {
                                                   options: Z,
-                                                  select: Y,
+                                                  select: $,
                                                   className: P.sortSelect,
                                                   isSelected: (e) => e === N,
                                                   serialize: (e) => e
@@ -147,13 +148,14 @@ let k = (e) => {
                                       (L
                                           ? (0, r.jsx)(s.zxk, {
                                                 color: s.Ttl.PRIMARY,
-                                                look: s.iLD.FILLED,
+                                                buttonRef: Y,
                                                 onClick: () => {
                                                     G({
                                                         isShuffling: !0,
-                                                        onOutroComplete: F
+                                                        onOutroComplete: F,
+                                                        returnRef: Y
                                                     }),
-                                                        p.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, { page_session_id: q });
+                                                        b.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, { page_session_id: q });
                                                 },
                                                 disabled: U !== x.g.MOUNTED && U !== x.g.FINISHED,
                                                 children: E.intl.string(E.t.X3tnc3)

@@ -14,7 +14,8 @@ function d(e) {
     let { channel: t, setEmojiConfetti: n, shouldShow: s, onRequestClose: l, position: d, align: f, positionRef: _, children: p } = e,
         h = i.useCallback(
             (e) => {
-                null != e && (n(e), l());
+                let { emoji: t } = e;
+                null != t && (n(t), l());
             },
             [l, n]
         );

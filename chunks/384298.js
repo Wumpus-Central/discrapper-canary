@@ -32,7 +32,7 @@ function m(e) {
           })
         : (0, r.jsx)(f.tG, {
               text: E ? b() : y(),
-              themeColor: E ? 'secondary' : 'primary',
+              themeColor: 'secondary',
               fullWidth: !0,
               onClick: O
           });

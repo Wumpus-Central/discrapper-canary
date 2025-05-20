@@ -16,6 +16,7 @@ e.exports = {
     badges: 'badges__39ec2',
     clickableContainer: 'clickableContainer__39ec2',
     clickableImage: 'clickableImage__39ec2',
+    image: 'image__39ec2',
     clickableText: 'clickableText__39ec2',
     inline: 'inline__39ec2',
     gameState: 'gameState__39ec2',
@@ -25,5 +26,6 @@ e.exports = {
     voiceIcon: 'voiceIcon__39ec2',
     voiceChannelHeading: 'voiceChannelHeading__39ec2',
     voiceChannelDivider: 'voiceChannelDivider__39ec2',
+    voiceChannelOverflowCount: 'voiceChannelOverflowCount__39ec2',
     contextMenu: 'contextMenu__39ec2'
 };

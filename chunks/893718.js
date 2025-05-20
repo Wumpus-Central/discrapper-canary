@@ -193,10 +193,16 @@ function eS(e, t, n) {
 }
 function eT(e) {
     return i.useCallback(
-        function (t, n) {
-            let r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        (t) => {
+            let { emoji: n, willClose: r } = t,
                 i = e.current;
-            null != t && null != i && i.insertEmoji(t, n, r), n && (0, P._Q)();
+            null != n &&
+                null != i &&
+                i.insertEmoji({
+                    emoji: n,
+                    willClose: r
+                }),
+                r && (0, P._Q)();
         },
         [e]
     );

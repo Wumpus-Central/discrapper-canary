@@ -64,6 +64,7 @@ function h(e) {
                       {
                           text: l ? f.intl.string(f.t['I6JG4+']) : e,
                           className: _.customButton,
+                          themeColor: 'secondary',
                           fullWidth: !0,
                           onClick: (e) => {
                               e.stopPropagation(),

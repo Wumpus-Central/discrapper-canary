@@ -1,4 +1,4 @@
-n.d(t, { Z: () => E }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r,
     i = n(255367),
     l = n(73800),
@@ -27,7 +27,7 @@ function b(e, t, n) {
         e
     );
 }
-class x extends (r = l.PureComponent) {
+class E extends (r = l.PureComponent) {
     render() {
         let { sku: e, storeListing: t, isHorizontal: n, className: r, renderCustomTagline: l, renderCustomTitle: a, renderCustomMedia: o, isEmbed: s } = this.props,
             c = s ? f.$G : h.Z;
@@ -86,11 +86,11 @@ class x extends (r = l.PureComponent) {
             });
     }
 }
-b(x, 'defaultProps', {
+b(E, 'defaultProps', {
     showMediaPlaceholder: !1,
     isMouseOver: !1,
     showBuyInline: !1,
     isHorizontal: !1,
     isEmbed: !1
 });
-let E = x;
+let x = E;

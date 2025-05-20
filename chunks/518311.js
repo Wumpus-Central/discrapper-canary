@@ -726,7 +726,7 @@ class eg extends (r = l.PureComponent) {
                 b.Z.addRecipients(e.id, t, er.Sbl.ADD_FRIENDS_TO_DM).then((n) => {
                     if (i) {
                         if (e.isDM() && n !== e.id) return void g.Z.call(n, !1, !0);
-                        g.Z.ring(n, t);
+                        g.Z.ring(n, t, 'dm_invite');
                     }
                 }),
                     q.default.track(

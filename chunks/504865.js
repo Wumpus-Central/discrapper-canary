@@ -10,22 +10,22 @@ var i = n(120356),
     u = n(474936),
     d = n(106112);
 let C = function (e) {
-    let { subscriptionTier: t, interval: n = u.rV.MONTH, className: i, isGift: C = !1, variant: m, priceOptions: p, isMarketingPageV2: g } = e;
+    let { subscriptionTier: t, interval: n = u.rV.MONTH, className: i, isGift: C = !1, variant: m, priceOptions: g, isMarketingPageV2: p } = e;
     if (!(0, a.e7)([o.Z], () => o.Z.isLoadedForPremiumSKUs()))
         return (0, r.jsx)(s.$jN, {
             type: s.$jN.Type.PULSING_ELLIPSIS,
             className: d.priceSpinner
         });
     let x = o.Z.getForSkuAndInterval((0, c.Wz)(t), n),
-        f = null != x ? (0, c.gy)(x, p, !1, C) : null;
+        f = null != x ? (0, c.gy)(x, g, !1, C) : null;
     return (0, r.jsx)(s.X6q, {
-        color: g ? 'none' : 'always-white',
+        color: p ? 'none' : 'always-white',
         variant: null != m ? m : 'heading-md/medium',
         className: l()(d.pricePerInterval, i),
         children: (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('span', {
-                    className: g ? void 0 : d.price,
+                    className: p ? void 0 : d.price,
                     children: f
                 }),
                 ' / ',

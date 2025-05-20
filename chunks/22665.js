@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(776571),
     _ = n(388032),
     b = n(537670),
-    x = n(848697),
-    E = n(328756);
+    E = n(848697),
+    x = n(328756);
 let y = (e) => {
     let { reportingUserId: t, guildId: n, compact: l, channel: o, messageId: y, reportedTimestamp: v } = e,
         O = f.default.getUser(t),
@@ -27,7 +27,7 @@ let y = (e) => {
             guildId: n,
             messageId: y
         })((0, u.JZ)(O, o)),
-        S = null != O ? O.getAvatarURL(n, (0, c.pxk)(c.EFr.SIZE_16)) : E,
+        S = null != O ? O.getAvatarURL(n, (0, c.pxk)(c.EFr.SIZE_16)) : x,
         I =
             null != O
                 ? _.intl.format(g.default['+zqXZm'], {
@@ -36,7 +36,7 @@ let y = (e) => {
                   })
                 : _.intl.string(g.default.xpRjfX);
     return (0, r.jsxs)('div', {
-        className: a()(x.messageSpine, x.repliedMessage, j),
+        className: a()(E.messageSpine, E.repliedMessage, j),
         children: [
             (0, r.jsx)(c.qEK, {
                 src: S,

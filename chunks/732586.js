@@ -33,7 +33,7 @@ function u(e) {
 }
 function d(e) {
     let t,
-        { type: r, style: d, label: p, placeholder: f, minLength: b, maxLength: O, required: m, value: y } = e,
+        { type: r, style: d, label: p, placeholder: f, minLength: b, maxLength: m, required: O, value: y } = e,
         [j, g] = l.useState(null != y ? y : ''),
         {
             state: h,
@@ -57,8 +57,8 @@ function d(e) {
         value: j,
         placeholder: f,
         minLength: b,
-        maxLength: O,
-        required: m,
+        maxLength: m,
+        required: O,
         onChange: (e) => {
             g(e),
                 v({
@@ -77,7 +77,7 @@ function d(e) {
     }
     return (0, n.jsx)(i.xJW, {
         title: p,
-        required: m,
+        required: O,
         className: s.formItem,
         error: P,
         children: t

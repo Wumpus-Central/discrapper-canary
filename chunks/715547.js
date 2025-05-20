@@ -23,6 +23,7 @@ function d(e) {
           })
         : (0, r.jsx)(l.tG, {
               text: u.intl.string(u.t['I6JG4+']),
+              themeColor: 'secondary',
               fullWidth: !0,
               onClick: _
           });

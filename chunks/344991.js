@@ -15,8 +15,8 @@ var n,
     p = r(280501),
     f = r(388032),
     b = r(749778),
-    O = r(950386);
-function m(e) {
+    m = r(950386);
+function O(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -62,16 +62,16 @@ function g(e) {
         [I, T] = i.useState(new Map(null == h ? void 0 : h.map((e) => [e.value, e]))),
         [k, Z] = i.useState(new Set(I.keys())),
         [L, D] = i.useState(() => (null != h ? h : []).map((e) => e.value)),
-        [R, _] = i.useState(0);
+        [R, A] = i.useState(0);
     i.useEffect(() => {
         let e = (null != h ? h : []).map((e) => e.value);
         if (e.every((e) => L.includes(e)) && L.every((t) => e.includes(t))) return;
         D(e);
         let t = new Map(null == h ? void 0 : h.map((e) => [e.value, e]));
-        T(t), Z(new Set(t.keys())), _((e) => e + 1);
+        T(t), Z(new Set(t.keys())), A((e) => e + 1);
     }, [h, L]);
     let {
-            state: A,
+            state: _,
             executeStateUpdate: M,
             visualState: U,
             isDisabled: H,
@@ -82,11 +82,11 @@ function g(e) {
         }),
         G = U === p.gH.LOADING;
     i.useEffect(() => {
-        if ((null == A ? void 0 : A.type) === s.re.USER_SELECT || (null == A ? void 0 : A.type) === s.re.ROLE_SELECT || (null == A ? void 0 : A.type) === s.re.MENTIONABLE_SELECT || (null == A ? void 0 : A.type) === s.re.CHANNEL_SELECT) {
-            let e = new Map(A.selectedOptions.map((e) => [e.value, e]));
+        if ((null == _ ? void 0 : _.type) === s.re.USER_SELECT || (null == _ ? void 0 : _.type) === s.re.ROLE_SELECT || (null == _ ? void 0 : _.type) === s.re.MENTIONABLE_SELECT || (null == _ ? void 0 : _.type) === s.re.CHANNEL_SELECT) {
+            let e = new Map(_.selectedOptions.map((e) => [e.value, e]));
             T(e), Z(new Set(e.keys()));
         }
-    }, [A]);
+    }, [_]);
     let z = i.useCallback(() => {
         M({
             type: v,
@@ -132,7 +132,7 @@ function g(e) {
                     x > 1
                         ? (0, l.jsx)(
                               c.VcW,
-                              m(
+                              O(
                                   {
                                       className: b.badges,
                                       value: Array.from(I.values()),
@@ -154,7 +154,7 @@ function g(e) {
                           )
                         : (0, l.jsx)(
                               c.VcW,
-                              m(
+                              O(
                                   {
                                       className: (b.badges, b.singleSelect),
                                       value: [...I.values()][0],
@@ -170,8 +170,8 @@ function g(e) {
             null != F
                 ? (0, l.jsx)(
                       u.st,
-                      ((t = m({}, (0, u.c4)(F))),
-                      (r = r = { className: O.error }),
+                      ((t = O({}, (0, u.c4)(F))),
+                      (r = r = { className: m.error }),
                       Object.getOwnPropertyDescriptors
                           ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(r))
                           : (function (e, t) {

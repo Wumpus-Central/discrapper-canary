@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(597688),
     d = n(297651),
     f = n(794324),
-    p = n(388032),
-    b = n(806734);
+    b = n(388032),
+    p = n(806734);
 let g = (e) => {
     var t, n, i;
     let g,
@@ -21,13 +21,13 @@ let g = (e) => {
         { featuredBlockBanner: x } = (0, f.YG)(h, m),
         S = l.useRef(null),
         j = v === o.T.NAMEPLATE,
-        y = j ? p.intl.string(p.t['/Rk1dn']) : null == m ? void 0 : m.bodyText;
+        y = j ? b.intl.string(b.t['/Rk1dn']) : null == m ? void 0 : m.bodyText;
     return (0, r.jsx)(s.$, {
         innerRef: S,
         onChange: O,
         threshold: 0,
         children: (0, r.jsxs)(c.P3F, {
-            className: b.featuredBlock,
+            className: p.featuredBlock,
             innerRef: S,
             style: { backgroundImage: 'url('.concat(x, ')') },
             onClick: () => C('shop marketing tile', v),
@@ -36,21 +36,21 @@ let g = (e) => {
                     (0, r.jsx)(c.IGR, {
                         disableColor: !0,
                         text: _,
-                        className: b.featuredBlockBadge
+                        className: p.featuredBlockBadge
                     }),
                 null != y &&
                     (0, r.jsx)(c.X6q, {
                         lineClamp: 4,
-                        className: a()(b.featuredBlockBodyText, { [b.featuredBlockNameplate]: j }),
+                        className: a()(p.featuredBlockBodyText, { [p.featuredBlockNameplate]: j }),
                         style: { color: null != (i = null == m ? void 0 : m.bannerTextColor) ? i : 'white' },
                         variant: 'heading-lg/semibold',
                         children: y
                     }),
                 (0, r.jsx)(c.zxk, {
-                    className: b.featuredBlockButton,
+                    className: p.featuredBlockButton,
                     color: c.Ttl.WHITE,
                     onClick: () => {},
-                    children: p.intl.string(p.t.jVcuVV)
+                    children: b.intl.string(b.t.jVcuVV)
                 })
             ]
         })

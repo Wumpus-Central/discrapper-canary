@@ -34,8 +34,9 @@ let f = (e) => {
                         return (0, r.jsx)(c.Z, {
                             pickerIntention: m.Hz.COMMUNITY_CONTENT,
                             closePopout: t,
-                            onSelectEmoji: (e, n) => {
-                                null != e && f(e), n && t();
+                            onSelectEmoji: (e) => {
+                                let { emoji: n, willClose: r } = e;
+                                null != n && f(n), r && t();
                             }
                         });
                     },

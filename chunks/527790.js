@@ -1,29 +1,29 @@
-t.d(n, { Z: () => d });
-var s = t(255367);
-t(73800);
-var a = t(100527),
-    i = t(906732),
-    l = t(26033),
-    r = t(194811),
-    c = t(382405),
-    o = t(670451);
+s.d(n, { Z: () => d });
+var t = s(255367);
+s(73800);
+var a = s(100527),
+    i = s(906732),
+    l = s(26033),
+    r = s(194811),
+    c = s(382405),
+    o = s(670451);
 function d(e) {
-    let { user: n, entry: t, className: d, onClose: x, hideContextMenu: m = !1, appContext: u } = e,
+    let { user: n, entry: s, className: d, onClose: x, hideContextMenu: m = !1, appContext: u } = e,
         { analyticsLocations: j } = (0, i.ZP)(a.Z.USER_PROFILE_RECENT_ACTIVITY_CARD);
-    return (0, l.Rh)(t)
-        ? (0, s.jsx)(i.Gt, {
+    return (0, l.Rh)(s)
+        ? (0, t.jsx)(i.Gt, {
               value: j,
-              children: (0, s.jsx)(c.Z, {
-                  entry: t,
+              children: (0, t.jsx)(c.Z, {
+                  entry: s,
                   user: n,
                   className: d,
                   onClose: x,
-                  header: (0, s.jsx)(r.Z, {
+                  header: (0, t.jsx)(r.Z, {
                       contextMenu: m
                           ? null
-                          : (0, s.jsx)(o.Z, {
+                          : (0, t.jsx)(o.Z, {
                                 display: 'recent',
-                                entry: t,
+                                entry: s,
                                 user: n,
                                 onClose: x,
                                 appContext: u

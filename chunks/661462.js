@@ -1,23 +1,23 @@
 n.d(t, { Z: () => p }), n(388685);
 var o = n(255367),
     r = n(73800),
-    i = n(481060),
-    c = n(785717),
+    c = n(481060),
+    i = n(785717),
     a = n(128156),
     l = n(311044),
     s = n(408986),
     d = n(228168),
     u = n(662776);
 function f(e) {
-    let { user: t, currentUser: n, section: r, subsection: i, displayProfile: c, guildId: u, channelId: f, onClose: p } = e;
+    let { user: t, currentUser: n, section: r, subsection: c, displayProfile: i, guildId: u, channelId: f, onClose: p } = e;
     return r === d.oh.ACTIVITY
         ? (0, o.jsx)(a.Z, {
               user: t,
               currentUser: n,
-              displayProfile: c,
+              displayProfile: i,
               guildId: u,
               channelId: f,
-              subsection: i,
+              subsection: c,
               onClose: p
           })
         : r === d.oh.MUTUAL_FRIENDS
@@ -36,9 +36,9 @@ function f(e) {
 }
 function p(e) {
     var t, n, a;
-    let { user: l, currentUser: s, displayProfile: d, guildId: p, channelId: m, items: b, initialSection: _, initialSubsection: g, onClose: h } = e,
-        { trackUserProfileAction: y } = (0, c.KZ)(),
-        [{ section: x, subsection: j, text: I }, O] = r.useState(
+    let { user: l, currentUser: s, displayProfile: d, guildId: p, channelId: m, items: b, initialSection: _, initialSubsection: y, onClose: h } = e,
+        { trackUserProfileAction: x } = (0, i.KZ)(),
+        [{ section: g, subsection: j, text: O }, I] = r.useState(
             ((n = (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},
@@ -73,7 +73,7 @@ function p(e) {
                     ? t
                     : b[0]
             )),
-            (a = a = { subsection: g }),
+            (a = a = { subsection: y }),
             Object.getOwnPropertyDescriptors
                 ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
                 : (function (e, t) {
@@ -91,28 +91,28 @@ function p(e) {
     return (0, o.jsxs)('div', {
         className: u.container,
         children: [
-            (0, o.jsx)(i.njP, {
+            (0, o.jsx)(c.njP, {
                 type: 'top',
                 className: u.tabBar,
-                selectedItem: x,
+                selectedItem: g,
                 onItemSelect: (e) => {
-                    y({
+                    x({
                         action: 'PRESS_SECTION',
                         section: e
                     }),
-                        O((t) => {
+                        I((t) => {
                             var n;
                             return null != (n = b.find((t) => t.section === e)) ? n : t;
                         });
                 },
                 children: b.map((e) =>
                     (0, o.jsx)(
-                        i.njP.Item,
+                        c.njP.Item,
                         {
                             className: u.tabBarItem,
                             id: e.section,
                             'aria-label': e.text,
-                            children: (0, o.jsx)(i.Text, {
+                            children: (0, o.jsx)(c.Text, {
                                 variant: 'heading-md/normal',
                                 tag: 'span',
                                 children: e.text
@@ -122,9 +122,9 @@ function p(e) {
                     )
                 )
             }),
-            (0, o.jsx)(i.njP.Panel, {
-                id: x,
-                'aria-label': I,
+            (0, o.jsx)(c.njP.Panel, {
+                id: g,
+                'aria-label': O,
                 className: u.tabBarPanel,
                 children: (0, o.jsx)(f, {
                     user: l,
@@ -132,7 +132,7 @@ function p(e) {
                     displayProfile: d,
                     guildId: p,
                     channelId: m,
-                    section: x,
+                    section: g,
                     subsection: j,
                     onClose: h
                 })

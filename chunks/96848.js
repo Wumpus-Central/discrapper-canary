@@ -37,7 +37,8 @@ function _(e) {
                 ]
             }),
         h = (e) => {
-            null != t && (t(e), l(!1));
+            let { emoji: n } = e;
+            null != t && (t(n), l(!1));
         };
     return (0, r.jsx)(o.yRy, {
         targetElementRef: _,

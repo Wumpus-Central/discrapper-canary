@@ -22,7 +22,7 @@ function g(e) {
               url: e.url
           })
         : 'VIDEO' === e.type && null != e.proxyUrl
-          ? (0, d.D)(e.proxyUrl)
+          ? (0, d.Dt)(e.proxyUrl)
           : null;
 }
 function E(e) {

@@ -116,12 +116,12 @@ let p = (e, t, n) => ({
         });
     },
     insertEmoji(t) {
-        let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        let { emoji: n, addSpace: r = !1 } = t;
         l.T.withSingleEntry(e, () => {
-            var r, i;
-            let o = t.animated ? 'a' : '',
-                a = null != (i = null != (r = t.originalName) ? r : t.name) ? i : '';
-            m(e, ':'.concat(t.name, ':'), null != t.id ? '<'.concat(o, ':').concat(a.replace(/:/g, ''), ':').concat(t.id, '>') : null, n);
+            var t, i;
+            let o = n.animated ? 'a' : '',
+                a = null != (i = null != (t = n.originalName) ? t : n.name) ? i : '';
+            m(e, ':'.concat(n.name, ':'), null != n.id ? '<'.concat(o, ':').concat(a.replace(/:/g, ''), ':').concat(n.id, '>') : null, r);
         });
     }
 });

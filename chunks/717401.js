@@ -1,4 +1,5 @@
 n.d(t, {
+    Tl: () => f,
     YV: () => l,
     a5: () => d,
     cF: () => u,
@@ -44,4 +45,11 @@ function d(e) {
     var t;
     let n = null == (t = (0, o.Z)()) ? void 0 : t.eligiblePlanIds;
     return null == n ? void 0 : n.includes(null == e ? void 0 : e.id);
+}
+function f(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 78.98;
+    if (null == e) return;
+    let n = Array.isArray(e) ? e : e.gradient,
+        r = Array.isArray(e) || null == e.angle ? t : e.angle;
+    return { background: 'linear-gradient('.concat(r, 'deg, ').concat(n.join(', '), ')') };
 }

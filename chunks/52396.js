@@ -15,7 +15,7 @@ var n = r(255367),
     p = r(482417),
     f = r(301419),
     b = r(397035);
-function O(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -40,7 +40,7 @@ function O(e) {
     }
     return e;
 }
-function m(e, t) {
+function O(e, t) {
     if (null == e) return {};
     var r,
         n,
@@ -66,8 +66,8 @@ function j() {
 }
 function g(e) {
     var { entry: t } = e,
-        r = m(e, ['entry']);
-    let l = O(
+        r = O(e, ['entry']);
+    let l = m(
         {
             baseEntryData: (0, u.Z)({
                 entry: t,
@@ -78,80 +78,80 @@ function g(e) {
     );
     switch (t.content_type) {
         case a.s.TOP_ARTIST:
-            return (0, n.jsx)(P, O({ entry: t }, l));
+            return (0, n.jsx)(P, m({ entry: t }, l));
         case a.s.TOP_GAME:
-            return (0, n.jsx)(x, O({ entry: t }, l));
+            return (0, n.jsx)(x, m({ entry: t }, l));
         case a.s.PLAYED_GAME:
-            return (0, n.jsx)(S, O({ entry: t }, l));
+            return (0, n.jsx)(S, m({ entry: t }, l));
         case a.s.WATCHED_MEDIA:
-            return (0, n.jsx)(w, O({ entry: t }, l));
+            return (0, n.jsx)(w, m({ entry: t }, l));
         case a.s.LISTENED_SESSION:
-            return (0, n.jsx)(C, O({ entry: t }, l));
+            return (0, n.jsx)(C, m({ entry: t }, l));
         case a.s.LAUNCHED_ACTIVITY:
-            return (0, n.jsx)(v, O({ entry: t }, l));
+            return (0, n.jsx)(v, m({ entry: t }, l));
         default:
             throw Error('Unsupported content type: '.concat(t.content_type));
     }
 }
 function h(e) {
     var { errorFallback: t } = e,
-        r = m(e, ['errorFallback']);
+        r = O(e, ['errorFallback']);
     return (0, n.jsx)(c.S, {
         fallback: t,
-        children: (0, n.jsx)(g, O({}, r))
+        children: (0, n.jsx)(g, m({}, r))
     });
 }
 function v(e) {
     var { entry: t, children: r } = e,
-        l = m(e, ['entry', 'children']);
-    let i = (0, s.Z)(O({ entry: t }, l));
+        l = O(e, ['entry', 'children']);
+    let i = (0, s.Z)(m({ entry: t }, l));
     return (0, n.jsx)(y.Provider, {
-        value: O({ parsedEntry: i }, l),
+        value: m({ parsedEntry: i }, l),
         children: r
     });
 }
 function P(e) {
     var { entry: t, children: r } = e,
-        l = m(e, ['entry', 'children']);
-    let i = (0, f.Z)(O({ entry: t }, l));
+        l = O(e, ['entry', 'children']);
+    let i = (0, f.Z)(m({ entry: t }, l));
     return (0, n.jsx)(y.Provider, {
-        value: O({ parsedEntry: i }, l),
+        value: m({ parsedEntry: i }, l),
         children: r
     });
 }
 function x(e) {
     var { entry: t, children: r } = e,
-        l = m(e, ['entry', 'children']);
-    let i = (0, d.Z)(O({ entry: t }, l));
+        l = O(e, ['entry', 'children']);
+    let i = (0, d.Z)(m({ entry: t }, l));
     return (0, n.jsx)(y.Provider, {
-        value: O({ parsedEntry: i }, l),
+        value: m({ parsedEntry: i }, l),
         children: r
     });
 }
 function S(e) {
     var { entry: t, children: r } = e,
-        l = m(e, ['entry', 'children']);
-    let i = (0, d.Z)(O({ entry: t }, l));
+        l = O(e, ['entry', 'children']);
+    let i = (0, d.Z)(m({ entry: t }, l));
     return (0, n.jsx)(y.Provider, {
-        value: O({ parsedEntry: i }, l),
+        value: m({ parsedEntry: i }, l),
         children: r
     });
 }
 function w(e) {
     var { entry: t, children: r } = e,
-        l = m(e, ['entry', 'children']);
-    let i = (0, b.Z)(O({ entry: t }, l));
+        l = O(e, ['entry', 'children']);
+    let i = (0, b.Z)(m({ entry: t }, l));
     return (0, n.jsx)(y.Provider, {
-        value: O({ parsedEntry: i }, l),
+        value: m({ parsedEntry: i }, l),
         children: r
     });
 }
 function C(e) {
     var { entry: t, children: r } = e,
-        l = m(e, ['entry', 'children']);
-    let i = (0, p.Z)(O({ entry: t }, l));
+        l = O(e, ['entry', 'children']);
+    let i = (0, p.Z)(m({ entry: t }, l));
     return (0, n.jsx)(y.Provider, {
-        value: O({ parsedEntry: i }, l),
+        value: m({ parsedEntry: i }, l),
         children: r
     });
 }

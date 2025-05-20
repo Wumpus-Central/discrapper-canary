@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(277707),
     _ = n(358595),
     b = n(981631),
-    x = n(388032),
-    E = n(273254);
+    E = n(388032),
+    x = n(273254);
 function y(e) {
     var t, y, v;
     let O,
@@ -68,7 +68,7 @@ function y(e) {
     });
     return (
         (j = (0, r.jsxs)('span', {
-            className: E.infoTitle,
+            className: x.infoTitle,
             children: [
                 (0, r.jsx)(u.Z, {
                     guildId: N.id,
@@ -83,7 +83,7 @@ function y(e) {
                         })
                 }),
                 (0, r.jsx)('span', {
-                    className: E.infoBadge,
+                    className: x.infoBadge,
                     children: (0, r.jsx)(d.Z, {
                         guild: N,
                         isBannerVisible: !1,
@@ -94,22 +94,22 @@ function y(e) {
         })),
         G &&
             (C = (0, r.jsx)(a.DY3, {
-                className: E.tooltipContainer,
-                text: x.intl.string(x.t['/FeTKy']),
+                className: x.tooltipContainer,
+                text: E.intl.string(E.t['/FeTKy']),
                 children: (0, r.jsx)(a.d3s, {
                     size: 'md',
                     color: 'currentColor',
-                    className: E.infoIcon
+                    className: x.infoIcon
                 })
             })),
         F
             ? ((j = (0, r.jsx)(p.Z.Channel, { channel: L })),
               (O = (0, r.jsxs)('span', {
-                  className: E.infoTitle,
+                  className: x.infoTitle,
                   children: [
-                      x.intl.format(x.t['2wimj4'], { guildName: N.name }),
+                      E.intl.format(E.t['2wimj4'], { guildName: N.name }),
                       (0, r.jsx)('span', {
-                          className: E.infoBadge,
+                          className: x.infoBadge,
                           children: (0, r.jsx)(d.Z, {
                               guild: N,
                               isBannerVisible: !1
@@ -137,7 +137,7 @@ function y(e) {
                 (0, r.jsxs)(p.Z.Body, {
                     children: [
                         (0, r.jsxs)('div', {
-                            className: E.headerLine,
+                            className: x.headerLine,
                             children: [
                                 (0, r.jsx)(p.Z.Icon, { guild: N }),
                                 (0, r.jsx)(p.Z.Info, {
@@ -151,18 +151,18 @@ function y(e) {
                             onClick: Q,
                             submitting: D,
                             color: p.Z.Button.Colors.GREEN,
-                            children: F ? (B ? x.intl.string(x.t['7vb2cX']) : x.intl.string(x.t.gpqgam)) : M ? x.intl.string(x.t.cEnaW1) : x.intl.string(x.t.XpeFYm)
+                            children: F ? (B ? E.intl.string(E.t['7vb2cX']) : E.intl.string(E.t.gpqgam)) : M ? E.intl.string(E.t.cEnaW1) : E.intl.string(E.t.XpeFYm)
                         })
                     ]
                 }),
                 N.hasFeature(b.oNc.HUB) &&
                     (0, r.jsxs)(r.Fragment, {
                         children: [
-                            (0, r.jsx)('div', { className: E.separator }),
+                            (0, r.jsx)('div', { className: x.separator }),
                             (0, r.jsx)(a.Text, {
                                 variant: 'text-sm/normal',
                                 color: 'header-secondary',
-                                children: x.intl.format(x.t['/o1IfH'], {
+                                children: E.intl.format(E.t['/o1IfH'], {
                                     onClick: () =>
                                         (0, a.ZDy)(async () => {
                                             let { default: e } = await Promise.all([n.e('95468'), n.e('46343')]).then(n.bind(n, 650233));

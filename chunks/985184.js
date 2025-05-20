@@ -1,6 +1,6 @@
 r.d(t, {
     Gt: () => b,
-    ZP: () => O
+    ZP: () => m
 }),
     r(388685);
 var n = r(255367),
@@ -24,10 +24,10 @@ function b() {
     let { isInContainer: e } = l.useContext(p);
     return e;
 }
-function O(e) {
+function m(e) {
     let { components: t, accentColor: r, spoiler: i, renderComponents: d } = e,
         [p, b] = l.useState(i),
-        O = (e) =>
+        m = (e) =>
             (0, n.jsx)(s.am.AutoMeasuredNestedContainer, {
                 children: (l) =>
                     (0, n.jsx)('div', {
@@ -48,7 +48,7 @@ function O(e) {
                 reason: c.wk.SPOILER,
                 obscured: p,
                 onToggleObscurity: () => b((e) => !e),
-                children: (e) => O(e)
+                children: (e) => m(e)
             })
-          : O(!1);
+          : m(!1);
 }

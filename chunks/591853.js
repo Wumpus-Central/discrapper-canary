@@ -210,8 +210,9 @@ function eO(e) {
         Z = null != t && E ? ec.intl.formatToPlainString(ec.t['8lzR/f'], { channel: '#'.concat(t.name) }) : ec.intl.formatToPlainString(ec.t['4c+CAw'], { channel: '@'.concat(V) }),
         H = E ? ec.intl.string(ec.t.Z2CUgo) : ec.intl.string(ec.t.XLGiTE),
         Y = async (e) => {
-            let r;
-            if (null != e) {
+            let r,
+                { emoji: i } = e;
+            if (null != i) {
                 if (
                     (W.default.track(el.rMx.CONTENT_POPOUT_EMOJI_CLICKED, {
                         surface_type: es.Kd.GUILD_MEMBER_LIST,
@@ -225,14 +226,14 @@ function eO(e) {
                 )
                     l()(null != t, 'shareToChannelMode should only be true if a valid channel is passed'), (r = t);
                 else {
-                    var i;
+                    var o;
                     let e = await _.Z.getOrEnsurePrivateChannel(n.id);
-                    r = null != (i = U.Z.getChannel(e)) ? i : null;
+                    r = null != (o = U.Z.getChannel(e)) ? o : null;
                 }
                 return (
                     l()(null != r, 'Send channel must be defined'),
                     q({
-                        reply: ':'.concat(e.name, ':'),
+                        reply: ':'.concat(i.name, ':'),
                         sendToChannel: r,
                         onComplete: (e, t) => {
                             P(!0),
@@ -429,7 +430,7 @@ let ev = (e) => {
                               children: (0, r.jsx)(k.u, {
                                   emoji: t,
                                   isDisabled: !o,
-                                  onClick: () => n(t),
+                                  onClick: () => n({ emoji: t }),
                                   className: eu.emoji
                               })
                           })

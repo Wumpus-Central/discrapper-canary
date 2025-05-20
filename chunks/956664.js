@@ -70,7 +70,7 @@ function p(e, t, n, r) {
         o = f;
     null != n && n * i > window.innerWidth * _ && (o = (window.innerWidth * _) / n);
     let a = f;
-    return null != r && r * i > window.innerHeight * _ && (a = (window.innerHeight * _) / r), (i = Math.min(i, o, a));
+    return null != r && r * i > window.innerHeight * _ && (a = (window.innerHeight * _) / r), (i = parseFloat((i = Math.min(i, o, a)).toFixed(2)));
 }
 function h(e) {
     let { width: t, height: n, maxWidth: r, maxHeight: i } = e,

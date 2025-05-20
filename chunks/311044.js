@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ });
 var o = n(255367),
     r = n(73800),
-    i = n(481060),
-    c = n(81897),
+    c = n(481060),
+    i = n(81897),
     a = n(906732),
     l = n(566898),
     s = n(785717),
@@ -13,21 +13,21 @@ var o = n(255367),
     m = n(264481),
     b = n(274151);
 function _(e) {
-    let { user: t, guildId: n, channelId: _, onClose: g } = e,
+    let { user: t, guildId: n, channelId: _, onClose: y } = e,
         { analyticsLocations: h } = (0, a.ZP)(),
-        { context: y, trackUserProfileAction: x } = (0, s.KZ)(),
-        { mutualFriends: j, mutualFriendsCount: I } = (0, d.Z)(t),
-        O = (0, c.Z)();
+        { context: x, trackUserProfileAction: g } = (0, s.KZ)(),
+        { mutualFriends: j, mutualFriendsCount: O } = (0, d.Z)(t),
+        I = (0, i.Z)();
     return (
         r.useEffect(() => {
-            (0, u.Z)(t.id, O);
-        }, [t.id, O]),
-        (0, o.jsx)(i.Ttm, {
+            (0, u.Z)(t.id, I);
+        }, [t.id, I]),
+        (0, o.jsx)(c.Ttm, {
             className: b.scroller,
             fade: !0,
             children:
                 null == j
-                    ? Array.from({ length: null != I ? I : 10 }).map((e, t) =>
+                    ? Array.from({ length: null != O ? O : 10 }).map((e, t) =>
                           (0, o.jsxs)(
                               'div',
                               {
@@ -49,18 +49,18 @@ function _(e) {
                     : 0 === j.length
                       ? (0, o.jsx)(m.s_, {})
                       : j.map((e) => {
-                            let { key: t, user: r, status: i } = e;
+                            let { key: t, user: r, status: c } = e;
                             return (0, o.jsx)(
                                 p.Z,
                                 {
                                     user: r,
-                                    status: i,
+                                    status: c,
                                     guildId: n,
                                     channelId: _,
                                     onSelect: () => {
                                         var e, t;
-                                        g(),
-                                            x({ action: 'PRESS_MUTUAL_FRIEND' }),
+                                        y(),
+                                            g({ action: 'PRESS_MUTUAL_FRIEND' }),
                                             (0, f.openUserProfileModal)(
                                                 ((e = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
@@ -86,7 +86,7 @@ function _(e) {
                                                             });
                                                     }
                                                     return e;
-                                                })({}, y)),
+                                                })({}, x)),
                                                 (t = t =
                                                     {
                                                         userId: r.id,

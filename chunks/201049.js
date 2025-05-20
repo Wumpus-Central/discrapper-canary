@@ -112,8 +112,9 @@ function g(e) {
                                             return (0, l.jsx)(d.Z, {
                                                 guildId: k,
                                                 closePopout: n,
-                                                onSelectEmoji: (e, t) => {
-                                                    S(e), t && n();
+                                                onSelectEmoji: (e) => {
+                                                    let { emoji: t, willClose: l } = e;
+                                                    S(t), l && n();
                                                 },
                                                 pickerIntention: v.Hz.COMMUNITY_CONTENT,
                                                 onNavigateAway: g,

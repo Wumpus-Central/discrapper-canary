@@ -110,7 +110,7 @@ function j(e) {
         d = i
             ? () => u.Z.stopRinging(t, [n])
             : () => {
-                  u.Z.ring(t, [n]), (0, g.Kh)(t);
+                  u.Z.ring(t, [n], 'dm_banner'), (0, g.Kh)(t);
               };
     return a
         ? (0, r.jsx)(s.z, {

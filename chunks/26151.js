@@ -50,28 +50,31 @@ let h = {
                 );
         } else a(n);
     },
-    ring(e, t) {
-        let n = a.Z.getChannel(e);
-        if (null == n) return;
-        let s = (0, o.V)(n),
-            l = _.TPd.CALLABLE.has(n.type);
-        if (s) {
+    ring(e, t, n) {
+        let s = a.Z.getChannel(e);
+        if (null == s) return;
+        let l = (0, o.V)(s),
+            c = _.TPd.CALLABLE.has(s.type);
+        if (l) {
             r.tn.post({
                 url: _.ANM.CALL_RING(e),
-                body: { recipients: t },
+                body: {
+                    recipients: t,
+                    analytics_location: n
+                },
                 oldFormErrors: !0,
                 rejectWithError: !0
             }),
-                n.type === _.d4z.GUILD_VOICE &&
+                s.type === _.d4z.GUILD_VOICE &&
                     null != t &&
                     i.Z.dispatch({
                         type: 'GUILD_LOCAL_RING_START',
                         ringing: t,
-                        guildId: n.guild_id
+                        guildId: s.guild_id
                     });
             return;
         }
-        l &&
+        c &&
             i.Z.dispatch({
                 type: 'CALL_ENQUEUE_RING',
                 channelId: e,

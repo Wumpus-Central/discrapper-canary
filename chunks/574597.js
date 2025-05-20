@@ -11,8 +11,8 @@ var n = r(255367),
     p = r(592125),
     f = r(430824),
     b = r(158776),
-    O = r(594174),
-    m = r(970184),
+    m = r(594174),
+    O = r(970184),
     y = r(280501),
     j = r(811654),
     g = r(344991),
@@ -20,7 +20,7 @@ var n = r(255367),
     v = r(922127);
 function P(e) {
     var t;
-    let r = (0, m.CJ)(),
+    let r = (0, O.CJ)(),
         P = null == r || null == (t = r.message) ? void 0 : t.getChannelId(),
         x = p.Z.getChannel(P),
         S = f.Z.getGuild(null == x ? void 0 : x.getGuildId()),
@@ -32,7 +32,7 @@ function P(e) {
         renderIcon: (e, t) => {
             let r = t === g.tE.PILL_ICON_SIZE;
             if ((null == e ? void 0 : e.type) === y.tM.USER) {
-                let l = O.default.getUser(e.value);
+                let l = m.default.getUser(e.value);
                 if (null == l) return;
                 return (0, n.jsx)(o.qEK, {
                     size: r ? o.EFr.SIZE_16 : o.EFr.SIZE_24,
@@ -86,7 +86,7 @@ function P(e) {
         renderOptionLabel: (e) => {
             let t = null;
             if (e.type === y.tM.USER) {
-                let r = O.default.getUser(e.value);
+                let r = m.default.getUser(e.value);
                 null != r &&
                     (t = (0, n.jsx)(a.Z, {
                         className: v.tag,

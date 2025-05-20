@@ -10,15 +10,15 @@ function c(e) {
         { entry: s, baseEntryData: u } = e,
         d = s.extra.entries[0].media,
         p = d.artists[0],
-        { title: f, provider: b, image_url: O } = d,
-        m = p.name,
+        { title: f, provider: b, image_url: m } = d,
+        O = p.name,
         y = {
             onClick: () => (0, l.o)(o.Hw.TRACK, d.external_id),
             ariaDescription: a.intl.formatToPlainString(a.t.xTsar6, { itemName: f })
         },
         j = {
             onClick: () => (0, l.o)(o.Hw.ARTIST, p.external_id),
-            ariaDescription: a.intl.formatToPlainString(a.t.xTsar6, { itemName: m })
+            ariaDescription: a.intl.formatToPlainString(a.t.xTsar6, { itemName: O })
         };
     return (
         b === n.p.SPOTIFY && (c = { type: i.kG.SPOTIFY }),
@@ -50,8 +50,8 @@ function c(e) {
         (r = r =
             {
                 title: f,
-                subtitle: m,
-                thumbnailUrl: O,
+                subtitle: O,
+                thumbnailUrl: m,
                 titleClickable: y,
                 subtitleClickable: j,
                 thumbnailClickable: y,

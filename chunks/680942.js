@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(884697),
     d = n(228624),
     f = n(67409),
-    p = n(474936),
-    b = n(231338),
+    b = n(474936),
+    p = n(231338),
     g = n(388032),
     h = n(846165);
 let m = {
@@ -132,7 +132,7 @@ let m = {
                                                   selectedVariantIndex: n
                                               }),
                                               isGift: !0,
-                                              giftingOrigin: p.Wt.SHOP_PAGE,
+                                              giftingOrigin: b.Wt.SHOP_PAGE,
                                               analyticsLocations: S,
                                               returnRef: _,
                                               variantsReturnStyle: E,
@@ -148,7 +148,7 @@ let m = {
                                       ? (0, r.jsx)(c.Z, {
                                             hovered: y,
                                             isContentDismissed: !0,
-                                            themeOverride: b.BR.DARK,
+                                            themeOverride: p.BR.DARK,
                                             boxColors: m
                                         })
                                       : (0, r.jsx)(i.OgN, {

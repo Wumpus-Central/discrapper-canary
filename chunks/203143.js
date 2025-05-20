@@ -23,8 +23,8 @@ var r = n(512722),
     g = n(41776),
     _ = n(566006),
     b = n(48854),
-    x = n(869765),
-    E = n(314897),
+    E = n(869765),
+    x = n(314897),
     y = n(592125),
     v = n(703558),
     O = n(607744),
@@ -151,7 +151,7 @@ async function F(e) {
         }),
         l = a().difference(i, r),
         o = a().difference(r, i),
-        c = E.default.getId(),
+        c = x.default.getId(),
         d = [
             ...l.map((e) => ({
                 type: 'MESSAGE_REACTION_REMOVE',
@@ -357,7 +357,7 @@ let V = {
                         channelId: t,
                         messageId: n
                     };
-                let l = x.Z.getMessage(t, n);
+                let l = E.Z.getMessage(t, n);
                 if (null != l.message)
                     return {
                         channelId: t,

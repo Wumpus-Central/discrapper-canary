@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(381585),
     d = n(597688),
     f = n(506800),
-    p = n(788822),
-    b = n(215023),
+    b = n(788822),
+    p = n(215023),
     g = n(388032),
     h = n(806734);
 let m = (e) => {
@@ -18,7 +18,7 @@ let m = (e) => {
             i = d.Z.getCategory(o.T.ROBERT),
             c = (0, f.c)('CollectiblesFeedShop') && null != i,
             u = d.Z.getCategory(o.T.ANIME_V2),
-            m = l.useMemo(() => g.intl.string(new Date() > b.gJ ? g.t.l0CjbW : g.t.uPewb2), []);
+            m = l.useMemo(() => g.intl.string(new Date() > p.gJ ? g.t.l0CjbW : g.t.uPewb2), []);
         return (0, r.jsx)('div', {
             className: a()(h.col2, h.centeredSection),
             children:
@@ -29,7 +29,7 @@ let m = (e) => {
                               let l = null != e.unpublishedAt ? g.intl.string(g.t['h/uBCQ']) : '1341506445245415424' === e.categoryStoreListingId ? g.intl.string(g.t.PsL3bW) : e.categoryStoreListingId === (null == u ? void 0 : u.storeListingId) ? g.intl.string(g.t['o/oRJC']) : void 0,
                                   a = c && e.categoryStoreListingId === (null == i ? void 0 : i.storeListingId) ? m : l;
                               return (0, r.jsx)(
-                                  p.q,
+                                  b.q,
                                   {
                                       subblock: e,
                                       badgeText: 0 === n ? l : a,
@@ -48,7 +48,7 @@ let m = (e) => {
         if (null == n || n.length < 2) return c.Z.captureMessage('Collectible Featured Block requires at least 2 categories'), null;
         let [i, s] = n,
             m = (null == i ? void 0 : i.unpublishedAt) != null ? g.intl.string(g.t['h/uBCQ']) : void 0,
-            _ = g.intl.string(new Date() > b.gJ ? g.t.l0CjbW : g.t.uPewb2),
+            _ = g.intl.string(new Date() > p.gJ ? g.t.l0CjbW : g.t.uPewb2),
             C = l ? _ : g.intl.string(g.t['o/oRJC']);
         return (0, r.jsx)('div', {
             className: a()(h.col2, h.centeredSection),
@@ -59,13 +59,13 @@ let m = (e) => {
                 },
                 children: [
                     null != i &&
-                        (0, r.jsx)(p.q, {
+                        (0, r.jsx)(b.q, {
                             category: i,
                             badgeText: m,
                             handleTransition: t
                         }),
                     null != s &&
-                        (0, r.jsx)(p.q, {
+                        (0, r.jsx)(b.q, {
                             category: s,
                             badgeText: C,
                             handleTransition: t

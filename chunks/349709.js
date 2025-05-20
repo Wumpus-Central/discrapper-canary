@@ -70,9 +70,10 @@ function j(e) {
         M = () => {
             O(void 0), S(void 0);
         },
-        I = (e) => (t, n) => {
-            let l = (null == t ? void 0 : t.id) == null;
-            M(), l ? O(null == t ? void 0 : t.optionallyDiverseSequence) : (C && O(null == t ? void 0 : t.name), S(null == t ? void 0 : t.id)), n && e();
+        I = (e) => (t) => {
+            let { emoji: n, willClose: l } = t,
+                a = (null == n ? void 0 : n.id) == null;
+            M(), a ? O(null == n ? void 0 : n.optionallyDiverseSequence) : (C && O(null == n ? void 0 : n.name), S(null == n ? void 0 : n.id)), l && e();
         },
         T = (e) => {
             e.stopPropagation(), M();

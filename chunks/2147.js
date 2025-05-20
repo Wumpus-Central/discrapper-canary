@@ -176,8 +176,9 @@ function eE(e) {
                     pickerIntention: en.Hz.CHANNEL_NAME,
                     closePopout: n,
                     onNavigateAway: n,
-                    onSelectEmoji: (e, i) => {
-                        null != e && e.type === T.B.UNICODE && t(e.surrogates), i && n();
+                    onSelectEmoji: (e) => {
+                        let { emoji: i, willClose: l } = e;
+                        null != i && i.type === T.B.UNICODE && t(i.surrogates), l && n();
                     },
                     showOnlyUnicode: !0
                 });
@@ -983,8 +984,9 @@ class eO extends l.PureComponent {
                 return (0, i.jsx)(Z.Z, {
                     guildId: null == n ? void 0 : n.guild_id,
                     closePopout: t,
-                    onSelectEmoji: (e, n) => {
-                        this.handleChangeDefaultReactionEmoji(e), n && t();
+                    onSelectEmoji: (e) => {
+                        let { emoji: n, willClose: i } = e;
+                        this.handleChangeDefaultReactionEmoji(n), i && t();
                     },
                     pickerIntention: en.Hz.COMMUNITY_CONTENT,
                     channel: n

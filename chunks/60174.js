@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(931651),
     _ = n(594174),
     b = n(630388),
-    x = n(74538),
-    E = n(566006),
+    E = n(74538),
+    x = n(566006),
     y = n(981631),
     v = n(185923),
     O = n(474936),
@@ -57,10 +57,10 @@ class T extends i.Component {
         let { type: e, message: t, className: n, children: i, useChatFontScaling: l, tabIndex: o = 0 } = this.props,
             { isReactionPickerActive: s } = this.state,
             c = t.state === y.yb.SENDING,
-            m = e === E.O.BURST;
+            m = e === x.O.BURST;
         if (c || (0, b.yE)(t.flags, y.iLy.EPHEMERAL)) return null;
         let f = _.default.getCurrentUser(),
-            h = (0, x.I5)(f),
+            h = (0, E.I5)(f),
             g = m ? j.intl.string(j.t.Kfcszs) : j.intl.string(j.t.lfIHs7);
         !h && m && (g = (0, r.jsx)(p.X, { tooltipText: j.intl.string(j.t.Kfcszs) }));
         let O = l ? S : C,
@@ -132,8 +132,8 @@ class T extends i.Component {
                 let { type: t, channel: n } = this.props;
                 e.stopPropagation();
                 let r = _.default.getCurrentUser();
-                t !== E.O.BURST ||
-                    (0, x.I5)(r) ||
+                t !== x.O.BURST ||
+                    (0, E.I5)(r) ||
                     (0, m.m)({
                         analytics: {
                             type: O.cd.BURST_REACTION_UPSELL,
@@ -149,7 +149,7 @@ class T extends i.Component {
                     { type: n, channel: i, message: l } = this.props,
                     a = N(
                         { openPopoutType: 'message_reaction_emoji_picker' },
-                        n === E.O.BURST && {
+                        n === x.O.BURST && {
                             openPopoutType: 'message_super_reaction_emoji_picker',
                             page: null != i.getGuildId() ? y.ZY5.GUILD_CHANNEL : y.ZY5.DM_CHANNEL,
                             section: (0, h.s4)(i),
@@ -159,8 +159,9 @@ class T extends i.Component {
                     o = (0, r.jsx)(g.$, {
                         closePopout: t,
                         channel: i,
-                        onSelectEmoji: (e, n, r) => {
-                            this.onAddReaction(e, r), n && (r ? s()(t, 150)() : t());
+                        onSelectEmoji: (e) => {
+                            let { emoji: n, willClose: r, isBurst: i } = e;
+                            this.onAddReaction(n, i), r && (i ? s()(t, 150)() : t());
                         },
                         analyticsOverride: a,
                         messageId: l.id

@@ -10,14 +10,14 @@ var r = n(120356),
     d = n(367907),
     u = n(122021),
     f = n(275759),
-    m = n(888496),
-    p = n(768762),
+    p = n(888496),
+    m = n(768762),
     b = n(706454),
     _ = n(49012),
     y = n(981631),
     h = n(856651),
-    g = n(388032),
-    x = n(738873);
+    x = n(388032),
+    g = n(738873);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -68,7 +68,7 @@ function I(e) {
         b = (0, f.FI)(l[h.PC.CREATED_AT], c),
         I = s.Z.get((0, u.rR)(n.type));
     return (0, o.jsxs)('div', {
-        className: x.connection,
+        className: g.connection,
         children: [
             (0, o.jsx)(a.ua7, {
                 text: null == I ? void 0 : I.name,
@@ -76,14 +76,14 @@ function I(e) {
                     (0, o.jsx)(
                         'img',
                         O(j({}, e), {
-                            alt: g.intl.formatToPlainString(g.t.rtm15O, { name: null == I ? void 0 : I.name }),
-                            className: x.platformIcon,
+                            alt: x.intl.formatToPlainString(x.t.rtm15O, { name: null == I ? void 0 : I.name }),
+                            className: g.platformIcon,
                             src: (0, a.wjy)(r) ? (null == I ? void 0 : I.icon.darkSVG) : null == I ? void 0 : I.icon.lightSVG
                         })
                     )
             }),
             (0, o.jsxs)('div', {
-                className: x.connectionInfo,
+                className: g.connectionInfo,
                 children: [
                     (0, o.jsxs)('div', {
                         children: [
@@ -105,7 +105,7 @@ function I(e) {
                                       })
                                     : (0, o.jsx)(a.eee, {
                                           href: t,
-                                          className: x.platformUrlAnchor,
+                                          className: g.platformUrlAnchor,
                                           useDefaultUnderlineStyles: !1,
                                           onClick: (e) => {
                                               (0, d.yw)(y.rMx.CONNECTED_ACCOUNT_VIEWED, {
@@ -121,7 +121,7 @@ function I(e) {
                                                   );
                                           },
                                           children: (0, o.jsxs)('div', {
-                                              className: x.accountName,
+                                              className: g.accountName,
                                               children: [
                                                   (0, o.jsx)(a.ua7, {
                                                       overflowOnly: !0,
@@ -135,9 +135,9 @@ function I(e) {
                                                               })
                                                           )
                                                   }),
-                                                  (0, o.jsx)(p.Z, {
-                                                      className: x.platformUrlIcon,
-                                                      direction: p.Z.Directions.RIGHT
+                                                  (0, o.jsx)(m.Z, {
+                                                      className: g.platformUrlIcon,
+                                                      direction: m.Z.Directions.RIGHT
                                                   })
                                               ]
                                           })
@@ -146,13 +146,13 @@ function I(e) {
                             null != b &&
                                 (0, o.jsx)(a.Text, {
                                     variant: 'text-xs/normal',
-                                    children: g.intl.format(g.t['9rfonp'], { date: b })
+                                    children: x.intl.format(x.t['9rfonp'], { date: b })
                                 })
                         ]
                     }),
                     (0, o.jsx)('div', {
-                        className: x.metadata,
-                        children: n.type === y.ABu.REDDIT ? (0, m.oP)(l) : n.type === y.ABu.STEAM ? (0, m.Dq)(l) : n.type === y.ABu.BLUESKY || n.type === y.ABu.MASTODON || n.type === y.ABu.TWITTER ? (0, m.rJ)(l) : n.type === y.ABu.PAYPAL ? (0, m.li)(l) : n.type === y.ABu.EBAY ? (0, m.ul)(l) : n.type === y.ABu.TIKTOK ? (0, m.hf)(l) : null
+                        className: g.metadata,
+                        children: n.type === y.ABu.REDDIT ? (0, p.oP)(l) : n.type === y.ABu.STEAM ? (0, p.Dq)(l) : n.type === y.ABu.BLUESKY || n.type === y.ABu.MASTODON || n.type === y.ABu.TWITTER ? (0, p.rJ)(l) : n.type === y.ABu.PAYPAL ? (0, p.li)(l) : n.type === y.ABu.EBAY ? (0, p.ul)(l) : n.type === y.ABu.TIKTOK ? (0, p.hf)(l) : null
                     })
                 ]
             })
@@ -166,7 +166,7 @@ function v(e) {
     return 0 === t.length
         ? null
         : (0, o.jsx)('div', {
-              className: c()(x.container, r),
+              className: c()(g.container, r),
               children: t.map((e) =>
                   (0, o.jsx)(
                       I,

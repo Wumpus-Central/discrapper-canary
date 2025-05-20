@@ -20,7 +20,7 @@ function f(e) {
         : m.intl.format(l, { username: t });
 }
 function h(e) {
-    var t, n, r, h, g, _, b, x, E, y, v, O, j, C, S;
+    var t, n, r, h, g, _, b, E, x, y, v, O, j, C, S;
     let { item: I, renderApplication: N } = e,
         T = null != (r = null == (t = I.other_user) ? void 0 : t.id) ? r : p.lds,
         P = u.ZP.getName(s.default.getUser(null == (n = I.other_user) ? void 0 : n.id)),
@@ -29,7 +29,7 @@ function h(e) {
         case d.O7.FRIEND_REQUESTS_GROUPED:
             let w = u.ZP.getName(s.default.getUser(null == (g = I.other_users) || null == (h = g[0]) ? void 0 : h.id)),
                 Z = u.ZP.getName(s.default.getUser(null == (b = I.other_users) || null == (_ = b[1]) ? void 0 : _.id)),
-                R = Math.max((null != (E = null == (x = I.other_users) ? void 0 : x.length) ? E : 0) - 2, 0);
+                R = Math.max((null != (x = null == (E = I.other_users) ? void 0 : E.length) ? x : 0) - 2, 0);
             return m.intl.format(m.t.g5xyIC, {
                 user: w,
                 user2: Z,

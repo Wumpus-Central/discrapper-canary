@@ -17,10 +17,10 @@ let d = (e) => {
                 isGift: !1,
                 activeSubscription: null
             }),
-            p = (0, a.Wz)(u.GP[e].skuId),
-            { priceOptions: g } = (0, i.Z)({
+            g = (0, a.Wz)(u.GP[e].skuId),
+            { priceOptions: p } = (0, i.Z)({
                 activeSubscription: null,
-                skuIDs: [p],
+                skuIDs: [g],
                 paymentSourceId: m,
                 isGift: !1
             }),
@@ -35,23 +35,23 @@ let d = (e) => {
                 renewal: !0,
                 preventFetch: null == x,
                 paymentSourceId: m,
-                currency: g.currency
+                currency: p.currency
             }),
             v = null == f || null == (C = f.invoiceItems) || null == (d = C.find((t) => t.subscriptionPlanId === e)) || null == (n = d.discounts) || null == (t = n.find((e) => e.type === r.eW.SUBSCRIPTION_PLAN)) ? void 0 : t.amount,
-            T = (0, a.aS)(e, !1, !1, g);
+            T = (0, a.aS)(e, !1, !1, p);
         return (0, s.T4)(T.amount - (null != v ? v : 0), T.currency);
     },
     C = (e, t, n) => {
         var c, d, C, m;
-        let { paymentSourceId: p } = (0, l.Z)({
+        let { paymentSourceId: g } = (0, l.Z)({
                 isGift: !1,
                 activeSubscription: null
             }),
-            g = (0, a.Wz)(u.GP[t].skuId),
+            p = (0, a.Wz)(u.GP[t].skuId),
             { priceOptions: x } = (0, i.Z)({
                 activeSubscription: null,
-                skuIDs: [g],
-                paymentSourceId: p,
+                skuIDs: [p],
+                paymentSourceId: g,
                 isGift: !1
             }),
             f = null != n,
@@ -65,7 +65,7 @@ let d = (e) => {
                 ],
                 renewal: !0,
                 preventFetch: !f,
-                paymentSourceId: p,
+                paymentSourceId: g,
                 currency: x.currency,
                 userDiscountOfferId: null == n ? void 0 : n.id
             }),

@@ -390,7 +390,12 @@ function X(e) {
               ? { defaultTextColor: 'interactive-normal' }
               : 3 === n
                 ? { defaultTextColor: 'text-muted' }
-                : { defaultTextColor: 'text-secondary' }),
+                : 4 === n
+                  ? {
+                        defaultTextColor: 'text-secondary',
+                        defaultIconColor: f.TVs.colors.TEXT_SECONDARY
+                    }
+                  : { defaultTextColor: 'text-secondary' }),
         (0, r.jsx)(L.Provider, {
             value: A({ location: n }, t),
             children: (0, r.jsx)('div', {

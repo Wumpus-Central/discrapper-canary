@@ -331,8 +331,9 @@ class I extends r.PureComponent {
                     { onClose: n } = this.props;
                 return (0, l.jsx)(m.Z, {
                     closePopout: e,
-                    onSelectEmoji: (t, n) => {
-                        this.handleEmojiChange(t), n && e();
+                    onSelectEmoji: (t) => {
+                        let { emoji: n, willClose: l } = t;
+                        this.handleEmojiChange(n), l && e();
                     },
                     pickerIntention: _.Hz.STATUS,
                     onNavigateAway: n

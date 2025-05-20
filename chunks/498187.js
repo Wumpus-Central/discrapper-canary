@@ -1,4 +1,4 @@
-r.d(t, { Z: () => O });
+r.d(t, { Z: () => m });
 var n = r(876215),
     l = r(758713),
     i = r(835473),
@@ -14,13 +14,13 @@ let f = {
         [l.z.PLAYSTATION]: s.kG.PLAYSTATION
     },
     b = { [u._.EMBED]: o.m1.Embed };
-function O(e) {
+function m(e) {
     var t, r;
     let l,
         o,
-        { entry: s, location: u, baseEntryData: O } = e,
-        m = (0, i.q)(s.extra.application_id),
-        y = null == m ? void 0 : m.getIconURL(d.Si.LARGE),
+        { entry: s, location: u, baseEntryData: m } = e,
+        O = (0, i.q)(s.extra.application_id),
+        y = null == O ? void 0 : O.getIconURL(d.Si.LARGE),
         j = s.extra.game_name;
     if (null != s.extra.platform) {
         let e = f[s.extra.platform];
@@ -63,7 +63,7 @@ function O(e) {
                     });
             }
             return e;
-        })({}, O)),
+        })({}, m)),
         (r = r =
             {
                 thumbnailUrl: y,

@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(594174),
     _ = n(626135),
     b = n(709054),
-    x = n(591759),
-    E = n(833592),
+    E = n(591759),
+    x = n(833592),
     y = n(497089),
     v = n(178480),
     O = n(418316),
@@ -103,7 +103,7 @@ let M = i.memo(function (e) {
             { analyticsLocations: c } = (0, s.ZP)(),
             p = (0, C.I)(l, o),
             f = i.useCallback(async () => {
-                if ((p || (0, E.wt)(l), null != l.item_enum && l.item_enum === y.AM.FIND_FRIENDS))
+                if ((p || (0, x.wt)(l), null != l.item_enum && l.item_enum === y.AM.FIND_FRIENDS))
                     return void (0, a.ZDy)(async () => {
                         let { default: e } = await n.e('6074').then(n.bind(n, 443189));
                         return (t) =>
@@ -137,12 +137,12 @@ let M = i.memo(function (e) {
                             );
                     });
                 if (null != l.deeplink) {
-                    let t = x.Z.safeParseWithQuery(l.deeplink);
+                    let t = E.Z.safeParseWithQuery(l.deeplink);
                     if (null == t) return;
                     let n = t.hostname,
                         r = t.path;
                     if (null == n || null == r) return;
-                    if (x.Z.isDiscordHostname(n)) {
+                    if (E.Z.isDiscordHostname(n)) {
                         let t = r.match('^/users/(\\d+)');
                         if (null != t && 2 === t.length) {
                             var e;

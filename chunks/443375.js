@@ -109,7 +109,8 @@ function Y(e) {
                       image: ea,
                       smallImage: es,
                       size: t,
-                      aspectRatio: e
+                      aspectRatio: e,
+                      className: V.image
                   })
                 : (0, r.jsx)(h.E, {
                       image: ea,

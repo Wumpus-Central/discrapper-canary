@@ -20,7 +20,7 @@ function a(e, t, n) {
     );
 }
 var s = (function (e) {
-    return (e[(e.MESSAGING = 0)] = 'MESSAGING'), (e[(e.OVERLAYS = 1)] = 'OVERLAYS'), (e[(e.PREMIUM = 2)] = 'PREMIUM'), (e[(e.REPORTING = 3)] = 'REPORTING'), (e[(e.APP_COLLECTIONS = 4)] = 'APP_COLLECTIONS'), e;
+    return (e[(e.MESSAGING = 0)] = 'MESSAGING'), (e[(e.OVERLAYS = 1)] = 'OVERLAYS'), (e[(e.PREMIUM = 2)] = 'PREMIUM'), (e[(e.REPORTING = 3)] = 'REPORTING'), (e[(e.APP_COLLECTIONS = 4)] = 'APP_COLLECTIONS'), (e[(e.SHOP = 5)] = 'SHOP'), e;
 })({});
 let l = {
         visual_effect_view_overrides: {
@@ -62,6 +62,10 @@ let l = {
         disable_app_collections_cache: {
             label: 'Disable application collections cache so that you can see updates to collections immediately.',
             category: 4
+        },
+        shop_show_debug_overlay: {
+            label: 'Show debug log overlay in collectibles shop',
+            category: 5
         }
     },
     c = {};

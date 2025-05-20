@@ -272,25 +272,26 @@ function w(e) {
             },
             [eg]
         ),
-        eb = (e) => (n, l) => {
-            var t, i;
-            if (null == n) return;
-            let a = null;
+        eb = (e) => (n) => {
+            var l, t;
+            let { emoji: i, willClose: a } = n;
+            if (null == i) return;
+            let r = null;
             eg(
                 null,
-                null == n.id
+                null == i.id
                     ? {
                           id: null,
-                          name: null != (t = n.optionallyDiverseSequence) ? t : '',
+                          name: null != (l = i.optionallyDiverseSequence) ? l : '',
                           animated: !1
                       }
                     : {
-                          id: n.id,
-                          name: null != (i = n.originalName) ? i : n.name,
-                          animated: n.animated
+                          id: i.id,
+                          name: null != (t = i.originalName) ? t : i.name,
+                          animated: i.animated
                       }
             ),
-                l && e();
+                a && e();
         },
         ey = null;
     return (

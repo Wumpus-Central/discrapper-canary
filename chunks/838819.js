@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(952265),
     d = n(4738),
     f = n(481060),
-    p = n(150063),
-    b = n(100527),
+    b = n(150063),
+    p = n(100527),
     g = n(906732),
     h = n(702486),
     m = n(605236),
@@ -74,20 +74,20 @@ let J = (e) => {
             ee = l.useMemo(() => {
                 switch (i) {
                     case z.AW.ORBS:
-                        return b.Z.COLLECTIBLES_SHOP_ORBS_TAB;
+                        return p.Z.COLLECTIBLES_SHOP_ORBS_TAB;
                     case z.AW.HOME:
-                        return b.Z.COLLECTIBLES_SHOP_HOME_SCREEN;
+                        return p.Z.COLLECTIBLES_SHOP_HOME_SCREEN;
                     case z.AW.CATALOG:
-                        return b.Z.COLLECTIBLES_SHOP_FULLSCREEN;
+                        return p.Z.COLLECTIBLES_SHOP_FULLSCREEN;
                 }
             }, [i]),
-            { analyticsLocations: et, newestAnalyticsLocation: en } = (0, g.ZP)([...$, b.Z.COLLECTIBLES_SHOP, ee]),
+            { analyticsLocations: et, newestAnalyticsLocation: en } = (0, g.ZP)([...$, p.Z.COLLECTIBLES_SHOP, ee]),
             { sessionId: er, scrollerRef: el, scrollHandler: ei } = (0, h._)(q.rMx.COLLECTIBLES_SHOP_SCROLLED, u),
             { selectedTab: ea, transitionState: eo, transitionToTab: es } = (0, R.B)(el, i, n),
             [ec, eu] = l.useState(!1),
             ed = (0, B.R)('CollectiblesShop'),
-            [ef, ep] = l.useState(z.IV),
-            [eb, eg] = l.useState(),
+            [ef, eb] = l.useState(z.IV),
+            [ep, eg] = l.useState(),
             [eh, em] = l.useState(),
             { noCache: e_, includeUnpublished: eC } = (0, V.Z)(),
             { closeIntroToOrbsClaimedCoachmark: ev } = (0, O.Z)({ location: 'CollectiblesShop' });
@@ -139,10 +139,10 @@ let J = (e) => {
                             source: t,
                             page_session_id: er,
                             page_type: ea === z.AW.CATALOG ? 'full' : ea,
-                            category: ea === z.AW.HOME || null == (e = k.Z.getCategory(eb)) ? void 0 : e.name
+                            category: ea === z.AW.HOME || null == (e = k.Z.getCategory(ep)) ? void 0 : e.name
                         });
                 }
-            }, [et, u, er, eb, eg, eh, eo, ea, ee, en]),
+            }, [et, u, er, ep, eg, eh, eo, ea, ee, en]),
             l.useEffect(() => {
                 null == eS ||
                     ej ||
@@ -161,7 +161,7 @@ let J = (e) => {
                     });
         }, [eA]),
             l.useEffect(() => {
-                n || (0, p.Y)(q.Z5c.COLLECTIBLES_SHOP);
+                n || (0, b.Y)(q.Z5c.COLLECTIBLES_SHOP);
             }, [n]);
         let eZ = l.useCallback(() => {
                 eI();
@@ -216,7 +216,7 @@ let J = (e) => {
             ),
             eQ = (0, s.e7)([k.Z], () => {
                 var e;
-                return null == (e = k.Z.getCategory(eb)) ? void 0 : e.name;
+                return null == (e = k.Z.getCategory(ep)) ? void 0 : e.name;
             });
         return (0, r.jsx)(g.Gt, {
             value: et,
@@ -239,7 +239,7 @@ let J = (e) => {
                                 onScroll: () => {
                                     if ((ei(), null != el.current)) {
                                         let e = el.current.getDistanceFromBottom();
-                                        ef >= ed ? eu(e < 20) : e <= 200 && ep(ef + z.IV);
+                                        ef >= ed ? eu(e < 20) : e <= 200 && eb(ef + z.IV);
                                     }
                                 },
                                 children: (0, r.jsxs)('div', {

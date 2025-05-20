@@ -21,8 +21,8 @@ function f(e) {
         m = s.EFr.SIZE_32,
         g = (0, o.Z)(null == f ? void 0 : f.assetId, m, !_),
         E = (0, c.Z)(),
-        S = null == E ? void 0 : E.giftPurchaseConfirmation;
-    return null == n || null == S
+        y = null == E ? void 0 : E.giftPurchaseConfirmation;
+    return null == n || null == y
         ? null
         : (0, l.jsx)(p.O3, {
               children: (0, l.jsx)(s.mzw, {
@@ -46,7 +46,7 @@ function f(e) {
                                           purchaseType: x.o8.PROMOTIONAL
                                       });
                               },
-                              children: S.collectRewardButtonText()
+                              children: y.collectRewardButtonText()
                           })
                       ]
                   })

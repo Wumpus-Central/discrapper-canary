@@ -22,22 +22,22 @@ function f(e) {
         h = (null == (n = o.default.getCurrentUser()) ? void 0 : n.id) === e.id,
         j = (0, g.Z)(),
         P = (0, i.e7)([d.ZP], () => d.ZP.getPermissionsForUser(e.id, f), [f, e.id]),
-        v = (0, c.B)(f);
+        x = (0, c.B)(f);
     if (null == t || null == O || null == m || P.speaker) return null;
-    let x = () => {
+    let v = () => {
         h ? (0, s.RK)(t, !1) : (0, s._0)(t, e.id);
     };
-    return v
+    return x
         ? (0, l.jsx)(r.sNh, {
               id: 'invite-speaker',
               label: h ? Z.intl.string(Z.t['W6c/VV']) : Z.intl.string(Z.t.VUCWcH),
-              action: x
+              action: v
           })
         : j && h
           ? (0, l.jsx)(r.sNh, {
                 id: 'invite-speaker',
                 label: Z.intl.string(Z.t['W6c/VV']),
-                action: x
+                action: v
             })
           : null;
 }

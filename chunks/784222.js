@@ -390,7 +390,11 @@ let V = (e) => {
             (e, r) => {
                 switch (e.type) {
                     case 1:
-                        return void i(void 0, r.isFinalSelection, r.isBurst);
+                        return void i({
+                            emoji: void 0,
+                            willClose: r.isFinalSelection,
+                            isBurst: r.isBurst
+                        });
                     case 0: {
                         let { emoji: s } = e;
                         if (null == s) return;
@@ -413,7 +417,12 @@ let V = (e) => {
                                 emojiId: s.id
                             });
                         if (c === D.Z5.ROLE_SUBSCRIPTION_UNAVAILABLE) return;
-                        null == a || a(e), i(s, r.isFinalSelection, r.isBurst);
+                        null == a || a(e),
+                            i({
+                                emoji: s,
+                                willClose: r.isFinalSelection,
+                                isBurst: r.isBurst
+                            });
                     }
                 }
             },

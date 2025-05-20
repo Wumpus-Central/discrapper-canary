@@ -161,7 +161,7 @@ function R(e) {
                         isObscured: !h && w,
                         src: R.url,
                         children: (n) =>
-                            (0, r.jsx)(v.Z, {
+                            (0, r.jsx)(v.ZP, {
                                 media: R,
                                 maxWidth: e,
                                 maxHeight: t,

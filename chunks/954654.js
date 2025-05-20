@@ -16,8 +16,8 @@ var l = r(120356),
     p = r(574597),
     f = r(378975),
     b = r(732586),
-    O = r(988075),
-    m = r(12067),
+    m = r(988075),
+    O = r(12067),
     y = r(676149),
     j = r(861529),
     g = r(568248),
@@ -94,11 +94,11 @@ function E(e) {
                         case a.re.TEXT_DISPLAY:
                             return (0, n.jsx)(j.Z, w({}, e), t);
                         case a.re.MEDIA_GALLERY:
-                            return (0, n.jsx)(m.Z, w({}, e), t);
+                            return (0, n.jsx)(O.Z, w({}, e), t);
                         case a.re.THUMBNAIL:
                             return (0, n.jsx)(g.Z, w({}, e), t);
                         case a.re.FILE:
-                            return (0, n.jsx)(O.Z, w({}, e), t);
+                            return (0, n.jsx)(m.Z, w({}, e), t);
                         case a.re.SEPARATOR:
                             return (0, n.jsx)(y.Z, w({}, e), t);
                         case a.re.CONTENT_INVENTORY_ENTRY:

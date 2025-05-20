@@ -1,11 +1,11 @@
 n.d(t, {
     DG: () => a,
-    Mc: () => l,
     iC: () => _,
     me: () => s,
     nP: () => f,
     sA: () => c,
-    wm: () => u
+    wm: () => u,
+    zO: () => l
 });
 var r = n(818083),
     i = n(109911),
@@ -52,19 +52,14 @@ let a = (0, r.B)({
     }),
     l = (0, r.B)({
         kind: 'user',
-        id: '2025-04_hotwheels_v3_model',
+        id: '2025-05_hotwheels_user_affinity_v2',
         label: 'Next iteration of the activity feed ranking model.',
         commonTriggerPoint: o.$P.CONNECTION_OPEN,
         defaultConfig: {},
         treatments: [
             {
-                id: 3,
-                label: 'Noteworthy',
-                config: {}
-            },
-            {
-                id: 15,
-                label: 'ML model V3',
+                id: 14,
+                label: 'ML model V3 - User Affinity V2',
                 config: {}
             }
         ]

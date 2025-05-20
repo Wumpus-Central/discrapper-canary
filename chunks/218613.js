@@ -155,8 +155,9 @@ function ea(e) {
                     pickerIntention: J.Hz.CHANNEL_NAME,
                     closePopout: n,
                     onNavigateAway: n,
-                    onSelectEmoji: (e, i) => {
-                        null != e && e.type === D.B.UNICODE && t(e.surrogates), i && n();
+                    onSelectEmoji: (e) => {
+                        let { emoji: i, willClose: s } = e;
+                        null != i && i.type === D.B.UNICODE && t(i.surrogates), s && n();
                     },
                     showOnlyUnicode: !0
                 });

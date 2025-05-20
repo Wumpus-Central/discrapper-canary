@@ -113,8 +113,9 @@ function _(e) {
             });
         }, [t, l, o]),
         d = i.useCallback(
-            (e) => (n, r) => {
-                o(t, l, { emoji: null != n ? n : void 0 }), r && e();
+            (e) => (n) => {
+                let { emoji: r, willClose: i } = n;
+                o(t, l, { emoji: null != r ? r : void 0 }), i && e();
             },
             [t, l, o]
         ),

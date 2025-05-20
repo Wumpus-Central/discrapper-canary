@@ -1,9 +1,9 @@
-n.d(t, { Z: () => c });
+n.d(t, { Z: () => i });
 var o = n(255367);
 n(73800);
 var r = n(678738),
-    i = n(362258);
-function c(e) {
+    c = n(362258);
+function i(e) {
     return (0, o.jsx)(
         r.Z,
         (function (e) {
@@ -32,7 +32,7 @@ function c(e) {
             return e;
         })(
             {
-                headingClassName: i.heading,
+                headingClassName: c.heading,
                 headingVariant: 'text-xs/semibold',
                 headingColor: 'none'
             },

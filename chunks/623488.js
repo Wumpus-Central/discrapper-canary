@@ -72,7 +72,7 @@ function f(e) {
           });
 }
 function h(e) {
-    let { imageUrl: t, name: n, description: i, formattedPrice: c, role: h, ctaComponent: g, shouldShowFullDescriptionButton: _ = !0, onShowFullDescription: b, productType: x, onTapCard: E, actionMenu: y, showOpaqueBackground: v = !1, hideRoleTag: O = !1, lineClamp: j = 1, cardWidth: C = 332, cardHeight: S, thumbnailHeight: I = 187, descriptionTextVariant: N = 'text-sm/normal', isDraft: T = !1 } = e,
+    let { imageUrl: t, name: n, description: i, formattedPrice: c, role: h, ctaComponent: g, shouldShowFullDescriptionButton: _ = !0, onShowFullDescription: b, productType: E, onTapCard: x, actionMenu: y, showOpaqueBackground: v = !1, hideRoleTag: O = !1, lineClamp: j = 1, cardWidth: C = 332, cardHeight: S, thumbnailHeight: I = 187, descriptionTextVariant: N = 'text-sm/normal', isDraft: T = !1 } = e,
         P = (0, o.hQ)(),
         A = (0, r.jsxs)(r.Fragment, {
             children: [
@@ -135,7 +135,7 @@ function h(e) {
                             variant: 'text-xxs/normal',
                             color: 'text-normal',
                             className: p.__invalid_productType,
-                            children: x
+                            children: E
                         }),
                         (0, r.jsx)('div', {
                             className: p.productActionButton,
@@ -148,7 +148,7 @@ function h(e) {
                 })
             ]
         });
-    return null == E
+    return null == x
         ? (0, r.jsx)('article', {
               className: l()(p.productCard, v ? p.opaqueBackground : p.solidBackground),
               'aria-labelledby': P,
@@ -163,7 +163,7 @@ function h(e) {
                   tag: 'article',
                   'aria-label': d.intl.formatToPlainString(d.t['e+TmJS'], { productName: n }),
                   className: l()(p.productCard, v ? p.opaqueBackground : p.solidBackground, p.cardClickableContainer),
-                  onClick: E,
+                  onClick: x,
                   children: A
               })
           });

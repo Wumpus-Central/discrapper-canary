@@ -115,11 +115,16 @@ class j extends i.Component {
         var t;
         null == (t = this.ref.current) || t.submit(e);
     }
-    insertEmoji(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            { textValue: r } = this.props,
-            i = this.ref.current;
-        null != e && null != i && (n && !r.endsWith(' ') && i.insertText(' ', void 0, !1), i.insertEmoji(e, t), t && this.focus());
+    insertEmoji(e) {
+        let { emoji: t, willClose: n } = e,
+            r = this.ref.current;
+        null != t &&
+            null != r &&
+            (r.insertEmoji({
+                emoji: t,
+                addSpace: n
+            }),
+            n && this.focus());
     }
     insertGIF(e) {
         let { textValue: t } = this.props,

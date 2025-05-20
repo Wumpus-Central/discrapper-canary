@@ -10,17 +10,18 @@ var r = n(255367),
 function u(e) {
     let { className: t, emojiClassName: n, emoji: u, setEmoji: m, channel: h } = e,
         j = i.useRef(null),
-        x = (e) => (t, n) => {
-            var r, i;
-            null != t &&
-                (null == t.id
-                    ? m({ name: null != (r = t.optionallyDiverseSequence) ? r : '' })
+        x = (e) => (t) => {
+            var n, r;
+            let { emoji: i, willClose: l } = t;
+            null != i &&
+                (null == i.id
+                    ? m({ name: null != (n = i.optionallyDiverseSequence) ? n : '' })
                     : m({
-                          id: t.id,
-                          name: null != (i = t.originalName) ? i : t.name,
-                          animated: t.animated
+                          id: i.id,
+                          name: null != (r = i.originalName) ? r : i.name,
+                          animated: i.animated
                       }),
-                n && e());
+                l && e());
         },
         v =
             null == u || null == u.name

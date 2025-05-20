@@ -149,9 +149,10 @@ function D(e) {
     let j = (e) => {
             x(e), null == p || p(e);
         },
-        U = (e, t) => {
-            if (null == e && t) return void o();
-            null != e && u(e), j(!t), t && g.kJ.setSearchPlaceholder(null);
+        U = (e) => {
+            let { emoji: t, willClose: n } = e;
+            if (null == t && n) return void o();
+            null != t && u(t), j(!n), n && g.kJ.setSearchPlaceholder(null);
         },
         G = (e) => {
             null != e && e.key !== v.vn.TAB && (e.key !== v.vn.ENTER || e.shiftKey ? j(!0) : j(!L));
@@ -216,7 +217,12 @@ function D(e) {
                                                 emoji: e,
                                                 isDisabled: n,
                                                 onClick: () => {
-                                                    n ? null == d || d(e) : U(e, !0);
+                                                    n
+                                                        ? null == d || d(e)
+                                                        : U({
+                                                              emoji: e,
+                                                              willClose: !0
+                                                          });
                                                 }
                                             })
                                         })
