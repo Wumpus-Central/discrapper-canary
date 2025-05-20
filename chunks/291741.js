@@ -1,7 +1,7 @@
 n.d(t, {
     Dl: () => s,
-    Mk: () => o,
-    fD: () => a,
+    Mk: () => a,
+    fD: () => o,
     mO: () => i
 });
 let r = (0, n(818083).B)({
@@ -32,8 +32,8 @@ let r = (0, n(818083).B)({
         ]
     }),
     i = (e) => r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).enabled,
-    a = (e) => r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).defaultTimeout,
-    o = (e) => r.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled,
+    o = (e) => r.getCurrentConfig({ location: e }, { autoTrackExposure: !1 }).defaultTimeout,
+    a = (e) => r.useExperiment({ location: e }, { autoTrackExposure: !1 }).enabled,
     s = (e) => {
         r.trackExposure({ location: e });
     };

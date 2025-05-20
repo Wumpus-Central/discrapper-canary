@@ -5,8 +5,8 @@ n.d(t, {
     n(388685);
 var r,
     i = n(442837),
-    a = n(570140),
-    o = n(973616);
+    o = n(570140),
+    a = n(973616);
 function s(e, t, n) {
     return (
         t in e
@@ -87,7 +87,7 @@ class b extends (r = i.ZP.Store) {
     getApplicationRecord(e) {
         if (null == e) return;
         let t = f[e];
-        if (null != t) return o.ZP.createFromServer(t);
+        if (null != t) return a.ZP.createFromServer(t);
     }
     getApplications() {
         return f;
@@ -112,7 +112,7 @@ class b extends (r = i.ZP.Store) {
     }
 }
 s(b, 'displayName', 'ApplicationDirectoryApplicationsStore');
-let y = new b(a.Z, {
+let y = new b(o.Z, {
     APPLICATION_DIRECTORY_FETCH_APPLICATION: m,
     APPLICATION_DIRECTORY_FETCH_APPLICATION_SUCCESS: g,
     APPLICATION_DIRECTORY_FETCH_APPLICATION_FAILURE: E

@@ -1,14 +1,14 @@
 var r = n(98405),
     i = n(507604),
-    a = n(127849),
-    o = n(46015),
+    o = n(127849),
+    a = n(46015),
     s = n(77025),
     l = n(880181),
     c = n(568033),
     u = n(382698),
     d = n(573078),
     f = n(190289),
-    _ = a.Symbol,
+    _ = o.Symbol,
     p = _ && _.prototype;
 if (i && l(_) && (!('description' in p) || void 0 !== _().description)) {
     var h = {},
@@ -19,11 +19,11 @@ if (i && l(_) && (!('description' in p) || void 0 !== _().description)) {
         };
     f(m, _), (m.prototype = p), (p.constructor = m);
     var g = 'Symbol(description detection)' === String(_('description detection')),
-        E = o(p.valueOf),
-        b = o(p.toString),
+        E = a(p.valueOf),
+        b = a(p.toString),
         y = /^Symbol\((.*)\)[^)]+$/,
-        O = o(''.replace),
-        v = o(''.slice);
+        O = a(''.replace),
+        v = a(''.slice);
     d(p, 'description', {
         configurable: !0,
         get: function () {

@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(88658),
     d = n(976978),
     u = n(695346),
-    m = n(87820),
-    g = n(639814),
+    g = n(87820),
+    m = n(639814),
     p = n(838436),
     h = n(51331),
     f = n(922628),
@@ -21,10 +21,10 @@ var i = n(255367),
     j = n(388032);
 function O(e) {
     let { ingress: t, guildId: n } = e,
-        _ = (0, g.c_)(),
+        _ = (0, m.c_)(),
         O = u.h2.useSetting().includes(n),
         S = (0, d.q)(),
-        v = (0, m.r)(),
+        v = (0, g.r)(),
         T = r.useCallback(
             (e) => {
                 let i = (0, c.YK)();
@@ -82,7 +82,7 @@ function O(e) {
 }
 function S(e) {
     let { ingress: t = _.f4.USER_SETTINGS_PRIVACY_SAFETY, guildId: n } = e,
-        r = (0, g.is)();
+        r = (0, m.is)();
     return (0, i.jsx)(O, {
         ingress: t,
         guildId: null != n ? n : r

@@ -9,8 +9,8 @@ n.d(t, {
 });
 var r = n(570140),
     i = n(579806),
-    a = n(569550),
-    o = n(226961);
+    o = n(569550),
+    a = n(226961);
 function s(e) {
     r.Z.dispatch({
         type: 'RTC_DEBUG_MODAL_OPEN',
@@ -31,7 +31,7 @@ function u(e) {
     });
 }
 function d(e) {
-    (0, a.Z)('connection_replay_log_enabled', e, o.ZP.shouldRecordNextConnection()),
+    (0, o.Z)('connection_replay_log_enabled', e, a.ZP.shouldRecordNextConnection()),
         r.Z.dispatch({
             type: 'RTC_DEBUG_SET_RECORDING_FLAG',
             value: e

@@ -1,7 +1,7 @@
-n.d(t, { u: () => o }), n(804061), n(704826), n(35282);
+n.d(t, { u: () => a }), n(804061), n(704826), n(35282);
 var r = n(503461),
     i = n(190313);
-function a(e, t, n) {
+function o(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -14,12 +14,12 @@ function a(e, t, n) {
         e
     );
 }
-class o {
+class a {
     get prefix() {
         return this.table.prefix;
     }
     withoutLogging() {
-        return new o(this.originalPrefix, this.table.tableId, this.table.database, !1);
+        return new a(this.originalPrefix, this.table.tableId, this.table.database, !1);
     }
     get(e, t, n) {
         return this.table.get([e, t, c(n)]);
@@ -42,8 +42,8 @@ class o {
     }
     putAll(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.Sn.Replace,
-            a = n.map((n) => l(e, t, n));
-        return this.table.putAll(a, i);
+            o = n.map((n) => l(e, t, n));
+        return this.table.putAll(o, i);
     }
     deleteAll() {
         return this.table.delete();
@@ -64,7 +64,7 @@ class o {
         return new s(this.table.upgradeTransaction(e));
     }
     constructor(e, t, n, r = !0) {
-        a(this, 'originalPrefix', void 0), a(this, 'table', void 0), (this.originalPrefix = e), (this.table = new i.i([e], t, n, r));
+        o(this, 'originalPrefix', void 0), o(this, 'table', void 0), (this.originalPrefix = e), (this.table = new i.i([e], t, n, r));
     }
 }
 class s {
@@ -80,8 +80,8 @@ class s {
     }
     putAll(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.Sn.Replace,
-            a = n.map((n) => l(e, t, n));
-        this.transaction.putAll(a, i);
+            o = n.map((n) => l(e, t, n));
+        this.transaction.putAll(o, i);
     }
     replaceAll(e, t, n) {
         let r = n.map((n) => l(e, t, n));
@@ -112,7 +112,7 @@ class s {
         this.transaction.messages.trimChannelsNotIn(e, t);
     }
     constructor(e) {
-        a(this, 'transaction', void 0), (this.transaction = e);
+        o(this, 'transaction', void 0), (this.transaction = e);
     }
 }
 function l(e, t, n) {

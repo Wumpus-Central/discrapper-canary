@@ -9,8 +9,8 @@ var r = n(399606),
     c = n(631885),
     d = n(552045),
     u = n(87792),
-    m = n(302289),
-    g = n(946690),
+    g = n(302289),
+    m = n(946690),
     p = n(292352),
     h = n(332495),
     f = n(388032),
@@ -34,24 +34,24 @@ let _ = () => {
                   (0, i.jsxs)('div', {
                       className: b.featureCards,
                       children: [
-                          (0, i.jsx)(g.Z, {
+                          (0, i.jsx)(m.Z, {
                               icon: s.eQA,
                               header: f.intl.string(h.default['001l3t']),
                               description: _
                           }),
-                          (0, i.jsx)(g.Z, {
+                          (0, i.jsx)(m.Z, {
                               icon: s.tEF,
                               header: f.intl.string(h.default.yipAeH),
                               description: x
                           }),
-                          (0, i.jsx)(g.Z, {
+                          (0, i.jsx)(m.Z, {
                               icon: s.IkH,
                               header: f.intl.string(h.default.hhOuMT),
                               description: E
                           })
                       ]
                   }),
-                  0 === e.length ? (0, i.jsx)(m.Z, {}) : null,
+                  0 === e.length ? (0, i.jsx)(g.Z, {}) : null,
                   void 0 !== t && e.length > 0 ? (0, i.jsx)(u.Z, { user: t }) : null
               ]
           });

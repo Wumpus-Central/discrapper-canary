@@ -1,56 +1,56 @@
-t.d(n, { Z: () => s });
-var o = t(255367);
-t(73800);
-var r = t(481060),
-    c = t(906732),
-    i = t(335131),
-    a = t(475413),
-    l = t(388032);
+n.d(t, { Z: () => s });
+var o = n(255367);
+n(73800);
+var r = n(481060),
+    i = n(906732),
+    c = n(335131),
+    a = n(475413),
+    l = n(388032);
 function s(e) {
-    var { onClose: n } = e,
-        t = (function (e, n) {
+    var { onClose: t } = e,
+        n = (function (e, t) {
             if (null == e) return {};
-            var t,
+            var n,
                 o,
-                r = (function (e, n) {
+                r = (function (e, t) {
                     if (null == e) return {};
-                    var t,
+                    var n,
                         o,
                         r = {},
-                        c = Object.keys(e);
-                    for (o = 0; o < c.length; o++) (t = c[o]), n.indexOf(t) >= 0 || (r[t] = e[t]);
+                        i = Object.keys(e);
+                    for (o = 0; o < i.length; o++) (n = i[o]), t.indexOf(n) >= 0 || (r[n] = e[n]);
                     return r;
-                })(e, n);
+                })(e, t);
             if (Object.getOwnPropertySymbols) {
-                var c = Object.getOwnPropertySymbols(e);
-                for (o = 0; o < c.length; o++) (t = c[o]), !(n.indexOf(t) >= 0) && Object.prototype.propertyIsEnumerable.call(e, t) && (r[t] = e[t]);
+                var i = Object.getOwnPropertySymbols(e);
+                for (o = 0; o < i.length; o++) (n = i[o]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
             }
             return r;
         })(e, ['onClose']);
-    let { analyticsLocations: s, newestAnalyticsLocation: d } = (0, c.ZP)();
+    let { analyticsLocations: s, newestAnalyticsLocation: d } = (0, i.ZP)();
     return (0, o.jsx)(
         a.ef,
         (function (e) {
-            for (var n = 1; n < arguments.length; n++) {
-                var t = null != arguments[n] ? arguments[n] : {},
-                    o = Object.keys(t);
+            for (var t = 1; t < arguments.length; t++) {
+                var n = null != arguments[t] ? arguments[t] : {},
+                    o = Object.keys(n);
                 'function' == typeof Object.getOwnPropertySymbols &&
                     (o = o.concat(
-                        Object.getOwnPropertySymbols(t).filter(function (e) {
-                            return Object.getOwnPropertyDescriptor(t, e).enumerable;
+                        Object.getOwnPropertySymbols(n).filter(function (e) {
+                            return Object.getOwnPropertyDescriptor(n, e).enumerable;
                         })
                     )),
-                    o.forEach(function (n) {
+                    o.forEach(function (t) {
                         var o;
-                        (o = t[n]),
-                            n in e
-                                ? Object.defineProperty(e, n, {
+                        (o = n[t]),
+                            t in e
+                                ? Object.defineProperty(e, t, {
                                       value: o,
                                       enumerable: !0,
                                       configurable: !0,
                                       writable: !0
                                   })
-                                : (e[n] = o);
+                                : (e[t] = o);
                     });
             }
             return e;
@@ -61,15 +61,15 @@ function s(e) {
                 tooltipText: l.intl.string(l.t.b2d0Nz),
                 themeColor: 'secondary',
                 onClick: () => {
-                    (0, i.mK)({
+                    (0, c.mK)({
                         analyticsLocations: s,
                         openInLayer: !1,
                         analyticsSource: d
                     }),
-                        null == n || n();
+                        null == t || t();
                 }
             },
-            t
+            n
         )
     );
 }

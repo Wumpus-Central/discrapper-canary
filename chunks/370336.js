@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(467510),
     i = n(176984),
-    a = n(573736),
-    o = n(622916);
+    o = n(573736),
+    a = n(622916);
 function s(e, t, n) {
     try {
         Object.defineProperty(e, t, {
@@ -14,18 +14,18 @@ function s(e, t, n) {
             configurable: !0
         });
     } catch (n) {
-        i.X && o.kg.log(`Failed to add non-enumerable property "${t}" to object`, e);
+        i.X && a.kg.log(`Failed to add non-enumerable property "${t}" to object`, e);
     }
 }
 function l(e) {
-    if ((0, a.VZ)(e))
+    if ((0, o.VZ)(e))
         return {
             message: e.message,
             name: e.name,
             stack: e.stack,
             ...u(e)
         };
-    if (!(0, a.cO)(e)) return e;
+    if (!(0, o.cO)(e)) return e;
     {
         let t = {
             type: e.type,
@@ -33,12 +33,12 @@ function l(e) {
             currentTarget: c(e.currentTarget),
             ...u(e)
         };
-        return 'undefined' != typeof CustomEvent && (0, a.V9)(e, CustomEvent) && (t.detail = e.detail), t;
+        return 'undefined' != typeof CustomEvent && (0, o.V9)(e, CustomEvent) && (t.detail = e.detail), t;
     }
 }
 function c(e) {
     try {
-        return (0, a.kK)(e) ? (0, r.Rt)(e) : Object.prototype.toString.call(e);
+        return (0, o.kK)(e) ? (0, r.Rt)(e) : Object.prototype.toString.call(e);
     } catch (e) {
         return '<unknown>';
     }

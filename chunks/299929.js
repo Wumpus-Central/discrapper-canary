@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(172751),
     d = n(131085),
     u = n(526761),
-    m = n(388032),
-    g = n(729495);
+    g = n(388032),
+    m = n(729495);
 let p = r.memo(function (e) {
     let { guildId: t, guildProfile: n, title: p, description: h, onClose: f } = e,
         b = (0, l.Z)({ scrollPosition: u.Y_.GUILD_TAG }),
@@ -18,24 +18,24 @@ let p = r.memo(function (e) {
         x(!0), await (0, a.c)(t, !0), x(!1), null == f || f();
     }
     return (0, i.jsxs)('div', {
-        className: g.container,
+        className: m.container,
         ref: e.ref,
         children: [
             (0, i.jsx)(s.olH, {
-                className: g.closeButton,
+                className: m.closeButton,
                 onClick: f
             }),
             (0, i.jsx)('div', {
-                className: g.tagContainer,
+                className: m.tagContainer,
                 children: (0, i.jsxs)('div', {
-                    className: g.tag,
+                    className: m.tag,
                     children: [
                         null != n.badge &&
                             (0, i.jsx)(c.eI, {
                                 src: (0, o.Ic)(t, n.badge, d.Gg.SIZE_36),
                                 tag: n.tag,
                                 size: d.Gg.SIZE_36,
-                                className: g.badge
+                                className: m.badge
                             }),
                         (0, i.jsx)(s.Text, {
                             tag: 'span',
@@ -47,27 +47,27 @@ let p = r.memo(function (e) {
             }),
             (0, i.jsx)(s.X6q, {
                 variant: 'heading-md/semibold',
-                className: g.title,
+                className: m.title,
                 children: p
             }),
             (0, i.jsx)(s.Text, {
                 variant: 'text-sm/medium',
-                className: g.description,
+                className: m.description,
                 children: h
             }),
             (0, i.jsx)(s.zxk, {
-                className: g.adoptButton,
+                className: m.adoptButton,
                 submitting: _,
                 onClick: E,
-                children: m.intl.string(m.t.jwEaiY)
+                children: g.intl.string(g.t.jwEaiY)
             }),
             (0, i.jsx)(s.zxk, {
                 color: s.zxk.Colors.PRIMARY,
-                className: g.editButton,
+                className: m.editButton,
                 onClick: function () {
                     null == f || f(), b();
                 },
-                children: m.intl.string(m.t.s5vZlZ)
+                children: g.intl.string(g.t.s5vZlZ)
             })
         ]
     });

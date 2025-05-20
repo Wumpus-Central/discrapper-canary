@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(481060),
     d = n(533307),
     u = n(189907),
-    m = n(812206),
-    g = n(600164),
+    g = n(812206),
+    m = n(600164),
     p = n(925329),
     h = n(981632),
     f = n(314897),
@@ -57,8 +57,8 @@ class y extends r.PureComponent {
     render() {
         let { hideCode: e, giftCode: t } = this.props,
             { copyMode: n } = this.state;
-        return (0, i.jsxs)(g.Z, {
-            direction: g.Z.Direction.VERTICAL,
+        return (0, i.jsxs)(m.Z, {
+            direction: m.Z.Direction.VERTICAL,
             className: I.giftCodeRow,
             children: [
                 (0, i.jsx)(c.kO8, {
@@ -137,9 +137,9 @@ class A extends r.PureComponent {
         );
     }
     renderGenerateGiftCodeRow() {
-        return (0, i.jsxs)(g.Z, {
-            justify: g.Z.Justify.BETWEEN,
-            align: g.Z.Align.CENTER,
+        return (0, i.jsxs)(m.Z, {
+            justify: m.Z.Justify.BETWEEN,
+            align: m.Z.Align.CENTER,
             className: I.generateCodeRow,
             children: [
                 (0, i.jsx)(c.Text, {
@@ -161,7 +161,7 @@ class A extends r.PureComponent {
     }
     render() {
         let { entitlements: e, application: t, giftCodes: n, className: s, sku: l, isFetching: a, hideCodes: o, giftStyle: d } = this.props,
-            { isOpen: m } = this.state;
+            { isOpen: g } = this.state;
         return (0, i.jsxs)(u.Z, {
             className: s,
             children: [
@@ -175,8 +175,8 @@ class A extends r.PureComponent {
                         children: (0, i.jsxs)('div', {
                             className: I.cardHeader,
                             children: [
-                                (0, i.jsxs)(g.Z, {
-                                    align: g.Z.Align.CENTER,
+                                (0, i.jsxs)(m.Z, {
+                                    align: m.Z.Align.CENTER,
                                     children: [
                                         null != d
                                             ? (0, i.jsx)(h.Z, {
@@ -202,14 +202,14 @@ class A extends r.PureComponent {
                                     ]
                                 }),
                                 (0, i.jsx)(C.Z, {
-                                    direction: m ? C.Z.Directions.UP : C.Z.Directions.DOWN,
+                                    direction: g ? C.Z.Directions.UP : C.Z.Directions.DOWN,
                                     className: I.expandIcon
                                 })
                             ]
                         })
                     })
                 }),
-                m
+                g
                     ? (0, i.jsx)(u.Z.Body, {
                           children: a
                               ? (0, i.jsx)(c.$jN, { className: I.spinner })
@@ -259,7 +259,7 @@ class A extends r.PureComponent {
             });
     }
 }
-let P = a.ZP.connectStores([E.Z, _.Z, b.Z, m.Z, x.Z, f.default], (e) => {
+let P = a.ZP.connectStores([E.Z, _.Z, b.Z, g.Z, x.Z, f.default], (e) => {
     let { skuId: t, subscriptionPlanId: n, giftStyle: i } = e,
         r = E.Z.get(t);
     if (null == r) throw Error('SKU was unavailable while rendering gift.');
@@ -271,7 +271,7 @@ let P = a.ZP.connectStores([E.Z, _.Z, b.Z, m.Z, x.Z, f.default], (e) => {
         hideCodes: _.Z.enabled,
         isFetching: b.Z.getUserGiftCodesFetchingForSKUAndPlan(t, n),
         loadedAt: b.Z.getUserGiftCodesLoadedAtForSKUAndPlan(t, n),
-        application: m.Z.getApplication(r.applicationId),
+        application: g.Z.getApplication(r.applicationId),
         subscriptionPlan: null != n ? (0, S.oE)(n) : null,
         giftCodes: s
     };

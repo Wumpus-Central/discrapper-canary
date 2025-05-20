@@ -1,8 +1,8 @@
 n.d(t, { Z: () => G }), n(388685);
 var r = n(255367),
     i = n(73800),
-    a = n(950035),
-    o = n(442837),
+    o = n(230986),
+    a = n(442837),
     s = n(481060),
     l = n(727637),
     c = n(616780),
@@ -94,7 +94,7 @@ function G(e) {
             messageId: G,
             roleId: B
         }),
-        Q = (0, o.e7)([h.Z], () => (null != k ? h.Z.getGuild(k) : null)),
+        Q = (0, a.e7)([h.Z], () => (null != k ? h.Z.getGuild(k) : null)),
         X = i.useMemo(() => (null != k ? { [k]: [t.id] } : {}), [k, t.id]);
     (0, c.$)(X);
     let J = i.useRef(null),
@@ -110,7 +110,7 @@ function G(e) {
     }, [J, Z]);
     let er = (0, f.p)({ location: 'UserProfilePopout' }),
         ei = i.useMemo(() => (0, _.Z)(), []),
-        ea = (e) => {
+        eo = (e) => {
             null == V || V(),
                 (0, y.openUserProfileModal)(
                     U(
@@ -127,14 +127,14 @@ function G(e) {
                     )
                 );
         },
-        eo = () =>
+        ea = () =>
             H
                 ? null
                 : (0, r.jsx)(s.sNh, {
                       id: 'view-profile',
                       label: L.intl.string(L.t['+Xp3ho']),
                       action: () => {
-                          ea(),
+                          eo(),
                               (0, g.pQ)(
                                   M(
                                       {
@@ -167,7 +167,7 @@ function G(e) {
                             themeType: D.lY.POPOUT,
                             children: [
                                 null != et.interactionType &&
-                                    (0, r.jsx)(a.animated.div, {
+                                    (0, r.jsx)(o.animated.div, {
                                         style: en,
                                         className: x.backdrop
                                     }),
@@ -191,7 +191,7 @@ function G(e) {
                                                 type: 'banner',
                                                 user: t,
                                                 guildId: k,
-                                                viewProfileItem: eo(),
+                                                viewProfileItem: ea(),
                                                 appContext: W
                                             })
                                     ]
@@ -217,7 +217,7 @@ function G(e) {
                                             guildId: k,
                                             channelId: j,
                                             themeType: D.lY.POPOUT,
-                                            onOpenProfile: H ? void 0 : ea
+                                            onOpenProfile: H ? void 0 : eo
                                         }),
                                         (0, r.jsx)(P.Z, {
                                             location: 'UserProfilePopout',
@@ -236,7 +236,7 @@ function G(e) {
                                     displayProfile: $,
                                     guild: Q,
                                     isHovering: null == et.interactionType && ee,
-                                    onOpenProfile: H ? void 0 : ea,
+                                    onOpenProfile: H ? void 0 : eo,
                                     channelId: j,
                                     onClose: V
                                 }),

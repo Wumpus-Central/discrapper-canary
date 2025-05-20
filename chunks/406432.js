@@ -14,14 +14,14 @@ let i = (e, t) => {
         let [n, r] = e.split(/\?/, 1);
         return t.test(n);
     },
-    a = (e, t) => {
+    o = (e, t) => {
         if (null == e) return !1;
         let [n, r] = e.split('/');
         return n === t;
     },
-    o = /\.(png|jpe?g|webp|gif|heic|heif|dng|avif)$/i,
-    s = (e) => null != e && o.test(e),
-    l = (e) => a(e, 'image'),
+    a = /\.(png|jpe?g|webp|gif|heic|heif|dng|avif)$/i,
+    s = (e) => null != e && a.test(e),
+    l = (e) => o(e, 'image'),
     c = /\.(webp|gif|avif)$/i,
     u = (e) => i(e, c),
     d = /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i,
@@ -33,4 +33,4 @@ let i = (e, t) => {
     g = (0, r.isIOS)() ? p : (0, r.isAndroid)() ? h : m,
     E = (e) => i(e, g),
     b = (e) => null != e && g.test(e),
-    y = (e) => a(e, 'video');
+    y = (e) => o(e, 'video');

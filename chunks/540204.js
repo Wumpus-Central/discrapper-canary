@@ -8,18 +8,18 @@ var i = n(255367),
     c = n(771845),
     d = n(823379),
     u = n(997950),
-    m = n(816108),
-    g = n(388032),
+    g = n(816108),
+    m = n(388032),
     p = n(867198);
 let h = {
-    label: () => g.intl.string(g.t['32u1Dw']),
+    label: () => m.intl.string(m.t['32u1Dw']),
     value: u.Th
 };
 function f() {
     let { selectedGuildId: e, setSelectedGuildId: t } = (0, u.xu)(),
         n = (0, s.e7)([c.ZP], () => c.ZP.getFlattenedGuildIds()),
-        g = (0, s.e7)([o.Z], () => o.Z.getGuilds()),
-        { hideGuildOptions: f, hideGlobalOption: b } = (0, m.b)(),
+        m = (0, s.e7)([o.Z], () => o.Z.getGuilds()),
+        { hideGuildOptions: f, hideGlobalOption: b } = (0, g.b)(),
         _ = n[0];
     r.useEffect(() => {
         (b && f) || (e === u.Th && e !== _ && b && t(_), e !== u.Th && f && t(u.Th));
@@ -30,7 +30,7 @@ function f() {
                 ? []
                 : n
                       .map((e) => {
-                          let t = g[e];
+                          let t = m[e];
                           return null == t
                               ? null
                               : {
@@ -84,7 +84,7 @@ function f() {
                     ),
                 i
             );
-        }, [f, n, b, g]),
+        }, [f, n, b, m]),
         E = r.useCallback(
             (e) => {
                 let t = (null == e ? void 0 : e.label) === h.label() && (null == e ? void 0 : e.value) === h.value;
@@ -100,12 +100,12 @@ function f() {
                       })
                     : (0, i.jsx)(a.Z, {
                           className: p.guildSelectOptionIcon,
-                          guild: g[e.value],
+                          guild: m[e.value],
                           size: a.Z.Sizes.SMALLER,
                           active: !0
                       });
             },
-            [g]
+            [m]
         );
     return (0, i.jsx)(l.VcW, {
         wrapperClassName: p.searchableSelect,

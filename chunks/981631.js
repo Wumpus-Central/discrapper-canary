@@ -25,7 +25,7 @@ n.d(t, {
     BhN: () => nV,
     BiE: () => eq,
     Bjg: () => nZ,
-    BmY: () => ea,
+    BmY: () => eo,
     BpS: () => ec,
     CgE: () => rb,
     CkL: () => tK,
@@ -55,7 +55,7 @@ n.d(t, {
     GU0: () => ep,
     GZQ: () => g.GZ,
     H0J: () => g.H0,
-    HGf: () => n3,
+    HGf: () => n2,
     HN8: () => eB,
     HeQ: () => g.He,
     Hqc: () => ny,
@@ -81,7 +81,7 @@ n.d(t, {
     KJ3: () => rR,
     KsC: () => A,
     L4X: () => eF,
-    LAt: () => to,
+    LAt: () => ta,
     LPv: () => tz,
     LYt: () => th,
     Lg6: () => rP,
@@ -95,9 +95,9 @@ n.d(t, {
     N_j: () => nJ,
     NgX: () => I,
     O0b: () => nl,
-    O0n: () => eo,
+    O0n: () => ea,
     O42: () => E.O4,
-    O8q: () => n2,
+    O8q: () => n3,
     OBS: () => W,
     OBo: () => ns,
     OGo: () => ed,
@@ -146,7 +146,7 @@ n.d(t, {
     T23: () => rQ,
     TC2: () => g.TC,
     TNx: () => tT,
-    TPd: () => o.T,
+    TPd: () => a.T,
     TU7: () => tc,
     TaA: () => rr,
     TzF: () => nz,
@@ -166,7 +166,7 @@ n.d(t, {
     V_K: () => tW,
     VqG: () => g.Vq,
     Vzj: () => g.Vz,
-    WND: () => na,
+    WND: () => no,
     WtW: () => e4,
     Wyy: () => t5,
     X5t: () => g.X5,
@@ -175,7 +175,7 @@ n.d(t, {
     XAJ: () => ev,
     XKF: () => n$,
     XmY: () => e$,
-    Xyh: () => e3,
+    Xyh: () => e2,
     YeM: () => el,
     Ypu: () => ei,
     Z5c: () => eA,
@@ -191,7 +191,7 @@ n.d(t, {
     _vf: () => er,
     a5g: () => tY,
     aIL: () => ey,
-    aIt: () => ro,
+    aIt: () => ra,
     aO5: () => g.aO,
     aVf: () => rS,
     aZC: () => tq,
@@ -203,7 +203,7 @@ n.d(t, {
     b8q: () => tx,
     bL: () => eC,
     c2C: () => nD,
-    d4z: () => o.d,
+    d4z: () => a.d,
     dAT: () => tH,
     dCx: () => t8,
     dG4: () => g.dG,
@@ -225,7 +225,7 @@ n.d(t, {
     f07: () => n7,
     fK7: () => g.fK,
     fMv: () => E.fM,
-    fo$: () => ta,
+    fo$: () => to,
     frH: () => g.fr,
     fzT: () => t1,
     gLR: () => rq,
@@ -252,7 +252,7 @@ n.d(t, {
     jwA: () => nN,
     kEZ: () => j,
     kGb: () => rl,
-    kNB: () => ra,
+    kNB: () => ro,
     kVF: () => k,
     kg4: () => v,
     kod: () => eb,
@@ -273,7 +273,7 @@ n.d(t, {
     oNc: () => U,
     o_z: () => eg,
     p3w: () => tp,
-    p6O: () => t3,
+    p6O: () => t2,
     pAY: () => t_,
     pJs: () => R,
     pKx: () => g.pK,
@@ -281,7 +281,7 @@ n.d(t, {
     pNK: () => T,
     pTL: () => rK,
     pjP: () => n0,
-    pmI: () => t2,
+    pmI: () => t3,
     q5t: () => tD,
     q9n: () => nB,
     qAy: () => tM,
@@ -307,7 +307,7 @@ n.d(t, {
     tPV: () => eY,
     tPk: () => g.tP,
     t_t: () => ee,
-    tuJ: () => no,
+    tuJ: () => na,
     u34: () => b,
     uRl: () => tF,
     uaV: () => c.u,
@@ -340,7 +340,7 @@ n.d(t, {
     yb: () => Y,
     ylB: () => rB,
     yqN: () => nf,
-    ys_: () => e2,
+    ys_: () => e3,
     zMe: () => g.zM,
     zUn: () => nR,
     zYc: () => ry,
@@ -350,9 +350,9 @@ n.d(t, {
     n(743606);
 var r = n(512722),
     i = n.n(r),
-    a = n(674746);
+    o = n(674746);
 n(722770);
-var o = n(106351),
+var a = n(106351),
     s = n(470167),
     l = n(388123),
     c = n(275726),
@@ -579,10 +579,10 @@ var K = (function (e) {
     ei = (function (e) {
         return (e.ENABLED = 'ENABLED'), (e.DISABLED = 'DISABLED'), e;
     })({}),
-    ea = (function (e) {
+    eo = (function (e) {
         return (e.CONNECT = 'CONNECT'), (e.DISPATCH = 'DISPATCH'), (e.LOG_MESSAGES = 'LOG_MESSAGES'), (e.STORAGE_SYNC = 'STORAGE_SYNC'), e;
     })({}),
-    eo = (function (e) {
+    ea = (function (e) {
         return (e.TEXT_WIDGET = 'TEXT_WIDGET'), e;
     })({}),
     es = (function (e) {
@@ -1572,8 +1572,8 @@ let eP = 100,
     e$ = (e) => '||'.concat(e, '||'),
     e0 = /^\|\|([\s\S]+?)\|\|/,
     e1 = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/,
-    e3 = /^\d{17,19}$/;
-var e2 = (function (e) {
+    e2 = /^\d{17,19}$/;
+var e3 = (function (e) {
         return (e.MESSAGE = 'MESSAGE'), (e.MESSAGE_GROUP_BLOCKED = 'MESSAGE_GROUP_BLOCKED'), (e.MESSAGE_GROUP_IGNORED = 'MESSAGE_GROUP_IGNORED'), (e.MESSAGE_GROUP_SPAMMER = 'MESSAGE_GROUP_SPAMMER'), (e.THREAD_STARTER_MESSAGE = 'THREAD_STARTER_MESSAGE'), (e.DIVIDER = 'DIVIDER'), (e.JUMP_TARGET = 'JUMP_TARGET'), (e.FORUM_POST_ACTION_BAR = 'FORUM_POST_ACTION_BAR'), (e.MESSAGE_GROUP = 'MESSAGE_GROUP'), (e.DIVIDER_TIME_STAMP = 'DIVIDER_TIME_STAMP'), (e.DIVIDER_NEW_MESSAGES = 'DIVIDER_NEW_MESSAGES'), e;
     })({}),
     e4 = (function (e) {
@@ -1595,8 +1595,8 @@ let e7 = 128,
     tn = 64000,
     tr = 96000,
     ti = 1000,
-    ta = '0000',
-    to = '1',
+    to = '0000',
+    ta = '1',
     ts = 99,
     tl = 10000,
     tc = 10000,
@@ -2781,9 +2781,9 @@ let t$ = new Set(['facebook', 'contacts']),
         IOS: 'https://itunes.apple.com/app/discord/id985746746',
         ANDROID: 'https://play.google.com/store/apps/details?id=com.discord'
     }),
-    t3 = 10070709,
-    t2 = [1752220, 3066993, 3447003, 10181046, 15277667, 15844367, 15105570, 15158332, 9807270, 6323595, 1146986, 2067276, 2123412, 7419530, 11342935, 12745742, 11027200, 10038562, 9936031, 5533306],
-    t4 = (0, u._i)(a.Z.BRAND_500);
+    t2 = 10070709,
+    t3 = [1752220, 3066993, 3447003, 10181046, 15277667, 15844367, 15105570, 15158332, 9807270, 6323595, 1146986, 2067276, 2123412, 7419530, 11342935, 12745742, 11027200, 10038562, 9936031, 5533306],
+    t4 = (0, u._i)(o.Z.BRAND_500);
 i()(null != t4, 'Brand color could not be parsed');
 let t5 = t4;
 var t6 = (function (e) {
@@ -2810,8 +2810,8 @@ let nr = Object.freeze({
         3: 14
     }),
     ni = 7,
-    na = 0;
-var no = (function (e) {
+    no = 0;
+var na = (function (e) {
     return (e[(e.DEFAULT = 0)] = 'DEFAULT'), (e[(e.GIFT = 1)] = 'GIFT'), (e[(e.SALE = 2)] = 'SALE'), (e[(e.PREMIUM_TIER_1 = 3)] = 'PREMIUM_TIER_1'), (e[(e.PREMIUM_TIER_2 = 4)] = 'PREMIUM_TIER_2'), (e[(e.MOBILE = 5)] = 'MOBILE'), (e[(e.PREMIUM_TIER_0 = 6)] = 'PREMIUM_TIER_0'), (e[(e.MOBILE_PREMIUM_TIER_2 = 7)] = 'MOBILE_PREMIUM_TIER_2'), e;
 })({});
 let ns = Object.freeze({
@@ -4634,8 +4634,8 @@ var n0 = (function (e) {
     n1 = (function (e) {
         return (e[(e.MUTUAL_FRIENDS = 2)] = 'MUTUAL_FRIENDS'), (e[(e.MUTUAL_GUILDS = 4)] = 'MUTUAL_GUILDS'), (e[(e.NO_RELATION = 8)] = 'NO_RELATION'), e;
     })({});
-let n3 = 14,
-    n2 = 6,
+let n2 = 14,
+    n3 = 6,
     n4 = 30;
 var n5 = (function (e) {
     return (e.OVERLAY = 'OVERLAY'), (e.APP = 'APP'), (e.POPOUT = 'POPOUT'), e;
@@ -4665,10 +4665,10 @@ var n8 = (function (e) {
     ri = (function (e) {
         return (e[(e.PURCHASE = 1)] = 'PURCHASE'), (e[(e.PREMIUM_SUBSCRIPTION = 2)] = 'PREMIUM_SUBSCRIPTION'), (e[(e.DEVELOPER_GIFT = 3)] = 'DEVELOPER_GIFT'), (e[(e.TEST_MODE_PURCHASE = 4)] = 'TEST_MODE_PURCHASE'), (e[(e.FREE_PURCHASE = 5)] = 'FREE_PURCHASE'), (e[(e.USER_GIFT = 6)] = 'USER_GIFT'), (e[(e.PREMIUM_PURCHASE = 7)] = 'PREMIUM_PURCHASE'), (e[(e.APPLICATION_SUBSCRIPTION = 8)] = 'APPLICATION_SUBSCRIPTION'), (e[(e.FREE_STAFF_PURCHASE = 9)] = 'FREE_STAFF_PURCHASE'), (e[(e.QUEST_REWARD = 10)] = 'QUEST_REWARD'), (e[(e.FRACTIONAL_REDEMPTION = 11)] = 'FRACTIONAL_REDEMPTION'), (e[(e.VIRTUAL_CURRENCY_REDEMPTION = 12)] = 'VIRTUAL_CURRENCY_REDEMPTION'), e;
     })({}),
-    ra = (function (e) {
+    ro = (function (e) {
         return (e[(e.QUEST_REWARD = 1)] = 'QUEST_REWARD'), (e[(e.DEVELOPER_GIFT = 2)] = 'DEVELOPER_GIFT'), (e[(e.INVOICE = 3)] = 'INVOICE'), (e[(e.REVERSE_TRIAL = 4)] = 'REVERSE_TRIAL'), (e[(e.FRACTIONAL_PREMIUM_GIVEBACK = 8)] = 'FRACTIONAL_PREMIUM_GIVEBACK'), e;
     })({}),
-    ro = (function (e) {
+    ra = (function (e) {
         return (e.ESRB = '1'), (e.PEGI = '2'), e;
     })({}),
     rs = (function (e) {

@@ -10,7 +10,7 @@ var r = n(442837),
     d = n(523726);
 function u(e) {
     let { purchaseState: t, currentStep: n, onClose: u } = e,
-        [m, g] = (0, o.z)({
+        [g, m] = (0, o.z)({
             purchaseState: t,
             currentStep: n,
             initialScene: c.fe.Scenes.ENTRY,
@@ -26,8 +26,8 @@ function u(e) {
         children: [
             (0, i.jsx)(c.fe, {
                 className: d.animation,
-                nextScene: m,
-                onScenePlay: (e) => g(c.fe.getNextScene(e)),
+                nextScene: g,
+                onScenePlay: (e) => m(c.fe.getNextScene(e)),
                 pauseWhileUnfocused: !1,
                 pause: p
             }),

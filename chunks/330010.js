@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(544891),
     i = n(570140),
-    a = n(973616),
-    o = n(598077),
+    o = n(973616),
+    a = n(598077),
     s = n(981631);
 function l(e, t, n) {
     return (
@@ -72,8 +72,8 @@ async function f(e) {
         })
     ).body.map((e) =>
         d(c({}, e), {
-            application: 'application' in e && null != e.application ? a.ZN.createFromServer(e.application) : void 0,
-            user: 'user' in e && null != e.user ? new o.Z(e.user) : void 0
+            application: 'application' in e && null != e.application ? o.ZN.createFromServer(e.application) : void 0,
+            user: 'user' in e && null != e.user ? new a.Z(e.user) : void 0
         })
     );
     return (

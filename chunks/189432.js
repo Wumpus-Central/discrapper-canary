@@ -1,8 +1,8 @@
 n.d(t, { r: () => b });
 var r = n(100527),
     i = n(703656),
-    a = n(6025),
-    o = n(897473),
+    o = n(6025),
+    a = n(897473),
     s = n(592125),
     l = n(984933),
     c = n(944486),
@@ -77,14 +77,14 @@ function b(e, t, n) {
     }
     return (
         (0, u.q)(e, t, O, v),
-        a.Z.openGuildSidebar({
+        o.Z.openGuildSidebar({
             guildId: e,
             baseChannelId: n,
-            sidebarType: o.jL.GUILD_MEMBER_MOD_VIEW,
+            sidebarType: a.jL.GUILD_MEMBER_MOD_VIEW,
             details: E(
                 m(
                     {
-                        type: o.Ff.GUILD_MEMBER_MOD_VIEW,
+                        type: a.Ff.GUILD_MEMBER_MOD_VIEW,
                         userId: t,
                         guildId: e
                     },

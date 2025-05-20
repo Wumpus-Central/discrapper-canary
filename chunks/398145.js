@@ -1,15 +1,15 @@
-t.d(n, { Z: () => o });
+t.d(n, { Z: () => s });
 var l = t(806729),
     r = t(146078),
     i = t(228168),
-    s = t(388032);
-function o(e) {
+    o = t(388032);
+function s(e) {
     let { mutualGuilds: n } = (0, l.Z)(e),
         t = null == n ? void 0 : n.length;
     return [
         {
             section: i.oh.BOT_INFO,
-            text: s.intl.string(s.t.jGoPJS)
+            text: o.intl.string(o.t.jGoPJS)
         },
         {
             section: i.oh.MUTUAL_GUILDS,
@@ -17,7 +17,7 @@ function o(e) {
         },
         {
             section: i.oh.BOT_DATA_ACCESS,
-            text: s.intl.string(s.t.WstFb2)
+            text: o.intl.string(o.t.WstFb2)
         }
     ];
 }

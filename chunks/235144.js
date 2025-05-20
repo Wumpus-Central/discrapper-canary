@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(131951),
     d = n(321614),
     u = n(345655),
-    m = n(388032),
-    g = n(20493);
+    g = n(388032),
+    m = n(20493);
 function p() {
     let { analyticsLocations: e } = (0, o.ZP)(),
         t = (0, s.e7)([c.Z], () => c.Z.getActiveInputProfile()),
@@ -24,26 +24,26 @@ function p() {
         h = [
             {
                 value: u._.VOICE_ISOLATION,
-                name: m.intl.string(m.t.cjPbpa),
-                desc: m.intl.string(m.t.CzhvnJ)
+                name: g.intl.string(g.t.cjPbpa),
+                desc: g.intl.string(g.t.CzhvnJ)
             },
             {
                 value: u._.STUDIO,
-                name: m.intl.string(m.t.VZPR0d),
-                desc: m.intl.string(m.t.ZaJksb)
+                name: g.intl.string(g.t.VZPR0d),
+                desc: g.intl.string(g.t.ZaJksb)
             },
             {
                 value: u._.CUSTOM,
-                name: m.intl.string(m.t['N/PQjo']),
-                desc: m.intl.string(m.t.SnBmub)
+                name: g.intl.string(g.t['N/PQjo']),
+                desc: g.intl.string(g.t.SnBmub)
             }
         ].filter((e) => {
             let { value: t } = e;
             return n.includes(t);
         });
     return (0, i.jsx)(l.xJW, {
-        title: m.intl.string(m.t.LM3U3t),
-        className: g.marginBottom20,
+        title: g.intl.string(g.t.LM3U3t),
+        className: m.marginBottom20,
         children: (0, i.jsx)(l.FXm, {
             onChange: p,
             options: h,

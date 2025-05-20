@@ -13,7 +13,7 @@ var i = n(255367),
     c = n(209613),
     d = n(475413),
     u = n(404255);
-function m(e) {
+function g(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             i = Object.keys(n);
@@ -38,7 +38,7 @@ function m(e) {
     }
     return e;
 }
-function g(e, t) {
+function m(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -94,7 +94,7 @@ function h(e) {
     let I = (e) =>
         (0, i.jsxs)(
             d.kF,
-            g(m({}, e, C, _), {
+            m(g({}, e, C, _), {
                 ref: O,
                 role: 'button',
                 look: o.zxk.Looks.BLANK,
@@ -154,7 +154,7 @@ function f(e) {
                     s = p(e, ['ref']);
                 return (0, i.jsx)(
                     'div',
-                    g(m({}, s), {
+                    m(g({}, s), {
                         ref: t,
                         onMouseLeave: () => r.setFocus(null),
                         children: n
@@ -169,7 +169,7 @@ function b(e) {
         className: u.submenuPaddingContainer,
         children: (0, i.jsx)(
             o.v2r,
-            m(
+            g(
                 {
                     variant: 'fixed',
                     hideScroller: !0,

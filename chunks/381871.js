@@ -46,8 +46,9 @@ function U(e) {
         B = x.ZP.canUseFancyVoiceChannelReactions(U),
         G = (0, a.e7)([v.Z], () => v.Z.getState().animationType),
         F = i.useRef(!1),
-        H = (0, f.wC)(n.guild_id),
-        V = (0, l.uniqBy)([...H, ...D], 'name')
+        H = i.useRef(null),
+        V = (0, f.wC)(n.guild_id),
+        z = (0, l.uniqBy)([...V, ...D], 'name')
             .filter(
                 (e) =>
                     !_.ZP.isEmojiFilteredOrLocked({
@@ -57,10 +58,10 @@ function U(e) {
                     })
             )
             .slice(0, N.e5),
-        z = (null != (t = j.Z.recentlyUsedEmojis) ? t : []).filter((e) => !V.slice(0, N.e5 - 1).some((t) => t.name === e.name));
-    z.length > 0 && V.splice(V.length - 1, 1, z[0]);
-    let W = (0, O.Iu)(G),
-        Y = (e) => {
+        W = (null != (t = j.Z.recentlyUsedEmojis) ? t : []).filter((e) => !z.slice(0, N.e5 - 1).some((t) => t.name === e.name));
+    W.length > 0 && z.splice(z.length - 1, 1, W[0]);
+    let Y = (0, O.Iu)(G),
+        q = (e) => {
             c.Z.dispatch({
                 type: 'VOICE_CHANNEL_EFFECT_RECENT_EMOJI',
                 emoji: e
@@ -70,11 +71,11 @@ function U(e) {
                     emoji: e,
                     location: y.yX.EMOJI_PICKER,
                     animationType: G,
-                    animationId: W,
+                    animationId: Y,
                     isPremium: B
                 });
         },
-        q = () => {
+        K = () => {
             (0, I.h)({
                 analytics: {
                     type: A.cd.EMOJI_PICKER_EMOJI_CLICKED,
@@ -83,29 +84,30 @@ function U(e) {
                 }
             });
         },
-        K = (e) => {
+        X = (e) => {
             (F.current = e),
                 e &&
                     p.ZP.trackWithMetadata(Z.rMx.VOICE_CHANNEL_EFFECT_EMOJI_PICKER_EXPANDED, {
-                        channel_id: X,
-                        guild_id: Q
+                        channel_id: Q,
+                        guild_id: J
                     });
         },
-        { id: X, guild_id: Q } = n;
+        { id: Q, guild_id: J } = n;
     i.useEffect(() => {
         p.ZP.trackWithMetadata(Z.rMx.VOICE_CHANNEL_EFFECT_BAR_VIEWED, {
-            channel_id: X,
-            guild_id: Q
+            channel_id: Q,
+            guild_id: J
         });
-    }, [X, Q]);
-    let J = T ? [o.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
-        $ = G === S.q.PREMIUM;
+    }, [Q, J]);
+    let $ = T ? [o.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP] : [],
+        ee = G === S.q.PREMIUM;
     return (0, r.jsx)(h.ZP, {
-        contentTypes: J,
+        contentTypes: $,
         children: (e) => {
             let { visibleContent: t, markAsDismissed: i } = e,
                 l = T && t === o.z.VOICE_CHANNEL_EFFECTS_REDUCED_MOTION_TOOLTIP;
             return (0, r.jsx)(s.yRy, {
+                targetElementRef: H,
                 position: 'left',
                 'aria-label': R.intl.string(R.t.RLHsHx),
                 shouldShow: l,
@@ -127,25 +129,26 @@ function U(e) {
                     }),
                 children: () =>
                     (0, r.jsx)(P.Z, {
+                        ref: H,
                         title: R.intl.string(R.t.Nn8lPz),
                         channel: n,
                         closePopout: m,
-                        onSelectEmoji: Y,
-                        onSelectDisabledEmoji: q,
+                        onSelectEmoji: q,
+                        onSelectDisabledEmoji: K,
                         onFocus: C,
-                        onExpandedToggle: K,
+                        onExpandedToggle: X,
                         analyticsOverride: L,
                         emojiSearchProps: {
                             accessory: (0, r.jsx)(E.Z, {
                                 labelText: R.intl.string(R.t['ktEv/v']),
-                                value: $,
+                                value: ee,
                                 onChange: () => {
                                     if (B)
                                         return (
                                             p.ZP.trackWithMetadata(Z.rMx.VOICE_CHANNEL_EFFECT_FANCY_ANIMATION_TOGGLED, {
-                                                channel_id: X,
-                                                guild_id: Q,
-                                                enabled: !$
+                                                channel_id: Q,
+                                                guild_id: J,
+                                                enabled: !ee
                                             }),
                                             c.Z.dispatch({ type: 'VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE' })
                                         );
@@ -160,7 +163,7 @@ function U(e) {
                                     })
                             })
                         },
-                        recentlyUsedEmojis: z
+                        recentlyUsedEmojis: W
                     })
             });
         }

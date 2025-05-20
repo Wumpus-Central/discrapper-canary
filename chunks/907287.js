@@ -1,14 +1,14 @@
 var r = n(990393),
     i = 1,
-    a = Object.prototype.hasOwnProperty;
-e.exports = function (e, t, n, o, s, l) {
+    o = Object.prototype.hasOwnProperty;
+e.exports = function (e, t, n, a, s, l) {
     var c = n & i,
         u = r(e),
         d = u.length;
     if (d != r(t).length && !c) return !1;
     for (var f = d; f--; ) {
         var _ = u[f];
-        if (!(c ? _ in t : a.call(t, _))) return !1;
+        if (!(c ? _ in t : o.call(t, _))) return !1;
     }
     var p = l.get(e),
         h = l.get(t);
@@ -18,8 +18,8 @@ e.exports = function (e, t, n, o, s, l) {
     for (var g = c; ++f < d; ) {
         var E = e[(_ = u[f])],
             b = t[_];
-        if (o) var y = c ? o(b, E, _, t, e, l) : o(E, b, _, e, t, l);
-        if (!(void 0 === y ? E === b || s(E, b, n, o, l) : y)) {
+        if (a) var y = c ? a(b, E, _, t, e, l) : a(E, b, _, e, t, l);
+        if (!(void 0 === y ? E === b || s(E, b, n, a, l) : y)) {
             m = !1;
             break;
         }

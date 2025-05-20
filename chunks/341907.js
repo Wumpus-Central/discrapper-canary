@@ -15,8 +15,8 @@ n.r(t),
 var r = n(255367);
 n(73800);
 var i = n(772848),
-    a = n(271579),
-    o = n(756647),
+    o = n(271579),
+    a = n(756647),
     s = n(481060),
     l = n(37234),
     c = n(836768),
@@ -91,7 +91,7 @@ function P(e, t) {
 let R = 'in-app',
     w = 'Discord Widget';
 function D(e) {
-    let { questId: t, location: i, questContentPosition: a, preview: o = !1, previewQuest: l = null } = e;
+    let { questId: t, location: i, questContentPosition: o, preview: a = !1, previewQuest: l = null } = e;
     (0, s.ZDy)(async () => {
         let { default: e } = await Promise.all([n.e('37447'), n.e('64838'), n.e('88622'), n.e('11186')]).then(n.bind(n, 985866));
         return (n) =>
@@ -99,9 +99,9 @@ function D(e) {
                 e,
                 P(N({}, n), {
                     questId: t,
-                    questContentPosition: a,
+                    questContentPosition: o,
                     location: i,
-                    preview: o,
+                    preview: a,
                     previewQuest: l
                 })
             );
@@ -138,7 +138,7 @@ function x(e, t) {
 }
 function k(e, t) {
     (0, s.ZDy)(async () => {
-        let { default: i } = await n.e('20565').then(n.bind(n, 383294));
+        let { default: i } = await Promise.all([n.e('128'), n.e('94784')]).then(n.bind(n, 383294));
         return (n) =>
             (0, r.jsx)(
                 i,
@@ -213,10 +213,10 @@ function F(e) {
     (0, s.ZDy)(
         async () => {
             let { default: i } = await B();
-            return (a) =>
+            return (o) =>
                 (0, r.jsx)(
                     i,
-                    P(N({}, a), {
+                    P(N({}, o), {
                         openStartClockTime: performance.now(),
                         questId: e.id,
                         autoplay: t,
@@ -241,9 +241,9 @@ function V(e) {
         r = 'quest';
     if ('Android' === n || 'iOS' === n) {
         let t = f.default.getFingerprint(),
-            n = (0, a.WS)(),
+            n = (0, o.WS)(),
             i = ''.concat(location.protocol, '//').concat(window.GLOBAL_ENV.WEBAPP_ENDPOINT, '/quests/').concat(e);
-        return (0, a.ZP)(i, {
+        return (0, o.ZP)(i, {
             utmSource: r,
             fingerprint: t,
             attemptId: n
@@ -253,10 +253,10 @@ function V(e) {
 }
 function Z(e) {
     let t = V(e),
-        n = (0, a.zS)(t);
+        n = (0, o.zS)(t);
     null != n &&
         _.default.track(S.rMx.DEEP_LINK_CLICKED, {
-            fingerprint: (0, o.K)(n.fingerprint),
+            fingerprint: (0, a.K)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource
         }),

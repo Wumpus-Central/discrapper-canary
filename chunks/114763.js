@@ -1,9 +1,9 @@
 n.d(t, { N: () => E });
 var r = n(717029),
     i = n(25487),
-    a = n(846042);
-function o(e) {
-    return (o =
+    o = n(846042);
+function a(e) {
+    return (a =
         'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
@@ -51,7 +51,7 @@ function f(e) {
     };
 }
 function _(e, t) {
-    return t && ('object' === o(t) || 'function' == typeof t) ? t : p(e);
+    return t && ('object' === a(t) || 'function' == typeof t) ? t : p(e);
 }
 function p(e) {
     if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
@@ -92,7 +92,7 @@ var E = (function (e) {
     function n() {
         var e;
         s(this, n);
-        for (var r = arguments.length, i = Array(r), a = 0; a < r; a++) i[a] = arguments[a];
+        for (var r = arguments.length, i = Array(r), o = 0; o < r; o++) i[o] = arguments[o];
         return g(p((e = t.call.apply(t, [this].concat(i)))), 'priority', 90), g(p(e), 'subpriority', 1), g(p(e), 'incompatibleTokens', ['Y', 'R', 'q', 'Q', 'M', 'L', 'w', 'I', 'd', 'E', 'i', 'e', 'c', 't', 'T']), e;
     }
     return (
@@ -103,11 +103,11 @@ var E = (function (e) {
                     switch (t) {
                         case 'D':
                         case 'DD':
-                            return (0, a.ie)(i.z.dayOfYear, e);
+                            return (0, o.ie)(i.z.dayOfYear, e);
                         case 'Do':
                             return n.ordinalNumber(e, { unit: 'date' });
                         default:
-                            return (0, a.ZL)(t.length, e);
+                            return (0, o.ZL)(t.length, e);
                     }
                 }
             },
@@ -115,7 +115,7 @@ var E = (function (e) {
                 key: 'validate',
                 value: function (e, t) {
                     var n = e.getUTCFullYear();
-                    return (0, a.kT)(n) ? t >= 1 && t <= 366 : t >= 1 && t <= 365;
+                    return (0, o.kT)(n) ? t >= 1 && t <= 366 : t >= 1 && t <= 365;
                 }
             },
             {

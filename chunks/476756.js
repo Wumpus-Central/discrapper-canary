@@ -1,4 +1,4 @@
-n.d(t, { Z: () => g });
+n.d(t, { Z: () => m });
 var i = n(255367);
 n(73800);
 var r = n(512722),
@@ -9,19 +9,19 @@ var r = n(512722),
     c = n(474873),
     d = n(197344),
     u = n(871465),
-    m = n(388032);
-function g() {
+    g = n(388032);
+function m() {
     let e = (0, l.e7)([c.Z], () => c.Z.getSoundpack()),
         t = d.Z.useHolidaySoundpack();
     s()(null != t, 'should not render this without a holiday soundpack');
     let n = [
         {
             value: u.YC.CLASSIC,
-            label: m.intl.string(m.t.p3Hg5e)
+            label: g.intl.string(g.t.p3Hg5e)
         },
         {
             value: t.soundpack,
-            label: m.intl.string(t.soundpackLabel)
+            label: g.intl.string(t.soundpackLabel)
         }
     ];
     return (0, i.jsx)(a.q4e, {

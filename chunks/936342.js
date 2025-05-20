@@ -1,7 +1,7 @@
 var r = n(815329),
     i = n(243647),
-    a = n(13863),
-    o = n(699367),
+    o = n(13863),
+    a = n(699367),
     s = n(744145),
     l = n(425194),
     c = n(883367),
@@ -17,8 +17,8 @@ e.exports = function (e, t, n, h, m) {
     if (void 0 !== e && !p(e)) throw new r('Assertion failed: O must be undefined or an Object');
     if (!d(t)) throw new r('Assertion failed: P must be a Property Key');
     if ('boolean' != typeof n) throw new r('Assertion failed: extensible must be a Boolean');
-    if (!o(h)) throw new r('Assertion failed: Desc must be a Property Descriptor');
-    if (void 0 !== m && !o(m)) throw new r('Assertion failed: current must be a Property Descriptor, or undefined');
+    if (!a(h)) throw new r('Assertion failed: Desc must be a Property Descriptor');
+    if (void 0 !== m && !a(m)) throw new r('Assertion failed: current must be a Property Descriptor, or undefined');
     if (void 0 === m)
         return (
             !!n &&
@@ -33,7 +33,7 @@ e.exports = function (e, t, n, h, m) {
                       })))
         );
     if (
-        !a(
+        !o(
             {
                 IsAccessorDescriptor: l,
                 IsDataDescriptor: c

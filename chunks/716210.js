@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var i = n(255367);
 n(73800);
 var r = n(442837),
@@ -9,10 +9,10 @@ var r = n(442837),
     c = n(726985),
     d = n(388032),
     u = n(20493);
-function m(e) {
+function g(e) {
     let { refreshStyles: t = !1 } = e,
         n = (0, r.e7)([o.Z], () => o.Z.getEnableSilenceWarning()),
-        m = (0, i.jsx)(s.j7V, {
+        g = (0, i.jsx)(s.j7V, {
             value: n,
             onChange: (e) => l.Z.setSilenceWarning(e),
             hideBorder: t,
@@ -21,11 +21,11 @@ function m(e) {
     return (0, i.jsx)(a.F, {
         setting: c.s6.VOICE_AND_VIDEO_ADVANCED_SILENCE_WARNING,
         children: t
-            ? m
+            ? g
             : (0, i.jsx)(s.hjN, {
                   className: u.marginBottom20,
                   title: d.intl.string(d.t['aP1N/v']),
-                  children: m
+                  children: g
               })
     });
 }

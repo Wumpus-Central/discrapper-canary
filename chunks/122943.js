@@ -1,8 +1,8 @@
 n.d(t, { Z: () => I });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(692547),
     l = n(481060),
     c = n(906732),
@@ -68,7 +68,7 @@ function v(e, t) {
     );
 }
 function I(e) {
-    let { channel: t, textVariant: n, textClassName: a, iconClassName: b, hideText: O = !1, hideTooltip: I = !1, canTruncate: S = !0 } = e,
+    let { channel: t, textVariant: n, textClassName: o, iconClassName: b, hideText: O = !1, hideTooltip: I = !1, canTruncate: S = !0 } = e,
         T = (0, l.vjg)(l.Skl.ONLINE),
         A = (0, d.ZP)(t),
         N = t.isDM() || t.isGroupDM(),
@@ -87,7 +87,7 @@ function I(e) {
                       size: 'custom',
                       color: T,
                       channel: t,
-                      className: o()(E.icon, b)
+                      className: a()(E.icon, b)
                   })
                 : (0, r.jsx)(l.ua7, {
                       text: A,
@@ -101,14 +101,14 @@ function I(e) {
                                   size: 'custom',
                                   color: s.Z.colors.STATUS_POSITIVE,
                                   channel: t,
-                                  className: o()(E.icon, b)
+                                  className: a()(E.icon, b)
                               })
                           )
                   }),
         D = () => {
             let e = {
                 variant: n,
-                className: a,
+                className: o,
                 canTruncate: S
             };
             return C ? (0, r.jsx)(h.Z, v(y({}, e), { children: A })) : N ? (0, r.jsx)(h.Z, v(y({}, e), { children: g.intl.string(g.t['9FaEzs']) })) : t.isGuildStageVoice() ? (0, r.jsx)(h.Z, v(y({}, e), { children: g.intl.string(g.t.QygGCA) })) : (0, r.jsx)(h.Z, v(y({}, e), { children: g.intl.string(g.t.msxteH) }));

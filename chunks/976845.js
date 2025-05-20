@@ -1,142 +1,132 @@
-n.d(t, {
-    D2: () => g,
-    ZP: () => v,
-    eg: () => E
+r.d(t, {
+    D2: () => h,
+    ZP: () => C,
+    eg: () => O
 });
-var r = n(255367),
-    i = n(73800),
-    a = n(60488),
-    o = n(934248),
-    s = n(780384),
-    l = n(410030),
-    c = n(738134);
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function d(e) {
+var n = r(255367),
+    a = r(73800),
+    l = r(60488),
+    i = r(934248),
+    o = r(780384),
+    c = r(410030),
+    u = r(738134);
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                u(e, t, n[t]);
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = n);
             });
     }
     return e;
 }
-function f(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function _(e, t) {
+function d(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
+            : (function (e, t) {
+                  var r = Object.keys(e);
+                  if (Object.getOwnPropertySymbols) {
+                      var n = Object.getOwnPropertySymbols(e);
+                      r.push.apply(r, n);
+                  }
+                  return r;
+              })(Object(t)).forEach(function (r) {
+                  Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
               }),
         e
     );
 }
-function p(e, t) {
+function b(e, t) {
     if (null == e) return {};
-    var n,
-        r,
-        i = h(e, t);
+    var r,
+        n,
+        a = (function (e, t) {
+            if (null == e) return {};
+            var r,
+                n,
+                a = {},
+                l = Object.keys(e);
+            for (n = 0; n < l.length; n++) (r = l[n]), t.indexOf(r) >= 0 || (a[r] = e[r]);
+            return a;
+        })(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var l = Object.getOwnPropertySymbols(e);
+        for (n = 0; n < l.length; n++) (r = l[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (a[r] = e[r]);
     }
-    return i;
+    return a;
 }
-function h(e, t) {
-    if (null == e) return {};
-    var n,
-        r,
-        i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-    return i;
-}
-let m = {
+let f = {
         width: 60,
         height: 60
     },
-    g = 3000,
-    E = {
+    h = 3000,
+    O = {
         EARN: 0.25,
         SPEND: 0.3
     },
-    b = (e) => {
-        let { currentAnimationType: t, animationTypeRef: n, onSetAnimationDurationMS: r, play: a, getDuration: o } = e,
-            s = o(),
-            l = null != s ? 1000 * s : g;
-        (0, i.useEffect)(() => {
-            null !== t && t !== n.current && ((n.current = t), a());
-        }, [t, a, n]),
-            (0, i.useEffect)(() => {
-                r(l);
-            }, [r, l]);
-    },
     y = (e) => {
+        let { currentAnimationType: t, animationTypeRef: r, onSetAnimationDurationMS: n, play: l, getDuration: i } = e,
+            o = i(),
+            c = null != o ? 1000 * o : h;
+        (0, a.useEffect)(() => {
+            null !== t && t !== r.current && ((r.current = t), l());
+        }, [t, l, r]),
+            (0, a.useEffect)(() => {
+                n(c);
+            }, [n, c]);
+    },
+    p = (e) => {
         var { currentAnimationType: t } = e,
-            n = p(e, ['currentAnimationType']);
-        let i = (0, o.D)(null != t ? t : 'earn'),
-            { Component: a } = i;
+            r = b(e, ['currentAnimationType']);
+        let a = (0, i.D)(null != t ? t : 'earn'),
+            { Component: l } = a;
         return (
-            b(d({ currentAnimationType: t }, n, p(i, ['Component']))),
-            (0, r.jsx)(
-                a,
-                _(d({}, m), {
+            y(s({ currentAnimationType: t }, r, b(a, ['Component']))),
+            (0, n.jsx)(
+                l,
+                d(s({}, f), {
                     size: 'custom',
-                    className: c.orbsLottie,
+                    className: u.orbsLottie,
                     useLottieDefaultColors: !0
                 })
             )
         );
     },
-    O = (e) => {
+    m = (e) => {
         var { currentAnimationType: t } = e,
-            n = p(e, ['currentAnimationType']);
-        let i = (0, a.v)(null != t ? t : 'earn'),
-            { Component: o } = i;
+            r = b(e, ['currentAnimationType']);
+        let a = (0, l.v)(null != t ? t : 'earn'),
+            { Component: i } = a;
         return (
-            b(d({ currentAnimationType: t }, n, p(i, ['Component']))),
-            (0, r.jsx)(
-                o,
-                _(d({}, m), {
+            y(s({ currentAnimationType: t }, r, b(a, ['Component']))),
+            (0, n.jsx)(
+                i,
+                d(s({}, f), {
                     size: 'custom',
-                    className: c.orbsLottie,
+                    className: u.orbsLottie,
                     useLottieDefaultColors: !0
                 })
             )
         );
     },
-    v = (e) => {
-        let t = (0, l.ZP)();
-        return (0, s.ap)(t) ? (0, r.jsx)(O, d({}, e)) : (0, r.jsx)(y, d({}, e));
+    C = (e) => {
+        let t = (0, c.ZP)();
+        return (0, o.ap)(t) ? (0, n.jsx)(m, s({}, e)) : (0, n.jsx)(p, s({}, e));
     };

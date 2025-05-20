@@ -4,6 +4,6 @@ function i(e) {
     var t = (0, r.Z)(e),
         n = t.overflow,
         i = t.overflowX,
-        a = t.overflowY;
-    return /auto|scroll|overlay|hidden/.test(n + a + i);
+        o = t.overflowY;
+    return /auto|scroll|overlay|hidden/.test(n + o + i);
 }

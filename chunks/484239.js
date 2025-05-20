@@ -9,8 +9,8 @@ var r = n(120356),
     c = n(743612),
     d = n(735825),
     u = n(593595),
-    m = n(721239),
-    g = n(557634),
+    g = n(721239),
+    m = n(557634),
     p = n(992429);
 let h = (e) => {
     var t;
@@ -25,10 +25,10 @@ let h = (e) => {
             (n = p), (r = 'unlocked icon');
             break;
         case d.EB.PENDING:
-            (n = m), (r = 'locked icon');
+            (n = g), (r = 'locked icon');
             break;
         case d.EB.REDEEMED:
-            (n = g), (r = 'thumbs up icon');
+            (n = m), (r = 'thumbs up icon');
             break;
         default:
             (n = void 0), (r = '');

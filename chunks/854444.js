@@ -13,8 +13,8 @@ var i = n(73800),
     c = n(846787),
     d = n(924301),
     u = n(601070),
-    m = n(569471),
-    g = n(131704),
+    g = n(569471),
+    m = n(131704),
     p = n(680089),
     h = n(592125),
     f = n(58468),
@@ -27,7 +27,7 @@ var i = n(73800),
     O = n(540126),
     S = n(647086),
     v = n(231338);
-let T = 12633 == n.j ? [a.ZP, o.Z, d.ZP, u.Z, m.Z, p.Z, h.Z, b.Z, _.Z, x.ZP, E.Z, C.ZP] : null;
+let T = 12633 == n.j ? [a.ZP, o.Z, d.ZP, u.Z, g.Z, p.Z, h.Z, b.Z, _.Z, x.ZP, E.Z, C.ZP] : null;
 function I() {
     let [e, t] = i.useState(() => N());
     return (
@@ -57,15 +57,15 @@ function N() {
         }
         n.parentId in d || (d[n.parentId] = []), d[n.parentId].push(r);
     }
-    function m(n, l) {
+    function g(n, l) {
         let { isCollapsed: a, isMuted: o } = l;
         return s()(n)
             .map((n) => {
                 var c;
                 if (!n.isPrivate() && !_.Z.can(v.Pl.VIEW_CHANNEL, n)) return null;
                 let d = null != i && (i.id === n.id || r === n.id),
-                    m = null != i && i.isThread() && i.parent_id === n.id,
-                    p = null != (c = d || m || !a ? u.Z.getActiveJoinedRelevantThreadsForParent(n.guild_id, n.id) : u.Z.getActiveJoinedUnreadThreadsForParent(n.guild_id, n.id)) ? c : {},
+                    g = null != i && i.isThread() && i.parent_id === n.id,
+                    p = null != (c = d || g || !a ? u.Z.getActiveJoinedRelevantThreadsForParent(n.guild_id, n.id) : u.Z.getActiveJoinedUnreadThreadsForParent(n.guild_id, n.id)) ? c : {},
                     h = (0, O.zR)(n, p, i, r, t),
                     b = f.Z.isCollapsed(n.id),
                     E = C.ZP.isChannelMuted(n.guild_id, n.id),
@@ -81,7 +81,7 @@ function N() {
                         isFirstVoiceChannel: !1,
                         subtitle: (0, O.Bz)(n, b, !1)
                     };
-                return d || m || !s().isEmpty(p) || x.ZP.getMentionCount(n.id) > 0 ? j : (t && E) || (a && (E || o || (0, g.vd)(n.type) || ((0, g.vc)(n.type) && !1 === x.ZP.hasUnread(n.id)))) ? null : j;
+                return d || g || !s().isEmpty(p) || x.ZP.getMentionCount(n.id) > 0 ? j : (t && E) || (a && (E || o || (0, m.vd)(n.type) || ((0, m.vc)(n.type) && !1 === x.ZP.hasUnread(n.id)))) ? null : j;
             })
             .filter(j.lm)
             .sortBy((e) => {
@@ -100,7 +100,7 @@ function N() {
             getShownChannelAndThreadIds: () => a.map((e) => e.id),
             isEmpty: () => 0 === a.length,
             get channelList() {
-                return null == b && (b = m(a, this)), b;
+                return null == b && (b = g(a, this)), b;
             }
         },
         I = s()(e)
@@ -126,7 +126,7 @@ function N() {
                     getShownChannelAndThreadIds: () => s.map((e) => e.id),
                     isEmpty: () => 0 === s.length,
                     get channelList() {
-                        return null == c && (c = m(s, this)), c;
+                        return null == c && (c = g(s, this)), c;
                     }
                 };
             })

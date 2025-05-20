@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
 var r = n(255367),
     i = n(73800),
-    a = n(657707),
-    o = n(456100),
+    o = n(657707),
+    a = n(456100),
     s = n(841784),
     l = n(906732),
     c = n(482798),
@@ -15,11 +15,11 @@ var r = n(255367),
     m = n(981631);
 let g = function (e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return (0, u.dS)(e) ? a.ewx : (0, s.Z)(e) ? (t ? a.iWm : a.jje) : e.type === m.IIU.PLAYING ? a.iWm : e.type === m.IIU.LISTENING ? a.RZG : e.type === m.IIU.WATCHING || e.type === m.IIU.STREAMING ? a.ARS : e.type === m.IIU.COMPETING ? a.iWm : null;
+    return (0, u.dS)(e) ? o.ewx : (0, s.Z)(e) ? (t ? o.iWm : o.jje) : e.type === m.IIU.PLAYING ? o.iWm : e.type === m.IIU.LISTENING ? o.RZG : e.type === m.IIU.WATCHING || e.type === m.IIU.STREAMING ? o.ARS : e.type === m.IIU.COMPETING ? o.iWm : null;
 };
 function E(e) {
-    let { activity: t, textVariant: n, textClassName: a, iconClassName: s, hideIcon: u = !1, hideText: m = !1, hideTooltip: E = !1, canTruncate: b = !0 } = e,
-        { enabled: y } = o.c.useExperiment({ location: 'PresenceActivityStatus' }, { autoTrackExposure: !0 }),
+    let { activity: t, textVariant: n, textClassName: o, iconClassName: s, hideIcon: u = !1, hideText: m = !1, hideTooltip: E = !1, canTruncate: b = !0 } = e,
+        { enabled: y } = a.c.useExperiment({ location: 'PresenceActivityStatus' }, { autoTrackExposure: !0 }),
         { descriptiveTextEnabled: O } = (0, d.f)({ location: 'PresenceActivityStatus' }),
         { enableTopNavButton: v } = (0, c.Cq)({ location: 'PresenceActivityStatus' }),
         { analyticsLocations: I } = (0, l.ZP)(),
@@ -47,7 +47,7 @@ function E(e) {
             !m &&
                 (0, r.jsx)(h.Z, {
                     variant: n,
-                    className: a,
+                    className: o,
                     canTruncate: b,
                     children: T
                 })

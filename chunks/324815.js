@@ -11,7 +11,7 @@ let o = {
 function c(e) {
     var t,
         n,
-        { className: r, color: c, onClick: d, disabled: u, children: m, muted: g = !1 } = e,
+        { className: r, color: c, onClick: d, disabled: u, children: g, muted: m = !1 } = e,
         p = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -60,10 +60,10 @@ function c(e) {
         })({}, p)),
         (n = n =
             {
-                muted: g,
+                muted: m,
                 className: s()(u ? a.buttonDisabled : a.buttonEnabled, o[c], r),
                 onClick: u ? void 0 : d,
-                children: m
+                children: g
             }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))

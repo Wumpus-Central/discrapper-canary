@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r = n(592125),
     i = n(594174),
-    a = n(585483),
-    o = n(636449),
+    o = n(585483),
+    a = n(636449),
     s = n(337682),
     l = n(566620),
     c = n(224189),
@@ -65,24 +65,24 @@ async function m(e) {
     if (null == e.targetApplicationId) return !1;
     let n = !1;
     try {
-        (t = await (0, c.Z)(e.targetApplicationId, e.channelId)), (n = (0, o.R)());
+        (t = await (0, c.Z)(e.targetApplicationId, e.channelId)), (n = (0, a.R)());
     } catch (e) {
         return !1;
     }
-    return (0, o.C)(n, () => g(h(_({}, e), { targetApplication: t })));
+    return (0, a.C)(n, () => g(h(_({}, e), { targetApplication: t })));
 }
 async function g(e) {
-    let { targetApplication: t, locationObject: n, channelId: o, analyticsLocations: c, componentId: f, commandOrigin: _, sectionName: p, source: h, onExecutedCallback: m, referrerId: g, customId: E, inviterUserId: b, onConfirmActivityLaunchChecksAlertOpen: y } = e,
+    let { targetApplication: t, locationObject: n, channelId: a, analyticsLocations: c, componentId: f, commandOrigin: _, sectionName: p, source: h, onExecutedCallback: m, referrerId: g, customId: E, inviterUserId: b, onConfirmActivityLaunchChecksAlertOpen: y } = e,
         O = (0, u.Z)(),
         v = i.default.getCurrentUser();
-    return null == o
-        ? (a.S.dispatch(d.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: t.id }), !1)
-        : null != r.Z.getChannel(o) &&
+    return null == a
+        ? (o.S.dispatch(d.CkL.SHOW_ACTIVITIES_CHANNEL_SELECTOR, { applicationId: t.id }), !1)
+        : null != r.Z.getChannel(a) &&
               null != v &&
               null != t &&
               (s.tZ(t.id),
               await (0, l.G6)({
-                  channelId: o,
+                  channelId: a,
                   applicationId: t.id,
                   isStart: !0,
                   embeddedActivitiesManager: O,

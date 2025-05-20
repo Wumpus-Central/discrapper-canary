@@ -1,15 +1,15 @@
-n.d(t, { Z: () => o });
+n.d(t, { Z: () => a });
 var r = n(451478);
 function i() {
     return !0;
 }
-function a() {
+function o() {
     return i();
 }
-let o = {
+let a = {
     canUIRequestGatewaySocket: i,
     getState: function () {
         return r.Z.isFocused() ? 'focused' : 'unfocused';
     },
-    useCanUIRequestGatewaySocket: a
+    useCanUIRequestGatewaySocket: o
 };

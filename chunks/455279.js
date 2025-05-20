@@ -12,8 +12,8 @@ var i,
     c = n.n(o),
     d = n(392711),
     u = n.n(d),
-    m = n(481060),
-    g = n(600164),
+    g = n(481060),
+    m = n(600164),
     p = n(13140),
     h = n(388032),
     f = n(556707);
@@ -54,7 +54,7 @@ class E extends s.PureComponent {
             s = (0, p.BB)(n, !0);
         e = 'RECORDING' === t ? h.intl.string(h.t.bmOri4) : 0 === n.length ? h.intl.string(h.t.co3wt7) : h.intl.string(h.t.idFMvL);
         let l = 'DEFAULT' === t && n.length > 0;
-        return (0, r.jsx)(m.tEY, {
+        return (0, r.jsx)(g.tEY, {
             focusTarget: this._inputRef,
             ringTarget: this._containerRef,
             children: (0, r.jsx)('div', {
@@ -65,10 +65,10 @@ class E extends s.PureComponent {
                     [f.hasValue]: l,
                     [f.containerDisabled]: i
                 }),
-                children: (0, r.jsxs)(g.Z, {
+                children: (0, r.jsxs)(m.Z, {
                     className: f.recorderLayout,
                     children: [
-                        (0, r.jsx)(g.Z.Child, {
+                        (0, r.jsx)(m.Z.Child, {
                             className: f.keybindInput,
                             children: (0, r.jsx)('input', {
                                 id: this._inputId,
@@ -80,18 +80,18 @@ class E extends s.PureComponent {
                                 disabled: 'RECORDING' !== this.props.mode || i
                             })
                         }),
-                        (0, r.jsx)(g.Z, {
+                        (0, r.jsx)(m.Z, {
                             shrink: 1,
                             grow: 0,
                             style: { margin: 0 },
-                            children: (0, r.jsxs)(m.zxk, {
+                            children: (0, r.jsxs)(g.zxk, {
                                 className: f.addKeybindButton,
                                 disabled: i,
                                 onClick: (e) => {
                                     e.stopPropagation(), e.preventDefault(), this.handleClick(e);
                                 },
-                                size: m.zxk.Sizes.MIN,
-                                color: m.Ttl.PRIMARY,
+                                size: g.zxk.Sizes.MIN,
+                                color: g.Ttl.PRIMARY,
                                 children: [
                                     (0, r.jsx)('span', {
                                         className: f.text,

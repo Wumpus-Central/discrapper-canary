@@ -1,8 +1,8 @@
 n.d(t, { Z: () => _ });
 var r,
     i = n(442837),
-    a = n(570140);
-function o(e, t, n) {
+    o = n(570140);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -42,8 +42,8 @@ class f extends (r = i.ZP.DeviceSettingsStore) {
         return s;
     }
 }
-o(f, 'displayName', 'StageMusicStore'), o(f, 'persistKey', 'StageMusicStore');
-let _ = new f(a.Z, {
+a(f, 'displayName', 'StageMusicStore'), a(f, 'persistKey', 'StageMusicStore');
+let _ = new f(o.Z, {
     STAGE_MUSIC_MUTE: c,
     STAGE_MUSIC_PLAY: u,
     VOICE_CHANNEL_SELECT: d

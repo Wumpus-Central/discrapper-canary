@@ -1,16 +1,16 @@
-(t.parse = o), (t.serialize = s);
+(t.parse = a), (t.serialize = s);
 var n = decodeURIComponent,
     r = encodeURIComponent,
     i = /; */,
-    a = /^[\u0009\u0020-\u007e\u0080-\u00ff]+$/;
-function o(e, t) {
+    o = /^[\u0009\u0020-\u007e\u0080-\u00ff]+$/;
+function a(e, t) {
     if ('string' != typeof e) throw TypeError('argument str must be a string');
     var r = {},
-        a = t || {},
-        o = e.split(i),
-        s = a.decode || n;
+        o = t || {},
+        a = e.split(i),
+        s = o.decode || n;
     return (
-        o.forEach(function (e) {
+        a.forEach(function (e) {
             var t = e.indexOf('=');
             if (!(t < 0)) {
                 var n = e.substr(0, t).trim(),
@@ -23,10 +23,10 @@ function o(e, t) {
 }
 function s(e, t, n) {
     var i = n || {},
-        o = i.encode || r;
-    if (!a.test(e)) throw TypeError('argument name is invalid');
-    var s = o(t);
-    if (s && !a.test(s)) throw TypeError('argument val is invalid');
+        a = i.encode || r;
+    if (!o.test(e)) throw TypeError('argument name is invalid');
+    var s = a(t);
+    if (s && !o.test(s)) throw TypeError('argument val is invalid');
     var l = [e + '=' + s];
     if (null != i.maxAge) {
         var c = i.maxAge - 0;
@@ -34,11 +34,11 @@ function s(e, t, n) {
         l.push('Max-Age=' + Math.floor(c));
     }
     if (i.domain) {
-        if (!a.test(i.domain)) throw TypeError('option domain is invalid');
+        if (!o.test(i.domain)) throw TypeError('option domain is invalid');
         l.push('Domain=' + i.domain);
     }
     if (i.path) {
-        if (!a.test(i.path)) throw TypeError('option path is invalid');
+        if (!o.test(i.path)) throw TypeError('option path is invalid');
         l.push('Path=' + i.path);
     }
     return i.expires && l.push('Expires=' + i.expires.toUTCString()), i.httpOnly && l.push('HttpOnly'), i.secure && l.push('Secure'), i.firstPartyOnly && l.push('First-Party-Only'), l.join('; ');

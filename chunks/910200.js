@@ -1,13 +1,13 @@
 n.d(t, {
-    N3: () => g,
-    Z7: () => m,
-    ZP: () => E
+    N3: () => y,
+    Z7: () => b,
+    ZP: () => O
 });
 var r = n(255367);
 n(73800);
 var i = n(120356),
-    a = n.n(i),
-    o = n(481060),
+    o = n.n(i),
+    a = n(481060),
     s = n(686546),
     l = n(813197),
     c = n(60034),
@@ -15,91 +15,143 @@ var i = n(120356),
     d = n(15210),
     f = n(43542),
     _ = n(686369),
-    p = n(248217);
-function h(e, t) {
+    p = n(486324),
+    h = n(248217);
+function m(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function g(e) {
+    for (var t = 1; t < arguments.length; t++) {
+        var n = null != arguments[t] ? arguments[t] : {},
+            r = Object.keys(n);
+        'function' == typeof Object.getOwnPropertySymbols &&
+            (r = r.concat(
+                Object.getOwnPropertySymbols(n).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                })
+            )),
+            r.forEach(function (t) {
+                m(e, t, n[t]);
+            });
+    }
+    return e;
+}
+function E(e, t) {
     let n = (0, _.qw)(e, t);
     return null != e.brandColorPrimary ? e.brandColorPrimary : n;
 }
-function m(e) {
+function b(e) {
     let { profile: t, className: n } = e,
-        i = h(t, (0, _.nv)().hex()),
-        o = (0, _.dG)(i, t);
+        i = E(t, (0, _.nv)().hex()),
+        a = (0, _.dG)(i, t);
     return (0, r.jsx)('div', {
-        className: a()(n, p.banner),
-        style: { background: o }
+        className: o()(n, h.banner),
+        style: { background: a }
     });
 }
-function g(e) {
-    let { profile: t, onIconChange: n } = e;
-    return null == n
-        ? (0, r.jsx)('div', {
-              className: p.avatarContainer,
-              children: (0, r.jsx)(s.ZP, {
-                  mask: s.QS.CLAN_ICON,
-                  width: 70,
-                  height: 70,
-                  children: (0, r.jsx)('div', {
-                      className: p.avatarWrapper,
-                      children: (0, r.jsx)(c.Ft, {
-                          guildId: t.id,
-                          guildName: t.name,
-                          guildIcon: t.icon,
-                          iconSize: 64
-                      })
-                  })
-              })
-          })
-        : (0, r.jsx)('div', {
-              className: p.avatarContainer,
-              children: (0, r.jsx)(o.tEY, {
-                  within: !0,
-                  children: (0, r.jsx)(s.ZP, {
-                      mask: s.QS.CLAN_ICON,
-                      width: 70,
-                      height: 70,
-                      children: (0, r.jsxs)('div', {
-                          className: a()(p.avatarWrapper, p.clickable),
-                          children: [
-                              (0, r.jsx)(c.Ft, {
-                                  guildId: t.id,
-                                  guildName: t.name,
-                                  guildIcon: t.icon,
-                                  iconSize: 64
-                              }),
-                              (0, r.jsx)('div', { className: p.overlay }),
-                              (0, r.jsx)(o.vdY, {
-                                  size: 'custom',
-                                  className: p.overlayIcon,
-                                  width: 20,
-                                  height: 20,
-                                  color: 'white'
-                              }),
-                              (0, r.jsx)(l.ZP, {
-                                  tabIndex: 0,
-                                  onChange: n
-                              })
-                          ]
-                      })
-                  })
-              })
-          });
+function y(e) {
+    let { profile: t, onIconChange: i } = e;
+    if (null == i)
+        return (0, r.jsx)('div', {
+            className: h.avatarContainer,
+            children: (0, r.jsx)(s.ZP, {
+                mask: s.QS.CLAN_ICON,
+                width: 70,
+                height: 70,
+                children: (0, r.jsx)('div', {
+                    className: h.avatarWrapper,
+                    children: (0, r.jsx)(c.Ft, {
+                        guildId: t.id,
+                        guildName: t.name,
+                        guildIcon: t.icon,
+                        iconSize: 64
+                    })
+                })
+            })
+        });
+    function u(e, t) {
+        null != i &&
+            (0, a.ZDy)(async () => {
+                let { default: o } = await Promise.all([n.e('91689'), n.e('59732'), n.e('48389')]).then(n.bind(n, 712451));
+                return (n) =>
+                    (0, r.jsx)(
+                        o,
+                        g(
+                            {
+                                uploadType: p.pC.GUILD_ICON,
+                                imageUri: e,
+                                file: t,
+                                onCrop: (e) => {
+                                    let { imageUri: t } = e;
+                                    return i(t);
+                                }
+                            },
+                            n
+                        )
+                    );
+            }, {});
+    }
+    return (0, r.jsx)('div', {
+        className: h.avatarContainer,
+        children: (0, r.jsx)(a.tEY, {
+            within: !0,
+            children: (0, r.jsx)(s.ZP, {
+                mask: s.QS.CLAN_ICON,
+                width: 70,
+                height: 70,
+                children: (0, r.jsxs)('div', {
+                    className: o()(h.avatarWrapper, h.clickable),
+                    children: [
+                        (0, r.jsx)(c.Ft, {
+                            guildId: t.id,
+                            guildName: t.name,
+                            guildIcon: t.icon,
+                            iconSize: 64
+                        }),
+                        (0, r.jsx)('div', { className: h.overlay }),
+                        (0, r.jsx)(a.vdY, {
+                            size: 'custom',
+                            className: h.overlayIcon,
+                            width: 20,
+                            height: 20,
+                            color: 'white'
+                        }),
+                        (0, r.jsx)(l.ZP, {
+                            tabIndex: 0,
+                            onChange: u
+                        })
+                    ]
+                })
+            })
+        })
+    });
 }
-function E(e) {
-    let { profile: t, onIconChange: n, className: i, disableCTA: o, CTAOverride: s, onClose: l } = e,
+function O(e) {
+    let { profile: t, onIconChange: n, className: i, disableCTA: a, CTAOverride: s, onClose: l } = e,
         c = null;
     return (
         null != s
             ? (c = s)
-            : o ||
+            : a ||
               (c = (0, r.jsx)(d.Z, {
                   profile: t,
                   onComplete: l
               })),
         (0, r.jsxs)('div', {
-            className: a()(p.container, i),
+            className: o()(h.container, i),
             children: [
-                (0, r.jsx)(m, { profile: t }),
-                (0, r.jsx)(g, {
+                (0, r.jsx)(b, { profile: t }),
+                (0, r.jsx)(y, {
                     onIconChange: n,
                     profile: t
                 }),
@@ -107,7 +159,7 @@ function E(e) {
                 (0, r.jsx)(u.E, { profile: t }),
                 null != c &&
                     (0, r.jsx)('div', {
-                        className: p.buttonContainer,
+                        className: h.buttonContainer,
                         children: c
                     })
             ]

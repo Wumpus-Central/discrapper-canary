@@ -4,8 +4,8 @@ n.d(t, {
 });
 var r = n(848572),
     i = n(586502),
-    a = n(474936),
-    o = n(749472),
+    o = n(474936),
+    a = n(749472),
     s = n(860691),
     l = n(110149),
     c = n(64649),
@@ -22,35 +22,35 @@ var r = n(848572),
     y = n(340113),
     O = n(438802);
 let v = {
-        [a.VU.PREMIUM_TENURE_1_MONTH]: {
-            standard: o,
+        [o.VU.PREMIUM_TENURE_1_MONTH]: {
+            standard: a,
             ambient: p.Z
         },
-        [a.VU.PREMIUM_TENURE_3_MONTH]: {
+        [o.VU.PREMIUM_TENURE_3_MONTH]: {
             standard: _,
             ambient: h.Z
         },
-        [a.VU.PREMIUM_TENURE_6_MONTH]: {
+        [o.VU.PREMIUM_TENURE_6_MONTH]: {
             standard: c,
             ambient: m.Z
         },
-        [a.VU.PREMIUM_TENURE_12_MONTH]: {
+        [o.VU.PREMIUM_TENURE_12_MONTH]: {
             standard: d,
             ambient: g.Z
         },
-        [a.VU.PREMIUM_TENURE_24_MONTH]: {
+        [o.VU.PREMIUM_TENURE_24_MONTH]: {
             standard: s,
             ambient: E.Z
         },
-        [a.VU.PREMIUM_TENURE_36_MONTH]: {
+        [o.VU.PREMIUM_TENURE_36_MONTH]: {
             standard: l,
             ambient: b.Z
         },
-        [a.VU.PREMIUM_TENURE_60_MONTH]: {
+        [o.VU.PREMIUM_TENURE_60_MONTH]: {
             standard: f,
             ambient: y.Z
         },
-        [a.VU.PREMIUM_TENURE_72_MONTH]: {
+        [o.VU.PREMIUM_TENURE_72_MONTH]: {
             standard: u,
             ambient: O.Z
         }

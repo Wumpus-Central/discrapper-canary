@@ -16,30 +16,31 @@ var r = n(255367),
     b = n(522458);
 function y(e) {
     var t, n;
-    let { onClick: f, selectedOverride: y = !1, popoutProps: O } = e,
-        v = (0, l.Ie)('notifications-inbox'),
-        [_, C] = i.useState(!1),
-        j = y || window.location.pathname.startsWith(m.Z5c.NOTIFICATIONS_INBOX()),
-        S = (0, o.e7)([p.Z], () => p.Z.unreadMessageIds),
-        E = S.size > 0 ? (0, u.N)(S.size) : null,
-        { notificationCenterVariant: x } = h.L.useExperiment({ location: 'NotificationsInboxButtonInner' }),
-        P = (0, o.e7)([d.Z], () => d.Z.getChannelId()),
-        I = i.useMemo(() => {
-            if ('sidebar' === x) return m.Z5c.NOTIFICATIONS_INBOX(null != P ? P : void 0);
-        }, [x, P]);
+    let { onClick: f, selectedOverride: y = !1, popoutProps: O, ref: v } = e,
+        _ = (0, l.Ie)('notifications-inbox'),
+        [C, j] = i.useState(!1),
+        S = y || window.location.pathname.startsWith(m.Z5c.NOTIFICATIONS_INBOX()),
+        E = (0, o.e7)([p.Z], () => p.Z.unreadMessageIds),
+        x = E.size > 0 ? (0, u.N)(E.size) : null,
+        { notificationCenterVariant: P } = h.L.useExperiment({ location: 'NotificationsInboxButtonInner' }),
+        I = (0, o.e7)([d.Z], () => d.Z.getChannelId()),
+        w = i.useMemo(() => {
+            if ('sidebar' === P) return m.Z5c.NOTIFICATIONS_INBOX(null != I ? I : void 0);
+        }, [P, I]);
     return (0, r.jsxs)(c.H, {
+        ref: v,
         children: [
-            'sidebar' === x &&
+            'sidebar' === P &&
                 (0, r.jsx)(a.Z, {
-                    selected: j,
-                    hovered: _,
-                    unread: S.size > 0,
+                    selected: S,
+                    hovered: C,
+                    unread: E.size > 0,
                     className: b.pill
                 }),
             (0, r.jsx)(g.Z, {
                 children: (0, r.jsx)(s.aRk, {
-                    selected: j || _,
-                    lowerBadge: E,
+                    selected: S || C,
+                    lowerBadge: x,
                     children: (0, r.jsx)(
                         s.LYs,
                         ((t = (function (e) {
@@ -66,14 +67,14 @@ function y(e) {
                                     });
                             }
                             return e;
-                        })({}, v, O)),
+                        })({}, _, O)),
                         (n = n =
                             {
                                 onClick: f,
-                                to: I,
-                                selected: j || _,
-                                onMouseEnter: () => C(!0),
-                                onMouseLeave: () => C(!1),
+                                to: w,
+                                selected: S || C,
+                                onMouseEnter: () => j(!0),
+                                onMouseLeave: () => j(!1),
                                 children: (0, r.jsx)(s.Dkj, {
                                     size: 'custom',
                                     color: 'currentColor',
@@ -102,18 +103,21 @@ function y(e) {
     });
 }
 function O() {
-    let { notificationCenterVariant: e } = h.L.useExperiment({ location: 'NotificationsInboxButton' });
-    return 'sidebar' === e
+    let e = i.useRef(null),
+        { notificationCenterVariant: t } = h.L.useExperiment({ location: 'NotificationsInboxButton' });
+    return 'sidebar' === t
         ? (0, r.jsx)(y, {})
-        : 'popout' === e
+        : 'popout' === t
           ? (0, r.jsx)(f.Z, {
+                targetElementRef: e,
                 popoutPosition: 'right',
                 popoutAlign: 'bottom',
-                children: (e, t, n) =>
+                children: (t, n, i) =>
                     (0, r.jsx)(y, {
-                        selectedOverride: t,
-                        onClick: e,
-                        popoutProps: n
+                        ref: e,
+                        selectedOverride: n,
+                        onClick: t,
+                        popoutProps: i
                     })
             })
           : null;

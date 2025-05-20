@@ -1,6 +1,6 @@
 n.d(t, {
     A: () => i,
-    Z: () => a
+    Z: () => o
 }),
     n(388685);
 let r = Object.freeze({
@@ -13,4 +13,4 @@ let r = Object.freeze({
         [r.MIDNIGHT, r.DARK],
         [r.DARKER, r.DARK]
     ]),
-    a = r;
+    o = r;

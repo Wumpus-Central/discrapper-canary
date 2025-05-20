@@ -1,8 +1,8 @@
 n.d(t, { Z: () => f }), n(388685), n(415506);
 var r = n(464847),
     i = n(289182),
-    a = n(358085),
-    o = n(998502);
+    o = n(358085),
+    a = n(998502);
 function s(e, t, n) {
     return (
         t in e
@@ -58,8 +58,8 @@ function u(e, t) {
 function d() {
     var e, t, n, r, i, s;
     let l = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    a.isPlatformEmbedded &&
-        o.ZP.updateCrashReporter({
+    o.isPlatformEmbedded &&
+        a.ZP.updateCrashReporter({
             user_id: null != (e = l.id) ? e : '',
             username: null != (t = l.username) ? t : '',
             email: null != (n = l.email) ? n : '',
@@ -75,13 +75,13 @@ function d() {
 let f = {
     setUser(e, t, n, r) {
         var i;
-        let a = {
+        let o = {
             id: e,
             username: t,
             email: n,
             staff: r
         };
-        null == (i = window.DiscordSentry) || i.getCurrentScope().setUser(a), d(a);
+        null == (i = window.DiscordSentry) || i.getCurrentScope().setUser(o), d(o);
     },
     clearUser() {
         var e;
@@ -107,12 +107,12 @@ let f = {
     captureCrash(e, t) {
         var n;
         let r,
-            a = (0, i.v)(t);
+            o = (0, i.v)(t);
         return (
             null == (n = window.DiscordSentry) ||
                 n.withScope((t) => {
                     var n;
-                    t.setExtras(a.extra),
+                    t.setExtras(o.extra),
                         t.setTag('crash', 'true'),
                         t.setLevel('fatal'),
                         t.addEventProcessor((e) => {

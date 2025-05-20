@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var i = n(392711),
     r = n.n(i),
     s = n(710845),
@@ -20,7 +20,7 @@ function d(e, t, n) {
     );
 }
 let u = new s.Z('UserSettingsProto'),
-    m = new (class {
+    g = new (class {
         async getAll(e) {
             let t = performance.now(),
                 n = await o.Z.userSettings(e).getMany(),

@@ -1,8 +1,8 @@
 n.d(t, { t: () => f });
 var r = n(255367),
     i = n(73800),
-    a = n(286263),
-    o = n(931989),
+    o = n(286263),
+    a = n(931989),
     s = n(396704);
 function l(e, t, n) {
     return (
@@ -57,6 +57,6 @@ function d(e, t) {
     );
 }
 let f = i.forwardRef(function (e, t) {
-    let { status: n, buffer: i } = (0, s.V)(a.Z);
-    return n === s.J.Loading ? null : (0, r.jsx)(o.v, d(c({ buffer: i }, e), { ref: t }));
+    let { status: n, buffer: i } = (0, s.V)(o.Z);
+    return n === s.J.Loading ? null : (0, r.jsx)(a.v, d(c({ buffer: i }, e), { ref: t }));
 });

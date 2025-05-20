@@ -9,8 +9,8 @@ n.d(t, {
     n(35282);
 var r = n(392711),
     i = n.n(r),
-    a = n(31775),
-    o = n.n(a),
+    o = n(31775),
+    a = n.n(o),
     s = n(664751),
     l = n(261470),
     c = n(956664),
@@ -47,7 +47,7 @@ let m = 5,
     g = /\.webp($|\?|#)/i,
     E = /\.avif($|\?|#)/i,
     b = [16, 20, 22, 24, 28, 32, 40, 44, 48, 56, 60, 64, 80, 96, 100, 128, 160, 240, 256, 300, 320, 480, 512, 600, 640, 1024, 1280, 1536, 2048, 3072, 4096],
-    y = new (o())({ max: 1000 });
+    y = new (a())({ max: 1000 });
 function O(e, t) {
     null == e.backoff && (e.backoff = new l.Z());
     let { backoff: n } = e;
@@ -138,23 +138,23 @@ function N(e) {
     return [t, s.parse(n)];
 }
 function C(e) {
-    let { src: t, sourceWidth: n, sourceHeight: r, targetWidth: a, targetHeight: o, format: l = null, quality: u = null, animated: f = !1, srcIsAnimated: p = !1 } = e;
+    let { src: t, sourceWidth: n, sourceHeight: r, targetWidth: o, targetHeight: a, format: l = null, quality: u = null, animated: f = !1, srcIsAnimated: p = !1 } = e;
     if (t.startsWith('data:image') || d.Z.isDiscordCdnUrl(t)) return t;
     let [h, m] = N(t);
     null != l && (m.format = l), null != u && (m.quality = u), f && p && (g.test(t) || E.test(t)) && (m.animated = !0), E.test(t) && (m.format = 'webp');
     let b = (0, c.Tj)({
-        width: a,
-        height: o,
+        width: o,
+        height: a,
         maxWidth: _.hiG,
         maxHeight: _.hiG
     });
-    return (a = b.width), (o = b.height), (a !== n || o !== r) && ((m.width = 0 | a), (m.height = 0 | o)), i().isEmpty(m) || (h += '?' + s.stringify(m)), h;
+    return (o = b.width), (a = b.height), (o !== n || a !== r) && ((m.width = 0 | o), (m.height = 0 | a)), i().isEmpty(m) || (h += '?' + s.stringify(m)), h;
 }
 function P(e) {
-    let { src: t, width: n, height: r, maxWidth: i, maxHeight: a, ratio: o = 1, format: s = null, quality: l = null, animated: c = !1, srcIsAnimated: u = !1 } = e,
+    let { src: t, width: n, height: r, maxWidth: i, maxHeight: o, ratio: a = 1, format: s = null, quality: l = null, animated: c = !1, srcIsAnimated: u = !1 } = e,
         d = n,
         _ = r;
-    o < 1 && ((d = Math.round(n * o)), (_ = Math.round(r * o))), null != i && (d = Math.min(d, i)), null != a && (_ = Math.min(_, a));
+    a < 1 && ((d = Math.round(n * a)), (_ = Math.round(r * a))), null != i && (d = Math.min(d, i)), null != o && (_ = Math.min(_, o));
     let p = (0, f.Z)();
     return C({
         src: t,

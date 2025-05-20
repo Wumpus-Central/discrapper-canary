@@ -1,8 +1,8 @@
 n.d(t, { i: () => u });
 var r = n(255367),
     i = n(481060),
-    a = n(598117);
-function o(e, t, n) {
+    o = n(598117);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -26,7 +26,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -68,6 +68,6 @@ let u = async function () {
                     })
                 );
         },
-        { modalKey: a.Hj }
+        { modalKey: o.Hj }
     );
 };

@@ -43,8 +43,8 @@ let g = new l.Z('ImageEditor'),
             }),
             b = a.useRef(null),
             [v, x] = a.useState(1),
-            [_, j] = a.useState(null),
-            [O, E] = a.useState({
+            [_, O] = a.useState(null),
+            [j, E] = a.useState({
                 width: 0,
                 height: 0
             }),
@@ -73,14 +73,14 @@ let g = new l.Z('ImageEditor'),
                         width: r,
                         height: r
                     };
-                j({
+                O({
                     width: e,
                     height: t
                 }),
                     E(n),
                     N((0, o.kH)(e, t, n));
             }, [v]),
-            P = a.useCallback(
+            L = a.useCallback(
                 (e) => {
                     if (null == b.current) return;
                     let { x: t, y: r } = (0, o.U$)(e.x, e.y, D);
@@ -93,20 +93,20 @@ let g = new l.Z('ImageEditor'),
                 },
                 [b, y, D]
             ),
-            L = a.useCallback(
+            P = a.useCallback(
                 (e) => {
                     if (null == _) return;
                     let { width: t, height: r } = _,
-                        n = (0, o.kH)(t * e, r * e, O),
+                        n = (0, o.kH)(t * e, r * e, j),
                         { x: a, y: i } = m.current;
                     x(e),
                         N(n),
-                        P({
+                        L({
                             x: a,
                             y: i
                         });
                 },
-                [O, _, P]
+                [j, _, L]
             ),
             z = a.useCallback(() => {
                 if (null == b.current || null == _) return;
@@ -115,18 +115,18 @@ let g = new l.Z('ImageEditor'),
                     r = m.current.y,
                     n = _.height,
                     a = _.width,
-                    i = (0, o.kH)(n * v, a * v, O);
-                P({
+                    i = (0, o.kH)(n * v, a * v, j);
+                L({
                     x: r,
                     y: t
                 }),
                     I(e),
-                    j({
+                    O({
                         width: n,
                         height: a
                     }),
                     N(i);
-            }, [_, y, P, v, O]),
+            }, [_, y, L, v, j]),
             G = a.useCallback(() => {
                 if (null == _) return {};
                 let { width: e, height: t } = f(_, y);
@@ -153,12 +153,12 @@ let g = new l.Z('ImageEditor'),
                 let { x: t, y: r } = m.current;
                 S &&
                     (e.clientX !== t || e.clientY !== r) &&
-                    P({
+                    L({
                         x: (t = e.clientX - C.x),
                         y: (r = e.clientY - C.y)
                     });
             },
-            [S, C, P]
+            [S, C, L]
         );
         a.useEffect(() => {
             if (S) return window.addEventListener('mousemove', B), () => window.removeEventListener('mousemove', B);
@@ -179,7 +179,7 @@ let g = new l.Z('ImageEditor'),
                         let { result: r, cancelFn: i } = await (0, o.$p)({
                             file: t,
                             image: n,
-                            cropDimensions: O,
+                            cropDimensions: j,
                             cropOriginCoordinates: m.current,
                             maxDimensions: a,
                             imageRotation: y
@@ -194,7 +194,7 @@ let g = new l.Z('ImageEditor'),
                 else
                     e = (0, i.PT)({
                         image: n,
-                        cropDimensions: O,
+                        cropDimensions: j,
                         cropOriginCoordinates: m.current,
                         maxDimensions: a,
                         imageRotation: y
@@ -211,7 +211,7 @@ let g = new l.Z('ImageEditor'),
                         null == (e = U.current) || e.call(U), (U.current = null);
                     }
                 );
-            }, [O, t, y, R, l]);
+            }, [j, t, y, R, l]);
         return (
             a.useEffect(() => {
                 l({
@@ -254,8 +254,8 @@ let g = new l.Z('ImageEditor'),
                                 className: h.overlay,
                                 style: {
                                     opacity: +(null != _),
-                                    width: O.width,
-                                    height: O.height
+                                    width: j.width,
+                                    height: j.height
                                 }
                             })
                         ]
@@ -277,7 +277,7 @@ let g = new l.Z('ImageEditor'),
                                         minValue: 1,
                                         maxValue: 2,
                                         keyboardStep: 0.025,
-                                        asValueChanges: L,
+                                        asValueChanges: P,
                                         equidistant: !0,
                                         hideBubble: !0,
                                         'aria-label': d.intl.string(d.t.dnvZSk)

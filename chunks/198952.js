@@ -1,5 +1,5 @@
 n.d(t, {
-    Z: () => m,
+    Z: () => g,
     r: () => u
 });
 var i = n(255367);
@@ -16,8 +16,8 @@ let d = l.ZP.getEnableHardwareAcceleration() ? r.Xo$ : r.qEK,
         let { user: l, avatarSize: c = r.EFr.SIZE_48 } = e,
             {
                 avatarSrc: u,
-                avatarDecorationSrc: m,
-                eventHandlers: g
+                avatarDecorationSrc: g,
+                eventHandlers: m
             } = (0, s.Z)({
                 user: l,
                 size: c
@@ -48,12 +48,12 @@ let d = l.ZP.getEnableHardwareAcceleration() ? r.Xo$ : r.qEK,
                         });
                 }
                 return e;
-            })({}, g)),
+            })({}, m)),
             (n = n =
                 {
                     children: (0, i.jsx)(d, {
                         src: u,
-                        avatarDecoration: m,
+                        avatarDecoration: g,
                         size: c,
                         'aria-label': o.intl.formatToPlainString(a.default.kFj4h4, { name: l.username })
                     })
@@ -73,7 +73,7 @@ let d = l.ZP.getEnableHardwareAcceleration() ? r.Xo$ : r.qEK,
             t)
         );
     },
-    m = (e) => {
+    g = (e) => {
         let { currentUser: t, otherUser: n, children: r } = e;
         return (0, i.jsx)('div', {
             className: c.avatarPairContainer,

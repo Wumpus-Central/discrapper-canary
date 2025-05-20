@@ -91,12 +91,13 @@ function F() {
         n = (0, s.e7)([P.Z], () => P.Z.getChannelId()),
         i = (0, s.e7)([j.Z], () => j.Z.getGuildId()),
         a = (0, s.e7)([N.Z], () => N.Z.getChannel(n), [n]),
-        u = T.Z.getGuild(null != i ? i : null == a ? void 0 : a.guild_id),
-        h = (0, m.Z)(),
+        u = null != i ? i : null == a ? void 0 : a.guild_id,
+        h = (0, s.e7)([T.Z], () => T.Z.getGuild(u), [u]),
+        f = (0, m.Z)(),
         {
-            application: f,
-            isContextlessActivity: g,
-            isActivityPanelMode: b
+            application: g,
+            isContextlessActivity: b,
+            isActivityPanelMode: E
         } = (0, s.cj)([d.ZP, p.Z], () => {
             let e = d.ZP.getCurrentEmbeddedActivity();
             return {
@@ -105,52 +106,52 @@ function F() {
                 isActivityPanelMode: d.ZP.getActivityPanelMode() === D.Ez.PANEL
             };
         }),
-        E =
-            null != f
+        O =
+            null != g
                 ? Z.ZP.getApplicationIconURL({
-                      id: f.id,
-                      icon: f.icon,
-                      bot: f.bot
+                      id: g.id,
+                      icon: g.icon,
+                      bot: g.bot
                   })
                 : void 0,
-        O = null;
+        y = null;
     return (
-        null != f && g && b
-            ? ((e = f.name),
-              (O = (0, r.jsx)('img', {
+        null != g && b && E
+            ? ((e = g.name),
+              (y = (0, r.jsx)('img', {
                   className: G.appIcon,
                   alt: M.intl.string(M.t.X4IxWF),
-                  src: E,
+                  src: O,
                   'aria-hidden': !0,
                   draggable: !1
               })))
-            : null != u
-              ? ((O = h
+            : null != h
+              ? ((y = f
                     ? (0, r.jsx)(c.r7p, { size: 'xs' })
                     : (0, r.jsx)(_.Z, {
-                          guild: u,
+                          guild: h,
                           size: _.Z.Sizes.MINI,
                           active: !0,
                           className: G.guildIcon
                       })),
-                (e = u.name))
+                (e = h.name))
               : null != a && (a.isDM() || a.isGroupDM())
-                ? ((e = M.intl.string(M.t.YUU0RE)), (O = (0, r.jsx)(c.gw7, { size: 'xs' })))
+                ? ((e = M.intl.string(M.t.YUU0RE)), (y = (0, r.jsx)(c.gw7, { size: 'xs' })))
                 : t.pathname.startsWith(R.Z5c.GLOBAL_DISCOVERY)
-                  ? ((e = M.intl.string(M.t['4nEZLi'])), (O = (0, r.jsx)(c.Jmo, { size: 'xs' })))
+                  ? ((e = M.intl.string(M.t['4nEZLi'])), (y = (0, r.jsx)(c.Jmo, { size: 'xs' })))
                   : t.pathname.startsWith(R.Z5c.NITRO_HOME)
-                    ? ((e = M.intl.string(M.t.Ipxkoq)), (O = (0, r.jsx)(c.SrA, { size: 'xs' })))
+                    ? ((e = M.intl.string(M.t.Ipxkoq)), (y = (0, r.jsx)(c.SrA, { size: 'xs' })))
                     : t.pathname.startsWith(R.Z5c.COLLECTIBLES_SHOP)
-                      ? ((e = M.intl.string(M.t.pWG4zc)), (O = (0, r.jsx)(c.EOn, { size: 'xs' })))
+                      ? ((e = M.intl.string(M.t.pWG4zc)), (y = (0, r.jsx)(c.EOn, { size: 'xs' })))
                       : t.pathname.startsWith(R.Z5c.FRIENDS)
-                        ? ((e = M.intl.string(M.t.TdEu5e)), (O = (0, r.jsx)(c.iFz, { size: 'xs' })))
-                        : t.pathname.startsWith(R.Z5c.FAMILY_CENTER) && ((e = M.intl.string(U.default.RZqaJi)), (O = (0, r.jsx)(c.BFJ, { size: 'xs' }))),
+                        ? ((e = M.intl.string(M.t.TdEu5e)), (y = (0, r.jsx)(c.iFz, { size: 'xs' })))
+                        : t.pathname.startsWith(R.Z5c.FAMILY_CENTER) && ((e = M.intl.string(U.default.RZqaJi)), (y = (0, r.jsx)(c.BFJ, { size: 'xs' }))),
         null != e &&
             '' !== e &&
             (0, r.jsxs)('div', {
                 className: G.title,
                 children: [
-                    O,
+                    y,
                     (0, r.jsx)(c.Text, {
                         variant: 'text-sm/medium',
                         lineClamp: 1,

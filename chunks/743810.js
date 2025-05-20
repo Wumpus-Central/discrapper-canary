@@ -13,12 +13,12 @@ var i = n(350483),
     c = n(944486),
     d = n(9156),
     u = n(981631),
-    m = n(490897);
-let g = (e, t) => {
+    g = n(490897);
+let m = (e, t) => {
         let n = a.Z.getChannel(t);
         return null != n && ((0, l.hv)(n.type) || u.TPd.GUILD_VOCAL.has(n.type) ? o.ZP.getMentionCount(t) > 0 || c.Z.getVoiceChannelId() === t : (!d.ZP.isChannelMuted(e, t) || o.ZP.getMentionCount(t) > 0) && (0, r.d)(n));
     },
-    p = (e, t) => (t === m.W.GUILD_EVENT ? !d.ZP.isMuteScheduledEventsEnabled(e) && o.ZP.hasUnread(e, t) : o.ZP.hasUnread(e, t)),
+    p = (e, t) => (t === g.W.GUILD_EVENT ? !d.ZP.isMuteScheduledEventsEnabled(e) && o.ZP.hasUnread(e, t) : o.ZP.hasUnread(e, t)),
     h = (e, t) => {
         let n = a.Z.getChannel(t);
         return null != n && !!u.TPd.GUILD_VOCAL.has(n.type) && (o.ZP.getMentionCount(t) > 0 || (c.Z.getVoiceChannelId() === t && o.ZP.getUnreadCount(t) > 0));
@@ -31,7 +31,7 @@ let g = (e, t) => {
             let t = null != (e = s.Z.getState().guildId) ? e : u.ME;
             return (
                 (0, i.Z)(1, {
-                    channelPredicate: g,
+                    channelPredicate: m,
                     guildPredicate: (e) => e === t || !d.ZP.isMuted(e),
                     guildFeaturePredicate: p,
                     ensureChatIsVisible: h,
@@ -49,7 +49,7 @@ let g = (e, t) => {
             let t = null != (e = s.Z.getState().guildId) ? e : u.ME;
             return (
                 (0, i.Z)(-1, {
-                    channelPredicate: g,
+                    channelPredicate: m,
                     guildPredicate: (e) => e === t || !d.ZP.isMuted(e),
                     guildFeaturePredicate: p,
                     ensureChatIsVisible: h,

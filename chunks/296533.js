@@ -6,15 +6,15 @@ n.d(t, {
     n(388685);
 var i = n(255367),
     r = n(73800),
-    s = n(950035),
+    s = n(230986),
     l = n(399606),
     a = n(481060),
     o = n(607070),
     c = n(975298),
     d = n(280942),
     u = n(209747),
-    m = n(430824),
-    g = n(594174),
+    g = n(430824),
+    m = n(594174),
     p = n(267642),
     h = n(74538),
     f = n(709054),
@@ -35,7 +35,7 @@ function S(e) {
             let e = null != n.premiumGuildSubscription ? f.default.extractTimestamp(n.premiumGuildSubscription.id) : 0;
             return j.intl.formatToPlainString(j.t.lY2Bur, { date: new Date(e) });
         }, [n, o, c, d]),
-        m = r.useMemo(
+        g = r.useMemo(
             () =>
                 (function (e) {
                     if (null == e || e === E.Eu4.NONE) return '';
@@ -59,7 +59,7 @@ function S(e) {
                 })(t),
             [t]
         ),
-        g = (0, a.Yzy)(
+        m = (0, a.Yzy)(
             l,
             {
                 from: { opacity: 0 },
@@ -77,22 +77,22 @@ function S(e) {
                   children: u
               })
           })
-        : g((e, t) =>
+        : m((e, t) =>
               (0, i.jsx)(s.animated.div, {
                   style: e,
                   className: O.boostDescriptionInnerContainer,
                   children: (0, i.jsx)(a.Text, {
                       variant: 'text-sm/medium',
                       color: 'text-muted',
-                      children: t ? m : u
+                      children: t ? g : u
                   })
               })
           );
 }
 function v(e) {
-    let { guildTier: t, guildBoostSlot: n, premiumSubscription: s, hasCancelableGuildBoostSlot: u, showAltText: m, isLastGuildBoostSlot: h } = e,
+    let { guildTier: t, guildBoostSlot: n, premiumSubscription: s, hasCancelableGuildBoostSlot: u, showAltText: g, isLastGuildBoostSlot: h } = e,
         f = (0, l.e7)([o.Z], () => o.Z.useReducedMotion),
-        x = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
+        x = (0, l.e7)([m.default], () => m.default.getCurrentUser()),
         E = r.useMemo(() => (null != n.cooldownEndsAt ? new Date(n.cooldownEndsAt) : null), [n]),
         C = r.useMemo(() => null != E && E > new Date(), [E]),
         v = (0, p.tl)(n),
@@ -120,7 +120,7 @@ function v(e) {
                                 : (0, i.jsx)(S, {
                                       guildTier: t,
                                       guildBoostSlot: n,
-                                      showAltText: m,
+                                      showAltText: g,
                                       isCanceled: v,
                                       premiumSubscription: s,
                                       fractionalPremiumInfo: T
@@ -204,7 +204,7 @@ function v(e) {
 }
 function T(e) {
     let { guildId: t, guildBoostSlotRecords: n, premiumSubscription: r, hasCancelableGuildBoostSlot: s, showAltText: a } = e,
-        o = (0, l.e7)([m.Z], () => m.Z.getGuild(t), [t]);
+        o = (0, l.e7)([g.Z], () => g.Z.getGuild(t), [t]);
     return (0, i.jsxs)('div', {
         className: O.appliedBoostContainer,
         children: [
@@ -231,7 +231,7 @@ function T(e) {
 }
 function I(e) {
     let { guildId: t, appliedGuildBoosts: n, premiumSubscription: r } = e,
-        s = (0, l.e7)([m.Z], () => m.Z.getGuild(t), [t]),
+        s = (0, l.e7)([g.Z], () => g.Z.getGuild(t), [t]),
         a = f.default.fromTimestamp(Date.now());
     if (
         (n.forEach((e) => {

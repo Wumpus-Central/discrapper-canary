@@ -2,28 +2,28 @@ t.d(n, { Z: () => v });
 var l = t(255367),
     r = t(73800),
     i = t(481060),
-    s = t(81897),
-    o = t(906732),
-    a = t(785717),
-    c = t(806729),
-    d = t(857302),
-    u = t(892001),
+    o = t(81897),
+    s = t(906732),
+    c = t(785717),
+    u = t(806729),
+    a = t(857302),
+    d = t(892001),
     f = t(252417),
     p = t(388032),
-    h = t(301150);
+    g = t(301150);
 function v(e) {
-    let { user: n, guildId: t, channelId: v, onClose: g } = e,
-        { mutualFriends: j } = (0, c.Z)(n),
-        { analyticsLocations: m } = (0, o.ZP)(),
-        { context: b, trackUserProfileAction: x } = (0, a.KZ)(),
-        Z = (0, s.Z)();
+    let { user: n, guildId: t, channelId: v, onClose: h } = e,
+        { mutualFriends: j } = (0, u.Z)(n),
+        { analyticsLocations: m } = (0, s.ZP)(),
+        { context: b, trackUserProfileAction: x } = (0, c.KZ)(),
+        Z = (0, o.Z)();
     r.useEffect(() => {
-        (0, d.Z)(n.id, Z);
+        (0, a.Z)(n.id, Z);
     }, [n.id, Z]);
     let O = (e) => {
         var n, t;
-        g(),
-            (0, u.openUserProfileModal)(
+        h(),
+            (0, d.openUserProfileModal)(
                 ((n = (function (e) {
                     for (var n = 1; n < arguments.length; n++) {
                         var t = null != arguments[n] ? arguments[n] : {},
@@ -70,21 +70,21 @@ function v(e) {
             );
     };
     return (0, l.jsx)(i.zJl, {
-        className: h.listScroller,
+        className: g.listScroller,
         fade: !0,
         children:
             null == j
                 ? (0, l.jsx)('div', {
-                      className: h.empty,
+                      className: g.empty,
                       children: (0, l.jsx)(i.$jN, {})
                   })
                 : 0 === j.length
                   ? (0, l.jsxs)('div', {
-                        className: h.empty,
+                        className: g.empty,
                         children: [
-                            (0, l.jsx)('div', { className: h.emptyIconFriends }),
+                            (0, l.jsx)('div', { className: g.emptyIconFriends }),
                             (0, l.jsx)('div', {
-                                className: h.emptyText,
+                                className: g.emptyText,
                                 children: p.intl.string(p.t['/5p4g4'])
                             })
                         ]

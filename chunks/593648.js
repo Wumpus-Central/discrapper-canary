@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(442837),
     d = n(524437),
     u = n(481060),
-    m = n(668781),
-    g = n(292556),
+    g = n(668781),
+    m = n(292556),
     p = n(87051),
     h = n(419363),
     f = n(761781),
@@ -130,7 +130,7 @@ function Q(e) {
         d = r.useCallback(
             (e, n) => {
                 let i = t.filter((t) => t !== e);
-                n || i.push(e), g.default.setDisabledSounds(i);
+                n || i.push(e), m.default.setDisabledSounds(i);
             },
             [t]
         );
@@ -138,7 +138,7 @@ function Q(e) {
         var e;
         null == (e = a.current) || e.stop();
     });
-    let m = [
+    let g = [
             {
                 label: H.intl.string(H.t.pz71xM),
                 sound: 'message1',
@@ -252,16 +252,16 @@ function Q(e) {
                 (0, i.jsx)(u.j7V, {
                     note: H.intl.string(H.t['7oXUio']),
                     value: s,
-                    onChange: g.default.setNotifyMessagesInSelectedChannel,
+                    onChange: m.default.setNotifyMessagesInSelectedChannel,
                     children: H.intl.string(H.t.lF5GGR)
                 }),
                 (0, i.jsx)(u.j7V, {
                     note: H.intl.string(H.t['+B0XLC']),
                     value: n,
-                    onChange: g.default.toggleDisableAllSounds,
+                    onChange: m.default.toggleDisableAllSounds,
                     children: H.intl.string(H.t['2ZhCOT'])
                 }),
-                m.map((e) => {
+                g.map((e) => {
                     let { label: r, sound: s, focusModeDisabled: l } = e;
                     return (0, i.jsx)(
                         X,
@@ -379,18 +379,18 @@ class $ extends r.PureComponent {
         if (t !== G.qrD.NEVER)
             w.Z.requestPermission((e) => {
                 let t = e ? G.$Ab.ENABLED : G.$Ab.BLOCKED;
-                g.default.setPermissionsState(t, 'UserSettingsModal');
+                m.default.setPermissionsState(t, 'UserSettingsModal');
             });
-        else g.default.setDesktopType(t);
+        else m.default.setDesktopType(t);
     }
     handleTTSChange(e) {
         let t = e.value;
-        g.default.setTTSType(t);
+        m.default.setTTSType(t);
     }
     render() {
         let { desktopType: e, afkTimeout: t, disableUnreadBadge: n, taskbarFlash: r, disabledSounds: s, disableAllSounds: a, notifyMessagesInSelectedChannel: c, focusMode: d } = this.props,
-            m = k.isPlatformEmbedded && (0, k.isWindows)(),
-            g = o()
+            g = k.isPlatformEmbedded && (0, k.isWindows)(),
+            m = o()
                 .range(1, 11)
                 .map((e) => ({
                     value: 60 * e,
@@ -416,7 +416,7 @@ class $ extends r.PureComponent {
                 (0, i.jsx)(P.F, {
                     setting: V.s6.NOTIFICATIONS_UNREAD_MESSAGE_BADGE,
                     children: (0, i.jsx)(u.j7V, {
-                        className: m ? W.marginBottom20 : W.marginBottom40,
+                        className: g ? W.marginBottom20 : W.marginBottom40,
                         value: !n,
                         note: H.intl.string(H.t['9K4qwc']),
                         onChange: this.handleToggleShowUnreadBadge,
@@ -444,7 +444,7 @@ class $ extends r.PureComponent {
                             (0, i.jsx)(u.q4e, {
                                 value: t,
                                 onChange: B.CM.updateSetting,
-                                options: g
+                                options: m
                             }),
                             (0, i.jsx)(u.R94, {
                                 type: u.geA.DESCRIPTION,
@@ -471,10 +471,10 @@ class $ extends r.PureComponent {
     constructor(...e) {
         super(...e),
             Y(this, 'handleToggleShowUnreadBadge', () => {
-                g.default.setDisableUnreadBadge(!this.props.disableUnreadBadge);
+                m.default.setDisableUnreadBadge(!this.props.disableUnreadBadge);
             }),
             Y(this, 'handleToggleShowFlash', () => {
-                g.default.setTaskbarFlash(!this.props.taskbarFlash);
+                m.default.setTaskbarFlash(!this.props.taskbarFlash);
             }),
             Y(this, 'renderTTS', () => {
                 if (!h.Zh) return null;
@@ -635,7 +635,7 @@ async function ei(e) {
     let t = await (0, v.Tn)();
     0 === t.length
         ? await (0, I.oL)()
-        : m.Z.show({
+        : g.Z.show({
               title: H.intl.string(H.t['cY+Ooa']),
               body: H.intl.format(H.t['7zTJJS'], { date: new Date(t[t.length - 1].recorded_at) }),
               cancelText: H.intl.string(H.t['ETE/oK']),

@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(642619),
     d = n(626135),
     u = n(74538),
-    m = n(150039),
-    g = n(993413),
+    g = n(150039),
+    m = n(993413),
     p = n(504983),
     h = n(981631),
     f = n(474936),
@@ -17,10 +17,10 @@ var i = n(255367),
     _ = n(482470);
 function x(e) {
     let { user: t, guild: n, className: s, sectionTitle: x, forcedDivider: E = !1, withTutorial: C = !1, showBorder: j = !1, isTryItOutFlow: O = !1, initialSelectedEffectId: S } = e,
-        v = (0, m.Kg)(t, n),
+        v = (0, g.Kg)(t, n),
         T = u.ZP.canUsePremiumProfileCustomization(t),
         { analyticsLocations: I } = (0, o.ZP)(),
-        { pendingProfileEffectId: N, errors: y } = (0, m.bd)(n),
+        { pendingProfileEffectId: N, errors: y } = (0, g.bd)(n),
         A = r.useCallback(
             () =>
                 (0, c.H)({
@@ -39,7 +39,7 @@ function x(e) {
     }, [T, I]);
     let P = null != n,
         R = C ? a.gtL : a.zxk;
-    return (0, i.jsx)(g.Z, {
+    return (0, i.jsx)(m.Z, {
         forcedDivider: E,
         borderType: p.Y.PREMIUM,
         hasBackground: !0,
@@ -63,7 +63,7 @@ function x(e) {
                         look: a.zxk.Looks.LINK,
                         size: a.zxk.Sizes.SMALL,
                         onClick: function () {
-                            (0, m.s6)(null, v, null == n ? void 0 : n.id);
+                            (0, g.s6)(null, v, null == n ? void 0 : n.id);
                         },
                         children: P ? b.intl.string(b.t.CHf9iI) : b.intl.string(b.t.uMuafH)
                     })

@@ -36,8 +36,10 @@ let g = (e) => {
             },
             [v, j, _, b, g]
         ),
-        w = (_ || j) && (g === f.D.EMOJI || null == g);
+        w = (_ || j) && (g === f.D.EMOJI || null == g),
+        R = i.useRef(null);
     return (0, r.jsx)(a.yRy, {
+        targetElementRef: R,
         shouldShow: w,
         animation: a.yRy.Animation.FADE,
         animationPosition: 'top',
@@ -74,7 +76,8 @@ let g = (e) => {
                 },
                 onMouseEnter: N,
                 onMouseLeave: T,
-                isActive: j
+                isActive: j,
+                ref: R
             });
         }
     });

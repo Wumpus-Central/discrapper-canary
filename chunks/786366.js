@@ -3,18 +3,18 @@ var l = t(255367);
 t(73800);
 var r = t(597312),
     i = t(442837),
-    s = t(481060),
-    o = t(860719),
-    a = t(621853),
-    c = t(388032),
-    d = t(989421);
-function u(e) {
+    o = t(481060),
+    s = t(860719),
+    c = t(621853),
+    u = t(388032),
+    a = t(989421);
+function d(e) {
     let { icon: n, title: t, description: r } = e;
     return (0, l.jsxs)('div', {
-        className: d.row,
+        className: a.row,
         children: [
             (0, l.jsx)('div', {
-                className: d.rowIcon,
+                className: a.rowIcon,
                 children: (0, l.jsx)(n, {
                     size: 'custom',
                     width: 20,
@@ -23,13 +23,13 @@ function u(e) {
                 })
             }),
             (0, l.jsxs)('div', {
-                className: d.rowText,
+                className: a.rowText,
                 children: [
-                    (0, l.jsx)(s.X6q, {
+                    (0, l.jsx)(o.X6q, {
                         variant: 'text-xs/semibold',
                         children: t
                     }),
-                    (0, l.jsx)(s.Text, {
+                    (0, l.jsx)(o.Text, {
                         variant: 'text-sm/normal',
                         children: r
                     })
@@ -40,36 +40,36 @@ function u(e) {
 }
 function f(e) {
     let { user: n } = e,
-        t = (0, i.e7)([a.Z], () => {
+        t = (0, i.e7)([c.Z], () => {
             var e;
-            return null == (e = a.Z.getUserProfile(n.id)) ? void 0 : e.application;
+            return null == (e = c.Z.getUserProfile(n.id)) ? void 0 : e.application;
         }),
-        { hasMessageContent: f, hasGuildPresences: p, hasGuildMembers: h } = (0, o.w)({ flags: null == t ? void 0 : t.flags });
+        { hasMessageContent: f, hasGuildPresences: p, hasGuildMembers: g } = (0, s.w)({ flags: null == t ? void 0 : t.flags });
     return (0, l.jsxs)(r.zJ, {
         fade: !0,
-        className: d.scroller,
+        className: a.scroller,
         children: [
             f &&
-                (0, l.jsx)(u, {
-                    icon: s.kBi,
-                    title: c.intl.string(c.t['7Tmhfn']),
-                    description: c.intl.string(c.t['eu5x7+'])
+                (0, l.jsx)(d, {
+                    icon: o.kBi,
+                    title: u.intl.string(u.t['7Tmhfn']),
+                    description: u.intl.string(u.t['eu5x7+'])
                 }),
             p &&
-                (0, l.jsx)(u, {
-                    icon: s.iWm,
-                    title: c.intl.string(c.t.awYSsL),
-                    description: c.intl.string(c.t.TpsXoK)
+                (0, l.jsx)(d, {
+                    icon: o.iWm,
+                    title: u.intl.string(u.t.awYSsL),
+                    description: u.intl.string(u.t.TpsXoK)
                 }),
-            h &&
-                (0, l.jsx)(u, {
-                    icon: s.BFJ,
-                    title: c.intl.string(c.t.WuKeSE),
-                    description: c.intl.string(c.t.wOBmtb)
+            g &&
+                (0, l.jsx)(d, {
+                    icon: o.BFJ,
+                    title: u.intl.string(u.t.WuKeSE),
+                    description: u.intl.string(u.t.wOBmtb)
                 }),
-            (0, l.jsx)(s.Text, {
+            (0, l.jsx)(o.Text, {
                 variant: 'text-xs/normal',
-                children: c.intl.format(c.t.b6nqk5, { helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975' })
+                children: u.intl.format(u.t.b6nqk5, { helpCenterUrl: 'https://support.discord.com/hc/articles/7933951485975' })
             })
         ]
     });

@@ -8,28 +8,29 @@ var r = n(255367),
     c = n(388032),
     u = n(614147);
 function d(e) {
-    let { children: t, popoutPosition: n, popoutAlign: d } = e,
-        [h, p] = (0, i.useState)(!1),
-        f = (0, i.useCallback)(() => {
-            p(!1);
-        }, []),
+    let { children: t, popoutPosition: n, popoutAlign: d, targetElementRef: h } = e,
+        [p, f] = (0, i.useState)(!1),
         g = (0, i.useCallback)(() => {
-            p(!h);
-        }, [h]);
+            f(!1);
+        }, []),
+        m = (0, i.useCallback)(() => {
+            f(!p);
+        }, [p]);
     return (
         (0, s.ZP)(() => {
             let e = () => {
-                p(!1);
+                f(!1);
             };
             return o.Z.subscribe('USER_SETTINGS_MODAL_OPEN', e), () => o.Z.unsubscribe('USER_SETTINGS_MODAL_OPEN', e);
         }),
         (0, r.jsx)(l.yRy, {
-            shouldShow: h,
+            targetElementRef: h,
+            shouldShow: p,
             align: d,
             animation: l.yRy.Animation.FADE,
             animationPosition: 'left',
             position: n,
-            onRequestClose: f,
+            onRequestClose: g,
             spacing: 0,
             renderPopout: function () {
                 return (0, r.jsx)(l.VqE, {
@@ -49,7 +50,7 @@ function d(e) {
             },
             children: (e, n) => {
                 let { isShown: r } = n;
-                return t(g, r, e);
+                return t(m, r, e);
             }
         })
     );

@@ -8,8 +8,8 @@ var i,
     c = n(442837),
     d = n(570140);
 let u = !1,
-    m = [],
-    g = '',
+    g = [],
+    m = '',
     p = !1,
     h = {
         viewNonce: '',
@@ -17,10 +17,10 @@ let u = !1,
     };
 class f extends (s = c.ZP.Store) {
     getVerificationKey() {
-        return g;
+        return m;
     }
     getBackupCodes() {
-        return m;
+        return g;
     }
     get togglingSMS() {
         return u;
@@ -44,7 +44,7 @@ class f extends (s = c.ZP.Store) {
 let b = new f(d.Z, {
     MFA_ENABLE_SUCCESS: function (e) {
         let { token: t, codes: n } = e;
-        void 0 !== t && o.setToken(t), (m = n);
+        void 0 !== t && o.setToken(t), (g = n);
     },
     MFA_DISABLE_SUCCESS: function (e) {
         let { token: t } = e;
@@ -57,11 +57,11 @@ let b = new f(d.Z, {
         u = !1;
     },
     MFA_CLEAR_BACKUP_CODES: function () {
-        m = [];
+        g = [];
     },
     MFA_VIEW_BACKUP_CODES: function (e) {
         let { codes: t, key: n } = e;
-        (m = a().sortBy(t, 'code')), (g = n);
+        (g = a().sortBy(t, 'code')), (m = n);
     },
     MFA_SEND_VERIFICATION_KEY: function (e) {
         let { nonces: t } = e;

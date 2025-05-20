@@ -5,7 +5,7 @@ n.d(t, {
     $n: () => eQ,
     A5: () => j,
     AU: () => K,
-    Bo: () => e3,
+    Bo: () => e2,
     C2: () => Q,
     CL: () => f,
     CR: () => ei,
@@ -25,7 +25,7 @@ n.d(t, {
     Lw: () => ev,
     M_: () => e1,
     Nl: () => e_,
-    OT: () => eo,
+    OT: () => ea,
     QF: () => eN,
     QI: () => eW,
     QP: () => eL,
@@ -45,7 +45,7 @@ n.d(t, {
     UD: () => E,
     Ue: () => k,
     Uq: () => eS,
-    VU: () => e2,
+    VU: () => e3,
     Wt: () => e$,
     X2: () => eJ,
     XB: () => em,
@@ -72,7 +72,7 @@ n.d(t, {
     gW: () => ep,
     gh: () => U,
     h1: () => ex,
-    h8: () => ea,
+    h8: () => eo,
     hX: () => eX,
     hs: () => es,
     i_: () => H,
@@ -106,8 +106,8 @@ n.d(t, {
     n(388685);
 var r = n(314794),
     i = n(981631),
-    a = n(185923),
-    o = n(388032),
+    o = n(185923),
+    a = n(388032),
     s = (function (e) {
         return (e[(e.TIER_1 = 1)] = 'TIER_1'), (e[(e.TIER_2 = 2)] = 'TIER_2'), (e[(e.TIER_0 = 3)] = 'TIER_0'), e;
     })({});
@@ -348,8 +348,8 @@ let A = Object.freeze({
     en = '1271484512081285191',
     er = '1161363847311785984',
     ei = [H, Y, W, K, z, q, Q, X, J, $, ee, et, en, er],
-    ea = [$, ee, en],
-    eo = [$, en],
+    eo = [$, ee, en],
+    ea = [$, en],
     es = '1150904354090532864',
     el = '1199128659810582528',
     ec = '1204865493622587392',
@@ -544,7 +544,7 @@ let eO = Object.freeze({
         [i.Eu4.NONE]: {
             features: [],
             limits: {
-                emoji: a.xD,
+                emoji: o.xD,
                 bitrate: i.eWB,
                 fileSize: i.mBz,
                 screenShareQualityFramerate: 30,
@@ -655,64 +655,64 @@ var eX = (function (e) {
     })({});
 let e0 = 3,
     e1 = 30,
-    e3 = 20;
-var e2 = (function (e) {
+    e2 = 20;
+var e3 = (function (e) {
     return (e.PREMIUM_TENURE_1_MONTH = 'premium_tenure_1_month_v2'), (e.PREMIUM_TENURE_3_MONTH = 'premium_tenure_3_month_v2'), (e.PREMIUM_TENURE_6_MONTH = 'premium_tenure_6_month_v2'), (e.PREMIUM_TENURE_12_MONTH = 'premium_tenure_12_month_v2'), (e.PREMIUM_TENURE_24_MONTH = 'premium_tenure_24_month_v2'), (e.PREMIUM_TENURE_36_MONTH = 'premium_tenure_36_month_v2'), (e.PREMIUM_TENURE_60_MONTH = 'premium_tenure_60_month_v2'), (e.PREMIUM_TENURE_72_MONTH = 'premium_tenure_72_month_v2'), e;
 })({});
 let e4 = ['premium_tenure_1_month_v2', 'premium_tenure_3_month_v2', 'premium_tenure_6_month_v2', 'premium_tenure_12_month_v2', 'premium_tenure_24_month_v2', 'premium_tenure_36_month_v2', 'premium_tenure_60_month_v2', 'premium_tenure_72_month_v2'],
     e5 = {
         premium_tenure_1_month_v2: {
             id: 'premium_tenure_1_month_v2',
-            nameUnformatted: o.t.LR1C0d,
+            nameUnformatted: a.t.LR1C0d,
             tenureReqNumMonths: 1,
             hasWideArt: !1,
             glowColor: '#b54913'
         },
         premium_tenure_3_month_v2: {
             id: 'premium_tenure_3_month_v2',
-            nameUnformatted: o.t['rI1/3N'],
+            nameUnformatted: a.t['rI1/3N'],
             tenureReqNumMonths: 3,
             hasWideArt: !1,
             glowColor: '#9e9e9e'
         },
         premium_tenure_6_month_v2: {
             id: 'premium_tenure_6_month_v2',
-            nameUnformatted: o.t.VkhVKS,
+            nameUnformatted: a.t.VkhVKS,
             tenureReqNumMonths: 6,
             hasWideArt: !1,
             glowColor: '#ffa813'
         },
         premium_tenure_12_month_v2: {
             id: 'premium_tenure_12_month_v2',
-            nameUnformatted: o.t.gzUfNT,
+            nameUnformatted: a.t.gzUfNT,
             tenureReqNumMonths: 12,
             hasWideArt: !1,
             glowColor: '#5eacc2'
         },
         premium_tenure_24_month_v2: {
             id: 'premium_tenure_24_month_v2',
-            nameUnformatted: o.t.fuwTPj,
+            nameUnformatted: a.t.fuwTPj,
             tenureReqNumMonths: 24,
             hasWideArt: !1,
             glowColor: '#6d5cf2'
         },
         premium_tenure_36_month_v2: {
             id: 'premium_tenure_36_month_v2',
-            nameUnformatted: o.t.qNhNk5,
+            nameUnformatted: a.t.qNhNk5,
             tenureReqNumMonths: 36,
             hasWideArt: !1,
             glowColor: '#32c102'
         },
         premium_tenure_60_month_v2: {
             id: 'premium_tenure_60_month_v2',
-            nameUnformatted: o.t['wvX+eH'],
+            nameUnformatted: a.t['wvX+eH'],
             tenureReqNumMonths: 60,
             hasWideArt: !0,
             glowColor: '#f29cc3'
         },
         premium_tenure_72_month_v2: {
             id: 'premium_tenure_72_month_v2',
-            nameUnformatted: o.t['/menIy'],
+            nameUnformatted: a.t['/menIy'],
             tenureReqNumMonths: 72,
             hasWideArt: !0,
             glowColor: '#078292'

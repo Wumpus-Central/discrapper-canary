@@ -1,7 +1,7 @@
 var r = n(754675),
     i = n(39493),
-    a = n(855543),
-    o = n(143866),
+    o = n(855543),
+    a = n(143866),
     s = n(142670),
     l = '[object Boolean]',
     c = '[object Date]',
@@ -48,10 +48,10 @@ e.exports = function (e, t, n) {
         case p:
             return new N(e);
         case f:
-            return a(e);
+            return o(e);
         case _:
             return new N();
         case h:
-            return o(e);
+            return a(e);
     }
 };

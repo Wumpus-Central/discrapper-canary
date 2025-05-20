@@ -1,13 +1,13 @@
 n.d(t, {
     j: () => s,
-    s: () => o
+    s: () => a
 });
 var r = n(668757),
     i = n(818083);
-let a = '2025-05_libdiscore_notestore',
-    o = (0, i.B)({
+let o = '2025-05_libdiscore_notestore',
+    a = (0, i.B)({
         kind: 'user',
-        id: a,
+        id: o,
         label: 'libdiscore NoteStore Migration',
         defaultConfig: { enabled: !1 },
         treatments: [
@@ -24,5 +24,5 @@ let a = '2025-05_libdiscore_notestore',
         ]
     });
 function s() {
-    return (0, r.X6)() && (0, r.Md)().isExperimentIdEnabled(a);
+    return (0, r.X6)() && (0, r.Md)().isExperimentIdEnabled(o);
 }

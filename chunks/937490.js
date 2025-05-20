@@ -12,8 +12,8 @@ var r = (function () {
 function i(e, t) {
     if (!(e instanceof t)) throw TypeError('Cannot call a class as a function');
 }
-var a = n(13416),
-    o = (function () {
+var o = n(13416),
+    a = (function () {
         function e() {
             i(this, e);
         }
@@ -111,7 +111,7 @@ var a = n(13416),
                 {
                     key: 'bezier',
                     value: function (e, t, n, r) {
-                        return a(e, t, n, r);
+                        return o(e, t, n, r);
                     }
                 },
                 {
@@ -140,5 +140,5 @@ var a = n(13416),
             e
         );
     })(),
-    s = o.bezier(0.42, 0, 1, 1);
-e.exports = o;
+    s = a.bezier(0.42, 0, 1, 1);
+e.exports = a;

@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(433811),
     d = n(214852),
     u = n(626135),
-    m = n(63063),
-    g = n(464670),
+    g = n(63063),
+    m = n(464670),
     p = n(796634),
     h = n(767714),
     f = n(314684),
@@ -60,7 +60,7 @@ let A = (e) => {
     },
     P = (e) => {
         let { analyticsLocations: t } = e,
-            n = m.Z.getArticleURL(S.BhN.REFERRAL_PROGRAM);
+            n = g.Z.getArticleURL(S.BhN.REFERRAL_PROGRAM);
         return (0, i.jsxs)('div', {
             className: T.giftingVariant2Container,
             children: [
@@ -110,13 +110,13 @@ let A = (e) => {
         (0, d.z)(c.X);
         let e = r.useRef(null),
             t = r.useRef(null),
-            [n, m] = r.useState(!1),
+            [n, g] = r.useState(!1),
             { analyticsLocations: p } = (0, o.ZP)(a.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
             [h, E] = r.useState(!1);
         (0, f.FM)();
         let N = 'true' === new URLSearchParams(window.location.search).get('autoScroll');
         window.history.replaceState({}, '', window.location.pathname);
-        let y = g.PU.useExperiment({ location: 'HeroHeading' });
+        let y = m.PU.useExperiment({ location: 'HeroHeading' });
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(l.yWw, {
@@ -131,7 +131,7 @@ let A = (e) => {
                                     className: T.heroHeading,
                                     location: C.MQ.HOME
                                 }),
-                                y.cohort === g.XS.Variant2 && (0, i.jsx)(P, { analyticsLocations: p }),
+                                y.cohort === m.XS.Variant2 && (0, i.jsx)(P, { analyticsLocations: p }),
                                 (0, i.jsx)(b.Z, {
                                     variant: C.gM.WHATS_NEW,
                                     className: T.whatsNew,
@@ -144,7 +144,7 @@ let A = (e) => {
                                     noBackground: !0,
                                     leftAlignHeaders: !0,
                                     showAllPerksButton: (0, i.jsx)(O.Z, {
-                                        setIsAllPerksVisible: m,
+                                        setIsAllPerksVisible: g,
                                         previousComponent: C.MQ.HOME
                                     })
                                 }),
@@ -180,7 +180,7 @@ let A = (e) => {
                 }),
                 (0, i.jsx)(j.Z, {
                     isAllPerksVisible: n,
-                    setIsAllPerksVisible: m,
+                    setIsAllPerksVisible: g,
                     previousComponent: C.MQ.HOME
                 })
             ]

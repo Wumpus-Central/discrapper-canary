@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(522474),
     d = n(788983),
     u = n(668826),
-    m = n(120421),
-    g = n(324815),
+    g = n(120421),
+    m = n(324815),
     p = n(763283),
     h = n(981631),
     f = n(622802),
@@ -23,7 +23,7 @@ let C = (0, r.Un)({
     name: 'ClickerGamePopoutWindow'
 });
 function j() {
-    let e = (0, l.e7)([m.Z], () => m.Z.lifetimePoints > 0),
+    let e = (0, l.e7)([g.Z], () => g.Z.lifetimePoints > 0),
         t = (0, l.e7)([c.Z], () => c.Z.getWindowOpen(h.KJ3.CLICKER_GAME)),
         r = () => {
             d.bA(h.KJ3.CLICKER_GAME, (e) => (0, i.jsx)(C, { windowKey: e }), {
@@ -105,7 +105,7 @@ function j() {
                         src: x,
                         alt: b.intl.string(f.default['7qZdOz'])
                     }),
-                    (0, i.jsxs)(g.Z, {
+                    (0, i.jsxs)(m.Z, {
                         muted: !0,
                         className: _.playButton,
                         color: 'white',
@@ -124,7 +124,7 @@ function j() {
                             })
                         ]
                     }),
-                    (0, i.jsx)(g.Z, {
+                    (0, i.jsx)(m.Z, {
                         muted: !0,
                         className: _.resetButton,
                         color: 'white',
@@ -151,7 +151,7 @@ function j() {
                     }),
                     (0, i.jsx)('div', {
                         className: _.footerCenter,
-                        children: (0, i.jsx)(g.Z, {
+                        children: (0, i.jsx)(m.Z, {
                             muted: !0,
                             color: 'white',
                             href: 'https://www.youtube.com/watch?v=h-9SUgIeJnY',

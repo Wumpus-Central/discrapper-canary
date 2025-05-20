@@ -9,14 +9,14 @@ var r = n(120356),
     c = n(51144),
     d = n(785717),
     u = n(475413),
-    m = n(388032),
-    g = n(517895);
+    g = n(388032),
+    m = n(517895);
 function p(e) {
     let { user: t, isHovering: n } = e,
         { trackUserProfileAction: r } = (0, d.KZ)();
     return o.wS
         ? (0, i.jsx)(a.Z, {
-              text: m.intl.string(m.t.y5MwJy),
+              text: g.intl.string(g.t.y5MwJy),
               delay: 0,
               'aria-label': !1,
               copyValue: c.ZP.getUserTag(t, {
@@ -55,14 +55,14 @@ function p(e) {
                       })({}, e)),
                       (r = r =
                           {
-                              className: s()(g.hover, { [g.visible]: n }),
-                              innerClassName: g.hover,
+                              className: s()(m.hover, { [m.visible]: n }),
+                              innerClassName: m.hover,
                               look: l.zxk.Looks.BLANK,
                               size: l.zxk.Sizes.NONE,
-                              color: g.hoverColor,
+                              color: m.hoverColor,
                               themeColor: 'none',
                               grow: !1,
-                              'aria-label': m.intl.string(m.t.y5MwJy),
+                              'aria-label': g.intl.string(g.t.y5MwJy),
                               children: (0, i.jsx)(l.TIy, {
                                   size: 'xs',
                                   color: 'currentColor'

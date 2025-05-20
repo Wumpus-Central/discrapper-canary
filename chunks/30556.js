@@ -1,13 +1,13 @@
-t.d(n, { Z: () => a });
+t.d(n, { Z: () => c });
 var l = t(255367);
 t(73800);
 var r = t(481060),
     i = t(493683),
-    s = t(475413),
-    o = t(388032);
-function a(e) {
-    var { type: n, userId: t, onClose: a } = e,
-        c = (function (e, n) {
+    o = t(475413),
+    s = t(388032);
+function c(e) {
+    var { type: n, userId: t, onClose: c } = e,
+        u = (function (e, n) {
             if (null == e) return {};
             var t,
                 l,
@@ -26,9 +26,9 @@ function a(e) {
             }
             return r;
         })(e, ['type', 'userId', 'onClose']);
-    let d = n === s.j8.TEXT ? s.tG : s.ef;
+    let a = n === o.j8.TEXT ? o.tG : o.ef;
     return (0, l.jsx)(
-        d,
+        a,
         (function (e) {
             for (var n = 1; n < arguments.length; n++) {
                 var t = null != arguments[n] ? arguments[n] : {},
@@ -57,13 +57,13 @@ function a(e) {
             {
                 action: 'SEND_MESSAGE',
                 icon: r.kBi,
-                text: o.intl.string(o.t.zROXER),
-                tooltipText: o.intl.string(o.t.zROXER),
+                text: s.intl.string(s.t.zROXER),
+                tooltipText: s.intl.string(s.t.zROXER),
                 onClick: () => {
-                    i.Z.openPrivateChannel({ recipientIds: t }), null == a || a();
+                    i.Z.openPrivateChannel({ recipientIds: t }), null == c || c();
                 }
             },
-            c
+            u
         )
     );
 }

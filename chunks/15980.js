@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m }), n(388685);
+n.d(t, { Z: () => g }), n(388685);
 var i,
     r,
     s,
@@ -27,7 +27,7 @@ class u extends (i = l.ZP.Store) {
               writable: !0
           })
         : (u[r] = s);
-let m = new u(a.Z, {
+let g = new u(a.Z, {
     LOGOUT: function () {
         (d = []), (c = !1);
     },

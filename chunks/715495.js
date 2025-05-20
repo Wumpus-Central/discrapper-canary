@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(276264),
     d = n(205822),
     u = n(329013),
-    m = n(594174),
-    g = n(396821),
+    g = n(594174),
+    m = n(396821),
     p = n(780771),
     h = n(4242),
     f = n(996746),
@@ -65,12 +65,12 @@ function O() {
     let [t, n] = (0, r.useState)(!1),
         [s, l] = (0, r.useState)(!1),
         [a, c] = (0, r.useState)(null),
-        m = (0, g.ZP)((e) => e.toolsCache),
-        { setToolsCache: f, removeToolsCache: _ } = (0, g.L3)(),
-        { setImgCache: O } = (0, g.W_)(),
+        g = (0, m.ZP)((e) => e.toolsCache),
+        { setToolsCache: f, removeToolsCache: _ } = (0, m.L3)(),
+        { setImgCache: O } = (0, m.W_)(),
         A = (0, r.useCallback)(
             (e) => {
-                let t = m[e];
+                let t = g[e];
                 null != t &&
                     c({
                         src: t.url,
@@ -90,7 +90,7 @@ function O() {
                               })
                     );
             },
-            [m]
+            [g]
         ),
         P = (0, r.useCallback)((e) => {
             c((t) =>
@@ -195,7 +195,7 @@ function O() {
                             }),
                             (0, i.jsx)('div', {
                                 className: E.uploadedArea,
-                                children: Object.values(m).map((e) => {
+                                children: Object.values(g).map((e) => {
                                     let { url: t } = e;
                                     return (0, i.jsx)(
                                         S,
@@ -300,7 +300,7 @@ function T(e) {
 }
 function I(e) {
     let { nameplate: t } = e,
-        n = (0, a.e7)([m.default], () => m.default.getCurrentUser());
+        n = (0, a.e7)([g.default], () => g.default.getCurrentUser());
     return (0, i.jsx)('div', {
         className: E.preview,
         children: (0, i.jsxs)('div', {

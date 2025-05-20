@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(481060),
     d = n(355467),
     u = n(179360),
-    m = n(881052),
-    g = n(128069),
+    g = n(881052),
+    m = n(128069),
     p = n(100527),
     h = n(906732),
     f = n(600164),
@@ -72,8 +72,8 @@ function S(e) {
                                 let e = (0, b.g)(t, 1);
                                 l()((0, E.uV)(e) <= (0, E.uV)(t.additionalPlans), 'Uncanceling should not increase the number of guild subscriptions'), await O(t, e, n, S), s();
                             } catch (t) {
-                                let e = t instanceof m.HF ? t : new m.HF(t, t.code);
-                                T(C.intl.string(e.code === g.SM.BILLING_PAUSE_INVALID_UPDATE ? C.t.dq4vq6 : C.t['5mlOCQ'])), p(!1);
+                                let e = t instanceof g.HF ? t : new g.HF(t, t.code);
+                                T(C.intl.string(e.code === m.SM.BILLING_PAUSE_INVALID_UPDATE ? C.t.dq4vq6 : C.t['5mlOCQ'])), p(!1);
                             }
                         },
                         submitting: u,
@@ -126,15 +126,15 @@ function T(e) {
         x.ZP.hasFetchedSubscriptions() || (0, d.jg)();
     }, []);
     let u = (0, a.e7)([x.ZP], () => x.ZP.getPremiumTypeSubscription()),
-        [m, g] = r.useState(1);
+        [g, m] = r.useState(1);
     if (null == u) t = (0, i.jsx)(c.hzk, { children: (0, i.jsx)(c.$jN, {}) });
     else
-        switch (m) {
+        switch (g) {
             case 1:
                 t = (0, i.jsx)(S, {
                     premiumSubscription: u,
                     guildBoostSlotId: n,
-                    onNext: () => g(2),
+                    onNext: () => m(2),
                     onClose: l
                 });
                 break;
@@ -142,7 +142,7 @@ function T(e) {
                 t = (0, i.jsx)(v, { onClose: l });
                 break;
             default:
-                throw Error('Unexpected step: '.concat(m));
+                throw Error('Unexpected step: '.concat(g));
         }
     return (0, i.jsx)(h.Gt, {
         value: o,

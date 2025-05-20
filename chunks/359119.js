@@ -6,8 +6,8 @@ n.d(t, {
     n(388685);
 var r = n(442837),
     i = n(570140),
-    a = n(592125);
-function o(e, t, n) {
+    o = n(592125);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -31,7 +31,7 @@ function s(e) {
                 })
             )),
             r.forEach(function (t) {
-                o(e, t, n[t]);
+                a(e, t, n[t]);
             });
     }
     return e;
@@ -111,7 +111,7 @@ function S(e) {
 }
 function T() {
     (p = {}),
-        Object.values(a.Z.getMutablePrivateChannels()).forEach((e) => {
+        Object.values(o.Z.getMutablePrivateChannels()).forEach((e) => {
             g(e);
         });
 }
@@ -120,7 +120,7 @@ function A(e) {
 }
 class N extends r.ZP.Store {
     initialize() {
-        this.waitFor(a.Z);
+        this.waitFor(o.Z);
     }
     getChannelSafetyWarning(e, t) {
         var n;

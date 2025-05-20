@@ -9,8 +9,8 @@ var r = n(120356),
     c = n(104494),
     d = n(639119),
     u = n(404615),
-    m = n(743612),
-    g = n(409100),
+    g = n(743612),
+    m = n(409100),
     p = n(474936),
     h = n(388032),
     f = n(593595);
@@ -36,7 +36,7 @@ let b = (e) => {
     return (0, i.jsxs)('div', {
         className: s()(f.cardDescription, null == A || null == (t = A.description) ? void 0 : t.className),
         children: [
-            (0, i.jsx)(m.Z, {
+            (0, i.jsx)(g.Z, {
                 title: r,
                 cardVariantStyleInfo: A,
                 titleClassName: b,
@@ -44,7 +44,7 @@ let b = (e) => {
                 description: E
             }),
             j &&
-                (0, i.jsx)(g.Z, {
+                (0, i.jsx)(m.Z, {
                     className: _,
                     look: l.zxk.Looks.BLANK,
                     color: l.zxk.Colors.CUSTOM,

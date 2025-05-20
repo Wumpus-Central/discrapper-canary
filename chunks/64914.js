@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(415439),
     d = n(956097),
     u = n(921801),
-    m = n(695103),
-    g = n(998502),
+    g = n(695103),
+    m = n(998502),
     p = n(740492),
     h = n(695346),
     f = n(399970),
@@ -42,10 +42,10 @@ function E(e) {
     return e;
 }
 function C() {
-    let [e] = r.useState(() => g.ZP.getEnableHardwareAcceleration()),
+    let [e] = r.useState(() => m.ZP.getEnableHardwareAcceleration()),
         t = h.bm.useSetting(),
         n = h.Sb.useSetting(),
-        C = (0, s.e7)([m.Z], () => m.Z.testModeApplicationId),
+        C = (0, s.e7)([g.Z], () => g.Z.testModeApplicationId),
         j = (0, s.e7)([p.ZP], () => p.ZP.showPlayAgain),
         O = r.useCallback((e) => {
             h.bm.updateSetting(!e);
@@ -66,7 +66,7 @@ function C() {
                             header: x.intl.string(x.t.aqpAvr),
                             confirmText: x.intl.string(x.t.vT7ckp),
                             cancelText: x.intl.string(x.t['ETE/oK']),
-                            onConfirm: () => g.ZP.setEnableHardwareAcceleration(e)
+                            onConfirm: () => m.ZP.setEnableHardwareAcceleration(e)
                         },
                         t
                     )),

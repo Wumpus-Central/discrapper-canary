@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(540059),
     d = n(695346),
     u = n(650774),
-    m = n(430824),
-    g = n(771845),
+    g = n(430824),
+    m = n(771845),
     p = n(626135),
     h = n(358085),
     f = n(88658),
@@ -66,8 +66,8 @@ function v(e, t) {
 function T(e) {
     let { guildId: t } = e,
         n = (0, c.Q3)('GuildItem'),
-        a = (0, l.e7)([m.Z], () => m.Z.getGuild(t)),
-        g = (0, l.e7)([u.Z], () => u.Z.getMemberCount(t)),
+        a = (0, l.e7)([g.Z], () => g.Z.getGuild(t)),
+        m = (0, l.e7)([u.Z], () => u.Z.getMemberCount(t)),
         h = !d.SE.useSetting().includes(t),
         b = (0, o.dQu)(o.TVs.modules.guildbar.AVATAR_SIZE),
         T = (0, s.Ie)(null != t ? t : _.lds),
@@ -125,7 +125,7 @@ function T(e) {
                           (0, i.jsx)(o.Text, {
                               variant: 'text-xs/normal',
                               className: O.guildSubtitle,
-                              children: j.intl.formatToPlainString(C.default.obBqMj, { count: null != g ? g : 0 })
+                              children: j.intl.formatToPlainString(C.default.obBqMj, { count: null != m ? m : 0 })
                           })
                       ]
                   })
@@ -152,7 +152,7 @@ function I() {
                 label: j.intl.string(j.t.MIgNPD)
             }
         ],
-        c = (0, l.e7)([g.ZP], () => g.ZP.getFlattenedGuildIds()),
+        c = (0, l.e7)([m.ZP], () => m.ZP.getFlattenedGuildIds()),
         u = r.useCallback(() => {
             let e = (0, f._o)();
             c.some((t) => e.has(t)) ? d.SE.updateSetting([]) : d.SE.updateSetting(c);

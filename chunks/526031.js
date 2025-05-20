@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(765585),
     d = n(429467),
     u = n(921944),
-    m = n(388032),
-    g = n(385255);
+    g = n(388032),
+    m = n(385255);
 function p(e) {
     let { markAsDismissed: t } = e,
         { analyticsLocations: p } = (0, o.ZP)(a.Z.CUSTOM_STATUS_TAGS_COACHMARK);
@@ -20,7 +20,7 @@ function p(e) {
         tryItText: (0, i.jsx)(l.Text, {
             variant: 'text-xs/semibold',
             color: 'always-white',
-            children: m.intl.string(m.t.RzWDqa)
+            children: g.intl.string(g.t.RzWDqa)
         }),
         tryItButtonColor: l.Ttl.BRAND,
         onTryFeature: () => {
@@ -84,23 +84,23 @@ function p(e) {
         header: (0, i.jsx)(l.X6q, {
             variant: 'heading-sm/bold',
             color: 'text-primary',
-            className: g.header,
-            children: m.intl.string(m.t.jrzHRk)
+            className: m.header,
+            children: g.intl.string(g.t.jrzHRk)
         }),
         body: (0, i.jsx)(l.Text, {
             variant: 'text-xs/normal',
             color: 'text-secondary',
-            className: g.body,
-            children: m.intl.string(m.t.hA60Ul)
+            className: m.body,
+            children: g.intl.string(g.t.hA60Ul)
         }),
         position: 'top',
         align: 'center',
-        artClassName: g.art,
-        className: g.container,
-        contentClassName: g.content,
-        pointerClassName: g.pointer,
+        artClassName: m.art,
+        className: m.container,
+        contentClassName: m.content,
+        pointerClassName: m.pointer,
         dismissIcon: (0, i.jsx)(r.D, {}),
-        dismissIconClassName: g.dismissIcon,
+        dismissIconClassName: m.dismissIcon,
         onDismissIconClick: () => t(u.L.USER_DISMISS)
     });
 }

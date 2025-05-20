@@ -1,8 +1,8 @@
 n.d(t, { Z: () => b });
 var r = n(255367),
     i = n(73800),
-    a = n(481060),
-    o = n(287734),
+    o = n(481060),
+    a = n(287734),
     s = n(906732),
     l = n(522651),
     c = n(585483),
@@ -67,8 +67,8 @@ function g(e, t) {
         r,
         i = E(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -77,8 +77,8 @@ function E(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function b(e) {
@@ -88,7 +88,7 @@ function b(e) {
         b = n ? u.d : u.Z,
         y = t.isManaged() || !t.isPrivate() ? f.intl.string(f.t.S0W8Z2) : f.intl.string(f.t['0D/6R0']),
         O = i.useCallback(() => {
-            null == _ || _(), (0, l.v)(E, l.d.JOIN_CALL), o.default.selectVoiceChannel(t.id);
+            null == _ || _(), (0, l.v)(E, l.d.JOIN_CALL), a.default.selectVoiceChannel(t.id);
         }, [t.id, _, E]);
     return (
         i.useEffect(
@@ -103,7 +103,7 @@ function b(e) {
         (0, r.jsx)(
             b,
             m(p({}, h), {
-                iconComponent: a.Csw,
+                iconComponent: o.Csw,
                 label: y,
                 onClick: O,
                 isTrayButton: !1

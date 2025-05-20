@@ -2,17 +2,17 @@ t.d(n, { Z: () => p }), t(35282);
 var l = t(255367),
     r = t(73800),
     i = t(442837),
-    s = t(481060),
-    o = t(34854),
-    a = t(531301),
-    c = t(246946),
-    d = t(981631),
-    u = t(388032),
+    o = t(481060),
+    s = t(34854),
+    c = t(531301),
+    u = t(246946),
+    a = t(981631),
+    d = t(388032),
     f = t(343074);
 function p(e) {
-    let { autoFocus: n = !1, className: t, userId: p, onUpdate: h } = e,
-        v = (0, i.e7)([c.Z], () => c.Z.hidePersonalInformation),
-        { loading: g, note: j } = (0, a.Z)(p),
+    let { autoFocus: n = !1, className: t, userId: p, onUpdate: g } = e,
+        v = (0, i.e7)([u.Z], () => u.Z.hidePersonalInformation),
+        { loading: h, note: j } = (0, c.Z)(p),
         m = r.useRef(null);
     return (r.useEffect(() => {
         if (!n || v) return;
@@ -23,15 +23,15 @@ function p(e) {
         ? null
         : (0, l.jsx)('div', {
               className: t,
-              children: (0, l.jsx)(s.lcI, {
+              children: (0, l.jsx)(o.lcI, {
                   ref: m,
                   className: f.textarea,
-                  disabled: g,
-                  placeholder: g ? u.intl.string(u.t['WLKx//']) : u.intl.string(u.t.VBhOe3),
-                  'aria-label': u.intl.string(u.t.PbMNh4),
+                  disabled: h,
+                  placeholder: h ? d.intl.string(d.t['WLKx//']) : d.intl.string(d.t.VBhOe3),
+                  'aria-label': d.intl.string(d.t.PbMNh4),
                   onBlur: (e) => {
                       let n = e.currentTarget.value;
-                      (null != j ? j : '') !== n && (null == h || h(), o.Z.updateNote(p, n));
+                      (null != j ? j : '') !== n && (null == g || g(), s.Z.updateNote(p, n));
                   },
                   onKeyPress: (e) => {
                       if (13 === e.which)
@@ -39,10 +39,10 @@ function p(e) {
                               var n;
                               (null != (n = e.currentTarget.value.match(/\n/g)) ? n : []).length >= 5 && e.preventDefault();
                           } else e.preventDefault(), e.currentTarget.blur();
-                      else e.which === d.yXg.SPACE && e.stopPropagation();
+                      else e.which === a.yXg.SPACE && e.stopPropagation();
                   },
                   defaultValue: null != j ? j : void 0,
-                  maxLength: d.vuo
+                  maxLength: a.vuo
               })
           });
 }

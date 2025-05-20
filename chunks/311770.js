@@ -17,15 +17,15 @@ var n = r(255367),
     v = r(981631),
     x = r(388032),
     _ = r(807179);
-let j = new o.Z('EmojiStudioModal'),
-    O = (e) => {
+let O = new o.Z('EmojiStudioModal'),
+    j = (e) => {
         let { userImage: t, guildId: r, back: o } = e,
             h = (0, i.e7)([c.Z, d.Z, u.Z], () => {
                 let e = d.Z.getGuildId(),
                     t = c.Z.getGuild(e);
                 return u.Z.can(v.Plq.CREATE_GUILD_EXPRESSIONS, t) && null != t ? t.id : null;
             }),
-            [m, O] = a.useState(null != r ? r : h),
+            [m, j] = a.useState(null != r ? r : h),
             [E, D] = a.useState(null),
             [N, C] = a.useState(''),
             [w, S] = a.useState(null),
@@ -40,7 +40,7 @@ let j = new o.Z('EmojiStudioModal'),
                         name: N
                     });
                 } catch (e) {
-                    D((0, f.z)(e)), j.error('Failed to upload emoji.', e);
+                    D((0, f.z)(e)), O.error('Failed to upload emoji.', e);
                     return;
                 }
                 (0, s.Mr3)(g.Hj);
@@ -100,7 +100,7 @@ let j = new o.Z('EmojiStudioModal'),
                                     ]
                                 }),
                                 (0, n.jsx)(y, {
-                                    onChange: O,
+                                    onChange: j,
                                     selected: m
                                 }),
                                 (0, n.jsx)(s.zxk, {
@@ -132,7 +132,7 @@ let j = new o.Z('EmojiStudioModal'),
                 children: [
                     null == l
                         ? (0, n.jsx)(m.u, { setUserImage: o })
-                        : (0, n.jsx)(O, {
+                        : (0, n.jsx)(j, {
                               userImage: l,
                               guildId: i,
                               back: c

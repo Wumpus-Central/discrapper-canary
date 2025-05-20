@@ -8,8 +8,8 @@ var i = n(255367),
     c = n(481060),
     d = n(607070),
     u = n(100527),
-    m = n(906732),
-    g = n(975298),
+    g = n(906732),
+    m = n(975298),
     p = n(626135),
     h = n(695349),
     f = n(103433),
@@ -31,11 +31,11 @@ let v = (e) => {
             let [n, i] = t;
             return !1 !== i.canReveal && 'upcomingDropUntimed' !== i.name && (e[n] = i), e;
         }, {}),
-        { analyticsLocations: P } = (0, m.ZP)(u.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
+        { analyticsLocations: P } = (0, g.ZP)(u.Z.PREMIUM_SUBSCRIBER_NITRO_HOME),
         [R, D] = r.useState(!1),
         Z = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
         w = (0, E.mN)(),
-        { fractionalState: k } = (0, g.Z)(),
+        { fractionalState: k } = (0, m.Z)(),
         L = (0, h.W)().isInReverseTrial;
     return (
         w ? ((t = j.intl.string(j.t['+vt7w8'])), (n = j.intl.string(j.t.LgHbnJ))) : ((t = j.intl.string(j.t.LgHbnJ)), (n = j.intl.string(j.t['+vt7w8']))),
@@ -47,7 +47,7 @@ let v = (e) => {
             ref: N,
             children: (0, i.jsx)('div', {
                 className: O.container,
-                children: (0, i.jsxs)(m.Gt, {
+                children: (0, i.jsxs)(g.Gt, {
                     value: P,
                     children: [
                         (0, i.jsx)(f.Z, {

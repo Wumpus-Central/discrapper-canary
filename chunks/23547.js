@@ -1,64 +1,64 @@
-n.d(t, {
-    Mm: () => p,
-    jj: () => m,
-    wH: () => u
+r.d(t, {
+    Mm: () => h,
+    jj: () => b,
+    wH: () => d
 });
-var i = n(255367),
-    r = n(73800),
-    s = n(442837),
-    l = n(481060),
-    a = n(751648),
-    o = n(479766);
-function c(e) {
+var n = r(255367),
+    a = r(73800),
+    l = r(442837),
+    i = r(481060),
+    o = r(751648),
+    c = r(479766);
+function u(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            i = Object.keys(n);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (i = i.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 })
             )),
-            i.forEach(function (t) {
-                var i;
-                (i = n[t]),
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
                     t in e
                         ? Object.defineProperty(e, t, {
-                              value: i,
+                              value: n,
                               enumerable: !0,
                               configurable: !0,
                               writable: !0
                           })
-                        : (e[t] = i);
+                        : (e[t] = n);
             });
     }
     return e;
 }
-let d = 'balance-widget-menu-coachmark-modal',
-    u = () => (0, l.nfh)(d),
-    m = () => (0, l.Mr3)(d),
-    g = {
-        modalKey: d,
-        onCloseCallback: a.j2,
+let s = 'balance-widget-menu-coachmark-modal',
+    d = () => (0, i.nfh)(s),
+    b = () => (0, i.Mr3)(s),
+    f = {
+        modalKey: s,
+        onCloseCallback: o.j2,
         onCloseRequest: async () => {
-            await (0, a.j2)();
+            await (0, o.j2)();
         }
     };
-function p(e) {
-    let t = (0, s.cj)([o.Z], () => o.Z.earnedOrbsCoachmark),
-        { shouldOpen: a } = t;
+function h(e) {
+    let t = (0, l.cj)([c.Z], () => c.Z.earnedOrbsCoachmark),
+        { shouldOpen: o } = t;
     return (
-        (0, r.useEffect)(() => {
-            let t = u();
-            if (a && !t) {
-                var r;
-                (r = c({}, e)).isCoachmarkEnabled &&
-                    (0, l.ZDy)(async () => {
-                        let { BalanceWidgetEarnedOrbsCoachmarkModal: e } = await Promise.all([n.e('82081'), n.e('1258')]).then(n.bind(n, 720463));
-                        return (t) => (0, i.jsx)(e, c({}, r, t));
-                    }, g);
-            } else !a && t && m();
-        }, [a, e]),
-        c({}, t)
+        (0, a.useEffect)(() => {
+            let t = d();
+            if (o && !t) {
+                var a;
+                (a = u({}, e)).isCoachmarkEnabled &&
+                    (0, i.ZDy)(async () => {
+                        let { BalanceWidgetEarnedOrbsCoachmarkModal: e } = await Promise.all([r.e('82081'), r.e('1258')]).then(r.bind(r, 720463));
+                        return (t) => (0, n.jsx)(e, u({}, a, t));
+                    }, f);
+            } else !o && t && b();
+        }, [o, e]),
+        u({}, t)
     );
 }

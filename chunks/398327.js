@@ -1,8 +1,8 @@
 n.d(t, { Z: () => h }), n(388685);
 var r,
     i = n(442837),
-    a = n(433517),
-    o = n(570140),
+    o = n(433517),
+    a = n(570140),
     s = n(241601),
     l = n(601993);
 function c(e, t, n) {
@@ -22,14 +22,14 @@ let u = 'SpellcheckStore',
     d = !0,
     f = new Set();
 function _() {
-    a.K.set(u, {
+    o.K.set(u, {
         enabled: d,
         learnedWords: f
     });
 }
 class p extends (r = i.ZP.Store) {
     initialize() {
-        let e = a.K.get(u);
+        let e = o.K.get(u);
         null != e && ((d = e.enabled), (f = new Set(e.learnedWords)), (0, l.gL)(d), (0, l.fG)(f)), (0, s.Ql)(l._2);
     }
     isEnabled() {
@@ -40,7 +40,7 @@ class p extends (r = i.ZP.Store) {
     }
 }
 c(p, 'displayName', 'SpellcheckStore');
-let h = new p(o.Z, {
+let h = new p(a.Z, {
     SPELLCHECK_TOGGLE() {
         (d = !d), (0, l.gL)(d), _();
     },

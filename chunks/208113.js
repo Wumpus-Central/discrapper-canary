@@ -9,8 +9,8 @@ var r = n(442837),
     c = n(680924),
     d = n(726985),
     u = n(65154),
-    m = n(388032),
-    g = n(20493);
+    g = n(388032),
+    m = n(20493);
 function p(e) {
     let { refreshStyles: t = !1 } = e,
         {
@@ -25,49 +25,49 @@ function p(e) {
             automaticAudioSubsystemSupported: o.Z.supports(u.AN.AUTOMATIC_AUDIO_SUBSYSTEM)
         })),
         b = (0, i.jsx)(s.q4e, {
-            className: g.marginBottom20,
+            className: m.marginBottom20,
             value: n,
             options: (function (e, t, n) {
                 let i = [
                     {
                         value: u.iA.STANDARD,
-                        label: m.intl.string(m.t.dqb2JS)
+                        label: g.intl.string(g.t.dqb2JS)
                     }
                 ];
                 return (
                     e &&
                         i.push({
                             value: u.iA.LEGACY,
-                            label: m.intl.string(m.t['TYfH+/'])
+                            label: g.intl.string(g.t['TYfH+/'])
                         }),
                     t &&
                         i.push({
                             value: u.iA.EXPERIMENTAL,
-                            label: m.intl.string(m.t.liQmtr)
+                            label: g.intl.string(g.t.liQmtr)
                         }),
                     n &&
                         i.push({
                             value: u.iA.AUTOMATIC,
-                            label: m.intl.string(m.t.qNgtOz)
+                            label: g.intl.string(g.t.qNgtOz)
                         }),
                     i
                 );
             })(p, h, f),
             onChange: (e) => {
-                (0, c.Z)(m.intl.string(m.t.uY7AcX), m.intl.string(m.t.gBqik5), () => l.Z.setAudioSubsystem(e));
+                (0, c.Z)(g.intl.string(g.t.uY7AcX), g.intl.string(g.t.gBqik5), () => l.Z.setAudioSubsystem(e));
             }
         });
     return (0, i.jsx)(a.F, {
         setting: d.s6.VOICE_AND_VIDEO_ADVANCED_SUBSYSTEM,
         children: t
             ? (0, i.jsx)(s.xJW, {
-                  title: m.intl.string(m.t.wVBHr6),
+                  title: g.intl.string(g.t.wVBHr6),
                   children: b
               })
             : (0, i.jsxs)(s.hjN, {
-                  className: g.marginBottom20,
-                  title: m.intl.string(m.t.wVBHr6),
-                  children: [b, (0, i.jsx)(s.$i$, { className: g.marginBottom20 })]
+                  className: m.marginBottom20,
+                  title: g.intl.string(g.t.wVBHr6),
+                  children: [b, (0, i.jsx)(s.$i$, { className: m.marginBottom20 })]
               })
     });
 }

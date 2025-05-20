@@ -1,7 +1,7 @@
 n.d(t, {
     C7: () => h,
     Hw: () => u,
-    M5: () => o,
+    M5: () => a,
     Ps: () => c,
     SD: () => f,
     ai: () => l,
@@ -11,10 +11,10 @@ n.d(t, {
 });
 var r = n(726542),
     i = n(358085),
-    a = n(981631);
-let o = 'spotify',
+    o = n(981631);
+let a = 'spotify',
     s = 'spotify:',
-    l = r.Z.get(a.ABu.SPOTIFY).name;
+    l = r.Z.get(o.ABu.SPOTIFY).name;
 function c(e) {
     return null != e && e.startsWith(s);
 }
@@ -47,7 +47,7 @@ let f = ['open.spotify.com', 'www.spotify.com'],
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
                 r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 'desktop';
             return ''
-                .concat(o, ':')
+                .concat(a, ':')
                 .concat(encodeURIComponent(e), ':')
                 .concat(encodeURIComponent(t))
                 .concat(n ? p(r) : '');

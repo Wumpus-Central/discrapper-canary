@@ -9,10 +9,10 @@ e.exports = function (e) {
             variants: [e.COMMENT('!', '$', { relevance: 0 }), e.COMMENT('^C[ ]', '$', { relevance: 0 }), e.COMMENT('^C$', '$', { relevance: 0 })]
         },
         i = /(_[a-z_\d]+)?/,
-        a = /([de][+-]?\d+)?/,
-        o = {
+        o = /([de][+-]?\d+)?/,
+        a = {
             className: 'number',
-            variants: [{ begin: t.concat(/\b\d+/, /\.(\d*)/, a, i) }, { begin: t.concat(/\b\d+/, a, i) }, { begin: t.concat(/\.\d+/, a, i) }],
+            variants: [{ begin: t.concat(/\b\d+/, /\.(\d*)/, o, i) }, { begin: t.concat(/\b\d+/, o, i) }, { begin: t.concat(/\.\d+/, o, i) }],
             relevance: 0
         },
         s = {
@@ -44,7 +44,7 @@ e.exports = function (e) {
                 relevance: 0
             },
             r,
-            o
+            a
         ]
     };
 };

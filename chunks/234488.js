@@ -1,7 +1,7 @@
 var r = n(46015),
     i = n(621523),
-    a = n(880181),
-    o = n(214027),
+    o = n(880181),
+    a = n(214027),
     s = n(154028),
     l = n(845691),
     c = function () {},
@@ -10,7 +10,7 @@ var r = n(46015),
     f = r(d.exec),
     _ = !d.test(c),
     p = function (e) {
-        if (!a(e)) return !1;
+        if (!o(e)) return !1;
         try {
             return u(c, [], e), !0;
         } catch (e) {
@@ -18,8 +18,8 @@ var r = n(46015),
         }
     },
     h = function (e) {
-        if (!a(e)) return !1;
-        switch (o(e)) {
+        if (!o(e)) return !1;
+        switch (a(e)) {
             case 'AsyncFunction':
             case 'GeneratorFunction':
             case 'AsyncGeneratorFunction':

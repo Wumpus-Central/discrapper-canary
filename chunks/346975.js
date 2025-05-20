@@ -708,8 +708,8 @@ function ey(e) {
             channel: t
         }),
         e4 = e1.containerProps,
-        { ref: e5 } = e4,
-        e2 = eg(e4, ['ref']),
+        { ref: e2 } = e4,
+        e5 = eg(e4, ['ref']),
         e7 = R.ZP.getSidebarState(t.id),
         te = null != e7 && (0, R.D5)(e7),
         tt = (0, g.e7)([R.ZP], () => R.ZP.getSection(t.id)) === eo.ULH.MEMBERS;
@@ -745,7 +745,7 @@ function ey(e) {
                                           {
                                               ref: (e) => {
                                                   var t;
-                                                  (e5.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null), eK(e);
+                                                  (e2.current = null != (t = null == e ? void 0 : e.getScrollerNode()) ? t : null), eK(e);
                                               },
                                               itemGutter: 16,
                                               padding: 24,
@@ -761,7 +761,7 @@ function ey(e) {
                                               onScroll: v ? e6 : void 0,
                                               chunkSize: 350
                                           },
-                                          e2,
+                                          e5,
                                           e
                                       ),
                                       A

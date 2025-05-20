@@ -1,9 +1,9 @@
-n.r(t), n.d(t, { default: () => a });
+n.r(t), n.d(t, { default: () => o });
 var r = n(528734),
     i = n(951516);
-function a(e, t) {
+function o(e, t) {
     (0, i.Z)(2, arguments);
     var n = (0, r.default)(e),
-        a = (0, r.default)(t);
-    return n.getFullYear() === a.getFullYear();
+        o = (0, r.default)(t);
+    return n.getFullYear() === o.getFullYear();
 }

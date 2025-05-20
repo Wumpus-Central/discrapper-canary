@@ -5,9 +5,9 @@ n.d(t, {
     Z_: () => c,
     Zj: () => p,
     cn: () => u,
-    jA: () => g,
+    jA: () => m,
     xD: () => o,
-    yW: () => m
+    yW: () => g
 }),
     n(35282);
 var i = n(544891),
@@ -47,10 +47,10 @@ function u(e, t) {
         metadata: t
     });
 }
-function m() {
+function g() {
     return r.Z.dispatch({ type: 'CLICKER_GAME_RESET' });
 }
-function g(e) {
+function m(e) {
     return r.Z.dispatch({
         type: 'CLICKER_GAME_SET_VOLUME',
         volume: e

@@ -10,6 +10,7 @@ t.exports = {
     imageDisabled: 'imageDisabled__57752 image__57752',
     overlay: 'overlay__57752',
     overlayAvatar: 'overlayAvatar__57752 overlay__57752',
+    overlayGuildIcon: 'overlayGuildIcon__57752 overlay__57752',
     overlayBanner: 'overlayBanner__57752 overlay__57752',
     toolsContainer: 'toolsContainer__57752',
     zoomControls: 'zoomControls__57752',

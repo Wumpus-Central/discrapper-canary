@@ -8,25 +8,25 @@ var i = n(255367),
     c = n(53281),
     d = n(281598),
     u = n(373071),
-    m = n(782691),
-    g = n(662583);
+    g = n(782691),
+    m = n(662583);
 let p = "Make sure you're only uploading text files!",
     h = (e) => {
         var t, n, r;
         let { effect: s, onClick: a } = e,
             { deleteConfig: c } = (0, u.n6)();
         return (0, i.jsxs)(o.P3F, {
-            className: g.previewCard,
+            className: m.previewCard,
             onClick: () => {
                 a(s);
             },
             children: [
                 (0, i.jsx)('div', {
-                    className: g.previewCardImage,
+                    className: m.previewCardImage,
                     style: { backgroundImage: 'url('.concat(null == (r = s.config) || null == (n = r.effects) || null == (t = n[0]) ? void 0 : t.base64, ')') }
                 }),
                 (0, i.jsxs)('div', {
-                    className: l()(g.previewCardFooter, g.row),
+                    className: l()(m.previewCardFooter, m.row),
                     children: [
                         (0, i.jsx)(o.Text, {
                             variant: 'text-md/bold',
@@ -73,23 +73,23 @@ function b() {
             [_]
         );
     return (0, i.jsxs)('div', {
-        className: g.root,
+        className: m.root,
         children: [
             null == n &&
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsxs)('div', {
-                            className: g.col,
+                            className: m.col,
                             children: [
                                 (0, i.jsx)('div', {
-                                    className: g.section,
+                                    className: m.section,
                                     children: (0, i.jsx)(o.X6q, {
                                         variant: 'heading-lg/bold',
                                         children: 'Profile Effects'
                                     })
                                 }),
                                 (0, i.jsx)('div', {
-                                    className: g.grid,
+                                    className: m.grid,
                                     children: Object.values(e).map((e) =>
                                         (0, i.jsx)(
                                             h,
@@ -106,10 +106,10 @@ function b() {
                             ]
                         }),
                         (0, i.jsxs)('div', {
-                            className: l()(g.row, g.end, g.section),
+                            className: l()(m.row, m.end, m.section),
                             children: [
                                 (0, i.jsxs)('div', {
-                                    className: g.uploadButton,
+                                    className: m.uploadButton,
                                     children: [
                                         (0, i.jsx)(o.Text, {
                                             variant: 'text-md/normal',
@@ -134,7 +134,7 @@ function b() {
                     ]
                 }),
             null != n &&
-                (0, i.jsx)(m.Z, {
+                (0, i.jsx)(g.Z, {
                     effect: n,
                     back: () => {
                         s(void 0);

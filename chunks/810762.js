@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var i = n(255367);
 n(73800);
 var r = n(873546),
@@ -9,11 +9,11 @@ var r = n(873546),
     c = n(949914),
     d = n(388032),
     u = n(477108);
-let m = (e) => {
+let g = (e) => {
     let { onGoBack: t } = e,
         n = (0, o.Z)(),
-        { loading: m } = (0, a.sp)(n);
-    return ((0, l.Z)(r.tq ? 'role-subscriptions-user-setting' : void 0), m)
+        { loading: g } = (0, a.sp)(n);
+    return ((0, l.Z)(r.tq ? 'role-subscriptions-user-setting' : void 0), g)
         ? (0, i.jsx)(s.$jN, {})
         : 0 === n.length
           ? null

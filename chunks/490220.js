@@ -1,4 +1,4 @@
-n.d(t, { Z: () => m });
+n.d(t, { Z: () => g });
 var i = n(255367),
     r = n(73800),
     s = n(442837),
@@ -8,9 +8,9 @@ var i = n(255367),
     c = n(25990),
     d = n(678135),
     u = n(976979);
-function m(e) {
+function g(e) {
     var t;
-    let { user: m, disabledInputs: g, containerClassName: p } = e,
+    let { user: g, disabledInputs: m, containerClassName: p } = e,
         { reducedMotion: h } = r.useContext(l.Sfi),
         {
             pendingAvatar: f,
@@ -51,13 +51,13 @@ function m(e) {
             })({}, c.Z.getAllPending(), c.Z.getAllTryItOut())
         ),
         T = (0, o.SD)({
-            userId: m.id,
+            userId: g.id,
             image: null != j ? j : f
         }),
         I = (0, a.Z)(S, !1);
     return (0, i.jsx)(d.Z, {
         containerClassName: p,
-        user: m,
+        user: g,
         pendingPronouns: x,
         pendingBio: E,
         pendingBanner: null != (t = null != O ? O : b) ? t : n(466045),
@@ -69,6 +69,6 @@ function m(e) {
         canUsePremiumCustomization: !0,
         isTryItOutFlow: !0,
         hideExampleButton: !0,
-        disabledInputs: g
+        disabledInputs: m
     });
 }

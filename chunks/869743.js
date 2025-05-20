@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r = n(255367),
     i = n(73800),
-    a = n(481060),
-    o = n(299206),
+    o = n(481060),
+    a = n(299206),
     s = n(726521),
     l = n(389052),
     c = n(388032),
@@ -61,18 +61,18 @@ function p(e, t) {
 }
 let h = (e) => {
         let { appRecord: t, closePopout: n, showAppReportingOption: i, selectedGuildId: l, selectedChannelId: u, children: d = null } = e,
-            f = (0, o.Z)({
+            f = (0, a.Z)({
                 id: t.id,
                 label: c.intl.string(c.t['+NP/b2'])
             });
-        return (0, r.jsxs)(a.v2r, {
+        return (0, r.jsxs)(o.v2r, {
             navId: 'authorized-app-action-menu',
             onClose: n,
             'aria-label': c.intl.string(c.t.tKobzc),
             onSelect: void 0,
             children: [
                 i
-                    ? (0, r.jsx)(a.sNh, {
+                    ? (0, r.jsx)(o.sNh, {
                           id: 'report',
                           label: c.intl.string(c.t['+78Pfn']),
                           color: 'danger',
@@ -91,12 +91,12 @@ let h = (e) => {
         });
     },
     m = (e) => {
-        let { appRecord: t, botUser: n, closePopout: i, showAppReportingOption: a, selectedGuildId: o, selectedChannelId: s } = e;
+        let { appRecord: t, botUser: n, closePopout: i, showAppReportingOption: o, selectedGuildId: a, selectedChannelId: s } = e;
         return (0, r.jsx)(h, {
             appRecord: t,
             closePopout: i,
-            showAppReportingOption: a,
-            selectedGuildId: o,
+            showAppReportingOption: o,
+            selectedGuildId: a,
             selectedChannelId: s,
             children: (0, l.Z)({
                 user: n,
@@ -106,9 +106,9 @@ let h = (e) => {
         });
     },
     g = (e) => {
-        let { appRecord: t, showAppReportingOption: n, selectedGuildId: o, selectedChannelId: s } = e,
+        let { appRecord: t, showAppReportingOption: n, selectedGuildId: a, selectedChannelId: s } = e,
             l = i.useRef(null);
-        return (0, r.jsx)(a.yRy, {
+        return (0, r.jsx)(o.yRy, {
             targetElementRef: l,
             renderPopout: (e) => {
                 let { closePopout: i } = e;
@@ -117,7 +117,7 @@ let h = (e) => {
                           appRecord: t,
                           closePopout: i,
                           showAppReportingOption: n,
-                          selectedGuildId: o,
+                          selectedGuildId: a,
                           selectedChannelId: s
                       })
                     : (0, r.jsx)(m, {
@@ -125,7 +125,7 @@ let h = (e) => {
                           botUser: t.bot,
                           closePopout: i,
                           showAppReportingOption: n,
-                          selectedGuildId: o,
+                          selectedGuildId: a,
                           selectedChannelId: s
                       });
             },
@@ -133,7 +133,7 @@ let h = (e) => {
             position: 'bottom',
             children: (e) =>
                 (0, r.jsx)(
-                    a.P3F,
+                    o.P3F,
                     p(
                         f(
                             {
@@ -144,9 +144,9 @@ let h = (e) => {
                             e
                         ),
                         {
-                            children: (0, r.jsx)(a.xhG, {
+                            children: (0, r.jsx)(o.xhG, {
                                 size: 'xs',
-                                color: a.TVs.colors.INTERACTIVE_NORMAL
+                                color: o.TVs.colors.INTERACTIVE_NORMAL
                             })
                         }
                     )

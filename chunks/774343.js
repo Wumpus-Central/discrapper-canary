@@ -8,8 +8,8 @@ var i,
     c = n(442837),
     d = n(570140),
     u = n(592125),
-    m = n(896797),
-    g = n(430824),
+    g = n(896797),
+    m = n(430824),
     p = n(944486),
     h = n(55589),
     f = n(981631);
@@ -21,10 +21,10 @@ function _(e) {
 }
 class x extends (o = c.ZP.Store) {
     initialize() {
-        this.waitFor(m.Z, h.Z, p.Z, g.Z, u.Z);
+        this.waitFor(g.Z, h.Z, p.Z, m.Z, u.Z);
     }
     getHomeLink() {
-        return null != b ? b : m.Z.fallbackRoute;
+        return null != b ? b : g.Z.fallbackRoute;
     }
 }
 (r = 'AppViewStore'),

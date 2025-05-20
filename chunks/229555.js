@@ -9,8 +9,8 @@ var r = n(120356),
     c = n(848572),
     d = n(787528),
     u = n(388032),
-    m = n(536564);
-let g = (e, t) =>
+    g = n(536564);
+let m = (e, t) =>
         (null == e ? void 0 : e.status) === c.Vq.EARNED
             ? u.intl.format(u.t.Hu4jfn, { date: null != t ? t : new Date() })
             : (null == e ? void 0 : e.status) === c.Vq.UPCOMING
@@ -30,7 +30,7 @@ let g = (e, t) =>
             x = (0, o.q)(p, f),
             E = { '--custom-badge-glow-color': (0, a.rj)(t.glowColor, 0.5) };
         return (0, i.jsxs)('div', {
-            className: m.container,
+            className: g.container,
             style: E,
             children: [
                 (0, i.jsx)('div', {}),
@@ -38,27 +38,27 @@ let g = (e, t) =>
                 (0, i.jsx)('img', {
                     src: r,
                     alt: _,
-                    className: s()(m.badgeImage, {
-                        [m.upcomingBadge]: t.status === c.Vq.UPCOMING,
-                        [m.wide]: b
+                    className: s()(g.badgeImage, {
+                        [g.upcomingBadge]: t.status === c.Vq.UPCOMING,
+                        [g.wide]: b
                     })
                 }),
                 (0, i.jsxs)('div', {
-                    className: m.textColumn,
+                    className: g.textColumn,
                     children: [
                         (0, i.jsx)(l.xv, {
                             variant: 'text-lg/semibold',
-                            className: m.badgeText,
+                            className: g.badgeText,
                             children: _
                         }),
                         (0, i.jsx)(l.xv, {
                             variant: 'text-md/normal',
-                            className: m.badgeText,
+                            className: g.badgeText,
                             children: x
                         }),
                         (0, i.jsx)(l.xv, {
                             variant: 'text-xs/normal',
-                            children: g(t, n)
+                            children: m(t, n)
                         })
                     ]
                 })

@@ -1,13 +1,13 @@
 e = n.nmd(e);
 var r = n(788255),
     i = t && !t.nodeType && t,
-    a = i && e && !e.nodeType && e,
-    o = a && a.exports === i && r.process,
+    o = i && e && !e.nodeType && e,
+    a = o && o.exports === i && r.process,
     s = (function () {
         try {
-            var e = a && a.require && a.require('util').types;
+            var e = o && o.require && o.require('util').types;
             if (e) return e;
-            return o && o.binding && o.binding('util');
+            return a && a.binding && a.binding('util');
         } catch (e) {}
     })();
 e.exports = s;

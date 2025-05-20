@@ -1,8 +1,8 @@
 n.d(t, { Z: () => g });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
+    o = n(120356),
+    a = n.n(o),
     s = n(481060),
     l = n(129861),
     c = n(670188),
@@ -65,8 +65,8 @@ function h(e, t) {
         r,
         i = m(e, t);
     if (Object.getOwnPropertySymbols) {
-        var a = Object.getOwnPropertySymbols(e);
-        for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
@@ -75,18 +75,18 @@ function m(e, t) {
     var n,
         r,
         i = {},
-        a = Object.keys(e);
-    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
 function g(e) {
-    let { user: t, guildId: n, channelId: a, nick: d, className: _, textClassName: m, disablePopout: g, ignoreModalClicks: E, onClick: b, onContextMenu: y, onPopoutRequestOpen: O, onPopoutRequestClose: v } = e,
+    let { user: t, guildId: n, channelId: o, nick: d, className: _, textClassName: m, disablePopout: g, ignoreModalClicks: E, onClick: b, onContextMenu: y, onPopoutRequestOpen: O, onPopoutRequestClose: v } = e,
         I = i.useRef(null);
     return (0, r.jsx)(c.Z, {
         targetElementRef: I,
         user: t,
         guildId: n,
-        channelId: a,
+        channelId: o,
         position: 'left',
         shouldShow: !g && void 0,
         onRequestOpen: O,
@@ -94,12 +94,12 @@ function g(e) {
         ignoreModalClicks: E,
         children: (e) => {
             var { onClick: i } = e,
-                a = h(e, ['onClick']);
+                o = h(e, ['onClick']);
             return (0, r.jsxs)(
                 s.P3F,
-                p(f({}, a), {
+                p(f({}, o), {
                     innerRef: I,
-                    className: o()(u.userListItem, _, { [u.popoutDisabled]: g }),
+                    className: a()(u.userListItem, _, { [u.popoutDisabled]: g }),
                     onContextMenu: y,
                     onClick: (e) => {
                         i(e), null == b || b(e);
@@ -112,7 +112,7 @@ function g(e) {
                             size: s.EFr.SIZE_24
                         }),
                         (0, r.jsx)(s.Text, {
-                            className: o()(u.userListItemTag, m),
+                            className: a()(u.userListItemTag, m),
                             variant: 'text-sm/normal',
                             children: (0, r.jsx)(l.Z, {
                                 user: t,
