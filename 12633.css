@@ -41952,6 +41952,10 @@ img.thumbnail__0f2e8 {
     flex: 1
 }
 
+.user-profile-modal-v2 .upsellButtonWrapper__5997d {
+    flex: unset
+}
+
 .upsellButton__5997d {
     width: 100%
 }
