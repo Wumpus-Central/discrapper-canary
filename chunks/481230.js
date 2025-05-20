@@ -86,14 +86,14 @@ function m(e) {
     );
 }
 function f(e) {
-    let { email: t, phoneToken: n, username: r, globalName: m, consent: f, password: _, guildTemplateCode: x, birthday: b, invite: E = null, giftCodeSKUId: v = null, promoEmailConsent: O = null, usedUsernameSuggestion: S = null } = e;
-    if ((a.Z.dispatch({ type: 'REGISTER' }), null != b)) {
-        (0, g.Z)(b, h.jXE.REGISTER),
+    let { email: t, phoneToken: n, username: r, globalName: m, consent: f, password: _, guildTemplateCode: x, birthday: E, invite: b = null, giftCodeSKUId: v = null, promoEmailConsent: O = null, usedUsernameSuggestion: I = null } = e;
+    if ((a.Z.dispatch({ type: 'REGISTER' }), null != E)) {
+        (0, g.Z)(E, h.jXE.REGISTER),
             u.default.track(h.rMx.AGE_GATE_ACTION, {
                 source: p.L0.REGISTER,
                 action: p.Al.AGE_GATE_SUBMITTED
             });
-        let e = i()().diff(b, 'years');
+        let e = i()().diff(E, 'years');
         e < 13 || u.default.track(h.rMx.USER_AGE_SUBMITTED, { age_bucket: e >= 13 && e <= 17 ? '13-17' : e >= 18 && e <= 22 ? '18-22' : '23+' });
     }
     return d.Z.post({
@@ -104,10 +104,10 @@ function f(e) {
             username: r,
             global_name: m,
             password: _,
-            invite: E,
+            invite: b,
             consent: f,
             phone_token: n,
-            date_of_birth: null == b ? void 0 : b.format('YYYY-MM-DD'),
+            date_of_birth: null == E ? void 0 : E.format('YYYY-MM-DD'),
             gift_code_sku_id: v,
             guild_template_code: x,
             promotional_email_opt_in: null == O ? void 0 : O.checked
@@ -115,8 +115,8 @@ function f(e) {
         trackedActionData: {
             event: l.NetworkActionNames.USER_REGISTER,
             properties: {
-                invite_code: E,
-                used_username_suggestion: S,
+                invite_code: b,
+                used_username_suggestion: I,
                 promotional_email_opt_in: null == O ? void 0 : O.checked,
                 promotional_email_pre_checked: null == O ? void 0 : O.preChecked,
                 was_unique_username: !0

@@ -29,7 +29,7 @@ var r = n(255367),
     S = n(419851),
     T = n(246403);
 let R = (e) => {
-        let { headerId: t, email: n, password: i, setEmail: l, setPassword: s, emailError: a, passwordError: c } = e;
+        let { headerId: t, email: n, password: i, setEmail: l, setPassword: s, emailError: a, passwordError: c, hasManualFormFields: u, isMember: d } = e;
         return (0, r.jsxs)('div', {
             className: F.content,
             children: [
@@ -45,7 +45,7 @@ let R = (e) => {
                     id: t,
                     variant: 'heading-xl/semibold',
                     className: F.header,
-                    children: P.intl.string(P.t.MhcDLy)
+                    children: u && !d ? P.intl.string(P.t['qQYF6+']) : P.intl.string(P.t.MhcDLy)
                 }),
                 (0, r.jsx)(o.Text, {
                     variant: 'text-sm/normal',
@@ -151,12 +151,12 @@ let R = (e) => {
         var t, n, s, N;
         let { verificationForm: S, headerId: T, guildId: M, onClose: k, onComplete: D, isPreview: L = !1 } = e,
             z = (0, C.N0)(M, null == S ? void 0 : S.guild, L),
-            { guildProfile: Z, fetchGuildProfile: q } = (0, d.u)(M),
+            { guildProfile: q, fetchGuildProfile: Z } = (0, d.u)(M),
             B = (0, l.e7)([b.ZP, h.default], () => b.ZP.isMember(M, h.default.getId())),
             [H, U] = i.useState(!1);
         i.useEffect(() => {
-            B && !H && null == Z && q().finally(() => U(!0));
-        }, [q, Z, H, B]);
+            B && !H && null == q && Z().finally(() => U(!0));
+        }, [Z, q, H, B]);
         let G = null == S ? void 0 : S.formFields.some((e) => e.field_type !== _.QJ.TERMS),
             [V, W] = i.useState(null != (s = null == S ? void 0 : S.formFields) ? s : []),
             [J, K] = i.useState(!1),
@@ -183,7 +183,7 @@ let R = (e) => {
                     });
             }, [M]);
         let ed = (0, l.e7)([g.default], () => g.default.getCurrentUser()),
-            { currentStep: em, setCurrentStep: ef } = (0, C.k3)(ed, eu);
+            { currentStep: em, setCurrentStep: ef } = (0, C.k3)(ed);
         (0, C.lk)(V);
         let eh = null == ed ? void 0 : ed.verified,
             ep = null == ed ? void 0 : ed.isPhoneVerified(),
@@ -228,7 +228,7 @@ let R = (e) => {
             eO = (function (e) {
                 let t = (0, o.dQu)(o.TVs.colors.BACKGROUND_MODIFIER_ACCENT).hex();
                 return 'linear-gradient(-45deg, '.concat(t, ', ').concat(e, ')');
-            })(null != (N = null == Z ? void 0 : Z.brandColorPrimary) ? N : '');
+            })(null != (N = null == q ? void 0 : q.brandColorPrimary) ? N : '');
         if (null == z) return null;
         let eC = async () => {
                 K(!0), er(null), el(null);
@@ -307,7 +307,7 @@ let R = (e) => {
                     K(!1);
                 }
             },
-            eN = null != Z;
+            eN = null != q;
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)('div', {
@@ -321,7 +321,7 @@ let R = (e) => {
                             }),
                             eN
                                 ? (0, r.jsx)(m.ZP, {
-                                      profile: Z,
+                                      profile: q,
                                       className: F.guildProfile,
                                       disableCTA: !0
                                   })
@@ -359,7 +359,9 @@ let R = (e) => {
                                                     setEmail: $,
                                                     setPassword: et,
                                                     emailError: en,
-                                                    passwordError: ei
+                                                    passwordError: ei,
+                                                    hasManualFormFields: G,
+                                                    isMember: B
                                                 });
                                             case C.KJ.EMAIL_CONFIRMATION:
                                                 return (0, r.jsx)(w, {

@@ -107,7 +107,7 @@ let Y = function () {
                 }
             });
         }, [e]);
-    let { enabled: H } = (0, S.W)({ location: M.dr.QUEST_HOME_DESKTOP }),
+    let { enabled: H } = (0, S.WX)({ location: M.dr.QUEST_HOME_DESKTOP }),
         F = z(),
         Y = i.useCallback(() => {
             if (F) return void window.open(T.Z.getArticleURL(U.BhN.VIRTUAL_CURRENCY_LEARN_MORE));

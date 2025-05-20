@@ -15,7 +15,7 @@ var i = n(73800),
 let g = new s.Z('VirtualCurrency'),
     p = (e) => {
         let { location: t } = e,
-            { enabled: n } = (0, d.W)({ location: t }),
+            { enabled: n } = (0, d.WX)({ location: t }),
             s = (0, r.e7)(
                 [l.Z],
                 () => {

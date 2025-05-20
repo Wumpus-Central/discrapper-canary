@@ -848,8 +848,8 @@ function e$(e) {
         }),
         eM.resetGuildSentinels();
     let s = null == (t = J.default.getCurrentUser()) ? void 0 : t.id;
-    for (let e of (null != s && (eM.get(s, ei.W.NOTIFICATION_CENTER).lastMessageId = G.default.fromTimestamp(Date.now())), eB(i), ej(a), r)) ej(null != (n = e.channels) ? n : []), e3(e), eG(e);
-    e0(), (eE = setTimeout(() => e2(o.entries), 10 * k.Z.Millis.SECOND));
+    for (let e of (null != s && (eM.get(s, ei.W.NOTIFICATION_CENTER).lastMessageId = G.default.fromTimestamp(Date.now())), eB(i), ej(a), r)) ej(null != (n = e.channels) ? n : []), e2(e), eG(e);
+    e0(), (eE = setTimeout(() => e3(o.entries), 10 * k.Z.Millis.SECOND));
 }
 function e0() {
     null != eE && clearTimeout(eE);
@@ -858,7 +858,7 @@ eo(eM, '_guildReadStateSentinels', {}), eo(eM, '_readStates', new Map()), eo(eM,
 let e1 = (0, a.throttle)((e) => {
     e.delete();
 }, 100);
-function e2(e) {
+function e3(e) {
     let t = ev();
     for (let r of e) {
         var n;
@@ -867,7 +867,7 @@ function e2(e) {
         i.shouldDeleteReadState(t) && e1(i);
     }
 }
-function e3(e) {
+function e2(e) {
     if (null != e.channelUpdates) {
         var t;
         ej(null == (t = e.channelUpdates) ? void 0 : t.writes);
@@ -902,7 +902,7 @@ function e6(e) {
         e.guildId === n.id && e.shouldDeleteReadState(r) && e.delete(!1);
     }),
         ej(null != (t = n.channels) ? t : []),
-        e3(n),
+        e2(n),
         eG(n);
 }
 function e8(e) {

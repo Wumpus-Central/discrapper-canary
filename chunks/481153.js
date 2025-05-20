@@ -1,4 +1,4 @@
-n.d(t, { Z: () => I });
+n.d(t, { Z: () => S });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -15,12 +15,12 @@ var r = n(255367),
     f = n(55563),
     _ = n(296848),
     x = n(981631),
-    b = n(474936),
-    E = n(388032),
+    E = n(474936),
+    b = n(388032),
     v = n(378027),
     O = n(893354),
-    S = n(20493);
-let I = o.ZP.connectStores([f.Z, c.Z, m.Z, p.default], (e) => {
+    I = n(20493);
+let S = o.ZP.connectStores([f.Z, c.Z, m.Z, p.default], (e) => {
     let { giftCode: t } = e,
         n = f.Z.get(t.skuId),
         { subscriptionPlanId: r } = t;
@@ -32,11 +32,11 @@ let I = o.ZP.connectStores([f.Z, c.Z, m.Z, p.default], (e) => {
     };
 })((e) => {
     let { error: t, giftCode: n, gifter: l, sku: o, application: c, subscriptionPlan: p } = e,
-        m = null == l ? E.intl.string(E.t.lTGZAg) : E.intl.formatToPlainString(E.t.TjWdPT, { username: l.username }),
+        m = null == l ? b.intl.string(b.t.lTGZAg) : b.intl.formatToPlainString(b.t.TjWdPT, { username: l.username }),
         f = o.name;
     return (
         null != p &&
-            (f = E.intl.formatToPlainString(p.interval === b.rV.MONTH ? E.t.CTpcCQ : E.t.rgPWGx, {
+            (f = b.intl.formatToPlainString(p.interval === E.rV.MONTH ? b.t.CTpcCQ : b.t.rgPWGx, {
                 skuName: o.name,
                 intervalCount: p.intervalCount
             })),
@@ -51,17 +51,17 @@ let I = o.ZP.connectStores([f.Z, c.Z, m.Z, p.default], (e) => {
                     : (0, r.jsx)(u.qE, {
                           src: null != l ? l.getAvatarURL(void 0, 100) : null,
                           size: s.EFr.DEPRECATED_SIZE_100,
-                          className: S.marginBottom20
+                          className: I.marginBottom20
                       }),
                 null != t
                     ? (0, r.jsxs)(i.Fragment, {
-                          children: [(0, r.jsx)(u.DK, { children: E.intl.string(E.t.mDFGFh) }), (0, r.jsx)(u.Dx, { children: t })]
+                          children: [(0, r.jsx)(u.DK, { children: b.intl.string(b.t.mDFGFh) }), (0, r.jsx)(u.Dx, { children: t })]
                       })
                     : (0, r.jsxs)(i.Fragment, {
                           children: [
                               (0, r.jsx)(u.DK, { children: m }),
                               (0, r.jsxs)(u.Dx, {
-                                  className: a()(S.marginTop8, O.flexCenter),
+                                  className: a()(I.marginTop8, O.flexCenter),
                                   children: [
                                       o.productLine !== x.POd.COLLECTIBLES &&
                                           (0, r.jsx)(d.Z, {

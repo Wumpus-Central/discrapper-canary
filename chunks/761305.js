@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(35282), n(388685);
+n.d(t, { Z: () => E }), n(35282), n(388685);
 var r,
     i = n(255367),
     l = n(73800),
@@ -127,4 +127,4 @@ class x extends (r = l.PureComponent) {
     }
 }
 _(x, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) });
-let b = o.ZP.connectStores([d.Z], () => ({ defaultRoute: d.Z.defaultRoute }))(x);
+let E = o.ZP.connectStores([d.Z], () => ({ defaultRoute: d.Z.defaultRoute }))(x);

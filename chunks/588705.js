@@ -1,5 +1,5 @@
 n.d(t, {
-    R: () => I,
+    R: () => S,
     Z: () => y
 }),
     n(415506);
@@ -19,22 +19,22 @@ var r = n(255367),
     f = n(598077),
     _ = n(594174),
     x = n(51144),
-    b = n(981631),
-    E = n(888592),
+    E = n(981631),
+    b = n(888592),
     v = n(245335),
     O = n(388032),
-    S = n(782770);
-let I = () =>
+    I = n(782770);
+let S = () =>
         (0, r.jsxs)(i.Fragment, {
             children: [
                 (0, r.jsx)(o.qE, {
                     src: null,
                     size: a.EFr.DEPRECATED_SIZE_100,
-                    className: S.avatar
+                    className: I.avatar
                 }),
                 (0, r.jsx)(o.DK, { children: O.intl.string(O.t['3rE1Pz']) }),
                 (0, r.jsx)(o.Dx, {
-                    className: S.inviteResolvingGuildName,
+                    className: I.inviteResolvingGuildName,
                     children: O.intl.string(O.t.ZTNur6)
                 })
             ]
@@ -43,22 +43,22 @@ let I = () =>
         let { guild: t, user: n, application: i, compact: l } = e;
         return null != i
             ? (0, r.jsx)(c.Z, {
-                  className: S.appIcon,
+                  className: I.appIcon,
                   game: i,
-                  size: S.appIconSize
+                  size: I.appIconSize
               })
             : null != n
               ? (0, r.jsx)(o.qE, {
                     src: null != n ? n.getAvatarURL(void 0, 80) : null,
                     size: a.EFr.SIZE_80,
-                    className: l ? S.compactAvatar : S.avatar
+                    className: l ? I.compactAvatar : I.avatar
                 })
               : null != t
                 ? (0, r.jsx)(s.ZP, {
                       mask: s.ZP.Masks.SQUIRCLE,
                       width: 64,
                       height: 64,
-                      className: S.guildIcon,
+                      className: I.guildIcon,
                       children: (0, r.jsx)(o.Vj, {
                           guild: t,
                           size: o.Vj.Sizes.LARGER,
@@ -72,15 +72,15 @@ let I = () =>
         let n,
             i,
             s,
-            { invite: c, disableUser: I = !1, error: y, flatActivityCount: N = !1, isRegister: C = !1, inUnclaimedFlowExperiment: T = !1 } = e,
+            { invite: c, disableUser: S = !1, error: y, flatActivityCount: N = !1, isRegister: C = !1, inUnclaimedFlowExperiment: T = !1 } = e,
             { currentUser: A } = (0, l.cj)([_.default], () => ({ currentUser: _.default.getCurrentUser() })),
             P = (0, d.WR)({ location: 'invite' }) && null != A;
         if (null == c) return null;
         let Z = null != c.guild ? new m.ZP(c.guild) : null,
             R = null != c.channel ? (0, p.jD)(c.channel) : null,
             w = null != c.target_application ? new h.ZP(c.target_application) : null,
-            L = I || null == c.inviter ? null : new f.Z(c.inviter),
-            D = !((null != c.approximate_member_count && c.approximate_member_count > 100) || (null != Z && Z.hasFeature(b.oNc.COMMUNITY))) && null != L,
+            L = S || null == c.inviter ? null : new f.Z(c.inviter),
+            D = !((null != c.approximate_member_count && c.approximate_member_count > 100) || (null != Z && Z.hasFeature(E.oNc.COMMUNITY))) && null != L,
             k = null,
             M = !1;
         if (null != Z)
@@ -90,7 +90,7 @@ let I = () =>
                 D &&
                     null == w &&
                     (n = (0, r.jsx)(o.Vj, {
-                        className: S.icon,
+                        className: I.icon,
                         guild: Z,
                         size: o.Vj.Sizes.SMALL
                     })),
@@ -100,11 +100,11 @@ let I = () =>
                     (s = (0, r.jsxs)('div', {
                         children: [
                             (0, r.jsx)(o.DK, {
-                                className: S.appIn,
+                                className: I.appIn,
                                 children: O.intl.string(O.t['3gg9fH'])
                             }),
                             (0, r.jsxs)('div', {
-                                className: S.guildContainer,
+                                className: I.guildContainer,
                                 children: [
                                     (0, r.jsx)(o.Vj, {
                                         guild: Z,
@@ -114,7 +114,7 @@ let I = () =>
                                         tag: 'span',
                                         variant: 'text-lg/normal',
                                         color: 'header-primary',
-                                        className: S.appGuildName,
+                                        className: I.appGuildName,
                                         children: Z.name
                                     })
                                 ]
@@ -141,12 +141,12 @@ let I = () =>
                     null != y
                         ? null
                         : (0, r.jsx)(o.DK, {
-                              className: S.directInviteSubTitle,
+                              className: I.directInviteSubTitle,
                               children: C ? O.intl.format(O.t['6r4JiY'], { username: e }) : O.intl.format(O.t.Quj7HR, { username: e })
                           }));
         }
         return (0, r.jsxs)('div', {
-            className: S.container,
+            className: I.container,
             children: [
                 (0, r.jsx)(j, {
                     application: w,
@@ -162,12 +162,12 @@ let I = () =>
                           children: [
                               (0, r.jsx)(o.DK, { children: k }),
                               (0, r.jsxs)(o.Dx, {
-                                  className: S.title,
+                                  className: I.title,
                                   children: [
                                       null != Z
                                           ? (0, r.jsx)(u.Z, {
                                                 guild: Z,
-                                                className: S.guildBadge,
+                                                className: I.guildBadge,
                                                 tooltipPosition: 'left'
                                             })
                                           : null,
@@ -178,10 +178,10 @@ let I = () =>
                           ]
                       }),
                 s,
-                null != w || M || (null == c || null == (t = c.guild) ? void 0 : t.id) === E.fQ
+                null != w || M || (null == c || null == (t = c.guild) ? void 0 : t.id) === b.fQ
                     ? null
                     : (0, r.jsx)(o.EJ, {
-                          className: S.activityCount,
+                          className: I.activityCount,
                           online: c.approximate_presence_count,
                           total: c.approximate_member_count,
                           flat: N

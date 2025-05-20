@@ -15,12 +15,12 @@ var r = n(255367),
     f = n(314897),
     _ = n(896797),
     x = n(82142),
-    b = n(283595),
-    E = n(55563),
+    E = n(283595),
+    b = n(55563),
     v = n(669079),
     O = n(63063),
-    S = n(51144),
-    I = n(481153),
+    I = n(51144),
+    S = n(481153),
     j = n(781428),
     y = n(423527),
     N = n(981631),
@@ -157,7 +157,7 @@ class P extends i.PureComponent {
         let n = this.getErrorMessage(e);
         return (0, r.jsxs)(h.ZP, {
             children: [
-                (0, r.jsx)(I.Z, { giftCode: e }),
+                (0, r.jsx)(S.Z, { giftCode: e }),
                 (0, r.jsx)(h.zx, {
                     disabled: null != n,
                     className: T.marginTop40,
@@ -172,7 +172,7 @@ class P extends i.PureComponent {
                     : (0, r.jsx)(h.i_, {
                           className: T.marginTop20,
                           children: C.intl.format(C.t.NYM08v, {
-                              userTag: S.ZP.getUserTag(t),
+                              userTag: I.ZP.getUserTag(t),
                               onLogoutClick: this.handleLogout
                           })
                       })
@@ -254,19 +254,19 @@ class P extends i.PureComponent {
             });
     }
 }
-let Z = o.ZP.connectStores([x.Z, b.Z, f.default, E.Z, _.Z, p.Z], (e) => {
+let Z = o.ZP.connectStores([x.Z, E.Z, f.default, b.Z, _.Z, p.Z], (e) => {
     let t = e.match.params.giftCode,
         n = x.Z.get(t),
-        r = null != n ? E.Z.get(n.skuId) : null;
+        r = null != n ? b.Z.get(n.skuId) : null;
     return {
         giftCode: n,
         sku: r,
-        libraryApplication: null != r && (null == n ? void 0 : n.entitlementBranches) != null ? v.z2(n.entitlementBranches, r, b.Z) : null,
+        libraryApplication: null != r && (null == n ? void 0 : n.entitlementBranches) != null ? v.z2(n.entitlementBranches, r, E.Z) : null,
         authenticated: f.default.isAuthenticated(),
         defaultRoute: _.Z.defaultRoute,
         isResolved: x.Z.getIsResolved(t),
         isAccepting: x.Z.getIsAccepting(t),
-        libraryApplicationsFetched: b.Z.fetched,
+        libraryApplicationsFetched: E.Z.fetched,
         nativeAppState: p.Z.getState(t)
     };
 })(P);

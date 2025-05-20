@@ -15,12 +15,12 @@ var r = n(255367),
     f = n(639946),
     _ = n(792766),
     x = n(362762),
-    b = n(978684),
-    E = n(264229),
+    E = n(978684),
+    b = n(264229),
     v = n(929809),
     O = n(703656),
-    S = n(108427),
-    I = n(314897),
+    I = n(108427),
+    S = n(314897),
     j = n(896797),
     y = n(701190),
     N = n(626135),
@@ -63,13 +63,13 @@ async function V(e) {
 class H extends i.PureComponent {
     componentDidMount() {
         let { isUnderage: e, login: t, inviteKey: n } = this.props;
-        if ((N.default.track(L.rMx.INVITE_VIEWED, { invite_code: n }, { flush: !0 }), (0, S.e)('invite'), !M.KO)) {
+        if ((N.default.track(L.rMx.INVITE_VIEWED, { invite_code: n }, { flush: !0 }), (0, I.e)('invite'), !M.KO)) {
             let e = this.getInviteKey();
             P.Z.launch('discord://' + L.Z5c.INVITE(e), () => void 0);
         }
         if (!t && e) {
             let e = this.getInviteKey(),
-                { baseCode: t } = (0, E.fU)(e);
+                { baseCode: t } = (0, b.fU)(e);
             (0, O.dL)(L.Z5c.INVITE_LOGIN(t));
         }
     }
@@ -79,7 +79,7 @@ class H extends i.PureComponent {
         if (l !== this.getInviteKey(e)) V(l);
         else if (t.state === L.r2o.APP_NOT_OPENED) this.handleContinue();
         else if (this.getMode() === z.LOGIN && r !== e.authenticated && r) {
-            let e = I.default.getFingerprint();
+            let e = S.default.getFingerprint();
             if (null != e) {
                 let t = (0, s.s)(e);
                 this.track(L.rMx.INVITE_LOGIN_SUCCESSFUL, !0, { prev_user_id: t });
@@ -93,7 +93,11 @@ class H extends i.PureComponent {
         }
         if ((n !== e.nativeAppState && n === L.kEZ.OPEN && this.track(L.rMx.INVITE_APP_INVOKED, !1), this.getMode() === z.REGISTER && r && !e.authenticated)) {
             let { channel: e } = t;
-            null != e && ((0, v.c)(k.M5.INVITE_UNCLAIMED), null != t.guild ? i(L.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code)) : d.ZP.transitionToInvite(t, i));
+            if (null != e)
+                if (((0, v.c)(k.M5.INVITE_UNCLAIMED), null != t.guild)) {
+                    var a, o;
+                    i((null == (a = t.guild.features) ? void 0 : a.includes(L.oNc.MEMBER_VERIFICATION_GATE_ENABLED)) && (null == (o = t.guild.features) ? void 0 : o.includes(L.oNc.MEMBER_VERIFICATION_MANUAL_APPROVAL)) ? L.Z5c.GUILD_MEMBER_VERIFICATION(t.guild.id) : L.Z5c.APP_WITH_INVITE_AND_GUILD_ONBOARDING(t.code));
+                } else d.ZP.transitionToInvite(t, i);
         }
     }
     getInviteKey() {
@@ -107,7 +111,7 @@ class H extends i.PureComponent {
     track(e, t, n) {
         let { invite: r } = this.props,
             i = this.getInviteKey(),
-            l = (0, E.jX)(i),
+            l = (0, b.jX)(i),
             a = t
                 ? {
                       guild_id: null != r.guild ? r.guild.id : null,
@@ -253,7 +257,7 @@ class H extends i.PureComponent {
                 return this.renderSpinner(U.intl.string(U.t['Z+hCVV']));
             case L.r2o.RESOLVED:
                 var a;
-                if (n && (0, C.yE)(null != (a = e.flags) ? a : 0, o.$.IS_GUEST_INVITE)) return d.ZP.openApp(e.code), u.x.set(b.J, e.code), this.renderAppOpened(() => i(L.Z5c.APP));
+                if (n && (0, C.yE)(null != (a = e.flags) ? a : 0, o.$.IS_GUEST_INVITE)) return d.ZP.openApp(e.code), u.x.set(E.J, e.code), this.renderAppOpened(() => i(L.Z5c.APP));
                 if (n || !M.KO) return this.renderAuthenticatedOrDownload();
                 if (this.getMode() === z.LOGIN)
                     return (0, r.jsx)(R.Z, {
@@ -341,13 +345,13 @@ class H extends i.PureComponent {
             });
     }
 }
-let K = c.ZP.connectStores([y.Z, j.Z, I.default, x.Z, h.Z], (e) => {
+let K = c.ZP.connectStores([y.Z, j.Z, S.default, x.Z, h.Z], (e) => {
     var t;
     let { inviteKey: n } = e;
     return {
         invite: null != (t = y.Z.getInvite(n)) ? t : {},
         nativeAppState: x.Z.getState(n),
-        authenticated: I.default.isAuthenticated(),
+        authenticated: S.default.isAuthenticated(),
         defaultRoute: j.Z.defaultRoute,
         isUnderage: h.Z.isUnderageAnonymous()
     };

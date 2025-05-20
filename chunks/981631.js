@@ -55,7 +55,7 @@ n.d(t, {
     GU0: () => ep,
     GZQ: () => g.GZ,
     H0J: () => g.H0,
-    HGf: () => n2,
+    HGf: () => n3,
     HN8: () => eB,
     HeQ: () => g.He,
     Hqc: () => ny,
@@ -97,7 +97,7 @@ n.d(t, {
     O0b: () => nl,
     O0n: () => eo,
     O42: () => E.O4,
-    O8q: () => n3,
+    O8q: () => n2,
     OBS: () => W,
     OBo: () => ns,
     OGo: () => ed,
@@ -175,7 +175,7 @@ n.d(t, {
     XAJ: () => ev,
     XKF: () => n$,
     XmY: () => e$,
-    Xyh: () => e2,
+    Xyh: () => e3,
     YeM: () => el,
     Ypu: () => ei,
     Z5c: () => eA,
@@ -273,7 +273,7 @@ n.d(t, {
     oNc: () => U,
     o_z: () => eg,
     p3w: () => tp,
-    p6O: () => t2,
+    p6O: () => t3,
     pAY: () => t_,
     pJs: () => R,
     pKx: () => g.pK,
@@ -281,7 +281,7 @@ n.d(t, {
     pNK: () => T,
     pTL: () => rK,
     pjP: () => n0,
-    pmI: () => t3,
+    pmI: () => t2,
     q5t: () => tD,
     q9n: () => nB,
     qAy: () => tM,
@@ -340,7 +340,7 @@ n.d(t, {
     yb: () => Y,
     ylB: () => rB,
     yqN: () => nf,
-    ys_: () => e3,
+    ys_: () => e2,
     zMe: () => g.zM,
     zUn: () => nR,
     zYc: () => ry,
@@ -1572,8 +1572,8 @@ let eP = 100,
     e$ = (e) => '||'.concat(e, '||'),
     e0 = /^\|\|([\s\S]+?)\|\|/,
     e1 = /^<id:(home|browse|customize|guide|linked-roles)(?::(\d+))?>/,
-    e2 = /^\d{17,19}$/;
-var e3 = (function (e) {
+    e3 = /^\d{17,19}$/;
+var e2 = (function (e) {
         return (e.MESSAGE = 'MESSAGE'), (e.MESSAGE_GROUP_BLOCKED = 'MESSAGE_GROUP_BLOCKED'), (e.MESSAGE_GROUP_IGNORED = 'MESSAGE_GROUP_IGNORED'), (e.MESSAGE_GROUP_SPAMMER = 'MESSAGE_GROUP_SPAMMER'), (e.THREAD_STARTER_MESSAGE = 'THREAD_STARTER_MESSAGE'), (e.DIVIDER = 'DIVIDER'), (e.JUMP_TARGET = 'JUMP_TARGET'), (e.FORUM_POST_ACTION_BAR = 'FORUM_POST_ACTION_BAR'), (e.MESSAGE_GROUP = 'MESSAGE_GROUP'), (e.DIVIDER_TIME_STAMP = 'DIVIDER_TIME_STAMP'), (e.DIVIDER_NEW_MESSAGES = 'DIVIDER_NEW_MESSAGES'), e;
     })({}),
     e4 = (function (e) {
@@ -2781,8 +2781,8 @@ let t$ = new Set(['facebook', 'contacts']),
         IOS: 'https://itunes.apple.com/app/discord/id985746746',
         ANDROID: 'https://play.google.com/store/apps/details?id=com.discord'
     }),
-    t2 = 10070709,
-    t3 = [1752220, 3066993, 3447003, 10181046, 15277667, 15844367, 15105570, 15158332, 9807270, 6323595, 1146986, 2067276, 2123412, 7419530, 11342935, 12745742, 11027200, 10038562, 9936031, 5533306],
+    t3 = 10070709,
+    t2 = [1752220, 3066993, 3447003, 10181046, 15277667, 15844367, 15105570, 15158332, 9807270, 6323595, 1146986, 2067276, 2123412, 7419530, 11342935, 12745742, 11027200, 10038562, 9936031, 5533306],
     t4 = (0, u._i)(a.Z.BRAND_500);
 i()(null != t4, 'Brand color could not be parsed');
 let t5 = t4;
@@ -4634,8 +4634,8 @@ var n0 = (function (e) {
     n1 = (function (e) {
         return (e[(e.MUTUAL_FRIENDS = 2)] = 'MUTUAL_FRIENDS'), (e[(e.MUTUAL_GUILDS = 4)] = 'MUTUAL_GUILDS'), (e[(e.NO_RELATION = 8)] = 'NO_RELATION'), e;
     })({});
-let n2 = 14,
-    n3 = 6,
+let n3 = 14,
+    n2 = 6,
     n4 = 30;
 var n5 = (function (e) {
     return (e.OVERLAY = 'OVERLAY'), (e.APP = 'APP'), (e.POPOUT = 'POPOUT'), e;

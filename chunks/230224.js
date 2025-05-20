@@ -4,9 +4,9 @@ n.d(t, {
     UM: () => P,
     V6: () => T,
     WT: () => O,
-    X7: () => S,
+    X7: () => I,
     jq: () => A,
-    mx: () => b
+    mx: () => E
 }),
     n(415506);
 var r = n(255367),
@@ -25,8 +25,8 @@ var r = n(255367),
     f = n(888592),
     _ = n(388032),
     x = n(440617);
-let b = 100,
-    E = (e) => {
+let E = 100,
+    b = (e) => {
         var t, n;
         let r = {
             onlineCount: null != (t = e.approximate_presence_count) ? t : 0,
@@ -39,18 +39,18 @@ let b = 100,
         var t;
         return (null == (t = e.channel) ? void 0 : t.type) === m.d4z.GROUP_DM;
     },
-    S = (e) => null == e.channel && null == e.guild && null != e.inviter,
-    I = (e) => {
+    I = (e) => null == e.channel && null == e.guild && null != e.inviter,
+    S = (e) => {
         var t;
-        let n = E(e);
-        return (null != (t = null == n ? void 0 : n.memberCount) ? t : 0) > b;
+        let n = b(e);
+        return (null != (t = null == n ? void 0 : n.memberCount) ? t : 0) > E;
     },
     j = (e) => e.state === m.r2o.ACCEPTED,
     y = (e) => {
         let { guild_scheduled_event: t } = e;
         return null != t;
     },
-    N = (e) => !y(e) && (!!S(e) || (null != e.inviter && !j(e) && !I(e))),
+    N = (e) => !y(e) && (!!I(e) || (null != e.inviter && !j(e) && !S(e))),
     C = (e) => {
         let { guild: t, user: n, application: i } = e;
         return null != i
@@ -77,7 +77,7 @@ let b = 100,
 function T(e) {
     var t;
     let { invite: n, textClassName: i, className: l } = e,
-        o = E(n);
+        o = b(n);
     return null == o || N(n) || (null == n || null == (t = n.guild) ? void 0 : t.id) === f.fQ
         ? null
         : (0, r.jsx)(s.EJ, {

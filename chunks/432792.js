@@ -32,7 +32,7 @@ let C = () => (0, g.Lk)(document.body.style.getPropertyValue('--custom-app-panel
     O = (e) => {
         let { onboardingCoachmarkType: t, prevCoachmarksDismissed: n = !0, onShowCoachmarkHandler: i } = e,
             s = (0, u.wE)(l.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL),
-            { enabled: a } = (0, p.W)({ location: 'virtual_currency_onboarding_coachmark' }),
+            { enabled: a } = (0, p.WX)({ location: 'virtual_currency_onboarding_coachmark' }),
             o = j[t],
             c = (0, u.wE)(o),
             d = a && s && n && !c,

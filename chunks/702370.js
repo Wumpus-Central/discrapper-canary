@@ -46,8 +46,8 @@ var r = n(255367),
     K = n(228624),
     q = n(635552),
     Y = n(83479),
-    Q = n(290175),
-    X = n(905357),
+    X = n(290175),
+    Q = n(905357),
     J = n(724994),
     $ = n(328456),
     ee = n(390698),
@@ -270,7 +270,7 @@ let eT = {
         o()(null != S, 'Selected product should not be null');
         let N = (0, J.L)(n),
             { isPurchased: T, isPartiallyOwnedBundle: L } = (0, J.L)(S),
-            { isDisabled: Z, disabledReason: B } = (0, Q.G)(S.skuId),
+            { isDisabled: Z, disabledReason: B } = (0, X.G)(S.skuId),
             D = (0, V.ne)({
                 product: S,
                 isPartiallyOwnedBundle: L,
@@ -289,8 +289,8 @@ let eT = {
                 onSuccess: m
             }),
             eh = (0, K.hv)('CollectiblesProductPreviewInfo'),
-            ev = (0, X.T)(S),
-            { enabled: ex } = (0, y.W)({ location: 'collectibles_shop_product_details_modal' }),
+            ev = (0, Q.T)(S),
+            { enabled: ex } = (0, y.WX)({ location: 'collectibles_shop_product_details_modal' }),
             {
                 checkoutEligiblePrices: eg,
                 isOrbExclusive: eT,

@@ -180,7 +180,7 @@ let P = function (e) {
             },
             'animate-always'
         ),
-        N = o.useCallback(
+        T = o.useCallback(
             (e) => {
                 (x.current = e), null != v && (v.current = e);
             },
@@ -189,12 +189,12 @@ let P = function (e) {
     o.useLayoutEffect(() => {
         null != x.current && E !== i && x.current.scrollTo({ to: 0 });
     }, [i, E, x]);
-    let T = (0, s.jsx)(S, {
+    let N = (0, s.jsx)(S, {
         isMobile: d.tq,
         mobileSidebarOpen: h,
         closeAction: a
     });
-    function D() {
+    function I() {
         return null == r
             ? null
             : (0, s.jsx)(
@@ -232,7 +232,7 @@ let P = function (e) {
                                                       d.tq &&
                                                           (0, s.jsx)('div', {
                                                               className: _.mobileSidebarHeader,
-                                                              children: T
+                                                              children: N
                                                           }),
                                                       t
                                                   ]
@@ -246,13 +246,13 @@ let P = function (e) {
                                 d.tq &&
                                 (0, s.jsxs)('div', {
                                     className: l()(_.mobileContentHeader, { [_.hideHamburger]: !e }),
-                                    children: [e && (0, s.jsx)(u.r, { onClick: j }), T]
+                                    children: [e && (0, s.jsx)(u.r, { onClick: j }), N]
                                 });
                         if ('custom' === m)
                             return (0, s.jsxs)(p.W, {
                                 component: 'div',
                                 className: _.contentRegion,
-                                children: [t, n, !d.tq && T, D()]
+                                children: [t, n, !d.tq && N, I()]
                             });
                         if ('scrollableCustom' === m)
                             return (0, s.jsxs)(p.W, {
@@ -262,7 +262,7 @@ let P = function (e) {
                                     t,
                                     (0, s.jsxs)(f.yWw, {
                                         className: l()(_.contentRegionScroller, y ? _.contentRegionHiddenSidebar : _.contentRegionShownSidebar),
-                                        ref: N,
+                                        ref: T,
                                         children: [
                                             (0, s.jsx)(O.Provider, {
                                                 value: x.current,
@@ -275,10 +275,10 @@ let P = function (e) {
                                                     })
                                                 })
                                             }),
-                                            !d.tq && T
+                                            !d.tq && N
                                         ]
                                     }),
-                                    D()
+                                    I()
                                 ]
                             });
                         let r = C[null != m ? m : 'default'];
@@ -292,7 +292,7 @@ let P = function (e) {
                                         t,
                                         (0, s.jsxs)(f.yWw, {
                                             className: l()(_.contentRegionScroller, y ? _.contentRegionHiddenSidebar : _.contentRegionShownSidebar),
-                                            ref: N,
+                                            ref: T,
                                             children: [
                                                 (0, s.jsx)(O.Provider, {
                                                     value: x.current,
@@ -309,12 +309,12 @@ let P = function (e) {
                                                               })
                                                     })
                                                 }),
-                                                !d.tq && T
+                                                !d.tq && N
                                             ]
                                         })
                                     ]
                                 }),
-                                D()
+                                I()
                             ]
                         });
                     })()

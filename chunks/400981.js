@@ -1,52 +1,52 @@
-n.d(t, { Z: () => h });
-var r = n(255367);
+n.d(t, { Z: () => f });
+var l = n(255367);
 n(73800);
 var i = n(442837),
-    l = n(481060),
-    s = n(607070),
-    o = n(906732),
-    a = n(821982),
+    s = n(481060),
+    r = n(607070),
+    a = n(906732),
+    o = n(821982),
     C = n(832149),
     d = n(600164),
     c = n(286961),
     u = n(594174),
     p = n(614277),
-    _ = n(215023),
-    x = n(317112);
-function h(e) {
-    let { onClose: t, selectedPromotionalDecoPurchaseRecord: n, selectedGiftingPromotionReward: h } = e,
-        f = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
-        j = (0, i.e7)([s.Z], () => s.Z.useReducedMotion),
-        { analyticsLocations: m } = (0, o.ZP)(),
-        L = l.EFr.SIZE_32,
-        g = (0, a.Z)(null == h ? void 0 : h.assetId, L, !j),
-        S = (0, c.Z)(),
-        E = null == S ? void 0 : S.giftPurchaseConfirmation;
-    return null == n || null == E
+    x = n(215023),
+    h = n(317112);
+function f(e) {
+    let { onClose: t, selectedPromotionalDecoPurchaseRecord: n, selectedGiftingPromotionReward: f } = e,
+        j = (0, i.e7)([u.default], () => u.default.getCurrentUser()),
+        _ = (0, i.e7)([r.Z], () => r.Z.useReducedMotion),
+        { analyticsLocations: L } = (0, a.ZP)(),
+        m = s.EFr.SIZE_32,
+        g = (0, o.Z)(null == f ? void 0 : f.assetId, m, !_),
+        E = (0, c.Z)(),
+        S = null == E ? void 0 : E.giftPurchaseConfirmation;
+    return null == n || null == S
         ? null
-        : (0, r.jsx)(p.O3, {
-              children: (0, r.jsx)(l.mzw, {
+        : (0, l.jsx)(p.O3, {
+              children: (0, l.jsx)(s.mzw, {
                   align: d.Z.Align.CENTER,
-                  children: (0, r.jsxs)('div', {
-                      className: x.promotionalFooter,
+                  children: (0, l.jsxs)('div', {
+                      className: h.promotionalFooter,
                       children: [
-                          (0, r.jsx)(l.Xo$, {
-                              'aria-label': null == f ? void 0 : f.username,
-                              size: L,
-                              src: null == f ? void 0 : f.getAvatarURL(void 0, (0, l.pxk)(L), !j),
+                          (0, l.jsx)(s.Xo$, {
+                              'aria-label': null == j ? void 0 : j.username,
+                              size: m,
+                              src: null == j ? void 0 : j.getAvatarURL(void 0, (0, s.pxk)(m), !_),
                               avatarDecoration: g
                           }),
-                          (0, r.jsx)(l.zxk, {
+                          (0, l.jsx)(s.zxk, {
                               onClick: () => {
                                   t(),
                                       (0, C.Z)({
                                           product: n,
                                           shouldShowPromotionalExperience: !0,
-                                          analyticsLocations: m,
-                                          purchaseType: _.o8.PROMOTIONAL
+                                          analyticsLocations: L,
+                                          purchaseType: x.o8.PROMOTIONAL
                                       });
                               },
-                              children: E.collectRewardButtonText()
+                              children: S.collectRewardButtonText()
                           })
                       ]
                   })

@@ -140,8 +140,8 @@ function q(e) {
         eJ = ee.paymentSourceId,
         e$ = (0, O.$)($, eJ),
         { hasEntitlements: e0, entitlements: e1 } = (0, F.H)(ek.id, eP),
-        e2 = (0, C.Ap)(ee.paymentSourceId),
-        e3 = (0, b.sE)(el, eJ, X),
+        e3 = (0, C.Ap)(ee.paymentSourceId),
+        e2 = (0, b.sE)(el, eJ, X),
         e4 = (0, y.Kp)({
             isTrial: eh,
             isGift: eP,
@@ -182,7 +182,7 @@ function q(e) {
         Q = (0, r.jsx)(B.e9, {
             plan: ek,
             className: K.invoice,
-            isPrepaidPaymentSource: e2,
+            isPrepaidPaymentSource: e3,
             isCustomGift: eq,
             invoicePreview: eK
         });
@@ -239,10 +239,10 @@ function q(e) {
                             (0, r.jsx)(B.Lu, {
                                 invoice: eF,
                                 newPlan: ek,
-                                isPrepaidPaymentSource: e2,
+                                isPrepaidPaymentSource: e3,
                                 referralTrialOfferId: ep
                             }),
-                            e2
+                            e3
                                 ? null
                                 : (0, r.jsx)(B.nd, {
                                       renewalInvoice: eZ,
@@ -262,7 +262,7 @@ function q(e) {
         to = W.intl.formatToPlainString(W.t['sBpy9/'], { planName: ek.name });
     eP && !eq ? (to = W.intl.string(W.t.J5a0eX)) : eP && eq ? (to = '') : (0, C.PV)(ek.id) && (to = C.ZP.getBillingReviewSubheader(null, ek));
     let ts = null != eB && eB.length > 0 && (eJ === T.c || null === e$) && eC ? U.w.SELECT_PAYMENT_METHOD : void 0;
-    return e3
+    return e2
         ? null
         : (0, r.jsxs)('div', {
               className: K.stepBody,

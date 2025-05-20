@@ -1,5 +1,5 @@
 n.d(t, {
-    ZP: () => b,
+    ZP: () => E,
     c2: () => x,
     cK: () => p
 });
@@ -120,4 +120,4 @@ g(x, 'defaultProps', {
     bgColor: '#ffffff',
     fgColor: '#000000'
 });
-let b = _;
+let E = _;

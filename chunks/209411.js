@@ -33,12 +33,12 @@ function x(e) {
             },
             [e.transitionTo]
         ),
-        { isAuthenticated: b, loginStatus: E } = (0, o.cj)([p.default], () => ({
+        { isAuthenticated: E, loginStatus: b } = (0, o.cj)([p.default], () => ({
             isAuthenticated: p.default.isAuthenticated(),
             loginStatus: p.default.getLoginStatus()
         })),
         { location: v, redirectTo: O } = e,
-        [S, I] = i.useState(b);
+        [I, S] = i.useState(E);
     function j(e) {
         let { handoffKey: t, handoffToken: n, handoffSource: r } = e;
         (0, c.Yz)({
@@ -46,14 +46,14 @@ function x(e) {
             handoffToken: n,
             handoffSource: r
         }),
-            I(!1);
+            S(!1);
     }
     return ((0, u.ZP)(() => {
         if (null != v) {
             let { handoff_key: e, handoff_token: t } = (0, l.parse)(v.search);
             if (null != e && null != t) {
                 let n = null != O ? (0, d.L)(O) : void 0;
-                S
+                I
                     ? s.Z.logout('handoff', null).finally(() => {
                           j({
                               handoffKey: e,
@@ -69,7 +69,7 @@ function x(e) {
             }
         }
     }),
-    S || E === f.u34.LOGGING_IN)
+    I || b === f.u34.LOGGING_IN)
         ? (0, r.jsx)(m.q, {})
         : (0, r.jsx)(
               m.Z,

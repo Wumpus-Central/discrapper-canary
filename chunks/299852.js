@@ -15,7 +15,7 @@ var r,
     f = n(930441),
     _ = n(388032),
     x = n(20493);
-function b(e, t, n) {
+function E(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -29,7 +29,7 @@ function b(e, t, n) {
     );
 }
 o.ZP.initialize();
-class E extends (r = l.PureComponent) {
+class b extends (r = l.PureComponent) {
     componentDidMount() {
         let e = (0, u.Z)(this.props.location),
             t = (0, a.parse)(this.props.location.search);
@@ -148,7 +148,7 @@ class E extends (r = l.PureComponent) {
     }
     constructor(...e) {
         super(...e),
-            b(this, 'state', {
+            E(this, 'state', {
                 busy: !0,
                 success: !1,
                 user: null,
@@ -156,5 +156,5 @@ class E extends (r = l.PureComponent) {
             });
     }
 }
-b(E, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) });
-let v = o.ZP.connectStores([p.Z], () => ({ defaultRoute: p.Z.defaultRoute }))(E);
+E(b, 'defaultProps', { transitionTo: (e) => n.g.location.assign(e) });
+let v = o.ZP.connectStores([p.Z], () => ({ defaultRoute: p.Z.defaultRoute }))(b);

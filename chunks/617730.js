@@ -68,39 +68,39 @@ function _(e) {
     let { invite: t, onAcceptInvite: n, disableUser: _ = !1 } = e;
     if (null == t) return null;
     let x = null != t.guild ? new o.ZP(t.guild) : null,
-        b = null != t.channel ? (0, a.jD)(t.channel) : null,
-        E = null != t.target_application ? new l.ZP(t.target_application) : null,
+        E = null != t.channel ? (0, a.jD)(t.channel) : null,
+        b = null != t.target_application ? new l.ZP(t.target_application) : null,
         v = _ || null == t.inviter ? null : new s.Z(t.inviter),
         O = !((null != t.approximate_member_count && t.approximate_member_count > c.mx) || (null != x && x.hasFeature(d.oNc.COMMUNITY))) && null != v && (0, c.WT)(t),
-        S = f(t),
-        I = {
+        I = f(t),
+        S = {
             invite: t,
             user: v,
             guild: x,
-            channel: b,
-            application: E
+            channel: E,
+            application: b
         };
     return (0, c.JI)(t)
         ? (0, r.jsx)(u.Z, {
               invite: t,
-              channel: b,
-              isSubmitting: S,
+              channel: E,
+              isSubmitting: I,
               onAcceptInvite: n
           })
         : (0, r.jsxs)('div', {
               className: h.container,
               children: [
                   (0, r.jsx)(c.GB, {
-                      application: E,
+                      application: b,
                       guild: x,
                       user: O || (0, c.X7)(t) ? v : null
                   }),
-                  (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, m(p({}, I), { showBigUserIcon: O })),
-                  (0, r.jsx)(c.UM, m(p({}, I), { showBigUserIcon: O })),
-                  (0, r.jsx)(c.V6, p({}, I)),
+                  (0, c.X7)(t) ? null : (0, r.jsx)(c.jq, m(p({}, S), { showBigUserIcon: O })),
+                  (0, r.jsx)(c.UM, m(p({}, S), { showBigUserIcon: O })),
+                  (0, r.jsx)(c.V6, p({}, S)),
                   (0, r.jsx)(i.zxk, {
                       onClick: n,
-                      submitting: S,
+                      submitting: I,
                       className: h.acceptButton,
                       children: g.intl.string(g.t.ohMvm5)
                   })

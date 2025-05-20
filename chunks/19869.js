@@ -23,7 +23,7 @@ var i = n(255367),
     S = n(388032),
     v = n(751318);
 function T() {
-    let { enabled: e } = (0, p.W)({ location: 'revenue_storybook' });
+    let { enabled: e } = (0, p.WX)({ location: 'revenue_storybook' });
     return (0, i.jsxs)('div', {
         children: [e && (0, i.jsx)(N, {}), (0, i.jsx)(I, {}), (0, i.jsx)(y, {})]
     });

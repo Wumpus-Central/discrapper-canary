@@ -253,9 +253,9 @@ let ec = (e, t) => {
             { analyticsLocations: e$ } = (0, E.ZP)(g.Z.EMOJI_PICKER),
             { diversitySurrogate: e0 } = (0, u.cj)([y.ZP], () => ({ diversitySurrogate: y.ZP.diversitySurrogate })),
             e1 = (0, j.DV)(eU, c, l, eP),
-            e2 = null == e1 ? 0 : e1.locked.length + e1.unlocked.length,
-            e3 = w.d4.useSetting(),
-            e4 = i.useMemo(() => new Set(e3), [e3]),
+            e3 = null == e1 ? 0 : e1.locked.length + e1.unlocked.length,
+            e2 = w.d4.useSetting(),
+            e4 = i.useMemo(() => new Set(e2), [e2]),
             e5 = i.useCallback((e) => {
                 w.d4.updateSetting(Array.from(e));
             }, []),
@@ -370,13 +370,13 @@ let ec = (e, t) => {
                 (null == (e = e9[n]) ? void 0 : e[t]) == null && 0 !== t && I.kJ.setInspectedExpressionPosition(0, 0);
             }, [e9]),
             i.useEffect(() => {
-                if (('' === ej.current && '' !== eU && (0, j.PC)(eJ, l), 0 === e2 && '' !== eU)) ep(eJ, eU);
+                if (('' === ej.current && '' !== eU && (0, j.PC)(eJ, l), 0 === e3 && '' !== eU)) ep(eJ, eU);
                 else if ('' !== eU && ej.current !== eU) {
                     var e;
-                    eh(e2, null != (e = null == e1 ? void 0 : e1.locked.length) ? e : 0, eJ, eU, l);
+                    eh(e3, null != (e = null == e1 ? void 0 : e1.locked.length) ? e : 0, eJ, eU, l);
                 }
                 ej.current = eU;
-            }, [eU, eJ, e2, e1, l]);
+            }, [eU, eJ, e3, e1, l]);
         let tu = null != ev ? ev : C ? 'div' : _.VqE,
             td = null != e6;
         if ((null == ek ? void 0 : ek.type) === H.Bg.PREMIUM) {

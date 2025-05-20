@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -16,31 +16,31 @@ var r = n(255367),
     _ = n(388032),
     x = n(20493);
 l.ZP.initialize();
-let b = (e) => {
+let E = (e) => {
     let { location: t } = e,
         n = (0, l.e7)([m.default], () => m.default.isAuthenticated()),
-        b = (0, l.e7)([d.Z], () => d.Z.hasLoadedExperiments),
-        E = (0, h.oK)('RSL - Landing Page'),
+        E = (0, l.e7)([d.Z], () => d.Z.hasLoadedExperiments),
+        b = (0, h.oK)('RSL - Landing Page'),
         [v, O] = i.useState(!1),
-        [S, I] = i.useState(_.intl.string(_.t['9exy+f'])),
+        [I, S] = i.useState(_.intl.string(_.t['9exy+f'])),
         [j, y] = i.useState(!0),
         N = (e) => {
             switch (e) {
                 case f.evJ.INVALID_FORM_BODY:
                 case f.evJ.DSA_RSL_REPORT_NOT_FOUND:
-                    I(_.intl.string(_.t.bzXDfX));
+                    S(_.intl.string(_.t.bzXDfX));
                     break;
                 case f.evJ.DSA_RSL_ALREADY_REQUESTED:
-                    I(_.intl.string(_.t.rV00ws));
+                    S(_.intl.string(_.t.rV00ws));
                     break;
                 case f.evJ.DSA_RSL_LIMITED_TIME:
-                    I(_.intl.string(_.t['0dI29v']));
+                    S(_.intl.string(_.t['0dI29v']));
                     break;
                 case f.evJ.DSA_RSL_REPORT_INELIGIBLE:
-                    I(_.intl.string(_.t['RGa/GR']));
+                    S(_.intl.string(_.t['RGa/GR']));
                     break;
                 default:
-                    I(_.intl.string(_.t['0QLzfn']));
+                    S(_.intl.string(_.t['0QLzfn']));
             }
         };
     return (
@@ -54,14 +54,14 @@ let b = (e) => {
                 : y(!1);
         }, [n]),
         i.useEffect(() => {
-            b || E || o.Z.getExperiments();
-        }, [b, E]),
+            E || b || o.Z.getExperiments();
+        }, [E, b]),
         i.useEffect(() => {
             let e = async (e) => {
                 var t, n;
                 try {
                     let n = null != e ? await (0, g.hs)(e) : void 0;
-                    null != n ? I(_.intl.string(_.t.e6mZMj)) : N(null == (t = n.body) ? void 0 : t.code);
+                    null != n ? S(_.intl.string(_.t.e6mZMj)) : N(null == (t = n.body) ? void 0 : t.code);
                 } catch (e) {
                     N(null == (n = e.body) ? void 0 : n.code);
                 } finally {
@@ -70,13 +70,13 @@ let b = (e) => {
             };
             O(!0), e((0, c.Z)(t)), (0, p.e)('report_second_look');
         }, [t]),
-        E &&
+        b &&
             !j &&
             (0, r.jsxs)(u.ZP, {
                 children: [
                     (0, r.jsx)(u.Dx, {
                         className: x.marginBottom8,
-                        children: S
+                        children: I
                     }),
                     v && (0, r.jsx)(a.$jN, {})
                 ]

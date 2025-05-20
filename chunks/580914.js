@@ -74,7 +74,7 @@ let L = {
             q = (0, x.a)()(z),
             Y = (0, S.l)(q).slice(0, 4),
             $ = (0, k.St)(Y),
-            K = v === T.AW.ORBS ? I.intl.string(I.t['1CdL8f']) : I.intl.formatToPlainString(I.t.wvKYCg, { category_name: F.name });
+            X = v === T.AW.ORBS ? I.intl.string(I.t['1CdL8f']) : I.intl.formatToPlainString(I.t.wvKYCg, { category_name: F.name });
         return null != A && (t || F !== L)
             ? (0, r.jsxs)('div', {
                   className: a()(B.heroBlock, { [B.responsiveHero]: null == M ? void 0 : M.responsive }),
@@ -168,7 +168,7 @@ let L = {
                                                             (0, p.navigateToQuestHome)({ fromContent: o.j.ORBS_SHOP_HERO_CTA }))
                                                           : n('shop latest category hero', F.categorySkuId);
                                                   },
-                                                  children: K
+                                                  children: X
                                               })
                                           })
                                   ]

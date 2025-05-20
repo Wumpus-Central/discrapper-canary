@@ -1,47 +1,44 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => C });
 var r = n(255367);
 n(73800);
 var i = n(442837),
-    a = n(481060),
-    o = n(607070),
+    l = n(481060),
+    a = n(607070),
     s = n(821982),
-    l = n(594174),
+    o = n(594174),
     c = n(484027),
     u = n(328756),
     d = n(131812);
-let f = 1.2,
-    _ = 0.321;
-function p(e) {
-    let { maxRewardImageSrc: t, claimableRewards: n, size: p } = e,
-        h = (0, i.e7)([l.default], () => l.default.getCurrentUser()),
-        m = (0, i.e7)([o.Z], () => o.Z.useReducedMotion),
-        g = (0, a.pxk)(p),
-        E = { height: g * f };
+function C(e) {
+    let { maxRewardImageSrc: t, claimableRewards: n, size: C } = e,
+        m = (0, i.e7)([o.default], () => o.default.getCurrentUser()),
+        p = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
+        g = (0, l.pxk)(C);
     return n.length > 2
         ? (0, r.jsx)('img', {
               alt: '',
               src: t,
-              style: E
+              style: { height: 1.2 * g }
           })
         : (0, r.jsxs)('div', {
               className: c.container,
               children: [
                   (1 === n.length || 2 === n.length) &&
-                      (0, r.jsx)(a.Xo$, {
-                          'aria-label': null == h ? void 0 : h.username,
-                          size: p,
+                      (0, r.jsx)(l.Xo$, {
+                          'aria-label': null == m ? void 0 : m.username,
+                          size: C,
                           className: c.firstPromotionalAvatar,
-                          src: 1 === n.length ? (null == h ? void 0 : h.getAvatarURL(void 0, (0, a.pxk)(p), !m)) : d,
-                          avatarDecoration: (0, s.Z)(n[0].assetId, p, !m)
+                          src: 1 === n.length ? (null == m ? void 0 : m.getAvatarURL(void 0, (0, l.pxk)(C), !p)) : d,
+                          avatarDecoration: (0, s.Z)(n[0].assetId, C, !p)
                       }),
                   2 === n.length &&
                       (0, r.jsx)('div', {
-                          style: { marginRight: -Math.round(g * _) },
-                          children: (0, r.jsx)(a.Xo$, {
-                              'aria-label': null == h ? void 0 : h.username,
-                              size: p,
+                          style: { marginRight: -Math.round(0.321 * g) },
+                          children: (0, r.jsx)(l.Xo$, {
+                              'aria-label': null == m ? void 0 : m.username,
+                              size: C,
                               src: u,
-                              avatarDecoration: (0, s.Z)(n[1].assetId, p, !m)
+                              avatarDecoration: (0, s.Z)(n[1].assetId, C, !p)
                           })
                       })
               ]

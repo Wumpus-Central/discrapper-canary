@@ -33,7 +33,7 @@ let c = (e) => {
                 product: n,
                 isPremiumUser: r
             }),
-            { enabled: d } = (0, i.C)({ location: 'getShopProductPrices' }),
+            { enabled: d } = (0, i.CE)({ location: 'getShopProductPrices' }),
             h = d ? u.find((e) => e.currency === a.pKx.DISCORD_ORB) : void 0,
             p = u.find((e) => e.currency !== a.pKx.DISCORD_ORB),
             f = [],

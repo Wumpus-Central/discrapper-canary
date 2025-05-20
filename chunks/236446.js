@@ -15,12 +15,12 @@ var r = n(255367),
     f = n(306453),
     _ = n(929809),
     x = n(108427),
-    b = n(390885),
-    E = n(314897),
+    E = n(390885),
+    b = n(314897),
     v = n(896797),
     O = n(954824),
-    S = n(781428),
-    I = n(163671),
+    I = n(781428),
+    S = n(163671),
     j = n(423527),
     y = n(981631),
     N = n(260539),
@@ -118,7 +118,7 @@ class L extends i.PureComponent {
             case N.Rj.RESOLVED:
                 if (n || !A.KO) return this.renderAuthenticatedOrDownload();
                 if (this.props.login)
-                    return (0, r.jsx)(S.Z, {
+                    return (0, r.jsx)(I.Z, {
                         guildTemplate: e,
                         transitionTo: i,
                         location: l
@@ -128,7 +128,7 @@ class L extends i.PureComponent {
                     transitionTo: i,
                     location: l,
                     onRegister: () => {
-                        (0, _.c)(C.M5.ORGANIC_REGISTERED_GUILD_TEMPLATE), b.Z.flowStart(T.MK.ORGANIC_GUILD_TEMPLATES, T.EW.NUF_STARTED);
+                        (0, _.c)(C.M5.ORGANIC_REGISTERED_GUILD_TEMPLATE), E.Z.flowStart(T.MK.ORGANIC_GUILD_TEMPLATES, T.EW.NUF_STARTED);
                     }
                 });
             case N.Rj.EXPIRED:
@@ -149,7 +149,7 @@ function D(e) {
     let t = {
         guildTemplate: (0, c.e7)([g.Z], () => g.Z.getGuildTemplate(e.code)),
         nativeAppState: (0, c.e7)([d.Z], () => d.Z.getState(e.code)),
-        authenticated: (0, c.e7)([E.default], () => E.default.isAuthenticated()),
+        authenticated: (0, c.e7)([b.default], () => b.default.isAuthenticated()),
         defaultRoute: (0, c.e7)([v.Z], () => v.Z.defaultRoute)
     };
     return (0, r.jsx)(
@@ -175,7 +175,7 @@ function D(e) {
 function k(e) {
     let { guildTemplate: t } = e,
         { form: n, handleSubmit: i } = (0, h.Z)(t, !1);
-    b.Z.flowStep(T.MK.ORGANIC_GUILD_TEMPLATES, T.X2.GUILD_CREATE);
+    E.Z.flowStep(T.MK.ORGANIC_GUILD_TEMPLATES, T.X2.GUILD_CREATE);
     let l = (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(u.Dx, {
@@ -190,7 +190,7 @@ function k(e) {
             })
         ]
     });
-    return (0, r.jsx)(I.Z, {
+    return (0, r.jsx)(S.Z, {
         className: Z.authBox,
         children: () => [
             (0, r.jsx)(m.Z, { guildTemplate: t }, 'template'),

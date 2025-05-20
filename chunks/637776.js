@@ -15,13 +15,13 @@ var r = n(255367),
 function f(e) {
     let { location: t } = e,
         [f, _] = i.useState(!1),
-        { verifySuccess: x, verifyErrors: b, redirectGuildId: E } = (0, l.e7)([d.Z], () => d.Z.getState());
+        { verifySuccess: x, verifyErrors: E, redirectGuildId: b } = (0, l.e7)([d.Z], () => d.Z.getState());
     i.useEffect(() => {
         let e = (0, o.Z)(t);
         a.Z.verify(e), (0, u.e)('verify_hub_email');
     }, [t]);
     let v = () => {
-        (0, g.Z)(E), _(!0);
+        (0, g.Z)(b), _(!0);
     };
     return f
         ? (0, r.jsxs)(s.ZP, {
@@ -36,7 +36,7 @@ function f(e) {
                   }),
                   (0, r.jsx)(s.zx, {
                       className: m.spacedButton,
-                      onClick: () => (0, c.uL)(h.Z5c.CHANNEL(E)),
+                      onClick: () => (0, c.uL)(h.Z5c.CHANNEL(b)),
                       children: p.intl.string(p.t.fIv16O)
                   })
               ]
@@ -58,7 +58,7 @@ function f(e) {
                     })
                 ]
             })
-          : null != b
+          : null != E
             ? (0, r.jsxs)(s.ZP, {
                   children: [
                       (0, r.jsx)(s.Ee, {

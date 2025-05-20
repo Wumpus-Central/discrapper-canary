@@ -1,5 +1,5 @@
 let r, i, s;
-n.d(t, { Z: () => T }), n(388685), n(539854);
+n.d(t, { Z: () => N }), n(388685), n(539854);
 var o,
     a,
     l,
@@ -83,7 +83,7 @@ let w =
             s
         );
     });
-class N extends (o = d.ZP.Store) {
+class T extends (o = d.ZP.Store) {
     initialize() {
         this.waitFor(v.Z, h.Z, y.default, b.Z, j.ZP), this.syncWith([j.ZP, b.Z], P);
     }
@@ -105,15 +105,15 @@ class N extends (o = d.ZP.Store) {
     }
 }
 (l = 'PrivateChannelSortStore'),
-    (a = 'displayName') in N
-        ? Object.defineProperty(N, a, {
+    (a = 'displayName') in T
+        ? Object.defineProperty(T, a, {
               value: l,
               enumerable: !0,
               configurable: !0,
               writable: !0
           })
-        : (N[a] = l);
-let T = new N(f.Z, {
+        : (T[a] = l);
+let N = new T(f.Z, {
     CONNECTION_OPEN: P,
     CONNECTION_OPEN_SUPPLEMENTAL: P,
     OVERLAY_INITIALIZE: P,

@@ -35,7 +35,7 @@ function P(e) {
         k = (0, b.ZP)(),
         T = (0, s.e7)([_.default], () => _.default.getCurrentUser()),
         w = (null == T ? void 0 : T.isStaff()) || (null == T ? void 0 : T.isStaffPersonal()) || !1,
-        { enabled: I } = (0, h.W)({ location: 'collectibles_shop_header_bar' }),
+        { enabled: I } = (0, h.WX)({ location: 'collectibles_shop_header_bar' }),
         B = [
             {
                 tab: O.AW.HOME,

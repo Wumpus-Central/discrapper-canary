@@ -31,9 +31,9 @@ var r = n(120356),
     I = n(404380),
     N = n(879463),
     y = n(104494),
-    A = n(987997),
-    P = n(833569),
-    R = n(823188),
+    A = n(382791),
+    P = n(987997),
+    R = n(833569),
     D = n(474936),
     Z = n(981631),
     w = n(388032),
@@ -107,10 +107,10 @@ function G(e) {
                                     t,
                                     a &&
                                         null != o &&
-                                        (0, i.jsx)(R.Cy, {
+                                        (0, i.jsx)(A.Cy, {
                                             text: w.intl.formatToPlainString(w.t.iiLbvr, { percent: o }),
                                             className: k.discountPill,
-                                            colorOptions: R.VE.PREMIUM_TIER_2_WHITE_FILL,
+                                            colorOptions: A.VE.PREMIUM_TIER_2_WHITE_FILL,
                                             isPillOnBorder: !1
                                         })
                                 ]
@@ -147,10 +147,10 @@ function F(e) {
                                     t,
                                     a &&
                                         null != o &&
-                                        (0, i.jsx)(R.Cy, {
+                                        (0, i.jsx)(A.Cy, {
                                             text: w.intl.formatToPlainString(w.t.iiLbvr, { percent: o }),
                                             className: k.discountPill,
-                                            colorOptions: R.VE.PREMIUM_TIER_2_WHITE_FILL,
+                                            colorOptions: A.VE.PREMIUM_TIER_2_WHITE_FILL,
                                             isPillOnBorder: !1
                                         }),
                                     n
@@ -187,7 +187,7 @@ function z() {
             className: k.planInfo,
             children: w.intl.string(w.t.R0GJLy)
         }),
-        buttons: (0, i.jsx)(A.Z, {
+        buttons: (0, i.jsx)(P.Z, {
             className: k.toolsButton,
             onClick: () =>
                 (0, h.Z)({
@@ -202,7 +202,7 @@ function z() {
 }
 let W = function (e) {
     var t;
-    let { subscription: r, renewalInvoicePreview: l, paymentSource: p, busy: R, analyticsLocation: z } = e,
+    let { subscription: r, renewalInvoicePreview: l, paymentSource: p, busy: A, analyticsLocation: z } = e,
         W = 'subscription_header',
         { analyticsLocations: Y } = (0, m.ZP)(u.Z.SUBSCRIPTION_HEADER),
         K = (0, o.e7)([b.default], () => b.default.getCurrentUser()),
@@ -216,13 +216,13 @@ let W = function (e) {
         et = (0, v.lr)(),
         en = (0, T.W)().isInReverseTrial,
         ei = () => {
-            (r.status === Z.O0b.ACTIVE || r.status === Z.O0b.PAST_DUE || r.status === Z.O0b.PAUSED) && el(P.R.PAUSE_SELECT);
+            (r.status === Z.O0b.ACTIVE || r.status === Z.O0b.PAST_DUE || r.status === Z.O0b.PAUSED) && el(R.R.PAUSE_SELECT);
         },
         er = () => {
             (r.status === Z.O0b.ACTIVE || r.status === Z.O0b.PAST_DUE || r.status === Z.O0b.PAUSE_PENDING || X) && el();
         },
         es = () => {
-            r.status === Z.O0b.BILLING_RETRY && el(P.R.CONFIRM);
+            r.status === Z.O0b.BILLING_RETRY && el(R.R.CONFIRM);
         },
         el = (e) => {
             (0, c.ZDy)(async () => {
@@ -279,10 +279,10 @@ let W = function (e) {
                 : d.v4(r, Y);
         },
         ec = () => {
-            r.status === Z.O0b.PAUSED && el(P.R.PAUSE_SELECT);
+            r.status === Z.O0b.PAUSED && el(R.R.PAUSE_SELECT);
         },
         ed = () => {
-            el(P.R.WHAT_YOU_LOSE);
+            el(R.R.WHAT_YOU_LOSE);
         },
         eu = j.ZP.getPlanIdFromInvoice(r, l);
     if ((0, f.Q0)(eu)) return null;
@@ -350,7 +350,7 @@ let W = function (e) {
                         size: c.zxk.Sizes.SMALL,
                         look: c.iLD.OUTLINED,
                         color: c.Ttl.WHITE,
-                        submitting: R,
+                        submitting: A,
                         children: w.intl.string(w.t.obRG6e)
                     })
                 });
@@ -367,7 +367,7 @@ let W = function (e) {
                                   size: c.zxk.Sizes.SMALL,
                                   look: c.iLD.LINK,
                                   color: c.Ttl.WHITE,
-                                  submitting: R,
+                                  submitting: A,
                                   onClick: ei,
                                   children: w.intl.string(w.t.eFlYVF)
                               })
@@ -376,7 +376,7 @@ let W = function (e) {
                                   size: c.zxk.Sizes.SMALL,
                                   look: c.iLD.LINK,
                                   color: c.Ttl.WHITE,
-                                  submitting: R,
+                                  submitting: A,
                                   onClick: er,
                                   children: w.intl.string(w.t['ETE/oK'])
                               }),
@@ -384,7 +384,7 @@ let W = function (e) {
                             text: t,
                             children: (t) =>
                                 (0, i.jsx)(
-                                    A.Z,
+                                    P.Z,
                                     B(L({}, t), {
                                         disabled: e,
                                         className: k.toolsButton,
@@ -408,7 +408,7 @@ let W = function (e) {
                     className: k.toolsButton,
                     size: c.zxk.Sizes.SMALL,
                     color: c.Ttl.BRAND_INVERTED,
-                    submitting: R,
+                    submitting: A,
                     onClick: ea,
                     children: w.intl.string(w.t.iIvF29)
                 });
@@ -418,7 +418,7 @@ let W = function (e) {
                         className: k.billingRetryCancel,
                         size: c.zxk.Sizes.SMALL,
                         color: c.Ttl.CUSTOM,
-                        submitting: R,
+                        submitting: A,
                         onClick: es,
                         children: w.intl.string(w.t['ETE/oK'])
                     });
@@ -431,7 +431,7 @@ let W = function (e) {
                                 size: c.zxk.Sizes.SMALL,
                                 look: c.iLD.LINK,
                                 color: c.Ttl.WHITE,
-                                submitting: R,
+                                submitting: A,
                                 onClick: er,
                                 children: w.intl.string(w.t.cM1H0N)
                             }),
@@ -439,7 +439,7 @@ let W = function (e) {
                                 className: k.toolsButton,
                                 size: c.zxk.Sizes.SMALL,
                                 color: c.Ttl.BRAND_INVERTED,
-                                submitting: R,
+                                submitting: A,
                                 onClick: eo,
                                 children: w.intl.string(w.t.TgV5QU)
                             })
@@ -457,7 +457,7 @@ let W = function (e) {
                                       size: c.zxk.Sizes.SMALL,
                                       look: c.iLD.LINK,
                                       color: c.Ttl.WHITE,
-                                      submitting: R,
+                                      submitting: A,
                                       onClick: ec,
                                       children: w.intl.string(w.t.jNHWt7)
                                   })
@@ -466,7 +466,7 @@ let W = function (e) {
                                       size: c.zxk.Sizes.SMALL,
                                       look: c.iLD.LINK,
                                       color: c.Ttl.WHITE,
-                                      submitting: R,
+                                      submitting: A,
                                       onClick: ed,
                                       children: w.intl.string(w.t.cM1H0N)
                                   }),
@@ -474,7 +474,7 @@ let W = function (e) {
                                 className: k.toolsButton,
                                 size: c.zxk.Sizes.SMALL,
                                 color: c.Ttl.BRAND_INVERTED,
-                                submitting: R,
+                                submitting: A,
                                 onClick: eo,
                                 children: w.intl.string(w.t.zpi5pq)
                             })

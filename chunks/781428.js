@@ -20,12 +20,12 @@ var r,
     f = n(579806),
     _ = n(743142),
     x = n(254942),
-    b = n(388905),
-    E = n(379760),
+    E = n(388905),
+    b = n(379760),
     v = n(600164),
     O = n(100159),
-    S = n(473855),
-    I = n(124860),
+    I = n(473855),
+    S = n(124860),
     j = n(86779),
     y = n(726745),
     N = n(913583),
@@ -98,7 +98,7 @@ function X(e, t) {
     );
 }
 function Q() {
-    return (0, i.jsx)(b.ZP, { children: (0, i.jsx)(g.$jN, {}) });
+    return (0, i.jsx)(E.ZP, { children: (0, i.jsx)(g.$jN, {}) });
 }
 class $ extends (r = l.PureComponent) {
     static getDerivedStateFromProps(e) {
@@ -213,15 +213,15 @@ class $ extends (r = l.PureComponent) {
     }
     renderHandOffAvailable() {
         let { authBoxClassName: e } = this.props;
-        return (0, i.jsxs)(b.ZP, {
+        return (0, i.jsxs)(E.ZP, {
             className: e,
             children: [
-                (0, i.jsx)(b.Hh, {}),
-                (0, i.jsx)(b.Dx, {
+                (0, i.jsx)(E.Hh, {}),
+                (0, i.jsx)(E.Dx, {
                     className: q.marginBottom8,
                     children: K.intl.string(K.t.S6RMND)
                 }),
-                (0, i.jsx)(b.DK, { children: K.intl.string(K.t.YZiJbm) })
+                (0, i.jsx)(E.DK, { children: K.intl.string(K.t.YZiJbm) })
             ]
         });
     }
@@ -229,32 +229,32 @@ class $ extends (r = l.PureComponent) {
         let { user: e, transitionTo: t, authBoxClassName: n } = this.props;
         return null == e
             ? null
-            : (0, i.jsxs)(b.ZP, {
+            : (0, i.jsxs)(E.ZP, {
                   className: n,
                   children: [
-                      (0, i.jsx)(b.qE, {
+                      (0, i.jsx)(E.qE, {
                           src: e.getAvatarURL(void 0, 100),
                           size: g.EFr.DEPRECATED_SIZE_100,
                           className: q.marginBottom20
                       }),
-                      (0, i.jsx)(b.Dx, {
+                      (0, i.jsx)(E.Dx, {
                           className: q.marginBottom8,
                           children: K.intl.format(K.t.ot19ho, { name: e.toString() })
                       }),
-                      (0, i.jsx)(b.DK, {
+                      (0, i.jsx)(E.DK, {
                           className: q.marginBottom40,
                           children: K.intl.string(K.t['2xkqzc'])
                       }),
-                      (0, i.jsxs)(b.gO, {
+                      (0, i.jsxs)(E.gO, {
                           children: [
-                              (0, i.jsx)(b.zx, {
+                              (0, i.jsx)(E.zx, {
                                   onClick: () => t(V.Z5c.APP),
                                   className: q.marginBottom8,
                                   children: K.intl.format(K.t.fohtv7, { name: e.toString() })
                               }),
-                              (0, i.jsx)(b.zx, {
-                                  look: b.zx.Looks.LINK,
-                                  color: b.zx.Colors.LINK,
+                              (0, i.jsx)(E.zx, {
+                                  look: E.zx.Looks.LINK,
+                                  color: E.zx.Colors.LINK,
                                   onClick: this.handleReset,
                                   children: K.intl.string(K.t.nO564e)
                               })
@@ -268,24 +268,24 @@ class $ extends (r = l.PureComponent) {
             t = this.props.loginStatus === V.u34.ACCOUNT_DISABLED,
             n = t ? K.intl.string(K.t['j3rC+f']) : K.intl.string(K.t.ZFWofn),
             r = t ? K.intl.string(K.t['6eNTWV']) : K.intl.string(K.t.pCBti4);
-        return (0, i.jsx)(b.ZP, {
+        return (0, i.jsx)(E.ZP, {
             tag: 'form',
             onSubmit: this.handleReset,
             className: e,
             children: (0, i.jsxs)(g.y5t, {
-                component: (0, i.jsx)(b.Dx, {
+                component: (0, i.jsx)(E.Dx, {
                     className: q.marginBottom8,
                     children: n
                 }),
                 children: [
-                    (0, i.jsx)(b.DK, {
+                    (0, i.jsx)(E.DK, {
                         className: q.marginBottom20,
                         children: r
                     }),
-                    (0, i.jsxs)(b.gO, {
+                    (0, i.jsxs)(E.gO, {
                         children: [
-                            (0, i.jsx)(b.zx, {
-                                color: b.zx.Colors.BRAND,
+                            (0, i.jsx)(E.zx, {
+                                color: E.zx.Colors.BRAND,
                                 type: 'submit',
                                 children: K.intl.string(K.t.JhDw5u)
                             }),
@@ -301,11 +301,11 @@ class $ extends (r = l.PureComponent) {
     }
     renderResolving() {
         let { authBoxClassName: e, country: t } = this.props;
-        return (0, i.jsxs)(b.ZP, {
+        return (0, i.jsxs)(E.ZP, {
             className: e,
             children: [
                 (0, i.jsx)(B.R, {}),
-                (0, i.jsxs)(b.gO, {
+                (0, i.jsxs)(E.gO, {
                     className: q.marginTop20,
                     children: [
                         (0, i.jsx)(A.Z, {
@@ -327,7 +327,7 @@ class $ extends (r = l.PureComponent) {
                             autoFocus: !0,
                             required: !0
                         }),
-                        (0, i.jsx)(b.II, {
+                        (0, i.jsx)(E.II, {
                             className: q.marginBottom20,
                             label: K.intl.string(K.t['CIGa+/']),
                             onChange: (e) => this.setState({ password: e }),
@@ -338,23 +338,23 @@ class $ extends (r = l.PureComponent) {
                             value: this.state.password,
                             required: !0
                         }),
-                        (0, i.jsx)(b.zx, {
+                        (0, i.jsx)(E.zx, {
                             className: q.marginBottom8,
                             type: 'submit',
                             disabled: !0,
                             children: K.intl.string(K.t.dKhVQE)
                         }),
-                        (0, i.jsx)(b.zx, {
+                        (0, i.jsx)(E.zx, {
                             disabled: !0,
-                            look: b.zx.Looks.LINK,
-                            color: b.zx.Colors.LINK,
+                            look: E.zx.Looks.LINK,
+                            color: E.zx.Colors.LINK,
                             children: K.intl.string(K.t.wWIufn)
                         }),
-                        (0, i.jsx)(b.zx, {
+                        (0, i.jsx)(E.zx, {
                             disabled: !0,
                             className: q.marginTop4,
-                            look: b.zx.Looks.LINK,
-                            color: b.zx.Colors.LINK,
+                            look: E.zx.Looks.LINK,
+                            color: E.zx.Colors.LINK,
                             children: K.intl.string(K.t.tmE73t)
                         })
                     ]
@@ -377,14 +377,14 @@ class $ extends (r = l.PureComponent) {
                               className: W.header,
                               children: [
                                   (0, i.jsx)(
-                                      b.Dx,
+                                      E.Dx,
                                       {
                                           className: q.marginBottom8,
                                           children: K.intl.string(K.t['7fNJgI'])
                                       },
                                       'title'
                                   ),
-                                  !1 === (0, U.isAndroidWeb)() ? (0, i.jsx)(b.DK, { children: K.intl.string(K.t.euS7r6) }, 'subtitle') : null
+                                  !1 === (0, U.isAndroidWeb)() ? (0, i.jsx)(E.DK, { children: K.intl.string(K.t.euS7r6) }, 'subtitle') : null
                               ]
                           })
                     : (0, i.jsx)(B.Z, { invite: r })),
@@ -399,12 +399,12 @@ class $ extends (r = l.PureComponent) {
                             children: [
                                 this.canShowChooseAccount &&
                                     this.state.dismissedChooseAccount &&
-                                    (0, i.jsx)(b.zx, {
+                                    (0, i.jsx)(E.zx, {
                                         onClick: () => {
                                             this.setState((e) => X(J({}, e), { dismissedChooseAccount: !1 }));
                                         },
-                                        look: b.zx.Looks.LINK,
-                                        color: b.zx.Colors.PRIMARY,
+                                        look: E.zx.Looks.LINK,
+                                        color: E.zx.Colors.PRIMARY,
                                         className: W.goBackButton,
                                         children: (0, i.jsxs)('div', {
                                             className: W.content,
@@ -423,7 +423,7 @@ class $ extends (r = l.PureComponent) {
                                     }),
                                 n,
                                 (0, i.jsx)(g.y5t, {
-                                    children: (0, i.jsxs)(b.gO, {
+                                    children: (0, i.jsxs)(E.gO, {
                                         className: q.marginTop20,
                                         children: [
                                             (0, i.jsx)(A.Z, {
@@ -446,7 +446,7 @@ class $ extends (r = l.PureComponent) {
                                                 autoFocus: !d && !c && !u,
                                                 required: !0
                                             }),
-                                            (0, i.jsx)(b.II, {
+                                            (0, i.jsx)(E.II, {
                                                 label: K.intl.string(K.t['CIGa+/']),
                                                 error: this.renderError('password'),
                                                 onChange: (e) => this.setState({ password: e }),
@@ -459,17 +459,17 @@ class $ extends (r = l.PureComponent) {
                                                 value: this.state.password,
                                                 required: !0
                                             }),
-                                            (0, i.jsx)(b.zx, {
+                                            (0, i.jsx)(E.zx, {
                                                 onClick: this.handleForgotPassword,
-                                                look: b.zx.Looks.LINK,
-                                                color: b.zx.Colors.LINK,
+                                                look: E.zx.Looks.LINK,
+                                                color: E.zx.Colors.LINK,
                                                 className: s()(q.marginBottom20, q.marginTop4),
                                                 children: K.intl.string(K.t.wWIufn)
                                             }),
-                                            (0, i.jsx)(b.zx, {
+                                            (0, i.jsx)(E.zx, {
                                                 type: 'submit',
                                                 submitting: a === V.u34.LOGGING_IN,
-                                                color: h ? b.zx.Colors.GREEN : b.zx.Colors.BRAND,
+                                                color: h ? E.zx.Colors.GREEN : E.zx.Colors.BRAND,
                                                 className: q.marginBottom8,
                                                 children: h ? K.intl.string(K.t.wvVThI) : K.intl.string(K.t.dKhVQE)
                                             }),
@@ -480,10 +480,10 @@ class $ extends (r = l.PureComponent) {
                                                         className: W.needAccount,
                                                         children: K.intl.string(K.t.tmE73t)
                                                     }),
-                                                    (0, i.jsx)(b.zx, {
+                                                    (0, i.jsx)(E.zx, {
                                                         onClick: this.handleGotoRegister,
-                                                        look: b.zx.Looks.LINK,
-                                                        color: b.zx.Colors.LINK,
+                                                        look: E.zx.Looks.LINK,
+                                                        color: E.zx.Colors.LINK,
                                                         className: W.smallRegisterLink,
                                                         children: K.intl.string(K.t.pV8xeX)
                                                     })
@@ -513,7 +513,7 @@ class $ extends (r = l.PureComponent) {
         return (0, i.jsxs)('div', {
             className: W.__invalid_pageContainer,
             children: [
-                (0, i.jsx)(b.ZP, {
+                (0, i.jsx)(E.ZP, {
                     onSubmit: this.handleLogin,
                     tag: 'form',
                     className: e,
@@ -529,7 +529,7 @@ class $ extends (r = l.PureComponent) {
             onSubmit: this.handleLogin,
             tag: 'form',
             className: s()(this.props.authBoxClassName, W.horizontalAuthBox),
-            children: () => [(0, i.jsx)(S.Z, { guildTemplate: e }, 'template'), this.renderDefaultForm(!1)]
+            children: () => [(0, i.jsx)(I.Z, { guildTemplate: e }, 'template'), this.renderDefaultForm(!1)]
         });
     }
     renderMFA() {
@@ -537,9 +537,9 @@ class $ extends (r = l.PureComponent) {
             ticket: this.props.mfaTicket,
             methods: this.props.mfaMethods
         };
-        return (0, i.jsx)(b.ZP, {
+        return (0, i.jsx)(E.ZP, {
             style: { padding: 0 },
-            children: (0, i.jsx)(I.Cd, {
+            children: (0, i.jsx)(S.Cd, {
                 mfaFinish: this.handleTokenSubmitMFA,
                 mfaChallenge: e,
                 onEarlyClose: () => {
@@ -552,10 +552,10 @@ class $ extends (r = l.PureComponent) {
     renderIPAuthorization() {
         let { authBoxClassName: e } = this.props,
             { phoneVerifyError: t } = this.state;
-        return (0, i.jsx)(b.ZP, {
+        return (0, i.jsx)(E.ZP, {
             tag: 'form',
             className: e,
-            children: (0, i.jsx)(E.Z, {
+            children: (0, i.jsx)(b.Z, {
                 title: K.intl.string(K.t.w55Ocn),
                 subtitle: K.intl.format(K.t.CfRZBg, { onResendClick: this.handleResendCode }),
                 error: t,
@@ -567,10 +567,10 @@ class $ extends (r = l.PureComponent) {
     renderPasswordRecovery() {
         let { authBoxClassName: e } = this.props,
             { phoneVerifyError: t } = this.state;
-        return (0, i.jsx)(b.ZP, {
+        return (0, i.jsx)(E.ZP, {
             tag: 'form',
             className: e,
-            children: (0, i.jsx)(E.Z, {
+            children: (0, i.jsx)(b.Z, {
                 title: K.intl.string(K.t['+xqy3d']),
                 subtitle: K.intl.format(K.t.ef4uZ2, { onResendClick: this.handleResendCode }),
                 error: t,
@@ -726,7 +726,7 @@ class $ extends (r = l.PureComponent) {
                                     {
                                         header: K.intl.string(K.t.f5Pi7O),
                                         confirmText: K.intl.string(K.t.BddRzc),
-                                        confirmButtonColor: b.zx.Colors.BRAND,
+                                        confirmButtonColor: E.zx.Colors.BRAND,
                                         className: u.tq ? W.mobile : ''
                                     },
                                     e

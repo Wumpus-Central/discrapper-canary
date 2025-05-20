@@ -1,4 +1,4 @@
-n.d(t, { i: () => j }), n(388685);
+n.d(t, { t: () => j }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(636977),
@@ -22,7 +22,7 @@ let C = 'orb-announcement-modal-key';
 function j() {
     let { hasLayers: e } = (0, o.cj)([f.Z], () => ({ hasLayers: f.Z.hasLayers() })),
         { onboardingModalOpenedPrior: t } = (0, o.cj)([b.Z], () => ({ onboardingModalOpenedPrior: b.Z.onboardingModalOpenedPrior })),
-        { enabled: j } = (0, m.W)({ location: 'virtual_currency_announcement_modal' }),
+        { enabled: j } = (0, m.hl)({ location: 'virtual_currency_announcement_modal' }),
         [S, E] = (0, h.US)(j ? [s.z.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL] : [], ...y.b.useSelectedDismissibleContent),
         x = (0, c.s9z)(c.JQI);
     i.useEffect(() => {

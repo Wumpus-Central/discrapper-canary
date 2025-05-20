@@ -1,4 +1,4 @@
-e.exports = {
+o.exports = {
     legacyPricingNotice: 'legacyPricingNotice_e50a4d',
     skuSelectModalHeader: 'skuSelectModalHeader_e50a4d',
     skuSelectModalContent: 'skuSelectModalContent_e50a4d',

@@ -4,6 +4,7 @@ e.exports = {
     isExpanded: 'isExpanded__48112',
     folderHeader: 'folderHeader__48112',
     folderButton: 'folderButton__48112',
+    folderButtonInner: 'folderButtonInner__48112',
     folderButtonContent: 'folderButtonContent__48112',
     folderDragPreview: 'folderDragPreview__48112',
     folderIconWrapper: 'folderIconWrapper__48112',

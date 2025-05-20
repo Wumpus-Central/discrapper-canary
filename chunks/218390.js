@@ -1,6 +1,6 @@
 n.d(t, {
-    C: () => ea,
-    Z: () => ec
+    C: () => eo,
+    Z: () => ed
 }),
     n(388685);
 var i = n(255367),
@@ -45,27 +45,28 @@ var i = n(255367),
     G = n(533525),
     F = n(232076),
     H = n(767714),
-    z = n(823188),
-    W = n(504865),
-    Y = n(179984),
-    K = n(386733),
-    q = n(474936),
-    X = n(981631),
-    Q = n(388032),
-    J = n(133525),
-    $ = n(881188),
-    ee = n(434691);
-let et = 'to_premium_home_button',
-    en = 'premium home page',
-    ei = 'gifting_button',
-    er = 'payment modal';
-function es(e) {
+    z = n(382791),
+    W = n(823188),
+    Y = n(504865),
+    K = n(179984),
+    q = n(386733),
+    X = n(474936),
+    Q = n(981631),
+    J = n(388032),
+    $ = n(133525),
+    ee = n(881188),
+    et = n(434691);
+let en = 'to_premium_home_button',
+    ei = 'premium home page',
+    er = 'gifting_button',
+    es = 'payment modal';
+function el(e) {
     let { premiumSubscription: t, isDiscountApplied: n, activeDiscountInfo: r, theme: s } = e,
         l = t.hasActiveTrial,
-        a = t.planIdFromItems === q.Xh.PREMIUM_YEAR_TIER_2,
+        a = t.planIdFromItems === X.Xh.PREMIUM_YEAR_TIER_2,
         c = n || l,
         d = null != t.trialEndsAt ? o()(t.trialEndsAt).diff(o()(), 'd') : 0,
-        g = q.GP[t.planIdFromItems],
+        g = X.GP[t.planIdFromItems],
         p = k.ZP.formatPriceString(k.ZP.getDefaultPrice(g.id), g.interval);
     if (c) {
         var h, f, b;
@@ -73,41 +74,41 @@ function es(e) {
             children: [
                 (l || !a) &&
                     (0, i.jsx)(z.Cy, {
-                        text: l ? Q.intl.string(Q.t.qYKftb) : Q.intl.string(Q.t.EyjDRE),
-                        className: J.topRimPillWithSparkles,
+                        text: l ? J.intl.string(J.t.qYKftb) : J.intl.string(J.t.EyjDRE),
+                        className: $.topRimPillWithSparkles,
                         colorOptions: (0, u.wj)(s) ? z.VE.PREMIUM_TIER_2_WHITE_FILL : z.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
                     }),
-                (l || !a) && (0, i.jsx)('div', { className: J.rimGlowTier2 }),
+                (l || !a) && (0, i.jsx)('div', { className: $.rimGlowTier2 }),
                 (0, i.jsx)(m.X6q, {
                     variant: 'heading-md/normal',
                     color: 'always-white',
-                    className: J.trialHeader,
+                    className: $.trialHeader,
                     children: l
-                        ? Q.intl.format(Q.t['2CGBrq'], {
+                        ? J.intl.format(J.t['2CGBrq'], {
                               remainingTime: d,
                               price: p
                           })
                         : a
-                          ? Q.intl.format(Q.t['+qqh6u'], {
-                                percent: null != (h = null == r ? void 0 : r.percentage) ? h : q.Bo,
+                          ? J.intl.format(J.t['+qqh6u'], {
+                                percent: null != (h = null == r ? void 0 : r.percentage) ? h : X.Bo,
                                 regularPrice: p
                             })
-                          : Q.intl.formatToPlainString(Q.t['3Ziutb'], {
-                                percent: null != (f = null == r ? void 0 : r.percentage) ? f : q.M_,
+                          : J.intl.formatToPlainString(J.t['3Ziutb'], {
+                                percent: null != (f = null == r ? void 0 : r.percentage) ? f : X.M_,
                                 regularPrice: p,
-                                numMonths: null != (b = null == r ? void 0 : r.duration) ? b : q.rt
+                                numMonths: null != (b = null == r ? void 0 : r.duration) ? b : X.rt
                             })
                 })
             ]
         });
     }
-    return (0, i.jsx)(W.Z, {
+    return (0, i.jsx)(Y.Z, {
         variant: void 0,
-        subscriptionTier: q.Si.TIER_2,
+        subscriptionTier: X.Si.TIER_2,
         interval: g.interval
     });
 }
-function el() {
+function ea() {
     let e = P.default.getCurrentUser(),
         t = (0, L.t7)(),
         n = (0, L.lr)(),
@@ -120,30 +121,30 @@ function el() {
     let g = a.isFractionalPremiumActive,
         p = null !== s && s.hasActiveTrial;
     return (0, i.jsxs)('div', {
-        className: l()(J.tierCard, { [J.withTier2Rim]: t || p }),
+        className: l()($.tierCard, { [$.withTier2Rim]: t || p }),
         children: [
             (0, i.jsxs)('div', {
-                className: J.tierInfo,
+                className: $.tierInfo,
                 children: [
-                    (0, i.jsx)(D.Z, { className: J.tierTitle }),
+                    (0, i.jsx)(D.Z, { className: $.tierTitle }),
                     g && !o
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(z.mn, {
-                                      text: Q.intl.string(Q.t.uXF4c3),
-                                      className: J.fractionalPremiumTopRimPill,
+                                      text: J.intl.string(J.t.uXF4c3),
+                                      className: $.fractionalPremiumTopRimPill,
                                       colorOptions: z.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
                                   }),
                                   (0, i.jsx)(m.X6q, {
                                       variant: 'heading-md/normal',
                                       color: 'always-white',
-                                      className: J.fractionalPremiumSubheader,
-                                      children: Q.intl.format(Q.t.sK7fGh, { helpCenterLink: w.Z.getArticleURL(X.BhN.FRACTIONAL_PREMIUM_ABOUT) })
+                                      className: $.fractionalPremiumSubheader,
+                                      children: J.intl.format(J.t.sK7fGh, { helpCenterLink: w.Z.getArticleURL(Q.BhN.FRACTIONAL_PREMIUM_ABOUT) })
                                   })
                               ]
                           })
                         : d
-                          ? (0, i.jsx)(es, {
+                          ? (0, i.jsx)(el, {
                                 premiumSubscription: s,
                                 isDiscountApplied: t,
                                 activeDiscountInfo: n,
@@ -153,50 +154,50 @@ function el() {
                             ? (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       (0, i.jsx)(z.Cy, {
-                                          text: Q.intl.string(Q.t.qYKftb),
-                                          className: J.topRimPillWithSparkles,
+                                          text: J.intl.string(J.t.qYKftb),
+                                          className: $.topRimPillWithSparkles,
                                           colorOptions: (0, u.wj)(r) ? z.VE.PREMIUM_TIER_2_WHITE_FILL : z.VE.PREMIUM_TIER_2_OLD_GRADIENT_FILL
                                       }),
                                       (0, i.jsx)(m.X6q, {
                                           variant: 'heading-md/normal',
                                           color: 'always-white',
-                                          className: J.trialHeader,
-                                          children: Q.intl.format(Q.t['/SfHws'], { weeks: 1 })
+                                          className: $.trialHeader,
+                                          children: J.intl.format(J.t['/SfHws'], { weeks: 1 })
                                       })
                                   ]
                               })
                             : null,
-                    (0, i.jsx)(z.nT, { featureSet: g ? z.uZ.FRACTIONAL_PREMIUM : z.uZ.DEFAULT }),
+                    (0, i.jsx)(W.nT, { featureSet: g ? W.uZ.FRACTIONAL_PREMIUM : W.uZ.DEFAULT }),
                     g && !d && (0, M.C)('nitro-settings-hero', e)
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(H.Z, {
                                       textOptions: {
-                                          textOverride: o ? Q.intl.string(Q.t.YScQSE) : Q.intl.string(Q.t['0b3YRk']),
-                                          textClassName: J.tierCardButtonCTA
+                                          textOverride: o ? J.intl.string(J.t.YScQSE) : J.intl.string(J.t['0b3YRk']),
+                                          textClassName: $.tierCardButtonCTA
                                       },
-                                      className: J.tierCardButton,
+                                      className: $.tierCardButton,
                                       color: m.zxk.Colors.WHITE,
                                       disableShine: !0,
                                       showIcon: !1
                                   }),
                                   (0, i.jsx)(m.zxk, {
-                                      className: J.managePlanButton,
+                                      className: $.managePlanButton,
                                       look: m.zxk.Looks.OUTLINED,
                                       color: m.zxk.Colors.WHITE,
                                       onClick: () => {
-                                          Z.default.track(X.rMx.PREMIUM_SETTINGS_INTERACTED, {
-                                              cta_type: et,
-                                              target: en
+                                          Z.default.track(Q.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                                              cta_type: en,
+                                              target: ei
                                           }),
                                               (0, h.xf)(),
-                                              (0, y.uL)(X.Z5c.APPLICATION_STORE);
+                                              (0, y.uL)(Q.Z5c.APPLICATION_STORE);
                                       },
                                       children: (0, i.jsx)(m.Text, {
-                                          className: J.__invalid_managePlanButtonCTA,
+                                          className: $.__invalid_managePlanButtonCTA,
                                           variant: 'text-sm/medium',
                                           color: 'always-white',
-                                          children: o ? Q.intl.string(Q.t.VR2iVF) : Q.intl.string(Q.t.T1aUAQ)
+                                          children: o ? J.intl.string(J.t.VR2iVF) : J.intl.string(J.t.T1aUAQ)
                                       })
                                   })
                               ]
@@ -204,38 +205,38 @@ function el() {
                         : (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(m.zxk, {
-                                      className: J.tierCardButton,
+                                      className: $.tierCardButton,
                                       color: m.zxk.Colors.WHITE,
                                       onClick: () => {
-                                          Z.default.track(X.rMx.PREMIUM_SETTINGS_INTERACTED, {
-                                              cta_type: et,
-                                              target: en
+                                          Z.default.track(Q.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                                              cta_type: en,
+                                              target: ei
                                           }),
                                               (0, h.xf)(),
-                                              (0, y.uL)(X.Z5c.APPLICATION_STORE);
+                                              (0, y.uL)(Q.Z5c.APPLICATION_STORE);
                                       },
                                       children: (0, i.jsx)(m.Text, {
-                                          className: J.tierCardButtonCTA,
+                                          className: $.tierCardButtonCTA,
                                           variant: 'text-sm/medium',
-                                          children: Q.intl.string(Q.t.VR2iVF)
+                                          children: J.intl.string(J.t.VR2iVF)
                                       })
                                   }),
                                   (0, i.jsx)(m.zxk, {
-                                      className: J.managePlanButton,
+                                      className: $.managePlanButton,
                                       look: m.zxk.Looks.OUTLINED,
                                       color: m.zxk.Colors.WHITE,
                                       onClick: () => {
-                                          Z.default.track(X.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                                          Z.default.track(Q.rMx.PREMIUM_SETTINGS_INTERACTED, {
                                               cta_type: 'to_subscriptions_button',
                                               target: 'subscriptions settings'
                                           }),
-                                              b.Z.open(X.oAB.SUBSCRIPTIONS);
+                                              b.Z.open(Q.oAB.SUBSCRIPTIONS);
                                       },
                                       children: (0, i.jsx)(m.Text, {
-                                          className: J.__invalid_managePlanButtonCTA,
+                                          className: $.__invalid_managePlanButtonCTA,
                                           variant: 'text-sm/medium',
                                           color: 'always-white',
-                                          children: Q.intl.string(Q.t['9uDy6O'])
+                                          children: J.intl.string(J.t['9uDy6O'])
                                       })
                                   })
                               ]
@@ -243,62 +244,62 @@ function el() {
                 ]
             }),
             (0, i.jsx)('div', {
-                className: J.tierImage,
+                className: $.tierImage,
                 children: (0, i.jsx)('img', {
-                    className: J.tierImage,
+                    className: $.tierImage,
                     alt: '',
-                    src: $
+                    src: ee
                 })
             })
         ]
     });
 }
-function ea(e) {
+function eo(e) {
     let { className: t, config: n } = e,
         r = (0, c.e7)([C.Z], () => C.Z.useReducedMotion) ? n.getStaticImageUrl() : n.getAnimatedImageUrl();
     return (0, i.jsxs)('div', {
-        className: l()(J.giftCardPromotion, t),
+        className: l()($.giftCardPromotion, t),
         children: [
             (0, i.jsx)('img', {
                 alt: '',
-                className: J.giftImagePromotion,
+                className: $.giftImagePromotion,
                 'aria-hidden': !0,
                 src: r
             }),
             (0, i.jsxs)('div', {
-                className: J.giftInfoPromotion,
+                className: $.giftInfoPromotion,
                 children: [
                     (0, i.jsx)('img', {
                         alt: '',
                         'aria-hidden': !0,
-                        className: J.giftCardPromotionBannerImage,
+                        className: $.giftCardPromotionBannerImage,
                         src: n.getBackgroundImageUrl()
                     }),
                     (0, i.jsx)(m.X6q, {
-                        className: J.giftInfoTitlePromotion,
+                        className: $.giftInfoTitlePromotion,
                         color: 'always-white',
                         variant: 'heading-xl/extrabold',
                         children: n.title()
                     }),
                     (0, i.jsx)(m.Text, {
-                        className: J.giftText,
+                        className: $.giftText,
                         color: 'always-white',
                         variant: 'text-sm/medium',
                         children: n.body()
                     }),
                     (0, i.jsx)(H.Z, {
                         isGift: !0,
-                        className: l()(J.giftCardButton, J.halloweenColor),
+                        className: l()($.giftCardButton, $.halloweenColor),
                         look: m.zxk.Looks.OUTLINED,
                         textOptions: {
-                            textOverride: Q.intl.string(Q.t.Ve9Ge3),
-                            textClassName: J.giftButtonCTA
+                            textOverride: J.intl.string(J.t.Ve9Ge3),
+                            textClassName: $.giftButtonCTA
                         },
                         color: m.zxk.Colors.CUSTOM,
                         onClick: () => {
-                            Z.default.track(X.rMx.PREMIUM_SETTINGS_INTERACTED, {
-                                cta_type: ei,
-                                target: er
+                            Z.default.track(Q.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                                cta_type: er,
+                                target: es
                             });
                         }
                     })
@@ -307,45 +308,45 @@ function ea(e) {
         ]
     });
 }
-function eo() {
+function ec() {
     var e;
     let t = null == (e = (0, U.Z)()) ? void 0 : e.billingSettingsMarketingBanner;
     return null != t
-        ? (0, i.jsx)(ea, { config: t })
+        ? (0, i.jsx)(eo, { config: t })
         : (0, i.jsxs)('div', {
-              className: J.giftCard,
+              className: $.giftCard,
               children: [
                   (0, i.jsx)('img', {
-                      className: J.giftImage,
+                      className: $.giftImage,
                       alt: '',
-                      src: ee
+                      src: et
                   }),
                   (0, i.jsxs)('div', {
-                      className: J.giftInfo,
+                      className: $.giftInfo,
                       children: [
                           (0, i.jsx)(m.X6q, {
-                              className: J.giftTitle,
+                              className: $.giftTitle,
                               variant: 'heading-xl/extrabold',
-                              children: Q.intl.string(Q.t['3KomGR'])
+                              children: J.intl.string(J.t['3KomGR'])
                           }),
                           (0, i.jsx)(m.Text, {
-                              className: J.giftText,
+                              className: $.giftText,
                               variant: 'text-sm/normal',
-                              children: Q.intl.string(Q.t.yQ06u7)
+                              children: J.intl.string(J.t.yQ06u7)
                           }),
                           (0, i.jsx)(H.Z, {
                               isGift: !0,
-                              className: l()(J.giftCardButton, J.giftCardButtonColor),
+                              className: l()($.giftCardButton, $.giftCardButtonColor),
                               look: m.zxk.Looks.OUTLINED,
                               textOptions: {
-                                  textOverride: Q.intl.string(Q.t.Ve9Ge3),
-                                  textClassName: J.giftButtonCTA
+                                  textOverride: J.intl.string(J.t.Ve9Ge3),
+                                  textClassName: $.giftButtonCTA
                               },
                               color: m.zxk.Colors.CUSTOM,
                               onClick: () => {
-                                  Z.default.track(X.rMx.PREMIUM_SETTINGS_INTERACTED, {
-                                      cta_type: ei,
-                                      target: er
+                                  Z.default.track(Q.rMx.PREMIUM_SETTINGS_INTERACTED, {
+                                      cta_type: er,
+                                      target: es
                                   });
                               }
                           })
@@ -354,7 +355,7 @@ function eo() {
               ]
           });
 }
-let ec = function () {
+let ed = function () {
     let e = (0, S.Q)(),
         { analyticsLocations: t } = (0, O.ZP)(j.Z.PREMIUM_SETTINGS),
         n = (0, c.e7)([R.ZP], () => R.ZP.getPremiumTypeSubscription()),
@@ -379,7 +380,7 @@ let ec = function () {
     let P = (0, G.b)(y);
     r.useEffect(() => {
         g.Z.wait(async () => {
-            E || e || (await Promise.all([p.jg(), p.tZ(), (0, f.Y2)(b, null, X.JjL.DISCOVERY)])), o(!1);
+            E || e || (await Promise.all([p.jg(), p.tZ(), (0, f.Y2)(b, null, Q.JjL.DISCOVERY)])), o(!1);
         });
     }, [b, E, e]);
     let [D, w] = r.useState(!1);
@@ -389,7 +390,7 @@ let ec = function () {
         L = u.fetched && u.isFractionalPremiumActive;
     if (!k && !L && !a)
         return (0, i.jsx)(N.Z, {
-            title: Q.intl.string(Q.t.dyq9TU),
+            title: J.intl.string(J.t.dyq9TU),
             note: null
         });
     if ((!k && !L) || a) return (0, i.jsx)(m.$jN, {});
@@ -399,29 +400,29 @@ let ec = function () {
         children: (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsxs)('div', {
-                    className: J.__invalid_container,
+                    className: $.__invalid_container,
                     children: [
-                        (0, i.jsx)(el, {}),
-                        P && (0, i.jsx)(K.Z, { isInSettings: !0 }),
-                        (0, i.jsx)(eo, {}),
-                        (0, i.jsx)(Y.Z, {
-                            className: J.__invalid_planComparisonTable,
+                        (0, i.jsx)(ea, {}),
+                        P && (0, i.jsx)(q.Z, { isInSettings: !0 }),
+                        (0, i.jsx)(ec, {}),
+                        (0, i.jsx)(K.Z, {
+                            className: $.__invalid_planComparisonTable,
                             hideCTAs: !0,
-                            headingOverride: Q.intl.string(Q.t.dnVvQU),
+                            headingOverride: J.intl.string(J.t.dnVvQU),
                             hidePill: !B,
-                            selectedPlanColumnClassName: J.tier2PlanComparisonTableBackground,
-                            selectedPlanTier: q.p9.TIER_2
+                            selectedPlanColumnClassName: $.tier2PlanComparisonTableBackground,
+                            selectedPlanTier: X.p9.TIER_2
                         })
                     ]
                 }),
                 (0, i.jsx)(d.$, {
                     innerRef: C,
                     onChange: (e) => {
-                        e && !D && (Z.default.track(X.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }), w(!0));
+                        e && !D && (Z.default.track(Q.rMx.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }), w(!0));
                     },
                     children: (0, i.jsx)('div', {
                         ref: C,
-                        className: J.bottomOfPageVisibilitySensor
+                        className: $.bottomOfPageVisibilitySensor
                     })
                 })
             ]

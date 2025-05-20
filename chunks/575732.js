@@ -1,33 +1,33 @@
 n.d(t, {
     FV: () => p,
     Kw: () => c,
-    LH: () => _,
-    Nv: () => f,
+    LH: () => m,
+    Nv: () => C,
     Pc: () => d,
     x7: () => u
 });
 var r = n(481060),
     i = n(709586),
-    a = n(930153),
-    o = n(74538),
+    l = n(930153),
+    a = n(74538),
     s = n(474936),
-    l = n(388032);
+    o = n(388032);
 let c = [
         {
             Icon: r.dz2,
-            getText: () => l.intl.string(l.t.kpMomJ)
+            getText: () => o.intl.string(o.t.kpMomJ)
         },
         {
             Icon: r.dz2,
-            getText: () => l.intl.formatToPlainString(l.t.p8QVLS, { maxUploadPremium: (0, o.v9)(s.p9.TIER_2, { useSpace: !1 }) })
+            getText: () => o.intl.formatToPlainString(o.t.p8QVLS, { maxUploadPremium: (0, a.v9)(s.p9.TIER_2, { useSpace: !1 }) })
         },
         {
             Icon: r.dz2,
-            getText: () => l.intl.string(l.t.W180bW)
+            getText: () => o.intl.string(o.t.W180bW)
         },
         {
             Icon: r.dz2,
-            getText: () => l.intl.string(l.t.zTk8Ul)
+            getText: () => o.intl.string(o.t.zTk8Ul)
         }
     ],
     u = [
@@ -35,106 +35,106 @@ let c = [
             Icon: (0, r.GSL)(i.Z),
             getText: function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 'en-US';
-                return l.intl.formatToPlainString(l.t.T9RTr6, {
+                return o.intl.formatToPlainString(o.t.T9RTr6, {
                     numBoosts: s.cb,
-                    percentageOff: (0, a.T3)(e, s.Rr / 100)
+                    percentageOff: (0, l.T3)(e, s.Rr / 100)
                 });
             }
         },
         {
             Icon: r.rG2,
-            getText: () => l.intl.formatToPlainString(l.t.p8QVLS, { maxUploadPremium: (0, o.v9)(s.p9.TIER_2, { useSpace: !1 }) })
+            getText: () => o.intl.formatToPlainString(o.t.p8QVLS, { maxUploadPremium: (0, a.v9)(s.p9.TIER_2, { useSpace: !1 }) })
         },
         {
             Icon: r.EO4,
-            getText: () => l.intl.string(l.t.KjrZ8f)
+            getText: () => o.intl.string(o.t.KjrZ8f)
         },
         {
             Icon: r.hGI,
-            getText: () => l.intl.string(l.t.W180bW)
+            getText: () => o.intl.string(o.t.W180bW)
         },
         {
             Icon: r.kYE,
-            getText: () => l.intl.string(l.t.CNIZf3)
+            getText: () => o.intl.string(o.t.CNIZf3)
         }
     ],
     d = [
         {
             Icon: r.rG2,
-            getText: () => l.intl.formatToPlainString(l.t.p8QVLS, { maxUploadPremium: (0, o.v9)(s.p9.TIER_2, { useSpace: !1 }) })
+            getText: () => o.intl.formatToPlainString(o.t.p8QVLS, { maxUploadPremium: (0, a.v9)(s.p9.TIER_2, { useSpace: !1 }) })
         },
         {
             Icon: r.EO4,
-            getText: () => l.intl.string(l.t.KjrZ8f)
+            getText: () => o.intl.string(o.t.KjrZ8f)
         },
         {
             Icon: r.Pt5,
-            getText: () => l.intl.string(l.t.taMwg4)
+            getText: () => o.intl.string(o.t.taMwg4)
         },
         {
             Icon: r.hGI,
-            getText: () => l.intl.string(l.t.W180bW)
+            getText: () => o.intl.string(o.t.W180bW)
         },
         {
             Icon: r.kYE,
-            getText: () => l.intl.string(l.t.CNIZf3)
+            getText: () => o.intl.string(o.t.CNIZf3)
         }
     ],
-    f = [
+    C = [
         {
             Icon: r.rG2,
-            getText: () => l.intl.formatToPlainString(l.t.p8QVLS, { maxUploadPremium: (0, o.v9)(s.p9.TIER_2, { useSpace: !1 }) })
+            getText: () => o.intl.formatToPlainString(o.t.p8QVLS, { maxUploadPremium: (0, a.v9)(s.p9.TIER_2, { useSpace: !1 }) })
         },
         {
             Icon: r.EO4,
-            getText: () => l.intl.string(l.t.KjrZ8f)
+            getText: () => o.intl.string(o.t.KjrZ8f)
         },
         {
             Icon: r.Pt5,
-            getText: () => l.intl.string(l.t.taMwg4)
+            getText: () => o.intl.string(o.t.taMwg4)
         },
         {
             Icon: r.hGI,
-            getText: () => l.intl.string(l.t.W180bW)
+            getText: () => o.intl.string(o.t.W180bW)
         },
         {
             Icon: (0, r.GSL)(i.Z),
-            getText: () => l.intl.string(l.t.cdfuUV)
+            getText: () => o.intl.string(o.t.cdfuUV)
         },
         {
             Icon: r.kYE,
-            getText: () => l.intl.string(l.t.CNIZf3)
+            getText: () => o.intl.string(o.t.CNIZf3)
         }
     ],
-    _ = [
+    m = [
         {
             Icon: r.dz2,
-            getText: () => l.intl.string(l.t.KjrZ8f)
+            getText: () => o.intl.string(o.t.KjrZ8f)
         },
         {
             Icon: r.dz2,
-            getText: () => l.intl.formatToPlainString(l.t.p8QVLS, { maxUploadPremium: (0, o.v9)(s.p9.TIER_0, { useSpace: !1 }) })
+            getText: () => o.intl.formatToPlainString(o.t.p8QVLS, { maxUploadPremium: (0, a.v9)(s.p9.TIER_0, { useSpace: !1 }) })
         },
         {
             Icon: r.dz2,
-            getText: () => l.intl.string(l.t.Uukj4u)
+            getText: () => o.intl.string(o.t.Uukj4u)
         }
     ],
     p = [
         {
             Icon: r.rG2,
-            getText: () => l.intl.formatToPlainString(l.t.p8QVLS, { maxUploadPremium: (0, o.v9)(s.p9.TIER_0, { useSpace: !1 }) })
+            getText: () => o.intl.formatToPlainString(o.t.p8QVLS, { maxUploadPremium: (0, a.v9)(s.p9.TIER_0, { useSpace: !1 }) })
         },
         {
             Icon: r.EO4,
-            getText: () => l.intl.string(l.t.KjrZ8f)
+            getText: () => o.intl.string(o.t.KjrZ8f)
         },
         {
             Icon: r.Pt5,
-            getText: () => l.intl.string(l.t.taMwg4)
+            getText: () => o.intl.string(o.t.taMwg4)
         },
         {
             Icon: r.SrA,
-            getText: () => l.intl.string(l.t['8ukxAQ'])
+            getText: () => o.intl.string(o.t['8ukxAQ'])
         }
     ];

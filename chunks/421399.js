@@ -18,12 +18,12 @@ var r,
     f = n(385499),
     _ = n(372900),
     x = n(172751),
-    b = n(477747),
-    E = n(477734),
+    E = n(477747),
+    b = n(477734),
     v = n(670188),
     O = n(768581),
-    S = n(585483),
-    I = n(463396),
+    I = n(585483),
+    S = n(463396),
     j = n(935910),
     y = n(981631),
     N = n(848697);
@@ -90,8 +90,8 @@ function Z(e) {
         { nick: Y, colorString: J, colorStrings: X, colorRoleName: Q } = n,
         $ = (0, c.e7)([h.Z], () => h.Z.roleStyle),
         ee = 'username' === $,
-        et = (0, E.X$)(),
-        en = (0, b.Z)(null != F ? F : K, 'BaseUsername'),
+        et = (0, b.X$)(),
+        en = (0, E.Z)(null != F ? F : K, 'BaseUsername'),
         er = (0, j.Z)(r),
         ei = l.useContext(u.d),
         el = en && null != X && null != X.primaryColor && null != X.secondaryColor,
@@ -99,7 +99,7 @@ function Z(e) {
     l.useEffect(() => {
         if (null == z || !ea || null == ei) return;
         let { setAnimate: e } = ei;
-        return S.S.subscribeKeyed(y.LPv.ANIMATE_CHAT_AVATAR, ''.concat(z, ':').concat(r.author.id), e), () => void S.S.unsubscribeKeyed(y.LPv.ANIMATE_CHAT_AVATAR, ''.concat(z, ':').concat(r.author.id), e);
+        return I.S.subscribeKeyed(y.LPv.ANIMATE_CHAT_AVATAR, ''.concat(z, ':').concat(r.author.id), e), () => void I.S.unsubscribeKeyed(y.LPv.ANIMATE_CHAT_AVATAR, ''.concat(z, ':').concat(r.author.id), e);
     }, [r.author.id, z, ea, ei]);
     let { gradientStyle: eo, gradientClassname: es } = (0, g.Icv)({
             primaryColor: null == X ? void 0 : X.primaryColor,
@@ -227,7 +227,7 @@ function Z(e) {
                 }),
             null != em ? em : null,
             null == ep || A ? null : ep,
-            null != r && (0, I.f)(r) && et && G ? (0, i.jsx)(P, {}) : null
+            null != r && (0, S.f)(r) && et && G ? (0, i.jsx)(P, {}) : null
         ]
     });
 }

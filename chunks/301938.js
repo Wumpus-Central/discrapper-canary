@@ -15,10 +15,10 @@ var r = n(255367),
     f = n(578605),
     _ = n(20493);
 function x(e) {
-    let { setOriginalEmail: t, setSlide: l, ready: x, token: b } = e,
-        [E, v] = i.useState(!1),
-        [O, S] = i.useState(null),
-        [I, j] = i.useState(null),
+    let { setOriginalEmail: t, setSlide: l, ready: x, token: E } = e,
+        [b, v] = i.useState(!1),
+        [O, I] = i.useState(null),
+        [S, j] = i.useState(null),
         [y, N] = i.useState(''),
         C = i.useRef(null);
     return (
@@ -31,15 +31,15 @@ function x(e) {
         (0, r.jsxs)('div', {
             children: [
                 (0, r.jsx)(u.Ee, {
-                    src: null == I ? n(26230) : n(935227),
+                    src: null == S ? n(26230) : n(935227),
                     className: a()(_.marginBottom20, _.marginTop8)
                 }),
                 (0, r.jsx)(u.Dx, { children: m.intl.string(m.t['IfBQ5+']) }),
-                null != I && '' !== I
+                null != S && '' !== S
                     ? (0, r.jsx)(s.Text, {
                           variant: 'text-sm/normal',
                           color: 'text-danger',
-                          children: I
+                          children: S
                       })
                     : null,
                 (0, r.jsxs)(u.gO, {
@@ -61,20 +61,20 @@ function x(e) {
                         (0, r.jsx)(u.zx, {
                             className: _.marginTop8,
                             onClick: () => {
-                                if (!E) {
+                                if (!b) {
                                     if (0 === y.length) {
-                                        S(m.intl.string(m.t.R98xDw)), d.S.dispatch(p.CkL.WAVE_EMPHASIZE);
+                                        I(m.intl.string(m.t.R98xDw)), d.S.dispatch(p.CkL.WAVE_EMPHASIZE);
                                         return;
                                     }
                                     return (
-                                        null != I && j(null),
-                                        null != O && S(null),
+                                        null != S && j(null),
+                                        null != O && I(null),
                                         t(''),
                                         v(!0),
                                         g.Z.post({
                                             url: p.ANM.ACCOUNT_REVERT,
                                             body: {
-                                                token: b,
+                                                token: E,
                                                 password: y
                                             },
                                             trackedActionData: { event: o.NetworkActionNames.ACCOUNT_REVERT },
@@ -91,7 +91,7 @@ function x(e) {
                                                 else {
                                                     let t = new c.Z(e);
                                                     t.hasFieldErrors()
-                                                        ? S(t.getAnyErrorMessage())
+                                                        ? I(t.getAnyErrorMessage())
                                                         : j(
                                                               (function (e) {
                                                                   switch (e) {
@@ -115,8 +115,8 @@ function x(e) {
                                     );
                                 }
                             },
-                            submitting: E,
-                            disabled: E,
+                            submitting: b,
+                            disabled: b,
                             children: m.intl.string(m.t.ezv91d)
                         })
                     ]

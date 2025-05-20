@@ -106,7 +106,7 @@ let m = (e) =>
     },
     E = (e) => {
         let { listScrollerRef: t } = e,
-            { enabled: n } = (0, u.W)({ location: 'useShopOnboardingCoachmark' }),
+            { enabled: n } = (0, u.WX)({ location: 'useShopOnboardingCoachmark' }),
             r = i.useRef(null),
             a = i.useCallback(() => {
                 null !== r.current && r.current.updateElementPosition();
