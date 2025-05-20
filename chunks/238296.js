@@ -1,5 +1,5 @@
 n.d(t, {
-    E: () => x,
+    E: () => P,
     Y: () => S,
     default: () => E
 });
@@ -49,7 +49,7 @@ function S(e) {
         })
     ];
 }
-function x(e, t, n) {
+function P(e, t, n) {
     let o = (0, d.B)({
             userId: e.id,
             channelId: t,
@@ -95,7 +95,7 @@ let E = (0, c.Z)(
                     channelId: u,
                     context: a
                 }),
-                O = x(t, u),
+                O = P(t, u),
                 p = (0, b.Z)({
                     id: t.id,
                     label: h.intl.string(h.t['/AXYnJ'])

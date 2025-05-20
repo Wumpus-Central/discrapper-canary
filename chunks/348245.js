@@ -262,7 +262,7 @@ function Y(e) {
         });
 }
 function W(e) {
-    let { channelId: t, messageRecord: n, reason: r, noSendFailed: i } = e;
+    let { channelId: t, messageRecord: n, reason: r, noSendFailed: i, shouldSendNotification: a } = e;
     null != n &&
         !0 !== i &&
         s.Z.dispatch({

@@ -975,12 +975,13 @@ let eM = {
                         channelId: e,
                         nonce: et,
                         items: P,
-                        message: s
+                        message: s,
+                        shouldUploadFailureSendNotification: !n.doNotNotifyOnError && void 0
                     });
                     if (null == t) return;
-                    let n = t.attachments;
-                    if (((c = t.uploader), Q && (null == n || 0 === n.length))) return;
-                    null != n && (ei.message.attachments = n.map((e, t) => (0, eE.B)(e, t)));
+                    let r = t.attachments;
+                    if (((c = t.uploader), Q && (null == r || 0 === r.length))) return;
+                    null != r && (ei.message.attachments = r.map((e, t) => (0, eE.B)(e, t)));
                 } catch (r) {
                     let { file: e, code: t, reason: n } = r;
                     (0, U.x)({
