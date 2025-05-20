@@ -12,7 +12,7 @@ var r,
     h = n(513202),
     f = n(981631),
     m = n(388032),
-    g = n(854670);
+    g = n(968216);
 let b = ['embedded_cover'],
     _ = {
         tension: 800,

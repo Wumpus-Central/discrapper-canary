@@ -467,19 +467,15 @@ let V = {
                 layout_type: a
             };
         try {
-            if (null != c && c.length > 0) {
-                var p;
-                let e = null != (p = E.default.getToken()) ? p : '';
-                await I.sk({
-                    channel: t,
-                    items: c,
-                    token: e,
-                    poll: d,
-                    nonce: (0, b.r)(),
-                    maxSizeCallback: () => {}
-                });
-            } else await m.Z.sendPollMessage(t.id, d);
-            null == s || s();
+            null != c && c.length > 0
+                ? await I.sk({
+                      channel: t,
+                      items: c,
+                      poll: d,
+                      nonce: (0, b.r)()
+                  })
+                : await m.Z.sendPollMessage(t.id, d),
+                null == s || s();
         } catch (e) {
             if ('poll' === (e instanceof f.Hx ? e : new f.Hx(e)).getAnyErrorMessage() && null != e.text) throw R(Z({}, e), { body: JSON.parse(e.text) });
             throw e;

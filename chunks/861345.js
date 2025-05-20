@@ -17,7 +17,7 @@ var r = n(255367),
     p = n(157018),
     f = n(828656),
     h = n(388032),
-    x = n(683384);
+    x = n(492606);
 function b(e) {
     let { guildId: t, emojiId: n, emojiName: l, title: a, description: c, targetType: u, index: d, dndName: g, onEdit: p, onMove: b, disabled: j = !1 } = e,
         _ = i.useRef(null),

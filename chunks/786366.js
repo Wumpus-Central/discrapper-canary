@@ -7,7 +7,7 @@ var r = t(597312),
     o = t(860719),
     a = t(621853),
     c = t(388032),
-    d = t(391551);
+    d = t(989421);
 function u(e) {
     let { icon: n, title: t, description: r } = e;
     return (0, l.jsxs)('div', {

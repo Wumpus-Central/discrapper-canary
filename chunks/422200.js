@@ -1,84 +1,84 @@
-t.d(n, { default: () => x });
-var r = t(255367);
-t(73800);
-var i = t(481060),
-    l = t(239091),
-    a = t(108843),
-    o = t(100527),
-    c = t(299206),
-    s = t(895563),
-    u = t(32750),
-    d = t(109764),
-    f = t(323597),
-    h = t(461535),
-    b = t(438536),
-    p = t(251746),
-    O = t(193987),
-    j = t(933793),
-    Z = t(13736),
-    y = t(732393),
-    g = t(214906),
-    v = t(612856),
-    P = t(137591),
-    m = t(388032);
-let x = (0, a.Z)(
+n.d(t, { default: () => C });
+var i = n(255367);
+n(73800);
+var r = n(481060),
+    a = n(239091),
+    l = n(108843),
+    o = n(100527),
+    d = n(299206),
+    u = n(895563),
+    s = n(32750),
+    c = n(109764),
+    f = n(323597),
+    h = n(461535),
+    v = n(438536),
+    b = n(251746),
+    p = n(193987),
+    g = n(933793),
+    Z = n(13736),
+    O = n(732393),
+    _ = n(214906),
+    m = n(612856),
+    y = n(137591),
+    E = n(388032);
+let C = (0, l.Z)(
     function (e) {
-        let { channel: n, onSelect: t } = e,
-            a = (0, d.Z)(n),
-            o = (0, h.Z)(n),
-            x = (0, g.Z)(n),
-            w = (0, u.Z)(n),
-            k = (0, O.Z)(n),
-            S = (0, f.Z)(n),
-            _ = (0, c.Z)({
-                id: n.id,
-                label: m.intl.string(m.t.DQ797u)
+        let { channel: t, onSelect: n } = e,
+            l = (0, c.Z)(t),
+            o = (0, h.Z)(t),
+            C = (0, _.Z)(t),
+            j = (0, s.Z)(t),
+            A = (0, p.Z)(t),
+            P = (0, f.Z)(t),
+            N = (0, d.Z)({
+                id: t.id,
+                label: E.intl.string(E.t.DQ797u)
             }),
-            C = (0, b.Z)(n, 'Context Menu'),
-            E = (0, j.Z)(n),
-            D = (0, v.Z)(n),
-            N = (0, Z.Z)(n),
-            G = (0, y.Z)(n.id),
-            U = (0, p.Z)(n),
-            M = (0, P.Z)(n),
-            Q = (0, s.l)(n),
-            T = (0, s.P)(n);
-        return (0, r.jsxs)(i.v2r, {
+            U = (0, v.Z)(t, 'Context Menu'),
+            R = (0, g.Z)(t),
+            S = (0, m.Z)(t),
+            T = (0, Z.Z)(t),
+            k = (0, O.Z)(t.id),
+            x = (0, b.Z)(t),
+            D = (0, y.Z)(t),
+            I = (0, u.l)(t),
+            F = (0, u.P)(t);
+        return (0, i.jsxs)(r.v2r, {
             navId: 'thread-context',
-            onClose: l.Zy,
-            'aria-label': m.intl.string(m.t['1NBjqa']),
-            onSelect: t,
+            onClose: a.Zy,
+            'aria-label': E.intl.string(E.t['1NBjqa']),
+            onSelect: n,
             children: [
-                (0, r.jsxs)(
-                    i.kSQ,
+                (0, i.jsxs)(
+                    r.kSQ,
                     {
-                        children: [o, Q]
+                        children: [o, I]
                     },
                     'mark-as-read-or-favorite'
                 ),
-                (0, r.jsxs)(
-                    i.kSQ,
+                (0, i.jsxs)(
+                    r.kSQ,
                     {
-                        children: [C, U, w, k, N, G, a]
+                        children: [U, x, j, A, T, k, l]
                     },
                     'thread-actions'
                 ),
-                (0, r.jsxs)(
-                    i.kSQ,
+                (0, i.jsxs)(
+                    r.kSQ,
                     {
-                        children: [x, D]
+                        children: [C, S]
                     },
                     'notifications'
                 ),
-                (0, r.jsx)(i.kSQ, { children: T }),
-                (0, r.jsxs)(
-                    i.kSQ,
+                (0, i.jsx)(r.kSQ, { children: F }),
+                (0, i.jsxs)(
+                    r.kSQ,
                     {
-                        children: [M, E, S]
+                        children: [D, R, P]
                     },
                     'admin-actions'
                 ),
-                (0, r.jsx)(i.kSQ, { children: _ }, 'developer-actions')
+                (0, i.jsx)(r.kSQ, { children: N }, 'developer-actions')
             ]
         });
     },

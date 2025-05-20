@@ -19,7 +19,7 @@ var i = n(255367),
     f = n(391110),
     b = n(75077),
     _ = n(51636),
-    x = n(491654);
+    x = n(795067);
 let E = (e) => {
         let { showAllPerksButton: t, leftAlignHeaders: n, title: r, headerClassname: s } = e,
             l = (0, i.jsx)(o.X6q, {

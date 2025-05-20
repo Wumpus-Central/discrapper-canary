@@ -4,7 +4,7 @@ var r = n(255367),
     l = n(481060),
     a = n(298213),
     o = n(388032),
-    s = n(936130);
+    s = n(884492);
 function c(e) {
     let { userId: t, applicationId: n } = e,
         [c, u] = i.useState(!1),

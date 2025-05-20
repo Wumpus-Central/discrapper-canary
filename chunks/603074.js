@@ -13,7 +13,7 @@ var r = n(255367),
     p = n(522811),
     h = n(763296),
     m = n(526617),
-    g = n(391800);
+    g = n(268365);
 function E(e) {
     let { guildId: t, channel: n, containerWidth: a, onClose: E, onSelect: b, analyticsSource: y, suppressPlaySound: O, shouldValidateSelectedSound: v, shouldShowUpsell: I = !0, gridNotice: S, inExpressionPicker: T, soundButtonOverlay: A, listPadding: N, renderHeader: C, defaultSoundsOnly: P } = e,
         R = (0, s.e7)([h.Z], () => h.Z.isFetchingSounds() || h.Z.isFetchingDefaultSounds()),

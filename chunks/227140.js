@@ -5,7 +5,7 @@ var i = n(120356),
     s = n.n(i),
     o = n(481060),
     a = n(679768),
-    l = n(166844);
+    l = n(456411);
 function c(e) {
     let { copy: t, showStars: n = !0, className: i } = e;
     return (0, r.jsxs)('div', {

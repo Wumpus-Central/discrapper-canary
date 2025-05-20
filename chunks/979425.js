@@ -6,7 +6,7 @@ var l = n(120356),
     a = n(481060),
     o = n(871118),
     u = n(388032),
-    s = n(816732);
+    s = n(519417);
 function c(e) {
     let { stream: t, isSmall: n, selected: l, isSelfStream: c } = e;
     return (0, r.jsxs)(r.Fragment, {

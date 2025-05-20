@@ -438,16 +438,16 @@
         }
         function e0(e, n) {
             return function (r) {
-                return null != r ? (e3(this, e, r), t.updateOffset(this, n), this) : e1(this, e);
+                return null != r ? (e2(this, e, r), t.updateOffset(this, n), this) : e1(this, e);
             };
         }
         function e1(e, t) {
             return e.isValid() ? e._d['get' + (e._isUTC ? 'UTC' : '') + t]() : NaN;
         }
-        function e3(e, t, n) {
+        function e2(e, t, n) {
             e.isValid() && !isNaN(n) && ('FullYear' === t && eX(e.year()) && 1 === e.month() && 29 === e.date() ? e._d['set' + (e._isUTC ? 'UTC' : '') + t](n, e.month(), e6(n, e.month())) : e._d['set' + (e._isUTC ? 'UTC' : '') + t](n));
         }
-        function e2(e) {
+        function e3(e) {
             return M(this[(e = ee(e))]) ? this[e]() : this;
         }
         function e4(e, t) {
@@ -862,10 +862,10 @@
         function t1(e) {
             return e ? e.toLowerCase().replace('_', '-') : e;
         }
-        function t3(e) {
+        function t2(e) {
             for (var t, n, r, i, a = 0; a < e.length; ) {
                 for (t = (i = t1(e[a]).split('-')).length, n = (n = t1(e[a + 1])) ? n.split('-') : null; t > 0; ) {
-                    if ((r = t2(i.slice(0, t).join('-')))) return r;
+                    if ((r = t3(i.slice(0, t).join('-')))) return r;
                     if (n && n.length >= t && w(i, n, !0) >= t - 1) break;
                     t--;
                 }
@@ -873,7 +873,7 @@
             }
             return O;
         }
-        function t2(t) {
+        function t3(t) {
             var r = null;
             if (!t$[t] && e && e.exports)
                 try {
@@ -897,7 +897,7 @@
             else if (null != t.parentLocale)
                 if (null != t$[t.parentLocale]) r = t$[t.parentLocale]._config;
                 else {
-                    if (null == (n = t2(t.parentLocale)))
+                    if (null == (n = t3(t.parentLocale)))
                         return (
                             t0[t.parentLocale] || (t0[t.parentLocale] = []),
                             t0[t.parentLocale].push({
@@ -923,7 +923,7 @@
                 var n,
                     r,
                     i = tJ;
-                null != (r = t2(e)) && (i = r._config), ((n = new G((t = U(i, t)))).parentLocale = t$[e]), (t$[e] = n), t4(e);
+                null != (r = t3(e)) && (i = r._config), ((n = new G((t = U(i, t)))).parentLocale = t$[e]), (t$[e] = n), t4(e);
             } else null != t$[e] && (null != t$[e].parentLocale ? (t$[e] = t$[e].parentLocale) : null != t$[e] && delete t$[e]);
             return t$[e];
         }
@@ -931,10 +931,10 @@
             var t;
             if ((e && e._locale && e._locale._abbr && (e = e._locale._abbr), !e)) return O;
             if (!i(e)) {
-                if ((t = t2(e))) return t;
+                if ((t = t3(e))) return t;
                 e = [e];
             }
-            return t3(e);
+            return t2(e);
         }
         function t7() {
             return b(t$);
@@ -1310,10 +1310,10 @@
         function n1() {
             return !!this.isValid() && !this._isUTC;
         }
-        function n3() {
+        function n2() {
             return !!this.isValid() && this._isUTC;
         }
-        function n2() {
+        function n3() {
             return !!this.isValid() && this._isUTC && 0 === this._offset;
         }
         t.updateOffset = function () {};
@@ -1393,7 +1393,7 @@
             var a = n._milliseconds,
                 o = nF(n._days),
                 s = nF(n._months);
-            e.isValid() && ((i = null == i || i), s && ti(e, e1(e, 'Month') + s * r), o && e3(e, 'Date', e1(e, 'Date') + o * r), a && e._d.setTime(e._d.valueOf() + a * r), i && t.updateOffset(e, o || s));
+            e.isValid() && ((i = null == i || i), s && ti(e, e1(e, 'Month') + s * r), o && e2(e, 'Date', e1(e, 'Date') + o * r), a && e._d.setTime(e._d.valueOf() + a * r), i && t.updateOffset(e, o || s));
         }
         (n6.fn = nG.prototype), (n6.invalid = nU);
         var rn = re(1, 'add'),
@@ -1764,13 +1764,13 @@
         function r1(e) {
             return nC(1000 * e);
         }
-        function r3() {
+        function r2() {
             return nC.apply(null, arguments).parseZone();
         }
-        function r2(e) {
+        function r3(e) {
             return e;
         }
-        (r0.add = rn), (r0.calendar = ra), (r0.clone = ro), (r0.diff = r_), (r0.endOf = rN), (r0.format = rE), (r0.from = rb), (r0.fromNow = ry), (r0.to = rO), (r0.toNow = rv), (r0.get = e2), (r0.invalidAt = rM), (r0.isAfter = rs), (r0.isBefore = rl), (r0.isBetween = rc), (r0.isSame = ru), (r0.isSameOrAfter = rd), (r0.isSameOrBefore = rf), (r0.isValid = rx), (r0.lang = rS), (r0.locale = rI), (r0.localeData = rT), (r0.max = nR), (r0.min = nP), (r0.parsingFlags = rk), (r0.set = e4), (r0.startOf = rA), (r0.subtract = rr), (r0.toArray = rw), (r0.toObject = rD), (r0.toDate = rR), (r0.toISOString = rm), (r0.inspect = rg), (r0.toJSON = rL), (r0.toString = rh), (r0.unix = rP), (r0.valueOf = rC), (r0.creationData = rj), (r0.year = eJ), (r0.isLeapYear = e$), (r0.weekYear = rG), (r0.isoWeekYear = rB), (r0.quarter = r0.quarters = rY), (r0.month = ta), (r0.daysInMonth = to), (r0.week = r0.weeks = tv), (r0.isoWeek = r0.isoWeeks = tI), (r0.weeksInYear = rV), (r0.isoWeeksInYear = rF), (r0.date = rW), (r0.day = r0.days = tx), (r0.weekday = tk), (r0.isoWeekday = tM), (r0.dayOfYear = rK), (r0.hour = r0.hours = tX), (r0.minute = r0.minutes = rz), (r0.second = r0.seconds = rq), (r0.millisecond = r0.milliseconds = rX), (r0.utcOffset = nK), (r0.utc = nq), (r0.local = nQ), (r0.parseZone = nX), (r0.hasAlignedHourOffset = nJ), (r0.isDST = n$), (r0.isLocal = n1), (r0.isUtcOffset = n3), (r0.isUtc = n2), (r0.isUTC = n2), (r0.zoneAbbr = rJ), (r0.zoneName = r$), (r0.dates = L('dates accessor is deprecated. Use date instead.', rW)), (r0.months = L('months accessor is deprecated. Use month instead', ta)), (r0.years = L('years accessor is deprecated. Use year instead', eJ)), (r0.zone = L('moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/', nz)), (r0.isDSTShifted = L('isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information', n0));
+        (r0.add = rn), (r0.calendar = ra), (r0.clone = ro), (r0.diff = r_), (r0.endOf = rN), (r0.format = rE), (r0.from = rb), (r0.fromNow = ry), (r0.to = rO), (r0.toNow = rv), (r0.get = e3), (r0.invalidAt = rM), (r0.isAfter = rs), (r0.isBefore = rl), (r0.isBetween = rc), (r0.isSame = ru), (r0.isSameOrAfter = rd), (r0.isSameOrBefore = rf), (r0.isValid = rx), (r0.lang = rS), (r0.locale = rI), (r0.localeData = rT), (r0.max = nR), (r0.min = nP), (r0.parsingFlags = rk), (r0.set = e4), (r0.startOf = rA), (r0.subtract = rr), (r0.toArray = rw), (r0.toObject = rD), (r0.toDate = rR), (r0.toISOString = rm), (r0.inspect = rg), (r0.toJSON = rL), (r0.toString = rh), (r0.unix = rP), (r0.valueOf = rC), (r0.creationData = rj), (r0.year = eJ), (r0.isLeapYear = e$), (r0.weekYear = rG), (r0.isoWeekYear = rB), (r0.quarter = r0.quarters = rY), (r0.month = ta), (r0.daysInMonth = to), (r0.week = r0.weeks = tv), (r0.isoWeek = r0.isoWeeks = tI), (r0.weeksInYear = rV), (r0.isoWeeksInYear = rF), (r0.date = rW), (r0.day = r0.days = tx), (r0.weekday = tk), (r0.isoWeekday = tM), (r0.dayOfYear = rK), (r0.hour = r0.hours = tX), (r0.minute = r0.minutes = rz), (r0.second = r0.seconds = rq), (r0.millisecond = r0.milliseconds = rX), (r0.utcOffset = nK), (r0.utc = nq), (r0.local = nQ), (r0.parseZone = nX), (r0.hasAlignedHourOffset = nJ), (r0.isDST = n$), (r0.isLocal = n1), (r0.isUtcOffset = n2), (r0.isUtc = n3), (r0.isUTC = n3), (r0.zoneAbbr = rJ), (r0.zoneName = r$), (r0.dates = L('dates accessor is deprecated. Use date instead.', rW)), (r0.months = L('months accessor is deprecated. Use month instead', ta)), (r0.years = L('years accessor is deprecated. Use year instead', eJ)), (r0.zone = L('moment().zone is deprecated, use moment().utcOffset instead. http://momentjs.com/guides/#/warnings/zone/', nz)), (r0.isDSTShifted = L('isDSTShifted is deprecated. See http://momentjs.com/guides/#/warnings/dst-shifted/ for more information', n0));
         var r4 = G.prototype;
         function r5(e, t, n, r) {
             var i = t8(),
@@ -1813,8 +1813,8 @@
             (r4.longDateFormat = Z),
             (r4.invalidDate = Y),
             (r4.ordinal = z),
-            (r4.preparse = r2),
-            (r4.postformat = r2),
+            (r4.preparse = r3),
+            (r4.postformat = r3),
             (r4.relativeTime = Q),
             (r4.pastFuture = X),
             (r4.set = j),
@@ -2062,7 +2062,7 @@
             (t.duration = n6),
             (t.isMoment = C),
             (t.weekdays = ie),
-            (t.parseZone = r3),
+            (t.parseZone = r2),
             (t.localeData = t8),
             (t.isDuration = nB),
             (t.monthsShort = r9),

@@ -35,7 +35,7 @@ var r = n(255367),
     k = n(356659),
     L = n(921944),
     D = n(388032),
-    U = n(390927);
+    U = n(911777);
 function B(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -114,7 +114,7 @@ let F = i.memo(function (e) {
     function em() {
         (0, c.ZDy)(
             async () => {
-                let { default: e } = await Promise.all([n.e('2668'), n.e('76646')]).then(n.bind(n, 542055));
+                let { default: e } = await Promise.all([n.e('2668'), n.e('71248')]).then(n.bind(n, 542055));
                 return (t) => (0, r.jsx)(e, G(B({}, t), { channelId: H.id }));
             },
             { modalKey: k.Qr }

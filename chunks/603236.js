@@ -20,8 +20,8 @@ var l = n(255367),
     x = n(245335),
     I = n(981631),
     f = n(388032),
-    j = n(898349),
-    N = n(971005);
+    j = n(821022),
+    N = n(20493);
 let _ = o.ZP.connectStores([g.Z], () => ({ hideValue: g.Z.hideInstantInvites }))((e) => {
         let { value: t, autoFocus: n, hideValue: i, onCopy: r, disabled: s } = e;
         return (0, l.jsx)(d.Z, {

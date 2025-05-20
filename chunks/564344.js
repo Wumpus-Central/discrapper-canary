@@ -20,7 +20,7 @@ var i = n(255367),
     C = n(526761),
     j = n(726985),
     O = n(388032),
-    S = n(804008);
+    S = n(545784);
 function v() {
     o.Z.useExperiment({ location: 'profile_customization_auto' });
     let e = (0, s.e7)([d.Z], () => d.Z.getGuild()),

@@ -10,7 +10,7 @@ var r = n(255367),
     d = n(740903),
     m = n(598622),
     g = n(388032),
-    p = n(930551);
+    p = n(902893);
 function f(e) {
     let { title: t, subtitle: n, icon: i, page: s } = e;
     return (0, r.jsxs)('div', {

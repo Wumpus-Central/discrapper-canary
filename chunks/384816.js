@@ -21,7 +21,7 @@ var r = t(442837),
     Z = t(179828),
     O = t(228168),
     y = t(388032),
-    I = t(577069);
+    I = t(349966);
 function P(e) {
     let { user: n, currentUser: t, displayProfile: P, subsection: E, onClose: N } = e,
         { trackUserProfileAction: T } = (0, p.KZ)(),

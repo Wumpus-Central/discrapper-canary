@@ -5,7 +5,7 @@ n.d(t, {
     $n: () => eQ,
     A5: () => j,
     AU: () => K,
-    Bo: () => e3,
+    Bo: () => e2,
     C2: () => Q,
     CL: () => f,
     CR: () => ei,
@@ -45,7 +45,7 @@ n.d(t, {
     UD: () => E,
     Ue: () => k,
     Uq: () => eS,
-    VU: () => e2,
+    VU: () => e3,
     Wt: () => e$,
     X2: () => eJ,
     XB: () => em,
@@ -655,8 +655,8 @@ var eX = (function (e) {
     })({});
 let e0 = 3,
     e1 = 30,
-    e3 = 20;
-var e2 = (function (e) {
+    e2 = 20;
+var e3 = (function (e) {
     return (e.PREMIUM_TENURE_1_MONTH = 'premium_tenure_1_month_v2'), (e.PREMIUM_TENURE_3_MONTH = 'premium_tenure_3_month_v2'), (e.PREMIUM_TENURE_6_MONTH = 'premium_tenure_6_month_v2'), (e.PREMIUM_TENURE_12_MONTH = 'premium_tenure_12_month_v2'), (e.PREMIUM_TENURE_24_MONTH = 'premium_tenure_24_month_v2'), (e.PREMIUM_TENURE_36_MONTH = 'premium_tenure_36_month_v2'), (e.PREMIUM_TENURE_60_MONTH = 'premium_tenure_60_month_v2'), (e.PREMIUM_TENURE_72_MONTH = 'premium_tenure_72_month_v2'), e;
 })({});
 let e4 = ['premium_tenure_1_month_v2', 'premium_tenure_3_month_v2', 'premium_tenure_6_month_v2', 'premium_tenure_12_month_v2', 'premium_tenure_24_month_v2', 'premium_tenure_36_month_v2', 'premium_tenure_60_month_v2', 'premium_tenure_72_month_v2'],

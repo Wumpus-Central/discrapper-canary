@@ -5,7 +5,7 @@ var r = n(255367),
     o = n.n(a),
     s = n(481060),
     l = n(600164),
-    c = n(149065);
+    c = n(42656);
 class u extends i.PureComponent {
     render() {
         let { note: e, title: t, action: n, className: i } = this.props;

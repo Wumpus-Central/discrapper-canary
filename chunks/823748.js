@@ -74,7 +74,7 @@ var r = n(255367),
     ey = n(6025),
     ev = n(897473),
     ej = n(922482),
-    eO = n(504185),
+    eO = n(856393),
     eE = n(657218),
     eI = n(407908),
     eP = n(66556),
@@ -111,11 +111,11 @@ var r = n(255367),
     e7 = n(981631),
     e8 = n(918559),
     e5 = n(354459),
-    e6 = n(921944),
-    e4 = n(440493),
+    e4 = n(921944),
+    e6 = n(440493),
     e9 = n(157925),
     te = n(388032),
-    tt = n(22249);
+    tt = n(100658);
 function tn(e, t, n) {
     return (
         t in e
@@ -208,7 +208,7 @@ class ta extends i.PureComponent {
         let i = eq.default.getUser(t.getRecipientId());
         s()(null != i, 'Missing user in Channel.openDMContextMenu'),
             (0, _.jW)(e, async () => {
-                let { default: e } = await Promise.all([n.e('26881'), n.e('5639'), n.e('70205'), n.e('98783'), n.e('53912'), n.e('56826'), n.e('3431')]).then(n.bind(n, 131404));
+                let { default: e } = await Promise.all([n.e('79695'), n.e('5639'), n.e('70205'), n.e('98783'), n.e('53912'), n.e('56826'), n.e('31084')]).then(n.bind(n, 131404));
                 return (n) =>
                     (0, r.jsx)(
                         e,
@@ -359,7 +359,7 @@ class ta extends i.PureComponent {
                             return (n) => (0, r.jsx)(e, ti(tr({}, n), { guildId: t }));
                         },
                         {
-                            onCloseCallback: () => W.Z.viewPrompt(e4.r.REAL_NAME_PROMPT, t),
+                            onCloseCallback: () => W.Z.viewPrompt(e6.r.REAL_NAME_PROMPT, t),
                             modalKey: 'Guild Hub Real Name Modal'
                         }
                     ),
@@ -831,7 +831,7 @@ let to = (0, O.Z)(ta),
         i.useEffect(() => {
             let e = ep && !ed,
                 t = ep && ed && (null == c ? void 0 : c.id) !== eg;
-            (e || t) && (0, G.EW)(f.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: e6.L.AUTO });
+            (e || t) && (0, G.EW)(f.z.ACTIVITY_GDM_CALL_TOOLTIP, { dismissAction: e4.L.AUTO });
         }, [null == c ? void 0 : c.id, eg, ed, ep]);
         let e_ = (0, m.f9)(),
             eC = (0, U.Q3)('Channel');

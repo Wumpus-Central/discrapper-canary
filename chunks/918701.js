@@ -56,7 +56,7 @@ n.d(t, {
     oo: () => eN,
     pO: () => ew,
     q6: () => Q,
-    q8: () => e3,
+    q8: () => e2,
     qe: () => ty,
     t2: () => ed,
     u7: () => tf,
@@ -549,7 +549,7 @@ let ej = (e, t) => {
         var n, r, i, a, o;
         let s = null == (r = e.userStatus) || null == (n = r.progress) ? void 0 : n[t.type],
             l = null != (o = null != (a = null == s ? void 0 : s.value) ? a : null == (i = e.userStatus) ? void 0 : i.streamProgressSeconds) ? o : 0;
-        if (e3(e)) {
+        if (e2(e)) {
             let n = T.Z.getOptimisticProgress(e.id, t.type);
             return null == n || n < l ? l : n;
         }
@@ -620,8 +620,8 @@ let ej = (e, t) => {
                 quest: e,
                 includeTaskTypes: null != t ? t : e6(e) ? o.T.CONSOLE : o.T.ALL
             });
-        if (e3(e))
-            if (e2(e))
+        if (e2(e))
+            if (e3(e))
                 return eH({
                     quest: e,
                     taskType: o.X.WATCH_VIDEO_ON_MOBILE
@@ -688,9 +688,9 @@ function e0(e, t) {
     return ''.concat(String(e).padStart(2, '0'), ':').concat(String(t).padStart(2, '0'));
 }
 let e1 = eq([o.X.PLAY_ON_XBOX, o.X.PLAY_ON_PLAYSTATION]),
-    e3 = eq([o.X.WATCH_VIDEO, o.X.WATCH_VIDEO_ON_MOBILE]);
+    e2 = eq([o.X.WATCH_VIDEO, o.X.WATCH_VIDEO_ON_MOBILE]);
 eq([o.X.WATCH_VIDEO]);
-let e2 = eq([o.X.WATCH_VIDEO_ON_MOBILE]);
+let e3 = eq([o.X.WATCH_VIDEO_ON_MOBILE]);
 function e4(e) {
     return e1(e);
 }
@@ -705,7 +705,7 @@ function e6(e) {
     return null != e.userStatus && (e5(e.userStatus, o.X.PLAY_ON_XBOX) || e5(e.userStatus, o.X.PLAY_ON_PLAYSTATION));
 }
 function e8(e) {
-    return !!e3(e) && (0, n(952265).nf)(tf(e.id));
+    return !!e2(e) && (0, n(952265).nf)(tf(e.id));
 }
 function e7() {
     d.Z.open(D.oAB.CONNECTIONS);
@@ -826,7 +826,7 @@ function tf(e) {
     return 'VIDEO-QUEST-'.concat(e);
 }
 function t_(e) {
-    let t = e3(e),
+    let t = e2(e),
         n = ew(e);
     return t || n;
 }

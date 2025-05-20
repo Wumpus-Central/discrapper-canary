@@ -6,7 +6,7 @@ var i = n(120356),
     o = n(937615),
     s = n(474936),
     l = n(388032),
-    c = n(84513);
+    c = n(879027);
 function u(e) {
     let { price: t, currency: n, intervalType: i, className: u, intervalCount: d = 1, isPrepaidPaymentSource: f = !1 } = e,
         _ = (0, o.T4)(t, n),

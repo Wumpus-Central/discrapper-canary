@@ -10,7 +10,7 @@ var i = n(120356),
     u = n(553385),
     d = n(981631),
     p = n(388032),
-    m = n(988829);
+    m = n(257590);
 function f(e) {
     let { message: t, channel: i, compact: o } = e,
         s = null != t.embeds && t.embeds.length > 0;

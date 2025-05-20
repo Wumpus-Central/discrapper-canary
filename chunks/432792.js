@@ -21,7 +21,7 @@ var i = n(255367),
     h = n(622562),
     f = n(937860),
     b = n(921944),
-    _ = n(473012),
+    _ = n(973792),
     x = n(447489),
     E = n(484885);
 let C = () => (0, g.Lk)(document.body.style.getPropertyValue('--custom-app-panels-height'), 56) + 8,

@@ -7,7 +7,7 @@ var i = n(120356),
     a = n(600164),
     s = n(528144),
     c = n(388032),
-    d = n(164194);
+    d = n(410322);
 function u(e) {
     let { name: t, description: n, icon: i, imageSrc: u, iconBackgroundColor: p, iconClassName: m, iconWrapperClassName: b, details: g, detailsClassName: f, isHeader: h, isPremium: x } = e;
     return (0, r.jsxs)(a.Z, {

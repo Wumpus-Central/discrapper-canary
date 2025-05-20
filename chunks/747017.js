@@ -19,7 +19,7 @@ var r = n(255367),
     y = n(122943),
     O = n(556638),
     v = n(981631),
-    I = n(405538);
+    I = n(843280);
 function S(e) {
     let { user: t, activities: n, applicationStream: a, voiceChannel: S, textClassName: T, iconClassName: A, textSize: N = 'xs', animateEmoji: C = !0, hasQuest: P = !1, hideEmoji: R = !1, hideTooltip: w = !1 } = e;
     (0, u.Z)(null == t ? void 0 : t.id);

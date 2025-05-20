@@ -12,7 +12,7 @@ var i = n(442837),
     u = n(594174),
     p = n(614277),
     _ = n(215023),
-    x = n(800808);
+    x = n(317112);
 function h(e) {
     let { onClose: t, selectedPromotionalDecoPurchaseRecord: n, selectedGiftingPromotionReward: h } = e,
         f = (0, i.e7)([u.default], () => u.default.getCurrentUser()),

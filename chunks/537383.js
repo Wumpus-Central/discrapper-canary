@@ -2,7 +2,7 @@ n.d(t, { Z: () => s });
 var r = n(255367),
     l = n(73800),
     i = n(461745),
-    a = n(194609);
+    a = n(932197);
 let s = l.forwardRef(function (e, t) {
     let { query: n, onQueryChange: l, onRemoveTag: s, onSelect: o, onSelectionChange: c, selectedSection: d, selectedRow: u, tags: m, sections: x, placeholder: h = '', focusAfterReady: b, isReady: y, 'aria-labelledby': f, 'aria-controls': p } = e;
     return (0, r.jsx)(i.ZP, {

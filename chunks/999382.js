@@ -407,11 +407,11 @@ function e1(e) {
             about: null != c ? c : el.about
         }));
 }
-function e3(e) {
+function e2(e) {
     let { guildId: t, errors: n } = e;
     null != s && t === s.id && (z = null != n ? n : {});
 }
-function e2(e) {
+function e3(e) {
     let { profile: t } = e;
     t.id === (null == s ? void 0 : s.id) && (l = c = t);
 }
@@ -565,7 +565,7 @@ let e9 = new e7(
               GUILD_ROLE_DELETE: eF,
               GUILD_UPDATE: eM,
               GUILD_DELETE: ej,
-              GUILD_PROFILE_FETCH_SUCCESS: e2,
+              GUILD_PROFILE_FETCH_SUCCESS: e3,
               GUILD_PROFILE_UPDATE: e4,
               GUILD_PROFILE_UPDATE_SUCCESS: e5,
               GUILD_PROFILE_UPDATE_FAILURE: e6,
@@ -582,7 +582,7 @@ let e9 = new e7(
               GUILD_DISCOVERY_CATEGORY_DELETE: e$,
               GUILD_DISCOVERY_CATEGORY_UPDATE_FAIL: e0,
               GUILD_UPDATE_DISCOVERY_METADATA: e1,
-              GUILD_UPDATE_DISCOVERY_METADATA_FAIL: e3,
+              GUILD_UPDATE_DISCOVERY_METADATA_FAIL: e2,
               GUILD_DISCOVERY_SLUG_FETCH_SUCCESS: eQ,
               GUILD_DISCOVERY_SLUG_FETCH_FAIL: eX,
               GUILD_SETTINGS_WIDGET_UPDATE: eZ

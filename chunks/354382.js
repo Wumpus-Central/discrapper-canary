@@ -1,7 +1,7 @@
 n.d(t, { Z: () => o });
 var i = n(475637),
     a = n(925300),
-    r = n(182431);
+    r = n(99887);
 let o = {
     ordinalNumber: (0, a.Z)({
         matchPattern: /^[०१२३४५६७८९]+/i,

@@ -163,12 +163,18 @@ let g = (0, d.Zc)(
     (e) => o.D5.create({ value: e })
 );
 let S = (0, d.Zc)(
-        'notifications',
-        'reactionNotifications',
-        (e) => (null != e ? e : a.Ns.NOTIFICATIONS_ENABLED),
-        (e) => e
-    ),
-    T = (0, d.Zc)(
+    'notifications',
+    'reactionNotifications',
+    (e) => (null != e ? e : a.Ns.NOTIFICATIONS_ENABLED),
+    (e) => e
+);
+(0, d.Zc)(
+    'notifications',
+    'customStatusPushNotifications',
+    (e) => (null != e ? e : a.Oi.STATUS_PUSH_UNSET),
+    (e) => e
+);
+let T = (0, d.Zc)(
         'notifications',
         'gameActivityNotifications',
         (e) => (null != e ? e : a.Tv.ACTIVITY_NOTIFICATIONS_UNSET),

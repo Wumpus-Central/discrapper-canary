@@ -17,7 +17,7 @@ var i = e(255367),
     k = e(981631),
     x = e(372897),
     C = e(388032),
-    A = e(802552);
+    A = e(875606);
 function Z(n) {
     var t;
     let { onClose: e, transitionState: Z, guildId: E } = n,

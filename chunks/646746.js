@@ -13,7 +13,7 @@ var l = n(255367),
     _ = n(695346),
     g = n(318616),
     m = n(388032),
-    p = n(884976);
+    p = n(28447);
 function E(e) {
     let { message: t, forwardOptions: n, channel: i } = e,
         E = _.jU.useSetting(),

@@ -9,7 +9,7 @@ var r = n(120356),
     c = n(993413),
     d = n(486324),
     u = n(388032),
-    m = n(727098);
+    m = n(771066);
 function g(e) {
     let { showRemoveBannerButton: t, errors: n, onBannerChange: r, guildId: g, className: p, disabled: h = !1, showPremiumIcon: f = !0, isTryItOutFlow: b = !1, forcedDivider: _, withHighlight: x = !1 } = e,
         { newestAnalyticsLocation: E } = (0, a.ZP)(),

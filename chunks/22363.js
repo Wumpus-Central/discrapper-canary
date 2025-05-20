@@ -9,7 +9,7 @@ var i = n(120356),
     c = n(533432),
     u = n(149203),
     d = n(185923),
-    f = n(825372);
+    f = n(539490);
 let _ = (e) => {
     let { accessory: t, pickerIntention: n, headerClassName: i, emojiListRef: _, onKeyDown: p, onFocus: h, autoFocus: m, searchBarRef: g, hasTabWrapper: E, diversitySurrogate: b, isBurstReaction: y, onBurstReactionToggle: O, renderHeader: v } = e,
         I = (0, r.jsxs)(r.Fragment, {

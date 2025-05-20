@@ -22,7 +22,7 @@ var r = n(255367),
     S = n(215023),
     j = n(981631),
     y = n(388032),
-    P = n(379890);
+    P = n(806734);
 let E = (e) => {
     let { isLoading: t, sortedSkuIds: n, handleTransition: i, numVisibleItems: E, tab: k } = e,
         T = (0, o.e7)([d.default], () => d.default.getCurrentUser()),

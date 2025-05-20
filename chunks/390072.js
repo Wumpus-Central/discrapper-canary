@@ -6,7 +6,7 @@ var r = n(255367),
     o = n(11868),
     s = n(217804),
     c = n(765305),
-    u = n(925457);
+    u = n(244231);
 function d(e) {
     let { guildScheduledEvent: t, channel: n, onClose: d } = e,
         g = t.entity_type === c.WX.EXTERNAL,

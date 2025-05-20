@@ -20,7 +20,7 @@ var r = t(442837),
     x = t(228168),
     j = t(981631),
     I = t(388032),
-    O = t(368226);
+    O = t(514656);
 function v(e) {
     let { user: n, currentUser: t, displayProfile: v, guildId: C, channelId: P, subsection: A, onClose: T } = e,
         { voiceActivityStatusEnabled: N } = (0, i.U)({ location: 'UserProfileModalV2Activity' }),

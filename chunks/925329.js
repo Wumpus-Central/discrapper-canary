@@ -8,7 +8,7 @@ var i = n(120356),
     l = n(565138),
     c = n(474936),
     u = n(388032),
-    d = n(278857);
+    d = n(235831);
 let f = {
     XXSMALL: d.xxsmall,
     XSMALL: d.xsmall,

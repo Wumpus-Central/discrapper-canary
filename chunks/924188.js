@@ -5,7 +5,7 @@ var i = n(481060),
     s = n(313201),
     r = n(468706),
     o = n(388032),
-    l = n(355437);
+    l = n(782410);
 function c(t) {
     let { channelId: e, messageId: n, onClose: c, transitionState: d } = t,
         u = (0, s.Dt)();

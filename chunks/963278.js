@@ -10,7 +10,7 @@ var l = n(120356),
     u = n(597688),
     d = n(709999),
     b = n(388032),
-    f = n(379890);
+    f = n(806734);
 let p = (e) => {
     let { shelf: t, handleTransition: n, tab: l } = e,
         p = (0, a.e7)([s.default], () => s.default.getCurrentUser());

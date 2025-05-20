@@ -5,7 +5,7 @@ var i = n(120356),
     a = n.n(i),
     o = n(481060),
     s = n(118012),
-    l = n(988283);
+    l = n(362560);
 function c(e) {
     var t;
     let { name: n, className: i, state: c, isInline: u, onClick: d } = e,

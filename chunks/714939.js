@@ -4,7 +4,7 @@ n(73800);
 var i = n(481060),
     l = n(259580),
     s = n(388032),
-    a = n(231855);
+    a = n(70713);
 function o(e) {
     let { role: t, onClick: n } = e;
     return (0, r.jsxs)(i.P3F, {

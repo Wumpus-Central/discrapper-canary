@@ -16,7 +16,7 @@ var n = i(255367),
     I = i(981631),
     T = i(979007),
     N = i(388032),
-    g = i(485953);
+    g = i(969878);
 function P(t) {
     let { onClose: e, transitionState: i, appId: P, guildId: O } = t,
         b = (0, o.e7)([c.Z], () => c.Z.getApplication(P), [P]),

@@ -5,7 +5,7 @@ var s = n(255367),
     r = n(313201),
     o = n(273504),
     l = n(388032),
-    c = n(498606);
+    c = n(831242);
 function d(e) {
     let { initialCustomMessage: t, onSubmit: n, onClose: d, transitionState: h } = e,
         x = (0, r.Dt)(),

@@ -3,7 +3,7 @@ var n = s(255367);
 s(73800);
 var r = s(481060),
     l = s(388032),
-    i = s(874561);
+    i = s(652297);
 function a(e) {
     let { email: t, onClose: s } = e;
     return (0, n.jsxs)(n.Fragment, {

@@ -5,7 +5,7 @@ var i = n(255367),
     o = n(53365),
     c = n(377176),
     s = n(388032),
-    l = n(697871);
+    l = n(339500);
 function E(t) {
     let { guildId: r, transitionState: n, onClose: E } = t,
         [T, _] = e.useState(!1),

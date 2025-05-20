@@ -16,7 +16,7 @@ var i = n(255367),
     b = n(981631),
     _ = n(856651),
     x = n(388032),
-    E = n(882449);
+    E = n(6318);
 function C(e) {
     var t;
     let { account: n, refreshed: l, handleRefresh: o } = e,

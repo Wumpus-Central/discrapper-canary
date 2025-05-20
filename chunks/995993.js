@@ -19,7 +19,7 @@ var r = n(255367),
     v = n(176505),
     _ = n(490897),
     C = n(388032),
-    j = n(732020);
+    j = n(990252);
 function S(e) {
     let { guild: t, selected: S } = e,
         E = (0, h.Z)(t),

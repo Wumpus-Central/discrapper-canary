@@ -42,7 +42,7 @@ var o = t(255367),
     F = t(768111),
     H = t(228168),
     Y = t(388032),
-    W = t(125905);
+    W = t(517603);
 function K(e) {
     let { user: n, currentUser: t, guildId: K, channelId: X, messageId: q, roleId: z, sessionId: J, initialSection: Q, initialSubsection: $, transitionState: ee, customStatusPrompt: en, openedAt: et, onClose: eo, sourceAnalyticsLocations: er = [] } = e,
         { analyticsLocations: ec } = (0, f.ZP)([...er, u.Z.USER_PROFILE_MODAL_V2]),

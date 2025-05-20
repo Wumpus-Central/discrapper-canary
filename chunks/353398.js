@@ -26,8 +26,8 @@ var r,
     _ = n(999382),
     v = n(260539),
     O = n(388032),
-    C = n(587949),
-    y = n(971005);
+    C = n(651412),
+    y = n(20493);
 function N(e, t, n) {
     return (
         t in e
@@ -451,7 +451,7 @@ function M(e) {
         className: C.button,
         onClick: () =>
             (0, m.ZDy)(async () => {
-                let { default: e } = await Promise.all([n.e('10778'), n.e('15608')]).then(n.bind(n, 766775));
+                let { default: e } = await Promise.all([n.e('10778'), n.e('44044')]).then(n.bind(n, 766775));
                 return (n) => {
                     var r, l;
                     return (0, i.jsx)(

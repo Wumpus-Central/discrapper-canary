@@ -27,7 +27,7 @@ var i = n(442837),
     P = n(228168),
     S = n(981631),
     Z = n(388032),
-    N = n(994530);
+    N = n(283189);
 function T(e) {
     let { user: t, currentUser: n, displayProfile: T, channel: A, isHovering: w, onOpenProfile: R } = e,
         { relationshipType: M, originApplicationId: k } = (0, i.cj)([s.Z], () => ({

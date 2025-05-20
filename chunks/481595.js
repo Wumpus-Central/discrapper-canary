@@ -32,7 +32,7 @@ var r = n(255367),
     L = n(982204),
     x = n(981631),
     k = n(388032),
-    M = n(808241);
+    M = n(718578);
 function j(e) {
     let { application: t, sku: n, isEmbeddedIAP: i } = e;
     return !0 !== i

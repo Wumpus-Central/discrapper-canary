@@ -5,7 +5,7 @@ var l = n(120356),
     i = n.n(l),
     a = n(481060),
     o = n(960919),
-    s = n(409343);
+    s = n(595392);
 function c(e) {
     let { orbAmount: t, className: n } = e;
     return (0, r.jsxs)(a.Text, {

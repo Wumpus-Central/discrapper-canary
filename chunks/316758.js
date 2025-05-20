@@ -35,7 +35,7 @@ async function d(e) {
     r.Z.clearAll(e, a.d.Poll);
 }
 async function p(e) {
-    let { channel: t, items: n, poll: r, nonce: l, maxSizeCallback: o } = e;
+    let { channel: t, items: n, poll: r, nonce: l } = e;
     return i.Z.uploadFiles({
         channelId: t.id,
         uploads: n,

@@ -5,7 +5,7 @@ var r = n(255367),
     a = n.n(l),
     o = n(481060),
     s = n(785717),
-    c = n(653358);
+    c = n(507710);
 function u(e) {
     let { section: t, header: n, items: l, listClassName: u, onExpand: d } = e,
         { trackUserProfileAction: p } = (0, s.KZ)(),

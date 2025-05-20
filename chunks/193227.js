@@ -23,7 +23,7 @@ var r = n(255367),
     j = n(302800),
     y = n(215023),
     P = n(474936),
-    E = n(842817);
+    E = n(484920);
 function k(e) {
     let { products: t, handleShopCardMount: n, header: l, category: i, isPremiumUser: a, isGiftEasterEggEnabled: c } = e,
         u = (0, o.e7)([b.default], () => b.default.getCurrentUser()),

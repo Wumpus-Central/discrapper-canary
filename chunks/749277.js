@@ -28,7 +28,7 @@ var i = n(442837),
     D = n(801461),
     b = n(474936),
     h = n(388032),
-    U = n(226293);
+    U = n(131715);
 let M = (e) => {
     let { dismissibleContent: t, noticeType: M } = e,
         v = (0, i.e7)([R.ZP], () => R.ZP.getNotice()),
