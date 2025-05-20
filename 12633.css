@@ -35299,6 +35299,22 @@ html:not(.visual-refresh) .root_e5f3a9 {
     width: 4px
 }
 
+.guildTagContainer__63ed3 {
+    border: 1px solid var(--user-profile-border);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    height: 20px
+}
+
+.guildTagContainer__63ed3:hover {
+    background-color: var(--user-profile-background-hover)
+}
+
+.guildTag__63ed3 {
+    background: unset;
+    margin: 0 auto
+}
+
 .viewFullBio_f5f93a {
     margin-top: 8px
 }
@@ -38076,7 +38092,8 @@ html:not(.visual-refresh-chat-input) .inputInner_b1f01d {
     gap: 8px
 }
 
-.user-profile-modal .content__39ec2 {
+.user-profile-modal .content__39ec2,
+.user-profile-modal-v2 .content__39ec2 {
     gap: 12px
 }
 
