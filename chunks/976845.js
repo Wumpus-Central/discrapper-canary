@@ -8,8 +8,8 @@ var n = r(255367),
     l = r(60488),
     i = r(934248),
     o = r(780384),
-    c = r(410030),
-    u = r(738134);
+    u = r(410030),
+    c = r(738134);
 function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
@@ -84,13 +84,13 @@ let f = {
     y = (e) => {
         let { currentAnimationType: t, animationTypeRef: r, onSetAnimationDurationMS: n, play: l, getDuration: i } = e,
             o = i(),
-            c = null != o ? 1000 * o : h;
+            u = null != o ? 1000 * o : h;
         (0, a.useEffect)(() => {
             null !== t && t !== r.current && ((r.current = t), l());
         }, [t, l, r]),
             (0, a.useEffect)(() => {
-                n(c);
-            }, [n, c]);
+                n(u);
+            }, [n, u]);
     },
     p = (e) => {
         var { currentAnimationType: t } = e,
@@ -103,7 +103,7 @@ let f = {
                 l,
                 d(s({}, f), {
                     size: 'custom',
-                    className: u.orbsLottie,
+                    className: c.orbsLottie,
                     useLottieDefaultColors: !0
                 })
             )
@@ -120,13 +120,13 @@ let f = {
                 i,
                 d(s({}, f), {
                     size: 'custom',
-                    className: u.orbsLottie,
+                    className: c.orbsLottie,
                     useLottieDefaultColors: !0
                 })
             )
         );
     },
     C = (e) => {
-        let t = (0, c.ZP)();
+        let t = (0, u.ZP)();
         return (0, o.ap)(t) ? (0, n.jsx)(m, s({}, e)) : (0, n.jsx)(p, s({}, e));
     };

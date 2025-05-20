@@ -1,4 +1,4 @@
-n.d(t, { default: () => N });
+n.d(t, { default: () => I });
 var r = n(255367),
     l = n(73800),
     i = n(442837),
@@ -23,21 +23,21 @@ var r = n(255367),
     S = n(358386),
     A = n(37258),
     v = n(931617),
-    I = n(981631),
+    N = n(981631),
     Z = n(388032);
-let N = (0, c.Z)(
+let I = (0, c.Z)(
     (0, u.Z)(
         function (e) {
             var t;
-            let { user: n, guildId: u, channelId: c, context: I, onSelect: N, moderationAlertId: h, analyticsLocation: T, analyticsLocations: D, onCloseContextMenu: C, showTransferOwnershipItem: U } = e,
+            let { user: n, guildId: u, channelId: c, context: N, onSelect: I, moderationAlertId: h, analyticsLocation: T, analyticsLocations: C, onCloseContextMenu: D, showTransferOwnershipItem: U } = e,
                 { analyticsLocations: R } = (0, f.ZP)(d.Z.CONTEXT_MENU),
                 L = (0, s.O)(),
-                w = null != (t = null == D ? void 0 : D[0]) ? t : R[0],
+                w = null != (t = null == C ? void 0 : C[0]) ? t : R[0],
                 x = (0, g.sE)(u, {
                     location: w,
                     targetUserId: n.id
                 }),
-                k = (0, i.e7)(
+                G = (0, i.e7)(
                     [y.Z],
                     () => {
                         var e;
@@ -45,22 +45,22 @@ let N = (0, c.Z)(
                     },
                     [u, n.id]
                 ),
-                G = l.useCallback(() => {
+                k = l.useCallback(() => {
                     x(g.jQ.COPY_ID);
                 }, [x]),
                 B = (0, i.e7)([b.ZP], () => b.ZP.isMember(u, n.id), [u, n.id]),
                 q = (0, A.Z)({
                     userId: n.id,
                     guildId: u,
-                    sourceAnalyticsLocations: D
+                    sourceAnalyticsLocations: C
                 }),
-                F = (0, j.Z)(n.id, I),
+                F = (0, j.Z)(n.id, N),
                 K = (0, E.Z)({
                     guildId: u,
                     userId: n.id,
                     analyticsLocation: null != T ? T : L.location,
                     analyticsLocations: [w],
-                    context: I
+                    context: N
                 }),
                 V = (0, p.Z)({
                     user: n,
@@ -74,24 +74,24 @@ let N = (0, c.Z)(
                     location: w,
                     channelId: c
                 }),
-                Y = (0, _.Z)(n, u, null != c ? c : k, w),
+                Y = (0, _.Z)(n, u, null != c ? c : G, w),
                 H = (0, P.Z)(c, h),
                 Q = (0, S.Z)(n, u),
                 X = (0, v.Z)(n.id, u, !1, w),
                 J = (0, O.Z)({
                     id: n.id,
                     label: Z.intl.string(Z.t['/AXYnJ']),
-                    onSuccess: G
+                    onSuccess: k
                 }),
                 z = (0, M.Z)(n, u),
                 $ = !!(null == n ? void 0 : n.isNonUserBot());
             return (0, r.jsxs)(a.v2r, {
                 navId: 'user-context',
                 onClose: () => {
-                    (0, o.Zy)(), null == C || C();
+                    (0, o.Zy)(), null == D || D();
                 },
                 'aria-label': Z.intl.string(Z.t.liqwPD),
-                onSelect: N,
+                onSelect: I,
                 children: [
                     !$ &&
                         (0, r.jsxs)(r.Fragment, {
@@ -119,7 +119,7 @@ let N = (0, c.Z)(
                 ]
             });
         },
-        { object: I.qAy.CONTEXT_MENU }
+        { object: N.qAy.CONTEXT_MENU }
     ),
     [d.Z.CONTEXT_MENU, d.Z.GUILD_MODERATION_USER_MENU]
 );

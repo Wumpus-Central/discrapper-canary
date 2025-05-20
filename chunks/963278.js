@@ -1,4 +1,4 @@
-n.d(t, { Z: () => p });
+n.d(t, { Z: () => b });
 var r = n(255367);
 n(73800);
 var l = n(120356),
@@ -9,18 +9,18 @@ var l = n(120356),
     c = n(381585),
     u = n(597688),
     d = n(709999),
-    b = n(388032),
-    f = n(806734);
-let p = (e) => {
+    f = n(388032),
+    p = n(806734);
+let b = (e) => {
     let { shelf: t, handleTransition: n, tab: l } = e,
-        p = (0, a.e7)([s.default], () => s.default.getCurrentUser());
-    return null == p
+        b = (0, a.e7)([s.default], () => s.default.getCurrentUser());
+    return null == b
         ? null
         : (0, r.jsxs)('div', {
-              className: i()(f.shelfBlockContainer, f.centeredSection),
+              className: i()(p.shelfBlockContainer, p.centeredSection),
               children: [
                   (0, r.jsxs)('div', {
-                      className: f.blockHeader,
+                      className: p.blockHeader,
                       children: [
                           (0, r.jsx)(o.X6q, {
                               variant: 'heading-lg/semibold',
@@ -30,12 +30,12 @@ let p = (e) => {
                               color: o.Ttl.PRIMARY,
                               look: o.iLD.FILLED,
                               onClick: () => n('shelf block see all', t.categorySkuId),
-                              children: b.intl.formatToPlainString(b.t.bc9RBA, { category_name: t.name })
+                              children: f.intl.formatToPlainString(f.t.bc9RBA, { category_name: t.name })
                           })
                       ]
                   }),
                   (0, r.jsx)('div', {
-                      className: f.feed,
+                      className: p.feed,
                       children: (0, r.jsx)(r.Fragment, {
                           children: t.rankedSkuIds.map((e, n) => {
                               let i = u.Z.getCategoryForProduct(e),
@@ -55,7 +55,7 @@ let p = (e) => {
                                                 {
                                                     product: a,
                                                     category: i,
-                                                    user: p,
+                                                    user: b,
                                                     tab: l
                                                 },
                                                 e

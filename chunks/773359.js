@@ -10,7 +10,7 @@ var r = n(255367),
 let d = (e) => {
     let { channelId: t } = e,
         n = i.useCallback(() => {
-            o.l.reopenModReport(t);
+            o.Z.reopenModReport(t);
         }, [t]);
     return (0, r.jsx)(a.i, {
         bannerHeader: (0, r.jsx)(l.Text, {

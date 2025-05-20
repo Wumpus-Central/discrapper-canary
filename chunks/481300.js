@@ -1,7 +1,7 @@
 n.d(t, { Z: () => o });
-var i = n(255367);
+var r = n(255367);
 n(73800);
-var r = n(481060),
+var i = n(481060),
     l = n(247206),
     a = n(388032);
 function o(e, t) {
@@ -13,38 +13,38 @@ function o(e, t) {
             },
             (0, l.HH)(e)
         )
-        ? (0, i.jsx)(
-              r.sNh,
+        ? (0, r.jsx)(
+              i.sNh,
               {
                   id: 'report-image-false-positive',
                   label: a.intl.string(a.t.ZH7P2t),
                   action: () => {
-                      (0, r.ZDy)(async () => {
-                          let { default: r } = await n(788679);
+                      (0, i.ZDy)(async () => {
+                          let { default: i } = await n(788679);
                           return (n) =>
-                              (0, i.jsx)(
-                                  r,
+                              (0, r.jsx)(
+                                  i,
                                   (function (e) {
                                       for (var t = 1; t < arguments.length; t++) {
                                           var n = null != arguments[t] ? arguments[t] : {},
-                                              i = Object.keys(n);
+                                              r = Object.keys(n);
                                           'function' == typeof Object.getOwnPropertySymbols &&
-                                              (i = i.concat(
+                                              (r = r.concat(
                                                   Object.getOwnPropertySymbols(n).filter(function (e) {
                                                       return Object.getOwnPropertyDescriptor(n, e).enumerable;
                                                   })
                                               )),
-                                              i.forEach(function (t) {
-                                                  var i;
-                                                  (i = n[t]),
+                                              r.forEach(function (t) {
+                                                  var r;
+                                                  (r = n[t]),
                                                       t in e
                                                           ? Object.defineProperty(e, t, {
-                                                                value: i,
+                                                                value: r,
                                                                 enumerable: !0,
                                                                 configurable: !0,
                                                                 writable: !0
                                                             })
-                                                          : (e[t] = i);
+                                                          : (e[t] = r);
                                               });
                                       }
                                       return e;
@@ -59,7 +59,7 @@ function o(e, t) {
                               );
                       });
                   },
-                  icon: r.fFY
+                  icon: i.fFY
               },
               'report-image-false-positive'
           )

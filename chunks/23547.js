@@ -8,8 +8,8 @@ var n = r(255367),
     l = r(442837),
     i = r(481060),
     o = r(751648),
-    c = r(479766);
-function u(e) {
+    u = r(479766);
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
         var r = null != arguments[t] ? arguments[t] : {},
             n = Object.keys(r);
@@ -45,20 +45,20 @@ let s = 'balance-widget-menu-coachmark-modal',
         }
     };
 function h(e) {
-    let t = (0, l.cj)([c.Z], () => c.Z.earnedOrbsCoachmark),
+    let t = (0, l.cj)([u.Z], () => u.Z.earnedOrbsCoachmark),
         { shouldOpen: o } = t;
     return (
         (0, a.useEffect)(() => {
             let t = d();
             if (o && !t) {
                 var a;
-                (a = u({}, e)).isCoachmarkEnabled &&
+                (a = c({}, e)).isCoachmarkEnabled &&
                     (0, i.ZDy)(async () => {
                         let { BalanceWidgetEarnedOrbsCoachmarkModal: e } = await Promise.all([r.e('82081'), r.e('1258')]).then(r.bind(r, 720463));
-                        return (t) => (0, n.jsx)(e, u({}, a, t));
+                        return (t) => (0, n.jsx)(e, c({}, a, t));
                     }, f);
             } else !o && t && b();
         }, [o, e]),
-        u({}, t)
+        c({}, t)
     );
 }

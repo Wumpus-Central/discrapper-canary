@@ -8,9 +8,9 @@ var r = n(255367),
     c = n(91192),
     u = n(536895),
     d = n(866442),
-    b = n(481060),
-    f = n(209613),
-    p = n(429368),
+    f = n(481060),
+    p = n(209613),
+    b = n(429368),
     g = n(724994),
     h = n(388032),
     m = n(820612);
@@ -82,28 +82,28 @@ let O = s()((e) => {
             let n = (0, d._i)(e);
             null != n && (t = 0.3 >= (0, d.Bd)(n));
         }
-        return t ? b.TVs.unsafe_rawColors.PRIMARY_700.css : b.TVs.unsafe_rawColors.PRIMARY_200.css;
+        return t ? f.TVs.unsafe_rawColors.PRIMARY_700.css : f.TVs.unsafe_rawColors.PRIMARY_200.css;
     }),
     x = (e) => {
-        let { variantGroupProduct: t, variant: n, variantIndex: i, totalVariants: o, selectedVariantIndex: s, onEnter: d, onLeave: f, minimal: x } = e,
+        let { variantGroupProduct: t, variant: n, variantIndex: i, totalVariants: o, selectedVariantIndex: s, onEnter: d, onLeave: p, minimal: x } = e,
             { isPurchased: S } = (0, g.L)(n),
             j = (0, c.JA)('shop-variants-group-'.concat(t.storeListingId, '-').concat(i)),
             { onFocus: y } = j,
-            P = v(j, ['onFocus']),
-            E = l.useCallback(
+            E = v(j, ['onFocus']),
+            P = l.useCallback(
                 (e) => {
-                    e.preventDefault(), e.stopPropagation(), (0, p.$)(t, i), y();
+                    e.preventDefault(), e.stopPropagation(), (0, b.$)(t, i), y();
                 },
                 [y, t, i]
             );
-        return (0, r.jsx)(b.ua7, {
+        return (0, r.jsx)(f.ua7, {
             text: h.intl.string(h.t['6cfuDg']),
             'aria-label': !1,
             shouldShow: !x && S,
             children: (e) =>
                 (0, r.jsx)(
-                    b.P3F,
-                    C(_({}, P), {
+                    f.P3F,
+                    C(_({}, E), {
                         tag: 'li',
                         onMouseEnter: () => {
                             var t;
@@ -111,7 +111,7 @@ let O = s()((e) => {
                         },
                         onMouseLeave: () => {
                             var t;
-                            f(), null == (t = e.onMouseLeave) || t.call(e);
+                            p(), null == (t = e.onMouseLeave) || t.call(e);
                         },
                         onFocus: () => {
                             var t;
@@ -119,11 +119,11 @@ let O = s()((e) => {
                         },
                         onBlur: () => {
                             var t;
-                            f(), null == (t = e.onMouseLeave) || t.call(e);
+                            p(), null == (t = e.onMouseLeave) || t.call(e);
                         },
-                        onClick: E,
+                        onClick: P,
                         onKeyDown: (e) => {
-                            e.key === u.R8.ENTER && E(e);
+                            e.key === u.R8.ENTER && P(e);
                         },
                         className: m.colorVariant,
                         children: (0, r.jsx)('div', {
@@ -136,7 +136,7 @@ let O = s()((e) => {
                                 zIndex: o - i
                             },
                             children: S
-                                ? (0, r.jsx)(b.kSu, {
+                                ? (0, r.jsx)(f.kSu, {
                                       className: m.purchasedIndicator,
                                       color: O(n.variantValue)
                                   })
@@ -148,13 +148,13 @@ let O = s()((e) => {
     },
     S = (e) => {
         var t, n;
-        let { variantGroupProduct: l, className: i, previewingVariantIndexProps: o, setIsHoveringOnSwitch: s, minimal: d, selectedVariantIndex: p, alternativeBackgroundColor: g } = e,
+        let { variantGroupProduct: l, className: i, previewingVariantIndexProps: o, setIsHoveringOnSwitch: s, minimal: d, selectedVariantIndex: b, alternativeBackgroundColor: g } = e,
             O = o.previewingVariantIndex,
-            S = null == (t = l.variants) ? void 0 : t[p],
+            S = null == (t = l.variants) ? void 0 : t[b],
             j = null !== O ? (null == (n = l.variants) ? void 0 : n[O]) : void 0,
-            y = (0, f.Z)('shop-variants-group-'.concat(l.storeListingId), u.hy.HORIZONTAL);
+            y = (0, p.Z)('shop-variants-group-'.concat(l.storeListingId), u.hy.HORIZONTAL);
         if (null == S) return null;
-        let P = null != j ? j.variantLabel : null == S ? void 0 : S.variantLabel;
+        let E = null != j ? j.variantLabel : null == S ? void 0 : S.variantLabel;
         return (0, r.jsx)(c.bG, {
             navigator: y,
             children: (0, r.jsx)(c.SJ, {
@@ -185,7 +185,7 @@ let O = s()((e) => {
                                                           variantGroupProduct: l,
                                                           variant: e,
                                                           variantIndex: t,
-                                                          selectedVariantIndex: p,
+                                                          selectedVariantIndex: b,
                                                           totalVariants: null != (i = null == (n = l.variants) ? void 0 : n.length) ? i : 0,
                                                           onEnter: () => o.handleEntering(t),
                                                           onLeave: o.handleLeaving,
@@ -195,11 +195,11 @@ let O = s()((e) => {
                                                   );
                                               })
                                 }),
-                                (0, r.jsx)(b.Text, {
+                                (0, r.jsx)(f.Text, {
                                     variant: 'text-xs/medium',
                                     color: 'text-secondary',
                                     className: m.variantLabel,
-                                    children: d ? h.intl.string(h.t.wbgaj4) : P
+                                    children: d ? h.intl.string(h.t.wbgaj4) : E
                                 })
                             ]
                         })

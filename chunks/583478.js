@@ -4,8 +4,8 @@ var n = r(255367),
     l = r(120356),
     i = r.n(l),
     o = r(230986),
-    c = r(481060),
-    u = r(110924),
+    u = r(481060),
+    c = r(110924),
     s = r(710845),
     d = r(168232),
     b = r(976845),
@@ -25,7 +25,7 @@ let O = new s.Z('BalanceCounter'),
     C = (e, t, r) => (null === r ? Math.max(e, t) : Math.max(t, r)),
     g = (e) => {
         var t, r;
-        let { value: l, onSetDigitCount: i, onValueChange: u, onValueReached: s, targetTotalCounterTime: d = 3000 } = e,
+        let { value: l, onSetDigitCount: i, onValueChange: c, onValueReached: s, targetTotalCounterTime: d = 3000 } = e,
             [b, f] = (0, a.useState)(0),
             h = (0, a.useRef)(null),
             C = (0, a.useRef)(null);
@@ -36,16 +36,16 @@ let O = new s.Z('BalanceCounter'),
                 return;
             }
             let e = null !== h.current ? l - h.current : l;
-            0 !== e && null !== h.current && u(e),
+            0 !== e && null !== h.current && c(e),
                 (C.current = {
                     lastChangedAt: Date.now(),
                     totalDelta: Math.abs(e)
                 });
-        }, [l, u]);
+        }, [l, c]);
         let g = null != l ? l : 0,
             _ = null != (t = h.current) ? t : g,
             { duration: E, delay: R } = m(g - _, d),
-            { number: j } = (0, c.q_F)({
+            { number: j } = (0, u.q_F)({
                 from: { number: null != (r = h.current) ? r : g },
                 number: g,
                 config: {
@@ -100,9 +100,9 @@ let O = new s.Z('BalanceCounter'),
         let s = null === r,
             [d, b] = (0, a.useState)(null),
             f = (0, a.useMemo)(() => p(r), [r]),
-            O = null != (t = (0, u.Z)(f)) ? t : 0,
+            O = null != (t = (0, c.Z)(f)) ? t : 0,
             y = (0, a.useMemo)(() => C(O, f, d), [O, f, d]);
-        return (0, n.jsx)(c.Text, {
+        return (0, n.jsx)(u.Text, {
             variant: 'text-md/semibold',
             className: i()(h.balanceCounterText, s ? void 0 : h.balanceCounterMargin, l),
             style: {

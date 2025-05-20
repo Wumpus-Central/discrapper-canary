@@ -8,12 +8,12 @@ var r = n(73800),
     c = n(597688),
     u = n(884697),
     d = n(26931),
-    b = n(370039),
-    f = n(937510),
-    p = n(981631),
+    f = n(370039),
+    p = n(937510),
+    b = n(981631),
     g = n(388032);
 let h = (e, t) => {
-    let n = (0, o.e7)([s.Z], () => s.Z.hasConsented(p.pjP.PERSONALIZATION)),
+    let n = (0, o.e7)([s.Z], () => s.Z.hasConsented(b.pjP.PERSONALIZATION)),
         l = r.useMemo(() => {
             var t;
             return null != (t = null == e ? void 0 : e[a.m.RECOMMENDED]) ? t : [];
@@ -27,7 +27,7 @@ let h = (e, t) => {
         [v, O] = r.useState(0),
         x = (0, d.u)(),
         S = (0, o.e7)([c.Z], () => c.Z.productsWithVariantsAsGroup),
-        j = (0, b.a)(),
+        j = (0, f.a)(),
         y = r.useMemo(() => {
             let e = [];
             return (
@@ -46,13 +46,13 @@ let h = (e, t) => {
                 j(e)
             );
         }, [_, j, S, t, x, l, h, v]),
-        P = r.useCallback(() => {
+        E = r.useCallback(() => {
             O((e) => e + 1), C(a.m.RANDOM);
         }, []);
     return {
         sortType: _,
         setSortType: C,
-        sortedItems: (0, f.l)(y),
+        sortedItems: (0, p.l)(y),
         sortOptions: r.useMemo(() => {
             let e = [
                 {
@@ -78,6 +78,6 @@ let h = (e, t) => {
             );
         }, [m]),
         showRecommendationOption: m,
-        shuffleProducts: P
+        shuffleProducts: E
     };
 };

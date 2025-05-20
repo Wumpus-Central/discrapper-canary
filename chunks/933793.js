@@ -1,25 +1,25 @@
-e.d(t, { Z: () => g });
+e.d(n, { Z: () => g });
 var i = e(255367);
 e(73800);
 var r = e(442837),
     l = e(481060),
     a = e(240872),
-    o = e(456269),
-    s = e(346479),
+    s = e(456269),
+    o = e(346479),
     d = e(665906),
-    u = e(592125),
-    c = e(176505),
+    c = e(592125),
+    u = e(176505),
     h = e(388032);
-function g(n) {
-    let t = (0, r.e7)([u.Z], () => u.Z.getChannel(n.parent_id)),
-        e = (0, d.Xb)(n),
-        g = (0, o.kF)(n);
-    return (null == t ? void 0 : t.isForumLikeChannel()) && e
-        ? n.hasFlag(c.zZ.PINNED)
+function g(t) {
+    let n = (0, r.e7)([c.Z], () => c.Z.getChannel(t.parent_id)),
+        e = (0, d.Xb)(t),
+        g = (0, s.kF)(t);
+    return (null == n ? void 0 : n.isForumLikeChannel()) && e
+        ? t.hasFlag(u.zZ.PINNED)
             ? (0, i.jsx)(l.sNh, {
                   id: 'unpin-thread',
                   label: h.intl.string(h.t.trD8am),
-                  action: () => s.Z.unpin(n)
+                  action: () => o.Z.unpin(t)
               })
             : (0, i.jsx)(l.sNh, {
                   id: 'pin-thread',
@@ -30,10 +30,10 @@ function g(n) {
                                 title: h.intl.string(h.t.IMbjxs),
                                 body: h.intl.string(h.t['mi5+Vl']),
                                 onConfirm: async () => {
-                                    await s.Z.unpin(g), s.Z.pin(n);
+                                    await o.Z.unpin(g), o.Z.pin(t);
                                 }
                             })
-                          : s.Z.pin(n);
+                          : o.Z.pin(t);
                   }
               })
         : null;

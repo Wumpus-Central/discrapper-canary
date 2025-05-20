@@ -1,9 +1,11 @@
 n.d(t, {
     BK: () => p,
+    CX: () => g,
     mm: () => m,
     vV: () => d
 }),
-    n(997841);
+    n(997841),
+    n(388685);
 var r = n(442837),
     o = n(271383),
     l = n(430824),
@@ -51,8 +53,14 @@ let d = (e, t) => {
     );
 };
 function p(e, t) {
-    return null != t && i.Z.canManageUser(u.Plq.KICK_MEMBERS, e, t) && !e.isNonUserBot();
+    let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.Z];
+    return null != t && n.canManageUser(u.Plq.KICK_MEMBERS, e, t) && !e.isNonUserBot();
 }
 function m(e, t) {
-    return null != t && i.Z.canManageUser(u.Plq.BAN_MEMBERS, e, t) && !e.isNonUserBot() && !e.bot;
+    let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.Z];
+    return null != t && n.canManageUser(u.Plq.BAN_MEMBERS, e, t) && !e.isNonUserBot() && !e.bot;
+}
+function g(e, t) {
+    let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.Z];
+    return null != e && null != t && n.canManageUser(u.Plq.MANAGE_MESSAGES, e, t) && !e.isNonUserBot();
 }

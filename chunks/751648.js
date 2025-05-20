@@ -1,7 +1,7 @@
 r.d(t, {
     ZO: () => o,
-    df: () => c,
-    hF: () => u,
+    df: () => u,
+    hF: () => c,
     j2: () => s,
     qD: () => d
 });
@@ -34,8 +34,8 @@ async function o() {
         });
     }
 }
-async function c(e) {
-    let { skuId: t, onRedeemStart: r, onRedeemSucceed: c, onRedeemFail: u, shouldRefetchBalance: s = !0 } = e;
+async function u(e) {
+    let { skuId: t, onRedeemStart: r, onRedeemSucceed: u, onRedeemFail: c, shouldRefetchBalance: s = !0 } = e;
     a.Z.wait(() => {
         a.Z.dispatch({
             type: 'VIRTUAL_CURRENCY_REDEEM_START',
@@ -57,7 +57,7 @@ async function c(e) {
                 entitlements: e
             }),
             s && o(),
-            null == c || c(e),
+            null == u || u(e),
             e
         );
     } catch (r) {
@@ -68,10 +68,10 @@ async function c(e) {
             error: e
         }),
             s && o(),
-            null == u || u(e);
+            null == c || c(e);
     }
 }
-function u(e) {
+function c(e) {
     let { earnedOrbsQuantity: t, dedupeKey: r } = e;
     return a.Z.dispatch({
         type: 'VIRTUAL_CURRENCY_EARNED_ORBS_COACHMARK_OPEN',

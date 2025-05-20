@@ -332,29 +332,28 @@ function V(e) {
             return null != f && null != (t = null == (e = Z.ZP.getMember(a, f.id)) ? void 0 : e.isPending) && t;
         }),
         x = !!(0, _.Dc)(s),
-        j = (g || c.notClaimed) && x,
-        O = (0, o.e7)([y.Z], () => y.Z.shouldShowPopout(a)),
-        E = (0, o.e7)([A.Z], () => A.Z.can(k.Plq.SEND_MESSAGES, i)),
-        I = (0, o.e7)([C.Z], () => C.Z.getRequest(a)),
-        M = F(G({}, c), {
+        j = (0, o.e7)([y.Z], () => y.Z.shouldShowPopout(a)),
+        O = (0, o.e7)([A.Z], () => A.Z.can(k.Plq.SEND_MESSAGES, i)),
+        E = (0, o.e7)([C.Z], () => C.Z.getRequest(a)),
+        I = F(G({}, c), {
             guild: s,
             isLurking: h,
             isFollowable: u,
-            shouldShowLurkerModeSuccessPopout: O,
+            shouldShowLurkerModeSuccessPopout: j,
             showLurkerModeUpsellPopout: h && null != s && R.Uu(k.Plq.SEND_MESSAGES, i),
             theme: P.Z.theme,
-            canSendMessages: E,
+            canSendMessages: O,
             channelFollowingUsersSeen: null != d ? d.usersSeenEver : null,
             hasVerificationGate: x,
-            showMemberVerificationModal: j,
-            guildJoinRequestStatus: null != (n = null == I ? void 0 : I.applicationStatus) ? n : b.wB.STARTED,
-            guildJoinRequest: I,
+            showMemberVerificationModal: g && x,
+            guildJoinRequestStatus: null != (n = null == E ? void 0 : E.applicationStatus) ? n : b.wB.STARTED,
+            guildJoinRequest: E,
             useReducedMotion: p.Z.useReducedMotion,
             isStaff: m
         });
     return (0, r.jsx)(
         H,
-        F(G({}, M), {
+        F(G({}, I), {
             channel: i,
             children: l
         })

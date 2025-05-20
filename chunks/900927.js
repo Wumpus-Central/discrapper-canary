@@ -112,7 +112,8 @@ function f(e) {
                                       s.Z,
                                       j(p({}, e), {
                                           guild: y,
-                                          size: s.Z.Sizes.SMOL
+                                          size: s.Z.Sizes.SMOL,
+                                          className: b.guildIcon
                                       })
                                   )
                           }),

@@ -1,7 +1,7 @@
 n.d(t, {
-    CF: () => Q,
+    CF: () => X,
     ZP: () => et,
-    nD: () => X
+    nD: () => Q
 }),
     n(539854),
     n(388685),
@@ -276,7 +276,7 @@ let Y = o.memo(function (e) {
               ]
           });
 });
-function Q(e, t, n) {
+function X(e, t, n) {
     let { message: o, channel: l, author: i, compact: s = !1, onContextMenu: a, showUsernamePopout: c, roleIcon: u, onClickUsername: d, onPopoutRequestClose: p } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -308,7 +308,7 @@ function Q(e, t, n) {
         ]
     });
 }
-function X(e) {
+function Q(e) {
     let { message: t, avatar: n, username: o, usernameSpanId: l, usernameClassName: s, compact: a, showTimestamp: u, showTimestampOnHover: d, ariaLabelledBy: m, ariaDescribedBy: g, className: f, messageClassname: b, badges: h } = e,
         O = (0, _.yE)(t.flags, F.iLy.SENT_BY_SOCIAL_LAYER_INTEGRATION) ? t.applicationId : null,
         y = (0, p.q)(O);
@@ -532,7 +532,7 @@ let ee = o.memo(function (e) {
                 [t, P, l]
             ),
             V = (0, a.e7)([N.Z], () => $(l, L, g, N.Z.getGuild(e.guildId)), [l, L, g, e.guildId]),
-            Q = o.useMemo(() => {
+            X = o.useMemo(() => {
                 let e = [];
                 return (0, _.yE)(t.flags, F.iLy.SUPPRESS_NOTIFICATIONS) && e.push((0, r.jsx)(v.Z, {}, 'suppress-notifications')), t.hasPotions() && e.push((0, r.jsx)(O.Z, { message: t })), e;
             }, [t]),
@@ -540,7 +540,7 @@ let ee = o.memo(function (e) {
             ee = (0, A.Dv)(t),
             et = h ? ''.concat(J) : ''.concat(J, ' ').concat(ee),
             en = (null == n ? void 0 : n.state) === j.Y.LOADED ? (0, A.Gq)(t) : void 0;
-        return (0, r.jsx)(X, {
+        return (0, r.jsx)(Q, {
             message: t,
             avatar: D,
             username: (0, r.jsxs)(r.Fragment, {
@@ -585,7 +585,7 @@ let ee = o.memo(function (e) {
             usernameSpanId: (0, A.XX)(t, b),
             usernameClassName: i()(H.headerText, {
                 [H.hasRoleIcon]: 0 !== V,
-                [H.hasBadges]: null != G || Q.length > 0
+                [H.hasBadges]: null != G || X.length > 0
             }),
             compact: l,
             showTimestamp: !0 !== h,
@@ -593,6 +593,6 @@ let ee = o.memo(function (e) {
             ariaLabelledBy: et,
             ariaDescribedBy: en,
             className: y,
-            badges: Q
+            badges: X
         });
     });

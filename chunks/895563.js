@@ -1,5 +1,5 @@
 n.d(t, {
-    P: () => g,
+    P: () => b,
     l: () => p
 }),
     n(388685);
@@ -16,7 +16,7 @@ var r = n(392711),
     f = n(362658),
     h = n(981631),
     v = n(388032);
-function b(e, t) {
+function g(e, t) {
     return e.type === h.d4z.GROUP_DM ? (t ? v.intl.string(v.t['0BWmSE']) : v.intl.string(v.t.uuVTOD)) : e.type === h.d4z.DM ? (t ? v.intl.string(v.t['2wfKGh']) : v.intl.string(v.t.wPbAsb)) : t ? v.intl.string(v.t.Bou7lZ) : v.intl.string(v.t['4wcdEx']);
 }
 function p(e) {
@@ -31,12 +31,12 @@ function p(e) {
     return 0 === v.length
         ? (0, i.jsx)(o.sNh, {
               id: 'favorite-channel',
-              label: b(e, !1),
+              label: g(e, !1),
               action: () => p(null)
           })
         : (0, i.jsxs)(o.sNh, {
               id: 'favorite-channel',
-              label: b(e, !1),
+              label: g(e, !1),
               action: () => p(null),
               children: [
                   n &&
@@ -67,13 +67,13 @@ function p(e) {
               ]
           });
 }
-function g(e) {
+function b(e) {
     let t = (0, l.e7)([u.Z], () => u.Z.isFavorite(e.id));
     return __OVERLAY__ || !t
         ? null
         : (0, i.jsx)(o.sNh, {
               id: 'favorite-channel',
-              label: b(e, !0),
+              label: g(e, !0),
               color: 'danger',
               action: () =>
                   e.type === h.d4z.GUILD_CATEGORY

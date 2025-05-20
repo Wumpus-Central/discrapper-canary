@@ -18,14 +18,14 @@ let i = {
         let t = a.useRef(null),
             o = a.useRef(e);
         o.current = e;
-        let c = a.useMemo(
+        let u = a.useMemo(
                 () => () => {
                     null != t.current && t.current.play(e);
                 },
                 [e]
             ),
-            u = a.useCallback((e) => {
-                var a, c;
+            c = a.useCallback((e) => {
+                var a, u;
                 return (0, n.jsx)(
                     l.L,
                     ((a = (function (e) {
@@ -53,7 +53,7 @@ let i = {
                         }
                         return e;
                     })({}, e)),
-                    (c = c =
+                    (u = u =
                         {
                             src: () => r.e('75535').then(r.t.bind(r, 405115, 19)),
                             ref: t,
@@ -61,7 +61,7 @@ let i = {
                             markers: i
                         }),
                     Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(c))
+                        ? Object.defineProperties(a, Object.getOwnPropertyDescriptors(u))
                         : (function (e, t) {
                               var r = Object.keys(e);
                               if (Object.getOwnPropertySymbols) {
@@ -69,15 +69,15 @@ let i = {
                                   r.push.apply(r, n);
                               }
                               return r;
-                          })(Object(c)).forEach(function (e) {
-                              Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(c, e));
+                          })(Object(u)).forEach(function (e) {
+                              Object.defineProperty(a, e, Object.getOwnPropertyDescriptor(u, e));
                           }),
                     a)
                 );
             }, []);
         return {
             events: {},
-            play: c,
+            play: u,
             getDuration: a.useCallback(() => {
                 var e;
                 return null == (e = t.current) ? void 0 : e.getDuration();
@@ -86,6 +86,6 @@ let i = {
                 var e, r;
                 return null != (r = null == (e = t.current) ? void 0 : e.getCurrentFrame()) ? r : null;
             }, []),
-            Component: u
+            Component: c
         };
     };

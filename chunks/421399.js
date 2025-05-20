@@ -81,7 +81,7 @@ function P(e) {
 }
 function Z(e) {
     var t;
-    let { author: n, message: r, channel: a, userOverride: f, compact: A = !1, withMentionPrefix: Z = !1, showPopout: R = !1, hideGuildTag: w = !1, className: L, onClick: D, onContextMenu: k, onPopoutRequestClose: M, renderPopout: U, renderRemixTag: G = !1, decorations: B, previewGuildId: F, subscribeToGroupId: z } = e,
+    let { author: n, message: r, channel: a, userOverride: f, compact: A = !1, withMentionPrefix: Z = !1, showPopout: R = !1, hideGuildTag: w = !1, className: L, onClick: D, onContextMenu: k, onPopoutRequestClose: M, renderPopout: U, renderRemixTag: B = !1, decorations: G, previewGuildId: F, subscribeToGroupId: z } = e,
         V = l.useRef(null),
         H = l.useContext(_.Z),
         K = null != (t = null == a ? void 0 : a.guild_id) ? t : H,
@@ -198,8 +198,8 @@ function Z(e) {
                 : (0, i.jsxs)(i.Fragment, {
                       children: [(0, i.jsx)(g.P3F, T(C({}, eu), { className: o()(eu.className, L) })), ed]
                   }),
-        ep = null != B ? B[0] : null,
-        em = null != B ? B[1] : null;
+        ep = null != G ? G[0] : null,
+        em = null != G ? G[1] : null;
     return (0, i.jsxs)(m.Gt, {
         value: W,
         children: [
@@ -227,7 +227,7 @@ function Z(e) {
                 }),
             null != em ? em : null,
             null == ep || A ? null : ep,
-            null != r && (0, S.f)(r) && et && G ? (0, i.jsx)(P, {}) : null
+            null != r && (0, S.f)(r) && et && B ? (0, i.jsx)(P, {}) : null
         ]
     });
 }

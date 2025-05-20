@@ -68,36 +68,37 @@ function v(e, t) {
     );
 }
 let I = (e) => {
-    let { isFetching: t = !1, entitlements: n, unactivatedFractionalPremiumUnits: r, currentUser: i, premiumSubscription: a, fetchedAllEntitlements: s, excludeReverseTrialFromCountdown: c } = e,
-        u = {
+    var t;
+    let { isFetching: n = !1, entitlements: r, unactivatedFractionalPremiumUnits: i, currentUser: a, premiumSubscription: s, fetchedAllEntitlements: c, excludeReverseTrialFromCountdown: u } = e,
+        d = {
             isFractionalPremiumActive: !1,
             fractionalState: E.a$.NONE,
             startsAt: l()(0),
             endsAt: l()(0),
             currentEntitlementId: '',
             unactivatedUnits: [],
-            fetched: s
+            fetched: c
         };
-    if (t) return v(y({}, u), { fetched: !1 });
-    if (null == i || (0 === n.length && 0 === r.length)) return u;
-    let d = n.filter((e) => null != e.endsAt && null != e.startsAt).sort((e, t) => ((o()(null != e.endsAt && null != t.endsAt, 'endsAt should not be null'), e.endsAt < t.endsAt) ? -1 : +(e.endsAt > t.endsAt)));
-    if ((d.reverse(), d.length > 0 && (d.length !== n.length || null == d[0].startsAt || null == d[0].endsAt))) {
-        let e = Array.from(n.values()).map((e) => e.id),
+    if (n) return v(y({}, d), { fetched: !1 });
+    if (null == a || (0 === r.length && 0 === i.length)) return d;
+    let f = r.filter((e) => null != e.endsAt && null != e.startsAt).sort((e, t) => ((o()(null != e.endsAt && null != t.endsAt, 'endsAt should not be null'), e.endsAt < t.endsAt) ? -1 : +(e.endsAt > t.endsAt)));
+    if ((f.reverse(), f.length > 0 && (f.length !== r.length || null == f[0].startsAt || null == f[0].endsAt))) {
+        let e = Array.from(r.values()).map((e) => e.id),
             t = 'fractional redemption entitlements should have startsAt/endsAt';
         throw ((0, h.g9)(t, { extra: { entitlementIds: e } }), Error(t));
     }
-    let f = d.length > 0,
-        _ = E.a$.NONE;
-    f && (_ = null != a && a.status === g.O0b.PAUSED ? E.a$.FP_SUB_PAUSED : E.a$.FP_ONLY);
-    let p = c && d.length > 0 && d[0].sourceType === g.kNB.REVERSE_TRIAL;
+    let _ = null != (t = f[0]) ? t : null,
+        p = E.a$.NONE;
+    null != _ && (p = null != s && s.status === g.O0b.PAUSED ? E.a$.FP_SUB_PAUSED : E.a$.FP_ONLY);
+    let b = u && (null == _ ? void 0 : _.sourceType) === g.kNB.REVERSE_TRIAL;
     return {
-        isFractionalPremiumActive: f,
-        fractionalState: _,
-        startsAt: f ? l()(d[0].startsAt) : l()(0),
-        endsAt: f ? l()((0, m.N1)(d[0].endsAt, r, void 0, p)) : l()(0),
-        currentEntitlementId: d.length > 0 ? d[0].id : '',
-        unactivatedUnits: r,
-        fetched: s
+        isFractionalPremiumActive: null != _,
+        fractionalState: p,
+        startsAt: null != _ ? l()(_.startsAt) : l()(0),
+        endsAt: null != _ ? l()((0, m.N1)(_.endsAt, i, void 0, b)) : l()(0),
+        currentEntitlementId: null != _ ? _.id : '',
+        unactivatedUnits: i,
+        fetched: c
     };
 };
 function S() {

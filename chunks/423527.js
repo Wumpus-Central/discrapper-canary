@@ -36,8 +36,8 @@ var r,
     k = n(219496),
     M = n(794099),
     U = n(807369),
-    G = n(180529),
-    B = n(703656),
+    B = n(180529),
+    G = n(703656),
     F = n(108427),
     z = n(314897),
     V = n(480294),
@@ -433,7 +433,7 @@ class eh extends (r = l.PureComponent) {
                                         });
                                     }
                                 }),
-                                (0, i.jsx)(G.Z, {
+                                (0, i.jsx)(B.Z, {
                                     show: !n || d,
                                     children: (0, i.jsx)(h.Text, {
                                         variant: 'text-sm/normal',
@@ -579,7 +579,7 @@ class eh extends (r = l.PureComponent) {
                             this.setState({ globalNameFocused: !1 }), this.trackInputBlur('global_name');
                         }
                     }),
-                    (0, i.jsx)(G.Z, {
+                    (0, i.jsx)(B.Z, {
                         show: d,
                         top: -12,
                         bottom: 20,
@@ -915,7 +915,7 @@ function em(e) {
                     color: 'text-normal',
                     children: el.intl.string(el.t.z7c4bG)
                 })),
-        (0, i.jsx)(G.Z, {
+        (0, i.jsx)(B.Z, {
             show: (d && (null == u ? void 0 : u.type) === k.K.ERROR) || o,
             top: -12,
             bottom: 20,
@@ -925,5 +925,5 @@ function em(e) {
 }
 es(eh, 'defaultProps', {
     giftCodeResolved: !1,
-    transitionTo: B.uL
+    transitionTo: G.uL
 });

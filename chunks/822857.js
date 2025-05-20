@@ -1,14 +1,23 @@
 n.d(t, {
-    CE: () => l,
-    WX: () => o,
-    hl: () => a
+    CE: () => c,
+    WX: () => s,
+    hl: () => u
 });
-var r = n(278401),
-    i = n(907584);
-let l = (e) => ({ enabled: i.Z.getCurrentConfig(e).enabled }),
-    o = (e) => ({ enabled: i.Z.useExperiment(e).enabled }),
-    a = (e) => {
-        let { enabled: t } = o(e),
-            n = r.Z.useExperiment(e);
+var r = n(594174),
+    i = n(603077),
+    l = n(278401),
+    o = n(907584);
+let a = (e) => {
+        let t = r.default.getCurrentUser();
+        return !(null != t && t.isStaff()) && !i.Z.getCurrentConfig(e).enabled;
+    },
+    c = (e) => (a(e) ? { enabled: !1 } : { enabled: o.Z.getCurrentConfig(e).enabled }),
+    s = (e) => {
+        let t = o.Z.useExperiment(e);
+        return a(e) ? { enabled: !1 } : { enabled: t.enabled };
+    },
+    u = (e) => {
+        let { enabled: t } = s(e),
+            n = l.Z.useExperiment(e);
         return { enabled: t && n.enabled };
     };

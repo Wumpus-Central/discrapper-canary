@@ -41,8 +41,8 @@ var r,
     k = n(626135),
     M = n(585483),
     U = n(358085),
-    G = n(481153),
-    B = n(588705),
+    B = n(481153),
+    G = n(588705),
     F = n(494526),
     z = n(163671),
     V = n(981631),
@@ -304,7 +304,7 @@ class $ extends (r = l.PureComponent) {
         return (0, i.jsxs)(E.ZP, {
             className: e,
             children: [
-                (0, i.jsx)(B.R, {}),
+                (0, i.jsx)(G.R, {}),
                 (0, i.jsxs)(E.gO, {
                     className: q.marginTop20,
                     children: [
@@ -372,7 +372,7 @@ class $ extends (r = l.PureComponent) {
             (n =
                 null == r || h
                     ? null != l
-                        ? (0, i.jsx)(G.Z, { giftCode: l })
+                        ? (0, i.jsx)(B.Z, { giftCode: l })
                         : (0, i.jsxs)('div', {
                               className: W.header,
                               children: [
@@ -387,7 +387,7 @@ class $ extends (r = l.PureComponent) {
                                   !1 === (0, U.isAndroidWeb)() ? (0, i.jsx)(E.DK, { children: K.intl.string(K.t.euS7r6) }, 'subtitle') : null
                               ]
                           })
-                    : (0, i.jsx)(B.Z, { invite: r })),
+                    : (0, i.jsx)(G.Z, { invite: r })),
             (0, i.jsxs)(
                 v.Z,
                 {

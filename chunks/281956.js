@@ -1,27 +1,25 @@
 n.d(t, {
-    J: () => u,
-    n: () => c
+    J: () => c,
+    n: () => l
 }),
     n(388685);
 var r = n(442837),
     i = n(271383),
     o = n(430824),
-    a = n(607744),
-    s = n(594174),
-    l = n(983736);
-function c(e) {
-    let [t, n, r, c] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.Z, a.Z, s.default, i.ZP];
+    a = n(594174),
+    s = n(983736);
+function l(e) {
+    let [t, n, r] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [o.Z, a.default, i.ZP];
     if (null == e) return !1;
-    let u = t.getGuild(e),
-        { notClaimed: d } = n.getCheck(e),
-        f = r.getCurrentUser(),
-        _ = !1;
-    if (null != f) {
-        var p, h;
-        _ = null != (h = null == (p = c.getMember(e, f.id)) ? void 0 : p.isPending) && h;
+    let l = t.getGuild(e),
+        c = n.getCurrentUser(),
+        u = !1;
+    if (null != c) {
+        var d, f;
+        u = null != (f = null == (d = r.getMember(e, c.id)) ? void 0 : d.isPending) && f;
     }
-    return (_ || d) && !!(0, l.Dc)(u);
+    return u && !!(0, s.Dc)(l);
 }
-function u(e) {
-    return (0, r.e7)([o.Z, a.Z, s.default, i.ZP], () => null != e && c(e, [o.Z, a.Z, s.default, i.ZP]), [e]);
+function c(e) {
+    return (0, r.e7)([o.Z, a.default, i.ZP], () => null != e && l(e, [o.Z, a.default, i.ZP]), [e]);
 }

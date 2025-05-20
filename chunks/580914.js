@@ -8,9 +8,9 @@ var r = n(255367),
     c = n(442837),
     u = n(481060),
     d = n(607070),
-    b = n(70097),
-    f = n(688465),
-    p = n(341907),
+    f = n(70097),
+    p = n(688465),
+    b = n(341907),
     g = n(507808),
     h = n(594174),
     m = n(451478),
@@ -22,12 +22,12 @@ var r = n(255367),
     S = n(937510),
     j = n(823941),
     y = n(38900),
-    P = n(709999),
-    E = n(794324),
+    E = n(709999),
+    P = n(794324),
     k = n(619899),
     T = n(215023),
-    w = n(981631),
-    I = n(388032),
+    I = n(981631),
+    w = n(388032),
     B = n(806734);
 let L = {
         rankedSkuIds: [],
@@ -68,13 +68,13 @@ let L = {
             A = (0, c.e7)([h.default], () => h.default.getCurrentUser()),
             Z = (0, O.u)(),
             F = l.useMemo(() => (null != s ? s : N(i)), [s, i]),
-            { isPreviewingStaticBanner: H, bannerOverrides: D, bannerStyleOverrides: M, heroLogo: W, heroBannerStatic: V, heroBannerAnimated: U } = (0, E.hr)(F),
+            { isPreviewingStaticBanner: H, bannerOverrides: D, bannerStyleOverrides: M, heroLogo: W, heroBannerStatic: V, heroBannerAnimated: U } = (0, P.hr)(F),
             G = null == D ? void 0 : D.heroBanner,
             z = l.useMemo(() => Z(F.rankedSkuIds), [t, Z, F.rankedSkuIds]),
             q = (0, x.a)()(z),
             Y = (0, S.l)(q).slice(0, 4),
             $ = (0, k.St)(Y),
-            X = v === T.AW.ORBS ? I.intl.string(I.t['1CdL8f']) : I.intl.formatToPlainString(I.t.wvKYCg, { category_name: F.name });
+            K = v === T.AW.ORBS ? w.intl.string(w.t['1CdL8f']) : w.intl.formatToPlainString(w.t.wvKYCg, { category_name: F.name });
         return null != A && (t || F !== L)
             ? (0, r.jsxs)('div', {
                   className: a()(B.heroBlock, { [B.responsiveHero]: null == M ? void 0 : M.responsive }),
@@ -88,7 +88,7 @@ let L = {
                                         className: B.bannerImage,
                                         style: { backgroundImage: 'url('.concat(V, ')') }
                                     })
-                                  : (0, r.jsx)(b.Z, {
+                                  : (0, r.jsx)(f.Z, {
                                         className: B.bannerVideoBackground,
                                         src: U,
                                         autoPlay: !0,
@@ -123,7 +123,7 @@ let L = {
                                                     null != F.unpublishedAt &&
                                                         (0, r.jsx)(u.IGR, {
                                                             disableColor: !0,
-                                                            text: I.intl.string(I.t['h/uBCQ']),
+                                                            text: w.intl.string(w.t['h/uBCQ']),
                                                             className: B.limitedTimeBadge
                                                         }),
                                                     (0, r.jsxs)('div', {
@@ -140,7 +140,7 @@ let L = {
                                                                     variant: 'heading-xxl/bold',
                                                                     className: B.title,
                                                                     color: 'header-primary',
-                                                                    children: [F.title, v === T.AW.ORBS && (0, r.jsx)(f.Z, {})]
+                                                                    children: [F.title, v === T.AW.ORBS && (0, r.jsx)(p.Z, {})]
                                                                 }),
                                                             (0, r.jsx)(u.Text, {
                                                                 variant: v === T.AW.ORBS ? 'text-lg/medium' : 'text-md/normal',
@@ -161,14 +161,14 @@ let L = {
                                                   onClick: () => {
                                                       v === T.AW.ORBS
                                                           ? ((0, g.Y)({
-                                                                pageType: w.ZY5.SHOP_ORBS_TAB,
-                                                                sectionType: w.jXE.ORBS_SHOP_HERO_BLOCK,
-                                                                ctaObject: w.qAy.CTA_TO_QUEST_HOME
+                                                                pageType: I.ZY5.SHOP_ORBS_TAB,
+                                                                sectionType: I.jXE.ORBS_SHOP_HERO_BLOCK,
+                                                                ctaObject: I.qAy.CTA_TO_QUEST_HOME
                                                             }),
-                                                            (0, p.navigateToQuestHome)({ fromContent: o.j.ORBS_SHOP_HERO_CTA }))
+                                                            (0, b.navigateToQuestHome)({ fromContent: o.j.ORBS_SHOP_HERO_CTA }))
                                                           : n('shop latest category hero', F.categorySkuId);
                                                   },
-                                                  children: X
+                                                  children: K
                                               })
                                           })
                                   ]
@@ -193,7 +193,7 @@ let L = {
                                                                   categoryPosition: 0
                                                               },
                                                               children: (0, r.jsx)(
-                                                                  P.Z,
+                                                                  E.Z,
                                                                   {
                                                                       product: e,
                                                                       category: n,

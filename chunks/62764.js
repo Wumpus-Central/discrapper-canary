@@ -1,4 +1,4 @@
-n.d(t, { Z: () => M }), n(388685);
+n.d(t, { Z: () => B }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -17,19 +17,23 @@ var r = n(255367),
     _ = n(216337),
     C = n(920888),
     x = n(287151),
-    y = n(569471),
-    v = n(346479),
-    j = n(592125),
-    O = n(934415),
-    E = n(572004),
-    I = n(456269),
-    P = n(109590),
-    S = n(228392),
-    Z = n(981631),
-    N = n(388032),
-    T = n(184844),
-    A = n(92254);
-function w(e) {
+    y = n(501517),
+    v = n(982168),
+    j = n(216572),
+    O = n(569471),
+    E = n(346479),
+    I = n(592125),
+    P = n(934415),
+    S = n(572004),
+    Z = n(456269),
+    N = n(109590),
+    T = n(228392),
+    A = n(981631),
+    w = n(388032),
+    R = n(776571),
+    M = n(184844),
+    k = n(92254);
+function L(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -54,7 +58,7 @@ function w(e) {
     }
     return e;
 }
-function R(e, t) {
+function D(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
@@ -72,34 +76,66 @@ function R(e, t) {
         e
     );
 }
-function M(e) {
-    let { postId: t, isFirstMessage: n, isLastItem: l = !1, parentChannelId: M } = e,
-        { ref: k, width: L } = (0, d.ZP)(),
-        [D, U] = i.useState(3),
-        [B, G] = i.useState(!n),
-        [F, H] = (0, p.Z)(!1, 2000),
-        V = (0, o.e7)([j.Z], () => j.Z.getChannel(t), [t]),
-        { firstMessage: z } = (0, P.cl)(V),
-        W = (0, o.e7)([y.Z], () => y.Z.hasJoined(t)),
-        { disableReactionUpdates: Y, disableReactionCreates: q, isLurking: K, isGuest: X, isPendingMember: Q } = (0, g.Z)(V),
-        J = (0, o.e7)([j.Z], () => j.Z.getChannel(M)),
-        $ = (0, I.Bs)(J),
-        ee = (0, o.e7)([h.Z], () => h.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
-        et = i.useCallback(
+function U(e) {
+    let { channel: t } = e,
+        n = t.isArchivedThread(),
+        l = (0, v.P0)(t),
+        [a, o] = i.useState(!1);
+    return l
+        ? (0, r.jsxs)(s.zxk, {
+              size: s.zxk.Sizes.SMALL,
+              look: s.zxk.Looks.FILLED,
+              color: s.zxk.Colors.PRIMARY,
+              onClick: () => {
+                  o(!0),
+                      y.Z.resolveFlag(t.id).then(() => {
+                          o(!1);
+                      });
+              },
+              disabled: n,
+              innerClassName: M.actionButton,
+              submitting: a,
+              children: [
+                  (0, r.jsx)(s.dz2, {
+                      size: 'custom',
+                      color: 'currentColor',
+                      width: 16,
+                      height: 16
+                  }),
+                  n ? w.intl.string(R.default['2Y4vkp']) : w.intl.string(R.default.YIbR4u)
+              ]
+          })
+        : null;
+}
+function B(e) {
+    let { postId: t, isFirstMessage: n, isLastItem: l = !1, parentChannelId: y } = e,
+        { ref: v, width: R } = (0, d.ZP)(),
+        [B, G] = i.useState(3),
+        [F, H] = i.useState(!n),
+        [V, z] = (0, p.Z)(!1, 2000),
+        W = (0, o.e7)([I.Z], () => I.Z.getChannel(t), [t]),
+        { firstMessage: Y } = (0, N.cl)(W),
+        q = (0, o.e7)([O.Z], () => O.Z.hasJoined(t)),
+        { disableReactionUpdates: K, disableReactionCreates: X, isLurking: Q, isGuest: J, isPendingMember: $ } = (0, g.Z)(W),
+        ee = (0, j.nw)(W),
+        et = (0, o.e7)([I.Z], () => I.Z.getChannel(y)),
+        en = (0, Z.Bs)(et),
+        er = (0, o.e7)([h.Z], () => h.Z.shouldDisplayPrompt(t) && !0 === n, [t, n]),
+        ei = i.useCallback(
             (e) => {
                 let t = e[0];
                 if (null != t && n) {
                     let e = t.intersectionRect,
                         n = t.boundingClientRect;
-                    G((e.bottom - e.top) / (n.bottom - n.top) < 1);
+                    H((e.bottom - e.top) / (n.bottom - n.top) < 1);
                 }
             },
             [n]
         );
     i.useLayoutEffect(() => {
-        let e = k.current;
+        let e = v.current;
         if (null == e || !n) return;
-        let t = new IntersectionObserver(et, { threshold: 1 });
+        let t = new IntersectionObserver(ei, { threshold: 1 });
         return (
             t.observe(e),
             () => {
@@ -107,56 +143,56 @@ function M(e) {
             }
         );
     });
-    let [en, er] = i.useState(!0);
+    let [el, ea] = i.useState(!0);
     if (
         (i.useEffect(() => {
-            null != L && (U(Math.floor((L - 280) / 58)), er(!1));
-        }, [L]),
-        null == V || null == z)
+            null != R && (G(Math.floor((R - 280) / 58)), ea(!1));
+        }, [R]),
+        null == W || null == Y)
     )
         return null;
-    let ei = z.reactions.length > 0,
-        el = () => {
-            W ? v.Z.leaveThread(V, 'Forum Toolbar') : v.Z.joinThread(V, 'Forum Toolbar');
+    let eo = Y.reactions.length > 0,
+        es = () => {
+            q ? E.Z.leaveThread(W, 'Forum Toolbar') : E.Z.joinThread(W, 'Forum Toolbar');
         },
-        ea = () => {
-            (0, S.B)({
-                postId: V.id,
-                location: { section: Z.jXE.CHANNEL_HEADER }
+        ec = () => {
+            (0, T.B)({
+                postId: W.id,
+                location: { section: A.jXE.CHANNEL_HEADER }
             }),
-                (0, E.JG)((0, O.EO)(V, J), () => H(!0));
+                (0, S.JG)((0, P.EO)(W, et), () => z(!0));
         },
-        eo = () => {
+        eu = () => {
             c.Z.jumpToMessage({
-                channelId: V.id,
-                messageId: V.id,
+                channelId: W.id,
+                messageId: W.id,
                 flash: !0,
                 jumpType: u.SR.INSTANT
             });
         },
-        es = W ? s.dz2 : s.Dkj;
+        ed = q ? s.dz2 : s.Dkj;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsxs)('div', {
-                className: a()(T.container, { [T.header]: B }),
-                ref: k,
+                className: a()(M.container, { [M.header]: F }),
+                ref: v,
                 children: [
                     (0, r.jsxs)('div', {
-                        className: a()(T.reactButtons, { [T.loading]: en }),
+                        className: a()(M.reactButtons, { [M.loading]: el }),
                         children: [
-                            !ei &&
-                                !q &&
-                                null != $ &&
+                            !eo &&
+                                !X &&
+                                null != en &&
                                 (0, r.jsx)('div', {
-                                    className: A.reactions,
+                                    className: k.reactions,
                                     children: (0, r.jsx)(x.le, {
-                                        message: z,
+                                        message: Y,
                                         readOnly: !1,
                                         useChatFontScaling: !1,
-                                        isLurking: K,
-                                        isGuest: X,
-                                        isPendingMember: Q,
-                                        emoji: $,
+                                        isLurking: Q,
+                                        isGuest: J,
+                                        isPendingMember: $,
+                                        emoji: en,
                                         type: m.O.NORMAL,
                                         hideCount: !0,
                                         count: 0,
@@ -167,68 +203,70 @@ function M(e) {
                                     })
                                 }),
                             (0, r.jsx)(C.Z, {
-                                message: z,
-                                channel: V,
+                                message: Y,
+                                channel: W,
                                 disableReactionCreates: !0,
-                                disableReactionUpdates: Y,
-                                isLurking: K,
-                                isGuest: X,
-                                isPendingMember: Q,
-                                maxReactions: D,
-                                className: T.reactions,
+                                disableReactionUpdates: K,
+                                isLurking: Q,
+                                isGuest: J,
+                                isPendingMember: $,
+                                maxReactions: B,
+                                className: M.reactions,
                                 useChatFontScaling: !1,
                                 isForumToolbar: !0,
                                 forceHideReactionCreates: !0
                             }),
-                            !q &&
+                            !X &&
                                 (0, r.jsx)(b.X, {
                                     type: m.O.NORMAL,
-                                    message: z,
-                                    channel: V,
+                                    message: Y,
+                                    channel: W,
                                     useChatFontScaling: !1,
-                                    className: a()(T.addReactButton, { [T.hasNoReactions]: !ei }),
+                                    className: a()(M.addReactButton, { [M.hasNoReactions]: !eo }),
                                     isForumToolbar: !0,
-                                    children: !ei && N.intl.string(N.t.xpOyTE)
+                                    children: !eo && w.intl.string(w.t.xpOyTE)
                                 })
                         ]
                     }),
                     (0, r.jsxs)('div', {
-                        className: T.buttons,
+                        className: M.buttons,
                         children: [
+                            ee
+                                ? (0, r.jsx)(U, { channel: W })
+                                : (0, r.jsx)(s.ua7, {
+                                      text: w.intl.string(w.t.F7oeDg),
+                                      children: (e) =>
+                                          (0, r.jsxs)(
+                                              s.zxk,
+                                              D(L({}, e), {
+                                                  look: s.zxk.Looks.BLANK,
+                                                  size: s.zxk.Sizes.SMALL,
+                                                  onClick: es,
+                                                  className: M.button,
+                                                  innerClassName: a()(M.buttonInner, { [M.active]: q }),
+                                                  children: [
+                                                      (0, r.jsx)(ed, {
+                                                          size: 'xs',
+                                                          color: 'currentColor'
+                                                      }),
+                                                      q ? w.intl.string(w.t['7OkUzs']) : w.intl.string(w.t['3aOv+v'])
+                                                  ]
+                                              })
+                                          )
+                                  }),
                             (0, r.jsx)(s.ua7, {
-                                text: N.intl.string(N.t.F7oeDg),
+                                text: w.intl.string(w.t.WqhZsr),
                                 children: (e) =>
                                     (0, r.jsxs)(
                                         s.zxk,
-                                        R(w({}, e), {
+                                        D(L({}, e), {
                                             look: s.zxk.Looks.BLANK,
                                             size: s.zxk.Sizes.SMALL,
-                                            onClick: el,
-                                            className: T.button,
-                                            innerClassName: a()(T.buttonInner, { [T.active]: W }),
+                                            onClick: ec,
+                                            className: M.button,
+                                            innerClassName: M.buttonInner,
                                             children: [
-                                                (0, r.jsx)(es, {
-                                                    size: 'xs',
-                                                    color: 'currentColor'
-                                                }),
-                                                W ? N.intl.string(N.t['7OkUzs']) : N.intl.string(N.t['3aOv+v'])
-                                            ]
-                                        })
-                                    )
-                            }),
-                            (0, r.jsx)(s.ua7, {
-                                text: N.intl.string(N.t.WqhZsr),
-                                children: (e) =>
-                                    (0, r.jsxs)(
-                                        s.zxk,
-                                        R(w({}, e), {
-                                            look: s.zxk.Looks.BLANK,
-                                            size: s.zxk.Sizes.SMALL,
-                                            onClick: ea,
-                                            className: T.button,
-                                            innerClassName: T.buttonInner,
-                                            children: [
-                                                F
+                                                V
                                                     ? (0, r.jsx)(s.dz2, {
                                                           size: 'custom',
                                                           color: 'currentColor',
@@ -241,23 +279,23 @@ function M(e) {
                                                           width: 16,
                                                           height: 16
                                                       }),
-                                                F ? N.intl.string(N.t['t5VZ8/']) : null
+                                                V ? w.intl.string(w.t['t5VZ8/']) : null
                                             ]
                                         })
                                     )
                             }),
                             !n &&
                                 (0, r.jsx)(s.ua7, {
-                                    text: N.intl.string(N.t.nFP4oa),
+                                    text: w.intl.string(w.t.nFP4oa),
                                     children: (e) =>
                                         (0, r.jsx)(
                                             s.zxk,
-                                            R(w({}, e), {
+                                            D(L({}, e), {
                                                 look: s.zxk.Looks.BLANK,
                                                 size: s.zxk.Sizes.SMALL,
-                                                onClick: eo,
-                                                className: T.button,
-                                                innerClassName: T.buttonInner,
+                                                onClick: eu,
+                                                className: M.button,
+                                                innerClassName: M.buttonInner,
                                                 children: (0, r.jsx)(s.Za2, {
                                                     size: 'custom',
                                                     color: 'currentColor',
@@ -271,9 +309,9 @@ function M(e) {
                     })
                 ]
             }),
-            ee && (0, r.jsx)(f.Z, { threadId: t }),
+            er && (0, r.jsx)(f.Z, { threadId: t }),
             (0, r.jsx)(_.Z, {
-                channel: V,
+                channel: W,
                 isLastItem: l
             })
         ]

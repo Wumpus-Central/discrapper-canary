@@ -9,5 +9,6 @@ e.exports = {
     hasNoReactions: 'hasNoReactions__34c2c',
     reactions: 'reactions__34c2c',
     buttons: 'buttons__34c2c',
+    actionButton: 'actionButton__34c2c',
     active: 'active__34c2c'
 };

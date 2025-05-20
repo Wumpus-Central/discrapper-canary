@@ -19,8 +19,8 @@ var r = n(481060),
     v = n(494439),
     h = n(991307),
     p = n(700994),
-    m = n(332031),
-    Z = n(981631),
+    Z = n(332031),
+    m = n(981631),
     S = n(388032);
 function j(e) {
     for (var t = 1; t < arguments.length; t++) {
@@ -66,10 +66,10 @@ function P(e, t) {
     );
 }
 function A(e) {
-    let { user: t, guildId: n, channelId: o, mediaEngineContext: a, onSelect: c, onShowProfile: Z, onWatchStream: j, appContext: P } = e,
+    let { user: t, guildId: n, channelId: o, mediaEngineContext: a, onSelect: c, onShowProfile: m, onWatchStream: j, appContext: P } = e,
         A = (0, v.Z)({
             onAction: () => {
-                null == Z || Z();
+                null == m || m();
             }
         }),
         I = (0, E.Z)({
@@ -80,7 +80,7 @@ function A(e) {
             user: t,
             appContext: P
         }),
-        M = (0, m.Z)(t.id, j),
+        M = (0, Z.Z)(t.id, j),
         N = (0, p.Z)(t.id),
         C = (0, h.Z)(t.id, a),
         D = (0, y.Z)({ user: t }),
@@ -131,7 +131,7 @@ function A(e) {
 }
 function I(e) {
     let { user: t, mediaEngineContext: n, onSelect: o, onShowProfile: a, onWatchStream: c, appContext: b } = e,
-        Z = (0, v.Z)({
+        m = (0, v.Z)({
             onAction: () => {
                 null == a || a();
             }
@@ -144,7 +144,7 @@ function I(e) {
             user: t,
             appContext: b
         }),
-        A = (0, m.Z)(t.id, c),
+        A = (0, Z.Z)(t.id, c),
         I = (0, p.Z)(t.id),
         T = (0, h.Z)(t.id, n),
         M = (0, y.Z)({ user: t }),
@@ -178,7 +178,7 @@ function I(e) {
                     children: [
                         (0, l.jsx)(r.kSQ, { children: U }),
                         (0, l.jsxs)(r.kSQ, {
-                            children: [Z, j, P, A]
+                            children: [m, j, P, A]
                         }),
                         (0, l.jsx)(r.kSQ, { children: I }),
                         (0, l.jsx)(r.kSQ, { children: N }),
@@ -230,7 +230,7 @@ let T = (0, a.Z)(
                       })
                   );
         },
-        { object: Z.qAy.CONTEXT_MENU }
+        { object: m.qAy.CONTEXT_MENU }
     ),
     [c.Z.CONTEXT_MENU, c.Z.USER_OVERLAY_CONTEXT_MENU]
 );

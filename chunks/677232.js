@@ -37,7 +37,7 @@ let d = [
             ribbon: '#67DA9C'
         }
     ],
-    b = [
+    f = [
         {
             box: '#EABB75',
             ribbon: '#E4595C'
@@ -67,8 +67,8 @@ let d = [
             ribbon: '#81C29F'
         }
     ],
-    f = 1 / 300,
-    p = (0, i.animated)(c.Z),
+    p = 1 / 300,
+    b = (0, i.animated)(c.Z),
     g = (0, i.animated)(u.Z),
     h = (0, i.animated)(o.OgN),
     m = l.memo(function (e) {
@@ -78,7 +78,7 @@ let d = [
                 isContentDismissed: i,
                 boxColors: c = {
                     dark: d,
-                    light: b
+                    light: f
                 }
             } = e,
             u = (0, s.ZP)(),
@@ -92,7 +92,7 @@ let d = [
                     }),
                     l.useEffect(() => {
                         if (e) return;
-                        let t = Math.random() <= f;
+                        let t = Math.random() <= p;
                         if ((n(t), !t)) {
                             let e;
                             do e = Math.floor(7 * Math.random());
@@ -122,7 +122,7 @@ let d = [
                     isDark: (0, a.wj)(u),
                     style: C
                 })
-              : (0, r.jsx)(p, {
+              : (0, r.jsx)(b, {
                     boxColor: O.box,
                     ribbonColor: O.ribbon,
                     style: C
