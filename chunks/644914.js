@@ -1,6 +1,6 @@
 n.d(t, {
-    TE: () => C,
-    h_: () => x
+    TE: () => x,
+    h_: () => C
 }),
     n(388685);
 var r = n(73800),
@@ -19,7 +19,7 @@ var r = n(73800),
     g = n(496675),
     b = n(709054),
     _ = n(981631);
-function C(e, t) {
+function x(e, t) {
     return (0, a.cj)(
         [g.Z],
         () => ({
@@ -31,7 +31,7 @@ function C(e, t) {
         [t, e]
     );
 }
-function x(e) {
+function C(e) {
     return {
         guildPopulated: (function (e) {
             let t = (0, a.e7)([u.Z], () => u.Z.getChannel(null == e ? void 0 : e.systemChannelId)),

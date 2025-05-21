@@ -3,7 +3,7 @@ var r = n(255367),
     o = n(73800),
     s = n(120356),
     a = n.n(s),
-    i = n(230986),
+    i = n(366594),
     l = n(278074),
     c = n(442837),
     d = n(692547),
@@ -83,53 +83,53 @@ function Q(e, t) {
 }
 function U(e) {
     var t;
-    let { quest: n, onClick: s, reducedMotion: i } = e,
-        [l, c] = o.useState(!1),
-        m = o.useRef(null),
-        f = (0, O.z)(O.i.QUEST_BAR_PREVIEW_VIDEO, n),
-        g = (0, O.z)(O.i.VIDEO_PLAYER_THUMBNAIL, n),
-        x = (0, j.km)((e) => e.getVideoProgressState);
+    let { quest: n, onClick: s, reducedMotion: i, isExpanded: l } = e,
+        [c, m] = o.useState(!1),
+        f = o.useRef(null),
+        g = (0, O.z)(O.i.QUEST_BAR_PREVIEW_VIDEO, n),
+        x = (0, O.z)(O.i.VIDEO_PLAYER_THUMBNAIL, n),
+        h = (0, j.km)((e) => e.getVideoProgressState);
     o.useEffect(() => {
-        null != m.current && (i && l && (m.current.currentTime = 0), m.current.play());
-    }, [m, l, i]);
-    let h = x(n.id),
-        b = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null && h === j.iw.COMPLETED,
-        v = !b && (!i || l);
+        null != f.current && (l && (!i || c) ? ((f.current.currentTime = 0), f.current.play()) : f.current.pause());
+    }, [f, c, i, l]);
+    let b = h(n.id),
+        v = (null == (t = n.userStatus) ? void 0 : t.completedAt) != null && b === j.iw.COMPLETED,
+        y = !v && (!i || c);
     return (0, r.jsxs)(u.P3F, {
         className: Z.videoQuestPreviewCont,
         onClick: s,
         onMouseEnter: () => {
-            i && !l && c(!0);
+            i && !c && m(!0);
         },
         onMouseLeave: () => {
-            i && l && c(!1);
+            i && c && m(!1);
         },
         children: [
-            null != g &&
+            null != x &&
                 (0, r.jsx)('img', {
                     alt: '',
-                    src: g.url,
+                    src: x.url,
                     className: Z.assetBodyVideoPreviewMedia
                 }),
-            null != f
+            null != g
                 ? (0, r.jsx)(p.Z, {
-                      ref: m,
-                      autoPlay: !0,
-                      poster: null == g ? void 0 : g.url,
+                      ref: f,
+                      autoPlay: !1,
+                      poster: null == x ? void 0 : x.url,
                       loop: !0,
                       muted: !0,
                       playsInline: !0,
-                      className: a()(Z.assetBodyVideoPreviewVideo, { [Z.assetBodyVideoPreviewVisible]: v }),
+                      className: a()(Z.assetBodyVideoPreviewVideo, { [Z.assetBodyVideoPreviewVisible]: y }),
                       controls: !1,
                       children: (0, r.jsx)('source', {
-                          src: f.url,
-                          type: f.mimetype
+                          src: g.url,
+                          type: g.mimetype
                       })
                   })
                 : null,
             (0, r.jsx)('div', {
                 className: Z.previewPlayButtonCont,
-                children: b
+                children: v
                     ? (0, r.jsx)(u.Oe7, {
                           color: d.Z.colors.WHITE,
                           className: Z.previewPlayButton
@@ -443,6 +443,7 @@ function X(e) {
                         children: [
                             K &&
                                 (0, r.jsx)(U, {
+                                    isExpanded: p,
                                     quest: n,
                                     onClick: Y,
                                     reducedMotion: m

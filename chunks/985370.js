@@ -14,7 +14,7 @@ var r = n(255367),
     m = n(981631);
 let g = (e) => {
     let { channel: t, className: n, whichPopoutIsOpen: g, setWhichPopoutIsOpen: b } = e,
-        { isHovered: _, setIsHovered: C, onMouseEnter: x, onMouseLeave: y, cancelTimers: v } = (0, u.Z)(200, 300),
+        { isHovered: _, setIsHovered: x, onMouseEnter: C, onMouseLeave: y, cancelTimers: v } = (0, u.Z)(200, 300),
         [j, O] = i.useState(!1),
         E = (0, l.e7)([p.Z], () => p.Z.effectCooldownEndTime),
         I = i.useMemo(() => (null != E ? (E.getTime() - Date.now()) / 1000 : 0), [E]),
@@ -23,9 +23,9 @@ let g = (e) => {
         { parentAnalyticsLocation: Z } = (0, s.ZP)(),
         N = i.useCallback(
             (e) => {
-                'focus' !== e.type && (j || S || x());
+                'focus' !== e.type && (j || S || C());
             },
-            [j, S, x]
+            [j, S, C]
         ),
         T = i.useCallback(() => {
             j || y();
@@ -47,7 +47,7 @@ let g = (e) => {
         align: 'center',
         spacing: 16,
         onRequestClose: () => {
-            C(!1), O(!1), null == b || b(void 0);
+            x(!1), O(!1), null == b || b(void 0);
         },
         renderPopout: (e) => {
             let { closePopout: n } = e;
@@ -55,7 +55,7 @@ let g = (e) => {
                 isHovered: w,
                 channel: t,
                 closePopout: n,
-                onMouseEnter: x,
+                onMouseEnter: C,
                 onMouseLeave: T,
                 onFocus: () => O(!0)
             });

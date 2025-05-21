@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => C });
 var r = n(255367);
 n(73800);
 var i = n(442837),
@@ -16,7 +16,7 @@ var i = n(442837),
     g = n(967128),
     b = n(388032),
     _ = n(906667);
-function C(e) {
+function x(e) {
     let { channel: t } = e;
     return (0, u.I3)(o.Z.EMPTY_GROUP_DM, t.id)
         ? (0, r.jsxs)('div', {
@@ -36,11 +36,11 @@ function C(e) {
           })
         : null;
 }
-function x(e) {
+function C(e) {
     var t, n, u;
     let { channel: h, children: f, user: b } = e,
         _ = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
-        x = null != (t = (0, c.ZP)(h)) ? t : '',
+        C = null != (t = (0, c.ZP)(h)) ? t : '',
         {
             avatarDecorationSrc: y,
             eventHandlers: v,
@@ -92,19 +92,19 @@ function x(e) {
                                       size: l.EFr.SIZE_80,
                                       experimentLocation: 'empty_messages',
                                       animated: e,
-                                      'aria-label': x
+                                      'aria-label': C
                                   })
                               })
                             : (0, r.jsx)(l.qEK, {
-                                  'aria-label': x,
+                                  'aria-label': C,
                                   size: l.EFr.SIZE_80,
                                   src: (0, s.x)(h, 80, e),
                                   avatarDecoration: y
                               });
                     })(),
-                    (0, r.jsx)(g.Ot, { children: x }),
+                    (0, r.jsx)(g.Ot, { children: C }),
                     (0, r.jsx)(g.jz, { children: f }),
-                    h.isMultiUserDM() && (0, r.jsx)(C, { channel: h })
+                    h.isMultiUserDM() && (0, r.jsx)(x, { channel: h })
                 ]
             }),
         Object.getOwnPropertyDescriptors

@@ -36,7 +36,7 @@ let v = (e) => {
         Z = (0, a.e7)([d.Z], () => d.Z.useReducedMotion),
         w = (0, E.mN)(),
         { fractionalState: k } = (0, m.Z)(),
-        L = (0, h.W)().isInReverseTrial;
+        L = (0, h.W)();
     return (
         w ? ((t = j.intl.string(j.t['+vt7w8'])), (n = j.intl.string(j.t.LgHbnJ))) : ((t = j.intl.string(j.t.LgHbnJ)), (n = j.intl.string(j.t['+vt7w8']))),
         (0, i.jsx)(c.yWw, {

@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(605436),
     b = n(185413),
     _ = n(42311),
-    C = n(626786),
-    x = n(434404),
+    x = n(626786),
+    C = n(434404),
     y = n(454585),
     v = n(430824),
     j = n(496675),
@@ -180,13 +180,13 @@ function w(e) {
                                       disabled: !U,
                                       verified: s,
                                       onClick: () => {
-                                          x.Z.open(t.guild_id, N.pNK.MEMBERS), x.Z.selectRole(e.id);
+                                          C.Z.open(t.guild_id, N.pNK.MEMBERS), C.Z.selectRole(e.id);
                                       }
                                   },
                                   e.id
                               )
                             : (0, r.jsx)(
-                                  C.Z,
+                                  x.Z,
                                   {
                                       className: a()(A.role, { [A.last]: n === L.length - 1 }),
                                       roleName: e.name,

@@ -157,23 +157,15 @@ class F extends (r = s.yh) {
     hasFetchedForApplicationIds(e) {
         return e.every((e) => S.has(e));
     }
-    getReverseTrialEntitlementInfo(e) {
+    getReverseTrialEntitlement(e) {
         let t = new Date(),
-            n = this.getForApplication(p.CL),
-            r = null,
-            i = !1;
-        if (null != n) {
-            for (let o of n) {
-                let n = null != o.endsAt && o.endsAt < t;
-                n || o.sourceType === _.kNB.REVERSE_TRIAL || (i = !0);
-                let a = null != o.startsAt;
-                o.type === _.qc2.FRACTIONAL_REDEMPTION && o.sourceType === _.kNB.REVERSE_TRIAL && (!n || e) && a && (r = o);
+            n = this.getForApplication(p.CL);
+        if (null != n)
+            for (let r of n) {
+                let n = null != r.endsAt && r.endsAt < t,
+                    i = null != r.startsAt;
+                if (r.type === _.qc2.FRACTIONAL_REDEMPTION && r.sourceType === _.kNB.REVERSE_TRIAL && (!n || e) && i) return r;
             }
-            return {
-                reverseTrialEntitlement: r,
-                hasBankedFractionalNitro: i
-            };
-        }
         return null;
     }
     getFractionalPremium() {

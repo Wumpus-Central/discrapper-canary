@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(403404),
     b = n(906732),
     _ = n(522651),
-    C = n(243778),
-    x = n(579185),
+    x = n(243778),
+    C = n(579185),
     y = n(301076),
     v = n(127379),
     j = n(981631),
@@ -28,7 +28,7 @@ function I(e) {
         Z = (0, p.KF)(t.id),
         N = (0, p.g5)(Z),
         T = Z !== p.jy.CAN_LAUNCH || S,
-        { isHovered: A, setIsHovered: w, onMouseEnter: R, onMouseLeave: M } = (0, x.Z)(200, 300),
+        { isHovered: A, setIsHovered: w, onMouseEnter: R, onMouseLeave: M } = (0, C.Z)(200, 300),
         k = (0, d.a)({ surface: s.eR.VOICE_LAUNCHER }),
         L = (0, l.e7)([u.ZP], () => null != u.ZP.getSelfEmbeddedActivityForLocation(u.ZP.getConnectedActivityLocation())),
         D = !T,
@@ -52,7 +52,7 @@ function I(e) {
     T || V.push(a.z.ACTIVITIES_MINI_SHELF_SPARKLES), (0, h.Z)(t.id) && !T && V.push(a.z.ACTIVITY_GDM_ROCKET_SPARKLE), T || V.push(a.z.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP);
     let z = i.useRef(!1),
         W = i.useRef(null);
-    return (0, r.jsx)(C.ZP, {
+    return (0, r.jsx)(x.ZP, {
         contentTypes: V,
         children: (e) => {
             let { visibleContent: i, markAsDismissed: l } = e,

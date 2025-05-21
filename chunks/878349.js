@@ -14,7 +14,7 @@ var r = n(255367),
     m = n(546240),
     g = n(952009);
 function b(e) {
-    let { checked: t, labelText: n, tooltipText: l, canToggle: b, iconAltText: _, onChange: C, tooltipColor: x, className: y, id: v = 'fancybutton-toggle', collapseWhenChecked: j = !0, onClick: O, disabled: E } = e,
+    let { checked: t, labelText: n, tooltipText: l, canToggle: b, iconAltText: _, onChange: x, tooltipColor: C, className: y, id: v = 'fancybutton-toggle', collapseWhenChecked: j = !0, onClick: O, disabled: E } = e,
         I = (0, o.e7)([p.Z], () => p.Z.useReducedMotion),
         [P, S] = i.useState(!1),
         Z = (0, d.ZP)(),
@@ -27,7 +27,7 @@ function b(e) {
             tooltipText: l
         }),
         position: 'top',
-        color: null != x ? x : E ? c.ua7.Colors.BLACK : c.ua7.Colors.BRAND,
+        color: null != C ? C : E ? c.ua7.Colors.BLACK : c.ua7.Colors.BRAND,
         'aria-label': l,
         tooltipClassName: f.tooltip,
         className: f.tooltipContainer,
@@ -38,7 +38,7 @@ function b(e) {
                 onChange: function () {
                     if (b) {
                         let e = !t;
-                        S(!0), null == C || C(e);
+                        S(!0), null == x || x(e);
                     }
                     'function' == typeof O && O();
                 },

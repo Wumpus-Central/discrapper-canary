@@ -3,7 +3,7 @@ var r = n(255367);
 n(73800);
 var i = n(120356),
     l = n.n(i),
-    a = n(230986),
+    a = n(366594),
     o = n(481060),
     s = n(871499),
     c = n(388032),
@@ -71,8 +71,8 @@ let h = (0, a.animated)((e) => {
     });
 });
 function f(e) {
-    var { totalCooldownSeconds: t, remainingCooldownSeconds: n, onClick: i, onKeyDown: f, onMouseEnter: m, onMouseLeave: g, isActive: b = !1, isCenterButton: _ = !1, ref: C } = e,
-        x = (function (e, t) {
+    var { totalCooldownSeconds: t, remainingCooldownSeconds: n, onClick: i, onKeyDown: f, onMouseEnter: m, onMouseLeave: g, isActive: b = !1, isCenterButton: _ = !1, ref: x } = e,
+        C = (function (e, t) {
             if (null == e) return {};
             var n,
                 r,
@@ -103,18 +103,18 @@ function f(e) {
         O = _ ? s.d : s.Z;
     return (0, r.jsxs)('div', {
         className: u.container,
-        ref: C,
+        ref: x,
         children: [
             y ? (0, r.jsx)(h, { percentComplete: v.percentComplete }) : null,
             (0, r.jsx)(
                 O,
-                p(d({}, x), {
+                p(d({}, C), {
                     isTrayButton: !0,
                     disabled: y,
                     label: j,
                     iconComponent: o.EO4,
                     iconClassName: l()(u.iconHover, b && u.active),
-                    className: l()(x.className, u.button),
+                    className: l()(C.className, u.button),
                     onClick: i,
                     onKeyDown: f,
                     onMouseEnter: m,

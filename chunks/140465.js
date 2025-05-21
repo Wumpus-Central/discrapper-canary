@@ -121,4 +121,4 @@ let m = () => {
             r = !!(null == e ? void 0 : e.hasActiveTrial);
         return n && !r && !t;
     },
-    O = () => (0, u.W)().isInReverseTrial;
+    O = () => (0, u.W)();

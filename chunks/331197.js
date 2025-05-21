@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(792165),
     b = n(603074),
     _ = n(294629),
-    C = n(131951),
-    x = n(390322),
+    x = n(131951),
+    C = n(390322),
     y = n(871499),
     v = n(127379),
     j = n(388032);
@@ -30,7 +30,7 @@ function O(e) {
         } = (0, o.j)(),
         A = t.getGuildId(),
         { mute: w, suppress: R } = (0, _.Z)(t),
-        M = (0, l.e7)([C.Z], () => C.Z.isDeaf()),
+        M = (0, l.e7)([x.Z], () => x.Z.isDeaf()),
         k = w || R || M,
         L = (0, m.sR)({ isSoundboardButtonDisabled: k }),
         [D, U] = (0, h.cv)(L),
@@ -112,7 +112,7 @@ function O(e) {
             let { closePopout: n } = e;
             return k
                 ? null
-                : (0, r.jsx)(x.Z, {
+                : (0, r.jsx)(C.Z, {
                       children: (0, r.jsx)('div', {
                           onMouseEnter: H,
                           onMouseLeave: V,

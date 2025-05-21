@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(909746),
     b = n(501801),
     _ = n(884902),
-    C = n(271383),
-    x = n(430824),
+    x = n(271383),
+    C = n(430824),
     y = n(5192),
     v = n(776767),
     j = n(981631),
@@ -29,11 +29,11 @@ function S(e) {
     let { log: n, member: l, guild: o } = e,
         { analyticsLocations: d } = (0, p.ZP)(),
         m = g.nm(n),
-        x = g.QM(n),
+        C = g.QM(n),
         v = null == (t = g.V$(j.zUn.REASON, n)) ? void 0 : t.newValue,
         P = g.J5(n),
         S = (0, h.LJ)(n.id),
-        Z = (0, c.e7)([C.ZP], () => (null != n.userId ? C.ZP.getMember(l.guildId, n.userId) : null), [l.guildId, n.userId]),
+        Z = (0, c.e7)([x.ZP], () => (null != n.userId ? x.ZP.getMember(l.guildId, n.userId) : null), [l.guildId, n.userId]),
         N = (0, _.X)(null == Z ? void 0 : Z.guildId, null == Z ? void 0 : Z.colorStrings),
         T = i.useCallback(
             (e) => (t) => {
@@ -88,11 +88,11 @@ function S(e) {
                                     color: 'header-primary',
                                     children: m
                                 }),
-                            null != x &&
+                            null != C &&
                                 (0, r.jsxs)(u.Text, {
                                     variant: 'text-sm/normal',
                                     color: 'header-secondary',
-                                    children: ['(', 'string' == typeof x ? x : s()(x).fromNow(), ')']
+                                    children: ['(', 'string' == typeof C ? C : s()(C).fromNow(), ')']
                                 })
                         ]
                     }),
@@ -163,7 +163,7 @@ function S(e) {
 }
 function Z(e) {
     let { member: t } = e,
-        n = (0, c.e7)([x.Z], () => x.Z.getGuild(t.guildId), [t.guildId]),
+        n = (0, c.e7)([C.Z], () => C.Z.getGuild(t.guildId), [t.guildId]),
         l = (0, c.e7)(
             [m.Z],
             () => {

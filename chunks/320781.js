@@ -38,7 +38,10 @@ function h(e) {
                     color: 'header-secondary',
                     children: d.intl.string(d.t.mE3KJC)
                 }),
-            (0, r.jsx)(c.Z, { appliedTags: m })
+            (0, r.jsx)(c.Z, {
+                appliedTags: m,
+                wrap: n.isModeratorReportChannel()
+            })
         ]
     });
 }

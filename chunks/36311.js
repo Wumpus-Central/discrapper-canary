@@ -15,15 +15,15 @@ var r = n(255367),
     g = n(981631),
     b = n(723359),
     _ = n(388032),
-    C = n(857651);
-function x(e) {
+    x = n(857651);
+function C(e) {
     let { guild: t, channelId: n } = e,
         l = (0, o.e7)([f.default], () => {
             var e;
             return (null == (e = f.default.getCurrentUser()) ? void 0 : e.nsfwAllowed) === !1;
         }),
         a = (0, p.Kt)(),
-        { verifyAgreementButtonText: x, verifyGateDescription: y } = (0, p.a1)(b.L0.NSFW_CHANNEL),
+        { verifyAgreementButtonText: C, verifyGateDescription: y } = (0, p.a1)(b.L0.NSFW_CHANNEL),
         v = i.useCallback(() => {
             null != t && c.Z.nsfwReturnToSafety(t.id);
         }, [t]),
@@ -42,10 +42,10 @@ function x(e) {
               onDisagree: v,
               title: _.intl.string(_.t.ZmwvDQ),
               description: y,
-              agreement: x,
+              agreement: C,
               agreementButtonColor: s.zxk.Colors.BRAND,
               disagreement: _.intl.string(_.t['/g10LC']),
-              imageClassName: C.ageGatedImage
+              imageClassName: x.ageGatedImage
           })
         : l
           ? (0, r.jsx)(h.Z, {
@@ -58,7 +58,7 @@ function x(e) {
                 description: _.intl.format(_.t['2kHZen'], { helpURL: m.Z.getArticleURL(g.BhN.NSFW_AGE_GATING) }),
                 agreement: null,
                 disagreement: _.intl.string(_.t['/g10LC']),
-                imageClassName: C.ageGatedImage
+                imageClassName: x.ageGatedImage
             })
           : (0, r.jsx)(h.Z, {
                 guildId: null == t ? void 0 : t.id,
@@ -82,10 +82,10 @@ let y = function (e) {
         }, []),
         (0, r.jsx)(s.Den, {
             ref: o,
-            className: C.scroller,
+            className: x.scroller,
             children: (0, r.jsx)('div', {
-                className: a()(l, C.wrapper),
-                children: (0, r.jsx)(x, {
+                className: a()(l, x.wrapper),
+                children: (0, r.jsx)(C, {
                     guild: t,
                     channelId: n
                 })

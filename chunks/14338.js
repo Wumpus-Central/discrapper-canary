@@ -1,4 +1,4 @@
-n.d(t, { Z: () => x });
+n.d(t, { Z: () => C });
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -56,10 +56,10 @@ function _(e, t) {
         e
     );
 }
-function C(e) {
+function x(e) {
     let { channel: t, speaker: l, className: f } = e,
-        C = i.useRef(null),
-        { newestAnalyticsLocation: x } = (0, d.ZP)(),
+        x = i.useRef(null),
+        { newestAnalyticsLocation: C } = (0, d.ZP)(),
         y = (0, u.bp)(),
         { reducedMotion: v } = i.useContext(o.Sfi),
         j = (0, c.Z)({ userId: l.id }),
@@ -79,7 +79,7 @@ function C(e) {
                                 showMediaItems: !0,
                                 showStageChannelItems: !0,
                                 showChatItems: !1,
-                                onInteraction: (0, p.u)('GuildChannelUserContextMenu', x)
+                                onInteraction: (0, p.u)('GuildChannelUserContextMenu', C)
                             })
                         );
                 },
@@ -87,21 +87,21 @@ function C(e) {
             );
         };
     return (0, r.jsx)(h.Z, {
-        targetElementRef: C,
+        targetElementRef: x,
         user: l.user,
         guildId: t.guild_id,
         channelId: t.id,
         clickTrap: !0,
         children: (e) =>
             (0, r.jsx)(o.ua7, {
-                targetElementRef: C,
+                targetElementRef: x,
                 text: l.userNick,
                 position: 'bottom',
                 children: (n) =>
                     (0, r.jsx)(
                         o.P3F,
                         _(b({}, n, e), {
-                            innerRef: C,
+                            innerRef: x,
                             onClick: (t) => {
                                 t.stopPropagation(), e.onClick(t);
                             },
@@ -118,7 +118,7 @@ function C(e) {
             })
     });
 }
-function x(e) {
+function C(e) {
     let { speakers: t, channel: n } = e;
     return (0, r.jsx)(f.Z, {
         className: g.summary,
@@ -127,7 +127,7 @@ function x(e) {
         max: 10,
         renderUser: (e, t, i) =>
             (0, r.jsx)(
-                C,
+                x,
                 {
                     channel: n,
                     speaker: e,

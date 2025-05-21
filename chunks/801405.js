@@ -15,25 +15,25 @@ var r = n(255367),
     g = n(585483),
     b = n(358085),
     _ = n(228488),
-    C = n(981631),
-    x = n(806176);
+    x = n(981631),
+    C = n(806176);
 let y = () => {
-    a.Z.wait(() => p.xv(C.KJ3.CHANNEL_CALL_POPOUT));
+    a.Z.wait(() => p.xv(x.KJ3.CHANNEL_CALL_POPOUT));
 };
 function v(e) {
     let { channel: t, appContext: n, popoutOpen: a, popoutWindow: p, currentWindow: v } = e,
         { parentAnalyticsLocation: j } = (0, c.ZP)(),
-        O = n === C.IlC.POPOUT,
+        O = n === x.IlC.POPOUT,
         E = i.useRef(null),
         { currentLayout: I, mode: P } = (0, l.cj)(
             [u.Z],
             () => {
                 let e = u.Z.getMode(t.id),
-                    r = n === C.IlC.POPOUT;
-                r && (e = C.WtW.VIDEO);
-                let i = e === C.WtW.VIDEO ? u.Z.getLayout(t.id, n) : C.AEg.MINIMUM;
+                    r = n === x.IlC.POPOUT;
+                r && (e = x.WtW.VIDEO);
+                let i = e === x.WtW.VIDEO ? u.Z.getLayout(t.id, n) : x.AEg.MINIMUM;
                 return (
-                    r && i !== C.AEg.FULL_SCREEN && (i = C.AEg.NO_CHAT),
+                    r && i !== x.AEg.FULL_SCREEN && (i = x.AEg.NO_CHAT),
                     {
                         currentLayout: i,
                         mode: e
@@ -57,17 +57,17 @@ function v(e) {
             };
         }, [p, O, v]),
         A = a && !O,
-        w = P === C.WtW.VIDEO && S && !A,
+        w = P === x.WtW.VIDEO && S && !A,
         R = i.useCallback(
             (e, r) => {
-                r !== e && (o.Z.updateLayout(t.id, r, n), r === C.AEg.FULL_SCREEN && t.isPrivate() && g.S.dispatch(C.CkL.TEXTAREA_BLUR));
+                r !== e && (o.Z.updateLayout(t.id, r, n), r === x.AEg.FULL_SCREEN && t.isPrivate() && g.S.dispatch(x.CkL.TEXTAREA_BLUR));
             },
             [n, t]
         ),
         M = i.useCallback(
             (e) => {
                 null != T &&
-                    e === C.AEg.FULL_SCREEN &&
+                    e === x.AEg.FULL_SCREEN &&
                     (R(e, Z.current),
                     (0, _.Pr)((e) => {
                         Z.current = e;
@@ -77,13 +77,13 @@ function v(e) {
         ),
         k = i.useCallback(
             (e) => () => {
-                null != T && ((0, d.v)(j, d.d.FULL_SCREEN, e !== C.AEg.FULL_SCREEN), e !== C.AEg.FULL_SCREEN ? ((Z.current = e), R(e, C.AEg.FULL_SCREEN), (0, _.Dj)(T)) : M(e));
+                null != T && ((0, d.v)(j, d.d.FULL_SCREEN, e !== x.AEg.FULL_SCREEN), e !== x.AEg.FULL_SCREEN ? ((Z.current = e), R(e, x.AEg.FULL_SCREEN), (0, _.Dj)(T)) : M(e));
             },
             [R, M, T, j]
         );
     i.useEffect(() => {
         let e = () => {
-            null != T && ((0, _.rB)(T, N) || I !== C.AEg.FULL_SCREEN || k(I)());
+            null != T && ((0, _.rB)(T, N) || I !== x.AEg.FULL_SCREEN || k(I)());
         };
         return (
             N.addEventListener(_.NO, e),
@@ -104,7 +104,7 @@ function v(e) {
         let { channel: e, maybeLeaveFullScreen: t } = D.current;
         return (
             m.default.track(
-                C.rMx.VIDEO_LAYOUT_TOGGLED,
+                x.rMx.VIDEO_LAYOUT_TOGGLED,
                 (function (e) {
                     for (var t = 1; t < arguments.length; t++) {
                         var n = null != arguments[t] ? arguments[t] : {},
@@ -137,7 +137,7 @@ function v(e) {
         );
     }, [I, O]),
     i.useEffect(() => {
-        null != T && E.current === C.WtW.VIDEO && P === C.WtW.VOICE && (0, _.Pr)(T, N);
+        null != T && E.current === x.WtW.VIDEO && P === x.WtW.VOICE && (0, _.Pr)(T, N);
     }, [N, P, E, T]),
     i.useEffect(() => {
         !S && O && y();
@@ -147,7 +147,7 @@ function v(e) {
               themeable: !1,
               node: T,
               guestWindow: p,
-              className: x.rightTrayIcon,
+              className: C.rightTrayIcon,
               onClick: k(I)
           })
         : null;

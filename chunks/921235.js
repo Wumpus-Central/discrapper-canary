@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(626135),
     b = n(51144),
     _ = n(901461),
-    C = n(981631),
-    x = n(388032),
+    x = n(981631),
+    C = n(388032),
     y = n(900170);
 let v = '749054660769218631';
 function j(e) {
@@ -31,26 +31,26 @@ function j(e) {
             () =>
                 !!a()(f.Z.getMessages(n.id).toArray())
                     .reverse()
-                    .find((e) => e.author.id !== h.default.getId() && e.state === C.yb.SENT && !(0, _.Z)(e))
+                    .find((e) => e.author.id !== h.default.getId() && e.state === x.yb.SENT && !(0, _.Z)(e))
         ),
         E = (0, o.e7)([m.default], () => m.default.getUser(n.isPrivate() ? n.getRecipientId() : null)),
-        I = null != (t = b.ZP.useName(E)) ? t : x.intl.string(x.t.y1Wu2d),
+        I = null != (t = b.ZP.useName(E)) ? t : C.intl.string(C.t.y1Wu2d),
         P = (0, o.e7)([d.Z], () => d.Z.getStickerById(v)),
         S = i.useCallback(async () => {
             if (null == l || '' === l)
                 try {
                     await c.Z.sendGreetMessage(n.id, v),
-                        g.default.track(C.rMx.DM_EMPTY_ACTION, {
+                        g.default.track(x.rMx.DM_EMPTY_ACTION, {
                             channel_id: n.id,
                             channel_type: n.type,
                             source: 'Wave',
                             type: 'Send wave'
                         });
                 } catch (e) {
-                    e.ok || 429 !== e.status || j(x.intl.string(x.t['Whhv4+']));
+                    e.ok || 429 !== e.status || j(C.intl.string(C.t['Whhv4+']));
                 }
         }, [n.id, n.type, l]),
-        Z = x.intl.formatToPlainString(x.t.m0zYbW, { username: I }),
+        Z = C.intl.formatToPlainString(C.t.m0zYbW, { username: I }),
         N =
             null != l && '' !== l
                 ? (0, r.jsx)(s.Text, {
@@ -66,7 +66,7 @@ function j(e) {
               children: [
                   (0, r.jsxs)(s.P3F, {
                       className: null != l && '' !== l ? y.compactButtonDisabled : y.compactButton,
-                      'aria-label': x.intl.string(x.t.pJObYG),
+                      'aria-label': C.intl.string(C.t.pJObYG),
                       onClick: S,
                       children: [
                           (0, r.jsx)(p.Z, {

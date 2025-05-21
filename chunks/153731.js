@@ -20,10 +20,10 @@ var n = r(255367),
     E = r(775194),
     j = r(499848),
     C = r(724392),
-    Z = r(442580),
-    P = r(770800),
-    N = r(981631),
-    R = r(65154),
+    P = r(442580),
+    Z = r(770800),
+    R = r(981631),
+    N = r(65154),
     x = r(388032),
     F = r(442122);
 let S = (e, t, r) =>
@@ -75,9 +75,9 @@ function k(e, t, r, n, a) {
         }),
         null != s &&
             i.push({
-                section: (0, f.J$)(e, N._s_.TRANSPORT, r),
+                section: (0, f.J$)(e, R._s_.TRANSPORT, r),
                 label: x.intl.string(x.t.wU9INz),
-                element: P.Z,
+                element: Z.Z,
                 elementProps: {
                     context: e,
                     index: r
@@ -86,7 +86,7 @@ function k(e, t, r, n, a) {
         null == d ||
             l().isEmpty(d) ||
             i.push({
-                section: (0, f.J$)(e, N._s_.OUTBOUND, r),
+                section: (0, f.J$)(e, R._s_.OUTBOUND, r),
                 label: x.intl.string(x.t['3u0gIC']),
                 element: C.Z,
                 elementProps: {
@@ -96,7 +96,7 @@ function k(e, t, r, n, a) {
             }),
         null != m &&
             i.push({
-                section: (0, f.J$)(e, N._s_.CAMERA, r),
+                section: (0, f.J$)(e, R._s_.CAMERA, r),
                 label: x.intl.string(x.t['2AGBWF']),
                 element: b.Z,
                 elementProps: {
@@ -143,8 +143,8 @@ function B() {
     let { defaultStats: r, streamStats: i } = (0, s.e7)(
             [f.ZP],
             () => ({
-                defaultStats: f.ZP.getAllStats(R.Yn.DEFAULT),
-                streamStats: f.ZP.getAllStats(R.Yn.STREAM)
+                defaultStats: f.ZP.getAllStats(N.Yn.DEFAULT),
+                streamStats: f.ZP.getAllStats(N.Yn.STREAM)
             }),
             [],
             s.pF
@@ -153,12 +153,12 @@ function B() {
         m = null == (e = r.concat(i).find((e) => null != e.screenshare)) ? void 0 : e.screenshare,
         y = null == (t = i.find((e) => null != e.clips)) ? void 0 : t.clips,
         v = (0, s.e7)([p.Z], () => p.Z.theme),
-        D = (0, s.e7)([p.Z], () => (p.Z.darkSidebar ? N.BRd.DARK : void 0)),
+        D = (0, s.e7)([p.Z], () => (p.Z.darkSidebar ? R.BRd.DARK : void 0)),
         b = (0, s.e7)([f.ZP], () => f.ZP.getSection()),
         j = (function (e) {
             let { defaultStats: t, streamStats: r, videoStreams: a, screenshare: i, clips: l, channel: s, connectionState: c } = e,
-                d = t.flatMap((e, t) => k(R.Yn.DEFAULT, e, t, a, null == s ? void 0 : s.getGuildId())),
-                m = r.flatMap((e, t) => k(R.Yn.STREAM, e, t, a, null == s ? void 0 : s.getGuildId())),
+                d = t.flatMap((e, t) => k(N.Yn.DEFAULT, e, t, a, null == s ? void 0 : s.getGuildId())),
+                m = r.flatMap((e, t) => k(N.Yn.STREAM, e, t, a, null == s ? void 0 : s.getGuildId())),
                 p = [],
                 h = [],
                 y = { section: u.ID.DIVIDER };
@@ -166,15 +166,15 @@ function B() {
                 null != i &&
                     (p.push(y),
                     p.push({
-                        section: N._s_.SCREENSHARE,
+                        section: R._s_.SCREENSHARE,
                         label: x.intl.string(x.t['gWbr/f']),
-                        element: Z.Z,
+                        element: P.Z,
                         elementProps: { screenshare: i }
                     })),
                 null != l &&
                     (h.push(y),
                     h.push({
-                        section: N._s_.CLIPS,
+                        section: R._s_.CLIPS,
                         label: x.intl.string(x.t.MKrFKC),
                         element: E.Z,
                         elementProps: { clips: l }
@@ -202,7 +202,7 @@ function B() {
                             (0, n.jsx)(o.X6q, {
                                 className: F.channelName,
                                 variant: 'heading-md/normal',
-                                children: c === N.hes.RTC_CONNECTED ? 'Connected' : 'Disconnected'
+                                children: c === R.hes.RTC_CONNECTED ? 'Connected' : 'Disconnected'
                             })
                     },
                     ...d,

@@ -16,12 +16,12 @@ var i = n(442837),
     g = n(388032);
 function b(e) {
     var t, b;
-    let { channel: _, children: C } = e,
-        x = (0, i.e7)([u.Z], () => u.Z.isBlocked(_.getRecipientId()));
+    let { channel: _, children: x } = e,
+        C = (0, i.e7)([u.Z], () => u.Z.isBlocked(_.getRecipientId()));
     (0, o.Z)(_.id);
     let y = (0, s.Z)(_.id),
         v = _.isSystemDM(),
-        j = x && !v && !_.isMultiUserDM(),
+        j = C && !v && !_.isMultiUserDM(),
         O = {};
     if (v) {
         let e = y
@@ -84,7 +84,7 @@ function b(e) {
             }
             return e;
         })({}, O)),
-        (b = b = { children: C }),
+        (b = b = { children: x }),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(b))
             : (function (e, t) {

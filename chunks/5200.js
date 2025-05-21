@@ -1,10 +1,10 @@
-n.d(t, { Y: () => x }), n(388685);
+n.d(t, { Y: () => C }), n(388685);
 var r,
     i = n(255367),
     l = n(73800),
     a = n(120356),
     o = n.n(a),
-    s = n(230986),
+    s = n(366594),
     c = n(481060),
     u = n(542094),
     d = n(182906),
@@ -18,10 +18,10 @@ let b = ['embedded_cover'],
         tension: 800,
         friction: 24
     };
-var C = (((r = C || {})[(r.THIRTEEN_BY_ELEVEN = 0)] = 'THIRTEEN_BY_ELEVEN'), (r[(r.SIXTEEN_BY_NINE = 1)] = 'SIXTEEN_BY_NINE'), r);
-function x(e) {
+var x = (((r = x || {})[(r.THIRTEEN_BY_ELEVEN = 0)] = 'THIRTEEN_BY_ELEVEN'), (r[(r.SIXTEEN_BY_NINE = 1)] = 'SIXTEEN_BY_NINE'), r);
+function C(e) {
     var t;
-    let { context: n, activityItem: r, onClick: a, aspectRatio: C = 0, animatedDivClass: x, commandOrigin: y } = e,
+    let { context: n, activityItem: r, onClick: a, aspectRatio: x = 0, animatedDivClass: C, commandOrigin: y } = e,
         {
             onActivityItemSelected: v,
             imageBackground: j,
@@ -106,9 +106,9 @@ function x(e) {
                     theme: f.BRd.DARK,
                     children: (e) =>
                         (0, i.jsxs)(s.animated.div, {
-                            className: o()(e, g.activityItem, x, {
-                                [g.activityItem_13_11]: 0 === C,
-                                [g.activityItem_16_9]: 1 === C
+                            className: o()(e, g.activityItem, C, {
+                                [g.activityItem_13_11]: 0 === x,
+                                [g.activityItem_16_9]: 1 === x
                             }),
                             style: {
                                 transform: t.to([0, 1], [1, 1.05]).to((e) => 'scale('.concat(e, ')'))
@@ -129,4 +129,4 @@ function x(e) {
         })
     });
 }
-x.AspectRatio = C;
+C.AspectRatio = x;

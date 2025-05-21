@@ -66,7 +66,7 @@ function D(e, t) {
 }
 function L(e, t) {
     let n = null != t ? t : h.Z.getPreferredRegion();
-    null != n && n !== h.Z.getRegion(g.Z.getHostname(g.Z.getActiveStreamKey())) && (0, a.dV)(e, n);
+    null != n && n !== h.Z.getRegion(g.Z.getHostname(e)) && (0, a.dV)(e, n);
 }
 function x(e, t) {
     g.Z.getAllActiveStreamKeys().includes(e) ||

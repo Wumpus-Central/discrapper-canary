@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(618857),
     b = n(488131),
     _ = n(375954),
-    C = n(626135),
-    x = n(585483),
+    x = n(626135),
+    C = n(585483),
     y = n(403182),
     v = n(127654),
     j = n(752305),
@@ -61,7 +61,7 @@ function A(e) {
         (0, b.R6)(t, void 0, 'Plus Button');
     }
     function U() {
-        C.default.track(E.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), R('/', (0, j.JM)('/'));
+        x.default.track(E.rMx.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), R('/', (0, j.JM)('/'));
     }
     function B() {
         M();
@@ -121,7 +121,7 @@ function A(e) {
             );
     }
     function F() {
-        C.default.track(E.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
+        x.default.track(E.rMx.CHANNEL_ATTACH_MENU_START_ACTIVITY_CLICKED, {
             channel_type: t.type,
             channel_id: t.id,
             guild_id: t.guild_id
@@ -138,11 +138,11 @@ function A(e) {
             n = 'txt',
             r = '',
             i = w.match(N);
-        null != i && ((r = i[1]), (n = i[2]), (e = i[3]), (r += i[4])), (0, v.d)([(0, y.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n), 'text/plain')], t, A), x.S.dispatchToLastSubscribed(E.CkL.CLEAR_TEXT), '' !== r && x.S.dispatchToLastSubscribed(E.CkL.INSERT_TEXT, { plainText: r });
+        null != i && ((r = i[1]), (n = i[2]), (e = i[3]), (r += i[4])), (0, v.d)([(0, y.dp)(new Blob([e], { type: 'text/plain' }), 'message.'.concat(n), 'text/plain')], t, A), C.S.dispatchToLastSubscribed(E.CkL.CLEAR_TEXT), '' !== r && C.S.dispatchToLastSubscribed(E.CkL.INSERT_TEXT, { plainText: r });
     }
     return (
         i.useEffect(() => {
-            C.default.track(E.rMx.OPEN_POPOUT, {
+            x.default.track(E.rMx.OPEN_POPOUT, {
                 type: 'Send Attachment',
                 channel_id: t.id,
                 guild_id: t.guild_id

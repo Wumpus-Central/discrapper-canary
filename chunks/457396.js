@@ -84,7 +84,7 @@ let U = (e) => {
             X = (0, l.JA)('nitro'),
             Q = (0, v.N)(),
             J = (0, I.Ng)(),
-            $ = (0, O.W)().isInReverseTrial,
+            $ = (0, O.W)(),
             ee = (0, a.e7)([g.Z], () => g.Z.isLocalizedPromoEnabled) && null == Q,
             et = (0, T.Vi)(),
             en = (0, S.$_)(),

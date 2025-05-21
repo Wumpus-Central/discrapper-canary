@@ -24,31 +24,21 @@ async function h(e) {
             entitlementType: _.qc2.FRACTIONAL_REDEMPTION,
             excludeEnded: !1
         }));
-    let r = c.Z.getReverseTrialEntitlementInfo(!0),
-        o = null == r ? void 0 : r.reverseTrialEntitlement;
-    return (!(!(!n && null != o && null != o.endsAt && o.endsAt.getTime() < Date.now()) || o.endsAt.getTime() < Date.now() - p) && o.sourceType === _.kNB.REVERSE_TRIAL && (null == e && (await (0, d.T)()), null != l.Z.getUserTrialOffer(f.Rt))) || !1;
+    let r = c.Z.getReverseTrialEntitlement(!0);
+    return (!(!(!n && null != r && null != r.endsAt && r.endsAt.getTime() < Date.now()) || r.endsAt.getTime() < Date.now() - p) && r.sourceType === _.kNB.REVERSE_TRIAL && (null == e && (await (0, d.T)()), null != l.Z.getUserTrialOffer(f.Rt))) || !1;
 }
 function m() {
-    var e;
-    let t = (0, r.e7)([a.default], () => a.default.getCurrentUser()),
-        n = s.ZP.getPremiumTypeSubscription(),
-        l = null != n && !n.isBoostOnly,
-        d = (0, r.e7)([c.Z], () => c.Z.getReverseTrialEntitlementInfo(!1)),
-        f = null == d ? void 0 : d.reverseTrialEntitlement;
+    let e = (0, r.e7)([a.default], () => a.default.getCurrentUser()),
+        t = s.ZP.getPremiumTypeSubscription(),
+        n = null != t && !t.isBoostOnly,
+        l = (0, r.e7)([c.Z], () => c.Z.getReverseTrialEntitlement(!1));
     return (
         (0, o.ZP)(() => {
-            null != t && (0, u.I5)(t) && !l && (c.Z.fetchedAllEntitlements || c.Z.fetchingAllEntitlements || (0, i.p0)({ entitlementType: _.qc2.FRACTIONAL_REDEMPTION }));
+            null != e && (0, u.I5)(e) && !n && (c.Z.fetchedAllEntitlements || c.Z.fetchingAllEntitlements || (0, i.p0)({ entitlementType: _.qc2.FRACTIONAL_REDEMPTION }));
         }),
-        {
-            reverseTrialEntitlement: l ? null : f,
-            hasBankedFractionalNitro: null != (e = null == d ? void 0 : d.hasBankedFractionalNitro) && e
-        }
+        n ? null : l
     );
 }
 function g() {
-    let e = m();
-    return {
-        isInReverseTrial: null != e.reverseTrialEntitlement,
-        hasBankedFractionalNitro: e.hasBankedFractionalNitro
-    };
+    return null != m();
 }

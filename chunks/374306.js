@@ -17,10 +17,10 @@ function m(e) {
         n = (0, u.r_)(t),
         m = (0, i.e7)([a.Z], () => a.Z.hasHidden(t.id)),
         g = (0, d.c)(t.id),
-        { sortOrder: b, tagFilter: _, tagSetting: C } = (0, c.H)(t.id),
-        x = (0, i.e7)([s.Z, p.Z], () => !!(s.Z.getThreadIds(t.id, b, _, C).length > 0) || !!(p.Z.getThreads(t.id, b, _, C).length > 0), [t.id, b, _, C]),
+        { sortOrder: b, tagFilter: _, tagSetting: x } = (0, c.H)(t.id),
+        C = (0, i.e7)([s.Z, p.Z], () => !!(s.Z.getThreadIds(t.id, b, _, x).length > 0) || !!(p.Z.getThreads(t.id, b, _, x).length > 0), [t.id, b, _, x]),
         y = t.isMediaChannel();
-    if (!n || g || (y && x)) return null;
+    if (!n || g || (y && C)) return null;
     let v = m ? (y ? f.intl.string(f.t['WP/IEx']) : f.intl.string(f.t.zfq9V1)) : y ? f.intl.string(f.t.p60yFx) : f.intl.string(f.t.SNOqYG);
     return (0, r.jsx)(h.JO, {
         tooltip: v,

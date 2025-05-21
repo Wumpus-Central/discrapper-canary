@@ -17,13 +17,13 @@ function b(e) {
     let { channelId: t, onClick: n } = e,
         b = (0, o.bp)(),
         _ = (0, m.qY)(t),
-        C = (0, l.e7)([d.Z], () => d.Z.getChannel(t), [t]),
-        { canManageGuildEvent: x } = (0, s.XJ)(C),
-        y = x(_),
+        x = (0, l.e7)([d.Z], () => d.Z.getChannel(t), [t]),
+        { canManageGuildEvent: C } = (0, s.XJ)(x),
+        y = C(_),
         v = i.useRef(null);
     if (null == _) return null;
     let j = () => {
-            if (null != C && (0, f.Z)(C)) return void (0, p.lC)(C, b);
+            if (null != x && (0, f.Z)(x)) return void (0, p.lC)(x, b);
             n();
         },
         O = () => {

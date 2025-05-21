@@ -4,7 +4,7 @@ var r = n(255367),
     o = n(120356),
     i = n.n(o),
     a = n(10106),
-    s = n(230986),
+    s = n(366594),
     c = n(760907),
     u = n(670081),
     d = n(442837),
@@ -166,14 +166,14 @@ function $(e) {
         e0 = (0, d.e7)([v.Z], () => v.Z.useReducedMotion),
         e1 = (0, l.useRef)(null),
         e2 = (0, l.useRef)(null),
-        e8 = l.useRef(!0),
-        e6 = (null == (t = el.userStatus) ? void 0 : t.completedAt) != null,
+        e6 = l.useRef(!0),
+        e8 = (null == (t = el.userStatus) ? void 0 : t.completedAt) != null,
         e4 = (0, _.km)((e) => e.transcript),
         [e7, e3] = l.useState(null),
         [e9, e5] = l.useState(!1),
         [te, tt] = l.useState(!1),
         [tn, tr] = l.useState(null),
-        tl = e6 ? (null != (b = null == (n = e1.current) ? void 0 : n.duration) ? b : 0) : Math.max(eW.maxTimestampSec, ex.progressSeconds),
+        tl = e8 ? (null != (b = null == (n = e1.current) ? void 0 : n.duration) ? b : 0) : Math.max(eW.maxTimestampSec, ex.progressSeconds),
         to = l.useMemo(
             () =>
                 (0, D.T)({
@@ -194,9 +194,9 @@ function $(e) {
                 subtitle: f ? p : d
             };
         })(el),
-        ts = e6 ? (eW.timestampSec >= eW.duration ? 0 : eW.timestampSec) : Math.max(eW.timestampSec, ex.progressSeconds);
+        ts = e8 ? (eW.timestampSec >= eW.duration ? 0 : eW.timestampSec) : Math.max(eW.timestampSec, ex.progressSeconds);
     (0, f.Ng)(() => {
-        e8.current && ((e8.current = !1), eV(E.Z.getEffectiveConnectionSpeed()), e6 && eW.timestampSec >= eW.duration && eX(el.id, 0, eW.duration));
+        e6.current && ((e6.current = !1), eV(E.Z.getEffectiveConnectionSpeed()), e8 && eW.timestampSec >= eW.duration && eX(el.id, 0, eW.duration));
     });
     let {
             videoAssetId: tc,
@@ -278,13 +278,13 @@ function $(e) {
     let tT = l.useCallback(
         (e) => {
             var t;
-            e6 || (null == (t = el.userStatus) ? void 0 : t.enrolledAt) == null || (to.info('[QV] sendServerProgressUpdate: '.concat(e)), (0, y.FI)(el, e)), tf();
+            e8 || (null == (t = el.userStatus) ? void 0 : t.enrolledAt) == null || (to.info('[QV] sendServerProgressUpdate: '.concat(e)), (0, y.FI)(el, e)), tf();
         },
-        [e6, el, to, tf]
+        [e8, el, to, tf]
     );
     l.useEffect(() => {
-        (es !== p.Dvm.HIDDEN && es !== p.Dvm.EXITING && es !== p.Dvm.EXITED && (null == es || !eh || eO || e6) && (!eE || eb || e6)) || null == e1.current || eC !== M.rq.PLAYING || (to.info('[QV] | Pausing video | playerState: '.concat(eC, ', parentTransitionState: ').concat(es, ', visible: ').concat(eO, ', focused: ').concat(eb, ', isQuestCompleted: ').concat(e6)), tP(M.rq.PAUSED), e6 || e3(j.yE.LOST_FOCUS));
-    }, [es, eb, eE, eO, eh, eC, e6, tP, tT, to]);
+        (es !== p.Dvm.HIDDEN && es !== p.Dvm.EXITING && es !== p.Dvm.EXITED && (null == es || !eh || eO || e8) && (!eE || eb || e8)) || null == e1.current || eC !== M.rq.PLAYING || (to.info('[QV] | Pausing video | playerState: '.concat(eC, ', parentTransitionState: ').concat(es, ', visible: ').concat(eO, ', focused: ').concat(eb, ', isQuestCompleted: ').concat(e8)), tP(M.rq.PAUSED), e8 || e3(j.yE.LOST_FOCUS));
+    }, [es, eb, eE, eO, eh, eC, e8, tP, tT, to]);
     let tN = () => e_(!0),
         tk = () => e_(!1),
         tI = ey || eC === M.rq.PAUSED || eC === M.rq.ENDED,
@@ -435,7 +435,7 @@ function $(e) {
         ),
         tW = l.useMemo(() => (0, N.z)(N.i.VIDEO_PLAYER_THUMBNAIL, el), [el]),
         tX = l.useMemo(() => (0, N.z)(N.i.VIDEO_PLAYER_CAPTION, el), [el]),
-        t$ = e6 || eW.maxTimestampSec >= (null != (I = null == (o = e1.current) ? void 0 : o.currentTime) ? I : 0) + 1;
+        t$ = e8 || eW.maxTimestampSec >= (null != (I = null == (o = e1.current) ? void 0 : o.currentTime) ? I : 0) + 1;
     return (0, r.jsx)(p.P3F, {
         className: G.videoCont,
         'data-fullscreen': ev,
@@ -668,8 +668,8 @@ function $(e) {
                     children: [
                         (0, r.jsx)(L.Z, {
                             percent: eD,
-                            animate: !0 !== e8.current && !eT,
-                            interactionEnabled: e6 && eQ,
+                            animate: !0 !== e6.current && !eT,
+                            interactionEnabled: e8 && eQ,
                             backgroundColor: tI ? void 0 : 'rgba(0, 0, 0, 0.0)',
                             preloadedBuffers: tI ? eL : void 0,
                             duration: null != (B = null == (m = e1.current) ? void 0 : m.duration) ? B : 1,

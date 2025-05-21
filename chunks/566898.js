@@ -2,7 +2,7 @@ n.d(t, {
     M9: () => _,
     Pb: () => b,
     XX: () => m,
-    ZP: () => C,
+    ZP: () => x,
     ZT: () => p,
     iv: () => g,
     pk: () => f
@@ -145,7 +145,7 @@ let f = 44,
     g = 26,
     b = 26,
     _ = 6;
-function C(e) {
+function x(e) {
     let { messages: t, groupSpacing: n = 0, compact: i = !1, attachmentSpecs: l, className: a } = e,
         s = null != l ? (l.last ? t - 1 : o().random(0, t - 1)) : -1,
         c = o().random(80, 120),

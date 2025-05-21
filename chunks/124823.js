@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(221292),
     b = n(687158),
     _ = n(892001),
-    C = n(899007),
-    x = n(648052),
+    x = n(899007),
+    C = n(648052),
     y = n(867176),
     v = n(280885),
     j = n(900927),
@@ -107,7 +107,7 @@ function R(e) {
                                         themeType: Z.lY.SIDEBAR,
                                         animateOnHover: !G
                                     }),
-                                    (0, r.jsx)(C.Z, {
+                                    (0, r.jsx)(x.Z, {
                                         user: t,
                                         displayProfile: M,
                                         channelId: n.id,
@@ -125,7 +125,7 @@ function R(e) {
                                         nickname: f.ZP.getName(null, n.id, t),
                                         pronouns: null == M ? void 0 : M.pronouns,
                                         onOpenProfile: R ? void 0 : F,
-                                        tags: (0, r.jsx)(x.Z, {
+                                        tags: (0, r.jsx)(C.Z, {
                                             displayProfile: M,
                                             themeType: Z.lY.SIDEBAR
                                         })

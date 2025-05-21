@@ -1,6 +1,6 @@
 n.d(t, {
     Z: () => _,
-    r: () => C
+    r: () => x
 });
 var r = n(73800),
     i = n(760907),
@@ -39,7 +39,7 @@ function _(e) {
         uploadHandler: u
     });
 }
-function C(e) {
+function x(e) {
     let { parentChannel: t } = e,
         { name: n, appliedTags: r } = (0, u.xH)((e) => {
             let { name: t, appliedTags: n } = e;

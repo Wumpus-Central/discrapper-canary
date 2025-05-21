@@ -12,5 +12,7 @@ e.exports = {
     pronounsTooltip: 'pronounsTooltip__63ed3',
     pronounsText: 'pronounsText__63ed3 userTag__63ed3',
     userTagDiscriminator: 'userTagDiscriminator__63ed3',
-    dotSpacer: 'dotSpacer__63ed3'
+    dotSpacer: 'dotSpacer__63ed3',
+    guildTagContainer: 'guildTagContainer__63ed3',
+    guildTag: 'guildTag__63ed3'
 };

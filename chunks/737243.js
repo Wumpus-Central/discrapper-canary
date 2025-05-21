@@ -11,7 +11,7 @@ var r = n(255367),
     p = n(614584);
 let h = i.memo(function (e) {
     var t, n;
-    let { message: h, channel: f, compact: m = !1, interactionUsernameProfile: g, interactionAvatarProfile: b, interactionData: _, referencedUsernameProfile: C, referencedAvatarProfile: x, setPopout: y } = e,
+    let { message: h, channel: f, compact: m = !1, interactionUsernameProfile: g, interactionAvatarProfile: b, interactionData: _, referencedUsernameProfile: x, referencedAvatarProfile: C, setPopout: y } = e,
         { isInteractionUserBlocked: v, isInteractionUserIgnored: j } = (0, l.cj)(
             [c.Z],
             () => ({
@@ -27,8 +27,8 @@ let h = i.memo(function (e) {
         S = (0, o.t0)(h),
         Z = (null == S ? void 0 : S.type) === a.B8.APPLICATION_COMMAND ? (null == (n = S.target_user) ? void 0 : n.id) : void 0,
         N = (0, d.wq)(Z, f.id),
-        T = (0, d.JC)(Z, f, C, y),
-        A = (0, d.rY)(x, y),
+        T = (0, d.JC)(Z, f, x, y),
+        A = (0, d.rY)(C, y),
         w = (0, d.Xn)(_, y),
         R = i.useCallback(() => {
             y({
@@ -46,14 +46,14 @@ let h = i.memo(function (e) {
                     channel: f,
                     compact: m,
                     setPopout: y,
-                    referencedAvatarProfile: x,
-                    referencedUsernameProfile: C,
+                    referencedAvatarProfile: C,
+                    referencedUsernameProfile: x,
                     replyReference: h.messageReference,
                     replyMessage: O,
                     isReplySpineClickable: !1,
                     showReplySpine: !1
                 }),
-            [f, m, h, x, O, C, y]
+            [f, m, h, C, O, x, y]
         );
     return (0, r.jsx)(u.Z, {
         message: h,
@@ -64,8 +64,8 @@ let h = i.memo(function (e) {
         showAvatarPopout: b,
         showUsernamePopout: g,
         showDataPopout: _,
-        showTargetAvatarPopout: x,
-        showTargetUsernamePopout: C,
+        showTargetAvatarPopout: C,
+        showTargetUsernamePopout: x,
         onClickAvatar: P,
         onClickUsername: I,
         onClickCommand: w,

@@ -1,22 +1,22 @@
-n.d(t, { I: () => l });
-var a = n(381814),
-    r = n(731965);
-let l = (0, a.U)((e) => ({
+n.d(t, { I: () => o });
+var r = n(381814),
+    i = n(731965);
+let o = (0, r.U)((e) => ({
     colors: [],
     chassisMixAmount: 0,
     gradientAngle: 0,
     setColors: (t) => {
-        (0, r.j)(() => {
+        (0, i.j)(() => {
             e({ colors: t });
         });
     },
     setChassisMixAmount: (t) => {
-        (0, r.j)(() => {
+        (0, i.j)(() => {
             e({ chassisMixAmount: t });
         });
     },
     setGradientAngle: (t) => {
-        (0, r.j)(() => {
+        (0, i.j)(() => {
             e({ gradientAngle: t });
         });
     }

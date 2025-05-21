@@ -28,9 +28,9 @@ function s(e) {
         })(e, ['hasPermission', 'streamActive', 'isSelfStream', 'centerButton', 'onMouseEnter', 'onMouseLeave', 'renderNUXHighlight', 'buttonRef']);
     let b = d ? a.d : a.Z;
     t = c ? (u ? o.intl.string(o.t.S5anIS) : o.intl.string(o.t.q3O3Jy)) : s ? o.intl.string(o.t.fjBNo6) : o.intl.string(o.t.uQn9Bw);
-    let { Component: _, events: C, play: x } = (0, l.P)(c ? 'disable' : 'enable');
+    let { Component: _, events: x, play: C } = (0, l.P)(c ? 'disable' : 'enable');
     return (
-        i.useEffect(() => () => x(), [c, x]),
+        i.useEffect(() => () => C(), [c, C]),
         (0, r.jsx)(
             b,
             (function (e) {
@@ -67,10 +67,10 @@ function s(e) {
                     isActive: c,
                     color: (f ? (n = 'premiumGradient') : c && (n = 'green'), n),
                     onMouseEnter: (e) => {
-                        null == p || p(e), C.onMouseEnter();
+                        null == p || p(e), x.onMouseEnter();
                     },
                     onMouseLeave: (e) => {
-                        null == h || h(e), C.onMouseLeave();
+                        null == h || h(e), x.onMouseLeave();
                     }
                 },
                 g

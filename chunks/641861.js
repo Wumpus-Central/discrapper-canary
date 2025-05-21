@@ -16,8 +16,8 @@ var i = n(120356),
     g = n(359110),
     b = n(430824),
     _ = n(933557),
-    C = n(354459),
-    x = n(388032),
+    x = n(354459),
+    C = n(388032),
     y = n(249671);
 function v(e) {
     let { recipientUser: t, voiceChannel: n } = e,
@@ -29,7 +29,7 @@ function v(e) {
                 s && null != n.id && (e = p.Z.getParticipant(n.id, t.id)),
                 {
                     userIsInCall: null != e,
-                    isUserRinging: null != e && e.type === C.fO.USER && e.ringing
+                    isUserRinging: null != e && e.type === x.fO.USER && e.ringing
                 }
             );
         }),
@@ -80,7 +80,7 @@ function v(e) {
                               className: y.chatHeaderBarText,
                               variant: 'text-md/medium',
                               color: 'header-secondary',
-                              children: x.intl.format(x.t.f2tNxM, {
+                              children: C.intl.format(C.t.f2tNxM, {
                                   username: null == t ? void 0 : t.globalName,
                                   channelName: (0, r.jsx)(
                                       c.Text,
@@ -106,7 +106,7 @@ function v(e) {
 function j(e) {
     let { channelId: t, recipientUserId: n, isUserRinging: i } = e,
         a = (0, m.Q3)('RingUserButton'),
-        o = i ? x.intl.string(x.t.ygslb2) : x.intl.string(x.t['3Hv9qa']),
+        o = i ? C.intl.string(C.t.ygslb2) : C.intl.string(C.t['3Hv9qa']),
         d = i
             ? () => u.Z.stopRinging(t, [n])
             : () => {

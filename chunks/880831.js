@@ -8,7 +8,7 @@ var r = n(255367),
     l = n(120356),
     a = n.n(l),
     o = n(392711),
-    s = n(230986),
+    s = n(366594),
     c = n(442837),
     u = n(481060),
     d = n(570140),
@@ -19,8 +19,8 @@ var r = n(255367),
     g = n(937889),
     b = n(739566),
     _ = n(267128),
-    C = n(378233),
-    x = n(419922),
+    x = n(378233),
+    C = n(419922),
     y = n(375954),
     v = n(699516),
     j = n(768581),
@@ -74,12 +74,12 @@ function N(e) {
             leadingIconClass: S.messageContentLeadingIcon,
             iconSize: P.WW
         }),
-        R = (0, C.cv)(n),
+        R = (0, x.cv)(n),
         M =
             R.length > 0
                 ? R.map((e) =>
                       (0, r.jsx)(
-                          x.Z,
+                          C.Z,
                           {
                               className: S.sticker,
                               size: 128,
@@ -174,9 +174,9 @@ function T(e) {
         _ = i.useCallback((e, t) => {
             null == t ? delete m.current[e] : (m.current[e] = t);
         }, []),
-        C = i.useRef(g);
+        x = i.useRef(g);
     i.useLayoutEffect(() => {
-        C.current = g;
+        x.current = g;
     }),
         i.useLayoutEffect(() => {
             let e = {},
@@ -186,14 +186,14 @@ function T(e) {
                 let i = null != (n = m.current[r.id]) ? n : 0;
                 (e[r.id] = t), (t += i + 8);
             }
-            (0, o.isEqual)(e, C.current) || b(e);
+            (0, o.isEqual)(e, x.current) || b(e);
         }, [f]);
-    let x = f.map((e) => ({
+    let C = f.map((e) => ({
             message: e,
             height: m.current[e.id],
             y: g[e.id]
         })),
-        v = (0, u.Yzy)(x, {
+        v = (0, u.Yzy)(C, {
             keys: (e) => e.message.id,
             from: () => ({ opacity: 0 }),
             enter: (e) => {

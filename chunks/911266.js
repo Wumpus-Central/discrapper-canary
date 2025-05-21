@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -15,20 +15,20 @@ var r = n(255367),
     g = n(287941),
     b = n(235894),
     _ = n(675479);
-let C = (e) => {
+let x = (e) => {
     let { message: t, hovering: n, compact: l } = e,
-        C = i.useRef((0, o.random)(-6, 24)).current,
-        x = (0, s.e7)([h.Z], () => h.Z.confettiMode),
+        x = i.useRef((0, o.random)(-6, 24)).current,
+        C = (0, s.e7)([h.Z], () => h.Z.confettiMode),
         y = (0, s.e7)([u.Z], () => u.Z.useReducedMotion),
         v = i.useRef(0),
         j = i.useRef(null),
         O = i.useRef(null),
         [E, I] = i.useState(!1),
-        P = i.useMemo(() => !n && !x && !y, [x, n, y]);
+        P = i.useMemo(() => !n && !C && !y, [C, n, y]);
     if (
         (i.useEffect(() => {
-            n || I(!1), n && x && I(!0);
-        }, [n, x]),
+            n || I(!1), n && C && I(!0);
+        }, [n, C]),
         i.useEffect(() => {
             !y &&
                 (E ||
@@ -36,7 +36,7 @@ let C = (e) => {
                     (v.current = Date.now()),
                     (j.current = setTimeout(() => {
                         let e = v.current;
-                        if (0 !== e && !1 !== n && !(Date.now() - e < 1000) && !x) {
+                        if (0 !== e && !1 !== n && !(Date.now() - e < 1000) && !C) {
                             if (null != O.current) {
                                 var r;
                                 let { x: e, y: n, width: i, height: l } = null == (r = O.current) ? void 0 : r.getBoundingClientRect();
@@ -59,7 +59,7 @@ let C = (e) => {
                                 });
                         }
                     }, 1100))));
-        }, [x, E, n, t, y]),
+        }, [C, E, n, t, y]),
         !(0, m.p7)('Message Confetti Peak') || !(0, b.Uw)(t))
     )
         return null;
@@ -83,24 +83,24 @@ let C = (e) => {
     return (0, r.jsxs)('div', {
         ref: O,
         className: _.emojiWrapper,
-        style: { right: ''.concat(256 + C, 'px') },
+        style: { right: ''.concat(256 + x, 'px') },
         children: [
             (0, r.jsx)('img', {
                 alt: '',
                 src: N,
-                className: a()([_.emoji, _.left, P && _.shy, x && _.confettiMode]),
+                className: a()([_.emoji, _.left, P && _.shy, C && _.confettiMode]),
                 width: 28
             }),
             (0, r.jsx)('img', {
                 alt: '',
                 src: N,
-                className: a()([_.emoji, _.right, P && _.shy, x && _.confettiMode]),
+                className: a()([_.emoji, _.right, P && _.shy, C && _.confettiMode]),
                 width: 26
             }),
             (0, r.jsx)('img', {
                 alt: '',
                 src: N,
-                className: a()([_.emoji, _.center, P && _.shy, x && _.confettiMode]),
+                className: a()([_.emoji, _.center, P && _.shy, C && _.confettiMode]),
                 width: 32
             })
         ]

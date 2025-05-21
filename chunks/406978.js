@@ -1,1 +1,1 @@
-p.exports = JSON.parse('{"jfDsyM":"Compartir limitado"}');
+a.exports = JSON.parse('{"MkgMBw":"Ponte en línea para compartir actividad","Poezn5":"Ponerte en línea","qKDqen":"Ponte en línea para compartir actividad","jfDsyM":"Compartir limitado","TvK8dH":["Mostrar ",[1,"numTruncated"]," más"],"a3AofX":"Establece el estado en línea"}');

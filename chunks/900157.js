@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(541716),
     b = n(665149),
     _ = n(910611),
-    C = n(359110),
-    x = n(592125),
+    x = n(359110),
+    C = n(592125),
     y = n(703558),
     v = n(430824),
     j = n(979651),
@@ -70,7 +70,7 @@ function N(e, t) {
 }
 function T(e) {
     let { channelId: t, baseChannelId: l, channelViewSource: T = 'Split View' } = e,
-        A = (0, o.e7)([x.Z], () => x.Z.getChannel(t)),
+        A = (0, o.e7)([C.Z], () => C.Z.getChannel(t)),
         w = (0, o.e7)([v.Z], () => v.Z.getGuild(null == A ? void 0 : A.getGuildId())),
         R = (0, f.ZP)(A);
     var M = A;
@@ -82,14 +82,14 @@ function T(e) {
                 type: 'SIDEBAR_CLOSE',
                 baseChannelId: M.parent_id
             }),
-            (0, C.ad)(M, { source: E.on.VOICE_AUTO_OPEN }));
+            (0, x.ad)(M, { source: E.on.VOICE_AUTO_OPEN }));
     }, [k, M]);
     let L = i.useRef(!1);
     if (
         (i.useEffect(() => {
             if (null == A || L.current) return;
             L.current = !0;
-            let e = (0, p.K)(x.Z.getChannel(A.id), !0);
+            let e = (0, p.K)(C.Z.getChannel(A.id), !0);
             (0, d.yw)(I.rMx.CHANNEL_OPENED, N(Z({}, e, (0, d.$H)(A.id)), { channel_view: T })), (0, h.a)(I.rMx.CHANNEL_OPENED_CLICKSTREAM, { channelId: A.id });
         }, [A, T]),
         null == A || null == w)
@@ -120,7 +120,7 @@ function T(e) {
                         });
                     },
                     handleClick: function () {
-                        null != A && (0, C.Kh)(A.id);
+                        null != A && (0, x.Kh)(A.id);
                     }
                 })
             }),

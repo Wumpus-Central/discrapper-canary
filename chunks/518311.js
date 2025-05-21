@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => eC,
-    l: () => ex
+    Z: () => ex,
+    l: () => eC
 }),
     n(642613),
     n(415506),
@@ -24,8 +24,8 @@ var r,
     g = n(26151),
     b = n(493683),
     _ = n(529103),
-    C = n(447543),
-    x = n(708690),
+    x = n(447543),
+    C = n(708690),
     y = n(194359),
     v = n(425493),
     j = n(461745),
@@ -250,7 +250,7 @@ class eg extends (r = l.PureComponent) {
     }
     componentDidMount() {
         let { channel: e } = this.props;
-        m.Z.wait(() => x.Z.open(null == e ? void 0 : e.id));
+        m.Z.wait(() => C.Z.open(null == e ? void 0 : e.id));
         let t = (0, P.v_)(e);
         q.default.track(
             er.rMx.OPEN_POPOUT,
@@ -264,7 +264,7 @@ class eg extends (r = l.PureComponent) {
             X.S.subscribe(er.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown);
     }
     componentWillUnmount() {
-        X.S.unsubscribe(er.CkL.SCROLL_PAGE_UP, this.scrollPageUp), X.S.unsubscribe(er.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), m.Z.wait(() => x.Z.close());
+        X.S.unsubscribe(er.CkL.SCROLL_PAGE_UP, this.scrollPageUp), X.S.unsubscribe(er.CkL.SCROLL_PAGE_DOWN, this.scrollPageDown), null != this.copyTimeout && clearTimeout(this.copyTimeout), m.Z.wait(() => C.Z.close());
     }
     isNotFriends() {
         let { channel: e } = this.props;
@@ -277,7 +277,7 @@ class eg extends (r = l.PureComponent) {
         let { channel: e } = this.props;
         if (null == e || !e.isMultiUserDM() || this.isPartyFull()) return;
         let { inviteMaxAgeSeconds: t } = ee.Z.getCurrentConfig({ location: '5326c5_1' }, { autoTrackExposure: !1 });
-        C.ZP.createInvite(e.id, { max_age: t }, er.t4x.GROUP_DM);
+        x.ZP.createInvite(e.id, { max_age: t }, er.t4x.GROUP_DM);
     }
     isPartyFull() {
         let { channel: e } = this.props;
@@ -627,14 +627,14 @@ class eg extends (r = l.PureComponent) {
                 null == e || e.focus();
             }),
             eo(this, 'focusResult', (e) => {
-                x.Z.select(e);
+                C.Z.select(e);
             }),
             eo(this, 'handleSelect', (e, t) => {
                 let { results: n, channel: r } = this.props;
-                null == t ? x.Z.clear(null == r ? void 0 : r.id) : null != n && this.handleClick(n[t].user.id);
+                null == t ? C.Z.clear(null == r ? void 0 : r.id) : null != n && this.handleClick(n[t].user.id);
             }),
             eo(this, 'handleSelectionChange', (e, t) => {
-                x.Z.select(t);
+                C.Z.select(t);
                 let n = this.scrollerRef.current;
                 null != n &&
                     n.scrollToIndex({
@@ -646,7 +646,7 @@ class eg extends (r = l.PureComponent) {
             eo(this, 'handleQueryChange', (e) => {
                 let { channel: t } = this.props,
                     n = (0, P.v_)(t);
-                x.Z.search(e, null == t ? void 0 : t.id),
+                C.Z.search(e, null == t ? void 0 : t.id),
                     null != this._existingTimeout && clearTimeout(this._existingTimeout),
                     (this._existingTimeout = setTimeout(() => {
                         q.default.track(
@@ -662,11 +662,11 @@ class eg extends (r = l.PureComponent) {
             }),
             eo(this, 'handleRemoveUser', (e) => {
                 let t = Array.from(this.props.selectedUsers);
-                x.Z.removeUser(t[e]), this.forceFocus();
+                C.Z.removeUser(t[e]), this.forceFocus();
             }),
             eo(this, 'handleClick', (e) => {
                 let { selectedUsers: t, query: n, channel: r } = this.props;
-                t.has(e) ? x.Z.removeUser(e) : (x.Z.addUser(e), n.length > 0 && x.Z.clear(null == r ? void 0 : r.id)), this.forceFocus();
+                t.has(e) ? C.Z.removeUser(e) : (C.Z.addUser(e), n.length > 0 && C.Z.clear(null == r ? void 0 : r.id)), this.forceFocus();
             }),
             eo(this, 'handleAddFriendNavigation', () => {
                 (0, k.uL)(er.Z5c.FRIENDS), _.Z.setSection(er.pJs.ADD_FRIEND), this.props.onClose();
@@ -847,17 +847,17 @@ function e_(e) {
     });
     return (0, i.jsx)(eg, es({ channel: t }, n, r));
 }
-function eC(e) {
+function ex(e) {
     var t, n;
     let { channel: r, iconClassName: a, className: o, icon: s, tooltip: c, tooltipPosition: u = 'bottom', popoutPosition: d = 'bottom', popoutAlign: p = 'right', subscribeToGlobalHotkey: m = !1, location: g } = e,
         b = null != s ? s : null == r ? f.kL_ : f.ejJ,
         _ = (0, w.a)(g),
-        C = 'channel-invite-modal-'.concat(null == r ? void 0 : r.id),
-        x = (0, f.VXO)(C),
-        y = l.useCallback(() => (0, f.ZDy)(() => Promise.resolve((e) => (0, i.jsx)(e_, ec(es({}, e), { channel: r }))), { modalKey: C }), [r, C]),
+        x = 'channel-invite-modal-'.concat(null == r ? void 0 : r.id),
+        C = (0, f.VXO)(x),
+        y = l.useCallback(() => (0, f.ZDy)(() => Promise.resolve((e) => (0, i.jsx)(e_, ec(es({}, e), { channel: r }))), { modalKey: x }), [r, x]),
         v = l.useRef(null),
         [j, E] = l.useState(null != r && r.isGroupDM() && 0 === r.recipients.length),
-        I = l.useCallback(() => (_ ? (x ? (0, f.Mr3)(C) : y()) : E((e) => !e)), [_, x, C, y]);
+        I = l.useCallback(() => (_ ? (C ? (0, f.Mr3)(x) : y()) : E((e) => !e)), [_, C, x, y]);
     l.useEffect(
         () => (
             m && X.S.subscribe(er.CkL.TOGGLE_DM_CREATE, I),
@@ -917,7 +917,7 @@ function eC(e) {
                     )
             });
 }
-function ex(e) {
+function eC(e) {
     let { channel: t, className: n, popoutPosition: r = 'bottom', popoutAlign: a = 'right' } = e;
     (0, O.ZP)(() => {
         (0, L._)();

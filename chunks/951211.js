@@ -14,7 +14,7 @@ var r,
     d = n(388032),
     p = (((r = {}).UPLOAD_A_FILE = 'UPLOAD_A_FILE'), (r.UPLOAD_TEXT_AS_FILE = 'UPLOAD_TEXT_AS_FILE'), (r.INVITE_TO_PLAY_GAME = 'INVITE_TO_GAME'), (r.INVITE_TO_LISTEN = 'INVITE_TO_LISTEN'), (r.INVITE_TO_WATCH = 'INVITE_TO_WATCH'), (r.CREATE_THREAD = 'CREATE_THREAD'), (r.SLASH_COMMAND = 'SLASH_COMMAND'), (r.CLIPS = 'CLIPS'), (r.POLL = 'POLL'), (r.ACTIVITY = 'ACTIVITY'), (r.SCHEDULED_MESSAGE = 'SCHEDULED_MESSAGE'), r);
 function h(e) {
-    let { canAttachFiles: t, canStartThreads: n, useSlate: r, canUseApplicationCommands: p, hasClips: h, channel: f, activities: m, newClipsCount: g, canPostPolls: b, canLaunchActivities: _, appContext: C, canSendScheduledMessages: x } = e,
+    let { canAttachFiles: t, canStartThreads: n, useSlate: r, canUseApplicationCommands: p, hasClips: h, channel: f, activities: m, newClipsCount: g, canPostPolls: b, canLaunchActivities: _, appContext: x, canSendScheduledMessages: C } = e,
         y = [];
     return (
         t &&
@@ -30,7 +30,7 @@ function h(e) {
             })),
         h &&
             t &&
-            C !== u.IlC.POPOUT &&
+            x !== u.IlC.POPOUT &&
             y.push({
                 type: 'CLIPS',
                 icon: i.AlX,
@@ -99,7 +99,7 @@ function h(e) {
                         activity: e
                     }));
         }),
-        x &&
+        C &&
             y.push({
                 type: 'SCHEDULED_MESSAGE',
                 icon: i.T39,

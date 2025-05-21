@@ -1,33 +1,39 @@
 n.d(t, {
-    PQ: () => c,
-    ZP: () => f,
-    e3: () => u
+    PQ: () => p,
+    ZP: () => E,
+    e3: () => h
 }),
-    n(388685);
+    n(388685),
+    n(539854);
 var r = n(73800),
-    i = n(691324),
-    o = n(442837),
-    a = n(780384),
-    s = n(514361),
-    l = n(629935);
-let c = 'data-client-themes',
-    u = 'custom-theme-background',
-    d = () => {
-        let e = (0, o.e7)([s.Z], () => s.Z.gradientPreset);
+    i = n(688619),
+    o = n.n(i),
+    a = n(691324),
+    s = n(442837),
+    l = n(780384),
+    c = n(210887),
+    u = n(233398),
+    d = n(514361),
+    f = n(629935),
+    _ = n(803038);
+let p = 'data-client-themes',
+    h = 'custom-theme-background',
+    m = () => {
+        let e = (0, s.e7)([d.Z], () => d.Z.gradientPreset);
         return (0, r.useMemo)(() => {
             if (null == e) return null;
-            let t = s.Z.getLinearGradient();
+            let t = d.Z.getLinearGradient();
             if (null == t) return null;
-            let n = i.b[e.colors[0].token].hex,
-                r = i.b[e.colors[e.colors.length - 1].token].hex,
-                o = (0, l.W4)({
+            let n = a.b[e.colors[0].token].hex,
+                r = a.b[e.colors[e.colors.length - 1].token].hex,
+                i = (0, f.W4)({
                     enabled: !0,
                     primaryColor: n,
                     secondaryColor: r,
-                    isDarkTheme: (0, a.wj)(e.theme)
+                    isDarkTheme: (0, l.wj)(e.theme)
                 }),
-                c = '\n      '.concat(
-                    Object.entries(o)
+                o = '\n      '.concat(
+                    Object.entries(i)
                         .map((e) => {
                             let [t, n] = e;
                             return ''.concat(t, ': ').concat(n, ';');
@@ -35,18 +41,75 @@ let c = 'data-client-themes',
                         .join('\n'),
                     '\n    '
                 );
-            return '.'.concat(u, ' {\n      --custom-theme-background: ').concat(t, ';\n      --custom-theme-primary-color: ').concat(n, ';\n      --custom-theme-secondary-color: ').concat(r, ';\n      ').concat(c, '\n    }');
+            return '.'.concat(h, ' {\n      --custom-theme-background: ').concat(t, ';\n      --custom-theme-primary-color: ').concat(n, ';\n      --custom-theme-secondary-color: ').concat(r, ';\n      ').concat(o, '\n    }');
         }, [e]);
     },
-    f = () => {
-        let e = d();
-        return null === e
+    g = () => {
+        let e = _.M.useExperiment({ location: 'RootThemeContextProvider' }).enabled,
+            t = (0, s.e7)([c.Z], () => c.Z.theme),
+            { colors: n, chassisMixAmount: i, gradientAngle: a } = (0, u.I)();
+        return (0, r.useMemo)(() => {
+            if (!e || 0 === n.length) return null;
+            let r = n.slice();
+            1 === n.length && r.push(n[0]);
+            let s = n.map((e) => {
+                    let t = o()(e).rgb();
+                    return 0.2126 * t[0] + 0.7152 * t[1] + 0.0722 * t[2];
+                }),
+                c = o()(n[s.indexOf(Math.min(...s))]),
+                u = o()(n[s.indexOf(Math.max(...s))]),
+                d = 'linear-gradient('.concat(a, 'deg, ').concat(r.join(', '), ')'),
+                _ = (0, l.wj)(t),
+                p = o()(u).set('hsl.s', 1).set('hsl.l', 0.9),
+                m = o()(c).set('hsl.s', 1).set('hsl.l', 0.05),
+                g = 30 + 0.7 * i;
+            return '.'
+                .concat(h, ' {\n      --custom-theme-background: ')
+                .concat(d, ';\n      --theme-bg-overlay-opacity-mix-amount: ')
+                .concat((g / 100).toFixed(2), ';\n      ')
+                .concat(f.LN, ': ')
+                .concat(_ ? (100 - 0.4 * g).toFixed(1) : (100 - 0.5 * g).toFixed(1), '%;\n      ')
+                .concat(f.Po, ': ')
+                .concat(p.css(), ';\n      ')
+                .concat(f.ej, ': ')
+                .concat((0, f.dw)(p), ';\n      ')
+                .concat(f.jX, ': ')
+                .concat(m.css(), ';\n      ')
+                .concat(f.i4, ': ')
+                .concat((0, f.dw)(m), ';\n      --theme-border-color-amount: 15%;\n      ')
+                .concat(f.uv, ': ')
+                .concat(
+                    o()(c)
+                        .set('hsl.l', ((4 + 0.16 * g) / 100).toFixed(2))
+                        .css(),
+                    ';\n      '
+                )
+                .concat(f.Xg, ': ')
+                .concat(
+                    o()(u)
+                        .set('hsl.l', ((85 - 0.25 * g) / 100).toFixed(2))
+                        .css(),
+                    ';\n      '
+                )
+                .concat(f.ld, ': ')
+                .concat(_ ? 30 : 40, '%\n    }');
+        }, [n, i, a, e, t]);
+    },
+    E = () => {
+        let e = m(),
+            t = g();
+        return null != t
             ? {
-                  clientThemesCSS: '',
-                  clientThemesClassName: ''
+                  clientThemesCSS: t,
+                  clientThemesClassName: h
               }
-            : {
-                  clientThemesCSS: e,
-                  clientThemesClassName: u
-              };
+            : null === e
+              ? {
+                    clientThemesCSS: '',
+                    clientThemesClassName: ''
+                }
+              : {
+                    clientThemesCSS: e,
+                    clientThemesClassName: h
+                };
     };

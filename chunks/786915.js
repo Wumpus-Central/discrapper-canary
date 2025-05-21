@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => x });
 var r = n(255367);
 n(73800);
 var i = n(512722),
@@ -40,8 +40,8 @@ function _(e) {
     }
     return e;
 }
-function C(e) {
-    var { applicationId: t, stream: i, channel: C, exitFullScreen: x, appContext: y, analyticsLocation: v, guildScheduledEvent: j, shouldPrioritizeGroupPlusIcon: O = !1, isContextlessActivity: E = !1, iconClassName: I, look: P, size: S, buttonText: Z, color: N } = e,
+function x(e) {
+    var { applicationId: t, stream: i, channel: x, exitFullScreen: C, appContext: y, analyticsLocation: v, guildScheduledEvent: j, shouldPrioritizeGroupPlusIcon: O = !1, isContextlessActivity: E = !1, iconClassName: I, look: P, size: S, buttonText: Z, color: N } = e,
         T = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -63,7 +63,7 @@ function C(e) {
         })(e, ['applicationId', 'stream', 'channel', 'exitFullScreen', 'appContext', 'analyticsLocation', 'guildScheduledEvent', 'shouldPrioritizeGroupPlusIcon', 'isContextlessActivity', 'iconClassName', 'look', 'size', 'buttonText', 'color']);
     let A = (0, c.bp)(),
         { parentAnalyticsLocation: w } = (0, u.ZP)(),
-        R = null == C ? void 0 : C.getGuildId(),
+        R = null == x ? void 0 : x.getGuildId(),
         M = (0, a.e7)([p.Z], () => (null != R ? p.Z.getGuild(R) : null), [R]),
         k = (0, a.e7)([h.Z], () => (null != t ? h.Z.getApplicationActivity(t) : void 0)),
         L = null == t || O ? o.ejJ : o.gQj,
@@ -81,14 +81,14 @@ function C(e) {
               buttonText: Z,
               color: null != N ? N : void 0
           })
-        : null != M && null != C && f.Z.can(g.Plq.CREATE_INSTANT_INVITE, C)
+        : null != M && null != x && f.Z.can(g.Plq.CREATE_INSTANT_INVITE, x)
           ? (0, r.jsx)(
                 m.Z,
                 _(
                     {
                         onClick: () => {
                             l()(null != M, 'guild cannot be null'),
-                                l()(null != C, 'channel cannot be null'),
+                                l()(null != x, 'channel cannot be null'),
                                 null != w && (0, d.v)(w, d.d.INVITE),
                                 (function (e) {
                                     let { guild: t, channel: i, streamUserId: l, applicationId: a, appContext: s, exitFullScreen: c, analyticsLocation: u, guildScheduledEvent: d } = e;
@@ -134,11 +134,11 @@ function C(e) {
                                         );
                                 })({
                                     guild: M,
-                                    channel: C,
+                                    channel: x,
                                     streamUserId: null == i ? void 0 : i.ownerId,
                                     applicationId: t,
                                     appContext: null != y ? y : A,
-                                    exitFullScreen: x,
+                                    exitFullScreen: C,
                                     analyticsLocation: v,
                                     guildScheduledEvent: j
                                 });

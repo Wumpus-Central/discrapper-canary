@@ -42,7 +42,7 @@ function g(e) {
         g = (0, l.e7)([o.default], () => o.default.getUser(n)),
         b = (0, l.e7)([o.default], () => o.default.getCurrentUser()),
         _ = (0, u.Z)(),
-        [C, x] = (0, c.Z)(n);
+        [x, C] = (0, c.Z)(n);
     (0, a.t)();
     let { withMutualFriendsCount: y } = (0, s.j)({ location: 'UserProfileSidebarRenderer' });
     return (i.useEffect(() => {
@@ -55,14 +55,14 @@ function g(e) {
         });
     }, [g, n, t.id, y]),
     null != g && null != b && _)
-        ? C
+        ? x
             ? (0, r.jsx)(
                   h.Z,
                   m(
                       {
                           user: g,
                           currentUser: b,
-                          onHide: x
+                          onHide: C
                       },
                       e
                   )

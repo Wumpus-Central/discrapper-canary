@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(800329),
     b = n(470956),
     _ = n(430824),
-    C = n(496675),
-    x = n(434488),
+    x = n(496675),
+    C = n(434488),
     y = n(27457),
     v = n(251564),
     j = n(695492),
@@ -41,7 +41,7 @@ function I(e) {
                 v.d.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [S.id, R]);
-    let D = (0, o.e7)([C.Z], () => S.isPrivate() || (0, m.b)(C.Z, w, S), [w, S]),
+    let D = (0, o.e7)([x.Z], () => S.isPrivate() || (0, m.b)(x.Z, w, S), [w, S]),
         U = (null == w ? void 0 : w.afkChannelId) === S.id,
         B = S.userLimit <= 0 || S.userLimit > 1,
         G = (0, o.e7)([u.ZP], () => u.ZP.getEmbeddedActivitiesForChannel(S.id).length <= 0),
@@ -88,7 +88,7 @@ function I(e) {
                   D &&
                   (G && !H
                       ? z.push((e) =>
-                            (0, r.jsx)(x.h, {
+                            (0, r.jsx)(C.h, {
                                 channel: S,
                                 guild: w,
                                 width: e,
@@ -106,7 +106,7 @@ function I(e) {
                             })
                         ))
                 : z.push((e) =>
-                      (0, r.jsx)(x.h, {
+                      (0, r.jsx)(C.h, {
                           channel: S,
                           guild: w,
                           width: e,

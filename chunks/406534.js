@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(62764),
     b = n(79712),
     _ = n(736052),
-    C = n(216572),
-    x = n(359110),
+    x = n(216572),
+    C = n(359110),
     y = n(359119),
     v = n(13279),
     j = n(248789),
@@ -114,8 +114,8 @@ function ei(e) {
         eg = () => ec.isInitialized() || F.ready,
         eb = (0, G.$)(f),
         e_ = F.length > 0 && (null == (t = F.first()) ? void 0 : t.isFirstMessageInForumPost(f)),
-        eC = (0, c.ts)(f),
-        ex = (0, l.e7)([I.Z], () => I.Z.shouldShowTopicsBar() && !eh),
+        ex = (0, c.ts)(f),
+        eC = (0, l.e7)([I.Z], () => I.Z.shouldShowTopicsBar() && !eh),
         ey = (0, O.P)(f.id),
         ev = (0, v.z)(f.id, $.zr),
         ej = (0, p.k)(f.id),
@@ -144,7 +144,7 @@ function ei(e) {
         })(f, null != (n = null != ey ? ey : ev) ? n : ej),
         eI = f.isForumPost() && !e_ ? (0, r.jsx)(g.Z, { postId: f.id }) : null,
         eP = (0, _.Z)(f.id),
-        eS = (0, C.nw)(f);
+        eS = (0, x.nw)(f);
     (0, K.Z)();
     let eZ = null,
         eN = [],
@@ -290,7 +290,7 @@ function ei(e) {
             n = T.ZP.getOldestUnreadTimestamp(f.id),
             l = 0 !== n ? n : k.default.extractTimestamp(f.id),
             o = (0, R.KC)(new Date(), new Date(l));
-        if ((T.ZP.isEstimated(f.id) ? ((e = o ? ee.t.wvtbbG : ee.t.tHqbtr), (t = ee.t.vaPWFR)) : ((e = o ? ee.t.BctFHx : ee.t['3wXb9P']), (t = ee.t['4H8ldH'])), eC && (0, c.tW)(f) && eO.includes(X.E.SUMMARIES))) {
+        if ((T.ZP.isEstimated(f.id) ? ((e = o ? ee.t.wvtbbG : ee.t.tHqbtr), (t = ee.t.vaPWFR)) : ((e = o ? ee.t.BctFHx : ee.t['3wXb9P']), (t = ee.t['4H8ldH'])), ex && (0, c.tW)(f) && eO.includes(X.E.SUMMARIES))) {
             let n = T.ZP.ackMessageId(f.id),
                 o = (0, P.q)(f.id, T.ZP.getOldestUnreadMessageId(f.id));
             if (
@@ -298,18 +298,18 @@ function ei(e) {
                     num_unread_summaries: o,
                     num_unread_messages: ei,
                     last_ack_message_id: n,
-                    summaries_enabled_by_user: ex,
+                    summaries_enabled_by_user: eC,
                     summaries_enabled_for_channel: (0, c.Lp)(f)
                 }),
                 (0, c.Lp)(f))
             ) {
-                let n = ex
+                let n = eC
                     ? ee.intl.format(t, { count: ei })
                     : ee.intl.format(e, {
                           count: ei,
                           timestamp: l
                       });
-                if (ex) {
+                if (eC) {
                     let e =
                         o > 0
                             ? (0, r.jsxs)(r.Fragment, {
@@ -400,7 +400,7 @@ function ei(e) {
     if (
         (null == i &&
             (0, c.Lp)(f) &&
-            ex &&
+            eC &&
             eO.includes(X.E.SUMMARIES) &&
             (i = (0, r.jsx)(W.BO, {
                 channel: f,
@@ -445,7 +445,7 @@ function ei(e) {
                             (function (e) {
                                 o.Z.jumpToPresent(e.id, J.AQB);
                                 let t = A.Z.getChannelId();
-                                e.id === t && (0, x.Kh)(e.id);
+                                e.id === t && (0, C.Kh)(e.id);
                             })(f),
                         className: ef
                     });

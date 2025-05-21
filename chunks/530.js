@@ -89,7 +89,9 @@ function p(e) {
                         }),
                     (0, r.jsx)(u.ZP, {
                         userId: t.id,
-                        onClose: O
+                        onClose: O,
+                        containerClassName: _.guildTagContainer,
+                        className: _.guildTag
                     }),
                     i
                 ]

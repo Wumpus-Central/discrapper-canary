@@ -1,1 +1,1 @@
-s.exports = JSON.parse('{"jfDsyM":"Korlátozott megosztás"}');
+t.exports = JSON.parse('{"MkgMBw":"Online állapot aktiválása a tevékenység megosztásához","Poezn5":"Online állapot aktiválása","qKDqen":"Online állapot aktiválása a tevékenység megosztásához","jfDsyM":"Korlátozott megosztás","TvK8dH":[[1,"numTruncated"]," további megjelenítése"],"a3AofX":"Online beállításra állítja az állapotot"}');

@@ -21,7 +21,7 @@ function v() {
         [C, O] = r.useState(null != (e = n[0]) ? e : '#0000FF'),
         [N, E, T] = (0, i.Wu)([c.Z, d.ZP, m.Z], () => [c.Z.theme, null == m.Z.gradientPreset, d.ZP.useSystemTheme === p.KW.ON]);
     return t
-        ? (0, a.jsxs)('div', {
+        ? (0, a.jsxs)(a.Fragment, {
               children: [
                   (0, a.jsx)(s.X6q, {
                       className: f.header,
@@ -101,19 +101,6 @@ function v() {
                   (0, a.jsx)(s.X6q, {
                       className: f.subheader,
                       variant: 'heading-md/semibold',
-                      children: 'Chassis Mix Amount'
-                  }),
-                  (0, a.jsx)(s.iRW, {
-                      className: f.slider,
-                      initialValue: v,
-                      defaultValue: 0,
-                      minValue: 0,
-                      maxValue: 100,
-                      onValueChange: _
-                  }),
-                  (0, a.jsx)(s.X6q, {
-                      className: f.subheader,
-                      variant: 'heading-md/semibold',
                       children: 'Gradient Angle'
                   }),
                   (0, a.jsx)(s.iRW, {
@@ -124,6 +111,19 @@ function v() {
                       maxValue: 360,
                       onValueChange: y,
                       onValueRender: (e) => ''.concat(e.toFixed(0), '\xB0')
+                  }),
+                  (0, a.jsx)(s.X6q, {
+                      className: f.subheader,
+                      variant: 'heading-md/semibold',
+                      children: 'Base Mix Amount'
+                  }),
+                  (0, a.jsx)(s.iRW, {
+                      className: f.slider,
+                      initialValue: v,
+                      defaultValue: 0,
+                      minValue: 0,
+                      maxValue: 100,
+                      onValueChange: _
                   })
               ]
           })

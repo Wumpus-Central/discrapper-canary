@@ -1,1 +1,1 @@
-s.exports = JSON.parse('{"jfDsyM":"Begrenztes Teilen"}');
+e.exports = JSON.parse('{"MkgMBw":"Geh online, um Aktivitäten zu teilen","Poezn5":"Geh Online","qKDqen":"Geh online, um Aktivitäten zu teilen","jfDsyM":"Begrenztes Teilen","TvK8dH":[[1,"numTruncated"]," Mehr anzeigen"],"a3AofX":"Setzt Status auf \u201EOnline\u201C"}');

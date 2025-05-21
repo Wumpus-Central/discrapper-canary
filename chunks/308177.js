@@ -15,12 +15,12 @@ var r = n(255367),
     g = n(450369),
     b = n(388032),
     _ = n(816395);
-let C = {
+let x = {
         singleSpeaker: 424,
         twoSpeakers: 624,
         threeSpeakers: 824
     },
-    x = (e, t) => {
+    C = (e, t) => {
         let n = Math.floor(e / t - 8),
             r = Math.floor(n / g.Q);
         return {
@@ -28,14 +28,14 @@ let C = {
             speakerTileHeight: r
         };
     },
-    y = (e, t) => (e < C.singleSpeaker ? 1 : e < C.twoSpeakers ? 2 : e < C.threeSpeakers || t ? 3 : 4),
+    y = (e, t) => (e < x.singleSpeaker ? 1 : e < x.twoSpeakers ? 2 : e < x.threeSpeakers || t ? 3 : 4),
     v = (e) => Math.floor((e - 32) / 102);
 function j(e) {
     return e.type === u.Ui.VOICE;
 }
 let O = (0, a.Z)((e) => {
     var t, n;
-    let { channel: a, width: C, onScroll: O } = e,
+    let { channel: a, width: x, onScroll: O } = e,
         {
             selectedParticipantId: E,
             largeStream: I,
@@ -55,8 +55,8 @@ let O = (0, a.Z)((e) => {
         T = (0, c.w8)(a.id, u.pV.SPEAKER),
         A = T.filter(j),
         w = null != T.find((e) => e.type === u.Ui.STREAM),
-        R = v(C),
-        M = y(C, P),
+        R = v(x),
+        M = y(x, P),
         k = {
             [u.pV.SPEAKER]: M,
             [u.pV.AUDIENCE]: R,
@@ -65,8 +65,8 @@ let O = (0, a.Z)((e) => {
         L = (0, d.Dx)(a.id),
         [D, U] = (0, d.aP)(a.id, k, L),
         B = [Math.max(null != (t = D[0]) ? t : 1, 1), Math.max(null != (n = D[1]) ? n : 1, 1), D[2]],
-        { speakerTileWidth: G, speakerTileHeight: F } = x(C, M),
-        H = I ? C - 32 : Math.min(C - 64, 3 * G + 8),
+        { speakerTileWidth: G, speakerTileHeight: F } = C(x, M),
+        H = I ? x - 32 : Math.min(x - 64, 3 * G + 8),
         V = (e) => e === D.length - 1 || (0 === Z && 1 === e),
         [z, W] = i.useState(!1),
         [Y, q] = i.useState(!1);

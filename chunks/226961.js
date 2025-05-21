@@ -235,10 +235,6 @@ class Z extends (r = i.ZP.Store) {
     getSection() {
         return h;
     }
-    getStats() {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d.Yn.DEFAULT;
-        return m[e][0];
-    }
     getInboundStats(e, t) {
         var n, r;
         let i = null == (r = this.getAllStats(t)[0]) || null == (n = r.rtp) ? void 0 : n.inbound[e],

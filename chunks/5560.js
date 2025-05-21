@@ -19,8 +19,8 @@ var r = n(255367),
     g = n(21825),
     b = n(232495),
     _ = n(10401),
-    C = n(322274);
-function x(e, t, n) {
+    x = n(322274);
+function C(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -44,7 +44,7 @@ function y(e) {
                 })
             )),
             r.forEach(function (t) {
-                x(e, t, n[t]);
+                C(e, t, n[t]);
             });
     }
     return e;
@@ -119,7 +119,7 @@ class j extends i.PureComponent {
         if (null == l) return null;
         let { media: o, textAlign: s, isLongText: c, highPriority: u, spacing: p, arrowAlignment: f = h.cy.TOP, popoutPosition: m } = l,
             { offsetX: b, offsetY: _ } = this.state,
-            x = {
+            C = {
                 left: null != b ? i.x + b : void 0,
                 top: null != _ ? i.y + _ : void 0
             },
@@ -130,15 +130,15 @@ class j extends i.PureComponent {
                     : (0, r.jsxs)('div', {
                           children: [
                               (0, r.jsx)('div', {
-                                  className: a()(C.top, {
-                                      [C.animating]: t,
-                                      [C.notAnimating]: !t
+                                  className: a()(x.top, {
+                                      [x.animating]: t,
+                                      [x.notAnimating]: !t
                                   })
                               }),
                               (0, r.jsx)('div', {
-                                  className: a()(C.bottom, {
-                                      [C.animating]: t,
-                                      [C.notAnimating]: !t
+                                  className: a()(x.bottom, {
+                                      [x.animating]: t,
+                                      [x.notAnimating]: !t
                                   })
                               })
                           ]
@@ -147,9 +147,9 @@ class j extends i.PureComponent {
             O = (e) => {
                 let t = n && !e;
                 return {
-                    [C.animating]: t,
-                    [C.notAnimating]: !t,
-                    [C.highPriority]: u
+                    [x.animating]: t,
+                    [x.notAnimating]: !t,
+                    [x.highPriority]: u
                 };
             },
             E = this.getTutorialPopoutText();
@@ -178,12 +178,12 @@ class j extends i.PureComponent {
                         return (0, r.jsx)(
                             d.P3F,
                             v(y({}, e), {
-                                className: C.indicator,
-                                style: x,
+                                className: x.indicator,
+                                style: C,
                                 innerRef: this.contentRef,
                                 children: (0, r.jsxs)('div', {
-                                    className: a()(C.animationContainer, O(n)),
-                                    children: [j(n), (0, r.jsx)('div', { className: a()(C.innerCircle, O(n)) }), (0, r.jsx)('div', { className: a()(C.outerCircle, O(n)) })]
+                                    className: a()(x.animationContainer, O(n)),
+                                    children: [j(n), (0, r.jsx)('div', { className: a()(x.innerCircle, O(n)) }), (0, r.jsx)('div', { className: a()(x.outerCircle, O(n)) })]
                                 })
                             })
                         );
@@ -194,12 +194,12 @@ class j extends i.PureComponent {
     }
     constructor(...e) {
         super(...e),
-            x(this, 'state', {
+            C(this, 'state', {
                 offsetX: null,
                 offsetY: null
             }),
-            x(this, 'contentRef', i.createRef()),
-            x(this, 'handleDismiss', () => {
+            C(this, 'contentRef', i.createRef()),
+            C(this, 'handleDismiss', () => {
                 p.Z.dismiss(this.props.tutorialId);
             });
     }

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(442837),
@@ -56,10 +56,10 @@ function _(e, t) {
         e
     );
 }
-let C = function (e) {
+let x = function (e) {
     let { channel: t } = e,
         n = (0, c.Q3)('ChannelPinsButton'),
-        C = (0, l.e7)(
+        x = (0, l.e7)(
             [u.Z, p.default],
             () => {
                 let e = p.default.getCurrentUser();
@@ -67,13 +67,13 @@ let C = function (e) {
             },
             [t]
         ),
-        [x, y] = i.useState(!1),
+        [C, y] = i.useState(!1),
         v = (0, l.e7)([d.ZP], () => d.ZP.hasUnreadPins(t.id), [t]),
         j = (0, s.Aq)(),
         O = i.useRef(null),
         E = i.useCallback(() => {
-            C || y((e) => !e);
-        }, [C]);
+            x || y((e) => !e);
+        }, [x]);
     function I(e) {
         (null == e ? void 0 : e.shiftKey) || j.dispatch(m.CkL.POPOUT_CLOSE);
     }
@@ -89,7 +89,7 @@ let C = function (e) {
         ),
         (0, r.jsx)(a.yRy, {
             targetElementRef: O,
-            shouldShow: x,
+            shouldShow: C,
             animation: a.yRy.Animation.NONE,
             position: 'bottom',
             align: 'right',
@@ -117,7 +117,7 @@ let C = function (e) {
                         icon: a.qQX,
                         iconSize: n ? 20 : void 0,
                         'aria-label': g.intl.string(g.t['mp1N//']),
-                        disabled: C,
+                        disabled: x,
                         showBadge: v,
                         selected: i
                     })

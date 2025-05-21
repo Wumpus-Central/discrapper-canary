@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(213652),
     b = n(320427),
     _ = n(145010),
-    C = n(361057),
-    x = n(159909),
+    x = n(361057),
+    C = n(159909),
     y = n(531675);
 function v(e) {
     let { channel: t, hasActiveStream: n, showRightDivider: v } = e,
@@ -50,14 +50,14 @@ function v(e) {
                             markAsDismissed: A
                         }),
                     O &&
-                        (0, r.jsx)(C.Z, {
+                        (0, r.jsx)(x.Z, {
                             ref: E,
                             channel: t,
                             glow: w
                         }),
                     M && (0, r.jsx)(b.Z, {}),
                     M && (0, r.jsx)(_.Z, { channel: t }),
-                    M && (0, r.jsx)(x.Z, {})
+                    M && (0, r.jsx)(C.Z, {})
                 ]
             }),
             v && (R || w || O || M) && (0, r.jsx)('div', { className: y.divider })

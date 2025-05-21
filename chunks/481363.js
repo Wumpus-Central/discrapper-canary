@@ -16,8 +16,8 @@ function c(e) {
         g = p.state === o.yb.SENDING,
         b = p.id === f,
         _ = (0, i.yE)(p.flags, o.iLy.EPHEMERAL),
-        C = p.state === o.yb.SEND_FAILED;
-    return g || (_ && !C)
+        x = p.state === o.yb.SEND_FAILED;
+    return g || (_ && !x)
         ? null
         : (0, r.jsx)(a.Z, {
               className: s.buttons,

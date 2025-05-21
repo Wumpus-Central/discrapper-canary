@@ -26,8 +26,8 @@ function p(e) {
             height: 0
         }),
         { width: b, height: _ } = m,
-        C = null != (t = null == l ? void 0 : l.length) ? t : 0,
-        x = b - 16,
+        x = null != (t = null == l ? void 0 : l.length) ? t : 0,
+        C = b - 16,
         y = _ - (h + f),
         {
             tileStyle: v,
@@ -82,8 +82,8 @@ function p(e) {
                         rows: r,
                         columns: i
                     };
-                })(C, x, y),
-            [C, x, y]
+                })(x, C, y),
+            [x, C, y]
         ),
         I = E + 1,
         P = I * j + (I - 1) * 8 <= b,
@@ -113,7 +113,7 @@ function p(e) {
                                           className: a()(s.tile, {
                                               [s.padColumn]: P,
                                               [s.noVerticalMargin]: l >= (O - 1) * E,
-                                              [s.noHorizontalMargin]: (l + 1) % E == 0 || l === C - 1
+                                              [s.noHorizontalMargin]: (l + 1) % E == 0 || l === x - 1
                                           }),
                                           children: (0, r.jsx)('div', {
                                               className: s.tileSizer,

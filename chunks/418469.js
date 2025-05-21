@@ -40,8 +40,9 @@ function f(e) {
 function _(e, t, d) {
     var _;
     let p = (0, s.Cf)(e),
-        h = (0, i.e7)([l.default], () => l.default.getId()),
-        m = null != e ? (0, a.V9)(e) : c.Z.getActiveStreamKey(),
+        h = (0, i.e7)([l.default], () => l.default.getId());
+    if (null == e) return null;
+    let m = (0, a.V9)(e),
         g = null != (_ = c.Z.getVideoStats(m)) ? _ : {},
         E = f(
             {
@@ -72,13 +73,11 @@ function _(e, t, d) {
                             );
                     });
         };
-    return null == e
-        ? null
-        : (0, r.jsx)(o.sNh, {
-              id: 'report-stream-problem',
-              color: 'danger',
-              label: u.intl.string(u.t.sdnCxc),
-              action: b,
-              icon: o.P4T
-          });
+    return (0, r.jsx)(o.sNh, {
+        id: 'report-stream-problem',
+        color: 'danger',
+        label: u.intl.string(u.t.sdnCxc),
+        action: b,
+        icon: o.P4T
+    });
 }

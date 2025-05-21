@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => x });
 var r = n(255367);
 n(73800);
 var i = n(81897),
@@ -16,10 +16,10 @@ var i = n(81897),
     g = n(686625),
     b = n(388032),
     _ = n(954767);
-function C(e) {
+function x(e) {
     let { user: t, channelId: n } = e,
-        { analyticsLocations: C } = (0, l.ZP)(),
-        { context: x } = (0, s.KZ)(),
+        { analyticsLocations: x } = (0, l.ZP)(),
+        { context: C } = (0, s.KZ)(),
         y = (0, i.Z)(),
         { mutualFriendsCount: v, mutualFriends: j, mutualGuilds: O } = (0, c.Z)(t),
         E = !t.bot && null != v && v > 0,
@@ -110,11 +110,11 @@ function C(e) {
                                                                     });
                                                             }
                                                             return e;
-                                                        })({}, x)),
+                                                        })({}, C)),
                                                         (t = t =
                                                             {
                                                                 userId: i.id,
-                                                                sourceAnalyticsLocations: C
+                                                                sourceAnalyticsLocations: x
                                                             }),
                                                         Object.getOwnPropertyDescriptors
                                                             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))

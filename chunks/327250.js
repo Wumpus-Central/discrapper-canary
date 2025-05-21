@@ -16,8 +16,8 @@ var i = n(120356),
     g = n(314897),
     b = n(592125),
     _ = n(271383),
-    C = n(430824),
-    x = n(496675),
+    x = n(430824),
+    C = n(496675),
     y = n(158776),
     v = n(944486),
     j = n(885110),
@@ -179,17 +179,17 @@ function R(e) {
 }
 function M(e) {
     let { user: t, member: i, guildId: l } = e,
-        m = (0, a.e7)([C.Z], () => C.Z.getGuild(l)),
+        m = (0, a.e7)([x.Z], () => x.Z.getGuild(l)),
         {
             canKickUser: _,
             canBanUser: y,
             canModerateMembers: j
         } = (0, a.cj)(
-            [x.Z, O.default, C.Z],
+            [C.Z, O.default, x.Z],
             () => ({
                 canKickUser: (0, h.BK)(t, m),
                 canBanUser: (0, h.mm)(t, m),
-                canModerateMembers: null != m && (0, p.F)(m.id, t.id, [O.default, C.Z, x.Z])
+                canModerateMembers: null != m && (0, p.F)(m.id, t.id, [O.default, x.Z, C.Z])
             }),
             [t, m]
         ),

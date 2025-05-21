@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(597998),
     b = n(199902),
     _ = n(314897),
-    C = n(271383),
-    x = n(131951),
+    x = n(271383),
+    C = n(131951),
     y = n(496675),
     v = n(158776),
     j = n(885110),
@@ -34,13 +34,13 @@ let w = i.memo((e) => {
     let { mute: l, deaf: a, user: s, channel: g, sessionId: y, nick: A } = e,
         w = s.id,
         R = (0, o.e7)([_.default], () => _.default.getId() === w, [w]),
-        [M, k, L] = (0, o.Wu)([x.Z], () => (R ? [!x.Z.isSupported() || x.Z.isSelfMute() || x.Z.isSelfMutedTemporarily(), x.Z.isSelfDeaf(), !1] : [!x.Z.isSupported() || x.Z.isLocalMute(w), !1, x.Z.isLocalVideoDisabled(w)]), [R, w]),
+        [M, k, L] = (0, o.Wu)([C.Z], () => (R ? [!C.Z.isSupported() || C.Z.isSelfMute() || C.Z.isSelfMutedTemporarily(), C.Z.isSelfDeaf(), !1] : [!C.Z.isSupported() || C.Z.isLocalMute(w), !1, C.Z.isLocalVideoDisabled(w)]), [R, w]),
         D = (0, o.e7)([E.Z], () => E.Z.isPrioritySpeaker(w)),
         U = (0, c.Z)({
             userId: w,
             checkSoundSharing: !0
         }),
-        B = (0, o.e7)([C.ZP], () => C.ZP.isGuestOrLurker(g.guild_id, w)),
+        B = (0, o.e7)([x.ZP], () => x.ZP.isGuestOrLurker(g.guild_id, w)),
         G = (0, o.e7)([h.Z], () => h.Z.getGuildRingingUsers(g.id).has(w)),
         F = (0, o.e7)(
             [u.ZP],
@@ -131,7 +131,7 @@ let w = i.memo((e) => {
 w.displayName = 'ConnectedVoiceUser';
 let R = [],
     M = function (e) {
-        let { allowPreviews: t = !0, allowDragging: n = !0, channel: l, voiceStates: c, collapsed: u, collapsedMax: d = 6, tabIndex: f, location: b, numAudience: C, withGuildIcon: x = !1, className: j, children: O } = e,
+        let { allowPreviews: t = !0, allowDragging: n = !0, channel: l, voiceStates: c, collapsed: u, collapsedMax: d = 6, tabIndex: f, location: b, numAudience: x, withGuildIcon: C = !1, className: j, children: O } = e,
             [E, I] = i.useState(null),
             [P, S] = i.useState(!1),
             T = i.useRef(null),
@@ -207,11 +207,11 @@ let R = [],
                     );
                 });
             return (
-                null != C && C > 0
+                null != x && x > 0
                     ? i.push(
                           (0, r.jsx)(Z.ul, {
                               collapsed: u,
-                              numAudience: C
+                              numAudience: x
                           })
                       )
                     : u && M.length > d + 1 && i.push((0, r.jsx)(Z.XX, { numUsers: M.length - d })),
@@ -223,7 +223,7 @@ let R = [],
             : (0, r.jsxs)(g.eJ, {
                   className: a()(j, A.list, {
                       [A.collapsed]: u,
-                      [A.withGuildIcon]: x
+                      [A.withGuildIcon]: C
                   }),
                   collapsed: u,
                   children: [G, O]

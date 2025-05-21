@@ -1,1 +1,1 @@
-i.exports = JSON.parse('{"jfDsyM":"Función de compartir limitada"}');
+a.exports = JSON.parse('{"MkgMBw":"Conéctate en línea para compartir la actividad","Poezn5":"Conéctate en línea","qKDqen":"Conéctate en línea para compartir la actividad","jfDsyM":"Función de compartir limitada","TvK8dH":["Mostrar ",[1,"numTruncated"]," más"],"a3AofX":"Configura el estado como en línea"}');

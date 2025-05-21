@@ -5,7 +5,7 @@ var i = n(27457),
     l = n(131951),
     a = n(938243);
 function o(e) {
-    var { aspectRatio: t, blocked: n, ignored: o, channel: s, className: c, focused: u, children: d, inCall: p, inPopout: h, noBorder: f, onClick: m, onContextMenu: g, onDoubleClick: b, onVideoResize: _, paused: C, pulseSpeakingIndicator: x, participant: y, width: v } = e,
+    var { aspectRatio: t, blocked: n, ignored: o, channel: s, className: c, focused: u, children: d, inCall: p, inPopout: h, noBorder: f, onClick: m, onContextMenu: g, onDoubleClick: b, onVideoResize: _, paused: x, pulseSpeakingIndicator: C, participant: y, width: v } = e,
         j = (function (e, t) {
             if (null == e) return {};
             var n,
@@ -74,8 +74,8 @@ function o(e) {
                             onDoubleClick: b,
                             onVideoResize: _,
                             participant: y,
-                            paused: C,
-                            pulseSpeakingIndicator: x,
+                            paused: x,
+                            pulseSpeakingIndicator: C,
                             videoComponent: O,
                             width: v
                         },

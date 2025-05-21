@@ -1,4 +1,4 @@
-n.d(t, { Z: () => C }), n(388685);
+n.d(t, { Z: () => x }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(788900),
@@ -20,17 +20,17 @@ function _(e) {
         d = (0, h.Z)(t.wallpaperId),
         f = null != d ? (0, a.I)(d.asset) : null,
         _ = (null == d ? void 0 : d.thumbhash) != null ? (0, l.xS)(b.from(d.thumbhash, 'base64')) : void 0,
-        [C, x] = i.useState(_);
+        [x, C] = i.useState(_);
     return (i.useEffect(() => {
         null == f && t.isViewable && u.Z.shouldFetchWallpapers && (0, p.k9)();
     }, [f, t.isViewable]),
     i.useEffect(() => {
-        if (null == f) return void x(void 0);
+        if (null == f) return void C(void 0);
         let e = performance.now();
-        x(_),
+        C(_),
             (0, o.p)(f, (t) => {
                 if (t === f) {
-                    x(void 0);
+                    C(void 0);
                     let n = performance.now();
                     s.default.track(m.rMx.CHAT_WALLPAPER_DOWNLOADED, {
                         time_used_in_ms: n - e,
@@ -42,11 +42,11 @@ function _(e) {
     t.isViewable && null != d)
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  null != C &&
+                  null != x &&
                       (0, r.jsx)('div', {
                           className: g.thumbhashContainer,
                           children: (0, r.jsx)('img', {
-                              src: C,
+                              src: x,
                               alt: '',
                               'aria-hidden': !0
                           })
@@ -62,7 +62,7 @@ function _(e) {
           })
         : null;
 }
-function C(e) {
+function x(e) {
     let { channel: t } = e,
         n = (0, f.Z)(t.id);
     return null == n || !n.isViewable || (!t.isDM() && !t.isMultiUserDM() && !t.isGroupDM()) || (d.t(t) && !n.isPreview) ? null : (0, r.jsx)(_, { chatWallpaperState: n });

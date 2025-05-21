@@ -15,8 +15,8 @@ var r = n(255367),
     g = n(459273),
     b = n(880831),
     _ = n(774168),
-    C = n(871499),
-    x = n(981631),
+    x = n(871499),
+    C = n(981631),
     y = n(388032);
 function v(e) {
     let t = (0, s.e7)([m.Z], () => !(0, o.isEmpty)(m.Z.getTypingUsers(e)), [e]),
@@ -115,7 +115,7 @@ function O(e) {
             null == (e = P.current) || e.focus();
         }, []);
     (0, g.yp)({
-        event: x.CkL.FOCUS_CHAT_BUTTON,
+        event: C.CkL.FOCUS_CHAT_BUTTON,
         handler: I ? null : R
     });
     let [M, k] = i.useState(!1),
@@ -123,7 +123,7 @@ function O(e) {
             f && k(!0);
         }, [f]);
     (0, g.yp)({
-        event: x.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
+        event: C.CkL.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP,
         handler: L
     }),
         i.useEffect(() => {
@@ -143,7 +143,7 @@ function O(e) {
         T > 0 && D.push(y.intl.formatToPlainString(y.t['3l1GOz'], { mentionCount: T })),
         N > 0 && D.push(y.intl.string(y.t.x5zAGR)),
         (0, r.jsx)(
-            C.Z,
+            x.Z,
             (function (e) {
                 for (var t = 1; t < arguments.length; t++) {
                     var n = null != arguments[t] ? arguments[t] : {},

@@ -15,13 +15,13 @@ var r = n(255367),
     g = n(127654),
     b = n(205822),
     _ = n(731994),
-    C = n(981631),
-    x = n(388032);
+    x = n(981631),
+    C = n(388032);
 let y = function (e) {
     let { className: t, style: n, channel: y, draftType: v } = e,
         [j, O] = i.useState(!0),
         E = (0, l.e7)([d.Z], () => d.Z.hasLayers()),
-        I = (0, l.e7)([p.Z], () => null != y && p.Z.can(C.Plq.ATTACH_FILES, y), [y]),
+        I = (0, l.e7)([p.Z], () => null != y && p.Z.can(x.Plq.ATTACH_FILES, y), [y]),
         P = null != (0, l.e7)([a.Z], () => a.Z.getActiveCommand(y.id)),
         S = y.getGuildId(),
         Z = v === s.d.FirstThreadMessage,
@@ -31,14 +31,14 @@ let y = function (e) {
         }),
         T = (0, l.e7)([c.Z], () => c.Z.didAgree(S)) && !N,
         A = i.useMemo(() => !E && ((y.isPrivate() && !y.isManaged()) || (null != S && (!y.isNSFW() || T) && I && u.Z.canChatInGuild(S))), [I, T, y, S, E]),
-        w = Z ? (C.TPd.GUILD_THREADS_ONLY.has(y.type) ? x.intl.string(x.t.RBBLhI) : x.intl.string(x.t.gUx4en)) : j ? x.intl.format(x.t.dYP2FR, { destination: (0, o.F6)(y, f.default, h.Z, !0) }) : x.intl.string(x.t.h76ulJ);
+        w = Z ? (x.TPd.GUILD_THREADS_ONLY.has(y.type) ? C.intl.string(C.t.RBBLhI) : C.intl.string(C.t.gUx4en)) : j ? C.intl.format(C.t.dYP2FR, { destination: (0, o.F6)(y, f.default, h.Z, !0) }) : C.intl.string(C.t.h76ulJ);
     return P || !A
         ? null
         : (0, r.jsx)(b.Z, {
               className: t,
               style: n,
               title: w,
-              description: Z ? x.intl.string(x.t.lpgkzs) : x.intl.string(x.t.usQh4O),
+              description: Z ? C.intl.string(C.t.lpgkzs) : C.intl.string(C.t.usQh4O),
               icons: _.J6,
               onDrop: (e) => {
                   if (P) return !1;
@@ -48,7 +48,7 @@ let y = function (e) {
                           requireConfirm: j,
                           showLargeMessageDialog: !1
                       }),
-                      m.S.dispatchToLastSubscribed(C.CkL.TEXTAREA_FOCUS));
+                      m.S.dispatchToLastSubscribed(x.CkL.TEXTAREA_FOCUS));
               },
               onDragClear: () => O(!0),
               onDragOver: (e) => {

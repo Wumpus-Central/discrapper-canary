@@ -18,8 +18,8 @@ var r = n(255367),
     g = n(213609),
     b = n(358221),
     _ = n(795318),
-    C = n(258609),
-    x = n(569545),
+    x = n(258609),
+    C = n(569545),
     y = n(102172),
     v = n(352978),
     j = n(880395),
@@ -136,9 +136,9 @@ let D = 16 / 9,
             })),
             N = i.useCallback(
                 (e, t) => {
-                    if (e.type === R.fO.STREAM && 0 === j.filter((t) => (0, x.V9)(t) === e.id && t.state !== w.jm8.ENDED).length) {
-                        if (!(0, y.p9)(l, Z.Z, P.Z, S.Z, C.Z)[0]) return;
-                        (0, p.rn)((0, x.my)(e.id), { forceMultiple: t.shiftKey });
+                    if (e.type === R.fO.STREAM && 0 === j.filter((t) => (0, C.V9)(t) === e.id && t.state !== w.jm8.ENDED).length) {
+                        if (!(0, y.p9)(l, Z.Z, P.Z, S.Z, x.Z)[0]) return;
+                        (0, p.rn)((0, C.my)(e.id), { forceMultiple: t.shiftKey });
                     }
                     (null == O ? void 0 : O.id) === e.id ? (I ? (u.Z.selectParticipant(l.id, null), u.Z.updateStageStreamSize(l.id, !1)) : u.Z.updateStageStreamSize(l.id, !0)) : (u.Z.updateStageStreamSize(l.id, !1), u.Z.selectParticipant(l.id, e.id));
                 },
@@ -170,9 +170,9 @@ let D = 16 / 9,
         let { participant: i, channel: l, width: c } = e,
             { newestAnalyticsLocation: u } = (0, m.ZP)(f.Z.STAGE_TILE),
             p = (0, h.bp)(),
-            C = l.getGuildId(),
-            x = I.default.getId();
-        a()(null != C, 'Channel cannot be guildless');
+            x = l.getGuildId(),
+            C = I.default.getId();
+        a()(null != x, 'Channel cannot be guildless');
         let { user: y } = i,
             v = (0, s.e7)([b.Z], () => b.Z.getParticipant(l.id, i.id), [l.id, i.id]),
             O = (0, s.e7)([N.ZP], () => N.ZP.isModerator(y.id, l.id), [l.id, y.id]);
@@ -183,7 +183,7 @@ let D = 16 / 9,
                     name: o.ImpressionNames.CALL_TILE_CONTEXT_MENU,
                     properties: {
                         location: 'StageTile',
-                        is_tile_owner: y.id === x,
+                        is_tile_owner: y.id === C,
                         tile_type: e
                     }
                 });
@@ -237,7 +237,7 @@ let D = 16 / 9,
                                         e,
                                         L(k({}, t), {
                                             user: y,
-                                            guildId: C,
+                                            guildId: x,
                                             channel: l,
                                             showMediaItems: !0,
                                             showStageChannelItems: !0,
@@ -258,7 +258,7 @@ let D = 16 / 9,
                   stageParticipant: i,
                   rtcParticipant: v,
                   channel: l,
-                  guildId: C,
+                  guildId: x,
                   user: y,
                   width: c,
                   isModerator: O,
@@ -269,7 +269,7 @@ let D = 16 / 9,
                   stageParticipant: i,
                   rtcParticipant: v,
                   channel: l,
-                  guildId: C,
+                  guildId: x,
                   user: y,
                   width: c,
                   isModerator: O,

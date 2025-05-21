@@ -2,9 +2,9 @@ n.d(t, {
     Dr: () => _,
     Rq: () => g,
     So: () => b,
-    Su: () => C,
+    Su: () => x,
     YZ: () => h,
-    _Q: () => x,
+    _Q: () => C,
     bF: () => f,
     c$: () => p,
     kx: () => m
@@ -140,14 +140,14 @@ let g = i()(async (e, t) => {
             entry: i.body
         });
     },
-    C = (e, t) => {
+    x = (e, t) => {
         o.Z.dispatch({
             type: 'GUILD_DIRECTORY_CATEGORY_SELECT',
             channelId: e,
             categoryId: t
         });
     },
-    x = async (e, t) => {
+    C = async (e, t) => {
         try {
             let n = await a.tn.get({
                 url: d.ANM.DIRECTORY_CHANNEL_LIST_BY_ID(e),

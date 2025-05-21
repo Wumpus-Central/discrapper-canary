@@ -18,8 +18,8 @@ var r = n(255367),
     g = n(906732),
     b = n(213609),
     _ = n(795318),
-    C = n(670188),
-    x = n(314897),
+    x = n(670188),
+    C = n(314897),
     y = n(271383),
     v = n(709586),
     j = n(5192),
@@ -143,7 +143,7 @@ let Z = i.memo(function (e) {
         let { participant: t, channel: l } = e,
             { user: o, blocked: d } = t,
             v = l.getGuildId(),
-            j = x.default.getId(),
+            j = C.default.getId(),
             { newestAnalyticsLocation: O } = (0, g.ZP)(m.Z.AUDIENCE_TILE),
             Z = (0, f.bp)(),
             T = (0, u.e7)(
@@ -193,7 +193,7 @@ let Z = i.memo(function (e) {
             },
             [o, j, Z, v, l, O]
         );
-        return (0, r.jsx)(C.Z, {
+        return (0, r.jsx)(x.Z, {
             targetElementRef: A,
             user: o,
             guildId: l.guild_id,
