@@ -178,6 +178,15 @@ let V = '1193992107035983872',
                     }
                 }
             },
+            taskConfigV2: {
+                joinOperator: u.r.AND,
+                tasks: {
+                    [l.X.PLAY_ON_DESKTOP]: {
+                        type: l.X.PLAY_ON_DESKTOP,
+                        target: 300
+                    }
+                }
+            },
             features: []
         },
         userStatus: null,

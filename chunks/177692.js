@@ -1,9 +1,9 @@
-n.d(t, { Mn: () => d }), n(415506);
+n.d(t, { Mn: () => d }), n(539854), n(415506);
 var r = n(259443),
     i = n(668757),
     o = n(511495),
     a = n(626135),
-    s = n(621590),
+    s = n(894276),
     l = n(981631);
 let c = new r.Yd('libdiscore'),
     u = !1;
@@ -20,11 +20,14 @@ async function d() {
     }
 }
 function f() {
-    let e = (0, s.j)() ? ['note_store'] : [];
-    a.default.track(l.rMx.LIBDISCORE_LOADED, {
-        success: !0,
-        experimental_features: e
-    });
+    let e = [];
+    s.o.forEach((t) => {
+        t.cachedIsEnabled() && e.push(t.feature);
+    }),
+        a.default.track(l.rMx.LIBDISCORE_LOADED, {
+            success: !0,
+            experimental_features: e
+        });
 }
 function _(e) {
     let t = '',

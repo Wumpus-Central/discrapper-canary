@@ -107,6 +107,7 @@ function H(e) {
                 original_client_app_state: o,
                 client_app_state: m.Z.getState(),
                 skip_context: s,
+                original_connect_reason: a,
                 gateway_connect_reasons: k.Pf()
             });
         }, 200);

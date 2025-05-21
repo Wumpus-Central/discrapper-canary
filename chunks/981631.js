@@ -3942,6 +3942,7 @@ var n_ = (function (e) {
             (e.COLLECTIBLES_EXPIRY_MODAL_CLOSED = 'collectibles_expiry_modal_closed'),
             (e.COLLECTIBLES_TILE_IMPRESSION = 'collectibles_tile_impression'),
             (e.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED = 'collectibles_share_link_button_clicked'),
+            (e.COLLECTIBLES_SHOP_ELEMENT_CLICKED = 'collectibles_shop_element_clicked'),
             (e.COLLECTIBLES_SHOP_PERF_TRACKED = 'collectibles_shop_perf_tracked'),
             (e.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED = 'collectibles_shop_feed_shuffle_clicked'),
             (e.COLLECTIBLES_SHOP_FEED_SORT_CHANGED = 'collectibles_shop_feed_sort_changed'),

@@ -1,9 +1,10 @@
-n.d(t, { Z: () => f }), n(388685);
+n.d(t, { Z: () => p }), n(388685);
 var r = n(668757),
     i = n(147913),
-    o = n(353926),
-    a = n(894276);
-function s(e, t, n) {
+    o = n(818083),
+    a = n(353926),
+    s = n(894276);
+function l(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,33 +17,57 @@ function s(e, t, n) {
         e
     );
 }
-let l = null;
-function c(e, t) {
+let c = null;
+function u(e, t) {
     if (e.size !== t.size) return !1;
     for (let n of e) if (!t.has(n)) return !1;
     return !0;
 }
-function u() {
+function d() {
     if (!(0, r.X6)()) return;
     let e = new Set(),
         t = (0, r.Md)();
     if (
-        (a.V.forEach((t) => {
-            t.getCurrentConfig({ location: 'default' }).enabled && e.add(t.definition.id);
+        (s.o.forEach((t) => {
+            var n;
+            (null == (n = t._discordExperiment) ? void 0 : n.getCurrentConfig({ location: 'default' }).enabled) && e.add(t.id);
         }),
-        null === l || !c(l, e))
+        null === c || !u(c, e))
     ) {
         let n = Array.from(e);
-        t.flushToCache(n), (l = e);
+        t.flushToCache(n), (c = e);
     }
 }
-class d extends i.Z {
+function f() {
+    s.o.forEach((e) => {
+        let t = (0, o.B)({
+            kind: 'user',
+            id: e.id,
+            label: 'libdiscore '.concat(e.feature, ' Migration'),
+            defaultConfig: { enabled: !1 },
+            treatments: [
+                {
+                    id: 0,
+                    label: 'Control',
+                    config: { enabled: !1 }
+                },
+                {
+                    id: 1,
+                    label: 'Use libdiscore '.concat(e.feature),
+                    config: { enabled: !0 }
+                }
+            ]
+        });
+        e.setDiscordExperiment(t);
+    });
+}
+class _ extends i.Z {
     _initialize() {
-        u();
+        f(), d();
     }
     _terminate() {}
     constructor(...e) {
-        super(...e), s(this, 'actions', {}), s(this, 'stores', new Map().set(o.Z, u));
+        super(...e), l(this, 'actions', {}), l(this, 'stores', new Map().set(a.Z, d));
     }
 }
-let f = new d();
+let p = new _();

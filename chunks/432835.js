@@ -1,7 +1,7 @@
 n.d(t, { Z: () => s });
 var r = n(259443),
-    i = n(621590);
+    i = n(894276);
 let o = new r.Yd('NoteStore'),
-    a = n((0, i.j)() ? 301963 : 476151);
-o.info('libdiscore enabled: '.concat((0, i.j)()));
+    a = n(i.I.cachedIsEnabled() ? 301963 : 476151);
+o.info('libdiscore enabled: '.concat(i.I.cachedIsEnabled()));
 let s = a.default;
