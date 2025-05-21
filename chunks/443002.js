@@ -90,15 +90,13 @@ let A = function (e) {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 null != A &&
-                    (0, r.jsx)(a.P3F, {
-                        'aria-label': S.intl.string(S.t.cpT0Cg),
-                        onClick: j,
+                    (0, r.jsx)('div', {
                         className: T.closeIconWrapper,
                         children: (0, r.jsx)(s.Z, {
                             className: T.closeIcon,
                             closeAction: j,
                             keybind: 'ESC',
-                            variant: s.Z.Variants.SOLID
+                            variant: s.Z.Variants.BOLD
                         })
                     }),
                 (0, r.jsxs)(a.yWw, {

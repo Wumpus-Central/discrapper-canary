@@ -330,10 +330,10 @@ function ed(e) {
     return e_(
         t,
         Object.values(n).reduce((e, t) => {
-            if ((null != t.owner && e.push(t.owner), null != t.first_message.message_snapshots)) {
-                var n, r;
-                let i = t.first_message.message_snapshots[0];
-                (null == (n = i.moderator_report) ? void 0 : n.reported_member) != null && e.push(i.moderator_report.reported_member), (null == (r = i.moderator_report) ? void 0 : r.reporting_member) != null && e.push(i.moderator_report.reporting_member);
+            var n, r, i;
+            if ((null != t.owner && e.push(t.owner), (null == t || null == (n = t.first_message) ? void 0 : n.message_snapshots) != null)) {
+                let n = t.first_message.message_snapshots[0];
+                (null == (r = n.moderator_report) ? void 0 : r.reported_member) != null && e.push(n.moderator_report.reported_member), (null == (i = n.moderator_report) ? void 0 : i.reporting_member) != null && e.push(n.moderator_report.reporting_member);
             }
             return e;
         }, [])

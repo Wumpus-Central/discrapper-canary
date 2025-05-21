@@ -7,7 +7,7 @@ function s() {
     let t = new Date().getTime();
     for (let n of Object.values(r.vK)) {
         let i = new Date(e);
-        if ((i.setMonth(e.getMonth() + n.tenureReqNumMonths), t < i.getTime())) break;
+        if ((i.setMonth(e.getMonth() + n.tenureReqNumMonths), i.setHours(i.getHours() + 30), t < i.getTime())) break;
         if (t - i.getTime() < 604800000) return n.id;
     }
     return null;
