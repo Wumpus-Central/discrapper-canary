@@ -1,7 +1,7 @@
 n.d(t, {
-    Ux: () => p,
-    gS: () => N,
-    ww: () => S
+    Ux: () => T,
+    gS: () => S,
+    ww: () => N
 }),
     n(997841);
 var r = n(73800),
@@ -15,10 +15,10 @@ var r = n(73800),
     d = n(914010),
     _ = n(715903),
     E = n(981631),
-    I = n(372897),
-    O = n(526761),
-    T = n(388032);
-function p(e) {
+    O = n(372897),
+    I = n(526761),
+    p = n(388032);
+function T(e) {
     return (0, i.e7)(
         [a.default, c.ZP],
         () => {
@@ -29,7 +29,7 @@ function p(e) {
         [e]
     );
 }
-function N(e) {
+function S(e) {
     return (0, i.cj)(
         [a.default, c.ZP, d.Z, s.Z],
         () => {
@@ -45,33 +45,33 @@ function N(e) {
                 o = c.ZP.getMember(r, l),
                 u = (0, _.Ow)(null == o ? void 0 : o.flags);
             if (0 === u.size) return t;
-            if (u.has(I.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME))
+            if (u.has(O.q.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME))
                 if (null == e) {
                     var E;
-                    t.nick = [T.intl.formatToPlainString(T.t.WBUh3N, { guildName: null != (E = i.name) ? E : '' })];
-                } else t.nick = [T.intl.string(T.t.EPZCrK)];
-            return u.has(I.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [T.intl.string(T.t.dZh1v7)]), t;
+                    t.nick = [p.intl.formatToPlainString(p.t.WBUh3N, { guildName: null != (E = i.name) ? E : '' })];
+                } else t.nick = [p.intl.string(p.t.EPZCrK)];
+            return u.has(O.q.AUTOMOD_QUARANTINED_BIO) && (t.bio = [p.intl.string(p.t.dZh1v7)]), t;
         },
         [e]
     );
 }
-function S(e) {
+function N(e) {
     let { guildId: t, scrollPosition: n, analyticsLocation: a, analyticsLocations: c, openWithoutBackstack: d } = e,
         _ = (0, i.e7)([s.Z], () => s.Z.getGuild(t), [t]),
-        I = (0, i.e7)([u.Z], () => null != _ && u.Z.can(E.Plq.CHANGE_NICKNAME, _), [_]);
+        O = (0, i.e7)([u.Z], () => null != _ && u.Z.can(E.Plq.CHANGE_NICKNAME, _), [_]);
     return [
         r.useCallback(() => {
             if (null == _) return;
             let e = E.oAB.PROFILE_CUSTOMIZATION,
-                t = O.NB.GUILD;
-            I ? (0, o.Fq)(_) : (t = O.NB.USER_PROFILE),
+                t = I.NB.GUILD;
+            O ? (0, o.Fq)(_) : (t = I.NB.USER_PROFILE),
                 l.Z.open(e, t, {
                     scrollPosition: n,
                     analyticsLocation: a,
                     analyticsLocations: c,
                     openWithoutBackstack: d
                 });
-        }, [I, n, a, c, d, _]),
-        I
+        }, [O, n, a, c, d, _]),
+        O
     ];
 }

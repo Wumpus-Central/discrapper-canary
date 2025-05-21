@@ -1,8 +1,8 @@
 n.d(t, { Z: () => m });
 var r = n(255367);
 n(73800);
-var i = n(313361),
-    l = n(697988),
+var l = n(313361),
+    i = n(697988),
     a = n(683860),
     s = n(481060),
     o = n(109434),
@@ -73,15 +73,15 @@ function m(e) {
                                   id: 'view-as-list',
                                   group: 'view-as',
                                   label: d.intl.string(d.t['NJFr+v']),
-                                  action: () => b(i.X.LIST),
-                                  checked: h === i.X.LIST
+                                  action: () => b(l.X.LIST),
+                                  checked: h === l.X.LIST
                               }),
                               (0, r.jsx)(s.k5B, {
                                   id: 'view-as-grid',
                                   group: 'view-as',
                                   label: d.intl.string(d.t.wKeggY),
-                                  action: () => b(i.X.GRID),
-                                  checked: h === i.X.GRID
+                                  action: () => b(l.X.GRID),
+                                  checked: h === l.X.GRID
                               })
                           ]
                       }),
@@ -93,15 +93,15 @@ function m(e) {
                                   id: 'match-some',
                                   group: 'tag-setting',
                                   label: d.intl.string(d.t.rQ0ctb),
-                                  action: () => j(l.z.MATCH_SOME),
-                                  checked: g === l.z.MATCH_SOME
+                                  action: () => j(i.z.MATCH_SOME),
+                                  checked: g === i.z.MATCH_SOME
                               }),
                               (0, r.jsx)(s.k5B, {
                                   id: 'match-all',
                                   group: 'tag-setting',
                                   label: d.intl.string(d.t.FCXUu7),
-                                  action: () => j(l.z.MATCH_ALL),
-                                  checked: g === l.z.MATCH_ALL
+                                  action: () => j(i.z.MATCH_ALL),
+                                  checked: g === i.z.MATCH_ALL
                               })
                           ]
                       })

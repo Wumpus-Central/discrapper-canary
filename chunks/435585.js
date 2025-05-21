@@ -48,12 +48,12 @@ function u(e, t, n, u, d) {
         f = (0, o.O5)(),
         v = (0, r.useRef)(-1),
         g = (null == (m = e.userStatus) ? void 0 : m.completedAt) != null,
-        b = e.id,
-        E = r.useCallback(
+        E = e.id,
+        b = r.useCallback(
             (e) => {
                 null != t.current &&
                     p({
-                        questId: b,
+                        questId: E,
                         event: a.rMx.QUEST_VIDEO_LOADING_STARTED,
                         properties: s(
                             {
@@ -66,14 +66,14 @@ function u(e, t, n, u, d) {
                         )
                     });
             },
-            [b, t, d, u, n, p]
+            [E, t, d, u, n, p]
         ),
         O = r.useCallback(
             (e, r) => {
                 null != t.current &&
                     null != r &&
                     p({
-                        questId: b,
+                        questId: E,
                         event: a.rMx.QUEST_VIDEO_LOADING_ENDED,
                         properties: s(
                             {
@@ -86,13 +86,13 @@ function u(e, t, n, u, d) {
                         )
                     });
             },
-            [b, t, d, u, n, p]
+            [E, t, d, u, n, p]
         ),
         h = r.useCallback(
             (e) => {
                 null != t.current &&
                     p({
-                        questId: b,
+                        questId: E,
                         event: a.rMx.QUEST_VIDEO_TIME_TO_FIRST_FRAME,
                         properties: s(
                             {
@@ -104,12 +104,12 @@ function u(e, t, n, u, d) {
                         )
                     });
             },
-            [b, t, d, u, n, p]
+            [E, t, d, u, n, p]
         ),
         S = r.useCallback(() => {
             null != t.current &&
                 p({
-                    questId: b,
+                    questId: E,
                     event: a.rMx.QUEST_VIDEO_PROGRESSED,
                     properties: s(
                         {
@@ -121,12 +121,12 @@ function u(e, t, n, u, d) {
                         c(n)
                     )
                 });
-        }, [b, t, u, n, p, d]),
+        }, [E, t, u, n, p, d]),
         C = r.useCallback(
             (e) => {
                 null != t.current &&
                     p({
-                        questId: b,
+                        questId: E,
                         event: a.rMx.QUEST_VIDEO_RESUMED,
                         properties: s(
                             {
@@ -139,14 +139,14 @@ function u(e, t, n, u, d) {
                         )
                     });
             },
-            [b, t, u, n, p, d]
+            [E, t, u, n, p, d]
         ),
         j = r.useCallback(
             (e) => {
                 null != t.current &&
                     null != e &&
                     p({
-                        questId: b,
+                        questId: E,
                         event: a.rMx.QUEST_VIDEO_PAUSED,
                         properties: s(
                             {
@@ -159,13 +159,13 @@ function u(e, t, n, u, d) {
                         )
                     });
             },
-            [b, t, u, n, p, d]
+            [E, t, u, n, p, d]
         ),
-        y = r.useCallback(
+        _ = r.useCallback(
             (e, n) => {
                 null != t.current &&
                     p({
-                        questId: b,
+                        questId: E,
                         event: e ? a.rMx.QUEST_VIDEO_APP_FOCUSED : a.rMx.QUEST_VIDEO_APP_UNFOCUSED,
                         properties: {
                             video_timestamp_seconds: t.current.currentTime,
@@ -175,14 +175,14 @@ function u(e, t, n, u, d) {
                         }
                     });
             },
-            [b, t, u, p, d]
+            [E, t, u, p, d]
         ),
-        _ = r.useCallback(
+        y = r.useCallback(
             (e) => {
                 null != t.current &&
                     ((v.current += 1),
                     p({
-                        questId: b,
+                        questId: E,
                         event: a.rMx.QUEST_VIDEO_BUFFERING_STARTED,
                         properties: s(
                             {
@@ -195,14 +195,14 @@ function u(e, t, n, u, d) {
                         )
                     }));
             },
-            [b, t, d, u, n, p]
+            [E, t, d, u, n, p]
         ),
         x = r.useCallback(
             (e, r) => {
                 null != t.current &&
                     ((v.current += 1),
                     p({
-                        questId: b,
+                        questId: E,
                         event: a.rMx.QUEST_VIDEO_BUFFERING_ENDED,
                         properties: s(
                             {
@@ -216,24 +216,24 @@ function u(e, t, n, u, d) {
                         )
                     }));
             },
-            [b, t, d, u, n, p]
+            [E, t, d, u, n, p]
         ),
         D = r.useCallback(
             (e, t) => {
                 f({
-                    questId: b,
+                    questId: E,
                     questContent: e,
                     questContentCTA: t
                 });
             },
-            [b, f]
+            [E, f]
         ),
         P = r.useCallback(
             (e) => {
                 if (null != t.current) {
                     var r, l;
                     p({
-                        questId: b,
+                        questId: E,
                         event: a.rMx.QUEST_VIDEO_SEGMENT_WATCHED,
                         properties: s(
                             ((r = s({}, e)),
@@ -263,7 +263,7 @@ function u(e, t, n, u, d) {
                     });
                 }
             },
-            [p, b, d, g, u, n, t]
+            [p, E, d, g, u, n, t]
         ),
         T = r.useCallback(
             (e, r) => {
@@ -273,7 +273,7 @@ function u(e, t, n, u, d) {
                     f = null == (o = t.current) ? void 0 : o.networkState,
                     v = null != t.current ? (0, i.bA)(t.current.currentTime, t.current.duration) : void 0;
                 p({
-                    questId: b,
+                    questId: E,
                     event: a.rMx.QUEST_VIDEO_ERROR,
                     properties: s(
                         {
@@ -290,25 +290,25 @@ function u(e, t, n, u, d) {
                     )
                 });
             },
-            [b, t, d, u, n, p]
+            [E, t, d, u, n, p]
         );
     return {
-        trackQuestVideoLoadingStarted: E,
+        trackQuestVideoLoadingStarted: b,
         trackQuestVideoLoadingEnded: O,
         trackQuestVideoTimeToFirstFrame: h,
         trackQuestVideoProgressed: S,
         trackQuestVideoResumed: C,
         trackQuestVideoPaused: j,
-        trackQuestVideoFocusChange: y,
+        trackQuestVideoFocusChange: _,
         trackQuestContentClick: D,
-        trackQuestVideoBufferingStarted: _,
+        trackQuestVideoBufferingStarted: y,
         trackQuestVideoBufferingEnded: x,
         trackWatchTimeAnalytics: P,
         trackQuestVideoFullscreenChanged: r.useCallback(
             (e) => {
                 null != t.current &&
                     p({
-                        questId: b,
+                        questId: E,
                         event: e ? a.rMx.QUEST_VIDEO_FULLSCREEN_ENTERED : a.rMx.QUEST_VIDEO_FULLSCREEN_EXITED,
                         properties: s(
                             {
@@ -319,14 +319,14 @@ function u(e, t, n, u, d) {
                         )
                     });
             },
-            [b, t, u, n, p, d]
+            [E, t, u, n, p, d]
         ),
         trackQuestVideoError: T,
         trackQuestVideoVolumeChanged: r.useCallback(
             (e) => {
                 null != t.current &&
                     p({
-                        questId: b,
+                        questId: E,
                         event: a.rMx.QUEST_VIDEO_VOLUME_CHANGED,
                         properties: s(
                             {
@@ -338,7 +338,7 @@ function u(e, t, n, u, d) {
                         )
                     });
             },
-            [b, t, d, u, n, p]
+            [E, t, d, u, n, p]
         )
     };
 }

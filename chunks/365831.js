@@ -13,8 +13,8 @@ var r = n(255367),
     f = n(743498),
     p = n(56848),
     g = n(378441),
-    v = n(388032),
-    h = n(270217);
+    h = n(388032),
+    v = n(270217);
 function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
@@ -58,14 +58,14 @@ function y(e, t) {
         e
     );
 }
-let x = (e) => 1 - Math.pow(1 - e, 4),
-    j = {
+let j = (e) => 1 - Math.pow(1 - e, 4),
+    C = {
         mass: 1,
         friction: 64,
         tension: 1000,
         clamp: !0
     },
-    C = {
+    x = {
         mass: 1,
         friction: 64,
         tension: 1000
@@ -81,7 +81,7 @@ function O(e) {
         { activeVoice: n } = (0, g.o)(),
         a = (0, u.Z)(n),
         O = (0, p.z)(n),
-        { toggleLoopback: E, isLoopbackEnabled: P } = (function () {
+        { toggleLoopback: E, isLoopbackEnabled: N } = (function () {
             let { activeVoice: e } = (0, g.o)(),
                 t = (0, s.e7)([m.Z], () => m.Z.getVoiceFilterPlaybackEnabled()),
                 n = i.useCallback(() => {
@@ -103,8 +103,8 @@ function O(e) {
                 }
             );
         })(),
-        N = P ? c.Iy5 : c.X_q,
-        S = i.useCallback(() => (0, f.v6)(null), []),
+        S = N ? c.Iy5 : c.X_q,
+        P = i.useCallback(() => (0, f.v6)(null), []),
         w = (0, c.dQu)(c.TVs.colors.BACKGROUND_SECONDARY).hex(),
         T = (0, c.dQu)(c.TVs.colors.WHITE).hex(),
         L = i.useRef(0),
@@ -113,10 +113,10 @@ function O(e) {
         L.current = k;
     }, [k]);
     let Z = null != n,
-        D = !Z,
-        A = Z && null != a,
-        R = null == n && null != a,
-        F = (0, c.q_F)(
+        A = !Z,
+        D = Z && null != a,
+        F = null == n && null != a,
+        M = (0, c.q_F)(
             {
                 opacity: +!!Z,
                 height: 72 * !!Z,
@@ -125,15 +125,15 @@ function O(e) {
                 config: (e) =>
                     'backgroundColor' === e
                         ? {
-                              easing: x,
+                              easing: j,
                               duration: 200
                           }
-                        : j,
-                delay: 100 * !!A
+                        : C,
+                delay: 100 * !!D
             },
             'respect-motion-settings'
         ),
-        M = (0, c.Yzy)(
+        R = (0, c.Yzy)(
             null == O ? void 0 : O.id,
             {
                 key: k,
@@ -143,15 +143,15 @@ function O(e) {
                 },
                 enter: {
                     opacity: 1,
-                    delay: A ? 100 : 50
+                    delay: D ? 100 : 50
                 },
                 leave: {
                     opacity: 0,
-                    delay: A ? 100 : 150
+                    delay: D ? 100 : 150
                 },
                 config: {
-                    easing: x,
-                    duration: A ? 250 : 200
+                    easing: j,
+                    duration: D ? 250 : 200
                 }
             },
             'respect-motion-settings'
@@ -159,7 +159,7 @@ function O(e) {
         [B] = (0, c.bYB)(
             2,
             (e) => ({
-                from: A
+                from: D
                     ? {
                           translateY: 0,
                           opacity: 1
@@ -174,7 +174,7 @@ function O(e) {
                               translateY: 16,
                               opacity: 0
                           }
-                        : A
+                        : D
                           ? null
                           : {
                                 translateY: 0,
@@ -183,11 +183,11 @@ function O(e) {
                 config: (e) =>
                     'opacity' === e
                         ? {
-                              easing: x,
+                              easing: j,
                               duration: 200
                           }
-                        : C,
-                delay: R ? 50 - 50 * e : 200 + 50 * e
+                        : x,
+                delay: F ? 50 - 50 * e : 200 + 50 * e
             }),
             'respect-motion-settings',
             [n]
@@ -199,7 +199,7 @@ function O(e) {
                 from: {
                     opacity: 0,
                     scale: 80 / 88,
-                    translateX: A ? -16 : 0
+                    translateX: D ? -16 : 0
                 },
                 enter: {
                     opacity: 1,
@@ -211,16 +211,16 @@ function O(e) {
                     opacity: 0,
                     scale: Z ? 80 / 88 : 1,
                     translateX: 24 * !!Z,
-                    delay: 150 * !A
+                    delay: 150 * !D
                 },
                 config: (e) =>
                     'opacity' === e
                         ? {
-                              easing: x,
+                              easing: j,
                               duration: 200
                           }
                         : Z
-                          ? j
+                          ? C
                           : I
             },
             'respect-motion-settings'
@@ -231,8 +231,8 @@ function O(e) {
                 key: k,
                 from: {
                     opacity: 0,
-                    scale: A ? 0.9 : 1,
-                    translateY: 16 * !A
+                    scale: D ? 0.9 : 1,
+                    translateY: 16 * !D
                 },
                 enter: {
                     opacity: 1,
@@ -243,53 +243,53 @@ function O(e) {
                     config: (e) =>
                         'opacity' === e
                             ? {
-                                  easing: x,
+                                  easing: j,
                                   duration: 200
                               }
-                            : A
-                              ? j
-                              : C
+                            : D
+                              ? C
+                              : x
                 },
                 leave: {
                     opacity: 0,
                     translateX: 24 * (null != n),
                     translateY: 16 * (null == n),
-                    delay: R ? 100 : 50,
+                    delay: F ? 100 : 50,
                     config: (e) =>
                         'opacity' === e
                             ? {
-                                  easing: x,
+                                  easing: j,
                                   duration: 200
                               }
-                            : A
-                              ? j
-                              : C
+                            : D
+                              ? C
+                              : x
                 }
             },
             'respect-motion-settings'
         ),
-        W = v.intl.string(P ? v.t.esVyo6 : v.t.UQqFCA);
+        W = h.intl.string(N ? h.t.esVyo6 : h.t.UQqFCA);
     return (0, r.jsxs)(l.animated.div, {
-        className: h.voiceFilterHero,
-        'aria-hidden': D,
-        style: F,
+        className: v.voiceFilterHero,
+        'aria-hidden': A,
+        style: M,
         children: [
             (0, r.jsx)('div', {
-                className: o()([h.bgGradient, h.bgGradientHighlight])
+                className: o()([v.bgGradient, v.bgGradientHighlight])
             }),
-            M((e) =>
+            R((e) =>
                 (0, r.jsx)(l.animated.div, {
-                    className: h.bgGradient,
+                    className: v.bgGradient,
                     style: e
                 })
             ),
             (0, r.jsx)('div', {
-                className: h.iconWrapper,
+                className: v.iconWrapper,
                 children: z((e, t) =>
                     (0, r.jsx)(
                         l.animated.img,
                         {
-                            className: h.activeVoiceIcon,
+                            className: v.activeVoiceIcon,
                             style: e,
                             alt: '',
                             src: t
@@ -299,61 +299,61 @@ function O(e) {
                 )
             }),
             (0, r.jsx)('div', {
-                className: h.descriptionWrapper,
+                className: v.descriptionWrapper,
                 children: U((e, t) =>
                     (0, r.jsxs)(l.animated.div, {
-                        className: h.description,
+                        className: v.description,
                         style: e,
                         children: [
                             (0, r.jsx)(c.Text, {
                                 variant: 'text-xs/normal',
                                 color: 'always-white',
-                                className: h.offWhiteText,
-                                children: v.intl.string(v.t.WW5DAA)
+                                className: v.offWhiteText,
+                                children: h.intl.string(h.t.WW5DAA)
                             }),
                             (0, r.jsx)(c.Text, {
                                 variant: 'text-md/medium',
                                 color: 'always-white',
-                                children: null != t ? v.intl.string(t) : ''
+                                children: null != t ? h.intl.string(t) : ''
                             })
                         ]
                     })
                 )
             }),
             (0, r.jsxs)('div', {
-                className: h.buttonWrapper,
+                className: v.buttonWrapper,
                 children: [
                     (0, r.jsx)(c.ua7, {
                         'aria-label': W,
-                        tooltipClassName: h.tooltip,
-                        tooltipContentClassName: h.tooltipContent,
+                        tooltipClassName: v.tooltip,
+                        tooltipContentClassName: v.tooltipContent,
                         shouldShow: Z,
                         text: (0, r.jsxs)(r.Fragment, {
                             children: [
                                 (0, r.jsx)(c.X6q, {
                                     variant: 'heading-sm/normal',
                                     color: 'header-primary',
-                                    className: h.tooltipHeader,
+                                    className: v.tooltipHeader,
                                     children: W
                                 }),
                                 (0, r.jsx)(c.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'header-muted',
-                                    children: v.intl.string(P ? v.t.Sg6cfn : v.t.ZKhtw8)
+                                    children: h.intl.string(N ? h.t.Sg6cfn : h.t.ZKhtw8)
                                 })
                             ]
                         }),
                         children: (e) =>
                             (0, r.jsx)(l.animated.div, {
-                                className: h.buttonWrapper,
+                                className: v.buttonWrapper,
                                 style: B[0],
                                 children: (0, r.jsx)(
                                     c.P3F,
                                     y(
                                         b(
                                             {
-                                                className: o()(h.button, { [h.loopbackEnabled]: P }),
-                                                'aria-hidden': D,
+                                                className: o()(v.button, { [v.loopbackEnabled]: N }),
+                                                'aria-hidden': A,
                                                 focusProps: { enabled: Z },
                                                 tabIndex: Z ? 0 : -1
                                             },
@@ -361,7 +361,7 @@ function O(e) {
                                         ),
                                         {
                                             onClick: () => E(),
-                                            children: (0, r.jsx)(N, {
+                                            children: (0, r.jsx)(S, {
                                                 size: 'custom',
                                                 width: 20,
                                                 height: 20,
@@ -374,25 +374,25 @@ function O(e) {
                     }),
                     (0, r.jsx)(c.ua7, {
                         shouldShow: Z,
-                        text: v.intl.string(v.t.UvMx7O),
+                        text: h.intl.string(h.t.UvMx7O),
                         children: (e) =>
                             (0, r.jsx)(l.animated.div, {
-                                className: h.buttonWrapper,
+                                className: v.buttonWrapper,
                                 style: B[1],
                                 children: (0, r.jsx)(
                                     c.P3F,
                                     y(
                                         b(
                                             {
-                                                className: h.button,
-                                                'aria-hidden': D,
+                                                className: v.button,
+                                                'aria-hidden': A,
                                                 focusProps: { enabled: Z },
                                                 tabIndex: Z ? 0 : -1
                                             },
                                             e
                                         ),
                                         {
-                                            onClick: S,
+                                            onClick: P,
                                             children: (0, r.jsx)(c.k$p, {
                                                 size: 'custom',
                                                 width: 20,

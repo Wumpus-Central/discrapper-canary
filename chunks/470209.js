@@ -1,4 +1,4 @@
-r.d(t, { Z: () => m });
+r.d(t, { Z: () => h });
 var n = r(255367),
     A = r(73800),
     a = r(512722),
@@ -53,11 +53,11 @@ function f(e, t) {
     );
 }
 let p = (0, s.hQ)();
-function m(e) {
+function h(e) {
     let { newRoleParams: t, setNewRoleParams: r } = e,
         a = A.useRef(null),
-        { name: s, color: m } = t,
-        h = (e) => r((t) => (l()(null != t, 'newRoleParams should be defined'), f(g({}, t), { color: e })));
+        { name: s, color: h } = t,
+        m = (e) => r((t) => (l()(null != t, 'newRoleParams should be defined'), f(g({}, t), { color: e })));
     return (0, n.jsxs)('div', {
         className: u.roleInputContainer,
         children: [
@@ -73,10 +73,10 @@ function m(e) {
             (0, n.jsxs)('div', {
                 className: u.roleColorContainer,
                 children: [
-                    (0, n.jsx)(i.nn4, { children: d.intl.format(d.t['Vlq/pK'], { color: (0, o.Rf)(m) }) }),
+                    (0, n.jsx)(i.nn4, { children: d.intl.format(d.t['Vlq/pK'], { color: (0, o.Rf)(h) }) }),
                     (0, n.jsx)('div', {
                         className: u.roleColorPreview,
-                        style: { backgroundColor: (0, o.Rf)(m) }
+                        style: { backgroundColor: (0, o.Rf)(h) }
                     }),
                     (0, n.jsx)(i.LZC, {
                         size: 8,
@@ -88,8 +88,8 @@ function m(e) {
                             (0, n.jsx)(
                                 i.Z$W,
                                 f(g({}, e), {
-                                    value: m,
-                                    onChange: h
+                                    value: h,
+                                    onChange: m
                                 })
                             ),
                         children: (e) =>

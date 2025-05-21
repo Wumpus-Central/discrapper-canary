@@ -2,9 +2,9 @@ n.d(t, { l: () => p });
 var i = n(255367),
     r = n(73800),
     o = n(481060),
-    a = n(100527),
-    s = n(906732),
-    l = n(181918),
+    l = n(100527),
+    a = n(906732),
+    s = n(181918),
     c = n(670188),
     u = n(592125),
     d = n(91047);
@@ -36,9 +36,9 @@ function h(e) {
 function p(e) {
     let { user: t, channelId: n, guildId: p, messageId: m, stopPropagation: f = !1, ariaLabel: g } = e,
         b = r.useRef(null),
-        { analyticsLocations: j } = (0, s.ZP)(a.Z.USERNAME),
-        v = (0, l.$V)(p, 'useUsernameHook'),
-        O = r.useCallback(
+        { analyticsLocations: j } = (0, a.ZP)(l.Z.USERNAME),
+        O = (0, s.$V)(p, 'useUsernameHook'),
+        v = r.useCallback(
             (e) => {
                 let i = u.Z.getChannel(n);
                 null != i && null != t && (0, d.Pv)(e, t, i);
@@ -46,26 +46,26 @@ function p(e) {
             [t, n]
         );
     return r.useCallback(
-        (e) => (r, a) => {
-            let l = null == e ? void 0 : e.colorStrings,
-                u = v && null != l && null != l.primaryColor && null != l.secondaryColor,
+        (e) => (r, l) => {
+            let s = null == e ? void 0 : e.colorStrings,
+                u = O && null != s && null != s.primaryColor && null != s.secondaryColor,
                 d = (t) => {
-                    var n, a;
+                    var n, l;
                     return (0, i.jsx)(
                         o.rz2,
                         ((n = h({}, null != t ? t : {})),
-                        (a = a =
+                        (l = l =
                             {
                                 ref: b,
-                                onContextMenu: O,
+                                onContextMenu: v,
                                 name: (0, o.qgQ)(r),
                                 color: null == e ? void 0 : e.colorString,
                                 roleName: null == e ? void 0 : e.colorRoleName,
-                                roleColors: u ? l : null,
+                                roleColors: u ? s : null,
                                 'aria-label': g
                             }),
                         Object.getOwnPropertyDescriptors
-                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
+                            ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(l))
                             : (function (e, t) {
                                   var n = Object.keys(e);
                                   if (Object.getOwnPropertySymbols) {
@@ -73,8 +73,8 @@ function p(e) {
                                       n.push.apply(n, i);
                                   }
                                   return n;
-                              })(Object(a)).forEach(function (e) {
-                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
+                              })(Object(l)).forEach(function (e) {
+                                  Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(l, e));
                               }),
                         n)
                     );
@@ -83,7 +83,7 @@ function p(e) {
                     f && null != t && t.stopPropagation(), e(t);
                 };
             return (0, i.jsx)(
-                s.Gt,
+                a.Gt,
                 {
                     value: j,
                     children:
@@ -122,9 +122,9 @@ function p(e) {
                               })
                             : d(void 0)
                 },
-                a
+                l
             );
         },
-        [j, t, n, p, m, O, f, g, v]
+        [j, t, n, p, m, v, f, g, O]
     );
 }

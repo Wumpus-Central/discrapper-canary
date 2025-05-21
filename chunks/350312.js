@@ -1,4 +1,4 @@
-n.d(t, { Z: () => b }), n(388685);
+n.d(t, { Z: () => E }), n(388685);
 var r = n(255367),
     l = n(73800),
     o = n(120356),
@@ -101,7 +101,7 @@ function g(e) {
         ]
     });
 }
-let b = function (e) {
+let E = function (e) {
     let { quest: t, ctaBtnLabel: n, title: o, subtitle: i, onCTAClick: a } = e,
         s = l.useMemo(() => (0, c.z)(c.i.VIDEO_PLAYER_THUMBNAIL, t), [t]);
     return (0, r.jsxs)(r.Fragment, {

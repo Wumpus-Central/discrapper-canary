@@ -1,6 +1,6 @@
-n.d(t, { D: () => i });
-var r = n(471309);
-function i() {
+n.d(t, { D: () => r });
+var i = n(471309);
+function r() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return r.Z.useExperiment({ location: 'experiment_hook' }, { autoTrackExposure: e });
+    return i.Z.useExperiment({ location: 'experiment_hook' }, { autoTrackExposure: e });
 }

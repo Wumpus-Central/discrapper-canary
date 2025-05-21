@@ -6,9 +6,9 @@ var i = n(255367);
 n(73800);
 var r = n(120356),
     o = n.n(r),
-    a = n(692547),
-    s = n(481060),
-    l = n(109434),
+    l = n(692547),
+    a = n(481060),
+    s = n(109434),
     c = n(456269),
     u = n(479099),
     d = n(176505),
@@ -20,15 +20,15 @@ function f(e) {
         i = (0, c.eV)(t),
         r = i.slice(void 0, 3),
         o = i.slice(3),
-        a = i.length > 3 ? i.length - 3 : 0,
-        s = t.hasFlag(d.zZ.PINNED),
-        l = r.length > 0 || s || n;
+        l = i.length > 3 ? i.length - 3 : 0,
+        a = t.hasFlag(d.zZ.PINNED),
+        s = r.length > 0 || a || n;
     return {
         shownTags: r,
         remainingTags: o,
-        moreTagsCount: a,
-        isPinned: s,
-        shouldRenderTagsRow: l,
+        moreTagsCount: l,
+        isPinned: a,
+        shouldRenderTagsRow: s,
         forumPostContainsTags: i.length > 0
     };
 }
@@ -39,32 +39,32 @@ function g(e) {
             remainingTags: g,
             moreTagsCount: b,
             isPinned: j,
-            shouldRenderTagsRow: v
+            shouldRenderTagsRow: O
         } = f({
             channel: t,
             isNew: n
         }),
-        { tagFilter: O } = (0, l.H)(t.id);
-    return v
+        { tagFilter: v } = (0, s.H)(t.id);
+    return O
         ? (0, i.jsxs)('div', {
               className: o()(m.tags, c),
               children: [
                   n
-                      ? (0, i.jsx)(s.IGR, {
+                      ? (0, i.jsx)(a.IGR, {
                             className: o()(p.newBadge, p.inTagsRow),
-                            color: a.Z.unsafe_rawColors.BRAND_260.css,
+                            color: l.Z.unsafe_rawColors.BRAND_260.css,
                             text: h.intl.string(h.t.y2b7CA)
                         })
                       : null,
                   j &&
                       (0, i.jsx)('div', {
                           className: m.pinIcon,
-                          children: (0, i.jsx)(s.ua7, {
+                          children: (0, i.jsx)(a.ua7, {
                               text: h.intl.string(h.t['1QLRYW']),
                               children: (e) => {
                                   var t, n;
                                   return (0, i.jsx)(
-                                      s.qQX,
+                                      a.qQX,
                                       ((t = (function (e) {
                                           for (var t = 1; t < arguments.length; t++) {
                                               var n = null != arguments[t] ? arguments[t] : {},
@@ -119,7 +119,7 @@ function g(e) {
                           {
                               tag: e,
                               size: u.Z.Sizes.SMALL,
-                              className: o()(r, { [m.tagFiltered]: O.has(e.id) })
+                              className: o()(r, { [m.tagFiltered]: v.has(e.id) })
                           },
                           e.id
                       )

@@ -1,112 +1,102 @@
-n.d(t, { Z: () => p }), n(539854), n(997841);
-var r = n(544891),
-    i = n(881052),
-    o = n(687294),
-    a = n(476326),
-    s = n(45251),
-    l = n(861990),
-    c = n(388032);
-function u(e, t, n) {
-    return (
-        t in e
-            ? Object.defineProperty(e, t, {
-                  value: n,
-                  enumerable: !0,
-                  configurable: !0,
-                  writable: !0
-              })
-            : (e[t] = n),
-        e
-    );
-}
-function d(e) {
+r.d(t, { Z: () => d }), r(539854), r(997841);
+var n = r(544891),
+    A = r(881052),
+    a = r(687294),
+    l = r(476326),
+    o = r(45251),
+    i = r(861990),
+    s = r(388032);
+function c(e) {
     for (var t = 1; t < arguments.length; t++) {
-        var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+        var r = null != arguments[t] ? arguments[t] : {},
+            n = Object.keys(r);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
-                Object.getOwnPropertySymbols(n).filter(function (e) {
-                    return Object.getOwnPropertyDescriptor(n, e).enumerable;
+            (n = n.concat(
+                Object.getOwnPropertySymbols(r).filter(function (e) {
+                    return Object.getOwnPropertyDescriptor(r, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                u(e, t, n[t]);
+            n.forEach(function (t) {
+                var n;
+                (n = r[t]),
+                    t in e
+                        ? Object.defineProperty(e, t, {
+                              value: n,
+                              enumerable: !0,
+                              configurable: !0,
+                              writable: !0
+                          })
+                        : (e[t] = n);
             });
     }
     return e;
 }
-function f(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function _(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : f(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-class p extends o.Z {
+class d extends a.Z {
     async uploadFiles(e, t) {
-        let { addFilesTo: n } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        super.upload({ name: c.intl.string(c.t.jfKTen) }, e);
-        let r = new AbortController();
+        let { addFilesTo: r } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        super.upload({ name: s.intl.string(s.t.jfKTen) }, e);
+        let n = new AbortController();
         try {
-            if (((this.files = e), this._aborted || (this._handleStart(() => r.abort()), !(await this.compressAndCheckFileSize())))) return;
-            this.setUploadingTextForUI(), await (0, o.$)(this.files, !0, this._recomputeProgress.bind(this));
+            if (((this.files = e), this._aborted || (this._handleStart(() => n.abort()), !(await this.compressAndCheckFileSize())))) return;
+            this.setUploadingTextForUI(), await (0, a.$)(this.files, !0, this._recomputeProgress.bind(this));
         } catch (e) {
             this._handleException(e);
         }
         try {
-            return await this._createMessage(r.signal, t, n);
+            return await this._createMessage(n.signal, t, r);
         } catch (e) {
             if (this._raiseEndpointErrors) throw e;
             this._handleException(e);
         }
     }
-    async _createMessage(e, t, n) {
-        var o, c;
-        let u,
+    async _createMessage(e, t, r) {
+        var a, s, d, u;
+        let g,
             f = [];
         if (
-            (this.files.forEach((e, t) => {
-                let n = (0, l.B)(e, t);
-                e.item.platform === a.ow.WEB && f.push(d({}, n));
+            ((this.files.forEach((e, t) => {
+                let r = (0, i.B)(e, t);
+                e.item.platform === l.ow.WEB && f.push(c({}, r));
             }),
-            null != (u = null != n && null != t ? this._addAttachmentsToPayload(t, n, f) : _(d({}, t), { attachments: f })).scheduled_timestamp)
+            null != r && null != t)
+                ? (g = this._addAttachmentsToPayload(t, r, f))
+                : ((d = c({}, t)),
+                  (u = u = { attachments: f }),
+                  Object.getOwnPropertyDescriptors
+                      ? Object.defineProperties(d, Object.getOwnPropertyDescriptors(u))
+                      : (function (e, t) {
+                            var r = Object.keys(e);
+                            if (Object.getOwnPropertySymbols) {
+                                var n = Object.getOwnPropertySymbols(e);
+                                r.push.apply(r, n);
+                            }
+                            return r;
+                        })(Object(u)).forEach(function (e) {
+                            Object.defineProperty(d, e, Object.getOwnPropertyDescriptor(u, e));
+                        }),
+                  (g = d)),
+            null != g.scheduled_timestamp)
         ) {
             try {
-                let e = await (0, s.PV)({
-                    channelId: u.channel_id,
-                    scheduledTimestamp: u.scheduled_timestamp,
+                let e = await (0, o.PV)({
+                    channelId: g.channel_id,
+                    scheduledTimestamp: g.scheduled_timestamp,
                     messageSendData: {
-                        channelId: u.channel_id,
-                        content: u.content,
-                        flags: u.flags,
-                        nonce: u.nonce,
-                        message_reference: u.message_reference,
-                        allowed_mentions: u.allowed_mentions,
+                        channelId: g.channel_id,
+                        content: g.content,
+                        flags: g.flags,
+                        nonce: g.nonce,
+                        message_reference: g.message_reference,
+                        allowed_mentions: g.allowed_mentions,
                         tts: !1
                     },
                     attachments: f
                 });
                 return this._handleComplete(e.body), e.body;
             } catch (e) {
-                if (this._raiseEndpointErrors) throw new i.Hx(e);
+                if (this._raiseEndpointErrors) throw new A.Hx(e);
                 this._handleError({
-                    code: null == e || null == (o = e.body) ? void 0 : o.code,
+                    code: null == e || null == (a = e.body) ? void 0 : a.code,
                     body: null == e ? void 0 : e.body
                 });
             }
@@ -114,23 +104,23 @@ class p extends o.Z {
         }
         let p = {
                 url: this._url,
-                body: u,
+                body: g,
                 signal: e,
                 rejectWithError: !1
             },
-            h = 'POST' === this._method ? r.tn.post : r.tn.patch;
+            h = 'POST' === this._method ? n.tn.post : n.tn.patch;
         try {
             let e = await h(p);
             return this._handleComplete(e.body), e.body;
         } catch (e) {
-            if (this._raiseEndpointErrors) throw new i.Hx(e);
+            if (this._raiseEndpointErrors) throw new A.Hx(e);
             this._handleError({
-                code: null == e || null == (c = e.body) ? void 0 : c.code,
+                code: null == e || null == (s = e.body) ? void 0 : s.code,
                 body: null == e ? void 0 : e.body
             });
         }
     }
-    constructor(e, t = 'POST', n) {
-        super(e, t, n);
+    constructor(e, t = 'POST', r) {
+        super(e, t, r);
     }
 }

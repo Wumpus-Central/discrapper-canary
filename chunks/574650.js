@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R }), n(539854), n(388685);
+n.d(t, { Z: () => A }), n(539854), n(388685);
 var r = n(255367);
 n(73800);
 var i = n(120356),
@@ -11,14 +11,14 @@ var i = n(120356),
     d = n(693546),
     _ = n(305325),
     E = n(246364),
-    I = n(983736),
-    O = n(937111),
-    T = n(981631),
-    p = n(176505),
-    N = n(388032),
-    S = n(246752),
+    O = n(983736),
+    I = n(937111),
+    p = n(981631),
+    T = n(176505),
+    S = n(388032),
+    N = n(246752),
     f = n(240211);
-function A(e) {
+function m(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,34 +43,34 @@ function A(e) {
     }
     return e;
 }
-let R = () => {
+let A = () => {
     var e, t;
     let i = (0, a.e7)([u.Z], () => u.Z.getGuildId(), []),
-        R = (0, a.e7)([s.Z], () => s.Z.getGuild(i), [i]),
-        m = (0, a.e7)([O.Z], () => (null != i ? O.Z.getRequest(i) : null), [i]),
-        C = (0, o.TH)(),
-        g = (null == (e = (0, o.LX)(C.pathname, T.Z5c.CHANNEL(null == R ? void 0 : R.id, p.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
-    if (null == R || !(0, I.Dc)(R) || g) return null;
-    let P = null != (t = null == m ? void 0 : m.applicationStatus) ? t : E.wB.STARTED,
+        A = (0, a.e7)([s.Z], () => s.Z.getGuild(i), [i]),
+        R = (0, a.e7)([I.Z], () => (null != i ? I.Z.getRequest(i) : null), [i]),
+        g = (0, o.TH)(),
+        C = (null == (e = (0, o.LX)(g.pathname, p.Z5c.CHANNEL(null == A ? void 0 : A.id, T.oC.GUILD_ONBOARDING))) ? void 0 : e.isExact) === !0;
+    if (null == A || !(0, O.Dc)(A) || C) return null;
+    let P = null != (t = null == R ? void 0 : R.applicationStatus) ? t : E.wB.STARTED,
         y = null,
-        D = null,
         b = null,
-        h = [S.notice, f.notice];
+        D = null,
+        h = [N.notice, f.notice];
     switch (P) {
         case E.wB.SUBMITTED:
-            (y = N.intl.string(N.t['5iLvS0'])),
-                (D = N.intl.string(N.t.mqtdmZ)),
-                (b = () => {
+            (y = S.intl.string(S.t['5iLvS0'])),
+                (b = S.intl.string(S.t.mqtdmZ)),
+                (D = () => {
                     (0, c.h7j)((e) => {
                         var t, n;
                         return (0, r.jsx)(
                             c.ConfirmModal,
-                            ((t = A(
+                            ((t = m(
                                 {
-                                    header: N.intl.string(N.t.aIz1oa),
-                                    confirmText: N.intl.string(N.t['cY+Ooa']),
-                                    cancelText: N.intl.string(N.t['ETE/oK']),
-                                    onConfirm: () => d.Z.removeGuildJoinRequest(R.id),
+                                    header: S.intl.string(S.t.aIz1oa),
+                                    confirmText: S.intl.string(S.t['cY+Ooa']),
+                                    cancelText: S.intl.string(S.t['ETE/oK']),
+                                    onConfirm: () => d.Z.removeGuildJoinRequest(A.id),
                                     confirmButtonColor: c.zxk.Colors.BRAND
                                 },
                                 e
@@ -79,7 +79,7 @@ let R = () => {
                                 {
                                     children: (0, r.jsx)(c.Text, {
                                         variant: 'text-md/normal',
-                                        children: N.intl.string(N.t['13tjTU'])
+                                        children: S.intl.string(S.t['13tjTU'])
                                     })
                                 }),
                             Object.getOwnPropertyDescriptors
@@ -100,38 +100,38 @@ let R = () => {
                 });
             break;
         case E.wB.REJECTED:
-            (y = N.intl.string(N.t.lk30cX)),
-                (D = N.intl.string(N.t['8RrsHh'])),
-                (b = () => {
+            (y = S.intl.string(S.t.lk30cX)),
+                (b = S.intl.string(S.t['8RrsHh'])),
+                (D = () => {
                     (0, c.ZDy)(async () => {
                         let { default: e } = await n.e('3378').then(n.bind(n, 76075));
-                        return (t) => (0, r.jsx)(e, A({ guildId: R.id }, t));
+                        return (t) => (0, r.jsx)(e, m({ guildId: A.id }, t));
                     });
                 }),
-                h.push(S.error);
+                h.push(N.error);
             break;
         default:
-            (y = N.intl.string(N.t.G5YKXF)),
-                (D = N.intl.string(N.t['r8/DT0'])),
-                (b = () => {
-                    (0, _.hk)(R.id);
+            (y = S.intl.string(S.t.G5YKXF)),
+                (b = S.intl.string(S.t['r8/DT0'])),
+                (D = () => {
+                    (0, _.hk)(A.id);
                 });
     }
     return (0, r.jsxs)('div', {
         className: l()(...h),
         children: [
             (0, r.jsx)(c.Text, {
-                className: S.header,
+                className: N.header,
                 variant: 'text-sm/normal',
                 children: y
             }),
             (0, r.jsx)(c.zxk, {
-                className: S.button,
+                className: N.button,
                 look: c.zxk.Looks.OUTLINED,
                 color: c.zxk.Colors.WHITE,
                 size: c.zxk.Sizes.NONE,
-                onClick: b,
-                children: D
+                onClick: D,
+                children: b
             })
         ]
     });

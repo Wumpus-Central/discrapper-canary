@@ -3,7 +3,7 @@ var i,
     r = n(442837),
     l = n(570140),
     s = n(656063),
-    a = n(814443),
+    a = n(752048),
     o = n(158776),
     c = n(594174),
     u = n(981631);
@@ -61,7 +61,7 @@ function N(e) {
     let t = !1;
     return (
         e.forEach((e) => {
-            t = !1 !== y(e) || t;
+            t = !1 !== h(e) || t;
         }),
         t
     );
@@ -72,7 +72,7 @@ function m(e) {
     let n = t.gameId;
     return null != E[n] && ((E = f({}, E)), delete E[n][e], 0 === Object.values(E[n]).length && delete E[n]), (O = f({}, O)), delete O[e], !0;
 }
-function y(e) {
+function h(e) {
     let { user: t, activities: n } = e;
     if (null == t) return !1;
     let i = n.filter((e) => e.type !== u.IIU.CUSTOM_STATUS);
@@ -107,11 +107,11 @@ function y(e) {
         r
     );
 }
-function S() {
+function y() {
     let e,
         t = !1;
     return (
-        a.Z.needsRefresh() ||
+        a.Z.shouldFetch() ||
             g ||
             ((E = {}),
             (O = {}),
@@ -120,19 +120,19 @@ function S() {
                 let n = c.default.getUser(t);
                 null != n &&
                     (e =
-                        y({
+                        h({
                             user: n,
                             activities: o.Z.getActivities(t)
                         }) || e);
             }),
             (t = e)),
-        (g = !a.Z.needsRefresh()),
+        (g = !a.Z.shouldFetch()),
         t
     );
 }
-class h extends (i = r.ZP.Store) {
+class S extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(a.Z), this.syncWith([a.Z], S);
+        this.waitFor(a.Z), this.syncWith([a.Z], y);
     }
     get games() {
         return E;
@@ -150,8 +150,8 @@ class h extends (i = r.ZP.Store) {
         return O[e];
     }
 }
-d(h, 'displayName', 'NowPlayingStore');
-let v = new h(l.Z, {
+d(S, 'displayName', 'NowPlayingStore');
+let v = new S(l.Z, {
     CONNECTION_OPEN: function () {
         (E = {}), (O = {});
     },
@@ -171,7 +171,7 @@ let v = new h(l.Z, {
     },
     PRESENCE_UPDATES: function (e) {
         let { updates: t } = e;
-        return t.map((e) => y(e)).some((e) => e);
+        return t.map((e) => h(e)).some((e) => e);
     },
     PRESENCES_REPLACE: function (e) {
         let { presences: t } = e;

@@ -15,8 +15,8 @@ var i = r(392711),
     g = r(678135),
     h = r(643879),
     b = r(350327),
-    j = r(687158),
-    x = r(706454),
+    x = r(687158),
+    j = r(706454),
     y = r(695346),
     O = r(265159),
     P = r(25990),
@@ -55,7 +55,7 @@ let S = (e) => {
             g = (0, a.P)('ProfileEffectDescription'),
             h = (0, l.e7)([v.default], () => v.default.getCurrentUser()),
             b = (0, l.e7)([s.Z], () => s.Z.getProduct(null == r ? void 0 : r.skuId)),
-            j = (0, l.e7)([x.default], () => x.default.locale),
+            x = (0, l.e7)([j.default], () => j.default.locale),
             y = E.ZP.canUseCollectibles(h),
             O = (0, c.qS)(p),
             P = (0, c.G1)(f),
@@ -99,7 +99,7 @@ let S = (e) => {
                                   className: w.effectPurchasedAt,
                                   children: [
                                       C.intl.format(C.t.gW9R4O, {
-                                          date: p.purchasedAt.toLocaleDateString(j, {
+                                          date: p.purchasedAt.toLocaleDateString(x, {
                                               month: 'long',
                                               year: 'numeric'
                                           })
@@ -109,7 +109,7 @@ let S = (e) => {
                                               children: [
                                                   (0, n.jsx)('br', {}),
                                                   C.intl.format(C.t.eZSTa2, {
-                                                      date: p.expiresAt.toLocaleDateString(j, {
+                                                      date: p.expiresAt.toLocaleDateString(x, {
                                                           minute: 'numeric',
                                                           hour: 'numeric',
                                                           day: 'numeric',
@@ -139,7 +139,7 @@ let S = (e) => {
         let { user: o, pendingProfileEffectRecord: s, canApplySelectedChange: c, product: a, purchase: u, guild: d } = e,
             {
                 pendingGlobalName: m,
-                pendingNickname: x,
+                pendingNickname: j,
                 pendingPronouns: v,
                 pendingBio: _,
                 pendingBanner: C,
@@ -159,13 +159,13 @@ let S = (e) => {
             ),
             A = E.ZP.isPremium(o),
             T = E.ZP.canUsePremiumProfileCustomization(o),
-            B = (0, j.ZP)(o.id),
+            B = (0, x.ZP)(o.id),
             G = !!(null == B ? void 0 : B.getPreviewBio(_).value),
             R = {
                 user: o,
                 guild: d,
                 pendingGlobalName: m,
-                pendingNickname: x,
+                pendingNickname: j,
                 pendingPronouns: v,
                 pendingBio: y.dN.useSetting() && null != _ ? p.ZP.parse(void 0, _).content : _,
                 pendingBanner: C,

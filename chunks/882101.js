@@ -38,7 +38,7 @@ let f = (e) => {
         f = (0, c.Z)(),
         [p] = s._T(t),
         [g] = s.d9(t, f),
-        [v] = s.H9(t);
+        [h] = s.H9(t);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(_, { listingName: p }),
@@ -52,7 +52,7 @@ let f = (e) => {
                 variant: 'heading-xl/semibold',
                 className: u.tierPrice,
                 tag: 'div',
-                children: (0, o.T4)(v.price, v.currency)
+                children: (0, o.T4)(h.price, h.currency)
             }),
             (0, r.jsx)(i.Text, {
                 variant: 'text-xs/normal',
@@ -60,8 +60,8 @@ let f = (e) => {
                 className: u.tierPeriod,
                 children: d.intl.format(d.t.isLGyc, {
                     period: (0, l.JE)({
-                        interval: v.interval,
-                        interval_count: v.interval_count
+                        interval: h.interval,
+                        interval_count: h.interval_count
                     })
                 })
             })

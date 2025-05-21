@@ -1,10 +1,10 @@
-n.d(t, { H: () => l }), n(388685);
+n.d(t, { H: () => i }), n(388685);
 var r = n(73800),
-    i = n(481060);
-function l() {
+    l = n(481060);
+function i() {
     let [e, t] = r.useState(!0);
     return {
-        transitions: (0, i.Yzy)(e, {
+        transitions: (0, l.Yzy)(e, {
             keys: (e) => (e ? 'shown' : 'hidden'),
             config: a,
             from: { opacity: 0 },

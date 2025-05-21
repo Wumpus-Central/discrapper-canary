@@ -153,7 +153,7 @@ let g = (e, t) => m({ AvatarImage1: e[0] }, null != e[1] && { AvatarImage2: e[1]
                 8
             ) === s.vP.Failure &&
                 e.drawPath(
-                    a.Cv,
+                    a.C,
                     {
                         x: _.sB,
                         y: _.sB

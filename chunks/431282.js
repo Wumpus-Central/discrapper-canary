@@ -91,7 +91,7 @@ function h(e) {
                 v(e === t);
             });
     }, [t, j, T]);
-    let I = (e) =>
+    let N = (e) =>
         (0, i.jsxs)(
             d.kF,
             m(g({}, e, C, _), {
@@ -139,9 +139,9 @@ function h(e) {
               renderPopout: b,
               shouldShow: S,
               onRequestClose: () => v(!0),
-              children: I
+              children: N
           })
-        : I();
+        : N();
 }
 function f(e) {
     let { id: t, children: n } = e,

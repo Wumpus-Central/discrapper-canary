@@ -106,7 +106,7 @@ function g(e) {
     var { user: t, guildId: n, channelId: u, themeType: f, onClose: h, children: g } = e,
         E = p(e, ['user', 'guildId', 'channelId', 'themeType', 'onClose', 'children']);
     let { interactionType: b, interactionSource: y, resetInteraction: O, interactionSourceId: v, interactionPopoutTargetRef: I } = (0, o.Xo)(),
-        S = f === c.lY.MODAL ? (0, a.z)(t.id, n) : void 0,
+        S = [c.lY.MODAL, c.lY.MODAL_V2].includes(f) ? (0, a.z)(t.id, n) : void 0,
         T = y === E.sourceType && b === c.P.REACT,
         A = y === E.sourceType && b === c.P.REPLY,
         N = (T || A) && v === E.sourceId;

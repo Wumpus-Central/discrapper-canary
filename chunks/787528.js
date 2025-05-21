@@ -1,67 +1,65 @@
 n.d(t, {
-    J: () => S,
-    u: () => I
+    J: () => I,
+    u: () => v
 });
-var r = n(848572),
-    i = n(586502),
-    o = n(474936),
-    a = n(749472),
-    s = n(860691),
-    l = n(110149),
-    c = n(64649),
-    u = n(166870),
-    d = n(79914),
-    f = n(634071),
-    _ = n(557821),
-    p = n(379060),
-    h = n(904344),
-    m = n(871597),
-    g = n(259869),
-    E = n(993341),
-    b = n(289248),
-    y = n(340113),
-    O = n(438802);
-let v = {
-        [o.VU.PREMIUM_TENURE_1_MONTH]: {
-            standard: a,
+var r = n(586502),
+    i = n(474936),
+    o = n(749472),
+    a = n(860691),
+    s = n(110149),
+    l = n(64649),
+    c = n(166870),
+    u = n(79914),
+    d = n(634071),
+    f = n(557821),
+    _ = n(379060),
+    p = n(904344),
+    h = n(871597),
+    m = n(259869),
+    g = n(993341),
+    E = n(289248),
+    b = n(340113),
+    y = n(438802);
+let O = {
+        [i.VU.PREMIUM_TENURE_1_MONTH]: {
+            standard: o,
+            ambient: _.Z
+        },
+        [i.VU.PREMIUM_TENURE_3_MONTH]: {
+            standard: f,
             ambient: p.Z
         },
-        [o.VU.PREMIUM_TENURE_3_MONTH]: {
-            standard: _,
+        [i.VU.PREMIUM_TENURE_6_MONTH]: {
+            standard: l,
             ambient: h.Z
         },
-        [o.VU.PREMIUM_TENURE_6_MONTH]: {
-            standard: c,
+        [i.VU.PREMIUM_TENURE_12_MONTH]: {
+            standard: u,
             ambient: m.Z
         },
-        [o.VU.PREMIUM_TENURE_12_MONTH]: {
-            standard: d,
+        [i.VU.PREMIUM_TENURE_24_MONTH]: {
+            standard: a,
             ambient: g.Z
         },
-        [o.VU.PREMIUM_TENURE_24_MONTH]: {
+        [i.VU.PREMIUM_TENURE_36_MONTH]: {
             standard: s,
             ambient: E.Z
         },
-        [o.VU.PREMIUM_TENURE_36_MONTH]: {
-            standard: l,
+        [i.VU.PREMIUM_TENURE_60_MONTH]: {
+            standard: d,
             ambient: b.Z
         },
-        [o.VU.PREMIUM_TENURE_60_MONTH]: {
-            standard: f,
+        [i.VU.PREMIUM_TENURE_72_MONTH]: {
+            standard: c,
             ambient: y.Z
-        },
-        [o.VU.PREMIUM_TENURE_72_MONTH]: {
-            standard: u,
-            ambient: O.Z
         }
     },
-    I = () => {
-        let e = (0, r.Rw)(),
-            t = (0, i.Z)();
-        return null != e ? S(e.id, { ambient: t }) : null;
+    v = (e) => {
+        let t = (0, r.Z)();
+        return null != e ? I(e, { ambient: t }) : null;
     };
-function S(e) {
+function I(e) {
     let { ambient: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        n = v[e];
+        n = O[e];
     return t ? n.ambient : n.standard;
 }

@@ -23,7 +23,7 @@ let m = (e, t) =>
         var e;
         let t = (0, c.Rw)(),
             n = null != (e = (0, c.GG)()) ? e : new Date(),
-            r = (0, d.u)();
+            r = (0, d.u)(null == t ? void 0 : t.id);
         if (null == t || null == r) return null;
         let { id: p, nameUnformatted: h, tenureReqNumMonths: f, hasWideArt: b } = t,
             _ = u.intl.string(h),

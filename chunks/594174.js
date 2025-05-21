@@ -144,7 +144,12 @@ function R(e, t) {
             let r = e.resolved.users[n];
             A(r) && N(r, t);
         }
-    (null == (s = e.interaction_metadata) ? void 0 : s.user) != null && A(e.interaction_metadata.user) && N(e.interaction_metadata.user, t);
+    (null == (s = e.interaction_metadata) ? void 0 : s.user) != null && A(e.interaction_metadata.user) && N(e.interaction_metadata.user, t),
+        null != e.message_snapshots &&
+            e.message_snapshots.forEach((e) => {
+                var n, r, i, o;
+                (null == (r = e.moderator_report) || null == (n = r.reported_member) ? void 0 : n.user) != null && N(e.moderator_report.reported_member.user, t), (null == (o = e.moderator_report) || null == (i = o.reporting_member) ? void 0 : i.user) != null && N(e.moderator_report.reporting_member.user, t);
+            });
 }
 function w(e) {
     let { user: t, users: n, guilds: r } = e;

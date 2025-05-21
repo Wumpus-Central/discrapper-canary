@@ -1,12 +1,12 @@
 n.d(t, {
     Z: () => T,
-    _: () => N
+    _: () => S
 }),
     n(388685);
 var r = n(255367),
-    i = n(73800),
-    l = n(512722),
-    a = n.n(l),
+    l = n(73800),
+    i = n(512722),
+    a = n.n(i),
     s = n(366594),
     o = n(442837),
     c = n(481060),
@@ -35,13 +35,13 @@ let y = {
         scale: 1,
         opacity: 1
     },
-    S = {
+    N = {
         tension: 2400,
         friction: 52
     };
-function N(e) {
-    let { channelId: t, onClick: n, onClose: l, onMouseEnter: s } = e,
-        u = i.useRef(null),
+function S(e) {
+    let { channelId: t, onClick: n, onClose: i, onMouseEnter: s } = e,
+        u = l.useRef(null),
         m = (0, o.e7)([f.Z], () => f.Z.getChannel(t), [t]);
     return (
         a()(null != m, 'Forum Channel is null'),
@@ -62,7 +62,7 @@ function N(e) {
                     className: _.fileInput,
                     ref: u,
                     onChange: (e) => {
-                        null == l || l(), (0, j.d)(e.currentTarget.files, m, x.d.FirstThreadMessage, { requireConfirm: !0 }), b.S.dispatch(C.CkL.TEXTAREA_FOCUS), (e.currentTarget.value = null);
+                        null == i || i(), (0, j.d)(e.currentTarget.files, m, x.d.FirstThreadMessage, { requireConfirm: !0 }), b.S.dispatch(C.CkL.TEXTAREA_FOCUS), (e.currentTarget.value = null);
                     },
                     multiple: m.rateLimitPerUser <= 0,
                     tabIndex: -1,
@@ -81,13 +81,13 @@ function N(e) {
 }
 function P(e) {
     let { channelId: t, closePopout: n } = e,
-        [l, a] = i.useState(!1),
-        { reducedMotion: d } = i.useContext(c.Sfi),
+        [i, a] = l.useState(!1),
+        { reducedMotion: d } = l.useContext(c.Sfi),
         f = (0, c.q_F)(
             {
                 from: d.enabled ? O : y,
                 to: w,
-                config: S
+                config: N
             },
             'animate-always'
         ),
@@ -96,7 +96,7 @@ function P(e) {
     return (0, r.jsx)(s.animated.div, {
         className: _.popoutContainer,
         onMouseLeave: () => {
-            l || n();
+            i || n();
         },
         style: f,
         children: (0, r.jsxs)(c.zJl, {
@@ -105,7 +105,7 @@ function P(e) {
             paddingFix: !1,
             fade: !0,
             children: [
-                (0, r.jsx)(N, {
+                (0, r.jsx)(S, {
                     channelId: t,
                     onClick: () => {
                         a(!0);
@@ -137,15 +137,15 @@ function P(e) {
 }
 function T(e) {
     let { channelId: t } = e,
-        [n, l] = i.useState(!1),
+        [n, i] = l.useState(!1),
         a = (0, o.e7)([p.Z], () => p.Z.getUploads(t, m.Ie.CREATE_FORUM_POST.drafts.type)),
         s = a.length,
         c = s > 0;
-    i.useEffect(() => {
-        n && !c && l(!1);
+    l.useEffect(() => {
+        n && !c && i(!1);
     }, [n, c]);
     let d = () => {
-        c && l(!0);
+        c && i(!0);
     };
     return (0, r.jsxs)('div', {
         className: _.container,
@@ -165,7 +165,7 @@ function T(e) {
                               })
                       ]
                   })
-                : (0, r.jsx)(N, {
+                : (0, r.jsx)(S, {
                       onMouseEnter: d,
                       channelId: t
                   }),
@@ -173,7 +173,7 @@ function T(e) {
                 (0, r.jsx)(P, {
                     channelId: t,
                     closePopout: () => {
-                        l(!1);
+                        i(!1);
                     }
                 })
         ]

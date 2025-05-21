@@ -5,10 +5,10 @@ n.d(t, {
 var i,
     r = n(255367),
     o = n(73800),
-    a = n(120356),
-    s = n.n(a),
-    l = n(500923),
-    c = n.n(l),
+    l = n(120356),
+    a = n.n(l),
+    s = n(500923),
+    c = n.n(s),
     u = n(570140),
     d = n(960020),
     h = n(831244),
@@ -24,20 +24,20 @@ let b = async (e) => {
     return (r.assets[0].p = n.url), r;
 };
 function j(e) {
-    let { className: t, effect: n, onComplete: i, emojiSize: a = 20 } = e,
-        l = o.useRef(null),
-        h = a * p.Vz,
-        m = (h + a) / 2;
+    let { className: t, effect: n, onComplete: i, emojiSize: l = 20 } = e,
+        s = o.useRef(null),
+        h = l * p.Vz,
+        m = (h + l) / 2;
     return (
         o.useEffect(() => {
             let e;
             if (null != n)
                 return (
                     !(async function () {
-                        if (null != l.current) {
+                        if (null != s.current) {
                             let t = await b({ effect: n });
                             (e = c().loadAnimation({
-                                container: l.current,
+                                container: s.current,
                                 renderer: 'svg',
                                 loop: !1,
                                 autoplay: !0,
@@ -62,17 +62,17 @@ function j(e) {
                         null != e && e.destroy();
                     }
                 );
-        }, [i, n, a]),
+        }, [i, n, l]),
         (0, r.jsx)('div', {
             className: f.effectsWrapper,
             children: (0, r.jsx)('div', {
-                className: s()(f.effect, t),
+                className: a()(f.effect, t),
                 style: {
                     transform: 'translateY('.concat(m, 'px)'),
                     height: h,
                     width: h
                 },
-                ref: l
+                ref: s
             })
         })
     );

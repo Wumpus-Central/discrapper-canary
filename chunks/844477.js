@@ -1,16 +1,29 @@
-n.d(t, { z: () => h });
+n.d(t, { z: () => v });
 var r = n(255367),
     i = n(73800),
-    a = n(120356),
-    o = n.n(a),
-    l = n(186325),
-    s = n(84735),
+    o = n(120356),
+    a = n.n(o),
+    s = n(186325),
+    l = n(84735),
     c = n(836459),
-    d = n(993365),
-    u = n(511857),
-    _ = n(410030),
-    m = n(994971);
-function f(e) {
+    u = n(993365),
+    d = n(511857),
+    f = n(410030),
+    _ = n(994971);
+function p(e, t, n) {
+    return (
+        t in e
+            ? Object.defineProperty(e, t, {
+                  value: n,
+                  enumerable: !0,
+                  configurable: !0,
+                  writable: !0
+              })
+            : (e[t] = n),
+        e
+    );
+}
+function h(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -21,152 +34,151 @@ function f(e) {
                 })
             )),
             r.forEach(function (t) {
-                var r;
-                (r = n[t]),
-                    t in e
-                        ? Object.defineProperty(e, t, {
-                              value: r,
-                              enumerable: !0,
-                              configurable: !0,
-                              writable: !0
-                          })
-                        : (e[t] = r);
+                p(e, t, n[t]);
             });
     }
     return e;
 }
-function p(e, t) {
+function m(e, t) {
+    var n = Object.keys(e);
+    if (Object.getOwnPropertySymbols) {
+        var r = Object.getOwnPropertySymbols(e);
+        t &&
+            (r = r.filter(function (t) {
+                return Object.getOwnPropertyDescriptor(e, t).enumerable;
+            })),
+            n.push.apply(n, r);
+    }
+    return n;
+}
+function g(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : (function (e, t) {
-                  var n = Object.keys(e);
-                  if (Object.getOwnPropertySymbols) {
-                      var r = Object.getOwnPropertySymbols(e);
-                      n.push.apply(n, r);
-                  }
-                  return n;
-              })(Object(t)).forEach(function (n) {
+            : m(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-let g = {
+function E(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = b(e, t);
+    if (Object.getOwnPropertySymbols) {
+        var o = Object.getOwnPropertySymbols(e);
+        for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+    }
+    return i;
+}
+function b(e, t) {
+    if (null == e) return {};
+    var n,
+        r,
+        i = {},
+        o = Object.keys(e);
+    for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
+    return i;
+}
+let y = {
         xs: 'text-sm/semibold',
         sm: 'text-sm/semibold',
         md: 'text-md/semibold',
         lg: 'text-lg/semibold'
     },
-    v = {
+    O = {
         xs: 'xs',
         sm: 'xs',
         md: 'sm',
         lg: 'md'
     };
-function h(e) {
-    var { role: t = 'button', variant: n = 'primary', size: a = 'md', text: c, icon: h, iconPosition: y = 'start', iconOpticalOffsetMargin: x = 0, focusProps: j } = e,
-        C = (function (e, t) {
-            if (null == e) return {};
-            var n,
-                r,
-                i = (function (e, t) {
-                    if (null == e) return {};
-                    var n,
-                        r,
-                        i = {},
-                        a = Object.keys(e);
-                    for (r = 0; r < a.length; r++) (n = a[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                    return i;
-                })(e, t);
-            if (Object.getOwnPropertySymbols) {
-                var a = Object.getOwnPropertySymbols(e);
-                for (r = 0; r < a.length; r++) (n = a[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
-            }
-            return i;
-        })(e, ['role', 'variant', 'size', 'text', 'icon', 'iconPosition', 'iconOpticalOffsetMargin', 'focusProps']);
-    function I() {
-        if (null == h) return;
-        let e = (function () {
-            if (0 === x) return {};
-            switch (y) {
-                case 'start':
-                    return { marginLeft: x };
-                case 'end':
-                    return { marginRight: x };
-            }
-            return {};
-        })();
-        return (0, r.jsx)(h, {
+function v(e) {
+    var { role: t = 'button', variant: n = 'primary', size: o = 'md', text: c, icon: p, iconPosition: m = 'start', iconOpticalOffsetMargin: b = 0, focusProps: v } = e,
+        S = E(e, ['role', 'variant', 'size', 'text', 'icon', 'iconPosition', 'iconOpticalOffsetMargin', 'focusProps']);
+    function T() {
+        if (0 === b) return {};
+        switch (m) {
+            case 'start':
+                return { marginLeft: b };
+            case 'end':
+                return { marginRight: b };
+        }
+        return {};
+    }
+    function A() {
+        if (null == p) return;
+        let e = T();
+        return (0, r.jsx)(p, {
             color: 'currentColor',
             style: e,
-            size: v[a]
+            size: O[o]
         });
     }
-    let O = i.useRef(null),
-        E = 'expressive' === n,
-        P = i.useContext(l.S),
-        N = (0, u.a)((0, _.ZP)()),
-        S = (0, r.jsx)(
-            s.t,
-            p(f({}, j), {
+    let N = i.useRef(null),
+        C = 'expressive' === n,
+        P = i.useContext(s.S),
+        R = (0, d.a)((0, f.ZP)()),
+        w = (0, r.jsx)(
+            l.t,
+            g(h({}, v), {
                 children: (0, r.jsxs)(
                     'button',
-                    p(
-                        f(
+                    g(
+                        h(
                             {
                                 role: t,
-                                className: o()(m.button, m[a], m[n]),
-                                ref: O
+                                className: a()(_.button, _[o], _[n]),
+                                ref: N
                             },
-                            C
+                            S
                         ),
                         {
                             children: [
-                                E &&
-                                    (0, r.jsx)(b, {
+                                C &&
+                                    (0, r.jsx)(I, {
                                         hasReducedMotion: P.reducedMotion.enabled,
-                                        buttonRef: O,
-                                        isLightMode: N
+                                        buttonRef: N,
+                                        isLightMode: R
                                     }),
-                                null != h && 'start' === y && (0, r.jsx)(I, {}),
-                                (0, r.jsx)(d.x, {
+                                null != p && 'start' === m && (0, r.jsx)(A, {}),
+                                (0, r.jsx)(u.x, {
                                     tag: 'span',
-                                    variant: g[a],
+                                    variant: y[o],
                                     color: 'none',
-                                    className: m.text,
+                                    className: _.text,
                                     lineClamp: 1,
                                     children: c
                                 }),
-                                null != h && 'end' === y && (0, r.jsx)(I, {})
+                                null != p && 'end' === m && (0, r.jsx)(A, {})
                             ]
                         }
                     )
                 )
             })
         );
-    return E
+    return C
         ? (0, r.jsx)('div', {
-              className: m.expressiveWrapper,
-              children: S
+              className: _.expressiveWrapper,
+              children: w
           })
-        : S;
+        : w;
 }
-function b(e) {
-    let { hasReducedMotion: t, buttonRef: n, isLightMode: a } = e,
-        l = i.useRef(null);
+function I(e) {
+    let { hasReducedMotion: t, buttonRef: n, isLightMode: o } = e,
+        s = i.useRef(null);
     return (
         i.useEffect(() => {
             if (t) {
                 let e = n.current,
                     t = () => {
                         var e;
-                        null == (e = l.current) || e.play();
+                        null == (e = s.current) || e.play();
                     },
                     r = () => {
                         var e;
-                        null == (e = l.current) || e.pause();
+                        null == (e = s.current) || e.pause();
                     };
                 return (
                     null == e || e.addEventListener('mouseenter', t, !0),
@@ -180,20 +192,20 @@ function b(e) {
         (0, r.jsxs)(r.Fragment, {
             children: [
                 (0, r.jsx)(c.QD, {
-                    className: o()(m.expressiveRive, m.expressiveBackground),
+                    className: a()(_.expressiveRive, _.expressiveBackground),
                     eventTargetRef: n,
                     fit: 'layout',
                     artboard: 'BaseGlowRemapped',
-                    ref: l,
+                    ref: s,
                     withReducedMotion: 'short-loop'
                 }),
                 !t &&
                     (0, r.jsx)(c.QD, {
-                        className: o()(m.expressiveRive, m.expressiveHover),
+                        className: a()(_.expressiveRive, _.expressiveHover),
                         fit: 'layout',
-                        artboard: a ? 'HoverLightmode' : 'HoverDarkmode'
+                        artboard: o ? 'HoverLightmode' : 'HoverDarkmode'
                     }),
-                (0, r.jsx)('div', { className: o()(m.expressiveRive, m.expressiveFill) })
+                (0, r.jsx)('div', { className: a()(_.expressiveRive, _.expressiveFill) })
             ]
         })
     );

@@ -149,7 +149,8 @@ let M = (e) => {
                     sku_id: (0, S.Wz)(S.ZP.getSkuIdForPremiumType(P.p9.TIER_2)),
                     has_search_query: null != q && '' !== q,
                     is_animated: et
-                }
+                },
+                isEmojiPickerOverlay: !0
             });
     return J
         ? el()

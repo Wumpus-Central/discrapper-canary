@@ -1,6 +1,6 @@
 n.d(t, {
-    h: () => x,
-    x: () => j
+    h: () => j,
+    x: () => C
 });
 var r = n(255367);
 n(73800);
@@ -17,14 +17,14 @@ var i = n(120356),
     f = n(584825),
     p = n(570533),
     g = n(629262),
-    v = n(575460),
-    h = n(293810),
+    h = n(575460),
+    v = n(293810),
     b = n(388032),
     y = n(506222);
-let x = (e) => {
+let j = (e) => {
         let { onClose: t, listing: n, step: i, guildId: o } = e,
             s = (0, f.YB)(o),
-            u = (0, c.Z)(h.Xy),
+            u = (0, c.Z)(v.Xy),
             m = (() => {
                 var e;
                 if (u) return null;
@@ -68,7 +68,7 @@ let x = (e) => {
             ]
         });
     },
-    j = (e) => {
+    C = (e) => {
         let { onClose: t, listing: n, guildId: i } = e,
             a = (0, o.e7)([u.Z], () => u.Z.getGuild(i), [i]),
             c = (0, p.Z)(i).filter((e) => e.roles.includes(n.role_id)),
@@ -102,7 +102,7 @@ let x = (e) => {
                                 className: y.confirmationBenefits,
                                 children: _.map((e) =>
                                     (0, r.jsx)(
-                                        v.Z,
+                                        h.Z,
                                         {
                                             benefit: e,
                                             guildId: i,

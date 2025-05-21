@@ -113,7 +113,7 @@ let u = (e, t, n) => c({ AvatarImage: e }, null != t && { MediaImage: t }, null 
                     )),
                     n === i.vP.Failure &&
                         e.drawPath(
-                            r.Cv,
+                            r.C,
                             {
                                 x: s.sB,
                                 y: s.sB

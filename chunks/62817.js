@@ -1,9 +1,9 @@
-n.d(t, { Z: () => L }), n(35282), n(388685), n(358797);
-var r,
-    i = n(442837),
+n.d(t, { Z: () => O }), n(35282), n(388685), n(358797);
+var i,
+    r = n(442837),
     o = n(570140),
-    a = n(375954);
-function s(e, t, n) {
+    l = n(375954);
+function a(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -16,150 +16,130 @@ function s(e, t, n) {
         e
     );
 }
-function l(e) {
+function s(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
-            r = Object.keys(n);
+            i = Object.keys(n);
         'function' == typeof Object.getOwnPropertySymbols &&
-            (r = r.concat(
+            (i = i.concat(
                 Object.getOwnPropertySymbols(n).filter(function (e) {
                     return Object.getOwnPropertyDescriptor(n, e).enumerable;
                 })
             )),
-            r.forEach(function (t) {
-                s(e, t, n[t]);
+            i.forEach(function (t) {
+                a(e, t, n[t]);
             });
     }
     return e;
 }
-function c(e, t) {
-    var n = Object.keys(e);
-    if (Object.getOwnPropertySymbols) {
-        var r = Object.getOwnPropertySymbols(e);
-        t &&
-            (r = r.filter(function (t) {
-                return Object.getOwnPropertyDescriptor(e, t).enumerable;
-            })),
-            n.push.apply(n, r);
-    }
-    return n;
-}
-function u(e, t) {
-    return (
-        (t = null != t ? t : {}),
-        Object.getOwnPropertyDescriptors
-            ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : c(Object(t)).forEach(function (n) {
-                  Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
-              }),
-        e
-    );
-}
-let d = Object.freeze([]),
-    f = {},
-    _ = {},
-    p = {},
+let c = Object.freeze([]),
+    u = {},
+    d = {},
     h = {},
+    p = {},
     m = {};
-function g(e, t) {}
-function E() {
-    m = {};
+function f(e, t) {}
+function g(e, t) {
+    let n = u[e];
+    return null != n && ((u[e] = n.filter((e) => e.id !== t)), delete d[t], delete h[t], n.length !== u[e].length);
 }
 function b(e, t) {
-    let n = f[e];
-    return null != n && ((f[e] = n.filter((e) => e.id !== t)), delete _[t], delete p[t], n.length !== f[e].length);
-}
-function y() {
-    E();
-}
-function O() {
-    E();
-}
-function v(e) {
-    var t;
-    let { channelId: n, file: r, uploader: i, message: o } = e;
-    if (i._aborted || i._errored) return;
-    let a = null != (t = f[n]) ? t : d;
-    (_[r.id] = i), (f[n] = [...a, r]), (p[r.id] = o);
-    let { items: s } = r;
-    null != s && (h[o.id] = u(l({}, r), { items: s })), o.nonce;
-}
-function I(e) {
-    let { channelId: t, file: n } = e;
-    T(t, n);
-}
-function S(e) {
-    let { channelId: t, file: n } = e;
-    T(t, n);
-}
-function T(e, t) {
-    let n = f[e];
+    let n = u[e];
     if (null == n) return !1;
-    f[e] = n.map((e) => (e.id === t.id ? l({}, e, t) : e));
-    let r = p[t.id];
-    null != r && null != h[r.id] && (h[r.id] = l({}, h[r.id], t));
+    u[e] = n.map((e) => (e.id === t.id ? s({}, e, t) : e));
+    let i = h[t.id];
+    null != i && null != p[i.id] && (p[i.id] = s({}, p[i.id], t));
 }
-function A(e) {
-    let { channelId: t, file: n } = e;
-    return b(t, n.id);
-}
-function N(e) {
-    let { channelId: t, file: n } = e;
-    return b(t, n.id);
-}
-function C(e) {
-    let { file: t } = e,
-        n = _[t.id];
-    if (null == n) return !1;
-    setImmediate(() => {
-        var e;
-        return null == (e = n.cancel) ? void 0 : e.call(n);
-    });
-}
-function P(e) {
-    let { file: t, itemId: n } = e,
-        r = _[t.id];
-    if (null == r) return !1;
-    setImmediate(() => r.cancelItem(n));
-}
-function R(e) {
-    let { channelId: t, file: n } = e,
-        r = p[n.id];
-    null != r && r.nonce, T(t, n);
-}
-function w(e) {
-    let { file: t, messageId: n } = e;
-    h[n] = t;
-}
-class D extends (r = i.ZP.Store) {
+class j extends (i = r.ZP.Store) {
     initialize() {
-        this.waitFor(a.Z);
+        this.waitFor(l.Z);
     }
     getFiles(e) {
         var t;
-        return null != (t = f[e]) ? t : d;
+        return null != (t = u[e]) ? t : c;
     }
     getMessageForFile(e) {
-        return p[e];
+        return h[e];
     }
     getUploaderFileForMessageId(e) {
-        return h[e];
+        return p[e];
     }
     getUploadAttachments(e) {
         if (null != e) return m[e];
     }
 }
-s(D, 'displayName', 'UploadStore');
-let L = new D(o.Z, {
-    CONNECTION_OPEN: y,
-    LOGOUT: O,
-    UPLOAD_START: v,
-    UPLOAD_COMPRESSION_PROGRESS: S,
-    UPLOAD_PROGRESS: I,
-    UPLOAD_COMPLETE: A,
-    UPLOAD_FAIL: N,
-    UPLOAD_CANCEL_REQUEST: C,
-    UPLOAD_ITEM_CANCEL_REQUEST: P,
-    UPLOAD_FILE_UPDATE: R,
-    UPLOAD_RESTORE_FAILED_UPLOAD: w
+a(j, 'displayName', 'UploadStore');
+let O = new j(o.Z, {
+    CONNECTION_OPEN: function () {
+        m = {};
+    },
+    LOGOUT: function () {
+        m = {};
+    },
+    UPLOAD_START: function (e) {
+        var t, n, i;
+        let { channelId: r, file: o, uploader: l, message: a } = e;
+        if (l._aborted || l._errored) return;
+        let m = null != (t = u[r]) ? t : c;
+        (d[o.id] = l), (u[r] = [...m, o]), (h[o.id] = a);
+        let { items: f } = o;
+        null != f &&
+            (p[a.id] =
+                ((n = s({}, o)),
+                (i = i = { items: f }),
+                Object.getOwnPropertyDescriptors
+                    ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(i))
+                    : (function (e, t) {
+                          var n = Object.keys(e);
+                          if (Object.getOwnPropertySymbols) {
+                              var i = Object.getOwnPropertySymbols(e);
+                              n.push.apply(n, i);
+                          }
+                          return n;
+                      })(Object(i)).forEach(function (e) {
+                          Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(i, e));
+                      }),
+                n)),
+            a.nonce;
+    },
+    UPLOAD_COMPRESSION_PROGRESS: function (e) {
+        let { channelId: t, file: n } = e;
+        b(t, n);
+    },
+    UPLOAD_PROGRESS: function (e) {
+        let { channelId: t, file: n } = e;
+        b(t, n);
+    },
+    UPLOAD_COMPLETE: function (e) {
+        let { channelId: t, file: n } = e;
+        return g(t, n.id);
+    },
+    UPLOAD_FAIL: function (e) {
+        let { channelId: t, file: n } = e;
+        return g(t, n.id);
+    },
+    UPLOAD_CANCEL_REQUEST: function (e) {
+        let { file: t } = e,
+            n = d[t.id];
+        if (null == n) return !1;
+        setImmediate(() => {
+            var e;
+            return null == (e = n.cancel) ? void 0 : e.call(n);
+        });
+    },
+    UPLOAD_ITEM_CANCEL_REQUEST: function (e) {
+        let { file: t, itemId: n } = e,
+            i = d[t.id];
+        if (null == i) return !1;
+        setImmediate(() => i.cancelItem(n));
+    },
+    UPLOAD_FILE_UPDATE: function (e) {
+        let { channelId: t, file: n } = e,
+            i = h[n.id];
+        null != i && i.nonce, b(t, n);
+    },
+    UPLOAD_RESTORE_FAILED_UPLOAD: function (e) {
+        let { file: t, messageId: n } = e;
+        p[n] = t;
+    }
 });

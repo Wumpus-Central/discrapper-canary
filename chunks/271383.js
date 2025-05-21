@@ -329,9 +329,14 @@ function ed(e) {
     let { guildId: t, threads: n } = e;
     return e_(
         t,
-        Object.values(n)
-            .map((e) => e.owner)
-            .filter(E.lm)
+        Object.values(n).reduce((e, t) => {
+            if ((null != t.owner && e.push(t.owner), null != t.first_message.message_snapshots)) {
+                var n, r;
+                let i = t.first_message.message_snapshots[0];
+                (null == (n = i.moderator_report) ? void 0 : n.reported_member) != null && e.push(i.moderator_report.reported_member), (null == (r = i.moderator_report) ? void 0 : r.reporting_member) != null && e.push(i.moderator_report.reporting_member);
+            }
+            return e;
+        }, [])
     );
 }
 function ef(e) {

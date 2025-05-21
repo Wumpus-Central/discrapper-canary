@@ -13,7 +13,7 @@ var n,
 function c(e) {
     let { transitionState: t, onClose: r, title: n, body: s, cta: c, closeLabel: d, onConfirm: u, iconVariant: g = 'warning' } = e,
         [f, p] = a.useState(!1),
-        m = async () => {
+        h = async () => {
             p(!0);
             try {
                 await u(), r();
@@ -21,12 +21,12 @@ function c(e) {
                 p(!1);
             }
         },
-        h = null != n ? n : o.intl.string(o.t.D94rwc);
+        m = null != n ? n : o.intl.string(o.t.D94rwc);
     return (0, A.jsxs)(l.Y0X, {
         className: i.__invalid_container,
         size: l.CgR.DYNAMIC,
         transitionState: t,
-        'aria-label': h,
+        'aria-label': m,
         children: [
             (0, A.jsxs)(l.hzk, {
                 className: i.content,
@@ -55,7 +55,7 @@ function c(e) {
                             (0, A.jsx)(l.X6q, {
                                 variant: 'heading-xl/semibold',
                                 color: 'header-primary',
-                                children: h
+                                children: m
                             })
                         ]
                     }),
@@ -72,7 +72,7 @@ function c(e) {
                 children: [
                     (0, A.jsx)(l.zxk, {
                         color: l.zxk.Colors.BRAND,
-                        onClick: m,
+                        onClick: h,
                         submitting: f,
                         children: c
                     }),

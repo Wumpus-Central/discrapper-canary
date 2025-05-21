@@ -1,25 +1,26 @@
-n.d(t, { Z: () => C });
+n.d(t, { Z: () => P });
 var r = n(255367);
 n(73800);
 var i = n(120356),
     o = n.n(i),
     a = n(442837),
-    s = n(481060),
-    l = n(230711),
-    c = n(906732),
-    u = n(543241),
-    d = n(963249),
-    f = n(703656),
-    _ = n(594174),
-    p = n(78839),
-    h = n(451478),
-    m = n(639119),
-    g = n(433390),
-    E = n(474936),
-    b = n(981631),
-    y = n(388032),
-    O = n(163882);
-function v(e, t, n) {
+    s = n(844477),
+    l = n(481060),
+    c = n(230711),
+    u = n(906732),
+    d = n(543241),
+    f = n(963249),
+    _ = n(703656),
+    p = n(594174),
+    h = n(78839),
+    m = n(451478),
+    g = n(639119),
+    E = n(433390),
+    b = n(474936),
+    y = n(981631),
+    O = n(388032),
+    v = n(163882);
+function I(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -32,7 +33,7 @@ function v(e, t, n) {
         e
     );
 }
-function I(e) {
+function S(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -43,12 +44,12 @@ function I(e) {
                 })
             )),
             r.forEach(function (t) {
-                v(e, t, n[t]);
+                I(e, t, n[t]);
             });
     }
     return e;
 }
-function S(e, t) {
+function T(e, t) {
     var n = Object.keys(e);
     if (Object.getOwnPropertySymbols) {
         var r = Object.getOwnPropertySymbols(e);
@@ -60,29 +61,29 @@ function S(e, t) {
     }
     return n;
 }
-function T(e, t) {
+function A(e, t) {
     return (
         (t = null != t ? t : {}),
         Object.getOwnPropertyDescriptors
             ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-            : S(Object(t)).forEach(function (n) {
+            : T(Object(t)).forEach(function (n) {
                   Object.defineProperty(e, n, Object.getOwnPropertyDescriptor(t, n));
               }),
         e
     );
 }
-function A(e, t) {
+function N(e, t) {
     if (null == e) return {};
     var n,
         r,
-        i = N(e, t);
+        i = C(e, t);
     if (Object.getOwnPropertySymbols) {
         var o = Object.getOwnPropertySymbols(e);
         for (r = 0; r < o.length; r++) (n = o[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
     }
     return i;
 }
-function N(e, t) {
+function C(e, t) {
     if (null == e) return {};
     var n,
         r,
@@ -91,147 +92,154 @@ function N(e, t) {
     for (r = 0; r < o.length; r++) (n = o[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
     return i;
 }
-let C = function (e) {
+let P = function (e) {
     var t,
-        { subscriptionTier: i, onClick: v, size: S, className: N, textOptions: C, iconClassName: P, postSuccessGuild: R, onSubscribeModalClose: w, premiumModalAnalyticsLocation: D, showIcon: L = !0, disableShine: x, applicationId: k, giftMessage: M, shinyButtonClassName: j, showGradient: U = !1, confirmationFooter: G, paymentModalBanner: B, isGift: F, iconColor: V = 'currentColor', giftIconClassName: Z } = e,
-        H = A(e, ['subscriptionTier', 'onClick', 'size', 'className', 'textOptions', 'iconClassName', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'showIcon', 'disableShine', 'applicationId', 'giftMessage', 'shinyButtonClassName', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'isGift', 'iconColor', 'giftIconClassName']);
-    let Y = (0, a.e7)([_.default], () => _.default.getCurrentUser()),
-        W = (0, a.e7)([h.Z], () => h.Z.isFocused()),
-        K = (0, a.e7)([p.ZP], () => p.ZP.getPremiumTypeSubscription()),
-        { analyticsLocations: z } = (0, c.ZP)(),
-        q = (0, m.N)(),
-        Q = !F && null != q && null != i && E.nG[q.trial_id].skus.includes(i),
-        X = (0, g.Z)({
+        { subscriptionTier: i, onClick: I, size: T, className: C, textOptions: P, iconClassName: R, postSuccessGuild: w, onSubscribeModalClose: D, premiumModalAnalyticsLocation: L, showIcon: x = !0, disableShine: k, applicationId: M, giftMessage: j, shinyButtonClassName: U, showGradient: G = !1, confirmationFooter: B, paymentModalBanner: F, isGift: V, iconColor: Z = 'currentColor', useExpressiveButton: H, giftIconClassName: Y } = e,
+        W = N(e, ['subscriptionTier', 'onClick', 'size', 'className', 'textOptions', 'iconClassName', 'postSuccessGuild', 'onSubscribeModalClose', 'premiumModalAnalyticsLocation', 'showIcon', 'disableShine', 'applicationId', 'giftMessage', 'shinyButtonClassName', 'showGradient', 'confirmationFooter', 'paymentModalBanner', 'isGift', 'iconColor', 'useExpressiveButton', 'giftIconClassName']);
+    let K = (0, a.e7)([p.default], () => p.default.getCurrentUser()),
+        z = (0, a.e7)([m.Z], () => m.Z.isFocused()),
+        q = (0, a.e7)([h.ZP], () => h.ZP.getPremiumTypeSubscription()),
+        { analyticsLocations: Q } = (0, u.ZP)(),
+        X = (0, g.N)(),
+        J = !V && null != X && null != i && b.nG[X.trial_id].skus.includes(i),
+        $ = (0, E.Z)({
             subscriptionTier: i,
-            buttonTextOverride: null == C ? void 0 : C.textOverride,
-            defaultTextOverride: null == C ? void 0 : C.subscribeText
+            buttonTextOverride: null == P ? void 0 : P.textOverride,
+            defaultTextOverride: null == P ? void 0 : P.subscribeText
         }),
-        J = (e) => {
+        ee = (e) => {
             var t;
-            if ((e.preventDefault(), null == Y)) return void (0, f.uL)(b.Z5c.LOGIN, { source: 'premium_subscribe_button' });
-            if ((null == v || v(e), (null == K ? void 0 : K.status) === b.O0b.ACCOUNT_HOLD)) {
-                (0, u.A3)(), l.Z.open(b.oAB.PREMIUM), null == w || w(!1);
+            if ((e.preventDefault(), null == K)) return void (0, _.uL)(y.Z5c.LOGIN, { source: 'premium_subscribe_button' });
+            if ((null == I || I(e), (null == q ? void 0 : q.status) === y.O0b.ACCOUNT_HOLD)) {
+                (0, d.A3)(), c.Z.open(y.oAB.PREMIUM), null == D || D(!1);
                 return;
             }
-            if (!Y.isClaimed())
-                return void (0, s.ZDy)(async () => {
+            if (!K.isClaimed())
+                return void (0, l.ZDy)(async () => {
                     let { default: e } = await n.e('69417').then(n.bind(n, 918995));
                     return (t) => {
                         var { onClose: n } = t,
-                            i = A(t, ['onClose']);
-                        return (0, r.jsx)(e, T(I({}, i), { onClose: n }));
+                            i = N(t, ['onClose']);
+                        return (0, r.jsx)(e, A(S({}, i), { onClose: n }));
                     };
                 });
-            if (!Y.verified)
-                return void (0, s.ZDy)(async () => {
+            if (!K.verified)
+                return void (0, l.ZDy)(async () => {
                     let { default: e } = await n.e('20102').then(n.bind(n, 444688));
                     return (t) => {
                         var { onClose: n } = t,
-                            i = A(t, ['onClose']);
-                        return (0, r.jsx)(e, T(I({}, i), { onClose: n }));
+                            i = N(t, ['onClose']);
+                        return (0, r.jsx)(e, A(S({}, i), { onClose: n }));
                     };
                 });
-            let o = Q ? (null == (t = q.subscription_trial) ? void 0 : t.id) : null,
-                a = b.Qqv.BUY;
-            null != o ? (a = b.Qqv.TRIAL) : F && (a = b.Qqv.GIFT),
-                (0, d.Z)({
-                    isGift: F,
+            let o = J ? (null == (t = X.subscription_trial) ? void 0 : t.id) : null,
+                a = y.Qqv.BUY;
+            null != o ? (a = y.Qqv.TRIAL) : V && (a = y.Qqv.GIFT),
+                (0, f.Z)({
+                    isGift: V,
                     initialPlanId: null,
                     subscriptionTier: i,
-                    analyticsLocations: z,
-                    analyticsObject: I(
+                    analyticsLocations: Q,
+                    analyticsObject: S(
                         {
-                            object: b.qAy.BUTTON_CTA,
+                            object: y.qAy.BUTTON_CTA,
                             objectType: a
                         },
-                        D
+                        L
                     ),
                     trialId: o,
-                    postSuccessGuild: R,
-                    onClose: w,
-                    applicationId: k,
-                    giftMessage: M,
-                    confirmationFooter: G,
-                    paymentModalBanner: B
+                    postSuccessGuild: w,
+                    onClose: D,
+                    applicationId: M,
+                    giftMessage: j,
+                    confirmationFooter: B,
+                    paymentModalBanner: F
                 });
         };
-    if (F) {
-        let e = i === E.Si.TIER_0 ? y.intl.string(y.t.rk4Uu7) : y.intl.string(y.t.Ve9Ge3);
+    if (H && (null == P ? void 0 : P.expressiveButtonText) != null)
+        return (0, r.jsx)(s.z, {
+            onClick: ee,
+            variant: 'expressive',
+            text: null == P ? void 0 : P.expressiveButtonText,
+            icon: l.SrA
+        });
+    if (V) {
+        let e = i === b.Si.TIER_0 ? O.intl.string(O.t.rk4Uu7) : O.intl.string(O.t.Ve9Ge3);
         return (0, r.jsxs)(
-            s.zxk,
-            T(
-                I(
+            l.zxk,
+            A(
+                S(
                     {
-                        size: S,
-                        className: N,
-                        innerClassName: O.giftButton,
-                        color: s.zxk.Colors.PRIMARY,
-                        onClick: J
+                        size: T,
+                        className: C,
+                        innerClassName: v.giftButton,
+                        color: l.zxk.Colors.PRIMARY,
+                        onClick: ee
                     },
-                    H
+                    W
                 ),
                 {
                     children: [
-                        L &&
-                            (0, r.jsx)(s.OgN, {
+                        x &&
+                            (0, r.jsx)(l.OgN, {
                                 size: 'md',
                                 color: 'currentColor',
-                                className: o()(O.giftIcon, Z)
+                                className: o()(v.giftIcon, Y)
                             }),
                         (0, r.jsx)('span', {
-                            className: o()(O.buttonText, null == C ? void 0 : C.textClassName),
-                            children: null != (t = null == C ? void 0 : C.textOverride) ? t : e
+                            className: o()(v.buttonText, null == P ? void 0 : P.textClassName),
+                            children: null != (t = null == P ? void 0 : P.textOverride) ? t : e
                         })
                     ]
                 }
             )
         );
     }
-    function $(e) {
+    function et(e) {
         return (0, r.jsxs)(
-            s.gtL,
-            T(
-                I(
+            l.gtL,
+            A(
+                S(
                     {
-                        disabled: X.disabled,
-                        onClick: J,
-                        innerClassName: O.premiumSubscribeButton,
-                        color: i === E.Si.TIER_1 ? s.zxk.Colors.PRIMARY : s.zxk.Colors.GREEN,
-                        size: S,
-                        className: j,
+                        disabled: $.disabled,
+                        onClick: ee,
+                        innerClassName: v.premiumSubscribeButton,
+                        color: i === b.Si.TIER_1 ? l.zxk.Colors.PRIMARY : l.zxk.Colors.GREEN,
+                        size: T,
+                        className: U,
                         wrapperClassName: o()(
                             {
-                                [O.tier2Gradient]: U && i === E.Si.TIER_2,
-                                [O.tier1Gradient]: U && i === E.Si.TIER_1
+                                [v.tier2Gradient]: G && i === b.Si.TIER_2,
+                                [v.tier1Gradient]: G && i === b.Si.TIER_1
                             },
-                            N
+                            C
                         ),
-                        pauseAnimation: !W || x
+                        pauseAnimation: !z || k
                     },
-                    H,
+                    W,
                     e
                 ),
                 {
                     children: [
-                        L &&
-                            (0, r.jsx)(s.SrA, {
+                        x &&
+                            (0, r.jsx)(l.SrA, {
                                 size: 'md',
-                                color: V,
-                                className: o()(O.premiumIcon, P)
+                                color: Z,
+                                className: o()(v.premiumIcon, R)
                             }),
                         (0, r.jsx)('span', {
-                            className: o()(O.buttonText, null == C ? void 0 : C.textClassName),
-                            children: X.buttonText
+                            className: o()(v.buttonText, null == P ? void 0 : P.textClassName),
+                            children: $.buttonText
                         })
                     ]
                 }
             )
         );
     }
-    return null != X.buttonTooltipText
-        ? (0, r.jsx)(s.ua7, {
-              text: X.buttonTooltipText,
-              children: $
+    return null != $.buttonTooltipText
+        ? (0, r.jsx)(l.ua7, {
+              text: $.buttonTooltipText,
+              children: et
           })
-        : $();
+        : et();
 };

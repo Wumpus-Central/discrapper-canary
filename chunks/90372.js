@@ -1,14 +1,14 @@
 n.d(t, { Z: () => s });
 var r = n(73800),
-    i = n(451478),
-    l = n(830917),
+    l = n(451478),
+    i = n(830917),
     a = n(985518);
 let s = {
     useForumChannelSeenManager: function (e) {
         let { guildId: t, channelId: n } = e,
             s = r.useRef(null),
-            o = (0, l.UU)(),
-            c = !i.Z.isFocused(o);
+            o = (0, i.UU)(),
+            c = !l.Z.isFocused(o);
         return (
             r.useLayoutEffect(
                 () => (

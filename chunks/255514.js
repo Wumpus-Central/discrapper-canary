@@ -29,8 +29,8 @@ var r = n(255367),
     P = n(15682),
     k = n(189472),
     E = n(749534),
-    M = n(157759),
-    w = n(521332),
+    w = n(157759),
+    M = n(521332),
     A = n(905434),
     D = n(196627),
     R = n(289809),
@@ -67,14 +67,14 @@ function H(e) {
     return e;
 }
 let V = ['user_urf', 'message_urf', 'guild_urf'];
-function q(e, t) {
+function X(e, t) {
     let { elements: n } = e;
     return n.find((e) => {
         let { type: n } = e;
         return n === t;
     });
 }
-function X(e, t) {
+function q(e, t) {
     let { elements: n } = e;
     return n.filter((e) => {
         let { type: n } = e;
@@ -83,12 +83,12 @@ function X(e, t) {
 }
 let K = (e) => {
     let { node: t, reportType: n, reportSubType: K, history: Y, onSelectChild: Q, onModalClose: J, onSubmit: $, multiSelect: ee, reportId: et, textInput: en } = e,
-        er = q(t, 'checkbox'),
-        ea = q(t, 'text_line_resource'),
-        ei = X(t, 'external_link'),
-        el = X(t, 'free_text'),
-        eo = X(t, 'dropdown'),
-        es = q(t, 'text'),
+        er = X(t, 'checkbox'),
+        ea = X(t, 'text_line_resource'),
+        ei = q(t, 'external_link'),
+        el = q(t, 'free_text'),
+        eo = q(t, 'dropdown'),
+        es = X(t, 'text'),
         ec = i.s.REPORT_TO_MOD.has(n.name),
         [ed, eu] = a.useState(!1),
         [em, ep] = a.useState(!1),
@@ -176,7 +176,7 @@ let K = (e) => {
         t.is_auto_submit && !em && (ep(!0), $(ej(['', t.id])));
     }, [t.is_auto_submit, em, $, ej, t.id]);
     let eZ = (0, s.fW)(K),
-        eN = null != q(t, 'ignore_users') && ('message' === n.name || 'first_dm' === n.name || 'user' === n.name);
+        eN = null != X(t, 'ignore_users') && ('message' === n.name || 'first_dm' === n.name || 'user' === n.name);
     return (0, r.jsxs)('div', {
         className: W.container,
         children: [
@@ -185,7 +185,7 @@ let K = (e) => {
                 direction: o.Z.Direction.VERTICAL,
                 className: W.header,
                 children: [
-                    (0, r.jsx)(D.Z, { element: q(t, 'success') }),
+                    (0, r.jsx)(D.Z, { element: X(t, 'success') }),
                     (0, r.jsx)(O.Z, {
                         node: t,
                         isModeratorReport: ec
@@ -198,10 +198,10 @@ let K = (e) => {
                 children: [
                     null != ea && (0, r.jsx)(B.Z, { element: ea }),
                     null != es && (0, r.jsx)(R.Z, { element: es }),
-                    null != q(t, 'message_preview') && ('message' === n.name || 'first_dm' === n.name || 'report_to_mod_message' === n.name) && (0, r.jsx)(S.Z, { message: n.record }),
-                    null != q(t, 'user_preview') && 'user' === n.name ? (0, r.jsx)(L.Z, { user: n.record }) : null,
-                    null != q(t, 'guild_preview') && 'guild' === n.name ? (0, r.jsx)(y.Z, { guild: n.record }) : null,
-                    null != q(t, 'breadcrumbs') &&
+                    null != X(t, 'message_preview') && ('message' === n.name || 'first_dm' === n.name || 'report_to_mod_message' === n.name) && (0, r.jsx)(S.Z, { message: n.record }),
+                    null != X(t, 'user_preview') && 'user' === n.name ? (0, r.jsx)(L.Z, { user: n.record }) : null,
+                    null != X(t, 'guild_preview') && 'guild' === n.name ? (0, r.jsx)(y.Z, { guild: n.record }) : null,
+                    null != X(t, 'breadcrumbs') &&
                         (0, r.jsx)(p.Z, {
                             isModeratorReport: ec,
                             history: Y
@@ -221,7 +221,7 @@ let K = (e) => {
                                         channelId: ev,
                                         reportId: et
                                     }),
-                                null != q(t, 'block_users') &&
+                                null != X(t, 'block_users') &&
                                     ('message' === n.name || 'first_dm' === n.name || 'user' === n.name || 'report_to_mod_message' === n.name || ('application' === n.name && null != n.record.bot)) &&
                                     (0, r.jsx)(m.Z, {
                                         user: 'application' === n.name ? n.record.bot : 'user' === n.name ? n.record : n.record.author,
@@ -230,43 +230,43 @@ let K = (e) => {
                                         reportType: n
                                     }),
                                 !eN &&
-                                    null != q(t, 'mute_users') &&
+                                    null != X(t, 'mute_users') &&
                                     ('message' === n.name || 'first_dm' === n.name || 'user' === n.name || 'report_to_mod_message' === n.name) &&
                                     (0, r.jsx)(k.Z, {
                                         user: 'user' === n.name ? n.record : n.record.author,
                                         channelId: ev,
                                         reportId: et
                                     }),
-                                null != q(t, 'delete_message') &&
+                                null != X(t, 'delete_message') &&
                                     ('message' === n.name || 'report_to_mod_message' === n.name) &&
                                     (0, r.jsx)(b.Z, {
                                         message: n.record,
                                         reportId: et
                                     }),
-                                null != q(t, 'leave_guild') &&
+                                null != X(t, 'leave_guild') &&
                                     'guild' === n.name &&
                                     (0, r.jsx)(N.Z, {
                                         guildId: n.record.id,
                                         reportId: et
                                     }),
-                                null != q(t, 'deauthorize_app') &&
+                                null != X(t, 'deauthorize_app') &&
                                     'application' === n.name &&
                                     (0, r.jsx)(g.Z, {
                                         application: n.record,
                                         reportId: et
                                     }),
-                                null != q(t, 'deauthorize_app') &&
+                                null != X(t, 'deauthorize_app') &&
                                     'application' === n.name &&
-                                    (0, r.jsx)(M.Z, {
+                                    (0, r.jsx)(w.Z, {
                                         application: n.record,
                                         reportId: et
                                     })
                             ]
                         }),
-                    null != q(t, 'settings_upsells') &&
+                    null != X(t, 'settings_upsells') &&
                         ('message' === n.name || 'report_to_mod_message' === n.name) &&
                         null != eZ &&
-                        (0, r.jsx)(w.Z, {
+                        (0, r.jsx)(M.Z, {
                             settingsUpsells: eZ,
                             channelId: n.record.channel_id,
                             onModalClose: J,
@@ -274,11 +274,11 @@ let K = (e) => {
                             reportType: n,
                             reportSubType: K
                         }),
-                    null != q(t, 'channel_preview') && 'stage_channel' === n.name && (0, r.jsx)(A.Z, { stageInstance: n.record }),
-                    null != q(t, 'guild_scheduled_event_preview') && 'guild_scheduled_event' === n.name && (0, r.jsx)(I.Z, { event: n.record }),
-                    null != q(t, 'guild_directory_entry_preview') && 'guild_directory_entry' === n.name && (0, r.jsx)(j.Z, { entry: n.record }),
-                    null != q(t, 'guild_discovery_preview') && 'guild_discovery' === n.name && (0, r.jsx)(C.Z, { entry: n.record }),
-                    null != q(t, 'app_preview') && 'application' === n.name && (0, r.jsx)(u.Z, { entry: n.record }),
+                    null != X(t, 'channel_preview') && 'stage_channel' === n.name && (0, r.jsx)(A.Z, { stageInstance: n.record }),
+                    null != X(t, 'guild_scheduled_event_preview') && 'guild_scheduled_event' === n.name && (0, r.jsx)(I.Z, { event: n.record }),
+                    null != X(t, 'guild_directory_entry_preview') && 'guild_directory_entry' === n.name && (0, r.jsx)(j.Z, { entry: n.record }),
+                    null != X(t, 'guild_discovery_preview') && 'guild_discovery' === n.name && (0, r.jsx)(C.Z, { entry: n.record }),
+                    null != X(t, 'app_preview') && 'application' === n.name && (0, r.jsx)(u.Z, { entry: n.record }),
                     null != er &&
                         (0, r.jsx)(P.Z, {
                             element: er,

@@ -147,7 +147,7 @@ function b(e) {
         { fillMode: o.JU.Contain }
     ) === o.vP.Failure &&
         e.drawPath(
-            i.Cv,
+            i.C,
             {
                 x: c.sB,
                 y: c.sB

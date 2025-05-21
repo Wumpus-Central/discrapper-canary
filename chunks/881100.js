@@ -23,8 +23,8 @@ var i = n(399606),
     S = n(302036),
     v = n(994554),
     T = n(1549),
-    I = n(13327),
-    N = n(59137),
+    N = n(13327),
+    I = n(59137),
     y = n(405991),
     A = n(24615),
     P = n(193943),
@@ -148,7 +148,7 @@ let M = (e, t, n) => ((0, r.wj)(e) ? t : n),
             superReactions: {
                 title: m.intl.string(m.t.uZt5q6),
                 description: m.intl.string(m.t.ZK3Zoa),
-                imageSource: M(n, T, I),
+                imageSource: M(n, T, N),
                 imageClassName: t.superReactionsImage
             },
             upload: {
@@ -160,7 +160,7 @@ let M = (e, t, n) => ((0, r.wj)(e) ? t : n),
             videoBackground: {
                 title: m.intl.string(m.t.NaGpTU),
                 description: m.intl.string(m.t['A8O/Q0']),
-                imageSource: M(n, N, y),
+                imageSource: M(n, I, y),
                 imageClassName: t.videoBackgroundImage
             }
         };

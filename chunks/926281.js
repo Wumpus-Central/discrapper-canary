@@ -86,6 +86,11 @@ function a(e) {
                 label: i.intl.string(i.t.KO88BQ),
                 checked: !1
             },
+            Ads: {
+                value: 'Ads',
+                label: i.intl.string(i.t.wb7QJy),
+                checked: !1
+            },
             Messages: {
                 value: 'Messages',
                 label: i.intl.string(i.t['0dO1t7']),

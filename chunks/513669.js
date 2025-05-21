@@ -58,7 +58,7 @@ let g = 'custom-image',
                 isSelected: f,
                 label: s
             }),
-            m = a
+            h = a
                 ? void 0
                 : () => {
                       A(g, i);
@@ -73,7 +73,7 @@ let g = 'custom-image',
                             [c.selected]: f,
                             [c.disabled]: a
                         }),
-                        onClick: m,
+                        onClick: h,
                         'aria-disabled': a
                     },
                     p
@@ -89,21 +89,21 @@ let g = 'custom-image',
         );
     });
 function p(e) {
-    let { presetImages: t, image: r, imageName: a, savedImageName: p, onChange: m, uploadButtonLabel: h = s.intl.string(s.t['MsUY/f']), radioGroupAriaLabel: b = s.intl.string(s.t['0Q0UJi']), disabled: v = !1 } = e,
+    let { presetImages: t, image: r, imageName: a, savedImageName: p, onChange: h, uploadButtonLabel: m = s.intl.string(s.t['MsUY/f']), radioGroupAriaLabel: b = s.intl.string(s.t['0Q0UJi']), disabled: v = !1 } = e,
         C = a === g,
-        [q, x] = A.useState(C ? r : null),
+        [x, q] = A.useState(C ? r : null),
         [j, O] = A.useState(null),
         U = A.useRef(null),
         P = A.useRef(null);
     A.useEffect(() => {
-        p !== g && (x(null), O(null));
+        p !== g && (q(null), O(null));
     }, [p]);
-    let V = null != j ? s.intl.formatToPlainString(s.t['Kw+5YW'], { filename: j }) : s.intl.string(s.t.SNPvSk),
-        N = (0, o.arW)({
+    let y = null != j ? s.intl.formatToPlainString(s.t['Kw+5YW'], { filename: j }) : s.intl.string(s.t.SNPvSk),
+        V = (0, o.arW)({
             orientation: 'horizontal',
             isDisabled: v
         }),
-        { ref: y } = N,
+        { ref: N } = V,
         I = (function (e, t) {
             if (null == e) return {};
             var r,
@@ -122,13 +122,13 @@ function p(e) {
                 for (n = 0; n < a.length; n++) (r = a[n]), !(t.indexOf(r) >= 0) && Object.prototype.propertyIsEnumerable.call(e, r) && (A[r] = e[r]);
             }
             return A;
-        })(N, ['ref']),
+        })(V, ['ref']),
         T = () => {
             var e;
             return null == (e = U.current) ? void 0 : e.activateUploadDialogue();
         },
         F = () => {
-            a === g && m(t[0].data, t[0].name), x(null), O(null);
+            a === g && h(t[0].data, t[0].name), q(null), O(null);
         };
     return (
         A.useEffect(() => {
@@ -145,7 +145,7 @@ function p(e) {
                     children: (0, n.jsxs)('div', {
                         className: l()(c.uploadButton, {
                             [c.disabled]: v,
-                            [c.hidden]: null != q
+                            [c.hidden]: null != x
                         }),
                         'aria-disabled': v,
                         children: [
@@ -158,20 +158,20 @@ function p(e) {
                                 variant: 'text-xxs/normal',
                                 color: 'text-muted',
                                 'aria-hidden': !0,
-                                children: h
+                                children: m
                             }),
                             (0, n.jsx)(i.ZP, {
                                 ref: U,
                                 tabIndex: 0,
                                 onChange: (e, t) => {
-                                    null != t && (O(t.name), x(e), m(e, g));
+                                    null != t && (O(t.name), q(e), h(e, g));
                                 },
-                                'aria-label': h
+                                'aria-label': m
                             })
                         ]
                     })
                 }),
-                null != q &&
+                null != x &&
                     (0, n.jsxs)('div', {
                         className: c.customImageActionContainer,
                         children: [
@@ -219,22 +219,22 @@ function p(e) {
                         d(
                             {
                                 'aria-label': b,
-                                ref: y
+                                ref: N
                             },
                             I
                         ),
                         {
                             className: c.radioGroup,
                             children: [
-                                null != q &&
+                                null != x &&
                                     (0, n.jsx)(f, {
                                         ref: P,
                                         selectedImageName: a,
-                                        onChange: m,
+                                        onChange: h,
                                         disabled: v,
                                         name: g,
-                                        alt: V,
-                                        data: q
+                                        alt: y,
+                                        data: x
                                     }),
                                 t.map((e) =>
                                     (0, n.jsx)(
@@ -242,7 +242,7 @@ function p(e) {
                                         d(
                                             {
                                                 selectedImageName: a,
-                                                onChange: m,
+                                                onChange: h,
                                                 disabled: v
                                             },
                                             e

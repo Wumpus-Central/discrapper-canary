@@ -23,8 +23,8 @@ var i = n(255367),
     S = n(867176),
     v = n(537006),
     T = n(483517),
-    I = n(483424),
-    N = n(681837),
+    N = n(483424),
+    I = n(681837),
     y = n(638970),
     A = n(502762),
     P = n(530),
@@ -102,13 +102,14 @@ function ee(e) {
         ex = (0, V.I5)(t),
         eE = (0, g.p)({ location: 'UserProfileAccountPopout' }),
         eC = (0, x.b)({ location: 'UserProfileAccountPopout' }),
-        ej = r.useMemo(() => (0, m.Z)(), []),
-        eO = (e) => {
+        ej = r.useRef((0, G.Z)((e) => e.shouldRenderTenureLevelUp)),
+        eO = r.useMemo(() => (0, m.Z)(), []),
+        eS = (e) => {
             null == n || n(),
                 (0, C.openUserProfileModal)(
                     $(
                         {
-                            customStatusPrompt: ej,
+                            customStatusPrompt: eO,
                             sourceAnalyticsLocations: es
                         },
                         el,
@@ -146,14 +147,14 @@ function ee(e) {
                                         user: t,
                                         displayProfile: er,
                                         themeType: q.lY.POPOUT,
-                                        onOpenProfile: ei ? void 0 : eO
+                                        onOpenProfile: ei ? void 0 : eS
                                     }),
                                     (0, i.jsx)(D.Z, {
                                         location: 'UserProfileAccountPopout',
                                         user: t,
                                         themeType: q.lY.POPOUT,
                                         onCloseProfile: n,
-                                        prompt: eE ? ej : null
+                                        prompt: eE ? eO : null
                                     })
                                 ]
                             }),
@@ -169,17 +170,18 @@ function ee(e) {
                                         user: t,
                                         className: Q.username,
                                         nickname: U.ZP.getName(null, null, t),
-                                        onOpenProfile: ei ? void 0 : eO,
+                                        onOpenProfile: ei ? void 0 : eS,
                                         pronouns: null == er ? void 0 : er.pronouns,
                                         tags: (0, i.jsx)(O.Z, {
                                             displayProfile: er,
                                             themeType: q.lY.POPOUT,
                                             onClose: n,
-                                            shouldOpenBadgeTooltip: null != et ? (e) => e === et : void 0
+                                            shouldOpenBadgeTooltip: null != et ? (e) => e === et : void 0,
+                                            shouldGlowTenureBadge: ej.current
                                         }),
                                         nicknameIcons: (0, i.jsxs)(i.Fragment, {
                                             children: [
-                                                (0, i.jsx)(N.Z, { userId: t.id }),
+                                                (0, i.jsx)(I.Z, { userId: t.id }),
                                                 (0, i.jsx)(R.Z, {
                                                     user: t,
                                                     isHovering: eo
@@ -202,9 +204,9 @@ function ee(e) {
                                               user: t,
                                               currentUser: t,
                                               displayProfile: er,
-                                              onOpenUserProfileModal: eO
+                                              onOpenUserProfileModal: eS
                                           })
-                                        : (0, i.jsx)(I.Z, {
+                                        : (0, i.jsx)(N.Z, {
                                               user: t,
                                               currentUser: t,
                                               displayProfile: er,

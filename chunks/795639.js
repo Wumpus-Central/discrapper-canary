@@ -1,8 +1,8 @@
 n.d(t, { _: () => T }), n(781311), n(953529);
 var r = n(255367),
-    i = n(73800),
-    l = n(120356),
-    a = n.n(l),
+    l = n(73800),
+    i = n(120356),
+    a = n.n(i),
     s = n(512722),
     o = n.n(s),
     c = n(760907),
@@ -22,19 +22,19 @@ var r = n(255367),
     y = n(124252),
     O = n(388032),
     w = n(554010);
-let S = [
+let N = [
         {
             name: 'Media Post Thumbnail',
             extensions: ['jpg', 'jpeg', 'png', 'gif', 'webp']
         }
     ],
-    N = (0, p.hQ)();
+    S = (0, p.hQ)();
 function P(e) {
-    let { mediaAttachments: t, containerWidth: n, containerHeight: i } = e,
-        l = (0, C.tu)({
+    let { mediaAttachments: t, containerWidth: n, containerHeight: l } = e,
+        i = (0, C.tu)({
             numAttachments: t.length,
             containerWidth: n,
-            containerHeight: i
+            containerHeight: l
         });
     return (0, r.jsx)(r.Fragment, {
         children: t.map((e, t) => {
@@ -42,7 +42,7 @@ function P(e) {
             return (0, r.jsx)(
                 'div',
                 {
-                    style: l[t],
+                    style: i[t],
                     children:
                         !0 === e.isVideo
                             ? (0, r.jsx)(b.Z, {
@@ -64,32 +64,32 @@ function P(e) {
 }
 let T = (e) => {
     var t;
-    let { parentChannel: l } = e,
+    let { parentChannel: i } = e,
         { textAreaState: s } = (0, v.xH)((e) => {
             let { textAreaState: t } = e;
             return { textAreaState: t };
         }, c.X),
         p = (0, d.e7)([h.Z], () => h.Z.keyboardModeEnabled),
-        b = (0, y.Z)(l, null == (t = s.textValue) ? void 0 : t.trim()),
-        C = i.useMemo(() => b.find((e) => e.isThumbnail), [b]),
+        b = (0, y.Z)(i, null == (t = s.textValue) ? void 0 : t.trim()),
+        C = l.useMemo(() => b.find((e) => e.isThumbnail), [b]),
         T = null != b && b.length > 0,
-        I = i.useMemo(() => {
+        I = l.useMemo(() => {
             let e = (null == b ? void 0 : b.length) > 1 ? 1.15 : 1;
             return {
                 width: 153 * e,
                 height: 86 * e
             };
         }, [b]),
-        E = i.useCallback(
+        E = l.useCallback(
             (e) => {
-                null != C && m.Z.remove(l.id, C.id, g.Ie.CREATE_FORUM_POST.drafts.type),
-                    (0, _.d)(e.currentTarget.files, l, g.Ie.CREATE_FORUM_POST.drafts.type, {
+                null != C && m.Z.remove(i.id, C.id, g.Ie.CREATE_FORUM_POST.drafts.type),
+                    (0, _.d)(e.currentTarget.files, i, g.Ie.CREATE_FORUM_POST.drafts.type, {
                         requireConfirm: !0,
                         isThumbnail: !0
                     }),
                     (e.currentTarget.value = null);
             },
-            [l, C]
+            [i, C]
         ),
         k = (e) => {
             e.stopPropagation(),
@@ -99,10 +99,10 @@ let T = (e) => {
                         o()(null != e, 'upload should not be null');
                         let { default: t } = await Promise.resolve().then(n.bind(n, 95152));
                         return (n) => {
-                            var i, a;
+                            var l, a;
                             return (0, r.jsx)(
                                 t,
-                                ((i = (function (e) {
+                                ((l = (function (e) {
                                     for (var t = 1; t < arguments.length; t++) {
                                         var n = null != arguments[t] ? arguments[t] : {},
                                             r = Object.keys(n);
@@ -130,20 +130,20 @@ let T = (e) => {
                                 (a = a =
                                     {
                                         upload: e,
-                                        channelId: l.id,
+                                        channelId: i.id,
                                         draftType: g.Ie.CREATE_FORUM_POST.drafts.type,
                                         onSubmit: (t) => {
-                                            let { name: n, description: r, spoiler: i } = t;
-                                            m.Z.update(l.id, e.id, g.Ie.CREATE_FORUM_POST.drafts.type, {
+                                            let { name: n, description: r, spoiler: l } = t;
+                                            m.Z.update(i.id, e.id, g.Ie.CREATE_FORUM_POST.drafts.type, {
                                                 filename: n,
                                                 description: r,
-                                                spoiler: i
+                                                spoiler: l
                                             });
                                         },
                                         disableSpoiler: !0
                                     }),
                                 Object.getOwnPropertyDescriptors
-                                    ? Object.defineProperties(i, Object.getOwnPropertyDescriptors(a))
+                                    ? Object.defineProperties(l, Object.getOwnPropertyDescriptors(a))
                                     : (function (e, t) {
                                           var n = Object.keys(e);
                                           if (Object.getOwnPropertySymbols) {
@@ -152,9 +152,9 @@ let T = (e) => {
                                           }
                                           return n;
                                       })(Object(a)).forEach(function (e) {
-                                          Object.defineProperty(i, e, Object.getOwnPropertyDescriptor(a, e));
+                                          Object.defineProperty(l, e, Object.getOwnPropertyDescriptor(a, e));
                                       }),
-                                i)
+                                l)
                             );
                         };
                     });
@@ -166,8 +166,8 @@ let T = (e) => {
             onChange: E,
             multiple: !1,
             'aria-hidden': !0,
-            filters: S,
-            'aria-describedby': N,
+            filters: N,
+            'aria-describedby': S,
             'aria-label': T ? O.intl.string(O.t.MxJI3d) : O.intl.string(O.t.CbiofX),
             children: T
                 ? (0, r.jsxs)(r.Fragment, {
@@ -232,7 +232,7 @@ let T = (e) => {
                               (0, r.jsx)(f.Z, {
                                   className: w.action,
                                   tooltip: O.intl.string(O.t.vN7REx),
-                                  onClick: () => m.Z.remove(l.id, C.id, g.Ie.CREATE_FORUM_POST.drafts.type),
+                                  onClick: () => m.Z.remove(i.id, C.id, g.Ie.CREATE_FORUM_POST.drafts.type),
                                   dangerous: !0,
                                   children: (0, r.jsx)(u.XHJ, {
                                       size: 'md',
@@ -243,7 +243,7 @@ let T = (e) => {
                       }),
                       draftType: g.Ie.CREATE_FORUM_POST.drafts.type,
                       id: C.id,
-                      channelId: l.id,
+                      channelId: i.id,
                       handleEditModal: k,
                       keyboardModeEnabled: p,
                       size: x.q.SMALL,

@@ -1,4 +1,4 @@
-n.d(t, { Z: () => N }), n(388685);
+n.d(t, { Z: () => S }), n(388685);
 var r = n(255367),
     i = n(73800),
     l = n(120356),
@@ -10,32 +10,32 @@ var r = n(255367),
     d = n(430824),
     _ = n(914010),
     E = n(900849),
-    I = n(981631),
-    O = n(388032),
-    T = n(8940),
-    p = n(240211);
-let N = () => {
+    O = n(981631),
+    I = n(388032),
+    p = n(8940),
+    T = n(240211);
+let S = () => {
     let e = (0, a.e7)([_.Z], () => _.Z.getGuildId(), []),
         t = (0, a.e7)([d.Z], () => d.Z.getGuild(e), [e]),
         [n, l] = i.useState(!1);
     if (null == t) return null;
-    let N = async () => {
+    let S = async () => {
         l(!0);
         try {
-            E.mT(t.id), await s.Z.joinGuild(t.id, { source: I.vtS.NOTICE_BAR });
+            E.mT(t.id), await s.Z.joinGuild(t.id, { source: O.vtS.NOTICE_BAR });
         } catch (e) {
             l(!1);
         }
     };
     return (0, r.jsxs)('div', {
-        className: o()(T.notice, p.notice),
+        className: o()(p.notice, T.notice),
         children: [
             (0, r.jsxs)(c.zxk, {
                 look: c.zxk.Looks.OUTLINED,
                 color: c.zxk.Colors.WHITE,
                 size: c.zxk.Sizes.NONE,
-                className: o()(T.button, T.back),
-                innerClassName: T.iconButton,
+                className: o()(p.button, p.back),
+                innerClassName: p.iconButton,
                 onClick: () => {
                     (0, u.s1)().goBack();
                 },
@@ -43,24 +43,24 @@ let N = () => {
                     (0, r.jsx)(c.whL, {
                         size: 'xs',
                         color: 'currentColor',
-                        className: T.arrow
+                        className: p.arrow
                     }),
-                    O.intl.string(O.t['13/7kZ'])
+                    I.intl.string(I.t['13/7kZ'])
                 ]
             }),
             (0, r.jsx)(c.Text, {
-                className: T.header,
+                className: p.header,
                 variant: 'text-sm/normal',
-                children: O.intl.string(O.t['N/y2WF'])
+                children: I.intl.string(I.t['N/y2WF'])
             }),
             (0, r.jsx)(c.zxk, {
-                className: T.button,
+                className: p.button,
                 look: c.zxk.Looks.OUTLINED,
                 color: c.zxk.Colors.WHITE,
                 size: c.zxk.Sizes.NONE,
                 submitting: n,
-                onClick: N,
-                children: O.intl.format(O.t.uHN7n5, { guild: t.name })
+                onClick: S,
+                children: I.intl.format(I.t.uHN7n5, { guild: t.name })
             })
         ]
     });

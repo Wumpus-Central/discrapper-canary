@@ -1,6 +1,6 @@
 n.d(t, {
-    Z: () => S,
-    p: () => I
+    Z: () => P,
+    p: () => C
 }),
     n(953529);
 var r = n(255367),
@@ -8,119 +8,203 @@ var r = n(255367),
     o = n(120356),
     a = n.n(o),
     s = n(442837),
-    l = n(481060),
-    c = n(355467),
-    u = n(37234),
-    d = n(174609),
-    f = n(703656),
-    _ = n(626135),
-    p = n(74538),
-    h = n(357355),
-    m = n(639119),
-    g = n(767714),
-    E = n(302945),
-    b = n(474936),
-    y = n(981631),
-    O = n(388032),
-    v = n(229191),
-    I = (function (e) {
+    l = n(780384),
+    c = n(481060),
+    u = n(355467),
+    d = n(37234),
+    f = n(410030),
+    _ = n(174609),
+    p = n(703656),
+    h = n(626135),
+    m = n(74538),
+    g = n(357355),
+    E = n(314528),
+    b = n(639119),
+    y = n(767714),
+    O = n(302945),
+    v = n(474936),
+    I = n(981631),
+    S = n(388032),
+    T = n(520303),
+    A = n(229191),
+    N = n(635048),
+    C = (function (e) {
         return (e[(e.NONE = 0)] = 'NONE'), (e[(e.PARENT_CONTAINER = 1)] = 'PARENT_CONTAINER'), (e[(e.TAB_PARENT_CONTAINER = 2)] = 'TAB_PARENT_CONTAINER'), e;
     })({});
-function S(e) {
-    let { containerContext: t, image: n, title: o, description: I, enableSocialProof: S, analyticsLocationSection: T, upsellViewedTrackingData: A, onClose: N, onDisplay: C, onLearnMore: P } = e,
-        R = (0, s.e7)([h.Z], () => h.Z.affinities),
-        w = (0, s.e7)([h.Z], () => h.Z.hasFetched);
+function P(e) {
+    let { containerContext: t, image: n, title: o, description: C, enableSocialProof: P, analyticsLocationSection: R, upsellViewedTrackingData: w, onClose: D, onDisplay: L, onLearnMore: x, isEmojiPickerOverlay: k = !1 } = e,
+        M = (0, s.e7)([g.Z], () => g.Z.affinities),
+        j = (0, s.e7)([g.Z], () => g.Z.hasFetched);
     i.useEffect(() => {
-        !w && S && c.MH();
-    }, [w, S]),
+        !j && P && u.MH();
+    }, [j, P]),
         i.useEffect(() => {
-            _.default.track(y.rMx.PREMIUM_UPSELL_VIEWED, A), null == C || C();
-        }, [C, A]);
-    let D = R.length > 1 && S,
-        L = () => (2 === t ? v.hasTabParentContainer : 1 === t ? v.hasParentContainer : v.noParentContainer),
-        x = () => {
-            _.default.track(y.rMx.PREMIUM_PROMOTION_OPENED, {
-                location_section: T,
-                location_object: y.qAy.NAVIGATION_LINK
+            h.default.track(I.rMx.PREMIUM_UPSELL_VIEWED, w), null == L || L();
+        }, [L, w]);
+    let U = M.length > 1 && P,
+        G = () => (2 === t ? A.hasTabParentContainer : 1 === t ? A.hasParentContainer : A.noParentContainer),
+        B = () => {
+            h.default.track(I.rMx.PREMIUM_PROMOTION_OPENED, {
+                location_section: R,
+                location_object: I.qAy.NAVIGATION_LINK
             }),
-                null == P || P(),
-                (0, d.Z)(),
-                N(),
-                (0, u.xf)(),
-                (0, f.uL)(y.Z5c.APPLICATION_STORE);
+                null == x || x(),
+                (0, _.Z)(),
+                D(),
+                (0, d.xf)(),
+                (0, p.uL)(I.Z5c.APPLICATION_STORE);
         },
-        k = (0, m.N)(),
-        M = i.useCallback(() => {
+        F = (0, b.N)(),
+        V = i.useCallback(() => {
             var e;
-            return null != (e = (0, p.fr)(k)) ? e : O.intl.string(O.t.pj0XBA);
-        }, [k]);
-    return (0, r.jsxs)(r.Fragment, {
-        children: [
-            (0, r.jsx)(l.YMn, {
-                backdropStyle: l.fCB.DARK,
-                onClose: N,
-                'aria-label': O.intl.string(O.t.cpT0Cg),
-                isVisible: !0
-            }),
-            (0, r.jsxs)('div', {
-                className: a()(v.container, L()),
-                children: [
-                    (0, r.jsx)(l.olH, {
-                        onClick: N,
-                        className: v.closeButton
-                    }),
-                    (0, r.jsxs)('div', {
-                        className: v.contentContainer,
-                        children: [
-                            (0, r.jsx)('img', {
-                                className: v.image,
-                                width: n.width,
-                                height: n.height,
-                                src: n.url,
-                                alt: 'Nitro Perk'
-                            }),
-                            (0, r.jsx)(l.X6q, {
-                                className: a()(v.title, { [v.titleNoSocialProof]: !D }),
-                                variant: 'heading-xl/bold',
-                                children: o
-                            }),
-                            D && (0, r.jsx)(E.Z, { affinities: R }),
-                            (0, r.jsx)(l.Text, {
-                                variant: 'text-sm/medium',
-                                className: v.body,
-                                children: I
-                            })
-                        ]
-                    }),
-                    (0, r.jsxs)('div', {
-                        className: v.ctaContainer,
-                        children: [
-                            (0, r.jsx)(l.zxk, {
-                                className: v.secondaryCTA,
-                                size: l.zxk.Sizes.SMALL,
-                                color: l.zxk.Colors.CUSTOM,
-                                look: l.zxk.Looks.LINK,
-                                onClick: x,
-                                children: O.intl.string(O.t.ZnqyZ2)
-                            }),
-                            (0, r.jsx)(g.Z, {
-                                showGradient: !0,
-                                premiumModalAnalyticsLocation: {
-                                    section: T,
-                                    object: y.qAy.BUTTON_CTA
-                                },
-                                subscriptionTier: b.Si.TIER_2,
-                                size: l.zxk.Sizes.SMALL,
-                                color: l.zxk.Colors.CUSTOM,
-                                onClick: () => {
-                                    N();
-                                },
-                                textOptions: { textOverride: M() }
-                            })
-                        ]
-                    })
-                ]
-            })
-        ]
-    });
+            return null != (e = (0, m.fr)(F)) ? e : S.intl.string(S.t.pj0XBA);
+        }, [F]),
+        Z = (0, l.ap)((0, f.ZP)()),
+        H = (0, E.Z)({ location: 'PremiumUpsellPickerOverlay' }) && k;
+    return H
+        ? (0, r.jsxs)(r.Fragment, {
+              children: [
+                  (0, r.jsx)(c.YMn, {
+                      backdropStyle: c.fCB.DARK,
+                      onClose: D,
+                      'aria-label': S.intl.string(S.t.cpT0Cg),
+                      isVisible: !0
+                  }),
+                  (0, r.jsxs)('div', {
+                      className: a()(T.container, G()),
+                      children: [
+                          (0, r.jsxs)('div', {
+                              className: T.content,
+                              children: [
+                                  (0, r.jsx)(c.olH, {
+                                      onClick: D,
+                                      className: T.closeButton
+                                  }),
+                                  (0, r.jsxs)('div', {
+                                      className: T.contentContainer,
+                                      children: [
+                                          (0, r.jsx)('img', {
+                                              className: T.image,
+                                              src: N,
+                                              alt: 'Nitro Perk'
+                                          }),
+                                          (0, r.jsx)(c.X6q, {
+                                              className: a()(T.title, { [T.titleNoSocialProof]: !U }),
+                                              variant: 'heading-xl/bold',
+                                              color: 'header-primary',
+                                              children: o
+                                          }),
+                                          U && (0, r.jsx)(O.Z, { affinities: M }),
+                                          (0, r.jsx)(c.Text, {
+                                              variant: 'text-sm/medium',
+                                              color: 'text-secondary',
+                                              className: T.body,
+                                              children: C
+                                          })
+                                      ]
+                                  })
+                              ]
+                          }),
+                          (0, r.jsx)('div', {
+                              className: T.footer,
+                              children: (0, r.jsxs)('div', {
+                                  className: T.buttonContainer,
+                                  children: [
+                                      (0, r.jsx)(c.zxk, {
+                                          color: Z ? c.zxk.Colors.PRIMARY : c.zxk.Colors.WHITE,
+                                          look: c.zxk.Looks.LINK,
+                                          onClick: B,
+                                          children: S.intl.string(S.t.ZnqyZ2)
+                                      }),
+                                      (0, r.jsx)(y.Z, {
+                                          showGradient: !0,
+                                          premiumModalAnalyticsLocation: {
+                                              section: R,
+                                              object: I.qAy.BUTTON_CTA
+                                          },
+                                          subscriptionTier: v.Si.TIER_2,
+                                          size: c.zxk.Sizes.SMALL,
+                                          color: c.zxk.Colors.CUSTOM,
+                                          onClick: () => {
+                                              D();
+                                          },
+                                          textOptions: { expressiveButtonText: V() },
+                                          useExpressiveButton: H
+                                      })
+                                  ]
+                              })
+                          })
+                      ]
+                  })
+              ]
+          })
+        : (0, r.jsxs)(r.Fragment, {
+              children: [
+                  (0, r.jsx)(c.YMn, {
+                      backdropStyle: c.fCB.DARK,
+                      onClose: D,
+                      'aria-label': S.intl.string(S.t.cpT0Cg),
+                      isVisible: !0
+                  }),
+                  (0, r.jsxs)('div', {
+                      className: a()(A.container, G()),
+                      children: [
+                          (0, r.jsx)(c.olH, {
+                              onClick: D,
+                              className: A.closeButton
+                          }),
+                          (0, r.jsxs)('div', {
+                              className: A.contentContainer,
+                              children: [
+                                  (0, r.jsx)('img', {
+                                      className: A.image,
+                                      width: n.width,
+                                      height: n.height,
+                                      src: n.url,
+                                      alt: 'Nitro Perk'
+                                  }),
+                                  (0, r.jsx)(c.X6q, {
+                                      className: a()(A.title, { [A.titleNoSocialProof]: !U }),
+                                      variant: 'heading-xl/bold',
+                                      children: o
+                                  }),
+                                  U && (0, r.jsx)(O.Z, { affinities: M }),
+                                  (0, r.jsx)(c.Text, {
+                                      variant: 'text-sm/medium',
+                                      className: A.body,
+                                      children: C
+                                  })
+                              ]
+                          }),
+                          (0, r.jsxs)('div', {
+                              className: A.ctaContainer,
+                              children: [
+                                  (0, r.jsx)(c.zxk, {
+                                      className: A.secondaryCTA,
+                                      size: c.zxk.Sizes.SMALL,
+                                      color: c.zxk.Colors.CUSTOM,
+                                      look: c.zxk.Looks.LINK,
+                                      onClick: B,
+                                      children: S.intl.string(S.t.ZnqyZ2)
+                                  }),
+                                  (0, r.jsx)(y.Z, {
+                                      showGradient: !0,
+                                      premiumModalAnalyticsLocation: {
+                                          section: R,
+                                          object: I.qAy.BUTTON_CTA
+                                      },
+                                      subscriptionTier: v.Si.TIER_2,
+                                      size: c.zxk.Sizes.SMALL,
+                                      color: c.zxk.Colors.CUSTOM,
+                                      onClick: () => {
+                                          D();
+                                      },
+                                      textOptions: { textOverride: V() }
+                                  })
+                              ]
+                          })
+                      ]
+                  })
+              ]
+          });
 }

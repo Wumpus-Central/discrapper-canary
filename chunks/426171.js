@@ -47,10 +47,7 @@ let h = ''.concat('#').concat('itemSkuId', '='),
                     inline: 'center'
                 });
             let e = o,
-                f = (0, p.oQ)({
-                    product: o,
-                    tab: a
-                }),
+                f = (0, p.oQ)({ product: o }),
                 g = setTimeout(
                     () => {
                         let i = document.getElementById('shop-item-'.concat(e.skuId));

@@ -37,12 +37,13 @@ var E = (function (e) {
     return (e.EMBED = 'embed'), (e.ATTACHMENT = 'attachment'), e;
 })({});
 function b(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.x4.getSetting();
-    if (!t) return [];
-    let n = null == e ? void 0 : e.attachments;
-    return null == e || null == n
+    var t, n;
+    let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.x4.getSetting();
+    if (!r) return [];
+    let o = (null == e || null == (t = e.messageSnapshots[0]) ? void 0 : t.moderatorReport) != null ? (null == e || null == (n = e.messageSnapshots[0]) ? void 0 : n.message.attachments) : null == e ? void 0 : e.attachments;
+    return null == e || null == o
         ? []
-        : n
+        : o
               .filter(g)
               .map((e, t) => {
                   var n;

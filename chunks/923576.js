@@ -61,9 +61,9 @@ function v() {
         C = r.useCallback(
             async (e) => {
                 let t = new Date();
-                null != e && (t.setMonth(t.getMonth() - e), t.setDate(t.getDate() - 1));
+                e > 0 ? t.setMonth(t.getMonth() - e) : t.setDate(t.getDate() - 7), t.setDate(t.getDate() - 2);
                 let n = {
-                    subscription_status: null != e ? p.O0b.ACTIVE : p.O0b.ENDED,
+                    subscription_status: p.O0b.ACTIVE,
                     endedAt: void 0,
                     premium_streak_started_at: x.default.fromTimestamp(t.getTime())
                 };

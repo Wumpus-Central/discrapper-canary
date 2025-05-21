@@ -3777,6 +3777,7 @@ var n_ = (function (e) {
             (e.MOBILE_NITRO_HOME_TAB_SWITCHED = 'mobile_nitro_home_tab_switched'),
             (e.MOBILE_NITRO_HOME_PERKS_CAROUSEL_SCROLLED = 'mobile_nitro_home_perks_carousel_scrolled'),
             (e.TIERED_TENURE_BADGE_CLICKED = 'tiered_tenure_badge_clicked'),
+            (e.TIERED_TENURE_BADGE_LEVEL_UP_REPLAY_CLICKED = 'tiered_tenure_badge_level_up_replay_clicked'),
             (e.TIERED_TENURE_BADGE_PERK_CARD_CLICKED = 'tiered_tenure_badge_perk_card_clicked'),
             (e.VOICE_CALL_TRANSFER = 'voice_call_transfer'),
             (e.DM_SAFETY_COACHMARK_ACTION = 'dm_safety_coachmark_action'),

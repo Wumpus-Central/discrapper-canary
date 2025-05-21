@@ -102,10 +102,10 @@ let x = (e) =>
             r.useEffect(() => {
                 null !== O.current && O.current.updateElementPosition();
             }, [h]);
-        let I = (0, s.TH)().pathname,
-            N = r.useCallback(() => {
-                E.includes(I) || (0, d.uL)(p.Z5c.ME), c();
-            }, [I, c]);
+        let N = (0, s.TH)().pathname,
+            I = r.useCallback(() => {
+                E.includes(N) || (0, d.uL)(p.Z5c.ME), c();
+            }, [N, c]);
         return (0, i.jsx)(
             m.WS,
             ((t = _(
@@ -119,7 +119,7 @@ let x = (e) =>
                         _(
                             {
                                 onClose: a,
-                                onCtaClick: N
+                                onCtaClick: I
                             },
                             b,
                             C

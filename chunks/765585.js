@@ -11,7 +11,7 @@ var i = n(255367),
     g = n(388032),
     m = n(418952);
 let p = r.forwardRef(function (e, t) {
-    let { body: n, header: s, artClassName: p, headerClassName: h, contentClassName: f, tryItText: b, dismissText: _, onTryFeature: x, onClose: E, className: C, inlineArt: j = !1, isPremiumFeature: O = !1, shouldUseHorizontalButtons: S = !1, showGIFTag: v = !1, dismissibleContent: T, position: I = 'top', align: N = 'center', art: y, isPremiumEarlyAccess: A = !1, maxWidth: P = 280, hideDismissButton: R = !1, pointerClassName: D, dismissIconClassName: Z, dismissIcon: w, onDismissIconClick: k, tryItButtonColor: L } = e,
+    let { body: n, header: s, artClassName: p, headerClassName: h, contentClassName: f, tryItText: b, dismissText: _, onTryFeature: x, onClose: E, className: C, inlineArt: j = !1, isPremiumFeature: O = !1, shouldUseHorizontalButtons: S = !1, showGIFTag: v = !1, dismissibleContent: T, position: N = 'top', align: I = 'center', art: y, isPremiumEarlyAccess: A = !1, maxWidth: P = 280, hideDismissButton: R = !1, pointerClassName: D, dismissIconClassName: Z, dismissIcon: w, onDismissIconClick: k, tryItButtonColor: L } = e,
         B = S ? a.zxk.Sizes.LARGE : a.zxk.Sizes.MAX,
         [M, U] = r.useState(!1),
         { ref: V, width: G } = (0, o.ZP)();
@@ -134,10 +134,10 @@ let p = r.forwardRef(function (e, t) {
                     }),
                     (0, i.jsx)('div', {
                         className: l()(m.pointer, D, {
-                            [m.bottomPointer]: 'top' === I,
-                            [m.centerLeftPointer]: 'right' === I && 'center' === N,
-                            [m.topLeftPointer]: 'right' === I && 'top' === N,
-                            [m.bottomLeftPointer]: 'right' === I && 'bottom' === N
+                            [m.bottomPointer]: 'top' === N,
+                            [m.centerLeftPointer]: 'right' === N && 'center' === I,
+                            [m.topLeftPointer]: 'right' === N && 'top' === I,
+                            [m.bottomLeftPointer]: 'right' === N && 'bottom' === I
                         })
                     })
                 ]

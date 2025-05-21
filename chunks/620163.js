@@ -24,8 +24,8 @@ var r = n(990547),
     S = n(540059),
     v = n(621628),
     T = n(243778),
-    I = n(890022),
-    N = n(18438),
+    N = n(890022),
+    I = n(18438),
     y = n(778825),
     A = n(665166),
     P = n(442933),
@@ -78,8 +78,8 @@ var r = n(990547),
     eS = n(389650),
     ev = n(649157),
     eT = n(593648),
-    eI = n(327885),
-    eN = n(595242),
+    eN = n(327885),
+    eI = n(595242),
     ey = n(463153),
     eA = n(36192),
     eP = n(889029),
@@ -272,7 +272,7 @@ let e0 = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 },
                 onSettingsClose: () => {
                     o.Z.wait(() => {
-                        (0, N.It)(), (0, u.P6)(), g.Z.clearSubsection(eY.oAB.PROFILE_CUSTOMIZATION);
+                        (0, I.It)(), (0, u.P6)(), g.Z.clearSubsection(eY.oAB.PROFILE_CUSTOMIZATION);
                     });
                 },
                 url: eY.Z5c.SETTINGS('profile-customization')
@@ -575,7 +575,7 @@ let e0 = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eY.oAB.GUILD_BOOSTING,
                 searchableTitles: [eX.intl.string(eX.t['+CbP2t'])],
                 label: eX.intl.string(eX.t['+CbP2t']),
-                element: eN.Z
+                element: eI.Z
             },
             [ez.s6.SUBSCRIPTIONS]: {
                 section: eY.oAB.SUBSCRIPTIONS,
@@ -1368,7 +1368,7 @@ let e0 = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eY.oAB.NOTIFICATIONS,
                 searchableTitles: [eX.intl.string(eX.t.omtoJy)],
                 parent: ez.s6.NOTIFICATIONS,
-                predicate: () => (0, I.uw)('SettingsRendererConfig')
+                predicate: () => (0, N.uw)('SettingsRendererConfig')
             },
             [ez.s6.KEYBINDS]: {
                 section: eY.oAB.KEYBINDS,
@@ -1527,7 +1527,7 @@ let e0 = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 section: eY.oAB.OVERLAY,
                 searchableTitles: [eX.intl.string(eX.t['9cb1U1']), eX.intl.string(eX.t.HcoRu7)],
                 label: eX.intl.string(eX.t['9cb1U1']),
-                element: eI.Z,
+                element: eN.Z,
                 predicate: () => !e6 && F
             },
             [ez.s6.CHANGELOG]: {

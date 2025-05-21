@@ -2,9 +2,9 @@ n.d(t, { Z: () => p }), n(388685);
 var i = n(442837),
     r = n(715903),
     o = n(71619),
-    a = n(41776),
-    s = n(665906),
-    l = n(271383),
+    l = n(41776),
+    a = n(665906),
+    s = n(271383),
     c = n(607744),
     u = n(496675),
     d = n(432376),
@@ -13,12 +13,12 @@ function p(e) {
     var t, n;
     let p = null == e ? void 0 : e.guild_id,
         m = (0, i.e7)([c.Z], () => null == p || c.Z.canChatInGuild(p), [p]),
-        f = (0, i.e7)([a.Z], () => null != p && a.Z.isLurking(p), [p]),
-        g = (0, i.e7)([l.ZP], () => null != p && l.ZP.isCurrentUserGuest(p), [p]),
+        f = (0, i.e7)([l.Z], () => null != p && l.Z.isLurking(p), [p]),
+        g = (0, i.e7)([s.ZP], () => null != p && s.ZP.isCurrentUserGuest(p), [p]),
         b = (0, i.e7)([u.Z], () => m && u.Z.can(h.Plq.ADD_REACTIONS, e), [m, e]),
         j = (0, r.ux)(p),
-        [, v] = (0, o.AB)(p),
-        O = (0, s.$R)(e);
+        [, O] = (0, o.AB)(p),
+        v = (0, a.$R)(e);
     return null == e
         ? {
               disableReactionReads: !0,
@@ -61,8 +61,8 @@ function p(e) {
                   canAddNewReactions: b,
                   isLurking: f,
                   isGuest: g,
-                  communicationDisabled: v,
-                  isActiveChannelOrUnarchivableThread: O,
+                  communicationDisabled: O,
+                  isActiveChannelOrUnarchivableThread: v,
                   isAutomodQuarantined: j
               })
           )),

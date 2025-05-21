@@ -1,15 +1,13 @@
-n.d(t, { Z: () => h });
+n.d(t, { Z: () => _ });
 var r = n(394821),
     i = n(841784),
     o = n(833664),
-    a = n(499254),
-    s = n(827498),
-    l = n(541716),
-    c = n(810568),
-    u = n(168524),
-    d = n(103479),
-    f = n(553375);
-function _(e, t, n) {
+    a = n(810568),
+    s = n(168524),
+    l = n(103479),
+    c = n(553375),
+    u = n(614716);
+function d(e, t, n) {
     return (
         t in e
             ? Object.defineProperty(e, t, {
@@ -22,7 +20,7 @@ function _(e, t, n) {
         e
     );
 }
-function p(e) {
+function f(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -33,38 +31,40 @@ function p(e) {
                 })
             )),
             r.forEach(function (t) {
-                _(e, t, n[t]);
+                d(e, t, n[t]);
             });
     }
     return e;
 }
-function h(e) {
-    let { location: t, user: n, currentUser: _, activity: h, application: m, entry: g, onClose: E } = e,
-        b = (0, u.Z)(
-            p(
+function _(e) {
+    let { location: t, user: n, currentUser: d, activity: _, application: p, entry: h, onClose: m } = e,
+        g = (0, s.Z)(
+            f(
                 {
                     location: t,
-                    source: c.m1.UserProfile,
+                    source: a.m1.UserProfile,
                     trackEntryPointImpression: !0
                 },
-                (0, f.nK)({
+                (0, c.nK)({
                     user: n,
-                    activity: h,
-                    entry: g
+                    activity: _,
+                    entry: h
                 })
             )
         ),
-        y = (0, i.Z)(h);
-    return y && null != m
-        ? () => {
-              null == E || E(), a.__(s._b.TEXT, l.Ie.NORMAL, { applicationId: m.id });
-          }
-        : !y && (0, o.Z)(h)
-          ? b
-          : (0, r.Z)(h) && n.id !== _.id
+        E = (0, u.Z)({
+            applicationId: null == p ? void 0 : p.id,
+            onClose: m
+        }),
+        b = (0, i.Z)(_);
+    return b && null != p
+        ? E
+        : !b && (0, o.Z)(_)
+          ? g
+          : (0, r.Z)(_) && n.id !== d.id
             ? () =>
-                  (0, d.s)({
-                      activity: h,
+                  (0, l.s)({
+                      activity: _,
                       user: n,
                       index: 0
                   })

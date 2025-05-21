@@ -7,7 +7,7 @@ var r,
     l = n(442837),
     c = n(570140),
     u = n(353926),
-    d = n(814443),
+    d = n(752048),
     f = n(480294),
     _ = n(699516),
     p = n(709054),
@@ -82,7 +82,7 @@ function L() {
             if (N.length >= O) break;
             let t = _.Z.getSince(e),
                 n = d.Z.getUserAffinity(e);
-            if (_.Z.getRelationshipType(e) === g.OGo.FRIEND && !_.Z.isIgnored(e) && null != n && n.affinity > 0 && null != t) {
+            if (_.Z.getRelationshipType(e) === g.OGo.FRIEND && !_.Z.isIgnored(e) && null != n && n.communicationProbability > 0 && null != t) {
                 let n = new Date(t);
                 D(n) && (N.push(e), (P[e] = { friendsSince: n }));
             }
@@ -90,8 +90,8 @@ function L() {
         N.sort((e, t) => {
             let n = d.Z.getUserAffinity(e),
                 r = d.Z.getUserAffinity(t),
-                i = null != n ? n.affinity : 0;
-            return (null != r ? r.affinity : 0) - i;
+                i = null != n ? n.communicationProbability : 0;
+            return (null != r ? r.communicationProbability : 0) - i;
         }),
             (C = new Set(N.slice(0, y)));
     }

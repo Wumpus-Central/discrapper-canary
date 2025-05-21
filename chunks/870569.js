@@ -8,7 +8,7 @@ var i = n(255367),
     c = n(168301);
 let d = r.forwardRef(function (e, t) {
     let { tooltipText: n, children: r, onContextMenu: s, onClick: d, disabled: u, icon: g, iconForeground: m, innerClassName: p, className: h, redGlow: f, tooltipClassName: b, onMouseEnter: _, onMouseLeave: x, 'aria-label': E, 'aria-checked': C, role: j, tooltipColor: O, tooltipForceOpen: S, tooltipContentClassName: v, plated: T } = e,
-        I =
+        N =
             'function' == typeof g
                 ? (0, i.jsx)(g, {
                       width: 20,
@@ -116,9 +116,9 @@ let d = r.forwardRef(function (e, t) {
                                       width: 20,
                                       height: 20,
                                       mask: o.ZP.Masks.PANEL_BUTTON,
-                                      children: I
+                                      children: N
                                   })
-                                : I,
+                                : N,
                             r
                         ]
                     }),

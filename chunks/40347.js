@@ -1,26 +1,26 @@
 d.d(t, { Z: () => Z });
 var a = d(780384),
-    c = d(410030),
-    n = d(848572),
+    n = d(410030),
+    c = d(804413),
     s = d(291175),
     o = d(474936),
-    l = d(861885),
-    i = d(245013),
+    i = d(861885),
+    l = d(245013),
     r = d(662190),
     f = d(234372),
-    p = d(23732),
-    _ = d(643193),
+    _ = d(23732),
+    p = d(643193),
     u = d(107120),
-    b = d(261684),
-    h = d(831631),
-    E = d(594393),
-    m = d(636774),
-    T = d(705821),
-    g = d(927982),
-    U = d(254673),
+    E = d(261684),
+    b = d(831631),
+    T = d(594393),
+    h = d(636774),
+    m = d(705821),
+    U = d(927982),
+    g = d(254673),
     M = d(38932),
     N = d(56946);
-let x = {
+let R = {
         [o.VU.PREMIUM_TENURE_1_MONTH]: {
             dark: ' #D76C1F, #F79C53',
             light: ' #8E2A0B, #D4681C'
@@ -54,56 +54,56 @@ let x = {
             light: ' #6881D4, #956CB8, #5491A0'
         }
     },
-    R = {
+    x = {
         [o.VU.PREMIUM_TENURE_1_MONTH]: {
-            dark: l.Z,
-            light: h.Z
+            dark: i.Z,
+            light: b.Z
         },
         [o.VU.PREMIUM_TENURE_3_MONTH]: {
-            dark: i.Z,
-            light: E.Z
+            dark: l.Z,
+            light: T.Z
         },
         [o.VU.PREMIUM_TENURE_6_MONTH]: {
             dark: r.Z,
-            light: m.Z
+            light: h.Z
         },
         [o.VU.PREMIUM_TENURE_12_MONTH]: {
             dark: f.Z,
-            light: T.Z
+            light: m.Z
         },
         [o.VU.PREMIUM_TENURE_24_MONTH]: {
-            dark: p.Z,
-            light: g.Z
-        },
-        [o.VU.PREMIUM_TENURE_36_MONTH]: {
             dark: _.Z,
             light: U.Z
+        },
+        [o.VU.PREMIUM_TENURE_36_MONTH]: {
+            dark: p.Z,
+            light: g.Z
         },
         [o.VU.PREMIUM_TENURE_60_MONTH]: {
             dark: u.Z,
             light: M.Z
         },
         [o.VU.PREMIUM_TENURE_72_MONTH]: {
-            dark: b.Z,
+            dark: E.Z,
             light: N.Z
         }
     };
 function Z() {
-    let e = (0, n.kG)(),
-        t = (0, a.wj)((0, c.ZP)());
+    let e = (0, c.Z)(),
+        t = (0, a.wj)((0, n.ZP)());
     if (!e) return null;
-    let d = x[e],
-        l = R[e],
-        i = {
+    let d = R[e],
+        i = x[e],
+        l = {
             currentBadge: (0, s.fv)(e),
             currentBadgeTextGradient: t ? (null == d ? void 0 : d.dark) : null == d ? void 0 : d.light,
-            levelUpVideoSrc: t ? (null == l ? void 0 : l.dark) : null == l ? void 0 : l.light
+            levelUpVideoSrc: t ? (null == i ? void 0 : i.dark) : null == i ? void 0 : i.light
         },
         r = o.Qh.indexOf(e);
     if (r > 0) {
         let e = o.Qh[r - 1],
-            d = x[e];
-        (i.prevBadge = (0, s.fv)(e)), (i.prevBadgeTextGradient = t ? (null == d ? void 0 : d.dark) : null == d ? void 0 : d.light);
+            d = R[e];
+        (l.prevBadge = (0, s.fv)(e)), (l.prevBadgeTextGradient = t ? (null == d ? void 0 : d.dark) : null == d ? void 0 : d.light);
     }
-    return i;
+    return l;
 }

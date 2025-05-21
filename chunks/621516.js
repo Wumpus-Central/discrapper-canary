@@ -1,8 +1,8 @@
 n.d(t, { Z: () => E });
 var r = n(255367),
-    i = n(73800),
-    l = n(120356),
-    a = n.n(l),
+    l = n(73800),
+    i = n(120356),
+    a = n.n(i),
     s = n(366594),
     o = n(442837),
     c = n(780384),
@@ -22,8 +22,8 @@ var r = n(255367),
     y = n(388032),
     O = n(461238),
     w = n(906739),
-    S = n(965358),
-    N = n(420196),
+    N = n(965358),
+    S = n(420196),
     P = n(433075);
 function T(e) {
     let { handleHide: t } = e;
@@ -39,7 +39,7 @@ function T(e) {
     });
 }
 function I(e) {
-    let { username: t, title: n, videoSrc: i, messageCount: l, reaction: s, reactionCount: o, classname: c } = e;
+    let { username: t, title: n, videoSrc: l, messageCount: i, reaction: s, reactionCount: o, classname: c } = e;
     return (0, r.jsxs)('div', {
         className: a()(O.videoPreview, c),
         children: [
@@ -73,7 +73,7 @@ function I(e) {
             (0, r.jsx)(d.LZC, { size: 10 }),
             (0, r.jsx)(h.Z, {
                 className: O.video,
-                src: i,
+                src: l,
                 autoPlay: !0,
                 loop: !0,
                 muted: !0
@@ -97,7 +97,7 @@ function I(e) {
                                 (0, r.jsx)(d.Text, {
                                     variant: 'text-xs/normal',
                                     color: 'interactive-normal',
-                                    children: l
+                                    children: i
                                 })
                             ]
                         }),
@@ -124,27 +124,27 @@ function I(e) {
 }
 let E = (e) => {
     var t, n;
-    let { channel: l } = e,
+    let { channel: i } = e,
         h = (0, u.ZP)(),
         E = (0, c.wj)(h),
-        k = (0, o.e7)([j.Z], () => j.Z.getGuild(l.guild_id)),
+        k = (0, o.e7)([j.Z], () => j.Z.getGuild(i.guild_id)),
         R = (0, o.e7)([m.Z], () => m.Z.useReducedMotion),
-        Z = (0, o.e7)([g.Z], () => g.Z.hasHidden(l.id)),
+        Z = (0, o.e7)([g.Z], () => g.Z.hasHidden(i.id)),
         M = (0, p.C)({
-            guildId: l.guild_id,
-            channelId: l.id
+            guildId: i.guild_id,
+            channelId: i.id
         }),
         { transitions: A, setVisible: L } = (0, C.H)(),
-        F = i.useCallback(() => {
-            L(!1), f.Z.hideAdminOnboarding(l.id, !0);
-        }, [l, L]);
-    i.useEffect(() => {
-        (0, x.c)(l.id) || L(!Z);
-    }, [l, L, Z]);
-    let D = i.useMemo(() => [y.intl.string(y.t['8pEGAw']), y.intl.string(y.t.jwfgDQ), y.intl.string(y.t.mPKs29), y.intl.string(y.t.StRbvL)], []),
-        z = i.useMemo(() => [y.intl.string(y.t['m/b58P']), y.intl.string(y.t.MuJSKy), y.intl.string(y.t['d/Wqvr']), y.intl.string(y.t.GJklAw)], []),
+        F = l.useCallback(() => {
+            L(!1), f.Z.hideAdminOnboarding(i.id, !0);
+        }, [i, L]);
+    l.useEffect(() => {
+        (0, x.c)(i.id) || L(!Z);
+    }, [i, L, Z]);
+    let D = l.useMemo(() => [y.intl.string(y.t['8pEGAw']), y.intl.string(y.t.jwfgDQ), y.intl.string(y.t.mPKs29), y.intl.string(y.t.StRbvL)], []),
+        z = l.useMemo(() => [y.intl.string(y.t['m/b58P']), y.intl.string(y.t.MuJSKy), y.intl.string(y.t['d/Wqvr']), y.intl.string(y.t.GJklAw)], []),
         B = () => {
-            b.Z.open(l.guild_id, _.pNK.ROLE_SUBSCRIPTIONS);
+            b.Z.open(i.guild_id, _.pNK.ROLE_SUBSCRIPTIONS);
         },
         H = null != (t = null == k ? void 0 : k.hasFeature(_.oNc.ROLE_SUBSCRIPTIONS_AVAILABLE_FOR_PURCHASE)) && t ? y.intl.string(y.t.n0q7sL) : y.intl.string(y.t.QoYdiY),
         U = null != (n = (null == k ? void 0 : k.hasFeature(_.oNc.CREATOR_MONETIZABLE)) || (null == k ? void 0 : k.hasFeature(_.oNc.CREATOR_MONETIZABLE_PROVISIONAL))) && n,
@@ -278,12 +278,12 @@ let E = (e) => {
                                                       className: O.contentImageContainer,
                                                       children: [
                                                           (0, r.jsx)('img', {
-                                                              src: E ? N : P,
+                                                              src: E ? S : P,
                                                               alt: '',
                                                               className: a()(O.previewEmbedImage, O.secondaryImage)
                                                           }),
                                                           (0, r.jsx)('img', {
-                                                              src: E ? w : S,
+                                                              src: E ? w : N,
                                                               alt: '',
                                                               className: O.previewEmbedImage
                                                           })
