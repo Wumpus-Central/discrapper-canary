@@ -51988,6 +51988,9 @@ html.disable-forced-colors * {
     --button-danger-background-disabled: var(--red-430);
     --button-danger-background-hover: var(--red-500);
     --button-danger-border: hsl(var(--white-500-hsl)/0);
+    --button-expressive-background: var(--white);
+    --button-expressive-background-active: var(--neutral-5);
+    --button-expressive-background-hover: var(--white);
     --button-filled-brand-background: var(--brand-500);
     --button-filled-brand-background-active: var(--brand-600);
     --button-filled-brand-background-hover: var(--brand-560);
@@ -52616,6 +52619,9 @@ html.disable-forced-colors * {
     --button-danger-background-disabled: var(--red-430);
     --button-danger-background-hover: var(--red-500);
     --button-danger-border: hsl(var(--white-500-hsl)/0);
+    --button-expressive-background: var(--brand-500);
+    --button-expressive-background-active: var(--brand-600);
+    --button-expressive-background-hover: var(--brand-560);
     --button-filled-brand-background: var(--brand-500);
     --button-filled-brand-background-active: var(--brand-600);
     --button-filled-brand-background-hover: var(--brand-560);
@@ -53244,6 +53250,9 @@ html.disable-forced-colors * {
     --button-danger-background-disabled: var(--red-430);
     --button-danger-background-hover: var(--red-500);
     --button-danger-border: hsl(var(--white-500-hsl)/0);
+    --button-expressive-background: var(--white);
+    --button-expressive-background-active: var(--neutral-5);
+    --button-expressive-background-hover: var(--white);
     --button-filled-brand-background: var(--brand-500);
     --button-filled-brand-background-active: var(--brand-600);
     --button-filled-brand-background-hover: var(--brand-560);
@@ -53872,6 +53881,9 @@ html.disable-forced-colors * {
     --button-danger-background-disabled: var(--red-430);
     --button-danger-background-hover: var(--red-500);
     --button-danger-border: hsl(var(--white-500-hsl)/0);
+    --button-expressive-background: var(--white);
+    --button-expressive-background-active: var(--neutral-5);
+    --button-expressive-background-hover: var(--white);
     --button-filled-brand-background: var(--brand-500);
     --button-filled-brand-background-active: var(--brand-600);
     --button-filled-brand-background-hover: var(--brand-560);
