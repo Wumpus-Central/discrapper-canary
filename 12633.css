@@ -45637,6 +45637,29 @@ div.mobilePushContainer__3d3b0 {
     background-color: var(--button-secondary-background)
 }
 
+.visual-refresh .side_b3f026 .destructive_b3f026.item_b3f026:not(.disabled_b3f026),
+.visual-refresh .topPill_b3f026 .destructive_b3f026.item_b3f026:not(.disabled_b3f026) {
+    color: var(--text-danger)
+}
+
+.visual-refresh .side_b3f026 .destructive_b3f026.item_b3f026:hover:not(.disabled_b3f026),
+.visual-refresh .topPill_b3f026 .destructive_b3f026.item_b3f026:hover:not(.disabled_b3f026) {
+    background-color: var(--background-feedback-critical);
+    color: var(--text-danger)
+}
+
+.visual-refresh .side_b3f026 .destructive_b3f026.item_b3f026:active:not(.disabled_b3f026),
+.visual-refresh .topPill_b3f026 .destructive_b3f026.item_b3f026:active:not(.disabled_b3f026) {
+    background-color: var(--background-feedback-critical);
+    color: var(--white)
+}
+
+.visual-refresh .side_b3f026 .destructive_b3f026.selected_b3f026.item_b3f026:not(.disabled_b3f026),
+.visual-refresh .topPill_b3f026 .destructive_b3f026.selected_b3f026.item_b3f026:not(.disabled_b3f026) {
+    background-color: var(--background-feedback-critical);
+    color: var(--white)
+}
+
 .visual-refresh.full-motion .item_b3f026 {
     transition: background-color .3s ease
 }
