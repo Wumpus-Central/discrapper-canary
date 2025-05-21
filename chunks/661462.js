@@ -1,19 +1,19 @@
-n.d(t, { Z: () => p }), n(388685);
-var o = n(255367),
-    r = n(73800),
-    c = n(481060),
-    i = n(785717),
-    a = n(128156),
-    l = n(311044),
-    s = n(408986),
-    d = n(228168),
-    u = n(662776);
+t.d(n, { Z: () => p }), t(388685);
+var o = t(255367),
+    r = t(73800),
+    c = t(481060),
+    i = t(785717),
+    a = t(128156),
+    l = t(311044),
+    s = t(408986),
+    d = t(228168),
+    u = t(662776);
 function f(e) {
-    let { user: t, currentUser: n, section: r, subsection: c, displayProfile: i, guildId: u, channelId: f, onClose: p } = e;
+    let { user: n, currentUser: t, section: r, subsection: c, displayProfile: i, guildId: u, channelId: f, onClose: p } = e;
     return r === d.oh.ACTIVITY
         ? (0, o.jsx)(a.Z, {
-              user: t,
-              currentUser: n,
+              user: n,
+              currentUser: t,
               displayProfile: i,
               guildId: u,
               channelId: f,
@@ -22,71 +22,71 @@ function f(e) {
           })
         : r === d.oh.MUTUAL_FRIENDS
           ? (0, o.jsx)(l.Z, {
-                user: t,
+                user: n,
                 guildId: u,
                 channelId: f,
                 onClose: p
             })
           : r === d.oh.MUTUAL_GUILDS
             ? (0, o.jsx)(s.Z, {
-                  user: t,
+                  user: n,
                   onClose: p
               })
             : null;
 }
 function p(e) {
-    var t, n, a;
+    var n, t, a;
     let { user: l, currentUser: s, displayProfile: d, guildId: p, channelId: m, items: b, initialSection: _, initialSubsection: y, onClose: h } = e,
         { trackUserProfileAction: g } = (0, i.KZ)(),
         [{ section: x, subsection: j, text: I }, O] = r.useState(
-            ((n = (function (e) {
-                for (var t = 1; t < arguments.length; t++) {
-                    var n = null != arguments[t] ? arguments[t] : {},
-                        o = Object.keys(n);
+            ((t = (function (e) {
+                for (var n = 1; n < arguments.length; n++) {
+                    var t = null != arguments[n] ? arguments[n] : {},
+                        o = Object.keys(t);
                     'function' == typeof Object.getOwnPropertySymbols &&
                         (o = o.concat(
-                            Object.getOwnPropertySymbols(n).filter(function (e) {
-                                return Object.getOwnPropertyDescriptor(n, e).enumerable;
+                            Object.getOwnPropertySymbols(t).filter(function (e) {
+                                return Object.getOwnPropertyDescriptor(t, e).enumerable;
                             })
                         )),
-                        o.forEach(function (t) {
+                        o.forEach(function (n) {
                             var o;
-                            (o = n[t]),
-                                t in e
-                                    ? Object.defineProperty(e, t, {
+                            (o = t[n]),
+                                n in e
+                                    ? Object.defineProperty(e, n, {
                                           value: o,
                                           enumerable: !0,
                                           configurable: !0,
                                           writable: !0
                                       })
-                                    : (e[t] = o);
+                                    : (e[n] = o);
                         });
                 }
                 return e;
             })(
                 {},
                 null !=
-                    (t = b.find((e) => {
-                        let { section: t } = e;
-                        return t === _;
+                    (n = b.find((e) => {
+                        let { section: n } = e;
+                        return n === _;
                     }))
-                    ? t
+                    ? n
                     : b[0]
             )),
             (a = a = { subsection: y }),
             Object.getOwnPropertyDescriptors
-                ? Object.defineProperties(n, Object.getOwnPropertyDescriptors(a))
-                : (function (e, t) {
-                      var n = Object.keys(e);
+                ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(a))
+                : (function (e, n) {
+                      var t = Object.keys(e);
                       if (Object.getOwnPropertySymbols) {
                           var o = Object.getOwnPropertySymbols(e);
-                          n.push.apply(n, o);
+                          t.push.apply(t, o);
                       }
-                      return n;
+                      return t;
                   })(Object(a)).forEach(function (e) {
-                      Object.defineProperty(n, e, Object.getOwnPropertyDescriptor(a, e));
+                      Object.defineProperty(t, e, Object.getOwnPropertyDescriptor(a, e));
                   }),
-            n)
+            t)
         );
     return (0, o.jsxs)('div', {
         className: u.container,
@@ -100,9 +100,9 @@ function p(e) {
                         action: 'PRESS_SECTION',
                         section: e
                     }),
-                        O((t) => {
-                            var n;
-                            return null != (n = b.find((t) => t.section === e)) ? n : t;
+                        O((n) => {
+                            var t;
+                            return null != (t = b.find((n) => n.section === e)) ? t : n;
                         });
                 },
                 children: b.map((e) =>

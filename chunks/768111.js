@@ -1,15 +1,15 @@
-n.d(t, { Z: () => s }), n(539854);
-var o = n(585305),
-    r = n(806729),
-    c = n(708108),
-    i = n(146078),
-    a = n(228168),
-    l = n(388032);
+t.d(n, { Z: () => s }), t(539854);
+var o = t(585305),
+    r = t(806729),
+    c = t(708108),
+    i = t(146078),
+    a = t(228168),
+    l = t(388032);
 function s(e) {
-    let { user: t, currentUser: n } = e,
-        { mutualFriendsCount: s, mutualGuilds: d } = (0, r.Z)(t),
+    let { user: n, currentUser: t } = e,
+        { mutualFriendsCount: s, mutualGuilds: d } = (0, r.Z)(n),
         u = null == d ? void 0 : d.length,
-        f = (0, o.Z)(t),
+        f = (0, o.Z)(n),
         p = [
             {
                 text: l.intl.string(l.t.chq59f),
@@ -18,7 +18,7 @@ function s(e) {
             }
         ];
     return (
-        t.id !== (null == n ? void 0 : n.id) &&
+        n.id !== (null == t ? void 0 : t.id) &&
             f &&
             (p.push({
                 text: (0, c.Z)(s),
