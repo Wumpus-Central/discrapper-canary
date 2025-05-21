@@ -277,16 +277,16 @@ function ea(e, t, n) {
             gameTitle: L.r.build(e.config).application.name
         });
     if ((0, P.q8)(e)) {
-        var a;
-        let t = null == (a = e.config.videoMetadata) ? void 0 : a.messages.videoTitle;
-        return null == t ? j.intl.string(j.t['o+e9ys']) : j.intl.formatToPlainString(j.t['9m9MnZ'], { videoTitle: t });
+        let t = L.r.build(e.config).defaultWatchVideoTask,
+            n = null == t ? void 0 : t.messages.videoTitle;
+        return null == n ? j.intl.string(j.t['o+e9ys']) : j.intl.formatToPlainString(j.t['9m9MnZ'], { videoTitle: n });
     }
     if (null != i) return i.title;
     if ((0, P.pO)(e) && (0, P.KM)(e)) return j.intl.format(j.t['1NaRSk'], { minutes: r });
-    let s = j.t['6zWtV1'];
+    let a = j.t['6zWtV1'];
     return (
-        (0, P.Nj)({ quest: e }) && (s = j.t['wmOh/v']),
-        j.intl.format(s, {
+        (0, P.Nj)({ quest: e }) && (a = j.t['wmOh/v']),
+        j.intl.format(a, {
             minutes: r,
             gameTitle: e.config.messages.gameTitle
         })

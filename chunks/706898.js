@@ -172,32 +172,33 @@ class C extends (r = a.Component) {
         }
     }
     render() {
-        let { children: e, className: t, id: n, selectedItem: r, color: i, disabled: a, onContextMenu: s, clickableRef: c, clickableInnerRef: u, look: d, disableItemStyles: _ } = this.props,
-            p = this.props['aria-label'],
-            m = r === n;
+        let { children: e, className: t, id: n, selectedItem: r, color: i, variant: a, disabled: s, onContextMenu: c, clickableRef: u, clickableInnerRef: d, look: _, disableItemStyles: p } = this.props,
+            m = this.props['aria-label'],
+            g = r === n;
         return (0, o.jsx)(f.P, {
             className: l()(t, {
-                [h.item]: !_,
-                [h.brand]: 'brand' === d,
-                [h.selected]: null == i && m,
-                [h.themed]: 'grey' === d,
-                [h.disabled]: null == i && a
+                [h.item]: !p,
+                [h.brand]: 'brand' === _,
+                [h.selected]: null == i && g,
+                [h.themed]: 'grey' === _,
+                [h.disabled]: null == i && s,
+                [h.destructive]: 'destructive' === a
             }),
             style: this.getStyle(),
             role: 'tab',
-            'aria-selected': m,
-            'aria-controls': m ? A(''.concat(n)) : void 0,
-            'aria-disabled': a,
-            tabIndex: m ? 0 : -1,
+            'aria-selected': g,
+            'aria-controls': g ? A(''.concat(n)) : void 0,
+            'aria-disabled': s,
+            tabIndex: g ? 0 : -1,
             onMouseEnter: null != i ? this.handleMouseOver : void 0,
             onClick: this.handleClick,
             onMouseLeave: null != i ? this.handleMouseOut : void 0,
             onMouseUp: null != i ? this.handleMouseUp : void 0,
             onMouseDown: this.handleMouseDown,
-            onContextMenu: s,
-            'aria-label': p,
-            innerRef: u,
-            ref: c,
+            onContextMenu: c,
+            'aria-label': m,
+            innerRef: d,
+            ref: u,
             children: e
         });
     }

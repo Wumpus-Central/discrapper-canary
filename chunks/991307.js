@@ -1,7 +1,7 @@
-n.d(t, { Z: () => p });
-var i = n(255367);
+n.d(t, { Z: () => h });
+var l = n(255367);
 n(73800);
-var l = n(442837),
+var i = n(442837),
     r = n(481060),
     o = n(668781),
     a = n(846027),
@@ -9,25 +9,25 @@ var l = n(442837),
     u = n(131951),
     d = n(19780),
     c = n(914010),
-    f = n(594174),
-    b = n(626135),
+    g = n(594174),
+    f = n(626135),
     Z = n(981631),
-    g = n(65154),
+    b = n(65154),
     O = n(388032),
-    v = n(752420);
-function p(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : g.Yn.DEFAULT,
-        n = (0, l.e7)([f.default], () => {
+    m = n(752420);
+function h(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b.Yn.DEFAULT,
+        n = (0, i.e7)([g.default], () => {
             var t;
-            return (null == (t = f.default.getCurrentUser()) ? void 0 : t.id) === e;
+            return (null == (t = g.default.getCurrentUser()) ? void 0 : t.id) === e;
         }),
-        p = (0, l.e7)([s.Z], () => s.Z.isLocalSoundboardMuted(e)),
+        h = (0, i.e7)([s.Z], () => s.Z.isLocalSoundboardMuted(e)),
         {
             muted: j,
-            deafened: m = !1,
-            localVideoDisabled: h = !1,
-            localVideoAutoDisabled: y = !1
-        } = (0, l.cj)(
+            deafened: v = !1,
+            localVideoDisabled: E = !1,
+            localVideoAutoDisabled: p = !1
+        } = (0, i.cj)(
             [u.Z],
             () =>
                 n
@@ -43,14 +43,14 @@ function p(e) {
             [n, t, e]
         ),
         P =
-            u.Z.supports(g.AN.DISABLE_VIDEO) && !n
-                ? (0, i.jsx)(
+            u.Z.supports(b.AN.DISABLE_VIDEO) && !n
+                ? (0, l.jsx)(
                       r.S89,
                       {
                           id: 'disable-video',
                           label: O.intl.string(O.t['4MMsWF']),
                           action: () => {
-                              if (y)
+                              if (p)
                                   return void o.Z.show({
                                       title: O.intl.string(O.t.m2Hyj4),
                                       body: O.intl.string(O.t.EhaK6O),
@@ -58,19 +58,19 @@ function p(e) {
                                       cancelText: O.intl.string(O.t.jEqEh4),
                                       onConfirm: () => a.Z.setDisableLocalVideo(e, Z.ZUi.MANUAL_ENABLED)
                                   });
-                              let n = h ? Z.ZUi.MANUAL_ENABLED : Z.ZUi.DISABLED;
+                              let n = E ? Z.ZUi.MANUAL_ENABLED : Z.ZUi.DISABLED;
                               a.Z.setDisableLocalVideo(e, n, t);
                           },
-                          checked: h,
-                          subtext: y
-                              ? (0, i.jsxs)('div', {
-                                    className: v.videoPaused,
+                          checked: E,
+                          subtext: p
+                              ? (0, l.jsxs)('div', {
+                                    className: m.videoPaused,
                                     children: [
-                                        (0, i.jsx)(r.P4T, {
+                                        (0, l.jsx)(r.P4T, {
                                             size: 'custom',
                                             color: 'currentColor',
                                             width: 12,
-                                            className: v.warningCircle
+                                            className: m.warningCircle
                                         }),
                                         O.intl.string(O.t.m2Hyj4)
                                     ]
@@ -80,31 +80,31 @@ function p(e) {
                       'disable-video'
                   )
                 : null,
-        x = n
+        y = n
             ? null
-            : (0, i.jsx)(
+            : (0, l.jsx)(
                   r.S89,
                   {
                       id: 'soundboard-sound-mute',
                       label: O.intl.string(O.t.LxhEuL),
                       action: () => {
                           let n = d.Z.getRTCConnection();
-                          b.default.track(Z.rMx.AUDIO_LOCAL_SOUNDBOARD_MUTE_TOGGLED, {
+                          f.default.track(Z.rMx.AUDIO_LOCAL_SOUNDBOARD_MUTE_TOGGLED, {
                               guild_id: c.Z.getGuildId(),
                               target_user_id: e,
                               media_session_id: null == n ? void 0 : n.getMediaSessionId(),
                               parent_media_session_id: null == n ? void 0 : n.parentMediaSessionId,
-                              mute_soundboard: !p
+                              mute_soundboard: !h
                           }),
                               a.Z.toggleLocalSoundboardMute(e, t);
                       },
-                      checked: p
+                      checked: h
                   },
                   'soundboard-sound-mute'
               );
     return n
         ? [
-              (0, i.jsx)(
+              (0, l.jsx)(
                   r.S89,
                   {
                       id: 'mute',
@@ -118,7 +118,7 @@ function p(e) {
                   },
                   'self-mute'
               ),
-              (0, i.jsx)(
+              (0, l.jsx)(
                   r.S89,
                   {
                       id: 'deafen',
@@ -128,14 +128,14 @@ function p(e) {
                               context: t,
                               location: 'User Context Menu'
                           }),
-                      checked: m
+                      checked: v
                   },
                   'self-deafen'
               ),
               P
           ]
         : [
-              (0, i.jsx)(
+              (0, l.jsx)(
                   r.S89,
                   {
                       id: 'mute',
@@ -145,7 +145,7 @@ function p(e) {
                   },
                   'self-mute'
               ),
-              x,
+              y,
               P
           ];
 }

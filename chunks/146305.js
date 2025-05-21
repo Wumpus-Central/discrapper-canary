@@ -523,6 +523,7 @@ let eO = {
                         size: 'xs',
                         color: 'currentColor'
                     }),
+                    variant: 'destructive',
                     predicate: () => t.isOwnerWithRequiredMfaLevel
                 };
             case ef.pNK.LANDING:

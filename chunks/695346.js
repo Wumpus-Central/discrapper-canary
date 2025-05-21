@@ -650,9 +650,31 @@ let eI = (0, d.KM)(
         'clientThemeSettings',
         (e) => {
             var t;
-            return { backgroundGradientPresetId: null == e || null == (t = e.backgroundGradientPresetId) ? void 0 : t.value };
+            return {
+                backgroundGradientPresetId: null == e || null == (t = e.backgroundGradientPresetId) ? void 0 : t.value,
+                customUserThemeSettings:
+                    (null == e ? void 0 : e.customUserThemeSettings) != null
+                        ? {
+                              colors: e.customUserThemeSettings.colors,
+                              gradientColorStops: e.customUserThemeSettings.gradientColorStops,
+                              gradientAngle: e.customUserThemeSettings.gradientAngle,
+                              baseMix: e.customUserThemeSettings.baseMix
+                          }
+                        : void 0
+            };
         },
-        (e) => ({ backgroundGradientPresetId: null != e.backgroundGradientPresetId ? a.yC.create({ value: e.backgroundGradientPresetId }) : void 0 })
+        (e) => ({
+            backgroundGradientPresetId: null != e.backgroundGradientPresetId ? a.yC.create({ value: e.backgroundGradientPresetId }) : void 0,
+            customUserThemeSettings:
+                null != e.customUserThemeSettings
+                    ? {
+                          colors: e.customUserThemeSettings.colors,
+                          gradientColorStops: e.customUserThemeSettings.gradientColorStops,
+                          gradientAngle: e.customUserThemeSettings.gradientAngle,
+                          baseMix: e.customUserThemeSettings.baseMix
+                      }
+                    : void 0
+        })
     ),
     eT = (0, d.R2)(
         (0, d.KM)(

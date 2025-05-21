@@ -1,6 +1,6 @@
-t.d(n, {
-    S: () => i,
-    _: () => l
+i.d(l, {
+    S: () => n,
+    _: () => a
 });
-let l = 'Guild Welcome Screen',
-    i = 'hasClickedWelcomeEmojiPicker';
+let a = 'Guild Welcome Screen',
+    n = 'hasClickedWelcomeEmojiPicker';

@@ -91,6 +91,13 @@ class u {
             i = t[r.X.ACHIEVEMENT_IN_GAME];
         return null != (e = null != n ? n : i) ? e : null;
     }
+    get defaultWatchVideoTask() {
+        var e, t, n;
+        if (null == this.quest.taskConfigV2) return null;
+        let i = null == (e = this.quest.taskConfigV2) ? void 0 : e.tasks[r.X.WATCH_VIDEO],
+            o = null == (t = this.quest.taskConfigV2) ? void 0 : t.tasks[r.X.WATCH_VIDEO_ON_MOBILE];
+        return null != i && null != o ? i : null != (n = null != o ? o : i) ? n : null;
+    }
     constructor(e) {
         a(this, 'quest', void 0), (this.quest = e);
     }

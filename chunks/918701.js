@@ -850,8 +850,9 @@ function tE(e, t) {
     return e <= 0 || t <= 0 ? 0 : e >= t ? 1 : Math.min(1, Math.round((e / t) * 100) / 100);
 }
 function tb(e) {
-    var t, n, r, i;
-    return null != (i = null != (r = null == (t = e.videoMetadata) ? void 0 : t.messages.videoEndCtaButtonLabel) ? r : null == (n = e.videoMetadata) ? void 0 : n.messages.videoEndCtaTitle) ? i : x.intl.string(x.t.iiTtpK);
+    var t, n;
+    let r = P.r.build(e).defaultWatchVideoTask;
+    return null != (n = null != (t = null == r ? void 0 : r.messages.videoEndCtaButtonLabel) ? t : null == r ? void 0 : r.messages.videoEndCtaTitle) ? n : x.intl.string(x.t.iiTtpK);
 }
 function ty(e) {
     var t;

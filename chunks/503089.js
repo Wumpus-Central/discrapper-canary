@@ -262,7 +262,7 @@ class w extends i.PureComponent {
                 this._unmounted || ((this._intensity = C), this.forceUpdate());
             }),
             O(this, 'renderSettingsSectionTabBarItem', (e, t, n) => {
-                let { section: i, label: s = null, ariaLabel: l, onClick: c, color: u, icon: p, className: f, newIndicator: g, newIndicatorDismissibleContentTypes: b, badgeCount: m } = e,
+                let { section: i, label: s = null, ariaLabel: l, onClick: c, variant: u, icon: p, className: f, newIndicator: g, newIndicatorDismissibleContentTypes: b, badgeCount: m } = e,
                     O = null;
                 i === _.oAB.ACCOUNT && this.props.isEligibleForPomelo
                     ? (O = (0, r.jsx)(a.P4T, {
@@ -298,7 +298,7 @@ class w extends i.PureComponent {
                 return (0, r.jsx)(
                     a.njP.Item,
                     {
-                        color: u,
+                        variant: u,
                         id: i,
                         onClick: c,
                         className: f,

@@ -1950,7 +1950,8 @@ let e0 = () => [s.z.CLIENT_THEMES_SETTINGS_BADGE, s.z.DEKSTOP_CUSTOM_APP_ICON_BA
                 icon: (0, i.jsx)(a.PBZ, {
                     size: 'xs',
                     color: 'currentColor'
-                })
+                }),
+                variant: 'destructive'
             },
             [ez.s6.SOCIAL_LINKS]: {
                 section: m.ID.CUSTOM,

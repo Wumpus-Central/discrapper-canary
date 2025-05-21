@@ -9,5 +9,6 @@ e.exports = {
     disabled: 'disabled_b3f026',
     side: 'side_b3f026',
     top: 'top_b3f026',
-    topPill: 'topPill_b3f026'
+    topPill: 'topPill_b3f026',
+    destructive: 'destructive_b3f026'
 };

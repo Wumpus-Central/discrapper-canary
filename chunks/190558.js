@@ -1539,6 +1539,63 @@ let { Themes: r } = n(15202).V,
                     opacity: 0
                 }
             },
+            BUTTON_EXPRESSIVE_BACKGROUND: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'WHITE',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'BRAND_500',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'WHITE',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'WHITE',
+                    opacity: 1
+                }
+            },
+            BUTTON_EXPRESSIVE_BACKGROUND_ACTIVE: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'NEUTRAL_5',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'BRAND_600',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'NEUTRAL_5',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'NEUTRAL_5',
+                    opacity: 1
+                }
+            },
+            BUTTON_EXPRESSIVE_BACKGROUND_HOVER: {
+                category: 'generic',
+                [r.DARK]: {
+                    raw: 'WHITE',
+                    opacity: 1
+                },
+                [r.LIGHT]: {
+                    raw: 'BRAND_560',
+                    opacity: 1
+                },
+                [r.MIDNIGHT]: {
+                    raw: 'WHITE',
+                    opacity: 1
+                },
+                [r.DARKER]: {
+                    raw: 'WHITE',
+                    opacity: 1
+                }
+            },
             BUTTON_FILLED_BRAND_BACKGROUND: {
                 category: 'generic',
                 [r.DARK]: {

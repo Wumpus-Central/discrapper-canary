@@ -149,14 +149,15 @@ function T(e) {
     );
 }
 function A(e, t, n, r) {
-    var i, o;
-    let a,
-        s = null != (o = null == (i = e.config.videoMetadata) ? void 0 : i.messages.videoTitle) ? o : 'video',
+    var i;
+    let o,
+        a = f.r.build(e.config).defaultWatchVideoTask,
+        s = null != (i = null == a ? void 0 : a.messages.videoTitle) ? i : 'video',
         c = f.r.build(e.config).defaultReward.messages.nameWithArticle,
         u = (0, l.f$)(e.config),
         d = (0, l._p)(e.config);
     return O(
-        (a = u && n ? (d ? h.t['xqX+r6'] : h.t['vs/xBg']) : u || null != t ? h.t['W/HkLC'] : e.id === _.V6 ? h.t.Rsd5bG : h.t.yMsQ7e),
+        (o = u && n ? (d ? h.t['xqX+r6'] : h.t['vs/xBg']) : u || null != t ? h.t['W/HkLC'] : e.id === _.V6 ? h.t.Rsd5bG : h.t.yMsQ7e),
         {
             videoTitle: s,
             rewardNameWithArticle: c,
