@@ -91,13 +91,25 @@ let V = new E.Z('GatewaySocket'),
 function H(e) {
     let { actuallySkipped: t, reason: n } = e,
         r = x.a(),
-        i = k.Pf();
+        i = k.Pf(),
+        o = m.Z.getState(),
+        a = i.length > 0 ? ''.concat(n, ' + ').concat(i) : n,
+        s = r ? 'paused' : 'request_state';
     v.default.track(j.rMx.GATEWAY_CONNECT_SKIPPED, {
         actually_skipped: null != t ? t : r,
-        client_app_state: m.Z.getState(),
-        connect_reason: i.length > 0 ? ''.concat(n, ' + ').concat(i) : n,
-        skip_context: r ? 'paused' : 'request_state'
-    });
+        client_app_state: o,
+        connect_reason: a,
+        skip_context: s
+    }),
+        setTimeout(() => {
+            v.default.track(j.rMx.POST_GATEWAY_CONNECT_SKIPPED, {
+                actually_skipped: null != t ? t : r,
+                original_client_app_state: o,
+                client_app_state: m.Z.getState(),
+                skip_context: s,
+                gateway_connect_reasons: k.Pf()
+            });
+        }, 200);
 }
 function Y(e) {
     let t,

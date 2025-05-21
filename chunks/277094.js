@@ -1,8 +1,8 @@
 t.d(n, { Z: () => f });
 var o = t(255367);
 t(73800);
-var c = t(481060),
-    i = t(906732),
+var i = t(481060),
+    c = t(906732),
     r = t(705556),
     a = t(30556),
     l = t(821706),
@@ -11,7 +11,7 @@ var c = t(481060),
     u = t(887910);
 function f(e) {
     let { user: n, currentUser: t, guildId: f, relationshipType: p, onClose: _ } = e,
-        { newestAnalyticsLocation: m } = (0, i.ZP)(),
+        { newestAnalyticsLocation: m } = (0, c.ZP)(),
         { gameFriends: b, hasOutgoingPendingGameFriends: I, hasIncomingPendingGameFriends: h } = (0, d.H)({ userId: n.id });
     if (p === s.OGo.BLOCKED) return null;
     if (n.id === t.id)
@@ -85,7 +85,7 @@ function f(e) {
                   (0, o.jsx)(l.Z7, {
                       type: 'text',
                       userId: n.id,
-                      color: c.zxk.Colors.BRAND,
+                      color: i.zxk.Colors.BRAND,
                       analyticsLocation: m,
                       autoFocus: !0
                   })

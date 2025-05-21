@@ -7,6 +7,8 @@ e.exports = {
     profileHeader: 'profileHeader__9c3be',
     profileBody: 'profileBody__9c3be',
     profileSection: 'profileSection__9c3be',
+    profileBanner: 'profileBanner__9c3be',
+    friendRequestBanner: 'friendRequestBanner__9c3be',
     profileUsernameTag: 'profileUsernameTag__9c3be',
     profileButtons: 'profileButtons__9c3be',
     profileScroller: 'profileScroller__9c3be',

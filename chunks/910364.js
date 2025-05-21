@@ -1,7 +1,7 @@
-t.d(n, { Z: () => G }), t(388685);
+t.d(n, { Z: () => B }), t(388685);
 var o = t(255367),
-    c = t(73800),
-    i = t(366594),
+    i = t(73800),
+    c = t(366594),
     r = t(442837),
     a = t(481060),
     l = t(727637),
@@ -15,24 +15,25 @@ var o = t(255367),
     b = t(5192),
     I = t(785717),
     h = t(221292),
-    y = t(687158),
-    x = t(510659),
+    y = t(977378),
+    x = t(687158),
+    g = t(510659),
     j = t(892001),
-    g = t(113557),
+    v = t(113557),
     O = t(867176),
-    v = t(451834),
-    Z = t(502762),
+    Z = t(451834),
+    P = t(502762),
     A = t(544989),
     N = t(481932),
-    P = t(195387),
+    w = t(195387),
     C = t(664794),
-    w = t(4517),
+    E = t(4517),
     T = t(62154),
     S = t(277094),
-    E = t(228168),
-    M = t(388032),
+    M = t(228168),
+    D = t(388032),
     L = t(405666);
-function D(e) {
+function R(e) {
     for (var n = 1; n < arguments.length; n++) {
         var t = null != arguments[n] ? arguments[n] : {},
             o = Object.keys(t);
@@ -57,7 +58,7 @@ function D(e) {
     }
     return e;
 }
-function R(e, n) {
+function G(e, n) {
     return (
         (n = null != n ? n : {}),
         Object.getOwnPropertyDescriptors
@@ -75,124 +76,125 @@ function R(e, n) {
         e
     );
 }
-function G(e) {
-    let { user: n, currentUser: t, guildId: G, channelId: B, messageId: k, roleId: F, sessionId: V, initialSection: U, initialSubsection: W, transitionState: Y, customStatusPrompt: q, openedAt: H, onClose: K, showGuildProfile: Q = !0, sourceAnalyticsLocations: z = [] } = e,
-        { analyticsLocations: J } = (0, u.ZP)([...z, s.Z.USER_PROFILE_MODAL]),
-        X = (0, I.ZB)({
+function B(e) {
+    let { user: n, currentUser: t, guildId: B, channelId: k, messageId: V, roleId: F, sessionId: U, initialSection: W, initialSubsection: Y, transitionState: q, customStatusPrompt: H, openedAt: K, onClose: Q, showGuildProfile: z = !0, sourceAnalyticsLocations: J = [] } = e,
+        { analyticsLocations: X } = (0, u.ZP)([...J, s.Z.USER_PROFILE_MODAL]),
+        $ = (0, I.ZB)({
             layout: 'MODAL',
             userId: n.id,
-            sourceSessionId: V,
-            guildId: G,
-            channelId: B,
-            messageId: k,
+            sourceSessionId: U,
+            guildId: B,
+            channelId: k,
+            messageId: V,
             roleId: F,
-            showGuildProfile: Q
+            showGuildProfile: z
         }),
-        $ = (0, x.$m)(),
-        ee = (0, a.q_F)({
-            opacity: +(null != $.interactionType),
+        ee = (0, g.$m)(),
+        en = (0, a.q_F)({
+            opacity: +(null != ee.interactionType),
             config: { duration: 150 }
         }),
-        en = (0, y.ZP)(n.id, Q ? G : void 0),
-        et = (0, y.ZP)(n.id, G),
-        eo = (0, r.e7)([m.Z], () => m.Z.getRelationshipType(n.id)),
+        et = (0, x.ZP)(n.id, z ? B : void 0),
+        eo = (0, x.ZP)(n.id, B),
+        ei = (0, r.e7)([m.Z], () => m.Z.getRelationshipType(n.id)),
         ec = n.id === t.id,
-        ei = (0, f.p)({ location: 'UserProfileModal' }),
-        er = c.useMemo(() => (null != q ? q : (0, p.Z)()), [q]),
-        ea = c.useMemo(() => (null != G ? { [G]: [n.id] } : {}), [G, n.id]);
-    (0, d.$)(ea);
-    let el = c.useRef(null),
-        ed = (0, l.Z)(el);
+        er = (0, f.p)({ location: 'UserProfileModal' }),
+        { viewMainProfileEnabled: ea } = (0, y.E)({ location: 'UserProfileModal' }),
+        el = i.useMemo(() => (null != H ? H : (0, p.Z)()), [H]),
+        ed = i.useMemo(() => (null != B ? { [B]: [n.id] } : {}), [B, n.id]);
+    (0, d.$)(ed);
+    let es = i.useRef(null),
+        eu = (0, l.Z)(es);
     return (0, o.jsx)(u.Gt, {
-        value: J,
+        value: X,
         children: (0, o.jsx)(I.Mt, {
-            value: X,
-            openedAt: H,
-            fetchStartedAt: null == en ? void 0 : en.fetchStartedAt,
-            fetchEndedAt: null == en ? void 0 : en.fetchEndedAt,
-            isLoaded: null == en ? void 0 : en.isLoaded,
-            children: (0, o.jsx)(x.NJ, {
-                value: $,
+            value: $,
+            openedAt: K,
+            fetchStartedAt: null == et ? void 0 : et.fetchStartedAt,
+            fetchEndedAt: null == et ? void 0 : et.fetchEndedAt,
+            isLoaded: null == et ? void 0 : et.isLoaded,
+            children: (0, o.jsx)(g.NJ, {
+                value: ee,
                 children: (0, o.jsxs)(a.Y0X, {
-                    transitionState: Y,
+                    transitionState: q,
                     className: L.root,
                     hideShadow: !0,
-                    'aria-label': M.intl.string(M.t['3N/J2t']),
+                    'aria-label': D.intl.string(D.t['3N/J2t']),
                     children: [
-                        (0, o.jsxs)(Z.Z, {
+                        (0, o.jsxs)(P.Z, {
                             user: n,
-                            displayProfile: en,
-                            themeType: E.lY.MODAL,
-                            ref: el,
+                            displayProfile: et,
+                            themeType: M.lY.MODAL,
+                            ref: es,
                             children: [
                                 (0, o.jsxs)(A.Z, {
                                     children: [
-                                        (0, o.jsx)(P.Z, {
-                                            shouldShowTooltip: null === $.interactionType,
+                                        (0, o.jsx)(w.Z, {
+                                            shouldShowTooltip: null === ee.interactionType,
                                             user: n,
-                                            guildId: G,
-                                            channelId: B,
-                                            onClose: K
+                                            guildId: B,
+                                            channelId: k,
+                                            onClose: Q
                                         }),
                                         (0, o.jsx)(N.Z, {
-                                            shouldShowTooltip: null === $.interactionType,
-                                            themeType: E.lY.MODAL,
+                                            shouldShowTooltip: null === ee.interactionType,
+                                            themeType: M.lY.MODAL,
                                             user: n
                                         }),
                                         (0, o.jsx)(C.Z, {
                                             type: 'banner',
                                             user: n,
-                                            guildId: G,
+                                            guildId: B,
                                             viewProfileItem:
-                                                (null == et ? void 0 : et.guildId) == null
-                                                    ? null
-                                                    : (null == en ? void 0 : en.guildId) != null
-                                                      ? (0, o.jsx)(a.sNh, {
-                                                            id: 'view-main-profile',
-                                                            label: M.intl.string(M.t.GISTtb),
-                                                            subtext: M.intl.formatToPlainString(M.t['mn/nW1'], { displayName: b.ZP.getName(void 0, void 0, n) }),
-                                                            action: () => {
-                                                                K(),
-                                                                    (0, j.openUserProfileModal)(
-                                                                        R(D({}, X), {
-                                                                            showGuildProfile: !1,
-                                                                            sourceAnalyticsLocations: z
-                                                                        })
-                                                                    ),
-                                                                    (0, h.pQ)(
-                                                                        D(
-                                                                            {
-                                                                                action: 'PRESS_VIEW_MAIN_PROFILE',
-                                                                                analyticsLocations: J
-                                                                            },
-                                                                            X
-                                                                        )
-                                                                    );
-                                                            }
-                                                        })
-                                                      : (0, o.jsx)(a.sNh, {
-                                                            id: 'view-server-profile',
-                                                            label: M.intl.string(M.t.DisZzM),
-                                                            subtext: M.intl.formatToPlainString(M.t['mn/nW1'], { displayName: b.ZP.getName(G, B, n) }),
-                                                            action: () => {
-                                                                K(),
-                                                                    (0, j.openUserProfileModal)(
-                                                                        R(D({}, X), {
-                                                                            showGuildProfile: !0,
-                                                                            sourceAnalyticsLocations: z
-                                                                        })
-                                                                    ),
-                                                                    (0, h.pQ)(
-                                                                        D(
-                                                                            {
-                                                                                action: 'PRESS_VIEW_SERVER_PROFILE',
-                                                                                analyticsLocations: J
-                                                                            },
-                                                                            X
-                                                                        )
-                                                                    );
-                                                            }
-                                                        })
+                                                ea && (null == eo ? void 0 : eo.guildId) != null
+                                                    ? (null == et ? void 0 : et.guildId) != null
+                                                        ? (0, o.jsx)(a.sNh, {
+                                                              id: 'view-main-profile',
+                                                              label: D.intl.string(D.t.GISTtb),
+                                                              subtext: D.intl.formatToPlainString(D.t['mn/nW1'], { displayName: b.ZP.getName(void 0, void 0, n) }),
+                                                              action: () => {
+                                                                  Q(),
+                                                                      (0, j.openUserProfileModal)(
+                                                                          G(R({}, $), {
+                                                                              showGuildProfile: !1,
+                                                                              sourceAnalyticsLocations: J
+                                                                          })
+                                                                      ),
+                                                                      (0, h.pQ)(
+                                                                          R(
+                                                                              {
+                                                                                  action: 'PRESS_VIEW_MAIN_PROFILE',
+                                                                                  analyticsLocations: X
+                                                                              },
+                                                                              $
+                                                                          )
+                                                                      );
+                                                              }
+                                                          })
+                                                        : (0, o.jsx)(a.sNh, {
+                                                              id: 'view-server-profile',
+                                                              label: D.intl.string(D.t.DisZzM),
+                                                              subtext: D.intl.formatToPlainString(D.t['mn/nW1'], { displayName: b.ZP.getName(B, k, n) }),
+                                                              action: () => {
+                                                                  Q(),
+                                                                      (0, j.openUserProfileModal)(
+                                                                          G(R({}, $), {
+                                                                              showGuildProfile: !0,
+                                                                              sourceAnalyticsLocations: J
+                                                                          })
+                                                                      ),
+                                                                      (0, h.pQ)(
+                                                                          R(
+                                                                              {
+                                                                                  action: 'PRESS_VIEW_SERVER_PROFILE',
+                                                                                  analyticsLocations: X
+                                                                              },
+                                                                              $
+                                                                          )
+                                                                      );
+                                                              }
+                                                          })
+                                                    : null
                                         })
                                     ]
                                 }),
@@ -200,48 +202,47 @@ function G(e) {
                                     children: [
                                         (0, o.jsx)(O.Z, {
                                             user: n,
-                                            displayProfile: en,
-                                            themeType: E.lY.MODAL
+                                            displayProfile: et,
+                                            themeType: M.lY.MODAL
                                         }),
-                                        (0, o.jsx)(v.Z, {
+                                        (0, o.jsx)(Z.Z, {
                                             userId: n.id,
-                                            onClose: K,
+                                            onClose: Q,
                                             className: L.toast
                                         }),
-                                        null != $.interactionType &&
-                                            (0, o.jsx)(i.animated.div, {
-                                                style: ee,
+                                        null != ee.interactionType &&
+                                            (0, o.jsx)(c.animated.div, {
+                                                style: en,
                                                 className: L.backdrop
                                             }),
                                         (0, o.jsxs)('div', {
                                             className: L.headerInner,
                                             children: [
-                                                (0, o.jsx)(g.Z, {
+                                                (0, o.jsx)(v.Z, {
                                                     location: 'UserProfileModal',
                                                     user: n,
-                                                    displayProfile: en,
-                                                    guildId: G,
-                                                    channelId: B,
-                                                    themeType: E.lY.MODAL
+                                                    displayProfile: et,
+                                                    guildId: B,
+                                                    channelId: k,
+                                                    themeType: M.lY.MODAL
                                                 }),
-                                                (0, o.jsx)(w.Z, {
+                                                (0, o.jsx)(E.Z, {
                                                     location: 'UserProfileModal',
                                                     user: n,
-                                                    guildId: G,
-                                                    channelId: B,
-                                                    themeType: E.lY.MODAL,
-                                                    hasEntered: Y === a.Dvm.ENTERED,
-                                                    onCloseProfile: K,
-                                                    prompt: ei && ec ? er : null
+                                                    guildId: B,
+                                                    channelId: k,
+                                                    themeType: M.lY.MODAL,
+                                                    hasEntered: q === a.Dvm.ENTERED,
+                                                    prompt: er && ec ? el : null
                                                 }),
                                                 (0, o.jsx)('div', {
                                                     className: L.headerButtons,
                                                     children: (0, o.jsx)(S.Z, {
                                                         user: n,
                                                         currentUser: t,
-                                                        guildId: G,
-                                                        relationshipType: eo,
-                                                        onClose: K
+                                                        guildId: B,
+                                                        relationshipType: ei,
+                                                        onClose: Q
                                                     })
                                                 })
                                             ]
@@ -251,19 +252,19 @@ function G(e) {
                                 (0, o.jsx)(T.Z, {
                                     user: n,
                                     currentUser: t,
-                                    guildId: G,
-                                    channelId: B,
-                                    displayProfile: en,
-                                    initialSection: U,
-                                    initialSubsection: W,
-                                    onClose: K
+                                    guildId: B,
+                                    channelId: k,
+                                    displayProfile: et,
+                                    initialSection: W,
+                                    initialSubsection: Y,
+                                    onClose: Q
                                 })
                             ]
                         }),
-                        (null == en ? void 0 : en.profileEffectId) != null &&
+                        (null == et ? void 0 : et.profileEffectId) != null &&
                             (0, o.jsx)(_.Z, {
-                                profileEffectId: null == en ? void 0 : en.profileEffectId,
-                                isHovering: ed
+                                profileEffectId: null == et ? void 0 : et.profileEffectId,
+                                isHovering: eu
                             })
                     ]
                 })

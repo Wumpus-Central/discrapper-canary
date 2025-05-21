@@ -15,19 +15,19 @@ var o = n(255367),
 function _(e) {
     let { user: t, guildId: n, channelId: _, onClose: y } = e,
         { analyticsLocations: h } = (0, a.ZP)(),
-        { context: x, trackUserProfileAction: g } = (0, s.KZ)(),
-        { mutualFriends: j, mutualFriendsCount: O } = (0, d.Z)(t),
-        I = (0, i.Z)();
+        { context: g, trackUserProfileAction: x } = (0, s.KZ)(),
+        { mutualFriends: j, mutualFriendsCount: I } = (0, d.Z)(t),
+        O = (0, i.Z)();
     return (
         r.useEffect(() => {
-            (0, u.Z)(t.id, I);
-        }, [t.id, I]),
+            (0, u.Z)(t.id, O);
+        }, [t.id, O]),
         (0, o.jsx)(c.Ttm, {
             className: b.scroller,
             fade: !0,
             children:
                 null == j
-                    ? Array.from({ length: null != O ? O : 10 }).map((e, t) =>
+                    ? Array.from({ length: null != I ? I : 10 }).map((e, t) =>
                           (0, o.jsxs)(
                               'div',
                               {
@@ -60,7 +60,7 @@ function _(e) {
                                     onSelect: () => {
                                         var e, t;
                                         y(),
-                                            g({ action: 'PRESS_MUTUAL_FRIEND' }),
+                                            x({ action: 'PRESS_MUTUAL_FRIEND' }),
                                             (0, f.openUserProfileModal)(
                                                 ((e = (function (e) {
                                                     for (var t = 1; t < arguments.length; t++) {
@@ -86,7 +86,7 @@ function _(e) {
                                                             });
                                                     }
                                                     return e;
-                                                })({}, x)),
+                                                })({}, g)),
                                                 (t = t =
                                                     {
                                                         userId: r.id,
