@@ -7,6 +7,7 @@ e.exports = {
     tab: 'tab__80679',
     selected: 'selected__80679',
     discordLogo: 'discordLogo__80679',
+    shopHomeLink: 'shopHomeLink__80679',
     alignedRightContent: 'alignedRightContent__80679',
     balanceWidgetMenu: 'balanceWidgetMenu__80679'
 };

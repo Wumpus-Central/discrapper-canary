@@ -1,18 +1,18 @@
-n.d(t, { Z: () => r });
+n.d(t, { Z: () => a });
 var o = n(131951),
     i = n(626135);
-function r(e, t) {
-    let { rating: n, reasonCode: r, reasonDescription: a, feedback: l, analyticsData: s } = t,
+function a(e, t) {
+    let { rating: n, reasonCode: a, reasonDescription: l, feedback: r, analyticsData: s } = t,
         c = o.Z.getSettings(),
         u = o.Z.getInputDeviceId(),
         d = o.Z.getInputDevices()[u],
-        b = o.Z.getOutputDeviceId(),
-        p = o.Z.getOutputDevices()[b],
-        m = o.Z.getVideoDeviceId(),
-        _ = o.Z.getVideoDevices()[m],
+        _ = o.Z.getOutputDeviceId(),
+        m = o.Z.getOutputDevices()[_],
+        b = o.Z.getVideoDeviceId(),
+        p = o.Z.getVideoDevices()[b],
         f = o.Z.getNoiseCancellation(),
         h = o.Z.getMediaEngine().getAudioSubsystem(),
-        O = o.Z.getMediaEngine().getAudioLayer();
+        v = o.Z.getMediaEngine().getAudioLayer();
     i.default.track(
         e,
         (function (e) {
@@ -42,9 +42,9 @@ function r(e, t) {
         })(
             {
                 rating: null != n ? n : 'no response',
-                reason_code: r,
-                reason_description: a,
-                feedback: l,
+                reason_code: a,
+                reason_description: l,
+                feedback: r,
                 audio_input_mode: c.mode,
                 automatic_audio_input_sensitivity_enabled: c.modeOptions.autoThreshold,
                 audio_input_sensitivity: c.modeOptions.threshold,
@@ -54,10 +54,10 @@ function r(e, t) {
                 voice_output_volume: c.outputVolume,
                 noise_cancellation_enabled: f,
                 input_device_name: null == d ? void 0 : d.name,
-                output_device_name: null == p ? void 0 : p.name,
-                video_device_name: null == _ ? void 0 : _.name,
+                output_device_name: null == m ? void 0 : m.name,
+                video_device_name: null == p ? void 0 : p.name,
                 audio_subsystem: h,
-                audio_layer: O,
+                audio_layer: v,
                 automatic_audio_subsystem: c.automaticAudioSubsystem
             },
             s

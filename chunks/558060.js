@@ -10,8 +10,8 @@ var l = n(120356),
     u = n(981631),
     d = n(388032),
     f = n(561197);
-function b() {
-    return (b =
+function p() {
+    return (p =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -21,7 +21,7 @@ function b() {
             return e;
         }).apply(this, arguments);
 }
-function p(e) {
+function b(e) {
     for (var t = 1; t < arguments.length; t++) {
         var n = null != arguments[t] ? arguments[t] : {},
             r = Object.keys(n);
@@ -75,7 +75,7 @@ function h(e) {
         });
     let v = (0, o.ql)(t, u.tuJ.PREMIUM_TIER_2),
         O = !n && !(0, o.x6)(t),
-        x = (0, o.x6)(t) && n ? g(p({}, C), { amount: l.original }) : C,
+        x = (0, o.x6)(t) && n ? g(b({}, C), { amount: l.original }) : C,
         S = _ && n,
         j = _ && !n;
     return (0, r.jsxs)('div', {
@@ -117,7 +117,7 @@ function h(e) {
                         text: d.intl.string(d.t.MPFyJy),
                         'aria-label': d.intl.string(d.t.X3Ekj4),
                         children: (e) => {
-                            var t = b(
+                            var t = p(
                                 {},
                                 (function (e) {
                                     if (null == e) throw TypeError('Cannot destructure ' + e);
@@ -127,7 +127,7 @@ function h(e) {
                             return (0, r.jsx)(
                                 a.SrA,
                                 g(
-                                    p(
+                                    b(
                                         {
                                             size: 'md',
                                             color: 'currentColor'

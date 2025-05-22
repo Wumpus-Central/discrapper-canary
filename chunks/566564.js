@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(139668),
     d = n(364111),
     f = n(303952),
-    b = n(752053),
-    p = n(81136),
+    p = n(752053),
+    b = n(81136),
     g = n(953655),
     h = n(548685),
     m = n(580914),
@@ -22,7 +22,7 @@ var r = n(255367),
 let S = (e) => {
         var t;
         let { handleTransition: n, numVisibleItems: i, isFetchingCategories: s, tab: u, isFullScreen: v } = e,
-            { noCache: O, includeUnpublished: S } = (0, p.Z)(),
+            { noCache: O, includeUnpublished: S } = (0, b.Z)(),
             j = (0, c.sp)(),
             y = null != (t = null == j ? void 0 : j.sessionId) ? t : '';
         l.useEffect(() => {
@@ -73,9 +73,9 @@ let S = (e) => {
             }, [P, E, k.length, S, O, y, u, v]),
             null != P)
         )
-            return (0, r.jsx)(b.Z, {
+            return (0, r.jsx)(p.Z, {
                 onRetry: I,
-                errorOrigin: b.i.SHOP_PAGE,
+                errorOrigin: p.i.SHOP_PAGE,
                 errorMessage: P.message
             });
         if (E || 0 === k.length)

@@ -1,4 +1,4 @@
-n.d(t, { E: () => b });
+n.d(t, { E: () => p });
 var r = n(73800),
     l = n(442837),
     i = n(626135),
@@ -9,32 +9,32 @@ var r = n(73800),
     u = n(819490),
     d = n(82892),
     f = n(981631);
-function b(e, t) {
+function p(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 'product',
-        b = (0, o.sp)(),
-        p = (0, l.e7)([s.Z], () => s.Z.getProduct(e)),
+        p = (0, o.sp)(),
+        b = (0, l.e7)([s.Z], () => s.Z.getProduct(e)),
         g = (0, d.x)(),
         h = a.ZP.canUseCollectibles(g),
         m = r.useRef(null),
         _ = (0, u.B)('shop_product_card'),
         C = r.useCallback(() => {
             if (!_) return;
-            let r = null != p ? (0, c.Vw)(p, h, !1) : null,
-                l = null != p ? (0, c.eu)(p, h, !1) : void 0;
+            let r = null != b ? (0, c.Vw)(b, h, !1) : null,
+                l = null != b ? (0, c.eu)(b, h, !1) : void 0;
             i.default.track(f.rMx.COLLECTIBLES_TILE_IMPRESSION, {
-                collectibles_shop_session_id: null == b ? void 0 : b.sessionId,
+                collectibles_shop_session_id: null == p ? void 0 : p.sessionId,
                 sku_id: e,
                 display_price: null == r ? void 0 : r.amount,
                 display_price_currency: null == r ? void 0 : r.currency.toString(),
                 display_price_strikethrough: l,
-                position: null == b ? void 0 : b.tilePosition,
+                position: null == p ? void 0 : p.tilePosition,
                 page_type: t,
-                page_category: null == b ? void 0 : b.pageCategory,
-                page_section: null == b ? void 0 : b.pageSection,
+                page_category: null == p ? void 0 : p.pageCategory,
+                page_section: null == p ? void 0 : p.pageSection,
                 type: n,
-                category_position: null == b ? void 0 : b.categoryPosition
+                category_position: null == p ? void 0 : p.categoryPosition
             });
-        }, [null == b ? void 0 : b.sessionId, null == b ? void 0 : b.categoryPosition, null == b ? void 0 : b.pageCategory, null == b ? void 0 : b.pageSection, null == b ? void 0 : b.tilePosition, h, _, t, p, e, n]),
+        }, [null == p ? void 0 : p.sessionId, null == p ? void 0 : p.categoryPosition, null == p ? void 0 : p.pageCategory, null == p ? void 0 : p.pageSection, null == p ? void 0 : p.tilePosition, h, _, t, b, e, n]),
         v = r.useCallback(
             (e) => {
                 e

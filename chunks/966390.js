@@ -90,9 +90,9 @@ let M = {
                 scheduled_timestamp: null == B ? void 0 : B.scheduledTimestamp
             };
         null != F && (z.content = null == F ? void 0 : F.content), null != S.Z.getPendingReply(k) && ((z.type = w.uaV.REPLY), (z.message_reference = B.messageReference), (z.allowed_mentions = B.allowedMentions), (0, x.A6)(k));
-        let [W, J] = (0, _.Z)(z.content);
-        W && ((z.content = J), (z.flags = (0, R.pj)(null != (n = z.flags) ? n : 0, w.iLy.SUPPRESS_NOTIFICATIONS)));
-        let K = null != (C = B.nonce) ? C : (0, f.r)(),
+        let [W, K] = (0, _.Z)(z.content);
+        W && ((z.content = K), (z.flags = (0, R.pj)(null != (n = z.flags) ? n : 0, w.iLy.SUPPRESS_NOTIFICATIONS)));
+        let J = null != (C = B.nonce) ? C : (0, f.r)(),
             X = (0, m.ZP)({
                 channelId: k,
                 content: z.content,
@@ -100,11 +100,11 @@ let M = {
                 type: z.type,
                 messageReference: z.message_reference,
                 flags: z.flags,
-                nonce: K,
+                nonce: J,
                 poll: (0, b.x9)(B.poll)
             });
         return (
-            (z.nonce = K),
+            (z.nonce = J),
             G.on('start', (e) => {
                 (L = (0, p.e5)(A(Z({}, X), { id: e.id }))),
                     i.Z.dispatch({

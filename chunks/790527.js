@@ -1,4 +1,4 @@
-n.d(t, { Z: () => R });
+n.d(t, { Z: () => w });
 var r = n(255367),
     i = n(73800),
     o = n(120356),
@@ -15,10 +15,10 @@ var r = n(255367),
     m = n(357355),
     g = n(104494),
     E = n(639119),
-    b = n(767714),
-    y = n(165583),
-    O = n(302945),
-    v = n(631771),
+    b = n(311476),
+    y = n(767714),
+    O = n(165583),
+    v = n(302945),
     I = n(474936),
     S = n(981631),
     T = n(388032),
@@ -45,10 +45,27 @@ function P(e, t) {
     return i;
 }
 function R(e) {
+    switch (e) {
+        case I.cd.CLIENT_THEMES_UPSELL:
+        case I.cd.APP_ICON_UPSELL:
+            return b.Z.getCurrentConfig({ location: 'shouldShowSocialProof' }, { autoTrackExposure: !1 }).addSocialProof;
+        case I.cd.ANIMATED_AVATAR_MODAL_UPSELL:
+        case I.cd.ANIMATED_BANNER_MODAL_UPSELL:
+        case I.cd.PROFILE_EFFECT_MODAL_UPSELL:
+        case I.cd.AVATAR_DECORATION_MODAL_UPSELL:
+        case I.cd.FOR_LATER_MODAL_UPSELL:
+        case I.cd.VOICE_FILTERS_UPSELL:
+        case I.cd.RECENT_AVATARS_ROADBLOCK_UPSELL:
+            return !0;
+        default:
+            return !1;
+    }
+}
+function w(e) {
     var t,
         n,
         o,
-        { title: P, type: R, guildBoostProps: w, analyticsSource: D, analyticsLocation: L, body: x, context: k, glowUp: M, modalClassName: j, modalContentClassName: U, artContainerClassName: G, artClassName: B, headerClassName: F, bodyClassName: V, transitionState: Z, onClose: H, onSubscribeClick: Y, onSubscribeFinish: W, onSecondaryClick: K, secondaryCTA: z, secondaryCTAClassName: q, subscribeButtonText: Q, showNewBadge: X = !1, showBetaBadge: J = !1, enableArtBoxShadow: $ = !0, subscriptionTier: ee = I.Si.TIER_2, isLoading: et = !1, hideBackButton: en, backButtonText: er, showEnhancedUpsell: ei, useSubscribeButtonGradient: eo, subscribeButtonClassname: ea, hidePremiumOfferUpsell: es, children: el, LeadingComponent: ec, backgroundElements: eu, smallText: ed = !1, footerClassName: ef } = e,
+        { title: b, type: P, guildBoostProps: w, analyticsSource: D, analyticsLocation: L, body: x, context: k, glowUp: M, modalClassName: j, modalContentClassName: U, artContainerClassName: G, artClassName: B, headerClassName: F, bodyClassName: V, transitionState: Z, onClose: H, onSubscribeClick: Y, onSubscribeFinish: W, onSecondaryClick: K, secondaryCTA: z, secondaryCTAClassName: q, subscribeButtonText: Q, showNewBadge: X = !1, showBetaBadge: J = !1, enableArtBoxShadow: $ = !0, subscriptionTier: ee = I.Si.TIER_2, isLoading: et = !1, hideBackButton: en, backButtonText: er, showEnhancedUpsell: ei, useSubscribeButtonGradient: eo, subscribeButtonClassname: ea, hidePremiumOfferUpsell: es, children: el, LeadingComponent: ec, backgroundElements: eu, smallText: ed = !1, footerClassName: ef } = e,
         e_ = C(e, ['title', 'type', 'guildBoostProps', 'analyticsSource', 'analyticsLocation', 'body', 'context', 'glowUp', 'modalClassName', 'modalContentClassName', 'artContainerClassName', 'artClassName', 'headerClassName', 'bodyClassName', 'transitionState', 'onClose', 'onSubscribeClick', 'onSubscribeFinish', 'onSecondaryClick', 'secondaryCTA', 'secondaryCTAClassName', 'subscribeButtonText', 'showNewBadge', 'showBetaBadge', 'enableArtBoxShadow', 'subscriptionTier', 'isLoading', 'hideBackButton', 'backButtonText', 'showEnhancedUpsell', 'useSubscribeButtonGradient', 'subscribeButtonClassname', 'hidePremiumOfferUpsell', 'children', 'LeadingComponent', 'backgroundElements', 'smallText', 'footerClassName']);
     let ep = null != w,
         eh = (0, E.N)(),
@@ -60,7 +77,7 @@ function R(e) {
             analyticsLocations: eE,
             analyticsSource: D,
             guildBoostProps: w,
-            type: R
+            type: P
         },
         ey = i.useRef(eb);
     i.useEffect(() => {
@@ -86,7 +103,7 @@ function R(e) {
                   });
         }, [ep, ee, et]);
     let eO = (0, s.e7)([m.Z], () => m.Z.affinities),
-        ev = eO.length > 1 && (0, v.Y)(R),
+        ev = eO.length > 1 && R(P),
         eI = (0, s.e7)([m.Z], () => m.Z.hasFetched);
     i.useEffect(() => {
         eI || c.MH();
@@ -107,7 +124,7 @@ function R(e) {
                         intervalCount: null == eh || null == (n = eh.subscription_trial) ? void 0 : n.interval_count
                     });
                 } else null != em && (e = T.intl.formatToPlainString(T.t.bkQ4bG, { percent: em.discount.amount }));
-            return (0, r.jsx)(b.Z, {
+            return (0, r.jsx)(y.Z, {
                 className: ea,
                 showGradient: ei || eo,
                 premiumModalAnalyticsLocation: L,
@@ -133,7 +150,7 @@ function R(e) {
             : null != e_.artElement && (eA = e_.artElement),
         (0, r.jsxs)(l.Y0X, {
             className: a()(A.root, !eg && j),
-            'aria-label': P,
+            'aria-label': b,
             transitionState: Z,
             children: [
                 null != eA &&
@@ -156,11 +173,11 @@ function R(e) {
                     children: et
                         ? (0, r.jsx)(l.$jN, {})
                         : eg
-                          ? (0, r.jsx)(y.ZP, {
+                          ? (0, r.jsx)(O.ZP, {
                                 onClose: H,
-                                type: R,
+                                type: P,
                                 subscriptionTier: null != (o = null == eh || null == (n = eh.subscription_trial) ? void 0 : n.sku_id) ? o : I.Si.TIER_2,
-                                headingText: P,
+                                headingText: b,
                                 context: k,
                                 analyticsLocationObject: L,
                                 discountOffer: em,
@@ -177,9 +194,9 @@ function R(e) {
                                             (0, r.jsxs)(l.X6q, {
                                                 className: a()(A.header, { [A.enhancedHeader]: ei }, F),
                                                 variant: 'heading-xl/bold',
-                                                children: [P, J ? (0, r.jsx)(f.Z, { className: A.betaTag }) : null]
+                                                children: [b, J ? (0, r.jsx)(f.Z, { className: A.betaTag }) : null]
                                             }),
-                                            ev ? (0, r.jsx)(O.Z, { affinities: eO }) : void 0,
+                                            ev ? (0, r.jsx)(v.Z, { affinities: eO }) : void 0,
                                             el,
                                             (0, r.jsx)(l.Text, {
                                                 variant: ed ? 'text-sm/normal' : 'text-md/normal',

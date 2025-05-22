@@ -120,6 +120,7 @@ function O(e) {
                 }),
                 (0, r.jsx)(s.Text, {
                     variant: 'text-sm/semibold',
+                    color: 'currentColor',
                     children: j.intl.string(j.t['2a50fH'])
                 })
             ]

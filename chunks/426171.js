@@ -19,8 +19,8 @@ var r = n(73800),
     u = n(328347),
     d = n(429368),
     f = n(410127),
-    b = n(237031),
-    p = n(956472),
+    p = n(237031),
+    b = n(956472),
     g = n(981631);
 let h = ''.concat('#').concat('itemSkuId', '='),
     m = new RegExp('^'.concat(h, '(\\d+)$')),
@@ -47,7 +47,7 @@ let h = ''.concat('#').concat('itemSkuId', '='),
                     inline: 'center'
                 });
             let e = o,
-                f = (0, p.oQ)({ product: o }),
+                f = (0, b.oQ)({ product: o }),
                 g = setTimeout(
                     () => {
                         let i = document.getElementById('shop-item-'.concat(e.skuId));
@@ -60,7 +60,7 @@ let h = ''.concat('#').concat('itemSkuId', '='),
                                 null != r && r > -1 && (0, d.$)(n, r);
                             }
                         }
-                        (0, b.T)({
+                        (0, p.T)({
                             product: e,
                             category: s,
                             analyticsSource: r,
@@ -79,21 +79,21 @@ let h = ''.concat('#').concat('itemSkuId', '='),
     O = (e) => {
         let { isFetchingCategories: t, isLayer: n, initialItemCardRef: c } = e,
             d = (0, i.e7)([a.Z], () => a.Z.useReducedMotion),
-            b = r.useRef(null),
-            p = (0, l.TH)(),
-            h = p.pathname === g.Z5c.COLLECTIBLES_SHOP ? o.Z.HOME_PAGE_SHOP_TAB : p.pathname === g.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? o.Z.COLLECTIBLES_SHOP_FULLSCREEN : o.Z.COLLECTIBLES_SHOP,
+            p = r.useRef(null),
+            b = (0, l.TH)(),
+            h = b.pathname === g.Z5c.COLLECTIBLES_SHOP ? o.Z.HOME_PAGE_SHOP_TAB : b.pathname === g.Z5c.COLLECTIBLES_SHOP_FULLSCREEN ? o.Z.COLLECTIBLES_SHOP_FULLSCREEN : o.Z.COLLECTIBLES_SHOP,
             { analyticsLocations: _ } = (0, s.ZP)(h),
             C = (0, f.Z)();
         r.useEffect(() => {
             if (n) return;
-            let e = m.exec(p.hash);
-            null != e ? (b.current = e[1]) : (b.current = null);
-        }, [C, n, p.hash]);
+            let e = m.exec(b.hash);
+            null != e ? (p.current = e[1]) : (p.current = null);
+        }, [C, n, b.hash]);
         let O = (0, i.e7)([u.Z], () => u.Z.initialProductSkuId);
         r.useEffect(() => {
             if (t) return;
             let e = null;
-            if (null != (e = n ? O : b.current)) {
+            if (null != (e = n ? O : p.current)) {
                 let t = [],
                     n = setTimeout(() => {
                         let n = v({

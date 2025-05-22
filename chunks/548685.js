@@ -9,8 +9,8 @@ var r = n(255367),
     u = n(607070),
     d = n(594174),
     f = n(451478),
-    b = n(626135),
-    p = n(63063),
+    p = n(626135),
+    b = n(63063),
     g = n(74538),
     h = n(381585),
     m = n(597688),
@@ -45,7 +45,7 @@ let k = (e) => {
                     isShuffling: !1,
                     onOutroComplete: () => R(e)
                 }),
-                    b.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
+                    p.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SORT_CHANGED, {
                         page_session_id: q,
                         sort_type: e
                     });
@@ -103,7 +103,7 @@ let k = (e) => {
                                                   })({}, e)),
                                                   (n = n =
                                                       {
-                                                          onClick: () => (0, c.Z)(p.Z.getArticleURL(y.BhN.DATA_USED_FOR_RECOMMENDED)),
+                                                          onClick: () => (0, c.Z)(b.Z.getArticleURL(y.BhN.DATA_USED_FOR_RECOMMENDED)),
                                                           className: P.informationIcon,
                                                           children: (0, r.jsx)(s.d3s, { size: 'sm' })
                                                       }),
@@ -155,7 +155,7 @@ let k = (e) => {
                                                         onOutroComplete: F,
                                                         returnRef: Y
                                                     }),
-                                                        b.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, { page_session_id: q });
+                                                        p.default.track(y.rMx.COLLECTIBLES_SHOP_FEED_SHUFFLE_CLICKED, { page_session_id: q });
                                                 },
                                                 disabled: U !== x.g.MOUNTED && U !== x.g.FINISHED,
                                                 children: E.intl.string(E.t.X3tnc3)

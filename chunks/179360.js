@@ -50,6 +50,7 @@ async function d() {
     );
 }
 async function f() {
+    i.Z.dispatch({ type: 'GUILD_BOOST_SLOTS_FETCH' });
     let e = (
         await r.tn.get({
             url: c.ANM.USER_GUILD_BOOST_SLOTS,

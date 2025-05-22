@@ -40,7 +40,7 @@ function _(e) {
 function p(e) {
     let { nameplate: t, className: n, style: i, animate: o, loop: a } = e,
         { staticAsset: s, animatedAsset: l } = (0, c._)(t),
-        u = null == l ? void 0 : l.endsWith('.png');
+        u = !(null == l ? void 0 : l.endsWith('.webm'));
     return null == s || null == l
         ? null
         : u
