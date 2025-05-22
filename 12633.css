@@ -20204,7 +20204,7 @@ span.clanTag__5d473 {
 }
 
 .content__4f6e5 {
-    padding: var(--spacing-24) var(--spacing-24) 0
+    padding: var(--spacing-32) var(--spacing-32) 0
 }
 
 .closeButton__4f6e5 {
@@ -20239,10 +20239,6 @@ span.clanTag__5d473 {
     margin-bottom: 24px
 }
 
-.body__4f6e5 {
-    max-width: 345px
-}
-
 .footer__4f6e5 {
     background-color: var(--background-primary);
     border-bottom: 1px solid var(--border-subtle);
@@ -20262,7 +20258,7 @@ span.clanTag__5d473 {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    max-width: 345px
+    padding: 0 var(--spacing-32)
 }
 
 .visual-refresh .container__4f6e5,
