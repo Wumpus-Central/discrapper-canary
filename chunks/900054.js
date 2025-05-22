@@ -1,6 +1,7 @@
 e.exports = {
     friendWrapper: 'friendWrapper_bbd192',
     friend: 'friend_bbd192',
+    twoRows: 'twoRows_bbd192',
     avatar: 'avatar_bbd192',
     checkbox: 'checkbox_bbd192',
     match: 'match_bbd192',

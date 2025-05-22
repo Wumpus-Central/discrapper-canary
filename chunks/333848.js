@@ -1,18 +1,18 @@
 l.d(t, { Z: () => d }), l(415506);
 var n = l(990547),
     r = l(283693),
-    a = l(570140),
-    s = l(408987),
-    o = l(9156),
-    i = l(621600),
+    s = l(570140),
+    a = l(408987),
+    i = l(9156),
+    o = l(621600),
     u = l(573261),
     c = l(87051),
-    p = l(981631),
-    h = l(526761);
+    h = l(981631),
+    p = l(526761);
 let d = {
     createChannel(e) {
-        let { guildId: t, type: l, name: d, permissionOverwrites: g = [], bitrate: f, userLimit: y, parentId: E, skuId: b, branchId: v } = e;
-        a.Z.dispatch({
+        let { guildId: t, type: l, name: d, permissionOverwrites: g = [], bitrate: f, userLimit: y, parentId: E, skuId: v, branchId: b } = e;
+        s.Z.dispatch({
             type: 'CREATE_CHANNEL_MODAL_SUBMIT',
             guildId: t,
             channelType: l
@@ -22,12 +22,12 @@ let d = {
             name: d,
             permission_overwrites: g
         };
-        if ((null != f && f !== p.epw && (C.bitrate = f), null != y && y > 0 && (C.user_limit = y), null != E && (C.parent_id = E), l === p.d4z.GUILD_STORE)) {
-            if (null == b) throw Error('Unexpected missing SKU');
-            (C.sku_id = b), (C.branch_id = v);
+        if ((null != f && f !== h.epw && (C.bitrate = f), null != y && y > 0 && (C.user_limit = y), null != E && (C.parent_id = E), l === h.d4z.GUILD_STORE)) {
+            if (null == v) throw Error('Unexpected missing SKU');
+            (C.sku_id = v), (C.branch_id = b);
         }
         return u.Z.post({
-            url: p.ANM.GUILD_CHANNELS(t),
+            url: h.ANM.GUILD_CHANNELS(t),
             body: C,
             oldFormErrors: !0,
             trackedActionData: {
@@ -43,10 +43,10 @@ let d = {
             },
             rejectWithError: !1
         }).then(
-            (e) => (o.ZP.isOptInEnabled(t) && c.Z.updateChannelOverrideSettings(t, e.body.id, { flags: h.ic.OPT_IN_ENABLED }, i.ZB.OptedIn), s.Z.checkGuildTemplateDirty(t), e),
+            (e) => (i.ZP.isOptInEnabled(t) && c.Z.updateChannelOverrideSettings(t, e.body.id, { flags: p.ic.OPT_IN_ENABLED }, o.ZB.OptedIn), a.Z.checkGuildTemplateDirty(t), e),
             (e) => {
                 throw (
-                    (a.Z.dispatch({
+                    (s.Z.dispatch({
                         type: 'CREATE_CHANNEL_MODAL_SUBMIT_FAILURE',
                         errors: e.body
                     }),
@@ -55,13 +55,13 @@ let d = {
             }
         );
     },
-    createRoleSubscriptionTemplateChannel: (e, t, l, a) =>
+    createRoleSubscriptionTemplateChannel: (e, t, l, s) =>
         u.Z.post({
-            url: p.ANM.GUILD_CHANNELS(e),
+            url: h.ANM.GUILD_CHANNELS(e),
             body: {
                 name: t,
                 type: l,
-                topic: a
+                topic: s
             },
             oldFormErrors: !0,
             trackedActionData: {

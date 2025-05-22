@@ -314,14 +314,15 @@ let A = {
             };
         i && m.default.track(y.rMx.CHANNEL_ICON_EDIT_PROGRESSED, T(I({}, s), { status: 'initiated' }));
         try {
-            let n = await r.tn.patch({
+            let a = await r.tn.patch({
+                    context: { location: n },
                     url: y.ANM.CHANNEL(e),
                     body: t,
                     oldFormErrors: !0,
                     rejectWithError: !0
                 }),
-                a = null == o ? void 0 : o.getGuildId();
-            return null == a || (null == o ? void 0 : o.isThread()) || l.Z.checkGuildTemplateDirty(a), i && m.default.track(y.rMx.CHANNEL_ICON_EDIT_PROGRESSED, T(I({}, s), { status: 'success' })), n;
+                c = null == o ? void 0 : o.getGuildId();
+            return null == c || (null == o ? void 0 : o.isThread()) || l.Z.checkGuildTemplateDirty(c), i && m.default.track(y.rMx.CHANNEL_ICON_EDIT_PROGRESSED, T(I({}, s), { status: 'success' })), a;
         } catch (e) {
             if (i) {
                 var c, u;

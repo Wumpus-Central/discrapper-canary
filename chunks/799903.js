@@ -1,50 +1,54 @@
 n.d(t, {
-    F: () => c,
-    default: () => u
+    F: () => u,
+    default: () => d
 }),
     n(388685);
 var r = n(255367),
     i = n(73800),
-    l = n(481060),
-    a = n(776571),
-    o = n(388032),
-    s = n(584299);
-let c = 'report_to_mod_dont_show_resolve_confirm';
-function u(e) {
-    let { transitionState: t, onClose: n, handleResolveFlag: u } = e,
-        [d, p] = i.useState(!1);
-    return (0, r.jsxs)(l.Y0X, {
+    l = n(433517),
+    a = n(481060),
+    o = n(776571),
+    s = n(388032),
+    c = n(584299);
+let u = 'report_to_mod_dont_show_resolve_confirm';
+function d(e) {
+    let { transitionState: t, onClose: n, handleResolveFlag: d } = e,
+        [p, h] = i.useState(!1);
+    return (0, r.jsxs)(a.Y0X, {
         transitionState: t,
         children: [
-            (0, r.jsxs)(l.xBx, {
-                className: s.header,
+            (0, r.jsxs)(a.xBx, {
+                className: c.header,
                 children: [
-                    (0, r.jsx)(l.olH, { className: s.closeButton }),
-                    (0, r.jsx)(l.X6q, {
+                    (0, r.jsx)(a.olH, {
+                        className: c.closeButton,
+                        onClick: n
+                    }),
+                    (0, r.jsx)(a.X6q, {
                         variant: 'heading-xl/bold',
-                        children: o.intl.string(a.default['8R4eur'])
+                        children: s.intl.string(o.default['8R4eur'])
                     })
                 ]
             }),
-            (0, r.jsx)(l.hzk, {
-                children: (0, r.jsx)(l.Text, {
+            (0, r.jsx)(a.hzk, {
+                children: (0, r.jsx)(a.Text, {
                     variant: 'text-md/normal',
-                    children: o.intl.string(a.default.xgOraW)
+                    children: s.intl.string(o.default.xgOraW)
                 })
             }),
-            (0, r.jsxs)(l.mzw, {
-                className: s.footer,
+            (0, r.jsxs)(a.mzw, {
+                className: c.footer,
                 children: [
-                    (0, r.jsx)(l.XZJ, {
-                        value: d,
-                        onChange: (e, t) => p(t),
-                        children: o.intl.string(a.default['3puq5e'])
+                    (0, r.jsx)(a.XZJ, {
+                        value: p,
+                        onChange: (e, t) => h(t),
+                        children: s.intl.string(o.default['3puq5e'])
                     }),
-                    (0, r.jsx)(l.zxk, {
+                    (0, r.jsx)(a.zxk, {
                         onClick: () => {
-                            d && localStorage.setItem(c, 'true'), n(), u();
+                            p && l.K.set(u, !0), n(), d();
                         },
-                        children: o.intl.string(a.default.ctefOz)
+                        children: s.intl.string(o.default.ctefOz)
                     })
                 ]
             })
